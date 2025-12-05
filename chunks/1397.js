@@ -4,7 +4,7 @@ var i = n(54381),
     l = n(512722),
     a = n.n(l),
     o = n(442837),
-    s = n(693789),
+    s = n(885387),
     c = n(248514),
     u = n(481060),
     d = n(893776),
@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(391650),
     g = n(693546),
     b = n(881952),
-    y = n(305325),
-    C = n(246364),
+    C = n(305325),
+    y = n(246364),
     v = n(983736),
     _ = n(937111),
     O = n(270801),
@@ -118,7 +118,7 @@ class q extends r.PureComponent {
                 showLurkerModeUpsellPopout: m,
                 showMemberVerificationModal: g,
                 useReducedMotion: b,
-                isStaff: y,
+                isStaff: C,
                 guildJoinRequest: v,
                 showLinkedLobbyApplicationLoadingIndicator: _,
                 requiredLinkedLobbyApplication: O,
@@ -144,13 +144,13 @@ class q extends r.PureComponent {
                 (j.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount);
         else if (g)
             switch (null == v ? void 0 : v.applicationStatus) {
-                case C.wB.SUBMITTED:
+                case y.wB.SUBMITTED:
                     (j.message = H.intl.string(H.t["5iLvSx"])),
                         (j.subtitle = H.intl.string(H.t.FdsK4h)),
                         (j.buttonText = H.intl.string(H.t.mqtdmQ)),
                         (j.onButtonClick = this.handleCancelApplication);
                     break;
-                case C.wB.REJECTED:
+                case y.wB.REJECTED:
                     (j.message = H.intl.string(H.t.lk30cY)),
                         (j.buttonText = H.intl.string(H.t["8RrsHr"])),
                         (j.onButtonClick = this.handleViewApplicationRejection);
@@ -162,7 +162,7 @@ class q extends r.PureComponent {
                         (j.onButtonClick = this.handleShowMemberVerification);
             }
         else if (_ || null == O)
-            r && !y
+            r && !C
                 ? ((j.message = H.intl.string(H.t["2dThMM"])),
                   (j.buttonText = H.intl.string(H.t["50gfOv"])),
                   (j.onButtonClick = this.handleVerifyPhone))
@@ -265,7 +265,7 @@ class q extends r.PureComponent {
             }),
             G(this, "handleShowMemberVerification", () => {
                 let { guild: e } = this.props;
-                null != e && (0, y.hk)(e.id);
+                null != e && (0, C.hk)(e.id);
             }),
             G(this, "handleClaimAccount", () => {
                 m.j();
@@ -284,20 +284,10 @@ class q extends r.PureComponent {
                 d.Z.verifyResend();
                 let t = null == (e = R.default.getCurrentUser()) ? void 0 : e.email;
                 null != t &&
-                    (0, u.h7j)((e) =>
-                        (0, i.jsx)(
-                            u.ConfirmModal,
-                            W(z({}, e), {
-                                header: H.intl.string(H.t.LykQYk),
-                                confirmText: H.intl.string(H.t.BddRzS),
-                                confirmButtonColor: s.Tt.BRAND,
-                                children: (0, i.jsx)(u.Text, {
-                                    variant: "text-md/normal",
-                                    children: H.intl.format(H.t.azKEPy, { email: t }),
-                                }),
-                            }),
-                        ),
-                    );
+                    (0, s.Z)({
+                        title: H.intl.string(H.t.LykQYk),
+                        subtitle: H.intl.format(H.t.azKEPy, { email: t }),
+                    });
             }),
             G(this, "handleTextAreaClick", () => {
                 let { showLurkerModeUpsellPopout: e } = this.props;
@@ -338,7 +328,7 @@ class q extends r.PureComponent {
             }),
             G(this, "renderMemberVerificationSuccessModal", () => {
                 let { guild: e, guildJoinRequest: t } = this.props,
-                    n = (null == t ? void 0 : t.applicationStatus) === C.wB.APPROVED;
+                    n = (null == t ? void 0 : t.applicationStatus) === y.wB.APPROVED;
                 if (null == e || null == t || !n || (0, b.d3)(t)) return null;
                 let r = () => {
                     g.Z.ackUserGuildJoinRequest(e.id, t.joinRequestId);
@@ -373,7 +363,7 @@ function K(e) {
             return null != h && null != (t = null == (e = N.ZP.getMember(a, h.id)) ? void 0 : e.isPending) && t;
         }),
         b = !!(0, v.Dc)(s),
-        y = (0, o.e7)([x.Z], () => x.Z.shouldShowPopout(a)),
+        C = (0, o.e7)([x.Z], () => x.Z.shouldShowPopout(a)),
         O = (0, o.e7)([M.Z], () => M.Z.can(U.Plq.SEND_MESSAGES, r)),
         j = (0, o.e7)([_.Z], () => _.Z.getRequest(a)),
         { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: P } = (0, k.Z)(r.linkedLobby),
@@ -381,14 +371,14 @@ function K(e) {
             guild: s,
             isLurking: p,
             isFollowable: u,
-            shouldShowLurkerModeSuccessPopout: y,
+            shouldShowLurkerModeSuccessPopout: C,
             showLurkerModeUpsellPopout: p && null != s && L.Uu(U.Plq.SEND_MESSAGES, r),
             theme: Z.Z.theme,
             canSendMessages: O,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: b,
             showMemberVerificationModal: g && b,
-            guildJoinRequestStatus: null != (n = null == j ? void 0 : j.applicationStatus) ? n : C.wB.STARTED,
+            guildJoinRequestStatus: null != (n = null == j ? void 0 : j.applicationStatus) ? n : y.wB.STARTED,
             guildJoinRequest: j,
             showLinkedLobbyApplicationLoadingIndicator: S,
             requiredLinkedLobbyApplication: P,

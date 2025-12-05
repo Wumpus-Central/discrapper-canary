@@ -1,16 +1,10 @@
-n.d(t, {
-    V: () => m,
-    k: () => _,
-});
+n.d(t, { Z: () => d });
 var r = n(54381);
 n(473749);
-var i = n(885387),
+var i = n(159691),
     a = n(481060),
-    o = n(63063),
-    s = n(981631),
-    l = n(388032),
-    c = n(342153);
-function u(e, t, n) {
+    o = n(388032);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +17,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +28,12 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,27 +45,32 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e) {
-    let { kind: t } = e;
-    (0, a.ZDy)(async () => {
-        let { default: e } = await n.e("7285").then(n.bind(n, 951269));
-        return (n) => (0, r.jsx)(e, p(d({}, n), { kind: t }));
-    });
-}
-function m() {
-    (0, i.Z)({
-        title: l.intl.string(c.default.odgSTk),
-        subtitle: l.intl.format(c.default.EZfHRq, { helpURL: o.Z.getArticleURL(s.BhN.NSFW_AGE_GATING) }),
-    });
+function d(e) {
+    let { title: t, subtitle: n, confirmText: s = o.intl.string(o.t.BddRzS) } = e;
+    return (0, a.h7j)((e) =>
+        (0, r.jsx)(
+            i.u_l,
+            u(l({}, e), {
+                title: t,
+                subtitle: n,
+                actions: [
+                    {
+                        text: s,
+                        onClick: e.onClose,
+                    },
+                ],
+            }),
+        ),
+    );
 }

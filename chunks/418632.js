@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => b,
-    s: () => E,
+    Z: () => g,
+    s: () => h,
 }),
     n(388685);
 var r = n(54381),
@@ -9,7 +9,7 @@ var r = n(54381),
     o = n.n(a),
     s = n(793030),
     l = n(442837),
-    c = n(755721),
+    c = n(885387),
     u = n(481060),
     d = n(893776),
     f = n(594174),
@@ -43,53 +43,13 @@ function m(e) {
     }
     return e;
 }
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function g(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function E(e) {
+function h(e) {
     return d.Z.verifyResend()
         .then(() => {
-            (0, u.h7j)((t) =>
-                (0, r.jsx)(
-                    u.ConfirmModal,
-                    g(
-                        m(
-                            {
-                                header: p.intl.string(p.t.LykQYk),
-                                confirmText: p.intl.string(p.t.BddRzS),
-                                confirmButtonColor: c.zx.Colors.BRAND,
-                            },
-                            t,
-                        ),
-                        {
-                            children: (0, r.jsx)(u.Text, {
-                                variant: "text-md/normal",
-                                children: p.intl.format(p.t.azKEPy, { email: e.email }),
-                            }),
-                        },
-                    ),
-                ),
-            );
+            (0, c.Z)({
+                title: p.intl.string(p.t.LykQYk),
+                subtitle: p.intl.format(p.t.azKEPy, { email: e.email }),
+            });
         })
         .catch((e) => {
             let { body: t } = e,
@@ -116,13 +76,13 @@ function E(e) {
                 );
         });
 }
-function b(e) {
+function g(e) {
     let { size: t, variant: n } = e,
         a = (0, l.e7)([f.default], () => f.default.getCurrentUser());
     o()(null != a, "ResendEmailVerificationButton: currentUser cannot be undefined");
     let [s, c] = i.useState(!1),
         d = i.useCallback(() => {
-            c(!0), E(a).then(() => c(!1));
+            c(!0), h(a).then(() => c(!1));
         }, [a]);
     return (0, r.jsx)(u.Button, {
         size: t,

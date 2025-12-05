@@ -8,8 +8,8 @@ var r = n(54381),
     c = n(215569),
     d = n(796027),
     u = n(199849),
-    g = n(477690),
-    m = n(755721),
+    g = n(885387),
+    m = n(477690),
     p = n(481060),
     f = n(313201),
     h = n(345861),
@@ -24,25 +24,25 @@ var r = n(54381),
     N = n(333866),
     E = n(388032),
     I = n(858760);
-let S = (0, j.Mg)(g.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
+let S = (0, j.Mg)(m.Z.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 function T(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
         { format: s } = (0, C.Z)(n.id),
-        g = (0, _.YB)(n.id),
+        m = (0, _.YB)(n.id),
         j = i.useCallback(() => {
             var e;
-            return (null == g || null == (e = g.cover_image_asset) ? void 0 : e.application_id) == null
+            return (null == m || null == (e = m.cover_image_asset) ? void 0 : e.application_id) == null
                 ? null
-                : (0, x._W)(g.cover_image_asset.application_id, g.cover_image_asset, S);
-        }, [g]),
+                : (0, x._W)(m.cover_image_asset.application_id, m.cover_image_asset, S);
+        }, [m]),
         [T, P] = i.useState(s),
-        [w, Z] = i.useState(null != (t = null == g ? void 0 : g.description) ? t : ""),
+        [w, Z] = i.useState(null != (t = null == m ? void 0 : m.description) ? t : ""),
         [R, D] = i.useState(j),
-        [A, L] = i.useState(null == g ? void 0 : g.store_page_guild_products_default_sort),
-        [k, G] = i.useState(null == g ? void 0 : g.server_shop_tab_order),
+        [A, L] = i.useState(null == m ? void 0 : m.store_page_guild_products_default_sort),
+        [k, G] = i.useState(null == m ? void 0 : m.server_shop_tab_order),
         { loading: M, error: U, updateSubscriptionsSettings: B } = (0, _.QV)(),
-        { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, O.Z)(null == g ? void 0 : g.cover_image_asset),
+        { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, O.Z)(null == m ? void 0 : m.cover_image_asset),
         W = (0, f.Dt)();
     function V(e, t) {
         a()(null != e, "Null value not allowed"), null != t && z(t.name), D(e);
@@ -50,19 +50,19 @@ function T(e) {
     let K = i.useMemo(() => {
             var e;
             return (
-                (null != w && w !== (null != (e = null == g ? void 0 : g.description) ? e : "")) ||
+                (null != w && w !== (null != (e = null == m ? void 0 : m.description) ? e : "")) ||
                 (null == R ? void 0 : R.startsWith("data:")) === !0 ||
                 T !== s ||
-                (null == g ? void 0 : g.store_page_guild_products_default_sort) !== A ||
-                (null == g ? void 0 : g.server_shop_tab_order) !== k
+                (null == m ? void 0 : m.store_page_guild_products_default_sort) !== A ||
+                (null == m ? void 0 : m.server_shop_tab_order) !== k
             );
-        }, [R, s, w, g, T, A, k]),
+        }, [R, s, w, m, T, A, k]),
         Y = null != w && "" !== w && null != R;
     i.useEffect(() => {
         var e;
-        (null == g || null == (e = g.cover_image_asset) ? void 0 : e.application_id) != null &&
-            D((0, x._W)(g.cover_image_asset.application_id, g.cover_image_asset, S));
-    }, [null == g ? void 0 : g.cover_image_asset]);
+        (null == m || null == (e = m.cover_image_asset) ? void 0 : e.application_id) != null &&
+            D((0, x._W)(m.cover_image_asset.application_id, m.cover_image_asset, S));
+    }, [null == m ? void 0 : m.cover_image_asset]);
     let q = (0, v.mY)(),
         X = i.useMemo(
             () =>
@@ -109,64 +109,10 @@ function T(e) {
                               onChange: (e) => {
                                   s !== e &&
                                       e === y.e3.ALL_CHANNELS &&
-                                      (0, p.h7j)((e) => {
-                                          var t, n;
-                                          return (0, r.jsx)(
-                                              p.ConfirmModal,
-                                              ((t = (function (e) {
-                                                  for (var t = 1; t < arguments.length; t++) {
-                                                      var n = null != arguments[t] ? arguments[t] : {},
-                                                          r = Object.keys(n);
-                                                      "function" == typeof Object.getOwnPropertySymbols &&
-                                                          (r = r.concat(
-                                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                  return Object.getOwnPropertyDescriptor(n, e)
-                                                                      .enumerable;
-                                                              }),
-                                                          )),
-                                                          r.forEach(function (t) {
-                                                              var r;
-                                                              (r = n[t]),
-                                                                  t in e
-                                                                      ? Object.defineProperty(e, t, {
-                                                                            value: r,
-                                                                            enumerable: !0,
-                                                                            configurable: !0,
-                                                                            writable: !0,
-                                                                        })
-                                                                      : (e[t] = r);
-                                                          });
-                                                  }
-                                                  return e;
-                                              })({}, e)),
-                                              (n = n =
-                                                  {
-                                                      header: E.intl.string(E.t.dmVoOz),
-                                                      confirmText: E.intl.string(E.t["NX+WJN"]),
-                                                      confirmButtonColor: m.zx.Colors.BRAND,
-                                                      children: (0, r.jsx)(p.Text, {
-                                                          variant: "text-md/normal",
-                                                          children: E.intl.string(E.t.mtwzdD),
-                                                      }),
-                                                  }),
-                                              Object.getOwnPropertyDescriptors
-                                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                                  : (function (e, t) {
-                                                        var n = Object.keys(e);
-                                                        if (Object.getOwnPropertySymbols) {
-                                                            var r = Object.getOwnPropertySymbols(e);
-                                                            n.push.apply(n, r);
-                                                        }
-                                                        return n;
-                                                    })(Object(n)).forEach(function (e) {
-                                                        Object.defineProperty(
-                                                            t,
-                                                            e,
-                                                            Object.getOwnPropertyDescriptor(n, e),
-                                                        );
-                                                    }),
-                                              t),
-                                          );
+                                      (0, g.Z)({
+                                          title: E.intl.string(E.t.dmVoOz),
+                                          subtitle: E.intl.string(E.t.mtwzdD),
+                                          confirmText: E.intl.string(E.t["NX+WJN"]),
                                       }),
                                       P(e);
                               },
@@ -269,20 +215,20 @@ function T(e) {
                             onReset: () => {
                                 var e;
                                 P(s),
-                                    Z(null != (e = null == g ? void 0 : g.description) ? e : ""),
+                                    Z(null != (e = null == m ? void 0 : m.description) ? e : ""),
                                     D(j),
-                                    L(null == g ? void 0 : g.store_page_guild_products_default_sort),
-                                    G(null == g ? void 0 : g.server_shop_tab_order);
+                                    L(null == m ? void 0 : m.store_page_guild_products_default_sort),
+                                    G(null == m ? void 0 : m.server_shop_tab_order);
                             },
                             onSave: () => {
-                                a()(null != g, "Settings must be defined");
+                                a()(null != m, "Settings must be defined");
                                 let e = {};
-                                w !== g.description && (e.description = w),
+                                w !== m.description && (e.description = w),
                                     null != R && R.startsWith("data:") && (e.cover_image = R),
                                     T !== s && (e.full_server_gate = T === y.e3.ALL_CHANNELS),
-                                    A !== g.store_page_guild_products_default_sort &&
+                                    A !== m.store_page_guild_products_default_sort &&
                                         (e.store_page_guild_products_default_sort = A),
-                                    k !== g.server_shop_tab_order && (e.server_shop_tab_order = k),
+                                    k !== m.server_shop_tab_order && (e.server_shop_tab_order = k),
                                     o().isEmpty(e) || B(n.id, e);
                             },
                             saveButtonTooltip: Y ? void 0 : E.intl.string(E.t["6HRvit"]),

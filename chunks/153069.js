@@ -5,16 +5,16 @@ var n,
     i = r(533126),
     a = r(990547),
     l = r(265489),
-    d = r(793030),
-    u = r(442837),
-    h = r(755721),
+    u = r(793030),
+    d = r(442837),
+    h = r(885387),
     c = r(481060),
     p = r(893776),
     f = r(479495),
     g = r(213609),
     m = r(254942),
-    _ = r(388905),
-    b = r(379760),
+    b = r(388905),
+    _ = r(379760),
     C = r(124860),
     y = r(144114),
     w = r(541692),
@@ -22,8 +22,8 @@ var n,
     x = r(703656),
     O = r(210887),
     A = r(901375),
-    j = r(314897),
-    S = r(896797),
+    S = r(314897),
+    j = r(896797),
     E = r(585483),
     v = r(358085),
     R = r(998502),
@@ -113,7 +113,7 @@ class M extends (n = o.PureComponent) {
             n = !this.hasError("email") && this.hasError("password");
         return (0, s.jsx)("div", {
             className: I.mainLoginContainer,
-            children: (0, s.jsxs)(_.gO, {
+            children: (0, s.jsxs)(b.gO, {
                 children: [
                     (0, s.jsx)(P.Z, {
                         alpha2: e.alpha2,
@@ -135,7 +135,7 @@ class M extends (n = o.PureComponent) {
                         autoFocus: !n,
                         required: !0,
                     }),
-                    (0, s.jsx)(_.II, {
+                    (0, s.jsx)(b.II, {
                         label: T.intl.string(T.t["CIGa+7"]),
                         error: this.renderError("password"),
                         onChange: (t) => this.setState({ password: t }),
@@ -184,12 +184,12 @@ class M extends (n = o.PureComponent) {
         let { loginStatus: t, onBackPressed: e } = this.props;
         return (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, s.jsx)(d.xBx, {
+                (0, s.jsx)(u.xBx, {
                     title: T.intl.string(T.t.bPP34Q),
                     subtitle: T.intl.string(T.t.rvx0T4),
                 }),
-                (0, s.jsx)(d.fef, { children: this.renderDefaultForm() }),
-                (0, s.jsx)(d.Go$, {
+                (0, s.jsx)(u.fef, { children: this.renderDefaultForm() }),
+                (0, s.jsx)(u.Go$, {
                     leading: (0, s.jsx)(c.Avr, {
                         variant: "secondary",
                         size: "md",
@@ -230,11 +230,11 @@ class M extends (n = o.PureComponent) {
             r = t ? T.intl.string(T.t["6eNTWe"]) : T.intl.string(T.t["pCBti+"]);
         return (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, s.jsx)(d.xBx, {
+                (0, s.jsx)(u.xBx, {
                     title: e,
                     subtitle: r,
                 }),
-                (0, s.jsx)(d.Go$, {
+                (0, s.jsx)(u.Go$, {
                     leading: (0, s.jsx)(c.Text, {
                         variant: "text-md/normal",
                         color: "text-subtle",
@@ -269,8 +269,8 @@ class M extends (n = o.PureComponent) {
     }
     renderPhonePasswordRecovery() {
         let { phoneVerifyError: t } = this.state;
-        return (0, s.jsx)(d.fef, {
-            children: (0, s.jsx)(b.Z, {
+        return (0, s.jsx)(u.fef, {
+            children: (0, s.jsx)(_.Z, {
                 title: T.intl.string(T.t["+xqy3d"]),
                 subtitle: T.intl.format(T.t.ef4uZ7, { onResendClick: this.handleResendCode }),
                 error: t,
@@ -357,7 +357,7 @@ class M extends (n = o.PureComponent) {
                                   },
                               ];
                               return (0, s.jsx)(
-                                  d.Modal,
+                                  u.Modal,
                                   N(
                                       D(
                                           {
@@ -375,27 +375,10 @@ class M extends (n = o.PureComponent) {
                                   ),
                               );
                           })
-                        : (0, c.h7j)((t) =>
-                              (0, s.jsx)(
-                                  c.ConfirmModal,
-                                  N(
-                                      D(
-                                          {
-                                              header: T.intl.string(T.t.f5Pi7A),
-                                              confirmText: T.intl.string(T.t.BddRzS),
-                                              confirmButtonColor: h.zx.Colors.BRAND,
-                                          },
-                                          t,
-                                      ),
-                                      {
-                                          children: (0, s.jsx)(c.Text, {
-                                              variant: "text-md/normal",
-                                              children: T.intl.format(T.t["6u5hQ9"], { email: r }),
-                                          }),
-                                      },
-                                  ),
-                              ),
-                          );
+                        : (0, h.Z)({
+                              title: T.intl.string(T.t.f5Pi7A),
+                              subtitle: T.intl.format(T.t["6u5hQ9"], { email: r }),
+                          });
                 } catch (e) {
                     let t = (0, m.p)(e);
                     this.setState({ errors: t });
@@ -498,13 +481,13 @@ let Z = function (t) {
             }
             return s;
         })(t, ["onClose", "transitionState", "onBackPressed"]);
-    let l = (0, u.cj)([S.Z, j.default, w.Z, O.Z], () => ({
-        authenticated: j.default.isAuthenticated(),
-        isPasswordlessActive: j.default.getIsPasswordlessActive(),
-        loginStatus: j.default.getLoginStatus(),
-        mfaTicket: j.default.getMFATicket(),
-        mfaMethods: j.default.getMFAMethods(),
-        defaultRoute: S.Z.defaultRoute,
+    let l = (0, d.cj)([j.Z, S.default, w.Z, O.Z], () => ({
+        authenticated: S.default.isAuthenticated(),
+        isPasswordlessActive: S.default.getIsPasswordlessActive(),
+        loginStatus: S.default.getLoginStatus(),
+        mfaTicket: S.default.getMFATicket(),
+        mfaMethods: S.default.getMFAMethods(),
+        defaultRoute: j.Z.defaultRoute,
         country: w.Z.getCountryCode(),
         theme: O.Z.theme,
     }));
@@ -515,7 +498,7 @@ let Z = function (t) {
     let h = o.useCallback(() => {
         e(), n();
     }, [e, n]);
-    return (0, s.jsx)(d.IX, {
+    return (0, s.jsx)(u.IX, {
         size: "md",
         onClose: e,
         transitionState: r,
