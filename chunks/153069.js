@@ -214,7 +214,7 @@ class M extends (n = o.PureComponent) {
             ticket: this.props.mfaTicket,
             methods: this.props.mfaMethods,
         };
-        return (0, s.jsx)(C.Cd, {
+        return (0, s.jsx)(C.C, {
             mfaFinish: this.handleTokenSubmitMFA,
             mfaChallenge: t,
             onEarlyClose: () => {

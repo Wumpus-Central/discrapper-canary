@@ -1,14 +1,14 @@
 n.d(t, { Z: () => o });
-var l = n(54381);
+var r = n(54381);
 n(473749);
-var r = n(481060),
+var l = n(481060),
     i = n(600164),
     s = n(388032),
     a = n(357507);
 let o = {
     SlideContent: function (e) {
         let { children: t, scrollbarType: n } = e;
-        return (0, l.jsx)(r.hzk, {
+        return (0, r.jsx)(l.hzk, {
             className: a.content,
             scrollbarType: n,
             children: t,
@@ -18,7 +18,7 @@ let o = {
         let { error: t } = e;
         return null == t
             ? null
-            : (0, l.jsx)(r.Text, {
+            : (0, r.jsx)(l.Text, {
                   className: a.error,
                   variant: "text-sm/normal",
                   color: "text-feedback-critical",
@@ -26,29 +26,29 @@ let o = {
               });
     },
     SlideFooter: function (e) {
-        let { mfaChallenge: t, setSlide: n, leadingButton: i, showConfirm: a = !1, disabled: o, submitting: d } = e,
-            u = t.methods.length > 1;
-        return null != i || u || a
-            ? (0, l.jsx)(r.mzw, {
-                  children: (0, l.jsxs)(r.ButtonGroup, {
+        let { mfaChallenge: t, setSlide: n, trailingButton: i, showConfirm: a = !1, disabled: o, submitting: c } = e,
+            d = t.methods.length > 1;
+        return null != i || d || a
+            ? (0, r.jsx)(l.mzw, {
+                  children: (0, r.jsxs)(l.ButtonGroup, {
                       fullWidth: !0,
                       direction: "vertical",
                       children: [
-                          i,
-                          u &&
-                              (0, l.jsx)(r.Button, {
+                          d &&
+                              (0, r.jsx)(l.Button, {
                                   variant: "secondary",
                                   text: s.intl.string(s.t.Tot4EC),
                                   onClick: () => n("select"),
                               }),
                           a &&
-                              (0, l.jsx)(r.Button, {
+                              (0, r.jsx)(l.Button, {
                                   type: "submit",
                                   variant: "primary",
                                   text: s.intl.string(s.t["cY+Oob"]),
                                   disabled: o,
-                                  loading: d,
+                                  loading: c,
                               }),
+                          i,
                       ],
                   }),
               })
@@ -56,25 +56,24 @@ let o = {
     },
     SlideHeader: function (e) {
         let { subtitle: t, onClose: n, headerAlignStart: o } = e;
-        return (0, l.jsxs)(r.xBx, {
+        return (0, r.jsxs)(l.xBx, {
             direction: i.Z.Direction.VERTICAL,
             className: a.header,
             separator: !1,
             align: o ? i.Z.Align.START : void 0,
             children: [
-                (0, l.jsx)(r.Heading, {
+                (0, r.jsx)(l.Heading, {
                     variant: "heading-xl/semibold",
                     color: "header-primary",
                     children: s.intl.string(s.t.saHocI),
                 }),
                 null != t &&
-                    (0, l.jsx)(r.Text, {
-                        color: "text-default",
-                        variant: "text-md/normal",
+                    (0, r.jsx)(l.Heading, {
+                        variant: "heading-lg/semibold",
                         className: a.subtitle,
                         children: t,
                     }),
-                (0, l.jsx)(r.olH, {
+                (0, r.jsx)(l.olH, {
                     className: a.closeButton,
                     onClick: n,
                 }),

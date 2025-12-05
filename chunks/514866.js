@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var a = n(54381);
 n(473749);
 var l = n(120356),
@@ -18,30 +18,7 @@ var l = n(120356),
     b = n(134612),
     v = n(517269),
     j = n(197571);
-let _ = () => {
-    Promise.all([n.e("52030"), n.e("1286")])
-        .then(n.bind(n, 24031))
-        .then((e) => {
-            let { openMFAModal: t } = e;
-            t(
-                {
-                    ticket: "ticket",
-                    methods: [
-                        {
-                            type: "webauthn",
-                            challenge: "{}",
-                        },
-                        { type: "totp" },
-                        { type: "sms" },
-                        { type: "password" },
-                    ],
-                },
-                console.log,
-                console.error,
-            );
-        });
-};
-function y() {
+function _() {
     let e = g.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
         l = h.Rt.useSetting();
@@ -50,15 +27,6 @@ function y() {
             (0, a.jsx)("div", {
                 className: r()(v.buttonsContainer, j.marginBottom20),
                 children: (0, a.jsx)(x.g, { isDevTools: !0 }),
-            }),
-            (0, a.jsx)("div", {
-                className: r()(v.buttonsContainer, j.marginBottom8),
-                children: (0, a.jsx)(s.Button, {
-                    variant: "primary",
-                    size: "sm",
-                    text: "Launch MFA",
-                    onClick: _,
-                }),
             }),
             (0, a.jsx)("div", {
                 className: r()(v.buttonsContainer, j.marginBottom8),

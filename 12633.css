@@ -74247,6 +74247,11 @@ html .progress__61462 {
     top: var(--space-8)
 }
 
+.buttonContainer_e8b59c {
+    background-color: var(--background-surface-high);
+    border-radius: var(--radius-sm)
+}
+
 .messageGroupWrapper_e8b59c:focus-within .actionButtons_e8b59c,
 .messageGroupWrapper_e8b59c:hover .actionButtons_e8b59c {
     display: flex;

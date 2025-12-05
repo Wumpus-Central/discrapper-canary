@@ -1,26 +1,26 @@
 n.d(t, { Z: () => g }), n(388685), n(49124);
-var l = n(54381),
-    r = n(473749),
+var r = n(54381),
+    l = n(473749),
     i = n(849055),
     s = n(544891),
     a = n(481060),
     o = n(358085),
-    d = n(960048),
-    u = n(998502),
-    c = n(507453),
-    h = n(981631),
-    f = n(388032);
+    c = n(960048),
+    d = n(998502),
+    u = n(507453),
+    f = n(981631),
+    h = n(388032);
 function g(e) {
-    let { mfaChallenge: t, finish: n, setSlide: g, onClose: m, headerAlignStart: p } = e,
-        [b, S] = r.useState(!1),
-        [x, j] = r.useState(null),
-        { challenge: y } = t.methods.find((e) => "webauthn" === e.type),
+    let { mfaChallenge: t, finish: n, setSlide: g, onClose: m, headerAlignStart: b } = e,
+        [p, j] = l.useState(!1),
+        [y, x] = l.useState(null),
+        { challenge: S } = t.methods.find((e) => "webauthn" === e.type),
         v = async () => {
-            S(!0), j(null);
+            j(!0), x(null);
             let e =
-                    o.isPlatformEmbedded && u.ZP.supportsFeature(h.eRX.WEBAUTHN)
-                        ? u.ZP.webAuthnAuthenticate(y)
-                        : i.U2(JSON.parse(y)).then((e) => JSON.stringify(e)),
+                    o.isPlatformEmbedded && d.ZP.supportsFeature(f.eRX.WEBAUTHN)
+                        ? d.ZP.webAuthnAuthenticate(S)
+                        : i.U2(JSON.parse(S)).then((e) => JSON.stringify(e)),
                 t = async (e) => {
                     try {
                         await n({
@@ -28,32 +28,32 @@ function g(e) {
                             data: e,
                         });
                     } catch (e) {
-                        e instanceof s.Pd ? j(f.intl.string(f.t.xSCvBf)) : j(e.message);
+                        e instanceof s.Pd ? x(h.intl.string(h.t.xSCvBf)) : x(e.message);
                     }
                 };
             try {
                 let n = await e;
                 await t(n);
             } catch (e) {
-                d.Z.captureException(e), j(f.intl.string(f.t.xSCvBf));
+                c.Z.captureException(e), x(h.intl.string(h.t.xSCvBf));
             } finally {
-                S(!1);
+                j(!1);
             }
         };
-    return (0, l.jsxs)(l.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, l.jsx)(c.Z.SlideHeader, {
+            (0, r.jsx)(u.Z.SlideHeader, {
                 onClose: m,
-                headerAlignStart: p,
+                headerAlignStart: b,
             }),
-            null != x && (0, l.jsx)(c.Z.SlideContent, { children: (0, l.jsx)(c.Z.SlideError, { error: x }) }),
-            (0, l.jsx)(c.Z.SlideFooter, {
+            null != y && (0, r.jsx)(u.Z.SlideContent, { children: (0, r.jsx)(u.Z.SlideError, { error: y }) }),
+            (0, r.jsx)(u.Z.SlideFooter, {
                 mfaChallenge: t,
                 setSlide: g,
-                leadingButton: (0, l.jsx)(a.Button, {
+                trailingButton: (0, r.jsx)(a.Button, {
                     variant: "primary",
-                    text: f.intl.string(f.t.Xr3Eks),
-                    loading: b,
+                    text: h.intl.string(h.t.Xr3Eks),
+                    loading: p,
                     onClick: v,
                     fullWidth: !0,
                 }),

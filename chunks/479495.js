@@ -103,7 +103,7 @@ class E extends (n = i.PureComponent) {
             style: { padding: 0 },
             theme: r,
             className: n,
-            children: (0, s.jsx)(O.Cd, {
+            children: (0, s.jsx)(O.C, {
                 mfaFinish: a,
                 mfaChallenge: {
                     ticket: e,

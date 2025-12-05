@@ -492,7 +492,7 @@ class et extends (r = s.PureComponent) {
         };
         return (0, i.jsx)(v.ZP, {
             style: { padding: 0 },
-            children: (0, i.jsx)(S.Cd, {
+            children: (0, i.jsx)(S.C, {
                 mfaFinish: this.handleTokenSubmitMFA,
                 mfaChallenge: e,
                 onEarlyClose: () => {
