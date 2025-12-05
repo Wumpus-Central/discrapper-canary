@@ -151,12 +151,15 @@ let G = (e) => {
 class B extends i.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
-        return (0, r.jsx)(d.Button, {
-            variant: "overlay-primary",
-            size: "sm",
-            text: A.intl.string(A.t.k5WiPf),
-            onClick: this.handleClickJump,
-            loading: e,
+        return (0, r.jsx)("div", {
+            className: C.buttonContainer,
+            children: (0, r.jsx)(d.Button, {
+                variant: "secondary",
+                size: "sm",
+                text: A.intl.string(A.t.k5WiPf),
+                onClick: this.handleClickJump,
+                loading: e,
+            }),
         });
     }
     renderCloseButton() {
@@ -168,12 +171,15 @@ class B extends i.PureComponent {
             closeAriaLabel: a,
         } = this.props;
         return null != e && (t || n || (null != i && i.isPrivate()))
-            ? (0, r.jsx)(d.hU, {
-                  icon: d.Dio,
-                  size: "sm",
-                  variant: "overlay-primary",
-                  "aria-label": null != a ? a : A.intl.string(A.t.cpT0Cq),
-                  onClick: this.handleClickClose,
+            ? (0, r.jsx)("div", {
+                  className: C.buttonContainer,
+                  children: (0, r.jsx)(d.hU, {
+                      icon: d.Dio,
+                      size: "sm",
+                      variant: "secondary",
+                      "aria-label": null != a ? a : A.intl.string(A.t.cpT0Cq),
+                      onClick: this.handleClickClose,
+                  }),
               })
             : null;
     }
