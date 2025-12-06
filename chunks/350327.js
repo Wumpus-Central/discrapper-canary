@@ -10,9 +10,10 @@ n.d(t, {
     g_: () => S,
     ho: () => v,
     pG: () => O,
+    rH: () => D,
     rf: () => w,
-    uV: () => L,
-    x3: () => D,
+    uV: () => j,
+    x3: () => x,
     z5: () => C,
 });
 var r = n(442837),
@@ -191,9 +192,16 @@ function w(e) {
         E(m.QP.PROFILE_THEME_COLOR);
 }
 function D(e) {
+    a.Z.dispatch({
+        type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES",
+        displayNameStyles: e,
+    }),
+        E(m.QP.DISPLAY_NAME_STYLES);
+}
+function x(e) {
     a.Z.dispatch(g({ type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET" }, e)), E(m.QP.PRESET);
 }
-async function x() {
+async function L() {
     if (null == p.Z.applicationWidgetApplicationConfigs || !(p.Z.applicationWidgetApplicationConfigs.length > 0)) {
         a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_START" });
         try {
@@ -214,8 +222,8 @@ async function x() {
         }
     }
 }
-let L = (0, r.Kb)(p.Z, {
+let j = (0, r.Kb)(p.Z, {
     getQueryId: _.McO.APPLICATION_WIDGET_APPLICATION_CONFIGS,
     get: () => p.Z.applicationWidgetApplicationConfigs,
-    load: () => x(),
+    load: () => L(),
 });

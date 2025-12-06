@@ -5,7 +5,7 @@ n.d(t, {
     $e: () => f,
     $n: () => eJ,
     A5: () => B,
-    AU: () => Q,
+    AU: () => X,
     Bo: () => e4,
     C: () => s,
     C2: () => $,
@@ -30,7 +30,7 @@ n.d(t, {
     OT: () => ec,
     PremiumTypes: () => l,
     QF: () => ex,
-    QI: () => eQ,
+    QI: () => eX,
     QP: () => eG,
     Qh: () => e8,
     RU: () => ed,
@@ -78,7 +78,7 @@ n.d(t, {
     i_: () => z,
     ih: () => em,
     in: () => eA,
-    jy: () => eX,
+    jy: () => eQ,
     jz: () => eo,
     m8: () => V,
     mn: () => A,
@@ -99,7 +99,7 @@ n.d(t, {
     vK: () => e6,
     vL: () => eC,
     w1: () => eS,
-    wh: () => X,
+    wh: () => Q,
     xT: () => er,
     y7: () => g,
     ys: () => eF,
@@ -406,8 +406,8 @@ let P = Object.freeze({
     K = 14,
     z = "520373071933079552",
     q = "902329034132684800",
-    X = "983601860436819968",
-    Q = "983601860436819969",
+    Q = "983601860436819968",
+    X = "983601860436819969",
     J = "984244797441048577",
     $ = "1004850445463584768",
     ee = "1073698058383917056",
@@ -417,7 +417,7 @@ let P = Object.freeze({
     ei = "1268347360493174784",
     ea = "1271484512081285191",
     eo = "1161363847311785984",
-    es = [z, q, X, Q, J, $, ee, et, en, er, ei, ea, eo],
+    es = [z, q, Q, X, J, $, ee, et, en, er, ei, ea, eo],
     el = [en, er, ea],
     ec = [en, ea],
     eu = "1150904354090532864",
@@ -443,12 +443,12 @@ let P = Object.freeze({
             id: q,
             skus: ["521847234246082599"],
         },
-        [X]: {
-            id: X,
-            skus: ["521847234246082599"],
-        },
         [Q]: {
             id: Q,
+            skus: ["521847234246082599"],
+        },
+        [X]: {
+            id: X,
             skus: ["521847234246082599"],
         },
         [J]: {
@@ -707,6 +707,7 @@ var eG = (function (e) {
             (e.CLIENT_THEME = "client_theme"),
             (e.SHARED_CANVAS = "shared_canvas"),
             (e.PROFILE_EFFECT = "profile_effect"),
+            (e.DISPLAY_NAME_STYLES = "display_name_styles"),
             (e.PRESET = "preset"),
             e
         );
@@ -766,9 +767,9 @@ var ez = (function (e) {
     return (e.BOOST = "boost"), (e.DISMISS = "dismiss"), e;
 })({});
 let eq = new Set(["PL", "TR"]),
-    eX = [1, 2, 3],
-    eQ = [4, 5, 7, 6];
-[8, 9, 11, 10].concat(eX);
+    eQ = [1, 2, 3],
+    eX = [4, 5, 7, 6];
+[8, 9, 11, 10].concat(eQ);
 let eJ = 190;
 var e$ = (function (e) {
         return (e[(e.FRIEND_ANNIVERSARY = 0)] = "FRIEND_ANNIVERSARY"), e;

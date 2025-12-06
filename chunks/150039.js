@@ -69,11 +69,13 @@ function E(e, t) {
         { pendingGuildDisplayNameStyles: a, guildErrors: o } = (0, s.cj)([u.Z], () => ({
             pendingGuildDisplayNameStyles: u.Z.getPendingDisplayNameStyles(),
             guildErrors: u.Z.getErrors().displayNameStyles,
-        }));
+        })),
+        l = (0, s.e7)([_.Z], () => _.Z.getTryItOutDisplayNameStyles());
     return {
         userDisplayNameStyles: null == e ? void 0 : e.displayNameStyles,
         guildDisplayNameStyles: null == n ? void 0 : n.displayNameStyles,
         pendingDisplayNameStyles: null != t ? a : r,
+        tryItOutDisplayNameStyles: l,
         pendingErrors: null != t ? o : i,
     };
 }

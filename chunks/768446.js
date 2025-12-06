@@ -1,37 +1,39 @@
-n.d(t, { z: () => d });
+n.d(t, { z: () => u });
 var l = n(473749),
     o = n(522942),
     r = n(342905),
     i = n(809206),
     a = n(18438),
-    s = n(626135),
-    c = n(981631);
-function d(e) {
+    s = n(350327),
+    c = n(626135),
+    d = n(981631);
+function u(e) {
     let {
         hasChanges: t,
         selectedFontId: n,
-        selectedEffectId: d,
-        selectedColors: u,
-        defaultColor: p,
-        guildId: m,
-        onClose: f,
+        selectedEffectId: u,
+        selectedColors: p,
+        defaultColor: m,
+        guildId: f,
+        isTryItOut: g,
+        onClose: h,
     } = e;
     return l.useCallback(() => {
         if (t) {
-            let e = u;
-            d === o.m.SOLID && u.length > 0 && u[0] === p && (e = []);
+            let e = p;
+            u === o.m.SOLID && p.length > 0 && p[0] === m && (e = []);
             let t = {
                 fontId: n,
-                effectId: d,
+                effectId: u,
                 colors: e,
             };
-            null != m ? (0, a.N_)(t) : (0, i.NI)(t),
-                s.default.track(c.rMx.DISPLAY_NAME_STYLES_APPLIED, {
+            null != f ? (0, a.N_)(t) : g ? (0, s.rH)(t) : (0, i.NI)(t),
+                c.default.track(d.rMx.DISPLAY_NAME_STYLES_APPLIED, {
                     font_name: r.C[n],
-                    effect_name: o.m[d],
-                    colors: u,
+                    effect_name: o.m[u],
+                    colors: p,
                 }),
-                null == f || f();
+                null == h || h();
         }
-    }, [t, n, d, u, p, f, m]);
+    }, [t, n, u, p, m, h, f, g]);
 }
