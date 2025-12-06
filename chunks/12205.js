@@ -15,7 +15,6 @@ e.exports = {
     errorImage: "errorImage__9b0f4",
     errorBody: "errorBody__9b0f4",
     iconContainer: "iconContainer__9b0f4",
-    ctas: "ctas__9b0f4",
     iconSparklePlus: "iconSparklePlus__9b0f4",
     iconLink: "iconLink__9b0f4",
     iconSparkleStar: "iconSparkleStar__9b0f4",
