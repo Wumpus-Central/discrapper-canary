@@ -95,6 +95,7 @@ class u extends a.Z {
             o(this, "targetApplication", void 0),
             o(this, "type", void 0),
             o(this, "flags", void 0),
+            o(this, "roles", void 0),
             (this.code = e.code || ""),
             (this.temporary = e.temporary || !1),
             (this.revoked = e.revoked || !1),
@@ -109,6 +110,7 @@ class u extends a.Z {
             (this.targetUser = e.targetUser || null),
             (this.targetApplication = e.targetApplication || null),
             (this.type = e.type || null),
-            (this.flags = e.flags || 0);
+            (this.flags = e.flags || 0),
+            (this.roles = e.roles || []);
     }
 }

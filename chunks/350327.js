@@ -2,18 +2,17 @@ n.d(t, {
     CM: () => A,
     Cf: () => I,
     ID: () => T,
-    Ju: () => R,
     Ls: () => y,
     Xz: () => P,
     Z: () => b,
     c_: () => N,
-    f4: () => w,
+    f4: () => R,
     g_: () => S,
     ho: () => v,
     pG: () => O,
-    rf: () => D,
-    uV: () => j,
-    x3: () => x,
+    rf: () => w,
+    uV: () => L,
+    x3: () => D,
     z5: () => C,
 });
 var r = n(442837),
@@ -179,29 +178,22 @@ function P(e) {
 }
 function R(e) {
     a.Z.dispatch({
-        type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT",
-        profileEffect: e,
-    }),
-        E(m.QP.PROFILE_EFFECT);
-}
-function w(e) {
-    a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
         banner: e,
     }),
         E(m.QP.PROFILE_BANNER);
 }
-function D(e) {
+function w(e) {
     a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
         themeColors: e,
     }),
         E(m.QP.PROFILE_THEME_COLOR);
 }
-function x(e) {
+function D(e) {
     a.Z.dispatch(g({ type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET" }, e)), E(m.QP.PRESET);
 }
-async function L() {
+async function x() {
     if (null == p.Z.applicationWidgetApplicationConfigs || !(p.Z.applicationWidgetApplicationConfigs.length > 0)) {
         a.Z.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_APPLICATION_CONFIGS_FETCH_START" });
         try {
@@ -222,8 +214,8 @@ async function L() {
         }
     }
 }
-let j = (0, r.Kb)(p.Z, {
+let L = (0, r.Kb)(p.Z, {
     getQueryId: _.McO.APPLICATION_WIDGET_APPLICATION_CONFIGS,
     get: () => p.Z.applicationWidgetApplicationConfigs,
-    load: () => L(),
+    load: () => x(),
 });

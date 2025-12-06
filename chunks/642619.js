@@ -55,7 +55,7 @@ function l(e, t) {
     );
 }
 let c = (e) => {
-    let { initialSelectedEffect: t, analyticsLocations: a, guild: s, isTryItOut: c } = e;
+    let { initialSelectedEffect: t, analyticsLocations: a, guild: s } = e;
     (0, i.ZDy)(async () => {
         let { default: e } = await n.e("55183").then(n.bind(n, 191564));
         return (n) =>
@@ -65,7 +65,6 @@ let c = (e) => {
                     guild: s,
                     initialSelectedEffect: t,
                     analyticsLocations: a,
-                    isTryItOut: c,
                 }),
             );
     }, {});

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => y });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -7,84 +7,78 @@ var r = n(54381),
     l = n(481060),
     c = n(906732),
     u = n(642619),
-    d = n(350327),
-    f = n(626135),
-    p = n(74538),
-    _ = n(150039),
-    m = n(993413),
-    h = n(504983),
-    g = n(981631),
-    E = n(474936),
-    b = n(388032),
-    y = n(78946);
-function O(e) {
+    d = n(626135),
+    f = n(74538),
+    p = n(150039),
+    _ = n(993413),
+    m = n(504983),
+    h = n(981631),
+    g = n(474936),
+    E = n(388032),
+    b = n(78946);
+function y(e) {
     let {
             user: t,
             guild: n,
             initialSelectedEffect: a,
-            className: O,
-            sectionTitle: v,
-            forcedDivider: S = !1,
-            withTutorial: I = !1,
-            showBorder: T = !1,
-            isTryItOut: A = !1,
+            className: y,
+            sectionTitle: O,
+            forcedDivider: v = !1,
+            withTutorial: S = !1,
+            showBorder: I = !1,
         } = e,
-        { analyticsLocations: C } = (0, c.ZP)(),
-        N = p.ZP.canUsePremiumProfileCustomization(t),
-        P = (0, _.nh)({
+        { analyticsLocations: T } = (0, c.ZP)(),
+        A = f.ZP.canUsePremiumProfileCustomization(t),
+        C = (0, p.nh)({
             user: t,
             guildId: null == n ? void 0 : n.id,
         }),
-        { pendingProfileEffect: R, errors: w } = (0, _.sY)({
-            guildId: null == n ? void 0 : n.id,
-            isTryItOut: A,
-        }),
-        D = i.useCallback(() => {
+        { pendingProfileEffect: N, errors: P } = (0, p.xZ)(null == n ? void 0 : n.id),
+        R = void 0 === N ? null != C : null != N,
+        w = () => {
             (0, u.H)({
-                analyticsLocations: C,
+                analyticsLocations: T,
                 guild: n,
                 initialSelectedEffect: a,
-                isTryItOut: A,
             });
-        }, [C, a, n, A]);
+        },
+        D = () => {
+            (0, p.UK)(null, null == n ? void 0 : n.id);
+        };
     i.useEffect(() => {
-        N &&
-            f.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: E.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: C,
+        A &&
+            d.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: g.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
+                location_stack: T,
             });
-    }, [N, C]);
-    let x = A || void 0 !== R ? null != R : null != P;
-    function L() {
-        A ? (0, d.Ju)(null) : (0, _.UK)(null, null == n ? void 0 : n.id);
-    }
-    let j = I ? l.gtL : s.zx;
-    return (0, r.jsx)(m.Z, {
-        forcedDivider: S,
-        borderType: h.Y.PREMIUM,
+    }, [A, T]);
+    let x = S ? l.gtL : s.zx;
+    return (0, r.jsx)(_.Z, {
+        forcedDivider: v,
+        borderType: m.Y.PREMIUM,
         hasBackground: !0,
-        title: v,
-        showBorder: T,
-        errors: w,
-        className: O,
+        title: O,
+        showBorder: I,
+        errors: P,
+        className: y,
         children: (0, r.jsxs)("div", {
-            className: y.buttonsContainer,
+            className: b.buttonsContainer,
             children: [
-                (0, r.jsx)(j, {
+                (0, r.jsx)(x, {
                     size: s.zx.Sizes.SMALL,
-                    onClick: D,
-                    className: o()({ [y.buttonHighlighted]: I }),
-                    children: b.intl.string(b.t["/dRfCf"]),
+                    onClick: w,
+                    className: o()({ [b.buttonHighlighted]: S }),
+                    children: E.intl.string(E.t["/dRfCf"]),
                 }),
-                x &&
+                R &&
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: y.removeButton,
+                        className: b.removeButton,
                         children: (0, r.jsx)(l.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: null != n ? b.intl.string(b.t.CHf9iJ) : b.intl.string(b.t.uMuafO),
-                            onClick: L,
+                            text: null != n ? E.intl.string(E.t.CHf9iJ) : E.intl.string(E.t.uMuafO),
+                            onClick: D,
                         }),
                     }),
             ],

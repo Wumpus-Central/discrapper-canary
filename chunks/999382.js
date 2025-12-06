@@ -120,8 +120,8 @@ let F = !0,
     K = j.QZA.CLOSED,
     z = {},
     q = null,
-    X = !1,
     Q = !1,
+    X = !1,
     J = !1,
     $ = null,
     ee = null,
@@ -165,7 +165,7 @@ function eh(e) {
     let _ = S.Z.getProfile(n);
     (o = s = p),
         (l = c = _),
-        (J = Q),
+        (J = X),
         (ee = $),
         (K = j.QZA.OPEN),
         (z = {}),
@@ -184,7 +184,7 @@ function eg() {
     (W = !1),
         (K = j.QZA.CLOSED),
         (o = s = null),
-        (X = !1),
+        (Q = !1),
         (J = !1),
         (ee = null),
         (et = null),
@@ -289,6 +289,7 @@ function eN(e) {
         maxAge: e.max_age,
         createdAt: g()(null != (t = e.created_at) ? t : void 0),
         flags: e.flags,
+        roles: e.roles,
     });
 }
 function eP(e) {
@@ -372,7 +373,7 @@ function eB(e) {
     u === n && (u = null);
 }
 function eF(e) {
-    (X = !0), (Q = J = e.enabled), ($ = ee = e.channelId);
+    (Q = !0), (X = J = e.enabled), ($ = ee = e.channelId);
 }
 function eV(e) {
     let { guildId: t, enabled: n, channelId: r } = e;
@@ -408,7 +409,7 @@ function eq(e) {
         new Set([...s.features, j.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE]),
     );
 }
-function eX(e) {
+function eQ(e) {
     var t, n, r, i, a, o, l, c, u, d;
     let { guildId: f, metadata: p } = e;
     null != s &&
@@ -429,7 +430,7 @@ function eX(e) {
             }),
         (z = {}));
 }
-function eQ() {
+function eX() {
     es = el = ea;
 }
 function eJ(e) {
@@ -523,7 +524,7 @@ class te extends (p = E.ZP.Store) {
         return el;
     }
     widgetHasChanges() {
-        return !1 !== X && (J !== Q || ee !== $);
+        return !1 !== Q && (J !== X || ee !== $);
     }
     hasChanges() {
         return !m().isEqual(s, o) || !m().isEqual(el, es) || !m().isEqual(c, l) || this.widgetHasChanges();
@@ -595,7 +596,7 @@ class te extends (p = E.ZP.Store) {
             bansVersion: eu,
             invites: ef,
             selectedRoleId: u,
-            fetchedEmbed: X,
+            fetchedEmbed: Q,
             embedEnabled: J,
             embedChannelId: ee,
             mfaLevel: er,
@@ -658,8 +659,8 @@ let tt = new te(
               GUILD_INTEGRATIONS_UPDATE: eK,
               INSTANT_INVITE_REVOKE_SUCCESS: eR,
               INSTANT_INVITE_CREATE_SUCCESS: ew,
-              GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: eX,
-              GUILD_DISCOVERY_METADATA_FETCH_FAIL: eQ,
+              GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: eQ,
+              GUILD_DISCOVERY_METADATA_FETCH_FAIL: eX,
               GUILD_DISCOVERY_CATEGORY_ADD: e0,
               GUILD_DISCOVERY_CATEGORY_DELETE: e1,
               GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL: e3,

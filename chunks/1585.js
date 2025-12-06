@@ -60,10 +60,10 @@ function c(e, t) {
     );
 }
 function u(e) {
-    return "number" != typeof e ? (0, i.pxk)(e) * a.hs : e * a.hs;
+    return "number" != typeof e ? (0, i.dcp)(e) * a.hs : e * a.hs;
 }
 let d = (e) => {
-    let { analyticsLocations: t, initialSelectedDecoration: a, isTryItOut: o, guild: l, onClose: u } = e;
+    let { analyticsLocations: t, initialSelectedDecoration: a, guild: o, onClose: l } = e;
     (0, i.ZDy)(async () => {
         let { default: e } = await n.e("79589").then(n.bind(n, 235400));
         return (n) =>
@@ -71,11 +71,10 @@ let d = (e) => {
                 e,
                 c(s({}, n), {
                     onCloseModal: n.onClose,
-                    onClose: u,
+                    onClose: l,
                     analyticsLocations: t,
                     initialSelectedDecoration: a,
-                    isTryItOut: o,
-                    guild: l,
+                    guild: o,
                 }),
             );
     }, {});

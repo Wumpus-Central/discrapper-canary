@@ -1,13 +1,11 @@
 let r, i, a, o, s, l, c, u, d, f, p, _, m, h, g, E, b, y, O;
-n.d(t, { Z: () => ed });
+n.d(t, { Z: () => el });
 var v,
     S = n(979554),
     I = n(442837),
     T = n(570140),
-    A = n(922347),
-    C = n(212161),
-    N = n(981631);
-function P(e, t, n) {
+    A = n(981631);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,39 +18,39 @@ function P(e, t, n) {
         e
     );
 }
-let R = N.QZA.CLOSED,
-    w = {};
+let N = A.QZA.CLOSED,
+    P = {};
+function R() {
+    (N = A.QZA.OPEN), (P = {});
+}
+function w() {
+    (N = A.QZA.CLOSED), (P = {});
+}
 function D() {
-    (R = N.QZA.OPEN), (w = {});
+    (N = A.QZA.SUBMITTING), (P = {});
 }
-function x() {
-    (R = N.QZA.CLOSED), (w = {});
+function x(e) {
+    var t;
+    if (N !== A.QZA.SUBMITTING) return !1;
+    (N = A.QZA.OPEN), (P = null != (t = e.errors) ? t : {});
 }
-function L() {
-    (R = N.QZA.SUBMITTING), (w = {});
+function L(e) {
+    let { section: t } = e;
+    return t === A.oAB.ACCOUNT && R();
 }
 function j(e) {
-    var t;
-    if (R !== N.QZA.SUBMITTING) return !1;
-    (R = N.QZA.OPEN), (w = null != (t = e.errors) ? t : {});
-}
-function M(e) {
-    let { section: t } = e;
-    return t === N.oAB.ACCOUNT && D();
-}
-function k(e) {
     let { avatar: t } = e;
     (r = t), (g = void 0);
 }
-function U(e) {
+function M(e) {
     let { globalName: t } = e;
     i = t;
 }
-function G(e) {
+function k(e) {
     let { legacyUsernameDisabled: t } = e;
     p = t;
 }
-function Z(e) {
+function U(e) {
     let { item: t } = e;
     t.type === S.Z.AVATAR_DECORATION
         ? (a = t.value)
@@ -60,95 +58,91 @@ function Z(e) {
           ? (o = t.value)
           : t.type === S.Z.NAMEPLATE && (s = t.value);
 }
-function B(e) {
-    let { item: t } = e;
-    (0, A.M)(t) ? ((E = t), (b = null)) : (0, C.H)(t) && ((E = null), (b = t));
-}
-function F(e) {
+function G(e) {
     let { banner: t } = e;
     l = t;
 }
-function V(e) {
+function Z(e) {
     let { bio: t } = e;
     c = t;
 }
-function H(e) {
+function B(e) {
     let { pronouns: t } = e;
     u = t;
 }
-function Y(e) {
+function F(e) {
     let { color: t } = e;
     d = t;
 }
-function W(e) {
+function V(e) {
     let { themeColors: t } = e;
     f = t;
 }
-function K(e) {
+function H(e) {
     let { primaryGuildId: t } = e;
     _ = t;
 }
-function z(e) {
+function Y(e) {
     let { displayNameStyles: t } = e;
     m = t;
 }
-function q(e) {
+function W(e) {
     let { themeColors: t } = e;
     h = t;
 }
-function X(e) {
+function K(e) {
     let { avatar: t } = e;
     g = t;
 }
-function Q(e) {
+function z(e) {
     let { avatarDecoration: t } = e;
     E = t;
 }
-function J(e) {
+function q(e) {
     let { profileEffect: t } = e;
     b = t;
 }
-function $(e) {
+function Q(e) {
     let { banner: t } = e;
     y = t;
 }
-function ee(e) {
+function X(e) {
     let { banner: t, themeColors: n, avatarDecoration: r, displayNameStyles: i } = e;
     (y = t), (h = n), (E = r), (O = i);
 }
-function et() {
+function J() {
     r = void 0;
 }
-function en() {
-    w = {};
+function $() {
+    P = {};
 }
-function er() {
-    ei(), ea(), es(), el(), (w = {});
+function ee() {
+    et(), en(), ei(), ea(), (P = {});
 }
-function ei() {
+function et() {
     (r = void 0), (i = void 0), (a = void 0), (o = void 0), (s = void 0), (m = void 0);
 }
-function ea() {
+function en() {
     (l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (o = void 0);
 }
-function eo() {
+function er() {
     (g = void 0), (E = void 0), (b = void 0), (y = void 0), (h = void 0), (O = void 0);
 }
-function es() {
+function ei() {
     p = void 0;
 }
-function el() {
+function ea() {
     _ = void 0;
 }
-function ec() {
-    er(), eo(), x();
+function eo() {
+    ee(), er(), w();
 }
-class eu extends (v = I.ZP.Store) {
+class es extends (v = I.ZP.Store) {
     getFormState() {
-        return R;
+        return N;
     }
     getErrors() {
-        return w;
+        return P;
     }
     showNotice() {
         return (
@@ -168,7 +162,7 @@ class eu extends (v = I.ZP.Store) {
         );
     }
     getIsSubmitDisabled() {
-        return void 0 !== c && c.length > N.tPV;
+        return void 0 !== c && c.length > A.tPV;
     }
     getPendingAvatar() {
         return r;
@@ -246,40 +240,39 @@ class eu extends (v = I.ZP.Store) {
         };
     }
 }
-P(eu, "displayName", "UserSettingsAccountStore");
-let ed = new eu(T.Z, {
-    USER_SETTINGS_ACCOUNT_INIT: D,
-    USER_SETTINGS_MODAL_INIT: D,
-    USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: D,
-    USER_SETTINGS_MODAL_SET_SECTION: M,
-    USER_SETTINGS_ACCOUNT_CLOSE: x,
-    USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: ec,
-    USER_SETTINGS_ACCOUNT_SUBMIT: L,
-    USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: j,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: k,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: U,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: G,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_COLLECTIBLES_ITEM: Z,
-    USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: B,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: F,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: V,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: H,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: Y,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: W,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: X,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: Q,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT: J,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: $,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: q,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET: ee,
-    USER_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID: K,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_DISPLAY_NAME_STYLES: z,
-    USER_SETTINGS_CLEAR_ERRORS: en,
-    USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: ei,
-    USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: ea,
-    USER_SETTINGS_RESET_ALL_PENDING: er,
-    USER_SETTINGS_RESET_ALL_TRY_IT_OUT: eo,
-    USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED: es,
-    USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: el,
-    LOGOUT: et,
+C(es, "displayName", "UserSettingsAccountStore");
+let el = new es(T.Z, {
+    USER_SETTINGS_ACCOUNT_INIT: R,
+    USER_SETTINGS_MODAL_INIT: R,
+    USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: R,
+    USER_SETTINGS_MODAL_SET_SECTION: L,
+    USER_SETTINGS_ACCOUNT_CLOSE: w,
+    USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: eo,
+    USER_SETTINGS_ACCOUNT_SUBMIT: D,
+    USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: x,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: j,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: M,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: k,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_COLLECTIBLES_ITEM: U,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: G,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: Z,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: B,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: F,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: V,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: K,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: z,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT: q,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: Q,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: W,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET: X,
+    USER_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID: H,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_DISPLAY_NAME_STYLES: Y,
+    USER_SETTINGS_CLEAR_ERRORS: $,
+    USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: et,
+    USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: en,
+    USER_SETTINGS_RESET_ALL_PENDING: ee,
+    USER_SETTINGS_RESET_ALL_TRY_IT_OUT: er,
+    USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED: ei,
+    USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: ea,
+    LOGOUT: J,
 });

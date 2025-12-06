@@ -119,7 +119,6 @@ function v(e) {
                             (0, u.ps)({
                                 guild: null == n ? void 0 : n,
                                 analyticsLocations: P,
-                                isTryItOut: A,
                             });
                         },
                     });

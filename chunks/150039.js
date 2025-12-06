@@ -1,6 +1,7 @@
 n.d(t, {
     Jw: () => I,
     PO: () => T,
+    Tb: () => O,
     UK: () => A,
     Wh: () => C,
     Ys: () => N,
@@ -11,9 +12,8 @@ n.d(t, {
     i3: () => b,
     mD: () => E,
     nh: () => y,
-    sY: () => v,
-    wE: () => O,
     xQ: () => S,
+    xZ: () => v,
 }),
     n(539854);
 var r = n(473749),
@@ -96,36 +96,26 @@ function y(e) {
     });
 }
 function O(e) {
-    let { guildId: t, isTryItOut: n } = e;
-    return (0, s.cj)([u.Z, _.Z], () =>
-        n
-            ? { pendingAvatarDecoration: _.Z.getTryItOutAvatarDecoration() }
-            : null == t
-              ? {
-                    pendingAvatarDecoration: _.Z.getPendingAvatarDecoration(),
-                    errors: _.Z.getErrors().avatarDecoration,
-                }
-              : {
-                    pendingAvatarDecoration: u.Z.getPendingAvatarDecoration(),
-                    errors: u.Z.getErrors().avatarDecoration,
-                },
-    );
+    let t = (0, s.cj)([_.Z], () => ({
+            pendingAvatarDecoration: _.Z.getPendingAvatarDecoration(),
+            errors: _.Z.getErrors().avatarDecoration,
+        })),
+        n = (0, s.cj)([u.Z], () => ({
+            pendingAvatarDecoration: u.Z.getPendingAvatarDecoration(),
+            errors: u.Z.getErrors().avatarDecoration,
+        }));
+    return null != e ? n : t;
 }
 function v(e) {
-    let { guildId: t, isTryItOut: n } = e;
-    return (0, s.cj)([_.Z, u.Z], () =>
-        n
-            ? { pendingProfileEffect: _.Z.getTryItOutProfileEffect() }
-            : null == t
-              ? {
-                    pendingProfileEffect: _.Z.getPendingProfileEffect(),
-                    errors: u.Z.getErrors().profileEffect,
-                }
-              : {
-                    pendingProfileEffect: u.Z.getPendingProfileEffect(),
-                    errors: _.Z.getErrors().profileEffect,
-                },
-    );
+    let t = (0, s.cj)([_.Z], () => ({
+            pendingProfileEffect: _.Z.getPendingProfileEffect(),
+            errors: _.Z.getErrors().profileEffect,
+        })),
+        n = (0, s.cj)([u.Z], () => ({
+            pendingProfileEffect: u.Z.getPendingProfileEffect(),
+            errors: u.Z.getErrors().profileEffect,
+        }));
+    return null != e ? n : t;
 }
 function S(e, t) {
     (0, d.Cf)(e === t ? void 0 : e);
