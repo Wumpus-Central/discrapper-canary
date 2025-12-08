@@ -130,32 +130,36 @@ function L(e) {
         F = i.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
         V = i.isFirstMessageInForumPost(j),
         H = (0, u.A)((null != (n = i.editedTimestamp) ? n : i.timestamp).valueOf()),
-        { content: Y, hasSpoilerEmbeds: W } = (0, E.Z)(i, {
+        {
+            content: Y,
+            hasSpoilerEmbeds: W,
+            hasBailedAst: K,
+        } = (0, E.Z)(i, {
             hideSimpleEmbedContent: L,
             allowList: V || H,
             allowHeading: V || H,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        K = i.type === A.uaV.REPLY ? i.messageReference : void 0,
-        z = (0, l.e7)([d.Z], () => d.Z.getMessageByReference(K)),
-        q = (0, s.JA)(i.id),
+        z = i.type === A.uaV.REPLY ? i.messageReference : void 0,
+        q = (0, l.e7)([d.Z], () => d.Z.getMessageByReference(z)),
+        Q = (0, s.JA)(i.id),
         X = (0, m.ZP)(i),
-        Q = (0, l.e7)(
+        J = (0, l.e7)(
             [f.Z],
             () => i.hasFlag(A.iLy.HAS_THREAD) && f.Z.getChannel(p.default.castMessageIdAsChannelId(i.id)),
         ),
-        J = (0, c.p9)({
+        $ = (0, c.p9)({
             guildId: j.guild_id,
             roleId: X.iconRoleId,
         }),
-        $ = (0, b.Z)({
+        ee = (0, b.Z)({
             message: i,
             channel: j,
             enabled: Z,
         }),
-        ee = (0, g.iG)(i),
-        et = (0, g.Gx)(i);
+        et = (0, g.iG)(i),
+        en = (0, g.Gx)(i);
     return (0, r.jsx)(
         h.Z,
         P(
@@ -166,28 +170,28 @@ function L(e) {
                     [C.disableInteraction]: F,
                 }),
                 disableInteraction: F,
-                childrenRepliedMessage: (0, T.Z)(i, j, K, z, a),
+                childrenRepliedMessage: (0, T.Z)(i, j, z, q, a),
                 childrenExecutedCommand: (0, I.Z)(i, j, a),
                 childrenHeader: (0, v.Z)(
                     w(P({}, e), {
                         guildId: j.guild_id,
                         author: X,
-                        roleIcon: J,
+                        roleIcon: $,
                     }),
                 ),
-                childrenAccessories: e.hideAccessories ? void 0 : (0, y.Q)(e, W),
+                childrenAccessories: e.hideAccessories ? void 0 : (0, y.Q)(e, W, K),
                 childrenMessageContent: (0, O.Z)(e, Y),
                 childrenSystemMessage: (0, S.Z)(w(P({}, e), { disableInteraction: F })),
                 onContextMenu: R,
                 onClick: x,
-                hasThread: G && null != Q && i.hasFlag(A.iLy.HAS_THREAD),
+                hasThread: G && null != J && i.hasFlag(A.iLy.HAS_THREAD),
                 hasReply: i.type === A.uaV.REPLY,
-                "aria-labelledby": ee,
-                "aria-describedby": et,
-                messageRef: $,
+                "aria-labelledby": et,
+                "aria-describedby": en,
+                messageRef: ee,
                 author: X,
             },
-            q,
+            Q,
             B,
         ),
     );

@@ -6,5 +6,6 @@ function a(e) {
     return {
         content: (0, r.jsx)(i.ZP, { message: e }),
         hasSpoilerEmbeds: !1,
+        hasBailedAst: !1,
     };
 }

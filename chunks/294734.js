@@ -90,7 +90,11 @@ function R(e) {
         E = c && u,
         b = (0, o.e7)([g.Z], () => g.Z.isDeveloper),
         y = (0, d.A)((null != (t = l.editedTimestamp) ? t : l.timestamp).valueOf()),
-        { content: O, hasSpoilerEmbeds: v } = (0, p.Z)(l, {
+        {
+            content: O,
+            hasSpoilerEmbeds: v,
+            hasBailedAst: S,
+        } = (0, p.Z)(l, {
             hideSimpleEmbedContent: E,
             isInteracting: !1,
             formatInline: !1,
@@ -100,9 +104,9 @@ function R(e) {
             allowDevLinks: b,
             previewLinkTarget: !0,
         }),
-        S = (0, o.e7)([h.Z], () => h.Z.getChannel(n.channel_id)),
-        T = m.jU.useSetting();
-    return null == S
+        T = (0, o.e7)([h.Z], () => h.Z.getChannel(n.channel_id)),
+        A = m.jU.useSetting();
+    return null == T
         ? null
         : (0, r.jsxs)(
               "div",
@@ -117,15 +121,16 @@ function R(e) {
                               (0, r.jsx)(f.ZP, {
                                   message: l,
                                   content: O,
-                                  compact: T,
+                                  compact: A,
                               }),
                               (0, _.Z)({
                                   channelMessageProps: {
                                       message: l,
-                                      channel: S,
-                                      compact: T,
+                                      channel: T,
+                                      compact: A,
                                   },
                                   hasSpoilerEmbeds: v,
+                                  hasBailedAst: S,
                                   isInteracting: !1,
                                   isMessageSnapshot: !0,
                                   renderThreadAccessory: !1,

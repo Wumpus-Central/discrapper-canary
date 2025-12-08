@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(62764),
     g = n(79712),
     b = n(736052),
-    y = n(216572),
-    C = n(359110),
+    C = n(216572),
+    y = n(359110),
     v = n(359119),
     _ = n(13279),
     O = n(248789),
@@ -37,9 +37,9 @@ var i = n(54381),
     k = n(186877),
     U = n(294218),
     V = n(534469),
-    F = n(993397),
-    B = n(511010),
-    H = n(524444),
+    H = n(993397),
+    F = n(511010),
+    B = n(524444),
     G = n(977391),
     z = n(921235),
     W = n(97352),
@@ -90,6 +90,7 @@ let ee = r.memo(function (e) {
             channel_id: n.id,
             customRenderedContent: {
                 hasSpoilerEmbeds: !1,
+                hasBailedAst: !1,
                 content: (0, i.jsx)(h.p, {
                     channelId: n.id,
                     file: t,
@@ -122,8 +123,8 @@ function et(e) {
         em = (0, k.$)(U),
         eg = et.length > 0 && (null == (t = et.first()) ? void 0 : t.isFirstMessageInForumPost(U)),
         eb = (0, s.ts)(U),
-        ey = (0, l.e7)([j.Z], () => j.Z.shouldShowTopicsBar() && !ed),
-        eC = (0, x.P)(U.id),
+        eC = (0, l.e7)([j.Z], () => j.Z.shouldShowTopicsBar() && !ed),
+        ey = (0, x.P)(U.id),
         ev = (0, _.z)(U.id, X.zr),
         e_ = (0, d.k)(U.id),
         eO = (0, D.Z)(),
@@ -148,10 +149,10 @@ function et(e) {
                         senderId: e.getRecipientId(),
                     });
             return null;
-        })(U, null != (n = null != eC ? eC : ev) ? n : e_),
+        })(U, null != (n = null != ey ? ey : ev) ? n : e_),
         eE = U.isForumPost() && !eg ? (0, i.jsx)(m.Z, { postId: U.id }) : null,
         ej = (0, b.Z)(U.id),
-        eS = (0, y.nw)(U);
+        eS = (0, C.nw)(U);
     (0, W.Z)();
     let eP = null,
         eI = [],
@@ -169,7 +170,7 @@ function et(e) {
                             isBeforeGroup: null == e.content && $(el[t + 1]),
                         })
                       : (0, i.jsx)(
-                            B.Z,
+                            F.Z,
                             {
                                 isUnread: l,
                                 isBeforeGroup: null == e.content && $(el[t + 1]),
@@ -204,7 +205,7 @@ function et(e) {
                               ? J.t["VFWjc+"]
                               : J.t.xfkfTK),
                     (0, i.jsx)(
-                        F.Z,
+                        H.Z,
                         {
                             unreadId: K.j1,
                             messages: e,
@@ -317,18 +318,18 @@ function et(e) {
                     num_unread_summaries: o,
                     num_unread_messages: en,
                     last_ack_message_id: n,
-                    summaries_enabled_by_user: ey,
+                    summaries_enabled_by_user: eC,
                     summaries_enabled_for_channel: (0, s.Lp)(U),
                 }),
                 (0, s.Lp)(U))
             ) {
-                let n = ey
+                let n = eC
                     ? J.intl.format(t, { count: en })
                     : J.intl.format(e, {
                           count: en,
                           timestamp: l,
                       });
-                if (ey) {
+                if (eC) {
                     let e =
                         o > 0
                             ? (0, i.jsxs)(i.Fragment, {
@@ -358,7 +359,7 @@ function et(e) {
                                   color: "currentColor",
                                   children: n,
                               });
-                    r = (0, i.jsx)(H.G5, {
+                    r = (0, i.jsx)(B.G5, {
                         scrollManager: eo,
                         content: e,
                         channel: U,
@@ -400,7 +401,7 @@ function et(e) {
                                       children: n,
                                   }),
                     });
-                    r = (0, i.jsx)(H.LE, {
+                    r = (0, i.jsx)(B.LE, {
                         content: e,
                         channelId: U.id,
                     });
@@ -408,7 +409,7 @@ function et(e) {
             }
         } else
             eO.includes(q.E.NEW_MESSAGES) &&
-                (r = (0, i.jsx)(H.LE, {
+                (r = (0, i.jsx)(B.LE, {
                     content: J.intl.format(e, {
                         count: en,
                         timestamp: l,
@@ -419,15 +420,15 @@ function et(e) {
     if (
         (null == r &&
             (0, s.Lp)(U) &&
-            ey &&
+            eC &&
             eO.includes(q.E.SUMMARIES) &&
-            (r = (0, i.jsx)(H.BO, {
+            (r = (0, i.jsx)(B.BO, {
                 channel: U,
                 scrollManager: eo,
             })),
         et.error)
     )
-        h = (0, i.jsx)(H.Rp, {
+        h = (0, i.jsx)(B.Rp, {
             loading: et.loadingMore,
             onClick: () => {
                 var e;
@@ -446,10 +447,10 @@ function et(e) {
         let { jumpReturnTargetId: e } = et;
         h =
             et.loadingMore && et.jumpedToPresent
-                ? (0, i.jsx)(H.DR, { className: ep })
+                ? (0, i.jsx)(B.DR, { className: ep })
                 : null != e
-                  ? (0, i.jsx)(H.DR, {
-                        type: H.A7.REPLY,
+                  ? (0, i.jsx)(B.DR, {
+                        type: B.A7.REPLY,
                         onClick: () => {
                             o.Z.jumpToMessage({
                                 channelId: U.id,
@@ -459,12 +460,12 @@ function et(e) {
                         },
                         className: ep,
                     })
-                  : (0, i.jsx)(H.DR, {
+                  : (0, i.jsx)(B.DR, {
                         onClick: () =>
                             (function (e) {
                                 o.Z.jumpToPresent(e.id, Y.AQB);
                                 let t = T.Z.getChannelId();
-                                e.id === t && (0, C.Kh)(e.id);
+                                e.id === t && (0, y.Kh)(e.id);
                             })(U),
                         className: ep,
                     });

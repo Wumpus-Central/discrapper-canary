@@ -510,9 +510,10 @@ class tn extends (r = a.Component) {
         return (0, i.jsx)(eV.Z, { items: b });
     }
     renderEmbeds(e) {
-        let { renderEmbeds: t } = this.props;
-        return 0 !== e.embeds.length && t
-            ? e.embeds.map((t, n) => {
+        let { renderEmbeds: t, hasBailedAst: n } = this.props;
+        return 0 === e.embeds.length || !t || n
+            ? null
+            : e.embeds.map((t, n) => {
                   if (
                       ez.b.has(t.type) ||
                       (0, eO.l3)(t) ||
@@ -548,8 +549,7 @@ class tn extends (r = a.Component) {
                       }
                   }
                   return this.renderEmbed(t, n, r, e);
-              })
-            : null;
+              });
     }
     renderComponentAccessories(e) {
         if (0 === e.components.length) return null;
@@ -1030,6 +1030,7 @@ function tr(e) {
             ),
             {
                 hasSpoilerEmbeds: e.hasSpoilerEmbeds && j,
+                hasBailedAst: e.hasBailedAst,
                 isLurking: h && m,
                 isGuest: g && m,
                 isPendingMember: E && m,

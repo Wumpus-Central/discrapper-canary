@@ -155,6 +155,7 @@ let N = {
 function P(e, t, n) {
     return {
         hasSpoilerEmbeds: !1,
+        hasBailedAst: !1,
         content: c.Z.reactParserFor(C(t))(e.content, !1, null != n ? { changeLog: n } : {}),
     };
 }

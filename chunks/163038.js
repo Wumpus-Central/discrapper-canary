@@ -186,7 +186,11 @@ function V(e) {
         E = h && g,
         b = (0, o.e7)([P.Z], () => P.Z.isDeveloper),
         y = (0, _.A)((null != (a = m.editedTimestamp) ? a : m.timestamp).valueOf()),
-        { content: O, hasSpoilerEmbeds: I } = (0, v.Z)(m, {
+        {
+            content: O,
+            hasSpoilerEmbeds: I,
+            hasBailedAst: T,
+        } = (0, v.Z)(m, {
             hideSimpleEmbedContent: E,
             isInteracting: !1,
             formatInline: !1,
@@ -196,8 +200,8 @@ function V(e) {
             allowDevLinks: b,
             previewLinkTarget: !0,
         }),
-        T = (0, o.e7)([N.Z], () => N.Z.getChannel(s.channel_id));
-    return null == T
+        C = (0, o.e7)([N.Z], () => N.Z.getChannel(s.channel_id));
+    return null == C
         ? null
         : (0, r.jsx)(
               "div",
@@ -209,7 +213,7 @@ function V(e) {
                           (0, r.jsx)(F, {
                               mergedMessageRecord: m,
                               content: O,
-                              channel: T,
+                              channel: C,
                               reportingUserId:
                                   null == l || null == (n = l.moderatorReport) ? void 0 : n.reporting_user_id,
                               reportedTimestamp: s.timestamp,
@@ -217,10 +221,11 @@ function V(e) {
                           (0, S.Z)({
                               channelMessageProps: {
                                   message: m,
-                                  channel: T,
+                                  channel: C,
                                   compact: !1,
                               },
                               hasSpoilerEmbeds: I,
+                              hasBailedAst: T,
                               isInteracting: !1,
                               isMessageSnapshot: !0,
                               renderThreadAccessory: !1,

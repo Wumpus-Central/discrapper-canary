@@ -41,6 +41,7 @@ function h(e, t) {
                 return {
                     content: p.intl.string(p.t.sWi5EU),
                     hasSpoilerEmbeds: !1,
+                    hasBailedAst: !1,
                 };
             if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(f.iLy.LOADING)) return (0, c.Z)(e);
             if (e.type === f.uaV.CHANGELOG) {
@@ -66,6 +67,7 @@ function h(e, t) {
                           }),
                       }),
                       hasSpoilerEmbeds: N,
+                      hasBailedAst: !1,
                   }
                 : (0, l.ZP)(e, {
                       hideSimpleEmbedContent: h,
