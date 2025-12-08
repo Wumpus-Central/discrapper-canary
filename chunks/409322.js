@@ -1,77 +1,78 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(481060),
     o = n(36361),
     s = n(111161),
-    l = n(530171),
-    c = n(388032),
-    u = n(457454);
-let d = (e, t) =>
+    l = n(662097),
+    c = n(530171),
+    u = n(388032),
+    d = n(457454);
+let f = (e, t) =>
     e
-        ? c.intl.formatToPlainString(c.t["3SHL+d"], { count: t })
-        : c.intl.formatToPlainString(c.t["8JRFyZ"], { count: t });
-function f(e) {
+        ? u.intl.formatToPlainString(u.t["3SHL+d"], { count: t })
+        : u.intl.formatToPlainString(u.t["8JRFyZ"], { count: t });
+function p(e) {
     var t;
     let { node: n } = e,
-        [c, f] = i.useState(!1),
+        [u, p] = i.useState(!1),
         {
-            useTitle: p,
-            layout: _,
-            collapseAfter: m,
-            ContextProvider: h,
+            useTitle: _,
+            layout: m,
+            collapseAfter: h,
             useCollapsibleTitle: g,
             useCollapsedSubtitle: E,
+            initialize: b,
         } = n,
-        b = null != m ? _.slice(0, m) : _,
-        y = null != m ? _.slice(m) : [],
-        O = null != h ? h : i.Fragment,
-        v = null == p ? void 0 : p(),
-        S = null != (t = null == g ? void 0 : g(c, y.length)) ? t : d(c, y.length),
+        y = null != h ? m.slice(0, h) : m,
+        O = null != h ? m.slice(h) : [],
+        v = null == _ ? void 0 : _(),
+        S = null != (t = null == g ? void 0 : g(u, O.length)) ? t : f(u, O.length),
         I = null == E ? void 0 : E();
-    return (0, r.jsx)(O, {
-        children: (0, r.jsxs)(a.Kqy, {
+    return (
+        (0, l.D)(b),
+        (0, r.jsxs)(a.Kqy, {
             gap: 8,
             children: [
                 null != v &&
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-md/semibold",
                         color: "text-default",
-                        className: u.listTitle,
+                        className: d.listTitle,
                         children: v,
                     }),
-                b.map((e, t) =>
+                y.map((e, t) =>
                     (0, r.jsxs)(
                         i.Fragment,
                         {
                             children: [
                                 (0, r.jsx)(o.Z, { node: e }),
-                                y.length > 0 && t !== b.length - 1 && (0, r.jsx)(s.Z, {}),
+                                O.length > 0 && t !== y.length - 1 && (0, r.jsx)(s.Z, {}),
                             ],
                         },
                         e.key,
                     ),
                 ),
-                y.length > 0 &&
+                O.length > 0 &&
                     (0, r.jsxs)("div", {
-                        className: u.collapsibleContainer,
+                        className: d.collapsibleContainer,
                         children: [
-                            (0, r.jsx)(s.Z, { className: u.hoverDivider }),
-                            (0, r.jsx)(l.I, {
+                            (0, r.jsx)(s.Z, { className: d.hoverDivider }),
+                            (0, r.jsx)(c.I, {
                                 title: S,
                                 collapsedSubtitle: I,
-                                isExpanded: c,
-                                onExpandedChange: f,
+                                isExpanded: u,
+                                onExpandedChange: p,
                                 children: (0, r.jsx)(a.Kqy, {
                                     gap: 8,
                                     padding: { top: 8 },
-                                    children: y.map((e, t) =>
+                                    children: O.map((e, t) =>
                                         (0, r.jsxs)(
                                             i.Fragment,
                                             {
                                                 children: [
                                                     (0, r.jsx)(o.Z, { node: e }),
-                                                    t !== y.length - 1 && (0, r.jsx)(s.Z, {}),
+                                                    t !== O.length - 1 && (0, r.jsx)(s.Z, {}),
                                                 ],
                                             },
                                             e.key,
@@ -82,6 +83,6 @@ function f(e) {
                         ],
                     }),
             ],
-        }),
-    });
+        })
+    );
 }
