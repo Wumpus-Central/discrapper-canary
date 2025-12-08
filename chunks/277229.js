@@ -1,12 +1,13 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => b }), n(388685), n(539854);
 var r = n(147913),
     i = n(704806),
     a = n(626135),
     o = n(70956),
     s = n(358085),
     l = n(848479),
-    c = n(981631);
-function u(e, t, n) {
+    c = n(998502),
+    u = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,16 +31,16 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-let f = 5 * o.Z.Millis.MINUTE;
-function p() {
+let p = 5 * o.Z.Millis.MINUTE;
+function _() {
     return s.isPlatformEmbedded;
 }
-async function _() {
+async function m() {
     var e, t, n, r, a, o, s, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, A, C, N, P, R, w, D, x, L, j, M, k;
     let U = l.Z.getMemoryUsageElectronProcessTypeDetails();
     if (null == U) return null;
@@ -78,7 +79,7 @@ async function _() {
         Z
     );
 }
-function m() {
+function h() {
     let e = l.Z.getMemoryHeapStats(),
         t = l.Z.getBlinkMemoryInfo(),
         n = null;
@@ -102,28 +103,52 @@ function m() {
         }
     );
 }
-class h extends r.Z {
+async function g() {
+    var e, t, n;
+    let r = c.ZP.requireModule("discord_media");
+    if (!(null == r ? void 0 : r.getMemoryUsageBlob))
+        return {
+            gpu_dedicated_memory: [],
+            gpu_renderer_used_memory: [],
+        };
+    let i = [],
+        a = [],
+        o = await r.getMemoryUsageBlob(),
+        s = new Set();
+    for (let r of null != (n = null == o || null == (t = o[0]) || null == (e = t.data) ? void 0 : e.gpus) ? n : [])
+        if (!(!r.luid || 0 === r.luid || s.has(r.luid)))
+            if ((s.add(r.luid), null != r.memory ? i.push(r.memory / 1024) : i.push(-1), null != r.memory_usage)) {
+                let e = 0;
+                for (let t of r.memory_usage) t.memory_usage && (e += t.memory_usage / 1024);
+                a.push(e);
+            } else a.push(-1);
+    return {
+        gpu_dedicated_memory: i,
+        gpu_renderer_used_memory: a,
+    };
+}
+class E extends r.Z {
     _initialize() {}
     _terminate() {
-        p() && (clearInterval(this._heartbeatAnalyticsInterval), (this._heartbeatAnalyticsInterval = null));
+        _() && (clearInterval(this._heartbeatAnalyticsInterval), (this._heartbeatAnalyticsInterval = null));
     }
     handlePostConnectionOpen() {
-        p() &&
+        _() &&
             (clearInterval(this._heartbeatAnalyticsInterval),
             (this._heartbeatAnalyticsInterval = setInterval(async () => {
                 await this.trackPerfAnalytics();
-            }, f)));
+            }, p)));
     }
     async trackPerfAnalytics() {
-        let e = await _();
+        let e = await m();
         if (null == e) return;
-        let t = d({}, e, m());
-        a.default.track(c.rMx.DESKTOP_PERF_HEARTBEAT, t);
+        let t = f({}, e, h(), await g());
+        a.default.track(u.rMx.DESKTOP_PERF_HEARTBEAT, t);
     }
     constructor(...e) {
         super(...e),
-            u(this, "_heartbeatAnalyticsInterval", null),
-            u(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
+            d(this, "_heartbeatAnalyticsInterval", null),
+            d(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
     }
 }
-let g = new h();
+let b = new E();
