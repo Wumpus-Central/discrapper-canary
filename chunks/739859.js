@@ -1,168 +1,123 @@
-n.r(t), n.d(t, { default: () => y }), n(388685);
-var r = n(54381),
-    a = n(473749),
-    i = n(120356),
-    s = n.n(i),
-    d = n(990547),
+n.r(t), n.d(t, { default: () => b }), n(388685);
+var a = n(54381),
+    d = n(473749),
+    s = n(120356),
+    i = n.n(s),
+    r = n(990547),
+    l = n(28664),
     o = n(481060),
     c = n(213609),
-    l = n(70097),
-    u = n(483444),
-    _ = n(626135),
-    p = n(553896),
-    b = n(848572),
+    u = n(70097),
+    _ = n(483444),
+    x = n(626135),
+    m = n(553896),
+    T = n(848572),
     g = n(474936),
-    f = n(981631),
-    m = n(388032),
-    x = n(43860);
-function y(e) {
+    h = n(981631),
+    p = n(388032),
+    E = n(43860);
+function b(e) {
     var t;
     let { levelUpData: n } = e,
-        [i, y] = a.useState(!1),
-        [h, O] = a.useState(!1),
-        [T, j] = a.useState(!1),
-        v = (0, b.GG)(),
-        E = a.useRef(null),
-        w = a.useRef(null),
-        { currentBadge: P, prevBadge: N, levelUpVideoSrc: U } = n,
-        k = a.useCallback(() => {
-            let e = 700 * (P.id !== g.VU.PREMIUM_TENURE_1_MONTH);
-            (w.current.currentTime = 0),
+        [s, b] = d.useState(!1),
+        [f, v] = d.useState(!1),
+        [N, y] = d.useState(!1),
+        U = (0, T.GG)(),
+        w = d.useRef(null),
+        B = d.useRef(null),
+        { currentBadge: j, prevBadge: C, levelUpVideoSrc: R } = n,
+        k = d.useCallback(() => {
+            let e = 700 * (j.id !== g.VU.PREMIUM_TENURE_1_MONTH);
+            (B.current.currentTime = 0),
                 setTimeout(() => {
-                    j(!0), w.current.play();
+                    y(!0), B.current.play();
                 }, e);
-        }, [P.id]);
-    a.useEffect(() => {
-        i && k();
-    }, [i, k]),
+        }, [j.id]);
+    d.useEffect(() => {
+        s && k();
+    }, [s, k]),
         (0, c.Z)(
             {
-                type: d.ImpressionTypes.POPOUT,
-                name: d.ImpressionNames.TIERED_TENURE_BADGE_LEVEL_UP,
-                properties: { new_badge_id: P.id },
+                type: r.ImpressionTypes.POPOUT,
+                name: r.ImpressionNames.TIERED_TENURE_BADGE_LEVEL_UP,
+                properties: { new_badge_id: j.id },
             },
             { trackOnInitialLoad: !0 },
         ),
-        a.useEffect(() => {
-            null != w.current && w.current.load();
+        d.useEffect(() => {
+            null != B.current && B.current.load();
         }, []);
-    let B = a.useCallback(() => {
-            O(!1),
-                j(!1),
+    let I = d.useCallback(() => {
+            v(!1),
+                y(!1),
                 k(),
-                (E.current.style.display = "none"),
-                E.current.offsetWidth,
-                (E.current.style.display = ""),
-                _.default.track(f.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: P.id });
-        }, [P.id, k]),
-        C = {
+                (w.current.style.display = "none"),
+                w.current.offsetWidth,
+                (w.current.style.display = ""),
+                x.default.track(h.rMx.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED, { new_badge_id: j.id });
+        }, [j.id, k]),
+        L = {
             "--custom-old-badge-color": "linear-gradient(to right, ".concat(
                 null != (t = n.prevBadgeTextGradient) ? t : "transparent",
                 ")",
             ),
             "--custom-new-badge-color": "linear-gradient(to right, ".concat(n.currentBadgeTextGradient, ")"),
         };
-    return (0, r.jsxs)("div", {
-        className: s()(x.content, {
-            [x.ended]: h,
-            [x.loaded]: i,
-            [x.started]: T,
+    return (0, a.jsxs)("div", {
+        className: i()(E.content, {
+            [E.ended]: f,
+            [E.loaded]: s,
+            [E.started]: N,
         }),
-        style: C,
-        ref: E,
+        style: L,
+        ref: w,
         children: [
-            (0, r.jsx)(l.Z, {
-                ref: w,
-                className: x.video,
-                src: U,
+            (0, a.jsx)(u.Z, {
+                ref: B,
+                className: E.video,
+                src: R,
                 playsInline: !0,
-                onLoadedData: () => y(!0),
-                onEnded: () => O(!0),
+                onLoadedData: () => b(!0),
+                onEnded: () => v(!0),
             }),
-            (0, r.jsxs)("div", {
-                className: x.textContainer,
+            (0, a.jsxs)("div", {
+                className: E.textContainer,
                 children: [
-                    (0, r.jsx)(u.Z, {
+                    (0, a.jsx)(_.Z, {
                         width: 60,
                         height: 15,
                     }),
-                    null != N &&
-                        (0, r.jsx)(o.Text, {
+                    null != C &&
+                        (0, a.jsx)(o.Text, {
                             variant: "display-md",
-                            className: s()(x.badgeText, x.old),
-                            children: m.intl.string(N.nameUnformatted),
+                            className: i()(E.badgeText, E.old),
+                            children: p.intl.string(C.nameUnformatted),
                         }),
-                    (0, r.jsx)(o.Text, {
+                    (0, a.jsx)(o.Text, {
                         variant: "display-md",
-                        className: s()(x.badgeText, x.new),
-                        children: m.intl.string(P.nameUnformatted),
+                        className: i()(E.badgeText, E.new),
+                        children: p.intl.string(j.nameUnformatted),
                     }),
-                    null != v &&
-                        (0, r.jsx)(o.Text, {
+                    null != U &&
+                        (0, a.jsx)(o.Text, {
                             variant: "text-xs/medium",
-                            className: x.subscribedText,
-                            children: m.intl.formatToPlainString(m.t["f/OGgM"], {
-                                timeFrame: (0, p.q)(P.id, P.tenureReqNumMonths),
-                                date: v,
+                            className: E.subscribedText,
+                            children: p.intl.formatToPlainString(p.t["f/OGgM"], {
+                                timeFrame: (0, m.q)(j.id, j.tenureReqNumMonths),
+                                date: U,
                             }),
                         }),
-                    (0, r.jsx)("div", {
-                        className: x.actionButtons,
-                        children: (0, r.jsx)(o.aML, {
-                            "data-migration-pending": !0,
-                            text: m.intl.string(m.t.hsvh0i),
-                            children: (e) => {
-                                var t, n;
-                                return (0, r.jsx)(
-                                    o.hU,
-                                    ((t = (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                r = Object.keys(n);
-                                            "function" == typeof Object.getOwnPropertySymbols &&
-                                                (r = r.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    }),
-                                                )),
-                                                r.forEach(function (t) {
-                                                    var r;
-                                                    (r = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: r,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0,
-                                                              })
-                                                            : (e[t] = r);
-                                                });
-                                        }
-                                        return e;
-                                    })({}, e)),
-                                    (n = n =
-                                        {
-                                            icon: o.o1U,
-                                            variant: "secondary",
-                                            size: "sm",
-                                            onClick: B,
-                                            "aria-label": m.intl.string(m.t.hsvh0i),
-                                        }),
-                                    Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                        : (function (e, t) {
-                                              var n = Object.keys(e);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var r = Object.getOwnPropertySymbols(e);
-                                                  n.push.apply(n, r);
-                                              }
-                                              return n;
-                                          })(Object(n)).forEach(function (e) {
-                                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                          }),
-                                    t),
-                                );
-                            },
+                    (0, a.jsx)("div", {
+                        className: E.actionButtons,
+                        children: (0, a.jsx)(l.u, {
+                            text: p.intl.string(p.t.hsvh0i),
+                            children: (0, a.jsx)(o.hU, {
+                                icon: o.o1U,
+                                variant: "secondary",
+                                size: "sm",
+                                onClick: I,
+                                "aria-label": p.intl.string(p.t.hsvh0i),
+                            }),
                         }),
                     }),
                 ],
