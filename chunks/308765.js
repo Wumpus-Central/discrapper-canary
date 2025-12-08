@@ -721,7 +721,7 @@ let i = {
         neverLoadBeforeConnectionOpen: !0,
     },
     RunningGameHeartbeatManager: {
-        actions: ["RUNNING_GAMES_CHANGE", "LOGOUT", "CONNECTION_CLOSED", "POST_CONNECTION_OPEN"],
+        actions: ["RUNNING_GAMES_CHANGE", "LOGOUT", "POST_CONNECTION_OPEN"],
         inlineRequire: () => n(696287).Z,
         neverLoadBeforeConnectionOpen: !0,
     },
