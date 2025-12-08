@@ -214,7 +214,7 @@ class K extends i.PureComponent {
         } = this.state;
         if (i) {
             let e = () => this.setState({ shouldRenderOwnedTeamsModal: !1 });
-            return (0, r.jsx)(c.sYh, {
+            return (0, r.jsx)(c.SR, {
                 dismissable: !0,
                 header: Z.intl.string(Z.t.UNGZDI),
                 confirmText: Z.intl.string(Z.t.BddRzS),
@@ -229,7 +229,7 @@ class K extends i.PureComponent {
         }
         if (e) {
             let e = () => this.setState({ shouldRenderOwnedGuildsModal: !1 });
-            return (0, r.jsx)(c.sYh, {
+            return (0, r.jsx)(c.SR, {
                 dismissable: !0,
                 header: Z.intl.string(Z.t.I5UrbV),
                 confirmText: Z.intl.string(Z.t.BddRzS),
@@ -244,7 +244,7 @@ class K extends i.PureComponent {
         }
         if (t) {
             let e = () => this.setState({ shouldRenderDeleteAccountConfirmModal: !1 });
-            return (0, r.jsx)(c.sYh, {
+            return (0, r.jsx)(c.SR, {
                 dismissable: !0,
                 header: Z.intl.string(Z.t["8lQ2rR"]),
                 confirmText: Z.intl.string(Z.t["8lQ2rR"]),
@@ -263,7 +263,7 @@ class K extends i.PureComponent {
                     shouldRenderDisableAccountErrorModal: !1,
                     disableAccountErrorMessage: null,
                 });
-            return (0, r.jsx)(c.sYh, {
+            return (0, r.jsx)(c.SR, {
                 dismissable: !0,
                 header: Z.intl.string(Z.t.LX0nT8),
                 confirmText: Z.intl.string(Z.t.BddRzS),

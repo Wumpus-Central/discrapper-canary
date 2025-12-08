@@ -113,7 +113,7 @@ function h(t) {
             [N],
         ),
         (0, r.jsx)(
-            c.ConfirmModal,
+            c.VoidConfirmModal,
             I(
                 b(
                     {

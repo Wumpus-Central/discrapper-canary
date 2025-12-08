@@ -30,7 +30,7 @@ function g(t) {
         (0, i.h7j)((r) => {
             var u, o;
             return (0, l.jsxs)(
-                i.ConfirmModal,
+                i.VoidConfirmModal,
                 ((u = (function (t) {
                     for (var e = 1; e < arguments.length; e++) {
                         var n = null != arguments[e] ? arguments[e] : {},

@@ -86,7 +86,7 @@ function T() {
         !c.Z.isSupported() &&
         ((0, a.h7j)((e) =>
             (0, r.jsx)(
-                a.ConfirmModal,
+                a.VoidConfirmModal,
                 v(
                     y(
                         {

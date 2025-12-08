@@ -28,7 +28,7 @@ function c(e) {
             return o;
         })(e, ["body"]);
     return (0, n.jsx)(
-        o.ConfirmModal,
+        o.VoidConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},

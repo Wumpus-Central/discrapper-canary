@@ -1,15 +1,15 @@
 r.d(t, { default: () => l }), r(388685);
 var n = r(54381),
-    c = r(473749),
-    o = r(481060),
+    o = r(473749),
+    c = r(481060),
     i = r(693546),
     a = r(246364),
     s = r(388032);
 let l = (e) => {
     var t, r;
     let { guildId: l, userId: u, guildJoinRequestId: p, onConfirm: b, onError: O, modalProps: f } = e,
-        [y, j] = c.useState(),
-        g = async () => {
+        [y, j] = o.useState(),
+        d = async () => {
             try {
                 await i.Z.updateGuildJoinRequest(l, u, p, a.wB.REJECTED, y), null == b || b();
             } catch (e) {
@@ -17,7 +17,7 @@ let l = (e) => {
             }
         };
     return (0, n.jsx)(
-        o.ConfirmModal,
+        c.VoidConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -47,13 +47,13 @@ let l = (e) => {
                 header: s.intl.string(s.t["mFP/qw"]),
                 cancelText: s.intl.string(s.t["ETE/oC"]),
                 confirmText: s.intl.string(s.t.hDtbsz),
-                onConfirm: g,
+                onConfirm: d,
             },
             f,
         )),
         (r = r =
             {
-                children: (0, n.jsx)(o.Kx8, {
+                children: (0, n.jsx)(c.Kx8, {
                     value: y,
                     onChange: j,
                     maxLength: 160,

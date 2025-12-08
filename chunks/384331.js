@@ -120,7 +120,7 @@ function S(e) {
         });
     }, [a, i, s]);
     return (0, l.jsxs)(
-        o.ConfirmModal,
+        o.VoidConfirmModal,
         ((n = (function (e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},

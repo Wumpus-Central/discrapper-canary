@@ -94,7 +94,7 @@ function E(e) {
                 g.onClose();
         };
     return (0, r.jsx)(
-        o.ConfirmModal,
+        o.VoidConfirmModal,
         m(p({}, g), {
             header: v,
             confirmText: u.intl.string(u.t.TyCVIq),

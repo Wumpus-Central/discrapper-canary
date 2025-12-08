@@ -82,7 +82,7 @@ function f(e) {
     var { body: t } = e,
         a = u(e, ["body"]);
     (0, i.ZDy)(async () => {
-        let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
+        let { VoidConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
         return (n) =>
             (0, r.jsx)(
                 e,

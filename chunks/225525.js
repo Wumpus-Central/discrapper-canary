@@ -10,7 +10,7 @@ function f(t) {
     var e,
         r,
         { avatarId: f, storageHash: u, avatarDescription: b, onConfirmDelete: p, onClose: y } = t,
-        O = (function (t, e) {
+        d = (function (t, e) {
             if (null == t) return {};
             var r,
                 n,
@@ -31,7 +31,7 @@ function f(t) {
             }
             return o;
         })(t, ["avatarId", "storageHash", "avatarDescription", "onConfirmDelete", "onClose"]);
-    let [d, m] = o.useState(!1),
+    let [O, m] = o.useState(!1),
         { avatarSrc: v, eventHandlers: j } = (0, c.Z)({
             avatarId: f,
             storageHash: u,
@@ -39,7 +39,7 @@ function f(t) {
         }),
         { onMouseEnter: g, onMouseLeave: x } = j;
     return (0, n.jsxs)(
-        i.ConfirmModal,
+        i.VoidConfirmModal,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
@@ -71,7 +71,7 @@ function f(t) {
                 confirmText: l.intl.string(l.t.Lh0uyy),
                 cancelText: l.intl.string(l.t["ETE/oC"]),
                 confirmButtonColor: a.zx.Colors.RED,
-                loading: d,
+                loading: O,
                 onConfirm: async () => {
                     m(!0);
                     try {
@@ -84,7 +84,7 @@ function f(t) {
                 },
                 onClose: y,
             },
-            O,
+            d,
         )),
         (r = r =
             {

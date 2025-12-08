@@ -17,7 +17,7 @@ class c extends s.Z {
         (0, l.h7j)((e) => {
             var t, n;
             return (0, r.jsx)(
-                l.ConfirmModal,
+                l.VoidConfirmModal,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

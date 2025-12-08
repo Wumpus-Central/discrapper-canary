@@ -55,7 +55,7 @@ function f(e) {
         ]);
     let P = (0, o.e7)([c.default], () => c.default.getCurrentUser());
     return (0, n.jsx)(
-        i.ConfirmModal,
+        i.VoidConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},

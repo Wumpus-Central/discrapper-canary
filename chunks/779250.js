@@ -1,6 +1,6 @@
 n.d(t, { default: () => F }), n(388685);
-var r,
-    l = n(54381),
+var l,
+    r = n(54381),
     i = n(473749),
     a = n(392711),
     s = n(442837),
@@ -14,8 +14,8 @@ var r,
     h = n(430824),
     v = n(971130),
     p = n(981888),
-    j = n(924301),
-    f = n(482241),
+    f = n(924301),
+    j = n(482241),
     b = n(951539),
     y = n(545165),
     O = n(236373),
@@ -28,41 +28,41 @@ var r,
     Z = n(744782),
     T = n(129526),
     w = n(765305),
-    D = n(981631),
-    k = n(388032),
+    k = n(981631),
+    D = n(388032),
     R = n(869939);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            l = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            l.forEach(function (t) {
+                var l;
+                (l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = l);
             });
     }
     return e;
 }
 let { INVITE_OPTIONS_7_DAYS: A, INVITE_OPTIONS_UNLIMITED: G } = v.ZP;
 var U =
-    (((r = U || {})[(r.ENTITY = 0)] = "ENTITY"),
-    (r[(r.SETTINGS = 1)] = "SETTINGS"),
-    (r[(r.PREVIEW = 2)] = "PREVIEW"),
-    (r[(r.SUCCESS = 3)] = "SUCCESS"),
-    r);
+    (((l = U || {})[(l.ENTITY = 0)] = "ENTITY"),
+    (l[(l.SETTINGS = 1)] = "SETTINGS"),
+    (l[(l.PREVIEW = 2)] = "PREVIEW"),
+    (l[(l.SUCCESS = 3)] = "SUCCESS"),
+    l);
 function L(e) {
     let { modal: t } = e,
         { createMultipleConfetti: n } = i.useContext(d.h);
@@ -70,18 +70,18 @@ function L(e) {
         i.useEffect(() => {
             let e = null == t ? void 0 : t.getScrollerNode();
             if (null == e) return;
-            let r = e.getBoundingClientRect();
+            let l = e.getBoundingClientRect();
             n(
                 {
                     position: {
                         type: "static-random",
                         minValue: {
-                            x: r.left - 100,
-                            y: r.top - 100,
+                            x: l.left - 100,
+                            y: l.top - 100,
                         },
                         maxValue: {
-                            x: r.left + 100,
-                            y: r.top + 100,
+                            x: l.left + 100,
+                            y: l.top + 100,
                         },
                     },
                     velocity: {
@@ -103,12 +103,12 @@ function L(e) {
                         position: {
                             type: "static-random",
                             minValue: {
-                                x: r.right - 100,
-                                y: r.top - 100,
+                                x: l.right - 100,
+                                y: l.top - 100,
                             },
                             maxValue: {
-                                x: r.right + 100,
-                                y: r.top + 100,
+                                x: l.right + 100,
+                                y: l.top + 100,
                             },
                         },
                         velocity: {
@@ -133,14 +133,14 @@ function z(e) {
     let {
             guildId: t,
             guildEvent: n,
-            guildEventId: r,
+            guildEventId: l,
             isEdit: c,
             formErrors: d,
             transitionState: x,
             loading: h,
             error: v,
             onChange: p,
-            onSave: f,
+            onSave: j,
             onClose: b,
             createdEvent: y,
         } = e,
@@ -151,28 +151,28 @@ function z(e) {
             () => [
                 {
                     slideId: 0,
-                    label: k.intl.string(k.t["56QlKS"]),
+                    label: D.intl.string(D.t["56QlKS"]),
                     valid: null == d.entity,
                     userErrorMessage: d.entity,
                 },
                 {
                     slideId: 1,
-                    label: k.intl.string(k.t["w5/ntT"]),
+                    label: D.intl.string(D.t["w5/ntT"]),
                     valid: null == d.schedule && null == d.topic && (!c || N),
                     userErrorMessage: d.schedule,
                 },
                 {
                     slideId: 2,
-                    label: k.intl.string(k.t["8aJzT4"]),
+                    label: D.intl.string(D.t["8aJzT4"]),
                     valid: !0,
                 },
             ],
             [d, c, N],
         ),
         w = Object.keys(U).length,
-        D = (0, j.xt)(n),
+        k = (0, f.xt)(n),
         _ = (e) => Math.max(0, Math.min(e, w - 1)),
-        [A, G] = i.useState(+!!D),
+        [A, G] = i.useState(+!!k),
         [z, F] = i.useState(!1),
         M = i.useMemo(
             () =>
@@ -197,45 +197,45 @@ function z(e) {
             (null == y ? void 0 : y.id) != null && H.current(3);
         }, [null == y ? void 0 : y.id]);
     let Y = () => {
-            M && (2 === V ? f() : B ? b() : q(A + 1));
+            M && (2 === V ? j() : B ? b() : q(A + 1));
         },
         K = () => {
             q(A - 1);
         },
-        J = k.intl.string(k.t.PDTjLN);
+        J = D.intl.string(D.t.PDTjLN);
     return (
-        2 === V && (J = c ? k.intl.string(k.t.e5VEcE) : k.intl.string(k.t["60lJ0C"])),
-        (0, l.jsxs)(o.Y0X, {
+        2 === V && (J = c ? D.intl.string(D.t.e5VEcE) : D.intl.string(D.t["60lJ0C"])),
+        (0, r.jsxs)(o.Y0X, {
             transitionState: x,
             "aria-labelledby": O,
             size: o.CgR.DYNAMIC,
             parentComponent: "ScheduleEventModal",
             "data-migration-pending": !0,
             children: [
-                !X && B ? (0, l.jsx)(L, { modal: W.current }) : null,
-                (0, l.jsxs)(o.hzk, {
+                !X && B ? (0, r.jsx)(L, { modal: W.current }) : null,
+                (0, r.jsxs)(o.hzk, {
                     className: R.content,
                     scrollerRef: W,
                     "data-migration-pending": !0,
                     children: [
                         !B &&
-                            (0, l.jsx)(g.Z, {
+                            (0, r.jsx)(g.Z, {
                                 steps: T.map((e) => e.label),
                                 stepIndex: A,
                                 onClick: (e) => {
                                     e < A ? K() : e > A && Y();
                                 },
                             }),
-                        (0, l.jsxs)(o.MyZ, {
+                        (0, r.jsxs)(o.MyZ, {
                             activeSlide: V,
                             width: 440,
                             onSlideReady: (e) => {
                                 F(e === V);
                             },
                             children: [
-                                (0, l.jsx)(o.Mi4, {
+                                (0, r.jsx)(o.Mi4, {
                                     id: 0,
-                                    children: (0, l.jsx)(P.Z, {
+                                    children: (0, r.jsx)(P.Z, {
                                         guildId: t,
                                         guildEvent: n,
                                         validationErrorMessage: d.entity,
@@ -243,11 +243,11 @@ function z(e) {
                                         onChange: p,
                                     }),
                                 }),
-                                (0, l.jsx)(o.Mi4, {
+                                (0, r.jsx)(o.Mi4, {
                                     id: 1,
-                                    children: (0, l.jsx)(I.Z, {
+                                    children: (0, r.jsx)(I.Z, {
                                         guildEvent: n,
-                                        guildEventId: r,
+                                        guildEventId: l,
                                         guildId: t,
                                         onChange: p,
                                         error: v,
@@ -255,18 +255,18 @@ function z(e) {
                                         isSlideReady: z,
                                     }),
                                 }),
-                                (0, l.jsx)(o.Mi4, {
+                                (0, r.jsx)(o.Mi4, {
                                     id: 2,
-                                    children: (0, l.jsx)(S.Z, {
+                                    children: (0, r.jsx)(S.Z, {
                                         guildId: t,
                                         guildEvent: n,
-                                        guildEventId: r,
+                                        guildEventId: l,
                                         error: v,
                                     }),
                                 }),
-                                (0, l.jsx)(o.Mi4, {
+                                (0, r.jsx)(o.Mi4, {
                                     id: 3,
-                                    children: (0, l.jsx)(Z.Z, {
+                                    children: (0, r.jsx)(Z.Z, {
                                         onClose: b,
                                         event: y,
                                     }),
@@ -276,22 +276,22 @@ function z(e) {
                     ],
                 }),
                 !B &&
-                    (0, l.jsxs)(o.mzw, {
+                    (0, r.jsxs)(o.mzw, {
                         className: R.footer,
                         "data-migration-pending": !0,
                         children: [
-                            (0, l.jsxs)("div", {
+                            (0, r.jsxs)("div", {
                                 className: R.inline,
                                 children: [
-                                    (0, l.jsx)(o.Button, {
+                                    (0, r.jsx)(o.Button, {
                                         variant: "secondary",
-                                        text: k.intl.string(k.t["ETE/oC"]),
+                                        text: D.intl.string(D.t["ETE/oC"]),
                                         onClick: b,
                                     }),
-                                    (0, l.jsx)("div", {
+                                    (0, r.jsx)("div", {
                                         "data-button-hoisted-classname-wrapper": !0,
                                         className: R.button,
-                                        children: (0, l.jsx)(o.Button, {
+                                        children: (0, r.jsx)(o.Button, {
                                             variant: "primary",
                                             text: J,
                                             onClick: Y,
@@ -302,13 +302,13 @@ function z(e) {
                                 ],
                             }),
                             0 !== V &&
-                                (0, l.jsx)("div", {
+                                (0, r.jsx)("div", {
                                     className: R.textButtonWrapper,
-                                    children: (0, l.jsx)(o.Avr, {
+                                    children: (0, r.jsx)(o.Avr, {
                                         variant: "secondary",
                                         size: "sm",
                                         onClick: K,
-                                        text: k.intl.string(k.t["13/7kX"]),
+                                        text: D.intl.string(D.t["13/7kX"]),
                                     }),
                                 }),
                         ],
@@ -318,9 +318,9 @@ function z(e) {
     );
 }
 function F(e) {
-    let { guildId: t, guildScheduledEventId: r, transitionState: a, onClose: u } = e;
+    let { guildId: t, guildScheduledEventId: l, transitionState: a, onClose: u } = e;
     (0, s.e7)([h.Z], () => h.Z.getGuild(t));
-    let d = (0, s.e7)([j.ZP], () => j.ZP.getGuildScheduledEvent(r), [r]),
+    let d = (0, s.e7)([f.ZP], () => f.ZP.getGuildScheduledEvent(l), [l]),
         g = (0, s.e7)([x.ZP], () => x.ZP.getDefaultChannel(t), [t]),
         m = (0, O.j$)(d, g),
         [v, C] = i.useState(m),
@@ -328,21 +328,21 @@ function F(e) {
         [S, I] = i.useState(null),
         [Z, { loading: R, error: U }] = (0, p.Z)(async () => {
             if (null != S) return;
-            if (P && null != r) return await f.Z.saveEvent(r, v, t), u();
-            let e = await f.Z.createGuildEvent(v, t);
+            if (P && null != l) return await j.Z.saveEvent(l, v, t), u();
+            let e = await j.Z.createGuildEvent(v, t);
             return (
                 ((e) => {
                     var t;
                     let n = (0, b.so)(e),
-                        r = null != (t = e.channel_id) ? t : null == g ? void 0 : g.id;
-                    null != r &&
+                        l = null != (t = e.channel_id) ? t : null == g ? void 0 : g.id;
+                    null != l &&
                         c.ZP.createInvite(
-                            r,
+                            l,
                             {
                                 max_age: A.value,
                                 max_uses: G.value,
                             },
-                            D.t4x.GUILD_EVENTS,
+                            k.t4x.GUILD_EVENTS,
                         ),
                         n ? I(e) : u();
                 })(e.body),
@@ -350,10 +350,10 @@ function F(e) {
             );
         }),
         L = i.useMemo(() => (0, T.Z)(v, P), [v, P]);
-    return (0, l.jsx)(z, {
+    return (0, r.jsx)(z, {
         guildId: t,
         guildEvent: v,
-        guildEventId: r,
+        guildEventId: l,
         isEdit: P,
         formErrors: L,
         transitionState: a,
@@ -362,9 +362,9 @@ function F(e) {
         onChange: (e) => {
             if (null != e.entityType) {
                 var n;
-                let r = (0, E.xC)(e.entityType),
-                    [l] = (0, y.SU)(t, r);
-                (e.channelId = null != (n = null == l ? void 0 : l.id) ? n : null),
+                let l = (0, E.xC)(e.entityType),
+                    [r] = (0, y.SU)(t, l);
+                (e.channelId = null != (n = null == r ? void 0 : r.id) ? n : null),
                     e.entityType !== w.WX.EXTERNAL && v.entityType === w.WX.EXTERNAL && (e.entityMetadata = null);
             }
             C((t) => _({}, t, e));
@@ -372,41 +372,41 @@ function F(e) {
         onSave: () => {
             null != v.recurrenceRule && P && (0, N.BP)(d, v)
                 ? (0, o.ZDy)(async () => {
-                      let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
+                      let { VoidConfirmModal: e } = await Promise.resolve().then(n.bind(n, 288022));
                       return (t) => {
-                          var n, r;
-                          return (0, l.jsxs)(
+                          var n, l;
+                          return (0, r.jsxs)(
                               e,
                               ((n = _({}, t)),
-                              (r = r =
+                              (l = l =
                                   {
-                                      header: k.intl.string(k.t.BW1Qoh),
-                                      confirmText: k.intl.string(k.t.e5VEcE),
-                                      cancelText: k.intl.string(k.t.oEAioF),
+                                      header: D.intl.string(D.t.BW1Qoh),
+                                      confirmText: D.intl.string(D.t.e5VEcE),
+                                      cancelText: D.intl.string(D.t.oEAioF),
                                       onConfirm: Z,
                                       children: [
-                                          (0, l.jsx)(o.Text, {
+                                          (0, r.jsx)(o.Text, {
                                               variant: "text-md/normal",
-                                              children: k.intl.string(k.t.aNCYas),
+                                              children: D.intl.string(D.t.aNCYas),
                                           }),
-                                          (0, l.jsx)("br", {}),
-                                          (0, l.jsx)(o.Text, {
+                                          (0, r.jsx)("br", {}),
+                                          (0, r.jsx)(o.Text, {
                                               variant: "text-md/normal",
-                                              children: k.intl.format(k.t.RWBa5X, {}),
+                                              children: D.intl.format(D.t.RWBa5X, {}),
                                           }),
                                       ],
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, r);
+                                            var l = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, l);
                                         }
                                         return n;
-                                    })(Object(r)).forEach(function (e) {
-                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                    })(Object(l)).forEach(function (e) {
+                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                                     }),
                               n),
                           );

@@ -2,8 +2,8 @@ r.d(n, { Z: () => h });
 var t = r(54381);
 r(473749);
 var i = r(442837),
-    s = r(692547),
-    o = r(481060),
+    o = r(692547),
+    s = r(481060),
     l = r(493683),
     a = r(129861),
     d = r(700582),
@@ -47,15 +47,15 @@ function h(e, n) {
     let r = (0, i.e7)([c.default], () => c.default.getCurrentUser());
     return null == r || n.ownerId !== r.id || e.id === r.id
         ? null
-        : (0, t.jsx)(o.sNh, {
+        : (0, t.jsx)(s.sNh, {
               id: "make-dm-owner",
               color: "danger",
               label: u.intl.string(u.t["6t3CyN"]),
               action: () => {
-                  (0, o.h7j)((i) => {
+                  (0, s.h7j)((i) => {
                       var c, h;
                       return (0, t.jsxs)(
-                          o.ConfirmModal,
+                          s.VoidConfirmModal,
                           ((c = (function (e) {
                               for (var n = 1; n < arguments.length; n++) {
                                   var r = null != arguments[n] ? arguments[n] : {},
@@ -93,7 +93,7 @@ function h(e, n) {
                           (h = h =
                               {
                                   children: [
-                                      (0, t.jsx)(p, { color: s.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                      (0, t.jsx)(p, { color: o.Z.unsafe_rawColors.PRIMARY_300.css }),
                                       (0, t.jsxs)("div", {
                                           className: m.fromToWrapper,
                                           children: [
@@ -101,29 +101,29 @@ function h(e, n) {
                                                   className: m.from,
                                                   children: (0, t.jsx)(d.Z, {
                                                       user: r,
-                                                      size: o.EFr.SIZE_80,
+                                                      size: s.EFr.SIZE_80,
                                                   }),
                                               }),
                                               (0, t.jsx)("div", {
                                                   className: m.to,
                                                   children: (0, t.jsx)(d.Z, {
                                                       user: e,
-                                                      size: o.EFr.SIZE_80,
+                                                      size: s.EFr.SIZE_80,
                                                   }),
                                               }),
                                           ],
                                       }),
-                                      (0, t.jsx)(o.Text, {
+                                      (0, t.jsx)(s.Text, {
                                           variant: "text-md/normal",
                                           children: u.intl.format(u.t.gsBb3F, {
                                               usernameHook: (n, r) =>
                                                   (0, t.jsx)(
                                                       a.Z,
                                                       {
-                                                          usernameIcon: (0, t.jsx)(o.qEK, {
+                                                          usernameIcon: (0, t.jsx)(s.qEK, {
                                                               className: m.avatarIcon,
                                                               src: e.getAvatarURL(void 0, 16),
-                                                              size: o.EFr.SIZE_16,
+                                                              size: s.EFr.SIZE_16,
                                                               "aria-hidden": !0,
                                                           }),
                                                           className: m.discordTag,

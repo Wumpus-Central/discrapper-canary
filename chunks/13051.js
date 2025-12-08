@@ -24,8 +24,8 @@ var i = n(54381),
     N = n(246946),
     S = n(259580),
     I = n(768581),
-    E = n(709054),
-    w = n(486199),
+    w = n(709054),
+    E = n(486199),
     P = n(981631),
     T = n(388032),
     Z = n(516941),
@@ -95,7 +95,7 @@ function R(e) {
                 (0, f.h7j)((e) => {
                     if (!G && l.expire_behavior === c.l.KICK)
                         return (0, i.jsx)(
-                            f.ConfirmModal,
+                            f.VoidConfirmModal,
                             D(A({}, e), {
                                 header: T.intl.string(T.t.emx3lN),
                                 confirmText: T.intl.string(T.t.BddRzS),
@@ -112,7 +112,7 @@ function R(e) {
                             ? T.intl.string(T.t["6kpw4i"])
                             : T.intl.string(T.t.fQUQIJ);
                     return (0, i.jsx)(
-                        f.ConfirmModal,
+                        f.VoidConfirmModal,
                         D(A({}, e), {
                             header: T.intl.string(T.t.emx3lN),
                             confirmText: t,
@@ -218,10 +218,10 @@ function R(e) {
             {
                 icon: f.T39,
                 text: H
-                    ? T.intl.formatToPlainString(T.t.gcdJ8J, { timestamp: E.default.extractTimestamp(l.id) })
+                    ? T.intl.formatToPlainString(T.t.gcdJ8J, { timestamp: w.default.extractTimestamp(l.id) })
                     : T.intl.formatToPlainString(T.t.Nu9sat, {
                           user: null != l.user ? new y.Z(l.user).tag : null,
-                          timestamp: E.default.extractTimestamp(l.id),
+                          timestamp: w.default.extractTimestamp(l.id),
                       }),
             },
         ];
@@ -241,7 +241,7 @@ function R(e) {
             className: Z.header,
             align: j.Z.Align.CENTER,
             children: [
-                (0, i.jsx)(w.Z, {
+                (0, i.jsx)(E.Z, {
                     name: "".concat(l.name),
                     detailsClassName: Z.description,
                     details: t,

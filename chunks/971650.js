@@ -178,7 +178,7 @@ class P extends s.PureComponent {
     }
     renderConfirmModal(e) {
         let { onClose: t } = this.props;
-        return (0, r.jsx)(l.sYh, {
+        return (0, r.jsx)(l.SR, {
             dismissable: !0,
             header: g.intl.string(g.t.mwVXnI),
             confirmText: g.intl.string(g.t.MwSEoz),

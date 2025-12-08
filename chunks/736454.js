@@ -33,7 +33,7 @@ function b(e) {
         })(e, ["onSubmit", "onClose"]);
     let [f, O] = o.useState(!1);
     return (0, n.jsxs)(
-        i.ConfirmModal,
+        i.VoidConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},

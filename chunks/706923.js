@@ -16,7 +16,7 @@ function f(e) {
         h = (0, l.e7)([c.Z], () => c.Z.getChannel(n)),
         [C, F] = (0, u.Z)(n),
         m = null == h ? void 0 : h.guild_id;
-    return (0, t.jsx)(o.ConfirmModal, {
+    return (0, t.jsx)(o.VoidConfirmModal, {
         header: g.intl.string(g.t.aIz1oV),
         confirmText: g.intl.string(g.t["cY+Oob"]),
         cancelText: g.intl.string(g.t["ETE/oC"]),

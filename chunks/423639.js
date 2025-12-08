@@ -41,7 +41,7 @@ function b(e) {
             e.isValid() && f(e);
         };
     return (0, n.jsx)(
-        u.ConfirmModal,
+        u.VoidConfirmModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},

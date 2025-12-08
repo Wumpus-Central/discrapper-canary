@@ -641,7 +641,7 @@ class tn extends (r = a.Component) {
     }
     renderSuppressConfirmModal() {
         let { channel: e, message: t } = this.props;
-        return (0, i.jsxs)(p.sYh, {
+        return (0, i.jsxs)(p.SR, {
             dismissable: !0,
             header: eX.intl.string(eX.t.VL1KOk),
             confirmText: eX.intl.string(eX.t.YEHppG),
@@ -670,7 +670,7 @@ class tn extends (r = a.Component) {
             { attachmentToDelete: n } = this.state;
         return null == n
             ? void this.setState({ showRemoveAttachmentModal: !1 })
-            : (0, i.jsx)(p.sYh, {
+            : (0, i.jsx)(p.SR, {
                   dismissable: !0,
                   header: eX.intl.string(eX.t.CbTIEo),
                   confirmText: eX.intl.string(eX.t.kFwAsa),

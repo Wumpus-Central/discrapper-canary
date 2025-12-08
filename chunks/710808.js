@@ -102,7 +102,7 @@ function L(e) {
         o = A.intl.formatToPlainString(A.t.ejOT95, { errorCode: a });
     (0, c.h7j)((e) =>
         (0, r.jsx)(
-            c.ConfirmModal,
+            c.VoidConfirmModal,
             w(
                 P(
                     {

@@ -951,7 +951,7 @@ let _ = {
     },
     ConsentCheckBoxModal: async () => {
         let { default: e } = await n.e("63490").then(n.bind(n, 853268)),
-            { ConfirmModal: t } = await Promise.resolve().then(n.bind(n, 878678)),
+            { VoidConfirmModal: t } = await Promise.resolve().then(n.bind(n, 288022)),
             { Text: l, Heading: r, Anchor: i } = await Promise.resolve().then(n.bind(n, 481060)),
             s = await Promise.resolve().then(n.t.bind(n, 473749, 19));
         function o(n) {

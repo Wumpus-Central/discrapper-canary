@@ -190,7 +190,7 @@ function N(t) {
             [u],
         ),
         (0, r.jsx)(
-            c.ConfirmModal,
+            c.VoidConfirmModal,
             h(
                 E(
                     {

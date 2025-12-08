@@ -86,7 +86,7 @@ function O(t) {
             }
         };
     return (0, n.jsxs)(
-        a.ConfirmModal,
+        a.VoidConfirmModal,
         ((e = (function (t) {
             for (var e = 1; e < arguments.length; e++) {
                 var r = null != arguments[e] ? arguments[e] : {},
