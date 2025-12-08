@@ -1,6 +1,6 @@
 n.d(t, { Z: () => o });
 var r = n(54381),
-    i = n(199849),
+    i = n(481060),
     a = n(550964);
 function o(e) {
     let { node: t } = e,
@@ -10,12 +10,15 @@ function o(e) {
         p = n(),
         _ = c();
     return (0, r.jsx)(a.X, {
-        children: (0, r.jsx)(i.y6, {
+        children: (0, r.jsx)(i.PhF, {
+            selectionMode: "single",
             label: d,
             description: f,
-            value: p,
-            onChange: (e) => o(e),
             options: _,
+            value: p,
+            onSelectionChange: (e) => {
+                null != e && o(e);
+            },
             layout: u,
         }),
     });

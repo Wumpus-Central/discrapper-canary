@@ -19,30 +19,35 @@ let c = (0, r.Em)(u.n.CLIPS_RESOLUTION, {
     },
     useOptions: () => [
         {
+            id: "480p",
             value: a.ApplicationStreamResolutions.RESOLUTION_480,
             label: o.intl.formatToPlainString(o.t.TEOC0I, {
                 resolution: a.ApplicationStreamResolutions.RESOLUTION_480,
             }),
         },
         {
+            id: "720p",
             value: a.ApplicationStreamResolutions.RESOLUTION_720,
             label: o.intl.formatToPlainString(o.t.TEOC0I, {
                 resolution: a.ApplicationStreamResolutions.RESOLUTION_720,
             }),
         },
         {
+            id: "1080p",
             value: a.ApplicationStreamResolutions.RESOLUTION_1080,
             label: o.intl.formatToPlainString(o.t.TEOC0I, {
                 resolution: a.ApplicationStreamResolutions.RESOLUTION_1080,
             }),
         },
         {
+            id: "1440p",
             value: a.ApplicationStreamResolutions.RESOLUTION_1440,
             label: o.intl.formatToPlainString(o.t.TEOC0I, {
                 resolution: a.ApplicationStreamResolutions.RESOLUTION_1440,
             }),
         },
         {
+            id: "source",
             value: a.ApplicationStreamResolutions.RESOLUTION_SOURCE,
             label: o.intl.string(o.t.XjXqzh),
         },

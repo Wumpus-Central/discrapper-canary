@@ -9,14 +9,17 @@ let o = (0, s.Em)(u.n.REACTION_NOTIFICATIONS, {
     useTitle: () => a.intl.string(a.t.Wxj9Hp),
     useOptions: () => [
         {
+            id: "enabled",
             label: a.intl.string(a.t["9x/RtT"]),
             value: i.Ns.NOTIFICATIONS_ENABLED,
         },
         {
+            id: "only_dms",
             label: a.intl.string(a.t.fJAbQd),
             value: i.Ns.ONLY_DMS,
         },
         {
+            id: "disabled",
             label: a.intl.string(a.t["xu+UDU"]),
             value: i.Ns.NOTIFICATIONS_DISABLED,
         },

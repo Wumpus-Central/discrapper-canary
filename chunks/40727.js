@@ -19,14 +19,17 @@ let c = (0, r.Em)(u.n.CLIPS_FRAME_RATE, {
     },
     useOptions: () => [
         {
+            id: "15",
             value: a.ApplicationStreamFPS.FPS_15,
             label: o.intl.formatToPlainString(o.t.Qb44XH, { fps: a.ApplicationStreamFPS.FPS_15 }),
         },
         {
+            id: "30",
             value: a.ApplicationStreamFPS.FPS_30,
             label: o.intl.formatToPlainString(o.t.Qb44XH, { fps: a.ApplicationStreamFPS.FPS_30 }),
         },
         {
+            id: "60",
             value: a.ApplicationStreamFPS.FPS_60,
             label: o.intl.formatToPlainString(o.t.Qb44XH, { fps: a.ApplicationStreamFPS.FPS_60 }),
         },

@@ -13,14 +13,17 @@ let c = (0, r.Em)(u.n.CLIPS_LENGTH, {
     setValue: (t) => s.eU(t),
     useOptions: () => [
         {
+            id: "30s",
             value: a.OT.SECONDS_30,
             label: o.intl.formatToPlainString(o.t["bTFv/3"], { count: 30 }),
         },
         {
+            id: "1m",
             value: a.OT.MINUTES_1,
             label: o.intl.formatToPlainString(o.t.ICo9Nk, { count: 1 }),
         },
         {
+            id: "2m",
             value: a.OT.MINUTES_2,
             label: o.intl.formatToPlainString(o.t.ICo9Nk, { count: 2 }),
         },

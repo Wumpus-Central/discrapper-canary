@@ -12,6 +12,7 @@ let a = (0, l.Em)(r.n.MOBILE_NOTIFICATION_DELAY, {
     setValue: s.CM.updateSetting,
     useOptions: () =>
         i.range(1, 11).map((t) => ({
+            id: "".concat(t),
             value: 60 * t,
             label: u.intl.formatToPlainString(u.t.iXLF9W, { minutes: t }),
         })),
