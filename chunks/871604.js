@@ -1,27 +1,24 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => A });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
     o = n(481060),
     s = n(989573),
-    l = n(499254),
-    c = n(827498),
-    u = n(311819),
-    d = n(433534),
-    f = n(541716),
-    p = n(433355),
-    _ = n(592125),
-    m = n(944486),
-    h = n(626135),
-    g = n(572004),
-    E = n(591759),
-    b = n(135431),
-    y = n(621853),
-    O = n(497805),
-    v = n(732380),
-    S = n(981631),
-    I = n(388032);
-function T(e, t, n) {
+    l = n(176412),
+    c = n(311819),
+    u = n(433534),
+    d = n(592125),
+    f = n(944486),
+    p = n(626135),
+    _ = n(572004),
+    m = n(591759),
+    h = n(135431),
+    g = n(621853),
+    E = n(497805),
+    b = n(732380),
+    y = n(981631),
+    O = n(388032);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +31,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,16 +42,16 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function C(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = N(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -62,7 +59,7 @@ function C(e, t) {
     }
     return i;
 }
-function N(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -71,87 +68,81 @@ function N(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function P(e) {
+function A(e) {
     var { user: t, closePopout: n } = e,
-        T = C(e, ["user", "closePopout"]);
-    let N = i.useRef(null),
-        P = (0, a.e7)([y.Z], () => {
+        v = I(e, ["user", "closePopout"]);
+    let T = i.useRef(null),
+        A = (0, a.e7)([g.Z], () => {
             var e;
-            return null == (e = y.Z.getUserProfile(t.id)) ? void 0 : e.application;
+            return null == (e = g.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        R = (0, a.e7)([m.Z, _.Z], () => _.Z.getChannel(m.Z.getChannelId())),
-        w = (0, s.Z)(R),
-        D = t.id,
-        x = i.useCallback(() => {
-            if (null != P)
-                if (w) {
-                    let e = m.Z.getCurrentlySelectedChannelId(),
-                        t = _.Z.getChannel(e),
-                        r =
-                            null != p.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal())
-                                ? f.Ie.SIDEBAR
-                                : f.Ie.NORMAL;
-                    l._(c._b.TEXT, r, { applicationId: P.id }),
-                        (0, o.Mr3)((0, O.z)(D, null == R ? void 0 : R.guild_id)),
-                        null == n || n(),
-                        h.default.track(S.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: P.id });
-                } else (0, b.L)(A({ applicationId: P.id }, P));
-        }, [P, w, D, null == R ? void 0 : R.guild_id, n]),
-        L = w ? I.intl.string(I.t["Cia+A8"]) : I.intl.string(I.t.NgXl3C);
-    if (null == P || !(0, d.Eb)(P)) return null;
-    let { customInstallUrl: j } = P,
-        M = null == j || E.Z.isDiscordUrl(j) ? o.qJs : o.Gr1,
-        k = w ? void 0 : M;
-    return g.wS
+        C = (0, a.e7)([f.Z, d.Z], () => d.Z.getChannel(f.Z.getChannelId())),
+        N = (0, s.Z)(C),
+        P = t.id,
+        R = i.useCallback(() => {
+            null != A &&
+                (N
+                    ? ((0, l.X)(A.id),
+                      (0, o.Mr3)((0, E.z)(P, null == C ? void 0 : C.guild_id)),
+                      null == n || n(),
+                      p.default.track(y.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id }))
+                    : (0, h.L)(S({ applicationId: A.id }, A)));
+        }, [A, N, P, null == C ? void 0 : C.guild_id, n]),
+        w = N ? O.intl.string(O.t["Cia+A8"]) : O.intl.string(O.t.NgXl3C);
+    if (null == A || !(0, u.Eb)(A)) return null;
+    let { customInstallUrl: D } = A,
+        x = null == D || m.Z.isDiscordUrl(D) ? o.qJs : o.Gr1,
+        L = N ? void 0 : x;
+    return _.wS
         ? (0, r.jsx)(o.yRy, {
-              targetElementRef: N,
+              targetElementRef: T,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(o.v2r, {
                       navId: "user-bot-profile-add-app",
                       onClose: t,
-                      "aria-label": I.intl.string(I.t.dbkxVm),
+                      "aria-label": O.intl.string(O.t.dbkxVm),
                       onSelect: void 0,
                       children: (0, r.jsx)(o.kSQ, {
                           children: (0, r.jsx)(o.sNh, {
                               id: "copy",
-                              label: I.intl.string(I.t.XWDihq),
-                              action: () => (0, g.JG)((0, u.J)(P)),
+                              label: O.intl.string(O.t.XWDihq),
+                              action: () => (0, _.JG)((0, c.J)(A)),
                           }),
                       }),
                   });
               },
               children: (e) => {
                   var { onClick: t } = e,
-                      n = C(e, ["onClick"]);
+                      n = I(e, ["onClick"]);
                   return (0, r.jsx)(
-                      v.O1,
-                      A(
+                      b.O1,
+                      S(
                           {
-                              buttonRef: N,
+                              buttonRef: T,
                               action: "PRESS_ADD_APP",
-                              text: L,
-                              icon: k,
+                              text: w,
+                              icon: L,
                               onContextMenu: t,
-                              onClick: x,
+                              onClick: R,
                           },
                           n,
-                          T,
+                          v,
                       ),
                   );
               },
           })
         : (0, r.jsx)(
-              v.O1,
-              A(
+              b.O1,
+              S(
                   {
                       action: "PRESS_ADD_APP",
-                      text: L,
-                      icon: k,
-                      onClick: x,
+                      text: w,
+                      icon: L,
+                      onClick: R,
                       variant: "primary",
                   },
-                  T,
+                  v,
               ),
           );
 }
