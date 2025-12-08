@@ -82,7 +82,7 @@ function x(e) {
     return !D(e, e.getFullYear()) && D(e, new Date().getFullYear());
 }
 function L() {
-    if (null != w) return void Q(w);
+    if (null != w) return void X(w);
     if ((k(), !f.Z.hasConsented(m.pjP.PERSONALIZATION))) return;
     let { enabled: e } = _.w.getConfig({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
     if (!e) return;
@@ -97,8 +97,8 @@ function L() {
     N.sort((e, t) => {
         let n = d.Z.getUserAffinity(e),
             r = d.Z.getUserAffinity(t),
-            i = null != n ? n.communicationProbability : 0;
-        return (null != r ? r.communicationProbability : 0) - i;
+            i = null != n ? n.dmProbability : 0;
+        return (null != r ? r.dmProbability : 0) - i;
     });
     let t = 0;
     for (let e of N)
@@ -156,15 +156,15 @@ function z() {
 function q() {
     C.giftUnreadNotificationLastDismissedTimes = [];
 }
-function X(e) {
+function Q(e) {
     let { total: t } = e;
     if (null == t) {
         (w = null), L();
         return;
     }
-    Q(t);
+    X(t);
 }
-function Q(e) {
+function X(e) {
     k();
     let { enabled: t } = _.w.getConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" });
     if (!t) return;
@@ -180,7 +180,7 @@ function Q(e) {
             }
         });
     let r = 0;
-    for (let e of n) if (null == C.messageGiftIntentLastShownMap[e] && (P.add(e), ++r >= E)) break;
+    for (let e of N) if (null == C.messageGiftIntentLastShownMap[e] && (P.add(e), ++r >= E)) break;
 }
 class J extends (r = l.ZP.PersistedStore) {
     initialize(e) {
@@ -201,12 +201,11 @@ class J extends (r = l.ZP.PersistedStore) {
     getFriendAnniversaries() {
         return N;
     }
-    isTopAffinityFriendAnniversary(e) {
-        let { userId: t } = e,
-            { enabled: n } = _.w.getConfig({ location: "PremiumGiftingIntentStore isTopAffinityFriendAnniversary" });
-        return !!n && P.has(t) && null == C.messageGiftIntentLastShownMap[t];
+    isFreshTopAffinityFriendAnniversary(e) {
+        let { userId: t } = e;
+        return P.has(t) && null == C.messageGiftIntentLastShownMap[t];
     }
-    canShowGiftUnreadNotification() {
+    canShowGiftNotification() {
         V();
         let e = C.giftUnreadNotificationLastDismissedTimes;
         return !!M() && (0 === e.length || (!(e.length >= I) && !(e.filter((e) => Date.now() - e <= y).length >= S)));
@@ -260,5 +259,5 @@ let $ = new J(c.Z, {
     DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: K,
     DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET: z,
     DEV_TOOLS_GIFT_UNREAD_NOTIFICATION_COOLDOWN_RESET: q,
-    DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT: X,
+    DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT: Q,
 });
