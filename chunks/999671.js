@@ -77,8 +77,8 @@ function g() {
             let { onClick: n } = t;
             return (0, r.jsx)(o.u, {
                 text: h.intl.string(h.t.pEasFX),
+                targetElementRef: e,
                 children: (0, r.jsx)(a.hU, {
-                    buttonRef: e,
                     size: "sm",
                     variant: "secondary",
                     "aria-label": h.intl.string(h.t.pEasFX),
