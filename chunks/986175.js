@@ -1,4 +1,4 @@
-n.d(t, { I: () => S }), n(35282), n(539854), n(415506);
+n.d(t, { I: () => C }), n(35282), n(539854), n(415506), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(164617),
@@ -110,7 +110,103 @@ function v(e) {
             (i = a.lastIndex);
     return i < e.length && n.push(e.substring(i)), n.length > 0 ? n : e;
 }
-let S = {
+function S() {
+    let { setNextEnabled: e } = (0, o.vqz)();
+    return (
+        i.useEffect(() => {
+            e(!0);
+        }, [e]),
+        (0, r.jsx)(u.Text, {
+            variant: "text-sm/normal",
+            color: "text-subtle",
+            children: "Lost access to your radness? Talk to your radness provider to refresh your aura.",
+        })
+    );
+}
+function I() {
+    let { setNextEnabled: e } = (0, o.vqz)(),
+        [t, n] = i.useState([]),
+        a = [
+            {
+                label: "I am wearing a helmet",
+                value: "helmet",
+            },
+            {
+                label: "I know where to find my personal flotation device",
+                value: "pfd",
+            },
+            {
+                label: "I completed the safety training",
+                value: "training",
+            },
+        ];
+    return (
+        i.useEffect(() => {
+            e(t.length === a.length);
+        }, [t, e, a.length]),
+        (0, r.jsx)(o.cOn, {
+            label: "Safety checklist",
+            options: a,
+            selectedValues: t,
+            onChange: n,
+        })
+    );
+}
+function T() {
+    let { setNextEnabled: e } = (0, o.vqz)(),
+        [t, n] = i.useState("");
+    return (
+        i.useEffect(() => {
+            e(t.length > 0);
+        }, [t, e]),
+        (0, r.jsx)(u.oil, {
+            placeholder: "Enter your passcode...",
+            value: t,
+            onChange: (e) => n(e),
+        })
+    );
+}
+function A(e) {
+    var t = m({}, h(e));
+    let [n, a] = i.useState("intro"),
+        s = [
+            {
+                stepKey: "intro",
+                title: "Verify radness",
+                subtitle: "To verify your radness, we need to ask you a few deep and personal questions.",
+                body: (0, r.jsx)(S, {}),
+                nextButtonProps: { text: "Verify" },
+            },
+            {
+                stepKey: "safety",
+                stepNumber: 1,
+                title: "Safety first",
+                subtitle: "Before we get started verifying your radness, we need to make sure you're safe and sound.",
+                body: (0, r.jsx)(I, {}),
+            },
+            {
+                stepKey: "passcode",
+                stepNumber: 2,
+                title: "Enter passcode",
+                subtitle: "Enter your passcode to complete the radness verification process.",
+                body: (0, r.jsx)(T, {}),
+                nextButtonProps: { text: "Verify passcode" },
+            },
+        ];
+    return (0, r.jsx)(
+        o.dGG,
+        g(
+            {
+                steps: s,
+                stepCount: 2,
+                currentStepKey: n,
+                onStepChange: a,
+            },
+            t,
+        ),
+    );
+}
+let C = {
     title: "Modal",
     stories: [
         {
@@ -745,6 +841,28 @@ let S = {
                                         }),
                                     ),
                                 ),
+                        }),
+                    ],
+                });
+            },
+        },
+        {
+            name: "MultiStepModal [Alpha]",
+            id: "multi-step-modal",
+            component: function (e) {
+                var t = m({}, h(e));
+                return (0, r.jsxs)(u.Kqy, {
+                    gap: 16,
+                    align: "center",
+                    children: [
+                        (0, r.jsx)(u.Text, {
+                            variant: "text-md/normal",
+                            children: "Click the button below to open the multi-step modal",
+                        }),
+                        (0, r.jsx)(u.Button, {
+                            variant: "primary",
+                            text: "Open MultiStepModal",
+                            onClick: () => (0, u.h7j)((e) => (0, r.jsx)(A, g({}, e)), { dismissable: t.dismissable }),
                         }),
                     ],
                 });

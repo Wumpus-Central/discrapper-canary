@@ -10,6 +10,8 @@ var r = n(54381),
 let o = {
         i18n: {
             CANCEL: "Cancel",
+            BACK: "Back",
+            NEXT: "Next",
             SPINNER_LOADING_LABEL: "Loading",
             BUTTON_LOADING_STARTED_LABEL: "Loading",
             BUTTON_LOADING_FINISHED_LABEL: "Loading",
@@ -48,6 +50,7 @@ let o = {
             CALENDAR_PREVIOUS_MONTH_LABEL: "Previous month",
             CALENDAR_NEXT_MONTH_LABEL: "Next month",
             INLINE_NOTICE_GENERIC_ERROR: "Something went wrong. Please try again later.",
+            STEP_INDICATOR: (e, t) => "Step ".concat(e, " of ").concat(t),
         },
         theme: "light",
         locale: "en-US",

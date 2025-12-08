@@ -2548,6 +2548,10 @@
     display: flex
 }
 
+.headerStepIndicator__8a031 {
+    margin-bottom: var(--space-12)
+}
+
 .headerGradient__8a031:before {
     border-radius: var(--custom-border-radius) var(--custom-border-radius) 0 0;
     left: -1.5px;
@@ -52686,7 +52690,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59890,9 +59894,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -61218,9 +61222,9 @@ screen and (max-width:485px) {
 }
 
 .cardTitle__6df1a {
-    font-size: 2rem;
+    font-size: 32px;
     font-style: italic;
-    line-height: 1.6875rem;
+    line-height: 27px;
     text-transform: uppercase
 }
 

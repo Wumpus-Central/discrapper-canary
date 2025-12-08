@@ -1,7 +1,7 @@
 n.d(t, { w: () => w }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
-    a = n(502922),
+    a = n(469571),
     o = n(120356),
     s = n.n(o),
     l = n(442837),
@@ -24,7 +24,7 @@ var r = n(54381),
     T = n(998502),
     A = n(264783),
     C = n(892071),
-    N = n(298200),
+    N = n(245034),
     P = n(388032);
 function R(e, t, n, r, o) {
     let s = i.useContext(p.Z),
@@ -32,6 +32,8 @@ function R(e, t, n, r, o) {
             () => ({
                 i18n: {
                     CANCEL: P.intl.string(P.t["ETE/oC"]),
+                    BACK: P.intl.string(P.t["13/7kX"]),
+                    NEXT: P.intl.string(P.t.PDTjLN),
                     SPINNER_LOADING_LABEL: P.intl.string(P.t.ZTNur7),
                     BUTTON_LOADING_STARTED_LABEL: P.intl.string(P.t.pfChQr),
                     BUTTON_LOADING_FINISHED_LABEL: P.intl.string(P.t.SVParY),
@@ -70,6 +72,11 @@ function R(e, t, n, r, o) {
                     CALENDAR_PREVIOUS_MONTH_LABEL: P.intl.string(N.default.raS6yf),
                     CALENDAR_NEXT_MONTH_LABEL: P.intl.string(N.default["/cp93l"]),
                     INLINE_NOTICE_GENERIC_ERROR: P.intl.string(P.t["rTU7/z"]),
+                    STEP_INDICATOR: (e, t) =>
+                        P.intl.formatToPlainString(N.default["v2YSk/"], {
+                            stepNumber: e,
+                            stepCount: t,
+                        }),
                 },
                 locale: o,
                 theme: e,
