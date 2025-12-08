@@ -14,6 +14,6 @@ let r = {
         "widget",
     ]),
     REPORT_TO_MOD: new Set(["report_to_mod_message"]),
-    UNAUTHENTICATED: new Set(["guild_urf", "message_urf", "user_urf"]),
+    UNAUTHENTICATED: new Set(["guild_urf", "media_takedown", "message_urf", "user_urf"]),
     CONSOLE: new Set(["playstation_console_voice", "xbox_console_voice"]),
 };
