@@ -1,14 +1,15 @@
-n.d(e, { r: () => a });
-var i = n(522558),
-    l = n(509613),
-    s = n(695346),
-    r = n(313789),
-    u = n(388032);
-let a = (0, l.qs)(r.n.FRIEND_ANNIVERSARY_NOTIFICATIONS, {
-    useTitle: () => u.intl.string(u.t.NjOMvh),
+n.d(e, { r: () => o });
+var i = n(666383),
+    l = n(522558),
+    s = n(509613),
+    r = n(695346),
+    u = n(313789),
+    a = n(388032);
+let o = (0, s.qs)(u.n.FRIEND_ANNIVERSARY_NOTIFICATIONS, {
+    useTitle: () => a.intl.string(a.t.NjOMvh),
     useBadge: () => "beta",
-    useValue: s.vc.useSetting,
-    setValue: s.vc.updateSetting,
-    useSearchTerms: () => [u.intl.string(u.t.hi4dSk)],
-    usePredicate: () => (0, i.i)("FriendAnniversaryNotifications"),
+    useValue: r.vc.useSetting,
+    setValue: i.$,
+    useSearchTerms: () => [a.intl.string(a.t.hi4dSk)],
+    usePredicate: () => (0, l.i)("FriendAnniversaryNotifications"),
 });

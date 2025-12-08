@@ -1,10 +1,11 @@
-n.d(e, { I: () => u });
-var i = n(509613),
-    l = n(695346),
-    s = n(313789),
-    r = n(388032);
-let u = (0, i.qs)(s.n.GO_LIVE_NOTIFICATIONS, {
-    useTitle: () => r.intl.string(r.t.FSNIvs),
-    useValue: l.JN.useSetting,
-    setValue: l.JN.updateSetting,
+n.d(e, { I: () => a });
+var i = n(556297),
+    l = n(509613),
+    s = n(695346),
+    r = n(313789),
+    u = n(388032);
+let a = (0, l.qs)(r.n.GO_LIVE_NOTIFICATIONS, {
+    useTitle: () => u.intl.string(u.t.FSNIvs),
+    useValue: s.JN.useSetting,
+    setValue: i.O,
 });
