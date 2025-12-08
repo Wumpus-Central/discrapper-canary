@@ -1,4 +1,4 @@
-n.d(e, { Z: () => O }), n(388685);
+n.d(e, { Z: () => b }), n(388685);
 var i = n(54381),
     r = n(473749),
     s = n(481060),
@@ -10,66 +10,63 @@ var i = n(54381),
     u = n(681678),
     p = n(699516),
     x = n(473092),
-    g = n(991981),
-    h = n(850165),
+    h = n(991981),
+    _ = n(850165),
     m = n(134612),
-    _ = n(388032),
-    f = n(394968),
-    b = n(149355);
-function O(t) {
-    let { senderId: e, channelId: n, hasReported: O, onReport: v, trackAnalyticsEvent: j } = t,
-        T = (0, a.e7)([p.Z], () => p.Z.isBlocked(e)),
-        [E, S] = r.useState(T),
-        y = (0, d.o)(),
-        A = (0, d.Q)(),
-        [N, C] = r.useState(!1),
-        I = (0, g.q)(n),
-        R = r.useMemo(() => (y ? 0 : A ? 2 : 1), [y, A]),
-        M = async () => {
-            null != I &&
-                (C(!0),
+    g = n(388032),
+    f = n(394968);
+function b(t) {
+    let { senderId: e, channelId: n, hasReported: b, onReport: O, trackAnalyticsEvent: j } = t,
+        v = (0, a.e7)([p.Z], () => p.Z.isBlocked(e)),
+        [T, E] = r.useState(v),
+        S = (0, d.o)(),
+        y = (0, d.Q)(),
+        [N, A] = r.useState(!1),
+        C = (0, h.q)(n),
+        M = r.useMemo(() => (S ? 0 : y ? 2 : 1), [S, y]),
+        R = async () => {
+            null != C &&
+                (A(!0),
                 await (0, l.J7)(
-                    I,
+                    C,
                     () => {
-                        u.Z.showReportSuccessToast(e, n), v();
+                        u.Z.showReportSuccessToast(e, n), O();
                     },
                     () => {
                         u.Z.showFailedToast();
                     },
                 ),
-                C(!1),
+                A(!1),
                 j(x.NM.USER_TAKEOVER_MODAL_REPORT));
         },
         Z = r.useMemo(() => {
-            switch (R) {
+            switch (M) {
                 case 0:
-                    return _.intl.string(_.t.sZf6cz);
+                    return g.intl.string(g.t.sZf6cz);
                 case 2:
-                    return _.intl.string(_.t.HQ2nKl);
+                    return g.intl.string(g.t.HQ2nKl);
                 default:
-                    return _.intl.string(_.t["65XQar"]);
+                    return g.intl.string(g.t["65XQar"]);
             }
-        }, [R]);
-    return (0, i.jsx)(h.Z, {
-        heroImageSrc: b,
-        heroImageAlt: _.intl.string(_.t.RVyYCK),
-        header: _.intl.string(_.t["mWO+ys"]),
-        description: _.intl.string(_.t.S0XtKF),
+        }, [M]);
+    return (0, i.jsx)(_.Z, {
+        header: g.intl.string(g.t["mWO+ys"]),
+        description: g.intl.string(g.t.S0XtKF),
         children: (0, i.jsxs)("div", {
             className: f.buttonContainer,
             children: [
                 (0, i.jsx)(s.Button, {
-                    text: E ? _.intl.string(_.t.XyHpKH) : _.intl.string(_.t.l4Emac),
+                    text: T ? g.intl.string(g.t.XyHpKH) : g.intl.string(g.t.l4Emac),
                     variant: "primary",
                     fullWidth: !0,
                     icon: s.k$p,
                     onClick: () => {
-                        E
-                            ? (S(!1),
+                        T
+                            ? (E(!1),
                               o.Z.unblockUser(e, { location: m.DL }),
                               j(x.NM.USER_TAKEOVER_MODAL_UNBLOCK),
                               u.Z.showUnblockSuccessToast(e, n))
-                            : (S(!0),
+                            : (E(!0),
                               j(x.NM.USER_TAKEOVER_MODAL_BLOCK),
                               o.Z.blockUser(e, { location: m.DL }).then(() => {
                                   u.Z.showBlockSuccessToast(e, n);
@@ -77,13 +74,13 @@ function O(t) {
                     },
                 }),
                 (0, i.jsx)(s.Button, {
-                    text: O ? _.intl.string(_.t.QvwOJ6) : _.intl.string(_.t["7fHyE6"]),
+                    text: b ? g.intl.string(g.t.QvwOJ6) : g.intl.string(g.t["7fHyE6"]),
                     variant: "secondary",
                     fullWidth: !0,
                     icon: s.U65,
-                    onClick: M,
+                    onClick: R,
                     loading: N,
-                    disabled: O,
+                    disabled: b,
                 }),
                 (0, i.jsx)(s.Button, {
                     text: Z,
@@ -91,9 +88,9 @@ function O(t) {
                     fullWidth: !0,
                     icon: s.kBi,
                     onClick: () => {
-                        0 === R
+                        0 === M
                             ? ((0, c.Z)(m.EI), j(x.NM.USER_TAKEOVER_MODAL_CTL))
-                            : 2 === R
+                            : 2 === M
                               ? ((0, c.Z)(m.$l), j(x.NM.USER_TAKEOVER_MODAL_THROUGHLINE))
                               : ((0, c.Z)(m.n4), j(x.NM.USER_TAKEOVER_MODAL_NO_FILTR));
                     },

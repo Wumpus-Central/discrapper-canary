@@ -4,14 +4,14 @@ n(473749);
 var r = n(481060),
     s = n(394968);
 function a(t) {
-    let { heroImageSrc: e, heroImageAlt: n, children: a, header: o, description: c } = t;
+    let { heroImage: e, children: n, header: a, description: o } = t;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("img", {
-                src: e,
-                alt: n,
-                className: s.heroImage,
-            }),
+            void 0 !== e &&
+                (0, i.jsx)("div", {
+                    className: s.heroImage,
+                    children: e,
+                }),
             (0, i.jsxs)(r.hzk, {
                 "data-migration-pending": !0,
                 className: s.body,
@@ -22,18 +22,18 @@ function a(t) {
                             (0, i.jsx)(r.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
-                                children: o,
+                                children: a,
                             }),
-                            null != c &&
+                            null != o &&
                                 (0, i.jsx)(r.Text, {
                                     variant: "text-md/medium",
                                     color: "text-default",
                                     className: s.description,
-                                    children: c,
+                                    children: o,
                                 }),
                         ],
                     }),
-                    a,
+                    n,
                 ],
             }),
         ],
