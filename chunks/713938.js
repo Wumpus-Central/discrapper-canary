@@ -6,7 +6,8 @@ n.d(t, {
     ak: () => s,
     sg: () => u,
     up: () => l,
-});
+}),
+    n(539854);
 var r = n(243814),
     i = n(388032);
 let a = [
@@ -154,21 +155,25 @@ function c(e, t) {
             return [i.intl.string(i.t.IM4Cje)];
         case r.x.APPLICATION_IDENTITIES_WRITE:
             return [i.intl.string(i.t["1zioRF"])];
-        case r.x.SDK_SOCIAL_LAYER_PRESENCE:
-            return [
+        case r.x.SDK_SOCIAL_LAYER_PRESENCE: {
+            let e = [
                 i.intl.string(i.t.Pl1dTW),
                 i.intl.string(i.t.mPRcyT),
                 i.intl.string(i.t.F7J4NE),
                 i.intl.string(i.t.syJLx9),
             ];
-        case r.x.SDK_SOCIAL_LAYER:
-            return [
+            return t.includes(r.x.APPLICATION_IDENTITIES_WRITE) || e.push(i.intl.string(i.t["1zioRF"])), e;
+        }
+        case r.x.SDK_SOCIAL_LAYER: {
+            let e = [
                 i.intl.string(i.t.Pl1dTW),
                 i.intl.string(i.t["hc/+yg"]),
                 i.intl.string(i.t.mPRcyT),
                 i.intl.string(i.t.F7J4NE),
                 i.intl.string(i.t["2wxXX9"]),
             ];
+            return t.includes(r.x.APPLICATION_IDENTITIES_WRITE) || e.push(i.intl.string(i.t["1zioRF"])), e;
+        }
         default:
             return [e];
     }
