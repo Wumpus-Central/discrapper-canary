@@ -6,17 +6,17 @@ var r = n(54381),
     o = n(239091),
     i = n(493773),
     c = n(884338),
-    d = n(592125),
-    u = n(720202),
+    u = n(592125),
+    d = n(720202),
     h = n(594174),
     g = n(260483),
-    m = n(314208),
-    f = n(124368),
+    f = n(314208),
+    m = n(124368),
     j = n(712335);
 let v = l.memo(function (e) {
     let { threadId: t, goToThread: l, showChannelName: i } = e,
-        c = (0, a.e7)([d.Z], () => d.Z.getChannel(t)),
-        u = (0, a.e7)([d.Z], () => d.Z.getChannel(c.parent_id));
+        c = (0, a.e7)([u.Z], () => u.Z.getChannel(t)),
+        d = (0, a.e7)([u.Z], () => u.Z.getChannel(c.parent_id));
     return (0, r.jsxs)(s.P3F, {
         className: j.container,
         onClick: (e) => l(c, e.shiftKey),
@@ -83,15 +83,15 @@ let v = l.memo(function (e) {
                                 className: j.threadName,
                                 children: c.name,
                             }),
-                            i && null != u
+                            i && null != d
                                 ? (0, r.jsx)("span", {
                                       className: j.parentName,
-                                      children: "#".concat(u.name),
+                                      children: "#".concat(d.name),
                                   })
                                 : null,
                         ],
                     }),
-                    (0, m.Z)(c),
+                    (0, f.Z)(c),
                 ],
             }),
             (0, r.jsx)(x, { channel: c }),
@@ -111,7 +111,7 @@ function x(e) {
         s = (0, a.Wu)([h.default], () => n.map((e) => h.default.getUser(e)));
     return ((0, i.ZP)(() => {
         n.filter((e, t) => null == s[t]).forEach((e) => {
-            u.Z.requestMember(t.guild_id, e);
+            d.Z.requestMember(t.guild_id, e);
         });
     }),
     0 === n.length)
@@ -122,6 +122,6 @@ function x(e) {
               guildId: t.guild_id,
               users: s,
               count: l,
-              max: f.yX,
+              max: m.yX,
           });
 }

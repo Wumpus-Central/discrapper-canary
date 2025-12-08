@@ -3,8 +3,8 @@ var a = n(54381),
     i = n(473749),
     r = n(120356),
     l = n.n(r),
-    s = n(392711),
-    o = n.n(s),
+    o = n(392711),
+    s = n.n(o),
     c = n(442837),
     d = n(28664),
     u = n(481060),
@@ -13,20 +13,20 @@ var a = n(54381),
     f = n(669764),
     p = n(810568),
     x = n(839392),
-    h = n(774073),
-    v = n(426482),
+    v = n(774073),
+    h = n(426482),
     j = n(644941),
-    _ = n(388032),
-    I = n(226788),
-    b = n(414642);
-let y = (e) => {
+    b = n(388032),
+    _ = n(226788),
+    y = n(414642);
+let I = (e) => {
     let { game: t, onClose: n, trackClick: i } = e,
         r = (0, c.e7)([g.Z], () => g.Z.getApplication(t.applicationId));
     return (0, a.jsx)(d.u, {
         asContainer: !0,
         text: t.name,
         children: (0, a.jsx)(u.P3F, {
-            className: b.similarGameImageClickable,
+            className: y.similarGameImageClickable,
             onClick: async () => {
                 i(p.as.ClickSimilarGame, t.applicationId),
                     (0, u.ZDy)(() =>
@@ -70,41 +70,41 @@ let y = (e) => {
                     await new Promise((e) => setTimeout(e, 10)),
                     n();
             },
-            children: (0, a.jsx)(v.C, {
+            children: (0, a.jsx)(h.C, {
                 game: t,
                 application: r,
-                className: b.similarGameImage,
-                size: v.Z.SMALL,
+                className: y.similarGameImage,
+                size: h.Z.SMALL,
             }),
         }),
     });
 };
 function O(e) {
-    let { applicationId: t, onClose: n, trackAction: r, similarGames: s, similarGamesError: d } = e,
+    let { applicationId: t, onClose: n, trackAction: r, similarGames: o, similarGamesError: d } = e,
         g = (0, c.e7)([x.Z, f.Z], () => {
             let e = void 0 === x.Z.getSimilarGames(t) && null == x.Z.getSimilarGamesError(t),
-                n = s.some((e) => f.Z.isFetching(e));
+                n = o.some((e) => f.Z.isFetching(e));
             return e || n;
         }),
         p = (0, c.Wu)([f.Z], () =>
-            s
+            o
                 .map((e) => f.Z.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, h.z6)(e.applicationId))
+                .filter((e) => (0, v.z6)(e.applicationId))
                 .slice(0, 5),
         );
     return (i.useEffect(() => {
-        s.length > 0 && m.Z.getDetectableGamesSupplemental([t, ...s]);
-    }, [t, s]),
+        o.length > 0 && m.Z.getDetectableGamesSupplemental([t, ...o]);
+    }, [t, o]),
     g && null == d)
         ? (0, a.jsxs)("div", {
               children: [
-                  (0, a.jsx)("div", { className: l()(b.loadingHeading, I.sectionHeader) }),
+                  (0, a.jsx)("div", { className: l()(y.loadingHeading, _.sectionHeader) }),
                   (0, a.jsx)("div", {
-                      className: l()(I.row, I.gapLg),
-                      children: o()
+                      className: l()(_.row, _.gapLg),
+                      children: s()
                           .range(0, 5)
-                          .map((e) => (0, a.jsx)("div", { className: b.loadingArtwork }, e)),
+                          .map((e) => (0, a.jsx)("div", { className: y.loadingArtwork }, e)),
                   }),
               ],
           })
@@ -112,17 +112,17 @@ function O(e) {
           ? (0, a.jsxs)("div", {
                 children: [
                     (0, a.jsx)(u.Heading, {
-                        className: I.sectionHeader,
+                        className: _.sectionHeader,
                         variant: "text-md/semibold",
                         color: "header-primary",
-                        children: _.intl.string(_.t["6rLyQB"]),
+                        children: b.intl.string(b.t["6rLyQB"]),
                     }),
                     (0, a.jsx)("div", {
-                        className: b.similarGames,
+                        className: y.similarGames,
                         style: {},
                         children: p.map((e) =>
                             (0, a.jsx)(
-                                y,
+                                I,
                                 {
                                     game: e,
                                     onClose: n,

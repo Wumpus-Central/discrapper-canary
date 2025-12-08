@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(539854), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(494497),
-    l = n(442837),
+    l = n(494497),
+    o = n(442837),
     a = n(704215),
     s = n(952265),
     u = n(907862),
@@ -10,14 +10,14 @@ var r = n(54381),
     d = n(819640),
     p = n(476044),
     f = n(921944),
-    m = n(130231),
+    m = n(810878),
     g = n(388032);
 function v(e) {
     let { powerup: t, targetRef: n, isCardVisible: v } = e,
-        x = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
+        x = (0, o.e7)([d.Z], () => d.Z.hasLayers()),
         _ = (0, s.useHasAnyModalOpen)(),
         b =
-            t.skuId === o.A$
+            t.skuId === l.A$
                 ? {
                       title: g.intl.string(m.default.YWo6VL),
                       body: g.intl.string(m.default.gXVvKc),
@@ -27,12 +27,12 @@ function v(e) {
         h = [];
     null == b || x || !v || _ || h.push(b.dismissibleContentType);
     let [j, C] = (0, c.US)(h),
-        w = i.useCallback(() => {
+        Z = i.useCallback(() => {
             C(f.L.INDIRECT_ACTION);
         }, [C]);
     return ((0, p.Z)({
         targetRef: n,
-        onShouldClose: w,
+        onShouldClose: Z,
         enabled: null != j,
     }),
     null == b || null == j)

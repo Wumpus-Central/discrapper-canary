@@ -37,7 +37,7 @@ var r = n(54381),
     U = n(474936),
     G = n(282793),
     Z = n(981631),
-    B = n(606097),
+    B = n(441677),
     F = n(388032),
     V = n(250445),
     H = n(867983);
@@ -160,7 +160,7 @@ function q(e) {
     let ey = null;
     null != n &&
         (ey = z
-            ? (0, r.jsx)(X, {
+            ? (0, r.jsx)(Q, {
                   premiumSubscription: n,
                   onInvoiceError: V,
                   priceOptions: s,
@@ -174,7 +174,7 @@ function q(e) {
                     preventFetch: eh,
                 })
               : (0, R.R4)(n, w, Y)
-                ? (0, r.jsx)(Q, {
+                ? (0, r.jsx)(X, {
                       premiumSubscription: n,
                       newPlan: ef,
                       onInvoiceError: V,
@@ -298,7 +298,7 @@ function q(e) {
         ],
     });
 }
-function X(e) {
+function Q(e) {
     let { premiumSubscription: t, onInvoiceError: n, priceOptions: a, preventFetch: o } = e,
         { setInvoicePreview: s } = (0, y.JL)(),
         [l, c] = (0, w.Ox)({
@@ -330,7 +330,7 @@ function X(e) {
           })
         : (0, r.jsx)(d.$jN, {});
 }
-function Q(e) {
+function X(e) {
     let t,
         {
             premiumSubscription: n,

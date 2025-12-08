@@ -1,4 +1,4 @@
-n.d(e, { Z: () => E });
+n.d(e, { G: () => T });
 var i = n(323472),
     l = n(509613),
     s = n(313789),
@@ -21,9 +21,9 @@ let c = s.n.NOTIFICATIONS_ADVANCED_ACCORDION,
                 },
             });
         },
-        buildLayout: () => [r.Z, u.Z, a.Z],
+        buildLayout: () => [r.i, u.F, a.l],
     }),
-    E = (0, l.k4)(s.n.NOTIFICATIONS_ADVANCED_CATEGORY, {
+    T = (0, l.k4)(s.n.NOTIFICATIONS_ADVANCED_CATEGORY, {
         useTitle: () => o.intl.string(o.t["31DySj"]),
         buildLayout: () => [d],
     });

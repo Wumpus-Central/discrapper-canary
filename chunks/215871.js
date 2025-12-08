@@ -1,4 +1,4 @@
-n.d(e, { b: () => E });
+n.d(e, { b: () => T });
 var i = n(657707),
     l = n(509613),
     s = n(313789),
@@ -14,7 +14,7 @@ let c = (0, l.x1)(s.n.OVERLAY_PANE, {
         useTitle: () => o.intl.string(o.t["9cb1Uz"]),
         buildLayout: () => [c],
     }),
-    E = (0, l.m7)(s.n.OVERLAY_SIDEBAR_ITEM, {
+    T = (0, l.m7)(s.n.OVERLAY_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t["9cb1Uz"]),
         getLegacySearchKey: () => a.s6.OVERLAY,
         icon: i.epB,

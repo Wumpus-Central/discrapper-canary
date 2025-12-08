@@ -2,8 +2,8 @@ n.d(t, { Z: () => o });
 var a = n(54381);
 n(473749);
 var l = n(120356),
-    i = n.n(l),
-    r = n(584973),
+    r = n.n(l),
+    i = n(584973),
     s = n(608007);
 function o(e) {
     let {
@@ -22,13 +22,13 @@ function o(e) {
     let { emoji: x } = t,
         f = null != t.state && "" !== t.state ? t.state : c;
     return (0, a.jsxs)("div", {
-        className: i()(s.__invalid_container, n),
+        className: r()(s.__invalid_container, n),
         children: [
             p || null == x
                 ? null
-                : (0, a.jsx)(r.Z, {
+                : (0, a.jsx)(i.Z, {
                       emoji: x,
-                      className: i()(s.emoji, l, null != d ? { [d]: null == f || "" === f } : null),
+                      className: r()(s.emoji, l, null != d ? { [d]: null == f || "" === f } : null),
                       animate: u,
                       hideTooltip: m,
                   }),

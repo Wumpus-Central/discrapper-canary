@@ -3,8 +3,8 @@ var a = n(54381),
     i = n(473749),
     r = n(481060),
     l = n(312097),
-    s = n(810568),
-    o = n(388032),
+    o = n(810568),
+    s = n(388032),
     c = n(226788),
     d = n(275914);
 function u(e) {
@@ -40,7 +40,7 @@ function u(e) {
                       className: c.sectionHeader,
                       variant: "text-md/semibold",
                       color: "header-primary",
-                      children: o.intl.string(o.t.bNdK5x),
+                      children: s.intl.string(s.t.bNdK5x),
                   }),
                   (0, a.jsxs)("div", {
                       className: g ? d.gameProfileMediaSmall : d.gameProfileMediaLarge,
@@ -59,7 +59,7 @@ function u(e) {
                                               ringClassName: d.gameArtworkFocusRing,
                                           },
                                           onClick: () => {
-                                              n(s.as.ClickImage),
+                                              n(o.as.ClickImage),
                                                   (0, l.K)({
                                                       items: m,
                                                       startingIndex: t,
@@ -70,7 +70,7 @@ function u(e) {
                                           children: (0, a.jsx)("img", {
                                               src: e.url,
                                               className: d.gameArtwork,
-                                              alt: o.intl.formatToPlainString(o.t.COYYrn, { game: name }),
+                                              alt: s.intl.formatToPlainString(s.t.COYYrn, { game: name }),
                                           }),
                                       },
                                       t,

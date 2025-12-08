@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(242291),
     g = n(792165),
     b = n(603074),
-    y = n(294629),
-    C = n(131951),
+    C = n(294629),
+    y = n(131951),
     v = n(390322),
     _ = n(871499),
     O = n(127379),
@@ -29,13 +29,13 @@ function E(e) {
             events: { onMouseEnter: T, onMouseLeave: N },
         } = (0, o.j)(),
         A = t.getGuildId(),
-        { mute: w, suppress: M } = (0, y.Z)(t),
-        R = (0, l.e7)([C.Z], () => C.Z.isDeaf()),
+        { mute: w, suppress: M } = (0, C.Z)(t),
+        R = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
         L = w || M || R,
         D = (0, m.sR)({ isSoundboardButtonDisabled: L }),
         [k, U] = (0, h.cv)(D),
         { analyticsLocations: V } = (0, u.ZP)(),
-        { isHovered: F, setIsHovered: B, onMouseEnter: H, onMouseLeave: G } = (0, f.Z)(200, 300);
+        { isHovered: H, setIsHovered: F, onMouseEnter: B, onMouseLeave: G } = (0, f.Z)(200, 300);
     function z(e) {
         null != A &&
             (0, c.jW)(e, async () => {
@@ -97,19 +97,19 @@ function E(e) {
         (0, d.v)(P, d.d.SOUNDBOARD),
             j === O.D.SOUNDBOARD
                 ? (null == S || S(void 0), G())
-                : (null != j ? (Z(), H()) : Z(), null == S || S(O.D.SOUNDBOARD));
+                : (null != j ? (Z(), B()) : Z(), null == S || S(O.D.SOUNDBOARD));
     }
     let q = r.useRef(null);
     return (0, i.jsx)(s.y, {
         targetElementRef: q,
-        shouldShow: (F && (j === O.D.SOUNDBOARD || null == j)) || j === O.D.SOUNDBOARD,
+        shouldShow: (H && (j === O.D.SOUNDBOARD || null == j)) || j === O.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: "top",
         position: "top",
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            B(!1), null == S || S(void 0);
+            F(!1), null == S || S(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -117,7 +117,7 @@ function E(e) {
                 ? null
                 : (0, i.jsx)(v.Z, {
                       children: (0, i.jsx)("div", {
-                          onMouseEnter: H,
+                          onMouseEnter: B,
                           onMouseLeave: G,
                           children: (0, i.jsx)(b.Z, {
                               guildId: A,
@@ -151,13 +151,13 @@ function E(e) {
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {
-                    H(), T();
+                    B(), T();
                 },
                 onMouseLeave: () => {
                     null == j && (G(), N());
                 },
-                isActive: F || j === O.D.SOUNDBOARD,
-                color: F || j === O.D.SOUNDBOARD ? "primaryDark" : void 0,
+                isActive: H || j === O.D.SOUNDBOARD,
+                color: H || j === O.D.SOUNDBOARD ? "primaryDark" : void 0,
             }),
     });
 }

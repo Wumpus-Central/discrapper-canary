@@ -2,20 +2,20 @@ n.d(t, { Z: () => o });
 var i = n(54381);
 n(473749);
 var l = n(481060),
-    r = n(813197),
-    s = n(388032),
-    a = n(437907);
+    a = n(813197),
+    r = n(388032),
+    s = n(437907);
 function o(e) {
     let { icon: t, onChange: n } = e;
     return (0, i.jsx)(l.tEY, {
         within: !0,
         children: (0, i.jsxs)("div", {
-            className: a.iconContainer,
+            className: s.iconContainer,
             children: [
                 null != t
                     ? (0, i.jsx)("img", {
                           alt: "Your icon",
-                          className: a.filledIcon,
+                          className: s.filledIcon,
                           src: t,
                       })
                     : (0, i.jsxs)("svg", {
@@ -54,11 +54,11 @@ function o(e) {
                               }),
                           ],
                       }),
-                (0, i.jsx)(r.ZP, {
+                (0, i.jsx)(a.ZP, {
                     onChange: n,
                     multiple: !1,
                     tabIndex: 0,
-                    "aria-label": s.intl.string(s.t.DWB2YZ),
+                    "aria-label": r.intl.string(r.t.DWB2YZ),
                 }),
             ],
         }),

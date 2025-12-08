@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var r = n(54381),
     i = n(481060);
-function o(e) {
+function l(e) {
     return (0, i.ZDy)(async () => {
         let { default: t } = await Promise.all([n.e("67365"), n.e("26473")]).then(n.bind(n, 323297));
         return (n) =>

@@ -36,8 +36,8 @@ var r = n(54381),
     A = n(314897),
     R = n(857192),
     D = n(77498),
-    L = n(131951),
-    M = n(158776),
+    M = n(131951),
+    L = n(158776),
     k = n(979651),
     G = n(574254),
     U = n(374129),
@@ -97,13 +97,13 @@ let ei = [$.fO.ACTIVITY],
             eN = y.type === $.fO.ACTIVITY ? null : y.user,
             eZ = null != (l = null == eN ? void 0 : eN.id) ? l : null,
             [ew] = (0, p.Z)(y.type === $.fO.ACTIVITY ? [y.applicationId] : []),
-            eT = (0, a.e7)([L.Z], () => null != eZ && L.Z.isLocalVideoDisabled(eZ, (0, g.Z)(y.type)), [eZ, y.type]),
-            eA = (0, a.e7)([L.Z], () => (null != eZ ? L.Z.getVideoToggleState(eZ, (0, g.Z)(y.type)) : J.ZUi.NONE), [
+            eT = (0, a.e7)([M.Z], () => null != eZ && M.Z.isLocalVideoDisabled(eZ, (0, g.Z)(y.type)), [eZ, y.type]),
+            eA = (0, a.e7)([M.Z], () => (null != eZ ? M.Z.getVideoToggleState(eZ, (0, g.Z)(y.type)) : J.ZUi.NONE), [
                 eZ,
                 y.type,
             ]),
             eR = eA === J.ZUi.AUTO_PROBING,
-            { speaking: eD, latched: eL, ringing: eM, hasVideo: ek } = (0, X.Z)(y, eP),
+            { speaking: eD, latched: eM, ringing: eL, hasVideo: ek } = (0, X.Z)(y, eP),
             eG = (0, a.e7)([P.Z], () => null !== eZ && P.Z.isUserPlayingSounds(eZ), [eZ]),
             eU = (function (e, t, n) {
                 var r, i, l, o;
@@ -118,7 +118,7 @@ let ei = [$.fO.ACTIVITY],
                             voiceChannelId: null == i ? void 0 : i.channelId,
                         };
                     }),
-                    u = (0, a.cj)([L.Z], () => {
+                    u = (0, a.cj)([M.Z], () => {
                         let n = (0, g.Z)(t.type);
                         return e === s
                             ? {
@@ -126,9 +126,9 @@ let ei = [$.fO.ACTIVITY],
                                   deafened: !1,
                               }
                             : {
-                                  muted: L.Z.isLocalMute(s, n),
-                                  localVideoDisabled: L.Z.isLocalVideoDisabled(s, n),
-                                  localVideoAutoDisabled: L.Z.isLocalVideoAutoDisabled(s, n),
+                                  muted: M.Z.isLocalMute(s, n),
+                                  localVideoDisabled: M.Z.isLocalVideoDisabled(s, n),
+                                  localVideoAutoDisabled: M.Z.isLocalVideoAutoDisabled(s, n),
                               };
                     }, [e, t.type, s]);
                 return {
@@ -150,10 +150,10 @@ let ei = [$.fO.ACTIVITY],
             eV = (0, a.e7)([k.Z], () => k.Z.getVoicePlatformForChannel(el.id, null != eZ ? eZ : J.lds)),
             { showGameIcon: eH } = v.ZP.useExperiment({ location: "voice_users" }, { autoTrackExposure: !1 }),
             eW = (0, a.e7)(
-                [M.Z],
+                [L.Z],
                 () =>
                     eH && null != eZ
-                        ? M.Z.findActivity(eZ, (e) => null != e.application_id && e.type === J.IIU.PLAYING)
+                        ? L.Z.findActivity(eZ, (e) => null != e.application_id && e.type === J.IIU.PLAYING)
                         : null,
                 [eH, eZ],
             ),
@@ -278,7 +278,7 @@ let ei = [$.fO.ACTIVITY],
         return (0, r.jsx)(f.Z, {
             section: J.jXE.VOICE_CHANNEL_TILE,
             children: (0, r.jsx)("div", {
-                className: o()(er.wrapper, { [er.ringing]: eM }, F),
+                className: o()(er.wrapper, { [er.ringing]: eL }, F),
                 style: Q,
                 onMouseEnter: () => {
                     eI(!0);
@@ -445,7 +445,7 @@ let ei = [$.fO.ACTIVITY],
                                               className: o()(er.border, {
                                                   [er.voiceChannelEffect]: !eh && (eG || null != eF),
                                                   [er.speaking]: eD && !eh && !eG,
-                                                  [er.latchedNotSpeaking]: eL && !eD && !eh && !eG,
+                                                  [er.latchedNotSpeaking]: eM && !eD && !eh && !eG,
                                               }),
                                           })
                                         : null,
@@ -554,12 +554,12 @@ let ec = i.memo((e) => {
             onToggleMute: A,
             popoutType: R,
         } = e,
-        D = (0, a.e7)([L.Z], () => null != v && L.Z.isLocalVideoAutoDisabled(v, (0, g.Z)(_)), [v, _]),
-        M = (0, y.Z)({
+        D = (0, a.e7)([M.Z], () => null != v && M.Z.isLocalVideoAutoDisabled(v, (0, g.Z)(_)), [v, _]),
+        L = (0, y.Z)({
             userId: v,
             guildId: j.getGuildId(),
         }),
-        k = (0, O.j)({ displayNameStyles: M }),
+        k = (0, O.j)({ displayNameStyles: L }),
         U = (0, Q.N)(l),
         B = (0, Q.K)(l),
         [F, V] = i.useState(!1);

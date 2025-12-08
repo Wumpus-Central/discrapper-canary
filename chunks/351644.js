@@ -24,8 +24,8 @@ var i = n(54381),
     N = n(768581),
     S = n(63063),
     I = n(709054),
-    E = n(51144),
-    w = n(466070),
+    w = n(51144),
+    E = n(466070),
     P = n(585835),
     T = n(997787),
     Z = n(981631),
@@ -66,8 +66,8 @@ function W(e) {
             builtInIntegrations: F,
             customWebhooks: K,
             followedChannelWebhooks: z,
-            isLoadingWebhooks: q,
-            canCreateWebhook: V,
+            isLoadingWebhooks: V,
+            canCreateWebhook: q,
             onManageBuiltIn: Y,
             onManageCustomWebhooks: J,
             onManageFollowedChannels: Q,
@@ -169,7 +169,7 @@ function W(e) {
                           icon: u.T39,
                           text: A.intl.formatToPlainString(A.t.Nu9sat, {
                               timestamp: I.default.extractTimestamp(r.id),
-                              user: E.ZP.getUserTag(r.user),
+                              user: w.ZP.getUserTag(r.user),
                           }),
                       })
                     : l.push({
@@ -270,11 +270,11 @@ function W(e) {
         })(ee, ef, null == W ? void 0 : W.id)),
         (eS = null));
     let eI = S.Z.getArticleURL(Z.BhN.INTEGRATIONS),
-        eE = null != H ? A.t.YV0vh6 : A.t.FnZEJs,
-        ew = [];
+        ew = null != H ? A.t.YV0vh6 : A.t.FnZEJs,
+        eE = [];
     if (el) {
         let e, t, r, a, o;
-        ew.push(
+        eE.push(
             ((n = K.length),
             n > 0 ? (t = (0, i.jsx)(u.LJT, { size: "xs" })) : (e = A.intl.string(A.t.lOQqJK)),
             (0, i.jsx)(
@@ -283,7 +283,7 @@ function W(e) {
                     name: A.intl.string(A.t.xOg4SP),
                     icon: u.tYf,
                     buttonText: e,
-                    buttonDisabled: !V,
+                    buttonDisabled: !q,
                     trailing: t,
                     onButtonClick: J,
                     hasNextSection: n > 0,
@@ -294,7 +294,7 @@ function W(e) {
         ),
             (null == H ? void 0 : H.type) === Z.d4z.GUILD_VOICE ||
                 ((null == H ? void 0 : H.type) != null && Z.TPd.GUILD_THREADS_ONLY.has(H.type)) ||
-                ew.push(
+                eE.push(
                     ((l = z.length),
                     l > 0
                         ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })), (a = Q))
@@ -317,7 +317,7 @@ function W(e) {
     }
     null == H &&
         ec.length > 0 &&
-        ew.push(
+        eE.push(
             ((o = ec.length),
             (0, i.jsx)(
                 P.Z,
@@ -333,7 +333,7 @@ function W(e) {
             )),
         ),
         eb &&
-            ew.push(
+            eE.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -371,7 +371,7 @@ function W(e) {
                 })(ed, ep, Y),
             ),
         eg &&
-            ew.push(
+            eE.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -414,27 +414,27 @@ function W(e) {
         children: [
             (0, i.jsx)(u.Text, {
                 variant: "text-sm/normal",
-                children: A.intl.format(eE, { helpdeskArticle: eI }),
+                children: A.intl.format(ew, { helpdeskArticle: eI }),
             }),
             (0, i.jsx)(u.izJ, { className: D.divider }),
-            q || ei || null == W
+            V || ei || null == W
                 ? (0, i.jsx)(u.$jN, {
                       className: D.__invalid_spinner,
                       type: u.$jN.Type.SPINNING_CIRCLE,
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          ew,
+                          eE,
                           eP &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      ew.length > 0 ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                      eE.length > 0 ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
                                       (0, i.jsx)(u.Heading, {
                                           variant: "heading-md/semibold",
                                           className: D.sectionHeader,
                                           children: A.intl.string(A.t.oAvIAg),
                                       }),
-                                      (0, i.jsx)(w.t, {
+                                      (0, i.jsx)(E.t, {
                                           channel: H,
                                           application: es,
                                           showApplicationImage: !0,
@@ -448,7 +448,7 @@ function W(e) {
                           ea
                               ? (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        ew.length > 0 || eP ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                        eE.length > 0 || eP ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
                                         (0, i.jsx)(u.Heading, {
                                             variant: "heading-md/semibold",
                                             className: D.sectionHeader,

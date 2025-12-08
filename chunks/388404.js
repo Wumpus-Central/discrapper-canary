@@ -1,4 +1,4 @@
-n.d(e, { $: () => E });
+n.d(e, { $: () => T });
 var i = n(100527),
     l = n(509613),
     s = n(208049),
@@ -8,7 +8,7 @@ var i = n(100527),
     o = n(313789),
     c = n(981631),
     d = n(388032);
-let E = (0, l.UO)(o.n.SOUNDBOARD_VOLUME_SETTING, {
+let T = (0, l.UO)(o.n.SOUNDBOARD_VOLUME_SETTING, {
     useTitle: () => d.intl.string(d.t.kbFsAD),
     useSubtitle: () => d.intl.format(d.t.BPbGq7, { helpCenterArticle: u.Z.getArticleURL(c.BhN.SOUNDBOARD) }),
     setValue: function (t) {

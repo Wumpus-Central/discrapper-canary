@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(54381),
     l = n(473749),
     i = n(498607),
@@ -16,10 +16,10 @@ let b = [
     c.d$.ORDER_BY_USER_ID_DESC,
     c.d$.ORDER_BY_USER_ID_ASC,
 ];
-function p(e) {
+function f(e) {
     let { guildId: t, onClose: n } = e,
         i = (0, a.e7)([u.Z], () => u.Z.getSearchStateByGuildId(t), [t], o()),
-        p = l.useCallback(
+        f = l.useCallback(
             (e) => {
                 var n, r;
                 (0, d.Dr)(
@@ -100,7 +100,7 @@ function p(e) {
                                 ? e === c.d$.ORDER_BY_GUILD_JOINED_AT_DESC
                                 : e === t,
                         disabled: !1,
-                        action: () => p(e),
+                        action: () => f(e),
                         group: "members-table-sort",
                     },
                     "members-table-sort-".concat(e),

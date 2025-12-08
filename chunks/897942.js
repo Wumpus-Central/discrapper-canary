@@ -15,7 +15,7 @@ function _(e) {
     let { maxRewardImageSrc: t, claimableRewards: n, size: _, imageScaling: m = f } = e,
         h = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
         g = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        E = (0, a.pxk)(_),
+        E = (0, a.dcp)(_),
         b = { height: E * m };
     return n.length > 0
         ? (0, r.jsx)("img", {
@@ -31,7 +31,7 @@ function _(e) {
                           "aria-label": null == h ? void 0 : h.username,
                           size: _,
                           className: c.firstPromotionalAvatar,
-                          src: 1 === n.length ? (null == h ? void 0 : h.getAvatarURL(void 0, (0, a.pxk)(_), !g)) : d,
+                          src: 1 === n.length ? (null == h ? void 0 : h.getAvatarURL(void 0, (0, a.dcp)(_), !g)) : d,
                           avatarDecoration: (0, s.Z)(n[0].assetId, _, !g),
                       }),
                   2 === n.length &&

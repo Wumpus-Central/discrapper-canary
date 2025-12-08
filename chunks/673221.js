@@ -15,7 +15,7 @@ var r = n(54381),
     h = n(415540),
     g = n(345729),
     E = n(483753),
-    b = n(298200),
+    b = n(245034),
     y = n(388032),
     O = n(680765);
 function v(e, t, n) {
@@ -137,8 +137,8 @@ function R(e) {
         { id: Y, required: W, label: K, disabled: z } = H,
         {
             isOpen: q,
-            setIsOpen: X,
-            refs: Q,
+            setIsOpen: Q,
+            refs: X,
             floatingStyles: J,
             getReferenceProps: $,
             getFloatingProps: ee,
@@ -157,12 +157,12 @@ function R(e) {
         ec = z || n,
         { measuredWidth: eu, itemsForMeasurement: ed } = w(er, t),
         ef = i.useCallback(() => {
-            ec || X(!q);
-        }, [ec, X, q]),
+            ec || Q(!q);
+        }, [ec, Q, q]),
         ep = i.useCallback(() => {
             var e;
-            X(!1), null == (e = ea.current) || e.focus();
-        }, [X]),
+            Q(!1), null == (e = ea.current) || e.focus();
+        }, [Q]),
         e_ = i.useCallback(() => {
             var e;
             "multiple" === t ? G([]) : G(null), null == (e = ea.current) || e.focus();
@@ -179,7 +179,7 @@ function R(e) {
                 if (!ec)
                     switch (e.key) {
                         case "ArrowDown":
-                            e.preventDefault(), X(!0);
+                            e.preventDefault(), Q(!0);
                             break;
                         case "ArrowLeft":
                             e.preventDefault(), null == (n = V.current) || null == (t = n.firstChild) || t.focus();
@@ -195,7 +195,7 @@ function R(e) {
                             el && f && (e.preventDefault(), e.stopPropagation(), e_());
                     }
             },
-            [e_, el, f, X, ec],
+            [e_, el, f, Q, ec],
         ),
         eh = i.useMemo(() => {
             let e = Array.isArray(Z) ? Z : [Z];
@@ -239,7 +239,7 @@ function R(e) {
                         });
                 }, 10));
     }, [eh, eb, B]);
-    let eO = (0, s.Z)(eo, Q.setReference),
+    let eO = (0, s.Z)(eo, X.setReference),
         ev = i.useCallback(
             (e) => {
                 if (ec) return;
@@ -352,7 +352,7 @@ function R(e) {
                                     T(
                                         S(
                                             {
-                                                ref: Q.setFloating,
+                                                ref: X.setFloating,
                                                 className: O.selectDropdown,
                                             },
                                             ee(),

@@ -8,19 +8,19 @@ var i = r(120356),
     l = r(518950),
     c = r(342386),
     u = r(51144),
-    d = r(606097),
-    p = r(388032),
-    f = r(456577);
+    d = r(441677),
+    f = r(388032),
+    p = r(456577);
 let b = (e) => {
     let { recipient: t, isSuccess: r, onClose: i } = e,
         { avatarSrc: b, eventHandlers: m } = (0, l.Z)({
             userId: null == t ? void 0 : t.id,
             size: a.EFr.SIZE_56,
         }),
-        y = u.ZP.getName(t),
-        h = !r;
+        g = u.ZP.getName(t),
+        y = !r;
     return (0, n.jsxs)("div", {
-        className: f.row,
+        className: p.row,
         children: [
             (0, n.jsx)(
                 a.qEK,
@@ -50,41 +50,41 @@ let b = (e) => {
                     return e;
                 })(
                     {
-                        imageClassName: s()({ [f.erroredAvatar]: h }),
+                        imageClassName: s()({ [p.erroredAvatar]: y }),
                         src: b,
-                        "aria-label": y,
+                        "aria-label": g,
                         size: a.EFr.SIZE_32,
                     },
                     m,
                 ),
             ),
-            h
+            y
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
                           (0, n.jsx)(a.Text, {
-                              className: f.error,
+                              className: p.error,
                               variant: "text-md/medium",
                               color: "text-strong",
-                              children: y,
+                              children: g,
                           }),
                           (0, n.jsx)(a.Text, {
                               variant: "text-md/medium",
-                              className: f.error,
+                              className: p.error,
                               color: "text-strong",
-                              children: p.intl.format(d.default["Y/oMwY"], { userName: y }),
+                              children: f.intl.format(d.default["Y/oMwY"], { userName: g }),
                           }),
                       ],
                   })
                 : (0, n.jsx)(a.Text, {
                       variant: "text-md/medium",
-                      className: f.displayName,
+                      className: p.displayName,
                       color: "text-strong",
-                      children: y,
+                      children: g,
                   }),
             (0, n.jsx)(a.Button, {
                 variant: "secondary",
                 size: "sm",
-                text: p.intl.string(p.t["g33r/P"]),
+                text: f.intl.string(f.t["g33r/P"]),
                 icon: a.kBi,
                 onClick: () => {
                     var e;

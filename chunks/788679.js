@@ -12,7 +12,7 @@ function d(e) {
     let { channelId: t, messageId: n, mediaItemUrl: d, embedId: f, transitionState: g, onClose: b } = e,
         p = (0, s.v)(t, n, d),
         m = (0, s.Z)(t, n, f),
-        { reportFalsePositive: y, isReportFalsePositiveLoading: O } = (0, o.$)({
+        { reportFalsePositive: O, isReportFalsePositiveLoading: y } = (0, o.$)({
             onSuccess: () => (0, c.s)(b),
             onError: () => {
                 (0, i.showToast)((0, i.createToast)(u.intl.string(u.t.R0RpRX), i.ToastType.FAILURE));
@@ -31,9 +31,9 @@ function d(e) {
         (0, r.jsx)(c.$, {
             messageId: n,
             channelId: t,
-            isReportFalsePositiveLoading: O,
+            isReportFalsePositiveLoading: y,
             analyticsContext: a.UU.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
-            onConfirmPress: y,
+            onConfirmPress: O,
             attachmentPreview: 1 === p.length && 0 === m.length ? p[0] : void 0,
             embedPreview: 1 === m.length && 0 === p.length ? m[0] : void 0,
             transitionState: g,

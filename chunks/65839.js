@@ -75,7 +75,7 @@ let b = (e) => {
             handleSelectCategory: _,
             categoryCounts: y,
             allEntriesCount: O,
-            isLoading: j,
+            isLoading: x,
         } = e;
         return (0, r.jsx)("div", {
             className: h.pageContainer,
@@ -125,7 +125,7 @@ let b = (e) => {
                             ],
                         }),
                     }),
-                    j && null == n
+                    x && null == n
                         ? (0, r.jsx)(s.$jN, { className: h.spinner })
                         : null == n
                           ? void 0

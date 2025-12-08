@@ -74,15 +74,15 @@ let x = (e) => {
             j = f || (!g && v.size > 0),
             [_, y] = l.useState(""),
             [C, S] = l.useState(null),
-            [E, N] = l.useState(null);
+            [E, O] = l.useState(null);
         return (l.useEffect(() => {
             if ("" === _.trim() || !j) {
-                S(null), N(null);
+                S(null), O(null);
                 return;
             }
             let e = c.Z.getProduct(_),
                 t = c.Z.getCategoryForProduct(_);
-            null != e && null != t ? (S(e), N(t)) : (S(null), N(null));
+            null != e && null != t ? (S(e), O(t)) : (S(null), O(null));
         }, [_, j]),
         g)
             ? (0, a.jsx)(i.Text, {

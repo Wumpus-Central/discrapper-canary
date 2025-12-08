@@ -9,7 +9,7 @@ function c(e) {
     var t,
         r,
         { guildId: c, title: d, description: u, powerups: p, footerInfoText: f, footerAction: v } = e,
-        m = (function (e, t) {
+        b = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -31,7 +31,7 @@ function c(e) {
             return o;
         })(e, ["guildId", "title", "description", "powerups", "footerInfoText", "footerAction"]);
     let j = (0, i.Z)(c),
-        x =
+        m =
             null != f && f.length > 0
                 ? (0, n.jsx)("div", {
                       className: l.footerInfoContainer,
@@ -71,10 +71,10 @@ function c(e) {
             {
                 title: d,
                 subtitle: u,
-                actionBarInput: x,
+                actionBarInput: m,
                 actions: null != v ? [v] : [],
             },
-            m,
+            b,
         )),
         (r = r =
             {

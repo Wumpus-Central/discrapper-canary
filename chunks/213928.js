@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var a = n(54381),
     l = n(442837),
-    i = n(681715),
-    r = n(481060),
+    r = n(681715),
+    i = n(481060),
     s = n(885110),
     o = n(51144),
     c = n(231338),
@@ -16,18 +16,18 @@ function m() {
     return (0, a.jsxs)("div", {
         className: u.container,
         children: [
-            (0, a.jsxs)(r.nn4, {
+            (0, a.jsxs)(i.nn4, {
                 tag: "div",
                 children: [d.intl.string(d.t.AHoLf4), ":"],
             }),
             n,
             n.length > 0 &&
                 m &&
-                (0, a.jsx)(i.u, {
+                (0, a.jsx)(r.u, {
                     text: d.intl.string(d.t.L99HQm),
-                    children: (0, a.jsx)(r.Mgn, {
+                    children: (0, a.jsx)(i.Mgn, {
                         size: "xs",
-                        color: r.TVs.colors.STATUS_WARNING,
+                        color: i.TVs.colors.STATUS_WARNING,
                         "aria-label": d.intl.string(d.t.L99HQm),
                     }),
                 }),

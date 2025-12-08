@@ -148,12 +148,12 @@ function N(e) {
         G = null != I.selectedJoinSourceType,
         z = q || G,
         Y = (0, f.xC)(t),
-        W = l.useMemo(() => n.filter((e) => (0, f.rX)(t, Y, e)), [Y, n, t]),
-        Q = W.length > 0,
-        K = 0 === W.filter((e) => !V.has(e)).length,
+        Q = l.useMemo(() => n.filter((e) => (0, f.rX)(t, Y, e)), [Y, n, t]),
+        W = Q.length > 0,
+        K = 0 === Q.filter((e) => !V.has(e)).length,
         J = l.useCallback(() => {
-            Q && (K ? E() : M(W));
-        }, [Q, K, E, M, W]);
+            W && (K ? E() : M(Q));
+        }, [W, K, E, M, Q]);
     return (0, r.jsx)("thead", {
         children: (0, r.jsxs)("tr", {
             className: _.tableHeaderRow,
@@ -162,14 +162,14 @@ function N(e) {
                     (0, r.jsx)("th", {
                         className: o()(_.tableHeaderCellContainer, w.xsmallCol),
                         children: (0, r.jsx)(u.u, {
-                            shouldShow: !Q,
+                            shouldShow: !W,
                             text: H.intl.string(H.t.tJEY0G),
                             children: (0, r.jsx)(d.P3F, {
                                 onClick: J,
                                 className: _.tableHeaderCell,
                                 children: (0, r.jsx)(d.FZ5, {
                                     checked: K,
-                                    disabled: !Q,
+                                    disabled: !W,
                                 }),
                             }),
                         }),

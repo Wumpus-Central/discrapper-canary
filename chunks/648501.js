@@ -37,8 +37,8 @@ function N(e) {
             enableActivities: A,
             isSubscriptionGated: R,
             needSubscriptionToAccess: D,
-            isNewChannel: L,
-            muted: M,
+            isNewChannel: M,
+            muted: L,
             resolvedUnreadSetting: k,
         } = e,
         G = (0, i.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
@@ -70,19 +70,19 @@ function N(e) {
             isMentionLowImportance: U,
         });
     if ((0, d.O)(R)) return (0, r.jsx)(d.Z, { locked: D });
-    if (L)
+    if (M)
         return (0, r.jsx)(o.IGR, {
             text: I.intl.string(I.t.y2b7CA),
             color: l.Z.unsafe_rawColors.BRAND_260.css,
             className: P.newChannel,
         });
-    if (!M && k === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != K && K > 0)
+    if (!L && k === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != K && K > 0)
         return (0, r.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "text-brand",
             children: I.intl.format(I.t.GkAbqY, { count: (0, o.NGo)(K) }),
         });
-    if (!M && n.isForumLikeChannel() && null != Y && Y > 0)
+    if (!L && n.isForumLikeChannel() && null != Y && Y > 0)
         return (0, r.jsx)(o.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
@@ -108,7 +108,7 @@ function N(e) {
             : null != A && A && (0, y.u)(B)
               ? (0, r.jsx)(j.Z, {
                     embeddedApps: B,
-                    muted: M,
+                    muted: L,
                 })
               : null;
 }

@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(623624),
     y = n(665149),
     O = n(984370),
-    j = n(616286),
-    x = n(975146),
+    x = n(616286),
+    j = n(975146),
     v = n(430824),
     C = n(496675),
     I = n(626135),
@@ -70,7 +70,7 @@ function M(e) {
             !m &&
                 O &&
                 (0, r.jsx)(
-                    x.Z,
+                    j.Z,
                     {
                         className: a()(L.button, { [L.sidebarOpen]: c }),
                         onClick: () => {
@@ -82,7 +82,7 @@ function M(e) {
             !c &&
                 (0, r.jsx)("div", {
                     className: a()(L.button, { [L.sidebarOpen]: v || i }),
-                    children: (0, r.jsx)(j.T, {
+                    children: (0, r.jsx)(x.T, {
                         channelId: t.id,
                         showRequestToSpeakSidebar: i,
                         toggleRequestToSpeakSidebar: n,
@@ -100,11 +100,11 @@ function k(e) {
         f = (0, S.Io)(n.id),
         g = (0, S.Rk)(n.id, E.pV.AUDIENCE),
         b = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id), [n.guild_id]),
-        j = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
-        x =
+        x = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
+        j =
             null != b && b.features.has(w.GuildFeatures.COMMUNITY)
-                ? j < w.TU7
-                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && j <= w.eez,
+                ? x < w.TU7
+                : (null == b ? void 0 : b.premiumTier) !== w.Eu4.TIER_3 && x <= w.eez,
         Z = (0, R.Z)(n),
         N = (0, s.e7)([C.Z], () => C.Z.can(P.yP, n)),
         k = () => {
@@ -206,18 +206,18 @@ function k(e) {
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-md/medium",
                                       color: "header-primary",
-                                      children: x ? D.intl.string(D.t["T+zF9M"]) : D.intl.string(D.t["IZ+SVv"]),
+                                      children: j ? D.intl.string(D.t["T+zF9M"]) : D.intl.string(D.t["IZ+SVv"]),
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-default",
-                                      children: x ? D.intl.string(D.t.Izgpmv) : D.intl.string(D.t["7FHbPG"]),
+                                      children: j ? D.intl.string(D.t.Izgpmv) : D.intl.string(D.t["7FHbPG"]),
                                   }),
                               ],
                           }),
                           (0, r.jsx)("div", {
                               className: L.buttons,
-                              children: x
+                              children: j
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(c.Button, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -79,7 +79,7 @@ let D = {
         object: Z.qAy.CHANNEL,
     },
 };
-function L(e, t) {
+function M(e, t) {
     (0, p.jW)(e, async () => {
         let { default: e } = await Promise.all([
             n.e("36599"),
@@ -102,8 +102,8 @@ function L(e, t) {
         return (n) => (0, r.jsx)(e, R(A({}, n), { guild: t }));
     });
 }
-let M = i.memo(function (e) {
-    var t, n, l, p, M;
+let L = i.memo(function (e) {
+    var t, n, l, p, L;
     let {
             guildNode: k,
             setRef: G,
@@ -118,7 +118,7 @@ let M = i.memo(function (e) {
             unavailable: Y = !1,
             badge: q = 0,
             isMentionLowImportance: Q,
-            contextMenu: X = L,
+            contextMenu: X = M,
             draggable: J = !1,
             sorting: $ = !1,
             preloadOnClick: ee = !0,
@@ -136,7 +136,7 @@ let M = i.memo(function (e) {
                   ? l
                   : void 0)
         : null == es && null != et && (es = null != (p = (0, N.jt)({ guildJoinRequestStatus: et })) ? p : void 0);
-    let ec = null != (M = e.lowerBadgeSize) ? M : { width: (0, f.OVM)(q) },
+    let ec = null != (L = e.lowerBadgeSize) ? L : { width: (0, f.OVM)(q) },
         [{ dragging: eu }, ed] = (0, a.c)({
             type: j.eD.GUILD,
             item: () => (

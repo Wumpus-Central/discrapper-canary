@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(194082),
     g = n(236091),
     b = n(517525),
-    y = n(2818),
-    C = n(954551),
+    C = n(2818),
+    y = n(954551),
     v = n(44136),
     _ = n(651183),
     O = n(853476),
@@ -86,7 +86,7 @@ function R(e) {
         A = t.isGuildVoiceOrThread() && !n,
         { hasParticipantsPanel: R } = (0, T.Z)({ location: "ChannelCallHeaderToolbar" }),
         L = !P && R && (t.isGuildVoiceOrThread() || t.isGroupDM()),
-        { enabled: D, inInbox: k } = y.Z.useExperiment({ location: "ChannelCallHeaderToolbar" }),
+        { enabled: D, inInbox: k } = C.Z.useExperiment({ location: "ChannelCallHeaderToolbar" }),
         U = [];
     return (
         u &&
@@ -211,7 +211,7 @@ function R(e) {
                     "call-members-popout",
                 ),
             ),
-        D && !k && U.push((0, i.jsx)(C.Z, { className: w.button }, "for-later")),
+        D && !k && U.push((0, i.jsx)(y.Z, { className: w.button }, "for-later")),
         L &&
             U.push(
                 (0, i.jsx)(

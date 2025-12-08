@@ -49,7 +49,7 @@ class g extends i.PureComponent {
             h(this, "handleInvite", () => {
                 let { guild: e } = this.props;
                 (0, l.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e("7654"), n.e("77653")]).then(n.bind(n, 560114));
+                    let { default: t } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             t,

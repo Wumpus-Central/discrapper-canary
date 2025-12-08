@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(481060),
     c = n(785717),
     s = n(128156),
@@ -61,7 +61,7 @@ function h(e, t) {
 }
 function y(e) {
     var { children: t, className: n, scrollerRef: i } = e,
-        a = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -70,14 +70,14 @@ function y(e) {
                     var n,
                         r,
                         i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
@@ -88,10 +88,10 @@ function y(e) {
             b(
                 {
                     ref: i,
-                    className: l()(m.tabPanelScroller, n),
+                    className: a()(m.tabPanelScroller, n),
                     fade: !0,
                 },
-                a,
+                l,
             ),
             { children: t },
         ),
@@ -102,8 +102,8 @@ function v(e) {
         user: t,
         currentUser: n,
         section: i,
-        subsection: a,
-        displayProfile: l,
+        subsection: l,
+        displayProfile: a,
         guildId: o,
         channelId: c,
         onClose: m,
@@ -112,10 +112,10 @@ function v(e) {
         ? (0, r.jsx)(s.Z, {
               user: t,
               currentUser: n,
-              displayProfile: l,
+              displayProfile: a,
               guildId: o,
               channelId: c,
-              subsection: a,
+              subsection: l,
               onClose: m,
           })
         : i === p.oh.MUTUAL_FRIENDS
@@ -144,8 +144,8 @@ function O(e) {
     var t;
     let {
             user: n,
-            currentUser: a,
-            displayProfile: l,
+            currentUser: l,
+            displayProfile: a,
             guildId: s,
             channelId: u,
             items: d,
@@ -213,8 +213,8 @@ function O(e) {
                     component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: x }) }),
                     children: (0, r.jsx)(v, {
                         user: n,
-                        currentUser: a,
-                        displayProfile: l,
+                        currentUser: l,
+                        displayProfile: a,
                         guildId: s,
                         channelId: u,
                         section: O,

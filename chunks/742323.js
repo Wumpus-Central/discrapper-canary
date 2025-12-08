@@ -46,8 +46,8 @@ let h = {
                 childSpanTimeout: P,
                 markBackgroundSpan: v,
                 traceFetch: w,
-                traceXHR: G,
-                shouldCreateSpanForRequest: M,
+                traceXHR: M,
+                shouldCreateSpanForRequest: G,
                 enableHTTPTimings: b,
                 instrumentPageLoad: U,
                 instrumentNavigation: H,
@@ -216,9 +216,9 @@ let h = {
                     t && (0, a.D)(),
                     (0, O.L7)(e, {
                         traceFetch: w,
-                        traceXHR: G,
+                        traceXHR: M,
                         tracePropagationTargets: e.getOptions().tracePropagationTargets,
-                        shouldCreateSpanForRequest: M,
+                        shouldCreateSpanForRequest: G,
                         enableHTTPTimings: b,
                     });
             },

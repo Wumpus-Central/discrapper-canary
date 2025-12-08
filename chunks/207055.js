@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(388685), n(290780), n(539854);
+n.d(t, { Z: () => H }), n(388685), n(290780), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(574176),
     g = n(106301),
     b = n(882522),
-    y = n(819349),
-    C = n(771027),
+    C = n(819349),
+    y = n(771027),
     v = n(512384),
     _ = n(763624),
     O = n(463421),
@@ -37,10 +37,10 @@ var i = n(54381),
     k = n(968080);
 let U = r.memo((e) => {
     var t, n, r, l;
-    let { mute: a, deaf: s, user: y, channel: C, sessionId: E, nick: Z } = e,
-        T = y.id,
+    let { mute: a, deaf: s, user: C, channel: y, sessionId: E, nick: Z } = e,
+        T = C.id,
         k = (0, o.e7)([S.default], () => S.default.getId() === T, [T]),
-        [U, V, F] = (0, o.Wu)(
+        [U, V, H] = (0, o.Wu)(
             [I.Z],
             () =>
                 k
@@ -48,53 +48,53 @@ let U = r.memo((e) => {
                     : [!I.Z.isSupported() || I.Z.isLocalMute(T), !1, I.Z.isLocalVideoDisabled(T)],
             [k, T],
         ),
-        B = (0, o.e7)([A.Z], () => A.Z.isPrioritySpeaker(T)),
-        H = (0, c.Z)({
+        F = (0, o.e7)([A.Z], () => A.Z.isPrioritySpeaker(T)),
+        B = (0, c.Z)({
             userId: T,
             checkSoundSharing: !0,
         }),
         G = (0, o.e7)([A.Z], () => A.Z.isCurrentUserPTTLatched()),
         z = k && G,
-        W = (0, o.e7)([P.ZP], () => P.ZP.isGuestOrLurker(C.guild_id, T)),
-        q = (0, o.e7)([h.Z], () => h.Z.getGuildRingingUsers(C.id).has(T)),
+        W = (0, o.e7)([P.ZP], () => P.ZP.isGuestOrLurker(y.guild_id, T)),
+        q = (0, o.e7)([h.Z], () => h.Z.getGuildRingingUsers(y.id).has(T)),
         K = (0, o.e7)(
             [u.ZP],
             () =>
-                u.ZP.getEmbeddedActivitiesForChannel(C.id).find((e) => {
+                u.ZP.getEmbeddedActivitiesForChannel(y.id).find((e) => {
                     let { userIds: t } = e;
                     return t.has(T);
                 }),
-            [T, C.id],
+            [T, y.id],
         ),
         Y = (0, p.Z)(null != K ? [K.applicationId] : []),
-        X = (0, O.Z)(T, C.guild_id)[0],
+        X = (0, O.Z)(T, y.guild_id)[0],
         J = null != (n = (0, d.IX)(null == X ? void 0 : X.application_id).data) ? n : void 0,
         [Q, $] = (0, o.Wu)(
             [j.Z],
-            () => [j.Z.getStreamForUser(T, C.getGuildId()), j.Z.getActiveStreamForUser(T, C.getGuildId())],
-            [C, T],
+            () => [j.Z.getStreamForUser(T, y.getGuildId()), j.Z.getActiveStreamForUser(T, y.getGuildId())],
+            [y, T],
         ),
         ee = (0, o.e7)([N.Z], () => N.Z.getSessionById(E)),
-        et = M.ZP.useName(y),
-        en = (0, o.e7)([w.Z], () => w.Z.getVoicePlatformForChannel(C.id, T), [C.id, T]),
+        et = M.ZP.useName(C),
+        en = (0, o.e7)([w.Z], () => w.Z.getVoicePlatformForChannel(y.id, T), [y.id, T]),
         { enableHangStatus: ei } = (0, m.bN)({
-            guildId: C.guild_id,
+            guildId: y.guild_id,
             location: "VoiceUsers",
         }),
-        er = (0, f.ZP)(C, !0, y),
+        er = (0, f.ZP)(y, !0, C),
         el = (0, o.e7)([g.Z], () => (k ? g.Z.getHangStatusActivity() : null), [k]),
         ea = (0, b.j)(T),
-        eo = (0, x.Eu)(C.id, T),
+        eo = (0, x.Eu)(y.id, T),
         { enableVCStatusIcons: es, enableRequestToStream: ec } = _.A.useExperiment(
             {
-                guildId: C.guild_id,
+                guildId: y.guild_id,
                 location: "VoiceUsers",
             },
             { autoTrackExposure: (null == X ? void 0 : X.session_id) != null },
         );
     return (0, i.jsx)(v.Z, {
         shakeLocation: D.oZ.VOICE_USER,
-        isShaking: H,
+        isShaking: B,
         children: (0, i.jsx)(
             R.ZP,
             ((r = (function (e) {
@@ -130,15 +130,15 @@ let U = r.memo((e) => {
                     otherClientSessionType: null == ee || null == (t = ee.clientInfo) ? void 0 : t.os,
                     voicePlatform: en,
                     localMute: U && !k,
-                    localVideoDisabled: F,
+                    localVideoDisabled: H,
                     mute: a || U,
                     deaf: s || V,
-                    speaking: H,
+                    speaking: B,
                     latched: z,
                     ringing: q,
-                    priority: B,
+                    priority: F,
                     embeddedApplication: Y[0],
-                    isStreaming: null != Q && Q.channelId === C.id,
+                    isStreaming: null != Q && Q.channelId === y.id,
                     isWatching: null != $ && $.state !== L.jm8.ENDED,
                     isGuest: W,
                     isSelf: k,
@@ -165,7 +165,7 @@ let U = r.memo((e) => {
 });
 U.displayName = "ConnectedVoiceUser";
 let V = [],
-    F = function (e) {
+    H = function (e) {
         let {
                 allowPreviews: t = !0,
                 allowDragging: n = !0,
@@ -185,26 +185,26 @@ let V = [],
             [I, N] = r.useState(!1),
             A = r.useRef(null),
             w = (0, x.Es)(l.id, null != c ? c : V),
-            { shouldShow: M, dismiss: D } = (0, C.UM)(l),
-            F = r.useRef(
+            { shouldShow: M, dismiss: D } = (0, y.UM)(l),
+            H = r.useRef(
                 new s.sW(50, () => {
                     P(A.current), (A.current = null);
                 }),
             ),
-            B = r.useRef(
+            F = r.useRef(
                 new s.sW(175, () => {
                     P(null);
                 }),
             ),
-            H = r.useCallback(
+            B = r.useCallback(
                 (e) => {
-                    t && (N(!0), B.current.cancel(), (A.current = e), F.current.delay());
+                    t && (N(!0), F.current.cancel(), (A.current = e), H.current.delay());
                 },
                 [t],
             ),
             G = r.useCallback(
                 (e) => {
-                    t && (F.current.cancel(), (A.current = null), N(!1), B.current.delay());
+                    t && (H.current.cancel(), (A.current = null), N(!1), F.current.delay());
                 },
                 [t],
             ),
@@ -246,7 +246,7 @@ let V = [],
                             channel: l,
                             collapsed: u,
                             canDrag: n && Z.Z.can(L.Plq.MOVE_MEMBERS, l),
-                            showPreview: H,
+                            showPreview: B,
                             hidePreview: G,
                             previewIsOpen: I,
                             shouldShowHoverPopout: j === a.id,
@@ -260,7 +260,7 @@ let V = [],
                 M &&
                     r.unshift(
                         (0, i.jsx)(
-                            y.S,
+                            C.S,
                             {
                                 channel: l,
                                 onClose: D,

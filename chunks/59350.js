@@ -98,7 +98,7 @@ function ee(e) {
         I = w.filter((e) => b.includes(e.id)),
         P = (0, j.ZP)(s.id, i.id);
     (0, h.ZP)(() => {
-        (0, O.Z)(s.id, s.getAvatarURL(i.id, (0, d.pxk)(J)), { guildId: i.id });
+        (0, O.Z)(s.id, s.getAvatarURL(i.id, (0, d.dcp)(J)), { guildId: i.id });
     });
     let T = (0, x.parseBioReact)(null == P ? void 0 : P.bio),
         B = E.ZP.getEnableHardwareAcceleration() ? d.Xo$ : d.qEK;

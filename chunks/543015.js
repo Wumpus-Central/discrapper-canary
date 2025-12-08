@@ -331,7 +331,7 @@ let ed = i.memo(function (e) {
             null != o
                 ? (0, r.jsx)(f.qEK, {
                       size: f.EFr.SIZE_40,
-                      src: o.getAvatarURL(m, (0, f.pxk)(f.EFr.SIZE_40)),
+                      src: o.getAvatarURL(m, (0, f.dcp)(f.EFr.SIZE_40)),
                       "aria-label": "",
                       className: el.originalMessageAuthorAvatar,
                   })

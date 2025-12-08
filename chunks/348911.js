@@ -1,4 +1,4 @@
-n.d(e, { Z: () => o });
+n.d(e, { p: () => o });
 var i = n(509613),
     l = n(313789),
     s = n(92885),
@@ -7,5 +7,5 @@ var i = n(509613),
     a = n(388032);
 let o = (0, i.k4)(l.n.NOTIFICATIONS_SOUNDS_CATEGORY, {
     useTitle: () => a.intl.string(a.t.LweOYy),
-    buildLayout: () => [s.D, r.Z, u.T],
+    buildLayout: () => [s.D, r.u, u.T],
 });

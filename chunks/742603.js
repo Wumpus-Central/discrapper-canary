@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var i = n(54381);
 n(473749);
 var r = n(120356),
@@ -15,8 +15,8 @@ var r = n(120356),
     m = n(925329),
     g = n(554747),
     b = n(854698),
-    y = n(897669),
-    C = n(665149),
+    C = n(897669),
+    y = n(665149),
     v = n(984370),
     _ = n(910611),
     O = n(728285),
@@ -51,7 +51,7 @@ function V(e) {
         }),
     });
 }
-function F(e) {
+function H(e) {
     let { user: t, channel: n, stream: r, color: l } = e,
         a = (0, S.Z)(n, t, r);
     return null == t || null == r
@@ -73,7 +73,7 @@ function F(e) {
               ],
           });
 }
-function B(e) {
+function F(e) {
     let t,
         { focusedApplication: n, focusedParticipant: r, channel: l } = e,
         a = (0, T.Z)(l, !0),
@@ -84,7 +84,7 @@ function B(e) {
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(C.ZP.Divider, { className: k.divider }),
+                    (0, i.jsx)(y.ZP.Divider, { className: k.divider }),
                     (0, i.jsx)(m.Z, {
                         game: n,
                         className: k.activityIcon,
@@ -107,8 +107,8 @@ function B(e) {
             n = r.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(C.ZP.Divider, { className: k.divider }),
-                (0, i.jsx)(F, {
+                (0, i.jsx)(y.ZP.Divider, { className: k.divider }),
+                (0, i.jsx)(H, {
                     user: e,
                     channel: l,
                     stream: n,
@@ -123,7 +123,7 @@ function B(e) {
         });
     } else
         d &&
-            (t = (0, i.jsx)(y.Z, {
+            (t = (0, i.jsx)(C.Z, {
                 guildEvent: o,
                 recurrenceId: c,
             }));
@@ -132,7 +132,7 @@ function B(e) {
         children: t,
     });
 }
-function H(e) {
+function B(e) {
     let { channel: t, guild: r, appContext: c, inCall: u, isChatOpen: m, exitFullScreen: g } = e,
         { focusedParticipant: b } = (0, a.cj)(
             [I.Z],
@@ -142,7 +142,7 @@ function H(e) {
             }),
             [t.id],
         ),
-        y = (0, h.ZP)(t),
+        C = (0, h.ZP)(t),
         O = (0, f.KS)(t),
         [S] = (0, d.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
         P = D.intl.string(D.t.BVZqJl);
@@ -217,14 +217,14 @@ function H(e) {
                   }),
               })
             : null,
-        F = (0, j.m$)({ channelId: t.id });
+        H = (0, j.m$)({ channelId: t.id });
     return (0, i.jsxs)("div", {
         className: k.subtitleContainer,
         children: [
             (0, i.jsx)(s.f6W, {
                 theme: L.BR.DARK,
                 children: (e) =>
-                    (0, i.jsxs)(C.ZP, {
+                    (0, i.jsxs)(y.ZP, {
                         onDoubleClick: v.O,
                         transparent: !0,
                         className: l()(e, k.headerBar),
@@ -239,18 +239,18 @@ function H(e) {
                             exitFullScreen: g,
                         }),
                         children: [
-                            (0, i.jsx)(C.ZP.Title, {
+                            (0, i.jsx)(y.ZP.Title, {
                                 wrapperClassName: k.title,
                                 children: (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         null != O
-                                            ? (0, i.jsx)(C.ZP.ChannelIcon, {
+                                            ? (0, i.jsx)(y.ZP.ChannelIcon, {
                                                   icon: O,
                                                   "aria-label": P,
                                               })
                                             : null,
-                                        y,
-                                        F &&
+                                        C,
+                                        H &&
                                             (0, i.jsx)(o.u, {
                                                 text: D.intl.string(D.t.QyZ4Td),
                                                 children: (0, i.jsx)(s.tQf, {
@@ -267,7 +267,7 @@ function H(e) {
                                 channel: t,
                                 guild: r,
                             }),
-                            (0, i.jsx)(B, {
+                            (0, i.jsx)(F, {
                                 focusedApplication: S,
                                 focusedParticipant: b,
                                 channel: t,

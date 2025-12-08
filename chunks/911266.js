@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -14,10 +14,10 @@ var i = n(54381),
     m = n(111810),
     g = n(287941),
     b = n(235894),
-    y = n(874341);
-let C = (e) => {
+    C = n(874341);
+let y = (e) => {
     let { message: t, hovering: n, compact: l } = e,
-        C = r.useRef((0, o.random)(-6, 24)).current,
+        y = r.useRef((0, o.random)(-6, 24)).current,
         v = (0, s.e7)([h.Z], () => h.Z.confettiMode),
         _ = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         O = r.useRef(0),
@@ -72,7 +72,7 @@ let C = (e) => {
     if (null == I) return null;
     if (l)
         return (0, i.jsx)("span", {
-            className: y.hidden,
+            className: C.hidden,
             "aria-hidden": "true",
         });
     let Z = I.emoji[0],
@@ -87,25 +87,25 @@ let C = (e) => {
                   });
     return (0, i.jsxs)("div", {
         ref: E,
-        className: y.emojiWrapper,
-        style: { right: "".concat(256 + C, "px") },
+        className: C.emojiWrapper,
+        style: { right: "".concat(256 + y, "px") },
         children: [
             (0, i.jsx)("img", {
                 alt: "",
                 src: T,
-                className: a()([y.emoji, y.left, P && y.shy, v && y.confettiMode]),
+                className: a()([C.emoji, C.left, P && C.shy, v && C.confettiMode]),
                 width: 28,
             }),
             (0, i.jsx)("img", {
                 alt: "",
                 src: T,
-                className: a()([y.emoji, y.right, P && y.shy, v && y.confettiMode]),
+                className: a()([C.emoji, C.right, P && C.shy, v && C.confettiMode]),
                 width: 26,
             }),
             (0, i.jsx)("img", {
                 alt: "",
                 src: T,
-                className: a()([y.emoji, y.center, P && y.shy, v && y.confettiMode]),
+                className: a()([C.emoji, C.center, P && C.shy, v && C.confettiMode]),
                 width: 32,
             }),
         ],

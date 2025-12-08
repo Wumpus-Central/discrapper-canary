@@ -2,8 +2,8 @@ n.d(t, { Z: () => x });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    a = n.n(i),
-    l = n(85707),
+    l = n.n(i),
+    a = n(85707),
     o = n(442837),
     c = n(681715),
     s = n(481060),
@@ -61,13 +61,13 @@ function j(e, t) {
     );
 }
 function x(e) {
-    let { widget: t, className: n, buttonRef: i, additionalMenuItems: l } = e,
+    let { widget: t, className: n, buttonRef: i, additionalMenuItems: a } = e,
         o = (0, m.mR)(t),
         c = (0, f.Dt)();
     return (0, r.jsx)(P, {
         targetRef: i,
         widget: t,
-        additionalMenuItems: l,
+        additionalMenuItems: a,
         children: (e) =>
             (0, r.jsx)(_, {
                 children: (0, r.jsxs)(
@@ -76,7 +76,7 @@ function x(e) {
                         O(
                             {
                                 innerRef: i,
-                                className: a()(v.button, n),
+                                className: l()(v.button, n),
                                 "data-dnd-name": o,
                                 "aria-label": y.intl.formatToPlainString(y.t.HWNJJN, { widgetTitle: o }),
                                 "aria-describedby": c,
@@ -101,7 +101,7 @@ function x(e) {
 let _ = (e) => {
         let { children: t } = e,
             n = (0, o.e7)([d.Z], () => d.Z.keyboardModeEnabled),
-            { isDragging: i } = (0, l.f)((e) => ({ isDragging: e.isDragging() }));
+            { isDragging: i } = (0, a.f)((e) => ({ isDragging: e.isDragging() }));
         return (0, r.jsx)(c.u, {
             __unsupportedReactNodeAsText: (0, r.jsxs)("div", {
                 className: v.tooltipText,
@@ -129,7 +129,7 @@ let _ = (e) => {
         });
     },
     P = (e) => {
-        let { children: t, widget: i, targetRef: a, additionalMenuItems: l } = e,
+        let { children: t, widget: i, targetRef: l, additionalMenuItems: a } = e,
             { trackUserProfileEditAction: o } = (0, p.KZ)(),
             c = (e) => {
                 if (e.shiftKey) {
@@ -155,7 +155,7 @@ let _ = (e) => {
                 );
             };
         return (0, r.jsx)(s.yRy, {
-            targetElementRef: a,
+            targetElementRef: l,
             align: "top",
             position: "right",
             disablePointerEvents: !1,
@@ -171,7 +171,7 @@ let _ = (e) => {
                     className: v.menu,
                     children: (0, r.jsxs)(s.kSQ, {
                         children: [
-                            l,
+                            a,
                             (0, r.jsx)(s.sNh, {
                                 id: "remove-widget",
                                 label: y.intl.string(y.t.Mm07Yc),

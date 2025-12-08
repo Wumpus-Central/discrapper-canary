@@ -1,15 +1,15 @@
-n.d(t, { J: () => g });
+n.d(t, { J: () => f });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    a = n.n(i),
+    s = n.n(i),
     o = n(205120),
-    s = n(873546),
+    a = n(873546),
     c = n(435935),
     u = n(481060),
     d = n(168020),
-    f = n(779485);
-let g = l.memo(function (e) {
+    g = n(779485);
+let f = l.memo(function (e) {
     let { countdownTimerBlock: t, isVisible: n } = e,
         l = (0, u.q_F)({
             transform: "translateX(-50%) ".concat(n ? "translateY(-75%)" : "translateY(0%)"),
@@ -20,7 +20,7 @@ let g = l.memo(function (e) {
             },
         });
     return (0, r.jsxs)(o.animated.div, {
-        className: a()([f.countDownWrapper, s.tq && f.mobileWrapper]),
+        className: s()([g.countDownWrapper, a.tq && g.mobileWrapper]),
         role: "status",
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -62,7 +62,7 @@ let g = l.memo(function (e) {
                 children: [
                     (0, r.jsx)(u.Text, {
                         variant: "text-md/medium",
-                        className: f.countdownLabel,
+                        className: g.countdownLabel,
                         style: null != t.textColor && "" !== t.textColor ? { color: t.textColor } : void 0,
                         children: t.title,
                     }),
@@ -70,7 +70,7 @@ let g = l.memo(function (e) {
                         "" !== t.body &&
                         (0, r.jsx)(u.Text, {
                             variant: "text-sm/medium",
-                            className: f.countdownBody,
+                            className: g.countdownBody,
                             style: null != t.textColor && "" !== t.textColor ? { color: t.textColor } : void 0,
                             children: t.body,
                         }),

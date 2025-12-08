@@ -53,7 +53,7 @@ function L(e, t) {
 }
 var j = n(706827),
     M = j.custom,
-    k = X(M) ? M : null,
+    k = Q(M) ? M : null,
     U = {
         __proto__: null,
         double: '"',
@@ -95,7 +95,7 @@ function z(e) {
 function q(e) {
     return "[object Boolean]" === ee(e) && F(e);
 }
-function X(e) {
+function Q(e) {
     if (R) return e && "object" == typeof e && e instanceof Symbol;
     if ("symbol" == typeof e) return !0;
     if (!e || "object" != typeof e || !P) return !1;
@@ -104,7 +104,7 @@ function X(e) {
     } catch (e) {}
     return !1;
 }
-function Q(e) {
+function X(e) {
     if (!e || "object" != typeof e || !C) return !1;
     try {
         return C.call(e), !0;
@@ -166,7 +166,7 @@ e.exports = function e(t, r, i, s) {
             "[Function" + (v ? ": " + v : " (anonymous)") + "]" + (A.length > 0 ? " { " + I.call(A, ", ") + " }" : "")
         );
     }
-    if (X(t)) {
+    if (Q(t)) {
         var N = R ? b.call(String(t), /^(Symbol\(.*\))_[^)]*$/, "$1") : P.call(t);
         return "object" != typeof t || R ? N : ed(N);
     }
@@ -220,7 +220,7 @@ e.exports = function e(t, r, i, s) {
     if (es(t)) return ef("WeakSet");
     if (ea(t)) return ef("WeakRef");
     if (z(t)) return ed(y(Number(t)));
-    if (Q(t)) return ed(y(C.call(t)));
+    if (X(t)) return ed(y(C.call(t)));
     if (q(t)) return ed(_.call(t));
     if (K(t)) return ed(y(String(t)));
     if ("undefined" != typeof window && t === window) return "{ [object Window] }";

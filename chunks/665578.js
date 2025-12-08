@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(392711),
@@ -16,14 +16,14 @@ var i = n(54381),
     h = n(821864),
     x = n(905753),
     j = n(937427),
-    O = n(643886),
-    v = n(869157),
+    v = n(643886),
+    O = n(869157),
     y = n(454092),
     _ = n(289465),
     C = n(981631),
     N = n(689079),
     S = n(388032),
-    P = n(591086);
+    I = n(591086);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -67,13 +67,13 @@ function E(e, t) {
         e
     );
 }
-function I(e) {
+function P(e) {
     let {
             applicationId: t,
             commandId: l,
             guildId: j,
-            inModal: O,
-            editedTargetPermissions: I,
+            inModal: v,
+            editedTargetPermissions: P,
             originalApplicationPermissions: k,
             originalCommandPermissions: A,
             selectedPermissionCount: D,
@@ -100,9 +100,9 @@ function I(e) {
         [B, W] = r.useMemo(() => {
             let e = {},
                 t = {};
-            for (let [n, i] of Object.entries(I)) i.type === d.Kw.CHANNEL ? (e[n] = i) : (t[n] = i);
+            for (let [n, i] of Object.entries(P)) i.type === d.Kw.CHANNEL ? (e[n] = i) : (t[n] = i);
             return [e, t];
-        }, [I]),
+        }, [P]),
         H = r.useCallback(
             (e) => {
                 let t = g.Z.getGuild(j),
@@ -134,7 +134,7 @@ function I(e) {
                 let n,
                     i = null;
                 if (0 !== t.length) {
-                    let e = I[t[0]];
+                    let e = P[t[0]];
                     if (e.type === d.Kw.USER) n = y.s.REMOVE_SELF;
                     else {
                         let t = e.id;
@@ -154,12 +154,12 @@ function I(e) {
                 }
                 (0, y._)(n, i);
             },
-            [j, I],
+            [j, P],
         ),
         F = r.useCallback(
             (e, n) => {
                 let i = {};
-                for (let [e, t] of Object.entries(I))
+                for (let [e, t] of Object.entries(P))
                     i[e] = {
                         id: t.id,
                         permission: t.permission,
@@ -168,7 +168,7 @@ function I(e) {
                 if (((i = Object.assign(i, e)), n.length > 0 && (i = a().omit(i, n)), !H(i))) return void G(e, n);
                 h.W4(t, U, i);
             },
-            [t, I, U, H, G],
+            [t, P, U, H, G],
         ),
         K = r.useCallback(() => {
             let e = Object.keys(B);
@@ -216,7 +216,7 @@ function I(e) {
                     );
             });
         }, [F, j, W, D]),
-        q = r.useCallback(
+        V = r.useCallback(
             () =>
                 (0, c.ZDy)(async () => {
                     let { default: e } = await n.e("21897").then(n.bind(n, 303313)),
@@ -228,8 +228,8 @@ function I(e) {
                 }),
             [R],
         ),
-        V = D - N._n,
-        Y = V >= 0,
+        q = D - N._n,
+        Y = q >= 0,
         J = [
             {
                 buttonClick: z,
@@ -248,29 +248,29 @@ function I(e) {
         ];
     return (0, i.jsxs)(r.Fragment, {
         children: [
-            V > 0
+            q > 0
                 ? (0, i.jsx)(c.Wn, {
                       messageType: c.QYI.WARNING,
-                      children: S.intl.format(S.t["B/dFBH"], { removeCount: V }),
+                      children: S.intl.format(S.t["B/dFBH"], { removeCount: q }),
                   })
                 : null,
             L
                 ? (0, i.jsxs)("div", {
-                      className: P.requiredPermissionsBanner,
+                      className: I.requiredPermissionsBanner,
                       children: [
                           (0, i.jsx)(c.d3s, {
                               size: "sm",
                               color: "currentColor",
-                              className: P.icon,
+                              className: I.icon,
                           }),
                           (0, i.jsx)("span", {
-                              className: P.message,
+                              className: I.message,
                               children: S.intl.format(S.t["2889Gq"], {}),
                           }),
                           (0, i.jsx)(c.Button, {
                               variant: "secondary",
                               size: "sm",
-                              onClick: q,
+                              onClick: V,
                               text: S.intl.string(S.t["HO/oXl"]),
                           }),
                       ],
@@ -286,7 +286,7 @@ function I(e) {
                         _.Z,
                         {
                             bar: (0, i.jsx)(c.aML, {
-                                tooltipClassName: P.tooltip,
+                                tooltipClassName: I.tooltip,
                                 text: n,
                                 shouldShow: null != n,
                                 children: (t) =>
@@ -301,11 +301,11 @@ function I(e) {
                                         }),
                                     ),
                             }),
-                            inModal: O,
+                            inModal: v,
                             title: e.title,
                             children: (0, i.jsx)("div", {
-                                className: O ? void 0 : P.listContainer,
-                                children: (0, i.jsx)(v.Z, {
+                                className: v ? void 0 : I.listContainer,
+                                children: (0, i.jsx)(O.Z, {
                                     guildId: j,
                                     commandId: l,
                                     noneSelectedText: e.noneSelectedText,
@@ -327,7 +327,7 @@ function T(e) {
     return E(w({}, t), { results: t.results.map((e) => E(w({}, e), { type: d.Kw.CHANNEL })) });
 }
 function Z(e) {
-    let t = (0, O.U)(e);
+    let t = (0, v.U)(e);
     return E(w({}, t), {
         results: t.results.roles
             .map((e) => E(w({}, e), { type: d.Kw.ROLE }))

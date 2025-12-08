@@ -1,9 +1,9 @@
 n.d(t, {
     Gj: () => W,
     Pt: () => Y,
-    VO: () => X,
+    VO: () => Q,
     ji: () => $,
-    q8: () => Q,
+    q8: () => X,
 }),
     n(836215),
     n(472816),
@@ -221,8 +221,8 @@ function Y() {
         K = (0, i.e7)([S.Z], () => S.Z.hasLibraryApplication()),
         z = (0, i.e7)([O.default], () => O.default.hasTOTPEnabled()),
         q = w.Sb.useSetting(),
-        X = (0, d.Z)(),
-        Q = null == (o = (0, f.Z)()) || o,
+        Q = (0, d.Z)(),
+        X = null == (o = (0, f.Z)()) || o,
         J = (null == (t = (0, g.s)()) ? void 0 : t.length) > 0,
         { hasBlockedUsers: $, hasIgnoredUsers: ee } = (0, i.cj)([T.Z], () => ({
             hasBlockedUsers: T.Z.getBlockedIDs().length > 0,
@@ -256,11 +256,11 @@ function Y() {
                 isInapproprateConversationsDefaultOn: H,
                 paymentsBlocked: Y,
                 isEligibleForQuests: W,
-                isStricterMessageRequestsEnabled: X,
+                isStricterMessageRequestsEnabled: Q,
                 hasLibraryApplication: K,
                 hasTOTPEnabled: z,
                 developerMode: q,
-                isAdultUser: Q,
+                isAdultUser: X,
                 hasSecureFramesVerifiedUserIds: J,
                 hasIgnoredUsers: ee,
                 hasBlockedUsers: $,
@@ -272,7 +272,7 @@ function Y() {
                 isCrossDMSearchEnabledSettingVisible: eo,
                 isRedesignedNotificationsEnabled: es,
             }),
-        [q, Z, $, ee, K, J, z, j, Q, W, H, V, U, F, X, M, Y, B, R, v, et, en, er, ei, ea, eo, es],
+        [q, Z, $, ee, K, J, z, j, X, W, H, V, U, F, Q, M, Y, B, R, v, et, en, er, ei, ea, eo, es],
     );
 }
 function W(e) {
@@ -366,7 +366,7 @@ function q(e, t) {
         n
     );
 }
-function X() {
+function Q() {
     let e = Y(),
         { shouldMergeGameSettings: t } = P.b.useExperiment({ location: "settings" }),
         { showRedesign: n } = R.b.useExperiment({ location: "settings" }),
@@ -380,7 +380,7 @@ function X() {
         );
     return r.useMemo(() => z(i, e), [i, e]);
 }
-function Q(e) {
+function X(e) {
     let t = Y(),
         n = H();
     return r.useMemo(() => z(n, t, new Set(e)), [n, t, e]);

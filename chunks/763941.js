@@ -20,7 +20,7 @@ let r = (0, n(427164).le)({
             },
             2: {
                 enabled: !0,
-                rentalDuration: 1,
+                rentalDuration: 7,
             },
             3: {
                 enabled: !0,

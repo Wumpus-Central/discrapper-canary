@@ -1,9 +1,9 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
-    a = n.n(l),
-    o = n(205120),
+    o = n.n(l),
+    a = n(205120),
     s = n(481060),
     u = n(110924),
     c = n(569545),
@@ -13,8 +13,8 @@ var i = n(54381),
     f = n(68286),
     m = n(461393),
     g = n(340101),
-    y = n(981631),
-    O = n(339882);
+    O = n(981631),
+    y = n(339882);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,18 +58,18 @@ function v(e, t) {
         e
     );
 }
-let S = {
+let b = {
         mass: 1,
         tension: 250,
         friction: 18,
         clamp: !0,
     },
-    b = r.memo(function (e) {
+    S = r.memo(function (e) {
         let {
                 widgetId: t,
                 tileWidth: n,
                 tileHeight: l,
-                layout: b,
+                layout: S,
                 locked: x,
                 activeStreams: j,
                 streamParticipants: I,
@@ -88,7 +88,7 @@ let S = {
             })),
             T = (0, u.Z)(n),
             _ = (0, u.Z)(x),
-            P = b === g.C5.VERTICAL,
+            P = S === g.C5.VERTICAL,
             A = x || _ !== x || T !== n,
             D = r.useMemo(() => {
                 let e = 0,
@@ -149,7 +149,7 @@ let S = {
                             height: r,
                         };
                     },
-                    config: S,
+                    config: b,
                     trail: 100 * !A,
                 },
                 A ? "animate-never" : "respect-motion-settings",
@@ -159,7 +159,7 @@ let S = {
         return (
             r.useEffect(() => {
                 0 !== M.size &&
-                    (0, h.zi)(y.Odu.GO_LIVE, {
+                    (0, h.zi)(O.Odu.GO_LIVE, {
                         locked: d.default.isInstanceLocked(),
                         shownUserIds: Array.from(M),
                         liveUserIds: Array.from(V),
@@ -167,24 +167,24 @@ let S = {
                     });
             }, [M, V]),
             (0, i.jsx)("div", {
-                className: a()({
-                    [O.gridContainer]: !0,
-                    [O.vertical]: P,
-                    [O.horizontal]: !P,
+                className: o()({
+                    [y.gridContainer]: !0,
+                    [y.vertical]: P,
+                    [y.horizontal]: !P,
                 }),
                 style: P ? { height: R } : { width: k },
-                children: L((e, t, r, a) =>
-                    (0, i.jsx)(o.animated.div, {
-                        className: O.gridItem,
+                children: L((e, t, r, o) =>
+                    (0, i.jsx)(a.animated.div, {
+                        className: y.gridItem,
                         style: Object.assign({}, e, {
                             width: n,
                             height: l,
-                            zIndex: w.length - a,
+                            zIndex: w.length - o,
                         }),
                         children: ((e) => {
-                            let { participant: t, width: n, locked: r, widgetId: l, pinned: a } = e;
+                            let { participant: t, width: n, locked: r, widgetId: l, pinned: o } = e;
                             return (0, i.jsx)("div", {
-                                className: O.tileContainer,
+                                className: y.tileContainer,
                                 children: (0, i.jsx)(
                                     p.Z,
                                     {
@@ -192,7 +192,7 @@ let S = {
                                         width: n,
                                         locked: r,
                                         widgetId: l,
-                                        pinned: a,
+                                        pinned: o,
                                     },
                                     t.user.id,
                                 ),

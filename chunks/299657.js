@@ -49,10 +49,10 @@ let k = function (e) {
         K = i.useRef(0),
         z = (0, A.M5)(Z, L.PremiumTypes.TIER_2),
         q = (0, P.Z)({ location: "PremiumMarketingPage" }),
-        X = (0, s.e7)([C.Z], () => C.Z.hasFetched);
+        Q = (0, s.e7)([C.Z], () => C.Z.hasFetched);
     i.useEffect(() => {
-        X || u.MH();
-    }, [X]),
+        Q || u.MH();
+    }, [Q]),
         i.useEffect(() => {
             c.Z.wait(async () => {
                 let e = Date.now();
@@ -71,9 +71,9 @@ let k = function (e) {
         i.useEffect(() => {
             n && (null != F || null != V) && (0, N.ab)(F, V);
         }, [n, F, V]);
-    let Q = (0, s.e7)([O.Z], () => O.Z.enabled),
+    let X = (0, s.e7)([O.Z], () => O.Z.enabled),
         J = t === L.EZ.ApplicationStoreHome,
-        $ = Q
+        $ = X
             ? (0, r.jsx)(f.Z, {})
             : n
               ? (0, r.jsx)(E.c8, {})

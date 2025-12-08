@@ -169,8 +169,8 @@ let M = (e) => {
                 isPastDue: K,
                 subscriptionPrice: z,
                 memberSince: q,
-                nextRenewalDate: X,
-                nextRenewalLabel: Q,
+                nextRenewalDate: Q,
+                nextRenewalLabel: X,
                 isTrial: J,
             } = b,
             $ = n.soft_deleted || null == s || F,
@@ -189,8 +189,8 @@ let M = (e) => {
                                   className: j.subscriptionInfoCards,
                                   children: [
                                       (0, r.jsx)(M, {
-                                          label: Q,
-                                          value: X,
+                                          label: X,
+                                          value: Q,
                                       }),
                                       (0, r.jsx)(M, {
                                           label: L.intl.string(L.t.dltUMH),

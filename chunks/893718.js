@@ -64,8 +64,8 @@ var r = n(54381),
     K = n(594174),
     z = n(626135),
     q = n(459273),
-    X = n(700785),
-    Q = n(358085),
+    Q = n(700785),
+    X = n(358085),
     J = n(746877),
     $ = n(713913),
     ee = n(541716),
@@ -392,7 +392,7 @@ function ex(e, t, n, r) {
                 disabled: r || o || (!s && !u) || _,
                 canAttachFiles: !0 === t.attachments && (s || o || d || p),
                 canCreateThreads: c,
-                canEveryoneSendMessages: X.Uu(ed.Plq.SEND_MESSAGES, e),
+                canEveryoneSendMessages: Q.Uu(ed.Plq.SEND_MESSAGES, e),
             };
         }, [e, t.permissions.requireCreateTherads, t.permissions.requireSendMessages, t.attachments, n, r, o]);
     return eh(
@@ -538,7 +538,7 @@ function eG(e, t) {
         onChange: K,
         onResize: z,
         onBlur: q,
-        onFocus: X,
+        onFocus: Q,
         onKeyDown: er,
         onSubmit: ec,
         promptToUpload: ep,
@@ -562,8 +562,8 @@ function eG(e, t) {
     } = e;
     c()(null != G, "chat input type must be set");
     let { analyticsLocations: eq } = (0, b.ZP)(E.Z.CHANNEL_TEXT_AREA),
-        eX = ew(t),
-        eQ = i.useRef(null),
+        eQ = ew(t),
+        eX = i.useRef(null),
         eJ = i.useRef(null),
         e$ = i.useRef(null),
         e0 = i.useRef(null),
@@ -571,7 +571,7 @@ function eG(e, t) {
     null == eB || eB(e$.current);
     let e3 = (0, y.Z)(U),
         [e2, e4] = i.useState(!e3);
-    (0, h.PM)(eX, (e) => {
+    (0, h.PM)(eQ, (e) => {
         let { width: t } = e;
         return e4(!e3 && (null == t || t > eb));
     });
@@ -593,7 +593,7 @@ function eG(e, t) {
             canEveryoneSendMessages: tn,
         } = ex(U, G, e5, x),
         tr = G.toolbarType === ee.OW.STATIC,
-        ti = !B.dN.useSetting() && !(0, Q.isAndroidWeb)() && null != window.ResizeObserver,
+        ti = !B.dN.useSetting() && !(0, X.isAndroidWeb)() && null != window.ResizeObserver,
         ta = !ti || !(null == (n = G.commands) ? void 0 : n.enabled) || !Z || f !== ef.GI,
         to = (0, L.Z)(),
         { fontSize: ts } = (0, p.cj)([g.Z], () => ({ fontSize: g.Z.fontSize })),
@@ -631,7 +631,7 @@ function eG(e, t) {
             return null == e1 || null == (e = e1.current) ? void 0 : e.hide();
         }, []),
         { editorHeight: tI, handleResize: tT } = eD(z),
-        { handleTab: tA, handleEnter: tC, handleMoveSelection: tN } = ej(th, eQ, ta),
+        { handleTab: tA, handleEnter: tC, handleMoveSelection: tN } = ej(th, eX, ta),
         { expressionPickerView: tP, shouldHideExpressionPicker: tR, handleOuterClick: tw } = eL(G, e$, U.id),
         { selectedAutocompleteInputType: tD, selectedAutocompleteInputError: tx } = eM(tc, e$),
         tL = ek(f),
@@ -669,14 +669,14 @@ function eG(e, t) {
             ref: eJ,
             className: e_.hiddenAppLauncherAnchor,
         }),
-        tX = tU
+        tQ = tU
             ? (0, r.jsx)(v.Z, {
                   align: tk && G !== ee.Ie.SIDEBAR ? "left" : "right",
                   positionTargetRef: eJ,
                   channel: U,
               })
             : null,
-        tQ = (0, r.jsx)(ea.Z, {
+        tX = (0, r.jsx)(ea.Z, {
             type: G,
             disabled: e9,
             channel: U,
@@ -713,7 +713,7 @@ function eG(e, t) {
                         })
                       : null,
                 (0, r.jsxs)("div", {
-                    ref: eX,
+                    ref: eQ,
                     className: o()(O, {
                         [e_.channelTextArea]: !0,
                         [e_.channelTextAreaDisabled]: tB,
@@ -757,11 +757,11 @@ function eG(e, t) {
                                     }),
                                     onMouseDown: tw,
                                     children: [
-                                        tX,
+                                        tQ,
                                         tk && tq,
                                         tF,
                                         (0, r.jsx)(_.tEY, {
-                                            ringTarget: eX,
+                                            ringTarget: eQ,
                                             ringClassName: e_.focusRing,
                                             children: (0, r.jsx)(et.Z, {
                                                 ref: e$,
@@ -785,7 +785,7 @@ function eG(e, t) {
                                                 onChange: tf,
                                                 onResize: tT,
                                                 onBlur: q,
-                                                onFocus: X,
+                                                onFocus: Q,
                                                 onKeyDown: er,
                                                 onSubmit: t_,
                                                 onSubmitFailure: tG,
@@ -813,7 +813,7 @@ function eG(e, t) {
                                                 showValueWhenDisabled: ez,
                                             }),
                                         }),
-                                        tQ,
+                                        tX,
                                         !tk && tq,
                                     ],
                                 }),
@@ -822,7 +822,7 @@ function eG(e, t) {
                         ta
                             ? null
                             : (0, r.jsx)(I.Z, {
-                                  ref: eQ,
+                                  ref: eX,
                                   channel: U,
                                   canOnlyUseTextCommands: tZ,
                               }),
@@ -840,7 +840,7 @@ function eG(e, t) {
                             isEditorIdle: tL,
                             expressionPickerView: tP,
                             type: G,
-                            targetRef: eX,
+                            targetRef: eQ,
                             editorRef: e$,
                             onSendMessage: t_,
                             onSendSticker: tO,
@@ -864,7 +864,7 @@ function eG(e, t) {
                 tR
                     ? null
                     : (0, r.jsx)(R.Z, {
-                          positionTargetRef: eX,
+                          positionTargetRef: eQ,
                           type: G,
                           onSelectGIF: tb,
                           onSelectEmoji: ty,

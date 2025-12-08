@@ -220,7 +220,7 @@ function j(e, t) {
               : W(e)
                 ? K(e, t)
                 : z(e)
-                  ? X(e, t)
+                  ? Q(e, t)
                   : J(e, t);
 }
 function M(e) {
@@ -303,14 +303,14 @@ function z(e) {
 function q(e) {
     return e["rdf:Bag"] || e["rdf:Seq"] || e["rdf:Alt"];
 }
-function X(e, t) {
+function Q(e, t) {
     let n = q(e.value).value["rdf:li"],
         r = B(e),
         i = [];
     return (
         void 0 === n ? (n = []) : Array.isArray(n) || (n = [n]),
         n.forEach((e) => {
-            i.push(Q(e));
+            i.push(X(e));
         }),
         {
             value: i,
@@ -319,7 +319,7 @@ function X(e, t) {
         }
     );
 }
-function Q(e) {
+function X(e) {
     return G(e) ? Z(e) : H(e) ? Y(e).value : W(e) ? K(e).value : J(e);
 }
 function J(e, t) {

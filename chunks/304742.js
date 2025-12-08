@@ -1,17 +1,17 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    a = n.n(i),
+    s = n.n(i),
     o = n(481060),
-    s = n(811847),
+    a = n(811847),
     c = n(215023),
     u = n(388032),
     d = n(219588);
-function f(e) {
+function g(e) {
     let { handleTransition: t, onClose: n } = e,
-        i = (0, s.B)("CollectiblesIndexPageContextMenu"),
-        f = l.useMemo(
+        i = (0, a.B)("CollectiblesIndexPageContextMenu"),
+        g = l.useMemo(
             () => [
                 {
                     label: u.intl.string(u.t.dRZYNE),
@@ -37,14 +37,14 @@ function f(e) {
             [],
         );
     return (0, r.jsx)("div", {
-        className: a()({ [d.customCursors]: i }),
+        className: s()({ [d.customCursors]: i }),
         children: (0, r.jsx)(o.v2r, {
             navId: "collectibles-index-page-menu",
-            className: a()({ [d.customCursors]: i }),
+            className: s()({ [d.customCursors]: i }),
             onClose: n,
             "aria-label": u.intl.string(u.t.xFcotU),
             onSelect: () => {},
-            children: f.map((e) =>
+            children: g.map((e) =>
                 (0, r.jsx)(
                     o.sNh,
                     {

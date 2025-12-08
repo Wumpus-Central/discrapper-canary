@@ -4,7 +4,7 @@ n.d(t, {
     B6: () => eA,
     Fy: () => eM,
     GI: () => eZ,
-    Gd: () => eQ,
+    Gd: () => eX,
     I: () => eY,
     J2: () => en,
     Jf: () => ex,
@@ -28,7 +28,7 @@ n.d(t, {
     kJ: () => eU,
     m4: () => e6,
     me: () => eK,
-    qI: () => eX,
+    qI: () => eQ,
     qb: () => ez,
     tP: () => eI,
     tR: () => ey,
@@ -91,8 +91,8 @@ var h = n(48131),
     K = n(283689),
     z = n(542347),
     q = n(324805),
-    X = n(981631),
-    Q = n(408491),
+    Q = n(981631),
+    X = n(408491),
     J = n(474936),
     $ = n(388032);
 let ee = -1,
@@ -526,8 +526,8 @@ function eG() {
             xboxAndPlaystationAccounts: a,
         } = r.useMemo(() => {
             let e = t.filter((e) => !1 === e.revoked),
-                n = e.filter((e) => e.type === X.ABu.XBOX),
-                r = e.filter((e) => e.type === X.ABu.PLAYSTATION),
+                n = e.filter((e) => e.type === Q.ABu.XBOX),
+                r = e.filter((e) => e.type === Q.ABu.PLAYSTATION),
                 i = n.concat(r);
             return {
                 xboxAccounts: n,
@@ -580,8 +580,8 @@ let eZ = (e) => {
             n = e.length > 0,
             r = t.length > 0,
             i = (n && !r) || (!n && r),
-            a = A.Z.getArticleURL(X.BhN.QUEST_HOW_TO_PLAYSTATION),
-            o = A.Z.getArticleURL(X.BhN.QUEST_HOW_TO_XBOX),
+            a = A.Z.getArticleURL(Q.BhN.QUEST_HOW_TO_PLAYSTATION),
+            o = A.Z.getArticleURL(Q.BhN.QUEST_HOW_TO_XBOX),
             s = $.intl.format($.t.beN4DG, {
                 psHelpdeskArticle: a,
                 xboxHelpdeskArticle: o,
@@ -731,7 +731,7 @@ function eq(e) {
     var t;
     return null != (t = (0, c.e7)([L.Z], () => L.Z.quests).get(e)) ? t : null;
 }
-function eX(e) {
+function eQ(e) {
     let { mode: t, questContent: n, sourceQuestContent: i, questId: a } = e,
         o = r.useRef(null);
     r.useEffect(() => {
@@ -759,12 +759,12 @@ function eX(e) {
                 };
         }, [a, n, i]);
 }
-function eQ(e, t) {
+function eX(e, t) {
     let n = (0, c.e7)([L.Z], () => L.Z.getQuest(e), [e]),
         i = (0, u.ZP)();
     return r.useMemo(() => {
         if (null == n) return null;
-        let e = null != t ? t : (0, l.wj)(i) ? X.BRd.DARK : X.BRd.LIGHT;
+        let e = null != t ? t : (0, l.wj)(i) ? Q.BRd.DARK : Q.BRd.LIGHT;
         return (0, Z.fh)(n, Z.eC.COSPONSOR_LOGO_TYPE, e);
     }, [i, t, n]);
 }
@@ -813,12 +813,12 @@ function e$(e) {
                     ? null != n
                         ? h.Z.updateFrameLayoutMode({
                               applicationId: n.applicationId,
-                              layoutMode: Q.U.FOCUSED,
+                              layoutMode: X.U.FOCUSED,
                           })
                         : null != t && (0, f.Z)("guild_id" in t.location ? t.location.guild_id : null, t.location)
                     : o
                       ? h.Z.launchFrame({ applicationId: i })
-                      : (0, b.uL)(X.Z5c.ACTIVITY_DETAILS(i)));
+                      : (0, b.uL)(Q.Z5c.ACTIVITY_DETAILS(i)));
         }, [i, t, n, o]),
     };
 }
@@ -868,7 +868,7 @@ function e8(e) {
         a = r.useRef(null),
         o = r.useRef(null);
     r.useEffect(() => {
-        I.default.track(X.rMx.QUEST_HOME_SORT_METHOD_CHANGED, {
+        I.default.track(Q.rMx.QUEST_HOME_SORT_METHOD_CHANGED, {
             sort_method: t,
             previous_sort_method: a.current,
         }),
@@ -877,7 +877,7 @@ function e8(e) {
         r.useEffect(() => {
             var e;
             let t = n.map((e) => e.filter);
-            I.default.track(X.rMx.QUEST_HOME_FILTERS_CHANGED, {
+            I.default.track(Q.rMx.QUEST_HOME_FILTERS_CHANGED, {
                 filters: t,
                 previous_filters: null != (e = o.current) ? e : [],
                 num_quests_visible: i,

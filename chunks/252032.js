@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(585483),
     g = n(838440),
     b = n(819514),
-    y = n(930282),
-    C = n(955384),
+    C = n(930282),
+    y = n(955384),
     v = n(981631),
     _ = n(224837),
     O = n(360514);
@@ -35,9 +35,9 @@ function E(e) {
         { id: u } = n,
         m = t.getGuildId(),
         g = (0, a.e7)([h.Z], () => h.Z.getGuild(m), [m]),
-        y = t.type === v.d4z.GUILD_ANNOUNCEMENT,
+        C = t.type === v.d4z.GUILD_ANNOUNCEMENT,
         E = null != g && g.features.has(v.GuildFeatures.NEWS),
-        S = y && E,
+        S = C && E,
         {
             editingMessage: P,
             editingTextValue: I,
@@ -136,7 +136,7 @@ function E(e) {
             [u],
         );
     return null != I && null != Z
-        ? (0, i.jsx)(C.Z, {
+        ? (0, i.jsx)(y.Z, {
               ref: void 0,
               channel: t,
               message: n,
@@ -206,7 +206,7 @@ function S(e, t, n) {
               channel: l,
               message: r,
           })
-        : (0, i.jsx)(y.ZP, {
+        : (0, i.jsx)(C.ZP, {
               message: r,
               content: t,
               compact: null != a && a,

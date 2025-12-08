@@ -64,7 +64,7 @@ function y(e) {
         },
         [C],
     );
-    let x = (e) => {
+    let j = (e) => {
             if (n !== s.P.NO_POPOUT) return v;
             let t = null == O ? void 0 : O.getBoundingClientRect();
             if (((P.current = t), e.timestamp !== w || null == t)) return v;
@@ -76,12 +76,12 @@ function y(e) {
                 width: 268,
             };
         },
-        j = (0, i.useRef)(null),
+        x = (0, i.useRef)(null),
         Z = (0, c.Yzy)(
             I,
             {
                 keys: (e) => e.timestamp,
-                ref: j,
+                ref: x,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
                 config: b,
@@ -102,7 +102,7 @@ function y(e) {
                             opacity: 1,
                         },
                         y.enabled
-                            ? x(e)
+                            ? j(e)
                             : (() => {
                                   var e;
                                   if (n !== s.P.NO_POPOUT) return v;
@@ -123,7 +123,7 @@ function y(e) {
                             opacity: 1,
                             visibility: "visible",
                         },
-                        x(e),
+                        j(e),
                     ),
                 ],
                 leave: g(
@@ -153,7 +153,7 @@ function y(e) {
             "animate-always",
         );
     return (
-        (0, l.useChain)([j, R], [0, 0.1], 3000),
+        (0, l.useChain)([x, R], [0, 0.1], 3000),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {

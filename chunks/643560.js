@@ -23,12 +23,12 @@ function h(e) {
     let O = () => {
         d.kx(t.channelId, t.guildId);
     };
-    function j() {
+    function x() {
         (0, s.Zy)(), null == f || f();
     }
     return (0, r.jsxs)(a.v2r, {
         navId: "guild-entry-context",
-        onClose: j,
+        onClose: x,
         "aria-label": p.intl.string(p.t.HpQykc),
         onSelect: h,
         children: [
@@ -92,7 +92,7 @@ function h(e) {
                                           );
                                       };
                                   }),
-                                      j();
+                                      x();
                               },
                           })
                         : null,
@@ -107,7 +107,7 @@ function h(e) {
                                       confirmText: p.intl.string(p.t.N86XcP),
                                       onConfirm: O,
                                   }),
-                                      j();
+                                      x();
                               },
                               color: "danger",
                           })
@@ -118,7 +118,7 @@ function h(e) {
                               id: "report-server-listing",
                               label: p.intl.string(p.t.Aen9eh),
                               action: function () {
-                                  null != t && ((0, c.sq)(t), j());
+                                  null != t && ((0, c.sq)(t), x());
                               },
                               icon: a.U65,
                               color: "danger",

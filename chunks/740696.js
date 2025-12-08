@@ -1,4 +1,4 @@
-n.d(e, { default: () => f }), n(388685), n(539854);
+n.d(e, { default: () => h }), n(388685), n(539854);
 var a = n(54381),
     r = n(473749),
     i = n(793030),
@@ -6,15 +6,15 @@ var a = n(54381),
     o = n(481060),
     l = n(430824),
     c = n(496675),
-    d = n(228392),
-    g = n(941848),
+    g = n(228392),
+    d = n(941848),
     m = n(710352),
     u = n(981631),
     p = n(921944),
     x = n(388032),
-    h = n(87612);
-function f(t) {
-    let { guildId: e, shouldUpsellCreation: f, transitionState: v, onClose: j } = t,
+    f = n(87612);
+function h(t) {
+    let { guildId: e, shouldUpsellCreation: h, transitionState: v, onClose: j } = t,
         b = (0, s.e7)([l.Z], () => l.Z.getGuild(e), [e]),
         y = (0, s.e7)([c.Z], () => c.Z.can(u.Plq.MANAGE_CHANNELS, b)),
         N = [
@@ -34,13 +34,13 @@ function f(t) {
         [P, S] = r.useState(0),
         O = [
             {
-                variant: f ? "secondary" : "primary",
-                text: f ? x.intl.string(x.t.TulDPl) : x.intl.string(x.t["NX+WJN"]),
+                variant: h ? "secondary" : "primary",
+                text: h ? x.intl.string(x.t.TulDPl) : x.intl.string(x.t["NX+WJN"]),
                 onClick: () => j(p.L.SECONDARY),
             },
         ];
     return (
-        f &&
+        h &&
             O.push({
                 variant: "primary",
                 text: x.intl.string(x.t["1X8SK/"]),
@@ -80,7 +80,7 @@ function f(t) {
                                     {
                                         channelType: u.d4z.GUILD_FORUM,
                                         guildId: e,
-                                        prefillChannelName: f ? x.intl.string(x.t["5z1Xat"]) : void 0,
+                                        prefillChannelName: h ? x.intl.string(x.t["5z1Xat"]) : void 0,
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
@@ -116,9 +116,9 @@ function f(t) {
                             selectedItem: P,
                             type: "top",
                             onItemSelect: (t) => {
-                                S(t), (0, d.ws)({ forumDemoId: t });
+                                S(t), (0, g.ws)({ forumDemoId: t });
                             },
-                            className: h.tags,
+                            className: f.tags,
                             children: N.map((t, e) =>
                                 (0, a.jsx)(
                                     o.njP.Item,
@@ -130,7 +130,7 @@ function f(t) {
                                 ),
                             ),
                         }),
-                        (0, a.jsx)(g.Z, { id: P }),
+                        (0, a.jsx)(d.Z, { id: P }),
                     ],
                 }),
                 y &&

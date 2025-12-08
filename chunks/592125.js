@@ -106,7 +106,7 @@ class K {
     }
     static loadGuildFromChannelId(e) {
         var t;
-        return null == e ? null : K.loadGuildIds([null == (t = Q(e)) ? void 0 : t.guild_id]);
+        return null == e ? null : K.loadGuildIds([null == (t = X(e)) ? void 0 : t.guild_id]);
     }
     static loadGuildIds(e) {
         let t = e.filter(E.lm);
@@ -187,14 +187,14 @@ function q(e, t, n) {
         (null == r ? void 0 : r.guild_id) != null && z(r.guild_id, t, n);
     }
 }
-function X(e) {
+function Q(e) {
     if ((N.fileOnly("Deleting guild channels for ".concat(e)), null != w[e])) {
         for (let t of b.default.keys(w[e])) delete R[t];
         delete w[e];
     }
     null != j[e] && delete j[e];
 }
-function Q(e) {
+function X(e) {
     var t, n, r, i;
     return (
         q(e, 0, "getBasicChannel"),
@@ -277,7 +277,7 @@ function eo(e) {
             for (let e of (N.fileOnly(
                 "ConnectionOpen contained full channels for ".concat(t, " #:").concat(n.items.length),
             ),
-            X(t),
+            Q(t),
             Z.add(t),
             f.Z.restored(t),
             n.items))
@@ -317,7 +317,7 @@ function el(e) {
                     null == (t = e.partial_updates.channels) || t.forEach((t) => en((0, g.q_)(t, e.id)));
             } else
                 N.fileOnly("BG sync contained full channels for ".concat(e.id, " #:").concat(e.channels.length)),
-                    X(e.id),
+                    Q(e.id),
                     Z.add(e.id),
                     f.Z.restored(e.id),
                     e.channels.forEach((t) => en((0, g.q_)(t, e.id)));
@@ -438,7 +438,7 @@ function eI(e) {
     eo(e.guild);
 }
 function eT(e) {
-    N.fileOnly("GuildDelete of ".concat(e.guild.id)), X(e.guild.id), Z.delete(e.guild.id), f.Z.invalidate(e.guild.id);
+    N.fileOnly("GuildDelete of ".concat(e.guild.id)), Q(e.guild.id), Z.delete(e.guild.id), f.Z.invalidate(e.guild.id);
 }
 function eA(e) {
     let t = J(e.channelId),
@@ -488,10 +488,10 @@ class ex extends (r = s.ZP.Store) {
         this.waitFor(y.default, f.Z, h.Z, O.Z, v.default), this.syncWith([h.Z], ew);
     }
     hasChannel(e) {
-        return null != Q(e);
+        return null != X(e);
     }
     getBasicChannel(e) {
-        if (null != e) return Q(e);
+        if (null != e) return X(e);
     }
     getChannel(e) {
         if (null != e) return J(e);

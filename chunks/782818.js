@@ -17,7 +17,7 @@ var r = n(54381),
     A = n(485696),
     j = n(388032),
     y = n(916340);
-function x(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function x(e) {
     }
     return e;
 }
-function C(e) {
+function x(e) {
     let { avatar: t, index: n, onSelectRecentAvatar: a, onDeleteRecentAvatar: l, avatarButtonRef: i } = e,
         { id: s, storageHash: u, description: d = j.intl.string(j.t.lqaIxI) } = t,
         { avatarSrc: f, eventHandlers: p } = (0, m.Z)({
@@ -55,7 +55,7 @@ function C(e) {
             orderNumber: n + 1,
             description: b,
         }),
-        x = j.intl.formatToPlainString(j.t.pBzwhc, {
+        C = j.intl.formatToPlainString(j.t.pBzwhc, {
             orderNumber: n + 1,
             description: b,
         });
@@ -78,8 +78,8 @@ function C(e) {
             (0, r.jsx)(o.u, {
                 text: j.intl.string(j.t.N86XcP),
                 children: (0, r.jsx)(c.P3F, {
-                    "aria-label": x,
-                    onClick: (e) => l(e, n, s, u, x),
+                    "aria-label": C,
+                    onClick: (e) => l(e, n, s, u, C),
                     className: y.deleteButton,
                     children: (0, r.jsx)(c.XHJ, {
                         size: "xs",
@@ -105,8 +105,8 @@ function v(e) {
         _ = null != R ? R : null == m ? void 0 : m.message,
         Z = i.length,
         I = Math.max(A.iZ - Z, 0),
-        k = (0, c.vRw)(),
-        D = a.useCallback(
+        D = (0, c.vRw)(),
+        k = a.useCallback(
             async (e) => {
                 if (null == l || S) return;
                 T(!0), F(null);
@@ -131,7 +131,7 @@ function v(e) {
                             return (n) =>
                                 (0, r.jsx)(
                                     a,
-                                    x(
+                                    C(
                                         {
                                             imageUri: o,
                                             file: new File([l], u, { type: f }),
@@ -144,7 +144,7 @@ function v(e) {
                                     ),
                                 );
                         },
-                        { contextKey: k },
+                        { contextKey: D },
                     );
                 } catch (e) {
                     F(j.intl.string(j.t.fZRH9P));
@@ -152,7 +152,7 @@ function v(e) {
                     T(!1);
                 }
             },
-            [k, S, t, l],
+            [D, S, t, l],
         ),
         M = a.useCallback(
             (e, t, a, l, s) => {
@@ -191,7 +191,7 @@ function v(e) {
                                       })(t, ["onClose"]);
                                   return (0, r.jsx)(
                                       e,
-                                      x(
+                                      C(
                                           {
                                               avatarId: a,
                                               storageHash: l,
@@ -248,10 +248,10 @@ function v(e) {
                                       (0, r.jsx)(
                                           "li",
                                           {
-                                              children: (0, r.jsx)(C, {
+                                              children: (0, r.jsx)(x, {
                                                   avatar: e,
                                                   index: t,
-                                                  onSelectRecentAvatar: D,
+                                                  onSelectRecentAvatar: k,
                                                   onDeleteRecentAvatar: M,
                                                   avatarButtonRef: (e) => {
                                                       v.current[t] = e;

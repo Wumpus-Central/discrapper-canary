@@ -27,11 +27,11 @@ function b(e, t) {
     null != h && g.push(h);
     let x = (null == (n = t.tags) ? void 0 : n.guild_connections) === null,
         j = t.managed && !x,
-        O = null != t && (0, d.fI)(t);
+        v = null != t && (0, d.fI)(t);
     return (
         b ||
             j ||
-            O ||
+            v ||
             g.push(
                 (0, i.jsx)(
                     l.kSQ,

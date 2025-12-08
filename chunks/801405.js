@@ -17,7 +17,7 @@ var r = n(54381),
     _ = n(228488),
     y = n(981631);
 function O(e) {
-    let { channel: t, appContext: n, popoutOpen: O, popoutWindow: j, currentWindow: x } = e,
+    let { channel: t, appContext: n, popoutOpen: O, popoutWindow: x, currentWindow: j } = e,
         { parentAnalyticsLocation: v } = (0, c.ZP)(),
         C = n === y.IlC.POPOUT,
         I = i.useRef(null),
@@ -40,14 +40,14 @@ function O(e) {
     });
     let P = i.useRef(S),
         { currentDocument: T, rootNode: N } = i.useMemo(() => {
-            let e = null != j && C ? j.document : document,
-                t = x.document.getElementById("app-mount");
+            let e = null != x && C ? x.document : document,
+                t = j.document.getElementById("app-mount");
             return {
-                currentWindow: x,
+                currentWindow: j,
                 currentDocument: e,
                 rootNode: t,
             };
-        }, [j, C, x]),
+        }, [x, C, j]),
         R = O && !C,
         w = E === y.WtW.VIDEO && Z && !R,
         A = i.useCallback(
@@ -142,7 +142,7 @@ function O(e) {
         ? (0, r.jsx)(h.Z, {
               themeable: !1,
               node: N,
-              guestWindow: j,
+              guestWindow: x,
               onClick: L(S),
           })
         : null;

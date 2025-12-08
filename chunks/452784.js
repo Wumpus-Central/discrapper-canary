@@ -7,7 +7,7 @@ var r = n(657707),
     a = n(313789),
     o = n(590814),
     s = n(388032);
-let l = (0, i.x1)(a.n.LANGUAGE_AND_TIME_PANE, { buildLayout: () => [o.Z] }),
+let l = (0, i.x1)(a.n.LANGUAGE_AND_TIME_PANE, { buildLayout: () => [o.L] }),
     c = (0, i.wf)(a.n.LANGUAGE_AND_TIME_PANEL, {
         useTitle: () => s.intl.string(s.t.KyFVyi),
         buildLayout: () => [l],

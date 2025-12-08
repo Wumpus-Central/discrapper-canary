@@ -11,14 +11,14 @@ var r = n(54381),
     i = n(278074),
     l = n(754700),
     c = n(887003),
-    d = n(820827),
-    u = n(458708),
+    u = n(820827),
+    d = n(458708),
     p = n(481060),
     m = n(49436),
-    g = n(115179),
-    f = n(254579),
-    h = n(455357),
-    x = n(210724),
+    f = n(115179),
+    g = n(254579),
+    x = n(455357),
+    h = n(210724),
     _ = n(130653),
     b = n(801604),
     j = n(557843),
@@ -83,8 +83,8 @@ function D(e, t) {
     );
 }
 let q = ["png", "gif", "webp"],
-    L = [...q, "jpg", "jpeg"],
-    Q = Array.from(new Set([...L, "gif", "mp4", "webm"]));
+    Q = [...q, "jpg", "jpeg"],
+    L = Array.from(new Set([...Q, "gif", "mp4", "webm"]));
 function V(e) {
     var t, n;
     return {
@@ -167,7 +167,7 @@ let W = "1193992107035983872",
                 logotype: "game_logotype.png",
             },
             taskConfigV2: {
-                joinOperator: u.r.AND,
+                joinOperator: d.r.AND,
                 tasks: {
                     [l.X.PLAY_ON_DESKTOP]: {
                         type: l.X.PLAY_ON_DESKTOP,
@@ -176,7 +176,7 @@ let W = "1193992107035983872",
                 },
             },
             features: [],
-            sharePolicy: d.X.SHAREABLE_EVERYWHERE,
+            sharePolicy: u.X.SHAREABLE_EVERYWHERE,
             ctaConfig: {
                 link: "https://discord.com/",
                 buttonLabel: "Learn More",
@@ -186,13 +186,13 @@ let W = "1193992107035983872",
         targetedContent: [],
     };
 function U() {
-    var e, t, o, d, u, k;
+    var e, t, o, u, d, k;
     let [V, W] = s.useState(Z),
         U = s.useCallback((e) => {
             W(D(I({}, e), { preview: !0 }));
         }, []),
         [H, z] = s.useState(N.a.UNENROLLED),
-        [F, G] = s.useState(!1),
+        [G, F] = s.useState(!1),
         [K, X] = s.useState(!1),
         [Y, J] = s.useState(null),
         $ =
@@ -292,7 +292,7 @@ function U() {
         U(D(I({}, V), { config: D(I({}, V.config), { colors: D(I({}, V.config.colors), { [e]: t }) }) }));
     }
     function eo() {
-        (0, g.Xv)(V.config)
+        (0, f.Xv)(V.config)
             ? (0, R.openQuestCollectibleRewardModal)(V, m.jn.GIFT_INVENTORY_FOR_YOU, m.jn.INTERNAL_PREVIEW_TOOL, !0)
             : (0, R.openQuestsRewardCodeModal)({
                   quest: V,
@@ -328,7 +328,7 @@ function U() {
                                         if (null == e.userStatus) return N.a.UNENROLLED;
                                         if (null != e.userStatus.claimedAt) return N.a.CLAIMED;
                                         if (null != e.userStatus.completedAt) return N.a.COMPLETED_100;
-                                        let t = (0, f.il)(e),
+                                        let t = (0, g.il)(e),
                                             n = t.progressSeconds,
                                             r = t.targetSeconds;
                                         return n / r >= 1
@@ -423,35 +423,35 @@ function U() {
                         title: "Hero",
                         assetKey: "hero",
                         onFileChange: ee,
-                        filters: Q,
+                        filters: L,
                         initialValue: V.config.assets.hero,
                     }),
                     (0, r.jsx)(O.Z, {
                         title: "Hero Video (optional)",
                         assetKey: "heroVideo",
                         onFileChange: ee,
-                        filters: Q,
-                        initialValue: null != (d = V.config.assets.heroVideo) ? d : void 0,
+                        filters: L,
+                        initialValue: null != (u = V.config.assets.heroVideo) ? u : void 0,
                     }),
                     (0, r.jsx)(O.Z, {
                         title: "Quest Bar Hero",
                         assetKey: "questBarHero",
                         onFileChange: ee,
-                        filters: Q,
+                        filters: L,
                         initialValue: V.config.assets.questBarHero,
                     }),
                     (0, r.jsx)(O.Z, {
                         title: "Quest Bar Hero Video (optional)",
                         assetKey: "questBarHeroVideo",
                         onFileChange: ee,
-                        filters: Q,
-                        initialValue: null != (u = V.config.assets.questBarHeroVideo) ? u : void 0,
+                        filters: L,
+                        initialValue: null != (d = V.config.assets.questBarHeroVideo) ? d : void 0,
                     }),
                     (0, r.jsx)(O.Z, {
                         title: "Game Tile",
                         assetKey: "gameTile",
                         onFileChange: ee,
-                        filters: [...L, "svg"],
+                        filters: [...Q, "svg"],
                         initialValue: V.config.assets.gameTile,
                     }),
                     (0, r.jsx)(O.Z, {
@@ -468,21 +468,21 @@ function U() {
                                     title: "Quest Video",
                                     assetKey: "videoPlayerVideo",
                                     onFileChange: et,
-                                    filters: Q,
+                                    filters: L,
                                     initialValue: null == el ? void 0 : el.assets.video.url,
                                 }),
                                 (0, r.jsx)(O.Z, {
                                     title: "Quest Video (Low Resolution)",
                                     assetKey: "videoPlayerVideoLowRes",
                                     onFileChange: et,
-                                    filters: Q,
+                                    filters: L,
                                     initialValue: null == el || null == (e = el.assets.videoLowRes) ? void 0 : e.url,
                                 }),
                                 (0, r.jsx)(O.Z, {
                                     title: "Video Player Thumbnail (optional)",
                                     assetKey: "videoPlayerThumbnail",
                                     onFileChange: et,
-                                    filters: L,
+                                    filters: Q,
                                     initialValue: null == el ? void 0 : el.assets.video.thumbnail,
                                 }),
                             ],
@@ -551,7 +551,7 @@ function U() {
                                                         );
                                                     }
                                                 })(e, n, t),
-                                            filters: Q,
+                                            filters: L,
                                             initialValue: e.asset,
                                         }),
                                     (0, r.jsxs)(p.Kqy, {
@@ -699,11 +699,11 @@ function U() {
                                         }),
                                     (0, r.jsx)("div", {
                                         className: B.questBarPreview,
-                                        children: (0, r.jsx)(h.x8, {
+                                        children: (0, r.jsx)(x.x8, {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
-                                            children: (0, r.jsx)(_.Z, { children: (0, r.jsx)(x.P, { quest: V }) }),
+                                            children: (0, r.jsx)(_.Z, { children: (0, r.jsx)(h.P, { quest: V }) }),
                                         }),
                                     }),
                                 ],
@@ -717,7 +717,7 @@ function U() {
                                 variant: "heading-sm/semibold",
                                 children: "Quest Home Card",
                             }),
-                            (0, r.jsx)(h.x8, {
+                            (0, r.jsx)(x.x8, {
                                 isPreview: !0,
                                 source: "preview",
                                 questId: "0",
@@ -748,7 +748,7 @@ function U() {
                                 }),
                             (0, r.jsx)("div", {
                                 className: B.questBarPreviewWrapper,
-                                children: (0, r.jsx)(h.x8, {
+                                children: (0, r.jsx)(x.x8, {
                                     isPreview: !0,
                                     source: "preview",
                                     questId: "0",
@@ -757,7 +757,7 @@ function U() {
                                         children: (0, r.jsx)(b.Z, {
                                             channelId: "123",
                                             previewQuest: V,
-                                            isParticipatingOverride: F,
+                                            isParticipatingOverride: G,
                                         }),
                                     }),
                                 }),
@@ -768,9 +768,9 @@ function U() {
                         className: B.toggleSwitch,
                         children: (0, r.jsx)(p.rsf, {
                             label: "Is Participating:",
-                            checked: F,
+                            checked: G,
                             onChange: function (e) {
-                                G(e);
+                                F(e);
                             },
                         }),
                     }),

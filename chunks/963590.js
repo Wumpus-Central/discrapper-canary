@@ -1,16 +1,16 @@
 n.d(t, {
-    E: () => r,
+    E: () => i,
     Z: () => s,
 });
 var a = n(818083),
     l = n(875527),
-    i = n(987338);
-let r = (0, a.B)({
+    r = n(987338);
+let i = (0, a.B)({
     kind: "user",
     id: "2025-06_voice_filters_ea",
     label: "Voice Filters EA",
     defaultConfig: { enabled: null },
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    commonTriggerPoint: r.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,
@@ -26,7 +26,7 @@ let r = (0, a.B)({
 });
 function s(e) {
     let { location: t } = e,
-        { enabled: n } = r.useExperiment({ location: t }, { autoTrackExposure: !1 }),
+        { enabled: n } = i.useExperiment({ location: t }, { autoTrackExposure: !1 }),
         a = (0, l.Hu)({
             location: "VoiceFiltersEarlyAccess",
             autoTrackExposure: !0,

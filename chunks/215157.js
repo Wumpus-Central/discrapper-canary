@@ -26,14 +26,14 @@ function f(e, t, n, c) {
             let i = u.ik(e, m, null != t ? t : null, n, (e) => h(c, e));
             return 0 === i.length && "" === c.trim() && 1 === m.length && (i = u.aq()), i;
         }, [m, c, e, t, n, f]),
-        y = i.useMemo(() => (null == e ? [] : u.iI(g, null != t ? t : null, e, n, (e) => h(c, e))), [g, c, e, t, n]);
+        C = i.useMemo(() => (null == e ? [] : u.iI(g, null != t ? t : null, e, n, (e) => h(c, e))), [g, c, e, t, n]);
     return (
         i.useEffect(() => {
             null != e && s.Z.requestMembers(e.id, p(c), d.EQ);
         }, [c, e]),
         {
             roles: b,
-            members: y,
+            members: C,
             getRichTag: i.useCallback((e) => {
                 let t = null;
                 return (

@@ -61,7 +61,7 @@ let N = {
             K = H ? "#706F74" : "#aaaab2",
             z = i.useRef(null),
             q = (0, s.e7)([y.ZP], () => (null != n && null != t ? y.ZP.getMember(n, t.id) : null)),
-            X =
+            Q =
                 null != t
                     ? (0, b.Ly)({
                           pendingNickname: M,
@@ -70,7 +70,7 @@ let N = {
                           guildMember: q,
                       })
                     : void 0,
-            Q = (0, E.Ys)({
+            X = (0, E.Ys)({
                 pendingValue: k,
                 userValue: null == t ? void 0 : t.avatarDecoration,
                 guildValue: null == q ? void 0 : q.avatarDecoration,
@@ -130,7 +130,7 @@ let N = {
                                               guildId: n,
                                               avatarSize: J,
                                               status: x ? W : void 0,
-                                              avatarDecorationOverride: Q,
+                                              avatarDecorationOverride: X,
                                               "aria-hidden": !0,
                                           }),
                                           decorators: (0, r.jsx)(g.ZP, {
@@ -139,7 +139,7 @@ let N = {
                                               className: T.tagChiplet,
                                           }),
                                           name: (0, r.jsx)(h.Z, {
-                                              userName: X,
+                                              userName: Q,
                                               displayNameStyles: $,
                                               effectDisplayType: B ? m.F.PLAIN : m.F.ANIMATED,
                                               loop: !0,

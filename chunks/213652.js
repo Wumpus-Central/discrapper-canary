@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(358221),
     g = n(522651),
     b = n(354459),
-    y = n(388032),
-    C = n(591868);
+    C = n(388032),
+    y = n(591868);
 function v(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, o.ZP)(),
@@ -79,7 +79,7 @@ function v(e) {
             );
         }, []);
     return (0, i.jsx)(p.Z, {
-        className: C.actionBarButton,
+        className: y.actionBarButton,
         onClick: () => {
             I || ((0, g.v)(n, g.d.CLIP), P ? (0, u.br)() : (0, u.C1)(v.id));
         },
@@ -87,14 +87,14 @@ function v(e) {
         iconComponent: Z,
         label:
             null == O
-                ? y.intl.string(y.t.eg5qtV)
+                ? C.intl.string(C.t.eg5qtV)
                 : P || E
                   ? S
                       ? j
                           ? void 0
-                          : y.intl.string(y.t.U4URzP)
-                      : y.intl.string(y.t.wSS1yN)
-                  : y.intl.string(y.t.aRifJX),
+                          : C.intl.string(C.t.U4URzP)
+                      : C.intl.string(C.t.wSS1yN)
+                  : C.intl.string(C.t.aRifJX),
         grow: !1,
     });
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(388685), n(642613);
 var l,
-    r,
-    i = n(392711),
-    a = n.n(i),
+    i,
+    r = n(392711),
+    a = n.n(r),
     s = n(442837),
     o = n(570140),
     c = n(45966),
@@ -38,14 +38,14 @@ class N extends (l = s.ZP.Store) {
         return h;
     }
 }
-(r = "displayName") in N
-    ? Object.defineProperty(N, r, {
+(i = "displayName") in N
+    ? Object.defineProperty(N, i, {
           value: "GuildSettingsDefaultChannelsStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (N[r] = "GuildSettingsDefaultChannelsStore");
+    : (N[i] = "GuildSettingsDefaultChannelsStore");
 let I = new N(o.Z, {
     GUILD_SETTINGS_INIT: f,
     GUILD_SETTINGS_SET_SECTION: f,

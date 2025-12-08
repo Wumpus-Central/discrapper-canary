@@ -1,18 +1,18 @@
-e.d(a, { Z: () => o });
-var c = e(54381);
-e(473749);
-var n = e(289556);
+a.d(e, { Z: () => o });
+var c = a(54381);
+a(473749);
+var n = a(289556);
 let o = (r) => {
     let {
-            innerRingPercent: a,
-            outerRingColor: e = "currentColor",
+            innerRingPercent: e,
+            outerRingColor: a = "currentColor",
             innerRingColor: o = "currentColor",
             strokeWidth: t = 4,
             children: s,
             backgroundCircleColor: i,
             backgroundCircleBlurAmount: l = 0,
         } = r,
-        d = Math.min(Math.max(a, 0), 100),
+        d = Math.min(Math.max(e, 0), 100),
         g = (100 - t) / 2,
         u = g * Math.PI * 2,
         v = (100 - t) / 2,
@@ -40,7 +40,7 @@ let o = (r) => {
                         cy: 50,
                         r: g,
                         strokeWidth: t,
-                        stroke: e,
+                        stroke: a,
                         fill: "none",
                         strokeLinecap: "round",
                         transform: "rotate(-90 ".concat(50, " ").concat(50, ")"),

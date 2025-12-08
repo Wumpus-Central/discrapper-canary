@@ -29,7 +29,7 @@ var a = n(54381),
     d = n(481060),
     u = n(846027),
     m = n(493773),
-    p = n(839514),
+    p = n(304809),
     h = n(670863),
     x = n(72897),
     f = n(131951),
@@ -117,8 +117,8 @@ function C() {
         _ = (0, s.e7)([f.Z], () => f.Z.getKrispSuppressionLevel()),
         [C, S] = l.useState(null),
         E = l.useRef(null),
-        N = l.useRef(null),
-        [O, T] = l.useState(0.5),
+        O = l.useRef(null),
+        [N, T] = l.useState(0.5),
         {
             krispModels: P,
             krispModelOverride: I,
@@ -131,8 +131,8 @@ function C() {
             noiseSuppression: L,
             noiseSuppressionSupported: M,
             noiseCancellationSupported: U,
-            noiseCancellationEnableStats: B,
-            vadDuringPreProcess: F,
+            noiseCancellationEnableStats: F,
+            vadDuringPreProcess: B,
         } = (0, s.cj)([f.Z], () => ({
             krispModels: f.Z.getKrispModels(),
             krispModelOverride: f.Z.getKrispModelOverride(),
@@ -161,10 +161,10 @@ function C() {
         if ((t && H(), V(), null == z)) return;
         let n = z.createBufferSource();
         (n.buffer = e.audioBuffer),
-            (N.current = z.createGain()),
-            (N.current.gain.value = O),
-            n.connect(N.current),
-            N.current.connect(z.destination),
+            (O.current = z.createGain()),
+            (O.current.gain.value = N),
+            n.connect(O.current),
+            O.current.connect(z.destination),
             (n.loop = !0),
             n.start(),
             (E.current = n),
@@ -247,7 +247,7 @@ function C() {
                                 }),
                                 (0, a.jsx)(d.rsf, {
                                     label: "Enable Stats",
-                                    checked: B,
+                                    checked: F,
                                     onChange: (e) => u.Z.setNoiseCancellationEnableStats(e),
                                 }),
                             ],
@@ -283,7 +283,7 @@ function C() {
                                     }),
                                 (0, a.jsx)(d.rsf, {
                                     label: "Run Before Processing",
-                                    checked: null != F && F,
+                                    checked: null != B && B,
                                     onChange: (e) => u.Z.setMode(b.pM.VOICE_ACTIVITY, { vadDuringPreProcess: e }),
                                 }),
                             ],
@@ -340,9 +340,9 @@ function C() {
                     }),
                     (0, a.jsx)(d.iRW, {
                         label: "Volume",
-                        initialValue: O,
+                        initialValue: N,
                         asValueChanges: function (e) {
-                            null != N.current && ((N.current.gain.value = e), T(e));
+                            null != O.current && ((O.current.gain.value = e), T(e));
                         },
                         minValue: 0,
                         maxValue: 1,

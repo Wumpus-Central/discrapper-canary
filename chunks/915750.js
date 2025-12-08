@@ -28,9 +28,9 @@ var r = n(54381),
     E = n(358085),
     b = n(617136),
     y = n(616022),
-    O = n(509212),
-    v = n(198535),
-    S = n(535584),
+    O = n(198535),
+    v = n(535584),
+    S = n(862657),
     I = n(981631);
 function T(e, t, n) {
     return (
@@ -78,8 +78,8 @@ class x {
     }
     getBrandSafetyContext() {
         var e;
-        let t = (0, O.VB)(this.questContent),
-            n = (0, O.uN)(this.questContent),
+        let t = (0, S.VB)(this.questContent),
+            n = (0, S.uN)(this.questContent),
             r = (0, f.z5)(),
             i = (0, f.QW)();
         if (!(null == n ? void 0 : n.is_campaign_ias_enabled) || !t || void 0 === r || void 0 === i) return null;
@@ -181,7 +181,7 @@ class x {
             T(this, "isRunning", !1),
             T(this, "onMinViewTimeReached", () => {
                 this.quests.forEach((e) => {
-                    (0, S.T)().info(
+                    (0, v.T)().info(
                         ""
                             .concat(e.config.messages.questName, " Quest viewed for at least ")
                             .concat(this.minViewTimeSeconds, "s at ")
@@ -189,13 +189,13 @@ class x {
                         { impressionId: this.id },
                     );
                     let t = !1,
-                        n = (0, O.Zp)(this.questContent);
+                        n = (0, S.Zp)(this.questContent);
                     if (null != n) {
                         let r = D(e.id, n);
-                        (t = !w.has(r) && (0, O.VB)(this.questContent)) && w.add(r);
+                        (t = !w.has(r) && (0, S.VB)(this.questContent)) && w.add(r);
                     }
-                    let r = (0, O.jY)(this.questContent),
-                        i = (0, O.R_)(this.questContent);
+                    let r = (0, S.jY)(this.questContent),
+                        i = (0, S.R_)(this.questContent);
                     (0, u.S)((0, b._b)(this.questContent)).then((n) => {
                         (0, b.dA)({
                             questId: e.id,
@@ -226,7 +226,7 @@ class x {
                 _.quests.forEach((t) => {
                     if (null != _.lastBeatTime) {
                         let n = Math.round(Date.now() - _.lastBeatTime);
-                        (0, S.T)().info(
+                        (0, v.T)().info(
                             ""
                                 .concat(t.config.messages.questName, " Quest impression ")
                                 .concat(e ? "terminal " : "", "heartbeat: ")
@@ -285,10 +285,10 @@ class x {
                         this.onMinViewTimeReached,
                         1000 * this.minViewTimeSeconds,
                     ));
-                let e = (0, O.jY)(this.questContent),
-                    t = (0, O.R_)(this.questContent);
+                let e = (0, S.jY)(this.questContent),
+                    t = (0, S.R_)(this.questContent);
                 this.quests.forEach((n) => {
-                    (0, S.T)().info(
+                    (0, v.T)().info(
                         ""
                             .concat(n.config.messages.questName, " Quest became visible at ")
                             .concat((0, b._b)(this.questContent)),
@@ -309,7 +309,7 @@ class x {
                             sourceQuestContent: this.sourceQuestContent,
                         });
                 }),
-                    (0, v.a)("QuestImpressionTracker") &&
+                    (0, O.a)("QuestImpressionTracker") &&
                         p.Z.increment({
                             name: o.V.QUEST_CONTENT_IMPRESSION,
                             tags: ["quest_content:".concat((0, b._b)(this.questContent))],

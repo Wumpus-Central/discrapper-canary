@@ -5,7 +5,7 @@ var i = n(54381),
     r = n(5900),
     u = n(773275),
     a = n(388032),
-    o = n(163646),
+    o = n(237396),
     c = n(291771);
 let d = () => {
         let { isWeb: t, installationStatus: e } = (0, u.xf)(),
@@ -29,7 +29,7 @@ let d = () => {
                     case r._n.ZERO_TRUST:
                         return a.intl.string(o.default["7zgDRR"]);
                     case r._n.INSTALLED:
-                        return (0, i.jsx)(E, {});
+                        return (0, i.jsx)(T, {});
                 }
             }, [t, e]);
         return (0, i.jsx)(s.X6q, {
@@ -37,7 +37,7 @@ let d = () => {
             children: n,
         });
     },
-    E = () => {
+    T = () => {
         switch ((0, u.xf)((t) => t.connectionStatus)) {
             case r.Ij.INITIALIZING:
                 return (0, i.jsxs)("span", {

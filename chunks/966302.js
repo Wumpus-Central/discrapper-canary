@@ -46,8 +46,8 @@ var r = n(54381),
     K = n(388032),
     z = n(993103),
     q = n(450943),
-    X = n(315091);
-function Q(e, t, n) {
+    Q = n(315091);
+function X(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -71,7 +71,7 @@ function J(e) {
                 }),
             )),
             r.forEach(function (t) {
-                Q(e, t, n[t]);
+                X(e, t, n[t]);
             });
     }
     return e;
@@ -282,7 +282,7 @@ function el(e) {
             guildId: null == m ? void 0 : m.guild_id,
             location: "IncomingCallModal",
         }),
-        Q =
+        X =
             M === H.WtW.VOICE || (V && m.type === H.d4z.GUILD_VOICE)
                 ? K.intl.string(K.t.Js8cK3)
                 : K.intl.string(K.t.KcnWCO),
@@ -325,7 +325,7 @@ function el(e) {
                             color: "text-default",
                             className: q.subtitle,
                             variant: O ? "text-sm/normal" : "text-md/normal",
-                            children: Q,
+                            children: X,
                         }),
                     ],
                 }),
@@ -350,7 +350,7 @@ function el(e) {
                 theme: O ? H.BRd.DARK : void 0,
                 children: (e) =>
                     (0, r.jsxs)(s.animated.div, {
-                        className: o()(q.root, X.elevationHigh, { [q.previewCamera]: O }, e),
+                        className: o()(q.root, Q.elevationHigh, { [q.previewCamera]: O }, e),
                         style: ee(J({}, n), {
                             width: B.value.interpolate([0, 1], [el.width, er]),
                             minHeight: B.value.interpolate([0, 1], [el.height, ei]),

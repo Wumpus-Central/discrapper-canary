@@ -19,14 +19,14 @@ let d = i.forwardRef(function (e, t) {
             wishlistItem: _,
         } = e,
         { skuId: y, skuProductLine: O } = _,
-        { trackUserProfileWishlistAction: j } = (0, o.KZ)(),
-        x = h ? c.cardPreview : c.cardPreviewNoScale,
+        { trackUserProfileWishlistAction: x } = (0, o.KZ)(),
+        j = h ? c.cardPreview : c.cardPreviewNoScale,
         v = m ? c.cardSingle : c.card,
         C = null != g && g > 0,
         I = (0, r.jsxs)(a.P3F, {
             onClick: () => {
                 u(),
-                    j({
+                    x({
                         action: C ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
                         skuId: C ? null : y,
                         wishlistId: b,
@@ -38,7 +38,7 @@ let d = i.forwardRef(function (e, t) {
             innerRef: t,
             children: [
                 (0, r.jsx)("div", {
-                    className: x,
+                    className: j,
                     children: f(),
                 }),
                 C &&

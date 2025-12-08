@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var i,
     r,
     l = n(442837),
@@ -18,7 +18,7 @@ class o extends (r = l.ZP.Store) {
           writable: !0,
       })
     : (o[i] = "ApplicationBranchStore");
-let c = new o(s.Z, {
+let u = new o(s.Z, {
     OWNED_APPLICATION_BRANCHES_FETCH_SUCCESS: function (e) {
         let { applicationId: t, branches: n } = e;
         a[t] = n;

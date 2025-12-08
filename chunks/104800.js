@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(617136),
     u = n(915750),
     d = n(49436),
-    m = n(509212),
-    f = n(184299),
-    p = n(475595),
+    m = n(184299),
+    f = n(475595),
+    p = n(304696),
     v = n(602667),
     E = n(215113),
     g = n(874010),
@@ -19,7 +19,7 @@ var r = n(54381),
     b = n(273339);
 function C(e) {
     let { quest: t, sourceQuestContent: n } = e,
-        l = o.useMemo(() => (0, p.fh)(t, p.eC.VIDEO_PLAYER_THUMBNAIL, void 0, !1), [t]);
+        l = o.useMemo(() => (0, f.fh)(t, f.eC.VIDEO_PLAYER_THUMBNAIL, void 0, !1), [t]);
     return null == l
         ? null
         : (0, r.jsx)(v.A, {
@@ -83,10 +83,10 @@ function S(e) {
 }
 function _(e) {
     var t;
-    let { videoRef: n, onExitFullScreen: l, onTrackQuestVideoFullscreenChanged: i, onTrackQuestContentClick: p } = e,
+    let { videoRef: n, onExitFullScreen: l, onTrackQuestVideoFullscreenChanged: i, onTrackQuestContentClick: f } = e,
         { onClose: v, sourceQuestContent: g, quest: _ } = o.useContext(E.VideoQuestModalContext),
-        y = (0, f.ZP)((e) => e.fullScreenEnabled),
-        x = (0, f.ZP)((e) => e.setFullScreenEnabled),
+        y = (0, m.ZP)((e) => e.fullScreenEnabled),
+        x = (0, m.ZP)((e) => e.setFullScreenEnabled),
         j = (0, u.aM)(),
         P = (0, O.e)({
             quest: _,
@@ -101,12 +101,12 @@ function _(e) {
                     let e = (0, s.fn)(null == (t = n.current) ? void 0 : t.parentNode, n.current);
                     null != e && (e.removeEventListener(s.NO, l), (0, s.Pr)(e), x(!1), i(!1));
                 }
-                p(e, c.jZ.LEARN_MORE), P(e, c.jZ.OPEN_GAME_LINK);
+                f(e, c.jZ.LEARN_MORE), P(e, c.jZ.OPEN_GAME_LINK);
             },
-            [y, n, l, x, i, P, p],
+            [y, n, l, x, i, P, f],
         ),
         { title: R, subtitle: T } = {
-            title: (0, m.V_)(_),
+            title: (0, p.V_)(_),
             subtitle: null != (t = _.config.ctaConfig.subtitle) ? t : h.intl.string(h.t.mxaHfx),
         };
     return (0, r.jsxs)(r.Fragment, {

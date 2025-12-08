@@ -11,8 +11,8 @@ var r = n(54381),
     C = n(226192),
     m = n(223606),
     b = n(388032),
-    p = n(337640);
-function f(e) {
+    f = n(337640);
+function p(e) {
     var t;
     if (null == (null != (t = e.dmsDisabledUntil) ? t : e.invitesDisabledUntil)) return "";
     let n = null != e.dmsDisabledUntil,
@@ -33,27 +33,27 @@ function h(e) {
     let { onHandleEnableLockdown: n, onHandleReportFalseAlarm: l, incidentData: o } = e,
         s = null != (t = o.raidDetectedAt) ? t : o.dmSpamDetectedAt;
     return (0, r.jsxs)("div", {
-        className: p.subheaderContainer,
+        className: f.subheaderContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: p.subHeaderTextContainer,
+                className: f.subHeaderTextContainer,
                 children: [
                     (0, r.jsx)(a.b7C, {
                         size: "md",
-                        className: p.shieldIcon,
+                        className: f.shieldIcon,
                         color: i.Z.unsafe_rawColors.RED_345.css,
                     }),
                     (0, r.jsxs)("div", {
-                        className: p.subHeaderText,
+                        className: f.subHeaderText,
                         children: [
                             (0, r.jsx)(a.Heading, {
-                                className: p.heading,
+                                className: f.heading,
                                 variant: "heading-lg/semibold",
                                 color: "text-feedback-critical",
                                 children: (0, u.kk)(o) ? b.intl.string(b.t.raRxxT) : b.intl.string(b.t["4nbAta"]),
                             }),
                             (0, r.jsx)(a.Text, {
-                                className: p.tagLine,
+                                className: f.tagLine,
                                 variant: "text-sm/medium",
                                 children: b.intl.format(b.t["4QIIZl"], {
                                     dateTime: new Date(null != s ? s : "").toLocaleString(b.intl.currentLocale, u.pQ),
@@ -64,7 +64,7 @@ function h(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: p.buttonContainer,
+                className: f.buttonContainer,
                 children: [
                     (0, r.jsx)(a.Button, {
                         variant: "secondary",
@@ -86,27 +86,27 @@ function h(e) {
 function g(e) {
     let { onHandleEnableLockdown: t, incidentData: n, guildName: l } = e;
     return (0, r.jsxs)("div", {
-        className: p.subheaderContainer,
+        className: f.subheaderContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: p.subHeaderTextContainer,
+                className: f.subHeaderTextContainer,
                 children: [
                     (0, r.jsx)(a.b7C, {
                         size: "md",
-                        className: p.shieldIcon,
+                        className: f.shieldIcon,
                         color: i.Z.unsafe_rawColors.BRAND_360.css,
                     }),
                     (0, r.jsxs)("div", {
-                        className: p.subHeaderText,
+                        className: f.subHeaderText,
                         children: [
                             (0, r.jsx)(a.Heading, {
-                                className: p.heading,
+                                className: f.heading,
                                 variant: "heading-lg/semibold",
                                 color: "text-brand",
-                                children: f(n),
+                                children: p(n),
                             }),
                             (0, r.jsx)(a.Text, {
-                                className: p.tagLine,
+                                className: f.tagLine,
                                 variant: "text-sm/medium",
                                 children: (0, u.OY)(n, l),
                             }),
@@ -126,27 +126,27 @@ function g(e) {
 function j(e) {
     let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: n, incidentData: l, guildName: o } = e;
     return (0, r.jsxs)("div", {
-        className: p.subheaderContainer,
+        className: f.subheaderContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: p.subHeaderTextContainer,
+                className: f.subHeaderTextContainer,
                 children: [
                     (0, r.jsx)(a.b7C, {
                         size: "md",
-                        className: p.shieldIcon,
+                        className: f.shieldIcon,
                         color: i.Z.unsafe_rawColors.BRAND_360.css,
                     }),
                     (0, r.jsxs)("div", {
-                        className: p.subHeaderText,
+                        className: f.subHeaderText,
                         children: [
                             (0, r.jsx)(a.Heading, {
-                                className: p.heading,
+                                className: f.heading,
                                 variant: "heading-lg/semibold",
                                 color: "text-brand",
-                                children: f(l),
+                                children: p(l),
                             }),
                             (0, r.jsx)(a.Text, {
-                                className: p.tagLine,
+                                className: f.tagLine,
                                 variant: "text-sm/medium",
                                 children: (0, u.OY)(l, o),
                             }),
@@ -155,7 +155,7 @@ function j(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: p.buttonContainer,
+                className: f.buttonContainer,
                 children: [
                     (0, r.jsx)(a.Button, {
                         onClick: n,
@@ -233,11 +233,11 @@ function x(e) {
                 };
             });
         }, [t.id, n]),
-        p = l.useCallback(() => {
+        f = l.useCallback(() => {
             let e = m.Z.getLastIncidentAlertMessage(t.id);
             (0, C.kW)(e, t.id);
         }, [t.id]),
-        f = (() => {
+        p = (() => {
             switch (!0) {
                 case o && i:
                     return 3;
@@ -250,11 +250,11 @@ function x(e) {
             }
         })();
     if (null == t || null == n) return null;
-    switch (f) {
+    switch (p) {
         case 1:
             return (0, r.jsx)(h, {
                 onHandleEnableLockdown: b,
-                onHandleReportFalseAlarm: p,
+                onHandleReportFalseAlarm: f,
                 incidentData: n,
             });
         case 2:
@@ -266,7 +266,7 @@ function x(e) {
         case 3:
             return (0, r.jsx)(j, {
                 onHandleEnableLockdown: b,
-                onHandleReportFalseAlarm: p,
+                onHandleReportFalseAlarm: f,
                 incidentData: n,
                 guildName: t.name,
             });

@@ -43,7 +43,7 @@ function i(e, t) {
         e
     );
 }
-let a = {
+let s = {
         skus: [],
         currentPage: 0,
         totalCount: 0,
@@ -52,13 +52,13 @@ let a = {
         isFetchingResults: !1,
     },
     o = (0, r.U)((e) =>
-        i(l({}, a), {
+        i(l({}, s), {
             onSetResponse: (t) => {
                 let n = Math.floor(t.pageOffset / t.pageLimit) + 1;
                 e(i(l({}, t), { currentPage: n }));
             },
             setSearchError: (t) => {
-                e(i(l({}, a), { searchError: t }));
+                e(i(l({}, s), { searchError: t }));
             },
             setIsFetchingResults: (t) => {
                 e({ isFetchingResults: t });
@@ -67,7 +67,7 @@ let a = {
                 e({ searchError: null });
             },
             clear: () => {
-                e(l({}, a));
+                e(l({}, s));
             },
         }),
     );

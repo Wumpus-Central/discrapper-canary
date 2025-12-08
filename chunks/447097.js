@@ -1,74 +1,74 @@
-n.d(t, { Z: () => d }), n(704826), n(35282), n(388685), n(457542);
-var l = n(54381),
-    r = n(473749),
+n.d(t, { Z: () => c }), n(704826), n(35282), n(388685), n(457542);
+var r = n(54381),
+    l = n(473749),
     i = n(658550),
     s = n(481060),
     a = n(507453),
     o = n(388032);
-function d(e) {
-    let { mfaChallenge: t, finish: n, setSlide: d, onClose: u, isSlideReady: c, headerAlignStart: h } = e,
-        [f, g] = r.useState(!1),
-        [m, p] = r.useState(null),
-        [b, S] = r.useState(""),
-        x = r.useRef(null),
-        j = o.intl.string(o.t["C/ZAw/"]),
-        y = o.intl.string(o.t.fZSi1D),
-        v = r.useCallback(
+function c(e) {
+    let { mfaChallenge: t, finish: n, setSlide: c, onClose: u, isSlideReady: d, headerAlignStart: f } = e,
+        [h, g] = l.useState(!1),
+        [m, b] = l.useState(null),
+        [p, j] = l.useState(""),
+        y = l.useRef(null),
+        x = o.intl.string(o.t["C/ZAw/"]),
+        S = o.intl.string(o.t.fZSi1D),
+        v = l.useCallback(
             (e) => {
-                S(e), p(null);
+                j(e), b(null);
             },
-            [S, p],
+            [j, b],
         );
     return (
-        r.useEffect(() => {
-            if (c) {
+        l.useEffect(() => {
+            if (d) {
                 var e;
-                null == (e = x.current) || e.focus();
+                null == (e = y.current) || e.focus();
             }
-        }, [c]),
-        (0, l.jsxs)("form", {
+        }, [d]),
+        (0, r.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
                     g(!0),
                     n({
                         mfaType: "backup",
-                        data: b.replace(/-/g, ""),
+                        data: p.replace(/-/g, ""),
                     })
                         .catch((e) => {
                             var t, n;
-                            p(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
+                            b(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
                         })
                         .finally(() => {
                             g(!1);
                         });
             },
             children: [
-                (0, l.jsx)(a.Z.SlideHeader, {
+                (0, r.jsx)(a.Z.SlideHeader, {
                     onClose: u,
-                    headerAlignStart: h,
+                    headerAlignStart: f,
                 }),
-                (0, l.jsxs)(a.Z.SlideContent, {
+                (0, r.jsxs)(a.Z.SlideContent, {
                     children: [
-                        (0, l.jsx)(s.oil, {
-                            label: j,
-                            inputRef: x,
+                        (0, r.jsx)(s.oil, {
+                            label: x,
+                            inputRef: y,
                             onChange: v,
-                            placeholder: y,
+                            placeholder: S,
                             maxLength: i.tL,
                             minLength: i.th,
-                            value: b,
+                            value: p,
                             spellCheck: "false",
-                            disabled: f,
+                            disabled: h,
                         }),
-                        (0, l.jsx)(a.Z.SlideError, { error: m }),
+                        (0, r.jsx)(a.Z.SlideError, { error: m }),
                     ],
                 }),
-                (0, l.jsx)(a.Z.SlideFooter, {
+                (0, r.jsx)(a.Z.SlideFooter, {
                     mfaChallenge: t,
-                    setSlide: d,
+                    setSlide: c,
                     showConfirm: !0,
-                    disabled: b.length < 8,
-                    submitting: f,
+                    disabled: p.length < 8,
+                    submitting: h,
                 }),
             ],
         })

@@ -11,8 +11,8 @@ var r = n(54381),
     C = n(496675),
     m = n(910693),
     b = n(893966),
-    p = n(527379),
-    f = n(446535),
+    f = n(527379),
+    p = n(446535),
     h = n(855935),
     g = n(231338),
     j = n(388032),
@@ -66,7 +66,7 @@ let O = l.forwardRef(function (e, t) {
         a = (0, u.e7)([b.Z], () => b.Z.hasDefaultSearchStateByGuildId(n.id), [n.id]),
         O = (0, u.e7)([C.Z], () => C.Z.can(c.$e(g.Pl.MANAGE_GUILD, g.Pl.KICK_MEMBERS), n)),
         H = l.useCallback(() => {
-            null != n && O && (0, d.ZDy)(async () => (e) => (0, r.jsx)(f.Z, y(v({}, e), { guild: n })));
+            null != n && O && (0, d.ZDy)(async () => (e) => (0, r.jsx)(p.Z, y(v({}, e), { guild: n })));
         }, [n, O]),
         _ = (0, u.e7)([b.Z], () => b.Z.getSearchStateByGuildId(n.id), [n.id], s()),
         w = (0, m.gm)(n.id),
@@ -74,7 +74,7 @@ let O = l.forwardRef(function (e, t) {
         D = l.useCallback(
             (e) => {
                 let t = e.trim();
-                t.length > 0 && w(), (0, p.Dr)(n.id, { query: t });
+                t.length > 0 && w(), (0, f.Dr)(n.id, { query: t });
             },
             [n.id, w],
         ),

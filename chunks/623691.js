@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(913527),
     o = n.n(s),
     c = n(704215),
-    u = n(481060),
-    d = n(668781),
+    d = n(481060),
+    u = n(668781),
     g = n(749210),
     m = n(409513),
     p = n(266454),
@@ -34,27 +34,27 @@ function S(e) {
             setQuery: o,
             setHeaderHeight: c,
         } = e,
-        d = i.useRef(null),
+        u = i.useRef(null),
         { enabled: g } = m.Z.useExperiment({
             guildId: t.id,
             location: "GuildSettingsRolesOverviewHeader",
         });
     i.useEffect(() => {
         var e, t;
-        c(null != (t = null == (e = d.current) ? void 0 : e.offsetHeight) ? t : O.Cl);
+        c(null != (t = null == (e = u.current) ? void 0 : e.offsetHeight) ? t : O.Cl);
     }, [c]);
     let p = i.useCallback(() => {
             a(n.id);
         }, [a, n.id]),
         f = g ? v.Z : T;
     return (0, r.jsxs)("div", {
-        ref: d,
+        ref: u,
         children: [
-            (0, r.jsx)(u.Heading, {
+            (0, r.jsx)(d.Heading, {
                 variant: "heading-lg/semibold",
                 children: E.intl.string(E.t["LPJmL/"]),
             }),
-            (0, r.jsx)(u.Text, {
+            (0, r.jsx)(d.Text, {
                 className: I.description,
                 color: "text-default",
                 variant: "text-sm/normal",
@@ -83,16 +83,16 @@ function T(e) {
     }, [t]);
     let n = (0, b.vc)(o()(C.zQD), "LL"),
         l = t.features.has(C.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE)
-            ? (0, r.jsx)(u.Text, {
+            ? (0, r.jsx)(d.Text, {
                   variant: "text-sm/normal",
                   children: E.intl.format(E.t.Vg2oTN, { breakingChangeDate: n }),
               })
             : h.Z.can(N.Pl.ADMINISTRATOR, t)
-              ? (0, r.jsx)(u.Text, {
+              ? (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
                     children: E.intl.format(E.t.HYM8OE, {
                         onClickMigrate: () => {
-                            d.Z.show({
+                            u.Z.show({
                                 title: E.intl.string(E.t.nFE8dD),
                                 body: E.intl.format(E.t["1PAzQ6"], { guildName: t.name }),
                                 cancelText: E.intl.string(E.t["ETE/oC"]),
@@ -105,7 +105,7 @@ function T(e) {
                         breakingChangeDate: n,
                     }),
                 })
-              : (0, r.jsx)(u.Text, {
+              : (0, r.jsx)(d.Text, {
                     variant: "text-sm/normal",
                     children: E.intl.format(E.t.cAuU1S, { breakingChangeDate: n }),
                 });
@@ -128,7 +128,7 @@ function P(e) {
                 query: l,
                 setQuery: s,
             }),
-            (0, r.jsx)(u.Text, {
+            (0, r.jsx)(d.Text, {
                 className: I.helpText,
                 color: "text-default",
                 variant: "text-sm/normal",
@@ -140,12 +140,12 @@ function P(e) {
                     className: I.tableHeader,
                     children: [
                         (0, r.jsx)("div", { className: I.dragSpacing }),
-                        (0, r.jsx)(u.Text, {
+                        (0, r.jsx)(d.Text, {
                             className: a()(I.tableTitle, I.roleNameSpacing),
                             variant: "text-sm/normal",
                             children: E.intl.format(E.t["38N3Vz"], { numRoles: String(i.length) }),
                         }),
-                        (0, r.jsx)(u.Text, {
+                        (0, r.jsx)(d.Text, {
                             className: a()(I.tableTitle, I.memberSpacing),
                             variant: "text-sm/normal",
                             children: E.intl.string(E.t["9Oq93m"]),
@@ -169,7 +169,7 @@ function w(e) {
         c = i.useCallback(() => {
             l("");
         }, [l]),
-        d = async () => {
+        u = async () => {
             s(!0), await g.Z.createRole(t.id), s(!1);
         };
     return (0, r.jsx)("div", {
@@ -177,16 +177,16 @@ function w(e) {
         children: (0, r.jsxs)("div", {
             className: I.searchContainer,
             children: [
-                (0, r.jsx)(u.E1j, {
+                (0, r.jsx)(d.E1j, {
                     query: n,
                     onChange: o,
                     onClear: c,
                     placeholder: E.intl.string(E.t.Sojqsr),
                     "aria-label": E.intl.string(E.t.Sojqsr),
                 }),
-                (0, r.jsx)(u.Button, {
+                (0, r.jsx)(d.Button, {
                     size: "sm",
-                    onClick: d,
+                    onClick: u,
                     loading: a,
                     text: E.intl.string(E.t.JZZjQK),
                 }),

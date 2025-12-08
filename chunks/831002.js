@@ -19,18 +19,18 @@ var u = n(218035),
     m = n(496675),
     g = n(881824),
     b = n(146085),
-    y = n(427679),
-    C = n(430104);
+    C = n(427679),
+    y = n(430104);
 n(354459);
 var v = n(388032);
 function _(e) {
     let t = (0, a.e7)([f.Z], () => f.Z.getChannel(e), [e]),
         n = (0, a.e7)([m.Z], () => m.Z.can(b.yP, t)),
-        r = (0, C.sP)(),
-        l = (0, a.e7)([y.Z], () => y.Z.getStageInstanceByChannel(e), [e]),
+        r = (0, y.sP)(),
+        l = (0, a.e7)([C.Z], () => C.Z.getStageInstanceByChannel(e), [e]),
         u = (0, p.bp)(),
         d = () => {
-            (0, C.u1)()
+            (0, y.u1)()
                 ? s.Z.showAgeVerificationGetStartedModal({ entryPoint: c.cU.START_STAGE_PROMPT })
                 : null != t && (0, g.T)(t, u);
         };

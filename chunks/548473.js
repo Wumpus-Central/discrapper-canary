@@ -6,9 +6,9 @@ n.d(t, {
 }),
     n(49124);
 var l = n(54381),
-    r = n(473749),
-    i = n(120356),
-    a = n.n(i),
+    i = n(473749),
+    r = n(120356),
+    a = n.n(r),
     s = n(500923),
     o = n.n(s),
     c = n(442837),
@@ -55,7 +55,7 @@ function D(e) {
     }
     return e;
 }
-function y(e, t) {
+function G(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,11 +73,11 @@ function y(e, t) {
         e
     );
 }
-function G(e) {
+function y(e) {
     let t = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-        n = r.useRef(null);
+        n = i.useRef(null);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             let l;
             return (
                 null != n.current &&
@@ -97,7 +97,7 @@ function G(e) {
     );
 }
 function C() {
-    let e = G(x);
+    let e = y(x);
     return (0, l.jsx)("div", {
         className: a()(b.leftArt, b.altFloat),
         children: (0, l.jsx)("div", {
@@ -107,7 +107,7 @@ function C() {
     });
 }
 function P() {
-    let e = G(_);
+    let e = y(_);
     return (0, l.jsx)("div", {
         className: a()(b.rightArt, b.altFloat),
         children: (0, l.jsx)("div", {
@@ -117,17 +117,17 @@ function P() {
     });
 }
 function A(e) {
-    let { guild: t, mainIslandClassName: n, balloonDogClassName: i } = e,
+    let { guild: t, mainIslandClassName: n, balloonDogClassName: r } = e,
         s = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-        d = r.useRef(null),
-        u = G(S),
+        d = i.useRef(null),
+        u = y(S),
         g = N.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
             size: 96,
         });
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             let e;
             return (
                 null != d.current && null != g
@@ -158,7 +158,7 @@ function A(e) {
             className: a()(b.centerArt, b.float),
             children: [
                 (0, l.jsx)("div", {
-                    className: a()(b.balloonDog, i),
+                    className: a()(b.balloonDog, r),
                     ref: u,
                 }),
                 (0, l.jsx)("div", {
@@ -170,15 +170,15 @@ function A(e) {
     );
 }
 function L(e) {
-    let { guild: t, onStart: n, onboardingStatus: i, headerId: a, disableTracking: s } = e,
+    let { guild: t, onStart: n, onboardingStatus: r, headerId: a, disableTracking: s } = e,
         o = (0, c.e7)([p.Z], () => p.Z.isLoading()),
-        m = r.useRef(!1);
-    r.useEffect(() => {
+        m = i.useRef(!1);
+    i.useEffect(() => {
         if (!s)
             return (
                 f.default.track(
                     j.rMx.GUILD_ONBOARDING_STEP_VIEWED,
-                    y(D({}, (0, g.hH)(t.id)), {
+                    G(D({}, (0, g.hH)(t.id)), {
                         step: -1,
                         required: !0,
                     }),
@@ -186,7 +186,7 @@ function L(e) {
                 () => {
                     f.default.track(
                         j.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
-                        y(D({}, (0, g.hH)(t.id)), {
+                        G(D({}, (0, g.hH)(t.id)), {
                             step: -1,
                             skipped: !m.current,
                             is_final_step: !1,
@@ -196,7 +196,7 @@ function L(e) {
                 }
             );
     }, [t.id, m, s]);
-    let N = r.useMemo(() => (0, h.EB)(t, 135, !1, !0), [t]);
+    let N = i.useMemo(() => (0, h.EB)(t, 135, !1, !0), [t]);
     return (
         (0, u.ZP)(() => {
             setTimeout(() => {
@@ -227,7 +227,7 @@ function L(e) {
                             }),
                             o
                                 ? (0, l.jsx)(d.$jN, { className: b.__invalid_subtitle })
-                                : i === O.uX.NOT_APPLICABLE
+                                : r === O.uX.NOT_APPLICABLE
                                   ? (0, l.jsx)(d.Heading, {
                                         className: b.__invalid_subtitle,
                                         variant: "heading-xxl/normal",

@@ -1,6 +1,6 @@
 n.d(t, {
     XX: () => U,
-    ZP: () => F,
+    ZP: () => H,
     ul: () => V,
 }),
     n(388685);
@@ -19,8 +19,8 @@ var i = n(54381),
     m = n(100527),
     g = n(795318),
     b = n(258609),
-    y = n(257115),
-    C = n(569545),
+    C = n(257115),
+    y = n(569545),
     v = n(102172),
     _ = n(525925),
     O = n(701362),
@@ -114,16 +114,16 @@ function V(e) {
         ],
     });
 }
-let F = (0, h.$)(function (e) {
+let H = (0, h.$)(function (e) {
     var t;
     let {
             collapsed: l,
             user: h,
             channel: U,
             mute: V,
-            localMute: F,
-            localVideoDisabled: B,
-            deaf: H,
+            localMute: H,
+            localVideoDisabled: F,
+            deaf: B,
             video: G,
             embeddedApplication: z,
             serverMute: W,
@@ -152,9 +152,9 @@ let F = (0, h.$)(function (e) {
             application: em,
             hangStatusActivity: eg,
             requestToStreamActivity: eb,
-            showHangStatus: ey,
+            showHangStatus: eC,
         } = e,
-        eC = r.useRef(null),
+        ey = r.useRef(null),
         [ev, e_] = r.useState(!1),
         eO = r.useRef(null),
         [ex, eE] = r.useState(!1),
@@ -172,7 +172,7 @@ let F = (0, h.$)(function (e) {
             null != t && n.has(t) && (eP && eI(!1), ej && eS(!1)), eL();
         },
         eL = () => {
-            (et || ey || ew) && (null == ea || ea(h.id));
+            (et || eC || ew) && (null == ea || ea(h.id));
         },
         eD = (e) => {
             e
@@ -194,7 +194,7 @@ let F = (0, h.$)(function (e) {
                 guildId: U.guild_id,
             };
             I.default.getId() !== h.id && d.default.selectVoiceChannel(U.id),
-                en ? ((0, _.Z)(e), c.Z.selectParticipant(e.channelId, (0, C.V9)(e))) : (0, p.iV)(e),
+                en ? ((0, _.Z)(e), c.Z.selectParticipant(e.channelId, (0, y.V9)(e))) : (0, p.iV)(e),
                 null == ea || ea(h.id);
         },
         eV = (e) => {
@@ -222,7 +222,7 @@ let F = (0, h.$)(function (e) {
                     );
             });
         },
-        eF = (e) =>
+        eH = (e) =>
             ef
                 ? (0, i.jsx)(
                       x.$,
@@ -242,12 +242,12 @@ let F = (0, h.$)(function (e) {
                         }),
                     )
                   : null,
-        eB = () =>
+        eF = () =>
             (0, i.jsx)(j.Z, {
                 userId: h.id,
                 channel: U,
             }),
-        eH = () =>
+        eB = () =>
             (0, f.dl)() && (0, f.zd)(U.id)
                 ? null
                 : (0, i.jsx)(O.Z, {
@@ -263,13 +263,13 @@ let F = (0, h.$)(function (e) {
             onMouseEnter: ed
                 ? void 0
                 : () => {
-                      (et || ey || ew) && !ev && (null == el || el(h.id));
+                      (et || eC || ew) && !ev && (null == el || el(h.id));
                   },
             onMouseLeave: ed ? void 0 : eL,
             children: (0, i.jsx)(S.Z, {
                 clickTrap:
                     (null == h ? void 0 : h.id) === (null == (t = N.default.getCurrentUser()) ? void 0 : t.id) && ev,
-                targetElementRef: eC,
+                targetElementRef: ey,
                 user: h,
                 guildId: U.guild_id,
                 channelId: U.id,
@@ -285,14 +285,14 @@ let F = (0, h.$)(function (e) {
                                 latched: J,
                                 disconnected: Q,
                                 mute: V,
-                                localMute: F,
-                                localVideoDisabled: B,
+                                localMute: H,
+                                localVideoDisabled: F,
                                 isStreaming: et,
                                 isGuest: ei,
                                 video: G,
                                 priority: er,
                                 ringing: Y,
-                                deaf: H,
+                                deaf: B,
                                 nick: K,
                                 collapsed: l,
                                 overlap: l,
@@ -313,37 +313,37 @@ let F = (0, h.$)(function (e) {
                                 application: em,
                                 channelId: U.id,
                                 hangStatusActivity: eg,
-                                showHangStatus: ey,
+                                showHangStatus: eC,
                             };
                         if (ed) {
                             var r;
                             return (0, i.jsx)(o.u, {
-                                text: null != (r = (0, y.Z)(ec)) ? r : R.intl.string(R.t.IyYqqY),
-                                children: (0, i.jsx)(P.ZP, D({ ref: eC }, n)),
+                                text: null != (r = (0, C.Z)(ec)) ? r : R.intl.string(R.t.IyYqqY),
+                                children: (0, i.jsx)(P.ZP, D({ ref: ey }, n)),
                             });
                         }
                         let c = () => null;
                         return (
-                            ey && eA
-                                ? (c = eF)
+                            eC && eA
+                                ? (c = eH)
                                 : et
-                                  ? (c = eH)
+                                  ? (c = eB)
                                   : ew && h.id !== I.default.getId()
-                                    ? (c = eB)
-                                    : ey && (c = eF),
+                                    ? (c = eF)
+                                    : eC && (c = eH),
                             (0, i.jsx)(s.yRy, {
-                                targetElementRef: eC,
+                                targetElementRef: ey,
                                 position: "right",
                                 renderPopout: c,
-                                shouldShow: (eo || (ey && eN)) && !ev,
+                                shouldShow: (eo || (eC && eN)) && !ev,
                                 onRequestClose: eR,
-                                align: ey && eA && !ef ? "center" : void 0,
-                                spacing: ey && eA ? 8 : 0,
+                                align: eC && eA && !ef ? "center" : void 0,
+                                spacing: eC && eA ? 8 : 0,
                                 children: () =>
                                     (0, i.jsx)(
                                         P.ZP,
                                         k(D({}, n), {
-                                            ref: eC,
+                                            ref: ey,
                                             onMouseDown: e.onMouseDown,
                                             onKeyDown: e.onKeyDown,
                                             handleHoverHangStatus: eD,

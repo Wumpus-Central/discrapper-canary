@@ -4,15 +4,15 @@ var r = n(473749),
     a = n(70956),
     o = n(22095),
     s = n(616022),
-    l = n(509212),
-    c = n(704161);
+    l = n(704161),
+    c = n(862657);
 let u = 10 * a.Z.Millis.MINUTE;
 function d(e) {
     return null != e && e.fetchedAt + e.ttlMillis >= Date.now();
 }
 function f(e, t, n) {
     if (d(e) || s.Z.isFetchingQuestToDeliverByPlacement(t)) return;
-    let { enableNewRequestBehavior: r } = c.Z.getConfig({ location: "maybeRefreshAd" });
+    let { enableNewRequestBehavior: r } = l.Z.getConfig({ location: "maybeRefreshAd" });
     r && ((0, o.xw)(), (0, o.w)(t, n));
 }
 function p(e) {
@@ -40,7 +40,7 @@ function p(e) {
     }, [a, e, n]),
     null != n)
         ? n
-        : null == o || (0, l.zi)(o)
+        : null == o || (0, c.zi)(o)
           ? null
           : o;
 }

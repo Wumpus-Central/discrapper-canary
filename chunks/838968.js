@@ -9,12 +9,12 @@ n.d(t, {
 });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     a = n(481060),
     s = n(192371),
     u = n(834209),
-    c = n(130231),
+    c = n(810878),
     d = n(388032),
     p = n(237522);
 function f(e) {
@@ -69,14 +69,14 @@ function g(e) {
     });
 }
 function v(e) {
-    let { cost: t, costDecorator: n, status: i, className: o } = e,
+    let { cost: t, costDecorator: n, status: i, className: l } = e,
         s = void 0 !== t ? p.labelContainer : p.labelContainerEnd;
     return (0, r.jsxs)("div", {
-        className: l()(s, o),
+        className: o()(s, l),
         children: [
             void 0 !== t &&
                 (0, r.jsxs)("div", {
-                    className: l()(p.inline, p.inlineBoost),
+                    className: o()(p.inline, p.inlineBoost),
                     children: [
                         (0, r.jsx)(a.Ucv, {
                             size: "sm",
@@ -108,7 +108,7 @@ function x(e) {
     });
 }
 function _(e) {
-    let { title: t, textColor: n, children: i, footer: o } = e;
+    let { title: t, textColor: n, children: i, footer: l } = e;
     return (0, r.jsxs)("div", {
         className: p.contentContainer,
         children: [
@@ -125,7 +125,7 @@ function _(e) {
                     i,
                 ],
             }),
-            o,
+            l,
         ],
     });
 }
@@ -133,7 +133,7 @@ let b = i.forwardRef(function (e, t) {
     let {
         className: n,
         label: i,
-        isActive: o,
+        isActive: l,
         isWarning: s,
         badge: u,
         canRollback: c,
@@ -143,18 +143,18 @@ let b = i.forwardRef(function (e, t) {
         children: v,
     } = e;
     return (0, r.jsx)("div", {
-        className: l()(p.parentContainer, { [p.rollbackInactive]: c && !o }),
+        className: o()(p.parentContainer, { [p.rollbackInactive]: c && !l }),
         ref: t,
         children: (0, r.jsxs)(a.kL8, {
             "aria-label": i,
             onClick: f,
             onMouseOver: m,
             onMouseLeave: g,
-            className: l()(
+            className: o()(
                 p.container,
                 {
-                    [p.active]: o,
-                    [p.warning]: s || (c && o),
+                    [p.active]: l,
+                    [p.warning]: s || (c && l),
                 },
                 n,
             ),

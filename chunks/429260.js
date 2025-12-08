@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => S,
-    eH: () => Z,
+    ZP: () => E,
+    eH: () => _,
     wY: () => P,
 });
 var r = n(54381);
@@ -18,15 +18,15 @@ var i = n(442837),
     b = n(982168),
     p = n(216572),
     m = n(914010),
-    y = n(594174),
-    O = n(970257),
+    O = n(594174),
+    y = n(970257),
     h = n(921944),
     v = n(388032),
-    j = n(342153);
-function S(e) {
+    j = n(864309);
+function E(e) {
     let t = (0, i.e7)([m.Z], () => m.Z.getGuildId()),
         n = (0, p.Q_)(t);
-    return (0, O.a4)(e)
+    return (0, y.a4)(e)
         ? (0, r.jsx)(o.sNh, {
               id: "report",
               label: n ? v.intl.string(v.t.n5EBAJ) : v.intl.string(v.t.GwbdGe),
@@ -36,7 +36,7 @@ function S(e) {
           })
         : null;
 }
-function E() {
+function S() {
     return (0, r.jsx)(d.ZP, {
         contentTypes: [l.z.REPORT_TO_MOD_NEW_TAG],
         children: (e) => {
@@ -66,15 +66,15 @@ function P(e) {
               action: () => {
                   (0, u.Q3)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: h.L.USER_DISMISS }), (0, f.tV)(e);
               },
-              icon: (0, r.jsx)(E, {}),
+              icon: (0, r.jsx)(S, {}),
               disabled: t,
           })
         : null;
 }
-function Z(e) {
+function _(e) {
     let t = (0, i.e7)([c.ZP], () => c.ZP.get("iar_testing")),
-        n = (0, i.e7)([y.default], () => y.default.getCurrentUser());
-    return (0, O.a4)(e) && null != n && n.isStaff() && t
+        n = (0, i.e7)([O.default], () => O.default.getCurrentUser());
+    return (0, y.a4)(e) && null != n && n.isStaff() && t
         ? (0, r.jsx)(o.sNh, {
               id: "staff-test-message-report",
               label: "[STAFF] Test Message Report",

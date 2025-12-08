@@ -32,7 +32,7 @@ let E = async () => {
             return [];
         }
     },
-    N = async (e, t) => {
+    O = async (e, t) => {
         try {
             await s.tn.post({
                 url: _.ANM.CREATE_USER_OFFER(e, t),
@@ -43,7 +43,7 @@ let E = async () => {
             await (0, m.Tf)();
         }
     },
-    O = async (e, t) => {
+    N = async (e, t) => {
         try {
             await s.tn.del({
                 url: _.ANM.UPDATE_USER_OFFER(e, t),
@@ -91,17 +91,17 @@ function w(e) {
     let { offer: p, offerOptions: h, forceRefetch: b } = e,
         [v, j] = l.useState(!1),
         [S, E] = l.useState(!1),
-        [N, T] = l.useState(!1),
+        [O, T] = l.useState(!1),
         [P, I] = l.useState(!1);
     l.useEffect(() => {
-        N && I(!0);
+        O && I(!0);
         let e = setTimeout(() => {
             I(!1);
         }, 500);
         return () => {
             clearTimeout(e);
         };
-    }, [N]);
+    }, [O]);
     let { id: w, expires_at: k, redeemed_at: R, trial_id: A, subscription_trial: Z, referrer: D } = p,
         L =
             null !=
@@ -118,8 +118,8 @@ function w(e) {
     null != D && (L = "".concat(L, " from @").concat(D.username));
     let M = null != k,
         U = null != k && new Date(k).getTime() < Date.now(),
-        B = (null == Z ? void 0 : Z.sku_id) === y.Si.TIER_0,
-        F = async () => {
+        F = (null == Z ? void 0 : Z.sku_id) === y.Si.TIER_0,
+        B = async () => {
             T(!0), M ? await G({ expiresAt: null }) : await (0, m.ab)(p), b(), T(!1);
         },
         G = async (e) => {
@@ -185,7 +185,7 @@ function w(e) {
         M && (z = "Acked"),
         U && (z = "Expired"),
         (0, a.jsxs)("div", {
-            className: i()(C.card, B ? C.gradientWrapperTier0 : C.gradientWrapperTier2),
+            className: i()(C.card, F ? C.gradientWrapperTier0 : C.gradientWrapperTier2),
             children: [
                 (0, a.jsx)("div", {
                     className: i()(C.row, C.nameRow),
@@ -295,7 +295,7 @@ function w(e) {
                     className: C.badgeContainer,
                     children: [
                         (0, a.jsx)(d.P3F, {
-                            onClick: F,
+                            onClick: B,
                             className: i()(C.badge, C.clickable, {
                                 [C.acked]: M,
                                 [C.expired]: U,
@@ -319,7 +319,7 @@ function w(e) {
                 }),
                 (0, a.jsx)(d.P3F, {
                     onClick: async () => {
-                        T(!0), await O(w, "trial"), b(), T(!1);
+                        T(!0), await N(w, "trial"), b(), T(!1);
                     },
                     children: (0, a.jsx)(d.XHJ, {
                         size: "md",
@@ -328,7 +328,7 @@ function w(e) {
                     }),
                 }),
                 (0, a.jsx)("div", {
-                    className: i()(C.loadingContainer, { [C.isLoading]: N || P }),
+                    className: i()(C.loadingContainer, { [C.isLoading]: O || P }),
                     children: (0, a.jsx)(d.$jN, {}),
                 }),
             ],
@@ -351,7 +351,7 @@ function k(e) {
             clearTimeout(e);
         };
     }, [v]);
-    let { id: E, expires_at: N, applied_at: T, discount_id: P, discount: I } = r,
+    let { id: E, expires_at: O, applied_at: T, discount_id: P, discount: I } = r,
         w =
             null !=
             (n =
@@ -364,8 +364,8 @@ function k(e) {
                     : t.label)
                 ? n
                 : "Unknown",
-        k = null != N,
-        R = null != N && new Date(N).getTime() < Date.now(),
+        k = null != O,
+        R = null != O && new Date(O).getTime() < Date.now(),
         A = async () => {
             j(!0), k ? await Z({ expiresAt: null }) : await (0, m.ab)(void 0, r), c(), j(!1);
         },
@@ -417,7 +417,7 @@ function k(e) {
                         }),
                         (0, a.jsx)(d.P3F, {
                             onClick: async () => {
-                                j(!0), await O(E, "discount"), c(), j(!1);
+                                j(!0), await N(E, "discount"), c(), j(!1);
                             },
                             children: (0, a.jsx)(d.XHJ, {
                                 size: "md",
@@ -493,7 +493,7 @@ function k(e) {
                         }),
                         (0, a.jsx)("input", {
                             type: "datetime-local",
-                            value: (0, f.mm)(N),
+                            value: (0, f.mm)(O),
                             onChange: (e) =>
                                 Z({ expiresAt: "" !== e.target.value ? new Date(e.target.value).toISOString() : null }),
                         }),
@@ -539,14 +539,14 @@ function R() {
         [i, s] = l.useState(),
         [u, x] = l.useState(),
         [f, g] = l.useState([]),
-        [y, O] = l.useState([]),
+        [y, N] = l.useState([]),
         [R, A] = l.useState(!0),
         [Z, D] = l.useState(10080),
         [L, M] = l.useState([]),
-        { entitlements: U, deleteFractionalPremium: B, refreshEntitlementList: F } = (0, j.m)();
+        { entitlements: U, deleteFractionalPremium: F, refreshEntitlementList: B } = (0, j.m)();
     l.useEffect(() => {
-        F();
-    }, [F]),
+        B();
+    }, [B]),
         l.useEffect(() => {
             M(U.filter((e) => e.sourceType === _.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date()));
         }, [U]),
@@ -571,21 +571,21 @@ function R() {
                 (0, m.Tf)(),
                 T().then((e) => {
                     g(e.trial.sort((e, t) => e.id.localeCompare(t.id))),
-                        O(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
+                        N(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
         }, [R]);
     let G = async () => {
-            null != i && (await N(i, "trial"), A(!0));
+            null != i && (await O(i, "trial"), A(!0));
         },
         z = async () => {
-            null != u && (await N(u, "discount"), A(!0));
+            null != u && (await O(u, "discount"), A(!0));
         },
         V = async () => {
             await P(), A(!0);
         },
         H = async () => {
             let e = new Date(Date.now() + 60 * Z * 1000).toISOString();
-            await I(e), F();
+            await I(e), B();
         };
     return (0, a.jsx)(d.zJl, {
         className: S.panel,
@@ -788,7 +788,7 @@ function R() {
                                         {
                                             entitlement: e,
                                             active: !0,
-                                            onDelete: () => B(e.id),
+                                            onDelete: () => F(e.id),
                                         },
                                         e.id,
                                     ),

@@ -43,7 +43,7 @@ function b(e) {
         b = (0, l.e7)([s.default], () => s.default.getUser(n)),
         _ = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
         y = (0, d.Z)(),
-        [O, j] = (0, c.Z)(n);
+        [O, x] = (0, c.Z)(n);
     if (
         (i.useEffect(() => {
             (0, u.Z)(null != b ? b : n, {
@@ -57,14 +57,14 @@ function b(e) {
         null == b || null == _ || !y)
     )
         return null;
-    let x = "user-profile-sidebar-heading-".concat(b.id),
+    let j = "user-profile-sidebar-heading-".concat(b.id),
         v = o.ZP.getName(null, t.id, b);
     return (0, r.jsx)("aside", {
-        "aria-labelledby": x,
+        "aria-labelledby": j,
         children: (0, r.jsx)(a.y5t, {
             component: (0, r.jsx)(a.nn4, {
                 children: (0, r.jsx)(a.H, {
-                    id: x,
+                    id: j,
                     children: g.intl.format(g.t.KRe1Fk, { name: v }),
                 }),
             }),
@@ -75,7 +75,7 @@ function b(e) {
                           {
                               user: b,
                               currentUser: _,
-                              onHide: j,
+                              onHide: x,
                           },
                           e,
                       ),

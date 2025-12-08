@@ -5,13 +5,13 @@ n.d(t, {
     n(388685),
     n(539854);
 var r = n(473749),
-    i = n(823379),
-    l = n(568315),
+    l = n(823379),
+    i = n(568315),
     a = n(218471),
     s = n(46912),
     o = n(82554);
 let d = {
-    [o.zR.SAFETY_DM_SPAM_FILTER]: l.Z,
+    [o.zR.SAFETY_DM_SPAM_FILTER]: i.Z,
     [o.zR.SAFETY_SC_FILTERS_SEXUAL_MEDIA]: s.Z,
     [o.zR.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: a.Z,
 };
@@ -23,8 +23,8 @@ function c(e) {
                       let t = [];
                       return (
                           Object.entries(d).forEach((n) => {
-                              let [r, i] = n;
-                              (null == i.eligibleReportSubtypes || i.eligibleReportSubtypes.includes(e)) && t.push(r);
+                              let [r, l] = n;
+                              (null == l.eligibleReportSubtypes || l.eligibleReportSubtypes.includes(e)) && t.push(r);
                           }),
                           0 === t.length ? null : t
                       );
@@ -42,15 +42,15 @@ function u(e, t) {
                         let n = d[e];
                         return !(function (e, t) {
                             let { predicate: n, eligibleChannelTypes: r } = e,
-                                i = null == n || (null == n ? void 0 : n()) === !0,
-                                l = null == t || null == r || r.includes(t);
-                            return i && l;
+                                l = null == n || (null == n ? void 0 : n()) === !0,
+                                i = null == t || null == r || r.includes(t);
+                            return l && i;
                         })(n, t)
                             ? null
                             : n;
                     })(e, t),
                 )
-                .filter(i.lm),
+                .filter(l.lm),
         [e, t],
     );
 }

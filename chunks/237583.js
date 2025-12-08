@@ -82,7 +82,7 @@ class _ extends (r = a.PureComponent) {
                           l.qEK,
                           {
                               tabIndex: 0,
-                              src: p.getAvatarURL(f, (0, l.pxk)(o)),
+                              src: p.getAvatarURL(f, (0, l.dcp)(o)),
                               size: o,
                               "aria-label": p.username,
                               className: s()(t, d.cursorPointer, u.avatarSize),

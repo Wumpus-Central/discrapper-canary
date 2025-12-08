@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => N }), n(388685), n(704826), n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -14,28 +14,28 @@ var r = n(54381),
     E = n(51144),
     p = n(346585),
     h = n(81259),
-    y = n(119848),
-    O = n(801461),
+    O = n(119848),
+    y = n(801461),
     S = n(671955),
     b = n(388032),
     _ = n(631936),
-    N = n(733469);
-let v = i.forwardRef(function (e, t) {
+    x = n(733469);
+let N = i.forwardRef(function (e, t) {
     let {
             user: n,
             error: a,
-            formValues: v,
-            displayProfile: x,
+            formValues: N,
+            displayProfile: v,
             onChangeFormValue: T,
-            onFocusDisplayName: j,
-            onFocusUsername: I,
+            onFocusDisplayName: I,
+            onFocusUsername: j,
             editState: P,
             footerNotice: C,
             usernameSuggestionLoading: A,
             oneClickFlow: R,
         } = e,
-        { username: M, globalName: w } = v,
-        L = i.useRef(null),
+        { username: M, globalName: L } = N,
+        w = i.useRef(null),
         D = i.useRef(null),
         k = i.useMemo(() => n.merge({ discriminator: "0000" }), [n]),
         [Z, U] = (0, u.q_F)(() => ({
@@ -61,19 +61,19 @@ let v = i.forwardRef(function (e, t) {
                 },
                 focusUsername: () => {
                     var e;
-                    null == (e = L.current) || e.focus();
+                    null == (e = w.current) || e.focus();
                 },
             }),
             [],
         );
     let G = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         { createMultipleConfettiAt: W } = i.useContext(m.h),
-        q = null == x ? void 0 : x.getLegacyUsername();
+        F = null == v ? void 0 : v.getLegacyUsername();
     return (
         i.useEffect(() => {
             !G &&
-                P === O.Wq.PREVIEW &&
-                n.username.includes(O.nA) &&
+                P === y.Wq.PREVIEW &&
+                n.username.includes(y.nA) &&
                 (W(
                     window.innerWidth / 2 + 150,
                     0,
@@ -112,42 +112,42 @@ let v = i.forwardRef(function (e, t) {
                 ));
         }, [W, P, n, G]),
         (0, r.jsxs)("div", {
-            className: o()(_.userCardContainer, { [_.shinyCard]: P === O.Wq.PREVIEW }),
+            className: o()(_.userCardContainer, { [_.shinyCard]: P === y.Wq.PREVIEW }),
             children: [
                 (0, r.jsxs)("div", {
                     className: _.profileCard,
                     children: [
                         (0, r.jsx)(f.Z, {
                             user: k,
-                            displayProfile: x,
+                            displayProfile: v,
                             themeType: S.l.SIDEBAR,
                         }),
                         (0, r.jsx)(g.Z, {
                             user: k,
-                            displayProfile: x,
+                            displayProfile: v,
                             themeType: S.l.SIDEBAR,
                             className: _.avatar,
                         }),
-                        P === O.Wq.PREVIEW &&
-                            null != q &&
+                        P === y.Wq.PREVIEW &&
+                            null != F &&
                             (0, r.jsx)("div", {
                                 className: _.legacyUsernameBadgeContainer,
                                 children: (0, r.jsx)(c.u, {
                                     position: "top",
-                                    text: b.intl.formatToPlainString(b.t.bhrgkA, { legacyUsername: q }),
+                                    text: b.intl.formatToPlainString(b.t.bhrgkA, { legacyUsername: F }),
                                     spacing: 12,
                                     children: (0, r.jsx)(u.Anchor, {
                                         children: (0, r.jsx)("img", {
                                             className: _.legacyUsernameBadge,
                                             alt: "",
-                                            src: N,
+                                            src: x,
                                         }),
                                     }),
                                 }),
                             }),
                     ],
                 }),
-                P !== O.Wq.PREVIEW &&
+                P !== y.Wq.PREVIEW &&
                     (0, r.jsxs)(s.animated.div, {
                         style: {
                             opacity: Z.opacity,
@@ -158,26 +158,26 @@ let v = i.forwardRef(function (e, t) {
                             (0, r.jsxs)(u.Kqy, {
                                 gap: 16,
                                 children: [
-                                    P === O.Wq.EDIT_DISPLAY_NAME &&
+                                    P === y.Wq.EDIT_DISPLAY_NAME &&
                                         (0, r.jsx)(u.oil, {
                                             label: b.intl.string(b.t["9AjdkD"]),
-                                            value: null != w ? w : "",
+                                            value: null != L ? L : "",
                                             placeholder: E.ZP.getName(n),
-                                            maxLength: O.hy,
+                                            maxLength: y.hy,
                                             onChange: (e) => T({ globalName: e }),
-                                            onFocus: j,
+                                            onFocus: I,
                                             inputRef: D,
                                         }),
-                                    (P === O.Wq.EDIT_USERNAME || P === O.Wq.SUGGESTION) &&
+                                    (P === y.Wq.EDIT_USERNAME || P === y.Wq.SUGGESTION) &&
                                         (0, r.jsx)(u.oil, {
                                             label: b.intl.string(b.t.IEpCBQ),
                                             leading: "@",
                                             value: null != M ? M : "",
                                             placeholder: n.username,
-                                            maxLength: O.hy,
+                                            maxLength: y.hy,
                                             onChange: (e) => T({ username: e.replace("@", "") }),
-                                            onFocus: I,
-                                            inputRef: L,
+                                            onFocus: j,
+                                            inputRef: w,
                                         }),
                                 ],
                             }),
@@ -190,7 +190,7 @@ let v = i.forwardRef(function (e, t) {
                                             children: a,
                                         });
                                     if (null != C) {
-                                        if (P !== O.Wq.SUGGESTION)
+                                        if (P !== y.Wq.SUGGESTION)
                                             return (0, r.jsx)(u.Text, {
                                                 variant: "text-sm/normal",
                                                 children: C,
@@ -201,8 +201,8 @@ let v = i.forwardRef(function (e, t) {
                                                 children: C,
                                             });
                                     }
-                                    return null == C && null == a && (P === O.Wq.EDIT_USERNAME || P === O.Wq.SUGGESTION)
-                                        ? (0, r.jsx)(y.Z, {
+                                    return null == C && null == a && (P === y.Wq.EDIT_USERNAME || P === y.Wq.SUGGESTION)
+                                        ? (0, r.jsx)(O.Z, {
                                               username: M,
                                               oneClickFlow: R,
                                           })
@@ -211,7 +211,7 @@ let v = i.forwardRef(function (e, t) {
                             }),
                         ],
                     }),
-                P === O.Wq.PREVIEW &&
+                P === y.Wq.PREVIEW &&
                     (0, r.jsxs)("div", {
                         className: _.userCard,
                         children: [

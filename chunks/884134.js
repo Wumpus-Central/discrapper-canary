@@ -35,7 +35,7 @@ var r = n(54381),
     M = n(981631),
     k = n(921944),
     U = n(474936),
-    G = n(896591),
+    G = n(202283),
     Z = n(388032),
     B = n(882741);
 let F = 0,
@@ -131,7 +131,7 @@ function q(e) {
     for (let n of [90, 180, 270]) if (Math.abs(e - n) <= t) return n;
     return e;
 }
-function X(e) {
+function Q(e) {
     let { gradientAngle: t, setGradientAngle: n } = e,
         { key: a, handleInternalChange: s } = H(t),
         [l, c] = i.useState("".concat(Math.round(t), "\xB0"));
@@ -200,7 +200,7 @@ function X(e) {
         ],
     });
 }
-function Q(e) {
+function X(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e,
         { key: a, handleInternalChange: o } = H(t),
         [s, l] = i.useState("".concat(Math.round(t), "%"));
@@ -534,11 +534,11 @@ function en(e) {
                                           children: Z.intl.string(G.default.F1t0c8),
                                       }),
                                       T.length > 1 &&
-                                          (0, r.jsx)(X, {
+                                          (0, r.jsx)(Q, {
                                               gradientAngle: L,
                                               setGradientAngle: F,
                                           }),
-                                      (0, r.jsx)(Q, {
+                                      (0, r.jsx)(X, {
                                           chassisMixAmount: C,
                                           setChassisMixAmount: (e) => {
                                               U(e), 0 === T.length && (0, N.lT)(T, V, M);

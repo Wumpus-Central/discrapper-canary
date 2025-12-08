@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(710344),
     o = n(63063),
     c = n(190007),
-    u = n(926958),
-    d = n(964821),
+    d = n(926958),
+    u = n(964821),
     g = n(981631),
     m = n(290511),
     p = n(388032),
@@ -38,8 +38,8 @@ function h(e) {
     return e;
 }
 function b() {
-    let e = (0, l.e7)([u.Z], () => u.Z.getEditedConnections()),
-        t = (0, l.e7)([u.Z], () => u.Z.isSubmitting()),
+    let e = (0, l.e7)([d.Z], () => d.Z.getEditedConnections()),
+        t = (0, l.e7)([d.Z], () => d.Z.isSubmitting()),
         b = i.useCallback(() => {
             (0, a.ZDy)(async () => {
                 let { default: e } = await n.e("11798").then(n.bind(n, 8656));
@@ -131,7 +131,7 @@ function b() {
                     className: f.connectionsList,
                     children: x.map((e, t) =>
                         (0, r.jsx)(
-                            d.Z,
+                            u.Z,
                             {
                                 connection: e,
                                 index: t,

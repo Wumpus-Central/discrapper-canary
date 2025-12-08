@@ -2,17 +2,17 @@ n.d(t, { Z: () => y });
 var i = n(54381),
     l = n(473749),
     r = n(120356),
-    s = n.n(r),
-    a = n(442837),
+    a = n.n(r),
+    s = n(442837),
     o = n(692547),
     c = n(481060),
     d = n(787014),
     u = n(603211),
     h = n(710344),
     g = n(496675),
-    p = n(479099),
-    m = n(710352),
-    f = n(981631),
+    m = n(479099),
+    f = n(710352),
+    p = n(981631),
     b = n(388032),
     x = n(101453);
 function j(e) {
@@ -60,11 +60,11 @@ function v(e, t) {
 }
 function y(e) {
     let { channel: t } = e,
-        r = (0, a.e7)([g.Z], () => g.Z.can(f.Plq.MANAGE_CHANNELS, t), [t]),
-        u = t.availableTags.length >= m.pC,
-        p = t.availableTags.length > 0,
+        r = (0, s.e7)([g.Z], () => g.Z.can(p.Plq.MANAGE_CHANNELS, t), [t]),
+        u = t.availableTags.length >= f.pC,
+        m = t.availableTags.length > 0,
         y = l.useCallback(() => {
-            let e = t.availableTags.length >= m.pC;
+            let e = t.availableTags.length >= f.pC;
             r &&
                 !e &&
                 (0, c.ZDy)(async () => {
@@ -79,7 +79,7 @@ function y(e) {
                         );
                 });
         }, [t, r]),
-        S = l.useCallback(
+        O = l.useCallback(
             (e) => {
                 r &&
                     (0, c.ZDy)(async () => {
@@ -98,16 +98,16 @@ function y(e) {
             [r, t],
         ),
         {
-            handleDragStart: N,
-            handleDragReset: O,
-            handleDragComplete: Z,
+            handleDragStart: Z,
+            handleDragReset: S,
+            handleDragComplete: N,
         } = (0, h.Z)(t.availableTags, (e) => {
             (0, d.pW)({ availableTags: e });
         });
     return (0, i.jsxs)("div", {
         className: x.tags,
         children: [
-            p
+            m
                 ? t.availableTags.map((e) =>
                       (0, i.jsx)(
                           C,
@@ -115,19 +115,19 @@ function y(e) {
                               tag: e,
                               availableTags: t.availableTags,
                               canManageChannels: r,
-                              onTagClick: S,
-                              onDragComplete: Z,
-                              onDragReset: O,
-                              onDragStart: N,
+                              onTagClick: O,
+                              onDragComplete: N,
+                              onDragReset: S,
+                              onDragStart: Z,
                           },
                           e.id,
                       ),
                   )
                 : null,
-            p
+            m
                 ? (0, i.jsx)(c.P3F, {
                       onClick: y,
-                      className: s()(x.addTags, { [x.disabled]: !r || u }),
+                      className: a()(x.addTags, { [x.disabled]: !r || u }),
                       children: (0, i.jsx)(c.qJs, {
                           size: "custom",
                           "aria-label": b.intl.string(b.t["/jubeD"]),
@@ -151,7 +151,7 @@ function C(e) {
             availableTags: n,
             canManageChannels: l,
             onTagClick: r,
-            onDragComplete: a,
+            onDragComplete: s,
             onDragStart: o,
             onDragReset: c,
         } = e,
@@ -159,27 +159,27 @@ function C(e) {
         {
             drag: h,
             dragSourcePosition: g,
-            drop: m,
-            setIsDraggable: f,
+            drop: f,
+            setIsDraggable: p,
         } = (0, u.Z)({
             type: "CHANNEL_SETTINGS_FORUM_TAGS",
             index: d,
             optionId: t.id,
             onDragStart: o,
-            onDragComplete: a,
+            onDragComplete: s,
             onDragReset: c,
         });
     return (0, i.jsx)("div", {
-        className: s()(x.container, {
+        className: a()(x.container, {
             [x.dropIndicatorBefore]: null != g && d < g,
             [x.dropIndicatorAfter]: null != g && d > g,
         }),
         ref: (e) => {
-            h(m(e));
+            h(f(e));
         },
-        onMouseEnter: () => f(l),
-        onMouseLeave: () => f(!1),
-        children: (0, i.jsx)(p.Z, {
+        onMouseEnter: () => p(l),
+        onMouseLeave: () => p(!1),
+        children: (0, i.jsx)(m.Z, {
             tag: t,
             disabled: !l,
             ariaLabel: b.intl.formatToPlainString(b.t.jhSvB9, { name: t.name }),

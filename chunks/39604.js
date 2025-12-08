@@ -1,12 +1,12 @@
 n.d(t, {
     C1: () => z,
-    Gh: () => X,
+    Gh: () => Q,
     N0: () => Z,
     Pr: () => J,
     Rr: () => eo,
     So: () => es,
     T1: () => B,
-    Tm: () => Q,
+    Tm: () => X,
     UY: () => ei,
     W6: () => ea,
     WY: () => ed,
@@ -458,14 +458,14 @@ async function q(e, t) {
         );
     }
 }
-function X(e, t) {
+function Q(e, t) {
     a.Z.dispatch({
         type: "CLIPS_SAVE_ANIMATION_END",
         streamKey: e,
         timestamp: t,
     });
 }
-async function Q(e, t) {
+async function X(e, t) {
     let n = S.Z.getClips().find((t) => t.id === e);
     if (null == n) return;
     let r = L({}, n, t);
@@ -478,7 +478,7 @@ async function Q(e, t) {
         }));
 }
 async function J(e) {
-    await Q(e.id, { isFavorite: !e.isFavorite });
+    await X(e.id, { isFavorite: !e.isFavorite });
 }
 function $() {
     a.Z.dispatch({ type: "CLIPS_CLEAR_CLIPS_SESSION" });
@@ -574,5 +574,5 @@ function eu() {
     ec({ type: I.Bs.MANUAL });
 }
 async function ed(e) {
-    await Q(e, { isTemporary: !1 });
+    await X(e, { isTemporary: !1 });
 }

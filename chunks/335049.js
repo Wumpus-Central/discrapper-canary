@@ -16,14 +16,14 @@ var i = n(54381),
     h = n(48950),
     x = n(592125),
     j = n(271383),
-    O = n(485386),
-    v = n(246946),
+    v = n(485386),
+    O = n(246946),
     y = n(594174),
     _ = n(51144),
     C = n(981631),
     N = n(388032),
     S = n(243226);
-function P(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -77,7 +77,7 @@ function E(e) {
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        w(P({}, t), {
+                        w(I({}, t), {
                             id: l,
                             label: N.intl.string(N.t.oJ1Muw),
                         }),
@@ -88,7 +88,7 @@ function E(e) {
     );
     switch (a) {
         case m.Kw.CHANNEL:
-            return (0, i.jsx)(I, {
+            return (0, i.jsx)(P, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -113,7 +113,7 @@ function E(e) {
             });
     }
 }
-function I(e) {
+function P(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: o, openEntryContextMenu: s } = e,
         d = (0, b.bD)(t.id),
         {
@@ -173,7 +173,7 @@ function I(e) {
 function T(e) {
     var t;
     let { guild: l, id: o, isLocked: s, lockTooltipText: d } = e,
-        m = (0, c.e7)([O.Z], () => O.Z.getRole(l.id, o)),
+        m = (0, c.e7)([v.Z], () => v.Z.getRole(l.id, o)),
         b = (0, f.p9)({
             guildId: l.id,
             roleId: o,
@@ -188,7 +188,7 @@ function T(e) {
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                w(P({}, t), {
+                                w(I({}, t), {
                                     guild: l,
                                     role: m,
                                 }),
@@ -204,7 +204,7 @@ function T(e) {
               className: S.identifier,
               children: [
                   null != b
-                      ? (0, i.jsx)(h.Z, P({ className: a()(S.__invalid_icon, S.image) }, b))
+                      ? (0, i.jsx)(h.Z, I({ className: a()(S.__invalid_icon, S.image) }, b))
                       : (0, i.jsx)(u.lZ8, {
                             size: "custom",
                             width: 23,
@@ -229,7 +229,7 @@ function Z(e) {
             var e;
             return null == (e = j.ZP.getMember(t.id, n)) ? void 0 : e.nick;
         }, [t.id, n]),
-        d = (0, c.e7)([v.Z], () => v.Z.hidePersonalInformation);
+        d = (0, c.e7)([O.Z], () => O.Z.hidePersonalInformation);
     return null == o
         ? null
         : (0, i.jsxs)("div", {

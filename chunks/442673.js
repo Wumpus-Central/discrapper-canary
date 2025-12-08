@@ -3,8 +3,8 @@ var n = r(54381),
     i = r(473749),
     o = r(481060),
     c = r(985002),
-    a = r(957656),
-    l = r(744038),
+    l = r(957656),
+    a = r(225753),
     s = r(388032),
     d = r(601582);
 let u = (e) => {
@@ -12,8 +12,8 @@ let u = (e) => {
         b = i.useCallback(() => {
             f();
         }, [f]),
-        h = t.nsfwAllowed,
-        [p, j] = i.useState(!1),
+        p = t.nsfwAllowed,
+        [h, j] = i.useState(!1),
         [g, y] = i.useState(!1),
         x = i.useCallback(() => {
             y(!0), j(!1);
@@ -29,14 +29,14 @@ let u = (e) => {
             g &&
                 (0, n.jsx)(o.M14, {
                     type: "critical",
-                    children: s.intl.string(l.default.krIDdy),
+                    children: s.intl.string(a.default.krIDdy),
                 }),
             (0, n.jsxs)(o.fef, {
                 children: [
-                    (0, n.jsx)(a.Z.Header, {
+                    (0, n.jsx)(l.Z.Header, {
                         currentUser: t,
                         otherUser: r,
-                        header: s.intl.formatToPlainString(l.default["NMSTb/"], { isAdult: String(h) }),
+                        header: s.intl.formatToPlainString(a.default["NMSTb/"], { isAdult: String(p) }),
                         icon: (0, n.jsx)(o.Dio, {
                             size: "md",
                             color: "currentColor",
@@ -46,15 +46,15 @@ let u = (e) => {
                     (0, n.jsxs)(o.Kqy, {
                         gap: 16,
                         children: [
-                            (0, n.jsx)(a.Z.Notice, {
-                                notice: h ? s.intl.string(l.default.EvMGLT) : s.intl.string(l.default.f1SUeW),
+                            (0, n.jsx)(l.Z.Notice, {
+                                notice: p ? s.intl.string(a.default.EvMGLT) : s.intl.string(a.default.f1SUeW),
                             }),
                             (0, n.jsx)(o.Checkbox, {
-                                checked: p,
+                                checked: h,
                                 onChange: (e) => {
                                     j(e), y(!1);
                                 },
-                                label: h ? s.intl.string(l.default["/MYCee"]) : s.intl.string(l.default.VJaHUb),
+                                label: p ? s.intl.string(a.default["/MYCee"]) : s.intl.string(a.default.VJaHUb),
                             }),
                         ],
                     }),
@@ -71,11 +71,11 @@ let u = (e) => {
                     },
                     {
                         variant: "critical-primary",
-                        text: s.intl.string(l.default["c5L+sl"]),
+                        text: s.intl.string(a.default["c5L+sl"]),
                         onClick: () => {
                             y(!1), O(r.id);
                         },
-                        disabled: !p || m,
+                        disabled: !h || m,
                         loading: m,
                     },
                 ],

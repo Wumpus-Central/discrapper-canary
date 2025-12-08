@@ -32,8 +32,8 @@ var r = n(54381),
     A = n(359110),
     R = n(155409),
     D = n(695346),
-    L = n(592125),
-    M = n(430824),
+    M = n(592125),
+    L = n(430824),
     k = n(607744),
     G = n(496675),
     U = n(306680),
@@ -108,7 +108,7 @@ class er extends H.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, V.rY)(e, F.Z, M.Z);
+        return (0, V.rY)(e, F.Z, L.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -320,7 +320,7 @@ class er extends H.ZP {
             }),
             ee(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
-                    i = M.Z.getGuild(t.getGuildId());
+                    i = L.Z.getGuild(t.getGuildId());
                 null != i &&
                     (0, f.jW)(e, async () => {
                         let { default: e } = await Promise.all([
@@ -430,8 +430,8 @@ function el(e) {
             mentionCount: U.ZP.getMentionCount(n.id),
         })),
         d = (0, a.e7)([B.ZP], () => B.ZP.resolveUnreadSetting(n)),
-        f = (0, a.cj)([L.Z, k.Z, G.Z], () => {
-            let e = L.Z.getChannel(n.parent_id),
+        f = (0, a.cj)([M.Z, k.Z, G.Z], () => {
+            let e = M.Z.getChannel(n.parent_id),
                 r = k.Z.getCheck(n.guild_id);
             return {
                 canManageChannel: G.Z.can(Q.Plq.MANAGE_CHANNELS, n),
@@ -462,7 +462,7 @@ function el(e) {
             guildId: n.guild_id,
             location: "VoiceChannel",
         }),
-        { enableOpenTIVForPing: M } = T.A.useExperiment(
+        { enableOpenTIVForPing: L } = T.A.useExperiment(
             {
                 guildId: n.guild_id,
                 location: "VoiceChannel",
@@ -512,7 +512,7 @@ function el(e) {
                 resolvedUnreadSetting: d,
                 enableHangStatus: R,
                 showEmptyChannelTopic: D,
-                enableOpenTIVForPing: M,
+                enableOpenTIVForPing: L,
                 hasChannelInfo: null != q,
                 hasStartTime: x,
                 shouldHighlightChannel: K,

@@ -5,7 +5,7 @@ r.d(t, {
     GC: () => w,
     WU: () => L,
     db: () => h,
-    dz: () => G,
+    dz: () => M,
     nm: () => y,
     ph: () => v,
     x5: () => O,
@@ -294,7 +294,7 @@ function w(e) {
     let t = P.get(e);
     return t && P.delete(e), t;
 }
-function G(e, t) {
+function M(e, t) {
     if ((P.set(e, t), P.size > 30)) {
         let e = P.keys().next().value;
         P.delete(e);

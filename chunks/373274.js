@@ -38,8 +38,8 @@ var r,
     A = n(984933),
     R = n(914010),
     D = n(540126),
-    L = n(734307),
-    M = n(854444),
+    M = n(734307),
+    L = n(854444),
     k = n(113544),
     G = n(761091),
     U = n(301342),
@@ -974,7 +974,7 @@ let eg = (e) => {
     });
 };
 function em(e) {
-    let t = (0, M.o)(),
+    let t = (0, L.o)(),
         { isFavoritesPerk: n } = (0, y.z)("favorites-channel-list"),
         { density: r } = (0, d.TCT)();
     return (0, i.jsx)(
@@ -989,7 +989,7 @@ function em(e) {
 }
 function eb(e) {
     let t = (0, G.Z)(e.guild),
-        n = (0, u.cj)([L.Z], () => L.Z.getGuild(e.guildId, { guildActionRows: t })),
+        n = (0, u.cj)([M.Z], () => M.Z.getGuild(e.guildId, { guildActionRows: t })),
         { density: r } = (0, d.TCT)();
     return (0, i.jsx)(eg, ef(ed({}, e, n), { density: r }));
 }

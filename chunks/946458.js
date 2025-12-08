@@ -3,13 +3,13 @@ var i = n(54381);
 n(473749);
 var l = n(442837),
     r = n(481060),
-    s = n(596454),
-    a = n(339085),
+    a = n(596454),
+    s = n(339085),
     o = n(852492);
 function c(e) {
     let { reactionEmoji: t } = e,
-        n = (0, l.e7)([a.ZP], () =>
-            (null == t ? void 0 : t.emojiId) != null ? a.ZP.getUsableCustomEmojiById(t.emojiId) : null,
+        n = (0, l.e7)([s.ZP], () =>
+            (null == t ? void 0 : t.emojiId) != null ? s.ZP.getUsableCustomEmojiById(t.emojiId) : null,
         );
     return (0, i.jsxs)("div", {
         className: o.container,
@@ -48,7 +48,7 @@ function c(e) {
                         className: o.reaction,
                         children: [
                             null != t
-                                ? (0, i.jsx)(s.Z, {
+                                ? (0, i.jsx)(a.Z, {
                                       className: o.reactionEmote,
                                       emojiId: t.emojiId,
                                       emojiName: t.emojiName,

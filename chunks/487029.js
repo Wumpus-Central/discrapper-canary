@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(642613), n(539854);
+n.d(t, { Z: () => _ }), n(388685), n(642613), n(539854);
 var l = n(54381),
     i = n(473749),
     r = n(990547),
@@ -17,12 +17,12 @@ var l = n(54381),
     O = n(964398),
     y = n(294206),
     C = n(710111),
-    _ = n(649093);
-function T(e) {
+    T = n(649093);
+function _(e) {
     let {
             guildId: t,
             channel: n,
-            width: T,
+            width: _,
             height: m,
             keepOpen: I,
             interactive: S = !0,
@@ -87,7 +87,7 @@ function T(e) {
     let k = i.useCallback((e) => {
             (Z.current = e), j(null == e ? void 0 : e.soundId);
         }, []),
-        U = i.useCallback(
+        M = i.useCallback(
             (e) => {
                 if (null == e) return void k(null);
                 let t = x[e];
@@ -95,7 +95,7 @@ function T(e) {
             },
             [k, x],
         ),
-        M = i.useCallback(
+        U = i.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = x[e];
@@ -110,7 +110,7 @@ function T(e) {
                         y.ZP,
                         {
                             interactive: S,
-                            className: _.soundButton,
+                            className: T.soundButton,
                             sound: e,
                             focused: A === e.soundId,
                             channel: n,
@@ -125,14 +125,14 @@ function T(e) {
         : (0, l.jsx)(s.Gt, {
               value: D,
               children: (0, l.jsx)(O.Z, {
-                  wheelWidth: T,
+                  wheelWidth: _,
                   wheelHeight: m,
                   itemWidth: 96,
                   itemHeight: 52,
                   showDeadZoneIndicator: !I,
                   activeItem: A,
-                  onItemSelect: U,
-                  onItemAction: M,
+                  onItemSelect: M,
+                  onItemAction: U,
                   onClose: v,
                   interactive: S,
                   children: L,

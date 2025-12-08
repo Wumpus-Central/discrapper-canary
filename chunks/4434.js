@@ -52,8 +52,8 @@ var r = n(54381),
     K = n(74538),
     z = n(937615),
     q = n(588797),
-    X = n(981631),
-    Q = n(283307),
+    Q = n(981631),
+    X = n(283307),
     J = n(474936),
     $ = n(231338),
     ee = n(388032),
@@ -177,12 +177,12 @@ function ed(e) {
                 ? void 0
                 : _.items.find((e) => e.planId === J.Xh.PREMIUM_MONTH_TIER_2 || e.planId === J.Xh.PREMIUM_YEAR_TIER_2);
     null != B && Z.push(B);
-    let Q =
+    let X =
             null == _
                 ? void 0
                 : _.items.find((e) => e.planId === J.Xh.PREMIUM_MONTH_GUILD || e.planId === J.Xh.PREMIUM_YEAR_GUILD),
         { enabled: en } = q.Z.useExperiment({ location: "32b64a_1" }),
-        ei = !en || null == P || !J.Tp.has(P) || null == Q,
+        ei = !en || null == P || !J.Tp.has(P) || null == X,
         { analyticsLocations: ed } = (0, b.ZP)(),
         [ef, ep] = (0, I.ED)({
             subscriptionId: null == _ ? void 0 : _.id,
@@ -350,7 +350,7 @@ function ed(e) {
                     }),
                 (0, r.jsx)(m.Z, {
                     message: ee.intl.format(ee.t.Om31w8, {
-                        documentationLink: Y.Z.getArticleURL(X.BhN.LOCALIZED_PRICING),
+                        documentationLink: Y.Z.getArticleURL(Q.BhN.LOCALIZED_PRICING),
                     }),
                 }),
                 ey
@@ -571,7 +571,7 @@ function ep(e) {
                                 paymentSourceType: w,
                                 proratedAmount: null != M ? M.total : void 0,
                                 basePrice: a,
-                                productLine: X.POd.BOOST,
+                                productLine: Q.POd.BOOST,
                             }),
                             showPricingLink:
                                 (null != (t = null == M ? void 0 : M.currency) ? t : $.pK.USD) !== $.pK.USD,
@@ -607,7 +607,7 @@ function e_(e) {
                 ? ee.intl.format(ee.t.P52e1r, {})
                 : ee.intl.format(ee.t["4UnIk9"], { guildName: y })
             : d
-              ? ee.intl.format(ee.t.gFaKd1, { helpCenterLink: Y.Z.getArticleURL(X.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+              ? ee.intl.format(ee.t.gFaKd1, { helpCenterLink: Y.Z.getArticleURL(Q.BhN.FRACTIONAL_PREMIUM_ABOUT) })
               : null == y
                 ? ee.intl.format(ee.t.SZ5ohR, { guildSubscriptionQuantity: s })
                 : ee.intl.format(ee.t.GxK3Mv, {
@@ -649,7 +649,7 @@ function e_(e) {
                 }),
                 (0, r.jsx)(p.Button, {
                     variant: "primary",
-                    text: _ === Q.cL.APPLE_PAYMENT_LINK ? ee.intl.string(ee.t.qXV2XU) : ee.intl.string(ee.t["/iTxgz"]),
+                    text: _ === X.cL.APPLE_PAYMENT_LINK ? ee.intl.string(ee.t.qXV2XU) : ee.intl.string(ee.t["/iTxgz"]),
                     onClick: a,
                 }),
             ],

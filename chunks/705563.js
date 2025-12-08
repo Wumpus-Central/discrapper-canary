@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var i = n(54381);
 n(473749);
 var r = n(442837),
@@ -15,9 +15,9 @@ var r = n(442837),
     m = n(360328),
     g = n(981631),
     b = n(388032),
-    y = n(482722);
-function C(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: C = !1 } = e,
+    C = n(482722);
+function y(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: y = !1 } = e,
         v = p.default.cast(t),
         {
             joinRequest: _,
@@ -47,7 +47,7 @@ function C(e) {
         );
     return null != _ && _.applicationStatus === f.wB.SUBMITTED && O
         ? (0, i.jsxs)("div", {
-              className: y.buttons,
+              className: C.buttons,
               children: [
                   (0, i.jsx)(l.u, {
                       text: b.intl.string(b.t.cdPGbE),
@@ -80,7 +80,7 @@ function C(e) {
                           size: "sm",
                           text: b.intl.string(b.t.iXAna6),
                       }),
-                  C && (0, i.jsx)(o.ZP.Divider, {}),
+                  y && (0, i.jsx)(o.ZP.Divider, {}),
               ],
           })
         : null;

@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => Q }), n(388685), n(539854), n(415506);
+n.d(t, { Z: () => X }), n(388685), n(539854), n(415506);
 var i,
     a = n(348327),
     o = n.n(a),
@@ -111,7 +111,7 @@ function j() {
                 h.getNativeBreadcrumbs({ minBreadcrumbId: w() }, (e) => {
                     let { breadcrumbs: n } = e;
                     for (let e of n) D(e, f.C7.NativeOOP, null != t ? t : d.UNSET_PID);
-                    X.emitChange();
+                    Q.emitChange();
                 });
         }, y));
 }
@@ -139,7 +139,7 @@ function F() {
             null == h ||
                 null == (e = h.getDebuggingState) ||
                 e.call(h, (e) => {
-                    o()(r, e) || ((r = e), X.emitChange());
+                    o()(r, e) || ((r = e), Q.emitChange());
                 });
         }, B));
 }
@@ -192,7 +192,7 @@ class q extends (i = s.ZP.Store) {
     }
 }
 m(q, "displayName", "Overlay-v3-Native-Debug-Module-Store");
-let X = new q(
+let Q = new q(
         c.Z,
         __OVERLAY__ || !_.iP
             ? {}
@@ -206,4 +206,4 @@ let X = new q(
                   OVERLAY_SET_MODULE_LOGGING: z,
               },
     ),
-    Q = X;
+    X = Q;

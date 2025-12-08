@@ -17,7 +17,7 @@ var r = n(54381),
     x = n(388032),
     E = n(325659),
     v = n(197571);
-function b(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function b(e) {
     }
     return e;
 }
-function j(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,7 +87,7 @@ let I = {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                j(b({}, n), {
+                                b(j({}, n), {
                                     onFormSubmit: l,
                                     onResend: t,
                                     onSuccess: o,
@@ -106,7 +106,7 @@ let I = {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            j(b({}, t), {
+                            b(j({}, t), {
                                 onSuccess: l,
                                 headerText: x.intl.string(x.t.ZLRYGU),
                                 confirmButtonText: x.intl.string(x.t.PDTjLN),
@@ -130,7 +130,7 @@ let I = {
             [n, s] = i.useState([]),
             h = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
             g = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-            b = () => {
+            j = () => {
                 (0, p.Jj)()
                     .then((e) => {
                         let {
@@ -148,9 +148,9 @@ let I = {
                     ? (t(!0),
                       c
                           .k({ withAnalyticsToken: !0 })
-                          .then(() => b())
+                          .then(() => j())
                           .catch(() => t(!1)))
-                    : b();
+                    : j();
             }, [h]),
             i.useEffect(() => {
                 (async () => {

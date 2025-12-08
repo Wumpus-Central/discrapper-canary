@@ -391,10 +391,10 @@ function W(e, t, n, r) {
 let K = null,
     z = null,
     q = () => React.useContext(K),
-    X = 20,
-    Q = null;
+    Q = 20,
+    X = null;
 function J() {
-    Q = Q.filter((e) => e.isConnected);
+    X = X.filter((e) => e.isConnected);
 }
 let $ = 0,
     ee = "--floating-ui-scrollbar-width";

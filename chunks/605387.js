@@ -1007,8 +1007,8 @@ var t = (function () {
             } else if (!1 == O && 1 == v.length) {
                 for (var V = new Uint8Array(j * G * 3), z = j * G, y = 0; y < z; y++) {
                     var q = 3 * y,
-                        X = 4 * y;
-                    (V[q] = Z[X]), (V[q + 1] = Z[X + 1]), (V[q + 2] = Z[X + 2]);
+                        Q = 4 * y;
+                    (V[q] = Z[Q]), (V[q + 1] = Z[Q + 1]), (V[q + 2] = Z[Q + 2]);
                 }
                 (Z = V), (f = 2), (F = 3), (B = 3 * j);
             }

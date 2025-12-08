@@ -12,8 +12,8 @@ function d(e) {
         n,
         d,
         { channel: p, messages: h, oldestUnreadMessageId: f, treatSpam: m, summaries: g, selectedSummary: b } = e,
-        y = [],
-        C = !1,
+        C = [],
+        y = !1,
         v = null != f ? a.default.extractTimestamp(f) : null,
         _ = null;
     return (
@@ -28,7 +28,7 @@ function d(e) {
                         i = a.default.extractTimestamp(g[e].endId);
                     if (t >= n && t <= i) {
                         if (_ === g[e].id) break;
-                        y.push({
+                        C.push({
                             type: u.ys_.DIVIDER,
                             content: g[e].topic,
                             contentKey: g[e].id,
@@ -41,16 +41,16 @@ function d(e) {
             let S = (0, l.vc)(e.timestamp, "LL");
             S !== t &&
                 null == _ &&
-                (y.push({
+                (C.push({
                     type: u.ys_.DIVIDER,
                     content: S,
                     contentKey: S,
                 }),
                 (t = S));
-            let P = y[y.length - 1],
+            let P = C[C.length - 1],
                 I = null,
                 Z = (0, s.DQ)(e);
-            C = C || Z;
+            y = y || Z;
             let T = (function (e, t, n) {
                 if (i.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return u.ys_.MESSAGE_GROUP_BLOCKED;
@@ -67,7 +67,7 @@ function d(e) {
                               content: [],
                               key: e.id,
                           }),
-                          y.push(E))
+                          C.push(E))
                         : (j = (E = O).content[E.content.length - 1]),
                     [E, j])),
             f === e.id && null != v)
@@ -82,7 +82,7 @@ function d(e) {
                               }),
                           (x.hasUnread = !0))
                         : e.isFirstMessageInForumPost(p) ||
-                          y.push({
+                          C.push({
                               type: u.ys_.DIVIDER,
                               unreadId: e.id,
                           }),
@@ -90,7 +90,7 @@ function d(e) {
                 : null != v &&
                   a.default.extractTimestamp(e.id) > v &&
                   (e.isFirstMessageInForumPost(p) ||
-                      y.push({
+                      C.push({
                           type: u.ys_.DIVIDER,
                           unreadId: e.id,
                       }),
@@ -98,7 +98,7 @@ function d(e) {
             let N = (0, c.f)(e, p);
             null != N &&
                 "before" === N.position &&
-                y.push({
+                C.push({
                     type: u.ys_.MESSAGE,
                     content: N.message,
                     groupId: N.message.id,
@@ -117,17 +117,17 @@ function d(e) {
                 null != b &&
                     e.id === b.startId &&
                     b.count > 1 &&
-                    y.push({
+                    C.push({
                         type: u.ys_.DIVIDER,
                         content: b.topic,
                         contentKey: b.startId,
                         isSummaryDivider: !0,
                     }),
-                null !== I ? (I.content.push(w), w.jumpTarget && (I.hasJumpTarget = !0)) : y.push(w),
-                e.isFirstMessageInForumPost(p) && y.push({ type: u.ys_.FORUM_POST_ACTION_BAR }),
+                null !== I ? (I.content.push(w), w.jumpTarget && (I.hasJumpTarget = !0)) : C.push(w),
+                e.isFirstMessageInForumPost(p) && C.push({ type: u.ys_.FORUM_POST_ACTION_BAR }),
                 null != N &&
                     "after" === N.position &&
-                    y.push({
+                    C.push({
                         type: u.ys_.MESSAGE,
                         content: N.message,
                         groupId: N.message.id,
@@ -135,13 +135,13 @@ function d(e) {
                 null != b &&
                     e.id === b.endId &&
                     b.count > 1 &&
-                    y.push({
+                    C.push({
                         type: u.ys_.DIVIDER,
                         contentKey: b.endId,
                         isSummaryDivider: !0,
                     });
         }),
-        C && (0, s.P1)(p) && r.Z.trackExposure({ location: "416cc9_1" }),
-        y
+        y && (0, s.P1)(p) && r.Z.trackExposure({ location: "416cc9_1" }),
+        C
     );
 }

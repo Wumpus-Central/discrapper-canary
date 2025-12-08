@@ -94,7 +94,7 @@ function G(e) {
         W = v.QK.useSetting(),
         K = (0, C.n)(),
         [z, q] = i.useState(!1),
-        [X, Q] = i.useState((null == V ? void 0 : V.coverImage) == null),
+        [Q, X] = i.useState((null == V ? void 0 : V.coverImage) == null),
         J = (0, l.e7)([S.ZP, I.default], () => {
             var e;
             return S.ZP.isMember(
@@ -199,14 +199,14 @@ function G(e) {
                 onMouseEnter: el,
                 onMouseLeave: ec,
                 children: [
-                    !X &&
+                    !Q &&
                         (!0 === V.shouldShowBlurredThumbnailImage
                             ? (0, r.jsx)("img", {
                                   src: L,
                                   alt: D.intl.string(D.t.rIbh8H),
                                   className: o()(x.thumbnail, { [x.spoiler]: V.shouldSpoiler }),
                                   onContextMenu: Y,
-                                  onError: () => Q(!0),
+                                  onError: () => X(!0),
                               })
                             : (0, r.jsx)(m.Z, {
                                   src: !eg && eh ? "".concat(em, "?format=png") : em,
@@ -216,7 +216,7 @@ function G(e) {
                                   className: o()(x.thumbnail, { [x.spoiler]: V.shouldSpoiler }),
                                   imageChildClassName: x.thumbnailImage,
                                   onContextMenu: Y,
-                                  onError: () => Q(!0),
+                                  onError: () => X(!0),
                               })),
                     null != V.coverImageOverlayText &&
                         (0, r.jsx)(u.P3F, {

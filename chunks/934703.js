@@ -248,7 +248,7 @@ function v(e) {
             },
             [h, g, S],
         ),
-        k = r.useCallback(
+        L = r.useCallback(
             (e) => {
                 if (null != t.current) {
                     var r, o;
@@ -286,7 +286,7 @@ function v(e) {
             },
             [C, h, E, b, v, n, t, g],
         ),
-        L = r.useCallback(
+        k = r.useCallback(
             (e, r) => {
                 var o, i;
                 if (null == t.current) return;
@@ -354,12 +354,12 @@ function v(e) {
                     default:
                         n = d.CY.HLS_OTHER_ERROR;
                 }
-                L(n, {
+                k(n, {
                     errorDetails: t.details,
                     fatal: t.fatal,
                 });
             },
-            [O, L],
+            [O, k],
         );
     r.useEffect(() => {
         if (null == n.current) return;
@@ -419,9 +419,9 @@ function v(e) {
         trackQuestContentClick: w,
         trackQuestVideoBufferingStarted: N,
         trackQuestVideoBufferingEnded: A,
-        trackWatchTimeAnalytics: k,
+        trackWatchTimeAnalytics: L,
         trackQuestVideoFullscreenChanged: V,
-        trackQuestVideoError: L,
+        trackQuestVideoError: k,
         trackQuestVideoVolumeChanged: Z,
     };
 }

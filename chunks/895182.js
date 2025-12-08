@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var a = n(54381),
     l = n(473749),
-    i = n(660815),
-    r = n(442837),
+    r = n(660815),
+    i = n(442837),
     s = n(481060),
     o = n(570140),
     c = n(905551),
@@ -54,12 +54,12 @@ function x(e, t) {
     );
 }
 function f() {
-    let e = (0, r.e7)([m.Z], () => m.Z.getGuildId()),
-        t = (0, r.e7)([u.Z], () => {
+    let e = (0, i.e7)([m.Z], () => m.Z.getGuildId()),
+        t = (0, i.e7)([u.Z], () => {
             var t;
             return null == (t = u.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        n = (0, r.e7)([d.Z], () => {
+        n = (0, i.e7)([d.Z], () => {
             var t;
             return null == (t = d.Z.getStateForGuild(e)) ? void 0 : t.instances;
         }),
@@ -78,7 +78,7 @@ function f() {
         ),
         b = l.useMemo(
             () =>
-                Object.values(i.V).map((e) =>
+                Object.values(r.V).map((e) =>
                     (0, a.jsx)(
                         s.Button,
                         {

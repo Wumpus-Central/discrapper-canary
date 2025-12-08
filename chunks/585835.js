@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(539854), n(388685);
+n.d(t, { Z: () => O }), n(539854), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -16,20 +16,20 @@ var i = n(54381),
     h = n(929507),
     x = n(981631),
     j = n(388032),
-    O = n(473059);
-function v(e) {
+    v = n(473059);
+function O(e) {
     var t, n, l;
     let {
-            name: v,
+            name: O,
             icon: y,
             imageSrc: _,
             iconBackgroundColor: C,
             iconClassName: N,
             iconWrapperClassName: S,
-            details: P,
+            details: I,
             integration: w,
             buttonText: E,
-            buttonDisabled: I,
+            buttonDisabled: P,
             hasNextSection: T,
             onButtonClick: Z,
             guildId: k,
@@ -61,7 +61,7 @@ function v(e) {
                                       color: "currentColor",
                                       width: 10,
                                       height: 10,
-                                      className: O.caret,
+                                      className: v.caret,
                                   })
                                 : null,
                         ],
@@ -69,7 +69,7 @@ function v(e) {
                   : (0, i.jsx)(d.Button, {
                         size: "sm",
                         buttonRef: B,
-                        disabled: I,
+                        disabled: P,
                         onClick: Z,
                         text: E,
                     });
@@ -151,18 +151,18 @@ function v(e) {
                     ? l
                     : {},
             ).length > 0,
-        q = (0, i.jsxs)(d.Kqy, {
+        V = (0, i.jsxs)(d.Kqy, {
             direction: "horizontal",
             align: "center",
             children: [
                 (0, i.jsx)(f.Z, {
-                    name: v,
+                    name: O,
                     icon: y,
                     imageSrc: _,
                     iconBackgroundColor: C,
                     iconClassName: N,
                     iconWrapperClassName: S,
-                    details: P,
+                    details: I,
                     isPremium: F.length > 0,
                     children: (function (e, t) {
                         var n, r;
@@ -217,13 +217,13 @@ function v(e) {
               },
               children: (0, i.jsx)(d.Zbd, {
                   editable: !0,
-                  className: a()(O.card, O.clickable),
-                  children: q,
+                  className: a()(v.card, v.clickable),
+                  children: V,
               }),
           })
         : (0, i.jsx)(d.Zbd, {
               editable: !0,
-              className: O.card,
-              children: q,
+              className: v.card,
+              children: V,
           });
 }

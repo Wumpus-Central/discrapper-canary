@@ -1,4 +1,4 @@
-n.d(e, { Z: () => E });
+n.d(e, { A: () => T });
 var i = n(54381);
 n(473749);
 var l = n(442837),
@@ -9,7 +9,7 @@ var l = n(442837),
     o = n(509613),
     c = n(313789),
     d = n(388032);
-let E = (0, o.ON)(c.n.CLIPS_STORAGE_LOCATION, {
+let T = (0, o.ON)(c.n.CLIPS_STORAGE_LOCATION, {
     useSearchTerms: () => [d.intl.string(d.t.s4773E), d.intl.string(d.t.svjwGh)],
     render: () => {
         let t = (0, l.e7)([u.Z], () => u.Z.getSettings().storageLocation),

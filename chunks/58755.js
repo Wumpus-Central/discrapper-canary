@@ -151,7 +151,7 @@ function y(e) {
             steps: C = 26,
         } = t,
         E = (0, x.XM)(t),
-        N = (0, x.W6)(E, c);
+        O = (0, x.W6)(E, c);
     return (0, a.jsxs)(m.Kqy, {
         gap: 20,
         children: [
@@ -279,7 +279,7 @@ function y(e) {
                             let [l, c] = e,
                                 d = (0, x.HI)(c),
                                 u = (0, s.Z)((0, o.Z)("black"), c) > 4.5 ? "black" : "white",
-                                p = N[l];
+                                p = O[l];
                             return (0, a.jsxs)(
                                 "div",
                                 {

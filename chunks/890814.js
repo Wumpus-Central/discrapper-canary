@@ -1,8 +1,8 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(54381);
 n(473749);
 var i = n(956636);
-function a(e) {
+function l(e) {
     let { games: t, renderGame: n } = e;
     return (0, r.jsx)("ul", {
         className: i.coverList,

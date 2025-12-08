@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => y,
+    Z: () => C,
     y: () => g,
 }),
     n(388685);
@@ -40,10 +40,10 @@ function b(e) {
         className: m.resizeHandle,
     });
 }
-function y(e) {
+function C(e) {
     let { sidebarType: t, maxWidth: n, onWidthChange: i, children: a, floatingLayer: p } = e,
         g = l.useRef(null),
-        y = (function (e) {
+        C = (function (e) {
             switch (e) {
                 case 0:
                     return "postSidebarWidth";
@@ -59,12 +59,12 @@ function y(e) {
                     return "callParticipantsSidebarWidth";
             }
         })(t),
-        [C, v] = l.useState(h.ZP[y]),
+        [y, v] = l.useState(h.ZP[C]),
         _ = l.useCallback(
             (e) => {
-                d.ZP.updatedUnsyncedSettings({ [y]: e });
+                d.ZP.updatedUnsyncedSettings({ [C]: e });
             },
-            [y],
+            [C],
         ),
         O = 5 === t ? f.at : f.Co,
         x = (0, f.WL)({
@@ -72,7 +72,7 @@ function y(e) {
             minWidth: O,
         }),
         E = (0, u.dQu)(c.Z.modules.chat.RESIZE_HANDLE_WIDTH),
-        j = (0, s.clamp)(C, O, n),
+        j = (0, s.clamp)(y, O, n),
         S = x ? j : j + E;
     l.useEffect(() => {
         null == i || i(j, x);

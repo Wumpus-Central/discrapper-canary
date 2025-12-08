@@ -33,8 +33,8 @@ var i = n(54381),
     M = n(388032),
     R = n(787267),
     L = n(334405),
-    k = n(977007);
-function D(e) {
+    D = n(977007);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -79,7 +79,7 @@ function U(e, t) {
 }
 function V(e) {
     var t, n, l, o;
-    let { channel: V, setIsHangStatusInputFocused: F, setIsEmojiPickerOpen: H, setPopoutRef: B } = e,
+    let { channel: V, setIsHangStatusInputFocused: H, setIsEmojiPickerOpen: F, setPopoutRef: B } = e,
         G = r.useRef(null),
         z = (0, u.e7)([v.Z], () => v.Z.getCustomHangStatus()),
         W = (0, j.Z)(),
@@ -108,7 +108,7 @@ function V(e) {
     r.useEffect(() => {
         b.default.track(
             A.rMx.HANG_STATUS_PICKER_OPENED,
-            U(D({}, (0, O.Z)(V.id)), {
+            U(k({}, (0, O.Z)(V.id)), {
                 num_favorites: q.length,
                 num_recents: W.length,
             }),
@@ -119,8 +119,8 @@ function V(e) {
         }, [Q, ee, eu]),
         r.useEffect(() => {
             var e;
-            en || (Q !== (null != (e = null == z ? void 0 : z.status) ? e : "") && "" !== Q.trim()) ? F(!0) : F(!1);
-        }, [Q, null == z ? void 0 : z.status, ee, null == z ? void 0 : z.emoji, F, en]),
+            en || (Q !== (null != (e = null == z ? void 0 : z.status) ? e : "") && "" !== Q.trim()) ? H(!0) : H(!1);
+        }, [Q, null == z ? void 0 : z.status, ee, null == z ? void 0 : z.emoji, H, en]),
         r.useEffect(() => {
             null == B || B(null == J ? void 0 : J.current);
         }, [J, B]);
@@ -199,16 +199,16 @@ function V(e) {
                 let n = (0, x.Z)(t);
                 (!ep || e) &&
                     ((0, C.tg)(n ? t : t.status, n ? null : t.emoji),
-                    b.default.track(A.rMx.HANG_STATUS_FAVORITE_CLICKED, U(D({}, (0, O.Z)(V.id)), { favorited: !e })));
+                    b.default.track(A.rMx.HANG_STATUS_FAVORITE_CLICKED, U(k({}, (0, O.Z)(V.id)), { favorited: !e })));
             },
             [V.id, ep],
         ),
         eO = r.useCallback(() => {
-            F(!1);
-        }, [F]),
+            H(!1);
+        }, [H]),
         ex = r.useCallback(() => {
-            F(!0);
-        }, [F]),
+            H(!0);
+        }, [H]),
         eE = r.useCallback(
             (e, t, n) => {
                 var r;
@@ -268,7 +268,7 @@ function V(e) {
                 shouldShow: ef === d.z.HANG_STATUS_POPOVER_NUX,
                 graphic: {
                     type: "image",
-                    src: k.Z,
+                    src: D.Z,
                 },
                 targetElementRef: J,
                 onRequestClose: () => em(w.L.DISMISS),
@@ -297,7 +297,7 @@ function V(e) {
                                             setCustomStatusEmoji: et,
                                             selectedDefaultStatus: en || eh ? null : er,
                                             defaultStatusVariant: K,
-                                            setIsEmojiPickerOpen: H,
+                                            setIsEmojiPickerOpen: F,
                                         }),
                                     },
                                     trailing:

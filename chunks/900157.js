@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(910611),
     y = n(359110),
     O = n(592125),
-    j = n(703558),
-    x = n(430824),
+    x = n(703558),
+    j = n(430824),
     v = n(979651),
     C = n(664342),
     I = n(124368),
@@ -71,7 +71,7 @@ function T(e, t) {
 function N(e) {
     let { channelId: t, baseChannelId: l, channelViewSource: N = "Split View" } = e,
         R = (0, s.e7)([O.Z], () => O.Z.getChannel(t)),
-        w = (0, s.e7)([x.Z], () => x.Z.getGuild(null == R ? void 0 : R.getGuildId())),
+        w = (0, s.e7)([j.Z], () => j.Z.getGuild(null == R ? void 0 : R.getGuildId())),
         A = (0, f.ZP)(R);
     var D = R;
     let L = (0, s.e7)([v.Z], () => null != D && !a().isEmpty(v.Z.getVoiceStatesForChannel(D.id)));
@@ -104,7 +104,7 @@ function N(e) {
         children: [
             (0, r.jsx)(d.Z, {
                 channel: R,
-                draftType: j.d.ChannelMessage,
+                draftType: x.d.ChannelMessage,
             }),
             (0, r.jsx)(b.ZP, {
                 toolbar: k,

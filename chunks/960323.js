@@ -8,10 +8,10 @@ var i = n(657707),
     o = n(901567),
     c = n(279362),
     d = n(556080),
-    E = n(90794),
-    S = n(756893),
-    I = n(927947),
-    T = n(776570),
+    T = n(90794),
+    E = n(756893),
+    S = n(927947),
+    I = n(776570),
     g = n(726985),
     _ = n(388032);
 let O = (0, l.x1)(r.n.VOICE_AND_VIDEO_PANE, {
@@ -21,7 +21,7 @@ let O = (0, l.x1)(r.n.VOICE_AND_VIDEO_PANE, {
     }),
     N = (0, l.x1)(r.n.VOICE_AND_VIDEO_PANE, {
         usePredicate: () => (0, u.BK)("VoiceAndVideoPane"),
-        buildLayout: () => [T.Z, d.W, o.V, I.d, S.g, E.d, c.g],
+        buildLayout: () => [I.Z, d.W, o.V, S.d, E.g, T.d, c.g],
     }),
     A = (0, l.wf)(r.n.VOICE_AND_VIDEO_PANEL, {
         useTitle: () => _.intl.string(_.t.B1fFpf),

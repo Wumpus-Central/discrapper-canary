@@ -32,8 +32,8 @@ var r,
     A = n(823385),
     R = n(415795),
     D = n(670512),
-    L = n(558631),
-    M = n(981631),
+    M = n(558631),
+    L = n(981631),
     k = n(388032),
     G = n(712198);
 function U(e, t, n) {
@@ -94,7 +94,7 @@ let V = () =>
             (0, i.jsx)("div", {
                 className: G.emptyStateCTA,
                 children: (0, i.jsx)(d.Anchor, {
-                    href: w.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
+                    href: w.Z.getArticleURL(L.BhN.QUICK_SWITCHER_TUTORIAL),
                     children: k.intl.string(k.t["4iPfEO"]),
                 }),
             }),
@@ -140,7 +140,7 @@ let W = c.ZP.connectStores([E.ZP, v.Z], (e) => {
             r = null,
             i = C.Z.getState().statuses;
         return (
-            (null == (t = n.recipients) ? void 0 : t.some((e) => i[e] === M.Skl.ONLINE)) && (r = M.Skl.ONLINE),
+            (null == (t = n.recipients) ? void 0 : t.some((e) => i[e] === L.Skl.ONLINE)) && (r = L.Skl.ONLINE),
             {
                 mentions: E.ZP.getMentionCount(n.id),
                 status: r,
@@ -204,7 +204,7 @@ class X extends l.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(N.d9, {
-                    event: M.CkL.GLOBAL_CLIPBOARD_PASTE,
+                    event: L.CkL.GLOBAL_CLIPBOARD_PASTE,
                     handler: this.handleGlobalPaste,
                 }),
                 (0, i.jsx)(d.tEY, {
@@ -260,7 +260,7 @@ class X extends l.PureComponent {
         });
     }
     focusNode(e) {
-        Z.S.dispatch(M.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        Z.S.dispatch(L.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return "quick-switcher-".concat(this._listId, "-item-").concat(e);
@@ -274,7 +274,7 @@ class X extends l.PureComponent {
                 textChannelSymbolHook: (e, t) => Q(t, g.xQ.TEXT_CHANNEL, k.intl.string(k.t.wrwhuZ)),
                 voiceChannelSymbolHook: (e, t) => Q(t, g.xQ.VOICE_CHANNEL, k.intl.string(k.t["jz+hJp"])),
                 guildSymbolHook: (e, t) => Q(t, g.xQ.GUILD, k.intl.string(k.t.WuwCWi)),
-                helpdeskArticle: w.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
+                helpdeskArticle: w.Z.getArticleURL(L.BhN.QUICK_SWITCHER_TUTORIAL),
             }),
         });
     }
@@ -358,10 +358,10 @@ class X extends l.PureComponent {
                             l = x.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
-                            case M.d4z.GUILD_TEXT:
-                            case M.d4z.GUILD_ANNOUNCEMENT:
-                            case M.d4z.GUILD_FORUM:
-                            case M.d4z.GUILD_MEDIA:
+                            case L.d4z.GUILD_TEXT:
+                            case L.d4z.GUILD_ANNOUNCEMENT:
+                            case L.d4z.GUILD_FORUM:
+                            case L.d4z.GUILD_MEDIA:
                                 return (0, f.jW)(e, async () => {
                                     let { default: e } = await Promise.all([
                                         n.e("79695"),
@@ -378,8 +378,8 @@ class X extends l.PureComponent {
                                             }),
                                         );
                                 });
-                            case M.d4z.GUILD_VOICE:
-                            case M.d4z.GUILD_STAGE_VOICE:
+                            case L.d4z.GUILD_VOICE:
+                            case L.d4z.GUILD_STAGE_VOICE:
                                 return (0, f.jW)(e, async () => {
                                     let { default: e } = await Promise.all([
                                         n.e("79695"),
@@ -397,9 +397,9 @@ class X extends l.PureComponent {
                                             }),
                                         );
                                 });
-                            case M.d4z.ANNOUNCEMENT_THREAD:
-                            case M.d4z.PUBLIC_THREAD:
-                            case M.d4z.PRIVATE_THREAD:
+                            case L.d4z.ANNOUNCEMENT_THREAD:
+                            case L.d4z.PUBLIC_THREAD:
+                            case L.d4z.PRIVATE_THREAD:
                                 return (0, f.jW)(e, async () => {
                                     let { default: e } = await n.e("40157").then(n.bind(n, 422200));
                                     return (t) =>
@@ -411,7 +411,7 @@ class X extends l.PureComponent {
                                             }),
                                         );
                                 });
-                            case M.d4z.GUILD_STORE:
+                            case L.d4z.GUILD_STORE:
                                 return (0, f.jW)(e, async () => {
                                     let { default: e } = await n.e("99905").then(n.bind(n, 649400));
                                     return (t) =>
@@ -424,7 +424,7 @@ class X extends l.PureComponent {
                                             }),
                                         );
                                 });
-                            case M.d4z.GUILD_DIRECTORY:
+                            case L.d4z.GUILD_DIRECTORY:
                                 return (0, f.jW)(e, async () => {
                                     let { default: e } = await n.e("70623").then(n.bind(n, 99334));
                                     return (t) => (0, i.jsx)(e, F(B({}, t), { channel: r }));
@@ -658,7 +658,7 @@ class X extends l.PureComponent {
 function J(e) {
     let t = (0, c.cj)([A.Z], () => A.Z.getProps()),
         n = (0, O.Pt)(),
-        r = L.Z.useExperiment({ location: "QuickSwitcher" }).enabled,
+        r = M.Z.useExperiment({ location: "QuickSwitcher" }).enabled,
         o = l.useMemo(
             () =>
                 r
@@ -684,7 +684,7 @@ function J(e) {
             e.unshift({
                 title: k.intl.string(k.t["3D5yo/"]),
                 searchableTitles: [k.intl.string(k.t["3D5yo/"])],
-                path: M.Z5c.SETTINGS("account"),
+                path: L.Z5c.SETTINGS("account"),
             }),
                 (0, P.gF)(e);
         }, [o, r]),

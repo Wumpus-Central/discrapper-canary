@@ -1,18 +1,18 @@
-t.d(e, { default: () => _ });
-var o = t(54381);
-t(473749);
-var i = t(481060),
-    r = t(864762),
-    s = t(779341),
-    l = t(642566),
-    a = t(742699),
-    c = t(686494),
-    d = t(573703),
-    u = t(798930),
-    C = t(981631),
-    h = t(771831);
-function _(n) {
-    let { transitionState: e, onClose: t, analyticsLocation: _ } = n,
+e.d(t, { default: () => h });
+var o = e(54381);
+e(473749);
+var i = e(481060),
+    r = e(864762),
+    s = e(779341),
+    l = e(642566),
+    a = e(742699),
+    c = e(686494),
+    d = e(573703),
+    u = e(798930),
+    C = e(981631),
+    _ = e(771831);
+function h(n) {
+    let { transitionState: t, onClose: e, analyticsLocation: h } = n,
         {
             slide: p,
             gotoNext: x,
@@ -21,10 +21,10 @@ function _(n) {
             handleAuthToken: f,
             expectedCallbackState: v,
             callbackData: N,
-        } = (0, r.k)(_, C.ABu.CRUNCHYROLL);
+        } = (0, r.k)(h, C.ABu.CRUNCHYROLL);
     return (0, o.jsx)(i.Y0X, {
-        className: h.modal,
-        transitionState: e,
+        className: _.modal,
+        transitionState: t,
         disableTrack: !0,
         parentComponent: "CrunchyrollLinkModal",
         children: (0, o.jsxs)(i.MyZ, {
@@ -35,7 +35,7 @@ function _(n) {
                     id: u.O.LANDING,
                     children: (0, o.jsx)(a.Z, {
                         onContinue: x,
-                        onClose: t,
+                        onClose: e,
                     }),
                 }),
                 (0, o.jsx)(i.Mi4, {
@@ -45,7 +45,7 @@ function _(n) {
                         onWaitingForConnection: b,
                         onAuthToken: f,
                         onError: g,
-                        onClose: t,
+                        onClose: e,
                     }),
                 }),
                 (0, o.jsx)(i.Mi4, {
@@ -55,7 +55,7 @@ function _(n) {
                         expectedCallbackState: v,
                         onAuthToken: f,
                         onError: g,
-                        onClose: t,
+                        onClose: e,
                     }),
                 }),
                 (0, o.jsx)(i.Mi4, {
@@ -64,19 +64,19 @@ function _(n) {
                         authToken: N,
                         onContinue: x,
                         onError: g,
-                        onClose: t,
+                        onClose: e,
                     }),
                 }),
                 (0, o.jsx)(i.Mi4, {
                     id: u.O.ERROR,
                     children: (0, o.jsx)(l.Z, {
                         onContinue: x,
-                        onClose: t,
+                        onClose: e,
                     }),
                 }),
                 (0, o.jsx)(i.Mi4, {
                     id: u.O.SUCCESS,
-                    children: (0, o.jsx)(d.Z, { onClose: t }),
+                    children: (0, o.jsx)(d.Z, { onClose: e }),
                 }),
             ],
         }),

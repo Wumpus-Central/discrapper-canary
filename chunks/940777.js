@@ -64,7 +64,7 @@ function R() {
     var e, t;
     let l = (0, a.Ie)("favorites"),
         { favoriteAdded: R, clearFavoriteAdded: D } = (0, E.up)(),
-        [L, M] = i.useState(!1),
+        [M, L] = i.useState(!1),
         { favoriteServerMuted: k, favoriteChannels: G } = (0, s.cj)([C.Z], () => ({
             favoriteChannels: C.Z.getFavoriteChannels(),
             favoriteServerMuted: C.Z.favoriteServerMuted,
@@ -118,7 +118,7 @@ function R() {
         children: [
             (0, r.jsx)(p.Z, {
                 selected: F,
-                hovered: L,
+                hovered: M,
                 unread: H && !k,
                 className: w.pill,
             }),
@@ -143,9 +143,9 @@ function R() {
                                         pathname: N.Z5c.CHANNEL(N.I_8, U),
                                         state: A,
                                     },
-                                    selected: F || L,
-                                    onMouseEnter: () => M(!0),
-                                    onMouseLeave: () => M(!1),
+                                    selected: F || M,
+                                    onMouseEnter: () => L(!0),
+                                    onMouseLeave: () => L(!1),
                                     onMouseDown: function () {
                                         null != B && u.Z.preload(B.guild_id, B.id);
                                     },

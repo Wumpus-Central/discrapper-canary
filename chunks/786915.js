@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var i = n(54381);
 n(473749);
 var r = n(512722),
@@ -15,7 +15,7 @@ var r = n(512722),
     m = n(871499),
     g = n(981631),
     b = n(388032);
-function y(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -40,11 +40,11 @@ function y(e) {
     }
     return e;
 }
-function C(e) {
+function y(e) {
     var {
             applicationId: t,
             stream: r,
-            channel: C,
+            channel: y,
             exitFullScreen: v,
             appContext: _,
             analyticsLocation: O,
@@ -95,7 +95,7 @@ function C(e) {
         ]);
     let A = (0, d.bp)(),
         { parentAnalyticsLocation: w } = (0, c.ZP)(),
-        M = null == C ? void 0 : C.getGuildId(),
+        M = null == y ? void 0 : y.getGuildId(),
         R = (0, a.e7)([p.Z], () => (null != M ? p.Z.getGuild(M) : null), [M]),
         L = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
         D = null == t || E ? o.ejJ : o.gQj,
@@ -113,14 +113,14 @@ function C(e) {
               buttonText: Z,
               color: null != T ? T : void 0,
           })
-        : null != R && null != C && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, C)
+        : null != R && null != y && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, y)
           ? (0, i.jsx)(
                 m.Z,
-                y(
+                C(
                     {
                         onClick: () => {
                             l()(null != R, "guild cannot be null"),
-                                l()(null != C, "channel cannot be null"),
+                                l()(null != y, "channel cannot be null"),
                                 null != w && (0, u.v)(w, u.d.INVITE),
                                 (function (e) {
                                     let {
@@ -139,13 +139,13 @@ function C(e) {
                                                 let { default: e } = await Promise.all([
                                                     n.e("49049"),
                                                     n.e("7654"),
-                                                    n.e("89772"),
+                                                    n.e("68971"),
                                                 ]).then(n.bind(n, 560114));
                                                 return (n) => {
                                                     var o, s;
                                                     return (0, i.jsx)(
                                                         e,
-                                                        ((o = y({}, n)),
+                                                        ((o = C({}, n)),
                                                         (s = s =
                                                             {
                                                                 guild: t,
@@ -188,7 +188,7 @@ function C(e) {
                                         );
                                 })({
                                     guild: R,
-                                    channel: C,
+                                    channel: y,
                                     streamUserId: null == r ? void 0 : r.ownerId,
                                     applicationId: t,
                                     appContext: null != _ ? _ : A,

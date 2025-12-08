@@ -15,8 +15,8 @@ var r = n(54381),
     g = n(996733),
     O = n(313789),
     j = n(914578),
-    v = n(920952),
-    m = n(518596),
+    m = n(920952),
+    v = n(518596),
     h = n(388032),
     x = n(942408);
 function S(e) {
@@ -53,7 +53,7 @@ function P(e) {
             return o;
         })(e, ["target"]);
     let l = g.Z.useField("query"),
-        { node: a, directory: s } = (0, f.ZP)(v.Z, l),
+        { node: a, directory: s } = (0, f.ZP)(m.E, l),
         u = null != t && null != s.entry(t) ? t : void 0,
         p = o.useRef(null);
     return ((0, c.ZP)(() => {
@@ -100,7 +100,7 @@ function P(e) {
                       emptyState: _,
                       sidebarFooter: j.Z,
                       onPanelChange: (e) => {
-                          let t = (0, m.getUserSettingsSectionsByWebUserSettings)().get(e);
+                          let t = (0, v.getUserSettingsSectionsByWebUserSettings)().get(e);
                           null != t &&
                               (S({
                                   destinationPanel: t,

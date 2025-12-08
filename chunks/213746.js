@@ -1,7 +1,7 @@
 n.d(t, { Z: () => j }), n(35282), n(997841);
 var r = n(54381),
-    a = n(473749),
-    i = n(793030),
+    i = n(473749),
+    a = n(793030),
     l = n(442837),
     s = n(481060),
     o = n(794295),
@@ -12,8 +12,8 @@ var r = n(54381),
     m = n(171246),
     h = n(55563),
     g = n(881294),
-    _ = n(133743),
-    f = n(979007),
+    f = n(133743),
+    _ = n(979007),
     b = n(981631),
     x = n(388032),
     v = n(154494);
@@ -51,7 +51,7 @@ function j(e) {
 }
 function y(e) {
     let { application: t } = e,
-        { subscriptions: n, otps: a } = (0, d.q)(t.id);
+        { subscriptions: n, otps: i } = (0, d.q)(t.id);
     return (0, r.jsxs)("div", {
         className: v.storeContainer,
         children: [
@@ -74,7 +74,7 @@ function y(e) {
                                         listing: e,
                                         subscriptionType: n,
                                         onDetails: () =>
-                                            (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId)),
+                                            (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId)),
                                     },
                                     e.id,
                                 );
@@ -82,25 +82,25 @@ function y(e) {
                         }),
                     ],
                 }),
-            a.length > 0 &&
+            i.length > 0 &&
                 (0, r.jsxs)("div", {
                     className: v.productSection,
                     children: [
-                        (0, r.jsx)(i.X6q, {
+                        (0, r.jsx)(a.X6q, {
                             variant: "heading-lg/semibold",
                             color: "header-primary",
                             children: x.intl.string(x.t.yUGTs8),
                         }),
                         (0, r.jsx)("div", {
                             className: v.products,
-                            children: a.map((e) =>
+                            children: i.map((e) =>
                                 (0, r.jsx)(
                                     u.hd,
                                     {
                                         skuId: e.skuId,
                                         appId: t.id,
                                         onDetails: () =>
-                                            (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId)),
+                                            (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId)),
                                     },
                                     e.id,
                                 ),
@@ -119,18 +119,18 @@ function y(e) {
 function I(e) {
     let {
             match: {
-                params: { applicationId: t, skuId: i },
+                params: { applicationId: t, skuId: a },
             },
         } = e,
-        o = (0, l.e7)([h.Z], () => h.Z.get(i), [i]),
-        c = (0, l.e7)([h.Z], () => (null != i ? h.Z.getParentSKU(i) : void 0), [i]),
-        d = a.useId(),
-        u = a.useCallback(
-            () => (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, f.GlobalDiscoveryAppsSections.STORE)),
+        o = (0, l.e7)([h.Z], () => h.Z.get(a), [a]),
+        c = (0, l.e7)([h.Z], () => (null != a ? h.Z.getParentSKU(a) : void 0), [a]),
+        d = i.useId(),
+        u = i.useCallback(
+            () => (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, _.GlobalDiscoveryAppsSections.STORE)),
             [t],
         );
     return (
-        a.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
             var e;
             switch (null == o ? void 0 : o.type) {
                 case b.epS.CONSUMABLE:
@@ -144,7 +144,7 @@ function I(e) {
                                     C(
                                         {
                                             appId: t,
-                                            skuId: i,
+                                            skuId: a,
                                         },
                                         n,
                                     ),
@@ -154,10 +154,10 @@ function I(e) {
                             modalKey: d,
                             onCloseCallback: () => {
                                 P() ||
-                                    (0, _.Gp)(
+                                    (0, f.Gp)(
                                         b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
                                             t,
-                                            f.GlobalDiscoveryAppsSections.STORE,
+                                            _.GlobalDiscoveryAppsSections.STORE,
                                         ),
                                     );
                             },
@@ -169,15 +169,15 @@ function I(e) {
                         (e = (0, m.KW)(c.flags) ? "user" : "guild"),
                         void (0, s.ZDy)(
                             async () => {
-                                let { SubscriptionDetailsModal: a } = await Promise.resolve().then(n.bind(n, 519896));
+                                let { SubscriptionDetailsModal: i } = await Promise.resolve().then(n.bind(n, 519896));
                                 return (n) =>
                                     (0, r.jsx)(
-                                        a,
+                                        i,
                                         C(
                                             {
                                                 appId: t,
                                                 subscriptionType: e,
-                                                skuId: i,
+                                                skuId: a,
                                                 guildId: void 0,
                                             },
                                             n,
@@ -188,10 +188,10 @@ function I(e) {
                                 modalKey: d,
                                 onCloseCallback: () => {
                                     P() ||
-                                        (0, _.Gp)(
+                                        (0, f.Gp)(
                                             b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
                                                 t,
-                                                f.GlobalDiscoveryAppsSections.STORE,
+                                                _.GlobalDiscoveryAppsSections.STORE,
                                             ),
                                         );
                                 },
@@ -199,8 +199,8 @@ function I(e) {
                         )
                     );
             }
-        }, [t, d, u, null == c ? void 0 : c.flags, null == o ? void 0 : o.flags, null == o ? void 0 : o.type, i]),
-        a.useLayoutEffect(
+        }, [t, d, u, null == c ? void 0 : c.flags, null == o ? void 0 : o.flags, null == o ? void 0 : o.type, a]),
+        i.useLayoutEffect(
             () => () => {
                 (0, s.Mr3)(d);
             },
@@ -212,9 +212,9 @@ function I(e) {
 function S(e) {
     let { application: t } = e,
         n = (0, g.nu)(),
-        a = t.terms_of_service_url,
+        i = t.terms_of_service_url,
         l = t.privacy_policy_url;
-    if (null == a && null == l) return null;
+    if (null == i && null == l) return null;
     let s = (e, t) =>
         (0, r.jsx)(o.Z, {
             href: t,
@@ -223,17 +223,17 @@ function S(e) {
         });
     return (0, r.jsx)("div", {
         className: v.legalContainer,
-        children: (0, r.jsx)(i.xvT, {
+        children: (0, r.jsx)(a.xvT, {
             color: "header-primary",
             variant: "text-sm/normal",
             children:
-                null != a && null != l
+                null != i && null != l
                     ? x.intl.format(x.t.nylPOT, {
-                          termsHook: (e) => s(e, a),
+                          termsHook: (e) => s(e, i),
                           privacyHook: (e) => s(e, l),
                       })
-                    : null != a
-                      ? x.intl.format(x.t["0cPyDz"], { termsHook: (e) => s(e, a) })
+                    : null != i
+                      ? x.intl.format(x.t["0cPyDz"], { termsHook: (e) => s(e, i) })
                       : null != l
                         ? x.intl.format(x.t["loYGC/"], { privacyHook: (e) => s(e, l) })
                         : null,

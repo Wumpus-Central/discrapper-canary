@@ -2,8 +2,8 @@ n.d(t, { n: () => c });
 var a = n(54381);
 n(473749);
 var l = n(481060),
-    i = n(688465),
-    r = n(921944),
+    r = n(688465),
+    i = n(921944),
     s = n(388032),
     o = n(941246);
 function c(e) {
@@ -24,7 +24,7 @@ function c(e) {
                 children: [
                     (0, a.jsx)(l.P3F, {
                         className: o.closeIcon,
-                        onClick: () => t(r.L.USER_DISMISS),
+                        onClick: () => t(i.L.USER_DISMISS),
                         children: (0, a.jsx)(l.Dio, {}),
                     }),
                     (0, a.jsx)("img", {
@@ -38,7 +38,7 @@ function c(e) {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 className: o.heading,
-                                children: [s.intl.string(s.t.MLt8H4), (0, a.jsx)(i.Z, { className: o.betaTag })],
+                                children: [s.intl.string(s.t.MLt8H4), (0, a.jsx)(r.Z, { className: o.betaTag })],
                             }),
                             (0, a.jsx)(l.Text, {
                                 variant: "text-sm/normal",
@@ -52,7 +52,7 @@ function c(e) {
                         text: s.intl.string(s.t["9WdoB+"]),
                         fullWidth: !0,
                         onClick: () => {
-                            t(r.L.TAKE_ACTION), c();
+                            t(i.L.TAKE_ACTION), c();
                         },
                     }),
                 ],

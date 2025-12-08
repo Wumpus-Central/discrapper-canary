@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(100527),
     o = n(906732),
     c = n(366980),
-    u = n(158638),
-    d = n(441536),
+    d = n(158638),
+    u = n(441536),
     g = n(434404),
     m = n(736617),
     p = n(196961),
@@ -37,10 +37,10 @@ function O(e) {
 function C(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: l, originalVanityURLCode: s, errorDetails: o } = e,
         c = (null == t ? void 0 : t.features.has(x.GuildFeatures.VANITY_URL)) === !0,
-        u = i.useCallback(() => {
+        d = i.useCallback(() => {
             (0, m.Gy)("");
         }, []),
-        d = i.useCallback((e) => {
+        u = i.useCallback((e) => {
             (0, m.Gy)(e);
         }, []);
     if (null == n) return (0, r.jsx)(a.$jN, {});
@@ -68,7 +68,7 @@ function C(e) {
             }),
             (0, r.jsx)(b.Z, {
                 value: n,
-                onChange: d,
+                onChange: u,
                 error: g,
                 disabled: !c,
             }),
@@ -77,7 +77,7 @@ function C(e) {
                       className: v.removeVanityUrlButton,
                       children: (0, r.jsx)(a.Button, {
                           variant: "critical-secondary",
-                          onClick: u,
+                          onClick: d,
                           text: _.intl.string(_.t["3ggb6K"]),
                       }),
                   })
@@ -88,13 +88,13 @@ function C(e) {
 function y(e) {
     let { guild: t, vanityURLCode: n, vanityURLUses: a, originalVanityURLCode: c, errorDetails: m } = e,
         { analyticsLocations: b } = (0, o.ZP)(),
-        _ = (0, u.g1)(t.id, "GuildSettingsBoostPerks"),
+        _ = (0, d.g1)(t.id, "GuildSettingsBoostPerks"),
         y = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
                     _
-                        ? (g.Z.close(), (0, d.Z)(t.id, s.Z.GUILD_POWERUPS_GUILD_SETTINGS_VANITY_URL, l.A$))
+                        ? (g.Z.close(), (0, u.Z)(t.id, s.Z.GUILD_POWERUPS_GUILD_SETTINGS_VANITY_URL, l.A$))
                         : (0, h.E6)({
                               guild: t,
                               analyticsLocations: b,

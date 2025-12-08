@@ -1,4 +1,4 @@
-t.d(n, { Z: () => Z });
+t.d(n, { Z: () => _ });
 var l = t(54381);
 t(473749);
 var i = t(442837),
@@ -20,15 +20,15 @@ var i = t(442837),
     b = t(981631),
     I = t(388032),
     y = t(7994),
-    _ = t(878449);
-function Z(e) {
-    let { user: n, currentUser: t, guildId: Z, subsection: O, onClose: N } = e,
-        { voiceActivityStatusEnabled: A } = (0, r.U)({ location: "UserProfileModalActivity" }),
-        T = (0, u.b)({ location: "UserProfileModalActivity" }),
+    Z = t(878449);
+function _(e) {
+    let { user: n, currentUser: t, guildId: _, subsection: O, onClose: N } = e,
+        { voiceActivityStatusEnabled: T } = (0, r.U)({ location: "UserProfileModalActivity" }),
+        A = (0, u.b)({ location: "UserProfileModalActivity" }),
         { live: P, recent: E, stream: C } = (0, m.Z)(n.id),
         { voiceChannel: S, voiceActivity: w } = (0, p.Z)({
             userId: n.id,
-            guildId: Z,
+            guildId: _,
         }),
         D = (0, i.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
         R = n.id === t.id,
@@ -37,7 +37,7 @@ function Z(e) {
             return e === o.Skl.OFFLINE || e === o.Skl.INVISIBLE;
         }),
         M = P.length > 0 || null != C,
-        B = A && null == C && null == w && null != S,
+        B = T && null == C && null == w && null != S,
         U = !L && (M || B),
         k = E.length > 0;
     return U || k || !D
@@ -51,7 +51,7 @@ function Z(e) {
                             children: (0, l.jsxs)("ul", {
                                 className: y.activityList,
                                 children: [
-                                    !T &&
+                                    !A &&
                                         B &&
                                         (0, l.jsx)("li", {
                                             children: (0, l.jsx)(j.Z, {
@@ -126,7 +126,7 @@ function Z(e) {
               ],
           })
         : (0, l.jsx)("div", {
-              className: _.empty,
+              className: Z.empty,
               children: (0, l.jsx)(o.$jN, {}),
           });
 }

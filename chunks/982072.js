@@ -1,13 +1,13 @@
 n.d(t, { Z: () => o }), n(388685);
 var r = n(473749),
     i = n(907331),
-    a = n(262937),
-    l = n(931847);
+    l = n(262937),
+    a = n(931847);
 function o(e) {
     let { widget: t, onAction: n } = e,
         [o, c] = (0, r.useState)(!1),
-        s = t instanceof l.q ? t.applicationId : null,
-        { fetched: u } = (0, a.o)(s),
+        s = t instanceof a.q ? t.applicationId : null,
+        { fetched: u } = (0, l.o)(s),
         d = (0, r.useCallback)(
             (e) => {
                 e &&

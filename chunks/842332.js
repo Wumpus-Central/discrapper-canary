@@ -67,7 +67,7 @@ function h(e) {
             },
             [_, y, f, n, h.textValue],
         ),
-        j = i.useCallback(
+        x = i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return _
@@ -92,7 +92,7 @@ function h(e) {
         isGeneratingAI: f,
         generateAIName: y,
         enableAIFeatures: _,
-        renderAiGenerateButton: j,
+        renderAiGenerateButton: x,
         getThreadNameInputAccessory: O,
     };
 }

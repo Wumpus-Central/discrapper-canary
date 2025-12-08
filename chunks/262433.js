@@ -51,7 +51,7 @@ function v(e) {
     let w = s.Z.getEmojiImage(null != (n = null != (t = a.emojiId) ? t : a.emojiName) ? n : ""),
         I = (0, d.np)(a.x, b),
         P = (0, d.np)(a.y, h),
-        { outlineColor: x } = (0, d.bg)(a.userId, y, S, E);
+        { outlineColor: j } = (0, d.bg)(a.userId, y, S, E);
     g(a, (e) => {
         (e.x += e.xSpeed * window.devicePixelRatio),
             (e.y += e.ySpeed * window.devicePixelRatio),
@@ -96,7 +96,7 @@ function v(e) {
                     });
                 });
         })(a, I, P),
-        (0, f.I)(v, I, P, x, p.q2),
+        (0, f.I)(v, I, P, j, p.q2),
         (0, f.T)(v, I, P, a.userId),
         g(a, (e) =>
             (function (e, t, n) {

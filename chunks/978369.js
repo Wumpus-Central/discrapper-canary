@@ -1,46 +1,46 @@
 n.d(t, { Z: () => f }), n(539854), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(481060),
-    l = n(785717),
+    l = n(481060),
+    a = n(785717),
     o = n(86419),
     c = n(286957),
     s = n(388032),
     u = n(44258);
 let d = i.memo(function (e) {
-    let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: l } = e;
-    return (0, r.jsx)(a.v2r, {
+    let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: a } = e;
+    return (0, r.jsx)(l.v2r, {
         navId: "widget-game-tags",
         "aria-label": s.intl.string(s.t.r6EJOu),
-        onClose: l,
+        onClose: a,
         onSelect: () => {},
         className: u.gameTagsMenu,
         children: Object.entries(c.aE).map((e) => {
-            let [l, o] = e,
-                u = ((e, l) => {
+            let [a, o] = e,
+                u = ((e, a) => {
                     let o = [];
                     return (
-                        l.type === c.kd.RADIO &&
+                        a.type === c.kd.RADIO &&
                             o.push(
                                 (0, r.jsx)(
-                                    a.k5B,
+                                    l.k5B,
                                     {
                                         id: "".concat(e, "-none"),
                                         group: e,
                                         label: s.intl.string(s.t.PoWNfe),
-                                        checked: !l.tags.some((e) => t.includes(e)),
-                                        action: () => i(l.tags),
+                                        checked: !a.tags.some((e) => t.includes(e)),
+                                        action: () => i(a.tags),
                                     },
                                     "none",
                                 ),
                             ),
-                        l.tags.forEach((i) => {
+                        a.tags.forEach((i) => {
                             let s = c.XV[i];
                             null != s &&
-                                (l.type === c.kd.RADIO
+                                (a.type === c.kd.RADIO
                                     ? o.push(
                                           (0, r.jsx)(
-                                              a.k5B,
+                                              l.k5B,
                                               {
                                                   id: i,
                                                   group: e,
@@ -53,7 +53,7 @@ let d = i.memo(function (e) {
                                       )
                                     : o.push(
                                           (0, r.jsx)(
-                                              a.S89,
+                                              l.S89,
                                               {
                                                   id: i,
                                                   label: s.getText(),
@@ -66,14 +66,14 @@ let d = i.memo(function (e) {
                         }),
                         o
                     );
-                })(l, o);
+                })(a, o);
             return (0, r.jsx)(
-                a.kSQ,
+                l.kSQ,
                 {
                     label: o.getLabel(),
                     children: u,
                 },
-                l,
+                a,
             );
         }),
     });
@@ -81,7 +81,7 @@ let d = i.memo(function (e) {
 function f(e) {
     let { tags: t, widgetType: n, applicationId: f, ref: g } = e,
         p = (0, i.useRef)(null),
-        { trackUserProfileEditAction: m } = (0, l.KZ)(),
+        { trackUserProfileEditAction: m } = (0, a.KZ)(),
         b = (0, i.useMemo)(() => (null != t ? t : []), [t]),
         h = (0, i.useCallback)(
             function (e) {
@@ -132,7 +132,7 @@ function f(e) {
             },
             [b, m, n, f],
         );
-    return (0, r.jsx)(a.yRy, {
+    return (0, r.jsx)(l.yRy, {
         targetElementRef: p,
         position: "right",
         align: "top",
@@ -161,7 +161,7 @@ function f(e) {
                     }
                 ),
                 children: (0, r.jsx)(
-                    a.P3F,
+                    l.P3F,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -191,7 +191,7 @@ function f(e) {
                         {
                             className: u.addButton,
                             "aria-label": s.intl.string(s.t.r6EJOu),
-                            children: (0, r.jsx)(a.Text, {
+                            children: (0, r.jsx)(l.Text, {
                                 variant: "text-xxs/medium",
                                 color: "none",
                                 children: s.intl.string(s.t.fZSejy),

@@ -1,13 +1,13 @@
-n.d(t, { X: () => a });
+n.d(t, { X: () => s });
 var i = n(668781),
     l = n(63063),
     r = n(981631),
-    s = n(388032);
-function a(e) {
+    a = n(388032);
+function s(e) {
     i.Z.show({
-        title: s.intl.string(s.t.vElC9b),
-        body: s.intl.format(s.t.yslqFM, { name: e }),
-        cancelText: s.intl.string(s.t.psXQHP),
+        title: a.intl.string(a.t.vElC9b),
+        body: a.intl.format(a.t.yslqFM, { name: e }),
+        cancelText: a.intl.string(a.t.psXQHP),
         onCancel() {
             window.open(l.Z.getArticleURL(r.BhN.PERMISSIONS_LOCKOUT));
         },

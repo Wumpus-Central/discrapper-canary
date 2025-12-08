@@ -1,4 +1,4 @@
-n.d(e, { o: () => E });
+n.d(e, { o: () => T });
 var i = n(657707),
     l = n(509613),
     s = n(358085),
@@ -14,7 +14,7 @@ let c = (0, l.x1)(r.n.LINUX_PANE, {
         useTitle: () => o.intl.string(o.t["7pPjTW"]),
         buildLayout: () => [c],
     }),
-    E = (0, l.m7)(r.n.LINUX_SIDEBAR_ITEM, {
+    T = (0, l.m7)(r.n.LINUX_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t["7pPjTW"]),
         getLegacySearchKey: () => a.s6.LINUX_SETTINGS,
         icon: i.pzj,

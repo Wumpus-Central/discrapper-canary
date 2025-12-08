@@ -2,9 +2,9 @@ n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    a = n.n(i),
-    l = n(913527),
-    s = n.n(l),
+    l = n.n(i),
+    a = n(913527),
+    s = n.n(a),
     o = n(28664),
     c = n(481060),
     d = n(70956),
@@ -13,7 +13,7 @@ var i = n(120356),
 let h = (e) => {
     let t,
         n,
-        { rateLimitPerUser: i, slowmodeCooldownGuess: l, isBypassSlowmode: h, leadingIcon: g = !1 } = e;
+        { rateLimitPerUser: i, slowmodeCooldownGuess: a, isBypassSlowmode: h, leadingIcon: g = !1 } = e;
     if (i >= d.Z.Seconds.HOUR) {
         let e = Math.floor(i / d.Z.Seconds.HOUR),
             t = Math.floor((i - e * d.Z.Seconds.HOUR) / d.Z.Seconds.MINUTE),
@@ -30,9 +30,9 @@ let h = (e) => {
             seconds: i - 60 * e,
         });
     } else n = u.intl.formatToPlainString(u.t["9yE8Ga"], { seconds: i });
-    if (!h && l > 0) {
-        let e = s().duration(l);
-        if (l > d.Z.Millis.HOUR) {
+    if (!h && a > 0) {
+        let e = s().duration(a);
+        if (a > d.Z.Millis.HOUR) {
             let n = "".concat(e.minutes()).padStart(2, "0"),
                 r = "".concat(e.seconds()).padStart(2, "0");
             t = "".concat(e.hours(), ":").concat(n, ":").concat(r);
@@ -49,7 +49,7 @@ let h = (e) => {
         x = (0, r.jsx)(c.ANZ, {
             size: "xs",
             color: "currentColor",
-            className: a()(m.slowModeIcon, { [m.leadingIcon]: g }),
+            className: l()(m.slowModeIcon, { [m.leadingIcon]: g }),
         });
     return (0, r.jsx)(o.u, {
         text: n,

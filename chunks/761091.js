@@ -35,9 +35,9 @@ function j(e) {
         A = e.features.has(v.GuildFeatures.COMMUNITY),
         R = (0, y.l)(!(0, h.r1)(e.id)),
         D = e.features.has(v.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
-        L = (0, m.Z)(e.id);
+        M = (0, m.Z)(e.id);
     (0, g.e)(e.id, "useGuildActionRows", !0);
-    let M = (0, p.BU)(e.id, "useGuildActionRows"),
+    let L = (0, p.BU)(e.id, "useGuildActionRows"),
         k = e.features.has(v.GuildFeatures.GAME_SERVERS);
     return (
         T && w.push(O.z.GUILD_HUB_HEADER_OPTIONS),
@@ -52,8 +52,8 @@ function j(e) {
         C && E && w.push(O.z.GUILD_GAME_SHOP),
         ((Z && (A || D)) || (n && e.features.has(v.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL))) &&
             w.push(O.z.GUILD_MOD_DASH_MEMBER_SAFETY),
-        L && w.push(O.z.GUILD_BOOSTS),
-        M && k && w.push(O.z.GAME_SERVERS),
+        M && w.push(O.z.GUILD_BOOSTS),
+        L && k && w.push(O.z.GAME_SERVERS),
         w
     );
 }

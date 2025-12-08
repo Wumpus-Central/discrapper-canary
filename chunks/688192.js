@@ -44,13 +44,13 @@ function j(e) {
         A = l.useRef(null),
         R = null != j ? j : A,
         { trackUserProfileWishlistAction: D } = (0, p.KZ)(),
-        L = r && !0 === t.isOwned && null != t.gifterUserId,
-        M = null != t.gifterUserId ? d.default.getUser(t.gifterUserId) : null,
-        k = null != M ? h.ZP.getName(M) : null,
-        G = L && null != M && null != k && "" !== k,
+        M = r && !0 === t.isOwned && null != t.gifterUserId,
+        L = null != t.gifterUserId ? d.default.getUser(t.gifterUserId) : null,
+        k = null != L ? h.ZP.getName(L) : null,
+        G = M && null != L && null != k && "" !== k,
         U = G
             ? (0, i.jsx)(c.qEK, {
-                  src: M.getAvatarURL(void 0, 48),
+                  src: L.getAvatarURL(void 0, 48),
                   size: c.EFr.SIZE_48,
                   "aria-label": k,
               })

@@ -8,8 +8,8 @@ n.d(t, {
 }),
     n(388685);
 var l = n(570140),
-    r = n(668781),
-    i = n(479531),
+    i = n(668781),
+    r = n(479531),
     a = n(983736),
     s = n(45966),
     o = n(819553),
@@ -45,7 +45,7 @@ async function j(e, t) {
         a = Array.from(I.Z.editedDefaultChannelIds).filter((e) => null != g.Z.getChannel(e)),
         [o, d] = (0, c.d9)(e, [...a]);
     if (n && t === S.Un.ONBOARDING_DEFAULT && (d.length < S.md || o.length < S.X))
-        return void r.Z.show({
+        return void i.Z.show({
             title: x.intl.string(x.t.iLdiqY),
             body: x.intl.string(x.t.JOT74c),
         });
@@ -53,8 +53,8 @@ async function j(e, t) {
         await (0, p.n_)(e, { mode: t });
     } catch (n) {
         var u;
-        let { fieldName: e, error: t } = null != (u = new i.Z(n).getAnyErrorMessageAndField()) ? u : {};
-        r.Z.show({
+        let { fieldName: e, error: t } = null != (u = new r.Z(n).getAnyErrorMessageAndField()) ? u : {};
+        i.Z.show({
             title: x.intl.string(x.t.iLdiqY),
             body: [e, t].filter(f.lm).join(": "),
         });

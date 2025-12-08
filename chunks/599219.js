@@ -2,9 +2,9 @@ n.d(t, { default: () => S }), n(388685);
 var a = n(54381),
     o = n(473749),
     s = n(120356),
-    r = n.n(s),
+    l = n.n(s),
     i = n(990547),
-    l = n(442837),
+    r = n(442837),
     c = n(481060),
     u = n(393238),
     d = n(600164),
@@ -96,7 +96,7 @@ function S(e) {
         })(e, ["onSlideChange"]),
         { onClose: S } = s,
         [L, w] = o.useState(!1),
-        M = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
+        M = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
         k = null != M && null == M.nsfwAllowed,
         [P, U] = o.useState(k ? y.F.AGE_GATE : y.F.CHOOSE_TEMPLATE),
         [R, B] = o.useState(null);
@@ -106,8 +106,8 @@ function S(e) {
     let [Z, H] = o.useState(null),
         [W, z] = o.useState(null),
         [Y, V] = o.useState(!1),
-        J = (0, l.e7)([N.Z], () => N.Z.getType() === j.M5.INVITE_UNCLAIMED),
-        q = o.useCallback(
+        J = (0, r.e7)([N.Z], () => N.Z.getType() === j.M5.INVITE_UNCLAIMED),
+        K = o.useCallback(
             (e) => {
                 z(e),
                     U(y.F.CREATION_INTENT),
@@ -118,7 +118,7 @@ function S(e) {
             },
             [z, U],
         ),
-        { content: K, footer: X } = (0, f.v)({
+        { content: q, footer: X } = (0, f.v)({
             hasFooter: !1,
             onBack: () => {
                 z(null), U(y.F.CHOOSE_TEMPLATE);
@@ -170,13 +170,13 @@ function S(e) {
         case y.F.CREATION_INTENT:
             eo = X;
     }
-    let { ref: es, width: er } = (0, u.ZP)();
+    let { ref: es, width: el } = (0, u.ZP)();
     if (L)
         return (0, a.jsx)(
             c.Y0X,
             D(F({}, s), {
                 size: c.CgR.MEDIUM,
-                className: r()(G.modal, G.completed),
+                className: l()(G.modal, G.completed),
                 "aria-labelledby": t,
                 parentComponent: "NUFModal",
                 children: (0, a.jsx)(A.Z, { onComplete: S }),
@@ -199,7 +199,7 @@ function S(e) {
                     theme: O.BRd.LIGHT,
                     children: (e) =>
                         (0, a.jsxs)("div", {
-                            className: r()(G.content, e),
+                            className: l()(G.content, e),
                             ref: es,
                             children: [
                                 (0, a.jsx)("div", {
@@ -208,7 +208,7 @@ function S(e) {
                                         activeSlide: P,
                                         onSlideReady: (e) => B(e),
                                         centered: !1,
-                                        width: er,
+                                        width: el,
                                         children: [
                                             (0, a.jsx)(c.Mi4, {
                                                 id: y.F.AGE_GATE,
@@ -227,10 +227,10 @@ function S(e) {
                                                 impressionName: i.ImpressionNames.GUILD_ADD_LANDING,
                                                 impressionProperties: ei,
                                                 children: (0, a.jsx)("div", {
-                                                    className: r()(G.container, G.shortFooter),
+                                                    className: l()(G.container, G.shortFooter),
                                                     children: (0, a.jsx)(h.Z, {
                                                         className: G.templates,
-                                                        onChooseTemplate: q,
+                                                        onChooseTemplate: K,
                                                         isNewUser: !0,
                                                     }),
                                                 }),
@@ -240,8 +240,8 @@ function S(e) {
                                                 impressionName: i.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
                                                 impressionProperties: ei,
                                                 children: (0, a.jsx)("div", {
-                                                    className: r()(G.container, G.standardFooter),
-                                                    children: K,
+                                                    className: l()(G.container, G.standardFooter),
+                                                    children: q,
                                                 }),
                                             }),
                                             (0, a.jsx)(c.Mi4, {
@@ -249,7 +249,7 @@ function S(e) {
                                                 impressionName: i.ImpressionNames.GUILD_ADD_CUSTOMIZE,
                                                 impressionProperties: ei,
                                                 children: (0, a.jsx)("div", {
-                                                    className: r()(G.container, G.standardFooter),
+                                                    className: l()(G.container, G.standardFooter),
                                                     children: Q,
                                                 }),
                                             }),
@@ -258,7 +258,7 @@ function S(e) {
                                                 impressionName: i.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
                                                 impressionProperties: ei,
                                                 children: (0, a.jsx)("div", {
-                                                    className: r()(G.container, G.standardFooter),
+                                                    className: l()(G.container, G.standardFooter),
                                                     children: ee,
                                                 }),
                                             }),
@@ -267,7 +267,7 @@ function S(e) {
                                                 impressionName: i.ImpressionNames.GUILD_ADD_JOIN,
                                                 impressionProperties: ei,
                                                 children: (0, a.jsx)("div", {
-                                                    className: r()(G.container, G.standardFooter),
+                                                    className: l()(G.container, G.standardFooter),
                                                     children: en,
                                                 }),
                                             }),
@@ -283,7 +283,7 @@ function S(e) {
                                 P === y.F.CHOOSE_TEMPLATE
                                     ? (0, a.jsx)(c.mzw, {
                                           justify: d.Z.Justify.BETWEEN,
-                                          className: r()(G.footer, G.join),
+                                          className: l()(G.footer, G.join),
                                           children: (0, a.jsx)(c.Anchor, {
                                               className: G.joinCTA,
                                               onClick: () => {

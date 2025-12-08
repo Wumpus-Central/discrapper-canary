@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(781311);
+n.d(t, { Z: () => S }), n(781311);
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -14,12 +14,12 @@ var i = n(120356),
     b = n(496675),
     p = n(768581),
     m = n(176354),
-    y = n(981631),
-    O = n(185923),
+    O = n(981631),
+    y = n(185923),
     h = n(388032),
     v = n(561782);
 let j = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
-function S(e) {
+function E(e) {
     let { emoji: t, isFocused: n } = e,
         { animated: i, src: a, surrogates: s } = t;
     return (
@@ -53,7 +53,7 @@ function S(e) {
         })
     );
 }
-function E(e, t) {
+function S(e, t) {
     let n = (0, c.MZ)(t.guild_id).filter((e) => {
         var n;
         return (
@@ -61,14 +61,14 @@ function E(e, t) {
             !m.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: t,
-                intention: O.Hz.REACTION,
+                intention: y.Hz.REACTION,
             })
         );
     });
     n.length > 4 && (n.length = 4);
     let i = g.nc.useSetting(),
         l = (0, f.$R)(t);
-    return (0, a.e7)([b.Z], () => i && l && (t.isPrivate() || b.Z.can(y.Plq.ADD_REACTIONS, t)), [t, l, i]) &&
+    return (0, a.e7)([b.Z], () => i && l && (t.isPrivate() || b.Z.can(O.Plq.ADD_REACTIONS, t)), [t, l, i]) &&
         n.length > 0
         ? (0, r.jsx)(s.kSQ, {
               className: v.wrapper,
@@ -80,7 +80,7 @@ function E(e, t) {
                           id: "quickreact-".concat(null != (l = n.id) ? l : i),
                           render: (e) => {
                               let { isFocused: t } = e;
-                              return (0, r.jsx)(S, {
+                              return (0, r.jsx)(E, {
                                   emoji: n,
                                   isFocused: t,
                               });

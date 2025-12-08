@@ -834,10 +834,10 @@ var r = (function (e) {
         } while (!t.isZero());
         return i.isUnit() ? e : e.multiply(i);
     }
-    function X(e, t) {
+    function Q(e, t) {
         return (e = ea(e).abs()), (t = ea(t).abs()), e.divide(q(e, t)).multiply(t);
     }
-    function Q(e, n, r) {
+    function X(e, n, r) {
         e = ea(e);
         var i = r || Math.random,
             a = z(e, (n = ea(n))),
@@ -1045,11 +1045,11 @@ var r = (function (e) {
         (l.max = K),
         (l.min = z),
         (l.gcd = q),
-        (l.lcm = X),
+        (l.lcm = Q),
         (l.isInstance = function (e) {
             return e instanceof c || e instanceof u || e instanceof d;
         }),
-        (l.randBetween = Q),
+        (l.randBetween = X),
         (l.fromArray = function (e, t, n) {
             return $(e.map(ea), ea(t || 10), n);
         }),

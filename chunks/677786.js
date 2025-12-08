@@ -6,7 +6,7 @@ var i = n(838436),
     o = n(63063),
     s = n(915009),
     l = n(981631),
-    c = n(744038),
+    c = n(225753),
     u = n(388032);
 function d() {
     let { hasConsented: e, updateConsent: t } = (0, s.aR)(l.pjP.USAGE_STATISTICS);

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Z }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(35282);
 var r = n(54381),
-    a = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    i = n(473749),
+    a = n(120356),
+    l = n.n(a),
     s = n(873546),
     o = n(442837),
     c = n(481060),
@@ -12,8 +12,8 @@ var r = n(54381),
     m = n(915346),
     h = n(783097),
     g = n(433534),
-    _ = n(299206),
-    f = n(726521),
+    f = n(299206),
+    _ = n(726521),
     b = n(703656),
     x = n(973616),
     v = n(594174),
@@ -29,9 +29,9 @@ let N = "start_application_install",
     T = "launch_activity";
 function A(e) {
     let { renderDropdown: t, size: n } = e,
-        i = a.useRef(null);
+        a = i.useRef(null);
     return (0, r.jsx)(c.yRy, {
-        targetElementRef: i,
+        targetElementRef: a,
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return t(n);
@@ -68,7 +68,7 @@ function A(e) {
                     return e;
                 })(
                     {
-                        buttonRef: i,
+                        buttonRef: a,
                         variant: "secondary",
                         size: n,
                         icon: c.xhG,
@@ -80,10 +80,10 @@ function A(e) {
     });
 }
 function L(e) {
-    let { application: t, variant: n, size: i, contentWidth: l } = e,
+    let { application: t, variant: n, size: a, contentWidth: l } = e,
         { onClickInstallApplication: o, canInstall: d } = (function (e) {
             let t = (0, I.nu)(),
-                n = a.useCallback(() => {
+                n = i.useCallback(() => {
                     var t;
                     let n = null != (t = S.z8.getField("guildId")) ? t : void 0;
                     (0, y.L)({
@@ -96,7 +96,7 @@ function L(e) {
                     });
                 }, [e]);
             return (
-                a.useEffect(() => {
+                i.useEffect(() => {
                     let e = new URL(location.href);
                     if (t && "true" === e.searchParams.get(N)) {
                         e.searchParams.delete(N);
@@ -105,7 +105,7 @@ function L(e) {
                     }
                 }, [t, n]),
                 {
-                    onClickInstallApplication: a.useCallback(() => {
+                    onClickInstallApplication: i.useCallback(() => {
                         if (
                             ((0, I.zZ)(P.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }),
                             (s.tq || s.Em) && null == e.custom_install_url)
@@ -131,7 +131,7 @@ function L(e) {
                                 (0, I.rf)({ [N]: "true" });
                         }
                     }, [e, n, t]),
-                    canInstall: a.useMemo(
+                    canInstall: i.useMemo(
                         () =>
                             (0, g.Eb)({
                                 customInstallUrl: e.custom_install_url,
@@ -147,42 +147,42 @@ function L(e) {
         ? (0, r.jsx)(c.hU, {
               variant: n,
               icon: c.svS,
-              size: i,
+              size: a,
               onClick: o,
               "aria-label": O.intl.string(O.t.NgXl3C),
               disabled: !d,
           })
         : (0, r.jsx)(c.Button, {
               variant: n,
-              size: i,
+              size: a,
               text: "small" === l ? O.intl.string(O.t.qRZ35t) : O.intl.string(O.t.NgXl3C),
               onClick: o,
               disabled: !d,
           });
 }
 function R(e) {
-    let { size: t, contentWidth: n, onClick: a, isSubmitting: i } = e;
+    let { size: t, contentWidth: n, onClick: i, isSubmitting: a } = e;
     return "icon" === n
         ? (0, r.jsx)(c.hU, {
               variant: "primary",
               icon: c.o1U,
               size: t,
-              onClick: a,
-              loading: i,
+              onClick: i,
+              loading: a,
               "aria-label": O.intl.string(O.t.QO7rO6),
           })
         : (0, r.jsx)(c.Button, {
               variant: "primary",
               size: t,
               text: O.intl.string(O.t.QO7rO6),
-              onClick: a,
-              loading: i,
+              onClick: i,
+              loading: a,
           });
 }
-let Z = a.forwardRef(function (e, t) {
-    let { application: n, size: i } = e,
+let Z = i.forwardRef(function (e, t) {
+    let { application: n, size: a } = e,
         { analyticsLocations: s } = (0, p.ZP)(),
-        g = a.useCallback(() => {
+        g = i.useCallback(() => {
             let e;
             (0, I.zZ)(P.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }),
                 (0, j.JG)(
@@ -194,19 +194,19 @@ let Z = a.forwardRef(function (e, t) {
                     () => (0, c.showToast)((0, c.createToast)(O.intl.string(O.t["L/PwZf"]), c.ToastType.SUCCESS)),
                 );
         }, [n.id]),
-        C = a.useCallback(() => {
+        C = i.useCallback(() => {
             let e = x.ZP.createFromServer(n);
-            (0, f.uu)({
+            (0, _.uu)({
                 application: e,
                 entrypoint: "app_directory",
             });
         }, [n]),
-        y = (0, _.Z)({
+        y = (0, f.Z)({
             id: n.id,
             label: O.intl.string(O.t["FfCL+6"]),
             onSuccess: () => (0, c.showToast)((0, c.createToast)(O.intl.string(O.t.eNjAah), c.ToastType.SUCCESS)),
         }),
-        S = a.useCallback(
+        S = i.useCallback(
             (e, t) =>
                 (0, r.jsxs)(c.v2r, {
                     navId: "application-directory-profile",
@@ -240,16 +240,16 @@ let Z = a.forwardRef(function (e, t) {
         { onClickLaunchActivity: N, isSubmitting: Z } = (function (e, t) {
             var n;
             let r = e.id,
-                i = null == e || null == (n = e.bot) ? void 0 : n.id,
-                l = null != i && (0, h.BQ)(e) && (0, h.ye)(e),
-                [s, c] = a.useState(!1),
+                a = null == e || null == (n = e.bot) ? void 0 : n.id,
+                l = null != a && (0, h.BQ)(e) && (0, h.ye)(e),
+                [s, c] = i.useState(!1),
                 p = (0, I.nu)(),
                 g = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-                _ = (0, o.e7)([d.ZP], () => d.ZP.getCurrentEmbeddedActivity()),
-                f = a.useCallback(
+                f = (0, o.e7)([d.ZP], () => d.ZP.getCurrentEmbeddedActivity()),
+                _ = i.useCallback(
                     async (t, n, r) => {
-                        if (null != _ && _.applicationId === e.id) {
-                            let e = _.location;
+                        if (null != f && f.applicationId === e.id) {
+                            let e = f.location;
                             (0, u.Z)("guild_id" in e ? e.guild_id : null, e);
                             return;
                         }
@@ -263,24 +263,24 @@ let Z = a.forwardRef(function (e, t) {
                         } catch (e) {}
                         c(!1);
                     },
-                    [_, e.id],
+                    [f, e.id],
                 );
-            a.useEffect(() => {
+            i.useEffect(() => {
                 let e = new URL(location.href),
                     n = "true" === e.searchParams.get(T);
-                if (p && l && n && null != i && null != g) {
+                if (p && l && n && null != a && null != g) {
                     e.searchParams.delete(T);
                     let n = e.pathname + e.search;
-                    (0, b.dL)(n), f(i, r, t);
+                    (0, b.dL)(n), _(a, r, t);
                 }
-            }, [p, l, i, r, t, g, f]);
-            let x = a.useCallback(async () => {
-                if (null != i) {
+            }, [p, l, a, r, t, g, _]);
+            let x = i.useCallback(async () => {
+                if (null != a) {
                     if (((0, I.zZ)(P.rMx.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: r }), !p))
                         return void (0, I.rf)({ [T]: "true" });
-                    await f(i, r, t);
+                    await _(a, r, t);
                 }
-            }, [i, r, t, p, f]);
+            }, [a, r, t, p, _]);
             return {
                 onClickLaunchActivity: l ? x : void 0,
                 isSubmitting: s,
@@ -296,21 +296,21 @@ let Z = a.forwardRef(function (e, t) {
                 children: [
                     w &&
                         (0, r.jsx)(R, {
-                            size: i,
+                            size: a,
                             contentWidth: "normal",
                             onClick: N,
                             isSubmitting: Z,
                         }),
                     (0, r.jsx)(L, {
                         application: n,
-                        size: i,
+                        size: a,
                         contentWidth: "normal",
                         variant: D,
                     }),
                     j.wS
                         ? (0, r.jsx)(c.hU, {
                               variant: "secondary",
-                              size: i,
+                              size: a,
                               icon: c.xPt,
                               onClick: g,
                               "aria-label": O.intl.string(O.t.z4sP5J),
@@ -318,7 +318,7 @@ let Z = a.forwardRef(function (e, t) {
                         : null,
                     (0, r.jsx)(A, {
                         renderDropdown: (e) => S(!1, e),
-                        size: i,
+                        size: a,
                     }),
                 ],
             }),
@@ -327,20 +327,20 @@ let Z = a.forwardRef(function (e, t) {
                 children: [
                     w &&
                         (0, r.jsx)(R, {
-                            size: i,
+                            size: a,
                             contentWidth: "small",
                             onClick: N,
                             isSubmitting: Z,
                         }),
                     (0, r.jsx)(L, {
                         application: n,
-                        size: i,
+                        size: a,
                         contentWidth: "small",
                         variant: D,
                     }),
                     (0, r.jsx)(A, {
                         renderDropdown: (e) => S(j.wS, e),
-                        size: i,
+                        size: a,
                     }),
                 ],
             }),
@@ -349,20 +349,20 @@ let Z = a.forwardRef(function (e, t) {
                 children: [
                     w &&
                         (0, r.jsx)(R, {
-                            size: i,
+                            size: a,
                             contentWidth: "icon",
                             onClick: N,
                             isSubmitting: Z,
                         }),
                     (0, r.jsx)(L, {
                         application: n,
-                        size: i,
+                        size: a,
                         contentWidth: "icon",
                         variant: D,
                     }),
                     (0, r.jsx)(A, {
                         renderDropdown: (e) => S(j.wS, e),
-                        size: i,
+                        size: a,
                     }),
                 ],
             }),

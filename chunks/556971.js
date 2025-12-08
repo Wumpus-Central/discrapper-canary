@@ -2,19 +2,19 @@ n.d(t, { b: () => i }), n(388685);
 var r = n(473749);
 function i(e) {
     let { slideCount: t, intervalMs: n = 3000 } = e,
-        [i, a] = (0, r.useState)(0),
-        [l, o] = (0, r.useState)(!1),
+        [i, l] = (0, r.useState)(0),
+        [a, o] = (0, r.useState)(!1),
         s = (0, r.useCallback)(
             (e) => {
-                l ||
+                a ||
                     e < 0 ||
                     e >= t ||
                     (o(!0),
                     setTimeout(() => {
-                        a(e), o(!1);
+                        l(e), o(!1);
                     }, 300));
             },
-            [l, t, 300],
+            [a, t, 300],
         );
     return (
         (0, r.useEffect)(() => {
@@ -26,7 +26,7 @@ function i(e) {
         }, [t, n, i, s]),
         {
             activeSlide: i,
-            isTransitioning: l,
+            isTransitioning: a,
         }
     );
 }

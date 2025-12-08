@@ -23,8 +23,8 @@ var l = n(311570),
     C = n(786040),
     S = n(67409),
     E = n(58201),
-    N = n(445794),
-    O = n(956472),
+    O = n(445794),
+    N = n(956472),
     T = n(832149),
     P = n(215023),
     I = n(474936),
@@ -184,7 +184,7 @@ let R = (e) => {
             fullWidth: !0,
         });
     },
-    B = (e) => {
+    F = (e) => {
         let {
             product: t,
             checkoutEligiblePrices: n,
@@ -228,7 +228,7 @@ let R = (e) => {
             fullWidth: !0,
         });
     },
-    F = (e) => {
+    B = (e) => {
         let { handlePreviewButtonClick: t, text: n } = e;
         return (0, a.jsx)(i.Button, {
             variant: "primary",
@@ -261,13 +261,13 @@ let R = (e) => {
                 isPartiallyOwnedBundle: S,
                 isPurchased: b,
             }),
-            w = (0, N.Iw)(t),
+            w = (0, O.Iw)(t),
             k = null != w,
             {
                 shouldCheckoutWithOrbs: G,
                 hasSufficientOrbs: z,
                 checkoutEligiblePrices: V,
-            } = (0, O.Ip)({
+            } = (0, N.Ip)({
                 product: t,
                 isPremiumUser: p,
                 prioritizedCurrency: d,
@@ -319,7 +319,7 @@ let R = (e) => {
                       analyticsLocations: H,
                       onClickAnalytics: u,
                   })
-                : (0, a.jsx)(B, {
+                : (0, a.jsx)(F, {
                       product: t,
                       checkoutEligiblePrices: V,
                       analyticsLocations: H,
@@ -329,7 +329,7 @@ let R = (e) => {
                   });
         if (G && !z)
             if (V.length > 1)
-                return (0, a.jsx)(F, {
+                return (0, a.jsx)(B, {
                     handlePreviewButtonClick: W,
                     text: c,
                 });

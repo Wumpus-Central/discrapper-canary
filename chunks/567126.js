@@ -25,8 +25,8 @@ var r = n(54381),
     _ = n(594190),
     g = n(751571),
     x = n(616022),
-    v = n(509212),
-    j = n(787695),
+    v = n(787695),
+    j = n(759479),
     S = n(263463),
     b = n(131951),
     y = n(449224),
@@ -85,14 +85,14 @@ function F(e, t, n, r) {
     return null != a && M.Mm.has(a) ? 2 : 1;
 }
 function H(e, t, n) {
-    let r = (0, j.Z)({ location: D.dr.STREAM_SOURCE_SELECT });
+    let r = (0, v.Z)({ location: D.dr.STREAM_SOURCE_SELECT });
     return i.useMemo(() => {
         if (null == n || !r) return null;
         for (let r of n) {
             var i, l;
             let n = t.find((e) => (0, w.Z)(r.id, e.windowHandle));
             if ((null == n ? void 0 : n.id) == null) continue;
-            let s = (0, v.lQ)(e, n.id);
+            let s = (0, j.lQ)(e, n.id);
             if (
                 null != s &&
                 (null == (i = s.userStatus) ? void 0 : i.enrolledAt) != null &&

@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var i = n(990547),
     l = n(881052),
-    r = n(573261),
-    s = n(981631);
-let a = {
-    createGuildFromTemplate: async function (e, t, n, a, o) {
+    a = n(573261),
+    r = n(981631);
+let s = {
+    createGuildFromTemplate: async function (e, t, n, s, o) {
         try {
             return (
-                await r.Z.post({
-                    url: s.ANM.GUILDS,
+                await a.Z.post({
+                    url: r.ANM.GUILDS,
                     body: {
                         name: e,
                         icon: t,
@@ -22,7 +22,7 @@ let a = {
                         event: i.NetworkActionNames.GUILD_CREATE,
                         properties: {
                             template_name: n.id,
-                            is_community_intent: a,
+                            is_community_intent: s,
                         },
                     },
                     rejectWithError: !1,

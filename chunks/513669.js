@@ -1,9 +1,9 @@
-A.d(t, { Z: () => h }), A(388685);
+A.d(t, { Z: () => v }), A(388685);
 var n = A(54381),
     r = A(473749),
     a = A(120356),
-    i = A.n(a),
-    l = A(28664),
+    l = A.n(a),
+    i = A(28664),
     o = A(755721),
     s = A(481060),
     d = A(813197),
@@ -54,16 +54,16 @@ function f(e, t) {
 }
 let p = "custom-image",
     m = r.forwardRef(function (e, t) {
-        let { selectedImageName: A, onChange: r, disabled: a = !1, name: l, alt: d, data: u } = e,
-            p = l === A,
+        let { selectedImageName: A, onChange: r, disabled: a = !1, name: i, alt: d, data: u } = e,
+            p = i === A,
             m = (0, o.jm)({
                 isSelected: p,
                 label: d,
             }),
-            h = a
+            v = a
                 ? void 0
                 : () => {
-                      r(u, l);
+                      r(u, i);
                   };
         return (0, n.jsx)(
             s.P3F,
@@ -71,11 +71,11 @@ let p = "custom-image",
                 g(
                     {
                         ref: t,
-                        className: i()(c.radioOption, {
+                        className: l()(c.radioOption, {
                             [c.selected]: p,
                             [c.disabled]: a,
                         }),
-                        onClick: h,
+                        onClick: v,
                         "aria-disabled": a,
                     },
                     m,
@@ -90,13 +90,13 @@ let p = "custom-image",
             ),
         );
     });
-function h(e) {
+function v(e) {
     let {
             presetImages: t,
             image: A,
             imageName: a,
-            savedImageName: h,
-            onChange: v,
+            savedImageName: v,
+            onChange: h,
             uploadButtonLabel: q = u.intl.string(u.t["MsUY/S"]),
             radioGroupAriaLabel: b = u.intl.string(u.t["0Q0UJq"]),
             disabled: C = !1,
@@ -107,8 +107,8 @@ function h(e) {
         P = r.useRef(null),
         F = r.useRef(null);
     r.useEffect(() => {
-        h !== p && (V(null), O(null));
-    }, [h]);
+        v !== p && (V(null), O(null));
+    }, [v]);
     let y = null != x ? u.intl.formatToPlainString(u.t["Kw+5YX"], { filename: x }) : u.intl.string(u.t.SNPvSv),
         I = (0, o.Jb)({
             orientation: "horizontal",
@@ -149,7 +149,7 @@ function h(e) {
                 (0, n.jsx)(s.tEY, {
                     within: !0,
                     children: (0, n.jsxs)("div", {
-                        className: i()(c.uploadButton, {
+                        className: l()(c.uploadButton, {
                             [c.disabled]: C,
                             [c.hidden]: null != j,
                         }),
@@ -170,7 +170,7 @@ function h(e) {
                                 ref: P,
                                 tabIndex: 0,
                                 onChange: (e, t) => {
-                                    null != t && (O(t.name), V(e), v(e, p));
+                                    null != t && (O(t.name), V(e), h(e, p));
                                 },
                                 "aria-label": q,
                             }),
@@ -181,7 +181,7 @@ function h(e) {
                     (0, n.jsxs)("div", {
                         className: c.customImageActionContainer,
                         children: [
-                            (0, n.jsx)(l.u, {
+                            (0, n.jsx)(i.u, {
                                 asContainer: !0,
                                 text: u.intl.string(u.t.AQYXMO),
                                 children: (0, n.jsx)(s.P3F, {
@@ -198,13 +198,13 @@ function h(e) {
                                     }),
                                 }),
                             }),
-                            (0, n.jsx)(l.u, {
+                            (0, n.jsx)(i.u, {
                                 asContainer: !0,
                                 text: u.intl.string(u.t.WxqWU0),
                                 children: (0, n.jsx)(s.P3F, {
                                     className: c.customImageAction,
                                     onClick: () => {
-                                        a === p && v(t[0].data, t[0].name), V(null), O(null);
+                                        a === p && h(t[0].data, t[0].name), V(null), O(null);
                                     },
                                     "aria-label": u.intl.formatToPlainString(u.t.Z43V9S, { filename: x }),
                                     children: (0, n.jsx)(s.XHJ, {
@@ -233,7 +233,7 @@ function h(e) {
                                     (0, n.jsx)(m, {
                                         ref: F,
                                         selectedImageName: a,
-                                        onChange: v,
+                                        onChange: h,
                                         disabled: C,
                                         name: p,
                                         alt: y,
@@ -245,7 +245,7 @@ function h(e) {
                                         g(
                                             {
                                                 selectedImageName: a,
-                                                onChange: v,
+                                                onChange: h,
                                                 disabled: C,
                                             },
                                             e,

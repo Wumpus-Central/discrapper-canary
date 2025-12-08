@@ -55,8 +55,8 @@ var r = n(54381),
     K = n(581883),
     z = n(526665),
     q = n(436267),
-    X = n(494620),
-    Q = n(273313),
+    Q = n(494620),
+    X = n(273313),
     J = n(869743),
     $ = n(518596),
     ee = n(981631),
@@ -161,15 +161,15 @@ let ef = (e) => {
             (0, N.Z)(e) &&
                 ((n = en.intl.formatToPlainString(en.t["paC+US"], { applicationName: e.name })),
                 (i = en.intl.formatToPlainString(en.t.inM1Yt, { applicationName: e.name })),
-                (a = (0, r.jsx)(X.Z, {
-                    look: X.z.WARNING,
+                (a = (0, r.jsx)(Q.Z, {
+                    look: Q.z.WARNING,
                     children: en.intl.string(en.t.LY35Zy),
                 }))),
             (0, q.Z)(e.id) &&
                 (a = (0, r.jsxs)(r.Fragment, {
                     children: [
                         a,
-                        (0, r.jsx)(X.Z, { children: en.intl.format(en.t.KRnERi, { applicationName: e.name }) }),
+                        (0, r.jsx)(Q.Z, { children: en.intl.format(en.t.KRnERi, { applicationName: e.name }) }),
                     ],
                 })),
             (0, E.h7j)((e) =>
@@ -316,7 +316,7 @@ let ef = (e) => {
                       },
             ),
             [V, H] = i.useState(!1),
-            [X, Q] = i.useState(!1),
+            [Q, X] = i.useState(!1),
             eo = () => {
                 let e = [];
                 for (let n of t)
@@ -324,7 +324,7 @@ let ef = (e) => {
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(E.zF9, {
                         className: er.appDetailsSection,
-                        isExpanded: X,
+                        isExpanded: Q,
                         collapsibleContent: (0, r.jsxs)("ul", {
                             className: er.appDetailsContent,
                             children: [
@@ -374,7 +374,7 @@ let ef = (e) => {
                                     (0, r.jsxs)(E.P3F, {
                                         className: er.appDetailsSectionHeader,
                                         onClick: (e) => {
-                                            Q(!X), n(e);
+                                            X(!Q), n(e);
                                         },
                                         children: [
                                             (0, r.jsx)(E.Heading, {
@@ -382,7 +382,7 @@ let ef = (e) => {
                                                 color: "header-primary",
                                                 children: en.intl.string(en.t.xrmhRX),
                                             }),
-                                            X
+                                            Q
                                                 ? (0, r.jsx)(E.CJ0, {
                                                       size: "md",
                                                       color: E.TVs.colors.INTERACTIVE_NORMAL,
@@ -393,7 +393,7 @@ let ef = (e) => {
                                                   }),
                                         ],
                                     }),
-                                    !X &&
+                                    !Q &&
                                         (0, r.jsx)(E.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-subtle",
@@ -740,7 +740,7 @@ let ef = (e) => {
                           });
         return e
             ? (0, r.jsx)(v.Z, {})
-            : (0, r.jsx)(Q.Z, {
+            : (0, r.jsx)(X.Z, {
                   title: en.intl.string(en.t["f6kk+r"]),
                   children: (0, r.jsx)(E.y5t, {
                       component: (0, r.jsxs)(E.Zbd, {

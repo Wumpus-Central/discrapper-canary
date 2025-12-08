@@ -11,20 +11,20 @@ var r,
     h = n(846519),
     g = n(28664),
     p = n(481060),
-    f = n(893776),
-    m = n(881052),
+    m = n(893776),
+    f = n(881052),
     _ = n(899370),
     x = n(224841),
     E = n(13430),
     v = n(213609),
-    b = n(882037),
-    j = n(254942),
+    j = n(882037),
+    b = n(254942),
     I = n(481230),
     y = n(388905),
     S = n(853268),
-    O = n(639946),
-    N = n(616952),
-    C = n(792766),
+    N = n(639946),
+    C = n(616952),
+    O = n(792766),
     T = n(692483),
     A = n(100159),
     Z = n(473855),
@@ -125,7 +125,7 @@ class eu extends (r = s.PureComponent) {
             ),
             { flush: !0 },
         ),
-            null == this.props.consentRequired && f.Z.getLocationMetadata(),
+            null == this.props.consentRequired && m.Z.getLocationMetadata(),
             (0, G.e)("register");
     }
     componentWillUnmount() {
@@ -180,9 +180,9 @@ class eu extends (r = s.PureComponent) {
             { invite: l, guildTemplate: a, giftCode: o, onRegister: c, usernameSuggestion: u } = this.props,
             d = null != l ? l.code : null,
             h = null != o ? o.skuId : null,
-            g = b.MD.getState(),
+            g = j.MD.getState(),
             p = (0, q.Ew)(u) ? null : t === u,
-            f = ee.a ? await (0, T.K)(t) : t,
+            m = ee.a ? await (0, T.K)(t) : t,
             _ = ee.a ? await (0, T.K)(n) : n;
         K.S.dispatch(X.CkL.WAVE_EMPHASIZE),
             this.setState({
@@ -201,7 +201,7 @@ class eu extends (r = s.PureComponent) {
                   })
                 : await (0, I.R$)({
                       email: e,
-                      username: f,
+                      username: m,
                       globalName: _,
                       consent: i,
                       password: r,
@@ -214,8 +214,8 @@ class eu extends (r = s.PureComponent) {
                   }),
                 null == c || c();
         } catch (t) {
-            if ((this.setState({ registering: !1 }), !(t instanceof m.Hx))) return;
-            let e = (0, j.F)(t);
+            if ((this.setState({ registering: !1 }), !(t instanceof f.Hx))) return;
+            let e = (0, b.F)(t);
             this.setState({ apiErrors: e });
         }
     }
@@ -310,7 +310,7 @@ class eu extends (r = s.PureComponent) {
     renderInviteHeader() {
         let { invite: e } = this.props;
         return (null == e ? void 0 : e.guild_scheduled_event) != null
-            ? (0, i.jsx)(O.r, {
+            ? (0, i.jsx)(N.r, {
                   channel: e.channel,
                   guildScheduledEvent: e.guild_scheduled_event,
               })
@@ -409,7 +409,7 @@ class eu extends (r = s.PureComponent) {
                 null != e && u
                     ? (0, i.jsx)(y.ZP, {
                           className: es.marginTop20,
-                          children: (0, i.jsx)(C.y, {
+                          children: (0, i.jsx)(O.y, {
                               guild: e.guild,
                               onlineCount: e.approximate_presence_count,
                           }),
@@ -439,16 +439,16 @@ class eu extends (r = s.PureComponent) {
                 parsedDateOfBirth: u,
                 globalNameFocused: d,
                 emailClientError: h,
-                usernameClientError: f,
-                passwordClientError: m,
+                usernameClientError: m,
+                passwordClientError: f,
                 dateOfBirthClientError: _,
                 registering: x,
-                apiErrors: { email: v, username: b, global_name: j, password: I, date_of_birth: S } = {},
+                apiErrors: { email: v, username: j, global_name: b, password: I, date_of_birth: S } = {},
             } = this.state,
-            { consentRequired: O, authBoxClassName: C, hasLoggedInAccounts: T } = this.props,
+            { consentRequired: N, authBoxClassName: O, hasLoggedInAccounts: T } = this.props,
             A = this.renderErrorMessage(),
             Z = (0, i.jsx)(g.u, {
-                text: !c && O ? er.intl.string(er.t.AY4IVA) : null,
+                text: !c && N ? er.intl.string(er.t.AY4IVA) : null,
                 children: (0, i.jsx)("div", {
                     className: es.marginTop20,
                     children: (0, i.jsx)(p.Button, {
@@ -507,7 +507,7 @@ class eu extends (r = s.PureComponent) {
                         name: "global_name",
                         value: l,
                         onChange: (e) => this.setState({ globalName: e }),
-                        error: ec(j),
+                        error: ec(b),
                         maxLength: en.hy,
                         autoComplete: "off",
                         setRef: (e) => {
@@ -541,7 +541,7 @@ class eu extends (r = s.PureComponent) {
                                 name: "username",
                                 value: r,
                                 onChange: R,
-                                error: null != f ? f : ec(b),
+                                error: null != m ? m : ec(j),
                                 autoComplete: "off",
                                 setRef: (e) => {
                                     this.usernameRef = e;
@@ -562,7 +562,7 @@ class eu extends (r = s.PureComponent) {
                                 password: e,
                                 passwordClientError: 0 === e.length ? er.intl.string(er.t.EkokLy) : null,
                             }),
-                        error: null != m ? m : ec(I),
+                        error: null != f ? f : ec(I),
                         type: "password",
                         autoComplete: "new-password",
                         setRef: (e) => {
@@ -584,7 +584,7 @@ class eu extends (r = s.PureComponent) {
                         onFocus: this.trackInputFocus,
                         onBlur: this.trackInputBlur,
                     }),
-                    (0, i.jsx)(N.Z, {}),
+                    (0, i.jsx)(C.Z, {}),
                     this.renderConsentComponent(),
                     Z,
                     A,
@@ -604,7 +604,7 @@ class eu extends (r = s.PureComponent) {
             ? (0, i.jsx)(Q.Z, {
                   onSubmit: this.handleSubmit,
                   tag: "form",
-                  className: a()(C, ei.horizontalAuthBox),
+                  className: a()(O, ei.horizontalAuthBox),
                   children: () => [
                       L,
                       (0, i.jsxs)(
@@ -626,7 +626,7 @@ class eu extends (r = s.PureComponent) {
             : (0, i.jsxs)(y.ZP, {
                   onSubmit: this.handleSubmit,
                   tag: "form",
-                  className: C,
+                  className: O,
                   children: [
                       T
                           ? (0, i.jsx)("div", {
@@ -699,7 +699,7 @@ class eu extends (r = s.PureComponent) {
                         : null != c
                           ? ((t = X.Z5c.LOGIN), (d.redirect_to = c))
                           : ((t = X.Z5c.LOGIN), "" !== n && (d = { email: n })),
-                    f.Z.loginReset(),
+                    m.Z.loginReset(),
                     u(t, {
                         search: (0, o.stringify)(d),
                         source: "register",

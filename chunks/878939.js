@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(442837),
-    a = n(638730),
-    o = n(167762),
+    o = n(638730),
+    a = n(167762),
     s = n(293273),
     u = n(594174),
     c = n(444295),
@@ -16,10 +16,10 @@ function m(e) {
         n = (0, h.II)(),
         m = null == n ? void 0 : n.id,
         g = null == n ? void 0 : n.altId,
-        y = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
-        O = null != g ? g : m,
+        O = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
+        y = null != g ? g : m,
         [E, v] = r.useState(new Set()),
-        [S, b] = r.useState(new Set()),
+        [b, S] = r.useState(new Set()),
         x = r.useCallback((e, t, n) => {
             v((n) => {
                 if (t) {
@@ -31,7 +31,7 @@ function m(e) {
                 }
                 return new Set(n);
             }),
-                b((i) => {
+                S((i) => {
                     if (n && t) {
                         if (i.has(e)) return i;
                         i.add(e);
@@ -43,8 +43,8 @@ function m(e) {
                 });
         }, []),
         j = (0, c.ee)(() => E, [E]),
-        I = (0, c.ee)(() => S, [S]),
-        C = (0, a.h)(c.zi, 3000, []);
+        I = (0, c.ee)(() => b, [b]),
+        C = (0, o.h)(c.zi, 3000, []);
     r.useEffect(() => {
         0 === j.size ||
             t ||
@@ -55,61 +55,61 @@ function m(e) {
                 contentInventoryIds: [],
             });
     }, [j, I, t, C]);
-    let Z = (0, l.e7)([s.Z], () => (null == O ? null : s.Z.getApplicationActivity(O)), [O]),
+    let Z = (0, l.e7)([s.Z], () => (null == y ? null : s.Z.getApplicationActivity(y)), [y]),
         N = (0, r.useCallback)((e, t) => {
             let n = (function (e) {
                 switch (e) {
-                    case o.sG.OPEN_DIRECT_MESSAGE:
+                    case a.sG.OPEN_DIRECT_MESSAGE:
                         return {
                             type: c.Qu.FRIEND_LIST,
                             value: c.bk.CHAT,
                         };
-                    case o.sG.ACCEPT_FRIEND_REQUEST:
+                    case a.sG.ACCEPT_FRIEND_REQUEST:
                         return {
                             type: c.Qu.FRIEND_REQUEST,
                             value: c.bk.ACCEPT_REQUEST,
                         };
-                    case o.sG.DECLINE_FRIEND_REQUEST:
+                    case a.sG.DECLINE_FRIEND_REQUEST:
                         return {
                             type: c.Qu.FRIEND_REQUEST,
                             value: c.bk.DECLINE_REQUEST,
                         };
-                    case o.sG.CANCEL_FRIEND_REQUEST:
+                    case a.sG.CANCEL_FRIEND_REQUEST:
                         return {
                             type: c.Qu.FRIEND_REQUEST,
                             value: c.bk.CANCEL_REQUEST,
                         };
-                    case o.sG.SEND_FRIEND_REQUEST:
+                    case a.sG.SEND_FRIEND_REQUEST:
                         return {
                             type: c.Qu.FRIEND_REQUEST,
                             value: c.bk.SEND_REQUEST,
                         };
-                    case o.sG.SEND_ACTIVITY_INVITE:
+                    case a.sG.SEND_ACTIVITY_INVITE:
                         return {
                             type: c.Qu.INVITE,
                             value: c.bk.INVITE_SENT,
                         };
-                    case o.sG.ASK_TO_JOIN:
+                    case a.sG.ASK_TO_JOIN:
                         return {
                             type: c.Qu.INVITE,
                             value: c.bk.JOIN_REQUEST_SENT,
                         };
-                    case o.sG.USER_CONTEXT_MENU:
+                    case a.sG.USER_CONTEXT_MENU:
                         return {
                             type: c.Qu.FRIEND_LIST,
                             value: c.bk.SETTINGS_OPENED,
                         };
-                    case o.sG.OPEN_FRIEND_MODAL:
+                    case a.sG.OPEN_FRIEND_MODAL:
                         return {
                             type: c.Qu.FRIEND_LIST,
                             value: c.bk.PROFILE_OPENED,
                         };
-                    case o.sG.OPEN_SETTINGS_MODAL:
+                    case a.sG.OPEN_SETTINGS_MODAL:
                         return {
                             type: c.Qu.FRIEND_LIST,
                             value: c.bk.SETTINGS_OPENED,
                         };
-                    case o.sG.SEARCH_FRIENDS:
+                    case a.sG.SEARCH_FRIENDS:
                         return {
                             type: c.Qu.FRIEND_LIST,
                             value: c.bk.SEARCH,
@@ -169,14 +169,14 @@ function m(e) {
             () =>
                 (0, i.jsx)(d.lE, {
                     activity: Z,
-                    currentUser: y,
+                    currentUser: O,
                     showInviteButton: !1,
                 }),
-            [Z, y],
+            [Z, O],
         );
     return t
         ? null
-        : (0, i.jsx)(o.r1, {
+        : (0, i.jsx)(a.r1, {
               containerClassName: f.container,
               listClassName: f.list,
               closePopout: w,

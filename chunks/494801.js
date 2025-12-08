@@ -29,7 +29,7 @@ function l(e) {
                   alt: "",
               }),
         b = t ? s.intl.string(s.t.EuwcxO) : s.intl.string(s.t["e/z3na"]),
-        g = t ? s.intl.string(s.t["1GjS/W"]) : s.intl.string(s.t["7tXu0i"]);
+        x = t ? s.intl.string(s.t["1GjS/W"]) : s.intl.string(s.t["7tXu0i"]);
     return (0, o.jsx)(r.t, {
         platformType: i.ABu.XBOX,
         isWaitingForConnection: t,
@@ -40,6 +40,6 @@ function l(e) {
         onClose: p,
         img: f,
         title: b,
-        body: g,
+        body: x,
     });
 }

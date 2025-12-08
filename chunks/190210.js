@@ -47,8 +47,8 @@ var i = n(54381),
     k = n(127654),
     U = n(746877),
     V = n(541716),
-    F = n(667829),
-    H = n(258696),
+    H = n(667829),
+    F = n(258696),
     B = n(893718),
     G = n(273031),
     z = n(303628),
@@ -183,8 +183,8 @@ let en = r.memo(
                 canEveryoneSendMessages: eU,
             } = (0, B.TE)(L, k, eM, I),
             eV = !A.dN.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
-            eF = !eV || !(null == (n = k.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
-            eH = (0, T.Z)(),
+            eH = !eV || !(null == (n = k.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
+            eF = (0, T.Z)(),
             { fontSize: eB } = (0, d.cj)([C.Z], () => ({
                 fontSize: C.Z.fontSize,
                 isSubmitButtonEnabled: C.Z.isSubmitButtonEnabled,
@@ -311,7 +311,7 @@ let en = r.memo(
                         [n],
                     ),
                 };
-            })(eJ, eT, eF),
+            })(eJ, eT, eH),
             { expressionPickerView: e8, shouldHideExpressionPicker: e5, handleOuterClick: e6 } = (0, B.iV)(k, eN, L.id),
             e9 = (0, B.aT)(p),
             { currentAutocompleteType: te, handleAutocompleteVisibilityChange: tt } = (0, B.vB)(k, L.id),
@@ -420,7 +420,7 @@ let en = r.memo(
                                                     children: (0, i.jsx)(f.tEY, {
                                                         ringTarget: eZ,
                                                         ringClassName: Q.focusRing,
-                                                        children: (0, i.jsx)(F.Z, {
+                                                        children: (0, i.jsx)(H.Z, {
                                                             ref: eN,
                                                             id: j,
                                                             focused: G,
@@ -436,7 +436,7 @@ let en = r.memo(
                                                             type: V.Ie.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: ek,
                                                             uploadPromptCharacterCount: W.en1,
-                                                            maxCharacterCount: null != ef ? ef : eH,
+                                                            maxCharacterCount: null != ef ? ef : eF,
                                                             allowNewLines: !0,
                                                             "aria-describedby": eg,
                                                             onChange: Y,
@@ -484,7 +484,7 @@ let en = r.memo(
                                         className: J.footerPart,
                                         children: [
                                             (0, i.jsx)(el, { channel: L }),
-                                            (0, i.jsx)(H.Z, {
+                                            (0, i.jsx)(F.Z, {
                                                 type: V.Ie.CREATE_ANNOUNCEMENT_POST,
                                                 disabled: eD,
                                                 channel: L,

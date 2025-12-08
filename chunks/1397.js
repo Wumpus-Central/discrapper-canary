@@ -33,12 +33,12 @@ var i = n(54381),
     M = n(496675),
     R = n(594174),
     L = n(700785),
-    k = n(413251),
-    D = n(862679),
+    D = n(413251),
+    k = n(862679),
     U = n(981631),
     V = n(701488),
-    F = n(815660),
-    H = n(388032),
+    H = n(815660),
+    F = n(388032),
     B = n(97508);
 function G(e, t, n) {
     return (
@@ -129,59 +129,59 @@ class q extends r.PureComponent {
                 useReducedMotion: b,
             };
         if (e && !h) {
-            if (((j.message = H.intl.string(H.t.Hl0Mqh)), null != f && f >= 1000)) {
+            if (((j.message = F.intl.string(F.t.Hl0Mqh)), null != f && f >= 1000)) {
                 let e = 1000 * Math.floor(f / 1000);
-                j.subtitle = H.intl.formatToPlainString(H.t.C5bgrC, { count: e.toLocaleString() });
+                j.subtitle = F.intl.formatToPlainString(F.t.C5bgrC, { count: e.toLocaleString() });
             }
-            (j.buttonText = H.intl.string(H.t["3aOv+h"])),
+            (j.buttonText = F.intl.string(F.t["3aOv+h"])),
                 (j.onButtonClick = this.handleFollowAnnouncement),
                 t &&
                     ((j.onSecondaryButtonClick = this.handleJoinServer),
-                    (j.secondaryButtonText = H.intl.string(H.t.RLch70)));
+                    (j.secondaryButtonText = F.intl.string(F.t.RLch70)));
         } else if (n)
-            (j.message = H.intl.string(H.t["Eg3/c9"])),
-                (j.buttonText = H.intl.string(H.t.fiNVin)),
+            (j.message = F.intl.string(F.t["Eg3/c9"])),
+                (j.buttonText = F.intl.string(F.t.fiNVin)),
                 (j.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount);
         else if (g)
             switch (null == v ? void 0 : v.applicationStatus) {
                 case y.wB.SUBMITTED:
-                    (j.message = H.intl.string(H.t["5iLvSx"])),
-                        (j.subtitle = H.intl.string(H.t.FdsK4h)),
-                        (j.buttonText = H.intl.string(H.t.mqtdmQ)),
+                    (j.message = F.intl.string(F.t["5iLvSx"])),
+                        (j.subtitle = F.intl.string(F.t.FdsK4h)),
+                        (j.buttonText = F.intl.string(F.t.mqtdmQ)),
                         (j.onButtonClick = this.handleCancelApplication);
                     break;
                 case y.wB.REJECTED:
-                    (j.message = H.intl.string(H.t.lk30cY)),
-                        (j.buttonText = H.intl.string(H.t["8RrsHr"])),
+                    (j.message = F.intl.string(F.t.lk30cY)),
+                        (j.buttonText = F.intl.string(F.t["8RrsHr"])),
                         (j.onButtonClick = this.handleViewApplicationRejection);
                     break;
                 default:
-                    (j.message = H.intl.string(H.t.rEBKvg)),
-                        (j.buttonText = H.intl.string(H.t["r8/DT+"])),
+                    (j.message = F.intl.string(F.t.rEBKvg)),
+                        (j.buttonText = F.intl.string(F.t["r8/DT+"])),
                         (j.buttonVariant = "primary"),
                         (j.onButtonClick = this.handleShowMemberVerification);
             }
         else if (_ || null == O)
             r && !C
-                ? ((j.message = H.intl.string(H.t["2dThMM"])),
-                  (j.buttonText = H.intl.string(H.t["50gfOv"])),
+                ? ((j.message = F.intl.string(F.t["2dThMM"])),
+                  (j.buttonText = F.intl.string(F.t["50gfOv"])),
                   (j.onButtonClick = this.handleVerifyPhone))
                 : l
-                  ? ((j.message = H.intl.string(H.t.FkGPS5)),
-                    (j.buttonText = H.intl.string(H.t.lm1UKt)),
+                  ? ((j.message = F.intl.string(F.t.FkGPS5)),
+                    (j.buttonText = F.intl.string(F.t.lm1UKt)),
                     (j.onButtonClick = this.handleResendVerification))
                   : a
-                    ? ((j.message = H.intl.formatToPlainString(H.t.IH7RMF, { min: U.YeM.MEMBER_AGE })),
+                    ? ((j.message = F.intl.formatToPlainString(F.t.IH7RMF, { min: U.YeM.MEMBER_AGE })),
                       (j.countdown = o))
                     : s &&
-                      ((j.message = H.intl.formatToPlainString(H.t["2JA2GH"], { min: U.YeM.ACCOUNT_AGE })),
+                      ((j.message = F.intl.formatToPlainString(F.t["2JA2GH"], { min: U.YeM.ACCOUNT_AGE })),
                       (j.countdown = c));
         else {
             var S;
             (j.imageSrc = null != (S = O.getIconURL(V.Si.SMALL)) ? S : void 0),
-                (j.message = H.intl.format(H.t.EvDn1D, { name: O.name })),
+                (j.message = F.intl.format(F.t.EvDn1D, { name: O.name })),
                 null != O.connectionEntrypointUrl &&
-                    ((j.buttonText = H.intl.string(H.t.S0W8Z5)),
+                    ((j.buttonText = F.intl.string(F.t.S0W8Z5)),
                     (j.onButtonClick = () => {
                         window.open(O.connectionEntrypointUrl, "_blank");
                     }));
@@ -195,7 +195,7 @@ class q extends r.PureComponent {
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
                 (0, i.jsx)(
-                    D.Z,
+                    k.Z,
                     W(z({}, j), {
                         children: (0, i.jsxs)("div", {
                             ref: this.textAreaContainerRef,
@@ -248,10 +248,10 @@ class q extends r.PureComponent {
                 let { guild: e } = this.props;
                 null != e &&
                     (0, c.Z)({
-                        title: H.intl.string(H.t.aIz1oV),
-                        subtitle: H.intl.string(H.t["13tjTU"]),
+                        title: F.intl.string(F.t.aIz1oV),
+                        subtitle: F.intl.string(F.t["13tjTU"]),
                         variant: "primary",
-                        confirmText: H.intl.string(H.t["cY+Oob"]),
+                        confirmText: F.intl.string(F.t["cY+Oob"]),
                         onConfirm: () => g.Z.removeGuildJoinRequest(e.id),
                     });
             }),
@@ -276,7 +276,7 @@ class q extends r.PureComponent {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
                         return (t) => (0, i.jsx)(e, z({ reason: P.L.GUILD_PHONE_REQUIRED }, t));
                     },
-                    { modalKey: F.M },
+                    { modalKey: H.M },
                 );
             }),
             G(this, "handleResendVerification", () => {
@@ -285,8 +285,8 @@ class q extends r.PureComponent {
                 let t = null == (e = R.default.getCurrentUser()) ? void 0 : e.email;
                 null != t &&
                     (0, s.Z)({
-                        title: H.intl.string(H.t.LykQYk),
-                        subtitle: H.intl.format(H.t.azKEPy, { email: t }),
+                        title: F.intl.string(F.t.LykQYk),
+                        subtitle: F.intl.format(F.t.azKEPy, { email: t }),
                     });
             }),
             G(this, "handleTextAreaClick", () => {
@@ -366,7 +366,7 @@ function K(e) {
         C = (0, o.e7)([x.Z], () => x.Z.shouldShowPopout(a)),
         O = (0, o.e7)([M.Z], () => M.Z.can(U.Plq.SEND_MESSAGES, r)),
         j = (0, o.e7)([_.Z], () => _.Z.getRequest(a)),
-        { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: P } = (0, k.Z)(r.linkedLobby),
+        { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: P } = (0, D.Z)(r.linkedLobby),
         I = W(z({}, c), {
             guild: s,
             isLurking: p,

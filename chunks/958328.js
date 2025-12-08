@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var a = n(54381);
 n(473749);
 var l = n(120356),
-    i = n.n(l),
-    r = n(149765),
+    r = n.n(l),
+    i = n(149765),
     s = n(442837),
     o = n(481060),
     c = n(933557),
@@ -19,14 +19,14 @@ var l = n(120356),
 function v(e) {
     let { title: t, can: n } = e,
         l = n ? o.dz2 : o.Dio,
-        r = (0, a.jsx)("div", {
-            className: i()(g.iconOuter, n ? g.iconCheck : g.iconCross),
+        i = (0, a.jsx)("div", {
+            className: r()(g.iconOuter, n ? g.iconCheck : g.iconCross),
             children: (0, a.jsx)(l, { className: g.icon }),
         });
     return (0, a.jsxs)("div", {
         className: g.scope,
         children: [
-            r,
+            i,
             (0, a.jsx)("div", {
                 className: g.scopeInner,
                 children: (0, a.jsx)(o.Text, {
@@ -49,7 +49,7 @@ function j() {
         S = null != l ? x.Z.getGuildPermissionSpecMap(l) : null,
         E = Object.values(null != C ? C : {}).map((e) => {
             let { title: t, flag: n } = e,
-                l = r.e$(j, n);
+                l = i.e$(j, n);
             return (0, a.jsx)(
                 v,
                 {
@@ -59,9 +59,9 @@ function j() {
                 t,
             );
         }),
-        N = Object.values(null != S ? S : {}).map((e) => {
+        O = Object.values(null != S ? S : {}).map((e) => {
             let { title: t, flag: n } = e,
-                l = r.e$(_, n);
+                l = i.e$(_, n);
             return (0, a.jsx)(
                 v,
                 {
@@ -72,7 +72,7 @@ function j() {
             );
         });
     return (0, a.jsx)("div", {
-        className: i()(b.panel, g.panel),
+        className: r()(b.panel, g.panel),
         children: (0, a.jsxs)("div", {
             className: g.panelInner,
             children: [
@@ -93,7 +93,7 @@ function j() {
                             variant: "heading-md/semibold",
                             children: null != l ? "Permissions in ".concat(l.name) : "No guild selected",
                         }),
-                        N,
+                        O,
                     ],
                 }),
             ],

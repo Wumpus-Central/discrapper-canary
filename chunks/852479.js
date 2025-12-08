@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r = n(54381),
     l = n(473749),
     i = n(913527),
@@ -11,10 +11,10 @@ var r = n(54381),
     C = n(527379),
     m = n(388032),
     b = n(490225),
-    p = n(51237);
-function f(e) {
+    f = n(51237);
+function p(e) {
     let { guild: t, onSubmit: i } = e,
-        f = (0, a.e7)([d.Z], () => d.Z.getMembersCountByGuildId(t.id, c.R_.NEW_GUILD_MEMBER), [t.id]),
+        p = (0, a.e7)([d.Z], () => d.Z.getMembersCountByGuildId(t.id, c.R_.NEW_GUILD_MEMBER), [t.id]),
         h = (0, a.e7)([d.Z], () => {
             let e = d.Z.getNewMemberTimestamp(t.id);
             return o()(e).format("h:mm A");
@@ -75,14 +75,14 @@ function f(e) {
                       };
                   });
         }, [j, g]),
-        v = new Intl.NumberFormat(m.intl.currentLocale).format(f),
+        v = new Intl.NumberFormat(m.intl.currentLocale).format(p),
         y = (0, u.nX)(t.id),
         O = (0, u.xC)(t.id),
         H = l.useMemo(() => 1 + +!!y + +!!O, [y, O]);
-    return 0 === f
+    return 0 === p
         ? null
         : (0, r.jsxs)("tr", {
-              className: p.newMembersNotice,
+              className: f.newMembersNotice,
               onClick: x,
               children: [
                   (0, r.jsx)("td", {
@@ -103,11 +103,11 @@ function f(e) {
                           className: b.actionCell,
                           children: (0, r.jsx)(s.P3F, {
                               onClick: x,
-                              className: p.memberNoticeActionButton,
+                              className: f.memberNoticeActionButton,
                               children: (0, r.jsxs)(s.Text, {
                                   variant: "text-sm/normal",
                                   color: "always-white",
-                                  className: p.memberNoticeAction,
+                                  className: f.memberNoticeAction,
                                   children: [
                                       (0, r.jsx)("div", { children: m.intl.string(m.t.rkyOzK) }),
                                       (0, r.jsx)(s.tBG, {
@@ -115,7 +115,7 @@ function f(e) {
                                           color: "currentColor",
                                           width: 16,
                                           height: 16,
-                                          className: p.memberNoticeActionIcon,
+                                          className: f.memberNoticeActionIcon,
                                       }),
                                   ],
                               }),

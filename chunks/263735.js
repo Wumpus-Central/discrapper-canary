@@ -1,4 +1,4 @@
-n.d(e, { Q: () => E });
+n.d(e, { Q: () => T });
 var i = n(54381),
     l = n(657707),
     s = n(509613),
@@ -14,7 +14,7 @@ let c = (0, s.x1)(r.n.CHAT_PANE, {
         useTitle: () => o.intl.string(o.t["/VQax8"]),
         buildLayout: () => [c],
     }),
-    E = (0, s.m7)(r.n.CHAT_SIDEBAR_ITEM, {
+    T = (0, s.m7)(r.n.CHAT_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t["/VQax8"]),
         getLegacySearchKey: () => a.s6.CHAT,
         icon: l.kBi,

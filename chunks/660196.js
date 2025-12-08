@@ -25,13 +25,13 @@ function h(e) {
             [g],
         ),
         { analyticsLocations: O } = (0, a.ZP)(null != (t = (0, s.DR)()) ? t : []),
-        j = r.useRef(!1);
+        x = r.useRef(!1);
     r.useEffect(() => {
         m &&
             null != h &&
             null != y &&
-            !j.current &&
-            ((j.current = !0),
+            !x.current &&
+            ((x.current = !0),
             o.default.track(
                 p.rMx.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED,
                 (function (e) {

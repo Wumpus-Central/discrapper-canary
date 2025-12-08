@@ -16,13 +16,13 @@ var l = t(54381),
     h = t(63063),
     x = t(73346),
     m = t(590961),
-    C = t(705338),
-    v = t(181268),
+    v = t(705338),
+    C = t(181268),
     k = t(981631),
     j = t(228168),
     b = t(388032),
     S = t(260999);
-function L(e) {
+function Z(e) {
     let { content: n, onClick: t, ariaLabel: i, className: a } = e;
     return (0, l.jsx)(s.P3F, {
         className: o()(S.iconButton, a),
@@ -35,49 +35,49 @@ function N(e) {
     let { guildId: n, storefront: t, selectedPageIndex: a } = e,
         N = (0, s.wjy)((0, d.ZP)()),
         E = (0, p.Y)({ location: "SocialLayerStorefrontHeader" }),
-        Z = (0, r.e7)([I.default], () => I.default.getCurrentUser()),
+        L = (0, r.e7)([I.default], () => I.default.getCurrentUser()),
         R = (0, m.oR)(),
         { analyticsLocations: T } = (0, u.ZP)(),
         A = i.useCallback(() => {
-            (null == Z ? void 0 : Z.id) != null &&
+            (null == L ? void 0 : L.id) != null &&
                 (0, _.openUserProfileModal)({
-                    userId: Z.id,
+                    userId: L.id,
                     section: j.oh.WISHLIST,
                     showGuildProfile: !1,
                     sourceAnalyticsLocations: [c.Z.SOCIAL_LAYER_STOREFRONT],
                 });
-        }, [Z]),
+        }, [L]),
         M = i.useCallback(() => {
             f.default.track(k.rMx.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: null == R ? void 0 : R.sessionId,
-                cta_type: v.US.LEARN_MORE,
+                cta_type: C.US.LEARN_MORE,
                 location_stack: T,
             }),
                 window.open(h.Z.getArticleURL(k.BhN.SOCIAL_LAYER_STOREFRONT));
         }, [R, T]);
     if (null == t) return null;
-    let y = null != t.logoAssetId ? (0, x._W)(t.applicationId, t.logoAssetId, 75) : null,
-        O = null != t.lightThemeLogoAssetId ? (0, x._W)(t.applicationId, t.lightThemeLogoAssetId, 75) : null,
-        P = null;
+    let O = null != t.logoAssetId ? (0, x._W)(t.applicationId, t.logoAssetId, 75) : null,
+        P = null != t.lightThemeLogoAssetId ? (0, x._W)(t.applicationId, t.lightThemeLogoAssetId, 75) : null,
+        y = null;
     return (
-        (P = N ? (null != y ? y : O) : null != O ? O : y),
+        (y = N ? (null != O ? O : P) : null != P ? P : O),
         (0, l.jsxs)(g.Z, {
             disableDoubleClick: !0,
             className: S.headerContainer,
             children: [
                 (0, l.jsxs)(s.P3F, {
                     onClick: () => {
-                        (0, C.default)({
+                        (0, v.default)({
                             guildId: n,
                             pageIndex: 0,
                         });
                     },
                     className: S.titleContainer,
                     children: [
-                        null != P &&
+                        null != y &&
                             (0, l.jsx)("img", {
                                 className: S.logo,
-                                src: P,
+                                src: y,
                                 alt: t.title,
                             }),
                         (0, l.jsx)(g.Z.Title, { children: t.title }),
@@ -90,7 +90,7 @@ function N(e) {
                             g.Z.Title,
                             {
                                 onClick: () => {
-                                    (0, C.default)({
+                                    (0, v.default)({
                                         guildId: n,
                                         pageIndex: t,
                                     });
@@ -110,7 +110,7 @@ function N(e) {
                     (0, l.jsxs)("div", {
                         className: S.alignedRightContent,
                         children: [
-                            (0, l.jsx)(L, {
+                            (0, l.jsx)(Z, {
                                 content: (0, l.jsx)(s.h_8, {
                                     size: "xs",
                                     color: "currentColor",
@@ -119,7 +119,7 @@ function N(e) {
                                 ariaLabel: b.intl.string(b.t["7lZ31J"]),
                                 className: S.wishlistButton,
                             }),
-                            (0, l.jsx)(L, {
+                            (0, l.jsx)(Z, {
                                 onClick: M,
                                 ariaLabel: b.intl.string(b.t.hvVgAZ),
                                 content: (0, l.jsx)(s.xvT, {

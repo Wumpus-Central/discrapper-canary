@@ -7951,8 +7951,8 @@
                     var z = 1.2 * e.finalSize * 0.714,
                         q = !0;
                     a = O.length;
-                    var X = -1,
-                        Q = D,
+                    var Q = -1,
+                        X = D,
                         J = k,
                         $ = M,
                         ee = -1,
@@ -7984,7 +7984,7 @@
                             (C = 0),
                                 (N += e.yOffset),
                                 (N += +!!q),
-                                (D = Q),
+                                (D = X),
                                 (q = !1),
                                 this._hasMaskedPath &&
                                     ((k = J),
@@ -8009,7 +8009,7 @@
                                     }
                                     ee = A[P].line;
                                 }
-                                X !== A[P].ind && (A[X] && (D += A[X].extra), (D += A[P].an / 2), (X = A[P].ind)),
+                                Q !== A[P].ind && (A[Q] && (D += A[Q].extra), (D += A[P].an / 2), (Q = A[P].ind)),
                                     (D += y[0] * A[P].an * 0.005);
                                 var el = 0;
                                 for (i = 0; i < a; i += 1)
@@ -8027,7 +8027,7 @@
                                             (D =
                                                 0.5 * A[0].an +
                                                 ((F - this._pathData.f.v - 0.5 * A[0].an - 0.5 * A[A.length - 1].an) *
-                                                    X) /
+                                                    Q) /
                                                     (R - 1) +
                                                 this._pathData.f.v);
                                     j;
@@ -8165,7 +8165,7 @@
                                 S.translate(c, u, 0),
                                     (D -= y[0] * A[P].an * 0.005),
                                     A[P + 1] &&
-                                        X !== A[P + 1].ind &&
+                                        Q !== A[P + 1].ind &&
                                         ((D += A[P].an / 2), (D += 0.001 * e.tr * e.finalSize));
                             } else {
                                 switch (

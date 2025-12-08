@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(442837),
     o = n(681715),
     c = n(481060),
-    u = n(496675),
-    d = n(63063),
+    d = n(496675),
+    u = n(63063),
     g = n(384632),
     m = n(981631),
     p = n(388032),
@@ -15,7 +15,7 @@ var r = n(54381),
 function h(e) {
     let { activeType: t, onTypePicked: n, guild: l } = e,
         h = l.features.has(m.GuildFeatures.COMMUNITY),
-        b = (0, s.e7)([u.Z], () => u.Z.can(m.Plq.ADMINISTRATOR, l)),
+        b = (0, s.e7)([d.Z], () => d.Z.can(m.Plq.ADMINISTRATOR, l)),
         x = i.useMemo(() => {
             let e = t === g.A.DISCOVERABLE && !b,
                 n = h && (t === g.A.DISCOVERABLE || b);
@@ -58,7 +58,7 @@ function h(e) {
                 variant: "text-sm/medium",
                 className: f.bodyText,
                 children: p.intl.format(p.t["Y/jYwu"], {
-                    helpdeskArticle: d.Z.getArticleURL(m.BhN.MEMBER_APPLICATIONS),
+                    helpdeskArticle: u.Z.getArticleURL(m.BhN.MEMBER_APPLICATIONS),
                 }),
             }),
             (0, r.jsx)(c.njP, {

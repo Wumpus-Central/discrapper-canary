@@ -1,8 +1,8 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(473749),
     i = n(924826);
-function a(e) {
-    let { listRef: t, padding: n, channel: a, isEnabled: l } = e,
+function l(e) {
+    let { listRef: t, padding: n, channel: l, isEnabled: a } = e,
         s = r.useCallback(
             (e) => {
                 let r = t.current,
@@ -37,8 +37,8 @@ function a(e) {
             [t],
         );
     return (0, i.ZP)({
-        id: "forum-channel-list-".concat(a.id),
-        isEnabled: l,
+        id: "forum-channel-list-".concat(l.id),
+        isEnabled: a,
         scrollToStart: o,
         scrollToEnd: c,
         setFocus: s,

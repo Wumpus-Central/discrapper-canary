@@ -82,8 +82,8 @@ function U(e) {
             questContent: b.jn.MEMBERS_LIST,
             sourceQuestContent: b.jn.MEMBERS_LIST,
         }),
-        X = (null == Z || null == (t = Z.userStatus) ? void 0 : t.claimedAt) != null,
-        Q = (null == Z || null == (I = Z.userStatus) ? void 0 : I.enrolledAt) != null,
+        Q = (null == Z || null == (t = Z.userStatus) ? void 0 : t.claimedAt) != null,
+        X = (null == Z || null == (I = Z.userStatus) ? void 0 : I.enrolledAt) != null,
         J = (null == Z || null == (x = Z.userStatus) ? void 0 : x.completedAt) != null,
         $ = (0, s.e7)([h.Z], () => h.Z.getState().theme),
         ee = (0, c.wj)($) ? R.BR.DARK : R.BR.LIGHT,
@@ -206,14 +206,14 @@ function U(e) {
         },
         eh = (0, y.CR)({ quest: Z }),
         eg = (() => {
-            if (J && !X)
+            if (J && !Q)
                 return {
                     headerText: w.intl.string(w.t.gHerLS),
                     ctaText: w.intl.string(w.t.cfY4PE),
                     handleClickCta: q,
                     tileAssetType: "reward",
                 };
-            if (Q && !X)
+            if (X && !Q)
                 return {
                     headerText: w.intl.string(w.t.uH2sf2),
                     ctaText: w.intl.string(w.t.VN1Ajl),

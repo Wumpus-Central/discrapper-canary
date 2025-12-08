@@ -1,10 +1,10 @@
-n.d(t, { Z: () => l }), n(388685);
+n.d(t, { Z: () => a }), n(388685);
 var r = n(473749),
     i = n(393903),
-    a = n(448986);
-let l = () => {
+    l = n(448986);
+let a = () => {
     let [e, t] = r.useState(400),
-        n = (0, a.Z)((e) => {
+        n = (0, l.Z)((e) => {
             t(e.target.clientWidth);
         });
     return {

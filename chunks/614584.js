@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(352736),
     g = n(937889),
     b = n(739566),
-    y = n(267128),
-    C = n(507418),
+    C = n(267128),
+    y = n(507418),
     v = n(348238),
     _ = n(981631),
     O = n(388032);
@@ -79,7 +79,7 @@ let j = r.memo(function (e) {
         M = (0, b.Uj)(w),
         R = s.d.useExperiment({ location: "repliedMessage" }).enabled,
         L = (0, u.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        k = r.useMemo(() => {
+        D = r.useMemo(() => {
             if (null == w) return null;
             let e = (0, o.Z)(w);
             if (e.type === _.uaV.USER_JOIN)
@@ -142,7 +142,7 @@ let j = r.memo(function (e) {
             }
             return null;
         }, [w, M, S, L, R]),
-        { isReplyAuthorBlocked: D, isReplyAuthorIgnored: U } = (0, l.cj)(
+        { isReplyAuthorBlocked: k, isReplyAuthorIgnored: U } = (0, l.cj)(
             [f.Z],
             () => ({
                 isReplyAuthorBlocked: null != w && f.Z.isBlockedForMessage(w),
@@ -151,8 +151,8 @@ let j = r.memo(function (e) {
             [w],
         ),
         V = (0, v.wq)(null == w ? void 0 : w.author.id, S.id),
-        F = (0, v.$3)(n, w),
-        H = (0, v.Wl)(w, S, I, T),
+        H = (0, v.$3)(n, w),
+        F = (0, v.Wl)(w, S, I, T),
         B = (0, v.rY)(Z, T),
         G = r.useCallback(() => {
             T({
@@ -161,22 +161,22 @@ let j = r.memo(function (e) {
             });
         }, [T]),
         z = (0, b.Uj)(n);
-    return (0, i.jsx)(y.Z, {
+    return (0, i.jsx)(C.Z, {
         repliedAuthor: M,
         baseMessage: n,
         channel: S,
         baseAuthor: z,
         referencedMessage: j,
-        content: k,
+        content: D,
         compact: P,
-        isReplyAuthorBlocked: D,
+        isReplyAuthorBlocked: k,
         isReplyAuthorIgnored: U,
         showAvatarPopout: Z,
         showUsernamePopout: I,
-        renderPopout: C.Z,
+        renderPopout: y.Z,
         onClickAvatar: B,
-        onClickUsername: H,
-        onClickReply: F,
+        onClickUsername: F,
+        onClickReply: H,
         onContextMenu: V,
         onPopoutRequestClose: G,
         isReplySpineClickable: N,

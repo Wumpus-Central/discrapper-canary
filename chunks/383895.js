@@ -4,7 +4,7 @@ var a = n(54381),
     r = n(810568);
 function l(e) {
     var t, n;
-    let { entry: l, viewId: s, officialGuildId: o } = e;
+    let { entry: l, viewId: o, officialGuildId: s } = e;
     return (0, a.jsx)(
         i.Z,
         ((t = (function (e) {
@@ -40,8 +40,8 @@ function l(e) {
                         applicationId: l.extra.application_id,
                         gameName: l.extra.game_name,
                         recipientUserId: l.author_id,
-                        viewId: s,
-                        officialGuildId: o,
+                        viewId: o,
+                        officialGuildId: s,
                     });
                 },
                 onRequestOpen: () => {
@@ -50,8 +50,8 @@ function l(e) {
                         applicationId: l.extra.application_id,
                         gameName: l.extra.game_name,
                         recipientUserId: l.author_id,
-                        viewId: s,
-                        officialGuildId: o,
+                        viewId: o,
+                        officialGuildId: s,
                     });
                 },
             }),

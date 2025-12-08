@@ -1,21 +1,21 @@
-t.d(n, { U: () => u });
-var r = t(54381);
-t(473749);
-var l = t(120356),
-    i = t.n(l),
-    a = t(28664),
-    o = t(481060),
-    s = t(388032),
-    c = t(863577);
+n.d(t, { U: () => u });
+var r = n(54381);
+n(473749);
+var i = n(120356),
+    l = n.n(i),
+    a = n(28664),
+    o = n(481060),
+    s = n(388032),
+    c = n(863577);
 let u = (e) => {
-    let { className: n, isPartiallyPurchased: t } = e;
-    return t
+    let { className: t, isPartiallyPurchased: n } = e;
+    return n
         ? (0, r.jsx)(a.u, {
               position: "top",
               align: "left",
               text: s.intl.string(s.t.y1VWkZ),
               children: (0, r.jsxs)("div", {
-                  className: i()(c.partialOwnStateContainer, n),
+                  className: l()(c.partialOwnStateContainer, t),
                   children: [
                       (0, r.jsx)("span", {
                           className: c.iconWrapper,
@@ -34,7 +34,7 @@ let u = (e) => {
           })
         : (0, r.jsx)(o.Text, {
               variant: "text-md/semibold",
-              className: n,
+              className: t,
               children: s.intl.string(s.t["6cfuDj"]),
           });
 };

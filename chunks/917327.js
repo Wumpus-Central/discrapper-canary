@@ -4,8 +4,8 @@ e(473749);
 var l = e(442837),
     r = e(481060),
     a = e(787014),
-    c = e(362721),
-    s = e(339340),
+    s = e(362721),
+    c = e(339340),
     o = e(869768),
     d = e(496675),
     u = e(12498),
@@ -13,7 +13,7 @@ var l = e(442837),
     h = e(388032);
 function g(n, t) {
     let g = (0, l.e7)([d.Z], () => d.Z.can(Z.Plq.MANAGE_CHANNELS, t)),
-        f = (0, c.ZP)(n),
+        f = (0, s.ZP)(n),
         v = (0, o.W)(n),
         j = (0, l.e7)([u.Z], () => u.Z.getChannelStatus(n)),
         b = null != j && j.length > 0;
@@ -64,7 +64,7 @@ function g(n, t) {
                                         })({ channel: n }, e),
                                     );
                             },
-                            { modalKey: s.a },
+                            { modalKey: c.a },
                         );
                     },
                 })

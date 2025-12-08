@@ -256,7 +256,7 @@ function W(e) {
         o = n.author.id,
         s = "".concat(t, ":").concat(o),
         l = i.useRef(r),
-        c = X(n, a),
+        c = Q(n, a),
         [u, d] = i.useState(r);
     l.current = u || l.current;
     let f = i.useCallback(
@@ -322,7 +322,7 @@ function q(e, t) {
         [n],
     );
 }
-function X(e, t) {
+function Q(e, t) {
     return i.useCallback(
         (n) => {
             if (null == n || !(n.nativeEvent instanceof MouseEvent) || Object.values(t).some((e) => e)) return;

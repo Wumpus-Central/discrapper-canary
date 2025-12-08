@@ -27,7 +27,7 @@ var r = n(54381),
     N = n(963614),
     P = n(917107),
     R = n(208156),
-    w = n(748492),
+    w = n(676526),
     D = n(701488),
     x = n(918559),
     L = n(981631),
@@ -105,8 +105,8 @@ function V(e) {
         }),
         q = (0, A.sU)({ channelId: null == p ? void 0 : p.id }),
         {
-            activityParticipant: X,
-            selectedParticipant: Q,
+            activityParticipant: Q,
+            selectedParticipant: X,
             participantsOpen: J,
         } = (0, s.cj)([g.Z], () => ({
             activityParticipant:
@@ -124,7 +124,7 @@ function V(e) {
         })),
         $ = W || null != q,
         ee = (0, P.Z)(null == p ? void 0 : p.id),
-        et = ee && (null == Q ? void 0 : Q.type) !== j.fO.ACTIVITY,
+        et = ee && (null == X ? void 0 : X.type) !== j.fO.ACTIVITY,
         en = !ee && V === x.Ez.PIP,
         er = $ && (et || en) && null == K,
         ei = (!$ || er) && !z,
@@ -151,7 +151,7 @@ function V(e) {
     function el(e) {
         var t;
         let { onActive: n, onForceIdle: i, idle: a, isActivityInTextChannel: o, users: s } = e;
-        return ei && null != Z && ((null == X ? void 0 : X.type) === j.fO.ACTIVITY || o)
+        return ei && null != Z && ((null == Q ? void 0 : Q.type) === j.fO.ACTIVITY || o)
             ? (null == (t = Z.config) ? void 0 : t.useInteractivePIP)
                 ? (0, r.jsx)(w.of, {
                       onJumpToChannel: eo,
@@ -180,7 +180,7 @@ function V(e) {
                         users: s,
                         embeddedActivity: Z,
                     })
-                  : null == X
+                  : null == Q
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -199,7 +199,7 @@ function V(e) {
                                   onJumpToChannel: eo,
                                   channel: p,
                                   applicationId: Z.applicationId,
-                                  selectedParticipant: X,
+                                  selectedParticipant: Q,
                                   embeddedActivity: Z,
                               }),
                           ],
@@ -217,7 +217,7 @@ function V(e) {
                 });
             }
         }, [B, ei]),
-        null == Z || null == Y || ((0, P.Z)(null == p ? void 0 : p.id) && null == X) || null == H)
+        null == Z || null == Y || ((0, P.Z)(null == p ? void 0 : p.id) && null == Q) || null == H)
     )
         return null;
     let ec = Array.from(Z.userIds)

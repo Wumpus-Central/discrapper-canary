@@ -38,8 +38,8 @@ function Z(e) {
             spacing: R,
             dialogClassName: D,
         } = e,
-        { analyticsLocations: L } = (0, f.ZP)(d.Z.NOTIFICATION_CENTER),
-        [M, k] = i.useState(!1),
+        { analyticsLocations: M } = (0, f.ZP)(d.Z.NOTIFICATION_CENTER),
+        [L, k] = i.useState(!1),
         [G, U] = [
             (0, s.e7)([y.Z], () => {
                 var e, t;
@@ -76,11 +76,11 @@ function Z(e) {
             };
         })(G),
         V = i.useCallback(() => {
-            k(!1), M && (null == n || n());
-        }, [n, M]),
+            k(!1), L && (null == n || n());
+        }, [n, L]),
         H = i.useCallback(() => {
-            k(!M), M ? null == n || n() : null == t || t();
-        }, [n, t, M]);
+            k(!L), L ? null == n || n() : null == t || t();
+        }, [n, t, L]);
     i.useEffect(() => (O.S.subscribe(I.CkL.TOGGLE_INBOX, H), () => void O.S.unsubscribe(I.CkL.TOGGLE_INBOX, H)), [H]);
     let { enabled: W, inInbox: z } = p.Z.useExperiment({ location: "RecentsPopout" }),
         K = (0, s.e7)([g.Z], () => g.Z.hasOverdueReminder(), []) && W && z,
@@ -96,14 +96,14 @@ function Z(e) {
         ),
         Q = (0, b.Us)({ location: "ForYou" });
     return (0, r.jsx)(f.Gt, {
-        value: L,
+        value: M,
         children: (0, r.jsx)(u.yRy, {
             targetElementRef: A,
             animation: u.yRy.Animation.NONE,
             position: w,
             align: T,
             autoInvert: !1,
-            shouldShow: M,
+            shouldShow: L,
             onRequestClose: V,
             renderPopout: function () {
                 return (0, r.jsx)(u.VqE, {

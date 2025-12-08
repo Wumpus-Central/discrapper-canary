@@ -9,8 +9,8 @@ n.d(t, {
 });
 var r,
     i = n(512722),
-    a = n.n(i);
-function l(e, t, n) {
+    l = n.n(i);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,10 +45,10 @@ class c {
         };
     }
     constructor({ minWidth: e, maxWidth: t, gap: n }) {
-        l(this, "minWidth", void 0),
-            l(this, "maxWidth", void 0),
-            l(this, "gap", void 0),
-            a()(e < t, "minWidth needs to be smaller than maxWidth"),
+        a(this, "minWidth", void 0),
+            a(this, "maxWidth", void 0),
+            a(this, "gap", void 0),
+            l()(e < t, "minWidth needs to be smaller than maxWidth"),
             (this.minWidth = e),
             (this.maxWidth = t),
             (this.gap = n);

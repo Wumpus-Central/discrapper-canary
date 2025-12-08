@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(481060),
-    l = n(835473),
+    l = n(481060),
+    a = n(835473),
     o = n(768581),
     c = n(582113),
     s = n(388032),
@@ -11,7 +11,7 @@ function d(e) {
     let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: d, socialLayerStorefrontApplicationId: f } = e,
         g = i.useRef(null),
         [p, m] = i.useState(!1),
-        b = (0, l.q)(f),
+        b = (0, a.q)(f),
         h = i.useMemo(() => {
             let e = null == b || b.id !== c.t9 ? s.intl.string(s.t.apFNLU) : s.intl.string(s.t["kq/75v"]);
             if (null == b) return e;
@@ -28,7 +28,7 @@ function d(e) {
                         src: t,
                         alt: e,
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: "text-sm/medium",
                         color: "header-primary",
                         children: e,
@@ -38,32 +38,32 @@ function d(e) {
         }, [b]),
         y = i.useMemo(
             () =>
-                (0, r.jsxs)(a.kSQ, {
+                (0, r.jsxs)(l.kSQ, {
                     children: [
-                        (0, r.jsx)(a.sNh, {
+                        (0, r.jsx)(l.sNh, {
                             id: "browse-collectibles-shop",
                             label: s.intl.string(s.t["5upuqx"]),
-                            iconLeft: a.EOn,
+                            iconLeft: l.EOn,
                             action: n,
                         }),
-                        (0, r.jsx)(a.sNh, {
+                        (0, r.jsx)(l.sNh, {
                             id: "browse-social-layer-storefront",
                             label: h,
-                            iconLeft: null != b ? void 0 : a.EOn,
+                            iconLeft: null != b ? void 0 : l.EOn,
                             action: d,
                         }),
                     ],
                 }),
             [n, d, h, b],
         );
-    return (0, r.jsx)(a.yRy, {
+    return (0, r.jsx)(l.yRy, {
         targetElementRef: g,
         position: "bottom",
         onRequestOpen: () => m(!0),
         onRequestClose: () => m(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(a.v2r, {
+            return (0, r.jsx)(l.v2r, {
                 navId: "wishlist-overflow-menu",
                 onSelect: void 0,
                 onClose: t,
@@ -73,7 +73,7 @@ function d(e) {
         },
         children: (e) =>
             (0, r.jsx)(
-                a.Button,
+                l.Button,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -103,7 +103,7 @@ function d(e) {
                         buttonRef: g,
                         variant: "secondary",
                         size: "sm",
-                        icon: p ? a.Dio : a.CJ0,
+                        icon: p ? l.Dio : l.CJ0,
                         iconPosition: "end",
                         text: t,
                     },

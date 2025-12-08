@@ -12,9 +12,9 @@ var l = n(54381),
 function b(e) {
     let { guildEvent: t, recurrenceId: n, transitionState: b, onClose: p } = e,
         x = (0, d.Z)(n, t.id),
-        h = (0, c.iA)(n, t),
-        f = (0, c.x6)(h, x),
-        [j, v] = r.useState(f),
+        f = (0, c.iA)(n, t),
+        h = (0, c.x6)(f, x),
+        [j, v] = r.useState(h),
         [m, { loading: D, error: O }] = (0, u.Z)(() => {
             let e = (0, s.Z)(t, n, j, x);
             return null == O && p(), e;
@@ -33,7 +33,7 @@ function b(e) {
                 text: g.intl.string(g.t.e5VEcE),
                 onClick: m,
                 loading: D,
-                disabled: (0, c.Y4)(j, f),
+                disabled: (0, c.Y4)(j, h),
             },
         ],
         onClose: p,

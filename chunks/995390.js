@@ -16,8 +16,8 @@ var i = n(473749),
     h = n(823379),
     x = n(905753),
     j = n(399860),
-    O = n(981631);
-function v(e) {
+    v = n(981631);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -47,7 +47,7 @@ function y(e, t, n) {
         a = i.useMemo(
             () =>
                 (function (e, t) {
-                    let n = v({}, t),
+                    let n = O({}, t),
                         i = (0, u.bD)(e),
                         r = (0, j.rE)(i, d.Kw.CHANNEL),
                         l = (0, j.rE)(e, d.Kw.ROLE);
@@ -85,8 +85,8 @@ function y(e, t, n) {
         }, [n]),
         C = null != n ? n : t,
         N = null != n ? y : a,
-        S = i.useMemo(() => (null != _ ? _ : v({}, null != N ? N : {})), [_, N]),
-        P = i.useMemo(() => Object.keys(S).length, [S]),
+        S = i.useMemo(() => (null != _ ? _ : O({}, null != N ? N : {})), [_, N]),
+        I = i.useMemo(() => Object.keys(S).length, [S]),
         w = i.useMemo(() => (null == N || null == S ? null : !o().isEqual(N, S)), [N, S]);
     return (
         i.useEffect(() => {
@@ -168,7 +168,7 @@ function y(e, t, n) {
                         if (s.type === d.Kw.CHANNEL) {
                             let e = s.id === i,
                                 n = y[s.id];
-                            (t = e || g.Z.can(O.Plq.VIEW_CHANNEL, n)), (c = !0);
+                            (t = e || g.Z.can(v.Plq.VIEW_CHANNEL, n)), (c = !0);
                         } else if (s.type === d.Kw.ROLE) {
                             let i = s.id === e,
                                 l = _[s.id];
@@ -176,7 +176,7 @@ function y(e, t, n) {
                         } else if (s.type === d.Kw.USER) {
                             let e = C[s.id];
                             (t = null != e),
-                                (c = null != e && (o || g.Z.canManageUser(O.Plq.USE_APPLICATION_COMMANDS, e, n)));
+                                (c = null != e && (o || g.Z.canManageUser(v.Plq.USE_APPLICATION_COMMANDS, e, n)));
                         }
                         l[a] = (function (e, t) {
                             return (
@@ -195,7 +195,7 @@ function y(e, t, n) {
                                       }),
                                 e
                             );
-                        })(v({}, s), {
+                        })(O({}, s), {
                             canRead: t,
                             canWrite: c,
                         });
@@ -204,7 +204,7 @@ function y(e, t, n) {
                 }, [y, n, r, o, t, _, C]);
             })(e, S),
             hasChanges: w,
-            selectedPermissionCount: P,
+            selectedPermissionCount: I,
         }
     );
 }

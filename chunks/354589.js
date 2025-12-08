@@ -2,8 +2,8 @@ r.d(n, { default: () => L });
 var t = r(54381);
 r(473749);
 var i = r(442837),
-    s = r(481060),
-    o = r(239091),
+    o = r(481060),
+    s = r(239091),
     l = r(883385),
     a = r(108843),
     d = r(911969),
@@ -62,15 +62,15 @@ let L = (0, a.Z)(
                     guildId: null,
                 }),
                 J = (0, T.Z)(r, null, a),
-                K = (0, i.e7)([_.Z, j.Z], () => {
+                V = (0, i.e7)([_.Z, j.Z], () => {
                     let e = _.Z.getVoiceChannelId();
                     return j.Z.getChannel(e);
                 }),
-                { enabled: V } = x.Z.useExperiment({
-                    guildId: null == K ? void 0 : K.guild_id,
+                { enabled: K } = x.Z.useExperiment({
+                    guildId: null == V ? void 0 : V.guild_id,
                     location: "GroupDMUserContextMenu",
                 }),
-                $ = V ? (null == K ? void 0 : K.id) : l.id,
+                $ = K ? (null == V ? void 0 : V.id) : l.id,
                 ee = (0, Q.Z)(r, $),
                 en = (0, M.Z)(r.id, a),
                 er = (0, P.Z)({
@@ -83,8 +83,8 @@ let L = (0, a.Z)(
                     context: a,
                 }),
                 ei = (0, O.Z)({ user: r }),
-                es = (0, A.Z)(r.id),
-                eo = (0, D.Z)(r.id, l.id),
+                eo = (0, A.Z)(r.id),
+                es = (0, D.Z)(r.id, l.id),
                 el = (0, R.Z)(r.id),
                 ea = (0, g.B)({
                     userId: r.id,
@@ -126,9 +126,9 @@ let L = (0, a.Z)(
                 ew = r.isNonUserBot(),
                 ey = l.isManaged(),
                 eP = null == (n = l.recipients) ? void 0 : n.includes(r.id);
-            return (0, t.jsxs)(s.v2r, {
+            return (0, t.jsxs)(o.v2r, {
                 navId: "user-context",
-                onClose: o.Zy,
+                onClose: s.Zy,
                 "aria-label": G.intl.string(G.t.liqwPJ),
                 onSelect: B,
                 onInteraction: Y,
@@ -136,17 +136,17 @@ let L = (0, a.Z)(
                     !ew &&
                         (0, t.jsxs)(t.Fragment, {
                             children: [
-                                (0, t.jsx)(s.kSQ, { children: e_ }),
-                                (0, t.jsxs)(s.kSQ, {
+                                (0, t.jsx)(o.kSQ, { children: e_ }),
+                                (0, t.jsxs)(o.kSQ, {
                                     children: [q && H, u && J, en, er, !ey && ee, q && et, q && ei, eZ],
                                 }),
-                                F && (0, t.jsx)(s.kSQ, { children: es }),
+                                F && (0, t.jsx)(o.kSQ, { children: eo }),
                                 eP &&
-                                    (0, t.jsxs)(s.kSQ, {
-                                        children: [!ey && eo, eC],
+                                    (0, t.jsxs)(o.kSQ, {
+                                        children: [!ey && es, eC],
                                     }),
-                                (0, t.jsx)(s.kSQ, { children: q && eu }),
-                                (0, t.jsxs)(s.kSQ, {
+                                (0, t.jsx)(o.kSQ, { children: q && eu }),
+                                (0, t.jsxs)(o.kSQ, {
                                     children: [
                                         F && el,
                                         F && ea,
@@ -162,12 +162,12 @@ let L = (0, a.Z)(
                                     ],
                                 }),
                                 L &&
-                                    (0, t.jsxs)(s.kSQ, {
+                                    (0, t.jsxs)(o.kSQ, {
                                         children: [eO, ej, ex],
                                     }),
                             ],
                         }),
-                    (0, t.jsx)(s.kSQ, { children: ef }),
+                    (0, t.jsx)(o.kSQ, { children: ef }),
                 ],
             });
         },

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var a = n(54381),
     l = n(473749),
-    i = n(371286),
-    r = n(785717),
+    r = n(371286),
+    i = n(785717),
     s = n(836197),
     o = n(299560),
     c = n(247397),
@@ -22,25 +22,25 @@ function p(e) {
                     var n,
                         a,
                         l = {},
-                        i = Object.keys(e);
-                    for (a = 0; a < i.length; a++) (n = i[a]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        r = Object.keys(e);
+                    for (a = 0; a < r.length; a++) (n = r[a]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < i.length; a++)
-                    (n = i[a]),
+                var r = Object.getOwnPropertySymbols(e);
+                for (a = 0; a < r.length; a++)
+                    (n = r[a]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
         })(e, ["handleOpenUserProfileModal", "markAsDismissed"]);
-    let { trackUserProfileEditAction: f } = (0, r.KZ)(),
+    let { trackUserProfileEditAction: f } = (0, i.KZ)(),
         g = c.rR.filter((e) => s.Ki.includes(e)),
         b = l.useCallback(() => {
             h(d.L.TAKE_ACTION), f({ action: "PRESS_ADD_WIDGET" }), p();
         }, [p, h, f]);
     return (0, a.jsx)(
-        i.Z,
+        r.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

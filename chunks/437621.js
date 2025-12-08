@@ -59,7 +59,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,7 +77,7 @@ function L(e, t) {
         e
     );
 }
-class M extends I.ZP {
+class L extends I.ZP {
     componentWillUnmount() {
         this.resetTextChannelPopoutTimers();
     }
@@ -231,7 +231,7 @@ class M extends I.ZP {
                             onAction: this.handleActivitiesPopoutClose,
                             channel: t,
                         })
-                      : (0, r.jsx)(S.Z, L(D({}, e), { channel: this.props.channel }));
+                      : (0, r.jsx)(S.Z, M(D({}, e), { channel: this.props.channel }));
             }),
             R(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props;
@@ -241,7 +241,7 @@ class M extends I.ZP {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                L(D({}, n), {
+                                M(D({}, n), {
                                     channel: t,
                                     selected: !0,
                                 }),
@@ -260,7 +260,7 @@ class M extends I.ZP {
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
-                                    L(D({}, n), {
+                                    M(D({}, n), {
                                         user: i,
                                         channel: t,
                                         showModalItems: !1,
@@ -272,7 +272,7 @@ class M extends I.ZP {
                 if (t.isModeratorReportChannel())
                     return void (0, u.jW)(e, async () => {
                         let { default: e } = await n.e("86715").then(n.bind(n, 466676));
-                        return (n) => (0, r.jsx)(e, L(D({}, n), { channel: t }));
+                        return (n) => (0, r.jsx)(e, M(D({}, n), { channel: t }));
                     });
                 let i = v.Z.getGuild(t.getGuildId());
                 null != i &&
@@ -283,7 +283,7 @@ class M extends I.ZP {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                L(D({}, n), {
+                                M(D({}, n), {
                                     channel: t,
                                     guild: i,
                                 }),
@@ -292,7 +292,7 @@ class M extends I.ZP {
             });
     }
 }
-let k = (0, d.B)(M);
+let k = (0, d.B)(L);
 function G(e) {
     let { channel: t, guild: n, disableSorting: i, isFavoriteCategory: l, muted: o, selected: s } = e,
         { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, y.JQ)(t),
@@ -331,7 +331,7 @@ function G(e) {
         R = (0, h.ZP)(t);
     return (0, r.jsx)(
         k,
-        L(D({}, d, m, e), {
+        M(D({}, d, m, e), {
             hasActiveThreads: c,
             hasMoreActiveThreads: u,
             isSubscriptionGated: S,

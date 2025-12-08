@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(787309),
     y = n(687158),
     O = n(612600),
-    j = n(510659),
-    x = n(892001),
+    x = n(510659),
+    j = n(892001),
     v = n(899007),
     C = n(867176),
     I = n(451834),
@@ -76,13 +76,13 @@ function H(e) {
         }),
         q = i.useRef(null),
         { isHoveringOrFocusing: K, isHovering: Q } = (0, p.Z)(q),
-        X = (0, j.$m)(),
+        X = (0, x.$m)(),
         J = (0, o.q_F)({
             opacity: +(null != X.interactionType),
             config: { duration: 150 },
         }),
         $ = (e) => {
-            (0, x.openUserProfileModal)(
+            (0, j.openUserProfileModal)(
                 G(
                     {
                         sourceAnalyticsLocations: W,
@@ -107,7 +107,7 @@ function H(e) {
             fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
             fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
             isLoaded: null == B ? void 0 : B.isLoaded,
-            children: (0, r.jsx)(j.NJ, {
+            children: (0, r.jsx)(x.NJ, {
                 value: X,
                 children: (0, r.jsxs)(E.Z, {
                     ref: q,

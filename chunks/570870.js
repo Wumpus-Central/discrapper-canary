@@ -16,43 +16,43 @@ var i = n(54381),
     b = n(959218),
     j = n(981631),
     x = n(689079),
-    v = n(388032),
-    y = n(891628);
+    y = n(388032),
+    v = n(891628);
 let O = (e) => {
     let t,
-        { commandType: n, commandTargetId: l, channel: O, guildId: C, onHeightUpdate: E, context: I } = e,
-        P = (0, a.e7)([f.Z], () => f.Z.getGuild(null != C ? C : O.guild_id)),
+        { commandType: n, commandTargetId: l, channel: O, guildId: E, onHeightUpdate: C, context: I } = e,
+        P = (0, a.e7)([f.Z], () => f.Z.getGuild(null != E ? E : O.guild_id)),
         _ = (0, a.e7)([m.default], () => m.default.getUser(l)),
         w = (0, h.Z)({
             user: _,
             guildId: null == P ? void 0 : P.id,
             context: I,
         }),
-        M = r.useMemo(
+        S = r.useMemo(
             () => ({
                 channel: O,
                 type: "channel",
             }),
             [O],
         ),
-        { newUIEnabled: N, searchEnabled: S } = b.Z.useConfig({ location: "useAppsCommandItems" }),
-        [Z, T] = r.useState(""),
-        k = "" !== Z,
+        { newUIEnabled: Z, searchEnabled: N } = b.Z.useConfig({ location: "useAppsCommandItems" }),
+        [M, T] = r.useState(""),
+        A = "" !== M,
         {
-            commands: A,
-            commandsByActiveSection: D,
+            commands: D,
+            commandsByActiveSection: k,
             sectionDescriptors: F,
             loading: R,
         } = c.wi({
-            context: M,
+            context: S,
             filters: {
-                text: k ? Z : void 0,
+                text: A ? M : void 0,
                 commandTypes: [n],
             },
             options: {
                 limit: x.lr,
-                includeFrecency: N && !k,
-                scoreMethod: k ? d.p.COMMAND_OR_APPLICATION : void 0,
+                includeFrecency: Z && !A,
+                scoreMethod: A ? d.p.COMMAND_OR_APPLICATION : void 0,
             },
             allowFetch: !0,
         }),
@@ -67,8 +67,8 @@ let O = (e) => {
         }, [F]),
         H = r.useRef(R);
     r.useEffect(() => {
-        R !== H.current && ((H.current = R), null == E || E());
-    }, [R, E]);
+        R !== H.current && ((H.current = R), null == C || C());
+    }, [R, C]);
     let U = r.useCallback(
             (e, t) => {
                 let { showAppIcon: n } = t;
@@ -91,7 +91,7 @@ let O = (e) => {
                                           selectable: !1,
                                       })
                                 : void 0,
-                        icon: N ? o.Uuj : void 0,
+                        icon: Z ? o.Uuj : void 0,
                         action: () => {
                             (0, u.Z)({
                                 command: e,
@@ -107,7 +107,7 @@ let O = (e) => {
                     e.id,
                 );
             },
-            [O, L, N, P, l],
+            [O, L, Z, P, l],
         ),
         W = r.useCallback(
             (e) => {
@@ -115,7 +115,7 @@ let O = (e) => {
                 return (0, i.jsx)(
                     o.kSQ,
                     {
-                        label: v.intl.string(v.t.V0w2ap),
+                        label: y.intl.string(y.t.V0w2ap),
                         children: n.map((e) => U(e, { showAppIcon: !0 })),
                     },
                     t.id,
@@ -185,9 +185,9 @@ let O = (e) => {
                         })({}, e)),
                         (r = r =
                             {
-                                query: Z,
+                                query: M,
                                 onChange: T,
-                                placeholder: v.intl.string(v.t.m1UwbP),
+                                placeholder: y.intl.string(y.t.m1UwbP),
                                 ref: t,
                             }),
                         Object.getOwnPropertyDescriptors
@@ -219,10 +219,10 @@ let O = (e) => {
             "menu-commands-placeholder",
         );
     else {
-        if (0 === A.length)
+        if (0 === D.length)
             t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    k &&
+                    A &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [B, (0, i.jsx)(o.Clw, {})],
                         }),
@@ -230,39 +230,39 @@ let O = (e) => {
                         o.sNh,
                         {
                             id: "menu-commands-empty",
-                            label: v.intl.string(v.t.YSNlV2),
+                            label: y.intl.string(y.t.YSNlV2),
                             disabled: !0,
                         },
                         "menu-commands-empty",
                     ),
                 ],
             });
-        else if (N)
-            if (k)
+        else if (Z)
+            if (A)
                 t = (0, i.jsxs)(i.Fragment, {
-                    children: [B, (0, i.jsx)(o.Clw, {}), A.map((e) => U(e, { showAppIcon: !0 }))],
+                    children: [B, (0, i.jsx)(o.Clw, {}), D.map((e) => U(e, { showAppIcon: !0 }))],
                 });
             else {
-                let e = D.find((e) => {
+                let e = k.find((e) => {
                         let { section: t } = e;
                         return t.id === x.bi.FRECENCY;
                     }),
-                    n = D.filter((e) => {
+                    n = k.filter((e) => {
                         let { section: t } = e;
                         return t.id !== x.bi.FRECENCY;
                     });
                 t = (0, i.jsxs)(i.Fragment, {
                     children: [
-                        S && B,
+                        N && B,
                         null != e && W(e),
                         (0, i.jsx)(o.kSQ, {
-                            label: v.intl.string(v.t.PHjkRE),
+                            label: y.intl.string(y.t.PHjkRE),
                             children: n.map((e) => G(e)),
                         }),
                     ],
                 });
             }
-        else t = A.map((e) => U(e, { showAppIcon: !0 }));
+        else t = D.map((e) => U(e, { showAppIcon: !0 }));
         null != w &&
             w.length > 0 &&
             (t = (0, i.jsxs)(i.Fragment, {
@@ -274,8 +274,8 @@ let O = (e) => {
         else t = w;
     return (0, i.jsx)(o.sNh, {
         id: "apps",
-        label: v.intl.string(v.t.PHjkRE),
-        listClassName: y.list,
+        label: y.intl.string(y.t.PHjkRE),
+        listClassName: v.list,
         children: t,
     });
 };

@@ -8,33 +8,33 @@ var i = n(54381),
     o = n(131951),
     c = n(313789),
     d = n(518596),
-    E = n(595373),
-    S = n(981631),
-    I = n(388032),
-    T = n(53179);
+    T = n(595373),
+    E = n(981631),
+    S = n(388032),
+    I = n(53179);
 function g() {
     let t = (0, s.e7)([o.Z], () => {
             let { shortcut: t } = o.Z.getModeOptions();
             return t;
         }),
-        e = I.intl.format(I.t.HVvn5T, {
-            onClick: () => (0, d.openUserSettings)(c.n.KEYBINDS_PANEL, { section: S.oAB.KEYBINDS }),
+        e = S.intl.format(S.t.HVvn5T, {
+            onClick: () => (0, d.openUserSettings)(c.n.KEYBINDS_PANEL, { section: E.oAB.KEYBINDS }),
         });
     return (0, i.jsx)(l.gNt, {
-        label: I.intl.string(I.t["o+BJQR"]),
+        label: S.intl.string(S.t["o+BJQR"]),
         description: e,
         layout: "horizontal-responsive",
         children: (0, i.jsx)("div", {
-            className: T.keybindContainer,
+            className: I.keybindContainer,
             children: (0, i.jsx)(u.Z, {
                 defaultValue: t,
-                onChange: (t) => r.Z.setMode(S.pM4.PUSH_TO_TALK, { shortcut: t }),
+                onChange: (t) => r.Z.setMode(E.pM4.PUSH_TO_TALK, { shortcut: t }),
             }),
         }),
     });
 }
 let _ = (0, a.ON)(c.n.VOICE_PUSH_TO_TALK_KEYBIND_SETTING, {
-    useSearchTerms: () => [I.intl.string(I.t["pS+K2L"]), I.intl.string(I.t.nuFtHH)],
-    usePredicate: E.J,
+    useSearchTerms: () => [S.intl.string(S.t["pS+K2L"]), S.intl.string(S.t.nuFtHH)],
+    usePredicate: T.J,
     render: () => (0, i.jsx)(g, {}),
 });

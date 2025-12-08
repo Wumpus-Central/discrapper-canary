@@ -1,6 +1,6 @@
 n.d(t, {
     CR: () => P,
-    ZP: () => X,
+    ZP: () => Q,
     oL: () => R,
     so: () => w,
 }),
@@ -368,7 +368,7 @@ class q extends (r = c.ZP.Store) {
     }
 }
 T(q, "displayName", "ChannelMemberStore");
-let X = new q(u.Z, {
+let Q = new q(u.Z, {
     CONNECTION_OPEN: Z,
     OVERLAY_INITIALIZE: Z,
     GUILD_MEMBER_LIST_UPDATE: G,

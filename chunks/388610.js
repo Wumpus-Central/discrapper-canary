@@ -271,14 +271,14 @@ function q(e) {
     let { channelId: t } = e;
     return K(t);
 }
-function X(e) {
+function Q(e) {
     let {
         channel: { id: t },
     } = e;
     if (null == o || o.id !== t) return !1;
     C = v.QZA.CLOSED;
 }
-function Q(e) {
+function X(e) {
     let { overwriteId: t } = e;
     l = t;
 }
@@ -336,12 +336,12 @@ let $ = new J(h.Z, {
         CHANNEL_SETTINGS_CLOSE: k,
         CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: q,
         CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: q,
-        CHANNEL_SETTINGS_OVERWRITE_SELECT: Q,
+        CHANNEL_SETTINGS_OVERWRITE_SELECT: X,
         CHANNEL_SETTINGS_UPDATE: F,
         CHANNEL_SETTINGS_SET_SECTION: M,
         CHANNEL_SETTINGS_LOADED_INVITES: H,
         CHANNEL_UPDATES: z,
-        CHANNEL_DELETE: X,
+        CHANNEL_DELETE: Q,
         INSTANT_INVITE_REVOKE_SUCCESS: Y,
         INSTANT_INVITE_CREATE_SUCCESS: W,
     }),

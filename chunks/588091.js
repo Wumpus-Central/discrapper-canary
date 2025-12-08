@@ -22,8 +22,8 @@ var r = n(54381),
     Z = n(392739),
     N = n(916001),
     _ = n(298243),
-    S = n(388032),
-    z = n(800372);
+    z = n(388032),
+    S = n(800372);
 function O(e) {
     let { guildProductListing: t, guildId: n, skuPricePreview: a } = e,
         i = (0, y.C)(t),
@@ -32,16 +32,16 @@ function O(e) {
     return (
         c()(null != s, "guild cannot be null"),
         (0, r.jsxs)("div", {
-            className: z.purchaseSummaryContainer,
+            className: S.purchaseSummaryContainer,
             children: [
                 (0, r.jsx)(x.Z, {
                     alt: "",
-                    className: z.purchaseSummaryImage,
+                    className: S.purchaseSummaryImage,
                     listing: t,
                     imageSize: 100,
                 }),
                 (0, r.jsxs)("div", {
-                    className: z.purchaseSummarInfo,
+                    className: S.purchaseSummarInfo,
                     children: [
                         (0, r.jsx)(f.Text, {
                             variant: "text-md/medium",
@@ -68,7 +68,7 @@ function O(e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: z.purchaseSummaryPrice,
+                    className: S.purchaseSummaryPrice,
                     children: [
                         (0, r.jsx)(f.Text, {
                             variant: "text-md/medium",
@@ -79,7 +79,7 @@ function O(e) {
                         (0, r.jsx)(f.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            children: S.intl.string(S.t["5dWOZX"]),
+                            children: z.intl.string(z.t["5dWOZX"]),
                         }),
                     ],
                 }),
@@ -99,12 +99,12 @@ function P(e) {
     return 0 === i.length
         ? null
         : (0, r.jsx)(Z.Z, {
-              label: S.intl.string(S.t.HOkHPB),
+              label: z.intl.string(z.t.HOkHPB),
               children: (0, r.jsxs)("div", {
-                  className: l()(z.attachmentsContainer, { [z.attachmentsContainerMultiple]: s }),
+                  className: l()(S.attachmentsContainer, { [S.attachmentsContainerMultiple]: s }),
                   children: [
                       (0, r.jsx)("div", {
-                          className: z.attachmentGrid,
+                          className: S.attachmentGrid,
                           children: i.map((e) => (0, r.jsx)(C.Z, { attachment: e }, e.id)),
                       }),
                       (0, r.jsx)("div", {
@@ -146,7 +146,7 @@ function L(e) {
     return null == t
         ? null
         : (0, r.jsx)(Z.Z, {
-              label: S.intl.string(S.t.gWBNet),
+              label: z.intl.string(z.t.gWBNet),
               children: (0, r.jsx)(N.Z, { role: t }),
           });
 }
@@ -171,9 +171,9 @@ function T(e) {
             } catch (e) {
                 n(),
                     (0, h.Z)({
-                        body: S.intl.string(S.t.VQ0lXY),
-                        confirmText: S.intl.string(S.t["NX+WJN"]),
-                        header: S.intl.string(S.t.OCwKlu),
+                        body: z.intl.string(z.t.VQ0lXY),
+                        confirmText: z.intl.string(z.t["NX+WJN"]),
+                        header: z.intl.string(z.t.OCwKlu),
                         confirmButtonColor: d.zx.Colors.BRAND,
                     });
             }
@@ -183,8 +183,8 @@ function T(e) {
         C = x.role_id,
         Z = (0, u.e7)([j.Z], () => (null != C ? j.Z.getRole(s, C) : void 0));
     return (0, r.jsx)(o.Modal, {
-        title: S.intl.string(S.t.dhAgv3),
-        subtitle: S.intl.format(S.t.X6yvvo, {
+        title: z.intl.string(z.t.dhAgv3),
+        subtitle: z.intl.format(z.t.X6yvvo, {
             productName: x.name,
             emphasisHook: w,
         }),
@@ -200,9 +200,9 @@ function T(e) {
                           variant: "text-md/normal",
                           color: "text-default",
                           children: [
-                              y ? S.intl.string(S.t["A/RnkK"]) + " " : "",
+                              y ? z.intl.string(z.t["A/RnkK"]) + " " : "",
                               null != Z
-                                  ? S.intl.format(S.t.IeJDKs, {
+                                  ? z.intl.format(z.t.IeJDKs, {
                                         roleName: Z.name,
                                         emphasisHook: w,
                                     })
@@ -213,7 +213,7 @@ function T(e) {
                       (0, r.jsx)(f.Text, {
                           variant: "text-md/normal",
                           color: "text-default",
-                          children: S.intl.string(S.t["9S3QHF"]),
+                          children: z.intl.string(z.t["9S3QHF"]),
                       }),
                       (0, r.jsx)(f.LZC, { size: 24 }),
                       (0, r.jsx)(O, {
@@ -222,10 +222,10 @@ function T(e) {
                           skuPricePreview: m,
                       }),
                       (0, r.jsx)(f.LZC, { size: 32 }),
-                      (0, r.jsx)("div", { className: z.divider }),
+                      (0, r.jsx)("div", { className: S.divider }),
                       (0, r.jsx)(f.LZC, { size: 32 }),
                       (0, r.jsxs)("ul", {
-                          className: z.benefitsContainer,
+                          className: S.benefitsContainer,
                           children: [
                               (0, r.jsx)(P, {
                                   guildProductListing: x,

@@ -6,8 +6,8 @@ var r = n(54381),
     a = n(481060),
     o = n(358085),
     c = n(960048),
-    d = n(998502),
-    u = n(507453),
+    u = n(998502),
+    d = n(507453),
     f = n(981631),
     h = n(388032);
 function g(e) {
@@ -18,8 +18,8 @@ function g(e) {
         v = async () => {
             j(!0), x(null);
             let e =
-                    o.isPlatformEmbedded && d.ZP.supportsFeature(f.eRX.WEBAUTHN)
-                        ? d.ZP.webAuthnAuthenticate(S)
+                    o.isPlatformEmbedded && u.ZP.supportsFeature(f.eRX.WEBAUTHN)
+                        ? u.ZP.webAuthnAuthenticate(S)
                         : i.U2(JSON.parse(S)).then((e) => JSON.stringify(e)),
                 t = async (e) => {
                     try {
@@ -42,12 +42,12 @@ function g(e) {
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(u.Z.SlideHeader, {
+            (0, r.jsx)(d.Z.SlideHeader, {
                 onClose: m,
                 headerAlignStart: b,
             }),
-            null != y && (0, r.jsx)(u.Z.SlideContent, { children: (0, r.jsx)(u.Z.SlideError, { error: y }) }),
-            (0, r.jsx)(u.Z.SlideFooter, {
+            null != y && (0, r.jsx)(d.Z.SlideContent, { children: (0, r.jsx)(d.Z.SlideError, { error: y }) }),
+            (0, r.jsx)(d.Z.SlideFooter, {
                 mfaChallenge: t,
                 setSlide: g,
                 trailingButton: (0, r.jsx)(a.Button, {

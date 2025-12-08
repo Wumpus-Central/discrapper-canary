@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F });
+n.d(t, { Z: () => H });
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(189156),
     g = n(621853),
     b = n(484459),
-    y = n(131704),
-    C = n(881998),
+    C = n(131704),
+    y = n(881998),
     v = n(984933),
     _ = n(496675),
     O = n(594174),
@@ -42,50 +42,50 @@ function V(e) {
         a = (0, l.e7)([v.ZP], () => null != n.guild_id && n === v.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, h.Z)(n.id)) return null;
     if (n.isForumPost()) return (0, i.jsx)(S.Z, { channel: n });
-    if (y.Ec.has(n.type)) return (0, i.jsx)(w.Z, { channel: n });
+    if (C.Ec.has(n.type)) return (0, i.jsx)(w.Z, { channel: n });
     if (a) return (0, i.jsx)(M.Z, { channel: n });
     if (r) return (0, i.jsx)(N.Z, { channel: n });
     return (0, i.jsx)(A.Z, { channel: n });
 }
-function F(e) {
+function H(e) {
     var t;
     let { channel: n, showingBanner: p } = e,
         h = (0, d.ZP)(n),
-        { type: y } = n,
+        { type: C } = n,
         v = (0, l.e7)([O.default], () => (n.isPrivate() ? O.default.getUser(n.getRecipientId()) : null)),
         S = x.ZP.useUserTag(v),
         { canManageRoles: N, canReadMessageHistory: A } = (0, l.cj)([_.Z], () => ({
             canManageRoles: _.Z.can(R.Plq.MANAGE_ROLES, n),
             canReadMessageHistory: _.Z.can(R.Plq.READ_MESSAGE_HISTORY, n),
         })),
-        w = (0, l.e7)([g.Z], () => (y === R.d4z.DM ? g.Z.getMutualGuilds(n.getRecipientId()) : null), [n, y]),
+        w = (0, l.e7)([g.Z], () => (C === R.d4z.DM ? g.Z.getMutualGuilds(n.getRecipientId()) : null), [n, C]),
         M = (0, u.Z)(null != (t = null == v ? void 0 : v.id) ? t : R.lds),
-        { authorizedAppToken: F, authorizedAppsFetchState: B } = (0, l.cj)([C.default], () => ({
-            authorizedAppToken: C.default.getNewestTokenForApplication(null == M ? void 0 : M.id),
-            authorizedAppsFetchState: C.default.getFetchState(),
+        { authorizedAppToken: H, authorizedAppsFetchState: F } = (0, l.cj)([y.default], () => ({
+            authorizedAppToken: y.default.getNewestTokenForApplication(null == M ? void 0 : M.id),
+            authorizedAppsFetchState: y.default.getFetchState(),
         })),
-        H = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
+        B = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
     if (
         (r.useEffect(() => {
-            y === R.d4z.DM &&
+            C === R.d4z.DM &&
                 null == w &&
                 null != v &&
                 o.Z.wait(() => (0, b.Z)(n.getRecipientId(), v.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
-        }, [w, y, n, v]),
+        }, [w, C, n, v]),
         r.useEffect(() => {
-            (null == v ? void 0 : v.bot) && B === C.FetchState.NOT_FETCHED && s.Z.fetch();
-        }, [null == v ? void 0 : v.bot, B]),
+            (null == v ? void 0 : v.bot) && F === y.FetchState.NOT_FETCHED && s.Z.fetch();
+        }, [null == v ? void 0 : v.bot, F]),
         n.isSystemDM())
     )
         return (0, i.jsx)(T.Z, {
             channel: n,
             children: D.intl.string(D.t.Rzvnig),
         });
-    if (y === R.d4z.DM) {
+    if (C === R.d4z.DM) {
         let e;
         return (
             null != v && null != M
-                ? null != F &&
+                ? null != H &&
                   (e = (0, i.jsxs)("div", {
                       className: k.buttonContainer,
                       children: [
@@ -97,9 +97,9 @@ function F(e) {
                               user: v,
                               application: M,
                               channel: n,
-                              oauth2Token: F,
+                              oauth2Token: H,
                           }),
-                          H && (0, i.jsx)(f.Z, { channel: n }),
+                          B && (0, i.jsx)(f.Z, { channel: n }),
                       ],
                   }))
                 : (e = (0, i.jsx)(E.Z, {

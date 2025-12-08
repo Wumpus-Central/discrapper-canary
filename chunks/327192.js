@@ -179,15 +179,15 @@ function q(e) {
         [M, B] = i.useState(!1),
         [H, W] = i.useState([]),
         q = (0, y.rR)(n.type),
-        X = b.Z.get(q);
+        Q = b.Z.get(q);
     i.useEffect(() => {
         _(n.friendSync), g(n.visibility), I(n.metadataVisibility), C(n.showActivity);
     }, [n]);
-    let Q = {
+    let X = {
             inProgressVisibility: N,
             inProgressMetadataVisibility: R,
         },
-        J = i.useRef(Q);
+        J = i.useRef(X);
     function $(e) {
         var t;
         let n = b.Z.get(e.type),
@@ -502,7 +502,7 @@ function q(e) {
         C(e), m.Z.setShowActivity(n.type, n.id, e);
     }
     i.useEffect(() => {
-        J.current = Q;
+        J.current = X;
     }),
         i.useEffect(() => {
             if (!1 === n.verified) return;
@@ -513,10 +513,10 @@ function q(e) {
     let ed = (0, x.wy)("ConnectedAccount");
     return (0, r.jsxs)("div", {
         className: o()(V.connection, { [V.connectionUserSettingsRedesign]: ed }),
-        children: [$(n), ee(n), et(n), en(X), ei(), er()],
+        children: [$(n), ee(n), et(n), en(Q), ei(), er()],
     });
 }
-function X() {
+function Q() {
     return (
         i.useEffect(
             () => () => {
@@ -531,7 +531,7 @@ function X() {
         })
     );
 }
-function Q(e) {
+function X(e) {
     let t = b.Z.get(e);
     (0, v.Z)({ platformType: t.type }),
         R.default.track(G.rMx.ACCOUNT_LINK_STEP, {
@@ -544,7 +544,7 @@ function J() {
     function e() {
         _.Z.dispatch({
             type: "CONNECTIONS_GRID_MODAL_SHOW",
-            onComplete: Q,
+            onComplete: X,
         });
     }
     let t = (0, y.fq)();
@@ -636,7 +636,7 @@ let ee = () => {
         : (0, r.jsxs)(M.Z, {
               title: F.intl.string(F.t["3fe7U5"]),
               children: [
-                  (0, r.jsx)(X, {}),
+                  (0, r.jsx)(Q, {}),
                   (0, r.jsx)(p.izJ, { gap: 24 }),
                   (0, r.jsx)($, {
                       fetching: t,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => m,
-    x: () => y,
+    x: () => O,
 }),
     n(388685);
 var r = n(54381),
@@ -19,7 +19,7 @@ var r = n(54381),
 function m(e) {
     let { enabled: t } = s.Z.useExperiment({ location: "LongPressMessageActionSheet" }),
         n = (0, l.e7)([d.Z], () => d.Z.getSavedMessage(e.channel_id, e.id)),
-        i = y({
+        i = O({
             message: e,
             savedMessage: n,
         });
@@ -84,7 +84,7 @@ function m(e) {
               })
         : null;
 }
-function y(e) {
+function O(e) {
     let { message: t, savedMessage: n } = e,
         [l, o] = i.useState(new Date());
     i.useEffect(() => {

@@ -98,8 +98,8 @@ function E(e) {
             roles: w,
             members: M,
         }),
-        k = h && 0 === Object.keys(S).length;
-    async function D() {
+        D = h && 0 === Object.keys(S).length;
+    async function k() {
         if (null == d || 0 === Object.keys(S).length) return void p();
         Z(!0);
         try {
@@ -187,7 +187,7 @@ function E(e) {
                         renderRow: m.Z.renderRow,
                         sections: L,
                     },
-                    actions: k
+                    actions: D
                         ? [
                               {
                                   variant: "secondary",
@@ -204,7 +204,7 @@ function E(e) {
                               {
                                   variant: "primary",
                                   text: y.intl.string(y.t.i4jeWR),
-                                  onClick: D,
+                                  onClick: k,
                                   loading: I,
                               },
                           ],

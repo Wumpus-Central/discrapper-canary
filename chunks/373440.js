@@ -27,8 +27,8 @@ var c,
     P = r(847572),
     v = r(886649),
     w = r(309063),
-    G = r(343573),
-    M = r(431660),
+    M = r(343573),
+    G = r(431660),
     b = r(1693),
     U = r(690889),
     H = r(959036),
@@ -385,8 +385,8 @@ function ev(e, t) {
             keepIframeSrcFn: v = () => !1,
             newlyAddedElement: w = !1,
         } = t,
-        { preserveWhiteSpace: G = !0 } = t,
-        M = (function (e, t) {
+        { preserveWhiteSpace: M = !0 } = t,
+        G = (function (e, t) {
             let {
                     doc: r,
                     mirror: i,
@@ -737,7 +737,7 @@ function ev(e, t) {
             keepIframeSrcFn: v,
             newlyAddedElement: w,
         });
-    if (!M) return console.warn(e, "not serialized"), null;
+    if (!G) return console.warn(e, "not serialized"), null;
     r = o.hasNode(e)
         ? o.getId(e)
         : !(function (e, t) {
@@ -808,11 +808,11 @@ function ev(e, t) {
                     }
                 }
                 return !1;
-            })(M, h) &&
-            (G || M.type !== p.Text || M.isStyle || M.textContent.replace(/^\s+|\s+$/gm, "").length)
+            })(G, h) &&
+            (M || G.type !== p.Text || G.isStyle || G.textContent.replace(/^\s+|\s+$/gm, "").length)
           ? ep()
           : -2;
-    let b = Object.assign(M, { id: r });
+    let b = Object.assign(G, { id: r });
     if ((o.add(e, b), -2 === r)) return null;
     L && L(e);
     let U = !R;
@@ -822,7 +822,7 @@ function ev(e, t) {
         t && J(t) && (b.isShadowHost = !0);
     }
     if ((b.type === p.Document || b.type === p.Element) && U) {
-        h.headWhitespace && b.type === p.Element && "head" === b.tagName && (G = !1);
+        h.headWhitespace && b.type === p.Element && "head" === b.tagName && (M = !1);
         let t = {
             doc: i,
             mirror: o,
@@ -844,7 +844,7 @@ function ev(e, t) {
             dataURLOptions: D,
             inlineImages: S,
             recordCanvas: C,
-            preserveWhiteSpace: G,
+            preserveWhiteSpace: M,
             onSerialize: L,
             onIframeLoad: g,
             iframeLoadTimeout: m,
@@ -915,7 +915,7 @@ function ev(e, t) {
                             dataURLOptions: D,
                             inlineImages: S,
                             recordCanvas: C,
-                            preserveWhiteSpace: G,
+                            preserveWhiteSpace: M,
                             onSerialize: L,
                             onIframeLoad: g,
                             iframeLoadTimeout: m,
@@ -975,7 +975,7 @@ function ev(e, t) {
                             dataURLOptions: D,
                             inlineImages: S,
                             recordCanvas: C,
-                            preserveWhiteSpace: G,
+                            preserveWhiteSpace: M,
                             onSerialize: L,
                             onIframeLoad: g,
                             iframeLoadTimeout: m,
@@ -1005,25 +1005,25 @@ function ew(e) {
     }
     return r;
 }
-function eG(e, t, r = document) {
+function eM(e, t, r = document) {
     let n = {
         capture: !0,
         passive: !0,
     };
     return r.addEventListener(e, t, n), () => r.removeEventListener(e, t, n);
 }
-let eM =
+let eG =
         "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
     eb = {
         map: {},
-        getId: () => (console.error(eM), -1),
-        getNode: () => (console.error(eM), null),
+        getId: () => (console.error(eG), -1),
+        getNode: () => (console.error(eG), null),
         removeNodeFromMap() {
-            console.error(eM);
+            console.error(eG);
         },
-        has: () => (console.error(eM), !1),
+        has: () => (console.error(eG), !1),
         reset() {
-            console.error(eM);
+            console.error(eG);
         },
     };
 function eU(e, t, r = {}) {
@@ -1075,7 +1075,7 @@ function eH(e, t, r) {
 "undefined" != typeof window &&
     window.Proxy &&
     window.Reflect &&
-    (eb = new Proxy(eb, { get: (e, t, r) => ("map" === t && console.error(eM), Reflect.get(e, t, r)) }));
+    (eb = new Proxy(eb, { get: (e, t, r) => ("map" === t && console.error(eG), Reflect.get(e, t, r)) }));
 let eK = Date.now;
 function eB(e) {
     let t = e.document;
@@ -1797,7 +1797,7 @@ function ti(e, t) {
     );
 }
 function to({ scrollCb: e, doc: t, mirror: r, blockClass: n, blockSelector: a, unblockSelector: i, sampling: o }) {
-    return eG(
+    return eM(
         "scroll",
         tt(
             eU(
@@ -1944,7 +1944,7 @@ function tu(e, t = {}) {
                         { trailing: !1 },
                     ),
                 ),
-                E = [eG("mousemove", c, r), eG("touchmove", c, r), eG("drag", c, r)];
+                E = [eM("mousemove", c, r), eM("touchmove", c, r), eM("drag", c, r)];
             return tt(() => {
                 E.forEach((e) => e());
             });
@@ -2017,7 +2017,7 @@ function tu(e, t = {}) {
                                 case e3.TouchEnd:
                                     return;
                             }
-                        s.push(eG(_, E, t));
+                        s.push(eM(_, E, t));
                     }),
                 tt(() => {
                     s.forEach((e) => e());
@@ -2028,7 +2028,7 @@ function tu(e, t = {}) {
         _ = (function ({ viewportResizeCb: e }, { win: t }) {
             let r = -1,
                 n = -1;
-            return eG(
+            return eM(
                 "resize",
                 tt(
                     eU(
@@ -2143,7 +2143,7 @@ function tu(e, t = {}) {
                     });
                 }
             }
-            let A = ("last" === E.input ? ["change"] : ["input", "change"]).map((e) => eG(e, tt(R), t)),
+            let A = ("last" === E.input ? ["change"] : ["input", "change"]).map((e) => eM(e, tt(R), t)),
                 N = t.defaultView;
             if (!N)
                 return () => {
@@ -2231,11 +2231,11 @@ function tu(e, t = {}) {
                     ),
                 ),
                 s = [
-                    eG("play", _(0), o),
-                    eG("pause", _(1), o),
-                    eG("seeked", _(2), o),
-                    eG("volumechange", _(3), o),
-                    eG("ratechange", _(4), o),
+                    eM("play", _(0), o),
+                    eM("pause", _(1), o),
+                    eM("seeked", _(2), o),
+                    eM("volumechange", _(3), o),
+                    eM("ratechange", _(4), o),
                 ];
             return tt(() => {
                 s.forEach((e) => e());
@@ -2509,7 +2509,7 @@ function tu(e, t = {}) {
                     }
                     o({ ranges: s });
                 });
-            return s(), eG("selectionchange", s);
+            return s(), eM("selectionchange", s);
         })(e),
         p = (function ({ doc: e, customElementCb: t }) {
             let r = e.defaultView;
@@ -3034,8 +3034,8 @@ function tC(e = {}) {
             mousemoveWait: P,
             recordDOM: v = !0,
             recordCanvas: w = !1,
-            recordCrossOriginIframes: G = !1,
-            recordAfter: M = "DOMContentLoaded" === e.recordAfter ? e.recordAfter : "load",
+            recordCrossOriginIframes: M = !1,
+            recordAfter: G = "DOMContentLoaded" === e.recordAfter ? e.recordAfter : "load",
             userTriggeredOnInput: b = !1,
             collectFonts: U = !1,
             inlineImages: H = !1,
@@ -3047,7 +3047,7 @@ function tC(e = {}) {
             getCanvasManager: x,
         } = e;
     i = k;
-    let V = !G || window.parent === window,
+    let V = !M || window.parent === window,
         F = !1;
     if (!V)
         try {
@@ -3186,7 +3186,7 @@ function tC(e = {}) {
                       mirror: tS,
                       mutationCb: z,
                       stylesheetManager: Q,
-                      recordCrossOriginIframes: G,
+                      recordCrossOriginIframes: M,
                       wrappedEmit: o,
                   });
     for (let e of K || [])
@@ -3578,23 +3578,23 @@ function tC(e = {}) {
             "interactive" === document.readyState || "complete" === document.readyState
                 ? r()
                 : (e.push(
-                      eG("DOMContentLoaded", () => {
+                      eM("DOMContentLoaded", () => {
                           o({
                               type: e1.DomContentLoaded,
                               data: {},
                           }),
-                              "DOMContentLoaded" === M && r();
+                              "DOMContentLoaded" === G && r();
                       }),
                   ),
                   e.push(
-                      eG(
+                      eM(
                           "load",
                           () => {
                               o({
                                   type: e1.Load,
                                   data: {},
                               }),
-                                  "load" === M && r();
+                                  "load" === G && r();
                           },
                           window,
                       ),
@@ -3661,7 +3661,7 @@ function tv(e) {
 function tw(e) {
     return e > 9999999999 ? e / 1000 : e;
 }
-function tG(e, t) {
+function tM(e, t) {
     "sentry.transaction" !== t.category &&
         (["ui.click", "ui.input"].includes(t.category) ? e.triggerUserActivity() : e.checkAndHandleExpiredSession(),
         e.addUpdate(
@@ -3678,12 +3678,12 @@ function tG(e, t) {
             ),
         ));
 }
-function tM(e) {
+function tG(e) {
     return e.closest("button,a") || e;
 }
 function tb(e) {
     let t = tU(e);
-    return t && t instanceof Element ? tM(t) : t;
+    return t && t instanceof Element ? tG(t) : t;
 }
 function tU(e) {
     var t;
@@ -3699,7 +3699,7 @@ let tH = new Set([
     e2.MediaInteraction,
 ]);
 class tK {
-    constructor(e, t, r = tG) {
+    constructor(e, t, r = tM) {
         (this._lastMutation = 0),
             (this._lastScroll = 0),
             (this._clicks = []),
@@ -3769,7 +3769,7 @@ class tK {
         this._lastScroll = tw(e);
     }
     registerClick(e) {
-        let t = tM(e);
+        let t = tG(e);
         this._handleMultiClick(t);
     }
     _handleMultiClick(e) {
@@ -3999,7 +3999,7 @@ function tj(e) {
     return t ? t(e) : null;
 }
 function tX(e) {
-    return ((G.Z1 || F.performance.timeOrigin) + e) / 1000;
+    return ((M.Z1 || F.performance.timeOrigin) + e) / 1000;
 }
 function t$(e) {
     let t = e.entries[e.entries.length - 1];
@@ -4257,7 +4257,7 @@ function t5(e) {
 }
 function t4(e) {
     let t = Date.now(),
-        r = e.id || (0, M.DM)(),
+        r = e.id || (0, G.DM)(),
         n = e.started || t,
         a = e.lastActivity || t,
         i = e.segmentId || 0;
@@ -4830,17 +4830,17 @@ async function rw({ recordingData: e, replayId: t, segmentId: r, eventContext: n
         } catch (e) {}
         throw e;
     }
-    if ("number" == typeof _.statusCode && (_.statusCode < 200 || _.statusCode >= 300)) throw new rG(_.statusCode);
+    if ("number" == typeof _.statusCode && (_.statusCode < 200 || _.statusCode >= 300)) throw new rM(_.statusCode);
     let f = (0, K.WG)({}, _);
-    if ((0, K.Q)(f, "replay")) throw new rM(f);
+    if ((0, K.Q)(f, "replay")) throw new rG(f);
     return _;
 }
-class rG extends Error {
+class rM extends Error {
     constructor(e) {
         super(`Transport returned status code ${e}`);
     }
 }
-class rM extends Error {
+class rG extends Error {
     constructor(e) {
         super("Rate limit hit"), (this.rateLimits = e);
     }
@@ -4857,7 +4857,7 @@ async function rb(
         try {
             return await rw(e), !0;
         } catch (r) {
-            if (r instanceof rG || r instanceof rM) throw r;
+            if (r instanceof rM || r instanceof rG) throw r;
             if (((0, f.v)("Replays", { _retryCount: t.count }), n && n(r), t.count >= 3)) {
                 let e = Error(`${X} - max retries exceeded`);
                 try {
@@ -5401,7 +5401,7 @@ class rH {
                                 !o.ctrlKey &&
                                 !o.shiftKey &&
                                 ((r = e.clickDetector), (n = tb(t.event)), r.handleClick(a, n)),
-                                tG(e, a);
+                                tM(e, a);
                         }),
                             (0, V.a)((t) => {
                                 if (!e.isEnabled()) return;
@@ -5468,7 +5468,7 @@ class rH {
                                                     });
                                                 })(r)
                                               : tk(r));
-                                    n && tG(e, n);
+                                    n && tM(e, n);
                                 })(e, t),
                             );
                         let n = (0, O.s3)();
@@ -5608,7 +5608,7 @@ class rH {
                                                     r.match(
                                                         /(does not match server-rendered HTML|Hydration failed because)/i,
                                                     )) &&
-                                                tG(
+                                                tM(
                                                     e,
                                                     tk({
                                                         category: "replay.hydrate-error",
@@ -5752,7 +5752,7 @@ class rH {
                         },
                     });
                 })(t);
-                r && tG(e, r);
+                r && tM(e, r);
             })(this, e);
         };
     }
@@ -5843,7 +5843,7 @@ class rH {
                 } catch (t) {
                     this.handleException(t), this.stop({ reason: "sendReplay" });
                     let e = (0, O.s3)();
-                    e && e.recordDroppedEvent(t instanceof rM ? "ratelimit_backoff" : "send_error", "replay");
+                    e && e.recordDroppedEvent(t instanceof rG ? "ratelimit_backoff" : "send_error", "replay");
                 }
         }
     }

@@ -1,4 +1,4 @@
-n.d(e, { Z: () => O });
+n.d(e, { $: () => O });
 var i = n(54381),
     l = n(473749),
     s = n(512722),
@@ -8,18 +8,18 @@ var i = n(54381),
     o = n(660216),
     c = n(825209),
     d = n(924557),
-    E = n(509613),
-    S = n(556296),
-    I = n(313789),
-    T = n(981631),
+    T = n(509613),
+    E = n(556296),
+    S = n(313789),
+    I = n(981631),
     g = n(388032),
     _ = n(360919);
-let O = (0, E.ON)(I.n.CLIPS_SCREENSHOT_KEYBIND, {
+let O = (0, T.ON)(S.n.CLIPS_SCREENSHOT_KEYBIND, {
     useSearchTerms: () => [g.intl.string(g.t["0U/hj7"]), g.intl.string(g.t["5zxkdo"])],
     usePredicate: d.PP,
     render: () => {
-        let t = (0, u.e7)([S.ZP], () => S.ZP.getKeybindForAction(T.kg4.SAVE_CLIP, !0)),
-            e = (0, u.e7)([S.ZP], () => S.ZP.getKeybindForAction(T.kg4.SAVE_SCREENSHOT, !0));
+        let t = (0, u.e7)([E.ZP], () => E.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
+            e = (0, u.e7)([E.ZP], () => E.ZP.getKeybindForAction(I.kg4.SAVE_SCREENSHOT, !0));
         r()(null != t, "Save clip keybind unset"), r()(null != e, "Save screenshot keybind unset");
         let n = l.useCallback(
             (t) => {

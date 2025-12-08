@@ -929,14 +929,14 @@
             return ((t = t || {}).inline = !n), Y(e, t);
         },
         q = H(Z, "react"),
-        X = H(Z, "html"),
-        Q = function (e, t) {
+        Q = H(Z, "html"),
+        X = function (e, t) {
             return q(W(e, t), t);
         },
         J = function (e) {
             var t = {};
             for (var n in e) "source" !== n && Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-            return (t.children = Q(e.source)), u("div", null, t);
+            return (t.children = X(e.source)), u("div", null, t);
         };
     return {
         defaultRules: Z,
@@ -947,16 +947,16 @@
         anyScopeRegex: l,
         parseInline: b,
         parseBlock: y,
-        markdownToReact: Q,
+        markdownToReact: X,
         markdownToHtml: function (e, t) {
-            return X(W(e, t), t);
+            return Q(W(e, t), t);
         },
         ReactMarkdown: J,
         defaultBlockParse: W,
         defaultInlineParse: K,
         defaultImplicitParse: z,
         defaultReactOutput: q,
-        defaultHtmlOutput: X,
+        defaultHtmlOutput: Q,
         preprocess: r,
         sanitizeText: h,
         sanitizeUrl: p,

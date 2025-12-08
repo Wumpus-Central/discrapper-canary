@@ -28,8 +28,8 @@ var r = n(54381),
     w = n(890280),
     I = n(835473),
     P = n(522474),
-    x = n(314897),
-    j = n(819640),
+    j = n(314897),
+    x = n(819640),
     Z = n(594174),
     R = n(823379),
     T = n(5192),
@@ -39,7 +39,7 @@ let D = ["embedded_background"];
 function M(e) {
     let { avatarSize: t, guildId: n, channelId: i, users: l } = e,
         a = null != t ? t : s.EFr.SIZE_32,
-        o = (0, s.pxk)(a);
+        o = (0, s.dcp)(a);
     return (0, r.jsx)(E.ZP, {
         size: o,
         guildId: n,
@@ -72,9 +72,9 @@ function k(e) {
     let { participants: l, application: c, channel: m, width: g } = e,
         v = g > 400 ? 2 : +(g > 300),
         [b] = g > 400 ? [s.EFr.SIZE_56, 56] : g > 300 ? [s.EFr.SIZE_32, 32] : [s.EFr.SIZE_24, 24],
-        h = (0, o.Wu)([Z.default, x.default], () =>
+        h = (0, o.Wu)([Z.default, j.default], () =>
             Array.from(l)
-                .map((e) => ((0, p.J)(e, x.default) ? null : Z.default.getUser(e.userId)))
+                .map((e) => ((0, p.J)(e, j.default) ? null : Z.default.getUser(e.userId)))
                 .filter(R.lm),
         ),
         E = (0, o.e7)([d.ZP], () => {
@@ -93,7 +93,7 @@ function k(e) {
                 application: c,
             }) === _.Fw.CAN_JOIN,
         P = null != (n = m.getGuildId()) ? n : void 0,
-        j = i.useId(),
+        x = i.useId(),
         D = c.id,
         k = i.useMemo(
             () => ({
@@ -105,7 +105,7 @@ function k(e) {
         { submitting: L } = (0, w.Z)({
             applicationId: D,
             context: k,
-            launchingComponentId: j,
+            launchingComponentId: x,
         });
     return (0, r.jsxs)("div", {
         className: N.splash,
@@ -151,7 +151,7 @@ function k(e) {
                                           activityChannelId: m.id,
                                           locationObject: S.location,
                                           analyticsLocations: y,
-                                          componentId: j,
+                                          componentId: x,
                                       });
                           },
                           loading: L,
@@ -177,10 +177,10 @@ function L(e) {
         }),
         E = !l && f,
         w = !f,
-        x = !f && !l,
-        Z = (0, o.e7)([j.Z, P.Z], () =>
+        j = !f && !l,
+        Z = (0, o.e7)([x.Z, P.Z], () =>
             (0, S.Z)({
-                LayerStore: j.Z,
+                LayerStore: x.Z,
                 PopoutWindowStore: P.Z,
             }),
         );
@@ -209,7 +209,7 @@ function L(e) {
                               src: _,
                           })
                         : null,
-                    x &&
+                    j &&
                         null != p &&
                         (0, r.jsx)(k, {
                             width: n,

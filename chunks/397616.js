@@ -2,8 +2,8 @@ r.d(n, { Z: () => c });
 var t = r(54381);
 r(473749);
 var i = r(442837),
-    s = r(481060),
-    o = r(493683),
+    o = r(481060),
+    s = r(493683),
     l = r(592125),
     a = r(594174),
     d = r(388032);
@@ -17,10 +17,10 @@ function c(e, n) {
         !u.isOwner(c.id) ||
         !(null == (r = u.recipients) ? void 0 : r.includes(e))
         ? null
-        : (0, t.jsx)(s.sNh, {
+        : (0, t.jsx)(o.sNh, {
               id: "remove",
               label: d.intl.string(d.t["n5zMI+"]),
-              action: () => o.Z.removeRecipient(n, e),
+              action: () => s.Z.removeRecipient(n, e),
               color: "danger",
           });
 }

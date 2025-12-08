@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(313201),
     m = n(944163),
     f = n(266395),
-    h = n(187565),
-    x = n(200305),
+    x = n(187565),
+    h = n(200305),
     g = n(592286),
     p = n(388032),
     v = n(445609);
@@ -32,7 +32,7 @@ let b = () =>
     j = (e) => {
         let { transitionState: t, guildId: n, onClose: a, onComplete: c, inviteKey: g, isPreview: p = !1 } = e,
             j = (0, f.rb)((e) => e.shouldShowWarning),
-            { verificationForm: C, hasFetched: _ } = (0, h.ng)(n, p, g),
+            { verificationForm: C, hasFetched: _ } = (0, x.ng)(n, p, g),
             O = (0, d.Dt)();
         return (l.useEffect(() => {
             _ && C === m.t && a();
@@ -53,7 +53,7 @@ let b = () =>
                               }),
                               (0, r.jsx)("div", {
                                   className: v.container,
-                                  children: (0, r.jsx)(x.Z, {
+                                  children: (0, r.jsx)(h.Z, {
                                       verificationForm: C,
                                       headerId: O,
                                       guildId: n,

@@ -1,4 +1,4 @@
-n.d(e, { F: () => E });
+n.d(e, { F: () => T });
 var i = n(54381),
     l = n(657707),
     s = n(509613),
@@ -14,7 +14,7 @@ let c = (0, s.x1)(r.n.ACCESSIBILITY_PANE, {
         useTitle: () => o.intl.string(o.t.G0neg7),
         buildLayout: () => [c],
     }),
-    E = (0, s.m7)(r.n.ACCESSIBILITY_SIDEBAR_ITEM, {
+    T = (0, s.m7)(r.n.ACCESSIBILITY_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t.G0neg7),
         getLegacySearchKey: () => a.s6.ACCESSIBILITY,
         icon: l.O0f,

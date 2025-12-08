@@ -17,7 +17,7 @@ var r = n(54381),
     x = n(981631),
     E = n(186901),
     v = n(388032);
-let b = (e) => {
+let j = (e) => {
     let { title: t, subtitle: n, buttonText: i, buttonOnClick: s } = e;
     return (0, r.jsx)(u.ZP, {
         children: (0, r.jsxs)(o.Kqy, {
@@ -36,16 +36,16 @@ let b = (e) => {
         }),
     });
 };
-function j(e) {
+function b(e) {
     let { match: t, location: l } = e,
         o = (0, s.parse)(l.search).token,
-        [d, j] = i.useState("loading"),
+        [d, b] = i.useState("loading"),
         I = i.useRef(!1),
         y = i.useCallback(async (e) => {
             try {
                 p.default.track(x.rMx.ONE_TIME_LOGIN_ATTEMPTED, { source: "web_page" }),
                     await c.Z.oneTimeLogin(e),
-                    j("login_success"),
+                    b("login_success"),
                     p.default.track(x.rMx.LOGIN_SUCCESSFUL, {
                         source: "web_page",
                         login_method: "one_time_login",
@@ -58,7 +58,7 @@ function j(e) {
                     error_reason: "api_error",
                     error_message: e,
                 }),
-                    j("error");
+                    b("error");
             }
         }, []),
         S = i.useCallback((e) => {
@@ -73,11 +73,11 @@ function j(e) {
                           deep_link_provider: "protocol",
                           fingerprint: n,
                       }),
-                      j("app_launched"))
-                    : j("app_launch_not_supported");
+                      b("app_launched"))
+                    : b("app_launch_not_supported");
             });
         }, []),
-        O = i.useCallback(
+        N = i.useCallback(
             (e) => {
                 var t;
                 let r = null != (t = g.default.getFingerprint()) ? t : g.default.getId();
@@ -100,7 +100,7 @@ function j(e) {
                                           deep_link_provider: "rpc",
                                           fingerprint: r,
                                       }),
-                                      j("app_launched"))
+                                      b("app_launched"))
                                     : S(e);
                             })
                             .catch(() => {
@@ -122,7 +122,7 @@ function j(e) {
                 }),
                 !e)
             )
-                return void j("error");
+                return void b("error");
             if (a.tq || a.Em) {
                 var n;
                 let e = null == (n = p.default.getSuperProperties()) ? void 0 : n.os;
@@ -134,8 +134,8 @@ function j(e) {
                 return;
             }
             if ((0, m.isDesktop)()) return void y(o);
-            I.current || ((I.current = !0), j("rpc_attempting"), O(o));
-        }, [o, l, y, O]),
+            I.current || ((I.current = !0), b("rpc_attempting"), N(o));
+        }, [o, l, y, N]),
         a.tq || a.Em)
     ) {
         let e = null == o || "string" != typeof o ? "missing_token" : "invalid_token";
@@ -147,7 +147,7 @@ function j(e) {
     }
     if ((0, h.DB)()) return null;
     if ("app_launched" === d)
-        return (0, r.jsx)(b, {
+        return (0, r.jsx)(j, {
             title: v.intl.string(v.t.RvUUOy),
             subtitle: v.intl.string(v.t["5/lR0g"]),
             buttonText: v.intl.string(v.t["2ixEBi"]),
@@ -156,7 +156,7 @@ function j(e) {
             },
         });
     if ("app_launch_not_supported" === d)
-        return (0, r.jsx)(b, {
+        return (0, r.jsx)(j, {
             title: v.intl.string(v.t.qq4tjT),
             subtitle: v.intl.string(v.t.CVxYRo),
             buttonText: v.intl.string(v.t["2ixEBi"]),
@@ -164,7 +164,7 @@ function j(e) {
         });
     if ("error" === d) {
         let e = null == o || "string" != typeof o ? "missing_token" : "invalid_token";
-        return (0, r.jsx)(b, {
+        return (0, r.jsx)(j, {
             title: v.intl.string(v.t.RtCSr1),
             subtitle: v.intl.string(v.t["S+YjYJ"]),
             buttonText: v.intl.string(v.t.j3cG2p),
@@ -180,7 +180,7 @@ let I = function (e) {
     let { enabled: t } = (0, d.WW)("OneTimeLoginCardWrapper");
     return t
         ? (0, r.jsx)(
-              j,
+              b,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

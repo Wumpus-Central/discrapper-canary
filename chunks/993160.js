@@ -24,9 +24,9 @@ function f(e) {
         {
             gameFriends: I,
             hasOutgoingPendingGameFriends: y,
-            hasIncomingPendingGameFriends: _,
+            hasIncomingPendingGameFriends: Z,
         } = (0, m.H)({ userId: n.id }),
-        Z = I.length > 0 || y || _;
+        _ = I.length > 0 || y || Z;
     return v === p.OGo.BLOCKED
         ? null
         : n.id === t.id
@@ -97,7 +97,7 @@ function f(e) {
                           }),
                       ],
                   })
-                : v === p.OGo.NONE && Z
+                : v === p.OGo.NONE && _
                   ? (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsx)(a.H, {
@@ -114,7 +114,7 @@ function f(e) {
                                 tooltipPosition: "top",
                                 tooltipAlign: "center",
                                 shouldShowTooltip: !0,
-                                hasIncomingPendingGameFriends: _,
+                                hasIncomingPendingGameFriends: Z,
                                 hasOutgoingPendingGameFriends: y,
                             }),
                             (0, l.jsx)(c.wV, {

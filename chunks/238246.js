@@ -101,7 +101,7 @@ function q(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
     return t && k.isPlatformEmbedded && !n;
 }
-class X extends (r = a.Component) {
+class Q extends (r = a.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
@@ -193,7 +193,7 @@ class X extends (r = a.Component) {
                         children: (0, i.jsxs)(m.JcV, {
                             containerRef: this.rootRef,
                             children: [
-                                (0, i.jsx)(Q, {
+                                (0, i.jsx)(X, {
                                     guestWindow: o,
                                     className: l,
                                     children: (0, i.jsxs)(O, {
@@ -267,8 +267,8 @@ class X extends (r = a.Component) {
             });
     }
 }
-Y(X, "defaultProps", { withTitleBar: !0 });
-let Q = a.forwardRef(function (e, t) {
+Y(Q, "defaultProps", { withTitleBar: !0 });
+let X = a.forwardRef(function (e, t) {
         let { guestWindow: n, className: r, children: o } = e,
             { lang: l, style: u, className: d } = (0, M.vP)();
         return (
@@ -310,7 +310,7 @@ let Q = a.forwardRef(function (e, t) {
                   children: (0, i.jsx)(S.Gt, {
                       value: l,
                       children: (0, i.jsx)(
-                          X,
+                          Q,
                           z(W({ ref: t }, e), {
                               titleBarTheme: p,
                               guestWindow: r,

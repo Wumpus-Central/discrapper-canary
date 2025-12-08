@@ -1,4 +1,4 @@
-n.d(e, { Z: () => _ });
+n.d(e, { x: () => _ });
 var i = n(509613),
     l = n(313789),
     s = n(40727),
@@ -8,12 +8,12 @@ var i = n(509613),
     o = n(301763),
     c = n(287454),
     d = n(154869),
-    E = n(987143),
-    S = n(39408),
-    I = n(936890),
-    T = n(518517),
+    T = n(987143),
+    E = n(39408),
+    S = n(936890),
+    I = n(518517),
     g = n(388032);
 let _ = (0, i.k4)(l.n.CLIPS_RECORDING_CATEGORY, {
     useTitle: () => g.intl.string(g.t.iIwmV5),
-    buildLayout: () => [o.Z, r.Z, S.Z, I.Z, T.Z, a.Z, c.Z, s.Z, u.Z, d.Z, E.Z],
+    buildLayout: () => [o.n, r.y, E.h, S.r, I.b, a.G, c.G, s.N, u.k, d.$, T.A],
 });

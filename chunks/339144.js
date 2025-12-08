@@ -191,7 +191,7 @@ let D = i.memo(function (e) {
         let eu =
                 null == ee || null == H
                     ? null
-                    : (0, r.jsx)(M, {
+                    : (0, r.jsx)(L, {
                           guildId: ee,
                           applicationId: H.id,
                       }),
@@ -262,7 +262,7 @@ let D = i.memo(function (e) {
             em =
                 !q || Q
                     ? null
-                    : (0, r.jsx)(L, {
+                    : (0, r.jsx)(M, {
                           runningGame: U,
                           startAuthorization: () => {
                               Y() === m.r.RPC &&
@@ -302,7 +302,7 @@ let D = i.memo(function (e) {
                   ],
               });
     }),
-    L = i.forwardRef(function (e, t) {
+    M = i.forwardRef(function (e, t) {
         let { runningGame: n, startAuthorization: i, connectionApp: l } = e;
         return (0, r.jsx)(N.Z, {
             ref: t,
@@ -319,7 +319,7 @@ let D = i.memo(function (e) {
             tooltipText: T.intl.string(T.t.sbdnpw),
         });
     });
-function M(e) {
+function L(e) {
     let { applicationId: t, guildId: n } = e,
         l = i.useRef(null);
     i.useEffect(() => {

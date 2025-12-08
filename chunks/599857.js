@@ -5,23 +5,23 @@ n.d(t, {
     n(388685);
 var a = n(54381),
     l = n(473749),
-    i = n(462654),
-    r = n(780384),
+    r = n(462654),
+    i = n(780384),
     s = n(481060),
     o = n(626135),
     c = n(756148),
     d = n(981631);
 function u(e) {
-    let { sitekey: t, action: n, onVerify: i } = e,
-        [r, u] = l.useState("uninitialized"),
+    let { sitekey: t, action: n, onVerify: r } = e,
+        [i, u] = l.useState("uninitialized"),
         m = l.useCallback((e) => {
             o.default.track(d.rMx.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
         }, []),
         p = l.useCallback(
             (e) => {
-                m("handle-verify"), i(e);
+                m("handle-verify"), r(e);
             },
-            [i, m],
+            [r, m],
         ),
         h = l.useCallback(() => {
             var e, a, l;
@@ -45,8 +45,8 @@ function u(e) {
         }, [t, h, m]);
     return (
         l.useEffect(() => {
-            "uninitialized" === r && x();
-        }, [x, r]),
+            "uninitialized" === i && x();
+        }, [x, i]),
         l.useEffect(
             () => () => {
                 m("recaptcha-unloading"),
@@ -76,21 +76,21 @@ let m = (e) => {
                     var n,
                         a,
                         l = {},
-                        i = Object.keys(e);
-                    for (a = 0; a < i.length; a++) (n = i[a]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                        r = Object.keys(e);
+                    for (a = 0; a < r.length; a++) (n = r[a]), t.indexOf(n) >= 0 || (l[n] = e[n]);
                     return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < i.length; a++)
-                    (n = i[a]),
+                var r = Object.getOwnPropertySymbols(e);
+                for (a = 0; a < r.length; a++)
+                    (n = r[a]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
             return l;
         })(e, ["theme"]);
-    let o = (0, r.wj)(l) ? "dark" : "light";
+    let o = (0, i.wj)(l) ? "dark" : "light";
     return (0, a.jsx)(
-        i.Z,
+        r.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

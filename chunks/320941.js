@@ -8,12 +8,12 @@ var a = r(54381),
     s = r(709093),
     d = r(741245),
     p = r(783017),
-    b = r(317269),
-    m = r(474936),
-    u = r(981631),
+    u = r(317269),
+    b = r(474936),
+    m = r(981631),
     _ = r(388032),
     h = r(724683);
-function C(e) {
+function f(e) {
     let { onClose: t } = e,
         r = (0, a.jsx)(o.Text, {
             className: h.description,
@@ -28,18 +28,18 @@ function C(e) {
         onClose: t,
     });
 }
-function f(e) {
+function C(e) {
     let { onClose: t } = e;
-    return (0, a.jsx)(b.ZP, {
-        planId: m.Xh.PREMIUM_MONTH_TIER_0,
+    return (0, a.jsx)(u.ZP, {
+        planId: b.Xh.PREMIUM_MONTH_TIER_0,
         onClose: t,
     });
 }
 let S = (e) => {
     let { transitionState: t, onClose: r, premiumType: d } = e,
-        p = d === m.PremiumTypes.TIER_0,
-        b = n.useCallback(() => {
-            l.S.dispatch(u.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+        p = d === b.PremiumTypes.TIER_0,
+        u = n.useCallback(() => {
+            l.S.dispatch(m.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                 c.Z.isDisplayingWowMomentConfirmation && c.Z.isAnimated
                     ? setTimeout(() => {
                           r();
@@ -52,10 +52,10 @@ let S = (e) => {
         parentComponent: "ResubscribeSuccessStep",
         children: [
             (0, a.jsx)(s.Z, {
-                onClose: b,
+                onClose: u,
                 upgradeToPremiumType: d,
             }),
-            (0, a.jsx)(o.hzk, { children: (0, a.jsx)(p ? f : C, { onClose: b }) }),
+            (0, a.jsx)(o.hzk, { children: (0, a.jsx)(p ? C : f, { onClose: u }) }),
         ],
     });
 };

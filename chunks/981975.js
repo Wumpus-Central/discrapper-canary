@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(392711),
     o = n.n(s),
     c = n(442837),
-    u = n(481060),
-    d = n(570140),
+    d = n(481060),
+    u = n(570140),
     g = n(275759),
     m = n(63063),
     p = n(243730),
@@ -59,12 +59,12 @@ function S(e) {
     return (0, r.jsxs)("div", {
         className: y.headerNoConfigContainer,
         children: [
-            (0, r.jsx)(u.Heading, {
+            (0, r.jsx)(d.Heading, {
                 className: y.headerHeading,
                 variant: "eyebrow",
                 children: C.intl.string(C.t.nMir27),
             }),
-            (0, r.jsx)(u.Text, {
+            (0, r.jsx)(d.Text, {
                 variant: "text-sm/normal",
                 color: "text-default",
                 className: y.headerNoConfigSubtitle,
@@ -72,7 +72,7 @@ function S(e) {
                     helpdeskArticleUrl: m.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN),
                 }),
             }),
-            (0, r.jsx)(u.Button, {
+            (0, r.jsx)(d.Button, {
                 disabled: n,
                 onClick: t,
                 text: C.intl.string(C.t["OSvW5+"]),
@@ -110,7 +110,7 @@ function T(e) {
             (0, f.d_)(n.id, I(r, A));
     }
     function M() {
-        d.Z.dispatch({
+        u.Z.dispatch({
             type: "CONNECTIONS_GRID_MODAL_SHOW",
             onComplete: (e) => G(e),
             excludedPlatformTypes: k,
@@ -128,11 +128,11 @@ function T(e) {
         var B;
         let e = null;
         L.length < 10 &&
-            (e = (0, r.jsx)(u.Button, {
+            (e = (0, r.jsx)(d.Button, {
                 disabled: l,
                 onClick: M,
                 text: C.intl.string(C.t["OSvW5+"]),
-                icon: u.oFk,
+                icon: d.oFk,
                 fullWidth: !0,
                 variant: "secondary",
             })),
@@ -146,12 +146,12 @@ function T(e) {
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: y.headerTitleTextContainer,
-                                        children: (0, r.jsx)(u.Heading, {
+                                        children: (0, r.jsx)(d.Heading, {
                                             variant: "eyebrow",
                                             children: C.intl.string(C.t.nMir27),
                                         }),
                                     }),
-                                    (0, r.jsx)(u.Avr, {
+                                    (0, r.jsx)(d.Avr, {
                                         variant: "critical",
                                         onClick: B,
                                         disabled: l,
@@ -160,7 +160,7 @@ function T(e) {
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(u.Text, {
+                            (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 children: C.intl.format(C.t.q5f7tK, {
                                     helpdeskArticleUrl: m.Z.getArticleURL(v.BhN.CONNECTION_DETAILS_ADMIN),
@@ -170,7 +170,7 @@ function T(e) {
                     })),
                     (function (e, t, n, i, l) {
                         let a = I(i, g.O1.OR);
-                        return (0, r.jsx)(u.FXm, {
+                        return (0, r.jsx)(d.FXm, {
                             label: C.intl.string(C.t.Xs7PHX),
                             options: [
                                 {
@@ -278,7 +278,7 @@ function T(e) {
                 ],
             }));
     }
-    return (0, r.jsx)(u.yWw, {
+    return (0, r.jsx)(d.yWw, {
         className: y.scroller,
         style: { scrollPaddingTop: T },
         onScroll: Z,
@@ -299,14 +299,14 @@ function T(e) {
                     ? (0, r.jsxs)("div", {
                           className: y.warningContainer,
                           children: [
-                              (0, r.jsx)(u.Mgn, {
+                              (0, r.jsx)(d.Mgn, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
                                   className: y.warningIcon,
                               }),
-                              (0, r.jsx)(u.Text, {
+                              (0, r.jsx)(d.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-default",
                                   children: C.intl.string(C.t["2aFeef"]),

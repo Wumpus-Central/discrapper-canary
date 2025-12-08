@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(408310),
     y = n(75666),
     O = n(981631),
-    j = n(295907),
-    x = n(806328);
+    x = n(295907),
+    j = n(806328);
 let v = (e) => {
     let { channel: t, guild: v } = e,
         {
@@ -154,7 +154,7 @@ let v = (e) => {
         ),
         G = (e) => {
             0 !== w.trim().length &&
-                e.key === j.vn.ENTER &&
+                e.key === x.vn.ENTER &&
                 (u.Rq(t.id, w),
                 d.default.track(O.rMx.GUILD_DIRECTORY_SEARCH, {
                     directory_channel_id: t.id,
@@ -177,12 +177,12 @@ let v = (e) => {
           })
         : null == P && null == C
           ? (0, r.jsx)("div", {
-                className: x.pageContainer,
-                children: (0, r.jsx)(a.$jN, { className: x.spinner }),
+                className: j.pageContainer,
+                children: (0, r.jsx)(a.$jN, { className: j.spinner }),
             })
           : (null == P ? void 0 : P.length) === 0 && null == C
             ? (0, r.jsx)("div", {
-                  className: x.pageContainer,
+                  className: j.pageContainer,
                   children: (0, r.jsx)(g.Z, {
                       guild: v,
                       onAddGuild: U,

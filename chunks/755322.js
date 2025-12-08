@@ -1,4 +1,4 @@
-n.d(e, { w: () => E });
+n.d(e, { w: () => T });
 var i = n(657707),
     l = n(509613),
     s = n(313789),
@@ -14,7 +14,7 @@ let c = (0, l.x1)(s.n.LEGACY_NOTIFICATIONS_PANE, {
         useTitle: () => o.intl.string(o.t.HcoRu0),
         buildLayout: () => [c],
     }),
-    E = (0, l.m7)(s.n.LEGACY_NOTIFICATIONS_SIDEBAR_ITEM, {
+    T = (0, l.m7)(s.n.LEGACY_NOTIFICATIONS_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t.HcoRu0),
         getLegacySearchKey: () => a.s6.NOTIFICATIONS,
         icon: i.Dkj,

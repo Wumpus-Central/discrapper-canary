@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(49124);
+n.d(t, { Z: () => _ }), n(388685), n(49124);
 var l = n(54381),
     i = n(473749),
     r = n(120356),
@@ -17,7 +17,7 @@ var l = n(54381),
     O = n(65154),
     y = n(388032),
     C = n(827297);
-let _ = () => {
+let T = () => {
         f.Z.getMediaEngine().once(o.aB.ConnectionStats, (e) => {
             let t = JSON.stringify(
                 Object.values(O.Yn)
@@ -45,7 +45,7 @@ let _ = () => {
             (0, h.JG)(t, () => (0, s.showToast)((0, s.createToast)(y.intl.string(y.t.t5VZ88), s.ToastType.SUCCESS)));
         });
     },
-    T = function (e) {
+    _ = function (e) {
         (0, i.useEffect)(() => {
             g.default.track(N.rMx.OPEN_POPOUT, { type: "RTC Connection" });
         }, []);
@@ -108,7 +108,7 @@ let _ = () => {
             }, [e]),
             { connectionState: r, connectionTypeText: o } = e,
             h = d.Sb.getSetting(),
-            T = {
+            _ = {
                 [N.hes.AWAITING_ENDPOINT]: y.intl.format(y.t.Eu2vUR, { url: N.yXt.STATUS }),
                 [N.hes.CONNECTING]: y.intl.string(y.t["y+E8aD"]),
                 [N.hes.AUTHENTICATING]: y.intl.string(y.t["5lGIZH"]),
@@ -128,11 +128,11 @@ let _ = () => {
             }[r];
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                "function" == typeof T
-                    ? T()
+                "function" == typeof _
+                    ? _()
                     : (0, l.jsx)("p", {
                           className: a()(C.popoutText, C.popoutTextDetails),
-                          children: T,
+                          children: _,
                       }),
                 (0, l.jsx)("hr", { className: C.separator }),
                 (0, l.jsxs)("div", {
@@ -168,7 +168,7 @@ let _ = () => {
                                     }),
                                     (0, l.jsxs)(s.Anchor, {
                                         className: a()(C.copyStatsButton, C.textWithIcon),
-                                        onClick: _,
+                                        onClick: T,
                                         title: "Copy to clipboard",
                                         children: [
                                             y.intl.string(y.t["XEb+Sj"]),

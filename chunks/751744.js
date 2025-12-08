@@ -1,80 +1,80 @@
-i.d(e, { default: () => b }), i(953529);
-var n = i(54381),
-    r = i(473749),
-    s = i(793030),
-    c = i(442837),
-    l = i(481060),
-    a = i(168107),
-    o = i(480916),
-    A = i(819557),
-    _ = i(138201),
-    E = i(331692),
-    d = i(103879),
-    u = i(236289),
-    p = i(800530),
-    g = i(388032);
-let T = [
+n.d(e, { default: () => b }), n(953529);
+var i = n(54381),
+    l = n(473749),
+    r = n(793030),
+    s = n(442837),
+    c = n(481060),
+    o = n(168107),
+    a = n(480916),
+    d = n(819557),
+    u = n(138201),
+    x = n(331692),
+    m = n(103879),
+    p = n(236289),
+    g = n(800530),
+    f = n(388032);
+let h = [
         {
-            title: g.intl.string(g.t["1+E7LP"]),
-            description: g.intl.string(g.t["BXiat/"]),
+            title: f.intl.string(f.t["1+E7LP"]),
+            description: f.intl.string(f.t["BXiat/"]),
         },
         {
-            title: g.intl.string(g.t.iMQXtK),
-            description: g.intl.string(g.t.oQ0vwu),
+            title: f.intl.string(f.t.iMQXtK),
+            description: f.intl.string(f.t.oQ0vwu),
         },
         {
-            title: g.intl.string(g.t["oY/z1Q"]),
-            description: g.intl.string(g.t.wtj02W),
+            title: f.intl.string(f.t["oY/z1Q"]),
+            description: f.intl.string(f.t.wtj02W),
         },
     ],
     b = function (t) {
-        let { onClose: e, transitionState: i, classificationId: b } = t,
-            f = (0, c.e7)([u.Z], () => u.Z.getAgeVerificationWebviewUrl()),
-            P = (0, c.e7)([u.Z], () => u.Z.getIsLoadingAgeVerification()),
-            y = r.useCallback(() => {
-                e(), E.Z.close();
+        let { onClose: e, transitionState: n, classificationId: b } = t,
+            j = (0, s.e7)([p.Z], () => p.Z.getAgeVerificationWebviewUrl()),
+            _ = (0, s.e7)([p.Z], () => p.Z.getIsLoadingAgeVerification()),
+            v = l.useCallback(() => {
+                e(), x.Z.close();
             }, [e]),
-            U = r.useCallback(() => {
-                E.Z.success(), y(), E.Z.start_verification_check();
-            }, [y]);
+            N = l.useCallback(() => {
+                x.Z.success(), v(), x.Z.start_verification_check();
+            }, [v]);
         return (
-            r.useEffect(() => {
-                "" !== f &&
-                    a.Z.showAgeVerification({
-                        webviewUrl: f,
-                        onComplete: U,
-                        entryPoint: o.cU.AUTOMATED_UNDERAGE_APPEALS,
+            l.useEffect(() => {
+                "" !== j &&
+                    o.Z.showAgeVerification({
+                        webviewUrl: j,
+                        onComplete: N,
+                        entryPoint: a.cU.AUTOMATED_UNDERAGE_APPEALS,
                     });
-            }, [f, U]),
-            (0, n.jsx)(s.Modal, {
+            }, [j, N]),
+            (0, i.jsx)(r.Modal, {
                 onClose: e,
-                transitionState: i,
-                title: g.intl.string(g.t["9SDLnj"]),
-                subtitle: g.intl.string(g.t["yvx//1"]),
+                transitionState: n,
+                title: f.intl.string(f.t["9SDLnj"]),
+                subtitle: f.intl.string(f.t["yvx//1"]),
                 actions: [
                     {
-                        text: g.intl.string(g.t.dKacJ8),
-                        onClick: y,
+                        text: f.intl.string(f.t.dKacJ8),
+                        onClick: v,
                         variant: "secondary",
                     },
                     {
-                        text: g.intl.string(g.t["54b8V0"]),
-                        onClick: () => (0, d.FN)(b),
-                        loading: P,
+                        text: f.intl.string(f.t["54b8V0"]),
+                        onClick: () => (0, m.FN)(b),
+                        loading: _,
                     },
                 ],
-                children: (0, n.jsxs)(l.Kqy, {
+                children: (0, i.jsxs)(c.Kqy, {
                     gap: 8,
                     direction: "vertical",
                     children: [
-                        (0, n.jsx)(A.z, {
-                            children: T.map((t, e) => {
-                                let { title: i, description: r } = t;
-                                return (0, n.jsx)(
-                                    A.q,
+                        (0, i.jsx)(d.z, {
+                            children: h.map((t, e) => {
+                                let { title: n, description: l } = t;
+                                return (0, i.jsx)(
+                                    d.q,
                                     {
-                                        title: i,
-                                        description: r,
+                                        title: n,
+                                        description: l,
                                         index: e,
                                         listType: "numbered",
                                     },
@@ -82,27 +82,27 @@ let T = [
                                 );
                             }),
                         }),
-                        (0, n.jsxs)(l.Kqy, {
+                        (0, i.jsxs)(c.Kqy, {
                             gap: 8,
                             direction: "vertical",
                             children: [
-                                (0, n.jsx)(_.rT, {
-                                    title: g.intl.string(g.t.WPwp1b),
-                                    children: (0, n.jsx)(_.JZ, {
-                                        title: g.intl.string(g.t.N9WJMM),
-                                        description: g.intl.string(g.t.NHq382),
-                                        buttonText: g.intl.string(g.t["9iy4lB"]),
+                                (0, i.jsx)(u.rT, {
+                                    title: f.intl.string(f.t.WPwp1b),
+                                    children: (0, i.jsx)(u.JZ, {
+                                        title: f.intl.string(f.t.N9WJMM),
+                                        description: f.intl.string(f.t.NHq382),
+                                        buttonText: f.intl.string(f.t["9iy4lB"]),
                                         titleVariant: "text-md/medium",
-                                        onButtonPress: () => window.open(p.sQ.AGE_VERIFICATION_LINK, "_blank"),
+                                        onButtonPress: () => window.open(g.sQ.AGE_VERIFICATION_LINK, "_blank"),
                                     }),
                                 }),
-                                (0, n.jsx)(l.Kqy, {
+                                (0, i.jsx)(c.Kqy, {
                                     align: "center",
-                                    children: (0, n.jsx)(l.Text, {
+                                    children: (0, i.jsx)(c.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-subtle",
-                                        children: g.intl.format(g.t.ZbWsOF, {
-                                            learnMoreLink: p.sQ.LEARN_MORE_UU_APPEAL_LINK,
+                                        children: f.intl.format(f.t.ZbWsOF, {
+                                            learnMoreLink: g.sQ.LEARN_MORE_UU_APPEAL_LINK,
                                         }),
                                     }),
                                 }),

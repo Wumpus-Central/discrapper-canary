@@ -1,28 +1,28 @@
-i.d(e, { n: () => x });
-var t = i(473749),
-    a = i(442837),
-    s = i(626135),
-    l = i(236289),
-    r = i(451284),
-    o = i(613734),
-    c = i(800530),
-    d = i(981631);
+e.d(t, { n: () => x });
+var i = e(473749),
+    a = e(442837),
+    s = e(626135),
+    l = e(236289),
+    r = e(451284),
+    o = e(613734),
+    c = e(800530),
+    d = e(981631);
 let x = () => {
     let n = (0, a.e7)([l.Z], () => l.Z.getAppealClassificationId()),
-        e = (0, o.YG)(null != n ? n : d.lds),
-        i = (0, r.P)(),
+        t = (0, o.YG)(null != n ? n : d.lds),
+        e = (0, r.P)(),
         x = (0, a.e7)([l.Z], () => l.Z.getIsDsaEligible());
-    return t.useCallback(
-        (t) => {
+    return i.useCallback(
+        (i) => {
             s.default.track(d.rMx.SAFETY_HUB_ACTION, {
-                action: t,
-                account_standing: i.state,
+                action: i,
+                account_standing: e.state,
                 classification_ids: null != n ? [Number(n)] : null,
                 source: c.s.AppealIngestion,
                 is_dsa_eligible: x,
-                violation_type: e.violationType,
+                violation_type: t.violationType,
             });
         },
-        [i.state, n, e, x],
+        [e.state, n, t, x],
     );
 };

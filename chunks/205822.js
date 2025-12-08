@@ -1,9 +1,9 @@
-A.d(t, { Z: () => v }), A(953529), A(388685);
+A.d(t, { Z: () => h }), A(953529), A(388685);
 var n = A(54381),
     r = A(473749),
     a = A(120356),
-    i = A.n(a),
-    l = A(481060),
+    l = A.n(a),
+    i = A(481060),
     o = A(710845),
     s = A(310752),
     d = A(531643),
@@ -27,17 +27,17 @@ let p = new o.Z("UploadArea");
 function m() {
     return (0, n.jsxs)("div", {
         children: [
-            (0, n.jsx)("div", { className: i()(g.sparkleWhite, c.sparkleOne) }),
-            (0, n.jsx)("div", { className: i()(g.sparkleWhite, c.sparkleTwo) }),
-            (0, n.jsx)("div", { className: i()(g.lightWhite, c.lightOne) }),
-            (0, n.jsx)("div", { className: i()(g.lightWhite, c.lightTwo) }),
-            (0, n.jsx)("div", { className: i()(g.crossWhite, c.crossOne) }),
-            (0, n.jsx)("div", { className: i()(g.crossWhite, c.crossTwo) }),
-            (0, n.jsx)("div", { className: i()(g.popWhite, c.popOne) }),
+            (0, n.jsx)("div", { className: l()(g.sparkleWhite, c.sparkleOne) }),
+            (0, n.jsx)("div", { className: l()(g.sparkleWhite, c.sparkleTwo) }),
+            (0, n.jsx)("div", { className: l()(g.lightWhite, c.lightOne) }),
+            (0, n.jsx)("div", { className: l()(g.lightWhite, c.lightTwo) }),
+            (0, n.jsx)("div", { className: l()(g.crossWhite, c.crossOne) }),
+            (0, n.jsx)("div", { className: l()(g.crossWhite, c.crossTwo) }),
+            (0, n.jsx)("div", { className: l()(g.popWhite, c.popOne) }),
         ],
     });
 }
-class h extends r.Component {
+class v extends r.Component {
     componentDidMount() {
         let e = this.elementDOMRef.current;
         null != e &&
@@ -61,7 +61,7 @@ class h extends r.Component {
         let { title: e, description: t, icons: A, style: r, className: a } = this.props;
         return (0, n.jsx)("div", {
             ref: this.elementDOMRef,
-            className: i()(a, c.uploadArea, {
+            className: l()(a, c.uploadArea, {
                 [c.droppable]: this.state.isDragging,
                 [c.uploadModalIn]: this.state.isOverZone,
             }),
@@ -140,7 +140,7 @@ class h extends r.Component {
                 if (null != r) {
                     if (
                         ("move" === r.effectAllowed ? (r.dropEffect = "move") : (r.dropEffect = "copy"),
-                        (0, l.nfh)(d.A) && (0, l.Mr3)(d.A),
+                        (0, i.nfh)(d.A) && (0, i.Mr3)(d.A),
                         e.stopPropagation(),
                         e.preventDefault(),
                         null == (t = (A = this.props).onDragOver) || t.call(A, e),
@@ -186,4 +186,4 @@ class h extends r.Component {
             });
     }
 }
-let v = h;
+let h = v;

@@ -1,4 +1,4 @@
-n.d(e, { Z: () => d });
+n.d(e, { g: () => d });
 var i = n(509613),
     l = n(313789),
     s = n(49658),
@@ -10,5 +10,5 @@ var i = n(509613),
 let d = (0, i.CB)(l.n.VOICE_AND_VIDEO_DIAGNOSTICS_ACCORDION, {
     useTitle: (t) => (t ? c.intl.string(c.t["/B4I8H"]) : c.intl.string(c.t.BTlsWH)),
     useCollapsedSubtitle: () => c.intl.string(c.t.la1Ys4),
-    buildLayout: () => [o.Z, s.Z, a.Z, u.Z, r.Z],
+    buildLayout: () => [o.Q, s.P, a.I, u.i, r.f],
 });

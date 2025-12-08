@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(388685);
 var r = n(54381),
-    a = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    i = n(473749),
+    a = n(120356),
+    l = n.n(a),
     s = n(21260),
     o = n(481060),
     c = n(393903),
@@ -36,7 +36,7 @@ function g(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,49 +54,49 @@ function _(e, t) {
         e
     );
 }
-function f(e) {
-    var { id: t, label: n, selected: a, handleTransition: i } = e,
+function _(e) {
+    var { id: t, label: n, selected: i, handleTransition: a } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                a = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        a = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
-                    return a;
+                        i = {},
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++)
-                    (n = i[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return a;
+            return i;
         })(e, ["id", "label", "selected", "handleTransition"]);
     return (0, r.jsx)(
         d.Z.Title,
-        _(g({}, s), {
-            onClick: () => i(t),
+        f(g({}, s), {
+            onClick: () => a(t),
             wrapperClassName: h.tabWrapper,
-            className: l()(h.tab, { [h.selected]: a }),
+            className: l()(h.tab, { [h.selected]: i }),
             children: n,
         }),
     );
 }
 function b(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: i, selected: s } = e,
-        c = a.useRef(null);
+    let { onTabSelect: t, tabs: n, selectedTab: a, selected: s } = e,
+        c = i.useRef(null);
     return (0, r.jsx)(o.yRy, {
         targetElementRef: c,
         renderPopout: (e) => {
-            let { closePopout: a } = e;
+            let { closePopout: i } = e;
             return (0, r.jsx)(u.Z, {
-                selectedTab: i,
-                onClose: a,
+                selectedTab: a,
+                onClose: i,
                 tabs: n,
                 onTabSelect: t,
             });
@@ -107,7 +107,7 @@ function b(e) {
             let { isShown: n } = t;
             return (0, r.jsxs)(
                 d.Z.Title,
-                _(g({}, e), {
+                f(g({}, e), {
                     ref: c,
                     wrapperClassName: h.tabWrapper,
                     className: l()(h.tab, h.more, { [h.selected]: s }),
@@ -123,24 +123,24 @@ function b(e) {
     });
 }
 function x(e) {
-    let { className: t, selectedTab: n, tabs: i, onTabSelect: o, onAvailableWidthChange: d } = e,
-        [u, p] = a.useState(0),
-        m = a.useRef(u),
+    let { className: t, selectedTab: n, tabs: a, onTabSelect: o, onAvailableWidthChange: d } = e,
+        [u, p] = i.useState(0),
+        m = i.useRef(u),
         {
             lastVisibleIndex: g,
-            onItemLayout: _,
+            onItemLayout: f,
             overflowItemsRef: x,
             itemWidthsRef: v,
         } = (0, s.zP)({
-            items: i,
+            items: a,
             itemGapPx: 24,
             maxLines: 1,
             containerWidth: u,
         }),
-        C = a.useMemo(() => i.slice(0, g + 1), [g, i]),
-        j = a.useMemo(() => i.slice(g + 1), [g, i]),
-        y = a.useRef(null),
-        I = a.useCallback(
+        C = i.useMemo(() => a.slice(0, g + 1), [g, a]),
+        j = i.useMemo(() => a.slice(g + 1), [g, a]),
+        y = i.useRef(null),
+        I = i.useCallback(
             (e) => {
                 let t = e.contentRect.width;
                 if (null == t || m.current === t) return;
@@ -160,14 +160,14 @@ function x(e) {
             (0, r.jsxs)("div", {
                 className: h.measurements,
                 children: [
-                    i.map((e, t) =>
+                    a.map((e, t) =>
                         (0, r.jsx)(
                             s.AJ,
                             {
                                 index: t,
-                                onItemLayout: _,
+                                onItemLayout: f,
                                 children: (0, r.jsx)(
-                                    f,
+                                    _,
                                     {
                                         id: e.id,
                                         label: e.label,
@@ -197,7 +197,7 @@ function x(e) {
                     children: [
                         C.map((e) =>
                             (0, r.jsx)(
-                                f,
+                                _,
                                 {
                                     id: e.id,
                                     label: e.label,

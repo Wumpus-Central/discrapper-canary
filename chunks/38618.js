@@ -152,7 +152,7 @@ function q(e) {
             channelId: null,
         });
 }
-function X(e) {
+function Q(e) {
     let { channelId: t } = e;
     if (t === I.GC.channelId) {
         if (k === t) return !1;
@@ -162,7 +162,7 @@ function X(e) {
         });
     }
 }
-function Q(e) {
+function X(e) {
     let { channel: t } = e;
     t.id === I.GC.channelId &&
         I.GC.setState({
@@ -337,8 +337,8 @@ let ey = new eb(s.Z, {
     VOICE_CHANNEL_SELECT: Y,
     VOICE_STATE_UPDATES: z,
     GUILD_DELETE: q,
-    CHANNEL_DELETE: Q,
-    CALL_DELETE: X,
+    CHANNEL_DELETE: X,
+    CALL_DELETE: Q,
     APP_STATE_UPDATE: $,
     GUILD_MEMBERS_REQUEST: en,
     GUILD_SEARCH_RECENT_MEMBERS: er,

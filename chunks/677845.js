@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(728285),
     g = n(800329),
     b = n(470956),
-    y = n(430824),
-    C = n(496675),
+    C = n(430824),
+    y = n(496675),
     v = n(434488),
     _ = n(27457),
     O = n(251564),
@@ -35,7 +35,7 @@ function S(e) {
             popoutType: A,
         } = e,
         w = (0, m.bp)() === E.IlC.POPOUT,
-        M = (0, o.e7)([y.Z], () => y.Z.getGuild(I.guild_id), [I.guild_id]),
+        M = (0, o.e7)([C.Z], () => C.Z.getGuild(I.guild_id), [I.guild_id]),
         { dismissedActivityEntryPointTileChannel: R } = (0, O.d)(),
         L = (0, o.e7)([p.Z], () => p.Z.getUserParticipantCount(I.id), [I]),
         D = (0, b.bt)(I.id, t),
@@ -51,11 +51,11 @@ function S(e) {
                 O.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [I.id, R]);
-    let U = (0, o.e7)([C.Z], () => I.isPrivate() || (0, f.b)(C.Z, M, I), [M, I]),
+    let U = (0, o.e7)([y.Z], () => I.isPrivate() || (0, f.b)(y.Z, M, I), [M, I]),
         V = (null == M ? void 0 : M.afkChannelId) === I.id,
-        F = I.userLimit <= 0 || I.userLimit > 1,
-        B = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
-        H = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        H = I.userLimit <= 0 || I.userLimit > 1,
+        F = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
+        B = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         G = (0, u.KF)(I.id) !== u.jy.CAN_LAUNCH,
         z = null != R && R === I.id,
         W = D.map(
@@ -92,11 +92,11 @@ function S(e) {
     ),
         null != M &&
             !V &&
-            (!(L >= 2) || !B || G || H || z
-                ? F &&
+            (!(L >= 2) || !F || G || B || z
+                ? H &&
                   1 === L &&
                   U &&
-                  (B && !G
+                  (F && !G
                       ? W.push((e) =>
                             (0, i.jsx)(v.h, {
                                 channel: I,

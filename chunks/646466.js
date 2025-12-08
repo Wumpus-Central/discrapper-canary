@@ -1,6 +1,6 @@
 n.d(t, {
     L: () => T,
-    O: () => O,
+    O: () => N,
 }),
     n(388685);
 var a = n(54381),
@@ -407,7 +407,7 @@ let x = l.createContext({
             })
         );
     },
-    N = () => {
+    O = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, c.N9)(),
             { ignoredFilenames: r, clearAssets: s, clearIgnoredFilenames: o, processAndUpsertAssets: d } = (0, u.hm)(),
             { setDropHandler: m } = l.useContext(x),
@@ -461,7 +461,7 @@ let x = l.createContext({
             })
         );
     },
-    O = () => {
+    N = () => {
         let [e, t] = l.useState("preview");
         return (0, a.jsxs)("div", {
             className: p.container,
@@ -477,7 +477,7 @@ let x = l.createContext({
                     optionClassName: p.panelModeControlOption,
                 }),
                 (0, a.jsx)(i.LZC, { size: 8 }),
-                "preview" === e && (0, a.jsx)(N, {}),
+                "preview" === e && (0, a.jsx)(O, {}),
                 "validate" === e && (0, a.jsx)(E, {}),
                 (0, a.jsx)(i.LZC, { size: 16 }),
             ],

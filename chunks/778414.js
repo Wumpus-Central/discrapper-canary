@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(442837),
     c = n(704215),
     s = n(481060),
@@ -71,14 +71,14 @@ function L(e, t) {
             var n,
                 r,
                 i = {},
-                a = Object.keys(e);
-            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                l = Object.keys(e);
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var l = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < l.length; r++)
+            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -109,28 +109,28 @@ function F(e) {
     let { user: t } = e,
         { application: n } = (0, j.G)(),
         { token: i } = (0, d.o)(null == n ? void 0 : n.id),
-        a = (0, P.Z)(t.id),
-        l = (0, v.k)({ location: "ApplicationWidgetUpsell" }),
-        o = a.some((e) => e instanceof h.q && e.applicationId === (null == n ? void 0 : n.id));
-    return null == n || !l || null == i || o
+        l = (0, P.Z)(t.id),
+        a = (0, v.k)({ location: "ApplicationWidgetUpsell" }),
+        o = l.some((e) => e instanceof h.q && e.applicationId === (null == n ? void 0 : n.id));
+    return null == n || !a || null == i || o
         ? null
         : (0, r.jsx)(f.ZP, {
               contentTypes: [c.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET],
               children: (e) => {
-                  let { visibleContent: i, markAsDismissed: a } = e;
+                  let { visibleContent: i, markAsDismissed: l } = e;
                   return i === c.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET
                       ? (0, r.jsx)(w.Z, {
                             user: t,
                             application: n,
-                            onDismiss: a,
+                            onDismiss: l,
                         })
                       : null;
               },
           });
 }
 function U(e) {
-    let { user: t, guildId: n, channelId: a } = e,
-        l = (0, P.Z)(t.id),
+    let { user: t, guildId: n, channelId: l } = e,
+        a = (0, P.Z)(t.id),
         c = (0, o.e7)([m.default], () => m.default.getId() === t.id),
         s = (() => {
             let [e, t] = (0, o.Wu)([b.Z], () => [b.Z.ipCountryCode, b.Z.ipCountryCodeRequest]),
@@ -143,9 +143,9 @@ function U(e) {
             );
         })(),
         d = (0, v.k)({ location: "UserProfileModalV2Widgets" }),
-        f = 0 === l.length && c,
-        j = i.useMemo(() => l.filter(y.Wc), [l]),
-        x = i.useMemo(() => l.filter((e) => e instanceof h.q), [l]);
+        f = 0 === a.length && c,
+        j = i.useMemo(() => a.filter(y.Wc), [a]),
+        x = i.useMemo(() => a.filter((e) => e instanceof h.q), [a]);
     (0, O.J)(c, j);
     var I = t.id;
     (0, _.s)(x);
@@ -160,14 +160,14 @@ function U(e) {
             children: [
                 c && s && (0, r.jsx)(B, {}),
                 c && (0, r.jsx)(F, { user: t }),
-                l.map((e, i) =>
+                a.map((e, i) =>
                     (0, r.jsx)(
                         M,
                         {
                             widget: e,
                             user: t,
                             guildId: n,
-                            channelId: a,
+                            channelId: l,
                             index: i,
                         },
                         e instanceof h.q ? "".concat(e.type, "-").concat(e.applicationId) : "".concat(e.type),
@@ -184,14 +184,14 @@ function U(e) {
 function W(e) {
     var { user: t } = e,
         n = L(e, ["user"]);
-    let a = i.useRef(null);
-    (0, x.r)({ container: a.current });
+    let l = i.useRef(null);
+    (0, x.r)({ container: l.current });
     let o = (0, k.h)(t.id);
     return (0, r.jsxs)(N.F, {
         "data-scroller": !0,
-        scrollerRef: a,
-        className: l()(R.scroller, { [R.hasToolbar]: o }),
+        scrollerRef: l,
+        className: a()(R.scroller, { [R.hasToolbar]: o }),
         fade: !0,
-        children: [(0, r.jsx)(T.Z, { scrollerRef: a }), (0, r.jsx)(U, G({ user: t }, n))],
+        children: [(0, r.jsx)(T.Z, { scrollerRef: l }), (0, r.jsx)(U, G({ user: t }, n))],
     });
 }

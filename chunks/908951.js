@@ -139,7 +139,7 @@ function x(e) {
             }),
                 "function" == typeof n && n(e.id);
         },
-        X = () => {
+        Q = () => {
             (0, u.ZDy)(
                 async () => (e) =>
                     (0, r.jsx)(
@@ -157,7 +157,7 @@ function x(e) {
                 },
             );
         },
-        Q = () => {
+        X = () => {
             let e = t.paymentSourceId;
             return (0, r.jsx)(m.ZP, {
                 prependOption:
@@ -172,7 +172,7 @@ function x(e) {
                 hidePersonalInformation: j,
                 selectedPaymentSourceId: e,
                 onChange: z,
-                onPaymentSourceAdd: X,
+                onPaymentSourceAdd: Q,
                 dropdownLoading: B,
                 disabled: x,
                 paymentGatewayRestrictions: t.eligiblePaymentGateways,
@@ -182,7 +182,7 @@ function x(e) {
             (0, r.jsx)(u.Button, {
                 fullWidth: !0,
                 variant: a ? "primary" : "secondary",
-                onClick: X,
+                onClick: Q,
                 text: A.intl.string(A.t.CpOiEO),
             }),
         $ = (e) => {
@@ -208,7 +208,7 @@ function x(e) {
         let n = (0, v.DE)(e, t.paymentSourceId, !1);
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                Q(),
+                X(),
                 null != t.paymentSourceId
                     ? (0, r.jsx)(_.b, {
                           currencies: n,

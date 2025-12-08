@@ -1,17 +1,17 @@
 n.d(t, { h: () => c }), n(388685);
 var r = n(473749),
     i = n(442837),
-    a = n(314897),
-    l = n(621853),
+    l = n(314897),
+    a = n(621853),
     o = n(86419);
 function c(e) {
     let [t, n] = r.useState(!1),
         c = e.type,
-        s = (0, i.e7)([a.default, l.Z], () => {
+        s = (0, i.e7)([l.default, a.Z], () => {
             var e;
-            let t = a.default.getId();
+            let t = l.default.getId();
             if (null == t) return !1;
-            let n = l.Z.getUserProfile(t);
+            let n = a.Z.getUserProfile(t);
             return (null != (e = null == n ? void 0 : n.widgets) ? e : []).some((e) => e.type === c);
         }),
         u = (0, o.kQ)(e);

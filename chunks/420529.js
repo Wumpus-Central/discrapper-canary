@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => C });
 var i = n(54381);
 n(473749);
 var r = n(399606),
@@ -56,21 +56,21 @@ function b(e, t) {
         e
     );
 }
-function y(e) {
+function C(e) {
     let t = (0, r.e7)([s.Z], () => s.Z.getChannelId() === e.id),
-        y = (0, d.Z)(),
-        C = (null == y ? void 0 : y.channelId) === e.id,
+        C = (0, d.Z)(),
+        y = (null == C ? void 0 : C.channelId) === e.id,
         v = (0, o.V)(e) && !e.isPrivate(),
         _ = (0, o.Z)(e),
         O = (!(0, r.e7)([c.Z], () => c.Z.isInChannel(e.id)) && _) || v,
         x = (0, p.Z)();
-    return C || 0 !== x.length
-        ? C
+    return y || 0 !== x.length
+        ? y
             ? (0, i.jsx)(l.sNh, {
                   label: m.intl.string(m.t.PlwgdU),
                   id: "handoff",
                   action: () => {
-                      (0, u.F)(y);
+                      (0, u.F)(C);
                   },
                   icon: (0, h.Z)(void 0),
                   disabled: O,

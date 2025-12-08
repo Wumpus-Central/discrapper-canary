@@ -1,9 +1,9 @@
-n.d(t, { r: () => l });
+n.d(t, { r: () => a });
 var r = n(473749),
     i = n(85707),
-    a = n(481060);
-function l(e) {
-    let { container: t, edgeDistance: n = 130, maxSpeed: l = 1700, power: o = 2.2 } = e,
+    l = n(481060);
+function a(e) {
+    let { container: t, edgeDistance: n = 130, maxSpeed: a = 1700, power: o = 2.2 } = e,
         c = (0, r.useRef)(null),
         s = (0, r.useRef)(0),
         u = (0, r.useRef)({
@@ -23,7 +23,7 @@ function l(e) {
     (0, r.useEffect)(() => {
         d.current = p;
     }, [p]);
-    let b = (0, a.zPA)();
+    let b = (0, l.zPA)();
     (0, r.useEffect)(() => {
         if (null == t) return;
         if (!(!0 === g && (null == m ? void 0 : m.itemType) === "WIDGET" && !b)) {
@@ -49,7 +49,7 @@ function l(e) {
                     s.current = r;
                     return;
                 }
-                let a = Math.min(32, 0 !== s.current ? r - s.current : 16) / 1000;
+                let l = Math.min(32, 0 !== s.current ? r - s.current : 16) / 1000;
                 s.current = r;
                 let { top: f, bottom: g } = u.current,
                     p = i.y,
@@ -58,11 +58,11 @@ function l(e) {
                     h = 0;
                 if (
                     (m >= 0 && m < n
-                        ? (h = -l * Math.pow(1 - m / n, o))
-                        : b >= 0 && b < n && (h = l * Math.pow(1 - b / n, o)),
+                        ? (h = -a * Math.pow(1 - m / n, o))
+                        : b >= 0 && b < n && (h = a * Math.pow(1 - b / n, o)),
                     0 !== h)
                 ) {
-                    let e = h * a;
+                    let e = h * l;
                     Math.abs(e) >= 1 && (t.scrollTop += Math.round(e));
                 }
             })),
@@ -73,5 +73,5 @@ function l(e) {
                     null != t && ((t.style.overflowAnchor = "auto"), (t.style.overscrollBehavior = "auto"));
             }
         );
-    }, [t, g, null == m ? void 0 : m.itemType, n, l, o, b]);
+    }, [t, g, null == m ? void 0 : m.itemType, n, a, o, b]);
 }

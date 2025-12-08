@@ -1,4 +1,4 @@
-n.d(e, { o: () => E });
+n.d(e, { o: () => T });
 var i = n(54381),
     l = n(657707),
     s = n(509613),
@@ -14,7 +14,7 @@ let c = (0, s.x1)(r.n.BILLING_PANE, {
         useTitle: () => o.intl.string(o.t.oeUm2s),
         buildLayout: () => [c],
     }),
-    E = (0, s.m7)(r.n.BILLING_SIDEBAR_ITEM, {
+    T = (0, s.m7)(r.n.BILLING_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t.oeUm2s),
         getLegacySearchKey: () => a.s6.BILLING,
         icon: l.ciH,

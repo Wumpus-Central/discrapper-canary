@@ -8,10 +8,10 @@ var i = n(54381),
     o = n(313789),
     c = n(526665),
     d = n(698151),
-    E = n(183353),
-    S = n(726985),
-    I = n(388032);
-let T = (0, a.x1)(o.n.CLIPS_PANE, {
+    T = n(183353),
+    E = n(726985),
+    S = n(388032);
+let I = (0, a.x1)(o.n.CLIPS_PANE, {
         usePredicate: () => !(0, c.BK)("LegacyClipsPane"),
         render: () => (0, i.jsx)(u.Z, {}),
         buildLayout: () => [],
@@ -22,16 +22,16 @@ let T = (0, a.x1)(o.n.CLIPS_PANE, {
                 e = (0, s.w9)();
             return t && e;
         },
-        buildLayout: () => [E.x, d.K],
+        buildLayout: () => [T.x, d.K],
     }),
     _ = (0, a.wf)(o.n.CLIPS_PANEL, {
-        useTitle: () => I.intl.string(I.t.z2jK6X),
+        useTitle: () => S.intl.string(S.t.z2jK6X),
         useBadge: () => (0, i.jsx)(r.Z, {}),
-        buildLayout: () => ((0, c.Ml)("ClipsPanel") ? [g] : [T]),
+        buildLayout: () => ((0, c.Ml)("ClipsPanel") ? [g] : [I]),
     }),
     O = (0, a.m7)(o.n.CLIPS_SIDEBAR_ITEM, {
-        useTitle: () => I.intl.string(I.t.z2jK6X),
-        getLegacySearchKey: () => ((0, c.Ml)("ClipsPanel") ? void 0 : S.s6.CLIPS),
+        useTitle: () => S.intl.string(S.t.z2jK6X),
+        getLegacySearchKey: () => ((0, c.Ml)("ClipsPanel") ? void 0 : E.s6.CLIPS),
         icon: l.AlX,
         buildLayout: () => [_],
     });

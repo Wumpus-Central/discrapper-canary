@@ -1,6 +1,6 @@
-n.d(e, { S: () => l });
-var a = n(308569),
-    r = n(388032);
+e.d(n, { S: () => l });
+var a = e(308569),
+    r = e(388032);
 let i = {
     [a.pw.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => r.intl.string(r.t.naBTFO),
     [a.pw.SOMEONE_ASKED_ME_TO]: () => r.intl.string(r.t.LQ0RUP),

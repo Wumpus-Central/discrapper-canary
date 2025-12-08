@@ -96,7 +96,7 @@ function _(e) {
                   ? (0, r.jsx)(r.Fragment, { children: A() })
                   : (0, r.jsx)(r.Fragment, { children: C() }),
         P = () => {
-            let e = (0, s.pxk)(n),
+            let e = (0, s.dcp)(n),
                 t = (0, r.jsx)("img", {
                     src: m,
                     alt: " ",
@@ -132,7 +132,7 @@ function _(e) {
             },
             I,
         ),
-        w = (0, s.pxk)(n),
+        w = (0, s.dcp)(n),
         D = f(
             {
                 height: w,

@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(942951),
     _ = n(594174),
     m = n(55935),
-    h = n(342153),
+    h = n(864309),
     g = n(388032),
     E = n(424271),
     b = n(724913),
@@ -27,7 +27,7 @@ let O = (e) => {
             guildId: n,
             messageId: O,
         })((0, u.JZ)(S, s)),
-        A = null != S ? S.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : y,
+        A = null != S ? S.getAvatarURL(n, (0, c.dcp)(c.EFr.SIZE_16)) : y,
         C =
             null != S
                 ? g.intl.format(h.default["+zqXZs"], {

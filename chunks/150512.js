@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(35282);
 var l = n(54381),
-    r = n(473749),
-    i = n(120356),
-    a = n.n(i),
+    i = n(473749),
+    r = n(120356),
+    a = n.n(r),
     s = n(399606),
     o = n(481060),
     c = n(749210),
@@ -15,20 +15,20 @@ var l = n(54381),
     N = n(51144),
     I = n(180391);
 function p(e) {
-    let { guildId: t, welcomeMessage: n, className: i } = e,
+    let { guildId: t, welcomeMessage: n, className: r } = e,
         p = (0, s.e7)([g.Z], () => g.Z.getGuild(t)),
         O = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         E = (0, s.e7)([h.default], () => h.default.getUser(null == n ? void 0 : n.authorIds[0])),
-        S = r.useMemo(() => (null != p && null != E && (0, u.Y)(p, E) ? E : null), [p, E]),
+        S = i.useMemo(() => (null != p && null != E && (0, u.Y)(p, E) ? E : null), [p, E]),
         x = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        T = r.useMemo(() => {
+        T = i.useMemo(() => {
             var e;
             return null != (e = null == n ? void 0 : n.authorIds) ? e : [];
         }, [n]);
-    r.useEffect(() => {
+    i.useEffect(() => {
         c.Z.requestMembersById(t, T);
     }, [t, T]),
-        r.useEffect(() => {
+        i.useEffect(() => {
             null != S && (0, m.Z)(S.id, S.getAvatarURL(t, 48), { guildId: t });
         }, [S, t]);
     let _ = f.ZP.useName(t, null, S),
@@ -36,7 +36,7 @@ function p(e) {
     if (null == S || null == x || null == n) return null;
     let v = null != p && p.ownerId === S.id;
     return (0, l.jsxs)(o.Zbd, {
-        className: a()(I.welcomeMessageContainer, i),
+        className: a()(I.welcomeMessageContainer, r),
         children: [
             (0, l.jsx)("div", { className: I.avatarBackground }),
             O
@@ -78,13 +78,13 @@ function p(e) {
                         children: (function (e, t) {
                             let n = e.split(/\[@username\]/g);
                             return (0, l.jsx)("span", {
-                                children: n.map((e, i) =>
+                                children: n.map((e, r) =>
                                     (0, l.jsxs)(
-                                        r.Fragment,
+                                        i.Fragment,
                                         {
                                             children: [
                                                 e,
-                                                i < n.length - 1
+                                                r < n.length - 1
                                                     ? (0, l.jsx)(o.Text, {
                                                           tag: "span",
                                                           variant: "text-md/semibold",
@@ -93,7 +93,7 @@ function p(e) {
                                                     : null,
                                             ],
                                         },
-                                        "username-".concat(i),
+                                        "username-".concat(r),
                                     ),
                                 ),
                             });

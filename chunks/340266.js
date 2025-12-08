@@ -184,7 +184,7 @@ function g(e) {
                                         text: l.ZP.getName(n.guild_id, n.id, c),
                                         children: (0, r.jsx)("img", {
                                             className: d.avatar,
-                                            src: c.getAvatarURL(n.guild_id, (0, s.pxk)(s.EFr.SIZE_80)),
+                                            src: c.getAvatarURL(n.guild_id, (0, s.dcp)(s.EFr.SIZE_80)),
                                             alt: "",
                                         }),
                                     }),

@@ -435,14 +435,14 @@ function q(e) {
         f = (null == u ? void 0 : u.memberCount) == null || (null == u ? void 0 : u.memberCount) > 100;
     return W([i], { jitter: d && f });
 }
-function X(e) {
+function Q(e) {
     let { channelId: t, messages: n } = e;
     if (null == t || null == n) return !1;
     let r = g.Z.getChannelId(),
         i = _.ZP.getCurrentSidebarChannelId(r);
     return (t === r || t === i) && W(n);
 }
-function Q(e) {
+function X(e) {
     let { data: t } = e,
         n = !1;
     return (
@@ -497,7 +497,7 @@ class eo extends c.Z {
     constructor(...e) {
         super(...e),
             w(this, "actions", {
-                LOAD_MESSAGES_SUCCESS: X,
+                LOAD_MESSAGES_SUCCESS: Q,
                 LOAD_FORUM_POSTS: $,
                 LOAD_THREADS_SUCCESS: ee,
                 LOAD_ARCHIVED_THREADS_SUCCESS: ee,
@@ -505,8 +505,8 @@ class eo extends c.Z {
                 MESSAGE_CREATE: q,
                 MESSAGE_UPDATE: z,
                 LOGOUT: M,
-                SEARCH_MESSAGES_SUCCESS: Q,
-                MOD_VIEW_SEARCH_MESSAGES_SUCCESS: Q,
+                SEARCH_MESSAGES_SUCCESS: X,
+                MOD_VIEW_SEARCH_MESSAGES_SUCCESS: X,
                 CHANNEL_SELECT: en,
                 LOAD_PINNED_MESSAGES_SUCCESS: J,
                 USER_SETTINGS_PROTO_UPDATE: er,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    a = n.n(i),
-    l = n(884697),
+    l = n.n(i),
+    a = n(884697),
     o = n(754433),
     s = n(409116),
     c = n(981631),
@@ -17,19 +17,19 @@ function d(e) {
             className: p,
             discountOfferAmount: f,
             hideStrikethroughPrice: v = !1,
-            nitroIconType: h,
-            nitroIconSize: g = "md",
+            nitroIconType: g,
+            nitroIconSize: h = "md",
         } = e,
-        b = (0, l.ql)(i, c.tuJ.DEFAULT);
+        b = (0, a.ql)(i, c.tuJ.DEFAULT);
     if (null == b) return null;
     if (b.amount <= 0)
         return (0, r.jsx)("div", {
-            className: a()(u.priceTagsContainer, p),
+            className: l()(u.priceTagsContainer, p),
             children: (0, r.jsx)(s.F, { price: b }),
         });
-    let x = (0, l.ql)(i, c.tuJ.PREMIUM_TIER_2),
+    let x = (0, a.ql)(i, c.tuJ.PREMIUM_TIER_2),
         P =
-            (0, l.x6)(i) && d
+            (0, a.x6)(i) && d
                 ? ((t = (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var n = null != arguments[t] ? arguments[t] : {},
@@ -70,9 +70,9 @@ function d(e) {
                         }),
                   t)
                 : b,
-        _ = d && null != x;
+        j = d && null != x;
     return (0, r.jsxs)("div", {
-        className: a()(u.priceTagsContainer, p),
+        className: l()(u.priceTagsContainer, p),
         children: [
             v
                 ? null
@@ -81,11 +81,11 @@ function d(e) {
                       className: u.price,
                   }),
             (0, r.jsx)(s.F, {
-                price: _ ? x : P,
+                price: j ? x : P,
                 discount: m,
-                className: a()({ [u.price]: null == f }),
-                nitroIconType: _ ? h : void 0,
-                nitroIconSize: g,
+                className: l()({ [u.price]: null == f }),
+                nitroIconType: j ? g : void 0,
+                nitroIconSize: h,
                 discountOfferAmount: f,
             }),
         ],

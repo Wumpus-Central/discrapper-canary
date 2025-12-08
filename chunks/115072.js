@@ -1,8 +1,8 @@
 n.d(t, { default: () => T }), n(953529), n(642613), n(388685), n(784620), n(973216);
 var i = n(54381),
     r = n(473749),
-    a = n(772848),
-    l = n(442837),
+    l = n(772848),
+    a = n(442837),
     o = n(544891),
     s = n(668339),
     u = n(199849),
@@ -10,8 +10,8 @@ var i = n(54381),
     d = n(481060),
     m = n(53281),
     p = n(476326),
-    v = n(304761),
-    f = n(273031),
+    f = n(304761),
+    v = n(273031),
     h = n(859235),
     g = n(898463),
     x = n(951394),
@@ -81,12 +81,12 @@ function T(e) {
                 return "";
             })((0, S.getOS)()),
         ),
-        [er, ea] = r.useState(""),
-        [el, eo] = r.useState(""),
+        [er, el] = r.useState(""),
+        [ea, eo] = r.useState(""),
         [es, eu] = r.useState(""),
         [ec, ed] = r.useState(""),
         [em, ep] = r.useState(!1),
-        [ev, ef] = r.useState(!1),
+        [ef, ev] = r.useState(!1),
         [eh, eg] = r.useState(!1),
         [ex, eb] = r.useState(null);
     r.useEffect(() => {
@@ -102,21 +102,21 @@ function T(e) {
                 rejectWithError: !0,
             })
             .then((e) => {
-                if (null != e.body && "1225f060e1a1e0457c946d5a2d83694a2801aaa5" !== e.body.hash) {
-                    let e = new Date("1764874961827"),
+                if (null != e.body && "69b68414a4ffa72874248f93891a395700c9a12a" !== e.body.hash) {
+                    let e = new Date("1765236176420"),
                         t = new Date(),
                         n = (0, O.TD)(t, e);
                     n.hours > 6 && eb(n.hours);
                 }
             });
     }, []);
-    let ey = (0, l.e7)([j.default], () => {
+    let ey = (0, a.e7)([j.default], () => {
             let e = j.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        ej = (0, l.e7)([v.C], () => {
+        ej = (0, a.e7)([f.C], () => {
             var e;
-            return null == (e = v.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web;
+            return null == (e = f.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web;
         }),
         { overridesInfo: e_ } = (0, y.sI)(),
         { overridesInfo: eO } = (0, b.Qb)(),
@@ -131,14 +131,14 @@ function T(e) {
         var e, t;
         if ((eg(!1), "" === Z || "" === B || null == H)) return void ep(!0);
         let r = null == X || null == (e = X.features) ? void 0 : e.find((e) => (0, w.pD)(e) === K);
-        ef(!0), ep(!1);
-        let a = (0, P.D)(
+        ev(!0), ep(!1);
+        let l = (0, P.D)(
                 U.map((e) => {
                     let { item: t } = e;
                     return t;
                 }),
             ),
-            l = await (0, w.ZD)(
+            a = await (0, w.ZD)(
                 {
                     name: Z,
                     description: B,
@@ -154,16 +154,16 @@ function T(e) {
                           device: ee,
                           operatingSystem: en,
                           operatingSystemVersion: er,
-                          clientVersion: el,
+                          clientVersion: ea,
                           clientBuildNumber: es,
                           locale: ec,
                       }
                     : { overridePlatformInformation: Q },
-                a,
+                l,
             ).catch(() => eg(!0));
-        ef(!1),
-            null != l && l.ok
-                ? (ey && window.open(l.body.permalink_url, "_blank"),
+        ev(!1),
+            null != a && a.ok
+                ? (ey && window.open(a.body.permalink_url, "_blank"),
                   A(),
                   (0, d.ZDy)(async () => {
                       let { default: e } = await n.e("64648").then(n.bind(n, 81155));
@@ -172,7 +172,7 @@ function T(e) {
                           return (0, i.jsx)(
                               e,
                               ((n = E({}, t)),
-                              (r = r = { asanaTask: l.body }),
+                              (r = r = { asanaTask: a.body }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                   : (function (e, t) {
@@ -220,7 +220,7 @@ function T(e) {
                 Y([
                     ...U,
                     new p.ZP({
-                        id: (0, a.Z)(),
+                        id: (0, l.Z)(),
                         file: t,
                         platform: p.ow.WEB,
                         origin: "clipboard",
@@ -244,7 +244,7 @@ function T(e) {
             {
                 variant: "primary",
                 text: ey ? "Submit and Open Report" : "Submit Report",
-                loading: ev,
+                loading: ef,
                 onClick: ew,
                 autoFocus: !1,
             },
@@ -446,12 +446,12 @@ function T(e) {
                                           label: C.intl.string(C.t.rEtxdg),
                                           placeholder: "Operating System Version",
                                           value: er,
-                                          onChange: (e) => ea(e),
+                                          onChange: (e) => el(e),
                                       }),
                                       (0, i.jsx)(d.oil, {
                                           label: C.intl.string(C.t["wy1M/t"]),
                                           placeholder: "Client Version",
-                                          value: el,
+                                          value: ea,
                                           onChange: (e) => eo(e),
                                       }),
                                       (0, i.jsx)(d.oil, {
@@ -490,7 +490,7 @@ function T(e) {
                                             ...Array.from(e.currentTarget.files).map(
                                                 (e) =>
                                                     new p.ZP({
-                                                        id: (0, a.Z)(),
+                                                        id: (0, l.Z)(),
                                                         file: e,
                                                         platform: p.ow.WEB,
                                                         origin: "file_picker",
@@ -524,7 +524,7 @@ function T(e) {
                                                                   (0, i.jsx)("div", {
                                                                       className: k.removeAttachment,
                                                                       children: (0, i.jsx)(x.ZP, {
-                                                                          children: (0, i.jsx)(f.Z, {
+                                                                          children: (0, i.jsx)(v.Z, {
                                                                               tooltip: C.intl.string(C.t.vN7REz),
                                                                               onClick: () => {
                                                                                   var t;

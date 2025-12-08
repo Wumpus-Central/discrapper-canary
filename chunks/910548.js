@@ -201,8 +201,8 @@ let W = 45,
     K = ["#61D5B2"],
     z = n(303893),
     q = n(313226),
-    X = [z, q];
-function Q() {
+    Q = [z, q];
+function X() {
     return n
         .e("77843")
         .then(n.t.bind(n, 931152, 19))
@@ -340,7 +340,7 @@ function et(e) {
             children: [
                 (0, r.jsx)(s.Ji, {
                     ref: b,
-                    sprites: X,
+                    sprites: Q,
                     colors: K,
                     spriteWidth: W,
                     spriteHeight: W,
@@ -360,7 +360,7 @@ function et(e) {
                         sceneSegments: P,
                         onScenePlay: T,
                         onSceneComplete: A,
-                        importData: Q,
+                        importData: X,
                         pauseWhileUnfocused: !1,
                     }),
                 }),

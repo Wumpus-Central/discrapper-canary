@@ -8,37 +8,37 @@ var i = n(54381),
     o = n(594421),
     c = n(410030),
     d = n(100527),
-    E = n(906732),
-    S = n(740594),
-    I = n(612659),
-    T = n(5900),
+    T = n(906732),
+    E = n(740594),
+    S = n(612659),
+    I = n(5900),
     g = n(37279),
     _ = n(969521),
     O = n(773275),
     N = n(584197),
     A = n(703656),
     f = n(589072),
-    Z = n(626135),
+    C = n(626135),
     L = n(518596),
-    C = n(116282),
-    b = n(614074),
-    P = n(233751),
-    p = n(868087),
-    R = n(981631),
-    y = n(474936),
-    D = n(388032),
-    m = n(163646),
+    P = n(116282),
+    p = n(614074),
+    b = n(233751),
+    R = n(868087),
+    y = n(981631),
+    D = n(474936),
+    m = n(388032),
+    Z = n(237396),
     v = n(498374),
     V = n(93109),
     h = n(446818),
     x = n(932889);
 let j = () => {
         let t = (0, a.a)((0, c.ZP)()),
-            { analyticsLocations: e } = (0, E.ZP)(d.Z.CF_WARP_SETTINGS);
+            { analyticsLocations: e } = (0, T.ZP)(d.Z.CF_WARP_SETTINGS);
         return (
             (0, l.useEffect)(() => {
-                Z.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: y.cd.PRIVACY_PERK_SETTINGS,
+                C.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: D.cd.PRIVACY_PERK_SETTINGS,
                     location_stack: e,
                 });
             }, [e]),
@@ -80,7 +80,7 @@ let j = () => {
                                     }),
                                     (0, i.jsxs)("div", {
                                         className: v.content,
-                                        children: [(0, i.jsx)(b.C, {}), (0, i.jsx)(C.R, {})],
+                                        children: [(0, i.jsx)(p.C, {}), (0, i.jsx)(P.R, {})],
                                     }),
                                     (0, i.jsx)("div", { className: v.contentSpacer }),
                                     (0, i.jsx)("div", {
@@ -91,55 +91,55 @@ let j = () => {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(p.p, {}),
+                    (0, i.jsx)(R.p, {}),
                 ],
             })
         );
     },
     M = () => {
         let { installationStatus: t, isWeb: e, setInstallationStatus: n } = (0, O.xf)(),
-            l = (0, I.m)();
+            l = (0, S.m)();
         if (e) return (0, i.jsx)(_.U, {});
         if (!l)
             return (0, i.jsxs)("div", {
                 className: v.subscribeBtnContainer,
                 children: [
-                    (0, i.jsx)(S.Z, {
-                        buttonTextOverride: D.intl.string(D.t["8x0jKT"]),
-                        subscriptionTier: y.Si.TIER_2,
+                    (0, i.jsx)(E.Z, {
+                        buttonTextOverride: m.intl.string(m.t["8x0jKT"]),
+                        subscriptionTier: D.Si.TIER_2,
                         fullWidth: !0,
                         size: "sm",
                     }),
                     (0, i.jsx)(u.zxk, {
                         variant: "secondary",
-                        text: D.intl.string(D.t.ZnqyZ2),
+                        text: m.intl.string(m.t.ZnqyZ2),
                         size: "sm",
                         onClick: () => {
-                            (0, r.closeModal)(L.USER_SETTINGS_MODAL_KEY), (0, A.uL)(R.Z5c.APPLICATION_STORE);
+                            (0, r.closeModal)(L.USER_SETTINGS_MODAL_KEY), (0, A.uL)(y.Z5c.APPLICATION_STORE);
                         },
                     }),
                 ],
             });
         switch (t) {
-            case T._n.ERROR:
-            case T._n.NOT_INSTALLED:
-                return (0, i.jsx)(P.R, {});
-            case T._n.INSTALLED:
+            case I._n.ERROR:
+            case I._n.NOT_INSTALLED:
+                return (0, i.jsx)(b.R, {});
+            case I._n.INSTALLED:
                 return (0, i.jsx)(N.n, {});
-            case T._n.ZERO_TRUST:
+            case I._n.ZERO_TRUST:
                 break;
-            case T._n.EXISTING_INSTALLATION:
+            case I._n.EXISTING_INSTALLATION:
                 return (0, i.jsx)(u.zxk, {
                     variant: "primary",
                     onClick: () => {
-                        (0, o.j)(R.rMx.NITRO_WARP_CTA_CLICKED, { is_enable_warp: !0 }), n(T._n.READY_FOR_LICENSE);
+                        (0, o.j)(y.rMx.NITRO_WARP_CTA_CLICKED, { is_enable_warp: !0 }), n(I._n.READY_FOR_LICENSE);
                     },
-                    text: D.intl.string(m.default.J09UWz),
+                    text: m.intl.string(Z.default.J09UWz),
                 });
-            case T._n.INSTALLING:
-            case T._n.READY_FOR_LICENSE:
-            case T._n.WAITING_FOR_TERMS:
-            case T._n.INSTALLING_TIMEOUT:
+            case I._n.INSTALLING:
+            case I._n.READY_FOR_LICENSE:
+            case I._n.WAITING_FOR_TERMS:
+            case I._n.INSTALLING_TIMEOUT:
                 return (0, i.jsx)("div", {
                     className: v.spinner,
                     children: (0, i.jsx)(s.$jN, { type: s.RAz.SPINNING_CIRCLE }),

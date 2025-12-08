@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(736530),
     O = n(981631),
     v = n(388032),
-    S = n(744038);
+    S = n(225753);
 function I(e) {
     let { ingress: t, guildId: n } = e,
         E = (0, p.c_)(),

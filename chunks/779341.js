@@ -1,17 +1,17 @@
-t.d(e, { Z: () => l });
-var o = t(54381);
-t(473749);
-var i = t(585183),
-    r = t(728151),
-    s = t(981631);
+e.d(t, { Z: () => l });
+var o = e(54381);
+e(473749);
+var i = e(585183),
+    r = e(728151),
+    s = e(981631);
 function l(n) {
-    let { authToken: e, onContinue: t, onError: l, onClose: a } = n;
+    let { authToken: t, onContinue: e, onError: l, onClose: a } = n;
     return (0, o.jsx)(i.h, {
         platformType: s.ABu.CRUNCHYROLL,
         clientId: r.sp,
         scopes: r.Ii,
-        authToken: e,
-        onContinue: t,
+        authToken: t,
+        onContinue: e,
         onError: l,
         onClose: a,
     });

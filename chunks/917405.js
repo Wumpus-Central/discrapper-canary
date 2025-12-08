@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => T });
 var l = n(54381),
     i = n(473749),
     r = n(120356),
@@ -80,14 +80,14 @@ function C(e) {
     let r = y[t];
     return (0, l.jsx)(r, E({ className: a()(p.ping, { [p.largePing]: n }) }, i));
 }
-function _(e) {
+function T(e) {
     let {
             quality: t,
             lastPing: n,
             state: r,
             className: y,
-            children: _,
-            channelId: T,
+            children: T,
+            channelId: _,
             childrenAsSubtitle: m,
             connectionStatusTextVariant: I,
             hasVideo: S,
@@ -100,7 +100,7 @@ function _(e) {
                 return (0, l.jsx)(
                     f.Z,
                     ((t = E({}, e)),
-                    (n = n = { channelId: T }),
+                    (n = n = { channelId: _ }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -116,7 +116,7 @@ function _(e) {
                     t),
                 );
             },
-            [T],
+            [_],
         ),
         { connectionStatus: P, connectionStatusText: Z } = d.Z.getStatus(r, S);
     return (0, l.jsxs)("div", {
@@ -159,10 +159,10 @@ function _(e) {
                                                 textVariant: I,
                                                 hasVideo: S,
                                                 className: N[P],
-                                                hasConnectedChannel: null != T,
+                                                hasConnectedChannel: null != _,
                                             }),
                                         }),
-                                        m ? _ : null,
+                                        m ? T : null,
                                     ],
                                 }),
                             ],
@@ -170,7 +170,7 @@ function _(e) {
                     },
                 }),
             }),
-            m ? null : _,
+            m ? null : T,
         ],
     });
 }

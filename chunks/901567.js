@@ -1,4 +1,4 @@
-n.d(e, { Z: () => c });
+n.d(e, { V: () => c });
 var i = n(509613),
     l = n(313789),
     s = n(295647),
@@ -8,5 +8,5 @@ var i = n(509613),
     o = n(388032);
 let c = (0, i.k4)(l.n.CAMERA_CATEGORY, {
     useTitle: () => o.intl.string(o.t.uje3P9),
-    buildLayout: () => [a.Z, r.Z, u.Z, s.Z],
+    buildLayout: () => [a.J, r.W, u.R, s.j],
 });

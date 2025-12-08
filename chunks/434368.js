@@ -11,8 +11,8 @@ var r = n(54381),
     C = n(527379),
     m = n(981631),
     b = n(388032),
-    p = n(936765);
-function f(e) {
+    f = n(936765);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,19 +61,19 @@ function g(e) {
         g = (0, u.dW)(t),
         j = l.useCallback(() => {
             i.requireUnusualDmActivity || g(u.aY.UNUSUAL_DM_ACTIVITY),
-                (0, C.Dr)(t, h(f({}, i), { requireUnusualDmActivity: !i.requireUnusualDmActivity }));
+                (0, C.Dr)(t, h(p({}, i), { requireUnusualDmActivity: !i.requireUnusualDmActivity }));
         }, [t, i, g]),
         x = l.useCallback(() => {
             i.requireCommunicationDisabled || g(u.aY.COMMUNICATION_DISABLED),
-                (0, C.Dr)(t, h(f({}, i), { requireCommunicationDisabled: !i.requireCommunicationDisabled }));
+                (0, C.Dr)(t, h(p({}, i), { requireCommunicationDisabled: !i.requireCommunicationDisabled }));
         }, [t, i, g]),
         v = l.useCallback(() => {
             i.requireUnusualAccountActivity || g(u.aY.UNUSUAL_ACCOUNT_ACTIVITY),
-                (0, C.Dr)(t, h(f({}, i), { requireUnusualAccountActivity: !i.requireUnusualAccountActivity }));
+                (0, C.Dr)(t, h(p({}, i), { requireUnusualAccountActivity: !i.requireUnusualAccountActivity }));
         }, [t, i, g]),
         y = l.useCallback(() => {
             i.requireUsernameQuarantined || g(u.aY.USERNAME_QUARANTINED),
-                (0, C.Dr)(t, h(f({}, i), { requireUsernameQuarantined: !i.requireUsernameQuarantined }));
+                (0, C.Dr)(t, h(p({}, i), { requireUsernameQuarantined: !i.requireUsernameQuarantined }));
         }, [t, i, g]);
     return (0, r.jsx)(s.v2r, {
         navId: "member-safety-flags",
@@ -85,14 +85,14 @@ function g(e) {
                 (0, r.jsx)(s.S89, {
                     id: "toggle-require-unusual-dm-activity",
                     label: (0, r.jsxs)("div", {
-                        className: p.checkboxLabel,
+                        className: f.checkboxLabel,
                         children: [
                             (0, r.jsx)(s.b6m, {
                                 size: "custom",
                                 color: "currentColor",
                                 width: 16,
                                 height: 16,
-                                className: p.unusualDMLabelIcon,
+                                className: f.unusualDMLabelIcon,
                             }),
                             b.intl.string(b.t.ZRnON3),
                         ],
@@ -103,14 +103,14 @@ function g(e) {
                 (0, r.jsx)(s.S89, {
                     id: "toggle-require-communication-disabled",
                     label: (0, r.jsxs)("div", {
-                        className: p.checkboxLabel,
+                        className: f.checkboxLabel,
                         children: [
                             (0, r.jsx)(s.YlB, {
                                 size: "custom",
                                 color: "currentColor",
                                 width: 16,
                                 height: 16,
-                                className: p.timeoutLabelIcon,
+                                className: f.timeoutLabelIcon,
                             }),
                             b.intl.string(b.t.z3wbj8),
                         ],
@@ -123,12 +123,12 @@ function g(e) {
                         (0, r.jsx)(s.S89, {
                             id: "toggle-require-unusual-account-activity",
                             label: (0, r.jsxs)("div", {
-                                className: p.checkboxLabel,
+                                className: f.checkboxLabel,
                                 children: [
                                     (0, r.jsx)(c.Z, {
                                         width: 16,
                                         height: 16,
-                                        className: p.unusualAccountActivityLabelIcon,
+                                        className: f.unusualAccountActivityLabelIcon,
                                     }),
                                     b.intl.string(b.t.DIQsD9),
                                 ],
@@ -139,14 +139,14 @@ function g(e) {
                         (0, r.jsx)(s.S89, {
                             id: "toggle-require-username-quarantined",
                             label: (0, r.jsxs)("div", {
-                                className: p.checkboxLabel,
+                                className: f.checkboxLabel,
                                 children: [
                                     (0, r.jsx)(s.ics, {
                                         size: "custom",
                                         color: "currentColor",
                                         width: 16,
                                         height: 16,
-                                        className: p.quarantinedLabelIcon,
+                                        className: f.quarantinedLabelIcon,
                                     }),
                                     b.intl.string(b.t.Jloklk),
                                 ],

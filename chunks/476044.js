@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => l });
 var r = n(473749),
     i = n(374470);
-function o(e) {
-    let { targetRef: t, onShouldClose: n, topThreshold: o = 40, bottomThreshold: l = 60, enabled: a = !0 } = e;
+function l(e) {
+    let { targetRef: t, onShouldClose: n, topThreshold: l = 40, bottomThreshold: o = 60, enabled: a = !0 } = e;
     r.useEffect(() => {
         if (!a || (null == t ? void 0 : t.current) == null) return;
         let e = null,
@@ -15,9 +15,9 @@ function o(e) {
                     e = s;
                     return;
                 }
-                let c = s - e,
-                    u = Math.abs(c);
-                ((c < 0 && u > o) || (c > 0 && u > l)) && n();
+                let u = s - e,
+                    c = Math.abs(u);
+                ((u < 0 && c > l) || (u > 0 && c > o)) && n();
             };
         return (
             document.addEventListener("scroll", r, {
@@ -28,5 +28,5 @@ function o(e) {
                 document.removeEventListener("scroll", r, { capture: !0 });
             }
         );
-    }, [a, t, n, o, l]);
+    }, [a, t, n, l, o]);
 }

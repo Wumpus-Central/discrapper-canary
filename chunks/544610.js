@@ -14,8 +14,8 @@ var r,
     m = n(480294),
     g = n(580005),
     b = n(699516),
-    y = n(594174),
-    C = n(981631);
+    C = n(594174),
+    y = n(981631);
 let v = !1,
     _ = "",
     O = 0,
@@ -37,19 +37,19 @@ function Z() {
             null != i && i.clearQuery(),
             (x = (function (e) {
                 let t = b.Z.getFriendIDs(),
-                    n = y.default.getCurrentUser();
+                    n = C.default.getCurrentUser();
                 return (
                     (null == n ? void 0 : n.isStaff()) &&
                         (t = Array.from(
                             new Set([
                                 ...t,
-                                ...y.default.filter((e) => e.isStaff() && e.id !== n.id, !1).map((e) => e.id),
+                                ...C.default.filter((e) => e.isStaff() && e.id !== n.id, !1).map((e) => e.id),
                             ]),
                         )),
                     (null == e ? void 0 : e.isPrivate()) && (t = t.filter((t) => !e.recipients.includes(t))),
                     t
                         .reduce((e, t) => {
-                            let n = y.default.getUser(t);
+                            let n = C.default.getUser(t);
                             return (
                                 null == n ||
                                     n.isProvisional ||
@@ -68,7 +68,7 @@ function Z() {
     let t = null != e ? e.recipients : [];
     if (null != i) {
         var n;
-        let e = y.default.getCurrentUser(),
+        let e = C.default.getCurrentUser(),
             r = null != (n = null == e ? void 0 : e.isStaff()) && n;
         i.setQuery({
             query: _,
@@ -108,7 +108,7 @@ function T() {
     return (E = b.Z.getFriendCount() > 0) !== e;
 }
 function N(e, t) {
-    if (m.Z.hasConsented(C.pjP.PERSONALIZATION)) {
+    if (m.Z.hasConsented(y.pjP.PERSONALIZATION)) {
         var n, i, r, l;
         let a =
                 null != (r = null == (n = u.Z.getUserAffinity(e.user.id)) ? void 0 : n.communicationProbability)
@@ -129,7 +129,7 @@ function A(e) {
     if (!v || "" === _) return;
     let n = [];
     for (let { id: e, comparator: i } of t) {
-        let t = y.default.getUser(e);
+        let t = C.default.getUser(e);
         null != t &&
             n.push({
                 user: t,
@@ -142,11 +142,11 @@ function w() {
     return null != i && (i.destroy(), (i = null)), s.Z.getUserSearchContext(A, 1000);
 }
 function M(e) {
-    if (e.key !== C.vTt) return !1;
+    if (e.key !== y.vTt) return !1;
     (v = !0), T(), (i = w()), (S = null), I("");
 }
 function R(e) {
-    if (e.key !== C.vTt) return !1;
+    if (e.key !== y.vTt) return !1;
     L();
 }
 function L() {
@@ -154,8 +154,8 @@ function L() {
 }
 class D extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, m.Z, c.Z, g.Z, b.Z, u.Z, y.default),
-            this.syncWith([y.default, f.Z], Z),
+        this.waitFor(f.Z, m.Z, c.Z, g.Z, b.Z, u.Z, C.default),
+            this.syncWith([C.default, f.Z], Z),
             this.syncWith([b.Z], T);
     }
     getResults() {

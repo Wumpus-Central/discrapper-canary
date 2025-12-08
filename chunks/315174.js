@@ -217,7 +217,7 @@ function R(e) {
         y = i.useCallback(() => {
             _
                 ? (0, d.ZDy)(async () => {
-                      let { default: e } = await Promise.all([n.e("7654"), n.e("77653")]).then(n.bind(n, 560114));
+                      let { default: e } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
                       return (t) =>
                           (0, r.jsx)(
                               e,
@@ -301,11 +301,11 @@ let D = i.memo(function (e) {
             communityInfoVisible: A,
             hasSubheader: D,
         } = e,
-        M = j.features.has(v.GuildFeatures.ANIMATED_BANNER),
+        L = j.features.has(v.GuildFeatures.ANIMATED_BANNER),
         k = (0, f.Z)(j),
         G = !k && (0, y.Z)(j),
         U = !k && A,
-        B = (0, _.xR)(x) && M && !g,
+        B = (0, _.xR)(x) && L && !g,
         [F, V] = i.useState(!1),
         H = i.useRef(!1),
         W = i.useRef(null),
@@ -390,7 +390,7 @@ let D = i.memo(function (e) {
                                       animate: F,
                                   })
                                 : null,
-                            (0, r.jsx)(L, { controller: l }),
+                            (0, r.jsx)(M, { controller: l }),
                         ],
                     }),
                     B && q()
@@ -407,7 +407,7 @@ let D = i.memo(function (e) {
             }),
     });
 });
-function L(e) {
+function M(e) {
     let { controller: t } = e,
         { theme: n } = (0, d.TCT)(),
         i = t.springs.value;

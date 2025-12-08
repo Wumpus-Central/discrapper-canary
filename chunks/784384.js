@@ -1,16 +1,16 @@
 n.d(t, {
-    HY: () => P,
-    nm: () => Z,
-    pU: () => O,
-    y: () => j,
+    HY: () => v,
+    nm: () => E,
+    pU: () => P,
+    y: () => Z,
 }),
     n(388685),
     n(361932),
     n(187205);
 var l = n(473749),
     r = n(106351),
-    i = n(442837),
-    s = n(911969),
+    s = n(442837),
+    i = n(911969),
     a = n(622822),
     u = n(933557),
     c = n(987509),
@@ -19,15 +19,15 @@ var l = n(473749),
     f = n(131704),
     h = n(592125),
     m = n(496675),
-    g = n(699516),
-    p = n(594174),
-    b = n(408433),
+    b = n(699516),
+    g = n(594174),
+    p = n(408433),
     y = n(823379),
-    E = n(981631),
-    S = n(388032);
-function Z(e) {
+    S = n(981631),
+    j = n(388032);
+function E(e) {
     let t = e.map(c.hl).find(y.lm),
-        n = (0, i.e7)([h.Z], () => h.Z.getChannel(t), [t]);
+        n = (0, s.e7)([h.Z], () => h.Z.getChannel(t), [t]);
     return l.useMemo(
         () =>
             null != n
@@ -39,33 +39,33 @@ function Z(e) {
         [n],
     );
 }
-function v(e) {
-    return e.components.length > 0 && e.components[0].type === s.re.CHECKPOINT_CARD;
+function x(e) {
+    return e.components.length > 0 && e.components[0].type === i.re.CHECKPOINT_CARD;
 }
-function P(e, t, n, l) {
+function v(e, t, n, l) {
     let r = n instanceof f.Sf;
     if (null != l) {
         let e = l(n);
         if (null != e) return e;
     }
     if (null == e) return;
-    let i = v(e),
-        s = e.messageSnapshots.length > 0 && v(e.messageSnapshots[0].message);
-    if (null != t || i) {
-        if ((0, a.Y3)(t) && !(r && (0, a.Y3)(n))) return { label: S.intl.string(S.t.KgPx1D) };
+    let s = x(e),
+        i = e.messageSnapshots.length > 0 && x(e.messageSnapshots[0].message);
+    if (null != t || s) {
+        if ((0, a.Y3)(t) && !(r && (0, a.Y3)(n))) return { label: j.intl.string(j.t.KgPx1D) };
         if (r && (0, f.Km)(n.type)) {
             if (
                 (e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) &&
-                !m.Z.can(E.Plq.ATTACH_FILES, n)
+                !m.Z.can(S.Plq.ATTACH_FILES, n)
             )
-                return { label: S.intl.string(S.t.P7yvbm) };
+                return { label: j.intl.string(j.t.P7yvbm) };
             if (
                 ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) &&
-                    !(0, b.eC)(n, m.Z) &&
-                    !(0, b.En)(e)) ||
-                ((i || s) && !(0, b.eC)(n, m.Z))
+                    !(0, p.eC)(n, m.Z) &&
+                    !(0, p.En)(e)) ||
+                ((s || i) && !(0, p.eC)(n, m.Z))
             )
-                return { label: S.intl.string(S.t.Wr4RIX) };
+                return { label: j.intl.string(j.t.Wr4RIX) };
             let t = [
                 ...(0, d.cv)(e),
                 ...e.messageSnapshots.flatMap((e) => {
@@ -75,7 +75,7 @@ function P(e, t, n, l) {
             ];
             if (
                 t.length > 0 &&
-                !m.Z.can(E.Plq.USE_EXTERNAL_STICKERS, n) &&
+                !m.Z.can(S.Plq.USE_EXTERNAL_STICKERS, n) &&
                 t.some((e) =>
                     (function (e, t) {
                         let n = o.Z.getStickerById(e.id);
@@ -83,24 +83,24 @@ function P(e, t, n, l) {
                     })(e, n),
                 )
             )
-                return { label: S.intl.string(S.t["0Yyrua"]) };
+                return { label: j.intl.string(j.t["0Yyrua"]) };
             if (
-                (e.hasFlag(E.iLy.IS_VOICE_MESSAGE) ||
-                    e.messageSnapshots.some((e) => e.message.hasFlag(E.iLy.IS_VOICE_MESSAGE))) &&
-                !m.Z.can(E.Plq.SEND_VOICE_MESSAGES, n)
+                (e.hasFlag(S.iLy.IS_VOICE_MESSAGE) ||
+                    e.messageSnapshots.some((e) => e.message.hasFlag(S.iLy.IS_VOICE_MESSAGE))) &&
+                !m.Z.can(S.Plq.SEND_VOICE_MESSAGES, n)
             )
-                return { label: S.intl.string(S.t.quj4DY) };
+                return { label: j.intl.string(j.t.quj4DY) };
         }
     }
 }
-function O(e, t) {
+function P(e, t) {
     return (
         !!(null != e.rateLimitPerUser && e.rateLimitPerUser > 0) &&
-        !(t.can(E.Plq.MANAGE_CHANNELS, e) || t.can(E.Plq.MANAGE_MESSAGES, e))
+        !(t.can(S.Plq.MANAGE_CHANNELS, e) || t.can(S.Plq.MANAGE_MESSAGES, e))
     );
 }
-function j(e) {
-    let t = (0, i.Wu)(
+function Z(e) {
+    let t = (0, s.Wu)(
         [h.Z, m.Z],
         () =>
             e
@@ -109,8 +109,8 @@ function j(e) {
                     return "channel" === t ? h.Z.getChannel(n) : null;
                 })
                 .filter(y.lm)
-                .filter((e) => O(e, m.Z)),
+                .filter((e) => P(e, m.Z)),
         [e],
     );
-    return (0, i.Wu)([p.default, g.Z], () => t.map((e) => (0, u.F6)(e, p.default, g.Z, !0)), [t]);
+    return (0, s.Wu)([g.default, b.Z], () => t.map((e) => (0, u.F6)(e, g.default, b.Z, !0)), [t]);
 }

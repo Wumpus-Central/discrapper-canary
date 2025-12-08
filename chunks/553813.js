@@ -495,7 +495,7 @@ function W(e, t) {
 function K(e, t) {
     return (
         r("comp", e, t),
-        r("caret", (e = Q(e, t))),
+        r("caret", (e = X(e, t))),
         r("tildes", (e = q(e, t))),
         r("xrange", (e = $(e, t))),
         r("stars", (e = et(e, t))),
@@ -510,11 +510,11 @@ function q(e, t) {
         .trim()
         .split(/\s+/)
         .map(function (e) {
-            return X(e, t);
+            return Q(e, t);
         })
         .join(" ");
 }
-function X(e, t) {
+function Q(e, t) {
     var n = t.loose ? l[u.TILDELOOSE] : l[u.TILDE];
     return e.replace(n, function (t, n, i, a, o) {
         var s;
@@ -535,7 +535,7 @@ function X(e, t) {
         );
     });
 }
-function Q(e, t) {
+function X(e, t) {
     return e
         .trim()
         .split(/\s+/)

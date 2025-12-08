@@ -96,14 +96,14 @@ function L(e) {
         }),
         B = (0, u.ZP)(),
         F = i.useRef(null),
-        [{ spring: H }, W] = (0, d.q_F)(() => ({ spring: 0 }), "animate-always");
+        [{ spring: H }, z] = (0, d.q_F)(() => ({ spring: 0 }), "animate-always");
     i.useEffect(() => {
         function e() {
-            W({
+            z({
                 spring: 1,
                 config: l.config.gentle,
             }),
-                W({
+                z({
                     spring: 0,
                     config: l.config.gentle,
                     delay: 1000,
@@ -115,10 +115,10 @@ function L(e) {
                 p.S.unsubscribe(P.CkL.EMPHASIZE_NOTICE, e);
             }
         );
-    }, [W]);
-    let z = (0, d.dQu)(s.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
+    }, [z]);
+    let W = (0, d.dQu)(s.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
         V = (0, d.dQu)(s.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        K = (0, c.wj)(B) ? z : V,
+        K = (0, c.wj)(B) ? W : V,
         Y = H.to({
             range: [0, 1],
             output: [K, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()],

@@ -190,7 +190,7 @@ function A(e) {
     }
     var R = h();
     function w(e) {
-        (0, r.Z)(X, e), (X.length = t.length), R.notifyListeners(X.location, X.action);
+        (0, r.Z)(Q, e), (Q.length = t.length), R.notifyListeners(Q.location, Q.action);
     }
     function D(e) {
         v(e) || j(N(e.state));
@@ -214,7 +214,7 @@ function A(e) {
         }
     }
     function M(e) {
-        var t = X.location,
+        var t = Q.location,
             n = U.indexOf(t.key);
         -1 === n && (n = 0);
         var r = U.indexOf(e.key);
@@ -229,7 +229,7 @@ function A(e) {
     }
     function Z(e, r) {
         var i = "PUSH",
-            a = _(e, r, P(), X.location);
+            a = _(e, r, P(), Q.location);
         R.confirmTransitionTo(a, i, m, function (e) {
             if (e) {
                 var r = G(a),
@@ -249,7 +249,7 @@ function A(e) {
                     )
                         window.location.href = r;
                     else {
-                        var l = U.indexOf(X.location.key),
+                        var l = U.indexOf(Q.location.key),
                             u = U.slice(0, l + 1);
                         u.push(a.key),
                             (U = u),
@@ -264,7 +264,7 @@ function A(e) {
     }
     function B(e, r) {
         var i = "REPLACE",
-            a = _(e, r, P(), X.location);
+            a = _(e, r, P(), Q.location);
         R.confirmTransitionTo(a, i, m, function (e) {
             if (e) {
                 var r = G(a),
@@ -284,7 +284,7 @@ function A(e) {
                     )
                         window.location.replace(r);
                     else {
-                        var l = U.indexOf(X.location.key);
+                        var l = U.indexOf(Q.location.key);
                         -1 !== l && (U[l] = a.key),
                             w({
                                 action: i,
@@ -330,7 +330,7 @@ function A(e) {
             }
         );
     }
-    var X = {
+    var Q = {
         length: t.length,
         action: "POP",
         location: k,
@@ -343,7 +343,7 @@ function A(e) {
         block: z,
         listen: q,
     };
-    return X;
+    return Q;
 }
 var C = "hashchange",
     N = {
@@ -503,7 +503,7 @@ function x(e) {
         1 === (K += e) && 1 === e ? window.addEventListener(C, L) : 0 === K && window.removeEventListener(C, L);
     }
     var q = !1;
-    function X(e) {
+    function Q(e) {
         void 0 === e && (e = !1);
         var t = S.setPrompt(e);
         return (
@@ -513,7 +513,7 @@ function x(e) {
             }
         );
     }
-    function Q(e) {
+    function X(e) {
         var t = S.appendListener(e);
         return (
             z(1),
@@ -532,8 +532,8 @@ function x(e) {
         go: H,
         goBack: Y,
         goForward: W,
-        block: X,
-        listen: Q,
+        block: Q,
+        listen: X,
     };
     return J;
 }

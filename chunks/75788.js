@@ -1,48 +1,48 @@
-n.d(e, { Z: () => d }), n(388685);
-var a = n(54381),
-    r = n(473749),
-    i = n(442837),
-    l = n(481060),
-    s = n(479531),
-    o = n(393869),
-    c = n(25990),
-    u = n(388032),
-    E = n(780187),
-    _ = n(800010);
-function d(t) {
-    var e;
-    let { error: n, setEmailToken: d, setError: A, onNext: x, onClose: C, transitionState: g } = t,
-        [p, S] = r.useState(!1),
-        [f, N] = r.useState(""),
-        [m, h] = r.useState(!1),
-        T = (0, i.e7)([c.Z], () => c.Z.getErrors()),
-        v = r.useRef(null);
+e.d(n, { Z: () => _ }), e(388685);
+var a = e(54381),
+    r = e(473749),
+    i = e(442837),
+    l = e(481060),
+    s = e(479531),
+    o = e(393869),
+    c = e(25990),
+    u = e(388032),
+    E = e(780187),
+    A = e(800010);
+function _(t) {
+    var n;
+    let { error: e, setEmailToken: _, setError: d, onNext: C, onClose: x, transitionState: N } = t,
+        [S, g] = r.useState(!1),
+        [p, f] = r.useState(""),
+        [m, v] = r.useState(!1),
+        h = (0, i.e7)([c.Z], () => c.Z.getErrors()),
+        y = r.useRef(null);
     r.useEffect(() => {
         var t;
-        null == (t = v.current) || t.focus();
+        null == (t = y.current) || t.focus();
     }, []);
-    let y = async (t) => {
-            t.preventDefault(), A(null), S(!0);
+    let T = async (t) => {
+            t.preventDefault(), d(null), g(!0);
             try {
-                let { token: t } = await (0, o.w)(f);
-                d(t), x();
+                let { token: t } = await (0, o.w)(p);
+                _(t), C();
             } catch (t) {
-                A(new s.Z(t).getAnyErrorMessage());
+                d(new s.Z(t).getAnyErrorMessage());
             } finally {
-                S(!1);
+                g(!1);
             }
         },
         M = async () => {
             if (!m) {
-                h(!0);
+                v(!0);
                 try {
                     await (0, o.i)(!0),
                         (0, l.showToast)((0, l.createToast)(u.intl.string(u.t["84yeoz"]), l.ToastType.SUCCESS));
-                } catch (e) {
-                    let t = new s.Z(e).getAnyErrorMessage();
+                } catch (n) {
+                    let t = new s.Z(n).getAnyErrorMessage();
                     null != t && (0, l.showToast)((0, l.createToast)(t, l.ToastType.FAILURE));
                 } finally {
-                    h(!1);
+                    v(!1);
                 }
             }
         };
@@ -51,25 +51,25 @@ function d(t) {
         subtitle: u.intl.string(u.t.SZJowy),
         graphic: {
             type: "image",
-            src: _,
+            src: A,
         },
-        transitionState: g,
-        onClose: C,
+        transitionState: N,
+        onClose: x,
         actions: [
             {
                 variant: "primary",
                 text: u.intl.string(u.t.PDTjLN),
-                loading: p,
-                onClick: y,
+                loading: S,
+                onClick: T,
             },
         ],
         children: [
             (0, a.jsx)(l.oil, {
                 label: u.intl.string(u.t["8mZX6M"]),
-                error: null != n ? n : null == T || null == (e = T.email_token) ? void 0 : e[0],
-                value: f,
-                onChange: N,
-                inputRef: v,
+                error: null != e ? e : null == h || null == (n = h.email_token) ? void 0 : n[0],
+                value: p,
+                onChange: f,
+                inputRef: y,
             }),
             (0, a.jsx)(l.Text, {
                 className: E.help,

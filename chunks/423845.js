@@ -45,8 +45,8 @@ var r = n(620014),
     K = "[object Int8Array]",
     z = "[object Int16Array]",
     q = "[object Int32Array]",
-    X = "[object Uint8Array]",
-    Q = "[object Uint8ClampedArray]",
+    Q = "[object Uint8Array]",
+    X = "[object Uint8ClampedArray]",
     J = "[object Uint16Array]",
     $ = "[object Uint32Array]",
     ee = {};
@@ -110,8 +110,8 @@ function et(e, t, n, P, R, w) {
     ee[G] =
     ee[Z] =
     ee[B] =
-    ee[X] =
     ee[Q] =
+    ee[X] =
     ee[J] =
     ee[$] =
         !0),

@@ -1,7 +1,7 @@
 n.d(t, {
     Io: () => c,
-    cZ: () => u,
-    g6: () => d,
+    cZ: () => d,
+    g6: () => u,
     j7: () => o,
 });
 var r = n(54381);
@@ -76,7 +76,7 @@ function c() {
         ],
     });
 }
-function u() {
+function d() {
     return (0, r.jsxs)("div", {
         className: s.container,
         children: [
@@ -109,7 +109,7 @@ function u() {
         ],
     });
 }
-function d() {
+function u() {
     return (0, r.jsxs)("div", {
         className: s.container,
         children: [

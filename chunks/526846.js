@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(397698),
     g = n(895924),
     b = n(471518),
-    y = n(425986),
-    C = n(216780),
+    C = n(425986),
+    y = n(216780),
     v = n(728285),
     _ = n(390322),
     O = n(857192),
@@ -42,14 +42,14 @@ function A(e) {
                     });
                 }, [e]),
                 {
-                    fetchState: (0, c.e7)([y.Z], () =>
-                        y.Z.getFetchState({
+                    fetchState: (0, c.e7)([C.Z], () =>
+                        C.Z.getFetchState({
                             surface: T,
                             activeState: e,
                         }),
                     ),
-                    voiceBannerCollection: (0, c.e7)([y.Z], () =>
-                        y.Z.getCollections({
+                    voiceBannerCollection: (0, c.e7)([C.Z], () =>
+                        C.Z.getCollections({
                             surface: T,
                             activeState: e,
                         }),
@@ -57,7 +57,7 @@ function A(e) {
                 }
             );
         })(),
-        _ = g === y.M.FETCHING,
+        _ = g === C.M.FETCHING,
         x = r.useMemo(() => {
             let e = null == v ? void 0 : v.application_directory_collection_items[0];
             return null == e ? null : e.type === s.C.APPLICATION_BANNER ? e : null;
@@ -74,7 +74,7 @@ function A(e) {
         ? null
         : (null != x.id &&
               null != x.image_hash &&
-              (n = (0, C.$_)({
+              (n = (0, y.$_)({
                   itemId: x.id,
                   hash: x.image_hash,
                   containerWidth: 584,
@@ -107,19 +107,19 @@ function A(e) {
 let w = r.forwardRef(function (e, t) {
     var n;
     let { channel: l, isHovered: a, closePopout: o, onMouseEnter: s, onMouseLeave: c, onClick: h, className: f } = e,
-        { id: b, guild_id: y } = l;
+        { id: b, guild_id: C } = l;
     r.useEffect(() => {
         x.default.track(P.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
             channel_id: b,
-            guild_id: y,
+            guild_id: C,
         });
-    }, [b, y]),
+    }, [b, C]),
         r.useEffect(() => {
             a || o();
         }, [o, a]);
-    let C = (0, v.bp)(),
+    let y = (0, v.bp)(),
         { analyticsLocations: O, newestAnalyticsLocation: T } = (0, p.ZP)(d.Z.ACTIVITIES_MINI_SHELF),
-        w = C === P.IlC.POPOUT,
+        w = y === P.IlC.POPOUT,
         M = ((n = l.getGuildId()), (0, j.Z)({ guildId: n }).slice(0, 5));
     r.useEffect(() => {
         let e = setTimeout(() => E.ux(), 1000);

@@ -1,27 +1,27 @@
 n.d(t, {
     Gz: () => a,
-    P0: () => d,
+    P0: () => c,
     gH: () => s,
     tL: () => i,
-    th: () => r,
+    th: () => l,
 }),
     n(415506);
-var l = n(544891);
-let r = 8,
+var r = n(544891);
+let l = 8,
     i = 11,
     s = 6,
     a = 6;
 async function o(e) {
-    let { ticket: t, mfaType: n, data: r } = e,
+    let { ticket: t, mfaType: n, data: l } = e,
         i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
     try {
         return (
-            await l.tn.post({
+            await r.tn.post({
                 url: "/mfa/finish",
                 body: {
                     ticket: t,
                     mfa_type: n,
-                    data: r,
+                    data: l,
                 },
                 retries: i,
                 rejectWithError: !1,
@@ -33,14 +33,14 @@ async function o(e) {
         throw e;
     }
 }
-async function d(e, t) {
+async function c(e, t) {
     let { token: n } = await o(e);
-    return new Promise((e, l) => {
+    return new Promise((e, r) => {
         t({ "X-Discord-MFA-Authorization": n }, (t) => {
-            var n, r;
+            var n, l;
             return (null == (n = t.body) ? void 0 : n.code) === 60008 ||
-                (null == (r = t.body) ? void 0 : r.code) === 60003
-                ? (l(Error(t.body.message)), !0)
+                (null == (l = t.body) ? void 0 : l.code) === 60003
+                ? (r(Error(t.body.message)), !0)
                 : (e(), !1);
         });
     });

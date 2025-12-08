@@ -35,32 +35,32 @@ function w(e) {
         [R, B] = a.useState(null == O ? void 0 : O.emojiName),
         { file: U, loadAudioFromFile: _, maxVolume: z, setMaxVolume: G } = (0, v.p)(),
         [L, H] = a.useState(!1),
-        [V, W] = a.useState(null),
-        [A, q] = a.useState(null),
+        [V, A] = a.useState(null),
+        [W, q] = a.useState(null),
         [Y, J] = a.useState("ready"),
         [Q, K] = a.useState(C);
     async function X(e) {
         try {
-            await _(null != e ? e : null), J("ready"), W(null);
+            await _(null != e ? e : null), J("ready"), A(null);
         } catch (e) {
             $(e);
         }
     }
     function $(e) {
-        if (e instanceof u.Z) W(e);
+        if (e instanceof u.Z) A(e);
         else if (e instanceof Error) {
             let n = {
                 status: 500,
                 body: { message: e.message },
             };
-            W(new u.Z(n));
-        } else W(new u.Z(e));
+            A(new u.Z(n));
+        } else A(new u.Z(e));
     }
     a.useEffect(() => {
         (null == S ? void 0 : S.file) != null && e(S.file);
         async function e(e) {
             try {
-                await _(e), J("ready"), W(null);
+                await _(e), J("ready"), A(null);
             } catch (e) {
                 $(e);
             }
@@ -87,7 +87,7 @@ function w(e) {
                 if (null == e) return !0;
                 let n = (e.endMs - e.startMs) / 1000;
                 return n > 0 && n <= y.YW;
-            })(A),
+            })(W),
         ea = a.useCallback(async (e, n) => {
             J("encoding");
             try {
@@ -101,8 +101,8 @@ function w(e) {
             if (null == U) return;
             r()(null != Q, "Cannot submit soundboard sound with no guildId");
             let e = U;
-            if (null != A) {
-                let n = await ea(U, A);
+            if (null != W) {
+                let n = await ea(U, W);
                 if (null == n) return;
                 e = n;
             }
@@ -121,9 +121,9 @@ function w(e) {
             } catch (e) {
                 throw new u.Z(e);
             }
-        }, [U, Q, M, ea, A, I, D, R]),
+        }, [U, Q, M, ea, W, I, D, R]),
         er = a.useCallback(async () => {
-            r()(null != Q, "Cannot submit soundboard sound with no guildId"), H(!0), W(null);
+            r()(null != Q, "Cannot submit soundboard sound with no guildId"), H(!0), A(null);
             try {
                 et
                     ? await (0, g.$d)({

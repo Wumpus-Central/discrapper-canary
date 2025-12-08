@@ -32,8 +32,8 @@ var r = n(54381),
     A = n(9156),
     R = n(979651),
     D = n(934415),
-    L = n(98597),
-    M = n(648501),
+    M = n(98597),
+    L = n(648501),
     k = n(473403),
     G = n(207055),
     U = n(981631),
@@ -88,7 +88,7 @@ function K(e, t) {
         e
     );
 }
-class Y extends L.ZP {
+class Y extends M.ZP {
     getVoiceStatesCount() {
         var e;
         let { voiceStates: t } = this.props;
@@ -311,7 +311,7 @@ function Q(e) {
         { isSubscriptionGated: m, needSubscriptionToAccess: b } = (0, _.Z)(n.id),
         y = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
         O = (0, E.xJ)(n.id),
-        v = (0, M.Z)({
+        v = (0, L.Z)({
             channel: n,
             isChannelSelected: !1,
             isChannelCollapsed: o,

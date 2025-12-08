@@ -76,8 +76,8 @@ function g(e) {
             ariaLabel: C,
         } = e,
         E = {
-            width: (0, s.pxk)(n),
-            height: (0, s.pxk)(n),
+            width: (0, s.dcp)(n),
+            height: (0, s.dcp)(n),
         },
         S = (0, i.useId)(),
         I = O.size * u.hs,

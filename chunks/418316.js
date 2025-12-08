@@ -41,11 +41,11 @@ function g(e) {
         case d.DY.FRIEND_SUGGESTION_CREATED:
             return a.Z.getRelationshipType(N), f.OGo.PENDING_OUTGOING, null != (x = I.body) ? x : "";
         case d.DY.GUILD_SCHEDULED_EVENT_STARTED:
-            let L = I.guild_scheduled_event_id,
-                M = null != L ? l.ZP.getGuildScheduledEvent(L) : null,
-                k = null == M ? void 0 : M.name,
-                G = null == (C = o.Z.getGuild(null == M ? void 0 : M.guild_id)) ? void 0 : C.name,
-                U = (0, l.Z2)(null != M ? M : void 0);
+            let M = I.guild_scheduled_event_id,
+                L = null != M ? l.ZP.getGuildScheduledEvent(M) : null,
+                k = null == L ? void 0 : L.name,
+                G = null == (C = o.Z.getGuild(null == L ? void 0 : L.guild_id)) ? void 0 : C.name,
+                U = (0, l.Z2)(null != L ? L : void 0);
             return (0, c.Ew)(G) || (0, c.Ew)(k) || !U
                 ? null != (E = I.body)
                     ? E

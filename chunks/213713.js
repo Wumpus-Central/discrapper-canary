@@ -22,8 +22,8 @@ var a = n(54381),
     C = n(823379),
     S = n(550532),
     E = n(71585),
-    N = n(146282),
-    O = n(780106),
+    O = n(146282),
+    N = n(780106),
     T = n(650613),
     P = n(789086),
     I = n(206583),
@@ -66,7 +66,7 @@ let R = [
 function A(e) {
     var t, n;
     let { type: l } = e,
-        r = (0, u.e7)([N.Z], () => N.Z.getFilters()),
+        r = (0, u.e7)([O.Z], () => O.Z.getFilters()),
         i = null != (n = null == r || null == (t = r.types) ? void 0 : t.has(l)) && n;
     return (0, a.jsx)(h.rsf, {
         checked: i,
@@ -85,8 +85,8 @@ function A(e) {
 }
 function Z() {
     var e, t;
-    let n = (0, u.e7)([N.Z], () => N.Z.getFeed(I.YN.GLOBAL_FEED)),
-        r = (0, u.e7)([N.Z], () => N.Z.getDebugImpressionCappingDisabled()),
+    let n = (0, u.e7)([O.Z], () => O.Z.getFeed(I.YN.GLOBAL_FEED)),
+        r = (0, u.e7)([O.Z], () => O.Z.getDebugImpressionCappingDisabled()),
         i = (0, u.e7)([E.Z], () => E.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
@@ -99,9 +99,9 @@ function Z() {
                 };
             });
         })(null == n || null == (e = n.entries) ? void 0 : e.map((e) => e.content)),
-        c = (0, u.e7)([N.Z], () => {
+        c = (0, u.e7)([O.Z], () => {
             var e;
-            return (null == (e = N.Z.getFeedState(I.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = O.Z.getFeedState(I.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
         [A, Z] = l.useState(""),
         L = (0, u.e7)([y.Z, f.Z], () => {
@@ -128,8 +128,8 @@ function Z() {
                 let [t] = e;
                 return t;
             }),
-        B = (0, g.Z)(U).filter(C.lm),
-        F = (0, u.e7)([S.Z], () => S.Z.getFakeGameToShow());
+        F = (0, g.Z)(U).filter(C.lm),
+        B = (0, u.e7)([S.Z], () => S.Z.getFakeGameToShow());
     return (0, a.jsx)("div", {
         className: k.panel,
         children: (0, a.jsxs)(h.zJl, {
@@ -227,7 +227,7 @@ function Z() {
                             helperText: null != M ? "Game profile found" : void 0,
                         }),
                         (0, a.jsx)("ul", {
-                            children: B.map((e) =>
+                            children: F.map((e) =>
                                 (0, a.jsx)(
                                     "li",
                                     { children: (0, a.jsx)(D, { application: e }) },
@@ -249,11 +249,11 @@ function Z() {
                             children: "Force show game:",
                         }),
                         (0, a.jsx)(p.B6, {
-                            options: O.h.map((e) => ({
+                            options: N.h.map((e) => ({
                                 label: e,
                                 value: e,
                             })),
-                            isSelected: (e) => e === F,
+                            isSelected: (e) => e === B,
                             select: function (e) {
                                 x.Z.dispatch({
                                     type: "CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING",

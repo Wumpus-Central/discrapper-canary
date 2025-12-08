@@ -271,7 +271,7 @@ function I(e) {
             accessory: P,
             inputSize: D,
         }));
-    let X = j
+    let Q = j
         ? (0, r.jsx)(d.H, {
               value: y,
               maxLength: g,
@@ -281,7 +281,7 @@ function I(e) {
         s.gNt,
         E(h({}, k), {
             errorMessage: U.hasError && null != (t = U.errorMessage) ? t : void 0,
-            trailingAuxiliaryContent: X,
+            trailingAuxiliaryContent: Q,
             children: (0, r.jsxs)(s.UPk, {
                 ref: W,
                 disabled: n,

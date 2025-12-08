@@ -11,21 +11,21 @@ var r = n(54381),
     h = n(573261),
     g = n(720196),
     p = n(981631),
-    f = n(388032),
-    m = n(710509),
+    m = n(388032),
+    f = n(710509),
     _ = n(197571);
 function x(e) {
     let { setOriginalEmail: t, setSlide: s, ready: x, token: E } = e,
-        [v, b] = i.useState(!1),
-        [j, I] = i.useState(null),
+        [v, j] = i.useState(!1),
+        [b, I] = i.useState(null),
         [y, S] = i.useState(null),
-        [O, N] = i.useState(""),
-        C = i.useRef(null);
+        [N, C] = i.useState(""),
+        O = i.useRef(null);
     return (
         i.useEffect(() => {
             if (x) {
                 var e;
-                null == (e = C.current) || e.focus();
+                null == (e = O.current) || e.focus();
             }
         }, [x]),
         (0, r.jsxs)("div", {
@@ -34,7 +34,7 @@ function x(e) {
                     src: null == y ? n(26230) : n(935227),
                     className: l()(_.marginBottom20, _.marginTop8),
                 }),
-                (0, r.jsx)(u.Dx, { children: f.intl.string(f.t.IfBQ56) }),
+                (0, r.jsx)(u.Dx, { children: m.intl.string(m.t.IfBQ56) }),
                 null != y && "" !== y
                     ? (0, r.jsx)(o.Text, {
                           variant: "text-sm/normal",
@@ -48,37 +48,37 @@ function x(e) {
                         (0, r.jsx)(u.II, {
                             name: "password",
                             type: "password",
-                            label: f.intl.string(f.t["8dM4FO"]),
-                            setRef: C,
+                            label: m.intl.string(m.t["8dM4FO"]),
+                            setRef: O,
                             className: _.marginBottom20,
-                            value: O,
-                            onChange: N,
-                            error: j,
+                            value: N,
+                            onChange: C,
+                            error: b,
                             autoComplete: "new-password",
                             maxLength: 72,
-                            placeholder: f.intl.string(f.t["yY/PXY"]),
+                            placeholder: m.intl.string(m.t["yY/PXY"]),
                         }),
                         (0, r.jsx)("div", {
                             className: _.marginTop8,
                             children: (0, r.jsx)(o.Button, {
-                                text: f.intl.string(f.t.ezv91b),
+                                text: m.intl.string(m.t.ezv91b),
                                 fullWidth: !0,
                                 onClick: () => {
                                     if (!v) {
-                                        if (0 === O.length) {
-                                            I(f.intl.string(f.t.R98xD5)), d.S.dispatch(p.CkL.WAVE_EMPHASIZE);
+                                        if (0 === N.length) {
+                                            I(m.intl.string(m.t.R98xD5)), d.S.dispatch(p.CkL.WAVE_EMPHASIZE);
                                             return;
                                         }
                                         return (
                                             null != y && S(null),
-                                            null != j && I(null),
+                                            null != b && I(null),
                                             t(""),
-                                            b(!0),
+                                            j(!0),
                                             h.Z.post({
                                                 url: p.ANM.ACCOUNT_REVERT,
                                                 body: {
                                                     token: E,
-                                                    password: O,
+                                                    password: N,
                                                 },
                                                 trackedActionData: { event: a.NetworkActionNames.ACCOUNT_REVERT },
                                                 rejectWithError: !1,
@@ -87,12 +87,12 @@ function x(e) {
                                                     let {
                                                         body: { email: n },
                                                     } = e;
-                                                    N(""), t(n), s(g.n.SUCCESS);
+                                                    C(""), t(n), s(g.n.SUCCESS);
                                                 })
                                                 .catch((e) => {
                                                     if (e instanceof Error)
                                                         S(
-                                                            f.intl.formatToPlainString(f.t.aTVNes, {
+                                                            m.intl.formatToPlainString(m.t.aTVNes, {
                                                                 statusPageURL: p.yXt.STATUS,
                                                             }),
                                                         );
@@ -104,13 +104,13 @@ function x(e) {
                                                                   (function (e) {
                                                                       switch (e) {
                                                                           case p.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
-                                                                              return f.intl.string(f.t["11zzGR"]);
+                                                                              return m.intl.string(m.t["11zzGR"]);
                                                                           case p.evJ.ACCOUNT_REVERT_EMAIL_ALREADY_TAKEN:
-                                                                              return f.intl.string(f.t["6qmgaI"]);
+                                                                              return m.intl.string(m.t["6qmgaI"]);
                                                                           case p.evJ.ACCOUNT_REVERT_ACCOUNT_NOT_FOUND:
-                                                                              return f.intl.string(f.t.bChnKs);
+                                                                              return m.intl.string(m.t.bChnKs);
                                                                           default:
-                                                                              return f.intl.format(f.t.aTVNes, {
+                                                                              return m.intl.format(m.t.aTVNes, {
                                                                                   statusPageURL: p.yXt.STATUS,
                                                                               });
                                                                       }
@@ -120,7 +120,7 @@ function x(e) {
                                                     d.S.dispatch(p.CkL.WAVE_EMPHASIZE);
                                                 })
                                                 .finally(() => {
-                                                    b(!1);
+                                                    j(!1);
                                                 })
                                         );
                                     }
@@ -132,13 +132,13 @@ function x(e) {
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: m.buttonContainer,
+                    className: f.buttonContainer,
                     children: (0, r.jsx)(o.Button, {
-                        text: f.intl.string(f.t.rzxnQ8),
+                        text: m.intl.string(m.t.rzxnQ8),
                         variant: "secondary",
                         fullWidth: !0,
                         onClick: () => {
-                            N(""), s(g.n.START);
+                            C(""), s(g.n.START);
                         },
                     }),
                 }),

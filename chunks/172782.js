@@ -6,28 +6,28 @@ let s = (e) => {
         [s, a] = n.useState([]),
         [o, l] = n.useState(0),
         [c, u] = n.useState(!1),
-        [d, p] = n.useState(!1),
-        f = async (e) => {
+        [d, f] = n.useState(!1),
+        p = async (e) => {
             if (!c && null != e)
                 try {
-                    u(!0), p(!1);
+                    u(!0), f(!1);
                     let n = await (0, i.MT)(t, e, r);
                     a((t) => (0 === e ? n.users : [...t, ...n.users])), l(n.nextIndex);
                 } catch (e) {
-                    p(!0);
+                    f(!0);
                 } finally {
                     u(!1);
                 }
         };
     return (
         (0, n.useEffect)(() => {
-            l(0), f(0);
+            l(0), p(0);
         }, [t, r]),
         {
             eligibleUsers: s,
             isFetching: c,
             hasError: d,
-            getNextRows: () => f(o),
+            getNextRows: () => p(o),
         }
     );
 };

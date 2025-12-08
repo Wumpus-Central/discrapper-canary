@@ -40,8 +40,8 @@ var r = n(54381),
     B = n(359191),
     F = n(84658),
     H = n(142961),
-    W = n(815977),
-    z = n(730910),
+    z = n(815977),
+    W = n(730910),
     V = n(103576),
     K = n(475013),
     Y = n(17699),
@@ -368,14 +368,14 @@ let eC = {
                 return {
                     section: eb.pNK.ONBOARDING,
                     label: ej.intl.string(ej.t["LdxCK/"]),
-                    element: W.Z,
+                    element: z.Z,
                     ariaLabel: ej.intl.string(ej.t["LdxCK/"]),
                     newIndicatorDismissibleContentTypes: t.onboardingEnabled
                         ? null
                         : [l.z.COMMUNITY_ONBOARDING_NEW_BADGE],
                     notice: {
                         stores: [B.Z, U.Z, M.Z],
-                        element: z.Z,
+                        element: W.Z,
                     },
                     predicate: () => (0, h.wC)(t.guild.id),
                     decoration: (function (e, t) {

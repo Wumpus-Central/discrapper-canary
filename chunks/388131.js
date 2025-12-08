@@ -54,19 +54,19 @@ function I(e) {
             }
             return r;
         })(e, ["channelId", "onClose"]);
-    let N = (0, s.e7)([p.Z], () => p.Z.getChannel(m)),
-        y = (0, s.e7)([g.Z], () => g.Z.getGuild(null == N ? void 0 : N.getGuildId())),
+    let y = (0, s.e7)([p.Z], () => p.Z.getChannel(m)),
+        N = (0, s.e7)([g.Z], () => g.Z.getGuild(null == y ? void 0 : y.getGuildId())),
         [S, x] = r.useState(""),
         [j, P] = r.useState({}),
         [T, A] = r.useState(!1),
         [_, G] = r.useState(null),
         U = r.useRef(null),
-        { roles: w, members: L, getRichTag: D } = (0, h.Q)(y, N, C.yP, S),
+        { roles: w, members: L, getRichTag: D } = (0, h.Q)(N, y, C.yP, S),
         Z = d.Z.useSections({
             roles: w,
             members: L,
         });
-    if (null == N || null == y) return null;
+    if (null == y || null == N) return null;
     let R = async () => {
         A(!0);
         try {
@@ -81,7 +81,7 @@ function I(e) {
                         return t.rowType === f.aC.ROLE ? E(t.id, c.BN.ROLE) : E(t.id, c.BN.MEMBER);
                     });
                 return (0, o.hw)(e.id, n, !0);
-            })(N, j),
+            })(y, j),
                 I();
         } catch (t) {
             let e = new u.Hx(t);
@@ -140,10 +140,10 @@ function I(e) {
                                         size: "sm",
                                         color: "currentColor",
                                     }),
-                                    N.name,
+                                    y.name,
                                 ],
                             }),
-                            N.isGuildStageVoice() &&
+                            y.isGuildStageVoice() &&
                                 (0, i.jsx)(a.Text, {
                                     color: "text-default",
                                     className: O.description,

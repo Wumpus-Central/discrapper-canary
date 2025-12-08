@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(54381),
     i = n(473749),
-    a = n(85707),
-    l = n(442837),
+    l = n(85707),
+    a = n(442837),
     o = n(481060),
     c = n(594174),
     s = n(817053),
@@ -16,12 +16,12 @@ function g(e) {
             isDragging: g,
             item: p,
             sourceClientOffset: m,
-        } = (0, a.f)((e) => ({
+        } = (0, l.f)((e) => ({
             isDragging: e.isDragging(),
             item: e.getItem(),
             sourceClientOffset: e.getSourceClientOffset(),
         })),
-        b = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        b = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         h = (0, o.zPA)(),
         y = i.useMemo(() => {
             if (null == b || null == p) return null;

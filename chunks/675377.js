@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(525654),
     o = n.n(s),
     c = n(442837),
-    u = n(846519),
-    d = n(248514),
+    d = n(846519),
+    u = n(248514),
     g = n(28664),
     m = n(481060),
     p = n(232567),
@@ -99,7 +99,7 @@ function H() {
               }),
           });
 }
-function W(e) {
+function z(e) {
     let { children: t } = e;
     return (0, r.jsx)(m.Heading, {
         className: M.tableHeader,
@@ -108,7 +108,7 @@ function W(e) {
         children: t,
     });
 }
-function z(e) {
+function W(e) {
     let { currentTier: t, availableSounds: n, guildId: i } = e,
         l = I.Z.getGuild(i),
         a = null != l ? (0, w.nL)(l) : 0;
@@ -170,15 +170,15 @@ let V = (e) => {
                 return i;
             })(e, ["renderPopoutBody", "renderPopoutChildren", "popoutTargetRef"]);
         let [s, o] = i.useState(!1),
-            c = i.useMemo(() => new u.V7(), []),
-            d = i.useCallback(() => {
+            c = i.useMemo(() => new d.V7(), []),
+            u = i.useCallback(() => {
                 c.stop(), o(!0);
             }, [c]),
             g = i.useCallback(() => {
                 c.start(200, () => o(!1));
             }, [c]),
             p = {
-                onMouseEnter: d,
+                onMouseEnter: u,
                 onMouseLeave: g,
             };
         return (0, r.jsx)(
@@ -190,7 +190,7 @@ let V = (e) => {
                         renderPopout: (e) =>
                             (0, r.jsx)(m.VqE, {
                                 className: M.browserUnsupportedDialog,
-                                onMouseEnter: d,
+                                onMouseEnter: u,
                                 onMouseLeave: g,
                                 children: t(e),
                             }),
@@ -241,9 +241,9 @@ function Y(e) {
         }),
         { canCreateExpressions: s } = (0, _.XJ)(t),
         o = i.useRef(null),
-        u = (0, h.ZP)(),
-        d = t.premiumTier,
-        g = (0, w.yw)(t, l, d);
+        d = (0, h.ZP)(),
+        u = t.premiumTier,
+        g = (0, w.yw)(t, l, u);
     i.useEffect(() => {
         (0, v.w)();
     }, []);
@@ -297,7 +297,7 @@ function Y(e) {
             }),
             f
                 ? (0, r.jsxs)(m.ubH, {
-                      theme: u,
+                      theme: d,
                       className: M.empty,
                       children: [
                           (0, r.jsx)(m.oxh, {
@@ -321,9 +321,9 @@ function Y(e) {
                               className: M.tableTitle,
                               variant: "heading-md/bold",
                               color: "header-primary",
-                              children: (0, r.jsx)(z, {
+                              children: (0, r.jsx)(W, {
                                   guildId: t.id,
-                                  currentTier: d,
+                                  currentTier: u,
                                   availableSounds: g,
                               }),
                           }),
@@ -338,9 +338,9 @@ function Y(e) {
                                   (0, r.jsxs)("div", {
                                       className: M.tableHeaders,
                                       children: [
-                                          (0, r.jsx)(W, { children: G.intl.string(G.t.sMOuuS) }),
-                                          (0, r.jsx)(W, { children: G.intl.string(G.t.lLFvlT) }),
-                                          (0, r.jsx)(W, { children: G.intl.string(G.t["85qMS/"]) }),
+                                          (0, r.jsx)(z, { children: G.intl.string(G.t.sMOuuS) }),
+                                          (0, r.jsx)(z, { children: G.intl.string(G.t.lLFvlT) }),
+                                          (0, r.jsx)(z, { children: G.intl.string(G.t["85qMS/"]) }),
                                       ],
                                   }),
                                   l.map((e) =>
@@ -364,7 +364,7 @@ function Y(e) {
 }
 function q(e) {
     let { sound: t, isPlaying: l, onPlaySound: s, guild: o } = e,
-        { soundId: u, name: g, user: h, userId: b, emojiId: j, emojiName: O } = t,
+        { soundId: d, name: g, user: h, userId: b, emojiId: j, emojiName: O } = t,
         { analyticsLocations: C } = (0, x.ZP)(),
         y = (0, c.e7)([S.default], () => (null != h ? h : S.default.getUser(b)), [b, h]),
         { canManageGuildExpression: I } = (0, _.XJ)(o),
@@ -376,7 +376,7 @@ function q(e) {
         if (!Z) {
             D(!0);
             try {
-                await (0, v.AA)(o.id, u);
+                await (0, v.AA)(o.id, d);
             } catch (e) {
                 D(!1);
             }
@@ -482,7 +482,7 @@ function q(e) {
                               className: M.soundRemove,
                               onClick: function (e) {
                                   e.stopPropagation(),
-                                      (0, d.Z)({
+                                      (0, u.Z)({
                                           title: G.intl.formatToPlainString(G.t["PR/VbI"], { soundName: g }),
                                           subtitle: G.intl.format(G.t["u6+CmN"], { soundName: g }),
                                           confirmText: G.intl.string(G.t.oyYWHE),

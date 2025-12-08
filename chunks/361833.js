@@ -1,40 +1,40 @@
-n.d(e, { Z: () => _ }), n(388685);
-var a = n(54381),
-    r = n(473749),
-    i = n(442837),
-    l = n(481060),
-    s = n(809206),
-    o = n(25990),
-    c = n(155433),
-    u = n(388032),
-    E = n(800010);
-function _(t) {
-    var e, n;
-    let { emailToken: _, onClose: d, onBack: A, onNext: x, transitionState: C } = t,
+e.d(n, { Z: () => A }), e(388685);
+var a = e(54381),
+    r = e(473749),
+    i = e(442837),
+    l = e(481060),
+    s = e(809206),
+    o = e(25990),
+    c = e(155433),
+    u = e(388032),
+    E = e(800010);
+function A(t) {
+    var n, e;
+    let { emailToken: A, onClose: _, onBack: d, onNext: C, transitionState: x } = t,
+        [N, S] = r.useState(""),
         [g, p] = r.useState(""),
-        [S, f] = r.useState(""),
-        [N, m] = r.useState(!1),
-        h = (0, i.e7)([o.Z], () => o.Z.getErrors()),
-        T = r.useRef(null);
-    async function v(t) {
+        [f, m] = r.useState(!1),
+        v = (0, i.e7)([o.Z], () => o.Z.getErrors()),
+        h = r.useRef(null);
+    async function y(t) {
         t.preventDefault(), m(!0);
-        let e = await (0, s.Mn)({
-            email: g,
-            emailToken: _,
-            password: S,
+        let n = await (0, s.Mn)({
+            email: N,
+            emailToken: A,
+            password: g,
         });
-        if ((m(!1), null == e ? void 0 : e.ok)) x(g);
+        if ((m(!1), null == n ? void 0 : n.ok)) C(N);
         else {
-            var n, a;
-            (null == e || null == (n = e.body) ? void 0 : n.username) != null
+            var e, a;
+            (null == n || null == (e = n.body) ? void 0 : e.username) != null
                 ? (0, c.P)()
-                : (null == e || null == (a = e.body) ? void 0 : a.email_token) != null && (null == A || A());
+                : (null == n || null == (a = n.body) ? void 0 : a.email_token) != null && (null == d || d());
         }
     }
     return (
         r.useEffect(() => {
             var t;
-            null == (t = T.current) || t.focus();
+            null == (t = h.current) || t.focus();
         }, []),
         (0, a.jsx)(l.Ioy, {
             graphic: {
@@ -43,25 +43,25 @@ function _(t) {
             },
             title: u.intl.string(u.t.p3280r),
             subtitle: u.intl.string(u.t["1k44EL"]),
-            onClose: d,
-            transitionState: C,
+            onClose: _,
+            transitionState: x,
             actions: [
-                null != A
+                null != d
                     ? {
                           variant: "secondary",
                           text: u.intl.string(u.t["13/7kX"]),
-                          onClick: A,
+                          onClick: d,
                       }
                     : {
                           variant: "secondary",
                           text: u.intl.string(u.t["ETE/oC"]),
-                          onClick: d,
+                          onClick: _,
                       },
                 {
                     variant: "primary",
                     text: u.intl.string(u.t.i4jeWR),
-                    loading: N,
-                    onClick: v,
+                    loading: f,
+                    onClick: y,
                 },
             ],
             children: (0, a.jsxs)(l.Kqy, {
@@ -69,18 +69,18 @@ function _(t) {
                 children: [
                     (0, a.jsx)(l.oil, {
                         label: u.intl.string(u.t["w/qqKK"]),
-                        error: null == h || null == (e = h.email) ? void 0 : e[0],
+                        error: null == v || null == (n = v.email) ? void 0 : n[0],
                         type: "email",
-                        value: g,
-                        onChange: p,
-                        inputRef: T,
+                        value: N,
+                        onChange: S,
+                        inputRef: h,
                     }),
                     (0, a.jsx)(l.oil, {
                         label: u.intl.string(u.t.TmdnJ3),
-                        error: null == h || null == (n = h.password) ? void 0 : n[0],
+                        error: null == v || null == (e = v.password) ? void 0 : e[0],
                         type: "password",
-                        value: S,
-                        onChange: f,
+                        value: g,
+                        onChange: p,
                     }),
                 ],
             }),

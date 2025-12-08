@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(54381);
 n(473749);
 var i = n(28664),
@@ -7,7 +7,7 @@ var i = n(28664),
     s = n(231338),
     o = n(388032),
     c = n(824804);
-function u(e) {
+function d(e) {
     let { title: t, details: n } = e;
     return (0, r.jsxs)("div", {
         className: c.simpleItemWrapper,

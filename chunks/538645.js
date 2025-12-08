@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
 var a = n(54381),
     l = n(473749),
-    i = n(120356),
-    r = n.n(i),
+    r = n(120356),
+    i = n.n(r),
     s = n(772848),
     o = n(442837),
     c = n(481060),
@@ -17,19 +17,19 @@ var a = n(54381),
 let b = "Make sure you're only uploading text files!",
     v = (e) => {
         var t, n, l;
-        let { effect: i, onClick: r } = e,
+        let { effect: r, onClick: i } = e,
             { deleteConfig: s } = (0, x.n6)();
         return (0, a.jsxs)(c.P3F, {
             className: g.previewCard,
             onClick: () => {
-                r(i);
+                i(r);
             },
             children: [
                 (0, a.jsx)("div", {
                     className: g.previewCardImage,
                     style: {
                         backgroundImage: "url(".concat(
-                            null == (l = i.config) || null == (n = l.effects) || null == (t = n[0]) ? void 0 : t.base64,
+                            null == (l = r.config) || null == (n = l.effects) || null == (t = n[0]) ? void 0 : t.base64,
                             ")",
                         ),
                     },
@@ -39,13 +39,13 @@ let b = "Make sure you're only uploading text files!",
                     children: [
                         (0, a.jsx)(c.Text, {
                             variant: "text-md/bold",
-                            children: i.name,
+                            children: r.name,
                         }),
                         (0, a.jsx)(c.Button, {
                             variant: "critical-secondary",
                             text: "Delete",
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), s(i.skuId);
+                                e.preventDefault(), e.stopPropagation(), s(r.skuId);
                             },
                         }),
                     ],
@@ -55,7 +55,7 @@ let b = "Make sure you're only uploading text files!",
     };
 function j() {
     let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, x.n6)(),
-        [i, j] = l.useState(),
+        [r, j] = l.useState(),
         _ = l.useRef(null),
         y = (0, o.Wu)([h.Z], () => h.Z.getAllProfileEffects());
     (0, m.Z)();
@@ -66,43 +66,43 @@ function j() {
                     ? y
                     : y.filter((e) => {
                           var t, n, a, l;
-                          let i = C.toLowerCase(),
-                              r = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
+                          let r = C.toLowerCase(),
+                              i = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
                               s = null != (l = null == (n = e.config.description) ? void 0 : n.toLowerCase()) ? l : "";
-                          return r.includes(i) || s.includes(i);
+                          return i.includes(r) || s.includes(r);
                       }),
             [C, y],
         ),
-        N = l.useCallback(
+        O = l.useCallback(
             (e, n) => {
                 if (null == n || !e.type.startsWith("text/")) return (0, p.Eo)(b);
                 let [a, l] = n.split(",");
                 if (!a.includes("text/plain")) return (0, p.Eo)(b);
-                let i = JSON.parse(atob(l));
-                (i.skuId = (0, s.Z)()), t(i), (0, p.XA)("Profile Effect (maybe??) imported!");
+                let r = JSON.parse(atob(l));
+                (r.skuId = (0, s.Z)()), t(r), (0, p.XA)("Profile Effect (maybe??) imported!");
             },
             [t],
         ),
-        T = l.useCallback(
+        N = l.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
                     return void (0, p.Eo)("Error uploading file. Try again!");
-                (0, p.Kr)(e.currentTarget.files, N, p.Eo);
+                (0, p.Kr)(e.currentTarget.files, O, p.Eo);
             },
-            [N],
+            [O],
         );
     return (0, a.jsxs)("div", {
         className: g.root,
         children: [
-            null == i &&
+            null == r &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)("div", {
                             className: g.col,
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: r()(g.section, g.row),
+                                    className: i()(g.section, g.row),
                                     children: [
                                         (0, a.jsx)(c.Heading, {
                                             variant: "heading-xl/bold",
@@ -140,7 +140,7 @@ function j() {
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: r()(g.row, g.end, g.section),
+                            className: i()(g.row, g.end, g.section),
                             children: [
                                 (0, a.jsxs)("div", {
                                     className: g.uploadButton,
@@ -152,7 +152,7 @@ function j() {
                                         }),
                                         (0, a.jsx)(u.Z, {
                                             ref: _,
-                                            onChange: T,
+                                            onChange: N,
                                             multiple: !1,
                                         }),
                                     ],
@@ -219,7 +219,7 @@ function j() {
                         }),
                     ],
                 }),
-            null != i && (0, a.jsx)(f.Z, { effect: i }),
+            null != r && (0, a.jsx)(f.Z, { effect: r }),
         ],
     });
 }

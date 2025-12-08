@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
@@ -22,37 +22,37 @@ var r = n(54381),
     O = n(328626),
     x = n(849275),
     y = n(619899),
-    T = n(811847),
-    j = n(215023),
-    k = n(981631),
+    k = n(811847),
+    T = n(215023),
+    j = n(981631),
     I = n(388032),
     L = n(219588),
     B = n(310582);
-let A = (e) => {
+let N = (e) => {
     var t;
     let {
             isLoading: n,
             title: i,
-            sortedSkuIds: A,
-            numVisibleItems: N,
+            sortedSkuIds: N,
+            numVisibleItems: A,
             prioritizeUserDiscounts: P,
             tab: R,
             buttonContainerClassName: Z,
             orbsSupportedOnly: w,
         } = e,
-        D = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
-        H = h.ZP.canUseCollectibles(D),
-        M = (0, T.B)("FeedBlock"),
+        H = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+        D = h.ZP.canUseCollectibles(H),
+        M = (0, k.B)("FeedBlock"),
         {
             sortType: F,
             setSortType: W,
             sortedItems: U,
-            sortOptions: z,
-            shuffleProducts: V,
+            sortOptions: V,
+            shuffleProducts: z,
             showRecommendationOption: G,
         } = (0, x.Z)({
-            sortedSkuIds: A,
-            isPremiumUser: H,
+            sortedSkuIds: N,
+            isPremiumUser: D,
             prioritizeUserDiscounts: P,
             orbsSupportedOnly: w,
         }),
@@ -70,14 +70,14 @@ let A = (e) => {
                     isShuffling: !1,
                     onOutroComplete: () => W(e),
                 }),
-                    m.default.track(k.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    m.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: ee,
                         sort_type: e,
                     });
             },
             [X, W, ee],
         );
-    return null == D
+    return null == H
         ? null
         : (0, r.jsxs)("div", {
               className: s()(B.popularPicksSection, B.centeredSection),
@@ -99,7 +99,7 @@ let A = (e) => {
                                           "aria-label": I.intl.string(I.t["3taPdj"]),
                                           children: (0, r.jsx)(u.P3F, {
                                               onClick: () =>
-                                                  (0, d.Z)(C.Z.getArticleURL(k.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                                  (0, d.Z)(C.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED)),
                                               className: B.informationIcon,
                                               children: (0, r.jsx)(u.d3s, { size: "sm" }),
                                           }),
@@ -116,7 +116,7 @@ let A = (e) => {
                                   (0, r.jsx)("div", {
                                       className: Z,
                                       children: (0, r.jsx)(a.B6, {
-                                          options: z,
+                                          options: V,
                                           select: en,
                                           className: B.sortSelect,
                                           popoutClassName: s()({ [L.customCursors]: M }),
@@ -133,10 +133,10 @@ let A = (e) => {
                                           onClick: () => {
                                               X({
                                                   isShuffling: !0,
-                                                  onOutroComplete: V,
+                                                  onOutroComplete: z,
                                                   returnRef: et,
                                               }),
-                                                  m.default.track(k.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                  m.default.track(j.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
                                                       page_session_id: ee,
                                                   });
                                           },
@@ -153,7 +153,7 @@ let A = (e) => {
                           ? (0, r.jsx)(r.Fragment, {
                                 children: [...Array(12)].map((e, t) => (0, r.jsx)(S.Z, {}, t + 1)),
                             })
-                          : K.slice(0, N).map((e, t) => {
+                          : K.slice(0, A).map((e, t) => {
                                 let n,
                                     l = b.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
@@ -185,7 +185,7 @@ let A = (e) => {
                                             className: n,
                                             children: (0, r.jsx)(E.Z, {
                                                 skuId: e.skuId,
-                                                prioritizedCurrency: R === j.AW.ORBS ? v.tA.ORBS : void 0,
+                                                prioritizedCurrency: R === T.AW.ORBS ? v.tA.ORBS : void 0,
                                                 onClickAnalytics: (0, v.wO)(e, R, $),
                                             }),
                                         }),

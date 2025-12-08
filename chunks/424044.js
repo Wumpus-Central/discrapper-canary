@@ -21,10 +21,10 @@ let E = (e) => {
         n = (0, s.e7)([m.default], () => m.default.isAuthenticated()),
         E = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         v = (0, g.oK)("RSL - Landing Page"),
-        [b, j] = i.useState(!1),
+        [j, b] = i.useState(!1),
         [I, y] = i.useState(_.intl.string(_.t["9exy+V"])),
-        [S, O] = i.useState(!0),
-        N = (e) => {
+        [S, N] = i.useState(!0),
+        C = (e) => {
             switch (e) {
                 case f.evJ.INVALID_FORM_BODY:
                 case f.evJ.DSA_RSL_REPORT_NOT_FOUND:
@@ -46,12 +46,12 @@ let E = (e) => {
     return (
         i.useEffect(() => {
             n
-                ? (O(!0),
+                ? (N(!0),
                   o
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => O(!1))
-                      .catch(() => O(!1)))
-                : O(!1);
+                      .then(() => N(!1))
+                      .catch(() => N(!1)))
+                : N(!1);
         }, [n]),
         i.useEffect(() => {
             E || v || a.Z.getExperiments();
@@ -61,14 +61,14 @@ let E = (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, h.hs)(e) : void 0;
-                    null != n ? y(_.intl.string(_.t.e6mZMt)) : N(null == (t = n.body) ? void 0 : t.code);
+                    null != n ? y(_.intl.string(_.t.e6mZMt)) : C(null == (t = n.body) ? void 0 : t.code);
                 } catch (e) {
-                    N(null == (n = e.body) ? void 0 : n.code);
+                    C(null == (n = e.body) ? void 0 : n.code);
                 } finally {
-                    j(!1);
+                    b(!1);
                 }
             };
-            j(!0), e((0, c.Z)(t)), (0, p.e)("report_second_look");
+            b(!0), e((0, c.Z)(t)), (0, p.e)("report_second_look");
         }, [t]),
         v &&
             !S &&
@@ -78,7 +78,7 @@ let E = (e) => {
                         className: x.marginBottom8,
                         children: I,
                     }),
-                    b && (0, r.jsx)(l.$jN, {}),
+                    j && (0, r.jsx)(l.$jN, {}),
                 ],
             })
     );

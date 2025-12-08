@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(213609),
     g = n(518950),
     b = n(271383),
-    y = n(430824),
-    C = n(51144),
+    C = n(430824),
+    y = n(51144),
     v = n(771027),
     _ = n(981631),
     O = n(388032),
@@ -50,7 +50,7 @@ function S(e) {
     let { channel: t, inviteKey: l, onHoverOrFocus: o, setPopoutRef: u, closePopout: p } = e,
         g = r.useRef(null),
         b = (0, v.Tu)(g),
-        C = (0, v.j1)({ channel: t }),
+        y = (0, v.j1)({ channel: t }),
         { analyticsLocations: S } = (0, f.ZP)(h.Z.VOICE_INVITE_SUGGESTIONS_POPOVER);
     (0, m.Z)({
         name: c.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
@@ -68,10 +68,10 @@ function S(e) {
             null == o || o(b.isHoveringOrFocusing);
         }, [o, b]);
     let I = r.useCallback(() => {
-        let e = y.Z.getGuild(t.guild_id);
+        let e = C.Z.getGuild(t.guild_id);
         s()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, d.ZDy)(async () => {
-                let { default: r } = await Promise.all([n.e("49049"), n.e("7654"), n.e("89772")]).then(
+                let { default: r } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) => {
@@ -112,7 +112,7 @@ function S(e) {
             children: (0, i.jsxs)("ul", {
                 className: x.list,
                 children: [
-                    C.map((e) =>
+                    y.map((e) =>
                         (0, i.jsx)(
                             P,
                             {
@@ -155,7 +155,7 @@ function P(e) {
         { isHoveringOrFocusing: c } = (0, v.Tu)(o),
         [h, f] = r.useState(null),
         m = "success" === h || "sending" === h || null == l,
-        y = r.useCallback(() => {
+        C = r.useCallback(() => {
             m ||
                 (null != l &&
                     (f("sending"),
@@ -183,14 +183,14 @@ function P(e) {
             guildId: t.guild_id,
         });
     if (null == s) return null;
-    let I = C.ZP.getName(n),
+    let I = y.ZP.getName(n),
         Z = O.intl.string(O.t.jYnGPG);
     return (0, i.jsxs)(d.P3F, {
         innerRef: o,
         tag: "li",
         className: a()(x.row, { [x.clickable]: !m }),
         "aria-disabled": m,
-        onClick: y,
+        onClick: C,
         "aria-label": Z,
         children: [
             (0, i.jsx)(

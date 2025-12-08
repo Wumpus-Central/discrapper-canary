@@ -1,57 +1,57 @@
-n.d(e, { default: () => a }), n(388685);
+n.d(e, { default: () => c }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(793030),
     s = n(930180),
-    o = n(320596),
-    l = n(388032);
-function a(t) {
-    let { channel: e, onAccept: n, transitionState: a, onClose: c } = t,
-        d = (0, s.z)(e.id),
-        u = (0, s.bA)(e.id);
+    l = n(320596),
+    o = n(388032);
+function c(t) {
+    let { channel: e, onAccept: n, transitionState: c, onClose: a } = t,
+        u = (0, s.z)(e.id),
+        d = (0, s.bA)(e.id);
     return (0, r.jsx)(i.Modal, {
-        onClose: c,
-        transitionState: a,
+        onClose: a,
+        transitionState: c,
         actions: [
             {
-                text: l.intl.string(l.t.CZGqeT),
+                text: o.intl.string(o.t.CZGqeT),
                 variant: "secondary",
-                onClick: c,
+                onClick: a,
             },
             {
-                text: l.intl.string(l.t.mbD50D),
+                text: o.intl.string(o.t.mbD50D),
                 variant: "primary",
                 onClick: () => {
-                    n(e), c();
+                    n(e), a();
                 },
             },
         ],
         title: (function (t) {
             let { blockedUsersCount: e, ignoredUsersCount: n } = t;
             return e > 0 && n > 0
-                ? l.intl.formatToPlainString(l.t.Uzdyho, { number: e + n })
+                ? o.intl.formatToPlainString(o.t.Uzdyho, { number: e + n })
                 : n > 0
-                  ? l.intl.formatToPlainString(l.t.wvygk8, { number: n })
-                  : l.intl.formatToPlainString(l.t.HviVA9, { number: e });
+                  ? o.intl.formatToPlainString(o.t.wvygk8, { number: n })
+                  : o.intl.formatToPlainString(o.t.HviVA9, { number: e });
         })({
-            blockedUsersCount: d.length,
-            ignoredUsersCount: u.length,
+            blockedUsersCount: u.length,
+            ignoredUsersCount: d.length,
         }),
         subtitle: (function (t) {
             let { blockedUsersCount: e, ignoredUsersCount: n } = t;
             return e > 0 && n > 0
-                ? l.intl.string(l.t["P/KFXz"])
+                ? o.intl.string(o.t["P/KFXz"])
                 : n > 0
-                  ? l.intl.format(l.t.Ri3o33, { number: n })
-                  : l.intl.format(l.t["28qZMU"], { number: e });
+                  ? o.intl.format(o.t.Ri3o33, { number: n })
+                  : o.intl.format(o.t["28qZMU"], { number: e });
         })({
-            blockedUsersCount: d.length,
-            ignoredUsersCount: u.length,
+            blockedUsersCount: u.length,
+            ignoredUsersCount: d.length,
         }),
-        children: [...d, ...u].map((t) => {
+        children: [...u, ...d].map((t) => {
             let { user: n, id: i, speaker: s } = t;
             return (0, r.jsx)(
-                o.Ie,
+                l.Ie,
                 {
                     user: n,
                     speaker: s,

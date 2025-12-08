@@ -61,7 +61,7 @@ function m(e, t, n) {
                     p(g.intl.string(g.t["8Ve/S0"]), e);
             }
         },
-        y = async () => {
+        O = async () => {
             try {
                 await u.ZP.copyImage(c, null == n ? void 0 : n.contentType),
                     o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPIED, b({}, (0, d.v)())),
@@ -78,7 +78,7 @@ function m(e, t, n) {
                   {
                       id: "copy-image",
                       label: g.intl.string(g.t.tvUqWn),
-                      action: y,
+                      action: O,
                   },
                   "copy-image",
               )

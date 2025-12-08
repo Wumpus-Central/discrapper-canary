@@ -23,12 +23,12 @@ function N(e) {
         [N, x] = l.useState(""),
         [A, T] = l.useState(!1),
         [C, j] = l.useState(null),
-        O = l.useRef(null);
+        y = l.useRef(null);
     l.useEffect(() => {
         var e;
-        o && (null == (e = O.current) || e.focus());
+        o && (null == (e = y.current) || e.focus());
     }, [o]);
-    let v = l.useCallback(
+    let O = l.useCallback(
         (e) => {
             e.preventDefault();
             let t = N.trim();
@@ -86,14 +86,14 @@ function N(e) {
                 (0, s.jsxs)(r.hzk, {
                     children: [
                         (0, s.jsx)("form", {
-                            onSubmit: v,
+                            onSubmit: O,
                             className: b.inputForm,
                             children: (0, s.jsx)(r.oil, {
                                 label: h.intl.string(h.t.qreV25),
                                 error: C,
                                 value: N,
                                 onChange: x,
-                                inputRef: O,
+                                inputRef: y,
                             }),
                         }),
                         (0, s.jsx)(r.Text, {
@@ -122,7 +122,7 @@ function N(e) {
                 (0, s.jsx)(r.Button, {
                     variant: "primary",
                     text: h.intl.string(h.t.VJlc0S),
-                    onClick: v,
+                    onClick: O,
                     disabled: 0 === N.length,
                     loading: A,
                 }),

@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(607070),
     y = n(100527),
     O = n(367907),
-    j = n(906732),
-    x = n(493324),
+    x = n(906732),
+    j = n(493324),
     v = n(611064),
     C = n(677432),
     I = n(178762),
@@ -140,8 +140,8 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                 status: _,
                 channel: y,
                 guildId: O,
-                isTyping: j,
-                isMobileOnline: x,
+                isTyping: x,
+                isMobileOnline: j,
                 premiumSince: v,
                 nameplate: C,
             } = e,
@@ -251,10 +251,10 @@ let $ = z.ZP.getEnableHardwareAcceleration(),
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: a,
-                            isTyping: j,
+                            isTyping: x,
                             channel: y,
                             guildId: O,
-                            isMobile: x,
+                            isMobile: j,
                             onClickPremiumGuildIcon: w,
                             selected: E,
                             itemProps: I,
@@ -347,7 +347,7 @@ class el extends i.Component {
     componentDidMount() {
         this.updateSubscription(),
             this.trackMemberListViewed(),
-            (this._areActivitiesExperimentallyHidden = (0, x.$)("ChannelMembers"));
+            (this._areActivitiesExperimentallyHidden = (0, j.$)("ChannelMembers"));
     }
     componentDidUpdate(e) {
         e.channel.id !== this.props.channel.id && this.updateSubscription(),
@@ -666,7 +666,7 @@ class el extends i.Component {
 }
 function ea(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: l } = (0, j.ZP)(y.Z.MEMBER_LIST),
+        { analyticsLocations: l } = (0, x.ZP)(y.Z.MEMBER_LIST),
         s = (0, p.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         o = (0, p.cj)([L.ZP], () => L.ZP.getProps(t.guild_id, t.id)),
         {
@@ -681,7 +681,7 @@ function ea(e) {
         }),
         b = i.useRef(null),
         O = (0, h.UBm)("lg") + (0, h.UBm)("xxs"),
-        x = i.useCallback(
+        j = i.useCallback(
             (e, t) => {
                 let n = b.current;
                 if (null == n) return;
@@ -725,12 +725,12 @@ function ea(e) {
         ),
         I = (0, d.ZP)({
             id: "members-".concat(t.id),
-            setFocus: x,
+            setFocus: j,
             isEnabled: s,
             scrollToStart: v,
             scrollToEnd: C,
         });
-    return (0, r.jsx)(j.Gt, {
+    return (0, r.jsx)(x.Gt, {
         value: l,
         children: (0, r.jsx)("div", {
             className: a()(q.container, n),

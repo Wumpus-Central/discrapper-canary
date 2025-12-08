@@ -54,7 +54,7 @@ function s(e) {
         : s
           ? o.intl.string(o.t.fjBNo1)
           : o.intl.string(o.t.uQn9B8);
-    let { Component: y, events: C, play: v } = (0, l.P)(c ? "disable" : "enable");
+    let { Component: C, events: y, play: v } = (0, l.P)(c ? "disable" : "enable");
     return (
         r.useEffect(() => () => v(), [c, v]),
         (0, i.jsx)(
@@ -89,14 +89,14 @@ function s(e) {
                     isTrayButton: !0,
                     label: t,
                     disabled: !s,
-                    iconComponent: y,
+                    iconComponent: C,
                     isActive: c,
                     color: (f ? (n = "premiumGradient") : c && (n = "green"), n),
                     onMouseEnter: (e) => {
-                        null == p || p(e), C.onMouseEnter();
+                        null == p || p(e), y.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == h || h(e), C.onMouseLeave();
+                        null == h || h(e), y.onMouseLeave();
                     },
                 },
                 g,

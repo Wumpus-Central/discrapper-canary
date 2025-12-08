@@ -30,8 +30,8 @@ var i,
     Z = n(199902),
     w = n(439170),
     j = n(592125),
-    V = n(984933),
-    O = n(341165),
+    O = n(984933),
+    V = n(341165),
     R = n(751771),
     U = n(496675),
     G = n(158776),
@@ -43,8 +43,8 @@ var i,
     H = n(301873),
     q = n(264229),
     z = n(366980),
-    W = n(277364),
-    K = n(585385),
+    K = n(277364),
+    W = n(585385),
     Y = n(603236),
     Q = n(462376),
     J = n(245335),
@@ -423,7 +423,7 @@ class eu extends (i = s.PureComponent) {
                 });
             case J.RV.SETTINGS:
                 return (0, l.jsx)(
-                    K.D,
+                    W.D,
                     es(el({}, this.props), {
                         onSetInviteFlags: this.handleSetInviteFlags,
                         headerId: this._headerId,
@@ -619,13 +619,13 @@ let ec = s.forwardRef(function (e, t) {
             analyticsLocation: S,
         } = e,
         { analyticsLocations: b } = (0, _.ZP)(E.Z.INSTANT_INVITE_MODAL),
-        N = (0, v.e7)([k.Z, j.Z, V.ZP], () => {
+        N = (0, v.e7)([k.Z, j.Z, O.ZP], () => {
             if (null != r) return r;
             let e = k.Z.getChannelId(),
                 t = null == e || (0, X.AB)(e) ? void 0 : j.Z.getChannel(e);
             return (
                 (null == t ? void 0 : t.isThread()) && (t = j.Z.getChannel(t.parent_id)),
-                null != t ? t : V.ZP.getDefaultChannel(a.id, !0, $.Plq.CREATE_INSTANT_INVITE)
+                null != t ? t : O.ZP.getDefaultChannel(a.id, !0, $.Plq.CREATE_INSTANT_INVITE)
             );
         }, [r, a.id]),
         M = null;
@@ -639,17 +639,17 @@ let ec = s.forwardRef(function (e, t) {
             guildId: Z,
             location: "InstantInviteModalConnected",
         }),
-        F = (0, v.e7)([O.Z], () => {
+        F = (0, v.e7)([V.Z], () => {
             let e = null != N ? N.id : null;
             return null == e
                 ? null
-                : O.Z.getInvite(e, {
+                : V.Z.getInvite(e, {
                       targetType: M,
                       targetUserId: d,
                       targetApplicationId: c,
                   });
         }, [N, M, d, c]),
-        [q, z, K, Y] = (0, v.Wu)(
+        [q, z, W, Y] = (0, v.Wu)(
             [R.Z, L.ZP],
             () => [
                 R.Z.getInviteSuggestionRows(),
@@ -747,7 +747,7 @@ let ec = s.forwardRef(function (e, t) {
             let { currentPage: e, lastPage: t } = eE;
             e === J.RV.SETTINGS && null != t ? eT(t) : I();
         }, [eT, eE, I]),
-        eV = s.useCallback(() => {
+        eO = s.useCallback(() => {
             let e = null == N ? void 0 : N.id;
             0 === eP && 0 === eA && !eM && ex
                 ? eC({
@@ -780,14 +780,14 @@ let ec = s.forwardRef(function (e, t) {
                   )),
                 eA !== er.value && eZ !== er.value && eC({ savedMaxAge: er.value });
         }, [ex, ee, N, o, null == eg ? void 0 : eg.id, M, d, eA, eP, eM, eC, eZ, ew]),
-        eO = (0, y.Z)(N),
+        eV = (0, y.Z)(N),
         eR = (0, y.Z)((0, h.yE)(ew, g.$.IS_APPLICATION_BYPASS)),
-        eU = null != eO && eO !== N,
+        eU = null != eV && eV !== N,
         eG = null != eR && eR !== (0, h.yE)(ew, g.$.IS_APPLICATION_BYPASS);
     s.useEffect(() => {
-        !ex && (eU || eG) && eV();
-    }, [eV, eU, eG, ex]);
-    let { canCreateApplicationBypassInvites: ek, isManualApprovalGuild: eD } = (0, W.R)(a);
+        !ex && (eU || eG) && eO();
+    }, [eO, eU, eG, ex]);
+    let { canCreateApplicationBypassInvites: ek, isManualApprovalGuild: eD } = (0, K.R)(a);
     return (0, l.jsx)(_.Gt, {
         value: b,
         children: (0, l.jsx)(eu, {
@@ -805,7 +805,7 @@ let ec = s.forwardRef(function (e, t) {
             rows: q,
             sections: ey,
             showFriends: z,
-            initialCounts: K,
+            initialCounts: W,
             code: eh,
             source: o,
             analyticsLocations: b,
@@ -818,7 +818,7 @@ let ec = s.forwardRef(function (e, t) {
             modalState: eE,
             setModalState: eC,
             changePage: eT,
-            onGenerateNewLink: eV,
+            onGenerateNewLink: eO,
             handleDone: ej,
             isApplicationBypassToggleEnabled: ek && !et,
         }),

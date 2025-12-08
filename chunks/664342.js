@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(299206),
     y = n(727429),
     O = n(665149),
-    j = n(359110),
-    x = n(585483),
+    x = n(359110),
+    j = n(585483),
     v = n(407908),
     C = n(739830),
     I = n(488131),
@@ -121,7 +121,7 @@ function N(e) {
         A = (0, b.Z)(t),
         D = (0, p.Z)(t);
     function L() {
-        (0, j.Kh)(t.id);
+        (0, x.Kh)(t.id);
     }
     return (0, r.jsxs)(l.v2r, {
         navId: "thread-context",
@@ -154,7 +154,7 @@ function N(e) {
                         action: function () {
                             L(),
                                 setTimeout(() => {
-                                    x.S.dispatch(S.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    j.S.dispatch(S.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         },
                     }),
@@ -163,7 +163,7 @@ function N(e) {
                         label: E.intl.string(E.t["2BSH7n"]),
                         icon: l.rgF,
                         action: function () {
-                            L(), x.S.dispatch(S.CkL.TOGGLE_CHANNEL_PINS);
+                            L(), j.S.dispatch(S.CkL.TOGGLE_CHANNEL_PINS);
                         },
                     }),
                 ],

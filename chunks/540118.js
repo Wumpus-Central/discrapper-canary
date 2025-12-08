@@ -118,7 +118,7 @@ let v = "rgba(88, 74, 192, 1)",
         outline: "1px auto var(--accent-background)",
         interactiveFilter: "brightness(95%)",
     },
-    G = {
+    M = {
         foreground: "#ebe6ef",
         background: "#29232f",
         accentForeground: "white",
@@ -130,7 +130,7 @@ let v = "rgba(88, 74, 192, 1)",
         outline: "1px auto var(--accent-background)",
         interactiveFilter: "brightness(150%)",
     };
-function M(e) {
+function G(e) {
     return `
   --foreground: ${e.foreground};
   --background: ${e.background};
@@ -251,10 +251,10 @@ let b =
 
   ${"system" !== e ? "color-scheme: only light;" : ""}
 
-  ${M(
+  ${G(
       "dark" === e
           ? {
-                ...G,
+                ...M,
                 ...t,
             }
           : {
@@ -269,8 +269,8 @@ ${
         ? `
 @media (prefers-color-scheme: dark) {
   :host {
-    ${M({
-        ...G,
+    ${G({
+        ...M,
         ...t,
     })}
   }
@@ -1208,7 +1208,7 @@ function ew(e, t) {
         }, t)
     );
 }
-function eG() {
+function eM() {
     for (var e; (e = eA.shift()); )
         if (e.__P && e.__H)
             try {
@@ -1248,12 +1248,12 @@ function eG() {
                         function (e) {
                             var t,
                                 r = function () {
-                                    clearTimeout(n), eM && cancelAnimationFrame(t), setTimeout(e);
+                                    clearTimeout(n), eG && cancelAnimationFrame(t), setTimeout(e);
                                 },
                                 n = setTimeout(r, 100);
-                            eM && (t = requestAnimationFrame(r));
+                            eG && (t = requestAnimationFrame(r));
                         }
-                    )(eG)),
+                    )(eM)),
             t.__H.__.forEach(function (e) {
                 e.i && (e.__H = e.i), e.__V !== eN && (e.__ = e.__V), (e.i = void 0), (e.__V = eN);
             })),
@@ -1292,7 +1292,7 @@ function eG() {
             (r.__H = void 0),
             t && ef.__e(t, r.__v));
     });
-var eM = "function" == typeof requestAnimationFrame;
+var eG = "function" == typeof requestAnimationFrame;
 function eb(e) {
     var t = eI,
         r = e.__c;
@@ -1474,10 +1474,10 @@ function eV({
         [g, y] = em(!1),
         P = E && E.input,
         [v, w] = em(null),
-        G = ew((e) => {
+        M = ew((e) => {
             w(e), y(!1);
         }, []),
-        M = ew(
+        G = ew(
             (e) => {
                 let t = (function (e, t) {
                     let r = [];
@@ -1517,7 +1517,7 @@ function eV({
                                 message: ex(t, "message"),
                                 attachments: r ? [r] : void 0,
                             };
-                        if (!M(n)) return;
+                        if (!G(n)) return;
                         try {
                             await a(
                                 {
@@ -1545,7 +1545,7 @@ function eV({
         },
         P && g
             ? z(P, {
-                  onError: G,
+                  onError: M,
                   __self: this,
                   __source: {
                       fileName: eY,

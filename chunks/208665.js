@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var l,
-    r,
-    i = n(392711),
-    a = n.n(i),
+    i,
+    r = n(392711),
+    a = n.n(r),
     s = n(442837),
     o = n(570140),
     c = n(45966),
@@ -23,7 +23,7 @@ function p() {
             d.Z.getSection() === u.pNK.ONBOARDING &&
             ((f = c.Z.getOnboardingPrompts(h)), (N = c.Z.isAdvancedMode(h)));
 }
-class O extends (r = s.ZP.Store) {
+class O extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, c.Z);
     }

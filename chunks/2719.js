@@ -84,7 +84,7 @@ function q(e, t) {
     }
     return n;
 }
-function X(e, t) {
+function Q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -95,7 +95,7 @@ function X(e, t) {
         e
     );
 }
-let Q = M.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK;
+let X = M.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK;
 function J() {
     (0, Z.openUserSettings)(U.n.PROFILE_PANEL, { section: F.oAB.PROFILE_CUSTOMIZATION });
 }
@@ -386,7 +386,7 @@ function er(e) {
         (0, f.h7j)((e) =>
             (0, r.jsx)(
                 w.Z,
-                X(z({}, e), {
+                Q(z({}, e), {
                     title: Y.intl.string(Y.t["3CTiKi"]),
                     children: a.hasFlag(F.xW$.MFA_SMS) ? Y.intl.string(Y.t.jrhJyo) : void 0,
                     actionText: Y.intl.string(Y.t.N86XcP),
@@ -483,7 +483,7 @@ function ei(e) {
               children: (e) =>
                   (0, r.jsx)(
                       f.P3F,
-                      X(z({}, e), {
+                      Q(z({}, e), {
                           innerRef: o,
                           className: W.overflowMenuButton,
                           "aria-label": Y.intl.string(Y.t.DEoVWZ),
@@ -576,7 +576,7 @@ function eo() {
             (0, r.jsxs)("div", {
                 className: W.userInfo,
                 children: [
-                    (0, r.jsx)(Q, {
+                    (0, r.jsx)(X, {
                         className: W.avatar,
                         src: u,
                         avatarDecoration: d,

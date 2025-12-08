@@ -1,11 +1,11 @@
-n.d(t, { p: () => a });
+n.d(t, { p: () => l });
 var r = n(573654),
     i = n(473749);
-function a(e) {
+function l(e) {
     var t = {};
     return (
         Object.keys(e).forEach(function (n) {
-            var a = e[n];
+            var l = e[n];
             if (n.endsWith("Ref")) t[n] = e[n];
             else {
                 var o = function () {
@@ -14,7 +14,7 @@ function a(e) {
                         n,
                         o = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
                         c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                    if (!(0, i.isValidElement)(o)) return a(o, c), o;
+                    if (!(0, i.isValidElement)(o)) return l(o, c), o;
                     if ("string" != typeof o.type) {
                         var s = o.type.displayName || o.type.name || "the component";
                         throw Error(
@@ -27,9 +27,9 @@ function a(e) {
                         (e = o),
                         (t = c
                             ? function (e) {
-                                  return a(e, c);
+                                  return l(e, c);
                               }
-                            : a),
+                            : l),
                         (n = e.ref),
                         ((0, r.k)(
                             "string" != typeof n,
@@ -38,7 +38,7 @@ function a(e) {
                         n)
                             ? (0, i.cloneElement)(e, {
                                   ref: function (e) {
-                                      l(n, e), l(t, e);
+                                      a(n, e), a(t, e);
                                   },
                               })
                             : (0, i.cloneElement)(e, { ref: t })
@@ -52,6 +52,6 @@ function a(e) {
         t
     );
 }
-function l(e, t) {
+function a(e, t) {
     "function" == typeof e ? e(t) : (e.current = t);
 }

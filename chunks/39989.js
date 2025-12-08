@@ -1,8 +1,8 @@
 n.d(t, { C: () => h }), n(388685);
 var a = n(54381),
     l = n(473749),
-    i = n(120356),
-    r = n.n(i),
+    r = n(120356),
+    i = n.n(r),
     s = n(793030),
     o = n(481060),
     c = n(704088),
@@ -19,7 +19,7 @@ let m = [
         let [e, t] = l.useState("private_browsing_perk"),
             n = l.useMemo(() => p[e], [e]);
         return (0, a.jsxs)("div", {
-            className: r()(d.panel, u.container),
+            className: i()(d.panel, u.container),
             children: [
                 (0, a.jsx)(o.njP, {
                     className: u.tabBar,

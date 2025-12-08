@@ -185,8 +185,8 @@ function R(e) {
             size: N,
             handlePlaybackBtnClick: A,
             handleTranscriptBtnClick: w,
-            handleCaptionBtnClick: k,
-            handleFullScreenBtnClick: L,
+            handleCaptionBtnClick: L,
+            handleFullScreenBtnClick: k,
             handleSeekBackBtnClick: M,
             handleSeekForwardBtnClick: V,
             handleControlBarPendingInteraction: Z,
@@ -194,15 +194,15 @@ function R(e) {
         } = e,
         B = (0, p.km)((e) => e.volume),
         U = (0, p.km)((e) => e.setVolume),
-        q = (0, p.km)((e) => e.muted),
-        Y = (0, p.km)((e) => e.setMuted),
+        Y = (0, p.km)((e) => e.muted),
+        q = (0, p.km)((e) => e.setMuted),
         H = (0, p.km)((e) => e.transcriptEnabled),
         Q = (0, p.km)((e) => e.captionEnabled),
         G = (0, p.km)((e) => e.fullScreenEnabled),
         K = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
         W = (0, s.e7)([f.Z], () => f.Z.keyboardModeEnabled),
-        [z, X] = o.useState(q ? 0 : B),
-        [J, $] = o.useState(!1),
+        [z, X] = o.useState(Y ? 0 : B),
+        [$, J] = o.useState(!1),
         [ee, et] = o.useState(!1),
         [{ volumeAnimSpring: en }, er] = (0, m.q_F)(() => ({
             from: { volumeAnimSpring: 0 },
@@ -221,13 +221,13 @@ function R(e) {
             [l, z],
         ),
         ea = o.useCallback(() => {
-            null != l.current && (0 === z ? (ei(B), Y(!1), F(B)) : (U(z), ei(0), Y(!0), F(0)));
-        }, [l, z, ei, B, Y, U, F]),
+            null != l.current && (0 === z ? (ei(B), q(!1), F(B)) : (U(z), ei(0), q(!0), F(0)));
+        }, [l, z, ei, B, q, U, F]),
         es = () => {
-            $(!0);
+            J(!0);
         },
         ec = () => {
-            $(!1);
+            J(!1);
         },
         eu = o.useCallback(
             (e) => {
@@ -245,16 +245,16 @@ function R(e) {
                         V();
                         break;
                     case h.Y1.CAPTION:
-                        k();
+                        L();
                         break;
                     case h.Y1.FULLSCREEN:
-                        L();
+                        k();
                         break;
                     case h.Y1.MUTE:
                         ea();
                 }
             },
-            [k, L, A, M, V, ea, W],
+            [L, k, A, M, V, ea, W],
         );
     o.useEffect(() => {
         null != eo.current && eo.current.focus();
@@ -262,14 +262,14 @@ function R(e) {
         o.useEffect(
             () => (
                 er({
-                    volumeAnimSpring: ee || J ? 1 : 0,
+                    volumeAnimSpring: ee || $ ? 1 : 0,
                     immediate: K,
                 }),
                 () => {
                     en.stop();
                 }
             ),
-            [ee, J, er, K, en],
+            [ee, $, er, K, en],
         ),
         o.useEffect(
             () => (
@@ -387,7 +387,7 @@ function R(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        ei(e), U(e), F(e), ee && (et(!1), Z(!1)), q && e > 0 && Y(!1);
+                                        ei(e), U(e), F(e), ee && (et(!1), Z(!1)), Y && e > 0 && q(!1);
                                     },
                                     asValueChanges: (e) => {
                                         ei(e), ee || (et(!0), Z(!0));
@@ -426,7 +426,7 @@ function R(e) {
                             animationTime: b,
                             visible: _,
                             active: Q,
-                            onClick: k,
+                            onClick: L,
                             ariaLabel: C.intl.string(C.t.bDSZO1),
                             tooltipLabel: C.intl.string(C.t.bDSZO1),
                             shortcut: h.Y1.CAPTION,
@@ -436,7 +436,7 @@ function R(e) {
                         iconComponent: G ? m.wvt : m.NpZ,
                         animationTime: b,
                         visible: _,
-                        onClick: L,
+                        onClick: k,
                         ariaLabel: C.intl.string(C.t.vKZT5t),
                         tooltipLabel: C.intl.string(C.t.vKZT5t),
                         shortcut: h.Y1.FULLSCREEN,

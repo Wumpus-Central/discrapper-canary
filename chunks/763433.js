@@ -3,10 +3,10 @@ n.d(t, {
     r: () => m,
 });
 var r,
-    a = n(54381);
+    i = n(54381);
 n(473749);
-var i = n(120356),
-    l = n.n(i),
+var a = n(120356),
+    l = n.n(a),
     s = n(481060),
     o = n(410030),
     c = n(984370),
@@ -19,28 +19,28 @@ function h(e) {
             selectedTabId: t,
             handleTransition: n,
             tabs: r,
-            state: i = "DEFAULT",
+            state: a = "DEFAULT",
             onAvailableWidthChange: m,
             icon: h,
             children: g,
         } = e,
-        _ = (0, o.ZP)(),
-        { enabled: f } = (0, d.WX)({ location: "global_discovery_header_bar" });
-    return (0, a.jsx)(s.f6W, {
-        theme: _,
+        f = (0, o.ZP)(),
+        { enabled: _ } = (0, d.WX)({ location: "global_discovery_header_bar" });
+    return (0, i.jsx)(s.f6W, {
+        theme: f,
         children: (e) =>
-            (0, a.jsxs)(c.Z, {
+            (0, i.jsxs)(c.Z, {
                 className: l()(e, p.headerBar),
-                innerClassname: f ? p.headerBarInner : void 0,
+                innerClassname: _ ? p.headerBarInner : void 0,
                 children: [
-                    "DEFAULT" === i &&
-                        (0, a.jsxs)(a.Fragment, {
+                    "DEFAULT" === a &&
+                        (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, a.jsx)(h, {
+                                (0, i.jsx)(h, {
                                     color: "currentColor",
                                     size: "md",
                                 }),
-                                (0, a.jsx)(u.Z, {
+                                (0, i.jsx)(u.Z, {
                                     tabs: r,
                                     selectedTab: t,
                                     onTabSelect: n,
@@ -48,8 +48,8 @@ function h(e) {
                                 }),
                             ],
                         }),
-                    (0, a.jsx)("div", {
-                        className: l()(p.headerBarContent, { [p.headerBarSearchContent]: "SEARCH" === i }),
+                    (0, i.jsx)("div", {
+                        className: l()(p.headerBarContent, { [p.headerBarSearchContent]: "SEARCH" === a }),
                         children: g,
                     }),
                 ],

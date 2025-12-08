@@ -1,8 +1,8 @@
-n.d(t, { default: () => T }), n(388685), n(953529);
+n.d(t, { default: () => O }), n(388685), n(953529);
 var a = n(54381),
     l = n(473749),
-    i = n(772848),
-    r = n(793030),
+    r = n(772848),
+    i = n(793030),
     s = n(704215),
     o = n(481060),
     c = n(243778),
@@ -17,7 +17,7 @@ var a = n(54381),
     b = n(629235),
     v = n(981631),
     j = n(800530),
-    _ = n(282354),
+    _ = n(241751),
     y = n(388032),
     C = n(70402),
     S = n(736056);
@@ -44,12 +44,12 @@ function E(e) {
             })
           : null;
 }
-let T = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: T, classificationId: N } = e,
-        [O, P] = l.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        I = l.useRef(O),
-        [w, k] = (0, c.US)([O], void 0, !0),
-        R = l.useMemo(() => (0, i.Z)(), []),
+let O = function (e) {
+    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: O, classificationId: N } = e,
+        [T, P] = l.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        I = l.useRef(T),
+        [w, k] = (0, c.US)([T], void 0, !0),
+        R = l.useMemo(() => (0, r.Z)(), []),
         A = l.useRef(!1),
         Z = (0, m.GE)();
     l.useEffect(() => {
@@ -81,11 +81,11 @@ let T = function (e) {
         l.useEffect(() => {
             (0, f.lA)(R, f.d_.EXPRESSIVE_PRIMARY, n);
         }, [R, n]),
-        (0, a.jsx)(r.ExpressiveModal, {
+        (0, a.jsx)(i.ExpressiveModal, {
             transitionState: t,
             onClose: u,
             gradientColor: "blue",
-            dismissable: T,
+            dismissable: O,
             graphic: {
                 type: "image",
                 src: S.Z,

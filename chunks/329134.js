@@ -1,8 +1,8 @@
 n.d(t, { P: () => a });
 var r = n(473749),
     i = n(535396),
-    o = n(130231),
-    l = n(388032);
+    l = n(810878),
+    o = n(388032);
 function a(e, t, n) {
     return r.useMemo(() => {
         var r, a, s;
@@ -19,17 +19,17 @@ function a(e, t, n) {
               : t.type === i.A3.LEVEL_ACTIVATED
                 ? {
                       type: "active",
-                      statusText: l.intl.formatToPlainString(o.default.WRRYUT, {
+                      statusText: o.intl.formatToPlainString(l.default.WRRYUT, {
                           perkName:
                               null != (s = null == (a = t.sourcePowerup) ? void 0 : a.title)
                                   ? s
-                                  : l.intl.string(l.t.BfF6ED),
+                                  : o.intl.string(o.t.BfF6ED),
                       }),
                   }
                 : t.type === i.A3.POWERUP_ACTIVATED
                   ? {
                         type: "active",
-                        statusText: l.intl.string(o.default.FFLkmx),
+                        statusText: o.intl.string(l.default.FFLkmx),
                     }
                   : void 0;
     }, [t, n, e]);

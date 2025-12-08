@@ -1,6 +1,6 @@
 n.d(t, {
     S: () => j,
-    Z: () => v,
+    Z: () => O,
 }),
     n(35282),
     n(388685);
@@ -75,7 +75,7 @@ function j(e) {
             }),
     });
 }
-class O extends (i = l.PureComponent) {
+class v extends (i = l.PureComponent) {
     handleExternalFileChange(e) {
         c()(null != this.inputRef.current, "ImageInputRef asked to handleExternalFileChange when not mounted"),
             this.inputRef.current.handleFileChange(e);
@@ -91,17 +91,17 @@ class O extends (i = l.PureComponent) {
                 hint: s,
                 name: c,
                 makeURL: f,
-                disabled: O,
-                onChange: v,
+                disabled: v,
+                onChange: O,
                 showIcon: y,
                 showIconDisabled: _,
                 className: C,
                 imageClassName: N,
                 iconClassName: S,
-                iconWrapperClassName: P,
+                iconWrapperClassName: I,
                 icon: w,
                 hideSize: E,
-                imageStyle: I,
+                imageStyle: P,
                 showRemoveButton: T,
                 maxFileSizeBytes: Z,
                 onFileSizeError: k,
@@ -118,13 +118,13 @@ class O extends (i = l.PureComponent) {
                       className: g.imageUploaderAcronym,
                       children: (0, u.Zg)(c),
                   })),
-            O)
+            v)
         )
             return (0, r.jsx)("div", {
                 className: o()(g.imageUploader, g.disabled, C),
                 children: (0, r.jsxs)("div", {
                     className: o()(g.imageUploaderInner, N),
-                    style: x(h({}, I), { backgroundImage: n }),
+                    style: x(h({}, P), { backgroundImage: n }),
                     children: [
                         i,
                         _ &&
@@ -153,11 +153,11 @@ class O extends (i = l.PureComponent) {
                 (0, r.jsx)(d.tEY, {
                     within: !0,
                     children: (0, r.jsxs)("div", {
-                        className: y ? o()(g.imageUploaderIconWrapper, P) : void 0,
+                        className: y ? o()(g.imageUploaderIconWrapper, I) : void 0,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: o()(g.imageUploaderInner, N),
-                                style: x(h({}, I), { backgroundImage: n }),
+                                style: x(h({}, P), { backgroundImage: n }),
                                 children: [
                                     (0, r.jsx)("span", {
                                         "aria-hidden": !0,
@@ -171,7 +171,7 @@ class O extends (i = l.PureComponent) {
                                           })
                                         : (0, r.jsx)(p.ZP, {
                                               ref: this.inputRef,
-                                              onChange: v,
+                                              onChange: O,
                                               className: g.imageUploaderFileInput,
                                               "aria-label": R,
                                               tabIndex: 0,
@@ -206,7 +206,7 @@ class O extends (i = l.PureComponent) {
             });
     }
 }
-f(O, "defaultProps", {
+f(v, "defaultProps", {
     name: "",
     makeURL: (e) => e,
     disabled: !1,
@@ -216,4 +216,4 @@ f(O, "defaultProps", {
     maxFileSizeBytes: 1 / 0,
     icon: null,
 });
-let v = O;
+let O = v;

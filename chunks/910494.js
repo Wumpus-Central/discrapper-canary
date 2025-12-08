@@ -7,7 +7,7 @@ var r = n(54381),
     o = n(441536),
     c = n(434404),
     d = n(353857),
-    u = n(541673),
+    u = n(713328),
     g = n(388032);
 function m(e) {
     let { className: t, guildId: n, selectedBadge: m } = e,

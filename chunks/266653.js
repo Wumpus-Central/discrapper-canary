@@ -10,9 +10,9 @@ var s = n(54381),
     u = n(726745),
     m = n(760213),
     x = n(383832),
-    h = n(71509),
-    _ = n(981631),
-    f = n(388032),
+    f = n(71509),
+    h = n(981631),
+    _ = n(388032),
     g = n(518474);
 function C(e) {
     let { transitionState: t, onClose: n } = e,
@@ -20,35 +20,35 @@ function C(e) {
             currentUser: d.default.getCurrentUser(),
             multiAccountUsers: u.Z.getUsers(),
         })),
-        [E, N] = i.useState(!1),
-        [b, A] = i.useState(_.lds),
+        [b, E] = i.useState(!1),
+        [N, A] = i.useState(h.lds),
         [p, v] = i.useState(null);
     return (
         i.useEffect(() => {
-            if (E)
+            if (b)
                 v(
                     (0, s.jsx)(c.Wn, {
                         messageType: c.QYI.ERROR,
                         className: g.infoMessage,
-                        children: f.intl.format(f.t.HAuRSM, { maxNumAccounts: h.$H }),
+                        children: _.intl.format(_.t.HAuRSM, { maxNumAccounts: f.$H }),
                     }),
                 ),
-                    A(_.lds);
-            else if (null != b) {
-                let e = d.default.getUser(b);
+                    A(h.lds);
+            else if (null != N) {
+                let e = d.default.getUser(N);
                 null != e &&
                     v(
                         (0, s.jsx)(c.Wn, {
                             messageType: c.QYI.POSITIVE,
                             className: g.infoMessage,
-                            children: f.intl.format(f.t["09qide"], { username: e.username }),
+                            children: _.intl.format(_.t["09qide"], { username: e.username }),
                         }),
                     ),
-                    N(!1);
+                    E(!1);
             }
-        }, [b, E]),
+        }, [N, b]),
         i.useEffect(() => {
-            T.length < h.$H && N(!1);
+            T.length < f.$H && E(!1);
         }, [T]),
         (0, o.Z)({
             type: a.ImpressionTypes.MODAL,
@@ -58,15 +58,15 @@ function C(e) {
             onClose: n,
             transitionState: t,
             size: "md",
-            "aria-label": f.intl.string(f.t.WbFpq4),
-            title: f.intl.string(f.t.WbFpq4),
-            subtitle: f.intl.string(f.t["+1Uk3c"]),
+            "aria-label": _.intl.string(_.t.WbFpq4),
+            title: _.intl.string(_.t.WbFpq4),
+            subtitle: _.intl.string(_.t["+1Uk3c"]),
             actions: [
                 {
-                    text: f.intl.string(f.t["9g2mqT"]),
+                    text: _.intl.string(_.t["9g2mqT"]),
                     variant: "secondary",
                     onClick: () => {
-                        if (T.length >= h.$H) return void N(!0);
+                        if (T.length >= f.$H) return void E(!0);
                         n(), (0, x.y)();
                     },
                 },
@@ -74,7 +74,7 @@ function C(e) {
             children: [
                 p,
                 (0, s.jsx)(m.Z, {
-                    actionText: f.intl.string(f.t.Wf421J),
+                    actionText: _.intl.string(_.t.Wf421J),
                     onAction: (e, t) => {
                         switch (e) {
                             case m.W.LOGIN_REQUIRED:

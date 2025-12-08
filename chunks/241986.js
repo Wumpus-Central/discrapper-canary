@@ -1,5 +1,5 @@
-n.d(t, { Z: () => l });
-let r = (0, n(427164).le)({
+n.d(t, { Z: () => r });
+let l = (0, n(427164).le)({
     name: "2025-12-katsudon",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -8,8 +8,8 @@ let r = (0, n(427164).le)({
         1: { enabled: !0 },
     },
 });
-function l(e) {
+function r(e) {
     let { location: t } = e,
-        { enabled: n } = r.useConfig({ location: t });
+        { enabled: n } = l.useConfig({ location: t });
     return n;
 }

@@ -14,7 +14,7 @@ var i,
     m = n(981631),
     g = n(490897),
     b = n(526761);
-function y(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function y(e, t, n) {
         e
     );
 }
-let C = [
+let y = [
         {
             timeSinceJoin: +p.Z.Millis.HOUR,
             sends: 1,
@@ -49,7 +49,7 @@ let C = [
             viewTime: 30 * p.Z.Millis.MINUTE,
         },
     ],
-    v = 5 * C[C.length - 1].viewTime,
+    v = 5 * y[y.length - 1].viewTime,
     _ = p.Z.Millis.WEEK,
     O = { channels: {} },
     x = new Set(),
@@ -133,7 +133,7 @@ class A extends (i = l.ZP.PersistedStore) {
                     r = Math.min(h.default.age(e.id), Date.now() - i.getTime()),
                     l = O.channels[e.id];
                 if (null == l || l.lastActionTime < Date.now() - _) return !1;
-                for (let e of C)
+                for (let e of y)
                     if (r < e.timeSinceJoin && (l.numSends >= e.sends || l.viewDuration >= e.viewTime)) return !0;
                 return !1;
             })(t) &&
@@ -141,7 +141,7 @@ class A extends (i = l.ZP.PersistedStore) {
         );
     }
 }
-y(A, "displayName", "UnreadSettingNoticeStore2"), y(A, "persistKey", "UnreadSettingNoticeStore2");
+C(A, "displayName", "UnreadSettingNoticeStore2"), C(A, "persistKey", "UnreadSettingNoticeStore2");
 let w = new A(a.Z, {
         CHANNEL_SELECT: function () {
             let e = P();

@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(807705),
     g = n(27457),
     b = n(111248),
-    y = n(312703),
-    C = n(796638),
+    C = n(312703),
+    y = n(796638),
     v = n(981631),
     _ = n(354459),
     O = n(394024),
@@ -64,7 +64,7 @@ function j(e, t) {
     );
 }
 let S = 16 / 9,
-    P = 8 + C.cF;
+    P = 8 + y.cF;
 function I(e) {
     var t;
     let n,
@@ -83,10 +83,10 @@ function I(e) {
             width: k,
             height: U,
             layout: V,
-            idle: F,
+            idle: H,
         } = e,
-        B = h.Z.getVideoComponent(),
-        H = p.default.getId(),
+        F = h.Z.getVideoComponent(),
+        B = p.default.getId(),
         [G, z] = r.useState(null),
         W = (0, c.Z)(G),
         [q, K] = r.useState(!0),
@@ -143,14 +143,14 @@ function I(e) {
             },
             em,
         ),
-        ey = (0, s.q_F)(
+        eC = (0, s.q_F)(
             {
                 value: eu,
                 config: j(E({}, o.config.stiff), { clamp: !0 }),
             },
             (en === et && eb.value.idle && !el) || ea || ef ? "animate-never" : "animate-always",
         ),
-        eC = (0, s.q_F)(
+        ey = (0, s.q_F)(
             {
                 value: n,
                 config: j(E({}, o.config.stiff), { clamp: !0 }),
@@ -172,8 +172,8 @@ function I(e) {
         e_ = r.useCallback((e) => {
             z(e), K(!1);
         }, []),
-        eO = et ? [] : (0, y.n3)(T, R, H),
-        { visibleParticipants: ex, participantTileWidth: eE } = (0, C.ZB)(k, N);
+        eO = et ? [] : (0, C.n3)(T, R, B),
+        { visibleParticipants: ex, participantTileWidth: eE } = (0, y.ZB)(k, N);
     return (0, i.jsxs)("div", {
         className: a()(x.root, O.flexCenter, D),
         children: [
@@ -186,7 +186,7 @@ function I(e) {
                         style: { top: eb.value.to((e) => (-e * P) / 2) },
                         children: [
                             (0, i.jsx)(o.animated.div, {
-                                style: { width: ey.value },
+                                style: { width: eC.value },
                                 className: x.videoWrapper,
                                 children: (0, i.jsx)("div", {
                                     className: O.videoSizer,
@@ -204,7 +204,7 @@ function I(e) {
                                                           noBorder: eu >= k || ec >= U,
                                                           channel: M,
                                                           className: O.focusedVideo,
-                                                          videoComponent: B,
+                                                          videoComponent: F,
                                                           width: k,
                                                           participant: t,
                                                           onClick: l,
@@ -224,8 +224,8 @@ function I(e) {
                             }),
                             er
                                 ? (0, i.jsx)(o.animated.div, {
-                                      className: a()(x.actionRow, { [x.idle]: F }),
-                                      style: { bottom: eC.value },
+                                      className: a()(x.actionRow, { [x.idle]: H }),
+                                      style: { bottom: ey.value },
                                       children: (0, i.jsx)(d.Z, {
                                           channelId: M.id,
                                           isParticipantsOpen: L,
@@ -242,7 +242,7 @@ function I(e) {
                             opacity: eg.value,
                             visibility: eg.value.to((e) => (0 === e ? "hidden" : "visible")),
                         },
-                        children: (0, i.jsx)(C.ZP, {
+                        children: (0, i.jsx)(y.ZP, {
                             channel: M,
                             onClick: l,
                             onContextMenu: I,

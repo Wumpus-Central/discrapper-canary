@@ -6,14 +6,14 @@ var r = n(54381),
     i = n(481060),
     l = n(100527),
     c = n(335131),
-    d = n(617136),
-    u = n(915750),
+    u = n(617136),
+    d = n(915750),
     p = n(49436),
     m = n(979232),
-    g = n(373370),
-    f = n(968843),
-    h = n(304696),
-    x = n(387745),
+    f = n(373370),
+    g = n(968843),
+    x = n(304696),
+    h = n(387745),
     _ = n(115179),
     b = n(254579),
     j = n(283689),
@@ -74,7 +74,7 @@ function N(e) {
         fullWidth: !0,
         onClick: () => {
             var e;
-            let r = (null == (e = t.userStatus) ? void 0 : e.enrolledAt) == null ? d.jZ.ACCEPT_QUEST : d.jZ.WATCH_VIDEO;
+            let r = (null == (e = t.userStatus) ? void 0 : e.enrolledAt) == null ? u.jZ.ACCEPT_QUEST : u.jZ.WATCH_VIDEO;
             (0, y.openVideoQuestModal)({
                 quest: t,
                 questContent: p.jn.QUEST_BAR_V2,
@@ -88,15 +88,15 @@ function N(e) {
 }
 let R = (e) => {
         let { quest: t, sourceQuestContent: n } = e,
-            s = (0, u.aM)(),
-            a = (0, h.V_)(t);
+            s = (0, d.aM)(),
+            a = (0, x.V_)(t);
         return (0, r.jsx)(o.zxk, {
             size: "sm",
             fullWidth: !0,
             onClick: () =>
-                (0, x.nc)(t, {
+                (0, h.nc)(t, {
                     content: p.jn.QUEST_BAR_V2,
-                    ctaContent: d.jZ.OPEN_GAME_LINK,
+                    ctaContent: u.jZ.OPEN_GAME_LINK,
                     impressionId: s,
                     sourceQuestContent: n,
                 }),
@@ -106,15 +106,15 @@ let R = (e) => {
     A = (e) => {
         var t;
         let { quest: n, sourceQuestContent: s } = e,
-            a = null == (t = (0, u.WD)()) ? void 0 : t.getId();
+            a = null == (t = (0, d.WD)()) ? void 0 : t.getId();
         return (0, r.jsx)(o.zxk, {
             fullWidth: !0,
             onClick: () =>
-                (0, x.gI)(
+                (0, h.gI)(
                     { quest: n },
                     {
                         content: p.jn.QUEST_BAR_V2,
-                        ctaContent: d.jZ.CONNECT_CONSOLE,
+                        ctaContent: u.jZ.CONNECT_CONSOLE,
                         impressionId: a,
                         sourceQuestContent: s,
                     },
@@ -125,8 +125,8 @@ let R = (e) => {
     },
     B = (e) => {
         let { quest: t } = e,
-            n = (0, g.CR)({ quest: t }),
-            { launchInGameActivity: s } = (0, f.zB)(t);
+            n = (0, f.CR)({ quest: t }),
+            { launchInGameActivity: s } = (0, g.zB)(t);
         return (0, j.Rt)(t)
             ? (0, r.jsx)(o.zxk, {
                   fullWidth: !0,
@@ -174,11 +174,11 @@ let R = (e) => {
         var t,
             n,
             {
-                quest: u,
-                useReducedMotion: g,
-                isExpanded: f,
-                className: h,
-                ctaLabel: x,
+                quest: d,
+                useReducedMotion: f,
+                isExpanded: g,
+                className: x,
+                ctaLabel: h,
                 onClick: b,
                 questContent: j = p.jn.QUEST_BAR_V2,
                 sourceQuestContent: v,
@@ -213,9 +213,9 @@ let R = (e) => {
                 "questContent",
                 "sourceQuestContent",
             ]);
-        let E = (null == (t = u.userStatus) ? void 0 : t.completedAt) != null,
+        let E = (null == (t = d.userStatus) ? void 0 : t.completedAt) != null,
             N = (0, C.hf)({
-                quest: u,
+                quest: d,
                 questContent: j,
                 sourceQuestContent: v,
             }),
@@ -223,7 +223,7 @@ let R = (e) => {
                 (e) => {
                     var t;
                     null == b || b(e),
-                        (0, _.xN)(u.config) && (null == (t = u.userStatus) ? void 0 : t.claimedAt) != null
+                        (0, _.xN)(d.config) && (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, c.mK)({
                                   tab: O.AW.ORBS,
                                   analyticsLocations: [],
@@ -231,9 +231,9 @@ let R = (e) => {
                               })
                             : N();
                 },
-                [b, u.config, null == (n = u.userStatus) ? void 0 : n.claimedAt, N],
+                [b, d.config, null == (n = d.userStatus) ? void 0 : n.claimedAt, N],
             ),
-            { shouldUseShinyButton: A } = m.Z.useConfig({ location: (0, d._b)(v) + "- CtaButton" });
+            { shouldUseShinyButton: A } = m.Z.useConfig({ location: (0, u._b)(v) + "- CtaButton" });
         return A
             ? (0, r.jsx)(
                   i.gtL,
@@ -243,14 +243,14 @@ let R = (e) => {
                               fullWidth: !0,
                               size: a.zx.Sizes.SMALL,
                               onClick: R,
-                              pauseAnimation: g || (!f && !E),
-                              className: h,
+                              pauseAnimation: f || (!g && !E),
+                              className: x,
                               buttonShineClassName: T.shine,
                               "data-migration-pending": !0,
                           },
                           y,
                       ),
-                      { children: null != x ? x : S.intl.string(S.t.cfY4PE) },
+                      { children: null != h ? h : S.intl.string(S.t.cfY4PE) },
                   ),
               )
             : (0, r.jsx)(
@@ -260,7 +260,7 @@ let R = (e) => {
                           {
                               fullWidth: !0,
                               onClick: R,
-                              text: null != x ? x : S.intl.string(S.t.cfY4PE),
+                              text: null != h ? h : S.intl.string(S.t.cfY4PE),
                           },
                           y,
                       ),
@@ -278,33 +278,33 @@ let R = (e) => {
                 awaitingConsoleConnections: i,
                 hasMadeProgress: l,
                 isProgressing: c,
-                activeScreen: d,
-                taskDetails: u,
+                activeScreen: u,
+                taskDetails: d,
                 popoutTargetElementRef: m,
-                onGameSheetOpened: g,
-                onGameSheetClosed: f,
+                onGameSheetOpened: f,
+                onGameSheetClosed: g,
             } = e,
-            h = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-            x = (0, b.q8)(n),
-            _ = d !== p.LI.SELECT && !l && !c,
+            x = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
+            h = (0, b.q8)(n),
+            _ = u !== p.LI.SELECT && !l && !c,
             v = null;
         return (
-            h
+            x
                 ? (v = (0, r.jsx)(I, {
                       quest: n,
                       sourceQuestContent: s,
                       useReducedMotion: o,
                       isExpanded: a,
                   }))
-                : x
+                : h
                   ? (v = (0, r.jsx)(N, {
                         quest: n,
                         sourceQuestContent: s,
-                        taskDetails: u,
+                        taskDetails: d,
                     }))
                   : (0, j.Rt)(n)
                     ? (v = (0, r.jsx)(B, { quest: n }))
-                    : d === p.LI.CONSOLE && i
+                    : u === p.LI.CONSOLE && i
                       ? (v = (0, r.jsx)(A, {
                             quest: n,
                             sourceQuestContent: s,
@@ -313,10 +313,10 @@ let R = (e) => {
                         ? (v = (0, r.jsx)(k, {
                               quest: n,
                               sourceQuestContent: s,
-                              taskDetails: u,
+                              taskDetails: d,
                               popoutTargetElementRef: m,
-                              onGameSheetOpened: g,
-                              onGameSheetClosed: f,
+                              onGameSheetOpened: f,
+                              onGameSheetClosed: g,
                           }))
                         : _ &&
                           (v = (0, r.jsx)(R, {

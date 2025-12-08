@@ -1,4 +1,4 @@
-n.d(e, { g: () => I });
+n.d(e, { g: () => S });
 var i = n(54381),
     l = n(442837),
     s = n(351780),
@@ -8,16 +8,16 @@ var i = n(54381),
     o = n(726985),
     c = n(388032),
     d = n(781652);
-let E = (0, u.x1)(a.n.POGGERMODE_PANE, {
+let T = (0, u.x1)(a.n.POGGERMODE_PANE, {
         useTitle: () => c.intl.string(c.t.AtCukI),
         render: r.Z,
         buildLayout: () => [],
     }),
-    S = (0, u.wf)(a.n.POGGERMODE_PANEL, {
+    E = (0, u.wf)(a.n.POGGERMODE_PANEL, {
         useTitle: () => c.intl.string(c.t.AtCukI),
-        buildLayout: () => [E],
+        buildLayout: () => [T],
     }),
-    I = (0, u.m7)(a.n.POGGERMODE_SIDEBAR_ITEM, {
+    S = (0, u.m7)(a.n.POGGERMODE_SIDEBAR_ITEM, {
         useTitle: () => c.intl.string(c.t.AtCukI),
         getLegacySearchKey: () => o.s6.POGGERMODE,
         icon: () =>
@@ -27,5 +27,5 @@ let E = (0, u.x1)(a.n.POGGERMODE_PANE, {
                 className: d.poggermodeIcon,
             }),
         usePredicate: () => (0, l.e7)([s.Z], () => s.Z.settingsVisible),
-        buildLayout: () => [S],
+        buildLayout: () => [E],
     });

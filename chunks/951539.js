@@ -1,5 +1,5 @@
 t.d(n, {
-    ZP: () => h,
+    ZP: () => m,
     so: () => f,
 }),
     t(388685);
@@ -17,13 +17,13 @@ var i = t(442837),
 function f(e) {
     let [n, t, i, f] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.ZP, l.Z, c.Z, a.Z];
     if ((0, u.Z2)(e)) return !1;
-    let { guild_id: h, channel_id: g } = e,
-        m = e.entity_type === _.WX.EXTERNAL ? n.getDefaultChannel(e.guild_id) : t.getChannel(g),
-        v = i.getGuild(h),
-        b = f.getStageInstanceByChannel(g);
+    let { guild_id: m, channel_id: v } = e,
+        g = e.entity_type === _.WX.EXTERNAL ? n.getDefaultChannel(e.guild_id) : t.getChannel(v),
+        h = i.getGuild(m),
+        b = f.getStageInstanceByChannel(v);
     return (
-        !!(0, r.b)(s.Z, v, m, b) &&
-        null != m &&
+        !!(0, r.b)(s.Z, h, g, b) &&
+        null != g &&
         (function (e) {
             let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.Z],
                 { entityType: t, channelId: i } =
@@ -39,6 +39,6 @@ function f(e) {
         })(e, [t])
     );
 }
-function h(e) {
+function m(e) {
     return (0, i.e7)([o.ZP, l.Z, c.Z, a.Z], () => f(e, [o.ZP, l.Z, c.Z, a.Z]), [e]);
 }

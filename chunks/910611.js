@@ -1,6 +1,6 @@
 n.d(t, {
-    TS: () => F,
-    ud: () => k,
+    TS: () => H,
+    ud: () => D,
     v0: () => U,
 }),
     n(388685);
@@ -115,7 +115,7 @@ function L(e) {
         a,
     );
 }
-function k(e) {
+function D(e) {
     let {
             channel: t,
             channelName: n,
@@ -331,7 +331,7 @@ function k(e) {
             return null;
     }
 }
-let D = (e) => {
+let k = (e) => {
     var t, n, l;
     let { channel: a } = e,
         s = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
@@ -361,7 +361,7 @@ function U(e, t) {
     switch (e.type) {
         case A.d4z.DM:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(D, { channel: e }), (0, i.jsx)(P.Z, { channel: e }, e.id)],
+                children: [(0, i.jsx)(k, { channel: e }), (0, i.jsx)(P.Z, { channel: e }, e.id)],
             });
         case A.d4z.GUILD_ANNOUNCEMENT:
         case A.d4z.GUILD_TEXT:
@@ -394,7 +394,7 @@ function V(e, t) {
         ],
     });
 }
-function F(e) {
+function H(e) {
     let { guild: t, channel: n, caretPosition: l = "left" } = e,
         a = (0, o.e7)([O.Z], () => O.Z.getGuildId()),
         s = (0, b.D)(),

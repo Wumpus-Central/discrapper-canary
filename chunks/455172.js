@@ -8,8 +8,8 @@ var r = n(54381),
     c = n(317381),
     u = n(884338),
     d = n(470883),
-    h = n(933557),
-    f = n(777861),
+    f = n(933557),
+    h = n(777861),
     p = n(752048),
     g = n(439944),
     m = n(199902),
@@ -47,7 +47,7 @@ function E(e) {
               className: n,
               children: v.intl.string(v.t.fpKdS1),
           })
-        : (0, r.jsx)(f.Z, {
+        : (0, r.jsx)(h.Z, {
               muteConfig: t,
               className: n,
           });
@@ -58,7 +58,7 @@ function S(e) {
         {
             activityUsers: l,
             streamUsers: u,
-            voiceUsers: h,
+            voiceUsers: f,
         } = (function (e) {
             let t = e.id,
                 n = (0, a.Wu)([b.Z], () => b.Z.getBlockedOrIgnoredIDs()),
@@ -79,9 +79,9 @@ function S(e) {
                         .map((e) => y.default.getUser(e));
                     return (0, d.dq)(e, n);
                 }, [t, n]),
-                h = i.useMemo(() => (0, d.dq)(u, n), [u, n]),
-                f = i.useMemo(() => (0, g.C)(h, r, "DirectMessageTooltip - activityUsers"), [h, r]),
-                _ = i.useMemo(() => f.filter((e) => !s.some((t) => t.id === e.id)), [f, s]),
+                f = i.useMemo(() => (0, d.dq)(u, n), [u, n]),
+                h = i.useMemo(() => (0, g.C)(f, r, "DirectMessageTooltip - activityUsers"), [f, r]),
+                _ = i.useMemo(() => h.filter((e) => !s.some((t) => t.id === e.id)), [h, s]),
                 v = (0, a.Wu)([O.ZP], () => {
                     let t = O.ZP.getVoiceStatesForChannel(e).map((e) => {
                         let { user: t } = e;
@@ -93,16 +93,16 @@ function S(e) {
                 x = i.useMemo(() => (0, g.C)(j, r, "DirectMessageTooltip - voiceUsers"), [j, r]);
             return {
                 voiceUsers: i.useMemo(
-                    () => x.filter((e) => !s.some((t) => t.id === e.id) && !f.some((t) => t.id === e.id)),
-                    [x, s, f],
+                    () => x.filter((e) => !s.some((t) => t.id === e.id) && !h.some((t) => t.id === e.id)),
+                    [x, s, h],
                 ),
                 streamUsers: _,
                 activityUsers: s,
             };
         })(t),
-        f = (0, r.jsx)(C, {
+        h = (0, r.jsx)(C, {
             icon: s.gj8,
-            users: h,
+            users: f,
         }),
         v = (0, r.jsx)(C, {
             icon: s.hGI,
@@ -122,13 +122,13 @@ function S(e) {
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            f,
+            h,
             v,
             x,
             S
                 ? (0, r.jsx)(E, {
                       muteConfig: I,
-                      className: o()(j.muteText, { [j.muteTextWithActivity]: null != f || null != v }),
+                      className: o()(j.muteText, { [j.muteTextWithActivity]: null != h || null != v }),
                   })
                 : null,
         ],
@@ -136,7 +136,7 @@ function S(e) {
 }
 function I(e) {
     let { channel: t } = e,
-        n = (0, h.ZP)(t);
+        n = (0, f.ZP)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {

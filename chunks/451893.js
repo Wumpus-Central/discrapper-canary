@@ -60,12 +60,12 @@ function a(e) {
     let { className: t, children: n, containerRef: a, faderSize: o, faderEdgeThreshold: c } = e,
         u = l.useRef(null),
         [d, m] = l.useState(0),
-        [f, h] = l.useState(0),
-        [x, g] = l.useState(0),
+        [f, x] = l.useState(0),
+        [h, g] = l.useState(0),
         p = l.useCallback(() => {
             null != u.current &&
                 (m(u.current.getDistanceFromTop()),
-                h(u.current.getDistanceFromBottom()),
+                x(u.current.getDistanceFromBottom()),
                 g(u.current.getScrollerState().offsetHeight));
         }, []);
     l.useEffect(() => {
@@ -92,7 +92,7 @@ function a(e) {
             }
         }
         if (f > 0) {
-            let t = x - o,
+            let t = h - o,
                 n = c > 0 ? 1 - Math.min(c, f) / c : 1;
             for (let r = s.length - 1; r >= 0; r--) {
                 let { position: l, alpha: i } = s[r],
@@ -101,7 +101,7 @@ function a(e) {
             }
         }
         return { maskImage: "linear-gradient(".concat(e.join(","), ")") };
-    }, [f, d, c, o, x]);
+    }, [f, d, c, o, h]);
     return (0, r.jsx)(i.xVE, {
         ref: u,
         style: v,

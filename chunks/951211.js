@@ -38,8 +38,8 @@ function f(e) {
             channel: m,
             activities: g,
             newClipsCount: b,
-            canPostPolls: y,
-            canLaunchActivities: C,
+            canPostPolls: C,
+            canLaunchActivities: y,
             appContext: v,
             canSendScheduledMessages: _,
             canSummarizeThreads: O,
@@ -73,7 +73,7 @@ function f(e) {
                 icon: l.YPH,
                 display: p.intl.string(p.t.rBIGBL),
             }),
-        y &&
+        C &&
             E.push({
                 type: "POLL",
                 icon: l.QDj,
@@ -97,7 +97,7 @@ function f(e) {
                   icon: l.jje,
                   display: p.intl.string(j ? p.t["5Y0Fam"] : p.t.Bbvp6G),
               }),
-        C &&
+        y &&
             E.push({
                 type: "ACTIVITY",
                 icon: l.nG3,

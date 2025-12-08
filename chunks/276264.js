@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => Q,
+    Z: () => X,
     x: () => F,
 }),
     n(388685);
@@ -266,7 +266,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             })
         );
     }),
-    X = i.memo(function (e) {
+    Q = i.memo(function (e) {
         let {
                 hideSubtext: t,
                 hideTooltip: n = !1,
@@ -318,7 +318,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   hideTooltip: n,
               });
     }),
-    Q = i.memo(function (e) {
+    X = i.memo(function (e) {
         let {
                 selected: t = !1,
                 colorString: n,
@@ -346,7 +346,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 hideTooltip: H = !1,
                 onMouseDown: Y,
                 onKeyDown: W,
-                onClick: Q,
+                onClick: X,
                 onContextMenu: J,
                 onClickPremiumGuildIcon: $,
                 "aria-controls": ee,
@@ -453,7 +453,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       [j.flatBottom]: ew,
                                   }),
                                   innerClassName: j.memberInner,
-                                  onClick: Q,
+                                  onClick: X,
                                   onKeyDown: W,
                                   onMouseDown: Y,
                                   onContextMenu: J,
@@ -507,7 +507,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       currentUser: y,
                                   }),
                                   nameplate: U,
-                                  subText: (0, r.jsx)(X, {
+                                  subText: (0, r.jsx)(Q, {
                                       hideSubtext: F,
                                       activities: O,
                                       status: S,

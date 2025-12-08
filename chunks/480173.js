@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var a = n(54381),
     l = n(473749),
-    i = n(442837),
-    r = n(481060),
+    r = n(442837),
+    i = n(481060),
     s = n(607070),
     o = n(7093),
     c = n(817466),
@@ -10,7 +10,7 @@ var a = n(54381),
     u = n(119290);
 let m = l.lazy(() => n.e("77898").then(n.bind(n, 739859)));
 function p() {
-    let e = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+    let e = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
         t = (0, o.Z)((e) => e.shouldRenderTenureLevelUp),
         n = (0, c.Z)();
     return e || !t || null == n ? null : (0, a.jsx)(h, { levelUpData: n });
@@ -18,24 +18,24 @@ function p() {
 function h(e) {
     let { levelUpData: t } = e,
         n = l.useRef(null),
-        i = l.useCallback(() => {
+        r = l.useCallback(() => {
             o.Z.setState({ shouldRenderTenureLevelUp: !1 });
         }, []);
     return (
-        l.useEffect(() => i, [i]),
-        (0, a.jsx)(r.EqS, {
+        l.useEffect(() => r, [r]),
+        (0, a.jsx)(i.EqS, {
             containerRef: n,
             children: (0, a.jsxs)("div", {
                 className: u.wrapper,
                 children: [
                     (0, a.jsx)("div", {
                         className: u.closeButton,
-                        children: (0, a.jsx)(r.aML, {
+                        children: (0, a.jsx)(i.aML, {
                             text: d.intl.string(d.t.cpT0Cq),
                             children: (e) => {
                                 var t, n;
                                 return (0, a.jsx)(
-                                    r.hU,
+                                    i.hU,
                                     ((t = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
@@ -63,10 +63,10 @@ function h(e) {
                                     })({}, e)),
                                     (n = n =
                                         {
-                                            icon: r.Dio,
+                                            icon: i.Dio,
                                             variant: "secondary",
                                             size: "sm",
-                                            onClick: i,
+                                            onClick: r,
                                             "aria-label": d.intl.string(d.t.cpT0Cq),
                                         }),
                                     Object.getOwnPropertyDescriptors

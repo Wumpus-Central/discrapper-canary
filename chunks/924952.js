@@ -4,19 +4,19 @@ e(473749);
 var l = e(442837),
     r = e(481060),
     a = e(357156),
-    c = e(471253),
-    s = e(924301),
+    s = e(471253),
+    c = e(924301),
     o = e(482241),
     d = e(765305),
     u = e(388032);
 function Z(n, t, Z) {
     let { canManageGuildEvent: h } = (0, a.XJ)(null != Z ? Z : t),
-        g = (0, l.e7)([s.ZP], () => s.ZP.isActive(n)),
-        f = (0, l.e7)([s.ZP], () => s.ZP.getGuildScheduledEvent(n), [n]),
+        g = (0, l.e7)([c.ZP], () => c.ZP.isActive(n)),
+        f = (0, l.e7)([c.ZP], () => c.ZP.getGuildScheduledEvent(n), [n]),
         v = h(f);
     if (null == n || !v || !g || (null == f ? void 0 : f.entity_type) === d.WX.EXTERNAL) return null;
     let j = () => {
-        (null == Z ? void 0 : Z.isGuildStageVoice()) ? (0, c.NZ)(Z) : null != n && o.Z.endEvent(n, t.id), (0, r.pTH)();
+        (null == Z ? void 0 : Z.isGuildStageVoice()) ? (0, s.NZ)(Z) : null != n && o.Z.endEvent(n, t.id), (0, r.pTH)();
     };
     return (0, i.jsx)(r.sNh, {
         id: u.intl.string(u.t.qaYzPA),

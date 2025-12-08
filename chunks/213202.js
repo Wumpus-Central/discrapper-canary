@@ -4,8 +4,8 @@ e(473749);
 var l = e(442837),
     r = e(481060),
     a = e(239091),
-    c = e(883385),
-    s = e(108843),
+    s = e(883385),
+    c = e(108843),
     o = e(947440),
     d = e(100527),
     u = e(299206),
@@ -65,9 +65,9 @@ function D(n) {
     return n;
 }
 function U(n) {
-    let { channel: t, guild: e, onSelect: c } = n,
-        s = t.isGuildStageVoice(),
-        d = (0, l.e7)([C.Z], () => (s ? C.Z.getStageInstanceByChannel(t.id) : void 0), [s, t.id]),
+    let { channel: t, guild: e, onSelect: s } = n,
+        c = t.isGuildStageVoice(),
+        d = (0, l.e7)([C.Z], () => (c ? C.Z.getStageInstanceByChannel(t.id) : void 0), [c, t.id]),
         Z = (0, y.Z)(t),
         j = (0, b.qY)(t.id),
         S = (0, x.Z)(null == j ? void 0 : j.id, e, t),
@@ -94,7 +94,7 @@ function U(n) {
         navId: "channel-context",
         onClose: a.Zy,
         "aria-label": X.intl.string(X.t.Xm41aV),
-        onSelect: c,
+        onSelect: s,
         children: [
             (0, i.jsx)(r.kSQ, { children: null != j ? S : N }),
             (0, i.jsxs)(r.kSQ, {
@@ -116,9 +116,9 @@ function U(n) {
     });
 }
 function H(n) {
-    let { channel: t, guild: e, onSelect: c } = n,
-        s = t.isGuildStageVoice(),
-        d = (0, l.e7)([C.Z], () => (s ? C.Z.getStageInstanceByChannel(t.id) : void 0), [s, t.id]),
+    let { channel: t, guild: e, onSelect: s } = n,
+        c = t.isGuildStageVoice(),
+        d = (0, l.e7)([C.Z], () => (c ? C.Z.getStageInstanceByChannel(t.id) : void 0), [c, t.id]),
         Z = (0, m.Z)(t),
         g = (0, y.Z)(t),
         f = (0, b.qY)(t.id),
@@ -146,13 +146,13 @@ function H(n) {
         nl = (0, j.Z)(t),
         nr = (0, _.ZP)(t),
         na = (0, p.Mn)("ChannelListVoiceContextMenuNormal"),
-        nc = (0, Q.ZP)(t),
-        ns = (0, T.Z)();
+        ns = (0, Q.ZP)(t),
+        nc = (0, T.Z)();
     return (0, i.jsxs)(r.v2r, {
         navId: "channel-context",
         onClose: a.Zy,
         "aria-label": X.intl.string(X.t.Xm41aV),
-        onSelect: c,
+        onSelect: s,
         children: [
             (0, i.jsx)(r.kSQ, { children: null != f ? v : q }),
             (0, i.jsxs)(
@@ -179,7 +179,7 @@ function H(n) {
             (0, i.jsxs)(
                 r.kSQ,
                 {
-                    children: [nr, na ? nc : Y],
+                    children: [nr, na ? ns : Y],
                 },
                 "notifications",
             ),
@@ -194,15 +194,15 @@ function H(n) {
             (0, i.jsxs)(
                 r.kSQ,
                 {
-                    children: [nn, ns],
+                    children: [nn, nc],
                 },
                 "developer-actions",
             ),
         ],
     });
 }
-let Y = (0, s.Z)(
-    (0, c.Z)(
+let Y = (0, c.Z)(
+    (0, s.Z)(
         function (n) {
             return (0, Z.Z)() ? (0, i.jsx)(U, D({}, n)) : (0, i.jsx)(H, D({}, n));
         },

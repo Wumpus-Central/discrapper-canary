@@ -2,8 +2,8 @@ n.d(t, { Z: () => w });
 var r = n(54381);
 n(473749);
 var i = n(442837),
-    a = n(481060),
-    l = n(468363),
+    l = n(481060),
+    a = n(468363),
     o = n(353647),
     c = n(566898),
     s = n(158776),
@@ -25,7 +25,7 @@ var i = n(442837),
     I = n(158069);
 function w(e) {
     let { user: t, currentUser: n, displayProfile: w, guildId: S, channelId: E, subsection: T, onClose: C } = e,
-        { voiceActivityStatusEnabled: D } = (0, l.U)({ location: "UserProfileModalV2Activity" }),
+        { voiceActivityStatusEnabled: D } = (0, a.U)({ location: "UserProfileModalV2Activity" }),
         k = (0, f.b)({ location: "UserProfileModalV2Activity" }),
         { live: N, recent: A, stream: Z } = (0, g.Z)(t.id),
         { voiceChannel: R, voiceActivity: G } = (0, p.Z)({
@@ -36,7 +36,7 @@ function w(e) {
         M = t.id === n.id,
         B = (0, i.e7)([u.Z, s.Z], () => {
             let e = M ? u.Z.getStatus() : s.Z.getStatus(t.id);
-            return e === a.Skl.OFFLINE || e === a.Skl.INVISIBLE;
+            return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
         F = N.length > 0 || null != Z,
         U = D && null == Z && null == G && null != R,
@@ -140,7 +140,7 @@ function w(e) {
                           ? P.intl.format(P.t["4bk9Ak"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
-                                        a.Anchor,
+                                        l.Anchor,
                                         {
                                             href: d.Z.getArticleURL(_.BhN.ACTIVITY_STATUS_SETTINGS),
                                             children: e,

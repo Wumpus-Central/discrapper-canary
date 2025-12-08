@@ -2,15 +2,15 @@ n.d(t, { Z: () => u });
 var r = n(54381),
     l = n(473749),
     i = n(335818),
-    a = n(481060),
+    s = n(481060),
     o = n(501431),
-    s = n(149705),
+    a = n(149705),
     c = n(388032);
 function u() {
     let { itemTypeFilters: e, searchQuery: t } = (0, o.S)((e) => e),
-        { totalCount: n, isFetchingResults: u } = (0, s.a)(),
+        { totalCount: n, isFetchingResults: u } = (0, a.a)(),
         d = (0, o.S)((e) => e.hasFilters()),
-        f = l.useCallback(() => {
+        g = l.useCallback(() => {
             if (!d) return "";
             if (u) return c.intl.string(c.t["/FaMSE"]);
             if ("" !== t) {
@@ -30,8 +30,8 @@ function u() {
                       ? c.intl.format(c.t.fZ1rdk, { count: n })
                       : c.intl.format(c.t["/rPvmQ"], { count: n });
         }, [e, n, d, t, u]);
-    return (0, r.jsx)(a.Heading, {
+    return (0, r.jsx)(s.Heading, {
         variant: "heading-lg/semibold",
-        children: f(),
+        children: g(),
     });
 }

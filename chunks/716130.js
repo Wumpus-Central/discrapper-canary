@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(399606),
     o = n(481060),
     c = n(668781),
-    u = n(603211),
-    d = n(710344),
+    d = n(603211),
+    u = n(710344),
     g = n(430824),
     m = n(570961),
     p = n(208665),
@@ -61,14 +61,14 @@ function _(e, t) {
 function v(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
         c = (0, s.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
-        d = c.filter((e) => e.inOnboarding),
-        g = d.length,
+        u = c.filter((e) => e.inOnboarding),
+        g = u.length,
         {
             drag: f,
             drop: j,
             dragSourcePosition: _,
             setIsDraggable: v,
-        } = (0, u.Z)({
+        } = (0, d.Z)({
             type: "ONBOARDING_PROMPT_CARD",
             index: g,
             optionId: "separator",
@@ -91,7 +91,7 @@ function v(e) {
                 [x.dropIndicatorAfter]: null != _ && g > _,
             }),
             children: [
-                !l && d.length < h.b3
+                !l && u.length < h.b3
                     ? (0, r.jsxs)(o.P3F, {
                           className: x.addPrompt,
                           onClick: () => (0, m.tS)(t, [...c, (0, h.yZ)(!0)], !1),
@@ -134,7 +134,7 @@ function v(e) {
 }
 function O(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: i, includeCount: l, singleColumn: a } = e,
-        u = (0, s.e7)([g.Z], () => g.Z.getGuild(t)),
+        d = (0, s.e7)([g.Z], () => g.Z.getGuild(t)),
         O = (0, s.e7)([p.Z], () => p.Z.editedOnboardingPrompts),
         C = O.filter((e) => e.inOnboarding),
         y = O.filter((e) => !0 !== e.inOnboarding),
@@ -156,7 +156,7 @@ function O(e) {
             handleDragStart: E,
             handleDragReset: I,
             handleDragComplete: S,
-        } = (0, d.Z)(N, (e) => {
+        } = (0, u.Z)(N, (e) => {
             let t = e.findIndex((e) => "separator" === e.id),
                 n = e.slice(0, t).map((e) => _(j({}, e.data), { inOnboarding: !0 })),
                 r = e.slice(t + 1).map((e) =>
@@ -170,9 +170,9 @@ function O(e) {
                     title: b.intl.string(b.t.Cxtq5x),
                     body: b.intl.formatToPlainString(b.t["pkbZ+U"], { numQuestions: h.b3 }),
                 });
-            (0, m.tS)(u, [...n, ...r]);
+            (0, m.tS)(d, [...n, ...r]);
         });
-    return null == u
+    return null == d
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -200,7 +200,7 @@ function O(e) {
                                     (0, r.jsx)(
                                         f.Z,
                                         {
-                                            guild: u,
+                                            guild: d,
                                             prompt: e,
                                             disableAutofocus: n,
                                             includeCount: l,
@@ -217,7 +217,7 @@ function O(e) {
                             ],
                         }),
                   (0, r.jsx)(v, {
-                      guild: u,
+                      guild: d,
                       prejoinOnly: n,
                       postjoinOnly: i,
                   }),
@@ -229,7 +229,7 @@ function O(e) {
                                     (0, r.jsx)(
                                         f.Z,
                                         {
-                                            guild: u,
+                                            guild: d,
                                             prompt: e,
                                             promptIndex: t + C.length,
                                             dragIndex: t + C.length + 1,
@@ -243,7 +243,7 @@ function O(e) {
                                 O.length < h.YW
                                     ? (0, r.jsxs)(o.P3F, {
                                           className: x.addPrompt,
-                                          onClick: () => (0, m.tS)(u, [...O, (0, h.yZ)(!1)], !1),
+                                          onClick: () => (0, m.tS)(d, [...O, (0, h.yZ)(!1)], !1),
                                           children: [
                                               (0, r.jsx)(o.oFk, {
                                                   size: "custom",

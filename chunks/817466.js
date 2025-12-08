@@ -1,8 +1,8 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => O });
 var a = n(780384),
     l = n(410030),
-    i = n(291175),
-    r = n(804413),
+    r = n(291175),
+    i = n(804413),
     s = n(474936),
     o = n(538092),
     c = n(533577),
@@ -88,14 +88,14 @@ let S = {
             light: C.Z,
         },
     };
-function N() {
-    let e = (0, r.Z)(),
+function O() {
+    let e = (0, i.Z)(),
         t = (0, a.wj)((0, l.ZP)());
     if (!e) return null;
     let n = S[e],
         o = E[e],
         c = {
-            currentBadge: (0, i.fv)(e),
+            currentBadge: (0, r.fv)(e),
             currentBadgeTextGradient: t ? (null == n ? void 0 : n.dark) : null == n ? void 0 : n.light,
             levelUpVideoSrc: t ? (null == o ? void 0 : o.dark) : null == o ? void 0 : o.light,
         },
@@ -103,7 +103,7 @@ function N() {
     if (d > 0) {
         let e = s.Qh[d - 1],
             n = S[e];
-        (c.prevBadge = (0, i.fv)(e)),
+        (c.prevBadge = (0, r.fv)(e)),
             (c.prevBadgeTextGradient = t ? (null == n ? void 0 : n.dark) : null == n ? void 0 : n.light);
     }
     return c;

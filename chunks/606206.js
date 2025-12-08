@@ -29,11 +29,11 @@ function O(e, t, n) {
 }
 let y = [s.h8.TEXT_CHANNEL, s.h8.GROUP_DM, s.h8.USER],
     C = null,
-    _ = null,
-    T = [],
+    T = null,
+    _ = [],
     m = [];
 function I(e) {
-    (T = [...T, e]),
+    (_ = [..._, e]),
         (m = m.map((e) => {
             var t, n;
             return (
@@ -53,7 +53,7 @@ function I(e) {
                     }
                     return e;
                 })({}, e)),
-                (n = n = { sent: T.includes(e.data.record.id) }),
+                (n = n = { sent: _.includes(e.data.record.id) }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
@@ -72,7 +72,7 @@ function I(e) {
         x.emitChange();
 }
 function S() {
-    (C = null), null != l && (l.destroy(), (l = null)), null != _ && _();
+    (C = null), null != l && (l.destroy(), (l = null)), null != T && T();
 }
 function b() {
     let e = null != C && null != C.application_id ? f.Z.getApplicationActivity(C.application_id) : null;
@@ -97,8 +97,8 @@ O(v, "displayName", "ActivityInviteModalStore");
 let x = new v(a.Z, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
             (C = e.activity),
-                (_ = e.resolve),
-                (T = []),
+                (T = e.resolve),
+                (_ = []),
                 null == l &&
                     (l = new s.ZP(
                         (e, t) => {
@@ -138,7 +138,7 @@ let x = new v(a.Z, {
                                             let { record: t } = e;
                                             return {
                                                 type: s.h8.USER,
-                                                sent: T.includes(t.id),
+                                                sent: _.includes(t.id),
                                                 status: g.Z.getStatus(t.id),
                                                 data: e,
                                             };
@@ -150,7 +150,7 @@ let x = new v(a.Z, {
                                                 i = d.Z.getGuild(n.guild_id);
                                             return {
                                                 type: s.h8.TEXT_CHANNEL,
-                                                sent: T.includes(n.id),
+                                                sent: _.includes(n.id),
                                                 categoryName: null != l ? (0, u.F6)(l, p.default, h.Z) : "",
                                                 guildName: null != (t = null == i ? void 0 : i.name) ? t : "",
                                                 data: e,
@@ -160,7 +160,7 @@ let x = new v(a.Z, {
                                             let { record: t } = e;
                                             return {
                                                 type: s.h8.GROUP_DM,
-                                                sent: T.includes(t.id),
+                                                sent: _.includes(t.id),
                                                 data: e,
                                             };
                                         }

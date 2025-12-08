@@ -64,7 +64,7 @@ let f = i.memo(function (e) {
         a.qEK,
         l(
             {
-                src: d(t, (0, a.pxk)(n), s, p),
+                src: d(t, (0, a.dcp)(n), s, p),
                 size: n,
                 "aria-label": u ? void 0 : t.username,
                 "aria-hidden": u,

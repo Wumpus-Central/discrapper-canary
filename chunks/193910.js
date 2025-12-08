@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(266454),
     g = n(706140),
     b = n(243778),
-    y = n(618857),
-    C = n(346479),
+    C = n(618857),
+    y = n(346479),
     v = n(286934),
     _ = n(488131),
     O = n(375954),
@@ -69,10 +69,10 @@ function L(e) {
             draftType: k,
             editorTextContent: U,
             setValue: V,
-            openClips: F,
+            openClips: H,
         } = e,
-        { analyticsLocations: B, newestAnalyticsLocation: H } = (0, d.ZP)(),
-        G = (0, y.Dt)({ channel: t }),
+        { analyticsLocations: F, newestAnalyticsLocation: B } = (0, d.ZP)(),
+        G = (0, C.Dt)({ channel: t }),
         z = (0, l.e7)([v.Z], () => v.Z.isInProgress());
     function W() {
         (0, _.R6)(t, void 0, "Plus Button");
@@ -81,7 +81,7 @@ function L(e) {
         x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), V("/", (0, P.JM)("/"));
     }
     function K() {
-        F();
+        H();
     }
     function Y() {
         (0, m.Q3)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.L.TAKE_ACTION }),
@@ -152,7 +152,7 @@ function L(e) {
                           }
                         : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: H,
+                analyticsLocation: B,
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
@@ -258,7 +258,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.JOIN,
                                             activity: n,
-                                            location: B[B.length - 1],
+                                            location: F[F.length - 1],
                                         })
                                     );
                                 },
@@ -279,7 +279,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.LISTEN,
                                             activity: n,
-                                            location: B[B.length - 1],
+                                            location: F[F.length - 1],
                                         })
                                     );
                                 },
@@ -300,7 +300,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.WATCH,
                                             activity: n,
-                                            location: B[B.length - 1],
+                                            location: F[F.length - 1],
                                         })
                                     );
                                 },
@@ -354,7 +354,7 @@ function L(e) {
                             {
                                 id: "scheduled_message",
                                 label: r,
-                                action: () => (0, y.$f)({ channel: t }),
+                                action: () => (0, C.$f)({ channel: t }),
                                 children: G,
                             },
                             "scheduled_message",
@@ -365,7 +365,7 @@ function L(e) {
                             {
                                 id: "summarize_thread",
                                 label: r,
-                                action: () => C.Z.summarizeThread(t),
+                                action: () => y.Z.summarizeThread(t),
                                 icon: z ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
                                 disabled: z,
                                 children: z
@@ -378,7 +378,7 @@ function L(e) {
                                                       id: "summarize_thread_for_everyone",
                                                       label: A.intl.string(A.t.eCzSdd),
                                                       iconLeft: s.BFJ,
-                                                      action: () => C.Z.summarizeThread(t, !1),
+                                                      action: () => y.Z.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
                                               ),
@@ -388,7 +388,7 @@ function L(e) {
                                                       id: "summarize_thread_for_me",
                                                       label: A.intl.string(A.t["HOe+Hq"]),
                                                       iconLeft: s.tBG,
-                                                      action: () => C.Z.summarizeThread(t),
+                                                      action: () => y.Z.summarizeThread(t),
                                                   },
                                                   "summarize_thread_for_me",
                                               ),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => E });
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -13,21 +13,21 @@ var r = n(54381),
     b = n(496675),
     p = n(768581),
     m = n(585483),
-    y = n(176354),
-    O = n(981631),
+    O = n(176354),
+    y = n(981631),
     h = n(185923),
     v = n(388032),
     j = n(576311);
-function S(e, t) {
+function E(e, t) {
     let { reducedMotion: n } = i.useContext(s.Sfi),
         l = (0, f.$R)(t),
-        a = (0, o.e7)([b.Z], () => (t.isPrivate() || b.Z.can(O.Plq.ADD_REACTIONS, t)) && l, [t, l]),
+        a = (0, o.e7)([b.Z], () => (t.isPrivate() || b.Z.can(y.Plq.ADD_REACTIONS, t)) && l, [t, l]),
         p = (0, c.MZ)(t.getGuildId());
     if (!g.nc.getSetting() || !a) return null;
     let j = p
         .filter(
             (e) =>
-                !y.ZP.isEmojiFilteredOrLocked({
+                !O.ZP.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: t,
                     intention: h.Hz.REACTION,
@@ -45,7 +45,7 @@ function S(e, t) {
                     icon: (e) => {
                         var t, l;
                         return (0, r.jsx)(
-                            E,
+                            S,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -103,7 +103,7 @@ function S(e, t) {
         id: "add-reaction",
         label: v.intl.string(v.t.lfIHs4),
         action: () => {
-            m.S.dispatchKeyed(O.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            m.S.dispatchKeyed(y.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: "default",
         children: (0, r.jsxs)(r.Fragment, {
@@ -116,14 +116,14 @@ function S(e, t) {
                     label: v.intl.string(v.t["OBCR+p"]),
                     icon: s.EO4,
                     action: () => {
-                        m.S.dispatchKeyed(O.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        m.S.dispatchKeyed(y.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     },
                 }),
             ],
         }),
     });
 }
-function E(e) {
+function S(e) {
     var t;
     let { emoji: n, reducedMotionEnabled: i, className: l = "", isFocused: o = !1 } = e;
     return (0, r.jsx)("img", {
@@ -135,7 +135,7 @@ function E(e) {
                       animated: n.animated && (!i || o),
                       size: 18,
                   })
-                : y.ZP.getURL(null != (t = n.optionallyDiverseSequence) ? t : ""),
+                : O.ZP.getURL(null != (t = n.optionallyDiverseSequence) ? t : ""),
         alt: "",
     });
 }

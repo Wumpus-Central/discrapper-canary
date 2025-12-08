@@ -1,16 +1,16 @@
 n.d(t, { P: () => i }), n(804061), n(704826), n(35282);
-var r = n(830121),
-    l = n(591759),
-    a = n(388032);
-let s = [r.el];
+var l = n(830121),
+    r = n(591759),
+    s = n(388032);
+let a = [l.el];
 function i(e, t, n) {
-    let r = !1,
-        i = e.replaceAll(l.Z.URL_REGEX, (e) => {
-            let t = s.some((t) => null != t(e));
-            return t && (r = !0), t ? e : "`".concat(e, "`");
+    let l = !1,
+        i = e.replaceAll(r.Z.URL_REGEX, (e) => {
+            let t = a.some((t) => null != t(e));
+            return t && (l = !0), t ? e : "`".concat(e, "`");
         });
-    if (r) return i;
-    let u = a.intl.formatToMarkdownString(a.t.dZJpdG, {
+    if (l) return i;
+    let u = s.intl.formatToMarkdownString(s.t.dZJpdG, {
         applicationName: t.name,
         link: n,
     });

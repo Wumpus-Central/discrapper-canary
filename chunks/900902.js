@@ -22,8 +22,8 @@ let p = r.memo(function (e) {
                 repliedMessage: g,
                 roleIcon: b,
             } = e,
-            y = (0, u.wq)(t.author.id, n.id),
-            C = (0, u.XO)(t, n, p, f),
+            C = (0, u.wq)(t.author.id, n.id),
+            y = (0, u.XO)(t, n, p, f),
             v = (0, u.R9)(h, f),
             _ = r.useCallback(() => {
                 f({
@@ -45,8 +45,8 @@ let p = r.memo(function (e) {
             showAvatarPopout: h,
             showUsernamePopout: p,
             onClickAvatar: v,
-            onClickUsername: C,
-            onContextMenu: y,
+            onClickUsername: y,
+            onContextMenu: C,
             onPopoutRequestClose: _,
             roleIcon: b,
         });
@@ -63,20 +63,20 @@ function f(e) {
             roleIcon: u,
         } = e,
         { message: d, compact: f, channel: m, groupId: g } = t,
-        { usernameProfile: b, avatarProfile: y } = r;
+        { usernameProfile: b, avatarProfile: C } = r;
     if ((0, l.Z)(d)) return null;
-    let C = d.id === g;
-    return C || f || null != o
+    let y = d.id === g;
+    return y || f || null != o
         ? (0, i.jsx)(p, {
               message: d,
               channel: m,
               compact: f,
               subscribeToGroupId: g,
-              isGroupStart: C,
+              isGroupStart: y,
               groupId: g,
               setPopout: n,
               usernameProfile: b,
-              avatarProfile: y,
+              avatarProfile: C,
               author: s,
               repliedMessage: c,
               roleIcon: u,

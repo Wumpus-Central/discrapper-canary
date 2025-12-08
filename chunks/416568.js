@@ -32,8 +32,8 @@ var r = n(54381),
     A = n(271383),
     R = n(430824),
     D = n(771845),
-    L = n(358085),
-    M = n(316243),
+    M = n(358085),
+    L = n(316243),
     k = n(727258),
     G = n(605951),
     U = n(474109),
@@ -82,7 +82,7 @@ function ei(e) {
     }
     return e;
 }
-let el = (0, L.isWindows)() ? 4 : 12 * !(0, L.isMac)();
+let el = (0, M.isWindows)() ? 4 : 12 * !(0, M.isMac)();
 function eo(e) {
     return e.startsWith(ee.Z5c.GUILD_DISCOVERY) || e.startsWith(ee.Z5c.GLOBAL_DISCOVERY);
 }
@@ -286,7 +286,7 @@ function ec(e) {
     });
 }
 function eu(e) {
-    let { disableAppDownload: t = L.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: a } = e,
+    let { disableAppDownload: t = M.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: a } = e,
         [s] = (0, f.Wu)([D.ZP], () => {
             let e = D.ZP.getGuildsTree();
             return [e, e.version];
@@ -294,7 +294,7 @@ function eu(e) {
         d = (0, f.e7)([S.Z], () => S.Z.lurkingGuildIds()),
         h = i.useMemo(() => (n ? [] : d), [d, n]),
         b = (0, f.e7)([j.Z], () => j.Z.isFullscreenInContext()),
-        { isSorting: y, startSorting: C, stopSorting: E } = (0, M.Z)(),
+        { isSorting: y, startSorting: C, stopSorting: E } = (0, L.Z)(),
         N = i.useRef(!1),
         [T] = i.useState(() => new p.V7()),
         A = i.useRef(null),

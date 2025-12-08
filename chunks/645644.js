@@ -703,7 +703,7 @@ function q(e) {
         t !== y.UNSET_PID &&
         (D.verbose("AUDIO_TOGGLE_SELF_MUTE", e), U.handleMuteToggled());
 }
-function X(e) {
+function Q(e) {
     D.verbose("WINDOW_FOCUS", e);
     let t = (0, O.UU)();
     if (e.windowId !== t)
@@ -713,7 +713,7 @@ function X(e) {
         });
     U.desktopSetFocused(e.focused);
 }
-function Q(e) {
+function X(e) {
     if (e.pid === y.DEV_PID || e.pid === y.UNSET_PID) return;
     let t = U.getByPid(e.pid);
     if (null == t) return void D.error("OVERLAY_SUCCESSFULLY_SHOWN: Game not found", e, U.debug);
@@ -804,10 +804,10 @@ class en extends s.Z {
                           SOUNDBOARD_SET_OVERLAY_ENABLED: Y,
                           MESSAGE_ACKED: K,
                           MESSAGE_CREATE: z,
-                          WINDOW_FOCUS: X,
+                          WINDOW_FOCUS: Q,
                           RTC_CONNECTION_STATE: ee.handleRTCConnectionState,
                           AUDIO_TOGGLE_SELF_MUTE: q,
-                          OVERLAY_SUCCESSFULLY_SHOWN: Q,
+                          OVERLAY_SUCCESSFULLY_SHOWN: X,
                           OVERLAY_UPDATE_OVERLAY_METHOD: J,
                           OVERLAY_TRACK_STATE_CHANGED: $,
                       },

@@ -23,17 +23,17 @@ function g(e) {
             () => !!(o.Z.getThreadIds(t.id, b, _, y).length > 0) || !!(p.Z.getThreads(t.id, b, _, y).length > 0),
             [t.id, b, _, y],
         ),
-        j = t.isMediaChannel();
-    if (!n || m || (j && O)) return null;
-    let x = g
-        ? j
+        x = t.isMediaChannel();
+    if (!n || m || (x && O)) return null;
+    let j = g
+        ? x
             ? f.intl.string(f.t["WP/IE1"])
             : f.intl.string(f.t.zfq9V4)
-        : j
+        : x
           ? f.intl.string(f.t.p60yF1)
           : f.intl.string(f.t.SNOqYC);
     return (0, r.jsx)(h.JO, {
-        tooltip: x,
+        tooltip: j,
         icon: l.d3s,
         onClick: () => s.Z.hideAdminOnboarding(t.id, !g),
         selected: !g,

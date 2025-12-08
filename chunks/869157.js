@@ -16,17 +16,17 @@ var i = n(54381),
     h = n(314897),
     x = n(485386),
     j = n(430824),
-    O = n(594174),
-    v = n(626135),
+    v = n(594174),
+    O = n(626135),
     y = n(5192),
     _ = n(709054),
     C = n(145260),
     N = n(905753),
     S = n(399860),
-    P = n(335049),
+    I = n(335049),
     w = n(617012),
     E = n(981631),
-    I = n(388032),
+    P = n(388032),
     T = n(547063);
 function Z(e) {
     let {
@@ -40,7 +40,7 @@ function Z(e) {
         g = (0, o.e7)([j.Z], () => j.Z.getGuild(l));
     a()(null != g, "");
     let h = (0, o.e7)([x.Z], () => x.Z.getSortedRoles(l)),
-        [v, P] = r.useState(new Set()),
+        [O, I] = r.useState(new Set()),
         w = r.useMemo(() => {
             let e = (0, b.bD)(l),
                 t = h.toReversed().reduce((e, t, n) => ((e[t.id] = n), e), {});
@@ -54,8 +54,8 @@ function Z(e) {
                             return (function (e, t, n) {
                                 let i = Number(e.canWrite) - Number(t.canWrite);
                                 if (0 !== i) return i;
-                                let r = O.default.getUser(e.id),
-                                    l = O.default.getUser(t.id);
+                                let r = v.default.getUser(e.id),
+                                    l = v.default.getUser(t.id);
                                 if (null != r && null != l) {
                                     let e = y.ZP.getName(n, void 0, r),
                                         t = y.ZP.getName(n, void 0, l);
@@ -81,7 +81,7 @@ function Z(e) {
             },
             [n],
         ),
-        I = r.useCallback(
+        P = r.useCallback(
             (e, t, i) => {
                 let r = (0, S.rE)(e, t);
                 null != c[r] &&
@@ -100,10 +100,10 @@ function Z(e) {
         );
     r.useEffect(() => {
         let e = Object.values(c)
-            .filter((e) => e.type === m.Kw.USER && !e.canRead && !v.has(e.id))
+            .filter((e) => e.type === m.Kw.USER && !e.canRead && !O.has(e.id))
             .map((e) => e.id);
-        0 !== e.length && (u.Z.requestMembersById(l, e, !1), P((t) => new Set([...t, ...e])));
-    }, [l, c, v, P]);
+        0 !== e.length && (u.Z.requestMembersById(l, e, !1), I((t) => new Set([...t, ...e])));
+    }, [l, c, O, I]);
     let Z = (0, o.e7)([N.Z], () => N.Z.getApplicationId()),
         A = (0, o.e7)([C.default], () =>
             null == Z
@@ -121,7 +121,7 @@ function Z(e) {
                   {
                       guild: g,
                       commandId: t,
-                      onChange: (t) => I(e.id, e.type, t),
+                      onChange: (t) => P(e.id, e.type, t),
                       onRemove: () => E(e.id, e.type),
                       overwrite: e,
                       integration: A,
@@ -150,7 +150,7 @@ function k(e) {
             onRemove: f,
             overwrite: x,
             integration: j,
-            canShowMigrationTooltip: O,
+            canShowMigrationTooltip: v,
             hasAccessToMutatePermissions: y,
         } = e,
         _ = x.id === o.id || x.id === (0, b.bD)(o.id),
@@ -160,14 +160,14 @@ function k(e) {
     y
         ? x.canWrite ||
           (x.type === m.Kw.USER
-              ? (a = x.id === S ? I.intl.string(I.t["1VF/0x"]) : I.intl.string(I.t.P1GnEd))
-              : x.type === m.Kw.ROLE && (a = I.intl.string(I.t.mcAijf)))
-        : (a = null != d ? I.intl.string(I.t.tybdas) : I.intl.string(I.t["z2hjk/"]));
-    let Z = O && null != j && x.id === o.id && void 0 !== C && !x.permission;
+              ? (a = x.id === S ? P.intl.string(P.t["1VF/0x"]) : P.intl.string(P.t.P1GnEd))
+              : x.type === m.Kw.ROLE && (a = P.intl.string(P.t.mcAijf)))
+        : (a = null != d ? P.intl.string(P.t.tybdas) : P.intl.string(P.t["z2hjk/"]));
+    let Z = v && null != j && x.id === o.id && void 0 !== C && !x.permission;
     r.useEffect(() => {
         if (Z) {
             var e, t, n;
-            v.default.track(
+            O.default.track(
                 E.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -235,8 +235,8 @@ function k(e) {
         }),
         R = (0, i.jsx)(s.J2, {
             targetElementRef: k,
-            title: I.intl.string(I.t.ufFDiC),
-            body: I.intl.format(I.t.pW4Crz, {
+            title: P.intl.string(P.t.ufFDiC),
+            body: P.intl.format(P.t.pW4Crz, {
                 botName: C,
                 link: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/",
             }),
@@ -253,7 +253,7 @@ function k(e) {
             children: [
                 (0, i.jsx)("div", {
                     className: T.entryName,
-                    children: (0, i.jsx)(P.Z, {
+                    children: (0, i.jsx)(I.Z, {
                         guild: o,
                         id: x.id,
                         type: x.type,
@@ -289,7 +289,7 @@ function A(e) {
                 className: T.removeActions,
                 children: (0, i.jsx)(d.P3F, {
                     className: T.removeContainer,
-                    "aria-label": I.intl.string(I.t.mT0CQM),
+                    "aria-label": P.intl.string(P.t.mT0CQM),
                     onClick: l,
                     children: (0, i.jsx)(d.XHJ, {
                         size: "md",

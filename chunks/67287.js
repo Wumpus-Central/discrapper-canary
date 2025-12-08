@@ -8,7 +8,7 @@ var i = n(509613),
     o = n(865121),
     c = n(388032);
 let d = (0, i.vB)(s.n.DEVELOPER_SECTION, {
-    useLabel: () => c.intl.string(c.t.CbItOL),
+    useTitle: () => c.intl.string(c.t.CbItOL),
     usePredicate: () => (0, r.NT)("DeveloperSection") || l.Z.isDeveloper,
     buildLayout: () => [a.d, u.B, o.T],
 });

@@ -1,6 +1,6 @@
 n.d(t, {
     W: () => b,
-    Z: () => y,
+    Z: () => C,
 });
 var i = n(54381);
 n(473749);
@@ -31,7 +31,7 @@ function b(e) {
     null == s || s(),
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("89772")]).then(
+                let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) => {
@@ -95,14 +95,14 @@ function b(e) {
             },
         );
 }
-function y(e) {
+function C(e) {
     let {
             stream: t,
             applicationId: n,
             channel: r,
             exitFullScreen: a,
-            appContext: y,
-            analyticsLocation: C,
+            appContext: C,
+            analyticsLocation: y,
             className: v,
             size: _ = "sm",
         } = e,
@@ -130,9 +130,9 @@ function y(e) {
                                     channel: r,
                                     streamUserId: null == t ? void 0 : t.ownerId,
                                     applicationId: n,
-                                    appContext: y,
+                                    appContext: C,
                                     exitFullScreen: a,
-                                    analyticsLocation: C,
+                                    analyticsLocation: y,
                                     guildScheduledEvent: j,
                                 });
                         },
@@ -141,10 +141,10 @@ function y(e) {
                 (0, i.jsx)(d.Z, {
                     channel: r,
                     stream: t,
-                    appContext: y,
+                    appContext: C,
                     className: l()(v, g.iconButton),
                     exitFullScreen: a,
-                    analyticsLocation: C,
+                    analyticsLocation: y,
                     guildScheduledEvent: j,
                 }),
             ],

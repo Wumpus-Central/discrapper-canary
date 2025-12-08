@@ -10,8 +10,8 @@ var r = n(54381),
     s = n(194983),
     o = n(481060),
     c = n(977258),
-    u = n(45966),
-    d = n(473403),
+    d = n(45966),
+    u = n(473403),
     g = n(454585),
     m = n(323502),
     p = n(958832),
@@ -33,7 +33,7 @@ var r = n(54381),
     P = n(430864);
 function w(e) {
     let { guild: t } = e,
-        a = (0, l.e7)([u.Z], () => u.Z.getEnabled(t.id)),
+        a = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
         f = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
         h = (0, C.Z)(t),
         b = (0, l.e7)([_.Z], () => _.Z.editedDefaultChannelIds),
@@ -93,7 +93,7 @@ function w(e) {
                                                   (0, r.jsxs)("div", {
                                                       className: T.channelName,
                                                       children: [
-                                                          (0, r.jsx)(d._W, {
+                                                          (0, r.jsx)(u._W, {
                                                               channel: e,
                                                               guild: t,
                                                           }),
@@ -243,10 +243,10 @@ function w(e) {
 function Z(e) {
     let { saveOnClose: t = !1 } = e,
         n = (0, l.e7)([x.Z], () => x.Z.getGuild()),
-        a = (0, l.e7)([u.Z], () => u.Z.isLoading()),
+        a = (0, l.e7)([d.Z], () => d.Z.isLoading()),
         s = (0, l.e7)([h.ZP], () => h.ZP.getChannels(null == n ? void 0 : n.id)),
         c = (0, l.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
-        d = (0, l.e7)([O.Z], () => O.Z.advancedMode),
+        u = (0, l.e7)([O.Z], () => O.Z.advancedMode),
         g = i.useRef(null),
         [m, p] = i.useState(!1),
         _ = i.useRef(n);
@@ -260,12 +260,12 @@ function Z(e) {
                 null != e &&
                     (0, j.DO)(e)
                         .then(() => {
-                            d && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                            u && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
                         .catch(() => {});
             };
         }
-    }, [t, d]),
+    }, [t, u]),
     null == n)
         ? null
         : a
@@ -313,7 +313,7 @@ function Z(e) {
                                           }),
                                       ],
                                   }),
-                            d &&
+                            u &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)("div", { className: T.largeSeparator }),

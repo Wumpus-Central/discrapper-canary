@@ -6,8 +6,8 @@ var a = n(388032),
     o = n(162822),
     l = n(937855),
     c = n(5396),
-    d = n(563772),
-    g = n(420241),
+    g = n(563772),
+    d = n(420241),
     m = n(140574),
     u = n(765434);
 function p(t) {
@@ -18,7 +18,7 @@ function p(t) {
                 {
                     user: {
                         name: "pocketman",
-                        avatarSrc: g,
+                        avatarSrc: d,
                     },
                     tagId: 2,
                     title: a.intl.string(a.t.g1hPkw),
@@ -30,7 +30,7 @@ function p(t) {
                 {
                     user: {
                         name: "skaterdood12",
-                        avatarSrc: d,
+                        avatarSrc: g,
                     },
                     tagId: 1,
                     title: a.intl.string(a.t["5GM0TY"]),
@@ -68,7 +68,7 @@ function p(t) {
                     {
                         author: {
                             name: "skaterdood12",
-                            avatarSrc: d,
+                            avatarSrc: g,
                             isOP: !0,
                         },
                         content: a.intl.string(a.t.zEDYfk),
@@ -76,7 +76,7 @@ function p(t) {
                     {
                         author: {
                             name: "pocketman",
-                            avatarSrc: g,
+                            avatarSrc: d,
                             isOP: !1,
                         },
                         content: a.intl.string(a.t["+XGMDs"]),
@@ -111,7 +111,7 @@ function p(t) {
                 {
                     user: {
                         name: "pocketman",
-                        avatarSrc: g,
+                        avatarSrc: d,
                     },
                     tagId: 1,
                     title: a.intl.string(a.t.EQIrvX),
@@ -122,7 +122,7 @@ function p(t) {
                 {
                     user: {
                         name: "skaterdood12",
-                        avatarSrc: d,
+                        avatarSrc: g,
                     },
                     tagId: 1,
                     title: a.intl.string(a.t.f9n6Ue),
@@ -149,7 +149,7 @@ function p(t) {
                     {
                         author: {
                             name: "skaterdood12",
-                            avatarSrc: d,
+                            avatarSrc: g,
                             isOP: !0,
                         },
                         content: a.intl.string(a.t.VeQaUn),
@@ -157,7 +157,7 @@ function p(t) {
                     {
                         author: {
                             name: "pocketman",
-                            avatarSrc: g,
+                            avatarSrc: d,
                             isOP: !1,
                         },
                         content: a.intl.string(a.t.lwjElH),
@@ -180,7 +180,7 @@ function p(t) {
                 {
                     user: {
                         name: "skaterdood12",
-                        avatarSrc: d,
+                        avatarSrc: g,
                     },
                     tagId: null,
                     title: a.intl.string(a.t.to6uUe),
@@ -192,7 +192,7 @@ function p(t) {
                 {
                     user: {
                         name: "pocketman",
-                        avatarSrc: g,
+                        avatarSrc: d,
                     },
                     tagId: 1,
                     title: a.intl.string(a.t.dsQXOj),
@@ -230,7 +230,7 @@ function p(t) {
                     {
                         author: {
                             name: "skaterdood12",
-                            avatarSrc: d,
+                            avatarSrc: g,
                             isOP: !0,
                         },
                         content: a.intl.string(a.t["6DyhGl"]),
@@ -238,7 +238,7 @@ function p(t) {
                     {
                         author: {
                             name: "pocketman",
-                            avatarSrc: g,
+                            avatarSrc: d,
                             isOP: !1,
                         },
                         content: a.intl.string(a.t.BLiuYI),

@@ -233,7 +233,7 @@ class q extends Y {
         super(...e), M(this, "layoutClass", j.dividerContainer), M(this, "selectable", !1);
     }
 }
-class X extends Y {
+class Q extends Y {
     renderContent() {
         var e;
         let { user: t, nick: n, status: r, hidePersonalInformation: a, guildId: o } = this.props,
@@ -269,7 +269,7 @@ class X extends Y {
         });
     }
 }
-class Q extends Y {
+class X extends Y {
     renderContent() {
         var e;
         let {
@@ -586,8 +586,8 @@ M(ec, "Generic", W),
     M(ec, "Loading", K),
     M(ec, "Title", z),
     M(ec, "Divider", q),
-    M(ec, "User", X),
-    M(ec, "UserSuggestion", Q),
+    M(ec, "User", Q),
+    M(ec, "UserSuggestion", X),
     M(ec, "Role", J),
     M(ec, "Channel", ee),
     M(ec, "Command", et),

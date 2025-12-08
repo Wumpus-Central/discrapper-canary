@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(442837),
-    a = n(314897),
-    l = n(733231),
+    l = n(314897),
+    a = n(733231),
     o = n(141014),
     c = n(385153),
     s = n(623132),
@@ -36,7 +36,7 @@ function f(e) {
 }
 function g(e) {
     var { games: t, user: n, widgetType: i } = e,
-        a = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -45,19 +45,19 @@ function g(e) {
                     var n,
                         r,
                         i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["games", "user", "widgetType"]);
-    let { registerItemRef: o, manageFocusOnDelete: c } = (0, l.C)();
+    let { registerItemRef: o, manageFocusOnDelete: c } = (0, a.C)();
     return (0, r.jsx)("ul", {
         className: d.cardList,
         children: t.map((e, t) =>
@@ -75,7 +75,7 @@ function g(e) {
                                 coverRef: o(e.applicationId),
                                 onRemoveGame: c,
                             },
-                            a,
+                            l,
                         ),
                     ),
                 },
@@ -87,7 +87,7 @@ function g(e) {
 function p(e) {
     var t, n;
     let { user: s, widgetType: d, disableInteraction: p, games: m } = e,
-        b = (0, i.e7)([a.default], () => a.default.getId() === s.id),
+        b = (0, i.e7)([l.default], () => l.default.getId() === s.id),
         { getManageButtonForWidget: h } = (0, u.j)(),
         y = h(d),
         { expanded: v, setExpanded: O } = (0, o.g)(),
@@ -121,7 +121,7 @@ function p(e) {
             ],
         });
     return b && !p
-        ? (0, r.jsx)(l.d, {
+        ? (0, r.jsx)(a.d, {
               emptyListFallbackRef: y,
               children: _,
           })

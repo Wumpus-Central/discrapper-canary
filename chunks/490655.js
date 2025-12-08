@@ -16,14 +16,14 @@ var i = n(54381),
     h = n(585483),
     x = n(63063),
     j = n(919196),
-    O = n(731072),
-    v = n(494118),
+    v = n(731072),
+    O = n(494118),
     y = n(37607),
     _ = n(351644),
     C = n(720764),
     N = n(981631),
     S = n(388032),
-    P = n(134850);
+    I = n(134850);
 function w(e, t) {
     switch (e) {
         case N.b4C.APPLICATION:
@@ -51,7 +51,7 @@ let E = r.memo(function (e) {
             sectionId: n,
             guild: l,
             channel: E,
-            integrations: I,
+            integrations: P,
             editedIntegration: T,
             webhooks: Z,
             editedWebhook: k,
@@ -90,9 +90,9 @@ let E = r.memo(function (e) {
                     : (K(d.$x), !0),
             [L, F],
         ),
-        q = r.useCallback((e) => !!z() && (c.Z.setSection(e), !0), [z]),
+        V = r.useCallback((e) => !!z() && (c.Z.setSection(e), !0), [z]),
         {
-            applicationIntegrations: V,
+            applicationIntegrations: q,
             applicationBotIds: Y,
             builtInIntegrations: J,
             customWebhooks: Q,
@@ -103,8 +103,8 @@ let E = r.memo(function (e) {
                 n = {},
                 i = [],
                 r = [];
-            if (null != I)
-                for (let i of I)
+            if (null != P)
+                for (let i of P)
                     if ("discord" === i.type) {
                         if (null != i.application) {
                             var l;
@@ -131,7 +131,7 @@ let E = r.memo(function (e) {
                 customWebhooks: i,
                 followedChannelWebhooks: r,
             };
-        }, [I, B, W, Z]);
+        }, [P, B, W, Z]);
     r.useEffect(() => {
         if (!A)
             switch (t) {
@@ -142,9 +142,9 @@ let E = r.memo(function (e) {
                     null == J[N.ABu.YOUTUBE] && c.Z.setSection(N.b4C.OVERVIEW);
                     break;
                 case N.b4C.APPLICATION:
-                    (null != G && (G in Y || G in V)) || c.Z.setSection(N.b4C.OVERVIEW);
+                    (null != G && (G in Y || G in q)) || c.Z.setSection(N.b4C.OVERVIEW);
             }
-    }, [V, Y, J, G, t, A]),
+    }, [q, Y, J, G, t, A]),
         r.useEffect(() => {
             (null == l ? void 0 : l.id) != null &&
                 b.Z.getEntitlementsForGuildFetchState(l.id) === b.M.NOT_FETCHED &&
@@ -160,7 +160,7 @@ let E = r.memo(function (e) {
     switch (t) {
         case N.b4C.TWITCH:
             null != J[N.ABu.TWITCH] &&
-                ($ = (0, i.jsx)(O.Z, {
+                ($ = (0, i.jsx)(v.Z, {
                     guild: l,
                     integrations: J[N.ABu.TWITCH],
                     editedIntegration: T,
@@ -181,7 +181,7 @@ let E = r.memo(function (e) {
             break;
         case N.b4C.YOUTUBE:
             null != J[N.ABu.YOUTUBE] &&
-                ($ = (0, i.jsx)(O.Z, {
+                ($ = (0, i.jsx)(v.Z, {
                     guild: l,
                     integrations: J[N.ABu.YOUTUBE],
                     editedIntegration: T,
@@ -198,7 +198,7 @@ let E = r.memo(function (e) {
             break;
         case N.b4C.APPLICATION:
             var ee;
-            let et = null != G ? (null != (ee = V[Y[G]]) ? ee : V[G]) : null;
+            let et = null != G ? (null != (ee = q[Y[G]]) ? ee : q[G]) : null;
             null != et &&
                 ($ = (0, i.jsx)(j.Z, {
                     guild: l,
@@ -210,7 +210,7 @@ let E = r.memo(function (e) {
                 }));
             break;
         case N.b4C.CHANNEL_FOLLOWING:
-            $ = (0, i.jsx)(v.Z, {
+            $ = (0, i.jsx)(O.Z, {
                 followedChannelWebhooks: X,
                 editedWebhook: k,
                 selectableWebhookChannels: B,
@@ -261,7 +261,7 @@ let E = r.memo(function (e) {
             $ = (0, i.jsx)(_.Z, {
                 guild: l,
                 channel: E,
-                applicationIntegrations: V,
+                applicationIntegrations: q,
                 builtInIntegrations: J,
                 customWebhooks: Q,
                 followedChannelWebhooks: X,
@@ -294,7 +294,7 @@ let E = r.memo(function (e) {
         children: [
             (0, i.jsx)(p.Z, {
                 align: p.Z.Align.CENTER,
-                className: P.breadcrumbs,
+                className: I.breadcrumbs,
                 children:
                     t === N.b4C.OVERVIEW
                         ? (0, i.jsx)(s.Heading, {
@@ -305,15 +305,15 @@ let E = r.memo(function (e) {
                               activeId: t.toString(),
                               breadcrumbs: [N.b4C.OVERVIEW, t].map((e) => ({
                                   id: e.toString(),
-                                  label: w(e, V[G]),
+                                  label: w(e, q[G]),
                               })),
                               onBreadcrumbClick: (e) => {
-                                  t !== parseInt(e.id) && q(parseInt(e.id));
+                                  t !== parseInt(e.id) && V(parseInt(e.id));
                               },
                               renderCustomBreadcrumb: (e, t) =>
                                   (0, i.jsx)(s.Heading, {
                                       variant: "heading-lg/semibold",
-                                      className: t ? P.breadcrumbActive : P.breadcrumbInactive,
+                                      className: t ? I.breadcrumbActive : I.breadcrumbInactive,
                                       children: e.label,
                                   }),
                           }),

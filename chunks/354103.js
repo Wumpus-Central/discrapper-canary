@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(497321),
     o = n(158638),
     c = n(246946),
-    u = n(63063),
-    d = n(436879),
+    d = n(63063),
+    u = n(436879),
     g = n(736617),
     m = n(566084),
     p = n(295051),
@@ -20,7 +20,7 @@ function j(e) {
         n = i.useRef(null),
         j = (0, o.g1)(t.id, "GuildSettingsBoostPerks"),
         _ = (0, l.e7)([c.Z], () => c.Z.hideInstantInvites);
-    (0, d.Z)(n, h.KsC.BOOST_PERKS_VANITY_URL);
+    (0, u.Z)(n, h.KsC.BOOST_PERKS_VANITY_URL);
     let {
             vanityURLCode: v,
             vanityURLUses: O,
@@ -57,10 +57,10 @@ function j(e) {
                         className: x.description,
                         children: j
                             ? b.intl.format(b.t["J/v84B"], {
-                                  helpCenterArticle: u.Z.getArticleURL(h.BhN.GUILD_VANITY_URL),
+                                  helpCenterArticle: d.Z.getArticleURL(h.BhN.GUILD_VANITY_URL),
                               })
                             : b.intl.format(b.t.koklFG, {
-                                  helpCenterArticle: u.Z.getArticleURL(h.BhN.GUILD_VANITY_URL),
+                                  helpCenterArticle: d.Z.getArticleURL(h.BhN.GUILD_VANITY_URL),
                               }),
                     }),
                     (0, r.jsx)(f.z, {

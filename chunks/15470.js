@@ -6,9 +6,9 @@ n.d(t, {
     n(388685),
     n(953529);
 var r = n(54381),
-    a = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    i = n(473749),
+    a = n(120356),
+    l = n.n(a),
     s = n(159635),
     o = n.n(s),
     c = n(755721),
@@ -30,7 +30,7 @@ function g(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,14 +65,14 @@ function f(e, t) {
     );
 }
 let b = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
-    x = f(_({}, u.Z.rules), {
-        heading: f(_({}, u.Z.rules.heading), {
+    x = _(f({}, u.Z.rules), {
+        heading: _(f({}, u.Z.rules.heading), {
             react(e, t, n) {
-                let a = "h".concat(Math.min(Math.max(2, e.level + 1), 4));
+                let i = "h".concat(Math.min(Math.max(2, e.level + 1), 4));
                 return (0, r.jsx)(
                     d.Z,
                     {
-                        tag: a,
+                        tag: i,
                         children: t(e.content, n),
                     },
                     n.key,
@@ -112,7 +112,7 @@ let b = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
     }),
     v = o().parserFor(x),
     C = o().reactFor(o().ruleOutput(x, "react"));
-class j extends a.PureComponent {
+class j extends i.PureComponent {
     componentDidMount() {
         if (null != this._container) {
             let { height: e } = this._container.getBoundingClientRect();
@@ -120,10 +120,10 @@ class j extends a.PureComponent {
         }
     }
     render() {
-        let { applicationId: e, description: t, blurb: n, className: a, assets: i } = this.props,
+        let { applicationId: e, description: t, blurb: n, className: i, assets: a } = this.props,
             { collapsed: s, collapsable: o } = this.state;
         return (0, r.jsxs)("div", {
-            className: a,
+            className: i,
             children: [
                 (0, r.jsx)("div", {
                     className: l()({ [h.collapsed]: o && s }),
@@ -139,7 +139,7 @@ class j extends a.PureComponent {
                                 parser: v,
                                 output: C,
                                 state: {
-                                    assets: i,
+                                    assets: a,
                                     applicationId: e,
                                 },
                                 children: t,

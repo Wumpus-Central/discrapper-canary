@@ -5,24 +5,24 @@ var r = n(54381),
     a = n(763610);
 let i = function (e) {
     var t, n;
-    let { assetKey: i, filters: l, initialValue: c, onFileChange: d, title: u } = e,
+    let { assetKey: i, filters: l, initialValue: c, onFileChange: u, title: d } = e,
         [p, m] = s.useState(null),
-        g = s.useRef(null);
+        f = s.useRef(null);
     return (
         s.useEffect(
             () => () => {
-                null != g.current && URL.revokeObjectURL(g.current);
+                null != f.current && URL.revokeObjectURL(f.current);
             },
             [],
         ),
         (0, r.jsx)(o.gNt, {
-            label: u,
+            label: d,
             description: "Supported asset formats: ".concat(l.join(", ")),
             children: (0, r.jsx)(a.Z, {
                 filename: null != (n = null != (t = null == p ? void 0 : p.name) ? t : c) ? n : "",
                 filters: [
                     {
-                        name: u,
+                        name: d,
                         extensions: l,
                     },
                 ],
@@ -31,11 +31,11 @@ let i = function (e) {
                 onFileSelect: function (e) {
                     if ((m(null != e ? e : null), null == e)) return;
                     let t = URL.createObjectURL(e);
-                    g.current = t;
+                    f.current = t;
                     let n = new URL(t);
                     n.searchParams.append("mimetype", e.type),
                         n.searchParams.append("name", e.name),
-                        d(i, n.toString());
+                        u(i, n.toString());
                 },
             }),
         })

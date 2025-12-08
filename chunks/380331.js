@@ -220,7 +220,7 @@ let z = (e) => {
             nonUnicodeCategoryCount: U,
             firstUnicodeCategoryIndex: z,
             firstUnicodeCategoryOffsetTop: q,
-            rowCountBySection: X,
+            rowCountBySection: Q,
         } = i.useMemo(() => {
             let e = 0,
                 t = 0,
@@ -241,7 +241,7 @@ let z = (e) => {
                 rowCountBySection: [e, n, r],
             };
         }, [A]),
-        [Q, J] = i.useState(!0);
+        [X, J] = i.useState(!0);
     i.useLayoutEffect(() => {
         J(U >= W);
     }, [U]);
@@ -264,7 +264,7 @@ let z = (e) => {
             (e, t) => {
                 let n = A[e];
                 if (null == n) return 0;
-                let r = Q ? G : 0;
+                let r = X ? G : 0;
                 if (n.type === T.En.RECENT) return t ? 0 : k;
                 if (n.type === T.En.GUILD) {
                     let n = A[e + 1];
@@ -272,7 +272,7 @@ let z = (e) => {
                 }
                 return t ? j + r : 2 * j;
             },
-            [A, Q],
+            [A, X],
         ),
         en = i.useMemo(
             () =>
@@ -281,7 +281,7 @@ let z = (e) => {
                 },
             [],
         ),
-        er = Q ? "shortcut" : "hiddenshortcut";
+        er = X ? "shortcut" : "hiddenshortcut";
     return (0, r.jsx)(h.Z, {
         categoryListRef: C,
         expressionsListRef: n,
@@ -295,16 +295,16 @@ let z = (e) => {
         rowCount: A.length,
         categoryHeight: L,
         getScrollOffsetForIndex: et,
-        rowCountBySection: X,
+        rowCountBySection: Q,
         children: (e) =>
             U >= W &&
             (0, r.jsx)(
                 f.P3F,
                 {
-                    "aria-hidden": !Q,
+                    "aria-hidden": !X,
                     "aria-label": N.intl.string(N.t.dT0ctw),
-                    className: o()(P.unicodeShortcut, { [P.unicodeShortcutInvisible]: !Q }),
-                    tabIndex: Q ? 0 : -1,
+                    className: o()(P.unicodeShortcut, { [P.unicodeShortcutInvisible]: !X }),
+                    tabIndex: X ? 0 : -1,
                     onClick: () => ee(e),
                     children: (0, r.jsx)(f.EO4, {
                         size: "custom",

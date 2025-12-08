@@ -6,8 +6,8 @@ var r = n(54381),
     o = n(481060),
     i = n(487894),
     c = n(300234),
-    d = n(388032),
-    u = n(836227);
+    u = n(388032),
+    d = n(836227);
 function h(e) {
     let { channel: t, threadIds: n, startThread: a, goToThread: h } = e,
         g = l.useCallback(
@@ -25,11 +25,11 @@ function h(e) {
     return 0 === n.length
         ? (0, r.jsx)(i.Z, {
               channel: t,
-              header: d.intl.string(d.t.HgTQ8p),
+              header: u.intl.string(u.t.HgTQ8p),
               startThread: a,
           })
         : (0, r.jsx)(o.aVo, {
-              className: s()(u.list, u.activeThreadsList),
+              className: s()(d.list, d.activeThreadsList),
               fade: !0,
               sections: [n.length],
               sectionHeight: 0,

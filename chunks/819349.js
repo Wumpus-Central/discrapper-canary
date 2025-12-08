@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(906732),
     g = n(213609),
     b = n(341165),
-    y = n(496675),
-    C = n(626135),
+    C = n(496675),
+    y = n(626135),
     v = n(415397),
     _ = n(771027),
     O = n(981631),
@@ -65,18 +65,18 @@ function I(e) {
             location_stack: M,
         },
     });
-    let R = (0, c.e7)([y.Z], () => y.Z.can(O.Plq.CREATE_INSTANT_INVITE, t), [t]),
+    let R = (0, c.e7)([C.Z], () => C.Z.can(O.Plq.CREATE_INSTANT_INVITE, t), [t]),
         [L, D] = r.useState(null),
         [k, U] = r.useState(!1),
-        [V, F] = r.useState("unknown"),
-        B = r.useRef(null),
-        { isHoveringOrFocusing: H } = (0, _.Tu)(null == L ? B : l),
+        [V, H] = r.useState("unknown"),
+        F = r.useRef(null),
+        { isHoveringOrFocusing: B } = (0, _.Tu)(null == L ? F : l),
         [G, z] = r.useState(!1),
-        W = H || G,
+        W = B || G,
         q = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-                C.default.track(O.rMx.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
+                y.default.track(O.rMx.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
                     reason: e,
                     channel_id: t.id,
                     guild_id: t.guild_id,
@@ -102,7 +102,7 @@ function I(e) {
         }),
         Y = r.useCallback(function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-            U(!0), F(e);
+            U(!0), H(e);
         }, []),
         X = r.useCallback(
             () => (
@@ -239,7 +239,7 @@ function I(e) {
                                                   children: x.intl.string(x.t["EE+P0H"]),
                                               }),
                                           }),
-                                          H
+                                          B
                                               ? (0, i.jsx)(d.P3F, {
                                                     className: E.close,
                                                     onClick: () => Y("user_explicit"),

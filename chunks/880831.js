@@ -18,8 +18,8 @@ var i = n(54381),
     m = n(937889),
     g = n(739566),
     b = n(267128),
-    y = n(378233),
-    C = n(419922),
+    C = n(378233),
+    y = n(419922),
     v = n(375954),
     _ = n(699516),
     O = n(768581),
@@ -66,12 +66,12 @@ function Z(e) {
             leadingIconClass: P.messageContentLeadingIcon,
             iconSize: S.WW,
         }),
-        A = (0, y.cv)(n),
+        A = (0, C.cv)(n),
         w =
             A.length > 0
                 ? A.map((e) =>
                       (0, i.jsx)(
-                          C.Z,
+                          y.Z,
                           {
                               className: P.sticker,
                               size: 128,
@@ -174,12 +174,12 @@ function T(e) {
         }),
         m = r.useRef({}),
         [g, b] = r.useState({}),
-        y = r.useCallback((e, t) => {
+        C = r.useCallback((e, t) => {
             null == t ? delete m.current[e] : (m.current[e] = t);
         }, []),
-        C = r.useRef(g);
+        y = r.useRef(g);
     r.useLayoutEffect(() => {
-        C.current = g;
+        y.current = g;
     }),
         r.useLayoutEffect(() => {
             let e = {},
@@ -189,7 +189,7 @@ function T(e) {
                 let r = null != (n = m.current[i.id]) ? n : 0;
                 (e[i.id] = t), (t += r + 8);
             }
-            (0, o.isEqual)(e, C.current) || b(e);
+            (0, o.isEqual)(e, y.current) || b(e);
         }, [f]);
     let _ = f.map((e) => ({
             message: e,
@@ -232,7 +232,7 @@ function T(e) {
                 },
                 children: O((e, t) =>
                     (0, i.jsx)(s.animated.div, {
-                        ref: (e) => y(t.message.id, null != e ? e.offsetHeight : null),
+                        ref: (e) => C(t.message.id, null != e ? e.offsetHeight : null),
                         className: P.toastWrapper,
                         style: e,
                         children: (0, i.jsx)(Z, { message: t.message }),

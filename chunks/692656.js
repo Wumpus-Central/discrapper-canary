@@ -46,8 +46,8 @@ var r = n(54381),
     K = n(981631),
     z = n(689079),
     q = n(388032),
-    X = n(729755);
-let Q = [],
+    Q = n(729755);
+let X = [],
     J = 4,
     $ = 4,
     ee = 6,
@@ -95,7 +95,7 @@ function ea(e) {
         }, [n]);
     let P = a.length > 0;
     return (0, r.jsxs)("div", {
-        className: X.container,
+        className: Q.container,
         children: [
             N ? (0, r.jsx)(eo, {}) : null,
             (0, r.jsx)(es, {
@@ -105,7 +105,7 @@ function ea(e) {
             }),
             (0, r.jsx)(m.Ttm, {
                 ref: s,
-                className: X.scrollableContent,
+                className: Q.scrollableContent,
                 fade: !0,
                 children: P
                     ? (0, r.jsx)(Y.Z, {
@@ -153,10 +153,10 @@ function ea(e) {
 }
 function eo() {
     return (0, r.jsxs)("div", {
-        className: X.developerShelfControlsContainer,
+        className: Q.developerShelfControlsContainer,
         children: [
             (0, r.jsx)(m.Text, {
-                className: X.developerShelfControlsLabel,
+                className: Q.developerShelfControlsLabel,
                 variant: "text-sm/normal",
                 children: q.intl.string(q.t.tZ3FNs),
             }),
@@ -218,7 +218,7 @@ function es(e) {
             );
         }, [l, f]),
         (0, r.jsx)("div", {
-            className: X.searchBarContainer,
+            className: Q.searchBarContainer,
             children: (0, r.jsx)(m.E1j, {
                 ref: s,
                 placeholder: a,
@@ -297,9 +297,9 @@ function ec(e) {
                       onClickViewButton: p,
                   }),
                   (0, r.jsx)("div", {
-                      className: X.sectionContentContainer,
+                      className: Q.sectionContentContainer,
                       children: (0, r.jsx)("div", {
-                          className: X.frecentList,
+                          className: Q.frecentList,
                           children: f.map((e, n) => {
                               let { application: i } = e;
                               return o
@@ -362,7 +362,7 @@ function eu(e) {
                       children: (0, r.jsx)(V.Z, { title: q.intl.string(q.t.shUONg) }),
                   }),
                   (0, r.jsx)("div", {
-                      className: X.sectionTwoColumnContentContainer,
+                      className: Q.sectionTwoColumnContentContainer,
                       children: o.map((e, t) => {
                           let { application: i } = e;
                           return (0, r.jsx)(
@@ -420,7 +420,7 @@ function ed(e) {
                       }),
                   }),
                   (0, r.jsx)("div", {
-                      className: X.sectionRowsContentContainer,
+                      className: Q.sectionRowsContentContainer,
                       children: s
                           ? en.map((e) => (0, r.jsx)(Z.Z, { look: G.U4.ROW }, e))
                           : l.map((e, n) => {
@@ -475,7 +475,7 @@ function ef(e) {
                             (0, r.jsx)(V.Z.Loading, {}),
                             (0, r.jsx)("div", {
                                 className:
-                                    i === G.U4.ROW ? X.sectionRowsContentContainer : X.sectionTwoColumnContentContainer,
+                                    i === G.U4.ROW ? Q.sectionRowsContentContainer : Q.sectionTwoColumnContentContainer,
                                 children: n.map((e) => (0, r.jsx)(Z.Z, { look: i }, e)),
                             }),
                         ],
@@ -579,7 +579,7 @@ function ep(e) {
                 }),
             }),
             (0, r.jsx)("div", {
-                className: t === G.U4.ROW ? X.sectionRowsContentContainer : X.sectionTwoColumnContentContainer,
+                className: t === G.U4.ROW ? Q.sectionRowsContentContainer : Q.sectionTwoColumnContentContainer,
                 children: E.map((e, n) => {
                     let i,
                         {
@@ -680,7 +680,7 @@ function eg(e) {
     (0, y.g)();
     let a = (0, b.Z)({ guildId: "channel" === n.type ? (null == (t = n.channel) ? void 0 : t.getGuildId()) : void 0 });
     return i.useMemo(() => {
-        if (!r.some((e) => (0, p.yE)(e.flags, l.b.APPENDS_REMAINING_ACTIVITIES))) return Q;
+        if (!r.some((e) => (0, p.yE)(e.flags, l.b.APPENDS_REMAINING_ACTIVITIES))) return X;
         let e = new Set();
         return (
             r.forEach((t) => {

@@ -244,11 +244,11 @@ function q(e) {
     let { linkCode: t } = e;
     O = t;
 }
-function X(e) {
+function Q(e) {
     let { tab: t } = e;
     v = t;
 }
-function Q(e) {
+function X(e) {
     let { user: t } = e;
     if (void 0 === t.linked_users) return !1;
     let n = a.default.getUsers();
@@ -393,7 +393,7 @@ class ei extends i.Z {
     constructor() {
         super({
             CONNECTION_OPEN: J,
-            CURRENT_USER_UPDATE: Q,
+            CURRENT_USER_UPDATE: X,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             FAMILY_CENTER_INITIAL_LOAD: F,
             FAMILY_CENTER_FETCH_START: B,
@@ -404,7 +404,7 @@ class ei extends i.Z {
             FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: K,
             FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: z,
             FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: q,
-            FAMILY_CENTER_HANDLE_TAB_SELECT: X,
+            FAMILY_CENTER_HANDLE_TAB_SELECT: Q,
             SET_LOCATION_METADATA: $,
             LOGOUT: er,
         });

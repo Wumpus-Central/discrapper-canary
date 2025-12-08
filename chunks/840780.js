@@ -32,8 +32,8 @@ var r = n(54381),
     A = n(933557),
     R = n(194082),
     D = n(550532),
-    L = n(436774),
-    M = n(243778),
+    M = n(436774),
+    L = n(243778),
     k = n(48131),
     G = n(591472),
     U = n(594190),
@@ -171,7 +171,7 @@ class eZ extends i.PureComponent {
                       ? O.push(d.z.ACCOUNT_LINK_INVITE_FRIENDS)
                       : O.push(d.z.POST_ACCOUNT_CONNECTION_RTC_POPOVER)
                   : p && null != i && O.push(d.z.ACCOUNT_LINK_PROMPT),
-              (0, r.jsx)(M.ZP, {
+              (0, r.jsx)(L.ZP, {
                   contentTypes: O,
                   groupName: ev.R.ACCOUNT_NAME_ZONE,
                   bypassAutoDismiss: !0,
@@ -305,7 +305,7 @@ class eZ extends i.PureComponent {
                                 children: [
                                     (0, r.jsx)(p.SrA, {
                                         size: "xxs",
-                                        color: L.JX.PREMIUM_TIER_2,
+                                        color: M.JX.PREMIUM_TIER_2,
                                     }),
                                     (0, r.jsx)(Q.Z, {
                                         className: eE.perksDemoText,
@@ -546,8 +546,8 @@ let ew = (0, O.Z)(function (e) {
         w = (0, S.Z)() && null != I && (0, x.R)(),
         T = (0, u.e7)([ei.Z], () => (0, V.Z)(ei.Z) && (0, eh.isWindows)()),
         R = (0, u.e7)([eo.Z], () => (null != o ? eo.Z.findActivity(o, (e) => e.type === ey.IIU.PLAYING) : null)),
-        L = null != p && p.ownerId === o && p.state !== ey.jm8.ENDED,
-        M = (0, u.e7)([ec.default, ea.Z], () => (null != f ? (0, A.F6)(f, ec.default, ea.Z) : void 0)),
+        M = null != p && p.ownerId === o && p.state !== ey.jm8.ENDED,
+        L = (0, u.e7)([ec.default, ea.Z], () => (null != f ? (0, A.F6)(f, ec.default, ea.Z) : void 0)),
         k = (0, q.Z)(),
         [B, H] = i.useState(!1),
         W = (0, u.e7)([Y.Z], () => Y.Z.getWindowOpen(ey.KJ3.ACTIVITY_POPOUT)),
@@ -588,12 +588,12 @@ let ew = (0, O.Z)(function (e) {
             runningGame: null != C ? C : a,
             application: O,
             useReducedMotion: m,
-            isStreaming: L,
+            isStreaming: M,
             channel: f,
             canStream: y,
             stream: p,
             streamMetadata: g,
-            channelName: M,
+            channelName: L,
             guildForConnectedChannel: h,
             streamQualityIndicator: k,
             isForceShowSharingPopout: B,

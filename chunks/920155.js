@@ -142,9 +142,9 @@ function w(e) {
         [H, Y] = i.useState(b),
         W = i.useRef(b),
         K = i.useRef(0),
-        { ref: z, width: q, height: X } = (0, d.ZP)(),
-        Q = (0, c.e7)([f.Z], () => f.Z.getLayers()),
-        J = null != (t = Q[Q.length - 1]) ? t : "base",
+        { ref: z, width: q, height: Q } = (0, d.ZP)(),
+        X = (0, c.e7)([f.Z], () => f.Z.getLayers()),
+        J = null != (t = X[X.length - 1]) ? t : "base",
         $ = i.useRef(M);
     i.useEffect(() => {
         $.current = M;
@@ -188,8 +188,8 @@ function w(e) {
         }, [w, v, H]),
         ea = i.useMemo(() => {
             var e;
-            if ("edge" !== w) return R(null != (e = null == D ? void 0 : D.align) ? e : "center", H, q, X);
-        }, [w, D, H, q, X]),
+            if ("edge" !== w) return R(null != (e = null == D ? void 0 : D.align) ? e : "center", H, q, Q);
+        }, [w, D, H, q, Q]),
         eo = i.useMemo(
             () => ({
                 position: H,

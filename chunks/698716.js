@@ -180,9 +180,9 @@ function k(e) {
         },
         z = (e) => (0, o.showToast)((0, o.createToast)(new l.Z(e, e.status).message, o.ToastType.FAILURE)),
         q = () => (0, p.CS)(e.quest.id, !0).catch(z),
-        X = () => (0, p.is)(e.quest.id).catch(z),
-        Q = () => {
-            G(), X();
+        Q = () => (0, p.is)(e.quest.id).catch(z),
+        X = () => {
+            G(), Q();
         },
         J = (0, b.m4)(e.quest),
         $ = i.useMemo(
@@ -270,7 +270,7 @@ function k(e) {
                             (0, r.jsx)(o.sNh, {
                                 id: "enrollment",
                                 label: R.intl.string(R.t.taqkwK),
-                                action: Q,
+                                action: X,
                             }),
                             (0, r.jsx)(o.sNh, {
                                 id: "progress",
@@ -300,7 +300,7 @@ function k(e) {
                                         (0, r.jsx)(o.sNh, {
                                             id: "stop",
                                             label: "Stop heartbeat",
-                                            action: X,
+                                            action: Q,
                                         }),
                                     ],
                                 }),

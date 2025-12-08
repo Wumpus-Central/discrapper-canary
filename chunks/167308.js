@@ -7,32 +7,32 @@ var s = n(481060),
     i = n(644646),
     l = n(444134),
     c = n(836831),
-    d = n(324805),
-    u = n(835343);
+    u = n(324805),
+    d = n(835343);
 let p = (e) => {
     let {
             contentLocation: t,
             quest: n,
             progressBarRef: p,
             isExpanded: m,
-            percentComplete: g,
-            activeScreen: f,
-            popoutTargetElementRef: h,
-            onGameSheetOpened: x,
+            percentComplete: f,
+            activeScreen: g,
+            popoutTargetElementRef: x,
+            onGameSheetOpened: h,
             onGameSheetClosed: _,
         } = e,
         b = (0, a.eQ)(n),
         j = (0, a.vf)({
             quest: n,
             isExpanded: m,
-            activeScreen: f,
+            activeScreen: g,
             sourceQuestContent: o.jn.QUEST_BAR_V2,
-            popoutTargetElementRef: h,
-            onGameSheetOpened: x,
+            popoutTargetElementRef: x,
+            onGameSheetOpened: h,
             onGameSheetClosed: _,
         });
     return (0, r.jsxs)("div", {
-        className: u.questProgressWrapper,
+        className: d.questProgressWrapper,
         children: [
             (0, r.jsx)(l.JC, {
                 inState: t,
@@ -42,21 +42,21 @@ let p = (e) => {
                     (0, r.jsx)(c.Z, {
                         ref: e,
                         quest: n,
-                        percentComplete: g,
+                        percentComplete: f,
                         size: 42,
                         strokeWidth: 3,
                         children: (0, r.jsx)(i.Z, {
-                            className: u.questProgressRewardTile,
+                            className: d.questProgressRewardTile,
                             quest: n,
                             questContent: o.jn.QUEST_BAR_V2,
                             autoplay: !1,
-                            location: d.dr.QUESTS_BAR,
+                            location: u.dr.QUESTS_BAR,
                             sourceQuestContent: o.jn.QUEST_BAR_V2,
                         }),
                     }),
             }),
             (0, r.jsxs)("div", {
-                className: u.questProgressCopy,
+                className: d.questProgressCopy,
                 children: [
                     (0, r.jsx)(l.JC, {
                         inState: t,
@@ -64,7 +64,7 @@ let p = (e) => {
                         children: (e) =>
                             (0, r.jsx)(s.Text, {
                                 ref: e,
-                                className: u.questProgressHint,
+                                className: d.questProgressHint,
                                 color: "header-primary",
                                 variant: "text-sm/semibold",
                                 children: b,
@@ -77,7 +77,7 @@ let p = (e) => {
                         children: (e) =>
                             (0, r.jsx)(s.Text, {
                                 ref: e,
-                                className: u.questProgressHint,
+                                className: d.questProgressHint,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
                                 children: j,

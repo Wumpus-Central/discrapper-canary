@@ -2,8 +2,8 @@ n.d(t, { Z: () => x });
 var a = n(54381);
 n(473749);
 var l = n(120356),
-    i = n.n(l),
-    r = n(442837),
+    r = n.n(l),
+    i = n(442837),
     s = n(481060),
     o = n(179658),
     c = n(168107),
@@ -13,12 +13,12 @@ var l = n(120356),
     p = n(334078),
     h = n(451429);
 function x() {
-    let { personaForceFaeFail: e, personaForceIdVerificationFail: t } = (0, r.cj)([m.default], () => ({
+    let { personaForceFaeFail: e, personaForceIdVerificationFail: t } = (0, i.cj)([m.default], () => ({
         personaForceFaeFail: m.default.personaForceFaeFail,
         personaForceIdVerificationFail: m.default.personaForceIdVerificationFail,
     }));
     return (0, a.jsxs)("div", {
-        className: i()(h.panel, p.container),
+        className: r()(h.panel, p.container),
         children: [
             (0, a.jsxs)("div", {
                 children: [

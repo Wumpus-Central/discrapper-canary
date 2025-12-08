@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     content: "content__2ff9f",
     infoBox: "infoBox__2ff9f",
     stepsContainer: "stepsContainer__2ff9f",

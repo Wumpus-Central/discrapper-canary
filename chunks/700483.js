@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(258609),
     y = n(74299),
     O = n(924301),
-    j = n(459502),
-    x = n(856691),
+    x = n(459502),
+    j = n(856691),
     v = n(728285),
     C = n(357156),
     I = n(923973),
@@ -121,8 +121,8 @@ function ed(e) {
         g = M.default.getId(),
         [_] = (0, er.Z)(t),
         y = W.ZP.isModerator(g, t.id),
-        j = (0, V.B)(t.id),
-        x = c(h),
+        x = (0, V.B)(t.id),
+        j = c(h),
         { parentAnalyticsLocation: I } = (0, u.ZP)(),
         S = i.useRef(null),
         E = () =>
@@ -134,7 +134,7 @@ function ed(e) {
                 channel: t,
                 appContext: o,
             });
-    return (y || x) && null != p
+    return (y || j) && null != p
         ? (0, r.jsx)(a.yRy, {
               targetElementRef: S,
               renderPopout: (e) => {
@@ -172,7 +172,7 @@ function ed(e) {
                   });
               },
           })
-        : (f && !j) || _
+        : (f && !x) || _
           ? (0, r.jsx)(A.Z, {
                 label: el.intl.string(el.t.SMKyih),
                 onClick: E,
@@ -229,7 +229,7 @@ let eh = i.memo(function (e) {
         d = (0, V.B)(t.id),
         m = (0, ee.Z)(t.id),
         O = (0, l.e7)([_.default], () => null != _.default.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: j, enabled: x } = (0, I.Z)(),
+        { cameraUnavailable: x, enabled: j } = (0, I.Z)(),
         v = (0, E.Z)(t),
         { limit: C, reachedLimit: w } = (0, S.Z)(t),
         A = (0, l.e7)([H.default], () => H.default.getCurrentUser()),
@@ -266,8 +266,8 @@ let eh = i.memo(function (e) {
                 ref: K,
                 centerButton: !0,
                 hasPermission: v,
-                enabled: x,
-                cameraUnavailable: j,
+                enabled: j,
+                cameraUnavailable: x,
                 onChange: P.r,
                 onCameraUnavailable: N.Z,
                 channelLimitReached: w,
@@ -381,10 +381,10 @@ let eg = i.memo(function (e) {
                     (0, r.jsxs)("div", {
                         className: ea.eventPrompts,
                         children: [
-                            u ? (0, r.jsx)(j.Z, { channelId: null == t ? void 0 : t.id }) : null,
+                            u ? (0, r.jsx)(x.Z, { channelId: null == t ? void 0 : t.id }) : null,
                             (0, r.jsx)("div", { className: ea.separator }),
                             u && s && !o
-                                ? (0, r.jsx)(x.Z, {
+                                ? (0, r.jsx)(j.Z, {
                                       highlight: !0,
                                       channel: t,
                                   })

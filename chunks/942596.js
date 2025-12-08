@@ -107,7 +107,7 @@ let q = {
         VoiceChannel: [108, 60],
         ActivityFeed: [900, 500],
     },
-    X = (0, _.Z)(
+    Q = (0, _.Z)(
         class extends a.PureComponent {
             render() {
                 return (0, i.jsx)("div", {
@@ -117,7 +117,7 @@ let q = {
             }
         },
     );
-function Q(e) {
+function X(e) {
     let { activity: t } = e,
         n = null;
     return (
@@ -129,7 +129,7 @@ function Q(e) {
 function J(e) {
     let { activity: t } = e,
         n = (0, m.ZP)(),
-        r = Q({ activity: t });
+        r = X({ activity: t });
     if (null == r) return null;
     let a = h.Z.get(r);
     return (0, i.jsx)("img", {
@@ -491,7 +491,7 @@ class $ extends (r = a.PureComponent) {
         return null == n
             ? null
             : (0, x.Z)(e)
-              ? (0, i.jsx)(X, { timestamps: n })
+              ? (0, i.jsx)(Q, { timestamps: n })
               : (0, i.jsx)(T.ZP, {
                     start: n.start,
                     location: T.ZP.Locations.USER_ACTIVITY,

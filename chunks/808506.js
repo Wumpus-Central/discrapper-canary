@@ -134,8 +134,8 @@ var W = (function (e) {
 let K = {},
     z = !1,
     q = new Map(),
-    X = () => Array.from(q.values()).some((e) => "READY" === e),
-    Q = !1,
+    Q = () => Array.from(q.values()).some((e) => "READY" === e),
+    X = !1,
     J = !1,
     $ = null,
     ee = new Set(),
@@ -166,7 +166,7 @@ class er {
                     (null != this.timeout && (clearTimeout(this.timeout), (this.timeout = null)),
                     null != this.requestIdleCallback &&
                         (cancelIdleCallback(this.requestIdleCallback), (this.requestIdleCallback = null)),
-                    !X())
+                    !Q())
                 )
                     return void this.actionsToFlush.clear();
                 this.actionsToFlush.size > 0 &&
@@ -186,7 +186,7 @@ class er {
                 this,
                 "queueDispatch",
                 (e) =>
-                    !(!X() || ea.has(e.type)) &&
+                    !(!Q() || ea.has(e.type)) &&
                     (this.isDispatching
                         ? this.waitingActionsToFlush.add(e)
                         : ("USER_SETTINGS_PROTO_UPDATE" === e.type &&
@@ -445,7 +445,7 @@ async function eE(e) {
                 let t = await eI();
                 (ep = "reconcile.createHostProcess"), e.createHostProcess(t, eC, eA);
             } else (ep = "reconcile.destroyHostProcess"), e.destroyHostProcess(), eS((0, U.getPID)());
-        else if (Q) {
+        else if (X) {
             let t = await eI();
             e.createHostProcess(t, eC, eA);
         } else e.destroyHostProcess(), eS((0, U.getPID)());
@@ -528,7 +528,7 @@ async function eO(e) {
         }
     }
     let i = !1;
-    if (null == e || !Q) {
+    if (null == e || !X) {
         for (let t of (el.verbose("updateIntendedOverlayPIDs: Removing all.", K, e), Object.keys(K)))
             await r(Number(t)), (i = !0);
         return;
@@ -594,11 +594,11 @@ function eI() {
 }
 let eT = em("setOverlayEnabled", async (e) => {
     if (!(0, U.supportsLegacy)()) return;
-    if (Q === e) return void el.verbose("setOverlayEnabled: no change", { newOverlayEnabled: e });
-    (Q = e), e0.emitChange();
+    if (X === e) return void el.verbose("setOverlayEnabled: no change", { newOverlayEnabled: e });
+    (X = e), e0.emitChange();
     let t = await (0, G.K)();
     if (null == t) return void el.error("setOverlayEnabled: overlay module failed loaded");
-    Q || (await eO(void 0)), q.size > 0 && (await eE(t));
+    X || (await eO(void 0)), q.size > 0 && (await eE(t));
 });
 function eA(e) {
     f.Z.setFocusedPID(0 === e ? null : e, null);
@@ -734,7 +734,7 @@ function ek(e) {
     let { port: t } = e;
     et = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append("build_id", "9d0a5e2aaebcfdb72b89cd0efbc7298ebeef16fb"),
+    n.append("build_id", "69b68414a4ffa72874248f93891a395700c9a12a"),
         n.append("rpc", String(t)),
         n.append("rpc_auth_token", et),
         (r = "".concat(location.protocol, "//").concat(location.host, "/overlay?").concat(n.toString()));
@@ -764,7 +764,7 @@ function eZ(e) {
         (0, O.V6)(i, S.gl.Hook);
 }
 function eB() {
-    (J = !0), (z = !1), eX();
+    (J = !0), (z = !1), eQ();
 }
 function eF() {
     (J = !1), f.Z.setFocusedPID(null, null), ev(void 0), el.verbose("OverlayBridgeStore: handleConnectionClosed");
@@ -832,10 +832,10 @@ function eq(e) {
                   removed: [e.pid],
               });
 }
-function eX() {
+function eQ() {
     E.Z.hasLoadedExperiments && !z && ((z = !0), eT(v.v.legacyEnabled));
 }
-function eQ() {
+function eX() {
     z = !1;
 }
 function eJ() {
@@ -846,7 +846,7 @@ class e$ extends (i = o.ZP.Store) {
         !(0, U.supportsLegacy)() ||
             __OVERLAY__ ||
             (this.waitFor(w.default, E.Z, D.Z, x.Z, T.default, N.Z, P.Z, C.Z, b.ZP),
-            this.syncWith([E.Z], eX),
+            this.syncWith([E.Z], eQ),
             h.sr(eR, eP),
             w.default.addChangeListener(eN),
             l.Z.addInterceptor(ei.queueDispatch));
@@ -869,7 +869,7 @@ class e$ extends (i = o.ZP.Store) {
     }
     get enabled() {
         let e = C.Z.getFocusedPID();
-        return null != e ? (C.Z.isOverlayV3EnabledForPID(e) ? P.Z.isOverlayEnabled : Q) : P.Z.isOverlayEnabled || Q;
+        return null != e ? (C.Z.isOverlayV3EnabledForPID(e) ? P.Z.isOverlayEnabled : X) : P.Z.isOverlayEnabled || X;
     }
     getAnyGlobalEnabledOverlay() {
         return T.default.getAnyGlobalEnabledOverlay();
@@ -901,7 +901,7 @@ let e0 = new e$(
         __OVERLAY__
             ? { OVERLAY_RELAY_CLICK_ZONE_CLICKED: eW }
             : {
-                  LOGIN: eQ,
+                  LOGIN: eX,
                   LOGOUT: eJ,
                   CONNECTION_OPEN: eB,
                   CONNECTION_CLOSED: eF,

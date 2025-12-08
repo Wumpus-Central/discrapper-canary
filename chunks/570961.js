@@ -11,8 +11,8 @@ n.d(t, {
     n(415506),
     n(388685);
 var l = n(544891),
-    r = n(570140),
-    i = n(668781),
+    i = n(570140),
+    r = n(668781),
     a = n(881052),
     s = n(339085),
     o = n(592125),
@@ -66,7 +66,7 @@ function N(e, t) {
     );
 }
 function I() {
-    r.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET" });
+    i.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET" });
 }
 function p(e, t, n) {
     E(
@@ -83,14 +83,14 @@ function O(e, t) {
 function E(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     if (
-        (r.Z.dispatch({
+        (i.Z.dispatch({
             type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT",
             prompts: t,
         }),
         n)
     ) {
         let n = t.map((n) => _(e, t, n));
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS",
             errors: n,
         });
@@ -129,7 +129,7 @@ async function S(e, t) {
         p = l.map((t) => (n.some((e) => e.id === t.id) ? _(e, l, t) : null));
     if (p.filter(d.lm).length > 0)
         throw (
-            (r.Z.dispatch({
+            (i.Z.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
                 errors: p,
             }),
@@ -137,21 +137,21 @@ async function S(e, t) {
         );
     if (m.length > g.b3)
         throw (
-            (i.Z.show({
+            (r.Z.show({
                 title: h.intl.string(h.t.iLdiqY),
                 body: h.intl.formatToPlainString(h.t["cTb/rg"], { numQuestions: g.b3 }),
             }),
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
                 errors: p,
             }),
             Error("too many prompts in onboarding"))
         );
     let O = [...m, ...I];
-    r.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT" });
+    i.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT" });
     try {
         await T(e.id, { prompts: O.map(g.dr) }),
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS",
                 guildId: e.id,
                 updates: { prompts: O },
@@ -160,17 +160,17 @@ async function S(e, t) {
         var E;
         let { fieldName: e, error: t } = null != (E = new a.Hx(n).getAnyErrorMessageAndField()) ? E : {};
         throw (
-            (i.Z.show({
+            (r.Z.show({
                 title: h.intl.string(h.t.iLdiqY),
                 body: [e, t].filter(d.lm).join(": "),
             }),
-            r.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED" }),
+            i.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED" }),
             Error("failed to save prompts"))
         );
     }
 }
 async function x(e, t) {
-    r.Z.dispatch({
+    i.Z.dispatch({
         type: "GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE",
         guildId: e,
         updates: { enabled: t },
@@ -180,7 +180,7 @@ async function x(e, t) {
     } catch (l) {
         var n;
         let { fieldName: e, error: t } = null != (n = new a.Hx(l).getAnyErrorMessageAndField()) ? n : {};
-        i.Z.show({
+        r.Z.show({
             title: h.intl.string(h.t.iLdiqY),
             body: [e, t].filter(d.lm).join(": "),
         });
@@ -195,28 +195,28 @@ async function T(e, t) {
 }
 function _(e, t, n) {
     let l = { optionErrors: [] },
-        r = !1;
+        i = !1;
     return (
-        n.title.length <= 0 && ((l.title = h.intl.string(h.t.h8Hg1T)), (r = !0)),
-        n.options.length <= 0 && ((l.options = h.intl.string(h.t["64tF+W"])), (r = !0)),
+        n.title.length <= 0 && ((l.title = h.intl.string(h.t.h8Hg1T)), (i = !0)),
+        n.options.length <= 0 && ((l.options = h.intl.string(h.t["64tF+W"])), (i = !0)),
         n.inOnboarding &&
             t.filter((e) => e.inOnboarding).length > g.b3 &&
-            ((l.config = h.intl.formatToPlainString(h.t["cTb/rg"], { numQuestions: g.b3 })), (r = !0)),
+            ((l.config = h.intl.formatToPlainString(h.t["cTb/rg"], { numQuestions: g.b3 })), (i = !0)),
         (l.optionErrors = n.options.map((l) => j(e, t, n, l))),
-        (r = r || l.optionErrors.some((e) => null != e)) ? l : null
+        (i = i || l.optionErrors.some((e) => null != e)) ? l : null
     );
 }
 function j(e, t, n, l) {
-    var r, i, a;
+    var i, r, a;
     if (n.singleSelect) {
-        let e = new Set(null != (r = l.roleIds) ? r : []);
+        let e = new Set(null != (i = l.roleIds) ? i : []);
         for (let l of t)
             if (l.id !== n.id) {
                 for (let t of l.options)
                     if (null != t.roleIds && t.roleIds.some((t) => e.has(t))) return h.intl.string(h.t.rKxyvd);
             }
     }
-    let s = (null != (i = l.roleIds) ? i : []).filter((t) => null != c.Z.getRole(e.id, t)),
+    let s = (null != (r = l.roleIds) ? r : []).filter((t) => null != c.Z.getRole(e.id, t)),
         d = (null != (a = l.channelIds) ? a : []).filter((e) => null != o.Z.getChannel(e));
     return 0 === s.length && 0 === d.length ? h.intl.string(h.t.F6SUWB) : null;
 }

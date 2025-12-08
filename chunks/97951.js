@@ -8,28 +8,28 @@ var i = n(54381),
     o = n(313789),
     c = n(823087),
     d = n(981631),
-    E = n(65154),
-    S = n(388032);
-let I = "".concat(
+    T = n(65154),
+    E = n(388032);
+let S = "".concat(
     a.Z.getArticleURL(d.BhN.VOICE_VIDEO_TROUBLESHOOTING),
     "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm",
 );
-function T() {
+function I() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.Z, {}),
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                children: S.intl.format(S.t["V+B3FH"], { guideURL: I }),
+                children: E.intl.format(E.t["V+B3FH"], { guideURL: S }),
             }),
         ],
     });
 }
 let g = (0, r.ON)(o.n.VOICE_MICROPHONE_TEST_SETTING, {
-    useSearchTerms: () => [S.intl.string(S.t.nuFtHH)],
+    useSearchTerms: () => [E.intl.string(E.t.nuFtHH)],
     usePredicate: function () {
-        return (0, l.e7)([u.Z], () => u.Z.supports(E.AN.LOOPBACK));
+        return (0, l.e7)([u.Z], () => u.Z.supports(T.AN.LOOPBACK));
     },
-    render: () => (0, i.jsx)(T, {}),
+    render: () => (0, i.jsx)(I, {}),
 });

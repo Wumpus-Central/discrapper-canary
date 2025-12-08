@@ -94,8 +94,8 @@ function q(e, t) {
         e
     );
 }
-let X = "cozy",
-    Q = "compact",
+let Q = "cozy",
+    X = "compact",
     J = (0, O.hQ)(),
     $ = (0, O.hQ)(),
     ee = "1337",
@@ -377,15 +377,15 @@ class ei extends i.Component {
                                 options: [
                                     {
                                         name: V.intl.string(V.t.Jqj4cZ),
-                                        value: X,
+                                        value: Q,
                                     },
                                     {
                                         name: V.intl.string(V.t["1JNcPS"]),
-                                        value: Q,
+                                        value: X,
                                     },
                                 ],
                                 onChange: (e) => this.handleMessageDisplayModeChange({ value: e }),
-                                value: this.props.messageDisplayCompact ? Q : X,
+                                value: this.props.messageDisplayCompact ? X : Q,
                             }),
                             this.props.messageDisplayCompact &&
                                 (0, r.jsx)(d.rsf, {
@@ -431,7 +431,7 @@ class ei extends i.Component {
             }),
             W(this, "handleMessageDisplayModeChange", (e) => {
                 let { value: t } = e;
-                x.jU.updateSetting(t === Q), (0, m.ZZ)();
+                x.jU.updateSetting(t === X), (0, m.ZZ)();
             }),
             W(this, "handleUIDensityChange", (e) => {
                 let { value: t } = e;

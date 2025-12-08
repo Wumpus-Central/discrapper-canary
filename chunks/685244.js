@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(498607),
@@ -56,14 +56,14 @@ let b = {
         easing: s.Z.Easing.inOut(s.Z.Easing.back()),
         clamp: !0,
     },
-    p = {
+    f = {
         duration: 2000,
         easing: s.Z.Easing.quad,
         clamp: !0,
     };
-function f(e) {
+function p(e) {
     var { value: t, children: n, equalityFn: i = o(), style: s } = e,
-        f = (function (e, t) {
+        p = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -95,7 +95,7 @@ function f(e) {
             }),
                 j({
                     spring: 0,
-                    config: p,
+                    config: f,
                     delay: 300,
                 });
         }, [j]);
@@ -112,7 +112,7 @@ function f(e) {
         H = null != s ? m(C({}, s), { backgroundColor: O }) : { backgroundColor: O };
     return (0, r.jsx)(
         a.animated.tr,
-        m(C({}, f), {
+        m(C({}, p), {
             style: H,
             children: n,
         }),

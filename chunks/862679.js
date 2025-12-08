@@ -18,8 +18,8 @@ let d = function (e) {
             onButtonClick: m,
             imageSrc: g,
             animationSrc: b,
-            secondaryButtonText: y,
-            onSecondaryButtonClick: C,
+            secondaryButtonText: C,
+            onSecondaryButtonClick: y,
             children: v,
             useReducedMotion: _ = !1,
             buttonVariant: O,
@@ -69,13 +69,13 @@ let d = function (e) {
                 (0, i.jsxs)("div", {
                     className: u.buttonContainer,
                     children: [
-                        null != y &&
+                        null != C &&
                             (0, i.jsx)("div", {
                                 className: u.button,
                                 children: (0, i.jsx)(o.Avr, {
                                     textVariant: "text-sm/semibold",
-                                    text: y,
-                                    onClick: C,
+                                    text: C,
+                                    onClick: y,
                                 }),
                             }),
                         null != p &&

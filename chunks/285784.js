@@ -21,10 +21,10 @@ function u(e) {
             isChannelPublic: _ = !0,
             entityType: p,
             onJoinClick: f,
-            onRsvpClick: h,
-            onStartClick: g,
-            onInviteClick: m,
-            onEndClick: v,
+            onRsvpClick: m,
+            onStartClick: v,
+            onInviteClick: g,
+            onEndClick: h,
             onJoinGuildClick: b,
             isJoined: x = !1,
             channel: C,
@@ -58,7 +58,7 @@ function u(e) {
                         "aria-label": d.intl.string(d.t.WqhZss),
                     };
         })({
-            onInviteClick: m,
+            onInviteClick: g,
             canInvite: u,
             isChannelPublic: _,
             channel: C,
@@ -96,7 +96,7 @@ function u(e) {
                 text: d.intl.string(d.t["2BP08E"]),
                 onClick: b,
             }),
-        !t && !n && null != h)
+        !t && !n && null != m)
     ) {
         let e = i && !t;
         I.push({
@@ -104,25 +104,25 @@ function u(e) {
             size: "sm",
             icon: e ? l.dz2 : l.Dkj,
             text: d.intl.string(d.t.DlcqlU),
-            onClick: h,
+            onClick: m,
             disabled: t,
         });
     }
     return (
         n ||
-            null == g ||
+            null == v ||
             I.push({
                 variant: "primary",
                 size: "sm",
-                onClick: g,
+                onClick: v,
                 text: d.intl.string(d.t.I0v0Qv),
             }),
         n &&
-            null != v &&
+            null != h &&
             I.push({
                 variant: "secondary",
                 size: "sm",
-                onClick: v,
+                onClick: h,
                 text: d.intl.string(d.t.qaYzPA),
             }),
         I

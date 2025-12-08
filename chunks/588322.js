@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => x });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -17,33 +17,33 @@ var r = n(54381),
     _ = n(228392),
     y = n(388032),
     O = n(304247);
-function j(e) {
+function x(e) {
     let { channelId: t } = e,
-        j = (0, l.e7)([g.Z], () => g.Z.getChannel(t)),
-        x = (0, l.e7)([g.Z], () => g.Z.getChannel(null == j ? void 0 : j.parent_id)),
-        v = (0, l.e7)([b.Z], () => b.Z.getGuild(null == j ? void 0 : j.getGuildId())),
-        C = (0, o.ZP)(j),
+        x = (0, l.e7)([g.Z], () => g.Z.getChannel(t)),
+        j = (0, l.e7)([g.Z], () => g.Z.getChannel(null == x ? void 0 : x.parent_id)),
+        v = (0, l.e7)([b.Z], () => b.Z.getGuild(null == x ? void 0 : x.getGuildId())),
+        C = (0, o.ZP)(x),
         I = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            null == j || I.current || ((I.current = !0), (0, _.lN)(j));
-        }, [j]),
-        null == j || null == v)
+            null == x || I.current || ((I.current = !0), (0, _.lN)(x));
+        }, [x]),
+        null == x || null == v)
     )
         return null;
-    let S = (0, r.jsx)(f.Z, { channel: j });
+    let S = (0, r.jsx)(f.Z, { channel: x });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.Z, {
-                channel: j,
+                channel: x,
                 draftType: m.d.ChannelMessage,
             }),
             (0, r.jsx)(u.ZP, {
                 toolbar: S,
                 "aria-label": y.intl.string(y.t.Pwe8tN),
                 children: (0, p.ud)({
-                    channel: j,
-                    parentChannel: x,
+                    channel: x,
+                    parentChannel: j,
                     channelName: C,
                     guild: v,
                     inSidebar: !0,
@@ -79,7 +79,7 @@ function j(e) {
                                         }
                                         return e;
                                     })({}, t)),
-                                    (i = i = { channel: j }),
+                                    (i = i = { channel: x }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                         : (function (e, t) {
@@ -98,7 +98,7 @@ function j(e) {
                         });
                     },
                     handleClick: function () {
-                        null != j && (0, h.XU)(j.guild_id, j.id);
+                        null != x && (0, h.XU)(x.guild_id, x.id);
                     },
                 }),
             }),
@@ -107,7 +107,7 @@ function j(e) {
                 children: (0, r.jsx)(
                     c.Z,
                     {
-                        channel: j,
+                        channel: x,
                         guild: v,
                         chatInputType: d.Ie.SIDEBAR,
                     },

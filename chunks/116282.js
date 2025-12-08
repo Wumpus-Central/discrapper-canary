@@ -6,7 +6,7 @@ var i = n(54381),
     u = n(5900),
     a = n(773275),
     o = n(388032),
-    c = n(163646);
+    c = n(237396);
 let d = () => {
     let { isWeb: t, installationStatus: e, connectionStatus: n } = (0, a.xf)(),
         d = (0, l.useMemo)(() => {
@@ -21,7 +21,7 @@ let d = () => {
                     return o.intl.format(c.default["Rr+ah3"], { helpdeskArticle: r.w });
             }
         }, [n]),
-        E = (0, l.useMemo)(() => {
+        T = (0, l.useMemo)(() => {
             if (t) return o.intl.format(c.default.z6v0w5, { helpdeskArticle: r.w });
             switch (e) {
                 case u._n.ERROR:
@@ -48,6 +48,6 @@ let d = () => {
     return (0, i.jsx)(s.xvT, {
         variant: "text-sm/normal",
         color: "text-subtle",
-        children: E,
+        children: T,
     });
 };

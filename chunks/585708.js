@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => S });
 var i = n(54381);
 n(473749);
 var r = n(13245),
     l = n(45114),
-    a = n(937889),
-    o = n(864060),
+    o = n(937889),
+    a = n(864060),
     s = n(703656),
     u = n(460181),
     c = n(974180),
@@ -14,16 +14,16 @@ var r = n(13245),
     f = n(610394),
     m = n(322155),
     g = n(516542),
-    y = n(618373),
-    O = n(620954),
+    O = n(618373),
+    y = n(620954),
     E = n(987650),
     v = n(981631),
-    S = n(388032);
-function b(e, t, n, b) {
+    b = n(388032);
+function S(e, t, n, S) {
     var x;
     if (p.Z.isNotificationDisabled(E.n0.TextChat)) return (0, u.GN)(c.Ay, c.yk), null;
-    let { icon: j, title: I, body: C } = (0, o.Xi)(e, t, n),
-        { trackView: Z, trackClick: N } = (0, O.Rg)(E.n0.TextChat, {
+    let { icon: j, title: I, body: C } = (0, a.Xi)(e, t, n),
+        { trackView: Z, trackClick: N } = (0, y.Rg)(E.n0.TextChat, {
             notif_type: E.n0.TextChat,
             notif_user_id: null == (x = t.author) ? void 0 : x.id,
             message_id: t.id,
@@ -37,13 +37,13 @@ function b(e, t, n, b) {
         title: I,
         body:
             t.content.length > 0
-                ? (0, a.ZP)(t, {
+                ? (0, o.ZP)(t, {
                       noStyleAndInteraction: !0,
                       formatInline: !0,
                       hideSimpleEmbedContent: !1,
                   }).content
                 : C,
-        hint: (e, t) => (e && !t ? null : (0, y.QR)((0, O.Pb)(), S.t.ykjOAJ, S.intl.string(S.t.jZkzVJ))),
+        hint: (e, t) => (e && !t ? null : (0, O.QR)((0, y.Pb)(), b.t.ykjOAJ, b.intl.string(b.t.jZkzVJ))),
         maxBodyLines: 2,
         renderFooter: (n, r, l) =>
             n && !l
@@ -55,7 +55,7 @@ function b(e, t, n, b) {
                   })
                 : null,
         onNotificationShow: () => {
-            b && (0, u.GN)(c.Ay, c.yk), Z();
+            S && (0, u.GN)(c.Ay, c.yk), Z();
         },
         onNotificationClick: () => {
             let n = f.Z.getTargetPID();

@@ -2,9 +2,9 @@ A.d(t, { default: () => $ }), A(388685), A(953529);
 var n = A(54381),
     r = A(473749),
     a = A(120356),
-    i = A.n(a),
-    l = A(512722),
-    o = A.n(l),
+    l = A.n(a),
+    i = A(512722),
+    o = A.n(i),
     s = A(399606),
     d = A(692547),
     u = A(215569),
@@ -70,11 +70,11 @@ let E = (0, h.hQ)(),
     G = (0, h.hQ)(),
     Y = (0, h.hQ)();
 function H(e) {
-    let { text: t, onChange: A, value: r, disabled: a, warning: l } = e,
+    let { text: t, onChange: A, value: r, disabled: a, warning: i } = e,
         o = (0, h.Dt)(),
         s = a ? "text-muted" : "text-default";
     return (0, n.jsxs)("label", {
-        className: i()(R.benefitToggleContainer, { [R.disabled]: a }),
+        className: l()(R.benefitToggleContainer, { [R.disabled]: a }),
         htmlFor: o,
         children: [
             (0, n.jsx)(p.Text, {
@@ -82,14 +82,14 @@ function H(e) {
                 color: s,
                 children: t,
             }),
-            null != l &&
+            null != i &&
                 (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)(p.LZC, {
                             size: 4,
                             horizontal: !0,
                         }),
-                        l,
+                        i,
                     ],
                 }),
             (0, n.jsx)(p.rsf, {
@@ -108,7 +108,7 @@ function M(e, t) {
     });
 }
 function J(e) {
-    let { guildId: t, selectedPriceTier: A, setPriceTier: a, label: i, errorMessage: l } = e,
+    let { guildId: t, selectedPriceTier: A, setPriceTier: a, label: l, errorMessage: i } = e,
         { priceTiers: o } = (0, q.R)(t, B.RG5.GUILD_PRODUCTS),
         s = r.useMemo(
             () =>
@@ -119,8 +119,8 @@ function J(e) {
             [o, A],
         );
     return (0, n.jsx)(g.d, {
-        label: i,
-        errorMessage: l,
+        label: l,
+        errorMessage: i,
         value: A,
         placeholder: D.intl.string(D.t.aI4J5H),
         maxVisibleItems: 5,
@@ -131,32 +131,32 @@ function J(e) {
     });
 }
 function _(e) {
-    var t, A, a, i, l, g, h, q, U, M, _, ee;
+    var t, A, a, l, i, g, h, q, U, M, _, ee;
     let { guildId: et, productId: eA, transitionState: en, onClose: er } = e,
-        [ea, ei] = r.useState(eA),
-        el = (0, s.e7)([y.Z], () => (null == ea ? null : y.Z.getGuildProduct(ea)), [ea]),
+        [ea, el] = r.useState(eA),
+        ei = (0, s.e7)([y.Z], () => (null == ea ? null : y.Z.getGuildProduct(ea)), [ea]),
         eo = (0, s.e7)([y.Z], () => y.Z.getGuildProductsForGuild(et, { publishedOnly: !0 }).length, [et]),
-        es = (null == el ? void 0 : el.published) === !0,
+        es = (null == ei ? void 0 : ei.published) === !0,
         { application: ed } = (0, v.Z)(et, L.wW.GUILD_ROLE_SUBSCRIPTIONS),
         eu = N.M["0"],
         ec = j.QK.useSetting(),
         eg = (0, P.n)(),
         ef = r.useCallback(() => {
             var e;
-            return (null == el || null == (e = el.image_asset) ? void 0 : e.application_id) == null
+            return (null == ei || null == (e = ei.image_asset) ? void 0 : e.application_id) == null
                 ? eu.data
-                : (0, O._W)(el.image_asset.application_id, el.image_asset, 600, eg && ec ? void 0 : "webp");
-        }, [eu, el, eg, ec]),
+                : (0, O._W)(ei.image_asset.application_id, ei.image_asset, 600, eg && ec ? void 0 : "webp");
+        }, [eu, ei, eg, ec]),
         { shouldRestrictUpdatingCreatorMonetizationSettings: ep } = (0, C.gX)(et);
     r.useEffect(() => {
         ep && (er(), (0, W.B)(D.intl.string(D.t.OLf3xn), D.t["90LBVr"]));
     }, [ep, er]);
-    let [em, ev] = r.useState(null != (a = null == el ? void 0 : el.name) ? a : ""),
-        [eh, eq] = r.useState(null != (i = null == el ? void 0 : el.description) ? i : ""),
-        [eb, eC] = r.useState(null != (l = null == el ? void 0 : el.price_tier) ? l : void 0),
+    let [em, ev] = r.useState(null != (a = null == ei ? void 0 : ei.name) ? a : ""),
+        [eh, eq] = r.useState(null != (l = null == ei ? void 0 : ei.description) ? l : ""),
+        [eb, eC] = r.useState(null != (i = null == ei ? void 0 : ei.price_tier) ? i : void 0),
         [eU, ej] = r.useState(ef),
         [eV, ex] = r.useState(
-            null != (g = null == el || null == (t = el.image_asset) ? void 0 : t.filename) ? g : eu.name,
+            null != (g = null == ei || null == (t = ei.image_asset) ? void 0 : t.filename) ? g : eu.name,
         ),
         [eO, eP] = r.useState(!1),
         [eF, ey] = r.useState(),
@@ -169,11 +169,11 @@ function _(e) {
             hasUnsavedAttachmentChanges: eX,
             cancelUnusedUploads: eQ,
         } = (0, F.P)(),
-        eS = (null == el ? void 0 : el.attachments) != null && (null == el ? void 0 : el.attachments.length) > 0,
+        eS = (null == ei ? void 0 : ei.attachments) != null && (null == ei ? void 0 : ei.attachments.length) > 0,
         ez = null != eZ ? eZ : eF,
         ew = null != eT && "published" in eT,
         eB = null != eT && !ew,
-        eL = null != (h = null == el ? void 0 : el.role_id) ? h : null,
+        eL = null != (h = null == ei ? void 0 : ei.role_id) ? h : null,
         [eD, eR] = r.useState(),
         ek = null != eD || null != eL,
         eE = (0, s.e7)([V.Z], () => (null != eL && null !== eD ? V.Z.getRole(et, eL) : null != eD ? eD : void 0), [
@@ -200,7 +200,7 @@ function _(e) {
         } = r.useMemo(
             () =>
                 (0, I.fG)({
-                    guildProductListing: el,
+                    guildProductListing: ei,
                     name: em,
                     priceTier: eb,
                     description: eh,
@@ -211,7 +211,7 @@ function _(e) {
                     hasSavedAttachments: eS,
                     hasUnsavedAttachmentChanges: eX,
                 }),
-            [el, em, eb, eh, eU, eV, eO, eD, eS, eX],
+            [ei, em, eb, eh, eU, eV, eO, eD, eS, eX],
         ),
         e3 = r.useMemo(
             () =>
@@ -284,7 +284,7 @@ function _(e) {
                 let e = A.role_id;
                 o()(null != e, "Cannot update role without role ID"), await m.Z.updateRole(et, e, eD);
             }
-            eR(void 0), ei(A.id), "published" in e && !0 === e.published && er();
+            eR(void 0), el(A.id), "published" in e && !0 === e.published && er();
         }
     };
     r.useEffect(() => {
@@ -393,7 +393,7 @@ function _(e) {
                                         image: eU,
                                         imageName: eV,
                                         savedImageName:
-                                            null == el || null == (A = el.image_asset) ? void 0 : A.filename,
+                                            null == ei || null == (A = ei.image_asset) ? void 0 : A.filename,
                                         onChange: (e, t) => {
                                             if (null != e) {
                                                 var A;
@@ -402,7 +402,7 @@ function _(e) {
                                                     eP(
                                                         e.startsWith("data:") ||
                                                             t !==
-                                                                (null == el || null == (A = el.image_asset)
+                                                                (null == ei || null == (A = ei.image_asset)
                                                                     ? void 0
                                                                     : A.filename),
                                                     );

@@ -1,69 +1,69 @@
-n.d(t, { Z: () => d }), n(388685), n(457542);
-var l = n(54381),
-    r = n(473749),
+n.d(t, { Z: () => c }), n(388685), n(457542);
+var r = n(54381),
+    l = n(473749),
     i = n(658550),
     s = n(481060),
     a = n(507453),
     o = n(388032);
-function d(e) {
-    let { mfaChallenge: t, finish: n, setSlide: d, onClose: u, isSlideReady: c, headerAlignStart: h } = e,
-        [f, g] = r.useState(!1),
-        [m, p] = r.useState(null),
-        [b, S] = r.useState(""),
-        x = r.useRef(null);
+function c(e) {
+    let { mfaChallenge: t, finish: n, setSlide: c, onClose: u, isSlideReady: d, headerAlignStart: f } = e,
+        [h, g] = l.useState(!1),
+        [m, b] = l.useState(null),
+        [p, j] = l.useState(""),
+        y = l.useRef(null);
     return (
-        r.useEffect(() => {
-            if (c) {
+        l.useEffect(() => {
+            if (d) {
                 var e;
-                null == (e = x.current) || e.focus();
+                null == (e = y.current) || e.focus();
             }
-        }, [c]),
-        (0, l.jsxs)("form", {
+        }, [d]),
+        (0, r.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
                     g(!0),
-                    p(null),
+                    b(null),
                     n({
                         mfaType: "totp",
-                        data: b,
+                        data: p,
                     })
                         .catch((e) => {
                             var t, n;
-                            p(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
+                            b(null != (n = null == (t = e.body) ? void 0 : t.message) ? n : e.message);
                         })
                         .finally(() => {
                             g(!1);
                         });
             },
             children: [
-                (0, l.jsx)(a.Z.SlideHeader, {
+                (0, r.jsx)(a.Z.SlideHeader, {
                     onClose: u,
-                    headerAlignStart: h,
+                    headerAlignStart: f,
                 }),
-                (0, l.jsxs)(a.Z.SlideContent, {
+                (0, r.jsxs)(a.Z.SlideContent, {
                     scrollbarType: "none",
                     children: [
-                        (0, l.jsx)(s.oil, {
+                        (0, r.jsx)(s.oil, {
                             label: o.intl.string(o.t.HZPBOd),
-                            inputRef: x,
-                            onChange: S,
+                            inputRef: y,
+                            onChange: j,
                             placeholder: o.intl.string(o.t.tARzgo),
                             maxLength: i.gH,
                             minLength: i.gH,
-                            value: b,
+                            value: p,
                             autoComplete: "one-time-code",
                             spellCheck: "false",
-                            disabled: f,
+                            disabled: h,
                         }),
-                        (0, l.jsx)(a.Z.SlideError, { error: m }),
+                        (0, r.jsx)(a.Z.SlideError, { error: m }),
                     ],
                 }),
-                (0, l.jsx)(a.Z.SlideFooter, {
+                (0, r.jsx)(a.Z.SlideFooter, {
                     mfaChallenge: t,
-                    setSlide: d,
+                    setSlide: c,
                     showConfirm: !0,
-                    disabled: b.length !== i.gH,
-                    submitting: f,
+                    disabled: p.length !== i.gH,
+                    submitting: h,
                 }),
             ],
         })

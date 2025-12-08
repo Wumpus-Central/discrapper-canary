@@ -164,8 +164,8 @@ function C(e) {
             "buttonRef",
         ]);
     let q = (0, u.M)(),
-        X = null != (t = null == q ? void 0 : q.size) ? t : _,
-        Q = null != (n = null == q ? void 0 : q.fullWidth) ? n : T,
+        Q = null != (t = null == q ? void 0 : q.size) ? t : _,
+        X = null != (n = null == q ? void 0 : q.fullWidth) ? n : T,
         J = null != m,
         $ = i.useRef(null),
         ee = null != K ? K : $,
@@ -173,7 +173,7 @@ function C(e) {
             icon: E,
             iconOpticalOffsetMargin: S,
             iconPosition: y,
-            size: X,
+            size: Q,
             ref: ee,
             disabled: V,
         }),
@@ -195,7 +195,7 @@ function C(e) {
                 J &&
                     (0, r.jsx)(h.x, {
                         tag: "span",
-                        variant: I[X],
+                        variant: I[Q],
                         color: "none",
                         lineClamp: 1,
                         children: m,
@@ -217,9 +217,9 @@ function C(e) {
                             "data-mana-component": "button",
                             role: a,
                             "aria-busy": C,
-                            className: o()(g.button, g[X], g[f], {
+                            className: o()(g.button, g[Q], g[f], {
                                 [g.hasText]: J,
-                                [g.fullWidth]: Q,
+                                [g.fullWidth]: X,
                                 [g.rounded]: x,
                             }),
                             ref: ee,
@@ -253,7 +253,7 @@ function C(e) {
                                   })
                                 : (0, r.jsx)(N, {
                                       loading: C,
-                                      size: X,
+                                      size: Q,
                                       children: el,
                                   }),
                         ],
@@ -265,7 +265,7 @@ function C(e) {
     return en
         ? (0, r.jsx)("div", {
               className: o()(g.expressiveWrapper, {
-                  [g.fullWidth]: Q,
+                  [g.fullWidth]: X,
                   [g.hasText]: J,
               }),
               children: ed,

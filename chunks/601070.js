@@ -99,8 +99,8 @@ function x(e) {
                         channel: e,
                         joinTimestamp: t.getTime(),
                     },
-                    { isUnread: r, isRelevant: i, isTimedRelevant: a } = X(e);
-                ee(S, e, n, !1), ee(C, e, i ? n : null, !1), ee(I, e, r ? n : null, !1), a && Q(e, !0);
+                    { isUnread: r, isRelevant: i, isTimedRelevant: a } = Q(e);
+                ee(S, e, n, !1), ee(C, e, i ? n : null, !1), ee(I, e, r ? n : null, !1), a && X(e, !0);
             } else {
                 ee(T, e, e, !1);
                 let t = f.ZP.isForumPostUnread(e.id);
@@ -149,13 +149,13 @@ function k(e, t, n) {
                     channel: r,
                     joinTimestamp: i.getTime(),
                 },
-                { isUnread: t, isRelevant: n, isTimedRelevant: a } = X(r);
+                { isUnread: t, isRelevant: n, isTimedRelevant: a } = Q(r);
             ee(S, r, e, !0),
                 ee(C, r, n ? e : null, !0),
                 ee(I, r, t ? e : null, !0),
                 ee(T, r, null, !0),
                 ee(A, r, null, !0),
-                Q(r, a);
+                X(r, a);
         } else {
             let e = f.ZP.isForumPostUnread(r.id);
             ee(S, r, null, !0),
@@ -222,8 +222,8 @@ function V(e) {
         }
         if (null == r) return !1;
         if (en(S, t)) {
-            let { isUnread: n, isRelevant: i, isTimedRelevant: a } = X(t);
-            Q(t, a);
+            let { isUnread: n, isRelevant: i, isTimedRelevant: a } = Q(t);
+            X(t, a);
             let o = en(I, t),
                 s = en(C, t);
             if (n === o && i === s) return !1;
@@ -244,8 +244,8 @@ function H() {
         for (let t in S[e])
             for (let n in S[e][t]) {
                 let r = S[e][t][n],
-                    { isUnread: i, isRelevant: a, isTimedRelevant: o } = X(r.channel);
-                i && ee(I, r.channel, r, !1), a && ee(C, r.channel, r, !1), Q(r.channel, o);
+                    { isUnread: i, isRelevant: a, isTimedRelevant: o } = Q(r.channel);
+                i && ee(I, r.channel, r, !1), a && ee(C, r.channel, r, !1), X(r.channel, o);
             }
     for (let e in ((A = {}), T))
         for (let t in T[e])
@@ -274,7 +274,7 @@ function q() {
     if ((P = p.Z.getChannelId()) === e) return !1;
     j(e), j(P);
 }
-function X(e) {
+function Q(e) {
     let t = f.ZP.getMentionCount(e.id) > 0,
         n = f.ZP.hasUnread(e.id) && !h.Z.isMuted(e.id),
         r = e.hasFlag(E.zZ.PINNED),
@@ -286,7 +286,7 @@ function X(e) {
         isTimedRelevant: a,
     };
 }
-function Q(e, t) {
+function X(e, t) {
     $(e.id), t && J(e);
 }
 function J(e) {

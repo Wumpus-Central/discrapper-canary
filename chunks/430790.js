@@ -1,19 +1,19 @@
 n.d(t, { Z: () => s });
 var r = n(54381),
     i = n(473749),
-    a = n(481060),
-    l = n(785717),
+    l = n(481060),
+    a = n(785717),
     o = n(388032),
     c = n(684066);
 function s() {
-    let { trackUserProfileEditAction: e } = (0, l.KZ)(),
+    let { trackUserProfileEditAction: e } = (0, a.KZ)(),
         t = i.useCallback(() => {
             e({ action: "PRESS_ADD_WIDGET" }),
-                (0, a.ZDy)(
+                (0, l.ZDy)(
                     async () => {
                         let { default: t } = await n.e("38576").then(n.bind(n, 925170));
                         return (n) => {
-                            var i, a;
+                            var i, l;
                             return (0, r.jsx)(
                                 t,
                                 ((i = (function (e) {
@@ -41,9 +41,9 @@ function s() {
                                     }
                                     return e;
                                 })({}, n)),
-                                (a = a = { trackUserProfileEditAction: e }),
+                                (l = l = { trackUserProfileEditAction: e }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -51,8 +51,8 @@ function s() {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(a)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                       }),
                                 i),
                             );
@@ -61,15 +61,15 @@ function s() {
                     { stackingBehavior: "stack" },
                 );
         }, [e]);
-    return (0, r.jsxs)(a.P3F, {
+    return (0, r.jsxs)(l.P3F, {
         className: c.addWidgetButton,
         onClick: t,
         children: [
-            (0, r.jsx)(a.qJs, {
+            (0, r.jsx)(l.qJs, {
                 size: "sm",
                 color: "currentColor",
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: "text-sm/medium",
                 color: "text-default",
                 children: o.intl.string(o.t["lBG2s/"]),

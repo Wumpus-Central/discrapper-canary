@@ -20,8 +20,8 @@ var r,
     d = n(863249),
     m = n(944163),
     f = n(246364),
-    h = n(983736),
-    x = n(266395),
+    x = n(983736),
+    h = n(266395),
     g = n(388032),
     p =
         (((r = {})[(r.CLAIM_ACCOUNT = 0)] = "CLAIM_ACCOUNT"),
@@ -35,7 +35,7 @@ function v(e, t, n) {
     l.useEffect(() => {
         t || d.ZP.fetchVerificationForm(e, n).finally(() => s(!0));
     }, [e, n, t]);
-    let h = l.useMemo(() => {
+    let x = l.useMemo(() => {
         var e, n;
         let r;
         if (!t || null == u) return null;
@@ -63,7 +63,7 @@ function v(e, t, n) {
     }, [t, u, c]);
     return {
         hasFetched: r,
-        verificationForm: null != h ? h : c,
+        verificationForm: null != x ? x : c,
     };
 }
 function b(e, t, n) {
@@ -92,18 +92,18 @@ function j(e) {
     );
 }
 function C(e) {
-    let t = (0, x.rb)((e) => e.hasUnsubmittedChanges);
+    let t = (0, h.rb)((e) => e.hasUnsubmittedChanges);
     l.useEffect(
         () => (
-            (0, x.a5)(!1),
+            (0, h.a5)(!1),
             () => {
-                (0, x.a5)(!1);
+                (0, h.a5)(!1);
             }
         ),
         [],
     ),
         l.useEffect(() => {
-            let n = e.some((e) => e.field_type !== f.QJ.TERMS && (0, h.OA)(e));
-            n && !t ? (0, x.a5)(!0) : !n && t && (0, x.a5)(!1);
+            let n = e.some((e) => e.field_type !== f.QJ.TERMS && (0, x.OA)(e));
+            n && !t ? (0, h.a5)(!0) : !n && t && (0, h.a5)(!1);
         }, [e, t]);
 }

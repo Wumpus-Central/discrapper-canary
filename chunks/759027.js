@@ -56,7 +56,7 @@ let E = {
         [v.O0b.PAUSED]: "Paused",
         [v.O0b.PAUSE_PENDING]: "Pause Pending",
     },
-    N = {
+    O = {
         [j.Id.UNKNOWN]: "Unknown",
         [j.Id.ADMIN]: "Admin",
         [j.Id.USER]: "User",
@@ -64,7 +64,7 @@ let E = {
         [j.Id.DEFERRED_START]: "Deferred Start",
         [j.Id.USER_TEMPORARY_BAN]: "User Temp Ban",
     },
-    O = [
+    N = [
         {
             label: "Unpaid",
             value: v.O0b.UNPAID,
@@ -212,7 +212,7 @@ function P(e) {
         [A, Z] = l.useState(!1),
         [D, L] = l.useState(!1),
         [M, U] = l.useState(!1),
-        [B, F] = l.useState(null),
+        [F, B] = l.useState(null),
         G = (e) => ((null == e && (e = I.status), e in E) ? E[e] : "Unknown status ".concat(e)),
         z = (e) => {
             let t = new Date(e);
@@ -241,7 +241,7 @@ function P(e) {
                 });
             } catch (t) {
                 var e;
-                F((null == (e = t.body) ? void 0 : e.message) || t.message || "Failed to renew subscription");
+                B((null == (e = t.body) ? void 0 : e.message) || t.message || "Failed to renew subscription");
             }
             w();
         },
@@ -287,7 +287,7 @@ function P(e) {
             Y.push({
                 id: "pause-reason",
                 label: "Pause Reason: ".concat(
-                    I.pauseReason in N ? N[I.pauseReason] : "Unknown pause reason ".concat(I.pauseReason),
+                    I.pauseReason in O ? O[I.pauseReason] : "Unknown pause reason ".concat(I.pauseReason),
                 ),
                 isDisabled: !1,
             }),
@@ -497,7 +497,7 @@ function P(e) {
                                             label: "Status",
                                             serialize: (e) => G(e),
                                             isSelected: (e) => e === I.status,
-                                            options: O,
+                                            options: N,
                                             select: (e) => V({ status: e }),
                                             popoutLayerContext: f.O$,
                                         }),
@@ -535,12 +535,12 @@ function P(e) {
                                                         }),
                                                     ],
                                                 }),
-                                                null !== B &&
+                                                null !== F &&
                                                     (0, a.jsx)("div", {
                                                         className: C.error,
                                                         children: (0, a.jsx)(m.M14, {
                                                             type: "critical",
-                                                            children: B,
+                                                            children: F,
                                                         }),
                                                     }),
                                             ],

@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(442837),
     o = n(481060),
     c = n(497321),
-    u = n(484614),
-    d = n(314852),
+    d = n(484614),
+    u = n(314852),
     g = n(65361),
     m = n(246946),
     p = n(330010),
@@ -20,7 +20,7 @@ var r = n(54381),
 function v(e) {
     let { guildId: t } = e,
         { guildProfile: c, fetchGuildProfile: m, fetchStatus: v } = (0, g.u)(t),
-        O = v !== d.a.FETCHED,
+        O = v !== u.a.FETCHED,
         {
             fetchedEmbed: C,
             embedEnabled: y,
@@ -85,14 +85,14 @@ function v(e) {
                                             className: _.column,
                                             children: (0, r.jsx)(a.gNt, {
                                                 label: j.intl.string(j.t.TRyLUh),
-                                                children: (0, r.jsx)(u.Z, { value: t }),
+                                                children: (0, r.jsx)(d.Z, { value: t }),
                                             }),
                                         }),
                                         (0, r.jsx)("div", {
                                             className: _.column,
                                             children: (0, r.jsx)(a.gNt, {
                                                 label: j.intl.string(j.t.VECJcK),
-                                                children: (0, r.jsx)(u.Z, { value: E }),
+                                                children: (0, r.jsx)(d.Z, { value: E }),
                                             }),
                                         }),
                                     ],
@@ -106,7 +106,7 @@ function v(e) {
                                             children: (0, r.jsx)(a.gNt, {
                                                 label: j.intl.string(j.t.XVGbn1),
                                                 description: j.intl.string(j.t["+baN11"]),
-                                                children: (0, r.jsx)(u.Z, { value: I }),
+                                                children: (0, r.jsx)(d.Z, { value: I }),
                                             }),
                                         }),
                                         (0, r.jsx)("img", {

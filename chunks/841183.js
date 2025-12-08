@@ -18,7 +18,7 @@ function u(e) {
                     avatarId: t,
                     storageHash: n,
                     canAnimate: p,
-                    size: (0, l.pxk)(null != u ? u : c.m),
+                    size: (0, l.dcp)(null != u ? u : c.m),
                 }),
             [g, t, n, p, u],
         ),

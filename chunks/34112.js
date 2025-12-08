@@ -192,8 +192,8 @@ function M(e) {
             }),
             [d, O, C, y, G, M, _],
         ),
-        [{ isDragging: H }, W] = (0, s.c)(F),
-        z = i.useMemo(
+        [{ isDragging: H }, z] = (0, s.c)(F),
+        W = i.useMemo(
             () => ({
                 accept: L,
                 canDrop: () => !G,
@@ -207,7 +207,7 @@ function M(e) {
             }),
             [G, d],
         ),
-        [{ dragSourcePosition: V }, K] = (0, o.L)(z),
+        [{ dragSourcePosition: V }, K] = (0, o.L)(W),
         Y = i.useCallback(
             (e) => {
                 (0, m.jW)(e, async () => {
@@ -228,7 +228,7 @@ function M(e) {
     if (H)
         return (0, r.jsx)("div", {
             ref: (e) => {
-                W(e);
+                z(e);
             },
             className: a()(Z.roleRow, Z.roleRowDragging),
         });
@@ -244,7 +244,7 @@ function M(e) {
         onClick: X,
         onContextMenu: Y,
         innerRef: (e) => {
-            W(K(e));
+            z(K(e));
         },
         "data-dnd-name": d.name,
         "aria-label": w.intl.formatToPlainString(w.t.Vu0Acc, {

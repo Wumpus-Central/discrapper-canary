@@ -12,28 +12,28 @@ var r = t(120356),
     _ = t(924301),
     p = t(894017),
     f = t(854698),
-    h = t(390966),
-    m = t(765305),
-    v = t(388032),
-    g = t(709380);
+    m = t(390966),
+    v = t(765305),
+    g = t(388032),
+    h = t(709380);
 function b(e) {
     let { recurrenceId: n, originalScheduledStartTime: r, guildEventId: b, onClick: x, isActive: C } = e,
         j = (0, l.e7)([_.ZP], () => _.ZP.getGuildScheduledEvent(b)),
         k = (0, p.Z)(n, null == j ? void 0 : j.id),
         I = (0, l.e7)([u.Z], () => u.Z.getGuild(null == j ? void 0 : j.guild_id)),
-        y = (0, l.e7)([d.Z], () => d.Z.getChannel(null == j ? void 0 : j.channel_id));
+        N = (0, l.e7)([d.Z], () => d.Z.getChannel(null == j ? void 0 : j.channel_id));
     if (null == j) return null;
-    let { is_canceled: N = !1 } = null != k ? k : {},
-        w =
+    let { is_canceled: w = !1 } = null != k ? k : {},
+        y =
             (null == k ? void 0 : k.scheduled_start_time) != null
                 ? new Date(null == k ? void 0 : k.scheduled_start_time)
                 : r,
         Z = (0, f.DK)(j),
-        E = N ? m.p1.CANCELED : m.p1.SCHEDULED;
+        E = w ? v.p1.CANCELED : v.p1.SCHEDULED;
     Z === n && (E = j.status);
     let P =
             (null == j ? void 0 : j.scheduled_start_time) != null
-                ? (0, f.lh)(k, w, new Date(null == j ? void 0 : j.scheduled_start_time))
+                ? (0, f.lh)(k, y, new Date(null == j ? void 0 : j.scheduled_start_time))
                 : null,
         S = (e) => {
             e.stopPropagation(),
@@ -71,7 +71,7 @@ function b(e) {
                                     {
                                         guildEventId: j.id,
                                         recurrenceId: n,
-                                        channel: y,
+                                        channel: N,
                                         guild: I,
                                         isRecurrenceItem: !0,
                                     },
@@ -81,45 +81,45 @@ function b(e) {
                     });
         };
     return (0, i.jsxs)(c.kL8, {
-        className: a()(g.container, {
-            [g.canceled]: N,
-            [g.clickable]: null != x,
-            [g.active]: C,
+        className: a()(h.container, {
+            [h.canceled]: w,
+            [h.clickable]: null != x,
+            [h.active]: C,
         }),
         onClick: (e) => {
-            e.stopPropagation(), N || null == x || x(n);
+            e.stopPropagation(), w || null == x || x(n);
         },
         onContextMenu: S,
         "aria-label": "",
         children: [
-            (0, i.jsx)(h.z, {
-                startTime: w.toISOString(),
+            (0, i.jsx)(m.z, {
+                startTime: y.toISOString(),
                 status: null != P ? P : E,
                 eventType: j.entity_type,
                 guildEventId: j.id,
                 recurrenceId: n,
-                className: g.timeStatus,
+                className: h.timeStatus,
             }),
-            N &&
+            w &&
                 (0, i.jsx)(c.Text, {
                     variant: "text-sm/semibold",
                     color: "text-feedback-critical",
-                    className: g.canceledStatus,
-                    children: v.intl.string(v.t.fyBVRm),
+                    className: h.canceledStatus,
+                    children: g.intl.string(g.t.fyBVRm),
                 }),
             (0, i.jsx)(o.u, {
-                text: v.intl.string(v.t["UKOtz+"]),
+                text: g.intl.string(g.t["UKOtz+"]),
                 position: "top",
-                "aria-label": v.intl.string(v.t.bt75uw),
+                "aria-label": g.intl.string(g.t.bt75uw),
                 children: (0, i.jsx)(c.P3F, {
                     onClick: S,
-                    className: g.iconButton,
+                    className: h.iconButton,
                     children: (0, i.jsx)(c.xhG, {
                         size: "custom",
                         color: "currentColor",
                         width: 20,
                         height: 20,
-                        className: g.icon,
+                        className: h.icon,
                     }),
                 }),
             }),

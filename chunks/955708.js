@@ -1,5 +1,5 @@
 n.d(e, {
-    default: () => _,
+    default: () => g,
     x: () => m,
 }),
     n(388685);
@@ -14,7 +14,7 @@ var i,
     u = n(463439),
     p = n(388032),
     x = n(35853);
-function g(t) {
+function h(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             i = Object.keys(n);
@@ -39,7 +39,7 @@ function g(t) {
     }
     return t;
 }
-function h(t, e) {
+function _(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -62,29 +62,29 @@ var m =
     (i[(i.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
     (i[(i.TAKE_ACTION = 2)] = "TAKE_ACTION"),
     i);
-let _ = (t) => {
-    let { warningId: e, warningType: n, senderId: i, modalProps: m, channelId: _ } = t,
+let g = (t) => {
+    let { warningId: e, warningType: n, senderId: i, modalProps: m, channelId: g } = t,
         [f, b] = s.useState(0),
         O = s.useMemo(
             () => ({
-                channelId: _,
+                channelId: g,
                 senderId: i,
                 warningId: e,
                 warningType: n,
                 isNudgeWarning: !1,
             }),
-            [_, i, e, n],
+            [g, i, e, n],
         );
     s.useEffect(() => {
-        (0, c.KQ)(h(g({}, O), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
+        (0, c.KQ)(_(h({}, O), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
     }, [O]);
-    let v = s.useCallback(
+    let j = s.useCallback(
             (t) => {
-                (0, c.qc)(h(g({}, O), { cta: t }));
+                (0, c.qc)(_(h({}, O), { cta: t }));
             },
             [O],
         ),
-        [j, T] = s.useState(!1);
+        [v, T] = s.useState(!1);
     function E(t) {
         b(t);
     }
@@ -107,7 +107,7 @@ let _ = (t) => {
                             children: (0, r.jsx)(l.Z, {
                                 warningId: e,
                                 senderId: i,
-                                trackAnalyticsEvent: v,
+                                trackAnalyticsEvent: j,
                                 onNavigate: E,
                             }),
                         }),
@@ -116,7 +116,7 @@ let _ = (t) => {
                             children: (0, r.jsx)(d.Z, {
                                 warningId: e,
                                 senderId: i,
-                                trackAnalyticsEvent: v,
+                                trackAnalyticsEvent: j,
                             }),
                         }),
                         (0, r.jsx)(a.Mi4, {
@@ -124,9 +124,9 @@ let _ = (t) => {
                             children: (0, r.jsx)(u.Z, {
                                 warningId: e,
                                 senderId: i,
-                                trackAnalyticsEvent: v,
-                                channelId: _,
-                                hasReported: j,
+                                trackAnalyticsEvent: j,
+                                channelId: g,
+                                hasReported: v,
                                 onReport: function () {
                                     T(!0);
                                 },
@@ -144,7 +144,7 @@ let _ = (t) => {
                         size: "sm",
                         text: p.intl.string(p.t.cpT0Cq),
                         onClick: function () {
-                            m.onClose(), (0, o.T)(_, [e]), v(c.NM.USER_TAKEOVER_MODAL_DISMISS);
+                            m.onClose(), (0, o.T)(g, [e]), j(c.NM.USER_TAKEOVER_MODAL_DISMISS);
                         },
                         textVariant: "text-sm/normal",
                     }),

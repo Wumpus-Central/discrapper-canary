@@ -1,10 +1,10 @@
-n.d(t, { a: () => r });
+n.d(t, { a: () => i });
 var a = n(54381);
 n(473749);
 var l = n(481060),
-    i = n(530146);
-function r(e) {
-    let { isUploading: t, isSuccess: n, errorMessage: r, onClick: s, title: o } = e;
+    r = n(530146);
+function i(e) {
+    let { isUploading: t, isSuccess: n, errorMessage: i, onClick: s, title: o } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(l.Button, {
@@ -14,18 +14,18 @@ function r(e) {
                 disabled: t,
                 text: t ? "Uploading\u2026" : o,
             }),
-            null != r &&
+            null != i &&
                 (0, a.jsx)(l.Text, {
                     variant: "text-sm/normal",
                     color: "text-feedback-critical",
-                    className: i.statusText,
-                    children: r,
+                    className: r.statusText,
+                    children: i,
                 }),
             n &&
                 (0, a.jsx)(l.Text, {
                     variant: "text-sm/normal",
                     color: "text-feedback-positive",
-                    className: i.statusText,
+                    className: r.statusText,
                     children: "Logs uploaded successfully",
                 }),
         ],

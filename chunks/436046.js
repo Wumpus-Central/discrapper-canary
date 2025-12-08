@@ -2,9 +2,9 @@ n.d(t, { Z: () => N }), n(388685), n(953529);
 var a = n(54381),
     o = n(473749),
     s = n(512722),
-    r = n.n(s),
+    l = n.n(s),
     i = n(442837),
-    l = n(692547),
+    r = n(692547),
     c = n(755721),
     u = n(481060),
     d = n(771308),
@@ -23,7 +23,7 @@ function N(e) {
         j = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
         y = o.useRef(null);
     async function O(e) {
-        e.preventDefault(), r()(null != s, "Cannot submit null birthday."), C(!0);
+        e.preventDefault(), l()(null != s, "Cannot submit null birthday."), C(!0);
         try {
             await d.Av(s, h.L0.NEW_USER_FLOW), t();
         } catch (e) {
@@ -61,7 +61,7 @@ function N(e) {
                       width: 56,
                       height: 40,
                       className: E.logo,
-                      color: l.Z.unsafe_rawColors.BRAND_500.css,
+                      color: r.Z.unsafe_rawColors.BRAND_500.css,
                   }),
                   (0, a.jsx)(u.Heading, {
                       className: E.title,

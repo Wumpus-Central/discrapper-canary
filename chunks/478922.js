@@ -155,8 +155,8 @@ function g(e, t, n) {
             dir: b,
         });
         let {
-            forceUpdateOnChunkChange: X,
-            coordsMap: Q,
+            forceUpdateOnChunkChange: Q,
+            coordsMap: X,
             gridData: J,
             visibleSections: $,
             totalHeight: ee,
@@ -185,9 +185,9 @@ function g(e, t, n) {
         let er = (0, i.useCallback)(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                    e > z.current.dirty && (z.current.dirty = e), 2 === e ? et() : X(1);
+                    e > z.current.dirty && (z.current.dirty = e), 2 === e ? et() : Q(1);
                 },
-                [X, z, et],
+                [Q, z, et],
             ),
             ei = (0, s.t2)(K),
             ea = (0, i.useCallback)(() => en.itemGrid, [en]),
@@ -259,9 +259,9 @@ function g(e, t, n) {
                                             children: Object.keys($).map((e) => {
                                                 var t;
                                                 let n = (0, s.t$)(e),
-                                                    i = Q[e],
+                                                    i = X[e],
                                                     a = $[e],
-                                                    o = Q[(0, s.DP)(n)],
+                                                    o = X[(0, s.DP)(n)],
                                                     l = null == N ? void 0 : N(n);
                                                 return null != i && null != a
                                                     ? (0, r.jsxs)(
@@ -276,7 +276,7 @@ function g(e, t, n) {
                                                                   null != A && null != o && A(n, o, e),
                                                                   a.map((e) => {
                                                                       let [t, n, r] = e,
-                                                                          i = Q[t];
+                                                                          i = X[t];
                                                                       return null != i ? C(n, r, i, t, J) : null;
                                                                   }),
                                                               ],
@@ -287,7 +287,7 @@ function g(e, t, n) {
                                             }),
                                         }),
                                     }),
-                                [$, C, A, Q, ee, N, J],
+                                [$, C, A, X, ee, N, J],
                             ),
                         ],
                     },

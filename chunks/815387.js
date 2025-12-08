@@ -46,8 +46,8 @@ var r = n(54381),
     K = n(5192),
     z = n(960048),
     q = n(709054),
-    X = n(937889),
-    Q = n(15642),
+    Q = n(937889),
+    X = n(15642),
     J = n(260736),
     $ = n(930282),
     ee = n(818570),
@@ -478,7 +478,7 @@ function eq(e) {
           })
         : null;
 }
-function eX(e) {
+function eQ(e) {
     let { message: t, compact: n, channel: i } = e,
         a = (0, et.l)({
             user: t.author,
@@ -492,7 +492,7 @@ function eX(e) {
         usernameHook: a,
     });
 }
-function eQ(e) {
+function eX(e) {
     let { message: t, compact: n, channel: i } = e,
         a = (0, et.l)({
             user: t.author,
@@ -672,7 +672,7 @@ function e9(e) {
         o = (0, a.e7)([H.default], () => H.default.getUser(null == i ? void 0 : i.recipientUserId));
     return null == i || null == o
         ? null
-        : (0, r.jsx)(Q.Z, {
+        : (0, r.jsx)(X.Z, {
               giftIntentType: i.giftIntentType,
               recipientUser: o,
               channel: n,
@@ -759,9 +759,9 @@ let to = Object.freeze({
     [eP.uaV.THREAD_STARTER_MESSAGE]: eA.Z,
     [eP.uaV.GUILD_INVITE_REMINDER]: void 0,
     [eP.uaV.AUTO_MODERATION_ACTION]: eq,
-    [eP.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eX,
-    [eP.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED]: eX,
-    [eP.uaV.GUILD_INCIDENT_REPORT_RAID]: eQ,
+    [eP.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eQ,
+    [eP.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED]: eQ,
+    [eP.uaV.GUILD_INCIDENT_REPORT_RAID]: eX,
     [eP.uaV.GUILD_INCIDENT_REPORT_FALSE_ALARM]: eJ,
     [eP.uaV.ROLE_SUBSCRIPTION_PURCHASE]: y.Z,
     [eP.uaV.PURCHASE_NOTIFICATION]: e8,
@@ -808,7 +808,7 @@ function ts(e) {
         ? (eM(Error("unknown message type ".concat(t.type))), null)
         : (0, r.jsx)($.ZP, {
               message: t,
-              content: (0, X.ZP)(t).content,
+              content: (0, Q.ZP)(t).content,
               compact: null != i && i,
               children: (0, r.jsx)(s, {
                   message: t,

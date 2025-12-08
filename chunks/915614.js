@@ -3,16 +3,16 @@ var i = n(54381);
 n(473749);
 var r = n(120356),
     l = n.n(r),
-    a = n(481060),
-    o = n(809357),
+    o = n(481060),
+    a = n(809357),
     s = n(795482);
 function u(e) {
     let { onClick: t, keybind: n, className: r, IconComponent: u } = e,
-        c = (0, o.o)();
+        c = (0, a.o)();
     return (0, i.jsxs)("div", {
         className: l()(s.buttonContainer, r),
         children: [
-            (0, i.jsx)(a.P3F, {
+            (0, i.jsx)(o.P3F, {
                 className: s.button,
                 onClick: t,
                 "aria-hidden": !0,
@@ -23,7 +23,7 @@ function u(e) {
                 }),
             }),
             null != n && c
-                ? (0, i.jsx)(a.Text, {
+                ? (0, i.jsx)(o.Text, {
                       className: s.keybind,
                       "aria-hidden": !0,
                       variant: "text-xxs/bold",

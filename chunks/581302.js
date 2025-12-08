@@ -2,12 +2,12 @@ n.d(t, { Z: () => c });
 var a = n(54381);
 n(473749);
 var l = n(481060),
-    i = n(703656),
-    r = n(52647),
+    r = n(703656),
+    i = n(52647),
     s = n(981631),
     o = n(906406);
 let c = function () {
-    let { resetOnboardingExperience: e, resetQuestStatus: t } = (0, r.Z)();
+    let { resetOnboardingExperience: e, resetQuestStatus: t } = (0, i.Z)();
     return (0, a.jsx)("div", {
         className: o.container,
         children: (0, a.jsxs)(l.C3N, {
@@ -18,7 +18,7 @@ let c = function () {
                     children: (0, a.jsx)(l.Button, {
                         text: "Reset Onboarding State",
                         onClick: () => {
-                            e(), t(), (0, i.uL)(s.Z5c.APP);
+                            e(), t(), (0, r.uL)(s.Z5c.APP);
                         },
                     }),
                 }),

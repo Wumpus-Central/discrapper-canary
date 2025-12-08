@@ -8,15 +8,15 @@ var i = n(54381),
     o = n(509613),
     c = n(131951),
     d = n(63063),
-    E = n(210887),
-    S = n(313789),
-    I = n(803567),
-    T = n(981631),
+    T = n(210887),
+    E = n(313789),
+    S = n(803567),
+    I = n(981631),
     g = n(388032);
 let _ = n(775322),
     O = n(353385);
 function N() {
-    let t = (0, r.e7)([E.Z], () => (0, s.apv)(E.Z.theme));
+    let t = (0, r.e7)([T.Z], () => (0, s.apv)(T.Z.theme));
     return (0, i.jsx)("img", {
         src: t ? _ : O,
         width: 48,
@@ -26,43 +26,43 @@ function N() {
 }
 function A() {
     let t = l.useCallback((t) => {
-            a.Z.setNoiseCancellation(t === I.Q4.KRISP, I.MP), a.Z.setNoiseSuppression(t === I.Q4.STANDARD, I.MP);
+            a.Z.setNoiseCancellation(t === S.Q4.KRISP, S.MP), a.Z.setNoiseSuppression(t === S.Q4.STANDARD, S.MP);
         }, []),
         {
             noiseCancellation: e,
             noiseSuppression: n,
             isNoiseSuppressionSupported: o,
-            isNoiseCancellationSupported: E,
+            isNoiseCancellationSupported: T,
         } = (0, r.cj)([c.Z], () => ({
             noiseCancellation: c.Z.getNoiseCancellation(),
             noiseSuppression: c.Z.getNoiseSuppression(),
             isNoiseSuppressionSupported: c.Z.isNoiseSuppressionSupported(),
             isNoiseCancellationSupported: c.Z.isNoiseCancellationSupported(),
         })),
-        S = n ? I.Q4.STANDARD : I.Q4.NONE,
-        _ = e ? I.Q4.KRISP : S,
+        E = n ? S.Q4.STANDARD : S.Q4.NONE,
+        _ = e ? S.Q4.KRISP : E,
         O = l.useMemo(() => {
             let t = [];
             return (
-                E &&
+                T &&
                     t.push({
                         label: g.intl.string(g.t.rdoNzt),
-                        value: I.Q4.KRISP,
+                        value: S.Q4.KRISP,
                     }),
                 o &&
                     t.push({
                         label: g.intl.string(g.t.qXeYHw),
-                        value: I.Q4.STANDARD,
+                        value: S.Q4.STANDARD,
                     }),
                 t.push({
                     label: g.intl.string(g.t.wkYAlz),
-                    value: I.Q4.NONE,
+                    value: S.Q4.NONE,
                 }),
                 t
             );
-        }, [E, o]),
-        A = E
-            ? g.intl.format(g.t["1q5aTp"], { helpArticle: d.Z.getArticleURL(T.BhN.NOISE_SUPPRESSION) })
+        }, [T, o]),
+        A = T
+            ? g.intl.format(g.t["1q5aTp"], { helpArticle: d.Z.getArticleURL(I.BhN.NOISE_SUPPRESSION) })
             : g.intl.string(g.t.OWKjw5);
     return (0, i.jsxs)(s.Kqy, {
         direction: "vertical",
@@ -76,11 +76,11 @@ function A() {
                 onChange: t,
                 options: O,
             }),
-            E && (0, i.jsx)(N, {}),
+            T && (0, i.jsx)(N, {}),
         ],
     });
 }
-let f = (0, o.ON)(S.n.VOICE_NOISE_SUPPRESSION_SETTING, {
+let f = (0, o.ON)(E.n.VOICE_NOISE_SUPPRESSION_SETTING, {
     useSearchTerms: () => [g.intl.string(g.t.t8Qhib), g.intl.string(g.t.hmfkCi)],
     usePredicate: function () {
         return (0, r.e7)([c.Z], () => c.Z.isInputProfileCustom() && c.Z.isNoiseSuppressionSupported());

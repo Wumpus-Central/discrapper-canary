@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(402113),
     y = n(800965),
     O = n(592125),
-    j = n(271383),
-    x = n(944486),
+    x = n(271383),
+    j = n(944486),
     v = n(594174),
     C = n(585483),
     I = n(51144),
@@ -90,13 +90,13 @@ function V(e) {
             : ((e = Math.min(es.height * k.I0)) > es.width && (t = (e = es.width) / k.I0), (ed = (es.width - e) / 2));
     }
     let eh = J.get(null != (l = null == Y ? void 0 : Y.id) ? l : ""),
-        ef = (0, s.e7)([x.Z], () => x.Z.getChannelId()),
-        eg = (0, s.Wu)([j.ZP], () => {
+        ef = (0, s.e7)([j.Z], () => j.Z.getChannelId()),
+        eg = (0, s.Wu)([x.ZP], () => {
             var e;
             return null == Q
                 ? []
                 : Array.from(null != (e = null == eh ? void 0 : eh.embeddedActivity.userIds) ? e : []).map((e) =>
-                      j.ZP.getMember(Q.guild_id, e),
+                      x.ZP.getMember(Q.guild_id, e),
                   );
         }, [eh, Q]),
         em = i.useMemo(() => {

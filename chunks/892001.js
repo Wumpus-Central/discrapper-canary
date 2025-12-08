@@ -12,7 +12,7 @@ var r = n(481060),
     c = n(594174),
     u = n(9161),
     d = n(484459);
-let f = (0, r.pxk)(r.EFr.SIZE_120),
+let f = (0, r.dcp)(r.EFr.SIZE_120),
     p = new s.Z("UserProfileModalActionCreators"),
     _ = async (e) => {
         let t = l.default.getId() === e,

@@ -10,14 +10,14 @@ var r = n(54381),
     i = n(793030),
     l = n(442837),
     c = n(28664),
-    d = n(780384),
-    u = n(481060),
+    u = n(780384),
+    d = n(481060),
     p = n(607070),
     m = n(210887),
-    g = n(617136),
-    f = n(915750),
-    h = n(49436),
-    x = n(968843),
+    f = n(617136),
+    g = n(915750),
+    x = n(49436),
+    h = n(968843),
     _ = n(475595),
     b = n(387745),
     j = n(254579),
@@ -30,9 +30,9 @@ function S(e) {
     var t;
     let { quest: n, errorHints: o, transitionState: v, onClose: S, sourceQuestContent: w } = e,
         [P, N] = (0, s.useState)(o),
-        R = (0, x.KX)(),
-        A = (0, g.O5)(),
-        B = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
+        R = (0, h.KX)(),
+        A = (0, f.O5)(),
+        B = null == (t = (0, g.WD)()) ? void 0 : t.getId(),
         k = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
         I = (0, C.g2)({
             useReducedMotion: k,
@@ -40,16 +40,16 @@ function S(e) {
         }),
         D = P.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
         q = (0, j.Bz)(n),
-        L = (0, l.e7)([m.Z], () => m.Z.getState().theme),
-        Q = (0, d.wj)(L) ? y.BR.DARK : y.BR.LIGHT,
-        { startConsoleQuest: V, startingConsoleQuest: M } = (0, x.GI)({
+        Q = (0, l.e7)([m.Z], () => m.Z.getState().theme),
+        L = (0, u.wj)(Q) ? y.BR.DARK : y.BR.LIGHT,
+        { startConsoleQuest: V, startingConsoleQuest: M } = (0, h.GI)({
             questId: n.id,
             beforeRequest: () => {
                 I.startAnimation(),
                     A({
                         questId: n.id,
-                        questContent: h.jn.CONNECTIONS_MODAL,
-                        questContentCTA: g.jZ.DEFIBRILLATOR,
+                        questContent: x.jn.CONNECTIONS_MODAL,
+                        questContentCTA: f.jZ.DEFIBRILLATOR,
                         sourceQuestContent: w,
                     });
             },
@@ -70,8 +70,8 @@ function S(e) {
                     (0, b.V$)(
                         { quest: n },
                         {
-                            content: h.jn.CONNECTIONS_MODAL,
-                            ctaContent: g.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
+                            content: x.jn.CONNECTIONS_MODAL,
+                            ctaContent: f.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
                             impressionId: B,
                             sourceQuestContent: w,
                         },
@@ -89,17 +89,17 @@ function S(e) {
                 (0, r.jsxs)("div", {
                     className: O.contentHeader,
                     children: [
-                        (0, r.jsx)(u.Text, {
+                        (0, r.jsx)(d.Text, {
                             variant: "eyebrow",
                             color: "text-default",
                             children: E.intl.string(E.t["+/hZM/"]),
                         }),
-                        (0, r.jsxs)(u.P3F, {
+                        (0, r.jsxs)(d.P3F, {
                             className: a()(O.refreshWrapper, { [O.disabled]: M }),
                             onClick: V,
                             children: [
                                 I.render(),
-                                (0, r.jsx)(u.Text, {
+                                (0, r.jsx)(d.Text, {
                                     variant: "text-sm/medium",
                                     color: "currentColor",
                                     className: O.colorTransition,
@@ -113,11 +113,11 @@ function S(e) {
                     className: O.accountsWrapper,
                     children: [
                         (0, r.jsx)(T, {
-                            icon: (0, r.jsx)(u.pzj, { size: "sm" }),
+                            icon: (0, r.jsx)(d.pzj, { size: "sm" }),
                             text: E.intl.string(E.t.br3uIi),
                         }),
                         (0, r.jsx)(T, {
-                            icon: (0, r.jsx)(u.iWm, { size: "sm" }),
+                            icon: (0, r.jsx)(d.iWm, { size: "sm" }),
                             text: E.intl.string(E.t.XF4wuA),
                             errors: q ? void 0 : D.map((e) => e.message),
                             gameTile: q
@@ -126,11 +126,11 @@ function S(e) {
                                       __unsupportedReactNodeAsText: (0, r.jsxs)("div", {
                                           className: O.tooltip,
                                           children: [
-                                              (0, r.jsx)(u.Text, {
+                                              (0, r.jsx)(d.Text, {
                                                   variant: "text-sm/medium",
                                                   children: n.config.messages.gameTitle,
                                               }),
-                                              (0, r.jsx)(u.Text, {
+                                              (0, r.jsx)(d.Text, {
                                                   variant: "text-xs/normal",
                                                   color: "text-muted",
                                                   children: E.intl.string(E.t.STpNEC),
@@ -140,7 +140,7 @@ function S(e) {
                                       children: (0, r.jsx)("img", {
                                           className: O.gameTile,
                                           alt: n.config.messages.gameTitle,
-                                          src: (0, _.fh)(n, _.eC.GAME_TILE, Q).url,
+                                          src: (0, _.fh)(n, _.eC.GAME_TILE, L).url,
                                       }),
                                   })
                                 : null,
@@ -154,7 +154,7 @@ function S(e) {
 function T(e) {
     let { icon: t, text: n, errors: s = [], gameTile: o } = e,
         i = s.length > 0,
-        l = i ? u._3e : u.B_b;
+        l = i ? d._3e : d.B_b;
     return (0, r.jsxs)("div", {
         className: O.connectionRow,
         children: [
@@ -165,7 +165,7 @@ function T(e) {
                         className: O.connectionRowHeaderContent,
                         children: [
                             t,
-                            (0, r.jsx)(u.Text, {
+                            (0, r.jsx)(d.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
                                 children: n,
@@ -196,12 +196,12 @@ function T(e) {
                         {
                             className: O.errorRow,
                             children: [
-                                (0, r.jsx)(u.aNP, {
+                                (0, r.jsx)(d.aNP, {
                                     size: "sm",
                                     color: "currentColor",
                                     className: O.error,
                                 }),
-                                (0, r.jsx)(u.Text, {
+                                (0, r.jsx)(d.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-muted",
                                     children: e,
@@ -216,13 +216,13 @@ function T(e) {
     });
 }
 function w(e) {
-    (0, u.ZDy)(async () => {
+    (0, d.ZDy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
         return function (n) {
             return (0, r.jsx)(v.A, {
                 overrideVisibility: !0,
                 questOrQuests: e.quest,
-                questContent: h.jn.CONNECTIONS_MODAL,
+                questContent: x.jn.CONNECTIONS_MODAL,
                 sourceQuestContent: e.sourceQuestContent,
                 children: () =>
                     (0, r.jsx)(

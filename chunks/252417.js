@@ -16,7 +16,7 @@ var r = n(54381),
     b = n(671955),
     _ = n(777267);
 let y = o.EFr.SIZE_40,
-    O = (0, o.pxk)(y);
+    O = (0, o.dcp)(y);
 function v(e) {
     let { user: t, status: v, guildId: j, channelId: x, onSelect: C } = e,
         { theme: E, themeType: S } = (0, g.z)(),

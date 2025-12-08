@@ -3,34 +3,34 @@ var r = n(54381);
 n(473749);
 var l = n(120356),
     i = n.n(l),
-    a = n(87290),
+    s = n(87290),
     o = n(381585),
-    s = n(953528),
+    a = n(953528),
     c = n(788822),
     u = n(388032),
     d = n(310582);
-let f = (e) => {
+let g = (e) => {
         let { handleTransition: t, featuredBlockRecord: n } = e,
-            l = (0, s.QH)("collectibles_featured_block");
+            l = (0, a.QH)("collectibles_featured_block");
         return (0, r.jsx)("div", {
             className: i()(d.col2, d.centeredSection),
             children:
                 null == n
                     ? void 0
                     : n.subblocks.map((e, n) => {
-                          if (e.type === a.O.CATEGORY) {
+                          if (e.type === s.O.CATEGORY) {
                               let i =
                                   null != e.unpublishedAt
                                       ? u.intl.string(u.t["h/uBCR"])
                                       : ((e) => {
                                               switch (l) {
-                                                  case s.pj.NO_BADGE:
+                                                  case a.pj.NO_BADGE:
                                                       return !1;
-                                                  case s.pj.FIRST_BLOCK_ONLY:
+                                                  case a.pj.FIRST_BLOCK_ONLY:
                                                       return 0 === e;
-                                                  case s.pj.RIGHT_BLOCK_ONLY:
+                                                  case a.pj.RIGHT_BLOCK_ONLY:
                                                       return 1 === e;
-                                                  case s.pj.BOTH_BLOCKS:
+                                                  case a.pj.BOTH_BLOCKS:
                                                       return !0;
                                                   default:
                                                       return !1;
@@ -64,41 +64,41 @@ let f = (e) => {
                       }),
         });
     },
-    g = (e) => {
+    f = (e) => {
         let { handleTransition: t, categories: n } = e,
-            l = (0, s.QH)("collectibles_featured_block");
+            l = (0, a.QH)("collectibles_featured_block");
         if (null == n || n.length < 2) return null;
-        let [a, f] = n,
-            g =
-                (null == a ? void 0 : a.unpublishedAt) != null
+        let [s, g] = n,
+            f =
+                (null == s ? void 0 : s.unpublishedAt) != null
                     ? u.intl.string(u.t["h/uBCR"])
                     : (() => {
                             switch (l) {
-                                case s.pj.FIRST_BLOCK_ONLY:
-                                case s.pj.BOTH_BLOCKS:
+                                case a.pj.FIRST_BLOCK_ONLY:
+                                case a.pj.BOTH_BLOCKS:
                                     return !0;
                                 default:
                                     return !1;
                             }
                         })() &&
-                        (null == a ? void 0 : a.storeListingId) != null &&
-                        "" !== a.storeListingId
+                        (null == s ? void 0 : s.storeListingId) != null &&
+                        "" !== s.storeListingId
                       ? u.intl.string(u.t.soka7y)
                       : void 0,
             p =
-                (null == f ? void 0 : f.unpublishedAt) != null
+                (null == g ? void 0 : g.unpublishedAt) != null
                     ? u.intl.string(u.t["h/uBCR"])
                     : (() => {
                             switch (l) {
-                                case s.pj.RIGHT_BLOCK_ONLY:
-                                case s.pj.BOTH_BLOCKS:
+                                case a.pj.RIGHT_BLOCK_ONLY:
+                                case a.pj.BOTH_BLOCKS:
                                     return !0;
                                 default:
                                     return !1;
                             }
                         })() &&
-                        (null == f ? void 0 : f.storeListingId) != null &&
-                        "" !== f.storeListingId
+                        (null == g ? void 0 : g.storeListingId) != null &&
+                        "" !== g.storeListingId
                       ? u.intl.string(u.t.soka7y)
                       : u.intl.string(u.t["o/oRJB"]);
         return (0, r.jsx)("div", {
@@ -106,20 +106,20 @@ let f = (e) => {
             children: (0, r.jsxs)(o.k0, {
                 newValue: {
                     categoryPosition: 1,
-                    pageCategory: null != a ? a.name : null == f ? void 0 : f.name,
+                    pageCategory: null != s ? s.name : null == g ? void 0 : g.name,
                     pageSection: "featured_block",
-                    tilePosition: +(null == a),
+                    tilePosition: +(null == s),
                 },
                 children: [
-                    null != a &&
+                    null != s &&
                         (0, r.jsx)(c.q, {
-                            category: a,
-                            badgeText: g,
+                            category: s,
+                            badgeText: f,
                             handleTransition: t,
                         }),
-                    null != f &&
+                    null != g &&
                         (0, r.jsx)(c.q, {
-                            category: f,
+                            category: g,
                             badgeText: p,
                             handleTransition: t,
                         }),
@@ -128,7 +128,7 @@ let f = (e) => {
         });
     },
     p = (e) => {
-        let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: a } = e;
+        let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: s } = e;
         return t
             ? (0, r.jsxs)("div", {
                   className: i()(d.col2, d.centeredSection),
@@ -143,13 +143,13 @@ let f = (e) => {
                       }),
                   ],
               })
-            : null != a
-              ? (0, r.jsx)(f, {
-                    featuredBlockRecord: a,
+            : null != s
+              ? (0, r.jsx)(g, {
+                    featuredBlockRecord: s,
                     handleTransition: n,
                     isLoading: !1,
                 })
-              : (0, r.jsx)(g, {
+              : (0, r.jsx)(f, {
                     categories: l,
                     handleTransition: n,
                     isLoading: !1,

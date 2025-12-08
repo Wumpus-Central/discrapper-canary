@@ -1,4 +1,4 @@
-n.d(e, { w: () => E });
+n.d(e, { w: () => T });
 var i = n(54381),
     l = n(657707),
     s = n(509613),
@@ -14,7 +14,7 @@ let c = (0, s.x1)(r.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANE, {
         useTitle: () => o.intl.string(o.t["+CbP2v"]),
         buildLayout: () => [c],
     }),
-    E = (0, s.m7)(r.n.PREMIUM_GUILD_SUBSCRIPTIONS_SIDEBAR_ITEM, {
+    T = (0, s.m7)(r.n.PREMIUM_GUILD_SUBSCRIPTIONS_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t["+CbP2v"]),
         getLegacySearchKey: () => a.s6.GUILD_BOOSTING,
         icon: l.Ucv,

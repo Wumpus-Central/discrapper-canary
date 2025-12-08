@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(54381),
     r = n(473749),
     l = n(120356),
-    a = n.n(l),
-    o = n(399606),
+    o = n.n(l),
+    a = n(399606),
     s = n(46973),
     u = n(481060),
     c = n(846027),
@@ -17,12 +17,12 @@ var i = n(54381),
     f = n(414910),
     m = n(598006),
     g = n(194082),
-    y = n(569545),
-    O = n(871118),
+    O = n(569545),
+    y = n(871118),
     E = n(172751),
     v = n(728285),
-    S = n(352978),
-    b = n(833519),
+    b = n(352978),
+    S = n(833519),
     x = n(839662),
     j = n(199902),
     I = n(314897),
@@ -112,7 +112,7 @@ function M(e) {
                     className: D.controlAction,
                     onClick: (e) => {
                         null == n || n(),
-                            (0, p.g)((0, y.V9)(t.stream), !1),
+                            (0, p.g)((0, O.V9)(t.stream), !1),
                             e.stopPropagation(),
                             (0, w.Ws)(P.Odu.GO_LIVE, {
                                 type: w.Qu.SCREEN_SHARE,
@@ -132,12 +132,12 @@ function M(e) {
 function V(e) {
     let { participant: t } = e,
         n = t.user.id,
-        l = (0, o.e7)([C.Z], () => {
+        l = (0, a.e7)([C.Z], () => {
             let e = (0, f.Z)(t.type);
             return C.Z.isLocalMute(t.user.id, e);
         }, [t]),
-        a = (0, o.e7)([I.default], () => I.default.getId()),
-        { hasVideo: d } = (0, x.Z)(t, a),
+        o = (0, a.e7)([I.default], () => I.default.getId()),
+        { hasVideo: d } = (0, x.Z)(t, o),
         h = l && d,
         p = r.useCallback(() => {
             c.Z.toggleLocalMute(n, s.Yn.STREAM);
@@ -203,7 +203,7 @@ function U(e) {
     let { hasActiveStream: t, participant: n, onEnablePin: r } = e,
         l = (0, v.bp)(),
         s = n.user,
-        c = (0, o.e7)([Z.default], () => {
+        c = (0, a.e7)([Z.default], () => {
             var e;
             return null != (e = Z.default.getUser(s.id)) ? e : s;
         }, [s]),
@@ -211,7 +211,7 @@ function U(e) {
         { enabled: h } = (0, T.aq)("GoLiveTile");
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { className: a()(D.controlBackground, { [D.controlsWithActiveStream]: t }) }),
+            (0, i.jsx)("div", { className: o()(D.controlBackground, { [D.controlsWithActiveStream]: t }) }),
             !t &&
                 (0, i.jsx)("div", {
                     className: D.watchActionContainer,
@@ -319,8 +319,8 @@ function U(e) {
 }
 let W = new Set([P.jm8.ENDED, P.jm8.FAILED, P.jm8.PAUSED]),
     G = r.memo(function (e) {
-        let { participant: t, width: n, locked: r, widgetId: l, pinned: a } = e,
-            s = (0, o.e7)([j.Z], () => j.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [
+        let { participant: t, width: n, locked: r, widgetId: l, pinned: o } = e,
+            s = (0, a.e7)([j.Z], () => j.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [
                 t.user.id,
                 t.stream.guildId,
             ]),
@@ -328,7 +328,7 @@ let W = new Set([P.jm8.ENDED, P.jm8.FAILED, P.jm8.PAUSED]),
             d = null != s && W.has(s.state),
             p = null != s,
             f = (0, _.yA)(t.stream),
-            y = (0, _.xN)(t.stream);
+            O = (0, _.xN)(t.stream);
         return (!p && r) || d
             ? null
             : (0, i.jsxs)("div", {
@@ -351,10 +351,10 @@ let W = new Set([P.jm8.ENDED, P.jm8.FAILED, P.jm8.PAUSED]),
                                     onContextMenu: z(t, c),
                                     className: D.streamTile,
                                     style: { transform: "scale(".concat(f, ")") },
-                                    children: (0, i.jsx)(b.Z, {
+                                    children: (0, i.jsx)(S.Z, {
                                         participant: t,
                                         width: n,
-                                        fit: null != y ? y : S.L.CONTAIN,
+                                        fit: null != O ? O : b.L.CONTAIN,
                                         popoutType: m.P.OVERLAY,
                                         focused: !r,
                                         selected: !1,
@@ -364,7 +364,7 @@ let W = new Set([P.jm8.ENDED, P.jm8.FAILED, P.jm8.PAUSED]),
                             })
                           : (0, i.jsx)("div", {
                                 className: D.streamPreview,
-                                children: (0, i.jsx)(O.Z, {
+                                children: (0, i.jsx)(y.Z, {
                                     noText: !0,
                                     className: D.absoluteFill,
                                     stream: t.stream,
@@ -376,7 +376,7 @@ let W = new Set([P.jm8.ENDED, P.jm8.FAILED, P.jm8.PAUSED]),
                                 participant: t,
                                 hasActiveStream: p,
                                 onEnablePin: () => {
-                                    a || (0, h.xh)(l);
+                                    o || (0, h.xh)(l);
                                 },
                             }),
                   ],

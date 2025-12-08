@@ -8,8 +8,8 @@ var r,
     c = n(481060),
     u = n(239091),
     d = n(358221),
-    h = n(43267),
-    f = n(933557),
+    f = n(43267),
+    h = n(933557),
     p = n(266076),
     g = n(199902),
     m = n(19780),
@@ -147,7 +147,7 @@ class M extends (r = l.PureComponent) {
     getChannelIcon() {
         let { channel: e } = this.props,
             t = e.type === P.d4z.DM ? y.default.getUser(e.getRecipientId()) : null;
-        return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
+        return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, f.x)(e);
     }
     render() {
         let {
@@ -160,8 +160,8 @@ class M extends (r = l.PureComponent) {
                 stream: s,
                 isCurrentUserInThisDMCall: u,
                 unread: d,
-                treeItemProps: h,
-                statusIndicatorsEnabled: f,
+                treeItemProps: f,
+                statusIndicatorsEnabled: h,
             } = this.props,
             { hovered: g, animating: m } = this.state,
             b = e.isMultiUserDM() && null == e.icon,
@@ -193,7 +193,7 @@ class M extends (r = l.PureComponent) {
                                   })
                                 : void 0,
                         },
-                        h,
+                        f,
                     ),
                 ),
             y = (0, i.jsx)(c.aRk, {
@@ -209,7 +209,7 @@ class M extends (r = l.PureComponent) {
                 lowerBadgeSize: { width: (0, c.OVM)(r) },
                 children: _(),
             }),
-            O = f
+            O = h
                 ? (0, i.jsx)(C.Z, {
                       channel: e,
                       children: y,
@@ -288,11 +288,11 @@ w(M, "defaultProps", {
 });
 let L = l.forwardRef(function (e, t) {
     let n = e.channel.id,
-        r = (0, f.ZP)(e.channel),
+        r = (0, h.ZP)(e.channel),
         l = (0, a.Ie)(n, 2),
         o = (0, s.e7)([m.Z], () => m.Z.getChannelId(), []),
         u = (0, s.e7)([d.Z], () => d.Z.getMode(n), [n]),
-        h = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
+        f = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
         p = (0, s.e7)([O.ZP], () => O.ZP.getVoiceStatesForChannel(e.channel).length > 0, [e.channel]),
         y = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
         v = (0, s.e7)([b.ZP], () => b.ZP.getMentionCount(n), [n]),
@@ -312,7 +312,7 @@ let L = l.forwardRef(function (e, t) {
             badge: v,
             audio: E,
             video: S,
-            stream: h,
+            stream: f,
             isCurrentUserInThisDMCall: C,
             size: I,
             treeItemProps: l,

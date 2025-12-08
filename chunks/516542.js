@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(904245),
-    a = n(13245),
-    o = n(45114),
+    o = n(13245),
+    a = n(45114),
     s = n(493773),
     u = n(655687),
     c = n(541716),
@@ -13,19 +13,19 @@ var i = n(54381),
     f = n(849522),
     m = n(610394),
     g = n(981631),
-    y = n(959517),
-    O = n(572985);
+    O = n(959517),
+    y = n(572985);
 function E(e) {
     let { id: t, replyToMessageId: n, channel: E, onSend: v } = e,
-        S = (0, f.Z)(),
-        { placeholder: b, accessibilityLabel: x } = (0, u.Z)({ channel: E }),
+        b = (0, f.Z)(),
+        { placeholder: S, accessibilityLabel: x } = (0, u.Z)({ channel: E }),
         [j, I] = r.useState(() => (0, d.H2)()),
         { textValue: C, richValue: Z } = j,
         [N, w] = r.useState(!1),
         T = r.useCallback(() => w(!0), []),
         _ = r.useCallback(() => w(!1), []);
     (0, s.ZP)(() => {
-        (0, o.ack)(
+        (0, a.ack)(
             E.id,
             {
                 section: g.jXE.OVERLAY,
@@ -45,30 +45,30 @@ function E(e) {
         }, []),
         A = r.useCallback(
             (e) => {
-                "Escape" === e.key && a.Z.updateNotificationStatus(t, g._1z.ACTIVE);
+                "Escape" === e.key && o.Z.updateNotificationStatus(t, g._1z.ACTIVE);
             },
             [t],
         ),
         D = r.useCallback(
             () => (
-                C.length > S ||
-                    (l.Z.sendMessage(E.id, p.ZP.parse(E, C), !1, { location: y.dy.OVERLAY }),
-                    a.Z.setInputLocked(!0, m.Z.getTargetPID()),
-                    a.Z.updateNotificationStatus(t, g._1z.DISMISSED),
+                C.length > b ||
+                    (l.Z.sendMessage(E.id, p.ZP.parse(E, C), !1, { location: O.dy.OVERLAY }),
+                    o.Z.setInputLocked(!0, m.Z.getTargetPID()),
+                    o.Z.updateNotificationStatus(t, g._1z.DISMISSED),
                     null == v || v(C)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0,
                 })
             ),
-            [C, S, E, t, v],
+            [C, b, E, t, v],
         );
     return (0, i.jsx)("div", {
-        className: O.container,
+        className: y.container,
         children: (0, i.jsx)(h.ZP, {
-            innerClassName: O.textArea,
+            innerClassName: y.textArea,
             onChange: P,
-            placeholder: b,
+            placeholder: S,
             accessibilityLabel: x,
             channel: E,
             textValue: C,

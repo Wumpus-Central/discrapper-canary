@@ -9,7 +9,7 @@ var r = n(54381),
     d = n(823748),
     u = n(981631),
     p = n(815523);
-function h(e) {
+function f(e) {
     let { windowKey: t, channel: n } = e;
     return (0, r.jsx)(l.Z, {
         withTitleBar: !0,
@@ -29,7 +29,7 @@ function b(e, t) {
             s.open(
                 "".concat(u.KJ3.CHANNEL_POPOUT, "-").concat(e.id),
                 (t) =>
-                    (0, r.jsx)(h, {
+                    (0, r.jsx)(f, {
                         windowKey: t,
                         channel: e,
                     }),

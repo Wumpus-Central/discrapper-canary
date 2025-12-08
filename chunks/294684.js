@@ -46,8 +46,8 @@ var r = n(98405),
     K = o("String", "fromCodePoint"),
     z = parseInt,
     q = l("".charAt),
-    X = l([].join),
-    Q = l([].push),
+    Q = l([].join),
+    X = l([].push),
     J = l("".replace),
     $ = l([].shift),
     ee = l([].splice),
@@ -110,7 +110,7 @@ var r = n(98405),
                             break;
                         }
                         if (c > 191 || c < 128) break;
-                        Q(s, c), (r += 2), l++;
+                        X(s, c), (r += 2), l++;
                     }
                     if (s.length !== o) {
                         n += ea;
@@ -192,7 +192,7 @@ eh.prototype = {
             for (n = (t = C(e, u)).next; !(r = s(n, t)).done; ) {
                 if ((o = s((a = (i = C(v(r.value))).next), i)).done || (l = s(a, i)).done || !s(a, i).done)
                     throw new H("Expected sequence with length 2");
-                Q(c, {
+                X(c, {
                     key: I(o.value),
                     value: I(l.value),
                 });
@@ -200,7 +200,7 @@ eh.prototype = {
         else
             for (var d in e)
                 b(e, d) &&
-                    Q(c, {
+                    X(c, {
                         key: d,
                         value: I(e[d]),
                     });
@@ -209,14 +209,14 @@ eh.prototype = {
         if (e)
             for (var t, n, r = this.entries, i = et(e, "&"), a = 0; a < i.length; )
                 (t = i[a++]).length &&
-                    Q(r, {
+                    X(r, {
                         key: eu($((n = et(t, "=")))),
-                        value: eu(X(n, "=")),
+                        value: eu(Q(n, "=")),
                     });
     },
     serialize: function () {
-        for (var e, t = this.entries, n = [], r = 0; r < t.length; ) Q(n, e_((e = t[r++]).key) + "=" + e_(e.value));
-        return X(n, "&");
+        for (var e, t = this.entries, n = [], r = 0; r < t.length; ) X(n, e_((e = t[r++]).key) + "=" + e_(e.value));
+        return Q(n, "&");
     },
     update: function () {
         (this.entries.length = 0), this.parseQuery(this.url.query);
@@ -239,7 +239,7 @@ if (
             append: function (e, t) {
                 var n = k(this);
                 R(arguments.length, 2),
-                    Q(n.entries, {
+                    X(n.entries, {
                         key: I(e),
                         value: I(t),
                     }),
@@ -273,7 +273,7 @@ if (
             getAll: function (e) {
                 var t = k(this).entries;
                 R(arguments.length, 1);
-                for (var n = I(e), r = [], i = 0; i < t.length; i++) t[i].key === n && Q(r, t[i].value);
+                for (var n = I(e), r = [], i = 0; i < t.length; i++) t[i].key === n && X(r, t[i].value);
                 return r;
             },
             has: function (e) {
@@ -298,7 +298,7 @@ if (
                 for (var i = r.entries, a = !1, o = I(e), s = I(t), l = 0; l < i.length; l++)
                     (n = i[l]).key === o && (a ? ee(i, l--, 1) : ((a = !0), (n.value = s)));
                 a ||
-                    Q(i, {
+                    X(i, {
                         key: o,
                         value: s,
                     }),

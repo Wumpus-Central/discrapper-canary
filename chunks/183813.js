@@ -1,130 +1,130 @@
-n.d(t, { S: () => _ }), n(388685), n(361932), n(187205);
-var r = n(54381),
-    l = n(473749),
-    a = n(512722),
-    i = n.n(a),
-    o = n(442837),
-    s = n(481060),
+n.d(t, { S: () => O }), n(388685), n(361932), n(187205);
+var l = n(54381),
+    r = n(473749),
+    i = n(512722),
+    a = n.n(i),
+    s = n(442837),
+    o = n(481060),
     u = n(14476),
     c = n(600164),
     d = n(347896),
-    p = n(699758),
-    m = n(858026),
+    m = n(699758),
+    p = n(858026),
     h = n(831895),
     f = n(314404),
-    b = n(594174),
-    g = n(626135),
-    v = n(987209),
-    S = n(563132),
-    x = n(409813),
-    y = n(614277),
-    P = n(981631),
-    j = n(950174);
-function _(e) {
-    var t, n, a, _, O, w;
-    let { handleStepChange: C, handleClose: E } = e,
-        { selectedPlan: k, selectedSkuId: I, step: T } = (0, S.JL)(),
+    g = n(594174),
+    v = n(626135),
+    j = n(987209),
+    y = n(563132),
+    b = n(409813),
+    S = n(614277),
+    x = n(981631),
+    P = n(950174);
+function O(e) {
+    var t, n, i, O, E, I;
+    let { handleStepChange: w, handleClose: T } = e,
+        { selectedPlan: k, selectedSkuId: C, step: N } = (0, y.JL)(),
         {
-            setSelectedGiftingPromotionReward: N,
-            selectedGiftingPromotionReward: M,
-            claimableRewards: R,
+            setSelectedGiftingPromotionReward: M,
+            selectedGiftingPromotionReward: R,
+            claimableRewards: _,
             claimableVariants: A,
-        } = (0, v.wD)(),
+        } = (0, j.wD)(),
         L = (0, d.Z)(),
-        Z = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
-        D = (0, p.ZP)(R, A, M),
-        [B, F] = l.useState(null == D || null == (t = D.defaultHighlightedReward) ? void 0 : t.skuId),
-        [H, G] = l.useState(!1),
-        U = (0, m.Z)({
+        Z = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+        D = (0, m.ZP)(_, A, R),
+        [F, B] = r.useState(null == D || null == (t = D.defaultHighlightedReward) ? void 0 : t.skuId),
+        [G, H] = r.useState(!1),
+        U = (0, p.Z)({
             claimableVariants: A,
-            claimableRewards: R,
+            claimableRewards: _,
             defaultSelection: D,
-            selectedGiftingPromotionReward: M,
-            setSelectedGiftingPromotionReward: N,
-            hasUserMadeSelection: H,
+            selectedGiftingPromotionReward: R,
+            setSelectedGiftingPromotionReward: M,
+            hasUserMadeSelection: G,
         }),
-        z = l.useMemo(() => {
+        z = r.useMemo(() => {
             var e, t;
             if (null == A || 0 === A.length) return null != (e = null == L ? void 0 : L.rewards) ? e : [];
-            let n = null != (t = null == U ? void 0 : U.selectedCategory) ? t : p.KN.Trick;
+            let n = null != (t = null == U ? void 0 : U.selectedCategory) ? t : m.KN.Trick;
             return A.flatMap((e) => {
-                var t, r;
-                return e.variants.length < p.mo
+                var t, l;
+                return e.variants.length < m.mo
                     ? []
                     : ((t = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
-                                  r = Object.keys(n);
+                                  l = Object.keys(n);
                               "function" == typeof Object.getOwnPropertySymbols &&
-                                  (r = r.concat(
+                                  (l = l.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                       }),
                                   )),
-                                  r.forEach(function (t) {
-                                      var r;
-                                      (r = n[t]),
+                                  l.forEach(function (t) {
+                                      var l;
+                                      (l = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
-                                                    value: r,
+                                                    value: l,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0,
                                                 })
-                                              : (e[t] = r);
+                                              : (e[t] = l);
                                   });
                           }
                           return e;
                       })({}, e.variants[n])),
-                      (r = r = { name: e.name }),
+                      (l = l = { name: e.name }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
-                                    var r = Object.getOwnPropertySymbols(e);
-                                    n.push.apply(n, r);
+                                    var l = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, l);
                                 }
                                 return n;
-                            })(Object(r)).forEach(function (e) {
-                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                            })(Object(l)).forEach(function (e) {
+                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(l, e));
                             }),
                       t);
             });
         }, [A, null == L ? void 0 : L.rewards, null == U ? void 0 : U.selectedCategory]);
-    l.useEffect(() => {
+    r.useEffect(() => {
         let e = null == D ? void 0 : D.defaultHighlightedReward;
-        !H && null == M && null != e && null != e && z.some((t) => t.skuId === e.skuId) && (N(e), F(e.skuId));
-    }, [D, H, M, z, N]),
-        i()(null != k, "Expected plan to selected"),
-        i()(null != I, "Expected selectedSkuId"),
-        i()(null != T, "Step should be set");
-    let K = l.useMemo(() => null != B && (null != R ? R : []).some((e) => e.skuId === B), [B, R]),
-        W = l.useMemo(() => null != M && z.some((e) => e.skuId === M.skuId), [z, M]),
-        V = l.useMemo(() => 0 === z.length || null == B || !W || !K, [z, B, K, W]);
-    l.useEffect(() => {
+        !G && null == R && null != e && null != e && z.some((t) => t.skuId === e.skuId) && (M(e), B(e.skuId));
+    }, [D, G, R, z, M]),
+        a()(null != k, "Expected plan to selected"),
+        a()(null != C, "Expected selectedSkuId"),
+        a()(null != N, "Step should be set");
+    let K = r.useMemo(() => null != F && (null != _ ? _ : []).some((e) => e.skuId === F), [F, _]),
+        W = r.useMemo(() => null != R && z.some((e) => e.skuId === R.skuId), [z, R]),
+        V = r.useMemo(() => 0 === z.length || null == F || !W || !K, [z, F, K, W]);
+    r.useEffect(() => {
         if (0 === z.length) {
-            F(void 0), N(void 0);
+            B(void 0), M(void 0);
             return;
         }
-        (K && z.some((e) => e.skuId === B)) || null == B || (F(void 0), N(void 0));
-    }, [z, K, B, N]);
+        (K && z.some((e) => e.skuId === F)) || null == F || (B(void 0), M(void 0));
+    }, [z, K, F, M]);
     let Y = (e) => {
-            N(z.find((t) => t.skuId === e)), F(e), G(!0);
+            M(z.find((t) => t.skuId === e)), B(e), H(!0);
         },
         q = z.map((e) => {
             var t, n;
-            return (0, r.jsx)(
+            return (0, l.jsx)(
                 u.c,
                 {
                     skuId: e.skuId,
                     assetId: e.assetId,
                     productName: null == (t = e.name) ? void 0 : t.call(e),
                     a11yLabel: null == (n = e.a11yLabel) ? void 0 : n.call(e),
-                    claimed: null != R && R.every((t) => t.skuId !== e.skuId),
+                    claimed: null != _ && _.every((t) => t.skuId !== e.skuId),
                     user: Z,
                     onSelect: Y,
-                    selectedSkuId: B,
+                    selectedSkuId: F,
                     category: null == U ? void 0 : U.selectedCategory,
                     type: e.type,
                     palette: e.palette,
@@ -132,21 +132,21 @@ function _(e) {
                 e.skuId,
             );
         }),
-        J = (0, r.jsx)(y.O3, {
-            children: (0, r.jsx)(s.mzw, {
+        J = (0, l.jsx)(S.O3, {
+            children: (0, l.jsx)(o.mzw, {
                 "data-migration-pending": !0,
-                className: j.modalFooter,
-                children: (0, r.jsx)(f.y, {
+                className: P.modalFooter,
+                children: (0, l.jsx)(f.y, {
                     onStepChange: (e) => {
                         null != Z &&
-                            null != M &&
-                            g.default.track(P.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
+                            null != R &&
+                            v.default.track(x.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
                                 user_id: Z.id,
-                                reward_sku_id: M.skuId,
+                                reward_sku_id: R.skuId,
                             }),
-                            C(e);
+                            w(e);
                     },
-                    onBackClick: () => C(x.h8.PLAN_SELECT),
+                    onBackClick: () => w(b.h8.PLAN_SELECT),
                     shouldRenderUpdatedPaymentModal: !0,
                     showBackButton: !0,
                     planOptions: [k.id],
@@ -155,55 +155,55 @@ function _(e) {
                 }),
             }),
         });
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, r.jsxs)(s.xBx, {
+            (0, l.jsxs)(o.xBx, {
                 "data-migration-pending": !0,
-                className: j.modalHeader,
+                className: P.modalHeader,
                 direction: c.Z.Direction.VERTICAL,
                 align: c.Z.Align.START,
                 separator: !1,
                 children: [
-                    (0, r.jsx)(s.Heading, {
+                    (0, l.jsx)(o.Heading, {
                         variant: "heading-lg/semibold",
                         color: "header-primary",
                         children: null == L || null == (n = L.rewardSelection) ? void 0 : n.heading(),
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, l.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        className: j.headerSubtitle,
-                        children: null == L || null == (a = L.rewardSelection) ? void 0 : a.primarySubtitle(),
+                        className: P.headerSubtitle,
+                        children: null == L || null == (i = L.rewardSelection) ? void 0 : i.primarySubtitle(),
                     }),
-                    (null == L || null == (O = L.rewardSelection) || null == (_ = O.secondarySubtitle)
+                    (null == L || null == (E = L.rewardSelection) || null == (O = E.secondarySubtitle)
                         ? void 0
-                        : _.call(O)) != null &&
-                        (0, r.jsx)(s.Text, {
+                        : O.call(E)) != null &&
+                        (0, l.jsx)(o.Text, {
                             variant: "text-md/medium",
                             color: "text-subtle",
-                            children: null == L || null == (w = L.rewardSelection) ? void 0 : w.secondarySubtitle(),
+                            children: null == L || null == (I = L.rewardSelection) ? void 0 : I.secondarySubtitle(),
                         }),
-                    (0, r.jsx)(s.olH, {
+                    (0, l.jsx)(o.olH, {
                         "data-migration-pending": !0,
-                        className: j.closeButton,
-                        onClick: E,
+                        className: P.closeButton,
+                        onClick: T,
                     }),
                 ],
             }),
-            (0, r.jsx)(s.hzk, {
+            (0, l.jsx)(o.hzk, {
                 "data-migration-pending": !0,
-                children: (0, r.jsxs)(s.Kqy, {
+                children: (0, l.jsxs)(o.Kqy, {
                     direction: "vertical",
                     justify: "center",
                     align: "center",
                     children: [
                         (null == U ? void 0 : U.shouldRenderCategoryControl) &&
-                            (0, r.jsx)(h.Z, {
+                            (0, l.jsx)(h.Z, {
                                 defaultCategory: U.selectedCategory,
                                 onCategoryChange: U.setSelectedCategory,
                             }),
-                        (0, r.jsx)("div", {
-                            className: j.giftRewardShopCardsGrid,
+                        (0, l.jsx)("div", {
+                            className: P.giftRewardShopCardsGrid,
                             children: q,
                         }),
                     ],

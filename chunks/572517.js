@@ -1,58 +1,58 @@
 n.d(t, { c: () => h });
-var r = n(54381),
-    l = n(442837),
-    a = n(780384),
-    i = n(481060),
-    o = n(410030),
-    s = n(607070),
-    d = n(987209),
+var l = n(54381),
+    r = n(442837),
+    i = n(780384),
+    a = n(481060),
+    s = n(410030),
+    o = n(607070),
+    u = n(987209),
     c = n(347896),
-    u = n(717401),
-    p = n(897942),
-    m = n(432483);
+    d = n(717401),
+    m = n(897942),
+    p = n(432483);
 function h() {
     var e, t;
-    let n = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
-        h = (0, o.ZP)(),
-        f = (0, a.wj)(h),
-        b = (0, c.Z)(),
-        g = null == b ? void 0 : b.planSelectionBanner,
-        { claimableRewards: v } = (0, d.wD)();
-    if (null == g || null == v) return null;
-    let x = null == (e = g.getBackgroundImageUrl) ? void 0 : e.call(g, f),
-        P = (0, u.Yr)(x),
-        y =
-            null == (t = g.gradientConfig)
+    let n = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
+        h = (0, s.ZP)(),
+        f = (0, i.wj)(h),
+        g = (0, c.Z)(),
+        v = null == g ? void 0 : g.planSelectionBanner,
+        { claimableRewards: j } = (0, u.wD)();
+    if (null == v || null == j) return null;
+    let y = null == (e = v.getBackgroundImageUrl) ? void 0 : e.call(v, f),
+        b = (0, d.Yr)(y),
+        S =
+            null == (t = v.gradientConfig)
                 ? void 0
-                : t.call(g, {
+                : t.call(v, {
                       isDarkMode: f,
                       isAndroid: !1,
                   }),
-        j = (0, u.Tl)(y, {
+        x = (0, d.Tl)(S, {
             colorStops: [0, 12, 100],
         }),
-        S = (0, u.$q)(P, j, {
+        P = (0, d.$q)(b, x, {
             backgroundSize: "cover, auto",
             backgroundPosition: "right center, 0% 0%",
         });
-    return (0, r.jsxs)("div", {
-        className: m.promotionalFooterBanner,
-        style: S,
+    return (0, l.jsxs)("div", {
+        className: p.promotionalFooterBanner,
+        style: P,
         children: [
-            (0, r.jsx)("div", {
-                className: m.avatar,
-                children: (0, r.jsx)(p.Z, {
-                    claimableRewards: v,
-                    maxRewardImageSrc: g.getImageUrl(f, n),
-                    size: i.EFr.SIZE_40,
+            (0, l.jsx)("div", {
+                className: p.avatar,
+                children: (0, l.jsx)(m.Z, {
+                    claimableRewards: j,
+                    maxRewardImageSrc: v.getImageUrl(f, n),
+                    size: a.EFr.SIZE_40,
                     imageScaling: 1.25,
                 }),
             }),
-            (0, r.jsx)(i.Text, {
+            (0, l.jsx)(a.Text, {
                 variant: "text-md/medium",
-                className: m.bannerText,
+                className: p.bannerText,
                 color: "always-white",
-                children: g.desktopBannerText(v.length),
+                children: v.desktopBannerText(j.length),
             }),
         ],
     });

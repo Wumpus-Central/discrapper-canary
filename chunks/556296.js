@@ -178,7 +178,7 @@ let Z = () => {
     K = !1,
     z = [v.kg4.PUSH_TO_TALK, v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET],
     q = [];
-function X(e) {
+function Q(e) {
     switch (e) {
         case D.id:
             return D;
@@ -188,7 +188,7 @@ function X(e) {
             return F[e];
     }
 }
-function Q(e, t) {
+function X(e, t) {
     return (
         !(e.shortcut.length >= t.shortcut.length) &&
         e.shortcut.every((e) => t.shortcut.some((t) => t[0] === e[0] && t[1] === e[1]))
@@ -204,7 +204,7 @@ function J(e, t, n) {
 }
 function $(e, t) {
     var n;
-    let r = X(e);
+    let r = Q(e);
     if (null == r) return;
     let i = null == (n = Y[r.action]) ? void 0 : n.keyEvents;
     if (null == i) return;
@@ -217,8 +217,8 @@ function $(e, t) {
         setTimeout(() => {
             for (let t of q) {
                 if (t === e) continue;
-                let n = X(t);
-                if (null != n && Q(r, n)) {
+                let n = Q(t);
+                if (null != n && X(r, n)) {
                     q.includes(e) && q.splice(q.indexOf(e), 1);
                     return;
                 }

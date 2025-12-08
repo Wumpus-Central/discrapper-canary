@@ -22,7 +22,7 @@ var r = n(54381),
     S = n(736530),
     I = n(981631),
     T = n(388032),
-    A = n(744038);
+    A = n(225753);
 function C(e) {
     let { ingress: t, guildId: n } = e,
         C = (0, h.c_)(),

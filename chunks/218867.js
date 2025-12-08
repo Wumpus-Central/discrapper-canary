@@ -244,7 +244,7 @@ let d = i.memo(
             }),
             [G, I, H, D],
         );
-        let { visibleItems: q, listOffset: X } = i.useMemo(() => {
+        let { visibleItems: q, listOffset: Q } = i.useMemo(() => {
                 if (-1 === D || -1 === R)
                     return {
                         visibleItems: null,
@@ -300,15 +300,15 @@ let d = i.memo(
                     listOffset: r,
                 };
             }, [U, Z, G, B, d, f, p, m, _, R, W, I, h, k, D]),
-            Q = i.useMemo(() => {
+            X = i.useMemo(() => {
                 var e, t, n;
                 return {
-                    top: X,
+                    top: Q,
                     right: null != (e = null == d ? void 0 : d[1]) ? e : 0,
                     bottom: null != (t = null == d ? void 0 : d[2]) ? t : 0,
                     left: null != (n = null == d ? void 0 : d[3]) ? n : 0,
                 };
-            }, [X, d]),
+            }, [Q, d]),
             J = i.useMemo(() => ({ height: H }), [H]),
             $ = A ? s.xVE : s.h21;
         return (0, r.jsxs)($, {
@@ -320,7 +320,7 @@ let d = i.memo(
                 (0, r.jsx)("div", {
                     role: P,
                     className: c.listItems,
-                    style: Q,
+                    style: X,
                     children: q,
                 }),
                 (0, r.jsx)("div", {

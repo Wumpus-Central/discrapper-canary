@@ -6,7 +6,7 @@ var n = r(54381),
     l = r(481060),
     s = r(985002),
     a = r(957656),
-    d = r(744038),
+    d = r(225753),
     u = r(388032),
     f = r(544723);
 let b = (e) => {
@@ -18,13 +18,13 @@ let b = (e) => {
         y = o.useCallback(() => {
             b();
         }, [b]),
-        g = t.nsfwAllowed,
-        { declineLinkRequest: x, isDeclineLoading: O } = (0, s.G)({
+        x = t.nsfwAllowed,
+        { declineLinkRequest: g, isDeclineLoading: O } = (0, s.G)({
             onError: j,
             onSuccess: y,
         });
     return (
-        c()(!g, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
+        c()(!x, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
         (0, n.jsxs)(l.IX, {
             transitionState: i,
             onClose: b,
@@ -64,7 +64,7 @@ let b = (e) => {
                             variant: "critical-primary",
                             text: u.intl.string(d.default.dKxFcn),
                             onClick: () => {
-                                h(!1), x(r.id);
+                                h(!1), g(r.id);
                             },
                             disabled: O,
                             loading: O,

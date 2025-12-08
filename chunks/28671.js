@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(54381),
     i = n(473749),
-    a = n(296009),
-    l = n(28664),
+    l = n(296009),
+    a = n(28664),
     o = n(481060),
     c = n(785717),
     s = n(931847),
@@ -18,7 +18,7 @@ function b(e) {
         y = i.useMemo(
             () =>
                 new s.q({
-                    type: a.l.APPLICATION,
+                    type: l.l.APPLICATION,
                     applicationId: n.id,
                 }),
             [n.id],
@@ -65,7 +65,7 @@ function b(e) {
             content: m.intl.format(m.t.BQySru, { applicationName: n.name }),
             buttons: (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(l.u, {
+                    (0, r.jsx)(a.u, {
                         text: m.intl.string(m.t.WAI6xu),
                         ariaHidden: !0,
                         children: (0, r.jsx)(o.Yd2, {
@@ -78,7 +78,7 @@ function b(e) {
                             },
                         }),
                     }),
-                    (0, r.jsx)(l.u, {
+                    (0, r.jsx)(a.u, {
                         text: m.intl.string(m.t["lBG2s/"]),
                         ariaHidden: !0,
                         children: (0, r.jsx)(o.Yd2, {

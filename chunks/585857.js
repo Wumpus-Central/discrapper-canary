@@ -1,4 +1,4 @@
-n.d(t, { Q: () => g });
+n.d(t, { Q: () => f });
 var r = n(54381);
 n(473749);
 var s = n(481060),
@@ -7,19 +7,19 @@ var s = n(481060),
     i = n(617136),
     l = n(49436),
     c = n(981631),
-    d = n(388032),
-    u = n(39625);
+    u = n(388032),
+    d = n(39625);
 function p(e) {
-    let { text: t, quest: n, sourceQuestContent: d } = e,
+    let { text: t, quest: n, sourceQuestContent: u } = e,
         p = (0, i.O5)();
     return (0, r.jsx)(s.P3F, {
-        className: u.showConnectionsButton,
+        className: d.showConnectionsButton,
         onClick: () => {
             p({
                 questId: n.id,
                 questContent: l.jn.QUEST_BAR_V2,
                 questContentCTA: i.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                sourceQuestContent: d,
+                sourceQuestContent: u,
             }),
                 (0, a.openUserSettings)(o.n.CONNECTIONS_PANEL, { section: c.oAB.CONNECTIONS });
         },
@@ -35,19 +35,19 @@ function m(e) {
     let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: s } = e;
     return t.length > 0
         ? (0, r.jsx)(p, {
-              text: d.intl.string(d.t["qiS+xj"]),
+              text: u.intl.string(u.t["qiS+xj"]),
               quest: n,
               sourceQuestContent: s,
           })
         : null;
 }
-function g(e) {
+function f(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.Text, {
                 color: "text-muted",
                 variant: "text-xs/medium",
-                children: d.intl.string(d.t.EJFSvD),
+                children: u.intl.string(u.t.EJFSvD),
             }),
             (0, r.jsx)(
                 m,

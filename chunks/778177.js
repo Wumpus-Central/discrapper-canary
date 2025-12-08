@@ -125,7 +125,7 @@ function q(e) {
         t
     );
 }
-let X = (e, t, n) => {
+let Q = (e, t, n) => {
         var i, a, o;
         let { user: s, text: l } = n;
         if (null == s) return (0, r.jsx)("strong", { children: l });
@@ -169,7 +169,7 @@ let X = (e, t, n) => {
             ),
         ];
     },
-    Q = (e, t, n) => {
+    X = (e, t, n) => {
         let { channel: i, text: a } = n;
         return null == i
             ? (0, r.jsx)("strong", { children: a })
@@ -239,10 +239,10 @@ let X = (e, t, n) => {
             J,
             H(F({}, e), {
                 className: Z.user,
-                renderResult: X,
+                renderResult: Q,
             }),
         ),
-    ee = (e) => (0, r.jsx)(J, H(F({}, e), { renderResult: Q }));
+    ee = (e) => (0, r.jsx)(J, H(F({}, e), { renderResult: X }));
 function et(e) {
     return (0, R.kG)(e).map((e, t, n) => ((0, R.Fr)(e, n[t + 1]) ? e : new E.WU(e.getFullMatch(), E.Xe)));
 }

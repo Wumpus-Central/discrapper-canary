@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(54381),
     i = n(473749),
-    a = n(785717),
-    l = n(86419),
+    l = n(785717),
+    a = n(86419),
     o = n(206599),
     c = n(141014),
     s = n(977416);
@@ -17,26 +17,26 @@ function u(e) {
                     var n,
                         r,
                         i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["widgetType"]);
     let { games: u, onAddGame: d } = (0, o.K)(t),
         { setExpanded: f } = (0, c.g)(),
-        { trackUserProfileEditAction: g } = (0, a.KZ)(),
+        { trackUserProfileEditAction: g } = (0, l.KZ)(),
         p = i.useCallback(
             (e, n, r) => {
                 d(e),
                     f(!0),
-                    (0, l.ES)(t, {
+                    (0, a.ES)(t, {
                         applicationId: e,
                         gameName: n,
                         imageSrc: r,

@@ -1,4 +1,4 @@
-n.d(e, { q: () => S });
+n.d(e, { q: () => E });
 var i = n(54381),
     l = n(657707),
     s = n(509613),
@@ -11,14 +11,14 @@ let d = (0, s.x1)(r.n.REGISTERED_GAMES_PANE, {
         render: () => (0, i.jsx)(u.Z, {}),
         buildLayout: () => [],
     }),
-    E = (0, s.wf)(r.n.REGISTERED_GAMES_PANEL, {
+    T = (0, s.wf)(r.n.REGISTERED_GAMES_PANEL, {
         useTitle: () => c.intl.string(c.t.AVDyEj),
         buildLayout: () => [d],
     }),
-    S = (0, s.m7)(r.n.REGISTERED_GAMES_SIDEBAR_ITEM, {
+    E = (0, s.m7)(r.n.REGISTERED_GAMES_SIDEBAR_ITEM, {
         useTitle: () => c.intl.string(c.t.AVDyEj),
         getLegacySearchKey: () => o.s6.REGISTERED_GAMES,
         icon: l.iWm,
         usePredicate: a.Jw,
-        buildLayout: () => [E],
+        buildLayout: () => [T],
     });

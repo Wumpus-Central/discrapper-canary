@@ -1,7 +1,7 @@
 n.d(t, { Z: () => g });
 var r = n(54381),
-    a = n(473749),
-    i = n(793030),
+    i = n(473749),
+    a = n(793030),
     l = n(442837),
     s = n(445986),
     o = n(9807),
@@ -14,7 +14,7 @@ var r = n(54381),
 function g(e) {
     let { application: t, carouselItems: n } = e,
         g = (0, l.e7)([d.Z], () => d.Z.isFocused()),
-        _ = (0, r.jsxs)(r.Fragment, {
+        f = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("img", {
                     className: m.errorImage,
@@ -22,7 +22,7 @@ function g(e) {
                     "aria-hidden": !0,
                     alt: "",
                 }),
-                (0, r.jsx)(i.X6q, {
+                (0, r.jsx)(a.X6q, {
                     variant: "heading-xl/semibold",
                     children: p.intl.string(p.t.UvDfMz),
                 }),
@@ -35,13 +35,13 @@ function g(e) {
             name: t.name,
         });
     });
-    let f = a.useCallback(
+    let _ = i.useCallback(
         (e, t) => {
             if (e.type === u.s9s.IMG) {
                 let t = n.filter((e) => e.type === u.s9s.IMG),
                     r = t.findIndex((t) => t === e);
                 if (r < 0) return;
-                let a = t.map((e) => ({
+                let i = t.map((e) => ({
                     url: (0, s.Q)(e.src),
                     original: e.src,
                     width: e.width,
@@ -49,7 +49,7 @@ function g(e) {
                     type: "IMAGE",
                 }));
                 (0, c.K)({
-                    items: a,
+                    items: i,
                     startingIndex: r,
                     shouldHideMediaOptions: !0,
                     location: "GlobalDiscoveryAppsDetailCarousel",
@@ -67,7 +67,7 @@ function g(e) {
               autoplayInterval: 8000,
               paused: !g,
               videoAutoPlay: !0,
-              onCurrentItemClick: f,
-              errorComponent: _,
+              onCurrentItemClick: _,
+              errorComponent: f,
           });
 }

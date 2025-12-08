@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(54381);
 n(473749);
 var i = n(442837),
-    a = n(454399),
-    l = n(28664),
+    l = n(454399),
+    a = n(28664),
     o = n(602733),
     c = n(689201),
     s = n(594174),
@@ -33,7 +33,7 @@ function g(e) {
                           ? (0, r.jsx)(
                                 "li",
                                 {
-                                    children: (0, r.jsx)(l.u, {
+                                    children: (0, r.jsx)(a.u, {
                                         text: s.title,
                                         position: "top",
                                         asContainer: !0,
@@ -46,7 +46,7 @@ function g(e) {
                           : (0, r.jsx)(
                                 "li",
                                 {
-                                    children: (0, r.jsx)(a.i, {
+                                    children: (0, r.jsx)(l.i, {
                                         title: s.title,
                                         body: null != (c = s.body) ? c : "",
                                         asset: null == (i = s.renderIcon) ? void 0 : i.call(s, e),

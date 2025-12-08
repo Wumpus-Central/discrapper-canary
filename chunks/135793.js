@@ -218,7 +218,7 @@ let V = (e) => {
             );
         }, [c]),
         l)
-            ? (0, r.jsx)(X, {})
+            ? (0, r.jsx)(Q, {})
             : null == o
               ? (0, r.jsx)(q, {})
               : (0, r.jsxs)(r.Fragment, {
@@ -470,7 +470,7 @@ let V = (e) => {
                 ],
             }),
         }),
-    X = () =>
+    Q = () =>
         (0, r.jsx)("div", {
             className: w.anomaly,
             children: (0, r.jsx)("div", {

@@ -49,8 +49,8 @@ let f = a.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
                 disabled: A,
                 application: P,
             } = e,
-            { maxAge: M, maxUses: Z, networkError: w, showVanityURL: j, flags: V } = d,
-            O = l.useCallback(() => {
+            { maxAge: M, maxUses: Z, networkError: w, showVanityURL: j, flags: O } = d,
+            V = l.useCallback(() => {
                 h.default.track(m.rMx.COPY_INSTANT_INVITE, {
                     server: c.Z.getGuildId(),
                     channel: null == C ? void 0 : C.id,
@@ -67,13 +67,13 @@ let f = a.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
                 (0, i.jsx)(f, {
                     value: E,
                     autoFocus: a,
-                    onCopy: O,
+                    onCopy: V,
                     disabled: A,
                 }),
                 g &&
                     (0, i.jsx)(u.rsf, {
-                        checked: (0, r.yE)(V, s.$.IS_APPLICATION_BYPASS),
-                        onChange: (e) => y((0, r.mB)(V, s.$.IS_APPLICATION_BYPASS, e)),
+                        checked: (0, r.yE)(O, s.$.IS_APPLICATION_BYPASS),
+                        onChange: (e) => y((0, r.mB)(O, s.$.IS_APPLICATION_BYPASS, e)),
                         disabled: A,
                         label: S.intl.string(S.t["1i1bUl"]),
                         description: S.intl.string(S.t["jvd/LF"]),

@@ -1,10 +1,10 @@
-r.d(t, { Z: () => i });
-var n = r(54381),
-    l = r(473749),
-    o = r(794433);
+n.d(t, { Z: () => i });
+var r = n(54381),
+    l = n(473749),
+    o = n(794433);
 let i = l.forwardRef(function (e, t) {
     let {
-        query: r,
+        query: n,
         onQueryChange: l,
         onRemoveTag: i,
         onSelect: s,
@@ -19,7 +19,7 @@ let i = l.forwardRef(function (e, t) {
         "aria-labelledby": w,
         "aria-controls": f,
     } = e;
-    return (0, n.jsx)(o.Z, {
+    return (0, r.jsx)(o.Z, {
         autoFocus: !0,
         maxHeight: 100,
         onQueryChange: l,
@@ -29,7 +29,7 @@ let i = l.forwardRef(function (e, t) {
         onSelect: s,
         onSelectionChange: a,
         placeholder: 0 === d.length ? x : "",
-        query: r,
+        query: n,
         ref: t,
         size: o.Z.Sizes.MEDIUM,
         tags: d,

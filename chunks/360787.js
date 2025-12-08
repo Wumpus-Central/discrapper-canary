@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(539854);
+n.d(t, { Z: () => C }), n(388685), n(539854);
 var i,
     r,
     l = n(442837),
@@ -40,7 +40,7 @@ class b extends (i = l.ZP.Store) {
           writable: !0,
       })
     : (b[r] = "PresenceSubscriptionsStore");
-let y = new b(o.Z, {
+let C = new b(o.Z, {
     PRESENCE_SUBSCRIPTIONS_ADD: function (e) {
         let { subscription: t } = e,
             n = (function () {

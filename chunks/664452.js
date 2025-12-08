@@ -23,15 +23,15 @@ function O(e) {
         C = !!(null == _ ? void 0 : _.features.has(x.GuildFeatures.INVITES_DISABLED)),
         [N] = r.useState(!1),
         [S, I] = r.useState(h.Fl),
-        E = (0, a.e7)([g.Z], () => g.Z.getGuildIncident(t)),
-        w = (0, m.BT)(_),
-        P = (0, b.SG)(E) || C,
-        T = (0, b.sN)(E),
+        w = (0, a.e7)([g.Z], () => g.Z.getGuildIncident(t)),
+        E = (0, m.BT)(_),
+        P = (0, b.SG)(w) || C,
+        T = (0, b.sN)(w),
         [Z, k] = r.useState(P),
         [A, D] = r.useState(T),
         [R, L] = r.useState(!1),
         M = Z !== P || A !== T || R,
-        U = C && !w;
+        U = C && !E;
     return null == _
         ? (O(), null)
         : (0, i.jsx)(l.Modal, {

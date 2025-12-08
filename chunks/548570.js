@@ -168,8 +168,8 @@ function W(e) {
 function K() {}
 let z = 4,
     q = 1001,
-    X = "Stream end encountered",
-    Q = 4004,
+    Q = "Stream end encountered",
+    X = 4004,
     J = 30 * I.Z.Millis.SECOND,
     $ = 3 * I.Z.Millis.MINUTE,
     ee = +I.Z.Millis.MINUTE;
@@ -432,7 +432,7 @@ class ei extends L.Z {
                 code: t,
                 reason: n,
             }),
-            t === Q)
+            t === X)
         )
             return (
                 (this.connectionState = C.Z.CLOSED),
@@ -462,7 +462,7 @@ class ei extends L.Z {
         (0, T.isIOS)() &&
             null != this.token &&
             e === q &&
-            t === X &&
+            t === Q &&
             ((this.iosGoingAwayEventCount += 1),
             3 === this.iosGoingAwayEventCount &&
                 d.tn
@@ -481,7 +481,7 @@ class ei extends L.Z {
                             401 === t &&
                                 ((this.connectionState = C.Z.CLOSED),
                                 V.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
-                                this._reset(n, Q, "invalid token manually detected")),
+                                this._reset(n, X, "invalid token manually detected")),
                                 v.default.track(U.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                         },
                     ));
@@ -560,7 +560,7 @@ class ei extends L.Z {
     async _doIdentify() {
         (this.seq = 0), (this.sessionId = null);
         let e = this.handleIdentify();
-        if (null === e) return void this._handleClose(!0, Q, "No connection info provided");
+        if (null === e) return void this._handleClose(!0, X, "No connection info provided");
         this.connectionState = C.Z.IDENTIFYING;
         let t = Date.now();
         this.identifyStartTime = t;
@@ -603,7 +603,7 @@ class ei extends L.Z {
     _doFastConnectIdentify() {
         (this.seq = 0), (this.sessionId = null);
         let e = this.handleIdentify();
-        if (null === e) return void this._handleClose(!0, Q, "No connection info provided");
+        if (null === e) return void this._handleClose(!0, X, "No connection info provided");
         let { token: t } = e;
         (this.token = t),
             (this.connectionState = C.Z.IDENTIFYING),

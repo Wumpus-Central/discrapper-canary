@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685), n(642613);
 var a = n(54381),
     l = n(473749),
-    i = n(120356),
-    r = n.n(i),
+    r = n(120356),
+    i = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(665149),
@@ -17,10 +17,10 @@ function f(e, t) {
 }
 function g(e) {
     let { store: t, dataGetter: n } = e,
-        [i, r] = l.useState(n(t));
+        [r, i] = l.useState(n(t));
     return (
         l.useEffect(() => {
-            let e = () => r(n(t));
+            let e = () => i(n(t));
             return (
                 e(),
                 t.addChangeListener(e),
@@ -31,7 +31,7 @@ function g(e) {
         }, [t, n]),
         (0, a.jsx)(o.zJl, {
             className: x.inspectorContainer,
-            children: (0, a.jsx)(d.Z, { data: i }),
+            children: (0, a.jsx)(d.Z, { data: r }),
         })
     );
 }
@@ -82,7 +82,7 @@ let b = [
     ];
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: l, renderSelectedTab: i } = (0, p.ZP)({ tabs: v }, []);
+        { TabBar: l, renderSelectedTab: r } = (0, p.ZP)({ tabs: v }, []);
     return (0, a.jsxs)(u.Z, {
         className: x.subPanel,
         minHeight: 100,
@@ -90,7 +90,7 @@ function j(e) {
         children: [
             (0, a.jsx)(l, {}),
             (0, a.jsxs)(c.ZP, {
-                className: r()(h.headerBar, x.subPanelHeaderBar),
+                className: i()(h.headerBar, x.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(c.ZP.Icon, {
                         icon: o.lO_,
@@ -99,24 +99,24 @@ function j(e) {
                     (0, a.jsx)(c.ZP.Title, { children: t.getName() }),
                 ],
             }),
-            i({ store: t }),
+            r({ store: t }),
         ],
     });
 }
 function _() {
     let e = l.useRef(null),
         [t, n] = l.useState(""),
-        i = s.yh.getAll(),
+        r = s.yh.getAll(),
         c = l
             .useMemo(
                 () =>
-                    i
+                    r
                         .map((e) => ({
                             key: e._dispatchToken,
                             store: e,
                         }))
                         .sort(f),
-                [i],
+                [r],
             )
             .filter((e) =>
                 (function (e, t) {
@@ -125,10 +125,10 @@ function _() {
                 })(e, t),
             ),
         [d, u] = l.useState(),
-        p = i.find((e) => e._dispatchToken === d);
+        p = r.find((e) => e._dispatchToken === d);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: r()(h.panel, x.panel),
+        className: i()(h.panel, x.panel),
         children: [
             (0, a.jsx)("div", {
                 className: x.toolbar,

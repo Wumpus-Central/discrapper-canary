@@ -12,16 +12,16 @@ var r = n(54381),
     h = n(981631),
     f = n(50493),
     g = n(388032),
-    m = n(342153);
+    m = n(864309);
 function b(e) {
     var t, n;
     let { channel: b } = e,
         _ = i.useContext(p.AnalyticsContext),
         y = (0, c.Aq)(),
         O = g.intl.string(m.default["Beo/7v"]),
-        { firstMessage: j } = (0, a.cl)(b),
-        x = null == j || null == (t = j.messageSnapshots) ? void 0 : t[0],
-        v = null == x || null == (n = x.moderatorReport) ? void 0 : n.reported_user_id;
+        { firstMessage: x } = (0, a.cl)(b),
+        j = null == x || null == (t = x.messageSnapshots) ? void 0 : t[0],
+        v = null == j || null == (n = j.moderatorReport) ? void 0 : n.reported_user_id;
     return b.isModeratorReportChannel() && null != v
         ? (0, r.jsx)(o.ZP.Icon, {
               onClick: () => {

@@ -197,7 +197,7 @@ function V(
             let e = _.Z.read(n.PhotoshopSettings.value, i);
             t ? (C.photoshop = e) : (C = (0, r.wB)({}, C, e));
         }
-        if (a.Z.USE_TIFF && a.Z.USE_ICC && n.ICC_Profile && !X(j)) {
+        if (a.Z.USE_TIFF && a.Z.USE_ICC && n.ICC_Profile && !Q(j)) {
             let e = m.Z.read(n.ICC_Profile.value, [
                 {
                     offset: 0,
@@ -209,7 +209,7 @@ function V(
             t ? (C.icc = e) : (C = (0, r.wB)({}, C, e));
         }
         if (a.Z.USE_MAKER_NOTES && n.MakerNote) {
-            if (Q(n)) {
+            if (X(n)) {
                 let a = h.Z.read(e, D, n.MakerNote.__offset, s, i);
                 t ? (C.makerNotes = a) : (C = (0, r.wB)({}, C, a));
             } else if (J(n)) {
@@ -229,7 +229,7 @@ function V(
         let n = p.Z.read(e, L, o);
         t ? (C.xmp = n) : (delete n._raw, (C = (0, r.wB)({}, C, n)));
     }
-    if ((a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_ICC && X(j)) {
+    if ((a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_ICC && Q(j)) {
         A = !0;
         let t = m.Z.read(e, j, n);
         t instanceof Promise ? N.push(t.then(eo)) : eo(t);
@@ -328,10 +328,10 @@ function z(e) {
 function q(e) {
     return Array.isArray(e) && e.length > 0;
 }
-function X(e) {
+function Q(e) {
     return Array.isArray(e) && e.length > 0;
 }
-function Q(e) {
+function X(e) {
     return (
         e.Make &&
         e.Make.value &&

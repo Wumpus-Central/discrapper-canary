@@ -3,15 +3,15 @@ var i = n(54381);
 n(473749);
 var r = n(120356),
     l = n.n(r),
-    a = n(442837),
-    o = n(592125),
+    o = n(442837),
+    a = n(592125),
     s = n(944486),
     u = n(293224),
     c = n(678925);
 function d(e) {
     let { locked: t } = e,
-        n = (0, a.e7)([s.Z], () => s.Z.getVoiceChannelId()),
-        r = (0, a.e7)([o.Z], () => o.Z.getChannel(n)),
+        n = (0, o.e7)([s.Z], () => s.Z.getVoiceChannelId()),
+        r = (0, o.e7)([a.Z], () => a.Z.getChannel(n)),
         d = null != r;
     return (0, i.jsxs)("div", {
         className: l()({

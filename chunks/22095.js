@@ -16,11 +16,11 @@ n.d(t, {
     is: () => x,
     it: () => L,
     lL: () => ee,
-    lx: () => Q,
+    lx: () => X,
     m0: () => M,
     nE: () => V,
     pf: () => B,
-    qm: () => X,
+    qm: () => Q,
     w: () => J,
     wF: () => U,
     xw: () => j,
@@ -43,9 +43,9 @@ var r = n(990547),
     g = n(705006),
     E = n(616022),
     b = n(49436),
-    y = n(509212),
-    O = n(184299),
-    v = n(475595),
+    y = n(184299),
+    O = n(475595),
+    v = n(862657),
     S = n(552943),
     I = n(324805),
     T = n(981631),
@@ -273,10 +273,10 @@ async function G(e, t) {
         questId: e,
     });
     try {
-        let n = (0, y.jY)(t.questContent),
+        let n = (0, v.jY)(t.questContent),
             r = await i.tn.post({
                 url: T.ANM.QUESTS_ENROLL(e),
-                body: R(N({ location: t.questContent }, (0, y.qe)(e, t.questContent)), {
+                body: R(N({ location: t.questContent }, (0, v.qe)(e, t.questContent)), {
                     metadata_raw: null != n ? n : null,
                 }),
                 rejectWithError: !0,
@@ -305,7 +305,7 @@ async function Z(e, t, n) {
             questId: e,
         });
         try {
-            let r = (0, y.jY)(n),
+            let r = (0, v.jY)(n),
                 o = await i.tn.post({
                     url: T.ANM.QUESTS_CLAIM_REWARD(e),
                     body: R(
@@ -314,7 +314,7 @@ async function Z(e, t, n) {
                                 platform: t,
                                 location: n,
                             },
-                            (0, y.qe)(e, n),
+                            (0, v.qe)(e, n),
                         ),
                         { metadata_raw: null != r ? r : null },
                     ),
@@ -377,7 +377,7 @@ async function B(e) {
 }
 async function F(e, t) {
     let n = E.Z.isDismissingContent(e),
-        r = (0, y.GN)(t);
+        r = (0, v.GN)(t);
     if (!n && r) {
         a.Z.dispatch({
             type: "QUESTS_DISMISS_CONTENT_BEGIN",
@@ -387,7 +387,7 @@ async function F(e, t) {
         try {
             let n = await i.tn.post({
                 url: T.ANM.QUESTS_DISMISS_CONTENT(e, t),
-                body: N({}, (0, y.qe)(e, t)),
+                body: N({}, (0, v.qe)(e, t)),
                 rejectWithError: !1,
             });
             a.Z.dispatch({
@@ -503,7 +503,7 @@ async function q() {
         }
     }
 }
-function X(e, t, n) {
+function Q(e, t, n) {
     a.Z.dispatch({
         type: "QUESTS_UPDATE_OPTIMISTIC_PROGRESS",
         questId: e,
@@ -511,7 +511,7 @@ function X(e, t, n) {
         progress: n,
     });
 }
-function Q(e) {
+function X(e) {
     a.Z.dispatch({
         type: "QUESTS_RESET_OPTIMISTIC_PROGRESS",
         questId: e,
@@ -610,31 +610,31 @@ async function $(e, t) {
 }
 async function ee(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, v.fh)(e, v.eC.VIDEO_PLAYER_TRANSCRIPT, void 0, t);
+        n = (0, O.fh)(e, O.eC.VIDEO_PLAYER_TRANSCRIPT, void 0, t);
     if (null == n)
-        return void O.ZP.getState().setTranscriptAsset({
+        return void y.ZP.getState().setTranscriptAsset({
             questId: e.id,
-            fetchStatus: O.iF.FAILURE,
+            fetchStatus: y.iF.FAILURE,
         });
-    O.ZP.getState().setTranscriptAsset({
+    y.ZP.getState().setTranscriptAsset({
         questId: e.id,
-        fetchStatus: O.iF.FETCHING,
+        fetchStatus: y.iF.FETCHING,
     });
     try {
         let t = await i.tn.get({
             url: n.url,
             rejectWithError: !0,
         });
-        O.ZP.getState().setTranscriptAsset({
+        y.ZP.getState().setTranscriptAsset({
             questId: e.id,
-            fetchStatus: O.iF.SUCCESS,
+            fetchStatus: y.iF.SUCCESS,
             text: t.text,
             url: n.url,
         });
     } catch (t) {
-        O.ZP.getState().setTranscriptAsset({
+        y.ZP.getState().setTranscriptAsset({
             questId: e.id,
-            fetchStatus: O.iF.FAILURE,
+            fetchStatus: y.iF.FAILURE,
         });
     }
 }

@@ -365,7 +365,7 @@ function K() {
         { game: t } = X(e.widget);
     return null == t
         ? null
-        : (0, r.jsx)(T.Z, {
+        : (0, r.jsx)(T.F, {
               className: D.socialProof,
               applicationId: t.id,
               guildId: e.guildId,

@@ -13,11 +13,11 @@ function d(e) {
         g = i.useCallback((e) => (0, a.Qt)(t, d)(e), [t, d]),
         p = (0, o.u)(t, n);
     if (null == p) return null;
-    let { IconComponent: f, locationName: m } = p,
+    let { IconComponent: m, locationName: f } = p,
         _ = (0, r.jsxs)(r.Fragment, {
             children: [
-                null != f &&
-                    (0, r.jsx)(f, {
+                null != m &&
+                    (0, r.jsx)(m, {
                         size: "custom",
                         color: "currentColor",
                         width: 20,
@@ -28,7 +28,7 @@ function d(e) {
                     color: "text-default",
                     variant: "text-sm/normal",
                     className: u.locationText,
-                    children: (0, l.m)(m, !0),
+                    children: (0, l.m)(f, !0),
                 }),
             ],
         });

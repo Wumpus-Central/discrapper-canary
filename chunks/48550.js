@@ -1,19 +1,19 @@
-n.d(t, { P: () => r });
-var l = n(388032);
-let r = {
+n.d(t, { P: () => l });
+var r = n(388032);
+let l = {
     get webauthn() {
-        return l.intl.string(l.t.gTH4Dp);
+        return r.intl.string(r.t.gTH4Dp);
     },
     get totp() {
-        return l.intl.string(l.t.nXKmyf);
+        return r.intl.string(r.t.nXKmyf);
     },
     get sms() {
-        return l.intl.string(l.t.ZbVwZW);
+        return r.intl.string(r.t.ZbVwZW);
     },
     get password() {
-        return l.intl.string(l.t["8F6hKS"]);
+        return r.intl.string(r.t["8F6hKS"]);
     },
     get backup() {
-        return l.intl.string(l.t.vhSRKf);
+        return r.intl.string(r.t.vhSRKf);
     },
 };

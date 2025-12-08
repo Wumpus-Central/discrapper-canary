@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(35282), n(388685), n(539854);
+n.d(t, { Z: () => w }), n(35282), n(388685), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -32,14 +32,14 @@ function I(e, t) {
               discriminator: C.fo$,
           });
 }
-function E(e) {
+function w(e) {
     let {
             id: t,
             webhook: n,
             editedWebhook: l,
             channelOptions: j,
-            isExpanded: E,
-            isNew: w,
+            isExpanded: w,
+            isNew: E,
             errors: P,
             onToggleExpand: T,
         } = e,
@@ -92,7 +92,7 @@ function E(e) {
           });
     let U = null;
     return (
-        E &&
+        w &&
             null != l &&
             (U = (0, i.jsxs)("div", {
                 className: S.body,
@@ -307,13 +307,13 @@ function E(e) {
         (0, i.jsx)(u.Zbd, {
             editable: !0,
             id: t,
-            className: a()(S.card, w ? S.pulse : null),
+            className: a()(S.card, E ? S.pulse : null),
             children: (0, i.jsxs)(g.Z, {
                 direction: g.Z.Direction.VERTICAL,
                 children: [
                     (0, i.jsx)(u.P3F, {
                         className: S.header,
-                        "aria-expanded": E,
+                        "aria-expanded": w,
                         onClick: T,
                         children: (0, i.jsxs)(g.Z, {
                             align: g.Z.Align.CENTER,
@@ -325,7 +325,7 @@ function E(e) {
                                 }),
                                 (0, i.jsx)(x.Z, {
                                     className: S.expandIcon,
-                                    expanded: E,
+                                    expanded: w,
                                     "aria-hidden": !0,
                                 }),
                             ],

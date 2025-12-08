@@ -1,4 +1,4 @@
-t.d(n, { Z: () => _ }), t(388685), t(953529);
+t.d(n, { Z: () => Z }), t(388685), t(953529);
 var l = t(54381),
     i = t(442837),
     o = t(481060),
@@ -43,16 +43,16 @@ function y(e) {
     }
     return e;
 }
-function _(e) {
+function Z(e) {
     let {
             user: n,
             guildId: t,
-            channelId: _,
-            messageId: Z,
+            channelId: Z,
+            messageId: _,
             roleId: O,
             transitionState: N,
-            openedAt: A,
-            onHide: T,
+            openedAt: T,
+            onHide: A,
             sourceAnalyticsLocations: P = [],
         } = e,
         E = t === j.ME ? void 0 : t,
@@ -63,8 +63,8 @@ function _(e) {
             userId: n.id,
             showGuildProfile: !0,
             guildId: E,
-            channelId: _,
-            messageId: Z,
+            channelId: Z,
+            messageId: _,
             roleId: O,
         }),
         D = [
@@ -78,13 +78,13 @@ function _(e) {
             },
         ],
         R = (0, p.ZP)(n.id, E),
-        L = d.ZP.getName(null == R ? void 0 : R.guildId, _, n),
+        L = d.ZP.getName(null == R ? void 0 : R.guildId, Z, n),
         M = b.intl.formatToPlainString(b.t.KRe1Fk, { name: L });
     return (0, l.jsx)(s.Gt, {
         value: S,
         children: (0, l.jsx)(u.Mt, {
             value: w,
-            openedAt: A,
+            openedAt: T,
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
             isLoaded: null == R ? void 0 : R.isLoaded,
@@ -145,7 +145,7 @@ function _(e) {
                                             size: "md",
                                             isBlocked: C,
                                             onClick: () => {
-                                                T(),
+                                                A(),
                                                     (0, m.pQ)(
                                                         y(
                                                             {
@@ -162,7 +162,7 @@ function _(e) {
                                         (0, l.jsx)(h.Z, {
                                             userId: n.id,
                                             onClick: () => {
-                                                T(),
+                                                A(),
                                                     (0, m.pQ)(
                                                         y(
                                                             {

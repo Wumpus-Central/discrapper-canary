@@ -14,8 +14,8 @@ var i = n(473749),
     m = n(709054),
     g = n(534469),
     b = n(173033),
-    y = n(959517),
-    C = n(981631);
+    C = n(959517),
+    y = n(981631);
 function v(e, t, n) {
     return (
         t in e
@@ -161,7 +161,7 @@ class x {
         }
         let a = e.messages.last(),
             o = t.last();
-        if (null != a && a.state === C.yb.SENDING && (null == o ? void 0 : o.id) !== a.id)
+        if (null != a && a.state === y.yb.SENDING && (null == o ? void 0 : o.id) !== a.id)
             return void this.setScrollToBottom();
         let { focusId: s } = this.props;
         if (null != s && n !== s) {
@@ -171,7 +171,7 @@ class x {
                 null == (c = this.ref.current) ||
                     c.scrollIntoViewNode({
                         node: e,
-                        padding: y.kQ + this.props.additionalMessagePadding,
+                        padding: C.kQ + this.props.additionalMessagePadding,
                         callback: this.handleScroll,
                     });
                 return;
@@ -202,7 +202,7 @@ class x {
         this.setAutomaticAnchor(null);
     }
     newMessageBarBuffer() {
-        return this.props.channel.isForumPost() ? y.R4 : y.Eo;
+        return this.props.channel.isForumPost() ? C.R4 : C.Eo;
     }
     findAnchor() {
         let { messages: e, hasUnreads: t, channel: n } = this.props,
@@ -270,7 +270,7 @@ class x {
                 null == (i = this.ref.current) ||
                     i.scrollIntoViewNode({
                         node: t,
-                        padding: y.kQ + this.props.additionalMessagePadding,
+                        padding: C.kQ + this.props.additionalMessagePadding,
                         callback: this.handleScroll,
                     });
         } else this.mergeTo(n, this.handleScroll);
@@ -386,7 +386,7 @@ class x {
             let i = this.getElementFromMessageId(n);
             (0, a.kK)(i)
                 ? this.scrollTo(
-                      this.getOffsetOrientationFromNode(i, "middle", t ? this.newMessageBarBuffer() : y.kQ),
+                      this.getOffsetOrientationFromNode(i, "middle", t ? this.newMessageBarBuffer() : C.kQ),
                       !0,
                   )
                 : this.scrollToNewMessages(!0, "middle");
@@ -397,7 +397,7 @@ class x {
         let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
             i = arguments.length > 2 ? arguments[2] : void 0,
-            r = null == (e = this.getDocument()) ? void 0 : e.getElementById(y.j1),
+            r = null == (e = this.getDocument()) ? void 0 : e.getElementById(C.j1),
             l = () => {
                 (this.jumping = !1), this.setAutomaticAnchor(this.findAnchor()), null != i && i(), this.handleScroll();
             };
@@ -424,8 +424,8 @@ class x {
         null != t
             ? this.scrollToMessage(t, !1)
             : this.props.hasUnreads &&
-                this.props.channel.type !== C.d4z.GUILD_VOICE &&
-                this.props.channel.type !== C.d4z.GUILD_STAGE_VOICE
+                this.props.channel.type !== y.d4z.GUILD_VOICE &&
+                this.props.channel.type !== y.d4z.GUILD_STAGE_VOICE
               ? this.scrollToNewMessages()
               : null != e
                 ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll)
@@ -457,7 +457,7 @@ class x {
             { messages: t, channel: n } = this.props;
         if (t.hasMoreAfter) {
             var i;
-            s.Z.jumpToPresent(n.id, C.AQB), (0, p.XU)(null != (i = n.getGuildId()) ? i : C.ME, n.id);
+            s.Z.jumpToPresent(n.id, y.AQB), (0, p.XU)(null != (i = n.getGuildId()) ? i : y.ME, n.id);
         } else
             this.scrollTo(Number.MAX_SAFE_INTEGER, e, () => {
                 (this.jumping = !1), this.handleScroll();
@@ -509,7 +509,7 @@ class x {
                   this.getOffsetOrientationFromNode(
                       i,
                       "middle",
-                      this.props.hasUnreads ? this.newMessageBarBuffer() : y.kQ,
+                      this.props.hasUnreads ? this.newMessageBarBuffer() : C.kQ,
                   ),
                   t,
                   r,
@@ -521,7 +521,7 @@ class x {
             { messages: r, hasUnreads: l, placeholderHeight: a } = this.props;
         if ("top" === e)
             if (!r.hasMoreBefore) return 0;
-            else return l ? a - y.D4 - 2 : a + 500;
+            else return l ? a - C.D4 - 2 : a + 500;
         return r.hasMoreAfter ? n - i - a - 500 : n - i;
     }
     getOffsetToPreventLoading(e) {
@@ -669,7 +669,7 @@ class x {
                         channelId: r.props.channel.id,
                         before: e,
                         after: t,
-                        limit: C.AQB,
+                        limit: y.AQB,
                         truncate: !0,
                     });
             }),

@@ -462,7 +462,7 @@ e.exports = function (e) {
             contains: [...m, ...N, ...K, R, z],
         };
     z.contains.push(q);
-    let X = {
+    let Q = {
             begin: /\(/,
             end: /\)/,
             relevance: 0,
@@ -486,7 +486,7 @@ e.exports = function (e) {
                 z,
             ],
         },
-        Q = {
+        X = {
             begin: /</,
             end: />/,
             keywords: "repeat each",
@@ -519,7 +519,7 @@ e.exports = function (e) {
                 Z,
                 ...K,
                 z,
-                X,
+                Q,
             ],
             endsParent: !0,
             illegal: /["']/,
@@ -530,13 +530,13 @@ e.exports = function (e) {
                 1: "keyword",
                 3: "title.function",
             },
-            contains: [Q, J, t],
+            contains: [X, J, t],
             illegal: [/\[/, /%/],
         },
         ee = {
             match: [/\b(?:subscript|init[?!]?)/, /\s*(?=[<(])/],
             className: { 1: "keyword" },
-            contains: [Q, J, t],
+            contains: [X, J, t],
             illegal: /\[|%/,
         },
         et = {
@@ -579,7 +579,7 @@ e.exports = function (e) {
             },
             keywords: C,
             contains: [
-                Q,
+                X,
                 ...N,
                 {
                     begin: /:/,
@@ -636,7 +636,7 @@ e.exports = function (e) {
             ...W,
             ...K,
             z,
-            X,
+            Q,
         ],
     };
 };

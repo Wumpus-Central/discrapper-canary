@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r = n(54381),
-    a = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    i = n(473749),
+    a = n(120356),
+    l = n.n(a),
     s = n(481060),
     o = n(49898),
     c = n(174183);
@@ -10,21 +10,21 @@ function d(e) {
     let {
             state: t,
             query: n,
-            placeholder: i,
+            placeholder: a,
             onTextChange: d,
             onCollapsedClick: u,
             onClear: p,
             onBlur: m,
             onSubmit: h,
         } = e,
-        g = a.useRef(null),
-        _ = a.useCallback(
+        g = i.useRef(null),
+        f = i.useCallback(
             (e) => {
                 "Enter" === e.key && h();
             },
             [h],
         ),
-        f = a.useCallback(() => {
+        _ = i.useCallback(() => {
             u(),
                 setTimeout(() => {
                     var e;
@@ -34,7 +34,7 @@ function d(e) {
     return t === o.GlobalDiscoverySearchBarState.COLLAPSED
         ? (0, r.jsx)(s.P3F, {
               className: c.searchIcon,
-              onClick: f,
+              onClick: _,
               children: (0, r.jsx)(s._Ve, {
                   size: "sm",
                   color: s.TVs.colors.ICON_PRIMARY,
@@ -46,10 +46,10 @@ function d(e) {
                   size: "sm",
                   ref: g,
                   query: n,
-                  placeholder: i,
+                  placeholder: a,
                   onChange: d,
                   onClear: p,
-                  onKeyDown: _,
+                  onKeyDown: f,
                   onBlur: m,
               }),
           });

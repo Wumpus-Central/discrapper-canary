@@ -8,13 +8,13 @@ var a = r(54381),
     s = r(563132),
     d = r(409813),
     p = r(518727),
-    b = r(7305),
-    m = r(74538),
-    u = r(16989),
+    u = r(7305),
+    b = r(74538),
+    m = r(16989),
     _ = r(540310),
     h = r(320941),
-    C = r(474936);
-function f(e) {
+    f = r(474936);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(r);
@@ -60,34 +60,34 @@ function S(e, t) {
 let v = (e) => {
     var t;
     let { analyticsLocations: r, premiumSubscription: o } = e,
-        v = null == (t = (0, m.Af)(o)) ? void 0 : t.planId,
-        x = null != v ? (0, m.Rd)(v) : null;
-    i()(null != x, "Should not be resubscribing Nitro without premiumType");
-    let w = x === C.PremiumTypes.TIER_0,
-        [P, y] = n.useState(_.R.CONFIRM),
-        g = n.useCallback(() => {
+        v = null == (t = (0, b.Af)(o)) ? void 0 : t.planId,
+        w = null != v ? (0, b.Rd)(v) : null;
+    i()(null != w, "Should not be resubscribing Nitro without premiumType");
+    let y = w === f.PremiumTypes.TIER_0,
+        [P, x] = n.useState(_.R.CONFIRM),
+        O = n.useCallback(() => {
             switch (P) {
                 case _.R.CONFIRM:
-                    return (0, a.jsx)(u.G, S(f({}, e), { setStep: y }));
+                    return (0, a.jsx)(m.G, S(C({}, e), { setStep: x }));
                 case _.R.SUCCESS:
-                    return (0, a.jsx)(h.n, S(f({}, e), { premiumType: x }));
+                    return (0, a.jsx)(h.n, S(C({}, e), { premiumType: w }));
                 default:
-                    return (0, a.jsx)(u.G, S(f({}, e), { setStep: y }));
+                    return (0, a.jsx)(m.G, S(C({}, e), { setStep: x }));
             }
-        }, [P, e, x]);
+        }, [P, e, w]);
     return (0, a.jsx)(l.Gt, {
         value: r,
         children: (0, a.jsx)(s.PaymentContextProvider, {
             activeSubscription: o,
-            stepConfigs: (0, b.O)(),
+            stepConfigs: (0, u.O)(),
             skuIDs: [],
             breadcrumbs: [d.h8.CONFIRM],
             children: (0, a.jsx)(c.b6, {
                 children: (0, a.jsx)(p.Z, {
                     isConfirmationStep: P === _.R.SUCCESS,
-                    isEligibleForWowMoment: !w,
-                    shouldPrefetchWowMoment: !w,
-                    children: g(),
+                    isEligibleForWowMoment: !y,
+                    shouldPrefetchWowMoment: !y,
+                    children: O(),
                 }),
             }),
         }),

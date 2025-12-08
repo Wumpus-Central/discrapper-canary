@@ -259,12 +259,12 @@ function W(e) {
 let K = a().throttle(H, I),
     z = a().throttle(Y, I),
     q = a().throttle(W, I);
-function X(e, t, n) {
+function Q(e, t, n) {
     let r = n(C[t]),
         i = n(e[t]);
     return null != r && null != i && 0 !== r ? Math.max(i - r, 0) : 0;
 }
-function Q(e) {
+function X(e) {
     let { state: t } = e;
     R = !0;
     let n = {},
@@ -275,11 +275,11 @@ function Q(e) {
         for (let t in r[e]) {
             let o = (0, _.Tu)(e, t);
             if (((n[o] = Z(r[e][t])), null != C[o])) {
-                let e = X(n, o, B);
+                let e = Q(n, o, B);
                 e > 0 && K((w += e));
-                let r = X(n, o, F);
+                let r = Q(n, o, F);
                 r > 0 && q((D += r));
-                let s = X(n, o, V);
+                let s = Q(n, o, V);
                 if ((s > 0 && z((x += s)), i === t)) {
                     let e = n[o];
                     if (
@@ -383,5 +383,5 @@ class J extends (r = o.ZP.Store) {
 y(J, "displayName", "DispatchApplicationStore");
 let $ = new J(s.Z, {
     CONNECTION_OPEN: U,
-    DISPATCH_APPLICATION_STATE_UPDATE: Q,
+    DISPATCH_APPLICATION_STATE_UPDATE: X,
 });

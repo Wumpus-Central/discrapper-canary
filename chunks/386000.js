@@ -48,14 +48,14 @@ function d(e) {
             "onMouseLeave",
             "onClick",
         ]);
-    let { parentAnalyticsLocation: y } = (0, a.ZP)(),
-        C = t || n || d,
+    let { parentAnalyticsLocation: C } = (0, a.ZP)(),
+        y = t || n || d,
         v = p ? u.d : u.Z,
         _ = (0, o.Z)(t, n, d, h),
-        { events: O, play: x, Component: E } = (0, c.b)(C),
+        { events: O, play: x, Component: E } = (0, c.b)(y),
         j = n || d ? l.v0G : E;
     return (
-        r.useEffect(() => () => x(), [x, C]),
+        r.useEffect(() => () => x(), [x, y]),
         (0, i.jsx)(
             v,
             (function (e) {
@@ -86,8 +86,8 @@ function d(e) {
                 {
                     iconComponent: j,
                     isTrayButton: !0,
-                    caretColor: C ? "red" : "primaryDark",
-                    color: C ? "red" : void 0,
+                    caretColor: y ? "red" : "primaryDark",
+                    color: y ? "red" : void 0,
                     label: _,
                     onMouseEnter: (e) => {
                         null == f || f(e), O.onMouseEnter();
@@ -96,7 +96,7 @@ function d(e) {
                         null == m || m(e), O.onMouseLeave();
                     },
                     onClick: (e) => {
-                        null == g || g(e), (0, s.v)(y, s.d.MIC, t);
+                        null == g || g(e), (0, s.v)(C, s.d.MIC, t);
                     },
                 },
                 b,

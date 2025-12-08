@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(442837),
-    a = n(314897),
-    l = n(733231),
+    l = n(314897),
+    a = n(733231),
     o = n(890814),
     c = n(141014),
     s = n(385153),
@@ -45,19 +45,19 @@ function g(e) {
                     var n,
                         r,
                         i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["games"]);
-    let { registerItemRef: i, manageFocusOnDelete: a } = (0, l.C)();
+    let { registerItemRef: i, manageFocusOnDelete: l } = (0, a.C)();
     return (0, r.jsx)(o.Z, {
         games: t,
         renderGame: (e, t) =>
@@ -68,7 +68,7 @@ function g(e) {
                         index: t,
                         game: e,
                         coverRef: i(e.applicationId),
-                        onRemoveGame: a,
+                        onRemoveGame: l,
                     },
                     n,
                 ),
@@ -78,7 +78,7 @@ function g(e) {
 function p(e) {
     var t, n;
     let { userId: o, widgetType: u, disableInteraction: p, games: m } = e,
-        b = (0, i.e7)([a.default], () => a.default.getId() === o),
+        b = (0, i.e7)([l.default], () => l.default.getId() === o),
         { getManageButtonForWidget: h } = (0, d.j)(),
         y = h(u),
         { expanded: v, setExpanded: O } = (0, c.g)(),
@@ -112,7 +112,7 @@ function p(e) {
             ],
         });
     return b && !p
-        ? (0, r.jsx)(l.d, {
+        ? (0, r.jsx)(a.d, {
               emptyListFallbackRef: y,
               children: _,
           })

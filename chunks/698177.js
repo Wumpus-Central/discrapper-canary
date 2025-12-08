@@ -18,25 +18,25 @@ let x = () => {
     let [e, t] = i.useState(""),
         [s, x] = i.useState(""),
         [E, v] = i.useState(!1),
-        [b, j] = i.useState(!1),
+        [j, b] = i.useState(!1),
         [I, y] = i.useState(null),
-        [S, O] = i.useState(null),
-        N = (0, a.e7)([d.Z], () => d.Z.getCountryCode()),
-        C = N.code.split(" ")[0],
+        [S, N] = i.useState(null),
+        C = (0, a.e7)([d.Z], () => d.Z.getCountryCode()),
+        O = C.code.split(" ")[0],
         T = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                O(e.body.message);
+                N(e.body.message);
             }
         },
         A = async () => {
             v(!0);
             try {
-                let { token: t } = await c.Z.verifyPhone(C + e, s);
-                y(null), O(null), j(!0), c.Z.validatePhoneForSupport(t);
+                let { token: t } = await c.Z.verifyPhone(O + e, s);
+                y(null), N(null), b(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (y(null), O(e.body.message)) : (y(e.body.phone), O(e.body.code));
+                e.body.message ? (y(null), N(e.body.message)) : (y(e.body.phone), N(e.body.code));
             } finally {
                 v(!1);
             }
@@ -57,7 +57,7 @@ let x = () => {
                 }),
             ],
         });
-    return b
+    return j
         ? Z
         : (0, r.jsxs)(g.ZP, {
               children: [
@@ -71,8 +71,8 @@ let x = () => {
                       children: [
                           (0, r.jsx)(h.Z, {
                               label: m.intl.string(m.t["eJnn0+"]),
-                              alpha2: N.alpha2,
-                              countryCode: C,
+                              alpha2: C.alpha2,
+                              countryCode: O,
                               value: e,
                               autoComplete: "off",
                               spellCheck: "false",

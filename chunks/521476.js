@@ -15,8 +15,8 @@ var r = n(442837),
     m = n(372897),
     g = n(526761),
     b = n(388032),
-    y = n(216390);
-function C(e) {
+    C = n(216390);
+function y(e) {
     var t;
     let { guild: n } = e,
         r = (0, c.Z)({ scrollPosition: g.Y_.GUILD_TAG });
@@ -25,12 +25,12 @@ function C(e) {
             bannerIcon: (0, i.jsx)(l.ics, {
                 size: "lg",
                 color: "currentColor",
-                className: y.bannerIcon,
+                className: C.bannerIcon,
             }),
             bannerHeader: b.intl.format(b.t.GgMwjk, { guildName: null != (t = null == n ? void 0 : n.name) ? t : "" }),
             bannerSubtext: b.intl.string(b.t.ONjwD5),
-            textStyles: y.bannerContainer,
-            headerStyles: y.bannerHeader,
+            textStyles: C.bannerContainer,
+            headerStyles: C.bannerHeader,
             children: (0, i.jsx)(l.Button, {
                 variant: "primary",
                 size: "sm",
@@ -55,12 +55,12 @@ function v(e) {
             bannerIcon: (0, i.jsx)(l.ics, {
                 size: "lg",
                 color: "currentColor",
-                className: y.bannerIcon,
+                className: C.bannerIcon,
             }),
             bannerHeader: b.intl.format(b.t.kcYdTq, { guildName: null != (n = null == r ? void 0 : r.name) ? n : "" }),
             bannerSubtext: p,
-            textStyles: y.bannerContainer,
-            headerStyles: y.bannerHeader,
+            textStyles: C.bannerContainer,
+            headerStyles: C.bannerHeader,
             children: (0, i.jsx)(l.Button, {
                 variant: "primary",
                 size: "sm",
@@ -82,6 +82,6 @@ function _(e) {
     return n.has(m.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || n.has(m.q.AUTOMOD_QUARANTINED_BIO)
         ? (0, i.jsx)(v, { guild: t })
         : n.has(m.q.AUTOMOD_QUARANTINED_SERVER_TAG)
-          ? (0, i.jsx)(C, { guild: t })
+          ? (0, i.jsx)(y, { guild: t })
           : (0, i.jsx)(v, { guild: t });
 }

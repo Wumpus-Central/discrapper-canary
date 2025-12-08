@@ -14,8 +14,8 @@ var i = n(473749),
     m = n(271383),
     g = n(607744),
     b = n(375954),
-    y = n(496675),
-    C = n(572004),
+    C = n(496675),
+    y = n(572004),
     v = n(585483),
     _ = n(358085),
     O = n(709054),
@@ -43,11 +43,11 @@ let I = function (e, t, n) {
                 switch (n.key.toLowerCase()) {
                     case "backspace":
                         i &&
-                            (y.Z.can(P.Plq.MANAGE_MESSAGES, M) || w.canDeleteOwnMessage(R)) &&
+                            (C.Z.can(P.Plq.MANAGE_MESSAGES, M) || w.canDeleteOwnMessage(R)) &&
                             (n.preventDefault(), (0, S.$Z)(M, w, n));
                         break;
                     case "c":
-                        ((0, _.isMac)() ? N : T) && C.wS && (n.preventDefault(), (0, C.JG)(w.content));
+                        ((0, _.isMac)() ? N : T) && y.wS && (n.preventDefault(), (0, y.JG)(w.content));
                         break;
                     case "e":
                         i && !M.isSystemDM() && (0, x.Z)(w, R) && (n.preventDefault(), (0, S.Hd)(M, w));
@@ -64,7 +64,7 @@ let I = function (e, t, n) {
                                         channel: e,
                                         canChat: t,
                                         renderReactions: n,
-                                        canAddNewReactions: t && y.Z.can(P.Plq.ADD_REACTIONS, e),
+                                        canAddNewReactions: t && C.Z.can(P.Plq.ADD_REACTIONS, e),
                                         isLurking: null != e.guild_id && o.Z.isLurking(e.guild_id),
                                         isGuest: null != e.guild_id && m.ZP.isCurrentUserGuest(e.guild_id),
                                         isActiveChannelOrUnarchivableThread: (0, c.RG)(e),

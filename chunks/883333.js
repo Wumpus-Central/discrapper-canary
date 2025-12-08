@@ -14,11 +14,11 @@ var i = n(120356),
     _ = n(930153),
     m = n(617136),
     h = n(616022),
-    g = n(509212),
-    E = n(979232),
-    b = n(373370),
-    y = n(968843),
-    O = n(115179),
+    g = n(979232),
+    E = n(373370),
+    b = n(968843),
+    y = n(115179),
+    O = n(254579),
     v = n(659302),
     S = n(644646),
     I = n(110560),
@@ -68,11 +68,11 @@ function D(e) {
         } = e,
         d = (null == (t = o.userStatus) ? void 0 : t.completedAt) != null,
         f = d && (null == (n = o.userStatus) ? void 0 : n.claimedAt) != null,
-        m = (0, O.oo)({ quest: o }),
-        h = (0, O.B3)(o.config);
+        m = (0, y.oo)({ quest: o }),
+        h = (0, y.B3)(o.config);
     if (f) {
         let e = m
-                ? (0, O.o9)({
+                ? (0, y.o9)({
                       quest: o,
                       idx: null == (r = o.userStatus) ? void 0 : r.claimedTier,
                   })
@@ -96,7 +96,7 @@ function D(e) {
                   date: u,
               });
     let g = m
-        ? (0, O.o9)({
+        ? (0, y.o9)({
               quest: o,
               idx: 0,
           })
@@ -116,44 +116,44 @@ function D(e) {
 function x(e) {
     var t;
     let { quest: n, progressState: i, questContent: a, questContentPosition: o, sourceQuestContent: c } = e,
-        f = i >= y.OH.COMPLETED,
+        f = i >= b.OH.COMPLETED,
         p = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         _ = (0, s.e7)([h.Z], () => h.Z.isEnrolling(n.id)),
-        m = (0, g.q8)(n),
-        E = (0, g.Vl)(n),
-        b = (0, v.Ks)({
+        m = (0, O.q8)(n),
+        g = (0, O.Vl)(n),
+        E = (0, v.Ks)({
             progressState: i,
             quest: n,
             questContent: a,
             questContentPosition: o,
             inGiftInventory: !1,
             isVideoQuest: m,
-            inGameQuest: E,
+            inGameQuest: g,
             sourceQuestContent: c,
         }),
-        O = f && !p;
+        y = f && !p;
     return (0, r.jsx)(
         l.u,
         {
-            text: b.tooltipText,
-            children: O
-                ? (0, r.jsx)(L, { ctaConfig: b })
+            text: E.tooltipText,
+            children: y
+                ? (0, r.jsx)(L, { ctaConfig: E })
                 : (0, r.jsx)(u.Button, {
                       fullWidth: !0,
                       variant: "primary",
-                      disabled: null == b.onClick,
+                      disabled: null == E.onClick,
                       loading: _,
-                      onClick: null != (t = b.onClick) ? t : void 0,
-                      text: b.text,
+                      onClick: null != (t = E.onClick) ? t : void 0,
+                      text: E.text,
                   }),
         },
-        b.tooltipText,
+        E.tooltipText,
     );
 }
 function L(e) {
     var t, n;
     let { ctaConfig: i } = e,
-        { shouldUseShinyButton: o } = E.Z.useConfig({ location: "QuestsCardFooter" }),
+        { shouldUseShinyButton: o } = g.Z.useConfig({ location: "QuestsCardFooter" }),
         s = (0, u.MgI)(),
         l = !!(null == s ? void 0 : s.fullWidth);
     return o
@@ -187,22 +187,22 @@ let j = (e) => {
             isQuestExpired: p,
             isExpanded: _,
             isAnimating: g,
-            contentPosition: E,
+            contentPosition: y,
             sourceQuestContent: O,
         } = e,
-        v = (0, y._Q)(n),
-        T = (0, y.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
+        v = (0, b._Q)(n),
+        T = (0, b.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
             year: "numeric",
             month: "long",
             day: "numeric",
         }),
-        C = v >= y.OH.ACCEPTED,
-        L = v >= y.OH.COMPLETED,
+        C = v >= b.OH.ACCEPTED,
+        L = v >= b.OH.COMPLETED,
         j = _ || g,
-        M = (0, b.t5)(n, A.dr.QUESTS_CARD, i, O),
+        M = (0, E.t5)(n, A.dr.QUESTS_CARD, i, O),
         k = (0, m.O5)(),
-        U = (0, y.Rf)(n),
-        G = (0, b.DD)({
+        U = (0, b.Rf)(n),
+        G = (0, E.DD)({
             quest: n,
             taskDetails: U,
             location: A.dr.QUESTS_CARD,
@@ -218,7 +218,7 @@ let j = (e) => {
                 k({
                     questId: n.id,
                     questContent: i,
-                    questContentPosition: E,
+                    questContentPosition: y,
                     questContentCTA: m.jZ.LEARN_MORE,
                     sourceQuestContent: O,
                 });
@@ -257,7 +257,7 @@ let j = (e) => {
                                 location: A.dr.QUESTS_CARD,
                                 quest: n,
                                 questContent: i,
-                                questContentPosition: E,
+                                questContentPosition: y,
                                 sourceQuestContent: O,
                             }),
                         ],

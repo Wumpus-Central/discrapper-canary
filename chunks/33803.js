@@ -113,7 +113,7 @@ function q(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function X(e, t) {
+function Q(e, t) {
     let { popouts: n, selected: r, setPopout: a } = (0, j.Z)(e.id, U.d$),
         { usernameProfile: o, avatarProfile: s } = n,
         l = (0, L.wq)(e.author.id, t.id),
@@ -139,7 +139,7 @@ function X(e, t) {
         showUsernamePopout: o,
     };
 }
-function Q(e, t, n) {
+function X(e, t, n) {
     return i.useMemo(() => {
         if (null != t && null != n)
             return (i) =>
@@ -256,8 +256,8 @@ function er(e) {
 let ei = i.memo(function (e) {
     let t,
         { message: n, channel: i, embedChannel: a, compact: o, interactionUserId: s } = e,
-        l = X(n, i),
-        c = Q(i, n.author),
+        l = Q(n, i),
+        c = X(i, n.author),
         u = (0, P.ZP)(n),
         d = (0, D.CF)(
             Y(
@@ -274,8 +274,8 @@ let ei = i.memo(function (e) {
         ),
         f = () => d,
         _ = T.default.getUser(s),
-        m = X(n, i),
-        h = Q(i, _, T.default.getCurrentUser());
+        m = Q(n, i),
+        h = X(i, _, T.default.getCurrentUser());
     if (null != _) {
         let e = (0, P.ij)(_, i),
             r = (0, D.CF)(
@@ -326,7 +326,7 @@ function ea(e) {
         {
             ruleName: W,
             embedChannel: q,
-            decisionId: Q,
+            decisionId: X,
             keywordMatchedContent: ee,
             keyword: et,
             content: en,
@@ -338,7 +338,7 @@ function ea(e) {
             interactionUserId: eu,
         } = (0, E.ZP)(s),
         ed = i.useMemo(() => (0, N.k$)(en, ee, l.id), [en, ee, l]),
-        ef = X(s, l),
+        ef = Q(s, l),
         { selected: ep } = ef,
         e_ = z(ef, ["selected"]),
         em = ep || (U && R),
@@ -347,8 +347,8 @@ function ea(e) {
             null == (t = e_.onContextMenuModerateUser) || t.call(e_, e);
         },
         eg = i.useCallback(() => {
-            (0, b._s)(s.id, en, Q, l);
-        }, [s.id, en, Q, l]),
+            (0, b._s)(s.id, en, X, l);
+        }, [s.id, en, X, l]),
         eE = i.useCallback(
             (e) => {
                 null != ea &&

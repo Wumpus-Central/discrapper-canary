@@ -132,7 +132,7 @@ let C = (e) => {
                                             p.Z,
                                             A(I({}, e), {
                                                 user: R,
-                                                pendingAvatar: R.getAvatarURL(null, (0, d.pxk)(d.EFr.SIZE_80)),
+                                                pendingAvatar: R.getAvatarURL(null, (0, d.dcp)(d.EFr.SIZE_80)),
                                                 pendingAvatarDecoration: (0, g.M)(j) ? j : null,
                                                 pendingProfileEffect: (0, E.H)(j) ? j : null,
                                                 canUsePremiumCustomization: !0,

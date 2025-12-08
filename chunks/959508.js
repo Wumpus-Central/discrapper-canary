@@ -56,8 +56,8 @@ function C(e) {
         B = null != (t = L.options) ? t : L.optionErrors.filter(p.lm)[0],
         F = L.config,
         H = l.options.length >= j.fY,
-        W = (0, g.kl)(n.id, Array.from(w), [l]).length - w.size,
-        z = i.useRef(null),
+        z = (0, g.kl)(n.id, Array.from(w), [l]).length - w.size,
+        W = i.useRef(null),
         V = i.useRef(x);
     return (i.useEffect(() => {
         V.current = x;
@@ -66,7 +66,7 @@ function C(e) {
         setTimeout(() => {
             if (0 === V.current && !u) {
                 var e;
-                null == (e = z.current) || e.focus();
+                null == (e = W.current) || e.focus();
             }
         }, 0);
     }, [u]),
@@ -161,7 +161,7 @@ function C(e) {
                           children: [
                               (0, r.jsx)(c.oil, {
                                   label: _.intl.formatToPlainString(_.t.yjS3zs, { index: x + 1 }),
-                                  inputRef: z,
+                                  inputRef: W,
                                   value: l.title,
                                   onChange: (e) => (0, h.Kk)(n, l.id, { title: e }),
                                   placeholder: _.intl.string(_.t.QMCuCo),
@@ -210,7 +210,7 @@ function C(e) {
                                                 onChange: (e) => (0, h.Kk)(n, l.id, { required: e }),
                                                 disabled: !l.inOnboarding,
                                                 label: E
-                                                    ? _.intl.formatToPlainString(_.t["0re8T6"], { count: W })
+                                                    ? _.intl.formatToPlainString(_.t["0re8T6"], { count: z })
                                                     : _.intl.string(_.t.Ur8Vrt),
                                             })
                                           : null,

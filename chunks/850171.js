@@ -680,8 +680,8 @@ let w = "0px",
     K = () => J,
     z = () => document.getElementById("sprig-feedback-container"),
     q = () => document.getElementById("sprig-feedback-loading-animation"),
-    X = () => !!document.getElementById(R),
-    Q = !1,
+    Q = () => !!document.getElementById(R),
+    X = !1,
     J = null,
     $ = null,
     ee = !1,
@@ -775,7 +775,7 @@ let w = "0px",
                 styleString: i ?? "",
                 nonce: window.UserLeap.styleNonce,
             }),
-            (Q = "center-modal" === l),
+            (X = "center-modal" === l),
             (en = o);
         let [p, _] = o.split("-");
         ((e) => {
@@ -802,7 +802,7 @@ let w = "0px",
             s.e.on(s.E.SURVEY_FADING_OUT, el),
             $.addEventListener("click", async () => {
                 let e = document.getElementById("sprig-feedback-error-container");
-                if (X() || ea()) {
+                if (Q() || ea()) {
                     if (el()) {
                         s.e.emit(s.S.SurveyCloseRequested, {
                             name: s.S.SurveyCloseRequested,
@@ -853,7 +853,7 @@ let w = "0px",
             useMobileStyling: h,
             _config: { border: g },
         } = window.UserLeap;
-        if (Q || h) es(0);
+        if (X || h) es(0);
         else {
             let e = document.createElement("div");
             (e.id = "sprig-feedback-loading-container"),
@@ -1390,7 +1390,7 @@ let eq = function (e) {
                     }),
                 s.b.info("TrackEvent", { eventName: m });
             let E =
-                window.UserLeap.delayingSurvey || X()
+                window.UserLeap.delayingSurvey || Q()
                     ? await S(A("1", [O], "events/batch"), {
                           body: JSON.stringify({
                               events: [
@@ -1889,7 +1889,7 @@ let eq = function (e) {
         };
     Object.assign(window.UserLeap, r);
 };
-async function eX(e, t, n = {}, r = {}) {
+async function eQ(e, t, n = {}, r = {}) {
     let i = window.__cfg && window.__cfg.mode,
         a = T(),
         l = window.UserLeap.envId,
@@ -1925,7 +1925,7 @@ async function eX(e, t, n = {}, r = {}) {
         })
     ).ok || console.warn("[Sprig] (ERR-444) Failed to report error to API", t);
 }
-function eQ(e = {}) {
+function eX(e = {}) {
     var t;
     null == (t = window.SprigLoggerCallback) || t.call(window, "Initializing Sprig");
     let n = new URLSearchParams(window.location.search).get("sprigPreviewKey") ?? "";
@@ -1934,7 +1934,7 @@ function eQ(e = {}) {
         if (window.UserLeap.loaded) return;
         if (
             (null == (t = window.SprigLoggerCallback) || t.call(window, "Loading Sprig"),
-            (window.UserLeap.reportError = eX),
+            (window.UserLeap.reportError = eQ),
             (window.UserLeap.loaded = !0),
             (window.UserLeap._config = Object.assign({}, e, window.UserLeap.config)),
             (window.UserLeap.delayingSurvey = !1),
@@ -2140,7 +2140,7 @@ let e$ = {
                 "constructor" !== e && (window.Sprig[e] = eJ.prototype[e]);
             });
         let t = window.Sprig;
-        return (t.appId = e.envId), (t._queue = []), (window.UserLeap = t), eQ(e), window.Sprig;
+        return (t.appId = e.envId), (t._queue = []), (window.UserLeap = t), eX(e), window.Sprig;
     },
 };
 e$.configure;

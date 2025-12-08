@@ -2,8 +2,8 @@ n.d(t, { default: () => x }), n(704826), n(35282);
 var a = n(54381);
 n(473749);
 var l = n(734610),
-    i = n(990547),
-    r = n(793030),
+    r = n(990547),
+    i = n(793030),
     s = n(481060),
     o = n(213609),
     c = n(528477),
@@ -21,8 +21,8 @@ function x(e) {
             theRestOfTheUrl: C,
             shouldTrustUrl: S,
             setShouldTrustUrl: E,
-            handleConfirm: N,
-            handleCancel: T,
+            handleConfirm: O,
+            handleCancel: N,
         } = (0, u.X)({
             url: t,
             trustUrl: n,
@@ -32,10 +32,10 @@ function x(e) {
         });
     return (
         (0, o.Z)({
-            type: i.ImpressionTypes.MODAL,
-            name: i.ImpressionNames.MASKED_LINK_MODAL,
+            type: r.ImpressionTypes.MODAL,
+            name: r.ImpressionNames.MASKED_LINK_MODAL,
         }),
-        (0, a.jsxs)(r.Modal, {
+        (0, a.jsxs)(i.Modal, {
             size: "md",
             transitionState: v,
             onClose: b,
@@ -45,7 +45,7 @@ function x(e) {
                 {
                     text: p.intl.string(p.t["/g10LC"]),
                     onClick: () => {
-                        T(),
+                        N(),
                             d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: S,
                                 action_type: "cancel",
@@ -56,7 +56,7 @@ function x(e) {
                 {
                     text: x ? p.intl.string(p.t.COq6kk) : p.intl.string(p.t.NcJfJG),
                     onClick: () => {
-                        N(),
+                        O(),
                             d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: S,
                                 action_type: "confirm",

@@ -1,8 +1,8 @@
 n.d(t, { a: () => p }), n(388685);
 var r = n(54381),
     i = n(793030),
-    a = n(619307),
-    o = n(463208),
+    a = n(463208),
+    o = n(199849),
     s = n(481060),
     l = n(409738);
 function c(e, t, n) {
@@ -80,7 +80,7 @@ function p(e) {
                               children: [
                                   "select" === c.type &&
                                       null != c.options &&
-                                      (0, r.jsx)(a.q4, {
+                                      (0, r.jsx)(o.y6, {
                                           value: u,
                                           onChange: (e) => d(l, e),
                                           options: c.options,
@@ -92,12 +92,12 @@ function p(e) {
                                           label: c.label,
                                       }),
                                   "text" === c.type &&
-                                      (0, r.jsx)(o.o, {
+                                      (0, r.jsx)(a.o, {
                                           value: u,
                                           onChange: (e) => d(l, e),
                                       }),
                                   "number" === c.type &&
-                                      (0, r.jsx)(o.o, {
+                                      (0, r.jsx)(a.o, {
                                           type: "number",
                                           value: String(u),
                                           min: c.minValue,

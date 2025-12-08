@@ -1,14 +1,14 @@
 A.d(t, {
     YP: () => p,
     ZP: () => q,
-    aN: () => h,
+    aN: () => v,
 });
 var n = A(54381);
 A(473749);
 var r = A(512722),
     a = A.n(r),
-    i = A(866442),
-    l = A(399606),
+    l = A(866442),
+    i = A(399606),
     o = A(159691),
     s = A(481060),
     d = A(485386),
@@ -33,7 +33,7 @@ function m(e) {
                       label: r.name,
                       icon: {
                           type: "role",
-                          color: (0, i.Rf)(r.color),
+                          color: (0, l.Rf)(r.color),
                       },
                   },
               ],
@@ -45,14 +45,14 @@ function m(e) {
               children: t,
           }));
 }
-function h() {
+function v() {
     return (0, n.jsx)(s.Mgn, {
         size: "xs",
         color: "currentColor",
         className: f.warningIcon,
     });
 }
-function v(e) {
+function h(e) {
     let { roleName: t } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -116,8 +116,8 @@ function v(e) {
     });
 }
 function q(e) {
-    let { newRoleParams: t, setNewRoleParams: r, guildId: i, productId: c, listingRoleId: f, error: p } = e,
-        h = (0, l.e7)([d.Z], () => (null != f ? d.Z.getRole(i, f) : void 0));
+    let { newRoleParams: t, setNewRoleParams: r, guildId: l, productId: c, listingRoleId: f, error: p } = e,
+        v = (0, i.e7)([d.Z], () => (null != f ? d.Z.getRole(l, f) : void 0));
     return null === t
         ? (0, n.jsx)(s.gNt, {
               label: g.intl.string(g.t.ovXIrP),
@@ -125,7 +125,7 @@ function q(e) {
               children: (0, n.jsxs)(s.NIo, {
                   children: [
                       (0, n.jsx)(m, {
-                          role: h,
+                          role: v,
                           onRemove: void 0,
                       }),
                       (0, n.jsx)(o.zxk, {
@@ -146,10 +146,10 @@ function q(e) {
                 description: g.intl.string(g.t.OfuEkP),
                 errorMessage: p,
                 children: (0, n.jsx)(m, {
-                    role: h,
+                    role: v,
                     onRemove: () => {
                         a()(null != c, "productId cannot be null"),
-                            a()(null != h, "no role attached"),
+                            a()(null != v, "no role attached"),
                             (function (e) {
                                 let { onConfirm: t, roleName: r } = e;
                                 (0, s.ZDy)(async () => {
@@ -184,7 +184,7 @@ function q(e) {
                                             })(
                                                 {
                                                     title: g.intl.string(g.t.Y3Hi3R),
-                                                    body: (0, n.jsx)(v, { roleName: r }),
+                                                    body: (0, n.jsx)(h, { roleName: r }),
                                                     cta: g.intl.string(g.t.VawZVx),
                                                     closeLabel: g.intl.string(g.t["6y+3Bw"]),
                                                     onConfirm: t,
@@ -194,7 +194,7 @@ function q(e) {
                                         );
                                 });
                             })({
-                                roleName: h.name,
+                                roleName: v.name,
                                 onConfirm: () => r(null),
                             });
                     },

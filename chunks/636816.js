@@ -5,8 +5,8 @@ var i = n(54381),
     s = n(481060),
     a = n(314852),
     o = n(65361),
-    c = n(63063),
-    u = n(981631),
+    u = n(63063),
+    c = n(981631),
     d = n(388032);
 function h(e) {
     let { guildId: t, channelType: n, className: h } = e,
@@ -16,19 +16,19 @@ function h(e) {
     r.useEffect(() => {
         g();
     }, [t, g]);
-    let O = [];
+    let b = [];
     if (
-        n === u.d4z.GUILD_ANNOUNCEMENT &&
-        (O.push(d.intl.format(d.t.tI7KNX, { documentationLink: c.Z.getArticleURL(u.BhN.ANNOUNCEMENT_CHANNELS) })),
+        n === c.d4z.GUILD_ANNOUNCEMENT &&
+        (b.push(d.intl.format(d.t.tI7KNX, { documentationLink: u.Z.getArticleURL(c.BhN.ANNOUNCEMENT_CHANNELS) })),
         !C && !f)
     ) {
         let e = d.intl.string(d.t["2Ab4Id"]);
-        O.push(e);
+        b.push(e);
     }
-    return 0 === O.length
+    return 0 === b.length
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: O.map((e, t) =>
+              children: b.map((e, t) =>
                   (0, i.jsx)(
                       s.Text,
                       {

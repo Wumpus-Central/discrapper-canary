@@ -5,7 +5,7 @@ r.d(t, {
     YF: () => D,
     _4: () => h,
     _j: () => S,
-    cN: () => M,
+    cN: () => G,
     to: () => O,
 });
 var s = r(98076),
@@ -50,7 +50,7 @@ function S(e, t) {
                     );
             })(e),
             (A[e] = !0)),
-        G(e, t)
+        M(e, t)
     );
 }
 function C(e, t) {
@@ -103,12 +103,12 @@ function P() {
 }
 function v(e, t, r, n, a = !1) {
     let i;
-    return w(e, t), A[e] || ((i = r()), (A[e] = !0)), n && t({ metric: n }), G(e, t, a ? i : void 0);
+    return w(e, t), A[e] || ((i = r()), (A[e] = !0)), n && t({ metric: n }), M(e, t, a ? i : void 0);
 }
 function w(e, t) {
     (T[e] = T[e] || []), T[e].push(t);
 }
-function G(e, t, r) {
+function M(e, t, r) {
     return () => {
         r && r();
         let n = T[e];
@@ -117,6 +117,6 @@ function G(e, t, r) {
         -1 !== a && n.splice(a, 1);
     };
 }
-function M(e) {
+function G(e) {
     return "duration" in e;
 }

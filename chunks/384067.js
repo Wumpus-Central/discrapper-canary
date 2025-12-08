@@ -46,9 +46,9 @@ let y = (e) => {
         { handleCardVisibilityChange: R } = (0, h.E)(P, "home", "marketing wide banner"),
         Z = (0, m.sp)(),
         { bannerURL: w } = (0, _.UI)(y),
-        D = k === b.AW.ORBS,
-        H = null != y.ctaRoute && "" !== y.ctaRoute,
-        M = !0 !== y.disableCta && ((null != y.ctaText && "" !== y.ctaText) || H),
+        H = k === b.AW.ORBS,
+        D = null != y.ctaRoute && "" !== y.ctaRoute,
+        M = !0 !== y.disableCta && ((null != y.ctaText && "" !== y.ctaText) || D),
         F = null != y.logoURL && "" !== y.logoURL,
         W = l.useCallback(() => {
             if ((A(!0), y.isDismissible)) {
@@ -94,8 +94,8 @@ let y = (e) => {
         );
     if (null == w || N) return null;
     let z = s()(x.row, x.between, x.bannerBlockContainer, x.centeredSection, {
-            [x.extraRounded]: D,
-            [x.bannerBlockContainerClickable]: H,
+            [x.extraRounded]: H,
+            [x.bannerBlockContainerClickable]: D,
         }),
         G = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -111,13 +111,13 @@ let y = (e) => {
                         }),
                     }),
                 (0, r.jsx)("div", {
-                    className: s()(x.wideBannerBackgroundImg, { [x.extraRounded]: D }),
+                    className: s()(x.wideBannerBackgroundImg, { [x.extraRounded]: H }),
                     style: null != L ? { height: "".concat(L, "px") } : void 0,
                     children: (0, r.jsx)("img", {
                         ref: I,
                         src: w,
                         alt: y.title,
-                        className: s()(x.wideBannerArt, { [x.wideBannerArtOrbs]: D }),
+                        className: s()(x.wideBannerArt, { [x.wideBannerArtOrbs]: H }),
                     }),
                 }),
                 (0, r.jsx)("div", {
@@ -128,15 +128,15 @@ let y = (e) => {
                         children: [
                             (0, r.jsx)(c.Heading, {
                                 style: { color: null != (n = y.bannerTextColor) ? n : "var(--header-primary)" },
-                                className: D ? x.wideBannerOrbsHeading : void 0,
+                                className: H ? x.wideBannerOrbsHeading : void 0,
                                 variant: "heading-xl/bold",
                                 children: y.title,
                             }),
                             (0, r.jsx)(c.Text, {
                                 style: { color: "var(--text-muted)" },
                                 lineClamp: 2,
-                                variant: D ? "text-md/medium" : "text-sm/medium",
-                                children: D
+                                variant: H ? "text-md/medium" : "text-sm/medium",
+                                children: H
                                     ? O.intl.format(O.t.SFFP7K, {
                                           helpdeskArticle: p.Z.getArticleURL(E.BhN.VIRTUAL_CURRENCY_LEARN_MORE),
                                       })
@@ -169,13 +169,13 @@ let y = (e) => {
             ],
         });
     return (0, r.jsx)(c.f6W, {
-        theme: D ? void 0 : S.BR.DARK,
+        theme: H ? void 0 : S.BR.DARK,
         children: (e) =>
             (0, r.jsx)(a.$, {
                 innerRef: j,
                 onChange: R,
                 threshold: 0,
-                children: H
+                children: D
                     ? (0, r.jsx)(c.P3F, {
                           innerRef: j,
                           onClick: () => V(null),

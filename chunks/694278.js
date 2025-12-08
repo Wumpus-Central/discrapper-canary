@@ -11,18 +11,18 @@ var n = r(54381),
 function p(t) {
     var e, r;
     let { guild: p, onClose: b, hideColors: g } = t,
-        [y, f] = a.useState(p.verificationLevel),
+        [f, y] = a.useState(p.verificationLevel),
         [_, O] = a.useState(null),
         m = p.features.has(u.GuildFeatures.COMMUNITY),
         v = (0, l.IF)(m, g).filter((t) => !t.disabled),
         j = a.useCallback(async () => {
             null != _ && O(null);
             try {
-                await c.Z.saveGuild(p.id, { verificationLevel: y }), c.Z.updateGuild({ verificationLevel: y }), b();
+                await c.Z.saveGuild(p.id, { verificationLevel: f }), c.Z.updateGuild({ verificationLevel: f }), b();
             } catch (t) {
                 O(new o.Hx(t).getAnyErrorMessage());
             }
-        }, [_, p.id, y, b]);
+        }, [_, p.id, f, b]);
     return (0, n.jsx)(
         s.Z,
         ((e = (function (t) {
@@ -58,9 +58,9 @@ function p(t) {
                 onConfirm: j,
                 onCancel: b,
                 children: (0, n.jsx)(i.FXm, {
-                    value: y,
+                    value: f,
                     options: v,
-                    onChange: (t) => f(t),
+                    onChange: (t) => y(t),
                 }),
             }),
         Object.getOwnPropertyDescriptors

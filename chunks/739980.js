@@ -4,18 +4,18 @@ var l = n(54381),
     i = n(954654),
     a = n(937889),
     s = n(930282),
-    u = n(524444),
-    o = n(695346),
+    o = n(524444),
+    u = n(695346),
     c = n(315934);
 function d(e) {
     let { previewMessage: t } = e,
-        n = o.jU.useSetting(),
+        n = u.jU.useSetting(),
         { content: d } = (0, a.ZP)(t, {
             allowHeading: !0,
             allowLinks: !0,
         }),
-        f = t.attachments.map((e, t) => {
-            let n = (0, u.Yi)({
+        b = t.attachments.map((e, t) => {
+            let n = (0, o.Yi)({
                 src: e.url,
                 containerClassName: c.previewImage,
                 imageContainerClassName: c.previewImage,
@@ -39,7 +39,7 @@ function d(e) {
                         content: d,
                         compact: n,
                     }),
-                    f,
+                    b,
                     t.components.length > 0
                         ? (0, l.jsx)(i.ZP, {
                               message: t,

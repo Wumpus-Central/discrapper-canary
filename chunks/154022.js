@@ -40,7 +40,7 @@ var r = n(54381),
     B = n(611480),
     F = n(653477),
     V = n(388032),
-    H = n(677065),
+    H = n(905170),
     Y = n(953752),
     W = n(328756);
 function K(e, t, n) {
@@ -84,7 +84,7 @@ function q(e, t) {
     }
     return n;
 }
-function X(e, t) {
+function Q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -95,7 +95,7 @@ function X(e, t) {
         e
     );
 }
-let Q = (0, g.hQ)(),
+let X = (0, g.hQ)(),
     J = (0, g.hQ)(),
     $ = (0, g.hQ)(),
     ee = o().debounce((e) => {
@@ -189,7 +189,7 @@ function er() {
         [t] = i.useState(() => {
             let e = "1337",
                 t = (0, v.e5)(
-                    X(
+                    Q(
                         z(
                             {},
                             (0, S.ZP)({
@@ -241,7 +241,7 @@ function er() {
                     className: Y.previewMessage,
                     children: (0, r.jsx)(T.Z, {
                         compact: e,
-                        author: X(z({}, (0, I.ZH)(t)), { colorString: "#DD80F4" }),
+                        author: Q(z({}, (0, I.ZH)(t)), { colorString: "#DD80F4" }),
                         message: t,
                     }),
                 }),
@@ -289,7 +289,7 @@ function eo() {
             (0, r.jsx)(c.iRW, {
                 label: V.intl.string(V.t["5PWWCY"]),
                 description: V.intl.string(V.t["0PbE/H"]),
-                "aria-labelledby": Q,
+                "aria-labelledby": X,
                 "aria-describedby": J,
                 markers: Z.yqN.SATURATION_INCREMENTS,
                 equidistant: !0,

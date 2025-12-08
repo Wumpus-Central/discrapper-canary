@@ -161,13 +161,13 @@ function A(e) {
                     e || G(Date.now());
                 }));
         }, [z]),
-        X = i.useCallback(
+        Q = i.useCallback(
             (e) => {
                 O && k(!0), null == f && B(_), null == N || N(e);
             },
             [O, _, N, B, f],
         ),
-        Q = i.useCallback(
+        X = i.useCallback(
             (e) => {
                 O && k(!1), null == f && F(_), null == P || P(e);
             },
@@ -179,13 +179,13 @@ function A(e) {
                 v(y({}, j), {
                     className: o()("emoji", c, { jumboable: "jumbo" === I }),
                     onError: q,
-                    onMouseEnter: X,
-                    onMouseLeave: Q,
+                    onMouseEnter: Q,
+                    onMouseLeave: X,
                     "data-type": "emoji",
                 }),
                 e,
             );
-        }, [c, f, _, X, Q, q, j, I]);
+        }, [c, f, _, Q, X, q, j, I]);
     i.useEffect(
         () => () => {
             var e;

@@ -4,9 +4,9 @@ n.d(t, {
 }),
     n(997841);
 var l = n(54381),
-    r = n(473749),
-    i = n(120356),
-    a = n.n(i),
+    i = n(473749),
+    r = n(120356),
+    a = n.n(r),
     s = n(95015),
     o = n(442837),
     c = n(481060),
@@ -27,27 +27,27 @@ var l = n(54381),
     _ = n(388032),
     j = n(371882);
 function v(e) {
-    var { title: t, emojiId: n, emojiName: r, icon: i, completed: s, Icon: o, onClick: d } = e,
+    var { title: t, emojiId: n, emojiName: i, icon: r, completed: s, Icon: o, onClick: d } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
                 l,
-                r = (function (e, t) {
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         l,
-                        r = {},
-                        i = Object.keys(e);
-                    for (l = 0; l < i.length; l++) (n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                        i = {},
+                        r = Object.keys(e);
+                    for (l = 0; l < r.length; l++) (n = r[l]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < i.length; l++)
-                    (n = i[l]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                var r = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < r.length; l++)
+                    (n = r[l]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return r;
+            return i;
         })(e, ["title", "emojiId", "emojiName", "icon", "completed", "Icon", "onClick"]);
     let m = "channel" === u.variant ? u.channelId : null,
         g = "static" === u.variant ? u.subtitle : u.channelName,
@@ -55,7 +55,7 @@ function v(e) {
             null != m
                 ? I.ZP.getNewMemberActionIconURL({
                       channelId: m,
-                      icon: i,
+                      icon: r,
                   })
                 : null;
     return (0, l.jsxs)(c.Zbd, {
@@ -73,7 +73,7 @@ function v(e) {
                   })
                 : (0, l.jsx)(S.Z, {
                       emojiId: n,
-                      emojiName: r,
+                      emojiName: i,
                       size: S.R.LARGE,
                       defaultComponent: (0, l.jsx)("div", {
                           className: j.channelIconContainer,
@@ -117,13 +117,13 @@ function v(e) {
 }
 function b(e) {
     var t;
-    let { action: n, completed: i } = e,
+    let { action: n, completed: r } = e,
         { channelId: a, title: s, emoji: g, icon: h } = n,
         { id: N, name: I } = null != g ? g : {},
         O = (0, o.e7)([m.Z], () => m.Z.getChannel(a)),
         E = (0, d.ZP)(O, !0),
         S = (0, o.e7)([f.Z], () => f.Z.can(x.Plq.VIEW_CHANNEL, O)),
-        T = r.useMemo(() => {
+        T = i.useMemo(() => {
             if (null != O) return () => (0, p.gp)(O.guild_id, O.id);
         }, [O]);
     if (null == O || !S) return null;
@@ -136,7 +136,7 @@ function b(e) {
         emojiId: N,
         emojiName: I,
         icon: h,
-        completed: i,
+        completed: r,
         Icon: _,
         onClick: T,
     });
@@ -144,17 +144,17 @@ function b(e) {
 function D(e) {
     let { guildId: t } = e,
         n = (0, o.e7)([O.Z], () => O.Z.getNewMemberActions(t), [t]),
-        i = (0, o.e7)([E.Z], () => E.Z.getCompletedActions(t)),
+        r = (0, o.e7)([E.Z], () => E.Z.getCompletedActions(t)),
         d = (0, o.e7)([g.ZP], () => g.ZP.getSelfMember(t)),
         u = (0, o.e7)([h.Z], () => h.Z.getGuild(t));
-    r.useEffect(() => {
+    i.useEffect(() => {
         var e;
-        null == i &&
+        null == r &&
             (null == d ? void 0 : d.flags) != null &&
             (0, s.yE)(null != (e = d.flags) ? e : 0, T.q.STARTED_HOME_ACTIONS) &&
             (0, p.Fg)(t);
-    }, [i, t, null == d ? void 0 : d.flags]);
-    let m = r.useCallback(() => {
+    }, [r, t, null == d ? void 0 : d.flags]);
+    let m = i.useCallback(() => {
         null != u && null != u.rulesChannelId && (0, p.gp)(u.id, u.rulesChannelId);
     }, [u]);
     return null == d || null == n || 0 === n.length
@@ -172,7 +172,7 @@ function D(e) {
                           b,
                           {
                               action: e,
-                              completed: (null == i ? void 0 : i[e.channelId]) === !0,
+                              completed: (null == r ? void 0 : r[e.channelId]) === !0,
                               guildId: t,
                           },
                           e.channelId,

@@ -15,44 +15,44 @@ function f(e) {
     let { message: t, canSend: n, selectedDestinations: f, onSend: p, inputValue: v, setInputValue: w } = e,
         b = (0, o.Z)(),
         x = (0, c.nm)(f),
-        y = (0, d.Ad)(),
-        { textValue: C, richValue: O } = v,
-        [j, _] = a.useState(!1),
-        S = a.useCallback(() => _(!0), []),
-        T = a.useCallback(() => _(!1), []),
-        E = a.useCallback(
+        C = (0, d.Ad)(),
+        { textValue: y, richValue: O } = v,
+        [j, T] = a.useState(!1),
+        _ = a.useCallback(() => T(!0), []),
+        E = a.useCallback(() => T(!1), []),
+        P = a.useCallback(
             (e, n, l) => {
                 w({
                     textValue: n,
                     richValue: l,
                 }),
-                    null != t && (r.Z.saveDraft(t.channel_id, n, u.d.ForwardContextMessage), y(t.channel_id, t.id));
+                    null != t && (r.Z.saveDraft(t.channel_id, n, u.d.ForwardContextMessage), C(t.channel_id, t.id));
             },
-            [y, t, w],
+            [C, t, w],
         ),
-        P = a.useCallback(() => {
-            null != t && (r.Z.clearDraft(t.channel_id, u.d.ForwardContextMessage), p(C));
-        }, [t, p, C]),
+        S = a.useCallback(() => {
+            null != t && (r.Z.clearDraft(t.channel_id, u.d.ForwardContextMessage), p(y));
+        }, [t, p, y]),
         D = a.useCallback(
             () => (
-                !n || C.length > b || P(),
+                !n || y.length > b || S(),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0,
                 })
             ),
-            [P, C, b, n],
+            [S, y, b, n],
         );
     return (0, l.jsx)(s.ZP, {
         innerClassName: g.messageInput,
-        onChange: E,
+        onChange: P,
         placeholder: m.intl.string(m.t.ZroO3G),
         channel: x,
-        textValue: C,
+        textValue: y,
         richValue: O,
         type: i.Ie.FORWARD_MESSAGE_INPUT,
-        onBlur: T,
-        onFocus: S,
+        onBlur: E,
+        onFocus: _,
         focused: j,
         onSubmit: D,
         parentModalKey: h.so,

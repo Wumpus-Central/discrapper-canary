@@ -1,16 +1,16 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var r = n(54381),
-    i = n(473749),
-    l = n(481060),
+    l = n(473749),
+    i = n(481060),
     a = n(454585),
     s = n(273744),
     o = n(5323);
-let c = (e) => {
+let d = (e) => {
     var t, n;
     let {
-            node: { info: c },
+            node: { info: d },
         } = e,
-        d = i.useRef(
+        c = l.useRef(
             a.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -53,11 +53,11 @@ let c = (e) => {
                 t),
             ),
         );
-    return null == c
+    return null == d
         ? null
-        : (0, r.jsx)(l.Wn, {
+        : (0, r.jsx)(i.Wn, {
               className: o.infoBox,
-              messageType: l.QYI.INFO,
-              children: d.current(c),
+              messageType: i.QYI.INFO,
+              children: c.current(d),
           });
 };

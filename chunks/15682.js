@@ -1,13 +1,13 @@
 n.d(t, { Z: () => s }), n(388685);
 var r = n(54381);
 n(473749);
-var i = n(481060),
-    l = n(652339);
+var l = n(481060),
+    i = n(652339);
 let a = (e) => {
         let { onChange: t, label: n, subtitle: a, selected: s } = e;
         return (0, r.jsx)("div", {
-            className: l.checkboxRow,
-            children: (0, r.jsx)(i.Checkbox, {
+            className: i.checkboxRow,
+            children: (0, r.jsx)(l.Checkbox, {
                 checked: s,
                 onChange: t,
                 label: n,
@@ -16,17 +16,17 @@ let a = (e) => {
         });
     },
     s = (e) => {
-        let { element: t, state: n, onChange: i } = e;
+        let { element: t, state: n, onChange: l } = e;
         if ((null == t ? void 0 : t.type) !== "checkbox") return null;
-        let { data: l } = t;
+        let { data: i } = t;
         return (0, r.jsx)("div", {
-            children: l.map((e, t) => {
-                let [l, s, o] = e;
+            children: i.map((e, t) => {
+                let [i, s, o] = e;
                 return (0, r.jsx)(
                     a,
                     {
-                        onChange: () => i(l, s),
-                        selected: l in n,
+                        onChange: () => l(i, s),
+                        selected: i in n,
                         label: s,
                         subtitle: o,
                     },

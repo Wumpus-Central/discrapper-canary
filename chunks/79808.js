@@ -19,8 +19,8 @@ function y(e) {
             defaultTarget: g,
             onClose: O,
             sidebarHeader: j,
-            sidebarFooter: v,
-            onPanelChange: m,
+            sidebarFooter: m,
+            onPanelChange: v,
             emptyState: h,
         } = e,
         x = null != p && (null == (t = y.entry(p)) ? void 0 : t.parentPanelKey) != null ? p : g,
@@ -77,13 +77,13 @@ function y(e) {
                         };
                         r.parentPanelKey !== n
                             ? w(() => {
-                                  i(), null == m || m(o);
+                                  i(), null == v || v(o);
                               })
                             : i();
                     },
                     { equalityFn: i.X },
                 ),
-            [w, m, y],
+            [w, v, y],
         );
     let k = o.useMemo(
             () => ({
@@ -102,7 +102,7 @@ function y(e) {
                 (0, r.jsx)(s.P, {
                     root: n,
                     header: j,
-                    footer: v,
+                    footer: m,
                     onClose: N,
                     emptyState: h,
                 }),

@@ -53,7 +53,7 @@ function L(e) {
         K = (0, p.Z)({ location: "UserProfilePopoutBody" }),
         z = (null == L ? void 0 : L.widgets) != null && L.widgets.length > 0,
         q = K && z,
-        X = (0, d.I5)(n);
+        Q = (0, d.I5)(n);
     return (0, r.jsxs)(a.Ttm, {
         fade: !0,
         className: x.body,
@@ -144,7 +144,7 @@ function L(e) {
                 }),
             W &&
                 (0, r.jsx)(m.Z, {
-                    isPremiumUser: X,
+                    isPremiumUser: Q,
                     onInteraction: G,
                 }),
             Y

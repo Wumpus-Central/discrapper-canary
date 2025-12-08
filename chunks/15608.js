@@ -1,36 +1,36 @@
 n.d(t, { Z: () => x });
 var i = n(54381),
     l = n(473749),
-    s = n(793030),
+    a = n(793030),
     r = n(481060),
-    a = n(109983),
+    s = n(109983),
     o = n(120298),
     c = n(75666),
     d = n(388032),
     u = n(496563);
 function m(e) {
-    let { guildTemplate: t, onClick: n, autoFocus: s } = e,
+    let { guildTemplate: t, onClick: n, autoFocus: a } = e,
         r = l.useCallback(() => {
             n(t);
         }, [t, n]);
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(s.Z, {
         icon: o.M[t.id],
         message: t.label,
         onClick: r,
-        autoFocus: s,
+        autoFocus: a,
     });
 }
 function x(e) {
     var t, n;
-    let { onBack: l, onChooseTemplate: a, directoryGuildName: o } = e,
+    let { onBack: l, onChooseTemplate: s, directoryGuildName: o } = e,
         x = (0, c.Pp)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(s.xBx, {
+            (0, i.jsx)(a.xBx, {
                 title: d.intl.formatToPlainString(d.t.T7aLYT, { guildName: o }),
                 subtitle: d.intl.string(d.t["RA+St6"]),
             }),
-            (0, i.jsx)(s.fef, {
+            (0, i.jsx)(a.fef, {
                 children: (0, i.jsx)(r.w0Z, {
                     className: u.scroller,
                     children: (0, i.jsxs)("div", {
@@ -77,7 +77,7 @@ function x(e) {
                                               Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                                           }),
                                     t),
-                                onClick: a,
+                                onClick: s,
                             }),
                             (0, i.jsx)(r.Text, {
                                 className: u.optionHeader,
@@ -87,33 +87,33 @@ function x(e) {
                             }),
                             (0, i.jsx)(m, {
                                 guildTemplate: x[c.sE.HUB_STUDY],
-                                onClick: a,
+                                onClick: s,
                             }),
                             (0, i.jsx)(m, {
                                 guildTemplate: x[c.sE.HUB_SCHOOL_CLUB],
-                                onClick: a,
+                                onClick: s,
                             }),
                             (0, i.jsx)(m, {
                                 guildTemplate: x[c.sE.HUB_CLASS],
-                                onClick: a,
+                                onClick: s,
                             }),
                             (0, i.jsx)(m, {
                                 guildTemplate: x[c.sE.HUB_SOCIAL],
-                                onClick: a,
+                                onClick: s,
                             }),
                             (0, i.jsx)(m, {
                                 guildTemplate: x[c.sE.HUB_MAJOR],
-                                onClick: a,
+                                onClick: s,
                             }),
                             (0, i.jsx)(m, {
                                 guildTemplate: x[c.sE.HUB_DORM],
-                                onClick: a,
+                                onClick: s,
                             }),
                         ],
                     }),
                 }),
             }),
-            (0, i.jsx)(s.Go$, {
+            (0, i.jsx)(a.Go$, {
                 leading: (0, i.jsx)(r.Avr, {
                     textVariant: "text-sm/medium",
                     variant: "secondary",

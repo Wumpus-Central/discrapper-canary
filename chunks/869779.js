@@ -2,34 +2,34 @@ n.r(t), n.d(t, { default: () => B });
 var i = n(54381),
     l = n(473749),
     r = n(442837),
-    s = n(481060),
-    a = n(570140),
+    a = n(481060),
+    s = n(570140),
     o = n(787014),
     c = n(37234),
     d = n(503089),
     u = n(493544),
     h = n(367907),
     g = n(933557),
-    p = n(471445),
-    m = n(351123),
-    f = n(685929),
+    m = n(471445),
+    f = n(351123),
+    p = n(685929),
     b = n(984802),
     x = n(665906),
     j = n(210887),
     v = n(131704),
     y = n(533947),
     C = n(277053),
-    S = n(388610),
-    N = n(592125),
-    O = n(496675),
-    Z = n(699516),
+    O = n(388610),
+    Z = n(592125),
+    S = n(496675),
+    N = n(699516),
     E = n(594174),
     w = n(585483),
     T = n(787263),
     _ = n(975316),
-    R = n(428813),
-    P = n(2147),
-    I = n(856606),
+    P = n(428813),
+    I = n(2147),
+    R = n(856606),
     L = n(981631),
     M = n(388032),
     A = n(102865);
@@ -48,7 +48,7 @@ class k extends l.PureComponent {
         D(this.props.section, null, this.props.analyticsLocation);
     }
     componentWillUnmount() {
-        a.Z.wait(() => (0, o.xv)());
+        s.Z.wait(() => (0, o.xv)());
     }
     componentDidUpdate(e) {
         let { formState: t, section: n } = e,
@@ -56,14 +56,14 @@ class k extends l.PureComponent {
                 formState: i,
                 section: l,
                 canManageRoles: r,
-                canManageChannels: s,
-                canManageWebhooks: a,
+                canManageChannels: a,
+                canManageWebhooks: s,
                 canUnlinkChannel: o,
             } = this.props;
-        (s || r || a || o) &&
+        (a || r || s || o) &&
         (i !== L.QZA.CLOSED || i === t) &&
         (r || l !== L.CoT.PERMISSIONS) &&
-        (a || o || l !== L.CoT.INTEGRATIONS)
+        (s || o || l !== L.CoT.INTEGRATIONS)
             ? l !== n && D(l, n)
             : (0, c.xf)();
     }
@@ -74,9 +74,9 @@ class k extends l.PureComponent {
             section: n,
             channel: l,
             category: r,
-            canManageRoles: a,
+            canManageRoles: s,
             canManageChannels: h,
-            canDeleteChannels: f,
+            canDeleteChannels: p,
             canManageWebhooks: b,
             canUnlinkChannel: x,
         } = this.props;
@@ -94,11 +94,11 @@ class k extends l.PureComponent {
                               category: n,
                               canManageRoles: l,
                               canManageChannels: r,
-                              canDeleteChannels: a,
+                              canDeleteChannels: s,
                               canManageWebhooks: d,
                               canUnlinkChannel: h,
                           } = e,
-                          f = (0, p.KS)(t),
+                          p = (0, m.KS)(t),
                           { GUILD_CATEGORY: b } = L.d4z,
                           x = v.Ec.has(t.type),
                           j =
@@ -116,22 +116,22 @@ class k extends l.PureComponent {
                                   null != t
                                       ? (0, i.jsxs)(i.Fragment, {
                                             children: [
-                                                null != f
-                                                    ? (0, i.jsx)(f, {
+                                                null != p
+                                                    ? (0, i.jsx)(p, {
                                                           size: "xxs",
                                                           color: "currentColor",
                                                           className: A.channelIcon,
                                                       })
                                                     : null,
-                                                (0, g.F6)(t, E.default, Z.Z),
+                                                (0, g.F6)(t, E.default, N.Z),
                                                 null != n
-                                                    ? (0, i.jsx)(s.Text, {
+                                                    ? (0, i.jsx)(a.Text, {
                                                           tag: "span",
                                                           variant: "text-xs/semibold",
                                                           color: "text-default",
                                                           lineClamp: 1,
                                                           className: A.category,
-                                                          children: (0, g.F6)(n, E.default, Z.Z),
+                                                          children: (0, g.F6)(n, E.default, N.Z),
                                                       })
                                                     : null,
                                             ],
@@ -142,19 +142,19 @@ class k extends l.PureComponent {
                               section: L.CoT.OVERVIEW,
                               label: M.intl.string(M.t["/dp6yY"]),
                               ariaLabel: M.intl.string(M.t["/dp6yY"]),
-                              element: P.Z,
+                              element: I.Z,
                               notice: {
-                                  element: P.G,
-                                  stores: [S.Z],
+                                  element: I.G,
+                                  stores: [O.Z],
                               },
                               predicate: () => !t.isModeratorReportChannel(),
                           },
                           {
                               section: L.CoT.PERMISSIONS,
                               label: M.intl.string(M.t.xrmhRX),
-                              element: m.Z,
+                              element: f.Z,
                               notice: {
-                                  element: I.n,
+                                  element: R.n,
                                   stores: [C.Z],
                               },
                               predicate: () => l && !x,
@@ -162,7 +162,7 @@ class k extends l.PureComponent {
                           {
                               section: L.CoT.INSTANT_INVITES,
                               label: M.intl.string(M.t["9F90ic"]),
-                              element: R.Z,
+                              element: P.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => t.type !== b && r && !x && !t.isModeratorReportChannel(),
                           },
@@ -190,20 +190,20 @@ class k extends l.PureComponent {
                               },
                               label: j,
                               ariaLabel: j,
-                              icon: (0, i.jsx)(s.XHJ, {
+                              icon: (0, i.jsx)(a.XHJ, {
                                   size: "xs",
                                   color: "currentColor",
                               }),
                               variant: "destructive",
-                              predicate: () => a && !t.isModeratorReportChannel(),
+                              predicate: () => s && !t.isModeratorReportChannel(),
                           },
                       ];
                   })({
                       channel: l,
                       category: r,
-                      canManageRoles: a,
+                      canManageRoles: s,
                       canManageChannels: h,
-                      canDeleteChannels: f,
+                      canDeleteChannels: p,
                       canManageWebhooks: b,
                       canUnlinkChannel: x,
                   }),
@@ -211,11 +211,11 @@ class k extends l.PureComponent {
     }
 }
 function B() {
-    let { channel: e, analyticsLocation: t } = (0, r.cj)([S.Z], () => S.Z.getProps()),
-        n = (0, r.e7)([S.Z], () => S.Z.getFormState()),
-        l = (0, r.e7)([S.Z], () => S.Z.getSection()),
-        s = (0, r.e7)([j.Z], () => j.Z.theme),
-        a = (0, b.Ll)(),
+    let { channel: e, analyticsLocation: t } = (0, r.cj)([O.Z], () => O.Z.getProps()),
+        n = (0, r.e7)([O.Z], () => O.Z.getFormState()),
+        l = (0, r.e7)([O.Z], () => O.Z.getSection()),
+        a = (0, r.e7)([j.Z], () => j.Z.theme),
+        s = (0, b.Ll)(),
         o = (0, x.C7)(e),
         c = (0, x.Xb)(e),
         {
@@ -223,24 +223,24 @@ function B() {
             canManageRoles: u,
             canManageWebhooks: h,
             canUnlinkChannel: g,
-        } = (0, r.cj)([O.Z], () => ({
-            canManageChannels: O.Z.can(L.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: null != e && O.Z.can(L.Plq.MANAGE_ROLES, e),
-            canManageWebhooks: null != e && O.Z.can(L.Plq.MANAGE_WEBHOOKS, e),
-            canUnlinkChannel: (0, f.C)(e, O.Z),
+        } = (0, r.cj)([S.Z], () => ({
+            canManageChannels: S.Z.can(L.Plq.MANAGE_CHANNELS, e),
+            canManageRoles: null != e && S.Z.can(L.Plq.MANAGE_ROLES, e),
+            canManageWebhooks: null != e && S.Z.can(L.Plq.MANAGE_WEBHOOKS, e),
+            canUnlinkChannel: (0, p.C)(e, S.Z),
         })),
-        p = (0, r.e7)([N.Z], () => N.Z.getChannel(null == e ? void 0 : e.parent_id));
+        m = (0, r.e7)([Z.Z], () => Z.Z.getChannel(null == e ? void 0 : e.parent_id));
     return (0, i.jsx)(k, {
         channel: e,
-        category: p,
+        category: m,
         canManageChannels: (null == e ? void 0 : e.isThread()) ? o : d,
         canDeleteChannels: (null == e ? void 0 : e.isThread()) ? c : d,
         canManageRoles: u,
         canManageWebhooks: h,
         canUnlinkChannel: g,
         formState: n,
-        theme: s,
-        sidebarTheme: a,
+        theme: a,
+        sidebarTheme: s,
         section: l,
         analyticsLocation: t,
     });

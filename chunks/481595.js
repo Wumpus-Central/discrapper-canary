@@ -64,8 +64,8 @@ function G(e) {
             isEmbeddedIAP: K,
             purchaseType: z,
             purchasePreviewError: q,
-            devShelfFetchState: X,
-            setPurchasePreviewError: Q,
+            devShelfFetchState: Q,
+            setPurchasePreviewError: X,
             hasPaymentSources: J,
         } = (0, R.JL)(),
         { isGift: $, giftRecipient: ee } = (0, P.wD)(),
@@ -97,12 +97,12 @@ function G(e) {
             null == eu &&
             (0, d.x2)(eo.applicationId, eo.id, ei, { isGift: $ })
                 .then(() => {
-                    Q(null);
+                    X(null);
                 })
                 .catch((e) => {
-                    Q(e);
+                    X(e);
                 });
-    }, [ei, ea, F, eo.applicationId, eo.id, eu, Q, $]);
+    }, [ei, ea, F, eo.applicationId, eo.id, eu, X, $]);
     let eg = null != es && es.length > 0 && (F === T.c || null === eh) && J ? y.w.SELECT_PAYMENT_METHOD : void 0,
         eE = eo.productLine === j.POd.SOCIAL_LAYER_GAME_ITEM,
         eb = et && !eE;
@@ -123,7 +123,7 @@ function G(e) {
                       "TEST_MODE",
                   )
                 : null,
-            (0, l.yE)(G.flags, j.udG.EMBEDDED) && X === h.O.ERROR
+            (0, l.yE)(G.flags, j.udG.EMBEDDED) && Q === h.O.ERROR
                 ? (0, r.jsx)(
                       p.Z,
                       {

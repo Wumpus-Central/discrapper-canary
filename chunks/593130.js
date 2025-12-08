@@ -6,12 +6,12 @@ var r = n(54381),
     o = n(442837),
     i = n(159691),
     c = n(481060),
-    d = n(496675),
-    u = n(346479),
+    u = n(496675),
+    d = n(346479),
     h = n(665906),
     g = n(91159),
-    m = n(443671),
-    f = n(342449),
+    f = n(443671),
+    m = n(342449),
     j = n(488131),
     v = n(124368),
     x = n(981631),
@@ -19,9 +19,9 @@ var r = n(54381),
     b = n(715);
 function Z(e) {
     let { channel: t, className: n, onClose: a } = e,
-        Z = (0, o.e7)([d.Z], () => d.Z.can(x.Plq.READ_MESSAGE_HISTORY, t)),
-        y = (0, h.cD)(t),
-        O = () => {
+        Z = (0, o.e7)([u.Z], () => u.Z.can(x.Plq.READ_MESSAGE_HISTORY, t)),
+        O = (0, h.cD)(t),
+        y = () => {
             a(), (0, j.R6)(t, void 0, "Thread Browser Empty State");
         },
         S = l.useCallback(
@@ -34,13 +34,13 @@ function Z(e) {
             let [n, r] = l.useState(""),
                 [a, s] = l.useState(!1),
                 [o, i] = l.useState(!1),
-                [c, d] = l.useState([]),
+                [c, u] = l.useState([]),
                 h = async () => {
                     if (null != n && "" !== n && !a) {
                         s(!0);
                         try {
-                            let r = await u.Z.searchThreads(e, t, n);
-                            i(!0), d(r);
+                            let r = await d.Z.searchThreads(e, t, n);
+                            i(!0), u(r);
                         } finally {
                             s(!1);
                         }
@@ -113,7 +113,7 @@ function Z(e) {
                               })
                             : null,
                         (0, r.jsx)("div", { className: b.spacer }),
-                        y
+                        O
                             ? (0, r.jsx)("div", {
                                   className: b.createButton,
                                   children: (0, r.jsx)(i.zxk, {
@@ -137,15 +137,15 @@ function Z(e) {
                     ],
                 }),
                 children: N.hasResults
-                    ? (0, r.jsx)(m.Z, {
+                    ? (0, r.jsx)(f.Z, {
                           channel: t,
-                          startThread: O,
+                          startThread: y,
                           goToThread: S,
                           threadIds: N.results,
                       })
-                    : (0, r.jsx)(f.Z, {
+                    : (0, r.jsx)(m.Z, {
                           channel: t,
-                          startThread: O,
+                          startThread: y,
                           goToThread: S,
                       }),
             }),

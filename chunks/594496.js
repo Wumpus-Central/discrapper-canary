@@ -76,12 +76,12 @@ function M(e) {
         }),
         q = null != k ? k : K;
     a()(null != q, "guild should not be null");
-    let X = (0, u.gS)(q.id),
-        Q = (0, o.e7)([I.ZP], () => (null == q.id ? null : I.ZP.getMember(q.id, U.id))),
+    let Q = (0, u.gS)(q.id),
+        X = (0, o.e7)([I.ZP], () => (null == q.id ? null : I.ZP.getMember(q.id, U.id))),
         J = (0, o.e7)([S.Z], () => S.Z.getGuildMemberProfile(U.id, q.id)),
         $ = c.JH.useExperiment({ location: "GuildIdentityCustomizationSections" }).enabled,
         ee = A.ZP.canUsePremiumProfileCustomization(U),
-        et = (0, f.gd)(Z, null == Q ? void 0 : Q.avatar),
+        et = (0, f.gd)(Z, null == X ? void 0 : X.avatar),
         en = (0, f.f$)(F, null == J ? void 0 : J.banner),
         er = (0, R.p)(Y, null == J ? void 0 : J.themeColors),
         ei = null != (t = null == J ? void 0 : J.bio) ? t : "",
@@ -91,17 +91,17 @@ function M(e) {
             n(null != e ? e : r);
         },
         es = (e) => eo(e, null == J ? void 0 : J.banner, N.g_),
-        el = (e) => eo(e, null == Q ? void 0 : Q.avatar, N.I5);
+        el = (e) => eo(e, null == X ? void 0 : X.avatar, N.I5);
     return (0, r.jsxs)("div", {
         className: j.sectionsContainer,
         children: [
             (0, r.jsx)(
                 w.Z,
                 {
-                    errors: null != (i = null == W ? void 0 : W.nick) ? i : null == X ? void 0 : X.nick,
+                    errors: null != (i = null == W ? void 0 : W.nick) ? i : null == Q ? void 0 : Q.nick,
                     username: C.ZP.getName(U),
                     pendingNick: B,
-                    currentNick: null == Q ? void 0 : Q.nick,
+                    currentNick: null == X ? void 0 : X.nick,
                     user: U,
                     guild: q,
                 },
@@ -251,7 +251,7 @@ function M(e) {
                                 ],
                             }),
                             onBioChange: (e) => (0, R.qN)(e, ei),
-                            errors: null != (M = null == W ? void 0 : W.bio) ? M : null == X ? void 0 : X.bio,
+                            errors: null != (M = null == W ? void 0 : W.bio) ? M : null == Q ? void 0 : Q.bio,
                             pendingBio: V,
                             currentBio: ei,
                             disabled: !ee,

@@ -23,7 +23,7 @@ let _ = i.memo(function (e) {
     let t,
         { title: p, onToggleExpand: b, expanded: _, expandedCount: y } = e,
         O = (0, l.e7)([d.Z], () => d.Z.hidden),
-        j = i.useCallback((e) => {
+        x = i.useCallback((e) => {
             (0, s.jW)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 703180));
                 return () => (0, r.jsx)(e, { closePopout: s.Zy });
@@ -43,7 +43,7 @@ let _ = i.memo(function (e) {
                     if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
                         return O ? (0, c.lY)() : y > 3 ? b() : (0, h.dG4)();
                 },
-                onContextMenu: j,
+                onContextMenu: x,
                 tag: "span",
                 "aria-hidden": !0,
                 className: g.headerContainer,

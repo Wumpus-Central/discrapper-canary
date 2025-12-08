@@ -1,183 +1,183 @@
-i.d(t, {
+n.d(t, {
     Z: () => x,
     f: () => w,
 }),
-    i(388685);
-var n,
-    s = i(54381),
-    a = i(473749),
-    o = i(120356),
-    l = i.n(o),
-    r = i(91192),
-    d = i(442837),
-    h = i(28664),
-    c = i(481060),
-    u = i(239091),
-    g = i(596454),
-    p = i(607070),
-    b = i(339085),
-    f = i(695346),
-    m = i(572004),
-    v = i(388032),
-    _ = i(716754);
-function y(e) {
+    n(388685);
+var r,
+    l = n(54381),
+    i = n(473749),
+    a = n(120356),
+    s = n.n(a),
+    o = n(91192),
+    c = n(442837),
+    u = n(28664),
+    d = n(481060),
+    h = n(239091),
+    g = n(596454),
+    p = n(607070),
+    f = n(339085),
+    v = n(695346),
+    m = n(572004),
+    D = n(388032),
+    O = n(716754);
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var i = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(i);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(i).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(i, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            n.forEach(function (t) {
-                var n;
-                (n = i[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: n,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = n);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function C(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var i = Object.keys(e);
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      i.push.apply(i, n);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return i;
-              })(Object(t)).forEach(function (i) {
-                  Object.defineProperty(e, i, Object.getOwnPropertyDescriptor(t, i));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var S = (((n = S || {})[(n.SMALL = 0)] = "SMALL"), (n[(n.MEDIUM = 1)] = "MEDIUM"), n);
+var y = (((r = y || {})[(r.SMALL = 0)] = "SMALL"), (r[(r.MEDIUM = 1)] = "MEDIUM"), r);
 function x(e) {
-    let { tag: t, size: n = 1, disabled: o, className: h, onClick: S, onRemove: x, selected: w, ariaLabel: T } = e,
-        { name: O, emojiId: F, emojiName: I } = t,
-        j = null != x,
-        [E, P] = a.useState(!1),
-        M = (0, d.e7)([b.ZP], () => (null != F ? b.ZP.getUsableCustomEmojiById(F) : null)),
-        Z = j || null != S,
-        A = (!j || !E) && (null != F || null != I),
-        k = 0 === n,
-        H = a.useRef(null),
-        L = (0, d.e7)([p.Z], () => p.Z.keyboardModeEnabled),
-        D = (0, s.jsxs)(s.Fragment, {
+    let { tag: t, size: r = 1, disabled: a, className: u, onClick: y, onRemove: x, selected: w, ariaLabel: E } = e,
+        { name: N, emojiId: S, emojiName: L } = t,
+        _ = null != x,
+        [Z, C] = i.useState(!1),
+        P = (0, c.e7)([f.ZP], () => (null != S ? f.ZP.getUsableCustomEmojiById(S) : null)),
+        I = _ || null != y,
+        M = (!_ || !Z) && (null != S || null != L),
+        A = 0 === r,
+        R = i.useRef(null),
+        T = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled),
+        U = (0, l.jsxs)(l.Fragment, {
             children: [
-                A
-                    ? (0, s.jsx)(g.Z, {
-                          className: l()(_.emoji, { [_.small]: k }),
-                          emojiId: F,
-                          emojiName: I,
-                          animated: !!(null == M ? void 0 : M.animated),
+                M
+                    ? (0, l.jsx)(g.Z, {
+                          className: s()(O.emoji, { [O.small]: A }),
+                          emojiId: S,
+                          emojiName: L,
+                          animated: !!(null == P ? void 0 : P.animated),
                           size: "reaction",
                       })
                     : null,
-                E &&
-                    j &&
-                    (0, s.jsx)("div", {
-                        className: _.closeCircle,
-                        children: (0, s.jsx)(c.Dio, {
+                Z &&
+                    _ &&
+                    (0, l.jsx)("div", {
+                        className: O.closeCircle,
+                        children: (0, l.jsx)(d.Dio, {
                             size: "md",
                             color: "currentColor",
-                            className: _.close,
+                            className: O.close,
                         }),
                     }),
-                (0, s.jsx)(c.Text, {
-                    variant: k ? "text-xs/semibold" : "text-sm/semibold",
+                (0, l.jsx)(d.Text, {
+                    variant: A ? "text-xs/semibold" : "text-sm/semibold",
                     lineClamp: 1,
                     color: "currentColor",
-                    children: O,
+                    children: N,
                 }),
             ],
         }),
-        N = {
+        k = {
             key: t.id,
-            className: l()(
-                _.pill,
+            className: s()(
+                O.pill,
                 {
-                    [_.disabled]: o,
-                    [_.clickable]: Z,
-                    [_.small]: k,
-                    [_.selected]: w,
-                    [_[t.color]]: null != t.color && !Z,
+                    [O.disabled]: a,
+                    [O.clickable]: I,
+                    [O.small]: A,
+                    [O.selected]: w,
+                    [O[t.color]]: null != t.color && !I,
                 },
-                h,
+                u,
             ),
             onClick: (e) => {
-                null == S || S(e), null == x || x(t), L || null == H.current || H.current.blur();
+                null == y || y(e), null == x || x(t), T || null == R.current || R.current.blur();
             },
             onContextMenu: (e) =>
                 ((e) => {
-                    let n = f.Sb.getSetting();
+                    let r = v.Sb.getSetting();
                     m.wS &&
-                        n &&
-                        (0, u.jW)(e, async () => {
-                            let { default: e } = await i.e("29646").then(i.bind(i, 955116));
-                            return (i) => (0, s.jsx)(e, C(y({}, i), { tag: t }));
+                        r &&
+                        (0, h.jW)(e, async () => {
+                            let { default: e } = await n.e("29646").then(n.bind(n, 955116));
+                            return (n) => (0, l.jsx)(e, j(b({}, n), { tag: t }));
                         });
                 })(e),
-            onMouseEnter: () => j && P(!0),
-            onMouseLeave: () => j && P(!1),
+            onMouseEnter: () => _ && C(!0),
+            onMouseLeave: () => _ && C(!1),
         },
-        B = (0, r.JA)("forum-tag-".concat(t.id));
-    return Z
-        ? (0, s.jsx)(
-              c.P3F,
-              C(
-                  y(
-                      C(y({}, B), {
-                          innerRef: H,
-                          focusProps: { ringTarget: H },
-                          "aria-label": null != T ? T : v.intl.formatToPlainString(v.t.iyRTLm, { tagName: O }),
+        G = (0, o.JA)("forum-tag-".concat(t.id));
+    return I
+        ? (0, l.jsx)(
+              d.P3F,
+              j(
+                  b(
+                      j(b({}, G), {
+                          innerRef: R,
+                          focusProps: { ringTarget: R },
+                          "aria-label": null != E ? E : D.intl.formatToPlainString(D.t.iyRTLm, { tagName: N }),
                           role: "button",
                           "aria-pressed": w,
                       }),
-                      N,
+                      k,
                   ),
-                  { children: D },
+                  { children: U },
               ),
           )
-        : (0, s.jsx)("div", C(y({}, N), { children: D }));
+        : (0, l.jsx)("div", j(b({}, k), { children: U }));
 }
 function w(e) {
-    let { tags: t, count: i, size: n = 1 } = e,
-        a = 0 === n;
-    return (0, s.jsx)(h.u, {
-        "aria-label": v.intl.string(v.t["P/y+sj"]),
-        __unsupportedReactNodeAsText: (0, s.jsx)(s.Fragment, {
+    let { tags: t, count: n, size: r = 1 } = e,
+        i = 0 === r;
+    return (0, l.jsx)(u.u, {
+        "aria-label": D.intl.string(D.t["P/y+sj"]),
+        __unsupportedReactNodeAsText: (0, l.jsx)(l.Fragment, {
             children: t.map((e) =>
-                (0, s.jsx)(
+                (0, l.jsx)(
                     x,
                     {
                         tag: e,
-                        className: _.tooltipPill,
+                        className: O.tooltipPill,
                         size: x.Sizes.SMALL,
                     },
                     e.id,
                 ),
             ),
         }),
-        children: (0, s.jsx)("div", {
-            className: l()(_.pill, { [_.small]: a }),
-            children: (0, s.jsxs)(c.Text, {
-                variant: a ? "text-xs/semibold" : "text-sm/semibold",
-                children: ["+", i],
+        children: (0, l.jsx)("div", {
+            className: s()(O.pill, { [O.small]: i }),
+            children: (0, l.jsxs)(d.Text, {
+                variant: i ? "text-xs/semibold" : "text-sm/semibold",
+                children: ["+", n],
             }),
         }),
     });
 }
-x.Sizes = S;
+x.Sizes = y;

@@ -21,13 +21,13 @@ function p(e) {
             canNavigate: x,
         } = e,
         j = o.Z.get(m),
-        O = r.useCallback(
+        v = r.useCallback(
             async (e) => {
                 x() && (await s.Z.enableIntegration(p.id, e.type, e.id), a.Z.startEditingIntegration(e.id));
             },
             [x, p.id],
         ),
-        v = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 x() &&
                     (e.id === (null == n ? void 0 : n.id) && a.Z.stopEditingIntegration(),
@@ -68,8 +68,8 @@ function p(e) {
                         editedIntegration: n,
                         guild: p,
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
-                        onEnable: O,
-                        onDisable: v,
+                        onEnable: v,
+                        onDisable: O,
                         onToggleExpand: () => y(e.id),
                     },
                     e.id,

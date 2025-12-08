@@ -172,15 +172,15 @@ function T(e, t, n, g) {
             locale: T,
         },
         q = [new f.GT()],
-        X = O.match(y)
+        Q = O.match(y)
             .map(function (e) {
                 var t = e[0];
                 return t in s.Z ? (0, s.Z[t])(e, T.formatLong) : e;
             })
             .join("")
             .match(b),
-        Q = [],
-        J = h(X);
+        X = [],
+        J = h(Q);
     try {
         var $ = function () {
             var t = K.value;
@@ -191,7 +191,7 @@ function T(e, t, n, g) {
             if (r) {
                 var i = r.incompatibleTokens;
                 if (Array.isArray(i)) {
-                    var a = Q.find(function (e) {
+                    var a = X.find(function (e) {
                         return i.includes(e.token) || e.token === n;
                     });
                     if (a)
@@ -200,11 +200,11 @@ function T(e, t, n, g) {
                                 .concat(a.fullToken, "` and `")
                                 .concat(t, "` at the same time"),
                         );
-                } else if ("*" === r.incompatibleTokens && Q.length > 0)
+                } else if ("*" === r.incompatibleTokens && X.length > 0)
                     throw RangeError(
                         "The format string mustn't contain `".concat(t, "` and any other token at the same time"),
                     );
-                Q.push({
+                X.push({
                     token: n,
                     fullToken: t,
                 });

@@ -102,11 +102,11 @@ async function E(e) {
                 let e = (
                     await Promise.all([
                         n.e("61924"),
-                        n.e("21976"),
+                        n.e("29659"),
                         n.e("13587"),
                         n.e("62880"),
                         n.e("39380"),
-                        n.e("44097"),
+                        n.e("77443"),
                         n.e("93979"),
                     ]).then(n.bind(n, 866035))
                 ).default;

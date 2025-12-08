@@ -1,7 +1,7 @@
 n.d(t, { Z: () => y }), n(388685), n(539854);
 var r,
-    a = n(54381),
-    i = n(473749),
+    i = n(54381),
+    a = n(473749),
     l = n(120356),
     s = n.n(l),
     o = n(299608),
@@ -12,8 +12,8 @@ var r,
     m = n(714338),
     h = n(134432),
     g = n(44488),
-    _ = n(585483),
-    f = n(981631),
+    f = n(585483),
+    _ = n(981631),
     b = n(463747);
 function x(e, t, n) {
     return (
@@ -48,7 +48,7 @@ let C = {
     friction: 10,
     tension: 100,
 };
-class j extends i.Component {
+class j extends a.Component {
     componentWillEnter(e) {
         let { directionHistory: t } = this.props,
             { translate: n, opacity: r } = this.state;
@@ -93,7 +93,7 @@ class j extends i.Component {
     render() {
         let { item: e } = this.props,
             { className: t } = this.props;
-        return (0, a.jsx)(d.Z.img, {
+        return (0, i.jsx)(d.Z.img, {
             src: e.src,
             alt: "",
             className: s()(b.slide, t),
@@ -108,26 +108,26 @@ class j extends i.Component {
             });
     }
 }
-class y extends (r = i.Component) {
+class y extends (r = a.Component) {
     componentDidMount() {
         this.preloadNextImages(),
             m.Z.disable(),
             m.Z.enableTemp(p.P),
-            _.S.subscribe(f.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled),
-            _.S.subscribe(f.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+            f.S.subscribe(_.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled),
+            f.S.subscribe(_.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
     }
     componentWillUnmount() {
         m.Z.disableTemp(),
-            _.S.unsubscribe(f.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled),
-            _.S.unsubscribe(f.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+            f.S.unsubscribe(_.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled),
+            f.S.unsubscribe(_.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
     }
     preloadNextImages() {
         var e, t;
         let { currentIndex: n } = this.state,
             { items: r } = this.props,
-            a = (((n + 1) % (e = r.length)) + e) % e,
-            i = (((n - 1) % (t = r.length)) + t) % t;
-        this.preloadImage(r[a]), this.preloadImage(r[i]);
+            i = (((n + 1) % (e = r.length)) + e) % e,
+            a = (((n - 1) % (t = r.length)) + t) % t;
+        this.preloadImage(r[i]), this.preloadImage(r[a]);
     }
     preloadImage(e) {
         (0, h.po)(e.src);
@@ -138,12 +138,12 @@ class y extends (r = i.Component) {
     }
     navigateTo(e) {
         var t, n, r;
-        let { directionHistory: a, currentIndex: i } = this.state;
-        a.push(e - i),
+        let { directionHistory: i, currentIndex: a } = this.state;
+        i.push(e - a),
             (e = ((e % (r = this.props.items.length)) + r) % r),
             this.setState({
                 currentIndex: e,
-                directionHistory: a,
+                directionHistory: i,
             }),
             null == (t = (n = this.props).onIndexChange) || t.call(n, e);
     }
@@ -151,32 +151,32 @@ class y extends (r = i.Component) {
         var e;
         let { className: t } = this.props,
             { currentIndex: n, directionHistory: r } = this.state,
-            { modalCarouselItemClassName: i } = this.props,
+            { modalCarouselItemClassName: a } = this.props,
             l = this.props.items[n],
             o = this.props.items;
-        return (0, a.jsxs)(u.W, {
+        return (0, i.jsxs)(u.W, {
             component: "div",
             className: s()(b.wrapper, t),
             children: [
                 o.length > 1
-                    ? (0, a.jsx)(g.am, {
+                    ? (0, i.jsx)(g.am, {
                           className: b.navPrev,
                           onClick: this.gotoPrev,
                       })
                     : null,
                 null != (e = l.component)
                     ? e
-                    : (0, a.jsx)(
+                    : (0, i.jsx)(
                           j,
                           {
                               item: l,
                               directionHistory: r,
-                              className: i,
+                              className: a,
                           },
                           l.src,
                       ),
                 o.length > 1
-                    ? (0, a.jsx)(g.Pz, {
+                    ? (0, i.jsx)(g.Pz, {
                           className: b.navNext,
                           onClick: this.gotoNext,
                       })

@@ -939,7 +939,7 @@ function q(e) {
         ],
     });
 }
-function X(e) {
+function Q(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -959,7 +959,7 @@ function X(e) {
         ],
     });
 }
-function Q(e) {
+function X(e) {
     let t = 24;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -1334,8 +1334,8 @@ let el = es,
                     O("svg-mask-avatar-call-icon-32", c.EF.SIZE_32, 0.5),
                     z("svg-mask-sticker-rounded-rect"),
                     q("svg-mask-chat-input-button-notification"),
-                    X("svg-mask-sticker-shop-notification"),
-                    Q("svg-mask-autocomplete-emoji-upsell-emoji"),
+                    Q("svg-mask-sticker-shop-notification"),
+                    X("svg-mask-autocomplete-emoji-upsell-emoji"),
                     J("svg-mask-event-ticket"),
                     $("svg-mask-guild-icon-with-channel-type"),
                     ee("svg-mask-content-inventory-card-face-pile-avatar"),

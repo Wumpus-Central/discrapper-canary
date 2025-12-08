@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(392711),
     o = n.n(s),
     c = n(442837),
-    u = n(28664),
-    d = n(477690),
+    d = n(28664),
+    u = n(477690),
     g = n(481060),
     m = n(179360),
     p = n(129861),
@@ -38,7 +38,7 @@ function T(e, t, n) {
         e
     );
 }
-let P = (0, N.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+let P = (0, N.Mg)(u.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
 class w extends i.Component {
     componentDidMount() {
         this.measure();
@@ -183,7 +183,7 @@ class w extends i.Component {
                 return null == e
                     ? null
                     : (0, r.jsx)(
-                          u.u,
+                          d.u,
                           {
                               __unsupportedReactNodeAsText: (0, r.jsx)(p.Z, {
                                   user: e.user,

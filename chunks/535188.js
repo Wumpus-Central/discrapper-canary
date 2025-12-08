@@ -1,13 +1,13 @@
-n.d(t, { Z: () => r });
+n.d(t, { Z: () => i });
 var a = n(54381);
 n(473749);
 var l = n(132392),
-    i = n(342781);
-let r = (e) => {
+    r = n(342781);
+let i = (e) => {
     var t;
-    let { onSubmit: n, disabled: r } = e,
+    let { onSubmit: n, disabled: i } = e,
         { task: s } = (0, l.T)(),
-        o = i.o[s.ui_component.component.type];
+        o = r.o[s.ui_component.component.type];
     return null == o
         ? null
         : (0, a.jsx)(o, {
@@ -16,6 +16,6 @@ let r = (e) => {
               taskId: s.task_id,
               flowId: null == (t = s.flow_context) ? void 0 : t.flow_id,
               assignmentId: s.assignment_id,
-              disabled: r,
+              disabled: i,
           });
 };

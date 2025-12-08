@@ -1,8 +1,8 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var a = n(54381),
     l = n(473749),
-    i = n(990547),
-    r = n(442837),
+    r = n(990547),
+    i = n(442837),
     s = n(544891),
     o = n(481060),
     c = n(893776),
@@ -46,25 +46,25 @@ function E(e) {
     }
     return e;
 }
-function N() {
-    let { action: e, theme: t } = (0, r.cj)([b.Z, g.Z], () => ({
+function O() {
+    let { action: e, theme: t } = (0, i.cj)([b.Z, g.Z], () => ({
             action: b.Z.getAction(),
             theme: g.Z.theme,
         })),
-        N = v.Z.getVerificationTypes(e),
-        [T, O] = l.useState(0),
-        P = (0, m.Z)(N);
+        O = v.Z.getVerificationTypes(e),
+        [N, T] = l.useState(0),
+        P = (0, m.Z)(O);
     (0, h.Z)(
         {
-            type: i.ImpressionTypes.MODAL,
-            name: i.ImpressionNames.USER_ACTION_REQUIRED,
+            type: r.ImpressionTypes.MODAL,
+            name: r.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: N[0],
-                verification_types: N,
+                verification_type: O[0],
+                verification_types: O,
             },
         },
         {},
-        [N.toString()],
+        [O.toString()],
     );
     let I = () => {
         (0, u.FD)(),
@@ -91,7 +91,7 @@ function N() {
         ),
         l.useEffect(() => {
             (null == P ? void 0 : P[0]) === y.PUi.PHONE &&
-                (null == N ? void 0 : N[0]) === y.PUi.EMAIL &&
+                (null == O ? void 0 : O[0]) === y.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
                         let { default: e } = await n.e("84112").then(n.bind(n, 273352));
@@ -128,10 +128,10 @@ function N() {
                         onCloseCallback: I,
                     },
                 );
-        }, [N, P]),
+        }, [O, P]),
         (0, a.jsx)(j.Z, {
-            types: N,
-            captchaKey: T,
+            types: O,
+            captchaKey: N,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
@@ -141,7 +141,7 @@ function N() {
                         rejectWithError: !0,
                     })
                     .then(d.xf, () => {
-                        O((e) => e + 1);
+                        T((e) => e + 1);
                     });
             },
             theme: t,

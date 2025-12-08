@@ -6,9 +6,9 @@ var r = n(54381),
     s = n(28767);
 function o(e) {
     let { showSecondaryColor: t, palette: n, onPrimaryColorChange: o, onSecondaryColorChange: c } = e,
-        u = i.useRef(null);
+        d = i.useRef(null);
     return (
-        (0, l.Tbt)(u),
+        (0, l.Tbt)(d),
         (0, r.jsxs)("div", {
             className: s.popoutContainer,
             children: [
@@ -19,7 +19,7 @@ function o(e) {
                     children: a.intl.string(a.t.JhNpgy),
                 }),
                 (0, r.jsxs)("div", {
-                    ref: u,
+                    ref: d,
                     className: s.colorPickersContainer,
                     children: [
                         (0, r.jsxs)("div", {
@@ -81,17 +81,17 @@ function c(e) {
         children: a,
         palette: s,
         onPrimaryColorChange: c,
-        onSecondaryColorChange: u,
-        popoutTargetRef: d,
+        onSecondaryColorChange: d,
+        popoutTargetRef: u,
     } = e;
     return (0, r.jsx)(l.yRy, {
-        targetElementRef: d,
+        targetElementRef: u,
         renderPopout: () =>
             (0, r.jsx)(o, {
                 showSecondaryColor: n,
                 palette: s,
                 onPrimaryColorChange: c,
-                onSecondaryColorChange: u,
+                onSecondaryColorChange: d,
             }),
         position: "top",
         shouldShow: t,

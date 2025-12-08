@@ -137,7 +137,7 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                 }),
                 [G, Z],
             ),
-            [X, Q] = (0, f.Z)(null, 300);
+            [Q, X] = (0, f.Z)(null, 300);
         return (0, r.jsx)(
             "div",
             A(
@@ -159,7 +159,7 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                 if ((null == D ? void 0 : D.current) === !0 || (null == x ? void 0 : x.current) === !0)
                                     return;
                                 let n = t.altKey;
-                                n && e.type === h.al.STICKER && !(0, g.gM)(e.sticker.id) && Q(e.sticker.id),
+                                n && e.type === h.al.STICKER && !(0, g.gM)(e.sticker.id) && X(e.sticker.id),
                                     null == j || j(e, n);
                             },
                             P = (0, s.throttle)(() => {
@@ -233,7 +233,7 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                     (0, r.jsxs)(c.P3F, {
                                         className: o()(v.sticker, k, {
                                             [v.stickerInspected]: f,
-                                            [v.showPulse]: X === e.sticker.id,
+                                            [v.showPulse]: Q === e.sticker.id,
                                         }),
                                         innerRef: G,
                                         tabIndex: K,

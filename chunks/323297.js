@@ -11,7 +11,7 @@ var i = t(793030),
     u = t(796724),
     g = t(343312),
     m = t(619733),
-    f = t(613275),
+    f = t(816632),
     x = t(388032),
     p = t(871404);
 function v(e) {
@@ -39,7 +39,7 @@ function v(e) {
     }
     return e;
 }
-function h(e, n) {
+function j(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -57,10 +57,10 @@ function h(e, n) {
         e
     );
 }
-function j(e) {
+function h(e) {
     let { step: n, setFooterNode: t } = (0, g.JL)(),
         a = (0, d.V)("GameServerSetupModal"),
-        { title: s, subtitle: j } = (function (e) {
+        { title: s, subtitle: h } = (function (e) {
             switch (e) {
                 case m.EK.SELECT_GAME:
                     return {
@@ -73,12 +73,12 @@ function j(e) {
         })(n);
     return (0, r.jsxs)(
         i.IX,
-        h(v({}, e), {
+        j(v({}, e), {
             size: "lg",
             children: [
                 (0, r.jsx)(i.xBx, {
                     title: s,
-                    subtitle: j,
+                    subtitle: h,
                 }),
                 a &&
                     (0, r.jsx)("div", {
@@ -128,7 +128,7 @@ function b(e) {
         (0, s.lY)(e.guildId, n, e.analyticsLocation),
         (0, r.jsx)(a.Gt, {
             value: n,
-            children: (0, r.jsx)(g.BT, h(v({}, e), { children: (0, r.jsx)(j, v({}, e)) })),
+            children: (0, r.jsx)(g.BT, j(v({}, e), { children: (0, r.jsx)(h, v({}, e)) })),
         })
     );
 }

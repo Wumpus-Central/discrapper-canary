@@ -161,8 +161,8 @@ let V = f.Z.RULES,
     K = /^<@\$(\d+)>/,
     z = /^<#(\d+)>/,
     q = /^<a?:(\w+):(\d+)>/,
-    X = /(@everyone|@here|@Clyde)\b/,
-    Q = /^[^\s]+@[^\s]+\.[^\s.]+/,
+    Q = /(@everyone|@here|@Clyde)\b/,
+    X = /^[^\s]+@[^\s]+\.[^\s.]+/,
     J = {
         link: B(o().defaultRules.link),
         autolink: B(o().defaultRules.autolink),
@@ -176,7 +176,7 @@ let V = f.Z.RULES,
         mention: {
             match(e, t, n) {
                 let r = n.split(" ").pop() + e;
-                if (Q.test(r)) return null;
+                if (X.test(r)) return null;
                 let i = G("@", e, t.users, "mention");
                 if (i || (i = G("@", e, t.mentionableRoles, "roleMention"))) return i;
                 if (
@@ -188,7 +188,7 @@ let V = f.Z.RULES,
                     ))
                 )
                     return null;
-                let a = X.exec(e);
+                let a = Q.exec(e);
                 if (null != a && i[0].length <= a[0].length) return null;
                 if ("" === n) {
                     let t = m.v.exec(e);

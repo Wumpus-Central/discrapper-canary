@@ -116,11 +116,11 @@ function q(e) {
     let {} = e;
     for (let e in ((R = c.oE.LOADING), d)) d[e].is_coppa && (d[e].appeal_status = { status: l.hQ.REVIEW_PENDING });
 }
-function X(e) {
+function Q(e) {
     let {} = e;
     (R = c.oE.LOADING), (w = null);
 }
-function Q(e) {
+function X(e) {
     let {} = e;
     (R = c.oE.LOADING), (w = null), (C += 1);
 }
@@ -224,8 +224,8 @@ let en = new et(s.Z, {
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN: z,
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE: z,
     SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_SUBMIT_SUCCESS: q,
-    SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL: X,
-    SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START: Q,
+    SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL: Q,
+    SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START: X,
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: J,
     SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE: $,
     LOGOUT: ee,

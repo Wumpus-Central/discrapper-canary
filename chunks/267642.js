@@ -1,7 +1,7 @@
 n.d(t, {
     A3: () => T,
     FZ: () => I,
-    Hl: () => Q,
+    Hl: () => X,
     Je: () => N,
     Jh: () => L,
     KK: () => W,
@@ -447,20 +447,20 @@ function q(e) {
     var t;
     return null != (t = v.find((t) => e < g.oCV[t])) ? t : g.Eu4.TIER_3;
 }
-let X = {
+let Q = {
     [g.Eu4.NONE]: 0,
     [g.Eu4.TIER_1]: 1 / 3,
     [g.Eu4.TIER_2]: 2 / 3,
     [g.Eu4.TIER_3]: 1,
 };
-function Q(e) {
+function X(e) {
     let t = (0, l.I)(e.id),
         n = z(t),
         r = q(t),
         i = g.oCV[n],
         a = (t - i) / (g.oCV[r] - i),
-        o = X[n],
-        s = X[r];
+        o = Q[n],
+        s = Q[r];
     return {
         fillFactor: n === g.Eu4.TIER_3 ? 1 : a * (s - o) + o,
         totalAvailableBoostsCount: t,

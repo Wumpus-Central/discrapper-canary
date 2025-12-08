@@ -1,55 +1,55 @@
 n.d(t, { x: () => h });
-var r = n(54381);
+var l = n(54381);
 n(473749);
-var l = n(512722),
-    a = n.n(l),
-    i = n(481060),
-    o = n(807163),
-    s = n(74538),
-    d = n(987209),
+var r = n(512722),
+    i = n.n(r),
+    a = n(481060),
+    s = n(807163),
+    o = n(74538),
+    u = n(987209),
     c = n(563132),
-    u = n(409813),
-    p = n(614223),
-    m = n(388032);
+    d = n(409813),
+    m = n(614223),
+    p = n(388032);
 function h(e) {
     let { handleStepChange: t, handleClose: n } = e,
         {
-            activeSubscription: l,
+            activeSubscription: r,
             selectedSkuId: h,
             setSelectedPlanId: f,
-            startedPaymentFlowWithPaymentSourcesRef: b,
+            startedPaymentFlowWithPaymentSourcesRef: g,
         } = (0, c.JL)(),
-        { isGift: g } = (0, d.wD)(),
-        v = null != l ? (0, s.Af)(l) : null,
-        x = null != v ? (0, s.MF)(v.planId) : null,
-        P = null != v ? (0, s.Rd)(v.planId) : null,
-        y = (0, p.Kp)({
+        { isGift: v } = (0, u.wD)(),
+        j = null != r ? (0, o.Af)(r) : null,
+        y = null != j ? (0, o.MF)(j.planId) : null,
+        b = null != j ? (0, o.Rd)(j.planId) : null,
+        S = (0, m.Kp)({
             isTrial: !1,
-            isGift: g,
+            isGift: v,
             selectedSkuId: h,
-            startedPaymentFlowWithPaymentSources: b.current,
+            startedPaymentFlowWithPaymentSources: g.current,
         });
     return (
-        a()(null != P, "Expected premium type"),
-        (0, r.jsx)(o.Z, {
-            premiumType: P,
-            titleText: m.intl.string(m.t["7VcWW0"]),
-            subtitleText: m.intl.format(m.t.Qk34Ik, { subscriptionName: x }),
-            footer: (0, r.jsxs)(i.ButtonGroup, {
+        i()(null != b, "Expected premium type"),
+        (0, l.jsx)(s.Z, {
+            premiumType: b,
+            titleText: p.intl.string(p.t["7VcWW0"]),
+            subtitleText: p.intl.format(p.t.Qk34Ik, { subscriptionName: y }),
+            footer: (0, l.jsxs)(a.ButtonGroup, {
                 direction: "horizontal-reverse",
                 align: "center",
                 children: [
-                    (0, r.jsx)(i.Button, {
+                    (0, l.jsx)(a.Button, {
                         variant: "primary",
-                        text: m.intl.string(m.t["3PatSz"]),
+                        text: p.intl.string(p.t["3PatSz"]),
                         onClick: () => {
-                            y ? (f((0, p.nA)(h, l)), t(u.h8.REVIEW)) : t(u.h8.PLAN_SELECT);
+                            S ? (f((0, m.nA)(h, r)), t(d.h8.REVIEW)) : t(d.h8.PLAN_SELECT);
                         },
                     }),
-                    (0, r.jsx)(i.Button, {
+                    (0, l.jsx)(a.Button, {
                         variant: "secondary",
                         onClick: n,
-                        text: m.intl.string(m.t.h9tkAK),
+                        text: p.intl.string(p.t.h9tkAK),
                     }),
                 ],
             }),

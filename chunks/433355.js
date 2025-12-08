@@ -203,10 +203,10 @@ function z() {
 function q() {
     i.tq && A && ((A = !1), (C = !1));
 }
-function X(e) {
+function Q(e) {
     return (D = e.searchContextId), z();
 }
-class Q extends (r = a.ZP.PersistedStore) {
+class X extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n, r, i, a;
@@ -274,9 +274,9 @@ class Q extends (r = a.ZP.PersistedStore) {
         return D;
     }
 }
-O(Q, "displayName", "ChannelSectionStore"), O(Q, "persistKey", "ChannelSectionStore2");
-let J = new Q(o.Z, {
-    SIDEBAR_SET_SELECTED_SEARCH_CONTEXT: X,
+O(X, "displayName", "ChannelSectionStore"), O(X, "persistKey", "ChannelSectionStore2");
+let J = new X(o.Z, {
+    SIDEBAR_SET_SELECTED_SEARCH_CONTEXT: Q,
     CHANNEL_TOGGLE_MEMBERS_SECTION: M,
     USER_PROFILE_SIDEBAR_TOGGLE_SECTION: U,
     CHANNEL_TOGGLE_SUMMARIES_SECTION: k,

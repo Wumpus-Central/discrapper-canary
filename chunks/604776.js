@@ -103,8 +103,8 @@ function y() {
         {
             refreshEntitlementList: S,
             grantFractionalPremium: E,
-            deleteFractionalPremium: N,
-            triggerNextEntitlementFulfillment: O,
+            deleteFractionalPremium: O,
+            triggerNextEntitlementFulfillment: N,
             entitlements: T,
             loading: P,
         } = (0, h.m)();
@@ -207,7 +207,7 @@ function y() {
                                                 size: c.zx.Sizes.TINY,
                                                 color: c.zx.Colors.PRIMARY,
                                                 look: c.zx.Looks.OUTLINED,
-                                                onClick: () => O(),
+                                                onClick: () => N(),
                                                 children: "Run fulfillment",
                                             }),
                                             (0, a.jsx)(c.zx, {
@@ -215,7 +215,7 @@ function y() {
                                                 size: c.zx.Sizes.TINY,
                                                 color: c.zx.Colors.RED,
                                                 look: c.zx.Looks.OUTLINED,
-                                                onClick: () => N(),
+                                                onClick: () => O(),
                                                 children: "Delete all",
                                             }),
                                             (0, a.jsx)(c.zx, {
@@ -250,7 +250,7 @@ function y() {
                                                     {
                                                         entitlement: e,
                                                         active: !0,
-                                                        onDelete: () => N(e.id),
+                                                        onDelete: () => O(e.id),
                                                     },
                                                     e.id,
                                                 ),

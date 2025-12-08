@@ -1,4 +1,4 @@
-n.d(t, { w: () => i });
+n.d(t, { w: () => r });
 var a = n(81825);
 function l(e, t, n) {
     return (
@@ -13,9 +13,9 @@ function l(e, t, n) {
         e
     );
 }
-class i extends a.Z {
+class r extends a.Z {
     static fromServer(e) {
-        return new i(e);
+        return new r(e);
     }
     setPassword(e) {
         return (this.password = e), this;

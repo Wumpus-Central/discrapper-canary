@@ -120,17 +120,17 @@ function M(e) {
         p = null != l && j.default.extractTimestamp(l.id) < Date.now() - P._8R,
         _ = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
         { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, l),
-        k = (0, s.e7)([v.default], () => {
+        D = (0, s.e7)([v.default], () => {
             var e, t;
             return (
                 (null == (e = v.default.getCurrentUser()) ? void 0 : e.desktop) === !0 ||
                 (null == (t = v.default.getCurrentUser()) ? void 0 : t.mobile) === !0
             );
         }),
-        { guildPopulated: D, guildMessaged: U, guildPersonalized: V } = (0, f.h_)(l),
+        { guildPopulated: k, guildMessaged: U, guildPersonalized: V } = (0, f.h_)(l),
         {
-            handleInvite: F,
-            handleMessage: H,
+            handleInvite: H,
+            handleMessage: F,
             handlePersonalize: B,
             handleDownload: G,
             handleAddApplication: z,
@@ -142,7 +142,7 @@ function M(e) {
                     }),
                         null != e &&
                             (0, u.ZDy)(async () => {
-                                let { default: t } = await Promise.all([n.e("49049"), n.e("7654"), n.e("89772")]).then(
+                                let { default: t } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
                                     n.bind(n, 560114),
                                 );
                                 return (n) =>
@@ -210,7 +210,7 @@ function M(e) {
                 }, [e]),
             };
         })(l),
-        W = !(k || D || U || V),
+        W = !(D || k || U || V),
         { titleAnimatedStyle: q, opacities: K } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
@@ -293,8 +293,8 @@ function M(e) {
                         children: (0, i.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0Ta),
-                            completed: D,
-                            onClick: F,
+                            completed: k,
+                            onClick: H,
                         }),
                     },
                     "invite",
@@ -328,7 +328,7 @@ function M(e) {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t["SoP7+l"]),
                             completed: U,
-                            onClick: H,
+                            onClick: F,
                         }),
                     },
                     "message",
@@ -344,7 +344,7 @@ function M(e) {
                         children: (0, i.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNI9),
-                            completed: k,
+                            completed: D,
                             onClick: G,
                         }),
                     },

@@ -1,36 +1,36 @@
-n.d(t, { Z: () => d });
-var l = n(54381);
+n.d(t, { Z: () => c });
+var r = n(54381);
 n(473749);
-var r = n(481060),
+var l = n(481060),
     i = n(507453),
     s = n(48550),
     a = n(388032),
     o = n(357507);
-function d(e) {
-    let { mfaChallenge: t, setSlide: n, onClose: d, headerAlignStart: u } = e;
-    return (0, l.jsxs)(l.Fragment, {
+function c(e) {
+    let { mfaChallenge: t, setSlide: n, onClose: c, headerAlignStart: u } = e;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, l.jsx)(i.Z.SlideHeader, {
+            (0, r.jsx)(i.Z.SlideHeader, {
                 subtitle: a.intl.string(a.t["XQaT+8"]),
-                onClose: d,
+                onClose: c,
                 headerAlignStart: u,
             }),
-            (0, l.jsx)(i.Z.SlideContent, {
+            (0, r.jsx)(i.Z.SlideContent, {
                 children: t.methods.map((e) =>
-                    (0, l.jsxs)(
-                        r.P3F,
+                    (0, r.jsxs)(
+                        l.P3F,
                         {
                             className: o.listItemContainer,
                             onClick: () => {
                                 n(e.type);
                             },
                             children: [
-                                (0, l.jsx)(r.Text, {
+                                (0, r.jsx)(l.Text, {
                                     className: o.listItemText,
                                     variant: "text-md/semibold",
                                     children: s.P[e.type],
                                 }),
-                                (0, l.jsx)(r.Fbu, {
+                                (0, r.jsx)(l.Fbu, {
                                     size: "custom",
                                     color: "currentColor",
                                     width: 20,

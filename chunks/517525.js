@@ -48,7 +48,7 @@ function P(e) {
     }
     return e;
 }
-function x(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ function x(e, t) {
         e
     );
 }
-let j = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
+let x = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
     Z = {
         opacity: 0,
         transform: "translate3d(100%, 0, 0)",
@@ -77,8 +77,8 @@ let j = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
     },
     T = { opacity: 0 },
     A = { opacity: 1 },
-    N = { borderRadius: "".concat(j, "px ").concat(j, "px ").concat(j, "px ").concat(j, "px") },
-    D = { borderRadius: "0px ".concat(j, "px ").concat(j, "px 0px") },
+    N = { borderRadius: "".concat(x, "px ").concat(x, "px ").concat(x, "px ").concat(x, "px") },
+    D = { borderRadius: "0px ".concat(x, "px ").concat(x, "px 0px") },
     M = {
         mass: 1,
         tension: 500,
@@ -93,7 +93,7 @@ let j = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 isUpsellEnabled: c,
                 shape: f,
                 size: v,
-                didTrackUpsellViewed: j,
+                didTrackUpsellViewed: x,
                 setDidTrackUpsellViewed: Z,
                 className: R,
                 premiumIndicator: T,
@@ -120,12 +120,12 @@ let j = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                     M &&
                     (0, p.ZDy)(async () => {
                         let { default: e } = await n.e("28479").then(n.bind(n, 78865));
-                        return (t) => (0, r.jsx)(e, x(P({}, t), { analyticsSource: k }));
+                        return (t) => (0, r.jsx)(e, j(P({}, t), { analyticsSource: k }));
                     });
             }, [F, M, k]);
         if (
             (i.useEffect(() => {
-                !j &&
+                !x &&
                     M &&
                     (h.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: C.cd.STREAM_QUALITY_INDICATOR,
@@ -134,7 +134,7 @@ let j = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         location_stack: N,
                     }),
                     Z(!0));
-            }, [t, l, M, j, Z, N]),
+            }, [t, l, M, x, Z, N]),
             null == A)
         )
             return null;
@@ -205,7 +205,7 @@ let j = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
             let { className: n, popoutProps: i } = e;
             return (0, r.jsxs)(
                 "div",
-                x(P({ className: a()(I.streamQualityIndicator, n) }, i), {
+                j(P({ className: a()(I.streamQualityIndicator, n) }, i), {
                     children: [
                         h((e, n) =>
                             n

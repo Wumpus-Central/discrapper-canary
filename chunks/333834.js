@@ -103,8 +103,8 @@ function R(e) {
             ignoreGrouping: R = !1,
         } = e,
         D = (0, y.fJ)(),
-        L = i.useRef(null),
-        M = (0, f.Z)(P, L),
+        M = i.useRef(null),
+        L = (0, f.Z)(P, M),
         { entrypoint: k, notificationCenterVariant: G } = (0, _.pN)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: U,
@@ -135,11 +135,11 @@ function R(e) {
     i.useEffect(() => {
         function e() {
             var e;
-            null == (e = L.current) || e.scrollPageUp({ animate: !0 });
+            null == (e = M.current) || e.scrollPageUp({ animate: !0 });
         }
         function t() {
             var e;
-            null == (e = L.current) || e.scrollPageDown({ animate: !0 });
+            null == (e = M.current) || e.scrollPageDown({ animate: !0 });
         }
         return (
             m.S.subscribe(S.CkL.SCROLL_PAGE_DOWN, t),
@@ -151,7 +151,7 @@ function R(e) {
     }, []);
     let K = i.useCallback(() => {
             var e;
-            let t = null == (e = L.current) ? void 0 : e.getScrollerState();
+            let t = null == (e = M.current) ? void 0 : e.getScrollerState();
             if (null == t) return;
             let n = 0.5 * t.offsetHeight;
             t.scrollHeight - (t.scrollTop + t.offsetHeight) <= n && (null == l || l(E.X.USER_SCROLL));
@@ -261,7 +261,7 @@ function R(e) {
     let en = i.useCallback(() => {
         var e;
         let t = T.filter((e) => H[e]).reduce((e, t) => e + Y[t].length, 0),
-            n = null == (e = L.current) ? void 0 : e.getScrollerState();
+            n = null == (e = M.current) ? void 0 : e.getScrollerState();
         return null == n ? 0 : Math.max(0, Math.ceil(n.offsetHeight / 64) - t);
     }, [H, Y]);
     i.useEffect(() => {
@@ -289,7 +289,7 @@ function R(e) {
             onDoubleClick: Z,
             "aria-label": e["aria-label"],
             children: (0, r.jsx)(c.bG, {
-                navigator: M,
+                navigator: L,
                 children: (0, r.jsx)(c.SJ, {
                     children: (e) => {
                         var t,
@@ -348,7 +348,7 @@ function R(e) {
                                 {
                                     ref: (e) => {
                                         var t;
-                                        (L.current = e),
+                                        (M.current = e),
                                             (i.current =
                                                 null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },

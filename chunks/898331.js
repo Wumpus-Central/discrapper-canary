@@ -8,7 +8,7 @@ var a = n(120356),
     o = n(328241);
 function c(e) {
     let { className: t, size: n = s.m } = e,
-        a = (0, i.pxk)(n);
+        a = (0, i.dcp)(n);
     return (0, r.jsx)("svg", {
         width: a,
         height: a,

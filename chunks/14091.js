@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(607802),
     y = n(375123),
     O = n(945577),
-    j = n(28964),
-    x = n(759209),
+    x = n(28964),
+    j = n(759209),
     v = n(532428),
     C = n(406326),
     I = n(994463),
@@ -138,8 +138,8 @@ function F(e) {
             searchResultsQuery: m,
             isFavoritesSearch: b,
         } = e,
-        { totalResults: _, isSearching: y, isIndexing: O, hasError: j } = l;
-    if (j)
+        { totalResults: _, isSearching: y, isIndexing: O, hasError: x } = l;
+    if (x)
         return (0, r.jsxs)(G, {
             children: [
                 (0, r.jsx)("div", { className: k.errorImage }),
@@ -179,13 +179,13 @@ function F(e) {
             searchResultsQuery: m,
             isFavoritesSearch: b,
         });
-    let { showNoResultsAlt: x } = l,
-        v = x ? M.intl.string(M.t["VrK/2R"]) : M.intl.string(M.t.V6nAfF);
+    let { showNoResultsAlt: j } = l,
+        v = j ? M.intl.string(M.t["VrK/2R"]) : M.intl.string(M.t.V6nAfF);
     return (0, r.jsxs)(G, {
         children: [
-            (0, r.jsx)("div", { className: a()(k.noResultsImage, { [k.alt]: x }) }),
+            (0, r.jsx)("div", { className: a()(k.noResultsImage, { [k.alt]: j }) }),
             (0, r.jsx)("div", {
-                className: a()(k.emptyResultsText, k.noResults, { [k.alt]: x }),
+                className: a()(k.emptyResultsText, k.noResults, { [k.alt]: j }),
                 children: v,
             }),
         ],
@@ -203,8 +203,8 @@ let B = [],
                 ignoreCount: f,
                 isFeedbackVisible: b,
                 dismissFeedbackEntrypoint: O,
-                onSearchModeChange: j,
-                onPageChange: x,
+                onSearchModeChange: x,
+                onPageChange: j,
                 searchMode: I,
                 onBlockedResultsClick: S,
                 searchResultsQuery: Z,
@@ -274,9 +274,9 @@ let B = [],
                             searchRequestAnalyticsId: a,
                             mode: e,
                         }),
-                        j(e));
+                        x(e));
                 },
-                [j, n.isSearching, t, I, a],
+                [x, n.isSearching, t, I, a],
             ),
             K = i.useCallback(
                 (e, r) => {
@@ -309,9 +309,9 @@ let B = [],
                         searchRequestAnalyticsId: a,
                         newPageIndex: e,
                     }),
-                        x(e);
+                        j(e);
                 },
-                [x, t, a],
+                [j, t, a],
             ),
             X = Math.floor(n.offset / D.vpv),
             J = W && X >= z,
@@ -404,9 +404,9 @@ function z(e) {
     let { searchContext: t, selectedChannelId: n } = e,
         { isFeedbackVisible: l, dismissFeedbackEntrypoint: a } = (function (e) {
             let [t, n] = i.useState(!1),
-                r = (0, j.M_)({ location: "SearchResults" }),
+                r = (0, x.M_)({ location: "SearchResults" }),
                 l = (0, O.Gc)({ location: "SearchResults" }),
-                a = (0, x.f)({ location: "SearchResults" }),
+                a = (0, j.f)({ location: "SearchResults" }),
                 s = e.type === D.aib.DMS || e.type === D.aib.CHANNEL,
                 o = a && (r || (s && l));
             return (

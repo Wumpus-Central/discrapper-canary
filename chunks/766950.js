@@ -23,9 +23,9 @@ var l = n(54381),
     P = n(438759),
     N = n(512070),
     k = n(299939),
-    y = n(305813),
-    O = n(981631),
-    T = n(677065),
+    O = n(305813),
+    y = n(981631),
+    T = n(905170),
     E = n(388032),
     D = n(300119);
 function R(e) {
@@ -34,8 +34,8 @@ function R(e) {
         B = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         Z = (0, C.t)(B, L),
         M = (0, s.e7)([g.Z], () => g.Z.getGuild(L)),
-        { userDisplayNameStyles: G, guildDisplayNameStyles: Y, pendingDisplayNameStyles: H } = (0, f.mD)(B, L),
-        z = void 0 !== H ? H : null != Y ? Y : G,
+        { userDisplayNameStyles: G, guildDisplayNameStyles: H, pendingDisplayNameStyles: Y } = (0, f.mD)(B, L),
+        z = void 0 !== Y ? Y : null != H ? H : G,
         [F, U] = o.useState(null != (t = null == z ? void 0 : z.fontId) ? t : a.C.DEFAULT),
         [q, K] = o.useState(null != (n = null == z ? void 0 : z.effectId) ? n : i.m.SOLID),
         X = (0, S.R)(q),
@@ -71,7 +71,7 @@ function R(e) {
         }),
         er = o.useCallback(() => {
             let { fontId: e, effectId: t, colors: n } = (0, _.aY)();
-            U(e), K(t), t === i.m.GRADIENT ? ee(n) : J(n[0]), x.default.track(O.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
+            U(e), K(t), t === i.m.GRADIENT ? ee(n) : J(n[0]), x.default.track(y.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
         }, [ee, J]),
         ei = o.useCallback(
             (e) => {
@@ -135,7 +135,7 @@ function R(e) {
                                           }),
                                       ],
                                   }),
-                                  (0, l.jsx)(y.Z, {
+                                  (0, l.jsx)(O.Z, {
                                       user: B,
                                       guild: M,
                                       displayName: Z,

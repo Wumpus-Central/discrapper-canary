@@ -1,4 +1,4 @@
-n.d(t, { u: () => M }), n(388685);
+n.d(t, { u: () => L }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(91192),
@@ -43,15 +43,15 @@ let D = {
         y: 0,
     },
 };
-function L(e) {
+function M(e) {
     var t, n;
     let { selected: o, user: d, badge: h, link: g, showProgressBadge: _ } = e,
         [y, O] = i.useState(!1),
         [v, j] = i.useState(!1),
         [x, C] = i.useState(null),
         [E, w] = i.useState(0),
-        L = (0, l.Ie)("home"),
-        M = (0, f.oq)().activePanel === f.wh.APP_ICON,
+        M = (0, l.Ie)("home"),
+        L = (0, f.oq)().activePanel === f.wh.APP_ICON,
         k = () => {
             C(null), w(0), clearTimeout(x);
         },
@@ -66,7 +66,7 @@ function L(e) {
             className: R.downloadProgress,
             determineOwnVisibility: !1,
         }));
-    let F = o || y || M,
+    let F = o || y || L,
         V = (0, r.jsx)(s.aRk, {
             selected: !0,
             lowerBadge: h > 0 ? (0, N.Ne)(h) : null,
@@ -123,7 +123,7 @@ function L(e) {
                         "aria-owns": "guild-list-unread-dms",
                         "aria-selected": o,
                     },
-                    L,
+                    M,
                 )),
                 (n = n =
                     {
@@ -178,7 +178,7 @@ function L(e) {
         }),
     });
 }
-function M() {
+function L() {
     let e = (0, E.n)(),
         t = (0, o.e7)([x.Z, j.Z], () => {
             let e = (0, c.E)(x.Z.activeItems, j.Z),
@@ -201,7 +201,7 @@ function M() {
         S = v.Z.getHomeLink();
     return (
         b && (S = Z.Z5c.APPLICATION_STORE),
-        (0, r.jsx)(L, {
+        (0, r.jsx)(M, {
             selected: e,
             user: f,
             selectedChannelId: _.Z.getChannelId(Z.ME),

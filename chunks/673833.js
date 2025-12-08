@@ -1,14 +1,14 @@
-n.d(t, { t: () => l });
+n.d(t, { t: () => o });
 var r = n(535396),
-    i = n(130231),
-    o = n(388032);
-function l(e, t) {
+    i = n(810878),
+    l = n(388032);
+function o(e, t) {
     switch (t) {
         case r.br.AVAILABLE:
-            return o.intl.formatToPlainString(i.default.BdRXZA, { boostCount: e });
+            return l.intl.formatToPlainString(i.default.BdRXZA, { boostCount: e });
         case r.br.SPENT:
-            return o.intl.formatToPlainString(i.default.xvgIVG, { boostCount: e });
+            return l.intl.formatToPlainString(i.default.xvgIVG, { boostCount: e });
         case r.br.TOTAL:
-            return o.intl.string(i.default["/F7Z2y"]);
+            return l.intl.string(i.default["/F7Z2y"]);
     }
 }

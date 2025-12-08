@@ -9,8 +9,8 @@ var n = r(473749),
     o = r(594174),
     s = r(823379),
     c = r(51144),
-    a = r(602733),
-    u = r(981631),
+    u = r(602733),
+    a = r(981631),
     d = r(388032);
 function f(e, t) {
     return n.useMemo(() => {
@@ -40,16 +40,16 @@ function f(e, t) {
                   !i && o
                       ? {
                             title:
-                                e.source === a.lr.WISHLIST
+                                e.source === u.lr.WISHLIST
                                     ? d.intl.formatToPlainString(d.t.p3RmJF, { username: n })
                                     : d.intl.string(d.t.Ig6VDH),
-                            renderIcon: e.productLine !== u.POd.COLLECTIBLES ? e.renderIcon : void 0,
+                            renderIcon: e.productLine !== a.POd.COLLECTIBLES ? e.renderIcon : void 0,
                             shouldShow: !0,
                         }
                       : i && !o
                         ? {
                               title:
-                                  e.productLine === u.POd.SOCIAL_LAYER_GAME_ITEM
+                                  e.productLine === a.POd.SOCIAL_LAYER_GAME_ITEM
                                       ? d.intl.string(d.t["4yiU7x"])
                                       : d.intl.string(d.t.HFhcqh),
                               renderIcon: e.renderIcon,
@@ -57,11 +57,11 @@ function f(e, t) {
                           }
                         : {
                               title:
-                                  e.productLine === u.POd.SOCIAL_LAYER_GAME_ITEM
+                                  e.productLine === a.POd.SOCIAL_LAYER_GAME_ITEM
                                       ? d.intl.string(d.t["4yiU7x"])
                                       : d.intl.string(d.t.HFhcqh),
                               body:
-                                  e.source === a.lr.WISHLIST
+                                  e.source === u.lr.WISHLIST
                                       ? d.intl.formatToPlainString(d.t.p3RmJF, { username: n })
                                       : d.intl.string(d.t.Ig6VDH),
                               renderIcon: e.renderIcon,
@@ -81,10 +81,10 @@ function m(e, t) {
                       let r = t && e.isOwned && null != e.gifterUserId && null != c[e.gifterUserId];
                       return {
                           title:
-                              e.skuProductLine === u.POd.SOCIAL_LAYER_GAME_ITEM
+                              e.skuProductLine === a.POd.SOCIAL_LAYER_GAME_ITEM
                                   ? d.intl.string(d.t["4yiU7x"])
                                   : d.intl.string(d.t.HFhcqh),
-                          renderIcon: e.skuProductLine === u.POd.SOCIAL_LAYER_GAME_ITEM ? l.Q : void 0,
+                          renderIcon: e.skuProductLine === a.POd.SOCIAL_LAYER_GAME_ITEM ? l.Q : void 0,
                           shouldShow: !r,
                       };
                   })

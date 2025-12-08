@@ -2,9 +2,9 @@ n.d(t, { Z: () => m });
 var i = n(54381);
 n(473749);
 var l = n(512722),
-    s = n.n(l),
+    a = n.n(l),
     r = n(793030),
-    a = n(481060),
+    s = n(481060),
     o = n(565138),
     c = n(703656),
     d = n(388032),
@@ -12,7 +12,7 @@ var l = n(512722),
 function m(e) {
     let { directoryGuildName: t, guildToAdd: n, isExistingGuildFlow: l, onClose: m } = e;
     return (
-        s()(null != n, "Missing guild in Hub add guild confirmation"),
+        a()(null != n, "Missing guild in Hub add guild confirmation"),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(r.fef, {
@@ -24,12 +24,12 @@ function m(e) {
                                 size: o.Z.Sizes.XLARGE,
                                 active: !0,
                             }),
-                            (0, i.jsx)(a.Heading, {
+                            (0, i.jsx)(s.Heading, {
                                 className: u.title,
                                 variant: "heading-xl/semibold",
                                 children: d.intl.string(d.t.CueiPY),
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(s.Text, {
                                 color: "text-default",
                                 variant: "text-md/normal",
                                 children: l

@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(807582),
     o = n(26323),
     c = n(516129),
-    u = n(345861),
-    d = n(768581),
+    d = n(345861),
+    u = n(768581),
     g = n(434404),
     m = n(981631),
     p = n(30513),
@@ -98,7 +98,7 @@ let j = function (e) {
             image: t.homeHeader,
             makeURL: (e) =>
                 null != e
-                    ? d.ZP.getGuildHomeHeaderURL({
+                    ? u.ZP.getGuildHomeHeaderURL({
                           id: t.id,
                           homeHeader: e,
                       })
@@ -141,7 +141,7 @@ let j = function (e) {
                                   }),
                                   (0, r.jsx)("div", {
                                       className: x.uploadButton,
-                                      children: (0, r.jsx)(u.Z, {
+                                      children: (0, r.jsx)(d.Z, {
                                           onChange: _,
                                           maxFileSizeBytes: h.B,
                                           text: b.intl.string(b.t.yG2pUi),

@@ -1,4 +1,4 @@
-n.d(e, { r: () => E });
+n.d(e, { r: () => T });
 var i = n(54381),
     l = n(657707),
     s = n(509613),
@@ -15,7 +15,7 @@ let c = (0, s.x1)(r.n.CONTENT_AND_SOCIAL_PANE, {
         useTitle: () => o.intl.string(o.t["+o1pDZ"]),
         buildLayout: () => [c],
     }),
-    E = (0, s.m7)(r.n.CONTENT_AND_SOCIAL_SIDEBAR_ITEM, {
+    T = (0, s.m7)(r.n.CONTENT_AND_SOCIAL_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t["+o1pDZ"]),
         getLegacySearchKey: () => a.s6.CONTENT_SOCIAL,
         icon: l.lZ8,

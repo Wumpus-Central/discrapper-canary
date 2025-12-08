@@ -127,7 +127,7 @@ function N(e) {
             canAnimate: D || !k ? L : M,
         }),
         Z = (0, u.dQu)(c.Z.unsafe_rawColors.PRIMARY_800).hex(),
-        B = n.getAvatarURL(b, (0, u.pxk)(I)),
+        B = n.getAvatarURL(b, (0, u.dcp)(I)),
         F = (0, s._i)((0, d.ZP)(B, Z, !1)),
         V = (0, f.Z)(null != (t = null != w ? w : null == a ? void 0 : a.primaryColor) ? t : F).hex,
         H = C(I),

@@ -1,38 +1,38 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    o = n.n(i),
-    a = n(907331),
-    s = n(399606),
+    s = n.n(i),
+    o = n(907331),
+    a = n(399606),
     c = n(481060),
     u = n(594174),
     d = n(381585),
-    f = n(870289),
-    g = n(370039),
+    g = n(870289),
+    f = n(370039),
     p = n(937510),
     m = n(303952),
-    h = n(253355),
-    C = n(38900),
+    C = n(253355),
+    h = n(38900),
     _ = n(653126),
     b = n(786040),
-    v = n(258939),
-    x = n(81136),
-    E = n(619899),
+    E = n(258939),
+    v = n(81136),
+    S = n(619899),
     O = n(215023),
-    S = n(887353);
+    x = n(887353);
 function y(e) {
     let { category: t } = e,
-        n = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+        n = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         l = (0, p.l)(t.products),
-        i = (0, g.a)()(l),
-        o = (0, E.St)(i),
-        a = (0, d.sp)();
-    return null == n || 0 === o.length
+        i = (0, f.a)()(l),
+        s = (0, S.St)(i),
+        o = (0, d.sp)();
+    return null == n || 0 === s.length
         ? null
         : (0, r.jsx)("div", {
-              className: S.cardsContainer,
-              children: o.map((e, t) =>
+              className: x.cardsContainer,
+              children: s.map((e, t) =>
                   (0, r.jsx)(
                       d.k0,
                       {
@@ -42,7 +42,7 @@ function y(e) {
                               {
                                   skuId: e.skuId,
                                   skipLimitedTimeCheck: !0,
-                                  onClickAnalytics: (0, b.wO)(e, O.AW.CATALOG, a),
+                                  onClickAnalytics: (0, b.wO)(e, O.AW.CATALOG, o),
                               },
                               e.skuId,
                           ),
@@ -52,26 +52,26 @@ function y(e) {
               ),
           });
 }
-function j(e) {
+function k(e) {
     let { category: t } = e,
         [n, i] = l.useState(!1),
-        o = (0, a.O)((e) => {
+        s = (0, o.O)((e) => {
             i(e);
         }, 0.15);
     return (0, r.jsxs)("div", {
-        className: S.categoryWrapper,
-        ref: o,
-        children: [(0, r.jsx)(h.Z, { category: t }), (0, r.jsx)(y, { category: t })],
+        className: x.categoryWrapper,
+        ref: s,
+        children: [(0, r.jsx)(C.Z, { category: t }), (0, r.jsx)(y, { category: t })],
     });
 }
-function I(e) {
+function T(e) {
     var t;
-    let { sortedCategories: n, setCategoryRef: i, currentPage: a, handlePageChange: s, initialCategoryId: u } = e,
-        g = (0, d.sp)(),
-        p = (0, v.R)(),
-        h = null != (t = null == g ? void 0 : g.sessionId) ? t : "",
-        { noCache: _, includeUnpublished: b } = (0, x.Z)(),
-        E = l.useMemo(
+    let { sortedCategories: n, setCategoryRef: i, currentPage: o, handlePageChange: a, initialCategoryId: u } = e,
+        f = (0, d.sp)(),
+        p = (0, E.R)(),
+        C = null != (t = null == f ? void 0 : f.sessionId) ? t : "",
+        { noCache: _, includeUnpublished: b } = (0, v.Z)(),
+        S = l.useMemo(
             () =>
                 n
                     .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
@@ -83,23 +83,23 @@ function I(e) {
         ),
         y = l.useRef(void 0);
     l.useEffect(() => {
-        if (null == u || 0 === E.length) {
+        if (null == u || 0 === S.length) {
             y.current = void 0;
             return;
         }
         if (u === y.current) return;
-        let e = E.findIndex((e) => e.skuId === u);
+        let e = S.findIndex((e) => e.skuId === u);
         if (-1 === e) return;
         let t = Math.floor(e / O.kN) + 1;
-        t !== a && s(t), (y.current = u);
-    }, [u, E, s, a]);
-    let I = l.useMemo(() => {
-        let e = (a - 1) * O.kN;
-        return E.slice(e, e + O.kN);
-    }, [E, a]);
+        t !== o && a(t), (y.current = u);
+    }, [u, S, a, o]);
+    let T = l.useMemo(() => {
+        let e = (o - 1) * O.kN;
+        return S.slice(e, e + O.kN);
+    }, [S, o]);
     l.useEffect(() => {
         (0, m.n)({
-            sessionId: h,
+            sessionId: C,
             checkpoint: m.a.SHOP_MOUNTED,
             tab: O.AW.CATALOG,
             unpublishedCategoriesShown: b,
@@ -108,41 +108,41 @@ function I(e) {
     }, []),
         l.useEffect(() => {
             p ||
-                0 === I.length ||
+                0 === T.length ||
                 (0, m.n)({
-                    sessionId: h,
+                    sessionId: C,
                     checkpoint: m.a.SHOP_RENDERED,
                     tab: O.AW.CATALOG,
                     unpublishedCategoriesShown: b,
                     cacheDisabled: _,
                 });
-        }, [h, b, _, p, I.length]);
-    let k = (0, f.FF)("CollectiblesBrowse");
+        }, [C, b, _, p, T.length]);
+    let j = (0, g.FF)("CollectiblesBrowse");
     return p
-        ? (0, r.jsx)(C.Z, {})
+        ? (0, r.jsx)(h.Z, {})
         : (0, r.jsxs)("div", {
-              className: o()(S.categories, { [S.categoriesNoFilter]: !k }),
+              className: s()(x.categories, { [x.categoriesNoFilter]: !j }),
               children: [
-                  I.map((e, t) =>
+                  T.map((e, t) =>
                       (0, r.jsx)(
                           "div",
                           {
                               ref: (t) => i(e.skuId, t),
                               children: (0, r.jsx)(d.k0, {
                                   newValue: { categoryPosition: t },
-                                  children: (0, r.jsx)(j, { category: e }),
+                                  children: (0, r.jsx)(k, { category: e }),
                               }),
                           },
                           e.skuId,
                       ),
                   ),
                   (0, r.jsx)("div", {
-                      className: S.paginationContainer,
+                      className: x.paginationContainer,
                       children: (0, r.jsx)(c.DsT, {
-                          currentPage: a,
-                          totalCount: E.length,
+                          currentPage: o,
+                          totalCount: S.length,
                           pageSize: O.kN,
-                          onPageChange: s,
+                          onPageChange: a,
                           disablePaginationGap: !0,
                       }),
                   }),

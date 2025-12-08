@@ -775,8 +775,8 @@ function W(e) {
             avatarTooltipText: z,
             avatarTooltipTitle: q,
         } = e,
-        X = (0, u.vj)(T, P),
-        Q = i.useId(),
+        Q = (0, u.vj)(T, P),
+        X = i.useId(),
         J = i.useId(),
         [$] = i.useState(() =>
             O(
@@ -792,7 +792,7 @@ function W(e) {
         ee = i.useMemo(
             () =>
                 O(
-                    { fill: X },
+                    { fill: Q },
                     Z({
                         size: y,
                         status: T,
@@ -800,7 +800,7 @@ function W(e) {
                         isTyping: p,
                     }),
                 ),
-            [X, y, T, f, p],
+            [Q, y, T, f, p],
         ),
         et = (0, l.q_F)(
             {
@@ -860,7 +860,7 @@ function W(e) {
                 "aria-hidden": !0,
                 children: [
                     (0, r.jsxs)("mask", {
-                        id: Q,
+                        id: X,
                         width: ec,
                         height: ec,
                         children: [
@@ -888,7 +888,7 @@ function W(e) {
                         y: 0,
                         width: ec,
                         height: ec,
-                        mask: "url(#".concat(Q, ")"),
+                        mask: "url(#".concat(X, ")"),
                         children: (0, r.jsx)(F, {
                             src: v,
                             isSpeaking: h,

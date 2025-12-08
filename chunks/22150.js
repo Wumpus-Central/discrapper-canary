@@ -1,54 +1,54 @@
-n.d(e, { Z: () => d }), n(388685), n(953529);
-var a = n(54381),
-    r = n(473749),
-    i = n(442837),
-    l = n(481060),
-    s = n(479531),
-    o = n(393869),
-    c = n(594174),
-    u = n(388032),
-    E = n(780187),
-    _ = n(800010);
-function d(t) {
-    let { onNext: e, onClose: n, transitionState: d } = t,
-        [A, x] = r.useState(!1),
-        C = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        g = async (t) => {
-            t.preventDefault(), x(!0);
+e.d(n, { Z: () => _ }), e(388685), e(953529);
+var a = e(54381),
+    r = e(473749),
+    i = e(442837),
+    l = e(481060),
+    s = e(479531),
+    o = e(393869),
+    c = e(594174),
+    u = e(388032),
+    E = e(780187),
+    A = e(800010);
+function _(t) {
+    let { onNext: n, onClose: e, transitionState: _ } = t,
+        [d, C] = r.useState(!1),
+        x = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
+        N = async (t) => {
+            t.preventDefault(), C(!0);
             try {
-                await (0, o.i)(), e();
-            } catch (e) {
-                let t = new s.Z(e).getAnyErrorMessage();
+                await (0, o.i)(), n();
+            } catch (n) {
+                let t = new s.Z(n).getAnyErrorMessage();
                 null != t && (0, l.showToast)((0, l.createToast)(t, l.ToastType.FAILURE));
             } finally {
-                x(!1);
+                C(!1);
             }
         };
     return (0, a.jsx)(l.Ioy, {
         graphic: {
             type: "image",
-            src: _,
+            src: A,
         },
         title: u.intl.string(u.t.uFxYq0),
-        onClose: n,
-        transitionState: d,
+        onClose: e,
+        transitionState: _,
         actions: [
             {
                 variant: "secondary",
                 text: u.intl.string(u.t["ETE/oC"]),
-                onClick: n,
+                onClick: e,
             },
             {
                 variant: "primary",
                 text: u.intl.string(u.t.rXV81H),
-                loading: A,
-                onClick: g,
+                loading: d,
+                onClick: N,
             },
         ],
         children: (0, a.jsx)(l.Text, {
             className: E.description,
             variant: "text-md/normal",
-            children: u.intl.format(u.t.oMFSgi, { oldEmail: null == C ? void 0 : C.email }),
+            children: u.intl.format(u.t.oMFSgi, { oldEmail: null == x ? void 0 : x.email }),
         }),
     });
 }

@@ -119,7 +119,7 @@ function q(e, t) {
                     (l[2 * i + 1] !== a && ((e.opt_len += (a - l[2 * i + 1]) * l[2 * i]), (l[2 * i + 1] = a)), r--);
     }
 }
-function X(e, t, n) {
+function Q(e, t, n) {
     var r,
         i,
         a = Array(S + 1),
@@ -130,7 +130,7 @@ function X(e, t, n) {
         0 !== s && (e[2 * i] = K(a[s]++, s));
     }
 }
-function Q() {
+function X() {
     var e,
         t,
         n,
@@ -145,7 +145,7 @@ function Q() {
     for (; e <= 255; ) (j[2 * e + 1] = 9), e++, l[9]++;
     for (; e <= 279; ) (j[2 * e + 1] = 7), e++, l[7]++;
     for (; e <= 287; ) (j[2 * e + 1] = 8), e++, l[8]++;
-    for (X(j, b + 1, l), e = 0; e < y; e++) (M[2 * e + 1] = 5), (M[2 * e] = K(e, 5));
+    for (Q(j, b + 1, l), e = 0; e < y; e++) (M[2 * e + 1] = 5), (M[2 * e] = K(e, 5));
     (r = new B(j, R, E + 1, b, S)), (i = new B(M, w, 0, y, S)), (a = new B([], D, 0, O, T));
 }
 function J(e) {
@@ -228,7 +228,7 @@ function ei(e, t) {
             (e.heap[1] = i++),
             en(e, a, 1);
     while (e.heap_len >= 2);
-    (e.heap[--e.heap_max] = e.heap[1]), q(e, t), X(a, c, e.bl_count);
+    (e.heap[--e.heap_max] = e.heap[1]), q(e, t), Q(a, c, e.bl_count);
 }
 function ea(e, t, n) {
     var r,
@@ -338,7 +338,7 @@ function e_(e, t, n) {
     );
 }
 (t._tr_init = function (e) {
-    eu || (Q(), (eu = !0)),
+    eu || (X(), (eu = !0)),
         (e.l_desc = new F(e.dyn_ltree, r)),
         (e.d_desc = new F(e.dyn_dtree, i)),
         (e.bl_desc = new F(e.bl_tree, a)),

@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(111583),
     g = n(459273),
     b = n(880831),
-    y = n(774168),
-    C = n(871499),
+    C = n(774168),
+    y = n(871499),
     v = n(981631),
     _ = n(388032);
 function O(e) {
@@ -39,7 +39,7 @@ function O(e) {
 function x(e) {
     let { className: t, channelId: n } = e,
         { unreadCount: r, mentionCount: l, isTyping: a, voiceChannelIsSelected: o } = O(n);
-    return (0, i.jsx)(y.Z, {
+    return (0, i.jsx)(C.Z, {
         className: t,
         unreadCount: r,
         mentionCount: l,
@@ -56,7 +56,7 @@ function E(e) {
             onClick: h,
             inPopout: f,
             showRequestToSpeakSidebar: m,
-            toggleRequestToSpeakSidebar: y,
+            toggleRequestToSpeakSidebar: C,
         } = e,
         E = (function (e, t) {
             if (null == e) return {};
@@ -116,8 +116,8 @@ function E(e) {
             );
         })(n),
         A = r.useCallback(() => {
-            (0, p.v)(j, p.d.CHAT, !I), null == h || h(), !I && m && (null == y || y()), c.Z.updateChatOpen(n, !I);
-        }, [n, I, h, m, y, j]),
+            (0, p.v)(j, p.d.CHAT, !I), null == h || h(), !I && m && (null == C || C()), c.Z.updateChatOpen(n, !I);
+        }, [n, I, h, m, C, j]),
         w = r.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -161,7 +161,7 @@ function E(e) {
         N > 0 && k.push(_.intl.formatToPlainString(_.t["3l1GOx"], { mentionCount: N })),
         T > 0 && k.push(_.intl.string(_.t.x5zAGZ)),
         (0, i.jsx)(
-            C.Z,
+            y.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

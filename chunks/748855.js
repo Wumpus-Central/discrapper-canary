@@ -13,8 +13,8 @@ var i = n(54381),
 function f(e) {
     let { label: t, icon: n, setStatus: l, isFavorited: f, onFavoriteClick: m } = e,
         [g, b] = r.useState(!1),
-        y = (0, o.e7)([u.Z], () => u.Z.getFavoritedStatuses().length >= u.o),
-        C = r.useCallback(
+        C = (0, o.e7)([u.Z], () => u.Z.getFavoritedStatuses().length >= u.o),
+        y = r.useCallback(
             (e) => {
                 e.stopPropagation(), null == m || m();
             },
@@ -41,7 +41,7 @@ function f(e) {
                 null != m &&
                 (0, i.jsx)(c.aML, {
                     "data-migration-pending": !0,
-                    text: y && !f ? d.intl.string(d.t.YSDH9n) : void 0,
+                    text: C && !f ? d.intl.string(d.t.YSDH9n) : void 0,
                     children: (e) => {
                         var t, n;
                         return (0, i.jsx)(
@@ -74,7 +74,7 @@ function f(e) {
                             (n = n =
                                 {
                                     className: a()(p.centerAlign, p.favoriteIcon),
-                                    onClick: C,
+                                    onClick: y,
                                     children: (0, i.jsx)(v, {
                                         className: p.closeIcon,
                                         color: f ? s.Z.colors.ICON_FEEDBACK_WARNING : "currentColor",

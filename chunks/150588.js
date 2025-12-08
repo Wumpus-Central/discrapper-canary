@@ -102,8 +102,8 @@ let D = (0, s.animated)(u.CJ0),
             K = (0, f.y)(W),
             z = (0, S.uq)(N),
             q = N === m.jn.QUESTS_EMBED,
-            X = (0, h.t5)(a, I.dr.QUESTS_CARD, N, G),
-            Q = (null == (t = a.userStatus) ? void 0 : t.completedAt) != null,
+            Q = (0, h.t5)(a, I.dr.QUESTS_CARD, N, G),
+            X = (null == (t = a.userStatus) ? void 0 : t.completedAt) != null,
             J = (0, _.O5)(),
             $ = (0, g.B6)(a.config.expiresAt),
             ee = (0, g.B6)(a.config.rewardsConfig.rewardsExpireAt),
@@ -199,7 +199,7 @@ let D = (0, s.animated)(u.CJ0),
                                                         }),
                                                         (0, r.jsx)(u.Text, {
                                                             variant: "text-xs/medium",
-                                                            children: X,
+                                                            children: Q,
                                                         }),
                                                     ],
                                                 }),
@@ -253,7 +253,7 @@ let D = (0, s.animated)(u.CJ0),
                                                     (0, r.jsx)(u.Text, {
                                                         variant: "text-xs/normal",
                                                         color: "always-white",
-                                                        children: Q
+                                                        children: X
                                                             ? A.intl.formatToPlainString(A.t.APddvF, {
                                                                   expirationDate: ee,
                                                               })

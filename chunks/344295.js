@@ -17,14 +17,14 @@ var r = n(54381),
     x = n(639946),
     E = n(792766),
     v = n(362762),
-    b = n(978684),
-    j = n(264229),
+    j = n(978684),
+    b = n(264229),
     I = n(929809),
     y = n(703656),
     S = n(108427),
-    O = n(314897),
-    N = n(896797),
-    C = n(701190),
+    N = n(314897),
+    C = n(896797),
+    O = n(701190),
     T = n(626135),
     A = n(63063),
     Z = n(782605),
@@ -125,7 +125,7 @@ class J extends i.PureComponent {
         }
         if (!t && e) {
             let e = this.getInviteKey(),
-                { baseCode: t } = (0, j.fU)(e);
+                { baseCode: t } = (0, b.fU)(e);
             (0, y.dL)(k.Z5c.INVITE_LOGIN(t));
         }
     }
@@ -135,7 +135,7 @@ class J extends i.PureComponent {
         if (s !== this.getInviteKey(e)) Y(s);
         else if (t.state === k.r2o.APP_NOT_OPENED) this.handleContinue();
         else if (this.getMode() === z && r !== e.authenticated && r) {
-            let e = O.default.getFingerprint();
+            let e = N.default.getFingerprint();
             if (null != e) {
                 let t = (0, c.s)(e);
                 this.track(k.rMx.INVITE_LOGIN_SUCCESSFUL, !0, { prev_user_id: t });
@@ -182,7 +182,7 @@ class J extends i.PureComponent {
     track(e, t, n) {
         let { invite: r } = this.props,
             i = this.getInviteKey(),
-            s = (0, j.jX)(i),
+            s = (0, b.jX)(i),
             l = t
                 ? {
                       guild_id: null != r.guild ? r.guild.id : null,
@@ -314,7 +314,7 @@ class J extends i.PureComponent {
             case k.r2o.RESOLVED:
                 var l;
                 if (n && (0, o.yE)(null != (l = e.flags) ? l : 0, a.$.IS_GUEST_INVITE))
-                    return g.ZP.openApp(e.code), d.x.set(b.J, e.code), this.renderAppOpened(() => i(k.Z5c.APP));
+                    return g.ZP.openApp(e.code), d.x.set(j.J, e.code), this.renderAppOpened(() => i(k.Z5c.APP));
                 if (n || !B.KO) return this.renderAuthenticatedOrDownload();
                 if (this.getMode() === z)
                     return (0, r.jsx)(L.Z, {
@@ -404,14 +404,14 @@ class J extends i.PureComponent {
             });
     }
 }
-let Q = u.ZP.connectStores([C.Z, N.Z, O.default, v.Z, m.Z], (e) => {
+let Q = u.ZP.connectStores([O.Z, C.Z, N.default, v.Z, m.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
-        invite: null != (t = C.Z.getInvite(n)) ? t : {},
+        invite: null != (t = O.Z.getInvite(n)) ? t : {},
         nativeAppState: v.Z.getState(n),
-        authenticated: O.default.isAuthenticated(),
-        defaultRoute: N.Z.defaultRoute,
+        authenticated: N.default.isAuthenticated(),
+        defaultRoute: C.Z.defaultRoute,
         isUnderage: m.Z.isUnderageAnonymous(),
     };
 })(J);

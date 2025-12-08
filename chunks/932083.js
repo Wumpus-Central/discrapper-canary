@@ -1,18 +1,18 @@
-n.d(t, { Z: () => a });
-var r = n(54381);
+n.d(t, { Z: () => s });
+var a = n(54381);
 n(473749);
 var l = n(481060),
-    i = n(786040),
-    o = n(29121);
-let a = (e) => {
+    r = n(786040),
+    i = n(29121);
+let s = (e) => {
     let { skuId: t, className: n } = e,
-        a = (0, i.LJ)(t),
-        s = (0, o.To)(a);
-    return (0, r.jsx)(l.Heading, {
+        s = (0, r.LJ)(t),
+        o = (0, i.To)(s);
+    return (0, a.jsx)(l.Heading, {
         variant: "heading-md/medium",
         color: "text-strong",
         className: n,
         lineClamp: 1,
-        children: s,
+        children: o,
     });
 };

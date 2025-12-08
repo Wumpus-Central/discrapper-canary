@@ -461,7 +461,7 @@ async function q(e, t, n, r) {
         bank: _,
     });
 }
-let X = (e, t, n) => {
+let Q = (e, t, n) => {
         if (null != t) throw n(t);
         if (null == e) throw n("SetupIntent not created");
         if (null == e.payment_method) throw n("setupIntent.payment_method not available with successful stripe call");
@@ -473,7 +473,7 @@ let X = (e, t, n) => {
             }
         );
     },
-    Q = (e) =>
+    X = (e) =>
         null != e &&
         "setup_intent_unexpected_state" === e.code &&
         null != e.setup_intent &&
@@ -532,7 +532,7 @@ async function et() {
                           redirect: "if_required",
                           elements: a,
                       });
-        if (Q(n.error) && s !== A.He.PAYMENT_REQUEST) {
+        if (X(n.error) && s !== A.He.PAYMENT_REQUEST) {
             let { client_secret: e } = await (0, f.V)();
             await J(a),
                 (n = await i.confirmSetup({
@@ -541,7 +541,7 @@ async function et() {
                     elements: a,
                 }));
         }
-        let { setupIntent: r } = X(n.setupIntent, n.error, (e) => H(e, !0));
+        let { setupIntent: r } = Q(n.setupIntent, n.error, (e) => H(e, !0));
         (l.current = r), (p = r.payment_method);
     } else {
         let { paymentMethod: e } = await $(i, a);
@@ -569,7 +569,7 @@ async function en(e, t, n, r) {
                 billing_details: o,
             },
         }),
-        { setupIntent: u } = X(s, l, (e) => Y(e));
+        { setupIntent: u } = Q(s, l, (e) => Y(e));
     return B(S.gg$.STRIPE, u.payment_method, n, {
         billingAddressToken: a,
         analyticsLocation: r,

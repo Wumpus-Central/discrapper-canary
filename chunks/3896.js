@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(481060),
     o = n(456935),
     c = n(259580),
-    u = n(981631),
-    d = n(388032),
+    d = n(981631),
+    u = n(388032),
     g = n(824804);
 function m(e) {
     let { guild: t } = e,
@@ -75,12 +75,12 @@ function m(e) {
                     (0, r.jsx)(s.Heading, {
                         variant: "text-md/semibold",
                         color: "header-primary",
-                        children: d.intl.string(d.t.DpRdYK),
+                        children: u.intl.string(u.t.DpRdYK),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: d.intl.string(d.t.mA17eD),
+                        children: u.intl.string(u.t.mA17eD),
                     }),
                     (0, r.jsx)("div", {
                         className: g.__invalid_pillRow,
@@ -89,7 +89,7 @@ function m(e) {
                             color: "interactive-normal",
                             className: g.valuePill,
                             children: [
-                                l === u.sFg.VERY_HIGH
+                                l === d.sFg.VERY_HIGH
                                     ? (0, r.jsx)(s.AtH, {
                                           size: "custom",
                                           color: "currentColor",

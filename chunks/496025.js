@@ -22,7 +22,7 @@ var a = n(54381),
     C = n(37812),
     S = n(165432),
     E = n(451429);
-function N() {
+function O() {
     var e;
     let t = (0, c.Wu)([v.Z], () => v.Z.getSortedChannels()[1]),
         [n, r] = l.useState(t.length > 0 ? t[0].channelId : void 0),
@@ -86,7 +86,7 @@ function N() {
         ],
     });
 }
-function O() {
+function N() {
     let e = l.useCallback(() => {
         m.Z.openPrivateChannel({ recipientIds: [C.I] });
     }, []);
@@ -116,9 +116,9 @@ function T() {
         children: [
             e,
             (0, a.jsx)("div", { className: S.divider }),
-            (0, a.jsx)(N, {}),
-            (0, a.jsx)("div", { className: S.divider }),
             (0, a.jsx)(O, {}),
+            (0, a.jsx)("div", { className: S.divider }),
+            (0, a.jsx)(N, {}),
         ],
     });
 }

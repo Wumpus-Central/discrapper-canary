@@ -58,7 +58,7 @@ function C(e, t) {
         e
     );
 }
-function _(e) {
+function T(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: i } = e,
         a = (0, r.cj)([c.Z], () => ({
             connectionState: c.Z.getConnectionState(t),
@@ -76,7 +76,7 @@ function _(e) {
         }),
     );
 }
-function T(e) {
+function _(e) {
     let { closePopout: t, connectionTypeText: n } = e,
         i = (0, r.cj)([s.Z], () => ({
             connectionState: s.Z.getState(),
@@ -98,12 +98,12 @@ function m(e) {
     let { channelId: t, isOverlay: n, lobbyId: i, closePopout: r } = e,
         a = (0, g.J)({ channelId: t }) ? N.intl.string(N.t["3BogKe"]) : N.intl.string(N.t.ETIVvg);
     return n
-        ? (0, l.jsx)(_, {
+        ? (0, l.jsx)(T, {
               lobbyId: i,
               closePopout: r,
               connectionTypeText: a,
           })
-        : (0, l.jsx)(T, {
+        : (0, l.jsx)(_, {
               closePopout: r,
               connectionTypeText: a,
           });

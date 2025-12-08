@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(752305),
     y = n(893718),
     O = n(303628),
-    j = n(313201),
-    x = n(967128),
+    x = n(313201),
+    j = n(967128),
     v = n(665149),
     C = n(294218),
     I = n(913663),
@@ -211,7 +211,7 @@ function Q(e) {
         })(t, g),
         O = (0, M.vH)(t),
         {
-            isGeneratingAI: j,
+            isGeneratingAI: x,
             enableAIFeatures: v,
             getThreadNameInputAccessory: C,
         } = (0, G.U)({
@@ -348,7 +348,7 @@ function Q(e) {
                         children: (0, r.jsxs)("div", {
                             className: V.scrollerInner,
                             children: [
-                                (0, r.jsxs)(x.ZP, {
+                                (0, r.jsxs)(j.ZP, {
                                     channelId: "create-thread-null",
                                     children: [
                                         (0, r.jsx)("div", {
@@ -364,7 +364,7 @@ function Q(e) {
                                                     updateThreadSettings: m,
                                                     error: E,
                                                     disabled: N,
-                                                    isGeneratingAI: j,
+                                                    isGeneratingAI: x,
                                                     enableAIFeatures: v,
                                                     getThreadNameInputAccessory: C,
                                                 }),
@@ -444,7 +444,7 @@ function J(e) {
         g = (0, L.Op)(s, { content: f }),
         m = (0, M.Od)(n, i),
         b = null != i && !p,
-        _ = (0, j.Dt)(),
+        _ = (0, x.Dt)(),
         y = p ? B.intl.string(B.t["Nb2/RE"]) : "" !== m ? m : B.intl.string(B.t["Nb2/RE"]);
     return (0, r.jsx)(o.oil, {
         label: B.intl.string(b ? B.t.JPvIiL : B.t.j3XWjD),
@@ -499,18 +499,18 @@ function $(e) {
             event: F.CkL.TEXTAREA_BLUR,
             handler: m,
         });
-    let j = (0, s.e7)([N.Z], () => N.Z.can(F.Plq.ATTACH_FILES, t)),
-        x = (0, L.Op)(p, { content: n.textValue });
+    let x = (0, s.e7)([N.Z], () => N.Z.can(F.Plq.ATTACH_FILES, t)),
+        j = (0, L.Op)(p, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(O.Z, {
                 channelId: t.id,
                 type: Y,
-                canAttachFiles: j,
+                canAttachFiles: x,
             }),
             (0, r.jsx)("div", {
                 className: V.starterMessageError,
-                children: (0, r.jsx)(o.pdY, { error: x }),
+                children: (0, r.jsx)(o.pdY, { error: j }),
             }),
             (0, r.jsx)(y.ZP, {
                 type: Y,
@@ -520,7 +520,7 @@ function $(e) {
                 richValue: n.richValue,
                 focused: h,
                 className: a()(V.channelTextArea, V.channelTextAreaWithTypingIndicator),
-                innerClassName: a()(V.channelTextAreaInner, { [V.channelTextAreaInnerError]: null != x }),
+                innerClassName: a()(V.channelTextAreaInner, { [V.channelTextAreaInnerError]: null != j }),
                 onFocus: g,
                 onBlur: m,
                 onChange: b,

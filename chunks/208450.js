@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => X,
+    ZP: () => Q,
     uh: () => Y,
 }),
     n(35282),
@@ -530,7 +530,7 @@ function q(e) {
         }),
         W = (0, P.kU)({ location: "Search" }),
         q = (0, N.UX)({ location: "Search" }),
-        X = i.useMemo(
+        Q = i.useMemo(
             () =>
                 t.type === B.aib.DMS
                     ? F.intl.string(F.t.m7OrlR)
@@ -548,11 +548,11 @@ function q(e) {
         keyboardModeEnabled: o,
         onSearch: H,
         isSearchSidebarOrModalOpen: V,
-        placeholder: X,
+        placeholder: Q,
         isSearchFiltersRedesignEnabled: W,
     });
 }
-function X(e) {
+function Q(e) {
     let { className: t, guildId: n, channelId: i } = e,
         a = (0, M.H)({
             guildId: n,

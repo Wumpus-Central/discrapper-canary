@@ -20,12 +20,12 @@ var i = t(481060),
     b = t(952124),
     I = t(53558),
     y = t(544989),
-    _ = t(30556),
-    Z = t(4517),
+    Z = t(30556),
+    _ = t(4517),
     O = t(740628),
     N = t(398145),
-    A = t(228168),
-    T = t(981631),
+    T = t(228168),
+    A = t(981631),
     P = t(671955),
     E = t(388032),
     C = t(673517);
@@ -46,9 +46,9 @@ function S(e) {
             sourceAnalyticsLocations: V = [],
             showGuildProfile: F,
         } = e,
-        W = S === T.ME ? void 0 : S,
-        H = (0, u.ZP)(n.id, F ? W : void 0),
-        z = c.ZP.getName(W, w, n),
+        W = S === A.ME ? void 0 : S,
+        z = (0, u.ZP)(n.id, F ? W : void 0),
+        H = c.ZP.getName(W, w, n),
         Y = (0, a.Dt)(),
         { analyticsLocations: K } = (0, s.ZP)([...V, r.Z.USER_PROFILE_MODAL]),
         J = (0, d.ZB)({
@@ -65,7 +65,7 @@ function S(e) {
             user: n,
             guildId: W,
             channelId: w,
-            displayProfile: H,
+            displayProfile: z,
             onClose: G,
         });
     return (0, l.jsx)(s.Gt, {
@@ -73,9 +73,9 @@ function S(e) {
         children: (0, l.jsx)(d.Mt, {
             value: J,
             openedAt: k,
-            fetchStartedAt: null == H ? void 0 : H.fetchStartedAt,
-            fetchEndedAt: null == H ? void 0 : H.fetchEndedAt,
-            isLoaded: null == H ? void 0 : H.isLoaded,
+            fetchStartedAt: null == z ? void 0 : z.fetchStartedAt,
+            fetchEndedAt: null == z ? void 0 : z.fetchEndedAt,
+            isLoaded: null == z ? void 0 : z.isLoaded,
             children: (0, l.jsx)(i.Y0X, {
                 "data-migration-pending": !0,
                 transitionState: U,
@@ -87,12 +87,12 @@ function S(e) {
                     component: (0, l.jsx)(i.nn4, {
                         children: (0, l.jsx)(i.H, {
                             id: Y,
-                            children: E.intl.format(E.t.KRe1Fk, { name: z }),
+                            children: E.intl.format(E.t.KRe1Fk, { name: H }),
                         }),
                     }),
                     children: (0, l.jsxs)(v.Z, {
                         user: n,
-                        displayProfile: H,
+                        displayProfile: z,
                         themeType: P.l.MODAL,
                         children: [
                             (0, l.jsx)(y.Z, {
@@ -106,7 +106,7 @@ function S(e) {
                                 children: [
                                     (0, l.jsx)(x.Z, {
                                         user: n,
-                                        displayProfile: H,
+                                        displayProfile: z,
                                         themeType: P.l.MODAL,
                                     }),
                                     (0, l.jsxs)("div", {
@@ -114,12 +114,12 @@ function S(e) {
                                         children: [
                                             (0, l.jsx)(p.Z, {
                                                 user: n,
-                                                displayProfile: H,
+                                                displayProfile: z,
                                                 guildId: W,
                                                 channelId: w,
                                                 themeType: P.l.MODAL,
                                             }),
-                                            (0, l.jsx)(Z.Z, {
+                                            (0, l.jsx)(_.Z, {
                                                 user: n,
                                                 themeType: P.l.MODAL,
                                                 hasEntered: U === i.Dvm.ENTERED,
@@ -131,7 +131,7 @@ function S(e) {
                                                 children: [
                                                     (0, l.jsx)("div", {
                                                         className: C.messageTextButton,
-                                                        children: (0, l.jsx)(_.H, {
+                                                        children: (0, l.jsx)(Z.H, {
                                                             variant: "secondary",
                                                             userId: n.id,
                                                             onClose: o.Z.popAll,
@@ -139,7 +139,7 @@ function S(e) {
                                                     }),
                                                     (0, l.jsx)("div", {
                                                         className: C.messageIconButton,
-                                                        children: (0, l.jsx)(_.v, {
+                                                        children: (0, l.jsx)(Z.v, {
                                                             variant: "secondary",
                                                             userId: n.id,
                                                             onClose: o.Z.popAll,
@@ -163,15 +163,15 @@ function S(e) {
                                         className: C.username,
                                         user: n,
                                         guildId: W,
-                                        nickname: z,
-                                        pronouns: null == H ? void 0 : H.pronouns,
+                                        nickname: H,
+                                        pronouns: null == z ? void 0 : z.pronouns,
                                         nicknameVariant: "heading-xl/bold",
                                         nicknameIcons: (0, l.jsx)(h.Z, {
                                             size: "sm",
                                             userId: n.id,
                                         }),
                                         tags: (0, l.jsx)(f.Z, {
-                                            displayProfile: H,
+                                            displayProfile: z,
                                             themeType: P.l.MODAL,
                                             onClose: G,
                                         }),
@@ -179,10 +179,10 @@ function S(e) {
                                     (0, l.jsx)(O.Z, {
                                         user: n,
                                         currentUser: t,
-                                        displayProfile: H,
+                                        displayProfile: z,
                                         guildId: W,
                                         items: q,
-                                        initialSection: null != M ? M : A.oh.BOT_INFO,
+                                        initialSection: null != M ? M : T.oh.BOT_INFO,
                                         initialSubsection: B,
                                         onClose: G,
                                     }),

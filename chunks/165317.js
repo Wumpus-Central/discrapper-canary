@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(937797),
     d = n(968843),
     m = n(115179),
-    f = n(472144),
+    f = n(836831),
     p = n(644646),
     v = n(969227),
     E = n(215113),
@@ -27,7 +27,7 @@ function C(e) {
         I = o.useRef(null == (t = y.userStatus) ? void 0 : t.completedAt),
         [N, A] = o.useState(!1),
         w = (0, m.w8)(y.config),
-        { completedRatio: k, completedRatioDisplay: L } = (0, d.I)(y),
+        { completedRatio: L, completedRatioDisplay: k } = (0, d.I)(y),
         M = (null == (n = y.userStatus) ? void 0 : n.completedAt) != null,
         V = (null == (C = y.userStatus) ? void 0 : C.claimedAt) != null,
         Z = O.intl.formatToPlainString(M && !V && P ? O.t.NRp4K4 : O.t["12IWP2"], { rewardName: w });
@@ -73,8 +73,8 @@ function C(e) {
                     children: (0, r.jsx)(f.Z, {
                         quest: y,
                         size: 48,
-                        percentComplete: k,
-                        percentCompleteText: D ? L : void 0,
+                        percentComplete: L,
+                        percentCompleteText: D ? k : void 0,
                         percentCompleteTextVariant: "text-sm/medium",
                         children: (0, r.jsx)(p.Z, {
                             className: h.questProgressRewardTile,

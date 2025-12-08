@@ -1,7 +1,7 @@
 n.d(t, { Z: () => T }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
 var r = n(54381),
-    a = n(473749),
-    i = n(828700),
+    i = n(473749),
+    a = n(828700),
     l = n(209173),
     s = n(288385),
     o = n(442837),
@@ -12,8 +12,8 @@ var r = n(54381),
     m = n(314897),
     h = n(471518),
     g = n(493646),
-    _ = n(370210),
-    f = n(678694),
+    f = n(370210),
+    _ = n(678694),
     b = n(177653),
     x = n(216780),
     v = n(881294),
@@ -30,28 +30,28 @@ function T(e) {
     var t;
     let { onSelectApplication: n, onScroll: T } = e,
         A = (0, o.e7)([m.default], () => m.default.isAuthenticated()),
-        L = a.useRef(null),
-        R = (0, i.TH)(),
-        Z = a.useRef(null),
+        L = i.useRef(null),
+        R = (0, a.TH)(),
+        Z = i.useRef(null),
         {
             query: w,
             page: D,
             categoryId: k,
-        } = a.useMemo(() => {
+        } = i.useMemo(() => {
             var e, t;
             let n = new URLSearchParams(R.search),
                 r = n.get("page"),
-                a = null != r ? Number(r) : 1;
+                i = null != r ? Number(r) : 1;
             return {
                 query: null != (e = n.get("q")) ? e : "",
-                page: a,
+                page: i,
                 categoryId:
                     null != (t = Number(n.get("category_id"))) ? t : O.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID,
             };
         }, [R.search]),
-        M = (0, o.e7)([f.Z], () => f.Z.getCategories()),
-        G = a.useMemo(() => (null == M ? void 0 : M.find((e) => e.id === k)), [M, k]),
-        B = a.useCallback(
+        M = (0, o.e7)([_.Z], () => _.Z.getCategories()),
+        G = i.useMemo(() => (null == M ? void 0 : M.find((e) => e.id === k)), [M, k]),
+        B = i.useCallback(
             (e) => {
                 (0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCHED, {
                     search_term: w,
@@ -64,7 +64,7 @@ function T(e) {
             },
             [w, D, null == G ? void 0 : G.name, null == G ? void 0 : G.id],
         );
-    a.useEffect(() => {
+    i.useEffect(() => {
         var e;
         null == (e = L.current) || e.scrollTo({ to: 0 }),
             w !== Z.current &&
@@ -134,8 +134,8 @@ function T(e) {
                 : {};
         }),
         z = (0, d.Z)(F),
-        V = a.useMemo(() => (U === _.M.FETCHING ? z : F), [U, z, F]),
-        Y = a.useCallback(
+        V = i.useMemo(() => (U === f.M.FETCHING ? z : F), [U, z, F]),
+        Y = i.useCallback(
             (e) => {
                 (0, I.pR)({
                     query: w,
@@ -145,7 +145,7 @@ function T(e) {
             },
             [k, w],
         ),
-        W = a.useCallback(
+        W = i.useCallback(
             (e) => {
                 (0, v.zZ)(E.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                     category: e.name,
@@ -159,7 +159,7 @@ function T(e) {
             },
             [w],
         ),
-        X = a.useCallback(
+        X = i.useCallback(
             (e, t) => {
                 (0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: y.m_.SEARCH,
@@ -196,9 +196,9 @@ function T(e) {
                                         }),
                                     }),
                                     (0, r.jsx)(C.Z, {
-                                        loading: U === _.M.FETCHING,
+                                        loading: U === f.M.FETCHING,
                                         children:
-                                            U === _.M.FETCHED &&
+                                            U === f.M.FETCHED &&
                                             (null == V || (null == V ? void 0 : V.results.length) === 0)
                                                 ? (0, r.jsx)(P.Z, {
                                                       selectedCategoryId: null != k ? k : K.id,

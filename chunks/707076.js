@@ -4,8 +4,8 @@ n.d(t, {
 });
 var l = n(54381);
 n(473749);
-var r = n(120356),
-    i = n.n(r),
+var i = n(120356),
+    r = n.n(i),
     a = n(442837),
     s = n(481060),
     o = n(367907),
@@ -45,7 +45,7 @@ function x(e) {
             },
         ];
     t && n.pop();
-    let r = t
+    let i = t
             ? (0, l.jsx)(s.Text, {
                   variant: "text-sm/semibold",
                   color: "header-primary",
@@ -65,21 +65,21 @@ function x(e) {
                   children: E.intl.format(E.t["8XLD3r"], {}),
               });
     return (0, l.jsxs)("div", {
-        className: i()(S.upsellPreview, S.spacingLarge, { [S.tooltip]: t }),
+        className: r()(S.upsellPreview, S.spacingLarge, { [S.tooltip]: t }),
         children: [
-            r,
+            i,
             (0, l.jsx)("div", {
                 className: S.spacingSmall,
                 children: n.map((e, t) => {
-                    let { emoji: n, emojiDescription: r, title: a, selected: o } = e;
+                    let { emoji: n, emojiDescription: i, title: a, selected: o } = e;
                     return (0, l.jsxs)(
                         "div",
                         {
-                            className: i()(S.previewListItem, { [S.selected]: o }),
+                            className: r()(S.previewListItem, { [S.selected]: o }),
                             children: [
                                 (0, l.jsx)("span", {
                                     role: "img",
-                                    "aria-label": r,
+                                    "aria-label": i,
                                     children: n,
                                 }),
                                 (0, l.jsx)(s.Text, {
@@ -282,7 +282,7 @@ function _() {
                                       ],
                                   }),
                                   (0, l.jsxs)("div", {
-                                      className: i()(S.upsellPreview, S.spacingLarge),
+                                      className: r()(S.upsellPreview, S.spacingLarge),
                                       children: [
                                           (0, l.jsx)(m.Z, {
                                               guildId: e,
@@ -313,7 +313,7 @@ function _() {
                               className: S.valueContainer,
                               children: [
                                   (0, l.jsx)("div", {
-                                      className: i()(S.upsellPreview, S.spacingLarge),
+                                      className: r()(S.upsellPreview, S.spacingLarge),
                                       children: [
                                           {
                                               channelIcon: () =>
@@ -356,11 +356,11 @@ function _() {
                                               selected: !0,
                                           },
                                       ].map((e, t) => {
-                                          let { channelIcon: n, channel: r, selected: a } = e;
+                                          let { channelIcon: n, channel: i, selected: a } = e;
                                           return (0, l.jsxs)(
                                               "div",
                                               {
-                                                  className: i()(S.previewListItem, S.spaceBetween, {
+                                                  className: r()(S.previewListItem, S.spaceBetween, {
                                                       [S.selected]: a,
                                                   }),
                                                   children: [
@@ -371,12 +371,12 @@ function _() {
                                                               (0, l.jsx)(s.Text, {
                                                                   variant: "text-md/medium",
                                                                   color: "header-primary",
-                                                                  children: r,
+                                                                  children: i,
                                                               }),
                                                           ],
                                                       }),
                                                       (0, l.jsx)("div", {
-                                                          className: i()(S.checkbox, { [S.selected]: a }),
+                                                          className: r()(S.checkbox, { [S.selected]: a }),
                                                           children:
                                                               a &&
                                                               (0, l.jsx)(s.dz2, {

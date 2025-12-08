@@ -3,8 +3,8 @@ var r = n(54381),
     o = n(473749),
     a = n(625651),
     i = n(905551),
-    l = n(162190),
-    c = n(613275),
+    c = n(162190),
+    l = n(816632),
     s = n(388032),
     u = n(924889);
 function d(e) {
@@ -30,9 +30,9 @@ function d(e) {
             }
             return o;
         })(e, ["guildId", "gameInstance"]);
-    let [f, m] = o.useState(!1),
-        [b, p] = o.useState(void 0),
-        g = (0, l.Z)(n.gameId, "cover");
+    let [f, b] = o.useState(!1),
+        [m, p] = o.useState(void 0),
+        g = (0, c.Z)(n.gameId, "cover");
     return (0, r.jsx)(
         a.f,
         (function (e) {
@@ -71,13 +71,13 @@ function d(e) {
                         className: u.image,
                     }),
                 }),
-                warningText: s.intl.string(c.default.ukbS3E),
-                acknowledgementText: s.intl.string(c.default.xjRtF9),
+                warningText: s.intl.string(l.default.ukbS3E),
+                acknowledgementText: s.intl.string(l.default.xjRtF9),
                 isLoading: f,
-                error: b,
+                error: m,
                 onDeactivate: () => {
                     p(void 0),
-                        m(!0),
+                        b(!0),
                         (0, i.s9)(t, n.planId, n.entitlementId)
                             .then(() => {
                                 d.onClose();
@@ -87,7 +87,7 @@ function d(e) {
                                 p(null != (t = e.body.message) ? t : e.message);
                             })
                             .finally(() => {
-                                m(!1);
+                                b(!1);
                             });
                 },
             },

@@ -3,8 +3,8 @@ var i = n(54381);
 n(473749);
 var l = n(120356),
     r = n.n(l),
-    s = n(692547),
-    a = n(755721),
+    a = n(692547),
+    s = n(755721),
     o = n(481060),
     c = n(600164),
     d = n(69165);
@@ -20,7 +20,7 @@ let u = (e) => {
                     width: 20,
                     height: 20,
                     size: "custom",
-                    color: s.Z.unsafe_rawColors.YELLOW_300.css,
+                    color: a.Z.unsafe_rawColors.YELLOW_300.css,
                 }),
                 (0, i.jsx)("div", {
                     className: d.label,
@@ -30,9 +30,9 @@ let u = (e) => {
                     }),
                 }),
                 g &&
-                    (0, i.jsx)(a.zx, {
-                        size: a.zx.Sizes.SMALL,
-                        color: a.zx.Colors.PRIMARY,
+                    (0, i.jsx)(s.zx, {
+                        size: s.zx.Sizes.SMALL,
+                        color: s.zx.Colors.PRIMARY,
                         onClick: h,
                         children: u,
                     }),

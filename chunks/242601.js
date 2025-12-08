@@ -373,7 +373,7 @@ class eh extends i.PureComponent {
                 let { guild: t } = this.props;
                 null != t &&
                     (0, g.jW)(e, async () => {
-                        let { default: e } = await n.e("92795").then(n.bind(n, 652171));
+                        let { default: e } = await n.e("78248").then(n.bind(n, 652171));
                         return (n) => (0, r.jsx)(e, eu(ec({}, n), { guild: t }));
                     });
             }),

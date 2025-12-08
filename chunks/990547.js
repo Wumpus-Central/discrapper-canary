@@ -12,8 +12,8 @@ n.r(t),
         getCampaignParams: () => x,
         getDevice: () => U,
         getOS: () => k,
-        getSuperProperties: () => X,
-        getSuperPropertiesBase64: () => Q,
+        getSuperProperties: () => Q,
+        getSuperPropertiesBase64: () => X,
         isThrottled: () => K,
         trackMaker: () => q,
     }),
@@ -285,7 +285,7 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-    let i = parseInt("474612", 10);
+    let i = parseInt("477243", 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == R || null == (e = (t = R.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return (
@@ -338,9 +338,9 @@ let q = (e) => {
         return a(e, r, i);
     };
 };
-function X() {
+function Q() {
     return r;
 }
-function Q() {
+function X() {
     return i;
 }

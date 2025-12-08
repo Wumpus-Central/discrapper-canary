@@ -330,8 +330,8 @@ function q() {
         t = D.has((0, E.getPID)()) || M.size > 0;
     e && t ? (0, s.T_)(window, !0) : (0, s.T_)(window, !1);
 }
-function X() {}
-function Q(e) {
+function Q() {}
+function X(e) {
     let { locked: t, pid: n } = e;
     t ? D.delete(n) : D.add(n), $(), q(), (k = !1);
 }
@@ -616,7 +616,7 @@ let eT = new eI(o.Z, {
     OVERLAY_SELECT_CHANNEL: et,
     OVERLAY_SELECT_CALL: en,
     CALL_DELETE: er,
-    LAYOUT_CREATE: X,
+    LAYOUT_CREATE: Q,
     OVERLAY_SET_ENABLED: ev,
     OVERLAY_SET_DISPLAY_NAME_MODE: eo,
     OVERLAY_SET_DISPLAY_USER_MODE: es,
@@ -629,7 +629,7 @@ let eT = new eI(o.Z, {
     OVERLAY_SET_TEXT_WIDGET_OPACITY: ep,
     OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: em,
     OVERLAY_INCOMPATIBLE_APP: eh,
-    OVERLAY_SET_INPUT_LOCKED: Q,
+    OVERLAY_SET_INPUT_LOCKED: X,
     OVERLAY_ACTIVATE_REGION: J,
     OVERLAY_DEACTIVATE_ALL_REGIONS: $,
     OVERLAY_SET_PREVIEW_IN_GAME_MODE: ea,

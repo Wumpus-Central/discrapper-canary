@@ -2,8 +2,8 @@ A.d(t, { Z: () => C }), A(388685);
 var n = A(54381),
     r = A(473749),
     a = A(120356),
-    i = A.n(a),
-    l = A(772848),
+    l = A.n(a),
+    i = A(772848),
     o = A(481060),
     s = A(752305),
     d = A(893718),
@@ -13,8 +13,8 @@ var n = A(54381),
     f = A(388032),
     p = A(231319),
     m = A(8542);
-let h = (0, l.Z)(),
-    v = (0, u.createChannelRecord)({
+let v = (0, i.Z)(),
+    h = (0, u.createChannelRecord)({
         id: "1",
         type: g.d4z.DM,
     });
@@ -30,7 +30,7 @@ function b(e) {
     var t;
     let { hasError: A, maxLength: r, text: a } = e;
     return (0, n.jsxs)("div", {
-        className: i()(m.maxLength, { [m.errorOverflow]: A }),
+        className: l()(m.maxLength, { [m.errorOverflow]: A }),
         "aria-hidden": "true",
         children: [null != (t = null == a ? void 0 : a.length) ? t : 0, " ", null != r && "/ ".concat(r)],
     });
@@ -40,7 +40,7 @@ function C(e) {
     let {
             "aria-labelledby": A,
             className: a,
-            id: l,
+            id: i,
             autoFocus: u,
             maxLength: g,
             onChange: m,
@@ -58,7 +58,7 @@ function C(e) {
         [N, K] = r.useState(() => (0, s.JM)(x)),
         T = r.useRef(!0 === u),
         Z = null != A ? A : null == I ? void 0 : I.titleId,
-        W = null != (t = null == I ? void 0 : I.errorId) ? t : h;
+        W = null != (t = null == I ? void 0 : I.errorId) ? t : v;
     function X(e, t, A) {
         m(t), K(A);
     }
@@ -83,23 +83,23 @@ function C(e) {
     return (0, n.jsx)(o.gNt, {
         label: F,
         errorMessage: y,
-        id: l,
+        id: i,
         required: V,
         children: (e) => {
             var t, A;
             return (0, n.jsxs)(d.ZP, {
-                id: null != (t = null == e ? void 0 : e.controlId) ? t : l,
+                id: null != (t = null == e ? void 0 : e.controlId) ? t : i,
                 "aria-describedby": null != (A = null == e ? void 0 : e.describedById) ? A : W,
                 "aria-labelledby": Z,
                 "aria-errormessage": null == e ? void 0 : e.errorMessageId,
                 "aria-invalid": (null == e ? void 0 : e.errorMessageId) != null,
                 className: p.textArea,
-                innerClassName: i()(a, p.textAreaInner),
+                innerClassName: l()(a, p.textAreaInner),
                 maxCharacterCount: g,
                 onChange: X,
                 placeholder: j,
                 required: V,
-                channel: v,
+                channel: h,
                 textValue: x,
                 richValue: N,
                 type: Q,
@@ -123,7 +123,7 @@ function C(e) {
                         }),
                     null != g &&
                         (0, n.jsx)(o.nn4, {
-                            id: h,
+                            id: v,
                             children: f.intl.format(f.t["+DFxLc"], { maxLength: g }),
                         }),
                 ],

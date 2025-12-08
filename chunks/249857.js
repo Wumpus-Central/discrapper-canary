@@ -1,4 +1,4 @@
-n.d(e, { R: () => E });
+n.d(e, { R: () => T });
 var i = n(657707),
     l = n(509613),
     s = n(358085),
@@ -14,7 +14,7 @@ let c = (0, l.x1)(r.n.WINDOWS_PANE, {
         useTitle: () => o.intl.string(o.t.ZkDZov),
         buildLayout: () => [c],
     }),
-    E = (0, l.m7)(r.n.WINDOWS_SIDEBAR_ITEM, {
+    T = (0, l.m7)(r.n.WINDOWS_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t.ZkDZov),
         getLegacySearchKey: () => a.s6.WINDOW_SETTINGS,
         icon: i.pzj,

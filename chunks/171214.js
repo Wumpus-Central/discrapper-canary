@@ -1,4 +1,4 @@
-o.exports = {
+e.exports = {
     cont: "cont_b256a2",
     hitboxArea: "hitboxArea_b256a2",
     interactionEnabled: "interactionEnabled_b256a2",

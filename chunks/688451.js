@@ -73,7 +73,7 @@ function _(e) {
 }
 function m(e) {
     if (Array.isArray(e)) return Array.prototype.slice.call(e);
-    var t = X(e);
+    var t = Q(e);
     delete t[W];
     for (var n = q(t), r = 0; r < n.length; r++) {
         var i = n[r],
@@ -115,11 +115,11 @@ function E(e) {
     return null == e || "object" != typeof e || Object.isFrozen(e);
 }
 function b(e) {
-    var t = Q[e];
+    var t = X[e];
     return t || r(18, e), t;
 }
 function y(e, t) {
-    Q[e] || (Q[e] = t);
+    X[e] || (X[e] = t);
 }
 function O() {
     return G;
@@ -311,7 +311,7 @@ var U,
                     return Object.getOwnPropertyNames(e).concat(Object.getOwnPropertySymbols(e));
                 }
               : Object.getOwnPropertyNames,
-    X =
+    Q =
         Object.getOwnPropertyDescriptors ||
         function (e) {
             var t = {};
@@ -322,7 +322,7 @@ var U,
                 t
             );
         },
-    Q = {},
+    X = {},
     J = {
         get: function (e, t) {
             if (t === W) return e;

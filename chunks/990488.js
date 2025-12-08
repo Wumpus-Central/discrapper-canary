@@ -14,8 +14,8 @@ var r = n(54381),
     d = n(186078),
     m = n(73880),
     f = n(276486),
-    h = n(196345),
-    x = n(707592),
+    x = n(196345),
+    h = n(707592),
     g = n(981631);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -76,7 +76,7 @@ function b(e) {
                 switch (e.field_type) {
                     case o.QJ.TERMS:
                         return (0, r.jsx)(
-                            h.dd,
+                            x.dd,
                             {
                                 channelId: a,
                                 formField: e,
@@ -90,7 +90,7 @@ function b(e) {
                         );
                     case o.QJ.TEXT_INPUT:
                         return (0, r.jsx)(
-                            x.zY,
+                            h.zY,
                             {
                                 formField: e,
                                 autofocus: 0 === t,
@@ -149,14 +149,14 @@ function C(e) {
     let t,
         { guildId: n, formFields: s, updateFormFields: o, disableVerification: d } = e,
         m = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
-        h = (0, c.i)({ guildId: n }),
-        x = (null == m ? void 0 : m.isPhoneVerified()) || (null == m ? void 0 : m.isStaff()),
-        p = (null == m ? void 0 : m.verified) || x,
+        x = (0, c.i)({ guildId: n }),
+        h = (null == m ? void 0 : m.isPhoneVerified()) || (null == m ? void 0 : m.isStaff()),
+        p = (null == m ? void 0 : m.verified) || h,
         v = !1;
-    h === g.sFg.NONE
+    x === g.sFg.NONE
         ? ((v = !0), (t = null))
-        : h === g.sFg.VERY_HIGH
-          ? ((v = null != x && x), (t = f.v))
+        : x === g.sFg.VERY_HIGH
+          ? ((v = null != h && h), (t = f.v))
           : ((v = null != p && p), (t = u.B));
     let j = l.useRef(v);
     return null == m

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(953529), n(388685);
 var r = n(54381),
-    a = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    i = n(473749),
+    a = n(120356),
+    l = n.n(a),
     s = n(159635),
     o = n.n(s),
     c = n(481060),
@@ -12,11 +12,11 @@ var r = n(54381),
     m = n(412850);
 let h = o().parserFor(u.Z),
     g = o().reactFor(o().ruleOutput(u.Z, "react"));
-function _(e) {
+function f(e) {
     let { description: t, supportsMarkdown: n } = e,
-        [i, s] = a.useState(!1),
-        o = a.useRef(null);
-    a.useEffect(() => {
+        [a, s] = i.useState(!1),
+        o = i.useRef(null);
+    i.useEffect(() => {
         if (null == o.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
@@ -28,8 +28,8 @@ function _(e) {
         });
         return e.observe(o.current), () => e.disconnect();
     }, []);
-    let [u, p] = a.useState(!1),
-        _ = a.useCallback(() => {
+    let [u, p] = i.useState(!1),
+        f = i.useCallback(() => {
             p((e) => !e);
         }, []);
     return (0, r.jsxs)(r.Fragment, {
@@ -54,18 +54,18 @@ function _(e) {
                           children: t,
                       }),
             }),
-            i || u
-                ? (0, r.jsx)(f, {
+            a || u
+                ? (0, r.jsx)(_, {
                       isShowingMore: u,
-                      onToggle: _,
+                      onToggle: f,
                   })
                 : null,
         ],
     });
 }
-function f(e) {
+function _(e) {
     let { onToggle: t, isShowingMore: n } = e,
-        i = a.useMemo(
+        a = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
                     className: m.showMoreContent,
@@ -93,23 +93,23 @@ function f(e) {
     return (0, r.jsxs)(c.P3F, {
         className: m.showMoreButton,
         onClick: t,
-        children: [(0, r.jsx)("div", { className: m.divider }), i, (0, r.jsx)("div", { className: m.divider })],
+        children: [(0, r.jsx)("div", { className: m.divider }), a, (0, r.jsx)("div", { className: m.divider })],
     });
 }
 let b = function (e) {
     var t, n;
-    let { application: i } = e,
-        l = null == (t = i.directory_entry) ? void 0 : t.detailed_description,
-        s = null == (n = i.directory_entry) ? void 0 : n.short_description,
-        o = a.useMemo(
+    let { application: a } = e,
+        l = null == (t = a.directory_entry) ? void 0 : t.detailed_description,
+        s = null == (n = a.directory_entry) ? void 0 : n.short_description,
+        o = i.useMemo(
             () =>
                 null != l && l.length > 0
-                    ? (0, r.jsx)(_, {
+                    ? (0, r.jsx)(f, {
                           description: l,
                           supportsMarkdown: !0,
                       })
                     : null != s && s.length > 0
-                      ? (0, r.jsx)(_, {
+                      ? (0, r.jsx)(f, {
                             description: s,
                             supportsMarkdown: !1,
                         })

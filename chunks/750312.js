@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(793030),
     c = n(442837),
     s = n(313201),
@@ -17,7 +17,7 @@ var r = n(54381),
     y = n(388032),
     v = n(415734);
 function O(e) {
-    let { index: t, widget: n, additionalManageWidgetMenuItems: a, children: o } = e,
+    let { index: t, widget: n, additionalManageWidgetMenuItems: l, children: o } = e,
         c = i.useRef(null),
         u = i.useRef(null),
         { registerManageWidgetButtonRef: d, manageFocusOnReorder: g } = (0, h.j)();
@@ -45,7 +45,7 @@ function O(e) {
         P = x && t > j;
     return (0, r.jsxs)("div", {
         ref: u,
-        className: l()(v.dragAndDropTarget, {
+        className: a()(v.dragAndDropTarget, {
             [v.dropIndicatorBefore]: _,
             [v.dropIndicatorAfter]: P,
             [v.isDragging]: O,
@@ -56,7 +56,7 @@ function O(e) {
                 buttonRef: c,
                 widget: n,
                 className: v.dragHandleButton,
-                additionalMenuItems: a,
+                additionalMenuItems: l,
             }),
             o,
         ],
@@ -67,7 +67,7 @@ function j(e) {
             userId: t,
             widget: n,
             children: i,
-            disableInteraction: a,
+            disableInteraction: l,
             className: f,
             index: p,
             trailingContent: m,
@@ -84,10 +84,10 @@ function j(e) {
             widget: n,
             onAction: w,
         }),
-        E = I && null != p && !a,
+        E = I && null != p && !l,
         T = () =>
             (0, r.jsxs)("div", {
-                className: l()(v.container, f),
+                className: a()(v.container, f),
                 children: [
                     (0, r.jsx)(b.Z, {
                         userId: t,
@@ -96,7 +96,7 @@ function j(e) {
                         subtitle: y,
                         actionButtons: j,
                         widget: n,
-                        disableInteraction: a,
+                        disableInteraction: l,
                         className: x,
                     }),
                     (0, r.jsxs)(o.y5t, {

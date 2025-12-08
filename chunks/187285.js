@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => d,
+    ZP: () => u,
     y3: () => c,
 });
 var r = n(54381);
@@ -44,7 +44,7 @@ function c(e) {
         children: t,
     });
 }
-let d = function (e) {
+let u = function (e) {
     let { children: t, heading: n, steps: s } = e;
     return (0, r.jsxs)("div", {
         className: i.wrapper,

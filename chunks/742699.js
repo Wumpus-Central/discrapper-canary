@@ -1,14 +1,14 @@
-t.d(e, { Z: () => u });
-var o = t(54381),
-    i = t(473749),
-    r = t(481060),
-    s = t(63063),
-    l = t(921869),
-    a = t(981631),
-    c = t(388032),
-    d = t(233820);
+e.d(t, { Z: () => u });
+var o = e(54381),
+    i = e(473749),
+    r = e(481060),
+    s = e(63063),
+    l = e(921869),
+    a = e(981631),
+    c = e(388032),
+    d = e(233820);
 function u(n) {
-    let { onContinue: e, onClose: t } = n,
+    let { onContinue: t, onClose: e } = n,
         u = s.Z.getArticleURL(a.BhN.CRUNCHYROLL_CONNECTION),
         C = i.useMemo(
             () => [
@@ -24,8 +24,8 @@ function u(n) {
         headerConnect: c.intl.string(c.t["Da+3NJ"]),
         body: c.intl.string(c.t.MaPpPL),
         learnMoreLink: u,
-        onClose: t,
-        onContinue: e,
+        onClose: e,
+        onContinue: t,
         img: (0, o.jsx)("img", {
             src: d,
             width: 234,

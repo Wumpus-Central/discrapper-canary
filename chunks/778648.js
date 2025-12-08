@@ -22,8 +22,8 @@ var a = n(54381),
     C = n(963249),
     S = n(87484),
     E = n(736519),
-    N = n(43747),
-    O = n(970815),
+    O = n(43747),
+    N = n(970815),
     T = n(430824),
     P = n(78839),
     I = n(246992),
@@ -101,8 +101,8 @@ let L = function () {
             value: e,
             label: e.name,
         })),
-        [U, B] = l.useState(M.length > 0 ? M[0].value : null),
-        [F, G] = l.useState(""),
+        [U, F] = l.useState(M.length > 0 ? M[0].value : null),
+        [B, G] = l.useState(""),
         [z, V] = l.useState({
             plan_id: k.Xh.PREMIUM_MONTH_TIER_2,
             gift: "true",
@@ -112,8 +112,8 @@ let L = function () {
         { analyticsLocations: q } = (0, f.ZP)(x.Z.PAYMENT_FLOW_TEST_PAGE),
         [Y, J] = l.useState(""),
         [X, Q] = l.useState(w.lds),
-        { balance: $, isFetching: ee, error: et } = (0, N.A)(),
-        { isSubmitting: en, responseMessage: ea, redeemVirtualCurrency: el } = (0, N.f)(),
+        { balance: $, isFetching: ee, error: et } = (0, O.A)(),
+        { isSubmitting: en, responseMessage: ea, redeemVirtualCurrency: el } = (0, O.f)(),
         [er, ei] = l.useState(w.lds),
         [es, eo] = l.useState(""),
         [ec, ed] = l.useState(w.lds),
@@ -213,7 +213,7 @@ let L = function () {
                                 label: "Boost",
                                 value: U,
                                 options: M,
-                                onChange: (e) => B(e),
+                                onChange: (e) => F(e),
                                 popoutLayerContext: I.O$,
                             }),
                             null != U
@@ -241,13 +241,13 @@ let L = function () {
                                     (0, a.jsx)(u.oil, {
                                         label: "Standalone: Trial Promotion Redemption",
                                         placeholder: "Promotion Code",
-                                        value: F,
+                                        value: B,
                                         onChange: (e) => G(e),
                                     }),
                                     (0, a.jsx)(u.aML, {
                                         "data-migration-pending": !0,
                                         text: "Need Promotion Code",
-                                        shouldShow: F.length < 1,
+                                        shouldShow: B.length < 1,
                                         children: (e) =>
                                             (0, a.jsx)(
                                                 u.Button,
@@ -256,13 +256,13 @@ let L = function () {
                                                         {
                                                             variant: "primary",
                                                             text: "Open Link",
-                                                            disabled: F.length < 1,
+                                                            disabled: B.length < 1,
                                                         },
                                                         e,
                                                     ),
                                                     {
                                                         onClick: () => {
-                                                            window.open(w.Z5c.BILLING_PROMOTION_REDEMPTION(F));
+                                                            window.open(w.Z5c.BILLING_PROMOTION_REDEMPTION(B));
                                                         },
                                                     },
                                                 ),
@@ -367,9 +367,9 @@ let L = function () {
                                                               et.message,
                                                           ],
                                                       }),
-                                                  (0, a.jsx)(O.A4, {
+                                                  (0, a.jsx)(N.A4, {
                                                       balance: null != $ ? $ : 0,
-                                                      balanceWidgetMode: O.b6.SELECTED,
+                                                      balanceWidgetMode: N.b6.SELECTED,
                                                   }),
                                               ],
                                           }),

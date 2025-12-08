@@ -58,14 +58,14 @@ function M(e) {
         {
             iconOrder: z,
             expressionsCombinedIntoEmojiButton: q,
-            reducedGap: X,
+            reducedGap: Q,
         } = S.n.useConfig({ location: "ChannelTextAreaButtons" }),
-        Q = (0, h.Iu)((e) => e.lastActiveView),
+        X = (0, h.Iu)((e) => e.lastActiveView),
         J =
             (null == (t = M.gifs) ? void 0 : t.button) != null &&
             (null == (n = M.stickers) ? void 0 : n.button) != null &&
-            null != Q
-                ? Q
+            null != X
+                ? X
                 : x.X1.EMOJI,
         $ = [],
         ee = !G.isDM() || void 0 === G.recipients || G.recipients.length > 1,
@@ -207,7 +207,7 @@ function M(e) {
     return 0 === ea.length
         ? null
         : (0, r.jsx)("div", {
-              className: o()(L.buttons, { [L.reducedGap]: X }),
+              className: o()(L.buttons, { [L.reducedGap]: Q }),
               children: ea,
           });
 }

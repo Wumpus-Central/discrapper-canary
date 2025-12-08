@@ -92,8 +92,8 @@ let M = m.Z.get(w.ABu.SPOTIFY),
     K = +C.Z.Millis.MINUTE,
     z = 3 * C.Z.Millis.SECOND,
     q = 128,
-    X = "message",
-    Q = "ping",
+    Q = "message",
+    X = "ping",
     J = "single",
     $ = new g.Z("Spotify"),
     ee = new f.V7(),
@@ -171,7 +171,7 @@ class em {
     }
     ping() {
         var e;
-        this.connected && (null == (e = this.socket) || e.send(JSON.stringify({ type: Q })));
+        this.connected && (null == (e = this.socket) || e.send(JSON.stringify({ type: X })));
     }
     handleOpen() {
         $.info("WS Connected"),
@@ -184,7 +184,7 @@ class em {
         let { data: t } = e;
         if ("string" != typeof t) return;
         let { type: n, uri: r, payloads: i } = JSON.parse(t);
-        if (n === X) {
+        if (n === Q) {
             if ("string" == typeof r && r.startsWith(U))
                 (this.connectionId = decodeURIComponent(r.split(U)[1])),
                     (0, P.am)(this.accountId, this.accessToken, this.connectionId);

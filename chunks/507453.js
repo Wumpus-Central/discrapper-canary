@@ -27,14 +27,14 @@ let o = {
     },
     SlideFooter: function (e) {
         let { mfaChallenge: t, setSlide: n, trailingButton: i, showConfirm: a = !1, disabled: o, submitting: c } = e,
-            d = t.methods.length > 1;
-        return null != i || d || a
+            u = t.methods.length > 1;
+        return null != i || u || a
             ? (0, r.jsx)(l.mzw, {
                   children: (0, r.jsxs)(l.ButtonGroup, {
                       fullWidth: !0,
                       direction: "vertical",
                       children: [
-                          d &&
+                          u &&
                               (0, r.jsx)(l.Button, {
                                   variant: "secondary",
                                   text: s.intl.string(s.t.Tot4EC),

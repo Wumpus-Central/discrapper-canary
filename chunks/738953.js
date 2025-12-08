@@ -100,9 +100,9 @@ function B(e) {
             disableUserProfileLink: K = __OVERLAY__,
             newAnalyticsLocations: z = [],
             appContext: q,
-            disableAutoFocus: X = !1,
+            disableAutoFocus: Q = !1,
         } = e,
-        { analyticsLocations: Q } = (0, u.ZP)([...z, c.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: X } = (0, u.ZP)([...z, c.Z.USER_PROFILE_POPOUT]),
         J = (0, E.ZB)({
             layout: "POPOUT",
             userId: n.id,
@@ -135,7 +135,7 @@ function B(e) {
                     Z(
                         U(
                             {
-                                sourceAnalyticsLocations: Q,
+                                sourceAnalyticsLocations: X,
                                 hideRestrictedProfile: !0,
                                 customStatusPrompt: eu,
                             },
@@ -158,18 +158,18 @@ function B(e) {
                                   U(
                                       {
                                           action: "PRESS_VIEW_PROFILE",
-                                          analyticsLocations: Q,
+                                          analyticsLocations: X,
                                       },
                                       J,
                                   ),
                               );
                       },
                   }),
-        ep = X ? "div" : s.VqE,
+        ep = Q ? "div" : s.VqE,
         e_ = (0, d.Dt)(),
         em = g.ZP.useName(null == $ ? void 0 : $.id, B, n);
     return (0, r.jsx)(u.Gt, {
-        value: Q,
+        value: X,
         children: (0, r.jsx)(E.Mt, {
             value: J,
             openedAt: H,
@@ -270,7 +270,7 @@ function B(e) {
                                     channelId: B,
                                     onClose: Y,
                                     appContext: q,
-                                    disableAutoFocus: X,
+                                    disableAutoFocus: Q,
                                 }),
                                 (null == en ? void 0 : en.profileEffect) != null &&
                                     (0, r.jsx)(m.Z, {

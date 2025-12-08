@@ -1,26 +1,26 @@
-t.d(n, { Z: () => a });
-var l = t(54381),
-    r = t(473749),
-    i = t(481060),
-    s = t(765305),
-    c = t(388032),
-    o = t(500537);
+n.d(t, { Z: () => a });
+var l = n(54381),
+    r = n(473749),
+    i = n(481060),
+    s = n(765305),
+    c = n(388032),
+    o = n(500537);
 function a(e) {
-    let { selectedTab: n, onTabSelected: t, userCount: a } = e,
-        d = r.useRef(null);
+    let { selectedTab: t, onTabSelected: n, userCount: a } = e,
+        u = r.useRef(null);
     return (
         r.useEffect(() => {
-            var e, n, t;
-            return null == (t = d.current) || null == (n = t.ref) || null == (e = n.blur) ? void 0 : e.call(n);
+            var e, t, n;
+            return null == (n = u.current) || null == (t = n.ref) || null == (e = t.blur) ? void 0 : e.call(t);
         }, []),
         (0, l.jsx)("div", {
             className: o.container,
             children: (0, l.jsxs)(i.njP, {
                 className: o.tabBar,
                 "aria-label": c.intl.string(c.t["+1H47t"]),
-                selectedItem: n,
+                selectedItem: t,
                 type: "top",
-                onItemSelect: t,
+                onItemSelect: n,
                 children: [
                     (0, l.jsx)(i.njP.Item, {
                         className: o.tabBarItem,

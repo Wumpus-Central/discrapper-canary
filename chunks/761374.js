@@ -2,8 +2,8 @@ n.d(t, { Z: () => C }), n(388685), n(642613);
 var i = n(54381),
     r = n(473749),
     l = n(442837),
-    a = n(481060),
-    o = n(13245),
+    o = n(481060),
+    a = n(13245),
     s = n(493773),
     u = n(358221),
     c = n(569545),
@@ -13,12 +13,12 @@ var i = n(54381),
     f = n(592125),
     m = n(355863),
     g = n(944486),
-    y = n(837268),
-    O = n(804570),
+    O = n(837268),
+    y = n(804570),
     E = n(350663),
     v = n(752802),
-    S = n(68286),
-    b = n(340101),
+    b = n(68286),
+    S = n(340101),
     x = n(501787),
     j = n(388032),
     I = n(965365);
@@ -38,12 +38,12 @@ function C(e) {
             anchorLeft: k,
             showEmpty: L = !0,
         } = e,
-        M = A ? b.C5.HORIZONTAL : b.C5.VERTICAL,
-        V = M === b.C5.VERTICAL,
+        M = A ? S.C5.HORIZONTAL : S.C5.VERTICAL,
+        V = M === S.C5.VERTICAL,
         z = (0, l.e7)([m.Z], () => {
             var e;
             let t = m.Z.getWidget(C);
-            return !!(0, b.ZL)(t) && !w && (null == (e = t.meta.showAllStreams) || e);
+            return !!(0, S.ZL)(t) && !w && (null == (e = t.meta.showAllStreams) || e);
         }, [C, w]),
         U = (0, l.e7)([g.Z], () => g.Z.getVoiceChannelId()),
         W = (0, l.e7)([f.Z], () => f.Z.getChannel(U)),
@@ -51,9 +51,9 @@ function C(e) {
             streamParticipants: G,
             activeStreams: F,
             participantsVersion: H,
-        } = (function (e, t, n, i, a) {
-            let o = (0, l.Wu)([h.Z], () => (null == e ? [] : h.Z.getAllActiveStreamsForChannel(e))),
-                s = r.useMemo(() => new Set(o.map((e) => (0, c.V9)(e))), [o]),
+        } = (function (e, t, n, i, o) {
+            let a = (0, l.Wu)([h.Z], () => (null == e ? [] : h.Z.getAllActiveStreamsForChannel(e))),
+                s = r.useMemo(() => new Set(a.map((e) => (0, c.V9)(e))), [a]),
                 d = (0, l.e7)([u.Z], () => (null == e ? -1 : u.Z.getParticipantsVersion(e)));
             return {
                 streamParticipants: (0, l.Wu)([u.Z, h.Z], () => {
@@ -71,7 +71,7 @@ function C(e) {
                             if (i) {
                                 if (r(e) && !r(t)) return -1;
                                 if (!r(e) && r(t)) return 1;
-                            } else if (a) {
+                            } else if (o) {
                                 if (r(e) && !r(t)) return 1;
                                 if (!r(e) && r(t)) return -1;
                             }
@@ -79,7 +79,7 @@ function C(e) {
                         }),
                         l
                     );
-                }, [e, s, t, n, i, a]),
+                }, [e, s, t, n, i, o]),
                 activeStreams: s,
                 participantsVersion: d,
             };
@@ -99,7 +99,7 @@ function C(e) {
             widgetHeight: J,
             containerRef: q,
             containerMinMaxSizes: $,
-        } = (0, S.Bz)({
+        } = (0, b.Bz)({
             tileCount: Y,
             padding: T,
             borderWidth: _,
@@ -126,7 +126,7 @@ function C(e) {
             },
             locked: w,
         };
-    (0, S.Dl)({
+    (0, b.Dl)({
         id: C,
         streamParticipants: G,
         layout: M,
@@ -134,10 +134,10 @@ function C(e) {
     });
     let et = null == W || (0 === F.size && w) || (0 === Y && !w);
     return (r.useEffect(() => {
-        o.Z.setGpuBoostRequested(y.zS.OVERLAY_VIDEO_STREAM_RENDERING, !et);
+        a.Z.setGpuBoostRequested(O.zS.OVERLAY_VIDEO_STREAM_RENDERING, !et);
     }, [et]),
     (0, s.ZP)(() => () => {
-        o.Z.setGpuBoostRequested(y.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
+        a.Z.setGpuBoostRequested(O.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
     }),
     (et || !D) && w)
         ? null
@@ -145,9 +145,9 @@ function C(e) {
           ? L
               ? w
                   ? null
-                  : (0, i.jsx)(O.E, {
+                  : (0, i.jsx)(y.E, {
                         emptyText: j.intl.string(j.t["T6+rXy"]),
-                        icon: a.hGI,
+                        icon: o.hGI,
                         absolute: !0,
                     })
               : null

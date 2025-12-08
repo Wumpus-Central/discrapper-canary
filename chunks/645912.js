@@ -1,4 +1,4 @@
-n.d(e, { G: () => E });
+n.d(e, { G: () => T });
 var i = n(54381),
     l = n(657707),
     s = n(509613),
@@ -14,7 +14,7 @@ let c = (0, s.x1)(r.n.KEYBINDS_PANE, {
         useTitle: () => o.intl.string(o.t.T9DA2K),
         buildLayout: () => [c],
     }),
-    E = (0, s.m7)(r.n.KEYBINDS_SIDEBAR_ITEM, {
+    T = (0, s.m7)(r.n.KEYBINDS_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t.T9DA2K),
         getLegacySearchKey: () => a.s6.KEYBINDS,
         icon: l.YiA,

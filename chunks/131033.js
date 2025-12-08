@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var a = n(54381);
 n(473749);
 var i = n(793030),
     r = n(388032),
     l = n(226788);
-function s(e) {
+function o(e) {
     let { detectedGame: t } = e;
     return 0 === t.publishers.length
         ? null

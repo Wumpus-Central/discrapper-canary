@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(54381),
     i = n(473749),
-    a = n(81897),
-    l = n(906732),
+    l = n(81897),
+    a = n(906732),
     o = n(566898),
     c = n(785717),
     s = n(806729),
@@ -14,10 +14,10 @@ var r = n(54381),
     m = n(443680);
 function b(e) {
     let { user: t, guildId: n, channelId: b, onClose: h } = e,
-        { analyticsLocations: y } = (0, l.ZP)(),
+        { analyticsLocations: y } = (0, a.ZP)(),
         { context: v, trackUserProfileAction: O } = (0, c.KZ)(),
         { mutualFriends: j, mutualFriendsCount: x } = (0, s.Z)(t),
-        _ = (0, a.Z)();
+        _ = (0, l.Z)();
     return (
         i.useEffect(() => {
             (0, u.Z)(t.id, _);
@@ -48,12 +48,12 @@ function b(e) {
                     : 0 === j.length
                       ? (0, r.jsx)(g.s_, {})
                       : j.map((e) => {
-                            let { key: t, user: i, status: a } = e;
+                            let { key: t, user: i, status: l } = e;
                             return (0, r.jsx)(
                                 f.Z,
                                 {
                                     user: i,
-                                    status: a,
+                                    status: l,
                                     guildId: n,
                                     channelId: b,
                                     onSelect: () => {

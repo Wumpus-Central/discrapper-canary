@@ -160,7 +160,7 @@ let C = (e) => {
         let [e, t] = l.useState(-1),
             [n, s] = l.useState(-1),
             [S, E] = l.useState(!1),
-            [N, O] = l.useState(5000),
+            [O, N] = l.useState(5000),
             [T, P] = l.useState(!1),
             I = l.useRef(null),
             w = (0, i.e7)([v.default], () => v.default.getCurrentUser()),
@@ -178,8 +178,8 @@ let C = (e) => {
                 setConnectionStatus: L,
                 setConnect: M,
                 setDisconnect: U,
-                setInstall: B,
-                setIsWeb: F,
+                setInstall: F,
+                setIsWeb: B,
                 setIsSupportedPrivateBrowsingPerkPlatform: G,
                 isWeb: z,
                 isSupportedPrivateBrowsingPerkPlatform: V,
@@ -218,10 +218,10 @@ let C = (e) => {
                                 setTimeout(() => {
                                     if (S) return void t(Error("Installation failed"));
                                     e();
-                                }, N),
+                                }, O),
                             );
                     }),
-                [S, N, Z, s],
+                [S, O, Z, s],
             );
         l.useEffect(() => {
             z && A !== p._n.UNKNOWN && Z(p._n.UNKNOWN);
@@ -230,8 +230,8 @@ let C = (e) => {
                 U(J);
             }, [J, U]),
             l.useEffect(() => {
-                B(X);
-            }, [X, B]),
+                F(X);
+            }, [X, F]),
             l.useEffect(() => {
                 A !== p._n.INSTALLING && clearTimeout(n);
             }, [n, A]),
@@ -281,7 +281,7 @@ let C = (e) => {
                                               (0, a.jsx)("div", {
                                                   style: { width: "45px" },
                                                   children: (0, a.jsx)(c.rsf, {
-                                                      onChange: () => F(!z),
+                                                      onChange: () => B(!z),
                                                       checked: z,
                                                   }),
                                               }),
@@ -415,8 +415,8 @@ let C = (e) => {
                                                       children: "Install time",
                                                   }),
                                                   (0, a.jsx)(o.B6, {
-                                                      select: (e) => O(e),
-                                                      isSelected: (e) => e === N,
+                                                      select: (e) => N(e),
+                                                      isSelected: (e) => e === O,
                                                       serialize: (e) => "".concat(e),
                                                       options: [
                                                           {

@@ -1,33 +1,33 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var r = n(54381),
-    i = n(473749),
-    l = n(481060),
+    l = n(473749),
+    i = n(481060),
     a = n(600164),
     s = n(388032),
-    o = n(342153);
-let c = (e) => {
+    o = n(864309);
+let d = (e) => {
     let t,
         {
             button: n,
-            submitting: c,
-            disableNext: d,
+            submitting: d,
+            disableNext: c,
             onClick: u,
             canNavigateBack: m,
             onBackClicked: p,
             isModeratorReport: g,
         } = e,
-        _ = i.useRef(null),
-        h = null != n && "cancel" !== n.type,
-        b = m && (null == n ? void 0 : n.type) !== "done",
-        x = h || b;
+        _ = l.useRef(null),
+        x = null != n && "cancel" !== n.type,
+        h = m && (null == n ? void 0 : n.type) !== "done",
+        b = x || h;
     if (
-        (i.useEffect(() => {
+        (l.useEffect(() => {
             if ((null == n ? void 0 : n.type) === "submit" || (null == n ? void 0 : n.type) === "done") {
                 var e;
                 null == (e = _.current) || e.focus();
             }
         }, [null == n ? void 0 : n.type]),
-        !x)
+        !b)
     )
         return null;
     let f = s.intl.string(s.t.i4jeWR);
@@ -37,26 +37,26 @@ let c = (e) => {
             : (null == n ? void 0 : n.type) === "next"
               ? (f = s.intl.string(s.t.PDTjLN))
               : (null == n ? void 0 : n.type) === "cancel" && ((f = s.intl.string(s.t["ETE/oC"])), (t = "secondary")),
-        (0, r.jsx)(l.mzw, {
+        (0, r.jsx)(i.mzw, {
             "data-migration-pending": !0,
             direction: a.Z.Direction.HORIZONTAL,
-            children: (0, r.jsxs)(l.ButtonGroup, {
-                fullWidth: b && h,
+            children: (0, r.jsxs)(i.ButtonGroup, {
+                fullWidth: h && x,
                 children: [
-                    b &&
-                        (0, r.jsx)(l.Button, {
+                    h &&
+                        (0, r.jsx)(i.Button, {
                             onClick: p,
                             variant: "secondary",
-                            disabled: c,
+                            disabled: d,
                             text: s.intl.string(s.t["13/7kX"]),
                         }),
-                    h &&
-                        (0, r.jsx)(l.Button, {
+                    x &&
+                        (0, r.jsx)(i.Button, {
                             onClick: () => {
                                 null != n && u(n);
                             },
                             variant: t,
-                            disabled: c || d,
+                            disabled: d || c,
                             buttonRef: _,
                             text: f,
                         }),

@@ -59,7 +59,7 @@ function B(e) {
         else if (i.Z.USE_JFIF && W(e, O)) (t = e.getUint16(O + u)), (a = O + d);
         else if (i.Z.USE_EXIF && K(e, O)) (t = e.getUint16(O + u)), (o = O + f);
         else if (i.Z.USE_XMP && z(e, O)) _ || (_ = []), (t = e.getUint16(O + u)), _.push(J(O, t));
-        else if (i.Z.USE_XMP && X(e, O)) _ || (_ = []), (t = e.getUint16(O + u)), _.push($(O, t));
+        else if (i.Z.USE_XMP && Q(e, O)) _ || (_ = []), (t = e.getUint16(O + u)), _.push($(O, t));
         else if (i.Z.USE_IPTC && ee(e, O)) (t = e.getUint16(O + u)), (s = O + p);
         else if (i.Z.USE_ICC && H(e, O)) {
             t = e.getUint16(O + u);
@@ -122,10 +122,10 @@ function q(e, t) {
     let n = k.length;
     return (0, r.oH)(e, t + c, n) === k;
 }
-function X(e, t) {
-    return e.getUint16(t) === P && Q(e, t);
-}
 function Q(e, t) {
+    return e.getUint16(t) === P && X(e, t);
+}
+function X(e, t) {
     let n = U.length;
     return (0, r.oH)(e, t + c, n) === U;
 }

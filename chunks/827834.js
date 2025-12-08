@@ -182,8 +182,8 @@ t.default = (function () {
                 value: "[0-9]",
                 description: "[0-9]",
             },
-            X = /^[0-9a-f]/i,
-            Q = {
+            Q = /^[0-9a-f]/i,
+            X = {
                 type: "class",
                 value: "[0-9a-f]i",
                 description: "[0-9a-f]i",
@@ -391,7 +391,7 @@ t.default = (function () {
         }
         function eM() {
             var e, n, r;
-            if ((e = eQ()) === i) {
+            if ((e = eX()) === i) {
                 if (
                     ((e = eO),
                     (n = []),
@@ -490,7 +490,7 @@ t.default = (function () {
                 (e = eO),
                 (n = eO),
                 61 === t.charCodeAt(eO) ? ((r = k), eO++) : ((r = i), 0 === eC && eP(U)),
-                r !== i && (a = eQ()) !== i ? (n = r = [r, a]) : ((eO = n), (n = l)),
+                r !== i && (a = eX()) !== i ? (n = r = [r, a]) : ((eO = n), (n = l)),
                 n !== i && (n = t.substring(e, eO)),
                 (e = n) === i && (e = e$()),
                 e
@@ -515,7 +515,7 @@ t.default = (function () {
             return (
                 (e = eO),
                 t.substr(eO, 7) === Z ? ((n = Z), (eO += 7)) : ((n = i), 0 === eC && eP(B)),
-                n !== i && ez() !== i && (r = eQ()) !== i ? ((ev = e), (e = n = F(r))) : ((eO = e), (e = l)),
+                n !== i && ez() !== i && (r = eX()) !== i ? ((ev = e), (e = n = F(r))) : ((eO = e), (e = l)),
                 e
             );
         }
@@ -552,11 +552,11 @@ t.default = (function () {
             var e;
             return z.test(t.charAt(eO)) ? ((e = t.charAt(eO)), eO++) : ((e = i), 0 === eC && eP(q)), e;
         }
-        function eX() {
-            var e;
-            return X.test(t.charAt(eO)) ? ((e = t.charAt(eO)), eO++) : ((e = i), 0 === eC && eP(Q)), e;
-        }
         function eQ() {
+            var e;
+            return Q.test(t.charAt(eO)) ? ((e = t.charAt(eO)), eO++) : ((e = i), 0 === eC && eP(X)), e;
+        }
+        function eX() {
             var e, n, r, a, o, s;
             if (((e = eO), 48 === t.charCodeAt(eO) ? ((n = J), eO++) : ((n = i), 0 === eC && eP($)), n === i)) {
                 if (
@@ -598,7 +598,7 @@ t.default = (function () {
                                     n !== i
                                         ? ((r = eO),
                                           (a = eO),
-                                          (o = eX()) !== i && (s = eX()) !== i && (c = eX()) !== i && (u = eX()) !== i
+                                          (o = eQ()) !== i && (s = eQ()) !== i && (c = eQ()) !== i && (u = eQ()) !== i
                                               ? (a = o = [o, s, c, u])
                                               : ((eO = a), (a = l)),
                                           a !== i && (a = t.substring(r, eO)),

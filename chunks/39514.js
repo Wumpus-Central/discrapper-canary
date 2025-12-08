@@ -17,14 +17,14 @@ var r = n(54381),
     x = n(314897),
     E = n(896797),
     v = n(82142),
-    b = n(283595),
-    j = n(55563),
+    j = n(283595),
+    b = n(55563),
     I = n(669079),
     y = n(63063),
     S = n(51144),
-    O = n(481153),
-    N = n(781428),
-    C = n(423527),
+    N = n(481153),
+    C = n(781428),
+    O = n(423527),
     T = n(981631),
     A = n(388032),
     Z = n(197571);
@@ -183,7 +183,7 @@ class R extends i.PureComponent {
             transitionTo: i,
             children: (0, r.jsxs)(p.ZP, {
                 children: [
-                    (0, r.jsx)(O.Z, { giftCode: e }),
+                    (0, r.jsx)(N.Z, { giftCode: e }),
                     (0, r.jsx)("div", {
                         className: Z.marginTop40,
                         children: (0, r.jsx)(o.Button, {
@@ -235,13 +235,13 @@ class R extends i.PureComponent {
                       : this.renderAuthenticated(i, e, t);
             }
             return "login" === this.getMode()
-                ? (0, r.jsx)(N.Z, {
+                ? (0, r.jsx)(C.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: a,
                       location: o,
                   })
-                : (0, r.jsx)(C.Z, {
+                : (0, r.jsx)(O.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: a,
@@ -297,22 +297,22 @@ class R extends i.PureComponent {
             });
     }
 }
-let L = a.ZP.connectStores([v.Z, b.Z, x.default, j.Z, E.Z, m.Z], (e) => {
+let L = a.ZP.connectStores([v.Z, j.Z, x.default, b.Z, E.Z, m.Z], (e) => {
         let t = e.match.params.giftCode,
             n = v.Z.get(t),
-            r = null != n ? j.Z.get(n.skuId) : null;
+            r = null != n ? b.Z.get(n.skuId) : null;
         return {
             giftCode: n,
             sku: r,
             libraryApplication:
                 null != r && (null == n ? void 0 : n.entitlementBranches) != null
-                    ? I.z2(n.entitlementBranches, r, b.Z)
+                    ? I.z2(n.entitlementBranches, r, j.Z)
                     : null,
             authenticated: x.default.isAuthenticated(),
             defaultRoute: E.Z.defaultRoute,
             isResolved: v.Z.getIsResolved(t),
             isAccepting: v.Z.getIsAccepting(t),
-            libraryApplicationsFetched: b.Z.fetched,
+            libraryApplicationsFetched: j.Z.fetched,
             nativeAppState: m.Z.getState(t),
         };
     })(R),

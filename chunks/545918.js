@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => F }), n(388685);
+n.r(t), n.d(t, { default: () => U }), n(388685);
 var l = n(54381),
     r = n(473749),
     i = n(120356),
@@ -68,7 +68,7 @@ function B(e) {
         })
     );
 }
-function F(e) {
+function U(e) {
     var t;
     let { guildId: n } = e,
         i = null != (t = (0, p.A)({ guildId: n })) ? t : 0,
@@ -85,8 +85,8 @@ function F(e) {
         (null == v ? void 0 : v.features.has(Z.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL)) ||
             b(E.e.ALL_MEMBERS);
     }, [v]);
-    let F = (0, N.n2)(n),
-        U = (0, m.m)(n),
+    let U = (0, N.n2)(n),
+        F = (0, m.m)(n),
         q = r.useRef(null);
     (0, O.n)(n);
     let { fetchNextPage: z } = (0, h.m)({
@@ -106,14 +106,14 @@ function F(e) {
             [u, n, z, D],
         );
     r.useEffect(() => {
-        if (!F && null != v) {
+        if (!U && null != v) {
             var e;
             let t = null == (e = S.ZP.getDefaultChannel(v.id)) ? void 0 : e.id;
             (0, C.XU)(v.id, t);
         }
-    }, [v, F]);
+    }, [v, U]);
     let K = (0, s.e7)([_.ZP], () => null != _.ZP.getGuildSidebarState(n), [n]);
-    return null != v && F
+    return null != v && U
         ? (0, l.jsxs)(d.Gt, {
               value: R,
               children: [
@@ -148,7 +148,7 @@ function F(e) {
                           (0, l.jsx)(A.Z, { guildId: v.id }),
                       ],
                   }),
-                  U &&
+                  F &&
                       (u === E.e.ALL_MEMBERS ? (0, l.jsx)(w.Z, { guildId: v.id }) : (0, l.jsx)(P.Z, { guildId: v.id })),
               ],
           })

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var a = n(54381),
     l = n(442837),
-    i = n(481060),
-    r = n(346486),
+    r = n(481060),
+    i = n(346486),
     s = n(146282),
     o = n(371991),
     c = n(206583);
@@ -19,18 +19,18 @@ function d() {
     return (0, a.jsxs)("div", {
         children: [
             t
-                ? (0, a.jsx)(i.Text, {
+                ? (0, a.jsx)(r.Text, {
                       variant: "text-md/normal",
                       children: "(fetching)",
                   })
-                : (0, a.jsxs)(i.Text, {
+                : (0, a.jsxs)(r.Text, {
                       variant: "text-md/normal",
                       children: [
                           "Next fetch: ",
-                          null != n ? (0, a.jsx)(r.Z, { deadline: n }) : e ? "(awaiting push)" : "(unscheduled)",
+                          null != n ? (0, a.jsx)(i.Z, { deadline: n }) : e ? "(awaiting push)" : "(unscheduled)",
                       ],
                   }),
-            (0, a.jsxs)(i.Text, {
+            (0, a.jsxs)(r.Text, {
                 variant: "text-md/normal",
                 children: [
                     "Last fetch:",

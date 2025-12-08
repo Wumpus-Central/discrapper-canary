@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(906732),
     g = n(397698),
     b = n(895924),
-    y = n(266454),
-    C = n(340541),
+    C = n(266454),
+    y = n(340541),
     v = n(416345),
     _ = n(626135),
     O = n(607187),
@@ -114,11 +114,11 @@ function Z(e) {
         });
     }, []);
     let { analyticsLocations: s, newestAnalyticsLocation: c } = (0, m.ZP)(f.Z.VC_TILE_ACTIVITY_INVITE),
-        d = (0, C._k)({ location: "single_user_tile" });
+        d = (0, y._k)({ location: "single_user_tile" });
     function p() {
         (0, u.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("89772")]).then(
+                let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) => {
@@ -237,7 +237,7 @@ function T(e) {
         });
     });
     let g = (0, p.Z)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: C } = (0, m.ZP)(f.Z.VC_TILE_ACTIVITY_SUGGESTION),
+        { analyticsLocations: y } = (0, m.ZP)(f.Z.VC_TILE_ACTIVITY_SUGGESTION),
         S = r.useMemo(
             () => ({
                 channel: t,
@@ -246,7 +246,7 @@ function T(e) {
             [t],
         );
     return (0, i.jsx)(m.Gt, {
-        value: C,
+        value: y,
         children: (0, i.jsxs)(O.Z, {
             className: j.root,
             children: [
@@ -281,7 +281,7 @@ function T(e) {
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, y.Q3)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, C.Q3)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
                         (0, i.jsx)(v.Z, {}),

@@ -1,18 +1,18 @@
-t.d(n, { Z: () => d });
-var s = t(54381);
-t(473749);
-var l = t(120356),
-    a = t.n(l),
-    r = t(481060),
-    i = t(942951),
-    o = t(456269),
-    c = t(388032),
-    u = t(423046);
+n.d(t, { Z: () => d });
+var s = n(54381);
+n(473749);
+var l = n(120356),
+    a = n.n(l),
+    r = n(481060),
+    i = n(942951),
+    o = n(456269),
+    c = n(388032),
+    u = n(423046);
 let d = (e) => {
-    var n, t;
+    var t, n;
     let { message: l, channel: d, renderColon: m, hasUnreads: h } = e,
         { user: g, author: f } = (0, o.AJ)(d),
-        x = null != (t = null != (n = null == f ? void 0 : f.nick) ? n : null == g ? void 0 : g.username) ? t : "",
+        x = null != (n = null != (t = null == f ? void 0 : f.nick) ? t : null == g ? void 0 : g.username) ? n : "",
         j = (0, i.l)({
             user: null == l ? void 0 : l.author,
             channelId: d.id,

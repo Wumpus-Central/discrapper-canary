@@ -17,8 +17,8 @@ var r = n(54381),
     A = n(782818),
     j = n(442552),
     y = n(430824),
-    x = n(914010),
-    C = n(594174),
+    C = n(914010),
+    x = n(594174),
     v = n(626135),
     E = n(267642),
     O = n(74538),
@@ -88,7 +88,7 @@ function I(e) {
         ),
     });
 }
-function k(e) {
+function D(e) {
     let { guildFeature: t, guild: n } = e;
     if (null == t || null == n) return;
     let r = (0, E._p)(t),
@@ -99,7 +99,7 @@ function k(e) {
         ? R.intl.formatToPlainString(R.t.u3L3TX, { levelName: l })
         : R.intl.formatToPlainString(R.t["r/v25U"], { levelName: l });
 }
-function D(e) {
+function k(e) {
     let { guildFeature: t, guild: n } = e;
     return (0, r.jsx)("div", {
         className: F.boostingPill,
@@ -141,7 +141,7 @@ function M(e) {
                 ],
             }),
             u &&
-                (0, r.jsx)(D, {
+                (0, r.jsx)(k, {
                     guild: l,
                     guildFeature: a,
                 }),
@@ -160,7 +160,7 @@ function L(e) {
         } = e,
         d = (0, N.GY)(n),
         f = (0, N.C6)(n, { isGIF: !1 }),
-        g = k({
+        g = D({
             guildFeature: f,
             guild: a,
         });
@@ -202,7 +202,7 @@ function U(e) {
         { shouldAnimate: l, onMouseEnter: i, onMouseLeave: s } = (0, j.Z)(),
         o = (0, N.Kq)(t),
         u = (0, N.C6)(t, { isGIF: !0 }),
-        d = k({
+        d = D({
             guildFeature: u,
             guild: n,
         });
@@ -245,17 +245,17 @@ function B(e) {
             analyticsLocations: N = [],
             imageSpecifications: Z,
             modalTitle: I = R.intl.string(R.t.DToW4e),
-            uploadOptionTitle: k = R.intl.string(R.t["MsUY/S"]),
-            allowRecentAvatarsSelection: D = !0,
+            uploadOptionTitle: D = R.intl.string(R.t["MsUY/S"]),
+            allowRecentAvatarsSelection: k = !0,
         } = e,
-        M = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
-        B = (0, s.e7)([x.Z], () => x.Z.getGuildId()),
+        M = (0, s.e7)([x.default], () => x.default.getCurrentUser()),
+        B = (0, s.e7)([C.Z], () => C.Z.getGuildId()),
         H = (0, s.e7)([y.Z], () => y.Z.getGuild(B)),
         V = (0, c.vRw)(),
         G = o === w.pC.AVATAR || o === w.pC.BANNER,
         z = !O.ZP.canUseAnimatedAvatar(M) && o === w.pC.AVATAR,
         q = (0, g.M)(!G),
-        W = (0, h.T)({ location: "NewSelectImageModal" }) && D,
+        W = (0, h.T)({ location: "NewSelectImageModal" }) && k,
         { analyticsLocations: X, newestAnalyticsLocation: Y } = (0, d.ZP)(N, u.Z.SELECT_IMAGE_MODAL),
         J = a.useCallback(
             (e) => {
@@ -380,7 +380,7 @@ function B(e) {
                                 children: [
                                     (0, r.jsx)("li", {
                                         children: (0, r.jsx)(L, {
-                                            label: k,
+                                            label: D,
                                             uploadType: o,
                                             guild: H,
                                             handleOpenImageEditingModal: K,

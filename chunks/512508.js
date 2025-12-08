@@ -1,6 +1,6 @@
 n.d(t, {
     PM: () => V,
-    WG: () => I,
+    WG: () => P,
     ZP: () => k,
 }),
     n(388685),
@@ -17,8 +17,8 @@ var r = n(54381),
     C = n(933557),
     m = n(471445),
     b = n(313201),
-    p = n(518738),
-    f = n(884902),
+    f = n(518738),
+    p = n(884902),
     h = n(48950),
     g = n(439170),
     j = n(592125),
@@ -92,10 +92,10 @@ let D = (0, b.hQ)(),
 function L(e) {
     return 1 === e.type;
 }
-function P(e) {
+function I(e) {
     return 0 === e.type;
 }
-function I(e) {
+function P(e) {
     let t = "".concat(!e.name.includes(g.CR) ? "@" : "").concat(e.name);
     return {
         tag: {
@@ -129,7 +129,7 @@ let M = l.memo(function (e) {
     var t;
     let { row: n, guildId: l, className: i } = e,
         { id: a, name: s } = n.record,
-        d = (0, p.p9)({
+        d = (0, f.p9)({
             guildId: l,
             roleId: a,
             size: 16,
@@ -138,7 +138,7 @@ let M = l.memo(function (e) {
         m = s.includes(g.CR) ? "" : "@",
         b = (0, u.dQu)(u.TVs.unsafe_rawColors.PRIMARY_300).hsl(),
         j = null != (t = null == C ? void 0 : C.colorString) ? t : b,
-        v = (0, f._f)(l, C, null == C ? void 0 : C.colorStrings);
+        v = (0, p._f)(l, C, null == C ? void 0 : C.colorStrings);
     return (0, r.jsxs)("div", {
         className: o()(H.rowLabel, H.roleTagContainer, i),
         children: [
@@ -189,7 +189,7 @@ function T(e, t, n) {
               },
               e.record.id,
           )
-        : P(e)
+        : I(e)
           ? (0, r.jsx)(
                 E,
                 {
@@ -210,8 +210,8 @@ function k(e) {
             selectedRoleIds: C = new Set(),
             onChange: m,
             placeholder: b,
-            helperText: p,
-            className: f,
+            helperText: f,
+            className: p,
         } = e,
         h = (0, c.e7)([x.Z], () => x.Z.getRolesSnapshot(t)),
         g = l.useMemo(
@@ -225,7 +225,7 @@ function k(e) {
                             null != t && (r[e] = V(t));
                         }),
                         t.forEach((e) => {
-                            e in n && (r[e] = I(n[e]));
+                            e in n && (r[e] = P(n[e]));
                         }),
                         r
                     );
@@ -260,7 +260,7 @@ function k(e) {
                     n = t
                         .filter((e) => {
                             let { row: t } = e;
-                            return P(t);
+                            return I(t);
                         })
                         .map((e) => e.row.record.id),
                     r = t
@@ -287,10 +287,10 @@ function k(e) {
     let Y = (e, t, n) => {
             n.stopPropagation(), n.preventDefault(), 2 === t ? M(e) : (1 === t || M(e), k(e));
         },
-        W = l.useCallback(
+        Q = l.useCallback(
             (e) => {
                 let t = _({}, g);
-                P(e) ? (t[e.id] = V(e.record)) : L(e) && (t[e.id] = I(e.record)),
+                I(e) ? (t[e.id] = V(e.record)) : L(e) && (t[e.id] = P(e.record)),
                     G(t),
                     Z(""),
                     z(),
@@ -307,7 +307,7 @@ function k(e) {
             },
             [G, g],
         ),
-        Q = l.useCallback(
+        W = l.useCallback(
             (e) => {
                 let { section: n, row: l } = e,
                     i = B[n][l];
@@ -316,7 +316,7 @@ function k(e) {
                     {
                         className: o()(H.selectableSearchRow, H.rowHeight),
                         onClick: (e) => {
-                            e.stopPropagation(), W(i);
+                            e.stopPropagation(), Q(i);
                         },
                         children: (0, r.jsx)("div", {
                             className: H.rowContainer,
@@ -326,7 +326,7 @@ function k(e) {
                     i.id,
                 );
             },
-            [t, W, B],
+            [t, Q, B],
         ),
         K = l.useMemo(
             () =>
@@ -337,7 +337,7 @@ function k(e) {
             [g, v, t],
         );
     return (0, r.jsxs)("div", {
-        className: o()(H.searchContainer, f),
+        className: o()(H.searchContainer, p),
         children: [
             (0, r.jsxs)("div", {
                 className: H.searchBox,
@@ -403,7 +403,7 @@ function k(e) {
                                 className: H.resultsListContainer,
                                 innerClassName: H.resultsList,
                                 sections: q,
-                                renderRow: Q,
+                                renderRow: W,
                                 rowHeight: 34,
                                 renderSection: (e) => {
                                     let { section: t } = e;
@@ -450,12 +450,12 @@ function k(e) {
                         }),
                 ],
             }),
-            null != p &&
+            null != f &&
                 (0, r.jsx)(u.Text, {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     className: H.helperText,
-                    children: p,
+                    children: f,
                 }),
         ],
     });

@@ -23,8 +23,8 @@ var l = n(54381),
     P = n(626135),
     N = n(63063),
     k = n(981631),
-    y = n(671955),
-    O = n(677065),
+    O = n(671955),
+    y = n(905170),
     T = n(388032),
     E = n(270816);
 function D(e) {
@@ -82,10 +82,10 @@ function A(e) {
         } = e,
         Z = (0, c.ZP)(),
         M = (0, s.wjy)(Z),
-        [G, Y] = (0, o.useState)(M),
-        H = (0, S.ZP)(t.id, null),
+        [G, H] = (0, o.useState)(M),
+        Y = (0, S.ZP)(t.id, null),
         { bannerSrc: z } = (0, j.Z)({
-            displayProfile: H,
+            displayProfile: Y,
             size: 413,
             canAnimate: !1,
         }),
@@ -101,7 +101,7 @@ function A(e) {
             P.default.track(k.rMx.DISPLAY_NAME_STYLES_CLOSED), B();
         }, [B]),
         $ = (0, o.useCallback)((e) => {
-            Y(e === k.BRd.DARK), P.default.track(k.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === k.BRd.DARK });
+            H(e === k.BRd.DARK), P.default.track(k.rMx.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === k.BRd.DARK });
         }, []),
         J = (0, o.useMemo)(
             () =>
@@ -131,8 +131,8 @@ function A(e) {
             null != z &&
                 (0, l.jsx)(C.Z, {
                     user: t,
-                    displayProfile: H,
-                    themeType: y.l.MODAL_V2,
+                    displayProfile: Y,
+                    themeType: O.l.MODAL_V2,
                     className: E.backgroundThemeContainer,
                     forceUserTheme: !0,
                     children: (0, l.jsx)("div", {
@@ -179,7 +179,7 @@ function A(e) {
                                             {},
                                             (0, p.ZP)({
                                                 channelId: "1337",
-                                                content: T.intl.string(O.default.h5Cuej),
+                                                content: T.intl.string(y.default.h5Cuej),
                                             }),
                                         ),
                                         {
@@ -213,7 +213,7 @@ function A(e) {
                     (0, l.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: T.intl.format(O.default.prQba8, {
+                        children: T.intl.format(y.default.prQba8, {
                             helpArticleLink: N.Z.getArticleURL(k.BhN.DISPLAY_NAME_STYLES),
                         }),
                     }),

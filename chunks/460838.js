@@ -15,18 +15,18 @@ var i,
     _ = t(357156),
     p = t(496675),
     f = t(725436),
-    h = t(274311),
-    g = t(854698),
-    m = t(285784),
-    v = t(95291),
+    m = t(274311),
+    v = t(854698),
+    g = t(285784),
+    h = t(95291),
     b = t(742593),
     x = t(810561),
     C = t(131154),
     j = t(765305),
     k = t(981631),
     I = t(388032),
-    y = t(187881);
-function N(e) {
+    N = t(187881);
+function w(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             i = Object.keys(t);
@@ -51,7 +51,7 @@ function N(e) {
     }
     return e;
 }
-function w(e, n) {
+function y(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -75,7 +75,7 @@ function E(e) {
         { canManageAllEvents: i } = (0, _.XJ)(n),
         l = (0, c.e7)([p.Z], () => !n.isGuildVocal() || p.Z.can(k.Plq.CONNECT, n), [n]),
         f = a.useMemo(() => (0, d.Z)(n), [n]),
-        h = (0, u.KS)(n);
+        m = (0, u.KS)(n);
     return (0, r.jsx)(s.aML, {
         "data-migration-pending": !0,
         text: I.intl.string(I.t.nHjY9C),
@@ -83,10 +83,10 @@ function E(e) {
         children: (e) =>
             (0, r.jsxs)(
                 s.P3F,
-                w(N({}, e), {
-                    className: o()(y.inline, y.channelContainer, {
-                        [y.channelContainerEnabled]: l && null != t,
-                        [y.channelContainerDisabled]: !l && null != t,
+                y(w({}, e), {
+                    className: o()(N.inline, N.channelContainer, {
+                        [N.channelContainerEnabled]: l && null != t,
+                        [N.channelContainerDisabled]: !l && null != t,
                     }),
                     onClick: t,
                     children: [
@@ -95,15 +95,15 @@ function E(e) {
                             text: I.intl.string(I.t["48WXaW"]),
                             shouldShow: i && f && l && null != t,
                             children: (e) =>
-                                null != h
+                                null != m
                                     ? (0, r.jsx)(
-                                          h,
-                                          w(N({}, e), {
+                                          m,
+                                          y(w({}, e), {
                                               color: "currentColor",
                                               size: "custom",
                                               width: 20,
                                               height: 20,
-                                              className: y.icon,
+                                              className: N.icon,
                                           }),
                                       )
                                     : null,
@@ -111,7 +111,7 @@ function E(e) {
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "none",
-                            className: y.channelLocation,
+                            className: N.channelLocation,
                             children: n.name,
                         }),
                     ],
@@ -127,7 +127,7 @@ function P(e) {
               onClick: t,
           })
         : (0, r.jsxs)(s.P3F, {
-              className: y.inline,
+              className: N.inline,
               onClick: i,
               children: [
                   (0, r.jsx)(s._tJ, {
@@ -135,10 +135,10 @@ function P(e) {
                       color: "currentColor",
                       height: 20,
                       width: 20,
-                      className: o()(y.channelContainer, y.icon),
+                      className: o()(N.channelContainer, N.icon),
                   }),
                   (0, r.jsx)(s.Text, {
-                      className: l ? y.externalLocation : y.channelLocation,
+                      className: l ? N.externalLocation : N.channelLocation,
                       variant: "text-sm/normal",
                       children: (0, f.m)(a, !0),
                   }),
@@ -159,11 +159,11 @@ function S(e) {
             onRsvpClick: _,
             onStartClick: p,
             onInviteClick: f,
-            onEndClick: g,
-            onJoinGuildClick: v,
+            onEndClick: v,
+            onJoinGuildClick: h,
         } = e,
-        b = (0, h.Q)(n, t),
-        x = (0, m.Zs)({
+        b = (0, m.Q)(n, t),
+        x = (0, g.Zs)({
             entityType: t,
             isJoined: i,
             isActive: a,
@@ -176,15 +176,15 @@ function S(e) {
             onRsvpClick: _,
             onStartClick: p,
             onInviteClick: f,
-            onEndClick: g,
-            onJoinGuildClick: v,
+            onEndClick: v,
+            onJoinGuildClick: h,
         });
     return (0, r.jsxs)(s.ButtonGroup, {
         fullWidth: !1,
         size: "sm",
         children: [
-            null != d ? (0, r.jsx)(m.b5, { onClick: d }) : null,
-            null == x ? void 0 : x.map((e, n) => (0, r.jsx)(s.Button, N({}, e), n)),
+            null != d ? (0, r.jsx)(g.b5, { onClick: d }) : null,
+            null == x ? void 0 : x.map((e, n) => (0, r.jsx)(s.Button, w({}, e), n)),
         ],
     });
 }
@@ -201,12 +201,12 @@ function O(e) {
             imageSource: _,
             isActive: p,
             isUserLurking: f,
-            isJoined: h = !1,
-            isMember: m = !1,
+            isJoined: m = !1,
+            isMember: g = !1,
             speakers: k,
             speakerCount: I,
-            rsvped: N,
-            canInvite: w,
+            rsvped: w,
+            canInvite: y,
             location: Z,
             truncate: E,
             onContextMenu: O,
@@ -227,8 +227,8 @@ function O(e) {
         J = q ? (e) => e.stopPropagation() : void 0,
         X = [];
     if (null != H && null != event) {
-        let e = (0, g.Ho)(H);
-        X = (0, g.PJ)(4, e, new Date(z.scheduled_start_time));
+        let e = (0, v.Ho)(H);
+        X = (0, v.PJ)(4, e, new Date(z.scheduled_start_time));
     }
     let V = X.length > 0;
     return (0, r.jsxs)(s.kL8, {
@@ -236,18 +236,18 @@ function O(e) {
         onClick: () => (null == A ? void 0 : A(M)),
         onContextMenu: O,
         className: o()(
-            y.card,
+            N.card,
             {
-                [y.joined]: h,
-                [y.lurking]: f,
+                [N.joined]: m,
+                [N.lurking]: f,
             },
             n,
         ),
         children: [
             (0, r.jsxs)("div", {
-                className: o()(y.padding, { [y.isRecurring]: V }),
+                className: o()(N.padding, { [N.isRecurring]: V }),
                 children: [
-                    0 === u && (0, r.jsx)(v.Z, { source: _ }),
+                    0 === u && (0, r.jsx)(h.Z, { source: _ }),
                     (0, r.jsx)(b.ZP, {
                         creator: a,
                         name: l,
@@ -268,11 +268,11 @@ function O(e) {
                             guild: t,
                             speakers: k,
                             speakerCount: I,
-                            className: y.spacing,
+                            className: N.spacing,
                         }),
-                    (0, r.jsx)("hr", { className: y.divider }),
+                    (0, r.jsx)("hr", { className: N.divider }),
                     (0, r.jsxs)("div", {
-                        className: o()(y.inline, y.footer),
+                        className: o()(N.inline, N.footer),
                         children: [
                             (0, r.jsx)(P, {
                                 channel: i,
@@ -282,16 +282,16 @@ function O(e) {
                                 isExternal: q,
                             }),
                             (0, r.jsx)("div", {
-                                className: y.eventActions,
+                                className: N.eventActions,
                                 children: (0, r.jsx)(S, {
                                     channel: i,
                                     entityType: c,
                                     isActive: p,
-                                    isJoined: h,
+                                    isJoined: m,
                                     isUserLurking: f,
-                                    isMember: m,
-                                    rsvped: N,
-                                    canInvite: w,
+                                    isMember: g,
+                                    rsvped: w,
+                                    canInvite: y,
                                     onContextMenu: O,
                                     onRsvpClick: D,
                                     onJoinGuildClick: U,
@@ -303,7 +303,7 @@ function O(e) {
                             }),
                         ],
                     }),
-                    V && (0, r.jsx)("hr", { className: y.divider }),
+                    V && (0, r.jsx)("hr", { className: N.divider }),
                 ],
             }),
             V &&

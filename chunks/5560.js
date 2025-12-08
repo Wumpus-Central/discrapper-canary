@@ -18,8 +18,8 @@ var i = n(54381),
     m = n(350707),
     g = n(21825),
     b = n(232495),
-    y = n(10401),
-    C = n(131257);
+    C = n(10401),
+    y = n(131257);
 function v(e, t, n) {
     return (
         t in e
@@ -136,17 +136,17 @@ class x extends r.PureComponent {
                 arrowAlignment: h = m.cy.TOP,
                 popoutPosition: f,
             } = l,
-            { offsetX: b, offsetY: y } = this.state,
+            { offsetX: b, offsetY: C } = this.state,
             v = {
                 left: null != b ? r.x + b : void 0,
-                top: null != y ? r.y + y : void 0,
+                top: null != C ? r.y + C : void 0,
             },
             x = (e) => {
                 let t = n && !e;
                 return {
-                    [C.animating]: t,
-                    [C.notAnimating]: !t,
-                    [C.highPriority]: u,
+                    [y.animating]: t,
+                    [y.notAnimating]: !t,
+                    [y.highPriority]: u,
                 };
             },
             E = this.getTutorialPopoutText();
@@ -175,11 +175,11 @@ class x extends r.PureComponent {
                         return (0, i.jsx)(
                             d.P3F,
                             O(_({}, e), {
-                                className: C.indicator,
+                                className: y.indicator,
                                 style: v,
                                 innerRef: this.contentRef,
                                 children: (0, i.jsxs)("div", {
-                                    className: a()(C.animationContainer, x(r)),
+                                    className: a()(y.animationContainer, x(r)),
                                     children: [
                                         ((e) => {
                                             let t = n && !e;
@@ -188,22 +188,22 @@ class x extends r.PureComponent {
                                                 : (0, i.jsxs)("div", {
                                                       children: [
                                                           (0, i.jsx)("div", {
-                                                              className: a()(C.top, {
-                                                                  [C.animating]: t,
-                                                                  [C.notAnimating]: !t,
+                                                              className: a()(y.top, {
+                                                                  [y.animating]: t,
+                                                                  [y.notAnimating]: !t,
                                                               }),
                                                           }),
                                                           (0, i.jsx)("div", {
-                                                              className: a()(C.bottom, {
-                                                                  [C.animating]: t,
-                                                                  [C.notAnimating]: !t,
+                                                              className: a()(y.bottom, {
+                                                                  [y.animating]: t,
+                                                                  [y.notAnimating]: !t,
                                                               }),
                                                           }),
                                                       ],
                                                   });
                                         })(r),
-                                        (0, i.jsx)("div", { className: a()(C.innerCircle, x(r)) }),
-                                        (0, i.jsx)("div", { className: a()(C.outerCircle, x(r)) }),
+                                        (0, i.jsx)("div", { className: a()(y.innerCircle, x(r)) }),
+                                        (0, i.jsx)("div", { className: a()(y.outerCircle, x(r)) }),
                                     ],
                                 }),
                             }),
@@ -233,10 +233,10 @@ let E =
                   tutorialData: t,
                   windowFocused: n,
                   shouldShowAny: r,
-              } = (0, u.cj)([y.Z, f.Z, h.Z], () => ({
-                  indicators: y.Z.getIndicators(),
-                  tutorialData: y.Z.getData(),
-                  shouldShowAny: y.Z.shouldShowAnyIndicators() && !h.Z.hasLayers(),
+              } = (0, u.cj)([C.Z, f.Z, h.Z], () => ({
+                  indicators: C.Z.getIndicators(),
+                  tutorialData: C.Z.getData(),
+                  shouldShowAny: C.Z.shouldShowAnyIndicators() && !h.Z.hasLayers(),
                   windowFocused: f.Z.isFocused(),
               }));
               return r

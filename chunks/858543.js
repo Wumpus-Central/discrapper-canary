@@ -1,29 +1,29 @@
-t.d(n, {
+n.d(t, {
     DM: () => x,
     ZP: () => j,
 });
-var s = t(54381);
-t(473749);
-var l = t(120356),
-    a = t.n(l),
-    r = t(692547),
-    i = t(28664),
-    o = t(481060),
-    c = t(109434),
-    u = t(456269),
-    d = t(479099),
-    m = t(176505),
-    h = t(388032),
-    g = t(586301),
-    f = t(240778);
+var s = n(54381);
+n(473749);
+var l = n(120356),
+    a = n.n(l),
+    r = n(692547),
+    i = n(28664),
+    o = n(481060),
+    c = n(109434),
+    u = n(456269),
+    d = n(479099),
+    m = n(176505),
+    h = n(388032),
+    g = n(586301),
+    f = n(240778);
 function x(e) {
-    let { channel: n, isNew: t } = e,
-        s = (0, u.eV)(n),
+    let { channel: t, isNew: n } = e,
+        s = (0, u.eV)(t),
         l = s.slice(void 0, 3),
         a = s.slice(3),
         r = s.length > 3 ? s.length - 3 : 0,
-        i = n.hasFlag(m.zZ.PINNED),
-        o = l.length > 0 || i || t;
+        i = t.hasFlag(m.zZ.PINNED),
+        o = l.length > 0 || i || n;
     return {
         shownTags: l,
         remainingTags: a,
@@ -34,7 +34,7 @@ function x(e) {
     };
 }
 function j(e) {
-    let { channel: n, isNew: t, tagsClassName: l, className: u } = e,
+    let { channel: t, isNew: n, tagsClassName: l, className: u } = e,
         {
             shownTags: m,
             remainingTags: j,
@@ -42,15 +42,15 @@ function j(e) {
             isPinned: v,
             shouldRenderTagsRow: p,
         } = x({
-            channel: n,
-            isNew: t,
+            channel: t,
+            isNew: n,
         }),
-        { tagFilter: N } = (0, c.H)(n.id);
+        { tagFilter: N } = (0, c.H)(t.id);
     return p
         ? (0, s.jsxs)("div", {
               className: a()(f.tags, u),
               children: [
-                  t
+                  n
                       ? (0, s.jsx)(o.IGR, {
                             className: a()(g.newBadge, g.inTagsRow),
                             color: r.Z.unsafe_rawColors.BRAND_260.css,

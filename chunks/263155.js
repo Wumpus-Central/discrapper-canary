@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(348327),
     o = n.n(s),
     c = n(891371),
-    u = n(692992),
-    d = n(442837),
+    d = n(692992),
+    u = n(442837),
     g = n(481060),
     m = n(239091),
     p = n(596454),
@@ -81,8 +81,8 @@ let G = "WELCOME_CHANNEL",
         let l,
             { guildId: s, welcomeChannel: o, onEdit: f, onChannelReorder: h, isDropHovered: _, index: v } = e,
             O = i.useRef(null),
-            C = (0, d.e7)([N.Z], () => N.Z.getChannel(o.channel_id)),
-            y = (0, d.e7)([j.ZP], () => (null != o.emoji_id ? j.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
+            C = (0, u.e7)([N.Z], () => N.Z.getChannel(o.channel_id)),
+            y = (0, u.e7)([j.ZP], () => (null != o.emoji_id ? j.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
             I = null != C && S.Uu(w.Plq.VIEW_CHANNEL, C),
             T = null != (t = (0, x.KS)(C)) ? t : g.VL1,
             P = (0, b.ZP)(C, !1),
@@ -114,7 +114,7 @@ let G = "WELCOME_CHANNEL",
                     null == e || t.didDrop() || h(e.channel, null, !0);
                 },
             }),
-            [, U] = (0, u.L)({
+            [, U] = (0, d.L)({
                 accept: G,
                 hover: (e) => {
                     h(e.channel, v, !1);
@@ -207,9 +207,9 @@ let G = "WELCOME_CHANNEL",
     },
     U = (e) => {
         let { guild: t } = e,
-            { welcomeSettings: l, originalWelcomeSettings: a } = (0, d.e7)([y.Z], () => y.Z.getSettingsProps()),
-            s = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
-            [c, u] = i.useState(null),
+            { welcomeSettings: l, originalWelcomeSettings: a } = (0, u.e7)([y.Z], () => y.Z.getSettingsProps()),
+            s = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
+            [c, d] = i.useState(null),
             [m, p] = i.useState(!1),
             [b, x] = i.useState(!1),
             { description: j, channels: N, enabled: S } = l,
@@ -224,7 +224,7 @@ let G = "WELCOME_CHANNEL",
                 let r = N.indexOf(e),
                     i = [...N];
                 null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), (0, C.VP)({ channels: i })),
-                    n ? (Z(i), u(null)) : u(t);
+                    n ? (Z(i), d(null)) : d(t);
             },
             B = i.useRef(!1);
         (0, f.ZP)(() => () => {

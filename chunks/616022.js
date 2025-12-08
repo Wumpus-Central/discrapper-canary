@@ -8,10 +8,10 @@ var P,
     L = n(570140),
     j = n(70956),
     M = n(49436),
-    k = n(509212),
-    U = n(184299),
-    G = n(704161),
-    Z = n(535584),
+    k = n(184299),
+    U = n(704161),
+    G = n(535584),
+    Z = n(862657),
     B = n(552943),
     F = n(324805);
 function V(e, t, n) {
@@ -69,8 +69,8 @@ function W(e, t) {
 let K = 6 * j.Z.Millis.HOUR,
     z = new Map(),
     q = null,
-    X = null,
-    Q = !1,
+    Q = null,
+    X = !1,
     J = null,
     $ = new Map(),
     ee = 5000,
@@ -100,7 +100,7 @@ function en() {
         (E = new Set()),
         (I = new Map()),
         (T = new Map()),
-        eQ(),
+        eX(),
         (A = null),
         (N = new Map()),
         ($ = new Map()),
@@ -163,7 +163,7 @@ function ec(e) {
     null != O.get(e) && (O = new Map(O)).delete(e);
 }
 function eu() {
-    eQ(), en();
+    eX(), en();
 }
 function ed() {
     r = !0;
@@ -175,15 +175,15 @@ function ef(e) {
     for (let e of t)
         l.set(e.id, e),
             s.set(e.id, e.config),
-            a.set(e.id, (0, k.zi)(e)),
+            a.set(e.id, (0, Z.zi)(e)),
             e.targetedContent.includes(M.jn.QUEST_BAR) &&
-                (0, Z.T)({ location: F.dr.QUESTS_STORE }).log(
+                (0, G.T)({ location: F.dr.QUESTS_STORE }).log(
                     "Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"),
                 );
     for (let e of ((c = new Map()), n)) c.set(e.id, e);
     for (let e of null == N ? void 0 : N.values())
-        l.has(e.id) || (l.set(e.id, e), s.set(e.id, e.config), a.set(e.id, (0, k.zi)(e)));
-    (T = a), eX(), (A = null != i ? new Date(i) : null);
+        l.has(e.id) || (l.set(e.id, e), s.set(e.id, e.config), a.set(e.id, (0, Z.zi)(e)));
+    (T = a), eQ(), (A = null != i ? new Date(i) : null);
 }
 function ep() {
     (d = 0), (r = !1);
@@ -306,13 +306,13 @@ function eU(e) {
 }
 function eG(e) {
     let { user_status: t } = e,
-        n = (0, Z.T)({ location: F.dr.QUESTS_STORE });
+        n = (0, G.T)({ location: F.dr.QUESTS_STORE });
     n.log("Received user status update for ".concat(t.quest_id), t);
     let r = (0, B.U3)(t);
     ei(t.quest_id, { userStatus: r });
     let i = l.get(t.quest_id);
     if (null != i) {
-        let e = (0, k.zi)(i);
+        let e = (0, Z.zi)(i);
         T.get(t.quest_id) !== e && (T = new Map(T).set(t.quest_id, e));
     }
     0 === Object.keys(r.progress).length &&
@@ -323,10 +323,10 @@ function eZ(e) {
     let { previewQuestUserStatus: t } = e;
     ei(t.questId, { userStatus: t }),
         null == t.claimedAt && (b = new Map(b)).delete(t.questId),
-        null == t.enrolledAt && ((S = new Map(S)).delete(t.questId), U.ZP.getState().resetQuest(t.questId));
+        null == t.enrolledAt && ((S = new Map(S)).delete(t.questId), k.ZP.getState().resetQuest(t.questId));
     let n = l.get(t.questId);
     if (null != n) {
-        let e = (0, k.zi)(n);
+        let e = (0, Z.zi)(n);
         T.get(t.questId) !== e && (T = new Map(T).set(t.questId, e));
     }
 }
@@ -346,7 +346,7 @@ function eV(e) {
 }
 function eH(e) {
     let { questId: t } = e;
-    z.has(t) && z.delete(t), U.ZP.getState().resetQuest(t);
+    z.has(t) && z.delete(t), k.ZP.getState().resetQuest(t);
 }
 function eY(e) {
     let {
@@ -360,7 +360,7 @@ function eY(e) {
         fetchedAt: u,
     } = e;
     (f = Date.now()), (i = !1), (a = new Map(a)).set(n, !1);
-    let { enableNewRequestBehavior: d } = G.Z.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
+    let { enableNewRequestBehavior: d } = U.Z.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
     if (d) {
         var p, _, m;
         let e = {
@@ -395,13 +395,13 @@ function ez() {
     let e = !1,
         t = new Map(T);
     l.forEach((n, r) => {
-        !0 !== t.get(r) && ((0, k.zi)(n) ? (t.set(r, !0), (e = !0)) : t.has(r) || t.set(r, !1));
+        !0 !== t.get(r) && ((0, Z.zi)(n) ? (t.set(r, !0), (e = !0)) : t.has(r) || t.set(r, !1));
     }),
         e && ((T = t), e2.emitChange());
 }
 function eq() {
     ez();
-    let e = (0, k.UE)(Array.from(l.values()));
+    let e = (0, Z.UE)(Array.from(l.values()));
     if (null == e) return;
     let t = Math.max(ee, e - Date.now() + 2000);
     t > et ||
@@ -409,10 +409,10 @@ function eq() {
             eq();
         }, t));
 }
-function eX() {
-    eQ(), eq();
-}
 function eQ() {
+    eX(), eq();
+}
+function eX() {
     null != q && (clearTimeout(q), (q = null));
 }
 function eJ(e) {
@@ -420,13 +420,13 @@ function eJ(e) {
     A = null != t ? new Date(t) : null;
 }
 function e$() {
-    Q = !0;
+    X = !0;
 }
 function e0(e) {
-    (Q = !1), (X = Date.now()), (J = e.takeover);
+    (X = !1), (Q = Date.now()), (J = e.takeover);
 }
 function e1() {
-    Q = !1;
+    X = !1;
 }
 en();
 class e3 extends (P = x.ZP.Store) {
@@ -528,13 +528,13 @@ class e3 extends (P = x.ZP.Store) {
         return N.get(e);
     }
     isFetchingQuestHomeTakeover() {
-        return Q;
+        return X;
     }
     getQuestHomeTakeoverConfig() {
         return J;
     }
     getLastFetchedQuestHomeTakeover() {
-        return X;
+        return Q;
     }
 }
 V(e3, "displayName", "QuestStore");

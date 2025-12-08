@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var a = n(54381);
 n(473749);
 var l = n(120356),
-    i = n.n(l),
-    r = n(481060),
+    r = n.n(l),
+    i = n(481060),
     s = n(320161),
     o = n(572004),
     c = n(51144),
@@ -26,7 +26,7 @@ function p(e) {
               children: (e) => {
                   var t, l;
                   return (0, a.jsx)(
-                      r.P3F,
+                      i.P3F,
                       ((t = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -54,9 +54,9 @@ function p(e) {
                       })({}, e)),
                       (l = l =
                           {
-                              className: i()(m.copyButton, { [m.visible]: n }),
+                              className: r()(m.copyButton, { [m.visible]: n }),
                               "aria-label": u.intl.string(u.t.y5MwJy),
-                              children: (0, a.jsx)(r.TIy, {
+                              children: (0, a.jsx)(i.TIy, {
                                   size: "xs",
                                   color: "currentColor",
                               }),

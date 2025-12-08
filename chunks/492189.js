@@ -45,8 +45,8 @@ var r = n(98405),
     K = l.TypedArray,
     z = l.TypedArrayPrototype,
     q = l.isTypedArray,
-    X = "BYTES_PER_ELEMENT",
-    Q = "Wrong length",
+    Q = "BYTES_PER_ELEMENT",
+    X = "Wrong length",
     J = function (e, t) {
         R(e, t, {
             configurable: !0,
@@ -159,8 +159,8 @@ o
                             (i = t), (d = h(n, o));
                             var f = t.byteLength;
                             if (void 0 === r) {
-                                if (f % o || (s = f - d) < 0) throw new B(Q);
-                            } else if ((s = _(r) * o) + d > f) throw new B(Q);
+                                if (f % o || (s = f - d) < 0) throw new B(X);
+                            } else if ((s = _(r) * o) + d > f) throw new B(X);
                             l = s / o;
                         } else if (q(t)) return x(E, t);
                         else return a(C, E, t);
@@ -193,8 +193,8 @@ o
                   },
                   y,
               ),
-              X in E || f(E, X, o),
-              X in b || f(b, X, o),
+              Q in E || f(E, Q, o),
+              Q in b || f(b, Q, o),
               P(l);
       }))
     : (e.exports = function () {});

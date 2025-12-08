@@ -120,7 +120,7 @@ function g(e) {
                     },
                     children: [
                         (0, r.jsx)(s.qEK, {
-                            src: t.getAvatarURL(n, (0, s.pxk)(s.EFr.SIZE_24)),
+                            src: t.getAvatarURL(n, (0, s.dcp)(s.EFr.SIZE_24)),
                             className: u.avatar,
                             "aria-label": t.username,
                             size: s.EFr.SIZE_24,

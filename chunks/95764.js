@@ -16,18 +16,18 @@ var i = n(54381),
 function b(e) {
     let { channelId: t, onClick: n } = e,
         b = (0, o.bp)(),
-        y = (0, m.qY)(t),
-        C = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        { canManageGuildEvent: v } = (0, s.XJ)(C),
-        _ = v(y),
+        C = (0, m.qY)(t),
+        y = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
+        { canManageGuildEvent: v } = (0, s.XJ)(y),
+        _ = v(C),
         O = r.useRef(null);
-    if (null == y) return null;
+    if (null == C) return null;
     let x = () => {
-            if (null != C && (0, f.Z)(C)) return void (0, p.lC)(C, b);
+            if (null != y && (0, f.Z)(y)) return void (0, p.lC)(y, b);
             n();
         },
         E = () => {
-            h.Z.endEvent(y.id, y.guild_id);
+            h.Z.endEvent(C.id, C.guild_id);
         };
     return _
         ? (0, i.jsx)(a.yRy, {

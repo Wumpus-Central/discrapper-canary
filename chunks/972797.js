@@ -2,8 +2,8 @@ A.d(t, { Z: () => c }), A(388685);
 var n = A(54381),
     r = A(473749),
     a = A(120356),
-    i = A.n(a),
-    l = A(159691),
+    l = A.n(a),
+    i = A(159691),
     o = A(481060),
     s = A(313201),
     d = A(388032),
@@ -17,7 +17,7 @@ function c(e) {
             m((e) => e || a);
         }, [a]),
         (0, n.jsxs)("div", {
-            className: i()(
+            className: l()(
                 {
                     [u.publishable]: !t && !a,
                     [u.wasEverPublished]: p,
@@ -44,7 +44,7 @@ function c(e) {
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(l.zxk, {
+                        (0, n.jsx)(i.zxk, {
                             text: a ? d.intl.string(d.t.DlJOvl) : d.intl.string(d.t.X7YGXE),
                             icon: a ? o.kZF : o.T$Z,
                             iconPosition: "end",

@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(158776),
     y = n(699516),
     O = n(111583),
-    j = n(594174),
-    x = n(626135),
+    x = n(594174),
+    j = n(626135),
     v = n(585483),
     C = n(233870),
     I = n(51144),
@@ -56,8 +56,8 @@ let N = [],
 function w(e) {
     let { user: t, channel: s, status: u, activities: p } = e,
         h = (0, a.e7)([O.Z], () => null != O.Z.getTypingUsers(s.id)[t.id]),
-        g = (0, a.e7)([j.default], () => j.default.getCurrentUser()),
-        x = (0, a.e7)([_.Z], () => _.Z.isMobileOnline(t.id)),
+        g = (0, a.e7)([x.default], () => x.default.getCurrentUser()),
+        j = (0, a.e7)([_.Z], () => _.Z.isMobileOnline(t.id)),
         C = (0, a.e7)([y.Z], () => y.Z.getNickname(t.id)),
         S = (0, f.Z)(t.id),
         P = i.useRef(null),
@@ -156,7 +156,7 @@ function w(e) {
                         channel: s,
                         onContextMenu: N,
                         selected: D,
-                        isMobile: x,
+                        isMobile: j,
                         nick: C,
                         nameplate: A,
                         onClick: (e) => {
@@ -184,17 +184,17 @@ function A(e, t) {
 }
 function D(e) {
     let { channel: t } = e,
-        n = j.default.getCurrentUser(),
+        n = x.default.getCurrentUser(),
         l = null == n ? void 0 : n.isStaff(),
         { analyticsLocations: o } = (0, p.ZP)(u.Z.MEMBER_LIST),
         { listItems: c } = (0, a.e7)(
-            [y.Z, j.default, _.Z],
+            [y.Z, x.default, _.Z],
             () => {
-                let e = (0, C.T)(t.recipients, j.default),
+                let e = (0, C.T)(t.recipients, x.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;
-                    y.Z.isFriend(t.id) || t.id === (null == (r = j.default.getCurrentUser()) ? void 0 : r.id)
+                    y.Z.isFriend(t.id) || t.id === (null == (r = x.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
                               status: null != (i = _.Z.getStatus(t.id)) ? i : E.Skl.OFFLINE,
                               activities: null != (l = _.Z.getActivities(t.id)) ? l : N,
@@ -219,7 +219,7 @@ function D(e) {
             A,
         );
     i.useEffect(() => {
-        x.default.track(E.rMx.MEMBER_LIST_VIEWED, {
+        j.default.track(E.rMx.MEMBER_LIST_VIEWED, {
             channel_id: t.id,
             channel_type: t.type,
             guild_id: t.guild_id,

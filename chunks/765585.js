@@ -36,8 +36,8 @@ let b = i.forwardRef(function (e, t) {
             maxWidth: A = 280,
             hideDismissButton: R = !1,
             pointerClassName: D,
-            dismissIconClassName: L,
-            dismissIcon: M,
+            dismissIconClassName: M,
+            dismissIcon: L,
             onDismissIconClick: k,
             tryItButtonColor: G,
         } = e,
@@ -66,11 +66,11 @@ let b = i.forwardRef(function (e, t) {
                     [m.contentPremium]: S,
                 }),
                 children: [
-                    null != M &&
+                    null != L &&
                         (0, r.jsx)(s.P3F, {
                             onClick: k,
-                            className: L,
-                            children: M,
+                            className: M,
+                            children: L,
                         }),
                     (0, r.jsxs)("div", {
                         className: o()(b, E ? m.artInline : m.artAbsolute),

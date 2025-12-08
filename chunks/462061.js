@@ -27,8 +27,8 @@ var r = n(54381),
     w = n(451478),
     I = n(5192),
     P = n(44136),
-    x = (n(351483), n(249212)),
-    j = n(853476),
+    j = (n(351483), n(249212)),
+    x = n(853476),
     Z = n(981631),
     R = n(65154),
     T = n(388032),
@@ -46,7 +46,7 @@ function M(e) {
                   children: (0, r.jsx)(s.Mgn, { color: s.TVs.colors.STATUS_WARNING_BACKGROUND }),
               }),
           })
-        : (0, r.jsx)(j.Z, { userId: n.user.id });
+        : (0, r.jsx)(x.Z, { userId: n.user.id });
 }
 function k(e) {
     let {
@@ -56,7 +56,7 @@ function k(e) {
             width: c,
             selected: s,
             popoutType: y,
-            fit: j,
+            fit: x,
             onVideoResize: M,
             blocked: k,
             ignored: L,
@@ -100,7 +100,7 @@ function k(e) {
     }, [G]),
     l && !X && !F && G && !s && null != z && C.Z.supports(R.AN.VIDEO))
         ? null != el && null == ea
-            ? (0, r.jsx)(x.Z, {
+            ? (0, r.jsx)(j.Z, {
                   avError: el,
                   userId: t.id,
                   width: c,
@@ -115,7 +115,7 @@ function k(e) {
                       mirror: Y,
                       streamId: B,
                       videoComponent: z,
-                      fit: j,
+                      fit: x,
                       videoSpinnerContext: H.id === W ? d.m.SELF_VIDEO : d.m.REMOTE_VIDEO,
                       paused: U,
                       userId: H.id,
