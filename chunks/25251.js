@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r,
     i = n(392711),
     a = n(442837),
@@ -59,28 +59,24 @@ let c = {},
     },
     m = (e) => {
         let { categories: t } = e;
-        return f(t);
-    },
-    h = (e) => {
-        let { categories: t } = e;
         return f(t.categories);
     },
-    g = (e) => {
+    h = (e) => {
         let { shopHome: t } = e;
         return f(t.categories);
     },
-    E = (e) => {
+    g = (e) => {
         let { purchases: t } = e;
         return p(t);
     },
-    b = (e) => {
+    E = (e) => {
         let { purchases: t } = e;
         return null != t && p(t);
     },
-    y = (e) => {
+    b = (e) => {
         c = {};
     };
-class O extends (r = a.ZP.Store) {
+class y extends (r = a.ZP.Store) {
     getAllProfileEffects() {
         return Object.values(c);
     }
@@ -88,13 +84,12 @@ class O extends (r = a.ZP.Store) {
         return null != e ? c[e] : void 0;
     }
 }
-l(O, "displayName", "ProfileEffectStore");
-let v = new O(o.Z, {
+l(y, "displayName", "ProfileEffectStore");
+let O = new y(o.Z, {
     COLLECTIBLES_PRODUCT_FETCH_SUCCESS: _,
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: m,
-    COLLECTIBLES_CATEGORIES_V2_FETCH_SUCCESS: h,
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: g,
-    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: E,
-    COLLECTIBLES_CLAIM_SUCCESS: b,
-    LOGOUT: y,
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: h,
+    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: g,
+    COLLECTIBLES_CLAIM_SUCCESS: E,
+    LOGOUT: b,
 });

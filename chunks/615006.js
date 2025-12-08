@@ -51,7 +51,7 @@ class m extends (r = i.ZP.Store) {
 o(m, "displayName", "CollectiblesUserDiscountStore");
 let h = new m(a.Z, {
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: c,
-    COLLECTIBLES_CATEGORIES_V2_FETCH_SUCCESS: u,
+    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: u,
     SKU_PURCHASE_SUCCESS: f,
     COLLECTIBLES_USER_DISCOUNTS_EXPIRED: p,
     LOGOUT: _,

@@ -1,5 +1,5 @@
 let r, i, a;
-n.d(t, { Z: () => z }), n(388685);
+n.d(t, { Z: () => W }), n(388685);
 var o,
     s = n(392711),
     l = n(442837),
@@ -60,32 +60,27 @@ let h = new Map(),
         (O = h), (v = g), (A = y), (N = !1), (P = new Set()), (r = t), (a = Date.now());
     },
     G = (e) => {
-        B(e.categories, e.noOp);
-    },
-    Z = (e) => {
-        B(e.categories.categories, e.noOp);
-    },
-    B = (e, t) => {
-        if (0 === e.length) (O = h), (v = g);
-        else if (!(0, s.isEqual)([...O.values()], e) && !t) {
-            let t = new Map(e.map((e) => [e.skuId, e])),
+        let t = e.categories.categories;
+        if (0 === t.length) (O = h), (v = g);
+        else if (!(0, s.isEqual)([...O.values()], t) && !e.noOp) {
+            let e = new Map(t.map((e) => [e.skuId, e])),
                 n = new Date();
-            O.forEach((e, r) => {
-                !t.has(r) && (null == e.unpublishedAt || e.unpublishedAt > n) && t.set(r, e);
+            O.forEach((t, r) => {
+                !e.has(r) && (null == t.unpublishedAt || t.unpublishedAt > n) && e.set(r, t);
             }),
-                (T = new Map([...(O = t).values()].map((e) => [e.storeListingId, e]))),
+                (T = new Map([...(O = e).values()].map((e) => [e.storeListingId, e]))),
                 (v = new Map((0, p.Cs)(O, !0).map((e) => [e.skuId, e]))),
                 (I = [...(S = new Map((0, p.Cs)(O, !1).map((e) => [e.storeListingId, e]))).values()]);
         }
-        V(e, v), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
+        B(t, v), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
     },
-    F = (e) => {
+    Z = (e) => {
         if (0 === e.shopHome.categories.length) return;
         let t = new Map(e.shopHome.categories.map((e) => [e.skuId, e]));
         (T = new Map([...(O = new Map([...O, ...t])).values()].map((e) => [e.storeListingId, e]))),
             (v = new Map((0, p.Cs)(O, !0).map((e) => [e.skuId, e])));
     },
-    V = (e, t) => {
+    B = (e, t) => {
         if (0 === e.length) {
             A = y;
             return;
@@ -102,7 +97,7 @@ let h = new Map(),
                 A = y;
         }
     },
-    H = () => {
+    F = () => {
         (O = h),
             (v = g),
             (A = y),
@@ -114,7 +109,7 @@ let h = new Map(),
             (D = {}),
             (x = 0);
     },
-    Y = () => {
+    V = () => {
         if (!u.Z.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = d.G.getCurrentConfig(
             { location: "CollectiblesCategoryStore handleExperimentChange" },
@@ -122,12 +117,12 @@ let h = new Map(),
         );
         e !== C && (i = void 0), (C = e);
     },
-    W = (e) => {
+    H = (e) => {
         x = e.skipNumCategories;
     };
-class K extends (o = l.ZP.Store) {
+class Y extends (o = l.ZP.Store) {
     initialize() {
-        this.syncWith([f.default], H), this.syncWith([u.Z], Y);
+        this.syncWith([f.default], F), this.syncWith([u.Z], V);
     }
     get isFetchingCategories() {
         return N;
@@ -188,16 +183,15 @@ class K extends (o = l.ZP.Store) {
         return this.getCategory(null == t ? void 0 : t.categorySkuId);
     }
 }
-m(K, "displayName", "CollectiblesCategoryStore");
-let z = new K(c.Z, {
+m(Y, "displayName", "CollectiblesCategoryStore");
+let W = new Y(c.Z, {
     COLLECTIBLES_CATEGORIES_FETCH: k,
     COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: G,
-    COLLECTIBLES_CATEGORIES_V2_FETCH_SUCCESS: Z,
     COLLECTIBLES_CATEGORIES_FETCH_FAILURE: U,
     COLLECTIBLES_PRODUCT_FETCH: L,
     COLLECTIBLES_PRODUCT_FETCH_SUCCESS: M,
     COLLECTIBLES_PRODUCT_FETCH_FAILURE: j,
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: F,
-    COLLECTIBLES_SKIP_NUM_CATEGORIES: W,
-    LOGOUT: H,
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: Z,
+    COLLECTIBLES_SKIP_NUM_CATEGORIES: H,
+    LOGOUT: F,
 });
