@@ -1,13 +1,18 @@
-n.d(t, { G: () => p }), n(856094);
+n.d(t, {
+    B: () => E,
+    G: () => g,
+}),
+    n(856094);
 var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(339695),
-    s = n(64027);
-n(910989), n(402453), n(777207);
-var l = n(325380);
-function c(e, t, n) {
+    s = n(64027),
+    l = n(595824),
+    c = n(402453),
+    u = n(325380);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +25,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +36,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,7 +53,30 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = h(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -57,21 +85,21 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
-    let { leading: t, actions: n = [], actionsFullWidth: i = !1, leadingLayout: c = "default" } = e;
+function g(e) {
+    let { leading: t, actions: n = [], actionsFullWidth: i = !1, leadingLayout: l = "default" } = e;
     if (null == t && n.length < 1) return null;
-    let d = ["primary", "critical-primary", "expressive"],
-        f = n.findLastIndex((e) => null != e.variant && d.includes(e.variant));
+    let c = ["primary", "critical-primary", "expressive"],
+        d = n.findLastIndex((e) => null != e.variant && c.includes(e.variant));
     return (0, r.jsxs)("footer", {
-        className: a()(l.actionBar, l.section, { [l.actionBarLayoutChatInput]: "chat-input" === c }),
+        className: a()(u.actionBar, u.section, { [u.actionBarLayoutChatInput]: "chat-input" === l }),
         children: [
             null != t &&
                 (0, r.jsx)("div", {
-                    className: l.actionBarLeading,
+                    className: u.actionBarLeading,
                     children: t,
                 }),
             (0, r.jsx)("div", {
-                className: a()(l.actionBarTrailing, { [l.actionBarTrailingFullWidth]: i }),
+                className: a()(u.actionBarTrailing, { [u.actionBarTrailingFullWidth]: i }),
                 children: (0, r.jsx)(s.h, {
                     fullWidth: i,
                     children:
@@ -81,7 +109,7 @@ function p(e) {
                                   var n;
                                   return (0, r.jsx)(
                                       o.z,
-                                      u({ autoFocus: null != (n = e.autoFocus) ? n : f === t }, e),
+                                      f({ autoFocus: null != (n = e.autoFocus) ? n : d === t }, e),
                                       t,
                                   );
                               }),
@@ -89,4 +117,16 @@ function p(e) {
             }),
         ],
     });
+}
+function E(e) {
+    var { label: t } = e,
+        n = m(e, ["label"]);
+    let { i18n: i } = (0, c.ZF)();
+    return (0, r.jsx)(
+        l.X,
+        _(f({}, n), {
+            label: null != t ? t : i.MODAL_DONT_SHOW_AGAIN,
+            labelType: "secondary",
+        }),
+    );
 }

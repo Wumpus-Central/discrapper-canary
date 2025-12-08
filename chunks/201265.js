@@ -54,26 +54,34 @@ function u(e, t) {
     return i;
 }
 function d(e) {
-    var { confirmText: t, cancelText: n, onConfirm: s, onCancel: u, onCloseCallback: d, variant: f = "critical" } = e,
-        p = c(e, ["confirmText", "cancelText", "onConfirm", "onCancel", "onCloseCallback", "variant"]);
-    let { i18n: _ } = (0, a.ZF)(),
-        m = _.CANCEL,
-        h = _.INLINE_NOTICE_GENERIC_ERROR,
-        [g, E] = i.useState(!1),
-        b = i.useRef(d);
+    var {
+            confirmText: t,
+            cancelText: n,
+            checkbox: s,
+            onConfirm: u,
+            onCancel: d,
+            onCloseCallback: f,
+            variant: p = "critical",
+        } = e,
+        _ = c(e, ["confirmText", "cancelText", "checkbox", "onConfirm", "onCancel", "onCloseCallback", "variant"]);
+    let { i18n: m } = (0, a.ZF)(),
+        h = m.CANCEL,
+        g = m.INLINE_NOTICE_GENERIC_ERROR,
+        [E, b] = i.useState(!1),
+        y = i.useRef(f);
     i.useLayoutEffect(() => {
-        b.current = d;
+        y.current = f;
     }),
         i.useLayoutEffect(
             () => () => {
                 var e;
-                null == (e = b.current) || e.call(b);
+                null == (e = y.current) || e.call(y);
             },
             [],
         );
-    let [y, O] = i.useState(void 0),
-        v = (e) => {
-            O(e);
+    let [O, v] = i.useState(void 0),
+        S = (e) => {
+            v(e);
         };
     return (0, r.jsx)(
         o.Modal,
@@ -81,37 +89,38 @@ function d(e) {
             {
                 actions: [
                     {
-                        text: null != n ? n : m,
+                        text: null != n ? n : h,
                         variant: "secondary",
                         onClick: () => {
-                            null == u || u(), p.onClose();
+                            null == d || d(), _.onClose();
                         },
                     },
                     {
                         text: t,
-                        variant: "primary" === f ? "primary" : "critical-primary",
+                        variant: "primary" === p ? "primary" : "critical-primary",
                         onClick: async () => {
-                            O(void 0), E(!0);
+                            v(void 0), b(!0);
                             try {
-                                await (null == s ? void 0 : s(v)), p.onClose();
+                                await (null == u ? void 0 : u(S)), _.onClose();
                             } catch (e) {
-                                throw (E(!1), O((e) => (null != e ? e : h)), e);
+                                throw (b(!1), v((e) => (null != e ? e : g)), e);
                             }
                         },
-                        disabled: g,
-                        loading: g,
+                        disabled: E,
+                        loading: E,
                     },
                 ],
+                actionBarInput: s,
                 role: "alertdialog",
                 notice:
-                    null != y
+                    null != O
                         ? {
-                              message: y,
+                              message: O,
                               type: "critical",
                           }
                         : void 0,
             },
-            p,
+            _,
         ),
     );
 }
