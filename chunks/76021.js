@@ -99,15 +99,21 @@ function g(e, t, p) {
                       width: 1280,
                       height: 720,
                   };
-        c.Z.getMediaEngine()
-            .getDesktopSource(r, !0)
-            .then((n) => {
-                (0, a.WH)(e, t, {
-                    pid: null,
-                    sourceId: n,
-                    sourceName: null,
-                    analyticsLocations: p,
+        (0, a.Rc)({
+            preset: f.ApplicationStreamPresets.PRESET_CUSTOM,
+            resolution: r.height,
+            frameRate: f.ApplicationStreamFPS.FPS_30,
+            soundshareEnabled: !0,
+        }),
+            c.Z.getMediaEngine()
+                .getDesktopSource(r, !0)
+                .then((n) => {
+                    (0, a.WH)(e, t, {
+                        pid: null,
+                        sourceId: n,
+                        sourceName: null,
+                        analyticsLocations: p,
+                    });
                 });
-            });
     }
 }
