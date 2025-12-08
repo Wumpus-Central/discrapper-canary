@@ -1184,9 +1184,9 @@ class x extends p.Z {
             S(this, "onConnectCallbackAt", void 0),
             S(this, "onVideoCodecsCallbackAt", void 0),
             S(this, "onEncryptionModesCallbackAt", void 0),
-            S(this, "handleSpeakingNative", (e, t) => {
-                let n = v.Dg.NONE;
-                (n = "boolean" == typeof t ? (t ? v.Dg.VOICE : v.Dg.NONE) : t), this.handleSpeakingFlags(e, n);
+            S(this, "handleSpeakingNative", (e, t, n) => {
+                let r = v.Dg.NONE;
+                (r = "boolean" == typeof t ? (t ? v.Dg.VOICE : v.Dg.NONE) : t), this.handleSpeakingFlags(e, r, n);
             }),
             S(this, "handleNativeMuteToggled", () => {
                 this.emit(h.Sh.ToggleMuteFromNative);
@@ -1194,10 +1194,10 @@ class x extends p.Z {
             S(this, "handleNativeMuteChanged", (e) => {
                 this.emit(h.Sh.NativeMuteChanged, e);
             }),
-            S(this, "handleSpeakingFlags", (e, t) => {
+            S(this, "handleSpeakingFlags", (e, t, n) => {
                 this.localSpeakingFlags[e] = t;
-                let n = e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e];
-                this.emit(h.Sh.Speaking, e, t, n),
+                let r = e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e];
+                this.emit(h.Sh.Speaking, e, t, r, n),
                     (t & v.Dg.SOUNDSHARE) != 0 &&
                         !1 === this.soundshareSentSpeakingEvent &&
                         (this.emit(h.Sh.SoundshareSpeaking), (this.soundshareSentSpeakingEvent = !0));
