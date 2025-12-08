@@ -7,7 +7,7 @@ var r = n(327432),
 function l(e) {
     return (
         (e.setFragmentData = (t) => {
-            if (null != e.selection) {
+            if (null != e.selection && !s.Jz.equals(e.selection.anchor, e.selection.focus)) {
                 let n = (0, a.sk)(s.bN.richValue(e), {
                     mode: "plain",
                     range: e.selection,
