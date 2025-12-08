@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => T,
-    q: () => O,
+    q: () => N,
 }),
     n(804061),
     n(704826),
@@ -93,10 +93,10 @@ let { SemanticColors: S } = d.V;
 function E(e) {
     return e.replaceAll(/_|\./g, "-").toLowerCase();
 }
-function N(e) {
+function O(e) {
     return e.replaceAll(/_|-/g, ".").toLowerCase();
 }
-function O(e, t) {
+function N(e, t) {
     let n = new Blob([t], { type: "application/json" }),
         a = URL.createObjectURL(n),
         l = document.createElement("a"),
@@ -114,7 +114,7 @@ function O(e, t) {
 function T() {
     let e = (0, x.Fg)(),
         [t, n, r, s, d, u] = (0, j.zn)(),
-        { semanticColorOverrides: m, rawColorOverrides: v, tab: S, scales: N } = t,
+        { semanticColorOverrides: m, rawColorOverrides: v, tab: S, scales: O } = t,
         T = l.useMemo(() => {
             let t = Object.entries(m).map((t) => {
                     let [n, a] = t,
@@ -159,7 +159,7 @@ function T() {
                         "--".concat(r, ": hsl(var(--").concat(r, "-hsl)) !important;"),
                     ];
                 }),
-                a = N.reduce((e, t) => {
+                a = O.reduce((e, t) => {
                     let { name: n } = t,
                         a = (0, j.XM)(t),
                         l = (0, j.W6)(a, n);
@@ -178,7 +178,7 @@ function T() {
                 .concat(e, " {\n        ")
                 .concat(t.join("\n"), "\n      }\n\n      html {\n        ")
                 .concat(n.join("\n"), "\n      }\n    ");
-        }, [v, N, m, e]);
+        }, [v, O, m, e]);
     return (0, a.jsxs)("div", {
         className: _.panel,
         children: [
@@ -218,21 +218,21 @@ function T() {
                     (0, a.jsxs)("div", {
                         className: _.toolbarButtons,
                         children: [
-                            (0, a.jsx)(p.zx, {
-                                size: p.zx.Sizes.ICON,
-                                color: p.zx.Colors.TRANSPARENT,
-                                look: p.zx.Looks.BLANK,
+                            (0, a.jsx)(h.hU, {
+                                variant: "secondary",
+                                size: "md",
+                                icon: h.UEU,
                                 onClick: r,
                                 disabled: !d,
-                                children: (0, a.jsx)(h.UEU, {}),
+                                "aria-label": "Undo",
                             }),
-                            (0, a.jsx)(p.zx, {
-                                size: p.zx.Sizes.ICON,
-                                color: p.zx.Colors.TRANSPARENT,
-                                look: p.zx.Looks.BLANK,
+                            (0, a.jsx)(h.hU, {
+                                variant: "secondary",
+                                size: "md",
+                                icon: h.zGS,
                                 onClick: s,
                                 disabled: !u,
-                                children: (0, a.jsx)(h.zGS, {}),
+                                "aria-label": "Redo",
                             }),
                             (0, a.jsx)(g.Z, {
                                 "aria-label": "Import",
@@ -263,14 +263,14 @@ function T() {
                                 look: p.zx.Looks.BLANK,
                                 children: (0, a.jsx)(h.rG2, {}),
                             }),
-                            (0, a.jsx)(p.zx, {
-                                size: p.zx.Sizes.ICON,
-                                color: p.zx.Colors.TRANSPARENT,
-                                look: p.zx.Looks.BLANK,
+                            (0, a.jsx)(h.hU, {
+                                variant: "secondary",
+                                size: "md",
+                                icon: h._8t,
                                 onClick: () => {
-                                    O("color-overrides", JSON.stringify(y({}, t), null, 2));
+                                    N("color-overrides", JSON.stringify(y({}, t), null, 2));
                                 },
-                                children: (0, a.jsx)(h._8t, {}),
+                                "aria-label": "Export",
                             }),
                         ],
                     }),
@@ -405,7 +405,7 @@ function P(e) {
                     let [t, l] = e,
                         i = l.colors[r];
                     if (null == i) return null;
-                    let s = N(i.color),
+                    let s = O(i.color),
                         c = i.opacity,
                         d = j.jC[t][r];
                     return (0, a.jsx)(
@@ -413,7 +413,7 @@ function P(e) {
                         {
                             title: E(t),
                             subtitle:
-                                1 === d.opacity ? N(d.raw) : "".concat(N(d.raw), " @ ").concat(100 * d.opacity, "%"),
+                                1 === d.opacity ? O(d.raw) : "".concat(O(d.raw), " @ ").concat(100 * d.opacity, "%"),
                             highlight: l.highlight,
                             onReset: () => {
                                 n((e) => {
