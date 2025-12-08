@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => A });
 var r = n(54381),
     i = n(793030),
     a = n(442837),
@@ -6,15 +6,16 @@ var r = n(54381),
     s = n(568836),
     l = n(834129),
     c = n(594174),
-    u = n(51144),
-    d = n(703995),
-    f = n(537363),
-    p = n(282793),
-    _ = n(606097),
-    m = n(388032),
-    h = n(887819),
-    g = n(617842);
-function E(e, t, n) {
+    u = n(78839),
+    d = n(51144),
+    f = n(703995),
+    p = n(537363),
+    _ = n(282793),
+    m = n(441677),
+    h = n(388032),
+    g = n(887819),
+    E = n(617842);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +28,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +39,12 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,34 +56,34 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let v = (e) => {
-        let { disabled: t, invite: a } = e,
-            s = () => {
+let S = (e) => {
+        let { disabled: t, invite: a, isExistingSub: s } = e,
+            l = () => {
                 if (null == a) return;
                 let e = a.subscription,
                     t = c.default.getUser(a.primary_user);
                 if (null == t) return;
-                let i = (0, u.XM)(t);
+                let i = (0, d.XM)(t);
                 (0, o.ZDy)(async () => {
                     let { default: t } = await n.e("26450").then(n.bind(n, 382927));
                     return (n) =>
                         (0, r.jsx)(
                             t,
-                            O(b({}, n), {
+                            v(y({}, n), {
                                 premiumGroupSubscriptionId: e,
                                 premiumGroupPrimaryName: i,
-                                isExistingSub: !1,
+                                isExistingSub: s,
                             }),
                         );
                 });
@@ -90,27 +91,27 @@ let v = (e) => {
         return (0, r.jsx)(o.Button, {
             variant: "expressive",
             size: "md",
-            text: m.intl.string(_.default.rjuKse),
+            text: h.intl.string(m.default.rjuKse),
             icon: i.SrA,
-            onClick: s,
+            onClick: l,
             disabled: t,
         });
     },
-    S = (e) => {
+    I = (e) => {
         let { disabled: t } = e,
             n = () => {};
         return (0, r.jsx)(o.Button, {
             variant: "secondary",
             size: "md",
-            text: m.intl.string(_.default["eYHh+z"]),
+            text: h.intl.string(m.default["eYHh+z"]),
             onClick: n,
             disabled: t,
         });
     },
-    I = (e) => {
+    T = (e) => {
         let { message: t, header: n, body: a, compact: s, actionButton: c } = e;
         return (0, r.jsxs)(l.Z, {
-            className: h.systemMessageContainer,
+            className: g.systemMessageContainer,
             compact: s,
             iconNode: (0, r.jsx)(i.SrA, {
                 size: "md",
@@ -124,22 +125,22 @@ let v = (e) => {
                 }),
                 (0, r.jsxs)(o.Kqy, {
                     direction: "horizontal",
-                    className: h.embedContainer,
+                    className: g.embedContainer,
                     children: [
                         (0, r.jsx)("img", {
-                            src: g,
+                            src: E,
                             alt: "",
-                            className: h.image,
+                            className: g.image,
                         }),
                         (0, r.jsxs)("div", {
-                            className: h.content,
+                            className: g.content,
                             children: [
                                 (0, r.jsx)(o.Cts, {
                                     type: "beta",
                                     variant: "expressive",
                                 }),
                                 (0, r.jsx)("h2", {
-                                    className: h.title,
+                                    className: g.title,
                                     children: n,
                                 }),
                                 (0, r.jsx)(o.Text, {
@@ -148,7 +149,7 @@ let v = (e) => {
                                     children: a,
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: h.buttonContainer,
+                                    className: g.buttonContainer,
                                     children: c,
                                 }),
                             ],
@@ -158,46 +159,49 @@ let v = (e) => {
             ],
         });
     },
-    T = (e) => {
+    A = (e) => {
         let { message: t, channel: n, compact: i } = e,
             o = t.premiumGroupInviteId,
             {
                 inviteState: l,
-                isFetching: u,
-                invite: _,
-                currentUser: m,
-            } = (0, a.cj)([d.Z, c.default], () => {
+                isFetching: d,
+                invite: m,
+                currentUser: h,
+                premiumSubscription: g,
+            } = (0, a.cj)([f.Z, c.default, u.Z], () => {
                 var e;
                 return {
-                    inviteState: null != o ? d.Z.getInviteState(o) : p.bZ.NOT_FOUND,
-                    isFetching: null != o && d.Z.isFetching(o),
-                    invite: null != o ? (null == (e = d.Z.getInvite(o)) ? void 0 : e.invite) : null,
+                    inviteState: null != o ? f.Z.getInviteState(o) : _.bZ.NOT_FOUND,
+                    isFetching: null != o && f.Z.isFetching(o),
+                    invite: null != o ? (null == (e = f.Z.getInvite(o)) ? void 0 : e.invite) : null,
                     currentUser: c.default.getCurrentUser(),
+                    premiumSubscription: u.Z.getPremiumSubscription(),
                 };
             }, [o]);
-        if (null == m) return null;
-        let h = t.author,
-            g = m.id === h.id;
-        if (u || l === p.bZ.FETCHING || l === p.bZ.UNKNOWN) return (0, r.jsx)(s.OR, { isHorizontal: !0 });
-        let E = (0, f.x)({
-            sender: h,
+        if (null == h) return null;
+        let E = t.author,
+            b = h.id === E.id;
+        if (d || l === _.bZ.FETCHING || l === _.bZ.UNKNOWN) return (0, r.jsx)(s.OR, { isHorizontal: !0 });
+        let y = (0, p.x)({
+            sender: E,
             channel: n,
-            isSender: g,
+            isSender: b,
             inviteState: l,
         });
-        if (null == E) return null;
-        let b = l === p.bZ.PENDING,
-            y = g
-                ? (0, r.jsx)(S, { disabled: !b })
-                : (0, r.jsx)(v, {
-                      disabled: !b,
-                      invite: _,
+        if (null == y) return null;
+        let O = l === _.bZ.PENDING,
+            v = b
+                ? (0, r.jsx)(I, { disabled: !O })
+                : (0, r.jsx)(S, {
+                      disabled: !O,
+                      invite: m,
+                      isExistingSub: null != g,
                   });
-        return (0, r.jsx)(I, {
-            message: E.message,
-            header: E.header,
-            body: E.body,
+        return (0, r.jsx)(T, {
+            message: y.message,
+            header: y.header,
+            body: y.body,
             compact: i,
-            actionButton: y,
+            actionButton: v,
         });
     };
