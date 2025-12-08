@@ -1,6 +1,6 @@
 n.d(t, {
     $h: () => T,
-    En: () => L,
+    En: () => M,
     cO: () => R,
     dJ: () => D,
     jG: () => w,
@@ -27,8 +27,8 @@ var i = n(120356),
     O = n(981631),
     v = n(176505),
     j = n(921944),
-    x = n(613275),
-    C = n(130231),
+    x = n(816632),
+    C = n(810878),
     E = n(388032),
     S = n(428197),
     I = n(611087),
@@ -37,7 +37,7 @@ var i = n(120356),
     Z = n(225375);
 function w(e) {
     let { guildId: t, powerup: n, channelRowRef: i, markAsDismissed: o } = e;
-    return (0, r.jsx)(M, {
+    return (0, r.jsx)(L, {
         asset: (0, r.jsx)(b.g, { className: l()(S.image, S.levelImage) }),
         title: E.intl.formatToPlainString(C.default["Zg/m9K"], { perkName: n.title }),
         body: E.intl.formatToPlainString(C.default["1EGXSK"], { perkName: n.title }),
@@ -96,7 +96,7 @@ function A(e) {
                     })
                   : E.intl.formatToPlainString(C.default.ZF8NT6, { perk: n[0].title }),
         g = 1 === n.length;
-    return (0, r.jsx)(M, {
+    return (0, r.jsx)(L, {
         size: 1 === n.length ? "video" : "lg",
         asset:
             n.length > 1
@@ -125,7 +125,7 @@ function R(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: l } = e,
         a = n.find((e) => e.skuId === o.A$);
     if (null != a)
-        return (0, r.jsx)(M, {
+        return (0, r.jsx)(L, {
             targetElementRef: i,
             title: E.intl.string(C.default.Ygpx4Q),
             body: E.intl.string(C.default.mmNkUA),
@@ -144,7 +144,7 @@ function R(e) {
         });
     let s = n.find((e) => y.NL.has(e.skuId));
     return null != s
-        ? (0, r.jsx)(M, {
+        ? (0, r.jsx)(L, {
               targetElementRef: i,
               title: E.intl.string(C.default["kA2c+n"]),
               body: E.intl.string(C.default.TUilLj),
@@ -169,7 +169,7 @@ function R(e) {
 function D(e) {
     let { guildId: t, type: n, markAsDismissed: i, channelRowRef: o } = e,
         a = (0, _.Td)(t, void 0);
-    return (0, r.jsx)(M, {
+    return (0, r.jsx)(L, {
         targetElementRef: o,
         asset: (0, r.jsx)("img", {
             alt: "",
@@ -191,9 +191,9 @@ function D(e) {
         markAsDismissed: i,
     });
 }
-function L(e) {
+function M(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e;
-    return (0, r.jsx)(M, {
+    return (0, r.jsx)(L, {
         size: "video",
         targetElementRef: i,
         asset: (0, r.jsx)("img", {
@@ -207,13 +207,15 @@ function L(e) {
             {
                 text: E.intl.string(E.t.RzWDqY),
                 variant: "primary",
-                onClick: () => (0, d.uL)(O.Z5c.CHANNEL(t, v.oC.GAME_SERVERS)),
+                onClick: () => {
+                    n(j.L.TAKE_ACTION), (0, d.uL)(O.Z5c.CHANNEL(t, v.oC.GAME_SERVERS));
+                },
             },
         ],
         markAsDismissed: n,
     });
 }
-function M(e) {
+function L(e) {
     var t,
         n,
         {
