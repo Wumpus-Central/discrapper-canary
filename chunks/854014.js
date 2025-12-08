@@ -113,7 +113,7 @@ function y(e) {
             var e;
             if (!u) return null;
             let t = (null != (e = null == l ? void 0 : l.layout.flatMap((e) => e.layout)) ? e : []).filter(
-                (e) => null != e.useTitle || null != e.useNavigationTitle,
+                (e) => null != e.useTitle,
             );
             return t.length > 1 ? (0, r.jsx)(d.Z, { categories: t }) : null;
         }, [u, null == l ? void 0 : l.layout]),

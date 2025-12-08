@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -7,10 +7,9 @@ var r = n(54381),
     l = n(996435),
     c = n(36361),
     u = n(530171),
-    d = n(175993),
-    f = n(774642),
-    p = n(445642);
-function _(e, t, n) {
+    d = n(774642),
+    f = n(445642);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function m(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +33,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,22 +50,22 @@ function h(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e) {
+function g(e) {
     let { node: t } = e,
-        { useTitle: n, layout: a, useCollapsedSubtitle: _, useNotice: h } = t,
-        [E, b] = i.useState(!1),
-        [y, O] = i.useState(!0);
+        { useTitle: n, layout: a, useCollapsedSubtitle: p } = t,
+        [m, g] = i.useState(!1),
+        [E, b] = i.useState(!0);
     i.useEffect(
         () =>
             l.Z.subscribe(
@@ -77,20 +76,19 @@ function E(e) {
                 (e) => {
                     if (null == e) return;
                     let n = (null == e ? void 0 : e.targetAccordionKey) === t.key;
-                    n && !E && (b(!0), O(!1)),
-                        n && E && (l.Z.setState({ navTransition: g(m({}, e), { targetAccordionKey: void 0 }) }), O(!0));
+                    n && !m && (g(!0), b(!1)),
+                        n && m && (l.Z.setState({ navTransition: h(_({}, e), { targetAccordionKey: void 0 }) }), b(!0));
                 },
                 {
                     equalityFn: s.X,
                     fireImmediately: !0,
                 },
             ),
-        [E, t.key],
+        [m, t.key],
     );
-    let v = null == n ? void 0 : n(E),
-        S = null == _ ? void 0 : _(),
-        I = null == h ? void 0 : h(),
-        T = i.useCallback(
+    let y = null == n ? void 0 : n(m),
+        O = null == p ? void 0 : p(),
+        v = i.useCallback(
             (e) => {
                 e &&
                     l.Z.setState({
@@ -106,19 +104,19 @@ function E(e) {
         );
     return (0, r.jsx)("div", {
         style: {
-            "--custom-base-setting-wrapper-horizontal-padding": "".concat(f.q, "px"),
-            "--custom-base-setting-wrapper-vertical-padding": "".concat(f.G, "px"),
+            "--custom-base-setting-wrapper-horizontal-padding": "".concat(d.q, "px"),
+            "--custom-base-setting-wrapper-vertical-padding": "".concat(d.G, "px"),
         },
-        className: o()({ [p.open]: E }),
-        children: (0, r.jsxs)(u.I, {
-            title: v,
-            collapsedSubtitle: S,
-            isExpanded: E,
-            onExpandedChange: b,
-            onExpandedChangeComplete: T,
-            animate: y,
-            children: [null != I && (0, r.jsx)(d.Z, { notice: I }), a.map((e) => (0, r.jsx)(c.Z, { node: e }, e.key))],
+        className: o()({ [f.open]: m }),
+        children: (0, r.jsx)(u.I, {
+            title: y,
+            collapsedSubtitle: O,
+            isExpanded: m,
+            onExpandedChange: g,
+            onExpandedChangeComplete: v,
+            animate: E,
+            children: a.map((e) => (0, r.jsx)(c.Z, { node: e }, e.key)),
         }),
     });
 }
-let b = i.memo(E);
+let E = i.memo(g);

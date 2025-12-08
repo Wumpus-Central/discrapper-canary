@@ -22,39 +22,39 @@ var i = n(28682),
 function v(e) {
     let { node: t } = e;
     switch (t.type) {
-        case i.Jq.ROOT:
-        case i.Jq.SECTION:
-        case i.Jq.SIDEBAR_ITEM:
+        case i.J.ROOT:
+        case i.J.SECTION:
+        case i.J.SIDEBAR_ITEM:
             throw Error("".concat(t.type, " nodes should never be rendered directly"));
-        case i.Jq.PANEL:
+        case i.J.PANEL:
             return (0, r.jsx)(b.T, { node: t });
-        case i.Jq.PANE:
+        case i.J.PANE:
             return (0, r.jsx)(E.Z, { node: t });
-        case i.Jq.LIST:
+        case i.J.LIST:
             return (0, r.jsx)(g.Z, { node: t });
-        case i.Jq.FIELD_SET:
+        case i.J.FIELD_SET:
             return (0, r.jsx)(h.Z, { node: t });
-        case i.Jq.RELATED:
+        case i.J.RELATED:
             return (0, r.jsx)(y.Z, { node: t });
-        case i.Jq.CATEGORY:
+        case i.J.CATEGORY:
             return (0, r.jsx)(m.Z, { node: t });
-        case i.Jq.ACCORDION:
+        case i.J.ACCORDION:
             return (0, r.jsx)(_.Z, { node: t });
-        case i.Jq.SPLIT:
+        case i.J.SPLIT:
             return (0, r.jsx)(O.Z, { node: t });
-        case i.Jq.TOGGLE:
+        case i.J.TOGGLE:
             return (0, r.jsx)(p.I, { node: t });
-        case i.Jq.BUTTON:
+        case i.J.BUTTON:
             return (0, r.jsx)(s.I, { node: t });
-        case i.Jq.SELECT:
+        case i.J.SELECT:
             return (0, r.jsx)(d.Z, { node: t });
-        case i.Jq.RADIO:
+        case i.J.RADIO:
             return (0, r.jsx)(u.Z, { node: t });
-        case i.Jq.SLIDER:
+        case i.J.SLIDER:
             return (0, r.jsx)(f.Z, { node: t });
-        case i.Jq.NAVIGATOR:
+        case i.J.NAVIGATOR:
             return (0, r.jsx)(l.Z, { node: t });
-        case i.Jq.CUSTOM:
+        case i.J.CUSTOM:
             return (0, r.jsx)(o.X, { children: (0, r.jsx)(t.render, {}) });
         default:
             return (0, r.jsx)(c.W, { node: t });
@@ -62,7 +62,7 @@ function v(e) {
 }
 function S(e) {
     let { node: t } = e;
-    return t.type === i.Jq.PANEL || t.type === i.Jq.PANE
+    return t.type === i.J.PANEL || t.type === i.J.PANE
         ? (0, r.jsx)(v, { node: t })
         : (0, r.jsx)(a.Z, {
               node: t,

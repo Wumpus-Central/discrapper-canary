@@ -3,8 +3,8 @@ var r = n(54381),
     i = n(793030),
     a = n(836519);
 function o(e) {
-    let { title: t, subtitle: n, badge: o, type: s = "primary" } = e;
-    return "secondary" === s
+    let { title: t, subtitle: n, type: o = "primary" } = e;
+    return "secondary" === o
         ? (0, r.jsx)(i.Kqy, {
               gap: 8,
               padding: {
@@ -25,16 +25,13 @@ function o(e) {
                   bottom: 24,
               },
               children: [
-                  (0, r.jsxs)("div", {
+                  (0, r.jsx)("div", {
                       className: a.headerTitle,
-                      children: [
-                          (0, r.jsx)(i.X6q, {
-                              variant: "heading-xl/normal",
-                              color: "header-primary",
-                              children: t,
-                          }),
-                          null != o && o,
-                      ],
+                      children: (0, r.jsx)(i.X6q, {
+                          variant: "heading-xl/normal",
+                          color: "header-primary",
+                          children: t,
+                      }),
                   }),
                   null != n &&
                       (0, r.jsx)(i.xvT, {

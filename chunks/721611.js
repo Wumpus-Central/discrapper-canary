@@ -13,17 +13,15 @@ var r = n(54381),
     y = n(700425),
     p = n(910557);
 function g(e) {
-    var t;
-    let { category: n, onClick: o, active: i } = e,
-        { useTitle: a, useNavigationTitle: s, key: f } = n,
-        b = null == a ? void 0 : a(),
-        y = null != (t = null == s ? void 0 : s()) ? t : b;
+    let { category: t, onClick: n, active: o } = e,
+        { useTitle: i, key: a } = t,
+        s = null == i ? void 0 : i();
     return (
-        c()(null != y, "[SettingsSubnavigationCategory] Category must have a title"),
+        c()(null != s, "[SettingsSubnavigationCategory] Category must have a title"),
         (0, r.jsx)(u.mh, {
-            id: f,
+            id: a,
             children: (e) => {
-                var t, n;
+                var t, i;
                 return (0, r.jsx)(
                     d.P3F,
                     ((t = (function (e) {
@@ -52,15 +50,15 @@ function g(e) {
                         return e;
                     })(
                         {
-                            onClick: o,
+                            onClick: n,
                             tag: "li",
-                            className: l()({ [p.active]: i }),
+                            className: l()({ [p.active]: o }),
                         },
                         e,
                     )),
-                    (n = n = { children: y }),
+                    (i = i = { children: s }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -68,11 +66,11 @@ function g(e) {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          })(Object(i)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
                           }),
                     t),
-                    f,
+                    a,
                 );
             },
         })

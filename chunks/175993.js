@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
 var r = n(54381),
     i = n(793030),
-    a = n(28682),
+    a = n(970013),
     o = n(465061);
 function s(e) {
     let { notice: t } = e,
@@ -14,15 +14,15 @@ function s(e) {
 }
 function l(e) {
     let { notice: t } = e,
-        { render: n } = t;
-    return n();
+        { notice: n } = t;
+    return (0, r.jsx)(n, {});
 }
 function c(e) {
     let { notice: t } = e;
     switch (t.type) {
-        case a.y1.INLINE_NOTICE:
+        case a.v.INLINE_NOTICE:
             return (0, r.jsx)(s, { notice: t });
-        case a.y1.STRONGLY_DISCOURAGED_CUSTOM:
+        case a.v.STRONGLY_DISCOURAGED_CUSTOM:
             return (0, r.jsx)(l, { notice: t });
     }
 }

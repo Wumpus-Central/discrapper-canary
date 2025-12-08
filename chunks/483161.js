@@ -7,35 +7,35 @@ var i = n(54381),
     a = n(398140),
     o = n(564344),
     c = n(509613),
-    d = n(28682),
-    E = n(518950),
-    S = n(25990),
-    I = n(594174),
-    T = n(313789),
+    d = n(970013),
+    T = n(518950),
+    E = n(25990),
+    S = n(594174),
+    I = n(313789),
     g = n(620163),
     _ = n(726985),
     O = n(388032),
     N = n(88651);
-let A = (0, c.x1)(T.n.PROFILE_PANE, {
+let A = (0, c.x1)(I.n.PROFILE_PANE, {
         render: o.Z,
         buildLayout: () => [],
     }),
-    f = (0, c.wf)(T.n.PROFILE_PANEL, {
+    f = (0, c.wf)(I.n.PROFILE_PANEL, {
         useTitle: () => O.intl.string(O.t["vi7f+q"]),
         notice: {
-            stores: [u.Z, S.Z],
+            stores: [u.Z, E.Z],
             element: a.Z,
         },
         buildLayout: () => [A],
     }),
-    C = (0, c.m7)(T.n.PROFILE_SIDEBAR_ITEM, {
+    C = (0, c.m7)(I.n.PROFILE_SIDEBAR_ITEM, {
         useTitle: () => O.intl.string(O.t["vi7f+q"]),
         getLegacySearchKey: () => _.s6.PROFILE_CUSTOMIZATION,
         icon: l.tBG,
         stronglyDiscouragedCustomComponent: () => {
             var t;
-            let e = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
-                { avatarSrc: n, avatarDecorationSrc: u } = (0, E.Z)({
+            let e = (0, s.e7)([S.default], () => S.default.getCurrentUser()),
+                { avatarSrc: n, avatarDecorationSrc: u } = (0, T.Z)({
                     userId: null == e ? void 0 : e.id,
                     size: r.EFr.SIZE_48,
                 });
@@ -80,9 +80,9 @@ let A = (0, c.x1)(T.n.PROFILE_PANE, {
                   });
         },
         trailing: {
-            type: d.PU.BADGE_NEW,
+            type: d.W.BADGE_NEW,
             getDismissibleContentTypes: g.OF,
-            badgeComponent: g.W8,
+            stronglyDiscouragedBadgeComponent: g.W8,
         },
         buildLayout: () => [f],
     });

@@ -14,14 +14,20 @@ let d = (e, t) =>
 function f(e) {
     var t;
     let { node: n } = e,
-        { useTitle: c } = n,
-        [f, p] = i.useState(!1),
-        { layout: _, collapseAfter: m, ContextProvider: h, useCollapsibleTitle: g, useCollapsedSubtitle: E } = n,
+        [c, f] = i.useState(!1),
+        {
+            useTitle: p,
+            layout: _,
+            collapseAfter: m,
+            ContextProvider: h,
+            useCollapsibleTitle: g,
+            useCollapsedSubtitle: E,
+        } = n,
         b = null != m ? _.slice(0, m) : _,
         y = null != m ? _.slice(m) : [],
         O = null != h ? h : i.Fragment,
-        v = null == c ? void 0 : c(),
-        S = null != (t = null == g ? void 0 : g(f, y.length)) ? t : d(f, y.length),
+        v = null == p ? void 0 : p(),
+        S = null != (t = null == g ? void 0 : g(c, y.length)) ? t : d(c, y.length),
         I = null == E ? void 0 : E();
     return (0, r.jsx)(O, {
         children: (0, r.jsxs)(a.Kqy, {
@@ -54,8 +60,8 @@ function f(e) {
                             (0, r.jsx)(l.I, {
                                 title: S,
                                 collapsedSubtitle: I,
-                                isExpanded: f,
-                                onExpandedChange: p,
+                                isExpanded: c,
+                                onExpandedChange: f,
                                 children: (0, r.jsx)(a.Kqy, {
                                     gap: 8,
                                     padding: { top: 8 },

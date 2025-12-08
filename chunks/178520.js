@@ -14,31 +14,26 @@ function s(e, t, n) {
                 d = ((null == (r = e.usePredicate) ? void 0 : r.call(e)) === !1 && !i) || c,
                 f = l(e, t, d, null == n ? void 0 : n.legacyMatches) || u,
                 p = !1;
-            if ((0, o.Lk)(e)) for (let t of e.layout) p = s(t, d, f) || p;
+            if ((0, o.L)(e)) for (let t of e.layout) p = s(t, d, f) || p;
             return !d && (f || p) && a.add(e.key), f || p;
         };
     return s(e), a;
 }
 function l(e, t, n, r) {
-    var s, l, c, u, d, f;
-    let p = null == (s = e.getLegacySearchKey) ? void 0 : s.call(e);
-    if (null != p && null != r) return t.length < 2 || r.has(p);
-    if (e.type === o.Jq.SECTION && e.hoisted) return !0;
-    let _ = "useTitle" in e ? (null == (l = e.useTitle) ? void 0 : l.call(e, !1)) : void 0,
-        m = "useNavigationTitle" in e ? (null == (c = e.useNavigationTitle) ? void 0 : c.call(e)) : void 0,
-        h = "useSearchTerms" in e ? (null == (u = e.useSearchTerms) ? void 0 : u.call(e)) : void 0;
-    if (n || (null == _ && null == m && null == h)) return !1;
+    var s, l, c, u;
+    let d = null == (s = e.getLegacySearchKey) ? void 0 : s.call(e);
+    if (null != d && null != r) return t.length < 2 || r.has(d);
+    if (e.type === o.J.SECTION && e.hoisted) return !0;
+    let f = "useTitle" in e ? (null == (l = e.useTitle) ? void 0 : l.call(e, !1)) : void 0,
+        p = "useSearchTerms" in e ? (null == (c = e.useSearchTerms) ? void 0 : c.call(e)) : void 0;
+    if (n || (null == f && null == p)) return !1;
     if ("" === t) return !0;
-    let g = t.toLowerCase();
-    for (let e of null != h ? h : []) if (i()(g, e.toLowerCase())) return !0;
-    let E = !1;
-    if (null != _) {
-        let e = null == (d = (0, a.qgQ)(_)) ? void 0 : d.toLowerCase();
-        null != e && (E = i()(g, e));
+    let _ = t.toLowerCase();
+    for (let e of null != p ? p : []) if (i()(_, e.toLowerCase())) return !0;
+    let m = !1;
+    if (null != f) {
+        let e = null == (u = (0, a.qgQ)(f)) ? void 0 : u.toLowerCase();
+        null != e && (m = i()(_, e));
     }
-    if (null != m && !E) {
-        let e = null == (f = (0, a.qgQ)(m)) ? void 0 : f.toLowerCase();
-        null != e && (E = i()(g, e));
-    }
-    return E;
+    return m;
 }

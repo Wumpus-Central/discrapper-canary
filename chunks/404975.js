@@ -1,4 +1,4 @@
-n.d(t, { P: () => v }), n(539854), n(388685);
+n.d(t, { P: () => m }), n(539854), n(388685);
 var r = n(54381),
     o = n(473749),
     i = n(120356),
@@ -10,13 +10,13 @@ var r = n(54381),
     d = n(724757),
     f = n(243778),
     b = n(984802),
-    y = n(28682),
+    y = n(970013),
     p = n(996435),
     g = n(854014),
     O = n(388032),
     j = n(845435);
-function v(e) {
-    let { root: t, header: n, footer: i, onClose: g, emptyState: v } = e,
+function m(e) {
+    let { root: t, header: n, footer: i, onClose: g, emptyState: m } = e,
         h = p.Z.useField("showNavigationMobile"),
         x = o.useRef(null),
         S = o.useMemo(() => {
@@ -27,8 +27,8 @@ function v(e) {
                     n.forEach((t) => {
                         if (null != t.trailing)
                             switch (t.trailing.type) {
-                                case y.PU.BADGE_NEW:
-                                case y.PU.STRONGLY_DISCOURAGED_CUSTOM:
+                                case y.W.BADGE_NEW:
+                                case y.W.STRONGLY_DISCOURAGED_CUSTOM:
                                     var n, r, o;
                                     null == (r = (o = t.trailing).getDismissibleContentTypes) ||
                                         null == (n = r.call(o)) ||
@@ -101,7 +101,7 @@ function v(e) {
                                         (0, r.jsx)("div", {
                                             children: P.map((e) =>
                                                 (0, r.jsx)(
-                                                    m,
+                                                    v,
                                                     {
                                                         section: e,
                                                         visibleContent: o,
@@ -112,7 +112,7 @@ function v(e) {
                                             ),
                                         }),
                                         null != n && (0, r.jsx)(n, {}),
-                                        null != v && 0 === C.length && (0, r.jsx)(v, {}),
+                                        null != m && 0 === C.length && (0, r.jsx)(m, {}),
                                     ],
                                 }),
                                 (0, r.jsx)(a.bG, {
@@ -196,7 +196,7 @@ function v(e) {
                                                                 className: j.nav,
                                                                 children: C.map((e) =>
                                                                     (0, r.jsx)(
-                                                                        m,
+                                                                        v,
                                                                         {
                                                                             section: e,
                                                                             visibleContent: o,
@@ -236,10 +236,10 @@ function v(e) {
         })
     );
 }
-function m(e) {
+function v(e) {
     var t;
     let { section: n, visibleContent: o, hoisted: i = !1 } = e,
-        l = null == (t = n.useLabel) ? void 0 : t.call(n);
+        l = null == (t = n.useTitle) ? void 0 : t.call(n);
     return (0, r.jsxs)("ul", {
         className: j.section,
         "aria-label": l,

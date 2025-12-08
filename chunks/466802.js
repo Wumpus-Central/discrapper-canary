@@ -1,7 +1,7 @@
-n.d(e, { J: () => S });
+n.d(e, { J: () => E });
 var i = n(657707),
     l = n(509613),
-    s = n(28682),
+    s = n(970013),
     r = n(313789),
     u = n(748717),
     a = n(126848),
@@ -11,17 +11,17 @@ let d = (0, l.x1)(r.n.NITRO_PANE, {
         render: u.Z,
         buildLayout: () => [],
     }),
-    E = (0, l.wf)(r.n.NITRO_PANEL, {
+    T = (0, l.wf)(r.n.NITRO_PANEL, {
         useTitle: () => c.intl.string(c.t.Ipxkog),
         buildLayout: () => [d],
     }),
-    S = (0, l.m7)(r.n.NITRO_SIDEBAR_ITEM, {
+    E = (0, l.m7)(r.n.NITRO_SIDEBAR_ITEM, {
         useTitle: () => c.intl.string(c.t.Ipxkog),
         getLegacySearchKey: () => o.s6.PREMIUM,
         icon: i.SrA,
         trailing: {
-            type: s.PU.STRONGLY_DISCOURAGED_CUSTOM,
-            useDecoration: (t, e) => (0, a.x)(e),
+            type: s.W.STRONGLY_DISCOURAGED_CUSTOM,
+            useCustomDecoration: (t, e) => (0, a.x)(e),
         },
-        buildLayout: () => [E],
+        buildLayout: () => [T],
     });
