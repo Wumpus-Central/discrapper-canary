@@ -29,7 +29,8 @@ function h(e) {
 }
 class g extends s.Z {
     destroy() {
-        super.destroy(), this.pc.close();
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        super.destroy(e), this.pc.close();
     }
     setCodecs(e, t, n) {
         var r, i, a;

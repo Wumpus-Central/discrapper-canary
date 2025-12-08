@@ -46,8 +46,8 @@ var r = n(654861),
     K = n(579806),
     z = n(859401),
     q = n(437263),
-    X = n(423343),
-    Q = n(685756),
+    Q = n(423343),
+    X = n(685756),
     J = n(655306),
     $ = n(583794),
     ee = n(179654),
@@ -205,37 +205,37 @@ class eN extends f.Z {
         let i = this._socket;
         null != i && this._cleanupSocket(),
             null != this._nextChannelId && ((this._channelId = this._nextChannelId), (this._nextChannelId = void 0)),
-            (i = this._socket = new Q.Z(this.endpoint, this.context)).on(
-                Q.V.Connecting,
+            (i = this._socket = new X.Z(this.endpoint, this.context)).on(
+                X.V.Connecting,
                 this._handleConnecting.bind(this, i),
             ),
-            i.on(Q.V.Connect, this._handleConnect.bind(this, i)),
-            i.on(Q.V.Disconnect, this._handleDisconnect.bind(this, i)),
-            i.on(Q.V.Resuming, this._handleResuming.bind(this, i)),
-            i.on(Q.V.Ready, this._handleReady.bind(this, i)),
-            i.on(Q.V.Speaking, this._handleSpeaking.bind(this, i)),
-            i.on(Q.V.Video, this._handleVideo.bind(this, i)),
-            i.on(Q.V.Ping, this._handleControlPing.bind(this)),
-            i.on(Q.V.ClientDisconnect, this._handleClientDisconnect.bind(this)),
-            i.on(Q.V.ClientConnect, this._handleClientConnect.bind(this)),
-            i.on(Q.V.Codecs, this._handleCodecs.bind(this)),
-            i.on(Q.V.MediaSessionId, this._handleMediaSessionId.bind(this)),
-            i.on(Q.V.MediaSinkWants, this._handleMediaSinkWants.bind(this)),
-            i.on(Q.V.VoiceBackendVersion, this._handleCodeVersion.bind(this)),
-            i.on(Q.V.KeyframeInterval, this._handleKeyframeInterval.bind(this)),
-            i.on(Q.V.Flags, this.handleFlags.bind(this)),
-            i.on(Q.V.Platform, this.handlePlatform.bind(this)),
-            i.on(Q.V.BandwidthEstimationExperiment, this._handleBandwidthEstimationExperiment.bind(this)),
-            i.on(Q.V.SecureFramesInit, this._handleSecureFramesInit.bind(this)),
-            i.on(Q.V.SecureFramesPrepareTransition, this._handleSecureFramesPrepareTransition.bind(this)),
-            i.on(Q.V.SecureFramesPrepareEpoch, this._handleSecureFramesPrepareEpoch.bind(this)),
-            i.on(Q.V.SecureFramesExecuteTransition, this._handleSecureFramesExecuteTransition.bind(this)),
-            i.on(Q.V.MLSExternalSenderPackage, this._handleMLSExternalSenderPackage.bind(this)),
-            i.on(Q.V.MLSProposals, this._handleMLSProposals.bind(this, i)),
-            i.on(Q.V.MLSPrepareCommitTransition, this._handleMLSPrepareCommitTransition.bind(this)),
-            i.on(Q.V.MLSWelcome, this._handleMLSWelcome.bind(this)),
-            i.on(Q.V.ReceiveMessage, this._recordMessageEvent.bind(this, 4)),
-            i.on(Q.V.SendMessage, this._recordMessageEvent.bind(this, 5)),
+            i.on(X.V.Connect, this._handleConnect.bind(this, i)),
+            i.on(X.V.Disconnect, this._handleDisconnect.bind(this, i)),
+            i.on(X.V.Resuming, this._handleResuming.bind(this, i)),
+            i.on(X.V.Ready, this._handleReady.bind(this, i)),
+            i.on(X.V.Speaking, this._handleSpeaking.bind(this, i)),
+            i.on(X.V.Video, this._handleVideo.bind(this, i)),
+            i.on(X.V.Ping, this._handleControlPing.bind(this)),
+            i.on(X.V.ClientDisconnect, this._handleClientDisconnect.bind(this)),
+            i.on(X.V.ClientConnect, this._handleClientConnect.bind(this)),
+            i.on(X.V.Codecs, this._handleCodecs.bind(this)),
+            i.on(X.V.MediaSessionId, this._handleMediaSessionId.bind(this)),
+            i.on(X.V.MediaSinkWants, this._handleMediaSinkWants.bind(this)),
+            i.on(X.V.VoiceBackendVersion, this._handleCodeVersion.bind(this)),
+            i.on(X.V.KeyframeInterval, this._handleKeyframeInterval.bind(this)),
+            i.on(X.V.Flags, this.handleFlags.bind(this)),
+            i.on(X.V.Platform, this.handlePlatform.bind(this)),
+            i.on(X.V.BandwidthEstimationExperiment, this._handleBandwidthEstimationExperiment.bind(this)),
+            i.on(X.V.SecureFramesInit, this._handleSecureFramesInit.bind(this)),
+            i.on(X.V.SecureFramesPrepareTransition, this._handleSecureFramesPrepareTransition.bind(this)),
+            i.on(X.V.SecureFramesPrepareEpoch, this._handleSecureFramesPrepareEpoch.bind(this)),
+            i.on(X.V.SecureFramesExecuteTransition, this._handleSecureFramesExecuteTransition.bind(this)),
+            i.on(X.V.MLSExternalSenderPackage, this._handleMLSExternalSenderPackage.bind(this)),
+            i.on(X.V.MLSProposals, this._handleMLSProposals.bind(this, i)),
+            i.on(X.V.MLSPrepareCommitTransition, this._handleMLSPrepareCommitTransition.bind(this)),
+            i.on(X.V.MLSWelcome, this._handleMLSWelcome.bind(this)),
+            i.on(X.V.ReceiveMessage, this._recordMessageEvent.bind(this, 4)),
+            i.on(X.V.SendMessage, this._recordMessageEvent.bind(this, 5)),
             (this._connectStartTime = (0, _.zO)()),
             this._connectCount++,
             (this._connecting = !0),
@@ -528,7 +528,7 @@ class eN extends f.Z {
     }
     _handleConnect(e) {
         let t = this.token;
-        if (null == t) throw Error("RTCConnection._handleConnect(...): Token is missing.");
+        if (((this.reconnecting = !1), null == t)) throw Error("RTCConnection._handleConnect(...): Token is missing.");
         this.logger.info("Connected to RTC server."),
             this._fetchAsyncResourcesPromise.finally(() => {
                 e.identify({
@@ -802,7 +802,7 @@ class eN extends f.Z {
             null != this._connection)
         ) {
             let e = this._connection;
-            (this._connection = null), e.destroy();
+            (this._connection = null), e.destroy(this.reconnecting);
         }
         this.setState(es.hes.DISCONNECTED, { willReconnect: N });
     }
@@ -931,14 +931,14 @@ class eN extends f.Z {
                 ) {
                     case "udp":
                         this.logger.info("Sending UDP info to RTC server.", i, this._selectedExperiments),
-                            e.once(Q.V.Encryption, (e, t) => {
+                            e.once(X.V.Encryption, (e, t) => {
                                 f === this._connection && (f.setEncryption(e, t), (this._encryptionMode = e));
                             }),
                             e.selectProtocol(r, this.getRTCConnectionId(), i, this._selectedExperiments);
                         break;
                     case "webrtc":
                         this.logger.info("Sending local SDP to RTC server."),
-                            e.once(Q.V.SDP, this._handleSDP.bind(this)),
+                            e.once(X.V.SDP, this._handleSDP.bind(this)),
                             e.selectProtocol(r, this.getRTCConnectionId(), i);
                         break;
                     default:
@@ -1853,6 +1853,7 @@ class eN extends f.Z {
             eu(this, "_secureFramesState", void 0),
             eu(this, "_userIds", void 0),
             eu(this, "_secureFramesRosterMap", new Map()),
+            eu(this, "reconnecting", !1),
             eu(this, "_nextFailureId", 0),
             eu(this, "_mlsFailures", []),
             eu(this, "_secureFramesTransitionStates", new Map()),
@@ -1878,6 +1879,7 @@ class eN extends f.Z {
                         (this._connecting = !0),
                         (this._encountered_socket_failure = !1)),
                     this._connectCount++,
+                    (this.reconnecting = !0),
                     e.close(),
                     e.connect());
             }),
@@ -1992,7 +1994,7 @@ class eN extends f.Z {
             (this.voiceVersion = null),
             (this.rtcWorkerVersion = null),
             (this.state = es.hes.AWAITING_ENDPOINT),
-            (this.stateHistory = new X.K(this.state)),
+            (this.stateHistory = new Q.K(this.state)),
             (this._socket = null),
             (this._backoff = new u.Z(1000, 10000)),
             (this._destroyed = !1),
@@ -2026,6 +2028,7 @@ class eN extends f.Z {
             (this._mlsFailures = []),
             (this._nextFailureId = 0),
             (this._mediaEngineConnectionId = null),
+            (this.reconnecting = !1),
             (this._lastSentSpeakingStatus = 0),
             (this._lastSentSSRC = void 0);
         let f = M.Z.supports(el.AN.FIRST_FRAME_CALLBACK) && M.Z.supports(el.AN.REMOTE_USER_MULTI_STREAM);

@@ -61,8 +61,9 @@ class E extends s.Z {
         this.input.resumeAudio();
     }
     destroy() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         for (let e of (super.destroy(), Object.keys(this.outputs))) this.destroyOutput(e);
-        this.input.destroy();
+        this.input.destroy(e);
     }
     async getStats() {
         if (!_.Fo) return null;

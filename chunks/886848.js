@@ -34,11 +34,15 @@ var s = (function (e) {
 })({});
 class l extends r.Z {
     destroy() {
-        this.removeAllListeners(), this.destroyStreams();
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.removeAllListeners(), this.destroyStreams(e);
     }
     destroyStreams() {
-        var e;
-        this.audio.destroy(), this.video.destroy(), null == (e = this.desktop) || e.destroy();
+        var e, t;
+        let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.audio.destroy(),
+            this.video.destroy(),
+            n ? null == (e = this.desktop) || e.reuse() : null == (t = this.desktop) || t.destroy();
     }
     setDesktop(e) {
         this.destroyStreams(),

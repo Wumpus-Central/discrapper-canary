@@ -54,9 +54,9 @@ function l(e, t) {
     );
 }
 class c extends r.EventEmitter {
-    static async get(e, t) {
-        var n;
-        let r = {
+    static async get(e, t, n) {
+        var r;
+        let i = {
             audio: t && {
                 echoCancellation: !1,
                 noiseSuppression: !1,
@@ -64,9 +64,12 @@ class c extends r.EventEmitter {
             },
             video: l(o({}, e), { frameRate: 30 }),
         };
-        if ((null == (n = navigator.mediaDevices) ? void 0 : n.getDisplayMedia) != null)
-            return new c(await navigator.mediaDevices.getDisplayMedia(r));
+        if ((null == (r = navigator.mediaDevices) ? void 0 : r.getDisplayMedia) != null)
+            return new c(await navigator.mediaDevices.getDisplayMedia(i), n);
         throw Error("UNKNOWN");
+    }
+    reuse() {
+        this.removeAllListeners(), this.pool.release(this);
     }
     destroy() {
         this.removeAllListeners(), (0, i.jC)(this.streamId), this.stream.getTracks().forEach((e) => e.stop());
@@ -83,10 +86,11 @@ class c extends r.EventEmitter {
             this.stream.getAudioTracks().some((e) => e.enabled),
         );
     }
-    constructor(e) {
+    constructor(e, t) {
         super(),
             a(this, "id", void 0),
             a(this, "stream", void 0),
+            a(this, "pool", void 0),
             a(this, "streamId", void 0),
             e.getVideoTracks().forEach((e) => {
                 e.onended = () => {
@@ -95,6 +99,7 @@ class c extends r.EventEmitter {
             }),
             (this.id = e.getVideoTracks()[0].label),
             (this.stream = e),
-            (this.streamId = (0, i.N7)(e));
+            (this.streamId = (0, i.N7)(e)),
+            (this.pool = t);
     }
 }

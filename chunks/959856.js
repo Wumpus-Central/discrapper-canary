@@ -13,11 +13,11 @@ var r = n(512722),
     _ = n(970838),
     m = n(68721),
     h = n(997653),
-    g = n(384136),
-    E = n(740197),
-    b = n(548820),
-    y = n(586021),
-    O = n(579237),
+    g = n(740197),
+    E = n(548820),
+    b = n(586021),
+    y = n(579237),
+    O = n(867985),
     v = n(582168),
     S = n(825040),
     I = n(65154),
@@ -38,8 +38,9 @@ function A(e, t, n) {
 let C = new u.Yd("MediaEngineWebRTC");
 class N extends s.Z {
     destroy() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null)),
-            this.eachConnection((e) => e.destroy()),
+            this.eachConnection((t) => t.destroy(e)),
             this.emit(f.aB.Destroy),
             this.removeAllListeners();
     }
@@ -61,9 +62,9 @@ class N extends s.Z {
     supports(e) {
         switch (e) {
             case I.AN.AUDIO_INPUT_DEVICE:
-                return E.S5;
+                return g.S5;
             case I.AN.AUDIO_OUTPUT_DEVICE:
-                return E.ZA;
+                return g.ZA;
             case I.AN.VIDEO:
                 return T.U8;
             case I.AN.DESKTOP_CAPTURE:
@@ -151,7 +152,7 @@ class N extends s.Z {
     }
     async _enable() {
         if (this.enabled) return;
-        await this.getAudioContext().audioWorklet.addModule(b);
+        await this.getAudioContext().audioWorklet.addModule(E);
         let e = new m.Z(this.getAudioContext());
         e.on("permission", this.handleAudioPermission);
         try {
@@ -177,7 +178,7 @@ class N extends s.Z {
     setNoiseCancellationAfterProcessing(e) {}
     setVADAfterWebrtc(e) {}
     getAudioInputDevices() {
-        return (0, E.Hg)();
+        return (0, g.Hg)();
     }
     setAudioInputDevice(e) {
         var t, n;
@@ -189,7 +190,7 @@ class N extends s.Z {
             this.emit(f.aB.SelectedDeviceChange, I.h7.AUDIO_INPUT, r, e);
     }
     getAudioOutputDevices() {
-        return (0, E.HS)();
+        return (0, g.HS)();
     }
     setAudioOutputDevice(e) {
         var t;
@@ -200,7 +201,7 @@ class N extends s.Z {
             this.emit(f.aB.SelectedDeviceChange, I.h7.AUDIO_OUTPUT, n, e);
     }
     getVideoInputDevices() {
-        return (0, E.l0)();
+        return (0, g.l0)();
     }
     setVideoInputDevice(e) {
         (this.videoInputDeviceId = e), this.eachConnection((t) => t.setVideoSource(e), I.Yn.DEFAULT);
@@ -217,9 +218,8 @@ class N extends s.Z {
         e("");
     }
     async getDesktopSource(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = await g.Z.get(e, t);
-        return (this.pendingDesktopInputs[n.id] = n), n.id;
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return (await this.desktopInputPool.acquire(e, t)).id;
     }
     getScreenPreviews(e, t) {
         return Promise.reject(Error("UNSUPPORTED"));
@@ -250,12 +250,12 @@ class N extends s.Z {
         else if (null != e.desktopDescription && null != this.findConnection(t)) {
             i()(t === I.Yn.STREAM, "Go live context is not STREAM");
             let n = !1,
-                r = this.pendingDesktopInputs[e.desktopDescription.id];
-            null != r &&
-                this.eachConnection((e) => {
-                    e.streamUserId === e.userId && ((n = !0), e.setDesktopInput(r));
-                }, t),
-                n && delete this.pendingDesktopInputs[e.desktopDescription.id];
+                r = this.desktopInputPool.get(e.desktopDescription.id);
+            if (null == r) return;
+            this.eachConnection((e) => {
+                e.streamUserId === e.userId && ((n = !0), e.setDesktopInput(r));
+            }, t),
+                n || this.desktopInputPool.release(r);
         }
     }
     setClipsSource(e) {}
@@ -283,7 +283,7 @@ class N extends s.Z {
     setLoopback(e, t) {
         e && null == this.loopback
             ? (this.enable(),
-              (this.loopback = new O.Z(this.getAudioContext(), this.sourceId, this.sinkId)),
+              (this.loopback = new y.Z(this.getAudioContext(), this.sourceId, this.sinkId)),
               this.loopback.setNoiseCancellation(t.noiseCancellation))
             : e || null == this.loopback || (this.loopback.stop(), (this.loopback = null));
     }
@@ -344,13 +344,13 @@ class N extends s.Z {
     showSystemCaptureConfigurationUI(e) {}
     fetchAsyncResources(e) {
         return e.fetchDave
-            ? (0, y.IT)()
-                ? (0, y.Ft)()
+            ? (0, b.IT)()
+                ? (0, b.Ft)()
                     ? new Promise((e, t) => {
-                          (0, y.D5)()
+                          (0, b.D5)()
                               .then((t) => {
                                   (this.dave = t),
-                                      (this.transientKeys = (0, y.Yk)()),
+                                      (this.transientKeys = (0, b.Yk)()),
                                       (this.maxSupportedProtocolVersion = t.MaxSupportedProtocolVersion()),
                                       C.info(
                                           "Successfully initialized DAVE, version:",
@@ -382,7 +382,7 @@ class N extends s.Z {
             A(this, "interacted", !1),
             A(this, "loopback", null),
             A(this, "voiceActivityInput", null),
-            A(this, "pendingDesktopInputs", {}),
+            A(this, "desktopInputPool", new O.Z()),
             A(this, "enablePromise", null),
             A(this, "dave", null),
             A(this, "transientKeys", null),
@@ -425,7 +425,7 @@ class N extends s.Z {
                 }
             }),
             A(this, "handleDeviceChange", () =>
-                (0, E.PW)().then((e) => {
+                (0, g.PW)().then((e) => {
                     let [t, n, r] = e;
                     return this.emit(f.aB.DeviceChange, t, n, r);
                 }),

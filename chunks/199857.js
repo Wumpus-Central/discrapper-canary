@@ -36,7 +36,8 @@ function S(e, t) {
 }
 class I extends f.Z {
     destroy() {
-        super.destroy(), "closed" !== this.signalingState && this.pc.close();
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        super.destroy(e), "closed" !== this.signalingState && this.pc.close();
     }
     setCodecs(e, t, n) {
         var r, i, a, o;
