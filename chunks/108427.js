@@ -2,8 +2,8 @@ n.d(t, {
     e: () => h,
     t: () => g,
 }),
-    n(388685),
-    n(35282);
+    n(35282),
+    n(388685);
 var r = n(772848),
     i = n(579806),
     a = n(626135),
@@ -81,14 +81,25 @@ class _ {
         });
     }
     trackTTI() {
-        window.__TTI_COMPLETED ||
-            ((window.__TTI_COMPLETED = !0),
-            requestIdleCallback(() => {
-                let e = p();
-                s.Z.firstRenderAfterReadyPayload.record();
-                let t = s.Z.serializeWebPerfStartupMetrics(e);
-                a.default.track(l.rMx.APP_WEB_PERF_STARTUP_METRICS, u({ load_id: this.loadId }, t));
-            }));
+        var e, t, n;
+        if (window.__TTI_COMPLETED) return;
+        window.__TTI_COMPLETED = !0;
+        let r = null == (n = window.location) || null == (t = n.pathname) || null == (e = t.split("/")) ? void 0 : e[1];
+        requestIdleCallback(() => {
+            let e = p();
+            s.Z.firstRenderAfterReadyPayload.record();
+            let t = s.Z.serializeWebPerfStartupMetrics(e);
+            a.default.track(
+                l.rMx.APP_WEB_PERF_STARTUP_METRICS,
+                u(
+                    {
+                        load_id: this.loadId,
+                        url_root_path: r,
+                    },
+                    t,
+                ),
+            );
+        });
     }
     trackAppUIViewed(e) {
         if (!this.appUIViewed) {
