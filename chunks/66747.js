@@ -44,7 +44,7 @@ var r = n(54381),
     G = n(50493),
     z = n(388032),
     Y = n(490225);
-let W = l.memo(function (e) {
+let Q = l.memo(function (e) {
         let { member: t } = e,
             n = l.useMemo(() => (0, j.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
             i = l.useMemo(
@@ -107,7 +107,7 @@ let W = l.memo(function (e) {
             ],
         });
     }),
-    Q = l.memo(function (e) {
+    W = l.memo(function (e) {
         let { member: t, highestRole: n } = e,
             i = (0, u.e7)([w.Z], () => w.Z.getGuild(t.guildId), [t.guildId]),
             a = t.roles.length - 1,
@@ -332,7 +332,7 @@ let $ = l.memo(function (e) {
                         }),
                     }),
                 (0, r.jsx)("td", {
-                    className: o()({ [Y.compact]: b }),
+                    className: o()(Y.mediumCol, { [Y.compact]: b }),
                     children: (0, r.jsx)(K, {
                         member: t,
                         user: n,
@@ -364,17 +364,17 @@ let $ = l.memo(function (e) {
                     }),
                 (0, r.jsx)("td", {
                     className: o()(Y.mediumCol, { [Y.compact]: b }),
-                    children: (0, r.jsx)(Q, {
+                    children: (0, r.jsx)(W, {
                         member: t,
                         highestRole: i,
                     }),
                 }),
                 (0, r.jsx)("td", {
                     className: o()(Y.smallCol, { [Y.compact]: b }),
-                    children: (0, r.jsx)(W, { member: t }),
+                    children: (0, r.jsx)(Q, { member: t }),
                 }),
                 (0, r.jsx)("td", {
-                    className: o()(Y.smallCol, { [Y.compact]: b }),
+                    className: o()(Y.fillCol, { [Y.compact]: b }),
                     children: (0, r.jsxs)("div", {
                         className: Y.actionCell,
                         children: [
