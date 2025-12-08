@@ -3,19 +3,18 @@ var r = n(964268),
     i = n(733579),
     a = n(981631);
 let o = {
-    [i.GE.ORB_CHECKOUT]: {
+    [i.G.ORB_CHECKOUT]: {
+        flowType: i.G.ORB_CHECKOUT,
         implemented: !0,
-        flowType: i.GE.ORB_CHECKOUT,
-        UnifiedCheckoutContextProvider: r.XF,
-        UnifiedCheckoutCustomHeader: r.Pv,
         purchaseType: a.GZQ.ONE_TIME,
+        TENANT_CHECKOUT_FLOW_CONFIG: r.n,
     },
-    [i.GE.PREMIUM_CHECKOUT]: {
+    [i.G.PREMIUM_CHECKOUT]: {
         implemented: !1,
-        flowType: i.GE.PREMIUM_CHECKOUT,
+        flowType: i.G.PREMIUM_CHECKOUT,
     },
-    [i.GE.COLLECTIBLES_CHECKOUT]: {
+    [i.G.COLLECTIBLES_CHECKOUT]: {
         implemented: !1,
-        flowType: i.GE.COLLECTIBLES_CHECKOUT,
+        flowType: i.G.COLLECTIBLES_CHECKOUT,
     },
 };

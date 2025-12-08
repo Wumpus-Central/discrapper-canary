@@ -1,34 +1,22 @@
-n.d(t, { q: () => c }), n(415506);
+n.d(t, { q: () => l });
 var r = n(54381);
 n(473749);
 var i = n(512722),
     a = n.n(i),
     o = n(467368);
-let s = (e) => null != e && "StepController" in e && null != e.StepController,
-    l = (e) => null != e && "directProps" in e && null != e.directProps;
-function c(e) {
-    let { step: t, renderStep: n, DirectStepComponent: i } = e;
+let s = (e) => null != e && "StepController" in e && null != e.StepController;
+function l(e) {
+    let { step: t, renderStep: n } = e;
     return function (e) {
-        let { paymentModalStepProps: c } = e,
-            u = (0, o.Li)(),
-            { unifiedCheckoutStepMappings: d, renderModalProps: f } = u,
-            p = d[t];
-        if ((a()(null != p, "Step config for ".concat(t, " is not set")), s(p))) {
-            if (!u.enableStepControllers) throw Error("Step controllers are not enabled");
-            let e = p.StepController,
-                { checkoutContext: t } = u;
+        let { paymentModalStepProps: i, unifiedStepDefinition: l } = e,
+            { renderModalProps: c, sharedCheckoutContext: u } = (0, o.Li)();
+        if ((a()(null != l, "Step config for ".concat(t, " is not set")), s(l))) {
+            let e = l.StepController;
             return (0, r.jsx)(e, {
                 renderStep: n,
-                paymentModalStepProps: c,
-                checkoutContext: t,
-                renderModalProps: f,
-            });
-        }
-        if (l(p)) {
-            let e = p.directProps;
-            return (0, r.jsx)(i, {
-                paymentModalStepProps: c,
-                unifiedStepProps: e,
+                paymentModalStepProps: i,
+                sharedCheckoutContext: u,
+                renderModalProps: c,
             });
         }
         return null;

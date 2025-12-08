@@ -1,7 +1,4 @@
-n.d(t, {
-    Pv: () => _,
-    XF: () => E,
-});
+n.d(t, { n: () => E });
 var r = n(54381),
     i = n(473749),
     a = n(467368),
@@ -73,7 +70,7 @@ let f = (e) => {
         let {
                 renderStep: n,
                 paymentModalStepProps: r,
-                checkoutContext: {
+                sharedCheckoutContext: {
                     skuId: i,
                     analyticsLocations: a,
                     analyticsSourceLocation: o,
@@ -115,60 +112,62 @@ let f = (e) => {
         onRedeemVirtualCurrency: () => {},
     }),
     g = () => (0, i.useContext)(h),
-    E = (e) => {
-        let {
-                skuId: t,
-                loadId: n,
-                onCheckoutSuccess: i,
-                analyticsLocations: a,
-                analyticsSourceLocation: s,
-                renderModalProps: u,
-                flowSpecificOptions: d,
-                children: f,
-            } = e,
-            _ = d.rentalDuration,
-            {
-                orbProductContext: g,
-                isRedeeming: E,
-                orbRedemptionError: b,
-                onRedeemVirtualCurrency: y,
-            } = (0, l.Gw)({
-                skuId: t,
-                loadId: n,
-                onCheckoutSuccess: i,
-                analyticsLocations: a,
-                rentalDuration: _,
-            }),
-            O = (0, c.HR)({
-                onClose: u.onClose,
-                skuId: t,
-                analyticsLocations: a,
-                analyticsSourceLocation: s,
-                orbProductContext: g,
-            });
-        return (0, r.jsx)(m.Provider, {
-            value: {
-                enableStepControllers: !0,
-                unifiedCheckoutStepMappings: { [o.h8.REVIEW]: { StepController: p } },
-                checkoutContext: {
-                    loadId: n,
+    E = {
+        UnifiedCheckoutContextProvider: (e) => {
+            let {
                     skuId: t,
+                    loadId: n,
                     onCheckoutSuccess: i,
                     analyticsLocations: a,
-                    analyticsSourceLocation: s,
-                    flowSpecificOptions: d,
-                },
-                paymentModalProps: O,
-                renderModalProps: u,
-            },
-            children: (0, r.jsx)(h.Provider, {
+                    analyticsSourceLocation: o,
+                    renderModalProps: s,
+                    flowSpecificOptions: u,
+                    children: d,
+                } = e,
+                f = u.rentalDuration,
+                {
+                    orbProductContext: p,
+                    isRedeeming: _,
+                    orbRedemptionError: g,
+                    onRedeemVirtualCurrency: E,
+                } = (0, l.Gw)({
+                    skuId: t,
+                    loadId: n,
+                    onCheckoutSuccess: i,
+                    analyticsLocations: a,
+                    rentalDuration: f,
+                }),
+                b = (0, c.HR)({
+                    onClose: s.onClose,
+                    skuId: t,
+                    analyticsLocations: a,
+                    analyticsSourceLocation: o,
+                    orbProductContext: p,
+                });
+            return (0, r.jsx)(m.Provider, {
                 value: {
-                    orbProductContext: g,
-                    isRedeeming: E,
-                    orbRedemptionError: b,
-                    onRedeemVirtualCurrency: y,
+                    sharedCheckoutContext: {
+                        loadId: n,
+                        skuId: t,
+                        onCheckoutSuccess: i,
+                        analyticsLocations: a,
+                        analyticsSourceLocation: o,
+                        flowSpecificOptions: u,
+                    },
+                    paymentModalProps: b,
+                    renderModalProps: s,
                 },
-                children: f,
-            }),
-        });
+                children: (0, r.jsx)(h.Provider, {
+                    value: {
+                        orbProductContext: p,
+                        isRedeeming: _,
+                        orbRedemptionError: g,
+                        onRedeemVirtualCurrency: E,
+                    },
+                    children: d,
+                }),
+            });
+        },
+        UnifiedCheckoutCustomHeader: _,
+        UnifiedCheckoutStepDefinitions: { [o.h8.REVIEW]: { StepController: p } },
     };

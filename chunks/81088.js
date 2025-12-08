@@ -1,16 +1,17 @@
 n.d(t, {
-    Ds: () => E,
-    Ko: () => g,
-    vw: () => h,
+    Ds: () => b,
+    Ko: () => E,
+    vw: () => g,
 });
 var r = n(54381),
     i = n(28664),
     a = n(159691),
     o = n(481060),
-    s = n(612853),
-    l = n(311821),
-    c = n(482151);
-function u(e, t, n) {
+    s = n(600164),
+    l = n(612853),
+    c = n(311821),
+    u = n(482151);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +24,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +35,12 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,22 +52,22 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -74,7 +75,7 @@ function _(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,27 +84,27 @@ function m(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let h = (e) => {
+let g = (e) => {
         let { message: t } = e;
         return (0, r.jsx)(o.M14, {
             type: "critical",
             children: t,
         });
     },
-    g = (e) => {
+    E = (e) => {
         var { onClick: t, loading: n, disabled: o, text: s, tooltipText: l } = e;
-        let c = d(
+        let c = f(
                 {
                     variant: "active",
                     type: "submit",
                     "data-testid": "submitButton",
                     text: s,
                 },
-                _(e, ["onClick", "loading", "disabled", "text", "tooltipText"]),
+                m(e, ["onClick", "loading", "disabled", "text", "tooltipText"]),
             ),
             u = (0, r.jsx)(
                 a.zxk,
-                p(d({}, c), {
+                _(f({}, c), {
                     onClick: t,
                     loading: n,
                     disabled: o,
@@ -118,15 +119,28 @@ let h = (e) => {
               })
             : u;
     },
-    E = (e) => {
-        let { primaryCTAButtonProps: t, showLockIcon: n, onBackClick: i } = e;
-        return (0, r.jsxs)(o.mzw, {
-            className: c.checkoutModalFooter,
-            "data-migration-pending": !0,
-            children: [
-                null != i ? (0, r.jsx)(l.Z, { onClick: i }) : null,
-                (0, r.jsx)(g, d({}, t)),
-                n && (0, r.jsx)(s.Z, {}),
-            ],
-        });
+    b = (e) => {
+        var { primaryCTAButtonProps: t, showLockIcon: n, onBackClick: i } = e,
+            a = m(e, ["primaryCTAButtonProps", "showLockIcon", "onBackClick"]);
+        return (0, r.jsxs)(
+            o.mzw,
+            _(
+                f(
+                    {
+                        className: u.checkoutModalFooter,
+                        direction: s.Z.Direction.HORIZONTAL,
+                        justify: s.Z.Justify.END,
+                        "data-migration-pending": !0,
+                    },
+                    a,
+                ),
+                {
+                    children: [
+                        null != i ? (0, r.jsx)(c.Z, { onClick: i }) : null,
+                        n && (0, r.jsx)(l.Z, {}),
+                        (0, r.jsx)(E, f({}, t)),
+                    ],
+                },
+            ),
+        );
     };
