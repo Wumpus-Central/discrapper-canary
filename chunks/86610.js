@@ -3,12 +3,12 @@ var r = n(54381),
     i = n(772848),
     a = n(481060),
     o = n(409813),
-    s = n(346790),
-    l = n(791785),
-    c = n(961830),
-    u = n(152521),
-    d = n(733579),
-    f = n(108135),
+    s = n(791785),
+    l = n(961830),
+    c = n(152521),
+    u = n(733579),
+    d = n(108135),
+    f = n(899560),
     p = n(147332),
     _ = n(333133),
     m = n(100788),
@@ -68,12 +68,12 @@ function O(e, t) {
 }
 let v = (e, t) => null != t && t.implemented && t.flowType === e,
     S = {
-        [d.G.ORB_CHECKOUT]: {
+        [u.G.ORB_CHECKOUT]: {
             allowGiftCustomization: !1,
             disablePaymentAuthSteps: !0,
         },
-        [d.G.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0 },
-        [d.G.PREMIUM_CHECKOUT]: { allowGiftCustomization: !1 },
+        [u.G.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0 },
+        [u.G.PREMIUM_CHECKOUT]: { allowGiftCustomization: !1 },
     };
 class I {
     getUnifiedStepDefinition(e) {
@@ -90,9 +90,9 @@ class I {
                 });
     }
     getPredicateStepConfig() {
-        return this.checkoutFlow === d.G.COLLECTIBLES_CHECKOUT
-            ? c.WA
-            : this.checkoutFlow === d.G.ORB_CHECKOUT
+        return this.checkoutFlow === u.G.COLLECTIBLES_CHECKOUT
+            ? l.WA
+            : this.checkoutFlow === u.G.ORB_CHECKOUT
               ? {
                     key: null,
                     renderStep: (e) =>
@@ -103,16 +103,27 @@ class I {
                 }
               : {
                     key: null,
-                    renderStep: (e) => (0, r.jsx)(l.I, b({}, e)),
+                    renderStep: (e) => (0, r.jsx)(s.I, b({}, e)),
                 };
     }
-    getAddPaymentStepConfig() {
-        if (this.checkoutFlow === d.G.ORB_CHECKOUT);
-        else if (this.checkoutFlow === d.G.COLLECTIBLES_CHECKOUT) return s.n;
+    getAddPaymentStepConfig(e) {
+        let { isGift: t } = e,
+            { allowGiftCustomization: n } = this.internalCheckoutFlowControls;
+        if (this.checkoutFlow !== u.G.ORB_CHECKOUT)
+            return {
+                key: o.h8.ADD_PAYMENT_STEPS,
+                renderStep: (e) =>
+                    (0, r.jsx)(f.a, {
+                        paymentModalStepProps: e,
+                        returnStep: o.h8.REVIEW,
+                        returnStepIfNoPaymentSources: t && n ? o.h8.GIFT_CUSTOMIZATION : void 0,
+                    }),
+                options: { renderHeader: !0 },
+            };
     }
     getGiftCustomizationStepConfig(e) {
         let { isGift: t } = e,
-            { allowGiftCustomization: n } = S[this.checkoutFlow];
+            { allowGiftCustomization: n } = this.internalCheckoutFlowControls;
         return t && n
             ? {
                   key: o.h8.GIFT_CUSTOMIZATION,
@@ -131,7 +142,7 @@ class I {
     getReviewStepConfig() {
         let { LEGACY_PAYMENT_STEPS: e = [] } = this.checkoutFlowConfiguration.TENANT_CHECKOUT_FLOW_CONFIG;
         return e.includes(o.h8.REVIEW)
-            ? c.wo
+            ? l.wo
             : {
                   key: o.h8.REVIEW,
                   renderStep: (e) =>
@@ -148,12 +159,12 @@ class I {
     generateCheckoutStepConfigs(e) {
         let { isGift: t } = e,
             { CUSTOM_CONFIRM_STEP_CONFIG: n } = this.tenantCheckoutFlowConfig,
-            { disablePaymentAuthSteps: r } = S[this.checkoutFlow],
+            { disablePaymentAuthSteps: r } = this.internalCheckoutFlowControls,
             i = this.getPredicateStepConfig(),
             a = this.getGiftCustomizationStepConfig({ isGift: t }),
-            s = this.getAddPaymentStepConfig(),
-            l = this.getReviewStepConfig(),
-            u = this.createDefinedStepConfigsArray([i, a, s, ...(r ? [] : c.yp), l]);
+            s = this.getAddPaymentStepConfig({ isGift: t }),
+            c = this.getReviewStepConfig(),
+            u = this.createDefinedStepConfigsArray([i, a, s, ...(r ? [] : l.yp), c]);
         return (
             null != n &&
                 u.push({
@@ -165,9 +176,9 @@ class I {
         );
     }
     getApplicationId(e) {
-        return this.checkoutFlow === d.G.ORB_CHECKOUT
-            ? (0, u.Nb)(e)
-            : this.checkoutFlow === d.G.COLLECTIBLES_CHECKOUT
+        return this.checkoutFlow === u.G.ORB_CHECKOUT
+            ? (0, c.Nb)(e)
+            : this.checkoutFlow === u.G.COLLECTIBLES_CHECKOUT
               ? h.XAJ
               : void 0;
     }
@@ -225,9 +236,12 @@ class I {
         E(this, "checkoutFlow", void 0),
             E(this, "checkoutFlowConfiguration", void 0),
             E(this, "tenantCheckoutFlowConfig", void 0),
+            E(this, "internalCheckoutFlowControls", void 0),
             (this.checkoutFlow = e);
-        let t = f.d[e];
+        let t = d.d[e];
         if (!v(e, t)) throw Error("Checkout flow ".concat(e, " is not implemented"));
-        (this.checkoutFlowConfiguration = t), (this.tenantCheckoutFlowConfig = t.TENANT_CHECKOUT_FLOW_CONFIG);
+        (this.checkoutFlowConfiguration = t),
+            (this.tenantCheckoutFlowConfig = t.TENANT_CHECKOUT_FLOW_CONFIG),
+            (this.internalCheckoutFlowControls = S[e]);
     }
 }
