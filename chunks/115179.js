@@ -11,13 +11,12 @@ n.d(t, {
     hF: () => T,
     o9: () => P,
     oo: () => R,
-    t2: () => D,
     vQ: () => b,
     w8: () => C,
     wj: () => y,
     xN: () => g,
     xn: () => p,
-    zG: () => w,
+    zG: () => D,
 }),
     n(388685);
 var r = n(991998),
@@ -123,21 +122,7 @@ function R(e) {
         n.assignmentMethod === i.j.TIERED && n.rewards.length > 0 && n.rewards.every((e) => e.type === o.w.REWARD_CODE)
     );
 }
-function w(e) {
+function D(e) {
     let t = e.rewardsConfig.platforms;
     return t.length > 0 ? t[0] : s.y$.CROSS_PLATFORM;
 }
-let D = (e) => {
-    switch (e) {
-        case s.y$.XBOX:
-            return d.intl.string(d.t.G84UWZ);
-        case s.y$.PLAYSTATION:
-            return d.intl.string(d.t["6IeKx2"]);
-        case s.y$.SWITCH:
-            return d.intl.string(d.t["1pp0su"]);
-        case s.y$.PC:
-            return d.intl.string(d.t["YK+wUg"]);
-        case s.y$.CROSS_PLATFORM:
-            return d.intl.string(d.t.UWVbzV);
-    }
-};

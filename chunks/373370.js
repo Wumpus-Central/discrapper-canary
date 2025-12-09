@@ -190,7 +190,7 @@ function R(e) {
         i,
     );
 }
-function w(e) {
+function D(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
         s = (0, p.B3)(n.config),
@@ -226,7 +226,7 @@ function w(e) {
         i,
     );
 }
-function D(e) {
+function w(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         { targetMinutes: i } = n,
         a = t.config.messages.gameTitle;
@@ -426,7 +426,7 @@ function U(e) {
             collectibleRewardDuration: h,
         });
     if ((0, _.$H)(t))
-        return w({
+        return D({
             quest: t,
             taskDetails: n,
             withoutMarkdown: o,
@@ -434,7 +434,7 @@ function U(e) {
             collectibleRewardDuration: h,
         });
     if ((0, p.oo)({ quest: t }))
-        return D({
+        return w({
             quest: t,
             taskDetails: n,
             withoutMarkdown: o,
@@ -603,25 +603,25 @@ function W(e) {
     }
 }
 function K(e) {
-    var t, n, r, i;
-    let { quest: a, rewardCode: o, selectedPlatformType: s } = e,
-        l = (0, p.oo)({ quest: a }),
-        c = null != s ? s : null == o ? void 0 : o.platform,
-        u = l
+    var t, n, r, i, a;
+    let { quest: o, rewardCode: s } = e,
+        l = (0, p.oo)({ quest: o }),
+        c = null != (r = null == s ? void 0 : s.platform) ? r : u.y$.CROSS_PLATFORM,
+        d = l
             ? (0, p.o9)({
-                  quest: a,
+                  quest: o,
                   idx:
-                      null != (r = null == o ? void 0 : o.tier)
-                          ? r
-                          : null == (t = a.userStatus)
+                      null != (i = null == s ? void 0 : s.tier)
+                          ? i
+                          : null == (t = o.userStatus)
                             ? void 0
                             : t.claimedTier,
               })
             : null,
-        d = (0, f.M1)(a.config),
-        _ =
-            null != (i = null == u || null == (n = u.messages) ? void 0 : n.redemptionInstructionsByPlatform)
-                ? i
-                : d.messages.redemptionInstructionsByPlatform;
-    return null != c ? _[c] : void 0;
+        _ = (0, f.M1)(o.config),
+        m =
+            null != (a = null == d || null == (n = d.messages) ? void 0 : n.redemptionInstructionsByPlatform)
+                ? a
+                : _.messages.redemptionInstructionsByPlatform;
+    return null != c ? m[c] : void 0;
 }

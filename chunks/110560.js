@@ -45,8 +45,8 @@ var i = n(772848),
     N = n(61115),
     P = n(150560),
     R = n(324805),
-    w = n(981631),
-    D = n(49898),
+    D = n(981631),
+    w = n(49898),
     x = n(388032);
 function L(e, t, n) {
     return (
@@ -103,39 +103,15 @@ function k(e, t) {
 let U = "in-app",
     G = "Discord Widget";
 function Z(e) {
-    let {
-        quest: t,
-        questContent: i,
-        questContentPosition: a,
-        preview: o = !1,
-        previewQuest: l = null,
-        sourceQuestContent: c,
-    } = e;
+    let { quest: t, sourceQuestContent: i } = e;
     (0, s.ZDy)(async () => {
-        if (!(t.config.rewardsConfig.platforms.length > 1)) {
-            let { default: e } = await Promise.all([n.e("35129"), n.e("83615"), n.e("96861")]).then(n.bind(n, 188209));
-            return (n) =>
-                (0, r.jsx)(
-                    e,
-                    k(j({}, n), {
-                        initialQuest: t,
-                        preview: o,
-                        sourceQuestContent: c,
-                        questContentPosition: a,
-                    }),
-                );
-        }
-        let { default: e } = await Promise.all([n.e("35129"), n.e("83615"), n.e("19341")]).then(n.bind(n, 564733));
+        let { default: e } = await n.e("96861").then(n.bind(n, 188209));
         return (n) =>
             (0, r.jsx)(
                 e,
                 k(j({}, n), {
-                    questId: t.id,
-                    questContentPosition: a,
-                    questContent: i,
-                    preview: o,
-                    previewQuest: l,
-                    sourceQuestContent: c,
+                    initialQuest: t,
+                    sourceQuestContent: i,
                 }),
             );
     });
@@ -231,9 +207,9 @@ function W() {
         utmContentCurrent: Object.keys(E.jn).find((t) => E.jn[t] === e),
     });
     let r = null != t ? "#".concat(t) : "";
-    n && c.Z.setState({ selectedTab: D.GlobalDiscoveryTab.QUESTS }),
+    n && c.Z.setState({ selectedTab: w.GlobalDiscoveryTab.QUESTS }),
         (0, d.default)(),
-        (0, u.uL)((n ? w.Z5c.QUEST_HOME : w.Z5c.QUEST_HOME_V2) + r);
+        (0, u.uL)((n ? D.Z5c.QUEST_HOME : D.Z5c.QUEST_HOME_V2) + r);
 }
 let K = 0.2;
 function z(e) {
@@ -278,7 +254,7 @@ function Q(e) {
         null != e &&
             e.timestampSec > 1 &&
             ((0, m.lx)(n.id),
-            p.default.track(w.rMx.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
+            p.default.track(D.rMx.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: n.id,
                 source_quest_content: (0, h._b)(o),
                 source_quest_content_cta: l,
@@ -332,7 +308,7 @@ function J(e) {
     let t = X(e),
         n = (0, a.zS)(t);
     null != n &&
-        p.default.track(w.rMx.DEEP_LINK_CLICKED, {
+        p.default.track(D.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
@@ -340,7 +316,7 @@ function J(e) {
         _.Z.launch(t, (t) => {
             t ||
                 (0, u.dL)({
-                    pathname: w.Z5c.QUEST_HOME_V2,
+                    pathname: D.Z5c.QUEST_HOME_V2,
                     hash: e,
                 });
         });
@@ -368,7 +344,7 @@ function ee(e) {
     let t = $(e),
         n = (0, a.zS)(t);
     null != n &&
-        p.default.track(w.rMx.DEEP_LINK_CLICKED, {
+        p.default.track(D.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
@@ -376,7 +352,7 @@ function ee(e) {
         _.Z.launch(t, (t) => {
             t ||
                 (0, u.dL)({
-                    pathname: w.Z5c.QUEST_HOME_V2,
+                    pathname: D.Z5c.QUEST_HOME_V2,
                     hash: e,
                 });
         });

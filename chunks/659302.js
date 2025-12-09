@@ -38,8 +38,8 @@ var c = n(98278),
     N = n(283689),
     P = n(542347),
     R = n(300917),
-    w = n(110560),
-    D = n(324805),
+    D = n(110560),
+    w = n(324805),
     x = n(388032);
 function L(e) {
     let { quest: t, questContent: n, questContentPosition: r, questContentRowIndex: a, sourceQuestContent: s } = e,
@@ -63,15 +63,13 @@ function L(e) {
                   ? (0, A.Bg)(t.config)
                       ? (0, c.$)()
                       : (0, A.Xv)(t.config)
-                        ? (0, w.openQuestCollectibleRewardModal)(t, n, s)
+                        ? (0, D.openQuestCollectibleRewardModal)(t, n, s)
                         : (0, A.vQ)(t.config)
-                          ? (0, w.openQuestInGameRewardModal)(t, n, s)
+                          ? (0, D.openQuestInGameRewardModal)(t, n, s)
                           : (0, A.xN)(t.config)
-                            ? (0, w.openQuestOrbsRewardModal)(t, n, s)
-                            : (0, w.openQuestsRewardCodeModal)({
+                            ? (0, D.openQuestOrbsRewardModal)(t, n, s)
+                            : (0, D.openQuestsRewardCodeModal)({
                                   quest: t,
-                                  questContent: n,
-                                  questContentPosition: r,
                                   sourceQuestContent: s,
                               })
                   : (0, R.B)());
@@ -133,9 +131,9 @@ let j = (e) => {
         });
     };
 function k(e) {
-    return e.config.features.includes(D.S7.START_QUEST_CTA)
+    return e.config.features.includes(w.S7.START_QUEST_CTA)
         ? (0, C.pO)(e)
-            ? e.config.features.includes(D.S7.CLOUD_GAMING_ACTIVITY)
+            ? e.config.features.includes(w.S7.CLOUD_GAMING_ACTIVITY)
                 ? {
                       text: x.intl.string(x.t["+qoymD"]),
                       questContentCTA: p.jZ.START_QUEST,
@@ -198,7 +196,7 @@ function U(e) {
                                     questContentRowIndex: s,
                                     sourceQuestContent: d,
                                 }),
-                                    (0, w.openPushToPhoneModal)(n);
+                                    (0, D.openPushToPhoneModal)(n);
                                 return;
                             }
                             c ||
@@ -211,8 +209,8 @@ function U(e) {
                                     sourceQuestContent: d,
                                 }),
                                 c
-                                    ? (0, y.R)(D.dr.QUEST_HOME_DESKTOP)
-                                        ? await (0, w.enrollAndStartVideoQuestWithErrorHandling)(n, {
+                                    ? (0, y.R)(w.dr.QUEST_HOME_DESKTOP)
+                                        ? await (0, D.enrollAndStartVideoQuestWithErrorHandling)(n, {
                                               questContent: a,
                                               questContentCTA: t,
                                               sourceQuestContent: d,
@@ -227,14 +225,14 @@ function U(e) {
                                               questContentRowIndex: s,
                                               sourceQuestContent: d,
                                           }),
-                                          (0, w.openVideoQuestModal)({
+                                          (0, D.openVideoQuestModal)({
                                               quest: n,
                                               questContent: a,
                                               sourceQuestContent: d,
                                               sourceQuestContentCTA: p.jZ.ACCEPT_QUEST,
                                           }))
                                     : v &&
-                                      ((0, y.R)(D.dr.QUEST_HOME_DESKTOP)
+                                      ((0, y.R)(w.dr.QUEST_HOME_DESKTOP)
                                           ? await (0, f.AH)(n.id, {
                                                 questContent: a,
                                                 questContentCTA: t,
@@ -277,7 +275,7 @@ function U(e) {
                         text: x.intl.string(x.t.IsH2Sp),
                         tooltipText: null,
                         onClick: () => {
-                            (0, w.openPushToPhoneModal)(n);
+                            (0, D.openPushToPhoneModal)(n);
                         },
                     };
                 if (c)
@@ -285,7 +283,7 @@ function U(e) {
                         text: (0, P.F9)(g),
                         tooltipText: x.intl.string(x.t.hsbwjv),
                         onClick: () =>
-                            (0, w.openVideoQuestModal)({
+                            (0, D.openVideoQuestModal)({
                                 quest: n,
                                 questContent: a,
                                 sourceQuestContent: d,
@@ -298,7 +296,7 @@ function U(e) {
                         text: e,
                         tooltipText: x.intl.string(x.t.hsbwjv),
                         onClick: () => {
-                            n.config.features.includes(D.S7.START_QUEST_CTA) && b();
+                            n.config.features.includes(w.S7.START_QUEST_CTA) && b();
                         },
                     };
                 }
