@@ -25,7 +25,6 @@ if (
         null == window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT &&
         null == window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST &&
         null == window.GLOBAL_ENV.PUBLIC_PATH &&
-        null == window.GLOBAL_ENV.SPRIG_API_KEY &&
         null == window.GLOBAL_ENV.MUX_ENV_KEY)
 )
     throw (
