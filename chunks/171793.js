@@ -1,7 +1,7 @@
 n.d(i, { default: () => h }), n(388685);
 var a = n(54381),
-    e = n(473749),
-    l = n(793030),
+    l = n(473749),
+    e = n(793030),
     s = n(481060),
     o = n(904245),
     r = n(455708),
@@ -17,15 +17,15 @@ function h(t) {
             modalTitle: p = u.intl.string(u.t["0VinIJ"]),
             defaultText: C = u.intl.string(u.t.OrwKgi),
         } = t,
-        [v, j] = e.useState(null),
-        [k, I] = e.useState(C),
-        S = e.useCallback(
+        [v, j] = l.useState(null),
+        [k, I] = l.useState(C),
+        S = l.useCallback(
             (t) => {
                 j(t), null == h || h(t);
             },
             [h],
         ),
-        w = e.useCallback(async () => {
+        w = l.useCallback(async () => {
             if (null != v) {
                 let t = c.Z.getChannelId();
                 null != t &&
@@ -54,7 +54,7 @@ function h(t) {
                     await n());
             }
         }, [v, k, n]);
-    return (0, a.jsx)(l.Modal, {
+    return (0, a.jsx)(e.Modal, {
         transitionState: i,
         onClose: n,
         title: p,
@@ -74,6 +74,7 @@ function h(t) {
                 text: u.intl.string(u.t.TXNS7S),
                 onClick: w,
                 loading: !1,
+                disabled: null == v,
             },
         ],
         children: (0, a.jsx)(r.Z, {

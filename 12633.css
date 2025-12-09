@@ -85715,21 +85715,8 @@ div.nagbar_d74ef8 {
     outline-offset: -2px
 }
 
-.container__25eff {
-    height: 400px
-}
-
 .channelIdSection__25eff {
     margin-top: 8px
-}
-
-.inputWrapper__25eff {
-    padding: 16px 16px 0
-}
-
-.voiceChannelList__25eff {
-    height: 340px;
-    padding: 0 16px
 }
 
 .guildName__25eff {
@@ -86114,6 +86101,10 @@ div.nagbar_d74ef8 {
     overflow-x: visible;
     scroll-padding-top: 24px;
     scrollbar-gutter: stable both-edges
+}
+
+.tabBar__6131a {
+    margin-bottom: var(--space-24)
 }
 
 .notice__6131a {
