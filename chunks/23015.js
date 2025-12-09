@@ -1,75 +1,77 @@
-n.d(t, { Z: () => m }), n(539854);
+n.d(t, { Z: () => h }), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(481060),
     o = n(758199),
     s = n(914498),
-    l = n(371991),
-    c = n(829820),
-    u = n(276852),
-    d = n(691731),
-    f = n(967249),
-    p = n(388032),
-    _ = n(837262);
-function m(e) {
-    var t, n, m, h;
+    l = n(368176),
+    c = n(371991),
+    u = n(829820),
+    d = n(276852),
+    f = n(691731),
+    p = n(967249),
+    _ = n(388032),
+    m = n(837262);
+function h(e) {
+    var t, n, h, g;
     let {
-            application: g,
-            message: E,
-            header: b,
-            presenceActivity: y,
-            hideParty: O,
-            partyStatusElement: v,
-            currentUserPresenceActivity: S,
-            onClickContent: I,
-            onView: T,
-            guildId: A,
+            application: E,
+            message: b,
+            header: y,
+            presenceActivity: O,
+            hideParty: v,
+            partyStatusElement: S,
+            currentUserPresenceActivity: I,
+            onClickContent: T,
+            onView: A,
+            guildId: C,
         } = e,
-        C = (0, d.g)(S, y),
-        N = (0, c.Lz)(y, E.author, "Invite Embed"),
-        P = i.useMemo(() => {
+        { enabled: N } = l.Q.useConfig({ location: "rich_presence_spotify_invite" }),
+        P = (0, f.g)(I, O),
+        R = (0, u.Lz)(O, b.author, "Invite Embed"),
+        w = i.useMemo(() => {
             let e = [];
-            if (!C) {
+            if (!P) {
                 var t;
                 e.push({
-                    label: null != (t = N.label) ? t : p.intl.string(p.t.VJlc0S),
+                    label: null != (t = R.label) ? t : _.intl.string(_.t.VJlc0S),
                     trackingArea: s.j_.SYNC,
                     onClick: () => {
-                        N.onClick();
+                        R.onClick();
                     },
-                    disabled: N.disabled,
-                    disabledReason: N.disabled ? N.tooltip : void 0,
+                    disabled: R.disabled,
+                    disabledReason: R.disabled ? R.tooltip : void 0,
                 });
             }
             return e;
-        }, [C, N]),
-        R =
-            null != y && null != y.details && null != y.state
-                ? p.intl.formatToPlainString(p.t.JCvHtx, {
-                      track: y.details,
-                      artist: y.state,
+        }, [P, R]),
+        D =
+            null != O && null != O.details && null != O.state
+                ? _.intl.formatToPlainString(_.t.JCvHtx, {
+                      track: O.details,
+                      artist: O.state,
                   })
-                : g.name,
-        w =
-            null != (m = null == y || null == (t = y.timestamps) ? void 0 : t.start)
-                ? m
-                : null == y
+                : E.name,
+        x =
+            null != (h = null == O || null == (t = O.timestamps) ? void 0 : t.start)
+                ? h
+                : null == O
                   ? void 0
-                  : y.created_at,
-        D = i.useMemo(() => {
+                  : O.created_at,
+        L = i.useMemo(() => {
             var e;
-            return null != w
+            return null != x
                 ? (0, r.jsxs)("div", {
-                      className: _.timestampContainer,
+                      className: m.timestampContainer,
                       children: [
                           (0, r.jsx)(a.RZG, {
                               size: "xxs",
-                              color: "currentColor",
+                              color: N ? a.TVs.colors.ICON_FEEDBACK_POSITIVE : "currentColor",
                           }),
-                          (0, r.jsx)(l.x3, {
+                          (0, r.jsx)(c.x3, {
                               entry: {
-                                  start: w,
-                                  end: null == y || null == (e = y.timestamps) ? void 0 : e.end,
+                                  start: x,
+                                  end: null == O || null == (e = O.timestamps) ? void 0 : e.end,
                               },
                               textColor: "currentColor",
                               textTabularNumbers: !1,
@@ -78,39 +80,39 @@ function m(e) {
                       ],
                   })
                 : null;
-        }, [w, null == y || null == (n = y.timestamps) ? void 0 : n.end]),
-        x = i.useMemo(
+        }, [x, null == O || null == (n = O.timestamps) ? void 0 : n.end, N]),
+        j = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
-                    className: _.info,
+                    className: m.info,
                     children: [
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
-                            className: _.tagline,
+                            className: m.tagline,
                             color: "none",
                             lineClamp: 1,
-                            children: D,
+                            children: L,
                         }),
-                        O ? null : v,
+                        v ? null : S,
                     ],
                 }),
-            [D, O, v],
+            [L, v, S],
         );
     return (0, r.jsx)(o.W, {
-        header: b,
-        title: R,
-        iconSrc: null != (h = (0, u.Z)(y, g.id)) ? h : void 0,
-        info: x,
-        actions: P,
-        onClickContent: I,
+        header: y,
+        title: D,
+        iconSrc: null != (g = (0, d.Z)(O, E.id)) ? g : void 0,
+        info: j,
+        actions: w,
+        onClickContent: T,
         trackingConfig: {
-            id: g.id,
-            linkType: f.U.RICH_PRESENCE_INVITE,
-            onView: T,
-            referrerId: E.author.id,
-            guildId: A,
-            channelId: E.channel_id,
-            messageId: E.id,
+            id: E.id,
+            linkType: p.U.RICH_PRESENCE_INVITE,
+            onView: A,
+            referrerId: b.author.id,
+            guildId: C,
+            channelId: b.channel_id,
+            messageId: b.id,
         },
     });
 }

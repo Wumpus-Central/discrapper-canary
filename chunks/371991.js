@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => b,
-    tS: () => g,
-    x3: () => E,
+    ZP: () => y,
+    tS: () => E,
+    x3: () => b,
 }),
     n(388685);
 var r = n(54381),
@@ -17,8 +17,9 @@ var r = n(54381),
     p = n(506071),
     _ = n(719247),
     m = n(561308),
-    h = n(284635);
-function g(e) {
+    h = n(368176),
+    g = n(284635);
+function E(e) {
     let [t, n] = i.useState(Date.now()),
         r = (0, p.n)(),
         a = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
@@ -39,7 +40,7 @@ function g(e) {
         }
     );
 }
-let E = (e) => {
+let b = (e) => {
         let {
                 entry: t,
                 inline: n = !1,
@@ -50,33 +51,34 @@ let E = (e) => {
                 bold: d = !1,
                 scaleFontToUserSetting: f = !1,
             } = e,
-            { now: p } = g(u),
-            _ = i.useMemo(() => (0, m.T_)(t, p), [t, p]),
-            E = i.useRef(_),
-            b = i.useRef(_);
+            { now: p } = E(u),
+            { enabled: _ } = h.Q.useConfig({ location: "active_timestamp" }),
+            b = i.useMemo(() => (0, m.T_)(t, p), [t, p]),
+            y = i.useRef(b),
+            O = i.useRef(b);
         return (
             i.useEffect(() => {
-                b.current = _;
+                O.current = b;
             }),
             i.useEffect(() => {
-                E.current = b.current;
+                y.current = O.current;
             }, [t]),
             (0, r.jsx)(c.Text, {
                 className: o()({
-                    [h.fontCode]: l,
-                    [h.bold]: d,
-                    [h.inlineTimestamp]: n,
+                    [g.fontCode]: !!_ || l,
+                    [g.bold]: !_ && d,
+                    [g.inlineTimestamp]: n,
                 }),
-                variant: "text-xs/medium",
+                variant: _ ? "text-xs/normal" : "text-xs/medium",
                 tabularNumbers: s,
-                color: a,
+                color: _ ? "text-feedback-positive" : a,
                 scaleFontToUserSetting: f,
-                "aria-label": E.current,
-                children: _,
+                "aria-label": y.current,
+                children: b,
             })
         );
     },
-    b = (e) => {
+    y = (e) => {
         var t, n;
         let { entry: i, textColor: a, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: u = !1 } = e,
             f = (0, m.Jg)(i),
@@ -89,7 +91,7 @@ let E = (e) => {
                       ? void 0
                       : h.created_at;
         return null != g
-            ? (0, r.jsx)(E, {
+            ? (0, r.jsx)(b, {
                   entry: { start: g },
                   textColor: a,
                   hovered: o,
@@ -97,7 +99,7 @@ let E = (e) => {
                   scaleFontToUserSetting: u,
               })
             : f
-              ? (0, r.jsx)(E, {
+              ? (0, r.jsx)(b, {
                     entry: i,
                     textColor: a,
                     hovered: o,
