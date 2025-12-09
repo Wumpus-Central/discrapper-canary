@@ -8,9 +8,14 @@ var i = n(442837),
     c = n(582113),
     u = n(354459);
 function d(e) {
-    let { location: t, channel: n } = e,
+    let { location: t, channelId: n } = e,
         d = (0, s.cZ)({ location: t }),
-        [p] = (0, i.e7)([l.Z], () => [l.Z.getParticipants(n.id), l.Z.getParticipantsVersion(n.id)], [n.id], r.Lc),
+        [p] = (0, i.e7)(
+            [l.Z],
+            () => (null != n ? [l.Z.getParticipants(n), l.Z.getParticipantsVersion(n)] : [[], 0]),
+            [n],
+            r.Lc,
+        ),
         h = (0, i.e7)([o.Z], () => {
             for (let e of p)
                 if ((0, u.Io)(e) || (0, u._5)(e)) {

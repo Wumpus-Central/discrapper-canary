@@ -492,7 +492,7 @@ let eA = function (e) {
             return (null != (e = null == L ? void 0 : L.channelId) ? e : el.Z.getVoiceChannelId()) === n.id;
         }),
         G = (0, F.Z)({
-            channel: n,
+            channelId: n.id,
             location: "center-control-tray",
         }),
         z = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
