@@ -125,6 +125,10 @@ function m(e) {
             questBarHeroVideo: e.assets.quest_bar_hero_video,
             gameTile: e.assets.game_tile,
             logotype: e.assets.logotype,
+            logotypeLight: e.assets.logotype_light,
+            logotypeDark: e.assets.logotype_dark,
+            gameTileLight: e.assets.game_tile_light,
+            gameTileDark: e.assets.game_tile_dark,
         },
         colors: {
             primary: e.colors.primary,
