@@ -1,4 +1,4 @@
-r.r(t), r.d(t, { default: () => k }), r(388685), r(314940);
+r.r(t), r.d(t, { default: () => C }), r(388685), r(314940);
 var n = r(54381),
     i = r(473749),
     a = r(512722),
@@ -13,13 +13,13 @@ var n = r(54381),
     g = r(283066),
     h = r(876917),
     m = r(594174),
-    b = r(508925),
-    j = r(616066),
-    w = r(216541),
-    y = r(302800),
+    j = r(508925),
+    b = r(616066),
+    y = r(684263),
+    w = r(302800),
     v = r(388032),
-    P = r(186175),
-    O = r(593639),
+    O = r(186175),
+    P = r(593639),
     E = r(945182),
     x = r(234286);
 function _(e) {
@@ -54,12 +54,12 @@ let S = (e) => {
                 let e = m.default.getCurrentUser();
                 return s()(null != e, "User cannot be undefined"), e;
             }),
-            y = Object.values(u.a).includes(t.skuId),
+            w = Object.values(u.a).includes(t.skuId),
             _ = (0, g.Z)({ location: "CollectiblesProductPreview" });
         return (0, o.EQ)(t.type)
             .with(c.Z.PROFILE_EFFECT, () =>
                 (0, n.jsx)("div", {
-                    className: P.profileEffectShopPreview,
+                    className: O.profileEffectShopPreview,
                     children: (0, n.jsx)(h.Z, {
                         skuId: a.skuId,
                         delayProfileEffectIntro: i,
@@ -68,7 +68,7 @@ let S = (e) => {
                 }),
             )
             .with(c.Z.AVATAR_DECORATION, () =>
-                (0, n.jsx)(j.R, {
+                (0, n.jsx)(b.R, {
                     item: a,
                     user: l,
                     avatarSize: f.EFr.SIZE_120,
@@ -78,7 +78,7 @@ let S = (e) => {
             )
             .with(c.Z.NAMEPLATE, () =>
                 (0, n.jsx)("div", {
-                    className: P.nameplate,
+                    className: O.nameplate,
                     children: (0, n.jsx)(p.Z, {
                         nameplate: a,
                         user: l,
@@ -89,9 +89,8 @@ let S = (e) => {
             )
             .with(c.Z.BUNDLE, () =>
                 (0, n.jsx)("div", {
-                    className: P.bundlePreview,
-                    children: (0, n.jsx)(w.d, {
-                        containerClassName: P.bundlePreviewContainer,
+                    className: O.bundlePreview,
+                    children: (0, n.jsx)(y.U, {
                         product: t,
                         user: l,
                         isPurchased: !1,
@@ -101,7 +100,7 @@ let S = (e) => {
                 }),
             )
             .with(c.Z.EXTERNAL_SKU, () => {
-                if (y)
+                if (w)
                     if (r)
                         return (0, n.jsx)("img", {
                             src: _ ? x : E,
@@ -110,14 +109,14 @@ let S = (e) => {
                         });
                     else
                         return (0, n.jsx)("img", {
-                            src: O,
+                            src: P,
                             alt: v.intl.string(v.t.g5W1g8),
                         });
-                return (0, n.jsx)(b.b, { product: t });
+                return (0, n.jsx)(j.b, { product: t });
             })
             .otherwise(() => null);
     },
-    C = (e) => {
+    k = (e) => {
         let { reducedMotion: t, displayOptions: r } = e,
             [a, s] = i.useState(!1),
             o = (0, f.q_F)({
@@ -164,12 +163,12 @@ let S = (e) => {
         return (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)(l.animated.div, {
-                    className: P.easterEggContainer,
+                    className: O.easterEggContainer,
                     style: o,
                     children: (0, n.jsx)(S, _({}, e)),
                 }),
                 (0, n.jsx)(l.animated.div, {
-                    className: P.easterEggContainer,
+                    className: O.easterEggContainer,
                     style: t ? u : c,
                     children: (0, n.jsx)("img", {
                         src: r.getSrc(),
@@ -181,12 +180,12 @@ let S = (e) => {
             ],
         });
     };
-function k(e) {
+function C(e) {
     var t, r;
-    let i = (0, y.v)(e.product.categorySkuId);
+    let i = (0, w.v)(e.product.categorySkuId);
     return null != i
         ? (0, n.jsx)(
-              C,
+              k,
               ((t = _({}, e)),
               (r = r = { displayOptions: i }),
               Object.getOwnPropertyDescriptors

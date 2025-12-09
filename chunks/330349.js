@@ -1,25 +1,23 @@
 n.d(t, {
-    L: () => s,
-    N: () => o,
+    L: () => o,
+    N: () => s,
 });
 var r = n(884697),
-    i = n(328456);
-function a(e) {
-    let t = new i.bB(e.items);
+    l = n(328456);
+function i(e) {
+    let t = new l.bB(e.items);
     return {
         firstProfileEffect: t.firstProfileEffect,
         firstAvatarDecoration: t.firstAvatarDecoration,
         firstNameplate: t.firstNameplate,
     };
 }
-function o(e) {
-    let { firstAvatarDecoration: t, firstProfileEffect: n, firstNameplate: r } = a(e),
-        i = null != t && null != n && null == r,
-        o = null != t && null != n && null != r;
-    return i || o;
-}
 function s(e) {
+    let { firstAvatarDecoration: t, firstProfileEffect: n, firstNameplate: r } = i(e);
+    return (null != t && null != n && null == r) || (null != t && null != n && null != r);
+}
+function o(e) {
     if (!(0, r.x6)(e)) return !1;
-    let { firstNameplate: t } = a(e);
+    let { firstNameplate: t } = i(e);
     return null != t;
 }

@@ -1,48 +1,51 @@
-n.d(t, { U: () => _ });
+n.d(t, { U: () => E });
 var r = n(54381),
     i = n(473749),
-    l = n(120356),
-    o = n.n(l),
-    a = n(780384),
-    s = n(481060),
+    a = n(120356),
+    o = n.n(a),
+    s = n(780384),
+    l = n(481060),
     c = n(410030),
     u = n(566697),
     d = n(876917),
     f = n(328456),
-    h = n(619899),
-    p = n(616066),
-    g = n(689157),
-    m = n(63243),
-    b = n(244488);
-let _ = i.memo(function (e) {
-    let { product: t, isPurchased: n, isHighlighted: i, user: l } = e,
-        { firstProfileEffect: _, firstAvatarDecoration: y, firstNameplate: O } = (0, f.Rj)(t),
-        v = (0, h.O1)(y),
-        j = (0, c.ZP)(),
-        x = (0, a.ap)(j),
-        C = null != O && null != y && null != _,
-        E = C ? s.EFr.SIZE_72 : s.EFr.SIZE_80;
+    p = n(619899),
+    _ = n(616066),
+    m = n(689157),
+    h = n(63243),
+    g = n(244488);
+let E = i.memo(function (e) {
+    let { product: t, isPurchased: n, isHighlighted: i, user: a, forCollectedModal: E } = e,
+        { firstProfileEffect: b, firstAvatarDecoration: y, firstNameplate: O } = (0, f.Rj)(t),
+        v = (0, p.O1)(y),
+        S = (0, c.ZP)(),
+        I = (0, s.ap)(S),
+        T = null != O && null != y && null != b,
+        A = T ? l.EFr.SIZE_72 : l.EFr.SIZE_80,
+        C = I ? g : h;
     return (0, r.jsxs)("div", {
-        className: o()(g.container, {
-            [g.twoItemBundle]: !C,
-            [g.threeItemBundle]: C,
+        className: o()(m.container, {
+            [m.twoItemBundle]: !T,
+            [m.threeItemBundle]: T,
         }),
         children: [
-            null != _ &&
+            null != b &&
                 (0, r.jsx)("div", {
-                    className: g.profileEffectShopPreview,
+                    className: m.profileEffectShopPreview,
                     children: (0, r.jsx)(d.Z, {
                         isHighlighted: i,
-                        skuId: _.skuId,
+                        skuId: b.skuId,
                         isPurchased: n,
                         removeSetHeight: !0,
+                        delayProfileEffectIntro: E,
+                        withScaleAnimation: E,
                     }),
                 }),
-            C &&
+            T &&
                 (0, r.jsx)("div", {
-                    className: g.nameplatePreview,
+                    className: m.nameplatePreview,
                     children: (0, r.jsx)(u.Z, {
-                        user: l,
+                        user: a,
                         nameplate: O,
                         isHighlighted: i,
                         isPurchased: n,
@@ -52,15 +55,15 @@ let _ = i.memo(function (e) {
                 }),
             null != v &&
                 (0, r.jsx)("div", {
-                    className: g.avatarDecorationPreview,
-                    children: (0, r.jsx)(p.R, {
+                    className: m.avatarDecorationPreview,
+                    children: (0, r.jsx)(_.R, {
                         item: v,
-                        user: l,
-                        avatarSize: E,
+                        user: a,
+                        avatarSize: A,
                         isPurchased: n,
                         isHighlighted: i,
-                        avatarPlaceholderSrc: x ? b : m,
-                        className: g.avatar,
+                        avatarPlaceholderSrc: C,
+                        className: m.avatar,
                     }),
                 }),
         ],
