@@ -1,11 +1,10 @@
-n.d(t, { Z: () => i });
-var r = n(231338);
-function i(e) {
+n.d(t, { Z: () => a });
+var r = n(981631),
+    i = n(231338);
+function a(e) {
     var t;
-    let { activities: n, status: i, applicationStream: a, voiceChannel: o } = e;
-    return (
-        i !== r.Sk.OFFLINE &&
-        i !== r.Sk.INVISIBLE &&
-        (null != a || null != o || (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0)
-    );
+    let { activities: n, status: a, applicationStream: o, voiceChannel: s } = e;
+    if (a === i.Sk.OFFLINE || a === i.Sk.INVISIBLE) return !1;
+    let l = null == n ? void 0 : n.filter((e) => e.type !== r.IIU.HANG_STATUS || null != s);
+    return null != o || null != s || (null != (t = null == l ? void 0 : l.length) ? t : 0) > 0;
 }

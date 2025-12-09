@@ -29912,43 +29912,6 @@ img.thumbnail__0f2e8 {
     object-fit: cover
 }
 
-.coachtip_b61b37 {
-    max-height: 92px;
-    max-width: 330px;
-    min-height: 92px;
-    min-width: 330px;
-    -webkit-margin-end: 16px;
-    filter: drop-shadow(0 8px 8px var(--opacity-black-32));
-    margin-inline-end: 16px;
-    margin-bottom: 16px
-}
-
-.coachtip_b61b37,
-.coachtipContent_b61b37 {
-    display: flex
-}
-
-.coachtipInner_b61b37 {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    position: relative
-}
-
-.coachtipAsset_b61b37 {
-    height: 117px;
-    position: relative;
-    width: 130px
-}
-
-.coachtipTextContainer_b61b37 {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    max-width: 160px
-}
-
 .loadingSpinner__5b1b2 {
     -webkit-margin-end: 8px;
     height: 24px;
