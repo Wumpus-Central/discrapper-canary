@@ -311,6 +311,7 @@ let R = (e) => {
             stepConfigs: L,
             purchaseType: I.GZQ.ONE_TIME,
             skuIDs: [t],
+            paymentGateway: I.gg$.VIRTUAL_CURRENCY,
             excludeSubscriptionPlansBySKU: !0,
             excludeSKUPurchasePreviews: !0,
             children: (0, r.jsx)(O.dv, {

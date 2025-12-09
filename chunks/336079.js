@@ -11,7 +11,7 @@ var r = n(54381),
     l = n(27123),
     c = n(594174),
     u = n(74538),
-    d = n(43747);
+    d = n(128077);
 let f = (0, i.createContext)({
         skuId: "123",
         loadId: (0, a.Z)(),
@@ -41,7 +41,14 @@ let f = (0, i.createContext)({
                     product: _,
                 };
             }, [_, p, f]),
-            { redeemVirtualCurrency: h, isSubmitting: g, error: E } = (0, d.f)(),
+            {
+                redeemVirtualCurrency: h,
+                isSubmitting: g,
+                error: E,
+            } = (0, d.f)({
+                skuId: t,
+                loadId: n,
+            }),
             b = (0, i.useCallback)(
                 (e) => {
                     h(

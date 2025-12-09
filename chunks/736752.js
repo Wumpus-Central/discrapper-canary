@@ -365,7 +365,7 @@ class K extends i.PureComponent {
               : void (n.isClaimed()
                     ? (0, c.h7j)((e) =>
                           (0, r.jsx)(
-                              O.Z,
+                              O.default,
                               Y(V({}, e), {
                                   handleSubmit: (e) => this.handleSubmitDisableAccount(e, t),
                                   title: t ? Z.intl.string(Z.t["8lQ2rR"]) : Z.intl.string(Z.t.jf5GGb),

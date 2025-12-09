@@ -11,8 +11,8 @@ var i = n(481060),
     d = n(852758),
     p = n(314897),
     f = n(594174),
-    h = n(374023),
-    g = n(886162),
+    g = n(374023),
+    h = n(886162),
     m = n(981631),
     _ = n(815660),
     b = n(308569),
@@ -26,7 +26,7 @@ let O = {
     },
     handleRequiredAction(e) {
         let t = e.requiredAction;
-        !h.s.isDisallowPopupsSet() &&
+        !g.s.isDisallowPopupsSet() &&
             null != f.default.getCurrentUser() &&
             (t === m.c2C.REQUIRE_CAPTCHA ||
             t === m.c2C.REQUIRE_VERIFIED_EMAIL ||
@@ -55,7 +55,7 @@ let O = {
                   ? (0, i.h7j)(
                         (e) =>
                             (0, r.jsx)(
-                                g.Z,
+                                h.default,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},

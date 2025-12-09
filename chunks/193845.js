@@ -1,87 +1,88 @@
-r.d(t, { default: () => N }), r(539854);
-var n = r(54381),
-    s = r(473749),
-    i = r(149765),
-    a = r(755721),
-    l = r(481060),
-    o = r(422559),
-    c = r(601964),
-    d = r(485386),
-    m = r(768581),
-    u = r(700785),
-    x = r(84058),
-    p = r(981631),
-    b = r(135899),
-    h = r(388032),
-    j = r(56726);
-function _(e) {
+n.d(t, { default: () => f }), n(539854);
+var i = n(54381),
+    a = n(473749),
+    o = n(149765),
+    r = n(755721),
+    l = n(481060),
+    s = n(422559),
+    c = n(601964),
+    d = n(485386),
+    _ = n(768581),
+    p = n(700785),
+    u = n(84058),
+    m = n(981631),
+    E = n(135899),
+    O = n(388032),
+    S = n(56726);
+function h(e) {
     let { guild: t } = e,
-        r = m.ZP.getGuildIconURL({
+        n = _.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
             size: 120,
         });
-    return (0, n.jsxs)(l.xBx, {
-        className: j.header,
+    return (0, i.jsxs)(l.xBx, {
+        className: S.header,
+        "data-migration-pending": !0,
         children: [
-            (0, n.jsx)("div", {
-                className: j.headerIconContainer,
+            (0, i.jsx)("div", {
+                className: S.headerIconContainer,
                 children:
-                    null != r
-                        ? (0, n.jsx)(l.qEK, {
-                              src: r,
+                    null != n
+                        ? (0, i.jsx)(l.qEK, {
+                              src: n,
                               "aria-label": t.name,
                               size: l.EFr.SIZE_120,
-                              className: j.__invalid_guildIcon,
+                              className: S.__invalid_guildIcon,
                           })
-                        : (0, n.jsx)("div", {
-                              className: j.acronym,
+                        : (0, i.jsx)("div", {
+                              className: S.acronym,
                               children: (0, c.gM)(t),
                           }),
             }),
-            (0, n.jsxs)("div", {
-                className: j.headerText,
+            (0, i.jsxs)("div", {
+                className: S.headerText,
                 children: [
-                    (0, n.jsx)(l.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         variant: "heading-lg/extrabold",
                         color: "header-primary",
-                        children: h.intl.string(h.t.MatO7M),
+                        children: O.intl.string(O.t.MatO7M),
                     }),
-                    (0, n.jsx)(l.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: "text-md/normal",
                         color: "header-primary",
-                        children: h.intl.string(h.t.VyPIeu),
+                        children: O.intl.string(O.t.VyPIeu),
                     }),
                 ],
             }),
         ],
     });
 }
-let f = (e) => (e.toString() === p.Plq.MENTION_EVERYONE.toString() ? h.intl.string(h.t.yCpsQw) : (0, o.wt)(e));
-function g(e) {
+let I = (e) => (e.toString() === m.Plq.MENTION_EVERYONE.toString() ? O.intl.string(O.t.yCpsQw) : (0, s.wt)(e));
+function T(e) {
     let { permissions: t } = e;
-    return (0, n.jsxs)("div", {
-        className: j.tableContainer,
+    return (0, i.jsxs)("div", {
+        className: S.tableContainer,
         children: [
-            (0, n.jsx)(l.Text, {
-                className: j.tableHeader,
+            (0, i.jsx)(l.Text, {
+                className: S.tableHeader,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: h.intl.string(h.t["0WZKI4"]),
+                children: O.intl.string(O.t["0WZKI4"]),
             }),
-            (0, n.jsx)("div", {
-                className: j.permissionsTable,
+            (0, i.jsx)("div", {
+                className: S.permissionsTable,
                 children: t.map((e, t) =>
-                    (0, n.jsxs)(
+                    (0, i.jsxs)(
                         "div",
                         {
-                            className: j.permissionRow,
+                            className: S.permissionRow,
                             children: [
-                                (0, n.jsx)("div", { className: j.bulletWarning }),
-                                (0, n.jsx)(l.Text, {
+                                (0, i.jsx)("div", { className: S.bulletWarning }),
+                                (0, i.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
-                                    children: f(e),
+                                    children: I(e),
                                 }),
                             ],
                         },
@@ -92,30 +93,30 @@ function g(e) {
         ],
     });
 }
-function v(e) {
+function N(e) {
     let { permissions: t } = e;
-    return (0, n.jsxs)("div", {
-        className: j.tableContainer,
+    return (0, i.jsxs)("div", {
+        className: S.tableContainer,
         children: [
-            (0, n.jsx)(l.Text, {
-                className: j.tableHeader,
+            (0, i.jsx)(l.Text, {
+                className: S.tableHeader,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: h.intl.string(h.t.Yo5qlq),
+                children: O.intl.string(O.t.Yo5qlq),
             }),
-            (0, n.jsx)("div", {
-                className: j.permissionsTable,
+            (0, i.jsx)("div", {
+                className: S.permissionsTable,
                 children: t.map((e, t) =>
-                    (0, n.jsxs)(
+                    (0, i.jsxs)(
                         "div",
                         {
-                            className: j.permissionRow,
+                            className: S.permissionRow,
                             children: [
-                                (0, n.jsx)("div", { className: j.bullet }),
-                                (0, n.jsx)(l.Text, {
+                                (0, i.jsx)("div", { className: S.bullet }),
+                                (0, i.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: f(e),
+                                    children: I(e),
                                 }),
                             ],
                         },
@@ -128,113 +129,116 @@ function v(e) {
 }
 function y(e) {
     let { permissions: t } = e,
-        { enabledPermissions: r, disabledPermissions: s } = t;
-    return (0, n.jsx)(l.hzk, {
-        children: (0, n.jsxs)("div", {
-            className: j.table,
-            children: [(0, n.jsx)(g, { permissions: r }), (0, n.jsx)(v, { permissions: s })],
+        { enabledPermissions: n, disabledPermissions: a } = t;
+    return (0, i.jsx)(l.hzk, {
+        "data-migration-pending": !0,
+        children: (0, i.jsxs)("div", {
+            className: S.table,
+            children: [(0, i.jsx)(T, { permissions: n }), (0, i.jsx)(N, { permissions: a })],
         }),
     });
 }
-function O(e) {
-    let { onConfirm: t, onDismiss: r } = e;
-    return (0, n.jsxs)(l.mzw, {
-        className: j.footer,
+function b(e) {
+    let { onConfirm: t, onDismiss: n } = e;
+    return (0, i.jsxs)(l.mzw, {
+        className: S.footer,
+        "data-migration-pending": !0,
         children: [
-            (0, n.jsx)(l.Button, {
+            (0, i.jsx)(l.Button, {
                 variant: "primary",
-                text: h.intl.string(h.t.iOSdAW),
+                text: O.intl.string(O.t.iOSdAW),
                 onClick: t,
             }),
-            (0, n.jsx)(a.zx, {
-                look: a.zx.Looks.LINK,
-                onClick: r,
-                color: a.zx.Colors.PRIMARY,
-                children: (0, n.jsx)(l.Text, {
+            (0, i.jsx)(r.zx, {
+                look: r.zx.Looks.LINK,
+                onClick: n,
+                color: r.zx.Colors.PRIMARY,
+                children: (0, i.jsx)(l.Text, {
                     variant: "text-sm/semibold",
                     color: "header-primary",
-                    children: h.intl.string(h.t.gWQZvr),
+                    children: O.intl.string(O.t.gWQZvr),
                 }),
             }),
         ],
     });
 }
-function N(e) {
-    let { guild: t, transitionState: r, onClose: a } = e,
-        o = s.useMemo(() => {
+function f(e) {
+    let { guild: t, transitionState: n, onClose: r } = e,
+        s = a.useMemo(() => {
             let e = [],
-                r = [];
+                n = [];
             return (
-                b.$X.map((n) => {
-                    u.oz(n, t) ? e.push(n) : r.push(n);
+                E.$X.map((i) => {
+                    p.oz(i, t) ? e.push(i) : n.push(i);
                 }),
                 {
                     enabledPermissions: e,
-                    disabledPermissions: r,
+                    disabledPermissions: n,
                 }
             );
         }, [t]);
     if (null == t) return null;
     let c = async () => {
-        var e, r;
-        let n = null != t ? d.Z.getEveryoneRole(t) : void 0;
-        if (null == n) return;
-        let s = i.Od(n.permissions, b.mu);
-        await (0, x.Gf)(t.id, [
+        var e, n;
+        let i = null != t ? d.Z.getEveryoneRole(t) : void 0;
+        if (null == i) return;
+        let a = o.Od(i.permissions, E.mu);
+        await (0, u.Gf)(t.id, [
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                    var r = null != arguments[t] ? arguments[t] : {},
-                        n = Object.keys(r);
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        i = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (n = n.concat(
-                            Object.getOwnPropertySymbols(r).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        (i = i.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        n.forEach(function (t) {
-                            var n;
-                            (n = r[t]),
+                        i.forEach(function (t) {
+                            var i;
+                            (i = n[t]),
                                 t in e
                                     ? Object.defineProperty(e, t, {
-                                          value: n,
+                                          value: i,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[t] = n);
+                                    : (e[t] = i);
                         });
                 }
                 return e;
-            })({}, n)),
-            (r = r = { permissions: s }),
+            })({}, i)),
+            (n = n = { permissions: a }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
+                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
-                      var r = Object.keys(e);
+                      var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var n = Object.getOwnPropertySymbols(e);
-                          r.push.apply(r, n);
+                          var i = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, i);
                       }
-                      return r;
-                  })(Object(r)).forEach(function (t) {
-                      Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
+                      return n;
+                  })(Object(n)).forEach(function (t) {
+                      Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                   }),
             e),
         ]),
-            a();
+            r();
     };
-    return (0, n.jsxs)(l.Y0X, {
-        transitionState: r,
+    return (0, i.jsxs)(l.Y0X, {
+        transitionState: n,
         size: l.CgR.SMALL,
-        className: j.modal,
+        className: S.modal,
         parentComponent: "DisableRiskyPermsModal",
+        "data-migration-pending": !0,
         children: [
-            (0, n.jsx)(_, { guild: t }),
-            (0, n.jsx)(y, { permissions: o }),
-            (0, n.jsx)(O, {
+            (0, i.jsx)(h, { guild: t }),
+            (0, i.jsx)(y, { permissions: s }),
+            (0, i.jsx)(b, {
                 onConfirm: c,
                 onDismiss: () => {
-                    a();
+                    r();
                 },
             }),
         ],

@@ -59,7 +59,7 @@ let _ = i.forwardRef(function (e, t) {
             [n, _, v, h, E, b],
         );
     return null != v
-        ? (0, r.jsx)(f.Z, {
+        ? (0, r.jsx)(f.default, {
               onClose: _,
               transitionState: m,
               title: p.intl.string(p.t.ZtCDc2),
