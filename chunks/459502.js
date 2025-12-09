@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => v });
 var i = n(54381);
 n(473749);
 var r = n(442837),
@@ -15,11 +15,11 @@ var r = n(442837),
     m = n(504160),
     g = n(554747),
     b = n(854698),
-    y = n(688641),
-    C = n(388032),
-    v = n(837815);
-function _(e) {
-    let { channelId: t, showDismiss: _ = !0 } = e,
+    C = n(688641),
+    y = n(388032),
+    _ = n(837815);
+function v(e) {
+    let { channelId: t, showDismiss: v = !0 } = e,
         O = (0, r.e7)([u.Z], () => u.Z.getChannel(t), [t]),
         x = (0, g.sz)(t),
         E = null != (0, g.qY)(t),
@@ -33,7 +33,7 @@ function _(e) {
         : (0, i.jsx)(i.Fragment, {
               children: S.map((e) =>
                   (0, i.jsx)(
-                      y.Z,
+                      C.Z,
                       {
                           icon: (0, i.jsx)(a.Que, {
                               size: "custom",
@@ -42,8 +42,8 @@ function _(e) {
                               width: 20,
                           }),
                           color: l.Z.unsafe_rawColors.GREEN_360.css,
-                          title: C.intl.formatToPlainString(j(e) ? C.t["1vGXqM"] : C.t.xMJyla, { eventName: e.name }),
-                          description: C.intl.formatToPlainString(C.t.PTebCR, {
+                          title: y.intl.formatToPlainString(j(e) ? y.t["1vGXqM"] : y.t.xMJyla, { eventName: e.name }),
+                          description: y.intl.formatToPlainString(y.t.PTebCR, {
                               startTime: (0, b.ub)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () =>
@@ -119,14 +119,14 @@ function _(e) {
                                         ? r()
                                         : (0, p.bO)({ eventId: e.id });
                               })(e),
-                          onDismiss: _
+                          onDismiss: v
                               ? () => {
                                     var t;
                                     return (t = e.id), void (0, m.Xy)(t);
                                 }
                               : void 0,
                           userCount: P[e.id],
-                          className: v.eventPrompt,
+                          className: _.eventPrompt,
                       },
                       e.id,
                   ),

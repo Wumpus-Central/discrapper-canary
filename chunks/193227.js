@@ -19,8 +19,8 @@ var r = n(54381),
     E = n(258939),
     v = n(81136),
     S = n(619899),
-    O = n(215023),
-    x = n(887353);
+    x = n(215023),
+    O = n(887353);
 function y(e) {
     let { category: t } = e,
         n = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
@@ -31,7 +31,7 @@ function y(e) {
     return null == n || 0 === s.length
         ? null
         : (0, r.jsx)("div", {
-              className: x.cardsContainer,
+              className: O.cardsContainer,
               children: s.map((e, t) =>
                   (0, r.jsx)(
                       d.k0,
@@ -42,7 +42,7 @@ function y(e) {
                               {
                                   skuId: e.skuId,
                                   skipLimitedTimeCheck: !0,
-                                  onClickAnalytics: (0, b.wO)(e, O.AW.CATALOG, o),
+                                  onClickAnalytics: (0, b.wO)(e, x.AW.CATALOG, o),
                               },
                               e.skuId,
                           ),
@@ -59,7 +59,7 @@ function k(e) {
             i(e);
         }, 0.15);
     return (0, r.jsxs)("div", {
-        className: x.categoryWrapper,
+        className: O.categoryWrapper,
         ref: s,
         children: [(0, r.jsx)(C.Z, { category: t }), (0, r.jsx)(y, { category: t })],
     });
@@ -90,18 +90,18 @@ function T(e) {
         if (u === y.current) return;
         let e = S.findIndex((e) => e.skuId === u);
         if (-1 === e) return;
-        let t = Math.floor(e / O.kN) + 1;
+        let t = Math.floor(e / x.kN) + 1;
         t !== o && a(t), (y.current = u);
     }, [u, S, a, o]);
     let T = l.useMemo(() => {
-        let e = (o - 1) * O.kN;
-        return S.slice(e, e + O.kN);
+        let e = (o - 1) * x.kN;
+        return S.slice(e, e + x.kN);
     }, [S, o]);
     l.useEffect(() => {
         (0, m.n)({
             sessionId: C,
             checkpoint: m.a.SHOP_MOUNTED,
-            tab: O.AW.CATALOG,
+            tab: x.AW.CATALOG,
             unpublishedCategoriesShown: b,
             cacheDisabled: _,
         });
@@ -112,7 +112,7 @@ function T(e) {
                 (0, m.n)({
                     sessionId: C,
                     checkpoint: m.a.SHOP_RENDERED,
-                    tab: O.AW.CATALOG,
+                    tab: x.AW.CATALOG,
                     unpublishedCategoriesShown: b,
                     cacheDisabled: _,
                 });
@@ -121,7 +121,7 @@ function T(e) {
     return p
         ? (0, r.jsx)(h.Z, {})
         : (0, r.jsxs)("div", {
-              className: s()(x.categories, { [x.categoriesNoFilter]: !j }),
+              className: s()(O.categories, { [O.categoriesNoFilter]: !j }),
               children: [
                   T.map((e, t) =>
                       (0, r.jsx)(
@@ -137,11 +137,11 @@ function T(e) {
                       ),
                   ),
                   (0, r.jsx)("div", {
-                      className: x.paginationContainer,
+                      className: O.paginationContainer,
                       children: (0, r.jsx)(c.DsT, {
                           currentPage: o,
                           totalCount: S.length,
-                          pageSize: O.kN,
+                          pageSize: x.kN,
                           onPageChange: a,
                           disablePaginationGap: !0,
                       }),

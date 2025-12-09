@@ -1,26 +1,26 @@
-n.d(t, { Z: () => a }), n(388685);
-var r = n(54381),
-    s = n(199849),
-    o = n(968843);
-let a = function (e) {
+n.d(t, { Z: () => l }), n(388685);
+var a = n(54381),
+    r = n(199849),
+    i = n(968843);
+let l = function (e) {
     let { onSelect: t, quest: n } = e,
-        { quests: a } = (0, o.J2)({
+        { quests: l } = (0, i.J2)({
             fetchPolicy: "cache-and-network",
             callerSource: "prefill_selector",
         }),
-        i = [
+        s = [
             {
                 label: "NONE",
                 value: null,
             },
-            ...a.map((e) => ({
+            ...l.map((e) => ({
                 label: e.config.messages.questName,
                 value: e,
             })),
         ];
-    return (0, r.jsx)(s.B6, {
+    return (0, a.jsx)(r.B6, {
         label: "Prefill with Quest",
-        options: i,
+        options: s,
         isSelected: (e) => (null == e ? void 0 : e.id) === (null == n ? void 0 : n.id),
         select: t,
         serialize: String,

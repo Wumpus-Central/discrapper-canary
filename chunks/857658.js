@@ -99,12 +99,12 @@ function R(e) {
         }
         v >= o.length && T(0);
     }, [v, o, n]);
-    let w = (e) => {
+    let D = (e) => {
             let t = e.trim();
             return t.startsWith("#") ? t : t.length > 0 ? "#".concat(t) : t;
         },
-        D = (e) => {
-            let t = w(e);
+        w = (e) => {
+            let t = D(e);
             if ((R(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), o.length > 0))) {
                 let e = [...o];
                 (e[v] = t), s(e);
@@ -123,7 +123,7 @@ function R(e) {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
-                    (0, E.J4)(), D(e);
+                    (0, E.J4)(), w(e);
                 } catch (e) {}
         },
         M = () => {
@@ -166,7 +166,7 @@ function R(e) {
                     (0, r.jsx)("input", {
                         className: O.hexInput,
                         value: A.toUpperCase(),
-                        onChange: (e) => D(e.target.value),
+                        onChange: (e) => w(e.target.value),
                         maxLength: 7,
                         placeholder: h.Dp,
                         type: "text",

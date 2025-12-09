@@ -20,9 +20,9 @@ n.d(t, { Z: () => C }),
     n(146733),
     n(539854);
 var a = n(54381),
-    l = n(473749),
-    r = n(345959),
-    i = n.n(r),
+    r = n(473749),
+    i = n(345959),
+    l = n.n(i),
     s = n(442837),
     o = n(199849),
     c = n(755721),
@@ -69,7 +69,7 @@ function _(e) {
     });
 }
 function y(e) {
-    let { recording: t, playing: n, onPlay: l, onStop: r } = e;
+    let { recording: t, playing: n, onPlay: r, onStop: i } = e;
     return (0, a.jsx)(d.zF9, {
         collapsibleContent: (0, a.jsx)(_, { recording: t }),
         children: (e) => {
@@ -85,7 +85,7 @@ function y(e) {
                     (0, a.jsx)(d.P3F, {
                         tag: "span",
                         onClick: (e) => {
-                            e.stopPropagation(), n ? r() : l(t);
+                            e.stopPropagation(), n ? i() : r(t);
                         },
                         children: n ? (0, a.jsx)(d.fpf, { size: "xxs" }) : (0, a.jsx)(d.o1U, { size: "xxs" }),
                     }),
@@ -93,14 +93,14 @@ function y(e) {
                         tag: "span",
                         onClick: (e) => {
                             e.stopPropagation();
-                            let n = new Blob([i()(t.audioBuffer)], { type: "audio/wav" }),
+                            let n = new Blob([l()(t.audioBuffer)], { type: "audio/wav" }),
                                 a = URL.createObjectURL(n),
-                                l = document.createElement("a");
-                            (l.href = a),
-                                (l.download = ""
+                                r = document.createElement("a");
+                            (r.href = a),
+                                (r.download = ""
                                     .concat(t.inputName, "-")
                                     .concat(new Date(t.createdAt).toLocaleString(), ".wav")),
-                                l.click(),
+                                r.click(),
                                 URL.revokeObjectURL(a);
                         },
                         children: (0, a.jsx)(d._8t, { size: "xxs" }),
@@ -112,27 +112,27 @@ function y(e) {
 }
 function C() {
     let { name: e } = (0, x.p6)(b.h7.AUDIO_INPUT),
-        [t, n] = l.useState(!1),
-        [r, i] = l.useState([]),
+        [t, n] = r.useState(!1),
+        [i, l] = r.useState([]),
         _ = (0, s.e7)([f.Z], () => f.Z.getKrispSuppressionLevel()),
-        [C, S] = l.useState(null),
-        E = l.useRef(null),
-        O = l.useRef(null),
-        [N, T] = l.useState(0.5),
+        [C, S] = r.useState(null),
+        E = r.useRef(null),
+        O = r.useRef(null),
+        [T, N] = r.useState(0.5),
         {
             krispModels: P,
-            krispModelOverride: I,
-            inputMode: w,
+            krispModelOverride: w,
+            inputMode: I,
             echoCancellation: k,
             autoThreshold: R,
             vadUseKrisp: A,
-            vadKrispActivationThreshold: Z,
-            noiseCancellation: D,
+            vadKrispActivationThreshold: D,
+            noiseCancellation: Z,
             noiseSuppression: L,
             noiseSuppressionSupported: M,
             noiseCancellationSupported: U,
-            noiseCancellationEnableStats: F,
-            vadDuringPreProcess: B,
+            noiseCancellationEnableStats: B,
+            vadDuringPreProcess: F,
         } = (0, s.cj)([f.Z], () => ({
             krispModels: f.Z.getKrispModels(),
             krispModelOverride: f.Z.getKrispModelOverride(),
@@ -148,31 +148,31 @@ function C() {
             noiseCancellationEnableStats: f.Z.getKrispEnableStats(),
             vadDuringPreProcess: f.Z.getModeOptions().vadDuringPreProcess,
         })),
-        G = D ? "KRISP" : L ? "STANDARD" : "NONE",
-        z = (0, p.N)(),
-        V = l.useCallback(() => {
+        G = Z ? "KRISP" : L ? "STANDARD" : "NONE",
+        V = (0, p.N)(),
+        H = r.useCallback(() => {
             var e;
             null == (e = E.current) || e.stop(), (E.current = null), S(null);
         }, []);
-    function H() {
+    function W() {
         f.Z.getMediaEngine().stopRecordingRawSamples();
     }
-    function W(e) {
-        if ((t && H(), V(), null == z)) return;
-        let n = z.createBufferSource();
+    function z(e) {
+        if ((t && W(), H(), null == V)) return;
+        let n = V.createBufferSource();
         (n.buffer = e.audioBuffer),
-            (O.current = z.createGain()),
-            (O.current.gain.value = N),
+            (O.current = V.createGain()),
+            (O.current.gain.value = T),
             n.connect(O.current),
-            O.current.connect(z.destination),
+            O.current.connect(V.destination),
             (n.loop = !0),
             n.start(),
             (E.current = n),
             S(e);
     }
-    l.useEffect(() => {
-        V();
-    }, [V]),
+    r.useEffect(() => {
+        H();
+    }, [H]),
         (0, m.zq)(() => {
             u.Z.setMode(f.Z.getMode(), {
                 vadDuringPreProcess: null,
@@ -234,7 +234,7 @@ function C() {
                                     clear: () => {
                                         u.Z.setKrispModelOverride("");
                                     },
-                                    isSelected: (e) => e === I,
+                                    isSelected: (e) => e === w,
                                     options: P.map((e) => ({
                                         label: e,
                                         value: e,
@@ -247,12 +247,12 @@ function C() {
                                 }),
                                 (0, a.jsx)(d.rsf, {
                                     label: "Enable Stats",
-                                    checked: F,
+                                    checked: B,
                                     onChange: (e) => u.Z.setNoiseCancellationEnableStats(e),
                                 }),
                             ],
                         }),
-                    w === b.pM.VOICE_ACTIVITY &&
+                    I === b.pM.VOICE_ACTIVITY &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(d.rsf, {
@@ -271,7 +271,7 @@ function C() {
                                             A &&
                                                 (0, a.jsx)(d.iRW, {
                                                     label: "Krisp VAD Activation Threshold",
-                                                    initialValue: Z,
+                                                    initialValue: D,
                                                     onValueChange: (e) =>
                                                         u.Z.setMode(b.pM.VOICE_ACTIVITY, {
                                                             vadKrispActivationThreshold: e,
@@ -283,7 +283,7 @@ function C() {
                                     }),
                                 (0, a.jsx)(d.rsf, {
                                     label: "Run Before Processing",
-                                    checked: null != B && B,
+                                    checked: null != F && F,
                                     onChange: (e) => u.Z.setMode(b.pM.VOICE_ACTIVITY, { vadDuringPreProcess: e }),
                                 }),
                             ],
@@ -303,29 +303,29 @@ function C() {
                             (0, a.jsx)(c.zx, {
                                 color: t ? c.zx.Colors.RED : c.zx.Colors.BRAND,
                                 onClick: t
-                                    ? H
+                                    ? W
                                     : function () {
-                                          V(),
+                                          H(),
                                               n(!0),
                                               u.Z.setLoopback("krisp_test", !0),
-                                              f.Z.getMediaEngine().startRecordingRawSamples((t, a, l) => {
+                                              f.Z.getMediaEngine().startRecordingRawSamples((t, a, r) => {
                                                   n(!1), u.Z.setLoopback("krisp_test", !1);
-                                                  let r = new AudioBuffer({
+                                                  let i = new AudioBuffer({
                                                       length: t.length,
-                                                      sampleRate: l,
+                                                      sampleRate: r,
                                                       numberOfChannels: a,
                                                   });
                                                   for (let e = 0; e < a; e++) {
                                                       let n = new Float32Array(t.length / a);
-                                                      for (let l = 0; l < t.length / a; l++)
-                                                          n[l] = t[l * a + e] / 32768;
-                                                      r.copyToChannel(n, e);
+                                                      for (let r = 0; r < t.length / a; r++)
+                                                          n[r] = t[r * a + e] / 32768;
+                                                      i.copyToChannel(n, e);
                                                   }
-                                                  i((t) => [
+                                                  l((t) => [
                                                       ...t,
                                                       {
                                                           inputName: e,
-                                                          audioBuffer: r,
+                                                          audioBuffer: i,
                                                           createdAt: Date.now(),
                                                           suppression: G,
                                                           echoCancellation: k,
@@ -340,9 +340,9 @@ function C() {
                     }),
                     (0, a.jsx)(d.iRW, {
                         label: "Volume",
-                        initialValue: N,
+                        initialValue: T,
                         asValueChanges: function (e) {
-                            null != O.current && ((O.current.gain.value = e), T(e));
+                            null != O.current && ((O.current.gain.value = e), N(e));
                         },
                         minValue: 0,
                         maxValue: 1,
@@ -354,14 +354,14 @@ function C() {
                                 variant: "text-sm/semibold",
                                 children: "Recordings",
                             }),
-                            r.map((e, t) =>
+                            i.map((e, t) =>
                                 (0, a.jsx)(
                                     y,
                                     {
                                         recording: e,
                                         playing: e === C,
-                                        onPlay: W,
-                                        onStop: V,
+                                        onPlay: z,
+                                        onStop: H,
                                     },
                                     t,
                                 ),

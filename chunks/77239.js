@@ -34,8 +34,8 @@ e.exports = function (e, t, n, _, m, h, g, E) {
         N = E.bits,
         P = 0,
         R = 0,
-        w = 0,
         D = 0,
+        w = 0,
         x = 0,
         L = 0,
         j = 0,
@@ -50,11 +50,11 @@ e.exports = function (e, t, n, _, m, h, g, E) {
         H = 0;
     for (P = 0; P <= i; P++) B[P] = 0;
     for (R = 0; R < _; R++) B[t[n + R]]++;
-    for (x = N, D = i; D >= 1 && 0 === B[D]; D--);
-    if ((x > D && (x = D), 0 === D)) return (m[h++] = 20971520), (m[h++] = 20971520), (E.bits = 1), 0;
-    for (w = 1; w < D && 0 === B[w]; w++);
-    for (x < w && (x = w), M = 1, P = 1; P <= i; P++) if (((M <<= 1), (M -= B[P]) < 0)) return -1;
-    if (M > 0 && (e === s || 1 !== D)) return -1;
+    for (x = N, w = i; w >= 1 && 0 === B[w]; w--);
+    if ((x > w && (x = w), 0 === w)) return (m[h++] = 20971520), (m[h++] = 20971520), (E.bits = 1), 0;
+    for (D = 1; D < w && 0 === B[D]; D++);
+    for (x < D && (x = D), M = 1, P = 1; P <= i; P++) if (((M <<= 1), (M -= B[P]) < 0)) return -1;
+    if (M > 0 && (e === s || 1 !== w)) return -1;
     for (P = 1, F[1] = 0; P < i; P++) F[P + 1] = F[P] + B[P];
     for (R = 0; R < _; R++) 0 !== t[n + R] && (g[F[t[n + R]]++] = R);
     if (
@@ -65,7 +65,7 @@ e.exports = function (e, t, n, _, m, h, g, E) {
               : ((G = f), (V = p), (I = -1)),
         (U = 0),
         (R = 0),
-        (P = w),
+        (P = D),
         (S = h),
         (L = x),
         (j = 0),
@@ -78,16 +78,16 @@ e.exports = function (e, t, n, _, m, h, g, E) {
         (T = P - j),
             g[R] < I ? ((A = 0), (C = g[R])) : g[R] > I ? ((A = V[H + g[R]]), (C = G[Z + g[R]])) : ((A = 96), (C = 0)),
             (b = 1 << (P - j)),
-            (w = y = 1 << L);
+            (D = y = 1 << L);
         do m[S + (U >> j) + (y -= b)] = (T << 24) | (A << 16) | C;
         while (0 !== y);
         for (b = 1 << (P - 1); U & b; ) b >>= 1;
         if ((0 !== b ? ((U &= b - 1), (U += b)) : (U = 0), R++, 0 == --B[P])) {
-            if (P === D) break;
+            if (P === w) break;
             P = t[n + g[R]];
         }
         if (P > x && (U & v) !== O) {
-            for (0 === j && (j = x), S += w, M = 1 << (L = P - j); L + j < D && !((M -= B[L + j]) <= 0); )
+            for (0 === j && (j = x), S += D, M = 1 << (L = P - j); L + j < w && !((M -= B[L + j]) <= 0); )
                 L++, (M <<= 1);
             if (((k += 1 << L), (e === l && k > a) || (e === c && k > o))) return 1;
             m[(O = U & v)] = (x << 24) | (L << 16) | (S - h);

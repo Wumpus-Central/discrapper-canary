@@ -112,9 +112,9 @@ class y extends i.Component {
                         n.e("62856"),
                         n.e("66201"),
                         n.e("91315"),
-                        n.e("89522"),
+                        n.e("91053"),
                         n.e("24783"),
-                        n.e("84608"),
+                        n.e("82082"),
                     ]).then(n.bind(n, 439635));
                     return (n) =>
                         (0, r.jsx)(

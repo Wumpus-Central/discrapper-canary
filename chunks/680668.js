@@ -56,19 +56,19 @@ function I(e) {
             onTransitionToInviteChannel: N,
             onAcceptInstantInvite: P,
             guild: R,
-            invite: w,
-            message: D,
+            invite: D,
+            message: w,
             currentUserId: x,
         } = e,
-        L = x === D.author.id,
-        { channel: j, approximate_member_count: M, approximate_presence_count: k } = w,
-        U = w.state === b.r2o.ACCEPTING,
+        L = x === w.author.id,
+        { channel: j, approximate_member_count: M, approximate_presence_count: k } = D,
+        U = D.state === b.r2o.ACCEPTING,
         G = null != j ? (0, m.jD)(j) : null,
         Z = null != R,
         B = null != G,
         F = null != G && G.isGuildVocal(),
         V = null != G && G.isGuildStageVoice(),
-        H = (0, o.yE)(null != (t = w.flags) ? t : 0, a.$.IS_GUEST_INVITE),
+        H = (0, o.yE)(null != (t = D.flags) ? t : 0, a.$.IS_GUEST_INVITE),
         Y = null != (v = null == R ? void 0 : R.features.has(b.GuildFeatures.HUB)) && v,
         W = null == R ? void 0 : R.id,
         { analyticsLocations: K } = (0, d.ZP)(u.Z.INVITE_EMBED),
@@ -83,17 +83,17 @@ function I(e) {
             Z ? (N(), (e = "transition")) : (P(), (e = "accept")),
                 (0, c.r$)(
                     {
-                        invite: w,
+                        invite: D,
                         action: e,
-                        inviter_id: D.author.id,
-                        invite_message_id: D.id,
+                        inviter_id: w.author.id,
+                        invite_message_id: w.id,
                     },
                     K,
                 );
-        }, [w, D, K, Z, N, P]);
+        }, [D, w, K, Z, N, P]);
     if (null == R) {
-        if (null == w.guild) return (0, r.jsx)(E.Z, {});
-        (R = h.Qs(w.guild)).premiumTier = null != (I = w.guild.premium_tier) ? I : b.Eu4.NONE;
+        if (null == D.guild) return (0, r.jsx)(E.Z, {});
+        (R = h.Qs(D.guild)).premiumTier = null != (I = D.guild.premium_tier) ? I : b.Eu4.NONE;
     }
     let ee = (0, g.e)({
         isVoiceChannel: F,

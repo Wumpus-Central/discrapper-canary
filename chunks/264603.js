@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(442837),
     o = n(524437),
     c = n(199849),
@@ -22,7 +22,7 @@ var a = n(54381),
     C = n(246992),
     S = n(451429),
     E = n(441900);
-let N = [
+let O = [
     {
         label: "Unset",
         value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
@@ -41,38 +41,38 @@ let N = [
     },
 ];
 function T() {
-    let e = l.useRef(null),
+    let e = r.useRef(null),
         { analyticsLocations: t } = (0, p.ZP)(m.Z.DEV_TOOLS),
         n = j.JG.useSetting(),
-        [r, o] = l.useState(""),
+        [i, o] = r.useState(""),
         T = (0, s.e7)([b.ZP, y.Z], () => (0, v.Z)(b.ZP, y.Z)),
-        O = (0, g.q)(r),
+        N = (0, g.q)(i),
         P = (0, s.Wu)([f.Z], () => {
             var e, t;
             return null !=
                 (t =
-                    null == O || null == (e = O.linkedGames)
+                    null == N || null == (e = N.linkedGames)
                         ? void 0
                         : e.map((e) => f.Z.getApplication(e.id)).filter((e) => null != e))
                 ? t
                 : [];
         }),
-        I = (0, x.F)(O, { allowedFlows: [x.r.RPC] }),
-        w = (0, x.F)(O, { allowedFlows: [x.r.WEB] }),
-        k = (0, x.F)(O),
+        w = (0, x.F)(N, { allowedFlows: [x.r.RPC] }),
+        I = (0, x.F)(N, { allowedFlows: [x.r.WEB] }),
+        k = (0, x.F)(N),
         { canDeauthorize: R, deauthorize: A } = (function (e) {
             let t = (0, s.e7)([_.default], () => _.default.getNewestTokenForApplication(e)),
-                n = l.useCallback(() => {
+                n = r.useCallback(() => {
                     null != t && u.Z.delete(t.id);
                 }, [t]);
             return {
                 canDeauthorize: null != t,
                 deauthorize: n,
             };
-        })(null == O ? void 0 : O.id);
+        })(null == N ? void 0 : N.id);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: i()(S.panel, E.panel),
+        className: l()(S.panel, E.panel),
         children: [
             (0, a.jsxs)("div", {
                 className: E.container,
@@ -83,7 +83,7 @@ function T() {
                     }),
                     (0, a.jsx)(c.B6, {
                         label: "Receive DMs In Game",
-                        options: N,
+                        options: O,
                         isSelected: (e) => e === n,
                         select: j.JG.updateSetting,
                         popoutLayerContext: C.O$,
@@ -100,7 +100,7 @@ function T() {
                     }),
                     (0, a.jsx)(d.oil, {
                         label: "Application ID",
-                        value: r,
+                        value: i,
                         onChange: o,
                     }),
                     null != T && null != T.id
@@ -112,7 +112,7 @@ function T() {
                         : null,
                     (0, a.jsxs)(d.Text, {
                         variant: "text-md/normal",
-                        children: ["Application Name: ", null != O ? O.name : "N/A"],
+                        children: ["Application Name: ", null != N ? N.name : "N/A"],
                     }),
                     (0, a.jsxs)(d.Text, {
                         variant: "text-md/normal",
@@ -122,7 +122,7 @@ function T() {
                             P.length > 0
                                 ? P.map((e) => {
                                       var t;
-                                      return (null == (t = (0, h.r)(O)) ? void 0 : t.id) === e.id
+                                      return (null == (t = (0, h.r)(N)) ? void 0 : t.id) === e.id
                                           ? "".concat(e.name, "*")
                                           : e.name;
                                   }).join(", ")
@@ -151,14 +151,14 @@ function T() {
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
                     (0, a.jsx)(d.Button, {
-                        disabled: !I.canStartAuthorization,
-                        onClick: () => I.startAuthorization({ analyticsLocations: t }),
+                        disabled: !w.canStartAuthorization,
+                        onClick: () => w.startAuthorization({ analyticsLocations: t }),
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
                     (0, a.jsx)(d.Button, {
-                        disabled: !w.canStartAuthorization,
-                        onClick: () => w.startAuthorization({ analyticsLocations: t }),
+                        disabled: !I.canStartAuthorization,
+                        onClick: () => I.startAuthorization({ analyticsLocations: t }),
                         variant: "secondary",
                         text: "Start Web Authorization",
                     }),

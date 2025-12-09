@@ -27,8 +27,8 @@ var r = n(664751),
     N = n(278323),
     P = n(58642),
     R = n(254854),
-    w = n(981631),
-    D = n(701488),
+    D = n(981631),
+    w = n(701488),
     x = n(388032);
 let L = 3,
     j = new p.Z("GamesActionCreators");
@@ -37,7 +37,7 @@ function M(e) {
         applicationId: t,
         secret: n,
         channelId: r,
-        intent: i = D.Ws.PLAY,
+        intent: i = w.Ws.PLAY,
         embedded: a = !1,
         source: o,
         locationObject: s,
@@ -47,7 +47,7 @@ function M(e) {
     if (u) {
         let e = d.Z.getApplication(t);
         if ((null == e ? void 0 : e.deepLinkUri) != null) {
-            let r = "".concat(e.deepLinkUri).concat(w.UWR.GAME_INVITE_FRAGMENT).concat(n);
+            let r = "".concat(e.deepLinkUri).concat(D.UWR.GAME_INVITE_FRAGMENT).concat(n);
             try {
                 if (r.startsWith("http")) {
                     let e = window.open(r, "_blank");
@@ -75,7 +75,7 @@ function M(e) {
         .then((e) =>
             0 === e
                 ? null
-                : T.Z.waitConnected(t).then(() => Promise.race([T.Z.waitSubscribed(t, w.zMe.ACTIVITY_JOIN)])),
+                : T.Z.waitConnected(t).then(() => Promise.race([T.Z.waitSubscribed(t, D.zMe.ACTIVITY_JOIN)])),
         )
         .then(() => {
             c.Z.dispatch({
@@ -104,7 +104,7 @@ function k(e, t) {
 function U(e) {
     return s.tn
         .post({
-            url: w.ANM.OAUTH2_AUTHORIZE,
+            url: D.ANM.OAUTH2_AUTHORIZE,
             query: {
                 client_id: e,
                 response_type: "token",
@@ -197,7 +197,7 @@ async function G(e) {
                   });
               })
               .catch((e) => {
-                  R.Z.show(w.kVF.LAUNCH_GAME_FAILURE, x.intl.string(x.t.YZEBdj)),
+                  R.Z.show(D.kVF.LAUNCH_GAME_FAILURE, x.intl.string(x.t.YZEBdj)),
                       c.Z.dispatch({
                           type: "GAME_LAUNCH_FAIL",
                           applicationId: t,
@@ -217,7 +217,7 @@ let Z = {
             type: "RUNNING_GAME_ADD_OVERRIDE",
             pid: e,
         }),
-            I.default.track(w.rMx.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
+            I.default.track(D.rMx.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
     },
     toggleOverlay(e, t, n) {
         let r = (0, E.ow)(e),
@@ -226,10 +226,10 @@ let Z = {
             let e = v.Z.getActiveLibraryApplication(i.id);
             if (null != e) {
                 let r = e.getFlags(),
-                    i = o.yE(r, w.eHb.OVERLAY_DISABLED);
-                t && i !== t && (r = o.x9(r, w.eHb.OVERLAY_DISABLED));
-                let a = o.yE(r, w.eHb.OVERLAY_V3_DISABLED);
-                null != n && n !== a && (r = o.x9(r, w.eHb.OVERLAY_V3_DISABLED)), P.h(e.id, e.branchId, r);
+                    i = o.yE(r, D.eHb.OVERLAY_DISABLED);
+                t && i !== t && (r = o.x9(r, D.eHb.OVERLAY_DISABLED));
+                let a = o.yE(r, D.eHb.OVERLAY_V3_DISABLED);
+                null != n && n !== a && (r = o.x9(r, D.eHb.OVERLAY_V3_DISABLED)), P.h(e.id, e.branchId, r);
                 return;
             }
         }
@@ -291,7 +291,7 @@ let Z = {
         c.Z.wait(() => {
             c.Z.dispatch({ type: "GAMES_DATABASE_FETCH" }),
                 C.Z.get({
-                    url: w.ANM.GAMES_DETECTABLE,
+                    url: D.ANM.GAMES_DETECTABLE,
                     headers: { "If-None-Match": e },
                     retries: 1,
                     oldFormErrors: !0,
@@ -335,7 +335,7 @@ let Z = {
         O.Z.canFetchExecutableBlocklist() &&
             s.tn
                 .get({
-                    url: w.ANM.GAMES_BLOCKLIST,
+                    url: D.ANM.GAMES_BLOCKLIST,
                     oldFormErrors: !0,
                     rejectWithError: !1,
                 })
@@ -361,7 +361,7 @@ let Z = {
             c.Z.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
                 s.tn
                     .get({
-                        url: w.ANM.NON_GAMES_DETECTABLE,
+                        url: D.ANM.NON_GAMES_DETECTABLE,
                         headers: { "If-None-Match": e },
                         retries: 1,
                         rejectWithError: !1,
@@ -406,7 +406,7 @@ let Z = {
             null != l &&
                 s.tn
                     .post({
-                        url: w.ANM.UNVERIFIED_APPLICATIONS,
+                        url: D.ANM.UNVERIFIED_APPLICATIONS,
                         body: {
                             name: t,
                             os: (0, A.getPlatformName)(),
@@ -434,7 +434,7 @@ let Z = {
     },
     uploadIcon(e, t, n) {
         s.tn.post({
-            url: w.ANM.UNVERIFIED_APPLICATIONS_ICONS,
+            url: D.ANM.UNVERIFIED_APPLICATIONS_ICONS,
             body: {
                 application_name: e,
                 application_hash: t,
@@ -459,7 +459,7 @@ let Z = {
             applicationId: r,
             channelId: i,
             messageId: a,
-            intent: o = D.Ws.PLAY,
+            intent: o = w.Ws.PLAY,
             embedded: s = !1,
             source: l,
             locationObject: u,

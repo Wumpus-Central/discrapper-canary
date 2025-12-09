@@ -54,8 +54,8 @@ let d = {
                     N = t.rects.reference,
                     P = t.rects.popper,
                     R = new Map(),
-                    w = !0,
-                    D = C[0],
+                    D = !0,
+                    w = C[0],
                     x = 0;
                 x < C.length;
                 x++
@@ -83,12 +83,12 @@ let d = {
                         return e;
                     }))
                 ) {
-                    (D = L), (w = !1);
+                    (w = L), (D = !1);
                     break;
                 }
                 R.set(L, F);
             }
-            if (w)
+            if (D)
                 for (
                     var V = O ? 3 : 1,
                         H = function (e) {
@@ -99,13 +99,13 @@ let d = {
                                         return e;
                                     });
                             });
-                            if (t) return (D = t), "break";
+                            if (t) return (w = t), "break";
                         },
                         Y = V;
                     Y > 0 && "break" !== H(Y);
                     Y--
                 );
-            t.placement !== D && ((t.modifiersData[a]._skip = !0), (t.placement = D), (t.reset = !0));
+            t.placement !== w && ((t.modifiersData[a]._skip = !0), (t.placement = w), (t.reset = !0));
         }
     },
     requiresIfExists: ["offset"],

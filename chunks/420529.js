@@ -60,9 +60,9 @@ function C(e) {
     let t = (0, r.e7)([s.Z], () => s.Z.getChannelId() === e.id),
         C = (0, d.Z)(),
         y = (null == C ? void 0 : C.channelId) === e.id,
-        v = (0, o.V)(e) && !e.isPrivate(),
-        _ = (0, o.Z)(e),
-        O = (!(0, r.e7)([c.Z], () => c.Z.isInChannel(e.id)) && _) || v,
+        _ = (0, o.V)(e) && !e.isPrivate(),
+        v = (0, o.Z)(e),
+        O = (!(0, r.e7)([c.Z], () => c.Z.isInChannel(e.id)) && v) || _,
         x = (0, p.Z)();
     return y || 0 !== x.length
         ? y

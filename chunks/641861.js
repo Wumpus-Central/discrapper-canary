@@ -17,8 +17,8 @@ var r = n(120356),
     b = n(430824),
     C = n(933557),
     y = n(354459),
-    v = n(388032),
-    _ = n(115858);
+    _ = n(388032),
+    v = n(115858);
 function O(e) {
     let { recipientUser: t, voiceChannel: n } = e,
         r = (0, C.ZP)(n),
@@ -51,36 +51,36 @@ function O(e) {
     j)
         ? null
         : (0, i.jsxs)("div", {
-              className: l()(_.themed, _.chatHeaderBar),
+              className: l()(v.themed, v.chatHeaderBar),
               children: [
                   (0, i.jsxs)("div", {
-                      className: _.chatHeaderBarInfo,
+                      className: v.chatHeaderBarInfo,
                       children: [
                           (0, i.jsx)(f.ZP, {
-                              className: _.mask,
+                              className: v.mask,
                               mask: f.QS.SQUIRCLE,
                               width: 24,
                               height: 24,
                               children:
                                   null == E
                                       ? (0, i.jsx)("div", {
-                                            className: l()(_.guildIcon, _.guildIconWithoutImage),
+                                            className: l()(v.guildIcon, v.guildIconWithoutImage),
                                             children: (0, i.jsx)("div", {
-                                                className: _.guildAcronym,
+                                                className: v.guildAcronym,
                                                 children: null != O ? (0, g.gM)(O) : null,
                                             }),
                                         })
                                       : (0, i.jsx)("img", {
                                             alt: null == O ? void 0 : O.name,
                                             src: E,
-                                            className: _.guildIcon,
+                                            className: v.guildIcon,
                                         }),
                           }),
                           (0, i.jsx)(c.Text, {
-                              className: _.chatHeaderBarText,
+                              className: v.chatHeaderBarText,
                               variant: "text-md/medium",
                               color: "text-default",
-                              children: v.intl.format(v.t.f2tNxH, {
+                              children: _.intl.format(_.t.f2tNxH, {
                                   username: null == t ? void 0 : t.globalName,
                                   channelName: (0, i.jsx)(
                                       c.Text,
@@ -105,7 +105,7 @@ function O(e) {
 }
 function x(e) {
     let { channelId: t, recipientUserId: n, isUserRinging: r } = e,
-        l = r ? v.intl.string(v.t.ygslb0) : v.intl.string(v.t["3Hv9qQ"]),
+        l = r ? _.intl.string(_.t.ygslb0) : _.intl.string(_.t["3Hv9qQ"]),
         a = r
             ? () => u.Z.stopRinging(t, [n])
             : () => {

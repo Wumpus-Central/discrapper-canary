@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(819514),
     C = n(930282),
     y = n(955384),
-    v = n(981631),
-    _ = n(224837),
+    _ = n(981631),
+    v = n(224837),
     O = n(360514);
 function x(e) {
     let { value: t, channel: n } = e;
@@ -35,8 +35,8 @@ function E(e) {
         { id: u } = n,
         m = t.getGuildId(),
         g = (0, a.e7)([h.Z], () => h.Z.getGuild(m), [m]),
-        C = t.type === v.d4z.GUILD_ANNOUNCEMENT,
-        E = null != g && g.features.has(v.GuildFeatures.NEWS),
+        C = t.type === _.d4z.GUILD_ANNOUNCEMENT,
+        E = null != g && g.features.has(_.GuildFeatures.NEWS),
         S = C && E,
         {
             editingMessage: P,
@@ -55,27 +55,27 @@ function E(e) {
         N = r.useCallback(
             (e, i, r) => {
                 let { content: a } = r,
-                    c = f.Z.can(v.Plq.MANAGE_MESSAGES, t),
+                    c = f.Z.can(_.Plq.MANAGE_MESSAGES, t),
                     u = null != P && null != P.author ? P.author.id : null,
                     d = S && (u === T || c),
                     p = {
                         content: a,
                         components: void 0,
                     };
-                if (n.hasFlag(v.iLy.IS_COMPONENTS_V2)) {
+                if (n.hasFlag(_.iLy.IS_COMPONENTS_V2)) {
                     var h;
                     let e = (null == (h = n.components[0]) ? void 0 : h.type) === s.re.MEDIA_GALLERY,
                         t = n.components.filter((e) => e.type !== s.re.TEXT_DISPLAY);
                     t.splice(+!!e, 0, {
                         type: s.re.TEXT_DISPLAY,
                         content: a,
-                        id: "".concat(_.Kb),
+                        id: "".concat(v.Kb),
                     }),
                         (p.content = ""),
                         (p.components = t);
                 }
                 return (
-                    d && null != P && (0, l.yE)(P.flags, v.iLy.CROSSPOSTED)
+                    d && null != P && (0, l.yE)(P.flags, _.iLy.CROSSPOSTED)
                         ? b.Z.confirmEdit(e, i, p)
                         : o.Z.editMessage(e, i, p),
                     Promise.resolve()
@@ -168,10 +168,10 @@ function j(e) {
     return (
         r.useEffect(
             () => (
-                m.S.subscribe(v.CkL.TEXTAREA_FOCUS, g),
-                m.S.subscribe(v.CkL.TEXTAREA_BLUR, b),
+                m.S.subscribe(_.CkL.TEXTAREA_FOCUS, g),
+                m.S.subscribe(_.CkL.TEXTAREA_BLUR, b),
                 () => {
-                    m.S.unsubscribe(v.CkL.TEXTAREA_FOCUS, g), m.S.unsubscribe(v.CkL.TEXTAREA_BLUR, b);
+                    m.S.unsubscribe(_.CkL.TEXTAREA_FOCUS, g), m.S.unsubscribe(_.CkL.TEXTAREA_BLUR, b);
                 }
             ),
             [g, b],

@@ -10,11 +10,11 @@ var i = n(120356),
     u = n(351768);
 function d(e) {
     var t, n, i;
-    let { product: d, isDarkText: m = !1, isOrbExclusive: p = !1, rentalDuration: f } = e,
+    let { product: d, isDarkText: m = !1, isOrbExclusive: f = !1, rentalDuration: p } = e,
         v =
             ((t = d.type),
-            (n = p),
-            null != (i = f)
+            (n = f),
+            null != (i = p)
                 ? 3 === i
                     ? c.intl.string(c.t["52UXCo"])
                     : 7 === i

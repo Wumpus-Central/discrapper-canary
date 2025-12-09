@@ -1,7 +1,7 @@
 n.d(t, {
-    QR: () => y,
-    Yj: () => b,
-    ZP: () => v,
+    QR: () => _,
+    Yj: () => y,
+    ZP: () => b,
 });
 var i,
     r = n(54381),
@@ -35,7 +35,7 @@ let f = (e) => e.stopPropagation(),
             onMouseOver: f,
         }),
     m = () => (0, r.jsx)("div", { className: u.divider }),
-    y = (e, t, n) =>
+    _ = (e, t, n) =>
         (0, r.jsx)("div", {
             className: u.keybindMessage,
             children: d.intl.format(n, {
@@ -51,12 +51,12 @@ let f = (e) => e.stopPropagation(),
                     ),
             }),
         }),
-    b = (e, t) =>
+    y = (e, t) =>
         (0, r.jsx)("div", {
             className: u.hintSubtleText,
             children: t,
         });
-class _ extends (i = s.PureComponent) {
+class v extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -261,9 +261,9 @@ class _ extends (i = s.PureComponent) {
         this.state = { expanded: t };
     }
 }
-p(_, "defaultProps", {
+p(v, "defaultProps", {
     maxBodyLines: void 0,
     expand: !1,
     disabled: !1,
 });
-let v = _;
+let b = v;

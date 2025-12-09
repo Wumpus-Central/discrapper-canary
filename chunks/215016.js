@@ -65,11 +65,11 @@ function R(e) {
     var t;
     return null != (t = e.id) ? t : e.src;
 }
-function w(e, t) {
+function D(e, t) {
     let n = P[t];
     return null == n ? 0 : n.height;
 }
-function D(e, t, n, i) {
+function w(e, t, n, i) {
     if (!(e > 0))
         return null == P[t]
             ? null
@@ -408,8 +408,8 @@ class G extends i.PureComponent {
                               columns: e,
                               itemGutter: 12,
                               getItemKey: x,
-                              getItemHeight: w,
-                              renderItem: D,
+                              getItemHeight: D,
+                              renderItem: w,
                               chunkSize: 128,
                           },
                           s,

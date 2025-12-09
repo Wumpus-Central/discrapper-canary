@@ -68,8 +68,8 @@ var c = n(329554),
     N = n(581079),
     P = n(207303),
     R = n(467159),
-    w = v.isBrowser("IE"),
-    D = !w,
+    D = v.isBrowser("IE"),
+    w = !D,
     x = {
         edit: _,
         composite: d,
@@ -366,7 +366,7 @@ var c = n(329554),
                                 onSelect: this._onSelect,
                                 ref: this.props.editorRef,
                                 role: d ? null : g,
-                                spellCheck: D && this.props.spellCheck,
+                                spellCheck: w && this.props.spellCheck,
                                 style: h,
                                 suppressContentEditableWarning: !0,
                                 tabIndex: this.props.tabIndex,
@@ -384,7 +384,7 @@ var c = n(329554),
                 (this._blockSelectEvents = !1),
                     !L && C("draft_ods_enabled") && ((L = !0), g.initODS()),
                     this.setMode("edit"),
-                    w &&
+                    D &&
                         (this.editor
                             ? this.editor.ownerDocument.execCommand("AutoUrlDetect", !1, !1)
                             : n.g.execCommand("AutoUrlDetect", !1, !1));

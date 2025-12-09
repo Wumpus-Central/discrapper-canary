@@ -279,12 +279,12 @@ e.exports = function (e) {
             contains: [{ match: /\{\{/ }, { match: /\}\}/ }, C],
             relevance: 2,
         },
-        w = {
+        D = {
             scope: "string",
             match: i(/'/, o(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/),
         };
     return (
-        (C.contains = [P, N, T, I, w, n, c, d, E, O, v, S, p, m]),
+        (C.contains = [P, N, T, I, D, n, c, d, E, O, v, S, p, m]),
         {
             name: "F#",
             aliases: ["fs", "f#"],
@@ -294,7 +294,7 @@ e.exports = function (e) {
             contains: [
                 n,
                 {
-                    variants: [R, P, N, A, T, I, w],
+                    variants: [R, P, N, A, T, I, D],
                 },
                 c,
                 d,
@@ -304,7 +304,7 @@ e.exports = function (e) {
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [d, A, T, I, w, S],
+                    contains: [d, A, T, I, D, S],
                 },
                 b,
                 E,

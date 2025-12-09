@@ -32,7 +32,7 @@ function S(e) {
     let { onJump: N, showTutorial: Z, setSeenTutorial: w, closePopout: T } = e,
         A = i.useRef(null),
         [R, D] = (0, j.ZP)(A),
-        { loadState: M, channels: L } = R,
+        { loadState: L, channels: M } = R,
         { maybeLoadMore: k } = D,
         G = (0, u.e7)([p.Z], () => p.Z.messageGroupSpacing);
     (t = A),
@@ -102,7 +102,7 @@ function S(e) {
             ),
         );
     let U = (0, g.Z)("unreads", A);
-    if (0 === L.length) {
+    if (0 === M.length) {
         return (0, r.jsx)(O.Z, {
             Icon: d.xx7,
             header: C.intl.string(C.t["6XMM+D"]),
@@ -180,12 +180,12 @@ function S(e) {
                     )),
                     (n = n =
                         {
-                            onScroll: M === j.jd.Done ? void 0 : k,
+                            onScroll: L === j.jd.Done ? void 0 : k,
                             className: o()(E.scroller, "group-spacing-".concat(G)),
                             children: [
                                 Z ? (0, r.jsx)(I, { setSeenTutorial: w }) : null,
-                                (0, v.Z)(L, D, N),
-                                M === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
+                                (0, v.Z)(M, D, N),
+                                L === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],
                         }),
                     Object.getOwnPropertyDescriptors

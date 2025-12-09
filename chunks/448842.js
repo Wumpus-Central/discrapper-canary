@@ -88,7 +88,7 @@ function v(e) {
             },
             [n],
         ),
-        { items: w } = (0,
+        { items: D } = (0,
         {
             [b.Sap.EMPTY]: () => {
                 let e = [];
@@ -350,10 +350,10 @@ function v(e) {
                 return { items: [...t] };
             },
         }[T.type])(),
-        D = i.useMemo(() => {
+        w = i.useMemo(() => {
             let e = [];
             return (
-                w.forEach((t) => {
+                D.forEach((t) => {
                     switch (t.type) {
                         case d.i.ROW:
                             e.push(t);
@@ -364,9 +364,9 @@ function v(e) {
                 }),
                 e
             );
-        }, [w]);
+        }, [D]);
     return {
-        items: w,
-        itemsData: D,
+        items: D,
+        itemsData: w,
     };
 }

@@ -38,9 +38,9 @@ function h(e) {
         N = null == t ? void 0 : t.emoji,
         P = null != C ? C : null == t ? void 0 : t.state,
         R = null != P && "" !== P,
-        w = null;
+        D = null;
     A && null != b
-        ? (w = (0, r.jsx)(u.Z, {
+        ? (D = (0, r.jsx)(u.Z, {
               userId: b,
               size: m,
               className: a()(i, _.hangStatusIcon),
@@ -48,23 +48,23 @@ function h(e) {
           }))
         : null == N ||
           v ||
-          (w = (0, r.jsx)(f.Z, {
+          (D = (0, r.jsx)(f.Z, {
               emoji: N,
               animate: O,
               className: i,
               hideTooltip: S || R,
           }));
-    let D = R && (null != w ? " ".concat(P) : P),
+    let w = R && (null != D ? " ".concat(P) : P),
         x = () => {
             let e = null != N && !v && !R;
             return S || e
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [w, D],
+                      children: [D, w],
                   })
                 : (0, r.jsxs)(o.Z, {
                       delay: p.X,
                       tooltipClassName: h,
-                      children: [w, D],
+                      children: [D, w],
                   });
         };
     return (0, r.jsx)(s.Text, {

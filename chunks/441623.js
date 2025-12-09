@@ -68,8 +68,8 @@ let C = A(),
     N = [],
     P = new Set(),
     R = {},
-    w = null;
-function D(e, t) {
+    D = null;
+function w(e, t) {
     let n = new Date(),
         r = new Date(e.getTime());
     r.setFullYear(t);
@@ -79,10 +79,10 @@ function D(e, t) {
     return a.setDate(r.getDate() + b), n > i && n < a;
 }
 function x(e) {
-    return !D(e, e.getFullYear()) && D(e, new Date().getFullYear());
+    return !w(e, e.getFullYear()) && w(e, new Date().getFullYear());
 }
 function L() {
-    if (null != w) return void X(w);
+    if (null != D) return void X(D);
     if ((k(), !f.Z.hasConsented(m.pjP.PERSONALIZATION))) return;
     let { enabled: e } = _.w.getConfig({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
     if (!e) return;
@@ -159,7 +159,7 @@ function q() {
 function Q(e) {
     let { total: t } = e;
     if (null == t) {
-        (w = null), L();
+        (D = null), L();
         return;
     }
     X(t);
@@ -168,7 +168,7 @@ function X(e) {
     k();
     let { enabled: t } = _.w.getConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" });
     if (!t) return;
-    w = e;
+    D = e;
     let n = p.Z.getFriendIDs().filter((e) => !p.Z.isIgnored(e));
     a()
         .sampleSize(n, e)
@@ -221,7 +221,7 @@ class J extends (r = l.ZP.PersistedStore) {
         return null != C.messageGiftIntentLastShownMap[e];
     }
     getDevToolTotalFriendAnniversaries() {
-        return w;
+        return D;
     }
 }
 h(J, "displayName", "PremiumGiftingIntentStore"),

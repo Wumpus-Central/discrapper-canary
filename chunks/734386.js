@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(626786),
     C = n(434404),
     y = n(454585),
-    v = n(345162),
-    _ = n(485386),
+    _ = n(345162),
+    v = n(485386),
     O = n(430824),
     x = n(496675),
     E = n(594174),
@@ -34,12 +34,12 @@ function w(e) {
         [n, l] = r.useState(!1),
         o = (0, m.ZP)(t, !0),
         w = t.guild_id,
-        M = (0, u.e7)([_.Z], () => (null != w ? _.Z.getSortedRoles(w) : void 0)),
+        M = (0, u.e7)([v.Z], () => (null != w ? v.Z.getSortedRoles(w) : void 0)),
         R = (0, u.e7)([E.default, O.Z], () => {
             var e;
             return E.default.getUser(null == (e = O.Z.getGuild(w)) ? void 0 : e.ownerId);
         }),
-        L = r.useMemo(() => (null != M ? M.filter((e) => !(0, v.fI)(e)) : []), [M]),
+        L = r.useMemo(() => (null != M ? M.filter((e) => !(0, _.fI)(e)) : []), [M]),
         D = r.useMemo(
             () =>
                 s()(L)

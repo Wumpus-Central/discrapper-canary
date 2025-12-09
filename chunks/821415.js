@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(463421),
     C = n(981631),
     y = n(178473),
-    v = n(388032),
-    _ = n(405143);
+    _ = n(388032),
+    v = n(405143);
 function O(e) {
     let t,
         { activity: n, channel: l, userId: a } = e,
@@ -42,13 +42,13 @@ function O(e) {
         }
         g(2);
     }
-    if ((b && (t = v.intl.string(y.default.qRXats)), n.type === C.IIU.PLAYING)) {
+    if ((b && (t = _.intl.string(y.default.qRXats)), n.type === C.IIU.PLAYING)) {
         let e = null == u ? void 0 : u.getIconURL(46);
         return (0, i.jsxs)("div", {
-            className: _.activityRow,
+            className: v.activityRow,
             children: [
                 (0, i.jsxs)("div", {
-                    className: _.activityRowContent,
+                    className: v.activityRowContent,
                     children: [
                         p || null == e
                             ? (0, i.jsx)(s.IMN, {
@@ -66,7 +66,7 @@ function O(e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: "text-sm/medium",
                                     color: "text-muted",
-                                    children: v.intl.string(v.t.BMTj28),
+                                    children: _.intl.string(_.t.BMTj28),
                                 }),
                                 (0, i.jsx)(s.Text, {
                                     variant: "text-md/medium",
@@ -81,12 +81,12 @@ function O(e) {
                     disabled: b || 2 === m,
                     fullWidth: !0,
                     size: "sm",
-                    text: 2 === m ? v.intl.string(y.default["8HU1M2"]) : v.intl.string(y.default.DKHhec),
+                    text: 2 === m ? _.intl.string(y.default["8HU1M2"]) : _.intl.string(y.default.DKHhec),
                     onClick: O,
                 }),
                 null != t &&
                     (0, i.jsx)(s.Text, {
-                        className: _.disabledReason,
+                        className: v.disabledReason,
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: t,
@@ -124,9 +124,9 @@ function x(e) {
         : (0, i.jsx)(p.Z.Provider, {
               value: n.guild_id,
               children: (0, i.jsx)("div", {
-                  className: _.root,
+                  className: v.root,
                   children: (0, i.jsx)("div", {
-                      className: _.activityList,
+                      className: v.activityList,
                       children: f.map((e) =>
                           (0, i.jsx)(
                               O,

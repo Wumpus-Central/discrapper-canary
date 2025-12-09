@@ -1,5 +1,5 @@
 n.d(t, {
-    L9: () => w,
+    L9: () => D,
     ZK: () => R,
     d4: () => P,
     dS: () => T,
@@ -231,15 +231,15 @@ function R(e) {
         }),
     );
 }
-function w(e) {
+function D(e) {
     return "CLIP" === e.item.type
-        ? (0, r.jsx)(D, {
+        ? (0, r.jsx)(w, {
               attachment: e.item.originalItem,
               message: e.message,
           })
         : null;
 }
-function D(e) {
+function w(e) {
     var t;
     let { attachment: n, message: i } = e,
         a = i.channel_id,

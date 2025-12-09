@@ -1,6 +1,6 @@
 n.d(t, {
-    $A: () => v,
-    j8: () => _,
+    $A: () => _,
+    j8: () => v,
 });
 var i = n(54381);
 n(473749);
@@ -19,33 +19,33 @@ var s = n(218035),
     m = n(146085),
     g = n(427679),
     b = n(430104),
-    y = n(852159);
+    C = n(852159);
 n(354459);
-var C = n(388032);
-function v(e) {
+var y = n(388032);
+function _(e) {
     let t = (0, a.e7)([p.Z], () => p.Z.getChannel(e), [e]),
         n = (0, a.e7)([h.Z], () => h.Z.can(m.yP, t)),
         r = (0, b.sP)(),
         l = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(e), [e]),
         s = (0, u.bp)(),
-        c = (0, y.A)(t);
+        c = (0, C.A)(t);
     return (null == t ? void 0 : t.isGuildStageVoice()) && n && !r
         ? null != l
             ? (0, i.jsx)(o.sNh, {
                   id: "edit-stage",
-                  label: C.intl.string(C.t["I+9bLx"]),
+                  label: y.intl.string(y.t["I+9bLx"]),
                   action: () => {
                       null != t && (0, f.T)(t, s);
                   },
               })
             : (0, i.jsx)(o.sNh, {
                   id: "start-stage",
-                  label: C.intl.string(C.t.OYbHfv),
+                  label: y.intl.string(y.t.OYbHfv),
                   action: c,
               })
         : null;
 }
-function _(e) {
+function v(e) {
     let t = (0, a.e7)([p.Z], () => p.Z.getChannel(e), [e]);
     l()(null != t, "useNotificationSettingsItem: channel cannot be undefined");
     let n = (0, d.Mn)("StageChannelCallOverflowMenu"),

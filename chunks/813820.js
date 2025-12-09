@@ -853,8 +853,8 @@ class R extends o.C {
         ]);
     }
 }
-let w = new R();
-class D extends o.C {
+let D = new R();
+class w extends o.C {
     create(e) {
         let t = {
             linkedUsers: {},
@@ -892,7 +892,7 @@ class D extends o.C {
                     a.primaryGuild = P.internalBinaryRead(e, e.uint32(), n, a.primaryGuild);
                     break;
                 case 6:
-                    a.crossPlatformRestriction = w.internalBinaryRead(e, e.uint32(), n, a.crossPlatformRestriction);
+                    a.crossPlatformRestriction = D.internalBinaryRead(e, e.uint32(), n, a.crossPlatformRestriction);
                     break;
                 case 7:
                     a.collectibles = C.internalBinaryRead(e, e.uint32(), n, a.collectibles);
@@ -1003,7 +1003,7 @@ class D extends o.C {
         e.quest && V.internalBinaryWrite(e.quest, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
             e.primaryGuild && P.internalBinaryWrite(e.primaryGuild, t.tag(5, r.TD.LengthDelimited).fork(), n).join(),
             e.crossPlatformRestriction &&
-                w.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
+                D.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
             e.collectibles && C.internalBinaryWrite(e.collectibles, t.tag(7, r.TD.LengthDelimited).fork(), n).join(),
             e.safetyState && et.internalBinaryWrite(e.safetyState, t.tag(8, r.TD.LengthDelimited).fork(), n).join(),
             e.premiumState && er.internalBinaryWrite(e.premiumState, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
@@ -1060,7 +1060,7 @@ class D extends o.C {
                 no: 6,
                 name: "cross_platform_restriction",
                 kind: "message",
-                T: () => w,
+                T: () => D,
             },
             {
                 no: 7,
@@ -1089,7 +1089,7 @@ class D extends o.C {
         ]);
     }
 }
-new D();
+new w();
 class x extends o.C {
     create(e) {
         let t = {

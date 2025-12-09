@@ -32,8 +32,8 @@ var r = n(54381),
     N = n(770812),
     P = n(434404),
     R = n(536442),
-    w = n(609218),
-    D = n(695346),
+    D = n(609218),
+    w = n(695346),
     x = n(984933),
     L = n(594174),
     j = n(626135),
@@ -284,9 +284,9 @@ let eu = (e, t) => {
                 categoryListClassName: eN,
                 shouldShowSoundmojiInEmojiPicker: eP = !1,
                 showOnlyUnicode: eR = !1,
-                showAddEmojiButton: ew = !1,
+                showAddEmojiButton: eD = !1,
             } = e,
-            { onFocus: eD, onKeyDown: ex, autoFocus: eL = !0, accessory: ej } = ev,
+            { onFocus: ew, onKeyDown: ex, autoFocus: eL = !0, accessory: ej } = ev,
             eM = (0, u.e7)([x.ZP], () => (null != f ? x.ZP.getDefaultChannel(f) : null), [f]),
             [ek, eU] = i.useState(null),
             eG = i.useRef(""),
@@ -307,10 +307,10 @@ let eu = (e, t) => {
             { diversitySurrogate: e2 } = (0, u.cj)([O.ZP], () => ({ diversitySurrogate: O.ZP.diversitySurrogate })),
             e4 = (0, U.DV)(eZ, c, l, eR),
             e5 = null == e4 ? 0 : e4.locked.length + e4.unlocked.length,
-            e8 = D.d4.useSetting(),
+            e8 = w.d4.useSetting(),
             e6 = i.useMemo(() => new Set(e8), [e8]),
             e7 = i.useCallback((e) => {
-                D.d4.updateSetting(Array.from(e));
+                w.d4.updateSetting(Array.from(e));
             }, []),
             e9 = (0, C.ep)({
                 gridWrapperRef: eB,
@@ -444,8 +444,8 @@ let eu = (e, t) => {
         let tp = null != eS ? eS : P ? "div" : p.VqE,
             t_ = null != e9;
         if ((null == ek ? void 0 : ek.type) === Y.Bg.PREMIUM) {
-            let e = w.p.NONE;
-            2 === k ? (e = w.p.PARENT_CONTAINER) : 1 === k && (e = w.p.TAB_PARENT_CONTAINER),
+            let e = D.p.NONE;
+            2 === k ? (e = D.p.PARENT_CONTAINER) : 1 === k && (e = D.p.TAB_PARENT_CONTAINER),
                 (s = (0, r.jsx)(q.Z, {
                     onLearnMore: ts,
                     emojiDescriptor: ek.emojiDescriptor,
@@ -478,7 +478,7 @@ let eu = (e, t) => {
                     null == td || td(e), null == ex || ex(e);
                 },
                 searchBarRef: eV,
-                onFocus: eD,
+                onFocus: ew,
                 autoFocus: eL,
                 accessory: ej,
                 headerClassName: ey,
@@ -486,7 +486,7 @@ let eu = (e, t) => {
                 isBurstReaction: eY,
                 onBurstReactionToggle: th,
                 renderHeader: eA,
-                showAddEmojiButton: ew,
+                showAddEmojiButton: eD,
             }),
             tE = [];
         l === $.Hz.REACTION && tE.push(d.z.SUPER_REACTIONS_NITRO_MARKETING),

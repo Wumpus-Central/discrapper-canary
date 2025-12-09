@@ -86,7 +86,7 @@ let y = function (e) {
     function R(e, t) {
         !!y[e] !== t && O((n) => b(g({}, n), { [e]: t }));
     }
-    let w = i.useCallback(
+    let D = i.useCallback(
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
@@ -94,13 +94,13 @@ let y = function (e) {
         },
         [I, v],
     );
-    function D() {
-        C(w());
+    function w() {
+        C(D());
     }
     i.useEffect(() => {
-        let e = y.cardNumber && y.cardExpiry && y.cardCvc && 0 === Object.keys(w(!0)).length;
+        let e = y.cardNumber && y.cardExpiry && y.cardCvc && 0 === Object.keys(D(!0)).length;
         a.current({ name: v.name }, !!e);
-    }, [y, v, w]);
+    }, [y, v, D]);
     let x = [
         {
             fields: [
@@ -215,7 +215,7 @@ let y = function (e) {
                 formError: n,
                 values: v,
                 onFieldChange: L,
-                onFieldBlur: D,
+                onFieldBlur: w,
             }),
         ],
     });

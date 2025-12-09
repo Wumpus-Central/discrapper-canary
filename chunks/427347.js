@@ -1,9 +1,9 @@
 n.d(t, { Z: () => j });
 var a = n(54381);
 n(473749);
-var l = n(481060),
-    r = n(100527),
-    i = n(906732),
+var r = n(481060),
+    i = n(100527),
+    l = n(906732),
     s = n(266454),
     o = n(314910),
     c = n(313789),
@@ -20,7 +20,7 @@ function v(e) {
     let { dismissibleContent: t } = e,
         n = p.Z.useIsEligible(),
         m = (0, s.Nj)(t),
-        { analyticsLocations: v } = (0, i.ZP)(r.Z.HOLIDAY_COACHMARK),
+        { analyticsLocations: v } = (0, l.ZP)(i.Z.HOLIDAY_COACHMARK),
         j = (e) => {
             (0, s.Q3)(t, { dismissAction: e });
         },
@@ -53,19 +53,19 @@ function v(e) {
                           children: [
                               (0, a.jsxs)("div", {
                                   children: [
-                                      (0, a.jsx)(l.Heading, {
+                                      (0, a.jsx)(r.Heading, {
                                           variant: "heading-md/bold",
                                           color: void 0,
                                           className: b.specialText,
                                           children: g.intl.string(g.t.zUhr3D),
                                       }),
-                                      (0, a.jsx)(l.Text, {
+                                      (0, a.jsx)(r.Text, {
                                           variant: "text-xs/normal",
                                           color: "always-white",
                                           children: g.intl.format(g.t.Xw2XUT, {
                                               settingsHook: (e, t) =>
                                                   (0, a.jsx)(
-                                                      l.P3F,
+                                                      r.P3F,
                                                       {
                                                           tag: "span",
                                                           className: b.specialTextLink,
@@ -78,10 +78,10 @@ function v(e) {
                                       }),
                                   ],
                               }),
-                              (0, a.jsx)(l.P3F, {
+                              (0, a.jsx)(r.P3F, {
                                   className: b.closeClickable,
                                   onClick: () => j(f.L.USER_DISMISS),
-                                  children: (0, a.jsx)(l.Dio, {
+                                  children: (0, a.jsx)(r.Dio, {
                                       color: "currentColor",
                                       size: "xs",
                                   }),

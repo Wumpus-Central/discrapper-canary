@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H });
+n.d(t, { Z: () => B });
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(484459),
     C = n(131704),
     y = n(881998),
-    v = n(984933),
-    _ = n(496675),
+    _ = n(984933),
+    v = n(496675),
     O = n(594174),
     x = n(51144),
     E = n(7782),
@@ -39,7 +39,7 @@ var i = n(54381),
 function V(e) {
     let { canManageRoles: t, channel: n } = e,
         r = t && (0, p.Yk)(n),
-        a = (0, l.e7)([v.ZP], () => null != n.guild_id && n === v.ZP.getDefaultChannel(n.guild_id), [n]);
+        a = (0, l.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, h.Z)(n.id)) return null;
     if (n.isForumPost()) return (0, i.jsx)(S.Z, { channel: n });
     if (C.Ec.has(n.type)) return (0, i.jsx)(w.Z, { channel: n });
@@ -47,34 +47,34 @@ function V(e) {
     if (r) return (0, i.jsx)(N.Z, { channel: n });
     return (0, i.jsx)(A.Z, { channel: n });
 }
-function H(e) {
+function B(e) {
     var t;
     let { channel: n, showingBanner: p } = e,
         h = (0, d.ZP)(n),
         { type: C } = n,
-        v = (0, l.e7)([O.default], () => (n.isPrivate() ? O.default.getUser(n.getRecipientId()) : null)),
-        S = x.ZP.useUserTag(v),
-        { canManageRoles: N, canReadMessageHistory: A } = (0, l.cj)([_.Z], () => ({
-            canManageRoles: _.Z.can(R.Plq.MANAGE_ROLES, n),
-            canReadMessageHistory: _.Z.can(R.Plq.READ_MESSAGE_HISTORY, n),
+        _ = (0, l.e7)([O.default], () => (n.isPrivate() ? O.default.getUser(n.getRecipientId()) : null)),
+        S = x.ZP.useUserTag(_),
+        { canManageRoles: N, canReadMessageHistory: A } = (0, l.cj)([v.Z], () => ({
+            canManageRoles: v.Z.can(R.Plq.MANAGE_ROLES, n),
+            canReadMessageHistory: v.Z.can(R.Plq.READ_MESSAGE_HISTORY, n),
         })),
         w = (0, l.e7)([g.Z], () => (C === R.d4z.DM ? g.Z.getMutualGuilds(n.getRecipientId()) : null), [n, C]),
-        M = (0, u.Z)(null != (t = null == v ? void 0 : v.id) ? t : R.lds),
-        { authorizedAppToken: H, authorizedAppsFetchState: F } = (0, l.cj)([y.default], () => ({
+        M = (0, u.Z)(null != (t = null == _ ? void 0 : _.id) ? t : R.lds),
+        { authorizedAppToken: B, authorizedAppsFetchState: F } = (0, l.cj)([y.default], () => ({
             authorizedAppToken: y.default.getNewestTokenForApplication(null == M ? void 0 : M.id),
             authorizedAppsFetchState: y.default.getFetchState(),
         })),
-        B = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
+        H = c.Z.useExperiment({ location: "EmptyMessages" }).enabledDesktop;
     if (
         (r.useEffect(() => {
             C === R.d4z.DM &&
                 null == w &&
-                null != v &&
-                o.Z.wait(() => (0, b.Z)(n.getRecipientId(), v.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
-        }, [w, C, n, v]),
+                null != _ &&
+                o.Z.wait(() => (0, b.Z)(n.getRecipientId(), _.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+        }, [w, C, n, _]),
         r.useEffect(() => {
-            (null == v ? void 0 : v.bot) && F === y.FetchState.NOT_FETCHED && s.Z.fetch();
-        }, [null == v ? void 0 : v.bot, F]),
+            (null == _ ? void 0 : _.bot) && F === y.FetchState.NOT_FETCHED && s.Z.fetch();
+        }, [null == _ ? void 0 : _.bot, F]),
         n.isSystemDM())
     )
         return (0, i.jsx)(T.Z, {
@@ -84,22 +84,22 @@ function H(e) {
     if (C === R.d4z.DM) {
         let e;
         return (
-            null != v && null != M
-                ? null != H &&
+            null != _ && null != M
+                ? null != B &&
                   (e = (0, i.jsxs)("div", {
                       className: k.buttonContainer,
                       children: [
                           (0, i.jsx)(Z.W, {
                               channel: n,
-                              user: v,
+                              user: _,
                           }),
                           (0, i.jsx)(I.n, {
-                              user: v,
+                              user: _,
                               application: M,
                               channel: n,
-                              oauth2Token: H,
+                              oauth2Token: B,
                           }),
-                          B && (0, i.jsx)(f.Z, { channel: n }),
+                          H && (0, i.jsx)(f.Z, { channel: n }),
                       ],
                   }))
                 : (e = (0, i.jsx)(E.Z, {
@@ -109,17 +109,17 @@ function H(e) {
                   })),
             (0, i.jsxs)(T.Z, {
                 channel: n,
-                user: v,
+                user: _,
                 children: [
-                    null != v &&
-                        !v.isProvisional &&
+                    null != _ &&
+                        !_.isProvisional &&
                         (0, i.jsx)(a.Heading, {
                             variant: "heading-xl/medium",
                             className: U.marginBottom20,
                             children: S,
                         }),
                     D.intl.format(D.t["Qvg+6+"], { username: h }),
-                    (null == v ? void 0 : v.isProvisional) && (0, i.jsx)(m.q, { userId: v.id }),
+                    (null == _ ? void 0 : _.isProvisional) && (0, i.jsx)(m.q, { userId: _.id }),
                     e,
                 ],
             })

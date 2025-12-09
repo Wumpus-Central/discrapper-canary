@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var i,
     r = n(873546),
     l = n(442837),
@@ -87,7 +87,7 @@ class y extends (i = l.ZP.Store) {
     }
 }
 u(y, "displayName", "TutorialIndicatorStore");
-let v = new y(a.Z, {
+let _ = new y(a.Z, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
         (b = !0),

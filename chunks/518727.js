@@ -43,8 +43,8 @@ let b = 1000,
             b && N(!0);
         }, [b]);
         let { mediaUrls: P, isSuccess: R } = (0, _.Z)(!y && a && C),
-            w = (0, i.useRef)(null),
-            [D, x] = (0, i.useState)(!1),
+            D = (0, i.useRef)(null),
+            [w, x] = (0, i.useState)(!1),
             [L, j] = (0, i.useState)(!1),
             [M, k] = (0, i.useState)("none"),
             [U, G] = (0, i.useState)(!1);
@@ -133,9 +133,9 @@ let b = 1000,
                         className: h.wowAnimation,
                         children: (0, r.jsx)(l.zec, {
                             fit: "layout",
-                            ref: w,
+                            ref: D,
                             dataBinding: {
-                                ExitTrigger: D,
+                                ExitTrigger: w,
                                 EntryTrigger: L,
                             },
                             listenOnDocumentBody: !0,
@@ -147,7 +147,7 @@ let b = 1000,
                     }),
                 ],
             });
-        let Z = !D;
+        let Z = !w;
         return "static" === M
             ? (0, r.jsxs)(r.Fragment, {
                   children: [

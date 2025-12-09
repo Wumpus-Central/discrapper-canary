@@ -85,8 +85,8 @@ let v = {
     N = !1,
     P = d.Z.Millis.DAY,
     R = 10 * d.Z.Millis.HOUR,
-    w = 7;
-var D = (function (e) {
+    D = 7;
+var w = (function (e) {
     return (
         (e.IS_OWNER = "is_owner"),
         (e.IS_ADMIN = "is_admin"),
@@ -98,8 +98,8 @@ var D = (function (e) {
         (e.GUILD_SIZE_ALL = "guild_size_all"),
         e
     );
-})(D || {});
-let x = new Set(Object.values(D));
+})(w || {});
+let x = new Set(Object.values(w));
 function L() {
     return null == S.lastFetched || Date.now() - S.lastFetched >= P;
 }
@@ -168,7 +168,7 @@ function Z(e) {
     let r = null != t,
         i = r && null == S.hiddenSurveys[t.key],
         a = r && M(t);
-    G(w);
+    G(D);
     let o = !1;
     C = i && a && !o ? t : null;
 }

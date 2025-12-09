@@ -68,7 +68,7 @@ function P(e) {
     -1 !== e.current && (clearTimeout(e.current), (e.current = -1));
 }
 let R = N("safe-polygon");
-function w(e, t, n) {
+function D(e, t, n) {
     if (n && !(0, a.r)(n)) return 0;
     if ("number" == typeof e) return e;
     if ("function" == typeof e) {
@@ -77,7 +77,7 @@ function w(e, t, n) {
     }
     return null == e ? void 0 : e[t];
 }
-function D(e) {
+function w(e) {
     return "function" == typeof e ? e() : e;
 }
 function x(e, t) {
@@ -132,7 +132,7 @@ function x(e, t) {
     let k = i.useCallback(
             function (e, t, n) {
                 void 0 === t && (t = !0), void 0 === n && (n = "hover");
-                let i = w(b.current, "close", v.current);
+                let i = D(b.current, "close", v.current);
                 i && !I.current
                     ? (P(S), (S.current = window.setTimeout(() => r(!1, e, n), i)))
                     : t && (P(S), r(!1, e, n));
@@ -175,9 +175,9 @@ function x(e, t) {
             );
         }
         function e(e) {
-            if ((P(S), (N.current = !1), (p && !(0, a.r)(v.current)) || (D(O.current) > 0 && !w(b.current, "open"))))
+            if ((P(S), (N.current = !1), (p && !(0, a.r)(v.current)) || (w(O.current) > 0 && !D(b.current, "open"))))
                 return;
-            let t = w(b.current, "open", v.current);
+            let t = D(b.current, "open", v.current);
             t
                 ? (S.current = window.setTimeout(() => {
                       y.current || r(!0, e, "hover");
@@ -279,12 +279,12 @@ function x(e, t) {
                 }
                 (!p || (0, a.r)(v.current)) &&
                     !n &&
-                    0 !== D(O.current) &&
+                    0 !== w(O.current) &&
                     ((j.current && e.movementX ** 2 + e.movementY ** 2 < 2) ||
                         (P(T),
                         "touch" === v.current
                             ? i()
-                            : ((j.current = !0), (T.current = window.setTimeout(i, D(O.current))))));
+                            : ((j.current = !0), (T.current = window.setTimeout(i, w(O.current))))));
             },
         };
     }, [p, r, n, y, O]);
@@ -530,7 +530,7 @@ function es(e, t) {
             };
             null == (t = (0, a.U9)(e)) || t.addEventListener("keydown", n);
         }),
-        w = (0, a.iW)((e) => {
+        D = (0, a.iW)((e) => {
             var t;
             let n = l.current.insideReactTree;
             l.current.insideReactTree = !1;
@@ -591,11 +591,11 @@ function es(e, t) {
             }
             r(!1, e, "outside-press");
         }),
-        D = (0, a.iW)((e) => {
+        w = (0, a.iW)((e) => {
             var t;
             let n = () => {
                 var t;
-                w(e), null == (t = (0, a.U9)(e)) || t.removeEventListener(f, n);
+                D(e), null == (t = (0, a.U9)(e)) || t.removeEventListener(f, n);
             };
             null == (t = (0, a.U9)(e)) || t.addEventListener(f, n);
         });
@@ -622,7 +622,7 @@ function es(e, t) {
             (p.addEventListener("keydown", I ? R : P, I),
             p.addEventListener("compositionstart", i),
             p.addEventListener("compositionend", d)),
-            y && p.addEventListener(f, T ? D : w, T);
+            y && p.addEventListener(f, T ? w : D, T);
         let _ = [];
         return (
             m &&
@@ -643,14 +643,14 @@ function es(e, t) {
                     (p.removeEventListener("keydown", I ? R : P, I),
                     p.removeEventListener("compositionstart", i),
                     p.removeEventListener("compositionend", d)),
-                    y && p.removeEventListener(f, T ? D : w, T),
+                    y && p.removeEventListener(f, T ? w : D, T),
                     _.forEach((e) => {
                         e.removeEventListener("scroll", t);
                     }),
                     window.clearTimeout(e);
             }
         );
-    }, [l, o, u, y, f, n, r, m, c, v, S, P, I, R, w, T, D]),
+    }, [l, o, u, y, f, n, r, m, c, v, S, P, I, R, D, T, w]),
         i.useEffect(() => {
             l.current.insideReactTree = !1;
         }, [l, y, f]);
@@ -1078,8 +1078,8 @@ function ev(e) {
                 C = eO(g, v),
                 N = S.width > v.width,
                 R = S.height > v.height,
-                w = (N ? v : S).left,
-                D = (N ? v : S).right,
+                D = (N ? v : S).left,
+                w = (N ? v : S).right,
                 x = (R ? v : S).top,
                 L = (R ? v : S).bottom;
             if (y && ((a = !0), !b)) return;
@@ -1103,18 +1103,18 @@ function ev(e) {
             switch (I) {
                 case "top":
                     j = [
-                        [w, v.top + 1],
-                        [w, S.bottom - 1],
-                        [D, S.bottom - 1],
                         [D, v.top + 1],
+                        [D, S.bottom - 1],
+                        [w, S.bottom - 1],
+                        [w, v.top + 1],
                     ];
                     break;
                 case "bottom":
                     j = [
-                        [w, S.top + 1],
-                        [w, v.bottom - 1],
-                        [D, v.bottom - 1],
                         [D, S.top + 1],
+                        [D, v.bottom - 1],
+                        [w, v.bottom - 1],
+                        [w, S.top + 1],
                     ];
                     break;
                 case "left":

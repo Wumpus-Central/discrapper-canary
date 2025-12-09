@@ -33,8 +33,8 @@ var i = n(120356),
     N = n(823188),
     P = n(52741),
     R = n(474936),
-    w = n(441677),
-    D = n(388032),
+    D = n(441677),
+    w = n(388032),
     x = n(1721),
     L = n(895601),
     j = n(381126),
@@ -108,13 +108,13 @@ function B(e) {
         S = null == v || null == (t = v.subscription_trial) ? void 0 : t.sku_id,
         I = (null == b ? void 0 : b.hasActiveTrial) ? (null == y ? void 0 : y.premiumType) : null,
         A = (0, C.y_)(I, S),
-        w = null != A,
+        D = null != A,
         L = (0, c.ap)((0, d.ZP)()),
         j = (0, E.yc)({ location: "PremiumBrandRefreshTierCards" }),
-        M = g ? D.intl.string(D.t.tUbSDK) : D.intl.string(D.t["t9uG/o"]),
+        M = g ? w.intl.string(w.t.tUbSDK) : w.intl.string(w.t["t9uG/o"]),
         k = (0, r.jsxs)(r.Fragment, {
             children: [
-                w &&
+                D &&
                     (0, r.jsx)(T.E, {
                         text: A,
                         className: x.pill,
@@ -148,11 +148,11 @@ function B(e) {
     return j
         ? (0, r.jsx)(u.$1m, {
               color: "nitro-green",
-              className: a()(x.card, x.tier0, l, { [x.pillMargin]: !_ && w }),
+              className: a()(x.card, x.tier0, l, { [x.pillMargin]: !_ && D }),
               children: k,
           })
         : (0, r.jsx)("div", {
-              className: a()(x.card, x.tier0, l, { [x.pillMargin]: !_ && w }),
+              className: a()(x.card, x.tier0, l, { [x.pillMargin]: !_ && D }),
               children: k,
           });
 }
@@ -169,7 +169,7 @@ function F(e) {
             showPromotionalGiftBanner: v = !1,
             wumpusPosition: S = "inCard",
             isApplicationHome: A = !1,
-            showWumpus: w = !0,
+            showWumpus: D = !0,
             showPill: k = !0,
         } = e,
         U = (0, s.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
@@ -206,17 +206,17 @@ function F(e) {
         color: "nitro-pink",
         className: a()(x.card, f, { [x.withGiftBanner]: v }),
         children: [
-            w && (0, r.jsx)(z, {}),
+            D && (0, r.jsx)(z, {}),
             k &&
                 (0, r.jsx)(T.E, {
-                    text: null != K ? K : D.intl.string(D.t["6bEcYr"]),
+                    text: null != K ? K : w.intl.string(w.t["6bEcYr"]),
                     className: x.pill,
                 }),
             (0, r.jsx)(o.X, {
                 variant: "display-md",
                 color: W ? "header-primary" : "always-white",
                 className: x.cardTitle,
-                children: D.intl.string(D.t.lG6a5x),
+                children: w.intl.string(w.t.lG6a5x),
             }),
             (0, r.jsx)(P.Z, {
                 isGift: p,
@@ -257,10 +257,10 @@ function V(e) {
                         variant: "display-md",
                         color: l ? "header-primary" : "always-white",
                         className: x.cardTitle,
-                        children: D.intl.string(w.default.eSKiXk),
+                        children: w.intl.string(D.default.eSKiXk),
                     }),
                     (0, r.jsx)(T.E, {
-                        text: D.intl.string(D.t.oW0eUd),
+                        text: w.intl.string(w.t.oW0eUd),
                         className: x.betaPill,
                     }),
                 ],
@@ -269,7 +269,7 @@ function V(e) {
             (0, r.jsx)(o.X, {
                 variant: "heading-md/semibold",
                 color: "text-muted",
-                children: D.intl.string(w.default["R+dzZw"]),
+                children: w.intl.string(D.default["R+dzZw"]),
             }),
             (0, r.jsx)("hr", { className: x.divider }),
             (0, r.jsx)(N.fm, { isApplicationHome: i }),
@@ -348,7 +348,7 @@ function Y(e) {
                     variant: "display-md",
                     color: "header-primary",
                     className: x.premiumCardsHeader,
-                    children: D.intl.string(D.t.vLz3Zs),
+                    children: w.intl.string(w.t.vLz3Zs),
                 }),
                 (0, r.jsxs)("div", {
                     ref: l,

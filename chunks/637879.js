@@ -2,13 +2,13 @@ n.d(t, {
     GM: () => H,
     HU: () => Z,
     Nk: () => Y,
-    Q0: () => w,
+    Q0: () => D,
     V4: () => q,
     _B: () => R,
     dI: () => k,
     do: () => L,
     f: () => x,
-    mW: () => D,
+    mW: () => w,
     uB: () => z,
 }),
     n(781311),
@@ -127,7 +127,7 @@ function R(e) {
         ),
     );
 }
-function w(e) {
+function D(e) {
     let { label: t, className: n } = e;
     return (0, r.jsx)(l.Text, {
         variant: "text-sm/medium",
@@ -136,7 +136,7 @@ function w(e) {
         children: t,
     });
 }
-function D(e) {
+function w(e) {
     var t, n;
     let { searchTokenType: i, answer: a } = e,
         o = null != (n = null == (t = h.ZP[i]) ? void 0 : t.key) ? n : "",
@@ -479,7 +479,7 @@ function Y(e) {
               ariaLabel: n.username,
           }
         : {
-              label: (0, r.jsx)(w, { label: i }),
+              label: (0, r.jsx)(D, { label: i }),
               ariaLabel: i,
           };
 }
@@ -565,7 +565,7 @@ function q(e) {
               ariaLabel: n.username,
           }
         : {
-              label: (0, r.jsx)(w, { label: i }),
+              label: (0, r.jsx)(D, { label: i }),
               ariaLabel: i,
           };
 }

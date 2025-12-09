@@ -29,17 +29,17 @@ let v = function (e) {
     !n && null == T && (S && !v && C.push(a.z.CLIENT_THEMES_COACHMARK), I && C.push(a.z.CUSTOM_THEME_COACHMARK));
     let [N, P] = (0, _.US)(C, y.R.SIDEBAR, !0),
         R = N === a.z.CLIENT_THEMES_COACHMARK,
-        w = N === a.z.CUSTOM_THEME_COACHMARK;
+        D = N === a.z.CUSTOM_THEME_COACHMARK;
     if (((0, d.HA)(I, N), n)) return null;
-    let D = T === E.wh.CLIENT_THEMES || R,
+    let w = T === E.wh.CLIENT_THEMES || R,
         x = T === E.wh.APP_ICON,
-        L = T === E.wh.CUSTOM_THEME || w,
+        L = T === E.wh.CUSTOM_THEME || D,
         j = T === E.wh.APPLICATION_TEST_MODE_DEBUG;
-    if (!(D || x || L || j)) return null;
+    if (!(w || x || L || j)) return null;
     let M = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
-                D &&
+                w &&
                     (0, r.jsx)(u.Z, {
                         markAsDismissed: R
                             ? P
@@ -60,7 +60,7 @@ let v = function (e) {
                     (0, r.jsx)(f.Z, {
                         metadata: null != A ? A : {},
                         markAsDismissed: P,
-                        isCoachmark: w,
+                        isCoachmark: D,
                         isMobile: t,
                     }),
                 j && (0, r.jsx)(s.Z, {}),

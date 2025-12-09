@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(453070),
     P = n(926491),
     R = n(457040),
-    w = n(740492),
-    D = n(574254),
+    D = n(740492),
+    w = n(574254),
     x = n(585483),
     L = n(28546),
     j = n(957825),
@@ -143,7 +143,7 @@ let q = j.Om + U.Su.MEDIUM,
     }),
     X = (e) => {
         let { positionContainerRef: t, drawerRef: n, orientation: r } = e,
-            a = (0, d.e7)([w.ZP], () => w.ZP.expressionPickerWidth),
+            a = (0, d.e7)([D.ZP], () => D.ZP.expressionPickerWidth),
             [o, s] = i.useState(window.innerWidth),
             [c, u] = i.useState(null != a ? a : j._j.MIN),
             f = i.useMemo(() => {
@@ -204,7 +204,7 @@ function J(e) {
     let {
             positionTargetRef: l,
             hideGifFavorites: m,
-            includeCreateEmojiButton: w,
+            includeCreateEmojiButton: D,
             onSelectGIF: V,
             onSelectEmoji: H,
             onSelectSticker: Y,
@@ -231,7 +231,7 @@ function J(e) {
         { renderWindow: ed, windowDispatch: ef } = i.useContext(T.ZP),
         ep = (0, d.e7)([P.Z], () => !P.Z.hasLoadedStickerPacks),
         e_ = (0, A.V2)({ location: "expression_picker" }),
-        em = (0, d.e7)([D.Z], () => D.Z.isOpen()),
+        em = (0, d.e7)([w.Z], () => w.Z.isOpen()),
         eh = null != en,
         eg = (0, p.useIsModalAtTop)(null != en ? en : ""),
         { reorderExpressionPickerTabs: eE } = b.n.useConfig({ location: "expression_picker" }),
@@ -323,8 +323,8 @@ function J(e) {
         });
     let eP = i.useCallback((e, t) => (null == W ? void 0 : W(e, "emoji_picker", t)), [W]),
         eR = i.useCallback((e, t) => (null == W ? void 0 : W(e, "soundboard_picker", t)), [W]),
-        ew = (null == (s = z.soundmoji) ? void 0 : s.allowSending) === !0 && null != W,
-        eD = "left" === $ ? "right" : "left",
+        eD = (null == (s = z.soundmoji) ? void 0 : s.allowSending) === !0 && null != W,
+        ew = "left" === $ ? "right" : "left",
         ex = null != ee ? ee : "left" === $ ? F.positionLayerDefaultAlignLeft : F.positionLayerDefaultAlignRight,
         eL = eb
             ? (0, r.jsx)(Q, {
@@ -388,7 +388,7 @@ function J(e) {
                                   (0, r.jsx)("div", {
                                       className: F.resizeHandle,
                                       onMouseDown: el,
-                                      style: { [eD]: -2 },
+                                      style: { [ew]: -2 },
                                   }),
                                   (0, r.jsxs)("div", {
                                       className: F.contentWrapper,
@@ -409,7 +409,7 @@ function J(e) {
                                                                       children: [eL, ej, eM],
                                                                   }),
                                                             e_ &&
-                                                                ew &&
+                                                                eD &&
                                                                 (0, r.jsx)(Q, {
                                                                     id: U.Hr,
                                                                     "aria-controls": U.gV,
@@ -459,7 +459,7 @@ function J(e) {
                                                     persistSearch: !0,
                                                     channel: K,
                                                     containerWidth: es,
-                                                    includeCreateEmojiButton: w,
+                                                    includeCreateEmojiButton: D,
                                                     emojiSize: null != es && es < q ? U.Su.MEDIUM : U.Su.LARGE,
                                                     pickerIntention: G.Hz.CHAT,
                                                     closePopout: eI,

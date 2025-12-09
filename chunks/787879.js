@@ -39,8 +39,8 @@ function R(e, t, n) {
         e
     );
 }
-let w = {},
-    D = null,
+let D = {},
+    w = null,
     x = [],
     L = new A.Z(),
     j = !1,
@@ -108,12 +108,12 @@ function Y(e) {
         );
 }
 function W() {
-    if (null == D) {
+    if (null == w) {
         G = S.default.fromTimestamp(Date.now());
         return;
     }
-    for (let e of D.toSorted((e, t) => S.default.compare(b.ZP.lastMessageId(t), b.ZP.lastMessageId(e)))) {
-        let t = w[e];
+    for (let e of w.toSorted((e, t) => S.default.compare(b.ZP.lastMessageId(t), b.ZP.lastMessageId(e)))) {
+        let t = D[e];
         if (t.loadState === C.a7.UNLOADED && null != t.mostRecentMessageId) {
             G = t.mostRecentMessageId;
             return;
@@ -123,14 +123,14 @@ function W() {
 }
 function K() {
     let { notifyingChannelIds: e, staleChannelIds: t } = H();
-    (D = e), (x = t), a()(null != D, "notifyingChannelIds should not be null");
-    let n = D.filter((e) => null == w[e]),
-        r = Object.keys(w).filter((e) => !(null == D ? void 0 : D.includes(e)));
-    if (0 !== D.length && 0 === n.length && 0 === r.length) return !1;
-    for (let e of r) delete w[e];
+    (w = e), (x = t), a()(null != w, "notifyingChannelIds should not be null");
+    let n = w.filter((e) => null == D[e]),
+        r = Object.keys(D).filter((e) => !(null == w ? void 0 : w.includes(e)));
+    if (0 !== w.length && 0 === n.length && 0 === r.length) return !1;
+    for (let e of r) delete D[e];
     for (let e of n)
         if (
-            ((w[e] = {
+            ((D[e] = {
                 loadState: C.a7.UNLOADED,
                 mostRecentMessageId: b.ZP.lastMessageId(e),
             }),
@@ -139,16 +139,16 @@ function K() {
             let t = Y(e);
             if (null != t) {
                 var i, o;
-                (w[e].loadState = C.a7.LOADED),
-                    (w[e].mostRecentMessageId =
-                        null != (o = null == (i = t.last()) ? void 0 : i.id) ? o : w[e].mostRecentMessageId);
+                (D[e].loadState = C.a7.LOADED),
+                    (D[e].mostRecentMessageId =
+                        null != (o = null == (i = t.last()) ? void 0 : i.id) ? o : D[e].mostRecentMessageId);
             }
         }
-    L.updateChannelIds(D), W();
+    L.updateChannelIds(w), W();
 }
 function z() {
-    (w = {}),
-        (D = null),
+    (D = {}),
+        (w = null),
         (x = []),
         (L = new A.Z()),
         (j = !1),
@@ -162,11 +162,11 @@ function z() {
 }
 function q() {
     var e, t, n;
-    for (let n of (K(), null != D ? D : [])) {
+    for (let n of (K(), null != w ? w : [])) {
         let r = Y(n);
         null != r &&
-            ((w[n].loadState = C.a7.LOADED),
-            (w[n].mostRecentMessageId = null != (t = null == (e = r.last()) ? void 0 : e.id) ? t : null),
+            ((D[n].loadState = C.a7.LOADED),
+            (D[n].mostRecentMessageId = null != (t = null == (e = r.last()) ? void 0 : e.id) ? t : null),
             W());
     }
     let r = null != (n = u.ZP.getSettingsFilteredMentions()) ? n : [];
@@ -198,11 +198,11 @@ function $(e) {
     var t, n, r;
     let { channelId: i, message: a } = e;
     if (
-        null == D ||
+        null == w ||
         (null == (t = a.author) ? void 0 : t.id) === (null == (n = v.default.getCurrentUser()) ? void 0 : n.id)
     )
         return !1;
-    let o = D.includes(i);
+    let o = w.includes(i);
     if ((0, l.zd)(i)) return !1;
     let s = J(a),
         c = s.mentioned;
@@ -221,11 +221,11 @@ function $(e) {
 }
 function ee(e) {
     let { channelId: t } = e;
-    if (!(null == D ? void 0 : D.includes(t))) return !1;
+    if (!(null == w ? void 0 : w.includes(t))) return !1;
     let n = Y(t);
     if (null == n) return !1;
     let r = n.length >= C.AQ || (n.hasFetched && !n.hasMoreBefore);
-    w[t].loadState !== C.a7.LOADED && (w[t].loadState = r ? C.a7.LOADED : C.a7.LOADED_UNREAD), W();
+    D[t].loadState !== C.a7.LOADED && (D[t].loadState = r ? C.a7.LOADED : C.a7.LOADED_UNREAD), W();
 }
 function et(e) {
     let { messages: t } = e;
@@ -272,7 +272,7 @@ function eo(e) {
             }))
                 ? void 0
                 : t.notificationCenterVariant) &&
-        null != D &&
+        null != w &&
         !j &&
         !M &&
         (!n || !U) &&
@@ -357,10 +357,10 @@ class eE extends (r = o.ZP.Store) {
         return L.getMessages();
     }
     getNotifyingChannelIds() {
-        return D;
+        return w;
     }
     getChannelInfoMap() {
-        return w;
+        return D;
     }
     get oldestDisplayedMessageId() {
         return G;

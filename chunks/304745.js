@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(397698),
     C = n(522651),
     y = n(243778),
-    v = n(728285),
-    _ = n(579185),
+    _ = n(728285),
+    v = n(579185),
     O = n(301076),
     x = n(127379),
     E = n(981631),
@@ -29,7 +29,7 @@ function P(e) {
         T = (0, p.KF)(t.id),
         N = (0, p.g5)(T),
         A = T !== p.jy.CAN_LAUNCH || Z,
-        { isHovered: w, setIsHovered: M, onMouseEnter: R, onMouseLeave: L } = (0, _.Z)(200, 300),
+        { isHovered: w, setIsHovered: M, onMouseEnter: R, onMouseLeave: L } = (0, v.Z)(200, 300),
         D = (0, d.p)({ surface: c.eR.VOICE_LAUNCHER }),
         k = (0, l.e7)(
             [u.ZP],
@@ -42,8 +42,8 @@ function P(e) {
             },
             [R],
         ),
-        H = (0, v.bp)() === E.IlC.POPOUT,
-        { parentAnalyticsLocation: F, newestAnalyticsLocation: B } = (0, g.ZP)(),
+        B = (0, _.bp)() === E.IlC.POPOUT,
+        { parentAnalyticsLocation: F, newestAnalyticsLocation: H } = (0, g.ZP)(),
         G = r.useCallback(() => {
             (0, C.v)(F, C.d.ACTIVITY),
                 (0, b.Z)({
@@ -54,24 +54,24 @@ function P(e) {
                                   channel: t,
                               }
                             : { type: "contextless" },
-                    openInPopout: H,
-                    analyticsLocation: B,
+                    openInPopout: B,
+                    analyticsLocation: H,
                 });
-        }, [t, H, B, F]),
-        z = [];
-    A || z.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES),
-        (0, h.Z)(t.id) && !A && z.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE),
-        A || z.push(a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
-    let W = r.useRef(!1),
+        }, [t, B, H, F]),
+        W = [];
+    A || W.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES),
+        (0, h.Z)(t.id) && !A && W.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE),
+        A || W.push(a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
+    let z = r.useRef(!1),
         q = r.useRef(null);
     return (0, i.jsx)(y.ZP, {
-        contentTypes: z,
+        contentTypes: W,
         children: (e) => {
             let { visibleContent: r, markAsDismissed: l } = e,
                 c = r === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !w;
             return (
-                W.current && !c && l(j.L.AUTO_DISMISS),
-                W.current !== c && (W.current = c),
+                z.current && !c && l(j.L.AUTO_DISMISS),
+                z.current !== c && (z.current = c),
                 (0, i.jsx)(s.yRy, {
                     targetElementRef: q,
                     fixed: !0,

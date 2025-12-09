@@ -1,7 +1,7 @@
 n.d(t, { Z: () => j }), n(388685);
 var r,
-    i,
-    a = n(54381),
+    a,
+    i = n(54381),
     l = n(473749),
     s = n(120356),
     o = n.n(s),
@@ -42,40 +42,40 @@ class v extends (r = l.PureComponent) {
                 count: t,
                 includeHitboxPadding: n,
                 arrowClassName: r,
-                paginationDotClassName: i,
+                paginationDotClassName: a,
                 paginationDotSelectedClassName: l,
                 paginationArrowIconType: s = "arrow",
             } = this.props,
             c = o()(b.arrowHitbox, { [b.arrowHitboxPadding]: n }, r);
-        return (0, a.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             className: o()(b.controls, this.props.className),
             children: [
-                (0, a.jsx)("div", {
+                (0, i.jsx)("div", {
                     className: c,
-                    children: (0, a.jsx)(p.hU, {
+                    children: (0, i.jsx)(p.hU, {
                         variant: "icon-only",
                         icon: "caret" === s ? p.V7D : p.whL,
                         "aria-label": _.intl.string(_.t.vgfxaA),
                         onClick: this.handlePrevious,
                     }),
                 }),
-                (0, a.jsx)("div", {
+                (0, i.jsx)("div", {
                     className: b.dots,
                     children: d().times(t, (t) =>
-                        (0, a.jsx)(
+                        (0, i.jsx)(
                             p.P3F,
                             {
                                 onClick: () => this.handleDotClick(t),
-                                className: t === e ? o()(b.dotSelected, l) : o()(b.dotNormal, i),
+                                className: t === e ? o()(b.dotSelected, l) : o()(b.dotNormal, a),
                                 "aria-label": _.intl.formatToPlainString(_.t["2SXOrM"], { pageNumber: t + 1 }),
                             },
                             "dot-".concat(t),
                         ),
                     ),
                 }),
-                (0, a.jsx)("div", {
+                (0, i.jsx)("div", {
                     className: c,
-                    children: (0, a.jsx)(p.hU, {
+                    children: (0, i.jsx)(p.hU, {
                         variant: "icon-only",
                         icon: "caret" === s ? p.Fbu : p.ZSh,
                         "aria-label": _.intl.string(_.t.XiOHRX),
@@ -104,7 +104,7 @@ class v extends (r = l.PureComponent) {
     }
 }
 x(v, "defaultProps", { includeHitboxPadding: !0 });
-class C extends (i = l.PureComponent) {
+class C extends (a = l.PureComponent) {
     componentDidMount() {
         m.Z.subscribe("WINDOW_FOCUS", this.handleWindowFocusChange),
             this.props.initialPaused || this.state.paused || this.startTimer();
@@ -115,11 +115,11 @@ class C extends (i = l.PureComponent) {
     componentDidUpdate(e, t) {
         let n = (e, t) => !e.initialPaused && !t.paused,
             r = n(this.props, this.state),
-            i = n(e, t);
-        r && !i ? this.startTimer() : !r && i && this.stopTimer();
-        let { items: a } = this.props,
+            a = n(e, t);
+        r && !a ? this.startTimer() : !r && a && this.stopTimer();
+        let { items: i } = this.props,
             { visibleIndex: l } = this.state;
-        null == a[l] && this.changeItem(a, 1);
+        null == i[l] && this.changeItem(i, 1);
     }
     startTimer() {
         null != this.props.delay && this.timer.start(this.props.delay, this.nextItem);
@@ -132,11 +132,11 @@ class C extends (i = l.PureComponent) {
         n < 0 ? (n = e.length - 1) : n > e.length - 1 && (n = 0);
         let { onChangeItem: r } = this.props;
         null == r || r(e[n], this.state.visibleIndex, n);
-        let i = t > 0 ? h.n.LEFT : h.n.RIGHT;
+        let a = t > 0 ? h.n.LEFT : h.n.RIGHT;
         return (
             this.setState({
                 visibleIndex: n,
-                direction: i,
+                direction: a,
             }),
             n
         );
@@ -147,7 +147,7 @@ class C extends (i = l.PureComponent) {
                 renderItem: t,
                 className: n,
                 slideAnimatorClassName: r,
-                slideAnimatorSpringSettings: i,
+                slideAnimatorSpringSettings: a,
                 slideAnimatorFadeInOut: l,
                 paginationClassName: s,
                 paginationArrowClassName: c,
@@ -161,28 +161,28 @@ class C extends (i = l.PureComponent) {
                 children: x,
             } = this.props,
             { visibleIndex: C } = this.state;
-        return (0, a.jsxs)("div", {
+        return (0, i.jsxs)("div", {
             className: b.root,
             children: [
-                (0, a.jsxs)("div", {
+                (0, i.jsxs)("div", {
                     className: o()(b.carouselContainer, n),
                     style: f,
                     onMouseEnter: this.handleMouseEnter,
                     onMouseLeave: this.handleMouseLeave,
                     children: [
-                        (0, a.jsx)("div", {
+                        (0, i.jsx)("div", {
                             style: { aspectRatio: _ },
-                            children: (0, a.jsx)(h.Z, {
+                            children: (0, i.jsx)(h.Z, {
                                 className: o()(b.carousel, r),
                                 step: C,
                                 direction: this.getCurrentDirection(),
-                                springSettings: i,
+                                springSettings: a,
                                 fadeInOut: l,
                                 children: t(e[C], C),
                             }),
                         }),
                         e.length > 1 &&
-                            (0, a.jsx)(v, {
+                            (0, i.jsx)(v, {
                                 className: o()(s, m ? b.themedPagination : b.pagination),
                                 arrowClassName: c,
                                 includeHitboxPadding: g,
@@ -233,8 +233,8 @@ class C extends (i = l.PureComponent) {
                 this.setState({ paused: !1 });
             }),
             x(this, "handleIntentionalChange", (e, t, n) => {
-                let { items: r, onIntentionalChange: i } = this.props;
-                return null == i ? void 0 : i(r[t], e, t, n);
+                let { items: r, onIntentionalChange: a } = this.props;
+                return null == a ? void 0 : a(r[t], e, t, n);
             }),
             (this.state = {
                 visibleIndex: !0 === e.randomize ? d().random(0, e.items.length - 1) : 0,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r,
     i = n(442837),
     a = n(46973),
@@ -114,7 +114,7 @@ function R(e) {
     let { userId: t, context: n } = e;
     return n === a.Yn.DEFAULT && S(t);
 }
-class w extends (r = i.ZP.Store) {
+class D extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(_.Z, p.default, d.Z, f.Z), this.syncWith([p.default], I);
     }
@@ -131,8 +131,8 @@ class w extends (r = i.ZP.Store) {
         return y.values();
     }
 }
-E(w, "displayName", "RTCConnectionDesyncStore");
-let D = new w(o.Z, {
+E(D, "displayName", "RTCConnectionDesyncStore");
+let w = new D(o.Z, {
     CONNECTION_OPEN: A,
     VOICE_CHANNEL_SELECT: T,
     RTC_CONNECTION_STATE: C,

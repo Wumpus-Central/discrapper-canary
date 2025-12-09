@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(620662),
     P = n(275920),
     R = n(561766),
-    w = n(404174),
-    D = n(691991),
+    D = n(404174),
+    w = n(691991),
     x = n(981631),
     L = n(967249),
     j = n(388032),
@@ -50,7 +50,7 @@ function k(e) {
                                     color: "currentColor",
                                 });
                             case R.Ol.ANDROID:
-                                return (0, r.jsx)(w.j, {
+                                return (0, r.jsx)(D.j, {
                                     width: s.Z.xxs,
                                     height: s.Z.xxs,
                                     color: "currentColor",
@@ -116,7 +116,7 @@ function U(e) {
             application: O,
             applicationName: C,
             channel: R,
-            header: w,
+            header: D,
             currentUserId: U,
             launchableAppId: G,
             isEmbeddedApplication: Z,
@@ -295,7 +295,7 @@ function U(e) {
             [es, ec, eu, ed, B, s.author.id, s.id, W, R.id, R.guild_id, Q, el, U, ef],
         ),
         e_ = ep.some((e) => e.trackingArea === _.j_.CLOUD_PLAY);
-    (0, D.Z)(e_, Q);
+    (0, w.Z)(e_, Q);
     let em = i.useMemo(
         () =>
             ed
@@ -307,7 +307,7 @@ function U(e) {
         [ed, W, el],
     );
     return (0, r.jsx)(p.W, {
-        header: w,
+        header: D,
         title: C,
         staticBannerSrc: F,
         onClickBanner: V,

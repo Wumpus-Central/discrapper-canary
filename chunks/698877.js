@@ -54,9 +54,9 @@ function s(e) {
         : s
           ? o.intl.string(o.t.fjBNo1)
           : o.intl.string(o.t.uQn9B8);
-    let { Component: C, events: y, play: v } = (0, l.P)(c ? "disable" : "enable");
+    let { Component: C, events: y, play: _ } = (0, l.P)(c ? "disable" : "enable");
     return (
-        r.useEffect(() => () => v(), [c, v]),
+        r.useEffect(() => () => _(), [c, _]),
         (0, i.jsx)(
             b,
             (function (e) {

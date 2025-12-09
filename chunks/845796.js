@@ -48,7 +48,7 @@ let b = () => {
                           value: "popularity",
                       };
         }, []),
-        O = l.useCallback(
+        x = l.useCallback(
             (e) =>
                 ({
                     recent: {
@@ -74,9 +74,9 @@ let b = () => {
                 })[e],
             [],
         ),
-        x = l.useCallback(
+        O = l.useCallback(
             (e) => {
-                let n = S(O(e));
+                let n = S(x(e));
                 u.default.track(m.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == i ? void 0 : i.sessionId,
                     page_section: null == i ? void 0 : i.pageSection,
@@ -86,16 +86,16 @@ let b = () => {
                     cta_name: "sort by ".concat(n.label.toLowerCase()),
                     page_type: "catalog",
                 }),
-                    t(O(e));
+                    t(x(e));
             },
-            [i, S, O, t],
+            [i, S, x, t],
         ),
         y = S(e);
     return (0, r.jsx)("div", {
         className: s()(h.container, { [_.customCursors]: b }),
         children: (0, r.jsx)(c.B6, {
             options: v.map(S),
-            select: x,
+            select: O,
             isSelected: (e) => e === y.value,
             serialize: (e) => e,
             popoutWidth: 224,

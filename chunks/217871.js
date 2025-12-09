@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(843693),
     C = n(641033),
     y = n(989830),
-    v = n(388032),
-    _ = n(23586);
+    _ = n(388032),
+    v = n(23586);
 let O = r.memo(function (e) {
         let { channelId: t, width: n } = e,
             l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -48,10 +48,10 @@ let O = r.memo(function (e) {
         return (
             null != a &&
             (0, i.jsx)(o.animated.div, {
-                className: _.messageComboScore,
+                className: v.messageComboScore,
                 style: f,
                 children: (0, i.jsx)(c.Text, {
-                    className: _.comboScore,
+                    className: v.comboScore,
                     variant: "text-sm/bold",
                     children: (0, C.Eo)(a.combo),
                 }),
@@ -64,29 +64,29 @@ let O = r.memo(function (e) {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.Text, {
-                    className: _.comboValue,
+                    className: v.comboValue,
                     variant: "text-sm/bold",
                     children: t,
                 }),
                 (0, i.jsxs)("div", {
-                    className: _.comboNameplate,
+                    className: v.comboNameplate,
                     style: { color: l },
                     children: [
                         (0, i.jsx)(c.Text, {
-                            className: _.comboMultiplier,
+                            className: v.comboMultiplier,
                             style: { color: l },
                             variant: "text-sm/bold",
-                            children: v.intl.format(v.t["6bgVlq"], { multiplier: n }),
+                            children: _.intl.format(_.t["6bgVlq"], { multiplier: n }),
                         }),
                         o &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: a()(_.comboSquare, _.left),
+                                        className: a()(v.comboSquare, v.left),
                                         style: { backgroundColor: l },
                                     }),
                                     (0, i.jsx)("div", {
-                                        className: a()(_.comboSquare, _.right),
+                                        className: a()(v.comboSquare, v.right),
                                         style: { backgroundColor: l },
                                     }),
                                 ],
@@ -95,14 +95,14 @@ let O = r.memo(function (e) {
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: a()(_.confettiIcon, _.left),
+                                        className: a()(v.confettiIcon, v.left),
                                         children: (0, i.jsx)(f.Z, {
                                             width: 24,
                                             height: 24,
                                         }),
                                     }),
                                     (0, i.jsx)("div", {
-                                        className: a()(_.confettiIcon, _.right),
+                                        className: a()(v.confettiIcon, v.right),
                                         children: (0, i.jsx)(f.Z, {
                                             width: 24,
                                             height: 24,
@@ -112,9 +112,9 @@ let O = r.memo(function (e) {
                             }),
                         1 === n &&
                             (0, i.jsx)(c.Text, {
-                                className: _.tip,
+                                className: v.tip,
                                 variant: "text-sm/bold",
-                                children: v.intl.string(v.t.b5Cpof),
+                                children: _.intl.string(_.t.b5Cpof),
                             }),
                     ],
                 }),
@@ -128,12 +128,12 @@ let O = r.memo(function (e) {
             a = (0, s.e7)([g.Z], () => g.Z.isEnabled()),
             d = (0, s.e7)([b.ZP], () => b.ZP.isComboing(n, t), [t, n]),
             { ref: f, width: m = 0 } = (0, u.ZP)(),
-            [C, v] = r.useState(!1),
+            [C, _] = r.useState(!1),
             E = (0, y.Z)(t),
             j = a && d && l;
         r.useEffect(() => {
-            j && v(!0);
-            let e = setTimeout(() => v(j), 1000);
+            j && _(!0);
+            let e = setTimeout(() => _(j), 1000);
             return () => clearTimeout(e);
         }, [j]);
         let S = (0, c.q_F)({
@@ -171,7 +171,7 @@ let O = r.memo(function (e) {
                 }),
                 (0, i.jsx)(o.animated.div, {
                     ref: f,
-                    className: _.combo,
+                    className: v.combo,
                     style: S,
                     children: (0, i.jsx)(x, {
                         value: T,

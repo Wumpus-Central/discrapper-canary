@@ -47,15 +47,15 @@ function v(e) {
             headingColor: P,
         } = e,
         R = (0, l.e7)([d.Z], () => d.Z.getPremiumTypeSubscription()),
-        w = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
-        D = (0, p.t7)(),
+        D = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
+        w = (0, p.t7)(),
         x = (0, p.lr)(),
         L = n === E.PremiumTypes.TIER_0 ? E.Si.TIER_0 : E.Si.TIER_2,
         j = (null == R ? void 0 : R.hasActiveTrial)
-            ? null == w
+            ? null == D
                 ? void 0
-                : w.premiumType
-            : D
+                : D.premiumType
+            : w
               ? E.PremiumTypes.TIER_2
               : null,
         M = (0, m.N)(),

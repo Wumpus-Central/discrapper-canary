@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -136,7 +136,7 @@ function P(e) {
     (m[t.guild_id] = f({}, m[t.guild_id])), delete m[t.guild_id][t.id];
 }
 let R = {};
-class w extends (r = o.ZP.Store) {
+class D extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -163,8 +163,8 @@ class w extends (r = o.ZP.Store) {
         return h.has(e);
     }
 }
-d(w, "displayName", "ActiveThreadsStore");
-let D = new w(s.Z, {
+d(D, "displayName", "ActiveThreadsStore");
+let w = new D(s.Z, {
     CONNECTION_OPEN: O,
     OVERLAY_INITIALIZE: v,
     GUILD_CREATE: S,

@@ -20,13 +20,13 @@ let d = function (e) {
             animationSrc: b,
             secondaryButtonText: C,
             onSecondaryButtonClick: y,
-            children: v,
-            useReducedMotion: _ = !1,
+            children: _,
+            useReducedMotion: v = !1,
             buttonVariant: O,
         } = e,
         x = (0, a.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
     if (l.tq && x) return null;
-    if (null == t) return (0, i.jsx)(i.Fragment, { children: r.Children.only(v) });
+    if (null == t) return (0, i.jsx)(i.Fragment, { children: r.Children.only(_) });
     let E = null;
     return (
         null != g
@@ -38,7 +38,7 @@ let d = function (e) {
             : null != b &&
               (E = (0, i.jsx)(o.Fmz, {
                   importData: b,
-                  shouldAnimate: !_,
+                  shouldAnimate: !v,
                   className: u.animation,
               })),
         (0, i.jsxs)("div", {

@@ -73,7 +73,7 @@ function A(e) {
         } = e,
         N = (0, s.ye)(l),
         { iconSrc: P, name: R } = T(m, l),
-        w =
+        D =
             null !=
             (n = (0, y.v)({
                 messageId: m.id,
@@ -82,7 +82,7 @@ function A(e) {
             }))
                 ? n
                 : void 0,
-        { openGameProfileModal: D, launchableAppId: x } = I(l.id, m.author.id),
+        { openGameProfileModal: w, launchableAppId: x } = I(l.id, m.author.id),
         L = (0, b.Z)({
             application: l,
             analyticsLocations: a,
@@ -97,7 +97,7 @@ function A(e) {
                 };
         }, [L]),
         M = (0, u.G)(l),
-        k = i.useMemo(() => (null != D ? D : null != M && N ? M : void 0), [N, D, M]),
+        k = i.useMemo(() => (null != w ? w : null != M && N ? M : void 0), [N, w, M]),
         U = !(0, E.Z)(C, m, l.id),
         G = (0, g.dQ)(R, null == (t = m.activity) ? void 0 : t.type, U);
     return U
@@ -111,7 +111,7 @@ function A(e) {
               launchableAppId: x,
               isEmbeddedApplication: N,
               tryWithGdnAction: j,
-              staticBannerSrc: w,
+              staticBannerSrc: D,
               onClickContent: k,
               iconSrc: P,
               onView: h,
@@ -128,7 +128,7 @@ function A(e) {
               launchableAppId: x,
               isEmbeddedApplication: N,
               tryWithGdnAction: j,
-              staticBannerSrc: w,
+              staticBannerSrc: D,
               onClickContent: k,
               iconSrc: P,
               onView: h,

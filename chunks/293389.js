@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(388032),
     P = n(740508),
     R = n(315091),
-    w = n(149715),
-    D = n(197571);
+    D = n(149715),
+    w = n(197571);
 function x(e, t, n) {
     return (
         t in e
@@ -117,9 +117,9 @@ function B(e) {
                         children: e.label,
                     }),
             }),
-            (0, r.jsx)(u.izJ, { className: o()(D.marginTop8, D.marginBottom8) }),
+            (0, r.jsx)(u.izJ, { className: o()(w.marginTop8, w.marginBottom8) }),
             (0, r.jsxs)("div", {
-                className: o()(P.actions, w.horizontal),
+                className: o()(P.actions, D.horizontal),
                 children: [
                     (0, r.jsx)(u.Avr, {
                         variant: "secondary",
@@ -145,7 +145,7 @@ function F(e) {
             isCurrentGameDetectionEnabled: _.ZP.isDetectionEnabled(S),
         })),
         R = (0, s.e7)([_.ZP], () => _.ZP.getVisibleGame()),
-        [D, x] = i.useState(!1),
+        [w, x] = i.useState(!1),
         j = i.useMemo(
             () =>
                 (0, E.le)(S)
@@ -156,7 +156,7 @@ function F(e) {
             [S, g],
         ),
         [k, Z] = i.useState(null != j ? j : "???"),
-        B = o()(w.flexCenter, {
+        B = o()(D.flexCenter, {
             [P.game]: !a,
             [P.activeGame]: a,
             [P.nowPlaying]: null != S && a,
@@ -209,7 +209,7 @@ function F(e) {
             : d.Z.toggleDetection(S);
     }
     function z() {
-        if (D) return;
+        if (w) return;
         let e = null != S.id ? b.Z.getDetectableGame(S.id) : null;
         O.default.track(A.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
@@ -322,7 +322,7 @@ function F(e) {
                   })
                 : null;
         return (0, r.jsxs)("div", {
-            className: o()(w.flexCenter, w.noWrap, w.justifyBetween, P.toggleContainer),
+            className: o()(D.flexCenter, D.noWrap, D.justifyBetween, P.toggleContainer),
             children: [
                 i,
                 (0, r.jsx)(u.aML, {
@@ -359,7 +359,7 @@ function F(e) {
                           colorClass: P.fill,
                       });
         return (0, r.jsx)("div", {
-            className: o()(w.flexCenter, w.noWrap, w.justifyBetween, P.toggleContainer),
+            className: o()(D.flexCenter, D.noWrap, D.justifyBetween, P.toggleContainer),
             children: (0, r.jsx)(u.aML, {
                 "data-migration-pending": !0,
                 text: N.intl.string(N.t.QmitzM),
@@ -379,10 +379,10 @@ function F(e) {
         });
     }
     function $() {
-        return D
+        return w
             ? null
             : (0, r.jsx)("div", {
-                  className: o()(w.flexCenter, w.noWrap, w.justifyBetween, P.toggleContainer),
+                  className: o()(D.flexCenter, D.noWrap, D.justifyBetween, P.toggleContainer),
                   children: (0, r.jsx)(u.aML, {
                       "data-migration-pending": !0,
                       text: N.intl.string(N.t["y0B+lo"]),
@@ -421,7 +421,7 @@ function F(e) {
                 className: B,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: o()(P.gameNameLastPlayed, w.vertical),
+                        className: o()(P.gameNameLastPlayed, D.vertical),
                         children: [q(), Q()],
                     }),
                     c ? null : $(),
@@ -458,9 +458,9 @@ function F(e) {
 }
 function V() {
     return (0, r.jsx)("div", {
-        className: o()(w.flexCenter, P.notDetected, P.activeGame),
+        className: o()(D.flexCenter, P.notDetected, P.activeGame),
         children: (0, r.jsxs)("div", {
-            className: o()(P.gameNameLastPlayed, w.vertical),
+            className: o()(P.gameNameLastPlayed, D.vertical),
             children: [
                 (0, r.jsx)("div", {
                     className: P.gameName,
@@ -477,7 +477,7 @@ function V() {
 function H(e) {
     let { children: t } = e;
     return (0, r.jsxs)(k, {
-        className: D.marginTop40,
+        className: w.marginTop40,
         children: [
             (0, r.jsx)(u.oxh, {
                 darkSrc: n(879601),
@@ -513,7 +513,7 @@ let Y = (0, v.oH)(function () {
             return 0 === d.length
                 ? (0, r.jsx)(H, { children: (0, r.jsx)(u.OZU, { children: N.intl.string(N.t["1yiJwn"]) }) })
                 : (0, r.jsx)(u.C3N, {
-                      className: D.marginTop40,
+                      className: w.marginTop40,
                       label: N.intl.string(N.t.jCOdvx),
                       description: N.intl.format(N.t.KPA3m9, { igdbLink: Z }),
                       children: d.map((e) =>
@@ -548,7 +548,7 @@ let Y = (0, v.oH)(function () {
                           )
                         : (0, r.jsx)(V, {}),
                     (0, r.jsxs)("div", {
-                        className: o()(P.nowPlayingAdd, D.marginReset, D.marginTop8, D.marginBottom20),
+                        className: o()(P.nowPlayingAdd, w.marginReset, w.marginTop8, w.marginBottom20),
                         children: [
                             (0, r.jsx)("span", { children: N.intl.string(N.t.xwhoqM) }),
                             (0, r.jsx)(u.yRy, {

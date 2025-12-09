@@ -62,8 +62,8 @@ function v(e) {
         [T, A] = (0, f.US)(I),
         [C, N] = i.useState(!1),
         [P, R] = (0, u.q_F)(() => ({})),
-        w = (0, s.animated)(u.Pt5);
-    function D() {
+        D = (0, s.animated)(u.Pt5);
+    function w() {
         R({
             from: { rotate: t ? "360deg" : "0deg" },
             to: { rotate: t ? "0deg" : "360deg" },
@@ -93,7 +93,7 @@ function v(e) {
             (0, r.jsx)("input", {
                 className: g.visuallyHidden,
                 checked: t,
-                onChange: D,
+                onChange: w,
                 id: a,
                 type: "checkbox",
             }),
@@ -101,7 +101,7 @@ function v(e) {
                 htmlFor: a,
                 className: o()(g.label, { [g.labelChecked]: t }),
                 children: [
-                    (0, r.jsx)(w, {
+                    (0, r.jsx)(D, {
                         style: v ? void 0 : P,
                         size: "custom",
                         width: b,

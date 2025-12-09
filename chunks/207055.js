@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H }), n(388685), n(290780), n(539854);
+n.d(t, { Z: () => B }), n(388685), n(290780), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(882522),
     C = n(819349),
     y = n(771027),
-    v = n(512384),
-    _ = n(763624),
+    _ = n(512384),
+    v = n(763624),
     O = n(463421),
     x = n(470956),
     E = n(597998),
@@ -40,7 +40,7 @@ let U = r.memo((e) => {
     let { mute: a, deaf: s, user: C, channel: y, sessionId: E, nick: Z } = e,
         T = C.id,
         k = (0, o.e7)([S.default], () => S.default.getId() === T, [T]),
-        [U, V, H] = (0, o.Wu)(
+        [U, V, B] = (0, o.Wu)(
             [I.Z],
             () =>
                 k
@@ -49,13 +49,13 @@ let U = r.memo((e) => {
             [k, T],
         ),
         F = (0, o.e7)([A.Z], () => A.Z.isPrioritySpeaker(T)),
-        B = (0, c.Z)({
+        H = (0, c.Z)({
             userId: T,
             checkSoundSharing: !0,
         }),
         G = (0, o.e7)([A.Z], () => A.Z.isCurrentUserPTTLatched()),
-        z = k && G,
-        W = (0, o.e7)([P.ZP], () => P.ZP.isGuestOrLurker(y.guild_id, T)),
+        W = k && G,
+        z = (0, o.e7)([P.ZP], () => P.ZP.isGuestOrLurker(y.guild_id, T)),
         q = (0, o.e7)([h.Z], () => h.Z.getGuildRingingUsers(y.id).has(T)),
         K = (0, o.e7)(
             [u.ZP],
@@ -85,16 +85,16 @@ let U = r.memo((e) => {
         el = (0, o.e7)([g.Z], () => (k ? g.Z.getHangStatusActivity() : null), [k]),
         ea = (0, b.j)(T),
         eo = (0, x.Eu)(y.id, T),
-        { enableVCStatusIcons: es, enableRequestToStream: ec } = _.A.useExperiment(
+        { enableVCStatusIcons: es, enableRequestToStream: ec } = v.A.useExperiment(
             {
                 guildId: y.guild_id,
                 location: "VoiceUsers",
             },
             { autoTrackExposure: (null == X ? void 0 : X.session_id) != null },
         );
-    return (0, i.jsx)(v.Z, {
+    return (0, i.jsx)(_.Z, {
         shakeLocation: D.oZ.VOICE_USER,
-        isShaking: B,
+        isShaking: H,
         children: (0, i.jsx)(
             R.ZP,
             ((r = (function (e) {
@@ -125,22 +125,22 @@ let U = r.memo((e) => {
             (l = l =
                 {
                     nick: null != Z ? Z : et,
-                    canDrag: e.canDrag && !W,
+                    canDrag: e.canDrag && !z,
                     disconnected: eo,
                     otherClientSessionType: null == ee || null == (t = ee.clientInfo) ? void 0 : t.os,
                     voicePlatform: en,
                     localMute: U && !k,
-                    localVideoDisabled: H,
+                    localVideoDisabled: B,
                     mute: a || U,
                     deaf: s || V,
-                    speaking: B,
-                    latched: z,
+                    speaking: H,
+                    latched: W,
                     ringing: q,
                     priority: F,
                     embeddedApplication: Y[0],
                     isStreaming: null != Q && Q.channelId === y.id,
                     isWatching: null != $ && $.state !== L.jm8.ENDED,
-                    isGuest: W,
+                    isGuest: z,
                     isSelf: k,
                     requestToStreamActivity: ec ? X : void 0,
                     application: (es || ei) && (null == X ? void 0 : X.session_id) != null ? J : void 0,
@@ -165,7 +165,7 @@ let U = r.memo((e) => {
 });
 U.displayName = "ConnectedVoiceUser";
 let V = [],
-    H = function (e) {
+    B = function (e) {
         let {
                 allowPreviews: t = !0,
                 allowDragging: n = !0,
@@ -177,8 +177,8 @@ let V = [],
                 location: m,
                 numAudience: g,
                 withGuildIcon: b = !1,
-                className: v,
-                children: _,
+                className: _,
+                children: v,
                 isThread: O = !1,
             } = e,
             [j, P] = r.useState(null),
@@ -186,7 +186,7 @@ let V = [],
             A = r.useRef(null),
             w = (0, x.Es)(l.id, null != c ? c : V),
             { shouldShow: M, dismiss: D } = (0, y.UM)(l),
-            H = r.useRef(
+            B = r.useRef(
                 new s.sW(50, () => {
                     P(A.current), (A.current = null);
                 }),
@@ -196,19 +196,19 @@ let V = [],
                     P(null);
                 }),
             ),
-            B = r.useCallback(
+            H = r.useCallback(
                 (e) => {
-                    t && (N(!0), F.current.cancel(), (A.current = e), H.current.delay());
+                    t && (N(!0), F.current.cancel(), (A.current = e), B.current.delay());
                 },
                 [t],
             ),
             G = r.useCallback(
                 (e) => {
-                    t && (H.current.cancel(), (A.current = null), N(!1), F.current.delay());
+                    t && (B.current.cancel(), (A.current = null), N(!1), F.current.delay());
                 },
                 [t],
             ),
-            z = (0, o.Wu)([T.Z], () => {
+            W = (0, o.Wu)([T.Z], () => {
                 if (u) return [];
                 let e = new Set();
                 return (
@@ -222,8 +222,8 @@ let V = [],
                     Array.from(e)
                 );
             });
-        (0, p.Z)(z);
-        let W = (() => {
+        (0, p.Z)(W);
+        let z = (() => {
             if (null == w || 0 === w.length) return null;
             let e = u && w.length > d + 1 ? w.slice(0, d) : w,
                 t = h.Z.getGuildRingingUsers(l.id),
@@ -246,7 +246,7 @@ let V = [],
                             channel: l,
                             collapsed: u,
                             canDrag: n && Z.Z.can(L.Plq.MOVE_MEMBERS, l),
-                            showPreview: B,
+                            showPreview: H,
                             hidePreview: G,
                             previewIsOpen: I,
                             shouldShowHoverPopout: j === a.id,
@@ -279,15 +279,15 @@ let V = [],
                 r
             );
         })();
-        return null == W && null == _
+        return null == z && null == v
             ? null
             : (0, i.jsxs)(E.eJ, {
-                  className: a()(v, k.list, {
+                  className: a()(_, k.list, {
                       [k.collapsed]: u,
                       [k.withGuildIcon]: b,
                       [k.isThread]: O,
                   }),
                   collapsed: u,
-                  children: [W, _],
+                  children: [z, v],
               });
     };

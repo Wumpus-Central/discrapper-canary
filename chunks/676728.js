@@ -1,28 +1,28 @@
-n.d(t, { Z: () => i });
-var r = n(54381),
-    s = n(481060),
-    o = n(388032),
-    a = n(669789);
-let i = function (e) {
+n.d(t, { Z: () => s });
+var a = n(54381),
+    r = n(481060),
+    i = n(388032),
+    l = n(669789);
+let s = function (e) {
     let { onDesktop: t, onConsole: n } = e;
-    return (0, r.jsxs)(s.ButtonGroup, {
+    return (0, a.jsxs)(r.ButtonGroup, {
         direction: "vertical",
         fullWidth: !0,
-        className: a.buttonGroup,
+        className: l.buttonGroup,
         size: "sm",
         children: [
-            (0, r.jsx)(s.Button, {
+            (0, a.jsx)(r.Button, {
                 onClick: t,
-                text: o.intl.string(o.t["QXc01+"]),
+                text: i.intl.string(i.t["QXc01+"]),
                 variant: "secondary",
-                icon: s.pzj,
+                icon: r.pzj,
                 iconPosition: "end",
             }),
-            (0, r.jsx)(s.Button, {
+            (0, a.jsx)(r.Button, {
                 onClick: n,
-                text: o.intl.string(o.t["8lAfuB"]),
+                text: i.intl.string(i.t["8lAfuB"]),
                 variant: "secondary",
-                icon: s.iWm,
+                icon: r.iWm,
                 iconPosition: "end",
             }),
         ],

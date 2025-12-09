@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(990547),
-    i = n(442837),
+    r = n(473749),
+    i = n(990547),
+    l = n(442837),
     s = n(544891),
     o = n(481060),
     c = n(893776),
@@ -47,17 +47,17 @@ function E(e) {
     return e;
 }
 function O() {
-    let { action: e, theme: t } = (0, i.cj)([b.Z, g.Z], () => ({
+    let { action: e, theme: t } = (0, l.cj)([b.Z, g.Z], () => ({
             action: b.Z.getAction(),
             theme: g.Z.theme,
         })),
         O = v.Z.getVerificationTypes(e),
-        [N, T] = l.useState(0),
+        [T, N] = r.useState(0),
         P = (0, m.Z)(O);
     (0, h.Z)(
         {
-            type: r.ImpressionTypes.MODAL,
-            name: r.ImpressionNames.USER_ACTION_REQUIRED,
+            type: i.ImpressionTypes.MODAL,
+            name: i.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
                 verification_type: O[0],
                 verification_types: O,
@@ -66,7 +66,7 @@ function O() {
         {},
         [O.toString()],
     );
-    let I = () => {
+    let w = () => {
         (0, u.FD)(),
             (0, o.ZDy)(
                 async () => {
@@ -80,7 +80,7 @@ function O() {
             );
     };
     return (
-        l.useEffect(
+        r.useEffect(
             () => (
                 p.Z.disable(),
                 () => {
@@ -89,25 +89,25 @@ function O() {
             ),
             [],
         ),
-        l.useEffect(() => {
+        r.useEffect(() => {
             (null == P ? void 0 : P[0]) === y.PUi.PHONE &&
                 (null == O ? void 0 : O[0]) === y.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
                         let { default: e } = await n.e("84112").then(n.bind(n, 273352));
                         return (t) => {
-                            var n, l;
+                            var n, r;
                             return (0, a.jsx)(
                                 e,
                                 ((n = E({}, t)),
-                                (l = l =
+                                (r = r =
                                     {
                                         title: S.intl.string(S.t.KLnLIP),
                                         body: S.intl.string(S.t.XGbCq3),
                                         confirmText: S.intl.string(S.t["3oK4qw"]),
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -115,8 +115,8 @@ function O() {
                                               n.push.apply(n, a);
                                           }
                                           return n;
-                                      })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                      })(Object(r)).forEach(function (e) {
+                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                       }),
                                 n),
                             );
@@ -125,13 +125,13 @@ function O() {
                     {
                         modalKey: _.HR,
                         Layer: x.ZP,
-                        onCloseCallback: I,
+                        onCloseCallback: w,
                     },
                 );
         }, [O, P]),
         (0, a.jsx)(j.Z, {
             types: O,
-            captchaKey: N,
+            captchaKey: T,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
@@ -141,13 +141,13 @@ function O() {
                         rejectWithError: !0,
                     })
                     .then(d.xf, () => {
-                        T((e) => e + 1);
+                        N((e) => e + 1);
                     });
             },
             theme: t,
             onClick: (e) => {
                 e === y.PUi.EMAIL_OR_PHONE || e === y.PUi.EMAIL || e === y.PUi.REVERIFY_EMAIL
-                    ? I()
+                    ? w()
                     : (0, o.ZDy)(
                           async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 607018));

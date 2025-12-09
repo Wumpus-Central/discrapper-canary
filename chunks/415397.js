@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(271383),
     C = n(430824),
     y = n(51144),
-    v = n(771027),
-    _ = n(981631),
+    _ = n(771027),
+    v = n(981631),
     O = n(388032),
     x = n(764194),
     E = n(254477);
@@ -49,8 +49,8 @@ function j(e) {
 function S(e) {
     let { channel: t, inviteKey: l, onHoverOrFocus: o, setPopoutRef: u, closePopout: p } = e,
         g = r.useRef(null),
-        b = (0, v.Tu)(g),
-        y = (0, v.j1)({ channel: t }),
+        b = (0, _.Tu)(g),
+        y = (0, _.j1)({ channel: t }),
         { analyticsLocations: S } = (0, f.ZP)(h.Z.VOICE_INVITE_SUGGESTIONS_POPOVER);
     (0, m.Z)({
         name: c.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
@@ -83,7 +83,7 @@ function S(e) {
                             {
                                 guild: e,
                                 channel: t,
-                                source: _.t4x.VOICE_INVITE_SUGGESTIONS,
+                                source: v.t4x.VOICE_INVITE_SUGGESTIONS,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
@@ -152,7 +152,7 @@ function P(e) {
     let { channel: t, user: n, inviteKey: l } = e,
         o = r.useRef(null),
         s = (0, u.e7)([b.ZP], () => b.ZP.getMember(t.guild_id, n.id), [t.guild_id, n.id]),
-        { isHoveringOrFocusing: c } = (0, v.Tu)(o),
+        { isHoveringOrFocusing: c } = (0, _.Tu)(o),
         [h, f] = r.useState(null),
         m = "success" === h || "sending" === h || null == l,
         C = r.useCallback(() => {
@@ -165,7 +165,7 @@ function P(e) {
                             user: n,
                             inviteKey: l,
                             location: "VoiceInviteSuggestionsPopover",
-                            inviteAnalyticsMetadata: { source: _.t4x.VOICE_INVITE_SUGGESTIONS },
+                            inviteAnalyticsMetadata: { source: v.t4x.VOICE_INVITE_SUGGESTIONS },
                         },
                         (e) => {
                             f(e ? "success" : null);

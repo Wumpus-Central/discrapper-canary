@@ -31,8 +31,8 @@ var r = n(54381),
     N = n(81273),
     P = n(293810),
     R = n(981631),
-    w = n(388032),
-    D = n(126683);
+    D = n(388032),
+    w = n(126683);
 let x = 24,
     L = 5,
     j = (e) => {
@@ -41,24 +41,24 @@ let x = 24,
             l = o ? t : t.slice(0, L),
             u = t.length > L,
             f = t.length - L,
-            p = w.intl.formatToPlainString(w.t.XSdy72, { numTruncated: f }),
+            p = D.intl.formatToPlainString(D.t.XSdy72, { numTruncated: f }),
             _ = () => s((e) => !e),
             h = (0, d.Dt)();
         return 0 === t.length
             ? null
             : (0, r.jsxs)("div", {
-                  className: D.benefitsSection,
+                  className: w.benefitsSection,
                   children: [
                       (0, r.jsx)(c.Heading, {
                           variant: "text-xs/bold",
                           color: "text-default",
-                          className: D.sectionHeader,
+                          className: w.sectionHeader,
                           id: h,
                           children: n,
                       }),
                       (0, r.jsx)(c.LZC, { size: 12 }),
                       (0, r.jsx)("ul", {
-                          className: D.benefitsList,
+                          className: w.benefitsList,
                           "aria-labelledby": h,
                           children: l.map((e, t) =>
                               (0, r.jsx)(
@@ -101,17 +101,17 @@ let x = 24,
         return 0 === o.length
             ? null
             : (0, r.jsxs)("div", {
-                  className: D.benefitsSection,
+                  className: w.benefitsSection,
                   children: [
                       (0, r.jsx)(c.Heading, {
                           variant: "text-xs/bold",
                           color: "text-default",
-                          className: D.sectionHeader,
-                          children: w.intl.format(w.t.NAnXEo, { count: o.length }),
+                          className: w.sectionHeader,
+                          children: D.intl.format(D.t.NAnXEo, { count: o.length }),
                       }),
                       (0, r.jsx)(c.LZC, { size: 12 }),
                       (0, r.jsx)("div", {
-                          className: D.emojiList,
+                          className: w.emojiList,
                           children: o.map((e, t) => {
                               var n;
                               return (0, r.jsx)(
@@ -120,7 +120,7 @@ let x = 24,
                                       text: e.name,
                                       "aria-label": !1,
                                       children: (0, r.jsx)("img", {
-                                          className: D.emojiListEmoji,
+                                          className: w.emojiListEmoji,
                                           src: s(e),
                                           width: x,
                                           height: x,
@@ -145,32 +145,32 @@ let x = 24,
         return null == a && 0 === l.length && 0 === u.length && 0 === f.size
             ? null
             : (0, r.jsxs)("div", {
-                  className: o()(D.subscriptionPerks, i),
+                  className: o()(w.subscriptionPerks, i),
                   children: [
                       null != a &&
                           (0, r.jsxs)(c.y5t, {
                               component: (0, r.jsx)(c.Heading, {
                                   variant: "text-xs/bold",
                                   color: "text-default",
-                                  className: D.sectionHeader,
-                                  children: w.intl.string(w.t.FJZmYx),
+                                  className: w.sectionHeader,
+                                  children: D.intl.string(D.t.FJZmYx),
                               }),
                               children: [
                                   (0, r.jsx)(c.LZC, { size: 8 }),
                                   (0, r.jsx)(S.Z, {
                                       role: d,
                                       guildId: n,
-                                      className: D.roleMessagePreview,
+                                      className: w.roleMessagePreview,
                                   }),
                               ],
                           }),
                       (0, r.jsx)(j, {
-                          header: w.intl.string(w.t.LtfhAj),
+                          header: D.intl.string(D.t.LtfhAj),
                           benefits: l,
                           guildId: n,
                       }),
                       (0, r.jsx)(j, {
-                          header: w.intl.string(w.t["8oxWpO"]),
+                          header: D.intl.string(D.t["8oxWpO"]),
                           benefits: u,
                           guildId: n,
                       }),
@@ -183,7 +183,7 @@ let x = 24,
     },
     U = (e) => {
         let { onToggle: t, isViewAll: n, showMoreText: i } = e,
-            a = n ? w.intl.string(w.t["r/xxPU"]) : i;
+            a = n ? D.intl.string(D.t["r/xxPU"]) : i;
         return (0, r.jsx)(c.Avr, {
             text: a,
             onClick: t,
@@ -224,39 +224,39 @@ let x = 24,
             en = (0, s.e7)([f.Z], () => f.Z.isViewingServerShop(n)),
             er = (null == _ ? void 0 : _.published) === !0,
             ei = (null == _ ? void 0 : _.soft_deleted) === !0,
-            ea = w.intl.string(w.t.KzmEA9);
+            ea = D.intl.string(D.t.KzmEA9);
         return (er || en) && !ei
             ? (0, r.jsxs)("article", {
-                  className: D.container,
+                  className: w.container,
                   "aria-label": H,
                   children: [
                       q &&
                           (0, r.jsxs)("div", {
-                              className: o()(D.tierTrialIndicator, D.tierTopIndicator),
+                              className: o()(w.tierTrialIndicator, w.tierTopIndicator),
                               children: [
-                                  w.intl.format(w.t.L2ouip, {
+                                  D.intl.format(D.t.L2ouip, {
                                       trialPeriodDuration: (0, m.iG)({
                                           interval: W.interval,
                                           interval_count: W.interval_count,
                                       }),
                                   }),
                                   (0, r.jsx)(l.u, {
-                                      text: w.intl.formatToPlainString(w.t.FYyR4o, {
+                                      text: D.intl.formatToPlainString(D.t.FYyR4o, {
                                           activeTrialUserLimit: null != K ? K : 0,
                                       }),
                                       children: (0, r.jsx)(c.d3s, {
                                           size: "xs",
                                           color: "currentColor",
-                                          className: D.tierTrialIndicatorIcon,
+                                          className: w.tierTrialIndicatorIcon,
                                       }),
                                   }),
                               ],
                           }),
                       (0, r.jsxs)("div", {
-                          className: q ? void 0 : D.cardContainerWithoutTopIndicator,
+                          className: q ? void 0 : w.cardContainerWithoutTopIndicator,
                           children: [
                               (0, r.jsxs)("div", {
-                                  className: D.tierInfoContainer,
+                                  className: w.tierInfoContainer,
                                   children: [
                                       X
                                           ? (0, r.jsx)(C.e, {
@@ -273,28 +273,28 @@ let x = 24,
                                           (0, r.jsxs)(c.Kqy, {
                                               gap: 16,
                                               children: [
-                                                  X && (0, r.jsx)("div", { className: D.divider }),
+                                                  X && (0, r.jsx)("div", { className: w.divider }),
                                                   j
                                                       ? (0, r.jsx)(c.Button, {
                                                             disabled: !0,
                                                             fullWidth: !0,
                                                             variant: M ? "secondary" : "primary",
                                                             text: M
-                                                                ? w.intl.string(w.t.iKHmu0)
-                                                                : w.intl.string(w.t.XvAuMo),
+                                                                ? D.intl.string(D.t.iKHmu0)
+                                                                : D.intl.string(D.t.XvAuMo),
                                                         })
                                                       : (0, r.jsxs)(r.Fragment, {
                                                             children: [
                                                                 O
                                                                     ? null
                                                                     : (0, r.jsx)(c.Wn, {
-                                                                          className: D.helpMessage,
+                                                                          className: w.helpMessage,
                                                                           messageType: c.QYI.INFO,
                                                                           children: v,
                                                                       }),
                                                                 (0, r.jsx)(c.Button, {
                                                                     fullWidth: !0,
-                                                                    text: w.intl.string(w.t.fM5ZsX),
+                                                                    text: D.intl.string(D.t.fM5ZsX),
                                                                     disabled: !O || T,
                                                                     loading: S,
                                                                     onClick: y,
@@ -310,7 +310,7 @@ let x = 24,
                                                           (0, r.jsx)(c.Text, {
                                                               variant: "text-sm/normal",
                                                               color: "text-default",
-                                                              className: o()((!B || !G) && D.tierDescriptionTruncate),
+                                                              className: o()((!B || !G) && w.tierDescriptionTruncate),
                                                               children: (0, r.jsx)("div", {
                                                                   ref: V,
                                                                   children: Y,

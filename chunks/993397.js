@@ -67,11 +67,11 @@ let y = r.memo(function (e) {
     let { messages: n, channel: l, compact: o = !1, unreadId: s, collapsedReason: u } = e,
         { hasJumpTarget: h = !1 } = n,
         [m, y] = r.useState(h),
-        v = r.useCallback(() => y((e) => !e), []);
+        _ = r.useCallback(() => y((e) => !e), []);
     r.useEffect(() => {
         h && y(!0);
     }, [h]);
-    let _ = n.hasUnread ? n.content.length - 1 : n.content.length;
+    let v = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, i.jsxs)("div", {
         className: a()({
             [b.groupStart]: !0,
@@ -91,10 +91,10 @@ let y = r.memo(function (e) {
             (0, i.jsx)(
                 C,
                 {
-                    count: _,
+                    count: v,
                     compact: o,
                     expanded: m,
-                    onClick: v,
+                    onClick: _,
                     collapsedReason: u,
                 },
                 "collapsed-message-item",

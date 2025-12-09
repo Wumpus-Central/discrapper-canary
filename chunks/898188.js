@@ -59,33 +59,33 @@ function C(e) {
         C = (null == m ? void 0 : m.actionType) === g.NewMemberActionTypes.VIEW,
         N = (0, c.dQu)(c.TVs.colors.WHITE),
         [P, R] = i.useState(!1),
-        [w] = i.useState(new s.Z.Value(0)),
-        [D] = i.useState(new s.Z.Value(0));
+        [D] = i.useState(new s.Z.Value(0)),
+        [w] = i.useState(new s.Z.Value(0));
     i.useEffect(() => {
         b
-            ? s.Z.timing(w, {
+            ? s.Z.timing(D, {
                   toValue: 0,
                   duration: O ? 1 : 350,
                   easing: s.Z.Easing.quad,
                   delay: 500 * !C,
               }).start(() => R(!0))
-            : s.Z.timing(w, {
+            : s.Z.timing(D, {
                   toValue: 1,
                   duration: O ? 1 : 350,
                   easing: s.Z.Easing.quad,
                   delay: 400,
               }).start();
-    }, [b, w, C, O]),
+    }, [b, D, C, O]),
         i.useEffect(() => {
             b &&
                 P &&
-                s.Z.timing(D, {
+                s.Z.timing(w, {
                     toValue: 1,
                     duration: 350 * !O,
                     easing: s.Z.Easing.quad,
                     delay: 400,
                 }).start();
-        }, [b, D, P, O]);
+        }, [b, w, P, O]);
     let x = i.useCallback(() => {
         null != y && (0, h.gp)(f, y.channelId);
     }, [f, y]);
@@ -97,7 +97,7 @@ function C(e) {
                   P && null != y
                       ? (0, r.jsx)(s.Z.div, {
                             style: {
-                                marginBottom: D.interpolate({
+                                marginBottom: w.interpolate({
                                     inputRange: [0, 1],
                                     outputRange: [-I, 0],
                                 }),
@@ -136,7 +136,7 @@ function C(e) {
                       : (0, r.jsxs)(s.Z.div, {
                             className: S.banner,
                             style: {
-                                marginBottom: w.interpolate({
+                                marginBottom: D.interpolate({
                                     inputRange: [0, 1],
                                     outputRange: [-I, 0],
                                 }),

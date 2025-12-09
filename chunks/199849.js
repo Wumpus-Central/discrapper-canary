@@ -157,10 +157,10 @@ function P(e, t) {
 function R(e) {
     return null == e ? void 0 : e.label;
 }
-function w(e) {
+function D(e) {
     return e.map((e) => R(e)).join(", ");
 }
-function D(e) {
+function w(e) {
     let {
             options: t,
             placeholder: n = g.intl.string(g.t.XqMe3N),
@@ -175,10 +175,10 @@ function D(e) {
             onClose: I,
             onOpen: T,
             renderOptionLabel: A = R,
-            renderOptionValue: C = w,
+            renderOptionValue: C = D,
             popoutClassName: N,
             popoutPosition: P = "bottom",
-            popoutLayerContext: D,
+            popoutLayerContext: w,
             optionClassName: L,
             closeOnSelect: j,
             select: M,
@@ -268,7 +268,7 @@ function D(e) {
                 });
             },
             position: P,
-            layerContext: D,
+            layerContext: w,
             children: (e, t) => {
                 var { onClick: i, onKeyDown: l } = e,
                     c = S(e, ["onClick", "onKeyDown"]),
@@ -402,11 +402,11 @@ function x(e) {
             isEnabled: !0,
             wrap: !0,
         }),
-        w = i.useRef(null);
-    (0, u.Tbt)(w),
+        D = i.useRef(null);
+    (0, u.Tbt)(D),
         i.useLayoutEffect(() => {
             var e;
-            null == (e = w.current) || e.focus();
+            null == (e = D.current) || e.focus();
         }, []),
         i.useEffect(() => {
             O > 0 && I();
@@ -420,7 +420,7 @@ function x(e) {
         i.useEffect(() => {
             I();
         }, [I, A]);
-    let D = i.useCallback(
+    let w = i.useCallback(
             (e, t) => {
                 n(e), c && !t && a();
             },
@@ -436,7 +436,7 @@ function x(e) {
                             isSelected: d(e.value),
                             value: e.value,
                             label: h(e),
-                            onSelect: D,
+                            onSelect: w,
                             className: b,
                             isDisabled: e.disabled,
                             preventCloseOnSelect: e.preventCloseOnSelect,
@@ -445,7 +445,7 @@ function x(e) {
                         null != (n = e.key) ? n : t,
                     );
                 }),
-            [D, d, b, f, h, g],
+            [w, d, b, f, h, g],
         ),
         j = f.length <= _ ? u.xVE : u.h21;
     return (0, r.jsx)(l.bG, {
@@ -469,7 +469,7 @@ function x(e) {
                                         ref: (e) => {
                                             var t;
                                             let r = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null;
-                                            (n.current = r), (w.current = r);
+                                            (n.current = r), (D.current = r);
                                         },
                                     },
                                     i,
@@ -559,8 +559,8 @@ function j(e) {
             renderOptionLabel: P,
         } = o,
         { fieldProps: R } = (0, u.XF_)(o),
-        w = "text-only" === N || null != P;
-    if (s && !w) {
+        D = "text-only" === N || null != P;
+    if (s && !D) {
         let e = null == R.label && null != A;
         return (0, r.jsx)(
             f.P,
@@ -612,7 +612,7 @@ function j(e) {
                     children: [null == t ? void 0 : t(e), e.label, null == n ? void 0 : n(e)],
                 });
     }
-    return (0, r.jsx)(D, v(y({}, o, l), { renderOptionLabel: null != P ? P : x() }));
+    return (0, r.jsx)(w, v(y({}, o, l), { renderOptionLabel: null != P ? P : x() }));
 }
 function M(e) {
     var t,
@@ -638,10 +638,10 @@ function M(e) {
             isSelected: P,
             renderOptionLabel: R,
         } = o,
-        { fieldProps: w } = (0, u.XF_)(o),
+        { fieldProps: D } = (0, u.XF_)(o),
         x = "text-only" === N || null != R;
     if (s && !x) {
-        let e = null == w.label && null != C;
+        let e = null == D.label && null != C;
         return (0, r.jsx)(
             f.P,
             v(
@@ -682,11 +682,11 @@ function M(e) {
                         maxOptionsVisible: T,
                         placeholder: A,
                     },
-                    w,
+                    D,
                 ),
                 {
-                    label: e ? C : w.label,
-                    hideLabel: !0 === w.hideLabel || e,
+                    label: e ? C : D.label,
+                    hideLabel: !0 === D.hideLabel || e,
                 },
             ),
         );
@@ -699,5 +699,5 @@ function M(e) {
                     children: [null == i ? void 0 : i(e), e.label, null == a ? void 0 : a(e)],
                 });
     }
-    return (0, r.jsx)(D, v(y({}, o), { renderOptionLabel: null != R ? R : L() }));
+    return (0, r.jsx)(w, v(y({}, o), { renderOptionLabel: null != R ? R : L() }));
 }

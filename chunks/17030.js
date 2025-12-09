@@ -21,8 +21,8 @@ function b(e) {
             setIsEmojiPickerOpen: C,
             defaultStatusVariant: y,
         } = e,
-        v = r.useRef(null),
-        _ = (0, l.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
+        _ = r.useRef(null),
+        v = (0, l.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
         O = r.useCallback(
             () =>
                 null != t
@@ -46,15 +46,15 @@ function b(e) {
             [t, y, b],
         );
     return (0, i.jsx)(a.yRy, {
-        targetElementRef: v,
+        targetElementRef: _,
         onRequestOpen: () => C(!0),
         onRequestClose: () => C(!1),
         renderPopout: (e) => {
             var t;
             let { closePopout: r } = e;
             return (0, i.jsx)(c.Z, {
-                channel: _,
-                guildId: null != (t = null == _ ? void 0 : _.guild_id) ? t : void 0,
+                channel: v,
+                guildId: null != (t = null == v ? void 0 : v.guild_id) ? t : void 0,
                 closePopout: r,
                 onSelectEmoji: (e) => {
                     let { emoji: t, willClose: i } = e;
@@ -115,7 +115,7 @@ function b(e) {
                 })({}, e)),
                 (l = l =
                     {
-                        ref: v,
+                        ref: _,
                         active: a,
                         tabIndex: 0,
                         renderButtonContents: null == t && null == b ? null : O,

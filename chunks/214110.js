@@ -19,9 +19,9 @@ function g(e) {
             () => null != n && null != g && (0, o.F)(g.id, n.id, [p.default, u.Z, d.Z]),
         ),
         [C, y] = (0, s.ZP)(null == n ? void 0 : n.id, t.guild_id),
-        v = (0, r.e7)([c.ZP], () => null != g && null != n && null != c.ZP.getMember(g.id, n.id));
-    if (!b || !v) return null;
-    let _ = "timeout-user-".concat(null == n ? void 0 : n.id);
+        _ = (0, r.e7)([c.ZP], () => null != g && null != n && null != c.ZP.getMember(g.id, n.id));
+    if (!b || !_) return null;
+    let v = "timeout-user-".concat(null == n ? void 0 : n.id);
     return (0, i.jsx)(
         h.Z,
         {
@@ -37,6 +37,6 @@ function g(e) {
             },
             disabled: y,
         },
-        _,
+        v,
     );
 }

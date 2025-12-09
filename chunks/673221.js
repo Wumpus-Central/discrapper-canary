@@ -155,7 +155,7 @@ function R(e) {
         es = null != I ? I : "multiple" !== t,
         el = Array.isArray(Z) ? Z.length > 0 : null != Z,
         ec = z || n,
-        { measuredWidth: eu, itemsForMeasurement: ed } = w(er, t),
+        { measuredWidth: eu, itemsForMeasurement: ed } = D(er, t),
         ef = i.useCallback(() => {
             ec || Q(!q);
         }, [ec, Q, q]),
@@ -322,7 +322,7 @@ function R(e) {
                                                 (0, r.jsxs)(c.n, {
                                                     children: [K, ", "],
                                                 }),
-                                                (0, r.jsx)(D, {
+                                                (0, r.jsx)(w, {
                                                     tagGroupRef: V,
                                                     placeholder: R,
                                                     selectionMode: t,
@@ -383,7 +383,7 @@ function R(e) {
         )
     );
 }
-function w(e, t) {
+function D(e, t) {
     let { ref: n, width: a } = (0, f.ZP)(),
         o = i.useId();
     return {
@@ -414,7 +414,7 @@ function w(e, t) {
         ),
     };
 }
-function D(e) {
+function w(e) {
     let { placeholder: t, selectionMode: n, selectedItems: i, onRemove: a, tagGroupRef: o } = e;
     return null == i || 0 === i.length
         ? (0, r.jsx)("div", {

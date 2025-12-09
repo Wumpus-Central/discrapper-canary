@@ -195,20 +195,18 @@ async function A(e, t, n, r, s) {
                 },
             });
         let l = (
-                await i.tn.post({
-                    url: g.ANM.ORDER_CREATE,
-                    body: o,
-                    rejectWithError: !1,
-                })
-            ).body,
-            c = l.id;
+            await i.tn.post({
+                url: g.ANM.ORDER_CREATE,
+                body: o,
+                rejectWithError: !1,
+            })
+        ).body.id;
         return (
             a.Z.dispatch({
                 type: "ORDER_CREATE_SUCCESS",
-                orderId: c,
-                order: l,
+                orderId: l,
             }),
-            c
+            l
         );
     } catch (e) {
         throw (a.Z.dispatch({ type: "ORDER_CREATE_FAIL" }), new o.HF("Failed to create order: ".concat(e)));

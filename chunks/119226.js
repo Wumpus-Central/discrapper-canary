@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(314940);
+n.d(t, { Z: () => D }), n(314940);
 var r = n(54381);
 n(473749);
 var i = n(278074),
@@ -7,7 +7,7 @@ var i = n(278074),
     s = n(1585),
     l = n(125988),
     c = n(583434),
-    u = n(216541),
+    u = n(684263),
     d = n(566697),
     f = n(479446),
     p = n(981632),
@@ -133,7 +133,7 @@ let R = (e) => {
     if ((null == o ? void 0 : o.type) === a.Z.BUNDLE)
         return (0, r.jsx)("div", {
             className: y.bundlePreviewWrapper,
-            children: (0, r.jsx)(u.d, {
+            children: (0, r.jsx)(u.U, {
                 product: o,
                 isPurchased: !1,
                 isHighlighted: !1,
@@ -156,7 +156,7 @@ let R = (e) => {
           })
         : l;
 };
-function w(e) {
+function D(e) {
     let { sku: t } = e;
     return t.productLine === E.POd.COLLECTIBLES ? (0, r.jsx)(R, { sku: t }) : null;
 }

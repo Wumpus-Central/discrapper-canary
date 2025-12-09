@@ -38,10 +38,10 @@ var P = function (e) {
             P(e);
         };
     },
-    w = function (e) {
+    D = function (e) {
         P(e.data);
     },
-    D = function (e) {
+    w = function (e) {
         s.postMessage(T(e), r.protocol + "//" + r.host);
     };
 (b && y) ||
@@ -69,9 +69,9 @@ var P = function (e) {
                 v.now(R(e));
             })
           : I && !g
-            ? ((o = (a = new I()).port2), (a.port1.onmessage = w), (i = c(o.postMessage, o)))
-            : s.addEventListener && u(s.postMessage) && !s.importScripts && r && "file:" !== r.protocol && !f(D)
-              ? ((i = D), s.addEventListener("message", w, !1))
+            ? ((o = (a = new I()).port2), (a.port1.onmessage = D), (i = c(o.postMessage, o)))
+            : s.addEventListener && u(s.postMessage) && !s.importScripts && r && "file:" !== r.protocol && !f(w)
+              ? ((i = w), s.addEventListener("message", D, !1))
               : (i =
                     N in m("script")
                         ? function (e) {

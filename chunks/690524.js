@@ -27,7 +27,7 @@ var r = n(54381),
     N = n(981631),
     P = n(474936),
     R = n(616926);
-function w(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function w(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -108,7 +108,7 @@ let M = {
                 let [e, t] = i.useState(P.Si.TIER_2),
                     [n, b] = i.useState(null),
                     y = (0, s.Wu)([A.Z], () => A.Z.getGuildsArray()),
-                    [w] = (0, s.Wu)([C.Z], () => [C.Z.getPremiumSubscription()]),
+                    [D] = (0, s.Wu)([C.Z], () => [C.Z.getPremiumSubscription()]),
                     x = y.map((e) => ({
                         value: e,
                         label: e.name,
@@ -119,7 +119,7 @@ let M = {
                         plan_id: P.Xh.PREMIUM_MONTH_TIER_2,
                         gift: "true",
                     }),
-                    F = "true" !== Z.gift && null != w,
+                    F = "true" !== Z.gift && null != D,
                     [V, H] = i.useState(x.length > 0 ? x[0].value : null),
                     { analyticsLocations: Y } = (0, m.ZP)(_.Z.PAYMENT_FLOW_TEST_PAGE),
                     [W, K] = i.useState(""),
@@ -260,7 +260,7 @@ let M = {
                                                         (0, r.jsx)(
                                                             u.Button,
                                                             L(
-                                                                D(
+                                                                w(
                                                                     {
                                                                         variant: "primary",
                                                                         text: "Open Link",
@@ -303,7 +303,7 @@ let M = {
                                                     label: "Nitro Basic",
                                                 },
                                             ],
-                                            onChange: (e) => B((t) => L(D({}, t), { plan_id: e })),
+                                            onChange: (e) => B((t) => L(w({}, t), { plan_id: e })),
                                         }),
                                         (0, r.jsx)(l.y6, {
                                             label: "Type",
@@ -318,7 +318,7 @@ let M = {
                                                     label: "Not Gift",
                                                 },
                                             ],
-                                            onChange: (e) => B((t) => L(D({}, t), { gift: e })),
+                                            onChange: (e) => B((t) => L(w({}, t), { gift: e })),
                                         }),
                                     ],
                                 }),
@@ -330,7 +330,7 @@ let M = {
                                         (0, r.jsx)(
                                             u.Button,
                                             L(
-                                                D(
+                                                w(
                                                     {
                                                         variant: "primary",
                                                         text: "Open Link",
@@ -343,7 +343,7 @@ let M = {
                                                         window.open(
                                                             N.Z5c.BILLING_PREMIUM_SUBSCRIBE +
                                                                 "?" +
-                                                                a.stringify(D({}, Z)),
+                                                                a.stringify(w({}, Z)),
                                                         );
                                                     },
                                                 },

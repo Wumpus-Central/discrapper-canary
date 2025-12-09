@@ -14,8 +14,8 @@ function d(e) {
         { channel: p, messages: h, oldestUnreadMessageId: f, treatSpam: m, summaries: g, selectedSummary: b } = e,
         C = [],
         y = !1,
-        v = null != f ? a.default.extractTimestamp(f) : null,
-        _ = null;
+        _ = null != f ? a.default.extractTimestamp(f) : null,
+        v = null;
     return (
         h.forEach((e) => {
             var r, O, x;
@@ -27,20 +27,20 @@ function d(e) {
                     let n = a.default.extractTimestamp(g[e].startId),
                         i = a.default.extractTimestamp(g[e].endId);
                     if (t >= n && t <= i) {
-                        if (_ === g[e].id) break;
+                        if (v === g[e].id) break;
                         C.push({
                             type: u.ys_.DIVIDER,
                             content: g[e].topic,
                             contentKey: g[e].id,
                         }),
-                            (_ = g[e].id);
+                            (v = g[e].id);
                         break;
                     }
                 }
             }
             let S = (0, l.vc)(e.timestamp, "LL");
             S !== t &&
-                null == _ &&
+                null == v &&
                 (C.push({
                     type: u.ys_.DIVIDER,
                     content: S,
@@ -70,7 +70,7 @@ function d(e) {
                           C.push(E))
                         : (j = (E = O).content[E.content.length - 1]),
                     [E, j])),
-            f === e.id && null != v)
+            f === e.id && null != _)
                 ? (null != P && P.type === u.ys_.DIVIDER
                       ? (P.unreadId = e.id)
                       : null !== I
@@ -86,15 +86,15 @@ function d(e) {
                               type: u.ys_.DIVIDER,
                               unreadId: e.id,
                           }),
-                  (v = null))
-                : null != v &&
-                  a.default.extractTimestamp(e.id) > v &&
+                  (_ = null))
+                : null != _ &&
+                  a.default.extractTimestamp(e.id) > _ &&
                   (e.isFirstMessageInForumPost(p) ||
                       C.push({
                           type: u.ys_.DIVIDER,
                           unreadId: e.id,
                       }),
-                  (v = null));
+                  (_ = null));
             let N = (0, c.f)(e, p);
             null != N &&
                 "before" === N.position &&

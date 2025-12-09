@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(517525),
     C = n(2818),
     y = n(954551),
-    v = n(44136),
-    _ = n(651183),
+    _ = n(44136),
+    v = n(651183),
     O = n(853476),
     x = n(390322),
     E = n(616286),
@@ -36,7 +36,7 @@ function M(e) {
             let e = Date.now();
             return s()(P.Z.getSpeakers())
                 .map((e) => I.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === N.fO.USER && e.speaking && !(0, v.ZP)(e))
+                .filter((e) => null != e && e.type === N.fO.USER && e.speaking && !(0, _.ZP)(e))
                 .sortBy((t) => -P.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
@@ -70,7 +70,7 @@ function R(e) {
         s = t.id,
         {
             voiceParticipantsHidden: u,
-            selectedParticipant: v,
+            selectedParticipant: _,
             userParticipantCount: S,
             participantsListOpen: P,
         } = (0, c.cj)(
@@ -110,13 +110,13 @@ function R(e) {
                 "clips-enabled-indicator",
             ),
         ),
-        (null == v ? void 0 : v.type) === N.fO.STREAM &&
+        (null == _ ? void 0 : _.type) === N.fO.STREAM &&
             (U.push(
                 (0, i.jsx)(
-                    _.Z,
+                    v.Z,
                     {
                         className: w.button,
-                        participant: v,
+                        participant: _,
                     },
                     "warning",
                 ),
@@ -127,20 +127,20 @@ function R(e) {
                     {
                         size: m.ZP.Sizes.LARGE,
                         className: w.button,
-                        participant: v,
+                        participant: _,
                         showQuality: !0,
                         premiumIndicator: !1,
                     },
                     "live-indicator",
                 ),
             )),
-        (null == v ? void 0 : v.type) === N.fO.USER &&
+        (null == _ ? void 0 : _.type) === N.fO.USER &&
             U.push(
                 (0, i.jsx)(
                     O.Z,
                     {
                         className: w.button,
-                        userId: v.id,
+                        userId: _.id,
                     },
                     "video-warning",
                 ),

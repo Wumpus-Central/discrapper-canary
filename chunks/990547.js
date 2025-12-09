@@ -146,8 +146,8 @@ if (null != R) {
             ? (r.os_sdk_version = null == i ? void 0 : i.split(".")[0])
             : "win32" === n && (r.os_sdk_version = null == i ? void 0 : i.split(".")[2]);
 }
-let w = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function D(e, t) {
+let D = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function w(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let n = new RegExp("[\\?&]".concat(t, "=([^&#]*)")).exec(e);
@@ -156,8 +156,8 @@ function D(e, t) {
 function x(e) {
     let t = {};
     return (
-        w.forEach((n) => {
-            let r = D(e, n);
+        D.forEach((n) => {
+            let r = w(e, n);
             r.length > 0 && (t[n] = r);
         }),
         t
@@ -182,7 +182,7 @@ function j() {
         r = "yahoo" !== n ? "q" : "p";
     if (null != n) {
         e.search_engine = n;
-        let i = D(t, r);
+        let i = w(t, r);
         i.length > 0 && (e.mp_keyword = i);
     }
     return e;
@@ -285,7 +285,7 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-    let i = parseInt("477243", 10);
+    let i = parseInt("477609", 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == R || null == (e = (t = R.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return (

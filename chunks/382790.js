@@ -13,9 +13,9 @@ var i,
     f = n(312186),
     g = n(483962),
     m = n(711553),
-    y = n(388032),
-    b = n(585816);
-function _(e, t, n) {
+    _ = n(388032),
+    y = n(585816);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function _(e, t, n) {
         e
     );
 }
-function v(e) {
+function b(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)(f.Z, { onClose: t });
 }
@@ -46,14 +46,14 @@ class O extends (i = s.PureComponent) {
                           e,
                       )
                     : (0, r.jsx)(m.Z, {
-                          title: y.intl.string(y.t.YUU0RF),
-                          renderSettings: v,
+                          title: _.intl.string(_.t.YUU0RF),
+                          renderSettings: b,
                           onDragStart: this.onDragStart,
                           children: (0, r.jsx)(g.Z, {}),
                       }),
             o = n ? "div" : h.ZP;
         return (0, r.jsxs)(o, {
-            className: l()(b.base, { [b.widget]: !n }, i),
+            className: l()(y.base, { [y.widget]: !n }, i),
             children: [
                 (0, r.jsx)(d.Z, {
                     isOverlay: !0,
@@ -66,11 +66,11 @@ class O extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, "onDragStart", (e) => {
+            v(this, "onDragStart", (e) => {
                 let { dragStart: t } = this.props;
                 t(c.B.MOVE, e.clientX, e.clientY);
             });
     }
 }
-_(O, "defaultProps", { contained: !1 });
+v(O, "defaultProps", { contained: !1 });
 let E = a.ZP.connectStores([u.Z], () => ({ selectedGuildId: u.Z.getGuildId() }))(O);

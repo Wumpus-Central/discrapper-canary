@@ -27,8 +27,8 @@ function p(e) {
         }),
         { width: b, height: C } = m,
         y = null != (t = null == l ? void 0 : l.length) ? t : 0,
-        v = b - 16,
-        _ = C - (h + f),
+        _ = b - 16,
+        v = C - (h + f),
         {
             tileStyle: O,
             tileWidth: x,
@@ -82,13 +82,13 @@ function p(e) {
                         rows: i,
                         columns: r,
                     };
-                })(y, v, _),
-            [y, v, _],
+                })(y, _, v),
+            [y, _, v],
         ),
         S = j + 1,
         P = S * x + (S - 1) * 8 <= b,
         I = Math.floor(x / c) + 8,
-        Z = Math.max(0, _ - I * E) / 2;
+        Z = Math.max(0, v - I * E) / 2;
     return (0, i.jsx)(o.Z, {
         fade: !0,
         className: n,

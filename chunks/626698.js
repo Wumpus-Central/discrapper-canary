@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(550770),
     P = n(807808);
 let R = 2.8,
-    w = 2,
-    D = 1000,
+    D = 2,
+    w = 1000,
     x = 500,
     L = 1000 + v.t;
 function j(e) {
@@ -54,14 +54,14 @@ function j(e) {
             pause: a,
         });
     i.useEffect(() => {
-        null != M.current && (M.current.playbackRate = w);
+        null != M.current && (M.current.playbackRate = D);
     }, []),
         i.useEffect(() => {
             if (G) {
                 null != M.current && (M.current.currentTime = 0.2);
                 let e = setTimeout(() => {
                     j(!1);
-                }, D);
+                }, w);
                 return () => clearTimeout(e);
             }
         }, [G]);

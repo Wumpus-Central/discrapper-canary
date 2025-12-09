@@ -1,9 +1,9 @@
 n.d(t, { ZP: () => j });
 var a = n(54381);
 n(473749);
-var l = n(442837),
-    r = n(704215),
-    i = n(198168),
+var r = n(442837),
+    i = n(704215),
+    l = n(198168),
     s = n(907862),
     o = n(570140),
     c = n(710845),
@@ -25,17 +25,17 @@ function b(e) {
         }),
             null == (n = e.onDismiss) || n.call(e, t);
     }
-    let { isAdopting: n, onAdoptTag: l, onEditProfile: r } = (0, h.Z)(e.guild.id, () => t(x.L.TAKE_ACTION)),
+    let { isAdopting: n, onAdoptTag: r, onEditProfile: i } = (0, h.Z)(e.guild.id, () => t(x.L.TAKE_ACTION)),
         c = [
             {
                 text: f.intl.string(f.t.jwEaiX),
                 loading: n,
-                onClick: l,
+                onClick: r,
                 variant: "primary",
             },
             {
                 text: f.intl.string(f.t.s5vZlQ),
-                onClick: r,
+                onClick: i,
                 variant: "secondary",
             },
         ];
@@ -48,7 +48,7 @@ function b(e) {
                 position: "top",
                 graphic: {
                     type: "dynamic",
-                    component: i.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
+                    component: l.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
                     props: {
                         guildId: e.guild.id,
                         guildProfile: e.guild.profile,
@@ -71,15 +71,15 @@ function v(e) {
             guildId: e.guild.id,
             lastSeenInfo: { tag: e.guild.profile.tag },
         }),
-            (0, d.Qd)(r.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, x.L.DISMISS),
+            (0, d.Qd)(i.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, x.L.DISMISS),
             null == (n = e.onDismiss) || n.call(e, t);
     }
-    let { isAdopting: n, onAdoptTag: l, onEditProfile: c } = (0, h.Z)(e.guild.id, () => t(x.L.TAKE_ACTION)),
+    let { isAdopting: n, onAdoptTag: r, onEditProfile: c } = (0, h.Z)(e.guild.id, () => t(x.L.TAKE_ACTION)),
         u = [
             {
                 text: f.intl.string(f.t.jwEaiX),
                 loading: n,
-                onClick: l,
+                onClick: r,
                 variant: "primary",
             },
             {
@@ -97,7 +97,7 @@ function v(e) {
                 position: "top",
                 graphic: {
                     type: "dynamic",
-                    component: i.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
+                    component: l.DynamicGraphicComponent.GUILD_TAG_COACHMARK_ASSET,
                     props: {
                         guildId: e.guild.id,
                         guildProfile: e.guild.profile,
@@ -113,7 +113,7 @@ function v(e) {
     });
 }
 function j(e) {
-    let t = (0, l.e7)([u.Z], () => u.Z.getGuild(e.guildId)),
+    let t = (0, r.e7)([u.Z], () => u.Z.getGuild(e.guildId)),
         n = (0, m.S3)(e.guildId);
     return null != t && (0, p.jq)(t) && null !== n
         ? "changed" === n

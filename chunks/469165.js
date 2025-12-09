@@ -72,7 +72,7 @@ function R(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function w(e, t) {
         e
     );
 }
-let D = {
+let w = {
         [b.fA]: {
             title: I.t.sfGgOG,
             body: I.t.igiSKe,
@@ -107,7 +107,7 @@ let D = {
             asset: A.Z,
         },
     },
-    x = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? D[e].logos.dark : D[e].logos.light),
+    x = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? w[e].logos.dark : w[e].logos.light),
     L = (e) => {
         let { recurrence: t } = e,
             n = (0, r.jsx)(a.sV5, { color: s.TVs.colors.BUTTON_POSITIVE_BACKGROUND }),
@@ -151,7 +151,7 @@ let D = {
             });
     },
     j = () =>
-        Object.entries(D).map((e) => {
+        Object.entries(w).map((e) => {
             let [t, n] = e;
             return (0, r.jsx)(
                 "div",
@@ -280,7 +280,7 @@ let D = {
                                                                       .then((n) => {
                                                                           c([
                                                                               ...l.slice(0, t),
-                                                                              w(P({}, e), { code: n.code }),
+                                                                              D(P({}, e), { code: n.code }),
                                                                               ...l.slice(t + 1),
                                                                           ]);
                                                                       })
@@ -343,7 +343,7 @@ let D = {
     U = (e) => {
         var t;
         let { promotion: n } = e;
-        return null != (t = D[n.outboundTitle.toLowerCase()]) ? t : null;
+        return null != (t = w[n.outboundTitle.toLowerCase()]) ? t : null;
     },
     G = (e) => {
         let { promotions: t, codesByPromotion: n } = e,

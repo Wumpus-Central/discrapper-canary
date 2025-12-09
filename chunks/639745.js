@@ -74,7 +74,7 @@ function v(e, t, n, r) {
                     .css(),
                 ";\n    ",
             ),
-        w = "\n      "
+        D = "\n      "
             .concat(s.Yk.LIGHT_THEME_BASE_COLOR, ": ")
             .concat(A.light.css(), ";\n      ")
             .concat(s.Yk.LIGHT_THEME_BASE_COLOR_HSL, ": ")
@@ -91,7 +91,7 @@ function v(e, t, n, r) {
         .concat(N, "\n      ")
         .concat(P, "\n      ")
         .concat(R, "\n      ")
-        .concat(w, "\n      }");
+        .concat(D, "\n      }");
 }
 function S(e, t) {
     let n = a.Z.unsafe_rawColors[e.colors[0].token].resolve({ saturation: 1 }).hex(),

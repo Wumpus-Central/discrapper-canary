@@ -40,8 +40,8 @@ function P(e, t, n) {
 }
 let R = window.DiscordNative;
 I.Wb.dispatcher.getDispatchHandler = A.Z;
-let w = new c.Z("ConnectionStore"),
-    D = 100,
+let D = new c.Z("ConnectionStore"),
+    w = 100,
     x = 0,
     L = null,
     j = !0,
@@ -49,15 +49,15 @@ let w = new c.Z("ConnectionStore"),
     k = null;
 function U() {
     return I.Wb.isClosed()
-        ? (w.verbose("Socket is reconnecting because of starting new session"), I.Wb.connect())
-        : (w.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
+        ? (D.verbose("Socket is reconnecting because of starting new session"), I.Wb.connect())
+        : (D.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
 }
 function G(e) {
-    e.isSwitchingAccount && I.RR.handleAccountSwitch(), w.verbose("Closing socket because of logout"), I.Wb.close();
+    e.isSwitchingAccount && I.RR.handleAccountSwitch(), D.verbose("Closing socket because of logout"), I.Wb.close();
 }
 function Z() {
     return (
-        w.verbose("session refresh dispatched", { isEstablished: I.Wb.isSessionEstablished() }),
+        D.verbose("session refresh dispatched", { isEstablished: I.Wb.isSessionEstablished() }),
         !!I.Wb.isSessionEstablished() && (I.Wb.close(), I.Wb.connect())
     );
 }
@@ -95,7 +95,7 @@ async function B(e) {
     I.GC.update(t, !0), (j = !1), (k = null);
 }
 function F() {
-    w.verbose("connection closed dispatched"), (x = Date.now());
+    D.verbose("connection closed dispatched"), (x = Date.now());
 }
 function V() {
     k = null;
@@ -130,7 +130,7 @@ function z(e) {
     return t.reduce((e, t) => {
         if (p.default.getId() !== t.userId) return e;
         if (t.sessionId === L) {
-            if (null != k) return w.verbose("Ignoring voice state for own session due to VSU lock on channel:", k), e;
+            if (null != k) return D.verbose("Ignoring voice state for own session due to VSU lock on channel:", k), e;
             I.GC.setState({
                 guildId: t.guildId,
                 channelId: t.channelId,
@@ -201,7 +201,7 @@ function en(e) {
         I.Wb.isSessionEstablished() &&
             ("userIds" in e
                 ? a()(e.userIds)
-                      .chunk(D)
+                      .chunk(w)
                       .forEach((t) => {
                           I.Wb.requestGuildMembers(e.guildIds, {
                               userIds: t,

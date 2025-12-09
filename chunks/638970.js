@@ -77,9 +77,9 @@ function I(e) {
             userId: t.id,
             guildId: y,
         }),
-        w = t.id === n.id,
-        D = (0, a.e7)([c.Z, l.Z], () => {
-            let e = w ? c.Z.getStatus() : l.Z.getStatus(t.id, y);
+        D = t.id === n.id,
+        w = (0, a.e7)([c.Z, l.Z], () => {
+            let e = D ? c.Z.getStatus() : l.Z.getStatus(t.id, y);
             return e === E.Sk.OFFLINE || e === E.Sk.INVISIBLE;
         }),
         { voiceActivityStatusEnabled: x } = (0, o.U)({ location: "UserProfileStackedActivity" }),
@@ -103,7 +103,7 @@ function I(e) {
             },
             [n, L, C, I, N, t, P],
         );
-    return D
+    return w
         ? null
         : (0, r.jsx)(p.Z, {
               renderCards: j,

@@ -1,6 +1,6 @@
 n.d(t, {
     I: () => S,
-    m: () => w,
+    m: () => D,
 }),
     n(388685);
 var r = n(54381),
@@ -117,7 +117,7 @@ function R() {
             return 0;
     }
 }
-function w(e) {
+function D(e) {
     var t;
     let {
             children: n,
@@ -126,8 +126,8 @@ function w(e) {
             onRequestClose: g,
             position: b = "top",
             align: v,
-            alignmentStrategy: w = "trigger-center",
-            caretConfig: D,
+            alignmentStrategy: D = "trigger-center",
+            caretConfig: w,
             hasVideo: x = !1,
             gradientColor: L,
             gradientOffsetBottom: j = 0.4,
@@ -177,7 +177,7 @@ function w(e) {
             onExitComplete: en,
         }),
         ei = i.useMemo(() => {
-            if ("edge" === w && null != v) {
+            if ("edge" === D && null != v) {
                 let e = "top" === H || "bottom" === H,
                     t = "left" === H || "right" === H;
                 if (e) {
@@ -185,17 +185,17 @@ function w(e) {
                 } else if (t && ("top" === v || "center" === v || "bottom" === v)) return v;
             }
             return "center";
-        }, [w, v, H]),
+        }, [D, v, H]),
         ea = i.useMemo(() => {
             var e;
-            if ("edge" !== w) return R(null != (e = null == D ? void 0 : D.align) ? e : "center", H, q, Q);
-        }, [w, D, H, q, Q]),
+            if ("edge" !== D) return R(null != (e = null == w ? void 0 : w.align) ? e : "center", H, q, Q);
+        }, [D, w, H, q, Q]),
         eo = i.useMemo(
             () => ({
                 position: H,
-                caretConfig: null != D ? D : { align: "center" },
+                caretConfig: null != w ? w : { align: "center" },
             }),
-            [H, D],
+            [H, w],
         ),
         es = (e) => {
             var { setPopoutRef: t, position: i, nudge: a } = e,

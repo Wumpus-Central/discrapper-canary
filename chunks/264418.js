@@ -127,7 +127,7 @@ function y(e) {
         R = i.useCallback(() => {
             null == S || S("user:explicit");
         }, [S]),
-        w = m(
+        D = m(
             {
                 targetElementRef: N.targetElementRef,
                 shouldShow: N.shouldShow,
@@ -147,7 +147,7 @@ function y(e) {
         );
     return (0, r.jsx)(
         l.m,
-        g(m({}, w), {
+        g(m({}, D), {
             children: (0, r.jsxs)("div", {
                 ref: I,
                 "data-mana-component": "popover",

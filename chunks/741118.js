@@ -105,9 +105,9 @@ function y(e) {
         A = T === f.length - 1,
         C = 0 === T,
         [N, P] = i.useState(!1),
-        [R, w] = i.useState(_);
-    R !== _ && (P(!1), w(_));
-    let D = i.useCallback(
+        [R, D] = i.useState(_);
+    R !== _ && (P(!1), D(_));
+    let w = i.useCallback(
             (e) => {
                 null == g || g(e);
             },
@@ -126,12 +126,12 @@ function y(e) {
             () => ({
                 currentStepKey: _,
                 setNextEnabled: P,
-                goToStep: D,
+                goToStep: w,
                 goToNextStep: L,
                 goToPreviousStep: j,
                 complete: x,
             }),
-            [_, P, D, L, j, x],
+            [_, P, w, L, j, x],
         ),
         k = {
             variant: "secondary",

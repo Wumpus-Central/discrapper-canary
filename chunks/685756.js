@@ -1,5 +1,5 @@
 n.d(t, {
-    V: () => D,
+    V: () => w,
     Z: () => x,
 }),
     n(410992),
@@ -126,7 +126,7 @@ function P(e) {
 function R(e) {
     return "audio" === e ? f.Tr.AUDIO : "test" === e ? f.Tr.TEST : "screen" === e ? f.Tr.SCREEN : f.Tr.VIDEO;
 }
-function w(e) {
+function D(e) {
     var t;
     return null !=
         (t =
@@ -153,7 +153,7 @@ function w(e) {
         ? t
         : [];
 }
-var D = (function (e) {
+var w = (function (e) {
     return (
         (e.Connecting = "connecting"),
         (e.Connect = "connect"),
@@ -258,7 +258,7 @@ class x extends o.Z {
                         this.handleHeartbeatAck(r);
                         break;
                     case 12:
-                        this.emit("video", r.user_id, r.audio_ssrc, r.video_ssrc, w(r.streams));
+                        this.emit("video", r.user_id, r.audio_ssrc, r.video_ssrc, D(r.streams));
                         break;
                     case 11:
                         this.emit("client-connect", r.user_ids);
@@ -406,7 +406,7 @@ class x extends o.Z {
         let t = (0, s.zO)() - this.connectionStartTime;
         this.logger.info("[READY] took ".concat(t, " ms")),
             this.serverVersion >= 6 && this.send(16, {}),
-            this.emit("ready", e.ip, e.port, e.modes, e.ssrc, w(e.streams), e.experiments);
+            this.emit("ready", e.ip, e.port, e.modes, e.ssrc, D(e.streams), e.experiments);
     }
     handleResumed(e) {
         this.backoff.succeed();

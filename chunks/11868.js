@@ -31,19 +31,19 @@ var r = n(54381),
     N = n(765305),
     P = n(388032),
     R = n(182279);
-let w = (e, t) => (n) => {
+let D = (e, t) => (n) => {
         n.stopPropagation(), u.default.selectVoiceChannel(e.channel_id, !1), null == t || t(n);
     },
-    D = (e, t) => (n) => {
+    w = (e, t) => (n) => {
         let r = _.Z.getChannel(e.channel_id);
         null != r && (n.stopPropagation(), (0, p.Cq)(r), null == t || t(n));
     },
     x = (e, t) => {
         switch (null == e ? void 0 : e.entity_type) {
             case N.WX.STAGE_INSTANCE:
-                return D(e, t);
-            case N.WX.VOICE:
                 return w(e, t);
+            case N.WX.VOICE:
+                return D(e, t);
         }
         return () => {};
     },

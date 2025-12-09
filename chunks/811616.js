@@ -34,8 +34,8 @@ function S(e) {
         } = e,
         N = (0, l.e7)([d.default], () => d.default.locale),
         P = (0, l.e7)([f.Z], () => f.Z.get(n)),
-        { isGift: R, giftRecipient: w } = (0, u.wD)(),
-        D = R && (0, p.pO)(w);
+        { isGift: R, giftRecipient: D } = (0, u.wD)(),
+        w = R && (0, p.pO)(D);
     s()(null != P, "Missing subscriptionPlan");
     let x = null != t && t.planId === n,
         L =
@@ -90,12 +90,12 @@ function S(e) {
                 children: [
                     (0, r.jsxs)("div", {
                         className: a()(v.planOptionInterval, {
-                            [v.optionSelected]: o || D,
-                            [v.updatedOptionSelected]: I && (o || D),
+                            [v.optionSelected]: o || w,
+                            [v.updatedOptionSelected]: I && (o || w),
                         }),
-                        children: [(0, m.L7)(P.interval, R, U, P.intervalCount, D, (0, m.Rd)(P.id)), D && Y()],
+                        children: [(0, m.L7)(P.interval, R, U, P.intervalCount, w, (0, m.Rd)(P.id)), w && Y()],
                     }),
-                    D &&
+                    w &&
                         (0, r.jsx)("div", {
                             className: v.planOneTimeCost,
                             children: O.intl.format(O.t.ori2Jm, { currencyAmount: (0, h.T4)(k.amount, k.currency) }),
@@ -127,7 +127,7 @@ function S(e) {
                   : null;
         };
     return (0, r.jsxs)(c.P3F, {
-        role: D ? "menuitem" : "radio",
+        role: w ? "menuitem" : "radio",
         "aria-checked": o,
         tabIndex: o ? 0 : -1,
         focusProps: {
@@ -140,8 +140,8 @@ function S(e) {
         },
         onClick: L ? void 0 : () => i(n),
         className: a()(v.planOptionClickableContainer, {
-            [v.selectedPlan]: D && o,
-            [v.selectionBox]: D,
+            [v.selectedPlan]: w && o,
+            [v.selectionBox]: w,
         }),
         children: [
             (0, r.jsxs)("div", {
@@ -150,7 +150,7 @@ function S(e) {
                     (0, r.jsxs)("div", {
                         className: v.planOptionClickable,
                         children: [
-                            !D &&
+                            !w &&
                                 (0, r.jsx)("div", {
                                     className: v.planOptionCheckbox,
                                     children: (0, r.jsx)(c.Checkbox, {
@@ -166,7 +166,7 @@ function S(e) {
                                     className: v.planOptionCurrentPlan,
                                     children: ["(", O.intl.string(O.t.ymSxhy), ")"],
                                 }),
-                            !D && Y(),
+                            !w && Y(),
                         ],
                     }),
                     I
@@ -175,7 +175,7 @@ function S(e) {
                               children: O.intl.format(O.t.hXcaLT, { price: K() }),
                           })
                         : (0, r.jsx)("div", {
-                              className: a()({ [v.optionSelected]: o || D }),
+                              className: a()({ [v.optionSelected]: o || w }),
                               children: (0, h.T4)(k.amount, k.currency),
                           }),
                 ],

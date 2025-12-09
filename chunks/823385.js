@@ -39,8 +39,8 @@ function R(e, t, n) {
         e
     );
 }
-let w = "seenQSTutorial",
-    D = 5,
+let D = "seenQSTutorial",
+    w = 5,
     x = 7,
     L = 3,
     j = 100,
@@ -218,7 +218,7 @@ function J(e) {
                 : new u.ZP(
                       et,
                       M,
-                      null != i ? j : D,
+                      null != i ? j : w,
                       {
                           frecencyBoosters: !0,
                           blacklist: s,
@@ -257,7 +257,7 @@ function er(e) {
         o = i.trim();
     if (null == r) return !1;
     if (Z !== a) {
-        r.setResultTypes(null != a ? [a] : M), r.setLimit(null != a ? j : D);
+        r.setResultTypes(null != a ? [a] : M), r.setLimit(null != a ? j : w);
         let e = null != (t = I.Z.getGuildId()) ? t : void 0;
         a === u.h8.USER && null != e
             ? r.setOptions(
@@ -289,14 +289,14 @@ function ei(e) {
 }
 function ea() {
     if (U) return !1;
-    (U = !0), l.K.set(w, !0);
+    (U = !0), l.K.set(D, !0);
 }
 class eo extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         var t;
         this.waitFor(p.Z, m.default, h.Z, g.Z, E.ZP, b.ZP, y.Z, O.Z, v.ZP, S.Z, I.Z, _.Z, T.ZP),
             this.syncWith([_.Z], () => !0),
-            (U = l.K.get(w) || !1),
+            (U = l.K.get(D) || !1),
             (Y = null != (t = null == e ? void 0 : e.channelHistory) ? t : []);
     }
     getState() {

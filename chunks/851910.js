@@ -25,8 +25,8 @@ function N(e) {
 function E(e, t) {
     return Math.random() * (t - e) + e;
 }
-let v = [6, 10, 9, 16, 8],
-    p = {
+let p = [6, 10, 9, 16, 8],
+    v = {
         [d.i.GENTLE_AMBIENT]: {
             firstState: "burst",
             springConfig: {
@@ -130,13 +130,13 @@ let v = [6, 10, 9, 16, 8],
             },
             states: {
                 burst: {
-                    getHeights: () => N(7, v),
+                    getHeights: () => N(7, p),
                     getAnimationDelay: () => E(8, 16),
                     getStateDuration: () => E(3000, 6000),
                     getNextState: () => "quiet",
                 },
                 quiet: {
-                    getHeights: () => N(4, v),
+                    getHeights: () => N(4, p),
                     getAnimationDelay: () => E(16, 128),
                     getStateDuration: () => E(1000, 3000),
                     getNextState: () => "burst",
@@ -152,15 +152,15 @@ function T(e) {
             animationStyle: N = d.i.GENTLE_AMBIENT,
             locked: E = !1,
         } = e,
-        v = i.useId(),
+        p = i.useId(),
         T = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         O = (0, o.e7)([c.Z], () => c.Z.isAppFocused() || c.Z.isVisible()),
-        [y, b] = i.useState(!1),
-        S = i.useCallback((e) => {
-            e && b(!0);
+        [y, S] = i.useState(!1),
+        b = i.useCallback((e) => {
+            e && S(!0);
         }, []),
-        I = (0, a.O)(S, 0.15),
-        j = p[N],
+        j = (0, a.O)(b, 0.15),
+        I = v[N],
         x = (function (e, t) {
             let [n, l] = i.useState(() => t.states[t.firstState].getHeights()),
                 r = i.useRef(t.firstState),
@@ -209,16 +209,16 @@ function T(e) {
                 }, [o, t]),
                 n
             );
-        })(T || !O || !y, j).map((e) => ({
+        })(T || !O || !y, I).map((e) => ({
             height: e,
-            config: j.springConfig,
+            config: I.springConfig,
         })),
         D = (0, s.bYB)(5, x, "animate-always"),
         _ = (f - 18) / 2,
         C = E
             ? (0, l.jsx)("defs", {
                   children: (0, l.jsxs)("mask", {
-                      id: v,
+                      id: p,
                       children: [
                           (0, l.jsx)("rect", {
                               width: f,
@@ -237,10 +237,10 @@ function T(e) {
                   }),
               })
             : null,
-        A = E ? "url(#".concat(v, ")") : void 0;
+        A = E ? "url(#".concat(p, ")") : void 0;
     return T
         ? (0, l.jsx)("span", {
-              ref: I,
+              ref: j,
               className: n,
               style: { display: "inline-flex" },
               children: (0, l.jsxs)("svg", {
@@ -280,7 +280,7 @@ function T(e) {
               }),
           })
         : (0, l.jsx)("span", {
-              ref: I,
+              ref: j,
               className: n,
               style: { display: "inline-flex" },
               children: (0, l.jsxs)("svg", {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(415506), n(388685);
+n.d(t, { Z: () => M }), n(415506), n(388685);
 var r,
     i = n(54381),
     l = n(473749),
@@ -89,7 +89,7 @@ function D(e) {
             throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)));
     }
 }
-class M extends (r = l.PureComponent) {
+class L extends (r = l.PureComponent) {
     componentWillEnter(e) {
         let { controller: t } = this.state;
         e(),
@@ -280,13 +280,13 @@ class M extends (r = l.PureComponent) {
             });
     }
 }
-w(M, "defaultProps", {
+w(L, "defaultProps", {
     badge: 0,
     audio: !1,
     video: !1,
     isCurrentUserInThisDMCall: !1,
 });
-let L = l.forwardRef(function (e, t) {
+let M = l.forwardRef(function (e, t) {
     let n = e.channel.id,
         r = (0, h.ZP)(e.channel),
         l = (0, a.Ie)(n, 2),
@@ -303,7 +303,7 @@ let L = l.forwardRef(function (e, t) {
     (C || (x && p)) && ((E = u === P.WtW.VOICE), (S = u === P.WtW.VIDEO));
     let I = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
-        M,
+        L,
         A(T({}, e), {
             ref: t,
             channelName: r,

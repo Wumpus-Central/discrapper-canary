@@ -54,8 +54,8 @@ function R(e) {
     }
     return e;
 }
-let w = 2,
-    D = 2000;
+let D = 2,
+    w = 2000;
 function x(e) {
     let { context: t, application: n, videoUrl: a, imageCoverUrl: l, sectionName: u, hasCommands: f } = e,
         p = i.useMemo(() => {
@@ -267,7 +267,7 @@ function U(e) {
                     is_bot_user_id_non_null: null != h,
                     show_try_it_out_button: g,
                 });
-        }, D);
+        }, w);
         return () => clearTimeout(e);
     }, [a, u, h, g]),
     (0, y.BQ)(a) && (0, y.ye)(a))
@@ -310,7 +310,7 @@ function G(e) {
             let e = c * u;
             return {
                 key: 1,
-                minHeightOverride: Math.min(e, w * c),
+                minHeightOverride: Math.min(e, D * c),
                 maxHeightOverride: e,
             };
         }, [u, c]),
@@ -327,12 +327,12 @@ function G(e) {
                     ref: s,
                     className: N.markup,
                     variant: "text-sm/medium",
-                    lineClamp: m ? void 0 : w,
+                    lineClamp: m ? void 0 : D,
                     style: { maxHeight: m ? void 0 : d.minHeightOverride },
                     children: o,
                 }),
             }),
-            null != u && u > w
+            null != u && u > D
                 ? (0, r.jsxs)(l.P3F, {
                       className: C.expandableDescriptionClickable,
                       onClick: () => a((e) => !e),

@@ -95,11 +95,11 @@ function R(e) {
         (y = null),
         (E = e.promotionId);
 }
-function w(e) {
+function D(e) {
     let { error: t } = e;
     (T = !1), (C = null), P(t);
 }
-function D(e) {
+function w(e) {
     let { skuId: t } = e;
     N.add(t);
 }
@@ -186,8 +186,8 @@ class V extends (a = o.ZP.Store) {
 c(V, "displayName", "SKUPaymentModalStore");
 let H = new V(s.Z, {
     SKU_PURCHASE_MODAL_OPEN: R,
-    SKU_PURCHASE_MODAL_CLOSE: w,
-    SKU_PURCHASE_PREVIEW_FETCH: D,
+    SKU_PURCHASE_MODAL_CLOSE: D,
+    SKU_PURCHASE_PREVIEW_FETCH: w,
     SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: x,
     SKU_PURCHASE_PREVIEW_FETCH_FAILURE: L,
     SKU_PURCHASE_START: j,

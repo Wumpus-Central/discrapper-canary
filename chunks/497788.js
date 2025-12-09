@@ -20,8 +20,8 @@ var r = n(54381),
 let v = (e) => {
     let { isBlockLoading: t = !1, heroBlock: n, tab: v } = e,
         S = (0, o.sp)(),
-        { hasPromoUpsell: O } = u.Z.useConfig({ location: "RewardHeroBlockCards" }),
-        x = l.useMemo(() => a.Z.getCategoryForProduct(n.rewardSkuId), [n.rewardSkuId]),
+        { hasPromoUpsell: x } = u.Z.useConfig({ location: "RewardHeroBlockCards" }),
+        O = l.useMemo(() => a.Z.getCategoryForProduct(n.rewardSkuId), [n.rewardSkuId]),
         y = (0, i.e7)([c.Z], () => c.Z.getPurchase(n.rewardSkuId)),
         { products: k } = ((e, t, n) => {
             let r = (0, h.Z)(),
@@ -51,8 +51,8 @@ let v = (e) => {
             [t, n.rankedSkuIds, k.length],
         ),
         j = t || T,
-        { readyToClaim: I } = (0, b.q)(x, n.rewardSkuId),
-        L = null == y && null != n.rewardSkuId && null != x;
+        { readyToClaim: I } = (0, b.q)(O, n.rewardSkuId),
+        L = null == y && null != n.rewardSkuId && null != O;
     return (0, r.jsx)(s.Z, {
         gap: "xl",
         children: j
@@ -62,7 +62,7 @@ let v = (e) => {
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       L &&
-                          !!(O || I) &&
+                          !!(x || I) &&
                           (0, r.jsx)(
                               o.k0,
                               {
@@ -72,7 +72,7 @@ let v = (e) => {
                                       categoryPosition: 0,
                                   },
                                   children: (0, r.jsx)(C.Z, {
-                                      category: x,
+                                      category: O,
                                       rewardSkuId: n.rewardSkuId,
                                   }),
                               },

@@ -175,7 +175,7 @@ function C(e) {
                 null != _ && _(t);
             }
         },
-        w = [...(null != d ? [d] : []), ...a, S].map((e, t) => {
+        D = [...(null != d ? [d] : []), ...a, S].map((e, t) => {
             if (e instanceof p.ZP) {
                 let { label: t } = I(e, f),
                     n = e === S || null == N || (null == N ? void 0 : N.includes(e.paymentGateway));
@@ -191,7 +191,7 @@ function C(e) {
                 label: e.label,
             };
         }),
-        D = i.useMemo(() => new Map(a.map((e) => [e.id, e])), [a]),
+        w = i.useMemo(() => new Map(a.map((e) => [e.id, e])), [a]),
         x = A(
             h,
             i.useMemo(() => a.find((e) => e.id === n), [a, n]),
@@ -210,7 +210,7 @@ function C(e) {
                       text: g.intl.string(g.t.eQ2bLp),
                   })
                 : (0, r.jsx)(l.y6, {
-                      options: w,
+                      options: D,
                       value: n,
                       label: t,
                       onChange: R,
@@ -222,9 +222,9 @@ function C(e) {
                           let [t] = e;
                           return C
                               ? (0, r.jsx)(u.$jN, { type: u.RAz.SPINNING_CIRCLE })
-                              : T(null == t.value ? void 0 : D.get(t.value), t, f);
+                              : T(null == t.value ? void 0 : w.get(t.value), t, f);
                       },
-                      renderOptionLabel: (e) => T(null == e.value ? void 0 : D.get(e.value), e, f),
+                      renderOptionLabel: (e) => T(null == e.value ? void 0 : w.get(e.value), e, f),
                   }),
             null != x
                 ? (0, r.jsxs)("div", {

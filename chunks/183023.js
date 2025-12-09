@@ -35,8 +35,8 @@ var r = n(54381),
     N = n(687476),
     P = n(761966),
     R = n(98278),
-    w = n(767714),
-    D = n(703656),
+    D = n(767714),
+    w = n(703656),
     x = n(944486),
     L = n(914010),
     j = n(594174),
@@ -168,7 +168,7 @@ let J = 32,
             }),
             f = (n = null == n || n) || t.isDiscoverable(),
             _ = () => {
-                t.isDiscoverable() ? (0, U.Ub)(a, {}) : n && (0, D.uL)(V.Z5c.CHANNEL(a, x.Z.getChannelId(a)));
+                t.isDiscoverable() ? (0, U.Ub)(a, {}) : n && (0, w.uL)(V.Z5c.CHANNEL(a, x.Z.getChannelId(a)));
             },
             m = () =>
                 null != d && f
@@ -314,7 +314,7 @@ let J = 32,
                 expressionSourceGuild: v,
                 joinedEmojiSourceGuildRecord: T,
                 closePopout: A,
-                onToggleShowMoreEmojis: D,
+                onToggleShowMoreEmojis: w,
                 guildEmoji: x,
                 demoMode: k = !1,
                 nonce: U,
@@ -414,7 +414,7 @@ let J = 32,
                     n = !X && J,
                     i = () =>
                         e_
-                            ? (0, r.jsx)(w.Z, {
+                            ? (0, r.jsx)(D.Z, {
                                   className: K.ctaButton,
                                   subscriptionTier: Y.Si.TIER_2,
                                   size: f.zx.Sizes.SMALL,
@@ -488,7 +488,7 @@ let J = 32,
                         (null != (t = null == v || null == (e = v.emojis) ? void 0 : e.length) ? t : 0) > 1,
                     i = () => {
                         n &&
-                            (null == D || D(),
+                            (null == w || w(),
                             eh || k || M.default.track(V.rMx.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef),
                             eg(!eh));
                     },
@@ -591,7 +591,7 @@ let J = 32,
                 f === Z.$.GET_PREMIUM
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(w.Z, {
+                              (0, r.jsx)(D.Z, {
                                   subscriptionTier: Y.Si.TIER_2,
                                   textOptions: { textOverride: o.text },
                                   className: K.ctaButton,

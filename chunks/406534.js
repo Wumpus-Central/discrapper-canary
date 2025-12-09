@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(736052),
     C = n(216572),
     y = n(359110),
-    v = n(359119),
-    _ = n(13279),
+    _ = n(359119),
+    v = n(13279),
     O = n(248789),
     x = n(88101),
     E = n(576954),
@@ -37,12 +37,12 @@ var i = n(54381),
     k = n(186877),
     U = n(294218),
     V = n(534469),
-    H = n(993397),
+    B = n(993397),
     F = n(511010),
-    B = n(524444),
+    H = n(524444),
     G = n(977391),
-    z = n(921235),
-    W = n(97352),
+    W = n(921235),
+    z = n(97352),
     q = n(226027),
     K = n(959517),
     Y = n(981631),
@@ -125,18 +125,18 @@ function et(e) {
         eb = (0, s.ts)(U),
         eC = (0, l.e7)([j.Z], () => j.Z.shouldShowTopicsBar() && !ed),
         ey = (0, x.P)(U.id),
-        ev = (0, _.z)(U.id, X.zr),
-        e_ = (0, d.k)(U.id),
+        e_ = (0, v.z)(U.id, X.zr),
+        ev = (0, d.k)(U.id),
         eO = (0, D.Z)(),
         ex = (function (e, t) {
             if (e.isDM() && null != t)
-                if (t.type === v.pj.STRANGER_DANGER)
+                if (t.type === _.pj.STRANGER_DANGER)
                     return (0, i.jsx)(E.M, {
                         channelId: e.id,
                         warningId: t.id,
                         senderId: e.getRecipientId(),
                     });
-                else if (t.type === v.pj.LIKELY_ATO)
+                else if (t.type === _.pj.LIKELY_ATO)
                     return (0, i.jsx)(p.M, {
                         channelId: e.id,
                         warningId: t.id,
@@ -149,11 +149,11 @@ function et(e) {
                         senderId: e.getRecipientId(),
                     });
             return null;
-        })(U, null != (n = null != ey ? ey : ev) ? n : e_),
+        })(U, null != (n = null != ey ? ey : e_) ? n : ev),
         eE = U.isForumPost() && !eg ? (0, i.jsx)(m.Z, { postId: U.id }) : null,
         ej = (0, b.Z)(U.id),
         eS = (0, C.nw)(U);
-    (0, W.Z)();
+    (0, z.Z)();
     let eP = null,
         eI = [],
         eZ = el.map((e, t) => {
@@ -205,7 +205,7 @@ function et(e) {
                               ? J.t["VFWjc+"]
                               : J.t.xfkfTK),
                     (0, i.jsx)(
-                        H.Z,
+                        B.Z,
                         {
                             unreadId: K.j1,
                             messages: e,
@@ -297,7 +297,7 @@ function et(e) {
                 ),
             ),
         et.hasMoreAfter && eI.push((0, i.jsx)(G.ZP, Q({ compact: er }, es), "has-more-after")),
-        !eu && em && ef() && eI.push((0, i.jsx)(z.Z, { channel: U })),
+        !eu && em && ef() && eI.push((0, i.jsx)(W.Z, { channel: U })),
         en > 0 && ei && ef())
     ) {
         let e,
@@ -359,7 +359,7 @@ function et(e) {
                                   color: "currentColor",
                                   children: n,
                               });
-                    r = (0, i.jsx)(B.G5, {
+                    r = (0, i.jsx)(H.G5, {
                         scrollManager: eo,
                         content: e,
                         channel: U,
@@ -401,7 +401,7 @@ function et(e) {
                                       children: n,
                                   }),
                     });
-                    r = (0, i.jsx)(B.LE, {
+                    r = (0, i.jsx)(H.LE, {
                         content: e,
                         channelId: U.id,
                     });
@@ -409,7 +409,7 @@ function et(e) {
             }
         } else
             eO.includes(q.E.NEW_MESSAGES) &&
-                (r = (0, i.jsx)(B.LE, {
+                (r = (0, i.jsx)(H.LE, {
                     content: J.intl.format(e, {
                         count: en,
                         timestamp: l,
@@ -422,13 +422,13 @@ function et(e) {
             (0, s.Lp)(U) &&
             eC &&
             eO.includes(q.E.SUMMARIES) &&
-            (r = (0, i.jsx)(B.BO, {
+            (r = (0, i.jsx)(H.BO, {
                 channel: U,
                 scrollManager: eo,
             })),
         et.error)
     )
-        h = (0, i.jsx)(B.Rp, {
+        h = (0, i.jsx)(H.Rp, {
             loading: et.loadingMore,
             onClick: () => {
                 var e;
@@ -447,10 +447,10 @@ function et(e) {
         let { jumpReturnTargetId: e } = et;
         h =
             et.loadingMore && et.jumpedToPresent
-                ? (0, i.jsx)(B.DR, { className: ep })
+                ? (0, i.jsx)(H.DR, { className: ep })
                 : null != e
-                  ? (0, i.jsx)(B.DR, {
-                        type: B.A7.REPLY,
+                  ? (0, i.jsx)(H.DR, {
+                        type: H.A7.REPLY,
                         onClick: () => {
                             o.Z.jumpToMessage({
                                 channelId: U.id,
@@ -460,7 +460,7 @@ function et(e) {
                         },
                         className: ep,
                     })
-                  : (0, i.jsx)(B.DR, {
+                  : (0, i.jsx)(H.DR, {
                         onClick: () =>
                             (function (e) {
                                 o.Z.jumpToPresent(e.id, Y.AQB);

@@ -1,8 +1,8 @@
 n.d(t, { U: () => S }), n(388685), n(49124), n(415506);
 var a = n(54381),
-    l = n(473749),
-    r = n(663042),
-    i = n(442837),
+    r = n(473749),
+    i = n(663042),
+    l = n(442837),
     s = n(544891),
     o = n(199849),
     c = n(159691),
@@ -18,32 +18,32 @@ var a = n(54381),
     v = n(594174),
     j = n(246992),
     _ = n(474936);
-let y = l.forwardRef((e, t) => {
-    let [n, r] = l.useState(null),
-        [i, o] = l.useState(null),
-        [d, u] = l.useState(!1),
-        m = l.useCallback(async () => {
-            u(!0), o(null), r(null);
+let y = r.forwardRef((e, t) => {
+    let [n, i] = r.useState(null),
+        [l, o] = r.useState(null),
+        [d, u] = r.useState(!1),
+        m = r.useCallback(async () => {
+            u(!0), o(null), i(null);
             try {
                 let e = await s.tn.get({
                     url: "/users/@me/debug/warp/license",
                     rejectWithError: !0,
                 });
-                r(e.body);
-            } catch (l) {
+                i(e.body);
+            } catch (r) {
                 var e, t;
                 let n =
-                        (null == l || null == (e = l.body) ? void 0 : e.message) ||
-                        (null == l ? void 0 : l.message) ||
+                        (null == r || null == (e = r.body) ? void 0 : e.message) ||
+                        (null == r ? void 0 : r.message) ||
                         "Unknown error occurred",
-                    a = (null == l ? void 0 : l.status) || (null == l || null == (t = l.body) ? void 0 : t.code);
+                    a = (null == r ? void 0 : r.status) || (null == r || null == (t = r.body) ? void 0 : t.code);
                 o("Error ".concat(a ? "(".concat(a, ")") : "", ": ").concat(n));
             } finally {
                 u(!1);
             }
         }, []);
     return (
-        l.useImperativeHandle(t, () => ({ refresh: m })),
+        r.useImperativeHandle(t, () => ({ refresh: m })),
         (0, a.jsxs)("div", {
             style: {
                 display: "flex",
@@ -56,7 +56,7 @@ let y = l.forwardRef((e, t) => {
                     onClick: m,
                     disabled: d,
                 }),
-                null != i &&
+                null != l &&
                     (0, a.jsx)("div", {
                         style: {
                             padding: "12px",
@@ -66,7 +66,7 @@ let y = l.forwardRef((e, t) => {
                             fontFamily: "monospace",
                             fontSize: "12px",
                         },
-                        children: i,
+                        children: l,
                     }),
                 null != n &&
                     (0, a.jsx)("pre", {
@@ -94,35 +94,35 @@ let y = l.forwardRef((e, t) => {
 y.displayName = "DebugWarpLicenseInfo";
 let C = (e) => {
         let { onSuccess: t } = e,
-            [n, r] = l.useState(!1),
-            [i, o] = l.useState(0),
-            [d, u] = l.useState(null);
-        l.useEffect(() => {
-            if (i > 0) {
+            [n, i] = r.useState(!1),
+            [l, o] = r.useState(0),
+            [d, u] = r.useState(null);
+        r.useEffect(() => {
+            if (l > 0) {
                 let e = setTimeout(() => {
-                    o(i - 1), 1 === i && t();
+                    o(l - 1), 1 === l && t();
                 }, 1000);
                 return () => clearTimeout(e);
             }
-        }, [i, t]);
+        }, [l, t]);
         let m = async () => {
-            r(!0), u(null);
+            i(!0), u(null);
             try {
                 await s.tn.post({
                     url: "/users/@me/debug/warp/license/extension-task",
                     rejectWithError: !0,
                 }),
                     o(5);
-            } catch (l) {
+            } catch (r) {
                 var e, t;
                 let n =
-                        (null == l || null == (e = l.body) ? void 0 : e.message) ||
-                        (null == l ? void 0 : l.message) ||
+                        (null == r || null == (e = r.body) ? void 0 : e.message) ||
+                        (null == r ? void 0 : r.message) ||
                         "Unknown error occurred",
-                    a = (null == l ? void 0 : l.status) || (null == l || null == (t = l.body) ? void 0 : t.code);
+                    a = (null == r ? void 0 : r.status) || (null == r || null == (t = r.body) ? void 0 : t.code);
                 u("Error ".concat(a ? "(".concat(a, ")") : "", ": ").concat(n));
             } finally {
-                r(!1);
+                i(!1);
             }
         };
         return (0, a.jsxs)("div", {
@@ -135,11 +135,11 @@ let C = (e) => {
                 (0, a.jsx)(c.zxk, {
                     text: n
                         ? "Triggering Task..."
-                        : i > 0
-                          ? "Refreshing in ".concat(i, "s...")
+                        : l > 0
+                          ? "Refreshing in ".concat(l, "s...")
                           : "Trigger License Extension Task",
                     onClick: m,
-                    disabled: n || i > 0,
+                    disabled: n || l > 0,
                 }),
                 null != d &&
                     (0, a.jsx)("div", {
@@ -157,15 +157,15 @@ let C = (e) => {
         });
     },
     S = () => {
-        let [e, t] = l.useState(-1),
-            [n, s] = l.useState(-1),
-            [S, E] = l.useState(!1),
-            [O, N] = l.useState(5000),
-            [T, P] = l.useState(!1),
-            I = l.useRef(null),
-            w = (0, i.e7)([v.default], () => v.default.getCurrentUser()),
+        let [e, t] = r.useState(-1),
+            [n, s] = r.useState(-1),
+            [S, E] = r.useState(!1),
+            [O, T] = r.useState(5000),
+            [N, P] = r.useState(!1),
+            w = r.useRef(null),
+            I = (0, l.e7)([v.default], () => v.default.getCurrentUser()),
             k = (0, x.u)(),
-            [R] = l.useState(() =>
+            [R] = r.useState(() =>
                 (0, f.o8)({
                     finishSetup: async () => !0,
                     perkAvailableToUser: k,
@@ -173,21 +173,21 @@ let C = (e) => {
             ),
             {
                 installationStatus: A,
-                setInstallationStatus: Z,
-                connectionStatus: D,
+                setInstallationStatus: D,
+                connectionStatus: Z,
                 setConnectionStatus: L,
                 setConnect: M,
                 setDisconnect: U,
-                setInstall: F,
-                setIsWeb: B,
+                setInstall: B,
+                setIsWeb: F,
                 setIsSupportedPrivateBrowsingPerkPlatform: G,
-                isWeb: z,
-                isSupportedPrivateBrowsingPerkPlatform: V,
-                setGetWarpInstallationStatus: H,
-                perkAvailableToUser: W,
+                isWeb: V,
+                isSupportedPrivateBrowsingPerkPlatform: H,
+                setGetWarpInstallationStatus: W,
+                perkAvailableToUser: z,
                 setPerkAvailableToUser: K,
-            } = (0, r.o)(R),
-            q = l.useCallback(
+            } = (0, i.o)(R),
+            q = r.useCallback(
                 async () => (
                     L(p.Ij.INITIALIZING),
                     t(
@@ -199,21 +199,21 @@ let C = (e) => {
                 ),
                 [L, t],
             );
-        l.useEffect(() => {
+        r.useEffect(() => {
             M(q);
         }, [q, M]);
-        let Y = l.useCallback(async () => p._n.INSTALLING, []);
-        l.useEffect(() => {
+        let Q = r.useCallback(async () => p._n.INSTALLING, []);
+        r.useEffect(() => {
             K(k);
         }, [k, K]),
-            l.useEffect(() => {
-                H(Y);
-            }, [H, Y]);
-        let J = l.useCallback(async () => (clearTimeout(e), L(p.Ij.DISCONNECTED), !0), [e, L]),
-            X = l.useCallback(
+            r.useEffect(() => {
+                W(Q);
+            }, [W, Q]);
+        let Y = r.useCallback(async () => (clearTimeout(e), L(p.Ij.DISCONNECTED), !0), [e, L]),
+            X = r.useCallback(
                 () =>
                     new Promise((e, t) => {
-                        Z(p._n.INSTALLING),
+                        D(p._n.INSTALLING),
                             s(
                                 setTimeout(() => {
                                     if (S) return void t(Error("Installation failed"));
@@ -221,25 +221,25 @@ let C = (e) => {
                                 }, O),
                             );
                     }),
-                [S, O, Z, s],
+                [S, O, D, s],
             );
-        l.useEffect(() => {
-            z && A !== p._n.UNKNOWN && Z(p._n.UNKNOWN);
-        }, [z, Z, A]),
-            l.useEffect(() => {
-                U(J);
-            }, [J, U]),
-            l.useEffect(() => {
-                F(X);
-            }, [X, F]),
-            l.useEffect(() => {
+        r.useEffect(() => {
+            V && A !== p._n.UNKNOWN && D(p._n.UNKNOWN);
+        }, [V, D, A]),
+            r.useEffect(() => {
+                U(Y);
+            }, [Y, U]),
+            r.useEffect(() => {
+                B(X);
+            }, [X, B]),
+            r.useEffect(() => {
                 A !== p._n.INSTALLING && clearTimeout(n);
             }, [n, A]),
-            l.useEffect(() => {
-                if (A !== p._n.INSTALLED && D !== p.Ij.INITIALIZING) return void L(p.Ij.INITIALIZING);
-            }, [A, D, L]);
-        let { enabled: Q } = h.H.useConfig({ location: "private_browsing_perk_settings_page" });
-        return Q
+            r.useEffect(() => {
+                if (A !== p._n.INSTALLED && Z !== p.Ij.INITIALIZING) return void L(p.Ij.INITIALIZING);
+            }, [A, Z, L]);
+        let { enabled: J } = h.H.useConfig({ location: "private_browsing_perk_settings_page" });
+        return J
             ? (0, a.jsxs)("div", {
                   children: [
                       (0, a.jsx)(c.X6q, {
@@ -265,9 +265,9 @@ let C = (e) => {
                                                   style: { width: "45px" },
                                                   children: (0, a.jsx)(c.rsf, {
                                                       onChange: () => {
-                                                          W ? (0, m.C)(null, w) : (0, m.C)(_.F_, w);
+                                                          z ? (0, m.C)(null, I) : (0, m.C)(_.F_, I);
                                                       },
-                                                      checked: W,
+                                                      checked: z,
                                                   }),
                                               }),
                                           ],
@@ -281,8 +281,8 @@ let C = (e) => {
                                               (0, a.jsx)("div", {
                                                   style: { width: "45px" },
                                                   children: (0, a.jsx)(c.rsf, {
-                                                      onChange: () => B(!z),
-                                                      checked: z,
+                                                      onChange: () => F(!V),
+                                                      checked: V,
                                                   }),
                                               }),
                                           ],
@@ -296,8 +296,8 @@ let C = (e) => {
                                               (0, a.jsx)("div", {
                                                   style: { width: "45px" },
                                                   children: (0, a.jsx)(c.rsf, {
-                                                      onChange: () => G(!V),
-                                                      checked: V,
+                                                      onChange: () => G(!H),
+                                                      checked: H,
                                                   }),
                                               }),
                                           ],
@@ -309,10 +309,10 @@ let C = (e) => {
                                                   children: "Installation Status",
                                               }),
                                               (0, a.jsx)(o.B6, {
-                                                  select: (e) => Z(e),
+                                                  select: (e) => D(e),
                                                   isSelected: (e) => e === A,
                                                   serialize: (e) => "".concat(e),
-                                                  disabled: z,
+                                                  disabled: V,
                                                   options: [
                                                       {
                                                           label: "Unknown",
@@ -364,7 +364,7 @@ let C = (e) => {
                                                   }),
                                                   (0, a.jsx)(o.B6, {
                                                       select: (e) => L(e),
-                                                      isSelected: (e) => e === D,
+                                                      isSelected: (e) => e === Z,
                                                       serialize: (e) => "".concat(e),
                                                       options: [
                                                           {
@@ -415,7 +415,7 @@ let C = (e) => {
                                                       children: "Install time",
                                                   }),
                                                   (0, a.jsx)(o.B6, {
-                                                      select: (e) => N(e),
+                                                      select: (e) => T(e),
                                                       isSelected: (e) => e === O,
                                                       serialize: (e) => "".concat(e),
                                                       options: [
@@ -476,7 +476,7 @@ let C = (e) => {
                                               P(!0);
                                           },
                                       }),
-                                      T &&
+                                      N &&
                                           (0, a.jsx)(u.default, {
                                               url: "https://www.discord.com",
                                               trustUrl: () => !1,
@@ -499,7 +499,7 @@ let C = (e) => {
                                       (0, a.jsx)(C, {
                                           onSuccess: () => {
                                               var e;
-                                              null == (e = I.current) || e.refresh();
+                                              null == (e = w.current) || e.refresh();
                                           },
                                       }),
                                   ],
@@ -510,7 +510,7 @@ let C = (e) => {
                                           variant: "heading-lg/medium",
                                           children: "Private Browsing Perk WARP License Info",
                                       }),
-                                      (0, a.jsx)(y, { ref: I }),
+                                      (0, a.jsx)(y, { ref: w }),
                                   ],
                               }),
                           ],

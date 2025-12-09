@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(481060),
-    i = n(493773),
+    r = n(473749),
+    i = n(481060),
+    l = n(493773),
     s = n(480916),
     o = n(17597),
     c = n(624138),
@@ -18,17 +18,17 @@ var a = n(54381),
     v = n(104940);
 let j = n(575703);
 function _(e) {
-    let { task: t, handleSubmit: n, disabled: r } = e,
-        [i, s] = l.useState(t),
-        o = l.useMemo(
+    let { task: t, handleSubmit: n, disabled: i } = e,
+        [l, s] = r.useState(t),
+        o = r.useMemo(
             () => ({
-                task: i,
+                task: l,
                 setTask: s,
             }),
-            [i, s],
+            [l, s],
         );
     return (
-        l.useEffect(() => {
+        r.useEffect(() => {
             s(t);
         }, [t]),
         (0, a.jsxs)(u.y.Provider, {
@@ -37,7 +37,7 @@ function _(e) {
                 (0, a.jsx)(x.Z, {}),
                 (0, a.jsx)(h.Z, {
                     onSubmit: n,
-                    disabled: r,
+                    disabled: i,
                 }),
             ],
         })
@@ -45,11 +45,11 @@ function _(e) {
 }
 let y = function (e) {
     let { onClose: t } = e,
-        [n, u] = l.useState(null),
-        [h, x] = l.useState(!0),
-        [y, C] = l.useState(null),
-        [S, E] = l.useState(!1),
-        O = l.useCallback(async () => {
+        [n, u] = r.useState(null),
+        [h, x] = r.useState(!0),
+        [y, C] = r.useState(null),
+        [S, E] = r.useState(!1),
+        O = r.useCallback(async () => {
             x(!0), C(null);
             try {
                 var e;
@@ -79,7 +79,7 @@ let y = function (e) {
                 x(!1);
             }
         }, [t]),
-        N = l.useCallback(
+        T = r.useCallback(
             async (e) => {
                 if (null !== n) {
                     E(!0);
@@ -99,10 +99,10 @@ let y = function (e) {
             },
             [n, O],
         );
-    (0, i.ZP)(() => {
+    (0, l.ZP)(() => {
         O();
     });
-    let T = l.useMemo(() => (null == n ? void 0 : n.task_type) === m.UA.AGE_VERIFICATION, [n]);
+    let N = r.useMemo(() => (null == n ? void 0 : n.task_type) === m.UA.AGE_VERIFICATION, [n]);
     return (0, a.jsxs)("div", {
         className: v.background,
         children: [
@@ -111,56 +111,56 @@ let y = function (e) {
                 src: j,
                 alt: "",
             }),
-            T
+            N
                 ? (0, a.jsx)(o.default, {
-                      transitionState: r.Dvm.ENTERED,
+                      transitionState: i.Dvm.ENTERED,
                       entryPoint: s.cU.SAFETY_FLOWS,
                       onClose: f.dG,
                       onComplete: async () => {
-                          await N({ type: m.rY.Empty });
+                          await T({ type: m.rY.Empty });
                       },
                       dismissable: !1,
                   })
                 : (0, a.jsx)("div", {
                       className: v.safetyFlow,
                       children: h
-                          ? (0, a.jsx)(r.$jN, { type: r.$jN.Type.SPINNING_CIRCLE })
+                          ? (0, a.jsx)(i.$jN, { type: i.$jN.Type.SPINNING_CIRCLE })
                           : (0, a.jsx)("div", {
                                 className: v.container,
-                                children: (0, a.jsxs)(r.Kqy, {
+                                children: (0, a.jsxs)(i.Kqy, {
                                     direction: "horizontal",
                                     justify: "start",
                                     className: v.body,
                                     children: [
                                         null !== y &&
-                                            (0, a.jsxs)(r.Kqy, {
+                                            (0, a.jsxs)(i.Kqy, {
                                                 direction: "vertical",
                                                 justify: "space-between",
                                                 align: "center",
                                                 className: v.interimBody,
                                                 padding: 16,
                                                 children: [
-                                                    (0, a.jsxs)(r.Kqy, {
+                                                    (0, a.jsxs)(i.Kqy, {
                                                         direction: "vertical",
                                                         gap: 4,
                                                         children: [
-                                                            (0, a.jsx)(r.Heading, {
+                                                            (0, a.jsx)(i.Heading, {
                                                                 variant: "heading-xl/semibold",
                                                                 children: b.intl.string(b.t.c6kn6F),
                                                             }),
-                                                            (0, a.jsx)(r.Text, {
+                                                            (0, a.jsx)(i.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-muted",
                                                                 children: b.intl.string(b.t.ZUEGFn),
                                                             }),
                                                         ],
                                                     }),
-                                                    (0, a.jsxs)(r.Kqy, {
+                                                    (0, a.jsxs)(i.Kqy, {
                                                         direction: "horizontal",
                                                         justify: "center",
                                                         align: "center",
                                                         children: [
-                                                            (0, a.jsx)(r.Button, {
+                                                            (0, a.jsx)(i.Button, {
                                                                 fullWidth: !0,
                                                                 variant: "secondary",
                                                                 text: b.intl.string(b.t["2jxGer"]),
@@ -168,7 +168,7 @@ let y = function (e) {
                                                                     (0, p.R)("safety_flows_modal");
                                                                 },
                                                             }),
-                                                            (0, a.jsx)(r.Button, {
+                                                            (0, a.jsx)(i.Button, {
                                                                 fullWidth: !0,
                                                                 text: b.intl.string(b.t["7NqTJn"]),
                                                                 onClick: () => {
@@ -183,7 +183,7 @@ let y = function (e) {
                                             null != n &&
                                             (0, a.jsx)(_, {
                                                 task: n,
-                                                handleSubmit: N,
+                                                handleSubmit: T,
                                                 disabled: S,
                                             }),
                                     ],

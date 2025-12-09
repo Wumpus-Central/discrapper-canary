@@ -12,7 +12,7 @@ var i = n(54381),
     h = n(960296),
     f = n(430864);
 function m(e) {
-    let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: C, popoutText: y, animation: v } = e;
+    let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: C, popoutText: y, animation: _ } = e;
     r.useEffect(() => {
         u.default.track(
             d.rMx.OPEN_POPOUT,
@@ -43,7 +43,7 @@ function m(e) {
             })({ type: C }, (0, s.v_)(b)),
         );
     }, [C, b]);
-    let _ = r.useCallback(() => {
+    let v = r.useCallback(() => {
             null == m || m(), t();
         }, [m, t]),
         O = r.useCallback(() => {
@@ -56,11 +56,11 @@ function m(e) {
                 t = c.Z.theme,
                 i = !1;
             return (
-                null != v &&
+                null != _ &&
                     (async () => {
                         let [{ default: r }, l] = await Promise.all([
                             Promise.resolve().then(n.t.bind(n, 500923, 23)),
-                            (0, a.wj)(t) ? v.dark() : v.light(),
+                            (0, a.wj)(t) ? _.dark() : _.light(),
                         ]);
                         i ||
                             null == x.current ||
@@ -76,17 +76,17 @@ function m(e) {
                     (i = !0), null != e && (e.destroy(), (e = void 0));
                 }
             );
-        }, [v]),
+        }, [_]),
         (0, i.jsx)(o.VqE, {
             "aria-labelledby": "content-warning-popout-label",
             children: (0, i.jsxs)("form", {
                 className: h.contentWarningPopout,
-                onSubmit: _,
+                onSubmit: v,
                 children: [
                     (0, i.jsxs)("div", {
                         className: h.body,
                         children: [
-                            null != v &&
+                            null != _ &&
                                 (0, i.jsx)("div", {
                                     className: h.animation,
                                     ref: x,
@@ -132,7 +132,7 @@ function m(e) {
                                                         className: h.button,
                                                         children: (0, i.jsx)(o.Button, {
                                                             variant: "primary",
-                                                            onClick: _,
+                                                            onClick: v,
                                                             text: p.intl.string(p.t.KJnHq3),
                                                             autoFocus: !0,
                                                         }),

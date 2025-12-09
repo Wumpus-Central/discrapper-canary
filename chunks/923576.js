@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(442837),
-    i = n(544891),
+    r = n(473749),
+    i = n(442837),
+    l = n(544891),
     s = n(199849),
     o = n(355467),
     c = n(232567),
@@ -53,12 +53,12 @@ let g = [
 ];
 function b() {
     var e, t;
-    let [n, b] = l.useState(!1),
-        v = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
+    let [n, b] = r.useState(!1),
+        v = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         j = (0, d.kG)(),
-        _ = (0, r.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
+        _ = (0, i.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
         y = null != j && null != (t = null == (e = f.vK[j]) ? void 0 : e.tenureReqNumMonths) ? t : 0,
-        C = l.useCallback(
+        C = r.useCallback(
             async (e) => {
                 let t = new Date();
                 e > 0 ? t.setMonth(t.getMonth() - e) : t.setDate(t.getDate() - 7), t.setDate(t.getDate() - 2);
@@ -68,7 +68,7 @@ function b() {
                     premium_streak_started_at: p.default.fromTimestamp(t.getTime()),
                 };
                 b(!0),
-                    await i.tn.patch({
+                    await l.tn.patch({
                         url: "/debug/subscriptions/".concat(_.id),
                         body: n,
                         rejectWithError: !1,

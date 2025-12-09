@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(669079),
     P = n(987209),
     R = n(563132),
-    w = n(45572),
-    D = n(435020),
+    D = n(45572),
+    w = n(435020),
     x = n(119226),
     L = n(982204),
     j = n(981631),
@@ -87,8 +87,8 @@ function G(e) {
         ]),
         ef = (0, c.e7)([v.Z], () => v.Z.enabled),
         ep = s.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback),
-        e_ = Z === w.A.PURCHASING || Z === w.A.COMPLETED,
-        em = (0, D.m)(B, F),
+        e_ = Z === D.A.PURCHASING || Z === D.A.COMPLETED,
+        em = (0, w.m)(B, F),
         eh = null != em ? em.type : null;
     i.useEffect(() => {
         ea &&

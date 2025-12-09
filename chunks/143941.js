@@ -1,6 +1,6 @@
 n.d(t, {
     a: () => R,
-    s: () => w,
+    s: () => D,
 }),
     n(388685);
 var r = n(54381),
@@ -123,7 +123,7 @@ let R = (e) => {
         let e = I.intl.string(I.t["50TX9k"]);
         return (
             (0, y.x6)(f) ? (e = I.intl.string(I.t.UfDp3L)) : (0, v.r1)(f) && !g && (e = I.intl.string(I.t.KsFBMs)),
-            (0, r.jsx)(w, {
+            (0, r.jsx)(D, {
                 skuId: p,
                 className: o()(T.disabledButton, a),
                 iconSize: n,
@@ -134,7 +134,7 @@ let R = (e) => {
             })
         );
     }
-    return (0, r.jsx)(w, {
+    return (0, r.jsx)(D, {
         skuId: p,
         className: o()(l && T.withHover, a),
         iconSize: n,
@@ -142,7 +142,7 @@ let R = (e) => {
         nuxGraphic: E,
     });
 };
-function w(e) {
+function D(e) {
     let {
             skuId: t,
             className: a,
@@ -155,9 +155,9 @@ function w(e) {
         } = e,
         [A, N] = (0, p.US)([l.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
         R = A === l.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
-        { analyticsLocations: w } = (0, d.ZP)(),
-        D = b.default.getCurrentUser(),
-        x = null != D ? _.Z.getFirstWishlistId(D.id) : null,
+        { analyticsLocations: D } = (0, d.ZP)(),
+        w = b.default.getCurrentUser(),
+        x = null != w ? _.Z.getFirstWishlistId(w.id) : null,
         L = (0, E.ny)(x, t),
         j = i.useRef(null),
         [M, k] = i.useState(null);
@@ -173,7 +173,7 @@ function w(e) {
                 if ((e.stopPropagation(), null == v || v(), U && null != x)) {
                     k(!1);
                     try {
-                        await g.Z.removeSkuFromWishlist(x, t, w), k(null);
+                        await g.Z.removeSkuFromWishlist(x, t, D), k(null);
                     } catch (e) {
                         k(null),
                             (0, u.showToast)((0, u.createToast)(I.intl.string(I.t.F8FvUy), u.ToastType.FAILURE)),
@@ -182,7 +182,7 @@ function w(e) {
                 } else {
                     k(!0);
                     try {
-                        await g.Z.addSkuToWishlist(t, w),
+                        await g.Z.addSkuToWishlist(t, D),
                             k(null),
                             R &&
                                 null != O &&
@@ -198,10 +198,10 @@ function w(e) {
                     }
                 }
             },
-            [U, x, t, w, R, O, N, v],
+            [U, x, t, D, R, O, N, v],
         ),
         V = U ? I.intl.string(I.t.yr9TTf) : I.intl.string(I.t["8DkMEQ"]);
-    return (h || U) && null != D
+    return (h || U) && null != w
         ? m
             ? (0, r.jsx)(c.u, {
                   text: null != y ? y : V,

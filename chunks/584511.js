@@ -132,16 +132,16 @@ function _(e) {
             },
             I,
         ),
-        w = (0, s.dcp)(n),
-        D = f(
+        D = (0, s.dcp)(n),
+        w = f(
             {
-                height: w,
-                width: w,
+                height: D,
+                width: D,
             },
             O,
         );
     return (0, r.jsx)("div", {
-        style: D,
+        style: w,
         onContextMenu: S,
         className: R,
         children: P(),

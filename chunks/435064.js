@@ -76,8 +76,8 @@ let y = "default",
     N = null,
     P = [],
     R = null,
-    w = {},
-    D = new Map(),
+    D = {},
+    w = new Map(),
     x = {
         clipsEnabled: !1,
         storageLocation: y,
@@ -158,8 +158,8 @@ function G(e) {
         var i;
         let e = Date.now();
         (R = null != R ? R : e),
-            (w[n] = [
-                ...(null != (i = w[n]) ? i : []),
+            (D[n] = [
+                ...(null != (i = D[n]) ? i : []),
                 {
                     timestamp: e,
                     thumbnail: r,
@@ -169,7 +169,7 @@ function G(e) {
 }
 function Z(e) {
     let { streamKey: t, timestamp: n } = e;
-    R === n && (R = null), null == n ? (w[t] = []) : (w[t] = w[t].filter((e) => e.timestamp !== n));
+    R === n && (R = null), null == n ? (D[t] = []) : (D[t] = D[t].filter((e) => e.timestamp !== n));
 }
 function B() {
     I = Math.max(I - 1, 0);
@@ -250,7 +250,7 @@ function q(e) {
 }
 function Q(e) {
     let { streamKey: t } = e;
-    if (((R = null), (w[t] = []), null == A || (0, c.my)(t).ownerId !== u.default.getId())) return !1;
+    if (((R = null), (D[t] = []), null == A || (0, c.my)(t).ownerId !== u.default.getId())) return !1;
     A = 0 === A.newClipIds.length ? null : b(g({}, A), { ended: !0 });
 }
 function X(e) {
@@ -308,8 +308,8 @@ function ea(e, t, n) {
             a = t.substring(n),
             o = JSON.parse(a);
         if (null == o.id) return !1;
-        let s = D.get(e);
-        return null == s && ((s = new Set()), D.set(e, s)), s.add(o.id), !0;
+        let s = w.get(e);
+        return null == s && ((s = new Set()), w.set(e, s)), s.add(o.id), !0;
     } catch (e) {
         return !1;
     }
@@ -353,10 +353,10 @@ class el extends (r = a.ZP.DeviceSettingsStore) {
     }
     getStreamClipAnimations(e) {
         var t;
-        return null != (t = w[e]) ? t : O;
+        return null != (t = D[e]) ? t : O;
     }
     hasAnyClipAnimations() {
-        return Object.values(w).some((e) => e.length > 0);
+        return Object.values(D).some((e) => e.length > 0);
     }
     getHardwareClassification() {
         return L.hardwareClassification;
@@ -416,7 +416,7 @@ class el extends (r = a.ZP.DeviceSettingsStore) {
     }
     wasClipSharedInChannel(e, t) {
         var n;
-        let r = D.get(t);
+        let r = w.get(t);
         return null != (n = null == r ? void 0 : r.has(e)) && n;
     }
 }

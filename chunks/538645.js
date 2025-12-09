@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685), n(953529), n(35282), n(853839), n(570086), n(479048);
 var a = n(54381),
-    l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(772848),
     o = n(442837),
     c = n(481060),
@@ -16,20 +16,20 @@ var a = n(54381),
     g = n(558270);
 let b = "Make sure you're only uploading text files!",
     v = (e) => {
-        var t, n, l;
-        let { effect: r, onClick: i } = e,
+        var t, n, r;
+        let { effect: i, onClick: l } = e,
             { deleteConfig: s } = (0, x.n6)();
         return (0, a.jsxs)(c.P3F, {
             className: g.previewCard,
             onClick: () => {
-                i(r);
+                l(i);
             },
             children: [
                 (0, a.jsx)("div", {
                     className: g.previewCardImage,
                     style: {
                         backgroundImage: "url(".concat(
-                            null == (l = r.config) || null == (n = l.effects) || null == (t = n[0]) ? void 0 : t.base64,
+                            null == (r = i.config) || null == (n = r.effects) || null == (t = n[0]) ? void 0 : t.base64,
                             ")",
                         ),
                     },
@@ -39,13 +39,13 @@ let b = "Make sure you're only uploading text files!",
                     children: [
                         (0, a.jsx)(c.Text, {
                             variant: "text-md/bold",
-                            children: r.name,
+                            children: i.name,
                         }),
                         (0, a.jsx)(c.Button, {
                             variant: "critical-secondary",
                             text: "Delete",
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), s(r.skuId);
+                                e.preventDefault(), e.stopPropagation(), s(i.skuId);
                             },
                         }),
                     ],
@@ -55,35 +55,35 @@ let b = "Make sure you're only uploading text files!",
     };
 function j() {
     let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, x.n6)(),
-        [r, j] = l.useState(),
-        _ = l.useRef(null),
+        [i, j] = r.useState(),
+        _ = r.useRef(null),
         y = (0, o.Wu)([h.Z], () => h.Z.getAllProfileEffects());
     (0, m.Z)();
-    let [C, S] = l.useState(""),
-        E = l.useMemo(
+    let [C, S] = r.useState(""),
+        E = r.useMemo(
             () =>
                 "" === C
                     ? y
                     : y.filter((e) => {
-                          var t, n, a, l;
-                          let r = C.toLowerCase(),
-                              i = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
-                              s = null != (l = null == (n = e.config.description) ? void 0 : n.toLowerCase()) ? l : "";
-                          return i.includes(r) || s.includes(r);
+                          var t, n, a, r;
+                          let i = C.toLowerCase(),
+                              l = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
+                              s = null != (r = null == (n = e.config.description) ? void 0 : n.toLowerCase()) ? r : "";
+                          return l.includes(i) || s.includes(i);
                       }),
             [C, y],
         ),
-        O = l.useCallback(
+        O = r.useCallback(
             (e, n) => {
                 if (null == n || !e.type.startsWith("text/")) return (0, p.Eo)(b);
-                let [a, l] = n.split(",");
+                let [a, r] = n.split(",");
                 if (!a.includes("text/plain")) return (0, p.Eo)(b);
-                let r = JSON.parse(atob(l));
-                (r.skuId = (0, s.Z)()), t(r), (0, p.XA)("Profile Effect (maybe??) imported!");
+                let i = JSON.parse(atob(r));
+                (i.skuId = (0, s.Z)()), t(i), (0, p.XA)("Profile Effect (maybe??) imported!");
             },
             [t],
         ),
-        N = l.useCallback(
+        T = r.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
@@ -95,14 +95,14 @@ function j() {
     return (0, a.jsxs)("div", {
         className: g.root,
         children: [
-            null == r &&
+            null == i &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)("div", {
                             className: g.col,
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: i()(g.section, g.row),
+                                    className: l()(g.section, g.row),
                                     children: [
                                         (0, a.jsx)(c.Heading, {
                                             variant: "heading-xl/bold",
@@ -140,7 +140,7 @@ function j() {
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: i()(g.row, g.end, g.section),
+                            className: l()(g.row, g.end, g.section),
                             children: [
                                 (0, a.jsxs)("div", {
                                     className: g.uploadButton,
@@ -152,7 +152,7 @@ function j() {
                                         }),
                                         (0, a.jsx)(u.Z, {
                                             ref: _,
-                                            onChange: N,
+                                            onChange: T,
                                             multiple: !1,
                                         }),
                                     ],
@@ -219,7 +219,7 @@ function j() {
                         }),
                     ],
                 }),
-            null != r && (0, a.jsx)(f.Z, { effect: r }),
+            null != i && (0, a.jsx)(f.Z, { effect: i }),
         ],
     });
 }

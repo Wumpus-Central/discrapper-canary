@@ -2,7 +2,7 @@ n.d(t, {
     $W: () => ee,
     Ad: () => k,
     BH: () => P,
-    Cs: () => D,
+    Cs: () => w,
     G1: () => O,
     IC: () => q,
     OT: () => X,
@@ -156,7 +156,7 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
         var t;
         return (null == (t = C(e, m.tuJ.DEFAULT)) ? void 0 : t.amount) === 0;
     },
-    w = (e) =>
+    D = (e) =>
         e.reduce(
             (e, t) =>
                 null != t && t.type === i.Z.VARIANTS_GROUP && null != t.variants
@@ -172,9 +172,9 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
                     : (e.push(t), e),
             [],
         ),
-    D = (e, t) => {
+    w = (e, t) => {
         let n = (0, r.flatMap)([...e.values()], "products");
-        return (0, r.uniqBy)(t ? w(n) : n, "storeListingId");
+        return (0, r.uniqBy)(t ? D(n) : n, "storeListingId");
     },
     x = (e, t) => {
         if (t === i.Z.AVATAR_DECORATION) {
@@ -192,7 +192,7 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
         return [];
     },
     L = (e, t) => {
-        let n = D(e, !0);
+        let n = w(e, !0);
         if (t === i.Z.AVATAR_DECORATION) {
             let e = (0, r.flatMap)(n, "items").filter(c.M);
             return (0, r.uniqBy)(e, "skuId");

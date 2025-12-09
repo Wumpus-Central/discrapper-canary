@@ -1,16 +1,16 @@
 n.d(t, { Z: () => c });
 var a = n(54381),
-    l = n(442837),
-    r = n(696826),
-    i = n(720734),
+    r = n(442837),
+    i = n(696826),
+    l = n(720734),
     s = n(594174),
     o = n(51144);
 function c(e) {
     var t;
     let { nameplate: n } = e,
-        c = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
+        c = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
         d = null != (t = o.ZP.useName(c)) ? t : "";
-    return (0, a.jsx)(i.m, {
+    return (0, a.jsx)(l.m, {
         username: d,
         selfMute: !1,
         selfDeaf: !1,
@@ -19,7 +19,7 @@ function c(e) {
         suppress: !1,
         speaking: !1,
         streaming: !1,
-        status: r.Sk.ONLINE,
+        status: i.Sk.ONLINE,
         currentUser: c,
         activities: [],
         applicationStream: void 0,

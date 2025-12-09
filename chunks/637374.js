@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(82142),
     P = n(283595),
     R = n(594174),
-    w = n(55563),
-    D = n(199480),
+    D = n(55563),
+    w = n(199480),
     x = n(626135),
     L = n(669079),
     j = n(74538),
@@ -430,7 +430,7 @@ class q extends i.Component {
                 return (0, r.jsxs)("div", {
                     className: i,
                     children: [
-                        n && (0, r.jsx)(D.Z, { className: F.headerIcon }),
+                        n && (0, r.jsx)(w.Z, { className: F.headerIcon }),
                         null != e.giftStyle &&
                             (0, r.jsx)(O.Z, {
                                 defaultAnimationState: e.redeemed ? b.SR.LOOP : b.SR.IDLE,
@@ -450,7 +450,7 @@ let Q = (0, _.Z)((0, p.Z)(q)),
                 resolved: N.Z.getIsResolved(t),
             })),
             o = (0, c.e7)([R.default], () => (null != i && null != i.userId ? R.default.getUser(i.userId) : null)),
-            s = (0, c.e7)([w.Z], () => (null != i ? w.Z.get(i.skuId) : null)),
+            s = (0, c.e7)([D.Z], () => (null != i ? D.Z.get(i.skuId) : null)),
             l = (0, c.e7)([P.Z], () =>
                 null != s && (null == i ? void 0 : i.entitlementBranches) != null
                     ? L.z2(i.entitlementBranches, s, P.Z)

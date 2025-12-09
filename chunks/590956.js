@@ -161,8 +161,8 @@ let T = (e) => {
             [S, T] = i.useState(String(Date.now())),
             [A, N] = i.useState(!1),
             [P, R] = i.useState(!1),
-            w = i.useRef(null),
-            D = (e) =>
+            D = i.useRef(null),
+            w = (e) =>
                 (0, r.jsx)(u.Z, {
                     emojiName: t.name,
                     size: null != e ? e : t.jumboable ? "jumbo" : "default",
@@ -179,7 +179,7 @@ let T = (e) => {
                     I(
                         v(
                             {
-                                asset: D("jumbo"),
+                                asset: w("jumbo"),
                                 title: t.name,
                                 body: d ? b.intl.string(b.t["515vjG"]) : "",
                                 ariaHidden: !0,
@@ -202,7 +202,7 @@ let T = (e) => {
                             children: (0, r.jsx)(
                                 c.P3F,
                                 I(v({}, e), {
-                                    innerRef: w,
+                                    innerRef: D,
                                     onMouseEnter: () => {
                                         var t;
                                         null == e || null == (t = e.onMouseEnter) || t.call(e);
@@ -221,7 +221,7 @@ let T = (e) => {
                                         [y.emojiContainerClickable]: d,
                                         [y.emojiJumbo]: t.jumboable,
                                     }),
-                                    children: D(),
+                                    children: w(),
                                 }),
                             ),
                         },
@@ -248,7 +248,7 @@ let T = (e) => {
             position: "right",
             renderPopout: j,
             positionKey: S,
-            targetElementRef: w,
+            targetElementRef: D,
             children: L,
         });
     },

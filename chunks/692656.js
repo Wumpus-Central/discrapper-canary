@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(425986),
     P = n(216780),
     R = n(857192),
-    w = n(823379),
-    D = n(541099),
+    D = n(823379),
+    w = n(541099),
     x = n(827498),
     L = n(87005),
     j = n(219066),
@@ -174,7 +174,7 @@ function es(e) {
                     (e) => {
                         (0, v.yw)(K.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
                             query: e,
-                            source: D.Z.entrypoint(),
+                            source: w.Z.entrypoint(),
                             location: I.Vh.APP_LAUNCHER_HOME,
                         });
                     },
@@ -190,7 +190,7 @@ function es(e) {
         f = i.useCallback(() => {
             c(!0),
                 (0, v.yw)(K.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
-                    source: D.Z.entrypoint(),
+                    source: w.Z.entrypoint(),
                     location: I.Vh.APP_LAUNCHER_HOME,
                 });
         }, []),
@@ -524,7 +524,7 @@ function ep(e) {
                             installOnDemand: s(e.application),
                         };
                 })
-                .filter(w.lm);
+                .filter(D.lm);
             return (
                 (0, p.yE)(a.flags, l.b.APPENDS_REMAINING_ACTIVITIES) &&
                     e.push(
@@ -707,7 +707,7 @@ function eE(e) {
                       handleViewMore: () => {
                           (0, v.yw)(K.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                               section_name: o,
-                              source: D.Z.entrypoint(),
+                              source: w.Z.entrypoint(),
                               num: r.length,
                           }),
                               l({

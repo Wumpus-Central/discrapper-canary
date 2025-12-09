@@ -57,11 +57,11 @@ let _ = 256,
         -1, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0,
         1, 0, 0,
     ],
-    w = (e) => {
+    D = (e) => {
         let t = new Float32Array(N);
         e.bufferData(e.ARRAY_BUFFER, t, e.STATIC_DRAW);
     },
-    D = (e) => {
+    w = (e) => {
         e.bufferData(e.ARRAY_BUFFER, new Float32Array(P), e.STATIC_DRAW);
     },
     x = (e) => {
@@ -113,9 +113,9 @@ function L(e, t, n, r, s) {
                 i.vertexAttribPointer(h, 3, i.FLOAT, !1, 0, 0),
                 i.enableVertexAttribArray(h);
             let b = i.createBuffer();
-            i.bindBuffer(i.ARRAY_BUFFER, b), w(i);
+            i.bindBuffer(i.ARRAY_BUFFER, b), D(i);
             let y = i.createBuffer();
-            i.bindBuffer(i.ARRAY_BUFFER, y), D(i);
+            i.bindBuffer(i.ARRAY_BUFFER, y), w(i);
             let O = a.c$(60),
                 v = () => {
                     if (null == i || null == e) return;
@@ -158,8 +158,8 @@ function j(e) {
         [C, N] = i.useState(!1),
         P = i.useRef(0),
         R = i.useRef(0),
-        w = d.E[f.yD.EMOJIS],
-        D = (0, l.dQu)(w.primaryColor).hex(),
+        D = d.E[f.yD.EMOJIS],
+        w = (0, l.dQu)(D.primaryColor).hex(),
         x = i.useRef(E),
         j = i.useRef(b),
         M = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
@@ -178,14 +178,14 @@ function j(e) {
             ((e.fillStyle = "black"),
             e.fillRect(0, 0, o.width, o.height),
             e.drawImage(I.current, 0, 0, o.width, o.height),
-            (e.fillStyle = D),
+            (e.fillStyle = w),
             e.fillRect(0, 0, o.width, v),
             e.fillRect(0, 0, v, o.height),
             e.fillRect(0, o.height - v, o.width, v),
             e.fillRect(o.width - v, 0, v, o.height),
             A(t),
             N(!0));
-    }, [t, I, D, o]);
+    }, [t, I, w, o]);
     i.useEffect(() => {
         A(null),
             (I.current.crossOrigin = "anonymous"),

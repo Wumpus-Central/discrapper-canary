@@ -29,8 +29,8 @@ function T(e) {
         C = null != (t = (0, d.q)(l.id === b.bi.BUILT_IN ? null : l.id)) ? t : l,
         N = (0, _.ye)(C) ? A : E.Z,
         P = i.useRef(null),
-        [R, w] = i.useState(!1),
-        { iconURL: D, name: x } = i.useMemo(
+        [R, D] = i.useState(!1),
+        { iconURL: w, name: x } = i.useMemo(
             () =>
                 (0, _.sl)(C, {
                     fakeAppIconURL: v,
@@ -57,13 +57,13 @@ function T(e) {
                     application: C,
                     context: n,
                     name: x,
-                    iconURL: D,
+                    iconURL: w,
                     scrollerRef: P,
                     sectionName: c,
                 }),
-                null != D &&
+                null != w &&
                     (0, r.jsx)(m.Z, {
-                        src: D,
+                        src: w,
                         className: O.appIcon,
                     }),
                 (0, r.jsx)(o.Z, { size: 54 }),
@@ -79,7 +79,7 @@ function T(e) {
                           application: C,
                           sectionName: c,
                           installOnDemand: k,
-                          setHasCommands: w,
+                          setHasCommands: D,
                       })
                     : null,
             ],

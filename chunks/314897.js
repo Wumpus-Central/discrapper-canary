@@ -38,8 +38,8 @@ function N(e, t, n) {
 }
 let P = new g.Z("AuthenticationStore"),
     R = "fingerprint",
-    w = "analytics_installation",
-    D = "user_id_cache",
+    D = "analytics_installation",
+    w = "user_id_cache",
     x = null,
     L = null,
     j = null,
@@ -72,7 +72,7 @@ function ee(e) {
 function et() {
     var e;
     let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (((k = u.K.get(R)), (G = null != (e = u.K.get(w)) ? e : null), null != q)) return q;
+    if (((k = u.K.get(R)), (G = null != (e = u.K.get(D)) ? e : null), null != q)) return q;
     let n = null != k ? k : o.getToken();
     !(0, E.m1)() || (!t && null != n) || I.Z.isHandoffAvailable() || en({ withGuildExperiments: !0 });
 }
@@ -221,7 +221,7 @@ function eO(e) {
 function ev(e) {
     let { installation: t } = e;
     if (null != G && G.length > 0) return !1;
-    (G = t), b.Z.canUseInstallationId() && u.K.set(w, t);
+    (G = t), b.Z.canUseInstallationId() && u.K.set(D, t);
 }
 function eS(e) {
     let { token: t } = e;
@@ -238,7 +238,7 @@ function eI(e) {
         ea(a),
         (x = n.id),
         void 0 !== o && (V = o.authenticator_types),
-        u.K.set(D, n.id);
+        u.K.set(w, n.id);
 }
 function eT(e) {
     var t;
@@ -250,7 +250,7 @@ function eT(e) {
         null != i && ea(i),
         er(),
         (x = n.id),
-        u.K.set(D, n.id);
+        u.K.set(w, n.id);
 }
 function eA(e) {
     let { code: t } = e;
@@ -258,7 +258,7 @@ function eA(e) {
     let r = n(952265).hasModalOpen;
     if (4004 === t) {
         if (F || r(C.$$) || r(C.dG)) return void eP();
-        O.default.track(A.rMx.APP_USER_DEAUTHENTICATED, { user_id: u.K.get(D) }),
+        O.default.track(A.rMx.APP_USER_DEAUTHENTICATED, { user_id: u.K.get(w) }),
             eR(),
             setImmediate(() => (0, E.uL)(A.Z5c.DEFAULT_LOGGED_OUT));
     }
@@ -302,7 +302,7 @@ function eR(e) {
         T.Z.clearAll(),
         h.ZH(),
         S.Z.clearUser(),
-        u.K.remove(D),
+        u.K.remove(w),
         (x = null),
         (L = null),
         (B = (null == e ? void 0 : e.isSwitchingAccount) ? A.u34.LOGGING_IN : A.u34.NONE),
@@ -313,15 +313,15 @@ function eR(e) {
         (J = !1),
         e_();
 }
-function ew() {
+function eD() {
     B = A.u34.FORGOT_PASSWORD;
 }
-function eD() {
+function ew() {
     B = A.u34.NONE;
 }
 function ex(e) {
     let { user: t } = e;
-    (x = t.id), void 0 !== t.authenticator_types && (V = t.authenticator_types), u.K.set(D, t.id);
+    (x = t.id), void 0 !== t.authenticator_types && (V = t.authenticator_types), u.K.set(w, t.id);
 }
 function eL(e) {
     let { suspendedUserToken: t } = e;
@@ -332,7 +332,7 @@ function ej() {
 }
 class eM extends (a = l.ZP.Store) {
     initialize() {
-        (x = u.K.get(D)), null == o.getToken() && et(), this.addChangeListener(() => (0, m.u)(x));
+        (x = u.K.get(w)), null == o.getToken() && et(), this.addChangeListener(() => (0, m.u)(x));
     }
     getLoginStatus() {
         return B;
@@ -417,8 +417,8 @@ let ek = new eM(
         FINGERPRINT: eO,
         INSTALLATION_DEFINED: ev,
         REGISTER_SUCCESS: eS,
-        FORGOT_PASSWORD_REQUEST: ew,
-        FORGOT_PASSWORD_SENT: eD,
+        FORGOT_PASSWORD_REQUEST: eD,
+        FORGOT_PASSWORD_SENT: ew,
         UPDATE_TOKEN: eC,
         EXPERIMENTS_FETCH: en,
         CURRENT_USER_UPDATE: ex,

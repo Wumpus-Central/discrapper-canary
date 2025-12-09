@@ -20,7 +20,7 @@ function f(e) {
             },
             [m],
         ),
-        v = f ? c.r7p : c.vxU;
+        _ = f ? c.r7p : c.vxU;
     return (0, i.jsxs)(c.P3F, {
         onClick: l,
         onMouseEnter: () => {
@@ -75,7 +75,7 @@ function f(e) {
                                 {
                                     className: a()(p.centerAlign, p.favoriteIcon),
                                     onClick: y,
-                                    children: (0, i.jsx)(v, {
+                                    children: (0, i.jsx)(_, {
                                         className: p.closeIcon,
                                         color: f ? s.Z.colors.ICON_FEEDBACK_WARNING : "currentColor",
                                     }),

@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(984802),
     P = n(594174),
     R = n(358085),
-    w = n(210887),
-    D = n(740492),
+    D = n(210887),
+    w = n(740492),
     x = n(695346),
     L = n(313789),
     j = n(329013),
@@ -461,16 +461,16 @@ function eo() {
             o && (0, b.w)();
     });
     let c = (0, N.A6)(),
-        u = (0, s.cj)([w.Z, D.ZP, h.Z, P.default, E.Z], () => {
+        u = (0, s.cj)([D.Z, w.ZP, h.Z, P.default, E.Z], () => {
             var e, t;
             return {
-                theme: w.Z.theme,
+                theme: D.Z.theme,
                 useForcedColors: h.Z.useForcedColors,
-                useSystemTheme: D.ZP.useSystemTheme,
+                useSystemTheme: w.ZP.useSystemTheme,
                 fontSize: h.Z.fontSize,
                 zoom: h.Z.zoom,
                 messageGroupSpacing: h.Z.messageGroupSpacing,
-                displayCompactAvatars: D.ZP.displayCompactAvatars,
+                displayCompactAvatars: w.ZP.displayCompactAvatars,
                 isStaff: null != (t = null == (e = P.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
                 gradientPreset: E.Z.gradientPreset,
             };

@@ -70,7 +70,7 @@ function R(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function w(e, t) {
         e
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -105,7 +105,7 @@ function x(e, t) {
 let L = { keys: ["label"] };
 function j(e) {
     var { children: t, isCollapsible: n = !1, maxOptionsVisible: a = 5, isOpen: o, setIsOpen: l, options: c } = e,
-        u = D(e, ["children", "isCollapsible", "maxOptionsVisible", "isOpen", "setIsOpen", "options"]);
+        u = w(e, ["children", "isCollapsible", "maxOptionsVisible", "isOpen", "setIsOpen", "options"]);
     let {
             selectionMode: d,
             disabled: f,
@@ -122,7 +122,7 @@ function j(e) {
         I = i.useRef(null),
         [T, A] = i.useState(null),
         [C, N] = i.useState(!1),
-        [R, w] = i.useState(""),
+        [R, D] = i.useState(""),
         [x, j] = i.useState(""),
         {
             options: M,
@@ -134,7 +134,7 @@ function j(e) {
             renderOption: m,
         }),
         G = i.useCallback((e, t) => {
-            j(e), w(null != t ? t : e);
+            j(e), D(null != t ? t : e);
         }, []);
     i.useEffect(() => {
         U(R);
@@ -207,16 +207,16 @@ function j(e) {
 }
 function M(e) {
     var { ref: t } = e,
-        n = D(e, ["ref"]);
+        n = w(e, ["ref"]);
     let { fieldProps: a, props: o } = (0, c.X)(n),
         s = (0, h.dQu)(_.Z.modules.select.MAX_WIDTH),
         l = i.useMemo(() => ({ horizontalControlColumnWidth: "minmax(".concat(s, ", auto)") }), [s]);
     return (0, r.jsx)(
         c.g,
-        w(P({}, a), {
+        D(P({}, a), {
             "data-mana-component": "combobox",
             layoutConfig: l,
-            children: (0, r.jsx)(k, w(P({}, o), { ref: t })),
+            children: (0, r.jsx)(k, D(P({}, o), { ref: t })),
         }),
     );
 }
@@ -236,7 +236,7 @@ function k(e) {
             wrapTags: N,
             ref: R,
         } = e,
-        D = i.useRef(null),
+        w = i.useRef(null),
         x = i.useRef(null),
         L = i.useRef(null),
         j = i.useContext(u.z),
@@ -373,9 +373,9 @@ function k(e) {
                         Q("single" === U ? [r] : (0, S.cq)(U, et, r));
                         break;
                     case "Backspace":
-                        if ("multiple" === U && "" === er && et.length > 0 && null != D.current) {
+                        if ("multiple" === U && "" === er && et.length > 0 && null != w.current) {
                             var i;
-                            e.preventDefault(), e.stopPropagation(), null == (i = D.current.lastChild) || i.focus();
+                            e.preventDefault(), e.stopPropagation(), null == (i = w.current.lastChild) || i.focus();
                         }
                         break;
                     case "Escape":
@@ -408,7 +408,7 @@ function k(e) {
                     className: A.singleSelectOption,
                     children: (0, r.jsx)(
                         b.W,
-                        w(P({}, e), {
+                        D(P({}, e), {
                             onClick: em,
                             "aria-hidden": !0,
                             inInput: !0,
@@ -431,7 +431,7 @@ function k(e) {
                 );
             });
             return (0, r.jsx)(p.QSK, {
-                listRef: D,
+                listRef: w,
                 label: T.intl.string(I.default.VMNfsY),
                 items: e,
                 layout: "inline",

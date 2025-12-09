@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(539854);
+n.d(t, { Z: () => w }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -92,7 +92,7 @@ let C = new _.Z("ChoosePaymentSourceType"),
     },
     P = 1000,
     R = "40c266_1";
-class w extends i.PureComponent {
+class D extends i.PureComponent {
     componentDidMount() {
         var e;
         (0, u.GE)(),
@@ -255,7 +255,7 @@ class w extends i.PureComponent {
             });
     }
 }
-let D = s.ZP.connectStores([g.Z], () => ({
+let w = s.ZP.connectStores([g.Z], () => ({
     ipCountryCode: g.Z.ipCountryCode,
     ipCountryCodeHasError: g.Z.ipCountryCodeHasError,
-}))(w);
+}))(D);

@@ -87,7 +87,7 @@ let S = window.DiscordNative,
     N = null,
     P = null,
     R = null,
-    w = {};
+    D = {};
 null != S &&
     ((N = S.remoteApp
         .getVersion()
@@ -95,7 +95,7 @@ null != S &&
         .map((e) => parseInt(e))),
     (R = null == (r = (i = S.remoteApp).getModuleVersions) ? void 0 : r.call(i)),
     (P = null == (a = (o = S.remoteApp).getBuildNumber) ? void 0 : a.call(o)));
-let D = new Set([
+let w = new Set([
         "discord_erlpack",
         "discord_game_utils",
         "discord_rpc",
@@ -153,7 +153,7 @@ var H = (function (e) {
 function W(e) {
     var t, n, r, i, a, o, s, l, c;
     return {
-        id: w[null != (t = e.id) ? t : ""],
+        id: D[null != (t = e.id) ? t : ""],
         nativeProcessObserverId: parseInt(null != (n = e.id) ? n : "", 10),
         name: null != (r = e.gameName) ? r : e.name,
         origGameName: e.origGameName,
@@ -197,7 +197,7 @@ let q = {
         requireModule: (e) => S.nativeModules.requireModule(e),
         ensureModule: (e) =>
             m.isPlatformEmbedded
-                ? __OVERLAY__ && D.has(e)
+                ? __OVERLAY__ && w.has(e)
                     ? Promise.resolve()
                     : S.nativeModules.ensureModule(e)
                 : Promise.reject(Error("not embedded")),
@@ -244,14 +244,14 @@ let q = {
         },
         setObservedGamesCallback(e, t, n) {
             try {
-                w = {};
+                D = {};
                 let r = 0,
                     i = this.getDiscordUtils();
                 (t && null != i.setObservedGamesCallback2 ? i.setObservedGamesCallback2 : i.setObservedGamesCallback)(
                     e.map((e) => {
                         let t = ++r;
                         return (
-                            null != e.id && (w[t] = e.id),
+                            null != e.id && (D[t] = e.id),
                             v(y({}, e), {
                                 cmdline: e.cmdLine,
                                 id: t,

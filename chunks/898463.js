@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => x,
-    r: () => D,
+    r: () => w,
 }),
     n(388685),
     n(190126),
@@ -220,7 +220,7 @@ function R(e) {
         }),
     });
 }
-function w(e) {
+function D(e) {
     let { file: t, alt: n, spoiler: a, size: s = O.q.MEDIUM, onMouseEnter: l, onVideoLoadError: c } = e,
         [u, d] = i.useState(),
         f = i.useRef(null);
@@ -260,7 +260,7 @@ function w(e) {
         })
     );
 }
-function D(e) {
+function w(e) {
     var t;
     let { upload: n, size: a = O.q.MEDIUM, onMouseEnter: s } = e,
         [l, c] = i.useState(!1);
@@ -273,7 +273,7 @@ function D(e) {
               onMouseEnter: s,
           })
         : !l && n.isVideo && n.item.platform === f.ow.WEB
-          ? (0, r.jsx)(w, {
+          ? (0, r.jsx)(D, {
                 file: n.item.file,
                 size: a,
                 alt: n.description,
@@ -392,7 +392,7 @@ function x(e) {
         size: m,
         className: o()({ [S.attachmentItemSmall]: N }),
         children: [
-            (0, r.jsx)(D, {
+            (0, r.jsx)(w, {
                 upload: a,
                 size: m,
             }),

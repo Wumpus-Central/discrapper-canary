@@ -142,7 +142,7 @@ function P(e) {
     );
 }
 function R(e) {
-    var t, n, c, d, R, w, D, x, L, j, M, k;
+    var t, n, c, d, R, D, w, x, L, j, M, k;
     let { stats: U, onClose: G } = e,
         [Z, B] = i.useState(!1),
         F = i.useRef(null);
@@ -252,7 +252,7 @@ function R(e) {
                                 (0, r.jsx)("span", {
                                     className: l.statValue,
                                     children: m(
-                                        null != (D = U.codecInfo.isProgressive) ? D : null,
+                                        null != (w = U.codecInfo.isProgressive) ? w : null,
                                         null != (x = U.codecInfo.isFragmented) ? x : null,
                                     ),
                                 }),
@@ -339,7 +339,7 @@ function R(e) {
                                 }),
                             ],
                         }),
-                    (null == (w = U.codecInfo) ? void 0 : w.audioChannels) != null &&
+                    (null == (D = U.codecInfo) ? void 0 : D.audioChannels) != null &&
                         (0, r.jsxs)("div", {
                             className: l.statRow,
                             children: [

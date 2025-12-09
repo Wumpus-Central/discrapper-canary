@@ -134,7 +134,7 @@ function g(e) {
             ref: A,
         } = e,
         C = m(e),
-        { labelId: N, controlId: P, errorMessageId: R, describedById: w, helperTextId: D, descriptionId: x } = C,
+        { labelId: N, controlId: P, errorMessageId: R, describedById: D, helperTextId: w, descriptionId: x } = C,
         L = null == y ? void 0 : y.horizontalControlColumnWidth,
         j = "group" === g || "radiogroup" === g,
         M = j ? "span" : "label",
@@ -188,7 +188,7 @@ function g(e) {
             errorMessage: _,
             helperText: c,
             trailing: T,
-            helperTextId: D,
+            helperTextId: w,
             errorMessageId: R,
         });
     return (0, r.jsx)(d.z.Provider, {
@@ -200,7 +200,7 @@ function g(e) {
             "data-layout": b,
             style: null != L ? { "--custom-field-horizontal-control-width": L } : void 0,
             "data-disabled": a,
-            "aria-describedby": j ? w : void 0,
+            "aria-describedby": j ? D : void 0,
             disabled: j ? a : void 0,
             children: [
                 U,

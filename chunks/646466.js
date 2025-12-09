@@ -1,12 +1,12 @@
 n.d(t, {
-    L: () => T,
-    O: () => N,
+    L: () => N,
+    O: () => T,
 }),
     n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(199849),
-    i = n(481060),
+    r = n(473749),
+    i = n(199849),
+    l = n(481060),
     s = n(373071),
     o = n(637443),
     c = n(619899),
@@ -39,7 +39,7 @@ function h(e) {
     }
     return e;
 }
-let x = l.createContext({
+let x = r.createContext({
         setDropHandler: () => {},
     }),
     f = [
@@ -61,37 +61,37 @@ let x = l.createContext({
         value: null,
     },
     v = () => {
-        (0, i.nfh)(o.g)
-            ? (0, i.Mr3)(o.g)
-            : (0, i.ZDy)(
+        (0, l.nfh)(o.g)
+            ? (0, l.Mr3)(o.g)
+            : (0, l.ZDy)(
                   async () => {
                       let { ShopAssetsPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
                       return (t) => (0, a.jsx)(e, h({}, t));
                   },
                   {
                       modalKey: o.g,
-                      onCloseRequest: () => (0, i.Mr3)(o.g),
+                      onCloseRequest: () => (0, l.Mr3)(o.g),
                   },
               );
     },
     j = () => {
-        (0, i.nfh)(o.c)
-            ? (0, i.Mr3)(o.c)
-            : (0, i.ZDy)(
+        (0, l.nfh)(o.c)
+            ? (0, l.Mr3)(o.c)
+            : (0, l.ZDy)(
                   async () => {
                       let { ShopPFXPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
                       return (t) => (0, a.jsx)(e, h({}, t));
                   },
                   {
                       modalKey: o.c,
-                      onCloseRequest: () => (0, i.Mr3)(o.c),
+                      onCloseRequest: () => (0, l.Mr3)(o.c),
                   },
               );
     },
     _ = () => {
         let e = (0, s.lb)(),
             { previewProfileEffectSkuId: t, setPreviewProfileEffectSkuId: n } = (0, c.N9)(),
-            o = l.useMemo(
+            o = r.useMemo(
                 () => [
                     g,
                     ...e.map((e) => ({
@@ -104,24 +104,24 @@ let x = l.createContext({
         return (0, a.jsxs)("div", {
             className: p.previewSelector,
             children: [
-                (0, a.jsx)(i.LZC, { size: 16 }),
+                (0, a.jsx)(l.LZC, { size: 16 }),
                 (0, a.jsxs)("div", {
                     className: p.headingContainer,
                     children: [
-                        (0, a.jsx)(i.Heading, {
+                        (0, a.jsx)(l.Heading, {
                             variant: "heading-md/bold",
                             children: "Preview Profile Effect",
                         }),
-                        (0, a.jsx)(i.hU, {
+                        (0, a.jsx)(l.hU, {
                             variant: "icon-only",
                             size: "sm",
                             onClick: j,
-                            icon: i.idN,
+                            icon: l.idN,
                             "aria-label": "Open PFX preview instructions",
                         }),
                     ],
                 }),
-                (0, a.jsx)(r.y6, {
+                (0, a.jsx)(i.y6, {
                     options: o,
                     value: t,
                     maxVisibleItems: 30,
@@ -133,7 +133,7 @@ let x = l.createContext({
     y = () => {
         let { previewAvatarDecorationSkuId: e, setPreviewAvatarDecorationSkuId: t } = (0, c.N9)(),
             { avatarDecorationAssets: n } = (0, c.xq)(),
-            s = l.useMemo(
+            s = r.useMemo(
                 () => [
                     b,
                     ...n.map((e) => ({
@@ -148,12 +148,12 @@ let x = l.createContext({
             : (0, a.jsxs)("div", {
                   className: p.previewSelector,
                   children: [
-                      (0, a.jsx)(i.LZC, { size: 16 }),
-                      (0, a.jsx)(i.Heading, {
+                      (0, a.jsx)(l.LZC, { size: 16 }),
+                      (0, a.jsx)(l.Heading, {
                           variant: "heading-md/bold",
                           children: "Preview Avatar Decorations",
                       }),
-                      (0, a.jsx)(r.y6, {
+                      (0, a.jsx)(i.y6, {
                           options: s,
                           value: e,
                           maxVisibleItems: 30,
@@ -164,33 +164,33 @@ let x = l.createContext({
     },
     C = (e) => {
         let { clearAssets: t, clearIgnoredFiles: n } = e,
-            { collectionAssets: r } = (0, c.xq)(),
+            { collectionAssets: i } = (0, c.xq)(),
             { deleteCollectionAsset: s, clearAssets: o } = (0, c.N9)(),
-            d = l.useMemo(
+            d = r.useMemo(
                 () =>
-                    Object.values(r).map((e) => ({
+                    Object.values(i).map((e) => ({
                         label: e.name,
                         value: e.type,
                     })),
-                [r],
+                [i],
             ),
-            u = l.useCallback((e) => s(e), [s]),
-            m = l.useCallback(() => {
+            u = r.useCallback((e) => s(e), [s]),
+            m = r.useCallback(() => {
                 o(), t(), n();
             }, [o, t, n]);
         return 0 === d.length
             ? null
             : (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, a.jsx)(i.LZC, { size: 16 }),
+                      (0, a.jsx)(l.LZC, { size: 16 }),
                       (0, a.jsxs)("div", {
                           className: p.headingContainer,
                           children: [
-                              (0, a.jsx)(i.Heading, {
+                              (0, a.jsx)(l.Heading, {
                                   variant: "heading-lg/bold",
                                   children: "Uploaded Assets",
                               }),
-                              (0, a.jsx)(i.Button, {
+                              (0, a.jsx)(l.Button, {
                                   variant: "critical-primary",
                                   size: "sm",
                                   onClick: m,
@@ -205,14 +205,14 @@ let x = l.createContext({
                                   {
                                       className: p.uploadedFileListItem,
                                       children: [
-                                          (0, a.jsx)(i.hU, {
+                                          (0, a.jsx)(l.hU, {
                                               variant: "icon-only",
                                               size: "sm",
                                               onClick: () => u(e.value),
-                                              icon: i.Dio,
+                                              icon: l.Dio,
                                               "aria-label": "Remove asset",
                                           }),
-                                          (0, a.jsx)(i.Text, {
+                                          (0, a.jsx)(l.Text, {
                                               variant: "text-md/normal",
                                               children: e.label,
                                           }),
@@ -231,15 +231,15 @@ let x = l.createContext({
             ? null
             : (0, a.jsxs)(a.Fragment, {
                   children: [
-                      (0, a.jsx)(i.LZC, { size: 16 }),
+                      (0, a.jsx)(l.LZC, { size: 16 }),
                       (0, a.jsxs)("div", {
                           className: p.headingContainer,
                           children: [
-                              (0, a.jsx)(i.Heading, {
+                              (0, a.jsx)(l.Heading, {
                                   variant: "heading-lg/bold",
                                   children: "Ignored Files",
                               }),
-                              (0, a.jsx)(i.Button, {
+                              (0, a.jsx)(l.Button, {
                                   variant: "primary",
                                   size: "sm",
                                   onClick: n,
@@ -253,7 +253,7 @@ let x = l.createContext({
                                   "li",
                                   {
                                       className: p.ignoredFileListItem,
-                                      children: (0, a.jsx)(i.Text, {
+                                      children: (0, a.jsx)(l.Text, {
                                           variant: "text-md/normal",
                                           children: e,
                                       }),
@@ -266,20 +266,20 @@ let x = l.createContext({
               });
     },
     E = () => {
-        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: r, errors: s } = (0, m.g)(),
+        let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: i, errors: s } = (0, m.g)(),
             o = Object.entries(s),
-            c = Object.entries(r),
+            c = Object.entries(i),
             d = o.length > 0,
             u = c.length > 0,
-            { setDropHandler: h } = l.useContext(x),
-            f = l.useCallback(
+            { setDropHandler: h } = r.useContext(x),
+            f = r.useCallback(
                 (n) => {
                     t(), e(n);
                 },
                 [e, t],
             );
         return (
-            l.useEffect(() => {
+            r.useEffect(() => {
                 h(f);
             }, [f, h]),
             (0, a.jsxs)(a.Fragment, {
@@ -288,17 +288,17 @@ let x = l.createContext({
                         ? (0, a.jsxs)("div", {
                               className: p.validationSummary,
                               children: [
-                                  (0, a.jsx)(i.Text, {
+                                  (0, a.jsx)(l.Text, {
                                       variant: "text-md/normal",
                                       color: d ? "text-feedback-critical" : "text-default",
                                       children: "".concat(o.length, " errors"),
                                   }),
-                                  (0, a.jsx)(i.Text, {
+                                  (0, a.jsx)(l.Text, {
                                       variant: "text-md/normal",
                                       color: u ? "text-feedback-warning" : "text-default",
                                       children: "".concat(c.length, " warnings"),
                                   }),
-                                  (0, a.jsx)(i.Button, {
+                                  (0, a.jsx)(l.Button, {
                                       variant: "primary",
                                       size: "sm",
                                       onClick: t,
@@ -306,40 +306,40 @@ let x = l.createContext({
                                   }),
                               ],
                           })
-                        : (0, a.jsx)(i.Text, {
+                        : (0, a.jsx)(l.Text, {
                               variant: "text-md/normal",
                               children: "Drop asset folder to validate.",
                           }),
-                    (0, a.jsx)(i.LZC, { size: 16 }),
+                    (0, a.jsx)(l.LZC, { size: 16 }),
                     d &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, a.jsx)(i.Heading, {
+                                (0, a.jsx)(l.Heading, {
                                     variant: "heading-lg/bold",
                                     children: "Errors",
                                 }),
-                                (0, a.jsx)(i.LZC, { size: 8 }),
+                                (0, a.jsx)(l.LZC, { size: 8 }),
                                 (0, a.jsx)("ul", {
                                     className: p.validationIssuesList,
                                     children: o.map((e, t) => {
-                                        let [n, l] = e;
+                                        let [n, r] = e;
                                         return (0, a.jsxs)(
                                             "li",
                                             {
                                                 children: [
-                                                    (0, a.jsx)(i.Text, {
+                                                    (0, a.jsx)(l.Text, {
                                                         variant: "text-md/bold",
                                                         color: "text-feedback-critical",
                                                         children: n,
                                                     }),
-                                                    l.length > 0 &&
+                                                    r.length > 0 &&
                                                         (0, a.jsx)("ul", {
                                                             className: p.validationIssuesList,
-                                                            children: l.map((e, t) =>
+                                                            children: r.map((e, t) =>
                                                                 (0, a.jsx)(
                                                                     "li",
                                                                     {
-                                                                        children: (0, a.jsx)(i.Text, {
+                                                                        children: (0, a.jsx)(l.Text, {
                                                                             variant: "text-sm/normal",
                                                                             color: "text-feedback-critical",
                                                                             children: e,
@@ -360,32 +360,32 @@ let x = l.createContext({
                     u &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, a.jsx)(i.Heading, {
+                                (0, a.jsx)(l.Heading, {
                                     variant: "heading-lg/bold",
                                     children: "Warnings",
                                 }),
-                                (0, a.jsx)(i.LZC, { size: 8 }),
+                                (0, a.jsx)(l.LZC, { size: 8 }),
                                 (0, a.jsx)("ul", {
                                     className: p.validationIssuesList,
-                                    children: Object.entries(r).map((e, t) => {
-                                        let [n, l] = e;
+                                    children: Object.entries(i).map((e, t) => {
+                                        let [n, r] = e;
                                         return (0, a.jsxs)(
                                             "li",
                                             {
                                                 children: [
-                                                    (0, a.jsx)(i.Text, {
+                                                    (0, a.jsx)(l.Text, {
                                                         variant: "text-md/bold",
                                                         color: "text-feedback-warning",
                                                         children: n,
                                                     }),
-                                                    l.length > 0 &&
+                                                    r.length > 0 &&
                                                         (0, a.jsx)("ul", {
                                                             className: p.validationIssuesList,
-                                                            children: l.map((e, t) =>
+                                                            children: r.map((e, t) =>
                                                                 (0, a.jsx)(
                                                                     "li",
                                                                     {
-                                                                        children: (0, a.jsx)(i.Text, {
+                                                                        children: (0, a.jsx)(l.Text, {
                                                                             variant: "text-sm/normal",
                                                                             color: "text-feedback-warning",
                                                                             children: e,
@@ -409,40 +409,40 @@ let x = l.createContext({
     },
     O = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, c.N9)(),
-            { ignoredFilenames: r, clearAssets: s, clearIgnoredFilenames: o, processAndUpsertAssets: d } = (0, u.hm)(),
-            { setDropHandler: m } = l.useContext(x),
-            h = l.useCallback(
+            { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: o, processAndUpsertAssets: d } = (0, u.hm)(),
+            { setDropHandler: m } = r.useContext(x),
+            h = r.useCallback(
                 (e) => {
                     n(), d(e);
                 },
                 [d, n],
             );
         return (
-            l.useEffect(() => {
+            r.useEffect(() => {
                 m(h);
             }, [h, m]),
             (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsx)(i.Text, {
+                    (0, a.jsx)(l.Text, {
                         variant: "text-md/normal",
                         children: "Drop files in this panel to begin preview.",
                     }),
                     (0, a.jsxs)("div", {
                         className: p.previewToggleContainer,
                         children: [
-                            (0, a.jsx)(i.rsf, {
+                            (0, a.jsx)(l.rsf, {
                                 checked: e,
                                 onChange: (e) => t(e),
                             }),
-                            (0, a.jsx)(i.Text, {
+                            (0, a.jsx)(l.Text, {
                                 variant: "text-md/normal",
                                 children: "Enable Preview",
                             }),
-                            (0, a.jsx)(i.hU, {
+                            (0, a.jsx)(l.hU, {
                                 variant: "icon-only",
                                 size: "sm",
                                 onClick: v,
-                                icon: i.idN,
+                                icon: l.idN,
                                 "aria-label": "Open preview instructions",
                             }),
                         ],
@@ -454,19 +454,19 @@ let x = l.createContext({
                         clearIgnoredFiles: o,
                     }),
                     (0, a.jsx)(S, {
-                        ignoredFiles: r,
+                        ignoredFiles: i,
                         handleClearIgnoredFiles: o,
                     }),
                 ],
             })
         );
     },
-    N = () => {
-        let [e, t] = l.useState("preview");
+    T = () => {
+        let [e, t] = r.useState("preview");
         return (0, a.jsxs)("div", {
             className: p.container,
             children: [
-                (0, a.jsx)(i.sY7, {
+                (0, a.jsx)(l.sY7, {
                     options: f,
                     value: e,
                     onChange: (e) => {
@@ -476,19 +476,19 @@ let x = l.createContext({
                     className: p.panelModeControl,
                     optionClassName: p.panelModeControlOption,
                 }),
-                (0, a.jsx)(i.LZC, { size: 8 }),
+                (0, a.jsx)(l.LZC, { size: 8 }),
                 "preview" === e && (0, a.jsx)(O, {}),
                 "validate" === e && (0, a.jsx)(E, {}),
-                (0, a.jsx)(i.LZC, { size: 16 }),
+                (0, a.jsx)(l.LZC, { size: 16 }),
             ],
         });
     },
-    T = (e) => {
+    N = (e) => {
         let { children: t } = e,
-            [n, r] = l.useState(() => () => {}),
-            i = l.useMemo(() => ({ setDropHandler: (e) => r(() => e) }), []);
+            [n, i] = r.useState(() => () => {}),
+            l = r.useMemo(() => ({ setDropHandler: (e) => i(() => e) }), []);
         return (0, a.jsx)(x.Provider, {
-            value: i,
+            value: l,
             children: (0, a.jsx)(d.L, {
                 onDrop: n,
                 children: t,

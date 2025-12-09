@@ -32,8 +32,8 @@ var i = n(120356),
     N = n(622909),
     P = n(382791),
     R = n(987997),
-    w = n(45474),
-    D = n(474936),
+    D = n(45474),
+    w = n(474936),
     x = n(981631),
     L = n(362786),
     j = n(388032),
@@ -214,7 +214,7 @@ function K() {
             className: M.toolsButton,
             onClick: () =>
                 (0, m.Z)({
-                    subscriptionTier: D.Si.TIER_1,
+                    subscriptionTier: w.Si.TIER_1,
                     analyticsLocations: e,
                     analyticsObject: F,
                 }),
@@ -237,10 +237,10 @@ let z = function (e) {
         { analyticsLocations: z } = (0, f.ZP)(d.Z.SUBSCRIPTION_HEADER),
         q = (0, p.Z)({ forceFetch: !1 }),
         { fractionalState: Q } = q,
-        X = Q === D.a$.FP_SUB_PAUSED,
+        X = Q === w.a$.FP_SUB_PAUSED,
         { enabled: J } = (0, A.ZP)({ location: K }),
         $ = (0, C.a)(K);
-    (D.pj.has(i.planId) && x.JwP.ALL_PAUSEABLE.has(i.status) && !X) || (J = !1);
+    (w.pj.has(i.planId) && x.JwP.ALL_PAUSEABLE.has(i.status) && !X) || (J = !1);
     let ee = (0, N.N)(),
         et = null == ee || null == (t = ee.discount) ? void 0 : t.amount,
         en = (0, I.t7)(),
@@ -248,13 +248,13 @@ let z = function (e) {
         ei = (0, T.W)(),
         ea = () => {
             (i.status === x.O0b.ACTIVE || i.status === x.O0b.PAST_DUE || i.status === x.O0b.PAUSED) &&
-                el(w.R.PAUSE_SELECT);
+                el(D.R.PAUSE_SELECT);
         },
         eo = () => {
             (i.status === x.O0b.ACTIVE || i.status === x.O0b.PAST_DUE || i.status === x.O0b.PAUSE_PENDING || X) && el();
         },
         es = () => {
-            i.status === x.O0b.BILLING_RETRY && el(w.R.CONFIRM);
+            i.status === x.O0b.BILLING_RETRY && el(D.R.CONFIRM);
         },
         el = (e) => {
             (0, c.ZDy)(async () => {
@@ -337,10 +337,10 @@ let z = function (e) {
                 : u.v4(i, z);
         },
         ef = () => {
-            i.status === x.O0b.PAUSED && el(w.R.PAUSE_SELECT);
+            i.status === x.O0b.PAUSED && el(D.R.PAUSE_SELECT);
         },
         ep = () => {
-            el(w.R.WHAT_YOU_LOSE);
+            el(D.R.WHAT_YOU_LOSE);
         },
         e_ = (e) => (
             s()(null != o, "Expected currentInvoicePreview"),
@@ -516,9 +516,9 @@ let z = function (e) {
     let eg = O.ZP.getStatusFromInvoice(i, o),
         eE = O.ZP.getPremiumType(eh),
         eb = {
-            [M.tier0]: eE === D.PremiumTypes.TIER_0,
-            [M.tier1]: eE === D.PremiumTypes.TIER_1,
-            [M.tier2]: eE === D.PremiumTypes.TIER_2,
+            [M.tier0]: eE === w.PremiumTypes.TIER_0,
+            [M.tier1]: eE === w.PremiumTypes.TIER_1,
+            [M.tier2]: eE === w.PremiumTypes.TIER_2,
             [M.canceled]: eg === x.O0b.CANCELED,
             [M.pausePending]: eg === x.O0b.PAUSE_PENDING,
             [M.paused]: eg === x.O0b.PAUSED && !X,
@@ -526,7 +526,7 @@ let z = function (e) {
         },
         ey = null;
     switch (eE) {
-        case D.PremiumTypes.TIER_0:
+        case w.PremiumTypes.TIER_0:
             ey = (0, r.jsxs)("div", {
                 className: M.wordMark,
                 children: [
@@ -538,10 +538,10 @@ let z = function (e) {
                 ],
             });
             break;
-        case D.PremiumTypes.TIER_1:
+        case w.PremiumTypes.TIER_1:
             ey = (0, r.jsx)(W, {});
             break;
-        case D.PremiumTypes.TIER_2:
+        case w.PremiumTypes.TIER_2:
             ey = (0, r.jsx)(E.Z, {
                 className: M.planName,
                 "aria-label": j.intl.string(j.t.lpNrPu),

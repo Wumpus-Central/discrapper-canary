@@ -142,8 +142,8 @@ let A = (e) => {
                 isReducedMotion: N,
                 onClick: P,
                 badgeText: R,
-                size: w,
-                enablePremiumBrandRefreshDesign: D,
+                size: D,
+                enablePremiumBrandRefreshDesign: w,
             } = e,
             x = (0, m.rO)(),
             L = i.useRef(null),
@@ -162,17 +162,17 @@ let A = (e) => {
             G = () => {
                 null == L.current || N || ((j.current = L.current.currentTime), L.current.pause());
             },
-            Z = D ? y : b;
-        t = D
-            ? w === h.y$.LARGE
+            Z = w ? y : b;
+        t = w
+            ? D === h.y$.LARGE
                 ? "heading-xxl/bold"
                 : "heading-xl/bold"
-            : w === h.y$.SMALL
+            : D === h.y$.SMALL
               ? "heading-xl/extrabold"
               : "heading-xxl/extrabold";
         let B = () =>
                 (0, r.jsxs)("div", {
-                    className: o()(Z.textBox, Z["".concat(w)]),
+                    className: o()(Z.textBox, Z["".concat(D)]),
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
@@ -188,14 +188,14 @@ let A = (e) => {
                                 (0, r.jsx)(d.Heading, {
                                     variant: t,
                                     color: "header-primary",
-                                    className: o()(Z.header, !D && Z["".concat(w)]),
+                                    className: o()(Z.header, !w && Z["".concat(D)]),
                                     children: a,
                                 }),
                             ],
                         }),
                         (0, r.jsx)(d.Text, {
                             variant: "text-md/medium",
-                            color: D ? "text-strong" : "text-muted",
+                            color: w ? "text-strong" : "text-muted",
                             className: Z.description,
                             children: l,
                         }),
@@ -205,13 +205,13 @@ let A = (e) => {
                                 descriptionCta: c,
                                 onClick: P,
                                 debouncedOnClickAnalytics: k,
-                                enablePremiumBrandRefreshDesign: D,
+                                enablePremiumBrandRefreshDesign: w,
                             }),
                     ],
                 }),
             F = () =>
                 (0, r.jsx)("div", {
-                    className: o()(Z.boxArtContainer, Z["".concat(w)]),
+                    className: o()(Z.boxArtContainer, Z["".concat(D)]),
                     children: (0, r.jsx)(
                         p.Z,
                         {
@@ -240,13 +240,13 @@ let A = (e) => {
                           children: [(0, r.jsx)(F, {}), (0, r.jsx)(B, {})],
                       }),
             Y = {
-                className: o()(D ? y.backgroundColor : M, Z.boxContainer, Z["".concat(w)], D && y.gradientBackground),
+                className: o()(w ? y.backgroundColor : M, Z.boxContainer, Z["".concat(D)], w && y.gradientBackground),
                 onMouseEnter: U,
                 onFocus: U,
                 onBlur: G,
                 onMouseLeave: G,
             };
-        return D
+        return w
             ? (0, r.jsx)(
                   d.$1m,
                   I(v({}, Y), {

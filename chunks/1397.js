@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(881952),
     C = n(305325),
     y = n(246364),
-    v = n(983736),
-    _ = n(937111),
+    _ = n(983736),
+    v = n(937111),
     O = n(270801),
     x = n(652730),
     E = n(41776),
@@ -37,9 +37,9 @@ var i = n(54381),
     k = n(862679),
     U = n(981631),
     V = n(701488),
-    H = n(815660),
+    B = n(815660),
     F = n(388032),
-    B = n(97508);
+    H = n(97508);
 function G(e, t, n) {
     return (
         t in e
@@ -53,7 +53,7 @@ function G(e, t, n) {
         e
     );
 }
-function z(e) {
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -69,7 +69,7 @@ function z(e) {
     }
     return e;
 }
-function W(e, t) {
+function z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -119,8 +119,8 @@ class q extends r.PureComponent {
                 showMemberVerificationModal: g,
                 useReducedMotion: b,
                 isStaff: C,
-                guildJoinRequest: v,
-                showLinkedLobbyApplicationLoadingIndicator: _,
+                guildJoinRequest: _,
+                showLinkedLobbyApplicationLoadingIndicator: v,
                 requiredLinkedLobbyApplication: O,
             } = this.props,
             { shouldShowLurkerModeUpsellPopout: x, shouldShowLurkerModeSuccessPopout: E } = this.state,
@@ -143,7 +143,7 @@ class q extends r.PureComponent {
                 (j.buttonText = F.intl.string(F.t.fiNVin)),
                 (j.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount);
         else if (g)
-            switch (null == v ? void 0 : v.applicationStatus) {
+            switch (null == _ ? void 0 : _.applicationStatus) {
                 case y.wB.SUBMITTED:
                     (j.message = F.intl.string(F.t["5iLvSx"])),
                         (j.subtitle = F.intl.string(F.t.FdsK4h)),
@@ -161,7 +161,7 @@ class q extends r.PureComponent {
                         (j.buttonVariant = "primary"),
                         (j.onButtonClick = this.handleShowMemberVerification);
             }
-        else if (_ || null == O)
+        else if (v || null == O)
             r && !C
                 ? ((j.message = F.intl.string(F.t["2dThMM"])),
                   (j.buttonText = F.intl.string(F.t["50gfOv"])),
@@ -196,7 +196,7 @@ class q extends r.PureComponent {
             children: (e) =>
                 (0, i.jsx)(
                     k.Z,
-                    W(z({}, j), {
+                    z(W({}, j), {
                         children: (0, i.jsxs)("div", {
                             ref: this.textAreaContainerRef,
                             children: [
@@ -210,8 +210,8 @@ class q extends r.PureComponent {
                                           children: (e) =>
                                               (0, i.jsx)(
                                                   u.P3F,
-                                                  W(z({ innerRef: this.upsellTargetRef }, e), {
-                                                      className: B.clickableChannelTextArea,
+                                                  z(W({ innerRef: this.upsellTargetRef }, e), {
+                                                      className: H.clickableChannelTextArea,
                                                       onClick: this.handleTextAreaClick,
                                                       children: p,
                                                   }),
@@ -260,7 +260,7 @@ class q extends r.PureComponent {
                 null != e &&
                     (0, u.ZDy)(async () => {
                         let { default: t } = await n.e("3378").then(n.bind(n, 76075));
-                        return (n) => (0, i.jsx)(t, z({ guildId: e.id }, n));
+                        return (n) => (0, i.jsx)(t, W({ guildId: e.id }, n));
                     });
             }),
             G(this, "handleShowMemberVerification", () => {
@@ -274,9 +274,9 @@ class q extends r.PureComponent {
                 (0, u.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                        return (t) => (0, i.jsx)(e, z({ reason: P.L.GUILD_PHONE_REQUIRED }, t));
+                        return (t) => (0, i.jsx)(e, W({ reason: P.L.GUILD_PHONE_REQUIRED }, t));
                     },
-                    { modalKey: H.M },
+                    { modalKey: B.M },
                 );
             }),
             G(this, "handleResendVerification", () => {
@@ -309,7 +309,7 @@ class q extends r.PureComponent {
                 let { channel: e } = this.props;
                 (0, u.ZDy)(async () => {
                     let { default: t } = await n.e("96964").then(n.bind(n, 807007));
-                    return (n) => (0, i.jsx)(t, z({ channel: e }, n));
+                    return (n) => (0, i.jsx)(t, W({ channel: e }, n));
                 });
             }),
             G(this, "closeLurkerModeUpsellPopout", () => {
@@ -337,7 +337,7 @@ class q extends r.PureComponent {
                     renderModal: (t) =>
                         (0, i.jsx)(
                             O.Z,
-                            W(z({}, t), {
+                            z(W({}, t), {
                                 onAccept: r,
                                 guildName: e.name,
                             }),
@@ -362,12 +362,12 @@ function K(e) {
             var e, t;
             return null != h && null != (t = null == (e = N.ZP.getMember(a, h.id)) ? void 0 : e.isPending) && t;
         }),
-        b = !!(0, v.Dc)(s),
+        b = !!(0, _.Dc)(s),
         C = (0, o.e7)([x.Z], () => x.Z.shouldShowPopout(a)),
         O = (0, o.e7)([M.Z], () => M.Z.can(U.Plq.SEND_MESSAGES, r)),
-        j = (0, o.e7)([_.Z], () => _.Z.getRequest(a)),
+        j = (0, o.e7)([v.Z], () => v.Z.getRequest(a)),
         { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: P } = (0, D.Z)(r.linkedLobby),
-        I = W(z({}, c), {
+        I = z(W({}, c), {
             guild: s,
             isLurking: p,
             isFollowable: u,
@@ -387,7 +387,7 @@ function K(e) {
         });
     return (0, i.jsx)(
         q,
-        W(z({}, I), {
+        z(W({}, I), {
             channel: r,
             children: l,
         }),

@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => D }), n(804061), n(704826), n(35282);
+n.d(t, { ZP: () => w }), n(804061), n(704826), n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -41,7 +41,7 @@ let P = (e, t) =>
             })
             .replaceAll("*", "");
     },
-    w = (e) => {
+    D = (e) => {
         let { entry: t, channel: n, users: r, countOthers: i } = e,
             a = N.t["7j/5mg"];
         return N.intl
@@ -53,8 +53,8 @@ let P = (e, t) =>
             })
             .replaceAll("*", "");
     },
-    D = (e) => {
-        let { channel: t, entry: n, onReaction: E, onVoiceChannelPreview: D, disableActivityProfileLinks: x } = e,
+    w = (e) => {
+        let { channel: t, entry: n, onReaction: E, onVoiceChannelPreview: w, disableActivityProfileLinks: x } = e,
             { largeImage: L } = (0, b.rv)({
                 entry: n,
                 showCoverImage: !1,
@@ -71,7 +71,7 @@ let P = (e, t) =>
                     if ((null == L ? void 0 : L.src) == null || null == t || null == j) return;
                     let r =
                         Y > 0
-                            ? w({
+                            ? D({
                                   entry: n,
                                   channel: t,
                                   users: [V, H],
@@ -152,7 +152,7 @@ let P = (e, t) =>
                 (0, r.jsx)(T.St, {
                     children: (0, r.jsx)(T.WT, {
                         onReaction: E,
-                        onVoiceChannelPreview: D,
+                        onVoiceChannelPreview: w,
                         user: j,
                         channel: t,
                         generateReactionImage: K,

@@ -160,13 +160,13 @@ let C = (e) => {
             children: (0, m.XX)(t),
         });
     },
-    w = () =>
+    D = () =>
         (0, r.jsx)(l.Text, {
             variant: "text-xs/bold",
             className: v.newBadge,
             children: O.intl.string(O.t.QKMRC4),
         }),
-    D = (e) => {
+    w = (e) => {
         let { classification: t } = e,
             { id: a, description: s } = t,
             c = f.default.extractTimestamp(a),
@@ -219,7 +219,7 @@ let C = (e) => {
                 children: (0, r.jsxs)("div", {
                     className: v.descriptionContainer,
                     children: [
-                        u ? (0, r.jsx)(w, {}) : (0, r.jsx)(R, { timestamp: c }),
+                        u ? (0, r.jsx)(D, {}) : (0, r.jsx)(R, { timestamp: c }),
                         (0, r.jsx)(l.Heading, {
                             variant: "heading-lg/normal",
                             children: d,
@@ -268,7 +268,7 @@ let C = (e) => {
                                     width: "100%",
                                 },
                             }),
-                            m.length > 0 && m.map((e) => (0, r.jsx)(D, { classification: e }, e.id)),
+                            m.length > 0 && m.map((e) => (0, r.jsx)(w, { classification: e }, e.id)),
                             m.length < n.length &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [

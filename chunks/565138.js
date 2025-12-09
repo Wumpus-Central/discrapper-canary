@@ -165,7 +165,7 @@ class R extends a.PureComponent {
                 lossless: N,
                 iconSize: R,
             } = n,
-            w = T(n, [
+            D = T(n, [
                 "guild",
                 "className",
                 "showBadge",
@@ -185,7 +185,7 @@ class R extends a.PureComponent {
                 "lossless",
                 "iconSize",
             ]),
-            D = P[c],
+            w = P[c],
             x = null != m ? f.P3F : "div",
             L = (0, h.gM)(r);
         return (0, i.jsxs)(
@@ -201,12 +201,12 @@ class R extends a.PureComponent {
                         "aria-hidden": C,
                         style:
                             null == r.icon
-                                ? v({ fontSize: (null != (t = D[L.length]) ? t : D[D.length - 1]) * d }, u)
+                                ? v({ fontSize: (null != (t = w[L.length]) ? t : w[w.length - 1]) * d }, u)
                                 : u,
                         onClick: null != g || null == m ? void 0 : m,
                         tabIndex: S,
                     },
-                    w,
+                    D,
                 ),
                 {
                     children: [this.renderAcronym(), this.renderBadge()],
@@ -241,7 +241,7 @@ class R extends a.PureComponent {
             : this.renderTooltip();
     }
 }
-let w = c.ZP.connectStores([g.Z], (e) => {
+let D = c.ZP.connectStores([g.Z], (e) => {
     let { guild: t, animate: n, iconSrc: r, style: i, size: a, iconSize: o, lossless: s } = e;
     return (
         null == r &&
@@ -252,13 +252,13 @@ let w = c.ZP.connectStores([g.Z], (e) => {
         { style: I(v({}, i), { backgroundImage: (0, E.rv)(r) }) }
     );
 })((0, p.N)((e) => (0, i.jsx)(R, v({}, e))));
-class D extends (r = a.PureComponent) {
+class w extends (r = a.PureComponent) {
     render() {
-        return (0, i.jsx)(w, v({}, this.props));
+        return (0, i.jsx)(D, v({}, this.props));
     }
 }
-O(D, "Sizes", C),
-    O(D, "defaultProps", {
+O(w, "Sizes", C),
+    O(w, "defaultProps", {
         size: C.LARGE,
         textScale: 1,
         showBadge: !1,
@@ -268,4 +268,4 @@ O(D, "Sizes", C),
         badgeStrokeColor: u.Z.unsafe_rawColors.WHITE_500.css,
         animate: !1,
     });
-let x = D;
+let x = w;

@@ -55,9 +55,9 @@ function x(e) {
         A = T.applicationId,
         R = (0, c.q)(A),
         D = i.useRef(null),
-        { analyticsLocations: M } = (0, s.ZP)(a.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD),
-        L = (0, l.e7)([f.Z], () => null != x && f.Z.hasSentGift(N.skuId, x.id), [N.skuId, x]),
-        k = L || !0 === N.isOwned,
+        { analyticsLocations: L } = (0, s.ZP)(a.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD),
+        M = (0, l.e7)([f.Z], () => null != x && f.Z.hasSentGift(N.skuId, x.id), [N.skuId, x]),
+        k = M || !0 === N.isOwned,
         G = N.skuName,
         {
             buttonCTALabel: U,
@@ -88,7 +88,7 @@ function x(e) {
                                         applicationId: R.id,
                                         guildId: R.guildId,
                                         isStorefront: !1,
-                                        analyticsLocations: M,
+                                        analyticsLocations: L,
                                     }));
                       },
                   }
@@ -101,7 +101,7 @@ function x(e) {
                           : v.intl.string(v.t.ilhtIa),
                       buttonIcon: C ? void 0 : o.OgN,
                       handleCardClick: () => {
-                          L ||
+                          M ||
                               (0, b.P)(
                                   T,
                                   {
@@ -110,12 +110,12 @@ function x(e) {
                                       giftingOrigin: w,
                                   },
                                   {
-                                      analyticsLocations: [...M, a.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON],
+                                      analyticsLocations: [...L, a.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON],
                                   },
                               );
                       },
                   };
-        }, [Z, k, E, T, C, R, L, x, w, M]),
+        }, [Z, k, E, T, C, R, M, x, w, L]),
         V = i.useCallback(
             () =>
                 S

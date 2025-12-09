@@ -27,7 +27,7 @@ var r = n(54381),
     N = n(215023),
     P = n(231338),
     R = n(206051);
-function w(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function w(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -168,7 +168,7 @@ function Z(e) {
             confettiCanvas: C,
             environment: N,
             setConfettiCanvas: R,
-            customConfettiVisible: w,
+            customConfettiVisible: D,
             setCustomConfettiVisible: Z,
             customConfettiDisplayOptions: B,
             hideConfirmStepConfetti: F,
@@ -203,7 +203,7 @@ function Z(e) {
                     renderStep: (e) =>
                         (0, r.jsx)(
                             S.x,
-                            D(
+                            w(
                                 {
                                     confettiCanvas: C,
                                     analyticsLocations: T,
@@ -224,7 +224,7 @@ function Z(e) {
                 environment: N,
                 setConfettiCanvas: R,
                 customConfettiDisplayOptions: B,
-                customConfettiVisible: w,
+                customConfettiVisible: D,
             }),
             (0, r.jsx)(h.PaymentContextProvider, {
                 loadId: s,

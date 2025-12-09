@@ -78,7 +78,7 @@ function R(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -86,7 +86,7 @@ function R(e, t) {
     }
     return i;
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -95,7 +95,7 @@ function w(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let D = {
+let w = {
     [y.Q.STAFF]: {
         IconComponent: u.Ymb,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
@@ -225,7 +225,7 @@ function j(e) {
             disableBoostClick: A,
             "aria-label": N = !1,
         } = e;
-    let w =
+    let D =
             null !=
             (a = R(e, [
                 "guild",
@@ -274,13 +274,13 @@ function j(e) {
         premiumBackgroundColor: Y,
         premiumForegroundColor: W,
         sizeAdjustment: K,
-    } = D[k];
+    } = w[k];
     if (null == Z) return null;
     M.premium && ((t = W), (n = Y));
     let z = (0, c.wj)(j) ? V : H,
         q = (0, c.wj)(j) ? B : F;
     (t = null != t ? t : z), (n = null != n ? n : q);
-    let Q = Math.floor(0.75 * w) - (null != K ? K : 0);
+    let Q = Math.floor(0.75 * D) - (null != K ? K : 0);
     return (0, r.jsx)(u.aML, {
         color: l,
         position: d,
@@ -302,7 +302,7 @@ function j(e) {
                         allowFullSizedIcon: !0,
                         color: null != n ? n : I,
                         stroke: v,
-                        size: w,
+                        size: D,
                         children: (0, r.jsx)(Z, {
                             size: "custom",
                             width: Q,

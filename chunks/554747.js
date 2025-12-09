@@ -1,8 +1,8 @@
 n.d(t, {
-    Vm: () => _,
+    Vm: () => v,
     ZP: () => C,
     eF: () => E,
-    gM: () => v,
+    gM: () => _,
     k5: () => O,
     qY: () => y,
     sz: () => j,
@@ -45,7 +45,7 @@ function y(e) {
         return n.length > 0 ? n[0] : null;
     }, [e]);
 }
-function v(e) {
+function _(e) {
     let t = (0, r.Wu)([c.ZP], () => c.ZP.getGuildScheduledEventsForGuild(e), [e]);
     return i.useMemo(() => {
         let e = new Map();
@@ -58,7 +58,7 @@ function v(e) {
         );
     }, [t]);
 }
-function _(e) {
+function v(e) {
     var t;
     let n = (0, r.Wu)(
             [c.ZP, l.Z, o.Z],

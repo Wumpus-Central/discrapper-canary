@@ -87,8 +87,8 @@ function v(e) {
         }),
         [N, P] = i.useState(!1),
         R = u.Z.theme,
-        w = b({}, a);
-    function D(e) {
+        D = b({}, a);
+    function w(e) {
         var n;
         null == o || o(e.target),
             (T.current = e.target),
@@ -96,7 +96,7 @@ function v(e) {
             null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, C], null != t ? t : "");
     }
     return (
-        R === h.BRd.LIGHT ? (w.colorScheme = "light") : (w.colorScheme = "dark"),
+        R === h.BRd.LIGHT ? (D.colorScheme = "light") : (D.colorScheme = "dark"),
         i.useEffect(
             () => (
                 d.S.dispatch(h.CkL.IFRAME_MOUNT, { id: I }),
@@ -118,13 +118,13 @@ function v(e) {
                 }
             );
         }, []),
-        N && (w.pointerEvents = "none"),
+        N && (D.pointerEvents = "none"),
         null != t
             ? (0, r.jsx)("iframe", {
-                  style: w,
+                  style: D,
                   allow: "autoplay; encrypted-media",
                   referrerPolicy: v,
-                  onLoad: D,
+                  onLoad: w,
                   sandbox: (0, _.Z)({ allowPopups: y }),
                   className: n,
                   src: "".concat(t, "?").concat(new URLSearchParams(C)),

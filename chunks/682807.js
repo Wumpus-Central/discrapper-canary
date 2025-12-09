@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
-var i = n(120356),
-    a = n.n(i),
+var a = n(120356),
+    i = n.n(a),
     l = n(780384),
     s = n(481060),
     o = n(794295),
@@ -13,11 +13,11 @@ var i = n(120356),
     m = n(84933);
 function h(e) {
     var t, n;
-    let { application: i, className: l, innerClassName: o } = e,
-        c = null != (n = null == (t = i.directory_entry) ? void 0 : t.external_urls) ? n : [];
-    return null != i.terms_of_service_url || null != i.privacy_policy_url || c.length > 0
+    let { application: a, className: l, innerClassName: o } = e,
+        c = null != (n = null == (t = a.directory_entry) ? void 0 : t.external_urls) ? n : [];
+    return null != a.terms_of_service_url || null != a.privacy_policy_url || c.length > 0
         ? (0, r.jsxs)("div", {
-              className: a()(m.container, l),
+              className: i()(m.container, l),
               children: [
                   (0, r.jsx)(s.Heading, {
                       variant: "heading-sm/semibold",
@@ -25,7 +25,7 @@ function h(e) {
                       children: p.intl.string(p.t.l6DP2n),
                   }),
                   (0, r.jsxs)("div", {
-                      className: a()(m.list, o),
+                      className: i()(m.list, o),
                       children: [
                           c.map((e, t) =>
                               (0, r.jsx)(
@@ -37,17 +37,17 @@ function h(e) {
                                   t,
                               ),
                           ),
-                          null != i.terms_of_service_url
+                          null != a.terms_of_service_url
                               ? (0, r.jsx)(f, {
                                     icon: s.aAW,
-                                    url: i.terms_of_service_url,
+                                    url: a.terms_of_service_url,
                                     children: p.intl.string(p.t.s7STcY),
                                 })
                               : null,
-                          null != i.privacy_policy_url
+                          null != a.privacy_policy_url
                               ? (0, r.jsx)(f, {
                                     icon: s.mBM,
-                                    url: i.privacy_policy_url,
+                                    url: a.privacy_policy_url,
                                     children: p.intl.string(p.t.kH3JR5),
                                 })
                               : null,
@@ -59,9 +59,9 @@ function h(e) {
 }
 function g(e) {
     var t, n;
-    let { url: i, children: a } = e,
+    let { url: a, children: i } = e,
         o = (0, c.ZP)(),
-        u = d.Z.getByUrl(i),
+        u = d.Z.getByUrl(a),
         p = (0, l.wj)(o)
             ? null == u || null == (t = u.icon)
                 ? void 0
@@ -72,18 +72,18 @@ function g(e) {
     return (0, r.jsx)(f, {
         icon: void 0 === p ? s.xPt : void 0,
         imageSrc: p,
-        url: i,
-        children: a,
+        url: a,
+        children: i,
     });
 }
 function f(e) {
-    let { icon: t, imageSrc: n, iconColor: i, url: l, children: c } = e,
+    let { icon: t, imageSrc: n, iconColor: a, url: l, children: c } = e,
         d = (0, u.nu)(),
         p = null;
     null != t
         ? (p = (0, r.jsx)(t, {
               className: m.listIcon,
-              color: null != i ? i : "currentColor",
+              color: null != a ? a : "currentColor",
               width: 20,
               height: 20,
               size: "custom",
@@ -107,7 +107,7 @@ function f(e) {
     });
     return (0, r.jsx)(o.Z, {
         href: l,
-        className: a()(m.listItem, m.linkItem),
+        className: i()(m.listItem, m.linkItem),
         trusted: !d,
         useDefaultUnderlineStyles: !1,
         children: h,

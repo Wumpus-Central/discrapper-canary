@@ -4,7 +4,7 @@ n.d(t, {
     Ev: () => s,
     Fu: () => h,
     GM: () => L,
-    Gu: () => D,
+    Gu: () => w,
     JT: () => m,
     K8: () => v,
     OF: () => x,
@@ -23,7 +23,7 @@ n.d(t, {
     sI: () => g,
     u2: () => l,
     um: () => C,
-    wP: () => w,
+    wP: () => D,
     wT: () => R,
     xK: () => T,
 }),
@@ -116,8 +116,8 @@ let P = {
         blocked_locales: [],
         supported_locales: [],
     },
-    w = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
-    D = [...w, i.d4z.GUILD_VOICE],
+    D = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
+    w = [...D, i.d4z.GUILD_VOICE],
     x = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
 var L = (function (e) {
     return (e.NORMAL = "normal"), (e.FULL_SCREEN = "full-screen"), e;

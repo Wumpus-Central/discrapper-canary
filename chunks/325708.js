@@ -59,8 +59,8 @@ function C(e) {
                     return "callParticipantsSidebarWidth";
             }
         })(t),
-        [y, v] = l.useState(h.ZP[C]),
-        _ = l.useCallback(
+        [y, _] = l.useState(h.ZP[C]),
+        v = l.useCallback(
             (e) => {
                 d.ZP.updatedUnsyncedSettings({ [C]: e });
             },
@@ -97,8 +97,8 @@ function C(e) {
                                 minWidth: O,
                                 maxWidth: n,
                                 resizableNode: g,
-                                onResize: v,
-                                onResizeEnd: _,
+                                onResize: _,
+                                onResizeEnd: v,
                             }),
                         (0, r.jsx)("div", {
                             ref: g,

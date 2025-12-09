@@ -2,7 +2,7 @@ let r;
 n.d(t, {
     FZ: () => ek,
     ZP: () => tt,
-    b6: () => eD,
+    b6: () => ew,
     ik: () => eL,
     ow: () => eS,
     rH: () => eP,
@@ -40,8 +40,8 @@ var i,
     N = n(70956),
     P = n(877481),
     R = n(823379),
-    w = n(358085),
-    D = n(998502),
+    D = n(358085),
+    w = n(998502),
     x = n(145597),
     L = n(581567),
     j = n(624126),
@@ -354,7 +354,7 @@ z.forEach((e) => {
         });
 });
 let eR = new Set(["1314395942253756416"]);
-function ew(e) {
+function eD(e) {
     let t = null;
     if ("id" in e) {
         var n;
@@ -366,7 +366,7 @@ function ew(e) {
     }
     return null != t && (0, O.YB)("getRawOverlayGameStatus") && eR.has(t);
 }
-function eD(e) {
+function ew(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         [n, r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [I.Z, T.Z],
         i = eS(e);
@@ -399,7 +399,7 @@ function eD(e) {
             };
     }
     let o = (0, x.supportsOutOfProcess)() && !t,
-        s = ew(null != a ? a : i),
+        s = eD(null != a ? a : i),
         l = b.v.legacyEnabled,
         c = o && !s,
         u = es.enableOverlay[eP(i)],
@@ -443,7 +443,7 @@ function ex(e) {
         n = es.enableOverlay[eP(t)],
         r = es.enableOverlayV3[eP(t)];
     if (null != n || null != r) return null != n ? n : r;
-    let i = eD(t);
+    let i = ew(t);
     return i.enabledLegacy || i.enabledOOP;
 }
 function eL(e) {
@@ -506,9 +506,9 @@ function eG() {
     );
 }
 function eZ() {
-    if (!__OVERLAY__ && w.isPlatformEmbedded) {
+    if (!__OVERLAY__ && D.isPlatformEmbedded) {
         let e = [...$, ...o().values(es.gameOverrides)];
-        D.ZP.setGameCandidateOverrides(e);
+        w.ZP.setGameCandidateOverrides(e);
     }
 }
 function eB(e, t) {
@@ -559,7 +559,7 @@ function eV() {
 }
 function eH(e, t) {
     if (void 0 === t) {
-        let t = D.ZP.getDiscordUtils();
+        let t = w.ZP.getDiscordUtils();
         if (null != t && null != t.getWindowHandleFromPid) {
             let n = t.getWindowHandleFromPid(e);
             return null != n && "0" !== n ? n : null;
@@ -694,8 +694,8 @@ function e5(e) {
 }
 function e8(e) {
     var t;
-    if (__OVERLAY__ || !w.isPlatformEmbedded) return;
-    let n = D.ZP.getDiscordUtils().notifyGameLaunched;
+    if (__OVERLAY__ || !D.isPlatformEmbedded) return;
+    let n = w.ZP.getDiscordUtils().notifyGameLaunched;
     if (null == n) return;
     let r = I.Z.getDetectableGame(e.applicationId);
     null != r && n(r.id, r.name, null != (t = e.pids) ? t : []);
@@ -708,7 +708,7 @@ function e7(e) {
     for (let e of n) X[e] = t;
 }
 !__OVERLAY__ &&
-    ((0, w.isDesktop)() || U.iP) &&
+    ((0, D.isDesktop)() || U.iP) &&
     (el = function () {
         if (!I.Z.hasAttemptedFetch || !M.Z.hasAttemptedFetch) return !1;
         let e = [],
@@ -719,7 +719,7 @@ function e7(e) {
             a = (0, x.supportsOutOfProcess)();
         for (let e of n) {
             var o, s, l, c;
-            let t = ew(e),
+            let t = eD(e),
                 n = (a && !t) || f.r.enabledOOP,
                 r = null != (o = e.overlay) ? o : f.r.enabled;
             ec[e.id] = {
@@ -782,7 +782,7 @@ function e7(e) {
                     (null != e.executables && e.executables.length > 0) ||
                     (null != e.thirdPartySkus && e.thirdPartySkus.length > 0),
             )),
-            D.ZP.setObservedGamesCallback(e, !0, (e) => {
+            w.ZP.setObservedGamesCallback(e, !0, (e) => {
                 let n = [],
                     i = {},
                     a = [];
@@ -811,7 +811,7 @@ function e7(e) {
                     eN();
             }),
             eZ(),
-            D.ZP.setGameDetectionCallback((e, t) => {
+            w.ZP.setGameDetectionCallback((e, t) => {
                 if (e.length === t.length)
                     for (let [a, o] of e.entries()) {
                         var n, r, i;
@@ -865,7 +865,7 @@ function e7(e) {
                     }
             });
         let p = j.g.getConfig({ location: "RunningGameStore.handleGamesDatabaseUpdate" }).enabled;
-        D.ZP.setGameDetectionErrorCallback((e, t, n, r, i) => {
+        w.ZP.setGameDetectionErrorCallback((e, t, n, r, i) => {
             p &&
                 C.default.track(k.rMx.GAME_DETECTION_ERROR, {
                     error_code: e.toString(),
@@ -1003,13 +1003,13 @@ class e9 extends (i = c.ZP.Store) {
     getOverlayEnabledForGame(e) {
         if (e.isLauncher || e.elevated || e.sandboxed)
             return V.verbose("getOverlayEnabledForGame: Overlay not supported.", e), !1;
-        let t = eD(e);
+        let t = ew(e);
         return t.enabledLegacy || t.enabledOOP;
     }
     getGameOverlayStatus(e) {
         if (e.isLauncher || e.elevated || e.sandboxed)
             return V.verbose("getGameOverlayStatus: Overlay not supported.", e), null;
-        let t = eD(e);
+        let t = ew(e);
         return t.enabledLegacy || t.enabledOOP ? t : null;
     }
     getObservedAppNameForWindow(e) {

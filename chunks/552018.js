@@ -937,7 +937,7 @@ class P extends o.C {
     }
 }
 let R = new P();
-class w extends o.C {
+class D extends o.C {
     create(e) {
         let t = {
             isoCountry: "",
@@ -999,7 +999,7 @@ class w extends o.C {
         ]);
     }
 }
-let D = new w();
+let w = new D();
 class x extends o.C {
     create(e) {
         let t = { location: { oneofKind: void 0 } };
@@ -1021,7 +1021,7 @@ class x extends o.C {
                 case 1:
                     a.location = {
                         oneofKind: "isoRegion",
-                        isoRegion: D.internalBinaryRead(e, e.uint32(), n, a.location.isoRegion),
+                        isoRegion: w.internalBinaryRead(e, e.uint32(), n, a.location.isoRegion),
                     };
                     break;
                 case 2:
@@ -1050,7 +1050,7 @@ class x extends o.C {
     }
     internalBinaryWrite(e, t, n) {
         "isoRegion" === e.location.oneofKind &&
-            D.internalBinaryWrite(e.location.isoRegion, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
+            w.internalBinaryWrite(e.location.isoRegion, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
             "isEu" === e.location.oneofKind && t.tag(2, r.TD.Varint).bool(e.location.isEu),
             "place" === e.location.oneofKind &&
                 R.internalBinaryWrite(e.location.place, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
@@ -1064,7 +1064,7 @@ class x extends o.C {
                 name: "iso_region",
                 kind: "message",
                 oneof: "location",
-                T: () => D,
+                T: () => w,
             },
             {
                 no: 2,

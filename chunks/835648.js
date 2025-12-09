@@ -75,7 +75,7 @@ function N(e, t) {
 }
 let P = [8, 8, 8, 8],
     R = 40;
-function w(e) {
+function D(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: a } = e;
     return (0, r.jsx)(
         u.P3F,
@@ -89,11 +89,11 @@ function w(e) {
         }),
     );
 }
-function D(e, t, n, i, a) {
+function w(e, t, n, i, a) {
     switch (e.categoryInfo.type) {
         case E.bg.FAVORITES:
             return (0, r.jsx)(
-                w,
+                D,
                 {
                     icon: u.r7p,
                     onClick: t,
@@ -104,7 +104,7 @@ function D(e, t, n, i, a) {
             );
         case E.bg.RECENTLY_HEARD:
             return (0, r.jsx)(
-                w,
+                D,
                 {
                     icon: u.T39,
                     onClick: t,
@@ -115,7 +115,7 @@ function D(e, t, n, i, a) {
             );
         case E.bg.FREQUENTLY_USED:
             return (0, r.jsx)(
-                w,
+                D,
                 {
                     icon: u.IeX,
                     onClick: t,
@@ -140,7 +140,7 @@ function D(e, t, n, i, a) {
             );
         case E.bg.DEFAULTS:
             return (0, r.jsx)(
-                w,
+                D,
                 {
                     icon: u.gw7,
                     onClick: t,
@@ -173,13 +173,13 @@ function L(e) {
     return t.categoryInfo.type === E.bg.GUILD
         ? (0, r.jsx)(_.V, {
               guild: t.categoryInfo.guild,
-              children: D(t, i, a, l, o),
+              children: w(t, i, a, l, o),
           })
         : (0, r.jsx)(c.u, {
               text: x(t),
               position: "right",
               align: "center",
-              children: D(t, i, a, l, o),
+              children: w(t, i, a, l, o),
           });
 }
 function j(e) {

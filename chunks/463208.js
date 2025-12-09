@@ -191,8 +191,8 @@ function I(e) {
             defaultDirty: N = !1,
             leading: P,
             trailing: R,
-            validateOn: w = "change",
-            size: D = "md",
+            validateOn: D = "change",
+            size: w = "md",
             fullWidth: x = !1,
             clearable: L = !1,
             showCharacterCount: j = !1,
@@ -221,7 +221,7 @@ function I(e) {
         ]),
         { fieldProps: k } = (0, s.XF_)(M),
         U = (0, f.m)({
-            validateOn: w,
+            validateOn: D,
             error: C,
             value: y,
             minLength: A,
@@ -257,19 +257,19 @@ function I(e) {
     let z = null;
     ("boolean" == typeof L ? L && null != y && "" !== y && !K : L.show)
         ? (z = (0, r.jsx)(S, {
-              inputSize: D,
+              inputSize: w,
               onClick: Y,
           }))
         : null != R &&
           (z = (0, r.jsx)(v, {
               accessory: R,
-              inputSize: D,
+              inputSize: w,
           }));
     let q = null;
     null != P &&
         (q = (0, r.jsx)(v, {
             accessory: P,
-            inputSize: D,
+            inputSize: w,
         }));
     let Q = j
         ? (0, r.jsx)(d.H, {
@@ -288,7 +288,7 @@ function I(e) {
                 validation: U,
                 fullWidth: x,
                 readOnly: K,
-                className: o()(_.container, _[D], {
+                className: o()(_.container, _[w], {
                     [_.hasLeading]: null != q,
                     [_.hasTrailing]: null != z,
                     [_.hasTags]: B,

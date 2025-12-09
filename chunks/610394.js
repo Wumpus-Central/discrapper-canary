@@ -75,8 +75,8 @@ function N(e, t) {
 }
 let P = new s.Z("OverlayV3Store"),
     R = new Set(),
-    w = new Set(),
-    D = null,
+    D = new Set(),
+    w = null,
     x = null,
     L = null,
     j = null,
@@ -98,10 +98,10 @@ function W() {
     Y = (0, O.r4)();
 }
 function K(e, t) {
-    if (null != D) {
+    if (null != w) {
         null != t && (B[e] = t);
         try {
-            if ((D.trackGame(e), R.has(e))) return;
+            if ((w.trackGame(e), R.has(e))) return;
             R.add(e),
                 (0, _.PY)(e, "maybeTrackGame", { newOverlayMethod: null != t ? f.gl[t] : null }),
                 o.Z.updateOverlayState(e, f.mM.WAITING_FOR_POPOUT_OPEN, "OverlayStore.maybeTrackGame");
@@ -121,10 +121,10 @@ function z(e) {
         R.delete(e),
         delete Z[e],
         delete B[e],
-        w.delete(e);
+        D.delete(e);
     try {
-        if (null == D) return;
-        D.untrackGame(e), P.verbose("Removing tracked game ".concat(e));
+        if (null == w) return;
+        w.untrackGame(e), P.verbose("Removing tracked game ".concat(e));
         let t = R.values().next().value;
         U === e && (U = null != t ? t : null);
     } catch (t) {
@@ -133,12 +133,12 @@ function z(e) {
 }
 function q() {
     try {
-        for (let e of R) null == D || D.untrackGame(e);
+        for (let e of R) null == w || w.untrackGame(e);
         R.clear(),
             (0, _.bs)(null, "clearTrackedGames"),
             (Z = {}),
             (B = {}),
-            w.clear(),
+            D.clear(),
             P.verbose("Cleared all tracked games");
     } catch (e) {
         P.error("Error clearing tracked games:", e), (0, _.PV)(d.UNSET_PID, e, { crashType: "native" });
@@ -163,10 +163,10 @@ function J() {
     var e;
     null != k &&
         M === k &&
-        null != D &&
+        null != w &&
         ((k = null),
         (0, _.PY)(M, "renderer_window_refreshing_finished"),
-        null == (e = D.readyToShow) || e.call(D, M),
+        null == (e = w.readyToShow) || e.call(w, M),
         o.Z.updateOverlayState(M, f.mM.OVERLAY_RENDERING, "checkPopoutRefresh"),
         P.verbose("Showing overlay v3 for pid ".concat(M)));
 }
@@ -177,13 +177,13 @@ function $(e, t) {
         if (t !== G) {
             G = t;
             try {
-                "function" == typeof (null == D ? void 0 : D.setLimitedInteraction)
+                "function" == typeof (null == w ? void 0 : w.setLimitedInteraction)
                     ? (P.info("Setting limited interaction", t),
                       (0, _.bs)(e, "focus_and_interaction_set", {
                           isLimitedInteraction: t,
                           focusable: !t,
                       }),
-                      D.setLimitedInteraction(t))
+                      w.setLimitedInteraction(t))
                     : P.info("No setLimitedInteraction function found, skipping");
             } catch (t) {
                 P.error("Error setting limited interaction mode:", t), (0, _.PV)(e, t, { crashType: "native" });
@@ -197,14 +197,14 @@ function ee() {
 }
 function et(e) {
     if (Y.allDone) {
-        if (!w.has(e))
+        if (!D.has(e))
             return void o.Z.updateOverlayState(e, f.mM.WAITING_FOR_SUCCESSFUL_SHOW, "maybeTrackSuccessfullyShown");
         o.Z.successfullyShown(e);
     }
 }
 function en(e) {
     let { pid: t } = e;
-    w.add(t), et(t);
+    D.add(t), et(t);
 }
 function er(e) {
     let { initialized: t } = e;
@@ -221,7 +221,7 @@ function er(e) {
     }
 }
 async function ei() {
-    y.Z.isModuleLoaded || y.Z.isModuleLoading || (await (0, _.Nk)()), (D = await (0, v.H)());
+    y.Z.isModuleLoaded || y.Z.isModuleLoading || (await (0, _.Nk)()), (w = await (0, v.H)());
 }
 async function ea(e) {
     e.overlayMethod === f.gl.OutOfProcess || e.overlayMethod === f.gl.OutOfProcessLimitedInteraction
@@ -288,7 +288,7 @@ function e_(e) {
 function em() {
     var e;
     (Y = N(A({}, Y), { showInactiveCalled: !0 })),
-        null == D || null == (e = D.onNativePopoutShowInactiveSuccess) || e.call(D);
+        null == w || null == (e = w.onNativePopoutShowInactiveSuccess) || e.call(w);
 }
 function eh() {
     (Y = N(A({}, Y), { allDone: !0 })),
@@ -306,9 +306,9 @@ function eE(e) {
     (M = r),
         J(),
         null != i && null != r && V(r, (0, O.rd)(i)),
-        null != D &&
-            (null != i || (null == (t = D.version) ? void 0 : t.call(D)) > 0) &&
-            (null == (n = D.setRenderingWindowHandle) || n.call(D, (0, O.rd)(null != i ? i : "0"), r));
+        null != w &&
+            (null != i || (null == (t = w.version) ? void 0 : t.call(w)) > 0) &&
+            (null == (n = w.setRenderingWindowHandle) || n.call(w, (0, O.rd)(null != i ? i : "0"), r));
 }
 function eb(e) {
     P.verbose("Updating OverlayMethod", e), ea(e);
@@ -317,10 +317,10 @@ function ey(e) {
     Z[e.pid] = e.overlayState;
 }
 function eO() {
-    (D = y.Z.getNativeModule()), Q();
+    (w = y.Z.getNativeModule()), Q();
 }
 function ev() {
-    D = null;
+    w = null;
 }
 class eS extends (r = i.ZP.Store) {
     initialize() {

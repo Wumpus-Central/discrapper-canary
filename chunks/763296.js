@@ -41,10 +41,10 @@ let b = new Map(),
 function R() {
     b.clear(), y.clear(), (A = 0), O.clear(), N.clear(), (P = !1), (I = 0), (T = 0), (S = 0);
 }
-function w() {
+function D() {
     O.clear(), N.clear();
 }
-function D() {
+function w() {
     I = 1;
 }
 function x(e) {
@@ -223,7 +223,7 @@ class X extends (r = o.ZP.Store) {
 E(X, "displayName", "SoundboardStore");
 let J = new X(s.Z, {
     LOGOUT: R,
-    GUILD_SOUNDBOARD_FETCH: D,
+    GUILD_SOUNDBOARD_FETCH: w,
     GUILD_SOUNDBOARD_SOUND_CREATE: j,
     GUILD_SOUNDBOARD_SOUND_UPDATE: j,
     GUILD_SOUNDBOARD_SOUND_DELETE: k,
@@ -231,7 +231,7 @@ let J = new X(s.Z, {
     GUILD_SOUNDBOARD_SOUND_PLAY_END: H,
     GUILD_SOUNDBOARD_SOUNDS_UPDATE: M,
     USER_SOUNDBOARD_SET_VOLUME: W,
-    VOICE_CHANNEL_SELECT: w,
+    VOICE_CHANNEL_SELECT: D,
     USER_SETTINGS_PROTO_UPDATE: z,
     SOUNDBOARD_FETCH_DEFAULT_SOUNDS: U,
     SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: G,

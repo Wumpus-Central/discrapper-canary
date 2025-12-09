@@ -101,8 +101,8 @@ function T(e) {
             action: N,
             caretConfig: P = { align: "center" },
             badge: R,
-            textLink: w,
-            onWatchVideo: D,
+            textLink: D,
+            onWatchVideo: w,
             onRequestClose: x,
             popoverRef: L,
             position: j,
@@ -160,8 +160,8 @@ function T(e) {
                 shouldHideMediaOptions: !0,
             }),
                 null == x || x(),
-                null == D || D();
-        }, [F, D, x]),
+                null == w || w();
+        }, [F, w, x]),
         W = B
             ? (0, r.jsx)(o.zsu, {
                   type: "image",
@@ -226,7 +226,7 @@ function T(e) {
                         title: O,
                         body: I,
                         badge: R,
-                        textLink: w,
+                        textLink: D,
                     }),
                     null != N ? (0, r.jsx)(d.k, { actions: [N] }) : null,
                 ],

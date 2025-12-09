@@ -30,8 +30,8 @@ var r = n(54381),
     N = n(74538),
     P = n(469165),
     R = n(554930),
-    w = n(229555),
-    D = n(768865),
+    D = n(229555),
+    w = n(768865),
     x = n(391110),
     L = n(75077),
     j = n(474936),
@@ -127,13 +127,13 @@ let ey = () => {
             scrollPosition: G.Y_.TRY_IT_OUT,
             analyticsLocations: e,
         }),
-        ew = () => {
+        eD = () => {
             (0, v.openUserSettings)(b.n.APPEARANCE_PANEL, {
                 section: M.oAB.APPEARANCE,
                 analyticsLocations: e,
             });
         },
-        eD = () => {
+        ew = () => {
             (0, v.openUserSettings)(b.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
                 section: M.oAB.GUILD_BOOSTING,
                 analyticsLocations: e,
@@ -193,7 +193,7 @@ let ey = () => {
                 subtitle: B.intl.string(B.t.CjRASJ),
                 description: B.intl.string(B.t.jBTTws),
                 descriptionCta: B.intl.string(B.t.jVcuVY),
-                onCtaClick: ew,
+                onCtaClick: eD,
                 perkImage: z,
             },
             clips: eS
@@ -296,7 +296,7 @@ let ey = () => {
                 subtitle: B.intl.string(B.t["4pEwXL"]),
                 description: eA ? "" : B.intl.string(B.t.jsyNHm),
                 descriptionCta: B.intl.string(B.t.jVcuVY),
-                onCtaClick: eA ? void 0 : eD,
+                onCtaClick: eA ? void 0 : ew,
                 perkImage: Q,
                 hideOnNarrowScreen: !eA,
                 imageOverlayText: eA ? B.intl.string(B.t["/VzCKE"]).toLocaleUpperCase() : void 0,
@@ -497,9 +497,9 @@ let ey = () => {
                 name: "tenureBadge",
                 title: B.intl.string(B.t.rnsqpa),
                 pillText: B.intl.string(B.t["jyYgZ+"]).toLocaleUpperCase(),
-                perkComponent: (0, r.jsx)(w.Z, {}),
+                perkComponent: (0, r.jsx)(D.Z, {}),
                 cardVariant: x.zW.NITRO_GRADIENT_HOVER_BORDER,
-                onClick: () => (0, D.k)({ analyticsLocations: e }),
+                onClick: () => (0, w.k)({ analyticsLocations: e }),
             }),
         eH
     );

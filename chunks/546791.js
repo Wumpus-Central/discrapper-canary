@@ -2,7 +2,7 @@ n.d(t, {
     E2: () => A,
     Kp: () => x,
     LI: () => b,
-    MH: () => D,
+    MH: () => w,
     Qr: () => E,
     _p: () => T,
     f0: () => v,
@@ -103,10 +103,10 @@ let f = 60,
     },
     P = (e, t) => ((0, l.PO)("family_center_activity_card") ? t : e),
     R = (e, t) => ((0, l.vE)("family_center_activity_card") ? t : e),
-    w = () => Object.values(s.Z.getLinkedUsers()).some((e) => e.link_status === c.ne.ACTIVE),
-    D = () => {
+    D = () => Object.values(s.Z.getLinkedUsers()).some((e) => e.link_status === c.ne.ACTIVE),
+    w = () => {
         let e = a.default.getCurrentUser(),
-            t = w(),
+            t = D(),
             n = (0, l.vE)("settings-controls");
         return (null == e ? void 0 : e.nsfwAllowed) === !1 && t && n;
     },

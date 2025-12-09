@@ -30,15 +30,15 @@ function f(e, t) {
         N = e.rects.popper,
         P = e.elements[S ? C : O],
         R = (0, r.Z)((0, c.kK)(P) ? P : P.contextElement || (0, i.Z)(e.elements.popper), g, b, m),
-        w = (0, a.Z)(e.elements.reference),
-        D = (0, o.Z)({
-            reference: w,
+        D = (0, a.Z)(e.elements.reference),
+        w = (0, o.Z)({
+            reference: D,
             element: N,
             strategy: "absolute",
             placement: p,
         }),
-        x = (0, s.Z)(Object.assign({}, N, D)),
-        L = O === l.k5 ? x : w,
+        x = (0, s.Z)(Object.assign({}, N, w)),
+        L = O === l.k5 ? x : D,
         j = {
             top: R.top - L.top + A.top,
             bottom: L.bottom - R.bottom + A.bottom,

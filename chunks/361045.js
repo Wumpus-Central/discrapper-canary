@@ -1,9 +1,9 @@
 n.d(t, { n: () => c });
 var a = n(54381);
 n(473749);
-var l = n(481060),
-    r = n(688465),
-    i = n(921944),
+var r = n(481060),
+    i = n(688465),
+    l = n(921944),
     s = n(388032),
     o = n(941246);
 function c(e) {
@@ -22,10 +22,10 @@ function c(e) {
             (0, a.jsxs)("div", {
                 className: o.content,
                 children: [
-                    (0, a.jsx)(l.P3F, {
+                    (0, a.jsx)(r.P3F, {
                         className: o.closeIcon,
-                        onClick: () => t(i.L.USER_DISMISS),
-                        children: (0, a.jsx)(l.Dio, {}),
+                        onClick: () => t(l.L.USER_DISMISS),
+                        children: (0, a.jsx)(r.Dio, {}),
                     }),
                     (0, a.jsx)("img", {
                         src: n(414190),
@@ -34,25 +34,25 @@ function c(e) {
                     }),
                     (0, a.jsxs)("div", {
                         children: [
-                            (0, a.jsxs)(l.Heading, {
+                            (0, a.jsxs)(r.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 className: o.heading,
-                                children: [s.intl.string(s.t.MLt8H4), (0, a.jsx)(r.Z, { className: o.betaTag })],
+                                children: [s.intl.string(s.t.MLt8H4), (0, a.jsx)(i.Z, { className: o.betaTag })],
                             }),
-                            (0, a.jsx)(l.Text, {
+                            (0, a.jsx)(r.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
                                 children: s.intl.string(s.t["l+lSLp"]),
                             }),
                         ],
                     }),
-                    (0, a.jsx)(l.Button, {
+                    (0, a.jsx)(r.Button, {
                         variant: "primary",
                         text: s.intl.string(s.t["9WdoB+"]),
                         fullWidth: !0,
                         onClick: () => {
-                            t(i.L.TAKE_ACTION), c();
+                            t(l.L.TAKE_ACTION), c();
                         },
                     }),
                 ],

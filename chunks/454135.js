@@ -74,12 +74,12 @@ function E(e) {
             null != t && ((f[e] = d(c({}, t), { style: "GENTLE_AMBIENT" })), O.emitChange()), delete h[e];
         }, 2000));
 }
-function v() {
+function p() {
     for (let e of Object.keys(h)) clearTimeout(h[e]);
     (h = {}), (f = {});
 }
-function p() {
-    return v(), !0;
+function v() {
+    return p(), !0;
 }
 class T extends (l = r.ZP.Store) {
     initialize() {
@@ -137,7 +137,7 @@ let O = new T(a.Z, {
         CHANNEL_SELECT: function (e) {
             let { guildId: t } = e;
             if (t === m || null == t) return !1;
-            (m = t), v();
+            (m = t), p();
             let n = s.Z.getVoiceStates(t),
                 l = {};
             for (let e of Object.values(n))
@@ -153,7 +153,7 @@ let O = new T(a.Z, {
                     });
             return !0;
         },
-        CONNECTION_OPEN: p,
-        LOGOUT: p,
+        CONNECTION_OPEN: v,
+        LOGOUT: v,
     }),
     y = O;

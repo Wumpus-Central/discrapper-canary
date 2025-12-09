@@ -37,8 +37,8 @@ var r,
     N = n(247206),
     P = n(629710),
     R = n(262777),
-    w = n(761538),
-    D = n(674611),
+    D = n(761538),
+    w = n(674611),
     x = n(294734),
     L = n(947849),
     j = n(10433),
@@ -91,8 +91,8 @@ var r,
     eN = n(255269),
     eP = n(461157),
     eR = n(901461),
-    ew = n(432376),
-    eD = n(384203),
+    eD = n(432376),
+    ew = n(384203),
     ex = n(633957),
     eL = n(530472),
     ej = n(29909),
@@ -260,7 +260,7 @@ class tn extends (r = a.Component) {
             r = null;
         switch (n) {
             case eI.aD.MARK_AS_FALSE_POSITIVE:
-                r = (0, i.jsx)(D.Z, {
+                r = (0, i.jsx)(w.Z, {
                     messageId: e.id,
                     channelId: t.id,
                 });
@@ -301,7 +301,7 @@ class tn extends (r = a.Component) {
                   if (n === A.g.EVENT) return (0, i.jsx)(G.Z, { code: r }, r);
                   if (n === A.g.CHANNEL_LINK)
                       return (0, i.jsx)(
-                          eD.Z,
+                          ew.Z,
                           {
                               code: r,
                               message: e,
@@ -743,7 +743,7 @@ class tn extends (r = a.Component) {
     }
     renderMediaObscureNotice(e) {
         return (0 !== e.attachments.length || 0 !== e.embeds.length) && (0, P.kC)(e)
-            ? (0, i.jsx)(w.Z, { message: e })
+            ? (0, i.jsx)(D.Z, { message: e })
             : null;
     }
     renderPoll(e, t) {
@@ -796,8 +796,8 @@ class tn extends (r = a.Component) {
             N = this.renderMediaObscureNotice(t),
             P = this.renderPoll(t, n),
             R = this.renderForwardedMessage(t),
-            w = this.renderReportedMessage(t),
-            D = this.renderShareClientTheme(t);
+            D = this.renderReportedMessage(t),
+            w = this.renderShareClientTheme(t);
         return null == c &&
             null == d &&
             null == _ &&
@@ -816,18 +816,18 @@ class tn extends (r = a.Component) {
             null != I &&
             null == P &&
             null == R &&
-            null == w &&
-            null == D
+            null == D &&
+            null == w
             ? null
             : (0, i.jsxs)("div", {
                   id: (0, eU.bX)(t),
                   className: s()(e, eJ.container),
                   children: [
-                      w,
+                      D,
                       R,
                       v,
                       P,
-                      D,
+                      w,
                       c,
                       u,
                       T,
@@ -994,7 +994,7 @@ function tr(e) {
         T = s === r.author.id && S && !o,
         A = r.author.id === s,
         C = r.isFirstMessageInForumPost(n),
-        P = (0, ew.Z)({
+        P = (0, eD.Z)({
             channel: n,
             canChat: m,
             renderReactions: p,
@@ -1005,8 +1005,8 @@ function tr(e) {
             isActiveChannelOrUnarchivableThread: S,
             isAutomodQuarantined: O,
         }),
-        w = (0, Y.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
-        D = (0, q.Z)(null == n ? void 0 : n.id),
+        D = (0, Y.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
+        w = (0, q.Z)(null == n ? void 0 : n.id),
         x = (0, J.Z)(r),
         L = (0, R.v)(r),
         j = (0, eN._)(n),
@@ -1041,9 +1041,9 @@ function tr(e) {
                 gifAutoPlay: _,
                 canRenderReferralEmbed: n.isDM(),
                 poll: x,
-                showListsAndHeaders: w,
-                showMaskedLinks: w,
-                shouldHideMediaOptions: D,
+                showListsAndHeaders: D,
+                showMaskedLinks: D,
+                shouldHideMediaOptions: w,
                 enabledContentHarmTypeFlags: L,
                 ctaButtonType: U,
                 shouldAgeVerify: G,

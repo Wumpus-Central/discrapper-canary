@@ -1,24 +1,24 @@
 n.d(t, {
-    A: () => r,
-    default: () => i,
+    A: () => i,
+    default: () => l,
 });
 var a = n(54381);
 n(473749);
-var l = n(793030);
-let r = "UPLOAD_ERROR_MODAL_KEY",
-    i = (e) => {
-        let { title: t, help: n, transitionState: r, onClose: i } = e;
-        return (0, a.jsx)(l.Modal, {
+var r = n(793030);
+let i = "UPLOAD_ERROR_MODAL_KEY",
+    l = (e) => {
+        let { title: t, help: n, transitionState: i, onClose: l } = e;
+        return (0, a.jsx)(r.Modal, {
             title: t,
             subtitle: n,
-            transitionState: r,
+            transitionState: i,
             actions: [
                 {
                     variant: "critical-secondary",
                     text: "Close",
-                    onClick: i,
+                    onClick: l,
                 },
             ],
-            onClose: i,
+            onClose: l,
         });
     };

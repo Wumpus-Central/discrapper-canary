@@ -49,8 +49,8 @@ let y = [
             viewTime: 30 * p.Z.Millis.MINUTE,
         },
     ],
-    v = 5 * y[y.length - 1].viewTime,
-    _ = p.Z.Millis.WEEK,
+    _ = 5 * y[y.length - 1].viewTime,
+    v = p.Z.Millis.WEEK,
     O = { channels: {} },
     x = new Set(),
     E = null,
@@ -59,7 +59,7 @@ let y = [
 function P() {
     if (null == E || !T(E)) return !1;
     let e = Z(E);
-    if (e.lastActionTime > Date.now() - p.Z.Millis.DAY && e.viewDuration > v) return !1;
+    if (e.lastActionTime > Date.now() - p.Z.Millis.DAY && e.viewDuration > _) return !1;
     let t = Date.now();
     (e.lastActionTime = t), (e.viewDuration += t - j), (j = t);
 }
@@ -132,7 +132,7 @@ class A extends (i = l.ZP.PersistedStore) {
                     i = null != (t = null == n ? void 0 : n.joinedAt) ? t : new Date(),
                     r = Math.min(h.default.age(e.id), Date.now() - i.getTime()),
                     l = O.channels[e.id];
-                if (null == l || l.lastActionTime < Date.now() - _) return !1;
+                if (null == l || l.lastActionTime < Date.now() - v) return !1;
                 for (let e of y)
                     if (r < e.timeSinceJoin && (l.numSends >= e.sends || l.viewDuration >= e.viewTime)) return !0;
                 return !1;
@@ -149,7 +149,7 @@ let w = new A(a.Z, {
         },
         CONNECTION_OPEN: function () {
             (E = u.Z.getChannelId()), (j = Date.now()), I();
-            let e = Date.now() - _;
+            let e = Date.now() - v;
             h.default.forEach(O.channels, (t, n) => {
                 let { lastActionTime: i } = t;
                 i < e && delete O.channels[n];

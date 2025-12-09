@@ -1,8 +1,8 @@
 n.d(t, { L: () => h }), n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(481060),
     o = n(310752),
     c = n(897842),
@@ -55,19 +55,19 @@ let m = () => {
         e.stopPropagation(), e.preventDefault();
     },
     h = (e) => {
-        let { className: t, onDrop: n, children: r } = e,
-            [h, x] = l.useState(!1),
-            f = l.useRef(null),
-            g = l.useCallback((e) => {
+        let { className: t, onDrop: n, children: i } = e,
+            [h, x] = r.useState(!1),
+            f = r.useRef(null),
+            g = r.useCallback((e) => {
                 p(e), x(!0), (0, s.Mr3)(c.A);
             }, []),
-            b = l.useCallback((e) => {
+            b = r.useCallback((e) => {
                 p(e);
                 let t = f.current,
                     n = e.relatedTarget;
                 (null != n && (null == t || t.contains(n))) || x(!1);
             }, []),
-            v = l.useCallback(
+            v = r.useCallback(
                 async (e) => {
                     p(e), x(!1);
                     let t = e.dataTransfer;
@@ -84,13 +84,13 @@ let m = () => {
             );
         return (0, a.jsxs)("div", {
             ref: f,
-            className: i()(t, u.wrapper),
+            className: l()(t, u.wrapper),
             onDragEnter: g,
             onDragOver: p,
             onDragLeave: b,
             onDrop: v,
             children: [
-                r,
+                i,
                 h &&
                     (0, a.jsx)("div", {
                         className: u.uploadModal,

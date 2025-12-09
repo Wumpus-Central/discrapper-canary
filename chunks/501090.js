@@ -5,8 +5,8 @@ var a = n(473749),
     l = n(45474),
     o = n(981631);
 let s = (t, e, n) => {
-    let [s, u] = a.useState(t),
-        [c, d] = a.useState(Date.now()),
+    let [s, c] = a.useState(t),
+        [u, d] = a.useState(Date.now()),
         [_] = a.useState(Date.now()),
         m = a.useCallback(
             (t) => {
@@ -40,17 +40,17 @@ let s = (t, e, n) => {
                         {
                             from_step: l.O[s],
                             to_step: l.O[t],
-                            step_duration_ms: Date.now() - c,
+                            step_duration_ms: Date.now() - u,
                             flow_duration_ms: Date.now() - _,
                             location_stack: n,
                         },
                         (0, i.v)(e),
                     ),
                 ),
-                    u(t),
+                    c(t),
                     d(Date.now());
             },
-            [n, _, c, s, e],
+            [n, _, u, s, e],
         );
-    return [s, m, c, _];
+    return [s, m, u, _];
 };

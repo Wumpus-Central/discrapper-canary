@@ -76,12 +76,12 @@ function T(e) {
         A = (0, a.e7)([d.Z], () => (null != T ? d.Z.getChannelId(T) : null), [T]),
         C = null != T ? T : null,
         N = (0, a.e7)([u.Z], () => (null != C ? u.Z.getGuild(C) : null), [C]),
-        { shouldShowIncidentActions: P, incidentData: R, isUnderLockdown: w } = (0, _.mI)(C),
-        D = (0, l.n2)(null != (t = null == N ? void 0 : N.id) ? t : g.lds),
+        { shouldShowIncidentActions: P, incidentData: R, isUnderLockdown: D } = (0, _.mI)(C),
+        w = (0, l.n2)(null != (t = null == N ? void 0 : N.id) ? t : g.lds),
         x = i.useCallback(() => null != N && (0, c._X)(N.id), [N]);
     if (null == N || null == R || !P) return null;
     let L = (e) => {
-            if (e && D && A !== E.oC.MEMBER_SAFETY && x())
+            if (e && w && A !== E.oC.MEMBER_SAFETY && x())
                 return void p.default.track(g.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
                     notice_type: g.kVF.GUILD_RAID_NOTIFICATION,
                     guild_id: N.id,
@@ -108,7 +108,7 @@ function T(e) {
             size: s.Z.Sizes.MINI,
         }),
         M = (0, h.OY)(R, N.name);
-    if (null != (null != (O = R.dmsDisabledUntil) ? O : R.invitesDisabledUntil) && w)
+    if (null != (null != (O = R.dmsDisabledUntil) ? O : R.invitesDisabledUntil) && D)
         return (0, r.jsxs)(o.qXd, {
             className: y.notice,
             color: o.DM8.NEUTRAL,
@@ -140,7 +140,7 @@ function T(e) {
             : (0, h.kk)(R)
               ? b.intl.formatToPlainString(b.t["1bSmxr"], { guildName: N.name })
               : b.intl.formatToPlainString(b.t.W87xDE, { guildName: N.name }),
-        U = D && A === E.oC.MEMBER_SAFETY;
+        U = w && A === E.oC.MEMBER_SAFETY;
     return (0, r.jsxs)(o.qXd, {
         className: y.notice,
         color: o.DM8.WARNING,

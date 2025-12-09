@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(643879),
     P = n(373230),
     R = n(246946),
-    w = n(25990),
-    D = n(594174),
+    D = n(25990),
+    w = n(594174),
     x = n(626135),
     L = n(74538),
     j = n(413182),
@@ -129,12 +129,12 @@ function Q() {
 }
 function X() {
     var e;
-    let t = (0, s.e7)([D.default], () => {
-            let e = D.default.getCurrentUser();
+    let t = (0, s.e7)([w.default], () => {
+            let e = w.default.getCurrentUser();
             return o()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
         n = (0, s.e7)([R.Z], () => R.Z.hidePersonalInformation),
-        a = (0, s.cj)([w.Z], () => w.Z.getAllPending()),
+        a = (0, s.cj)([D.Z], () => D.Z.getAllPending()),
         { pendingBio: l, pendingAvatar: g, pendingNameplate: E } = a,
         P = K(a, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
         Z = (0, N.SD)({
@@ -145,7 +145,7 @@ function X() {
             pendingValue: E,
             userValue: null == t || null == (e = t.collectibles) ? void 0 : e.nameplate,
         }),
-        Y = (0, s.e7)([w.Z], () => w.Z.showNotice()),
+        Y = (0, s.e7)([D.Z], () => D.Z.showNotice()),
         z = M.dN.useSetting() && null != l ? b.ZP.parse(void 0, l).content : l,
         X = L.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: J, newestAnalyticsLocation: $ } = (0, m.ZP)(_.Z.USER_SETTINGS_USER_PROFILE);

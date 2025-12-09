@@ -4,7 +4,7 @@ n.d(t, {
     E6: () => Y,
     EE: () => G,
     Gk: () => X,
-    Gt: () => D,
+    Gt: () => w,
     OV: () => U,
     PZ: () => $,
     Rg: () => Q,
@@ -114,14 +114,14 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let w = {
+let D = {
     [c.s.TOP_ARTIST]: [W],
     [c.s.PLAYED_GAME]: [U, G, k, z, B, H, K, V, F],
     [c.s.TOP_GAME]: [Y],
     [c.s.WATCHED_MEDIA]: [q, Q],
     [c.s.LAUNCHED_ACTIVITY]: [U, G, k, z, K, F],
 };
-var D = (function (e) {
+var w = (function (e) {
     return (
         (e[(e.CARD = 0)] = "CARD"),
         (e[(e.POPOUT = 1)] = "POPOUT"),
@@ -426,15 +426,15 @@ function X(e) {
 function J(e) {
     switch (e.content_type) {
         case c.s.TOP_ARTIST:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.PLAYED_GAME:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.TOP_GAME:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.WATCHED_MEDIA:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.LAUNCHED_ACTIVITY:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return D[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         default:
             return null;
     }

@@ -65,7 +65,7 @@ function R(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function w(e, t) {
         e
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -167,14 +167,14 @@ let L = (e) => {
                         { visibleRowIndex: p, columnIndex: _ } = e,
                         m = null != (n = j(_, G)) ? n : {},
                         { ref: h, tabIndex: g, onFocus: E } = m,
-                        b = D(m, ["ref", "tabIndex", "onFocus"]),
+                        b = w(m, ["ref", "tabIndex", "onFocus"]),
                         y = el.rowIndex === p && el.columnIndex === _,
                         O = () => {
                             k.current || U.current || x(e);
                         };
                     return (0, i.createElement)(
                         "li",
-                        w(P({}, b), { key: t }),
+                        D(P({}, b), { key: t }),
                         (0, r.jsx)(l.tEY, {
                             children: (0, r.jsx)("button", {
                                 "aria-label": d,
@@ -307,7 +307,7 @@ let L = (e) => {
         eh = (e) =>
             (0, r.jsx)(
                 "ul",
-                w(P({}, M(G)), {
+                D(P({}, M(G)), {
                     className: o()(C.emojiListRow, {
                         [C.emojiListRowLargeSize]: ep,
                         [C.emojiListRowMediumSize]: e_,

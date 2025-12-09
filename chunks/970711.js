@@ -84,7 +84,7 @@ n.d(t, {
     qJ: () => Y,
     qb: () => eg,
     qt: () => tm,
-    r3: () => eD,
+    r3: () => ew,
     rs: () => T,
     sB: () => e6,
     uX: () => ec,
@@ -101,7 +101,7 @@ n.d(t, {
     yR: () => et,
     yg: () => ee,
     yu: () => ef,
-    z3: () => ew,
+    z3: () => eD,
     z9: () => ep,
     zF: () => eV,
     zr: () => td,
@@ -308,8 +308,8 @@ function P(e, t, n) {
 function R(e, t, n, i) {
     r.closure611_externref_shim(e, t, n, i);
 }
-let w = ["bytes"],
-    D = ["omit", "same-origin", "include"],
+let D = ["bytes"],
+    w = ["omit", "same-origin", "include"],
     x = ["same-origin", "no-cors", "cors", "navigate"],
     L =
         "undefined" == typeof FinalizationRegistry
@@ -394,7 +394,7 @@ class G {
         r.intounderlyingbytesource_start(this.__wbg_ptr, e);
     }
     get type() {
-        return w[r.intounderlyingbytesource_type(this.__wbg_ptr)];
+        return D[r.intounderlyingbytesource_type(this.__wbg_ptr)];
     }
     cancel() {
         let e = this.__destroy_into_raw();
@@ -660,12 +660,12 @@ function eP(e, t) {
 function eR(e, t, n) {
     return new Uint8Array(e, t >>> 0, n >>> 0);
 }
-function ew() {
+function eD() {
     return u(function (e, t) {
         return new Response(e, t);
     }, arguments);
 }
-function eD() {
+function ew() {
     return u(function (e, t, n) {
         return new Request(l(e, t), n);
     }, arguments);
@@ -726,7 +726,7 @@ function eK(e, t) {
     e.body = t;
 }
 function ez(e, t) {
-    e.credentials = D[t];
+    e.credentials = w[t];
 }
 function eq(e, t) {
     e.headers = t;

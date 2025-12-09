@@ -12,7 +12,7 @@ n.d(t, {
     bN: () => P,
     dl: () => k,
     ft: () => q,
-    hO: () => w,
+    hO: () => D,
     kH: () => G,
     qF: () => K,
     xi: () => $,
@@ -106,10 +106,10 @@ function P() {
 function R(e) {
     return C.includes(e.nsfwLevel);
 }
-function w(e) {
-    return null != e && D(p.Z.getGuild(e));
-}
 function D(e) {
+    return null != e && w(p.Z.getGuild(e));
+}
+function w(e) {
     let t = (0, o.u)("age_verification_utils"),
         n = (0, s.yo)();
     return t && n && (null == e ? void 0 : e.features.has(b.GuildFeatures.AGE_VERIFICATION_LARGE_GUILD));
@@ -259,7 +259,7 @@ let B = () => {
     H = (e) => k() && V(e),
     Y = (e) => !!H(e) && ((0, g.mN)(E.L0.NSFW_VOICE_CHANNEL), !0);
 function W(e, t, n) {
-    if (w(e)) return void (0, g.mN)(E.L0.ACCESS_LARGE_GUILD_UNDERAGE);
+    if (D(e)) return void (0, g.mN)(E.L0.ACCESS_LARGE_GUILD_UNDERAGE);
     if (F(e)) {
         let e = null != n && N.has(n) ? n : E.L0.NSFW_SERVER;
         (0, g.mN)(e);

@@ -1,7 +1,7 @@
 n.d(t, {
-    B: () => D,
+    B: () => w,
     B5: () => P,
-    Do: () => w,
+    Do: () => D,
     GX: () => M,
     HR: () => F,
     Hr: () => N,
@@ -264,7 +264,7 @@ function R(e) {
         }),
     );
 }
-function w(e) {
+function D(e) {
     let { guildId: t, channelId: n, forumLayout: i } = e;
     r.ZP.trackWithMetadata(
         p.rMx.FORUM_CHANNEL_LAYOUT_UPDATED,
@@ -275,7 +275,7 @@ function w(e) {
         }),
     );
 }
-function D(e) {
+function w(e) {
     let { postId: t, location: n } = e;
     r.ZP.trackWithMetadata(p.rMx.FORUM_POST_LINK_COPIED, {
         forum_post_id: t,

@@ -1,7 +1,7 @@
 n.d(t, {
-    GY: () => w,
+    GY: () => D,
     PI: () => S,
-    RT: () => D,
+    RT: () => w,
     XM: () => P,
     bc: () => I,
     ls: () => R,
@@ -141,7 +141,7 @@ function R(e) {
         }),
     });
 }
-function w(e) {
+function D(e) {
     let { widgetId: t, showAllStreams: n } = e,
         i = n ? O.intl.string(O.t.q2B3rh) : O.intl.string(O.t.JKGi6o),
         a = () => {
@@ -162,7 +162,7 @@ function w(e) {
               }),
           });
 }
-function D(e) {
+function w(e) {
     let { id: t, pinned: n } = e,
         i = n ? O.intl.string(O.t.cSu80j) : O.intl.string(O.t.cM8Vnm),
         a = (0, y.Z)();

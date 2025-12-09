@@ -35,8 +35,8 @@ var m = n(358221),
     N = n(725319),
     P = n(344185),
     R = n(569471),
-    w = n(195663),
-    D = n(723170),
+    D = n(195663),
+    w = n(723170),
     x = n(581883),
     L = n(131704),
     j = n(386438),
@@ -172,7 +172,7 @@ function eP(e, t) {
 function eR(e) {
     return null != e && e.isPrivate() && !X.ZP.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id);
 }
-async function ew(e) {
+async function eD(e) {
     if (0 === eh.length) {
         (eg = !1), null == e || e();
         return;
@@ -188,18 +188,18 @@ async function ew(e) {
         }),
     ),
         await (0, d.GR)(1000 * ed),
-        ew(e);
+        eD(e);
 }
-let eD = 3;
+let ew = 3;
 async function ex(e) {
     let t = Z.default.getId();
-    for (let n = 0; n < eD; n++)
+    for (let n = 0; n < ew; n++)
         try {
             return await e();
         } catch (e) {
             if (
                 (es.error("", e),
-                n + 1 < eD && (await (0, d.GR)((n + 1) * 2000), await U.Z.awaitOnline(), t !== Z.default.getId()))
+                n + 1 < ew && (await (0, d.GR)((n + 1) * 2000), await U.Z.awaitOnline(), t !== Z.default.getId()))
             )
                 return Promise.reject(Error("User changed."));
         }
@@ -1312,7 +1312,7 @@ function te(e, t, n) {
         };
     if (X.ZP.mentionOnAllMessages && null != r) {
         if (r.isThread()) {
-            if ((0, D.J)(r) === ea.iN.ALL_MESSAGES)
+            if ((0, w.J)(r) === ea.iN.ALL_MESSAGES)
                 return {
                     shouldMention: !0,
                     isMentionLowImportance: !0,
@@ -1373,7 +1373,7 @@ function to(e) {
     return eM.get(t).syncThreadSettings();
 }
 function ts(e) {
-    return (0, w.s)(e) && eM.get(e.id).syncThreadSettings();
+    return (0, D.s)(e) && eM.get(e.id).syncThreadSettings();
 }
 function tl(e) {
     let { threads: t } = e;
@@ -1632,7 +1632,7 @@ function tR(e) {
         t,
     );
 }
-function tw(e) {
+function tD(e) {
     let { channelId: t, messageId: n, immediate: r = !1, force: i = !1, context: a, location: o } = e,
         s = eM.get(t),
         l = s.ack({
@@ -1646,7 +1646,7 @@ function tw(e) {
         });
     return null != n ? (s.rebuildChannelState(), !0) : l;
 }
-function tD(e) {
+function tw(e) {
     let { channelId: t, timestamp: n } = e;
     return eM.get(t).ackPins(n);
 }
@@ -1752,7 +1752,7 @@ function tV(e, t, n) {
                     read_state_type: e.readStateType,
                 })),
             ),
-            eg || ew(n));
+            eg || eD(n));
 }
 function tH(e) {
     let { channels: t, context: n, onFinished: r } = e;
@@ -2044,9 +2044,9 @@ let t0 = new t$(p.Z, {
         MESSAGE_DELETE: e7,
         MESSAGE_DELETE_BULK: e7,
         MESSAGE_ACK: tx,
-        CHANNEL_ACK: tw,
+        CHANNEL_ACK: tD,
         CHANNEL_LOCAL_ACK: tL,
-        CHANNEL_PINS_ACK: tD,
+        CHANNEL_PINS_ACK: tw,
         CHANNEL_PINS_UPDATE: tU,
         CHANNEL_SELECT: tS,
         VOICE_CHANNEL_SELECT: tT,

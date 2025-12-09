@@ -49,10 +49,10 @@ function b(e) {
     function R(e) {
         v(e);
     }
-    function w(e) {
+    function D(e) {
         A(e);
     }
-    function D() {
+    function w() {
         return null == b
             ? null
             : (0, r.jsx)("div", {
@@ -100,7 +100,7 @@ function b(e) {
         onClose: t,
         transitionState: n,
         children: [
-            D(),
+            w(),
             (0, r.jsxs)(f.Z, {
                 direction: f.Z.Direction.VERTICAL,
                 align: f.Z.Align.START,
@@ -135,7 +135,7 @@ function b(e) {
                                     key: "proxy",
                                 },
                             ],
-                            onChange: w,
+                            onChange: D,
                             placeholder: "URL Origin Type",
                         }),
                     }),

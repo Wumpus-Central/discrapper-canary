@@ -75,7 +75,7 @@ let S = {},
     N = {},
     P = null,
     R = {};
-function w() {
+function D() {
     for (let e in ((S = {}), (C = {}), (I = {}), (T = {}), (A = {}), (P = p.Z.getChannelId()), R)) clearTimeout(R[e]);
     (R = {}),
         m.Z.forEachGuild((e) => {
@@ -83,7 +83,7 @@ function w() {
         }),
         L();
 }
-function D(e) {
+function w(e) {
     for (let t in (delete S[e], delete C[e], delete I[e], delete T[e], delete A[e], x(e), T[e])) M(e, t);
 }
 function x(e) {
@@ -173,7 +173,7 @@ function U(e) {
 }
 function G(e) {
     let { channels: t } = e;
-    for (let e of t) if ((0, l.Y3)(e) !== Z(e.guild_id, e.parent_id)) return void w();
+    for (let e of t) if ((0, l.Y3)(e) !== Z(e.guild_id, e.parent_id)) return void D();
     return !1;
 }
 function Z(e, t) {
@@ -256,15 +256,15 @@ function H() {
     L();
 }
 function Y(e) {
-    if (e.channels.length > 0) return D(e.guildId);
+    if (e.channels.length > 0) return w(e.guildId);
 }
 function W(e) {
     let { guild: t } = e;
-    return D(t.id);
+    return w(t.id);
 }
 function K(e) {
     let { guildId: t } = e;
-    return D(t);
+    return w(t);
 }
 function z(e) {
     V(e), q();
@@ -407,16 +407,16 @@ class ec extends (r = o.ZP.Store) {
 }
 b(ec, "displayName", "ActiveJoinedThreadsStore");
 let eu = new ec(s.Z, {
-    CONNECTION_OPEN: w,
-    OVERLAY_INITIALIZE: w,
+    CONNECTION_OPEN: D,
+    OVERLAY_INITIALIZE: D,
     THREAD_LIST_SYNC: K,
-    LOAD_THREADS_SUCCESS: w,
-    LOAD_ARCHIVED_THREADS_SUCCESS: w,
-    SEARCH_MESSAGES_SUCCESS: w,
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: w,
+    LOAD_THREADS_SUCCESS: D,
+    LOAD_ARCHIVED_THREADS_SUCCESS: D,
+    SEARCH_MESSAGES_SUCCESS: D,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: D,
     GUILD_CREATE: W,
-    GUILD_DELETE: w,
-    CURRENT_USER_UPDATE: w,
+    GUILD_DELETE: D,
+    CURRENT_USER_UPDATE: D,
     THREAD_CREATE: U,
     THREAD_UPDATE: U,
     THREAD_DELETE: U,

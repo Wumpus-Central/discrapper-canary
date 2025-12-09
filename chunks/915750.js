@@ -65,8 +65,8 @@ let C = 100,
     N = 60,
     P = 1,
     R = 0.5,
-    w = new Set();
-function D(e, t) {
+    D = new Set();
+function w(e, t) {
     return "".concat(e, "_").concat(t);
 }
 class x {
@@ -191,8 +191,8 @@ class x {
                     let t = !1,
                         n = (0, S.Zp)(this.questContent);
                     if (null != n) {
-                        let r = D(e.id, n);
-                        (t = !w.has(r) && (0, S.VB)(this.questContent)) && w.add(r);
+                        let r = w(e.id, n);
+                        (t = !D.has(r) && (0, S.VB)(this.questContent)) && D.add(r);
                     }
                     let r = (0, S.jY)(this.questContent),
                         i = (0, S.R_)(this.questContent);

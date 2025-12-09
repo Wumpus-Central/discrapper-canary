@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(937889),
     P = n(739566),
     R = n(779125),
-    w = n(890410),
-    D = n(464891),
+    D = n(890410),
+    w = n(464891),
     x = n(507418),
     L = n(348238),
     j = n(38267),
@@ -259,7 +259,7 @@ let ei = i.memo(function (e) {
         l = Q(n, i),
         c = X(i, n.author),
         u = (0, P.ZP)(n),
-        d = (0, D.CF)(
+        d = (0, w.CF)(
             Y(
                 {
                     message: n,
@@ -278,7 +278,7 @@ let ei = i.memo(function (e) {
         h = X(i, _, T.default.getCurrentUser());
     if (null != _) {
         let e = (0, P.ij)(_, i),
-            r = (0, D.CF)(
+            r = (0, w.CF)(
                 Y(
                     {
                         message: n,
@@ -395,7 +395,7 @@ function ea(e) {
             children: (0, r.jsxs)("div", {
                 className: o()(V.content, { [V.compact]: a }),
                 children: [
-                    (0, r.jsx)(D.nD, {
+                    (0, r.jsx)(w.nD, {
                         message: s,
                         messageClassname: V.spanCorrection,
                         className: o()(V.usernameContainer, V.spanCorrection, { [V.compact]: a }),
@@ -428,7 +428,7 @@ function ea(e) {
                     (0, r.jsx)("div", {
                         className: o()(V.messageContent, { [V.compact]: a }),
                         children: (0, r.jsx)(
-                            w.Z,
+                            D.Z,
                             K(Y({}, P), {
                                 message: s,
                                 channel: q,

@@ -21,8 +21,8 @@ function m(e) {
             comparator: b,
             selected: C,
             checked: y,
-            disabled: v = !1,
-            inlineUsername: _ = !0,
+            disabled: _ = !1,
+            inlineUsername: v = !0,
             onClick: O,
             onMouseEnter: x,
             "aria-setsize": E,
@@ -59,7 +59,7 @@ function m(e) {
         })(
             {
                 id: "user-row-".concat(m),
-                className: l()(f.friendWrapper, { [f.disabled]: v }),
+                className: l()(f.friendWrapper, { [f.disabled]: _ }),
                 onClick: () => {
                     null != O && O(r.id);
                 },
@@ -73,14 +73,14 @@ function m(e) {
             {
                 role: "option",
                 "aria-selected": y,
-                "aria-disabled": v,
+                "aria-disabled": _,
                 "aria-setsize": E,
                 "aria-posinset": j,
                 children: (0, i.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,
                     className: l()(f.friend, {
                         [f.friendSelected]: C,
-                        [f.twoRows]: !_,
+                        [f.twoRows]: !v,
                     }),
                     children: [
                         (0, i.jsx)(u.Z, {
@@ -91,7 +91,7 @@ function m(e) {
                         (0, i.jsxs)(d.Z, {
                             className: f.match,
                             align: d.Z.Align.BASELINE,
-                            direction: _ ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
+                            direction: v ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
                             children: [
                                 (0, i.jsx)(s.Text, {
                                     tag: "strong",
@@ -121,7 +121,7 @@ function m(e) {
                         }),
                         (0, i.jsx)(s.FZ5, {
                             checked: y,
-                            disabled: v,
+                            disabled: _,
                         }),
                     ],
                 }),

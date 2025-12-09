@@ -15,7 +15,7 @@ function h(e, t, n, h) {
             game: n.name,
         }),
         g = t.getAvatarURL(e.guild_id, 80),
-        { trackView: m, trackClick: y } = (0, a.R)(d.n0.ActivityInvite, {
+        { trackView: m, trackClick: _ } = (0, a.R)(d.n0.ActivityInvite, {
             notif_type: d.n0.ActivityInvite,
             notif_user_id: t.id,
             activity_type: c.mFx.JOIN_REQUEST,
@@ -38,7 +38,7 @@ function h(e, t, n, h) {
                 activity: h,
                 location: l.default.isInstanceLocked() ? c.Sbl.LOCKED_OVERLAY : c.Sbl.UNLOCKED_OVERLAY,
             }),
-                y("join"),
+                _("join"),
                 r.Z.updateNotificationStatus(n);
         },
         onCancelClick: (t, n) => {
@@ -53,10 +53,10 @@ function h(e, t, n, h) {
                 !0,
             ),
                 r.Z.updateNotificationStatus(n),
-                y("decline");
+                _("decline");
         },
         onDismissClick: () => {
-            y("dismiss");
+            _("dismiss");
         },
     };
 }

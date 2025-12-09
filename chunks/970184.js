@@ -141,7 +141,7 @@ let R = (e) => {
         ) || !!o
     );
 };
-function w(e, t) {
+function D(e, t) {
     var n, r;
     let a = i.useContext(M),
         o = i.useCallback(
@@ -170,12 +170,12 @@ function w(e, t) {
         }
     );
 }
-function D(e, t, n, r) {
+function w(e, t, n, r) {
     var o;
     let s = (0, a.e7)([O.Z], () => O.Z.getInteractionComponentState(e.id, n.id)),
         l = (0, a.e7)([u.ZP], () => u.ZP.getInteraction(e), [e]),
         c = R(e.channel_id) || t,
-        { error: d, validate: p } = w(n, s),
+        { error: d, validate: p } = D(n, s),
         _ = null != (o = e.applicationId) ? o : e.author.id;
     return {
         state: s,
@@ -209,7 +209,7 @@ function D(e, t, n, r) {
 }
 function x(e, t, n) {
     let r = (0, a.e7)([O.Z], () => O.Z.getInteractionComponentState(e.customId, t.id)),
-        { error: s, validate: c } = w(t, r),
+        { error: s, validate: c } = D(t, r),
         u = i.useCallback(
             (n) =>
                 null == n ||
@@ -260,7 +260,7 @@ function k(e) {
         d = i.useMemo(() => {
             if (null != n)
                 return {
-                    useComponentState: D.bind(null, n, u),
+                    useComponentState: w.bind(null, n, u),
                     channelId: n.channel_id,
                     containerId: n.id,
                     message: n,

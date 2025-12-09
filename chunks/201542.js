@@ -78,8 +78,8 @@ let N = i.memo(function (e) {
             onVolumeShow: N,
             onVolumeHide: P,
             onPlay: R,
-            onPause: w,
-            onError: D,
+            onPause: D,
+            onError: w,
             playbackCacheKey: x,
         } = e,
         L = i.useRef(null),
@@ -129,8 +129,8 @@ let N = i.memo(function (e) {
             let e = L.current;
             if (null == e) return;
             let t = e.error;
-            null == D || D(t);
-        }, [D]),
+            null == w || w(t);
+        }, [w]),
         eu = i.useCallback(
             (e) => {
                 let t = (0, g.A)(e, 1);
@@ -161,7 +161,7 @@ let N = i.memo(function (e) {
         eh = {
             played: q,
             currentTime: G,
-            onPause: w,
+            onPause: D,
             onPlay: R,
         },
         eg = i.useRef(eh);

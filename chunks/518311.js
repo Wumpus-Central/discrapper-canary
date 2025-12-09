@@ -25,8 +25,8 @@ var i,
     b = n(447543),
     C = n(708690),
     y = n(194359),
-    v = n(425493),
-    _ = n(493773),
+    _ = n(425493),
+    v = n(493773),
     O = n(100527),
     x = n(367907),
     E = n(906732),
@@ -46,12 +46,12 @@ var i,
     k = n(544610),
     U = n(19780),
     V = n(306680),
-    H = n(699516),
+    B = n(699516),
     F = n(246946),
-    B = n(594174),
+    H = n(594174),
     G = n(626135),
-    z = n(572004),
-    W = n(585483),
+    W = n(572004),
+    z = n(585483),
     q = n(823379),
     K = n(709054),
     Y = n(51144),
@@ -253,12 +253,12 @@ class eu extends (i = l.PureComponent) {
                 is_friend: !this.isNotFriends(),
             }),
         ),
-            W.S.subscribe($.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            W.S.subscribe($.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
+            z.S.subscribe($.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            z.S.subscribe($.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
     }
     componentWillUnmount() {
-        W.S.unsubscribe($.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
-            W.S.unsubscribe($.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
+        z.S.unsubscribe($.CkL.SCROLL_PAGE_UP, this.scrollPageUp),
+            z.S.unsubscribe($.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown),
             null != this.copyTimeout && clearTimeout(this.copyTimeout),
             h.Z.wait(() => C.Z.close());
     }
@@ -267,7 +267,7 @@ class eu extends (i = l.PureComponent) {
         if (null == e || !e.isDM()) return !1;
         let t = e.getRecipientId();
         if (null == t) throw Error("no recipient in DM");
-        return !H.Z.isFriend(t);
+        return !B.Z.isFriend(t);
     }
     createInvite() {
         let { channel: e } = this.props;
@@ -281,7 +281,7 @@ class eu extends (i = l.PureComponent) {
     }
     getMaxParticipants() {
         let { channel: e } = this.props,
-            t = B.default.getCurrentUser();
+            t = H.default.getCurrentUser();
         return null != t && t.isStaff() ? $.p3w : null != e && e.userLimit > 0 ? e.userLimit : $.pAY;
     }
     getRemaining() {
@@ -327,7 +327,7 @@ class eu extends (i = l.PureComponent) {
         if (this.isNotFriends()) {
             let t = null != e ? e.getRecipientId() : null;
             if (null == t) throw Error("no recipient in DM");
-            let n = B.default.getUser(t),
+            let n = H.default.getUser(t),
                 i = null != n ? n.username : "";
             return et.intl.format(et.t["eg+R9x"], { username: i });
         }
@@ -363,7 +363,7 @@ class eu extends (i = l.PureComponent) {
         let i = [];
         return (
             n.forEach((e) => {
-                let t = B.default.getUser(e);
+                let t = H.default.getUser(e);
                 null != t &&
                     i.push({
                         id: e,
@@ -492,7 +492,7 @@ class eu extends (i = l.PureComponent) {
             label: et.intl.string(et.t.t3O2BR),
             helperText: l.length > 0 ? et.intl.format(et.t.ZVdJMy, { numHours: "".concat(24) }) : void 0,
             children: (0, r.jsx)(p.kO8, {
-                supportsCopy: z.wS,
+                supportsCopy: W.wS,
                 placeholder: (0, T.Z)(et.intl.string(et.t.lPVBqP)),
                 value: a ? (n ? et.intl.string(et.t["6HzNgZ"]) : l) : "",
                 buttonColor: d.zx.Colors.BRAND,
@@ -509,8 +509,8 @@ class eu extends (i = l.PureComponent) {
         if (this.isNotFriends()) {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
-            let n = B.default.getUser(e),
-                i = null != n && H.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
+            let n = H.default.getUser(e),
+                i = null != n && B.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
             return {
                 actions: [
                     {
@@ -657,7 +657,7 @@ class eu extends (i = l.PureComponent) {
                     children: (0, r.jsx)(p.JcV, {
                         containerRef: this._mobileCloseRef,
                         children: (0, r.jsx)("div", {
-                            children: (0, r.jsx)(v.Z, {
+                            children: (0, r.jsx)(_.Z, {
                                 className: en.mobileToolsCloseIcon,
                                 closeAction: this.props.onClose,
                                 keybind: "ESC",
@@ -870,7 +870,7 @@ class eu extends (i = l.PureComponent) {
             }),
             ei(this, "handleCopyInvite", (e) => {
                 let { channel: t, invite: n } = this.props;
-                null != n && (0, z.JG)(e),
+                null != n && (0, W.JG)(e),
                     null != this.copyTimeout && clearTimeout(this.copyTimeout),
                     this.setState({ copied: !0 }),
                     (this.copyTimeout = setTimeout(() => {
@@ -896,7 +896,7 @@ function ed(e) {
     let { selectedUsers: t, channelName: n, previewIcon: i, onIconChange: l, onIconRemove: a, onChange: o } = e,
         { analyticsLocations: s } = (0, E.ZP)(O.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, I.a)(O.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, S.pT)(Array.from(t), B.default, H.Z);
+    let c = (0, S.pT)(Array.from(t), H.default, B.Z);
     return (0, r.jsxs)("div", {
         className: en.customizationContainer,
         children: [
@@ -969,14 +969,14 @@ function eh(e) {
     return (
         l.useEffect(
             () => (
-                i && W.S.subscribe($.CkL.TOGGLE_DM_CREATE, f),
+                i && z.S.subscribe($.CkL.TOGGLE_DM_CREATE, f),
                 () => {
-                    W.S.unsubscribe($.CkL.TOGGLE_DM_CREATE, f);
+                    z.S.unsubscribe($.CkL.TOGGLE_DM_CREATE, f);
                 }
             ),
             [i, f, c],
         ),
-        (0, _.ZP)(() => {
+        (0, v.ZP)(() => {
             (0, w._)();
         }),
         {
@@ -1015,8 +1015,8 @@ function ef(e) {
         C = null != s ? s : null == i ? p.kL_ : p.ejJ,
         {
             showModal: y,
-            renderPopout: v,
-            toggleVisible: _,
+            renderPopout: _,
+            toggleVisible: v,
             popoutOpen: O,
             setPopoutOpen: x,
             inBornThisNamedExperiment: E,
@@ -1026,7 +1026,7 @@ function ef(e) {
             location: g,
             subscribeToGlobalHotkey: m,
         }),
-        j = (0, u.e7)([B.default], () => B.default.getUser(null == i ? void 0 : i.getRecipientId()));
+        j = (0, u.e7)([H.default], () => H.default.getUser(null == i ? void 0 : i.getRecipientId()));
     return (null != (t = null == j ? void 0 : j.bot) && t) || (null != (n = null == j ? void 0 : j.isProvisional) && n)
         ? null
         : E
@@ -1041,7 +1041,7 @@ function ef(e) {
             })
           : (0, r.jsx)(p.yRy, {
                 targetElementRef: b,
-                renderPopout: v,
+                renderPopout: _,
                 position: h,
                 shouldShow: O,
                 nudgeAlignIntoViewport: !0,
@@ -1056,7 +1056,7 @@ function ef(e) {
                         J.ZP.Icon,
                         el(er({}, e), {
                             ref: b,
-                            onClick: _,
+                            onClick: v,
                             icon: C,
                             className: o,
                             iconClassName: a,

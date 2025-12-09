@@ -19,8 +19,8 @@ var r = n(54381),
     E = n(594174),
     v = n(471731),
     S = n(870289),
-    O = n(304742),
-    x = n(554067),
+    x = n(304742),
+    O = n(554067),
     y = n(215023),
     k = n(981631),
     T = n(228168),
@@ -69,7 +69,7 @@ function B(e) {
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(O.Z, {
+                return (0, r.jsx)(x.Z, {
                     handleTransition: o,
                     onClose: t,
                 });
@@ -150,7 +150,7 @@ function N(e) {
         i = (0, u.ZP)(),
         d = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
         { enabled: g } = (0, _.WX)({ location: "collectibles_shop_header_bar" }),
-        O = (0, m.Y)({ location: "CollectiblesShopHeaderBar" }),
+        x = (0, m.Y)({ location: "CollectiblesShopHeaderBar" }),
         N = [
             {
                 tab: y.AW.HOME,
@@ -228,16 +228,16 @@ function N(e) {
                                   );
                         }),
                     }),
-                    (g || R || O) &&
+                    (g || R || x) &&
                         (0, r.jsxs)("div", {
                             className: I.alignedRightContent,
                             children: [
                                 R &&
-                                    (0, r.jsx)(x.Z, {
+                                    (0, r.jsx)(O.Z, {
                                         handleTransition: n,
                                         selectedTab: t,
                                     }),
-                                O &&
+                                x &&
                                     (0, r.jsx)(c.P3F, {
                                         className: I.wishlistButton,
                                         onClick: Z,

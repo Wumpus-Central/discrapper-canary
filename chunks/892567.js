@@ -36,16 +36,16 @@ let y = [l.C.CHERRY_BOMB, l.C.CHICLE],
             }),
             { useReducedMotion: P } = (0, c.cj)([f.Z], () => ({ useReducedMotion: f.Z.useReducedMotion })),
             { includeNonProfile: R } = p.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
-            w = (0, m.Y)({ location: "UserNameWithEffects" }),
-            D = (0, d.dQu)(d.TVs.colors.BACKGROUND_BASE_LOW).hex(),
+            D = (0, m.Y)({ location: "UserNameWithEffects" }),
+            w = (0, d.dQu)(d.TVs.colors.BACKGROUND_BASE_LOW).hex(),
             x = null != (t = null == i ? void 0 : i.effectId) ? t : s.m.SOLID,
             L = (0, d.qgQ)(n),
             j = (0, u.EJ)(L, x === s.m.TOON ? b.emoji : void 0),
             M = (0, _.Z)({
-                displayNameStyles: w ? i : null,
-                backgroundColor: D,
+                displayNameStyles: D ? i : null,
+                backgroundColor: w,
             });
-        if (!w || (!O && !R) || null == i) return n;
+        if (!D || (!O && !R) || null == i) return n;
         let k = (0, g.K)(x, M, {
                 shouldWrap: T,
                 fontOpacity: y.includes(i.fontId) ? A : 1,

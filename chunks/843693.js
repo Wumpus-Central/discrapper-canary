@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => M,
-    wU: () => D,
+    wU: () => w,
 }),
     n(388685);
 var r,
@@ -169,12 +169,12 @@ function R(e) {
     if (!d.Z.isEnabled()) return !1;
     N(n);
 }
-function w(e) {
+function D(e) {
     let { comboMessage: t } = e;
     if (!d.Z.isEnabled()) return !1;
     P(t);
 }
-function D(e, t, n, r) {
+function w(e, t, n, r) {
     return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
 }
 function x(e) {
@@ -185,7 +185,7 @@ function x(e) {
     } = e;
     if (!d.Z.isEnabled()) return !1;
     let s = l.default.getId();
-    if (!D(null == a ? void 0 : a.id, s, o, S)) return !1;
+    if (!w(null == a ? void 0 : a.id, s, o, S)) return !1;
     let c = I.get(
         C({
             userId: null != (t = null == a ? void 0 : a.id) ? t : "???",
@@ -251,7 +251,7 @@ class L extends (r = i.ZP.Store) {
 m(L, "displayName", "PoggermodeStore");
 let j = new L(s.Z, {
         POGGERMODE_UPDATE_COMBO: R,
-        POGGERMODE_UPDATE_MESSAGE_COMBO: w,
+        POGGERMODE_UPDATE_MESSAGE_COMBO: D,
         MESSAGE_CREATE: x,
     }),
     M = j;

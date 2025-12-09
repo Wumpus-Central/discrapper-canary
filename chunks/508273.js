@@ -29,12 +29,12 @@ function C(e) {
         [_, h] = i.useState(!0),
         [C, P] = i.useState(!1),
         R = t.state === O.r2o.ACCEPTING,
-        w = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
+        D = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
     i.useLayoutEffect(() => {
         var e, t;
         P((null != (t = null == (e = f.current) ? void 0 : e.clientHeight) ? t : 0) > I);
     }, [P]);
-    let D = (0, p.PC)(t),
+    let w = (0, p.PC)(t),
         x = i.useCallback(() => {
             C && _ && h(!1);
         }, [_, C]),
@@ -46,11 +46,11 @@ function C(e) {
             return C && (null == (e = f.current) ? void 0 : e.clientHeight) != null
                 ? {
                       height: _ ? I : f.current.clientHeight + T + A,
-                      transition: w ? void 0 : "height 0.2s ease",
+                      transition: D ? void 0 : "height 0.2s ease",
                   }
                 : {};
-        }, [_, C, w]);
-    return null == D
+        }, [_, C, D]);
+    return null == w
         ? (0, r.jsx)(y.Z, {})
         : (0, r.jsxs)(l.kL8, {
               className: o()(S.guildInviteContainer, { [S.clickable]: C && _ }),
@@ -63,13 +63,13 @@ function C(e) {
                       ref: f,
                       children: [
                           (0, r.jsx)(E.Z7, {
-                              profile: D,
+                              profile: w,
                               className: S.banner,
                           }),
-                          (0, r.jsx)(E.N3, { profile: D }),
-                          (0, r.jsx)(g.Z, { profile: D }),
+                          (0, r.jsx)(E.N3, { profile: w }),
+                          (0, r.jsx)(g.Z, { profile: w }),
                           (0, r.jsx)(m.E, {
-                              profile: D,
+                              profile: w,
                               className: S.mainContent,
                           }),
                           (0, r.jsx)(b.Z, { invite: t }),
@@ -97,7 +97,7 @@ function C(e) {
                                   className: S.buttonContainer,
                                   children: (0, r.jsx)(N, {
                                       invite: t,
-                                      profile: D,
+                                      profile: w,
                                       isMemberOfGuild: n,
                                       message: a,
                                       submitting: R,

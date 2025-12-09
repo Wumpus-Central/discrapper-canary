@@ -31,8 +31,8 @@ var r = n(473749),
     N = n(184071),
     P = n(368243),
     R = n(119121),
-    w = n(404583),
-    D = n(295349),
+    D = n(404583),
+    w = n(295349),
     x = n(631572),
     L = n(999675),
     j = n(238027),
@@ -143,8 +143,8 @@ let ef = (e, t) =>
                           assetUrl: e ? V.Z : Y.Z,
                       },
                       emojis: {
-                          thumbnail: D.Z,
-                          assetUrl: e ? w.Z : x.Z,
+                          thumbnail: w.Z,
+                          assetUrl: e ? D.Z : x.Z,
                       },
                       noLimits: {
                           thumbnail: j.Z,
@@ -220,7 +220,7 @@ let ef = (e, t) =>
                 previewImage: N.referralProgram.thumbnail,
                 videoUrl: N.referralProgram.assetUrl,
             },
-            w = {
+            D = {
                 name: "customThemes",
                 title: b.intl.string(y.default.XokIHM),
                 description: b.intl.string(y.default["7esQMC"]),
@@ -231,7 +231,7 @@ let ef = (e, t) =>
                 },
                 videoUrl: N.customThemes.assetUrl,
             },
-            D = {
+            w = {
                 name: "displayNameStyles",
                 title: b.intl.string(O.default.ABtBDQ),
                 description: b.intl.string(O.default.MFNXZh),
@@ -286,7 +286,7 @@ let ef = (e, t) =>
                 videoUrl: N.noLimits.assetUrl,
             };
         return {
-            whatsNewBoxes: v ? [[D], [w, R]] : S.enabled ? [[x], [P, R]] : [[w], [P, R]],
+            whatsNewBoxes: v ? [[w], [D, R]] : S.enabled ? [[x], [P, R]] : [[D], [P, R]],
             bestOfBoxes: [[L], [j], [M, k]],
         };
     };

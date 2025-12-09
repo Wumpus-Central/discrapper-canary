@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(470956),
     C = n(430824),
     y = n(496675),
-    v = n(434488),
-    _ = n(27457),
+    _ = n(434488),
+    v = n(27457),
     O = n(251564),
     x = n(695492),
     E = n(981631),
@@ -53,15 +53,15 @@ function S(e) {
     }, [I.id, R]);
     let U = (0, o.e7)([y.Z], () => I.isPrivate() || (0, f.b)(y.Z, M, I), [M, I]),
         V = (null == M ? void 0 : M.afkChannelId) === I.id,
-        H = I.userLimit <= 0 || I.userLimit > 1,
+        B = I.userLimit <= 0 || I.userLimit > 1,
         F = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
-        B = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
+        H = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         G = (0, u.KF)(I.id) !== u.jy.CAN_LAUNCH,
-        z = null != R && R === I.id,
-        W = D.map(
+        W = null != R && R === I.id,
+        z = D.map(
             (e) => (t) =>
                 (0, i.jsx)(
-                    _.ZP,
+                    v.ZP,
                     {
                         participant: e,
                         channel: I,
@@ -92,13 +92,13 @@ function S(e) {
     ),
         null != M &&
             !V &&
-            (!(L >= 2) || !F || G || B || z
-                ? H &&
+            (!(L >= 2) || !F || G || H || W
+                ? B &&
                   1 === L &&
                   U &&
                   (F && !G
-                      ? W.push((e) =>
-                            (0, i.jsx)(v.h, {
+                      ? z.push((e) =>
+                            (0, i.jsx)(_.h, {
                                 channel: I,
                                 guild: M,
                                 width: e,
@@ -107,7 +107,7 @@ function S(e) {
                                 userParticipantCount: L,
                             }),
                         )
-                      : W.push((e) =>
+                      : z.push((e) =>
                             (0, i.jsx)(x.Z, {
                                 width: e,
                                 channel: I,
@@ -115,8 +115,8 @@ function S(e) {
                                 inPopout: w,
                             }),
                         ))
-                : W.push((e) =>
-                      (0, i.jsx)(v.h, {
+                : z.push((e) =>
+                      (0, i.jsx)(_.h, {
                           channel: I,
                           guild: M,
                           width: e,
@@ -137,6 +137,6 @@ function S(e) {
         keyExtractor: q,
         paddingTop: 64,
         paddingBottom: 64,
-        children: W,
+        children: z,
     });
 }

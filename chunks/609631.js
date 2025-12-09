@@ -1,5 +1,5 @@
 n.d(t, {
-    j: () => D,
+    j: () => w,
     t: () => S,
 }),
     n(388685),
@@ -155,12 +155,12 @@ function R(e) {
     let { targetRef: t, overrideTargetRect: n } = e;
     return null != n ? n : (c()(null != t.current, "Invalid ref"), t.current.getBoundingClientRect());
 }
-function w(e, t) {
+function D(e, t) {
     let n = R(e),
         r = R(t);
     return n.top === r.top && n.left === r.left;
 }
-class D extends (r = a.Component) {
+class w extends (r = a.Component) {
     formatDimension(e) {
         return this.props.useRawTargetDimensions ? e : Math.ceil(e);
     }
@@ -349,7 +349,7 @@ class D extends (r = a.Component) {
     }
     componentDidUpdate(e, t) {
         if (
-            ((T(e) === T(this.props) && w(e, this.props)) || this.updatePosition(), t.position !== this.state.position)
+            ((T(e) === T(this.props) && D(e, this.props)) || this.updatePosition(), t.position !== this.state.position)
         ) {
             var n, r;
             null == (n = (r = this.props).onPositionChange) || n.call(r, this.state.position);
@@ -433,7 +433,7 @@ class D extends (r = a.Component) {
             });
     }
 }
-g(D, "defaultProps", {
+g(w, "defaultProps", {
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     autoInvert: !1,

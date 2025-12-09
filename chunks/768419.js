@@ -25,8 +25,8 @@ var o,
     N = n(823379),
     P = n(781518),
     R = n(616922),
-    w = n(981631);
-function D(e, t, n) {
+    D = n(981631);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -78,7 +78,7 @@ function j(e, t) {
         e
     );
 }
-let M = m.Z.get(w.ABu.SPOTIFY),
+let M = m.Z.get(D.ABu.SPOTIFY),
     k = "wss://dealer.spotify.com/?access_token=",
     U = "hm://pusher/v1/connections/",
     G = 30 * C.Z.Millis.SECOND,
@@ -213,16 +213,16 @@ class em {
         }
     }
     constructor(e, t) {
-        D(this, "accessToken", void 0),
-            D(this, "accountId", void 0),
-            D(this, "connectionId", void 0),
-            D(this, "isPremium", void 0),
-            D(this, "pingInterval", void 0),
-            D(this, "backoff", void 0),
-            D(this, "socket", void 0),
-            D(this, "_requestedDisconnect", !1),
-            D(this, "_requestedConnect", !1),
-            D(
+        w(this, "accessToken", void 0),
+            w(this, "accountId", void 0),
+            w(this, "connectionId", void 0),
+            w(this, "isPremium", void 0),
+            w(this, "pingInterval", void 0),
+            w(this, "backoff", void 0),
+            w(this, "socket", void 0),
+            w(this, "_requestedDisconnect", !1),
+            w(this, "_requestedConnect", !1),
+            w(
                 this,
                 "handleDeviceStateChange",
                 l().throttle(() => {
@@ -280,7 +280,7 @@ function eb(e, t, n) {
     let g = "presence change";
     n &&
         ((g = "started"),
-        T.default.track(w.rMx.SPOTIFY_LISTEN_ALONG_STARTED, {
+        T.default.track(D.rMx.SPOTIFY_LISTEN_ALONG_STARTED, {
             party_id: u.id,
             other_user_id: e,
         })),
@@ -294,7 +294,7 @@ function eb(e, t, n) {
         );
 }
 function ey() {
-    T.default.track(w.rMx.SPOTIFY_LISTEN_ALONG_ENDED, {
+    T.default.track(D.rMx.SPOTIFY_LISTEN_ALONG_ENDED, {
         party_id: null != i ? i.partyId : null,
         other_user_id: null != i ? i.userId : null,
     });
@@ -310,7 +310,7 @@ function eO() {
     let e = Object.keys(ea),
         t = y.Z.getAccounts().filter((e) => {
             let { type: t } = e;
-            return t === w.ABu.SPOTIFY;
+            return t === D.ABu.SPOTIFY;
         });
     if (null == t) return !1;
     let n = t.map((e) => {
@@ -348,8 +348,8 @@ function eI(e) {
             });
             null == e ? (eo[t].push(c), (f = !0)) : (0, d.Z)(e, c) || (Object.assign(e, c), (f = !0)), eE(t, c.id);
         } else (eo[t] = [c]), (f = !0);
-    n ? null == ec || ec.start(Z, ew) : ((o = null), null == ec || ec.stop());
-    let _ = y.Z.getAccount(t, w.ABu.SPOTIFY);
+    n ? null == ec || ec.start(Z, eD) : ((o = null), null == ec || ec.stop());
+    let _ = y.Z.getAccount(t, D.ABu.SPOTIFY);
     if (null == _) return f;
     let m = es[t],
         g =
@@ -369,7 +369,7 @@ function eI(e) {
         ((r = l()
             .values(es)
             .find((e) => null != e)),
-        eD(b.default.getId()),
+        ew(b.default.getId()),
         null == o || E ? er.stop() : er.start(o.duration - s + V, () => ef(_.id)),
         null != i && ((!n && s > 0) || null == c || (null != g && i.trackId !== g.track.id))
             ? ($.info(
@@ -393,8 +393,8 @@ function eI(e) {
             track: o,
             connectionId: t,
         }),
-        T.default.track(w.rMx.ACTIVITY_UPDATED, {
-            party_platform: w.ABu.SPOTIFY,
+        T.default.track(D.rMx.ACTIVITY_UPDATED, {
+            party_platform: D.ABu.SPOTIFY,
             track_id: o.id,
             has_images: !0,
             details: o.album.name,
@@ -460,17 +460,17 @@ function eR() {
         s = null != r && i.startTime !== r.start;
     return o || s ? eb(e, t, !1) : null != a && a.id !== i.partyId && ((i.partyId = a.id), !0);
 }
-function ew() {
+function eD() {
     if (null == r) return;
     let e = eu();
     if (null == e) return;
     let { socket: t } = e;
     (el = !0),
         (0, P.wO)(t.accountId, t.accessToken),
-        T.default.track(w.rMx.SPOTIFY_AUTO_PAUSED),
+        T.default.track(D.rMx.SPOTIFY_AUTO_PAUSED),
         $.info("Playback auto paused");
 }
-function eD(e) {
+function ew(e) {
     if (e === b.default.getId()) {
         let t = I.Z.isCurrentClientInVoiceChannel(),
             n = (0, _.O)({
@@ -478,19 +478,19 @@ function eD(e) {
                 checkSoundSharing: !0,
                 checkSoundboardSounds: !1,
             });
-        t && n && null != r ? (ee.start(Z, ew, !1), et.stop()) : et.start(B, () => ee.stop(), !1);
+        t && n && null != r ? (ee.start(Z, eD, !1), et.stop()) : et.start(B, () => ee.stop(), !1);
     }
     return !1;
 }
 function ex(e) {
     let { userId: t } = e;
-    return eD(t);
+    return ew(t);
 }
 function eL(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let { userId: n } = t;
-        return eD(n) || e;
+        return ew(n) || e;
     }, !1);
 }
 function ej(e) {
@@ -505,7 +505,7 @@ function eM(e) {
         null == ec || ec.stop();
         let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
         null != e && E.ZP.getObservedAppNameForWindow(e) === M.name && n
-            ? (ec = new f.Xp()).start(Z, ew)
+            ? (ec = new f.Xp()).start(Z, eD)
             : (null == ec || ec.stop(), (ec = null));
     } else null == t && (null == ec || ec.stop(), (ec = null));
 }
@@ -658,7 +658,7 @@ class eG extends (o = u.ZP.Store) {
                 return t.replace(/;/g, "");
             }).join("; "));
         let m = {},
-            h = null != o.image ? (0, A.f)(w.ABu.SPOTIFY, o.image.url) : null;
+            h = null != o.image ? (0, A.f)(D.ABu.SPOTIFY, o.image.url) : null;
         null != o.image && null != h && (m.large_image = h),
             o.type !== J && (m.large_text = o.name),
             null != p && (t = p.uri),
@@ -685,10 +685,10 @@ class eG extends (o = u.ZP.Store) {
                 },
                 party: { id: n },
             };
-        return u || ((y.sync_id = l), (y.flags = w.xjy.PLAY | w.xjy.SYNC), (y.metadata = E)), y;
+        return u || ((y.sync_id = l), (y.flags = D.xjy.PLAY | D.xjy.SYNC), (y.metadata = E)), y;
     }
 }
-D(eG, "displayName", "SpotifyStore");
+w(eG, "displayName", "SpotifyStore");
 let eZ = new eG(p.Z, {
         USER_CONNECTIONS_UPDATE: eO,
         CONNECTION_OPEN: eO,

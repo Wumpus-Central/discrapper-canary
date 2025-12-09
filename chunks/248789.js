@@ -57,10 +57,10 @@ function b(e, t) {
 }
 function C(e) {
     let { channelId: t, warningId: C, senderId: y } = e,
-        v = r.useCallback(() => {
+        _ = r.useCallback(() => {
             (0, u.T)(t, [C]);
         }, [t, C]),
-        _ = (0, a.e7)([c.Z], () => c.Z.isBlocked(y)),
+        v = (0, a.e7)([c.Z], () => c.Z.isBlocked(y)),
         O = r.useMemo(
             () => ({
                 channelId: t,
@@ -103,11 +103,11 @@ function C(e) {
                 x(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
         }, [t, y, C, x]),
         j = r.useCallback(() => {
-            v(), x(p.NM.USER_BANNER_BLOCK_CONFIRM);
-        }, [v, x]),
+            _(), x(p.NM.USER_BANNER_BLOCK_CONFIRM);
+        }, [_, x]),
         S = r.useCallback(() => {
-            v(), x(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
-        }, [v, x]),
+            _(), x(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+        }, [_, x]),
         P = r.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("19538").then(n.bind(n, 699783));
@@ -134,14 +134,14 @@ function C(e) {
         warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
         header: m.intl.string(m.t.ZzlB5p),
         description: m.intl.string(m.t["D1aU+h"]),
-        onDismiss: v,
+        onDismiss: _,
         buttons: [
             {
                 text: m.intl.string(m.t.Qyu4UK),
                 variant: "primary",
                 onClick: E,
             },
-            ...(_
+            ...(v
                 ? []
                 : [
                       {

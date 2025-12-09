@@ -138,7 +138,7 @@ function O(e) {
             "shouldPreload",
         ]);
     let R = i.useRef(void 0),
-        w = i.useCallback(
+        D = i.useCallback(
             () =>
                 null != v
                     ? v()
@@ -151,7 +151,7 @@ function O(e) {
                       }),
             [v, a, n, O, s, d],
         ),
-        D = i.useCallback(
+        w = i.useCallback(
             (e) =>
                 ((R.current = Date.now()), null != S)
                     ? S(e, R.current)
@@ -182,8 +182,8 @@ function O(e) {
                 {
                     popoutKey: u.Tg,
                     shouldShow: C,
-                    preload: N ? w : void 0,
-                    renderPopout: D,
+                    preload: N ? D : void 0,
+                    renderPopout: w,
                     onRequestOpen: I,
                     onRequestClose: T,
                 },

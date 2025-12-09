@@ -82,8 +82,8 @@ let h = "x-science-test",
     N = 0,
     P = 0,
     R = 0,
-    w = null,
-    D = 0,
+    D = null,
+    w = 0,
     x = Number.MAX_SAFE_INTEGER,
     L = 0,
     j = 0,
@@ -92,7 +92,7 @@ let h = "x-science-test",
     U = null,
     G = null;
 function Z() {
-    (C = 0), (N = 0), (P = 0), (D = 0), (x = Number.MAX_SAFE_INTEGER), (L = 0), (j = 0), (w = Date.now()), (R = A);
+    (C = 0), (N = 0), (P = 0), (w = 0), (x = Number.MAX_SAFE_INTEGER), (L = 0), (j = 0), (D = Date.now()), (R = A);
 }
 function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
@@ -138,7 +138,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
         function $() {
             if (((W = null), !X())) return Promise.resolve();
             let e = Y.slice();
-            (Y = []), (D = B(D));
+            (Y = []), (w = B(w));
             let t = e.length;
             (x = Math.min(x, t)), (L = Math.max(L, t)), (j = B(j, t));
             let n = ee(e);
@@ -196,13 +196,13 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                     rpc_failure_count: P,
                     first_seen_event_sequence_number: R,
                     last_seen_event_sequence_number: A,
-                    telemetry_period_start_timestamp: w,
+                    telemetry_period_start_timestamp: D,
                     telemetry_period_end_timestamp: Date.now(),
                     event_queue_rejection_count: C,
-                    event_queue_batch_count: D,
+                    event_queue_batch_count: w,
                     event_queue_batch_min_size: x === Number.MAX_SAFE_INTEGER ? 0 : x,
                     event_queue_batch_max_size: L,
-                    event_queue_batch_avg_size: D > 0 ? j / D : 0,
+                    event_queue_batch_avg_size: w > 0 ? j / w : 0,
                     science_request_id: G,
                     science_response: U,
                     launch_signature: q(),

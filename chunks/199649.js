@@ -18,18 +18,18 @@ function g(e) {
     let { channel: b, children: C } = e,
         y = (0, r.e7)([c.Z], () => c.Z.isBlocked(b.getRecipientId()));
     (0, o.Z)(b.id);
-    let v = (0, s.Z)(b.id),
-        _ = b.isSystemDM(),
-        O = y && !_ && !b.isMultiUserDM(),
+    let _ = (0, s.Z)(b.id),
+        v = b.isSystemDM(),
+        O = y && !v && !b.isMultiUserDM(),
         x = {};
-    if (_) {
-        let e = v ? m.intl.string(m.t["+KSnWX"]) : m.intl.string(m.t.hvVgAZ);
+    if (v) {
+        let e = _ ? m.intl.string(m.t["+KSnWX"]) : m.intl.string(m.t.hvVgAZ);
         (x.message = m.intl.string(m.t.Bt2N7D)),
             (x.subtitle = m.intl.string(m.t["n/Vzkw"])),
             (x.buttonText = e),
-            (x.buttonIcon = v ? l.rgF : void 0),
+            (x.buttonIcon = _ ? l.rgF : void 0),
             (x.onButtonClick = () => {
-                if (v) {
+                if (_) {
                     open(f.D2),
                         u.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: "chat_blocker",

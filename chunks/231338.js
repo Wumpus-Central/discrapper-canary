@@ -124,7 +124,6 @@ var h = (function (e) {
             (e[(e.GOOGLE = 4)] = "GOOGLE"),
             (e[(e.ADYEN = 5)] = "ADYEN"),
             (e[(e.APPLE_PARTNER = 6)] = "APPLE_PARTNER"),
-            (e[(e.VIRTUAL_CURRENCY = 8)] = "VIRTUAL_CURRENCY"),
             (e[(e.APPLE_ADVANCED_COMMERCE = 9)] = "APPLE_ADVANCED_COMMERCE"),
             e
         );
@@ -139,7 +138,6 @@ let E = Object.freeze({
         4: "Google",
         5: "Adyen",
         6: "Apple Partner",
-        8: "Virtual Currency",
         9: "Apple ACOM",
     }),
     b = Object.freeze({

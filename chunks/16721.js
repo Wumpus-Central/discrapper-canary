@@ -40,23 +40,23 @@ var r = n(580983),
             N = O && S.sticky,
             P = r(o, S),
             R = S.source,
-            w = 0,
-            D = T;
+            D = 0,
+            w = T;
         if (
             (N &&
                 (-1 === g((P = E(P, "y", "")), "g") && (P += "g"),
-                (D = b(T, S.lastIndex)),
+                (w = b(T, S.lastIndex)),
                 S.lastIndex > 0 &&
                     (!S.multiline || (S.multiline && "\n" !== h(T, S.lastIndex - 1))) &&
-                    ((R = "(?: " + R + ")"), (D = " " + D), w++),
+                    ((R = "(?: " + R + ")"), (w = " " + w), D++),
                 (n = RegExp("^(?:" + R + ")", P))),
             v && (n = RegExp("^" + R + "$(?!\\s)", P)),
             y && (i = S.lastIndex),
-            (s = r(_, N ? n : S, D)),
+            (s = r(_, N ? n : S, w)),
             N
                 ? s
-                    ? ((s.input = b(s.input, w)),
-                      (s[0] = b(s[0], w)),
+                    ? ((s.input = b(s.input, D)),
+                      (s[0] = b(s[0], D)),
                       (s.index = S.lastIndex),
                       (S.lastIndex += s[0].length))
                     : (S.lastIndex = 0)

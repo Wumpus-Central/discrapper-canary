@@ -19,14 +19,14 @@ let g = function (e) {
         y = r.useCallback(() => {
             C ? (0, s.hk)(n.guild_id, () => a.default.selectVoiceChannel(n.id)) : a.default.selectVoiceChannel(n.id);
         }, [n.id, n.guild_id, C]),
-        v = 4 === b.length ? 2 : 3;
+        _ = 4 === b.length ? 2 : 3;
     return (0, i.jsxs)("div", {
         className: m.container,
         children: [
             (0, i.jsx)(p.Z, {}),
             (0, i.jsx)("div", {
                 className: m.tiles,
-                style: { maxWidth: 168 * v },
+                style: { maxWidth: 168 * _ },
                 children: b.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         d.ZP,

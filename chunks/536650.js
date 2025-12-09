@@ -38,7 +38,7 @@ function O(e) {
         N = i.useRef(null),
         P = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOW).hex(),
         R = (0, d.ZP)("number" == typeof O ? "" : O, null != P ? P : ""),
-        w = i.useMemo(() => {
+        D = i.useMemo(() => {
             var e, t;
             return null !=
                 (t =
@@ -54,7 +54,7 @@ function O(e) {
                 ? t
                 : R;
         }, [R, I]),
-        D = y(T),
+        w = y(T),
         x = y(A),
         L = i.useCallback(() => {
             var e, t, n;
@@ -62,7 +62,7 @@ function O(e) {
                 i = T.current,
                 a = C.current,
                 o = null == N ? void 0 : N.current,
-                l = parseInt(null != (e = null == D ? void 0 : D.height) ? e : ""),
+                l = parseInt(null != (e = null == w ? void 0 : w.height) ? e : ""),
                 c = parseInt(null != (t = null == x ? void 0 : x.height) ? t : "");
             if (null != r && null != i && null != a && !isNaN(l) && !isNaN(c)) {
                 let e = null != (n = r.scrollTop) ? n : 0,
@@ -75,12 +75,12 @@ function O(e) {
                     (i.style.backgroundColor = "color-mix(in oklab,"
                         .concat(R, " ")
                         .concat((1 - p) * 100, "%, ")
-                        .concat(w, ")")),
+                        .concat(D, ")")),
                     (a.style.opacity = "".concat(b(0, 1, p))),
                     (a.style.transform = "translateY(".concat(b(l / 4, 0, p), "px)")),
                     null != o && (o.style.opacity = "".concat(b(1, 0, p)));
             }
-        }, [w, R, null == x ? void 0 : x.height, I, v, null == D ? void 0 : D.height]);
+        }, [D, R, null == x ? void 0 : x.height, I, v, null == w ? void 0 : w.height]);
     return (
         i.useEffect(() => {
             L();

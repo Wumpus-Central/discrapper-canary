@@ -78,33 +78,33 @@ function f(e) {
             e !== R.current && ((R.current = e), S(e));
         }, []),
         C = i.useCallback((e) => {
-            e !== w.current && ((w.current = e), T(e));
+            e !== D.current && ((D.current = e), T(e));
         }, []),
         N = p || v,
         P = _ || I,
         R = i.useRef(null),
-        w = i.useRef(null),
-        D = i.useRef(E),
+        D = i.useRef(null),
+        w = i.useRef(E),
         x = null != h,
         L = d(h),
         j = d(f),
         M = d(g),
         k = i.useCallback(() => {
-            if (!R.current || !w.current) return;
+            if (!R.current || !D.current) return;
             let e = {
                 placement: t,
                 strategy: n,
                 middleware: y,
             };
             j.current && (e.platform = j.current),
-                (0, r.oo)(R.current, w.current, e).then((e) => {
+                (0, r.oo)(R.current, D.current, e).then((e) => {
                     let t = {
                         ...e,
                         isPositioned: !1 !== M.current,
                     };
                     U.current &&
-                        !l(D.current, t) &&
-                        ((D.current = t),
+                        !l(w.current, t) &&
+                        ((w.current = t),
                         a.flushSync(() => {
                             b(t);
                         }));
@@ -112,8 +112,8 @@ function f(e) {
         }, [y, t, n, j, M]);
     s(() => {
         !1 === g &&
-            D.current.isPositioned &&
-            ((D.current.isPositioned = !1),
+            w.current.isPositioned &&
+            ((w.current.isPositioned = !1),
             b((e) => ({
                 ...e,
                 isPositioned: !1,
@@ -130,7 +130,7 @@ function f(e) {
         [],
     ),
         s(() => {
-            if ((N && (R.current = N), P && (w.current = P), N && P)) {
+            if ((N && (R.current = N), P && (D.current = P), N && P)) {
                 if (L.current) return L.current(N, P, k);
                 k();
             }
@@ -138,7 +138,7 @@ function f(e) {
     let G = i.useMemo(
             () => ({
                 reference: R,
-                floating: w,
+                floating: D,
                 setReference: A,
                 setFloating: C,
             }),

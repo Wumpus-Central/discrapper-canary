@@ -42,15 +42,15 @@ function E(e) {
                       children: e,
                   }),
         R = null != v && v.length > 0,
-        w = (0, c.D)(t),
-        D = (0, d.Z)({
+        D = (0, c.D)(t),
+        w = (0, d.Z)({
             userId: t.id,
             guildId: n,
             pendingDisplayNameStyles: O,
         }),
-        x = null != D;
+        x = null != w;
     return (0, r.jsxs)("div", {
-        className: a()(g.container, { [g.bot]: null != w }, S),
+        className: a()(g.container, { [g.bot]: null != D }, S),
         children: [
             (0, r.jsxs)("div", {
                 className: g.usernameRow,
@@ -61,7 +61,7 @@ function E(e) {
                                   variant: N,
                                   children: (0, r.jsx)(p.Z, {
                                       userName: b,
-                                      displayNameStyles: D,
+                                      displayNameStyles: w,
                                       effectDisplayType: f.F.ANIMATED,
                                       textClassName: g.nicknameWithDisplayNameStyles,
                                       shouldWrap: !0,
@@ -76,9 +76,9 @@ function E(e) {
                                   children: b,
                               }),
                     ),
-                    null != w &&
+                    null != D &&
                         (0, r.jsx)(u.Z, {
-                            type: w,
+                            type: D,
                             verified: t.isVerifiedBot(),
                         }),
                     null != y &&
@@ -91,7 +91,7 @@ function E(e) {
             (0, r.jsxs)("div", {
                 className: a()(g.tags, {
                     [g.pronouns]: R,
-                    [g.bot]: null != w,
+                    [g.bot]: null != D,
                 }),
                 children: [
                     !t.isProvisional &&

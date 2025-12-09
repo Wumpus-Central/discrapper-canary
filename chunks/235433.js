@@ -31,16 +31,16 @@ function v(e) {
         } = (0, m.mD)(t, n),
         R = [];
     S && R.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE);
-    let [w, D] = (0, c.US)(R),
-        x = w === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
+    let [D, w] = (0, c.US)(R),
+        x = D === a.z.DISPLAY_NAME_STYLES_NEW_BADGE_PROFILE_PAGE,
         L = (0, i.useCallback)(() => {
-            D(E.L.TAKE_ACTION),
+            w(E.L.TAKE_ACTION),
                 p.default.track(g.rMx.DISPLAY_NAME_STYLES_FROM_SETTINGS),
                 (0, d.I)({
                     analyticsLocations: T,
                     guildId: n,
                 });
-        }, [T, D, n]),
+        }, [T, w, n]),
         j = (0, i.useCallback)(() => {
             (0, s.NI)(null), p.default.track(g.rMx.DISPLAY_NAME_STYLES_REMOVED);
         }, []),

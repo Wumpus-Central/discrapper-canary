@@ -42,8 +42,8 @@ let S = (e, t, n) => {
             { largeImage: C } = (0, f.rv)({ entry: n }),
             { primaryColor: N, secondaryColor: P } = (0, h.Z)(null == C ? void 0 : C.src),
             R = (0, a.e7)([s.default], () => s.default.locale),
-            w = (0, m.Z)(O.ABu.CRUNCHYROLL),
-            D = (0, p.ap)(n.extra.media_assets_large_text),
+            D = (0, m.Z)(O.ABu.CRUNCHYROLL),
+            w = (0, p.ap)(n.extra.media_assets_large_text),
             x = i.useCallback(
                 (e) => {
                     if (null != A && (null == C ? void 0 : C.src) != null)
@@ -53,12 +53,12 @@ let S = (e, t, n) => {
                             avatarSrc: A.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
                             description: S(n, t, A),
                             timestamp: (0, p.yh)(n, R),
-                            episodeDescription: D,
+                            episodeDescription: w,
                             colors: [N, P],
                             channelId: e,
                         });
                 },
-                [t, n, D, R, null == C ? void 0 : C.src, N, P, A],
+                [t, n, w, R, null == C ? void 0 : C.src, N, P, A],
             ),
             L = () => {
                 if (null == n.extra.url) return;
@@ -82,7 +82,7 @@ let S = (e, t, n) => {
                           title: n.extra.media_title,
                           subtitle: n.extra.media_subtitle,
                           headerIcons: (0, r.jsx)(y.Z, {
-                              onClick: w,
+                              onClick: D,
                               Icon: o.omf,
                               "aria-label": v.intl.string(v.t.jdJYXw),
                           }),

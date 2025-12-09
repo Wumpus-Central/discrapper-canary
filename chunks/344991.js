@@ -90,7 +90,7 @@ function S(e) {
         [T, A] = i.useState(!1),
         [C, N] = i.useState(!1),
         [P, R] = i.useState(new Map(null == g ? void 0 : g.map((e) => [e.value, e]))),
-        [w, D] = i.useState(new Set(P.keys())),
+        [D, w] = i.useState(new Set(P.keys())),
         [x, L] = i.useState(() => (null != g ? g : []).map((e) => e.value)),
         [j, M] = i.useState(0);
     i.useEffect(() => {
@@ -98,7 +98,7 @@ function S(e) {
         if (e.every((e) => x.includes(e)) && x.every((t) => e.includes(t))) return;
         L(e);
         let t = new Map(null == g ? void 0 : g.map((e) => [e.value, e]));
-        R(t), D(new Set(t.keys())), M((e) => e + 1);
+        R(t), w(new Set(t.keys())), M((e) => e + 1);
     }, [g, x]);
     let k = (0, f.CJ)();
     l()(null != k, "SearchableSelectActionComponent must be rendered inside a ComponentStateContext");
@@ -128,18 +128,18 @@ function S(e) {
             (null == U ? void 0 : U.type) === u.re.CHANNEL_SELECT
         ) {
             let e = new Map(U.selectedOptions.map((e) => [e.value, e]));
-            R(e), D(new Set(e.keys()));
+            R(e), w(new Set(e.keys()));
         }
     }, [U]);
     let W = i.useCallback(() => {
         G({
             type: b,
             selectedOptions: Array.from(P.values()),
-        }) && D(new Set(P.keys()));
+        }) && w(new Set(P.keys()));
     }, [G, b, P]);
     i.useEffect(() => {
-        !T && !C && ((P.size === w.size && Array.from(P.keys()).every((e) => w.has(e))) || W());
-    }, [T, C, w, P, W]);
+        !T && !C && ((P.size === D.size && Array.from(P.keys()).every((e) => D.has(e))) || W());
+    }, [T, C, D, P, W]);
     let K = (e) => {
             T || N(!0), R(new Map(e.map((e) => [e.value, e])));
         },

@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(580747),
     P = n(38618),
     R = n(375657),
-    w = n(171393),
-    D = n(398269),
+    D = n(171393),
+    w = n(398269),
     x = n(921801),
     L = n(857192),
     j = n(558724),
@@ -766,7 +766,7 @@ function el() {
             preventPopoutClose: L.default.preventPopoutClose,
             logKeyboardMismatches: L.default.logKeyboardMismatches,
         })),
-        u = (0, w.Z)("go_back_to_regular_input"),
+        u = (0, D.Z)("go_back_to_regular_input"),
         f = Z.zY.useSetting();
     return (0, r.jsxs)(m.C3N, {
         label: "Developer Flags",
@@ -961,7 +961,7 @@ function ef() {
                               children: (0, r.jsx)(m.Button, {
                                   variant: "primary",
                                   text: "Open Overlay",
-                                  onClick: () => (0, D.f)(),
+                                  onClick: () => (0, w.f)(),
                               }),
                           }),
                           (0, r.jsx)(x.F, {

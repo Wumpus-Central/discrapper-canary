@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(111248),
     C = n(312703),
     y = n(796638),
-    v = n(981631),
-    _ = n(354459),
+    _ = n(981631),
+    v = n(354459),
     O = n(394024),
     x = n(597843);
 function E(e) {
@@ -83,21 +83,21 @@ function I(e) {
             width: k,
             height: U,
             layout: V,
-            idle: H,
+            idle: B,
         } = e,
         F = h.Z.getVideoComponent(),
-        B = p.default.getId(),
-        [G, z] = r.useState(null),
-        W = (0, c.Z)(G),
+        H = p.default.getId(),
+        [G, W] = r.useState(null),
+        z = (0, c.Z)(G),
         [q, K] = r.useState(!0),
         [Y, X] = r.useState(!1),
-        J = R.type === _.fO.ACTIVITY,
+        J = R.type === v.fO.ACTIVITY,
         Q = (0, u.Z)(J ? R.applicationId : void 0),
         $ = !J && null != R.streamId,
         ee = U <= 2 * P + 144,
         et = L && !ee,
         en = (0, c.Z)(et),
-        ei = V === v.AEg.MINIMUM || V === v.AEg.NORMAL,
+        ei = V === _.AEg.MINIMUM || V === _.AEg.NORMAL,
         er = !ee && (!ei || J),
         el = (0, m.Z)(er, 100),
         ea = (null != (t = (0, c.Z)(R.id)) ? t : R.id) !== R.id,
@@ -121,7 +121,7 @@ function I(e) {
             clearTimeout(e);
         };
     }, []);
-    let ef = q || null == W,
+    let ef = q || null == z,
         em = ef ? "animate-never" : "animate-always",
         eg = (0, s.q_F)(
             {
@@ -129,9 +129,9 @@ function I(e) {
                 delay: ep || !et ? 0 : 100,
                 config: j(E({}, o.config.stiff), { clamp: !0 }),
                 onStart: () => X(!0),
-                onChange: () => f.S.dispatch(v.CkL.REMEASURE_TARGET),
+                onChange: () => f.S.dispatch(_.CkL.REMEASURE_TARGET),
                 onRest: () => {
-                    X(!1), f.S.dispatch(v.CkL.REMEASURE_TARGET);
+                    X(!1), f.S.dispatch(_.CkL.REMEASURE_TARGET);
                 },
             },
             em,
@@ -157,7 +157,7 @@ function I(e) {
             },
             em,
         ),
-        ev = (0, s.Yzy)(
+        e_ = (0, s.Yzy)(
             R,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
@@ -169,10 +169,10 @@ function I(e) {
             },
             em,
         ),
-        e_ = r.useCallback((e) => {
-            z(e), K(!1);
+        ev = r.useCallback((e) => {
+            W(e), K(!1);
         }, []),
-        eO = et ? [] : (0, C.n3)(T, R, B),
+        eO = et ? [] : (0, C.n3)(T, R, H),
         { visibleParticipants: ex, participantTileWidth: eE } = (0, y.ZB)(k, N);
     return (0, i.jsxs)("div", {
         className: a()(x.root, O.flexCenter, D),
@@ -191,7 +191,7 @@ function I(e) {
                                 children: (0, i.jsx)("div", {
                                     className: O.videoSizer,
                                     style: { aspectRatio: es },
-                                    children: ev((e, t, n) => {
+                                    children: e_((e, t, n) => {
                                         let { key: r } = n;
                                         return null != t
                                             ? (0, i.jsx)(
@@ -210,7 +210,7 @@ function I(e) {
                                                           onClick: l,
                                                           onDoubleClick: Z,
                                                           onContextMenu: I,
-                                                          onVideoResize: e_,
+                                                          onVideoResize: ev,
                                                           inCall: w,
                                                           popoutType: A,
                                                           controlsBottom: eh,
@@ -224,7 +224,7 @@ function I(e) {
                             }),
                             er
                                 ? (0, i.jsx)(o.animated.div, {
-                                      className: a()(x.actionRow, { [x.idle]: H }),
+                                      className: a()(x.actionRow, { [x.idle]: B }),
                                       style: { bottom: ey.value },
                                       children: (0, i.jsx)(d.Z, {
                                           channelId: M.id,

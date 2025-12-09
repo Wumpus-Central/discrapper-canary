@@ -39,10 +39,10 @@ function _(e) {
         }
         A(t ? "animateIn" : "animateOut");
     }, [t]);
-    let w = (e) => {
+    let D = (e) => {
             null != a && a(e);
         },
-        D = o()(p.checkboxOption, "string" == typeof T && p[T], "indicator" !== O && p.spacing),
+        w = o()(p.checkboxOption, "string" == typeof T && p[T], "indicator" !== O && p.spacing),
         x = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -106,7 +106,7 @@ function _(e) {
         });
     return m
         ? (0, r.jsx)("div", {
-              className: D,
+              className: w,
               "data-selected": t || void 0,
               "data-disabled": _ || void 0,
               children: x,
@@ -119,11 +119,11 @@ function _(e) {
                   inputRef: S,
                   "aria-labelledby": g,
                   isSelected: t,
-                  onChange: w,
+                  onChange: D,
                   isDisabled: _,
                   isReadOnly: m,
                   "data-mana-component": "checkbox",
-                  className: D,
+                  className: w,
                   value: String(b),
                   children: x,
               }),

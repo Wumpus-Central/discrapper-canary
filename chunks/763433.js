@@ -3,10 +3,10 @@ n.d(t, {
     r: () => m,
 });
 var r,
-    i = n(54381);
+    a = n(54381);
 n(473749);
-var a = n(120356),
-    l = n.n(a),
+var i = n(120356),
+    l = n.n(i),
     s = n(481060),
     o = n(410030),
     c = n(984370),
@@ -19,28 +19,28 @@ function h(e) {
             selectedTabId: t,
             handleTransition: n,
             tabs: r,
-            state: a = "DEFAULT",
+            state: i = "DEFAULT",
             onAvailableWidthChange: m,
             icon: h,
             children: g,
         } = e,
         f = (0, o.ZP)(),
         { enabled: _ } = (0, d.WX)({ location: "global_discovery_header_bar" });
-    return (0, i.jsx)(s.f6W, {
+    return (0, a.jsx)(s.f6W, {
         theme: f,
         children: (e) =>
-            (0, i.jsxs)(c.Z, {
+            (0, a.jsxs)(c.Z, {
                 className: l()(e, p.headerBar),
                 innerClassname: _ ? p.headerBarInner : void 0,
                 children: [
-                    "DEFAULT" === a &&
-                        (0, i.jsxs)(i.Fragment, {
+                    "DEFAULT" === i &&
+                        (0, a.jsxs)(a.Fragment, {
                             children: [
-                                (0, i.jsx)(h, {
+                                (0, a.jsx)(h, {
                                     color: "currentColor",
                                     size: "md",
                                 }),
-                                (0, i.jsx)(u.Z, {
+                                (0, a.jsx)(u.Z, {
                                     tabs: r,
                                     selectedTab: t,
                                     onTabSelect: n,
@@ -48,8 +48,8 @@ function h(e) {
                                 }),
                             ],
                         }),
-                    (0, i.jsx)("div", {
-                        className: l()(p.headerBarContent, { [p.headerBarSearchContent]: "SEARCH" === a }),
+                    (0, a.jsx)("div", {
+                        className: l()(p.headerBarContent, { [p.headerBarSearchContent]: "SEARCH" === i }),
                         children: g,
                     }),
                 ],

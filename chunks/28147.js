@@ -27,7 +27,7 @@ var r = n(54381),
     N = n(981631),
     P = n(388032),
     R = n(399235);
-function w(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function w(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -87,7 +87,7 @@ let j = Array(6)
     U = 4,
     G = 5;
 function Z(e) {
-    return (0, r.jsx)(B, D({}, e));
+    return (0, r.jsx)(B, w({}, e));
 }
 function B(e) {
     let { context: t, query: n, entrypoint: a, isScrollCloseToBottom: l } = e,
@@ -184,15 +184,15 @@ function F(e) {
         v = null != (t = (0, l.Z)(b)) ? t : b,
         S = i.useCallback(() => y((e) => !e), []),
         A = (null != (n = (0, l.Z)(s)) ? n : s)[0] !== s[0],
-        w = b && !A;
+        D = b && !A;
     i.useLayoutEffect(() => y(!1), [A]);
     let {
-        ref: D,
+        ref: w,
         isTransitioning: x,
         onTransitionEnd: L,
     } = (0, O.Z)({
         key: s,
-        isExpanded: w,
+        isExpanded: D,
         durationMs: 200,
         maxAnimationHeight: C.K7,
     });
@@ -205,8 +205,8 @@ function F(e) {
                 num: o.length,
             });
     }, [o.length, v, b]);
-    let j = w || x,
-        M = w ? I.Z.buttonTypes.VIEW_LESS : I.Z.buttonTypes.VIEW_MORE,
+    let j = D || x,
+        M = D ? I.Z.buttonTypes.VIEW_LESS : I.Z.buttonTypes.VIEW_MORE,
         k = j ? o : E;
     return (0, r.jsxs)("div", {
         children: [
@@ -217,7 +217,7 @@ function F(e) {
             }),
             (0, r.jsx)("div", {
                 className: R.sectionContentContainer,
-                ref: D,
+                ref: w,
                 onTransitionEnd: L,
                 children: k.map((e, t) => {
                     let { command: n, application: i, section: o } = e;
@@ -272,7 +272,7 @@ function V(e) {
         },
         children: (0, r.jsx)(
             b.kA,
-            L(D({}, e), {
+            L(w({}, e), {
                 tracksImpression: !1,
                 enableVideoBanner: !0,
             }),

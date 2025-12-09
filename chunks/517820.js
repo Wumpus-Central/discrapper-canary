@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(348238),
     P = n(83561),
     R = n(834129),
-    w = n(981631),
-    D = n(674563),
+    D = n(981631),
+    w = n(674563),
     x = n(388032),
     L = n(682392);
 function j(e, t, n) {
@@ -389,7 +389,7 @@ function Y(e) {
             });
     }
     function _() {
-        null != o && y.Z.open(o, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
+        null != o && y.Z.open(o, D.pNK.GUILD_AUTOMOD, void 0, D.KsC.AUTOMOD_MENTION_SPAM);
     }
     return (0, r.jsx)(W, {
         compact: a,
@@ -516,7 +516,7 @@ function K(e) {
                                     children: x.intl.string(x.t.hG1StD),
                                 }),
                                 (0, r.jsx)(_.Z, {
-                                    type: D.Hb.SYSTEM_DM,
+                                    type: w.Hb.SYSTEM_DM,
                                     className: L.systemTag,
                                 }),
                                 f &&

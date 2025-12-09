@@ -1,7 +1,7 @@
 n.d(t, { Z: () => O }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
 var r = n(54381),
-    i = n(473749),
-    a = n(442837),
+    a = n(473749),
+    i = n(442837),
     l = n(283836),
     s = n(374939),
     o = n(233374),
@@ -25,44 +25,44 @@ var r = n(54381),
     P = n(352677);
 let O = function (e) {
     let { applicationId: t, onSelectApplication: n, onScroll: O, initialTab: E, onButtonsVisibilityChange: N } = e,
-        T = i.useRef(null),
-        A = (0, a.e7)([u.Z], () => u.Z.getApplication(t)),
-        L = (0, a.e7)([u.Z], () => u.Z.getApplicationFetchState(t));
-    i.useEffect(() => {
+        T = a.useRef(null),
+        A = (0, i.e7)([u.Z], () => u.Z.getApplication(t)),
+        L = (0, i.e7)([u.Z], () => u.Z.getApplicationFetchState(t));
+    a.useEffect(() => {
         if (null != t && null == A) {
             let e = "true" === new URLSearchParams(location.search).get("preview") || void 0;
             d.i6(t, { noCache: e });
         }
     }, [t, A]),
-        i.useEffect(() => {
+        a.useEffect(() => {
             d.T4({ applicationId: t });
         }, [t]),
-        i.useEffect(() => () => N(!0), [N]);
+        a.useEffect(() => () => N(!0), [N]);
     let R = null == A ? void 0 : A.storefront_available,
-        [Z, w] = i.useState(null != E ? E : y.GlobalDiscoveryAppsSections.ABOUT),
-        D = i.useCallback(
+        [Z, w] = a.useState(null != E ? E : y.GlobalDiscoveryAppsSections.ABOUT),
+        D = a.useCallback(
             (e) => {
                 var t;
                 null == (t = T.current) || t.scrollTo({ to: 0 }), w(y.GlobalDiscoveryAppsSections.ABOUT), n(e);
             },
             [n],
         );
-    i.useEffect(() => {
+    a.useEffect(() => {
         (null == A ? void 0 : A.storefront_available) && null != t && (0, l.Z)(t);
     }, [null == A ? void 0 : A.storefront_available, t]);
     let k = (0, f.Uc)(),
-        M = (0, a.e7)([p.Z], () => p.Z.getFetchState({ applicationId: null == A ? void 0 : A.id })),
-        G = (0, a.e7)([p.Z], () => p.Z.getSimilarApplications({ applicationId: null == A ? void 0 : A.id })),
-        B = i.useMemo(() => (null == G ? void 0 : G.applications.slice(0, 3)), [G]),
+        M = (0, i.e7)([p.Z], () => p.Z.getFetchState({ applicationId: null == A ? void 0 : A.id })),
+        G = (0, i.e7)([p.Z], () => p.Z.getSimilarApplications({ applicationId: null == A ? void 0 : A.id })),
+        B = a.useMemo(() => (null == G ? void 0 : G.applications.slice(0, 3)), [G]),
         U = {
             displayedSimilarApplications: B,
             previousView: k,
         },
-        F = i.useRef(U);
-    i.useEffect(() => {
+        F = a.useRef(U);
+    a.useEffect(() => {
         F.current = U;
     }),
-        i.useEffect(() => {
+        a.useEffect(() => {
             let { displayedSimilarApplications: e, previousView: t } = F.current;
             (null == A ? void 0 : A.id) != null &&
                 M !== p.M.FETCHING &&
@@ -74,7 +74,7 @@ let O = function (e) {
                     suggested_application_ids: null == e ? void 0 : e.map((e) => e.id),
                 });
         }, [null == A ? void 0 : A.id, M]);
-    let H = i.useMemo(
+    let H = a.useMemo(
             () => [
                 {
                     id: y.GlobalDiscoveryAppsSections.ABOUT,
@@ -87,7 +87,7 @@ let O = function (e) {
             ],
             [],
         ),
-        z = i.useMemo(() => {
+        z = a.useMemo(() => {
             if (null == A) return null;
             switch (Z) {
                 case y.GlobalDiscoveryAppsSections.ABOUT:
@@ -96,7 +96,7 @@ let O = function (e) {
                     return (0, r.jsx)(j.Z, { application: A });
             }
         }, [Z, A]),
-        V = i.useCallback(
+        V = a.useCallback(
             (e) => {
                 (0, m.zZ)(I.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                     application_id: t,

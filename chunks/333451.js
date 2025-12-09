@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -75,7 +75,7 @@ function R(e, t) {
         e
     );
 }
-function w(e) {
+function D(e) {
     let { shouldUpsellFromNoneTier: t } = e,
         n = (0, s.e7)([E.default], () => E.default.locale);
     return (0, r.jsxs)("div", {
@@ -113,7 +113,7 @@ function w(e) {
         ],
     });
 }
-function D(e) {
+function w(e) {
     var t;
     let {
             premiumSubscriptionPlan: n,
@@ -125,7 +125,7 @@ function D(e) {
             analyticsSourceLocation: C,
             priceOptions: P,
         } = e,
-        { analyticsLocations: D, sourceAnalyticsLocations: x } = (0, f.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
+        { analyticsLocations: w, sourceAnalyticsLocations: x } = (0, f.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
         { theme: L } = (0, u.TCT)(),
         j = (0, l.ap)(L) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
         M = null == n || null == n.premiumSubscriptionType,
@@ -161,7 +161,7 @@ function D(e) {
                                     ? T.intl.string(T.t.AoSzEr)
                                     : T.intl.format(T.t["7vePZb"], { monthlyPrice: U }),
                         }),
-                        (0, r.jsx)(w, { shouldUpsellFromNoneTier: M }),
+                        (0, r.jsx)(D, { shouldUpsellFromNoneTier: M }),
                     ],
                 }),
                 (0, r.jsxs)(u.mzw, {
@@ -188,7 +188,7 @@ function D(e) {
                                             (0, _.Z)({
                                                 initialPlanId: null,
                                                 subscriptionTier: I.Si.TIER_2,
-                                                analyticsLocations: D,
+                                                analyticsLocations: w,
                                                 analyticsObject: R(N({}, y), {
                                                     section: S.jXE.PREMIUM_GUILD_PURCHASE_MODAL,
                                                 }),

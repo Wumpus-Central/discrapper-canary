@@ -88,9 +88,9 @@ function b(e) {
             children: N,
             renderLayer: P,
             viewportPadding: R = g,
-            trigger: w = "click",
+            trigger: D = "click",
         } = e,
-        D = i.useRef(null),
+        w = i.useRef(null),
         x = i.useMemo(() => {
             let e = [(0, a.cv)(v)];
             return (
@@ -132,7 +132,7 @@ function b(e) {
         }),
         Z = (0, o.bQ)(G),
         B = (0, o.XI)(G, {
-            enabled: "hover" === w,
+            enabled: "hover" === D,
             handleClose: (0, o.xp)({ blockPointerEvents: !0 }),
         }),
         { getReferenceProps: F, getFloatingProps: V } = (0, o.NI)([Z, B]),
@@ -163,7 +163,7 @@ function b(e) {
                                 ),
                                 {
                                     children: (0, r.jsx)(u.Jc, {
-                                        containerRef: D,
+                                        containerRef: w,
                                         children: P({
                                             placement: M,
                                             update: U,

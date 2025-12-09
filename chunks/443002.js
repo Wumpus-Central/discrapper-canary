@@ -27,8 +27,8 @@ var r = n(54381),
 let N = function (e) {
     let { analyticsLocation: t, guild: n, onClose: N } = e,
         [P, R] = i.useState(!0),
-        w = i.useRef(!1),
-        D = (0, c.Z)(() => Date.now()),
+        D = i.useRef(!1),
+        w = (0, c.Z)(() => Date.now()),
         { analyticsLocations: x } = (0, u.ZP)(),
         L = i.useRef(null),
         j = i.useRef(null),
@@ -49,13 +49,13 @@ let N = function (e) {
                     location_section: t.section,
                     location_object: t.object,
                     guild_id: n.id,
-                    duration_open_ms: Date.now() - D,
+                    duration_open_ms: Date.now() - w,
                 });
-        }, [N, t, x, D, n.id]),
+        }, [N, t, x, w, n.id]),
         G = i.useCallback(
             (e) => {
                 e &&
-                    !w.current &&
+                    !D.current &&
                     (h.default.track(T.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                         type: T.ZY5.PREMIUM_GUILD_USER_MODAL,
                         location_stack: x,
@@ -63,7 +63,7 @@ let N = function (e) {
                         location_object: t.object,
                         guild_id: n.id,
                     }),
-                    (w.current = !0));
+                    (D.current = !0));
             },
             [t, x, n.id],
         );

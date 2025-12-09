@@ -27,8 +27,8 @@ var r = n(278074),
     N = n(687516),
     P = n(539573),
     R = n(926526),
-    w = n(826581),
-    D = n(409059),
+    D = n(826581),
+    w = n(409059),
     x = n(264229),
     L = n(413605),
     j = n(366980),
@@ -111,7 +111,7 @@ function eR(e) {
     }
     return e;
 }
-function ew(e, t) {
+function eD(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -123,12 +123,12 @@ function ew(e, t) {
     }
     return n;
 }
-function eD(e, t) {
+function ew(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : ew(Object(t)).forEach(function (n) {
+            : eD(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -168,7 +168,7 @@ function eU(e) {
                 overrideProperties: s,
             });
         else if (t === v.g.TEMPLATE) {
-            let e = D.Z.getGuildTemplate(c);
+            let e = w.Z.getGuildTemplate(c);
             if (null == e || e.state === eA.Rj.RESOLVING) return;
             f.ZP.trackWithMetadata(eI.rMx.GUILD_TEMPLATE_LINK_SENT, {
                 guild_template_code: c,
@@ -258,7 +258,7 @@ function eG(e) {
                 (t.is_filtered = s.suggestionData.isFiltered)),
             (t.source = s.source)),
             (t = eR(
-                eD(eR({}, t), {
+                ew(eR({}, t), {
                     location: o,
                     invite_type: e,
                     invite_code: d.baseCode,
@@ -279,7 +279,7 @@ function eG(e) {
             ((e.invite_inviter_id = u.inviter.id),
             null != u.target_application && (e.application_id = u.target_application.id),
             (e = eR(
-                eD(eR({}, e), {
+                ew(eR({}, e), {
                     location: o,
                     invite_type: eI.dAT.FRIEND_INVITE,
                     invite_code: d.baseCode,
@@ -404,7 +404,7 @@ let eV = {
             });
             eH.receiveMessage(
                 e,
-                eD(eR({}, r), {
+                ew(eR({}, r), {
                     state: eI.yb.SENT,
                     channel_id: e,
                 }),
@@ -426,7 +426,7 @@ let eV = {
                 },
                 giftingPrompt: t,
             });
-            eH.receiveMessage(e, eD(eR({}, n), { state: eI.yb.SENT }), !0);
+            eH.receiveMessage(e, ew(eR({}, n), { state: eI.yb.SENT }), !0);
         },
         sendClydeError(e) {
             let t,
@@ -876,7 +876,7 @@ let eV = {
             let a = await (0, $.Z)(e);
             if (null != a) return eH.sendMessage(a, t, r, i);
             let o = null != (n = i.nonce) ? n : (0, F.r)();
-            i = eD(eR({}, i), { nonce: o });
+            i = ew(eR({}, i), { nonce: o });
             let s = () => eH._sendMessage(e, t, i),
                 l = k.ZP.backgroundify(s, void 0);
             return (G.Z.recordMessageSendAttempt(e, o, i), ed.Z.isReady(e))
@@ -979,7 +979,7 @@ let eV = {
                     validNonShortcutEmojis: [],
                     tts: i,
                 },
-                eD(eR({}, r), { stickerIds: t }),
+                ew(eR({}, r), { stickerIds: t }),
             );
         },
         sendGreetMessage(e, t) {
@@ -1031,7 +1031,7 @@ let eV = {
                     validNonShortcutEmojis: [],
                     invalidEmojis: [],
                 },
-                eD(eR({}, n), {
+                ew(eR({}, n), {
                     poll: t,
                     location: eC.dy.POLL_CREATION,
                 }),
@@ -1069,7 +1069,7 @@ let eV = {
                     location: A,
                     inviteAnalyticsMetadata: C,
                     stickerIds: N,
-                    confettiPotionData: D,
+                    confettiPotionData: w,
                     messageReference: x,
                     allowedMentions: L,
                     poll: j,
@@ -1176,7 +1176,7 @@ let eV = {
                 Y.Z.isEnabled() && (ey.message.has_poggermode_enabled = !0),
                 ea && (ey.message.with_checkpoint = !0),
                 null != U && (ey.message.content_inventory_entry = U),
-                null != D && ((ey.message.confetti_potion = (0, Q.vY)(D)), D.callback()),
+                null != w && ((ey.message.confetti_potion = (0, Q.vY)(w)), w.callback()),
                 null != z && z.length > 0 && (ey.message.attachments = z),
                 null != eo && (ey.message.message_id_from_notification_experiment = eo),
                 null != ee && ee.length > 0)
@@ -1256,7 +1256,7 @@ let eV = {
                                         q.LL.MessageSent,
                                     ));
                                 let i = eO.default.cast(e),
-                                    c = w.Z.getRequest(i);
+                                    c = D.Z.getRequest(i);
                                 if (null != c) {
                                     let { guildId: t, userId: n, applicationStatus: r } = c;
                                     (0, R.pL)({

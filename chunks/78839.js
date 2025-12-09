@@ -131,10 +131,10 @@ function R(e) {
         g = s.Q.createFromServer(t);
     }
 }
-function w() {
+function D() {
     T = !1;
 }
-function D(e) {
+function w(e) {
     let { subscription: t } = e;
     if (((v = !0), null != t)) {
         if (t.user_id !== l.default.getId()) {
@@ -263,8 +263,8 @@ let B = new Z(a.Z, {
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: P,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: L,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: R,
-    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: w,
-    BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: D,
+    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: D,
+    BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: w,
     BILLING_SUBSCRIPTION_RESET: k,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: x,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: j,

@@ -94,13 +94,13 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let w = 4,
-    D = 268,
+let D = 4,
+    w = 268,
     x = 2,
     L = (e) => {
         if (null == e) return 0;
         let { width: t } = e.getBoundingClientRect();
-        return t > 0 ? t + w : 0;
+        return t > 0 ? t + D : 0;
     };
 function j(e) {
     let {
@@ -119,7 +119,7 @@ function j(e) {
             null != t ? (T.current[e] = t) : delete T.current[e];
         },
         [R, j] = i.useState(f),
-        [M, k] = i.useState(D),
+        [M, k] = i.useState(w),
         [U, G] = i.useState(!1),
         Z = i.useRef(null),
         B = i.useRef(null),
@@ -132,9 +132,9 @@ function j(e) {
             let e = L(Z.current),
                 t = L(B.current),
                 n = [],
-                r = D - e - t;
+                r = w - e - t;
             for (let e = 0; e < x; e++) {
-                let t = e === x - 1 ? r : D;
+                let t = e === x - 1 ? r : w;
                 for (let e = 0, r = n.length; r < f.length; r++) {
                     let i = f[r],
                         a = T.current[i.id];
@@ -144,7 +144,7 @@ function j(e) {
                     }
                     let o = Math.min(a.getBoundingClientRect().width, t);
                     if (e + o > t) break;
-                    (e += o + w), n.push(i);
+                    (e += o + D), n.push(i);
                 }
             }
             j(n.length === R.length ? R : n), k(r), F.current++;
@@ -166,7 +166,7 @@ function j(e) {
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: U || i !== R.length - 1 ? D : M },
+                    style: { maxWidth: U || i !== R.length - 1 ? w : M },
                     disableBorderColor: !0,
                     ref: (t) => C(e.id, t),
                     onRemove: () => b(e),

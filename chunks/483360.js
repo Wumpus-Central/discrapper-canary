@@ -44,8 +44,8 @@ var i = n(658722),
     N = n(822179),
     P = n(926491),
     R = n(373228),
-    w = n(601070),
-    D = n(569471),
+    D = n(601070),
+    w = n(569471),
     x = n(675478),
     L = n(131704),
     j = n(345162),
@@ -148,8 +148,8 @@ let ey = new h.Z("AutocompleteUtils"),
     eN = 3,
     eP = 5,
     eR = 3,
-    ew = 11,
-    eD = 6,
+    eD = 11,
+    ew = 6,
     ex = 8,
     eL = 1,
     ej = 1000,
@@ -317,9 +317,9 @@ function e0(e) {
 function e1(e) {
     switch (e) {
         case R.MO.STICKER_NAME:
-            return ew;
-        case R.MO.CORRELATED_EMOJI:
             return eD;
+        case R.MO.CORRELATED_EMOJI:
+            return ew;
         case R.MO.TAG:
             return eL;
         case R.MO.GUILD_NAME:
@@ -595,11 +595,11 @@ let te = (0, ee.oH)((e, t, n) => {
                 null != r
                     ? s()(B.ZP.getChannels(r)[l])
                           .map((e) => e.channel)
-                          .concat(g ? (m ? U.Z.getAllThreadsForGuild(r) : w.Z.computeAllActiveJoinedThreads(r)) : [])
+                          .concat(g ? (m ? U.Z.getAllThreadsForGuild(r) : D.Z.computeAllActiveJoinedThreads(r)) : [])
                           .value()
                     : s()(U.Z.loadAllGuildAndPrivateChannelsFromDisk())
                           .values()
-                          .concat(g ? w.Z.computeAllActiveJoinedThreads() : [])
+                          .concat(g ? D.Z.computeAllActiveJoinedThreads() : [])
                           .value();
             let E = {},
                 b = [],
@@ -629,7 +629,7 @@ let te = (0, ee.oH)((e, t, n) => {
                         !(t.length > 1) &&
                         (1 !== t.length || t[0].isFullMatch || s) &&
                         (e4(l, e.type) && (c = Math.max(c - eC, eA / 2)),
-                        e.isThread() && (e.isActiveThread() || (c -= eN), D.Z.hasJoined(e.id) || (c -= eP)),
+                        e.isThread() && (e.isActiveThread() || (c -= eN), w.Z.hasJoined(e.id) || (c -= eP)),
                         (c = Math.min(
                             c + Math.min(null != (O = G.Z.getScoreWithoutFetchingLatest(e.id)) ? O : 0 / y, 1) * eR,
                             c >= eS ? eO : eS,

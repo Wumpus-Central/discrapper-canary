@@ -27,8 +27,8 @@ var r,
     N = n(592125),
     P = n(480294),
     R = n(831506),
-    w = n(430824),
-    D = n(496675),
+    D = n(430824),
+    w = n(496675),
     x = n(158776),
     L = n(699516),
     j = n(594174),
@@ -155,7 +155,7 @@ function es(e) {
 function el(e) {
     let t = M.Z.getVoiceStateForUser(e);
     return (null == t ? void 0 : t.channelId) != null &&
-        D.Z.canWithPartialContext(U.Plq.VIEW_CHANNEL, { channelId: t.channelId })
+        w.Z.canWithPartialContext(U.Plq.VIEW_CHANNEL, { channelId: t.channelId })
         ? t.channelId
         : null;
 }
@@ -222,8 +222,8 @@ function ef(e, t, n) {
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: N.Z,
                     VoiceStateStore: M.Z,
-                    PermissionStore: D.Z,
-                    GuildStore: w.Z,
+                    PermissionStore: w.Z,
+                    GuildStore: D.Z,
                 }) !== c.Fw.CAN_JOIN
             )
                 continue;
@@ -266,7 +266,7 @@ function ef(e, t, n) {
         let t = el(e.id),
             n = N.Z.getChannel(t),
             i = null != n ? n.getGuildId() : null,
-            o = w.Z.getGuild(i);
+            o = D.Z.getGuild(i);
         if ((B.has(i) && Z.has(t)) || null == n || null == o || n.id === o.afkChannelId)
             null == n && ((r = null), (U = !0));
         else {
@@ -424,7 +424,7 @@ function eC() {
 class eN extends (r = o.ZP.Store) {
     initialize() {
         this.syncWith([j.default, h.Z, x.Z, R.Z, M.Z, C.Z, L.Z, P.Z, O.Z], eI),
-            this.waitFor(h.Z, C.Z, N.Z, P.Z, R.Z, E.Z, w.Z, D.Z, x.Z, L.Z, O.Z, j.default, M.Z);
+            this.waitFor(h.Z, C.Z, N.Z, P.Z, R.Z, E.Z, D.Z, w.Z, x.Z, L.Z, O.Z, j.default, M.Z);
     }
     get currentActivityParties() {
         return q;

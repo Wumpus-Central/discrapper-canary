@@ -251,8 +251,8 @@ function P(e) {
             onFocusOverflow: N,
             onUserClick: P,
             onUserPopoutRequestClose: R,
-            "aria-label": w,
-            "aria-labelledby": D,
+            "aria-label": D,
+            "aria-labelledby": w,
             "aria-hidden": x,
         } = e,
         [L, j] = i.useState(!1),
@@ -263,8 +263,8 @@ function P(e) {
         Z = () =>
             (0, r.jsx)(u.VqE, {
                 className: h.popoutWrapper,
-                "aria-label": w,
-                "aria-labelledby": D,
+                "aria-label": D,
+                "aria-labelledby": w,
                 children: (0, r.jsx)(u.Ttm, {
                     className: h.scroller,
                     children: t.map((e) =>
@@ -345,8 +345,8 @@ function P(e) {
         ? null
         : (0, r.jsxs)("div", {
               role: "group",
-              "aria-label": w,
-              "aria-labelledby": D,
+              "aria-label": D,
+              "aria-labelledby": w,
               className: o()(c, h.avatars),
               "aria-hidden": x,
               children: [

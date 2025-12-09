@@ -34,11 +34,11 @@ function S(e) {
         hideTooltip: R = !1,
     } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
-    let w = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        D = (0, f.E)("ActivityStatus", S),
+    let D = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        w = (0, f.E)("ActivityStatus", S),
         x = (0, l.e7)([p.default], () => p.default.getId() === (null == t ? void 0 : t.id)),
         L = (0, l.e7)([d.Z], () =>
-            D
+            w
                 ? x
                     ? d.Z.getHangStatusActivity()
                     : null != n
@@ -63,9 +63,9 @@ function S(e) {
     let M = (null == t ? void 0 : t.bot) === !0,
         k = ((null == j ? void 0 : j.state) != null || null != L) && "xs" === A,
         U = () => {
-            if (null != w)
+            if (null != D)
                 return (0, r.jsx)(h.Z, {
-                    stream: w,
+                    stream: D,
                     game: null == n ? void 0 : n.find(c.Z),
                     textVariant: "text-".concat(A, "/medium"),
                     textClassName: I,

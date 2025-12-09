@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => H }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(566006),
     C = n(443877),
     y = n(490597),
-    v = n(216337),
-    _ = n(920888),
+    _ = n(216337),
+    v = n(920888),
     O = n(287151),
     x = n(501517),
     E = n(982168),
@@ -37,7 +37,7 @@ var i = n(54381),
     k = n(864309),
     U = n(319720),
     V = n(127947),
-    H = n(577650);
+    B = n(577650);
 function F(e) {
     let { channel: t } = e,
         l = t.isArchivedThread(),
@@ -75,12 +75,12 @@ function F(e) {
           })
         : null;
 }
-function B(e) {
+function H(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
         { ref: x, width: E } = (0, h.ZP)(),
         [S, k] = r.useState(3),
-        [B, G] = r.useState(!n),
-        [z, W] = (0, f.Z)(!1, 2000),
+        [H, G] = r.useState(!n),
+        [W, z] = (0, f.Z)(!1, 2000),
         q = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
         { firstMessage: K } = (0, M.cl)(q),
         Y = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)),
@@ -131,13 +131,13 @@ function B(e) {
                 postId: q.id,
                 location: { section: L.jXE.CHANNEL_HEADER },
             }),
-                (0, A.JG)((0, N.EO)(q, en), () => W(!0));
+                (0, A.JG)((0, N.EO)(q, en), () => z(!0));
         },
         eu = Y ? u.dz2 : u.Dkj;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: a()(U.container, { [U.header]: B }),
+                className: a()(U.container, { [U.header]: H }),
                 ref: x,
                 children: [
                     et
@@ -173,7 +173,7 @@ function B(e) {
                                               emojiSize: "reaction",
                                           }),
                                       }),
-                                  (0, i.jsx)(_.Z, {
+                                  (0, i.jsx)(v.Z, {
                                       message: K,
                                       channel: q,
                                       disableReactionCreates: !0,
@@ -192,7 +192,7 @@ function B(e) {
                                           message: K,
                                           channel: q,
                                           useChatFontScaling: !1,
-                                          className: a()(H.secondary, U.addReactButton, { [U.hasNoReactions]: !es }),
+                                          className: a()(B.secondary, U.addReactButton, { [U.hasNoReactions]: !es }),
                                           isForumToolbar: !0,
                                           children: !es && D.intl.string(D.t.xpOyTO),
                                       }),
@@ -219,7 +219,7 @@ function B(e) {
                                   }),
                             (0, i.jsx)(c.u, {
                                 text: D.intl.string(D.t.WqhZss),
-                                children: z
+                                children: W
                                     ? (0, i.jsx)(u.Button, {
                                           icon: u.dz2,
                                           size: "sm",
@@ -258,7 +258,7 @@ function B(e) {
                 ],
             }),
             er && (0, i.jsx)(g.Z, { threadId: t }),
-            (0, i.jsx)(v.Z, {
+            (0, i.jsx)(_.Z, {
                 channel: q,
                 isLastItem: l,
             }),

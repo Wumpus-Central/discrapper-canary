@@ -119,10 +119,10 @@ function y(e) {
         R = i.useCallback(() => {
             N(!1), null == S || S();
         }, [S]),
-        w = i.useCallback(() => {
+        D = i.useCallback(() => {
             N(!0), null == I || I();
         }, [I]),
-        D = i.useCallback(() => {
+        w = i.useCallback(() => {
             N(!1), null == T || T();
         }, [T]),
         x = (0, s.e7)([c.ZP], () => {
@@ -153,8 +153,8 @@ function y(e) {
             }),
             onFocus: P,
             onBlur: R,
-            onMouseOver: w,
-            onMouseLeave: D,
+            onMouseOver: D,
+            onMouseLeave: w,
             children: (0, r.jsx)(l.ZP, {
                 className: f.mask,
                 mask: O || (y && (a || C)) ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,

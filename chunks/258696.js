@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(897291),
     P = n(466711),
     R = n(319417),
-    w = n(728386),
-    D = n(763679),
+    D = n(728386),
+    w = n(763679),
     x = n(957825),
     L = n(564355);
 function j(e) {
@@ -130,7 +130,7 @@ function M(e) {
                 $.push({
                     key: "sticker",
                     node: (0, r.jsx)(
-                        w.Z,
+                        D.Z,
                         {
                             disabled: U,
                             type: M,
@@ -142,7 +142,7 @@ function M(e) {
             $.push({
                 key: "upload",
                 node: (0, r.jsx)(
-                    D.z,
+                    w.z,
                     {
                         disabled: U,
                         inputType: M,

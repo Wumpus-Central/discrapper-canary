@@ -1,9 +1,9 @@
 n.d(t, { default: () => x }), n(704826), n(35282);
 var a = n(54381);
 n(473749);
-var l = n(734610),
-    r = n(990547),
-    i = n(793030),
+var r = n(734610),
+    i = n(990547),
+    l = n(793030),
     s = n(481060),
     o = n(213609),
     c = n(528477),
@@ -22,7 +22,7 @@ function x(e) {
             shouldTrustUrl: S,
             setShouldTrustUrl: E,
             handleConfirm: O,
-            handleCancel: N,
+            handleCancel: T,
         } = (0, u.X)({
             url: t,
             trustUrl: n,
@@ -32,10 +32,10 @@ function x(e) {
         });
     return (
         (0, o.Z)({
-            type: r.ImpressionTypes.MODAL,
-            name: r.ImpressionNames.MASKED_LINK_MODAL,
+            type: i.ImpressionTypes.MODAL,
+            name: i.ImpressionNames.MASKED_LINK_MODAL,
         }),
-        (0, a.jsxs)(i.Modal, {
+        (0, a.jsxs)(l.Modal, {
             size: "md",
             transitionState: v,
             onClose: b,
@@ -45,7 +45,7 @@ function x(e) {
                 {
                     text: p.intl.string(p.t["/g10LC"]),
                     onClick: () => {
-                        N(),
+                        T(),
                             d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: S,
                                 action_type: "cancel",
@@ -100,7 +100,7 @@ function x(e) {
                         labelType: "secondary",
                     }),
                 }),
-                (0, a.jsx)(l.SV, {
+                (0, a.jsx)(r.SV, {
                     fallback: null,
                     children: (0, a.jsx)(c.n, { onClose: b }),
                 }),

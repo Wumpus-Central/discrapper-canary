@@ -114,8 +114,8 @@
                 N = T ? "b" : "β",
                 P = r.document || {},
                 R = r.operamini || r.opera,
-                w = c.test((w = a && R ? R["[[Class]]"] : E(R))) ? w : (R = null),
-                D = e,
+                D = c.test((D = a && R ? R["[[Class]]"] : E(R))) ? D : (R = null),
+                w = e,
                 x = [],
                 L = null,
                 j = e == s,
@@ -536,7 +536,7 @@
                 if (b(r, "global"))
                     if (
                         (T &&
-                            ((D = (t = T.lang.System).getProperty("os.arch")),
+                            ((w = (t = T.lang.System).getProperty("os.arch")),
                             (B = B || t.getProperty("os.name") + " " + t.getProperty("os.version"))),
                         A)
                     ) {
@@ -561,7 +561,7 @@
                                       (M = t.versions.nw))),
                             U ||
                                 ((U = "Node.js"),
-                                (D = t.arch),
+                                (w = t.arch),
                                 (B = t.platform),
                                 (M = (M = /[\d.]+/.exec(t.version)) ? M[0] : null)));
                 else
@@ -631,7 +631,7 @@
                       c.test(U)
                           ? (/\bIE\b/.test(t) && "Mac OS" == B && (B = null), (t = "identify" + t))
                           : ((t = "mask" + t),
-                            (U = w ? h(w.replace(/([a-z])([A-Z])/g, "$1 $2")) : "Opera"),
+                            (U = D ? h(D.replace(/([a-z])([A-Z])/g, "$1 $2")) : "Opera"),
                             /\bIE\b/.test(t) && (B = null),
                             j || (M = null)),
                       (k = ["Presto"]),
@@ -774,7 +774,7 @@
                             return this.family + (e && !n ? " " + e : "") + (64 == this.architecture ? " 64-bit" : "");
                         },
                     })),
-                (t = /\b(?:AMD|IA|Win|WOW|x86_|x)64\b/i.exec(D)) && !/\bi686\b/i.test(D)
+                (t = /\b(?:AMD|IA|Win|WOW|x86_|x)64\b/i.exec(w)) && !/\bi686\b/i.test(w)
                     ? (B && ((B.architecture = 64), (B.family = B.family.replace(RegExp(" *" + t), ""))),
                       U &&
                           (/\bWOW64\b/i.test(e) ||

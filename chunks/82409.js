@@ -34,8 +34,8 @@ var p = n(315174),
     A = n(982183),
     R = n(981631),
     D = n(388032),
-    M = n(567133);
-function L(e) {
+    L = n(567133);
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -225,12 +225,12 @@ function U(e) {
         $ = X === j.v8.DROPDOWN && c !== A.V5.ALL,
         ee = (0, A.H_)(c);
     return (0, r.jsx)("nav", {
-        className: o()(M.container, { [M.panelSpacing]: l }),
+        className: o()(L.container, { [L.panelSpacing]: l }),
         children: (0, r.jsxs)(u.y5t, {
             forceLevel: 1,
             component: (0, r.jsx)(
                 p.ZP,
-                ((t = L(
+                ((t = M(
                     {
                         hasSubheader: !0,
                         guild: ee,
@@ -264,7 +264,7 @@ function U(e) {
                 c === A.V5.ALL && (0, r.jsx)(W, { hideBanner: !B || c !== A.V5.ALL }),
                 $ && (0, r.jsx)(u.LZC, { size: 8 }),
                 (0, r.jsx)(T.Z, {
-                    className: M.messageList,
+                    className: L.messageList,
                     renderMessageGroup: H,
                     messages: c === A.V5.BOOKMARKS ? Y : q,
                     unreadMessages: c === A.V5.BOOKMARKS ? [] : Q,
@@ -278,7 +278,7 @@ function U(e) {
     });
 }
 function B(e) {
-    return (0, r.jsx)(C.HP, { children: (0, r.jsx)(U, L({}, e)) });
+    return (0, r.jsx)(C.HP, { children: (0, r.jsx)(U, M({}, e)) });
 }
 function F(e, t, n) {
     return i.useMemo(
@@ -312,14 +312,14 @@ function W(e) {
     let { hideBanner: t } = e,
         n = (0, P.d)((e) => e.shouldHide());
     return (0, r.jsx)("div", {
-        className: o()(M.caughtUpContainer, { [M.hide]: n || t }),
+        className: o()(L.caughtUpContainer, { [L.hide]: n || t }),
         children: (0, r.jsxs)("div", {
-            className: M.caughtUpContent,
+            className: L.caughtUpContent,
             children: [
                 (0, r.jsx)(u.Text, {
                     variant: "text-sm/medium",
                     color: "text-feedback-positive",
-                    className: M.caughtUpText,
+                    className: L.caughtUpText,
                     children: D.intl.string(D.t["6XMM+D"]),
                 }),
                 (0, r.jsx)(u.W6s, {

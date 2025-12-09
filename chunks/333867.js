@@ -103,8 +103,8 @@ function I(e) {
             variantsReturnStyle: P,
         } = e,
         R = !1,
-        w = (0, i.Z)(),
-        D = (e) => {
+        D = (0, i.Z)(),
+        w = (e) => {
             t = e;
         },
         x = m ? v : O,
@@ -135,7 +135,7 @@ function I(e) {
                 return (0, r.jsx)(
                     p.ZP,
                     E(h({}, i), {
-                        loadId: w,
+                        loadId: D,
                         skuId: f,
                         isGift: m,
                         giftMessage: g,
@@ -149,7 +149,7 @@ function I(e) {
                             (R = !0), null == T || T();
                         },
                         returnRef: n,
-                        onStepChange: D,
+                        onStepChange: w,
                     }),
                 );
             },
@@ -158,7 +158,7 @@ function I(e) {
                 onCloseCallback: () => {
                     R ||
                         d.default.track(_.rMx.PAYMENT_FLOW_CANCELED, {
-                            load_id: w,
+                            load_id: D,
                             payment_type: _.Zuq[_.GZQ.ONE_TIME],
                             location: C,
                             is_gift: m,

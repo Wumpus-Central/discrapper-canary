@@ -71,7 +71,7 @@ function v(e) {
         N = (0, l.e7)([m.Z], () => m.Z.getSavedCustomTheme()),
         P = C,
         R = C || null != N,
-        w = i.useMemo(() => {
+        D = i.useMemo(() => {
             let e, t;
             if (C) (e = a.colors), (t = a.gradientAngle);
             else {
@@ -84,7 +84,7 @@ function v(e) {
                 { background: "var(--background-gradient), ".concat(n) }
             );
         }, [C, a, N]),
-        D = R ? u.Z.unsafe_rawColors.WHITE_500.css : void 0,
+        w = R ? u.Z.unsafe_rawColors.WHITE_500.css : void 0,
         x = i.useCallback(() => {
             v && S(), null == n || n();
         }, [v, S, n]);
@@ -99,12 +99,12 @@ function v(e) {
                 className: o()(y.container, R && A, t && y.disabled),
                 showBadge: !1,
                 showLockedBadge: !1,
-                style: w,
+                style: D,
                 children: [
                     !I && !R && (0, r.jsx)(O, {}),
                     (0, r.jsx)("div", { className: y.borderOverlay }),
                     (0, r.jsx)(s.V3v, {
-                        color: D,
+                        color: w,
                         className: y.paletteIcon,
                     }),
                 ],

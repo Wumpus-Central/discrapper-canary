@@ -169,8 +169,8 @@ function O(e) {
         N = null != y,
         P = null != O,
         R = i.useId(),
-        w = "".concat(R, "-upper_badge_masks"),
-        D = "".concat(R, "-lower_badge_masks"),
+        D = "".concat(R, "-upper_badge_masks"),
+        w = "".concat(R, "-lower_badge_masks"),
         x = "".concat(R, "-blob_mask"),
         L = "".concat(R, "-stroke_mask"),
         j = "".concat(R, "-highlight_mask"),
@@ -219,7 +219,7 @@ function O(e) {
                                     }),
                                     null != y
                                         ? (0, r.jsx)("rect", {
-                                              id: w,
+                                              id: D,
                                               x: n - G + _,
                                               y: -_,
                                               width: G,
@@ -230,7 +230,7 @@ function O(e) {
                                         : null,
                                     null != O
                                         ? (0, r.jsx)("rect", {
-                                              id: D,
+                                              id: w,
                                               x: n - (M + 2 * _) + _,
                                               y: n - (k + 2 * _) + _,
                                               width: M + 2 * _,
@@ -261,13 +261,13 @@ function O(e) {
                                     }),
                                     N
                                         ? (0, r.jsx)("use", {
-                                              href: "#".concat(w),
+                                              href: "#".concat(D),
                                               fill: "black",
                                           })
                                         : null,
                                     P
                                         ? (0, r.jsx)("use", {
-                                              href: "#".concat(D),
+                                              href: "#".concat(w),
                                               fill: "black",
                                           })
                                         : null,
@@ -286,13 +286,13 @@ function O(e) {
                                           }),
                                           N
                                               ? (0, r.jsx)("use", {
-                                                    href: "#".concat(w),
+                                                    href: "#".concat(D),
                                                     fill: "black",
                                                 })
                                               : null,
                                           P
                                               ? (0, r.jsx)("use", {
-                                                    href: "#".concat(D),
+                                                    href: "#".concat(w),
                                                     fill: "black",
                                                 })
                                               : null,
@@ -310,8 +310,8 @@ function O(e) {
                                           (0, r.jsxs)("g", {
                                               className: c.focusFill,
                                               children: [
-                                                  null != y ? (0, r.jsx)("use", { href: "#".concat(w) }) : null,
-                                                  null != O ? (0, r.jsx)("use", { href: "#".concat(D) }) : null,
+                                                  null != y ? (0, r.jsx)("use", { href: "#".concat(D) }) : null,
+                                                  null != O ? (0, r.jsx)("use", { href: "#".concat(w) }) : null,
                                               ],
                                           }),
                                       ],

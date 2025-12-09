@@ -1,39 +1,39 @@
 n.d(t, {
-    F0: () => i,
+    F0: () => l,
     cN: () => s,
     vc: () => o,
 });
 var a,
-    l,
-    r = n(544891),
-    i =
+    r,
+    i = n(544891),
+    l =
         (((a = {})[(a.DEFAULT = 0)] = "DEFAULT"),
         (a[(a.SUCCESSFUL = 1)] = "SUCCESSFUL"),
         (a[(a.FAILURE = 2)] = "FAILURE"),
         (a[(a.NONE = 3)] = "NONE"),
         a),
     s =
-        (((l = {})[(l.REWIND = 1)] = "REWIND"),
-        (l[(l.RENEW = 2)] = "RENEW"),
-        (l[(l.CANCEL = 3)] = "CANCEL"),
-        (l[(l.UNCANCEL = 4)] = "UNCANCEL"),
-        (l[(l.TIME_TRAVEL = 5)] = "TIME_TRAVEL"),
-        (l[(l.RESET = 6)] = "RESET"),
-        (l[(l.PAY_INVOICE = 7)] = "PAY_INVOICE"),
-        (l[(l.END = 8)] = "END"),
-        (l[(l.RESUME = 9)] = "RESUME"),
-        l);
+        (((r = {})[(r.REWIND = 1)] = "REWIND"),
+        (r[(r.RENEW = 2)] = "RENEW"),
+        (r[(r.CANCEL = 3)] = "CANCEL"),
+        (r[(r.UNCANCEL = 4)] = "UNCANCEL"),
+        (r[(r.TIME_TRAVEL = 5)] = "TIME_TRAVEL"),
+        (r[(r.RESET = 6)] = "RESET"),
+        (r[(r.PAY_INVOICE = 7)] = "PAY_INVOICE"),
+        (r[(r.END = 8)] = "END"),
+        (r[(r.RESUME = 9)] = "RESUME"),
+        r);
 async function o(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { targetDate: a, paymentType: l, sendReminderEmail: i } = n;
+        { targetDate: a, paymentType: r, sendReminderEmail: l } = n;
     return (
-        await r.tn.post({
+        await i.tn.post({
             url: "/debug/subscriptions/".concat(e, "/transition"),
             body: {
                 target_datetime: null == a ? void 0 : a.toISOString(),
-                payment_type: null != l ? l : 0,
+                payment_type: null != r ? r : 0,
                 transition: t,
-                send_reminder_email: null != i && i,
+                send_reminder_email: null != l && l,
             },
             rejectWithError: !0,
         })

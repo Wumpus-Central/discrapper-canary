@@ -29,8 +29,8 @@ function C(e) {
         N = (0, _.q)(),
         P = m.h2.useSetting().includes(n),
         R = (0, l.LN)(),
-        w = m.mX.useSetting(),
-        D = m.zA.useSetting().includes(n),
+        D = m.mX.useSetting(),
+        w = m.zA.useSetting().includes(n),
         x = i.useCallback(
             (e) => {
                 let r = (0, f.gl)();
@@ -79,7 +79,7 @@ function C(e) {
             n === S.T
                 ? (0, r.jsx)(E.ZP, {
                       title: T.intl.string(T.t["3o2ojh"]),
-                      value: !N && !w,
+                      value: !N && !D,
                       onChange: (e) => j(e, !1),
                       disabled: N || R,
                       tooltipText: R ? T.intl.string(A.default["6Af/cw"]) : void 0,
@@ -87,7 +87,7 @@ function C(e) {
                   })
                 : (0, r.jsx)(E.ZP, {
                       title: T.intl.string(T.t["3o2ojh"]),
-                      value: !P && !D,
+                      value: !P && !w,
                       onChange: (e) => j(e, !0),
                       disabled: P,
                       note: C

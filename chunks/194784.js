@@ -52,9 +52,9 @@ function b(e, t, n) {
             onFocusWithinChange: e.onFocusChange,
         }),
         R = (0, _.q)(m(r.Z), "@react-aria/datepicker"),
-        w = "hour" === t.maxGranularity ? "selectedTimeDescription" : "selectedDateDescription",
-        D = "hour" === t.maxGranularity ? "time" : "date",
-        x = t.value ? R.format(w, { [D]: t.formatValue({ month: "long" }) }) : "",
+        D = "hour" === t.maxGranularity ? "selectedTimeDescription" : "selectedDateDescription",
+        w = "hour" === t.maxGranularity ? "time" : "date",
+        x = t.value ? R.format(D, { [w]: t.formatValue({ month: "long" }) }) : "",
         L = (0, o.P)(x),
         j =
             "presentation" === e[g]

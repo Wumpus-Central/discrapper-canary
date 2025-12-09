@@ -54,7 +54,7 @@ function R(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,12 +66,12 @@ function w(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -124,7 +124,7 @@ let M = i.forwardRef(function (e, t) {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                D(R({}, t), {
+                                w(R({}, t), {
                                     sourceAnalyticsLocations: l,
                                     prompt: a,
                                 }),
@@ -199,13 +199,13 @@ let M = i.forwardRef(function (e, t) {
             I = (0, O.yi)(),
             { trackUserProfileAction: P } = (0, y.KZ)(),
             R = (0, h.p)({ location: "CustomStatusBubble" }),
-            w = null != p ? A.Hp : 0,
-            D = A.hT + w,
-            x = A.YF + w,
+            D = null != p ? A.Hp : 0,
+            w = A.hT + D,
+            x = A.YF + D,
             L = i.useRef(null),
             M = i.useRef(null),
             k = i.useRef(null),
-            U = i.useRef(D),
+            U = i.useRef(w),
             G = i.useRef(x),
             Z = null != p && null == _,
             [B, F] = i.useState(!1),
@@ -232,8 +232,8 @@ let M = i.forwardRef(function (e, t) {
             W(t > e),
                 (U.current = e),
                 (G.current = t),
-                X({ maxHeight: "".concat(Math.min(V ? U.current : G.current, V ? D : x), "px") });
-        }, [K, _, p, X, V, D, x]);
+                X({ maxHeight: "".concat(Math.min(V ? U.current : G.current, V ? w : x), "px") });
+        }, [K, _, p, X, V, w, x]);
         let J = (e) => {
                 Y &&
                     (e
@@ -246,7 +246,7 @@ let M = i.forwardRef(function (e, t) {
                               },
                           })
                         : X({
-                              maxHeight: "".concat(Math.min(U.current, D), "px"),
+                              maxHeight: "".concat(Math.min(U.current, w), "px"),
                               delay: 0,
                           }),
                     z ? H(!e) : q.start(e ? A.zS : A.Sq, () => H(!e)));
@@ -382,7 +382,7 @@ let M = i.forwardRef(function (e, t) {
         let [l, c] = i.useState(!1);
         return (0, r.jsx)(
             k,
-            D(R({}, s), {
+            w(R({}, s), {
                 ref: t,
                 emoji: n,
                 text: a,
@@ -418,7 +418,7 @@ function G(e) {
             },
             [h],
         ),
-        w = (e) =>
+        D = (e) =>
             null == e
                 ? null
                 : null != e.id
@@ -426,7 +426,7 @@ function G(e) {
                   : E.ZP.translateSurrogatesToInlineEmoji(e.name),
         L = (e, t) => (null == e ? t : "".concat(e, " ").concat(t)),
         j = () => {
-            let e = w(t);
+            let e = D(t);
             return null == n ? e : L(e, n);
         };
     return (0, r.jsx)(v.Z, {
@@ -441,7 +441,7 @@ function G(e) {
         children: () =>
             (0, r.jsx)(
                 k,
-                D(R({}, c), {
+                w(R({}, c), {
                     ref: g,
                     emoji: t,
                     text: n,

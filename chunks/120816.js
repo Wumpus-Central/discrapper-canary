@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(539854), n(388685);
 var a,
-    l,
-    r = n(772848),
-    i = n(756647),
+    r,
+    i = n(772848),
+    l = n(756647),
     s = n(442837),
     o = n(570140),
     c = n(314897),
@@ -29,14 +29,14 @@ class f extends (a = s.ZP.Store) {
         return x;
     }
 }
-(l = "displayName") in f
-    ? Object.defineProperty(f, l, {
+(r = "displayName") in f
+    ? Object.defineProperty(f, r, {
           value: "AnalyticsLogStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (f[l] = "AnalyticsLogStore");
+    : (f[r] = "AnalyticsLogStore");
 let g = new f(o.Z, {
     TRACK: function (e) {
         let { event: t, properties: n, fingerprint: a } = e;
@@ -45,25 +45,25 @@ let g = new f(o.Z, {
                 key: (u++).toString(),
                 event: t,
                 properties: n,
-                fingerprint: null != a ? (0, i.s)(a) : c.default.getId(),
+                fingerprint: null != a ? (0, l.s)(a) : c.default.getId(),
                 timestamp: new Date(),
             }),
             p++,
             m.length > 500 && (m = m.slice(-Math.floor(250))));
     },
     TRACK_TRIGGER: function (e) {
-        let { experimentId: t, descriptor: n, exposureType: a, excluded: l, location: i, previouslyTracked: s } = e;
+        let { experimentId: t, descriptor: n, exposureType: a, excluded: r, location: l, previouslyTracked: s } = e;
         d.Z.isDeveloper &&
             x &&
             (h = [
                 ...h,
                 {
-                    key: (0, r.Z)(),
+                    key: (0, i.Z)(),
                     experimentId: t,
                     descriptor: n,
                     exposureType: a,
-                    excluded: l,
-                    location: i,
+                    excluded: r,
+                    location: l,
                     previouslyTracked: s,
                     timestamp: new Date(),
                 },

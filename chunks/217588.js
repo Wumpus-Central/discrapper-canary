@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(378233),
     P = n(419922),
     R = n(688179),
-    w = n(981631),
-    D = n(474936),
+    D = n(981631),
+    w = n(474936),
     x = n(388032),
     L = n(564651),
     j = n(975900);
@@ -107,9 +107,9 @@ let Z = 80,
         );
     };
 function z(e) {
-    I.default.track(w.rMx.PREMIUM_PROMOTION_OPENED, {
-        location_page: null != e.guild_id ? w.ZY5.GUILD_CHANNEL : w.ZY5.DM_CHANNEL,
-        location_section: w.jXE.STICKER_POPOUT,
+    I.default.track(D.rMx.PREMIUM_PROMOTION_OPENED, {
+        location_page: null != e.guild_id ? D.ZY5.GUILD_CHANNEL : D.ZY5.DM_CHANNEL,
+        location_section: D.jXE.STICKER_POPOUT,
     }),
         (0, y.z)();
 }
@@ -170,10 +170,10 @@ let Q = (e) => {
             i.useEffect(() => {
                 let { channel: e } = h.current;
                 I.default.track(
-                    w.rMx.OPEN_POPOUT,
+                    D.rMx.OPEN_POPOUT,
                     k(
                         {
-                            type: w.jXE.STICKER_POPOUT,
+                            type: D.jXE.STICKER_POPOUT,
                             guild_id: e.getGuildId(),
                             sticker_pack_id: n.pack_id,
                         },
@@ -248,8 +248,8 @@ let Q = (e) => {
             [K, Q] = i.useState(null),
             X = i.useMemo(
                 () => ({
-                    page: null != a.guild_id ? w.ZY5.GUILD_CHANNEL : w.ZY5.DM_CHANNEL,
-                    section: w.jXE.STICKER_POPOUT,
+                    page: null != a.guild_id ? D.ZY5.GUILD_CHANNEL : D.ZY5.DM_CHANNEL,
+                    section: D.jXE.STICKER_POPOUT,
                 }),
                 [a.guild_id],
             ),
@@ -265,7 +265,7 @@ let Q = (e) => {
             i.useEffect(() => {
                 let { stickerSourceGuild: e } = ee.current;
                 (async () => {
-                    (null == e || e.features.has(w.GuildFeatures.DISCOVERABLE)) && C(await (0, g.Z)(n.id)), R(!0);
+                    (null == e || e.features.has(D.GuildFeatures.DISCOVERABLE)) && C(await (0, g.Z)(n.id)), R(!0);
                 })();
             }, [n.id, B]);
         let et = n.guild_id === a.getGuildId(),
@@ -299,7 +299,7 @@ let Q = (e) => {
                 e();
             }, [N, A]),
             (0, p.ZP)(() => {
-                I.default.track(w.rMx.OPEN_POPOUT, k({ type: ei }, J));
+                I.default.track(D.rMx.OPEN_POPOUT, k({ type: ei }, J));
             }),
             !N)
         )
@@ -324,7 +324,7 @@ let Q = (e) => {
                             er &&
                                 (0, r.jsx)(O.Z, {
                                     className: j.ctaButton,
-                                    subscriptionTier: D.Si.TIER_2,
+                                    subscriptionTier: w.Si.TIER_2,
                                     size: u.zx.Sizes.SMALL,
                                     fullWidth: !0,
                                     textOptions: { textOverride: x.intl.string(x.t["gl/XHJ"]) },

@@ -18,14 +18,14 @@ var r = n(442837),
     C = n(482722);
 function y(e) {
     let { channelId: t, showProfile: n = !1, showTrailingDivider: y = !1 } = e,
-        v = p.default.cast(t),
+        _ = p.default.cast(t),
         {
-            joinRequest: _,
+            joinRequest: v,
             isModmin: O,
             guildId: x,
             maxMembers: E,
         } = (0, r.cj)([h.Z, u.Z, d.Z], () => {
-            let e = h.Z.getRequest(v),
+            let e = h.Z.getRequest(_),
                 t = u.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
@@ -41,11 +41,11 @@ function y(e) {
             rejectRequest: I,
             submitting: Z,
         } = (0, m.s)(
-            null == _ ? void 0 : _.guildId,
-            null == _ ? void 0 : _.userId,
-            null == _ ? void 0 : _.joinRequestId,
+            null == v ? void 0 : v.guildId,
+            null == v ? void 0 : v.userId,
+            null == v ? void 0 : v.joinRequestId,
         );
-    return null != _ && _.applicationStatus === f.wB.SUBMITTED && O
+    return null != v && v.applicationStatus === f.wB.SUBMITTED && O
         ? (0, i.jsxs)("div", {
               className: C.buttons,
               children: [
@@ -66,14 +66,14 @@ function y(e) {
                       size: "sm",
                       text: b.intl.string(b.t.hDtbsz),
                       onClick: I,
-                      disabled: Z || _.applicationStatus !== f.wB.SUBMITTED,
+                      disabled: Z || v.applicationStatus !== f.wB.SUBMITTED,
                   }),
                   n &&
                       (0, i.jsx)(a.Button, {
                           onClick: () => {
                               (0, s.openUserProfileModal)({
-                                  userId: _.userId,
-                                  guildId: _.guildId,
+                                  userId: v.userId,
+                                  guildId: v.guildId,
                               });
                           },
                           variant: "secondary",

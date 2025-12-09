@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(823188),
     P = n(611116),
     R = n(306066),
-    w = n(349803),
-    D = n(8231),
+    D = n(349803),
+    w = n(8231),
     x = n(864879),
     L = n(238649),
     j = n(47840),
@@ -84,9 +84,9 @@ let z = () => {
             null != eN &&
             null != eN.expires_at &&
             eN.trial_id !== F.a7,
-        ew = E.Z.getAlmostExpiringDiscountOffers([F.Si.TIER_2]).length > 0 && null != eP && null != eP.expires_at,
-        eD = eR ? eN.expires_at : ew ? eP.expires_at : null,
-        ex = eC === v.tE.HERO_COUNTDOWN && (eR || ew) && null != eD,
+        eD = E.Z.getAlmostExpiringDiscountOffers([F.Si.TIER_2]).length > 0 && null != eP && null != eP.expires_at,
+        ew = eR ? eN.expires_at : eD ? eP.expires_at : null,
+        ex = eC === v.tE.HERO_COUNTDOWN && (eR || eD) && null != ew,
         eL = (0, r.jsxs)("div", {
             className: o()(eA.container, eA.responsiveContainer, {
                 [eA.containerBackground]: eh || J,
@@ -133,7 +133,7 @@ let z = () => {
                                           ref: a,
                                           subscriptionTier: ef,
                                           isEligibleForBogoPromotion: ep,
-                                          offerExpiresAt: ex ? eD : null,
+                                          offerExpiresAt: ex ? ew : null,
                                       })
                                     : (0, r.jsx)(U.Z, {
                                           ref: a,
@@ -186,12 +186,12 @@ let z = () => {
                         (0, r.jsx)("div", {
                             className: eA.planComparisonTableContainer,
                             ref: eT.ref,
-                            children: eh ? (0, r.jsx)(M.Z, {}) : (0, r.jsx)(D.Z, {}),
+                            children: eh ? (0, r.jsx)(M.Z, {}) : (0, r.jsx)(w.Z, {}),
                         }),
                     ],
                 }),
                 !eh &&
-                    (0, r.jsx)(w.Z, {
+                    (0, r.jsx)(D.Z, {
                         isVisible: eg && es,
                         subscriptionTier: ef,
                         isApplicationHome: !0,

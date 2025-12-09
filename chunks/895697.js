@@ -32,8 +32,8 @@ function P(e) {
             currentUser: n,
             displayProfile: P,
             guild: R,
-            isHoveringOrFocusing: w,
-            onOpenProfile: D,
+            isHoveringOrFocusing: D,
+            onOpenProfile: w,
             channelId: x,
             onClose: L,
         } = e,
@@ -52,7 +52,7 @@ function P(e) {
             (0, r.jsx)(E.Z, {
                 user: t,
                 guildId: null == R ? void 0 : R.id,
-                onOpenProfile: D,
+                onOpenProfile: w,
                 nickname: j,
                 pronouns: null == P ? void 0 : P.pronouns,
                 tags: (0, r.jsx)(p.Z, {
@@ -66,15 +66,15 @@ function P(e) {
                         !U &&
                             (0, r.jsx)(O.Z, {
                                 userId: t.id,
-                                isVisible: w,
-                                onOpenProfile: D,
+                                isVisible: D,
+                                onOpenProfile: w,
                             }),
                     ],
                 }),
             }),
             (0, r.jsx)(I.Z, {
                 user: t,
-                onOpenProfile: (e) => (null == D ? void 0 : D({ section: e })),
+                onOpenProfile: (e) => (null == w ? void 0 : w({ section: e })),
             }),
             (0, r.jsxs)("div", {
                 className: C.buttons,
@@ -102,7 +102,7 @@ function P(e) {
                       user: t,
                       currentUser: n,
                       guildId: null == R ? void 0 : R.id,
-                      onOpenUserProfileModal: D,
+                      onOpenUserProfileModal: w,
                       onClose: L,
                   })
                 : (0, r.jsx)(_.Z, {

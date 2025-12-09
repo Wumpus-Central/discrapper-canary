@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => U }), n(388685), n(781311);
 var r = n(54381),
-    i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    a = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(392711),
     o = n(442837),
     c = n(481060),
@@ -36,10 +36,10 @@ var r = n(54381),
     k = n(388032),
     M = n(813525);
 function G(e) {
-    let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: a } = e,
+    let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: i } = e,
         s = (0, o.e7)([j.Z], () => j.Z.getApplication(t)),
-        [d, u] = i.useState(n),
-        m = i.useCallback(() => {
+        [d, u] = a.useState(n),
+        m = a.useCallback(() => {
             u(n);
         }, [n]);
     return (0, r.jsxs)("div", {
@@ -49,7 +49,7 @@ function G(e) {
                 className: M.detailHeaderSection,
                 children: (0, r.jsx)(p.Cm, {
                     icon: c.j9r,
-                    onClick: a,
+                    onClick: i,
                 }),
             }),
             (0, r.jsx)(c.Heading, {
@@ -78,10 +78,10 @@ function G(e) {
     });
 }
 function B() {
-    let e = i.useCallback(() => {
+    let e = a.useCallback(() => {
             (0, S.qF)();
         }, []),
-        t = i.useCallback(() => {
+        t = a.useCallback(() => {
             (0, S.rf)();
         }, []);
     return (0, r.jsxs)(c.qXd, {
@@ -121,21 +121,21 @@ function B() {
 let U = function () {
     var e;
     let t = (0, o.e7)([_.default], () => !_.default.isAuthenticated()),
-        { onScroll: n, scrollPosition: a, resetScrollPosition: j } = (0, d.M)(),
+        { onScroll: n, scrollPosition: i, resetScrollPosition: j } = (0, d.M)(),
         L = (0, E.Xh)(),
         U = (0, S.nu)(),
         F = (null == L ? void 0 : L.type) === E.m_.CATEGORY ? L.categoryId : void 0,
         { applicationId: H, section: z } = (null == L ? void 0 : L.type) === E.m_.APPLICATION ? L : {},
         { query: V, categoryId: Y } = (null == L ? void 0 : L.type) === E.m_.SEARCH ? L : {},
         W = (0, o.e7)([y.Z], () => y.Z.getCategories()),
-        X = i.useMemo(() => [(0, I.KQ)(), ...W], [W]),
-        K = i.useMemo(() => X.find((e) => e.id === Number(Y)), [X, Y]),
+        X = a.useMemo(() => [(0, I.KQ)(), ...W], [W]),
+        K = a.useMemo(() => X.find((e) => e.id === Number(Y)), [X, Y]),
         { tabs: q, selectedTab: Q, onSelectTab: J } = (0, O.i)(null == F ? void 0 : F.toString()),
-        [$, ee] = i.useState(!0),
+        [$, ee] = a.useState(!0),
         et = E.z8.useField("trackedOpenedFromExternalEntrypoint"),
         en = E.z8.useField("sessionId"),
         er = (0, o.e7)([b.default], () => b.default.getCurrentUser());
-    i.useEffect(() => {
+    a.useEffect(() => {
         if (!et && null == en) {
             let e = (0, g.PM)();
             x.default.track(D.rMx.APP_DIRECTORY_OPENED, {
@@ -151,15 +151,15 @@ let U = function () {
                 });
         }
     }, [en, et, null == er ? void 0 : er.id]),
-        i.useEffect(() => {
+        a.useEffect(() => {
             v.CP();
         }, []),
-        i.useEffect(() => {
+        a.useEffect(() => {
             U && v.g5();
         }, [U]),
-        i.useEffect(() => E.aQ.setState({ lastItem: L }), [L]);
-    let ei = null != H,
-        ea = (null == L ? void 0 : L.type) === E.m_.SEARCH,
+        a.useEffect(() => E.aQ.setState({ lastItem: L }), [L]);
+    let ea = null != H,
+        ei = (null == L ? void 0 : L.type) === E.m_.SEARCH,
         {
             searchQuery: el,
             onSearchTextChange: es,
@@ -177,30 +177,30 @@ let U = function () {
             searchBarState: ed,
             setSearchBarState: (e) => C.Z.setState({ searchBarState: e }),
         }),
-        eh = i.useCallback(
+        eh = a.useCallback(
             (e) => {
-                J(e), ea && eo(), j();
+                J(e), ei && eo(), j();
             },
-            [ea, eo, J, j],
+            [ei, eo, J, j],
         ),
-        eg = i.useCallback((e) => (0, N.ph)({ applicationId: e }), []),
-        ef = ei || ea,
-        e_ = i.useCallback(() => {
+        eg = a.useCallback((e) => (0, N.ph)({ applicationId: e }), []),
+        ef = ea || ei,
+        e_ = a.useCallback(() => {
             null != (0, E.Uc)() ? (0, f.op)() : (0, N.Yp)();
         }, []),
-        eb = i.useMemo(
+        eb = a.useMemo(
             () =>
                 (0, s.debounce)((e) => {
-                    let { scrollTop: t, offsetHeight: n, scrollHeight: r, location: i } = e;
+                    let { scrollTop: t, offsetHeight: n, scrollHeight: r, location: a } = e;
                     t > 0 &&
                         (0, S.zZ)(D.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
                             scroll_visible_percentile: (t + n) / r,
-                            current_page: i,
+                            current_page: a,
                         });
                 }, 200),
             [],
         ),
-        ex = i.useCallback(
+        ex = a.useCallback(
             (e, t) => {
                 n(e),
                     eb({
@@ -222,8 +222,8 @@ let U = function () {
                     (0, r.jsxs)(p.ZP, {
                         variant: ef ? p._6.RELATIVE : p._6.OVERLAY,
                         children: [
-                            !ef && (0, r.jsx)(p.z6, { scrollPosition: a }),
-                            ei
+                            !ef && (0, r.jsx)(p.z6, { scrollPosition: i }),
+                            ea
                                 ? (0, r.jsx)(G, {
                                       applicationId: H,
                                       hideDetailHeaderButtons: $,
@@ -231,13 +231,13 @@ let U = function () {
                                   })
                                 : (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          ea
+                                          ei
                                               ? (0, r.jsx)(p.Cm, {
                                                     icon: c.j9r,
                                                     onClick: e_,
                                                 })
                                               : (0, r.jsx)(p.aV, { icon: c.jje }),
-                                          ea
+                                          ei
                                               ? (0, r.jsx)(c.Heading, {
                                                     variant: "heading-lg/semibold",
                                                     color: "header-primary",
@@ -272,7 +272,7 @@ let U = function () {
                                   }),
                         ],
                     }),
-                    ei
+                    ea
                         ? (0, r.jsx)(A.Z, {
                               onScroll: (e) => ex(e, E.m_.APPLICATION),
                               onSelectApplication: eg,
@@ -280,7 +280,7 @@ let U = function () {
                               initialTab: z,
                               onButtonsVisibilityChange: ee,
                           })
-                        : ea
+                        : ei
                           ? (0, r.jsx)(Z.Z, {
                                 onSelectApplication: eg,
                                 onScroll: (e) => ex(e, E.m_.SEARCH),

@@ -120,7 +120,7 @@ let P = (e) => {
             ],
         });
     },
-    w = (e) => {
+    D = (e) => {
         let { userRecords: t } = e,
             n = t.length,
             i = n < 1 ? null : t[0],
@@ -152,7 +152,7 @@ let P = (e) => {
             ],
         });
     },
-    D = (e) => {
+    w = (e) => {
         let { analyticsLocations: t } = e;
         _.default.track(O.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, c.ZDy)(async () => {
@@ -197,7 +197,7 @@ let P = (e) => {
                                 className: S.expandedProgressBarHeader,
                                 children: (0, y.$s)({ hasSentAll: T }),
                             }),
-                            (0, r.jsx)(w, { userRecords: f }),
+                            (0, r.jsx)(D, { userRecords: f }),
                             (0, r.jsx)(c.Text, {
                                 variant: t ? "text-sm/normal" : "text-lg/medium",
                                 children: (0, y.Hg)({
@@ -213,7 +213,7 @@ let P = (e) => {
                                     "data-migration-pending": !0,
                                     className: S.expandedProgressBarSelectFriendsCTA,
                                     color: l.Tt.CUSTOM,
-                                    onClick: () => D({ analyticsLocations: C }),
+                                    onClick: () => w({ analyticsLocations: C }),
                                     onlyShineOnHover: !0,
                                     children: (0, r.jsxs)("div", {
                                         className: S.expandedProgressBarSelectFriendsCTAInner,

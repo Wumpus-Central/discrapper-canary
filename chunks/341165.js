@@ -73,10 +73,10 @@ function R(e) {
         (r = null != (t = o()(l()(u()(Object.values(b), "createdAt")))) ? t : null),
         (O = !1);
 }
-function w() {
+function D() {
     O = !0;
 }
-function D() {
+function w() {
     v = !0;
 }
 function x() {
@@ -132,8 +132,8 @@ let k = new M(f.Z, {
     INSTANT_INVITE_CREATE_SUCCESS: T,
     INSTANT_INVITE_CREATE_FAILURE: A,
     INSTANT_INVITE_REVOKE_SUCCESS: C,
-    FRIEND_INVITE_REVOKE_REQUEST: w,
-    FRIEND_INVITE_CREATE_REQUEST: D,
+    FRIEND_INVITE_REVOKE_REQUEST: D,
+    FRIEND_INVITE_CREATE_REQUEST: w,
     FRIEND_INVITES_FETCH_REQUEST: x,
     FRIEND_INVITES_FETCH_RESPONSE: L,
     INSTANT_INVITE_CLEAR: j,

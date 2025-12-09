@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
-    i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    a = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(21260),
     o = n(481060),
     c = n(393903),
@@ -10,17 +10,17 @@ var r = n(54381),
     u = n(388032),
     p = n(16617);
 function m(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: a } = e,
-        s = i.useMemo(
+    let { onTabSelect: t, tabs: n, selectedTab: i } = e,
+        s = a.useMemo(
             () =>
                 null !=
                 n.find((e) => {
                     let { id: t } = e;
-                    return t === a;
+                    return t === i;
                 }),
-            [a, n],
+            [i, n],
         ),
-        [c, m] = i.useState(!1),
+        [c, m] = a.useState(!1),
         h = (function (e) {
             let { selected: t, isHovered: n } = e;
             return n ? "text-strong" : t ? "text-brand" : "text-default";
@@ -35,16 +35,16 @@ function m(e) {
             selected: s,
             isHovered: c,
         }),
-        f = i.useCallback(() => m(!0), []),
-        _ = i.useCallback(() => m(!1), []),
-        b = i.useRef(null);
+        f = a.useCallback(() => m(!0), []),
+        _ = a.useCallback(() => m(!1), []),
+        b = a.useRef(null);
     return (0, r.jsx)(o.yRy, {
         targetElementRef: b,
         renderPopout: (e) => {
-            let { closePopout: i } = e;
+            let { closePopout: a } = e;
             return (0, r.jsx)(d.Z, {
-                selectedTab: a,
-                onClose: i,
+                selectedTab: i,
+                onClose: a,
                 tabs: n,
                 onTabSelect: t,
             });
@@ -52,8 +52,8 @@ function m(e) {
         position: "bottom",
         align: "left",
         children: (e, t) => {
-            var n, i;
-            let { isShown: a } = t;
+            var n, a;
+            let { isShown: i } = t;
             return (0, r.jsx)(
                 o.njP.Item,
                 ((n = (function (e) {
@@ -81,7 +81,7 @@ function m(e) {
                     }
                     return e;
                 })({}, e)),
-                (i = i =
+                (a = a =
                     {
                         id: "more",
                         look: "brand",
@@ -101,7 +101,7 @@ function m(e) {
                                     color: h,
                                     children: u.intl.string(u.t["UKOtz+"]),
                                 }),
-                                a
+                                i
                                     ? (0, r.jsx)(o.u04, {
                                           size: "xs",
                                           color: g,
@@ -114,7 +114,7 @@ function m(e) {
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -122,8 +122,8 @@ function m(e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(i)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                      })(Object(a)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
                 n),
             );
@@ -131,24 +131,24 @@ function m(e) {
     });
 }
 function h(e) {
-    let { className: t, selectedTab: n, tabs: a, onTabSelect: d, onAvailableWidthChange: u } = e,
-        [h, g] = i.useState(0),
-        f = i.useRef(h),
+    let { className: t, selectedTab: n, tabs: i, onTabSelect: d, onAvailableWidthChange: u } = e,
+        [h, g] = a.useState(0),
+        f = a.useRef(h),
         {
             lastVisibleIndex: _,
             onItemLayout: b,
             overflowItemsRef: x,
             itemWidthsRef: v,
         } = (0, s.zP)({
-            items: a,
+            items: i,
             itemGapPx: 20,
             maxLines: 1,
             containerWidth: h,
         }),
-        C = i.useMemo(() => a.slice(0, _ + 1), [_, a]),
-        j = i.useMemo(() => a.slice(_ + 1), [_, a]),
-        y = i.useRef(null),
-        I = i.useCallback(
+        C = a.useMemo(() => i.slice(0, _ + 1), [_, i]),
+        j = a.useMemo(() => i.slice(_ + 1), [_, i]),
+        y = a.useRef(null),
+        I = a.useCallback(
             (e) => {
                 let t = e.contentRect.width;
                 if (null == t || f.current === t) return;
@@ -167,7 +167,7 @@ function h(e) {
             (0, r.jsxs)("div", {
                 className: p.measurements,
                 children: [
-                    a.map((e, t) =>
+                    i.map((e, t) =>
                         (0, r.jsx)(
                             s.AJ,
                             {

@@ -66,7 +66,7 @@ let m = () =>
             A = (0, i.useMemo)(() => g(p, I), [p, I]),
             [C, N] = (0, i.useState)(!1),
             [P, R] = (0, i.useState)(!1),
-            [w, D] = (0, i.useState)(0.9 * l.D2),
+            [D, w] = (0, i.useState)(0.9 * l.D2),
             x = null === a;
         (0, i.useEffect)(() => {
             x &&
@@ -96,7 +96,7 @@ let m = () =>
             B = {
                 currentAnimationType: M,
                 animationTypeRef: U,
-                onSetAnimationDurationMS: D,
+                onSetAnimationDurationMS: w,
             };
         return (0, r.jsx)(s.P3F, {
             onClick: L ? void 0 : b,
@@ -121,7 +121,7 @@ let m = () =>
                         value: j,
                         onValueChange: Z,
                         onValueReached: G,
-                        targetTotalCounterTime: w,
+                        targetTotalCounterTime: D,
                         className: L ? f.counterLoading : void 0,
                     }),
                     E && (0, r.jsx)(m, {}),

@@ -19,8 +19,8 @@ var r = n(54381),
     E = n(388032),
     v = n(213301),
     S = n(290181),
-    O = n(250967),
-    x = n(182975),
+    x = n(250967),
+    O = n(182975),
     y = n(655603);
 let k = l.memo(function (e) {
     let { category: t, rewardSkuId: n } = e,
@@ -145,8 +145,8 @@ let k = l.memo(function (e) {
                                                                     analyticsLocations: [],
                                                                     overrideGraphic: {
                                                                         type: "video",
-                                                                        src: x.Z,
-                                                                        fallbackImageSrc: O.Z,
+                                                                        src: O.Z,
+                                                                        fallbackImageSrc: x.Z,
                                                                         loop: !0,
                                                                         loopAt: 6,
                                                                         aspectRatio: "16/9",

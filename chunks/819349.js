@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(341165),
     C = n(496675),
     y = n(626135),
-    v = n(415397),
-    _ = n(771027),
+    _ = n(415397),
+    v = n(771027),
     O = n(981631),
     x = n(388032),
     E = n(108426),
@@ -68,11 +68,11 @@ function I(e) {
     let R = (0, c.e7)([C.Z], () => C.Z.can(O.Plq.CREATE_INSTANT_INVITE, t), [t]),
         [L, D] = r.useState(null),
         [k, U] = r.useState(!1),
-        [V, H] = r.useState("unknown"),
+        [V, B] = r.useState("unknown"),
         F = r.useRef(null),
-        { isHoveringOrFocusing: B } = (0, _.Tu)(null == L ? F : l),
-        [G, z] = r.useState(!1),
-        W = B || G,
+        { isHoveringOrFocusing: H } = (0, v.Tu)(null == L ? F : l),
+        [G, W] = r.useState(!1),
+        z = H || G,
         q = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
@@ -102,7 +102,7 @@ function I(e) {
         }),
         Y = r.useCallback(function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-            U(!0), H(e);
+            U(!0), B(e);
         }, []),
         X = r.useCallback(
             () => (
@@ -129,12 +129,12 @@ function I(e) {
         );
     (0, h.ZP)(X),
         r.useEffect(() => {
-            if (!W) {
+            if (!z) {
                 X(), J();
                 return;
             }
             null != T.current && clearTimeout(T.current), null != N.current && clearTimeout(N.current), Z(!0);
-        }, [W, X, J]),
+        }, [z, X, J]),
         r.useEffect(() => {
             !(async function () {
                 var e, n, i;
@@ -155,7 +155,7 @@ function I(e) {
             Z(!0);
         }, []),
         $ = r.useCallback(() => {
-            Z(!1), z(!1);
+            Z(!1), W(!1);
         }, []);
     return null == L
         ? null
@@ -168,12 +168,12 @@ function I(e) {
               popoutKey: "voice-invite-suggestions-button",
               renderPopout: (e) =>
                   (0, i.jsx)(
-                      v.B,
+                      _.B,
                       S(
                           {
                               channel: t,
                               inviteKey: L,
-                              onHoverOrFocus: z,
+                              onHoverOrFocus: W,
                           },
                           e,
                       ),
@@ -208,7 +208,7 @@ function I(e) {
                                                   (0, i.jsxs)(
                                                       "svg",
                                                       {
-                                                          className: a()(E.timer, { [E.paused]: W }),
+                                                          className: a()(E.timer, { [E.paused]: z }),
                                                           viewBox: "0 0 ".concat(24, " ").concat(24),
                                                           style: {
                                                               "--custom-voice-invite-suggestions-timer-duration": 10000,
@@ -239,7 +239,7 @@ function I(e) {
                                                   children: x.intl.string(x.t["EE+P0H"]),
                                               }),
                                           }),
-                                          B
+                                          H
                                               ? (0, i.jsx)(d.P3F, {
                                                     className: E.close,
                                                     onClick: () => Y("user_explicit"),

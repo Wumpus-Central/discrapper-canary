@@ -75,8 +75,8 @@ let m = null,
     N = [],
     P = null,
     R = null,
-    w = {},
-    D = {};
+    D = {},
+    w = {};
 function x() {
     var e, t, n, r;
     return (null == (t = window) || null == (e = t.location) ? void 0 : e.pathname) === u.ix.FAMILY_CENTER_MY_FAMILY
@@ -133,17 +133,17 @@ function U(e, t) {
     );
 }
 function G(e) {
-    D = e.reduce((e, t) => {
+    w = e.reduce((e, t) => {
         var n;
         return _(f({}, e), {
             [t.id]: _(f({}, (0, o.dangerouslyConstructGuildRecordFromUntypedObject)(t)), {
                 approximateMemberCount: null != (n = t.approximate_member_count) ? n : 0,
             }),
         });
-    }, D);
+    }, w);
 }
 function Z(e) {
-    w = e.reduce((e, t) => {
+    D = e.reduce((e, t) => {
         if (null != t.invoice_items && t.invoice_items.length > 0) {
             let n = t.invoice_items[0],
                 r = n.sku_id,
@@ -297,7 +297,7 @@ function er() {
         (g = {}),
         (b = L()),
         (y = j()),
-        (D = {}),
+        (w = {}),
         (I = !1),
         (T = null),
         (v = x()),
@@ -306,7 +306,7 @@ function er() {
         (N = []),
         (P = null),
         (R = null),
-        (w = {});
+        (D = {});
 }
 class ei extends i.Z {
     initialize() {
@@ -323,7 +323,7 @@ class ei extends i.Z {
                 linkedUsers: Object.values(g),
                 teenActivityTotals: et(),
                 teenActivity: ee(),
-                guilds: Object.values(D),
+                guilds: Object.values(w),
             },
         };
     }
@@ -352,7 +352,7 @@ class ei extends i.Z {
         return O;
     }
     getGuild(e) {
-        return D[e];
+        return w[e];
     }
     getSelectedTab() {
         return v;
@@ -385,7 +385,7 @@ class ei extends i.Z {
         return R;
     }
     getPurchaseInfo(e) {
-        return w[e];
+        return D[e];
     }
     canRefetch() {
         return null === T || s.default.age(T) > u.Of;

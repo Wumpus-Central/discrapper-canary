@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(880831),
     C = n(774168),
     y = n(871499),
-    v = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    v = n(388032);
 function O(e) {
     let t = (0, s.e7)([m.Z], () => !(0, o.isEmpty)(m.Z.getTypingUsers(e)), [e]),
         n = (0, s.e7)([f.Z], () => f.Z.getVoiceChannelId() === e, [e]),
@@ -133,7 +133,7 @@ function E(e) {
             null == (e = P.current) || e.focus();
         }, []);
     (0, g.yp)({
-        event: v.CkL.FOCUS_CHAT_BUTTON,
+        event: _.CkL.FOCUS_CHAT_BUTTON,
         handler: S ? null : M,
     });
     let [R, L] = r.useState(!1),
@@ -141,7 +141,7 @@ function E(e) {
             f && L(!0);
         }, [f]);
     (0, g.yp)({
-        event: v.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+        event: _.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
         handler: D,
     }),
         r.useEffect(() => {
@@ -156,10 +156,10 @@ function E(e) {
                 }
             );
         }, [R]);
-    let k = [(t = f && S ? _.intl.string(_.t.DPgc5h) : I ? _.intl.string(_.t.nthdxB) : _.intl.string(_.t["5KxXrK"]))];
+    let k = [(t = f && S ? v.intl.string(v.t.DPgc5h) : I ? v.intl.string(v.t.nthdxB) : v.intl.string(v.t["5KxXrK"]))];
     return (
-        N > 0 && k.push(_.intl.formatToPlainString(_.t["3l1GOx"], { mentionCount: N })),
-        T > 0 && k.push(_.intl.string(_.t.x5zAGZ)),
+        N > 0 && k.push(v.intl.formatToPlainString(v.t["3l1GOx"], { mentionCount: N })),
+        T > 0 && k.push(v.intl.string(v.t.x5zAGZ)),
         (0, i.jsx)(
             y.Z,
             (function (e) {

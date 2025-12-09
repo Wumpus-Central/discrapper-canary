@@ -40,7 +40,7 @@ function p(e) {
             },
             e,
         ),
-        { trackView: y, trackClick: b } = (0, c.R)(m, { notif_type: m });
+        { trackView: _, trackClick: y } = (0, c.R)(m, { notif_type: m });
     return {
         icon: s,
         title: p,
@@ -55,17 +55,17 @@ function p(e) {
                 children: u.intl.string(u.t["9MyuT0"]),
             }),
         onNotificationShow: () => {
-            y();
+            _();
         },
         onNotificationClick: (e, n) => {
-            b("unlock"),
+            y("unlock"),
                 t === d.nc.NEWS && r.Z.updateNotificationStatus(n),
                 o.default.isOverlayOOPEnabledForPid((0, a.getPID)())
                     ? r.Z.setInputLocked(!1, (0, a.getPID)())
                     : l.default.isInstanceLocked() && r.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            b("dismiss");
+            y("dismiss");
         },
     };
 }

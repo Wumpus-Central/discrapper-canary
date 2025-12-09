@@ -1,4 +1,4 @@
-n.d(t, { M: () => _ }), n(388685);
+n.d(t, { M: () => v }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(286379),
@@ -16,7 +16,7 @@ var i = n(54381),
     b = n(134612),
     C = n(981631),
     y = n(388032);
-function v(e) {
+function _(e) {
     let { senderId: t, channelId: n, warningId: l } = e,
         { isIgnored: o } = (0, a.cj)([p.Z], () => ({ isIgnored: p.Z.isIgnored(t) }), [t]),
         c = r.useCallback(() => {
@@ -46,12 +46,12 @@ function v(e) {
         onButtonPress: o ? u : c,
     });
 }
-function _(e) {
-    let { channelId: t, warningId: _, senderId: O } = e,
+function v(e) {
+    let { channelId: t, warningId: v, senderId: O } = e,
         { isBlocked: x } = (0, a.cj)([p.Z], () => ({ isBlocked: p.Z.isBlocked(O) }), [O]),
         E = r.useCallback(() => {
-            (0, h.T)(t, [_]);
-        }, [t, _]),
+            (0, h.T)(t, [v]);
+        }, [t, v]),
         j = (0, b.C2)(),
         S = r.useCallback(
             (e) => () => {
@@ -60,23 +60,23 @@ function _(e) {
                 }),
                     (0, m.qc)({
                         channelId: t,
-                        warningId: _,
+                        warningId: v,
                         senderId: O,
                         warningType: f.pj.STRANGER_DANGER,
                         cta: e,
                     });
             },
-            [E, t, _, O],
+            [E, t, v, O],
         );
     r.useEffect(() => {
         (0, m.MC)(C.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
-            warningId: _,
+            warningId: v,
             senderId: O,
             warningType: f.pj.STRANGER_DANGER,
         }),
             c.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
-    }, [t, _, O]);
+    }, [t, v, O]);
     let P = () => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("59385").then(n.bind(n, 480884));
@@ -86,7 +86,7 @@ function _(e) {
                         transitionState: r,
                         onClose: l,
                         channelId: t,
-                        warningId: _,
+                        warningId: v,
                         senderId: O,
                         description: y.intl.string(y.t.DJMZX6),
                         safetyTipRows: j.map((e, t) =>
@@ -103,11 +103,11 @@ function _(e) {
                         actionRows: (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(
-                                    v,
+                                    _,
                                     {
                                         senderId: O,
                                         channelId: t,
-                                        warningId: _,
+                                        warningId: v,
                                     },
                                     "more-tips-button",
                                 ),
@@ -170,7 +170,7 @@ function _(e) {
                                     null == l || l(),
                                         (0, m.qc)({
                                             channelId: t,
-                                            warningId: _,
+                                            warningId: v,
                                             senderId: O,
                                             warningType: f.pj.STRANGER_DANGER,
                                             cta: r,
@@ -196,7 +196,7 @@ function _(e) {
         };
     return (0, i.jsx)(g.Q, {
         channelId: t,
-        warningId: _,
+        warningId: v,
         senderId: O,
         warningType: f.pj.STRANGER_DANGER,
         header: y.intl.string(y.t.iOkDpM),
@@ -210,7 +210,7 @@ function _(e) {
                     P(),
                         (0, m.qc)({
                             channelId: t,
-                            warningId: _,
+                            warningId: v,
                             senderId: O,
                             warningType: f.pj.STRANGER_DANGER,
                             cta: m.NM.OPEN_MORE_TIPS,

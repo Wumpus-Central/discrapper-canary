@@ -1,6 +1,6 @@
 n.d(t, {
-    S: () => w,
-    Z: () => D,
+    S: () => D,
+    Z: () => w,
 }),
     n(704826),
     n(35282),
@@ -40,7 +40,7 @@ function R(e) {
         ? "ms-settings:camera" + (null != e ? "?cameraId=".concat(encodeURIComponent(e.replace(C, N))) : "")
         : "";
 }
-function w() {
+function D() {
     let [e, t] = i.useState(!1),
         n = (0, s.e7)([E.Z], () => E.Z.isMediaFilterSettingLoading());
     return (i.useEffect(() => {
@@ -61,7 +61,7 @@ function w() {
           })
         : null;
 }
-function D(e) {
+function w(e) {
     let {
             hideDeviceSelector: t = !1,
             hideDeviceHeader: n = !1,
@@ -75,8 +75,8 @@ function D(e) {
         } = e,
         { analyticsLocations: C } = (0, f.ZP)(),
         { id: N } = (0, _.p6)(S.h7.VIDEO_INPUT),
-        w = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
-        D = h.qF.useSetting();
+        D = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
+        w = h.qF.useSetting();
     return (0, r.jsxs)(c.Kqy, {
         gap: 20,
         children: [
@@ -94,7 +94,7 @@ function D(e) {
                 : (0, r.jsx)(c.rsf, {
                       label: I.intl.string(I.t["3Ppr1h"]),
                       description: I.intl.string(I.t.WNbX4O),
-                      checked: D,
+                      checked: w,
                       onChange: (e) => {
                           h.qF.updateSetting(e),
                               b.default.track(O.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
@@ -119,7 +119,7 @@ function D(e) {
                                 : void 0,
                         deviceType: S.h7.VIDEO_INPUT,
                         location: "CameraSettings",
-                        isDisabled: !w,
+                        isDisabled: !D,
                         showAllDevices: !0,
                     }),
                 }),

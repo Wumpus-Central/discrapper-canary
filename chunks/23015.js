@@ -29,7 +29,7 @@ function h(e) {
         { enabled: N } = l.Q.useConfig({ location: "rich_presence_spotify_invite" }),
         P = (0, f.g)(I, O),
         R = (0, u.Lz)(O, b.author, "Invite Embed"),
-        w = i.useMemo(() => {
+        D = i.useMemo(() => {
             let e = [];
             if (!P) {
                 var t;
@@ -45,7 +45,7 @@ function h(e) {
             }
             return e;
         }, [P, R]),
-        D =
+        w =
             null != O && null != O.details && null != O.state
                 ? _.intl.formatToPlainString(_.t.JCvHtx, {
                       track: O.details,
@@ -100,10 +100,10 @@ function h(e) {
         );
     return (0, r.jsx)(o.W, {
         header: y,
-        title: D,
+        title: w,
         iconSrc: null != (g = (0, d.Z)(O, E.id)) ? g : void 0,
         info: j,
-        actions: w,
+        actions: D,
         onClickContent: T,
         trackingConfig: {
             id: E.id,

@@ -88,12 +88,12 @@ function P(e) {
 function R() {
     A(!1, !1);
 }
-function w(e) {
+function D(e) {
     let { idle: t } = e;
     if (!t) return !1;
     A(!1, !0);
 }
-function D() {
+function w() {
     T.reset();
 }
 function x(e) {
@@ -211,8 +211,8 @@ let q = new z(l.Z, {
     CONNECTION_OPEN: P,
     CONNECTION_RESUMED: P,
     CONNECTION_CLOSED: R,
-    IDLE: w,
-    LOGOUT: D,
+    IDLE: D,
+    LOGOUT: w,
     VOICE_CHANNEL_SELECT: F,
     CHANNEL_SELECT: F,
     GUILD_CREATE: x,

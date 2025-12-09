@@ -136,7 +136,7 @@ function R() {
             g.fy.AUTOMATED,
         );
 }
-function w(e, t, n, r) {
+function D(e, t, n, r) {
     var i;
     let a = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
         o = (0, h.z)(n);
@@ -151,7 +151,7 @@ function w(e, t, n, r) {
         !0
     );
 }
-function D() {
+function w() {
     R();
 }
 let x = i().debounce(() => {
@@ -174,7 +174,7 @@ function U() {
             let t = !1;
             return (
                 (0, m.$E)((n, r, i) => {
-                    let a = w(e, r, n, (e) => {
+                    let a = D(e, r, n, (e) => {
                         Object.assign(e, i);
                     });
                     t = t || a;
@@ -218,7 +218,7 @@ class V extends l.Z {
     constructor(...e) {
         super(...e),
             b(this, "actions", {
-                POST_CONNECTION_OPEN: D,
+                POST_CONNECTION_OPEN: w,
                 AUDIO_SET_LOCAL_VOLUME: G,
                 AUDIO_TOGGLE_LOCAL_MUTE: Z,
                 AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: B,

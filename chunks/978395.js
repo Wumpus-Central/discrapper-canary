@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(166584),
     P = n(915014),
     R = n(981631),
-    w = n(671955),
-    D = n(388032),
+    D = n(671955),
+    w = n(388032),
     x = n(116649);
 function L(e) {
     let {
@@ -73,7 +73,7 @@ function L(e) {
                 pronouns: null == L ? void 0 : L.pronouns,
                 tags: (0, r.jsx)(_.Z, {
                     displayProfile: L,
-                    themeType: w.l.POPOUT,
+                    themeType: D.l.POPOUT,
                     onClose: G,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
@@ -121,7 +121,7 @@ function L(e) {
                 ? (0, r.jsx)(S.Z.Overlay, {
                       className: x.card,
                       children: (0, r.jsx)(y.Z, {
-                          heading: D.intl.string(D.t.Iyka0U),
+                          heading: w.intl.string(w.t.Iyka0U),
                           headingIcon: (0, r.jsx)(a.Mgn, {
                               size: "xxs",
                               color: a.TVs.colors.HEADER_PRIMARY,

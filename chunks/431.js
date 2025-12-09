@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(825670);
+n.d(t, { Z: () => w }), n(388685), n(825670);
 var r,
     i = n(442837),
     a = n(570140),
@@ -144,7 +144,7 @@ function R() {
     }
     return !1;
 }
-class w extends (r = i.ZP.PersistedStore) {
+class D extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (b = null != e ? e : E),
             this.waitFor(c.Z, o.Z, d.Z, l.default),
@@ -252,9 +252,9 @@ class w extends (r = i.ZP.PersistedStore) {
         return b.lastFetchSuccessful;
     }
 }
-p(w, "displayName", "UserOfferStore"),
-    p(w, "persistKey", "UserOfferStore"),
-    p(w, "migrations", [
+p(D, "displayName", "UserOfferStore"),
+    p(D, "persistKey", "UserOfferStore"),
+    p(D, "migrations", [
         (e) => {
             let t = null == e ? void 0 : e.userDiscounts;
             if (null != t) return h(_({}, e), { userDiscountOffers: t });
@@ -269,7 +269,7 @@ p(w, "displayName", "UserOfferStore"),
             if (null != e) return (null == e ? void 0 : e.isFetching) == null ? h(_({}, e), { isFetching: !1 }) : e;
         },
     ]);
-let D = new w(a.Z, {
+let w = new D(a.Z, {
     BILLING_USER_OFFER_FETCH_START: y,
     BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: O,
     BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: I,

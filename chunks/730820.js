@@ -346,7 +346,7 @@ class k extends i.PureComponent {
             w(this, "sendMFABackupCodesVerificationKeyEmail", () => {
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
-                        h.default,
+                        h.Z,
                         j(x({}, e), {
                             handleSubmit: (e) =>
                                 c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
@@ -402,7 +402,7 @@ class k extends i.PureComponent {
             w(this, "handleDisableSMS", () => {
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
-                        h.default,
+                        h.Z,
                         j(x({}, e), {
                             handleSubmit: c.Z.disableSMS,
                             title: P.intl.string(P.t.KLWnit),

@@ -45,13 +45,13 @@ function R(e) {
     var t;
     return null != (t = e.getGuildId()) ? t : A;
 }
-function w(e) {
+function D(e) {
     return C.values(null != e ? e : void 0, !0).map((e) => {
         let { id: t } = e;
         return t;
     });
 }
-function D(e) {
+function w(e) {
     N.has(e) ||
         (N.add(e),
         s()(_.Z.getMutableGuildChannelsForGuild(e))
@@ -64,7 +64,7 @@ function x(e) {
     let t = P[e];
     if (null != t) return t;
     let n = _.Z.getChannel(e);
-    return null != n && n.isGuildStageVoice() && (D(n.guild_id), j(n)) ? L(e) : null;
+    return null != n && n.isGuildStageVoice() && (w(n.guild_id), j(n)) ? L(e) : null;
 }
 function L(e) {
     let t = P[e];
@@ -82,14 +82,14 @@ function M(e, t) {
         : Z(e);
 }
 function k(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w();
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D();
     return t.reduce((t, n) => {
         let r = L(n);
         return e(r) ? (M(n, r), !0) : t;
     }, !1);
 }
 function U(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w();
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D();
     return k((t) => t.updateParticipant(e), t);
 }
 function G(e) {
@@ -124,7 +124,7 @@ function H(e) {
 }
 function Y(e) {
     let t = !1;
-    for (let n of w(e.guildId)) t = L(n).rebuild() || t;
+    for (let n of D(e.guildId)) t = L(n).rebuild() || t;
     return t;
 }
 function W(e) {
@@ -167,7 +167,7 @@ function J(e) {
 }
 function $(e) {
     let { guildId: t } = e;
-    if (N.has(t)) return k((e) => e.rebuild(), w(t));
+    if (N.has(t)) return k((e) => e.rebuild(), D(t));
 }
 let ee = [];
 class et extends (r = l.ZP.Store) {
@@ -195,7 +195,7 @@ class et extends (r = l.ZP.Store) {
         return null != (r = null == (n = x(e)) ? void 0 : n.size(t)) ? r : 0;
     }
     getChannels(e) {
-        return D(null != e ? e : A), C.values(null != e ? e : A);
+        return w(null != e ? e : A), C.values(null != e ? e : A);
     }
     getChannelsVersion() {
         return C.version;

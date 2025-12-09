@@ -65,7 +65,7 @@ function R(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function w(e, t) {
         e
     );
 }
-let D = new d.Z("ChannelRTCStore"),
+let w = new d.Z("ChannelRTCStore"),
     x = Object.freeze([]),
     L = [],
     j = {},
@@ -304,7 +304,7 @@ function eI(e) {
             let { ownerId: e } = (0, p.my)(n);
             e === h.default.getId() && Q(e, [t]);
         } catch (e) {
-            D.warn("INVALID STREAM KEY FORMAT ".concat(n), e);
+            w.warn("INVALID STREAM KEY FORMAT ".concat(n), e);
         }
         et(r) || (Z[t] = !1);
     }
@@ -348,19 +348,19 @@ function eN(e) {
 }
 function eP(e) {
     let { channelId: t, layout: n, appContext: r } = e;
-    G[t] = w(P({}, G[t]), { [r]: n });
+    G[t] = D(P({}, G[t]), { [r]: n });
 }
 function eR(e) {
     let { streamKey: t } = e,
         { channelId: n, ownerId: r } = (0, p.my)(t);
     return Q(r, [n]);
 }
-function ew(e) {
+function eD(e) {
     let { streamKey: t } = e,
         { channelId: n, ownerId: r } = (0, p.my)(t);
     return Q(r, [n]);
 }
-function eD(e) {
+function ew(e) {
     let { channelId: t, userId: n } = e;
     return Q(n, [t]);
 }
@@ -548,13 +548,13 @@ let eB = new eZ(c.Z, {
     STREAM_UPDATE_SELF_HIDDEN: eb,
     CHANNEL_RTC_UPDATE_CHAT_OPEN: ev,
     CHANNEL_RTC_UPDATE_PARTCIPANTS_LIST_OPEN: eS,
-    RTC_CONNECTION_VIDEO: eD,
+    RTC_CONNECTION_VIDEO: ew,
     RTC_CONNECTION_PLATFORM: ex,
     AUDIO_SET_LOCAL_VIDEO_DISABLED: eL,
     MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED: ej,
     STREAM_CLOSE: eR,
     STREAM_DELETE: eR,
-    STREAM_WATCH: ew,
+    STREAM_WATCH: eD,
     SPEAKING: ed,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: ed,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: ed,

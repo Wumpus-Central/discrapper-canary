@@ -16,11 +16,11 @@ function g(e) {
     let { channel: t, user: g, guild: b } = e,
         C = (0, l.e7)([p.Z], () => null != g && p.Z.isUserBanned(g.id)),
         y = null != g && null == C,
-        [v, _] = r.useState(y),
+        [_, v] = r.useState(y),
         O = (0, l.e7)([d.Z], () => null != g && null != b && (0, u.lD)(g, b, [d.Z]));
     if (
         ((0, c.ZP)(() => {
-            y && s.Z.searchGuildBans(t.guild_id, void 0, [null == g ? void 0 : g.id]).finally(() => _(!1));
+            y && s.Z.searchGuildBans(t.guild_id, void 0, [null == g ? void 0 : g.id]).finally(() => v(!1));
         }),
         !O)
     )
@@ -88,8 +88,8 @@ function g(e) {
                         };
                     });
             },
-            disabled: !0 === C || v,
-            submitting: v,
+            disabled: !0 === C || _,
+            submitting: _,
             color: a.zx.Colors.RED,
         },
         E,

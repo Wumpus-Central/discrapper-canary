@@ -33,8 +33,8 @@ var r = n(54381),
     N = n(945577),
     P = n(28964),
     R = n(971128),
-    w = n(532428),
-    D = n(583642),
+    D = n(532428),
+    w = n(583642),
     x = n(991896),
     L = n(611004),
     j = n(778177),
@@ -93,7 +93,7 @@ class z extends i.PureComponent {
     }
     tokenize(e) {
         let t = (0, A.kG)(v.Sq(e)).filter((e) => e.type !== f.ZP.NON_TOKEN_TYPE);
-        return v.lv(t, e, w.ZP);
+        return v.lv(t, e, D.ZP);
     }
     clearSearch() {
         let { searchContext: e } = this.props;
@@ -220,7 +220,7 @@ class z extends i.PureComponent {
             H(this, "renderPopout", () => {
                 let { isSearchFiltersRedesignEnabled: e } = this.props;
                 return e
-                    ? (0, r.jsx)(D.Z, {
+                    ? (0, r.jsx)(w.Z, {
                           ref: this._searchFiltersRedesignPopoutRef,
                           searchContext: this.props.searchContext,
                           navId: W,
@@ -288,7 +288,7 @@ class z extends i.PureComponent {
                         let { _editorRef: e } = this;
                         null == e || e.focus(),
                             this.handleSetSearchQuery({
-                                query: w.ZP[B.dCx.FILTER_IN].key + "".concat(o, " "),
+                                query: D.ZP[B.dCx.FILTER_IN].key + "".concat(o, " "),
                                 replace: !0,
                                 searchQuerySource: G.w7.SEARCH_TEXT_INPUT,
                             });
@@ -470,7 +470,7 @@ function q(e) {
     i.useEffect(() => {
         l && c.current !== l && ((c.current = l), L.Z.ensureSearchInputDecorators(t));
     }, [l, t]);
-    let f = i.useMemo(() => (null != s ? s : v.nR(S.Jl(w.ZP))), [s]),
+    let f = i.useMemo(() => (null != s ? s : v.nR(S.Jl(D.ZP))), [s]),
         { isSearching: p, hasResults: m } = (0, u.cj)([T.Z], () => {
             let e = T.Z.getTotalCount(a);
             return {
@@ -480,7 +480,7 @@ function q(e) {
         }),
         O = (0, u.e7)([g.ZP], () => g.ZP.getCurrentSearchContextId()),
         [I, C] = i.useState(!1),
-        D = i.useRef(I),
+        w = i.useRef(I),
         j = (0, u.e7)([g.ZP, y.Z, E.Z], () => {
             let e = y.Z.getCurrentlySelectedChannelId(),
                 t = E.Z.getChannel(e);
@@ -493,7 +493,7 @@ function q(e) {
     let G = (0, d.VXO)(Z.L),
         V = M || G;
     i.useEffect(() => {
-        D.current && !I && ((D.current = !1), (0, U.IZ)({ searchContext: t })), !D.current && I && (D.current = !0);
+        w.current && !I && ((w.current = !1), (0, U.IZ)({ searchContext: t })), !w.current && I && (w.current = !0);
     }, [t, I]);
     let H = i.useCallback(
             (e) => {

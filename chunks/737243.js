@@ -19,8 +19,8 @@ let h = r.memo(function (e) {
             interactionAvatarProfile: b,
             interactionData: C,
             referencedUsernameProfile: y,
-            referencedAvatarProfile: v,
-            setPopout: _,
+            referencedAvatarProfile: _,
+            setPopout: v,
         } = e,
         { isInteractionUserBlocked: O, isInteractionUserIgnored: x } = (0, l.cj)(
             [c.Z],
@@ -32,8 +32,8 @@ let h = r.memo(function (e) {
         ),
         E = (0, l.e7)([s.Z], () => s.Z.getMessageByReference(null == h ? void 0 : h.messageReference)),
         j = (0, d.wq)(null == (t = h.interaction) ? void 0 : t.user.id, f.id),
-        S = (0, d.Nk)(h.interaction, f, g, _),
-        P = (0, d.NU)(b, _),
+        S = (0, d.Nk)(h.interaction, f, g, v),
+        P = (0, d.NU)(b, v),
         I = (0, o.t0)(h),
         Z =
             (null == I ? void 0 : I.type) === a.B8.APPLICATION_COMMAND
@@ -42,33 +42,33 @@ let h = r.memo(function (e) {
                     : n.id
                 : void 0,
         T = (0, d.wq)(Z, f.id),
-        N = (0, d.JC)(Z, f, y, _),
-        A = (0, d.rY)(v, _),
-        w = (0, d.Xn)(C, _),
+        N = (0, d.JC)(Z, f, y, v),
+        A = (0, d.rY)(_, v),
+        w = (0, d.Xn)(C, v),
         M = r.useCallback(() => {
-            _({
+            v({
                 interactionUsernameProfile: !1,
                 interactionAvatarProfile: !1,
                 interactionData: !1,
                 referencedUsernameProfile: !1,
                 referencedAvatarProfile: !1,
             });
-        }, [_]),
+        }, [v]),
         R = r.useCallback(
             () =>
                 (0, p.Z)({
                     message: h,
                     channel: f,
                     compact: m,
-                    setPopout: _,
-                    referencedAvatarProfile: v,
+                    setPopout: v,
+                    referencedAvatarProfile: _,
                     referencedUsernameProfile: y,
                     replyReference: h.messageReference,
                     replyMessage: E,
                     isReplySpineClickable: !1,
                     showReplySpine: !1,
                 }),
-            [f, m, h, v, E, y, _],
+            [f, m, h, _, E, y, v],
         );
     return (0, i.jsx)(u.Z, {
         message: h,
@@ -79,7 +79,7 @@ let h = r.memo(function (e) {
         showAvatarPopout: b,
         showUsernamePopout: g,
         showDataPopout: C,
-        showTargetAvatarPopout: v,
+        showTargetAvatarPopout: _,
         showTargetUsernamePopout: y,
         onClickAvatar: P,
         onClickUsername: S,

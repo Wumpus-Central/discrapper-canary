@@ -169,7 +169,7 @@ function P(e) {
                   ? void 0
                   : n.ip,
         g = null == (i = l.client_info) ? void 0 : i.platform,
-        { text: E, icon: b } = w(null == (a = l.client_info) ? void 0 : a.os),
+        { text: E, icon: b } = D(null == (a = l.client_info) ? void 0 : a.os),
         O = c ? null : (0, m.p)(l.approx_last_used_time),
         v = [E, g].filter(y.lm),
         S = [h, O].filter(y.lm);
@@ -285,7 +285,7 @@ function R() {
         ],
     });
 }
-function w(e) {
+function D(e) {
     switch (null == e ? void 0 : e.toLowerCase().trim()) {
         case null:
         case void 0:

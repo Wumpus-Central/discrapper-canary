@@ -31,8 +31,8 @@ function b() {
         N = _.HV.useSetting(),
         P = (0, c.xy)({ location: "UserSettingsTextImages" }),
         R = null != (e = _.rR.useSetting()) ? e : P,
-        { analyticsLocations: w } = (0, s.ZP)(o.Z.TEXT_AND_IMAGES),
-        D = i.useCallback((e) => {
+        { analyticsLocations: D } = (0, s.ZP)(o.Z.TEXT_AND_IMAGES),
+        w = i.useCallback((e) => {
             let t = 1 === e;
             t ? u.Z.cleanUpPrivateChannelSearchState() : u.Z.cleanUpSearchState({ type: g.aib.DMS }),
                 (0, d.yn)({
@@ -163,7 +163,7 @@ function b() {
                                         p.default.track(g.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
                                             enabled: e,
                                             location: { section: g.jXE.SETTINGS_TEXT_AND_IMAGES },
-                                            location_stack: w,
+                                            location_stack: D,
                                         }),
                                             _.fq.updateSetting(e);
                                     },
@@ -268,7 +268,7 @@ function b() {
                                         value: 1,
                                     },
                                 ],
-                                onChange: D,
+                                onChange: w,
                                 value: +!!R,
                             }),
                         }),

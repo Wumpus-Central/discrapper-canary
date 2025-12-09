@@ -85,14 +85,14 @@ function I(e) {
         { enableTopNavButton: N } = (0, d.Cq)({ location: "VoiceActivityStatus" }),
         P = !N && I,
         { analyticsLocations: R } = (0, l.ZP)(),
-        w = i.useCallback(() => {
+        D = i.useCallback(() => {
             (0, _.A)({
                 analyticsLocations: R,
                 activityType: "VOICE",
                 voiceChannelId: t.id,
             });
         }, [R, t.id]),
-        D = () =>
+        w = () =>
             y || C
                 ? (0, r.jsx)(p.Z, {
                       size: "custom",
@@ -105,7 +105,7 @@ function I(e) {
                       text: A,
                       "aria-label": (0, c.ZP)({ channel: t }),
                       delay: g.X,
-                      onTooltipShow: w,
+                      onTooltipShow: D,
                       children: (e) =>
                           (0, r.jsx)(
                               p.Z,
@@ -127,7 +127,7 @@ function I(e) {
                     : E.intl.string(E.t.msxteM);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            D(),
+            w(),
             !h &&
                 (0, r.jsxs)(m.Z, {
                     variant: n,

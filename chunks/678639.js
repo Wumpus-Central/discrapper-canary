@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685), n(642613);
 var a = n(54381),
-    l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(442837),
     o = n(481060),
     c = n(665149),
@@ -17,10 +17,10 @@ function f(e, t) {
 }
 function g(e) {
     let { store: t, dataGetter: n } = e,
-        [r, i] = l.useState(n(t));
+        [i, l] = r.useState(n(t));
     return (
-        l.useEffect(() => {
-            let e = () => i(n(t));
+        r.useEffect(() => {
+            let e = () => l(n(t));
             return (
                 e(),
                 t.addChangeListener(e),
@@ -31,7 +31,7 @@ function g(e) {
         }, [t, n]),
         (0, a.jsx)(o.zJl, {
             className: x.inspectorContainer,
-            children: (0, a.jsx)(d.Z, { data: r }),
+            children: (0, a.jsx)(d.Z, { data: i }),
         })
     );
 }
@@ -82,15 +82,15 @@ let b = [
     ];
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: l, renderSelectedTab: r } = (0, p.ZP)({ tabs: v }, []);
+        { TabBar: r, renderSelectedTab: i } = (0, p.ZP)({ tabs: v }, []);
     return (0, a.jsxs)(u.Z, {
         className: x.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
-            (0, a.jsx)(l, {}),
+            (0, a.jsx)(r, {}),
             (0, a.jsxs)(c.ZP, {
-                className: i()(h.headerBar, x.subPanelHeaderBar),
+                className: l()(h.headerBar, x.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(c.ZP.Icon, {
                         icon: o.lO_,
@@ -99,24 +99,24 @@ function j(e) {
                     (0, a.jsx)(c.ZP.Title, { children: t.getName() }),
                 ],
             }),
-            r({ store: t }),
+            i({ store: t }),
         ],
     });
 }
 function _() {
-    let e = l.useRef(null),
-        [t, n] = l.useState(""),
-        r = s.yh.getAll(),
-        c = l
+    let e = r.useRef(null),
+        [t, n] = r.useState(""),
+        i = s.yh.getAll(),
+        c = r
             .useMemo(
                 () =>
-                    r
+                    i
                         .map((e) => ({
                             key: e._dispatchToken,
                             store: e,
                         }))
                         .sort(f),
-                [r],
+                [i],
             )
             .filter((e) =>
                 (function (e, t) {
@@ -124,11 +124,11 @@ function _() {
                     return n.getName().toLowerCase().includes(t.toLowerCase());
                 })(e, t),
             ),
-        [d, u] = l.useState(),
-        p = r.find((e) => e._dispatchToken === d);
+        [d, u] = r.useState(),
+        p = i.find((e) => e._dispatchToken === d);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: i()(h.panel, x.panel),
+        className: l()(h.panel, x.panel),
         children: [
             (0, a.jsx)("div", {
                 className: x.toolbar,

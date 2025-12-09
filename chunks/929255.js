@@ -19,8 +19,8 @@ var r = n(54381),
     E = n(763891),
     v = n(215023),
     S = n(981631),
-    O = n(388032),
-    x = n(452785);
+    x = n(388032),
+    O = n(452785);
 function y(e) {
     let { tab: t, sortedCategories: n, initialCategoryId: i, showFilterInitially: c = !0, onUnmount: u } = e;
     (0, g.A)();
@@ -29,7 +29,7 @@ function y(e) {
         { handleScroll: C } = (0, a.z)(p, t),
         { setCategoryRef: _, handleScrollToCategory: b } = (0, m.xV)(p.current),
         [E, v] = l.useState(f && c),
-        [S, O] = l.useState(!1);
+        [S, x] = l.useState(!1);
     return (
         l.useEffect(() => {
             null != i && b(i);
@@ -42,7 +42,7 @@ function y(e) {
         ),
         l.useEffect(() => {
             let e = () => {
-                O(window.innerWidth < 1400);
+                x(window.innerWidth < 1400);
             };
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
@@ -50,12 +50,12 @@ function y(e) {
             f || v(!1);
         }, [f, v]),
         (0, r.jsx)("div", {
-            className: s()(x.pageWrapper, { [x.pageWrapperFilter]: f }),
+            className: s()(O.pageWrapper, { [O.pageWrapperFilter]: f }),
             children: (0, r.jsxs)("main", {
-                className: s()(x.page, { [x.pageFilter]: f }),
+                className: s()(O.page, { [O.pageFilter]: f }),
                 children: [
                     (0, r.jsx)(o.yWw, {
-                        className: x.shopScroll,
+                        className: O.shopScroll,
                         ref: p,
                         onScroll: C,
                         children: (0, r.jsx)(k, {
@@ -69,11 +69,11 @@ function y(e) {
                             initialCategoryId: i,
                         }),
                     }),
-                    E && !S && (0, r.jsx)("div", { className: x.divider }),
+                    E && !S && (0, r.jsx)("div", { className: O.divider }),
                     E &&
                         !S &&
                         (0, r.jsx)(o.Ttm, {
-                            className: x.filterBar,
+                            className: O.filterBar,
                             children: (0, r.jsx)(h.Z, {}),
                         }),
                 ],
@@ -136,27 +136,27 @@ let k = (e) => {
             return document.addEventListener("mousedown", e), () => document.removeEventListener("mousedown", e);
         }, [t, n, i, B]),
         (0, r.jsx)("div", {
-            className: x.inventoryWrapper,
+            className: O.inventoryWrapper,
             children: (0, r.jsxs)("div", {
-                className: s()(x.inventory, { [x.inventoryFilter]: j }),
+                className: s()(O.inventory, { [O.inventoryFilter]: j }),
                 children: [
                     j &&
                         (0, r.jsxs)("div", {
-                            className: x.controls,
+                            className: O.controls,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: x.controlsLeftSide,
+                                    className: O.controlsLeftSide,
                                     children: (0, r.jsx)(f.Z, {}),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: s()(x.controlsRightSide, { [x.controlsRightSideResponsive]: t }),
+                                    className: s()(O.controlsRightSide, { [O.controlsRightSideResponsive]: t }),
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: x.sortBy,
+                                            className: O.sortBy,
                                             children: [
                                                 (0, r.jsx)(o.Text, {
                                                     variant: "text-md/semibold",
-                                                    children: O.intl.string(O.t.uaX705),
+                                                    children: x.intl.string(x.t.uaX705),
                                                 }),
                                                 (0, r.jsx)(C.Z, {}),
                                             ],
@@ -178,7 +178,7 @@ let k = (e) => {
                                                         i(e);
                                                 },
                                                 variant: "secondary",
-                                                text: O.intl.string(n ? O.t.fYtm6f : O.t["TeTYE+"]),
+                                                text: x.intl.string(n ? x.t.fYtm6f : x.t["TeTYE+"]),
                                                 icon: o.gXV,
                                                 iconPosition: "end",
                                             }),
@@ -188,10 +188,10 @@ let k = (e) => {
                                 n &&
                                     t &&
                                     (0, r.jsx)("div", {
-                                        className: x.filterOverlay,
+                                        className: O.filterOverlay,
                                         ref: I,
                                         children: (0, r.jsx)(o.Den, {
-                                            className: x.filterOverlayContent,
+                                            className: O.filterOverlayContent,
                                             children: (0, r.jsx)(h.Z, {}),
                                         }),
                                     }),

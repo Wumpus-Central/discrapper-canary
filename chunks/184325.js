@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(221292),
     P = n(485341),
     R = n(687158),
-    w = n(228168),
-    D = n(981631),
+    D = n(228168),
+    w = n(981631),
     x = n(215023),
     L = n(474936),
     j = n(681642),
@@ -149,7 +149,7 @@ function V(e) {
                     if (u) {
                         if (
                             (t.preventDefault(),
-                            I.default.track(D.rMx.TIERED_TENURE_BADGE_CLICKED, {
+                            I.default.track(w.rMx.TIERED_TENURE_BADGE_CLICKED, {
                                 badge: e.id,
                                 premium_type: q,
                                 viewed_user_id: null == v ? void 0 : v.userId,
@@ -157,7 +157,7 @@ function V(e) {
                             q)
                         ) {
                             p
-                                ? (0, y.uL)(D.Z5c.NITRO_HOME)
+                                ? (0, y.uL)(w.Z5c.NITRO_HOME)
                                 : (0, g.k)({
                                       analyticsLocations: Y,
                                       displayProfile: v,
@@ -184,7 +184,7 @@ function V(e) {
                 T = () => {
                     e.id === P.i &&
                         I.default.track(
-                            D.rMx.QUEST_CONTENT_VIEWED,
+                            w.rMx.QUEST_CONTENT_VIEWED,
                             B(G({}, (0, E.mH)(b.jn.QUEST_BADGE)), { is_targeted: !1 }),
                         ),
                         K({ action: "HOVER_BADGE" }),
@@ -203,7 +203,7 @@ function V(e) {
                 Q = (0, r.jsx)("img", {
                     alt: " ",
                     "aria-hidden": !0,
-                    src: null != (n = e.iconSrc) ? n : (0, w.Ej)(e.icon),
+                    src: null != (n = e.iconSrc) ? n : (0, D.Ej)(e.icon),
                     className: o()(k.badge, h),
                 }),
                 ee = {
@@ -227,7 +227,7 @@ function V(e) {
                         children: (0, r.jsx)(_.Z, {
                             targetElementRef: H,
                             mode: "tooltip",
-                            tooltipDelay: w.vB,
+                            tooltipDelay: D.vB,
                             children: n,
                         }),
                     },
@@ -270,11 +270,11 @@ function V(e) {
                             badgeId: e.id,
                             targetElementRef: H,
                             mode: "tooltip",
-                            tooltipDelay: w.vB,
+                            tooltipDelay: D.vB,
                             body: e.description,
                             actions: o,
                             onShow: () => {
-                                I.default.track(D.rMx.TOOLTIP_VIEWED, {
+                                I.default.track(w.rMx.TOOLTIP_VIEWED, {
                                     type: "tiered_tenure_badge_profile_" + (p ? "self" : "other"),
                                 });
                             },
@@ -297,7 +297,7 @@ function V(e) {
                     text: en,
                     "aria-label": e.description,
                     forceOpen: null != Z && Z(e.id),
-                    delay: w.vB,
+                    delay: D.vB,
                     children: et,
                 },
                 "".concat(e.id, "-").concat(t),

@@ -47,8 +47,8 @@ var r = n(54381),
     N = n(353926),
     P = n(341298),
     R = n(703656),
-    w = n(973616),
-    D = n(598077),
+    D = n(973616),
+    w = n(598077),
     x = n(314897),
     L = n(700785),
     j = n(591759),
@@ -340,8 +340,8 @@ function ec(e) {
     i.useEffect(() => {
         x.default.isAuthenticated() && !eP && b.Z.getExperiments();
     }, [eP]);
-    let [eR, ew] = i.useState(null),
-        [eD, ex] = i.useState(null),
+    let [eR, eD] = i.useState(null),
+        [ew, ex] = i.useState(null),
         [eL, ej] = i.useState(null),
         [eM, ek] = i.useState(!1),
         [eU, eG] = i.useState(!1),
@@ -351,7 +351,7 @@ function ec(e) {
         [eY, eW] = i.useState(L.Hn),
         [eK, ez] = i.useState(!1),
         eq = i.useMemo(
-            () => ((null == eR ? void 0 : eR.user) != null ? new D.Z(eR.user) : null),
+            () => ((null == eR ? void 0 : eR.user) != null ? new w.Z(eR.user) : null),
             [null == eR ? void 0 : eR.user],
         ),
         eQ = (0, T.Z)(null != (t = null == eR ? void 0 : eR.application) ? t : null),
@@ -365,7 +365,7 @@ function ec(e) {
         }, [eC, null == ed ? void 0 : ed.length, er, em]),
         [e1, e3] = i.useState(null);
     i.useEffect(() => {
-        e0 && S.ZP.fetchApplication($).then((e) => e3(w.ZP.createFromServer(e)));
+        e0 && S.ZP.fetchApplication($).then((e) => e3(D.ZP.createFromServer(e)));
     }, [$, e0]);
     let e2 = i.useMemo(() => {
             var e, t;
@@ -521,7 +521,7 @@ function ec(e) {
                                   nonce: es,
                                   integrationType: null != eJ ? eJ : void 0,
                               });
-                    ew((0, U.d)(e)),
+                    eD((0, U.d)(e)),
                         ec === B.s.NONE && e.authorized && !tt && tr(!0),
                         (0, y.yw)(J.rMx.OAUTH2_AUTHORIZE_VIEWED, {
                             application_id: e.application.id,
@@ -558,19 +558,19 @@ function ec(e) {
         }, [e1, e0]),
         ts = i.useRef(null);
     i.useEffect(() => {
-        eD !== ts.current &&
-            ((ts.current = eD),
+        ew !== ts.current &&
+            ((ts.current = ew),
             (0, y.yw)(J.rMx.OAUTH2_AUTHORIZE_STEP_VIEWED, {
-                step: eD,
+                step: ew,
                 application_id: $,
                 integration_type: eJ,
                 scopes: e5,
                 permissions: e6.toString(),
                 mobile_push_notification_default_setting: !1,
             }));
-    }, [$, eJ, e6, e5, eD]),
+    }, [$, eJ, e6, e5, ew]),
         i.useEffect(() => {
-            if (null == eD && (!e0 || null != e1) && eP)
+            if (null == ew && (!e0 || null != e1) && eP)
                 if (null != eC) {
                     var e;
                     e$(null != (e = eC.integration_type) ? e : u.Y.GUILD_INSTALL), ex("AUTHORIZE_SCOPES");
@@ -579,7 +579,7 @@ function ec(e) {
                         ? ex("SELECT_INSTALL_TYPE")
                         : (1 === to.length ? e$(to[0]) : null != em ? e$(em) : e$(u.Y.GUILD_INSTALL),
                           ex("AUTHORIZE_SCOPES"));
-        }, [eC, to, e1, e0, em, eD, eP]),
+        }, [eC, to, e1, e0, em, ew, eP]),
         i.useEffect(() => {
             if (null == eJ || null != eR || null != eL) return;
             eJ === u.Y.USER_INSTALL && (eF(null), eH(null));
@@ -631,7 +631,7 @@ function ec(e) {
                     ],
                 };
     let tu = (e) => {
-            e$(e), ew(null), ex("AUTHORIZE_SCOPES");
+            e$(e), eD(null), ex("AUTHORIZE_SCOPES");
         },
         td = (e, t) => {
             eW((n) => (e ? f.Od(n, t) : f.IH(n, t)));
@@ -642,7 +642,7 @@ function ec(e) {
         tm = !0,
         th = !0,
         tg = !1;
-    switch (eD) {
+    switch (ew) {
         case null:
             return {
                 label: ee.intl.string(ee.t.ZTNur7),
@@ -803,7 +803,7 @@ function ec(e) {
                           text: ee.intl.string(ee.t["ETE/oC"]),
                       },
             ),
-            "SELECT_INSTALL_TYPE" !== eD &&
+            "SELECT_INSTALL_TYPE" !== ew &&
                 tS.push(
                     eU
                         ? {

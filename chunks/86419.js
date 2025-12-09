@@ -14,7 +14,7 @@ n.d(t, {
     n$: () => L,
     np: () => C,
     ou: () => W,
-    qH: () => D,
+    qH: () => w,
     tk: () => F,
     vI: () => v,
     ww: () => O,
@@ -137,7 +137,7 @@ function P() {
 function R(e) {
     return P().find((t) => t.type === e);
 }
-function w(e) {
+function D(e) {
     let t = P(),
         n = t.findIndex((t) => t.type === e.type);
     if (-1 === n) return [...t, e];
@@ -146,7 +146,7 @@ function w(e) {
         return (r[n] = e), r;
     }
 }
-function D(e, t) {
+function w(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = P();
     null == r.find((t) => t.type === e) && (n ? c.Z.setPendingWidgets([t, ...r]) : c.Z.setPendingWidgets([...r, t]));
@@ -164,7 +164,7 @@ function L(e, t, n) {
     if (null == o) return;
     let l = E(h({}, o), { tags: n }),
         u = a.games.map((e) => (e.applicationId === t ? l : e)),
-        d = w(new s.zy(E(h({}, a), { games: u })));
+        d = D(new s.zy(E(h({}, a), { games: u })));
     c.Z.setPendingWidgets(d);
 }
 function j(e, t, n) {
@@ -182,7 +182,7 @@ function M(e, t, n) {
     if (null == i || n === i.comment) return;
     let a = E(h({}, i), { comment: n }),
         o = r.games.map((e) => (e.applicationId === t ? a : e)),
-        l = w(new s.zy(E(h({}, r), { games: o })));
+        l = D(new s.zy(E(h({}, r), { games: o })));
     c.Z.setPendingWidgets(l);
 }
 function k(e, t) {
@@ -202,7 +202,7 @@ function k(e, t) {
         tags: t.tags,
     };
     l = null != u ? [...(null != (o = u.games) ? o : []), f] : [f];
-    let p = w(new s.zy(E(h({}, null != u ? u : { type: e }), { games: l })));
+    let p = D(new s.zy(E(h({}, null != u ? u : { type: e }), { games: l })));
     c.Z.setPendingWidgets(p), a.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
 function U(e, t) {
@@ -220,14 +220,14 @@ function G(e, t, n) {
     if (t < 0 || t >= i.length || n < 0 || n >= i.length) return;
     let [a] = i.splice(t, 1);
     i.splice(n, 0, a);
-    let o = w(new s.zy(E(h({}, r), { games: i })));
+    let o = D(new s.zy(E(h({}, r), { games: i })));
     c.Z.setPendingWidgets(o);
 }
 function Z(e, t) {
     let n = R(e);
     if (null == n) return;
     let r = (null != n.games ? n.games : []).filter((e) => e.applicationId !== t),
-        i = w(new s.zy(E(h({}, n), { games: r })));
+        i = D(new s.zy(E(h({}, n), { games: r })));
     c.Z.setPendingWidgets(i);
 }
 async function B() {

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m });
 var a = n(54381);
 n(473749);
-var l = n(442837),
-    r = n(481060),
-    i = n(752048),
+var r = n(442837),
+    i = n(481060),
+    l = n(752048),
     s = n(594174),
     o = n(681619),
     c = n(996279),
@@ -21,7 +21,7 @@ let u = [
     {
         key: "affinity",
         renderHeader: () =>
-            (0, a.jsx)(r.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: "text-sm/semibold",
                 children: "COMMUNICATION AFFINITY",
             }),
@@ -34,7 +34,7 @@ let u = [
     {
         key: "vcProbability",
         renderHeader: () =>
-            (0, a.jsx)(r.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: "text-sm/semibold",
                 children: "VOICE AFFINITY",
             }),
@@ -47,7 +47,7 @@ let u = [
     {
         key: "isFriend",
         renderHeader: () =>
-            (0, a.jsx)(r.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: "text-sm/semibold",
                 children: "IS FRIEND",
             }),
@@ -59,14 +59,14 @@ let u = [
     },
 ];
 function m() {
-    let e = (0, l.Wu)([i.Z, s.default], () =>
-        i.Z.getUserAffinities().map((e) => {
-            let { otherUserId: t, communicationProbability: n, vcProbability: a, isFriend: l } = e;
+    let e = (0, r.Wu)([l.Z, s.default], () =>
+        l.Z.getUserAffinities().map((e) => {
+            let { otherUserId: t, communicationProbability: n, vcProbability: a, isFriend: r } = e;
             return {
                 user: s.default.getUser(t),
                 affinity: n,
                 vcProbability: a,
-                isFriend: l,
+                isFriend: r,
                 key: t,
             };
         }),

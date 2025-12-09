@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(921801),
     P = n(460181),
     R = n(210176),
-    w = n(430824),
-    D = n(292959),
+    D = n(430824),
+    w = n(292959),
     x = n(9156),
     L = n(594174),
     j = n(626135),
@@ -550,7 +550,7 @@ async function el(e) {
     e(!0),
         c.K.set("turnedOffNewNotifications", !0),
         j.default.track(H.rMx.NOTIFICATION_MIGRATION_OPTOUT, {
-            num_guilds_with_new_setting: w.Z.getGuildsArray().filter(
+            num_guilds_with_new_setting: D.Z.getGuildsArray().filter(
                 (e) => x.ZP.resolveGuildUnreadSetting(e) === W.i.ONLY_MENTIONS,
             ).length,
         }),
@@ -562,14 +562,14 @@ function ec(e) {
     return (0, r.jsx)(er, J(Q({}, e), { focusMode: t }));
 }
 function eu() {
-    let e = (0, s.cj)([D.Z], () => ({
-        disableUnreadBadge: D.Z.getDisableUnreadBadge(),
-        taskbarFlash: D.Z.taskbarFlash,
-        disabledSounds: D.Z.getDisabledSounds(),
-        disableAllSounds: D.Z.getDisableAllSounds(),
-        desktopType: D.Z.getDesktopType(),
-        ttsType: D.Z.getTTSType(),
-        notifyMessagesInSelectedChannel: D.Z.getNotifyMessagesInSelectedChannel(),
+    let e = (0, s.cj)([w.Z], () => ({
+        disableUnreadBadge: w.Z.getDisableUnreadBadge(),
+        taskbarFlash: w.Z.taskbarFlash,
+        disabledSounds: w.Z.getDisabledSounds(),
+        disableAllSounds: w.Z.getDisableAllSounds(),
+        desktopType: w.Z.getDesktopType(),
+        ttsType: w.Z.getTTSType(),
+        notifyMessagesInSelectedChannel: w.Z.getNotifyMessagesInSelectedChannel(),
     }));
     return (0, r.jsx)(ec, J(Q({}, e), { afkTimeout: G.CM.useSetting() }));
 }

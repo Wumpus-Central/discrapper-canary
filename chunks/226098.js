@@ -77,7 +77,7 @@ function C(e) {
             isDisabled: u,
             isPressed: v,
             preventFocusOnPress: C,
-            shouldCancelOnPointerExit: w,
+            shouldCancelOnPointerExit: D,
             allowTextSelectionOnPress: x,
             ref: L,
             ...j
@@ -146,7 +146,7 @@ function C(e) {
             }
         }),
         Y = (0, f.i)((e) => {
-            w && H(e);
+            D && H(e);
         }),
         W = (0, f.i)((e) => {
             u || null == l || l(e);
@@ -163,7 +163,7 @@ function C(e) {
                     onKeyDown(t) {
                         if (P(t.nativeEvent, t.currentTarget) && (0, p.bE)(t.currentTarget, (0, p.NI)(t.nativeEvent))) {
                             var r;
-                            D((0, p.NI)(t.nativeEvent), t.key) && t.preventDefault();
+                            w((0, p.NI)(t.nativeEvent), t.key) && t.preventDefault();
                             let i = !0;
                             if (!e.isPressed && !t.repeat) {
                                 (e.target = t.currentTarget),
@@ -218,7 +218,7 @@ function C(e) {
                 n = (t) => {
                     var n, r, i;
                     if (e.isPressed && e.target && P(t, e.target)) {
-                        D((0, p.NI)(t), t.key) && t.preventDefault();
+                        w((0, p.NI)(t), t.key) && t.preventDefault();
                         let n = (0, p.NI)(t),
                             i = (0, p.bE)(e.target, (0, p.NI)(t));
                         F(R(e.target, t), "keyboard", i),
@@ -372,14 +372,14 @@ function R(e, t) {
         clientY: r,
     };
 }
-function w(e) {
+function D(e) {
     return (
         !(e instanceof HTMLInputElement) &&
         (e instanceof HTMLButtonElement ? "submit" !== e.type && "reset" !== e.type : !N(e))
     );
 }
-function D(e, t) {
-    return e instanceof HTMLInputElement ? !L(e, t) : w(e);
+function w(e, t) {
+    return e instanceof HTMLInputElement ? !L(e, t) : D(e);
 }
 let x = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
 function L(e, t) {

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => x });
 var a = n(54381);
 n(473749);
-var l = n(120356),
-    r = n.n(l),
-    i = n(442837),
+var r = n(120356),
+    i = n.n(r),
+    l = n(442837),
     s = n(481060),
     o = n(179658),
     c = n(168107),
@@ -17,13 +17,13 @@ function x() {
         personaForceFaeFail: e,
         personaForceIdVerificationFail: t,
         personaDisableModularPilotTestTemplate: n,
-    } = (0, i.cj)([m.default], () => ({
+    } = (0, l.cj)([m.default], () => ({
         personaForceFaeFail: m.default.personaForceFaeFail,
         personaForceIdVerificationFail: m.default.personaForceIdVerificationFail,
         personaDisableModularPilotTestTemplate: m.default.personaDisableModularPilotTestTemplate,
     }));
     return (0, a.jsxs)("div", {
-        className: r()(h.panel, p.container),
+        className: i()(h.panel, p.container),
         children: [
             (0, a.jsxs)("div", {
                 children: [

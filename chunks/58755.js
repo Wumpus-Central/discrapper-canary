@@ -1,8 +1,8 @@
 n.d(t, { P: () => _ }), n(388685), n(35282), n(49124);
 var a = n(54381),
-    l = n(473749),
-    r = n(394900),
-    i = n(661105),
+    r = n(473749),
+    i = n(394900),
+    l = n(661105),
     s = n(609067),
     o = n(94367),
     c = n(407146),
@@ -73,8 +73,8 @@ let v = Object.keys(x.jQ).map((e) => ({
     }));
 function _(e) {
     let { state: t, setState: n } = e,
-        { scales: r } = t,
-        [i, s] = l.useState(null),
+        { scales: i } = t,
+        [l, s] = r.useState(null),
         o = (0, a.jsxs)("div", {
             className: f.section,
             children: [
@@ -107,7 +107,7 @@ function _(e) {
                 }),
                 (0, a.jsx)("ul", {
                     className: f.overrides,
-                    children: r.map((e) =>
+                    children: i.map((e) =>
                         (0, a.jsx)(
                             "li",
                             {
@@ -127,7 +127,7 @@ function _(e) {
                 }),
             ],
         }),
-        u = r.find((e) => e.name === i),
+        u = i.find((e) => e.name === l),
         p =
             null != u
                 ? (0, a.jsx)(y, {
@@ -139,7 +139,7 @@ function _(e) {
     return (0, a.jsx)("div", { children: p });
 }
 function y(e) {
-    let { scale: t, setState: n, onClose: l } = e,
+    let { scale: t, setState: n, onClose: r } = e,
         {
             name: c,
             base: d,
@@ -159,7 +159,7 @@ function y(e) {
                 className: f.titleWithIcon,
                 children: [
                     (0, a.jsx)(m.P3F, {
-                        onClick: l,
+                        onClick: r,
                         style: { maxWidth: 80 },
                         children: (0, a.jsx)(m.whL, { size: "sm" }),
                     }),
@@ -173,7 +173,7 @@ function y(e) {
                                 let [n, a] = t;
                                 return (
                                     (e[n] = {
-                                        value: (0, r.Z)((0, i.Z)(a, x.HW.sRGB), { format: "hex" }),
+                                        value: (0, i.Z)((0, l.Z)(a, x.HW.sRGB), { format: "hex" }),
                                         type: "color",
                                     }),
                                     e
@@ -276,10 +276,10 @@ function y(e) {
                         className: f.paletteOverrides,
                         "data-columnar": b,
                         children: Object.entries(E).map((e, n) => {
-                            let [l, c] = e,
+                            let [r, c] = e,
                                 d = (0, x.HI)(c),
                                 u = (0, s.Z)((0, o.Z)("black"), c) > 4.5 ? "black" : "white",
-                                p = O[l];
+                                p = O[r];
                             return (0, a.jsxs)(
                                 "div",
                                 {
@@ -305,14 +305,14 @@ function y(e) {
                                                     color: u,
                                                 },
                                                 children: [
-                                                    (0, r.Z)((0, i.Z)(c, x.HW.sRGB), { format: "hex" }).toUpperCase(),
+                                                    (0, i.Z)((0, l.Z)(c, x.HW.sRGB), { format: "hex" }).toUpperCase(),
                                                     " - ",
                                                     d,
                                                 ],
                                             }),
                                     ],
                                 },
-                                l,
+                                r,
                             );
                         }),
                     }),
@@ -323,8 +323,8 @@ function y(e) {
 }
 function C(e) {
     let { scale: t, onRemove: n } = e,
-        s = l.useMemo(
-            () => Object.values((0, x.XM)(t)).map((e) => (0, r.Z)((0, i.Z)(e, x.HW.sRGB), { format: "hex" })),
+        s = r.useMemo(
+            () => Object.values((0, x.XM)(t)).map((e) => (0, i.Z)((0, l.Z)(e, x.HW.sRGB), { format: "hex" })),
             [t],
         );
     return (0, a.jsxs)("li", {

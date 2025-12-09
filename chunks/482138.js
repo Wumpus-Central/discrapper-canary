@@ -27,8 +27,8 @@ var r,
     N = s.URL,
     P = s.TypeError,
     R = s.parseInt,
-    w = Math.floor,
-    D = Math.pow,
+    D = Math.floor,
+    w = Math.pow,
     x = c("".charAt),
     L = c(/./.exec),
     j = c([].join),
@@ -83,9 +83,9 @@ var r,
         }
         for (r = 0; r < t; r++)
             if (((o = n[r]), r === t - 1)) {
-                if (o >= D(256, 5 - t)) return null;
+                if (o >= w(256, 5 - t)) return null;
             } else if (o > 255) return null;
-        for (r = 0, s = k(n); r < n.length; r++) s += n[r] * D(256, 3 - r);
+        for (r = 0, s = k(n); r < n.length; r++) s += n[r] * w(256, 3 - r);
         return s;
     },
     el = function (e) {
@@ -154,7 +154,7 @@ var r,
     eu = function (e) {
         var t, n, r, i;
         if ("number" == typeof e) {
-            for (n = 0, t = []; n < 4; n++) H(t, e % 256), (e = w(e / 256));
+            for (n = 0, t = []; n < 4; n++) H(t, e % 256), (e = D(e / 256));
             return j(t, ".");
         }
         if ("object" == typeof e) {
@@ -232,8 +232,8 @@ var r,
     eN = {},
     eP = {},
     eR = {},
-    ew = {},
     eD = {},
+    ew = {},
     ex = {},
     eL = {},
     ej = {},
@@ -427,11 +427,11 @@ eF.prototype = {
                         d = "";
                     } else if (a === r || "/" === a || "?" === a || "#" === a || ("\\" === a && l.isSpecial())) {
                         if (f && "" === d) return Y;
-                        (u -= m(d).length + 1), (d = ""), (c = ew);
+                        (u -= m(d).length + 1), (d = ""), (c = eD);
                     } else d += a;
                     break;
-                case ew:
                 case eD:
+                case ew:
                     if (t && "file" === l.scheme) {
                         c = eM;
                         continue;
@@ -447,7 +447,7 @@ eF.prototype = {
                     else {
                         if ("" === d) return K;
                         if ((s = l.parseHost(d))) return s;
-                        if (((d = ""), (c = ex), t === eD)) return;
+                        if (((d = ""), (c = ex), t === ew)) return;
                     }
                     break;
                 case ex:
@@ -669,14 +669,14 @@ eF.prototype = {
         return null === e ? "" : null === t ? eu(e) : eu(e) + ":" + t;
     },
     setHost: function (e) {
-        this.cannotBeABaseURL || this.parse(e, ew);
+        this.cannotBeABaseURL || this.parse(e, eD);
     },
     getHostname: function () {
         var e = this.host;
         return null === e ? "" : eu(e);
     },
     setHostname: function (e) {
-        this.cannotBeABaseURL || this.parse(e, eD);
+        this.cannotBeABaseURL || this.parse(e, ew);
     },
     getPort: function () {
         var e = this.port;

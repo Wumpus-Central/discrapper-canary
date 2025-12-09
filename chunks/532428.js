@@ -75,7 +75,7 @@ function R(e) {
     }
     return e;
 }
-function w(e, t) {
+function D(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -87,12 +87,12 @@ function w(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -273,7 +273,7 @@ function en() {
 }
 function er(e, t, n) {
     return ei(e, t, et()).map((e) =>
-        D(R({}, e), {
+        w(R({}, e), {
             group: n,
             key: "".concat(n, "-").concat(e.text),
         }),
@@ -351,10 +351,10 @@ function eo(e) {
                     e.slice(0, r)
                 );
             }
-            o = g.ZP.queryGuildUsers(D(R({}, a), { guildId: n.guildId }));
+            o = g.ZP.queryGuildUsers(w(R({}, a), { guildId: n.guildId }));
             break;
         case C.aib.CHANNEL:
-            o = g.ZP.queryChannelUsers(D(R({}, a), { channelId: n.channelId }));
+            o = g.ZP.queryChannelUsers(w(R({}, a), { channelId: n.channelId }));
             break;
         case C.aib.DMS:
             let s = ea(null != i ? i : []);
@@ -362,12 +362,12 @@ function eo(e) {
                 let e = h.default.getCurrentUser();
                 null != e && s.push(e),
                     (o = g.ZP.queryUsers(
-                        D(R({}, a), {
+                        w(R({}, a), {
                             users: s,
                             boosters: (0, g.Cq)(c.h8.USER),
                         }),
                     ));
-            } else o = g.ZP.queryAllUsers(D(R({}, a), { boosters: (0, g.Cq)(c.h8.USER) }));
+            } else o = g.ZP.queryAllUsers(w(R({}, a), { boosters: (0, g.Cq)(c.h8.USER) }));
             break;
         default:
             return [];

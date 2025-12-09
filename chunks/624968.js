@@ -30,25 +30,25 @@ let f = 200,
                 S(g.current > h.current);
             },
             P = i.useCallback(() => {
-                let e = D.current;
+                let e = w.current;
                 null != e &&
                     (y.current = Math.floor((E.current + e.clientWidth / 2) / (e.scrollWidth / e.childElementCount)));
             }, []),
             R = i.useCallback(() => {
-                let e = D.current;
+                let e = w.current;
                 null != e && (T(E.current > 0), C(E.current + e.clientWidth < e.scrollWidth), P());
             }, [P]),
-            w = (0, c.y)((e) => {
+            D = (0, c.y)((e) => {
                 let { contentRect: t } = e;
-                if (((h.current = t.width), null != D.current)) {
+                if (((h.current = t.width), null != w.current)) {
                     var n;
-                    E.current = null == (n = D.current) ? void 0 : n.scrollLeft;
+                    E.current = null == (n = w.current) ? void 0 : n.scrollLeft;
                 }
                 N(), R();
             }),
-            D = i.useRef(null);
+            w = i.useRef(null);
         i.useEffect(() => {
-            let e = D.current;
+            let e = w.current;
             if (null == e) return;
             let t = new ResizeObserver(() => {
                 (g.current = e.scrollWidth), N(), R();
@@ -73,7 +73,7 @@ let f = 200,
         let x = i.useMemo(
                 () =>
                     (0, s.throttle)(() => {
-                        let e = D.current;
+                        let e = w.current;
                         if (null == e) return;
                         let { scrollLeft: t } = e,
                             n = Math.max(0, t - h.current);
@@ -91,7 +91,7 @@ let f = 200,
             L = i.useMemo(
                 () =>
                     (0, s.throttle)(() => {
-                        let e = D.current;
+                        let e = w.current;
                         if (null == e) return;
                         let { scrollLeft: t } = e,
                             n = t + h.current;
@@ -107,7 +107,7 @@ let f = 200,
                 [h, R],
             ),
             j = i.useCallback(() => {
-                let e = D.current;
+                let e = w.current;
                 if (null == e) return !1;
                 for (let t of e.children) {
                     let e = t;
@@ -118,7 +118,7 @@ let f = 200,
             M = () => {
                 setTimeout(() => {
                     if (!j()) {
-                        let e = D.current;
+                        let e = w.current;
                         if (null != e)
                             for (let t of (e.setAttribute("tabIndex", "0"), e.children))
                                 t.setAttribute("tabIndex", "-1");
@@ -127,7 +127,7 @@ let f = 200,
             },
             k = { "--custom-edge-fade-width": p(a) };
         return (0, r.jsxs)("div", {
-            ref: w,
+            ref: D,
             style: k,
             className: d.container,
             children: [
@@ -162,7 +162,7 @@ let f = 200,
                 (0, r.jsx)(l.Kqy, {
                     direction: "horizontal",
                     gap: n,
-                    ref: D,
+                    ref: w,
                     className: o()(d.children, {
                         [d.scrollLeft]: I,
                         [d.scrollRight]: A,
@@ -170,7 +170,7 @@ let f = 200,
                     }),
                     tabIndex: 0,
                     onFocus: (e) => {
-                        let t = D.current;
+                        let t = w.current;
                         if (null != t) {
                             if ((e.preventDefault(), -1 !== t.tabIndex)) {
                                 var n;
@@ -185,7 +185,7 @@ let f = 200,
                     },
                     onKeyDown: (e) => {
                         var t;
-                        let n = D.current;
+                        let n = w.current;
                         if (null == n) return;
                         let r = n.children,
                             i = null != (t = y.current) ? t : 0,

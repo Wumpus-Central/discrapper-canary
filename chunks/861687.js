@@ -27,8 +27,8 @@ var r = n(654861),
     N = n(145016),
     P = n(166884),
     R = n(450109),
-    w = n(118445),
-    D = n(412412),
+    D = n(118445),
+    w = n(412412),
     x = n(311473),
     L = n(615830),
     j = n(314897),
@@ -502,7 +502,7 @@ class eP extends f.Z {
         let { enabled: n } = (0, y.h)({ location: "_chooseExperiments" });
         n && t.push("should_analyze_user_voice_volume"),
             t.push("keyframe_on_join"),
-            w.Z.getCurrentConfig({ location: "_chooseExperiments" }, { autoTrackExposure: !0 }).enabled &&
+            D.Z.getCurrentConfig({ location: "_chooseExperiments" }, { autoTrackExposure: !0 }).enabled &&
                 t.push("network_aware_socket");
         let r = C.Z.getCurrentConfig(
             { location: "_chooseExperiments" },
@@ -857,7 +857,7 @@ class eP extends f.Z {
             k.Z.getUseVaapiEncoder() && E.push("vaapi"),
             this.context === ec.Yn.STREAM &&
                 "streamer" === this.getVoiceParticipantType() &&
-                (0, D.t)("handleReady").enabled &&
+                (0, w.t)("handleReady").enabled &&
                 E.push("useCaptureDeviceForEncode"),
             f.setVideoEncoderExperiments(E.join(",")),
             f.on(p.Sh.Speaking, (e, t, n) => {

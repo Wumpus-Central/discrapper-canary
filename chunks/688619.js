@@ -131,9 +131,9 @@
         N = f,
         P = d.unpack,
         R = d.type,
-        w = S;
+        D = S;
     (C.prototype.cmyk = function () {
-        return w(this._rgb);
+        return D(this._rgb);
     }),
         (A.cmyk = function () {
             for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
@@ -147,14 +147,14 @@
                 if ("array" === R((e = P(e, "cmyk"))) && 4 === e.length) return "cmyk";
             },
         });
-    var D = d.unpack,
+    var w = d.unpack,
         x = d.last,
         L = function (e) {
             return Math.round(100 * e) / 100;
         },
         j = function () {
             for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-            var n = D(e, "hsla"),
+            var n = w(e, "hsla"),
                 r = x(e) || "lsa";
             return (
                 (n[0] = L(n[0] || 0)),
@@ -426,7 +426,7 @@
         },
         eP = /^#?([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/,
         eR = /^#?([A-Fa-f0-9]{8}|[A-Fa-f0-9]{4})$/,
-        ew = function (e) {
+        eD = function (e) {
             if (e.match(eP)) {
                 (4 === e.length || 7 === e.length) && (e = e.substr(1)),
                     3 === e.length && (e = (e = e.split(""))[0] + e[0] + e[1] + e[1] + e[2] + e[2]);
@@ -441,7 +441,7 @@
             }
             throw Error("unknown hex color: " + e);
         },
-        eD = y,
+        ew = y,
         ex = E,
         eL = d.type,
         ej = f,
@@ -449,11 +449,11 @@
     (ex.prototype.hex = function (e) {
         return eM(this._rgb, e);
     }),
-        (eD.hex = function () {
+        (ew.hex = function () {
             for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
             return new (Function.prototype.bind.apply(ex, [null].concat(e, ["hex"])))();
         }),
-        (ej.format.hex = ew),
+        (ej.format.hex = eD),
         ej.autodetect.push({
             p: 4,
             test: function (e) {
@@ -722,8 +722,8 @@
             },
         });
     var tR = d.unpack,
-        tw = d.RAD2DEG,
-        tD = Math.sqrt,
+        tD = d.RAD2DEG,
+        tw = Math.sqrt,
         tx = Math.atan2,
         tL = Math.round,
         tj = function () {
@@ -732,8 +732,8 @@
                 r = n[0],
                 i = n[1],
                 a = n[2],
-                o = tD(i * i + a * a),
-                s = (tx(a, i) * tw + 360) % 360;
+                o = tw(i * i + a * a),
+                s = (tx(a, i) * tD + 360) % 360;
             return 0 === tL(10000 * o) && (s = NaN), [r, o, s];
         },
         tM = d.unpack,
@@ -965,7 +965,7 @@
         t8 = f,
         t6 = d.type,
         t7 = t4,
-        t9 = ew,
+        t9 = eD,
         ne = eN;
     (t5.prototype.name = function () {
         for (var e = ne(this._rgb, "rgb"), t = 0, n = Object.keys(t7); t < n.length; t += 1) {
@@ -1131,17 +1131,17 @@
         var t = Math.abs(e);
         return t < 0.04045 ? e / 12.92 : (nN(e) || 1) * nC((t + 0.055) / 1.055, 2.4);
     }
-    var nw = d.unpack,
-        nD = Math.pow,
+    var nD = d.unpack,
+        nw = Math.pow,
         nx = Math.sign,
         nL = function () {
             for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-            var n = (e = nw(e, "lab"))[0],
+            var n = (e = nD(e, "lab"))[0],
                 r = e[1],
                 i = e[2],
-                a = nD(n + 0.3963377774 * r + 0.2158037573 * i, 3),
-                o = nD(n - 0.1055613458 * r - 0.0638541728 * i, 3),
-                s = nD(n - 0.0894841775 * r - 1.291485548 * i, 3);
+                a = nw(n + 0.3963377774 * r + 0.2158037573 * i, 3),
+                o = nw(n - 0.1055613458 * r - 0.0638541728 * i, 3),
+                s = nw(n - 0.0894841775 * r - 1.291485548 * i, 3);
             return [
                 255 * nj(4.0767416621 * a - 3.3077115913 * o + 0.2309699292 * s),
                 255 * nj(-1.2684380046 * a + 2.6097574011 * o - 0.3413193965 * s),
@@ -1151,7 +1151,7 @@
         };
     function nj(e) {
         var t = Math.abs(e);
-        return t > 0.0031308 ? (nx(e) || 1) * (1.055 * nD(t, 1 / 2.4) - 0.055) : 12.92 * e;
+        return t > 0.0031308 ? (nx(e) || 1) * (1.055 * nw(t, 1 / 2.4) - 0.055) : 12.92 * e;
     }
     var nM = d.unpack,
         nk = d.type,
@@ -1450,8 +1450,8 @@
     rr.oklch = function (e, t, n) {
         return rR(e, t, n, "oklch");
     };
-    var rw = E,
-        rD = d.clip_rgb,
+    var rD = E,
+        rw = d.clip_rgb,
         rx = Math.pow,
         rL = Math.sqrt,
         rj = Math.PI,
@@ -1475,7 +1475,7 @@
                     n[t] *= i;
                 }),
                 (e = e.map(function (e) {
-                    return new rw(e);
+                    return new rD(e);
                 })),
                 "lrgb" === t)
             )
@@ -1504,7 +1504,7 @@
                     for (; _ >= 360; ) _ -= 360;
                     o[p] = _;
                 } else o[p] = o[p] / s[p];
-            return (f /= r), new rw(o, t).alpha(f > 0.99999 ? 1 : f, !0);
+            return (f /= r), new rD(o, t).alpha(f > 0.99999 ? 1 : f, !0);
         },
         rZ = function (e, t) {
             for (var n = e.length, r = [0, 0, 0, 0], i = 0; i < e.length; i++) {
@@ -1514,7 +1514,7 @@
                 (r[0] += rx(s[0], 2) * o), (r[1] += rx(s[1], 2) * o), (r[2] += rx(s[2], 2) * o), (r[3] += s[3] * o);
             }
             return (
-                (r[0] = rL(r[0])), (r[1] = rL(r[1])), (r[2] = rL(r[2])), r[3] > 0.9999999 && (r[3] = 1), new rw(rD(r))
+                (r[0] = rL(r[0])), (r[1] = rL(r[1])), (r[2] = rL(r[2])), r[3] > 0.9999999 && (r[3] = 1), new rD(rw(r))
             );
         },
         rB = y,
@@ -2028,8 +2028,8 @@
                                 var P = iE(O[N] - T);
                                 P < A && ((A = P), (C = N)), E[C]++, (g[I] = C);
                             }
-                        for (var R = Array(n), w = 0; w < n; w++) R[w] = null;
-                        for (var D = 0; D < h; D++) null === R[(m = g[D])] ? (R[m] = a[D]) : (R[m] += a[D]);
+                        for (var R = Array(n), D = 0; D < n; D++) R[D] = null;
+                        for (var w = 0; w < h; w++) null === R[(m = g[w])] ? (R[m] = a[w]) : (R[m] += a[w]);
                         for (var x = 0; x < n; x++) R[x] *= 1 / E[x];
                         b = !1;
                         for (var L = 0; L < n; L++)
@@ -2068,8 +2068,8 @@
             iN = Math.min,
             iP = Math.max,
             iR = Math.atan2,
-            iw = Math.abs,
-            iD = Math.cos,
+            iD = Math.abs,
+            iw = Math.cos,
             ix = Math.sin,
             iL = Math.exp,
             ij = Math.PI,
@@ -2102,18 +2102,18 @@
                     I = a(iR(_, b)),
                     T = S >= 0 ? S : S + 360,
                     A = I >= 0 ? I : I + 360,
-                    C = iw(T - A) > 180 ? (T + A + 360) / 2 : (T + A) / 2,
+                    C = iD(T - A) > 180 ? (T + A + 360) / 2 : (T + A) / 2,
                     N =
                         1 -
-                        0.17 * iD(o(C - 30)) +
-                        0.24 * iD(o(2 * C)) +
-                        0.32 * iD(o(3 * C + 6)) -
-                        0.2 * iD(o(4 * C - 63)),
+                        0.17 * iw(o(C - 30)) +
+                        0.24 * iw(o(2 * C)) +
+                        0.32 * iw(o(3 * C + 6)) -
+                        0.2 * iw(o(4 * C - 63)),
                     P = A - T;
-                (P = 180 >= iw(P) ? P : A <= T ? P + 360 : P - 360), (P = 2 * iA(y * O) * ix(o(P) / 2));
+                (P = 180 >= iD(P) ? P : A <= T ? P + 360 : P - 360), (P = 2 * iA(y * O) * ix(o(P) / 2));
                 var R = f - l,
-                    w = O - y,
-                    D = 1 + (0.015 * iC(m - 50, 2)) / iA(20 + iC(m - 50, 2)),
+                    D = O - y,
+                    w = 1 + (0.015 * iC(m - 50, 2)) / iA(20 + iC(m - 50, 2)),
                     x = 1 + 0.045 * v,
                     L = 1 + 0.015 * v * N,
                     j = 30 * iL(-iC((C - 275) / 25, 2)),
@@ -2123,10 +2123,10 @@
                     iN(
                         100,
                         iA(
-                            iC(R / (n * D), 2) +
-                                iC(w / (r * x), 2) +
+                            iC(R / (n * w), 2) +
+                                iC(D / (r * x), 2) +
                                 iC(P / (i * L), 2) +
-                                (w / (r * x)) * M * (P / (i * L)),
+                                (D / (r * x)) * M * (P / (i * L)),
                         ),
                     ),
                 );

@@ -21,13 +21,13 @@ function g(e) {
             guildId: null == t ? void 0 : t.guild_id,
             location: "b7309a_1",
         }),
-        { enableViewerClipping: v } = s.Z.useExperiment(
+        { enableViewerClipping: _ } = s.Z.useExperiment(
             { location: "VoiceEffectsActionBar" },
             { autoTrackExposure: !1 },
         ),
-        _ = (0, a.Z)(u.Z);
+        v = (0, a.Z)(u.Z);
     if (null == t || null != C) return null;
-    let O = v && _,
+    let O = _ && v,
         x = y && n;
     return O || x
         ? (0, i.jsxs)(l.Gt, {

@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(563959),
     P = n(917318),
     R = n(703656),
-    w = n(471253),
-    D = n(565799),
+    D = n(471253),
+    w = n(565799),
     x = n(590415),
     L = n(911560),
     j = n(488131),
@@ -81,8 +81,8 @@ var r = n(54381),
     eN = n(910548),
     eP = n(981631),
     eR = n(70722),
-    ew = n(388032);
-function eD(e, t, n) {
+    eD = n(388032);
+function ew(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -106,7 +106,7 @@ function ex(e) {
                 }),
             )),
             r.forEach(function (t) {
-                eD(e, t, n[t]);
+                ew(e, t, n[t]);
             });
     }
     return e;
@@ -597,9 +597,9 @@ function e2(e) {
         }),
         d = (0, a.e7)([B.Z], () => B.Z.can(eP.Plq.MUTE_MEMBERS, s)),
         f = () => {
-            (0, w.DT)(s, i.author.id, !1), l.Z.deleteMessage(s.id, i.id, !0);
+            (0, D.DT)(s, i.author.id, !1), l.Z.deleteMessage(s.id, i.id, !0);
         },
-        p = (0, a.e7)([D.Z], () => D.Z.getParticipant(s.id, i.author.id)),
+        p = (0, a.e7)([w.Z], () => w.Z.getParticipant(s.id, i.author.id)),
         _ =
             new Date(q.default.extractTimestamp(i.id)).toISOString() ===
             new Date(
@@ -617,7 +617,7 @@ function e2(e) {
                 ? (0, r.jsx)(o.Button, {
                       variant: "secondary",
                       onClick: f,
-                      text: ew.intl.string(ew.t.f0T7hI),
+                      text: eD.intl.string(eD.t.f0T7hI),
                       icon: o.Lrb,
                   })
                 : null,

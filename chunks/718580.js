@@ -135,8 +135,8 @@ function N(e) {
     });
     let P = S.activeSlide,
         R = (0, _.Z)(S.activeSlide),
-        w = null != (t = S.directionOverride) ? t : T(null != R ? C[R] : null, C[P]),
-        { reducedMotion: D } = i.useContext(d.Sfi),
+        D = null != (t = S.directionOverride) ? t : T(null != R ? C[R] : null, C[P]),
+        { reducedMotion: w } = i.useContext(d.Sfi),
         x = i.useContext(m.Z),
         L = C[P].impressionName,
         j = O(b({}, C[P].impressionProperties), { location_stack: N });
@@ -147,7 +147,7 @@ function N(e) {
         _stackContext: { isSlide: !0 },
     });
     let { ref: M, width: k = 0, height: U = 0 } = (0, p.ZP)(P),
-        G = b({}, I, S.springConfig, D.enabled ? { clamp: !0 } : null),
+        G = b({}, I, S.springConfig, w.enabled ? { clamp: !0 } : null),
         Z = (0, f.q_F)(
             {
                 width: null != (n = S.width) ? n : k,
@@ -171,7 +171,7 @@ function N(e) {
             },
             null == R ? "animate-never" : "respect-motion-settings",
         ),
-        F = (0, c.Z)(w),
+        F = (0, c.Z)(D),
         { width: V, centered: H = !0 } = S,
         Y =
             u.tq && !S.shouldUseMediaQueriesForSizing
@@ -217,7 +217,7 @@ function N(e) {
                         },
                         q,
                         K,
-                        D.enabled
+                        w.enabled
                             ? a
                             : b(
                                   {

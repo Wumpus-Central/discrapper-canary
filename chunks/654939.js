@@ -87,7 +87,7 @@ let g = (e) => {
     let R = (0, i.useCallback)(() => {
             null == n || n(d.L.USER_DISMISS);
         }, [n]),
-        w = {
+        D = {
             gradientColor: N,
             size: "lg",
             graphic: {
@@ -117,7 +117,7 @@ let g = (e) => {
                           delay: g,
                           onShow: I,
                       },
-                      w,
+                      D,
                   ),
                   { children: p },
               ),
@@ -136,7 +136,7 @@ let g = (e) => {
                               position: "top",
                               caretConfig: { align: "center" },
                           },
-                          w,
+                          D,
                       ),
                   ),
               ],

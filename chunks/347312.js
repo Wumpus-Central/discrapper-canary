@@ -49,12 +49,12 @@ function R(e) {
     let t;
     return Math.floor(((t = e <= g ? h : e >= b ? E : ((Math.min(e, b) - g) / (b - g)) * (E - h) + h) + O) / v) * v - O;
 }
-function w(e) {
+function D(e) {
     if (null == e) return;
     let t = 2 * y + O;
     return Math.floor((e + O) / t);
 }
-function D(e, t, n, r, i) {
+function w(e, t, n, r, i) {
     e.moveTo(t, n + i),
         e.lineTo(t, n + r - i),
         e.arc(t + i, n + r - i, i, Math.PI, 0, !0),
@@ -69,11 +69,11 @@ function x(e) {
 function L(e) {
     let { context: t, devicePixelRatio: n, canvasHeight: r, segmentValue: i, segmentIndex: a, constrainMin: o } = e,
         s = o ? (S - I) * i + I : S * i;
-    0 !== s && D(t, a * (2 * y + O) * n, (r / 2 - s / 2) * n, s * n, y * n);
+    0 !== s && w(t, a * (2 * y + O) * n, (r / 2 - s / 2) * n, s * n, y * n);
 }
 function j(e, t) {
     let n = i.useMemo(() => N(e), [e]),
-        r = i.useMemo(() => w(t), [t]);
+        r = i.useMemo(() => D(t), [t]);
     return i.useMemo(() => {
         var e;
         return null != (e = P(null != n ? n : [], r)) ? e : A;
@@ -139,8 +139,8 @@ function G(e) {
         N = window.devicePixelRatio,
         {
             lastBackgroundFillColor: P,
-            backgroundFillColor: w,
-            lastActiveFillColor: D,
+            backgroundFillColor: D,
+            lastActiveFillColor: w,
             activeFillColor: M,
             lastInactiveFillColor: G,
             inactiveFillColor: Z,
@@ -194,7 +194,7 @@ function G(e) {
                     null != A.current && n > A.current + C && (A.current = null);
                 let s = r.height / N;
                 i.clearRect(0, 0, r.width, r.height), i.beginPath();
-                let [c, u] = U(P, w, n, A.current);
+                let [c, u] = U(P, D, n, A.current);
                 (o = o || u), (i.fillStyle = c);
                 for (let e = 0; e < O.length; e++)
                     L({
@@ -208,7 +208,7 @@ function G(e) {
                 i.fill();
                 let [f, p] = U(G, Z, n, A.current);
                 o = o || p;
-                let [_, m] = U(D, M, n, A.current);
+                let [_, m] = U(w, M, n, A.current);
                 o = o || m;
                 for (let e = 0; e < a.length; e++) {
                     let t = a[e],
@@ -234,7 +234,7 @@ function G(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [g, N, O, E, a, s, l, d, P, w, D, M, G, Z]);
+        }, [g, N, O, E, a, s, l, d, P, D, w, M, G, Z]);
     let [, V] = (0, u.Z)({
         ref: g,
         onDrag: f,

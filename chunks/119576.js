@@ -17,7 +17,7 @@ n.d(t, {
     k3: () => m,
     ku: () => _,
     mA: () => r,
-    pw: () => w,
+    pw: () => D,
     uZ: () => p,
     yd: () => x,
     ze: () => u,
@@ -74,10 +74,10 @@ function v(e, t, n) {
         i = O(e),
         a = E(i),
         o = "x" === i ? (r === (n ? "end" : "start") ? "right" : "left") : "start" === r ? "bottom" : "top";
-    return t.reference[a] > t.floating[a] && (o = w(o)), [o, w(o)];
+    return t.reference[a] > t.floating[a] && (o = D(o)), [o, D(o)];
 }
 function S(e) {
-    let t = w(e);
+    let t = D(e);
     return [I(e), t, I(t)];
 }
 function I(e) {
@@ -105,10 +105,10 @@ function R(e, t, n, r) {
         a = P(m(e), "start" === n, r);
     return i && ((a = a.map((e) => e + "-" + i)), t && (a = a.concat(a.map(I)))), a;
 }
-function w(e) {
+function D(e) {
     return e.replace(/left|right|bottom|top/g, (e) => d[e]);
 }
-function D(e) {
+function w(e) {
     return {
         top: 0,
         right: 0,
@@ -119,7 +119,7 @@ function D(e) {
 }
 function x(e) {
     return "number" != typeof e
-        ? D(e)
+        ? w(e)
         : {
               top: e,
               right: e,

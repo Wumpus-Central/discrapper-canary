@@ -58,7 +58,7 @@ function N(e) {
         { loading: A, subscriptionsSettings: N } = (0, y.H)(n),
         { listingsLoaded: P } = (0, m.eD)(n),
         R = (0, m.ue)(n, { publishedOnly: !0 }),
-        w = i.useCallback(async () => {
+        D = i.useCallback(async () => {
             b.default.track(S.rMx.GUILD_SHOP_EMBED_CLICKED, C({}, (0, f.hH)(n))), await (0, h.Z)(S.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, p.Z)(
@@ -68,7 +68,7 @@ function N(e) {
         },
         { disableTrack: null == a },
     );
-    let D = R.length > 0 ? new Date(Math.min(...R.map((e) => Date.parse(e.published_at)))) : void 0;
+    let w = R.length > 0 ? new Date(Math.min(...R.map((e) => Date.parse(e.published_at)))) : void 0;
     return A || !P
         ? (0, r.jsx)("div", {
               className: o()(T.guildShopEmbed, T.spinnerContainer),
@@ -127,13 +127,13 @@ function N(e) {
                                             children: I.intl.format(I.t.tKZNlb, { listingCount: R.length }),
                                         }),
                                     }),
-                                    null != D &&
+                                    null != w &&
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(d.Text, {
                                                 variant: "text-sm/normal",
                                                 color: "text-muted",
                                                 children: I.intl.format(I.t["kXr8+b"], {
-                                                    createdYear: D.getFullYear(),
+                                                    createdYear: w.getFullYear(),
                                                 }),
                                             }),
                                         }),
@@ -142,7 +142,7 @@ function N(e) {
                             (0, r.jsx)("div", {
                                 className: T.guildShopEmbedCta,
                                 children: (0, r.jsx)(u.zxk, {
-                                    onClick: w,
+                                    onClick: D,
                                     icon: v.P,
                                     text: I.intl.string(I.t.jXx1CC),
                                 }),

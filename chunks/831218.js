@@ -32,7 +32,7 @@ var r,
     A = n(981631),
     R = n(388032),
     D = n(777126);
-function M(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function M(e, t, n) {
         e
     );
 }
-function L(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                L(e, t, n[t]);
             });
     }
     return e;
@@ -307,7 +307,7 @@ class U extends (r = l.Component) {
                     children: (r) =>
                         (0, i.jsx)(
                             f.aVo,
-                            L(
+                            M(
                                 {
                                     fade: !0,
                                     innerRole: o,
@@ -340,15 +340,15 @@ class U extends (r = l.Component) {
     }
     constructor(...e) {
         super(...e),
-            M(this, "state", {
+            L(this, "state", {
                 initialized: !1,
                 preRenderedChildren: 0,
                 totalRowCount: 0,
                 nonNullChildren: [],
             }),
-            M(this, "_list", null),
-            M(this, "hasReportedAnalytics", !1),
-            M(this, "reportAnalytics", () => {
+            L(this, "_list", null),
+            L(this, "hasReportedAnalytics", !1),
+            L(this, "reportAnalytics", () => {
                 var e;
                 if (this.hasReportedAnalytics) return;
                 let t = null == (e = this._list) ? void 0 : e.getScrollerState();
@@ -369,17 +369,17 @@ class U extends (r = l.Component) {
                 (this.hasReportedAnalytics = !0),
                     m.ZP.trackWithMetadata(
                         A.rMx.DM_LIST_VIEWED,
-                        k(L({}, u, (0, _.X)()), {
+                        k(M({}, u, (0, _.X)()), {
                             visible_user_ids: s.filter((e) => null != e),
                             changelog_dm_visible: c,
                         }),
                     );
             }),
-            M(this, "getSectionHeight", (e) => {
+            L(this, "getSectionHeight", (e) => {
                 let { showDMHeader: t } = this.props;
                 return 0 === e ? 0 : 24 * !!t;
             }),
-            M(
+            L(
                 this,
                 "handleScroll",
                 a()(() => {
@@ -390,7 +390,7 @@ class U extends (r = l.Component) {
                     void 0 !== this.props.onHandleScroll && this.props.onHandleScroll();
                 }, 100),
             ),
-            M(this, "renderDM", (e, t) => {
+            L(this, "renderDM", (e, t) => {
                 let { privateChannelIds: n, channels: r, selectedChannelId: l } = this.props,
                     { totalRowCount: o, preRenderedChildren: a } = this.state,
                     s = r[n[t]];
@@ -407,7 +407,7 @@ class U extends (r = l.Component) {
                           s.id,
                       );
             }),
-            M(this, "renderChild", (e) => {
+            L(this, "renderChild", (e) => {
                 let { nonNullChildren: t, totalRowCount: n } = this.state,
                     r = t[e];
                 return l.isValidElement(r)
@@ -417,7 +417,7 @@ class U extends (r = l.Component) {
                       })
                     : r;
             }),
-            M(this, "renderRow", (e) => {
+            L(this, "renderRow", (e) => {
                 let { section: t, row: n } = e,
                     { privateChannelIds: r, hideAllDMs: l } = this.props;
                 return 0 === t
@@ -426,7 +426,7 @@ class U extends (r = l.Component) {
                       ? this.renderDM(t, n)
                       : (0, i.jsx)(G, {}, "no-private-channels");
             }),
-            M(this, "renderSection", (e) => {
+            L(this, "renderSection", (e) => {
                 let { section: t } = e,
                     { showDMHeader: n } = this.props;
                 return 0 !== t && n
@@ -455,7 +455,7 @@ class U extends (r = l.Component) {
                       )
                     : null;
             }),
-            M(this, "getRowHeight", (e, t) => {
+            L(this, "getRowHeight", (e, t) => {
                 let { privateChannelIds: n, density: r } = this.props,
                     { nonNullChildren: i } = this.state,
                     o = 44;
@@ -474,7 +474,7 @@ class U extends (r = l.Component) {
             });
     }
 }
-M(U, "defaultProps", { padding: 8 });
+L(U, "defaultProps", { padding: 8 });
 let B = (e) => {
     let { density: t } = (0, f.TCT)(),
         { version: n, theme: r, children: o, showDMHeader: a, listScrollerRef: d, hideAllDMs: h } = e,
@@ -496,7 +496,7 @@ let B = (e) => {
         })),
         R = l.useRef(null),
         D = null != d ? d : R,
-        M = l.useCallback(
+        L = l.useCallback(
             (e) => {
                 let t = D.current,
                     n = document.querySelector(e);
@@ -545,7 +545,7 @@ let B = (e) => {
             scrollToStart: G,
             scrollToEnd: B,
             defaultFocused: (m + +!!a).toString(),
-            setFocus: M,
+            setFocus: L,
         });
     return (0, i.jsx)(b.Gt, {
         value: C,
@@ -553,7 +553,7 @@ let B = (e) => {
             navigator: V,
             children: (0, i.jsx)(
                 U,
-                k(L({}, e), {
+                k(M({}, e), {
                     density: t,
                     channels: y,
                     privateChannelIds: O,

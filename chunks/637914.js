@@ -53,8 +53,8 @@ var a,
     N = RegExp("\n", "g"),
     P = RegExp("^\n", "g"),
     R = RegExp(T, "g"),
-    w = RegExp("&#13;?", "g"),
-    D = RegExp("&#8203;?", "g"),
+    D = RegExp("&#13;?", "g"),
+    w = RegExp("&#8203;?", "g"),
     x = ["bold", "bolder", "500", "600", "700", "800", "900"],
     L = ["light", "lighter", "normal", "100", "200", "300", "400"],
     j = ["className", "href", "rel", "target", "title"],
@@ -392,7 +392,7 @@ var a,
 e.exports = function (e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c,
-        r = t((e = e.trim().replace(C, "").replace(R, A).replace(w, "").replace(D, "")));
+        r = t((e = e.trim().replace(C, "").replace(R, A).replace(D, "").replace(w, "")));
     return r
         ? new Y(G(n), function (e, t) {
               return "li" === e ? ("ol" === t ? "ordered-list-item" : "unordered-list-item") : null;

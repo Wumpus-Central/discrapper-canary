@@ -9,8 +9,8 @@ n.d(t, {
     hJ: () => eN,
     iV: () => eL,
     jx: () => eR,
-    oR: () => eD,
-    qz: () => ew,
+    oR: () => ew,
+    qz: () => eD,
     vB: () => eU,
     x2: () => eP,
 }),
@@ -45,8 +45,8 @@ var r = n(54381),
     N = n(570220),
     P = n(28546),
     R = n(805680),
-    w = n(368844),
-    D = n(41776),
+    D = n(368844),
+    w = n(41776),
     x = n(657871),
     L = n(849522),
     j = n(780291),
@@ -158,7 +158,7 @@ function eS(e, t, a, o, s) {
                             : [],
                     O = null != (b = W.Z.getUploads(s, t.drafts.type)) ? b : [],
                     v = (0, M.q5)(s);
-                if (null == d && !p && !h && (0, w.CB)(O, s)) {
+                if (null == d && !p && !h && (0, D.CB)(O, s)) {
                     c(!1),
                         (0, _.ZDy)(async () => {
                             let { default: e } = await Promise.all([
@@ -344,12 +344,12 @@ function eR() {
         handleHideAutocomplete: n,
     };
 }
-function ew(e) {
+function eD(e) {
     let t = i.useRef(null);
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e;
 }
-function eD(e) {
+function ew(e) {
     let [t, n] = i.useState(0);
     return {
         editorHeight: t,
@@ -363,7 +363,7 @@ function eD(e) {
 }
 function ex(e, t, n, r) {
     let i = e.getGuildId(),
-        a = (0, p.e7)([D.Z], () => null != i && D.Z.isLurking(i), [i]),
+        a = (0, p.e7)([w.Z], () => null != i && w.Z.isLurking(i), [i]),
         o = (0, p.e7)([F.ZP, K.default], () => {
             var e, t;
             let n = K.default.getCurrentUser();
@@ -523,8 +523,8 @@ function eG(e, t) {
         className: O,
         innerClassName: C,
         editorClassName: P,
-        id: w,
-        required: D,
+        id: D,
+        required: w,
         disabled: x,
         placeholder: M,
         accessibilityLabel: k,
@@ -562,7 +562,7 @@ function eG(e, t) {
     } = e;
     c()(null != G, "chat input type must be set");
     let { analyticsLocations: eq } = (0, b.ZP)(E.Z.CHANNEL_TEXT_AREA),
-        eQ = ew(t),
+        eQ = eD(t),
         eX = i.useRef(null),
         eJ = i.useRef(null),
         e$ = i.useRef(null),
@@ -630,10 +630,10 @@ function eG(e, t) {
             var e;
             return null == e1 || null == (e = e1.current) ? void 0 : e.hide();
         }, []),
-        { editorHeight: tI, handleResize: tT } = eD(z),
+        { editorHeight: tI, handleResize: tT } = ew(z),
         { handleTab: tA, handleEnter: tC, handleMoveSelection: tN } = ej(th, eX, ta),
-        { expressionPickerView: tP, shouldHideExpressionPicker: tR, handleOuterClick: tw } = eL(G, e$, U.id),
-        { selectedAutocompleteInputType: tD, selectedAutocompleteInputError: tx } = eM(tc, e$),
+        { expressionPickerView: tP, shouldHideExpressionPicker: tR, handleOuterClick: tD } = eL(G, e$, U.id),
+        { selectedAutocompleteInputType: tw, selectedAutocompleteInputError: tx } = eM(tc, e$),
         tL = ek(f),
         { currentAutocompleteType: tj, handleAutocompleteVisibilityChange: tM } = eU(G, U.id),
         { moveAppsEntrypointToOverflow: tk } = $.n.useConfig({ location: "ChannelAppLauncher" }),
@@ -659,7 +659,7 @@ function eG(e, t) {
             activeCommand: e5,
             pendingReply: W,
             pendingScheduledMessage: eK,
-            selectedAutocompleteInputType: tD,
+            selectedAutocompleteInputType: tw,
             selectedAutocompleteInputError: tx,
         }),
         tW = 0 === f.trim().length,
@@ -755,7 +755,7 @@ function eG(e, t) {
                                             G === ee.Ie.CREATE_FORUM_POST || G === ee.Ie.FORWARD_MESSAGE_INPUT,
                                         [e_.sansAttachButtonUserProfileReply]: G === ee.Ie.USER_PROFILE_REPLY,
                                     }),
-                                    onMouseDown: tw,
+                                    onMouseDown: tD,
                                     children: [
                                         tQ,
                                         tk && tq,
@@ -765,14 +765,14 @@ function eG(e, t) {
                                             ringClassName: e_.focusRing,
                                             children: (0, r.jsx)(et.Z, {
                                                 ref: e$,
-                                                id: w,
+                                                id: D,
                                                 focused: Z,
                                                 useSlate: ti,
                                                 textValue: f,
                                                 richValue: m,
                                                 disabled: e9,
                                                 placeholder: M,
-                                                required: D,
+                                                required: w,
                                                 accessibilityLabel: k,
                                                 isPreviewing: (e6 || e7) && tn,
                                                 channel: U,

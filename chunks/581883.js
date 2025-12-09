@@ -102,11 +102,11 @@ function P() {
 function R(e) {
     null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, g.JC)());
 }
-function w(e) {
+function D(e) {
     let { userSettingsProto: t } = e;
     (y.proto = (0, h.ac)(t)), a()("string" != typeof y.proto, "UserSettingsProto cannot be a string");
 }
-function D(e) {
+function w(e) {
     let {
         settings: { proto: t, type: n },
         partial: r,
@@ -264,12 +264,12 @@ class U extends (r = l.ZP.PersistedStore) {
 E(U, "displayName", "UserSettingsProtoStore"), E(U, "persistKey", "UserSettingsProtoStore-Cache");
 let G = new U(f.Z, {
     CACHE_LOADED: L,
-    USER_SETTINGS_PROTO_UPDATE: D,
-    USER_SETTINGS_PROTO_ENQUEUE_UPDATE: D,
+    USER_SETTINGS_PROTO_UPDATE: w,
+    USER_SETTINGS_PROTO_ENQUEUE_UPDATE: w,
     USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: x,
     CONNECTION_OPEN: A,
     CONNECTION_CLOSED: C,
     CONNECTION_RESUMED: C,
-    OVERLAY_INITIALIZE: w,
+    OVERLAY_INITIALIZE: D,
     LOGOUT: N,
 });

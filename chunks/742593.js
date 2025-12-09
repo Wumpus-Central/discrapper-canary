@@ -36,7 +36,7 @@ function O(e) {
                 ? (0, m.lh)(C, A, new Date(I.scheduled_start_time))
                 : null;
     if (null == I) return null;
-    let { entity_type: P, status: R, recurrence_rule: w } = I;
+    let { entity_type: P, status: R, recurrence_rule: D } = I;
     return (0, r.jsxs)("div", {
         className: a()(y.statusContainer, t),
         children: [
@@ -45,7 +45,7 @@ function O(e) {
                 status: null != N ? N : R,
                 eventType: P,
                 isNew: h,
-                recurrenceRule: (0, _.KV)(w),
+                recurrenceRule: (0, _.KV)(D),
                 guildEventId: g.id,
                 recurrenceId: v,
             }),

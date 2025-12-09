@@ -26,8 +26,8 @@ var r = n(620014),
     N = "[object Arguments]",
     P = "[object Array]",
     R = "[object Boolean]",
-    w = "[object Date]",
-    D = "[object Error]",
+    D = "[object Date]",
+    w = "[object Error]",
     x = "[object Function]",
     L = "[object GeneratorFunction]",
     j = "[object Map]",
@@ -50,46 +50,46 @@ var r = n(620014),
     J = "[object Uint16Array]",
     $ = "[object Uint32Array]",
     ee = {};
-function et(e, t, n, P, R, w) {
-    var D,
+function et(e, t, n, P, R, D) {
+    var w,
         j = t & T,
         M = t & A,
         U = t & C;
-    if ((n && (D = R ? n(e, P, R, w) : n(e)), void 0 !== D)) return D;
+    if ((n && (w = R ? n(e, P, R, D) : n(e)), void 0 !== w)) return w;
     if (!O(e)) return e;
     var G = E(e);
     if (G) {
-        if (((D = m(e)), !j)) return c(e, D);
+        if (((w = m(e)), !j)) return c(e, w);
     } else {
         var Z = _(e),
             B = Z == x || Z == L;
         if (b(e)) return l(e, j);
         if (Z == k || Z == N || (B && !R)) {
-            if (((D = M || B ? {} : g(e)), !j)) return M ? d(e, s(D, e)) : u(e, o(D, e));
+            if (((w = M || B ? {} : g(e)), !j)) return M ? d(e, s(w, e)) : u(e, o(w, e));
         } else {
             if (!ee[Z]) return R ? e : {};
-            D = h(e, Z, j);
+            w = h(e, Z, j);
         }
     }
-    w || (w = new r());
-    var F = w.get(e);
+    D || (D = new r());
+    var F = D.get(e);
     if (F) return F;
-    w.set(e, D),
+    D.set(e, w),
         v(e)
             ? e.forEach(function (r) {
-                  D.add(et(r, t, n, r, e, w));
+                  w.add(et(r, t, n, r, e, D));
               })
             : y(e) &&
               e.forEach(function (r, i) {
-                  D.set(i, et(r, t, n, i, e, w));
+                  w.set(i, et(r, t, n, i, e, D));
               });
     var V = U ? (M ? p : f) : M ? I : S,
         H = G ? void 0 : V(e);
     return (
         i(H || e, function (r, i) {
-            H && (r = e[(i = r)]), a(D, i, et(r, t, n, i, e, w));
+            H && (r = e[(i = r)]), a(w, i, et(r, t, n, i, e, D));
         }),
-        D
+        w
     );
 }
 (ee[N] =
@@ -97,7 +97,7 @@ function et(e, t, n, P, R, w) {
     ee[V] =
     ee[H] =
     ee[R] =
-    ee[w] =
+    ee[D] =
     ee[Y] =
     ee[W] =
     ee[K] =
@@ -115,5 +115,5 @@ function et(e, t, n, P, R, w) {
     ee[J] =
     ee[$] =
         !0),
-    (ee[D] = ee[x] = ee[F] = !1),
+    (ee[w] = ee[x] = ee[F] = !1),
     (e.exports = et);

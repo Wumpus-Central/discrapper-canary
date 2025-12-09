@@ -31,8 +31,8 @@ var r = n(54381),
     N = n(830253),
     P = n(286654),
     R = n(981631),
-    w = n(675654),
-    D = n(509571),
+    D = n(675654),
+    w = n(509571),
     x = n(388032),
     L = n(463063);
 function j(e, t, n) {
@@ -270,7 +270,7 @@ let Q = i.forwardRef(function (e, t) {
             I,
             null != (u = null == T ? void 0 : T.id) ? u : null,
             null != (m = eo ? y.AY.getSetting() : null == (n = y.kU.getSetting()) ? void 0 : n.volume) ? m : 100,
-            !eo && (null == T ? void 0 : T.isVocal()) ? D.w.VOICE : D.w.DEFAULT,
+            !eo && (null == T ? void 0 : T.isVocal()) ? w.w.VOICE : w.w.DEFAULT,
         ),
         { createMultipleConfettiAt: eE } = i.useContext(h.h),
         eb = i.useRef(null),
@@ -285,11 +285,11 @@ let Q = i.forwardRef(function (e, t) {
         eN = !(0, C.Nq)(ep, I, T) && !eo,
         eP = Z || (Q && !eN),
         eR = null != (O = g.Wq.useStore().bottomPosition) ? O : 0,
-        ew =
+        eD =
             (null != (S = null == (a = eb.current) ? void 0 : a.getBoundingClientRect().bottom) ? S : 0) + 50 > eR
                 ? "top"
                 : "bottom",
-        [eD, ex] = i.useState(!1),
+        [ew, ex] = i.useState(!1),
         eL = i.useCallback(() => {
             ex(!0);
         }, []),
@@ -305,7 +305,7 @@ let Q = i.forwardRef(function (e, t) {
             (eI &&
                 !eO &&
                 ((ev.current = Math.min(ev.current + H, V)),
-                Math.random() < ev.current && eE(ey.x, ey.y, void 0, void 0, { sprite: w.vv })),
+                Math.random() < ev.current && eE(ey.x, ey.y, void 0, void 0, { sprite: D.vv })),
             null != $)
         )
             return void $(e);
@@ -434,8 +434,8 @@ let Q = i.forwardRef(function (e, t) {
             (0, r.jsx)(d.u, {
                 "aria-label": null != el ? I.name : void 0,
                 __unsupportedReactNodeAsText: null != el ? el : I.name,
-                position: ew,
-                shouldShow: !eD,
+                position: eD,
+                shouldShow: !ew,
                 delay: 500,
                 children: (0, r.jsxs)(
                     f.kL8,
@@ -494,7 +494,7 @@ let Q = i.forwardRef(function (e, t) {
             !I.available &&
                 (0, r.jsx)(d.u, {
                     text: x.intl.string(x.t.MDOXJR),
-                    shouldShow: !eD,
+                    shouldShow: !ew,
                     children: (0, r.jsx)("div", {
                         className: L.unavailableTooltip,
                         children:

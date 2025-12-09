@@ -77,11 +77,11 @@ function R(e) {
         n = y(e.guildId);
     return "GUILD_ROLE_DELETE" === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t;
 }
-function w(e) {
+function D(e) {
     let { guildId: t, userId: n } = e;
     return y(t).updateMembersByMemberIds([n]);
 }
-function D(e) {
+function w(e) {
     let { guildId: t, members: n } = e;
     if (null == n || 0 === n.length) return !1;
     let r = y(t),
@@ -349,9 +349,9 @@ let J = new X(a.Z, {
     GUILD_ROLE_UPDATE: R,
     GUILD_ROLE_DELETE: R,
     GUILD_MEMBER_PROFILE_UPDATE: M,
-    GUILD_ROLE_MEMBER_REMOVE: w,
-    GUILD_ROLE_MEMBER_ADD: w,
-    THREAD_MEMBER_LIST_UPDATE: D,
+    GUILD_ROLE_MEMBER_REMOVE: D,
+    GUILD_ROLE_MEMBER_ADD: D,
+    THREAD_MEMBER_LIST_UPDATE: w,
     THREAD_MEMBERS_UPDATE: x,
     LOAD_ARCHIVED_THREADS_SUCCESS: L,
     LOAD_FORUM_POSTS: j,

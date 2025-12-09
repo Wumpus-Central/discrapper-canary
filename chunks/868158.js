@@ -1,9 +1,9 @@
 n.d(t, {
-    Eb: () => D,
+    Eb: () => w,
     Fx: () => M,
     IM: () => x,
     J2: () => F,
-    r$: () => w,
+    r$: () => D,
 }),
     n(539854),
     n(388685),
@@ -103,7 +103,7 @@ let C = new p.Z("ReadyPayloadUtils"),
     N = {},
     P = null,
     R = {};
-function w(e, t) {
+function D(e, t) {
     var n,
         { guilds: r, merged_members: i, merged_presences: a } = e,
         o = T(e, ["guilds", "merged_members", "merged_presences"]);
@@ -141,7 +141,7 @@ function w(e, t) {
         })
     );
 }
-function D() {
+function w() {
     let e = s.Z.database(),
         t = (0, f.O)() ? l.Z.getCommittedVersions() : Promise.resolve({});
     return Promise.all([

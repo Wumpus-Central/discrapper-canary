@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(739566),
     C = n(267128),
     y = n(507418),
-    v = n(348238),
-    _ = n(981631),
+    _ = n(348238),
+    v = n(981631),
     O = n(388032);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -82,14 +82,14 @@ let j = r.memo(function (e) {
         D = r.useMemo(() => {
             if (null == w) return null;
             let e = (0, o.Z)(w);
-            if (e.type === _.uaV.USER_JOIN)
+            if (e.type === v.uaV.USER_JOIN)
                 return (0, a.Rp)(
                     O.intl.formatToParts(m.Z.getSystemMessageUserJoin(e.id), {
                         username: null != M ? M.nick : e.author.username,
                         usernameHook: (e) => e,
                     }),
                 );
-            if (e.type === _.uaV.ROLE_SUBSCRIPTION_PURCHASE)
+            if (e.type === v.uaV.ROLE_SUBSCRIPTION_PURCHASE)
                 return (0, a.Rp)(
                     (0, c.PA)({
                         username: null != M ? M.nick : e.author.username,
@@ -97,28 +97,28 @@ let j = r.memo(function (e) {
                         roleSubscriptionData: e.roleSubscriptionData,
                     }),
                 );
-            if (e.type === _.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
+            if (e.type === v.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
                 return (0, a.Rp)(
                     (0, d.Y)({
                         application: null == e ? void 0 : e.application,
                         username: null == M ? void 0 : M.nick,
                     }),
                 );
-            if (e.type === _.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
+            if (e.type === v.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
                 return (0, a.Rp)(
                     (0, p.B2)({
                         application: null == e ? void 0 : e.application,
                         username: null == M ? void 0 : M.nick,
                     }),
                 );
-            if (e.type === _.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
+            if (e.type === v.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
                 return (0, a.Rp)(
                     (0, p.hj)({
                         application: null == e ? void 0 : e.application,
                         username: null == M ? void 0 : M.nick,
                     }),
                 );
-            else if (e.type === _.uaV.GUILD_DEADCHAT_REVIVE_PROMPT)
+            else if (e.type === v.uaV.GUILD_DEADCHAT_REVIVE_PROMPT)
                 return "" !== e.content ? e.content : O.intl.string(O.t.wnn1Dc);
             if (null != e.content && "" !== e.content) {
                 let t = {
@@ -150,22 +150,22 @@ let j = r.memo(function (e) {
             }),
             [w],
         ),
-        V = (0, v.wq)(null == w ? void 0 : w.author.id, S.id),
-        H = (0, v.$3)(n, w),
-        F = (0, v.Wl)(w, S, I, T),
-        B = (0, v.rY)(Z, T),
+        V = (0, _.wq)(null == w ? void 0 : w.author.id, S.id),
+        B = (0, _.$3)(n, w),
+        F = (0, _.Wl)(w, S, I, T),
+        H = (0, _.rY)(Z, T),
         G = r.useCallback(() => {
             T({
                 referencedUsernameProfile: !1,
                 referencedAvatarProfile: !1,
             });
         }, [T]),
-        z = (0, b.Uj)(n);
+        W = (0, b.Uj)(n);
     return (0, i.jsx)(C.Z, {
         repliedAuthor: M,
         baseMessage: n,
         channel: S,
-        baseAuthor: z,
+        baseAuthor: W,
         referencedMessage: j,
         content: D,
         compact: P,
@@ -174,9 +174,9 @@ let j = r.memo(function (e) {
         showAvatarPopout: Z,
         showUsernamePopout: I,
         renderPopout: y.Z,
-        onClickAvatar: B,
+        onClickAvatar: H,
         onClickUsername: F,
-        onClickReply: H,
+        onClickReply: B,
         onContextMenu: V,
         onPopoutRequestClose: G,
         isReplySpineClickable: N,

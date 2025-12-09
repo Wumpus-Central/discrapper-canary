@@ -32,8 +32,8 @@ var r = n(54381),
     N = n(594174),
     P = n(979651),
     R = n(259580),
-    w = n(626135),
-    D = n(74538),
+    D = n(626135),
+    w = n(74538),
     x = n(887766),
     L = n(763296),
     j = n(697426),
@@ -255,7 +255,7 @@ function ed(e) {
         eO = i.useMemo(() => $(X({}, ey), { section: Y.jXE.SOUNDBOARD_SOUND_PICKER }), [ey]),
         [ev, eS] = i.useState(null),
         eI = (0, l.e7)([N.default], () => N.default.getCurrentUser()),
-        eT = (0, D.I5)(eI, K.PremiumTypes.TIER_2),
+        eT = (0, w.I5)(eI, K.PremiumTypes.TIER_2),
         eA = (0, l.e7)([P.Z], () => {
             var e;
             return P.Z.getVoiceState(t, null != (e = null == eI ? void 0 : eI.id) ? e : Y.lds);
@@ -267,15 +267,15 @@ function ed(e) {
         eN = (0, b.Iu)((e) => e.searchQuery),
         eP = null != eN && "" !== eN,
         eR = (0, h.Dt)(),
-        ew = x.t.useConfig({ location: "SoundboardSoundGrid" }).upsellPinningMode,
-        { categories: eD, availableSounds: ex, soundCounts: eL } = (0, Z.ZP)(a, {}, ep),
+        eD = x.t.useConfig({ location: "SoundboardSoundGrid" }).upsellPinningMode,
+        { categories: ew, availableSounds: ex, soundCounts: eL } = (0, Z.ZP)(a, {}, ep),
         [ej, eM] = i.useState([]),
-        ek = (0, Z.FS)(eD, ej, eN),
+        ek = (0, Z.FS)(ew, ej, eN),
         eU = (0, b.Iu)((e) => e.isNitroLockedSectionVisible),
         [eG, eZ] = i.useState(!1),
         eB = i.useMemo(() => ek.filter((e) => e.items.length > 0), [ek]),
         eF = i.useMemo(
-            () => eB.findLastIndex((e) => !!(0, D._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
+            () => eB.findLastIndex((e) => !!(0, w._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
             [eB],
         ),
         eV = !eT && J && -1 !== eF,
@@ -283,7 +283,7 @@ function ed(e) {
         eY = A.T4.useSetting(),
         eW = i.useMemo(() => new Set(eY), [eY]),
         eK = null == a,
-        ez = D.ZP.canUseCustomCallSounds(eI),
+        ez = w.ZP.canUseCustomCallSounds(eI),
         eq = i.useCallback(
             (e) => {
                 eW.has(e) ? eW.delete(e) : eW.add(e), A.T4.updateSetting(Array.from(eW));
@@ -299,7 +299,7 @@ function ed(e) {
                     var o;
                     (0, M.GN)(e, null != (o = null == a ? void 0 : a.id) ? o : Y.lds, t, r),
                         eP &&
-                            w.default.track(Y.rMx.SEARCH_RESULT_SELECTED, {
+                            D.default.track(Y.rMx.SEARCH_RESULT_SELECTED, {
                                 search_type: Y.aib.SOUNDBOARD,
                                 channel_id: null == a ? void 0 : a.id,
                                 query: eN,
@@ -390,7 +390,7 @@ function ed(e) {
             null != e && eS(e);
         }, []),
         e1 = i.useCallback(() => {
-            let e = (0, D.Px)(K.PremiumTypes.TIER_2);
+            let e = (0, w.Px)(K.PremiumTypes.TIER_2);
             return z.intl.format(z.t["tw/SSq"], {
                 nitroTierName: e,
                 onClick: e0,
@@ -412,7 +412,7 @@ function ed(e) {
                     o = e$(n, t),
                     s = eW.has(i),
                     l = () => {
-                        w.default.track(Y.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                        D.default.track(Y.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                             location: { page: Y.ZY5.SOUNDBOARD_POPOUT },
                             tab: W.X1.SOUNDBOARD,
                             guild_id: null != t ? t : null,
@@ -500,18 +500,18 @@ function ed(e) {
             (e) =>
                 (0, r.jsx)(B.Z, {
                     soundboardListRef: e,
-                    categories: eD,
+                    categories: ew,
                     shouldUpsellLockedCategories: eV,
                     listPadding: ed,
                     guildId: t,
                     inExpressionPicker: e_,
                 }),
-            [eD, eV, ed, t, e_],
+            [ew, eV, ed, t, e_],
         ),
         tt = i.useCallback(() => {
             if (eV) {
                 let e;
-                switch (ew) {
+                switch (eD) {
                     case x.o.ALWAYS_PINNED:
                         e = !0;
                         break;
@@ -529,7 +529,7 @@ function ed(e) {
                 });
             }
             return null;
-        }, [e1, eV, ew, eU, eG]),
+        }, [e1, eV, eD, eU, eG]),
         tn = i.useCallback(
             (e) => {
                 var t;
@@ -589,7 +589,7 @@ function ed(e) {
                               is_external: !0,
                               location: $(X({}, eO), { object: Y.qAy.SOUNDBOARD_SOUND }),
                               location_stack: eb,
-                              sku_id: D.ZP.getSkuIdForPremiumType(K.PremiumTypes.TIER_2),
+                              sku_id: w.ZP.getSkuIdForPremiumType(K.PremiumTypes.TIER_2),
                           },
                           onClose: () => eS(null),
                           onLearnMore: g,

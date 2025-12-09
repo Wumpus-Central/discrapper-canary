@@ -1,9 +1,9 @@
 let r;
 n.d(t, {
     $k: () => O,
-    CA: () => D,
+    CA: () => w,
     F8: () => $,
-    JM: () => w,
+    JM: () => D,
     NZ: () => j,
     ZP: () => et,
     aN: () => L,
@@ -191,7 +191,7 @@ function R(e) {
         a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : O;
     return null != (t = P(e, n, r, i, a)) ? t : N(e.id, e.discriminator, e.isProvisional);
 }
-function w(e) {
+function D(e) {
     let t,
         { guildId: n, userId: r, avatar: i, canAnimate: a = !1, size: s = f.IXf, canWebP: c = O } = e,
         u = a && Q(i) ? er(c) : "jpg",
@@ -203,12 +203,12 @@ function w(e) {
     let p = { size: (0, l.oO)(s * (0, l.x_)()) };
     return "webp" === u && a && Q(i) && (p.animated = !0), (t += "?".concat(o.stringify(p)));
 }
-function D(e) {
+function w(e) {
     let { userId: t, avatar: n, guildId: r } = e,
         i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null == n
         ? null
-        : w({
+        : D({
               userId: t,
               avatar: n,
               guildId: r,
@@ -217,7 +217,7 @@ function D(e) {
 }
 function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = D(e, n);
+        r = w(e, n);
     return null != r ? ee(r) : t.getAvatarSource(e.guildId, n);
 }
 function L(e) {
@@ -360,7 +360,7 @@ function Y(e) {
         guildMember: l,
     } = e;
     if ((null == i ? void 0 : i.id) != null && null != l && null != l.avatar) {
-        let e = w({
+        let e = D({
             userId: i.id,
             guildId: l.guildId,
             avatar: l.avatar,
@@ -469,8 +469,8 @@ function ee(e) {
 let et = {
     getUserAvatarURL: R,
     getDefaultAvatarURL: N,
-    getGuildMemberAvatarURL: D,
-    getGuildMemberAvatarURLSimple: w,
+    getGuildMemberAvatarURL: w,
+    getGuildMemberAvatarURLSimple: D,
     getGuildMemberAvatarSource: x,
     getGuildMemberBannerURL: M,
     getUserBannerURL: L,

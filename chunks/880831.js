@@ -20,8 +20,8 @@ var i = n(54381),
     b = n(267128),
     C = n(378233),
     y = n(419922),
-    v = n(375954),
-    _ = n(699516),
+    _ = n(375954),
+    v = n(699516),
     O = n(768581),
     x = n(70956),
     E = n(823379),
@@ -33,16 +33,16 @@ function Z(e) {
     var t;
     let { message: n } = e,
         { isBlocked: l, isIgnored: o } = (0, c.cj)(
-            [_.Z],
+            [v.Z],
             () => ({
-                isBlocked: _.Z.isBlockedForMessage(n),
-                isIgnored: _.Z.isIgnoredForMessage(n),
+                isBlocked: v.Z.isBlockedForMessage(n),
+                isIgnored: v.Z.isIgnoredForMessage(n),
             }),
             [n],
         ),
         s = (0, g.Uj)(n),
         d = r.useContext(f.Z),
-        [v, x] = r.useState(!1),
+        [_, x] = r.useState(!1),
         E = r.useCallback(
             (e) => {
                 "A" !== e.target.nodeName &&
@@ -55,7 +55,7 @@ function Z(e) {
             },
             [n.channel_id, n.id],
         ),
-        j = null != n.content && "" !== n.content ? (0, m.ZP)(n, { isInteracting: v }).content : null,
+        j = null != n.content && "" !== n.content ? (0, m.ZP)(n, { isInteracting: _ }).content : null,
         {
             contentPlaceholder: I,
             renderedContent: Z,
@@ -76,7 +76,7 @@ function Z(e) {
                               className: P.sticker,
                               size: 128,
                               sticker: e,
-                              isInteracting: v,
+                              isInteracting: _,
                           },
                           e.id,
                       ),
@@ -164,7 +164,7 @@ function T(e) {
             let g = null != (t = h.current) ? t : o;
             return {
                 toastsHidden: u,
-                toastMessages: (0, c.Wu)([v.Z], () => g.map((e) => v.Z.getMessage(n, e)), [n, g]).filter(E.lm),
+                toastMessages: (0, c.Wu)([_.Z], () => g.map((e) => _.Z.getMessage(n, e)), [n, g]).filter(E.lm),
             };
         })({
             channelId: t,
@@ -191,12 +191,12 @@ function T(e) {
             }
             (0, o.isEqual)(e, y.current) || b(e);
         }, [f]);
-    let _ = f.map((e) => ({
+    let v = f.map((e) => ({
             message: e,
             height: m.current[e.id],
             y: g[e.id],
         })),
-        O = (0, u.Yzy)(_, {
+        O = (0, u.Yzy)(v, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {

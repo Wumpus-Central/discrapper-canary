@@ -19,8 +19,8 @@ var r = n(54381),
     E = n(981631),
     v = n(921944),
     S = n(231338),
-    O = n(388032),
-    x = n(310582);
+    x = n(388032),
+    O = n(310582);
 let y = (e) => {
     var t, n, i;
     let { wideBannerBlock: y, tab: k } = e,
@@ -46,9 +46,9 @@ let y = (e) => {
         { handleCardVisibilityChange: R } = (0, h.E)(P, "home", "marketing wide banner"),
         Z = (0, m.sp)(),
         { bannerURL: w } = (0, _.UI)(y),
-        H = k === b.AW.ORBS,
-        D = null != y.ctaRoute && "" !== y.ctaRoute,
-        M = !0 !== y.disableCta && ((null != y.ctaText && "" !== y.ctaText) || D),
+        D = k === b.AW.ORBS,
+        H = null != y.ctaRoute && "" !== y.ctaRoute,
+        M = !0 !== y.disableCta && ((null != y.ctaText && "" !== y.ctaText) || H),
         F = null != y.logoURL && "" !== y.logoURL,
         W = l.useCallback(() => {
             if ((A(!0), y.isDismissible)) {
@@ -93,73 +93,73 @@ let y = (e) => {
             [y.ctaRoute, U],
         );
     if (null == w || N) return null;
-    let z = s()(x.row, x.between, x.bannerBlockContainer, x.centeredSection, {
-            [x.extraRounded]: H,
-            [x.bannerBlockContainerClickable]: D,
+    let z = s()(O.row, O.between, O.bannerBlockContainer, O.centeredSection, {
+            [O.extraRounded]: D,
+            [O.bannerBlockContainerClickable]: H,
         }),
         G = (0, r.jsxs)(r.Fragment, {
             children: [
                 y.isDismissible &&
                     (0, r.jsx)("div", {
-                        className: x.wideBannerCloseButton,
+                        className: O.wideBannerCloseButton,
                         children: (0, r.jsx)(c.PZ7, {
                             size: "sm",
                             onClick: (e) => {
                                 e.stopPropagation(), W();
                             },
-                            "aria-label": O.intl.string(O.t.WAI6xu),
+                            "aria-label": x.intl.string(x.t.WAI6xu),
                         }),
                     }),
                 (0, r.jsx)("div", {
-                    className: s()(x.wideBannerBackgroundImg, { [x.extraRounded]: H }),
+                    className: s()(O.wideBannerBackgroundImg, { [O.extraRounded]: D }),
                     style: null != L ? { height: "".concat(L, "px") } : void 0,
                     children: (0, r.jsx)("img", {
                         ref: I,
                         src: w,
                         alt: y.title,
-                        className: s()(x.wideBannerArt, { [x.wideBannerArtOrbs]: H }),
+                        className: s()(O.wideBannerArt, { [O.wideBannerArtOrbs]: D }),
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: s()(x.wideBannerContentContainer, { [x.wideBannerWithCTAContentContainer]: M }),
+                    className: s()(O.wideBannerContentContainer, { [O.wideBannerWithCTAContentContainer]: M }),
                     style: { maxHeight: null != L ? "".concat(L, "px") : "auto" },
                     children: (0, r.jsxs)("div", {
-                        className: x.wideBannerTextContainer,
+                        className: O.wideBannerTextContainer,
                         children: [
                             (0, r.jsx)(c.Heading, {
                                 style: { color: null != (n = y.bannerTextColor) ? n : "var(--header-primary)" },
-                                className: H ? x.wideBannerOrbsHeading : void 0,
+                                className: D ? O.wideBannerOrbsHeading : void 0,
                                 variant: "heading-xl/bold",
                                 children: y.title,
                             }),
                             (0, r.jsx)(c.Text, {
                                 style: { color: "var(--text-muted)" },
                                 lineClamp: 2,
-                                variant: H ? "text-md/medium" : "text-sm/medium",
-                                children: H
-                                    ? O.intl.format(O.t.SFFP7K, {
+                                variant: D ? "text-md/medium" : "text-sm/medium",
+                                children: D
+                                    ? x.intl.format(x.t.SFFP7K, {
                                           helpdeskArticle: p.Z.getArticleURL(E.BhN.VIRTUAL_CURRENCY_LEARN_MORE),
                                       })
                                     : y.body,
                             }),
                             M &&
                                 (0, r.jsxs)("div", {
-                                    className: x.wideBannerCtaContainer,
+                                    className: O.wideBannerCtaContainer,
                                     children: [
                                         (0, r.jsx)(c.Button, {
                                             variant: "overlay-primary",
                                             onClick: (e) => {
                                                 var t;
                                                 e.stopPropagation(),
-                                                    V(null != (t = y.ctaText) ? t : O.intl.string(O.t.jVcuVY));
+                                                    V(null != (t = y.ctaText) ? t : x.intl.string(x.t.jVcuVY));
                                             },
-                                            text: null != (i = y.ctaText) ? i : O.intl.string(O.t.jVcuVY),
+                                            text: null != (i = y.ctaText) ? i : x.intl.string(x.t.jVcuVY),
                                         }),
                                         F &&
                                             (0, r.jsx)("img", {
                                                 src: y.logoURL,
                                                 alt: "",
-                                                className: x.wideBannerLogo,
+                                                className: O.wideBannerLogo,
                                             }),
                                     ],
                                 }),
@@ -169,13 +169,13 @@ let y = (e) => {
             ],
         });
     return (0, r.jsx)(c.f6W, {
-        theme: H ? void 0 : S.BR.DARK,
+        theme: D ? void 0 : S.BR.DARK,
         children: (e) =>
             (0, r.jsx)(a.$, {
                 innerRef: j,
                 onChange: R,
                 threshold: 0,
-                children: D
+                children: H
                     ? (0, r.jsx)(c.P3F, {
                           innerRef: j,
                           onClick: () => V(null),

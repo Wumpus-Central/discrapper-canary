@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(388685);
 var r = n(54381),
-    i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    a = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(21260),
     o = n(481060),
     c = n(393903),
@@ -55,48 +55,48 @@ function f(e, t) {
     );
 }
 function _(e) {
-    var { id: t, label: n, selected: i, handleTransition: a } = e,
+    var { id: t, label: n, selected: a, handleTransition: i } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                a = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        a = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+                    return a;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
-                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
             }
-            return i;
+            return a;
         })(e, ["id", "label", "selected", "handleTransition"]);
     return (0, r.jsx)(
         d.Z.Title,
         f(g({}, s), {
-            onClick: () => a(t),
+            onClick: () => i(t),
             wrapperClassName: h.tabWrapper,
-            className: l()(h.tab, { [h.selected]: i }),
+            className: l()(h.tab, { [h.selected]: a }),
             children: n,
         }),
     );
 }
 function b(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: a, selected: s } = e,
-        c = i.useRef(null);
+    let { onTabSelect: t, tabs: n, selectedTab: i, selected: s } = e,
+        c = a.useRef(null);
     return (0, r.jsx)(o.yRy, {
         targetElementRef: c,
         renderPopout: (e) => {
-            let { closePopout: i } = e;
+            let { closePopout: a } = e;
             return (0, r.jsx)(u.Z, {
-                selectedTab: a,
-                onClose: i,
+                selectedTab: i,
+                onClose: a,
                 tabs: n,
                 onTabSelect: t,
             });
@@ -123,24 +123,24 @@ function b(e) {
     });
 }
 function x(e) {
-    let { className: t, selectedTab: n, tabs: a, onTabSelect: o, onAvailableWidthChange: d } = e,
-        [u, p] = i.useState(0),
-        m = i.useRef(u),
+    let { className: t, selectedTab: n, tabs: i, onTabSelect: o, onAvailableWidthChange: d } = e,
+        [u, p] = a.useState(0),
+        m = a.useRef(u),
         {
             lastVisibleIndex: g,
             onItemLayout: f,
             overflowItemsRef: x,
             itemWidthsRef: v,
         } = (0, s.zP)({
-            items: a,
+            items: i,
             itemGapPx: 24,
             maxLines: 1,
             containerWidth: u,
         }),
-        C = i.useMemo(() => a.slice(0, g + 1), [g, a]),
-        j = i.useMemo(() => a.slice(g + 1), [g, a]),
-        y = i.useRef(null),
-        I = i.useCallback(
+        C = a.useMemo(() => i.slice(0, g + 1), [g, i]),
+        j = a.useMemo(() => i.slice(g + 1), [g, i]),
+        y = a.useRef(null),
+        I = a.useCallback(
             (e) => {
                 let t = e.contentRect.width;
                 if (null == t || m.current === t) return;
@@ -160,7 +160,7 @@ function x(e) {
             (0, r.jsxs)("div", {
                 className: h.measurements,
                 children: [
-                    a.map((e, t) =>
+                    i.map((e, t) =>
                         (0, r.jsx)(
                             s.AJ,
                             {

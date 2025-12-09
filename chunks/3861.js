@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => _ });
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -16,13 +16,13 @@ var i = n(54381),
     b = n(981631),
     C = n(354459),
     y = n(394024);
-let v = (0, a.Z)((e) => {
+let _ = (0, a.Z)((e) => {
     let {
         participants: t,
         filteredParticipants: n,
         selectedParticipant: a,
-        participantsVersion: v,
-        layout: _,
+        participantsVersion: _,
+        layout: v,
         onSelectParticipant: O,
         onContextMenuParticipant: x,
         onFullscreenParticipant: E,
@@ -44,7 +44,7 @@ let v = (0, a.Z)((e) => {
     }, [T, N, L.width, L.height]);
     let D = r.useMemo(
             () => n.filter((e) => e.type !== C.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))),
-            [n, v],
+            [n, _],
         ),
         k = (0, l.e7)([s.Z], () => s.Z.getVoiceParticipantsHidden(j.id), [j.id]);
     if ((null == R ? void 0 : R.channelId) === j.id) return (0, i.jsx)(h.Z, { height: N });
@@ -99,7 +99,7 @@ let v = (0, a.Z)((e) => {
         idle: A,
         height: N,
         width: T,
-        layout: _,
+        layout: v,
         inCall: I,
         channel: j,
         showParticipants: Z,

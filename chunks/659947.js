@@ -152,7 +152,7 @@ function R(e) {
         }),
     });
 }
-function w() {
+function D() {
     let e = i.useRef(!1),
         t = i.useCallback(() => {
             e.current = !0;
@@ -166,7 +166,7 @@ function w() {
         disableMouseFocus: n,
     };
 }
-function D(e) {
+function w(e) {
     let [t, n] = i.useState(0),
         r = i.useRef(e);
     return (
@@ -184,7 +184,7 @@ function x(e) {
     let { transitionState: t, onClose: n, onSelect: a } = e,
         s = i.useId(),
         c = i.useRef(null),
-        { mouseFocusEnabled: f, enableMouseFocus: _, disableMouseFocus: E } = w(),
+        { mouseFocusEnabled: f, enableMouseFocus: _, disableMouseFocus: E } = D(),
         {
             query: b,
             updateQuery: y,
@@ -195,7 +195,7 @@ function x(e) {
             autocompleterBeforeCreateSearchContext: I,
         }),
         v = P(b),
-        { focusedIndex: T, setFocusedIndex: R } = D(b);
+        { focusedIndex: T, setFocusedIndex: R } = w(b);
     i.useEffect(() => {
         let { current: e } = c;
         null == e ||

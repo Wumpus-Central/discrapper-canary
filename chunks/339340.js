@@ -31,8 +31,8 @@ function I(e) {
         A = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         C = (0, o.e7)([m.Z], () => m.Z.getMediaSessionId()),
         [N, P] = i.useState(null != A ? A : ""),
-        [R, w] = i.useState(!1),
-        [D, x] = i.useState(null),
+        [R, D] = i.useState(!1),
+        [w, x] = i.useState(null),
         L = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
         j = N.length > S;
     i.useEffect(() => {
@@ -49,12 +49,12 @@ function I(e) {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
                 let { errorMessage: e } = c.Z.validateMessage(n, L, t.id);
-                return x(e), w(!1), { hasErrors: !0 };
+                return x(e), D(!1), { hasErrors: !0 };
             }
             return { hasErrors: !1 };
         },
         U = async (e) => {
-            N === A && T(), null == e || e.preventDefault(), x(null), w(!0);
+            N === A && T(), null == e || e.preventDefault(), x(null), D(!0);
             let n = N.length,
                 r = N.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = _.ZP.parse(t, N),
@@ -76,7 +76,7 @@ function I(e) {
                 } catch (e) {
                     M(e);
                 }
-                w(!1);
+                D(!1);
             }
         },
         [G, Z] = i.useState((0, f.JM)(N)),
@@ -92,7 +92,7 @@ function I(e) {
         ),
         V = (0, r.jsx)(a.gNt, {
             label: b.intl.string(b.t.Fq5lwN),
-            errorMessage: D,
+            errorMessage: w,
             children: (0, r.jsx)(p.ZP, {
                 innerClassName: y.textArea,
                 textValue: N,

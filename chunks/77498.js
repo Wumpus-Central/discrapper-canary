@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     Z: () => B,
-    m: () => D,
+    m: () => w,
 }),
     n(388685),
     n(413496),
@@ -46,8 +46,8 @@ let b = "GameStoreReportedGames",
     N = !1,
     P = null,
     R = [],
-    w = [];
-function D(e) {
+    D = [];
+function w(e) {
     var t, n, r, i, a, o, s, l, c, u;
     return {
         id: e.id,
@@ -100,12 +100,12 @@ function k() {
 }
 function U(e) {
     let { games: t, etag: n } = e;
-    for (let e of (null != n && A !== n && (v.clear(), (S = {}), (I = {}), (A = n)), t)) L(D(e));
+    for (let e of (null != n && A !== n && (v.clear(), (S = {}), (I = {}), (A = n)), t)) L(w(e));
     (r = void 0), (C = Date.now()), (N = !0);
 }
 function G(e) {
     let { executables: t, patterns: n } = e;
-    (R = t.map((e) => e.toLowerCase())), (w = n.map((e) => RegExp(e, "i"))), (P = Date.now());
+    (R = t.map((e) => e.toLowerCase())), (D = n.map((e) => RegExp(e, "i"))), (P = Date.now());
 }
 class Z extends (a = o.ZP.PersistedStore) {
     initialize(e) {
@@ -202,7 +202,7 @@ class Z extends (a = o.ZP.PersistedStore) {
         return (
             !!(
                 null != e.exePath &&
-                (null != R.find((t) => e.exePath.includes(t)) || w.some((t) => t.test(e.exePath)))
+                (null != R.find((t) => e.exePath.includes(t)) || D.some((t) => t.test(e.exePath)))
             ) || !1
         );
     }

@@ -82,11 +82,11 @@ function R(e, t) {
         e
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = D(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -94,7 +94,7 @@ function w(e, t) {
     }
     return i;
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -155,8 +155,8 @@ function M(e) {
         embeddedApplication: N,
         otherClientSessionType: P,
         voicePlatform: R,
-        application: w,
-        guildId: D,
+        application: D,
+        guildId: w,
         channelId: x,
         user: j,
         disconnected: M,
@@ -257,7 +257,7 @@ function M(e) {
                 ),
             ),
         g && Y.push((0, r.jsx)(p.ZP, { size: p.ZP.Sizes.SMALL }, "stream"));
-    let K = null != w && !(0, l.yE)(w.flags, v.udG.EMBEDDED),
+    let K = null != D && !(0, l.yE)(D.flags, v.udG.EMBEDDED),
         z = null == k && K;
     return 0 !== Y.length || 0 !== W.length || Z || z
         ? (0, r.jsxs)("div", {
@@ -278,9 +278,9 @@ function M(e) {
                                 ? (0, r.jsx)(
                                       U,
                                       {
-                                          application: w,
+                                          application: D,
                                           iconClassName: C,
-                                          guildId: D,
+                                          guildId: w,
                                           channelId: x,
                                           userId: j.id,
                                       },
@@ -310,7 +310,7 @@ let k = function (e) {
             isOverlay: d = !1,
             ref: f,
         } = e,
-        p = w(e, ["avatarContainerClass", "userNameClassName", "size", "selected", "disabled", "isOverlay", "ref"]);
+        p = D(e, ["avatarContainerClass", "userNameClassName", "size", "selected", "disabled", "isOverlay", "ref"]);
     let {
             onClick: h,
             onKeyDown: E,
@@ -320,7 +320,7 @@ let k = function (e) {
             onMouseDown: I,
             priority: C,
             speaking: P,
-            latched: D,
+            latched: w,
             collapsed: x,
             mute: L,
             serverMute: j,
@@ -370,7 +370,7 @@ let k = function (e) {
                 [A.avatarLarge]: a === v.ipw.LARGE,
                 [A.avatarSmall]: a === v.ipw.SMALL,
                 [A.avatarSpeaking]: P,
-                [A.avatarLatched]: D && !P,
+                [A.avatarLatched]: w && !P,
             }),
             style: { backgroundImage: "url(".concat(Y.getAvatarURL(k, a === v.ipw.LARGE ? 38 : 24), ")") },
         });

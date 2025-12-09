@@ -30,8 +30,8 @@ function b(e, t, n) {
         N,
         P,
         R,
-        w,
         D,
+        w,
         x,
         L,
         j,
@@ -67,9 +67,9 @@ function b(e, t, n) {
                 (P =
                     null !=
                     (R =
-                        null != (w = null == n ? void 0 : n.weekStartsOn)
-                            ? w
-                            : null == n || null == (D = n.locale) || null == (x = D.options)
+                        null != (D = null == n ? void 0 : n.weekStartsOn)
+                            ? D
+                            : null == n || null == (w = n.locale) || null == (x = w.options)
                               ? void 0
                               : x.weekStartsOn)
                         ? R

@@ -344,12 +344,12 @@ function P(e, t, n) {
 function R(e, t) {
     return P(e, t, !0);
 }
-function w(e, t, n) {
+function D(e, t, n) {
     var r = new y(e, n),
         i = new y(t, n);
     return r.compare(i) || r.compareBuild(i);
 }
-function D(e, t, n) {
+function w(e, t, n) {
     return P(t, e, n);
 }
 function x(e, n) {
@@ -429,8 +429,8 @@ function F(e, t) {
     (t.patch = N),
     (t.compare = P),
     (t.compareLoose = R),
-    (t.compareBuild = w),
-    (t.rcompare = D),
+    (t.compareBuild = D),
+    (t.rcompare = w),
     (t.sort = x),
     (t.rsort = L),
     (t.gt = j),

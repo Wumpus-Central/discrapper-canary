@@ -108,8 +108,8 @@ function A(e) {
             onMouseEnter: N,
             onMouseLeave: P,
             canSelect: R = !0,
-            autoplay: w,
-            registerInnerRef: D,
+            autoplay: D,
+            registerInnerRef: w,
             registerAnimatedElementRef: x,
             surrogate: L,
         } = e,
@@ -139,7 +139,7 @@ function A(e) {
         { triggerAnimation: B, untriggerAnimation: F } = i.useContext(u.Rm),
         V = p.Yk.useSetting(),
         H = T(),
-        Y = null == w ? V : w,
+        Y = null == D ? V : D,
         W = E.kV[I],
         K = i.useRef(null),
         z = i.useMemo(() => {
@@ -195,9 +195,9 @@ function A(e) {
     );
     let $ = i.useCallback(
             (e) => {
-                (K.current = e), null == D || D(e), null == x || x(e);
+                (K.current = e), null == w || w(e), null == x || x(e);
             },
-            [D, x],
+            [w, x],
         ),
         ee = (0, l.Z)(K);
     return null == z || "" === z

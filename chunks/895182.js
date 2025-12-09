@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var a = n(54381),
-    l = n(473749),
-    r = n(660815),
-    i = n(442837),
+    r = n(473749),
+    i = n(660815),
+    l = n(442837),
     s = n(481060),
     o = n(570140),
     c = n(905551),
@@ -54,17 +54,17 @@ function x(e, t) {
     );
 }
 function f() {
-    let e = (0, i.e7)([m.Z], () => m.Z.getGuildId()),
-        t = (0, i.e7)([u.Z], () => {
+    let e = (0, l.e7)([m.Z], () => m.Z.getGuildId()),
+        t = (0, l.e7)([u.Z], () => {
             var t;
             return null == (t = u.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        n = (0, i.e7)([d.Z], () => {
+        n = (0, l.e7)([d.Z], () => {
             var t;
             return null == (t = d.Z.getStateForGuild(e)) ? void 0 : t.instances;
         }),
-        f = l.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
-        g = l.useCallback(
+        f = r.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
+        g = r.useCallback(
             (t) => {
                 null != f &&
                     null != e &&
@@ -76,9 +76,9 @@ function f() {
             },
             [f, e],
         ),
-        b = l.useMemo(
+        b = r.useMemo(
             () =>
-                Object.values(r.V).map((e) =>
+                Object.values(i.V).map((e) =>
                     (0, a.jsx)(
                         s.Button,
                         {
@@ -93,7 +93,7 @@ function f() {
                 ),
             [g],
         ),
-        v = l.useCallback(() => {
+        v = r.useCallback(() => {
             null != f &&
                 null != e &&
                 o.Z.dispatch({

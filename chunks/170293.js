@@ -1,16 +1,16 @@
-n.d(t, { $: () => i });
+n.d(t, { $: () => l });
 var a = n(668781),
-    l = n(743498),
-    r = n(388032);
-function i(e) {
+    r = n(743498),
+    i = n(388032);
+function l(e) {
     a.Z.show({
-        title: r.intl.string(r.t.RpjdL8),
-        body: r.intl.string(r.t.nOSopS),
-        confirmText: r.intl.string(r.t["sKJ7+Y"]),
+        title: i.intl.string(i.t.RpjdL8),
+        body: i.intl.string(i.t.nOSopS),
+        confirmText: i.intl.string(i.t["sKJ7+Y"]),
         confirmVariant: "critical-primary",
-        cancelText: r.intl.string(r.t["7wZ1GY"]),
+        cancelText: i.intl.string(i.t["7wZ1GY"]),
         onConfirm: () => {
-            (0, l.v6)(null);
+            (0, r.v6)(null);
         },
         onCancel: e,
     });

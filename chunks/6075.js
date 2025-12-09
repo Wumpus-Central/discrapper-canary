@@ -37,7 +37,7 @@ let C = {
     N = T.Z;
 function P(e, t = {}) {
     return R(e)
-        ? ((t.async = !0), w(e, t).then((e) => Z(e, t)))
+        ? ((t.async = !0), D(e, t).then((e) => Z(e, t)))
         : U(e)
           ? ((t.async = !0), G(e).then((e) => Z(e, t)))
           : Z(e, t);
@@ -45,16 +45,16 @@ function P(e, t = {}) {
 function R(e) {
     return "string" == typeof e;
 }
-function w(e, t) {
+function D(e, t) {
     return /^\w+:\/\//.test(e)
         ? "undefined" != typeof fetch
-            ? D(e, t)
+            ? w(e, t)
             : x(e, t)
         : j(e)
           ? Promise.resolve((0, r.u0)(e))
           : M(e, t);
 }
-function D(e, { length: t } = {}) {
+function w(e, { length: t } = {}) {
     let n = { method: "GET" };
     return (
         Number.isInteger(t) && t >= 0 && (n.headers = { range: `bytes=0-${t - 1}` }),
@@ -156,8 +156,8 @@ function V(
         {
             fileType: P,
             fileDataOffset: R,
-            jfifDataOffset: w,
-            tiffHeaderOffset: D,
+            jfifDataOffset: D,
+            tiffHeaderOffset: w,
             iptcDataOffset: x,
             xmpChunks: L,
             iccChunks: j,
@@ -173,14 +173,14 @@ function V(
         let n = u.Z.read(e, R);
         t ? (C.file = n) : (C = (0, r.wB)({}, C, n));
     }
-    if (a.Z.USE_JPEG && a.Z.USE_JFIF && Y(w)) {
+    if (a.Z.USE_JPEG && a.Z.USE_JFIF && Y(D)) {
         A = !0;
-        let n = d.Z.read(e, w);
+        let n = d.Z.read(e, D);
         t ? (C.jfif = n) : (C = (0, r.wB)({}, C, n));
     }
-    if (a.Z.USE_EXIF && W(D)) {
+    if (a.Z.USE_EXIF && W(w)) {
         A = !0;
-        let { tags: n, byteOrder: s } = l.Z.read(e, D, i);
+        let { tags: n, byteOrder: s } = l.Z.read(e, w, i);
         if (
             (n.Thumbnail && ((C.Thumbnail = n.Thumbnail), delete n.Thumbnail),
             t ? ((C.exif = n), K(C)) : (C = (0, r.wB)({}, C, n)),
@@ -210,10 +210,10 @@ function V(
         }
         if (a.Z.USE_MAKER_NOTES && n.MakerNote) {
             if (X(n)) {
-                let a = h.Z.read(e, D, n.MakerNote.__offset, s, i);
+                let a = h.Z.read(e, w, n.MakerNote.__offset, s, i);
                 t ? (C.makerNotes = a) : (C = (0, r.wB)({}, C, a));
             } else if (J(n)) {
-                let a = g.Z.read(e, D, n.MakerNote.__offset, i);
+                let a = g.Z.read(e, w, n.MakerNote.__offset, i);
                 t ? (C.makerNotes = a) : (C = (0, r.wB)({}, C, a));
             }
         }
@@ -266,7 +266,7 @@ function V(
     }
     let F = I.Z.get(C, t);
     F && (t ? (C.composite = F) : (C = (0, r.wB)({}, C, F)));
-    let ea = (a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_EXIF && a.Z.USE_THUMBNAIL && S.Z.get(e, C.Thumbnail, D);
+    let ea = (a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_EXIF && a.Z.USE_THUMBNAIL && S.Z.get(e, C.Thumbnail, w);
     if (
         (ea ? ((A = !0), (C.Thumbnail = ea)) : delete C.Thumbnail,
         P && (t ? (C.file || (C.file = {}), (C.file.FileType = P)) : (C.FileType = P), (A = !0)),

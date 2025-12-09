@@ -163,8 +163,8 @@ function v(e) {
             onDoubleClick: N,
             onMouseDown: P,
             onMouseUp: R,
-            onMouseEnter: w,
-            onMouseLeave: D,
+            onMouseEnter: D,
+            onMouseLeave: w,
             onKeyDown: x,
             children: L,
             rel: j,
@@ -203,7 +203,7 @@ function v(e) {
             "submittingFinishedLabel",
         ]);
     let F = p || h,
-        V = F && (null != w || null != D),
+        V = F && (null != D || null != w),
         H = V ? null : I,
         Y = y(k, t),
         W = i.useRef(!1);
@@ -225,8 +225,8 @@ function v(e) {
                     onDoubleClick: F ? (e) => e.preventDefault() : N,
                     onMouseUp: p ? void 0 : R,
                     onMouseDown: p ? void 0 : P,
-                    onMouseEnter: w,
-                    onMouseLeave: D,
+                    onMouseEnter: D,
+                    onMouseLeave: w,
                     onKeyDown: p ? void 0 : x,
                     type: v,
                     disabled: p,
@@ -271,8 +271,8 @@ function v(e) {
               children: [
                   K,
                   (0, r.jsx)("span", {
-                      onMouseEnter: w,
-                      onMouseLeave: D,
+                      onMouseEnter: D,
+                      onMouseLeave: w,
                       className: u.disabledButtonOverlay,
                   }),
               ],

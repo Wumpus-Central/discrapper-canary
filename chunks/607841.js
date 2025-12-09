@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(539854), n(388685);
+n.d(t, { Z: () => w }), n(539854), n(388685);
 var r = n(147913),
     i = n(43267),
     a = n(933557),
@@ -213,7 +213,7 @@ function R(e) {
         } else n.push(a.id);
     t.length > 0 && m.Z.indexDomains(t), n.length > 0 && m.Z.deleteSearchItems(n);
 }
-class w extends r.Z {
+class D extends r.Z {
     handleInit() {
         C(u.Z.getCurrentlySelectedChannelId()), y() && m.Z.clearSearchIndex(), b() && N();
     }
@@ -292,4 +292,4 @@ class w extends r.Z {
             });
     }
 }
-let D = new w();
+let w = new D();

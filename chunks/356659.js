@@ -15,7 +15,7 @@ n.d(t, {
     WM: () => _,
     X9: () => s,
     XH: () => E,
-    b0: () => D,
+    b0: () => w,
     dJ: () => o,
     f_: () => v,
     i$: () => P,
@@ -23,7 +23,7 @@ n.d(t, {
     ji: () => N,
     jp: () => C,
     nU: () => m,
-    qb: () => w,
+    qb: () => D,
     rI: () => h,
     wD: () => S,
     yl: () => T,
@@ -71,8 +71,8 @@ let c = "alt+c",
     P = 10;
 i.Z.Millis.DAY;
 let R = 20,
-    w = 1,
-    D = 50;
+    D = 1,
+    w = 50;
 var x = (function (e) {
     return (e.ALL = ":all"), (e.APPLICATION = ":application"), (e.VOICE = ":voice"), (e.SOUNDBOARD = ":soundboard"), e;
 })({});

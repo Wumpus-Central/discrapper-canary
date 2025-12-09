@@ -52,7 +52,7 @@ function R(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -68,8 +68,8 @@ function w(e) {
     }
     return e;
 }
-let D = () => Promise.resolve();
-D = n(346329).playApplication;
+let w = () => Promise.resolve();
+w = n(346329).playApplication;
 let x = Object.freeze({
         [d.xQ.USER]: d.h8.USER,
         [d.xQ.TEXT_CHANNEL]: d.h8.TEXT_CHANNEL,
@@ -173,7 +173,7 @@ function G() {
 function Z() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-    k(e), i.Z.dispatch(w({ type: "QUICKSWITCHER_SHOW" }, M(t)));
+    k(e), i.Z.dispatch(D({ type: "QUICKSWITCHER_SHOW" }, M(t)));
 }
 function B() {
     U(C.rMx.QUICKSWITCHER_CLOSED), G();
@@ -183,7 +183,7 @@ function F() {
     A.Z.isOpen() ? B() : Z(e);
 }
 function V(e) {
-    i.Z.dispatch(w({ type: "QUICKSWITCHER_SEARCH" }, M(e)));
+    i.Z.dispatch(D({ type: "QUICKSWITCHER_SEARCH" }, M(e)));
 }
 function H(e) {
     i.Z.dispatch({
@@ -228,7 +228,7 @@ function Y(e) {
             break;
         case d.h8.APPLICATION:
             let T = y.Z.getActiveLibraryApplication(v.id);
-            D(v.id, T, {
+            w(v.id, T, {
                 analyticsParams: {
                     source: C.Sbl.QUICK_SWITCHER,
                     location: C.Sbl.QUICK_SWITCHER,

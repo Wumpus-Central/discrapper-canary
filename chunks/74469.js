@@ -64,7 +64,7 @@ let S = (0, c.hQ)(),
                 },
                 [A],
             ),
-            w = i.useCallback(
+            D = i.useCallback(
                 (e) => {
                     var t;
                     if (null == e) return null;
@@ -81,7 +81,7 @@ let S = (0, c.hQ)(),
                 },
                 [A],
             ),
-            D = i.useCallback(
+            w = i.useCallback(
                 (e) => {
                     var t, n, i;
                     if (null == e) return null;
@@ -144,8 +144,8 @@ let S = (0, c.hQ)(),
                         isSelected: j,
                         options: P,
                         select: L,
-                        renderLeading: w,
-                        renderTrailing: D,
+                        renderLeading: D,
+                        renderTrailing: w,
                         renderOptionValue: x,
                         serialize: M,
                         clear: k,

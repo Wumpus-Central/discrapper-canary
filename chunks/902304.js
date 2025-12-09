@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(512722),
     i = n.n(r),
     a = n(846519),
@@ -52,7 +52,7 @@ function R(e) {
         return n && i && r;
     });
 }
-class w extends l.Z {
+class D extends l.Z {
     constructor(...e) {
         super(...e),
             I(this, "rollbackCommandTimeout", new a.V7()),
@@ -161,4 +161,4 @@ class w extends l.Z {
             });
     }
 }
-let D = new w();
+let w = new D();

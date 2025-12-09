@@ -301,11 +301,11 @@ let D = i.memo(function (e) {
             communityInfoVisible: A,
             hasSubheader: D,
         } = e,
-        L = j.features.has(v.GuildFeatures.ANIMATED_BANNER),
+        M = j.features.has(v.GuildFeatures.ANIMATED_BANNER),
         k = (0, f.Z)(j),
         G = !k && (0, y.Z)(j),
         U = !k && A,
-        B = (0, _.xR)(x) && L && !g,
+        B = (0, _.xR)(x) && M && !g,
         [F, V] = i.useState(!1),
         H = i.useRef(!1),
         W = i.useRef(null),
@@ -390,7 +390,7 @@ let D = i.memo(function (e) {
                                       animate: F,
                                   })
                                 : null,
-                            (0, r.jsx)(M, { controller: l }),
+                            (0, r.jsx)(L, { controller: l }),
                         ],
                     }),
                     B && q()
@@ -407,7 +407,7 @@ let D = i.memo(function (e) {
             }),
     });
 });
-function M(e) {
+function L(e) {
     let { controller: t } = e,
         { theme: n } = (0, d.TCT)(),
         i = t.springs.value;

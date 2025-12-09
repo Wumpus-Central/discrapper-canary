@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(603074),
     C = n(294629),
     y = n(131951),
-    v = n(390322),
-    _ = n(871499),
+    _ = n(390322),
+    v = n(871499),
     O = n(127379),
     x = n(388032);
 function E(e) {
@@ -35,8 +35,8 @@ function E(e) {
         D = (0, m.sR)({ isSoundboardButtonDisabled: L }),
         [k, U] = (0, h.cv)(D),
         { analyticsLocations: V } = (0, u.ZP)(),
-        { isHovered: H, setIsHovered: F, onMouseEnter: B, onMouseLeave: G } = (0, f.Z)(200, 300);
-    function z(e) {
+        { isHovered: B, setIsHovered: F, onMouseEnter: H, onMouseLeave: G } = (0, f.Z)(200, 300);
+    function W(e) {
         null != A &&
             (0, c.jW)(e, async () => {
                 let { default: e } = await n.e("56049").then(n.bind(n, 338991));
@@ -93,16 +93,16 @@ function E(e) {
                 };
             });
     }
-    function W() {
+    function z() {
         (0, d.v)(P, d.d.SOUNDBOARD),
             j === O.D.SOUNDBOARD
                 ? (null == S || S(void 0), G())
-                : (null != j ? (Z(), B()) : Z(), null == S || S(O.D.SOUNDBOARD));
+                : (null != j ? (Z(), H()) : Z(), null == S || S(O.D.SOUNDBOARD));
     }
     let q = r.useRef(null);
     return (0, i.jsx)(s.y, {
         targetElementRef: q,
-        shouldShow: (H && (j === O.D.SOUNDBOARD || null == j)) || j === O.D.SOUNDBOARD,
+        shouldShow: (B && (j === O.D.SOUNDBOARD || null == j)) || j === O.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: "top",
         position: "top",
@@ -115,9 +115,9 @@ function E(e) {
             let { closePopout: n } = e;
             return L
                 ? null
-                : (0, i.jsx)(v.Z, {
+                : (0, i.jsx)(_.Z, {
                       children: (0, i.jsx)("div", {
-                          onMouseEnter: B,
+                          onMouseEnter: H,
                           onMouseLeave: G,
                           children: (0, i.jsx)(b.Z, {
                               guildId: A,
@@ -135,7 +135,7 @@ function E(e) {
                   });
         },
         children: () =>
-            (0, i.jsx)(_.d, {
+            (0, i.jsx)(v.d, {
                 ref: q,
                 isTrayButton: !0,
                 themeable: E,
@@ -148,16 +148,16 @@ function E(e) {
                         : void 0,
                 iconComponent: I,
                 disabled: L,
-                onContextMenu: z,
-                onClick: W,
+                onContextMenu: W,
+                onClick: z,
                 onMouseEnter: () => {
-                    B(), T();
+                    H(), T();
                 },
                 onMouseLeave: () => {
                     null == j && (G(), N());
                 },
-                isActive: H || j === O.D.SOUNDBOARD,
-                color: H || j === O.D.SOUNDBOARD ? "primaryDark" : void 0,
+                isActive: B || j === O.D.SOUNDBOARD,
+                color: B || j === O.D.SOUNDBOARD ? "primaryDark" : void 0,
             }),
     });
 }

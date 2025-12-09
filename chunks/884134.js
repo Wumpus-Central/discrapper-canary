@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(866419),
     P = n(36982),
     R = n(803038),
-    w = n(990924),
-    D = n(771934),
+    D = n(990924),
+    w = n(771934),
     x = n(857658),
     L = n(174278),
     j = n(714097),
@@ -144,7 +144,7 @@ function Q(e) {
         let r = parseInt(t, 10);
         if (isNaN(r)) return;
         let i = Math.max(0, Math.min(360, r));
-        c("".concat(i, "\xB0")), (0, D.Ac)(), n(i);
+        c("".concat(i, "\xB0")), (0, w.Ac)(), n(i);
     };
     return (0, r.jsxs)("div", {
         className: o()(B.sliderContainer, B.gradientDirectionSliderContainer),
@@ -186,7 +186,7 @@ function Q(e) {
                             minValue: 0,
                             maxValue: 360,
                             onValueChange: (e) => {
-                                (0, D.fR)();
+                                (0, w.fR)();
                                 let t = q(e);
                                 t !== e || s(e), n(t);
                             },
@@ -213,7 +213,7 @@ function X(e) {
         let r = parseInt(t, 10);
         if (isNaN(r)) return;
         let i = Math.max(0, Math.min(100, r));
-        l("".concat(i, "%")), (0, D.PI)(), n(i);
+        l("".concat(i, "%")), (0, w.PI)(), n(i);
     };
     return (0, r.jsxs)("div", {
         className: B.sliderContainer,
@@ -242,7 +242,7 @@ function X(e) {
                     minValue: 0,
                     maxValue: 100,
                     onValueChange: (e) => {
-                        (0, D.z3)(), o(e), n(e);
+                        (0, w.z3)(), o(e), n(e);
                     },
                     onValueRender: () => null,
                     keyboardStep: 1,
@@ -261,7 +261,7 @@ function J(e) {
         _ = i.useRef(null),
         m = i.useCallback(() => {
             var e;
-            (0, D.Om)();
+            (0, w.Om)();
             let t = (0, C.C)();
             A.Ig.getState().setAll({
                 colors: t.colors,
@@ -343,7 +343,7 @@ function ee(e) {
     let { onSaveTheme: t, canApply: n } = e,
         i = (0, y.m)(U.PremiumTypes.TIER_2);
     return (
-        (0, D.hf)(i, m.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
+        (0, w.hf)(i, m.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, r.jsx)("div", {
             className: B.coachmarkFooterContainer,
             children: i
@@ -369,9 +369,9 @@ function et(e) {
     let { onSaveTheme: n, canApply: i, metadata: a } = e,
         s = (0, y.m)(U.PremiumTypes.TIER_2),
         c = (null == (t = (0, g.oq)().metadata) ? void 0 : t.from) === g.tE.SHARE_MESSAGE;
-    (0, D.hf)(s, m.Z.CUSTOM_THEMES_EDITOR);
+    (0, w.hf)(s, m.Z.CUSTOM_THEMES_EDITOR);
     let u = () => {
-            (0, D.Vb)(),
+            (0, w.Vb)(),
                 (0, E.Q3)(l.z.CUSTOM_THEME_COACHMARK),
                 (null == a ? void 0 : a.from) === g.tE.SETTING
                     ? ((0, I.openUserSettings)(S.n.APPEARANCE_PANEL, { section: M.oAB.APPEARANCE }), (0, g.Ll)())
@@ -424,7 +424,7 @@ function en(e) {
     var t;
     let { metadata: n, markAsDismissed: a, isCoachmark: o, isMobile: c } = e,
         u = R.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
-        b = w.y.useConfig({ location: "CustomThemesEditorV2" }).enabled,
+        b = D.y.useConfig({ location: "CustomThemesEditorV2" }).enabled,
         y = (0, N.jJ)(),
         S = (0, N.SK)(),
         I = i.useRef(!1),
@@ -452,14 +452,14 @@ function en(e) {
                         baseMix: C,
                     },
                 }),
-                (0, D.u7)(T, C, L, Y, z),
+                (0, w.u7)(T, C, L, Y, z),
                 null == a || a(k.L.TAKE_ACTION),
                 W || (0, E.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, g.Ll)(),
                 (0, O.UD)();
         },
         en = () => {
-            y(N._m.RESET_BUTTON), (0, D.uf)();
+            y(N._m.RESET_BUTTON), (0, w.uf)();
         },
         er = T.length > 0;
     return (i.useEffect(

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => m }), n(539854);
 var r = n(54381),
-    i = n(473749),
-    a = n(622535),
+    a = n(473749),
+    i = n(622535),
     l = n(481060),
     s = n(783097),
     o = n(768581),
@@ -11,8 +11,8 @@ var r = n(54381),
     p = n(348908);
 let m = function (e) {
     let { application: t, onButtonsVisibilityChange: n } = e,
-        m = i.useRef(null),
-        h = i.useMemo(
+        m = a.useRef(null),
+        h = a.useMemo(
             () =>
                 o.ZP.getApplicationIconURL({
                     id: t.id,
@@ -21,7 +21,7 @@ let m = function (e) {
                 }),
             [t],
         ),
-        g = i.useMemo(() => {
+        g = a.useMemo(() => {
             let e = [];
             return (
                 (0, s.vJ)(t) && e.push(u.intl.string(u.t.LO4f0P)),
@@ -81,7 +81,7 @@ let m = function (e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(a.$, {
+                    (0, r.jsx)(i.$, {
                         innerRef: m,
                         onChange: n,
                         active: !0,

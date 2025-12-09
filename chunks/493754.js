@@ -103,8 +103,8 @@ function C(e) {
             exitFullScreen: a,
             appContext: C,
             analyticsLocation: y,
-            className: v,
-            size: _ = "sm",
+            className: _,
+            size: v = "sm",
         } = e,
         O = null == r ? void 0 : r.getGuildId(),
         x = null == r ? void 0 : r.id,
@@ -117,9 +117,9 @@ function C(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("div", {
-                    className: l()(v, g.textButton),
+                    className: l()(_, g.textButton),
                     children: (0, i.jsx)(c.Button, {
-                        size: _,
+                        size: v,
                         variant: "secondary",
                         text: S,
                         onClick: () => {
@@ -142,7 +142,7 @@ function C(e) {
                     channel: r,
                     stream: t,
                     appContext: C,
-                    className: l()(v, g.iconButton),
+                    className: l()(_, g.iconButton),
                     exitFullScreen: a,
                     analyticsLocation: y,
                     guildScheduledEvent: j,

@@ -1,9 +1,9 @@
 n.d(t, { g: () => _ }), n(539854);
 var a = n(54381);
 n(473749);
-var l = n(442837),
-    r = n(692547),
-    i = n(780384),
+var r = n(442837),
+    i = n(692547),
+    l = n(780384),
     s = n(481060),
     o = n(210887),
     c = n(598077),
@@ -19,19 +19,19 @@ var l = n(442837),
     v = n(388032),
     j = n(681285);
 function _(e) {
-    let t = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
-        n = (0, l.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        _ = (0, l.e7)([o.Z], () => (0, i.wj)(o.Z.theme)),
+    let t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
+        n = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        _ = (0, r.e7)([o.Z], () => (0, l.wj)(o.Z.theme)),
         { multiAccountUsers: y } = (0, f.L)(),
-        C = y.map((l) => {
-            let i = new c.Z(l),
-                o = i.id === (null == t ? void 0 : t.id),
-                d = l.tokenStatus === x.q.INVALID,
-                u = n ? null : "#".concat(i.discriminator);
+        C = y.map((r) => {
+            let l = new c.Z(r),
+                o = l.id === (null == t ? void 0 : t.id),
+                d = r.tokenStatus === x.q.INVALID,
+                u = n ? null : "#".concat(l.discriminator);
             return (0, a.jsx)(
                 s.sNh,
                 {
-                    id: i.id,
+                    id: l.id,
                     focusedClassName: j.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
@@ -39,9 +39,9 @@ function _(e) {
                             className: j.userMenuItem,
                             children: [
                                 (0, a.jsx)(s.qEK, {
-                                    src: i.getAvatarURL(void 0, 40),
+                                    src: l.getAvatarURL(void 0, 40),
                                     size: s.EFr.SIZE_24,
-                                    "aria-label": l.username,
+                                    "aria-label": r.username,
                                 }),
                                 (0, a.jsxs)("div", {
                                     className: j.userMenuUsername,
@@ -49,12 +49,12 @@ function _(e) {
                                         (0, a.jsx)(s.Text, {
                                             className: j.userMenuText,
                                             variant: "text-sm/normal",
-                                            children: p.ZP.getUserTag(i, {
+                                            children: p.ZP.getUserTag(l, {
                                                 mode: "username",
                                                 identifiable: n ? "never" : "always",
                                             }),
                                         }),
-                                        !i.hasUniqueUsername() &&
+                                        !l.hasUniqueUsername() &&
                                             (0, a.jsx)(s.Text, {
                                                 className: j.userMenuDiscriminator,
                                                 variant: "text-sm/normal",
@@ -66,21 +66,21 @@ function _(e) {
                                     (0, a.jsx)(s.owK, {
                                         size: "sm",
                                         color: t
-                                            ? r.Z.unsafe_rawColors.WHITE_500.css
-                                            : r.Z.unsafe_rawColors.BRAND_500.css,
+                                            ? i.Z.unsafe_rawColors.WHITE_500.css
+                                            : i.Z.unsafe_rawColors.BRAND_500.css,
                                         secondaryColor:
                                             (t && _) || (t && !_)
-                                                ? r.Z.unsafe_rawColors.BRAND_500.css
-                                                : r.Z.unsafe_rawColors.WHITE_500.css,
+                                                ? i.Z.unsafe_rawColors.BRAND_500.css
+                                                : i.Z.unsafe_rawColors.WHITE_500.css,
                                         className: j.activeIcon,
                                     }),
                                 d &&
                                     (0, a.jsx)(s.Mgn, {
-                                        color: r.Z.unsafe_rawColors.RED_400.css,
+                                        color: i.Z.unsafe_rawColors.RED_400.css,
                                         secondaryColor:
                                             (t && _) || (t && !_)
-                                                ? r.Z.unsafe_rawColors.BRAND_500.css
-                                                : r.Z.unsafe_rawColors.WHITE_500.css,
+                                                ? i.Z.unsafe_rawColors.BRAND_500.css
+                                                : i.Z.unsafe_rawColors.WHITE_500.css,
                                         size: "xs",
                                         className: j.activeIcon,
                                     }),
@@ -91,7 +91,7 @@ function _(e) {
                         if ((null == e || e(), d)) (0, g.Z)();
                         else {
                             var n;
-                            (n = i.id) !== (null == t ? void 0 : t.id) &&
+                            (n = l.id) !== (null == t ? void 0 : t.id) &&
                                 (m.default.track(b.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
                                     location: { section: b.jXE.USER_PROFILE },
                                 }),
@@ -99,7 +99,7 @@ function _(e) {
                         }
                     },
                 },
-                i.id,
+                l.id,
             );
         });
     return (

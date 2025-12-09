@@ -28,8 +28,8 @@ var c = n(748721),
     N = n(473159),
     P = n(846519),
     R = n(579806),
-    w = n(896361),
-    D = n(746106),
+    D = n(896361),
+    w = n(746106),
     x = n(177692);
 n(986484);
 var L = n(857192),
@@ -53,7 +53,7 @@ function Y(e, t, n) {
     let i = null != n ? new URLSearchParams(n) : null;
     (null != (r = H[t]) && r.call(H, i)) || (0, A.uL)(t);
 }
-let W = (e) => V.render((0, l.jsx)(D.w, { children: (0, l.jsx)(w.Z, { children: (0, l.jsx)(e, {}) }) }));
+let W = (e) => V.render((0, l.jsx)(w.w, { children: (0, l.jsx)(D.Z, { children: (0, l.jsx)(e, {}) }) }));
 if (null != R.Z) {
     null == (r = R.Z.setUncaughtExceptionHandler) ||
         r.call(R.Z, (e, t) => {

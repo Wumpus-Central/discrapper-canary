@@ -24,8 +24,8 @@ let p = r.memo(function (e) {
             } = e,
             C = (0, u.wq)(t.author.id, n.id),
             y = (0, u.XO)(t, n, p, f),
-            v = (0, u.R9)(h, f),
-            _ = r.useCallback(() => {
+            _ = (0, u.R9)(h, f),
+            v = r.useCallback(() => {
                 f({
                     usernameProfile: !1,
                     avatarProfile: !1,
@@ -44,10 +44,10 @@ let p = r.memo(function (e) {
             renderPopout: c.Z,
             showAvatarPopout: h,
             showUsernamePopout: p,
-            onClickAvatar: v,
+            onClickAvatar: _,
             onClickUsername: y,
             onContextMenu: C,
-            onPopoutRequestClose: _,
+            onPopoutRequestClose: v,
             roleIcon: b,
         });
     }),

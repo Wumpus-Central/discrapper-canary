@@ -1,8 +1,8 @@
 n.d(t, { default: () => O }), n(388685), n(953529);
 var a = n(54381),
-    l = n(473749),
-    r = n(772848),
-    i = n(793030),
+    r = n(473749),
+    i = n(772848),
+    l = n(793030),
     s = n(704215),
     o = n(481060),
     c = n(243778),
@@ -45,30 +45,30 @@ function E(e) {
           : null;
 }
 let O = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: O, classificationId: N } = e,
-        [T, P] = l.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        I = l.useRef(T),
-        [w, k] = (0, c.US)([T], void 0, !0),
-        R = l.useMemo(() => (0, r.Z)(), []),
-        A = l.useRef(!1),
-        Z = (0, m.GE)();
-    l.useEffect(() => {
-        I.current = w;
-    }, [w]);
-    let { loading: D, ageVerificationMethods: L } = (0, b.Z)({
+    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: O, classificationId: T } = e,
+        [N, P] = r.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        w = r.useRef(N),
+        [I, k] = (0, c.US)([N], void 0, !0),
+        R = r.useMemo(() => (0, i.Z)(), []),
+        A = r.useRef(!1),
+        D = (0, m.GE)();
+    r.useEffect(() => {
+        w.current = I;
+    }, [I]);
+    let { loading: Z, ageVerificationMethods: L } = (0, b.Z)({
         onClose: () => {
             null == j || j(), u();
         },
         onMethodClick: () => {
             P(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
-        classificationId: N,
+        classificationId: T,
     });
     return (
-        l.useLayoutEffect(
+        r.useLayoutEffect(
             () => () => {
                 if (A.current) return;
-                let e = I.current;
+                let e = w.current;
                 null != e &&
                     ((A.current = !0),
                     p.Z.maybeOpenAgeVerificationUserFeedback({
@@ -78,10 +78,10 @@ let O = function (e) {
             },
             [],
         ),
-        l.useEffect(() => {
+        r.useEffect(() => {
             (0, f.lA)(R, f.d_.EXPRESSIVE_PRIMARY, n);
         }, [R, n]),
-        (0, a.jsx)(i.ExpressiveModal, {
+        (0, a.jsx)(l.ExpressiveModal, {
             transitionState: t,
             onClose: u,
             gradientColor: "blue",
@@ -91,7 +91,7 @@ let O = function (e) {
                 src: S.Z,
             },
             title: y.intl.string(y.t.JHNunj),
-            subtitle: Z
+            subtitle: D
                 ? y.intl.string(_.default["1/6wta"])
                 : y.intl.format(_.default.RpMIT0, {
                       handleOnHelpUrlHook: () => {
@@ -156,15 +156,15 @@ let O = function (e) {
                               direction: "vertical",
                               gap: 8,
                               children: L.map((e) => {
-                                  let { title: t, description: n, onClick: l } = e;
+                                  let { title: t, description: n, onClick: r } = e;
                                   return (0, a.jsx)(
                                       d.JZ,
                                       {
                                           variant: "clickable",
                                           title: t,
                                           description: n,
-                                          buttonDisabled: D,
-                                          onButtonPress: () => l(R),
+                                          buttonDisabled: Z,
+                                          onButtonPress: () => r(R),
                                       },
                                       t,
                                   );

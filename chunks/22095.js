@@ -1,7 +1,7 @@
 n.d(t, {
     AH: () => G,
     Ag: () => q,
-    CS: () => D,
+    CS: () => w,
     EW: () => K,
     Kh: () => ei,
     MG: () => en,
@@ -102,8 +102,8 @@ function R(e, t) {
         e
     );
 }
-let w = 5;
-async function D(e) {
+let D = 5;
+async function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     try {
         let n = (
@@ -120,7 +120,7 @@ async function D(e) {
                 user_status: n.quest_user_status,
             });
         else if (null != n.error_hints_v2 && n.error_hints_v2.length > 0)
-            return { errorHints: n.error_hints_v2.slice(0, w) };
+            return { errorHints: n.error_hints_v2.slice(0, D) };
     } catch (r) {
         var n;
         let e = new o.Z(r);

@@ -49,17 +49,17 @@ function m(e) {
         [N, P] = (0, r.iZ)(C, e.granularity),
         R = P || "UTC";
     if (C && !(N in C)) throw Error("Invalid granularity " + N + " for value " + C.toString());
-    let w = (0, d.useMemo)(() => new (0, a.C)(m), [m]),
-        D = (0, d.useMemo)(() => g(w.resolvedOptions().calendar), [g, w]),
+    let D = (0, d.useMemo)(() => new (0, a.C)(m), [m]),
+        w = (0, d.useMemo)(() => g(D.resolvedOptions().calendar), [g, D]),
         [x, L] = (0, u.z)(e.value, null != (t = e.defaultValue) ? t : null, e.onChange),
         [j] = (0, d.useState)(x),
         M = (0, d.useMemo)(() => {
             var e;
-            return null != (e = (0, r.Ai)(x, D)) ? e : null;
-        }, [x, D]),
-        [k, U] = (0, d.useState)(() => (0, r.OJ)(e.placeholderValue, N, D, P)),
+            return null != (e = (0, r.Ai)(x, w)) ? e : null;
+        }, [x, w]),
+        [k, U] = (0, d.useState)(() => (0, r.OJ)(e.placeholderValue, N, w, P)),
         G = M || k,
-        Z = "gregory" === D.identifier && "BC" === G.era,
+        Z = "gregory" === w.identifier && "BC" === G.era,
         B = (0, d.useMemo)(() => {
             var t;
             return {
@@ -84,23 +84,23 @@ function m(e) {
         ),
         [W, K] = (0, d.useState)(() => (e.value || e.defaultValue ? { ...Y } : {})),
         z = (0, d.useRef)(null),
-        q = (0, d.useRef)(D);
+        q = (0, d.useRef)(w);
     (0, d.useEffect)(() => {
-        (0, o.jv)(D, q.current) ||
-            ((q.current = D),
-            U((t) => (Object.keys(W).length > 0 ? (0, s.Mw)(t, D) : (0, r.OJ)(e.placeholderValue, N, D, P))));
-    }, [D, N, W, P, e.placeholderValue]),
+        (0, o.jv)(w, q.current) ||
+            ((q.current = w),
+            U((t) => (Object.keys(W).length > 0 ? (0, s.Mw)(t, w) : (0, r.OJ)(e.placeholderValue, N, w, P))));
+    }, [w, N, W, P, e.placeholderValue]),
         x && Object.keys(W).length < Object.keys(Y).length && K((W = { ...Y })),
         null == x &&
             Object.keys(W).length === Object.keys(Y).length &&
-            (K((W = {})), U((0, r.OJ)(e.placeholderValue, N, D, P)));
+            (K((W = {})), U((0, r.OJ)(e.placeholderValue, N, w, P)));
     let Q = M && Object.keys(W).length >= Object.keys(Y).length ? M : k,
         X = (t) => {
             if (e.isDisabled || e.isReadOnly) return;
             let n = Object.keys(W),
                 i = Object.keys(Y);
             null == t
-                ? (L(null), U((0, r.OJ)(e.placeholderValue, N, D, P)), K({}))
+                ? (L(null), U((0, r.OJ)(e.placeholderValue, N, w, P)), K({}))
                 : (0 === n.length && null == z.current) ||
                     n.length >= i.length ||
                     (n.length === i.length - 1 && Y.dayPeriod && !W.dayPeriod && "dayPeriod" !== z.current)
@@ -110,7 +110,7 @@ function m(e) {
                 (z.current = null);
         },
         J = (0, d.useMemo)(() => Q.toDate(R), [Q, R]),
-        $ = (0, d.useMemo)(() => h(J, W, V, H, Q, D, m, N), [J, W, V, H, Q, D, m, N]);
+        $ = (0, d.useMemo)(() => h(J, W, V, H, Q, w, m, N), [J, W, V, H, Q, w, m, N]);
     Y.era && W.year && !W.era ? ((W.era = !0), K({ ...W })) : !Y.era && W.era && (delete W.era, K({ ...W }));
     let ee = (e) => {
             (W[e] = !0), "year" === e && Y.era && (W.era = !0), K({ ...W });
@@ -137,7 +137,7 @@ function m(e) {
         value: M,
         defaultValue: null != (n = e.defaultValue) ? n : j,
         dateValue: J,
-        calendar: D,
+        calendar: w,
         setValue: X,
         segments: $,
         dateFormatter: V,
@@ -171,7 +171,7 @@ function m(e) {
         },
         clearSegment(t) {
             delete W[t], (z.current = t), K({ ...W });
-            let n = (0, r.OJ)(e.placeholderValue, N, D, P),
+            let n = (0, r.OJ)(e.placeholderValue, N, w, P),
                 i = Q;
             if ("dayPeriod" === t && "hour" in Q && "hour" in n) {
                 let e = Q.hour >= 12,

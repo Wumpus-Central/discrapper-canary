@@ -2,8 +2,8 @@ let r, i, a, o, s, l, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, A, C, N
 n.d(t, { Z: () => e4 }), n(388685);
 var P,
     R = n(392711),
-    w = n(754700),
-    D = n(887003),
+    D = n(754700),
+    w = n(887003),
     x = n(442837),
     L = n(570140),
     j = n(70956),
@@ -111,7 +111,7 @@ function er(e, t) {
     if (null != t.userStatus)
         for (let o of Object.values(null != (r = null == (n = t.userStatus) ? void 0 : n.progress) ? r : {}))
             !(0, R.isNil)(o) &&
-                w.T.DESKTOP.has(o.eventName) &&
+                D.T.DESKTOP.has(o.eventName) &&
                 ((null == (i = o.heartbeat) ? void 0 : i.lastBeatAt) != null
                     ? E.add(e)
                     : (null == (a = o.heartbeat) ? void 0 : a.lastBeatAt) == null && E.delete(e));
@@ -140,7 +140,7 @@ function es(e) {
     var t;
     let { entitlements: n } = e,
         r = null == (t = n.items[0].tenantMetadata) ? void 0 : t.questRewards.reward;
-    return (null == r ? void 0 : r.tag) !== D.w.REWARD_CODE ? null : r.rewardCode;
+    return (null == r ? void 0 : r.tag) !== w.w.REWARD_CODE ? null : r.rewardCode;
 }
 function el(e, t) {
     let n = new Map(y);
@@ -268,12 +268,12 @@ function eR(e) {
         n = new Set(m);
     n.delete(t), (m = n);
 }
-function ew(e) {
+function eD(e) {
     let { questId: t } = e,
         n = new Set(_);
     n.add(t), (_ = n);
 }
-function eD(e) {
+function ew(e) {
     let { questId: t, entitlements: n } = e,
         r = new Set(_);
     r.delete(t), (_ = r), el(t, n);
@@ -560,8 +560,8 @@ let e2 = new e3(L.Z, {
         QUESTS_FETCH_REWARD_CODE_BEGIN: eN,
         QUESTS_FETCH_REWARD_CODE_SUCCESS: eP,
         QUESTS_FETCH_REWARD_CODE_FAILURE: eR,
-        QUESTS_CLAIM_REWARD_BEGIN: ew,
-        QUESTS_CLAIM_REWARD_SUCCESS: eD,
+        QUESTS_CLAIM_REWARD_BEGIN: eD,
+        QUESTS_CLAIM_REWARD_SUCCESS: ew,
         QUESTS_CLAIM_REWARD_FAILURE: ex,
         QUESTS_DISMISS_CONTENT_BEGIN: ej,
         QUESTS_DISMISS_CONTENT_SUCCESS: eM,

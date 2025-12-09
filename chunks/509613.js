@@ -4,7 +4,7 @@ n.d(t, {
     Em: () => N,
     IC: () => E,
     J9: () => P,
-    ON: () => w,
+    ON: () => D,
     Ql: () => d,
     UO: () => C,
     US: () => v,
@@ -170,6 +170,6 @@ function P(e, t) {
 function R(e, t) {
     return I(e, r.J.NAVIGATOR, t);
 }
-function w(e, t) {
+function D(e, t) {
     return I(e, r.J.CUSTOM, t);
 }

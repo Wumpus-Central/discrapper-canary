@@ -85,9 +85,9 @@ let y = ["discordapp.com/gifts", "discord.com/gifts"],
     N = C(4, 4),
     P = C(4, 6),
     R = C(5, 3),
-    w = "WUMP-?",
-    D = [N, P, R, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
-    x = new RegExp("^(".concat(w, ")?(").concat(D, ")$")),
+    D = "WUMP-?",
+    w = [N, P, R, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
+    x = new RegExp("^(".concat(D, ")?(").concat(w, ")$")),
     L = "-";
 var j = (function (e) {
     return (

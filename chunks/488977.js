@@ -39,7 +39,7 @@ function R(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function w(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -72,7 +72,7 @@ function x(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -80,7 +80,7 @@ function x(e, t) {
 }
 function L(e) {
     var t;
-    let { application: a, context: R, className: D, sectionName: L } = e,
+    let { application: a, context: R, className: w, sectionName: L } = e,
         j = i.useRef(null),
         M = (0, l.e7)([S.Z], () => S.Z.entrypoint()),
         k = (0, I.L1)(a),
@@ -114,7 +114,7 @@ function L(e) {
                               applicationId: a.id,
                               referrerId: null == F ? void 0 : F.id,
                           })
-                        : (0, p.J)(w({ id: a.id }, k));
+                        : (0, p.J)(D({ id: a.id }, k));
                     (0, O.JG)(e, () =>
                         (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["L/PwZf"]), c.ToastType.SUCCESS)),
                     ),
@@ -123,7 +123,7 @@ function L(e) {
                             source: M,
                         });
                 },
-                className: o()(P.clickable, D),
+                className: o()(P.clickable, w),
                 "aria-label": N.intl.string(N.t.WqhZss),
                 children: (0, r.jsx)(c.xPt, {
                     size: "sm",
@@ -171,7 +171,7 @@ function L(e) {
                                                   null == k.customInstallUrl &&
                                                       (0, u.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, B),
                                                       (0, v.L)(
-                                                          x(w({}, k), {
+                                                          x(D({}, k), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t &&
@@ -217,9 +217,9 @@ function L(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         c.P3F,
-                        x(w({ innerRef: j }, e), {
+                        x(D({ innerRef: j }, e), {
                             onClick: e.onClick,
-                            className: o()(P.clickable, D),
+                            className: o()(P.clickable, w),
                             "aria-label": N.intl.string(N.t["UKOtz+"]),
                             children: (0, r.jsx)(c.xhG, {
                                 size: "sm",

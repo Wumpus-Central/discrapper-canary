@@ -80,7 +80,7 @@ let R = (e) => {
             ],
         });
     },
-    w = (e) => {
+    D = (e) => {
         let {
                 shouldAnimate: t,
                 size: a,
@@ -159,7 +159,7 @@ let R = (e) => {
                   }),
               });
     },
-    D = (e) => {
+    w = (e) => {
         let {
                 shouldAnimate: t,
                 sticker: n,
@@ -186,7 +186,7 @@ let R = (e) => {
             C = i.useCallback(() => {
                 g(!1);
             }, []),
-            w = i.useCallback(() => {
+            D = i.useCallback(() => {
                 y(!0);
             }, []);
         return (i.useEffect(() => {
@@ -221,7 +221,7 @@ let R = (e) => {
                                   alt: P(n),
                                   src: A,
                                   draggable: !1,
-                                  onError: w,
+                                  onError: D,
                                   onLoad: C,
                                   onContextMenu: v,
                                   ref: T,
@@ -333,7 +333,7 @@ let R = (e) => {
             y = (0, g.t$)(t) && !n,
             O = i.useRef(null);
         if (null == u) return null;
-        let v = u.format_type === E.u3.LOTTIE ? w : D;
+        let v = u.format_type === E.u3.LOTTIE ? D : w;
         return (0, r.jsxs)(
             i.Fragment,
             {

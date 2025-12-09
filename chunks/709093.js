@@ -87,9 +87,9 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
             N = (0, c.Fv)(E),
             P = (0, d.N)(),
             R = null == P || null == (t = P.discount) ? void 0 : t.amount,
-            w = C ? v : O,
+            D = C ? v : O,
             {
-                step: D,
+                step: w,
                 breadcrumbs: x,
                 startedPaymentFlowWithPaymentSourcesRef: L,
                 isDisplayingWowMomentConfirmation: j,
@@ -112,15 +112,15 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                 let t = e.id !== l.h8.ADD_PAYMENT_STEPS,
                     n = e.id === l.h8.ADD_PAYMENT_STEPS && !L.current;
                 return !E || (E && (t || n));
-            })).find((e) => e.id === D),
+            })).find((e) => e.id === w),
             U =
                 null != (i = null == k || null == (n = k.sectionHeaderText) ? void 0 : n.call(k))
                     ? i
                     : null == k
                       ? void 0
                       : k.label,
-            G = null != U && null != D,
-            Z = N && G && D === l.h8.REVIEW,
+            G = null != U && null != w,
+            Z = N && G && w === l.h8.REVIEW,
             B = C ? "nitro-pink" : "nitro-green",
             F = T(C, A);
         return j
@@ -147,7 +147,7 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                                       className: h.closeButtonPosition,
                                   }),
                               (0, r.jsx)("img", {
-                                  src: w,
+                                  src: D,
                                   alt: "",
                                   className: Z ? h.bigWumpus : h.wumpus,
                               }),
@@ -177,7 +177,7 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                           (0, r.jsx)(S, {
                               isOneStepCheckout: N,
                               headerText: U,
-                              step: D,
+                              step: w,
                               filteredBreadcrumbs: M,
                           }),
                       Z &&

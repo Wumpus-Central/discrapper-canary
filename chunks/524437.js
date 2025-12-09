@@ -26,7 +26,7 @@ n.d(t, {
     l1: () => T,
     n9: () => A,
     nI: () => d,
-    o8: () => D,
+    o8: () => w,
     os: () => M,
     p5: () => H,
     sf: () => e_,
@@ -264,7 +264,7 @@ var r = n(230367),
             e
         );
     })({});
-class w extends o.C {
+class D extends o.C {
     create(e) {
         let t = {};
         return (
@@ -557,7 +557,7 @@ class w extends o.C {
         ]);
     }
 }
-let D = new w();
+let w = new D();
 class x extends o.C {
     create(e) {
         let t = {
@@ -3917,7 +3917,7 @@ class eP extends o.C {
     }
 }
 let eR = new eP();
-class ew extends o.C {
+class eD extends o.C {
     create(e) {
         let t = {
             colors: [],
@@ -4009,7 +4009,7 @@ class ew extends o.C {
         ]);
     }
 }
-let eD = new ew();
+let ew = new eD();
 class ex extends o.C {
     create(e) {
         let t = {};
@@ -4037,7 +4037,7 @@ class ex extends o.C {
                     );
                     break;
                 case 4:
-                    a.customUserThemeSettings = eD.internalBinaryRead(e, e.uint32(), n, a.customUserThemeSettings);
+                    a.customUserThemeSettings = ew.internalBinaryRead(e, e.uint32(), n, a.customUserThemeSettings);
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -4055,7 +4055,7 @@ class ex extends o.C {
         e.backgroundGradientPresetId &&
             s.yC.internalBinaryWrite(e.backgroundGradientPresetId, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
             e.customUserThemeSettings &&
-                eD.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, r.TD.LengthDelimited).fork(), n).join();
+                ew.internalBinaryWrite(e.customUserThemeSettings, t.tag(4, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -4071,7 +4071,7 @@ class ex extends o.C {
                 no: 4,
                 name: "custom_user_theme_settings",
                 kind: "message",
-                T: () => eD,
+                T: () => ew,
             },
         ]);
     }

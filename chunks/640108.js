@@ -32,8 +32,8 @@ var r,
     N = n(283756),
     P = n(921135),
     R = n(428940),
-    w = n(793148),
-    D = n(981631),
+    D = n(793148),
+    w = n(981631),
     x = n(217702),
     L = n(388032),
     j = n(55343),
@@ -268,7 +268,7 @@ class Q extends (r = o.Component) {
                 }),
                 (0, a.jsx)("div", {
                     className: M.flex,
-                    children: (0, a.jsx)(w.Z, {
+                    children: (0, a.jsx)(D.Z, {
                         ref: this.setVolumeButtonRef,
                         muted: i,
                         value: _,
@@ -420,7 +420,7 @@ class ee {
                 !1 === this.metadata.hasValidFrame &&
                 ((this.errorCode = 4),
                 (this.errorMessage = "No valid video frames detected - codec may be unsupported")),
-            O.default.track(D.rMx.MEDIA_PLAY_FINISHED, {
+            O.default.track(w.rMx.MEDIA_PLAY_FINISHED, {
                 play_time_sec: this.playTimeSec,
                 play_wall_time_ms: this.playWallTimeMs,
                 first_play_waiting_ms: this.firstPlayWaitingMs,
@@ -940,7 +940,7 @@ class et extends (i = o.PureComponent) {
                 this.renderMetadata(),
                 t === Y.AUDIO ? this.renderAudio() : this.renderVideo(),
                 (0, a.jsx)(_.f6W, {
-                    theme: D.BRd.MIDNIGHT,
+                    theme: w.BRd.MIDNIGHT,
                     children: (e) =>
                         (0, a.jsx)("div", {
                             className: e,
@@ -1142,12 +1142,12 @@ class et extends (i = o.PureComponent) {
             k(this, "handleKeyDown", (e) => {
                 let { current: t } = this.mediaRef,
                     { disableArrowKeySeek: n } = this.props;
-                if (e.which === D.yXg.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
-                else if (e.which !== D.yXg.ARROW_LEFT || null == t || n)
-                    if (e.which !== D.yXg.ARROW_RIGHT || null == t || n) {
-                        if (e.which >= D.yXg.DIGIT_0 && e.which <= D.yXg.DIGIT_9 && null != t) {
+                if (e.which === w.yXg.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
+                else if (e.which !== w.yXg.ARROW_LEFT || null == t || n)
+                    if (e.which !== w.yXg.ARROW_RIGHT || null == t || n) {
+                        if (e.which >= w.yXg.DIGIT_0 && e.which <= w.yXg.DIGIT_9 && null != t) {
                             e.preventDefault(), e.stopPropagation();
-                            let n = (e.which - D.yXg.DIGIT_0) / 10;
+                            let n = (e.which - w.yXg.DIGIT_0) / 10;
                             (t.currentTime = t.duration * n), this.setPlay(!0);
                         }
                     } else {

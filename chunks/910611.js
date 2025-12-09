@@ -1,5 +1,5 @@
 n.d(t, {
-    TS: () => H,
+    TS: () => B,
     ud: () => D,
     v0: () => U,
 }),
@@ -21,8 +21,8 @@ var i = n(54381),
     b = n(370774),
     C = n(703656),
     y = n(621853),
-    v = n(484459),
-    _ = n(699516),
+    _ = n(484459),
+    v = n(699516),
     O = n(914010),
     x = n(594174),
     E = n(768581),
@@ -171,7 +171,7 @@ function D(e) {
                     };
             }
         })(t.type, o),
-        v = (0, i.jsxs)(i.Fragment, {
+        _ = (0, i.jsxs)(i.Fragment, {
             children: [
                 null != C
                     ? (0, i.jsxs)(u.nn4, {
@@ -191,7 +191,7 @@ function D(e) {
                 handleContextMenu: d,
             });
         case A.d4z.GROUP_DM:
-            if (t.isManaged()) return v;
+            if (t.isManaged()) return _;
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(u.nn4, { children: M.intl.string(M.t["e5y+gm"]) }),
@@ -216,7 +216,7 @@ function D(e) {
                               level: y,
                               onContextMenu: d,
                               onClick: c,
-                              children: v,
+                              children: _,
                           }),
                       ],
                   })
@@ -232,7 +232,7 @@ function D(e) {
                               level: y,
                               onContextMenu: d,
                               onClick: c,
-                              children: v,
+                              children: _,
                           }),
                           null != g ? g() : null,
                       ],
@@ -245,7 +245,7 @@ function D(e) {
                         level: y,
                         onContextMenu: d,
                         onClick: c,
-                        children: v,
+                        children: _,
                     }),
                 ],
             });
@@ -257,7 +257,7 @@ function D(e) {
                         level: y,
                         onContextMenu: d,
                         onClick: c,
-                        children: v,
+                        children: _,
                     }),
                 ],
             });
@@ -275,7 +275,7 @@ function D(e) {
                             onContextMenu: m,
                             onClick: p,
                             className: a()(R.parentChannelName, R.cursorPointer),
-                            children: (0, h.F6)(l, x.default, _.Z),
+                            children: (0, h.F6)(l, x.default, v.Z),
                         }),
                         (0, i.jsx)(T.Z.Caret, {}),
                     ],
@@ -295,7 +295,7 @@ function D(e) {
                             [R.forumPostTitle]: E,
                             [R.forumPostSidebarTitle]: s && E,
                         }),
-                        children: v,
+                        children: _,
                     }),
                 ],
             });
@@ -343,7 +343,7 @@ let k = (e) => {
         (null == s ? void 0 : s.isStaff()) &&
             null != c &&
             !c.isStaff() &&
-            (0, v.Z)(c.id, c.getAvatarURL(void 0, 80), {
+            (0, _.Z)(c.id, c.getAvatarURL(void 0, 80), {
                 dispatchWait: !0,
                 withMutualGuilds: !0,
                 withMutualFriendsCount: !0,
@@ -394,7 +394,7 @@ function V(e, t) {
         ],
     });
 }
-function H(e) {
+function B(e) {
     let { guild: t, channel: n, caretPosition: l = "left" } = e,
         a = (0, o.e7)([O.Z], () => O.Z.getGuildId()),
         s = (0, b.D)(),

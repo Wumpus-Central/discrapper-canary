@@ -35,7 +35,7 @@ let R = (e, t, n) =>
           : "sm" === t
             ? "text-sm/medium"
             : "text-xs/medium";
-function w(e) {
+function D(e) {
     let { containerSize: t, onClick: n, text: i, tabIndex: a } = e;
     return "xs" === t
         ? (0, r.jsx)(u.P3F, {
@@ -57,7 +57,7 @@ function w(e) {
               text: i,
           });
 }
-function D(e) {
+function w(e) {
     var t, n, r, i, a;
     let {
             quest: o,
@@ -276,7 +276,7 @@ let j = (e) => {
                         (0, r.jsx)(u.Text, {
                             variant: "lg" === c ? "text-sm/medium" : "text-xs/medium",
                             color: "text-muted",
-                            children: D({
+                            children: w({
                                 quest: n,
                                 locale: F,
                                 isQuestExpired: p,
@@ -310,7 +310,7 @@ let j = (e) => {
                           justify: "end",
                           fullWidth: "lg" !== c,
                           children: [
-                              (0, r.jsx)(w, {
+                              (0, r.jsx)(D, {
                                   containerSize: c,
                                   onClick: B,
                                   text: N.intl.string(N.t.LLLLPD),

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => D }), t(539854);
+t.d(n, { Z: () => A }), t(539854);
 var r = t(54381),
     l = t(473749),
     i = t(442837),
@@ -71,8 +71,8 @@ function B(e, n) {
         e
     );
 }
-function D(e) {
-    let { channelId: n, baseChannelId: D, channelViewSource: A = "Split View", isResourceChannelView: R } = e,
+function A(e) {
+    let { channelId: n, baseChannelId: A, channelViewSource: D = "Split View", isResourceChannelView: R } = e,
         k = (0, i.e7)([O.Z], () => O.Z.getChannel(n)),
         L = (0, i.e7)([N.Z], () => N.Z.getGuild(null == k ? void 0 : k.getGuildId())),
         H = (0, Z.ZP)(k),
@@ -89,9 +89,9 @@ function D(e) {
             null == k ||
                 F.current ||
                 ((F.current = !0),
-                (0, d.yw)(P.rMx.CHANNEL_OPENED, B(T({}, (0, d.$H)(k.id)), { channel_view: A })),
+                (0, d.yw)(P.rMx.CHANNEL_OPENED, B(T({}, (0, d.$H)(k.id)), { channel_view: D })),
                 (0, u.a)(P.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: k.id }));
-        }, [k, A]),
+        }, [k, D]),
         null == k || null == L)
     )
         return null;
@@ -103,7 +103,7 @@ function D(e) {
             {
                 icon: a.Dio,
                 tooltip: S.intl.string(S.t.cpT0Cq),
-                onClick: () => j.Z.closeChannelSidebar(D),
+                onClick: () => j.Z.closeChannelSidebar(A),
             },
             "close",
         ),

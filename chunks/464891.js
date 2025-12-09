@@ -34,8 +34,8 @@ var r = n(54381),
     N = n(670188),
     P = n(740492),
     R = n(430824),
-    w = n(496675),
-    D = n(594174),
+    D = n(496675),
+    w = n(594174),
     x = n(768581),
     L = n(585483),
     j = n(74538),
@@ -221,8 +221,8 @@ let et = i.memo(function (e) {
                         : null,
             [C, l, A],
         ),
-        P = (0, c.e7)([D.default], () => D.default.getCurrentUser()),
-        w = i.useMemo(() => {
+        P = (0, c.e7)([w.default], () => w.default.getCurrentUser()),
+        D = i.useMemo(() => {
             let e = [],
                 n = j.ZP.isPremium(t.author),
                 i = j.ZP.isPremium(P),
@@ -288,7 +288,7 @@ let et = i.memo(function (e) {
                       onPopoutRequestClose: E,
                       decorations: {
                           [U.a.SYSTEM_TAG]: I,
-                          [U.a.BADGES]: w,
+                          [U.a.BADGES]: D,
                       },
                       previewGuildId: o,
                       preview: b,
@@ -364,9 +364,9 @@ function er(e) {
             showAvatarPopout: I,
         } = o,
         C = i.useRef(null),
-        [R, w] = i.useState(!1),
+        [R, D] = i.useState(!1),
         { analyticsLocations: j } = (0, p.ZP)(f.Z.AVATAR),
-        M = (0, c.e7)([D.default], () => D.default.getCurrentUser()),
+        M = (0, c.e7)([w.default], () => w.default.getCurrentUser()),
         k = (0, c.e7)([P.ZP], () => {
             var e;
             return null != (e = o.displayCompactAvatars) ? e : P.ZP.displayCompactAvatars;
@@ -436,8 +436,8 @@ function er(e) {
         (i.useEffect(() => {
             if (null != E)
                 return (
-                    L.S.subscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(m.author.id), w),
-                    () => void L.S.unsubscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(m.author.id), w)
+                    L.S.subscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(m.author.id), D),
+                    () => void L.S.unsubscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, "".concat(E, ":").concat(m.author.id), D)
                 );
         }, [m.author.id, E]),
         !g || k)
@@ -600,9 +600,9 @@ let es = i.memo(function (e) {
             } = e,
             I = i.useMemo(() => (null != s ? (e) => s(e, t) : void 0), [s, t]),
             [, T] = (0, h.ZP)(t.author.id, e.guildId),
-            A = (0, c.e7)([w.Z, R.Z], () => {
+            A = (0, c.e7)([D.Z, R.Z], () => {
                 let n = R.Z.getGuild(e.guildId);
-                return null != t.author && null != n && w.Z.canManageUser(H.Plq.MODERATE_MEMBERS, t.author, n);
+                return null != t.author && null != n && D.Z.canManageUser(H.Plq.MODERATE_MEMBERS, t.author, n);
             }, [t.author, e.guildId]),
             C = T && A,
             N = er({
@@ -611,7 +611,7 @@ let es = i.memo(function (e) {
                 handleRenderPopout: I,
                 showCommunicationDisabledStyles: C,
             }),
-            D = (0, c.e7)([P.ZP], () => {
+            w = (0, c.e7)([P.ZP], () => {
                 var t;
                 return null != (t = e.displayCompactAvatars) ? t : P.ZP.displayCompactAvatars;
             }),
@@ -626,7 +626,7 @@ let es = i.memo(function (e) {
                     }),
                 [t, y, a],
             ),
-            L = (0, c.e7)([R.Z], () => eo(a, D, p, R.Z.getGuild(e.guildId)), [a, D, p, e.guildId]),
+            L = (0, c.e7)([R.Z], () => eo(a, w, p, R.Z.getGuild(e.guildId)), [a, w, p, e.guildId]),
             j = i.useMemo(() => {
                 let e = [];
                 return (

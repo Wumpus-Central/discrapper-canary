@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(366841),
     P = n(947519),
     R = n(248687),
-    w = n(690833),
-    D = n(859678),
+    D = n(690833),
+    w = n(859678),
     x = n(314910),
     L = n(84615),
     j = n(429142),
@@ -96,11 +96,11 @@ let ee = (0, W.Un)({
             g = (0, u.e7)([E.Z], () => (E.Z.useForcedColors ? "yes" : "no")),
             B = i.useRef(document.body),
             V = "".concat(g);
-        (0, N.G)(), (0, D.G)("AppSkeleton");
-        let H = (0, w.Co)("AppSkeleton");
+        (0, N.G)(), (0, w.G)("AppSkeleton");
+        let H = (0, D.Co)("AppSkeleton");
         return (
             i.useEffect(() => {
-                Y.isPlatformEmbedded && (H ? d.K.set(w.j4, "json") : d.K.remove(w.j4));
+                Y.isPlatformEmbedded && (H ? d.K.set(D.j4, "json") : d.K.remove(D.j4));
             }, [H]),
             (0, r.jsx)(
                 Z.w,

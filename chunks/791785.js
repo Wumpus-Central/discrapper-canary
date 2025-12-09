@@ -31,8 +31,8 @@ var r = n(54381),
     N = n(580130),
     P = n(626135),
     R = n(669079),
-    w = n(74538),
-    D = n(987209),
+    D = n(74538),
+    w = n(987209),
     x = n(563132),
     L = n(409813),
     j = n(45572),
@@ -151,8 +151,8 @@ function ee(e) {
             setSelectedPlanNotification: eN,
             setStep: eP,
             setPurchaseError: eR,
-            paymentAuthenticationState: ew,
-            step: eD,
+            paymentAuthenticationState: eD,
+            step: ew,
             selectedSku: ex,
             contextMetadata: eL,
             purchaseTokenAuthState: ej,
@@ -168,13 +168,13 @@ function ee(e) {
             invoicePreview: eY,
         } = (0, x.JL)(),
         eW = (0, M.Z)(),
-        { isGift: eK, giftRecipient: ez, customGiftMessage: eq, emojiConfetti: eQ, soundEffect: eX } = (0, D.wD)(),
+        { isGift: eK, giftRecipient: ez, customGiftMessage: eq, emojiConfetti: eQ, soundEffect: eX } = (0, w.wD)(),
         eJ = c.CgR.SMALL;
     ep || (null == eW ? void 0 : eW.isLargeModal)
         ? (eJ = c.CgR.LARGE)
         : e_ || (null == eW ? void 0 : eW.isMediumModal)
           ? (eJ = c.CgR.MEDIUM)
-          : (eD === L.h8.ADD_PAYMENT_STEPS || em || (null == eW ? void 0 : eW.isDynamicModal)) && (eJ = c.CgR.DYNAMIC);
+          : (ew === L.h8.ADD_PAYMENT_STEPS || em || (null == eW ? void 0 : eW.isDynamicModal)) && (eJ = c.CgR.DYNAMIC);
     let e$ = (0, v.N)(),
         e0 = null != U && !eK && (0, S.Wp)(e$, U),
         [e1, e3] = i.useState(
@@ -204,7 +204,7 @@ function ee(e) {
         e4 = null != eY ? eY.getDiscountIdIfExists() : void 0;
     i.useEffect(() => {
         e3((e) => {
-            let n = null != eA ? (0, w.aS)(eA.id, !1, eK, ek) : void 0;
+            let n = null != eA ? (0, D.aS)(eA.id, !1, eK, ek) : void 0;
             return q(
                 X(q({}, e), {
                     subscription_plan_id: null == eA ? void 0 : eA.id,
@@ -258,7 +258,7 @@ function ee(e) {
             eK && null != ez && null != a && n && (0, O.n)(a) && (0, y.Ni)(ez.id);
         }, [e1, eQ, eq, ez, eK, eX, eL.startTime, e2, a]),
         e8 = i.useMemo(() => () => (null == B ? void 0 : B(ev === j.A.COMPLETED, eI)), [B, ev, eI]),
-        e6 = (0, s.Z)(() => Date.now(), [eD]),
+        e6 = (0, s.Z)(() => Date.now(), [ew]),
         e7 = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -270,7 +270,7 @@ function ee(e) {
                     eR(null),
                     eN(null),
                     e === L.h8.ADD_PAYMENT_STEPS && (u.Z.wait(f.fw), u.Z.wait(p.pB));
-                let s = null != n ? n : eD;
+                let s = null != n ? n : ew;
                 if (null === s || a)
                     return void P.default.track(
                         H.rMx.PAYMENT_FLOW_LOADED,
@@ -290,14 +290,14 @@ function ee(e) {
                     }),
                 );
             },
-            [eP, ed, eR, eN, eD, eb, e1, e6, eL.startTime, e5, h, eE, e8, eU],
+            [eP, ed, eR, eN, ew, eb, e1, e6, eL.startTime, e5, h, eE, e8, eU],
         );
-    (0, I.bp)(eD, ew, e7, eS),
-        (0, L.dZ)(eD, ev, eS),
-        (0, T.p)(eD, ej, e7),
+    (0, I.bp)(ew, eD, e7, eS),
+        (0, L.dZ)(ew, ev, eS),
+        (0, T.p)(ew, ej, e7),
         (0, E.Z)(e8),
         (0, A.w)(eM, () => B(!1), eK),
-        (0, I.D6)(ew);
+        (0, I.D6)(eD);
     let e9 = {
             initialPlanId: k,
             subscriptionTier: U,
@@ -371,7 +371,7 @@ function et(e) {
             startedPaymentFlowWithPaymentSourcesRef: O,
             hasPaymentSources: v,
         } = (0, x.JL)(),
-        { isGift: S } = (0, D.wD)(),
+        { isGift: S } = (0, w.wD)(),
         I = O.current,
         T = (0, U.Z)({
             isGift: S,

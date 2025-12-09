@@ -115,8 +115,8 @@ let C = { location: {} },
     N = r.createContext(C),
     P = {},
     R = 1000,
-    w = 10000,
-    D = 60000,
+    D = 10000,
+    w = 60000,
     x = 120000,
     L = 300000,
     j = 900000,
@@ -171,7 +171,7 @@ let V = {
         throttleKeys: (e) => [e.server],
     },
     [g.rMx.ACTIVITY_UPDATED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.application_id],
         deduplicate: !0,
     },
@@ -212,7 +212,7 @@ let V = {
         },
     },
     [g.rMx.QUICKSWITCHER_OPENED]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: () => [],
     },
     [g.rMx.CHAT_INPUT_COMPONENT_VIEWED]: {
@@ -262,11 +262,11 @@ let V = {
         throttleKeys: (e) => [e.banner_type, e.channel_id],
     },
     [g.rMx.PREMIUM_UPSELL_VIEWED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.type],
     },
     [g.rMx.FORUM_CHANNEL_SEARCHED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.FORUM_CHANNEL_SCROLLED]: {
@@ -274,11 +274,11 @@ let V = {
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.user_id],
     },
     [g.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: () => [],
     },
     [g.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
@@ -306,7 +306,7 @@ let V = {
         throttleKeys: (e) => [e.guild_id],
     },
     [g.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
-        throttlePeriod: D,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.guild_id, e.channel_id],
     },
     [g.rMx.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
@@ -346,12 +346,12 @@ let V = {
     [g.rMx.OPEN_MODAL]: (e) =>
         e.type === g.jXE.MEDIA_VIEWER
             ? {
-                  throttlePeriod: D,
+                  throttlePeriod: w,
                   throttleKeys: (e) => [e.type],
               }
             : void 0,
     [g.rMx.MODERATOR_QUEUE_ACTION]: {
-        throttlePeriod: w,
+        throttlePeriod: D,
         throttleKeys: (e) => [e.guild_id],
     },
     [g.rMx.NOTIFICATION_PERMISSION_STATUS]: {

@@ -1,6 +1,6 @@
 n.d(t, {
     XX: () => U,
-    ZP: () => H,
+    ZP: () => B,
     ul: () => V,
 }),
     n(388685);
@@ -21,8 +21,8 @@ var i = n(54381),
     b = n(258609),
     C = n(257115),
     y = n(569545),
-    v = n(102172),
-    _ = n(525925),
+    _ = n(102172),
+    v = n(525925),
     O = n(701362),
     x = n(655018),
     E = n(83896),
@@ -114,19 +114,19 @@ function V(e) {
         ],
     });
 }
-let H = (0, h.$)(function (e) {
+let B = (0, h.$)(function (e) {
     var t;
     let {
             collapsed: l,
             user: h,
             channel: U,
             mute: V,
-            localMute: H,
+            localMute: B,
             localVideoDisabled: F,
-            deaf: B,
+            deaf: H,
             video: G,
-            embeddedApplication: z,
-            serverMute: W,
+            embeddedApplication: W,
+            serverMute: z,
             serverDeaf: q,
             nick: K,
             ringing: Y,
@@ -155,7 +155,7 @@ let H = (0, h.$)(function (e) {
             showHangStatus: eC,
         } = e,
         ey = r.useRef(null),
-        [ev, e_] = r.useState(!1),
+        [e_, ev] = r.useState(!1),
         eO = r.useRef(null),
         [ex, eE] = r.useState(!1),
         [ej, eS] = r.useState(!1),
@@ -165,7 +165,7 @@ let H = (0, h.$)(function (e) {
         eA = ex || eN,
         ew = (null == eb ? void 0 : eb.session_id) != null,
         eM = () => {
-            e_(!ev);
+            ev(!e_);
         },
         eR = (e, t) => {
             let n = new Set(["system:click_outside", "user:escape", "user:explicit"]);
@@ -186,7 +186,7 @@ let H = (0, h.$)(function (e) {
             e && eE(!1);
         },
         eU = () => {
-            if (!(et && (0, v.p9)(U, A.Z, Z.Z, T.Z, b.default)[0])) return;
+            if (!(et && (0, _.p9)(U, A.Z, Z.Z, T.Z, b.default)[0])) return;
             let e = {
                 streamType: M.lo.GUILD,
                 ownerId: h.id,
@@ -194,7 +194,7 @@ let H = (0, h.$)(function (e) {
                 guildId: U.guild_id,
             };
             I.default.getId() !== h.id && d.default.selectVoiceChannel(U.id),
-                en ? ((0, _.Z)(e), c.Z.selectParticipant(e.channelId, (0, y.V9)(e))) : (0, p.iV)(e),
+                en ? ((0, v.Z)(e), c.Z.selectParticipant(e.channelId, (0, y.V9)(e))) : (0, p.iV)(e),
                 null == ea || ea(h.id);
         },
         eV = (e) => {
@@ -222,7 +222,7 @@ let H = (0, h.$)(function (e) {
                     );
             });
         },
-        eH = (e) =>
+        eB = (e) =>
             ef
                 ? (0, i.jsx)(
                       x.$,
@@ -247,7 +247,7 @@ let H = (0, h.$)(function (e) {
                 userId: h.id,
                 channel: U,
             }),
-        eB = () =>
+        eH = () =>
             (0, f.dl)() && (0, f.zd)(U.id)
                 ? null
                 : (0, i.jsx)(O.Z, {
@@ -263,19 +263,19 @@ let H = (0, h.$)(function (e) {
             onMouseEnter: ed
                 ? void 0
                 : () => {
-                      (et || eC || ew) && !ev && (null == el || el(h.id));
+                      (et || eC || ew) && !e_ && (null == el || el(h.id));
                   },
             onMouseLeave: ed ? void 0 : eL,
             children: (0, i.jsx)(S.Z, {
                 clickTrap:
-                    (null == h ? void 0 : h.id) === (null == (t = N.default.getCurrentUser()) ? void 0 : t.id) && ev,
+                    (null == h ? void 0 : h.id) === (null == (t = N.default.getCurrentUser()) ? void 0 : t.id) && e_,
                 targetElementRef: ey,
                 user: h,
                 guildId: U.guild_id,
                 channelId: U.id,
                 newAnalyticsLocations: [m.Z.VOICE_USER],
-                shouldShow: ev,
-                onRequestClose: () => e_(!1),
+                shouldShow: e_,
+                onRequestClose: () => ev(!1),
                 children: (e) =>
                     ((e) => {
                         let t = w.al.has(null != ec ? ec : ""),
@@ -285,26 +285,26 @@ let H = (0, h.$)(function (e) {
                                 latched: J,
                                 disconnected: Q,
                                 mute: V,
-                                localMute: H,
+                                localMute: B,
                                 localVideoDisabled: F,
                                 isStreaming: et,
                                 isGuest: ei,
                                 video: G,
                                 priority: er,
                                 ringing: Y,
-                                deaf: B,
+                                deaf: H,
                                 nick: K,
                                 collapsed: l,
                                 overlap: l,
-                                serverMute: W,
+                                serverMute: z,
                                 serverDeaf: q,
                                 tabIndex: ep,
                                 otherClientSessionType: ec,
                                 voicePlatform: eu,
-                                embeddedApplication: z,
+                                embeddedApplication: W,
                                 avatarContainerClass: a()({ [L.userAvatar]: !0 }),
                                 disabled: ed && !t,
-                                selected: ev,
+                                selected: e_,
                                 onClick: t ? void 0 : eM,
                                 onDoubleClick: eU,
                                 onContextMenu: eV,
@@ -325,17 +325,17 @@ let H = (0, h.$)(function (e) {
                         let c = () => null;
                         return (
                             eC && eA
-                                ? (c = eH)
+                                ? (c = eB)
                                 : et
-                                  ? (c = eB)
+                                  ? (c = eH)
                                   : ew && h.id !== I.default.getId()
                                     ? (c = eF)
-                                    : eC && (c = eH),
+                                    : eC && (c = eB),
                             (0, i.jsx)(s.yRy, {
                                 targetElementRef: ey,
                                 position: "right",
                                 renderPopout: c,
-                                shouldShow: (eo || (eC && eN)) && !ev,
+                                shouldShow: (eo || (eC && eN)) && !e_,
                                 onRequestClose: eR,
                                 align: eC && eA && !ef ? "center" : void 0,
                                 spacing: eC && eA ? 8 : 0,

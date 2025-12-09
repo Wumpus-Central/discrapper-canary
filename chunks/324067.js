@@ -112,14 +112,14 @@ function R(e) {
     let { channelId: t } = e;
     return null == t && null != h ? P(c.Z.getChannel(h), null) : P(c.Z.getChannel(t), t);
 }
-function w(e) {
+function D(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let { channelId: n, sessionId: r } = t;
         return l.default.getSessionId() !== r ? e : P(c.Z.getChannel(n), n) || e;
     }, !1);
 }
-function D(e) {
+function w(e) {
     let { guildId: t } = e;
     if (((_ = null != t ? t : null), null == t || null != m[t])) return !1;
     y(t);
@@ -141,7 +141,7 @@ class j extends (r = i.ZP.Store) {
 }
 p(j, "displayName", "GuildCategoryStore");
 let M = new j(a.Z, {
-    CHANNEL_SELECT: D,
+    CHANNEL_SELECT: w,
     CONNECTION_OPEN: O,
     OVERLAY_INITIALIZE: O,
     CACHE_LOADED_LAZY: O,
@@ -159,5 +159,5 @@ let M = new j(a.Z, {
     IMPERSONATE_UPDATE: N,
     IMPERSONATE_STOP: N,
     VOICE_CHANNEL_SELECT: R,
-    VOICE_STATE_UPDATES: w,
+    VOICE_STATE_UPDATES: D,
 });

@@ -92,8 +92,8 @@ function y(e) {
             }),
             [y, P],
         ),
-        N = () => w(O),
-        E = null != S ? y.get(S) : void 0;
+        E = () => w(O),
+        N = null != S ? y.get(S) : void 0;
     return (0, r.jsx)(d.j.Provider, {
         value: k,
         children: (0, r.jsxs)("div", {
@@ -103,12 +103,12 @@ function y(e) {
                     root: n,
                     header: j,
                     footer: m,
-                    onClose: N,
+                    onClose: E,
                     emptyState: h,
                 }),
                 (0, r.jsx)(c.Z, {
-                    onClose: N,
-                    setting: null != E ? E : _,
+                    onClose: E,
+                    setting: null != N ? N : _,
                 }),
             ],
         }),

@@ -32,8 +32,8 @@ let f = 20,
             N = i.useRef(!1),
             P = i.useRef(null),
             R = (0, l.Iu)((e) => e.searchQuery),
-            w = a.useStore((e) => e.activeCategoryIndex),
-            D = i.useMemo(
+            D = a.useStore((e) => e.activeCategoryIndex),
+            w = i.useMemo(
                 () =>
                     n.map((e) =>
                         (0, s._O)(e.categoryInfo)
@@ -43,7 +43,7 @@ let f = 20,
                 [n],
             ),
             x = (0, u.Qs)({
-                activeCategoryIndex: w,
+                activeCategoryIndex: D,
                 isScrolling: N,
                 listRef: P,
                 onActiveCategoryIndexChange: a.setActiveCategoryIndex,
@@ -56,12 +56,12 @@ let f = 20,
                         _({
                             listRef: P,
                             searchQuery: R,
-                            nitroLockedSectionStates: D,
+                            nitroLockedSectionStates: w,
                             scrollTop: e,
                         }),
                         null == C || C(e);
                 },
-                [x, R, D, C],
+                [x, R, w, C],
             );
         return (
             i.useEffect(() => {
@@ -69,7 +69,7 @@ let f = 20,
             }, [L, P]),
             (0, u.Xs)({
                 searchQuery: R,
-                activeCategoryIndex: w,
+                activeCategoryIndex: D,
                 listRef: P,
             }),
             i.useImperativeHandle(

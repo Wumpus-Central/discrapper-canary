@@ -28,7 +28,7 @@ function y(e, t, n) {
         e
     );
 }
-let v = {
+let _ = {
     SCALE_MIN: 0.7,
     SCALE_MAX: 1,
     DURATION_IN: 300,
@@ -36,7 +36,7 @@ let v = {
     EASING_IN: o.Z.Easing.inOut(o.Z.Easing.back()),
     EASING_OUT: o.Z.Easing.quad,
 };
-class _ extends r.PureComponent {
+class v extends r.PureComponent {
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -51,8 +51,8 @@ class _ extends r.PureComponent {
             o.Z.parallel([
                 o.Z.timing(t, {
                     toValue: 1,
-                    duration: v.DURATION_IN,
-                    easing: v.EASING_IN,
+                    duration: _.DURATION_IN,
+                    easing: _.EASING_IN,
                 }),
                 o.Z.timing(n, {
                     toValue: 1,
@@ -74,8 +74,8 @@ class _ extends r.PureComponent {
         o.Z.sequence([
             o.Z.timing(t, {
                 toValue: 0,
-                duration: v.DURATION_OUT,
-                easing: v.EASING_OUT,
+                duration: _.DURATION_OUT,
+                easing: _.EASING_OUT,
             }),
             o.Z.sequence(l),
             o.Z.timing(r, {
@@ -91,7 +91,7 @@ class _ extends r.PureComponent {
                 {
                     scale: e.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [v.SCALE_MIN, v.SCALE_MAX],
+                        outputRange: [_.SCALE_MIN, _.SCALE_MAX],
                     }),
                 },
             ],
@@ -152,13 +152,13 @@ function O(e) {
     let { participants: n, onContextMenu: r, className: l, onClick: o, width: u, guildId: b } = e,
         C = (0, p.ZP)(),
         y = ((t = n.length), ((0, d.dcp)(d.EFr.SIZE_80) + 16) * t > u ? d.EFr.SIZE_40 : d.EFr.SIZE_80),
-        v = (0, s.e7)([h.Z], () => h.Z.isFocused()),
+        _ = (0, s.e7)([h.Z], () => h.Z.isFocused()),
         O = n.map((e) => {
             var t, n;
             if (e.type !== m.fO.USER) return null;
             let { user: l, voiceState: a, speaking: s, latched: c, ringing: u } = e;
             return (0, i.jsx)(
-                _,
+                v,
                 {
                     className: g.participant,
                     width: (0, d.dcp)(y),
@@ -171,7 +171,7 @@ function O(e) {
                             f.Z,
                             {
                                 userId: l.id,
-                                src: l.getAvatarURL(b, (0, d.dcp)(y), s && v),
+                                src: l.getAvatarURL(b, (0, d.dcp)(y), s && _),
                                 size: y,
                                 muted: null != (t = null == a ? void 0 : a.isVoiceMuted()) && t,
                                 deafen: null != (n = null == a ? void 0 : a.isVoiceDeafened()) && n,

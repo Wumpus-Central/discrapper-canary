@@ -1,15 +1,15 @@
 n.d(t, {
-    O: () => r.Oz,
+    O: () => i.Oz,
     i: () => s,
 });
 var a = n(37234),
-    l = n(156142),
-    r = n(951366),
-    i = n(981631);
+    r = n(156142),
+    i = n(951366),
+    l = n(981631);
 let s = (e) => {
-    l.PlaygroundStore.setState({
+    r.PlaygroundStore.setState({
         selectedCollection: e,
         selectedStory: null,
     }),
-        (0, a.jN)(i.S9g.COMPONENT_PLAYGROUND);
+        (0, a.jN)(l.S9g.COMPONENT_PLAYGROUND);
 };

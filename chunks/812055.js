@@ -4,9 +4,9 @@ n.d(t, {
 }),
     n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(442837),
-    i = n(704215),
+    r = n(473749),
+    i = n(442837),
+    l = n(704215),
     s = n(907862),
     o = n(243778),
     c = n(246133),
@@ -23,9 +23,9 @@ let v = p.Z.Millis.HOUR,
     j = p.Z.Millis.DAY,
     _ = 4 * p.Z.Millis.DAY;
 function y() {
-    let [e, t] = l.useState(Date.now()),
-        n = (0, r.e7)([u.Z], () => u.Z.hasLayers()),
-        a = (0, r.e7)([m.Z], () => m.Z.getStatus()),
+    let [e, t] = r.useState(Date.now()),
+        n = (0, i.e7)([u.Z], () => u.Z.hasLayers()),
+        a = (0, i.e7)([m.Z], () => m.Z.getStatus()),
         s = d.P4.useSetting(),
         c = (null == s ? void 0 : s.value) != null ? Number(s.value) : null,
         p = d.Cr.useSetting(),
@@ -36,7 +36,7 @@ function y() {
             disable: !g,
         });
     return (
-        l.useEffect(() => {
+        r.useEffect(() => {
             if (a === f.Sk.DND) {
                 t(Date.now());
                 let e = setInterval(() => t(Date.now()), v);
@@ -44,7 +44,7 @@ function y() {
             }
         }, [a]),
         (0, o.bf)(
-            b && !n ? i.z.DO_NOT_DISTURB_REMINDER_POPOVER : null,
+            b && !n ? l.z.DO_NOT_DISTURB_REMINDER_POPOVER : null,
             {
                 cooldownDurationMs: _,
                 numTimesToRecur: 2,
@@ -55,22 +55,22 @@ function y() {
     );
 }
 function C(e) {
-    let { targetElementRef: t, onDismiss: n, children: l } = e,
+    let { targetElementRef: t, onDismiss: n, children: r } = e,
         {
-            enabled: r,
-            titleText: i,
+            enabled: i,
+            titleText: l,
             bodyText: o,
         } = (0, h.a)({
             location: "popover",
             autoTrackExposure: !1,
         });
-    return null != t.current && r
+    return null != t.current && i
         ? (0, a.jsxs)(a.Fragment, {
               children: [
-                  l,
+                  r,
                   (0, a.jsx)(s.J2, {
                       targetElementRef: t,
-                      title: g.intl.string(i),
+                      title: g.intl.string(l),
                       body: g.intl.string(o),
                       caretConfig: { align: "start" },
                       gradientColor: "purple",
@@ -90,5 +90,5 @@ function C(e) {
                   }),
               ],
           })
-        : l;
+        : r;
 }

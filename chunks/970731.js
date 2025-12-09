@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
 var r = n(54381),
-    i = n(473749),
-    a = n(149765),
+    a = n(473749),
+    i = n(149765),
     l = n(481060),
     s = n(995648),
     o = n(422559),
@@ -10,10 +10,10 @@ var r = n(54381),
 let u = function (e) {
     var t;
     let { application: n } = e,
-        u = i.useMemo(() => {
+        u = a.useMemo(() => {
             var e;
             let t = null == n || null == (e = n.install_params) ? void 0 : e.permissions;
-            if (null != t) return o.VY.filter((e) => a.e$(a.vB(t), e));
+            if (null != t) return o.VY.filter((e) => i.e$(i.vB(t), e));
         }, [null == n || null == (t = n.install_params) ? void 0 : t.permissions]);
     return null != u && u.length > 0
         ? (0, r.jsxs)("div", {

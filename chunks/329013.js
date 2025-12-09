@@ -30,8 +30,8 @@ var r = n(54381),
     N = n(981631),
     P = n(921944),
     R = n(474936),
-    w = n(388032),
-    D = n(505575);
+    D = n(388032),
+    w = n(505575);
 let x = () => {
         (0, g.Q3)(o.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
             dismissAction: P.L.PRIMARY,
@@ -50,14 +50,14 @@ let x = () => {
             h = () => {
                 if (!o || s) return null;
                 let e = u
-                    ? w.intl.formatToPlainString(w.t.bkQ4bH, { percent: null == c ? void 0 : c.discount.amount })
-                    : w.intl.string(w.t.mr4K7D);
+                    ? D.intl.formatToPlainString(D.t.bkQ4bH, { percent: null == c ? void 0 : c.discount.amount })
+                    : D.intl.string(D.t.mr4K7D);
                 return (0, r.jsxs)("div", {
-                    className: D.tryItOutButtons,
+                    className: w.tryItOutButtons,
                     children: [
                         (0, r.jsx)(l.Button, {
                             variant: "secondary",
-                            text: w.intl.string(w.t["E+COuA"]),
+                            text: D.intl.string(D.t["E+COuA"]),
                             onClick: () => x(),
                         }),
                         (0, r.jsx)(y.Z, {
@@ -85,15 +85,15 @@ let x = () => {
                 (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)("div", {
-                            className: D.previewThemeButton,
+                            className: w.previewThemeButton,
                             children: (0, r.jsx)(l.Button, {
                                 variant: "secondary",
                                 fullWidth: !0,
-                                text: w.intl.string(w.t["E+COuA"]),
+                                text: D.intl.string(D.t["E+COuA"]),
                                 onClick: () => x(),
                             }),
                         }),
-                        (0, r.jsx)("div", { className: D.premiumTier2Divider }),
+                        (0, r.jsx)("div", { className: w.premiumTier2Divider }),
                         (0, r.jsx)(v.ZP, {
                             type: R.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                             subscriptionTier: R.Si.TIER_2,
@@ -113,7 +113,7 @@ let x = () => {
                 return (
                     o &&
                         (e = (0, r.jsx)("div", {
-                            className: D.colorThemesBackground,
+                            className: w.colorThemesBackground,
                             children: e,
                         })),
                     e
@@ -124,13 +124,13 @@ let x = () => {
                 (0, r.jsxs)(m.ZP, {
                     type: m.yH.SETTINGS,
                     children: [
-                        (0, r.jsx)(m.ZP.Basic, { className: D.basicThemeSelectors }),
+                        (0, r.jsx)(m.ZP.Basic, { className: w.basicThemeSelectors }),
                         (0, r.jsx)(j, {}),
                         (0, r.jsx)(_.Z, {}),
                         S,
                     ],
                 }),
-                (0, r.jsx)(l.izJ, { className: D.divider }),
+                (0, r.jsx)(l.izJ, { className: w.divider }),
             ],
         });
     };
@@ -152,7 +152,7 @@ function j() {
               children: [
                   (0, r.jsx)(l.izJ, { gap: 24 }),
                   (0, r.jsx)(l.rsf, {
-                      label: w.intl.string(w.t.yF54Ks),
+                      label: D.intl.string(D.t.yF54Ks),
                       checked: e && (0, s.ap)(t) && !n,
                       disabled: t !== N.BRd.LIGHT || n || null != i || o,
                       onChange: c.lq,
@@ -166,6 +166,6 @@ let M = () =>
         ? null
         : (0, r.jsx)(l.Button, {
               variant: "primary",
-              text: w.intl.string(w.t.qYXrkX),
+              text: D.intl.string(D.t.qYXrkX),
               onClick: x,
           });

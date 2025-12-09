@@ -1,11 +1,11 @@
 n.d(t, {
-    O: () => o,
-    h: () => a,
+    O: () => a,
+    h: () => o,
 });
 var r = n(593472),
     i = n(70956),
     l = n(981631);
-let o = {
+let a = {
         None: void 0,
         Terraria: {
             id: "1402418344912752671",
@@ -28,4 +28,4 @@ let o = {
             distributor: l.GQo.STEAM,
         },
     },
-    a = Object.keys(o);
+    o = Object.keys(a);

@@ -1,4 +1,4 @@
-n.d(t, { Y: () => v }), n(388685);
+n.d(t, { Y: () => _ }), n(388685);
 var i,
     r = n(54381),
     l = n(473749),
@@ -22,9 +22,9 @@ var y =
     (((i = y || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     i);
-function v(e) {
+function _(e) {
     var t;
-    let { context: n, activityItem: i, onClick: a, aspectRatio: y = 0, animatedDivClass: v, commandOrigin: _ } = e,
+    let { context: n, activityItem: i, onClick: a, aspectRatio: y = 0, animatedDivClass: _, commandOrigin: v } = e,
         {
             onActivityItemSelected: O,
             imageBackground: x,
@@ -38,7 +38,7 @@ function v(e) {
             onActivityItemSelected: a,
             embeddedActivitiesManager: h.Z,
             assetNames: b,
-            commandOrigin: _,
+            commandOrigin: v,
         }),
         [S, P] = l.useState(!1),
         I = l.useCallback(() => {
@@ -106,7 +106,7 @@ function v(e) {
                     theme: f.BRd.DARK,
                     children: (e) =>
                         (0, r.jsxs)(s.animated.div, {
-                            className: o()(e, g.activityItem, v, {
+                            className: o()(e, g.activityItem, _, {
                                 [g.activityItem_13_11]: 0 === y,
                                 [g.activityItem_16_9]: 1 === y,
                             }),
@@ -129,4 +129,4 @@ function v(e) {
         }),
     });
 }
-v.AspectRatio = y;
+_.AspectRatio = y;

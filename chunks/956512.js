@@ -75,7 +75,7 @@ function C(e, t) {
 }
 function N(e) {
     let { currentUserId: t, message: I, application: A, channel: N, analyticsLocations: P, onView: R } = e,
-        { staticBannerSrc: w, videoBannerSrc: D, bannerAspectRatio: x } = (0, d.E)(A),
+        { staticBannerSrc: D, videoBannerSrc: w, bannerAspectRatio: x } = (0, d.E)(A),
         L = g.ZP.getApplicationIconURL({
             id: A.id,
             icon: A.icon,
@@ -106,8 +106,8 @@ function N(e) {
         (0, r.jsx)(c.W, {
             header: S.intl.string(v.default.nAyuPp),
             title: A.name,
-            staticBannerSrc: w,
-            videoBannerSrc: D,
+            staticBannerSrc: D,
+            videoBannerSrc: w,
             bannerAspectRatio: x,
             iconSrc: null != L ? L : void 0,
             info: G,

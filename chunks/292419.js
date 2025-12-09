@@ -195,7 +195,7 @@ function R(e, t) {
             let n = e.components.map((e, t) => O(e, t)).filter(u.lm);
             return {
                 type: a.re.ACTION_ROW,
-                id: w(t),
+                id: D(t),
                 components: n,
             };
         }
@@ -203,7 +203,7 @@ function R(e, t) {
             let n = null != e.emoji ? h(e.emoji, v) : void 0;
             return {
                 type: a.re.BUTTON,
-                id: w(t),
+                id: D(t),
                 customId: e.custom_id,
                 style: e.style,
                 disabled: e.disabled,
@@ -216,7 +216,7 @@ function R(e, t) {
         case a.re.STRING_SELECT:
             return {
                 type: a.re.STRING_SELECT,
-                id: w(t),
+                id: D(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (n = e.required) && n,
@@ -235,7 +235,7 @@ function R(e, t) {
         case a.re.TEXT_INPUT:
             return {
                 type: e.type,
-                id: w(t),
+                id: D(t),
                 style: e.style,
                 customId: e.custom_id,
                 label: e.label,
@@ -249,7 +249,7 @@ function R(e, t) {
         case a.re.USER_SELECT:
             return {
                 type: a.re.USER_SELECT,
-                id: w(t),
+                id: D(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (o = e.required) && o,
@@ -261,7 +261,7 @@ function R(e, t) {
         case a.re.ROLE_SELECT:
             return {
                 type: a.re.ROLE_SELECT,
-                id: w(t),
+                id: D(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (s = e.required) && s,
@@ -273,7 +273,7 @@ function R(e, t) {
         case a.re.MENTIONABLE_SELECT:
             return {
                 type: a.re.MENTIONABLE_SELECT,
-                id: w(t),
+                id: D(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (c = e.required) && c,
@@ -285,7 +285,7 @@ function R(e, t) {
         case a.re.CHANNEL_SELECT:
             return {
                 type: a.re.CHANNEL_SELECT,
-                id: w(t),
+                id: D(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (p = e.required) && p,
@@ -301,7 +301,7 @@ function R(e, t) {
             if (0 === n.length || null == r) return null;
             return {
                 type: a.re.SECTION,
-                id: w(t),
+                id: D(t),
                 components: n,
                 accessory: r,
             };
@@ -309,13 +309,13 @@ function R(e, t) {
         case a.re.TEXT_DISPLAY:
             return {
                 type: a.re.TEXT_DISPLAY,
-                id: w(t),
+                id: D(t),
                 content: e.content,
             };
         case a.re.THUMBNAIL:
             return {
                 type: a.re.THUMBNAIL,
-                id: w(t),
+                id: D(t),
                 media: (0, l.ym)(e.media),
                 description: e.description,
                 spoiler: e.spoiler,
@@ -323,7 +323,7 @@ function R(e, t) {
         case a.re.MEDIA_GALLERY:
             return {
                 type: a.re.MEDIA_GALLERY,
-                id: w(t),
+                id: D(t),
                 items: e.items.map((e) => ({
                     media: (0, l.ym)(e.media),
                     description: e.description,
@@ -333,7 +333,7 @@ function R(e, t) {
         case a.re.FILE:
             return {
                 type: a.re.FILE,
-                id: w(t),
+                id: D(t),
                 file: (0, l.ym)(e.file),
                 name: e.name,
                 size: e.size,
@@ -342,7 +342,7 @@ function R(e, t) {
         case a.re.SEPARATOR:
             return {
                 type: a.re.SEPARATOR,
-                id: w(t),
+                id: D(t),
                 divider: null == (_ = e.divider) || _,
                 spacing: null != (g = e.spacing) ? g : a.US.SMALL,
             };
@@ -350,14 +350,14 @@ function R(e, t) {
             if (null == e.content_inventory_entry) return null;
             return {
                 type: a.re.CONTENT_INVENTORY_ENTRY,
-                id: w(t),
+                id: D(t),
                 contentInventoryEntry: e.content_inventory_entry,
             };
         case a.re.CONTAINER: {
             let n = e.components.map((e, t) => O(e, t)).filter(u.lm);
             return {
                 type: a.re.CONTAINER,
-                id: w(t),
+                id: D(t),
                 accentColor: null != e.accent_color ? (0, i.ho)(e.accent_color, !0) : void 0,
                 spoiler: e.spoiler,
                 components: n,
@@ -368,7 +368,7 @@ function R(e, t) {
             if (null == n) return null;
             return {
                 type: a.re.LABEL,
-                id: w(t),
+                id: D(t),
                 label: e.label,
                 description: e.description,
                 component: n,
@@ -377,7 +377,7 @@ function R(e, t) {
         case a.re.FILE_UPLOAD:
             return {
                 type: e.type,
-                id: w(t),
+                id: D(t),
                 customId: e.custom_id,
                 disabled: e.disabled,
                 required: null != (E = e.required) && E,
@@ -388,7 +388,7 @@ function R(e, t) {
             let n = e.checkpoint_data;
             return {
                 type: e.type,
-                id: w(t),
+                id: D(t),
                 checkpointData: {
                     cardId: n.card_id,
                     powerLevel: n.power_level,
@@ -428,6 +428,6 @@ function R(e, t) {
             return m.warn("transformComponent: Unknown component type", e.type), null;
     }
 }
-function w(e) {
+function D(e) {
     return (0, f.FF)(e.join(","));
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(953529);
 var r = n(54381);
 n(473749);
-var i = n(120356),
-    a = n.n(i),
+var a = n(120356),
+    i = n.n(a),
     l = n(481060),
     s = n(410030),
     o = n(686546),
@@ -17,7 +17,7 @@ var i = n(120356),
     _ = n(129512),
     b = n(330065);
 function x(e) {
-    let { guild: t, className: n, onClick: i } = e,
+    let { guild: t, className: n, onClick: a } = e,
         x = (0, s.ZP)(),
         v = (0, m.dangerouslyConstructGuildRecordFromUntypedObject)({
             name: t.name,
@@ -45,8 +45,8 @@ function x(e) {
             size: 50,
         });
     return (0, r.jsxs)(l.P3F, {
-        className: a()(f.card, n),
-        onClick: i,
+        className: i()(f.card, n),
+        onClick: a,
         "aria-label": g.intl.string(g.t.RB4L2x),
         children: [
             (0, r.jsxs)("div", {

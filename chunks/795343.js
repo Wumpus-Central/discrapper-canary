@@ -19,8 +19,8 @@ var r = n(54381),
     E = n(81136),
     v = n(440617),
     S = n(981631),
-    O = n(891131);
-let x = { flattenProductVariants: !0 };
+    x = n(891131);
+let O = { flattenProductVariants: !0 };
 function y(e) {
     var t;
     let { isFetchingCategories: n, scrollerRef: i, tab: y } = e,
@@ -38,8 +38,8 @@ function y(e) {
     l.useEffect(() => {
         Z();
     }, [w, Z]);
-    let H = (0, f.a)(),
-        D = l.useMemo(() => H(R), [H, R]);
+    let D = (0, f.a)(),
+        H = l.useMemo(() => D(R), [D, R]);
     l.useEffect(() => {
         n ||
             (0, C.n)({
@@ -56,9 +56,9 @@ function y(e) {
         G = n || P || null == L;
     l.useEffect(() => {
         if (G) return void z(!1);
-        D.length > 0 && z(!0);
-    }, [G, D.length]);
-    let K = U > 0 && !G && 0 === D.length;
+        H.length > 0 && z(!0);
+    }, [G, H.length]);
+    let K = U > 0 && !G && 0 === H.length;
     l.useEffect(() => {
         let e = new ResizeObserver(() => {
             null != M.current && F(Math.floor(5 * getComputedStyle(M.current).gridTemplateColumns.split(/\s+/).length));
@@ -81,19 +81,19 @@ function y(e) {
         [k, U, W],
     );
     return (0, r.jsxs)(_.zp.Provider, {
-        value: x,
+        value: O,
         children: [
             (0, r.jsxs)("div", {
-                className: s()({ [O.productsEmpty]: K }),
+                className: s()({ [x.productsEmpty]: K }),
                 children: [
                     K && (0, r.jsx)(v.Z, {}),
                     (0, r.jsxs)("div", {
-                        className: s()(O.products, { [O.loadIn]: V }),
+                        className: s()(x.products, { [x.loadIn]: V }),
                         ref: M,
                         children: [
                             G && [...Array(U)].map((e, t) => (0, r.jsx)(b.Z, {}, t)),
                             !G &&
-                                D.map((e, t) =>
+                                H.map((e, t) =>
                                     null == g.Z.getCategory(e.categorySkuId)
                                         ? null
                                         : (0, r.jsx)(
@@ -118,7 +118,7 @@ function y(e) {
             }),
             A > U &&
                 (0, r.jsx)("div", {
-                    className: O.paginationContainer,
+                    className: x.paginationContainer,
                     children: (0, r.jsx)("div", {
                         children: (0, r.jsx)(a.DsT, {
                             currentPage: N,

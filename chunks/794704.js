@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(594190),
     P = n(137920),
     R = n(320724),
-    w = n(925329),
-    D = n(297700),
+    D = n(925329),
+    w = n(297700),
     x = n(444295),
     L = n(486016),
     j = n(837268),
@@ -148,8 +148,8 @@ let eC = eL(null),
     eN = 20,
     eP = 16,
     eR = 1,
-    ew = 25,
-    eD = [0, 5, 10, 15, 20, 25];
+    eD = 25,
+    ew = [0, 5, 10, 15, 20, 25];
 function ex() {
     let e = eL(eC);
     f().isEqual(e, eC) || (es.default.track(ep.rMx.OVERLAY_SETTINGS_UPDATED, e), (eC = e));
@@ -575,7 +575,7 @@ function eG(e) {
                                 text: eg.intl.string(eg.t["4PJP5p"]),
                                 children: (e) =>
                                     (0, r.jsx)(
-                                        D.Z,
+                                        w.Z,
                                         eI(
                                             ev(
                                                 {
@@ -615,10 +615,10 @@ function eG(e) {
                       }),
                   ],
               }),
-              icon: (0, r.jsx)(w.Z, {
+              icon: (0, r.jsx)(D.Z, {
                   game: s,
                   pid: null == o ? void 0 : o.pid,
-                  size: w.A.MEDIUM,
+                  size: D.A.MEDIUM,
               }),
               "aria-label": eg.intl.string(eg.t["87O5GC"]),
               action: (0, r.jsx)(h.P3F, {
@@ -683,10 +683,10 @@ function eZ(e) {
     let { game: t, gameApplication: n } = e,
         a = i.useMemo(() => (null == t ? null : "pid" in t ? t.pid : null), [t]),
         o = (0, p.e7)([T.Z], () => (null != n ? n : T.Z.getApplication(null == t ? void 0 : t.id)), [n, t]);
-    return (0, r.jsx)(w.Z, {
+    return (0, r.jsx)(D.Z, {
         game: o,
         pid: a,
-        size: w.A.SMALL,
+        size: D.A.SMALL,
     });
 }
 function eB(e) {
@@ -1255,9 +1255,9 @@ function eX() {
                     initialValue: d,
                     onValueRender: (e) => (e < eR ? eg.intl.string(eg.t.nrUzFL) : "".concat(Math.floor(e))),
                     minValue: eR - 1,
-                    maxValue: ew,
+                    maxValue: eD,
                     onValueChange: g,
-                    markers: eD,
+                    markers: ew,
                     barStyles: { background: h.TVs.colors.BACKGROUND_MOD_STRONG.css },
                     fillStyles: { background: h.TVs.colors.BG_BRAND.css },
                     onMarkerRender: (e) => (e < eR ? eg.intl.string(eg.t.nrUzFL) : "".concat(Math.floor(e))),

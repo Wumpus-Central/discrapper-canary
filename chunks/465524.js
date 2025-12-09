@@ -93,7 +93,7 @@ function R(e, t) {
         e
     );
 }
-function w(e) {
+function D(e) {
     let { searchContext: t, filter: n, queryString: r } = e,
         a = (0, c.e7)([b.Z], () => b.Z.getState(t), [t], c.pF),
         o = i.useMemo(() => {
@@ -128,7 +128,7 @@ function w(e) {
         }
     );
 }
-function D(e) {
+function w(e) {
     let { user: t, guildId: n, channelId: r } = e,
         i = h.ZP.getName(n, r, t),
         a = t.getAvatarURL(n, (0, u.dcp)(u.EFr.SIZE_24));
@@ -154,7 +154,7 @@ function x(e, t) {
             filterAutocompleteResults: u,
             handleFocusFilter: d,
             autocompleteStoreState: f,
-        } = w({
+        } = D({
             searchContext: e,
             filter: t,
             queryString: l,
@@ -165,7 +165,7 @@ function x(e, t) {
             if (u.length > 0)
                 u.forEach((n) => {
                     let i = n.user,
-                        o = D({
+                        o = w({
                             user: i,
                             guildId: r,
                             channelId: a,
@@ -183,7 +183,7 @@ function x(e, t) {
                     let n = i.getData("userId"),
                         o = _.default.getUser(n);
                     if (null != o) {
-                        let n = D({
+                        let n = w({
                             user: o,
                             guildId: r,
                             channelId: a,
@@ -198,7 +198,7 @@ function x(e, t) {
                         if (t.has(n)) return;
                         let i = _.default.getUser(n);
                         if (null == i) return;
-                        let o = D({
+                        let o = w({
                             user: i,
                             guildId: r,
                             channelId: a,
@@ -276,7 +276,7 @@ function j(e) {
             filterAutocompleteResults: s,
             handleFocusFilter: l,
             autocompleteStoreState: c,
-        } = w({
+        } = D({
             searchContext: e,
             filter: T.dCx.FILTER_IN,
             queryString: a,
@@ -379,7 +379,7 @@ function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         n = arguments.length > 2 ? arguments[2] : void 0,
         [r, a] = i.useState(t),
-        { filterAutocompleteResults: o, handleFocusFilter: s } = w({
+        { filterAutocompleteResults: o, handleFocusFilter: s } = D({
             searchContext: e,
             filter: T.dCx.FILTER_HAS,
             queryString: "",
@@ -548,7 +548,7 @@ function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         n = arguments.length > 2 ? arguments[2] : void 0,
         [r, a] = i.useState(t),
-        { filterAutocompleteResults: o, handleFocusFilter: s } = w({
+        { filterAutocompleteResults: o, handleFocusFilter: s } = D({
             searchContext: e,
             filter: T.dCx.FILTER_AUTHOR_TYPE,
             queryString: "",

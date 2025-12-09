@@ -1,107 +1,118 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(392711),
     o = n.n(i),
     a = n(442837),
     s = n(668339),
-    c = n(159691),
-    u = n(481060),
-    d = n(48210),
-    C = n(345162),
-    m = n(485386),
-    b = n(496675),
-    f = n(388032),
-    p = n(797966);
-let h = (e) => {
+    c = n(481060),
+    u = n(48210),
+    d = n(345162),
+    C = n(485386),
+    m = n(496675),
+    b = n(388032),
+    f = n(797966);
+let p = (e) => {
     let { guild: t, transitionState: n, onClose: i } = e,
-        [h, g] = l.useState(7),
-        [j, x] = l.useState(null),
-        [v, y] = l.useState([]),
-        O = l.useCallback(async () => {
-            x(null), x(await d.Z.updateEstimate(t.id, h, v));
-        }, [h, t.id, v]);
+        [p, h] = l.useState(7),
+        [g, j] = l.useState(null),
+        [x, v] = l.useState([]),
+        y = l.useCallback(async () => {
+            j(null), j(await u.Z.updateEstimate(t.id, p, x));
+        }, [p, t.id, x]);
     l.useEffect(() => {
-        O();
-    }, [O]);
-    let H = l.useCallback(() => {
-            d.Z.prune(t.id, h, v), i();
-        }, [t.id, h, v, i]),
-        _ = (0, a.Wu)([b.Z, m.Z], () => {
-            let e = b.Z.getHighestRole(t);
-            return o()(m.Z.getSortedRoles(t.id))
-                .filter((n) => !(0, C.fI)(n) && b.Z.isRoleHigher(t, e, n))
-                .map((e) => {
-                    let { id: t, name: n } = e;
-                    return {
-                        label: n,
-                        value: t,
-                    };
-                })
-                .value();
-        }, [t]);
-    return (0, r.jsx)(c.u_l, {
-        title: "".concat(f.intl.string(f.t.zbyz7p), "\u2014").concat(null != t ? t.name : ""),
-        actions: [
-            {
-                text: f.intl.string(f.t["ETE/oC"]),
-                onClick: i,
-                variant: "secondary",
-            },
-            {
-                text: f.intl.string(f.t["2mIlKQ"]),
-                onClick: H,
-            },
-        ],
-        onClose: async () => {
-            await i();
-        },
+        y();
+    }, [y]);
+    let O = (0, a.Wu)([m.Z, C.Z], () => {
+        let e = m.Z.getHighestRole(t);
+        return o()(C.Z.getSortedRoles(t.id))
+            .filter((n) => !(0, d.fI)(n) && m.Z.isRoleHigher(t, e, n))
+            .map((e) => {
+                let { id: t, name: n } = e;
+                return {
+                    label: n,
+                    value: t,
+                };
+            })
+            .value();
+    }, [t]);
+    return (0, r.jsxs)(c.Y0X, {
         transitionState: n,
-        children: (0, r.jsxs)("div", {
-            className: p.content,
-            children: [
-                (0, r.jsx)(u.FXm, {
-                    label: f.intl.string(f.t.YccTvK),
-                    value: String(h),
-                    options: [
-                        {
-                            name: f.intl.formatToPlainString(f.t.FM1dHS, { days: 7 }),
-                            value: "7",
-                        },
-                        {
-                            name: f.intl.formatToPlainString(f.t.FM1dHS, { days: 30 }),
-                            value: "30",
-                        },
-                    ],
-                    onChange: (e) => {
-                        g(Number(e));
-                    },
+        parentComponent: "PruneGuild",
+        children: [
+            (0, r.jsx)(c.xBx, {
+                separator: !1,
+                children: (0, r.jsxs)(c.Heading, {
+                    variant: "heading-lg/semibold",
+                    children: [b.intl.string(b.t.zbyz7p), "\u2014", null != t ? t.name : ""],
                 }),
-                (0, r.jsx)(u.zJl, {
-                    className: p.scroller,
-                    children: (0, r.jsx)(s.d, {
-                        label: f.intl.string(f.t.buoe17),
-                        maxVisibleItems: 10,
-                        multi: !0,
-                        value: v,
-                        onChange: (e) => y(e),
-                        options: _,
+            }),
+            (0, r.jsxs)("div", {
+                className: f.content,
+                children: [
+                    (0, r.jsx)(c.FXm, {
+                        label: b.intl.string(b.t.YccTvK),
+                        value: String(p),
+                        options: [
+                            {
+                                name: b.intl.formatToPlainString(b.t.FM1dHS, { days: 7 }),
+                                value: "7",
+                            },
+                            {
+                                name: b.intl.formatToPlainString(b.t.FM1dHS, { days: 30 }),
+                                value: "30",
+                            },
+                        ],
+                        onChange: (e) => {
+                            h(Number(e));
+                        },
                     }),
+                    (0, r.jsx)(c.zJl, {
+                        className: f.scroller,
+                        children: (0, r.jsx)(s.d, {
+                            label: b.intl.string(b.t.buoe17),
+                            maxVisibleItems: 10,
+                            multi: !0,
+                            value: x,
+                            onChange: (e) => v(e),
+                            options: O,
+                        }),
+                    }),
+                    (0, r.jsx)(c.Text, {
+                        variant: "text-sm/normal",
+                        className: f.spacing,
+                        children:
+                            x.length > 0
+                                ? b.intl.format(b.t["5WxHHp"], {
+                                      members: g,
+                                      days: p,
+                                  })
+                                : b.intl.format(b.t.f13az9, {
+                                      members: g,
+                                      days: p,
+                                  }),
+                    }),
+                ],
+            }),
+            (0, r.jsx)(c.mzw, {
+                children: (0, r.jsxs)(c.ButtonGroup, {
+                    direction: "horizontal-reverse",
+                    children: [
+                        (0, r.jsx)(c.Button, {
+                            variant: "primary",
+                            text: b.intl.string(b.t["2mIlKQ"]),
+                            onClick: () => {
+                                u.Z.prune(t.id, p, x), i();
+                            },
+                        }),
+                        (0, r.jsx)(c.Button, {
+                            variant: "secondary",
+                            text: b.intl.string(b.t["ETE/oC"]),
+                            onClick: i,
+                        }),
+                    ],
                 }),
-                (0, r.jsx)(u.Text, {
-                    variant: "text-sm/normal",
-                    children:
-                        v.length > 0
-                            ? f.intl.format(f.t["5WxHHp"], {
-                                  members: j,
-                                  days: h,
-                              })
-                            : f.intl.format(f.t.f13az9, {
-                                  members: j,
-                                  days: h,
-                              }),
-                }),
-            ],
-        }),
+            }),
+        ],
     });
 };

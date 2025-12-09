@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(71080),
     C = n(981631),
     y = n(388032),
-    v = n(257803);
-function _(e) {
+    _ = n(257803);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -74,7 +74,7 @@ function x(e) {
         ? null
         : (0, i.jsx)(
               E,
-              _(
+              v(
                   {
                       guild: o,
                       channel: l,
@@ -136,7 +136,7 @@ function E(e) {
         getRichTag: R,
         children: (0, i.jsx)(
             l.Modal,
-            ((t = _({}, x)),
+            ((t = v({}, x)),
             (n = n =
                 {
                     title: y.intl.string(y.t.dMJ3Y6),
@@ -144,12 +144,12 @@ function E(e) {
                     input: (0, i.jsxs)("div", {
                         children: [
                             (0, i.jsxs)(o.Text, {
-                                className: v.channelName,
+                                className: _.channelName,
                                 variant: "text-lg/normal",
                                 color: "text-default",
                                 children: [
                                     (0, i.jsx)(U, {
-                                        className: v.channelIcon,
+                                        className: _.channelIcon,
                                         size: "sm",
                                         color: "currentColor",
                                     }),
@@ -159,19 +159,19 @@ function E(e) {
                             d.isGuildStageVoice() &&
                                 (0, i.jsx)(o.Text, {
                                     color: "text-default",
-                                    className: v.description,
+                                    className: _.description,
                                     variant: "text-sm/normal",
                                     children: y.intl.string(y.t.f7VbhF),
                                 }),
                             (0, i.jsx)(m.Z.SearchBox, { placeholderText: y.intl.string(y.t.iezLLn) }),
                             (0, i.jsx)(o.Text, {
-                                className: v.subtext,
+                                className: _.subtext,
                                 variant: "text-xs/normal",
                                 children: y.intl.string(y.t.rwFx85),
                             }),
                             null != T
                                 ? (0, i.jsx)(o.Text, {
-                                      className: v.subtext,
+                                      className: _.subtext,
                                       variant: "text-xs/normal",
                                       color: "text-feedback-critical",
                                       children: T.getAnyErrorMessage(),

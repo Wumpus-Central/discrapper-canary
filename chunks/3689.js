@@ -4,11 +4,11 @@ n(473749);
 var i = n(442837),
     l = n(481060),
     o = n(496675),
-    a = n(981631),
-    c = n(388032);
+    c = n(981631),
+    a = n(388032);
 function s(e, t) {
     let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
-        u = (0, i.e7)([o.Z], () => o.Z.can(a.Plq.MANAGE_CHANNELS, e), [e]);
+        u = (0, i.e7)([o.Z], () => o.Z.can(c.Plq.MANAGE_CHANNELS, e), [e]);
     if (__OVERLAY__ || !u) return null;
     let d = () => {
         (0, l.ZDy)(async () => {
@@ -66,16 +66,16 @@ function s(e, t) {
         });
     };
     switch (s) {
-        case a.d4z.GUILD_TEXT:
+        case c.d4z.GUILD_TEXT:
             return (0, r.jsx)(l.sNh, {
                 id: "create-text-channel",
-                label: c.intl.string(c.t.HHkTJP),
+                label: a.intl.string(a.t.HHkTJP),
                 action: d,
             });
-        case a.d4z.GUILD_VOICE:
+        case c.d4z.GUILD_VOICE:
             return (0, r.jsx)(l.sNh, {
                 id: "create-voice-channel",
-                label: c.intl.string(c.t.AlbZaI),
+                label: a.intl.string(a.t.AlbZaI),
                 action: d,
             });
         default:

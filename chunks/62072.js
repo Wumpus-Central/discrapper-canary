@@ -16,8 +16,8 @@ var i = n(473749),
     b = n(375954),
     C = n(496675),
     y = n(572004),
-    v = n(585483),
-    _ = n(358085),
+    _ = n(585483),
+    v = n(358085),
     O = n(709054),
     x = n(418476),
     E = n(151007),
@@ -47,7 +47,7 @@ let I = function (e, t, n) {
                             (n.preventDefault(), (0, S.$Z)(M, w, n));
                         break;
                     case "c":
-                        ((0, _.isMac)() ? N : T) && y.wS && (n.preventDefault(), (0, y.JG)(w.content));
+                        ((0, v.isMac)() ? N : T) && y.wS && (n.preventDefault(), (0, y.JG)(w.content));
                         break;
                     case "e":
                         i && !M.isSystemDM() && (0, x.Z)(w, R) && (n.preventDefault(), (0, S.Hd)(M, w));
@@ -72,7 +72,7 @@ let I = function (e, t, n) {
                                 return !i && n;
                             })(M) &&
                             (n.preventDefault(),
-                            v.S.dispatchKeyed(P.LPv.TOGGLE_REACTION_POPOUT, w.id, { emojiPicker: !0 }));
+                            _.S.dispatchKeyed(P.LPv.TOGGLE_REACTION_POPOUT, w.id, { emojiPicker: !0 }));
                         break;
                     case "r":
                         (i || A) && (0, s.o)(M, w) && (n.preventDefault(), (0, S.HH)(M, w, n));
@@ -97,7 +97,7 @@ let I = function (e, t, n) {
                         Z && (n.preventDefault(), (0, S.B8)(M, w));
                         break;
                     case "escape":
-                        f.Z.isEditing(M.id, w.id) ? r.Z.endEditMessage(M.id) : v.S.dispatch(P.CkL.TEXTAREA_FOCUS);
+                        f.Z.isEditing(M.id, w.id) ? r.Z.endEditMessage(M.id) : _.S.dispatch(P.CkL.TEXTAREA_FOCUS);
                 }
             },
             [e, t],

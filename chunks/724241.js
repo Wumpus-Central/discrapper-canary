@@ -38,7 +38,7 @@ function _(e) {
             user: t,
             guildMember: A,
         }),
-        w = () => {
+        D = () => {
             if (null != A && null !== m && (null != A.avatar || null != m))
                 return (0, r.jsx)(l.Z, {
                     user: t,
@@ -52,7 +52,7 @@ function _(e) {
             (0, r.jsx)(o.Z, {
                 user: t,
                 guildId: null == _ ? void 0 : _.id,
-                usernameIcon: w(),
+                usernameIcon: D(),
                 nickname: R,
                 pendingDisplayNameStyles: v,
                 pronouns: P,

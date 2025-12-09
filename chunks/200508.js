@@ -30,8 +30,8 @@ let a = {
     N = 65504,
     P = 65505,
     R = 65506,
-    w = 65517,
-    D = 65519,
+    D = 65517,
+    w = 65519,
     x = 65534,
     L = 65535,
     j = "JFIF",
@@ -143,11 +143,11 @@ function $(e, t) {
 }
 function ee(e, t) {
     let n = G.length;
-    return e.getUint16(t) === w && (0, r.oH)(e, t + c, n) === G && 0 === e.getUint8(t + c + n);
+    return e.getUint16(t) === D && (0, r.oH)(e, t + c, n) === G && 0 === e.getUint8(t + c + n);
 }
 function et(e, t) {
     let n = e.getUint16(t);
-    return (n >= N && n <= D) || n === x || n === v || n === S || n === I || n === T || n === A || n === C;
+    return (n >= N && n <= w) || n === x || n === v || n === S || n === I || n === T || n === A || n === C;
 }
 function en(e, t) {
     return e.getUint16(t) === L;

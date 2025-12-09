@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => i });
 var r = n(972959);
-let i = Object.freeze({
+let a = Object.freeze({
         query: "",
         searchBarState: n(49898).GlobalDiscoverySearchBarState.DEFAULT,
     }),
-    a = (0, r.H)(() => i);
+    i = (0, r.H)(() => a);

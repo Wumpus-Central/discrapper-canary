@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(243778),
     C = n(618857),
     y = n(346479),
-    v = n(286934),
-    _ = n(488131),
+    _ = n(286934),
+    v = n(488131),
     O = n(375954),
     x = n(626135),
     E = n(585483),
@@ -69,19 +69,19 @@ function L(e) {
             draftType: k,
             editorTextContent: U,
             setValue: V,
-            openClips: H,
+            openClips: B,
         } = e,
-        { analyticsLocations: F, newestAnalyticsLocation: B } = (0, d.ZP)(),
+        { analyticsLocations: F, newestAnalyticsLocation: H } = (0, d.ZP)(),
         G = (0, C.Dt)({ channel: t }),
-        z = (0, l.e7)([v.Z], () => v.Z.isInProgress());
-    function W() {
-        (0, _.R6)(t, void 0, "Plus Button");
+        W = (0, l.e7)([_.Z], () => _.Z.isInProgress());
+    function z() {
+        (0, v.R6)(t, void 0, "Plus Button");
     }
     function q() {
         x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), V("/", (0, P.JM)("/"));
     }
     function K() {
-        H();
+        B();
     }
     function Y() {
         (0, m.Q3)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.L.TAKE_ACTION }),
@@ -152,7 +152,7 @@ function L(e) {
                           }
                         : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: B,
+                analyticsLocation: H,
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
@@ -313,7 +313,7 @@ function L(e) {
                             {
                                 id: "THREAD",
                                 label: r,
-                                action: W,
+                                action: z,
                             },
                             "THREAD",
                         );
@@ -366,9 +366,9 @@ function L(e) {
                                 id: "summarize_thread",
                                 label: r,
                                 action: () => y.Z.summarizeThread(t),
-                                icon: z ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
-                                disabled: z,
-                                children: z
+                                icon: W ? (0, i.jsx)(s.$jN, { type: s.RAz.PULSING_ELLIPSIS }) : null,
+                                disabled: W,
+                                children: W
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [

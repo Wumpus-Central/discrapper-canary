@@ -31,8 +31,8 @@ var r = n(54381),
     N = n(124527),
     P = n(591867),
     R = n(325380),
-    w = n(428946),
-    D = n(42948),
+    D = n(428946),
+    w = n(42948),
     x = n(109194),
     L = n(352812),
     j = (function (e) {
@@ -87,7 +87,7 @@ function M(e) {
         X = (0, S.Z)(T.Si.TIER_2);
     if (Q) {
         let e;
-        e = F ? ((0, h.rO)() ? w.Z : D.Z) : (0, h.rO)() ? x.Z : L.Z;
+        e = F ? ((0, h.rO)() ? D.Z : w.Z) : (0, h.rO)() ? x.Z : L.Z;
         let t = F ? "nitro-pink" : "green";
         return (0, r.jsxs)(r.Fragment, {
             children: [

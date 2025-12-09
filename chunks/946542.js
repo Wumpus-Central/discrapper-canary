@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b }), n(953529), n(388685);
 var r = n(54381),
-    i = n(473749),
-    a = n(907331),
+    a = n(473749),
+    i = n(907331),
     l = n(481060),
     s = n(768581),
     o = n(255333),
@@ -16,12 +16,12 @@ function f(e) {
     let { applicationId: t, similarApplications: n, onSelectApplication: l, similarLoadId: s } = e,
         o = (function (e) {
             let { applicationId: t, similarAppIds: n } = e,
-                [r, l] = i.useState(),
-                s = (0, a.O)((e) => {
+                [r, l] = a.useState(),
+                s = (0, i.O)((e) => {
                     e && l(t);
                 });
             return (
-                i.useEffect(() => {
+                a.useEffect(() => {
                     r === t &&
                         (0, c.zZ)(m.rMx.APP_DIRECTORY_RECOMMENDATIONS_VIEWED, {
                             application_id: t,
@@ -32,7 +32,7 @@ function f(e) {
             );
         })({
             applicationId: t,
-            similarAppIds: i.useMemo(() => n.map((e) => e.id), [n]),
+            similarAppIds: a.useMemo(() => n.map((e) => e.id), [n]),
         });
     return (0, r.jsx)("div", {
         className: g.contentContainer,
@@ -53,11 +53,11 @@ function f(e) {
     });
 }
 function _(e) {
-    var t, n, a;
+    var t, n, i;
     let { applicationId: o, similarApplication: u, onSelectApplication: h, position: f, similarLoadId: _ } = e,
         b = (0, p.Z)({ application: u }),
         x = null == (t = u.categories) ? void 0 : t[0],
-        v = i.useMemo(
+        v = a.useMemo(
             () =>
                 s.ZP.getApplicationIconURL({
                     id: u.id,
@@ -66,7 +66,7 @@ function _(e) {
                 }),
             [u],
         ),
-        C = i.useCallback(() => {
+        C = a.useCallback(() => {
             (0, c.zZ)(m.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
                 current_page: "product",
                 application_id: o,
@@ -125,7 +125,7 @@ function _(e) {
                 color: "text-default",
                 lineClamp: 2,
                 children:
-                    null != (a = null == (n = u.directory_entry) ? void 0 : n.short_description) ? a : u.description,
+                    null != (i = null == (n = u.directory_entry) ? void 0 : n.short_description) ? i : u.description,
             }),
             (0, r.jsx)(d.Z, {
                 application: u,
@@ -139,8 +139,8 @@ function _(e) {
     });
 }
 let b = function (e) {
-    let { applicationId: t, fetchState: n, similarApplications: i, onSelectApplication: a, similarLoadId: s } = e;
-    return n !== o.M.FETCHING && (null == i || 0 === i.length)
+    let { applicationId: t, fetchState: n, similarApplications: a, onSelectApplication: i, similarLoadId: s } = e;
+    return n !== o.M.FETCHING && (null == a || 0 === a.length)
         ? null
         : (0, r.jsxs)("div", {
               className: g.sectionContainer,
@@ -155,11 +155,11 @@ let b = function (e) {
                   (0, r.jsx)(u.Z, {
                       loading: n === o.M.FETCHING,
                       children:
-                          null != i
+                          null != a
                               ? (0, r.jsx)(f, {
                                     applicationId: t,
-                                    similarApplications: i,
-                                    onSelectApplication: a,
+                                    similarApplications: a,
+                                    onSelectApplication: i,
                                     similarLoadId: s,
                                 })
                               : null,

@@ -40,8 +40,8 @@ let g = (e, t, n, r) => {
                 purchaseType: N,
                 productLine: P,
                 proratedAmount: R,
-                basePrice: w,
-                currentSubscription: D,
+                basePrice: D,
+                currentSubscription: w,
                 skuId: x,
                 applicationName: L,
                 hasAlreadyLinked: j,
@@ -59,7 +59,7 @@ let g = (e, t, n, r) => {
         let U = (0, a.K)({
                 purchaseType: N || f.GZQ.SUBSCRIPTION,
                 plan: b,
-                premiumSubscription: null == D ? null : D,
+                premiumSubscription: null == w ? null : w,
                 productLine: P,
                 isGift: !!y,
                 planGroup: k,
@@ -160,13 +160,13 @@ let g = (e, t, n, r) => {
                     productLine: P,
                     purchaseType: f.GZQ.SUBSCRIPTION,
                     plan: b,
-                    premiumSubscription: null == D ? null : D,
+                    premiumSubscription: null == w ? null : w,
                     isGift: !1,
                     planGroup: k,
                     isPrepaidPaymentSource: !1,
                 });
-            O || (e = g(w, t, n, b.id)),
-                (B = (null == D ? void 0 : D.isPausedAllowsResumeButNotUpdates)
+            O || (e = g(D, t, n, b.id)),
+                (B = (null == w ? void 0 : w.isPausedAllowsResumeButNotUpdates)
                     ? m.intl.format(m.t.B6oNwB, {
                           primaryText: r,
                           rate: e,
@@ -174,7 +174,7 @@ let g = (e, t, n, r) => {
                           contactLink: f.EYA.CONTACT,
                           helpdeskArticle: l.Z.getArticleURL(f.BhN.BILLING),
                       })
-                    : null != D && (0, d.GY)(D, b.id, k)
+                    : null != w && (0, d.GY)(w, b.id, k)
                       ? m.intl.format(m.t.LyBQUW, {
                             primaryText: r,
                             rate: e,
@@ -182,9 +182,9 @@ let g = (e, t, n, r) => {
                             contactLink: f.EYA.CONTACT,
                             helpdeskArticle: l.Z.getArticleURL(f.BhN.BILLING),
                         })
-                      : M && P === f.POd.BOOST && null != w
+                      : M && P === f.POd.BOOST && null != D
                         ? m.intl.format(m.t["2nKy/0"], {
-                              price: (0, u.T4)(w.amount, w.currency),
+                              price: (0, u.T4)(D.amount, D.currency),
                               paidServiceTermsArticle: f.EYA.PAID_TERMS,
                               contactUsArticle: f.EYA.CONTACT,
                               subscriptionFAQArticle: l.Z.getArticleURL(f.BhN.BILLING),
@@ -196,11 +196,11 @@ let g = (e, t, n, r) => {
                                 cancelSubscriptionArticle: l.Z.getArticleURL(f.BhN.PREMIUM_DETAILS_CANCEL_SUB),
                                 paidServiceTermsArticle: l.Z.getArticleURL(f.BhN.PAID_TERMS),
                             })
-                          : null != R && null != w
+                          : null != R && null != D
                             ? m.intl.format(m.t.Kcieh4, {
                                   primaryText: r,
-                                  proratedAmount: (0, u.T4)(R, w.currency),
-                                  renewalAmount: (0, u.T4)(w.amount, w.currency),
+                                  proratedAmount: (0, u.T4)(R, D.currency),
+                                  renewalAmount: (0, u.T4)(D.amount, D.currency),
                                   rateInterval: c.ZP.formatInterval(null == b ? void 0 : b.interval),
                                   paidURL: f.EYA.PAID_TERMS,
                                   contactLink: f.EYA.CONTACT,

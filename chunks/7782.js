@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(86203),
     C = n(6025),
     y = n(621853),
-    v = n(892001),
-    _ = n(433355),
+    _ = n(892001),
+    v = n(433355),
     O = n(699516),
     x = n(594174),
     E = n(768581),
@@ -87,7 +87,7 @@ let T = (e) => {
                       }),
                       (0, i.jsx)(c.P3F, {
                           onClick: () => {
-                              (0, v.openUserProfileModal)({
+                              (0, _.openUserProfileModal)({
                                   userId: t,
                                   channelId: n,
                                   section: P.oh.MUTUAL_GUILDS,
@@ -202,10 +202,10 @@ let T = (e) => {
                 (0, c.showToast)((0, c.createToast)(I.intl.string(I.t.a2j0hv), c.ToastType.FAILURE));
             }, []),
             a = r.useCallback(() => {
-                C.Z.closeChannelSidebar(_.uZ);
+                C.Z.closeChannelSidebar(v.uZ);
             }, []),
             o = r.useCallback(() => {
-                C.Z.closeChannelSidebar(_.uZ);
+                C.Z.closeChannelSidebar(v.uZ);
             }, []),
             {
                 acceptMessageRequest: s,

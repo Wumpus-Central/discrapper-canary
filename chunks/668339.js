@@ -78,7 +78,7 @@ function R(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = D(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -86,7 +86,7 @@ function R(e, t) {
     }
     return i;
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -95,7 +95,7 @@ function w(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let D = 44,
+let w = 44,
     x = { keys: ["label"] };
 function L(e) {
     return e.label;
@@ -198,8 +198,8 @@ let k = i.forwardRef(function (e, t) {
             placeholder: S = I.intl.string(I.t.XqMe3N),
             wrapperClassName: A,
             className: N,
-            isDisabled: w = !1,
-            isProcessing: D = !1,
+            isDisabled: D = !1,
+            isProcessing: w = !1,
             maxVisibleItems: k = 7,
             autoFocus: U = !1,
             popoutPosition: Z = "bottom",
@@ -272,15 +272,15 @@ let k = i.forwardRef(function (e, t) {
         eP = i.useRef(null),
         eR = i.useRef(null),
         {
-            options: ew,
-            loading: eD,
+            options: eD,
+            loading: ew,
             onQueryChange: ex,
         } = j({
             active: eS,
             loadableOptions: n,
             debounceTime: K,
         }),
-        eL = i.useMemo(() => M(ew, a), [ew, a]),
+        eL = i.useMemo(() => M(eD, a), [eD, a]),
         ej = i.useMemo(() => eL.map((e) => e.value), [eL]),
         eM = eL[eL.length - 1],
         ek = (0, f.Z)(eM),
@@ -288,9 +288,9 @@ let k = i.forwardRef(function (e, t) {
         eG = i.useId(),
         eZ = i.useCallback(
             (e) => {
-                eS === e || w || (eI(e), e ? null == b || b() : null == v || v());
+                eS === e || D || (eI(e), e ? null == b || b() : null == v || v());
             },
-            [w, v, b, eS],
+            [D, v, b, eS],
         ),
         eB = i.useCallback(
             (e) => {
@@ -339,13 +339,13 @@ let k = i.forwardRef(function (e, t) {
             disableClickOnSpace: !0,
         }),
         eK = (0, f.Z)(eW),
-        ez = (0, f.Z)(ew);
+        ez = (0, f.Z)(eD);
     i.useEffect(() => {
         let e = ez.current,
             t = ek.current;
         eS &&
             null != t &&
-            !eD &&
+            !ew &&
             requestAnimationFrame(() => {
                 let n = eP.current,
                     r = e.indexOf(t);
@@ -355,10 +355,10 @@ let k = i.forwardRef(function (e, t) {
                         row: r,
                     });
             });
-    }, [eS, eD, ez, ek]),
+    }, [eS, ew, ez, ek]),
         i.useEffect(() => {
             let e = eK.current;
-            if (eS && !eD) {
+            if (eS && !ew) {
                 var t;
                 let n = ey.current;
                 if (null != n) {
@@ -372,7 +372,7 @@ let k = i.forwardRef(function (e, t) {
                     n = null != t ? String(t.value) : null;
                 e.setFocus(n), ev(null);
             }
-        }, [eS, eD, eK, ek]),
+        }, [eS, ew, eK, ek]),
         i.useLayoutEffect(() => {
             eS || (m ? eA("") : null != eM && eA(eM.label));
         }, [m, eM, eS]),
@@ -384,7 +384,7 @@ let k = i.forwardRef(function (e, t) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
             if (null == e) return void l(m ? [] : void 0);
             let r = "function" == typeof n,
-                i = r ? ew.find((t) => t.value === e) : e;
+                i = r ? eD.find((t) => t.value === e) : e;
             if (m) {
                 let n = null != a ? a : [];
                 if (
@@ -399,7 +399,7 @@ let k = i.forwardRef(function (e, t) {
             } else l(i);
             ev(null), (!m || E) && eZ(!1), eN(!1), eo && eA("");
         },
-        [n, ew, m, E, eo, l, a, eZ],
+        [n, eD, m, E, eo, l, a, eZ],
     );
     i.useLayoutEffect(() => {
         if (U) {
@@ -423,15 +423,15 @@ let k = i.forwardRef(function (e, t) {
             },
             [eZ, eS],
         ),
-        eJ = ew;
-    eC && null != eT && !1 !== H && (eJ = "function" == typeof H ? H(ew, eT) : (0, s.Lu)(ew, eT, null != ea ? ea : x)),
+        eJ = eD;
+    eC && null != eT && !1 !== H && (eJ = "function" == typeof H ? H(eD, eT) : (0, s.Lu)(eD, eT, null != ea ? ea : x)),
         i.useEffect(() => {
             let e = eP.current;
             null == e || e.scrollToTop();
         }, [eT]),
         i.useEffect(() => {
-            !eD && eC && null !== eT && requestAnimationFrame(() => eW.focusFirstVisibleItem());
-        }, [eD, eC, eT, eW]);
+            !ew && eC && null !== eT && requestAnimationFrame(() => eW.focusFirstVisibleItem());
+        }, [ew, eC, eT, eW]);
     let e$ = m ? W : Y,
         e0 = i.useRef(null),
         { focusPreviousItem: e1, focusNextItem: e3 } = B(e0, ey, eL);
@@ -448,7 +448,7 @@ let k = i.forwardRef(function (e, t) {
                 renderPopout: (e) => {
                     let { closePopout: t, position: n, updatePosition: i } = e;
                     return (0, r.jsx)(G, {
-                        loading: eD,
+                        loading: ew,
                         multi: !!m,
                         listRef: eP,
                         listId: eU,
@@ -485,7 +485,7 @@ let k = i.forwardRef(function (e, t) {
                                 let i = null == e ? void 0 : e.controlId;
                                 return (0, r.jsxs)(_.UPk, {
                                     as: "div",
-                                    disabled: w,
+                                    disabled: D,
                                     ref: eR,
                                     className: o()(A, T.wrapper),
                                     containerClassName: N,
@@ -504,7 +504,7 @@ let k = i.forwardRef(function (e, t) {
                                             focusTarget: ey,
                                             offset: 4,
                                             children: (0, r.jsx)("div", {
-                                                onClick: w
+                                                onClick: D
                                                     ? void 0
                                                     : (e) => {
                                                           e.stopPropagation(), e.preventDefault(), eA(""), eZ(!0);
@@ -521,12 +521,12 @@ let k = i.forwardRef(function (e, t) {
                                                     children: (0, r.jsx)(e$, {
                                                         query: eT,
                                                         selectedOptions: eL,
-                                                        loading: eD,
+                                                        loading: ew,
                                                         renderOptionPrefix: Q,
                                                         renderOptionSuffix: X,
-                                                        isDisabled: w,
+                                                        isDisabled: D,
                                                         isEditing: eC,
-                                                        isProcessing: D,
+                                                        isProcessing: w,
                                                         inputRef: ey,
                                                         "aria-describedby":
                                                             null != J ? J : null == e ? void 0 : e.describedById,
@@ -581,7 +581,7 @@ let k = i.forwardRef(function (e, t) {
                                         (0, r.jsx)("div", {
                                             className: o()(T.icons, T.iconsContainer, { [T.multi]: m }),
                                             ref: ep,
-                                            children: D
+                                            children: w
                                                 ? (0, r.jsx)(y.bbz, {
                                                       dotRadius: 3.5,
                                                       themed: !0,
@@ -669,9 +669,9 @@ function U(e) {
             renderOptionPrefix: N,
             renderOptionSuffix: R,
         } = e,
-        { fieldProps: w } = (0, _.XF_)(e),
-        D = null != I || "function" == typeof i || null != A;
-    if (t && !D) {
+        { fieldProps: D } = (0, _.XF_)(e),
+        w = null != I || "function" == typeof i || null != A;
+    if (t && !w) {
         let e = null != f && "function" == typeof f ? f : void 0;
         return (0, r.jsx)(
             b.V,
@@ -684,7 +684,7 @@ function U(e) {
                         disabled: o || s,
                         hideTags: T,
                     },
-                    w,
+                    D,
                 ),
                 {
                     value: l,
@@ -749,7 +749,7 @@ function G(e) {
             renderOptionSuffix: A = () => null,
         } = e,
         N = i.useRef(null),
-        w = i.useCallback(
+        D = i.useCallback(
             (e) => {
                 t(e), O && n();
             },
@@ -790,7 +790,7 @@ function G(e) {
                                     }),
                                     style: {
                                         width: l,
-                                        maxHeight: c * D,
+                                        maxHeight: c * w,
                                     },
                                     ref: (e) => {
                                         var n;
@@ -806,7 +806,7 @@ function G(e) {
                                 innerRole: "listbox",
                                 innerAriaMultiselectable: b,
                                 innerId: p,
-                                rowHeight: D,
+                                rowHeight: w,
                                 sections: [s.length],
                                 sectionHeight: 0,
                                 renderRow: (e) => {
@@ -824,7 +824,7 @@ function G(e) {
                                             isFocused: d === String(i.value),
                                             value: i.value,
                                             label: o,
-                                            onSelect: w,
+                                            onSelect: D,
                                             prefix: S(i, {
                                                 inPill: !1,
                                                 inDropdown: !0,
@@ -984,7 +984,7 @@ function V(e) {
             C(
                 {
                     tag: "li",
-                    style: { height: D },
+                    style: { height: w },
                     focusProps: { enabled: !1 },
                     className: o()(T.option, {
                         [T.focused]: c,

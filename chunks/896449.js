@@ -89,7 +89,7 @@ function O(e) {
             label: _.intl.string(_.t["FfCL+6"]),
         }),
         R = (0, f.dX)(O),
-        w = (0, u.Z)({
+        D = (0, u.Z)({
             location: "ContentPopoutContextMenu",
             applicationId: R && !0 !== S ? (null == (t = O.extra) ? void 0 : t.application_id) : void 0,
             source: c.m1.ActivityCardContextMenu,
@@ -115,12 +115,12 @@ function O(e) {
                         (0, r.jsxs)(o.kSQ, {
                             children: [
                                 A,
-                                null != w &&
+                                null != D &&
                                     (0, r.jsx)(o.sNh, {
                                         id: "game-profile",
                                         label: _.intl.string(_.t.f7aVGn),
                                         action: (e) => {
-                                            w(e), null == T || T();
+                                            D(e), null == T || T();
                                         },
                                     }),
                             ],

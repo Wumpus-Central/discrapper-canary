@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(536895),
     d = n(866442),
     m = n(28664),
-    p = n(481060),
-    f = n(209613),
+    f = n(481060),
+    p = n(209613),
     v = n(429368),
     g = n(724994),
     h = n(388032),
@@ -84,7 +84,7 @@ let O = s()((e) => {
             let n = (0, d._i)(e);
             null != n && (t = 0.3 >= (0, d.Bd)(n));
         }
-        return t ? p.TVs.unsafe_rawColors.PRIMARY_700.css : p.TVs.unsafe_rawColors.PRIMARY_200.css;
+        return t ? f.TVs.unsafe_rawColors.PRIMARY_700.css : f.TVs.unsafe_rawColors.PRIMARY_200.css;
     }),
     _ = (e) => {
         let {
@@ -94,14 +94,14 @@ let O = s()((e) => {
                 totalVariants: o,
                 selectedVariantIndex: s,
                 onEnter: d,
-                onLeave: f,
+                onLeave: p,
                 minimal: _,
             } = e,
             { isPurchased: y } = (0, g.L)(n),
             C = (0, c.JA)("shop-variants-group-".concat(t.storeListingId, "-").concat(l)),
             { onFocus: I } = C,
-            S = j(C, ["onFocus"]),
-            w = i.useCallback(
+            w = j(C, ["onFocus"]),
+            S = i.useCallback(
                 (e) => {
                     e.preventDefault(), e.stopPropagation(), (0, v.$)(t, l), I();
                 },
@@ -113,24 +113,24 @@ let O = s()((e) => {
             shouldShow: !_ && y,
             asContainer: !0,
             children: (0, r.jsx)(
-                p.P3F,
-                P(x({}, S), {
+                f.P3F,
+                P(x({}, w), {
                     tag: "li",
                     onMouseEnter: () => {
                         d();
                     },
                     onMouseLeave: () => {
-                        f();
+                        p();
                     },
                     onFocus: () => {
                         d();
                     },
                     onBlur: () => {
-                        f();
+                        p();
                     },
-                    onClick: w,
+                    onClick: S,
                     onKeyDown: (e) => {
-                        e.key === u.R8.ENTER && w(e);
+                        e.key === u.R8.ENTER && S(e);
                     },
                     className: b.colorVariant,
                     children: (0, r.jsx)("div", {
@@ -143,7 +143,7 @@ let O = s()((e) => {
                             zIndex: o - l,
                         },
                         children: y
-                            ? (0, r.jsx)(p.kSu, {
+                            ? (0, r.jsx)(f.kSu, {
                                   className: b.purchasedIndicator,
                                   color: O(n.variantValue),
                               })
@@ -167,7 +167,7 @@ let O = s()((e) => {
             g = o.previewingVariantIndex,
             O = null == (t = i.variants) ? void 0 : t[m],
             y = null !== g ? (null == (n = i.variants) ? void 0 : n[g]) : void 0,
-            C = (0, f.Z)("shop-variants-group-".concat(i.storeListingId), u.hy.HORIZONTAL);
+            C = (0, p.Z)("shop-variants-group-".concat(i.storeListingId), u.hy.HORIZONTAL);
         if (null == O) return null;
         let I = null != y ? y.variantLabel : null == O ? void 0 : O.variantLabel;
         return (0, r.jsx)(c.bG, {
@@ -213,7 +213,7 @@ let O = s()((e) => {
                                                   );
                                               }),
                                 }),
-                                (0, r.jsx)(p.Text, {
+                                (0, r.jsx)(f.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-subtle",
                                     className: b.variantLabel,

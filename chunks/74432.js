@@ -215,8 +215,8 @@ let v = new u.Z("PaymentElement.web.stories"),
               });
     },
     R = (e) => (0, r.jsx)(P, O(b({}, e), { storyType: "joined-payment-address-elements" })),
-    w = (e) => (0, r.jsx)(P, O(b({}, e), { storyType: "stripe-payment-element" })),
-    D = (e) => (0, r.jsx)(P, O(b({}, e), { storyType: "stripe-address-element" })),
+    D = (e) => (0, r.jsx)(P, O(b({}, e), { storyType: "stripe-payment-element" })),
+    w = (e) => (0, r.jsx)(P, O(b({}, e), { storyType: "stripe-address-element" })),
     x = {
         theme: {
             label: "Theme",
@@ -260,13 +260,13 @@ let v = new u.Z("PaymentElement.web.stories"),
             {
                 name: "Stripe Payment Element",
                 id: "stripe-payment-element",
-                component: w,
+                component: D,
                 controls: b({}, x),
             },
             {
                 name: "Stripe Address Element",
                 id: "stripe-address-element",
-                component: D,
+                component: w,
                 controls: b({}, x),
             },
             L,

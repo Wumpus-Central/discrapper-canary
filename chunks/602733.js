@@ -2,11 +2,11 @@ n.d(t, {
     EU: () => O,
     UD: () => R,
     ZL: () => P,
-    ao: () => w,
+    ao: () => D,
     kZ: () => S,
     lr: () => v,
     ny: () => I,
-    p2: () => D,
+    p2: () => w,
     rq: () => y,
     zL: () => b,
 }),
@@ -193,7 +193,7 @@ function R(e) {
         };
     }, [a, null == t ? void 0 : t.items, n, i]);
 }
-function w(e) {
+function D(e) {
     let { location: t, isGift: n, giftRecipient: a } = e,
         o = (0, s.yc)({ location: t }),
         c = (0, s.hS)({ location: t }),
@@ -209,7 +209,7 @@ function w(e) {
         );
     }, [n, a, o, d, c]);
 }
-function D() {
+function w() {
     return x((0, i.e7)([d.default], () => d.default.getId()));
 }
 function x(e) {

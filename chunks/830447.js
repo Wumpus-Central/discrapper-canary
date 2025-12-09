@@ -1,5 +1,5 @@
 n.d(t, {
-    T: () => w,
+    T: () => D,
     v: () => R,
 }),
     n(361932),
@@ -444,13 +444,13 @@ function R(e) {
         } = e,
         A = C(b, T),
         R = N(A),
-        w = i.useRef([]);
-    l()(w.current, R) || (w.current = R);
+        D = i.useRef([]);
+    l()(D.current, R) || (D.current = R);
     let x = (0, p.c)("Menu"),
         L = null == (t = A.find((e) => null != e.key)) ? void 0 : t.key,
         j = (0, c.Z)({
             navId: n,
-            items: w.current,
+            items: D.current,
             initialFocusPath: f.Z.keyboardModeEnabled && null != L ? [L] : [],
             closeMenu: O,
             defaultIsUsingKeyboardNavigation: f.Z.keyboardModeEnabled,
@@ -489,7 +489,7 @@ function R(e) {
                             0 === A.length &&
                                 (0, r.jsx)(h.ck, {
                                     disabled: !0,
-                                    label: () => (0, r.jsx)(D, {}),
+                                    label: () => (0, r.jsx)(w, {}),
                                     menuItemProps: j.getItemProps({ path: ["empty"] }),
                                     isFocused: !1,
                                     onFocus: () => {},
@@ -503,13 +503,13 @@ function R(e) {
         ),
     });
 }
-function w() {
+function D() {
     return (0, r.jsx)("div", {
         className: o()(E.menu, E.loader, E.flexible),
         children: (0, r.jsx)(u.$jN, {}),
     });
 }
-function D() {
+function w() {
     let e = "\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A",
         t = "\u266B \u2282(\uFF61\u25D5‿‿\u25D5\uFF61\u2282) \u266A",
         [n, a] = i.useState(e);

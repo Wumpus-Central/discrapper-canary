@@ -4,8 +4,8 @@ n.d(t, {
 }),
     n(539854);
 var r,
-    i = n(54381),
-    a = n(473749),
+    a = n(54381),
+    i = n(473749),
     l = n(120356),
     s = n.n(l),
     o = n(442837),
@@ -48,7 +48,7 @@ function C(e) {
         N = null != (n = null == (t = l.directory_entry) ? void 0 : t.guild_count) ? n : 0,
         T = null != (r = null == d ? void 0 : d.length) ? r : 0,
         A = Math.max(0, N - T),
-        { shownMutualGuilds: L, hiddenMutualGuilds: R } = a.useMemo(() => {
+        { shownMutualGuilds: L, hiddenMutualGuilds: R } = i.useMemo(() => {
             let e = [],
                 t = [];
             return (
@@ -64,15 +64,15 @@ function C(e) {
             );
         }, [d, g]),
         Z = R.length,
-        w = (function (e, t, n, r, i) {
+        w = (function (e, t, n, r, a) {
             if (0 === t && 0 === e) return null;
             if (t > 0 && 0 === n) return f.intl.formatToPlainString(f.t.pnzE1t, { mutualGuildCount: t });
-            let a = t > 0 ? f.t.YR8PSL : f.t.GQjq6c,
+            let i = t > 0 ? f.t.YR8PSL : f.t.GQjq6c,
                 l = new Intl.NumberFormat(r, {
-                    notation: i ? "compact" : "standard",
+                    notation: a ? "compact" : "standard",
                     compactDisplay: "short",
                 });
-            return f.intl.formatToPlainString(a, {
+            return f.intl.formatToPlainString(i, {
                 guildCount: l.format(e),
                 mutualGuildCount: t,
                 nonMutualGuildCount: l.format(n),
@@ -80,17 +80,17 @@ function C(e) {
         })(N, T, A, O, y);
     return 0 === L.length && null == w
         ? null
-        : (0, i.jsxs)(i.Fragment, {
+        : (0, a.jsxs)(a.Fragment, {
               children: [
                   P,
-                  (0, i.jsxs)("div", {
+                  (0, a.jsxs)("div", {
                       className: s()(C, _.wrapper),
                       children: [
-                          (0, i.jsx)("div", {
+                          (0, a.jsx)("div", {
                               className: s()(_.icons, S),
                               children:
                                   L.length > 0
-                                      ? (0, i.jsxs)(i.Fragment, {
+                                      ? (0, a.jsxs)(a.Fragment, {
                                             children: [
                                                 L.map((e, t) => {
                                                     let n = t === L.length - 1 && 0 === Z,
@@ -100,18 +100,18 @@ function C(e) {
                                                             size: I,
                                                             canAnimate: !1,
                                                         }),
-                                                        l = (0, i.jsx)(c.u, {
+                                                        l = (0, a.jsx)(c.u, {
                                                             text: e.name,
                                                             position: "top",
-                                                            children: (0, i.jsx)("img", {
+                                                            children: (0, a.jsx)("img", {
                                                                 className: s()(_.icon, v[I]),
                                                                 src: r,
                                                                 alt: "",
                                                             }),
                                                         });
                                                     return n
-                                                        ? (0, i.jsx)(a.Fragment, { children: l }, e.id)
-                                                        : (0, i.jsx)(
+                                                        ? (0, a.jsx)(i.Fragment, { children: l }, e.id)
+                                                        : (0, a.jsx)(
                                                               p.ZP,
                                                               {
                                                                   className: _.iconMask,
@@ -124,12 +124,12 @@ function C(e) {
                                                           );
                                                 }),
                                                 Z > 0
-                                                    ? (0, i.jsx)(c.u, {
+                                                    ? (0, a.jsx)(c.u, {
                                                           text: f.intl.formatToPlainString(f.t.m6oRrA, {
                                                               appNames: E.format(R.map((e) => e.name)),
                                                           }),
                                                           position: "top",
-                                                          children: (0, i.jsxs)("div", {
+                                                          children: (0, a.jsxs)("div", {
                                                               className: s()(_.moreGuilds, x[I]),
                                                               children: ["+", Z],
                                                           }),
@@ -137,7 +137,7 @@ function C(e) {
                                                     : null,
                                             ],
                                         })
-                                      : (0, i.jsx)(u.QTo, {
+                                      : (0, a.jsx)(u.QTo, {
                                             size: "custom",
                                             color: "currentColor",
                                             width: I,
@@ -146,7 +146,7 @@ function C(e) {
                                         }),
                           }),
                           null != w
-                              ? (0, i.jsx)(u.Text, {
+                              ? (0, a.jsx)(u.Text, {
                                     variant: j,
                                     color: "text-default",
                                     children: w,

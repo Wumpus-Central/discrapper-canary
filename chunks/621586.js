@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(582113),
     C = n(981631),
     y = n(701488),
-    v = n(474936),
-    _ = n(388032),
+    _ = n(474936),
+    v = n(388032),
     O = n(842350);
 let x = "vc-gifting-".concat((0, l.Z)());
 function E(e) {
@@ -66,15 +66,15 @@ function E(e) {
                             className: O.title,
                             variant: "text-lg/bold",
                             color: "text-strong",
-                            children: _.intl.string(_.t.xLP3bi),
+                            children: v.intl.string(v.t.xLP3bi),
                         }),
                         (0, i.jsx)(a.xvT, {
                             className: O.subtitle,
                             variant: "text-sm/medium",
                             color: "text-subtle",
-                            children: _.intl.format(_.t["+SqhBF"], {
+                            children: v.intl.format(v.t["+SqhBF"], {
                                 applicationName:
-                                    null != (t = null == P ? void 0 : P.name) ? t : _.intl.string(_.t["/1hhto"]),
+                                    null != (t = null == P ? void 0 : P.name) ? t : v.intl.string(v.t["/1hhto"]),
                             }),
                         }),
                         (0, i.jsx)("div", {
@@ -86,7 +86,7 @@ function E(e) {
                                           (0, i.jsx)(
                                               s.i_,
                                               {
-                                                  body: _.intl.string(_.t["4yiU7x"]),
+                                                  body: v.intl.string(v.t["4yiU7x"]),
                                                   asset: I,
                                                   assetSize: p.EU,
                                                   position: "top",
@@ -101,7 +101,7 @@ function E(e) {
                                                       hideButtonIcon: !0,
                                                       showPrice: !0,
                                                       showIcons: !1,
-                                                      giftingOrigin: v.Wt.SHOP_PAGE,
+                                                      giftingOrigin: _.Wt.SHOP_PAGE,
                                                   }),
                                               },
                                               e.skuId,

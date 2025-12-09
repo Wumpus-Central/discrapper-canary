@@ -27,12 +27,12 @@ var i = n(620662),
 function C(e) {
     var t;
     let { user: n, activity: C, onAction: N, onClose: P, application: R } = e,
-        { themeType: w } = (0, h.z)(),
-        D = (0, c.q)(R),
+        { themeType: D } = (0, h.z)(),
+        w = (0, c.q)(R),
         x = (0, f.L)(null != (t = null == C ? void 0 : C.application_id) ? t : null == R ? void 0 : R.id),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.USER_PROFILE_ACTIVITY_BUTTONS),
-        j = w === A.l.MODAL || w === A.l.MODAL_V2;
-    return x || !D || null == R || j
+        j = D === A.l.MODAL || D === A.l.MODAL_V2;
+    return x || !w || null == R || j
         ? (0, s.Z)(C)
             ? (0, r.jsx)(O.Z, {
                   platformType: T.ABu.XBOX,

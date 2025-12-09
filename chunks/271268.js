@@ -38,8 +38,8 @@ function R() {
                 topMonth: { month: 0 },
             },
         } = (0, s.e7)([f.Z], () => f.Z.getCheckpointData()),
-        { duration: R, unit: w } = (0, p.Bi)(e),
-        D = w === l.J6.HOURS,
+        { duration: R, unit: D } = (0, p.Bi)(e),
+        w = D === l.J6.HOURS,
         x = i.useContext(m.$r),
         L = i.useRef(null),
         j = i.useContext(b.xS),
@@ -109,7 +109,7 @@ function R() {
                                 className: T.titleIcon,
                                 colorClass: T.iconColor,
                             }),
-                            D
+                            w
                                 ? (0, r.jsx)(y.Z, {
                                       variant: "eyebrow",
                                       className: T.eyebrow,

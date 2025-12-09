@@ -1,15 +1,15 @@
 n.d(t, {
-    _Y: () => N,
+    _Y: () => T,
     aB: () => E,
     th: () => O,
-    ub: () => T,
+    ub: () => N,
 }),
     n(388685),
     n(457542);
 var a = n(473749),
-    l = n(524437),
-    r = n(809206),
-    i = n(153867),
+    r = n(524437),
+    i = n(809206),
+    l = n(153867),
     s = n(857595),
     o = n(607070),
     c = n(1870),
@@ -26,7 +26,7 @@ var a = n(473749),
     j = n(469115),
     _ = n(959517);
 let y = [v.BRd.DARK, v.BRd.LIGHT, v.BRd.DARKER, v.BRd.MIDNIGHT],
-    C = [l.Pi.COMPACT, l.Pi.COZY, l.Pi.DEFAULT];
+    C = [r.Pi.COMPACT, r.Pi.COZY, r.Pi.DEFAULT];
 function S(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
@@ -40,23 +40,23 @@ async function E() {
         if (t) {
             let t,
                 a = [...e, null],
-                l = S(a);
-            if (null != l) {
+                r = S(a);
+            if (null != r) {
                 var n;
-                let e = j.qt[l];
+                let e = j.qt[r];
                 t = null != (n = null == e ? void 0 : e.theme) ? n : v.BRd.DARK;
             } else t = S([v.BRd.DARK, v.BRd.DARKER, v.BRd.MIDNIGHT]);
-            await i.ZI(
+            await l.ZI(
                 {
                     theme: t,
-                    backgroundGradientPresetId: null != l ? l : void 0,
+                    backgroundGradientPresetId: null != r ? r : void 0,
                     customUserThemeSettings: void 0,
                 },
                 x.fy.INFREQUENT_USER_ACTION,
             );
         } else {
             let e = S(y);
-            await i.ZI(
+            await l.ZI(
                 {
                     theme: e,
                     backgroundGradientPresetId: void 0,
@@ -72,23 +72,23 @@ async function O() {
         t = (0, d.Ad)(e),
         n = (0, d.jT)(e),
         a = t.length > 0,
-        l = n.length > 0;
-    if (a || l)
+        r = n.length > 0;
+    if (a || r)
         try {
             if (a) {
                 let e = S([...t, null]);
                 (0, u.PO)(e);
             }
-            if (l) {
+            if (r) {
                 let e = S([...n, null]);
                 (0, u.Wh)(e);
             }
             let e = f.Z.getAllPending(),
-                i = (0, m.ED)(e);
-            await (0, r.Mn)(i).finally(r.si);
+                l = (0, m.ED)(e);
+            await (0, i.Mn)(l).finally(i.si);
         } catch (e) {}
 }
-function N() {
+function T() {
     try {
         let e = S(v.yqN.FONT_SIZES);
         (0, s.oL)(e);
@@ -98,9 +98,9 @@ function N() {
         h.YC.updateSetting(n);
     } catch (e) {}
 }
-function T() {
+function N() {
     a.useEffect(() => {
-        var e, t, n, a, l;
+        var e, t, n, a, r;
         let b = g.default.getCurrentUser(),
             v = h.L1.getSetting(),
             j = c.Z.purchases,
@@ -110,14 +110,14 @@ function T() {
             S = v.backgroundGradientPresetId,
             E = null == b || null == (e = b.avatarDecoration) ? void 0 : e.skuId,
             O = null == b || null == (n = b.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
-            N = null != E && null != (a = _.find((e) => e.skuId === E)) ? a : null,
-            T = null != O && null != (l = y.find((e) => e.skuId === O)) ? l : null,
+            T = null != E && null != (a = _.find((e) => e.skuId === E)) ? a : null,
+            N = null != O && null != (r = y.find((e) => e.skuId === O)) ? r : null,
             P = o.Z.fontSize,
-            I = o.Z.messageGroupSpacing,
-            w = h.YC.getSetting();
+            w = o.Z.messageGroupSpacing,
+            I = h.YC.getSetting();
         return () => {
             try {
-                i.ZI(
+                l.ZI(
                     {
                         theme: C,
                         backgroundGradientPresetId: null != S ? S : void 0,
@@ -125,11 +125,11 @@ function T() {
                     },
                     x.fy.INFREQUENT_USER_ACTION,
                 ),
-                    (0, u.PO)(N),
-                    (0, u.Wh)(T);
+                    (0, u.PO)(T),
+                    (0, u.Wh)(N);
                 let e = f.Z.getAllPending(),
                     t = (0, m.ED)(e);
-                (0, r.Mn)(t).finally(r.si), (0, s.oL)(P), (0, s.ZZ)(I), h.YC.updateSetting(w);
+                (0, i.Mn)(t).finally(i.si), (0, s.oL)(P), (0, s.ZZ)(w), h.YC.updateSetting(I);
             } catch (e) {}
         };
     }, []);

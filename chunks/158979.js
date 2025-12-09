@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => _ });
 var i = n(54381);
 n(473749);
 var r = n(481060),
@@ -65,11 +65,11 @@ function m() {
         }),
     });
 }
-function y(e) {
+function _(e) {
     switch (e.type) {
         case u.nc.GO_LIVE_VOICE: {
             let { game: t, voiceGuild: p } = e,
-                { trackView: y, trackClick: b } = (0, c.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
+                { trackView: _, trackClick: y } = (0, c.R)(u.n0.GoLiveNudge, { notif_type: u.n0.GoLiveNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -80,10 +80,10 @@ function y(e) {
                 hint: () => (0, i.jsx)(m, {}),
                 renderFooter: () => (0, i.jsx)(m, {}),
                 onNotificationShow: () => {
-                    y();
+                    _();
                 },
                 onNotificationClick: (e, t) => {
-                    b("unlock");
+                    y("unlock");
                     let c = (0, a.getPID)();
                     s.Z.updateNotificationStatus(t);
                     let u = o.default.isOverlayOOPEnabledForPid(c);
@@ -107,7 +107,7 @@ function y(e) {
                     }, h);
                 },
                 onDismissClick: () => {
-                    b("dismiss");
+                    y("dismiss");
                 },
             };
         }

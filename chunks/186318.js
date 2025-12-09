@@ -75,8 +75,8 @@ let y = () => {
                 return e.setMonth(e.getMonth() + 1), e;
             }),
             [N, P] = i.useState(null),
-            [R, w] = i.useState(!1),
-            [D, x] = i.useState(!1),
+            [R, D] = i.useState(!1),
+            [w, x] = i.useState(!1),
             [L, j] = i.useState(!1);
         (0, i.useEffect)(() => {
             (0, s.Y2)();
@@ -193,7 +193,7 @@ let y = () => {
                                     intervalCount: 1,
                                 },
                                 errorOnCancel: R,
-                                errorOnRedeem: D,
+                                errorOnRedeem: w,
                                 setActiveStep: (e) => {
                                     h(e), t.onClose();
                                 },
@@ -223,7 +223,7 @@ let y = () => {
                             }),
                         ),
                 );
-        }, [e, E, v, N, R, D, n, A]);
+        }, [e, E, v, N, R, w, n, A]);
         return (
             (0, i.useEffect)(() => {
                 L && M();
@@ -326,9 +326,9 @@ let y = () => {
                     }),
                     (0, r.jsx)(c.BZ, {
                         children: (0, r.jsx)(o.Checkbox, {
-                            checked: D,
+                            checked: w,
                             onChange: () => {
-                                x(!D);
+                                x(!w);
                             },
                             label: "Error on Redeem Offer",
                         }),
@@ -337,7 +337,7 @@ let y = () => {
                         children: (0, r.jsx)(o.Checkbox, {
                             checked: R,
                             onChange: () => {
-                                w(!R);
+                                D(!R);
                             },
                             label: "Error on Cancel",
                         }),

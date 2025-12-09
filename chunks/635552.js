@@ -1,8 +1,8 @@
 n.d(t, { W: () => u }), n(388685);
 var a = n(473749),
-    l = n(979554),
-    r = n(809206),
-    i = n(164946),
+    r = n(979554),
+    i = n(809206),
+    l = n(164946),
     s = n(350327),
     o = n(884697),
     c = n(328456),
@@ -13,9 +13,9 @@ let u = (e) => {
         { firstAvatarDecoration: x, firstProfileEffect: f, firstNameplate: g } = (0, c.Rj)(t),
         b = (0, o.x6)(t)
             ? d.intl.string(d.t.tf1ZZ4)
-            : t.type === l.Z.AVATAR_DECORATION
+            : t.type === r.Z.AVATAR_DECORATION
               ? d.intl.string(d.t.zOA4ax)
-              : t.type === l.Z.NAMEPLATE
+              : t.type === r.Z.NAMEPLATE
                 ? d.intl.string(d.t.gOzMvx)
                 : d.intl.string(d.t.SWm2ai);
     return {
@@ -24,20 +24,20 @@ let u = (e) => {
             let e = {};
             try {
                 if ((null != x && (e.avatarDecoration = x), null != f)) {
-                    let e = (0, i.g9)({ pendingProfileEffect: f });
+                    let e = (0, l.g9)({ pendingProfileEffect: f });
                     await (0, s.Z)(e);
                 }
-                null != g && (e.nameplate = g), Object.keys(e).length > 0 && (await (0, r.Mn)(e));
+                null != g && (e.nameplate = g), Object.keys(e).length > 0 && (await (0, i.Mn)(e));
                 {
                     let {
                         ToastPosition: e,
                         ToastType: t,
                         createToast: a,
-                        popToast: l,
-                        showToast: r,
+                        popToast: r,
+                        showToast: i,
                     } = await Promise.resolve().then(n.bind(n, 481060));
-                    l(),
-                        r(
+                    r(),
+                        i(
                             a(b, t.MESSAGE, {
                                 duration: 6000,
                                 position: e.TOP,

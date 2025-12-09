@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(518311),
     C = n(518950),
     y = n(967128),
-    v = n(388032),
-    _ = n(963392);
+    _ = n(388032),
+    v = n(963392);
 function O(e) {
     var t;
     let { channel: n, children: O, user: x } = e,
@@ -79,18 +79,18 @@ function O(e) {
             (0, i.jsx)(y.jz, { children: O }),
             n.isMultiUserDM() &&
                 (0, i.jsxs)(a.hE2, {
-                    className: _.buttonContainer,
+                    className: v.buttonContainer,
                     children: [
                         (0, i.jsx)(b.l, {
                             channel: n,
-                            text: v.intl.string(v.t["6Qgrev"]),
+                            text: _.intl.string(_.t["6Qgrev"]),
                             icon: o.ejJ,
                         }),
                         (0, i.jsx)(a.zxk, {
                             icon: o.vdY,
                             variant: "secondary",
-                            text: v.intl.string(v.t["5Q9+/L"]),
-                            "aria-label": v.intl.string(v.t["5Q9+/L"]),
+                            text: _.intl.string(_.t["5Q9+/L"]),
+                            "aria-label": _.intl.string(_.t["5Q9+/L"]),
                             onClick: () => (0, g.B)(n.id, c.Z.EMPTY_GROUP_DM),
                         }),
                     ],

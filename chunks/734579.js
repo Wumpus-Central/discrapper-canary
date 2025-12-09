@@ -98,11 +98,11 @@ let S = i.memo(function (e) {
             },
             [t],
         ),
-        M = i.useCallback(() => {
+        L = i.useCallback(() => {
             var e;
             null == (e = S.current) || e.onMouseEnter(null, 500);
         }, [S]),
-        L = i.useCallback(
+        M = i.useCallback(
             (e, n, i, a) =>
                 (0, r.jsx)(v.m, {
                     innerClassName: e,
@@ -144,13 +144,13 @@ let S = i.memo(function (e) {
         children: [
             (0, r.jsx)(y.Z, {
                 ref: S,
-                children: L,
+                children: M,
             }),
             P || N || (null == t ? void 0 : t.id) !== (0, g.ac)() || Z !== s.z.GAME_SHOP_NEW_BADGE
                 ? null
                 : (0, r.jsx)(_.Z, {
                       onActionClick: T,
-                      onRender: M,
+                      onRender: L,
                       onRequestClose: R,
                       targetElementRef: I,
                   }),

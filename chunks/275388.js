@@ -1,17 +1,16 @@
 n.d(t, {
-    qA: () => E,
-    r9: () => h,
+    qA: () => h,
+    r9: () => m,
 });
 var r = n(54381),
     i = n(772848);
 n(952265);
 var a = n(481060),
-    o = n(570140),
-    s = n(844718),
-    l = n(762853),
-    c = n(887505),
-    u = n(981631);
-function d(e, t, n) {
+    o = n(844718),
+    s = n(762853),
+    l = n(887505),
+    c = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +23,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +34,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,62 +51,57 @@ function p(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 n(602091);
-let m = "orb-checkout-payment-modal-key",
-    h = () => (0, a.VXO)(m);
-function g() {
-    o.Z.wait(() => {
-        o.Z.dispatch({ type: "PAYMENT_MODAL_OPEN" });
-    });
-}
-let E = (e) => {
+let _ = "orb-checkout-payment-modal-key",
+    m = () => (0, a.VXO)(_),
+    h = (e) => {
         let {
                 skuId: t,
                 onCheckoutSuccess: n,
                 analyticsLocations: r = [],
-                analyticsSourceLocation: o,
-                onCloseCallback: l,
+                analyticsSourceLocation: s,
+                onCloseCallback: u,
                 rentalDuration: d,
             } = e,
-            { enabled: f } = (0, s.VL)({ location: "openOrbCheckoutPaymentModal" }),
+            { enabled: f } = (0, o.VL)({ location: "openOrbCheckoutPaymentModal" }),
             p = (0, i.Z)(),
-            _ = !1,
+            m = !1,
             h = () => {
-                _ ||
-                    (0, c._)(u.rMx.PAYMENT_FLOW_CANCELED, {
+                m ||
+                    (0, l._)(c.rMx.PAYMENT_FLOW_CANCELED, {
                         loadId: p,
                         skuId: t,
                         analyticsLocations: r,
-                        analyticsSourceLocation: o,
+                        analyticsSourceLocation: s,
                     }),
-                    (0, a.Mr3)(m);
+                    (0, a.Mr3)(_);
             },
-            g = {
+            b = {
                 loadId: p,
                 skuId: t,
                 onCheckoutSuccess: (e) => {
-                    _ || n(e), (_ = !0);
+                    m || n(e), (m = !0);
                 },
                 analyticsLocations: r,
-                analyticsSourceLocation: o,
-                onCloseCallback: l,
+                analyticsSourceLocation: s,
+                onCloseCallback: u,
                 rentalDuration: d,
                 onCloseRequest: h,
             };
-        return f ? b(g) : y(g);
+        return f ? g(b) : E(b);
     },
-    b = (e) => {
+    g = (e) => {
         let {
             loadId: t,
             skuId: n,
@@ -115,29 +109,26 @@ let E = (e) => {
             analyticsLocations: i = [],
             analyticsSourceLocation: a,
             onCloseCallback: o,
-            rentalDuration: s,
+            rentalDuration: l,
             onCloseRequest: c,
         } = e;
-        return (
-            g(),
-            l.F4.openCheckoutModal({
-                loadId: t,
-                skuId: n,
-                analyticsLocations: i,
-                analyticsSourceLocation: a,
-                flowSpecificOptions: {
-                    rentalDuration: s,
-                    onCheckoutSuccess: r,
-                },
-                openModalOptions: {
-                    onCloseCallback: o,
-                    modalKey: m,
-                    onCloseRequest: c,
-                },
-            })
-        );
+        return s.F4.openCheckoutModal({
+            loadId: t,
+            skuId: n,
+            analyticsLocations: i,
+            analyticsSourceLocation: a,
+            flowSpecificOptions: {
+                rentalDuration: l,
+                onCheckoutSuccess: r,
+            },
+            openModalOptions: {
+                onCloseCallback: o,
+                modalKey: _,
+                onCloseRequest: c,
+            },
+        });
     },
-    y = (e) => {
+    E = (e) => {
         let {
             skuId: t,
             onCheckoutSuccess: i,
@@ -146,36 +137,33 @@ let E = (e) => {
             analyticsLocations: l = [],
             analyticsSourceLocation: c,
             onCloseCallback: u,
-            rentalDuration: d,
+            rentalDuration: f,
         } = e;
-        return (
-            g(),
-            (0, a.ZDy)(
-                async () => {
-                    let { default: e } = await Promise.resolve().then(n.bind(n, 922987));
-                    return (n) =>
-                        (0, r.jsx)(
-                            e,
-                            _(
-                                f(
-                                    {
-                                        skuId: t,
-                                        analyticsLocations: l,
-                                        analyticsSourceLocation: c,
-                                        onCheckoutSuccess: i,
-                                        rentalDuration: d,
-                                    },
-                                    n,
-                                ),
-                                { loadId: s },
+        return (0, a.ZDy)(
+            async () => {
+                let { default: e } = await Promise.resolve().then(n.bind(n, 922987));
+                return (n) =>
+                    (0, r.jsx)(
+                        e,
+                        p(
+                            d(
+                                {
+                                    skuId: t,
+                                    analyticsLocations: l,
+                                    analyticsSourceLocation: c,
+                                    onCheckoutSuccess: i,
+                                    rentalDuration: f,
+                                },
+                                n,
                             ),
-                        );
-                },
-                {
-                    onCloseCallback: u,
-                    onCloseRequest: o,
-                    modalKey: m,
-                },
-            )
+                            { loadId: s },
+                        ),
+                    );
+            },
+            {
+                onCloseCallback: u,
+                onCloseRequest: o,
+                modalKey: _,
+            },
         );
     };

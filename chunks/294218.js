@@ -65,7 +65,7 @@ function R(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function w(e, t) {
         e
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -113,7 +113,7 @@ function L(e) {
             renderThreadAccessory: G,
             trackAnnouncementViews: Z = !1,
         } = e,
-        B = D(e, [
+        B = w(e, [
             "message",
             "compact",
             "className",
@@ -173,7 +173,7 @@ function L(e) {
                 childrenRepliedMessage: (0, T.Z)(i, j, z, q, a),
                 childrenExecutedCommand: (0, I.Z)(i, j, a),
                 childrenHeader: (0, v.Z)(
-                    w(P({}, e), {
+                    D(P({}, e), {
                         guildId: j.guild_id,
                         author: X,
                         roleIcon: $,
@@ -181,7 +181,7 @@ function L(e) {
                 ),
                 childrenAccessories: e.hideAccessories ? void 0 : (0, y.Q)(e, W, K),
                 childrenMessageContent: (0, O.Z)(e, Y),
-                childrenSystemMessage: (0, S.Z)(w(P({}, e), { disableInteraction: F })),
+                childrenSystemMessage: (0, S.Z)(D(P({}, e), { disableInteraction: F })),
                 onContextMenu: R,
                 onClick: x,
                 hasThread: G && null != J && i.hasFlag(A.iLy.HAS_THREAD),

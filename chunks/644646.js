@@ -45,8 +45,8 @@ let I = function (e) {
             showShine: P = !0,
             location: R,
         } = e,
-        w = (0, p.O5)(),
-        D = (0, l.e7)([f.Z], () => f.Z.isFocused()),
+        D = (0, p.O5)(),
+        w = (0, l.e7)([f.Z], () => f.Z.isFocused()),
         x = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
         L = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD), [a]),
         j = i.useMemo(() => (0, m.fh)(a, m.eC.REWARD_IMAGE), [a]),
@@ -54,7 +54,7 @@ let I = function (e) {
             (t) => {
                 var n;
                 (0, s.kK)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
-                    w({
+                    D({
                         questId: a.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -67,7 +67,7 @@ let I = function (e) {
                     }),
                     null == (n = e.onClick) || n.call(e, t);
             },
-            [w, a.id, e, A],
+            [D, a.id, e, A],
         ),
         k = i.useRef(null),
         U = i.useRef(_),
@@ -162,7 +162,7 @@ let I = function (e) {
                       P &&
                           !x &&
                           (0, r.jsx)(S, {
-                              appFocused: D,
+                              appFocused: w,
                               location: R,
                           }),
                       "text" === I &&

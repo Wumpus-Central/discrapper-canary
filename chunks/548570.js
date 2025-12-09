@@ -38,8 +38,8 @@ var r = n(512722),
     N = n(14639),
     P = n(639655),
     R = n(249308),
-    w = n(610308),
-    D = n(91247),
+    D = n(610308),
+    w = n(91247),
     x = n(508569),
     L = n(183139),
     j = n(645436),
@@ -99,7 +99,7 @@ function F(e, t) {
     );
 }
 let V = new E.Z("GatewaySocket"),
-    H = new w.Z();
+    H = new D.Z();
 function Y(e) {
     let { actuallySkipped: t, reason: n } = e;
     if (!(0, R.n)()) return;
@@ -347,7 +347,7 @@ class ei extends L.Z {
         let t = (this.heartbeatInterval = e.heartbeat_interval),
             n = Date.now() - this.connectionStartTime;
         V.verbose(
-            "[HELLO] via ".concat((0, D.TO)(e), ", ") +
+            "[HELLO] via ".concat((0, w.TO)(e), ", ") +
                 "heartbeat interval: ".concat(t, ", ") +
                 "took ".concat(n, " ms"),
         ),
@@ -368,7 +368,7 @@ class ei extends L.Z {
         if ("READY" === t) {
             let t = e.session_id;
             this.sessionId = t;
-            let n = (0, D.TO)(e);
+            let n = (0, w.TO)(e);
             o.Z.setServerTrace(n),
                 V.info("[READY] took ".concat(r, "ms, as ").concat(t)),
                 V.verbose("".concat(n)),
@@ -383,7 +383,7 @@ class ei extends L.Z {
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0))
                 : "RESUMED" === t &&
-                  (V.verbose((0, D.TO)(e)),
+                  (V.verbose((0, w.TO)(e)),
                   (this.connectionState = C.Z.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0));
@@ -543,7 +543,7 @@ class ei extends L.Z {
     _doResume() {
         var e;
         (this.connectionState = C.Z.RESUMING),
-            (this.dispatcher.resumeAnalytics = (0, D.zH)(Date.now() - this.connectionStartTime)),
+            (this.dispatcher.resumeAnalytics = (0, w.zH)(Date.now() - this.connectionStartTime)),
             V.info(
                 "[RESUME] resuming session ".concat(null != (e = this.sessionId) ? e : "", ", seq: ").concat(this.seq),
             ),

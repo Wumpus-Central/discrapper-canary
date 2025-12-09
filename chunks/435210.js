@@ -270,7 +270,7 @@ function P(e) {
 function R(e) {
     return Object.prototype.toString.call(e);
 }
-function w(e) {
+function D(e) {
     return e < 10 ? "0" + e.toString(10) : e.toString(10);
 }
 (t.debuglog = function (e) {
@@ -342,11 +342,11 @@ function w(e) {
         );
     }),
     (t.isBuffer = n(102439));
-var D = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var w = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 function x() {
     var e = new Date(),
-        t = [w(e.getHours()), w(e.getMinutes()), w(e.getSeconds())].join(":");
-    return [e.getDate(), D[e.getMonth()], t].join(" ");
+        t = [D(e.getHours()), D(e.getMinutes()), D(e.getSeconds())].join(":");
+    return [e.getDate(), w[e.getMonth()], t].join(" ");
 }
 function L(e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);

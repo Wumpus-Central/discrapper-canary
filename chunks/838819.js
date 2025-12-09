@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => D }), n(388685);
+n.r(t), n.d(t, { default: () => H }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
@@ -19,8 +19,8 @@ var r = n(54381),
     E = n(994587),
     v = n(780475),
     S = n(223143),
-    O = n(298228),
-    x = n(908430),
+    x = n(298228),
+    O = n(908430),
     y = n(99767),
     k = n(501431),
     T = n(98535),
@@ -34,7 +34,7 @@ var r = n(54381),
     R = n(295907),
     Z = n(887353),
     w = n(219588);
-let H = (e) => {
+let D = (e) => {
         let { children: t, shouldAddEventListener: n, onClose: r } = e,
             i = (0, c.useHasAnyModalOpen)();
         return (
@@ -48,16 +48,16 @@ let H = (e) => {
             t
         );
     },
-    D = function (e) {
+    H = function (e) {
         let { tab: t = A.AW.HOME } = e;
-        (0, m.z)(p.f), (0, x.f)();
+        (0, m.z)(p.f), (0, O.f)();
         let n = (0, g.Z)((0, o.Z)()),
             i = (0, a.e7)([h.default], () => h.default.getCurrentUser());
         (0, C.p2)();
         let c = (0, N.B)("CollectiblesShop"),
             { onClose: R } = (0, L.Db)(),
-            { currentTab: D, hasFilters: M } = (0, k.S)(),
-            F = l.useMemo(() => (t === A.AW.HOME && D && M() ? D : t), [t, D, M]),
+            { currentTab: H, hasFilters: M } = (0, k.S)(),
+            F = l.useMemo(() => (t === A.AW.HOME && H && M() ? H : t), [t, H, M]),
             { categories: W, refreshCategories: U } = (0, S.ZP)(
                 { logPerf: !0 },
                 {
@@ -65,7 +65,7 @@ let H = (e) => {
                     tab: F,
                 },
             ),
-            V = (0, O.O)(W),
+            V = (0, x.O)(W),
             [z, G] = l.useState(),
             K = (0, a.e7)([b.Z], () => {
                 var e;
@@ -103,7 +103,7 @@ let H = (e) => {
                 },
                 children: (0, r.jsx)(E.ni, {
                     tab: J,
-                    children: (0, r.jsx)(H, {
+                    children: (0, r.jsx)(D, {
                         onClose: R,
                         shouldAddEventListener: !1,
                         children: (0, r.jsxs)("div", {

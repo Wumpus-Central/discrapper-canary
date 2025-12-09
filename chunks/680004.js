@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(442837),
-    i = n(199849),
+    r = n(473749),
+    i = n(442837),
+    l = n(199849),
     s = n(481060),
     o = n(435064),
     c = n(894694),
@@ -51,10 +51,10 @@ function m(e, t) {
     );
 }
 function p() {
-    let { mlPipelinesEnabled: e } = (0, r.cj)([o.Z], () => ({
+    let { mlPipelinesEnabled: e } = (0, i.cj)([o.Z], () => ({
             mlPipelinesEnabled: o.Z.getSettings().mlPipelinesEnabled,
         })),
-        [t, n] = l.useState(
+        [t, n] = r.useState(
             () => (
                 void 0 === window.__CLIPS_DEBUG__ &&
                     (window.__CLIPS_DEBUG__ = {
@@ -71,11 +71,11 @@ function p() {
                 }
             ),
         ),
-        [p, h] = l.useState(c.x0.KILL),
-        [x, f] = l.useState(1),
-        [g, b] = l.useState(""),
-        [v, j] = l.useState(""),
-        _ = l.useCallback(
+        [p, h] = r.useState(c.x0.KILL),
+        [x, f] = r.useState(1),
+        [g, b] = r.useState(""),
+        [v, j] = r.useState(""),
+        _ = r.useCallback(
             (e) => {
                 let a = !t[e];
                 void 0 === window.__CLIPS_DEBUG__ &&
@@ -134,7 +134,7 @@ function p() {
                     children: [
                         (0, a.jsxs)(s.NIo, {
                             children: [
-                                (0, a.jsx)(i.y6, {
+                                (0, a.jsx)(l.y6, {
                                     label: "Event Type",
                                     value: p,
                                     onChange: (e) => h(e),
@@ -181,7 +181,7 @@ function p() {
                                         },
                                     ],
                                 }),
-                                (0, a.jsx)(i.y6, {
+                                (0, a.jsx)(l.y6, {
                                     label: "Importance",
                                     value: x,
                                     onChange: f,

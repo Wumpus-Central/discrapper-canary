@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var i,
     a = n(442837),
     o = n(570140),
@@ -102,7 +102,7 @@ class R extends (i = a.ZP.Store) {
     }
 }
 c(R, "displayName", "ConsumablesStore");
-let w = new R(o.Z, {
+let D = new R(o.Z, {
     CONSUMABLES_PRICE_FETCH_STARTED: E,
     CONSUMABLES_PRICE_FETCH_SUCCEEDED: b,
     CONSUMABLES_PRICE_FETCH_FAILED: y,

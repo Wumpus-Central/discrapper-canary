@@ -226,7 +226,7 @@ function R(e) {
         ],
     });
 }
-function w(e) {
+function D(e) {
     let {
             guildId: t,
             guildBoostSlotRecords: n,
@@ -259,7 +259,7 @@ function w(e) {
         ],
     });
 }
-function D(e) {
+function w(e) {
     let { guildId: t, appliedGuildBoosts: n, premiumSubscription: i } = e,
         a = (0, o.e7)([f.Z], () => f.Z.getGuild(t), [t]),
         s = m.default.fromTimestamp(Date.now());
@@ -328,7 +328,7 @@ function x(e) {
                       className: v.container,
                       children: m.default.keys(a).map((e) =>
                           (0, r.jsx)(
-                              D,
+                              w,
                               {
                                   guildId: e,
                                   premiumSubscription: n,
@@ -383,7 +383,7 @@ function L(e) {
                 className: v.container,
                 children: m.default.keys(s).map((e) =>
                     (0, r.jsx)(
-                        w,
+                        D,
                         {
                             guildId: e,
                             guildBoostSlotRecords: s[e],

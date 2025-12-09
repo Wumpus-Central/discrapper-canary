@@ -34,8 +34,8 @@ let S = (e) => {
             "SUCCESS",
         ].filter((e) => null != e),
         [N, P] = (0, l.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
-        [R, w] = i.useState(C[0]),
-        [D, x] = i.useState(!1),
+        [R, D] = i.useState(C[0]),
+        [w, x] = i.useState(!1),
         [L, j] = i.useState(n),
         [M, k] = i.useState(null != t ? t : A.slice(0, 1)),
         U = i.useMemo(
@@ -77,7 +77,7 @@ let S = (e) => {
                         {
                             variant: "primary",
                             text: O.intl.string(O.t["/uwYda"]),
-                            onClick: () => w("CONFIRM"),
+                            onClick: () => D("CONFIRM"),
                         },
                     ],
                     children: (0, r.jsxs)("div", {
@@ -112,7 +112,7 @@ let S = (e) => {
                 (0, r.jsx)(g.default, {
                     onClose: Z,
                     onSelectGuild: (e) => {
-                        j(e), w("CONFIRM");
+                        j(e), D("CONFIRM");
                     },
                     transitionState: I,
                     isTransfer: G,
@@ -123,7 +123,7 @@ let S = (e) => {
                 let e = M.filter((e) => (0, m.tl)(e)).length,
                     t = M.length,
                     n = U.length,
-                    i = "CONFIRM" === C[0] ? Z : () => w(C[C.indexOf(R) - 1]),
+                    i = "CONFIRM" === C[0] ? Z : () => D(C[C.indexOf(R) - 1]),
                     a = async () => {
                         if ((x(!1), null != L && (null == M ? void 0 : M.length) !== 0)) {
                             o()(
@@ -145,7 +145,7 @@ let S = (e) => {
                                         }),
                                         S === E.P.PERK,
                                     ),
-                                    w("SUCCESS");
+                                    D("SUCCESS");
                             } catch (e) {
                                 x(!0);
                             }
@@ -182,7 +182,7 @@ let S = (e) => {
                                   guildCount: n,
                               }),
                               imageClass: v.transferConfirmImage,
-                              error: D ? P : null,
+                              error: w ? P : null,
                               slotCount: t,
                               canceledCount: e,
                           })
@@ -194,7 +194,7 @@ let S = (e) => {
                                   slotCount: t,
                               }),
                               imageClass: v.confirmImage,
-                              error: D ? P : null,
+                              error: w ? P : null,
                               slotCount: t,
                               canceledCount: e,
                           }),

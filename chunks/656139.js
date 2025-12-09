@@ -43,7 +43,7 @@ let A = (e) => {
                 searchQuery: v,
                 selectedUsers: p,
             }),
-            [w, D] = i.useState(!1),
+            [D, w] = i.useState(!1),
             x = A.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map()),
             L = () =>
                 (0, r.jsx)(d.Z, {
@@ -77,13 +77,13 @@ let A = (e) => {
                         className: o()(T.footer, T.footerSeparator),
                         children: (0, r.jsx)(c.Button, {
                             variant: "primary",
-                            disabled: (0 === p.size && !s) || w,
+                            disabled: (0 === p.size && !s) || D,
                             text: i,
                             size: "md",
                             fullWidth: !0,
                             onClick: async () => {
                                 if (s) return void t();
-                                D(!0), await n([...p.values()]), D(!1);
+                                w(!0), await n([...p.values()]), w(!1);
                             },
                         }),
                     })

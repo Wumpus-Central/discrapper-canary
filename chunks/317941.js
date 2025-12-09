@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(669079),
     P = n(296848),
     R = n(474936),
-    w = n(388032),
-    D = n(669255);
+    D = n(388032),
+    w = n(669255);
 function x(e, t, n) {
     return (
         t in e
@@ -51,11 +51,11 @@ class M extends i.PureComponent {
     get copyButtonText() {
         switch (this.state.copyMode) {
             case f.uA3.SUCCESS:
-                return w.intl.string(w.t.XVvPjU);
+                return D.intl.string(D.t.XVvPjU);
             case f.uA3.ERROR:
-                return w.intl.string(w.t.i4GM3L);
+                return D.intl.string(D.t.i4GM3L);
             default:
-                return w.intl.string(w.t.OpuAlK);
+                return D.intl.string(D.t.OpuAlK);
         }
     }
     handleRevoke(e) {
@@ -66,26 +66,26 @@ class M extends i.PureComponent {
             { copyMode: n } = this.state;
         return (0, r.jsxs)(h.Z, {
             direction: h.Z.Direction.VERTICAL,
-            className: D.giftCodeRow,
+            className: w.giftCodeRow,
             children: [
                 (0, r.jsx)(f.kO8, {
-                    className: D.codeText,
+                    className: w.codeText,
                     value: (0, N.Nz)(t.code),
                     text: this.copyButtonText,
                     mode: n,
                     supportsCopy: C.wS,
-                    hideMessage: e ? w.intl.string(w.t["0RLn47"]) : null,
+                    hideMessage: e ? D.intl.string(D.t["0RLn47"]) : null,
                     onCopy: this.handleCopy,
                     buttonColor: d.Tt.BRAND,
                     buttonLook: d.iL.FILLED,
                 }),
                 (0, r.jsxs)("div", {
-                    className: D.subTextRow,
+                    className: w.subTextRow,
                     children: [
                         null != t.expiresAt
                             ? (0, r.jsxs)(i.Fragment, {
                                   children: [
-                                      w.intl.format(w.t.ltVZcJ, { hours: t.expiresAt.diff(l()(), "h") }),
+                                      D.intl.format(D.t.ltVZcJ, { hours: t.expiresAt.diff(l()(), "h") }),
                                       " \u2014\xA0",
                                   ],
                               })
@@ -93,7 +93,7 @@ class M extends i.PureComponent {
                         (0, r.jsx)(f.P3F, {
                             tag: "a",
                             onClick: () => this.handleRevoke(t.code),
-                            children: w.intl.string(w.t.v6Yazx),
+                            children: D.intl.string(D.t.v6Yazx),
                         }),
                     ],
                 }),
@@ -128,12 +128,12 @@ class k extends i.PureComponent {
             ? (0, r.jsx)(y.A, {
                   shape: "square",
                   sku: e,
-                  containerClassName: D.giftIcon,
+                  containerClassName: w.giftIcon,
               })
             : null != t
               ? (0, r.jsx)(E.Z, {
                     giftStyle: t,
-                    className: D.giftIcon,
+                    className: w.giftIcon,
                     shouldAnimate: this.state.isHovered,
                 })
               : (0, r.jsx)(g.Z, {
@@ -146,23 +146,23 @@ class k extends i.PureComponent {
         let { sku: e, entitlements: t, application: n } = this.props;
         return (0, b.K$)(e)
             ? (0, r.jsxs)("div", {
-                  className: o()(D.subtitleHeader, D.applicationSubtitleHeader),
+                  className: o()(w.subtitleHeader, w.applicationSubtitleHeader),
                   children: [
                       (0, r.jsx)(g.Z, {
                           game: n,
                           size: g.A.XSMALL,
                           skuId: e.id,
-                          className: D.applicationSubtitleIcon,
+                          className: w.applicationSubtitleIcon,
                       }),
-                      w.intl.format(w.t["6plpZi"], {
+                      D.intl.format(D.t["6plpZi"], {
                           applicationName: n.name,
                           copies: t.length,
                       }),
                   ],
               })
             : (0, r.jsx)("div", {
-                  className: D.subtitleHeader,
-                  children: w.intl.format(w.t.zMcvcA, { copies: t.length }),
+                  className: w.subtitleHeader,
+                  children: D.intl.format(D.t.zMcvcA, { copies: t.length }),
               });
     }
     renderTitle() {
@@ -171,20 +171,20 @@ class k extends i.PureComponent {
         return (
             (e =
                 i === R.m8
-                    ? w.intl.string(w.t.odsU6W)
+                    ? D.intl.string(D.t.odsU6W)
                     : i === R.rX && null != n
-                      ? w.intl.formatToPlainString(n.interval === R.rV.MONTH ? w.t.uZjpiJ : w.t.bJW1EA, {
+                      ? D.intl.formatToPlainString(n.interval === R.rV.MONTH ? D.t.uZjpiJ : D.t.bJW1EA, {
                             skuName: t.name,
                             intervalCount: n.intervalCount,
                         })
                       : null == n
                         ? t.name
-                        : w.intl.formatToPlainString(n.interval === R.rV.MONTH ? w.t.rCJvqo : w.t.Vd3Iu8, {
+                        : D.intl.formatToPlainString(n.interval === R.rV.MONTH ? D.t.rCJvqo : D.t.Vd3Iu8, {
                               skuName: t.name,
                               intervalCount: n.intervalCount,
                           })),
             (0, r.jsx)("div", {
-                className: D.gameName,
+                className: w.gameName,
                 children: e,
             })
         );
@@ -193,16 +193,16 @@ class k extends i.PureComponent {
         return (0, r.jsxs)(h.Z, {
             justify: h.Z.Justify.BETWEEN,
             align: h.Z.Align.CENTER,
-            className: D.generateCodeRow,
+            className: w.generateCodeRow,
             children: [
                 (0, r.jsx)(f.Text, {
                     variant: "text-md/normal",
-                    children: w.intl.string(w.t.lELyPj),
+                    children: D.intl.string(D.t.lELyPj),
                 }),
                 (0, r.jsx)(f.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: w.intl.string(w.t.Q3Qguo),
+                    text: D.intl.string(D.t.Q3Qguo),
                     loading: this.state.isCreating,
                     onClick: this.handleGenerateGiftCode,
                 }),
@@ -228,27 +228,27 @@ class k extends i.PureComponent {
             children: [
                 (0, r.jsx)(f.P3F, {
                     onClick: this.handleToggleOpen,
-                    className: D.card,
+                    className: w.card,
                     onMouseEnter: () => this.setIsHovered(!0),
                     onMouseLeave: () => this.setIsHovered(!1),
                     children: (0, r.jsx)(_.Z.Header, {
                         splashArtURL: t.getSplashURL(L),
                         children: (0, r.jsxs)("div", {
-                            className: D.cardHeader,
+                            className: w.cardHeader,
                             children: [
                                 (0, r.jsxs)(h.Z, {
                                     align: h.Z.Align.CENTER,
                                     children: [
                                         this.renderGiftIcon(),
                                         (0, r.jsxs)("div", {
-                                            className: D.headerText,
+                                            className: w.headerText,
                                             children: [this.renderTitle(), this.renderSubtitle()],
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)(A.Z, {
                                     direction: c ? A.Z.Directions.UP : A.Z.Directions.DOWN,
-                                    className: D.expandIcon,
+                                    className: w.expandIcon,
                                 }),
                             ],
                         }),
@@ -257,7 +257,7 @@ class k extends i.PureComponent {
                 c
                     ? (0, r.jsx)(_.Z.Body, {
                           children: s
-                              ? (0, r.jsx)(f.$jN, { className: D.spinner })
+                              ? (0, r.jsx)(f.$jN, { className: w.spinner })
                               : (0, r.jsxs)(i.Fragment, {
                                     children: [
                                         n.length < e.length ? this.renderGenerateGiftCodeRow() : null,

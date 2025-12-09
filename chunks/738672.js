@@ -19,8 +19,8 @@ function d(e) {
         m = r.useContext(c.h9),
         [g, b] = r.useState(""),
         [C, y] = r.useState(!1),
-        v = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
-        _ = r.useRef(null),
+        _ = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
+        v = r.useRef(null),
         O = r.useRef(0);
     r.useEffect(() => {
         let e = t.current;
@@ -31,12 +31,12 @@ function d(e) {
                 var e, t;
                 b(String(O.current)),
                     y(
-                        void 0 !== v &&
-                            v < (null != (t = null == (e = _.current) ? void 0 : e.clientHeight) ? t : 300) + 24,
+                        void 0 !== _ &&
+                            _ < (null != (t = null == (e = v.current) ? void 0 : e.clientHeight) ? t : 300) + 24,
                     ),
                     (O.current += 1);
             }
-        }, [v, _, f]);
+        }, [_, v, f]);
     let { preventIdle: x, allowIdle: E } = (0, u.Y)("popup");
     return (null == t ? void 0 : t.current) == null
         ? null
@@ -50,7 +50,7 @@ function d(e) {
                   nudgeAlignIntoViewport: h,
                   children: () =>
                       (0, i.jsx)("div", {
-                          ref: _,
+                          ref: v,
                           onMouseOver: x,
                           onFocus: x,
                           onBlur: E,

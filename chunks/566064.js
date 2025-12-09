@@ -68,22 +68,22 @@ function f(e) {
                 }),
         );
     r.useEffect(() => () => R.clean(), [R]);
-    let w = r.useCallback(
+    let D = r.useCallback(
             (e) => {
                 if (!v.current || !y) return !1;
                 e.focus();
             },
             [y],
         ),
-        D = r.useCallback(
+        w = r.useCallback(
             (e, n) => {
                 let r = c(t, e, n);
                 (null != m ? m(e, n, r) : Promise.resolve()).then(() => {
                     let e = u(r);
-                    null != e ? (w(e), C(!1)) : requestAnimationFrame(() => C(!0));
+                    null != e ? (D(e), C(!1)) : requestAnimationFrame(() => C(!0));
                 });
             },
-            [t, m, w],
+            [t, m, D],
         ),
         x = r.useCallback(
             function () {
@@ -100,28 +100,28 @@ function f(e) {
                 )
                     return void P(!0);
                 let a = u(c(t, n, r));
-                null != a && (P(!0), w(a));
+                null != a && (P(!0), D(a));
             },
-            [g, f, p, h, t, w],
+            [g, f, p, h, t, D],
         ),
         [L, j] = r.useState(!1);
     r.useEffect(() => {
         if (!L || !I) return;
         j(!1);
         let e = u(c(t, f, p));
-        if (null != e) return void w(e);
+        if (null != e) return void D(e);
         T(!1);
         let n = u(c(t));
-        null != n && w(n);
-    }, [t, L, I, w, f, p]);
+        null != n && D(n);
+    }, [t, L, I, D, f, p]);
     let M = r.useCallback((e) => {
         v.current && null == e && j(!0);
     }, []);
     r.useEffect(() => {
-        I && A && null != S && (w(S), C(!1));
+        I && A && null != S && (D(S), C(!1));
     }, [A, S]),
         r.useEffect(() => {
-            I && (N || D(f, p), P(!1));
+            I && (N || w(f, p), P(!1));
         }, [f, p]);
     let k = r.useCallback(
             (e) => {
@@ -166,8 +166,8 @@ function f(e) {
                     ? (I || (T(!0), P(!0)), !1)
                     : I
                       ? (x(!1), !1)
-                      : void (E && null != S ? D(f, p) : x(!0)),
-            [I, E, S, x, D, f, p],
+                      : void (E && null != S ? w(f, p) : x(!0)),
+            [I, E, S, x, w, f, p],
         ),
         G = r.useCallback((e) => {
             if (e.target !== e.currentTarget) {

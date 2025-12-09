@@ -1,5 +1,5 @@
 n.d(t, {
-    $V: () => w,
+    $V: () => D,
     E8: () => v,
     GN: () => h,
     PM: () => S,
@@ -160,6 +160,6 @@ function P(e) {
 function R(e, t) {
     a.Z.captureException(e, p(d({}, t), { tags: p(d({}, null == t ? void 0 : t.tags), { app_context: "quests" }) }));
 }
-function w() {
+function D() {
     return window.location.pathname.startsWith(c.Z5c.QUEST_HOME);
 }

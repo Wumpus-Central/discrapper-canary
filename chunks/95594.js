@@ -91,8 +91,8 @@ function f(e) {
         {
             dirty: P,
             chunkStart: R,
-            chunkEnd: w,
-            forceUpdateOnChunkChange: D,
+            chunkEnd: D,
+            forceUpdateOnChunkChange: w,
         } = (0, o.Z)({
             chunkSize: p,
             getScrollerState: _,
@@ -119,13 +119,13 @@ function f(e) {
                           marginLeft: N / 2,
                           dir: v,
                       }),
-                      T.computeVisibleSections(Math.max(0, R * p), w * p),
+                      T.computeVisibleSections(Math.max(0, R * p), D * p),
                       T.getState()),
-            [P, T, t, n, s, c, f, R, w, p, h, g, E, b, y, O, C, N, v],
+            [P, T, t, n, s, c, f, R, D, p, h, g, E, b, y, O, C, N, v],
         )),
         u(l({}, I.current), {
             masonryComputer: T,
-            forceUpdateOnChunkChange: D,
+            forceUpdateOnChunkChange: w,
             forceUpdate: S,
         })
     );

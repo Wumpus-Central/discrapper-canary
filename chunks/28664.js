@@ -102,7 +102,7 @@ function y(e) {
             positionKey: P,
             ariaHidden: R = !1,
         } = e,
-        w = E(e, [
+        D = E(e, [
             "children",
             "text",
             "keyboardShortcut",
@@ -119,9 +119,9 @@ function y(e) {
             "positionKey",
             "ariaHidden",
         ]);
-    let D = (0, f.c)(A),
+    let w = (0, f.c)(A),
         x = i.useId(),
-        { isVisible: L, triggerProps: j } = (0, u.l)(m({ targetElementRef: D.targetElementRef }, w)),
+        { isVisible: L, triggerProps: j } = (0, u.l)(m({ targetElementRef: w.targetElementRef }, D)),
         M = R ? void 0 : x,
         k = (0, d.Q)({ shouldShow: L }),
         { defaultLayerContext: U } = (0, o.ZFG)(),
@@ -176,18 +176,18 @@ function y(e) {
             tag: O,
             children: n,
             triggerHandlers: e,
-            triggerRef: D.triggerRef,
+            triggerRef: w.triggerRef,
         });
     } else {
         if (!i.isValidElement(n)) return null;
-        t = (0, c.C9)(n, j, M, D.triggerRef);
+        t = (0, c.C9)(n, j, M, w.triggerRef);
     }
     let B = k((e, t) =>
         t
             ? (0, r.jsx)(l.N, {
                   isVisible: L,
                   isRendered: !0,
-                  targetElementRef: D.targetElementRef,
+                  targetElementRef: w.targetElementRef,
                   anchorRef: C,
                   id: x,
                   content: G,

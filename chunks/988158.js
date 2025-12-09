@@ -1,36 +1,36 @@
 n.d(t, {
-    X: () => i,
-    h: () => r,
+    X: () => l,
+    h: () => i,
 }),
     n(704826),
     n(35282),
     n(388685);
 var a = n(473749),
-    l = n(902676);
-function r(e) {
+    r = n(902676);
+function i(e) {
     let { protocol: t, hostname: n } = a.useMemo(
             () => ({
-                protocol: (0, l.E)(e),
-                hostname: (0, l.F)(e),
+                protocol: (0, r.E)(e),
+                hostname: (0, r.F)(e),
             }),
             [e],
         ),
-        r = "//" === e.substr(t.length, 2) ? "//" : "",
-        i = "".concat(t).concat(r).concat(n);
+        i = "//" === e.substr(t.length, 2) ? "//" : "",
+        l = "".concat(t).concat(i).concat(n);
     return {
         protocol: t,
-        authorityPrefix: r,
+        authorityPrefix: i,
         hostname: n,
-        theRestOfTheUrl: e.replace(i, ""),
+        theRestOfTheUrl: e.replace(l, ""),
     };
 }
-function i(e) {
-    let { url: t, trustUrl: n, onConfirm: l, onCancel: i, onClose: s } = e,
+function l(e) {
+    let { url: t, trustUrl: n, onConfirm: r, onCancel: l, onClose: s } = e,
         [o, c] = a.useState(!1),
-        { protocol: d, authorityPrefix: u, hostname: m, theRestOfTheUrl: p } = r(t),
+        { protocol: d, authorityPrefix: u, hostname: m, theRestOfTheUrl: p } = i(t),
         h = a.useCallback(() => {
-            o && n(t), null == s || s(), l();
-        }, [t, o, n, l, s]);
+            o && n(t), null == s || s(), r();
+        }, [t, o, n, r, s]);
     return {
         protocol: d,
         authorityPrefix: u,
@@ -40,7 +40,7 @@ function i(e) {
         setShouldTrustUrl: c,
         handleConfirm: h,
         handleCancel: a.useCallback(() => {
-            null == s || s(), i();
-        }, [i, s]),
+            null == s || s(), l();
+        }, [l, s]),
     };
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685), n(457542);
 var a = n(54381),
-    l = n(473749),
-    r = n(296009),
-    i = n(442837),
+    r = n(473749),
+    i = n(296009),
+    l = n(442837),
     s = n(704215),
     o = n(907862),
     c = n(906732),
@@ -22,45 +22,45 @@ var a = n(54381),
 function C(e) {
     var t;
     let { targetElementRef: n, onClose: C } = e,
-        [S, E] = l.useState(!1),
-        { trackUserProfileEditAction: N } = (0, m.KZ)(),
-        T = (0, i.e7)([v.default], () => v.default.getId()),
-        { config: O, application: P } = (0, x.G)(),
-        { fetched: I, hasAlreadyLinked: w, canStartAuthorization: k, startAuthorization: R } = (0, d.F)(P),
+        [S, E] = r.useState(!1),
+        { trackUserProfileEditAction: O } = (0, m.KZ)(),
+        T = (0, l.e7)([v.default], () => v.default.getId()),
+        { config: N, application: P } = (0, x.G)(),
+        { fetched: w, hasAlreadyLinked: I, canStartAuthorization: k, startAuthorization: R } = (0, d.F)(P),
         A = (0, f.ZP)(T),
-        { analyticsLocations: Z } = (0, c.ZP)(),
-        D =
+        { analyticsLocations: D } = (0, c.ZP)(),
+        Z =
             null == A || null == (t = A.widgets)
                 ? void 0
                 : t.some((e) => e instanceof p.q && e.applicationId === (null == P ? void 0 : P.id));
-    return null != O && null != O.edit_profile_upsell_image && null != P && I
+    return null != N && null != N.edit_profile_upsell_image && null != P && w
         ? (0, a.jsx)(u.ZP, {
-              contentTypes: w
-                  ? D
+              contentTypes: I
+                  ? Z
                       ? []
                       : [s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
                   : k
                     ? [s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_UNLINKED]
                     : [],
               children: (e) => {
-                  let { visibleContent: t, markAsDismissed: l } = e;
+                  let { visibleContent: t, markAsDismissed: r } = e;
                   if (null == t) return null;
-                  let i = t === s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
+                  let l = t === s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
                   return (0, a.jsx)(o.J2, {
                       targetElementRef: n,
                       position: "right",
                       gradientColor: "blue",
                       graphic: {
                           type: "image",
-                          src: O.edit_profile_upsell_image,
+                          src: N.edit_profile_upsell_image,
                       },
                       title: y.intl.format(y.t.TXDztH, { applicationName: P.name }),
-                      body: i ? y.intl.string(y.t["63Kso0"]) : y.intl.string(y.t.HwXoeC),
+                      body: l ? y.intl.string(y.t["63Kso0"]) : y.intl.string(y.t.HwXoeC),
                       onRequestClose: () => {
-                          l(j.L.USER_DISMISS);
+                          r(j.L.USER_DISMISS);
                       },
                       actions: [
-                          i
+                          l
                               ? {
                                     text: y.intl.string(y.t.VSLDly),
                                     onClick: () => {
@@ -70,13 +70,13 @@ function C(e) {
                                                 section: _.oh.WIDGETS,
                                             })
                                                 .then(() => {
-                                                    l(j.L.TAKE_ACTION), C();
+                                                    r(j.L.TAKE_ACTION), C();
                                                     let e = new p.q({
                                                         applicationId: P.id,
-                                                        type: r.l.APPLICATION,
+                                                        type: i.l.APPLICATION,
                                                     });
                                                     (0, h.qH)(e.type, e),
-                                                        N(
+                                                        O(
                                                             (function (e) {
                                                                 for (var t = 1; t < arguments.length; t++) {
                                                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -128,11 +128,11 @@ function C(e) {
                                                         section: _.oh.WIDGETS,
                                                     })
                                                         .then(() => {
-                                                            l(j.L.TAKE_ACTION), C();
+                                                            r(j.L.TAKE_ACTION), C();
                                                         })
                                                         .finally(() => E(!1));
                                             },
-                                            analyticsLocations: Z,
+                                            analyticsLocations: D,
                                         });
                                     },
                                     loading: S,

@@ -49,7 +49,7 @@ function m(e) {
         }, [t]),
         P(u, o, n),
         y(u, n),
-        w(u, o, n),
+        D(u, o, n),
         N(u, s),
         (0, d.useEffect)(() => {
             let e = (0, i.vY)((0, a.r3)(u.current ? u.current[0] : void 0)),
@@ -338,7 +338,7 @@ function R(e) {
     }
     return (null == t ? void 0 : t.scopeRef) === e;
 }
-function w(e, t, n) {
+function D(e, t, n) {
     let o = (0, d.useRef)(
         "undefined" != typeof document ? (0, i.vY)((0, a.r3)(e.current ? e.current[0] : void 0)) : null,
     );
@@ -408,12 +408,12 @@ function w(e, t, n) {
                                     let n = t.getTreeNode(e);
                                     for (; n; ) {
                                         if (n.nodeToRestore && n.nodeToRestore.isConnected)
-                                            return void D(n.nodeToRestore);
+                                            return void w(n.nodeToRestore);
                                         n = n.parent;
                                     }
                                     for (n = t.getTreeNode(e); n; ) {
                                         if (n.scopeRef && n.scopeRef.current && U.getTreeNode(n.scopeRef))
-                                            return void D(A(n.scopeRef.current, !0));
+                                            return void w(A(n.scopeRef.current, !0));
                                         n = n.parent;
                                     }
                                 }
@@ -423,7 +423,7 @@ function w(e, t, n) {
                 );
         }, [e, t]);
 }
-function D(e) {
+function w(e) {
     e.dispatchEvent(
         new CustomEvent(p, {
             bubbles: !0,

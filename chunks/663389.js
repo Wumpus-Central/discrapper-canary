@@ -126,12 +126,12 @@ function P() {
 function R() {
     (u = s.QZA.OPEN), (_ = {});
 }
-function w(e) {
+function D(e) {
     var t;
     if (u !== s.QZA.SUBMITTING) return !1;
     (u = s.QZA.OPEN), (d = s.oAB.ACCOUNT), (_ = null != (t = e.errors) ? t : {});
 }
-class D extends (r = i.ZP.Store) {
+class w extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(o.default);
     }
@@ -166,14 +166,14 @@ class D extends (r = i.ZP.Store) {
         return y;
     }
 }
-l(D, "displayName", "UserSettingsModalStore");
-let x = new D(a.Z, {
+l(w, "displayName", "UserSettingsModalStore");
+let x = new w(a.Z, {
     USER_SETTINGS_MODAL_OPEN: O,
     USER_SETTINGS_MODAL_INIT: v,
     USER_SETTINGS_MODAL_CLOSE: S,
     LOGOUT: S,
     USER_SETTINGS_MODAL_SUBMIT: N,
-    USER_SETTINGS_MODAL_SUBMIT_FAILURE: w,
+    USER_SETTINGS_MODAL_SUBMIT_FAILURE: D,
     USER_SETTINGS_MODAL_SET_SECTION: I,
     USER_SETTINGS_MODAL_CLEAR_SUBSECTION: T,
     USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: A,

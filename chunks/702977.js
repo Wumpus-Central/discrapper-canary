@@ -1,4 +1,4 @@
-n.d(t, { av: () => l });
+n.d(t, { av: () => r });
 let a = (0, n(818083).B)({
     kind: "user",
     id: "2025-05_flamingo_intro_nux",
@@ -12,14 +12,14 @@ let a = (0, n(818083).B)({
         },
     ],
 });
-function l(e) {
+function r(e) {
     let { location: t, autoTrackExposure: n } = e,
-        { enabled: l } = a.useExperiment(
+        { enabled: r } = a.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: __OVERLAY__,
             },
         );
-    return l;
+    return r;
 }

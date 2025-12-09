@@ -102,12 +102,12 @@ function R() {
     let e = P();
     null != e && (O = e);
 }
-function w() {
+function D() {
     if (0 === Object.values(b[u.$k.THIRD_PARTY_OUTBOUND]).length) return !1;
     let e = P();
     null != e && ((O = e), (p.lastSeenOutboundPromotionStartDate = e));
 }
-function D(e) {
+function w(e) {
     let { data: t } = e,
         n = l.Z.createFromServer(t);
     v.set(n.componentType, n);
@@ -205,7 +205,7 @@ let M = new j(a.Z, {
     ACTIVE_BOGO_PROMOTION_FETCH: S,
     ACTIVE_BOGO_PROMOTION_FETCH_FAIL: I,
     OUTBOUND_PROMOTION_NOTICE_DISMISS: R,
-    OUTBOUND_PROMOTIONS_SEEN: w,
+    OUTBOUND_PROMOTIONS_SEEN: D,
     LOGOUT: x,
-    PREMIUM_MARKETING_PREVIEW: D,
+    PREMIUM_MARKETING_PREVIEW: w,
 });

@@ -103,14 +103,14 @@ function v(e) {
         N = (0, f.DP)(a),
         P = (0, l.Rf)(a),
         R = P === A ? C : P,
-        w = N ? c.Z.unsafe_rawColors.WHITE_500.css : c.Z.unsafe_rawColors.PRIMARY_530.css,
-        D = (0, d.Z)(v),
+        D = N ? c.Z.unsafe_rawColors.WHITE_500.css : c.Z.unsafe_rawColors.PRIMARY_530.css,
+        w = (0, d.Z)(v),
         x = (0, d.Z)(S),
         [L, j] = i.useState((0, s.Z)());
     return (
         i.useEffect(() => {
-            (D !== v || x !== S) && j((0, s.Z)());
-        }, [S, v, x, D]),
+            (w !== v || x !== S) && j((0, s.Z)());
+        }, [S, v, x, w]),
         (0, r.jsx)(u.yRy, {
             targetElementRef: T,
             positionKey: L,
@@ -151,7 +151,7 @@ function v(e) {
                                     className: m.editPencilIcon,
                                     width: 14,
                                     height: 14,
-                                    color: w,
+                                    color: D,
                                 }),
                             }),
                         ),

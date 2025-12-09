@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(539854);
+n.d(t, { Z: () => w }), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(793030),
@@ -39,7 +39,7 @@ function R(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,12 +55,12 @@ function w(e) {
     }
     return e;
 }
-function D(e) {
+function w(e) {
     let { checkpointData: t } = e,
         {
             cardId: n,
             numMessagesSent: R = 0,
-            totalVoiceMinutes: D = 0,
+            totalVoiceMinutes: w = 0,
             numEmojisSent: x = 0,
             topEmoji: L,
             topGame: j,
@@ -78,7 +78,7 @@ function D(e) {
             compactDisplay: "short",
             maximumFractionDigits: 2,
         }).format(x),
-        B = (0, _.nJ)(D),
+        B = (0, _.nJ)(w),
         F = (0, _.UN)(n),
         V = f.F[n],
         H = (0, c.dQu)(V.primaryColor).hex(),
@@ -102,7 +102,7 @@ function D(e) {
             let n = E.Z.getChannel(null == K || null == (e = K.message) ? void 0 : e.channel_id);
             y.default.track(
                 S.rMx.CHECKPOINT_CARD_CLICKED,
-                w(
+                D(
                     { other_user_id: null == K || null == (t = K.message) ? void 0 : t.author.id },
                     (0, d.v_)(n),
                     (0, d.hH)(null == n ? void 0 : n.guild_id),

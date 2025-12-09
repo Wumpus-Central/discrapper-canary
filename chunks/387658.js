@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(870205),
     P = n(981631),
     R = n(689079),
-    w = n(388032),
-    D = n(202874),
+    D = n(388032),
+    w = n(202874),
     x = n(698342);
 let L = 5,
     j = "placeholder",
@@ -117,10 +117,10 @@ function U() {
                     className: x.commandTextContainerPlaceholder,
                     children: [
                         (0, r.jsx)("div", {
-                            className: D.textPlaceholder,
+                            className: w.textPlaceholder,
                             style: t,
                             children: (0, r.jsx)(u.Text, {
-                                className: D.hidden,
+                                className: w.hidden,
                                 variant: "text-sm/semibold",
                                 color: "header-primary",
                                 lineClamp: 1,
@@ -128,10 +128,10 @@ function U() {
                             }),
                         }),
                         (0, r.jsx)("div", {
-                            className: D.textPlaceholder,
+                            className: w.textPlaceholder,
                             style: n,
                             children: (0, r.jsx)(u.Text, {
-                                className: D.hidden,
+                                className: w.hidden,
                                 variant: "text-xs/medium",
                                 color: "text-muted",
                                 lineClamp: 1,
@@ -143,7 +143,7 @@ function U() {
             [t, n],
         );
     return (0, r.jsx)("div", {
-        className: o()(x.command, D.loadingAnimation, { [D.noAnimation]: e }),
+        className: o()(x.command, w.loadingAnimation, { [w.noAnimation]: e }),
         children: a,
     });
 }
@@ -188,8 +188,8 @@ function G(e) {
         onClick: d,
         disabled: s,
         variant: "secondary",
-        "aria-label": w.intl.formatToPlainString(w.t.UXw6W2, { commandName: n.untranslatedName }),
-        text: w.intl.string(w.t.TXNS7S),
+        "aria-label": D.intl.formatToPlainString(D.t.UXw6W2, { commandName: n.untranslatedName }),
+        text: D.intl.string(D.t.TXNS7S),
         icon: l.U,
         iconPosition: "end",
         size: "md",
@@ -282,14 +282,14 @@ function B(e) {
                       context: n,
                       section: _,
                       commands: y,
-                      headerName: w.intl.string(w.t.acSE0h),
+                      headerName: D.intl.string(D.t.acSE0h),
                       sectionName: o,
                   }),
                   (0, r.jsx)(Z, {
                       context: n,
                       section: _,
                       commands: p ? M : E,
-                      headerName: w.intl.string(w.t.DUU9L3),
+                      headerName: D.intl.string(D.t.DUU9L3),
                       sectionName: o,
                       children:
                           b &&

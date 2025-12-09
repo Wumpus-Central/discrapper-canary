@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(136995),
     P = n(25827),
     R = n(163612),
-    w = n(601964),
-    D = n(430824),
+    D = n(601964),
+    w = n(430824),
     x = n(131951),
     L = n(594174),
     j = n(451478),
@@ -246,7 +246,7 @@ function el(e) {
     let { animatedStyle: n, y: a, x: f, channel: m } = e,
         { analyticsLocations: y } = (0, h.ZP)(_.Z.INCOMING_CALL_MODAL),
         [O, v] = i.useState(!1),
-        S = (0, l.e7)([D.Z], () => D.Z.getGuild(m.guild_id)),
+        S = (0, l.e7)([w.Z], () => w.Z.getGuild(m.guild_id)),
         I =
             null != S
                 ? k.ZP.getGuildIconURL({
@@ -300,7 +300,7 @@ function el(e) {
                                   className: o()(q.guildIcon, q.guildIconWithoutImage),
                                   children: (0, r.jsx)("div", {
                                       className: q.guildAcronym,
-                                      children: (0, w.gM)(S),
+                                      children: (0, D.gM)(S),
                                   }),
                               }),
                           }),

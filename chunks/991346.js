@@ -39,8 +39,8 @@ var r = n(473749),
     N = n(128064),
     P = n(202527),
     R = n(413182),
-    w = n(695346),
-    D = n(526665),
+    D = n(695346),
+    w = n(526665),
     x = n(620163),
     L = n(168308),
     j = n(839469),
@@ -220,7 +220,7 @@ function Y() {
         W = (0, h.Z)({ location: k.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         K = (0, i.e7)([S.Z], () => S.Z.hasLibraryApplication()),
         z = (0, i.e7)([O.default], () => O.default.hasTOTPEnabled()),
-        q = w.Sb.useSetting(),
+        q = D.Sb.useSetting(),
         Q = (0, d.Z)(),
         X = null == (o = (0, f.Z)()) || o,
         J = (null == (t = (0, g.s)()) ? void 0 : t.length) > 0,
@@ -240,7 +240,7 @@ function Y() {
         })),
         { enabled: ea } = (0, u.zM)("useGenerateUserSettingsSections", { autoTrackExposure: !1 }),
         eo = (0, E.UX)({ location: "useGenerateUserSettingsSections" }),
-        es = (0, D.gj)("useGenerateUserSettingsSections");
+        es = (0, w.gj)("useGenerateUserSettingsSections");
     return r.useMemo(
         () =>
             (0, x.iE)({

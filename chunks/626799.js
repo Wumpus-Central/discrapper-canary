@@ -222,8 +222,8 @@ class R extends (r = a.Component) {
     }
 }
 A(R, "defaultProps", { renderFallback: S.dG4 });
-let w = [y.Z, b.Z, E.Z, O.Z];
-function D(e) {
+let D = [y.Z, b.Z, E.Z, O.Z];
+function w(e) {
     let { skuId: t } = e,
         n = y.Z.get(t),
         r = null != n ? g.Z.getApplication(n.applicationId) : null;
@@ -237,5 +237,5 @@ function D(e) {
     };
 }
 let x = (0, h.Z)((0, m.Z)(R)),
-    L = s.ZP.connectStores(w, D)(x),
-    j = (0, m.Z)(s.ZP.connectStores(w, D)(R));
+    L = s.ZP.connectStores(D, w)(x),
+    j = (0, m.Z)(s.ZP.connectStores(D, w)(R));

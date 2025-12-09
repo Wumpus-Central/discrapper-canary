@@ -1,22 +1,22 @@
 n.d(t, {
-    Z: () => i,
-    a: () => a,
+    Z: () => s,
+    a: () => l,
 });
-var r,
-    s = n(54381),
-    o = n(199849),
-    a =
-        (((r = {})[(r.UNENROLLED = 0)] = "UNENROLLED"),
-        (r[(r.ENROLLED = 1)] = "ENROLLED"),
-        (r[(r.COMPLETED_25 = 2)] = "COMPLETED_25"),
-        (r[(r.COMPLETED_50 = 3)] = "COMPLETED_50"),
-        (r[(r.COMPLETED_75 = 4)] = "COMPLETED_75"),
-        (r[(r.COMPLETED_100 = 5)] = "COMPLETED_100"),
-        (r[(r.CLAIMED = 6)] = "CLAIMED"),
-        r);
-let i = function (e) {
+var a,
+    r = n(54381),
+    i = n(199849),
+    l =
+        (((a = {})[(a.UNENROLLED = 0)] = "UNENROLLED"),
+        (a[(a.ENROLLED = 1)] = "ENROLLED"),
+        (a[(a.COMPLETED_25 = 2)] = "COMPLETED_25"),
+        (a[(a.COMPLETED_50 = 3)] = "COMPLETED_50"),
+        (a[(a.COMPLETED_75 = 4)] = "COMPLETED_75"),
+        (a[(a.COMPLETED_100 = 5)] = "COMPLETED_100"),
+        (a[(a.CLAIMED = 6)] = "CLAIMED"),
+        a);
+let s = function (e) {
     let { onChange: t, value: n } = e;
-    return (0, s.jsx)(o.B6, {
+    return (0, r.jsx)(i.B6, {
         label: "User State",
         options: [
             {

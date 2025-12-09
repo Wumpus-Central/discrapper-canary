@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(793030),
     o = n(442837),
     c = n(678717),
@@ -23,7 +23,7 @@ let f = (e) => {
                         t(1);
                     },
                     children: (0, a.jsx)("div", {
-                        className: i()(x.banner, x.pfxBanner),
+                        className: l()(x.banner, x.pfxBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -36,7 +36,7 @@ let f = (e) => {
                         t(2);
                     },
                     children: (0, a.jsx)("div", {
-                        className: i()(x.banner, x.nameplateBanner),
+                        className: l()(x.banner, x.nameplateBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -49,7 +49,7 @@ let f = (e) => {
                         t(3);
                     },
                     children: (0, a.jsx)("div", {
-                        className: i()(x.banner, x.bundlesBanner),
+                        className: l()(x.banner, x.bundlesBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -88,7 +88,7 @@ let f = (e) => {
         });
     },
     g = () => {
-        let [e, t] = l.useState(0);
+        let [e, t] = r.useState(0);
         return (0, a.jsxs)(s.zJl, {
             className: x.wrapper,
             children: [

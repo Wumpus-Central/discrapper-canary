@@ -1,4 +1,4 @@
-n.d(t, { h: () => _ }), n(388685);
+n.d(t, { h: () => v }), n(388685);
 var i = n(54381);
 n(473749);
 var r = n(442837),
@@ -40,7 +40,7 @@ function y(e) {
         }),
     });
 }
-function v(e) {
+function _(e) {
     var t, n;
     let { guild: r } = e,
         { analyticsLocations: c } = (0, o.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
@@ -72,7 +72,7 @@ function v(e) {
         }),
     });
 }
-function _(e) {
+function v(e) {
     let { guild: t } = e,
         n = (0, r.e7)([u.default, d.ZP], () => {
             if (null == t) return new Set();
@@ -80,8 +80,8 @@ function _(e) {
             return (0, p.no)(d.ZP.getMember(t.id, e));
         }, [t]);
     return n.has(m.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || n.has(m.q.AUTOMOD_QUARANTINED_BIO)
-        ? (0, i.jsx)(v, { guild: t })
+        ? (0, i.jsx)(_, { guild: t })
         : n.has(m.q.AUTOMOD_QUARANTINED_SERVER_TAG)
           ? (0, i.jsx)(y, { guild: t })
-          : (0, i.jsx)(v, { guild: t });
+          : (0, i.jsx)(_, { guild: t });
 }

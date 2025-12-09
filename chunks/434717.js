@@ -17,8 +17,8 @@ var r = n(54381),
     x = n(659302),
     g = n(324805),
     y = n(231338),
-    v = n(388032),
-    b = n(985952);
+    b = n(388032),
+    v = n(985952);
 function _(e) {
     let { quest: t, sourceQuestContent: n, onLoadComplete: _ } = e,
         w = (0, l.ZP)(),
@@ -34,8 +34,8 @@ function _(e) {
                 : (0, f.BI)(t.config) !== i.W.GAMEPLAY ||
                     t.config.features.includes(g.S7.NON_GAMING_PLAY_QUEST) ||
                     (0, f.Pb)(t)
-                  ? v.intl.string(v.t.y8Xf3k)
-                  : v.intl.string(v.t["wirwN+"]);
+                  ? b.intl.string(b.t.y8Xf3k)
+                  : b.intl.string(b.t["wirwN+"]);
         }, [t]),
         { isLoading: A } = (0, h.kC)();
     a.useEffect(() => {
@@ -55,7 +55,7 @@ function _(e) {
         ),
     });
     return (0, r.jsxs)("div", {
-        className: b.container,
+        className: v.container,
         children: [
             (0, r.jsx)(h.Fl, {
                 id: "hero-display",
@@ -66,35 +66,35 @@ function _(e) {
                             width: 908,
                             height: 380,
                         },
-                        containerClassName: b.heroDisplayContainer,
+                        containerClassName: v.heroDisplayContainer,
                         isInteracting: !0,
                         assetRef: e,
                     }),
             }),
             (0, r.jsx)("div", {
-                className: b.partnerLogotypeContainer,
+                className: v.partnerLogotypeContainer,
                 children: (0, r.jsx)(h.Fl, {
                     id: "partner-logotype",
                     children: (e) =>
                         (0, r.jsx)("img", {
                             ref: e,
-                            className: b.partnerLogotype,
-                            alt: v.intl.formatToPlainString(v.t.rtm15P, { name: t.config.messages.gameTitle }),
+                            className: v.partnerLogotype,
+                            alt: b.intl.formatToPlainString(b.t.rtm15P, { name: t.config.messages.gameTitle }),
                             src: (0, m.fh)(t, m.eC.LOGO_TYPE, O).url,
                         }),
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: b.partnerContentContainer,
+                className: v.partnerContentContainer,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: b.partnerCopyContainer,
+                        className: v.partnerCopyContainer,
                         children: [
                             (0, r.jsx)(o.X6q, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
-                                className: b.partnerTitle,
-                                children: v.intl.format(v.t.EAYZAr, { questName: t.config.messages.questName }),
+                                className: v.partnerTitle,
+                                children: b.intl.format(b.t.EAYZAr, { questName: t.config.messages.questName }),
                             }),
                             (0, r.jsx)(o.xvT, {
                                 variant: "text-sm/medium",
@@ -108,15 +108,15 @@ function _(e) {
                         children: (e) =>
                             (0, r.jsx)("img", {
                                 ref: e,
-                                className: b.partnerGameTile,
-                                alt: v.intl.formatToPlainString(v.t.rtm15P, { name: t.config.messages.gameTitle }),
+                                className: v.partnerGameTile,
+                                alt: b.intl.formatToPlainString(b.t.rtm15P, { name: t.config.messages.gameTitle }),
                                 src: (0, m.fh)(t, m.eC.GAME_TILE, O).url,
                             }),
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: b.bottomContainer,
+                className: v.bottomContainer,
                 children: (0, r.jsxs)(o.hE2, {
                     size: "sm",
                     direction: "horizontal",
@@ -125,11 +125,11 @@ function _(e) {
                     children: [
                         E &&
                             (0, r.jsx)(s.u, {
-                                text: v.intl.string(v.t.WmfZHZ),
+                                text: b.intl.string(b.t.WmfZHZ),
                                 children: (0, r.jsx)(o.hU, {
                                     icon: o.xPt,
                                     onClick: I,
-                                    "aria-label": v.intl.string(v.t.WmfZHZ),
+                                    "aria-label": b.intl.string(b.t.WmfZHZ),
                                     variant: "secondary",
                                 }),
                             }),

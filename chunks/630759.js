@@ -1,7 +1,7 @@
 n.d(t, {
     J6: () => G,
-    LO: () => D,
-    TQ: () => w,
+    LO: () => w,
+    TQ: () => D,
     UB: () => H,
     ZU: () => x,
     Zn: () => L,
@@ -62,7 +62,7 @@ function P() {
 function R() {
     return g.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
 }
-function w(e, t, n, r, i) {
+function D(e, t, n, r, i) {
     n ? O.Z.createSecureFramesVerifiedKey(e, t) : O.Z.createSecureFramesTransientKey(e, t),
         (0, I.M1)({
             channelId: r,
@@ -70,7 +70,7 @@ function w(e, t, n, r, i) {
             analyticsLocation: i,
         });
 }
-function D(e, t, n) {
+function w(e, t, n) {
     if (n) {
         let n = (0, c.MK)(new Uint8Array(t));
         O.Z.deleteSecureFramesVerifiedKey(e, n);

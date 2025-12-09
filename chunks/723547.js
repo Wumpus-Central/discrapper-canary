@@ -1,9 +1,9 @@
 n.d(t, { v: () => o }), n(953529);
 var a = n(54381);
 n(473749);
-var l = n(481060),
-    r = n(921944),
-    i = n(388032),
+var r = n(481060),
+    i = n(921944),
+    l = n(388032),
     s = n(820762);
 function o(e) {
     let { markAsDismissed: t, onCTA: n } = e;
@@ -12,23 +12,23 @@ function o(e) {
         children: (0, a.jsxs)("div", {
             className: s.content,
             children: [
-                (0, a.jsx)(l.P3F, {
+                (0, a.jsx)(r.P3F, {
                     className: s.closeIcon,
-                    onClick: () => t(r.L.USER_DISMISS),
-                    children: (0, a.jsx)(l.Dio, { size: "xs" }),
+                    onClick: () => t(i.L.USER_DISMISS),
+                    children: (0, a.jsx)(r.Dio, { size: "xs" }),
                 }),
-                (0, a.jsx)(l.Text, {
+                (0, a.jsx)(r.Text, {
                     className: s.description,
                     variant: "text-md/normal",
-                    children: i.intl.string(i.t["Ny/0ui"]),
+                    children: l.intl.string(l.t["Ny/0ui"]),
                 }),
-                (0, a.jsx)(l.Button, {
+                (0, a.jsx)(r.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: i.intl.string(i.t.TYo738),
+                    text: l.intl.string(l.t.TYo738),
                     fullWidth: !0,
                     onClick: () => {
-                        t(r.L.TAKE_ACTION), n();
+                        t(i.L.TAKE_ACTION), n();
                     },
                 }),
             ],

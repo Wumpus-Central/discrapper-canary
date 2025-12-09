@@ -270,10 +270,10 @@ let R = {
                       },
         },
     },
-    w = /(-# +)/,
-    D = (0, p.Z)([A, R]),
+    D = /(-# +)/,
+    w = (0, p.Z)([A, R]),
     x = (0, p.Z)([C, R]),
-    L = l._p(D),
+    L = l._p(w),
     j = l._p(x),
     M = {
         max: 1 / 0,
@@ -508,7 +508,7 @@ function V(e, t, n, r) {
         };
     if ("subtext" === t)
         return {
-            before: w.exec(r.input)[1],
+            before: D.exec(r.input)[1],
             after: "",
         };
     let i = I["link" === t ? "url" : t];

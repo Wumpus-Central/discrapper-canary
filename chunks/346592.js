@@ -1,43 +1,43 @@
 n.d(t, { Z: () => c });
-var l = n(54381);
+var r = n(54381);
 n(473749);
-var r = n(120356),
-    s = n.n(r),
+var l = n(120356),
+    s = n.n(l),
     i = n(481060),
-    o = n(373370),
-    a = n(644646),
+    a = n(373370),
+    o = n(644646),
     u = n(673655);
 let c = function (e) {
     let {
             className: t,
             autoplay: n,
-            quest: r,
+            quest: l,
             questContent: c,
             taskDetails: d,
-            location: E,
-            sourceQuestContent: m,
+            location: m,
+            sourceQuestContent: f,
         } = e,
-        p = (0, o.DD)({
-            quest: r,
+        p = (0, a.DD)({
+            quest: l,
             taskDetails: d,
-            location: E,
+            location: m,
             questContent: c,
-            sourceQuestContent: m,
+            sourceQuestContent: f,
         });
-    return (0, l.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         className: s()(u.wrapper, t),
         children: [
-            (0, l.jsx)(a.Z, {
+            (0, r.jsx)(o.Z, {
                 autoplay: n,
                 className: u.rewardTile,
-                quest: r,
+                quest: l,
                 questContent: c,
-                location: E,
-                sourceQuestContent: m,
+                location: m,
+                sourceQuestContent: f,
             }),
-            (0, l.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: u.copy,
-                children: (0, l.jsx)(i.Text, {
+                children: (0, r.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: p,

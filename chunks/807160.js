@@ -27,8 +27,8 @@ var r,
     N = n(298243),
     P = n(336197),
     R = n(690221),
-    w = n(307643),
-    D = n(164670),
+    D = n(307643),
+    w = n(164670),
     x = n(517730),
     L = n(378233),
     j = n(419922),
@@ -336,7 +336,7 @@ class eI extends (r = a.PureComponent) {
     }
     renderTenantStatusOverride() {
         let { payment: e, hasLinkedToApplication: t } = this.props;
-        return (0, D.K$)(e.sku) && e.status === ee.PyE.COMPLETED
+        return (0, w.K$)(e.sku) && e.status === ee.PyE.COMPLETED
             ? null != e.entitlements && e.entitlements.some((e) => e.isFulfilled())
                 ? (0, i.jsx)("span", {
                       className: ei.statusTagGreen,
@@ -571,7 +571,7 @@ class eI extends (r = a.PureComponent) {
     }
     renderAdditionalTenantInfo() {
         let { payment: e } = this.props;
-        if ((0, D.K$)(e.sku)) return this.renderAdditionalGameItemDetails();
+        if ((0, w.K$)(e.sku)) return this.renderAdditionalGameItemDetails();
     }
     renderRefundDetails() {
         let e,
@@ -994,11 +994,11 @@ function eT(e) {
                 paymentSources: V.Z.paymentSources,
             };
         }),
-        { hasAlreadyLinked: O } = (0, b.F)((0, D.K$)(r.sku) ? m : void 0),
+        { hasAlreadyLinked: O } = (0, b.F)((0, w.K$)(r.sku) ? m : void 0),
         v = (0, p.e7)([y.Z], () => (null != d ? y.Z.getApplication(d) : null)),
         S = null;
     a.useEffect(() => {
-        f && null != d && (0, w.UM)(d);
+        f && null != d && (0, D.UM)(d);
     }, [d, f]);
     let I = (0, p.e7)([B.Z], () => B.Z.getGuild(null == m ? void 0 : m.guildId)),
         T = c ? m : void 0,

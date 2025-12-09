@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f });
 var r = n(54381),
-    i = n(473749),
-    a = n(793030),
+    a = n(473749),
+    i = n(793030),
     l = n(823379),
     s = n(216780),
     o = n(448021),
@@ -14,7 +14,7 @@ var r = n(54381),
     g = n(964645);
 function f(e) {
     let { application: t } = e,
-        n = i.useMemo(() => {
+        n = a.useMemo(() => {
             var e, n, r;
             return null !=
                 (r = (null != (n = null == (e = t.directory_entry) ? void 0 : e.carousel_items) ? n : [])
@@ -42,7 +42,7 @@ function f(e) {
                 className: g.informationContainer,
                 children: [
                     (0, r.jsx)("div", { className: g.divider }),
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(i.X6q, {
                         variant: "heading-lg/semibold",
                         color: "header-primary",
                         children: h.intl.string(h.t["mD+J/i"]),

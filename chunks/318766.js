@@ -101,7 +101,7 @@ let C = 20,
         tension: 800,
         friction: 24,
     },
-    w = () => {
+    D = () => {
         let e = (0, l.e7)([f.Z], () => f.Z.useReducedMotion);
         return (0, r.jsxs)("div", {
             className: y.premiumTooltipContainer,
@@ -121,7 +121,7 @@ let C = 20,
             ],
         });
     };
-function D(e) {
+function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
     return {
         "--custom-emoji-sprite-size": "".concat(t, "px"),
@@ -155,15 +155,15 @@ function x(e) {
             "ref",
         ]);
     let [A, C] = i.useState(!1),
-        [N, w] = i.useState(50),
+        [N, D] = i.useState(50),
         x = A || a,
         L = (0, h.l)(y, "emojiButton", x ? "Hovered" : "Normal"),
-        j = D(N, b),
+        j = w(N, b),
         M = i.useCallback(() => {
             if (x) return;
             let e = Math.floor(Math.random() * P);
-            C(!0), w(e), (0, _.x)(E.qR.EmojiButtonMouseEntered);
-        }, [x, C, w]),
+            C(!0), D(e), (0, _.x)(E.qR.EmojiButtonMouseEntered);
+        }, [x, C, D]),
         k = i.useCallback(() => {
             C(!1);
         }, [C]),
@@ -285,7 +285,7 @@ function L(e) {
           ? (0, r.jsx)(d.aML, {
                 "data-migration-pending": !0,
                 targetElementRef: N,
-                text: () => (0, r.jsx)(w, {}),
+                text: () => (0, r.jsx)(D, {}),
                 "aria-label": b.intl.formatToMarkdownString(b.t["/7R4q4"], {}),
                 position: "top",
                 shouldShow: !0,

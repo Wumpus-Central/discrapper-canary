@@ -3,8 +3,8 @@ var l = n(54381);
 n(473749);
 var r = n(442837),
     i = n(481060),
-    u = n(357156),
-    o = n(924301),
+    o = n(357156),
+    u = n(924301),
     c = n(894017),
     a = n(79874),
     s = n(576749),
@@ -53,17 +53,17 @@ function f(t, e) {
     );
 }
 function b(t) {
-    let { guildEventId: e, guild: b, channel: v, recurrenceId: E, isRecurrenceItem: p } = t,
-        { canManageGuildEvent: Z } = (0, u.XJ)(null != v ? v : b),
-        h = (0, r.e7)([o.ZP], () => o.ZP.getGuildScheduledEvent(e)),
-        y = Z(h),
-        P = (0, s.Z)(),
-        O = (0, c.Z)(E, null == h ? void 0 : h.id),
-        m = (0, a.zI)(e, E);
-    if (!y || null == m || null == h) return null;
-    let j = null != h.recurrence_rule && !p,
+    let { guildEventId: e, guild: b, channel: p, recurrenceId: v, isRecurrenceItem: E } = t,
+        { canManageGuildEvent: y } = (0, o.XJ)(null != p ? p : b),
+        O = (0, r.e7)([u.ZP], () => u.ZP.getGuildScheduledEvent(e)),
+        P = y(O),
+        Z = (0, s.Z)(),
+        h = (0, c.Z)(v, null == O ? void 0 : O.id),
+        j = (0, a.zI)(e, v);
+    if (!P || null == j || null == O) return null;
+    let m = null != O.recurrence_rule && !E,
         N = (t) => {
-            (null == E || t) && !p
+            (null == v || t) && !E
                 ? (0, i.ZDy)(async () => {
                       let { default: t } = await Promise.all([
                           n.e("49049"),
@@ -79,39 +79,39 @@ function b(t) {
                                   guildId: b.id,
                               }),
                           );
-                  }, P)
-                : null != E &&
+                  }, Z)
+                : null != v &&
                   (0, i.ZDy)(async () => {
                       let { default: t } = await n.e("27919").then(n.bind(n, 379038));
                       return (e) =>
                           (0, l.jsx)(
                               t,
                               f(g({}, e), {
-                                  guildEvent: h,
-                                  recurrenceId: E,
+                                  guildEvent: O,
+                                  recurrenceId: v,
                               }),
                           );
-                  }, P);
+                  }, Z);
         };
     return (0, l.jsx)(i.sNh, {
         id: d.intl.string(d.t.Rgy2dU),
         label: d.intl.string(d.t.Rgy2dU),
-        action: j ? void 0 : () => N(!0),
+        action: m ? void 0 : () => N(!0),
         children:
-            j &&
+            m &&
             (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(i.sNh, {
                         id: d.intl.string(d.t.wmVmXN),
                         label: d.intl.string(d.t.wmVmXN),
                         action: () => N(!1),
-                        disabled: (null == O ? void 0 : O.is_canceled) || m.startTime.getTime() < Date.now(),
+                        disabled: (null == h ? void 0 : h.is_canceled) || j.startTime.getTime() < Date.now(),
                     }),
                     (0, l.jsx)(i.sNh, {
                         id: d.intl.string(d.t.BW1Qoh),
                         label: d.intl.string(d.t.BW1Qoh),
                         action: () => N(!0),
-                        disabled: new Date(h.scheduled_start_time).getTime() < Date.now(),
+                        disabled: new Date(O.scheduled_start_time).getTime() < Date.now(),
                     }),
                 ],
             }),

@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(193869),
     P = n(639949),
     R = n(77691),
-    w = n(225466),
-    D = n(2835),
+    D = n(225466),
+    w = n(2835),
     x = n(225055),
     L = n(391876),
     j = n(410853),
@@ -268,7 +268,7 @@ function ei(e) {
                                                         }),
                                                     ],
                                                 }),
-                                            (0, r.jsx)(D.Z, {
+                                            (0, r.jsx)(w.Z, {
                                                 activeSlide: L,
                                                 setActiveSlide: e_,
                                                 className: q.stepIndicator,
@@ -277,7 +277,7 @@ function ei(e) {
                                             (0, r.jsxs)("div", {
                                                 className: q.actions,
                                                 children: [
-                                                    (0, r.jsx)(w.Z, {}),
+                                                    (0, r.jsx)(D.Z, {}),
                                                     (0, r.jsx)(h.P3F, {
                                                         onClick: () => eu(),
                                                         className: q.closeButton,

@@ -23,10 +23,10 @@ let N = A.QZA.CLOSED,
 function R() {
     (N = A.QZA.OPEN), (P = {});
 }
-function w() {
+function D() {
     (N = A.QZA.CLOSED), (P = {});
 }
-function D() {
+function w() {
     (N = A.QZA.SUBMITTING), (P = {});
 }
 function x(e) {
@@ -139,7 +139,7 @@ function eo() {
     _ = void 0;
 }
 function es() {
-    et(), ei(), w();
+    et(), ei(), D();
 }
 class el extends (v = I.ZP.Store) {
     getFormState() {
@@ -253,9 +253,9 @@ let ec = new el(T.Z, {
     USER_SETTINGS_MODAL_INIT: R,
     USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: R,
     USER_SETTINGS_MODAL_SET_SECTION: L,
-    USER_SETTINGS_ACCOUNT_CLOSE: w,
+    USER_SETTINGS_ACCOUNT_CLOSE: D,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: es,
-    USER_SETTINGS_ACCOUNT_SUBMIT: D,
+    USER_SETTINGS_ACCOUNT_SUBMIT: w,
     USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: x,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: j,
     USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: M,

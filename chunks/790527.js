@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -46,7 +46,7 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function w(e) {
+function D(e) {
     switch (e) {
         case I.cd.ANIMATED_AVATAR_MODAL_UPSELL:
         case I.cd.ANIMATED_BANNER_MODAL_UPSELL:
@@ -60,13 +60,13 @@ function w(e) {
             return !1;
     }
 }
-function D(e) {
+function w(e) {
     var t,
         n,
         a,
         {
             title: R,
-            type: D,
+            type: w,
             guildBoostProps: x,
             analyticsSource: L,
             analyticsLocation: j,
@@ -157,7 +157,7 @@ function D(e) {
             analyticsLocations: ey,
             analyticsSource: L,
             guildBoostProps: x,
-            type: D,
+            type: w,
         },
         ev = i.useRef(eO);
     i.useEffect(() => {
@@ -189,7 +189,7 @@ function D(e) {
                   });
         }, [eh, en, er]);
     let eS = (0, s.e7)([g.Z], () => g.Z.affinities),
-        eI = eS.length > 1 && w(D),
+        eI = eS.length > 1 && D(w),
         eT = (0, s.e7)([g.Z], () => g.Z.hasFetched);
     i.useEffect(() => {
         eT || u.MH();
@@ -264,7 +264,7 @@ function D(e) {
                         : eb
                           ? (0, r.jsx)(v.ZP, {
                                 onClose: W,
-                                type: D,
+                                type: w,
                                 subscriptionTier:
                                     null != (a = null == eg || null == (n = eg.subscription_trial) ? void 0 : n.sku_id)
                                         ? a

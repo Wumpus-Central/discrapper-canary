@@ -216,11 +216,11 @@ let R = [
         ["TAB", "\u21E5"],
         ["SPACE", "\u2423"],
     ],
-    w = (e) => {
+    D = (e) => {
         for (let [t, n] of R) if (t === e.toUpperCase()) return n;
         return e;
     },
-    D = (e) => {
+    w = (e) => {
         for (let [t, n] of R) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
@@ -264,7 +264,7 @@ function k(e) {
         .split("+")
         .map((e) => e.trim().replace("plus", "+"))
         .reduce((e, r) => {
-            let i = C(D(r), t, n);
+            let i = C(w(r), t, n);
             return null != i && e.push([n, i, t]), e;
         }, []);
 }
@@ -286,7 +286,7 @@ function U(e) {
             })
             .filter(l.lm);
     return t
-        ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? r.map(w) : r).join(" + ").toUpperCase()
+        ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? r.map(D) : r).join(" + ").toUpperCase()
         : r.join("+");
 }
 function G(e, t) {

@@ -27,7 +27,7 @@ var r = n(54381),
     N = n(388032),
     P = n(765179),
     R = n(630564);
-function w(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function w(e, t, n) {
         e
     );
 }
-function D(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function D(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -93,7 +93,7 @@ function j(e) {
             onClose: v,
             onHover: I,
         } = e,
-        { analyticsLocations: w } = (0, f.ZP)(),
+        { analyticsLocations: D } = (0, f.ZP)(),
         x = n !== T.A3.INACTIVE,
         j = (0, y.Z)(t),
         [M, k] = i.useState(!1),
@@ -108,10 +108,10 @@ function j(e) {
                         section: A.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
                     },
                     numberOfBoostsToAdd: 1,
-                    analyticsLocations: w,
+                    analyticsLocations: D,
                     guild: e,
                 });
-        }, [t, w]),
+        }, [t, D]),
         F = i.useCallback(() => {
             v(), (0, S.Z)(t, d.Z.GUILD_POWERUPS_MARKETING, b);
         }, [t, b, v]),
@@ -163,7 +163,7 @@ function j(e) {
                 }),
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: L(D({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
+                style: L(w({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
                 className: o()(R.contentContainer, P.contentContainer),
                 children: [
                     (0, r.jsx)(_.xm, {

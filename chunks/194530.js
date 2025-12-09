@@ -19,8 +19,8 @@ function p(e) {
         [C, N] = i.useState(null),
         P = (0, o.e7)([c.Z], () => c.Z.getErrors()),
         R = (0, o.e7)([c.Z], () => c.Z.getFormState()),
-        w = i.useRef(null);
-    async function D(e) {
+        D = i.useRef(null);
+    async function w(e) {
         e.preventDefault(), (0, l.b9)();
         let t = !1;
         if (
@@ -43,11 +43,11 @@ function p(e) {
         i.useEffect(() => {
             if (m === s.Dvm.ENTERED) {
                 var e;
-                null == (e = w.current) || e.focus();
+                null == (e = D.current) || e.focus();
             }
         }, [m]),
         (0, r.jsx)("form", {
-            onSubmit: D,
+            onSubmit: w,
             children: (0, r.jsx)(a.Modal, {
                 transitionState: m,
                 onClose: g,
@@ -75,7 +75,7 @@ function p(e) {
                             type: "password",
                             value: b,
                             onChange: y,
-                            inputRef: w,
+                            inputRef: D,
                             autoComplete: "current-password",
                             required: !0,
                         }),

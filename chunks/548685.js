@@ -19,8 +19,8 @@ var r = n(54381),
     E = n(653126),
     v = n(786040),
     S = n(401975),
-    O = n(328626),
-    x = n(849275),
+    x = n(328626),
+    O = n(849275),
     y = n(619899),
     k = n(811847),
     T = n(215023),
@@ -40,8 +40,8 @@ let N = (e) => {
             buttonContainerClassName: Z,
             orbsSupportedOnly: w,
         } = e,
-        H = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
-        D = h.ZP.canUseCollectibles(H),
+        D = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+        H = h.ZP.canUseCollectibles(D),
         M = (0, k.B)("FeedBlock"),
         {
             sortType: F,
@@ -50,9 +50,9 @@ let N = (e) => {
             sortOptions: V,
             shuffleProducts: z,
             showRecommendationOption: G,
-        } = (0, x.Z)({
+        } = (0, O.Z)({
             sortedSkuIds: N,
-            isPremiumUser: D,
+            isPremiumUser: H,
             prioritizeUserDiscounts: P,
             orbsSupportedOnly: w,
         }),
@@ -60,7 +60,7 @@ let N = (e) => {
         Y = (0, o.e7)([g.Z], () => g.Z.useReducedMotion),
         q = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         Q = !Y && q,
-        { animationPhase: J, startAnimation: X } = (0, O.y)(),
+        { animationPhase: J, startAnimation: X } = (0, x.y)(),
         $ = (0, _.sp)(),
         ee = null != (t = null == $ ? void 0 : $.sessionId) ? t : "",
         et = l.useRef(null),
@@ -77,7 +77,7 @@ let N = (e) => {
             },
             [X, W, ee],
         );
-    return null == H
+    return null == D
         ? null
         : (0, r.jsxs)("div", {
               className: s()(B.popularPicksSection, B.centeredSection),
@@ -140,7 +140,7 @@ let N = (e) => {
                                                       page_session_id: ee,
                                                   });
                                           },
-                                          disabled: J !== O.g.MOUNTED && J !== O.g.FINISHED,
+                                          disabled: J !== x.g.MOUNTED && J !== x.g.FINISHED,
                                       }),
                                   }),
                               ],
@@ -158,7 +158,7 @@ let N = (e) => {
                                     l = b.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
                                 if (Q)
-                                    if (J === O.g.SHUFFLE_OUT)
+                                    if (J === x.g.SHUFFLE_OUT)
                                         return (0, r.jsx)(
                                             "div",
                                             {
@@ -168,11 +168,11 @@ let N = (e) => {
                                             "".concat(e.skuId, "-").concat(t),
                                         );
                                     else
-                                        J === O.g.SORT_OUT
+                                        J === x.g.SORT_OUT
                                             ? (n = B.sortChangedOutro)
-                                            : J === O.g.SHUFFLE_IN
+                                            : J === x.g.SHUFFLE_IN
                                               ? (n = B.shuffleIntro)
-                                              : J === O.g.SORT_IN && (n = B.sortChangedIntro);
+                                              : J === x.g.SORT_IN && (n = B.sortChangedIntro);
                                 return (0, r.jsx)(
                                     _.k0,
                                     {

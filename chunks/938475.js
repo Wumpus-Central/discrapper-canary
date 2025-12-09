@@ -229,10 +229,10 @@ class R {
             (this.guildId = e);
     }
 }
-function w() {
+function D() {
     S = {};
 }
-function D() {
+function w() {
     Z();
 }
 function x(e) {
@@ -311,8 +311,8 @@ class B extends (r = o.ZP.Store) {
 }
 E(B, "displayName", "SortedVoiceStateStore");
 let F = new B(l.Z, {
-    CONNECTION_OPEN: w,
-    OVERLAY_INITIALIZE: D,
+    CONNECTION_OPEN: D,
+    OVERLAY_INITIALIZE: w,
     VOICE_CHANNEL_SELECT: j,
     VOICE_STATE_UPDATES: x,
     GUILD_MEMBER_UPDATE: k,

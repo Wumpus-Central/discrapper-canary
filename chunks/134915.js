@@ -81,11 +81,11 @@ function u(e) {
         N = (0, r.useRef)(o),
         P = () => {
             if (!R) return;
-            w(!1);
+            D(!1);
             let e = g || c || T.current;
             _(e, N.current) || ((N.current = e), C(e));
         },
-        [R, w] = (0, r.useState)(!1);
+        [R, D] = (0, r.useState)(!1);
     return (
         (0, r.useEffect)(P),
         {
@@ -96,10 +96,10 @@ function u(e) {
             },
             resetValidation() {
                 let e = o;
-                _(e, N.current) || ((N.current = e), C(e)), "native" === m && w(!1), S(!0);
+                _(e, N.current) || ((N.current = e), C(e)), "native" === m && D(!1), S(!0);
             },
             commitValidation() {
-                "native" === m && w(!0), S(!0);
+                "native" === m && D(!0), S(!0);
             },
         }
     );

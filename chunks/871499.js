@@ -111,8 +111,8 @@ function S(e) {
         buttonRef: N,
         grow: P,
         "aria-label": R,
-        look: w,
-        buttonText: D,
+        look: D,
+        buttonText: w,
         size: x,
         color: L,
     } = e;
@@ -133,7 +133,7 @@ function S(e) {
                         E(
                             {
                                 "data-migration-pending": !0,
-                                look: null != w ? w : l.zx.Looks.BLANK,
+                                look: null != D ? D : l.zx.Looks.BLANK,
                                 size: null != x ? x : l.zx.Sizes.NONE,
                                 color: L,
                                 onKeyDown: (e) => {
@@ -161,7 +161,7 @@ function S(e) {
                                     null == T || T(), null == u || u(e);
                                 },
                                 disabled: S,
-                                innerClassName: o()(h.lineHeightReset, { [h.buttonInnerWithText]: null != D }),
+                                innerClassName: o()(h.lineHeightReset, { [h.buttonInnerWithText]: null != w }),
                                 className: o()({ [h.active]: I }, f),
                                 wrapperClassName: _,
                                 buttonRef: N,
@@ -175,13 +175,13 @@ function S(e) {
                                 (0, r.jsx)(b, {
                                     size: s.Z.md,
                                     className: o()(m, {
-                                        [h.controlIcon]: null == D,
+                                        [h.controlIcon]: null == w,
                                         [h.themeable]: v,
                                         [h.active]: I,
                                     }),
                                     color: g,
                                 }),
-                                D,
+                                w,
                             ],
                         },
                     ),
@@ -242,8 +242,8 @@ function A(e) {
             "isTrayButton",
             "applyStyles",
         ]);
-    let w = (0, _.Z)(a, l),
-        D = null != s ? s : w,
+    let D = (0, _.Z)(a, l),
+        w = null != s ? s : D,
         x = (0, u.Z)("(max-width: 456px)"),
         L = i.useRef(null),
         j = i.useContext(f.h9);
@@ -264,7 +264,7 @@ function A(e) {
                     x || P ? g : null,
                     l && h.active,
                     h.centerButton,
-                    T[w],
+                    T[D],
                     k && h.fullRegionButton,
                     G && h.attachedButton,
                 ),
@@ -278,7 +278,7 @@ function A(e) {
                   h.attachedCaretButtonContainer,
                   A && h.popoutOpen,
                   g,
-                  U && [h.fullRegionDropdownButton, I[w]],
+                  U && [h.fullRegionDropdownButton, I[D]],
               ),
               children: [
                   Z,
@@ -290,7 +290,7 @@ function A(e) {
                                 className: o()(
                                     h.contextMenuNub,
                                     N && h.attachedCaret,
-                                    T[D],
+                                    T[w],
                                     A && [h.popoutOpen, h.active],
                                     C && h.disabled,
                                 ),

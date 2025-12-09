@@ -912,8 +912,8 @@
                                 N,
                                 P,
                                 R,
-                                w,
-                                D = !1;
+                                D,
+                                w = !1;
                             function x() {
                                 var e = S.buffer;
                                 (a.HEAP8 = I = new Int8Array(e)),
@@ -923,7 +923,7 @@
                                     (a.HEAP32 = N = new Int32Array(e)),
                                     (a.HEAPU32 = P = new Uint32Array(e)),
                                     (a.HEAPF32 = R = new Float32Array(e)),
-                                    (a.HEAPF64 = w = new Float64Array(e));
+                                    (a.HEAPF64 = D = new Float64Array(e));
                             }
                             var L = [],
                                 j = [],
@@ -939,7 +939,7 @@
                                 throw (
                                     (a.onAbort?.(e),
                                     O((e = "Aborted(" + e + ")")),
-                                    (D = !0),
+                                    (w = !0),
                                     (e = new WebAssembly.RuntimeError(e + ". Build with -sASSERTIONS for more info.")),
                                     i(e),
                                     e)
@@ -1676,7 +1676,7 @@
                                         e ? (this.mode |= 146) : (this.mode &= -147);
                                     }
                                 };
-                            function ew(e, t = {}) {
+                            function eD(e, t = {}) {
                                 if (!(e = eo(e)))
                                     return {
                                         path: "",
@@ -1706,7 +1706,7 @@
                                         for (a = 0; 40960 == (61440 & n.mode); )
                                             if (
                                                 ((n = eq(r)),
-                                                (n = ew((r = eo(en(r), n)), { Oa: t.Oa + 1 }).node),
+                                                (n = eD((r = eo(en(r), n)), { Oa: t.Oa + 1 }).node),
                                                 40 < a++)
                                             )
                                                 throw new eC(32);
@@ -1717,7 +1717,7 @@
                                     node: n,
                                 };
                             }
-                            function eD(e) {
+                            function ew(e) {
                                 for (var t; ; ) {
                                     if (e === e.parent)
                                         return (e = e.U.lb), t ? ("/" !== e[e.length - 1] ? `${e}/${t}` : e + t) : e;
@@ -1791,7 +1791,7 @@
                                 var n = "/" === t;
                                 if (n && eO) throw new eC(10);
                                 if (!n && t) {
-                                    var r = ew(t, { gb: !1 });
+                                    var r = eD(t, { gb: !1 });
                                     if (((t = r.path), (r = r.node).ua)) throw new eC(10);
                                     if (16384 != (61440 & r.mode)) throw new eC(54);
                                 }
@@ -1806,7 +1806,7 @@
                                     n ? (eO = e) : r && ((r.ua = t), r.U && r.U.dc.push(t));
                             }
                             function eY(e, t, n) {
-                                var r = ew(e, { parent: !0 }).node;
+                                var r = eD(e, { parent: !0 }).node;
                                 if (!(e = er(e)) || "." === e || ".." === e) throw new eC(28);
                                 var i = eU(r, e);
                                 if (i) throw new eC(i);
@@ -1821,7 +1821,7 @@
                             }
                             function ez(e, t) {
                                 if (!eo(e)) throw new eC(44);
-                                var n = ew(t, { parent: !0 }).node;
+                                var n = eD(t, { parent: !0 }).node;
                                 if (!n) throw new eC(44);
                                 var r = eU(n, (t = er(t)));
                                 if (r) throw new eC(r);
@@ -1829,9 +1829,9 @@
                                 n.j.Ca(n, t, e);
                             }
                             function eq(e) {
-                                if (!(e = ew(e).node)) throw new eC(44);
+                                if (!(e = eD(e).node)) throw new eC(44);
                                 if (!e.j.la) throw new eC(28);
-                                return eo(eD(e.parent), e.j.la(e));
+                                return eo(ew(e.parent), e.j.la(e));
                             }
                             function eQ(e, t, n) {
                                 if ("" === e) throw new eC(44);
@@ -1854,7 +1854,7 @@
                                 else {
                                     e = et(e);
                                     try {
-                                        i = ew(e, { fb: !(131072 & t) }).node;
+                                        i = eD(e, { fb: !(131072 & t) }).node;
                                     } catch (e) {}
                                 }
                                 if (((r = !1), 64 & t))
@@ -1876,7 +1876,7 @@
                                 )
                                     throw new eC(n);
                                 if (512 & t && !r) {
-                                    if (!(n = "string" == typeof (n = i) ? ew(n, { fb: !0 }).node : n).j.P)
+                                    if (!(n = "string" == typeof (n = i) ? eD(n, { fb: !0 }).node : n).j.P)
                                         throw new eC(63);
                                     if (16384 == (61440 & n.mode)) throw new eC(31);
                                     if (32768 != (61440 & n.mode)) throw new eC(28);
@@ -1890,7 +1890,7 @@
                                     (t &= -131713),
                                     (i = eZ({
                                         node: i,
-                                        path: eD(i),
+                                        path: ew(i),
                                         flags: t,
                                         seekable: !0,
                                         position: 0,
@@ -2131,7 +2131,7 @@
                                             (e[t].A[r.da] = r);
                                     }
                                 },
-                                tw = (e, t, n) => {
+                                tD = (e, t, n) => {
                                     if (a.hasOwnProperty(e)) {
                                         if (void 0 === n || (void 0 !== a[e].A && void 0 !== a[e].A[n]))
                                             throw new e3(`Cannot register public name '${e}' twice`);
@@ -2142,7 +2142,7 @@
                                         a[e].A[n] = t;
                                     } else (a[e] = t), void 0 !== n && (a[e].Lc = n);
                                 },
-                                tD = (e) => {
+                                tw = (e) => {
                                     if (void 0 === e) return "_unknown";
                                     var t = (e = e.replace(/[^a-zA-Z0-9_]/g, "$")).charCodeAt(0);
                                     return 48 <= t && 57 >= t ? `_${e}` : e;
@@ -2396,7 +2396,7 @@
                                             };
                                         case 8:
                                             return function (e) {
-                                                return this.fromWireType(w[e >> 3]);
+                                                return this.fromWireType(D[e >> 3]);
                                             };
                                         default:
                                             throw TypeError(`invalid float width (${t}): ${e}`);
@@ -3107,8 +3107,8 @@
                                     },
                                     _embind_register_class: (e, t, n, r, i, a, o, s, l, c, u, d, f) => {
                                         (u = ta(u)), (a = tW(i, a)), (s &&= tW(o, s)), (c &&= tW(l, c)), (f = tW(d, f));
-                                        var p = tD(u);
-                                        tw(p, function () {
+                                        var p = tw(u);
+                                        tD(p, function () {
                                             tK(`Cannot construct ${u} due to unbound types`, [r]);
                                         }),
                                             tT([e, t, n], r ? [r] : [], (t) => {
@@ -3345,7 +3345,7 @@
                                                 readValueFromPointer: t3(t, n, r),
                                                 L: null,
                                             }),
-                                            tw(t, i);
+                                            tD(t, i);
                                     },
                                     _embind_register_enum_value: (e, t, n) => {
                                         var r = tf(e, "enum");
@@ -3374,7 +3374,7 @@
                                         var o = tX(t, n);
                                         (e = tJ((e = ta(e)))),
                                             (i = tW(r, i)),
-                                            tw(
+                                            tD(
                                                 e,
                                                 function () {
                                                     tK(`Cannot call ${e} due to unbound types`, o);
@@ -3608,7 +3608,7 @@
                                             var i = 105 != r;
                                             (i &= 112 != r),
                                                 (n += i && n % 8 ? 4 : 0),
-                                                nu.push(112 == r ? P[n >> 2] : 105 == r ? N[n >> 2] : w[n >> 3]),
+                                                nu.push(112 == r ? P[n >> 2] : 105 == r ? N[n >> 2] : D[n >> 3]),
                                                 (n += i ? 8 : 4);
                                         }
                                         return X[e](...nu);
@@ -3837,7 +3837,7 @@
                                         ny.ma_device_process_pcm_frames_playback__webaudio)(e, t, n));
                             function nC() {
                                 function e() {
-                                    if (!n && ((n = !0), (a.calledRun = !0), !D)) {
+                                    if (!n && ((n = !0), (a.calledRun = !0), !w)) {
                                         if (
                                             (a.noFSInit ||
                                                 e$ ||
@@ -4203,17 +4203,17 @@
                                                         });
                                                     },
                                                     R = 0,
-                                                    w = o;
-                                                R < w.length;
+                                                    D = o;
+                                                R < D.length;
                                                 R++
                                             ) {
-                                                var y = w[R];
+                                                var y = D[R];
                                                 P(y);
                                             }
                                             break;
                                         case "mouseup":
                                             for (
-                                                var D = function (e) {
+                                                var w = function (e) {
                                                         p.forEach(function (t) {
                                                             e.pointerUp(t.transformedX, t.transformedY, t.identifier);
                                                         });
@@ -4224,7 +4224,7 @@
                                                 x++
                                             ) {
                                                 var y = L[x];
-                                                D(y);
+                                                w(y);
                                             }
                                     }
                                 }.bind(r),
@@ -5546,7 +5546,7 @@
                 !(function (e) {
                     (e[(e.AVAILABLE = 0)] = "AVAILABLE"), (e[(e.UNAVAILABLE = 1)] = "UNAVAILABLE");
                 })(l || (l = {}));
-                var w = new ((function (e) {
+                var D = new ((function (e) {
                         function t() {
                             var t = (null !== e && e.apply(this, arguments)) || this;
                             return (t._started = !1), (t._enabled = !1), (t._status = l.UNAVAILABLE), t;
@@ -5677,7 +5677,7 @@
                             t
                         );
                     })(P))(),
-                    D = (function () {
+                    w = (function () {
                         function e() {}
                         return (
                             (e.prototype.observe = function () {}),
@@ -5686,7 +5686,7 @@
                             e
                         );
                     })(),
-                    x = globalThis.ResizeObserver || D,
+                    x = globalThis.ResizeObserver || w,
                     L = new ((function () {
                         function e() {
                             var e = this;
@@ -6083,7 +6083,7 @@
                             (t.prototype.initializeAudio = function () {
                                 var e,
                                     t = this;
-                                w.status == l.UNAVAILABLE &&
+                                D.status == l.UNAVAILABLE &&
                                     (null == (e = this.artboard) ? void 0 : e.hasAudio) &&
                                     null === this._audioEventListener &&
                                     ((this._audioEventListener = {
@@ -6092,8 +6092,8 @@
                                             return t.onSystemAudioChanged();
                                         },
                                     }),
-                                    w.add(this._audioEventListener),
-                                    w.establishAudio());
+                                    D.add(this._audioEventListener),
+                                    D.establishAudio());
                             }),
                             (t.prototype.initArtboardSize = function () {
                                 this.artboard &&
@@ -6169,7 +6169,7 @@
                                     }
                                     if (
                                         ((this.artboard = s),
-                                        (s.volume = this._volume * w.systemVolume),
+                                        (s.volume = this._volume * D.systemVolume),
                                         (this.animator = new N(this.runtime, this.artboard, this.eventManager)),
                                         t.length > 0 || n.length > 0
                                             ? ((a = t.concat(n)),
@@ -6346,7 +6346,7 @@
                                     (this.riveFile = null),
                                     this.deleteRiveRenderer(),
                                     null !== this._audioEventListener &&
-                                        (w.remove(this._audioEventListener), (this._audioEventListener = null)),
+                                        (D.remove(this._audioEventListener), (this._audioEventListener = null)),
                                     null == (t = this._viewModelInstance) || t.cleanup(),
                                     (this._viewModelInstance = null),
                                     (this._dataEnums = null);
@@ -6799,7 +6799,7 @@
                                     );
                                 },
                                 set: function (e) {
-                                    (this._volume = e), this.artboard && (this.artboard.volume = e * w.systemVolume);
+                                    (this._volume = e), this.artboard && (this.artboard.volume = e * D.systemVolume);
                                 },
                                 enumerable: !1,
                                 configurable: !0,

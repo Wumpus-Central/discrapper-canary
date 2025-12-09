@@ -117,7 +117,7 @@ function R(e) {
         });
     });
 }
-function w(e, t, n, r, i) {
+function D(e, t, n, r, i) {
     let a = N(e);
     if ((null == a ? void 0 : a.requestState) === 2) {
         var o;
@@ -133,7 +133,7 @@ function w(e, t, n, r, i) {
         sort: i,
     });
 }
-function D(e) {
+function w(e) {
     null != N(e) &&
         C(e, {
             requestState: 0,
@@ -305,7 +305,7 @@ async function H(e) {
         d = U(k(i), u),
         f = null != (t = i.selectedSort) ? t : m.d$.ORDER_BY_GUILD_JOINED_AT_DESC;
     if (V(s, d) && (0, a.isEqual)(c, l.cursor)) return;
-    let p = w(s, d, c, o, f);
+    let p = D(s, d, c, o, f);
     try {
         if (
             (S.info("Making member search request", {
@@ -320,7 +320,7 @@ async function H(e) {
         });
     } catch (e) {
         if (v === e.code) return;
-        D(s);
+        w(s);
         return;
     }
     await x(s);

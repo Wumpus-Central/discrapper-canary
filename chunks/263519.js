@@ -29,11 +29,11 @@ function y(e) {
             return null != (e = null == N ? void 0 : N.flatMap(p.Z.getForSKU)) ? e : [];
         }, [N]),
         R = r.useMemo(() => P.map((e) => e.id), [P]),
-        w = (0, E.KK)(null != (n = null == I ? void 0 : I.flags) ? n : 0),
-        D = (0, o.e7)(
+        D = (0, E.KK)(null != (n = null == I ? void 0 : I.flags) ? n : 0),
+        w = (0, o.e7)(
             [g.Z],
-            () => null != i && !1 !== w && g.Z.getEntitlementsForGuild(i, !0).some((e) => e.skuId === O),
-            [w, O, i],
+            () => null != i && !1 !== D && g.Z.getEntitlementsForGuild(i, !0).some((e) => e.skuId === O),
+            [D, O, i],
         ),
         x = null == I ? void 0 : I.applicationId,
         L = (null == T ? void 0 : T.published) === !0 && (null == I ? void 0 : I.isAvailable()) === !0,
@@ -51,12 +51,12 @@ function y(e) {
         Y = r.useMemo(() => {
             if (!F || null == j || null == O) return u.rf.LOADING;
             if (!L) return u.rf.UNAVAILABLE;
-            if (!w) {
+            if (!D) {
                 if ((null == G ? void 0 : G.skuId) === O) return u.rf.SUBSCRIBED;
                 if ((null == B ? void 0 : B.skuId) === O && !1 === H) return u.rf.UPCOMING_PLAN;
             }
             return u.rf.AVAILABLE;
-        }, [null == G ? void 0 : G.skuId, L, j, F, H, w, null == B ? void 0 : B.skuId, O]);
+        }, [null == G ? void 0 : G.skuId, L, j, F, H, D, null == B ? void 0 : B.skuId, O]);
     return (
         r.useEffect(() => {
             L &&
@@ -86,7 +86,7 @@ function y(e) {
                     });
             }, [j, O, L, A, I, R, i, S, M, y, v]),
             subscriptionPurchaseButtonState: Y,
-            isGuildSubscribed: D,
+            isGuildSubscribed: w,
         }
     );
 }

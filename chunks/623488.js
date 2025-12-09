@@ -95,10 +95,10 @@ function m(e) {
             isDraft: P = !1,
         } = e,
         R = (0, s.hQ)(),
-        w = (e) => {
+        D = (e) => {
             e.stopPropagation();
         },
-        D = (0, r.jsxs)(r.Fragment, {
+        w = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(p, {
                     showDraftBadge: P,
@@ -163,7 +163,7 @@ function m(e) {
                         }),
                         (0, r.jsx)("div", {
                             className: f.productActionButton,
-                            onClick: w,
+                            onClick: D,
                             children: h,
                         }),
                     ],
@@ -174,7 +174,7 @@ function m(e) {
         ? (0, r.jsx)("article", {
               className: a()(f.productCard, v ? f.opaqueBackground : f.solidBackground),
               "aria-labelledby": R,
-              children: D,
+              children: w,
           })
         : (0, r.jsx)("div", {
               style: {
@@ -186,7 +186,7 @@ function m(e) {
                   "aria-label": d.intl.formatToPlainString(d.t["e+TmJa"], { productName: n }),
                   className: a()(f.productCard, v ? f.opaqueBackground : f.solidBackground, f.cardClickableContainer),
                   onClick: y,
-                  children: D,
+                  children: w,
               }),
           });
 }

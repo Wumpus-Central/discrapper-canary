@@ -20,7 +20,7 @@ var i = n(54381),
     b = n(232495),
     C = n(10401),
     y = n(131257);
-function v(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function v(e, t, n) {
         e
     );
 }
-function _(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -44,7 +44,7 @@ function _(e) {
                 }),
             )),
             i.forEach(function (t) {
-                v(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -137,7 +137,7 @@ class x extends r.PureComponent {
                 popoutPosition: f,
             } = l,
             { offsetX: b, offsetY: C } = this.state,
-            v = {
+            _ = {
                 left: null != b ? r.x + b : void 0,
                 top: null != C ? r.y + C : void 0,
             },
@@ -153,7 +153,7 @@ class x extends r.PureComponent {
         return (0, i.jsx)(
             m.ZP,
             O(
-                _(
+                v(
                     {
                         innerRef: this.contentRef,
                         position: f,
@@ -174,9 +174,9 @@ class x extends r.PureComponent {
                         let { isShown: r } = t;
                         return (0, i.jsx)(
                             d.P3F,
-                            O(_({}, e), {
+                            O(v({}, e), {
                                 className: y.indicator,
-                                style: v,
+                                style: _,
                                 innerRef: this.contentRef,
                                 children: (0, i.jsxs)("div", {
                                     className: a()(y.animationContainer, x(r)),
@@ -215,12 +215,12 @@ class x extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            v(this, "state", {
+            _(this, "state", {
                 offsetX: null,
                 offsetY: null,
             }),
-            v(this, "contentRef", r.createRef()),
-            v(this, "handleDismiss", () => {
+            _(this, "contentRef", r.createRef()),
+            _(this, "handleDismiss", () => {
                 p.Z.dismiss(this.props.tutorialId);
             });
     }
@@ -248,7 +248,7 @@ let E =
                                 s()(null != a, "Missing tutorial definition for ".concat(r)),
                                 (0, i.jsx)(
                                     x,
-                                    _(
+                                    v(
                                         {
                                             tutorialId: r,
                                             tutorialDefinition: a,

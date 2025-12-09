@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => H }), n(388685);
 var i = n(54381);
 n(473749);
 var r = n(120356),
@@ -17,8 +17,8 @@ var r = n(120356),
     b = n(854698),
     C = n(897669),
     y = n(665149),
-    v = n(984370),
-    _ = n(910611),
+    _ = n(984370),
+    v = n(910611),
     O = n(728285),
     x = n(454585),
     E = n(801604),
@@ -51,7 +51,7 @@ function V(e) {
         }),
     });
 }
-function H(e) {
+function B(e) {
     let { user: t, channel: n, stream: r, color: l } = e,
         a = (0, S.Z)(n, t, r);
     return null == t || null == r
@@ -108,7 +108,7 @@ function F(e) {
         t = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(y.ZP.Divider, { className: k.divider }),
-                (0, i.jsx)(H, {
+                (0, i.jsx)(B, {
                     user: e,
                     channel: l,
                     stream: n,
@@ -132,7 +132,7 @@ function F(e) {
         children: t,
     });
 }
-function B(e) {
+function H(e) {
     let { channel: t, guild: r, appContext: c, inCall: u, isChatOpen: m, exitFullScreen: g } = e,
         { focusedParticipant: b } = (0, a.cj)(
             [I.Z],
@@ -217,7 +217,7 @@ function B(e) {
                   }),
               })
             : null,
-        H = (0, j.m$)({ channelId: t.id });
+        B = (0, j.m$)({ channelId: t.id });
     return (0, i.jsxs)("div", {
         className: k.subtitleContainer,
         children: [
@@ -225,7 +225,7 @@ function B(e) {
                 theme: L.BR.DARK,
                 children: (e) =>
                     (0, i.jsxs)(y.ZP, {
-                        onDoubleClick: v.O,
+                        onDoubleClick: _.O,
                         transparent: !0,
                         className: l()(e, k.headerBar),
                         innerClassName: k.headerBarChildren,
@@ -250,7 +250,7 @@ function B(e) {
                                               })
                                             : null,
                                         C,
-                                        H &&
+                                        B &&
                                             (0, i.jsx)(o.u, {
                                                 text: D.intl.string(D.t.QyZ4Td),
                                                 children: (0, i.jsx)(s.tQf, {
@@ -263,7 +263,7 @@ function B(e) {
                                     ],
                                 }),
                             }),
-                            (0, i.jsx)(_.TS, {
+                            (0, i.jsx)(v.TS, {
                                 channel: t,
                                 guild: r,
                             }),

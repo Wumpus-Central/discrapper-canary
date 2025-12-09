@@ -1,9 +1,9 @@
 n.d(t, {
-    Lc: () => w,
+    Lc: () => D,
     Yr: () => R,
     ZP: () => L,
     gN: () => P,
-    sI: () => D,
+    sI: () => w,
 }),
     n(35282),
     n(388685),
@@ -104,12 +104,12 @@ function R(e) {
             );
     }
 }
-function w(e, t) {
+function D(e, t) {
     let [, n] = e,
         [, r] = t;
     return n === r;
 }
-var D = (function (e) {
+var w = (function (e) {
     return (
         (e.VIDEO = "VIDEO"),
         (e.STREAM = "STREAM"),
@@ -277,12 +277,12 @@ class L {
             N = g.Z.getVoicePlatformForChannel(this.channelId, e),
             P = f.Z.getChannel(this.channelId),
             R = null == P ? void 0 : P.getGuildId(),
-            w =
+            D =
                 null !=
                     (r =
                         (null == (n = this.call) || null == (t = n.ringing) ? void 0 : t.includes(e)) ||
                         this.guildRingingUsers.has(e)) && r;
-        (null != A || w) &&
+        (null != A || D) &&
             ((b = C(T({ type: O.fO.USER }, h.Z.getUserStreamData(e, R)), {
                 user: I,
                 id: I.id,
@@ -295,18 +295,18 @@ class L {
                 latched: x(e),
                 lastSpoke: null != (i = this.lastSpoke[e]) ? i : 0,
                 soundsharing: _.Z.isSoundSharing(e),
-                ringing: w,
+                ringing: D,
                 userNick: E.ZP.getName(R, this.channelId, I),
                 userAvatarDecoration: (0, s.o)(I, R),
                 localVideoDisabled: p.Z.isLocalVideoDisabled(I.id),
                 isPoppedOut: this.poppedOutParticipants.has(I.id),
             })),
             v.push(b));
-        let D = null != (o = c.Z.getStreamForUser(e, R)) ? o : c.Z.getActiveStreamForUser(e, R);
-        if (null != D && D.channelId === this.channelId) {
-            let t = (0, l.V9)(D),
+        let w = null != (o = c.Z.getStreamForUser(e, R)) ? o : c.Z.getActiveStreamForUser(e, R);
+        if (null != w && w.channelId === this.channelId) {
+            let t = (0, l.V9)(w),
                 n = this.getParticipant(t),
-                r = D.ownerId === u.default.getId() && c.Z.isSelfStreamHidden(this.channelId),
+                r = w.ownerId === u.default.getId() && c.Z.isSelfStreamHidden(this.channelId),
                 i =
                     (null == n ? void 0 : n.type) === O.fO.STREAM
                         ? {
@@ -320,7 +320,7 @@ class L {
                 userVideo: null != (d = null == A ? void 0 : A.selfVideo) && d,
                 user: I,
                 userNick: E.ZP.getName(R, this.channelId, I),
-                stream: D,
+                stream: w,
                 isPoppedOut: this.poppedOutParticipants.has(t),
             })),
                 v.push(y);

@@ -39,8 +39,8 @@ let _ = {
             N = (0, i.Z)(t.placement),
             P = (0, d.Z)(t.placement),
             R = !P,
-            w = (0, a.Z)(N),
-            D = (0, o.Z)(w),
+            D = (0, a.Z)(N),
+            w = (0, o.Z)(D),
             x = t.modifiersData.popperOffsets,
             L = t.rects.reference,
             j = t.rects.popper,
@@ -66,10 +66,10 @@ let _ = {
         if (x) {
             if (h) {
                 var Z,
-                    B = "y" === w ? r.we : r.t$,
-                    F = "y" === w ? r.I : r.F2,
-                    V = "y" === w ? "height" : "width",
-                    H = x[w],
+                    B = "y" === D ? r.we : r.t$,
+                    F = "y" === D ? r.I : r.F2,
+                    V = "y" === D ? "height" : "width",
+                    H = x[D],
                     Y = H + C[B],
                     W = H - C[F],
                     K = I ? -j[V] / 2 : 0,
@@ -90,27 +90,27 @@ let _ = {
                     en = R ? L[V] / 2 - K - et - $ - k.mainAxis : z - et - $ - k.mainAxis,
                     er = R ? -L[V] / 2 + K + et + ee + k.mainAxis : q + et + ee + k.mainAxis,
                     ei = t.elements.arrow && (0, c.Z)(t.elements.arrow),
-                    ea = ei ? ("y" === w ? ei.clientTop || 0 : ei.clientLeft || 0) : 0,
-                    eo = null != (Z = null == U ? void 0 : U[w]) ? Z : 0,
+                    ea = ei ? ("y" === D ? ei.clientTop || 0 : ei.clientLeft || 0) : 0,
+                    eo = null != (Z = null == U ? void 0 : U[D]) ? Z : 0,
                     es = H + en - eo - ea,
                     el = H + er - eo,
                     ec = (0, s.u)(I ? (0, p.VV)(Y, es) : Y, H, I ? (0, p.Fp)(W, el) : W);
-                (x[w] = ec), (G[w] = ec - H);
+                (x[D] = ec), (G[D] = ec - H);
             }
             if (E) {
                 var eu,
-                    ed = "x" === w ? r.we : r.t$,
-                    ef = "x" === w ? r.I : r.F2,
-                    ep = x[D],
-                    e_ = "y" === D ? "height" : "width",
+                    ed = "x" === D ? r.we : r.t$,
+                    ef = "x" === D ? r.I : r.F2,
+                    ep = x[w],
+                    e_ = "y" === w ? "height" : "width",
                     em = ep + C[ed],
                     eh = ep - C[ef],
                     eg = -1 !== [r.we, r.t$].indexOf(N),
-                    eE = null != (eu = null == U ? void 0 : U[D]) ? eu : 0,
+                    eE = null != (eu = null == U ? void 0 : U[w]) ? eu : 0,
                     eb = eg ? em : ep - L[e_] - j[e_] - eE + k.altAxis,
                     ey = eg ? ep + L[e_] + j[e_] - eE - k.altAxis : eh,
                     eO = I && eg ? (0, s.q)(eb, ep, ey) : (0, s.u)(I ? eb : em, ep, I ? ey : eh);
-                (x[D] = eO), (G[D] = eO - ep);
+                (x[w] = eO), (G[w] = eO - ep);
             }
             t.modifiersData[_] = G;
         }

@@ -35,8 +35,8 @@ var r,
     N = n(160404),
     P = n(41776),
     R = n(332473),
-    w = n(30684),
-    D = n(616106),
+    D = n(30684),
+    w = n(616106),
     x = n(2109),
     L = n(518638),
     j = n(1844),
@@ -101,7 +101,7 @@ function eR(e, t, n) {
         e
     );
 }
-function ew(e) {
+function eD(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -117,7 +117,7 @@ function ew(e) {
     }
     return e;
 }
-function eD(e, t) {
+function ew(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -134,7 +134,7 @@ function ex(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : eD(Object(t)).forEach(function (n) {
+            : ew(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -657,7 +657,7 @@ let eQ = [
             },
         },
         [eI.kVF.PREMIUM_REACTIVATE]: {
-            predicate: () => !eq(eI.kVF.PREMIUM_REACTIVATE) && D.Z.shouldShowReactivateNotice(),
+            predicate: () => !eq(eI.kVF.PREMIUM_REACTIVATE) && w.Z.shouldShowReactivateNotice(),
         },
         [eI.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT]: {
             predicate: (e) => {
@@ -740,7 +740,7 @@ let eQ = [
                 var t;
                 let { currentUser: n } = e,
                     r = null != (t = e_.Z.paymentSources) ? t : {};
-                return w.Z.getIsTargeted() && !(0, ey.I5)(n) && 0 !== Object.keys(r).length;
+                return D.Z.getIsTargeted() && !(0, ey.I5)(n) && 0 !== Object.keys(r).length;
             },
         },
         [eI.kVF.BLOCK_USER_FEEDBACK_NAGBAR]: {
@@ -798,7 +798,7 @@ function e$() {
                           premiumSubscription: i,
                           selectedGuildId: a,
                       });
-            eV = ex(ew({}, eF), {
+            eV = ex(eD({}, eF), {
                 type: n,
                 metadata: o,
             });
@@ -865,7 +865,7 @@ class tt extends (r = o.ZP.Store) {
                 z.default,
                 q.Z,
                 Q.Z,
-                w.Z,
+                D.Z,
                 X.Z,
                 m.Z,
                 J.Z,
@@ -896,7 +896,7 @@ class tt extends (r = o.ZP.Store) {
                 B.Z,
                 el.Z,
                 ec.Z,
-                D.Z,
+                w.Z,
                 em.Z,
                 eu.ZP,
                 eE.Z,

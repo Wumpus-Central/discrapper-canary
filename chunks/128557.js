@@ -21,8 +21,8 @@ var i = n(54381),
     b = n(978946),
     C = n(314897),
     y = n(430824),
-    v = n(594174),
-    _ = n(259580),
+    _ = n(594174),
+    v = n(259580),
     O = n(585483),
     x = n(63063),
     E = n(358085),
@@ -106,9 +106,9 @@ function w(e) {
                           color: "currentColor",
                           className: a()(T.checkmark, { [T.animate]: d }),
                       })
-                    : (0, i.jsx)(_.Z, {
+                    : (0, i.jsx)(v.Z, {
                           className: T.arrow,
-                          direction: _.Z.Directions.RIGHT,
+                          direction: v.Z.Directions.RIGHT,
                       }),
             ],
         })
@@ -118,22 +118,22 @@ function M(e) {
     let { channel: t } = e,
         l = (0, s.e7)([y.Z], () => (null != t ? y.Z.getGuild(t.getGuildId()) : null), [t]),
         p = null != l && j.default.extractTimestamp(l.id) < Date.now() - P._8R,
-        _ = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
+        v = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
         { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, l),
-        D = (0, s.e7)([v.default], () => {
+        D = (0, s.e7)([_.default], () => {
             var e, t;
             return (
-                (null == (e = v.default.getCurrentUser()) ? void 0 : e.desktop) === !0 ||
-                (null == (t = v.default.getCurrentUser()) ? void 0 : t.mobile) === !0
+                (null == (e = _.default.getCurrentUser()) ? void 0 : e.desktop) === !0 ||
+                (null == (t = _.default.getCurrentUser()) ? void 0 : t.mobile) === !0
             );
         }),
         { guildPopulated: k, guildMessaged: U, guildPersonalized: V } = (0, f.h_)(l),
         {
-            handleInvite: H,
+            handleInvite: B,
             handleMessage: F,
-            handlePersonalize: B,
+            handlePersonalize: H,
             handleDownload: G,
-            handleAddApplication: z,
+            handleAddApplication: W,
         } = (function (e) {
             let t = r.useCallback(() => {
                     h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
@@ -210,7 +210,7 @@ function M(e) {
                 }, [e]),
             };
         })(l),
-        W = !(D || k || U || V),
+        z = !(D || k || U || V),
         { titleAnimatedStyle: q, opacities: K } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
@@ -265,7 +265,7 @@ function M(e) {
                     opacities: i,
                 }
             );
-        })(W),
+        })(z),
         [Y, X] = r.useState([]),
         J = Y.length > 0;
     if (
@@ -289,12 +289,12 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: z ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0Ta),
                             completed: k,
-                            onClick: H,
+                            onClick: B,
                         }),
                     },
                     "invite",
@@ -306,12 +306,12 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: z ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.$_T,
                             header: Z.intl.string(Z.t.c5kxPh),
                             completed: V,
-                            onClick: B,
+                            onClick: H,
                         }),
                     },
                     "customize",
@@ -323,7 +323,7 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: z ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t["SoP7+l"]),
@@ -340,7 +340,7 @@ function M(e) {
                     o.Z.div,
                     {
                         className: T.cardWrapper,
-                        style: W ? { opacity: K[Q.length] } : {},
+                        style: z ? { opacity: K[Q.length] } : {},
                         children: (0, i.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNI9),
@@ -356,18 +356,18 @@ function M(e) {
                 o.Z.div,
                 {
                     className: T.cardWrapper,
-                    style: W ? { opacity: K[Q.length] } : {},
+                    style: z ? { opacity: K[Q.length] } : {},
                     children: (0, i.jsx)(w, {
                         iconUrl: u.Tg$,
                         header: Z.intl.string(Z.t.IhHDEO),
                         completed: J,
-                        onClick: z,
+                        onClick: W,
                     }),
                 },
                 "addapp",
             ),
         ));
-    let $ = _ ? Z.intl.string(Z.t["1ach9C"]) : Z.intl.string(Z.t["ezm+/j"]);
+    let $ = v ? Z.intl.string(Z.t["1ach9C"]) : Z.intl.string(Z.t["ezm+/j"]);
     p && ($ = Z.intl.string(Z.t["gwyU/J"]));
     let ee = "".concat(
         x.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED),

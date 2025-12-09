@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var a = n(54381),
-    l = n(473749),
-    r = n(979554),
-    i = n(311570),
+    r = n(473749),
+    i = n(979554),
+    l = n(311570),
     s = n(28664),
     o = n(481060),
     c = n(906732),
@@ -17,7 +17,7 @@ var a = n(54381),
 let b = (e) => {
     let { product: t, primary: n, selectedVariantIndex: b, returnRef: v, onSuccess: j, tooltipDelay: _ } = e,
         { analyticsLocations: y } = (0, c.ZP)(),
-        C = l.useRef(null),
+        C = r.useRef(null),
         S = (0, m.sp)(),
         E = (0, p.Z)();
     return (0, a.jsx)(s.u, {
@@ -36,7 +36,7 @@ let b = (e) => {
                         sku_id: t.skuId,
                         page_section: null == S ? void 0 : S.pageSection,
                         page_category: null == S ? void 0 : S.pageCategory,
-                        tile_type: r.Z[t.type],
+                        tile_type: i.Z[t.type],
                         tile_position: String(null == S ? void 0 : S.tilePosition),
                         cta_name: "gift button",
                         page_type: E || "home",
@@ -50,7 +50,7 @@ let b = (e) => {
                         giftingOrigin: f.Wt.SHOP_PAGE,
                         analyticsLocations: y,
                         returnRef: v,
-                        variantsReturnStyle: i.v.VARIANTS_GROUP,
+                        variantsReturnStyle: l.v.VARIANTS_GROUP,
                         onClose:
                             null != j
                                 ? (e) => {

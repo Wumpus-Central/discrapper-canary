@@ -30,8 +30,8 @@ function y(e) {
     A && (C = null != f ? f : m);
     let [N, P] = i.useState(C),
         R = (0, l.iE)(),
-        w = (0, l.yX)(),
-        [D, x] = i.useState(),
+        D = (0, l.yX)(),
+        [w, x] = i.useState(),
         [L, j] = i.useState(
             t && (0, u.MY)(y) === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == c ? _.intl.string(_.t.ZkOo1U) : c,
         ),
@@ -84,8 +84,8 @@ function y(e) {
             recommendedGiftSkuIds: z,
             giftingOrigin: p,
             claimableRewards: R,
-            claimableVariants: w,
-            selectedGiftingPromotionReward: D,
+            claimableVariants: D,
+            selectedGiftingPromotionReward: w,
             setSelectedGiftingPromotionReward: x,
         },
         children: E,

@@ -1,66 +1,66 @@
 n.d(t, {
-    q: () => s,
+    q: () => o,
     z: () => a,
 });
-var r = n(54381);
+var l = n(54381);
 n(473749);
-var l = n(481060);
+var r = n(481060);
 function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            l = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            l.forEach(function (t) {
+                var l;
+                (l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = l);
             });
     }
     return e;
 }
 function a(e) {
-    let { guildId: t, userId: a, anaylticsLocations: s, modReportId: o } = e;
-    (0, l.ZDy)(async () => {
+    let { guildId: t, userId: a, anaylticsLocations: o, modReportId: u } = e;
+    (0, r.ZDy)(async () => {
         let { default: e } = await n.e("72920").then(n.bind(n, 109730));
         return (n) =>
-            (0, r.jsx)(
+            (0, l.jsx)(
                 e,
                 i(
                     {
                         guildId: t,
                         userId: a,
-                        anaylticsLocations: s,
-                        modReportId: o,
+                        anaylticsLocations: o,
+                        modReportId: u,
                     },
                     n,
                 ),
             );
     });
 }
-function s(e) {
-    let { guildId: t, userId: a, anaylticsLocations: s } = e;
-    (0, l.ZDy)(async () => {
+function o(e) {
+    let { guildId: t, userId: a, anaylticsLocations: o } = e;
+    (0, r.ZDy)(async () => {
         let { default: e } = await n.e("76233").then(n.bind(n, 171494));
         return (n) =>
-            (0, r.jsx)(
+            (0, l.jsx)(
                 e,
                 i(
                     {
                         guildId: t,
                         userId: a,
-                        anaylticsLocations: s,
+                        anaylticsLocations: o,
                     },
                     n,
                 ),

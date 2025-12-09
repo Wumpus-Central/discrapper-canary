@@ -20,25 +20,15 @@ class s extends (r = i.ZP.Store) {
         return this._isCreatingOrder;
     }
     get currentOrderId() {
-        var e, t;
-        return null != (t = null == (e = this._order) ? void 0 : e.id) ? t : null;
-    }
-    get currentOrder() {
-        return this._order;
-    }
-    get currentPaymentGateway() {
-        var e, t, n;
-        return null != (n = null == (t = this._order) || null == (e = t.billing_facet) ? void 0 : e.payment_gateway)
-            ? n
-            : null;
+        return this._orderId;
     }
     handleOrderCreateStart(e) {
         let {} = e;
         this._isCreatingOrder = !0;
     }
     handleOrderCreateSuccess(e) {
-        let { orderId: t, order: n } = e;
-        (this._isCreatingOrder = !1), (this._order = null != n ? n : null);
+        let { orderId: t } = e;
+        (this._isCreatingOrder = !1), (this._orderId = t);
     }
     handleOrderCreateFail(e) {
         let {} = e;
@@ -58,7 +48,7 @@ class s extends (r = i.ZP.Store) {
     }
     handlePaymentModalOpen(e) {
         let {} = e;
-        this._order = null;
+        this._orderId = null;
     }
     constructor() {
         super(a.Z, {
@@ -72,7 +62,7 @@ class s extends (r = i.ZP.Store) {
         }),
             o(this, "_isCreatingOrder", !1),
             o(this, "_isUpdatingOrder", !1),
-            o(this, "_order", null);
+            o(this, "_orderId", null);
     }
 }
 o(s, "displayName", "OrderStore");

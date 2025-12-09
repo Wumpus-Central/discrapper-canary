@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => y });
 var i = n(54381);
 n(473749);
 var r = n(13245),
@@ -14,13 +14,13 @@ var r = n(13245),
     f = n(312839),
     g = n(981631),
     m = n(987650),
-    y = n(388032);
-function b(e, t, n, b) {
-    var _;
-    let { icon: v, title: O, body: E } = (0, s.Xi)(e, t, n),
+    _ = n(388032);
+function y(e, t, n, y) {
+    var v;
+    let { icon: b, title: O, body: E } = (0, s.Xi)(e, t, n),
         { trackView: x, trackClick: S } = (0, f.R)(m.n0.TextChat, {
             notif_type: m.n0.TextChat,
-            notif_user_id: null == (_ = t.author) ? void 0 : _.id,
+            notif_user_id: null == (v = t.author) ? void 0 : v.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -28,19 +28,19 @@ function b(e, t, n, b) {
             channel_type: e.type,
         });
     return {
-        icon: v,
+        icon: b,
         title: O,
         body: E,
         renderFooter: (e) =>
             e
                 ? (0, i.jsx)("div", {
                       style: { textAlign: "center" },
-                      children: y.intl.string(y.t["+MJm3w"]),
+                      children: _.intl.string(_.t["+MJm3w"]),
                   })
                 : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            b && (0, a.GN)(c.Ay, c.yk), x();
+            y && (0, a.GN)(c.Ay, c.yk), x();
         },
         onNotificationClick: () => {
             if (o.default.isOverlayOOPEnabledForPid((0, p.getPID)())) {

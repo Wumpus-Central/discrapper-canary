@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(246946),
     P = n(663389),
     R = n(351402),
-    w = n(853872),
-    D = n(78839),
+    D = n(853872),
+    w = n(78839),
     x = n(580130),
     L = n(626135),
     j = n(63063),
@@ -110,25 +110,25 @@ function X() {
     return (0, r.jsx)("hr", { className: K.hr });
 }
 let J = function () {
-    let e = (0, s.e7)([D.Z], () => D.Z.getPremiumTypeSubscription()),
+    let e = (0, s.e7)([w.Z], () => w.Z.getPremiumTypeSubscription()),
         t = (0, g.Z)({ subscriptionFilter: (e) => B.eS.has(e.status) }),
         n = t.length > 1,
         a = (0, s.e7)(
-            [w.Z],
-            () => (null != e && null != e.paymentSourceId ? w.Z.getPaymentSource(e.paymentSourceId) : null),
+            [D.Z],
+            () => (null != e && null != e.paymentSourceId ? D.Z.getPaymentSource(e.paymentSourceId) : null),
             [e],
         ),
-        f = (0, s.e7)([D.Z], () => D.Z.hasFetchedSubscriptions()),
+        f = (0, s.e7)([w.Z], () => w.Z.hasFetchedSubscriptions()),
         b = (0, s.e7)([R.Z], () => R.Z.isBusy),
         y = (0, E.V)(),
         x = (0, s.e7)([P.Z], () => P.Z.getSubsection()),
-        j = (0, s.e7)([D.Z], () => {
+        j = (0, s.e7)([w.Z], () => {
             var e, t;
-            return null != (t = null == (e = D.Z.getActiveApplicationSubscriptions()) ? void 0 : e.length) ? t : 0;
+            return null != (t = null == (e = w.Z.getActiveApplicationSubscriptions()) ? void 0 : e.length) ? t : 0;
         }),
-        M = (0, s.e7)([D.Z], () => {
+        M = (0, s.e7)([w.Z], () => {
             var e;
-            return Object.values(null != (e = D.Z.getSubscriptions()) ? e : {})
+            return Object.values(null != (e = w.Z.getSubscriptions()) ? e : {})
                 .filter((e) => e.type === V.NYc.GUILD)
                 .filter((e) => e.status !== V.O0b.ENDED).length;
         }),

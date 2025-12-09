@@ -1,11 +1,11 @@
 n.d(t, {
     $X: () => g,
-    $f: () => v,
+    $f: () => _,
     C$: () => b,
     Dt: () => y,
     Hw: () => f,
     eD: () => m,
-    uW: () => _,
+    uW: () => v,
     wW: () => C,
 }),
     n(539854);
@@ -120,7 +120,7 @@ function y(e) {
                         {
                             id: "custom-time",
                             label: d.intl.string(d.t.stHooC),
-                            action: () => v({ channel: t }),
+                            action: () => _({ channel: t }),
                         },
                         "custom-time",
                     ),
@@ -130,7 +130,7 @@ function y(e) {
         c
     );
 }
-function v(e) {
+function _(e) {
     let { channel: t, defaultValue: r = l()().startOf("hour").add(1, "hour") } = e;
     (0, a.ZDy)(
         async () => {
@@ -147,7 +147,7 @@ function v(e) {
         { modalKey: c.k },
     );
 }
-function _(e) {
+function v(e) {
     let { scheduledMessage: t } = e;
     (0, a.ZDy)(
         async () => {

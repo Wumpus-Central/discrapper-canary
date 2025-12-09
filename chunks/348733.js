@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var i = n(54381),
     r = n(473749),
     s = n(120356),
@@ -13,30 +13,30 @@ var i = n(54381),
     f = n(987650),
     g = n(981631),
     m = n(991168);
-function y(e) {
+function _(e) {
     let { locked: t, keybind: n } = e,
         s = r.useRef(null),
         h = (0, a.Wu)([c.Z], () => c.Z.getNotifications()),
-        y = (0, a.e7)([d.default], () => d.default.getNotificationPositionMode());
-    if ((0, a.e7)([p.Z], () => p.Z.isNotificationDisabled(f.n0.TextChat)) || y === g._vf.DISABLED) return null;
-    let _ = h.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
-        v = (0, l.groupBy)(_, (e) => e.type);
+        _ = (0, a.e7)([d.default], () => d.default.getNotificationPositionMode());
+    if ((0, a.e7)([p.Z], () => p.Z.isNotificationDisabled(f.n0.TextChat)) || _ === g._vf.DISABLED) return null;
+    let v = h.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
+        b = (0, l.groupBy)(v, (e) => e.type);
     return (0, i.jsx)(u.Z, {
         contentDomRef: s,
         observeInterval: 200,
         children: (0, i.jsx)("div", {
             ref: s,
-            className: o()(m.container, m[y]),
-            children: Object.entries(v).map((e) => {
+            className: o()(m.container, m[_]),
+            children: Object.entries(b).map((e) => {
                 let [r, s] = e;
                 return 0 === s.length
                     ? null
                     : (0, i.jsx)(
-                          b,
+                          y,
                           {
                               locked: t,
                               keybind: n,
-                              position: y,
+                              position: _,
                               notification: s[0],
                           },
                           r,
@@ -45,7 +45,7 @@ function y(e) {
         }),
     });
 }
-function b(e) {
+function y(e) {
     let { notification: t, position: n, keybind: r, locked: s } = e;
     return (0, i.jsx)("div", {
         className: m.notificationGroup,

@@ -102,9 +102,9 @@ function T(e, t, n, g) {
     if (!T.match) throw RangeError("locale must contain match property");
     var C = (0, u.Z)(
         null !=
-            (w =
+            (D =
                 null !=
-                (D =
+                (w =
                     null !=
                     (x =
                         null != (L = null == g ? void 0 : g.firstWeekContainsDate)
@@ -114,11 +114,11 @@ function T(e, t, n, g) {
                               : M.firstWeekContainsDate)
                         ? x
                         : v.firstWeekContainsDate)
-                    ? D
+                    ? w
                     : null == (k = v.locale) || null == (U = k.options)
                       ? void 0
                       : U.firstWeekContainsDate)
-            ? w
+            ? D
             : 1,
     );
     if (!(C >= 1 && C <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
@@ -149,8 +149,8 @@ function T(e, t, n, g) {
         else return new Date(NaN);
     var P,
         R,
-        w,
         D,
+        w,
         x,
         L,
         j,

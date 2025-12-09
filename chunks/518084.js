@@ -29,12 +29,12 @@ function f(e, t, n) {
 }
 let g = h.t_t.DEFAULT,
     m = 1,
-    y = s.createContext({
+    _ = s.createContext({
         type: g,
         opacity: m,
     }),
-    b = s.createContext(void 0),
-    _ = (e) => {
+    y = s.createContext(void 0),
+    v = (e) => {
         var { children: t, className: n } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -57,10 +57,10 @@ let g = h.t_t.DEFAULT,
                 }
                 return r;
             })(e, ["children", "className"]);
-        return (0, r.jsx)(y.Consumer, {
+        return (0, r.jsx)(_.Consumer, {
             children: (e) => {
                 let { type: s } = e;
-                return (0, r.jsx)(b.Consumer, {
+                return (0, r.jsx)(y.Consumer, {
                     children: (e) => {
                         var o, a;
                         return (0, r.jsx)(
@@ -107,12 +107,12 @@ let g = h.t_t.DEFAULT,
             },
         });
     };
-class v extends (i = s.PureComponent) {
+class b extends (i = s.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
-        return (0, r.jsx)(b.Consumer, {
+        return (0, r.jsx)(y.Consumer, {
             children: (i) =>
-                (0, r.jsx)(y.Consumer, {
+                (0, r.jsx)(_.Consumer, {
                     children: (s) => {
                         let o = l()(p.body, p[c()(s.type)], n);
                         return e
@@ -131,10 +131,10 @@ class v extends (i = s.PureComponent) {
         });
     }
 }
-f(v, "defaultProps", { disableScroll: !1 });
+f(b, "defaultProps", { disableScroll: !1 });
 let O = (e) => {
         let { type: t = g, width: n, height: i, children: s, className: o, opacity: a = m, onClick: d } = e;
-        return (0, r.jsx)(y.Provider, {
+        return (0, r.jsx)(_.Provider, {
             value: {
                 type: t,
                 opacity: a,
@@ -152,7 +152,7 @@ let O = (e) => {
     },
     E = (e) => {
         let { children: t, className: n, dynamicSize: i = !1 } = e;
-        return (0, r.jsx)(b.Consumer, {
+        return (0, r.jsx)(y.Consumer, {
             children: (e) =>
                 (0, r.jsx)("div", {
                     className: l()(p.content, { [p.staticSize]: !i }, n),
@@ -164,15 +164,15 @@ let O = (e) => {
 (O.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [_, v, E];
-    return (0, r.jsx)(y.Consumer, {
+    let i = [v, b, E];
+    return (0, r.jsx)(_.Consumer, {
         children: (e) => {
             let { opacity: o } = e,
                 l = { backgroundColor: "rgba(54, 57, 63, ".concat("" + (null != n ? n : o), ")") };
             if ("string" == typeof t.type) return s.cloneElement(t, { style: l });
             {
                 if (i.includes(t.type))
-                    return (0, r.jsx)(b.Provider, {
+                    return (0, r.jsx)(y.Provider, {
                         value: l,
                         children: t,
                     });
@@ -186,7 +186,7 @@ let O = (e) => {
         },
     });
 }),
-    (O.Body = v),
+    (O.Body = b),
     (O.Content = E),
     (O.Icon = (e) => {
         let {
@@ -224,5 +224,5 @@ let O = (e) => {
             }),
         });
     }),
-    (O.Bar = _);
+    (O.Bar = v);
 let x = O;

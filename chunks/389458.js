@@ -67,7 +67,7 @@ function I(e) {
                 let n = r.query(e);
                 g.set(e, n), n > E && (E = n), (t = !0);
             }
-    v(g, p), t && D.emitChange();
+    v(g, p), t && w.emitChange();
 }
 function T() {
     let e = u.V.getCurrentConfig({ location: "WordFrequencyStore" }, { autoTrackExposure: !0 }).enabled,
@@ -99,7 +99,7 @@ let P = (e) => {
         let { message: t } = e;
         return N([t]);
     };
-class w extends (i = a.ZP.PersistedStore) {
+class D extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(s.Z), null != e)) {
             var t;
@@ -134,10 +134,10 @@ class w extends (i = a.ZP.PersistedStore) {
         return null != t && t > h;
     }
 }
-d(w, "displayName", "WordFrequencyStore"), d(w, "persistKey", "WordFrequencyStore");
-let D = new w(o.Z, {
+d(D, "displayName", "WordFrequencyStore"), d(D, "persistKey", "WordFrequencyStore");
+let w = new D(o.Z, {
         LOAD_MESSAGES_SUCCESS: P,
         MESSAGE_CREATE: R,
         DEV_TOOLS_WORD_FREQUENCY_RESET: C,
     }),
-    x = D;
+    x = w;

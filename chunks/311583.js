@@ -1,9 +1,9 @@
 n.d(t, { Z: () => f });
 var a = n(54381);
 n(473749);
-var l = n(481060),
-    r = n(100527),
-    i = n(381585),
+var r = n(481060),
+    i = n(100527),
+    l = n(381585),
     s = n(994587),
     o = n(429368),
     c = n(680942),
@@ -24,20 +24,20 @@ let x = (e) => {
             } = e,
             b = (0, s.Nd)(),
             v = null == b ? void 0 : b.tab,
-            j = (0, i.sp)(),
+            j = (0, l.sp)(),
             _ = (0, m.J)(t, f),
-            y = (0, d.J7)(t, r.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON, g);
+            y = (0, d.J7)(t, i.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON, g);
         return null != u || null != x
-            ? (0, a.jsx)(l.hU, {
+            ? (0, a.jsx)(r.hU, {
                   variant: "primary",
                   "aria-label": h.intl.string(h.t.SKNnqq),
-                  icon: null != x ? x : l.tEF,
+                  icon: null != x ? x : r.tEF,
                   onClick: (e) => {
                       e.stopPropagation(), null != u ? u(t.skuId) : y(e);
                   },
               })
             : _
-              ? (0, a.jsx)(i.k0, {
+              ? (0, a.jsx)(l.k0, {
                     newValue: { pageCategory: v === p.AW.HOME || null == j ? void 0 : j.pageCategory },
                     children: (0, a.jsx)(c.Z, {
                         primary: !0,
@@ -50,7 +50,7 @@ let x = (e) => {
               : null;
     },
     f = (e) => {
-        let { skuId: t, cardRef: n, onClick: l, icon: r, prioritizedCurrency: i, onClickAnalytics: s } = e,
+        let { skuId: t, cardRef: n, onClick: r, icon: i, prioritizedCurrency: l, onClickAnalytics: s } = e,
             c = (0, d.LJ)(t),
             m = (0, o.o)(c);
         if (null == c) return null;
@@ -59,9 +59,9 @@ let x = (e) => {
             product: p,
             cardRef: n,
             selectedVariantIndex: m,
-            onClick: l,
-            icon: r,
-            prioritizedCurrency: i,
+            onClick: r,
+            icon: i,
+            prioritizedCurrency: l,
             onClickAnalytics: s,
         });
     };

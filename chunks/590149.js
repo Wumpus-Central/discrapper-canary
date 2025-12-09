@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(481060),
     o = n(259580),
     c = n(422665);
@@ -10,7 +10,7 @@ function d(e) {
     let {
             icon: t,
             title: n,
-            subtitle: r,
+            subtitle: i,
             children: d,
             className: u,
             isExpanded: m,
@@ -19,26 +19,26 @@ function d(e) {
             onOpen: x,
             maxHeight: f,
         } = e,
-        [g, b] = l.useState(h),
-        v = l.useRef(null),
-        [j, _] = l.useState(null),
+        [g, b] = r.useState(h),
+        v = r.useRef(null),
+        [j, _] = r.useState(null),
         y = void 0 !== m,
         C = y ? m : g;
-    l.useEffect(() => {
+    r.useEffect(() => {
         C && null != v.current && _(v.current.scrollHeight);
     }, [C, d]);
-    let S = l.useCallback(() => {
+    let S = r.useCallback(() => {
             let e = !C;
             y || b(e), null == p || p(e), e && null != x && x();
         }, [C, y, p, x]),
-        E = l.useMemo(() => {
+        E = r.useMemo(() => {
             if (C) {
                 if (null != f) return { maxHeight: "number" == typeof f ? "".concat(f, "px") : f };
                 if (null != j) return { maxHeight: "".concat(j, "px") };
             }
         }, [f, C, j]);
     return (0, a.jsxs)("div", {
-        className: i()(c.accordionContainer, u, { [c.opened]: C }),
+        className: l()(c.accordionContainer, u, { [c.opened]: C }),
         children: [
             (0, a.jsxs)(s.P3F, {
                 className: c.header,
@@ -57,17 +57,17 @@ function d(e) {
                                 color: "text-default",
                                 children: n,
                             }),
-                            null != r &&
-                                "" !== r &&
+                            null != i &&
+                                "" !== i &&
                                 (0, a.jsx)(s.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-subtle",
-                                    children: r,
+                                    children: i,
                                 }),
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: i()(c.caret, { [c.opened]: C }),
+                        className: l()(c.caret, { [c.opened]: C }),
                         children: (0, a.jsx)(o.Z, {
                             width: 20,
                             height: 20,
@@ -78,7 +78,7 @@ function d(e) {
             }),
             (0, a.jsx)("div", {
                 ref: v,
-                className: i()(c.content, { [c.opened]: C }),
+                className: l()(c.content, { [c.opened]: C }),
                 style: E,
                 children: d,
             }),

@@ -163,7 +163,7 @@ function R() {
                                 color: "text-subtle",
                                 children: I.intl.string(S.default["no+FQS"]),
                             }),
-                            (0, r.jsx)(w, {
+                            (0, r.jsx)(D, {
                                 overallStatus: A ? 0 : R ? 3 : 1,
                                 name: I.intl.string(S.default.AGLx00),
                                 steps: [
@@ -187,7 +187,7 @@ function R() {
                                 ],
                                 isChosen: u === v.r.RPC,
                             }),
-                            (0, r.jsx)(w, {
+                            (0, r.jsx)(D, {
                                 overallStatus: +!N,
                                 name: I.intl.string(S.default.K3ObrU),
                                 steps: [
@@ -208,7 +208,7 @@ function R() {
                     (0, r.jsxs)("div", {
                         className: T.footer,
                         children: [
-                            (0, r.jsx)(D, {
+                            (0, r.jsx)(w, {
                                 status: +!i,
                                 text: I.intl.string(I.t["Vu/zmQ"]),
                             }),
@@ -255,12 +255,12 @@ function R() {
         children: (0, r.jsx)(l.y5t, { children: null != e ? k() : M() }),
     });
 }
-function w(e) {
+function D(e) {
     let { overallStatus: t, name: n, steps: i, isChosen: a } = e;
     return (0, r.jsxs)("div", {
         className: T.categoryContainer,
         children: [
-            (0, r.jsx)(D, {
+            (0, r.jsx)(w, {
                 status: t,
                 text: n,
             }),
@@ -277,7 +277,7 @@ function w(e) {
         ],
     });
 }
-function D(e) {
+function w(e) {
     let { text: t, status: n } = e;
     return (0, r.jsxs)("div", {
         className: T.categoryHeader,

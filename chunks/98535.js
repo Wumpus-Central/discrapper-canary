@@ -28,7 +28,7 @@ function E(e) {
         m = v();
     S(m);
     let E = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        [O, x] = l.useState(void 0),
+        [x, O] = l.useState(void 0),
         [y, k] = l.useState(!0),
         T = l.useMemo(
             () =>
@@ -53,7 +53,7 @@ function E(e) {
                 c(t, n);
                 let s = r && !E,
                     a = i ? _.AW.ORBS : _.AW.CATALOG;
-                x(n), k(!l), o(a, s);
+                O(n), k(!l), o(a, s);
             },
             [E, o, c],
         ),
@@ -76,10 +76,10 @@ function E(e) {
             : (0, r.jsx)(f.Z, {
                   tab: t,
                   sortedCategories: T,
-                  initialCategoryId: O,
+                  initialCategoryId: x,
                   showFilterInitially: y,
                   onUnmount: () => {
-                      x(void 0), k(!0);
+                      O(void 0), k(!0);
                   },
               });
 }

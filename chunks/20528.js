@@ -54,8 +54,8 @@ let A = (0, r.debounce)(o.xc, 1000),
     N = {},
     P = 3 * b.Z.Millis.MINUTE,
     R = 5 * b.Z.Millis.SECOND,
-    w = 12 * b.Z.Millis.SECOND,
-    D = null;
+    D = 12 * b.Z.Millis.SECOND,
+    w = null;
 function x(e) {
     var t;
     null == (t = C[e]) || t.stop(), delete C[e];
@@ -72,7 +72,7 @@ function j(e, t) {
     let r = d.Z.getStreamForUser(t, n.getGuildId());
     if (null == r) return !1;
     let i = (0, O.V9)(r);
-    return i !== D && ((D = i), (0, o.rn)(r, { noFocus: !0 }), !0);
+    return i !== w && ((w = i), (0, o.rn)(r, { noFocus: !0 }), !0);
 }
 function M(e, t) {
     let n = null != t ? t : m.Z.getPreferredRegion();
@@ -83,7 +83,7 @@ function k(e, t) {
     if (g.Z.getAllActiveStreamKeys().includes(e)) return;
     let r = null != (n = N[e]) ? n : new i.V7();
     (N[e] = r),
-        r.start(t ? w : R, () => {
+        r.start(t ? D : R, () => {
             a.Z.dispatch({
                 type: "STREAM_TIMED_OUT",
                 streamKey: e,
@@ -156,7 +156,7 @@ class U extends s.Z {
             I(this, "handleVoiceChannelSelect", (e) => {
                 let { channelId: t } = e;
                 if (null == t) return;
-                D = null;
+                w = null;
                 let n = d.Z.getAllApplicationStreamsForChannel(t).filter((e) => {
                     let { ownerId: t } = e;
                     return t !== f.default.getId();

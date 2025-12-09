@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r = n(54381),
-    i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    a = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(481060),
     o = n(49898),
     c = n(174183);
@@ -10,21 +10,21 @@ function d(e) {
     let {
             state: t,
             query: n,
-            placeholder: a,
+            placeholder: i,
             onTextChange: d,
             onCollapsedClick: u,
             onClear: p,
             onBlur: m,
             onSubmit: h,
         } = e,
-        g = i.useRef(null),
-        f = i.useCallback(
+        g = a.useRef(null),
+        f = a.useCallback(
             (e) => {
                 "Enter" === e.key && h();
             },
             [h],
         ),
-        _ = i.useCallback(() => {
+        _ = a.useCallback(() => {
             u(),
                 setTimeout(() => {
                     var e;
@@ -46,7 +46,7 @@ function d(e) {
                   size: "sm",
                   ref: g,
                   query: n,
-                  placeholder: a,
+                  placeholder: i,
                   onChange: d,
                   onClear: p,
                   onKeyDown: f,

@@ -3,14 +3,14 @@ n.d(t, {
     BM: () => j,
     Cj: () => d,
     WY: () => C,
-    YD: () => D,
+    YD: () => w,
     a7: () => p,
     aD: () => m,
     j: () => R,
     oo: () => f,
     rj: () => _,
     vq: () => g,
-    wh: () => w,
+    wh: () => D,
     xj: () => L,
 }),
     n(415506),
@@ -321,7 +321,7 @@ function R(e, t) {
         P(r.hue, r.saturation, r.lightness)
     );
 }
-function w(e) {
+function D(e) {
     let { foreground: t, background: n, ratio: r = 5, saturationFactor: a = 1 } = e;
     a < 1 && ((t = t.set("hsl.s", t.get("hsl.s") * a)), (n = n.set("hsl.s", n.get("hsl.s") * a)));
     let o = 0.5 >= n.luminance(),
@@ -337,7 +337,7 @@ function w(e) {
     }
     return t.alpha(1);
 }
-function D(e) {
+function w(e) {
     return e
         .slice(0, 3)
         .map((e) => {

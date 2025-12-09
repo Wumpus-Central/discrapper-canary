@@ -13,10 +13,10 @@ var i = n(54381),
     f = n(145597),
     g = n(382790),
     m = n(990673),
-    y = n(906037),
-    b = n(430036),
-    _ = n(839434),
-    v = n(981631);
+    _ = n(906037),
+    y = n(430036),
+    v = n(839434),
+    b = n(981631);
 function O(e, t, n) {
     return (
         t in e
@@ -31,9 +31,9 @@ function O(e, t, n) {
     );
 }
 let E = {
-    [v.Odu.TEXT](e) {
+    [b.Odu.TEXT](e) {
         let { dragging: t, locked: n, pinned: r, dragStart: s, className: o } = e;
-        return (0, i.jsx)(b.Z, {
+        return (0, i.jsx)(y.Z, {
             dragStart: s,
             locked: n,
             pinned: r,
@@ -41,7 +41,7 @@ let E = {
             className: o,
         });
     },
-    [v.Odu.GUILDS](e) {
+    [b.Odu.GUILDS](e) {
         let { locked: t, dragStart: n, className: r } = e;
         return (0, i.jsx)(g.Z, {
             dragStart: n,
@@ -49,18 +49,18 @@ let E = {
             className: r,
         });
     },
-    [v.Odu.VOICE](e) {
+    [b.Odu.VOICE](e) {
         let { id: t, anchor: n, isPreviewingInGame: r, locked: s, pinned: o } = e;
-        return (0, i.jsx)(_.Z, {
+        return (0, i.jsx)(v.Z, {
             anchor: n,
             id: t,
             locked: s,
             pinned: o,
-            widget: v.Odu.VOICE,
+            widget: b.Odu.VOICE,
             isPreviewingInGame: r,
         });
     },
-    [v.Odu.GUILDS_TEXT](e) {
+    [b.Odu.GUILDS_TEXT](e) {
         let { dragging: t, locked: n, dragStart: r, className: s } = e;
         return (0, i.jsx)(m.Z, {
             dragStart: r,
@@ -76,7 +76,7 @@ class x extends r.PureComponent {
         this.props.locked &&
             !e.locked &&
             null != this.state.lastLayoutUpdate &&
-            (l.Z.track(v.rMx.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate),
+            (l.Z.track(b.rMx.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate),
             this.setState({ lastLayoutUpdate: null }));
     }
     renderWidget(e, t, n) {
@@ -112,8 +112,8 @@ class x extends r.PureComponent {
         let { id: l, pinned: a, zIndex: d, size: u, anchor: h, minSize: f } = e,
             g = (0, p.w_)(u, n),
             m = (0, p.KR)(h, n),
-            { resizeX: b, resizeY: _, dragAnywhere: v } = t,
-            O = (0, y.eM)({
+            { resizeX: y, resizeY: v, dragAnywhere: b } = t,
+            O = (0, _.eM)({
                 locked: r,
                 isPreviewingInGame: s,
                 pinned: a,
@@ -134,10 +134,10 @@ class x extends r.PureComponent {
                   container: E,
                   minSize: f,
                   hidden: !O,
-                  resizeX: b,
-                  resizeY: _,
+                  resizeX: y,
+                  resizeY: v,
                   style: { zIndex: d },
-                  dragAnywhere: v,
+                  dragAnywhere: b,
                   active: !r || o,
                   onUpdate: this.handleUpdate,
                   onClick: this.handleFocus,
@@ -205,7 +205,7 @@ let S = s.ZP.connectStores([d.Z, u.default], (e) => {
         widgetConfig: null != n ? d.Z.getWidgetConfig(n.type) : null,
         locked: u.default.isInstanceLocked(),
         isPreviewingInGame: u.default.isPreviewingInGame(),
-        isActiveRegion: null != n && n.type === v.Odu.TEXT && i.has(v.O0n.TEXT_WIDGET),
+        isActiveRegion: null != n && n.type === b.Odu.TEXT && i.has(b.O0n.TEXT_WIDGET),
     };
 })(x);
 function Z(e, t) {

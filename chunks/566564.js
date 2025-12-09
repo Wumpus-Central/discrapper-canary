@@ -19,8 +19,8 @@ var r = n(54381),
     E = n(81136),
     v = n(302933),
     S = n(953655),
-    O = n(548685),
-    x = n(580914),
+    x = n(548685),
+    O = n(580914),
     y = n(92589),
     k = n(548257),
     T = n(963278),
@@ -81,11 +81,11 @@ let P = (e) => {
                       }),
                 n),
             [Z, w] = l.useState(!1),
-            H = (0, f.sp)(),
-            D = null != (t = null == H ? void 0 : H.sessionId) ? t : "";
+            D = (0, f.sp)(),
+            H = null != (t = null == D ? void 0 : D.sessionId) ? t : "";
         l.useEffect(() => {
             (0, h.n)({
-                sessionId: D,
+                sessionId: H,
                 checkpoint: h.a.SHOP_MOUNTED,
                 tab: b,
                 unpublishedCategoriesShown: B,
@@ -106,7 +106,7 @@ let P = (e) => {
                     logPerf: !0,
                 },
                 {
-                    sessionId: D,
+                    sessionId: H,
                     tab: b,
                 },
             ),
@@ -118,13 +118,13 @@ let P = (e) => {
                 M ||
                 0 === W.length ||
                 (0, h.n)({
-                    sessionId: D,
+                    sessionId: H,
                     checkpoint: h.a.SHOP_RENDERED,
                     tab: b,
                     unpublishedCategoriesShown: B,
                     cacheDisabled: j,
                 });
-        }, [F, M, W.length, B, j, D, b]),
+        }, [F, M, W.length, B, j, H, b]),
         null != F)
             ? (0, r.jsx)(_.Z, {
                   onRetry: V,
@@ -135,7 +135,7 @@ let P = (e) => {
               ? (0, r.jsxs)("div", {
                     className: s()(A.loadingContainer, A.feedContent),
                     children: [
-                        (0, r.jsx)(x.Z, {
+                        (0, r.jsx)(O.Z, {
                             isLoading: M,
                             handleTransition: c,
                             tab: b,
@@ -145,7 +145,7 @@ let P = (e) => {
                             handleTransition: c,
                             categories: [],
                         }),
-                        (0, r.jsx)(O.Z, {
+                        (0, r.jsx)(x.Z, {
                             isLoading: M,
                             title: b === L.AW.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),
                             numVisibleItems: u,
@@ -162,7 +162,7 @@ let P = (e) => {
                             switch (e.type) {
                                 case o.z.HERO:
                                     l = (0, r.jsx)(
-                                        x.Z,
+                                        O.Z,
                                         {
                                             isLoading: M,
                                             handleTransition: c,
@@ -186,7 +186,7 @@ let P = (e) => {
                                 case o.z.FEED:
                                     let f = e.sortedSkuIds;
                                     l = (0, r.jsx)(
-                                        O.Z,
+                                        x.Z,
                                         {
                                             title:
                                                 b === L.AW.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),

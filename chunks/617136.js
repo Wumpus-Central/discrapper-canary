@@ -4,11 +4,11 @@ n.d(t, {
     Zk: () => F,
     _3: () => U,
     _F: () => Z,
-    _b: () => w,
+    _b: () => D,
     dA: () => M,
     jZ: () => k,
     mH: () => j,
-    uk: () => D,
+    uk: () => w,
 }),
     n(388685);
 var r = n(473749),
@@ -87,11 +87,11 @@ function N(e, t) {
 }
 let P = Object.keys(h.jn),
     R = new Set([I.rMx.QUEST_CONTENT_VIEWED, I.rMx.QUEST_CONTENT_CLICKED]);
-function w(e) {
+function D(e) {
     var t;
     return null != (t = P.find((t) => h.jn[t] === e)) ? t : "";
 }
-function D(e) {
+function w(e) {
     var t, n, r;
     return (null == (t = e.userStatus) ? void 0 : t.claimedAt) != null
         ? "COMPLETED_CLAIMED"
@@ -134,7 +134,7 @@ function L(e, t, n) {
 function j(e, t, n) {
     return {
         content_id: e,
-        content_name: w(e),
+        content_name: D(e),
         content_position: t,
         row_index: n,
     };
@@ -228,7 +228,7 @@ async function U(e) {
             sourceQuestContent: d,
         } = e,
         f = m.Z.getQuest(t),
-        _ = await (0, a.S)(w(n)),
+        _ = await (0, a.S)(D(n)),
         h = (0, y.jY)(n),
         g = (0, y.R_)(n);
     M({
@@ -236,7 +236,7 @@ async function U(e) {
         event: I.rMx.QUEST_CONTENT_CLICKED,
         properties: N(A({}, j(n, o, s), (0, c.Z)()), {
             cta_name: r,
-            quest_status: null != f ? D(f) : null,
+            quest_status: null != f ? w(f) : null,
             impression_id: l,
             apple_advertising_id: null != _ && (0, p.isIOS)() ? _.advertisingId : null,
             android_advertising_id: null != _ && (0, p.isAndroid)() ? _.advertisingId : null,
@@ -289,13 +289,13 @@ function B() {
                 f = m.Z.getQuest(n),
                 _ = (0, y.jY)(r),
                 h = (0, y.R_)(r);
-            (0, a.S)(w(r)).then((t) => {
+            (0, a.S)(D(r)).then((t) => {
                 e({
                     questId: n,
                     event: I.rMx.QUEST_CONTENT_CLICKED,
                     properties: N(A({}, j(r, s, l), (0, c.Z)()), {
                         cta_name: o,
-                        quest_status: null != f ? D(f) : null,
+                        quest_status: null != f ? w(f) : null,
                         click_id: (0, i.Z)(),
                         apple_advertising_id: null != t && (0, p.isIOS)() ? t.advertisingId : null,
                         android_advertising_id: null != t && (0, p.isAndroid)() ? t.advertisingId : null,

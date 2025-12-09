@@ -28,8 +28,8 @@ var i = n(442837),
     N = n(614277),
     P = n(981631),
     R = n(474936),
-    w = n(388032),
-    D = n(359739),
+    D = n(388032),
+    w = n(359739),
     x = n(611344);
 function L(e, t, n) {
     return (
@@ -65,7 +65,7 @@ let M = {
     renderStep: (e) => (0, r.jsx)(G, j({}, e)),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => w.intl.string(w.t["W685+b"]),
+        useBreadcrumbLabel: () => D.intl.string(D.t["W685+b"]),
     },
 };
 function k(e) {
@@ -78,7 +78,7 @@ function k(e) {
                 onClick: () => t(c),
                 disabled: o,
                 loading: s,
-                text: w.intl.string(w.t.XiOHRX),
+                text: D.intl.string(D.t.XiOHRX),
             }),
             i ? (0, r.jsx)(E.Z, { onClick: n }) : null,
         ],
@@ -112,9 +112,9 @@ let U = (e) => {
         ),
         K = (0, p.Z)({}),
         z = Y && L === R.Wt.DM_CHANNEL,
-        q = W === m.u.POPULAR ? w.intl.string(w.t.Kwgrrr) : w.intl.string(w.t.r1huYR),
+        q = W === m.u.POPULAR ? D.intl.string(D.t.Kwgrrr) : D.intl.string(D.t.r1huYR),
         Q = async (e, t) => {
-            j(!0), null != _ && E(), (await (0, c.B1)(e.id, t)) || E(w.intl.string(w.t["4kgVqQ"])), j(!1);
+            j(!0), null != _ && E(), (await (0, c.B1)(e.id, t)) || E(D.intl.string(D.t["4kgVqQ"])), j(!1);
         };
     (0, o.ZP)(() => {
         null != M &&
@@ -145,25 +145,25 @@ let U = (e) => {
                     price: a,
                     isSelected: e === M,
                     onSelect: (e) => X(e),
-                    className: D.recommendedGiftPreview,
+                    className: w.recommendedGiftPreview,
                 },
                 e,
             );
         },
         $ = () =>
             (0, r.jsx)(h.Z, {
-                sectionTitle: w.intl.string(w.t.B3miE8),
+                sectionTitle: D.intl.string(D.t.B3miE8),
                 onTextChange: (e) => (null == l ? void 0 : l(e)),
                 pendingText: s,
                 currentText: s,
                 disableThemedBackground: !0,
-                className: D.customGiftMessageWrapper,
-                innerClassName: D.customGiftMessage,
+                className: w.customGiftMessageWrapper,
+                innerClassName: w.customGiftMessage,
             }),
         ee = () => {
             if (z)
                 return (0, r.jsxs)("div", {
-                    className: D.bodyColumnRight,
+                    className: w.bodyColumnRight,
                     children: [
                         (0, r.jsx)(b.s, { giftRecipient: C }),
                         (0, r.jsx)(g.q, {
@@ -184,7 +184,7 @@ let U = (e) => {
             });
             return L === R.Wt.USER_PROFILE_WISHLIST || L === R.Wt.DM_CHANNEL_WISHLIST
                 ? (0, r.jsxs)("div", {
-                      className: D.bodyColumnRight,
+                      className: w.bodyColumnRight,
                       children: [
                           (0, r.jsx)(b.s, { giftRecipient: C }),
                           $(),
@@ -193,14 +193,14 @@ let U = (e) => {
                               (0, r.jsx)(d.Z, {
                                   skuId: M,
                                   price: e,
-                                  className: D.wishlistGiftPreview,
-                                  previewHeaderClassName: D.wishlistGiftPreviewHeader,
+                                  className: w.wishlistGiftPreview,
+                                  previewHeaderClassName: w.wishlistGiftPreviewHeader,
                                   isSelected: !0,
                                   shouldDisplayHeader: !0,
                                   hideProfilePreview: !0,
                               }),
                           (0, r.jsx)("div", {
-                              className: D.wishlistGiftPreviewFooter,
+                              className: w.wishlistGiftPreviewFooter,
                               children: (0, r.jsx)(B, {
                                   handleClose: n,
                                   selectedSkuId: M,
@@ -209,12 +209,12 @@ let U = (e) => {
                       ],
                   })
                 : (0, r.jsxs)("div", {
-                      className: D.bodyColumnRight,
+                      className: w.bodyColumnRight,
                       children: [
                           (0, r.jsx)(f.Z, {
                               selectedSkuId: M,
                               recipients: K,
-                              className: D.sendTo,
+                              className: w.sendTo,
                               validateSelectedGift: Q,
                           }),
                           $(),
@@ -222,7 +222,7 @@ let U = (e) => {
                               (0, r.jsx)(d.Z, {
                                   skuId: M,
                                   price: e,
-                                  className: D.giftPreview,
+                                  className: w.giftPreview,
                                   isSelected: !0,
                                   shouldDisplayHeader: !0,
                               }),
@@ -232,12 +232,12 @@ let U = (e) => {
     return {
         leftColumnComponent: z
             ? (0, r.jsxs)("div", {
-                  className: D.bodyColumnLeft,
+                  className: w.bodyColumnLeft,
                   children: [
                       (0, r.jsx)(a.Text, {
                           variant: "text-xs/bold",
                           color: "text-default",
-                          className: D.selectGiftTitle,
+                          className: w.selectGiftTitle,
                           children: q.toLocaleUpperCase(),
                       }),
                       N.map((e) => J(e)),
@@ -245,7 +245,7 @@ let U = (e) => {
                   ],
               })
             : (0, r.jsx)("div", {
-                  className: D.bodyColumnMiddle,
+                  className: w.bodyColumnMiddle,
                   children: (0, r.jsx)(g.q, { isShopGift: !0 }),
               }),
         rightColumnComponent: ee(),
@@ -272,7 +272,7 @@ function G(e) {
         children: [
             (0, r.jsx)(N.C3, {
                 children: (0, r.jsxs)("div", {
-                    className: D.stepBody,
+                    className: w.stepBody,
                     children: [i, o],
                 }),
             }),
@@ -306,13 +306,13 @@ function Z(e) {
     return (0, r.jsx)(a.P3F, {
         onClick: i,
         children: (0, r.jsxs)("div", {
-            className: D.navigateToShopButton,
+            className: w.navigateToShopButton,
             children: [
                 (0, r.jsxs)("div", {
-                    className: D.navigateToShopBody,
+                    className: w.navigateToShopBody,
                     children: [
                         (0, r.jsx)("div", {
-                            className: D.shopIcon,
+                            className: w.shopIcon,
                             children: (0, r.jsx)(a.EOn, {
                                 size: "custom",
                                 width: 18,
@@ -321,17 +321,17 @@ function Z(e) {
                             }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: D.navigateToShopTextWrapper,
+                            className: w.navigateToShopTextWrapper,
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     color: "header-primary",
                                     variant: "text-md/semibold",
-                                    children: w.intl.string(w.t["1+Co8G"]),
+                                    children: D.intl.string(D.t["1+Co8G"]),
                                 }),
                                 (0, r.jsx)(a.Heading, {
                                     color: "text-default",
                                     variant: "heading-sm/medium",
-                                    children: w.intl.string(w.t.nYn52B),
+                                    children: D.intl.string(D.t.nYn52B),
                                 }),
                             ],
                         }),
@@ -363,7 +363,7 @@ function B(e) {
                 : (0, y.uL)("".concat(P.Z5c.COLLECTIBLES_SHOP, "#itemSkuId=").concat(n));
     }
     return (0, r.jsx)(a.Avr, {
-        text: w.intl.string(w.t.J82mpK),
+        text: D.intl.string(D.t.J82mpK),
         onClick: o,
         textVariant: "text-sm/medium",
     });

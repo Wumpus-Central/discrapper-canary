@@ -1,11 +1,11 @@
 n.d(t, {
     $E: () => x,
-    T6: () => w,
+    T6: () => D,
     TW: () => I,
     U0: () => P,
     WO: () => L,
     rU: () => R,
-    wX: () => D,
+    wX: () => w,
 });
 var r = n(544891),
     i = n(780384),
@@ -253,7 +253,7 @@ async function R(e, t, n) {
             })
     );
 }
-function w(e) {
+function D(e) {
     let { channelId: t, messageId: n, emoji: r, key: i } = e;
     a.Z.dispatch({
         type: "BURST_REACTION_EFFECT_PLAY",
@@ -263,7 +263,7 @@ function w(e) {
         key: i,
     });
 }
-async function D(e, t, n) {
+async function w(e, t, n) {
     let i = null != n && !!n.isRetry;
     await c.Z.unarchiveThreadIfNecessary(e),
         r.tn
@@ -273,7 +273,7 @@ async function D(e, t, n) {
                 rejectWithError: !1,
             })
             .catch((n) => {
-                T(n, () => D(e, t, { isRetry: !0 }), { isRetry: i });
+                T(n, () => w(e, t, { isRetry: !0 }), { isRetry: i });
             });
 }
 async function x(e, t, n, i) {

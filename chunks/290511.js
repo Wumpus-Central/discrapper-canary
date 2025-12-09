@@ -3,8 +3,8 @@ n.d(t, {
     FN: () => v,
     NE: () => d,
     NO: () => f,
-    Ni: () => D,
-    Oq: () => w,
+    Ni: () => w,
+    Oq: () => D,
     RF: () => T,
     Un: () => S,
     X: () => b,
@@ -179,10 +179,10 @@ function R(e) {
         connections: null != (i = e.connections) ? i : [],
     };
 }
-function w(e) {
+function D(e) {
     return null == e || (null == e.id && null == e.name);
 }
-let D = new Set([
+let w = new Set([
         o.ABu.PLAYSTATION_STAGING,
         o.ABu.CONTACTS,
         o.ABu.DOMAIN,
@@ -192,7 +192,7 @@ let D = new Set([
         o.ABu.LEAGUE_OF_LEGENDS,
         o.ABu.SKYPE,
     ]),
-    x = Object.values(o.ABu).filter((e) => !D.has(e));
+    x = Object.values(o.ABu).filter((e) => !w.has(e));
 function L(e) {
     return 0 === e.connection_type ? "app:".concat(e.application_id) : "provider:".concat(e.provider_id);
 }

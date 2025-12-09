@@ -40,8 +40,8 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 draggable: A = !1,
                 sorting: R = !1,
                 onDragStart: D,
-                onDragEnd: M,
-                onExpandCollapse: L,
+                onDragEnd: L,
+                onExpandCollapse: M,
                 onContextMenu: k,
                 renderChildNode: G,
                 folderButtonSize: U,
@@ -67,7 +67,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     }
                 ),
                 end() {
-                    null == M || M(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
+                    null == L || L(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
@@ -76,9 +76,9 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             }, []),
             en = i.useCallback(
                 (e) => {
-                    (("ArrowRight" === e.key && !s) || ("ArrowLeft" === e.key && s)) && L();
+                    (("ArrowRight" === e.key && !s) || ("ArrowLeft" === e.key && s)) && M();
                 },
-                [L, s],
+                [M, s],
             ),
             er = null != W && "" !== W ? W : null != T && "" !== T ? T : E.intl.string(E.t.xV9hVh),
             ei = (0, c.Ie)("".concat(H)),
@@ -132,7 +132,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       isMentionLowImportance: Z,
                                       tooltipName: er,
                                       folderGroupId: el,
-                                      onClick: L,
+                                      onClick: M,
                                       onContextMenu: k,
                                       onHoverChange: Y,
                                       onKeyDown: en,

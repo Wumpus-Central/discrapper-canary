@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(937579),
     P = n(283066),
     R = n(622909),
-    w = n(639119),
-    D = n(2359),
+    D = n(639119),
+    w = n(2359),
     x = n(132547),
     L = n(474936),
     j = n(981631),
@@ -42,7 +42,7 @@ let k = function (e) {
         G = (0, s.e7)([S.Z], () => S.Z.hasFetchedPaymentSources),
         Z = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         B = null == Z ? void 0 : Z.id,
-        F = (0, w.N)(),
+        F = (0, D.N)(),
         V = (0, R.N)(),
         H = (0, g.V)(L.nS),
         [Y, W] = i.useState(!0),
@@ -94,6 +94,6 @@ let k = function (e) {
           })
         : (0, r.jsxs)(m.Gt, {
               value: k,
-              children: [J && !q && (0, r.jsx)(p.Z, {}), (0, r.jsx)(D.Z, { entrypoint: t })],
+              children: [J && !q && (0, r.jsx)(p.Z, {}), (0, r.jsx)(w.Z, { entrypoint: t })],
           });
 };

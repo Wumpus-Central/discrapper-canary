@@ -40,8 +40,8 @@ function f(e) {
             newClipsCount: b,
             canPostPolls: C,
             canLaunchActivities: y,
-            appContext: v,
-            canSendScheduledMessages: _,
+            appContext: _,
+            canSendScheduledMessages: v,
             canSummarizeThreads: O,
             showAppLauncher: x,
         } = e,
@@ -59,7 +59,7 @@ function f(e) {
         })),
         f &&
             t &&
-            v !== d.IlC.POPOUT &&
+            _ !== d.IlC.POPOUT &&
             E.push({
                 type: "CLIPS",
                 icon: l.AlX,
@@ -139,7 +139,7 @@ function f(e) {
                         activity: e,
                     }));
         }),
-        _ &&
+        v &&
             E.push({
                 type: "SCHEDULED_MESSAGE",
                 icon: l.T39,

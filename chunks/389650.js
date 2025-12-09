@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(358085),
     P = n(13140),
     R = n(526665),
-    w = n(659947),
-    D = n(273313),
+    D = n(659947),
+    w = n(273313),
     x = n(981631),
     L = n(295907),
     j = n(388032),
@@ -191,7 +191,7 @@ class Y extends i.PureComponent {
     }
     renderExtraSettings() {
         let { action: e } = this.props.keybind;
-        return e === x.kg4.SWITCH_TO_VOICE_CHANNEL ? (0, r.jsx)(w.Z, { keybind: this.props.keybind }) : void 0;
+        return e === x.kg4.SWITCH_TO_VOICE_CHANNEL ? (0, r.jsx)(D.Z, { keybind: this.props.keybind }) : void 0;
     }
     constructor(...e) {
         super(...e),
@@ -426,7 +426,7 @@ class W extends i.PureComponent {
             a = H();
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(D.Z, {
+                (0, r.jsx)(w.Z, {
                     title: j.intl.string(j.t.T9DA2K),
                     children: N.isPlatformEmbedded
                         ? (0, r.jsxs)(r.Fragment, {

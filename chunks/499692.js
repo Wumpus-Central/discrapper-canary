@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(54381),
-    i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    a = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(907331),
     o = n(535655),
     c = n(973693),
@@ -21,15 +21,15 @@ var r = n(54381),
     j = n(74021);
 let y = c.Y.APPLICATION_DIRECTORY;
 function I(e) {
-    let { collection: t, index: n, onSelectApplication: a } = e,
+    let { collection: t, index: n, onSelectApplication: i } = e,
         o = (function (e) {
             let { collectionId: t, index: n } = e,
-                [r, a] = i.useState(!1),
+                [r, i] = a.useState(!1),
                 l = (0, s.O)((e) => {
-                    e && a(!0);
+                    e && i(!0);
                 });
             return (
-                i.useEffect(() => {
+                a.useEffect(() => {
                     r &&
                         (0, _.zZ)(C.rMx.APP_DIRECTORY_COLLECTION_VIEWED, {
                             collection_id: t,
@@ -42,7 +42,7 @@ function I(e) {
             collectionId: t.id,
             index: n,
         }),
-        c = i.useCallback(
+        c = a.useCallback(
             (e, r) => {
                 (0, _.zZ)(C.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                     collection_id: t.id,
@@ -50,9 +50,9 @@ function I(e) {
                     collection_position: n,
                     application_id: e,
                 }),
-                    a(e);
+                    i(e);
             },
-            [t.id, n, a],
+            [t.id, n, i],
         );
     return (0, r.jsxs)("div", {
         ref: o,
@@ -85,7 +85,7 @@ function I(e) {
 let S = function (e) {
     let { onSelectApplication: t } = e,
         n = (0, p.e7)([h.default], () => h.default.onlyShowPreviewAppCollections) ? o.E.PREVIEW : o.E.ACTIVE,
-        a = (0, p.e7)([f.Z], () =>
+        i = (0, p.e7)([f.Z], () =>
             f.Z.getFetchState({
                 surface: y,
                 activeState: n,
@@ -97,20 +97,20 @@ let S = function (e) {
                 activeState: n,
             }),
         );
-    i.useEffect(() => {
+    a.useEffect(() => {
         g.XK({
             surface: y,
             activeState: n,
         });
     }, [n]);
-    let s = i.useMemo(() => (null == l ? void 0 : l.filter((e) => e.type !== u.o.GALLERY)), [l]);
-    return a === f.M.ERROR
+    let s = a.useMemo(() => (null == l ? void 0 : l.filter((e) => e.type !== u.o.GALLERY)), [l]);
+    return i === f.M.ERROR
         ? (0, r.jsx)("div", {
               className: j.errorContainer,
               children: (0, r.jsx)(v.Z, { className: j.error }),
           })
         : (0, r.jsx)(b.Z, {
-              loading: a === f.M.FETCHING,
+              loading: i === f.M.FETCHING,
               children:
                   null == s
                       ? void 0

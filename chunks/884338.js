@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => w,
+    ZP: () => D,
     ag: () => I,
     u8: () => b,
 }),
@@ -300,4 +300,4 @@ m(R, "defaultProps", {
     showDefaultAvatarsForNullUsers: !1,
     size: b.SIZE_24,
 });
-let w = R;
+let D = R;

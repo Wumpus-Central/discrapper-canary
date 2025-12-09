@@ -86,14 +86,14 @@ function R() {
     }),
         A();
 }
-function w(e) {
+function D(e) {
     if (e === v) return;
     let t = !e && v;
     (v = e), t && R();
 }
-class D extends r.Z {
+class w extends r.Z {
     _initialize() {
-        w(P());
+        D(P());
     }
     _terminate() {
         window.requestAnimationFrame = h;
@@ -112,7 +112,7 @@ class D extends r.Z {
         }
     }
     handleWindowStateChage() {
-        w(P());
+        D(P());
     }
     handleOverlayRenderDebugMode(e) {
         let { enabled: t, mode: n } = e;
@@ -129,4 +129,4 @@ class D extends r.Z {
             });
     }
 }
-let x = new D();
+let x = new w();

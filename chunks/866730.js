@@ -1,9 +1,9 @@
 n.d(t, { Z: () => x }), n(388685);
 var a = n(54381);
 n(473749);
-var l = n(913527),
-    r = n.n(l),
-    i = n(442837),
+var r = n(913527),
+    i = n.n(r),
+    l = n(442837),
     s = n(704215),
     o = n(713284),
     c = n(211644),
@@ -40,10 +40,10 @@ let m = (e) => {
         },
     ];
 function x() {
-    let e = (0, i.e7)([o.Z], () => o.Z.getDCFEvents()),
+    let e = (0, l.e7)([o.Z], () => o.Z.getDCFEvents()),
         t = (0, c.ZP)((e) => e.candidates),
         n = (0, c.ZP)((e) => e.lastWinnerTime),
-        l = 0 !== n ? r()(n).fromNow() : "n/a",
+        r = 0 !== n ? i()(n).fromNow() : "n/a",
         x = (0, c.ZP)((e) => e.recentlyShown[0]),
         f = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
@@ -62,7 +62,7 @@ function x() {
         children: [
             (0, a.jsxs)("div", {
                 className: u.info,
-                children: ["Last winner time: ", l],
+                children: ["Last winner time: ", r],
             }),
             (0, a.jsx)("br", {}),
             (0, a.jsxs)("div", {

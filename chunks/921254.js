@@ -1,6 +1,6 @@
 n.d(t, {
     Ji: () => x,
-    O_: () => w,
+    O_: () => D,
     qA: () => c,
     uR: () => L,
 });
@@ -680,7 +680,7 @@ function R() {
         )
     );
 }
-var w = r.forwardRef(function (e, t) {
+var D = r.forwardRef(function (e, t) {
         var o = e.className,
             s = e.environment,
             l = e.onClick,
@@ -725,8 +725,8 @@ var w = r.forwardRef(function (e, t) {
             A = r.useRef(new Map()),
             C = r.useRef(null),
             N = r.useRef(0),
-            w = r.useRef(0),
-            D = r.useCallback(
+            D = r.useRef(0),
+            w = r.useCallback(
                 function () {
                     var e = y.current;
                     if (null != e) {
@@ -741,10 +741,10 @@ var w = r.forwardRef(function (e, t) {
                                 }),
                                 null == _ || _(t),
                                 A.current.size > 0
-                                    ? (C.current = h(D))
+                                    ? (C.current = h(w))
                                     : (t.clearRect(0, 0, e.width, e.height), (C.current = null));
                             var n = Date.now();
-                            0 !== N.current && (w.current = 1000 / (n - N.current)), (N.current = n);
+                            0 !== N.current && (D.current = 1000 / (n - N.current)), (N.current = n);
                         }
                     }
                 },
@@ -752,9 +752,9 @@ var w = r.forwardRef(function (e, t) {
             );
         r.useEffect(
             function () {
-                null != C.current && (E(C.current), (C.current = h(D)));
+                null != C.current && (E(C.current), (C.current = h(w)));
             },
-            [E, D, h],
+            [E, w, h],
         );
         var x = r.useCallback(
                 function (e, t) {
@@ -762,9 +762,9 @@ var w = r.forwardRef(function (e, t) {
                         confetti: e,
                         spriteCanvas: t,
                     }),
-                        null == C.current && D();
+                        null == C.current && w();
                 },
-                [D],
+                [w],
             ),
             L = r.useCallback(
                 function (e, t, n, r, a) {
@@ -826,7 +826,7 @@ var w = r.forwardRef(function (e, t) {
                             ) {
                                 if (null != o) return o(e);
                                 if (null != i) {
-                                    var u = (-1000 / w.current) * 2,
+                                    var u = (-1000 / D.current) * 2,
                                         d = (function (e, t) {
                                             for (var n = 0, r = Array.from(e.values()); n < r.length; n++) {
                                                 var i = r[n];
@@ -928,7 +928,7 @@ var w = r.forwardRef(function (e, t) {
             )
         );
     }),
-    D = {
+    w = {
         display: "none",
         position: "absolute",
         width: 0,
@@ -1077,7 +1077,7 @@ var w = r.forwardRef(function (e, t) {
             r.createElement("canvas", {
                 ref: u,
                 className: n,
-                style: a ? void 0 : D,
+                style: a ? void 0 : w,
             })
         );
     });

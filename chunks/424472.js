@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p });
 var r = n(54381),
-    i = n(473749),
-    a = n(481060),
+    a = n(473749),
+    i = n(481060),
     l = n(881294),
     s = n(258971),
     o = n(133743),
@@ -10,7 +10,7 @@ var r = n(54381),
     u = n(161562);
 function p(e) {
     let { application: t, className: n } = e,
-        p = i.useCallback((e) => {
+        p = a.useCallback((e) => {
             (0, l.zZ)(c.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                 category: e.name,
                 category_id: e.id,
@@ -23,7 +23,7 @@ function p(e) {
         : (0, r.jsxs)("div", {
               className: n,
               children: [
-                  (0, r.jsx)(a.Heading, {
+                  (0, r.jsx)(i.Heading, {
                       variant: "heading-sm/semibold",
                       color: "header-primary",
                       children: d.intl.string(d.t.s7iald),
@@ -32,11 +32,11 @@ function p(e) {
                       className: u.categories,
                       children: t.categories.map((e) =>
                           (0, r.jsx)(
-                              a.P3F,
+                              i.P3F,
                               {
                                   className: u.category,
                                   onClick: () => p(e),
-                                  children: (0, r.jsx)(a.Text, {
+                                  children: (0, r.jsx)(i.Text, {
                                       variant: "text-sm/semibold",
                                       color: "redesign-button-tertiary-text",
                                       children: e.name,

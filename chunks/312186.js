@@ -13,10 +13,10 @@ var i = n(54381),
     f = n(998502),
     g = n(13140),
     m = n(486016),
-    y = n(809357),
-    b = n(624864),
-    _ = n(987650),
-    v = n(981631),
+    _ = n(809357),
+    y = n(624864),
+    v = n(987650),
+    b = n(981631),
     O = n(388032),
     E = n(183322),
     x = n(197571);
@@ -35,14 +35,14 @@ function S(e, t, n) {
 }
 function Z() {
     let e = p.default.getNotificationPositionMode(),
-        t = e !== v._vf.DISABLED,
+        t = e !== b._vf.DISABLED,
         n = h.ZP.getOverlayKeybind(),
         i = h.ZP.getOverlayChatKeybind();
-    a.Z.track(v.rMx.OVERLAY_SETTINGS_UPDATED, {
+    a.Z.track(b.rMx.OVERLAY_SETTINGS_UPDATED, {
         enabled: !0,
         notifications_enabled: t,
         notifications_position: t ? e : null,
-        text_notifications_mode: b.Z.isNotificationDisabled(_.n0.TextChat) ? "DISABLED" : "ENABLED",
+        text_notifications_mode: y.Z.isNotificationDisabled(v.n0.TextChat) ? "DISABLED" : "ENABLED",
         text_opacity_slider: p.default.getTextWidgetOpacity(),
         hotkey: null != n ? (0, g.BB)(n.shortcut) : null,
         text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null,
@@ -50,7 +50,7 @@ function Z() {
 }
 class j extends r.PureComponent {
     componentDidMount() {
-        a.Z.track(v.rMx.SETTINGS_PANE_VIEWED, {
+        a.Z.track(b.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: "overlay",
             destination_pane: "OVERLAY SETTINGS",
             origin_pane: null,
@@ -159,8 +159,8 @@ class j extends r.PureComponent {
                 showKeybindIndicators: n,
                 shouldShowInviteNotification: r,
             } = this.props,
-            s = !b.Z.isNotificationDisabled(_.n0.TextChat),
-            o = e !== v._vf.DISABLED;
+            s = !y.Z.isNotificationDisabled(v.n0.TextChat),
+            o = e !== b._vf.DISABLED;
         return (0, i.jsxs)(l.C3N, {
             children: [
                 (0, i.jsx)(l.gNt, {
@@ -201,11 +201,11 @@ class j extends r.PureComponent {
                     onChange: (e) => this.handleChangeAvatarSizeMode({ value: e }),
                     options: [
                         {
-                            value: v.ipw.LARGE,
+                            value: b.ipw.LARGE,
                             name: O.intl.string(O.t.YcOxtr),
                         },
                         {
-                            value: v.ipw.SMALL,
+                            value: b.ipw.SMALL,
                             name: O.intl.string(O.t.BKIKqx),
                         },
                     ],
@@ -216,15 +216,15 @@ class j extends r.PureComponent {
                     onChange: (e) => this.handleChangeDisplayNameMode({ value: e }),
                     options: [
                         {
-                            value: v.wC$.ALWAYS,
+                            value: b.wC$.ALWAYS,
                             name: O.intl.string(O.t.nBmDrT),
                         },
                         {
-                            value: v.wC$.ONLY_WHILE_SPEAKING,
+                            value: b.wC$.ONLY_WHILE_SPEAKING,
                             name: O.intl.string(O.t["2OvIZY"]),
                         },
                         {
-                            value: v.wC$.NEVER,
+                            value: b.wC$.NEVER,
                             name: O.intl.string(O.t.ekjlPL),
                         },
                     ],
@@ -235,11 +235,11 @@ class j extends r.PureComponent {
                     onChange: (e) => this.handleChangeDisplayUserMode({ value: e }),
                     options: [
                         {
-                            value: v.OYC.ALWAYS,
+                            value: b.OYC.ALWAYS,
                             name: O.intl.string(O.t.nBmDrT),
                         },
                         {
-                            value: v.OYC.ONLY_WHILE_SPEAKING,
+                            value: b.OYC.ONLY_WHILE_SPEAKING,
                             name: O.intl.string(O.t["2OvIZY"]),
                         },
                     ],
@@ -316,16 +316,16 @@ function C(e) {
             textChatDisabled: a,
             shouldShowKeybindIndicators: c,
             shouldShowInviteNotification: d,
-        } = (0, s.cj)([p.default, b.Z], () => ({
+        } = (0, s.cj)([p.default, y.Z], () => ({
             avatarSizeMode: p.default.getAvatarSizeMode(),
             displayNameMode: p.default.getDisplayNameMode(),
             displayUserMode: p.default.getDisplayUserMode(),
             notificationPositionMode: p.default.getNotificationPositionMode(),
-            textChatDisabled: b.Z.isNotificationDisabled(_.n0.TextChat),
+            textChatDisabled: y.Z.isNotificationDisabled(v.n0.TextChat),
             shouldShowKeybindIndicators: p.default.showKeybindIndicators,
-            shouldShowInviteNotification: !b.Z.isNotificationDisabled(_.n0.ActivityInvite),
+            shouldShowInviteNotification: !y.Z.isNotificationDisabled(v.n0.ActivityInvite),
         })),
-        u = (0, y.Z)({ location: "Overlay Settings" });
+        u = (0, _.Z)({ location: "Overlay Settings" });
     return (0, i.jsx)(j, {
         onClose: t,
         avatarSizeMode: n,

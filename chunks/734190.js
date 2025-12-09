@@ -73,7 +73,7 @@ function D(e, t) {
         e
     );
 }
-function M(e) {
+function L(e) {
     let { style: t, withGuildIcon: n, inverted: i } = e,
         l = {
             className: o()(A.spine, { [A.spineWithGuildIcon]: n }, { [A.invertedSpine]: i }),
@@ -146,7 +146,7 @@ function M(e) {
             );
     }
 }
-function L(e) {
+function M(e) {
     let { thread: t } = e,
         n = i.useMemo(() => {
             var e;
@@ -242,10 +242,10 @@ let k = i.memo(function (e) {
         role: X,
         className: o()(w.containerDefault, { [w.selected]: l }),
         children: [
-            (0, r.jsx)(M, { withGuildIcon: A }),
+            (0, r.jsx)(L, { withGuildIcon: A }),
             g
                 ? null
-                : (0, r.jsx)(M, {
+                : (0, r.jsx)(L, {
                       withGuildIcon: A,
                       inverted: !0,
                       style: { transform: "rotateX(180deg) translateY(-9px)" },
@@ -287,7 +287,7 @@ let k = i.memo(function (e) {
                                             ? (0, r.jsxs)("div", {
                                                   className: T.threadIconWithAvatar,
                                                   children: [
-                                                      (0, r.jsx)(L, { thread: t }),
+                                                      (0, r.jsx)(M, { thread: t }),
                                                       null == W
                                                           ? null
                                                           : (0, r.jsx)(p.Z, {
@@ -297,7 +297,7 @@ let k = i.memo(function (e) {
                                                   ],
                                               })
                                             : null,
-                                        "icon-in-bubble" === H.variant ? (0, r.jsx)(L, { thread: t }) : null,
+                                        "icon-in-bubble" === H.variant ? (0, r.jsx)(M, { thread: t }) : null,
                                         (0, r.jsx)(c.Z, {
                                             className: T.name,
                                             "aria-hidden": !0,

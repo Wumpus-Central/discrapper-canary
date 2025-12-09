@@ -39,8 +39,8 @@ function u(e) {
             value: d,
             builtinValidation: P,
         }),
-        w = R.displayValidation.isInvalid,
-        D = e.validationState || (w ? "invalid" : null),
+        D = R.displayValidation.isInvalid,
+        w = e.validationState || (D ? "invalid" : null),
         x = (e, t) => {
             f("timeZone" in t ? t.set((0, i.WG)(e)) : (0, i.IO)(e, t)), O(null), S(null), R.commitValidation();
         },
@@ -71,8 +71,8 @@ function u(e) {
         setOpen(t) {
             !t && !d && y && E && x(y, v || (0, r.zu)(e.defaultValue || e.placeholderValue)), u.setOpen(t);
         },
-        validationState: D,
-        isInvalid: w,
+        validationState: w,
+        isInvalid: D,
         formatValue(e, t) {
             if (!g) return "";
             let n = (0, r.oE)(t, T);

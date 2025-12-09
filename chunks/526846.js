@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(471518),
     C = n(425986),
     y = n(216780),
-    v = n(728285),
-    _ = n(390322),
+    _ = n(728285),
+    v = n(390322),
     O = n(857192),
     x = n(626135),
     E = n(566620),
@@ -32,7 +32,7 @@ function A(e) {
     var t;
     let n,
         { channel: l, openInPopout: o, onClick: p } = e,
-        { fetchState: g, voiceBannerCollection: v } = (function () {
+        { fetchState: g, voiceBannerCollection: _ } = (function () {
             let e = (0, c.e7)([O.default], () => O.default.onlyShowPreviewAppCollections) ? a.E.PREVIEW : a.E.ACTIVE;
             return (
                 r.useEffect(() => {
@@ -57,11 +57,11 @@ function A(e) {
                 }
             );
         })(),
-        _ = g === C.M.FETCHING,
+        v = g === C.M.FETCHING,
         x = r.useMemo(() => {
-            let e = null == v ? void 0 : v.application_directory_collection_items[0];
+            let e = null == _ ? void 0 : _.application_directory_collection_items[0];
             return null == e ? null : e.type === s.C.APPLICATION_BANNER ? e : null;
-        }, [null == v ? void 0 : v.application_directory_collection_items]),
+        }, [null == _ ? void 0 : _.application_directory_collection_items]),
         { trackItemImpressionRef: E } = (0, f.Z)({
             applicationId: null != (t = null == x ? void 0 : x.application.id) ? t : "",
             applicationFlags: null == x ? void 0 : x.application.flags,
@@ -70,7 +70,7 @@ function A(e) {
             sectionOverallPosition: 0,
             promotionalLabel: null != x ? (0, h.dF)(x.application) : void 0,
         });
-    return null == x || null == v || _
+    return null == x || null == _ || v
         ? null
         : (null != x.id &&
               null != x.image_hash &&
@@ -117,7 +117,7 @@ let w = r.forwardRef(function (e, t) {
         r.useEffect(() => {
             a || o();
         }, [o, a]);
-    let y = (0, v.bp)(),
+    let y = (0, _.bp)(),
         { analyticsLocations: O, newestAnalyticsLocation: T } = (0, p.ZP)(d.Z.ACTIVITIES_MINI_SHELF),
         w = y === P.IlC.POPOUT,
         M = ((n = l.getGuildId()), (0, j.Z)({ guildId: n }).slice(0, 5));
@@ -152,7 +152,7 @@ let w = r.forwardRef(function (e, t) {
         );
     return (0, i.jsx)(p.Gt, {
         value: O,
-        children: (0, i.jsx)(_.Z, {
+        children: (0, i.jsx)(v.Z, {
             children: (0, i.jsxs)(u.VqE, {
                 ref: t,
                 "aria-labelledby": N,

@@ -59,8 +59,8 @@ function A(e) {
             impersonateType: b.Z.getImpersonateType(t),
             viewingRoles: b.Z.getViewingRoles(t),
         })),
-        w = P === y.z.SERVER_SHOP,
-        D = (0, o.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
+        D = P === y.z.SERVER_SHOP,
+        w = (0, o.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
         x = null != I ? A[(0, u.lV)(I)] : null,
         [L, j] = i.useState(() => {
             let e = null == R ? [] : g.default.keys(R);
@@ -81,18 +81,18 @@ function A(e) {
             });
         }
     }, [L, P, A]);
-    let k = null != I && null != n && null != D ? N.find((e) => D.roles.includes(e.id)) : void 0,
+    let k = null != I && null != n && null != w ? N.find((e) => w.roles.includes(e.id)) : void 0,
         U = i.useMemo(
             () =>
                 null != I && null != n
                     ? N.filter((e) => !(0, d.fI)(e))
                           .filter((e) => {
                               var t;
-                              return !w || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
+                              return !D || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
                           })
                           .filter((e) => (null == k ? void 0 : k.id) === e.id || h.r6(I, n.id, k, e))
                     : [],
-            [I, n, w, k, N],
+            [I, n, D, k, N],
         ),
         G = i.useMemo(() => {
             let e = Array.from(U).map((e) => ({
@@ -115,9 +115,9 @@ function A(e) {
                 e
             );
         }, [U, I, x]);
-    if (null == n || null == I || null == D) return null;
+    if (null == n || null == I || null == w) return null;
     let Z = {};
-    return (D.roles.forEach((e) => {
+    return (w.roles.forEach((e) => {
         let t = A[e];
         null != t && (Z[t.id] = t);
     }),

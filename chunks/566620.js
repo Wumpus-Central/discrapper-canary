@@ -46,8 +46,8 @@ var r = n(990547),
     N = n(813370),
     P = n(957730),
     R = n(48854),
-    w = n(522474),
-    D = n(835873),
+    D = n(522474),
+    w = n(835873),
     x = n(973616),
     L = n(314897),
     j = n(592125),
@@ -134,11 +134,11 @@ async function el(e) {
         S = j.Z.getChannel(a),
         P = null != (t = null == S ? void 0 : S.getGuildId()) ? t : void 0;
     if (null == P && !(null != (r = null == S ? void 0 : S.isPrivate()) && r)) return !1;
-    let D = b.Z.getApplication(o),
-        x = null != D && (0, N.g)(D),
+    let w = b.Z.getApplication(o),
+        x = null != w && (0, N.g)(w),
         L = (0, R.r)();
     try {
-        if (w.Z.getWindowOpen(ee.KJ3.ACTIVITY_POPOUT)) {
+        if (D.Z.getWindowOpen(ee.KJ3.ACTIVITY_POPOUT)) {
             let { close: e } = n(788983);
             e(ee.KJ3.ACTIVITY_POPOUT);
         }
@@ -418,7 +418,7 @@ async function ed(e) {
         let e = 4;
         return (
             _ === z.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
-                ? ((e = 5), (0, D.w)())
+                ? ((e = 5), (0, w.w)())
                 : _ === z.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   ((e = 6),
                   c.Z.show({

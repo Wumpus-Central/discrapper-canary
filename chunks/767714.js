@@ -104,7 +104,7 @@ let y = function (e) {
             color: P,
             iconColor: R = "currentColor",
         } = e,
-        w = E(e, [
+        D = E(e, [
             "subscriptionTier",
             "onClick",
             "size",
@@ -123,7 +123,7 @@ let y = function (e) {
             "color",
             "iconColor",
         ]);
-    let D = (0, o.e7)([c.Z], () => c.Z.isFocused()),
+    let w = (0, o.e7)([c.Z], () => c.Z.isFocused()),
         x = (0, d.Z)({
             subscriptionTier: t,
             buttonTextOverride: null == h ? void 0 : h.textOverride,
@@ -165,14 +165,14 @@ let y = function (e) {
                                         _,
                                     ),
                                     buttonShineClassName:
-                                        "buttonShineClassName" in w
-                                            ? w.buttonShineClassName
+                                        "buttonShineClassName" in D
+                                            ? D.buttonShineClassName
                                             : n === s.Tt.BRAND_INVERTED
                                               ? p.brandShine
                                               : void 0,
-                                    pauseAnimation: !D || I,
+                                    pauseAnimation: !w || I,
                                 },
-                                w,
+                                D,
                                 e,
                             ),
                             {

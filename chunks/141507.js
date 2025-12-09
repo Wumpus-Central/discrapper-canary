@@ -1,4 +1,4 @@
-n.d(t, { k: () => D });
+n.d(t, { k: () => w });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -29,14 +29,14 @@ let P = 250;
 function R(e) {
     return null != e && "animated" in e;
 }
-let w = (e) => {
+let D = (e) => {
         let { inspectedEmoji: t, guild: n } = e,
             r = R(t);
         return null != n && r ? C.intl.format(C.t.KFW2aY, { guildName: n.name }) : null;
     },
-    D = i.memo(function (e) {
+    w = i.memo(function (e) {
         let t,
-            D,
+            w,
             x,
             { className: L, emojiGrid: j, guildId: M, pickerIntention: k, channel: U } = e,
             { enabled: G } = O.Z.useExperiment({ location: "EmojiPicker" }, { autoTrackExposure: !1 }),
@@ -110,7 +110,7 @@ let w = (e) => {
                           size: 28,
                       })
                     : t.url;
-            D =
+            w =
                 "" === e
                     ? (0, r.jsx)(s.Text, {
                           variant: "text-md/normal",
@@ -123,7 +123,7 @@ let w = (e) => {
                           className: N.emoji,
                       });
         } else if ("CREATE_EMOJI" === t.type)
-            D = (0, r.jsx)(s.oFk, {
+            w = (0, r.jsx)(s.oFk, {
                 size: "md",
                 color: "currentColor",
                 className: N.icon,
@@ -134,7 +134,7 @@ let w = (e) => {
                 i = n(39874),
                 a = n(853871),
                 s = n(63149);
-            D = K.has(t.guildId)
+            w = K.has(t.guildId)
                 ? (0, r.jsx)("img", {
                       className: N.icon,
                       src: (0, o.wj)(Q) ? a : s,
@@ -165,7 +165,7 @@ let w = (e) => {
         let $ =
             G && "CREATE_EMOJI" === t.type
                 ? C.intl.string(C.t["Z/r7IS"])
-                : w({
+                : D({
                       inspectedEmoji: t,
                       channel: U,
                       guildId: M,
@@ -174,7 +174,7 @@ let w = (e) => {
                   });
         return (0, r.jsx)(_.Z, {
             className: L,
-            graphicPrimary: D,
+            graphicPrimary: w,
             graphicSecondary: J,
             titlePrimary: x,
             titleSecondary: $,

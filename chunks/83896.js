@@ -16,8 +16,8 @@ var i = n(54381),
     b = n(797156),
     C = n(223135),
     y = n(505905),
-    v = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    v = n(388032),
     O = n(10359),
     x = n(254477);
 function E(e) {
@@ -67,14 +67,14 @@ function S(e) {
     let { hangStatusActivity: t, channel: n, userId: l, setPopoutRef: S } = e,
         P = r.useRef(null),
         I = (0, o.e7)([d.Z], () => d.Z.getVoiceChannelId() === n.id),
-        Z = (0, o.e7)([u.Z], () => u.Z.can(v.Plq.CONNECT, n)),
+        Z = (0, o.e7)([u.Z], () => u.Z.can(_.Plq.CONNECT, n)),
         T = (null == t ? void 0 : t.emoji) == null || (0, m.K)(t.emoji, n);
     r.useEffect(() => {
         null == S || S(null == P ? void 0 : P.current);
     }, [P, S]),
         r.useEffect(() => {
             p.default.track(
-                v.rMx.VIEW_HANG_STATUS,
+                _.rMx.VIEW_HANG_STATUS,
                 E(
                     {
                         source: "HangStatusPopout",
@@ -89,7 +89,7 @@ function S(e) {
                 Z &&
                 (c.default.selectVoiceChannel(n.id),
                 p.default.track(
-                    v.rMx.HANG_STATUS_CTA_CLICKED,
+                    _.rMx.HANG_STATUS_CTA_CLICKED,
                     j(E({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "join",
@@ -105,7 +105,7 @@ function S(e) {
                     (0, h._s)(t.details, t.emoji, !0);
                 } else (0, h.Zx)(e, !0);
                 p.default.track(
-                    v.rMx.HANG_STATUS_CTA_CLICKED,
+                    _.rMx.HANG_STATUS_CTA_CLICKED,
                     j(E({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "swipe",
@@ -131,7 +131,7 @@ function S(e) {
             I
                 ? (0, i.jsx)(s.aML, {
                       "data-migration-pending": !0,
-                      text: T ? void 0 : _.intl.string(_.t["0LMpW+"]),
+                      text: T ? void 0 : v.intl.string(v.t["0LMpW+"]),
                       children: (e) =>
                           (0, i.jsx)(
                               "div",
@@ -139,7 +139,7 @@ function S(e) {
                                   children: (0, i.jsx)(s.Button, {
                                       size: "sm",
                                       variant: "secondary",
-                                      text: _.intl.string(_.t["0eHzpm"]),
+                                      text: v.intl.string(v.t["0eHzpm"]),
                                       onClick: A,
                                       disabled: !T,
                                   }),
@@ -150,7 +150,7 @@ function S(e) {
                   (0, i.jsx)(s.Button, {
                       size: "sm",
                       variant: "secondary",
-                      text: _.intl.string(_.t["B/dHXL"]),
+                      text: v.intl.string(v.t["B/dHXL"]),
                       onClick: N,
                   }),
         ],

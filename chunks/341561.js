@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(54381);
 n(473749);
 var i = n(952265),
@@ -63,7 +63,7 @@ function P(e, t) {
 function R(e) {
     return "".concat(E.Iv).concat(e.name).concat(E.Iv);
 }
-function w(e) {
+function D(e) {
     var t;
     let n = e.animated ? "a" : "";
     return e.managed || null == e.id
@@ -73,7 +73,7 @@ function w(e) {
               .concat(null != (t = e.originalName) ? t : e.name, ":")
               .concat(e.id, ">");
 }
-let D = {
+let w = {
     sentinel: E.Iv,
     stores: [u.Z],
     matches: (e, t, n, r, i) => n.length > 1,
@@ -242,7 +242,7 @@ let D = {
         if (a < t.length) {
             let e = t[a];
             return (
-                o.insertText(R(e), w(e)),
+                o.insertText(R(e), D(e)),
                 {
                     type: g.z2.EMOJI,
                     metadata: {

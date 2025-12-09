@@ -50,7 +50,7 @@ function S() {
                     }),
                     h.xg.map((e) =>
                         (0, r.jsx)(
-                            O,
+                            x,
                             {
                                 filter: e,
                                 trackFilterAction: u,
@@ -68,7 +68,7 @@ function S() {
                         }),
                 ],
             }),
-            (0, r.jsx)(x, { trackFilterAction: u }),
+            (0, r.jsx)(O, { trackFilterAction: u }),
             (0, r.jsx)(T, { trackFilterAction: u }),
             o &&
                 (0, r.jsx)(d.Button, {
@@ -82,7 +82,7 @@ function S() {
         ],
     });
 }
-let O = (e) => {
+let x = (e) => {
         var t;
         let { filter: n, trackFilterAction: l } = e,
             i = {
@@ -102,7 +102,7 @@ let O = (e) => {
             label: null != (t = i[n]) ? t : "",
         });
     },
-    x = (e) => {
+    O = (e) => {
         let { trackFilterAction: t } = e,
             n = l.useMemo(
                 () => [

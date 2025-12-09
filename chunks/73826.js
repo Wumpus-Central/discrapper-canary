@@ -1,26 +1,26 @@
-n.d(t, { Z: () => f });
-var r = n(54381);
+n.d(t, { Z: () => h });
+var a = n(54381);
 n(473749);
-var s = n(120356),
-    o = n.n(s),
-    a = n(205120),
-    i = n(481060),
-    l = n(49436),
+var r = n(120356),
+    i = n.n(r),
+    l = n(205120),
+    s = n(481060),
+    o = n(49436),
     c = n(644646),
-    u = n(617889),
-    d = n(324805),
-    p = n(388032),
-    m = n(905952);
-let f = (e) => {
-    let { quest: t, expansionSpring: n, isFullyExpanded: s, partnerBranding: f, useReducedMotion: g } = e,
-        x = (0, u.qe)().label,
-        h = x ? -4 : 6;
-    return (0, r.jsxs)(r.Fragment, {
+    d = n(617889),
+    u = n(324805),
+    m = n(388032),
+    p = n(905952);
+let h = (e) => {
+    let { quest: t, expansionSpring: n, isFullyExpanded: r, partnerBranding: h, useReducedMotion: x } = e,
+        f = (0, d.qe)().label,
+        g = f ? -4 : 6;
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, r.jsx)(a.animated.div, {
-                className: m.rewardTileContainer,
+            (0, a.jsx)(l.animated.div, {
+                className: p.rewardTileContainer,
                 style: {
-                    transform: (0, a.to)(
+                    transform: (0, l.to)(
                         [
                             n.to({
                                 range: [0, 1],
@@ -38,14 +38,14 @@ let f = (e) => {
                         (e, t, n) => "translate(".concat(e, "px, ").concat(t, "px) scale(").concat(n, ")"),
                     ),
                 },
-                children: (0, r.jsx)(c.Z, {
+                children: (0, a.jsx)(c.Z, {
                     learnMoreStyle: "text",
-                    learnMoreFontSize: s ? 9 : void 0,
+                    learnMoreFontSize: r ? 9 : void 0,
                     quest: t,
-                    questContent: l.jn.QUEST_BAR_V2,
-                    location: d.dr.QUESTS_BAR,
-                    autoplay: s && !g,
-                    sourceQuestContent: l.jn.QUEST_BAR_V2,
+                    questContent: o.jn.QUEST_BAR_V2,
+                    location: u.dr.QUESTS_BAR,
+                    autoplay: r && !x,
+                    sourceQuestContent: o.jn.QUEST_BAR_V2,
                     style: {
                         width: 48,
                         height: 48,
@@ -54,10 +54,10 @@ let f = (e) => {
                     },
                 }),
             }),
-            (0, r.jsxs)(a.animated.div, {
-                className: o()(m.rewardHighlightLogoCTA, { [m.rewardHighlightLogoCTALabel]: x }),
+            (0, a.jsxs)(l.animated.div, {
+                className: i()(p.rewardHighlightLogoCTA, { [p.rewardHighlightLogoCTALabel]: f }),
                 style: {
-                    transform: (0, a.to)(
+                    transform: (0, l.to)(
                         [
                             n.to({
                                 range: [0, 1],
@@ -65,30 +65,30 @@ let f = (e) => {
                             }),
                             n.to({
                                 range: [0, 1],
-                                output: [0, h],
+                                output: [0, g],
                             }),
                         ],
                         (e, t) => "translate(".concat(e, "px, ").concat(t, "px)"),
                     ),
                 },
                 children: [
-                    (0, r.jsx)("div", {
-                        className: o()({ [m.partnerBranding]: !x }),
-                        children: f,
+                    (0, a.jsx)("div", {
+                        className: i()({ [p.partnerBranding]: !f }),
+                        children: h,
                     }),
-                    (0, r.jsx)(a.animated.div, {
-                        className: o()(m.rewardHighlightCTA, { [m.rewardHighlightCTALabel]: x }),
+                    (0, a.jsx)(l.animated.div, {
+                        className: i()(p.rewardHighlightCTA, { [p.rewardHighlightCTALabel]: f }),
                         style: {
                             opacity: n.to({
                                 range: [0, 1],
-                                output: [x ? 1 : 0.7, 0],
+                                output: [f ? 1 : 0.7, 0],
                             }),
                         },
-                        children: (0, r.jsx)(i.Text, {
+                        children: (0, a.jsx)(s.Text, {
                             color: "always-white",
                             lineClamp: 1,
                             variant: "text-xs/medium",
-                            children: p.intl.string(p.t["3mgEQf"]),
+                            children: m.intl.string(m.t["3mgEQf"]),
                         }),
                     }),
                 ],

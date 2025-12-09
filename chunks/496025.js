@@ -1,8 +1,8 @@
-n.d(t, { Z: () => T }), n(388685), n(35282);
+n.d(t, { Z: () => N }), n(388685), n(35282);
 var a = n(54381),
-    l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(602715),
     o = n(95015),
     c = n(442837),
@@ -25,8 +25,8 @@ var a = n(54381),
 function O() {
     var e;
     let t = (0, c.Wu)([v.Z], () => v.Z.getSortedChannels()[1]),
-        [n, r] = l.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: i, options: m } = (0, c.cj)([f.Z, b.default, g.Z], () => ({
+        [n, i] = r.useState(t.length > 0 ? t[0].channelId : void 0),
+        { selectedChannel: l, options: m } = (0, c.cj)([f.Z, b.default, g.Z], () => ({
             selectedChannel: f.Z.getChannel(n),
             options: t.map((e) => {
                 let t = f.Z.getChannel(e.channelId);
@@ -36,16 +36,16 @@ function O() {
                 };
             }),
         })),
-        j = l.useCallback(() => {
+        j = r.useCallback(() => {
             var e;
-            if (null == i || !i.isPrivate()) return;
-            let t = (0, o.x9)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
-            x.Z.updatePrivateChannelRecipientFlags(i.id, t);
-        }, [i]),
+            if (null == l || !l.isPrivate()) return;
+            let t = (0, o.x9)(null != (e = l.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            x.Z.updatePrivateChannelRecipientFlags(l.id, t);
+        }, [l]),
         _ =
-            null != i &&
-            !!i.isPrivate() &&
-            (0, o.yE)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+            null != l &&
+            !!l.isPrivate() &&
+            (0, o.yE)(null != (e = l.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(u.Text, {
@@ -60,7 +60,7 @@ function O() {
                         options: m,
                         placeholder: "Select DM",
                         value: n,
-                        onChange: r,
+                        onChange: i,
                         renderOptionPrefix: (e) => {
                             if (null == e) return null;
                             let t = f.Z.getChannel(e.value);
@@ -86,8 +86,8 @@ function O() {
         ],
     });
 }
-function N() {
-    let e = l.useCallback(() => {
+function T() {
+    let e = r.useCallback(() => {
         m.Z.openPrivateChannel({ recipientIds: [C.I] });
     }, []);
     return (0, a.jsx)(u.Button, {
@@ -97,13 +97,13 @@ function N() {
         onClick: e,
     });
 }
-function T() {
+function N() {
     let e = (0, c.e7)([_.ZP], () => _.ZP.allByCategory(_.zU.MESSAGING), [], c.pF).map((e) => {
-        let [t, n, { label: l }] = e;
+        let [t, n, { label: r }] = e;
         return (0, a.jsx)(
             u.rsf,
             {
-                label: l,
+                label: r,
                 description: t,
                 checked: n,
                 onChange: (e) => (0, j.Z)(t, e),
@@ -112,13 +112,13 @@ function T() {
         );
     });
     return (0, a.jsxs)("div", {
-        className: i()(E.panel, S.panel),
+        className: l()(E.panel, S.panel),
         children: [
             e,
             (0, a.jsx)("div", { className: S.divider }),
             (0, a.jsx)(O, {}),
             (0, a.jsx)("div", { className: S.divider }),
-            (0, a.jsx)(N, {}),
+            (0, a.jsx)(T, {}),
         ],
     });
 }

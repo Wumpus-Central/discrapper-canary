@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(467055), n(388685);
+n.d(t, { Z: () => w }), n(467055), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -94,11 +94,11 @@ function R(e) {
             channel: v,
             guild: S,
             messageId: T,
-            parentOptionKey: w,
-            commandOptionSpec: D,
+            parentOptionKey: D,
+            commandOptionSpec: w,
             sourceAnalyticsLocations: x,
         } = e,
-        L = null != w ? w + " " + g.name : g.name;
+        L = null != D ? D + " " + g.name : g.name;
     if (g.type === c.jw.SUB_COMMAND || g.type === c.jw.SUB_COMMAND_GROUP) {
         let e = [
                 (0, r.jsxs)(
@@ -109,7 +109,7 @@ function R(e) {
                             (0, r.jsx)(
                                 l.Text,
                                 A(I({}, C), {
-                                    children: null != (n = null == D ? void 0 : D.name_localized) ? n : g.name,
+                                    children: null != (n = null == w ? void 0 : w.name_localized) ? n : g.name,
                                 }),
                             ),
                         ],
@@ -118,7 +118,7 @@ function R(e) {
                 ),
             ],
             s = Object.fromEntries(
-                null == (t = null != (a = null == D ? void 0 : D.options) ? a : [])
+                null == (t = null != (a = null == w ? void 0 : w.options) ? a : [])
                     ? void 0
                     : t.map((e) => [e.name, e]),
             );
@@ -216,7 +216,7 @@ function R(e) {
                 f = P(O.intl.string(O.t.nONJVc));
                 break;
             default: {
-                let e = null == D || null == (s = D.choices) ? void 0 : s.find((e) => e.value === g.value);
+                let e = null == w || null == (s = w.choices) ? void 0 : s.find((e) => e.value === g.value);
                 null != e && (j = null != (u = e.name_localized) ? u : e.name);
             }
         }
@@ -230,7 +230,7 @@ function R(e) {
                         (0, r.jsxs)(
                             l.Text,
                             A(I({}, C), {
-                                children: [" ", null != (d = null == D ? void 0 : D.name_localized) ? d : g.name, ": "],
+                                children: [" ", null != (d = null == w ? void 0 : w.name_localized) ? d : g.name, ": "],
                             }),
                         ),
                         f,
@@ -241,7 +241,7 @@ function R(e) {
         ]
     );
 }
-function w(e) {
+function D(e) {
     var t, n, a, o, p, _;
     let m,
         { channel: h, messageId: E, interactionData: b } = e,
@@ -311,4 +311,4 @@ function w(e) {
         ],
     });
 }
-let D = i.memo(w);
+let w = i.memo(D);

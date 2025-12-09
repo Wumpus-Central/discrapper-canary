@@ -28,22 +28,22 @@ let m = {
         x: 0,
         y: 0,
     },
-    y = !1;
-function b(e) {
+    _ = !1;
+function y(e) {
     let { clientX: t, clientY: n } = e;
-    (y = !0), (m.x = t), (m.y = n);
+    (_ = !0), (m.x = t), (m.y = n);
 }
-let _ = new Map();
-function v(e, t) {
-    if (null == t) _.delete(e), 0 === _.size && (window.removeEventListener("mousemove", b), (y = !1));
+let v = new Map();
+function b(e, t) {
+    if (null == t) v.delete(e), 0 === v.size && (window.removeEventListener("mousemove", y), (_ = !1));
     else {
-        let n = _.get(e);
+        let n = v.get(e);
         if (null != n && (0, a.Z)(n.zone, t.zone)) return;
-        0 === _.size && window.addEventListener("mousemove", b), _.set(e, t);
+        0 === v.size && window.addEventListener("mousemove", y), v.set(e, t);
     }
     if (f.isPlatformEmbedded)
         if (u.default.isCurrentPidOutOfProcess()) {
-            let e = Array.from(_.values()).map((e) => {
+            let e = Array.from(v.values()).map((e) => {
                 let { zone: t } = e;
                 return {
                     name: t.name,
@@ -60,7 +60,7 @@ function v(e, t) {
             if (null == e) return;
             e.broadcastCommand({
                 message: "set_click_zones",
-                zones: Array.from(_.values()).map((e) => {
+                zones: Array.from(v.values()).map((e) => {
                     let { zone: t } = e;
                     return t;
                 }),
@@ -68,8 +68,8 @@ function v(e, t) {
                 (n = e),
                 O ||
                     (n.setClickZoneCallback((e, t, n) => {
-                        let i = _.get(e);
-                        null != i && (y || ((m.x = t), (m.y = n)), i.instance.click());
+                        let i = v.get(e);
+                        null != i && (_ || ((m.x = t), (m.y = n)), i.instance.click());
                     }),
                     (O = !0));
         }
@@ -80,7 +80,7 @@ class E extends (i = r.PureComponent) {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
     componentWillUnmount() {
-        this.interval.stop(), v(this.zone, null);
+        this.interval.stop(), b(this.zone, null);
     }
     componentDidUpdate(e) {
         let { observe: t } = this.props;
@@ -104,7 +104,7 @@ class E extends (i = r.PureComponent) {
                 let e = this.props.contentDomRef.current;
                 if ((0, l.kK)(e)) {
                     let { left: t, top: n, right: i, bottom: r } = e.getBoundingClientRect();
-                    v(this.zone, {
+                    b(this.zone, {
                         instance: this,
                         zone: {
                             name: this.zone,

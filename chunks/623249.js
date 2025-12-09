@@ -1,146 +1,146 @@
 n.d(t, {
-    default: () => S,
-    y: () => w,
+    default: () => O,
+    y: () => N,
 }),
     n(388685);
-var r = n(54381),
-    s = n(473749),
-    o = n(120356),
-    a = n.n(o),
-    i = n(793030),
-    l = n(442837),
+var a = n(54381),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
+    s = n(793030),
+    o = n(442837),
     c = n(28664),
-    u = n(780384),
-    d = n(481060),
-    p = n(607070),
-    m = n(210887),
-    f = n(617136),
-    g = n(915750),
-    x = n(49436),
-    h = n(968843),
-    _ = n(475595),
-    b = n(387745),
+    d = n(780384),
+    u = n(481060),
+    m = n(607070),
+    p = n(210887),
+    h = n(617136),
+    x = n(915750),
+    f = n(49436),
+    g = n(968843),
+    b = n(475595),
+    v = n(387745),
     j = n(254579),
-    v = n(602667),
-    C = n(659302),
-    y = n(231338),
-    E = n(388032),
-    O = n(301889);
-function S(e) {
+    _ = n(602667),
+    y = n(659302),
+    C = n(231338),
+    S = n(388032),
+    E = n(301889);
+function O(e) {
     var t;
-    let { quest: n, errorHints: o, transitionState: v, onClose: S, sourceQuestContent: w } = e,
-        [P, N] = (0, s.useState)(o),
-        R = (0, h.KX)(),
-        A = (0, f.O5)(),
-        B = null == (t = (0, g.WD)()) ? void 0 : t.getId(),
-        k = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
-        I = (0, C.g2)({
-            useReducedMotion: k,
-            className: O.colorTransition,
+    let { quest: n, errorHints: i, transitionState: _, onClose: O, sourceQuestContent: N } = e,
+        [P, w] = (0, r.useState)(i),
+        I = (0, g.KX)(),
+        k = (0, h.O5)(),
+        R = null == (t = (0, x.WD)()) ? void 0 : t.getId(),
+        A = (0, o.e7)([m.Z], () => m.Z.useReducedMotion),
+        D = (0, y.g2)({
+            useReducedMotion: A,
+            className: E.colorTransition,
         }),
-        D = P.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
-        q = (0, j.Bz)(n),
-        Q = (0, l.e7)([m.Z], () => m.Z.getState().theme),
-        L = (0, u.wj)(Q) ? y.BR.DARK : y.BR.LIGHT,
-        { startConsoleQuest: V, startingConsoleQuest: M } = (0, h.GI)({
+        Z = P.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
+        L = (0, j.Bz)(n),
+        M = (0, o.e7)([p.Z], () => p.Z.getState().theme),
+        U = (0, d.wj)(M) ? C.BR.DARK : C.BR.LIGHT,
+        { startConsoleQuest: B, startingConsoleQuest: F } = (0, g.GI)({
             questId: n.id,
             beforeRequest: () => {
-                I.startAnimation(),
-                    A({
+                D.startAnimation(),
+                    k({
                         questId: n.id,
-                        questContent: x.jn.CONNECTIONS_MODAL,
-                        questContentCTA: f.jZ.DEFIBRILLATOR,
-                        sourceQuestContent: w,
+                        questContent: f.jn.CONNECTIONS_MODAL,
+                        questContentCTA: h.jZ.DEFIBRILLATOR,
+                        sourceQuestContent: N,
                     });
             },
             afterRequest: (e) => {
-                I.stopAnimation(), N(e);
+                D.stopAnimation(), w(e);
             },
         });
-    return (0, r.jsx)(i.Modal, {
-        transitionState: v,
-        onClose: S,
-        title: E.intl.string(E.t.W5lmKt),
-        subtitle: R.message,
+    return (0, a.jsx)(s.Modal, {
+        transitionState: _,
+        onClose: O,
+        title: S.intl.string(S.t.W5lmKt),
+        subtitle: I.message,
         actions: [
             {
                 variant: "secondary",
                 onClick: () =>
-                    void (S(),
-                    (0, b.V$)(
+                    void (O(),
+                    (0, v.V$)(
                         { quest: n },
                         {
-                            content: x.jn.CONNECTIONS_MODAL,
-                            ctaContent: f.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                            impressionId: B,
-                            sourceQuestContent: w,
+                            content: f.jn.CONNECTIONS_MODAL,
+                            ctaContent: h.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
+                            impressionId: R,
+                            sourceQuestContent: N,
                         },
                     )),
-                text: E.intl.string(E.t["qiS+xj"]),
+                text: S.intl.string(S.t["qiS+xj"]),
             },
             {
                 variant: "primary",
-                onClick: () => S(),
-                text: E.intl.string(E.t.cpT0Cq),
+                onClick: () => O(),
+                text: S.intl.string(S.t.cpT0Cq),
             },
         ],
-        children: (0, r.jsxs)(r.Fragment, {
+        children: (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, r.jsxs)("div", {
-                    className: O.contentHeader,
+                (0, a.jsxs)("div", {
+                    className: E.contentHeader,
                     children: [
-                        (0, r.jsx)(d.Text, {
+                        (0, a.jsx)(u.Text, {
                             variant: "eyebrow",
                             color: "text-default",
-                            children: E.intl.string(E.t["+/hZM/"]),
+                            children: S.intl.string(S.t["+/hZM/"]),
                         }),
-                        (0, r.jsxs)(d.P3F, {
-                            className: a()(O.refreshWrapper, { [O.disabled]: M }),
-                            onClick: V,
+                        (0, a.jsxs)(u.P3F, {
+                            className: l()(E.refreshWrapper, { [E.disabled]: F }),
+                            onClick: B,
                             children: [
-                                I.render(),
-                                (0, r.jsx)(d.Text, {
+                                D.render(),
+                                (0, a.jsx)(u.Text, {
                                     variant: "text-sm/medium",
                                     color: "currentColor",
-                                    className: O.colorTransition,
-                                    children: E.intl.string(E.t.wzzjk9),
+                                    className: E.colorTransition,
+                                    children: S.intl.string(S.t.wzzjk9),
                                 }),
                             ],
                         }),
                     ],
                 }),
-                (0, r.jsxs)("div", {
-                    className: O.accountsWrapper,
+                (0, a.jsxs)("div", {
+                    className: E.accountsWrapper,
                     children: [
-                        (0, r.jsx)(T, {
-                            icon: (0, r.jsx)(d.pzj, { size: "sm" }),
-                            text: E.intl.string(E.t.br3uIi),
+                        (0, a.jsx)(T, {
+                            icon: (0, a.jsx)(u.pzj, { size: "sm" }),
+                            text: S.intl.string(S.t.br3uIi),
                         }),
-                        (0, r.jsx)(T, {
-                            icon: (0, r.jsx)(d.iWm, { size: "sm" }),
-                            text: E.intl.string(E.t.XF4wuA),
-                            errors: q ? void 0 : D.map((e) => e.message),
-                            gameTile: q
-                                ? (0, r.jsx)(c.u, {
+                        (0, a.jsx)(T, {
+                            icon: (0, a.jsx)(u.iWm, { size: "sm" }),
+                            text: S.intl.string(S.t.XF4wuA),
+                            errors: L ? void 0 : Z.map((e) => e.message),
+                            gameTile: L
+                                ? (0, a.jsx)(c.u, {
                                       "aria-label": n.config.messages.gameTitle,
-                                      __unsupportedReactNodeAsText: (0, r.jsxs)("div", {
-                                          className: O.tooltip,
+                                      __unsupportedReactNodeAsText: (0, a.jsxs)("div", {
+                                          className: E.tooltip,
                                           children: [
-                                              (0, r.jsx)(d.Text, {
+                                              (0, a.jsx)(u.Text, {
                                                   variant: "text-sm/medium",
                                                   children: n.config.messages.gameTitle,
                                               }),
-                                              (0, r.jsx)(d.Text, {
+                                              (0, a.jsx)(u.Text, {
                                                   variant: "text-xs/normal",
                                                   color: "text-muted",
-                                                  children: E.intl.string(E.t.STpNEC),
+                                                  children: S.intl.string(S.t.STpNEC),
                                               }),
                                           ],
                                       }),
-                                      children: (0, r.jsx)("img", {
-                                          className: O.gameTile,
+                                      children: (0, a.jsx)("img", {
+                                          className: E.gameTile,
                                           alt: n.config.messages.gameTitle,
-                                          src: (0, _.fh)(n, _.eC.GAME_TILE, L).url,
+                                          src: (0, b.fh)(n, b.eC.GAME_TILE, U).url,
                                       }),
                                   })
                                 : null,
@@ -152,56 +152,56 @@ function S(e) {
     });
 }
 function T(e) {
-    let { icon: t, text: n, errors: s = [], gameTile: o } = e,
-        i = s.length > 0,
-        l = i ? d._3e : d.B_b;
-    return (0, r.jsxs)("div", {
-        className: O.connectionRow,
+    let { icon: t, text: n, errors: r = [], gameTile: i } = e,
+        s = r.length > 0,
+        o = s ? u._3e : u.B_b;
+    return (0, a.jsxs)("div", {
+        className: E.connectionRow,
         children: [
-            (0, r.jsxs)("div", {
-                className: a()(O.connectionRowHeader, { [O.connectionRowHeaderError]: i }),
+            (0, a.jsxs)("div", {
+                className: l()(E.connectionRowHeader, { [E.connectionRowHeaderError]: s }),
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: O.connectionRowHeaderContent,
+                    (0, a.jsxs)("div", {
+                        className: E.connectionRowHeaderContent,
                         children: [
                             t,
-                            (0, r.jsx)(d.Text, {
+                            (0, a.jsx)(u.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-default",
                                 children: n,
                             }),
                         ],
                     }),
-                    (0, r.jsxs)("div", {
-                        className: O.connectionRowHeaderContent,
+                    (0, a.jsxs)("div", {
+                        className: E.connectionRowHeaderContent,
                         children: [
-                            o,
-                            (0, r.jsx)(l, {
+                            i,
+                            (0, a.jsx)(o, {
                                 color: "currentColor",
                                 size: "sm",
-                                className: a()({
-                                    [O.success]: !i,
-                                    [O.error]: i,
+                                className: l()({
+                                    [E.success]: !s,
+                                    [E.error]: s,
                                 }),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, r.jsx)("div", {
-                className: O.errorsContainer,
-                children: s.map((e) =>
-                    (0, r.jsxs)(
+            (0, a.jsx)("div", {
+                className: E.errorsContainer,
+                children: r.map((e) =>
+                    (0, a.jsxs)(
                         "div",
                         {
-                            className: O.errorRow,
+                            className: E.errorRow,
                             children: [
-                                (0, r.jsx)(d.aNP, {
+                                (0, a.jsx)(u.aNP, {
                                     size: "sm",
                                     color: "currentColor",
-                                    className: O.error,
+                                    className: E.error,
                                 }),
-                                (0, r.jsx)(d.Text, {
+                                (0, a.jsx)(u.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-muted",
                                     children: e,
@@ -215,39 +215,39 @@ function T(e) {
         ],
     });
 }
-function w(e) {
-    (0, d.ZDy)(async () => {
+function N(e) {
+    (0, u.ZDy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
         return function (n) {
-            return (0, r.jsx)(v.A, {
+            return (0, a.jsx)(_.A, {
                 overrideVisibility: !0,
                 questOrQuests: e.quest,
-                questContent: x.jn.CONNECTIONS_MODAL,
+                questContent: f.jn.CONNECTIONS_MODAL,
                 sourceQuestContent: e.sourceQuestContent,
                 children: () =>
-                    (0, r.jsx)(
+                    (0, a.jsx)(
                         t,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
+                                    a = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
+                                    (a = a.concat(
                                         Object.getOwnPropertySymbols(n).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        (r = n[t]),
+                                    a.forEach(function (t) {
+                                        var a;
+                                        (a = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: r,
+                                                      value: a,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = r);
+                                                : (e[t] = a);
                                     });
                             }
                             return e;

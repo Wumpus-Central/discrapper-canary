@@ -16,7 +16,7 @@ var i = n(473749),
     b = n(173033),
     C = n(959517),
     y = n(981631);
-function v(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function v(e, t, n) {
         e
     );
 }
-function _(e) {
+function v(e) {
     var t, n;
     if (null == e.jumpTargetId || !e.ready) return null;
     let { jumpTargetId: i, jumpTargetOffset: r } = e;
@@ -121,7 +121,7 @@ class x {
                         }),
                     )),
                     i.forEach(function (t) {
-                        v(e, t, n[t]);
+                        _(e, t, n[t]);
                     });
             }
             return e;
@@ -141,7 +141,7 @@ class x {
         }
         if (null != e.messages.jumpTargetId) {
             if (this.isLoading()) return;
-            let n = _(e.messages);
+            let n = v(e.messages);
             if (null == n || this.isJumping() || e.messages.jumpSequenceId === t.jumpSequenceId) {
                 if (this.isJumping()) return void (null != n ? this.scrollToMessage(n, !0) : (this.jumping = !1));
             } else {
@@ -381,7 +381,7 @@ class x {
         if (!this.isJumping()) return;
         let { messages: e, hasUnreads: t } = this.props;
         if (null != e.jumpTargetId) {
-            let n = _(e);
+            let n = v(e);
             if (null == n) return;
             let i = this.getElementFromMessageId(n);
             (0, a.kK)(i)
@@ -420,7 +420,7 @@ class x {
         if (this.isInitialized()) return;
         let { initialScrollTop: e } = this;
         this.initialScrollTop = void 0;
-        let t = _(this.props.messages);
+        let t = v(this.props.messages);
         null != t
             ? this.scrollToMessage(t, !1)
             : this.props.hasUnreads &&
@@ -565,29 +565,29 @@ class x {
             n,
             r = this;
         if (
-            (v(this, "props", void 0),
-            v(this, "ref", i.createRef()),
-            v(this, "automaticAnchor", null),
-            v(this, "messageFetchAnchor", null),
-            v(this, "focusAnchor", null),
-            v(this, "loading", void 0),
-            v(this, "jumping", !1),
-            v(this, "pinned", void 0),
-            v(this, "dragging", !1),
-            v(this, "isAtBottom", !1),
-            v(this, "prevScrollTop", null),
-            v(this, "anchorTimeout", null),
-            v(this, "initialScrollTop", null),
-            v(this, "acking", !1),
-            v(this, "scrollCounter", 0),
-            v(this, "offsetHeightCache", 0),
-            v(this, "scrollHeightCache", 0),
-            v(this, "scrollTopCache", -1),
-            v(this, "_bottomAnchor", null),
-            v(this, "_automaticAnchorCallbacks", []),
-            v(this, "_scrollCompleteCallbacks", []),
-            v(this, "updateVisibleMessagesDebounced", l().debounce(h.JR, 300)),
-            v(this, "handleScroll", (e) => {
+            (_(this, "props", void 0),
+            _(this, "ref", i.createRef()),
+            _(this, "automaticAnchor", null),
+            _(this, "messageFetchAnchor", null),
+            _(this, "focusAnchor", null),
+            _(this, "loading", void 0),
+            _(this, "jumping", !1),
+            _(this, "pinned", void 0),
+            _(this, "dragging", !1),
+            _(this, "isAtBottom", !1),
+            _(this, "prevScrollTop", null),
+            _(this, "anchorTimeout", null),
+            _(this, "initialScrollTop", null),
+            _(this, "acking", !1),
+            _(this, "scrollCounter", 0),
+            _(this, "offsetHeightCache", 0),
+            _(this, "scrollHeightCache", 0),
+            _(this, "scrollTopCache", -1),
+            _(this, "_bottomAnchor", null),
+            _(this, "_automaticAnchorCallbacks", []),
+            _(this, "_scrollCompleteCallbacks", []),
+            _(this, "updateVisibleMessagesDebounced", l().debounce(h.JR, 300)),
+            _(this, "handleScroll", (e) => {
                 var t;
                 if (!this.isInitialized()) return;
                 let n = this.getScrollerState(),
@@ -640,18 +640,18 @@ class x {
                 1 === r ? this.loadMore() : 2 === r ? this.loadMore(!0) : this.enableAutomaticAck(),
                     this.handleScrollSpeed(n);
             }),
-            v(this, "handleResize", (e, t) => {
+            _(this, "handleResize", (e, t) => {
                 let { offsetHeightCache: n, scrollHeightCache: i } = this;
                 "container" === t ? (n = e.contentRect.height) : "content" === t && (i = e.contentRect.height),
                     this.isHeightChange(n, i) && this.fixScrollPosition(n, i);
             }),
-            v(this, "handleMouseDown", (e) => {
+            _(this, "handleMouseDown", (e) => {
                 e.target === e.currentTarget && (this.dragging = !0);
             }),
-            v(this, "handleMouseUp", () => {
+            _(this, "handleMouseUp", () => {
                 (this.dragging = !1), this.handleScroll();
             }),
-            v(this, "loadMore", function () {
+            _(this, "loadMore", function () {
                 let e,
                     t,
                     n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -673,7 +673,7 @@ class x {
                         truncate: !0,
                     });
             }),
-            v(this, "updateStoreDimensionsDebounced", l().debounce(this.updateStoreDimensions, 200)),
+            _(this, "updateStoreDimensionsDebounced", l().debounce(this.updateStoreDimensions, 200)),
             (this.props = e),
             (this.loading = e.messages.loadingMore),
             null != e.messages.jumpTargetId)

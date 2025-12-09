@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => v,
-    Z: () => w,
+    Z: () => D,
 }),
     n(388685);
 var r = n(392711),
@@ -201,7 +201,7 @@ function P(e) {
 function R(e) {
     d.A2.updateSetting((t) => b(g({}, t), { [e]: b(g({}, t[e]), { lastImpressionTime: Date.now() }) }));
 }
-class w extends a.Z {
+class D extends a.Z {
     possiblyShowFeedbackModal(e, t, n) {
         if (!S(e) || (null != this.feedbackTypeToShow && m.b5[this.feedbackTypeToShow] < m.b5[e])) {
             null == n || n();

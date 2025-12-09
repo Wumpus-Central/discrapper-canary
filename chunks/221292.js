@@ -1,6 +1,6 @@
 n.d(t, {
     Er: () => k,
-    NE: () => D,
+    NE: () => w,
     Of: () => j,
     QN: () => C,
     Qf: () => x,
@@ -9,7 +9,7 @@ n.d(t, {
     V1: () => M,
     pQ: () => P,
     te: () => T,
-    z7: () => w,
+    z7: () => D,
 }),
     n(539854),
     n(388685);
@@ -227,7 +227,7 @@ let S = (e) => {
                 }),
             );
     },
-    w = (e) => {
+    D = (e) => {
         let {
             guildId: t,
             channelId: n,
@@ -271,7 +271,7 @@ let S = (e) => {
             }),
         );
     },
-    D = (e) => {
+    w = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
         d.default.track(
             g.rMx.USER_PROFILE_BADGE_PRESSED,

@@ -18,8 +18,8 @@ function b(e) {
         b = (0, o.bp)(),
         C = (0, m.qY)(t),
         y = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        { canManageGuildEvent: v } = (0, s.XJ)(y),
-        _ = v(C),
+        { canManageGuildEvent: _ } = (0, s.XJ)(y),
+        v = _(C),
         O = r.useRef(null);
     if (null == C) return null;
     let x = () => {
@@ -29,7 +29,7 @@ function b(e) {
         E = () => {
             h.Z.endEvent(C.id, C.guild_id);
         };
-    return _
+    return v
         ? (0, i.jsx)(a.yRy, {
               targetElementRef: O,
               renderPopout: (e) => {

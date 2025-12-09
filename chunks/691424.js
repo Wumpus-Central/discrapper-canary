@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(943362),
     P = n(551452),
     R = n(69626),
-    w = n(142990),
-    D = n(382056),
+    D = n(142990),
+    w = n(382056),
     x = n(532901),
     L = n(311739),
     j = n(981631),
@@ -405,13 +405,13 @@ let K = {
 function z(e) {
     return F(Z({}, K), {
         link: (0, x.Z)(e),
-        devLink: (0, w.Z)(e),
+        devLink: (0, D.Z)(e),
         emoji: V(e),
         customEmoji: H(e),
         channelMention: (0, P.Z)(e),
         commandMention: (0, R.ZP)(e),
         attachmentLink: (0, N.Z)(e),
         shopLink: (0, L.Z)(e),
-        gameMention: D.Z,
+        gameMention: w.Z,
     });
 }

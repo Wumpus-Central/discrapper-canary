@@ -71,7 +71,7 @@ function R(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,7 +82,7 @@ function w(e, t) {
         e
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -334,8 +334,8 @@ function V(e) {
                             children: (0, r.jsx)(c.SJ, {
                                 children: (e) => {
                                     var { ref: t } = e,
-                                        n = D(e, ["ref"]);
-                                    return (0, r.jsx)("div", w(P({ ref: t }, n), { children: F }));
+                                        n = w(e, ["ref"]);
+                                    return (0, r.jsx)("div", D(P({ ref: t }, n), { children: F }));
                                 },
                             }),
                         }),
@@ -372,7 +372,7 @@ function H(e) {
             let e = null != a ? g.Z.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
-    function w(e, n) {
+    function D(e, n) {
         let r = () => {
             let { id: r, channel_id: i } = e,
                 a = h.Z.getChannel(i);
@@ -380,10 +380,10 @@ function H(e) {
         };
         (0, S.Z)(e, r) && !R && r();
     }
-    function D(e) {
+    function w(e) {
         let { message: t, channel: n } = e;
         if (null == t) return [];
-        if (null != b) return b(t, (e) => w(t, e));
+        if (null != b) return b(t, (e) => D(t, e));
         let i = [];
         return null == n
             ? []
@@ -403,7 +403,7 @@ function H(e) {
                                   message: t,
                                   jumping: R,
                                   canCloseAllMessages: p,
-                                  jumpTo: w,
+                                  jumpTo: D,
                                   onCloseMessage: A,
                                   closeAriaLabel: P,
                               }),
@@ -438,7 +438,7 @@ function H(e) {
         hasMore: s,
         loadMore: c,
         getProTip: y,
-        renderItem: D,
+        renderItem: w,
         listName: N,
         "aria-label": e["aria-label"],
     });

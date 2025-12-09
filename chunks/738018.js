@@ -60,7 +60,7 @@ function R(e) {
         t
     );
 }
-function w(e) {
+function D(e) {
     var t;
     let n = (0, E.Tm)(e),
         r =
@@ -72,7 +72,7 @@ function w(e) {
                   };
     return A.set(n, r), r;
 }
-function D(e) {
+function w(e) {
     return {
         searchContext: e,
         query: "",
@@ -89,7 +89,7 @@ function D(e) {
 function x(e) {
     let { searchContext: t, query: n, mode: r, tokens: i, cursorScope: a, autocompletes: o } = e;
     return (
-        w(t),
+        D(t),
         {
             searchContext: t,
             query: n,
@@ -166,7 +166,7 @@ function B(e) {
     if (null != l && a === l.query && (null == l.mode || l.mode.filter === o.filter)) (t = l.autocompletes), (c = !1);
     else if (M(o)) {
         var u, d;
-        let e = w(n),
+        let e = D(n),
             i = o.token,
             a = null == i || null == (u = i.getFullMatch()) ? void 0 : u.trim();
         if (null != a && a.length > 0) {
@@ -201,7 +201,7 @@ function F(e) {
     let c = null,
         u = null != (n = null == a || null == (t = a.getFullMatch()) ? void 0 : t.trim()) ? n : "",
         d = 0 === u.length;
-    if ((0, E.b7)(o) && j(i) && !d) c = w(o).results;
+    if ((0, E.b7)(o) && j(i) && !d) c = D(o).results;
     else {
         let e = null == (r = y.ZP[i]) ? void 0 : r.getAutocompletions;
         c =
@@ -412,7 +412,7 @@ class et extends (r = o.ZP.Store) {
     getState(e) {
         var t;
         let n = (0, E.Tm)(e);
-        return null != (t = T.get(n)) ? t : D(e);
+        return null != (t = T.get(n)) ? t : w(e);
     }
     getSelectedSearchContext() {
         return I;

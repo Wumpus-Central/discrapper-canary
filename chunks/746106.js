@@ -1,4 +1,4 @@
-n.d(t, { w: () => w }), n(388685), n(539854);
+n.d(t, { w: () => D }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(469571),
@@ -100,7 +100,7 @@ function R(e, t, n, r, o) {
         u
     );
 }
-function w(e) {
+function D(e) {
     let { windowKey: t, themeOverride: n, children: a } = e,
         o = null != t,
         [c] = i.useState(() => T.ZP.getEnableHardwareAcceleration()),
@@ -109,8 +109,8 @@ function w(e) {
             theme: b,
             focused: N,
             currentWindow: P,
-            fontScale: w,
-            fontScaleClass: D,
+            fontScale: D,
+            fontScaleClass: w,
             keyboardModeEnabled: x,
             saturation: L,
             desaturateUserColors: j,
@@ -180,8 +180,8 @@ function w(e) {
                 theme: b,
                 density: Y,
                 focused: N,
-                fontScale: w,
-                fontScaleClass: D,
+                fontScale: D,
+                fontScaleClass: w,
                 keyboardModeEnabled: x,
                 mouseMode: V,
                 saturation: L,

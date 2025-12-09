@@ -30,7 +30,7 @@ var r = t(54381),
     E = t(388032),
     T = t(444630),
     B = t(430864);
-function D(e) {
+function A(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -55,7 +55,7 @@ function D(e) {
     }
     return e;
 }
-function A(e, n) {
+function D(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -87,7 +87,7 @@ function L(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        A(D({}, t), {
+                        D(A({}, t), {
                             channel: l,
                             guild: n,
                         }),
@@ -239,7 +239,7 @@ let H = l.memo(function () {
                                       return (t) =>
                                           (0, r.jsx)(
                                               e,
-                                              A(D({}, t), {
+                                              D(A({}, t), {
                                                   channel: n,
                                                   guild: i,
                                               }),
@@ -254,7 +254,7 @@ let H = l.memo(function () {
                                       return (t) =>
                                           (0, r.jsx)(
                                               e,
-                                              A(D({}, t), {
+                                              D(A({}, t), {
                                                   channel: n,
                                                   guild: i,
                                               }),

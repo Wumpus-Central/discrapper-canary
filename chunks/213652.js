@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => _ });
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -16,12 +16,12 @@ var i = n(54381),
     b = n(354459),
     C = n(388032),
     y = n(591868);
-function v(e) {
+function _(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, o.ZP)(),
-        v = (0, l.e7)([m.Z], () => m.Z.getSelectedParticipant(t.id)),
-        _ = (null == v ? void 0 : v.type) === b.fO.STREAM,
-        O = (0, l.e7)([h.Z], () => (_ ? h.Z.getActiveStreamForStreamKey(v.id) : null)),
+        _ = (0, l.e7)([m.Z], () => m.Z.getSelectedParticipant(t.id)),
+        v = (null == _ ? void 0 : _.type) === b.fO.STREAM,
+        O = (0, l.e7)([h.Z], () => (v ? h.Z.getActiveStreamForStreamKey(_.id) : null)),
         { ignoreSenderPreference: x } = d.Z.useExperiment(
             { location: "ActionBarClipsButton" },
             { autoTrackExposure: !1 },
@@ -32,7 +32,7 @@ function v(e) {
         })),
         S = (0, c.z8)(),
         P = (null == O ? void 0 : O.ownerId) === f.default.getId(),
-        I = !S || !(P || E) || j || null == v,
+        I = !S || !(P || E) || j || null == _,
         Z = r.useCallback((e) => {
             var t, n;
             return (0, i.jsx)(
@@ -81,7 +81,7 @@ function v(e) {
     return (0, i.jsx)(p.Z, {
         className: y.actionBarButton,
         onClick: () => {
-            I || ((0, g.v)(n, g.d.CLIP), P ? (0, u.br)() : (0, u.C1)(v.id));
+            I || ((0, g.v)(n, g.d.CLIP), P ? (0, u.br)() : (0, u.C1)(_.id));
         },
         disabled: I,
         iconComponent: Z,

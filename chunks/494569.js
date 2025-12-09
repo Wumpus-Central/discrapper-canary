@@ -81,10 +81,10 @@ function u(e) {
                     (void 0 === d || isNaN(d) || void 0 === n || isNaN(n) || n > d) && R(60);
                 }, e));
         }),
-        w = (e) => {
+        D = (e) => {
             e.preventDefault();
         },
-        { addGlobalListener: D, removeAllGlobalListeners: x } = (0, s.x)();
+        { addGlobalListener: w, removeAllGlobalListeners: x } = (0, s.x)();
     return {
         spinButtonProps: {
             role: "spinbutton",
@@ -101,7 +101,7 @@ function u(e) {
         },
         incrementButtonProps: {
             onPressStart: () => {
-                P(400), D(window, "contextmenu", w);
+                P(400), w(window, "contextmenu", D);
             },
             onPressEnd: () => {
                 S(), x();
@@ -111,7 +111,7 @@ function u(e) {
         },
         decrementButtonProps: {
             onPressStart: () => {
-                R(400), D(window, "contextmenu", w);
+                R(400), w(window, "contextmenu", D);
             },
             onPressEnd: () => {
                 S(), x();

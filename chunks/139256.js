@@ -110,7 +110,7 @@ function R(e) {
         children: n,
     });
 }
-function w(e) {
+function D(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)("div", {
         "aria-label": v.intl.string(v.t.sJpqBS),
@@ -119,7 +119,7 @@ function w(e) {
         children: n,
     });
 }
-function D(e) {
+function w(e) {
     let { className: t, children: n } = e,
         i = (0, c.Jb)({ orientation: "vertical" }),
         { ref: a } = i,
@@ -184,11 +184,11 @@ function j(e) {
             answersInteraction: n,
         })
             .with({ answersInteraction: b.Y7.RADIO_BUTTONS }, () => ({
-                ContainerComponent: D,
+                ContainerComponent: w,
                 answerElementType: 1,
             }))
             .with({ answersInteraction: b.Y7.CHECKBOXES }, () => ({
-                ContainerComponent: w,
+                ContainerComponent: D,
                 answerElementType: 2,
             }))
             .with(

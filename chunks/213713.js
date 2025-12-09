@@ -1,8 +1,8 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(120356),
-    i = n.n(r),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(392711),
     o = n.n(s),
     c = n(876215),
@@ -23,16 +23,16 @@ var a = n(54381),
     S = n(550532),
     E = n(71585),
     O = n(146282),
-    N = n(780106),
-    T = n(650613),
+    T = n(780106),
+    N = n(650613),
     P = n(789086),
-    I = n(206583),
-    w = n(680027),
+    w = n(206583),
+    I = n(680027),
     k = n(451429);
 let R = [
     {
         key: "type",
-        cellClassName: i()(w.cell, w.cellType),
+        cellClassName: l()(I.cell, I.cellType),
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(h.Text, {
@@ -43,7 +43,7 @@ let R = [
     },
     {
         key: "count",
-        cellClassName: i()(w.cell, w.cellCount),
+        cellClassName: l()(I.cell, I.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, a.jsx)("div", {
@@ -56,7 +56,7 @@ let R = [
     },
     {
         key: "only?",
-        cellClassName: w.cell,
+        cellClassName: I.cell,
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(A, { type: t });
@@ -65,29 +65,29 @@ let R = [
 ];
 function A(e) {
     var t, n;
-    let { type: l } = e,
-        r = (0, u.e7)([O.Z], () => O.Z.getFilters()),
-        i = null != (n = null == r || null == (t = r.types) ? void 0 : t.has(l)) && n;
+    let { type: r } = e,
+        i = (0, u.e7)([O.Z], () => O.Z.getFilters()),
+        l = null != (n = null == i || null == (t = i.types) ? void 0 : t.has(r)) && n;
     return (0, a.jsx)(h.rsf, {
-        checked: i,
+        checked: l,
         onChange: function () {
-            i
+            l
                 ? x.Z.dispatch({
                       type: "CONTENT_INVENTORY_SET_FILTERS",
                       filters: void 0,
                   })
                 : x.Z.dispatch({
                       type: "CONTENT_INVENTORY_SET_FILTERS",
-                      filters: { types: new Set([l]) },
+                      filters: { types: new Set([r]) },
                   });
         },
     });
 }
-function Z() {
+function D() {
     var e, t;
-    let n = (0, u.e7)([O.Z], () => O.Z.getFeed(I.YN.GLOBAL_FEED)),
-        r = (0, u.e7)([O.Z], () => O.Z.getDebugImpressionCappingDisabled()),
-        i = (0, u.e7)([E.Z], () => E.Z.getDebugFastImpressionCappingEnabled()),
+    let n = (0, u.e7)([O.Z], () => O.Z.getFeed(w.YN.GLOBAL_FEED)),
+        i = (0, u.e7)([O.Z], () => O.Z.getDebugImpressionCappingDisabled()),
+        l = (0, u.e7)([E.Z], () => E.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -101,9 +101,9 @@ function Z() {
         })(null == n || null == (e = n.entries) ? void 0 : e.map((e) => e.content)),
         c = (0, u.e7)([O.Z], () => {
             var e;
-            return (null == (e = O.Z.getFeedState(I.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = O.Z.getFeedState(w.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [A, Z] = l.useState(""),
+        [A, D] = r.useState(""),
         L = (0, u.e7)([y.Z, f.Z], () => {
             var e, t, n;
             return parseInt(A) > 0
@@ -128,12 +128,12 @@ function Z() {
                 let [t] = e;
                 return t;
             }),
-        F = (0, g.Z)(U).filter(C.lm),
-        B = (0, u.e7)([S.Z], () => S.Z.getFakeGameToShow());
+        B = (0, g.Z)(U).filter(C.lm),
+        F = (0, u.e7)([S.Z], () => S.Z.getFakeGameToShow());
     return (0, a.jsx)("div", {
         className: k.panel,
         children: (0, a.jsxs)(h.zJl, {
-            className: w.content,
+            className: I.content,
             children: [
                 (0, a.jsxs)(h.Kqy, {
                     gap: 8,
@@ -155,7 +155,7 @@ function Z() {
                             onClick: function () {
                                 x.Z.dispatch({
                                     type: "CONTENT_INVENTORY_MANUAL_REFRESH",
-                                    feedId: I.YN.GLOBAL_FEED,
+                                    feedId: w.YN.GLOBAL_FEED,
                                     feature: d.L.INBOX,
                                 });
                             },
@@ -188,7 +188,7 @@ function Z() {
                         }),
                         (0, a.jsx)(h.Button, {
                             variant: "primary",
-                            text: r ? "Enable Impression Capping" : "Disable Impression Capping",
+                            text: i ? "Enable Impression Capping" : "Disable Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
                                 x.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING" });
@@ -196,7 +196,7 @@ function Z() {
                         }),
                         (0, a.jsx)(h.Button, {
                             variant: "primary",
-                            text: i ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
+                            text: l ? "Disable Fast Impression Capping" : "Enable Fast Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
                                 x.Z.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING" });
@@ -205,7 +205,7 @@ function Z() {
                     ],
                 }),
                 !1,
-                (0, a.jsx)(T.Z, {}),
+                (0, a.jsx)(N.Z, {}),
                 (0, a.jsxs)(h.Kqy, {
                     gap: 8,
                     children: [
@@ -215,10 +215,10 @@ function Z() {
                         }),
                         (0, a.jsx)(h.oil, {
                             placeholder: "App ID or full name",
-                            onChange: (e) => (0 === e.length || e.length >= 18) && Z(e),
+                            onChange: (e) => (0 === e.length || e.length >= 18) && D(e),
                             onKeyDown: (e) => {
                                 "Enter" === e.key &&
-                                    (A === e.currentTarget.value ? null == M || M(e) : Z(e.currentTarget.value));
+                                    (A === e.currentTarget.value ? null == M || M(e) : D(e.currentTarget.value));
                             },
                             error:
                                 A.length > 0 && null == M
@@ -227,10 +227,10 @@ function Z() {
                             helperText: null != M ? "Game profile found" : void 0,
                         }),
                         (0, a.jsx)("ul", {
-                            children: F.map((e) =>
+                            children: B.map((e) =>
                                 (0, a.jsx)(
                                     "li",
-                                    { children: (0, a.jsx)(D, { application: e }) },
+                                    { children: (0, a.jsx)(Z, { application: e }) },
                                     "follow-game-".concat(e.id),
                                 ),
                             ),
@@ -249,11 +249,11 @@ function Z() {
                             children: "Force show game:",
                         }),
                         (0, a.jsx)(p.B6, {
-                            options: N.h.map((e) => ({
+                            options: T.h.map((e) => ({
                                 label: e,
                                 value: e,
                             })),
-                            isSelected: (e) => e === B,
+                            isSelected: (e) => e === F,
                             select: function (e) {
                                 x.Z.dispatch({
                                     type: "CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING",
@@ -269,7 +269,7 @@ function Z() {
         }),
     });
 }
-let D = (e) => {
+let Z = (e) => {
     let { application: t } = e,
         n = (0, _.Z)({
             applicationId: t.id,

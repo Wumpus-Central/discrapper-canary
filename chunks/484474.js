@@ -1,27 +1,27 @@
 n.d(t, { Z: () => m }), n(953529);
 var r = n(54381),
-    i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    a = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(780384),
     o = n(481060),
     c = n(410030),
     d = n(688465),
     u = n(196073);
 function p(e) {
-    let { title: t, betaTag: n, color: i = "header-primary" } = e;
+    let { title: t, betaTag: n, color: a = "header-primary" } = e;
     return (0, r.jsxs)(o.Heading, {
         className: l()(u.title, u.uppercase),
         variant: "display-lg",
-        color: i,
+        color: a,
         children: [t, n && (0, r.jsx)(d.Z, { className: u.betaTag })],
     });
 }
 function m(e) {
-    let { title: t, titleColor: n, description: a, button: d, className: m, children: h, betaTag: g = !1 } = e,
+    let { title: t, titleColor: n, description: i, button: d, className: m, children: h, betaTag: g = !1 } = e,
         f = (0, c.ZP)(),
         _ = (0, s.wj)(f),
-        b = i.useMemo(
+        b = a.useMemo(
             () =>
                 Array.isArray(t)
                     ? t.map((e, t) =>
@@ -51,12 +51,12 @@ function m(e) {
                     className: u.textContainer,
                     children: [
                         b,
-                        null != a &&
+                        null != i &&
                             (0, r.jsx)(o.Text, {
                                 className: u.description,
                                 variant: "text-md/medium",
                                 color: _ ? "text-muted" : "header-primary",
-                                children: a,
+                                children: i,
                             }),
                         null != d &&
                             (0, r.jsx)("div", {

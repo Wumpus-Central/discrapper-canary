@@ -143,9 +143,9 @@ function y(e) {
             "returnRef",
             "onNudgeChange",
         ]);
-    let [w, D] = i.useState(null != v ? v : "top");
+    let [D, w] = i.useState(null != v ? v : "top");
     i.useEffect(() => {
-        null != v && D(v);
+        null != v && w(v);
     }, [v]);
     let x = i.useMemo(() => {
             var e;
@@ -164,7 +164,7 @@ function y(e) {
             [O],
         ),
         M = i.useCallback((e) => {
-            D(e);
+            w(e);
         }, []),
         k = A ? f.caretHoverable : void 0,
         U = _(
@@ -172,7 +172,7 @@ function y(e) {
                 targetElementRef: R.targetElementRef,
                 shouldShow: R.shouldShow,
                 hasVideo: R.hasVideo,
-                position: w,
+                position: D,
                 caretConfig: x,
                 onRequestClose: L,
                 gradientColor: y,

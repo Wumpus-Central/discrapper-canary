@@ -39,7 +39,7 @@ function R(e, t, n) {
         e
     );
 }
-let w = o().throttle(
+let D = o().throttle(
         () => {
             h.Z.increment(
                 {
@@ -52,7 +52,7 @@ let w = o().throttle(
         100,
         { trailing: !1 },
     ),
-    D = 10 * y.Z.Millis.SECOND;
+    w = 10 * y.Z.Millis.SECOND;
 function x(e) {
     var t, n;
     let { error: a, onLock: o, onReload: l, onDisable: c, onCrashDisabled: u } = e,
@@ -63,7 +63,7 @@ function x(e) {
         S = (0, d.e7)([E.default], () => E.default.getCurrentUser());
     (0, m.ZP)(
         () => (
-            (h.current = setTimeout(R, D)),
+            (h.current = setTimeout(R, w)),
             _.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: A.n0.OverlayCrashed }),
             () => {
                 null != h.current && clearTimeout(h.current);
@@ -77,7 +77,7 @@ function x(e) {
                 null == o || o(),
                 null == u || u();
         }, [p, o, u]),
-        w = i.useCallback(
+        D = i.useCallback(
             (e) => {
                 O ||
                     (v(!0),
@@ -153,7 +153,7 @@ function x(e) {
             className: P.notificationIcon,
         }),
         onNotificationClick: x,
-        onConfirmClick: w,
+        onConfirmClick: D,
         onCancelClick: null != j ? L : void 0,
         onDismissClick: o,
         expand: !0,
@@ -190,7 +190,7 @@ class L extends i.PureComponent {
             sentry_issue_id: i,
             error_level: "fatal",
         }),
-            w(),
+            D(),
             (this.pid = r);
     }
     render() {

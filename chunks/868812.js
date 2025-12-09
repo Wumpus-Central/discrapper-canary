@@ -14,7 +14,7 @@ function f(e) {
     let { channel: t, themeable: n, whichPopoutIsOpen: f, setWhichPopoutIsOpen: m } = e,
         { parentAnalyticsLocation: g } = (0, o.ZP)(),
         b = r.useRef(null),
-        { isHovered: C, setIsHovered: y, onMouseEnter: v, onMouseLeave: _ } = (0, c.Z)(200, 300),
+        { isHovered: C, setIsHovered: y, onMouseEnter: _, onMouseLeave: v } = (0, c.Z)(200, 300),
         {
             Component: O,
             play: x,
@@ -22,19 +22,19 @@ function f(e) {
         } = (0, l.$)(),
         S = r.useCallback(
             (e) => {
-                "focus" !== e.type && (v(), E());
+                "focus" !== e.type && (_(), E());
             },
-            [v, E],
+            [_, E],
         ),
         P = r.useCallback(() => {
-            null == f && (_(), j());
-        }, [_, j, f]),
+            null == f && (v(), j());
+        }, [v, j, f]),
         I = r.useCallback(() => {
             (0, s.v)(g, s.d.GIFTING),
                 f === p.D.GIFTING
-                    ? (null == m || m(void 0), _())
-                    : (null != f ? (x(), v()) : x(), null == m || m(p.D.GIFTING));
-        }, [v, _, g, x, m, f]);
+                    ? (null == m || m(void 0), v())
+                    : (null != f ? (x(), _()) : x(), null == m || m(p.D.GIFTING));
+        }, [_, v, g, x, m, f]);
     return (0, i.jsx)(a.y, {
         targetElementRef: b,
         shouldShow: (C && (f === p.D.GIFTING || null == f)) || f === p.D.GIFTING,
@@ -52,8 +52,8 @@ function f(e) {
                 channel: t,
                 closePopout: n,
                 isHovered: C,
-                onMouseEnter: v,
-                onMouseLeave: _,
+                onMouseEnter: _,
+                onMouseLeave: v,
             });
         },
         children: () =>

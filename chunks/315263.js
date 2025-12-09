@@ -39,8 +39,8 @@ var r = n(873546),
 n(812513);
 var P = n(701190),
     R = n(944486),
-    w = n(914010),
-    D = n(771845),
+    D = n(914010),
+    w = n(771845),
     x = n(626135),
     L = n(591759),
     j = n(782568),
@@ -65,7 +65,7 @@ async function G(e) {
     if (null == n) return;
     if (n.state === M.r2o.EXPIRED || n.state === M.r2o.BANNED || n.state === M.r2o.ERROR)
         return void (await U(n, e.code));
-    let r = D.ZP.getFlattenedGuildIds(),
+    let r = w.ZP.getFlattenedGuildIds(),
         i = null == n || null == (t = n.guild) ? void 0 : t.id;
     null != i && r.includes(i) ? s.ZP.transitionToInviteSync(n) : await U(n, e.code);
 }
@@ -102,7 +102,7 @@ function B(e) {
                                 applicationId: void 0,
                                 skuId: void 0,
                             },
-                c = null != (a = w.Z.getGuildId()) ? a : void 0;
+                c = null != (a = D.Z.getGuildId()) ? a : void 0;
             return (
                 null == s
                     ? (0, j.Z)(e)
@@ -237,10 +237,10 @@ function B(e) {
                 !0
             );
         };
-    let { host: D, hostname: U, pathname: B, search: F, hash: V } = null != (t = L.Z.toURLSafe(e)) ? t : {},
+    let { host: w, hostname: U, pathname: B, search: F, hash: V } = null != (t = L.Z.toURLSafe(e)) ? t : {},
         H =
             L.Z.isDiscordHostname(null != U ? U : null) ||
-            L.Z.isDiscordLocalhost(null != D ? D : null, null != U ? U : null);
+            L.Z.isDiscordLocalhost(null != w ? w : null, null != U ? U : null);
     if (
         H &&
         ((null == B ? void 0 : B.startsWith("/application-directory")) ||
@@ -305,7 +305,7 @@ function B(e) {
     if (null != B && H && null != Y)
         return (e) => {
             null == e || e.preventDefault();
-            let t = w.Z.getGuildId();
+            let t = D.Z.getGuildId();
             null != Y.guildId && "" !== Y.guildId && Y.guildId !== t && (0, v.Z)(M.Z5c.CHANNEL(Y.guildId));
             let n = b.ZP.getGuildScheduledEvent(Y.guildEventId);
             return null != n && (0, E.bO)({ eventId: n.id }), !0;

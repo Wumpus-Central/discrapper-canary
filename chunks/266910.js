@@ -102,15 +102,15 @@ let C = function (e) {
             src: N,
             backgroundSrc: P,
             userId: R,
-            guildId: w,
-            pulseSpeakingIndicator: D = !1,
+            guildId: D,
+            pulseSpeakingIndicator: w = !1,
             speaking: x = !1,
         } = e,
         L = T(e, ["style", "src", "backgroundSrc", "userId", "guildId", "pulseSpeakingIndicator", "speaking"]);
     let j = null != P ? P : N,
         M = (0, c.ZP)(j, s.Z.unsafe_rawColors.PRIMARY_800.css),
         k = (0, u.c)(!0, "VideoBackground-web").enabled,
-        U = (0, p.ZP)(null != R ? R : E.lds, w),
+        U = (0, p.ZP)(null != R ? R : E.lds, D),
         G = null != (O = (0, f.V3)(null == U || null == (t = U.themeColors) ? void 0 : t[0])) ? O : E.BRd.DARK,
         { profileThemeStyle: Z, profileThemeClassName: B } = (0, _.Z)({
             theme: G,
@@ -132,10 +132,10 @@ let C = function (e) {
             null != R &&
                 H &&
                 (0, m.Z)(R, void 0, {
-                    guildId: w,
+                    guildId: D,
                     dispatchWait: !0,
                 });
-        }, [H, R, w]),
+        }, [H, R, D]),
         null == N)
     )
         return null;
@@ -155,7 +155,7 @@ let C = function (e) {
         (0, r.jsx)("div", {
             style: V ? v({}, C, Z) : v({}, W),
             className: o()(y.background, { [B]: V }),
-            children: D
+            children: w
                 ? (0, r.jsx)(d.Z, {
                       shouldAnimate: x,
                       children: Y,

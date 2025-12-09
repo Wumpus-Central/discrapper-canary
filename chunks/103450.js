@@ -27,8 +27,8 @@ var r = n(473749),
     N = n(699516),
     P = n(944486),
     R = n(594174),
-    w = n(979651),
-    D = n(181106),
+    D = n(979651),
+    w = n(181106),
     x = n(417363),
     L = n(358085),
     j = n(804739),
@@ -81,8 +81,8 @@ function G(e) {
             }),
         ),
         er = (0, i.e7)(
-            [D.Z],
-            () => null != Z && null != Z.application_id && D.Z.getState(Z.application_id, M.mFx.JOIN) === M.OcF.LOADING,
+            [w.Z],
+            () => null != Z && null != Z.application_id && w.Z.getState(Z.application_id, M.mFx.JOIN) === M.OcF.LOADING,
         ),
         ei = (0, b.q)(Q),
         ea = (0, y.A)(ei),
@@ -92,7 +92,7 @@ function G(e) {
             channelId: ee,
             application: ei,
         }),
-        es = (0, i.e7)([v.Z, T.Z, I.Z, N.Z, P.Z, w.Z, C.Z], () =>
+        es = (0, i.e7)([v.Z, T.Z, I.Z, N.Z, P.Z, D.Z, C.Z], () =>
             null != B
                 ? eo === _.Fw.CAN_JOIN
                 : (0, d.Z)({
@@ -107,7 +107,7 @@ function G(e) {
                       GuildMemberCountStore: I.Z,
                       RelationshipStore: N.Z,
                       SelectedChannelStore: P.Z,
-                      VoiceStateStore: w.Z,
+                      VoiceStateStore: D.Z,
                       PermissionStore: C.Z,
                   }),
         ),

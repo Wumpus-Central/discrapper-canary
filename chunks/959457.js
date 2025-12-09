@@ -39,8 +39,8 @@ let T = {},
     N = {},
     P = {},
     R = {},
-    w = v.hVg.THEATRE,
-    D = {};
+    D = v.hVg.THEATRE,
+    w = {};
 function x(e, t, n, i) {
     return (
         o()(null != r, "Creating RTCConnection without session."),
@@ -49,7 +49,7 @@ function x(e, t, n, i) {
             streamKey: e,
             serverId: t,
             channelId: n,
-            initialLayout: w,
+            initialLayout: D,
             analyticsContext: i,
             isStreamer: null != A[e],
             parentMediaSessionId: O.Z.getMediaSessionId(),
@@ -57,8 +57,8 @@ function x(e, t, n, i) {
     );
 }
 function L() {
-    l().forEach(D, (e, t) => {
-        e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete D[t], delete R[t];
+    l().forEach(w, (e, t) => {
+        e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete w[t], delete R[t];
     });
 }
 function j(e) {
@@ -91,7 +91,7 @@ function k(e) {
             appContext: i,
             analyticsLocations: d,
         }),
-        l().forEach(D, (e) => {
+        l().forEach(w, (e) => {
             let { analyticsContext: t, isOwner: n } = e;
             t.setActionContext(i), t.setNativePickerStyleUsed(c), n && t.trackStart();
         }),
@@ -119,7 +119,7 @@ function U(e) {
         appContext: t,
         analyticsLocations: void 0,
     }),
-        l().forEach(D, (e) => {
+        l().forEach(w, (e) => {
             let { analyticsContext: n, isOwner: r } = e;
             n.setActionContext(t), r && n.trackEnd();
         }),
@@ -129,7 +129,7 @@ function U(e) {
 }
 function G(e) {
     let { streamKey: t, rtcServerId: n, rtcChannelId: r, region: i, viewerIds: a } = e,
-        o = D[t],
+        o = w[t],
         s = (0, _.my)(t);
     if (null == o && null != n) {
         var l, c;
@@ -143,7 +143,7 @@ function G(e) {
             goLiveModalDurationMs: P[t],
             analyticsLocations: null == (c = T[t]) ? void 0 : c.analyticsLocations,
         });
-        (o = x(t, n, r, e)), (D[t] = o);
+        (o = x(t, n, r, e)), (w[t] = o);
     }
     delete R[t],
         d.Z.dispatch({
@@ -152,36 +152,36 @@ function G(e) {
         });
 }
 function Z(e) {
-    let t = D[e.streamKey];
+    let t = w[e.streamKey];
     if (null == t) return !1;
     t.connect(e.endpoint, e.token);
 }
 function B(e) {
     let { connectionStats: t } = e;
-    l().forEach(D, (e, n) => {
+    l().forEach(w, (e, n) => {
         e.updateStats(t);
     });
 }
 function F(e) {
     let { streamKey: t, viewerIds: n, paused: r } = e,
-        i = D[t];
+        i = w[t];
     if (null == i) return !1;
     null != n && i.analyticsContext.trackViewerCount(n.length), i.streamUpdate(r);
 }
 function V(e) {
     let { streamKey: t } = e,
-        n = D[t];
+        n = w[t];
     if (null == n) return !1;
     d.Z.dispatch({
         type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
         mediaEngineConnectionId: n.getMediaEngineConnectionId(),
     }),
         n.destroy("stream-end"),
-        delete D[t];
+        delete w[t];
 }
 function H(e) {
     let { layout: t } = e;
-    (w = t), Object.values(D).forEach((e) => e.layoutChange(t));
+    (D = t), Object.values(w).forEach((e) => e.layoutChange(t));
 }
 function Y() {
     return !0;
@@ -196,7 +196,7 @@ function W(e) {
         });
     if (
         t !== u.Yn.STREAM ||
-        null == D[o] ||
+        null == w[o] ||
         !Object.entries(n).some((e) => {
             let [t, n] = e;
             return "any" !== t && 0 !== n;
@@ -206,23 +206,23 @@ function W(e) {
     R[o] = performance.now();
 }
 function K(e) {
-    return l().some(D, (t) => t === e.connection);
+    return l().some(w, (t) => t === e.connection);
 }
 function z(e) {
     let { userId: t, context: n, quality: r } = e;
-    l().forEach(D, (e) => {
+    l().forEach(w, (e) => {
         e.setSimulcastDebugOverride(t, n, r);
     });
 }
 function q(e) {
     let { streamId: t, width: n, height: r } = e;
-    l().forEach(D, (e) => {
+    l().forEach(w, (e) => {
         null == e || e.setVideoSize(t, n, r);
     });
 }
 function Q(e) {
     let { streamId: t, zoom: n } = e;
-    l().forEach(D, (e) => {
+    l().forEach(w, (e) => {
         null == e || e.setVideoZoom(t, n);
     });
 }
@@ -244,46 +244,46 @@ class J extends (i = c.ZP.Store) {
         this.waitFor(E.default, b.Z, O.Z, f.ZP);
     }
     getRTCConnections() {
-        return D;
+        return w;
     }
     getAllActiveStreamKeys() {
-        return Object.keys(D);
+        return Object.keys(w);
     }
     getRTCConnection(e) {
-        return D[e];
+        return w[e];
     }
     getQuality(e) {
         var t, n;
-        return (0, h.Z)(b.Z) && null != e && null != (n = null == (t = D[e]) ? void 0 : t.quality) ? n : v.IE4.UNKNOWN;
+        return (0, h.Z)(b.Z) && null != e && null != (n = null == (t = w[e]) ? void 0 : t.quality) ? n : v.IE4.UNKNOWN;
     }
     getMediaSessionId(e) {
         if (null == e) return null;
-        let t = D[e];
+        let t = w[e];
         if (null != t) return null != t ? t.getMediaSessionId() : null;
     }
     getRtcConnectionId(e) {
         if (null == e) return null;
-        let t = D[e];
+        let t = w[e];
         if (null != t) return null != t ? t.getRTCConnectionId() : null;
     }
     getVideoStats(e) {
         if (null == e) return null;
-        let t = D[e];
+        let t = w[e];
         return null != t ? t.getVideoStats() : null;
     }
     getHostname(e) {
         if (null == e) return "";
-        let t = D[e];
+        let t = w[e];
         return null != t && null != t.hostname ? t.hostname : "";
     }
     getRegion(e) {
         if (null == e) return null;
-        let t = D[e];
+        let t = w[e];
         return null != t ? t.getRegion() : null;
     }
     getMaxViewers(e) {
         if (null == e) return null;
-        let t = D[e];
+        let t = w[e];
         return null != t ? t.getMaxViewers() : null;
     }
     getStreamSourceId(e) {
@@ -293,19 +293,19 @@ class J extends (i = c.ZP.Store) {
         return R[e];
     }
     getUserIds(e) {
-        let t = D[e];
+        let t = w[e];
         return null == t ? void 0 : t.getUserIds();
     }
     isUserConnected(e, t) {
-        let n = D[e];
+        let n = w[e];
         return null == n ? void 0 : n.getIsUserConnected(t);
     }
     getSecureFramesState(e) {
-        let t = D[e];
+        let t = w[e];
         return null == t ? void 0 : t.getSecureFramesState();
     }
     getSecureFramesRosterMapEntry(e, t) {
-        let n = D[e],
+        let n = w[e],
             r = null == n ? void 0 : n.getSecureFramesRosterMap();
         return null == r ? void 0 : r.get(t);
     }

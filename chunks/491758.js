@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(54381),
     i = n(473749),
     a = n(512722),
@@ -65,7 +65,7 @@ function R(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,12 +76,12 @@ function w(e, t) {
         e
     );
 }
-function D() {
+function w() {
     let e = (0, O.nq)(),
         t = (0, O.z8)(),
         n = (0, h.isWindows)(),
         { remindersEnabled: a, clipsLength: N, clipsQuality: R } = (0, s.cj)([E.Z], () => E.Z.getSettings()),
-        D = (0, s.e7)([E.Z], () => E.Z.getHardwareClassification()),
+        w = (0, s.e7)([E.Z], () => E.Z.getHardwareClassification()),
         x = (0, s.e7)([m.ZP], () => m.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
         L = (0, s.e7)([m.ZP], () => m.ZP.getKeybindForAction(I.kg4.SAVE_SCREENSHOT, !0)),
         j = (0, y.Z)(_.Z),
@@ -161,20 +161,20 @@ function D() {
         ),
         F = i.useCallback(
             (e) => {
-                u.Z.setKeybind(w(P({}, x), { shortcut: e }));
+                u.Z.setKeybind(D(P({}, x), { shortcut: e }));
             },
             [x],
         ),
         V = i.useCallback(
             (e) => {
-                u.Z.setKeybind(w(P({}, L), { shortcut: e }));
+                u.Z.setKeybind(D(P({}, L), { shortcut: e }));
             },
             [L],
         );
     return (0, r.jsxs)(c.C3N, {
         children: [
             (0, r.jsx)(p.Z, { children: A.intl.string(A.t["Z+MfqT"]) }),
-            D === b.xH.BELOW_MINIMUM
+            w === b.xH.BELOW_MINIMUM
                 ? (0, r.jsx)(p.Z, {
                       look: p.z.WARNING,
                       children: A.intl.string(A.t.SIxrIF),

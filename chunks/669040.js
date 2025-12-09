@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(53691),
     P = n(75145),
     R = n(695346),
-    w = n(594174),
-    D = n(626135),
+    D = n(594174),
+    w = n(626135),
     x = n(176354),
     L = n(111361),
     j = n(74538),
@@ -73,7 +73,7 @@ let z = 0,
                 isScrolling: A,
                 isUsingKeyboardNavigation: N,
                 allowAnimatedEmoji: R,
-                channelGuildId: w,
+                channelGuildId: D,
                 channelId: L,
                 messageId: j,
                 isBurstReaction: M,
@@ -110,14 +110,14 @@ let z = 0,
                         i = t.has(e);
                     i ? r.delete(e) : r.add(e),
                         null != n &&
-                            D.default.track(V.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                            w.default.track(V.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                                 location: es.location,
                                 tab: H.X1.EMOJI,
                                 collapsed: !i,
                                 guild_id: n.id,
                             }),
                         e === F.UX.SOUNDMOJI &&
-                            D.default.track(V.rMx.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !i }),
+                            w.default.track(V.rMx.SOUNDMOJI_EMOJI_PICKER_SECTION_TOGGLED, { collapsed: !i }),
                         g(r);
                 },
                 [es, t, g],
@@ -158,7 +158,7 @@ let z = 0,
                                 rowIndex: e,
                                 allowAnimatedEmoji: R,
                                 showEmojiFavoriteTooltip: em,
-                                channelGuildId: w,
+                                channelGuildId: D,
                                 category: i.sectionId,
                                 selectedItemClassName: K.__invalid_selectedItem,
                                 channelId: L,
@@ -170,7 +170,7 @@ let z = 0,
                             e,
                         );
                     }),
-                [a, h, s, ec, e_, c, f, O, v, A, N, R, em, w, L, j, M, eo],
+                [a, h, s, ec, e_, c, f, O, v, A, N, R, em, D, L, j, M, eo],
             );
         i.useEffect(
             () => () => {
@@ -215,7 +215,7 @@ let z = 0,
                                           className: K.soundmojiViewMore,
                                           onClick: () => {
                                               (0, b.hr)(H.X1.SOUNDBOARD),
-                                                  D.default.track(V.rMx.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
+                                                  w.default.track(V.rMx.SOUNDMOJI_EMOJI_PICKER_VIEW_ALL_CLICK);
                                           },
                                           children: W.intl.string(W.t.rUEjBe),
                                       })
@@ -323,7 +323,7 @@ let z = 0,
             B = E.kJ.useStore((e) => e.activeCategoryIndex),
             F = (0, b.Iu)((e) => e.searchQuery),
             H = R.Yk.useSetting(),
-            q = (0, u.e7)([w.default], () => w.default.getCurrentUser()),
+            q = (0, u.e7)([D.default], () => D.default.getCurrentUser()),
             Q = (0, L.I5)(q),
             { location: X } = (0, m.O)(),
             { analyticsLocations: J } = (0, h.ZP)(),
@@ -421,7 +421,7 @@ let z = 0,
         return (
             i.useEffect(() => {
                 et &&
-                    D.default.track(V.rMx.PREMIUM_UPSELL_VIEWED, {
+                    w.default.track(V.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: Y.cd.EMOJI_PICKER_FLOATING_UPSELL,
                         location: X,
                         location_stack: J,

@@ -1,9 +1,9 @@
 n.d(t, { F: () => p });
 var a = n(54381);
 n(473749);
-var l = n(120356),
-    r = n.n(l),
-    i = n(28664),
+var r = n(120356),
+    i = n.n(r),
+    l = n(28664),
     s = n(481060),
     o = n(937615),
     c = n(884697),
@@ -14,24 +14,24 @@ let p = (e) => {
         let {
             price: t,
             nitroIconType: n,
-            nitroIconSize: l = "md",
-            className: r,
-            discountOfferAmount: i,
+            nitroIconSize: r = "md",
+            className: i,
+            discountOfferAmount: l,
             discount: s = c.f_,
             variant: o = "text-md/semibold",
         } = e;
         return t.currency === d.pK.DISCORD_ORB
             ? (0, a.jsx)(x, {
                   orbAmount: t.amount,
-                  className: r,
+                  className: i,
                   variant: o,
               })
             : (0, a.jsx)(h, {
                   price: t,
                   nitroIconType: n,
-                  nitroIconSize: l,
-                  className: r,
-                  discountOfferAmount: i,
+                  nitroIconSize: r,
+                  className: i,
+                  discountOfferAmount: l,
                   discount: s,
                   variant: o,
               });
@@ -39,7 +39,7 @@ let p = (e) => {
     h = (e) => {
         let {
                 price: { amount: t, currency: n },
-                nitroIconType: l,
+                nitroIconType: r,
                 nitroIconSize: d = "md",
                 className: p,
                 discountOfferAmount: h,
@@ -74,16 +74,16 @@ let p = (e) => {
                               (0, a.jsx)(s.nn4, { children: u.intl.format(u.t["6C36MF"], { price: b }) }),
                               (0, a.jsx)("span", {
                                   "aria-hidden": !0,
-                                  className: r()({ [m.priceStrikethrough]: g }, p),
+                                  className: i()({ [m.priceStrikethrough]: g }, p),
                                   children: b,
                               }),
                           ],
                       });
         return (0, a.jsxs)("div", {
-            className: r()({ [m.discountBackgroundColor]: g }, m.container, p),
+            className: i()({ [m.discountBackgroundColor]: g }, m.container, p),
             children: [
-                "tooltip" === l
-                    ? (0, a.jsx)(i.u, {
+                "tooltip" === r
+                    ? (0, a.jsx)(l.u, {
                           text: u.intl.string(u.t.MPFyJ5),
                           "aria-label": u.intl.string(u.t.X3Ekj8),
                           children: (0, a.jsx)(s.SrA, {
@@ -92,7 +92,7 @@ let p = (e) => {
                               className: m.icon,
                           }),
                       })
-                    : "default" === l
+                    : "default" === r
                       ? (0, a.jsx)(s.SrA, {
                             size: d,
                             color: "currentColor",
@@ -122,9 +122,9 @@ let p = (e) => {
         });
     },
     x = (e) => {
-        let { orbAmount: t, className: n, variant: l = "text-md/semibold" } = e;
+        let { orbAmount: t, className: n, variant: r = "text-md/semibold" } = e;
         return (0, a.jsxs)("div", {
-            className: r()(m.container, n),
+            className: i()(m.container, n),
             children: [
                 (0, a.jsx)(s.aQr, {
                     color: "currentColor",
@@ -132,7 +132,7 @@ let p = (e) => {
                     className: m.icon,
                 }),
                 (0, a.jsxs)(s.Text, {
-                    variant: l,
+                    variant: r,
                     color: "currentColor",
                     lineClamp: 1,
                     children: [

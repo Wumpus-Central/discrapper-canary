@@ -36,8 +36,8 @@ var r = n(54381),
     N = n(870822),
     P = n(589414),
     R = n(600164),
-    w = n(240991),
-    D = n(713938),
+    D = n(240991),
+    w = n(713938),
     x = n(973616),
     L = n(881998),
     j = n(592125),
@@ -320,7 +320,7 @@ let ef = (e) => {
             eo = () => {
                 let e = [];
                 for (let n of t)
-                    e.push(...(0, D.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRq));
+                    e.push(...(0, w.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRq));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(E.zF9, {
                         className: er.appDetailsSection,
@@ -411,7 +411,7 @@ let ef = (e) => {
                         className: ei.markup,
                         variant: "text-sm/normal",
                         color: "text-default",
-                        children: (0, w.parseBioReact)(a.description),
+                        children: (0, D.parseBioReact)(a.description),
                     });
             }, [a.description]),
             ec = () => {

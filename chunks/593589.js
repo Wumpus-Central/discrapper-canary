@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(207035),
     d = n(823748),
     u = n(981631),
-    p = n(815523);
+    h = n(815523);
 function f(e) {
     let { windowKey: t, channel: n } = e;
     return (0, r.jsx)(l.Z, {
@@ -16,7 +16,7 @@ function f(e) {
         windowKey: t,
         title: n.name,
         channelId: n.id,
-        contentClassName: p.popoutContent,
+        contentClassName: h.popoutContent,
         children: (0, r.jsx)(o.Z.Provider, {
             value: n.guild_id,
             children: (0, r.jsx)(d.Z, { providedChannel: n }),

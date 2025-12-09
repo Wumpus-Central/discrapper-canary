@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(388685);
 var a = n(54381),
-    l = n(473749),
-    r = n(442837),
-    i = n(199849),
+    r = n(473749),
+    i = n(442837),
+    l = n(199849),
     s = n(481060),
     o = n(570140),
     c = n(178635),
@@ -29,11 +29,11 @@ let h = [
     },
 ];
 function x() {
-    let [e, t] = l.useState(null),
-        [n, x] = l.useState(0),
-        [f, g] = l.useState(1000),
-        [b, v] = l.useState(0),
-        j = (0, r.e7)([d.Z], () => {
+    let [e, t] = r.useState(null),
+        [n, x] = r.useState(0),
+        [f, g] = r.useState(1000),
+        [b, v] = r.useState(0),
+        j = (0, i.e7)([d.Z], () => {
             var t;
             return null === e ? null : null != (t = d.Z.getFeedbackConfig(m.nw[e])) ? t : c.R[m.nw[e]];
         }),
@@ -45,13 +45,13 @@ function x() {
                 value: t,
             };
         }),
-        C = l.useMemo(() => null != e && b >= 0 && b <= 100 && n >= 0, [e, b, n]);
+        C = r.useMemo(() => null != e && b >= 0 && b <= 100 && n >= 0, [e, b, n]);
     return (0, a.jsx)("div", {
         className: p.container,
         children: (0, a.jsxs)(s.Kqy, {
             gap: 32,
             children: [
-                (0, a.jsx)(i.y6, {
+                (0, a.jsx)(l.y6, {
                     label: "Feedback Survey",
                     options: y,
                     value: e,
@@ -101,7 +101,7 @@ function x() {
                                     placeholder: "Duration length",
                                     onChange: (e) => x(parseFloat(e)),
                                 }),
-                                (0, a.jsx)(i.y6, {
+                                (0, a.jsx)(l.y6, {
                                     options: h,
                                     value: f,
                                     onChange: (e) => {

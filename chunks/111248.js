@@ -16,7 +16,7 @@ var i = n(54381),
     b = n(315091);
 let C = "CameraPreviewPosition";
 function y(e) {
-    let { width: t, onContextMenuParticipant: n, height: l, channel: y, participants: v, onSelectParticipant: _ } = e,
+    let { width: t, onContextMenuParticipant: n, height: l, channel: y, participants: _, onSelectParticipant: v } = e,
         [O, x] = (function () {
             let [e, t] = r.useState(() => s.K.get(C, f.VD2.BOTTOM_RIGHT));
             return [
@@ -29,7 +29,7 @@ function y(e) {
         E = r.useRef(null),
         j = null == y.getGuildId() ? 70 : 50,
         S = (0, o.e7)([p.Z], () => p.Z.pipWidth(m.cL.CAMERA_PREVIEW)),
-        P = v.length,
+        P = _.length,
         I = S * P + 8 * (P - 1),
         Z = r.useMemo(
             () => ({
@@ -41,7 +41,7 @@ function y(e) {
     r.useLayoutEffect(() => {
         var e;
         null == (e = E.current) || e.ensureIsInPosition();
-    }, [v.length]);
+    }, [_.length]);
     let T = r.useCallback(
             (e) => {
                 let t = 0 === P ? e : (e - 8 * (P - 1)) / P;
@@ -73,7 +73,7 @@ function y(e) {
             resizeConfig: Z,
             children: (0, i.jsx)("div", {
                 className: g.tileContainer,
-                children: v.map((e) =>
+                children: _.map((e) =>
                     (0, i.jsx)(
                         h.ZP,
                         {
@@ -85,7 +85,7 @@ function y(e) {
                             inCall: !0,
                             popoutType: u.P.NO_POPOUT,
                             width: 160,
-                            onClick: _,
+                            onClick: v,
                         },
                         e.id,
                     ),

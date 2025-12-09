@@ -1,7 +1,7 @@
 n.d(t, {
     CP: () => N,
     T4: () => P,
-    XK: () => D,
+    XK: () => w,
     g5: () => x,
     gZ: () => A,
     i6: () => C,
@@ -283,10 +283,10 @@ async function R(e) {
         }
     }
 }
-function w() {
+function D() {
     return (0, f.isAndroid)() ? a.R.ANDROID : (0, f.isIOS)() ? a.R.IOS : a.R.WEB;
 }
-async function D() {
+async function w() {
     let { surface: e = o.Y.APPLICATION_DIRECTORY, activeState: t = i.E.ACTIVE } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = d.default.disableAppCollectionsCache,
@@ -313,7 +313,7 @@ async function D() {
                 query: {
                     surface: e,
                     active_state: t,
-                    platform: w(),
+                    platform: D(),
                     locale: u.default.locale,
                     cache: f,
                 },

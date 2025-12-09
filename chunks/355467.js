@@ -22,10 +22,10 @@ n.d(t, {
     _H: () => eL,
     aN: () => z,
     cQ: () => ep,
-    dP: () => ew,
+    dP: () => eD,
     df: () => eH,
     f0: () => en,
-    fG: () => eD,
+    fG: () => ew,
     i6: () => er,
     jg: () => e_,
     lC: () => eZ,
@@ -115,7 +115,7 @@ function R(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -126,7 +126,7 @@ function w(e, t) {
         e
     );
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -177,11 +177,11 @@ async function M(e, t) {
         let {
                 billingAddress: { line1: n, line2: r, postalCode: i },
             } = t,
-            a = D(t.billingAddress, ["line1", "line2", "postalCode"]),
+            a = w(t.billingAddress, ["line1", "line2", "postalCode"]),
             o = await l.tn.patch({
                 url: S.ANM.BILLING_PAYMENT_SOURCE(e),
                 body: {
-                    billing_address: w(P({}, a), {
+                    billing_address: D(P({}, a), {
                         line_1: n,
                         line_2: r,
                         postal_code: i,
@@ -345,7 +345,7 @@ function Y(e) {
             };
         (n = s),
             "card_error" === e.type &&
-                (E.default.track(S.rMx.PAYMENT_SOURCE_CREATION_FAILED, w(P({}, s), { stacktrace: Error().stack })),
+                (E.default.track(S.rMx.PAYMENT_SOURCE_CREATION_FAILED, D(P({}, s), { stacktrace: Error().stack })),
                 (r = !1)),
             (t = new u.HF(a));
     } else
@@ -359,7 +359,7 @@ function Y(e) {
         error: t,
     });
     let s = Error("string" == typeof e ? e : t.message);
-    return r && (0, b.q2)(s, w(P({}, a), { extra: P({}, n, a.extra) })), s;
+    return r && (0, b.q2)(s, D(P({}, a), { extra: P({}, n, a.extra) })), s;
 }
 async function W(e, t) {
     if (null == e || null == t) throw Y("Stripe or elements not loaded");
@@ -1204,8 +1204,8 @@ async function eP(e, t, n, r, i, a, o) {
         null != t.items &&
             (u.items = (0, y.gB)(t.items).map((e) => {
                 var { planId: t } = e,
-                    n = D(e, ["planId"]);
-                return w(P({}, n), { plan_id: t });
+                    n = w(e, ["planId"]);
+                return D(P({}, n), { plan_id: t });
             }));
         let d = await l.tn.patch({
             url: S.ANM.BILLING_SUBSCRIPTION(e.id),
@@ -1258,7 +1258,7 @@ function eR(e, t, n, r, i) {
         i,
     );
 }
-function ew(e, t, n, r, i, a) {
+function eD(e, t, n, r, i, a) {
     let o = (0, y.XK)(e, t);
     return eP(
         e,
@@ -1272,7 +1272,7 @@ function ew(e, t, n, r, i, a) {
         a,
     );
 }
-function eD(e, t, n, r, i) {
+function ew(e, t, n, r, i) {
     return eP(
         e,
         { currency: t },

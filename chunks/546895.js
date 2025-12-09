@@ -21,9 +21,9 @@ n.d(t, { Z: () => u }),
     n(97749),
     n(35282);
 var a = n(54381),
-    l = n(473749),
-    r = n(108514),
-    i = n(793030),
+    r = n(473749),
+    i = n(108514),
+    l = n(793030),
     s = n(668339),
     o = n(481060);
 let c = {
@@ -317,10 +317,10 @@ function d(e) {
             (e) =>
                 new Promise((t, n) => {
                     let a = new Uint8Array(e);
-                    r.Ri(a, (e, a) => {
+                    i.Ri(a, (e, a) => {
                         null != e && n(e);
-                        let l = Object.keys(a).reduce((e, t) => {
-                                var n, l;
+                        let r = Object.keys(a).reduce((e, t) => {
+                                var n, r;
                                 return (
                                     (n = (function (e) {
                                         for (var t = 1; t < arguments.length; t++) {
@@ -347,9 +347,9 @@ function d(e) {
                                         }
                                         return e;
                                     })({}, e)),
-                                    (l = l = { [t]: JSON.parse(r.T8(a[t])) }),
+                                    (r = r = { [t]: JSON.parse(i.T8(a[t])) }),
                                     Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                         : (function (e, t) {
                                               var n = Object.keys(e);
                                               if (Object.getOwnPropertySymbols) {
@@ -357,25 +357,25 @@ function d(e) {
                                                   n.push.apply(n, a);
                                               }
                                               return n;
-                                          })(Object(l)).forEach(function (e) {
-                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                          })(Object(r)).forEach(function (e) {
+                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                           }),
                                     n
                                 );
                             }, {}),
-                            i = l["manifest.json"];
-                        t(l["animations/".concat(i.animations[0].id, ".json")]);
+                            l = r["manifest.json"];
+                        t(r["animations/".concat(l.animations[0].id, ".json")]);
                     });
                 }),
         );
 }
 function u() {
-    let [e, t] = l.useState(void 0),
-        [n, r] = l.useState(400),
-        [u, m] = l.useState(400);
+    let [e, t] = r.useState(void 0),
+        [n, i] = r.useState(400),
+        [u, m] = r.useState(400);
     return (0, a.jsx)("div", {
         style: { margin: 24 },
-        children: (0, a.jsxs)(i.Kqy, {
+        children: (0, a.jsxs)(l.Kqy, {
             gap: 24,
             children: [
                 (0, a.jsx)(s.d, {
@@ -386,13 +386,13 @@ function u() {
                     value: e,
                     onChange: t,
                 }),
-                (0, a.jsxs)(i.Kqy, {
+                (0, a.jsxs)(l.Kqy, {
                     gap: 8,
                     direction: "horizontal",
                     children: [
                         (0, a.jsx)(o.oil, {
                             value: n.toString(),
-                            onChange: (e) => r(Number(e)),
+                            onChange: (e) => i(Number(e)),
                             label: "Width",
                         }),
                         (0, a.jsx)(o.oil, {
@@ -412,12 +412,12 @@ function u() {
                                 type: "application/json",
                             }),
                             a = URL.createObjectURL(n),
-                            l = document.createElement("a");
-                        (l.href = a),
-                            (l.download = "".concat(e.split("/").pop(), ".json")),
-                            document.body.appendChild(l),
-                            l.click(),
-                            document.body.removeChild(l),
+                            r = document.createElement("a");
+                        (r.href = a),
+                            (r.download = "".concat(e.split("/").pop(), ".json")),
+                            document.body.appendChild(r),
+                            r.click(),
+                            document.body.removeChild(r),
                             URL.revokeObjectURL(a);
                     },
                     text: "Download",

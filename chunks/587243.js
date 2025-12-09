@@ -5,9 +5,9 @@ n.d(t, {
     n(953529);
 var a = n(54381);
 n(473749);
-var l = n(481060),
-    r = n(734934),
-    i = n(158238),
+var r = n(481060),
+    i = n(734934),
+    l = n(158238),
     s = n(695346),
     o = n(70956),
     c = n(51144),
@@ -44,39 +44,39 @@ let x = [
     ],
     f = "forever";
 function g(e) {
-    let { status: t, currentStatus: n, description: r } = e,
-        i = t !== m.Skl.ONLINE,
+    let { status: t, currentStatus: n, description: i } = e,
+        l = t !== m.Skl.ONLINE,
         s = (0, a.jsx)(a.Fragment, {
             children: x.map((e) => {
-                let { duration: r, label: i } = e;
+                let { duration: i, label: l } = e;
                 return (0, a.jsx)(
-                    l.sNh,
+                    r.sNh,
                     {
-                        id: "".concat(t, "-").concat(r),
-                        label: i(),
+                        id: "".concat(t, "-").concat(i),
+                        label: l(),
                         action: () =>
                             (0, u.Z)({
                                 nextStatus: t,
                                 prevStatus: n,
-                                durationMillis: r,
+                                durationMillis: i,
                             }),
                         dontCloseOnAction: !0,
                     },
-                    null != r ? r : f,
+                    null != i ? i : f,
                 );
             }),
         });
-    return (0, a.jsx)(l.sNh, {
+    return (0, a.jsx)(r.sNh, {
         id: t,
         className: h.expiringStatusMenuItem,
         keepItemStyles: !0,
-        hasSubmenu: i,
+        hasSubmenu: l,
         label: (e) => {
             let { isFocused: n } = e;
             return (0, a.jsxs)("div", {
                 className: h.statusItem,
                 children: [
-                    (0, a.jsx)(l.qbd, {
+                    (0, a.jsx)(r.qbd, {
                         status: t,
                         className: h.icon,
                         size: 10,
@@ -86,10 +86,10 @@ function g(e) {
                         className: h.status,
                         children: (0, c.u5)(t),
                     }),
-                    null != r &&
+                    null != i &&
                         (0, a.jsx)("div", {
                             className: h.description,
-                            children: r,
+                            children: i,
                         }),
                 ],
             });
@@ -101,7 +101,7 @@ function g(e) {
             });
         },
         dontCloseOnAction: !0,
-        children: i ? s : void 0,
+        children: l ? s : void 0,
     });
 }
 function b(e) {
@@ -116,8 +116,8 @@ function b(e) {
 }
 function v(e) {
     let t = s.Cr.useSetting(),
-        n = (0, r.p)(),
-        o = i.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
+        n = (0, i.p)(),
+        o = l.e.useExperiment({ location: "UserProfileAccountPopout" }).allowQuietMode || n,
         c = s.fv.useSetting(),
         d = e === m.Skl.DND,
         u = (n) => {
@@ -134,14 +134,14 @@ function v(e) {
         },
         v = (0, a.jsx)(a.Fragment, {
             children: x.map((t) => {
-                let { duration: n, label: i } = t;
+                let { duration: n, label: l } = t;
                 return (0, a.jsx)(
-                    l.sNh,
+                    r.sNh,
                     {
                         id: "".concat(e, "-").concat(n),
-                        label: i(),
+                        label: l(),
                         action: () => {
-                            (0, r.oW)(!0, n);
+                            (0, i.oW)(!0, n);
                         },
                         dontCloseOnAction: !0,
                     },
@@ -171,16 +171,16 @@ function v(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             j,
-            (0, a.jsx)(l.Clw, {}, "menu-separator-statuses"),
+            (0, a.jsx)(r.Clw, {}, "menu-separator-statuses"),
             _,
             y,
             C,
             o || n
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(l.Clw, {}, "menu-separator-statuses"),
+                          (0, a.jsx)(r.Clw, {}, "menu-separator-statuses"),
                           (0, a.jsx)(
-                              l.sNh,
+                              r.sNh,
                               {
                                   id: "quiet-mode",
                                   "aria-label": "focus mode",
@@ -191,7 +191,7 @@ function v(e) {
                                       (0, a.jsxs)("div", {
                                           className: h.statusItem,
                                           children: [
-                                              (0, a.jsx)(l.owu, {
+                                              (0, a.jsx)(r.owu, {
                                                   size: "xxs",
                                                   className: h.icon,
                                               }),
@@ -199,17 +199,17 @@ function v(e) {
                                                   className: h.focusModeTitle,
                                                   children: [
                                                       p.intl.string(p.t.gJRnwK),
-                                                      (0, a.jsx)(l.IGR, {
+                                                      (0, a.jsx)(r.IGR, {
                                                           text: n
                                                               ? p.intl.string(p.t.ApAu9f)
                                                               : d
                                                                 ? p.intl.string(p.t.gH3Frd)
                                                                 : p.intl.string(p.t["64pl82"]),
                                                           color: n
-                                                              ? l.TVs.unsafe_rawColors.BRAND_500.css
+                                                              ? r.TVs.unsafe_rawColors.BRAND_500.css
                                                               : d
-                                                                ? l.TVs.unsafe_rawColors.RED_400.css
-                                                                : l.TVs.unsafe_rawColors.PRIMARY_500.css,
+                                                                ? r.TVs.unsafe_rawColors.RED_400.css
+                                                                : r.TVs.unsafe_rawColors.PRIMARY_500.css,
                                                       }),
                                                   ],
                                               }),
@@ -233,7 +233,7 @@ function v(e) {
                                           ],
                                       }),
                                   action: () => {
-                                      (0, r.oW)(!n);
+                                      (0, i.oW)(!n);
                                   },
                                   dontCloseOnAction: !0,
                                   children: v,

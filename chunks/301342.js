@@ -93,7 +93,7 @@ let N = i.memo(function (e) {
         let D = i.useCallback(() => {
                 A ? (0, h.mJ)(l.id) : (0, h.c4)(l.id);
             }, [l.id, A]),
-            M = i.useCallback(
+            L = i.useCallback(
                 (e) => {
                     if ("null" !== l.id) {
                         let t = _.Z.getGuild(l.getGuildId());
@@ -115,7 +115,7 @@ let N = i.memo(function (e) {
                 },
                 [l],
             ),
-            L = i.useCallback(() => {
+            M = i.useCallback(() => {
                 let e = l.type === x.d4z.GUILD_CATEGORY ? null : l.type,
                     t = l.getGuildId();
                 null != t &&
@@ -175,7 +175,7 @@ let N = i.memo(function (e) {
                                 [E.muted]: T,
                                 [E.clickable]: !0,
                             }),
-                            onContextMenu: M,
+                            onContextMenu: L,
                             children: [
                                 (0, r.jsxs)(
                                     f.P3F,
@@ -220,7 +220,7 @@ let N = i.memo(function (e) {
                                                   text: C.intl.string(C.t["fUYU+j"]),
                                                   children: (0, r.jsx)(f.P3F, {
                                                       className: o()(E.addButton, E.forceVisible),
-                                                      onClick: L,
+                                                      onClick: M,
                                                       tabIndex: U,
                                                       role: "button",
                                                       "aria-label": C.intl.string(C.t["fUYU+j"]),

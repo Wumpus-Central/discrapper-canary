@@ -19,8 +19,8 @@ var r = n(54381),
     E = n(81136),
     v = n(215023),
     S = n(981631),
-    O = n(388032),
-    x = n(887353),
+    x = n(388032),
+    O = n(887353),
     y = n(558513),
     k = n(662128),
     T = n(676790),
@@ -34,8 +34,8 @@ function A(e) {
     let { isFetchingCategories: n, scrollerRef: A, tab: P } = e,
         R = (0, g.sp)(),
         Z = null != (t = null == R ? void 0 : R.sessionId) ? t : "",
-        { noCache: w, includeUnpublished: H } = (0, E.Z)(),
-        D = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+        { noCache: w, includeUnpublished: D } = (0, E.Z)(),
+        H = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
         M = (0, s.e7)([f.Z], () => f.Z.productsWithVariantsAsGroup),
         [F, W] = l.useState(1),
         U = (0, c.Fg)(),
@@ -43,13 +43,13 @@ function A(e) {
         [z, G, K] = l.useMemo(() => {
             switch (P) {
                 case v.AW.AVATAR_DECORATIONS:
-                    return [O.intl.string(O.t.dRZYNE), V ? j.Z : T.Z, i.Z.AVATAR_DECORATION];
+                    return [x.intl.string(x.t.dRZYNE), V ? j.Z : T.Z, i.Z.AVATAR_DECORATION];
                 case v.AW.PROFILE_EFFECTS:
-                    return [O.intl.string(O.t["1cNjtx"]), V ? N.Z : B.Z, i.Z.PROFILE_EFFECT];
+                    return [x.intl.string(x.t["1cNjtx"]), V ? N.Z : B.Z, i.Z.PROFILE_EFFECT];
                 case v.AW.NAMEPLATES:
-                    return [O.intl.string(O.t.V68Fqz), V ? L.Z : I.Z, i.Z.NAMEPLATE];
+                    return [x.intl.string(x.t.V68Fqz), V ? L.Z : I.Z, i.Z.NAMEPLATE];
                 case v.AW.BUNDLES:
-                    return [O.intl.string(O.t.FYFpps), V ? k.Z : y.Z, i.Z.BUNDLE];
+                    return [x.intl.string(x.t.FYFpps), V ? k.Z : y.Z, i.Z.BUNDLE];
             }
         }, [P, V]),
         Y = (0, p.a)(),
@@ -77,7 +77,7 @@ function A(e) {
             sessionId: Z,
             checkpoint: C.a.SHOP_MOUNTED,
             tab: P,
-            unpublishedCategoriesShown: H,
+            unpublishedCategoriesShown: D,
             cacheDisabled: w,
         });
     }, []),
@@ -87,24 +87,24 @@ function A(e) {
                 sessionId: Z,
                 checkpoint: C.a.SHOP_RENDERED,
                 tab: P,
-                unpublishedCategoriesShown: H,
+                unpublishedCategoriesShown: D,
                 cacheDisabled: w,
             });
-    }, [Z, H, w, n, P]),
-    n || null == D)
+    }, [Z, D, w, n, P]),
+    n || null == H)
         ? (0, r.jsx)(h.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)("div", {
                       style: { backgroundImage: "url(".concat(G, ")") },
-                      className: x.bannerContainer,
+                      className: O.bannerContainer,
                       children: (0, r.jsx)(a.Heading, {
                           variant: "heading-xxl/extrabold",
                           children: z,
                       }),
                   }),
                   (0, r.jsx)("div", {
-                      className: x.products,
+                      className: O.products,
                       children: Q.slice(40 * (F - 1), 40 * F).map((e, t) =>
                           null == f.Z.getCategory(e.categorySkuId)
                               ? null
@@ -127,7 +127,7 @@ function A(e) {
                   }),
                   Q.length > 40 &&
                       (0, r.jsx)("div", {
-                          className: x.paginationContainer,
+                          className: O.paginationContainer,
                           children: (0, r.jsx)("div", {
                               children: (0, r.jsx)(a.DsT, {
                                   currentPage: F,

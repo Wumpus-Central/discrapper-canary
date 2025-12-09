@@ -120,14 +120,14 @@ function R(e) {
     let a = d({}, i);
     return (a.message = null), m.set(r, a), !0;
 }
-function w(e) {
+function D(e) {
     let { id: t, channelId: n } = e;
     return R({
         messageId: t,
         channelId: n,
     });
 }
-function D(e) {
+function w(e) {
     let { ids: t, channelId: n } = e;
     for (let e of t)
         R({
@@ -240,8 +240,8 @@ let B = new Z(o.Z, {
     SAVED_MESSAGES_UPDATE: C,
     SAVED_MESSAGE_CREATE: N,
     SAVED_MESSAGE_DELETE: P,
-    MESSAGE_DELETE: w,
-    MESSAGE_DELETE_BULK: D,
+    MESSAGE_DELETE: D,
+    MESSAGE_DELETE_BULK: w,
     MESSAGE_UPDATE: x,
     GUILD_CREATE: L,
     GUILD_UPDATE: L,
