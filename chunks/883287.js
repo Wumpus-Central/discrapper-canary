@@ -1,6 +1,5 @@
 e.exports = {
     akaBadge: "akaBadge__5149c",
-    header: "header__5149c",
     subHeader: "subHeader__5149c",
     miniAvatar: "miniAvatar__5149c",
     miniGuildIcon: "miniGuildIcon__5149c",

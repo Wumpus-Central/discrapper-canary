@@ -1,21 +1,22 @@
-n.d(t, { Z: () => y }), n(388685), n(642613);
+n.d(t, { Z: () => C }), n(388685), n(642613);
 var a = n(54381),
-    l = n(473749),
-    r = n(990547),
-    i = n(46973),
+    r = n(473749),
+    i = n(990547),
+    l = n(46973),
     s = n(199849),
     o = n(481060),
     c = n(480916),
     d = n(138464),
-    u = n(594174),
-    m = n(585483),
-    p = n(246992),
-    h = n(981631),
-    x = n(723359),
-    f = n(388032),
-    g = n(711322),
-    b = n(451429);
-function v(e) {
+    u = n(430824),
+    m = n(594174),
+    p = n(585483),
+    h = n(246992),
+    x = n(981631),
+    f = n(723359),
+    g = n(388032),
+    b = n(711322),
+    v = n(451429);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -40,7 +41,7 @@ function v(e) {
     }
     return e;
 }
-function j(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,19 +59,19 @@ function j(e, t) {
         e
     );
 }
-let _ = {
+let y = {
     CollectiblesExpiryModal: async () => {
         let { default: e } = await n.e("77370").then(n.bind(n, 83950));
-        return (t) => (0, a.jsx)(e, v({}, t));
+        return (t) => (0, a.jsx)(e, j({}, t));
     },
     EmailEnterModal: async () => {
         let { default: e } = await n.e("20670").then(n.bind(n, 993018));
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
-                    headerText: f.intl.string(f.t.ZLRYGU),
-                    confirmButtonText: f.intl.string(f.t.PDTjLN),
+                _(j({}, t), {
+                    headerText: g.intl.string(g.t.ZLRYGU),
+                    confirmButtonText: g.intl.string(g.t.PDTjLN),
                     confirmButtonVariant: "primary",
                 }),
             );
@@ -80,42 +81,42 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
-                    headerText: f.intl.string(f.t.H3Q7U8),
+                _(j({}, t), {
+                    headerText: g.intl.string(g.t.H3Q7U8),
                     onFormSubmit: () => {},
                     onResend: () => {},
                     onSuccess: () => {},
-                    confirmButtonText: f.intl.string(f.t["13ofGu"]),
-                    impression: { impressionName: r.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
+                    confirmButtonText: g.intl.string(g.t["13ofGu"]),
+                    impression: { impressionName: i.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
                 }),
             );
     },
     AgeVerificationRetryModal: async () => {
         let { default: e } = await n.e("22447").then(n.bind(n, 686768));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { entryPoint: c.cU.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL }));
+        return (t) => (0, a.jsx)(e, _(j({}, t), { entryPoint: c.cU.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL }));
     },
     ExistingUserAgeGatePrompt: async () => {
         let { default: e } = await Promise.all([n.e("1716"), n.e("8430")]).then(n.bind(n, 701509));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { source: x.L0.NSFW_SERVER }));
+        return (t) => (0, a.jsx)(e, _(j({}, t), { source: f.L0.NSFW_SERVER }));
     },
     ExistingUserAgeGateUnderage: async () => {
         let { default: e } = await n.e("80478").then(n.bind(n, 920644));
-        return (t) => (0, a.jsx)(e, v({}, t));
+        return (t) => (0, a.jsx)(e, j({}, t));
     },
     NewUserAgeGate: async () => {
         let { default: e } = await n.e("76323").then(n.bind(n, 298237));
-        return (t) => (0, a.jsx)(e, v({}, t));
+        return (t) => (0, a.jsx)(e, j({}, t));
     },
     AutomatedUnderageAppealModal: async () => {
         let { default: e } = await n.e("75435").then(n.bind(n, 751744));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { classificationId: "123" }));
+        return (t) => (0, a.jsx)(e, _(j({}, t), { classificationId: "123" }));
     },
     AutomodRaidResolveModal: async () => {
         let { default: e } = await n.e("28382").then(n.bind(n, 537623));
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     guildId: "123",
                     messageId: null,
                 }),
@@ -123,14 +124,14 @@ let _ = {
     },
     AutomodUserProfileQuarantineAlert: async () => {
         let { default: e } = await n.e("40390").then(n.bind(n, 251871));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { guildId: "123" }));
+        return (t) => (0, a.jsx)(e, _(j({}, t), { guildId: "123" }));
     },
     PhoneVerificationModal: async () => {
         let { default: e } = await Promise.resolve().then(n.bind(n, 145454));
         return (t) =>
             (0, a.jsx)(
                 e,
-                v(
+                j(
                     {
                         error: null,
                         working: !1,
@@ -145,8 +146,8 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
-                    mediaEngineContext: i.Yn.DEFAULT,
+                _(j({}, t), {
+                    mediaEngineContext: l.Yn.DEFAULT,
                     subtitle: "Devtools subtitle",
                 }),
             );
@@ -156,7 +157,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 o.Ioy,
-                j(v({}, t), {
+                _(j({}, t), {
                     title: "Dynamic Graphics Demo",
                     subtitle: "This modal demonstrates the dynamic graphics system",
                     graphic: {
@@ -185,7 +186,7 @@ let _ = {
         return (n) =>
             (0, a.jsx)(
                 e,
-                j(v({}, n), {
+                _(j({}, n), {
                     clientSettingType: t.LEGACY_GAME,
                     gameId: "123456789",
                 }),
@@ -194,8 +195,8 @@ let _ = {
     PremiumSubscriptionPauseModal: async () => {
         let { PremiumSubscriptionPauseModalSelect: e } = await n.e("14963").then(n.bind(n, 398775)),
             { CancellationContext: t } = await Promise.resolve().then(n.bind(n, 594135)),
-            { PremiumTypes: r } = await Promise.resolve().then(n.bind(n, 474936)),
-            i = {
+            { PremiumTypes: i } = await Promise.resolve().then(n.bind(n, 474936)),
+            l = {
                 id: "test-subscription-id",
                 userId: "test-user-id",
                 status: 1,
@@ -213,15 +214,15 @@ let _ = {
                 renewalMutations: null,
                 hasActiveTrial: !1,
             },
-            s = l.forwardRef((n, s) => {
-                let [o, c] = l.useState(null);
+            s = r.forwardRef((n, s) => {
+                let [o, c] = r.useState(null);
                 return (0, a.jsx)(t.Provider, {
                     value: {
                         setStep: () => {},
-                        premiumType: r.TIER_2,
+                        premiumType: i.TIER_2,
                         onClose: n.onClose,
                         transitionState: n.transitionState,
-                        premiumSubscription: i,
+                        premiumSubscription: l,
                         analyticsLocations: [],
                         analyticsLocation: void 0,
                         confettiCanvas: null,
@@ -241,12 +242,12 @@ let _ = {
                     children: (0, a.jsx)(e, {}),
                 });
             });
-        return (s.displayName = "PremiumSubscriptionPauseModalWrapper"), (e) => (0, a.jsx)(s, v({}, e));
+        return (s.displayName = "PremiumSubscriptionPauseModalWrapper"), (e) => (0, a.jsx)(s, j({}, e));
     },
     NewMemberActionModal: async () => {
         let { default: e } = await Promise.all([n.e("7590"), n.e("81257")]).then(n.bind(n, 380716)),
             { NewMemberActionTypes: t } = await Promise.resolve().then(n.bind(n, 734893)),
-            l = {
+            r = {
                 channelId: "123456789",
                 title: "Welcome to the server!",
                 description: "Say hello in the welcome channel",
@@ -257,9 +258,9 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     guildId: "123456789",
-                    action: l,
+                    action: r,
                     onSave: (e, t, n) => {
                         console.log("NewMemberActionModal onSave:", {
                             action: e,
@@ -276,8 +277,8 @@ let _ = {
     PlayStationModal: async () => {
         let { default: e } = await n.e("638").then(n.bind(n, 543974)),
             t = await Promise.resolve().then(n.bind(n, 258609)),
-            { createChannelRecord: l } = await Promise.resolve().then(n.bind(n, 131704)),
-            r = l({
+            { createChannelRecord: r } = await Promise.resolve().then(n.bind(n, 131704)),
+            i = r({
                 id: "123456789",
                 name: "test-voice-channel",
                 type: 2,
@@ -311,7 +312,7 @@ let _ = {
                 defaultSortOrder: null,
                 defaultForumLayout: 0,
             }),
-            i = {
+            l = {
                 "device-1": {
                     id: "device-1",
                     name: "PS5 - Living Room",
@@ -329,19 +330,19 @@ let _ = {
                 },
             },
             s = (n) => {
-                let l = t.default.getDevicesForPlatform,
+                let r = t.default.getDevicesForPlatform,
                     s = t.default.getFetchingDevices,
                     o = t.default.getLastSelectedDeviceByPlatform,
                     c = t.default.getAwaitingRemoteSessionInfo;
-                (t.default.getDevicesForPlatform = (e) => (e === h.ABu.PLAYSTATION ? i : l.call(t.default, e))),
-                    (t.default.getFetchingDevices = (e) => e !== h.ABu.PLAYSTATION && s.call(t.default, e)),
+                (t.default.getDevicesForPlatform = (e) => (e === x.ABu.PLAYSTATION ? l : r.call(t.default, e))),
+                    (t.default.getFetchingDevices = (e) => e !== x.ABu.PLAYSTATION && s.call(t.default, e)),
                     (t.default.getLastSelectedDeviceByPlatform = (e) =>
-                        e === h.ABu.PLAYSTATION ? "device-1" : o.call(t.default, e)),
+                        e === x.ABu.PLAYSTATION ? "device-1" : o.call(t.default, e)),
                     (t.default.getAwaitingRemoteSessionInfo = () => null);
                 let d = n.onClose;
                 return (
                     (n.onClose = async () => {
-                        (t.default.getDevicesForPlatform = l),
+                        (t.default.getDevicesForPlatform = r),
                             (t.default.getFetchingDevices = s),
                             (t.default.getLastSelectedDeviceByPlatform = o),
                             (t.default.getAwaitingRemoteSessionInfo = c),
@@ -349,9 +350,9 @@ let _ = {
                     }),
                     (0, a.jsx)(
                         e,
-                        j(v({}, n), {
-                            channel: r,
-                            platform: h.ABu.PLAYSTATION,
+                        _(j({}, n), {
+                            channel: i,
+                            platform: x.ABu.PLAYSTATION,
                         }),
                     )
                 );
@@ -363,7 +364,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     detectedActivity: {
                         application_id: "123456789",
                         name: "Test Game",
@@ -373,14 +374,14 @@ let _ = {
     },
     AppealIngestionModal: async () => {
         let { default: e } = await Promise.all([n.e("65652"), n.e("37931")]).then(n.bind(n, 208265));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { classificationId: "123456789" }));
+        return (t) => (0, a.jsx)(e, _(j({}, t), { classificationId: "123456789" }));
     },
     CreateTagModal: async () => {
         let { default: e } = await n.e("21971").then(n.bind(n, 201049));
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     channelId: "123456789",
                     guildId: "987654321",
                 }),
@@ -398,7 +399,7 @@ let _ = {
         return (n) =>
             (0, a.jsx)(
                 e,
-                j(v({}, n), {
+                _(j({}, n), {
                     channelId: "123456789",
                     guildId: "987654321",
                     tag: t,
@@ -410,7 +411,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     title: "Confirm Action",
                     subtitle: "Are you sure you want to perform this action? This action cannot be undone.",
                     confirmText: "Confirm",
@@ -424,7 +425,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     title: "Alert",
                     body: "This is an alert message with a single action.",
                     confirmText: "OK",
@@ -437,7 +438,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     title: "Confirm Action",
                     body: "Are you sure you want to proceed with this action?",
                     confirmText: "Yes",
@@ -452,7 +453,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     title: "Settings Change",
                     body: "This will change your account settings.",
                     confirmText: "Apply",
@@ -468,10 +469,10 @@ let _ = {
         let { default: e } = await Promise.all([n.e("38697"), n.e("4093"), n.e("2318")]).then(n.bind(n, 399299)),
             {
                 ApplicationStreamPresets: t,
-                ApplicationStreamResolutions: l,
-                ApplicationStreamFPS: r,
+                ApplicationStreamResolutions: r,
+                ApplicationStreamFPS: i,
             } = await Promise.resolve().then(n.bind(n, 37113)),
-            i = {
+            l = {
                 id: "screen:0:0",
                 name: "Entire Screen",
                 thumbnail:
@@ -481,11 +482,11 @@ let _ = {
         return (n) =>
             (0, a.jsx)(
                 e,
-                j(v({}, n), {
-                    selectedSource: i,
+                _(j({}, n), {
+                    selectedSource: l,
                     selectedPreset: t.PRESET_VIDEO,
-                    selectedResolution: l.RESOLUTION_1080,
-                    selectedFPS: r.FPS_60,
+                    selectedResolution: r.RESOLUTION_1080,
+                    selectedFPS: i.FPS_60,
                     sound: !0,
                     previewDisabled: !1,
                     selectedChannelId: "987654321",
@@ -512,9 +513,9 @@ let _ = {
         let {
                 Button: e,
                 Text: t,
-                Heading: l,
-                Checkbox: r,
-                ButtonGroup: i,
+                Heading: r,
+                Checkbox: i,
+                ButtonGroup: l,
             } = await Promise.resolve().then(n.bind(n, 481060)),
             { DisableCommunicationDuration: s, getFriendlyDurationString: o } = await Promise.resolve().then(
                 n.bind(n, 590433),
@@ -570,7 +571,7 @@ let _ = {
                     maxWidth: "500px",
                 },
                 children: [
-                    (0, a.jsxs)(l, {
+                    (0, a.jsxs)(r, {
                         variant: "heading-lg/semibold",
                         className: "mb-2",
                         children: ["Disable Communication for ", d, "#", "0001"],
@@ -584,12 +585,12 @@ let _ = {
                     (0, a.jsxs)("div", {
                         className: "mb-4",
                         children: [
-                            (0, a.jsx)(l, {
+                            (0, a.jsx)(r, {
                                 variant: "heading-sm/semibold",
                                 className: "mb-2",
                                 children: "Duration",
                             }),
-                            (0, a.jsx)(i, {
+                            (0, a.jsx)(l, {
                                 children: v.map((t) =>
                                     (0, a.jsx)(
                                         e,
@@ -608,7 +609,7 @@ let _ = {
                     (0, a.jsxs)("div", {
                         className: "mb-4",
                         children: [
-                            (0, a.jsx)(l, {
+                            (0, a.jsx)(r, {
                                 variant: "heading-sm/semibold",
                                 className: "mb-2",
                                 children: "Reason (Optional)",
@@ -632,7 +633,7 @@ let _ = {
                     }),
                     (0, a.jsx)("div", {
                         className: "mb-4",
-                        children: (0, a.jsx)(r, {
+                        children: (0, a.jsx)(i, {
                             checked: g,
                             onChange: b,
                             label: "Resolve associated mod report",
@@ -661,19 +662,19 @@ let _ = {
                 ],
             });
         }
-        return (e) => (0, a.jsx)(u, v({}, e));
+        return (e) => (0, a.jsx)(u, j({}, e));
     },
     GuildPowerupDeactivateModal: async () => {
-        let { Button: e, Text: t, Heading: l, Checkbox: r } = await Promise.resolve().then(n.bind(n, 481060)),
-            i = await Promise.resolve().then(n.t.bind(n, 473749, 19)),
+        let { Button: e, Text: t, Heading: r, Checkbox: i } = await Promise.resolve().then(n.bind(n, 481060)),
+            l = await Promise.resolve().then(n.t.bind(n, 473749, 19)),
             s = "Level 3 Server Boost",
             o = 200,
             c = 60,
             d = 8;
         function u(n) {
-            let [u, m] = i.useState(!1),
-                [p, h] = i.useState(!1),
-                x = i.useCallback(async () => {
+            let [u, m] = l.useState(!1),
+                [p, h] = l.useState(!1),
+                x = l.useCallback(async () => {
                     h(!0),
                         console.log("GuildPowerupDeactivateModal: Deactivating powerup", {
                             powerup: s,
@@ -689,7 +690,7 @@ let _ = {
                     maxWidth: "500px",
                 },
                 children: [
-                    (0, a.jsxs)(l, {
+                    (0, a.jsxs)(r, {
                         variant: "heading-lg/semibold",
                         className: "mb-2",
                         children: ["Deactivate ", s],
@@ -713,7 +714,7 @@ let _ = {
                             border: "1px solid var(--border-subtle)",
                         },
                         children: [
-                            (0, a.jsx)(l, {
+                            (0, a.jsx)(r, {
                                 variant: "heading-sm/semibold",
                                 className: "mb-2",
                                 children: "Current Features",
@@ -782,7 +783,7 @@ let _ = {
                     }),
                     (0, a.jsx)("div", {
                         className: "mb-4",
-                        children: (0, a.jsx)(r, {
+                        children: (0, a.jsx)(i, {
                             checked: u,
                             onChange: m,
                             label: "I understand that deactivating this powerup will remove all Level 3 features from my server",
@@ -813,7 +814,7 @@ let _ = {
                 ],
             });
         }
-        return (e) => (0, a.jsx)(u, v({}, e));
+        return (e) => (0, a.jsx)(u, j({}, e));
     },
     DataHarvestModal: async () => {
         let { default: e } = await n.e("25120").then(n.bind(n, 926281));
@@ -833,7 +834,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     onClose: () => {
                         console.log("EnableCommunityModal: Closed"), t.onClose();
                     },
@@ -845,7 +846,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     guildId: "123456789012345678",
                     startingChannelId: "987654321098765432",
                 }),
@@ -856,7 +857,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     videoEnabled: !1,
                     onEnable: () => console.log("Camera enabled"),
                 }),
@@ -867,7 +868,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     videoEnabled: !0,
                     onEnable: () => console.log("Camera enabled"),
                 }),
@@ -878,7 +879,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     handleResolveFlag: () => console.log("ModeratorReportResolveConfirmModal: Flag resolved"),
                 }),
             );
@@ -905,14 +906,14 @@ let _ = {
     },
     AddFavoriteChannelModal: async () => {
         let { default: e } = await n.e("95257").then(n.bind(n, 610617));
-        return (t) => (0, a.jsx)(e, j(v({}, t), { parentId: null }));
+        return (t) => (0, a.jsx)(e, _(j({}, t), { parentId: null }));
     },
     ActivityShareMomentModal: async () => {
         let { default: e } = await Promise.all([n.e("49049"), n.e("4530"), n.e("44469")]).then(n.bind(n, 899201));
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     applicationId: "123456789",
                     mediaUrl: "https://picsum.photos/400/300.jpg",
                 }),
@@ -923,7 +924,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     onSubmit: () => {
                         console.log("CallUserConfirmationModal: Call confirmed"), t.onClose();
                     },
@@ -935,7 +936,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), { onClose: () => (console.log("OptInReorderAttemptModal: Modal closed"), t.onClose()) }),
+                _(j({}, t), { onClose: () => (console.log("OptInReorderAttemptModal: Modal closed"), t.onClose()) }),
             );
     },
     GuildAntiRaidReportModal: async () => {
@@ -943,7 +944,7 @@ let _ = {
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     guildId: "123456789",
                     onClose: () => (console.log("GuildAntiRaidReportModal: Modal closed"), t.onClose()),
                 }),
@@ -952,14 +953,14 @@ let _ = {
     ConsentCheckBoxModal: async () => {
         let { default: e } = await n.e("63490").then(n.bind(n, 853268)),
             { VoidConfirmModal: t } = await Promise.resolve().then(n.bind(n, 288022)),
-            { Text: l, Heading: r, Anchor: i } = await Promise.resolve().then(n.bind(n, 481060)),
+            { Text: r, Heading: i, Anchor: l } = await Promise.resolve().then(n.bind(n, 481060)),
             s = await Promise.resolve().then(n.t.bind(n, 473749, 19));
         function o(n) {
             let [o, c] = s.useState(!1),
                 [d, u] = s.useState(!1);
             return (0, a.jsx)(
                 t,
-                j(v({}, n), {
+                _(j({}, n), {
                     header: "Consent CheckBox Examples",
                     confirmText: "Close",
                     cancelText: "",
@@ -975,7 +976,7 @@ let _ = {
                         children: [
                             (0, a.jsxs)("div", {
                                 children: [
-                                    (0, a.jsx)(r, {
+                                    (0, a.jsx)(i, {
                                         variant: "heading-md/semibold",
                                         style: { marginBottom: "12px" },
                                         children: "Terms of Service Consent",
@@ -987,7 +988,7 @@ let _ = {
                                             children: [
                                                 "I agree to Discord's",
                                                 " ",
-                                                (0, a.jsx)(i, {
+                                                (0, a.jsx)(l, {
                                                     href: "https://discord.com/terms",
                                                     target: "_blank",
                                                     rel: "noopener noreferrer",
@@ -996,7 +997,7 @@ let _ = {
                                                 " ",
                                                 "and",
                                                 " ",
-                                                (0, a.jsx)(i, {
+                                                (0, a.jsx)(l, {
                                                     href: "https://discord.com/privacy",
                                                     target: "_blank",
                                                     rel: "noopener noreferrer",
@@ -1005,7 +1006,7 @@ let _ = {
                                             ],
                                         }),
                                     }),
-                                    (0, a.jsxs)(l, {
+                                    (0, a.jsxs)(r, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
                                         style: { marginTop: "8px" },
@@ -1015,7 +1016,7 @@ let _ = {
                             }),
                             (0, a.jsxs)("div", {
                                 children: [
-                                    (0, a.jsx)(r, {
+                                    (0, a.jsx)(i, {
                                         variant: "heading-md/semibold",
                                         style: { marginBottom: "12px" },
                                         children: "Promotional Email Consent",
@@ -1027,7 +1028,7 @@ let _ = {
                                             "I would like to receive promotional emails from Discord about new features, events, and other updates.",
                                         muted: !0,
                                     }),
-                                    (0, a.jsxs)(l, {
+                                    (0, a.jsxs)(r, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
                                         style: { marginTop: "8px" },
@@ -1037,7 +1038,7 @@ let _ = {
                             }),
                             (0, a.jsxs)("div", {
                                 children: [
-                                    (0, a.jsx)(r, {
+                                    (0, a.jsx)(i, {
                                         variant: "heading-md/semibold",
                                         style: { marginBottom: "12px" },
                                         children: "Custom Styled Consent",
@@ -1057,14 +1058,14 @@ let _ = {
                 }),
             );
         }
-        return (o.displayName = "ConsentCheckBoxModalContent"), (e) => (0, a.jsx)(o, v({}, e));
+        return (o.displayName = "ConsentCheckBoxModalContent"), (e) => (0, a.jsx)(o, j({}, e));
     },
     GuildRaidLockdownFeedbackModal: async () => {
         let { default: e } = await n.e("53324").then(n.bind(n, 821312));
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     guildId: "123456789",
                     onClose: () => (console.log("GuildRaidLockdownFeedbackModal: Modal closed"), t.onClose()),
                 }),
@@ -1073,7 +1074,7 @@ let _ = {
     GuildVerificationLevelModal: async () => {
         let { default: e } = await n.e("72458").then(n.bind(n, 694278)),
             { dangerouslyConstructGuildRecordFromUntypedObject: t } = await Promise.resolve().then(n.bind(n, 411198)),
-            l = t({
+            r = t({
                 id: "123456789",
                 name: "Test Server",
                 description: "A test server for development",
@@ -1113,13 +1114,13 @@ let _ = {
                 premiumFeatures: null,
                 moderatorReporting: null,
             });
-        return (t) => (0, a.jsx)(e, j(v({}, t), { guild: l }));
+        return (t) => (0, a.jsx)(e, _(j({}, t), { guild: r }));
     },
     GuildVerificationLevelModalCommunity: async () => {
         let { default: e } = await n.e("72458").then(n.bind(n, 694278)),
             { dangerouslyConstructGuildRecordFromUntypedObject: t } = await Promise.resolve().then(n.bind(n, 411198)),
-            { GuildFeatures: l } = await Promise.resolve().then(n.bind(n, 981631)),
-            r = t({
+            { GuildFeatures: r } = await Promise.resolve().then(n.bind(n, 981631)),
+            i = t({
                 id: "123456789",
                 name: "Test Community Server",
                 description: "A test community server for development",
@@ -1128,7 +1129,7 @@ let _ = {
                 splash: null,
                 banner: null,
                 homeHeader: null,
-                features: [l.COMMUNITY],
+                features: [r.COMMUNITY],
                 preferredLocale: "en-US",
                 afkChannelId: null,
                 afkTimeout: 300,
@@ -1159,14 +1160,14 @@ let _ = {
                 premiumFeatures: null,
                 moderatorReporting: null,
             });
-        return (t) => (0, a.jsx)(e, j(v({}, t), { guild: r }));
+        return (t) => (0, a.jsx)(e, _(j({}, t), { guild: i }));
     },
     EmojiAddModal: async () => {
         let { EmojiAddModal: e } = await n.e("21112").then(n.bind(n, 301160));
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     guildId: "123456789",
                     initialTierEmojiIds: new Set(["emoji1"]),
                     onSubmit: (e) => {
@@ -1181,59 +1182,59 @@ let _ = {
     },
     StreamFullModal: async () => {
         let { default: e } = await n.e("63757").then(n.bind(n, 309690));
-        return (t) => (0, a.jsx)(e, v({}, t));
+        return (t) => (0, a.jsx)(e, j({}, t));
     },
     FamilyCenterAcceptLinkModal: async () => {
-        let e = u.default.getUser("12345"),
-            t = u.default.getUser("67890");
+        let e = m.default.getUser("12345"),
+            t = m.default.getUser("67890");
         if (void 0 === e || void 0 === t) return () => null;
-        let { default: l } = await n.e("59716").then(n.bind(n, 275370));
+        let { default: r } = await n.e("59716").then(n.bind(n, 275370));
         return (n) =>
             (0, a.jsx)(
-                l,
-                j(v({}, n), {
+                r,
+                _(j({}, n), {
                     currentUser: t,
                     otherUser: e,
                 }),
             );
     },
     FamilyCenterDeclineLinkModal: async () => {
-        let e = u.default.getUser("12345"),
-            t = u.default.getUser("67890");
+        let e = m.default.getUser("12345"),
+            t = m.default.getUser("67890");
         if (void 0 === e || void 0 === t) return () => null;
-        let { default: l } = await n.e("958").then(n.bind(n, 4526));
+        let { default: r } = await n.e("958").then(n.bind(n, 4526));
         return (n) =>
             (0, a.jsx)(
-                l,
-                j(v({}, n), {
+                r,
+                _(j({}, n), {
                     currentUser: t,
                     otherUser: e,
                 }),
             );
     },
     FamilyCenterCancelLinkModal: async () => {
-        let e = u.default.getUser("12345"),
-            t = u.default.getUser("67890");
+        let e = m.default.getUser("12345"),
+            t = m.default.getUser("67890");
         if (void 0 === e || void 0 === t) return () => null;
-        let { default: l } = await n.e("69015").then(n.bind(n, 247265));
+        let { default: r } = await n.e("69015").then(n.bind(n, 247265));
         return (n) =>
             (0, a.jsx)(
-                l,
-                j(v({}, n), {
+                r,
+                _(j({}, n), {
                     currentUser: e,
                     otherUser: t,
                 }),
             );
     },
     FamilyCenterDisconnectLinkModal: async () => {
-        let e = u.default.getUser("12345"),
-            t = u.default.getUser("67890");
+        let e = m.default.getUser("12345"),
+            t = m.default.getUser("67890");
         if (void 0 === e || void 0 === t) return () => null;
-        let { default: l } = await n.e("50872").then(n.bind(n, 442673));
+        let { default: r } = await n.e("50872").then(n.bind(n, 442673));
         return (n) =>
             (0, a.jsx)(
-                l,
-                j(v({}, n), {
+                r,
+                _(j({}, n), {
                     currentUser: e,
                     otherUser: t,
                 }),
@@ -1241,29 +1242,86 @@ let _ = {
     },
     FamilyCenterQRCodeModal: async () => {
         let { default: e } = await Promise.all([n.e("1216"), n.e("90688")]).then(n.bind(n, 978305));
-        return (t) => (0, a.jsx)(e, v({}, t));
+        return (t) => (0, a.jsx)(e, j({}, t));
     },
     PremiumGroupFriendsSelectorModal: async () => {
         let { default: e } = await n.e("86948").then(n.bind(n, 153241));
-        return (t) => (0, a.jsx)(e, v({}, t));
+        return (t) => (0, a.jsx)(e, j({}, t));
     },
     PremiumGroupAcceptInviteModal: async () => {
         let { default: e } = await n.e("26450").then(n.bind(n, 382927));
         return (t) =>
             (0, a.jsx)(
                 e,
-                j(v({}, t), {
+                _(j({}, t), {
                     premiumGroupSubscriptionId: "1234567890",
                     isExistingSub: !1,
                     premiumGroupPrimaryName: "Test User",
                 }),
             );
     },
+    QuarantineModeInfoModal: async () => {
+        let { default: e } = await n.e("98137").then(n.bind(n, 397013));
+        return (t) => (0, a.jsx)(e, j({}, t));
+    },
+    SafetyUserSentimentFeedbackModal: async () => {
+        let { default: e } = await Promise.all([n.e("26860"), n.e("52432")]).then(n.bind(n, 349994));
+        return (t) => (0, a.jsx)(e, j({}, t));
+    },
+    CaptchaTestModal: async () => {
+        let { default: e } = await n.e("61323").then(n.bind(n, 333636));
+        return (t) => (0, a.jsx)(e, j({}, t));
+    },
+    PasswordConfirm: async () => {
+        let { default: e } = await Promise.resolve().then(n.bind(n, 355497));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                _(j({}, t), {
+                    title: "Confirm Password",
+                    actionText: "Submit",
+                    handleSubmit: async (e) => {
+                        console.log("PasswordConfirm: Password submitted:", e),
+                            await new Promise((e) => setTimeout(e, 1000));
+                    },
+                }),
+            );
+    },
+    BlockedDomainModal: async () => {
+        let { default: e } = await n.e("2435").then(n.bind(n, 821606));
+        return (t) => (0, a.jsx)(e, _(j({}, t), { url: "https://example-phishing-site.com/malicious-page" }));
+    },
+    DmSettingsUpsellModal: async () => {
+        let { default: e } = await n.e("35489").then(n.bind(n, 582712)),
+            t = Object.keys(u.Z.getGuilds())[0];
+        return (n) => (0, a.jsx)(e, _(j({}, n), { guildId: t }));
+    },
+    LinkNotDiscordModal: async () => {
+        let { default: e } = await n.e("74194").then(n.bind(n, 269817));
+        return (t) => (0, a.jsx)(e, _(j({}, t), { url: "https://external-website.com/some-page" }));
+    },
+    UrgentMessageModal: async () => {
+        let { default: e } = await n.e("37971").then(n.bind(n, 848548));
+        return (t) => (0, a.jsx)(e, j({}, t));
+    },
+    UserAgreementsModal: async () => {
+        let { default: e } = await n.e("50536").then(n.bind(n, 886162));
+        return (t) => (0, a.jsx)(e, j({}, t));
+    },
+    DisableRiskyPermsModal: async () => {
+        let { default: e } = await n.e("59298").then(n.bind(n, 193845)),
+            t = Object.values(u.Z.getGuilds())[0];
+        return null == t ? () => null : (n) => (0, a.jsx)(e, _(j({}, n), { guild: t }));
+    },
+    OtherFriendRequestsModal: async () => {
+        let { default: e } = await Promise.all([n.e("74969"), n.e("33721")]).then(n.bind(n, 153932));
+        return (t) => (0, a.jsx)(e, j({}, t));
+    },
 };
-function y() {
-    let e = l.useMemo(
+function C() {
+    let e = r.useMemo(
             () =>
-                Object.keys(_)
+                Object.keys(y)
                     .map((e) => ({
                         label: e,
                         value: e,
@@ -1271,53 +1329,53 @@ function y() {
                     .sort((e, t) => e.label.localeCompare(t.label)),
             [],
         ),
-        [t, n] = l.useState(e[0].value);
+        [t, n] = r.useState(e[0].value);
     return (0, a.jsx)(o.zJl, {
-        className: b.panel,
+        className: v.panel,
         children: (0, a.jsxs)("div", {
-            className: g.panelInner,
+            className: b.panelInner,
             children: [
                 (0, a.jsxs)("section", {
-                    className: g.section,
+                    className: b.section,
                     children: [
                         (0, a.jsx)(o.Heading, {
                             variant: "heading-md/semibold",
                             children: "Open a Modal",
                         }),
                         (0, a.jsxs)("div", {
-                            className: g.inputRow,
+                            className: b.inputRow,
                             children: [
                                 (0, a.jsx)(s.B6, {
-                                    className: g.input,
+                                    className: b.input,
                                     options: e,
                                     isSelected: (e) => t === e,
                                     serialize: (e) => e,
                                     select: (e) => n(e),
-                                    popoutLayerContext: p.O$,
+                                    popoutLayerContext: h.O$,
                                 }),
                                 (0, a.jsx)(o.Button, {
                                     variant: "primary",
                                     text: "Open",
-                                    onClick: () => (0, o.ZDy)(_[t]),
+                                    onClick: () => (0, o.ZDy)(y[t]),
                                 }),
                             ],
                         }),
                     ],
                 }),
                 (0, a.jsxs)("section", {
-                    className: g.section,
+                    className: b.section,
                     children: [
                         (0, a.jsx)(o.Heading, {
                             variant: "heading-md/semibold",
                             children: "Wow moment",
                         }),
                         (0, a.jsx)("div", {
-                            className: g.inputRow,
+                            className: b.inputRow,
                             children: (0, a.jsx)(o.Button, {
                                 variant: "primary",
                                 text: "Open",
                                 onClick: () => {
-                                    (0, d.H)(!0), m.S.dispatch(h.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                                    (0, d.H)(!0), p.S.dispatch(x.CkL.PREMIUM_SUBSCRIPTION_CREATED);
                                 },
                             }),
                         }),

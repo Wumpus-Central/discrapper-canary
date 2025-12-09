@@ -1,7 +1,7 @@
 r.d(t, { default: () => N }), r(539854);
 var n = r(54381),
-    s = r(473749),
-    i = r(149765),
+    i = r(473749),
+    s = r(149765),
     a = r(755721),
     l = r(481060),
     o = r(422559),
@@ -14,7 +14,7 @@ var n = r(54381),
     b = r(135899),
     h = r(388032),
     j = r(56726);
-function _(e) {
+function g(e) {
     let { guild: t } = e,
         r = m.ZP.getGuildIconURL({
             id: t.id,
@@ -23,6 +23,7 @@ function _(e) {
         });
     return (0, n.jsxs)(l.xBx, {
         className: j.header,
+        "data-migration-pending": !0,
         children: [
             (0, n.jsx)("div", {
                 className: j.headerIconContainer,
@@ -57,8 +58,8 @@ function _(e) {
         ],
     });
 }
-let f = (e) => (e.toString() === p.Plq.MENTION_EVERYONE.toString() ? h.intl.string(h.t.yCpsQw) : (0, o.wt)(e));
-function g(e) {
+let _ = (e) => (e.toString() === p.Plq.MENTION_EVERYONE.toString() ? h.intl.string(h.t.yCpsQw) : (0, o.wt)(e));
+function f(e) {
     let { permissions: t } = e;
     return (0, n.jsxs)("div", {
         className: j.tableContainer,
@@ -81,7 +82,7 @@ function g(e) {
                                 (0, n.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
-                                    children: f(e),
+                                    children: _(e),
                                 }),
                             ],
                         },
@@ -115,7 +116,7 @@ function v(e) {
                                 (0, n.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: f(e),
+                                    children: _(e),
                                 }),
                             ],
                         },
@@ -128,11 +129,12 @@ function v(e) {
 }
 function y(e) {
     let { permissions: t } = e,
-        { enabledPermissions: r, disabledPermissions: s } = t;
+        { enabledPermissions: r, disabledPermissions: i } = t;
     return (0, n.jsx)(l.hzk, {
+        "data-migration-pending": !0,
         children: (0, n.jsxs)("div", {
             className: j.table,
-            children: [(0, n.jsx)(g, { permissions: r }), (0, n.jsx)(v, { permissions: s })],
+            children: [(0, n.jsx)(f, { permissions: r }), (0, n.jsx)(v, { permissions: i })],
         }),
     });
 }
@@ -140,6 +142,7 @@ function O(e) {
     let { onConfirm: t, onDismiss: r } = e;
     return (0, n.jsxs)(l.mzw, {
         className: j.footer,
+        "data-migration-pending": !0,
         children: [
             (0, n.jsx)(l.Button, {
                 variant: "primary",
@@ -161,7 +164,7 @@ function O(e) {
 }
 function N(e) {
     let { guild: t, transitionState: r, onClose: a } = e,
-        o = s.useMemo(() => {
+        o = i.useMemo(() => {
             let e = [],
                 r = [];
             return (
@@ -179,7 +182,7 @@ function N(e) {
         var e, r;
         let n = null != t ? d.Z.getEveryoneRole(t) : void 0;
         if (null == n) return;
-        let s = i.Od(n.permissions, b.mu);
+        let i = s.Od(n.permissions, b.mu);
         await (0, x.Gf)(t.id, [
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -206,7 +209,7 @@ function N(e) {
                 }
                 return e;
             })({}, n)),
-            (r = r = { permissions: s }),
+            (r = r = { permissions: i }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
                 : (function (e, t) {
@@ -228,8 +231,9 @@ function N(e) {
         size: l.CgR.SMALL,
         className: j.modal,
         parentComponent: "DisableRiskyPermsModal",
+        "data-migration-pending": !0,
         children: [
-            (0, n.jsx)(_, { guild: t }),
+            (0, n.jsx)(g, { guild: t }),
             (0, n.jsx)(y, { permissions: o }),
             (0, n.jsx)(O, {
                 onConfirm: c,

@@ -30,8 +30,8 @@ var r = n(54381),
     N = n(706454),
     P = n(210887),
     R = n(418632),
-    w = n(10298),
-    D = n(526156),
+    D = n(10298),
+    w = n(526156),
     x = n(730820),
     L = n(888256),
     j = n(2719),
@@ -313,9 +313,9 @@ class K extends i.PureComponent {
     }
     renderUnhidden() {
         let { subsection: e } = this.props;
-        return (0, r.jsx)(w.N, {
+        return (0, r.jsx)(D.N, {
             header: Z.intl.string(Z.t["JAIM/m"]),
-            children: (0, r.jsx)(D.Z, {
+            children: (0, r.jsx)(w.Z, {
                 parentSetting: k.s6.ACCOUNT,
                 settingsSection: U.oAB.ACCOUNT,
                 panelClassName: B.tabPanel,
@@ -365,7 +365,7 @@ class K extends i.PureComponent {
               : void (n.isClaimed()
                     ? (0, c.h7j)((e) =>
                           (0, r.jsx)(
-                              O.Z,
+                              O.default,
                               Y(V({}, e), {
                                   handleSubmit: (e) => this.handleSubmitDisableAccount(e, t),
                                   title: t ? Z.intl.string(Z.t["8lQ2rR"]) : Z.intl.string(Z.t.jf5GGb),

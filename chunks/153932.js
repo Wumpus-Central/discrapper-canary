@@ -1,21 +1,21 @@
-n.d(t, { default: () => x });
+n.d(t, { default: () => _ }), n(539854);
 var s = n(54381),
-    o = n(473749),
-    i = n(990547),
-    r = n(755721),
-    a = n(481060),
-    l = n(442837),
-    c = n(194359),
-    d = n(906732),
-    m = n(321488),
-    u = n(417183),
-    p = n(170245),
-    b = n(892001),
-    g = n(974042),
-    h = n(981631),
-    f = n(388032),
-    O = n(862998);
-function _(e) {
+    i = n(473749),
+    o = n(990547),
+    r = n(159691),
+    c = n(481060),
+    a = n(442837),
+    l = n(194359),
+    u = n(906732),
+    p = n(321488),
+    d = n(417183),
+    b = n(170245),
+    m = n(892001),
+    f = n(974042),
+    g = n(981631),
+    O = n(388032),
+    y = n(862998);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             s = Object.keys(n);
@@ -58,58 +58,58 @@ function j(e, t) {
         e
     );
 }
-function y(e) {
-    let { user: t, status: n, ignoredUser: o } = e,
-        { analyticsLocations: i } = (0, d.ZP)(),
+function P(e) {
+    let { user: t, status: n, ignoredUser: i } = e,
+        { analyticsLocations: o } = (0, u.ZP)(),
         r = (e) => {
-            e.stopPropagation(), c.Z.cancelFriendRequest(t.id, { location: "Spam requests modal" });
+            e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: "Spam requests modal" });
         },
-        l = (e) => {
+        a = (e) => {
             e.stopPropagation(),
-                c.Z.addRelationship({
+                l.Z.addRelationship({
                     userId: t.id,
                     context: { location: "Spam requests modal" },
                 });
         },
-        g = n === h.Skl.OFFLINE ? h.Skl.UNKNOWN : n,
-        _ = o ? f.intl.string(f.t.pO68Oz) : f.intl.string(f.t["gp+Ytz"]);
+        f = n === g.Skl.OFFLINE ? g.Skl.UNKNOWN : n,
+        h = i ? O.intl.string(O.t.pO68Oz) : O.intl.string(O.t["gp+Ytz"]);
     return (0, s.jsx)("div", {
-        className: O.spamRequest,
-        children: (0, s.jsx)(u.Z, {
+        className: y.spamRequest,
+        children: (0, s.jsx)(d.Z, {
             isFocused: !1,
             user: t,
-            className: O.listItem,
-            activeClassName: O.active,
+            className: y.listItem,
+            activeClassName: y.active,
             onClick: () =>
-                (0, b.openUserProfileModal)({
+                (0, m.openUserProfileModal)({
                     userId: t.id,
-                    sourceAnalyticsLocations: i,
+                    sourceAnalyticsLocations: o,
                 }),
             children: (e) =>
                 (0, s.jsxs)("div", {
-                    className: O.listItemContents,
+                    className: y.listItemContents,
                     children: [
-                        (0, s.jsx)(p.Z, {
+                        (0, s.jsx)(b.Z, {
                             user: t,
                             hovered: e,
-                            status: g,
-                            subText: _,
-                            className: O.userInfo,
+                            status: f,
+                            subText: h,
+                            className: y.userInfo,
                         }),
                         (0, s.jsxs)("div", {
-                            className: O.actions,
+                            className: y.actions,
                             children: [
-                                (0, s.jsx)(m.Z, {
-                                    icon: a.dz2,
-                                    actionType: m.Z.ActionTypes.ACCEPT,
-                                    tooltip: f.intl.string(f.t.Zcibdf),
-                                    onClick: l,
+                                (0, s.jsx)(p.Z, {
+                                    icon: c.dz2,
+                                    actionType: p.Z.ActionTypes.ACCEPT,
+                                    tooltip: O.intl.string(O.t.Zcibdf),
+                                    onClick: a,
                                     shouldHighlight: e,
                                 }),
-                                (0, s.jsx)(m.Z, {
-                                    icon: a.Dio,
-                                    actionType: m.Z.ActionTypes.DENY,
-                                    tooltip: f.intl.string(f.t.xuio0C),
+                                (0, s.jsx)(p.Z, {
+                                    icon: c.Dio,
+                                    actionType: p.Z.ActionTypes.DENY,
+                                    tooltip: O.intl.string(O.t.xuio0C),
                                     onClick: r,
                                     shouldHighlight: e,
                                 }),
@@ -120,74 +120,60 @@ function y(e) {
         }),
     });
 }
-function x(e) {
+function _(e) {
     let { transitionState: t, onClose: n } = e,
-        { rows: d } = (0, l.cj)([g.ZP], () => g.ZP.getState()),
-        m = d.filter(h.pJs.PENDING_IGNORED),
-        u = d.filter(h.pJs.SPAM),
-        p = u.length + m.length;
-    return (
-        o.useEffect(() => {
-            0 === p && n();
-        }, [p, n]),
-        (0, s.jsxs)(a.Y0X, {
-            transitionState: t,
-            className: O.modal,
-            impression: { impressionName: i.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX },
-            parentComponent: "OtherFriendRequestsModal",
-            children: [
-                (0, s.jsxs)(a.xBx, {
-                    separator: !1,
-                    className: O.modalHeader,
-                    children: [
-                        (0, s.jsx)(a.Heading, {
-                            variant: "heading-lg/bold",
-                            className: O.heading,
-                            children: f.intl.string(f.t.kaYqnm),
-                        }),
-                        (0, s.jsx)(a.Text, {
-                            variant: "text-md/medium",
-                            color: "text-default",
-                            children: f.intl.string(f.t.tRxb4H),
-                        }),
-                    ],
-                }),
-                (0, s.jsxs)(a.hzk, {
-                    className: O.modalContent,
-                    children: [
-                        m.map((e) =>
-                            (0, o.createElement)(
-                                y,
-                                j(_({}, e), {
-                                    isFocused: !1,
-                                    key: e.key,
-                                    ignoredUser: !0,
-                                }),
-                            ),
-                        ),
-                        u.map((e) =>
-                            (0, o.createElement)(
-                                y,
-                                j(_({}, e), {
-                                    isFocused: !1,
-                                    key: e.key,
-                                }),
-                            ),
-                        ),
-                    ],
-                }),
-                p > 1 &&
-                    (0, s.jsx)("div", {
-                        className: O.modalFooter,
-                        children: (0, s.jsx)(r.zx, {
-                            className: O.clearAllButton,
-                            onClick: () => {
-                                c.Z.clearPendingSpamAndIgnored(), n();
-                            },
-                            children: f.intl.string(f.t.O8k7O4),
-                        }),
+        { rows: c } = (0, a.cj)([f.ZP], () => f.ZP.getState()),
+        u = c.filter(g.pJs.PENDING_IGNORED),
+        p = c.filter(g.pJs.SPAM),
+        d = p.length + u.length;
+    i.useEffect(() => {
+        0 === d && n();
+    }, [d, n]);
+    let b = i.useCallback(() => {
+            l.Z.clearPendingSpamAndIgnored(), n();
+        }, [n]),
+        m = i.useMemo(() => {
+            let e = [];
+            return (
+                d > 1 &&
+                    e.push({
+                        text: O.intl.string(O.t.O8k7O4),
+                        onClick: b,
+                        variant: "secondary",
                     }),
+                e
+            );
+        }, [b, d]);
+    return (0, s.jsx)(r.u_l, {
+        title: O.intl.string(O.t.kaYqnm),
+        subtitle: O.intl.string(O.t.tRxb4H),
+        actions: m,
+        trackingProps: { impression: { impressionName: o.ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX } },
+        onClose: n,
+        transitionState: t,
+        children: (0, s.jsxs)("div", {
+            className: y.modalContent,
+            children: [
+                u.map((e) =>
+                    (0, i.createElement)(
+                        P,
+                        j(h({}, e), {
+                            isFocused: !1,
+                            key: e.key,
+                            ignoredUser: !0,
+                        }),
+                    ),
+                ),
+                p.map((e) =>
+                    (0, i.createElement)(
+                        P,
+                        j(h({}, e), {
+                            isFocused: !1,
+                            key: e.key,
+                        }),
+                    ),
+                ),
             ],
-        })
-    );
+        }),
+    });
 }
