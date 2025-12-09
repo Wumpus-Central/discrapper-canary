@@ -1,8 +1,8 @@
 n.d(t, {
     HR: () => M,
-    PR: () => w,
+    PR: () => D,
     default: () => U,
-    sF: () => D,
+    sF: () => w,
 });
 var r = n(54381),
     i = n(473749),
@@ -87,14 +87,14 @@ let R = (e) => {
             ? (0, r.jsx)(l.Vq, { onClose: t })
             : null;
     },
-    w = (e) => {
+    D = (e) => {
         let { handleClose: t } = e,
             { purchaseState: n } = (0, f.JL)();
         (0, i.useEffect)(() => {
             n === _.A.COMPLETED && t();
         }, [n, t]);
     },
-    D = (e) => {
+    w = (e) => {
         var t;
         let {
                 skuId: n,
@@ -165,7 +165,7 @@ let R = (e) => {
                 analyticsSourceLocation: u,
                 rentalDuration: d,
             } = (0, O.CH)();
-        w({ handleClose: t });
+        D({ handleClose: t });
         let {
             orbPriceAmount: f,
             orbBalanceToDisplay: p,
@@ -173,7 +173,7 @@ let R = (e) => {
             isStepLoading: m,
             showCollectiblesDiscountWarning: h,
             errorMessage: b,
-        } = D({
+        } = w({
             skuId: n,
             onRedeemVirtualCurrency: i,
             orbRedemptionError: s,
@@ -311,6 +311,7 @@ let R = (e) => {
             stepConfigs: L,
             purchaseType: I.GZQ.ONE_TIME,
             skuIDs: [t],
+            paymentGateway: I.gg$.VIRTUAL_CURRENCY,
             excludeSubscriptionPlansBySKU: !0,
             excludeSKUPurchasePreviews: !0,
             children: (0, r.jsx)(O.dv, {

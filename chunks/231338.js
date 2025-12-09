@@ -17,7 +17,7 @@ n.d(t, {
     He: () => O,
     Jj: () => x,
     MA: () => eE,
-    NY: () => w,
+    NY: () => D,
     OL: () => m,
     OM: () => ep,
     Pl: () => k,
@@ -29,7 +29,7 @@ n.d(t, {
     S7: () => M,
     Sk: () => p,
     TC: () => F,
-    U6: () => D,
+    U6: () => w,
     Uk: () => T,
     V6: () => H,
     Vq: () => G,
@@ -124,6 +124,7 @@ var h = (function (e) {
             (e[(e.GOOGLE = 4)] = "GOOGLE"),
             (e[(e.ADYEN = 5)] = "ADYEN"),
             (e[(e.APPLE_PARTNER = 6)] = "APPLE_PARTNER"),
+            (e[(e.VIRTUAL_CURRENCY = 8)] = "VIRTUAL_CURRENCY"),
             (e[(e.APPLE_ADVANCED_COMMERCE = 9)] = "APPLE_ADVANCED_COMMERCE"),
             e
         );
@@ -138,6 +139,7 @@ let E = Object.freeze({
         4: "Google",
         5: "Adyen",
         6: "Apple Partner",
+        8: "Virtual Currency",
         9: "Apple ACOM",
     }),
     b = Object.freeze({
@@ -215,12 +217,12 @@ var P = (function (e) {
             e
         );
     })({}),
-    w = (function (e) {
+    D = (function (e) {
         return (
             (e[(e.PREMIUM = 1)] = "PREMIUM"), (e[(e.GUILD = 2)] = "GUILD"), (e[(e.APPLICATION = 3)] = "APPLICATION"), e
         );
     })({}),
-    D = (function (e) {
+    w = (function (e) {
         return (
             (e.PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
             (e.VENMO_APP_CANCELED = "VENMO_APP_CANCELED"),
