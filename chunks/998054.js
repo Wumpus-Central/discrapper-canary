@@ -25,7 +25,11 @@ let d = async () => {
                     return l._n.EXISTING_INSTALLATION;
             }
         } catch (e) {
-            if (e instanceof Error && "Failed to locate warp-cli" === e.message) return l._n.NOT_INSTALLED;
+            if (
+                (e instanceof Error && "Failed to locate warp-cli" === e.message) ||
+                (e instanceof Error && _(e.message))
+            )
+                return l._n.NOT_INSTALLED;
             if (e instanceof Object && "code" in e && "MissingRegistration" === e.code) return l._n.WAITING_FOR_TERMS;
             return (
                 i.default.track(u.rMx.PREMIUM_FEATURE_ERROR, {
@@ -58,4 +62,8 @@ let d = async () => {
         }),
     p = async () => {
         await (0, c._)(!0), await o.ZP.getDiscordUtils().installWarp();
-    };
+    },
+    _ = (e) =>
+        e.includes("Unexpected token") ||
+        e.includes("Cannot read properties of undefined") ||
+        e.includes("Unexpected end of JSON input");
