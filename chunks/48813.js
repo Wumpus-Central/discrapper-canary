@@ -4,32 +4,33 @@ var a = n(54381),
     i = n(921254),
     l = n(512722),
     o = n.n(l),
-    s = n(544891),
+    s = n(547943),
+    c = n(544891),
     u = n(355467),
-    c = n(100527),
-    d = n(906732),
-    _ = n(211242),
-    m = n(845220),
+    d = n(100527),
+    _ = n(906732),
+    m = n(211242),
+    O = n(845220),
     f = n(588529),
-    O = n(626135),
-    E = n(74538),
-    p = n(937615),
-    y = n(374649),
+    E = n(626135),
+    p = n(74538),
+    y = n(937615),
+    S = n(374649),
     b = n(140465),
-    S = n(230916),
-    C = n(398775),
-    P = n(562218),
+    C = n(230916),
+    P = n(398775),
+    T = n(562218),
     v = n(284829),
-    T = n(586920),
-    R = n(45474),
-    I = n(594135),
-    A = n(881493),
+    R = n(586920),
+    I = n(45474),
+    A = n(594135),
+    D = n(881493),
     w = n(407965),
-    D = n(501090),
-    h = n(323321),
+    h = n(501090),
+    N = n(323321),
     x = n(474936),
-    N = n(981631),
-    M = n(320150);
+    M = n(981631),
+    U = n(320150);
 function g(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -55,162 +56,162 @@ function g(t) {
     }
     return t;
 }
-let k = [N.O0b.PAST_DUE, N.O0b.PAUSED, N.O0b.BILLING_RETRY],
+let k = [M.O0b.PAST_DUE, M.O0b.PAUSED, M.O0b.BILLING_RETRY],
     L = (t) => {
         var e, n, l;
-        let { analyticsLocation: L, analyticsLocations: U, onClose: j, transitionState: F, premiumSubscription: W } = t,
-            { initialStep: B } = t,
+        let { analyticsLocation: L, analyticsLocations: j, onClose: F, transitionState: W, premiumSubscription: B } = t,
+            { initialStep: Y } = t,
             G = r.useRef(new i.qA()),
-            [Y, Z] = r.useState(null),
-            H = null == (e = (0, E.Af)(W)) ? void 0 : e.planId,
-            V = null != H ? E.ZP.getPremiumType(H) : null;
-        o()(null != V, "Should not be cancelling Nitro without premiumType");
-        let X = V === x.PremiumTypes.TIER_0 || V === x.PremiumTypes.TIER_1 || V === x.PremiumTypes.TIER_2;
-        null == B && (B = X ? R.R.WHAT_YOU_LOSE : R.R.CONFIRM);
-        let [q, z, K, Q] = (0, D.q)(B, W, U),
-            J = (0, _.Q)(),
-            $ = (0, b.UV)(),
-            { churnUserDiscountOffer: tt, isFetchingChurnDiscountOffer: te } = (0, b.WR)(
-                !$ || (W.status === N.O0b.CANCELED && q !== R.R.CONFIRM_DISCOUNT),
+            [Z, H] = r.useState(null),
+            V = null == (e = (0, p.Af)(B)) ? void 0 : e.planId,
+            X = null != V ? p.ZP.getPremiumType(V) : null;
+        o()(null != X, "Should not be cancelling Nitro without premiumType");
+        let q = X === x.PremiumTypes.TIER_0 || X === x.PremiumTypes.TIER_1 || X === x.PremiumTypes.TIER_2;
+        null == Y && (Y = q ? I.R.WHAT_YOU_LOSE : I.R.CONFIRM);
+        let [z, K, Q, J] = (0, h.q)(Y, B, j),
+            $ = (0, m.Q)(),
+            tt = (0, b.UV)(),
+            { churnUserDiscountOffer: te, isFetchingChurnDiscountOffer: tn } = (0, b.WR)(
+                !tt || (B.status === M.O0b.CANCELED && z !== I.R.CONFIRM_DISCOUNT),
             ),
-            tn = (0, S._n)(W, x.Xh.PREMIUM_MONTH_TIER_2, tt),
-            [ta] = (0, y.ED)({
-                subscriptionId: W.id,
-                items: (0, E.Ue)(null != (l = null == (n = W.renewalMutations) ? void 0 : n.items) ? l : W.items),
+            ta = (0, C._n)(B, x.Xh.PREMIUM_MONTH_TIER_2, te),
+            [tr] = (0, S.ED)({
+                subscriptionId: B.id,
+                items: (0, p.Ue)(null != (l = null == (n = B.renewalMutations) ? void 0 : n.items) ? l : B.items),
                 renewal: !0,
-                analyticsLocations: U,
-                analyticsLocation: c.Z.CANCEL_INVOICE_PREVIEW,
+                analyticsLocations: j,
+                analyticsLocation: d.Z.CANCEL_INVOICE_PREVIEW,
             }),
-            tr = null !== ta ? E.ZP.getIntervalForInvoice(ta) : null,
-            ti = (0, E.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
-                currency: W.currency,
-                paymentSourceId: W.paymentSourceId,
+            ti = null !== tr ? p.ZP.getIntervalForInvoice(tr) : null,
+            tl = (0, p.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+                currency: B.currency,
+                paymentSourceId: B.paymentSourceId,
             }),
-            tl = (0, p.T4)(ti.amount, ti.currency),
-            to = r.useMemo(() => (0, m.b)(), []);
+            to = (0, y.T4)(tl.amount, tl.currency),
+            ts = r.useMemo(() => (0, O.b)(), []);
         r.useEffect(() => {
-            O.default.track(
-                N.rMx.CANCELLATION_FLOW_STARTED,
+            E.default.track(
+                M.rMx.CANCELLATION_FLOW_STARTED,
                 g(
                     {
-                        location_stack: U,
-                        load_id: to,
+                        location_stack: j,
+                        load_id: ts,
                     },
-                    (0, h.v)(W),
+                    (0, N.v)(B),
                 ),
             );
-        }, [U, W, to]);
-        let [ts, tu] = r.useState(null),
-            tc = r.useCallback(() => {
-                switch (q) {
-                    case R.R.CONFIRM:
-                        return (0, a.jsx)(P.G, {});
-                    case R.R.CONFIRM_DISCOUNT:
+        }, [j, B, ts]);
+        let [tc, tu] = r.useState(null),
+            td = r.useCallback(() => {
+                switch (z) {
+                    case I.R.CONFIRM:
+                        return (0, a.jsx)(T.G, {});
+                    case I.R.CONFIRM_DISCOUNT:
                         return (0, a.jsx)(v.U, {});
-                    case R.R.DISCOUNT_APPLIED:
-                        return (0, a.jsx)(T.i, {});
-                    case R.R.PREVIEW:
-                        return (0, a.jsx)(A.w, {});
-                    case R.R.PAUSE_SELECT:
-                        return (0, a.jsx)(C.PremiumSubscriptionPauseModalSelect, {});
-                    case R.R.PAUSE_CONFIRM:
-                        return (0, a.jsx)(C.Sz, {});
-                    case R.R.WHAT_YOU_LOSE:
+                    case I.R.DISCOUNT_APPLIED:
+                        return (0, a.jsx)(R.i, {});
+                    case I.R.PREVIEW:
+                        return (0, a.jsx)(D.w, {});
+                    case I.R.PAUSE_SELECT:
+                        return (0, a.jsx)(P.PremiumSubscriptionPauseModalSelect, {});
+                    case I.R.PAUSE_CONFIRM:
+                        return (0, a.jsx)(P.Sz, {});
+                    case I.R.WHAT_YOU_LOSE:
                     default:
                         return (0, a.jsx)(w.n, {});
                 }
-            }, [q]),
-            td = r.useCallback(async () => {
+            }, [z]),
+            t_ = r.useCallback(async () => {
                 if (
-                    (O.default.track(
-                        N.rMx.CANCELLATION_FLOW_COMPLETED,
+                    (E.default.track(
+                        M.rMx.CANCELLATION_FLOW_COMPLETED,
                         g(
                             {
-                                location_stack: U,
-                                load_id: to,
+                                location_stack: j,
+                                load_id: ts,
                             },
-                            (0, h.v)(W),
+                            (0, N.v)(B),
                         ),
                     ),
-                    k.includes(W.status))
+                    k.includes(B.status))
                 )
-                    await (0, u.EO)(W.id, U, L);
+                    await (0, u.EO)(B.id, j, L);
                 else {
                     var t, e;
-                    let n = null != (e = null == (t = W.renewalMutations) ? void 0 : t.items) ? e : W.items,
-                        a = (0, E.Ue)(n);
+                    let n = null != (e = null == (t = B.renewalMutations) ? void 0 : t.items) ? e : B.items,
+                        a = (0, p.Ue)(n);
                     await (0, u.Mg)(
-                        W,
+                        B,
                         { items: a },
                         {
                             amount: 0,
-                            currency: W.currency,
+                            currency: B.currency,
                         },
-                        (0, E.UX)(a, W.currency, W.paymentSourceId),
-                        U,
+                        (0, p.UX)(a, B.currency, B.paymentSourceId),
+                        j,
                         L,
                     );
                 }
-                f.ZP.fireSurveyAction("nitro_unsub");
-            }, [W, U, L, to]),
-            t_ = async () => {
-                if (null == tt) throw Error("Churn user discount offer is null");
-                W.status === N.O0b.CANCELED
-                    ? await (0, u.df)(W, tt)
-                    : await s.tn.post({
-                          url: N.ANM.USER_OFFER_REDEEM,
-                          body: { user_discount_offer_id: tt.id },
+                f.ZP.fireSurveyAction(s.Y.NITRO_UNSUBBED);
+            }, [B, j, L, ts]),
+            tm = async () => {
+                if (null == te) throw Error("Churn user discount offer is null");
+                B.status === M.O0b.CANCELED
+                    ? await (0, u.df)(B, te)
+                    : await c.tn.post({
+                          url: M.ANM.USER_OFFER_REDEEM,
+                          body: { user_discount_offer_id: te.id },
                           rejectWithError: !0,
                       });
             };
-        return (0, a.jsx)(d.Gt, {
-            value: U,
-            children: (0, a.jsxs)(I.CancellationContext.Provider, {
+        return (0, a.jsx)(_.Gt, {
+            value: j,
+            children: (0, a.jsxs)(A.CancellationContext.Provider, {
                 value: {
-                    setStep: z,
-                    premiumType: V,
+                    setStep: K,
+                    premiumType: X,
                     onClose: () => {
-                        j(),
-                            O.default.track(
-                                N.rMx.CANCELLATION_FLOW_STEP,
+                        F(),
+                            E.default.track(
+                                M.rMx.CANCELLATION_FLOW_STEP,
                                 g(
                                     {
-                                        from_step: R.O[q],
+                                        from_step: I.O[z],
                                         to_step: null,
-                                        step_duration_ms: Date.now() - K,
-                                        flow_duration_ms: Date.now() - Q,
-                                        location_stack: U,
-                                        load_id: to,
+                                        step_duration_ms: Date.now() - Q,
+                                        flow_duration_ms: Date.now() - J,
+                                        location_stack: j,
+                                        load_id: ts,
                                     },
-                                    (0, h.v)(W),
+                                    (0, N.v)(B),
                                 ),
                             );
                     },
-                    transitionState: F,
-                    premiumSubscription: W,
-                    analyticsLocations: U,
+                    transitionState: W,
+                    premiumSubscription: B,
+                    analyticsLocations: j,
                     analyticsLocation: L,
-                    confettiCanvas: Y,
-                    churnUserDiscountOffer: tt,
-                    isFetchingChurnDiscountOffer: $ && te,
-                    fullPrice: tl,
-                    discountedPrice: tn,
-                    planId: H,
-                    paymentsBlocked: J,
-                    renewalInvoice: ta,
-                    renewalInvoiceDetails: tr,
-                    handleCancellation: td,
-                    applyOffer: t_,
-                    pauseDuration: ts,
+                    confettiCanvas: Z,
+                    churnUserDiscountOffer: te,
+                    isFetchingChurnDiscountOffer: tt && tn,
+                    fullPrice: to,
+                    discountedPrice: ta,
+                    planId: V,
+                    paymentsBlocked: $,
+                    renewalInvoice: tr,
+                    renewalInvoiceDetails: ti,
+                    handleCancellation: t_,
+                    applyOffer: tm,
+                    pauseDuration: tc,
                     setPauseDuration: tu,
                 },
                 children: [
                     (0, a.jsx)(i.O_, {
-                        ref: Z,
-                        className: M.confettiCanvas,
+                        ref: H,
+                        className: U.confettiCanvas,
                         environment: G.current,
                     }),
-                    tc(),
+                    td(),
                 ],
             }),
         });
