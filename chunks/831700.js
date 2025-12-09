@@ -120,17 +120,16 @@ class er extends H.ZP {
     }
     renderSubtitle() {
         var e;
-        let { channel: t, connected: n, enableHangStatus: i, showEmptyChannelTopic: l } = this.props,
-            o = null == (e = (0, C.D)(this.props.subtitle)) ? void 0 : e.subtitle,
-            { hovered: a } = this.state;
+        let { channel: t, connected: n, showEmptyChannelTopic: i } = this.props,
+            l = null == (e = (0, C.D)(this.props.subtitle)) ? void 0 : e.subtitle,
+            { hovered: o } = this.state;
         return (0, r.jsx)(Y.Z, {
             onClick: this.handleVoiceStatusClick,
             channel: t,
             connected: n,
-            subtitle: o,
-            hovered: a,
-            enableHangStatus: i,
-            showEmptyChannelTopic: l,
+            subtitle: l,
+            hovered: o,
+            showEmptyChannelTopic: i,
         });
     }
     renderVoiceUsers() {

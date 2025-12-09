@@ -15,45 +15,36 @@ var r = n(54381),
     m = n(158871),
     b = n(430864);
 function _(e) {
-    let {
-            channel: t,
-            connected: n,
-            hovered: l,
-            subtitle: _,
-            onClick: y,
-            enableHangStatus: O,
-            showEmptyChannelTopic: v,
-        } = e,
-        j = (0, a.e7)([d.Z], () => d.Z.getChannelStatus(t)),
-        x = null != j && j.length > 0,
-        C = (0, u.ZP)(t, !0),
-        E = (!O || !!v) && C,
-        S = null != _ && _.length > 0;
+    let { channel: t, connected: n, hovered: l, subtitle: _, onClick: y, showEmptyChannelTopic: O } = e,
+        v = (0, a.e7)([d.Z], () => d.Z.getChannelStatus(t)),
+        j = null != v && v.length > 0,
+        x = (0, u.ZP)(t, !0),
+        C = null != _ && _.length > 0;
     if (
         (i.useEffect(() => {
-            x &&
+            j &&
                 h.default.track(p.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                     channel_id: t.id,
                     guild_id: t.guild_id,
                 });
-        }, [x, t.id, t.guild_id]),
+        }, [j, t.id, t.guild_id]),
         null == t.guild_id)
     )
         return null;
-    let I = o()(m.statusDiv, n && E ? m.hoverable : null);
-    return x
+    let E = o()(m.statusDiv, n && x ? m.hoverable : null);
+    return j
         ? (0, r.jsx)(c.P3F, {
-              className: I,
-              onClick: E ? y : void 0,
+              className: E,
+              onClick: x ? y : void 0,
               children: (0, r.jsx)(c.Text, {
                   variant: "text-xs/medium",
                   className: o()(m.statusText, b.markup),
-                  children: (0, r.jsx)(s.Z, { children: f.Z.parseVoiceChannelStatus(j, !0, { channelId: t.id }) }),
+                  children: (0, r.jsx)(s.Z, { children: f.Z.parseVoiceChannelStatus(v, !0, { channelId: t.id }) }),
               }),
           })
-        : n && E && (!S || l)
+        : n && x && (!C || l) && O
           ? (0, r.jsxs)(c.P3F, {
-                className: I,
+                className: E,
                 onClick: y,
                 children: [
                     (0, r.jsx)(c.Text, {
@@ -68,7 +59,7 @@ function _(e) {
                     }),
                 ],
             })
-          : S
+          : C
             ? (0, r.jsx)(s.Z, { children: _ })
             : null;
 }
