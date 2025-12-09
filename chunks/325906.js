@@ -1,9 +1,10 @@
-n.d(t, { WrappedUnifiedPaymentModal: () => d });
+n.d(t, { WrappedUnifiedPaymentModal: () => b });
 var r = n(54381),
-    o = n(987209),
-    i = n(563132),
-    c = n(791785),
-    a = n(467368);
+    o = n(473749),
+    i = n(987209),
+    a = n(563132),
+    l = n(791785),
+    c = n(467368);
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -29,7 +30,7 @@ function s(e) {
     }
     return e;
 }
-function l(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,91 +52,103 @@ let u = (e) => {
         let {
                 skuId: t,
                 applicationId: n,
-                transitionState: o,
-                returnRef: i,
-                onClose: l,
-                analyticsLocations: u,
-                renderHeader: p,
-                paymentModalVersion: d = "v2",
+                transitionState: i,
+                returnRef: a,
+                onComplete: p,
+                onClose: u,
+                modalOnClose: d,
+                analyticsLocations: b,
+                renderHeader: y,
+                paymentModalVersion: f = "v2",
             } = e,
-            { paymentModalProps: y } = (0, a.Li)(),
-            b = null != y && null != y.onClose ? y.onClose : l;
+            { paymentModalProps: O } = (0, c.Li)(),
+            j = o.useCallback(
+                (e, t) => {
+                    d(), null != u && u(e, t);
+                },
+                [d, u],
+            );
         return (0, r.jsx)(
-            c.PaymentModal,
+            l.PaymentModal,
             s(
                 {
-                    transitionState: o,
-                    returnRef: i,
+                    transitionState: i,
+                    returnRef: a,
                     applicationId: n,
-                    onClose: b,
+                    onComplete: p,
+                    onClose: j,
                     hideShadow: !0,
                     skuId: t,
-                    renderHeader: p,
+                    renderHeader: y,
                     initialPlanId: null,
-                    analyticsLocations: u,
-                    paymentModalVersion: d,
+                    analyticsLocations: b,
+                    paymentModalVersion: f,
                 },
-                y,
+                O,
             ),
         );
     },
-    p = (e) => {
+    d = (e) => {
         let { skuId: t } = e;
         return (0, r.jsx)(
-            i.PaymentContextProvider,
-            l(s({}, e), {
+            a.PaymentContextProvider,
+            p(s({}, e), {
                 skuIDs: [t],
                 children: e.children,
             }),
         );
     },
-    d = (e) => {
+    b = (e) => {
         let {
                 loadId: t,
                 skuId: n,
-                applicationId: i,
-                analyticsLocations: c,
-                analyticsSourceLocation: a,
-                onCheckoutSuccess: d,
-                giftContextProps: y,
+                applicationId: o,
+                analyticsLocations: a,
+                analyticsSourceLocation: l,
+                giftContextProps: c,
                 flowSpecificOptions: b,
-                renderModalProps: f,
-                checkoutFlowConfiguration: O,
-                tenantCheckoutFlowConfig: j,
-                renderHeader: P,
-                stepConfigs: h,
+                onComplete: y,
+                onClose: f,
+                renderModalProps: O,
+                checkoutFlowConfiguration: j,
+                tenantCheckoutFlowConfig: P,
+                renderHeader: h,
+                stepConfigs: m,
             } = e,
-            { purchaseType: S } = O,
-            { CustomPaymentContextProvider: w = p, UnifiedCheckoutContextProvider: k } = j,
-            g = null != y ? o.KB : o.b6;
+            { purchaseType: C } = j,
+            { CustomPaymentContextProvider: w = d, UnifiedCheckoutContextProvider: S } = P,
+            k = null != c ? i.KB : i.b6;
         return (0, r.jsx)(w, {
             skuId: n,
-            applicationId: i,
+            applicationId: o,
             activeSubscription: null,
             loadId: t,
-            stepConfigs: h,
-            purchaseType: S,
+            stepConfigs: m,
+            purchaseType: C,
             excludeSubscriptionPlansBySKU: !0,
             excludeSKUPurchasePreviews: !0,
             children: (0, r.jsx)(
-                g,
-                l(s({}, y), {
-                    children: (0, r.jsx)(k, {
+                k,
+                p(s({}, c), {
+                    children: (0, r.jsx)(S, {
                         skuId: n,
                         loadId: t,
-                        analyticsLocations: c,
-                        analyticsSourceLocation: a,
-                        onCheckoutSuccess: d,
-                        renderModalProps: f,
+                        analyticsLocations: a,
+                        analyticsSourceLocation: l,
+                        onComplete: y,
+                        onClose: f,
+                        renderModalProps: O,
                         flowSpecificOptions: b,
                         children: (0, r.jsx)(u, {
-                            transitionState: f.transitionState,
-                            returnRef: f.returnRef,
-                            onClose: f.onClose,
-                            applicationId: i,
+                            applicationId: o,
                             skuId: n,
-                            renderHeader: P,
-                            analyticsLocations: c,
+                            renderHeader: h,
+                            analyticsLocations: a,
+                            onComplete: y,
+                            onClose: f,
+                            modalOnClose: O.onClose,
+                            transitionState: O.transitionState,
+                            returnRef: O.returnRef,
                         }),
                     }),
                 }),

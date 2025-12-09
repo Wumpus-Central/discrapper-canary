@@ -70,62 +70,75 @@ let _ = "orb-checkout-payment-modal-key",
                 skuId: t,
                 onCheckoutSuccess: n,
                 analyticsLocations: r = [],
-                analyticsSourceLocation: i,
-                onCloseCallback: a,
-                rentalDuration: s,
+                analyticsSourceLocation: s,
+                onCloseCallback: u,
+                rentalDuration: d,
             } = e,
-            { enabled: l } = (0, o.VL)({ location: "openOrbCheckoutPaymentModal" }),
-            c = {
+            { enabled: f } = (0, o.VL)({ location: "openOrbCheckoutPaymentModal" }),
+            p = (0, i.Z)(),
+            m = !1,
+            h = () => {
+                m ||
+                    (0, l._)(c.rMx.PAYMENT_FLOW_CANCELED, {
+                        loadId: p,
+                        skuId: t,
+                        analyticsLocations: r,
+                        analyticsSourceLocation: s,
+                    }),
+                    (0, a.Mr3)(_);
+            },
+            b = {
+                loadId: p,
                 skuId: t,
-                onCheckoutSuccess: n,
+                onCheckoutSuccess: (e) => {
+                    m || n(e), (m = !0);
+                },
                 analyticsLocations: r,
-                analyticsSourceLocation: i,
-                onCloseCallback: a,
-                rentalDuration: s,
+                analyticsSourceLocation: s,
+                onCloseCallback: u,
+                rentalDuration: d,
+                onCloseRequest: h,
             };
-        return l ? g(c) : E(c);
+        return f ? g(b) : E(b);
     },
     g = (e) => {
         let {
-            skuId: t,
-            onCheckoutSuccess: n,
-            analyticsLocations: r = [],
-            analyticsSourceLocation: i,
-            onCloseCallback: a,
-            rentalDuration: o,
+            loadId: t,
+            skuId: n,
+            onCheckoutSuccess: r,
+            analyticsLocations: i = [],
+            analyticsSourceLocation: a,
+            onCloseCallback: o,
+            rentalDuration: l,
+            onCloseRequest: c,
         } = e;
         return s.F4.openCheckoutModal({
-            skuId: t,
-            analyticsLocations: r,
-            analyticsSourceLocation: i,
-            onCheckoutSuccess: n,
-            flowSpecificOptions: { rentalDuration: o },
+            loadId: t,
+            skuId: n,
+            analyticsLocations: i,
+            analyticsSourceLocation: a,
+            flowSpecificOptions: {
+                rentalDuration: l,
+                onCheckoutSuccess: r,
+            },
             openModalOptions: {
-                onCloseCallback: a,
+                onCloseCallback: o,
                 modalKey: _,
-                onCloseRequest: (e, n) => {
-                    e ||
-                        (0, l._)(c.rMx.PAYMENT_FLOW_CANCELED, {
-                            loadId: n,
-                            skuId: t,
-                            analyticsLocations: r,
-                            analyticsSourceLocation: i,
-                        });
-                },
+                onCloseRequest: c,
             },
         });
     },
     E = (e) => {
         let {
-                skuId: t,
-                onCheckoutSuccess: o,
-                analyticsLocations: s = [],
-                analyticsSourceLocation: u,
-                onCloseCallback: f,
-                rentalDuration: m,
-            } = e,
-            h = !1,
-            g = (0, i.Z)();
+            skuId: t,
+            onCheckoutSuccess: i,
+            onCloseRequest: o,
+            loadId: s,
+            analyticsLocations: l = [],
+            analyticsSourceLocation: c,
+            onCloseCallback: u,
+            rentalDuration: f,
+        } = e;
         return (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 922987));
@@ -136,31 +149,20 @@ let _ = "orb-checkout-payment-modal-key",
                             d(
                                 {
                                     skuId: t,
-                                    analyticsLocations: s,
-                                    analyticsSourceLocation: u,
-                                    onCheckoutSuccess: (e) => {
-                                        h || o(e), (h = !0);
-                                    },
-                                    rentalDuration: m,
+                                    analyticsLocations: l,
+                                    analyticsSourceLocation: c,
+                                    onCheckoutSuccess: i,
+                                    rentalDuration: f,
                                 },
                                 n,
                             ),
-                            { loadId: g },
+                            { loadId: s },
                         ),
                     );
             },
             {
-                onCloseCallback: f,
-                onCloseRequest() {
-                    h ||
-                        (0, l._)(c.rMx.PAYMENT_FLOW_CANCELED, {
-                            loadId: g,
-                            skuId: t,
-                            analyticsLocations: s,
-                            analyticsSourceLocation: u,
-                        }),
-                        (0, a.Mr3)(_);
-                },
+                onCloseCallback: u,
+                onCloseRequest: o,
                 modalKey: _,
             },
         );

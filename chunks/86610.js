@@ -176,18 +176,19 @@ class I {
                 openModalOptions: t,
                 flowSpecificOptions: o,
                 giftContextProps: s,
-                onCheckoutSuccess: l,
-                skuId: c,
-                loadId: u,
-                applicationId: d,
-                analyticsSourceLocation: f,
-                analyticsLocations: p,
+                onComplete: l,
+                onClose: c,
+                skuId: u,
+                loadId: d,
+                applicationId: f,
+                analyticsSourceLocation: p,
+                analyticsLocations: _,
             } = e,
-            _ = null != u ? u : (0, i.Z)(),
-            { modalKey: m } = t,
-            h = !1,
+            m = null != d ? d : (0, i.Z)(),
+            { modalKey: h } = t,
             g = this.generateRenderHeader(),
-            E = null != d ? d : this.getApplicationId(c);
+            E = null != f ? f : this.getApplicationId(u),
+            y = !1;
         return (0, a.ZDy)(
             async () => {
                 let { WrappedUnifiedPaymentModal: e } = await n.e("9172").then(n.bind(n, 325906));
@@ -197,25 +198,26 @@ class I {
                         checkoutFlowConfiguration: this.checkoutFlowConfiguration,
                         tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
                         stepConfigs: this.generateCheckoutStepConfigs({ isGift: !!(null != s && s.isGift) }),
+                        onComplete: (e) => {
+                            null != l && l(e), (y = !0);
+                        },
+                        onClose: c,
                         renderHeader: g,
-                        skuId: c,
-                        loadId: _,
+                        skuId: u,
+                        loadId: m,
                         applicationId: E,
-                        analyticsLocations: p,
-                        analyticsSourceLocation: f,
+                        analyticsLocations: _,
+                        analyticsSourceLocation: p,
                         renderModalProps: t,
                         giftContextProps: s,
-                        onCheckoutSuccess: (e) => {
-                            h || l(e), (h = !0);
-                        },
                         flowSpecificOptions: o,
                     });
             },
             O(b({}, t), {
                 onCloseRequest() {
-                    null != t.onCloseRequest && t.onCloseRequest(h, _), (0, a.Mr3)(m);
+                    null != t.onCloseRequest && t.onCloseRequest(y, m), (0, a.Mr3)(h);
                 },
-                modalKey: m,
+                modalKey: h,
             }),
         );
     }
