@@ -31,7 +31,7 @@ n.d(t, {
     CoT: () => T,
     Cyb: () => m.Cy,
     DJE: () => n5,
-    DJj: () => eD,
+    DJj: () => ew,
     DZw: () => eN,
     E07: () => tv,
     EKQ: () => m.EK,
@@ -110,7 +110,7 @@ n.d(t, {
     PUi: () => nx,
     Pbq: () => t4,
     Plq: () => m.Pl,
-    PrB: () => w,
+    PrB: () => D,
     PrS: () => tm,
     PsQ: () => tV,
     PyE: () => m.Py,
@@ -135,7 +135,7 @@ n.d(t, {
     STv: () => em,
     SaU: () => tU,
     Sap: () => t9,
-    Sbl: () => tw,
+    Sbl: () => tD,
     Sc2: () => ey,
     Skl: () => m.Sk,
     T23: () => rk,
@@ -173,14 +173,14 @@ n.d(t, {
     YeM: () => eo,
     Ypu: () => en,
     Z5c: () => eT,
-    Z8P: () => ew,
+    Z8P: () => eD,
     Z9p: () => nd,
     ZUi: () => B,
     ZY5: () => tx,
     ZfP: () => A,
     Zuq: () => m.Zu,
     _1z: () => ee,
-    _8R: () => rw,
+    _8R: () => rD,
     _s_: () => v,
     _vf: () => et,
     a5g: () => tY,
@@ -189,13 +189,13 @@ n.d(t, {
     aO5: () => m.aO,
     aZC: () => tq,
     aib: () => tN,
-    ane: () => nD,
+    ane: () => nw,
     apO: () => n7,
     b2L: () => ne,
     b4C: () => rN,
     b8q: () => tL,
     bL: () => eC,
-    c2C: () => nw,
+    c2C: () => nD,
     d4z: () => r.d,
     dAT: () => tH,
     dCx: () => t6,
@@ -224,7 +224,7 @@ n.d(t, {
     gLR: () => rM,
     gg$: () => m.gg,
     hBH: () => i.h,
-    hCA: () => rD,
+    hCA: () => rw,
     hUK: () => nu,
     hVg: () => nv,
     hes: () => U,
@@ -266,12 +266,12 @@ n.d(t, {
     pAY: () => tf,
     pJs: () => N,
     pKx: () => m.pK,
-    pM4: () => D,
+    pM4: () => w,
     pNK: () => S,
     pTL: () => rL,
     pjP: () => n$,
     pmI: () => t5,
-    q5t: () => tD,
+    q5t: () => tw,
     q9n: () => nG,
     qAy: () => tM,
     qWG: () => rP,
@@ -623,10 +623,10 @@ var r = n(106351),
     R = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    w = (function (e) {
+    D = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    D = (function (e) {
+    w = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     x = (function (e) {
@@ -2172,8 +2172,8 @@ var eA = (function (e) {
 let eN = 100,
     eP = 200,
     eR = 50,
-    ew = 50,
-    eD = 25,
+    eD = 50,
+    ew = 25,
     ex = 200,
     eL = 100,
     ej = 250,
@@ -2562,7 +2562,7 @@ var tN = (function (e) {
             e
         );
     })({}),
-    tw = (function (e) {
+    tD = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2645,7 +2645,7 @@ var tN = (function (e) {
             e
         );
     })({}),
-    tD = (function (e) {
+    tw = (function (e) {
         return (
             (e.JOIN = "join"),
             (e.ASK_TO_JOIN = "ask to join"),
@@ -3643,6 +3643,7 @@ var tZ = (function (e) {
             (e.SHAKE_PROFILE_MODAL = "SHAKE_PROFILE_MODAL"),
             (e.SHAKE_SETTINGS_MODAL = "SHAKE_SETTINGS_MODAL"),
             (e.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED = "WOW_MOMENT_CONFIRMATION_MODAL_CLOSED"),
+            (e.SETTINGS_TRIGGER_LOGOUT = "SETTINGS_TRIGGER_LOGOUT"),
             e
         );
     })({}),
@@ -5785,7 +5786,7 @@ var nT = (function (e) {
         );
     })({});
 let nR = 50;
-var nw = (function (e) {
+var nD = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -5801,7 +5802,7 @@ var nw = (function (e) {
             e
         );
     })({}),
-    nD = (function (e) {
+    nw = (function (e) {
         return (e.UPDATE_PASSWORD = "update_password"), e;
     })({}),
     nx = (function (e) {
@@ -6422,8 +6423,8 @@ var rA = (function (e) {
     })({});
 let rP = 2500,
     rR = 0,
-    rw = 2592000000;
-var rD = (function (e) {
+    rD = 2592000000;
+var rw = (function (e) {
         return (e.USERS = "users"), (e.ROLES = "roles"), (e.EVERYONE = "everyone"), e;
     })({}),
     rx = (function (e) {
