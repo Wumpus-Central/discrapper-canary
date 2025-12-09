@@ -15,7 +15,7 @@ var r = n(512722),
     c = n(981631);
 let u = 10;
 async function d() {
-    o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH" });
+    o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_START" });
     try {
         let e = (
             await a.tn.get({
@@ -72,7 +72,7 @@ async function p(e, t) {
     }
 }
 async function _(e) {
-    o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH" });
+    o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_START" });
     try {
         let t = (
                 await a.tn.get({

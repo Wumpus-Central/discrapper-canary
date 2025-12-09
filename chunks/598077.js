@@ -206,6 +206,12 @@ class O extends o.Z {
     hasUniqueUsername() {
         return "0" === this.discriminator;
     }
+    isPremiumGroupMember() {
+        return this.isPremiumWithPremiumGroup() && this.premiumGroupRole === a.bF.MEMBER;
+    }
+    isPremiumGroupPrimary() {
+        return this.isPremiumWithPremiumGroup() && this.premiumGroupRole === a.bF.PRIMARY;
+    }
     get isProvisional() {
         return this.hasFlag(m.xW$.PROVISIONAL_ACCOUNT);
     }

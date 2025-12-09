@@ -39,7 +39,7 @@ var r = n(54381),
     L = n(140465),
     j = n(160913),
     M = n(331972),
-    k = n(903904),
+    k = n(146761),
     U = n(757861),
     G = n(385251),
     Z = n(987997),
@@ -227,7 +227,7 @@ function en(e) {
 }
 function er() {
     let e = (0, f.e7)([N.default], () => N.default.getCurrentUser()),
-        t = null != e && e.isPremiumWithPremiumGroup();
+        t = null != e && e.isPremiumGroupMember();
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(m.Heading, {
@@ -258,7 +258,7 @@ function er() {
                         ],
                     }),
                 }),
-            t && (0, r.jsx)(k.ZP, { currentUser: e }),
+            t && (0, r.jsx)(k.d, { currentUser: e }),
         ],
     });
 }
@@ -472,7 +472,7 @@ function es(e) {
         X = !U && K,
         J = (null == a ? void 0 : a.status) === W.O0b.PAST_DUE,
         en = J ? u()().diff(u()(a.currentPeriodStart), "days") : 0,
-        er = null != y && y.isPremiumWithPremiumGroup(),
+        er = null != y && y.isPremiumGroupPrimary(),
         [ea] = (0, x.Ox)({
             subscriptionId: a.id,
             preventFetch: !(X || J),
@@ -501,7 +501,7 @@ function es(e) {
                             openInvoiceId: ea.id,
                         })
                       : null,
-                  er && (0, r.jsx)(k.ZP, { currentUser: y }),
+                  er && (0, r.jsx)(k.L, { subscription: a }),
                   n,
                   D &&
                       (0, r.jsx)(m.Wn, {
