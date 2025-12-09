@@ -7,20 +7,20 @@ var r = n(54381),
     c = n(607070),
     s = n(451478),
     u = n(585483),
-    d = n(79808),
-    f = n(981631);
+    f = n(79808),
+    d = n(981631);
 function b(e) {
     var t,
         n,
         {
-            root: b,
-            directory: y,
-            target: p,
-            defaultTarget: g,
-            onPanelChange: O,
-            sidebarHeader: j,
-            sidebarFooter: m,
-            emptyState: v,
+            partialRoot: b,
+            target: y,
+            defaultTarget: p,
+            onPanelChange: g,
+            sidebarFooter: O,
+            emptyState: m,
+            searchQuery: j,
+            onSearchChange: v,
         } = e,
         h = (function (e, t) {
             if (null == e) return {};
@@ -43,14 +43,14 @@ function b(e) {
             }
             return o;
         })(e, [
-            "root",
-            "directory",
+            "partialRoot",
             "target",
             "defaultTarget",
             "onPanelChange",
-            "sidebarHeader",
             "sidebarFooter",
             "emptyState",
+            "searchQuery",
+            "onSearchChange",
         ]);
     let [x, S] = o.useState(!1),
         [P, C] = o.useState(1.4),
@@ -69,9 +69,9 @@ function b(e) {
                     (_.current = setTimeout(() => S(!1), null != n ? n : 1000)));
             };
             return (
-                u.S.subscribe(f.CkL.SHAKE_SETTINGS_MODAL, e),
+                u.S.subscribe(d.CkL.SHAKE_SETTINGS_MODAL, e),
                 () => {
-                    u.S.unsubscribe(f.CkL.SHAKE_SETTINGS_MODAL, e), clearTimeout(_.current);
+                    u.S.unsubscribe(d.CkL.SHAKE_SETTINGS_MODAL, e), clearTimeout(_.current);
                 }
             );
         }, [w, k]),
@@ -107,16 +107,16 @@ function b(e) {
                 })({}, h)),
                 (n = n =
                     {
-                        children: (0, r.jsx)(d.Z, {
+                        children: (0, r.jsx)(f.Z, {
                             onClose: h.onClose,
-                            root: b,
-                            directory: y,
-                            target: p,
-                            defaultTarget: g,
-                            onPanelChange: O,
-                            sidebarHeader: j,
-                            emptyState: v,
-                            sidebarFooter: m,
+                            partialRoot: b,
+                            target: y,
+                            defaultTarget: p,
+                            onPanelChange: g,
+                            emptyState: m,
+                            sidebarFooter: O,
+                            searchQuery: j,
+                            onSearchChange: v,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

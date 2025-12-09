@@ -1,56 +1,56 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => p });
 var r = n(54381),
     o = n(473749),
     i = n(55160),
     l = n(493773),
-    a = n(996733),
-    c = n(636298),
-    s = n(404975),
-    u = n(924052),
-    d = n(59662),
-    f = n(996435),
+    a = n(636298),
+    c = n(404975),
+    s = n(924052),
+    u = n(59662),
+    f = n(131051),
+    d = n(996435),
     b = n(990757);
 function y(e) {
     var t;
     let {
-            root: n,
-            directory: y,
-            target: p,
-            defaultTarget: g,
-            onClose: O,
-            sidebarHeader: j,
-            sidebarFooter: m,
-            onPanelChange: v,
-            emptyState: h,
+            partialRoot: n,
+            target: y,
+            defaultTarget: p,
+            onClose: g,
+            sidebarFooter: O,
+            onPanelChange: m,
+            emptyState: j,
+            searchQuery: v,
+            onSearchChange: h,
         } = e,
-        x = null != p && (null == (t = y.entry(p)) ? void 0 : t.parentPanelKey) != null ? p : g,
-        S = f.Z.useField("currentPanelKey"),
-        [P, C] = o.useState(y),
-        _ = o.useMemo(() => P.get(null != S ? S : x), [P, S, x]),
-        { navigateWithValidation: w } = (0, u.Cu)();
+        x = d.Z.useField("currentPanelKey"),
+        { node: S, visibleDirectory: P, accessibleDirectory: C } = (0, f.ZP)(n, null != v ? v : ""),
+        _ = null != y && (null == (t = P.entry(y)) ? void 0 : t.parentPanelKey) != null ? y : p,
+        w = o.useMemo(() => C.get(null != x ? x : _), [x, C, _]),
+        { navigateWithValidation: k } = (0, s.Cu)();
     (0, l.ZP)(() => {
         var e, t;
-        let n = y.entry(x).parentPanelKey,
-            r = null == (e = y.entry(x)) ? void 0 : e.parentCategoryKey,
-            o = null == (t = y.entry(x)) ? void 0 : t.parentAccordionKey;
+        let n = P.entry(_).parentPanelKey,
+            r = null == (e = P.entry(_)) ? void 0 : e.parentCategoryKey,
+            o = null == (t = P.entry(_)) ? void 0 : t.parentAccordionKey;
         return (
-            f.Z.setState({
+            d.Z.setState({
                 currentPanelKey: n,
                 currentCategoryKey: r,
                 disableSidebarCategoryAutoSelect: !0,
                 navTransition: {
-                    targetKey: x,
+                    targetKey: _,
                     targetAccordionKey: o,
                     animateScroll: !1,
                 },
-                showNavigationMobile: null == p,
+                showNavigationMobile: null == y,
             }),
-            () => f.Z.resetState()
+            () => d.Z.resetState()
         );
     }),
         o.useEffect(
             () =>
-                f.Z.subscribe(
+                d.Z.subscribe(
                     (e) => ({
                         requestedTargetKey: e.requestedTargetKey,
                         currentPanelKey: e.currentPanelKey,
@@ -58,12 +58,15 @@ function y(e) {
                     (e) => {
                         let { requestedTargetKey: t, currentPanelKey: n } = e;
                         if (null == t) return;
-                        let r = y.entry(t);
-                        if (null == r) return void a.Z.setState({ query: "" });
+                        let r = P.entry(t);
+                        if (null == r) {
+                            null == h || h("");
+                            return;
+                        }
                         let o = r.parentPanelKey;
-                        if (null == o) return void f.Z.setState({ requestedTargetKey: void 0 });
+                        if (null == o) return void d.Z.setState({ requestedTargetKey: void 0 });
                         let i = () => {
-                            f.Z.setState({
+                            d.Z.setState({
                                 requestedTargetKey: void 0,
                                 currentPanelKey: r.parentPanelKey,
                                 currentCategoryKey: r.parentCategoryKey,
@@ -76,46 +79,47 @@ function y(e) {
                             });
                         };
                         r.parentPanelKey !== n
-                            ? w(() => {
-                                  i(), null == v || v(o);
+                            ? k(() => {
+                                  i(), null == m || m(o);
                               })
                             : i();
                     },
                     { equalityFn: i.X },
                 ),
-            [w, v, y],
+            [P, k, m, h],
         );
-    let k = o.useMemo(
+    let E = o.useMemo(
             () => ({
-                visibleDirectory: y,
-                accessibleDirectory: P,
+                visibleDirectory: P,
+                accessibleDirectory: C,
             }),
-            [y, P],
+            [P, C],
         ),
-        E = () => w(O),
-        N = null != S ? y.get(S) : void 0;
-    return (0, r.jsx)(d.j.Provider, {
-        value: k,
+        N = () => k(g),
+        T = null != x ? P.get(x) : void 0;
+    return (0, r.jsx)(u.j.Provider, {
+        value: E,
         children: (0, r.jsxs)("div", {
             className: b.container,
             children: [
-                (0, r.jsx)(s.P, {
-                    root: n,
-                    header: j,
-                    footer: m,
-                    onClose: E,
-                    emptyState: h,
+                (0, r.jsx)(c.P, {
+                    root: S,
+                    footer: O,
+                    onClose: N,
+                    emptyState: j,
+                    searchQuery: v,
+                    onSearchChange: h,
                 }),
-                (0, r.jsx)(c.Z, {
-                    onClose: E,
-                    setting: null != N ? N : _,
+                (0, r.jsx)(a.Z, {
+                    onClose: N,
+                    setting: null != T ? T : w,
                 }),
             ],
         }),
     });
 }
 function p(e) {
-    return (0, r.jsx)(u.Ri, {
+    return (0, r.jsx)(s.Ri, {
         children: (0, r.jsx)(
             y,
             (function (e) {

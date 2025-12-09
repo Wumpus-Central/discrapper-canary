@@ -1,25 +1,27 @@
-n.d(t, { P: () => m }), n(539854), n(388685);
+n.d(t, { P: () => h }), n(539854), n(388685);
 var r = n(54381),
     o = n(473749),
     i = n(120356),
     l = n.n(i),
     a = n(91192),
     c = n(873546),
-    s = n(481060),
-    u = n(607070),
+    s = n(704215),
+    u = n(481060),
+    f = n(607070),
     d = n(724757),
-    f = n(243778),
-    b = n(984802),
-    y = n(970013),
-    p = n(996435),
-    g = n(854014),
-    O = n(388032),
-    j = n(845435);
-function m(e) {
-    let { root: t, header: n, footer: i, onClose: g, emptyState: m } = e,
-        h = p.Z.useField("showNavigationMobile"),
-        x = o.useRef(null),
-        S = o.useMemo(() => {
+    b = n(243778),
+    y = n(984802),
+    p = n(970013),
+    g = n(996435),
+    O = n(886880),
+    m = n(854014),
+    j = n(388032),
+    v = n(845435);
+function h(e) {
+    let { root: t, footer: n, onClose: i, emptyState: s, searchQuery: O, onSearchChange: m } = e,
+        h = g.Z.useField("showNavigationMobile"),
+        P = o.useRef(null),
+        C = o.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -27,8 +29,8 @@ function m(e) {
                     n.forEach((t) => {
                         if (null != t.trailing)
                             switch (t.trailing.type) {
-                                case y.W.BADGE_NEW:
-                                case y.W.STRONGLY_DISCOURAGED_CUSTOM:
+                                case p.W.BADGE_NEW:
+                                case p.W.STRONGLY_DISCOURAGED_CUSTOM:
                                     var n, r, o;
                                     null == (r = (o = t.trailing).getDismissibleContentTypes) ||
                                         null == (n = r.call(o)) ||
@@ -41,7 +43,7 @@ function m(e) {
                 e
             );
         }, [t.layout]),
-        [P, C] = o.useMemo(() => {
+        [_, w] = o.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -51,57 +53,57 @@ function m(e) {
                 [e, n]
             );
         }, [t.layout]),
-        _ = (0, b.Ll)(),
-        w = (0, d.Z)("settings-sidebar", x),
-        k = p.Z.useField("currentPanelKey");
+        k = (0, y.Ll)(),
+        E = (0, d.Z)("settings-sidebar", P),
+        N = g.Z.useField("currentPanelKey");
     return (
         o.useEffect(() => {
             var e;
-            if (null == x.current || null == k) return;
-            let t = p.Z.getField("navTransition"),
+            if (null == P.current || null == N) return;
+            let t = g.Z.getField("navTransition"),
                 n = null == t || t.animateScroll,
                 r =
-                    null == (e = x.current.getScrollerNode())
+                    null == (e = P.current.getScrollerNode())
                         ? void 0
-                        : e.querySelector('[data-settings-sidebar-item="'.concat(k, '"]'));
+                        : e.querySelector('[data-settings-sidebar-item="'.concat(N, '"]'));
             null != r &&
-                x.current.scrollIntoViewNode({
+                P.current.scrollIntoViewNode({
                     node: r,
                     padding: 8,
-                    animate: !u.Z.useReducedMotion && n,
+                    animate: !f.Z.useReducedMotion && n,
                 });
-        }, [k]),
-        (0, r.jsx)(s.f6W, {
-            theme: _,
+        }, [N]),
+        (0, r.jsx)(u.f6W, {
+            theme: k,
             children: (e) =>
-                (0, r.jsx)(f.ZP, {
-                    contentTypes: S,
+                (0, r.jsx)(b.ZP, {
+                    contentTypes: C,
                     children: (t) => {
                         let { visibleContent: o } = t;
                         return (0, r.jsxs)("div", {
-                            className: l()(j.sidebar, e, {
-                                [j.mobile]: c.tq,
-                                [j.mobileNavigationOpen]: h,
+                            className: l()(v.sidebar, e, {
+                                [v.mobile]: c.tq,
+                                [v.mobileNavigationOpen]: h,
                             }),
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: j.fixedContent,
+                                    className: v.fixedContent,
                                     children: [
                                         c.tq &&
                                             (0, r.jsx)("div", {
-                                                className: j.mobileCloseButton,
-                                                children: (0, r.jsx)(s.hU, {
-                                                    icon: s.Uz9,
-                                                    onClick: g,
+                                                className: v.mobileCloseButton,
+                                                children: (0, r.jsx)(u.hU, {
+                                                    icon: u.Uz9,
+                                                    onClick: i,
                                                     variant: "icon-only",
                                                     size: "sm",
-                                                    "aria-label": O.intl.string(O.t.cpT0Cq),
+                                                    "aria-label": j.intl.string(j.t.cpT0Cq),
                                                 }),
                                             }),
                                         (0, r.jsx)("div", {
-                                            children: P.map((e) =>
+                                            children: _.map((e) =>
                                                 (0, r.jsx)(
-                                                    v,
+                                                    x,
                                                     {
                                                         section: e,
                                                         visibleContent: o,
@@ -111,16 +113,21 @@ function m(e) {
                                                 ),
                                             ),
                                         }),
-                                        null != n && (0, r.jsx)(n, {}),
-                                        null != m && 0 === C.length && (0, r.jsx)(m, {}),
+                                        null != O &&
+                                            null != m &&
+                                            (0, r.jsx)(S, {
+                                                searchQuery: O,
+                                                onSearchChange: m,
+                                            }),
+                                        null != s && 0 === w.length && (0, r.jsx)(s, {}),
                                     ],
                                 }),
                                 (0, r.jsx)(a.bG, {
-                                    navigator: w,
+                                    navigator: E,
                                     children: (0, r.jsx)(a.SJ, {
                                         children: (e) => {
                                             var t,
-                                                n,
+                                                i,
                                                 { ref: l } = e,
                                                 a = (function (e, t) {
                                                     if (null == e) return {};
@@ -147,7 +154,7 @@ function m(e) {
                                                     return o;
                                                 })(e, ["ref"]);
                                             return (0, r.jsxs)(
-                                                s.h21,
+                                                u.h21,
                                                 ((t = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -177,26 +184,26 @@ function m(e) {
                                                     {
                                                         ref: (e) => {
                                                             var t;
-                                                            (x.current = e),
+                                                            (P.current = e),
                                                                 (l.current =
                                                                     null !=
                                                                     (t = null == e ? void 0 : e.getScrollerNode())
                                                                         ? t
                                                                         : null);
                                                         },
-                                                        className: j.navScroller,
+                                                        className: v.navScroller,
                                                         fade: !0,
                                                     },
                                                     a,
                                                 )),
-                                                (n = n =
+                                                (i = i =
                                                     {
                                                         children: [
                                                             (0, r.jsx)("nav", {
-                                                                className: j.nav,
-                                                                children: C.map((e) =>
+                                                                className: v.nav,
+                                                                children: w.map((e) =>
                                                                     (0, r.jsx)(
-                                                                        v,
+                                                                        x,
                                                                         {
                                                                             section: e,
                                                                             visibleContent: o,
@@ -205,11 +212,11 @@ function m(e) {
                                                                     ),
                                                                 ),
                                                             }),
-                                                            null != i && (0, r.jsx)(i, {}),
+                                                            null != n && (0, r.jsx)(n, {}),
                                                         ],
                                                     }),
                                                 Object.getOwnPropertyDescriptors
-                                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                                                     : (function (e, t) {
                                                           var n = Object.keys(e);
                                                           if (Object.getOwnPropertySymbols) {
@@ -217,11 +224,11 @@ function m(e) {
                                                               n.push.apply(n, r);
                                                           }
                                                           return n;
-                                                      })(Object(n)).forEach(function (e) {
+                                                      })(Object(i)).forEach(function (e) {
                                                           Object.defineProperty(
                                                               t,
                                                               e,
-                                                              Object.getOwnPropertyDescriptor(n, e),
+                                                              Object.getOwnPropertyDescriptor(i, e),
                                                           );
                                                       }),
                                                 t),
@@ -236,19 +243,19 @@ function m(e) {
         })
     );
 }
-function v(e) {
+function x(e) {
     var t;
     let { section: n, visibleContent: o, hoisted: i = !1 } = e,
         l = null == (t = n.useTitle) ? void 0 : t.call(n);
     return (0, r.jsxs)("ul", {
-        className: j.section,
+        className: v.section,
         "aria-label": l,
         children: [
             null != l &&
                 (0, r.jsx)("div", {
-                    className: j.sectionLabel,
-                    children: (0, r.jsx)(s.Heading, {
-                        className: j.label,
+                    className: v.sectionLabel,
+                    children: (0, r.jsx)(u.Heading, {
+                        className: v.label,
                         variant: "heading-sm/medium",
                         color: "text-muted",
                         children: l,
@@ -256,7 +263,7 @@ function v(e) {
                 }),
             n.layout.map((e) =>
                 (0, r.jsx)(
-                    g.y,
+                    m.y,
                     {
                         node: e,
                         visibleContent: o,
@@ -265,6 +272,47 @@ function v(e) {
                     e.key,
                 ),
             ),
+        ],
+    });
+}
+function S(e) {
+    let { searchQuery: t, onSearchChange: n } = e,
+        i = o.useRef(null),
+        [l, a] = (0, b.US)([s.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
+        c = o.useCallback(() => {
+            n("");
+        }, [n]),
+        f = o.useMemo(
+            () => ({
+                title: j.intl.string(j.t.Kv519a),
+                body: j.intl.string(j.t.cTGJBZ),
+                badge: "new",
+                position: "right",
+                align: "center",
+                scrollBehavior: "sticky",
+            }),
+            [],
+        );
+    return (0, r.jsxs)("div", {
+        className: v.searchBarContainer,
+        children: [
+            (0, r.jsx)(u.E1j, {
+                size: "md",
+                query: t,
+                onChange: n,
+                onClear: c,
+            }),
+            (0, r.jsx)("div", {
+                className: v.popoverAnchor,
+                ref: i,
+            }),
+            (0, r.jsx)(O.Z, {
+                dismissibleContentType: s.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER,
+                targetElementRef: i,
+                visibleContent: l,
+                markAsDismissed: a,
+                props: f,
+            }),
         ],
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => _ });
 var i = n(54381),
     s = n(473749),
     r = n(120356),
@@ -6,34 +6,39 @@ var i = n(54381),
     l = n(793030),
     o = n(481060),
     d = n(511010),
-    c = n(64515);
-function u(e) {
+    c = n(64515),
+    u = n(892744);
+function _(e) {
     let {
         headerText: t,
         descriptionText: n,
         infoRows: r,
-        onDismissAndStay: u,
-        onDismissAndLeave: _,
-        leaveButtonText: m,
-        stayButtonText: x,
-        transitionState: f,
+        onDismissAndStay: _,
+        onDismissAndLeave: m,
+        leaveButtonText: x,
+        stayButtonText: f,
+        transitionState: g,
         impression: h,
     } = e;
-    return (0, i.jsx)(l.Modal, {
-        transitionState: f,
-        onClose: () => (u(), Promise.resolve()),
+    return (0, i.jsx)(l.ExpressiveModal, {
+        transitionState: g,
+        onClose: () => (_(), Promise.resolve()),
         trackingProps: { impression: h },
+        graphic: {
+            type: "image",
+            src: u.Z,
+        },
         title: t,
         subtitle: null != n ? n : void 0,
         actions: [
             {
-                text: x,
-                onClick: u,
+                text: f,
+                onClick: _,
                 variant: "secondary",
             },
             {
-                text: m,
-                onClick: _,
+                text: x,
+                onClick: m,
             },
         ],
         children: (0, i.jsx)("div", {
