@@ -97,6 +97,7 @@ function f(e) {
             c(
                 s(
                     {
+                        "data-migration-pending": !0,
                         forceOpen: p,
                         disableTooltipPointerEvents: !1,
                     },

@@ -1,58 +1,60 @@
-n.d(t, { default: () => x }), n(388685);
-var l = n(54381),
-    a = n(473749),
-    o = n(120356),
-    s = n.n(o),
-    i = n(693789),
-    r = n(466377),
-    c = n(993365),
-    d = n(481060),
-    u = n(600164),
-    m = n(388032),
-    h = n(573857);
-let x = (e) => {
-    let t,
-        n,
+t.d(n, { default: () => p }), t(388685);
+var a = t(54381),
+    l = t(473749),
+    o = t(120356),
+    i = t.n(o),
+    s = t(693789),
+    r = t(466377),
+    d = t(993365),
+    c = t(481060),
+    u = t(600164),
+    m = t(388032),
+    h = t(573857);
+let p = (e) => {
+    let n,
+        t,
         o,
         {
-            body: x,
-            cancelText: _,
-            className: p,
+            body: p,
+            cancelText: x,
+            className: _,
             confirmColor: y,
             confirmText: b = m.intl.string(m.t.BddRzS),
             secondaryConfirmText: f,
-            onCancel: j,
-            onClose: C,
-            onConfirm: z,
-            onConfirmSecondary: N,
-            title: g,
+            onCancel: g,
+            onClose: j,
+            onConfirm: C,
+            onConfirmSecondary: z,
+            title: N,
             transitionState: B,
             titleClassName: k,
         } = e,
-        v = i.zx.Sizes.MEDIUM,
-        [A, R] = a.useState(!1);
+        v = s.zx.Sizes.MEDIUM,
+        [A, R] = l.useState(!1);
     return (
-        a.useEffect(
+        l.useEffect(
             () => () => {
-                A && (null == N || N());
+                A && (null == z || z());
             },
-            [A, N],
+            [A, z],
         ),
-        null != _ &&
-            "" !== _ &&
-            (t = (0, l.jsx)(i.zx, {
+        null != x &&
+            "" !== x &&
+            (n = (0, a.jsx)(s.zx, {
+                "data-migration-pending": !0,
                 type: "button",
                 size: v,
-                color: i.zx.Colors.PRIMARY,
+                color: s.zx.Colors.PRIMARY,
                 onClick: () => {
-                    null == C || C(), null == j || j();
+                    null == j || j(), null == g || g();
                 },
                 className: h.secondaryButton,
-                children: _,
+                children: x,
             })),
         null != b &&
             "" !== b &&
-            (n = (0, l.jsx)(i.zx, {
+            (t = (0, a.jsx)(s.zx, {
+                "data-migration-pending": !0,
                 type: "submit",
                 color: y,
                 size: v,
@@ -62,59 +64,60 @@ let x = (e) => {
             })),
         null != f &&
             "" !== f &&
-            (o = (0, l.jsx)(d.Checkbox, {
+            (o = (0, a.jsx)(c.Checkbox, {
                 checked: A,
                 onChange: (e) => R(e),
                 label: f,
                 labelType: "secondary",
             })),
-        (0, l.jsx)(r.Y0, {
+        (0, a.jsx)(r.Y0, {
+            "data-migration-pending": !0,
             transitionState: B,
             size: r.Cg.DYNAMIC,
-            className: s()(p, h.container),
-            "aria-label": g,
+            className: i()(_, h.container),
+            "aria-label": N,
             parentComponent: "Alert",
-            children: (0, l.jsxs)("form", {
+            children: (0, a.jsxs)("form", {
                 onSubmit: (e) => {
-                    null != e && e.preventDefault(), null == C || C(), null == z || z();
+                    null != e && e.preventDefault(), null == j || j(), null == C || C();
                 },
                 className: h.form,
                 children: [
-                    (0, l.jsx)(r.xB, {
+                    (0, a.jsx)(r.xB, {
                         children:
-                            null != g
-                                ? (0, l.jsx)(d.Heading, {
+                            null != N
+                                ? (0, a.jsx)(c.Heading, {
                                       variant: "heading-lg/semibold",
-                                      className: s()(h.title, k),
-                                      children: g,
+                                      className: i()(h.title, k),
+                                      children: N,
                                   })
-                                : (0, l.jsx)(d.Heading, {
+                                : (0, a.jsx)(c.Heading, {
                                       variant: "heading-md/semibold",
-                                      className: s()(h.title, k),
-                                      children: g,
+                                      className: i()(h.title, k),
+                                      children: N,
                                   }),
                     }),
-                    (0, l.jsx)(r.hz, {
+                    (0, a.jsx)(r.hz, {
                         className: h.modalContent,
-                        children: (0, l.jsx)(u.Z, {
+                        children: (0, a.jsx)(u.Z, {
                             direction: u.Z.Direction.VERTICAL,
                             justify: u.Z.Justify.START,
                             className: h.content,
                             children:
-                                null != x &&
-                                (0, l.jsx)(c.x, {
+                                null != p &&
+                                (0, a.jsx)(d.x, {
                                     variant: "text-md/normal",
                                     className: h.body,
                                     color: "text-default",
-                                    children: x,
+                                    children: p,
                                 }),
                         }),
                     }),
-                    (0, l.jsxs)(r.mz, {
+                    (0, a.jsxs)(r.mz, {
                         justify: void 0,
                         wrap: u.Z.Wrap.WRAP,
                         className: h.modalFooter,
-                        children: [n, t, o],
+                        children: [t, n, o],
                     }),
                 ],
             }),

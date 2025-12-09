@@ -14,6 +14,7 @@ let l = {
                 let { type: t, title: n, body: i, hasButton: s } = e,
                     l = s ? (0, r.jsx)(a.Button, { text: "Action" }) : void 0;
                 return (0, r.jsx)(o.To, {
+                    "data-migration-pending": !0,
                     type: t,
                     title: n,
                     body: i,
@@ -101,6 +102,7 @@ let l = {
                                         children: [e, ":"],
                                     }),
                                     (0, r.jsx)(s.v, {
+                                        "data-migration-pending": !0,
                                         tag: e,
                                         disabled: n,
                                         required: i,

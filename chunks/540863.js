@@ -114,6 +114,7 @@ let _ = i.forwardRef(function (e, t) {
         className: null != u ? u : void 0,
         style: null != h ? h : void 0,
         children: (0, r.jsx)(a.ol, {
+            "data-migration-pending": !0,
             titleId: S,
             errorId: I,
             error: null != E ? E : void 0,
@@ -130,6 +131,7 @@ let _ = i.forwardRef(function (e, t) {
                               d(
                                   c(
                                       {
+                                          "data-migration-pending": !0,
                                           tag: _,
                                           disabled: l,
                                           required: m,

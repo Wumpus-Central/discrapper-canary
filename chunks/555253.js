@@ -64,7 +64,7 @@ let u = {
                 let [t, n] = i.useState(!1);
                 return (0, r.jsx)(
                     a.T2P,
-                    c(s({}, e), {
+                    c(s({ "data-migration-pending": !0 }, e), {
                         onChange: n,
                         checked: t,
                     }),

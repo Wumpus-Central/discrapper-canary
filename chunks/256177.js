@@ -29,6 +29,7 @@ let s = {
                     gap: "md",
                     children: [
                         (0, r.jsx)(a.$q, {
+                            "data-migration-pending": !0,
                             value: p,
                             onChange: m,
                             disabled: t,

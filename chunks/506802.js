@@ -214,6 +214,7 @@ let D = (e) => {
                       D,
                       y(
                           {
+                              "data-migration-pending": !0,
                               animationStyle: e,
                               targetElementRef: r,
                           },
@@ -395,6 +396,8 @@ let U = (e) => {
         o = S(e, ["children", "className", "element"]);
     return (0, i.jsx)(
         k,
-        v(y({}, o), { children: (e) => a.createElement(r, null != n ? v(y({}, e), { className: n }) : e, t) }),
+        v(y({ "data-migration-pending": !0 }, o), {
+            children: (e) => a.createElement(r, null != n ? v(y({}, e), { className: n }) : e, t),
+        }),
     );
 };
