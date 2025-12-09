@@ -103,6 +103,7 @@ let h = (() => {
         alertStartupMetrics: !1,
         personaForceFaeFail: !1,
         personaForceIdVerificationFail: !1,
+        personaDisableModularPilotTestTemplate: !1,
     },
     b = m({}, E);
 function y(e) {
@@ -185,6 +186,9 @@ class I extends (r = o.ZP.Store) {
     }
     get personaForceIdVerificationFail() {
         return b.personaForceIdVerificationFail;
+    }
+    get personaDisableModularPilotTestTemplate() {
+        return b.personaDisableModularPilotTestTemplate;
     }
     getDebugOptionsHeaderValue() {
         return (

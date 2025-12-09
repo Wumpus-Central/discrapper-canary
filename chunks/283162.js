@@ -13,9 +13,14 @@ var l = n(120356),
     p = n(334078),
     h = n(451429);
 function x() {
-    let { personaForceFaeFail: e, personaForceIdVerificationFail: t } = (0, i.cj)([m.default], () => ({
+    let {
+        personaForceFaeFail: e,
+        personaForceIdVerificationFail: t,
+        personaDisableModularPilotTestTemplate: n,
+    } = (0, i.cj)([m.default], () => ({
         personaForceFaeFail: m.default.personaForceFaeFail,
         personaForceIdVerificationFail: m.default.personaForceIdVerificationFail,
+        personaDisableModularPilotTestTemplate: m.default.personaDisableModularPilotTestTemplate,
     }));
     return (0, a.jsxs)("div", {
         className: r()(h.panel, p.container),
@@ -62,6 +67,13 @@ function x() {
                     (0, a.jsxs)("div", {
                         className: p.contentContainer,
                         children: [
+                            (0, a.jsx)(s.rsf, {
+                                label: "Disable Modular Pilot Test Template",
+                                description:
+                                    "Use actual pilot template (skips age override screen) for Persona age verification testing",
+                                checked: n,
+                                onChange: (e) => (0, o.y)({ personaDisableModularPilotTestTemplate: e }),
+                            }),
                             (0, a.jsx)(s.rsf, {
                                 label: "Force FAE to Fail",
                                 description: "Force Facial Age Estimation to fail for testing with Persona",
