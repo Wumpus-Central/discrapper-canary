@@ -85,6 +85,7 @@ let O = {
                         {
                             modalKey: b.f1,
                             onCloseRequest: E.Vq,
+                            dismissable: !1,
                         },
                     )
                   : t === m.c2C.REQUIRE_SAFETY_FLOWS
