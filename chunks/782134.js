@@ -54,10 +54,10 @@ function I() {
                   }),
                   (0, i.jsxs)(s.Kqy, {
                       direction: "vertical",
-                      gap: 4,
+                      gap: 8,
                       children: [
                           (0, i.jsx)(s.rsf, {
-                              label: E.intl.string(E.t["sqUm+k"]),
+                              label: E.intl.string(E.t.lY6j47),
                               description: _,
                               checked: t,
                               onChange: e,
