@@ -59,8 +59,8 @@ function C(e) {
             popoutPosition: N,
             analyticsPage: P,
             analyticsSection: R,
-            glow: w,
-            innerRef: D,
+            glow: D,
+            innerRef: w,
         } = e,
         x = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
         { analyticsLocations: L } = (0, f.ZP)(),
@@ -76,10 +76,7 @@ function C(e) {
             },
         });
     }, [t]);
-    let k = () =>
-            t === y.hX.FRIEND_ANNIVERSARY
-                ? S.intl.formatToPlainString(S.t.rtRr04, { friendUserName: h.ZP.getName(a) })
-                : (0, g.Ou)(t),
+    let k = () => (t === y.hX.FRIEND_ANNIVERSARY ? S.intl.string(S.t.CeQIwZ) : (0, g.Ou)(t)),
         U = () =>
             t === y.hX.FRIEND_ANNIVERSARY ? S.intl.formatToPlainString(S.t.PpG27s, { numberOfYears: j }) : (0, g.Ou)(t),
         G = () =>
@@ -106,12 +103,12 @@ function C(e) {
             });
         };
     return (0, r.jsx)("div", {
-        ref: D,
-        className: o()(I.content, { [I.outerGlow]: w }),
+        ref: w,
+        className: o()(I.content, { [I.outerGlow]: D }),
         onMouseEnter: T,
         onMouseLeave: C,
         children: (0, r.jsxs)("div", {
-            className: o()(I.innerContent, { [I.innerGlow]: w }),
+            className: o()(I.innerContent, { [I.innerGlow]: D }),
             children: [
                 (0, r.jsxs)("div", {
                     className: I.subContent,
@@ -146,11 +143,12 @@ function C(e) {
                                 (0, r.jsxs)("div", {
                                     className: I.subHeaderContainer,
                                     children: [
-                                        (0, r.jsx)(u.iFz, { size: "xs" }),
+                                        (0, r.jsx)(u.iFz, { size: "xxs" }),
                                         (0, r.jsx)(u.Text, {
                                             className: I.subHeaderText,
-                                            variant: "text-sm/normal",
+                                            variant: "text-xs/normal",
                                             color: "text-subtle",
+                                            lineClamp: 1,
                                             children: U(),
                                         }),
                                     ],
