@@ -468,10 +468,7 @@ function el(e) {
             },
             { autoTrackExposure: !1 },
         ),
-        { enableHighlight: V, enableWaveformIcon: H } = _.Z.useConfig({
-            location: "VoiceChannel",
-            guildId: t.id,
-        }),
+        { enableHighlight: V, enableWaveformIcon: H } = (0, _.M)(t.id, "VoiceChannel"),
         z = null != c && c.length > 0,
         K = V && z,
         Y = H && z,

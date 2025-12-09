@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => A });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -6,36 +6,75 @@ var i = n(120356),
     o = n(91192),
     a = n(442837),
     s = n(692547),
-    c = n(481060),
-    u = n(468363),
-    d = n(326255),
-    f = n(956221),
-    h = n(771173),
-    p = n(43267),
-    g = n(933557),
-    m = n(471445),
-    b = n(313201),
-    _ = n(565138),
-    y = n(199902),
-    O = n(592125),
-    v = n(430824),
-    j = n(158776),
-    x = n(306680),
-    C = n(594174),
-    E = n(388032),
-    S = n(888097);
-let I = {
+    c = n(681715),
+    u = n(481060),
+    d = n(468363),
+    f = n(326255),
+    h = n(956221),
+    p = n(771173),
+    g = n(367907),
+    m = n(43267),
+    b = n(933557),
+    _ = n(471445),
+    y = n(313201),
+    O = n(565138),
+    v = n(199902),
+    j = n(592125),
+    x = n(430824),
+    C = n(158776),
+    E = n(306680),
+    S = n(594174),
+    I = n(259580),
+    P = n(981631),
+    N = n(388032),
+    Z = n(888097);
+let w = {
     top: 8,
     bottom: 8,
     left: -4,
     right: -4,
 };
-function P(e) {
+function T(e) {
+    let { channelState: t, toggle: n, getNumUnreadChannels: i } = e;
+    return (0, r.jsx)(c.u, {
+        text: N.intl.string(N.t.iTcuma),
+        children: (0, r.jsx)(u.P3F, {
+            className: l()(Z.collapseButton, { [Z.collapsed]: null == t ? void 0 : t.collapsed }),
+            onClick: function () {
+                var e;
+                null != t &&
+                    null != n &&
+                    (n(t),
+                    (0, g.yw)(P.rMx.INBOX_CHANNEL_COLLAPSED, {
+                        channel_id: t.channelId,
+                        guild_id: t.guildId,
+                        num_unread_channels_remaining: null != (e = null == i ? void 0 : i()) ? e : 0,
+                        is_now_collapsed: !t.collapsed,
+                    }));
+            },
+            children: (0, r.jsx)(I.Z, {
+                width: 16,
+                height: 16,
+            }),
+        }),
+    });
+}
+function A(e) {
     var t, n;
-    let { channel: i, children: l, gotoChannel: a, mentionCount: s, channelState: u, toggleCollapsed: d } = e,
-        f = (0, o.JA)("recents-header-".concat(i.id, "-").concat((0, b.Dt)()));
-    return (0, r.jsx)(c.tEY, {
-        offset: I,
+    let {
+            channel: i,
+            children: a,
+            gotoChannel: s,
+            mentionCount: c,
+            channelState: d,
+            toggleCollapsed: f,
+            showCollapseButton: h = !1,
+            getNumUnreadChannels: p,
+        } = e,
+        g = (0, o.JA)("recents-header-".concat(i.id, "-").concat((0, y.Dt)())),
+        m = h && !i.isNSFW() && null != d && "nsfw" !== d.type;
+    return (0, r.jsx)(u.tEY, {
+        offset: w,
         children: (0, r.jsxs)(
             "div",
             ((t = (function (e) {
@@ -62,28 +101,35 @@ function P(e) {
                         });
                 }
                 return e;
-            })({ className: S.channelHeader }, f)),
+            })({ className: l()(Z.channelHeader, { [Z.showCollapseButton]: m }) }, g)),
             (n = n =
                 {
                     tabIndex: 0,
                     "data-recents-channel": i.id,
                     onKeyDown: function (e) {
-                        null != d &&
-                            null != u &&
-                            (("ArrowRight" === e.key && u.collapsed) || ("ArrowLeft" === e.key && !u.collapsed)) &&
-                            (null == d || d(u));
+                        null != f &&
+                            null != d &&
+                            (("ArrowRight" === e.key && d.collapsed) || ("ArrowLeft" === e.key && !d.collapsed)) &&
+                            (null == f || f(d));
                     },
                     children: [
-                        (0, r.jsx)(N, {
+                        m && null != d
+                            ? (0, r.jsx)(T, {
+                                  channelState: d,
+                                  toggle: f,
+                                  getNumUnreadChannels: p,
+                              })
+                            : null,
+                        (0, r.jsx)(R, {
                             channel: i,
-                            gotoChannel: a,
+                            gotoChannel: s,
                         }),
-                        (0, r.jsx)(T, {
+                        (0, r.jsx)(L, {
                             channel: i,
-                            gotoChannel: a,
-                            mentionCount: s,
+                            gotoChannel: s,
+                            mentionCount: c,
                         }),
-                        l,
+                        a,
                     ],
                 }),
             Object.getOwnPropertyDescriptors
@@ -102,97 +148,97 @@ function P(e) {
         ),
     });
 }
-function N(e) {
+function R(e) {
     let { channel: t, gotoChannel: n } = e;
     return t.isPrivate()
-        ? (0, r.jsx)(Z, {
+        ? (0, r.jsx)(D, {
               channel: t,
               gotoChannel: n,
           })
-        : (0, r.jsx)(w, {
+        : (0, r.jsx)(M, {
               channel: t,
               gotoChannel: n,
           });
 }
-function Z(e) {
+function D(e) {
     let { channel: t, gotoChannel: n } = e,
-        i = (0, a.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
-        l = null == i ? (0, p.x)(t) : i.getAvatarURL(void 0, 40);
-    return (0, r.jsx)(c.P3F, {
+        i = (0, a.e7)([S.default], () => (t.isDM() ? S.default.getUser(t.getRecipientId()) : null)),
+        l = null == i ? (0, m.x)(t) : i.getAvatarURL(void 0, 40);
+    return (0, r.jsx)(u.P3F, {
         onClick: n,
         tabIndex: -1,
         children: (0, r.jsx)("img", {
-            className: S.dmIcon,
+            className: Z.dmIcon,
             src: l,
             alt: "",
             "aria-hidden": !0,
         }),
     });
 }
-function w(e) {
+function M(e) {
     let { channel: t, gotoChannel: n } = e,
-        i = (0, a.e7)([v.Z], () => v.Z.getGuild(t.guild_id));
+        i = (0, a.e7)([x.Z], () => x.Z.getGuild(t.guild_id));
     return null == i
         ? null
-        : (0, r.jsx)(_.Z, {
+        : (0, r.jsx)(O.Z, {
               "aria-hidden": !0,
-              className: S.guildIcon,
+              className: Z.guildIcon,
               guild: i,
-              size: _.Z.Sizes.MEDIUM,
+              size: O.Z.Sizes.MEDIUM,
               active: !0,
               onClick: n,
               tabIndex: -1,
           });
 }
-function T(e) {
+function L(e) {
     let { channel: t, gotoChannel: n, mentionCount: i } = e,
-        o = (0, a.e7)([v.Z], () => v.Z.getGuild(t.guild_id)),
-        u = (0, a.e7)([O.Z], () => O.Z.getChannel(t.parent_id)),
-        d = (0, a.e7)([x.ZP], () => x.ZP.getIsMentionLowImportance(t.id)),
-        f = (0, m.KS)(t, o),
-        h = (0, g.ZP)(t, !1),
+        o = (0, a.e7)([x.Z], () => x.Z.getGuild(t.guild_id)),
+        c = (0, a.e7)([j.Z], () => j.Z.getChannel(t.parent_id)),
+        d = (0, a.e7)([E.ZP], () => E.ZP.getIsMentionLowImportance(t.id)),
+        f = (0, _.KS)(t, o),
+        h = (0, b.ZP)(t, !1),
         p =
-            null == u
+            null == c
                 ? null == o
                     ? void 0
                     : o.name
-                : "".concat(null == o ? void 0 : o.name, " \u203A ").concat(u.name),
-        b = t.isMultiUserDM()
-            ? E.intl.formatToPlainString(E.t.CxSA5N, { members: t.recipients.length + 1 })
+                : "".concat(null == o ? void 0 : o.name, " \u203A ").concat(c.name),
+        g = t.isMultiUserDM()
+            ? N.intl.formatToPlainString(N.t.CxSA5N, { members: t.recipients.length + 1 })
             : t.isPrivate()
-              ? (0, r.jsx)(A, { channel: t })
-              : (0, r.jsx)(c.P3F, {
-                    className: l()(S.subtext, S.guildName),
+              ? (0, r.jsx)(k, { channel: t })
+              : (0, r.jsx)(u.P3F, {
+                    className: l()(Z.subtext, Z.guildName),
                     onClick: n,
                     children: p,
                 });
     return (0, r.jsxs)("div", {
-        className: S.channelNameSection,
+        className: Z.channelNameSection,
         children: [
-            (0, r.jsx)(c.Heading, {
+            (0, r.jsx)(u.Heading, {
                 variant: "heading-md/semibold",
-                className: S.channelNameHeader,
-                children: (0, r.jsxs)(c.P3F, {
-                    className: S.channelName,
+                className: Z.channelNameHeader,
+                children: (0, r.jsxs)(u.P3F, {
+                    className: Z.channelName,
                     onClick: n,
                     children: [
                         t.isThread() || t.isGroupDM() || null == f
                             ? null
                             : (0, r.jsx)(f, {
-                                  className: t.isForumLikeChannel() ? S.forumIcon : void 0,
+                                  className: t.isForumLikeChannel() ? Z.forumIcon : void 0,
                                   width: 18,
                                   height: 18,
                                   size: "custom",
                                   color: "currentColor",
                               }),
                         (0, r.jsx)("span", {
-                            className: S.channelNameSpan,
+                            className: Z.channelNameSpan,
                             children: h,
                         }),
                         null != i && i > 0
                             ? (0, r.jsx)("div", {
-                                  className: S.badge,
-                                  children: (0, r.jsx)(c.mAB, {
+                                  className: Z.badge,
+                                  children: (0, r.jsx)(u.mAB, {
                                       count: i,
                                       color: d ? s.Z.colors.BACKGROUND_ACCENT.css : s.Z.colors.STATUS_DANGER.css,
                                   }),
@@ -201,46 +247,46 @@ function T(e) {
                     ],
                 }),
             }),
-            (0, r.jsx)(c.Text, {
+            (0, r.jsx)(u.Text, {
                 color: "text-default",
                 variant: "text-xs/normal",
-                className: S.subtextContainer,
-                children: b,
+                className: Z.subtextContainer,
+                children: g,
             }),
         ],
     });
 }
-function A(e) {
+function k(e) {
     let { channel: t } = e,
         {
             user: n,
             status: i,
             activities: l,
             applicationStream: o,
-        } = (0, a.cj)([C.default, j.Z, y.Z], () => {
-            let e = C.default.getUser(t.getRecipientId());
+        } = (0, a.cj)([S.default, C.Z, v.Z], () => {
+            let e = S.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                status: null != e ? j.Z.getStatus(e.id) : null,
-                activities: null != e ? j.Z.getActivities(e.id) : null,
-                applicationStream: null != e ? y.Z.getAnyStreamForUser(e.id) : null,
+                status: null != e ? C.Z.getStatus(e.id) : null,
+                activities: null != e ? C.Z.getActivities(e.id) : null,
+                applicationStream: null != e ? v.Z.getAnyStreamForUser(e.id) : null,
             };
         }),
-        { voiceActivityStatusEnabled: s } = (0, u.U)({ location: "RecentsChannelHeader" }),
-        { voiceChannel: c } = (0, f.Z)({ userId: null == n ? void 0 : n.id }),
-        p = s ? c : void 0;
-    return (0, d.Z)({
+        { voiceActivityStatusEnabled: s } = (0, d.U)({ location: "RecentsChannelHeader" }),
+        { voiceChannel: c } = (0, h.Z)({ userId: null == n ? void 0 : n.id }),
+        u = s ? c : void 0;
+    return (0, f.Z)({
         activities: l,
         status: i,
         applicationStream: o,
-        voiceChannel: p,
+        voiceChannel: u,
     })
-        ? (0, r.jsx)(h.Z, {
+        ? (0, r.jsx)(p.Z, {
               location: "RecentsChannelHeader",
               user: n,
               activities: l,
               applicationStream: o,
-              voiceChannel: p,
+              voiceChannel: u,
               hideTooltip: !0,
           })
         : null;
