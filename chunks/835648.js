@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => j });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -73,35 +73,13 @@ function N(e, t) {
         e
     );
 }
-function P(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = R(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function R(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let w = [8, 8, 8, 8],
-    D = 40;
-function x(e) {
-    var { icon: t, isSelected: n, onClick: i, listItemProps: a } = e,
-        s = P(e, ["icon", "isSelected", "onClick", "listItemProps"]);
+let P = [8, 8, 8, 8],
+    R = 40;
+function w(e) {
+    let { icon: t, isSelected: n, onClick: i, listItemProps: a } = e;
     return (0, r.jsx)(
         u.P3F,
-        N(A({}, a, s), {
+        N(A({}, a), {
             onClick: i,
             className: o()(I.categoryIcon, { [I.selected]: n }),
             children: (0, r.jsx)(t, {
@@ -111,11 +89,11 @@ function x(e) {
         }),
     );
 }
-function L(e, t, n, i, a) {
+function D(e, t, n, i, a) {
     switch (e.categoryInfo.type) {
         case E.bg.FAVORITES:
             return (0, r.jsx)(
-                x,
+                w,
                 {
                     icon: u.r7p,
                     onClick: t,
@@ -126,7 +104,7 @@ function L(e, t, n, i, a) {
             );
         case E.bg.RECENTLY_HEARD:
             return (0, r.jsx)(
-                x,
+                w,
                 {
                     icon: u.T39,
                     onClick: t,
@@ -137,7 +115,7 @@ function L(e, t, n, i, a) {
             );
         case E.bg.FREQUENTLY_USED:
             return (0, r.jsx)(
-                x,
+                w,
                 {
                     icon: u.IeX,
                     onClick: t,
@@ -162,7 +140,7 @@ function L(e, t, n, i, a) {
             );
         case E.bg.DEFAULTS:
             return (0, r.jsx)(
-                x,
+                w,
                 {
                     icon: u.gw7,
                     onClick: t,
@@ -175,7 +153,7 @@ function L(e, t, n, i, a) {
             return null;
     }
 }
-function j(e) {
+function x(e) {
     switch (e.categoryInfo.type) {
         case E.bg.FAVORITES:
             return S.intl.string(S.t.k8fFjp);
@@ -189,27 +167,27 @@ function j(e) {
             return S.intl.string(S.t.Rtvk9X);
     }
 }
-function M(e) {
+function L(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: o } = e,
         l = (0, s.JA)("soundboard_guild_".concat(n));
     return t.categoryInfo.type === E.bg.GUILD
         ? (0, r.jsx)(_.V, {
               guild: t.categoryInfo.guild,
-              children: L(t, i, a, l, o),
+              children: D(t, i, a, l, o),
           })
         : (0, r.jsx)(c.u, {
-              text: j(t),
+              text: x(t),
               position: "right",
               align: "center",
-              children: L(t, i, a, l, o),
+              children: D(t, i, a, l, o),
           });
 }
-function k(e) {
+function j(e) {
     let {
             soundboardListRef: t,
             categories: n,
             shouldUpsellLockedCategories: a,
-            listPadding: o = w,
+            listPadding: o = P,
             guildId: s,
             inExpressionPicker: c,
         } = e,
@@ -230,7 +208,7 @@ function k(e) {
                         }),
                             n();
                     };
-                return (0, r.jsx)(M, {
+                return (0, r.jsx)(L, {
                     category: e,
                     categoryIndex: t,
                     onClick: l,
@@ -249,6 +227,6 @@ function k(e) {
         listPadding: o,
         renderCategoryListItem: E,
         rowCount: n.length,
-        categoryHeight: D,
+        categoryHeight: R,
     });
 }
