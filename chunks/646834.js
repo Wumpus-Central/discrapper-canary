@@ -85,9 +85,12 @@ class b extends (r = a.ZP.Store) {
         try {
             if (l.H.getConfig({ location: "configureLicense" }).enabled) {
                 let e = n,
-                    r = await (0, f.S)(e.id, t);
-                if (null != r && "" !== r) await this.runCommand("registration", "license", r);
-                else throw Error("No license key returned from API when configuring license");
+                    i = await (0, f.S)(null == e ? void 0 : e.id, t);
+                if (null != i && "" !== i) {
+                    var r;
+                    if (i === (null == e || null == (r = e.account) ? void 0 : r.license)) return;
+                    await this.runCommand("registration", "license", i);
+                } else throw Error("No license key returned from API when configuring license");
             }
         } catch (e) {
             if (
@@ -142,7 +145,7 @@ class b extends (r = a.ZP.Store) {
         return (
             this.clientEnabled &&
                 (this.logEvent({ status: "Configuring" }),
-                await this.configureLicense({ ignoreAPIError: !0 }),
+                this.configureLicense({ ignoreAPIError: !0 }).catch(() => {}),
                 await this.configureExceptions(),
                 await this.configureMode(),
                 this.logEvent({ status: "ConnectCommandSent" }),

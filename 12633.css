@@ -71184,10 +71184,12 @@ html .progress__61462 {
 
 .scroller_b7f4b4 {
     flex: 0 0 auto;
-    width: 90px;
+    width: 106px;
     -webkit-border-end: 1px solid var(--border-subtle);
     border-inline-end: 1px solid var(--border-subtle);
-    margin-top: var(--custom-modal-padding-md)
+    margin-top: var(--custom-modal-padding-md);
+    -webkit-padding-end: var(--space-24);
+    padding-inline-end: var(--space-24)
 }
 
 .reactorsContainer_b7f4b4 {
@@ -71260,7 +71262,7 @@ html .progress__61462 {
 .reactor_b7f4b4 {
     box-sizing: border-box;
     height: 52px;
-    margin-inline: 12px 2px;
+    margin-inline: 24px 2px;
     white-space: nowrap
 }
 
