@@ -1,9 +1,13 @@
-n.d(t, { M: () => o });
+n.d(t, {
+    M: () => s,
+    s: () => c,
+});
 var i = n(913527),
     r = n.n(i),
     l = n(709054),
-    a = n(765305);
-function o(e, t, n, i) {
+    a = n(765305),
+    o = n(157925);
+function s(e, t, n, i) {
     let o = r()(),
         s = new Date(e.scheduled_start_time).getTime(),
         c = {
@@ -22,4 +26,7 @@ function o(e, t, n, i) {
     let u = l.default.extractTimestamp(e.id),
         d = Math.min((null != n ? n : u) + a.Fc, s);
     if (o.isBetween(u, d) && null == t && !i) return a.X_.NEW_EVENT;
+}
+function c(e) {
+    return (null == e ? void 0 : e.entity_type) != null && o.Wq.has(e.entity_type);
 }

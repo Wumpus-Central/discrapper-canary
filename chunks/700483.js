@@ -62,16 +62,23 @@ function es(e) {
         { parentAnalyticsLocation: n } = (0, u.ZP)(),
         i = (0, ee.Z)(t.id),
         [l, s] = (0, er.Z)(t),
-        d = (0, $._)(t);
+        d = (0, $._)(t),
+        p = (0, et.to)();
     return i
         ? null
         : (0, r.jsx)(w.d, {
               isTrayButton: !0,
               isActive: l,
-              label: l ? el.intl.string(el.t.GCimTk) : d ? el.intl.string(el.t.hLbG5N) : el.intl.string(el.t.e4WMvx),
-              iconComponent: a.V9,
+              label: p
+                  ? el.intl.string(el.t.NzITVo)
+                  : l
+                    ? el.intl.string(el.t.GCimTk)
+                    : d
+                      ? el.intl.string(el.t.hLbG5N)
+                      : el.intl.string(el.t.e4WMvx),
+              iconComponent: p ? a.XuQ : a.V9,
               onClick: () => {
-                  if (((0, m.v)(n, m.d.REQUEST_TO_SPEAK, !l), (0, et.u1)()))
+                  if (((0, m.v)(n, m.d.REQUEST_TO_SPEAK, !l), p))
                       return void o.Z.showAgeVerificationGetStartedModal({ entryPoint: c.cU.STAGE_CHANNEL_RAISE_HAND });
                   s();
               },
@@ -99,15 +106,16 @@ let eo = i.memo(function (e) {
 });
 function ec(e) {
     let { channel: t } = e,
-        { parentAnalyticsLocation: n } = (0, u.ZP)();
+        { parentAnalyticsLocation: n } = (0, u.ZP)(),
+        i = (0, et.to)();
     return (0, r.jsx)(w.d, {
         isTrayButton: !0,
         onClick: () => {
-            if (((0, m.v)(n, m.d.SPEAK_ON_STAGE), (0, et.u1)()))
+            if (((0, m.v)(n, m.d.SPEAK_ON_STAGE), i))
                 return void o.Z.showAgeVerificationGetStartedModal({ entryPoint: c.cU.STAGE_CHANNEL_RAISE_HAND });
             (0, B.RK)(t, !1);
         },
-        iconComponent: a.Lrb,
+        iconComponent: i ? a.v0G : a.Lrb,
         label: el.intl.string(el.t["8Joh+p"]),
     });
 }

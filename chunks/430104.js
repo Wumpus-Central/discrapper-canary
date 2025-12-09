@@ -1,6 +1,7 @@
 n.d(t, {
     NE: () => o,
     sP: () => a,
+    to: () => l,
     u1: () => s,
 });
 var r = n(81643),
@@ -16,4 +17,8 @@ function o() {
 function s() {
     let e = (0, r.M$)();
     return (0, i.y)("shouldAgeVerifyToSpeakForCurrentUser") && !e;
+}
+function l() {
+    let e = (0, r.gD)();
+    return (0, i.n)("useShouldAgeVerifyToSpeakForCurrentUser") && !e;
 }
