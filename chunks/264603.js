@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var a = n(54381),
     l = n(473749),
     r = n(120356),
@@ -8,19 +8,21 @@ var a = n(54381),
     c = n(199849),
     d = n(481060),
     u = n(384275),
-    m = n(407089),
-    p = n(524995),
-    h = n(812206),
-    x = n(835473),
-    f = n(594190),
-    g = n(989941),
-    b = n(695346),
-    v = n(881998),
-    j = n(449224),
-    _ = n(246992),
-    y = n(451429),
-    C = n(441900);
-let S = [
+    m = n(100527),
+    p = n(906732),
+    h = n(407089),
+    x = n(524995),
+    f = n(812206),
+    g = n(835473),
+    b = n(594190),
+    v = n(989941),
+    j = n(695346),
+    _ = n(881998),
+    y = n(449224),
+    C = n(246992),
+    S = n(451429),
+    E = n(441900);
+let N = [
     {
         label: "Unset",
         value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
@@ -38,27 +40,28 @@ let S = [
         value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
     },
 ];
-function E() {
+function T() {
     let e = l.useRef(null),
-        t = b.JG.useSetting(),
-        [n, r] = l.useState(""),
-        o = (0, s.e7)([f.ZP, j.Z], () => (0, g.Z)(f.ZP, j.Z)),
-        E = (0, x.q)(n),
-        O = (0, s.Wu)([h.Z], () => {
+        { analyticsLocations: t } = (0, p.ZP)(m.Z.DEV_TOOLS),
+        n = j.JG.useSetting(),
+        [r, o] = l.useState(""),
+        T = (0, s.e7)([b.ZP, y.Z], () => (0, v.Z)(b.ZP, y.Z)),
+        O = (0, g.q)(r),
+        P = (0, s.Wu)([f.Z], () => {
             var e, t;
             return null !=
                 (t =
-                    null == E || null == (e = E.linkedGames)
+                    null == O || null == (e = O.linkedGames)
                         ? void 0
-                        : e.map((e) => h.Z.getApplication(e.id)).filter((e) => null != e))
+                        : e.map((e) => f.Z.getApplication(e.id)).filter((e) => null != e))
                 ? t
                 : [];
         }),
-        N = (0, p.F)(E, { allowedFlows: [p.r.RPC] }),
-        T = (0, p.F)(E, { allowedFlows: [p.r.WEB] }),
-        P = (0, p.F)(E),
-        { canDeauthorize: I, deauthorize: w } = (function (e) {
-            let t = (0, s.e7)([v.default], () => v.default.getNewestTokenForApplication(e)),
+        I = (0, x.F)(O, { allowedFlows: [x.r.RPC] }),
+        w = (0, x.F)(O, { allowedFlows: [x.r.WEB] }),
+        k = (0, x.F)(O),
+        { canDeauthorize: R, deauthorize: A } = (function (e) {
+            let t = (0, s.e7)([_.default], () => _.default.getNewestTokenForApplication(e)),
                 n = l.useCallback(() => {
                     null != t && u.Z.delete(t.id);
                 }, [t]);
@@ -66,13 +69,13 @@ function E() {
                 canDeauthorize: null != t,
                 deauthorize: n,
             };
-        })(null == E ? void 0 : E.id);
+        })(null == O ? void 0 : O.id);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: i()(y.panel, C.panel),
+        className: i()(S.panel, E.panel),
         children: [
             (0, a.jsxs)("div", {
-                className: C.container,
+                className: E.container,
                 children: [
                     (0, a.jsx)(d.Heading, {
                         variant: "heading-lg/normal",
@@ -80,16 +83,16 @@ function E() {
                     }),
                     (0, a.jsx)(c.B6, {
                         label: "Receive DMs In Game",
-                        options: S,
-                        isSelected: (e) => e === t,
-                        select: b.JG.updateSetting,
-                        popoutLayerContext: _.O$,
+                        options: N,
+                        isSelected: (e) => e === n,
+                        select: j.JG.updateSetting,
+                        popoutLayerContext: C.O$,
                         serialize: (e) => e.toString(),
                     }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: C.container,
+                className: E.container,
                 children: [
                     (0, a.jsx)(d.Heading, {
                         variant: "heading-lg/normal",
@@ -97,29 +100,29 @@ function E() {
                     }),
                     (0, a.jsx)(d.oil, {
                         label: "Application ID",
-                        value: n,
-                        onChange: r,
+                        value: r,
+                        onChange: o,
                     }),
-                    null != o && null != o.id
+                    null != T && null != T.id
                         ? (0, a.jsx)(d.Button, {
-                              onClick: () => r(o.id),
+                              onClick: () => o(T.id),
                               variant: "primary",
-                              text: "Use detected game: ".concat(o.name, " (").concat(o.id, ")"),
+                              text: "Use detected game: ".concat(T.name, " (").concat(T.id, ")"),
                           })
                         : null,
                     (0, a.jsxs)(d.Text, {
                         variant: "text-md/normal",
-                        children: ["Application Name: ", null != E ? E.name : "N/A"],
+                        children: ["Application Name: ", null != O ? O.name : "N/A"],
                     }),
                     (0, a.jsxs)(d.Text, {
                         variant: "text-md/normal",
                         children: [
                             "Linked Games:",
                             " ",
-                            O.length > 0
-                                ? O.map((e) => {
+                            P.length > 0
+                                ? P.map((e) => {
                                       var t;
-                                      return (null == (t = (0, m.r)(E)) ? void 0 : t.id) === e.id
+                                      return (null == (t = (0, h.r)(O)) ? void 0 : t.id) === e.id
                                           ? "".concat(e.name, "*")
                                           : e.name;
                                   }).join(", ")
@@ -129,15 +132,15 @@ function E() {
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: C.container,
+                className: E.container,
                 children: [
                     (0, a.jsx)(d.Heading, {
                         variant: "heading-lg/normal",
                         children: "Authorization",
                     }),
                     (0, a.jsx)(d.Button, {
-                        disabled: !P.canStartAuthorization,
-                        onClick: () => P.startAuthorization(),
+                        disabled: !k.canStartAuthorization,
+                        onClick: () => k.startAuthorization({ analyticsLocations: t }),
                         variant: "primary",
                         text: "Start Authorization",
                     }),
@@ -148,20 +151,20 @@ function E() {
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
                     (0, a.jsx)(d.Button, {
-                        disabled: !N.canStartAuthorization,
-                        onClick: () => N.startAuthorization(),
+                        disabled: !I.canStartAuthorization,
+                        onClick: () => I.startAuthorization({ analyticsLocations: t }),
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
                     (0, a.jsx)(d.Button, {
-                        disabled: !T.canStartAuthorization,
-                        onClick: () => T.startAuthorization(),
+                        disabled: !w.canStartAuthorization,
+                        onClick: () => w.startAuthorization({ analyticsLocations: t }),
                         variant: "secondary",
                         text: "Start Web Authorization",
                     }),
                     (0, a.jsx)(d.Button, {
-                        disabled: !I,
-                        onClick: w,
+                        disabled: !R,
+                        onClick: A,
                         variant: "critical-primary",
                         text: "Deauthorize",
                     }),

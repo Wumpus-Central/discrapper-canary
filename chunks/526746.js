@@ -1,39 +1,41 @@
-n.d(t, { Z: () => f }), n(953529);
+n.d(t, { Z: () => g }), n(953529);
 var l = n(54381),
     i = n(473749),
     r = n(442837),
     o = n(367907),
-    a = n(524995),
-    c = n(728345),
-    s = n(812206),
-    u = n(925329),
-    d = n(626135),
-    m = n(826380),
-    p = n(981631),
-    h = n(388032);
-function f(e) {
+    a = n(906732),
+    c = n(524995),
+    s = n(728345),
+    u = n(812206),
+    d = n(925329),
+    m = n(626135),
+    p = n(826380),
+    h = n(981631),
+    f = n(388032);
+function g(e) {
     var t;
-    let { connection: n, guildId: f, location: g } = e,
-        j = (0, r.e7)([s.Z], () => (null != n.application_id ? s.Z.getApplication(n.application_id) : null), [
+    let { connection: n, guildId: g, location: j } = e,
+        v = (0, r.e7)([u.Z], () => (null != n.application_id ? u.Z.getApplication(n.application_id) : null), [
             n.application_id,
-        ]);
+        ]),
+        { analyticsLocations: x } = (0, a.ZP)(j);
     i.useEffect(() => {
-        null != j ||
+        null != v ||
             null == n.application_id ||
-            s.Z.isFetchingApplication(n.application_id) ||
-            s.Z.didFetchingApplicationFail(n.application_id) ||
-            (0, c.UM)(n.application_id).catch(() => {});
-    }, [j, n.application_id]);
-    let v = null != (t = null == j ? void 0 : j.name) ? t : h.intl.string(h.t.cgPbaZ),
-        { hasAlreadyLinked: x, canStartAuthorization: y, startAuthorization: b, fetched: C } = (0, a.F)(j),
-        O = (0, l.jsx)(u.Z, {
-            game: j,
-            size: u.A.MEDIUM,
+            u.Z.isFetchingApplication(n.application_id) ||
+            u.Z.didFetchingApplicationFail(n.application_id) ||
+            (0, s.UM)(n.application_id).catch(() => {});
+    }, [v, n.application_id]);
+    let y = null != (t = null == v ? void 0 : v.name) ? t : f.intl.string(f.t.cgPbaZ),
+        { hasAlreadyLinked: b, canStartAuthorization: C, startAuthorization: O, fetched: Z } = (0, c.F)(v),
+        w = (0, l.jsx)(d.Z, {
+            game: v,
+            size: d.A.MEDIUM,
         }),
-        Z = i.useCallback(() => {
+        _ = i.useCallback(() => {
             var e, t, l;
-            d.default.track(
-                p.rMx.GUILD_ONBOARDING_CONNECTION_CLICKED,
+            m.default.track(
+                h.rMx.GUILD_ONBOARDING_CONNECTION_CLICKED,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,12 +60,12 @@ function f(e) {
                             });
                     }
                     return e;
-                })({}, (0, o.hH)(f))),
+                })({}, (0, o.hH)(g))),
                 (l = l =
                     {
                         connection_type: "application",
                         application_id: null != (e = n.application_id) ? e : void 0,
-                        location: g,
+                        location: j,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(l))
@@ -79,15 +81,15 @@ function f(e) {
                       }),
                 t),
             ),
-                b();
-        }, [b, f, n.application_id, g]);
-    return (0, l.jsx)(m.Z, {
-        displayName: v,
+                O({ analyticsLocations: x });
+        }, [O, g, n.application_id, j, x]);
+    return (0, l.jsx)(p.Z, {
+        displayName: y,
         description: n.description,
-        icon: O,
-        isLoading: !C,
-        isConnected: x,
-        canConnect: y,
-        onConnect: Z,
+        icon: w,
+        isLoading: !Z,
+        isConnected: b,
+        canConnect: C,
+        onConnect: _,
     });
 }

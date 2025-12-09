@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(953529);
+n.d(t, { Z: () => R }), n(953529);
 var r = n(54381),
     i = n(120356),
     a = n.n(i),
@@ -12,15 +12,17 @@ var r = n(54381),
     p = n(782568),
     _ = n(317381),
     m = n(513202),
-    h = n(835473),
-    g = n(550385),
-    E = n(757266),
-    b = n(695103),
-    y = n(524995),
-    O = n(652271),
-    v = n(388032),
-    S = n(428498);
-function I(e, t, n) {
+    h = n(100527),
+    g = n(906732),
+    E = n(835473),
+    b = n(550385),
+    y = n(757266),
+    O = n(695103),
+    v = n(524995),
+    S = n(652271),
+    I = n(388032),
+    T = n(428498);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +35,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +46,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
 }
-function A(e, t) {
+function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,92 +63,93 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : N(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function N() {
-    let e = (0, h.q)(b.Z.testModeApplicationId),
+function R() {
+    let e = (0, E.q)(O.Z.testModeApplicationId),
+        { analyticsLocations: t } = (0, g.ZP)(h.Z.SDK_DEBUG_TOOLS),
         {
-            canStartAuthorization: t,
-            hasAlreadyLinked: n,
-            startAuthorization: i,
-            preferredFlow: o,
-            connectionApp: u,
-            debug: { isSubscribedToAuthorizeRequest: p, oauth2Token: I, hasConnectionEntrypointUrl: T, validFlows: A },
-        } = (0, y.F)(e, { debug: !0 }),
-        C = (0, c.e7)([E.Z], () => null != e && E.Z.isConnected(e.id)),
-        N = (0, c.e7)([_.ZP], () => _.ZP.getSelfEmbeddedActivities()),
-        w = "authorization_debug",
-        D = [
+            canStartAuthorization: n,
+            hasAlreadyLinked: i,
+            startAuthorization: o,
+            preferredFlow: u,
+            connectionApp: p,
+            debug: { isSubscribedToAuthorizeRequest: A, oauth2Token: C, hasConnectionEntrypointUrl: N, validFlows: P },
+        } = (0, v.F)(e, { debug: !0 }),
+        R = (0, c.e7)([y.Z], () => null != e && y.Z.isConnected(e.id)),
+        x = (0, c.e7)([_.ZP], () => _.ZP.getSelfEmbeddedActivities()),
+        L = "authorization_debug",
+        j = [
             {
                 id: "authorization_debug",
-                name: v.intl.string(O.default.vR0zs6),
+                name: I.intl.string(S.default.vR0zs6),
             },
         ],
-        x = () =>
+        M = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
-                        className: S.header,
+                        className: T.header,
                         children: (0, r.jsx)("div", {
-                            className: S.headerTextContainer,
+                            className: T.headerTextContainer,
                             children: (0, r.jsx)(l.X6q, {
                                 variant: "heading-lg/extrabold",
-                                children: v.intl.format(O.default.KoK4J9, { appName: "" }),
+                                children: I.intl.format(S.default.KoK4J9, { appName: "" }),
                             }),
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: S.body,
-                        children: (0, r.jsx)(l.$jN, { className: S.spinner }),
+                        className: T.body,
+                        children: (0, r.jsx)(l.$jN, { className: T.spinner }),
                     }),
                 ],
             }),
-        L = () => (
+        k = () => (
             s()(null != e, "Application should be defined when rendering the test mode panel"),
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: S.header,
+                        className: T.header,
                         children: [
                             (0, r.jsx)("div", {
-                                className: S.headerTextContainer,
+                                className: T.headerTextContainer,
                                 children: (0, r.jsx)(l.X6q, {
                                     variant: "heading-lg/extrabold",
-                                    children: v.intl.format(O.default.KoK4J9, { appName: e.name }),
+                                    children: I.intl.format(S.default.KoK4J9, { appName: e.name }),
                                 }),
                             }),
                             (0, r.jsx)(l.hU, {
                                 variant: "icon-only",
                                 icon: l.CTb,
                                 "aria-label": "Close",
-                                onClick: () => (0, g.Ll)(),
+                                onClick: () => (0, b.Ll)(),
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: S.body,
+                        className: T.body,
                         children: [
                             (0, r.jsx)(d.njP, {
-                                className: S.tabBar,
-                                selectedItem: w,
+                                className: T.tabBar,
+                                selectedItem: L,
                                 onItemSelect: () => {},
                                 orientation: "horizontal",
                                 type: "top",
                                 look: "brand",
-                                children: D.map((e) =>
+                                children: j.map((e) =>
                                     (0, r.jsx)(
                                         d.njP.Item,
                                         {
-                                            className: a()(S.tab, { [S.selected]: e.id === w }),
+                                            className: a()(T.tab, { [T.selected]: e.id === L }),
                                             id: e.id,
                                             "aria-label": e.name,
                                             children: e.name,
@@ -158,79 +161,79 @@ function N() {
                             (0, r.jsx)(l.xvT, {
                                 variant: "text-md/medium",
                                 color: "text-subtle",
-                                children: v.intl.string(O.default["no+FQS"]),
+                                children: I.intl.string(S.default["no+FQS"]),
                             }),
-                            (0, r.jsx)(P, {
-                                overallStatus: p ? 0 : C ? 3 : 1,
-                                name: v.intl.string(O.default.AGLx00),
+                            (0, r.jsx)(w, {
+                                overallStatus: A ? 0 : R ? 3 : 1,
+                                name: I.intl.string(S.default.AGLx00),
                                 steps: [
                                     {
-                                        status: C ? 2 : 4,
-                                        text: v.intl.string(O.default.kxF9br),
-                                        description: C ? null : v.intl.string(O.default.PFxxJa),
-                                        learnMoreLink: C
+                                        status: R ? 2 : 4,
+                                        text: I.intl.string(S.default.kxF9br),
+                                        description: R ? null : I.intl.string(S.default.PFxxJa),
+                                        learnMoreLink: R
                                             ? null
                                             : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                     },
                                     {
-                                        status: p ? 2 : C ? 3 : 4,
-                                        text: v.intl.string(O.default.S94dzs),
-                                        description: p || !C ? null : v.intl.string(O.default.aTULMB),
+                                        status: A ? 2 : R ? 3 : 4,
+                                        text: I.intl.string(S.default.S94dzs),
+                                        description: A || !R ? null : I.intl.string(S.default.aTULMB),
                                         learnMoreLink:
-                                            p || !C
+                                            A || !R
                                                 ? null
                                                 : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                     },
                                 ],
-                                isChosen: o === y.r.RPC,
+                                isChosen: u === v.r.RPC,
                             }),
-                            (0, r.jsx)(P, {
-                                overallStatus: +!T,
-                                name: v.intl.string(O.default.K3ObrU),
+                            (0, r.jsx)(w, {
+                                overallStatus: +!N,
+                                name: I.intl.string(S.default.K3ObrU),
                                 steps: [
                                     {
-                                        status: T ? 2 : 4,
-                                        text: v.intl.string(O.default["8a7IrV"]),
-                                        description: T
-                                            ? v.intl.formatToPlainString(O.default["9iLeL2"], {
-                                                  url: null == u ? void 0 : u.connectionEntrypointUrl,
+                                        status: N ? 2 : 4,
+                                        text: I.intl.string(S.default["8a7IrV"]),
+                                        description: N
+                                            ? I.intl.formatToPlainString(S.default["9iLeL2"], {
+                                                  url: null == p ? void 0 : p.connectionEntrypointUrl,
                                               })
                                             : null,
                                     },
                                 ],
-                                isChosen: o === y.r.WEB,
+                                isChosen: u === v.r.WEB,
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: S.footer,
+                        className: T.footer,
                         children: [
-                            (0, r.jsx)(R, {
-                                status: +!n,
-                                text: v.intl.string(v.t["Vu/zmQ"]),
+                            (0, r.jsx)(D, {
+                                status: +!i,
+                                text: I.intl.string(I.t["Vu/zmQ"]),
                             }),
-                            0 === A.length &&
+                            0 === P.length &&
                                 (0, r.jsx)(l.xvT, {
                                     style: {
                                         minWidth: 0,
                                         overflow: "hidden",
                                     },
                                     variant: "text-md/medium",
-                                    children: v.intl.string(O.default.eg0mNa),
+                                    children: I.intl.string(S.default.eg0mNa),
                                 }),
                             (0, r.jsx)(l.zxk, {
                                 variant: "secondary",
-                                disabled: !t || n,
-                                onClick: () => i(),
-                                text: v.intl.string(O.default.w0pN4R),
+                                disabled: !n || i,
+                                onClick: () => o({ analyticsLocations: t }),
+                                text: I.intl.string(S.default.w0pN4R),
                                 fullWidth: !0,
                             }),
-                            null != I &&
+                            null != C &&
                                 (0, r.jsx)(l.zxk, {
                                     variant: "secondary",
                                     onClick: () => {
-                                        f.Z.delete(I.id);
-                                        let t = N.get(e.id);
+                                        f.Z.delete(C.id);
+                                        let t = x.get(e.id);
                                         null != t &&
                                             m.Z.leaveActivity({
                                                 location: t.location,
@@ -238,7 +241,7 @@ function N() {
                                                 showFeedback: !1,
                                             });
                                     },
-                                    text: v.intl.string(O.default.tkIymA),
+                                    text: I.intl.string(S.default.tkIymA),
                                     fullWidth: !0,
                                 }),
                         ],
@@ -248,54 +251,54 @@ function N() {
         );
     return (0, r.jsx)("div", {
         "data-app-right-panel": !0,
-        className: S.debugToolsPanel,
-        children: (0, r.jsx)(l.y5t, { children: null != e ? L() : x() }),
+        className: T.debugToolsPanel,
+        children: (0, r.jsx)(l.y5t, { children: null != e ? k() : M() }),
     });
 }
-function P(e) {
+function w(e) {
     let { overallStatus: t, name: n, steps: i, isChosen: a } = e;
     return (0, r.jsxs)("div", {
-        className: S.categoryContainer,
+        className: T.categoryContainer,
         children: [
-            (0, r.jsx)(R, {
+            (0, r.jsx)(D, {
                 status: t,
                 text: n,
             }),
-            i.map((e, t) => (0, r.jsx)(w, T({}, e), t)),
+            i.map((e, t) => (0, r.jsx)(x, C({}, e), t)),
             a &&
                 (0, r.jsx)("div", {
-                    className: S.calloutBox,
+                    className: T.calloutBox,
                     children: (0, r.jsx)(l.xvT, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
-                        children: v.intl.string(O.default.OEkrCx),
+                        children: I.intl.string(S.default.OEkrCx),
                     }),
                 }),
         ],
     });
 }
-function R(e) {
+function D(e) {
     let { text: t, status: n } = e;
     return (0, r.jsxs)("div", {
-        className: S.categoryHeader,
+        className: T.categoryHeader,
         children: [
             (0, r.jsx)(l.xvT, {
                 variant: "text-md/semibold",
                 color: "text-subtle",
                 children: t,
             }),
-            (0, r.jsx)(D, { status: n }),
+            (0, r.jsx)(L, { status: n }),
         ],
     });
 }
-function w(e) {
+function x(e) {
     let { status: t, text: n, description: i, learnMoreLink: a } = e;
     return (0, r.jsxs)("div", {
-        className: S.statusRow,
+        className: T.statusRow,
         children: [
-            (0, r.jsx)(D, { status: t }),
+            (0, r.jsx)(L, { status: t }),
             (0, r.jsxs)("div", {
-                className: S.statusTextContainer,
+                className: T.statusTextContainer,
                 children: [
                     (0, r.jsx)(l.xvT, {
                         variant: "text-md/medium",
@@ -310,7 +313,7 @@ function w(e) {
                     null != a &&
                         (0, r.jsx)(l.Avr, {
                             textVariant: "text-sm/medium",
-                            text: v.intl.string(v.t.hvVgAZ),
+                            text: I.intl.string(I.t.hvVgAZ),
                             onClick: () => (0, p.Z)(a),
                         }),
                 ],
@@ -318,22 +321,22 @@ function w(e) {
         ],
     });
 }
-function D(e) {
+function L(e) {
     let { status: t } = e,
         n = {
             size: "sm",
-            className: S.statusIcon,
+            className: T.statusIcon,
         };
     switch (t) {
         case 0:
-            return (0, r.jsx)(l.owK, C(T({}, n), { color: u.Z.colors.ICON_FEEDBACK_POSITIVE }));
+            return (0, r.jsx)(l.owK, P(C({}, n), { color: u.Z.colors.ICON_FEEDBACK_POSITIVE }));
         case 1:
-            return (0, r.jsx)(l.k$p, C(T({}, n), { color: u.Z.colors.ICON_FEEDBACK_CRITICAL }));
+            return (0, r.jsx)(l.k$p, P(C({}, n), { color: u.Z.colors.ICON_FEEDBACK_CRITICAL }));
         case 2:
-            return (0, r.jsx)(l.kmB, C(T({}, n), { color: u.Z.colors.ICON_FEEDBACK_POSITIVE }));
+            return (0, r.jsx)(l.kmB, P(C({}, n), { color: u.Z.colors.ICON_FEEDBACK_POSITIVE }));
         case 3:
-            return (0, r.jsx)(l.aNP, C(T({}, n), { color: u.Z.colors.ICON_FEEDBACK_WARNING }));
+            return (0, r.jsx)(l.aNP, P(C({}, n), { color: u.Z.colors.ICON_FEEDBACK_WARNING }));
         case 4:
-            return (0, r.jsx)(l.Dio, C(T({}, n), { color: u.Z.colors.ICON_FEEDBACK_CRITICAL }));
+            return (0, r.jsx)(l.Dio, P(C({}, n), { color: u.Z.colors.ICON_FEEDBACK_CRITICAL }));
     }
 }

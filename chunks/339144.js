@@ -78,10 +78,10 @@ let D = i.memo(function (e) {
                 location: "Activity Panel",
                 autoTrackExposure: !1,
             }),
-            { parentAnalyticsLocation: $ } = (0, g.ZP)(),
-            ee = (0, x.Z)(H, "rtc-activity-panel"),
-            et = R(H, V, B),
-            en = i.useCallback(() => {
+            { parentAnalyticsLocation: $, analyticsLocations: ee } = (0, g.ZP)(),
+            et = (0, x.Z)(H, "rtc-activity-panel"),
+            en = R(H, V, B),
+            er = i.useCallback(() => {
                 var e;
                 o()(null != V, "Received null activity"),
                     P.default.track(Z.rMx.ACTIVITY_PANEL_BUTTON_CLICKED, {
@@ -97,7 +97,7 @@ let D = i.memo(function (e) {
                     }),
                     (0, d.h7)(V, !1);
             }, [V, W, $, U]),
-            er = i.useCallback(
+            ei = i.useCallback(
                 (e, t) => () => {
                     (0, b.v)($, b.d.LEAVE_ACTIVITY),
                         p.Z.leaveActivity({
@@ -108,16 +108,16 @@ let D = i.memo(function (e) {
                 },
                 [$],
             ),
-            ei = i.useCallback(
+            el = i.useCallback(
                 (e) => () => {
                     (0, b.v)($, b.d.LEAVE_ACTIVITY), O.Z.stopFrame({ applicationId: e });
                 },
                 [$],
             ),
-            el = i.useCallback(() => {
+            eo = i.useCallback(() => {
                 (0, j.Z)(C);
             }, [C]),
-            eo = i.useCallback(() => {
+            ea = i.useCallback(() => {
                 let e = null != k && (0, S.vd)(k.type) ? k : null,
                     t = null != e ? e.getGuildId() : w;
                 (0, u.ZDy)(async () => {
@@ -177,37 +177,37 @@ let D = i.memo(function (e) {
                     };
                 });
             }, [k, w, U, J]),
-            ea = i.useRef(null),
-            [es, ec] = i.useState(!1);
+            es = i.useRef(null),
+            [ec, eu] = i.useState(!1);
         i.useEffect(
             () => () => {
-                null != ea.current && clearTimeout(ea.current);
+                null != es.current && clearTimeout(es.current);
             },
             [],
         ),
             i.useEffect(() => {
-                Q && (ec(!1), null != ea.current && (clearTimeout(ea.current), (ea.current = null)));
+                Q && (eu(!1), null != es.current && (clearTimeout(es.current), (es.current = null)));
             }, [Q]);
-        let eu =
-                null == ee || null == H
+        let ed =
+                null == et || null == H
                     ? null
-                    : (0, r.jsx)(L, {
-                          guildId: ee,
+                    : (0, r.jsx)(M, {
+                          guildId: et,
                           applicationId: H.id,
                       }),
-            ed =
+            ef =
                 (null != U || null == B || (0, f.R)()) && (D || E)
                     ? (D
                           ? ((a = !1),
                             (s = () => {
-                                el(), (0, b.v)($, b.d.STREAM, !1);
+                                eo(), (0, b.v)($, b.d.STREAM, !1);
                             }),
                             (h = u.g5r),
                             (y = T.intl.string(T.t.S5anIc)))
                           : G
                             ? ((a = !1),
                               (s = () => {
-                                  eo(), (0, b.v)($, b.d.STREAM, !0);
+                                  ea(), (0, b.v)($, b.d.STREAM, !0);
                               }),
                               (h = u.hGI),
                               (y =
@@ -233,49 +233,49 @@ let D = i.memo(function (e) {
                           }),
                       }))
                     : null,
-            ef =
-                et && null == B
+            eh =
+                en && null == B
                     ? (0, r.jsx)(N.Z, {
                           ref: z,
                           tooltipText: T.intl.string(T.t["hC/Zey"]),
-                          onClick: en,
+                          onClick: er,
                           icon: u.ejJ,
                       })
                     : null,
-            eh =
+            ep =
                 null == B
                     ? null
                     : (0, r.jsx)(N.Z, {
                           tooltipText: T.intl.string(T.t["R/FK4A"]),
-                          onClick: er(B.applicationId, B.location),
+                          onClick: ei(B.applicationId, B.location),
                           icon: u.PBZ,
                       }),
-            ep =
+            eg =
                 null == F
                     ? null
                     : (0, r.jsx)(N.Z, {
                           tooltipText: T.intl.string(T.t["R/FK4A"]),
-                          onClick: ei(F.applicationId),
+                          onClick: el(F.applicationId),
                           icon: u.PBZ,
                       }),
-            eg = null == C ? null : (0, r.jsx)(_.Z, {}),
-            em =
+            em = null == C ? null : (0, r.jsx)(_.Z, {}),
+            eb =
                 !q || Q
                     ? null
-                    : (0, r.jsx)(M, {
+                    : (0, r.jsx)(L, {
                           runningGame: U,
                           startAuthorization: () => {
-                              Y() === m.r.RPC &&
-                                  (ec(!0),
-                                  null != ea.current && clearTimeout(ea.current),
-                                  (ea.current = setTimeout(() => {
-                                      ec(!1);
+                              Y({ analyticsLocations: ee }) === m.r.RPC &&
+                                  (eu(!0),
+                                  null != es.current && clearTimeout(es.current),
+                                  (es.current = setTimeout(() => {
+                                      eu(!1);
                                   }, 90000)));
                           },
                           connectionApp: X,
                           ref: K,
                       }),
-            eb =
+            e_ =
                 !q || Q
                     ? null
                     : (0, r.jsx)(c.J2, {
@@ -285,24 +285,24 @@ let D = i.memo(function (e) {
                           position: "top",
                           align: "center",
                           caretConfig: { align: "center" },
-                          shouldShow: es,
+                          shouldShow: ec,
                           onRequestClose: () => {
-                              ec(!1), null != ea.current && (clearTimeout(ea.current), (ea.current = null));
+                              eu(!1), null != es.current && (clearTimeout(es.current), (es.current = null));
                           },
                       });
-        return null == ed && null == ef && null == eh && null == ep && null == em && null == eu
+        return null == ef && null == eh && null == ep && null == eg && null == eb && null == ed
             ? null
             : (0, r.jsxs)("div", {
                   className: A.actions,
                   children: [
-                      null != (t = null != eu ? eu : em) ? t : ef,
-                      ed,
-                      null != (l = null != eh ? eh : ep) ? l : eg,
-                      eb,
+                      null != (t = null != ed ? ed : eb) ? t : eh,
+                      ef,
+                      null != (l = null != ep ? ep : eg) ? l : em,
+                      e_,
                   ],
               });
     }),
-    M = i.forwardRef(function (e, t) {
+    L = i.forwardRef(function (e, t) {
         let { runningGame: n, startAuthorization: i, connectionApp: l } = e;
         return (0, r.jsx)(N.Z, {
             ref: t,
@@ -319,7 +319,7 @@ let D = i.memo(function (e) {
             tooltipText: T.intl.string(T.t.sbdnpw),
         });
     });
-function L(e) {
+function M(e) {
     let { applicationId: t, guildId: n } = e,
         l = i.useRef(null);
     i.useEffect(() => {

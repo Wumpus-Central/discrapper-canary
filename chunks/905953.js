@@ -1,43 +1,45 @@
-n.d(t, { Z: () => y }), n(388685), n(457542);
+n.d(t, { Z: () => C }), n(388685), n(457542);
 var a = n(54381),
     l = n(473749),
     r = n(296009),
     i = n(442837),
     s = n(704215),
     o = n(907862),
-    c = n(524995),
-    d = n(243778),
-    u = n(785717),
-    m = n(931847),
-    p = n(86419),
-    h = n(50130),
-    x = n(687158),
-    f = n(892001),
-    g = n(872269),
-    b = n(314897),
-    v = n(921944),
-    j = n(228168),
-    _ = n(388032);
-function y(e) {
+    c = n(906732),
+    d = n(524995),
+    u = n(243778),
+    m = n(785717),
+    p = n(931847),
+    h = n(86419),
+    x = n(50130),
+    f = n(687158),
+    g = n(892001),
+    b = n(872269),
+    v = n(314897),
+    j = n(921944),
+    _ = n(228168),
+    y = n(388032);
+function C(e) {
     var t;
-    let { targetElementRef: n, onClose: y } = e,
-        [C, S] = l.useState(!1),
-        { trackUserProfileEditAction: E } = (0, u.KZ)(),
-        O = (0, i.e7)([b.default], () => b.default.getId()),
-        { config: N, application: T } = (0, h.G)(),
-        { fetched: P, hasAlreadyLinked: I, canStartAuthorization: w, startAuthorization: k } = (0, c.F)(T),
-        R = (0, x.ZP)(O),
-        A =
-            null == R || null == (t = R.widgets)
+    let { targetElementRef: n, onClose: C } = e,
+        [S, E] = l.useState(!1),
+        { trackUserProfileEditAction: N } = (0, m.KZ)(),
+        T = (0, i.e7)([v.default], () => v.default.getId()),
+        { config: O, application: P } = (0, x.G)(),
+        { fetched: I, hasAlreadyLinked: w, canStartAuthorization: k, startAuthorization: R } = (0, d.F)(P),
+        A = (0, f.ZP)(T),
+        { analyticsLocations: Z } = (0, c.ZP)(),
+        D =
+            null == A || null == (t = A.widgets)
                 ? void 0
-                : t.some((e) => e instanceof m.q && e.applicationId === (null == T ? void 0 : T.id));
-    return null != N && null != N.edit_profile_upsell_image && null != T && P
-        ? (0, a.jsx)(d.ZP, {
-              contentTypes: I
-                  ? A
+                : t.some((e) => e instanceof p.q && e.applicationId === (null == P ? void 0 : P.id));
+    return null != O && null != O.edit_profile_upsell_image && null != P && I
+        ? (0, a.jsx)(u.ZP, {
+              contentTypes: w
+                  ? D
                       ? []
                       : [s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
-                  : w
+                  : k
                     ? [s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_UNLINKED]
                     : [],
               children: (e) => {
@@ -50,31 +52,31 @@ function y(e) {
                       gradientColor: "blue",
                       graphic: {
                           type: "image",
-                          src: N.edit_profile_upsell_image,
+                          src: O.edit_profile_upsell_image,
                       },
-                      title: _.intl.format(_.t.TXDztH, { applicationName: T.name }),
-                      body: i ? _.intl.string(_.t["63Kso0"]) : _.intl.string(_.t.HwXoeC),
+                      title: y.intl.format(y.t.TXDztH, { applicationName: P.name }),
+                      body: i ? y.intl.string(y.t["63Kso0"]) : y.intl.string(y.t.HwXoeC),
                       onRequestClose: () => {
-                          l(v.L.USER_DISMISS);
+                          l(j.L.USER_DISMISS);
                       },
                       actions: [
                           i
                               ? {
-                                    text: _.intl.string(_.t.VSLDly),
+                                    text: y.intl.string(y.t.VSLDly),
                                     onClick: () => {
-                                        S(!0),
-                                            (0, f.openUserProfileModal)({
-                                                userId: O,
-                                                section: j.oh.WIDGETS,
+                                        E(!0),
+                                            (0, g.openUserProfileModal)({
+                                                userId: T,
+                                                section: _.oh.WIDGETS,
                                             })
                                                 .then(() => {
-                                                    l(v.L.TAKE_ACTION), y();
-                                                    let e = new m.q({
-                                                        applicationId: T.id,
+                                                    l(j.L.TAKE_ACTION), C();
+                                                    let e = new p.q({
+                                                        applicationId: P.id,
                                                         type: r.l.APPLICATION,
                                                     });
-                                                    (0, p.qH)(e.type, e),
-                                                        E(
+                                                    (0, h.qH)(e.type, e),
+                                                        N(
                                                             (function (e) {
                                                                 for (var t = 1; t < arguments.length; t++) {
                                                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -109,30 +111,31 @@ function y(e) {
                                                                 e.getProfileEditAnalyticsOptions(),
                                                             ),
                                                         ),
-                                                        (0, g.L$)(j.qb.WIDGET_ADDED);
+                                                        (0, b.L$)(_.qb.WIDGET_ADDED);
                                                 })
-                                                .finally(() => S(!1));
+                                                .finally(() => E(!1));
                                     },
-                                    loading: C,
+                                    loading: S,
                                 }
                               : {
-                                    text: _.intl.string(_.t["DSJi3+"]),
+                                    text: y.intl.string(y.t["DSJi3+"]),
                                     onClick: () => {
-                                        k({
+                                        R({
                                             onConfirm: () => {
-                                                S(!0),
-                                                    (0, f.openUserProfileModal)({
-                                                        userId: O,
-                                                        section: j.oh.WIDGETS,
+                                                E(!0),
+                                                    (0, g.openUserProfileModal)({
+                                                        userId: T,
+                                                        section: _.oh.WIDGETS,
                                                     })
                                                         .then(() => {
-                                                            l(v.L.TAKE_ACTION), y();
+                                                            l(j.L.TAKE_ACTION), C();
                                                         })
-                                                        .finally(() => S(!1));
+                                                        .finally(() => E(!1));
                                             },
+                                            analyticsLocations: Z,
                                         });
                                     },
-                                    loading: C,
+                                    loading: S,
                                 },
                       ],
                   });

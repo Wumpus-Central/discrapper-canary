@@ -5391,6 +5391,7 @@ var np = (function (e) {
             (e.GAME_COMMUNITY_UPSELL_VIEWED = "game_community_upsell_viewed"),
             (e.GAME_COMMUNITY_UPSELL_DISMISSED = "game_community_upsell_dismissed"),
             (e.GAME_COMMUNITY_UPSELL_ACCEPTED = "game_community_upsell_accepted"),
+            (e.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED = "on_platform_account_link_flow_started"),
             e
         );
     })({}),

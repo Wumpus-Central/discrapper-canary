@@ -232,7 +232,7 @@ function U(t) {
             application_id: n,
             is_gift: !0,
         }),
-            m();
+            m({ analyticsLocations: t });
     }, [m]);
     if (!p)
         return (0, i.jsx)(s.IX, {

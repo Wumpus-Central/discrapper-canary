@@ -63,7 +63,7 @@ function g(t) {
                 application_id: n,
                 is_gift: !1,
             }),
-                S();
+                S({ analyticsLocations: t });
         }, [S]),
         O = e.useCallback(() => {
             let { analyticsLocations: t, skuId: a } = R.current;
