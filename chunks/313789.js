@@ -38,6 +38,7 @@ var r = (function (e) {
         (e.REACTION_NOTIFICATIONS = "reaction_notifications"),
         (e.FRIEND_ONLINE_NOTIFICATIONS = "friend_online_notifications"),
         (e.PROFILE_UPDATES_NOTIFICATIONS = "profile_updates_notifications"),
+        (e.GAME_UPDATE_NOTIFICATIONS = "game_update_notifications"),
         (e.FRIEND_ANNIVERSARY_NOTIFICATIONS = "friend_anniversary_notifications"),
         (e.USER_RESURRECTION_NOTIFICATIONS = "user_resurrection_notifications"),
         (e.EXPERIMENTAL_UNREADS = "experimental_unreads"),
