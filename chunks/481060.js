@@ -557,6 +557,7 @@ n.d(t, {
     u2D: () => a.u2D,
     u3T: () => eN.u3,
     uA3: () => eb.u,
+    uIJ: () => i.uIJ,
     uMN: () => i.uMN,
     uVW: () => i.uVW,
     u_l: () => U.u_,

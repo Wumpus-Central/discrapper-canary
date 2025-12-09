@@ -1,55 +1,58 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => P });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
     o = n(481060),
     s = n(783097),
-    l = n(812206),
-    c = n(914498),
-    u = n(515344),
-    d = n(810568),
-    f = n(168524),
-    p = n(171516),
-    _ = n(77498),
-    m = n(81063),
-    h = n(768581),
-    g = n(758371),
-    E = n(994339),
-    b = n(206074),
-    y = n(77603),
-    O = n(732067),
-    v = n(328886),
-    S = n(388032);
-function I(e, t) {
+    l = n(335670),
+    c = n(951106),
+    u = n(524995),
+    d = n(812206),
+    f = n(914498),
+    p = n(515344),
+    _ = n(810568),
+    m = n(168524),
+    h = n(171516),
+    g = n(77498),
+    E = n(81063),
+    b = n(768581),
+    y = n(758371),
+    O = n(994339),
+    v = n(206074),
+    S = n(77603),
+    I = n(732067),
+    T = n(328886),
+    A = n(388032);
+function C(e, t) {
     var n;
-    let r = (0, p.h)(e),
-        i = (0, a.e7)([l.Z, _.Z], () => {
-            let t = l.Z.getApplication(e);
-            return null != t ? _.Z.getGameByApplication(t) : null;
+    let r = (0, h.h)(e),
+        i = (0, a.e7)([d.Z, g.Z], () => {
+            let t = d.Z.getApplication(e);
+            return null != t ? g.Z.getGameByApplication(t) : null;
         }, [e]);
     return {
-        openGameProfileModal: (0, f.Z)({
+        openGameProfileModal: (0, m.Z)({
             location: "Rich Presence Activity Invite Embed",
             applicationId: null != (n = null == i ? void 0 : i.id) ? n : void 0,
-            source: d.m1.Embed,
+            source: _.m1.Embed,
             trackEntryPointImpression: !0,
             sourceUserId: t,
         }),
         launchableAppId: r,
     };
 }
-function T(e, t) {
+function N(e, t) {
     var n, r, i, a;
     let { bot: o } = t,
         s =
             (null == (n = e.activity) ? void 0 : n.icon_override) != null
-                ? (0, m.xF)(t.id, null == (r = e.activity) ? void 0 : r.icon_override)
+                ? (0, E.xF)(t.id, null == (r = e.activity) ? void 0 : r.icon_override)
                 : null;
     return {
         iconSrc:
             null != s
                 ? s
-                : h.ZP.getApplicationIconURL({
+                : b.ZP.getApplicationIconURL({
                       id: t.id,
                       icon: t.icon,
                       bot: o,
@@ -57,85 +60,92 @@ function T(e, t) {
         name: null != (a = null == (i = e.activity) ? void 0 : i.name_override) ? a : t.name,
     };
 }
-function A(e) {
+function P(e) {
     var t, n;
     let {
             analyticsLocations: a,
-            application: l,
-            channel: d,
-            currentUserId: f,
-            currentUserPresenceActivity: p,
-            hideParty: _,
-            message: m,
-            onView: h,
-            partyStatusElement: A,
-            presenceActivity: C,
+            application: d,
+            channel: _,
+            currentUserId: m,
+            currentUserPresenceActivity: h,
+            hideParty: g,
+            message: E,
+            onView: b,
+            partyStatusElement: P,
+            presenceActivity: R,
         } = e,
-        N = (0, s.ye)(l),
-        { iconSrc: P, name: R } = T(m, l),
-        D =
+        D = (0, s.ye)(d),
+        { iconSrc: w, name: x } = N(E, d),
+        L =
             null !=
-            (n = (0, y.v)({
-                messageId: m.id,
-                presenceActivity: C,
-                application: l,
+            (n = (0, S.v)({
+                messageId: E.id,
+                presenceActivity: R,
+                application: d,
             }))
                 ? n
                 : void 0,
-        { openGameProfileModal: w, launchableAppId: x } = I(l.id, m.author.id),
-        L = (0, b.Z)({
-            application: l,
+        { openGameProfileModal: j, launchableAppId: M } = C(d.id, E.author.id),
+        k = (0, v.Z)({
+            application: d,
             analyticsLocations: a,
         }),
-        j = i.useMemo(() => {
-            if (null != L)
+        U = i.useMemo(() => {
+            if (null != k)
                 return {
-                    label: S.intl.string(S.t["jaYS/h"]),
+                    label: A.intl.string(A.t["jaYS/h"]),
                     icon: o.v3n,
-                    trackingArea: c.j_.CLOUD_PLAY,
-                    onClick: L,
+                    trackingArea: f.j_.CLOUD_PLAY,
+                    onClick: k,
                 };
-        }, [L]),
-        M = (0, u.G)(l),
-        k = i.useMemo(() => (null != w ? w : null != M && N ? M : void 0), [N, w, M]),
-        U = !(0, E.Z)(C, m, l.id),
-        G = (0, g.dQ)(R, null == (t = m.activity) ? void 0 : t.type, U);
-    return U
-        ? (0, r.jsx)(O.Z, {
-              message: m,
-              application: l,
-              applicationName: R,
-              channel: d,
-              header: G,
-              currentUserId: f,
-              launchableAppId: x,
-              isEmbeddedApplication: N,
-              tryWithGdnAction: j,
-              staticBannerSrc: D,
-              onClickContent: k,
-              iconSrc: P,
-              onView: h,
-              presenceActivity: C,
+        }, [k]),
+        G = (0, p.G)(d),
+        Z = i.useMemo(() => (null != j ? j : null != G && D ? G : void 0), [D, j, G]),
+        B = l.Z.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
+        { canStartAuthorization: F, hasAlreadyLinked: V, startAuthorization: H } = (0, u.F)(d),
+        Y = (0, c.K)(H, V),
+        W = !(0, O.Z)(R, E, d.id),
+        K = (0, y.dQ)(x, null == (t = E.activity) ? void 0 : t.type, W);
+    return W
+        ? (0, r.jsx)(I.Z, {
+              message: E,
+              application: d,
+              applicationName: x,
+              channel: _,
+              header: K,
+              currentUserId: m,
+              launchableAppId: M,
+              isEmbeddedApplication: D,
+              tryWithGdnAction: U,
+              staticBannerSrc: L,
+              onClickContent: Z,
+              iconSrc: w,
+              onView: b,
+              presenceActivity: R,
               analyticsLocations: a,
+              showAuthButton: F && !V && B.enabled,
+              startAuthorization: Y,
           })
-        : (0, r.jsx)(v.Z, {
-              message: m,
-              application: l,
-              applicationName: R,
-              channel: d,
-              header: G,
-              currentUserId: f,
-              launchableAppId: x,
-              isEmbeddedApplication: N,
-              tryWithGdnAction: j,
-              staticBannerSrc: D,
-              onClickContent: k,
-              iconSrc: P,
-              onView: h,
-              presenceActivity: C,
-              currentUserPresenceActivity: p,
-              hideParty: _,
-              partyStatusElement: A,
+        : (0, r.jsx)(T.Z, {
+              message: E,
+              application: d,
+              applicationName: x,
+              channel: _,
+              header: K,
+              currentUserId: m,
+              launchableAppId: M,
+              isEmbeddedApplication: D,
+              tryWithGdnAction: U,
+              staticBannerSrc: L,
+              onClickContent: Z,
+              iconSrc: w,
+              onView: b,
+              presenceActivity: R,
+              currentUserPresenceActivity: h,
+              hideParty: g,
+              partyStatusElement: P,
               analyticsLocations: a,
+              showAuthButton: F && !V && B.enabled,
+              startAuthorization: Y,
           });
 }

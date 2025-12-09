@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(953529);
+n.d(t, { Z: () => T }), n(539854), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -73,10 +73,13 @@ function T(e) {
             onView: N,
             presenceActivity: P,
             analyticsLocations: R,
+            showAuthButton: D,
+            startAuthorization: w,
         } = e,
-        D = (0, s.e7)([h.Z], () => h.Z.getMessages(o.id)),
-        w = i.useMemo(() => {
-            let e = [];
+        x = (0, s.e7)([h.Z], () => h.Z.getMessages(o.id)),
+        L = i.useMemo(() => {
+            let e = [],
+                r = !0;
             return (null != _
                 ? (e = [
                       {
@@ -91,26 +94,37 @@ function T(e) {
                           },
                       },
                   ])
-                : null != S && (e = [S]),
-            e.length > 0 && !(0, E.b)(t.id, D, n.id, P))
+                : null != S && ((e = [S]), (r = !1)),
+            D &&
+                r &&
+                e.push({
+                    label: O.intl.string(O.t.lw71Nf),
+                    trackingArea: d.j_.CONNECT_ACCOUNT,
+                    onClick: () => {
+                        w({ analyticsLocations: R });
+                    },
+                    icon: l.uIJ,
+                    iconButton: !0,
+                }),
+            e.length > 0 && !(0, E.b)(t.id, x, n.id, P))
                 ? []
                 : e;
-        }, [m, _, S, D, P, n.id, t.id]),
-        x = w.some((e) => e.trackingArea === d.j_.CLOUD_PLAY);
-    (0, b.Z)(x, R);
-    let L = w.length > 0,
-        j = i.useMemo(
+        }, [m, _, S, x, P, n.id, t.id, D, w, R]),
+        j = L.some((e) => e.trackingArea === d.j_.CLOUD_PLAY);
+    (0, b.Z)(j, R);
+    let M = L.length > 0,
+        k = i.useMemo(
             () =>
                 (0, r.jsx)(l.Text, {
                     variant: "text-xs/medium",
                     className: v.description,
                     color: "none",
                     lineClamp: 3,
-                    children: (0, g.wR)(t, a, o, p, L),
+                    children: (0, g.wR)(t, a, o, p, M),
                 }),
-            [t, a, o, p, L],
+            [t, a, o, p, M],
         );
-    return 0 === w.length
+    return 0 === L.length
         ? (0, r.jsx)(I, {
               message: t,
               applicationName: a,
@@ -126,8 +140,9 @@ function T(e) {
               onClickBanner: A,
               bannerAspectRatio: u.u.ACTIVITY,
               iconSrc: null != C ? C : void 0,
-              info: j,
-              actions: w,
+              info: k,
+              actions: L,
+              primaryActionFirst: !0,
               onClickContent: A,
               trackingConfig: {
                   id: n.id,

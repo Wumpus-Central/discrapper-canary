@@ -1,6 +1,6 @@
 n.d(t, {
-    W: () => O,
-    u: () => E,
+    W: () => v,
+    u: () => b,
 }),
     n(190126),
     n(368063),
@@ -17,22 +17,23 @@ var r = n(54381),
     l = n(907331),
     c = n(793030),
     u = n(442837),
-    d = n(607070),
-    f = n(206295),
-    p = n(314897),
-    _ = n(914498),
-    m = n(967249),
-    h = n(217702),
-    g = n(906376),
-    E = (function (e) {
+    d = n(681715),
+    f = n(607070),
+    p = n(206295),
+    _ = n(314897),
+    m = n(914498),
+    h = n(967249),
+    g = n(217702),
+    E = n(906376),
+    b = (function (e) {
         return (e[(e.BOT = 0)] = "BOT"), (e[(e.ACTIVITY = 1)] = "ACTIVITY"), e;
     })({});
-function b(e) {
+function y(e) {
     var t, n, r, i;
     return {
         id: null != (t = null == e ? void 0 : e.id) ? t : "0",
-        linkType: null != (n = null == e ? void 0 : e.linkType) ? n : m.U.UNKNOWN,
-        referrerId: null != (r = null == e ? void 0 : e.referrerId) ? r : p.default.getId(),
+        linkType: null != (n = null == e ? void 0 : e.linkType) ? n : h.U.UNKNOWN,
+        referrerId: null != (r = null == e ? void 0 : e.referrerId) ? r : _.default.getId(),
         activityCustomId: null == e ? void 0 : e.activityCustomId,
         onView: null == e ? void 0 : e.onView,
         onLinkCopied: null == e ? void 0 : e.onLinkCopied,
@@ -42,12 +43,12 @@ function b(e) {
         isDeadEnd: null != (i = null == e ? void 0 : e.isDeadEnd) && i,
     };
 }
-function y(e) {
+function O(e) {
     let { onClick: t, children: n, className: i } = e;
     return null != t
         ? (0, r.jsx)(c.P3F, {
               onClick: t,
-              className: o()({ [g.cursorPointer]: null != t }, i),
+              className: o()({ [E.cursorPointer]: null != t }, i),
               children: n,
           })
         : (0, r.jsx)("div", {
@@ -55,158 +56,159 @@ function y(e) {
               children: n,
           });
 }
-function O(e) {
+function v(e) {
     let {
         title: t,
         header: n,
         footer: a,
-        info: p,
-        staticBannerSrc: m,
-        videoBannerSrc: E,
-        bannerAspectRatio: O = 0,
-        iconSrc: v,
-        actions: S = [],
-        trackingConfig: I,
-        onClickContent: T,
-        onClickBanner: A,
+        info: _,
+        staticBannerSrc: h,
+        videoBannerSrc: b,
+        bannerAspectRatio: v = 0,
+        iconSrc: S,
+        actions: I = [],
+        primaryActionFirst: T = !1,
+        trackingConfig: A,
+        onClickContent: C,
+        onClickBanner: N,
     } = e;
-    I = b(I);
-    let { primaryColor: C, secondaryColor: N } = (0, f.Z)(null != v ? v : m),
-        P = "linear-gradient(45deg, ".concat(C, ", ").concat(N, ")"),
-        R = (0, u.e7)([d.Z], () => d.Z.useReducedMotion),
-        D = i.useRef(!1),
-        w = (0, l.O)(
+    A = y(A);
+    let { primaryColor: P, secondaryColor: R } = (0, p.Z)(null != S ? S : h),
+        D = "linear-gradient(45deg, ".concat(P, ", ").concat(R, ")"),
+        w = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+        x = i.useRef(!1),
+        L = (0, l.O)(
             (e) => {
-                if (!1 === D.current && e) {
+                if (!1 === x.current && e) {
                     var t;
-                    null == I || null == (t = I.onView) || t.call(I),
-                        (0, _.GF)({
-                            appId: I.id,
-                            linkType: I.linkType,
-                            referrerId: I.referrerId,
-                            customId: I.activityCustomId,
-                            guildId: I.guildId,
-                            channelId: I.channelId,
-                            messageId: I.messageId,
+                    null == A || null == (t = A.onView) || t.call(A),
+                        (0, m.GF)({
+                            appId: A.id,
+                            linkType: A.linkType,
+                            referrerId: A.referrerId,
+                            customId: A.activityCustomId,
+                            guildId: A.guildId,
+                            channelId: A.channelId,
+                            messageId: A.messageId,
                         }),
-                        (D.current = !0);
+                        (x.current = !0);
                 }
             },
             void 0,
         ),
-        x = null != m,
-        L = null != E && !1 === R,
-        j = x || L,
-        M = 0 === O ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
-        k = i.useRef(null),
-        U = i.useCallback(() => {
-            let e = k.current;
+        j = null != h,
+        M = null != b && !1 === w,
+        k = j || M,
+        U = 0 === v ? E.bannerAspectRatioBot : E.bannerAspectRatioActivity,
+        G = i.useRef(null),
+        Z = i.useCallback(() => {
+            let e = G.current;
             null != e && ("hidden" === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
-        G = i.useMemo(() => !!L && new URL(E).pathname.endsWith(".gif"), [L, E]),
-        Z = i.useMemo(() => {
-            if (null != T)
+        B = i.useMemo(() => !!M && new URL(b).pathname.endsWith(".gif"), [M, b]),
+        F = i.useMemo(() => {
+            if (null != C)
                 return (e) => {
-                    T(e),
-                        (0, _.KX)({
-                            applicationId: I.id,
-                            linkType: I.linkType,
-                            area: _.j_.CONTENT,
-                            referrerId: I.referrerId,
-                            customId: I.activityCustomId,
-                            isDeadEnd: I.isDeadEnd,
+                    C(e),
+                        (0, m.KX)({
+                            applicationId: A.id,
+                            linkType: A.linkType,
+                            area: m.j_.CONTENT,
+                            referrerId: A.referrerId,
+                            customId: A.activityCustomId,
+                            isDeadEnd: A.isDeadEnd,
                         });
                 };
-        }, [T, I]),
-        B = i.useMemo(() => {
-            if (null != A)
+        }, [C, A]),
+        V = i.useMemo(() => {
+            if (null != N)
                 return (e) => {
-                    A(e),
-                        (0, _.KX)({
-                            applicationId: I.id,
-                            linkType: I.linkType,
-                            area: _.j_.BANNER,
-                            referrerId: I.referrerId,
-                            customId: I.activityCustomId,
-                            isDeadEnd: I.isDeadEnd,
+                    N(e),
+                        (0, m.KX)({
+                            applicationId: A.id,
+                            linkType: A.linkType,
+                            area: m.j_.BANNER,
+                            referrerId: A.referrerId,
+                            customId: A.activityCustomId,
+                            isDeadEnd: A.isDeadEnd,
                         });
                 };
-        }, [A, I]);
+        }, [N, A]);
     return (0, r.jsxs)("div", {
-        ref: w,
-        className: g.embed,
+        ref: L,
+        className: E.embed,
         children: [
-            j &&
-                (0, r.jsxs)(y, {
-                    onClick: B,
-                    className: o()(g.bannerWrapper, M, { [g.showVideoOnFocus]: L }),
+            k &&
+                (0, r.jsxs)(O, {
+                    onClick: V,
+                    className: o()(E.bannerWrapper, U, { [E.showVideoOnFocus]: M }),
                     children: [
-                        L &&
-                            (G
+                        M &&
+                            (B
                                 ? (0, r.jsx)("div", {
-                                      className: g.videoBanner,
-                                      style: { backgroundImage: "url(".concat(E, ")") },
+                                      className: E.videoBanner,
+                                      style: { backgroundImage: "url(".concat(b, ")") },
                                   })
                                 : (0, r.jsx)(s.Z, {
-                                      ref: k,
-                                      src: E,
-                                      mediaLayoutType: h.hV.MOSAIC,
+                                      ref: G,
+                                      src: b,
+                                      mediaLayoutType: g.hV.MOSAIC,
                                       loop: !0,
                                       muted: !0,
-                                      className: g.videoBanner,
+                                      className: E.videoBanner,
                                   })),
-                        x &&
+                        j &&
                             (0, r.jsx)("div", {
-                                className: g.staticBanner,
-                                style: { backgroundImage: "url(".concat(m, ")") },
-                                onTransitionEnd: U,
+                                className: E.staticBanner,
+                                style: { backgroundImage: "url(".concat(h, ")") },
+                                onTransitionEnd: Z,
                             }),
                     ],
                 }),
             (0, r.jsxs)("div", {
-                style: { background: P },
+                style: { background: D },
                 children: [
                     (0, r.jsxs)("div", {
-                        className: g.contentContainer,
+                        className: E.contentContainer,
                         children: [
                             null != n &&
                                 (0, r.jsx)(c.xvT, {
                                     variant: "text-sm/semibold",
                                     color: "none",
-                                    className: g.header,
+                                    className: E.header,
                                     children: n,
                                 }),
-                            (0, r.jsxs)(y, {
-                                onClick: Z,
-                                className: o()(g.contentWrapper, { [g.contentWrapperClickable]: null != Z }),
+                            (0, r.jsxs)(O, {
+                                onClick: F,
+                                className: o()(E.contentWrapper, { [E.contentWrapperClickable]: null != F }),
                                 children: [
-                                    null != v &&
+                                    null != S &&
                                         (0, r.jsx)("div", {
-                                            className: g.img,
-                                            style: { backgroundImage: "url(".concat(v, ")") },
+                                            className: E.img,
+                                            style: { backgroundImage: "url(".concat(S, ")") },
                                         }),
                                     (0, r.jsxs)("div", {
-                                        className: g.content,
+                                        className: E.content,
                                         children: [
                                             (0, r.jsx)(c.xvT, {
                                                 variant: "text-md/semibold",
                                                 color: "none",
                                                 lineClamp: 1,
-                                                className: g.contentTitle,
+                                                className: E.contentTitle,
                                                 children: t,
                                             }),
                                             (0, r.jsx)("div", {
-                                                className: g.contentInfoWrapper,
-                                                children: p,
+                                                className: E.contentInfoWrapper,
+                                                children: _,
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
-                            S.length > 0 &&
+                            I.length > 0 &&
                                 (0, r.jsx)("div", {
-                                    className: g.actionWrapper,
-                                    children: S.map((e, t) => {
+                                    className: o()(E.actionWrapper, T ? E.actionWrapperPrimaryFirst : null),
+                                    children: I.map((e, t) => {
                                         let {
                                                 label: n,
                                                 icon: i,
@@ -215,44 +217,71 @@ function O(e) {
                                                 disabledReason: s,
                                                 submitting: l,
                                                 trackingArea: u,
-                                                isDeadEnd: d,
+                                                isDeadEnd: f,
+                                                iconButton: p,
                                             } = e,
-                                            f = 0 === t;
-                                        return (0, r.jsxs)(
-                                            "div",
-                                            {
-                                                className: g.buttonWithPossibleDisabledTextWrapper,
-                                                children: [
-                                                    (0, r.jsx)(c.zxk, {
-                                                        variant: f ? "overlay-primary" : "overlay-secondary",
-                                                        disabled: o || null != s,
-                                                        loading: l,
-                                                        icon: i,
-                                                        text: n,
-                                                        onClick: (e) => {
-                                                            a(e),
-                                                                (0, _.KX)({
-                                                                    applicationId: I.id,
-                                                                    linkType: I.linkType,
-                                                                    area: u,
-                                                                    referrerId: I.referrerId,
-                                                                    customId: I.activityCustomId,
-                                                                    isDeadEnd: d,
-                                                                });
-                                                        },
-                                                        fullWidth: !0,
-                                                    }),
-                                                    null != s &&
-                                                        (0, r.jsx)(c.xvT, {
-                                                            variant: "text-xs/medium",
-                                                            color: "none",
-                                                            className: g.disabledReason,
-                                                            children: s,
-                                                        }),
-                                                ],
-                                            },
-                                            n,
-                                        );
+                                            _ = 0 === t;
+                                        return p
+                                            ? (0, r.jsx)(
+                                                  d.u,
+                                                  {
+                                                      text: n,
+                                                      children: (0, r.jsx)(c.hU, {
+                                                          variant: _ ? "overlay-primary" : "overlay-secondary",
+                                                          disabled: o || null != s,
+                                                          loading: l,
+                                                          icon: i,
+                                                          "aria-label": n,
+                                                          onClick: (e) => {
+                                                              a(e),
+                                                                  (0, m.KX)({
+                                                                      applicationId: A.id,
+                                                                      linkType: A.linkType,
+                                                                      area: u,
+                                                                      referrerId: A.referrerId,
+                                                                      customId: A.activityCustomId,
+                                                                      isDeadEnd: f,
+                                                                  });
+                                                          },
+                                                      }),
+                                                  },
+                                                  n,
+                                              )
+                                            : (0, r.jsxs)(
+                                                  "div",
+                                                  {
+                                                      className: E.buttonWithPossibleDisabledTextWrapper,
+                                                      children: [
+                                                          (0, r.jsx)(c.zxk, {
+                                                              variant: _ ? "overlay-primary" : "overlay-secondary",
+                                                              disabled: o || null != s,
+                                                              loading: l,
+                                                              icon: i,
+                                                              text: n,
+                                                              onClick: (e) => {
+                                                                  a(e),
+                                                                      (0, m.KX)({
+                                                                          applicationId: A.id,
+                                                                          linkType: A.linkType,
+                                                                          area: u,
+                                                                          referrerId: A.referrerId,
+                                                                          customId: A.activityCustomId,
+                                                                          isDeadEnd: f,
+                                                                      });
+                                                              },
+                                                              fullWidth: !0,
+                                                          }),
+                                                          null != s &&
+                                                              (0, r.jsx)(c.xvT, {
+                                                                  variant: "text-xs/medium",
+                                                                  color: "none",
+                                                                  className: E.disabledReason,
+                                                                  children: s,
+                                                              }),
+                                                      ],
+                                                  },
+                                                  n,
+                                              );
                                     }),
                                 }),
                         ],

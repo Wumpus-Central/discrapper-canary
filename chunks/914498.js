@@ -19,6 +19,7 @@ var r = n(626135),
             (e.CONTENT = "content"),
             (e.BANNER = "banner"),
             (e.STREAM = "stream"),
+            (e.CONNECT_ACCOUNT = "connect_account"),
             e
         );
     })({});
