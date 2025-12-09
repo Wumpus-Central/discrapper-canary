@@ -25950,7 +25950,7 @@ span.clanTag__5d473 {
     gap: 0;
     height: 100%;
     padding-block: 48px 0;
-    padding-inline: 48px 36px
+    padding-inline: 48px 32px
 }
 
 @media (max-width:960px) {
@@ -52685,7 +52685,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59904,9 +59904,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
