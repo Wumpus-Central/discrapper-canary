@@ -534,7 +534,7 @@ function q(e) {
             () =>
                 t.type === B.aib.DMS
                     ? F.intl.string(F.t.m7OrlR)
-                    : (t.type === B.aib.CHANNEL && q) || W
+                    : W || q
                       ? F.intl.formatToPlainString(F.t.LDZtFO, { name: Y })
                       : F.intl.string(F.t["5h0QOP"]),
             [t.type, q, W, Y],

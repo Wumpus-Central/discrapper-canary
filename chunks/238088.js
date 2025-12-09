@@ -12,14 +12,14 @@ var n = l(54381),
     g = l(592125),
     F = l(944486),
     x = l(594174),
-    C = l(585483),
-    p = l(607802),
+    p = l(585483),
+    C = l(607802),
     T = l(28964),
     E = l(465524),
     S = l(611004),
     I = l(723642),
-    f = l(981631),
-    _ = l(388032),
+    _ = l(981631),
+    f = l(388032),
     R = l(540432);
 function m(e) {
     let { index: t, query: l, handleQuerySelect: r, handleDateSelect: i, options: o, handleRemoveDateFilter: s } = e,
@@ -29,7 +29,7 @@ function m(e) {
         className: R.dateFilter,
         children: [
             (0, n.jsx)(d.P, {
-                label: _.intl.string(_.t.ArxagQ),
+                label: f.intl.string(f.t.ArxagQ),
                 hideLabel: !0,
                 selectionMode: "single",
                 formatOption: (e) => {
@@ -69,7 +69,7 @@ function m(e) {
                     s(t);
                 },
                 className: R.removeDateFilterButton,
-                "aria-label": _.intl.formatToPlainString(_.t["2LwBlF"], { filterNumber: t + 1 }),
+                "aria-label": f.intl.formatToPlainString(f.t["2LwBlF"], { filterNumber: t + 1 }),
                 children: (0, n.jsx)(c.XHJ, {
                     size: "md",
                     color: "currentColor",
@@ -100,12 +100,12 @@ function y(e) {
                     (0, n.jsx)(c.Text, {
                         variant: "text-md/medium",
                         color: "text-strong",
-                        children: _.intl.string(_.t.oesnwm),
+                        children: f.intl.string(f.t.oesnwm),
                     }),
                     (0, n.jsx)(c.Text, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
-                        children: _.intl.string(_.t.A2DY6J),
+                        children: f.intl.string(f.t.A2DY6J),
                     }),
                 ],
             }),
@@ -127,7 +127,7 @@ function y(e) {
                 (0, n.jsx)(c.Button, {
                     variant: "secondary",
                     fullWidth: !0,
-                    text: _.intl.string(_.t.iP9YpB),
+                    text: f.intl.string(f.t.iP9YpB),
                     icon: c.BRu,
                     onClick: () => {
                         s() && a();
@@ -136,7 +136,7 @@ function y(e) {
         ],
     });
 }
-function L(e) {
+function b(e) {
     let {
             label: t,
             sublabel: l,
@@ -150,9 +150,9 @@ function L(e) {
             onSearchChange: g,
             filterType: F,
             validateFilter: x,
-            onBlur: C,
+            onBlur: p,
         } = e,
-        p = r.useMemo(() => (d ? (e) => e : void 0), [d]);
+        C = r.useMemo(() => (d ? (e) => e : void 0), [d]);
     return (0, n.jsx)("div", {
         className: R.filterSection,
         children: (0, n.jsx)(u.V, {
@@ -178,12 +178,13 @@ function L(e) {
             onFocus: h,
             onQueryChange: (e) => (null == g ? void 0 : g(e.target.value)),
             closeOnSelect: c,
-            customMatchSorter: p,
-            onBlur: C,
+            customMatchSorter: C,
+            onBlur: p,
+            wrapTags: !0,
         }),
     });
 }
-function b(e) {
+function L(e) {
     let {
         label: t,
         sublabel: l,
@@ -226,144 +227,144 @@ function v(e) {
         a = (0, h.Dt)(),
         u = (0, s.e7)([g.Z, F.Z], () => {
             let e = g.Z.getChannel(F.Z.getChannelId());
-            return null != e ? (0, p.nl)(e) : "general";
+            return null != e ? (0, C.nl)(e) : "general";
         }),
         d = (0, s.e7)([x.default], () => {
             let e = x.default.getCurrentUser();
-            return null != e ? e.username : _.intl.string(_.t.cqpybK);
+            return null != e ? e.username : f.intl.string(f.t.cqpybK);
         }),
-        [R, m] = r.useState(S.Z.getSearchInputText(i)),
-        v = r.useMemo(() => (0, p.kG)(null != R ? R : ""), [R]),
-        { prefilledSearchFilters: N, eligibleFilterTokens: O } = (0, E.p4)(v, i),
-        j = O.has(f.dCx.FILTER_FROM),
-        M = O.has(f.dCx.FILTER_MENTIONS),
-        A = O.has(f.dCx.FILTER_IN),
-        P = O.has(f.dCx.FILTER_AUTHOR_TYPE),
-        Q = r.useMemo(() => (0, p.nI)(v), [v]),
-        k = (0, T.g_)({ location: "SearchFiltersModal" }),
+        [m, v] = r.useState(S.Z.getSearchInputText(i)),
+        N = r.useMemo(() => (0, C.kG)(null != m ? m : ""), [m]),
+        { prefilledSearchFilters: O, eligibleFilterTokens: j } = (0, E.p4)(N, i),
+        M = j.has(_.dCx.FILTER_FROM),
+        A = j.has(_.dCx.FILTER_MENTIONS),
+        P = j.has(_.dCx.FILTER_IN),
+        Q = j.has(_.dCx.FILTER_AUTHOR_TYPE),
+        k = r.useMemo(() => (0, C.nI)(N), [N]),
+        D = (0, T.g_)({ location: "SearchFiltersModal" }),
         {
-            options: D,
-            query: H,
-            setQuery: B,
-            setQueryString: q,
-            handleClearFilter: Y,
+            options: H,
+            query: B,
+            setQuery: q,
+            setQueryString: Y,
+            handleClearFilter: w,
             getApplyQueryString: U,
-            handleFocusFilter: w,
-            handleBlurFilter: J,
-        } = (0, E.HJ)(i, f.dCx.FILTER_FROM, N[f.dCx.FILTER_FROM]),
+            handleFocusFilter: J,
+            handleBlurFilter: W,
+        } = (0, E.HJ)(i, _.dCx.FILTER_FROM, O[_.dCx.FILTER_FROM]),
         {
-            options: W,
-            query: Z,
-            setQuery: z,
-            setQueryString: X,
-            handleClearFilter: K,
-            getApplyQueryString: V,
-            handleFocusFilter: G,
-            handleBlurFilter: $,
-        } = (0, E.HJ)(i, f.dCx.FILTER_MENTIONS, N[f.dCx.FILTER_MENTIONS]),
+            options: Z,
+            query: z,
+            setQuery: X,
+            setQueryString: K,
+            handleClearFilter: V,
+            getApplyQueryString: G,
+            handleFocusFilter: $,
+            handleBlurFilter: ee,
+        } = (0, E.HJ)(i, _.dCx.FILTER_MENTIONS, O[_.dCx.FILTER_MENTIONS]),
         {
-            options: ee,
-            query: et,
-            setQuery: el,
-            handleClearFilter: en,
-            getApplyQueryString: er,
-            handleFocusFilter: ei,
-        } = (0, E.Z2)(i, N[f.dCx.FILTER_HAS], k),
+            options: et,
+            query: el,
+            setQuery: en,
+            handleClearFilter: er,
+            getApplyQueryString: ei,
+            handleFocusFilter: ea,
+        } = (0, E.Z2)(i, O[_.dCx.FILTER_HAS], D),
         {
-            options: ea,
-            query: eo,
-            setQuery: es,
-            setQueryString: eu,
-            handleClearFilter: ed,
-            getApplyQueryString: ec,
-            handleFocusFilter: eh,
-            handleBlurFilter: eg,
-        } = (0, E.ur)(i, N[f.dCx.FILTER_IN]),
+            options: eo,
+            query: es,
+            setQuery: eu,
+            setQueryString: ed,
+            handleClearFilter: ec,
+            getApplyQueryString: eh,
+            handleFocusFilter: eg,
+            handleBlurFilter: eF,
+        } = (0, E.ur)(i, O[_.dCx.FILTER_IN]),
         {
-            options: eF,
-            dates: ex,
+            options: ex,
+            dates: ep,
             validDates: eC,
-            handleDateQueryChange: ep,
-            handleDateChange: eT,
-            handleAddDateFilter: eE,
-            handleRemoveDateFilter: eS,
-            handleClearDateFilter: eI,
+            handleDateQueryChange: eT,
+            handleDateChange: eE,
+            handleAddDateFilter: eS,
+            handleRemoveDateFilter: eI,
+            handleClearDateFilter: e_,
             getDateQueryString: ef,
-        } = (0, E.fI)(N.dateFilters),
+        } = (0, E.fI)(O.dateFilters),
         {
-            options: e_,
-            query: eR,
-            setQuery: em,
-            handleClearFilter: ey,
+            options: eR,
+            query: em,
+            setQuery: ey,
+            handleClearFilter: eb,
             getApplyQueryString: eL,
-            handleFocusFilter: eb,
-        } = (0, E.fJ)(i, N[f.dCx.FILTER_AUTHOR_TYPE], k),
+            handleFocusFilter: ev,
+        } = (0, E.fJ)(i, O[_.dCx.FILTER_AUTHOR_TYPE], D),
         {
-            options: ev,
-            query: eN,
-            setQuery: eO,
-            handleClearFilter: ej,
-            getApplyQueryString: eM,
-        } = (0, E.zL)(i, N[f.dCx.FILTER_PINNED]),
-        eA = r.useMemo(() => {
+            options: eN,
+            query: eO,
+            setQuery: ej,
+            handleClearFilter: eM,
+            getApplyQueryString: eA,
+        } = (0, E.zL)(i, O[_.dCx.FILTER_PINNED]),
+        eP = r.useMemo(() => {
             let e = 0;
             return (
-                j && H.length > 0 && (e += H.length),
-                M && Z.length > 0 && (e += Z.length),
-                A && eo.length > 0 && (e += eo.length),
-                et.length > 0 && (e += et.length),
+                M && B.length > 0 && (e += B.length),
+                A && z.length > 0 && (e += z.length),
+                P && es.length > 0 && (e += es.length),
+                el.length > 0 && (e += el.length),
                 eC.length > 0 && (e += eC.length),
-                P && eR.length > 0 && (e += eR.length),
-                null !== eN && (e += 1),
+                Q && em.length > 0 && (e += em.length),
+                null !== eO && (e += 1),
                 e
             );
-        }, [j, H, M, Z, A, eo, et, eC, P, eR, eN]),
-        eP = r.useMemo(() => {
-            let e = er(f.dCx.FILTER_HAS),
+        }, [M, B, A, z, P, es, el, eC, Q, em, eO]),
+        eQ = r.useMemo(() => {
+            let e = ei(_.dCx.FILTER_HAS),
                 t = ef(),
-                l = eM(f.dCx.FILTER_PINNED),
+                l = eA(_.dCx.FILTER_PINNED),
                 n = [];
-            if (j) {
-                let e = U(f.dCx.FILTER_FROM);
-                null != e && n.push(e);
-            }
             if (M) {
-                let e = V(f.dCx.FILTER_MENTIONS);
+                let e = U(_.dCx.FILTER_FROM);
                 null != e && n.push(e);
             }
             if (A) {
-                let e = ec(f.dCx.FILTER_IN);
+                let e = G(_.dCx.FILTER_MENTIONS);
                 null != e && n.push(e);
             }
-            if ((null != e && n.push(e), null != t && n.push(t), P)) {
-                let e = eL(f.dCx.FILTER_AUTHOR_TYPE);
+            if (P) {
+                let e = eh(_.dCx.FILTER_IN);
+                null != e && n.push(e);
+            }
+            if ((null != e && n.push(e), null != t && n.push(t), Q)) {
+                let e = eL(_.dCx.FILTER_AUTHOR_TYPE);
                 null != e && n.push(e);
             }
             return null != l && n.push(l), [...n].join(" ");
-        }, [j, U, M, V, A, ec, er, ef, P, eL, eM]),
-        { validateFilter: eQ, validateDateFilter: ek } = (0, E.YL)({
-            nonFilterQueryString: Q,
-            filterQueryString: eP,
+        }, [M, U, A, G, P, eh, ei, ef, Q, eL, eA]),
+        { validateFilter: ek, validateDateFilter: eD } = (0, E.YL)({
+            nonFilterQueryString: k,
+            filterQueryString: eQ,
         }),
-        eD = r.useMemo(
+        eH = r.useMemo(
             () =>
                 !(
-                    (!j || (0, E.Ek)(H, N[f.dCx.FILTER_FROM])) &&
-                    (!M || (0, E.Ek)(Z, N[f.dCx.FILTER_MENTIONS])) &&
-                    (!A || (0, E.Ek)(eo, N[f.dCx.FILTER_IN])) &&
-                    (0, E.Ek)(et, N[f.dCx.FILTER_HAS]) &&
-                    (0, E.LE)(eC, N.dateFilters) &&
-                    (!P || (0, E.Ek)(eR, N[f.dCx.FILTER_AUTHOR_TYPE])) &&
-                    (0, E.Ek)(eN, N[f.dCx.FILTER_PINNED])
+                    (!M || (0, E.Ek)(B, O[_.dCx.FILTER_FROM])) &&
+                    (!A || (0, E.Ek)(z, O[_.dCx.FILTER_MENTIONS])) &&
+                    (!P || (0, E.Ek)(es, O[_.dCx.FILTER_IN])) &&
+                    (0, E.Ek)(el, O[_.dCx.FILTER_HAS]) &&
+                    (0, E.LE)(eC, O.dateFilters) &&
+                    (!Q || (0, E.Ek)(em, O[_.dCx.FILTER_AUTHOR_TYPE])) &&
+                    (0, E.Ek)(eO, O[_.dCx.FILTER_PINNED])
                 ),
-            [j, H, N, M, Z, A, eo, et, eC, P, eR, eN],
+            [M, B, O, A, z, P, es, el, eC, Q, em, eO],
         ),
-        eH = r.useCallback(() => {
-            if (0 === eP.length && 0 === Q.trim().length) {
-                C.S.dispatch(f.CkL.SEARCH_RESULTS_CLOSE), l();
+        eB = r.useCallback(() => {
+            if (0 === eQ.length && 0 === k.trim().length) {
+                p.S.dispatch(_.CkL.SEARCH_RESULTS_CLOSE), l();
                 return;
             }
-            let e = "".concat(eP, " ").concat(Q).trim();
+            let e = "".concat(eQ, " ").concat(k).trim();
             S.Z.dispatchSetSearchQuery({
                 query: e,
                 anchor: 0,
@@ -373,137 +374,140 @@ function v(e) {
                 searchQuerySource: I.w7.SEARCH_FILTERS_MODAL,
             }),
                 l();
-        }, [eP, Q, l]),
-        eB = r.useMemo(() => {
-            if (0 === eA) return _.intl.string(_.t.YfwFu1);
-            let e = "(".concat(eA, ")");
-            return "".concat(_.intl.string(_.t.YfwFu1), " ").concat(e);
-        }, [eA]),
-        eq = r.useCallback(() => {
-            j && Y(), M && K(), A && ed(), P && ey(), en(), eI(), ej();
-        }, [j, M, en, A, eI, Y, K, ed, P, ey, ej]),
-        eY =
-            M &&
-            (0, n.jsx)(L, {
-                label: _.intl.string(_.t.HEBnRU),
-                sublabel: _.intl.string(_.t.PdfTqT),
-                textPlaceholder: _.intl.formatToPlainString(_.t.zka3aJ, { username: d }),
-                value: Z,
-                onChange: z,
-                onFocus: G,
-                onSearchChange: X,
-                options: W,
+        }, [eQ, k, l]),
+        eq = r.useMemo(() => {
+            if (0 === eP) return f.intl.string(f.t.YfwFu1);
+            let e = "(".concat(eP, ")");
+            return "".concat(f.intl.string(f.t.YfwFu1), " ").concat(e);
+        }, [eP]),
+        eY = r.useCallback(() => {
+            M && w(), A && V(), P && ec(), Q && eb(), er(), e_(), eM();
+        }, [M, A, er, P, e_, w, V, ec, Q, eb, eM]),
+        ew =
+            A &&
+            (0, n.jsx)(b, {
+                label: f.intl.string(f.t.HEBnRU),
+                sublabel: f.intl.string(f.t.PdfTqT),
+                textPlaceholder: f.intl.formatToPlainString(f.t.zka3aJ, { username: d }),
+                value: z,
+                onChange: X,
+                onFocus: $,
+                onSearchChange: K,
+                options: Z,
                 filter: !0,
-                filterType: f.dCx.FILTER_MENTIONS,
-                validateFilter: eQ,
+                filterType: _.dCx.FILTER_MENTIONS,
+                validateFilter: ek,
                 closeOnSelect: !1,
-                onBlur: $,
+                onBlur: ee,
             }),
-        eU = (0, n.jsx)(L, {
-            label: _.intl.string(_.t["892qg1"]),
-            sublabel: _.intl.string(_.t["Oa//IE"]),
-            textPlaceholder: _.intl.string(_.t.tROvHH),
-            value: et,
-            onChange: el,
-            onFocus: ei,
-            options: ee,
+        eU = (0, n.jsx)(b, {
+            label: f.intl.string(f.t["892qg1"]),
+            sublabel: f.intl.string(f.t["Oa//IE"]),
+            textPlaceholder: f.intl.string(f.t.tROvHH),
+            value: el,
+            onChange: en,
+            onFocus: ea,
+            options: et,
             filter: !1,
             closeOnSelect: !1,
-            filterType: f.dCx.FILTER_HAS,
-            validateFilter: eQ,
+            filterType: _.dCx.FILTER_HAS,
+            validateFilter: ek,
         });
-    return (0, n.jsxs)(o.Modal, {
+    return (0, n.jsx)(o.Modal, {
         transitionState: t,
         onClose: l,
         "aria-labelledby": a,
-        title: _.intl.string(_.t["F8a0W/"]),
+        title: f.intl.string(f.t["F8a0W/"]),
         actions: [
             {
                 variant: "secondary",
-                text: _.intl.string(_.t["ETE/oC"]),
+                text: f.intl.string(f.t["ETE/oC"]),
                 onClick: l,
             },
             {
                 variant: "primary",
-                text: _.intl.string(_.t.qDzapn),
-                onClick: eH,
-                disabled: !eD,
+                text: f.intl.string(f.t.qDzapn),
+                onClick: eB,
+                disabled: !eH,
             },
         ],
         actionBarInput: (0, n.jsx)(c.Avr, {
             variant: "primary",
-            text: eB,
-            onClick: eq,
-            disabled: 0 === eA,
+            text: eq,
+            onClick: eY,
+            disabled: 0 === eP,
         }),
-        children: [
-            j &&
-                (0, n.jsx)(L, {
-                    label: _.intl.string(_.t.Qz6eOR),
-                    sublabel: _.intl.string(_.t["2JyXnO"]),
-                    textPlaceholder: _.intl.formatToPlainString(_.t["V4WMj/"], { username: d }),
-                    value: H,
-                    onChange: B,
-                    onFocus: w,
-                    onSearchChange: q,
-                    options: D,
-                    filter: !0,
-                    filterType: f.dCx.FILTER_FROM,
-                    validateFilter: eQ,
-                    closeOnSelect: !1,
-                    onBlur: J,
+        children: (0, n.jsxs)("div", {
+            className: R.container,
+            children: [
+                M &&
+                    (0, n.jsx)(b, {
+                        label: f.intl.string(f.t.Qz6eOR),
+                        sublabel: f.intl.string(f.t["2JyXnO"]),
+                        textPlaceholder: f.intl.formatToPlainString(f.t["V4WMj/"], { username: d }),
+                        value: B,
+                        onChange: q,
+                        onFocus: J,
+                        onSearchChange: Y,
+                        options: H,
+                        filter: !0,
+                        filterType: _.dCx.FILTER_FROM,
+                        validateFilter: ek,
+                        closeOnSelect: !1,
+                        onBlur: W,
+                    }),
+                P &&
+                    (0, n.jsx)(b, {
+                        label: f.intl.string(f.t["kLrM/s"]),
+                        sublabel: i.type === _.aib.DMS ? f.intl.string(f.t["b+abYv"]) : f.intl.string(f.t.x8cC0z),
+                        textPlaceholder: f.intl.formatToPlainString(f.t.K4l507, { channelName: u }),
+                        value: es,
+                        onChange: eu,
+                        onFocus: eg,
+                        onSearchChange: ed,
+                        options: eo,
+                        filter: !0,
+                        closeOnSelect: !1,
+                        filterType: _.dCx.FILTER_IN,
+                        validateFilter: ek,
+                        onBlur: eF,
+                    }),
+                D ? eU : ew,
+                D ? ew : eU,
+                (0, n.jsx)(y, {
+                    options: ex,
+                    dates: ep,
+                    handleDateQueryChange: eT,
+                    handleDateChange: eE,
+                    handleAddDateFilter: eS,
+                    handleRemoveDateFilter: eI,
+                    validateDateFilter: eD,
                 }),
-            A &&
+                Q &&
+                    (0, n.jsx)(b, {
+                        label: f.intl.string(f.t.Xgc1av),
+                        sublabel: f.intl.string(f.t.XaOAdt),
+                        textPlaceholder: f.intl.string(f.t.CAdOdf),
+                        value: em,
+                        onChange: ey,
+                        onFocus: ev,
+                        options: eR,
+                        filter: !1,
+                        closeOnSelect: !1,
+                        filterType: _.dCx.FILTER_AUTHOR_TYPE,
+                        validateFilter: ek,
+                    }),
                 (0, n.jsx)(L, {
-                    label: _.intl.string(_.t["kLrM/s"]),
-                    sublabel: _.intl.string(_.t.x8cC0z),
-                    textPlaceholder: _.intl.formatToPlainString(_.t.K4l507, { channelName: u }),
-                    value: eo,
-                    onChange: es,
-                    onFocus: eh,
-                    onSearchChange: eu,
-                    options: ea,
-                    filter: !0,
-                    closeOnSelect: !1,
-                    filterType: f.dCx.FILTER_IN,
-                    validateFilter: eQ,
-                    onBlur: eg,
+                    label: f.intl.string(f.t["6LYPWS"]),
+                    sublabel: f.intl.string(f.t.L8jjfu),
+                    textPlaceholder: f.intl.string(f.t.AQpFbX),
+                    value: eO,
+                    onChange: ej,
+                    options: eN,
+                    filterType: _.dCx.FILTER_PINNED,
+                    validateFilter: ek,
                 }),
-            k ? eU : eY,
-            k ? eY : eU,
-            (0, n.jsx)(y, {
-                options: eF,
-                dates: ex,
-                handleDateQueryChange: ep,
-                handleDateChange: eT,
-                handleAddDateFilter: eE,
-                handleRemoveDateFilter: eS,
-                validateDateFilter: ek,
-            }),
-            P &&
-                (0, n.jsx)(L, {
-                    label: _.intl.string(_.t.Xgc1av),
-                    sublabel: _.intl.string(_.t.XaOAdt),
-                    textPlaceholder: _.intl.string(_.t.CAdOdf),
-                    value: eR,
-                    onChange: em,
-                    onFocus: eb,
-                    options: e_,
-                    filter: !1,
-                    closeOnSelect: !1,
-                    filterType: f.dCx.FILTER_AUTHOR_TYPE,
-                    validateFilter: eQ,
-                }),
-            (0, n.jsx)(b, {
-                label: _.intl.string(_.t["6LYPWS"]),
-                sublabel: _.intl.string(_.t.L8jjfu),
-                textPlaceholder: _.intl.string(_.t.AQpFbX),
-                value: eN,
-                onChange: eO,
-                options: ev,
-                filterType: f.dCx.FILTER_PINNED,
-                validateFilter: eQ,
-            }),
-        ],
+            ],
+        }),
     });
 }

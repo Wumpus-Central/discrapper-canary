@@ -143,18 +143,22 @@ function v(e) {
                     { autocompleteCount: o, autocompleteGroups: s } = A({
                         filterFn: (e) => e.group === b.rtL.HISTORY && e.results.length > 0,
                         getAutocompleteRowItem: (e) => {
-                            let { result: t, modeType: r, group: a } = e,
-                                s = (0, f.lw)({
+                            let { result: t, modeType: r, group: s } = e,
+                                l = (0, f.lw)({
                                     modeType: r,
                                     result: t,
-                                    group: a,
+                                    group: s,
                                 }),
-                                l = (0, u.GM)({
+                                c = (0, u.GM)({
                                     result: t,
-                                    group: a,
+                                    group: s,
                                 }),
-                                { label: c, ariaLabel: p } = (0, u.HU)({ value: t.text }),
-                                _ = (e) => {
+                                { label: p, ariaLabel: _ } = (0, u.HU)({
+                                    value: t.text,
+                                    avatarSize: a.EFr.SIZE_16,
+                                    iconSize: "xs",
+                                }),
+                                h = (e) => {
                                     let { selectedIndex: t } = e;
                                     (0, m.$z)({
                                         searchContext: n,
@@ -162,17 +166,17 @@ function v(e) {
                                         searchHistoryTotalResults: o,
                                     }),
                                         S({
-                                            query: s,
+                                            query: l,
                                             performSearch: !0,
                                             replace: !1,
                                         });
                                 };
                             return (0, f.fC)(d.i.ROW, {
-                                icon: l,
-                                label: c,
-                                ariaLabel: y.intl.formatToPlainString(y.t.WoiGrV, { suggestion: p }),
-                                resultText: s,
-                                onSelect: _,
+                                icon: c,
+                                label: p,
+                                ariaLabel: y.intl.formatToPlainString(y.t.WoiGrV, { suggestion: _ }),
+                                resultText: l,
+                                onSelect: h,
                             });
                         },
                         getAutocompleteGroupItem: (e) => {
@@ -191,7 +195,11 @@ function v(e) {
             [b.Sap.FILTER_ALL]: () => {
                 let e = [];
                 if ("" !== t.query.trim()) {
-                    let { label: i } = (0, u.HU)({ value: t.query }),
+                    let { label: i } = (0, u.HU)({
+                            value: t.query,
+                            avatarSize: a.EFr.SIZE_16,
+                            iconSize: "xs",
+                        }),
                         o = (0, f.fC)(d.i.ROW, {
                             icon: (0, r.jsx)(a._Ve, {
                                 size: "sm",

@@ -1,17 +1,15 @@
 n.d(t, {
-    GM: () => V,
-    HU: () => G,
-    Nk: () => H,
-    Q0: () => R,
-    V4: () => z,
-    YQ: () => W,
-    _B: () => P,
-    dI: () => M,
-    do: () => x,
-    f: () => D,
-    mW: () => w,
-    pb: () => Y,
-    uB: () => K,
+    GM: () => H,
+    HU: () => Z,
+    Nk: () => Y,
+    Q0: () => w,
+    V4: () => q,
+    _B: () => R,
+    dI: () => k,
+    do: () => L,
+    f: () => x,
+    mW: () => D,
+    uB: () => z,
 }),
     n(781311),
     n(35282);
@@ -30,15 +28,16 @@ var i = n(120356),
     _ = n(607802),
     m = n(28964),
     h = n(532428),
-    g = n(628221),
-    E = n(991896),
-    b = n(579612),
-    y = n(723642),
-    O = n(981631),
-    v = n(268685),
-    S = n(388032),
-    I = n(493090);
-function T(e, t, n) {
+    g = n(465524),
+    E = n(628221),
+    b = n(991896),
+    y = n(579612),
+    O = n(723642),
+    v = n(981631),
+    S = n(268685),
+    I = n(388032),
+    T = n(493090);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +50,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,12 +61,12 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
 }
-function C(e, t) {
+function N(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -79,34 +78,34 @@ function C(e, t) {
     }
     return n;
 }
-function N(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : N(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function P(e) {
+function R(e) {
     let { icon: t, label: n, sublabel: i, onSelect: a, navId: o, index: s, selected: c } = e,
         u = () => {
             a({
-                searchAutocompleteSelectAction: y.ZW.CLICK,
+                searchAutocompleteSelectAction: O.ZW.CLICK,
                 selectedIndex: s,
             });
         };
     return (0, r.jsx)(
         l.P3F,
-        N(
-            A(
+        P(
+            C(
                 {
-                    className: I.itemContainer,
+                    className: T.itemContainer,
                     onClick: u,
                 },
-                (0, g.lR)({
+                (0, E.lR)({
                     navId: o,
                     index: s,
                     selected: c,
@@ -114,7 +113,7 @@ function P(e) {
             ),
             {
                 children: (0, r.jsxs)("div", {
-                    className: I.item,
+                    className: T.item,
                     children: [
                         t,
                         null == i
@@ -128,7 +127,7 @@ function P(e) {
         ),
     );
 }
-function R(e) {
+function w(e) {
     let { label: t, className: n } = e;
     return (0, r.jsx)(l.Text, {
         variant: "text-sm/medium",
@@ -137,13 +136,13 @@ function R(e) {
         children: t,
     });
 }
-function w(e) {
+function D(e) {
     var t, n;
     let { searchTokenType: i, answer: a } = e,
         o = null != (n = null == (t = h.ZP[i]) ? void 0 : t.key) ? n : "",
         s = null != a ? a : (0, _.Ko)(i);
     return (0, r.jsxs)("div", {
-        className: I.filterSublabelTextContainer,
+        className: T.filterSublabelTextContainer,
         children: [
             (0, r.jsx)(l.Text, {
                 variant: "text-sm/semibold",
@@ -158,54 +157,56 @@ function w(e) {
         ],
     });
 }
-function D(e) {
+function x(e) {
     let t = (0, _.nl)(e);
     return (0, r.jsxs)("div", {
-        className: I.channelNameContainer,
+        className: T.channelNameContainer,
         children: [
-            (0, r.jsx)(b.MC, {
+            (0, r.jsx)(y.MC, {
                 channel: e,
-                className: I.channelNameIcon,
+                className: T.channelNameIcon,
+                avatarSize: l.EFr.SIZE_16,
+                iconSize: "xs",
             }),
             (0, r.jsx)(l.Text, {
                 variant: "text-sm/semibold",
                 color: "text-strong",
-                className: I.channelName,
+                className: T.channelName,
                 children: t,
             }),
         ],
     });
 }
-function x(e) {
+function L(e) {
     let { searchContext: t } = e;
     return (0, r.jsx)(s.u, {
         asContainer: !0,
-        text: S.intl.string(S.t.dwAvX1),
+        text: I.intl.string(I.t.dwAvX1),
         position: "left",
         children: (0, r.jsx)(l.P3F, {
-            onClick: () => E.Z.clearSearchHistory(t),
-            className: I.clearSearchHistory,
-            title: S.intl.string(S.t.dwAvX1),
-            "aria-label": S.intl.string(S.t.dwAvX1),
+            onClick: () => b.Z.clearSearchHistory(t),
+            className: T.clearSearchHistory,
+            title: I.intl.string(I.t.dwAvX1),
+            "aria-label": I.intl.string(I.t.dwAvX1),
             children: (0, r.jsx)(l.XHJ, {
                 size: "sm",
                 color: "currentColor",
-                className: I.clearSearchHistoryIcon,
+                className: T.clearSearchHistoryIcon,
             }),
         }),
     });
 }
-function L(e) {
+function j(e) {
     let { title: t, showDivider: n, children: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            n && (0, r.jsx)("div", { className: I.divider }),
+            n && (0, r.jsx)("div", { className: T.divider }),
             (0, r.jsx)(
                 "ul",
                 {
                     role: "group",
                     "aria-labelledby": "".concat(t, "-header"),
-                    className: I.groupWrapper,
+                    className: T.groupWrapper,
                     children: i,
                 },
                 t,
@@ -213,11 +214,11 @@ function L(e) {
         ],
     });
 }
-function j(e) {
+function M(e) {
     let { headerId: t, titleText: n, trailingIcon: i } = e;
     return (0, r.jsxs)("div", {
         id: t,
-        className: I.groupHeader,
+        className: T.groupHeader,
         children: [
             (0, r.jsx)(l.Text, {
                 variant: "text-xs/semibold",
@@ -228,15 +229,15 @@ function j(e) {
         ],
     });
 }
-function M(e) {
+function k(e) {
     let { navId: t, item: n, startingIndex: i, selectedIndex: a } = e,
         o = i,
         { rows: s, title: l, trailingIcon: c } = n.data;
-    return (0, r.jsxs)(L, {
+    return (0, r.jsxs)(j, {
         title: l,
         showDivider: i > 0,
         children: [
-            (0, r.jsx)(j, {
+            (0, r.jsx)(M, {
                 headerId: l,
                 titleText: l,
                 trailingIcon: c,
@@ -248,7 +249,7 @@ function M(e) {
                 return (
                     (o += 1),
                     (0, r.jsx)(
-                        P,
+                        R,
                         {
                             icon: i,
                             label: s,
@@ -265,10 +266,10 @@ function M(e) {
         ],
     });
 }
-function k(e) {
+function U(e) {
     let { size: t, user: n, className: i } = e,
         a = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
-        s = (0, v.px)(t);
+        s = (0, S.px)(t);
     return (0, r.jsx)(l.qEK, {
         size: t,
         src: n.getAvatarURL(a, s),
@@ -276,7 +277,7 @@ function k(e) {
         className: i,
     });
 }
-function U(e) {
+function G(e) {
     let { user: t } = e,
         { selectedGuildId: n, selectedChannelId: i } = (0, o.cj)([d.Z, u.Z], () => {
             let e = d.Z.getGuildId(),
@@ -293,51 +294,66 @@ function U(e) {
         children: a,
     });
 }
-function G(e) {
-    let { value: t } = e,
-        n = "",
-        i = (0, g.ew)(t).map((e, t) => {
-            let i = e.getFullMatch();
-            if (0 === i.trim().length) return null;
-            n += i;
-            let a = O.TNx.test(e.type),
-                o = O.KA4.test(e.type),
-                s = "".concat(e.type, "-").concat(i, "-").concat(t);
-            if (o)
+function Z(e) {
+    let { value: t, avatarSize: n, iconSize: i } = e,
+        a = "",
+        o = (0, E.ew)(t).map((e, t) => {
+            let o = e.getFullMatch();
+            if (0 === o.trim().length) return null;
+            a += o;
+            let s = v.TNx.test(e.type),
+                l = v.KA4.test(e.type),
+                c = "".concat(e.type, "-").concat(o, "-").concat(t);
+            if (l)
                 switch (e.type) {
-                    case O.dCx.ANSWER_USERNAME_FROM:
-                    case O.dCx.ANSWER_USERNAME_MENTIONS:
-                        return (0, r.jsx)(B, { token: e }, s);
-                    case O.dCx.ANSWER_IN:
-                        return (0, r.jsx)(F, { token: e }, s);
+                    case v.dCx.ANSWER_USERNAME_FROM:
+                    case v.dCx.ANSWER_USERNAME_MENTIONS:
+                        return (0, r.jsx)(
+                            F,
+                            {
+                                token: e,
+                                avatarSize: n,
+                            },
+                            c,
+                        );
+                    case v.dCx.ANSWER_IN:
+                        return (0, r.jsx)(
+                            V,
+                            {
+                                token: e,
+                                avatarSize: n,
+                                iconSize: i,
+                            },
+                            c,
+                        );
                     default:
                         return (0, r.jsx)(
-                            Z,
+                            B,
                             {
-                                text: i,
-                                className: I.answerPill,
+                                text: o,
+                                className: T.answerPill,
                             },
-                            s,
+                            c,
                         );
                 }
             return (0, r.jsx)(
-                Z,
+                B,
                 {
-                    text: i,
-                    className: a ? I.filterPill : I.nonText,
+                    text: o,
+                    className: s ? T.filterPill : T.nonText,
                 },
-                s,
+                c,
             );
         });
     return {
         label: (0, r.jsx)("div", {
-            className: I.autocompletePillContainer,
-            children: i,
+            className: T.autocompletePillContainer,
+            children: o,
         }),
-        ariaLabel: n,
+        ariaLabel: a,
     };
 }
-function Z(e) {
+function B(e) {
     let { text: t, className: n } = e;
     return (0, r.jsx)(l.Text, {
         variant: "text-sm/semibold",
@@ -346,101 +362,103 @@ function Z(e) {
         children: t,
     });
 }
-function B(e) {
-    let { token: t } = e,
-        n = t.getFullMatch(),
-        i = t.getData("userId"),
-        a = (0, o.e7)([f.default], () => f.default.getUser(i));
-    return null == a
-        ? (0, r.jsx)(Z, {
-              text: n,
-              className: I.answerPill,
+function F(e) {
+    let { token: t, avatarSize: n } = e,
+        i = t.getFullMatch(),
+        a = t.getData("userId"),
+        s = (0, o.e7)([f.default], () => f.default.getUser(a));
+    return null == s
+        ? (0, r.jsx)(B, {
+              text: i,
+              className: T.answerPill,
           })
         : (0, r.jsxs)("div", {
-              className: I.answerPill,
+              className: T.answerPill,
               children: [
-                  (0, r.jsx)(k, {
-                      size: l.EFr.SIZE_16,
-                      user: a,
+                  (0, r.jsx)(U, {
+                      size: n,
+                      user: s,
                   }),
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/semibold",
                       color: "text-strong",
-                      children: a.username,
+                      children: s.username,
                   }),
               ],
           });
 }
-function F(e) {
+function V(e) {
     var t;
-    let { token: n } = e,
-        i = n.getFullMatch(),
-        s = null != (t = n.getData("channelIds")) ? t : [],
-        u = (0, o.e7)([c.Z], () => c.Z.getChannel(s[0]));
-    if (null == u)
-        return (0, r.jsx)(Z, {
-            text: i,
-            className: I.answerPill,
+    let { token: n, avatarSize: i, iconSize: s } = e,
+        u = n.getFullMatch(),
+        d = null != (t = n.getData("channelIds")) ? t : [],
+        f = (0, o.e7)([c.Z], () => c.Z.getChannel(d[0]));
+    if (null == f)
+        return (0, r.jsx)(B, {
+            text: u,
+            className: T.answerPill,
         });
-    let d = (0, _.nl)(u);
+    let p = (0, _.nl)(f);
     return (0, r.jsxs)("div", {
-        className: a()(I.answerPill, I.channelAnswerPill),
+        className: a()(T.answerPill, T.channelAnswerPill),
         children: [
-            (0, r.jsx)(b.MC, {
-                channel: u,
-                className: I.channelPillIcon,
+            (0, r.jsx)(y.MC, {
+                channel: f,
+                className: T.channelPillIcon,
+                avatarSize: i,
+                iconSize: s,
             }),
             (0, r.jsx)(l.Text, {
                 variant: "text-sm/semibold",
                 color: "text-strong",
-                children: d,
+                children: p,
             }),
         ],
     });
 }
-function V(e) {
+function H(e) {
     let { result: t, group: n } = e;
-    if (n === O.rtL.HISTORY)
+    if (n === v.rtL.HISTORY)
         return (0, r.jsx)(l._Ve, {
             size: "sm",
             color: "currentColor",
-            className: I.itemIcon,
+            className: T.itemIcon,
         });
     let { channel: i, user: a } = t;
     return null != i
         ? (0, r.jsx)(l.VL1, {
               size: "sm",
               color: "currentColor",
-              className: I.itemIcon,
+              className: T.itemIcon,
           })
         : null != a
-          ? n === O.dCx.FILTER_MENTIONS
+          ? n === v.dCx.FILTER_MENTIONS
               ? (0, r.jsx)(l.lOy, {
                     size: "sm",
                     color: "currentColor",
-                    className: I.itemIcon,
+                    className: T.itemIcon,
                 })
               : (0, r.jsx)(l.tBG, {
                     size: "sm",
                     color: "currentColor",
-                    className: I.itemIcon,
+                    className: T.itemIcon,
                 })
           : null;
 }
-function H(e) {
+function Y(e) {
     let { channel: t, user: n, text: i } = e;
     if (null != t) {
         var a;
         return {
             label: (0, r.jsxs)("div", {
-                className: I.labelWithElements,
+                className: T.labelWithElements,
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/medium",
                         color: "text-strong",
-                        children: null != (a = h.ZP[O.dCx.FILTER_IN].key) ? a : "",
+                        children: null != (a = h.ZP[v.dCx.FILTER_IN].key) ? a : "",
                     }),
-                    D(t),
+                    x(t),
                 ],
             }),
             ariaLabel: t.name,
@@ -449,138 +467,76 @@ function H(e) {
     return null != n
         ? {
               label: (0, r.jsxs)("div", {
-                  className: I.labelWithElements,
+                  className: T.labelWithElements,
                   children: [
-                      (0, r.jsx)(k, {
+                      (0, r.jsx)(U, {
                           size: l.EFr.SIZE_16,
                           user: n,
                       }),
-                      (0, r.jsx)(U, { user: n }),
+                      (0, r.jsx)(G, { user: n }),
                   ],
               }),
               ariaLabel: n.username,
           }
         : {
-              label: (0, r.jsx)(R, { label: i }),
+              label: (0, r.jsx)(w, { label: i }),
               ariaLabel: i,
           };
 }
-function Y(e) {
-    let { text: t, className: n, size: i } = e;
-    switch (t) {
-        case S.intl.string(S.t.ZNR2fi):
-            return (0, r.jsx)(l.xPt, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        case S.intl.string(S.t["20uQR3"]):
-            return (0, r.jsx)(l.FLu, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        case S.intl.string(S.t.L4lxyE):
-            return (0, r.jsx)(l.QDj, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        case S.intl.string(S.t["AV/v6i"]):
-            return (0, r.jsx)(l.aAW, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        case S.intl.string(S.t.XM9XGP):
-            return (0, r.jsx)(l.Odl, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        case S.intl.string(S.t.TNLcpx):
-            return (0, r.jsx)(l.XBm, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        case S.intl.string(S.t.F8Wf0e):
-            return (0, r.jsx)(l.KY1, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        case S.intl.string(S.t.PJgX2h):
-            return (0, r.jsx)(l.SlE, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        case S.intl.string(S.t.nrpA5E):
-            return (0, r.jsx)(l.WZu, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        default:
-            return null;
-    }
-}
 function W(e) {
-    let { text: t, className: n, size: i } = e;
-    switch (t) {
-        case S.intl.string(S.t.tPZo4p):
-            return (0, r.jsx)(l.tBG, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        case S.intl.string(S.t.JL7sRS):
-            return (0, r.jsx)(l.wGt, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        case S.intl.string(S.t.WjkIKU):
-            return (0, r.jsx)(l.tYf, {
-                size: i,
-                color: "currentColor",
-                className: n,
-            });
-        default:
-            return null;
-    }
+    let { text: t, className: n, size: i } = e,
+        a = (0, g.Xb)(t);
+    return null != a
+        ? (0, r.jsx)(a, {
+              size: i,
+              color: "currentColor",
+              className: n,
+          })
+        : null;
 }
 function K(e) {
+    let { text: t, className: n, size: i } = e,
+        a = (0, g.Lw)(t);
+    return null != a
+        ? (0, r.jsx)(a, {
+              size: i,
+              color: "currentColor",
+              className: n,
+          })
+        : null;
+}
+function z(e) {
     let { result: t, group: n } = e,
         { channel: i, user: a } = t;
     if (null != i)
-        return (0, r.jsx)(b.MC, {
+        return (0, r.jsx)(y.MC, {
             channel: i,
-            className: I.itemIcon,
+            className: T.itemIcon,
+            avatarSize: l.EFr.SIZE_20,
+            iconSize: "refresh_sm",
         });
     if (null != a)
-        return (0, r.jsx)(k, {
+        return (0, r.jsx)(U, {
             size: l.EFr.SIZE_20,
             user: a,
-            className: I.itemIcon,
+            className: T.itemIcon,
         });
     let o = (0, m.q$)({ location: "getAutocompleteIcon" });
-    return n === O.dCx.FILTER_HAS && o
-        ? (0, r.jsx)(Y, {
+    return n === v.dCx.FILTER_HAS && o
+        ? (0, r.jsx)(W, {
               size: "sm",
               text: t.text,
-              className: I.itemIcon,
+              className: T.itemIcon,
           })
-        : n === O.dCx.FILTER_AUTHOR_TYPE && o
-          ? (0, r.jsx)(W, {
+        : n === v.dCx.FILTER_AUTHOR_TYPE && o
+          ? (0, r.jsx)(K, {
                 size: "sm",
                 text: t.text,
-                className: I.itemIcon,
+                className: T.itemIcon,
             })
           : null;
 }
-function z(e) {
+function q(e) {
     let { channel: t, user: n, text: i } = e;
     if (null != t) {
         let e = (0, _.nl)(t);
@@ -596,9 +552,9 @@ function z(e) {
     return null != n
         ? {
               label: (0, r.jsxs)("div", {
-                  className: I.labelWithElements,
+                  className: T.labelWithElements,
                   children: [
-                      (0, r.jsx)(U, { user: n }),
+                      (0, r.jsx)(G, { user: n }),
                       (0, r.jsx)(l.Text, {
                           variant: "text-sm/medium",
                           color: "text-subtle",
@@ -609,7 +565,7 @@ function z(e) {
               ariaLabel: n.username,
           }
         : {
-              label: (0, r.jsx)(R, { label: i }),
+              label: (0, r.jsx)(w, { label: i }),
               ariaLabel: i,
           };
 }

@@ -217,12 +217,13 @@ function Q(e, t, n) {
 }
 function X(e, t) {
     let n = Object.values(d.Z.getMutablePrivateChannels()).filter((e) => {
-        if (t === (0, u.F6)(e, h.default, p.Z)) return !0;
+        if (e.isGroupDM() && t === (0, u.F6)(e, h.default, p.Z)) return !0;
         if (e.isDM()) {
             let n = e.getRecipientId(),
                 r = h.default.getUser(n);
             return null != r && t === b.ZP.getUserTag(r);
         }
+        return !1;
     });
     return (
         (null == n ? void 0 : n.length) > 0 &&
