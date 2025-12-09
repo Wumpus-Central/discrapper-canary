@@ -263,43 +263,45 @@ function B(e) {
     function o() {
         h.Kw(T.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
-    let l = a ? N.intl.string(N.t["5TUJOv"]) : n;
-    return (0, r.jsxs)(c.jSM, {
-        text: l,
-        className: P.newBackgroundTooltipContainer,
-        children: [
-            (0, r.jsxs)(k, {
-                className: P.__invalid_backgroundOptionBlurred,
-                disabled: i,
-                icon: c.FmF,
-                onClick: t,
-                onMouseLeave: o,
-                onBlur: o,
-                text: (0, r.jsxs)("div", {
-                    className: P.backgroundCustomInlineUpsell,
+    let u = a ? N.intl.string(N.t["5TUJOv"]) : n;
+    return (0, r.jsx)(l.u, {
+        text: u,
+        children: (0, r.jsxs)("div", {
+            className: P.newBackgroundTooltipContainer,
+            children: [
+                (0, r.jsxs)(k, {
+                    className: P.__invalid_backgroundOptionBlurred,
+                    disabled: i,
+                    icon: c.FmF,
+                    onClick: t,
+                    onMouseLeave: o,
+                    onBlur: o,
+                    text: (0, r.jsxs)("div", {
+                        className: P.backgroundCustomInlineUpsell,
+                        children: [
+                            (0, r.jsx)(c.SrA, {
+                                size: "md",
+                                color: "currentColor",
+                                className: P.backgroundCustomInlineUpsellIcon,
+                            }),
+                            (0, r.jsx)("div", {
+                                className: P.overflowEllipsis,
+                                children: N.intl.string(N.t["1t7U8W"]),
+                            }),
+                        ],
+                    }),
                     children: [
-                        (0, r.jsx)(c.SrA, {
-                            size: "md",
-                            color: "currentColor",
-                            className: P.backgroundCustomInlineUpsellIcon,
-                        }),
-                        (0, r.jsx)("div", {
-                            className: P.overflowEllipsis,
-                            children: N.intl.string(N.t["1t7U8W"]),
-                        }),
+                        (0, r.jsx)("div", { className: P.backgroundCustomInlineUpsellBackground }),
+                        (0, r.jsx)("div", { className: P.backgroundCustomInlineUpsellBackgroundDarkener }),
                     ],
                 }),
-                children: [
-                    (0, r.jsx)("div", { className: P.backgroundCustomInlineUpsellBackground }),
-                    (0, r.jsx)("div", { className: P.backgroundCustomInlineUpsellBackgroundDarkener }),
-                ],
-            }),
-            a &&
-                (0, r.jsx)(c.IGR, {
-                    text: N.intl.string(N.t.y2b7CA),
-                    className: P.newTextBadge,
-                }),
-        ],
+                a &&
+                    (0, r.jsx)(c.IGR, {
+                        text: N.intl.string(N.t.y2b7CA),
+                        className: P.newTextBadge,
+                    }),
+            ],
+        }),
     });
 }
 function F(e) {
