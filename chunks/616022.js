@@ -1,4 +1,4 @@
-let r, i, a, o, s, l, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, A, C, N;
+let r, i, a, o, s, l, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, C, A, N;
 n.d(t, { Z: () => e4 }), n(388685);
 var P,
     R = n(392711),
@@ -101,10 +101,10 @@ function en() {
         (I = new Map()),
         (T = new Map()),
         eX(),
-        (A = null),
+        (C = null),
         (N = new Map()),
         ($ = new Map()),
-        (C = new Map());
+        (A = new Map());
 }
 function er(e, t) {
     var n, r, i, a;
@@ -183,7 +183,7 @@ function ef(e) {
     for (let e of ((c = new Map()), n)) c.set(e.id, e);
     for (let e of null == N ? void 0 : N.values())
         l.has(e.id) || (l.set(e.id, e), s.set(e.id, e.config), a.set(e.id, (0, Z.zi)(e)));
-    (T = a), eQ(), (A = null != i ? new Date(i) : null);
+    (T = a), eQ(), (C = null != i ? new Date(i) : null);
 }
 function ep() {
     (d = 0), (r = !1);
@@ -245,11 +245,11 @@ function eT(e) {
         n = new Set(p);
     n.add(t), (p = n);
 }
-function eA(e) {
+function eC(e) {
     let { enrolledQuestUserStatus: t } = e;
     ei(t.questId, { userStatus: t }), eI(t.questId);
 }
-function eC(e) {
+function eA(e) {
     let { questId: t } = e;
     eI(t);
 }
@@ -362,15 +362,17 @@ function eY(e) {
     (f = Date.now()), (i = !1), (a = new Map(a)).set(n, !1);
     let { enableNewRequestBehavior: d } = U.Z.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
     if (d) {
-        var p, _, m;
+        var p;
         let e = {
             questId: null != (p = null == t ? void 0 : t.id) ? p : null,
             fetchedAt: u,
             ttlMillis: eW(s),
-            adSetId: null != (_ = null == r ? void 0 : r.ad_set_id) ? _ : null,
-            adRequestId: null != (m = null == r ? void 0 : r.decision_id) ? m : null,
+            adDecisionData: r,
+            adContext: o,
+            metadataRaw: l,
+            metadataSealed: c,
         };
-        (C = new Map(C)).set(n, e);
+        (A = new Map(A)).set(n, e);
     } else
         null == t
             ? I.delete(n)
@@ -417,7 +419,7 @@ function eX() {
 }
 function eJ(e) {
     let { quest_enrollment_blocked_until: t } = e;
-    A = null != t ? new Date(t) : null;
+    C = null != t ? new Date(t) : null;
 }
 function e$() {
     X = !0;
@@ -468,10 +470,10 @@ class e3 extends (P = x.ZP.Store) {
         return I;
     }
     get questEnrollmentBlockedUntil() {
-        return A;
+        return C;
     }
     get questAdDecisionByPlacement() {
-        return C;
+        return A;
     }
     getFetchQuestPreviewError(e) {
         return $.get(e);
@@ -555,8 +557,8 @@ let e2 = new e3(L.Z, {
         QUESTS_SEND_HEARTBEAT_SUCCESS: eO,
         QUESTS_SEND_HEARTBEAT_FAILURE: ev,
         QUESTS_ENROLL_BEGIN: eT,
-        QUESTS_ENROLL_SUCCESS: eA,
-        QUESTS_ENROLL_FAILURE: eC,
+        QUESTS_ENROLL_SUCCESS: eC,
+        QUESTS_ENROLL_FAILURE: eA,
         QUESTS_FETCH_REWARD_CODE_BEGIN: eN,
         QUESTS_FETCH_REWARD_CODE_SUCCESS: eP,
         QUESTS_FETCH_REWARD_CODE_FAILURE: eR,
