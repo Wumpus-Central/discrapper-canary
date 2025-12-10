@@ -2,7 +2,7 @@ n.d(t, { default: () => f }), n(539854);
 var i = n(54381),
     a = n(473749),
     o = n(149765),
-    r = n(755721),
+    r = n(793030),
     l = n(481060),
     s = n(422559),
     c = n(601964),
@@ -58,8 +58,8 @@ function h(e) {
         ],
     });
 }
-let I = (e) => (e.toString() === m.Plq.MENTION_EVERYONE.toString() ? O.intl.string(O.t.yCpsQw) : (0, s.wt)(e));
-function T(e) {
+let T = (e) => (e.toString() === m.Plq.MENTION_EVERYONE.toString() ? O.intl.string(O.t.yCpsQw) : (0, s.wt)(e));
+function I(e) {
     let { permissions: t } = e;
     return (0, i.jsxs)("div", {
         className: S.tableContainer,
@@ -82,7 +82,7 @@ function T(e) {
                                 (0, i.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
-                                    children: I(e),
+                                    children: T(e),
                                 }),
                             ],
                         },
@@ -116,7 +116,7 @@ function N(e) {
                                 (0, i.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: I(e),
+                                    children: T(e),
                                 }),
                             ],
                         },
@@ -134,32 +134,29 @@ function y(e) {
         "data-migration-pending": !0,
         children: (0, i.jsxs)("div", {
             className: S.table,
-            children: [(0, i.jsx)(T, { permissions: n }), (0, i.jsx)(N, { permissions: a })],
+            children: [(0, i.jsx)(I, { permissions: n }), (0, i.jsx)(N, { permissions: a })],
         }),
     });
 }
 function b(e) {
     let { onConfirm: t, onDismiss: n } = e;
-    return (0, i.jsxs)(l.mzw, {
+    return (0, i.jsx)(l.mzw, {
         className: S.footer,
         "data-migration-pending": !0,
-        children: [
-            (0, i.jsx)(l.Button, {
-                variant: "primary",
-                text: O.intl.string(O.t.iOSdAW),
-                onClick: t,
-            }),
-            (0, i.jsx)(r.zx, {
-                look: r.zx.Looks.LINK,
-                onClick: n,
-                color: r.zx.Colors.PRIMARY,
-                children: (0, i.jsx)(l.Text, {
-                    variant: "text-sm/semibold",
-                    color: "header-primary",
-                    children: O.intl.string(O.t.gWQZvr),
+        children: (0, i.jsxs)(r.hE2, {
+            fullWidth: !0,
+            children: [
+                (0, i.jsx)(r.zxk, {
+                    variant: "secondary",
+                    text: O.intl.string(O.t.gWQZvr),
+                    onClick: n,
                 }),
-            }),
-        ],
+                (0, i.jsx)(r.zxk, {
+                    text: O.intl.string(O.t.iOSdAW),
+                    onClick: t,
+                }),
+            ],
+        }),
     });
 }
 function f(e) {

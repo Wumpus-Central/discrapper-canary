@@ -1317,6 +1317,10 @@ let y = {
         let { default: e } = await Promise.all([n.e("74969"), n.e("33721")]).then(n.bind(n, 153932));
         return (t) => (0, a.jsx)(e, j({}, t));
     },
+    AcceptInviteModal: async () => {
+        let { default: e } = await Promise.all([n.e("13873"), n.e("86872"), n.e("60231")]).then(n.bind(n, 472365));
+        return (t) => (0, a.jsx)(e, j({}, t));
+    },
 };
 function C() {
     let e = r.useMemo(

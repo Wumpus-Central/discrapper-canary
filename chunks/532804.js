@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(755721),
+    s = n(793030),
     o = n(186523),
     c = n(553826),
     d = n(137510),
@@ -36,11 +36,9 @@ function f(e) {
               ? l
               : "",
         highlightColor: O ? d.q.NONE : null == I ? void 0 : I.highlightColor,
-        action: (0, r.jsx)(s.zx, {
-            look: s.zx.Looks.LINK,
-            size: s.zx.Sizes.MIN,
-            color: s.zx.Colors.LINK,
-            children: m.intl.string(m.t.GEgsA4),
+        action: (0, r.jsx)(s.Avr, {
+            text: m.intl.string(m.t.GEgsA4),
+            textVariant: "text-sm/medium",
         }),
         loading: y,
         className: x,
