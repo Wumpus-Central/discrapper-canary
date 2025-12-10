@@ -1,4 +1,4 @@
-n.d(t, { T: () => b }), n(388685), n(415506);
+n.d(t, { T: () => g }), n(388685), n(415506);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -141,21 +141,15 @@ function h(e) {
     );
 }
 function g(e) {
-    return e.every((e) => e.type === c.J.TAB_ITEM) && e.length > 0;
-}
-function E(e) {
-    return e.every((e) => e.type === c.J.PANE) && 1 === e.length;
-}
-function b(e) {
     let { node: t } = e,
         { layout: n } = t;
-    if (g(n))
+    if ((0, c.sp)(n))
         return (0, r.jsx)(m, {
             panelKey: t.key,
             notice: t.notice,
             layout: n,
         });
-    if (E(n))
+    if ((0, c.iU)(n))
         return (0, r.jsx)(h, {
             panelKey: t.key,
             notice: t.notice,

@@ -114,37 +114,37 @@ function f(e, t, n) {
     });
 }
 function p(e) {
-    return f("$Root", r.J.ROOT, e);
+    return f("$Root", r.Jq.ROOT, e);
 }
 function _(e, t) {
-    return f(e, r.J.SECTION, t);
+    return f(e, r.Jq.SECTION, t);
 }
 function m(e, t) {
-    return f(e, r.J.SIDEBAR_ITEM, t);
+    return f(e, r.Jq.SIDEBAR_ITEM, t);
 }
 function h(e, t) {
-    return f(e, r.J.PANEL, t);
+    return f(e, r.Jq.PANEL, t);
 }
 function g(e, t) {
-    return f(e, r.J.PANE, t);
+    return f(e, r.Jq.PANE, t);
 }
 function E(e, t) {
-    return f(e, r.J.SPLIT, t);
+    return f(e, r.Jq.SPLIT, t);
 }
 function b(e, t) {
-    return f(e, r.J.CATEGORY, t);
+    return f(e, r.Jq.CATEGORY, t);
 }
 function y(e, t) {
-    return f(e, r.J.ACCORDION, t);
+    return f(e, r.Jq.ACCORDION, t);
 }
 function O(e, t) {
-    return f(e, r.J.LIST, t);
+    return f(e, r.Jq.LIST, t);
 }
 function v(e, t) {
-    return f(e, r.J.RELATED, t);
+    return f(e, r.Jq.RELATED, t);
 }
 function S(e, t) {
-    return f(e, r.J.FIELD_SET, t);
+    return f(e, r.Jq.FIELD_SET, t);
 }
 function I(e, t, n) {
     return s(a({}, n), {
@@ -153,23 +153,23 @@ function I(e, t, n) {
     });
 }
 function T(e, t) {
-    return I(e, r.J.BUTTON, t);
+    return I(e, r.Jq.BUTTON, t);
 }
 function A(e, t) {
-    return I(e, r.J.TOGGLE, t);
+    return I(e, r.Jq.TOGGLE, t);
 }
 function C(e, t) {
-    return I(e, r.J.SLIDER, t);
+    return I(e, r.Jq.SLIDER, t);
 }
 function N(e, t) {
-    return I(e, r.J.SELECT, t);
+    return I(e, r.Jq.SELECT, t);
 }
 function P(e, t) {
-    return I(e, r.J.RADIO, t);
+    return I(e, r.Jq.RADIO, t);
 }
 function R(e, t) {
-    return I(e, r.J.NAVIGATOR, t);
+    return I(e, r.Jq.NAVIGATOR, t);
 }
 function D(e, t) {
-    return I(e, r.J.CUSTOM, t);
+    return I(e, r.Jq.CUSTOM, t);
 }

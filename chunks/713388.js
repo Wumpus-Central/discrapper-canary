@@ -40,15 +40,15 @@ function m(e) {
 function p(e) {
     let { setting: t, depth: n } = e,
         r =
-            (0, s.L)(t) &&
-            ((t.type === s.J.SIDEBAR_ITEM &&
+            (0, s.Lk)(t) &&
+            ((t.type === s.Jq.SIDEBAR_ITEM &&
                 t.layout.some((e) =>
                     null == e ? void 0 : e.layout.some((e) => null != e.StronglyDiscouragedCustomComponent),
                 )) ||
-                (t.type === s.J.PANEL && t.layout.some((e) => null != e.StronglyDiscouragedCustomComponent)) ||
-                (t.type === s.J.PANE && null != t.StronglyDiscouragedCustomComponent)),
+                (t.type === s.Jq.PANEL && t.layout.some((e) => null != e.StronglyDiscouragedCustomComponent)) ||
+                (t.type === s.Jq.PANE && null != t.StronglyDiscouragedCustomComponent)),
         i = null;
-    if ((0, s.L)(t)) {
+    if ((0, s.Lk)(t)) {
         var l, o, d;
         let e =
             null == (d = t.parent) || null == (o = d.parent) || null == (l = o.getLegacySearchKey) ? void 0 : l.call(o);

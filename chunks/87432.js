@@ -56,7 +56,7 @@ function l(e, t, n) {
     var i, o, c, u, d, f, p, _;
     let m = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (!t.has(e.key)) return null;
-    if (!(0, r.L)(e))
+    if (!(0, r.Lk)(e))
         return (
             n.register({
                 node: e,
@@ -68,15 +68,15 @@ function l(e, t, n) {
             e
         );
     let h = m;
-    e.type === r.J.SIDEBAR_ITEM && (h = s(a({}, m), { panel: e.layout[0] })),
-        e.type === r.J.PANEL && (h = s(a({}, m), { panel: e })),
-        e.type === r.J.CATEGORY && (h = s(a({}, m), { category: e })),
-        e.type === r.J.ACCORDION && (h = s(a({}, m), { accordion: e })),
-        e.type === r.J.TAB_ITEM && (h = s(a({}, m), { tab: e }));
+    e.type === r.Jq.SIDEBAR_ITEM && (h = s(a({}, m), { panel: e.layout[0] })),
+        e.type === r.Jq.PANEL && (h = s(a({}, m), { panel: e })),
+        e.type === r.Jq.CATEGORY && (h = s(a({}, m), { category: e })),
+        e.type === r.Jq.ACCORDION && (h = s(a({}, m), { accordion: e })),
+        e.type === r.Jq.TAB_ITEM && (h = s(a({}, m), { tab: e }));
     let g = e.layout.map((e) => l(e, t, n, h)).filter((e) => null != e);
     if (
         0 === g.length &&
-        !("StronglyDiscouragedCustomComponent" in e || (e.type === r.J.SIDEBAR_ITEM && "onClick" in e))
+        !("StronglyDiscouragedCustomComponent" in e || (e.type === r.Jq.SIDEBAR_ITEM && "onClick" in e))
     )
         return null;
     let E = s(a({}, e), { layout: g });

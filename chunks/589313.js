@@ -13,35 +13,39 @@ var r = n(54381),
     p = n(324805),
     v = n(388032);
 function E() {
-    var e, t, n;
-    let { quest: E, sourceQuestContent: g, onClose: O } = o.useContext(f.VideoQuestModalContext),
-        { enabled: h } = c.EO.useConfig({ location: p.dr.VIDEO_MODAL }),
-        b = (0, u.tP)(E),
-        C = null != (0, d.LM)(E.config),
-        S = (0, m.D)({
-            quest: E,
+    var e, t, n, E;
+    let { quest: g, sourceQuestContent: O, onClose: h } = o.useContext(f.VideoQuestModalContext),
+        { enabled: b } = c.EO.useConfig({ location: p.dr.VIDEO_MODAL }),
+        C = (0, u.tP)(g),
+        S = null != (0, d.LM)(g.config),
+        _ = (0, m.D)({
+            quest: g,
             questContent: s.jn.QUEST_HOME_DESKTOP,
-            sourceQuestContent: g,
-            onClick: O,
+            sourceQuestContent: O,
+            onClick:
+                (0, d.Bg)(g.config) ||
+                ((0, d.xN)(g.config) && (null == (e = g.userStatus) ? void 0 : e.claimedAt) != null)
+                    ? h
+                    : void 0,
             shouldShowShopIfAlreadyClaimed: !0,
         }),
-        _ =
-            (null == (e = E.userStatus) ? void 0 : e.claimedAt) != null
-                ? C
+        y =
+            (null == (t = g.userStatus) ? void 0 : t.claimedAt) != null
+                ? S
                     ? v.intl.string(v.t.WYchde)
                     : v.intl.string(v.t.vTgCWx)
                 : v.intl.string(v.t.cfY4PE),
-        y =
-            (null == (t = E.userStatus) ? void 0 : t.completedAt) == null && h
-                ? b
+        x =
+            (null == (n = g.userStatus) ? void 0 : n.completedAt) == null && b
+                ? C
                     ? v.intl.string(v.t.NJ6Bnm)
                     : v.intl.string(v.t.USNO1K)
                 : void 0;
     return (0, r.jsx)(i.u, {
-        text: y,
+        text: x,
         children: (0, r.jsx)("div", {
             children: (0, r.jsx)(a.Button, {
-                variant: h ? "secondary" : "primary",
+                variant: b ? "secondary" : "primary",
                 fullWidth: !0,
                 icon: ((e, t) => {
                     var n, r;
@@ -56,10 +60,10 @@ function E() {
                                 },
                             },
                         };
-                })(E, h),
-                onClick: S,
-                text: _,
-                disabled: (null == (n = E.userStatus) ? void 0 : n.completedAt) == null,
+                })(g, b),
+                onClick: _,
+                text: y,
+                disabled: (null == (E = g.userStatus) ? void 0 : E.completedAt) == null,
             }),
         }),
     });

@@ -17,7 +17,7 @@ function u(e) {
         E = null == (n = f.useTitle) ? void 0 : n.call(f),
         b = null == g || null == (u = g.useTitle) ? void 0 : u.call(g);
     if (null == g) return null;
-    let y = (null == (d = g.parent) ? void 0 : d.type) === o.J.SIDEBAR_ITEM ? g.parent.icon : void 0;
+    let y = (null == (d = g.parent) ? void 0 : d.type) === o.Jq.SIDEBAR_ITEM ? g.parent.icon : void 0;
     return (0, r.jsx)(l.x, {
         title: null != E ? E : b,
         description: _,

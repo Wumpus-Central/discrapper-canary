@@ -1,22 +1,23 @@
-n.d(t, { y: () => y }), n(361932), n(187205);
+n.d(t, { y: () => p }), n(361932), n(187205);
 var r = n(54381),
     o = n(473749),
     i = n(120356),
     l = n.n(i),
     a = n(91192),
     c = n(481060),
-    s = n(996435),
-    u = n(950941),
-    d = n(721611),
-    f = n(873395);
-function b(e) {
+    s = n(28682),
+    u = n(996435),
+    b = n(950941),
+    f = n(721611),
+    d = n(873395);
+function y(e) {
     var t, n;
-    let { tag: o, onClick: i, active: a, node: s, visibleContent: d, panelKey: b, listItemProps: y, children: p } = e,
-        { icon: g, stronglyDiscouragedCustomComponent: O, trailing: j, useTitle: m } = s,
-        v = null == m ? void 0 : m();
+    let { tag: o, onClick: i, active: a, node: s, visibleContent: u, panelKey: f, listItemProps: y, children: p } = e,
+        { icon: g, stronglyDiscouragedCustomComponent: O, trailing: m, useTitle: j } = s,
+        v = null == j ? void 0 : j();
     return (0, r.jsxs)(o, {
-        "data-settings-sidebar-item": b,
-        className: f.itemContainer,
+        "data-settings-sidebar-item": f,
+        className: d.itemContainer,
         children: [
             (0, r.jsxs)(
                 c.P3F,
@@ -47,18 +48,18 @@ function b(e) {
                 })({}, y)),
                 (n = n =
                     {
-                        className: l()(f.item, { [f.active]: a }),
+                        className: l()(d.item, { [d.active]: a }),
                         onClick: i,
                         children: [
                             null != O
                                 ? (0, r.jsx)(O, {})
                                 : (0, r.jsxs)("div", {
-                                      className: f.itemContent,
+                                      className: d.itemContent,
                                       children: [
                                           (0, r.jsx)(g, {
                                               color: "currentColor",
                                               size: "refresh_sm",
-                                              className: f.icon,
+                                              className: d.icon,
                                           }),
                                           (0, r.jsx)(c.Text, {
                                               variant: "text-md/medium",
@@ -67,12 +68,12 @@ function b(e) {
                                           }),
                                       ],
                                   }),
-                            null != j &&
+                            null != m &&
                                 (0, r.jsx)("div", {
-                                    className: f.itemContent,
-                                    children: (0, r.jsx)(u.W, {
-                                        trailing: j,
-                                        visibleContent: d,
+                                    className: d.itemContent,
+                                    children: (0, r.jsx)(b.W, {
+                                        trailing: m,
+                                        visibleContent: u,
                                         isSelected: a,
                                     }),
                                 }),
@@ -96,50 +97,50 @@ function b(e) {
         ],
     });
 }
-function y(e) {
+function p(e) {
     let { node: t, visibleContent: n, hoisted: i = !1 } = e,
         l = o.useMemo(() => t.layout[0], [t]),
-        c = s.Z.useField("currentPanelKey"),
-        u = null != c && c === (null == l ? void 0 : l.key),
-        f =
+        c = u.Z.useField("currentPanelKey"),
+        b = null != c && c === (null == l ? void 0 : l.key),
+        d =
             null != l
                 ? () =>
-                      s.Z.setState({
+                      u.Z.setState({
                           requestedTargetKey: l.key,
                           showNavigationMobile: !1,
                       })
                 : t.onClick,
-        y = o.useMemo(() => {
+        p = o.useMemo(() => {
             var e;
-            if (!u) return null;
+            if (!b || null == l || (0, s.sp)(l.layout)) return null;
             let t = (null != (e = null == l ? void 0 : l.layout.flatMap((e) => e.layout)) ? e : []).filter(
                 (e) => null != e.useTitle,
             );
-            return t.length > 1 ? (0, r.jsx)(d.Z, { categories: t }) : null;
-        }, [u, null == l ? void 0 : l.layout]),
-        p = i ? "li" : "div";
+            return t.length > 1 ? (0, r.jsx)(f.Z, { categories: t }) : null;
+        }, [b, l]),
+        g = i ? "li" : "div";
     return i
-        ? (0, r.jsx)(b, {
-              tag: p,
+        ? (0, r.jsx)(y, {
+              tag: g,
               panelKey: null == l ? void 0 : l.key,
-              onClick: f,
-              active: u,
+              onClick: d,
+              active: b,
               node: t,
               visibleContent: n,
-              children: y,
+              children: p,
           })
         : (0, r.jsx)(a.mh, {
               id: t.key,
               children: (e) =>
-                  (0, r.jsx)(b, {
-                      tag: p,
+                  (0, r.jsx)(y, {
+                      tag: g,
                       panelKey: null == l ? void 0 : l.key,
-                      onClick: f,
-                      active: u,
+                      onClick: d,
+                      active: b,
                       node: t,
                       visibleContent: n,
                       listItemProps: e,
-                      children: y,
+                      children: p,
                   }),
           });
 }
