@@ -151,19 +151,20 @@ function I(e) {
     });
 }
 function P(e) {
-    let { channel: t, "aria-label": n, children: i } = e;
+    let { channel: t, children: n } = e,
+        i = (0, f.ZP)(t);
     return (0, r.jsx)(s.aML, {
         "data-migration-pending": !0,
         hideOnClick: !0,
         spacing: 12,
         position: "right",
         text: (0, r.jsx)(I, { channel: t }),
-        "aria-label": n,
+        "aria-label": null != i && i,
         tooltipClassName: x.listItemTooltip,
         tooltipContentClassName: x.listItemTooltipContent,
         children: (e) => {
             var t,
-                n,
+                i,
                 { onFocus: l, onBlur: o } = e,
                 a = (function (e, t) {
                     if (null == e) return {};
@@ -221,9 +222,9 @@ function P(e) {
                     },
                     a,
                 )),
-                (n = n = { children: i }),
+                (i = i = { children: n }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -231,8 +232,8 @@ function P(e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
                 t),
             );
