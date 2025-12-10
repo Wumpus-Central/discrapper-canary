@@ -1,23 +1,20 @@
-n.d(e, { R: () => S });
+n.d(e, { R: () => d });
 var i = n(657707),
     l = n(509613),
     s = n(358085),
-    u = n(313789),
-    r = n(200645),
+    r = n(313789),
+    u = n(200645),
     a = n(726985),
     o = n(388032);
-let c = (0, l.x1)(u.n.WINDOWS_PANE, {
-        StronglyDiscouragedCustomComponent: r.Z,
+let c = (0, l.wf)(r.n.WINDOWS_PANEL, {
+        useTitle: () => o.intl.string(o.t.ZkDZov),
+        StronglyDiscouragedCustomComponent: u.Z,
         buildLayout: () => [],
     }),
-    d = (0, l.wf)(u.n.WINDOWS_PANEL, {
-        useTitle: () => o.intl.string(o.t.ZkDZov),
-        buildLayout: () => [c],
-    }),
-    S = (0, l.m7)(u.n.WINDOWS_SIDEBAR_ITEM, {
+    d = (0, l.m7)(r.n.WINDOWS_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t.ZkDZov),
         getLegacySearchKey: () => a.s6.WINDOW_SETTINGS,
         icon: i.pzj,
         usePredicate: () => s.isPlatformEmbedded && (0, s.isWindows)(),
-        buildLayout: () => [d],
+        buildLayout: () => [c],
     });

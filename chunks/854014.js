@@ -1,4 +1,4 @@
-n.d(t, { y: () => p }), n(361932), n(187205);
+n.d(t, { y: () => p });
 var r = n(54381),
     o = n(473749),
     i = n(120356),
@@ -111,12 +111,9 @@ function p(e) {
                       })
                 : t.onClick,
         p = o.useMemo(() => {
-            var e;
-            if (!b || null == l || (0, s.sp)(l.layout)) return null;
-            let t = (null != (e = null == l ? void 0 : l.layout.flatMap((e) => e.layout)) ? e : []).filter(
-                (e) => null != e.useTitle,
-            );
-            return t.length > 1 ? (0, r.jsx)(f.Z, { categories: t }) : null;
+            if (!b || null == l || !(0, s.iU)(l.layout)) return null;
+            let e = l.layout.filter((e) => null != e.useTitle);
+            return e.length > 1 ? (0, r.jsx)(f.Z, { categories: e }) : null;
         }, [b, l]),
         g = i ? "li" : "div";
     return i

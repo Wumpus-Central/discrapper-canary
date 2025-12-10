@@ -1,22 +1,18 @@
-n.d(e, { Q: () => S });
-var i = n(54381),
-    l = n(657707),
-    s = n(509613),
-    u = n(313789),
+n.d(e, { Q: () => c });
+var i = n(657707),
+    l = n(509613),
+    s = n(313789),
     r = n(400287),
-    a = n(726985),
-    o = n(388032);
-let c = (0, s.x1)(u.n.CHAT_PANE, {
-        StronglyDiscouragedCustomComponent: () => (0, i.jsx)(r.Z, {}),
+    u = n(726985),
+    a = n(388032);
+let o = (0, l.wf)(s.n.CHAT_PANEL, {
+        useTitle: () => a.intl.string(a.t["/VQax8"]),
+        StronglyDiscouragedCustomComponent: r.Z,
         buildLayout: () => [],
     }),
-    d = (0, s.wf)(u.n.CHAT_PANEL, {
-        useTitle: () => o.intl.string(o.t["/VQax8"]),
-        buildLayout: () => [c],
-    }),
-    S = (0, s.m7)(u.n.CHAT_SIDEBAR_ITEM, {
-        useTitle: () => o.intl.string(o.t["/VQax8"]),
-        getLegacySearchKey: () => a.s6.CHAT,
-        icon: l.kBi,
-        buildLayout: () => [d],
+    c = (0, l.m7)(s.n.CHAT_SIDEBAR_ITEM, {
+        useTitle: () => a.intl.string(a.t["/VQax8"]),
+        getLegacySearchKey: () => u.s6.CHAT,
+        icon: i.kBi,
+        buildLayout: () => [o],
     });

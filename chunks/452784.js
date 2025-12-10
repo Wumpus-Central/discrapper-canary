@@ -1,19 +1,15 @@
-n.d(t, {
-    $Y: () => l,
-    a: () => u,
-});
-var r = n(657707),
-    i = n(509613),
-    a = n(313789),
-    o = n(590814),
-    s = n(388032);
-let l = (0, i.x1)(a.n.LANGUAGE_AND_TIME_PANE, { buildLayout: () => [o.L] }),
-    c = (0, i.wf)(a.n.LANGUAGE_AND_TIME_PANEL, {
-        useTitle: () => s.intl.string(s.t.KyFVyi),
-        buildLayout: () => [l],
+n.d(e, { a: () => o });
+var i = n(657707),
+    l = n(509613),
+    s = n(313789),
+    r = n(590814),
+    u = n(388032);
+let a = (0, l.wf)(s.n.LANGUAGE_AND_TIME_PANEL, {
+        useTitle: () => u.intl.string(u.t.KyFVyi),
+        buildLayout: () => [r.L],
     }),
-    u = (0, i.m7)(a.n.LANGUAGE_AND_TIME_SIDEBAR_ITEM, {
-        icon: r.os0,
-        useTitle: () => s.intl.string(s.t.KyFVyi),
-        buildLayout: () => [c],
+    o = (0, l.m7)(s.n.LANGUAGE_AND_TIME_SIDEBAR_ITEM, {
+        icon: i.os0,
+        useTitle: () => u.intl.string(u.t.KyFVyi),
+        buildLayout: () => [a],
     });

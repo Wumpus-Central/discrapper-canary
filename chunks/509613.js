@@ -1,23 +1,22 @@
 n.d(t, {
-    $l: () => v,
-    CB: () => O,
-    Em: () => P,
-    IC: () => b,
-    J9: () => R,
-    ON: () => w,
+    $l: () => O,
+    CB: () => y,
+    Em: () => N,
+    IC: () => E,
+    J9: () => P,
+    ON: () => D,
     Ql: () => f,
-    UO: () => N,
-    US: () => S,
-    Uc: () => I,
-    ax: () => C,
-    eD: () => D,
-    k4: () => y,
+    UO: () => A,
+    US: () => v,
+    Uc: () => S,
+    ax: () => T,
+    eD: () => R,
+    k4: () => b,
     m7: () => h,
-    qs: () => A,
+    qs: () => C,
     so: () => _,
     vB: () => m,
     wf: () => g,
-    x1: () => E,
 }),
     n(388685),
     n(415506);
@@ -129,50 +128,47 @@ function g(e, t) {
     return p(e, r.Jq.PANEL, t);
 }
 function E(e, t) {
-    return p(e, r.Jq.PANE, t);
-}
-function b(e, t) {
     return p(e, r.Jq.SPLIT, t);
 }
-function y(e, t) {
+function b(e, t) {
     return p(e, r.Jq.CATEGORY, t);
 }
-function O(e, t) {
+function y(e, t) {
     return p(e, r.Jq.ACCORDION, t);
 }
-function v(e, t) {
+function O(e, t) {
     return p(e, r.Jq.LIST, t);
 }
-function S(e, t) {
+function v(e, t) {
     return p(e, r.Jq.RELATED, t);
 }
-function I(e, t) {
+function S(e, t) {
     return p(e, r.Jq.FIELD_SET, t);
 }
-function T(e, t, n) {
+function I(e, t, n) {
     return s(a({}, n), {
         key: e,
         type: t,
     });
 }
+function T(e, t) {
+    return I(e, r.Jq.BUTTON, t);
+}
 function C(e, t) {
-    return T(e, r.Jq.BUTTON, t);
+    return I(e, r.Jq.TOGGLE, t);
 }
 function A(e, t) {
-    return T(e, r.Jq.TOGGLE, t);
+    return I(e, r.Jq.SLIDER, t);
 }
 function N(e, t) {
-    return T(e, r.Jq.SLIDER, t);
+    return I(e, r.Jq.SELECT, t);
 }
 function P(e, t) {
-    return T(e, r.Jq.SELECT, t);
+    return I(e, r.Jq.RADIO, t);
 }
 function R(e, t) {
-    return T(e, r.Jq.RADIO, t);
+    return I(e, r.Jq.NAVIGATOR, t);
 }
 function D(e, t) {
-    return T(e, r.Jq.NAVIGATOR, t);
-}
-function w(e, t) {
-    return T(e, r.Jq.CUSTOM, t);
+    return I(e, r.Jq.CUSTOM, t);
 }
