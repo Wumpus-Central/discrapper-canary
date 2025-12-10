@@ -9,7 +9,6 @@ e.exports = {
     shop: "shop__6db1d",
     easterEggAnimation: "easterEggAnimation__6db1d",
     easterEggAnimationReverse: "easterEggAnimationReverse__6db1d",
-    categoriesNoFilter: "categoriesNoFilter__6db1d",
     categories: "categories__6db1d",
     products: "products__6db1d",
     paginationContainer: "paginationContainer__6db1d",

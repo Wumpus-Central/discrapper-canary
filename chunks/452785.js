@@ -1,6 +1,5 @@
 e.exports = {
     inventory: "inventory__1feb0",
-    inventoryFilter: "inventoryFilter__1feb0",
     controls: "controls__1feb0",
     controlsLeftSide: "controlsLeftSide__1feb0",
     controlsRightSide: "controlsRightSide__1feb0",
@@ -11,9 +10,7 @@ e.exports = {
     filterOverlay: "filterOverlay__1feb0",
     filterOverlayContent: "filterOverlayContent__1feb0",
     pageWrapper: "pageWrapper__1feb0",
-    pageWrapperFilter: "pageWrapperFilter__1feb0",
     inventoryWrapper: "inventoryWrapper__1feb0",
     page: "page__1feb0",
-    pageFilter: "pageFilter__1feb0",
     shopScroll: "shopScroll__1feb0",
 };

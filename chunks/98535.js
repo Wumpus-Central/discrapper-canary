@@ -1,47 +1,46 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(442837),
-    s = n(607070),
-    o = n(594174),
+    o = n(607070),
+    s = n(594174),
     a = n(960048),
     c = n(597688),
     u = n(1870),
-    d = n(870289),
-    g = n(149705),
-    f = n(929255),
-    p = n(752053),
-    m = n(81136),
-    C = n(566564),
+    d = n(149705),
+    g = n(929255),
+    f = n(752053),
+    p = n(81136),
+    m = n(566564),
     h = n(795477),
-    _ = n(215023);
-let b = [_.AW.HOME, _.AW.ORBS];
-function E(e) {
+    C = n(215023);
+let _ = [C.AW.HOME, C.AW.ORBS];
+function b(e) {
     let {
             tab: t,
             sortedCategories: n,
-            transitionToTab: o,
+            transitionToTab: s,
             transitionState: a,
             updateAnalyticsState: c,
             refreshCategories: u,
         } = e,
-        m = v();
-    S(m);
-    let E = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        [x, O] = l.useState(void 0),
-        [y, k] = l.useState(!0),
-        T = l.useMemo(
+        p = v();
+    E(p);
+    let b = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        [S, O] = l.useState(void 0),
+        [x, y] = l.useState(!0),
+        j = l.useMemo(
             () =>
                 n.filter(
                     (e) =>
-                        !_.y8.some((t) => {
+                        !C.y8.some((t) => {
                             let { categorySkuId: n } = t;
                             return n === e.skuId;
                         }),
                 ),
             [n],
         ),
-        j = l.useCallback(
+        k = l.useCallback(
             (e) => {
                 let {
                     sourceButton: t,
@@ -51,35 +50,34 @@ function E(e) {
                     isOrbsExclusive: i,
                 } = e;
                 c(t, n);
-                let s = r && !E,
-                    a = i ? _.AW.ORBS : _.AW.CATALOG;
-                O(n), k(!l), o(a, s);
+                let o = r && !b,
+                    a = i ? C.AW.ORBS : C.AW.CATALOG;
+                O(n), y(!l), s(a, o);
             },
-            [E, o, c],
+            [b, s, c],
         ),
-        I = (0, d.FF)("CollectiblesContent"),
-        { searchError: L } = (0, g.a)();
-    return I && null != L
+        { searchError: T } = (0, d.a)();
+    return null != T
         ? (0, r.jsx)(h.Z, {})
-        : null != m
-          ? (0, r.jsx)(p.Z, {
+        : null != p
+          ? (0, r.jsx)(f.Z, {
                 onRetry: u,
-                errorMessage: m,
-                errorOrigin: p.i.SHOP_PAGE,
+                errorMessage: p,
+                errorOrigin: f.i.SHOP_PAGE,
             })
-          : b.includes(t)
-            ? (0, r.jsx)(C.Z, {
-                  handleTransition: j,
+          : _.includes(t)
+            ? (0, r.jsx)(m.Z, {
+                  handleTransition: k,
                   tab: t,
                   transitionState: a,
               })
-            : (0, r.jsx)(f.Z, {
+            : (0, r.jsx)(g.Z, {
                   tab: t,
-                  sortedCategories: T,
-                  initialCategoryId: x,
-                  showFilterInitially: y,
+                  sortedCategories: j,
+                  initialCategoryId: S,
+                  showFilterInitially: x,
                   onUnmount: () => {
-                      O(void 0), k(!0);
+                      O(void 0), y(!0);
                   },
               });
 }
@@ -93,9 +91,9 @@ let v = () =>
                     ? "shop load fetch purchase error: ".concat(u.Z.fetchError.message)
                     : void 0,
         ),
-    S = (e) => {
-        let t = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
-            { noCache: n, includeUnpublished: r } = (0, m.Z)();
+    E = (e) => {
+        let t = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+            { noCache: n, includeUnpublished: r } = (0, p.Z)();
         l.useEffect(() => {
             var l, i;
             null != e &&
