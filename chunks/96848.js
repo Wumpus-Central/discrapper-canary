@@ -82,7 +82,7 @@ function g(e) {
                               children: [
                                   (0, r.jsx)(l.EO4, {
                                       size: "custom",
-                                      color: g ? s.Z.colors.ICON_PRIMARY : s.Z.colors.WHITE,
+                                      color: g ? s.Z.colors.ICON_STRONG : s.Z.colors.WHITE,
                                       className: _.emojiIcon,
                                       width: 14,
                                       height: 14,

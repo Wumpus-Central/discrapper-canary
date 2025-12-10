@@ -107,7 +107,7 @@ function A(e) {
               }),
           }));
     let M = (0, c.dQu)(r.Z.colors.INTERACTIVE_MUTED).hex(),
-        B = (0, c.dQu)(r.Z.colors.INTERACTIVE_ACTIVE).hex(),
+        B = (0, c.dQu)(r.Z.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
         U = j.verified
             ? (0, l.jsx)(h.Z, {
                   className: T.connectedAccountVerifiedIcon,
@@ -155,7 +155,7 @@ function A(e) {
                                                 text: j.name,
                                                 children: (0, l.jsx)(c.Text, {
                                                     variant: "text-sm/medium",
-                                                    color: "interactive-active",
+                                                    color: "interactive-text-active",
                                                     className: T.connectedAccountNameText,
                                                     children: j.name,
                                                 }),
@@ -216,7 +216,7 @@ function P(e) {
                         null != n.platform_name
                             ? (0, l.jsx)(c.Text, {
                                   variant: "eyebrow",
-                                  color: "interactive-normal",
+                                  color: "interactive-text-default",
                                   children: n.platform_name,
                               })
                             : null,
@@ -227,7 +227,7 @@ function P(e) {
                                       className: T.connectedAccountNameTextContainer,
                                       children: (0, l.jsx)(c.Text, {
                                           variant: "text-sm/medium",
-                                          color: "interactive-active",
+                                          color: "interactive-text-active",
                                           className: T.connectedAccountNameText,
                                           children: n.platform_username,
                                       }),

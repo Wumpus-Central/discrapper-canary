@@ -148,7 +148,7 @@ function L(e) {
                                           children: (0, T.Z)(e),
                                       }),
                                       (0, i.jsx)(m.Text, {
-                                          color: "interactive-normal",
+                                          color: "interactive-text-default",
                                           variant: "text-sm/normal",
                                           children: e.description,
                                       }),

@@ -59,7 +59,7 @@ function O(e) {
                     }),
                 (0, r.jsx)(u.Text, {
                     variant: "text-xs/medium",
-                    color: "interactive-normal",
+                    color: "interactive-text-default",
                     children: m,
                 }),
             ],
@@ -131,7 +131,7 @@ let f = l.memo(function (e) {
                               children: [
                                   (0, r.jsx)(u.Text, {
                                       variant: "eyebrow",
-                                      color: "interactive-normal",
+                                      color: "interactive-text-default",
                                       children: N.intl.format(N.t["0x6aTm"], { count: d }),
                                   }),
                                   (0, r.jsx)(u.Fbu, {

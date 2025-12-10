@@ -1,5 +1,5 @@
 n.d(t, {
-    Y: () => A,
+    Y: () => C,
     Z: () => D,
 }),
     n(388685);
@@ -7,7 +7,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(148884),
     l = n(442837),
     c = n(481060),
     u = n(13245),
@@ -95,7 +95,7 @@ function I(e, t) {
 function T(e) {
     e.currentTarget.scrollTo(0, 0);
 }
-let A = i.memo(function (e) {
+let C = i.memo(function (e) {
     let {
             maxBodyLines: t,
             expand: n = !1,
@@ -109,8 +109,8 @@ let A = i.memo(function (e) {
             confirmText: v,
             icon: S,
             body: I,
-            title: A,
-            renderFooter: C,
+            title: C,
+            renderFooter: A,
             contentOpacity: N,
             status: P,
             containerRef: R,
@@ -212,7 +212,7 @@ let A = i.memo(function (e) {
                 });
     }
     function W() {
-        let e = null == C ? void 0 : C(j, M);
+        let e = null == A ? void 0 : A(j, M);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(s.animated.div, {
@@ -224,14 +224,14 @@ let A = i.memo(function (e) {
                             className: E.details,
                             children: [
                                 (0, r.jsx)(c.Text, {
-                                    color: "interactive-normal",
+                                    color: "interactive-text-default",
                                     variant: "text-sm/semibold",
                                     lineClamp: 2,
-                                    children: A,
+                                    children: C,
                                 }),
                                 null != I
                                     ? (0, r.jsx)(c.Text, {
-                                          color: "interactive-normal",
+                                          color: "interactive-text-default",
                                           variant: "text-sm/normal",
                                           lineClamp: null != t ? t * (j ? 2 : 1) : void 0,
                                           children: I,
@@ -272,7 +272,7 @@ let A = i.memo(function (e) {
         ],
     });
 });
-function C(e) {
+function A(e) {
     let {
         springs: { opacity: t, scale: n, transform: i, height: a },
         scaleOverride: l,
@@ -396,7 +396,7 @@ function D(e) {
         V = !o && a,
         H = 0 === n && !Z && !V,
         { ref: Y, springs: W } = (0, m.X4)(t.id, s, l);
-    return (0, r.jsx)(C, {
+    return (0, r.jsx)(A, {
         transitionState: s,
         springs: W,
         scaleOverride: null == I ? void 0 : I.scale,
@@ -406,7 +406,7 @@ function D(e) {
         children: (0, r.jsx)(N, {
             observe: H,
             children: (0, r.jsx)(
-                A,
+                C,
                 v(y({}, F), {
                     title: "function" == typeof F.title ? F.title(O) : F.title,
                     containerRef: Y,

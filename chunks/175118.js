@@ -30,7 +30,7 @@ function m(e) {
         }),
         g = (function (e) {
             let { selected: t, isHovered: n } = e;
-            return n ? o.TVs.colors.TEXT_STRONG : t ? o.TVs.colors.TEXT_BRAND : o.TVs.colors.INTERACTIVE_NORMAL;
+            return n ? o.TVs.colors.TEXT_STRONG : t ? o.TVs.colors.TEXT_BRAND : o.TVs.colors.INTERACTIVE_TEXT_DEFAULT;
         })({
             selected: s,
             isHovered: c,

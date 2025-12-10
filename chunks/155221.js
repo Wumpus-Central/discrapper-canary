@@ -27,8 +27,8 @@ var r = n(54381),
     S = n(626135),
     I = n(361207),
     T = n(690032),
-    A = n(358085),
-    C = n(998502),
+    C = n(358085),
+    A = n(998502),
     N = n(981631),
     P = n(188785),
     R = n(436620);
@@ -126,7 +126,7 @@ let j = (0, m.Un)({
         name: "LinkAuthorize",
     }),
     V = (0, m.Un)({
-        createPromise: () => Promise.all([n.e("1216"), n.e("69773")]).then(n.bind(n, 197528)),
+        createPromise: () => Promise.all([n.e("97012"), n.e("69773")]).then(n.bind(n, 197528)),
         webpackId: 197528,
         name: "ActivateDevice",
     }),
@@ -191,7 +191,7 @@ let j = (0, m.Un)({
     Y = (0, m.Un)({
         createPromise: () =>
             Promise.all([
-                n.e("1216"),
+                n.e("97012"),
                 n.e("52030"),
                 n.e("13873"),
                 n.e("10778"),
@@ -302,7 +302,7 @@ function ei(e, t) {
 class ea extends i.Component {
     componentDidMount() {
         let { isAuthenticated: e } = this.props;
-        C.ZP.cleanupDisplaySleep(), b.Z.initialize(), (O.Z.wasAuthenticated = e);
+        A.ZP.cleanupDisplaySleep(), b.Z.initialize(), (O.Z.wasAuthenticated = e);
     }
     componentWillUnmount() {
         b.Z.terminate();
@@ -315,7 +315,7 @@ class ea extends i.Component {
                 n === g.P.IN_PROGRESS
                     ? null
                     : R.KO
-                      ? A.isPlatformEmbedded
+                      ? C.isPlatformEmbedded
                           ? (0, r.jsxs)(o.rs, {
                                 children: [
                                     t
@@ -575,7 +575,7 @@ class ea extends i.Component {
                 skipsSettingDefaultPageTitle: i,
                 children: [
                     e,
-                    A.isPlatformEmbedded && (n === g.P.NOT_STARTED || n === g.P.IN_PROGRESS) && !0 !== f.K.get(l.SV)
+                    C.isPlatformEmbedded && (n === g.P.NOT_STARTED || n === g.P.IN_PROGRESS) && !0 !== f.K.get(l.SV)
                         ? (0, r.jsx)(E.Z, {})
                         : null,
                 ],

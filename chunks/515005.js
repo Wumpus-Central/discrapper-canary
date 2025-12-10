@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -140,7 +140,7 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
             [Q, X] = (0, f.Z)(null, 300);
         return (0, r.jsx)(
             "div",
-            A(
+            C(
                 I(
                     {
                         className: v.row,
@@ -184,12 +184,12 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                             },
                             U = null != (d = null == l ? void 0 : l(e.columnIndex, M)) ? d : {},
                             { ref: G, tabIndex: K, onFocus: z } = U,
-                            J = C(U, ["ref", "tabIndex", "onFocus"]);
+                            J = A(U, ["ref", "tabIndex", "onFocus"]);
                         switch (e.type) {
                             case h.al.CREATE_STICKER:
                                 return (0, r.jsx)(
                                     "div",
-                                    A(I({}, J), {
+                                    C(I({}, J), {
                                         children: (0, r.jsxs)(c.P3F, {
                                             "aria-label": e.name,
                                             className: o()(v.createSticker, k, { [v.createInspected]: f }),
@@ -210,7 +210,7 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                                     }),
                                                 }),
                                                 (0, r.jsx)(c.Text, {
-                                                    color: "interactive-active",
+                                                    color: "interactive-text-active",
                                                     variant: "text-xs/normal",
                                                     children: O.intl.string(O.t["+nEuqr"]),
                                                 }),
@@ -229,7 +229,7 @@ let P = (0, l.Mg)(v.__invalid_stickerPickerPreviewDimensions),
                                     };
                                 return (0, i.createElement)(
                                     "div",
-                                    A(I({}, J), { key: e.sticker.id }),
+                                    C(I({}, J), { key: e.sticker.id }),
                                     (0, r.jsxs)(c.P3F, {
                                         className: o()(v.sticker, k, {
                                             [v.stickerInspected]: f,

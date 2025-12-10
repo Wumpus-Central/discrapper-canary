@@ -267,7 +267,7 @@ function g(e) {
                                   (0, t.jsx)(o.Text, {
                                       tag: "span",
                                       variant: "text-xs/medium",
-                                      color: "interactive-active",
+                                      color: "interactive-text-active",
                                       children: e,
                                   }),
                               brandHook: (e) =>

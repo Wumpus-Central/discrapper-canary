@@ -41,13 +41,13 @@ function f(e) {
                         children: y,
                     }),
                     (0, r.jsx)(a.Text, {
-                        color: "interactive-normal",
+                        color: "interactive-text-default",
                         variant: "text-xs/medium",
                         children: N,
                     }),
                     b &&
                         (0, r.jsxs)(a.Text, {
-                            color: "interactive-normal",
+                            color: "interactive-text-default",
                             variant: "text-xs/medium",
                             children: [
                                 null === O

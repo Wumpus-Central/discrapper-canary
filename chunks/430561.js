@@ -41,13 +41,13 @@ function S(e) {
 }
 let I = 7000;
 function T(e, t) {
-    return C(
+    return A(
         (0, s.e7)([_.Z], () => _.Z.getWidget(e), [e]),
         t,
     );
 }
-let A = (e, t) => Date.now() - e < t;
-function C(e, t) {
+let C = (e, t) => Date.now() - e < t;
+function A(e, t) {
     let n = i.useRef(null == e ? void 0 : e.showExtrasHintTimestamp),
         [r, a] = i.useState(!1),
         o = (0, y.Z)(),
@@ -66,7 +66,7 @@ function C(e, t) {
             let n = null == e ? void 0 : e.showExtrasHintTimestamp;
             return (
                 null != n &&
-                    A(n, t) &&
+                    C(n, t) &&
                     (a(!0),
                     (s.current = setTimeout(() => {
                         a(!1);
@@ -83,7 +83,7 @@ let N = 8000;
 function P(e) {
     let { children: t, widgetId: n } = e,
         i = (0, s.e7)([_.Z], () => _.Z.getWidget(n), [n]),
-        a = C(i, N),
+        a = A(i, N),
         o = () =>
             (0, E.QR)((0, b.Pb)(), O.t["1XA04X"], O.intl.string(O.t.uZZGzf), {
                 useFlexboxLayout: !0,
@@ -136,7 +136,7 @@ function R(e) {
             onClick: t,
             children: (0, r.jsx)(u.ewm, {
                 size: "xxs",
-                color: l.Z.colors.INTERACTIVE_ACTIVE,
+                color: l.Z.colors.INTERACTIVE_TEXT_ACTIVE,
             }),
         }),
     });
@@ -157,7 +157,7 @@ function D(e) {
                   onClick: a,
                   children: (0, r.jsx)(u.pzj, {
                       size: "xxs",
-                      color: n ? l.Z.colors.BG_BRAND : l.Z.colors.INTERACTIVE_ACTIVE,
+                      color: n ? l.Z.colors.BACKGROUND_BRAND : l.Z.colors.INTERACTIVE_TEXT_ACTIVE,
                   }),
               }),
           });
@@ -177,7 +177,7 @@ function w(e) {
             },
             children: (0, r.jsx)(u.k5M, {
                 size: "xxs",
-                color: n ? l.Z.colors.BG_BRAND : l.Z.colors.INTERACTIVE_ACTIVE,
+                color: n ? l.Z.colors.BACKGROUND_BRAND : l.Z.colors.INTERACTIVE_TEXT_ACTIVE,
             }),
         }),
     });

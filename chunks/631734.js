@@ -9,7 +9,7 @@ let a = (e) => {
         n,
         a,
         s,
-        { size: u = "md", width: c, height: d, color: h = r.Z.colors.INTERACTIVE_NORMAL, colorClass: p = "" } = e,
+        { size: c = "md", width: u, height: d, color: h = r.Z.colors.INTERACTIVE_TEXT_DEFAULT, colorClass: p = "" } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -31,9 +31,9 @@ let a = (e) => {
             }
             return r;
         })(e, ["size", "width", "height", "color", "colorClass"]);
-    let m = (0, l.m)(u),
-        g = null != (a = null == m ? void 0 : m.width) ? a : c,
-        O = null != (s = null == m ? void 0 : m.height) ? s : d;
+    let m = (0, l.m)(c),
+        g = null != (a = null == m ? void 0 : m.width) ? a : u,
+        y = null != (s = null == m ? void 0 : m.height) ? s : d;
     return (0, i.jsxs)(
         "svg",
         ((t = (function (e) {
@@ -65,7 +65,7 @@ let a = (e) => {
             {
                 xmlns: "http://www.w3.org/2000/svg",
                 width: g,
-                height: O,
+                height: y,
                 fill: "none",
                 viewBox: "0 0 24 24",
                 children: [

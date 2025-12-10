@@ -109,7 +109,7 @@ function v(e) {
     if ("string" == typeof t)
         return (0, r.jsx)(s.xvT, {
             variant: "text-md/normal",
-            color: "input-placeholder-text",
+            color: "input-placeholder-text-default",
             className: _.leadingText,
             children: t,
         });
@@ -156,7 +156,7 @@ function v(e) {
         className: _.icon,
         children: (0, r.jsx)(a, {
             size: o,
-            color: l.Z.colors.ICON_PRIMARY,
+            color: l.Z.colors.ICON_STRONG,
         }),
     });
 }
@@ -186,8 +186,8 @@ function I(e) {
             maxLength: g,
             value: y,
             defaultValue: I,
-            minLength: A,
-            error: C,
+            minLength: C,
+            error: A,
             defaultDirty: N = !1,
             leading: P,
             trailing: R,
@@ -222,9 +222,9 @@ function I(e) {
         { fieldProps: k } = (0, s.XF_)(M),
         U = (0, f.m)({
             validateOn: D,
-            error: C,
+            error: A,
             value: y,
-            minLength: A,
+            minLength: C,
             maxLength: g,
             defaultDirty: N,
         }),
@@ -311,7 +311,7 @@ function I(e) {
                                             type: p,
                                             placeholder: m,
                                             maxLength: g,
-                                            minLength: A,
+                                            minLength: C,
                                             value: y,
                                             defaultValue: I,
                                             "data-mana-component": "text-input",

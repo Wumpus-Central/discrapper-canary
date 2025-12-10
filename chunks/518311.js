@@ -46,8 +46,8 @@ var i,
     k = n(544610),
     U = n(19780),
     V = n(306680),
-    B = n(699516),
-    F = n(246946),
+    F = n(699516),
+    B = n(246946),
     H = n(594174),
     G = n(626135),
     W = n(572004),
@@ -267,7 +267,7 @@ class eu extends (i = l.PureComponent) {
         if (null == e || !e.isDM()) return !1;
         let t = e.getRecipientId();
         if (null == t) throw Error("no recipient in DM");
-        return !B.Z.isFriend(t);
+        return !F.Z.isFriend(t);
     }
     createInvite() {
         let { channel: e } = this.props;
@@ -510,7 +510,7 @@ class eu extends (i = l.PureComponent) {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
             let n = H.default.getUser(e),
-                i = null != n && B.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
+                i = null != n && F.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
             return {
                 actions: [
                     {
@@ -896,7 +896,7 @@ function ed(e) {
     let { selectedUsers: t, channelName: n, previewIcon: i, onIconChange: l, onIconRemove: a, onChange: o } = e,
         { analyticsLocations: s } = (0, E.ZP)(O.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, I.a)(O.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, S.pT)(Array.from(t), H.default, B.Z);
+    let c = (0, S.pT)(Array.from(t), H.default, F.Z);
     return (0, r.jsxs)("div", {
         className: en.customizationContainer,
         children: [
@@ -913,7 +913,7 @@ function ed(e) {
             (0, r.jsx)(p.Text, {
                 className: en.channelNameLabel,
                 variant: "text-sm/medium",
-                color: "header-muted",
+                color: "text-muted",
                 children: et.intl.string(et.t.YynaLK),
             }),
             (0, r.jsx)(p.oil, {
@@ -929,14 +929,14 @@ function ed(e) {
 function ep(e) {
     var { channel: t } = e,
         n = ea(e, ["channel"]);
-    let i = (0, u.cj)([k.Z, D.Z, F.Z], () => {
+    let i = (0, u.cj)([k.Z, D.Z, B.Z], () => {
         let e;
         return (
             null != t && null != (e = D.Z.getInvite(t.id)) && e.isExpired() && (e = null),
             el(er({}, k.Z.getState()), {
                 invite: e,
-                hideDiscriminator: F.Z.hidePersonalInformation,
-                hideInstantInvites: F.Z.hideInstantInvites,
+                hideDiscriminator: B.Z.hidePersonalInformation,
+                hideInstantInvites: B.Z.hideInstantInvites,
             })
         );
     });

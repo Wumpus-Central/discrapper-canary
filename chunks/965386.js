@@ -37,7 +37,7 @@ let l = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)(o.Text, {
             className: a()(n, s.autocompleteRowHeading),
-            color: "interactive-active",
+            color: "interactive-text-active",
             variant: "text-md/normal",
             children: t,
         });
@@ -46,7 +46,7 @@ let l = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)(o.Text, {
             className: a()(n, s.autocompleteRowSubheading),
-            color: "interactive-normal",
+            color: "interactive-text-default",
             variant: "text-xs/normal",
             children: t,
         });
@@ -55,7 +55,7 @@ let l = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)(o.Text, {
             className: a()(n, s.autocompleteRowContentSecondary),
-            color: "interactive-normal",
+            color: "interactive-text-default",
             variant: "text-xs/normal",
             children: t,
         });

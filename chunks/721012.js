@@ -2,13 +2,13 @@ n.d(t, { i: () => d }), n(388685);
 var l = n(54381),
     i = n(473749);
 n(120356);
-var r = n(205120),
+var r = n(148884),
     a = n(481060),
     s = n(388032),
     o = n(490369);
 function c(e) {
     let { testimonial: t, className: n } = e,
-        { message: i, profilePic: r, adminTitle: c, emphasisColor: d = "interactive-normal" } = t;
+        { message: i, profilePic: r, adminTitle: c, emphasisColor: d = "interactive-text-default" } = t;
     return (0, l.jsxs)("div", {
         className: n,
         children: [
@@ -63,7 +63,7 @@ function d(e) {
             });
         }, [c, t.length]),
         g = t[n],
-        h = i.useCallback(
+        f = i.useCallback(
             (e, t, n, i) =>
                 (0, l.jsx)(
                     u,
@@ -84,7 +84,7 @@ function d(e) {
                 className: o.animatedContainer,
                 children: (0, l.jsx)(a.W3x, {
                     items: [g],
-                    renderItem: h,
+                    renderItem: f,
                     getItemKey: (e) => e.adminTitle,
                 }),
             }),

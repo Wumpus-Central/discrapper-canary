@@ -51,7 +51,7 @@ function R() {
                 return t === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, i.jsx)(s.IGR, {
                           text: A.intl.string(A.t.y2b7CA),
-                          color: o.Z.colors.BUTTON_DANGER_BACKGROUND.css,
+                          color: o.Z.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT.css,
                       })
                     : null;
             },
@@ -69,9 +69,9 @@ function L(e) {
             draftType: k,
             editorTextContent: U,
             setValue: V,
-            openClips: B,
+            openClips: F,
         } = e,
-        { analyticsLocations: F, newestAnalyticsLocation: H } = (0, d.ZP)(),
+        { analyticsLocations: B, newestAnalyticsLocation: H } = (0, d.ZP)(),
         G = (0, C.Dt)({ channel: t }),
         W = (0, l.e7)([_.Z], () => _.Z.isInProgress());
     function z() {
@@ -81,7 +81,7 @@ function L(e) {
         x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), V("/", (0, P.JM)("/"));
     }
     function K() {
-        B();
+        F();
     }
     function Y() {
         (0, m.Q3)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.L.TAKE_ACTION }),
@@ -258,7 +258,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.JOIN,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: B[B.length - 1],
                                         })
                                     );
                                 },
@@ -279,7 +279,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.LISTEN,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: B[B.length - 1],
                                         })
                                     );
                                 },
@@ -300,7 +300,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.WATCH,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: B[B.length - 1],
                                         })
                                     );
                                 },

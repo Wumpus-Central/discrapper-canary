@@ -158,7 +158,7 @@ function N(e) {
               children: [
                   (0, r.jsx)(c.PEf, {
                       size: "xxs",
-                      color: c.TVs.colors.ICON_TERTIARY,
+                      color: c.TVs.colors.ICON_MUTED,
                       className: w.commentIcon,
                   }),
                   (0, r.jsx)(D, {
@@ -247,7 +247,7 @@ function A(e) {
                   children: [
                       (0, r.jsx)(c.vdY, {
                           size: "xxs",
-                          color: c.TVs.colors.ICON_TERTIARY,
+                          color: c.TVs.colors.ICON_MUTED,
                           className: w.commentIcon,
                       }),
                       (0, r.jsx)(D, {

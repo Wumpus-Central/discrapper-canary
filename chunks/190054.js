@@ -76,7 +76,7 @@ function f(e) {
                 (n = n =
                     {
                         size: "xxs",
-                        color: E ? s.TVs.colors.TEXT_FEEDBACK_POSITIVE : s.TVs.colors.INTERACTIVE_NORMAL,
+                        color: E ? s.TVs.colors.TEXT_FEEDBACK_POSITIVE : s.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

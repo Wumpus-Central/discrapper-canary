@@ -115,7 +115,7 @@ function L(e) {
                             }),
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/semibold",
-                                color: "interactive-normal",
+                                color: "interactive-text-default",
                                 children: R.intl.string(R.t["13/7kX"]),
                             }),
                         ],

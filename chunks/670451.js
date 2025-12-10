@@ -82,7 +82,7 @@ function _(e) {
                             },
                             className: c.contextMenu,
                             children: (0, r.jsx)(o.xhG, {
-                                color: o.TVs.colors.INTERACTIVE_NORMAL,
+                                color: o.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                 size: "xs",
                             }),
                         }),

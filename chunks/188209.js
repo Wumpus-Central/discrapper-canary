@@ -110,7 +110,7 @@ function D(e) {
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "eyebrow",
-                        color: "interactive-normal",
+                        color: "interactive-text-default",
                         className: A.claimInstructionsCodeInputTitle,
                         children: T.intl.string(T.t.srzsU2),
                     }),

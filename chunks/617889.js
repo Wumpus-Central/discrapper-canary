@@ -26,7 +26,7 @@ function o(e, t) {
     let a = (0, l.z)(e),
         r = null != (n = (0, i.i6)()) ? n : 0,
         s = "var(--green-330)",
-        o = ["var(--background-base-lowest)", "var(--interactive-normal)"];
+        o = ["var(--background-base-lowest)", "var(--interactive-text-default)"];
     return {
         backgroundTop: t ? o[r] : ["#828288", "#CBCDD4"][r],
         backgroundBottom: t ? o[r] : ["#535356", "#8B8C95"][r],

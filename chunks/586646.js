@@ -59,7 +59,7 @@ function E(e) {
                     null != E &&
                         (0, l.jsx)(f.H, {
                             chunks: E,
-                            color: a.TVs.colors.INTERACTIVE_NORMAL.css,
+                            color: a.TVs.colors.INTERACTIVE_TEXT_DEFAULT.css,
                             onCopy: N,
                         }),
                 ],

@@ -28,7 +28,7 @@ function s(e) {
                 children: (0, r.jsxs)(i.Text, {
                     className: a.actionTextHeader,
                     variant: "text-xs/medium",
-                    color: "interactive-normal",
+                    color: "interactive-text-default",
                     children: [
                         d,
                         null != u &&

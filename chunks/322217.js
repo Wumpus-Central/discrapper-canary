@@ -131,7 +131,7 @@ let f = {
                         },
                         {
                             label: "Header Muted",
-                            value: "header-muted",
+                            value: "text-muted",
                         },
                         {
                             label: "Feedback Positive",

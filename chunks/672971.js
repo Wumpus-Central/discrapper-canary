@@ -71,7 +71,7 @@ class b extends i.Component {
                 subscriptionPlan: S,
                 finePrintClassname: I,
             } = this.props,
-            { hasAcceptedEULA: T, hasAcceptedWithdrawalWaiver: A } = this.state;
+            { hasAcceptedEULA: T, hasAcceptedWithdrawalWaiver: C } = this.state;
         return (l()(!y || null != S, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"),
         a || (null != e && !i) || b)
             ? (0, r.jsxs)("div", {
@@ -111,7 +111,7 @@ class b extends i.Component {
                                 className: c,
                                 children: [
                                     (0, r.jsx)(u.Checkbox, {
-                                        checked: A,
+                                        checked: C,
                                         onChange: (e) => this.setState({ hasAcceptedWithdrawalWaiver: e }),
                                         disabled: s,
                                         label: m.intl.string(m.t["DFCVN+"]),
@@ -137,7 +137,7 @@ class b extends i.Component {
                           null != S &&
                           (0, r.jsx)(u.Text, {
                               variant: "text-xs/medium",
-                              color: "interactive-normal",
+                              color: "interactive-text-default",
                               children: m.intl.format(m.t["Hvo/Z5"], {
                                   buttonText: (0, p.W_)(null, S),
                                   interval: p.ZP.formatInterval(null == S ? void 0 : S.interval),
@@ -149,7 +149,7 @@ class b extends i.Component {
                           null != S &&
                           (0, r.jsx)(u.Text, {
                               variant: "text-xs/medium",
-                              color: "interactive-normal",
+                              color: "interactive-text-default",
                               children: m.intl.format(m.t.Oo2FeS, {
                                   buttonText: (0, p.W_)(null, S),
                                   interval: p.ZP.formatInterval(null == S ? void 0 : S.interval),
@@ -161,7 +161,7 @@ class b extends i.Component {
                           null != S &&
                           (0, r.jsx)(u.Text, {
                               variant: "text-xs/medium",
-                              color: "interactive-normal",
+                              color: "interactive-text-default",
                               children: m.intl.format(m.t["Z2c+aV"], {
                                   buttonText: (0, p.W_)(null, S),
                                   interval: p.ZP.formatInterval(null == S ? void 0 : S.interval),

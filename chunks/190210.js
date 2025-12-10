@@ -15,7 +15,7 @@ var i = n(54381),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(205120),
+    c = n(148884),
     u = n(772848),
     d = n(442837),
     p = n(692547),
@@ -47,8 +47,8 @@ var i = n(54381),
     k = n(127654),
     U = n(746877),
     V = n(541716),
-    B = n(667829),
-    F = n(258696),
+    F = n(667829),
+    B = n(258696),
     H = n(893718),
     G = n(273031),
     W = n(303628),
@@ -183,8 +183,8 @@ let en = r.memo(
                 canEveryoneSendMessages: eU,
             } = (0, H.TE)(L, k, eM, I),
             eV = !A.dN.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
-            eB = !eV || !(null == (n = k.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
-            eF = (0, T.Z)(),
+            eF = !eV || !(null == (n = k.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
+            eB = (0, T.Z)(),
             { fontSize: eH } = (0, d.cj)([C.Z], () => ({
                 fontSize: C.Z.fontSize,
                 isSubmitButtonEnabled: C.Z.isSubmitButtonEnabled,
@@ -311,7 +311,7 @@ let en = r.memo(
                         [n],
                     ),
                 };
-            })(eJ, eT, eB),
+            })(eJ, eT, eF),
             { expressionPickerView: e8, shouldHideExpressionPicker: e5, handleOuterClick: e6 } = (0, H.iV)(k, eN, L.id),
             e9 = (0, H.aT)(p),
             { currentAutocompleteType: te, handleAutocompleteVisibilityChange: tt } = (0, H.vB)(k, L.id),
@@ -420,7 +420,7 @@ let en = r.memo(
                                                     children: (0, i.jsx)(f.tEY, {
                                                         ringTarget: eZ,
                                                         ringClassName: Q.focusRing,
-                                                        children: (0, i.jsx)(B.Z, {
+                                                        children: (0, i.jsx)(F.Z, {
                                                             ref: eN,
                                                             id: j,
                                                             focused: G,
@@ -436,7 +436,7 @@ let en = r.memo(
                                                             type: V.Ie.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: ek,
                                                             uploadPromptCharacterCount: z.en1,
-                                                            maxCharacterCount: null != ef ? ef : eF,
+                                                            maxCharacterCount: null != ef ? ef : eB,
                                                             allowNewLines: !0,
                                                             "aria-describedby": eg,
                                                             onChange: Y,
@@ -484,7 +484,7 @@ let en = r.memo(
                                         className: J.footerPart,
                                         children: [
                                             (0, i.jsx)(el, { channel: L }),
-                                            (0, i.jsx)(F.Z, {
+                                            (0, i.jsx)(B.Z, {
                                                 type: V.Ie.CREATE_ANNOUNCEMENT_POST,
                                                 disabled: eD,
                                                 channel: L,
@@ -705,7 +705,7 @@ function el(e) {
             size: "custom",
             width: 20,
             height: 20,
-            color: p.Z.colors.INTERACTIVE_NORMAL,
+            color: p.Z.colors.INTERACTIVE_TEXT_DEFAULT,
         }),
     });
 }
@@ -757,7 +757,7 @@ function ea(e) {
                     }),
                     (0, i.jsx)(f.FmF, {
                         size: "md",
-                        color: s ? p.Z.colors.INTERACTIVE_ACTIVE : p.Z.colors.INTERACTIVE_NORMAL,
+                        color: s ? p.Z.colors.INTERACTIVE_TEXT_ACTIVE : p.Z.colors.INTERACTIVE_TEXT_DEFAULT,
                     }),
                 ],
             }),

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => H }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(205120),
+    l = n(148884),
     a = n(793030),
     s = n(442837),
     o = n(481060),
@@ -217,12 +217,12 @@ function H(e) {
 }
 let F = (e) => {
     let { handleOpenProfile: t, analyticsLocations: n, context: l } = e,
-        [a, s] = i.useState("interactive-normal");
+        [a, s] = i.useState("interactive-text-default");
     return (0, r.jsx)("div", {
         className: U.footer,
         children: (0, r.jsx)(o.P3F, {
-            onMouseEnter: () => s("interactive-hover"),
-            onMouseLeave: () => s("interactive-normal"),
+            onMouseEnter: () => s("interactive-text-hover"),
+            onMouseLeave: () => s("interactive-text-default"),
             onClick: () => {
                 t(),
                     (0, m.pQ)(

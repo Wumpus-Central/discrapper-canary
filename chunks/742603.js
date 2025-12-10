@@ -51,7 +51,7 @@ function V(e) {
         }),
     });
 }
-function B(e) {
+function F(e) {
     let { user: t, channel: n, stream: r, color: l } = e,
         a = (0, S.Z)(n, t, r);
     return null == t || null == r
@@ -73,7 +73,7 @@ function B(e) {
               ],
           });
 }
-function F(e) {
+function B(e) {
     let t,
         { focusedApplication: n, focusedParticipant: r, channel: l } = e,
         a = (0, T.Z)(l, !0),
@@ -108,7 +108,7 @@ function F(e) {
         t = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(y.ZP.Divider, { className: k.divider }),
-                (0, i.jsx)(B, {
+                (0, i.jsx)(F, {
                     user: e,
                     channel: l,
                     stream: n,
@@ -217,7 +217,7 @@ function H(e) {
                   }),
               })
             : null,
-        B = (0, j.m$)({ channelId: t.id });
+        F = (0, j.m$)({ channelId: t.id });
     return (0, i.jsxs)("div", {
         className: k.subtitleContainer,
         children: [
@@ -250,13 +250,13 @@ function H(e) {
                                               })
                                             : null,
                                         C,
-                                        B &&
+                                        F &&
                                             (0, i.jsx)(o.u, {
                                                 text: D.intl.string(D.t.QyZ4Td),
                                                 children: (0, i.jsx)(s.tQf, {
                                                     size: "xs",
                                                     "aria-label": D.intl.string(D.t.VHXh8a),
-                                                    color: s.TVs.colors.INTERACTIVE_NORMAL,
+                                                    color: s.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                                     className: k.secureFramesIcon,
                                                 }),
                                             }),
@@ -267,7 +267,7 @@ function H(e) {
                                 channel: t,
                                 guild: r,
                             }),
-                            (0, i.jsx)(F, {
+                            (0, i.jsx)(B, {
                                 focusedApplication: S,
                                 focusedParticipant: b,
                                 channel: t,

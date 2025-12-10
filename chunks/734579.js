@@ -132,7 +132,7 @@ let S = i.memo(function (e) {
                         children: [
                             (0, r.jsx)(d.IGR, {
                                 text: C.intl.string(C.t.y2b7CA),
-                                color: c.Z.colors.BG_BRAND.css,
+                                color: c.Z.colors.BACKGROUND_BRAND.css,
                             }),
                             a,
                         ],

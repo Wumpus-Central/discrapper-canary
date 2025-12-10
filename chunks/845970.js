@@ -44,7 +44,7 @@ function d(e) {
                 children: [
                     f,
                     (0, r.jsx)(o.Text, {
-                        color: "interactive-normal",
+                        color: "interactive-text-default",
                         variant: "text-sm/normal",
                         children: t.description,
                     }),

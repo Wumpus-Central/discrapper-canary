@@ -13,7 +13,7 @@ var a = n(54381),
     h = n(786040),
     x = n(508925),
     f = n(616066),
-    g = n(684263),
+    g = n(216541),
     b = n(396728),
     v = n(58201),
     j = n(201964),
@@ -68,7 +68,7 @@ let y = (e) => {
                     isPurchased: !1,
                 });
             case l.Z.BUNDLE:
-                return (0, a.jsx)(g.U, {
+                return (0, a.jsx)(g.d, {
                     product: t,
                     user: r,
                     isHighlighted: n,
@@ -87,7 +87,7 @@ let y = (e) => {
         let { hidden: t } = e;
         return (0, a.jsx)(s.sV5, {
             size: "custom",
-            color: c.TVs.colors.INTERACTIVE_ACTIVE,
+            color: c.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
             width: 40,
             height: 40,
             className: i()(_.productPreviewIconOverlay, { [_.hidden]: t }),

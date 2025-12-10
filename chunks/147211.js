@@ -86,7 +86,7 @@ let p = (e) => {
             height: f,
             secondaryColor: p = "#C12A35",
             secondaryColorClass: _ = "",
-            color: m = i.Z.colors.INTERACTIVE_NORMAL,
+            color: m = i.Z.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: h = "",
         } = e,
         g = d(e, ["size", "width", "height", "secondaryColor", "secondaryColorClass", "color", "colorClass"]);

@@ -69,7 +69,7 @@ function d(e) {
                     }),
                     l &&
                         (0, r.jsx)(o.Text, {
-                            color: "interactive-normal",
+                            color: "interactive-text-default",
                             variant: "text-sm/normal",
                             children: t.description,
                         }),
@@ -106,7 +106,7 @@ function f(e) {
                     }),
                     u &&
                         (0, r.jsx)(o.Text, {
-                            color: "interactive-normal",
+                            color: "interactive-text-default",
                             variant: "text-sm/normal",
                             children: n.description,
                         }),

@@ -65,7 +65,7 @@ function f(e) {
                 icon: l.AlX,
                 display: p.intl.string(p.t.o034cv),
                 badgeVal: b,
-                badgeColor: r.Z.colors.BG_BRAND.css,
+                badgeColor: r.Z.colors.BACKGROUND_BRAND.css,
             }),
         n &&
             E.push({

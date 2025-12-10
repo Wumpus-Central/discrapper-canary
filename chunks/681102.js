@@ -28,7 +28,7 @@ function g(e) {
         b = (null == n ? void 0 : n.level) === s.m.HIGH,
         y = (0, r.jsx)(c.Text, {
             variant: "text-sm/medium",
-            color: "interactive-active",
+            color: "interactive-text-active",
             children: t.name,
         }),
         O = (0, r.jsx)(l.u, {
@@ -87,7 +87,7 @@ function E(e) {
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: "text-xs/medium",
-                            color: "interactive-active",
+                            color: "interactive-text-active",
                             children: e.name,
                         }),
                     ],

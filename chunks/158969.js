@@ -39,7 +39,7 @@ let E = r.memo(function (e) {
                             className: v.blockedNotice,
                             children: (0, i.jsx)(u.Text, {
                                 variant: "text-sm/normal",
-                                color: "interactive-normal",
+                                color: "interactive-text-default",
                                 children: n,
                             }),
                         }),
@@ -52,7 +52,7 @@ let E = r.memo(function (e) {
                         onDeleteMessage: l,
                         children: (0, i.jsx)(u.Text, {
                             variant: "text-xs/normal",
-                            color: "interactive-normal",
+                            color: "interactive-text-default",
                             tag: "span",
                             className: v.learnMore,
                             children: _.intl.format(_.t["Nd3Gh+"], {

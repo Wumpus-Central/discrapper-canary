@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(541099),
     I = n(783097),
     T = n(570949),
-    A = n(314734),
-    C = n(981631),
+    C = n(314734),
+    A = n(981631),
     N = n(388032),
     P = n(820607);
 function R(e, t, n) {
@@ -102,7 +102,7 @@ function L(e) {
             label: N.intl.string(N.t["+NP/b2"]),
         }),
         H = (0, T.P)({ application: a }),
-        Y = (0, s.yE)(null != (t = a.flags) ? t : 0, C.udG.EMBEDDED),
+        Y = (0, s.yE)(null != (t = a.flags) ? t : 0, A.udG.EMBEDDED),
         W = "channel" === R.type ? R.channel : void 0;
     return (0, r.jsxs)("div", {
         className: P.container,
@@ -118,7 +118,7 @@ function L(e) {
                     (0, O.JG)(e, () =>
                         (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["L/PwZf"]), c.ToastType.SUCCESS)),
                     ),
-                        y.default.track(C.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                        y.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: a.id,
                             source: M,
                         });
@@ -127,7 +127,7 @@ function L(e) {
                 "aria-label": N.intl.string(N.t.WqhZss),
                 children: (0, r.jsx)(c.xPt, {
                     size: "sm",
-                    color: c.TVs.colors.INTERACTIVE_ACTIVE,
+                    color: c.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
                 }),
             }),
             (0, r.jsx)(c.yRy, {
@@ -135,7 +135,7 @@ function L(e) {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsxs)(c.v2r, {
-                        className: A.NN,
+                        className: C.NN,
                         navId: "app-details-more-menu",
                         onClose: t,
                         "aria-label": N.intl.string(N.t.AXIHpV),
@@ -169,14 +169,14 @@ function L(e) {
                                               label: N.intl.string(N.t.NgXl3C),
                                               action: () => {
                                                   null == k.customInstallUrl &&
-                                                      (0, u.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, B),
+                                                      (0, u.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, B),
                                                       (0, v.L)(
                                                           x(D({}, k), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t &&
                                                                       (0, u.yw)(
-                                                                          C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,
+                                                                          A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,
                                                                           B,
                                                                       );
                                                               },
@@ -223,7 +223,7 @@ function L(e) {
                             "aria-label": N.intl.string(N.t["UKOtz+"]),
                             children: (0, r.jsx)(c.xhG, {
                                 size: "sm",
-                                color: c.TVs.colors.INTERACTIVE_ACTIVE,
+                                color: c.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
                             }),
                         }),
                     ),

@@ -56,7 +56,7 @@ let g = a.memo(function (e) {
         y = (0, d.b1)(n),
         j = (0, d.NN)(y, p.current, b),
         x = (0, c.ZP)(),
-        N = (0, u.dQu)(o.Z.colors.ICON_PRIMARY).hex(),
+        N = (0, u.dQu)(o.Z.colors.ICON_STRONG).hex(),
         w = null == y || null == j,
         C = (0 === h.width || 0 === h.height || w) && null != n,
         S = a.useCallback(() => {

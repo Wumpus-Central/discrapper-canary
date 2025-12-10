@@ -169,7 +169,7 @@ let b = i.forwardRef(function (e, t) {
                     (0, r.jsx)(a.IGR, {
                         className: p.new,
                         text: d.intl.string(d.t.oW0eUd),
-                        color: a.TVs.colors.BG_BRAND.css,
+                        color: a.TVs.colors.BACKGROUND_BRAND.css,
                     }),
             ],
         }),

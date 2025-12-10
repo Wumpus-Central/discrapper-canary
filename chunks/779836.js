@@ -3,7 +3,7 @@ var i = n(54381);
 n(473749);
 var r = n(120356),
     l = n.n(r),
-    a = n(205120),
+    a = n(148884),
     o = n(399606),
     s = n(481060),
     c = n(511010),
@@ -54,7 +54,7 @@ function C(e) {
                           children: [
                               (0, i.jsx)(s.Text, {
                                   variant: "text-xs/medium",
-                                  color: "interactive-normal",
+                                  color: "interactive-text-default",
                                   children: g.intl.string(g.t["5ZsiE9"]),
                               }),
                               (0, i.jsx)(s.P3F, {

@@ -31,8 +31,8 @@ var r = n(54381),
     S = n(317381),
     I = n(513202),
     T = n(367907),
-    A = n(162685),
-    C = n(979200),
+    C = n(162685),
+    A = n(979200),
     N = n(870822),
     P = n(589414),
     R = n(600164),
@@ -301,7 +301,7 @@ let ef = (e) => {
                     ? void 0
                     : e.allowMobilePush;
             }, [b]),
-            N = A.w.useExperiment({ location: "oauth2_authorize" }),
+            N = C.w.useExperiment({ location: "oauth2_authorize" }),
             L = a.bot,
             M = (0, m.e7)([j.Z], () => j.Z.getDMFromUserId(null == L ? void 0 : L.id)),
             { appDMChannelMuteConfig: k, dmChannelMuted: Z } = (0, m.cj)([U.ZP], () =>
@@ -347,7 +347,7 @@ let ef = (e) => {
                                 null == d
                                     ? void 0
                                     : d.map((t, n) => {
-                                          let i = (0, C.PM)(t);
+                                          let i = (0, A.PM)(t);
                                           return null != i
                                               ? (0, r.jsxs)(
                                                     "li",
@@ -385,11 +385,11 @@ let ef = (e) => {
                                             Q
                                                 ? (0, r.jsx)(E.CJ0, {
                                                       size: "md",
-                                                      color: E.TVs.colors.INTERACTIVE_NORMAL,
+                                                      color: E.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                                   })
                                                 : (0, r.jsx)(E.Fbu, {
                                                       size: "md",
-                                                      color: E.TVs.colors.INTERACTIVE_NORMAL,
+                                                      color: E.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                                   }),
                                         ],
                                     }),
@@ -448,11 +448,11 @@ let ef = (e) => {
                                       V
                                           ? (0, r.jsx)(E.CJ0, {
                                                 size: "md",
-                                                color: E.TVs.colors.INTERACTIVE_NORMAL,
+                                                color: E.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                             })
                                           : (0, r.jsx)(E.Fbu, {
                                                 size: "md",
-                                                color: E.TVs.colors.INTERACTIVE_NORMAL,
+                                                color: E.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                             }),
                                   ],
                               });

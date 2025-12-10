@@ -14,8 +14,8 @@ var i,
     v = n(442837),
     I = n(692547),
     m = n(681715),
-    S = n(481060),
-    x = n(447543),
+    x = n(481060),
+    S = n(447543),
     f = n(247272),
     y = n(110924),
     E = n(100527),
@@ -120,12 +120,12 @@ class eu extends (i = s.PureComponent) {
                 modalState: h,
                 setModalState: p,
             } = this.props,
-            { maxAge: v, maxUses: I, temporary: m, flags: S } = h;
+            { maxAge: v, maxUses: I, temporary: m, flags: x } = h;
         if (l) {
             let n = null == e ? void 0 : e.id;
             if (null == n) return;
             p({ networkError: void 0 }),
-                x.ZP.createInvite(
+                S.ZP.createInvite(
                     n,
                     {
                         validate: null != t ? t : null,
@@ -135,7 +135,7 @@ class eu extends (i = s.PureComponent) {
                         target_type: a,
                         target_application_id: null == u ? void 0 : u.id,
                         temporary: m,
-                        flags: S,
+                        flags: x,
                     },
                     i,
                 ).catch((e) => p({ networkError: e }));
@@ -174,7 +174,7 @@ class eu extends (i = s.PureComponent) {
     }
     componentWillUnmount() {
         let { inviteChannel: e, modalState: t } = this.props;
-        (0, h.yE)(t.flags, g.$.IS_GUEST_INVITE) && null != e && x.ZP.clearInviteFromStore(e.id);
+        (0, h.yE)(t.flags, g.$.IS_GUEST_INVITE) && null != e && S.ZP.clearInviteFromStore(e.id);
     }
     getInviteKey() {
         let { code: e, vanityURLCode: t, guildScheduledEvent: n, modalState: i } = this.props,
@@ -193,13 +193,13 @@ class eu extends (i = s.PureComponent) {
             ? (0, l.jsxs)("div", {
                   className: et.warningContainer,
                   children: [
-                      (0, l.jsx)(S.Mgn, {
+                      (0, l.jsx)(x.Mgn, {
                           size: "custom",
                           className: et.warningIcon,
                           color: I.Z.unsafe_rawColors.YELLOW_300.css,
                           width: 12,
                       }),
-                      (0, l.jsx)(S.Text, {
+                      (0, l.jsx)(x.Text, {
                           variant: "text-xs/normal",
                           color: "text-default",
                           children: ee.intl.string(ee.t.x1SQZb),
@@ -258,7 +258,7 @@ class eu extends (i = s.PureComponent) {
             controls: (0, l.jsxs)(l.Fragment, {
                 children: [
                     t &&
-                        (0, l.jsx)(S.E1j, {
+                        (0, l.jsx)(x.E1j, {
                             size: "md",
                             query: i,
                             onChange: this.handleQueryChange,
@@ -282,7 +282,7 @@ class eu extends (i = s.PureComponent) {
                   renderRow: () =>
                       (0, l.jsx)("div", {
                           className: et.inviteRowEmptyState,
-                          children: (0, l.jsx)(S.OZU, { children: ee.intl.string(ee.t.ojoWgX) }),
+                          children: (0, l.jsx)(x.OZU, { children: ee.intl.string(ee.t.ojoWgX) }),
                       }),
                   rowHeight: 200,
               }
@@ -293,7 +293,7 @@ class eu extends (i = s.PureComponent) {
                     renderRow: () =>
                         (0, l.jsx)("div", {
                             className: et.inviteRowEmptyState,
-                            children: (0, l.jsx)(S.OZU, { children: ee.intl.string(ee.t.hzPwGG) }),
+                            children: (0, l.jsx)(x.OZU, { children: ee.intl.string(ee.t.hzPwGG) }),
                         }),
                     rowHeight: 200,
                 }
@@ -326,7 +326,7 @@ class eu extends (i = s.PureComponent) {
             {
                 bodyContent: (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)(S.Text, {
+                        (0, l.jsx)(x.Text, {
                             className: et.subText,
                             variant: "text-sm/normal",
                             children: o,
@@ -368,7 +368,7 @@ class eu extends (i = s.PureComponent) {
                   : null != i
                     ? (e = ee.intl.string(ee.t.KaWCyD))
                     : (null == a ? void 0 : a.isGuildStageVoice()) && (e = ee.intl.string(ee.t["2frWa3"])),
-                (d = (0, l.jsx)(S.gNt, {
+                (d = (0, l.jsx)(x.gNt, {
                     label: e,
                     children: (0, l.jsx)(
                         Y.I,
@@ -383,17 +383,17 @@ class eu extends (i = s.PureComponent) {
                 (d = (0, l.jsxs)("div", {
                     className: et.footerWithCheckbox,
                     children: [
-                        (0, l.jsx)(S.Checkbox, {
+                        (0, l.jsx)(x.Checkbox, {
                             checked: u === er.value,
                             onChange: this.handleToggleMaxAge,
                             label: ee.intl.string(ee.t["QKJru/"]),
                         }),
                         (0, l.jsx)(m.u, {
                             text: ee.intl.string(ee.t.Yx4IiC),
-                            children: (0, l.jsx)(S.P3F, {
+                            children: (0, l.jsx)(x.P3F, {
                                 onClick: this.openSettings,
                                 className: en.cursorPointer,
-                                children: (0, l.jsx)(S.ewm, {
+                                children: (0, l.jsx)(x.ewm, {
                                     size: "sm",
                                     color: I.Z.unsafe_rawColors.PRIMARY_400.css,
                                 }),
@@ -578,7 +578,7 @@ class eu extends (i = s.PureComponent) {
 }
 function ed(e) {
     let { section: t, heading: n, isOpen: i, onToggleVisibility: s } = e;
-    return (0, l.jsxs)(S.P3F, {
+    return (0, l.jsxs)(x.P3F, {
         style: {
             "--custom-invite-section-header-height": 24,
             "--custom-invite-section-header-gap": 12 * (0 !== t),
@@ -587,12 +587,12 @@ function ed(e) {
         className: et.inviteSectionHeader,
         onClick: () => s(t),
         children: [
-            (0, l.jsx)(S.Text, {
+            (0, l.jsx)(x.Text, {
                 variant: "text-sm/medium",
-                color: "header-muted",
+                color: "text-muted",
                 children: n,
             }),
-            (0, l.jsx)(S.CJ0, {
+            (0, l.jsx)(x.CJ0, {
                 size: "md",
                 color: "currentColor",
                 className: et.inviteSectionToggleIcon,
@@ -616,7 +616,7 @@ let ec = s.forwardRef(function (e, t) {
             transitionState: p,
             onClose: I,
             page: m,
-            analyticsLocation: S,
+            analyticsLocation: x,
         } = e,
         { analyticsLocations: b } = (0, _.ZP)(E.Z.INSTANT_INVITE_MODAL),
         N = (0, v.e7)([k.Z, j.Z, O.ZP], () => {
@@ -702,8 +702,8 @@ let ec = s.forwardRef(function (e, t) {
         ev = null == F ? void 0 : F.maxUses,
         eI = null == F ? void 0 : F.temporary,
         em = a.vanityURLCode,
-        eS = null != em && em.length > 0,
-        ex = !ee && !(null == N ? void 0 : N.isGuildVocal()) && eS,
+        ex = null != em && em.length > 0,
+        eS = !ee && !(null == N ? void 0 : N.isGuildVocal()) && ex,
         ef = null != (n = null == F ? void 0 : F.flags) ? n : 0;
     ee || (null == ec ? void 0 : ec.invite_code) == null || (eh = ec.invite_code);
     let ey = s.useMemo(() => (en ? (0, B.Qq)(q, Z) : null), [en, q, Z]),
@@ -715,7 +715,7 @@ let ec = s.forwardRef(function (e, t) {
             maxUses: null != ev && 0 !== ev ? ev : eo.value,
             temporary: null != eI && eI,
             networkError: void 0,
-            showVanityURL: ex,
+            showVanityURL: eS,
             currentPage: null != m ? m : J.RV.MAIN,
             lastPage: void 0,
             flags: ef,
@@ -734,7 +734,7 @@ let ec = s.forwardRef(function (e, t) {
             },
             [eE.currentPage, eC],
         ),
-        eb = en && !ex && !et && !ei,
+        eb = en && !eS && !et && !ei,
         { enabled: eN } = A.o.useExperiment(
             {
                 guildId: null == a ? void 0 : a.id,
@@ -749,7 +749,7 @@ let ec = s.forwardRef(function (e, t) {
         }, [eT, eE, I]),
         eO = s.useCallback(() => {
             let e = null == N ? void 0 : N.id;
-            0 === eP && 0 === eA && !eM && ex
+            0 === eP && 0 === eA && !eM && eS
                 ? eC({
                       networkError: void 0,
                       showVanityURL: !0,
@@ -760,7 +760,7 @@ let ec = s.forwardRef(function (e, t) {
                       networkError: void 0,
                       showVanityURL: !1,
                   }),
-                  x.ZP.createInvite(
+                  S.ZP.createInvite(
                       e,
                       {
                           max_age: eA,
@@ -775,18 +775,18 @@ let ec = s.forwardRef(function (e, t) {
                   ).catch((e) =>
                       eC({
                           networkError: e,
-                          showVanityURL: ex,
+                          showVanityURL: eS,
                       }),
                   )),
                 eA !== er.value && eZ !== er.value && eC({ savedMaxAge: er.value });
-        }, [ex, ee, N, o, null == eg ? void 0 : eg.id, M, d, eA, eP, eM, eC, eZ, ew]),
+        }, [eS, ee, N, o, null == eg ? void 0 : eg.id, M, d, eA, eP, eM, eC, eZ, ew]),
         eV = (0, y.Z)(N),
         eR = (0, y.Z)((0, h.yE)(ew, g.$.IS_APPLICATION_BYPASS)),
         eU = null != eV && eV !== N,
         eG = null != eR && eR !== (0, h.yE)(ew, g.$.IS_APPLICATION_BYPASS);
     s.useEffect(() => {
-        !ex && (eU || eG) && eO();
-    }, [eO, eU, eG, ex]);
+        !eS && (eU || eG) && eO();
+    }, [eO, eU, eG, eS]);
     let { canCreateApplicationBypassInvites: ek, isManualApprovalGuild: eD } = (0, K.R)(a);
     return (0, l.jsx)(_.Gt, {
         value: b,
@@ -809,10 +809,10 @@ let ec = s.forwardRef(function (e, t) {
             code: eh,
             source: o,
             analyticsLocations: b,
-            analyticsLocation: S,
+            analyticsLocation: x,
             transitionState: p,
             onClose: I,
-            canShowVanityURL: ex,
+            canShowVanityURL: eS,
             isGuestInviteCreationToggleEnabled: eN && eb,
             shouldHideTemporaryInviteToggle: (eN && eb) || eD,
             modalState: eE,

@@ -22,7 +22,7 @@ function g(e) {
             icon: {
                 type: "rive",
                 asset: r.q8_,
-                riveProps: { dataBinding: { fill: r.TVs.colors.ICON_PRIMARY } },
+                riveProps: { dataBinding: { fill: r.TVs.colors.ICON_STRONG } },
             },
             text: m.intl.string(p.default.NOGFds),
         }),
@@ -54,7 +54,7 @@ function g(e) {
                             text: m.intl.string(m.t["5AFxuK"]),
                             children: (0, l.jsx)(r.SrA, {
                                 size: "md",
-                                color: r.TVs.colors.ICON_PRIMARY,
+                                color: r.TVs.colors.ICON_STRONG,
                             }),
                         }),
                         (0, l.jsx)(r.Text, {

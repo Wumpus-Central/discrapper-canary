@@ -28,8 +28,8 @@ var r = n(54381),
     S = n(925329),
     I = n(963249),
     T = n(313789),
-    A = n(518596),
-    C = n(301766),
+    C = n(518596),
+    A = n(301766),
     N = n(594174),
     P = n(626135),
     R = n(63063),
@@ -112,7 +112,7 @@ function J(e) {
                     s &&
                         (0, r.jsx)(Z.Z, {
                             onClick: () =>
-                                (0, A.openUserSettings)(T.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
+                                (0, C.openUserSettings)(T.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
                                     section: W.oAB.GUILD_BOOSTING,
                                 }),
                             text: q.intl.string(q.t["NQ5g/U"]),
@@ -303,13 +303,13 @@ function ei(e) {
     let S = (0, y.Z)(),
         I = (0, M.$)(),
         T = (0, L.lr)(),
-        A = D.ZP.isBaseSubscriptionCanceled(t),
-        C = (0, U.P)(t, i);
+        C = D.ZP.isBaseSubscriptionCanceled(t),
+        A = (0, U.P)(t, i);
     if (null == b || null == v) return (0, r.jsx)(m.$jN, {});
-    let N = C ? (0, L.Yi)(v) : null,
+    let N = A ? (0, L.Yi)(v) : null,
         P = null != N || (null != T && (T.discountId === Y.dT || T.discountId === Y.dB)),
         R =
-            C && ((A && null != I) || (!A && P))
+            A && ((C && null != I) || (!C && P))
                 ? (0, r.jsx)(G.Z, {
                       subscription: t,
                       invoicePreview: v,
@@ -423,11 +423,11 @@ function es(e) {
         { analyticsLocations: O } = (0, E.ZP)(g.Z.SUBSCRIPTION_DETAILS),
         S = (0, M.$)(),
         I = null != o ? o.slice(1) : [],
-        [T, A] = i.useState(0);
+        [T, C] = i.useState(0);
     i.useEffect(() => {
         if (!b) return;
         let e = (e) => {
-            e.subscription.id === a.id && A((e) => e + 1);
+            e.subscription.id === a.id && C((e) => e + 1);
         };
         return (
             h.Z.subscribe("BILLING_SUBSCRIPTION_UPDATE_SUCCESS", e),
@@ -480,7 +480,7 @@ function es(e) {
     return null == P || null == D
         ? (0, r.jsx)(m.$jN, {})
         : (null != a.renewalMutations &&
-              ((a.renewalMutations.planId !== a.planId && !(0, C.Q0)(a.renewalMutations.planId)) ||
+              ((a.renewalMutations.planId !== a.planId && !(0, A.Q0)(a.renewalMutations.planId)) ||
                   a.hasExternalPlanChange) &&
               (n = (0, r.jsx)(V.Z, {
                   subscription: a,
@@ -515,7 +515,7 @@ function es(e) {
                               className: Q.helpNoticeDismissIcon,
                               children: (0, r.jsx)(m.Dio, {
                                   size: "sm",
-                                  color: _.Z.colors.ICON_PRIMARY,
+                                  color: _.Z.colors.ICON_STRONG,
                               }),
                           }),
                           children: q.intl.format(q.t.K4QorK, { helpdeskArticle: R.Z.getArticleURL(W.BhN.BILLING) }),

@@ -9,7 +9,7 @@ let a = (e) => {
         n,
         a,
         s,
-        { size: c = "md", width: u, height: d, color: m = o.Z.colors.INTERACTIVE_NORMAL } = e,
+        { size: c = "md", width: u, height: d, color: m = o.Z.colors.INTERACTIVE_TEXT_DEFAULT } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,

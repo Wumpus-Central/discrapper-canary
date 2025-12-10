@@ -38,7 +38,7 @@ function u(e) {
                         children: (0, s.Z)(t),
                     }),
                     (0, r.jsx)(i.Text, {
-                        color: "interactive-normal",
+                        color: "interactive-text-default",
                         variant: "text-sm/normal",
                         children: t.description,
                     }),

@@ -15,11 +15,11 @@ function l(e) {
             "user" === t
                 ? (0, r.jsx)(a.tBG, {
                       size: "xxs",
-                      color: o.Z.colors.INTERACTIVE_NORMAL,
+                      color: o.Z.colors.INTERACTIVE_TEXT_DEFAULT,
                   })
                 : (0, r.jsx)(a.QTo, {
                       size: "xxs",
-                      color: o.Z.colors.INTERACTIVE_NORMAL,
+                      color: o.Z.colors.INTERACTIVE_TEXT_DEFAULT,
                   }),
         text: "user" === t ? i.Z.Messages.STOREFRONT_USER_SUBSCRIPTION : i.Z.Messages.STOREFRONT_SERVER_SUBSCRIPTION,
     });

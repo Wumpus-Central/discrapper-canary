@@ -34,7 +34,7 @@ function c(e) {
                     : (0, r.jsx)(o.Text, {
                           className: s.overflow,
                           variant: "text-xs/bold",
-                          color: "interactive-active",
+                          color: "interactive-text-active",
                           children: "+".concat(e),
                       }),
             ],

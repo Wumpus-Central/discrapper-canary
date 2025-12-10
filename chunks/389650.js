@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(509140),
     I = n(825655),
     T = n(131951),
-    A = n(556296),
-    C = n(63063),
+    C = n(556296),
+    A = n(63063),
     N = n(358085),
     P = n(13140),
     R = n(526665),
@@ -110,7 +110,7 @@ class Y extends i.PureComponent {
               ? (0, r.jsx)(f.Wn, {
                     messageType: f.QYI.ERROR,
                     children: j.intl.format(j.t.MOIaNd, {
-                        keyboardNavArticle: C.Z.getArticleURL(x.BhN.KEYBOARD_NAVIGATION),
+                        keyboardNavArticle: A.Z.getArticleURL(x.BhN.KEYBOARD_NAVIGATION),
                     }),
                 })
               : (0, r.jsx)(f.Text, {
@@ -393,7 +393,7 @@ class W extends i.PureComponent {
             children: [
                 (0, r.jsx)(f.d3s, {
                     size: "xs",
-                    color: u.Z.colors.ICON_SECONDARY,
+                    color: u.Z.colors.ICON_SUBTLE,
                 }),
                 (0, r.jsx)(f.Text, {
                     variant: "text-sm/medium",
@@ -549,7 +549,7 @@ class W extends i.PureComponent {
     }
 }
 function K() {
-    let e = (0, c.e7)([A.ZP], () => A.ZP.getState()),
+    let e = (0, c.e7)([C.ZP], () => C.ZP.getState()),
         t = (0, c.e7)([T.Z], () => (0, y.Z)(T.Z)),
         n = (0, c.e7)([S.Z], () => S.Z.isSupported),
         i = (0, b.w9)(),

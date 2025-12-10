@@ -65,7 +65,7 @@ function c(e) {
                         children: [
                             null != p &&
                                 (0, r.jsx)(o.xvT, {
-                                    color: "interactive-normal",
+                                    color: "interactive-text-default",
                                     variant: "text-sm/normal",
                                     children: b,
                                 }),

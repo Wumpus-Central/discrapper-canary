@@ -43,7 +43,7 @@ function y(e) {
                         (0, r.jsx)(u.Text, {
                             className: _.title,
                             variant: "text-md/semibold",
-                            color: "interactive-active",
+                            color: "interactive-text-active",
                             children: b.intl.format(b.t.vtUO3Y, { username: l }),
                         }),
                         (0, r.jsxs)("div", {

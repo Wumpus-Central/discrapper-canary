@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-let C = (e) => {
+let A = (e) => {
         let { status: t, onClick: n, opened: i, count: a } = e;
         return (0, r.jsxs)(l.P3F, {
             className: v.header,
@@ -81,7 +81,7 @@ let C = (e) => {
                     className: v.headerIconWrapper,
                     children: (0, r.jsx)(l.aNP, {
                         size: "md",
-                        color: "active" === t ? l.TVs.colors.INTERACTIVE_ACTIVE : l.TVs.colors.INTERACTIVE_MUTED,
+                        color: "active" === t ? l.TVs.colors.INTERACTIVE_TEXT_ACTIVE : l.TVs.colors.INTERACTIVE_MUTED,
                     }),
                 }),
                 (0, r.jsxs)("div", {
@@ -186,7 +186,7 @@ let C = (e) => {
                     ? (null == t || null == (e = t.guild_metadata) ? void 0 : e.member_type) === p.wO.OWNER
                         ? O.intl.format(
                               O.t.Lb0HVv,
-                              A(I({}, a), { guildName: null == t || null == (n = t.guild_metadata) ? void 0 : n.name }),
+                              C(I({}, a), { guildName: null == t || null == (n = t.guild_metadata) ? void 0 : n.name }),
                           )
                         : O.intl.format(O.t.rmpEPD, {
                               guildName: null == t || null == (i = t.guild_metadata) ? void 0 : i.name,
@@ -252,7 +252,7 @@ let C = (e) => {
         return (0, r.jsxs)("div", {
             className: v.dropdown,
             children: [
-                (0, r.jsx)(C, {
+                (0, r.jsx)(A, {
                     status: t,
                     onClick: () => o((e) => !e),
                     opened: a,

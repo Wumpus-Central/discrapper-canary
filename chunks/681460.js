@@ -22,7 +22,7 @@ function c(e) {
                         children: (0, r.jsx)(s.Text, {
                             tag: "span",
                             variant: "text-sm/medium",
-                            color: "interactive-normal",
+                            color: "interactive-text-default",
                             children: e.text,
                         }),
                     }),

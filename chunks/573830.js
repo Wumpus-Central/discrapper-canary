@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(74361),
     o = n(69771),
-    s = n(205120),
+    s = n(148884),
     l = n(698369),
     c = n(692547),
     u = n(251052),
@@ -70,13 +70,13 @@ let y = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.1058
     S = "M10.84656 7.17346L10.84656 8.80104L5.24954 8.80104L5.24954 7.17346L10.84656 7.17346Z",
     I = "M6.31649 11.88304L5.0437 10.61032L11.44792 4.20604L12.72072 5.47883L6.31649 11.88304Z",
     T = "M3.26914 8.87224L4.54194 7.59943L7.5588 10.61632L6.28601 11.88912L3.26914 8.87224Z",
-    A = [0, 0.1, 0.4, 0.6, 0.9, 1],
-    C = [0, 0.1, 0.9, 1],
+    C = [0, 0.1, 0.4, 0.6, 0.9, 1],
+    A = [0, 0.1, 0.9, 1],
     N = [0, 0.1, 0.2, 0.5, 0.7, 1],
     P = [0, 0.3, 0.5, 0.8, 0.9, 1];
 function R(e, t, n) {
     let i = e.to({
-        range: C,
+        range: A,
         output: [t, t, n, n],
         extrapolate: "clamp",
     });
@@ -89,7 +89,7 @@ function R(e, t, n) {
                 (0, r.jsx)(s.animated.path, {
                     fill: i,
                     d: e.to({
-                        range: C,
+                        range: A,
                         output: [y, v, v, I],
                         extrapolate: "clamp",
                     }),
@@ -97,7 +97,7 @@ function R(e, t, n) {
                 (0, r.jsx)(s.animated.path, {
                     fill: i,
                     d: e.to({
-                        range: C,
+                        range: A,
                         output: [O, S, S, T],
                         extrapolate: "clamp",
                     }),
@@ -144,18 +144,18 @@ function D(e) {
         { hoverProps: U, isHovered: G } = (0, o.X)({ isDisabled: n }),
         Z = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
         B = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
-        F = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT_SELECTED).spring(),
+        F = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_SELECTED_DEFAULT).spring(),
         V = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_ACTIVE).spring(),
         H = (0, d.d)(c.Z.colors.SWITCH_BORDER_DEFAULT).spring(),
-        Y = (0, d.d)(c.Z.colors.SWITCH_BORDER_DEFAULT_SELECTED).spring(),
+        Y = (0, d.d)(c.Z.colors.SWITCH_BORDER_SELECTED_DEFAULT).spring(),
         W = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_HOVER).spring(),
-        K = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_HOVER_SELECTED).spring(),
+        K = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_SELECTED_HOVER).spring(),
         z = (0, d.d)(c.Z.colors.SWITCH_BORDER_HOVER).spring(),
-        q = (0, d.d)(c.Z.colors.SWITCH_BORDER_HOVER_SELECTED).spring(),
-        Q = (0, d.d)(c.Z.colors.SWITCH_THUMB_FOREGROUND_DEFAULT).spring(),
-        X = (0, d.d)(c.Z.colors.SWITCH_THUMB_FOREGROUND_ACTIVE).spring(),
+        q = (0, d.d)(c.Z.colors.SWITCH_BORDER_SELECTED_HOVER).spring(),
+        Q = (0, d.d)(c.Z.colors.SWITCH_THUMB_ICON_DEFAULT).spring(),
+        X = (0, d.d)(c.Z.colors.SWITCH_THUMB_ICON_ACTIVE).spring(),
         J = (0, d.d)(c.Z.colors.SWITCH_THUMB_BACKGROUND_DEFAULT).spring(),
-        $ = (0, d.d)(c.Z.colors.SWITCH_THUMB_BACKGROUND_DEFAULT_SELECTED).spring(),
+        $ = (0, d.d)(c.Z.colors.SWITCH_THUMB_BACKGROUND_SELECTED_DEFAULT).spring(),
         { state: ee, opacity: et } = (0, u.q)(
             {
                 config: { duration: T.enabled ? 200 : 300 },
@@ -198,13 +198,13 @@ function D(e) {
                                 style: {
                                     opacity: et,
                                     backgroundColor: ee.to({
-                                        range: C,
+                                        range: A,
                                         output: [G ? W : Z, B, V, G ? K : F],
                                         extrapolate: "clamp",
                                     }),
                                     border: "1px solid",
                                     borderColor: ee.to({
-                                        range: C,
+                                        range: A,
                                         output: [G ? z : H, G ? z : H, G ? q : Y, G ? q : Y],
                                         extrapolate: "clamp",
                                     }),
@@ -217,11 +217,11 @@ function D(e) {
                                         left: ee.to(
                                             T.enabled
                                                 ? {
-                                                      range: C,
+                                                      range: A,
                                                       output: [1, 1, 24, 24],
                                                   }
                                                 : {
-                                                      range: A,
+                                                      range: C,
                                                       output: [1, 1, 1, 24, 24, 24],
                                                   },
                                         ),
@@ -230,7 +230,7 @@ function D(e) {
                                     children: [
                                         (0, r.jsx)(s.animated.rect, {
                                             fill: ee.to({
-                                                range: C,
+                                                range: A,
                                                 output: [J, J, $, $],
                                             }),
                                             x: T.enabled ? 4 : en([4, 4, 2.5, 1, 2.5, 4]),

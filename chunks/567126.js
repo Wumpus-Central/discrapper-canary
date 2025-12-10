@@ -428,7 +428,7 @@ function J(e) {
             (0, r.jsx)(f.Text, {
                 className: G.nativePickerLabel,
                 variant: "text-md/semibold",
-                color: "interactive-normal",
+                color: "interactive-text-default",
                 children: B.intl.string(B.t.XyYoFc),
             }),
             y,
@@ -444,7 +444,7 @@ function J(e) {
                                   (0, r.jsx)(f.Text, {
                                       className: G.nativeCaptureDevicesText,
                                       variant: "text-md/semibold",
-                                      color: "interactive-normal",
+                                      color: "interactive-text-default",
                                       children: B.intl.string(B.t.rO0Vix),
                                   }),
                                   (0, r.jsx)(f.CJ0, {

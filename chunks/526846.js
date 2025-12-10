@@ -181,7 +181,7 @@ let w = r.forwardRef(function (e, t) {
                                             (0, i.jsx)(u.nG3, {
                                                 size: "md",
                                                 className: Z.titleLeftIcon,
-                                                color: "var(--interactive-active)",
+                                                color: "var(--interactive-text-active)",
                                             }),
                                             (0, i.jsx)(u.Text, {
                                                 variant: "eyebrow",
@@ -201,7 +201,7 @@ let w = r.forwardRef(function (e, t) {
                                                 size: "custom",
                                                 width: 12,
                                                 height: 12,
-                                                color: "var(--interactive-active)",
+                                                color: "var(--interactive-text-active)",
                                                 className: Z.titleRightIcon,
                                             }),
                                         ],

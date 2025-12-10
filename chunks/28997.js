@@ -43,12 +43,12 @@ function c(e) {
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-sm/medium",
-                                    color: "interactive-active",
+                                    color: "interactive-text-active",
                                     children: t,
                                 }),
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-sm/normal",
-                                    color: "interactive-normal",
+                                    color: "interactive-text-default",
                                     className: o.description,
                                     children: n,
                                 }),

@@ -92,18 +92,18 @@ function h(e) {
                                         (0, r.jsx)(e.icon, {
                                             size: "md",
                                             color: n
-                                                ? c.TVs.colors.INTERACTIVE_ACTIVE
-                                                : c.TVs.colors.INTERACTIVE_NORMAL,
+                                                ? c.TVs.colors.INTERACTIVE_TEXT_ACTIVE
+                                                : c.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             tag: "strong",
-                                            color: n ? "interactive-active" : "interactive-normal",
+                                            color: n ? "interactive-text-active" : "interactive-text-default",
                                             variant: "text-md/semibold",
                                             children: e.title,
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             tag: "span",
-                                            color: n ? "interactive-active" : "interactive-normal",
+                                            color: n ? "interactive-text-active" : "interactive-text-default",
                                             variant: "text-xs/medium",
                                             children: e.body,
                                         }),

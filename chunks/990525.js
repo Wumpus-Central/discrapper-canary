@@ -194,7 +194,7 @@ let w = (e) => {
                             children: [
                                 (0, r.jsxs)(u.Text, {
                                     variant: "text-xs/medium",
-                                    color: t.underDevelopment ? "header-muted" : "header-primary",
+                                    color: t.underDevelopment ? "text-muted" : "header-primary",
                                     children: [t.underDevelopment ? "\uD83D\uDEA7 " : "", W],
                                 }),
                                 M && !A ? (0, r.jsx)(u._8t, { size: "xxs" }) : null,

@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,8 +71,8 @@ function A(e, t) {
         e
     );
 }
-function C(e) {
-    let { summary: t, channel: f, members: b, guildId: S, unread: T, onClick: C } = e,
+function A(e) {
+    let { summary: t, channel: f, members: b, guildId: S, unread: T, onClick: A } = e,
         [N, P] = i.useState(!1),
         R = (0, u.Ye)(m.default.extractTimestamp(t.startId)),
         D = (0, a.e7)([h.Z], () => h.Z.summaryFeedback(t)),
@@ -89,12 +89,12 @@ function C(e) {
             x &&
                 (0, s.jW)(e, async () => {
                     let { default: e } = await n.e("12891").then(n.bind(n, 519620));
-                    return (n) => (0, r.jsx)(e, A(I({}, n), { summary: t }));
+                    return (n) => (0, r.jsx)(e, C(I({}, n), { summary: t }));
                 });
         };
     return (0, r.jsxs)(o.P3F, {
         className: v.container,
-        onClick: C,
+        onClick: A,
         onContextMenu: L,
         onMouseEnter: () => P(!0),
         onMouseLeave: () => P(!1),
@@ -111,7 +111,7 @@ function C(e) {
                     children: [
                         (0, r.jsx)(o.Text, {
                             className: v.timestamp,
-                            color: "interactive-normal",
+                            color: "interactive-text-default",
                             variant: "text-xs/normal",
                             children: R,
                         }),
@@ -128,7 +128,7 @@ function C(e) {
                         }),
                         (0, r.jsx)(o.Text, {
                             className: v.count,
-                            color: "interactive-normal",
+                            color: "interactive-text-default",
                             variant: "text-xs/normal",
                             children: t.count,
                         }),
@@ -209,7 +209,7 @@ function N(e) {
                   var i;
                   let a = null != (i = n[t]) ? i : [];
                   return (0, r.jsx)(
-                      C,
+                      A,
                       {
                           summary: e,
                           channel: o,

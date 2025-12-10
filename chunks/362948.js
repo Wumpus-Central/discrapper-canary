@@ -184,7 +184,7 @@ function g(e) {
               });
     } else
         t = (0, r.jsx)(l.Text, {
-            color: "interactive-active",
+            color: "interactive-text-active",
             variant: i,
             children: a,
         });

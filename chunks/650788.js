@@ -101,7 +101,7 @@ function V(e) {
                         (0, n.jsx)(j.Z.Icon, {
                             icon: (0, d.GSL)(I.Z),
                             "aria-hidden": !0,
-                            color: a.Z.colors.INTERACTIVE_ACTIVE.css,
+                            color: a.Z.colors.INTERACTIVE_TEXT_ACTIVE.css,
                         }),
                         (0, n.jsx)(j.Z.Title, { children: k.intl.string(k.t.al5EXL) }),
                         (0, n.jsx)(L.Z, {}),

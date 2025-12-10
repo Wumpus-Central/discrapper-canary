@@ -76,7 +76,7 @@ function x(e) {
                             children: s,
                         }),
                         (0, r.jsx)(o.Text, {
-                            color: "interactive-normal",
+                            color: "interactive-text-default",
                             variant: "text-sm/normal",
                             children: c,
                         }),

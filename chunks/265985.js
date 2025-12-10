@@ -1,6 +1,6 @@
 n.d(t, {
     h: () => T,
-    x: () => A,
+    x: () => C,
 });
 var r = n(54381);
 n(473749);
@@ -76,7 +76,7 @@ let v = 440,
             ],
         });
     },
-    A = (e) => {
+    C = (e) => {
         let { onClose: t, listing: n, guildId: i } = e,
             a = (0, o.e7)([f.Z], () => f.Z.getGuild(i), [i]),
             u = (0, h.Z)(i).filter((e) => e.roles.includes(n.role_id)),
@@ -112,7 +112,7 @@ let v = 440,
                                             children: y.intl.string(y.t.PrKk4n),
                                         }),
                                         (0, r.jsx)(l.Text, {
-                                            color: "interactive-normal",
+                                            color: "interactive-text-default",
                                             variant: "text-sm/normal",
                                             children: y.intl.format(y.t["2ICUkG"], { count: u.length }),
                                         }),

@@ -6,8 +6,8 @@ var i = n(54381),
     a = n(442837),
     o = n(692547),
     c = n(481060),
-    d = n(194359),
-    T = n(782568),
+    T = n(194359),
+    d = n(782568),
     u = n(726521),
     S = n(485664),
     x = n(681678),
@@ -83,7 +83,7 @@ function L(t) {
             }),
             (0, i.jsx)(c.Fbu, {
                 size: "md",
-                color: o.Z.colors.INTERACTIVE_NORMAL,
+                color: o.Z.colors.INTERACTIVE_TEXT_DEFAULT,
             }),
         ],
     });
@@ -113,7 +113,7 @@ let R = function (t) {
             (0, c.Mr3)(p.X_), I(O.NM.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
         }, [I]),
         U = s.useCallback(() => {
-            d.Z.unblockUser(e, { location: p.DL }), I(O.NM.USER_SAFETY_TOOLS_UNBLOCK);
+            T.Z.unblockUser(e, { location: p.DL }), I(O.NM.USER_SAFETY_TOOLS_UNBLOCK);
         }, [e, I]),
         k = s.useCallback(() => {
             (0, c.Mr3)(p.X_), I(O.NM.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM);
@@ -128,8 +128,8 @@ let R = function (t) {
                     disabled: M,
                     onPress: () => {
                         F
-                            ? (d.Z.unignoreUser(e, p.cH, r), I(O.NM.USER_SAFETY_TOOLS_UNIGNORE))
-                            : (d.Z.ignoreUser(e, p.cH, r), I(O.NM.USER_SAFETY_TOOLS_IGNORE));
+                            ? (T.Z.unignoreUser(e, p.cH, r), I(O.NM.USER_SAFETY_TOOLS_UNIGNORE))
+                            : (T.Z.ignoreUser(e, p.cH, r), I(O.NM.USER_SAFETY_TOOLS_IGNORE));
                     },
                 },
                 {
@@ -178,7 +178,7 @@ let R = function (t) {
                     subTitle: b.intl.string(b.t.iNcsrW),
                     buttonText: b.intl.string(b.t.rK4Gqv),
                     onPress: () => {
-                        (0, T.Z)(p.EI), I(O.NM.USER_SAFETY_TOOLS_CTL);
+                        (0, d.Z)(p.EI), I(O.NM.USER_SAFETY_TOOLS_CTL);
                     },
                 },
                 e = {
@@ -186,7 +186,7 @@ let R = function (t) {
                     subTitle: b.intl.string(b.t.g5uwC5),
                     buttonText: b.intl.string(b.t.rK4Gqv),
                     onPress: () => {
-                        (0, T.Z)(p.n4), I(O.NM.USER_SAFETY_TOOLS_NO_FILTR);
+                        (0, d.Z)(p.n4), I(O.NM.USER_SAFETY_TOOLS_NO_FILTR);
                     },
                 },
                 n = {
@@ -194,7 +194,7 @@ let R = function (t) {
                     subTitle: b.intl.string(b.t.S9O1ZZ),
                     buttonText: b.intl.string(b.t.rK4Gqv),
                     onPress: () => {
-                        (0, T.Z)(p.$l), I(O.NM.USER_SAFETY_TOOLS_THROUGHLINE);
+                        (0, d.Z)(p.$l), I(O.NM.USER_SAFETY_TOOLS_THROUGHLINE);
                     },
                 };
             return [

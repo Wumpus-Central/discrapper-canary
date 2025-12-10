@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(481060),
     p = n(686546),
     f = n(719961),
-    h = n(264783),
-    g = n(944486),
+    g = n(264783),
+    h = n(944486),
     m = n(358085),
     _ = n(821020),
     b = n(370774),
@@ -37,7 +37,7 @@ let C = {
     };
 function N(e) {
     var t, n;
-    let { onClick: l, selectedOverride: s = !1, popoutProps: o, ref: g, focusSectionProps: _ } = e,
+    let { onClick: l, selectedOverride: s = !1, popoutProps: o, ref: h, focusSectionProps: _ } = e,
         [O, v] = i.useState(!1),
         N = (0, b.D)(),
         j = s || N,
@@ -49,12 +49,12 @@ function N(e) {
         } = (0, f.T)({ location: "NotificationsInboxTitleBarButton" }),
         w = (0, r.jsx)(d.Dkj, {
             className: I.icon,
-            color: O || P ? d.TVs.colors.ICON_PRIMARY : d.TVs.colors.ICON_TERTIARY,
+            color: O || P ? d.TVs.colors.ICON_STRONG : d.TVs.colors.ICON_MUTED,
             size: A,
         }),
         { badge: L, badgeType: R } = (0, E.h6)({ isSelected: j }),
         D = (0, m.isDesktop)() && x,
-        M = (0, h.A)(),
+        M = (0, g.A)(),
         k = (0, m.isMac)() ? C[M] : D ? S[M] : T[M];
     return (0, r.jsxs)(d.Kqy, {
         gap: 0,
@@ -96,7 +96,7 @@ function N(e) {
                         return e;
                     })(
                         {
-                            innerRef: g,
+                            innerRef: h,
                             className: a()(I.clickableContainer, { [I.withHoverHighlight]: Z }),
                         },
                         _,
@@ -157,7 +157,7 @@ function j() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = i.useRef(null),
         { notificationCenterVariant: n } = (0, _.pN)({ location: "NotificationsInboxButton" }),
-        l = (0, o.e7)([g.Z], () => g.Z.getChannelId()),
+        l = (0, o.e7)([h.Z], () => h.Z.getChannelId()),
         a = i.useMemo(() => v.Z5c.CHANNEL(v.STv, null != l ? l : void 0), [l]),
         c = (0, E.mv)();
     return n === _.jP.SIDEBAR

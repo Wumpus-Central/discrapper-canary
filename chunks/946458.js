@@ -61,7 +61,7 @@ function c(e) {
                                   }),
                             (0, i.jsx)(r.Text, {
                                 variant: "text-sm/semibold",
-                                color: "interactive-normal",
+                                color: "interactive-text-default",
                                 children: 17,
                             }),
                         ],

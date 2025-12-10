@@ -51,7 +51,7 @@ function E(e) {
                             (0, r.jsxs)(c.Text, {
                                 className: I.channelName,
                                 variant: "text-md/medium",
-                                color: "interactive-normal",
+                                color: "interactive-text-default",
                                 children: [
                                     (0, r.jsx)(c.gj8, {
                                         size: "xs",

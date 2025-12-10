@@ -22,24 +22,24 @@ let v = (e) => {
     let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: v, setTrackedUpsellViewed: S } = e,
         { location: I } = (0, c.O)(),
         { analyticsLocations: T } = (0, d.ZP)(),
-        A = (0, s.e7)([h.Z], () => h.Z.getGuild(n)),
-        { canManageAllExpressions: C } = (0, m.XJ)(A),
-        N = null != A && 0 === (0, g.A3)(A.premiumTier) && !A.features.has(E.GuildFeatures.MORE_STICKERS);
+        C = (0, s.e7)([h.Z], () => h.Z.getGuild(n)),
+        { canManageAllExpressions: A } = (0, m.XJ)(C),
+        N = null != C && 0 === (0, g.A3)(C.premiumTier) && !C.features.has(E.GuildFeatures.MORE_STICKERS);
     if (
         (i.useEffect(() => {
-            C &&
+            A &&
                 N &&
                 v &&
                 ((0, u.yw)(E.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                     location: I,
-                    guild_id: null == A ? void 0 : A.id,
+                    guild_id: null == C ? void 0 : C.id,
                     channel_id: null == a ? void 0 : a.id,
                     type: "Expression Picker Inline Sticker Upsell",
                     location_stack: T,
                 }),
                 S(!0));
-        }, [N, A, a, I, v, S, T, C]),
-        null == A || !C)
+        }, [N, C, a, I, v, S, T, A]),
+        null == C || !A)
     )
         return null;
     if (N) {
@@ -47,7 +47,7 @@ let v = (e) => {
             (0, p.Z)({
                 analyticsLocations: T,
                 analyticsSourceLocation: I,
-                guild: A,
+                guild: C,
                 perks: (0, b.hC)(),
             });
         };
@@ -60,7 +60,7 @@ let v = (e) => {
                     className: O.icon,
                 }),
                 (0, r.jsx)(l.Text, {
-                    color: "interactive-normal",
+                    color: "interactive-text-default",
                     className: O.body,
                     variant: "text-sm/normal",
                     children: y.intl.format(y.t.AXWla1, { count: (0, g.A3)(E.Eu4.TIER_1) }),
@@ -88,7 +88,7 @@ let v = (e) => {
                     height: 20,
                 }),
                 (0, r.jsx)(l.Text, {
-                    color: "interactive-normal",
+                    color: "interactive-text-default",
                     className: O.body,
                     variant: "text-sm/normal",
                     children: y.intl.string(y.t.S83wgh),

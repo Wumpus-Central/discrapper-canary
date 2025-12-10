@@ -29,8 +29,8 @@ var r,
     S = n(926491),
     I = n(378233),
     T = n(695346),
-    A = n(430824),
-    C = n(699516),
+    C = n(430824),
+    A = n(699516),
     N = n(594174),
     P = n(768581),
     R = n(51144),
@@ -237,7 +237,7 @@ class Q extends Y {
     renderContent() {
         var e;
         let { user: t, nick: n, status: r, hidePersonalInformation: a, guildId: o } = this.props,
-            s = null == o ? C.Z.getNickname(t.id) : null;
+            s = null == o ? A.Z.getNickname(t.id) : null;
         return (0, i.jsxs)(D.RX, {
             children: [
                 (0, i.jsx)(D.Tw, {
@@ -282,7 +282,7 @@ class X extends Y {
                 selected: c,
                 layout: u = "horizontal",
             } = this.props,
-            d = null == l ? C.Z.getNickname(t.id) : null,
+            d = null == l ? A.Z.getNickname(t.id) : null,
             p = null != (e = null != n ? n : d) ? e : R.ZP.getName(t);
         return (0, i.jsxs)(D.RX, {
             className: s()({ [j.verticalLayout]: "vertical-suggestion" === u }),
@@ -302,7 +302,7 @@ class X extends Y {
                         (0, i.jsx)(D.z5, {
                             children: (0, i.jsx)(f.Text, {
                                 className: j.autocompleteRowHeading,
-                                color: "interactive-active",
+                                color: "interactive-text-active",
                                 variant: "text-sm/medium",
                                 children: p,
                             }),
@@ -410,7 +410,7 @@ class ee extends Y {
         return (0, i.jsxs)(D.RX, {
             children: [
                 null != n && (0, i.jsx)(D.Tw, { children: (0, i.jsx)(n, { className: j.icon }) }),
-                (0, i.jsx)(D.z5, { children: (0, i.jsx)(D.BR, { children: (0, g.F6)(e, N.default, C.Z) }) }),
+                (0, i.jsx)(D.z5, { children: (0, i.jsx)(D.BR, { children: (0, g.F6)(e, N.default, A.Z) }) }),
                 null != t ? (0, i.jsx)(D.dY, { children: t.name }) : null,
             ],
         });
@@ -503,7 +503,7 @@ class ei extends Y {
         return (
             (0, I.jl)(s)
                 ? (n = null == (e = S.Z.getStickerPack(s.pack_id)) ? void 0 : e.name)
-                : (0, I.J8)(s) && (n = null == (t = A.Z.getGuild(s.guild_id)) ? void 0 : t.name),
+                : (0, I.J8)(s) && (n = null == (t = C.Z.getGuild(s.guild_id)) ? void 0 : t.name),
             (0, i.jsxs)(D.RX, {
                 children: [
                     (0, i.jsx)(D.Tw, { children: a(s, l || !0 === o) }),

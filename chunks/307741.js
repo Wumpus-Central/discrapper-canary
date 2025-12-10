@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => A });
+n.d(t, { ZP: () => C });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -37,7 +37,7 @@ function O(e) {
         style:
             null != n && n.length > 0
                 ? { backgroundImage: 'url("'.concat(n, '")') }
-                : { backgroundColor: u.TVs.colors.BG_BRAND.css },
+                : { backgroundColor: u.TVs.colors.BACKGROUND_BRAND.css },
     });
 }
 function v(e) {
@@ -57,7 +57,7 @@ function v(e) {
                       size: "lg",
                       className: y.gameIconFallback,
                       color: u.TVs.colors.BACKGROUND_SURFACE_HIGH,
-                      style: { backgroundColor: u.TVs.colors.BG_BRAND.css },
+                      style: { backgroundColor: u.TVs.colors.BACKGROUND_BRAND.css },
                   }),
     });
 }
@@ -161,7 +161,7 @@ function T(e) {
         ],
     });
 }
-function A(e) {
+function C(e) {
     let { application: t, detectedGame: n, className: a, onClose: s } = e,
         l = (0, g.Z)(
             {

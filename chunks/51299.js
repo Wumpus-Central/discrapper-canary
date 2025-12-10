@@ -1,24 +1,24 @@
-i.d(t, { default: () => _ }), i(953529);
-var a = i(54381);
-i(473749);
-var e = i(512722),
-    l = i.n(e),
-    o = i(793030),
-    c = i(481060),
-    s = i(99690),
-    p = i(23551),
-    r = i(122021),
-    d = i(388032),
-    u = i(122048);
+e.d(t, { default: () => _ }), e(953529);
+var i = e(54381);
+e(473749);
+var a = e(512722),
+    l = e.n(a),
+    o = e(793030),
+    c = e(481060),
+    s = e(99690),
+    p = e(23551),
+    r = e(122021),
+    d = e(388032),
+    u = e(122048);
 function m(n) {
-    let { onComplete: t, excludedPlatformTypes: i, includedPlatformTypes: e } = n,
+    let { onComplete: t, excludedPlatformTypes: e, includedPlatformTypes: a } = n,
         l = (0, r.fq)();
-    return (0, a.jsx)("div", {
+    return (0, i.jsx)("div", {
         className: u.connectionsContainer,
         children: l
-            .filter((n) => !(null == i ? void 0 : i.has(n.type)) && (null == e || e.has(n.type)))
+            .filter((n) => !(null == e ? void 0 : e.has(n.type)) && (null == a || a.has(n.type)))
             .map((n) =>
-                (0, a.jsx)(
+                (0, i.jsx)(
                     p.Z,
                     {
                         type: n.type,
@@ -32,50 +32,50 @@ function m(n) {
     });
 }
 function x(n) {
-    let { integrations: t, onCompleteApplication: i } = n;
-    if (null == t || null == i) return null;
-    let e = t.filter((n) => {
+    let { integrations: t, onCompleteApplication: e } = n;
+    if (null == t || null == e) return null;
+    let a = t.filter((n) => {
         var t;
         return (null == (t = n.application) ? void 0 : t.roleConnectionsVerificationUrl) != null;
     });
-    return 0 === e.length
+    return 0 === a.length
         ? null
-        : (0, a.jsxs)(a.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, a.jsx)(c.Text, {
+                  (0, i.jsx)(c.Text, {
                       variant: "text-sm/medium",
-                      color: "interactive-normal",
+                      color: "interactive-text-default",
                       className: u.applicationsHeader,
                       children: d.intl.string(d.t.PHjkRE),
                   }),
-                  (0, a.jsx)("div", {
+                  (0, i.jsx)("div", {
                       className: u.applicationsContainer,
-                      children: e.map((n) => {
+                      children: a.map((n) => {
                           let t = n.application;
                           l()(null != t, "application is null");
-                          let e = null == t ? void 0 : t.bot;
+                          let a = null == t ? void 0 : t.bot;
                           return (
-                              l()(null != e, "bot is null"),
-                              (0, a.jsxs)(
+                              l()(null != a, "bot is null"),
+                              (0, i.jsxs)(
                                   c.P3F,
                                   {
-                                      onClick: () => i(t.id),
+                                      onClick: () => e(t.id),
                                       className: u.application,
                                       children: [
-                                          (0, a.jsx)(s.Z, {
-                                              user: e,
+                                          (0, i.jsx)(s.Z, {
+                                              user: a,
                                               className: u.applicationIcon,
                                           }),
-                                          (0, a.jsxs)("div", {
+                                          (0, i.jsxs)("div", {
                                               className: u.applicationNameContainer,
                                               children: [
-                                                  (0, a.jsx)(c.Heading, {
+                                                  (0, i.jsx)(c.Heading, {
                                                       variant: "heading-sm/semibold",
                                                       className: u.applicationNameText,
                                                       children: t.name,
                                                   }),
                                                   null != t.description && t.description.length > 0
-                                                      ? (0, a.jsx)(c.Text, {
+                                                      ? (0, i.jsx)(c.Text, {
                                                             variant: "text-xs/normal",
                                                             color: "text-default",
                                                             className: u.applicationNameText,
@@ -97,32 +97,32 @@ function x(n) {
 function _(n) {
     let {
         transitionState: t,
-        onComplete: i,
-        onClose: e,
+        onComplete: e,
+        onClose: a,
         excludedPlatformTypes: l,
         includedPlatformTypes: c,
         integrations: s,
         onCompleteApplication: p,
     } = n;
-    return (0, a.jsxs)(o.Modal, {
+    return (0, i.jsxs)(o.Modal, {
         title: d.intl.string(d.t.syl6HS),
         transitionState: t,
-        onClose: e,
+        onClose: a,
         actions: [],
         children: [
-            (0, a.jsx)(m, {
+            (0, i.jsx)(m, {
                 onComplete: function (n) {
-                    i(n), e();
+                    e(n), a();
                 },
                 excludedPlatformTypes: l,
                 includedPlatformTypes: c,
             }),
-            (0, a.jsx)(x, {
+            (0, i.jsx)(x, {
                 integrations: s,
                 onCompleteApplication:
                     null != p
                         ? function (n) {
-                              null == p || p(n), e();
+                              null == p || p(n), a();
                           }
                         : void 0,
             }),

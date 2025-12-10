@@ -52,7 +52,7 @@ function A(e) {
                               })
                             : (0, r.jsx)(s.Text, {
                                   variant: "text-sm/semibold",
-                                  color: "interactive-normal",
+                                  color: "interactive-text-default",
                                   children: g,
                               }),
                     onNavigate: T > 0 ? () => O(u.mw.MESSAGES) : void 0,
@@ -76,7 +76,7 @@ function A(e) {
                               })
                             : (0, r.jsx)(s.Text, {
                                   variant: "text-sm/semibold",
-                                  color: "interactive-normal",
+                                  color: "interactive-text-default",
                                   children: N,
                               }),
                     onNavigate: I > 0 ? () => O(u.mw.LINKS) : void 0,
@@ -100,7 +100,7 @@ function A(e) {
                               })
                             : (0, r.jsx)(s.Text, {
                                   variant: "text-sm/semibold",
-                                  color: "interactive-normal",
+                                  color: "interactive-text-default",
                                   children: h,
                               }),
                     onNavigate: m > 0 ? () => O(u.mw.MEDIA) : void 0,

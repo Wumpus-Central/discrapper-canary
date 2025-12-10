@@ -30,8 +30,8 @@ var c = n(442837),
     S = n(194082),
     I = n(266454),
     T = n(543241),
-    A = n(258609),
-    C = n(810568),
+    C = n(258609),
+    A = n(810568),
     N = n(168524),
     P = n(102172),
     R = n(871118),
@@ -182,15 +182,15 @@ function ey(e) {
             [G.Z],
             () => null != t && es.TPd.CONTENT_ENTRY_EMBEDS.has(t.type) && G.Z.can(es.Plq.SEND_MESSAGES, t),
         ),
-        [T, A] = i.useState(!1),
-        [C, N] = i.useState(!1),
-        { voiceBar: P, joinVoiceButton: R } = eC({
+        [T, C] = i.useState(!1),
+        [A, N] = i.useState(!1),
+        { voiceBar: P, joinVoiceButton: R } = eA({
             channel: t,
             entry: o,
             onVoiceChannelPreview: h,
         }),
         { embeddedActivity: D } = (0, $.Z)(o),
-        w = eA(D),
+        w = eC(D),
         x = null != R && 0 === s.length ? [R] : s,
         L = x.length > 0,
         j = x.length >= 2,
@@ -212,7 +212,7 @@ function ey(e) {
                         guild_id: null == t ? void 0 : t.guild_id,
                     }),
                     (0, I.Q3)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP),
-                    A(!0),
+                    C(!0),
                     N(!1),
                     g)
                 )
@@ -230,7 +230,7 @@ function ey(e) {
                         onComplete: (e, t) => {
                             N(!0),
                                 setTimeout(() => {
-                                    A(!1), a(e, t);
+                                    C(!1), a(e, t);
                                 }, 600);
                         },
                         interactionType: eo.xP.REACTION_EMOJI_REACT_SENT,
@@ -285,7 +285,7 @@ function ey(e) {
             children: (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(ea.Z, {
-                        sent: C,
+                        sent: A,
                         shown: T,
                         className: eu.toastContainer,
                     }),
@@ -344,7 +344,7 @@ function ey(e) {
                                         size: "custom",
                                         width: 20,
                                         height: 20,
-                                        color: d.Z.colors.ICON_PRIMARY,
+                                        color: d.Z.colors.ICON_STRONG,
                                     }),
                                 }),
                         ],
@@ -556,7 +556,7 @@ function eI(e) {
             {
                 location: "ContentPopout",
                 applicationId: f ? void 0 : y,
-                source: C.m1.ActivityCard,
+                source: A.m1.ActivityCard,
                 trackEntryPointImpression: !0,
                 sourceUserId: E.author_id,
             },
@@ -652,7 +652,7 @@ function eT(e) {
             "trackRankingItemInteraction",
         ]);
     let h = (0, c.e7)([k.Z], () => k.Z.getChannel(null == s ? void 0 : s.channelId)),
-        [b] = i.useMemo(() => (0, P.p9)(h, V.Z, U.Z, G.Z, A.default), [h]),
+        [b] = i.useMemo(() => (0, P.p9)(h, V.Z, U.Z, G.Z, C.default), [h]),
         { entry: y } = m,
         O = (0, q.dX)(y),
         v = O ? (null == (t = y.extra) ? void 0 : t.application_id) : void 0,
@@ -660,7 +660,7 @@ function eT(e) {
             {
                 location: "ContentPopout",
                 applicationId: v,
-                source: C.m1.ActivityCard,
+                source: A.m1.ActivityCard,
                 trackEntryPointImpression: !0,
                 sourceUserId: y.author_id,
             },
@@ -749,7 +749,7 @@ function eT(e) {
         ],
     });
 }
-function eA(e) {
+function eC(e) {
     let t = (0, c.e7)([U.Z], () => U.Z.getGuild((0, y.j)(null == e ? void 0 : e.location))),
         n = (0, c.e7)([k.Z], () => k.Z.getChannel((0, y.p)(null == e ? void 0 : e.location))),
         i = (0, c.Wu)([F.default], () => {
@@ -778,7 +778,7 @@ function eA(e) {
                                   }),
                                   (0, r.jsx)(_.Fbu, {
                                       size: "xxs",
-                                      color: d.Z.colors.INTERACTIVE_NORMAL,
+                                      color: d.Z.colors.INTERACTIVE_TEXT_DEFAULT,
                                   }),
                                   (0, r.jsx)(_.VL1, {
                                       size: "xs",
@@ -820,7 +820,7 @@ function eA(e) {
           })
         : null;
 }
-function eC(e) {
+function eA(e) {
     let { channel: t, entry: n, onVoiceChannelPreview: a } = e,
         { streamPreviewUrl: o, channel: s } = (0, et.Z)(n),
         { needSubscriptionToAccess: l } = (0, w.Z)(null == t ? void 0 : t.id),
@@ -902,7 +902,7 @@ function eC(e) {
                                     }),
                                     (0, r.jsx)(_.Fbu, {
                                         size: "xxs",
-                                        color: d.Z.colors.INTERACTIVE_NORMAL,
+                                        color: d.Z.colors.INTERACTIVE_TEXT_DEFAULT,
                                     }),
                                     (0, r.jsx)(_.gj8, {
                                         size: "xs",

@@ -14,8 +14,8 @@ let f = (e) => {
             headerId: t,
             reapplyText: n,
             onReapply: f,
-            confirmText: h,
-            onWithdrawApplication: g,
+            confirmText: g,
+            onWithdrawApplication: h,
             rejectionReason: m = null,
             guild: _ = null,
         } = e,
@@ -36,7 +36,7 @@ let f = (e) => {
                 className: p.iconWrapper,
                 children: (0, r.jsx)(s.P$X, {
                     size: "md",
-                    color: s.TVs.colors.INTERACTIVE_ACTIVE,
+                    color: s.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
                 }),
             }),
             (0, r.jsxs)("div", {
@@ -86,10 +86,10 @@ let f = (e) => {
                           })
                         : null,
                     (0, r.jsx)(s.Button, {
-                        onClick: () => g(E || O),
+                        onClick: () => h(E || O),
                         variant: "critical-primary",
                         size: "md",
-                        text: h,
+                        text: g,
                         fullWidth: !0,
                     }),
                 ],

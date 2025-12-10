@@ -73,7 +73,7 @@ let E = () => {
                     children: [
                         (0, r.jsx)(l.j9r, {
                             size: "sm",
-                            color: l.TVs.colors.INTERACTIVE_NORMAL,
+                            color: l.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: "eyebrow",

@@ -39,7 +39,7 @@ function v(e) {
                     (0, r.jsx)(a.Heading, {
                         className: O.inboxTitle,
                         variant: "text-lg/semibold",
-                        color: "interactive-active",
+                        color: "interactive-text-active",
                         children: y.intl.string(y.t.GSmTKJ),
                     }),
                     (0, r.jsxs)(a.kL8, {

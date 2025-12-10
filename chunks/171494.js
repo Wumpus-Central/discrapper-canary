@@ -17,9 +17,9 @@ var l = e(54381),
     y = e(266973);
 function g(t) {
     var n, e;
-    let { guildId: g, userId: w, anaylticsLocations: C, transitionState: x, onClose: D } = t,
+    let { guildId: g, userId: w, anaylticsLocations: x, transitionState: C, onClose: D } = t,
         { analyticsLocations: k } = (0, c.ZP)(),
-        _ = null != (e = null != (n = null == C ? void 0 : C[0]) ? n : null == k ? void 0 : k[0]) ? e : null,
+        _ = null != (e = null != (n = null == x ? void 0 : x[0]) ? n : null == k ? void 0 : k[0]) ? e : null,
         T = (0, s.e7)([h.default], () => h.default.getUser(w), [w]),
         [S, U] = (0, f.ZP)(w, g),
         [Z, E] = i.useState(!1),
@@ -54,7 +54,7 @@ function g(t) {
     null == T || null == g)
         ? null
         : (0, l.jsx)(a.Modal, {
-              transitionState: x,
+              transitionState: C,
               onClose: D,
               title: b.intl.string(b.t["+ZD3ou"]),
               subtitle: b.intl.format(b.t["t+abNU"], {
@@ -85,7 +85,7 @@ function g(t) {
               ],
               children: (0, l.jsx)(r.Text, {
                   variant: "text-md/normal",
-                  color: "interactive-normal",
+                  color: "interactive-text-default",
                   children: b.intl.format(b.t.KtENkK, { link: m.cu }),
               }),
           });

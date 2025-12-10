@@ -2,7 +2,7 @@ n.d(t, {
     Dp: () => N,
     Hh: () => P,
     ZP: () => R,
-    hq: () => A,
+    hq: () => C,
 }),
     n(388685);
 var r = n(54381),
@@ -76,7 +76,7 @@ function T(e, t) {
         e
     );
 }
-function A() {
+function C() {
     let { volume: e, onVolumeChange: t } = (0, h.Z)();
     return (0, r.jsxs)(u.P3F, {
         className: y.sliderContainer,
@@ -95,7 +95,7 @@ function A() {
         ],
     });
 }
-function C(e) {
+function A(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
         i = (0, m.V2)({ location: "SoundmojiBanner" }),
         a = (0, s.e7)([f.default], () => _.ZP.canUseSoundboardEverywhere(f.default.getCurrentUser())),
@@ -103,7 +103,7 @@ function C(e) {
     return n || a || t.guildId === E.X8 || t.guildId === o || !i
         ? (0, r.jsx)(u.IGR, {
               text: "BETA",
-              color: l.Z.colors.BG_BRAND.css,
+              color: l.Z.colors.BACKGROUND_BRAND.css,
               className: y.betaBadge,
           })
         : (0, r.jsxs)("div", {
@@ -126,7 +126,7 @@ function C(e) {
                           }),
                           (0, r.jsx)(u.IGR, {
                               text: "BETA",
-                              color: l.Z.colors.BG_BRAND.css,
+                              color: l.Z.colors.BACKGROUND_BRAND.css,
                               className: y.infoNitroBadge,
                           }),
                       ],
@@ -139,7 +139,7 @@ function N(e) {
     return (0, r.jsxs)("div", {
         className: o()(y.infoContainer, y.infoTooltip),
         children: [
-            (0, r.jsx)(C, { sound: t }),
+            (0, r.jsx)(A, { sound: t }),
             (0, r.jsxs)("div", {
                 className: y.infoSoundContainer,
                 children: [
@@ -237,7 +237,7 @@ function R(e) {
         children: [
             (0, r.jsx)(P, {
                 setTooltipShowing: i,
-                renderPopout: () => (0, r.jsx)(A, {}),
+                renderPopout: () => (0, r.jsx)(C, {}),
                 tooltipText: b.intl.string(b.t["19lt24"]),
                 position: "top",
                 children: (0, r.jsx)(u.gj8, {

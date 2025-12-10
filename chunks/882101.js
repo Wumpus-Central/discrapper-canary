@@ -18,7 +18,7 @@ let f = (e) => {
     let { listingName: t } = e;
     return (0, r.jsx)(i.Heading, {
         variant: "text-md/normal",
-        color: "interactive-active",
+        color: "interactive-text-active",
         className: d.tierName,
         children: t,
     });
@@ -56,7 +56,7 @@ let _ = (e) => {
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/normal",
-                color: "interactive-normal",
+                color: "interactive-text-default",
                 className: d.tierPeriod,
                 children: u.intl.format(u.t.isLGyX, {
                     period: (0, s.JE)({

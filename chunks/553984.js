@@ -44,7 +44,7 @@ function m(e) {
                       })
                     : (0, r.jsx)(s.gt9, {
                           size: "xs",
-                          color: o.Z.colors.ICON_TERTIARY.css,
+                          color: o.Z.colors.ICON_MUTED.css,
                       }),
         }),
     });

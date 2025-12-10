@@ -53,7 +53,7 @@ function f(e) {
                         guildTag: n,
                         guildBadge: a,
                         badgeSize: u.Gg.SIZE_16,
-                        textColor: "interactive-normal",
+                        textColor: "interactive-text-default",
                         textVariant: "text-sm/semibold",
                         badgeClassName: d.badge,
                     }),

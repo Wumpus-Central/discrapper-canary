@@ -74,7 +74,7 @@ function S(e) {
                     n || null == l
                         ? null
                         : (0, r.jsxs)(d.Text, {
-                              color: "interactive-normal",
+                              color: "interactive-text-default",
                               variant: "text-xs/medium",
                               className: I.valuePill,
                               children: [

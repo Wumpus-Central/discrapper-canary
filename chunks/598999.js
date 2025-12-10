@@ -28,8 +28,8 @@ var r = n(54381),
     S = n(804063),
     I = n(294218),
     T = n(981631),
-    A = n(388032),
-    C = n(129633);
+    C = n(388032),
+    A = n(129633);
 function N(e, t, n) {
     return (
         t in e
@@ -113,17 +113,17 @@ function U(e) {
 let G = (e) => {
         let { title: t, icon: n, children: i, className: a } = e;
         return (0, r.jsxs)("div", {
-            className: o()(a, C.header),
+            className: o()(a, A.header),
             children: [
                 (0, r.jsxs)("div", {
-                    className: C.titleContainer,
+                    className: A.titleContainer,
                     children: [
-                        null != n ? (0, r.jsx)(n, { color: d.TVs.colors.INTERACTIVE_NORMAL }) : null,
+                        null != n ? (0, r.jsx)(n, { color: d.TVs.colors.INTERACTIVE_TEXT_DEFAULT }) : null,
                         null == t
                             ? null
                             : (0, r.jsx)(d.Text, {
                                   variant: "text-lg/semibold",
-                                  color: "interactive-active",
+                                  color: "interactive-text-active",
                                   children: t,
                               }),
                     ],
@@ -135,14 +135,14 @@ let G = (e) => {
     Z = (e) => {
         let { msg: t, image: n } = e;
         return (0, r.jsxs)("div", {
-            className: C.emptyPlaceholder,
+            className: A.emptyPlaceholder,
             children: [
                 (0, r.jsx)("div", {
-                    className: C.image,
+                    className: A.image,
                     style: { backgroundImage: "url(".concat(n, ")") },
                 }),
                 (0, r.jsx)("div", {
-                    className: C.body,
+                    className: A.body,
                     children: t,
                 }),
             ],
@@ -152,11 +152,11 @@ class B extends i.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, r.jsx)("div", {
-            className: C.buttonContainer,
+            className: A.buttonContainer,
             children: (0, r.jsx)(d.Button, {
                 variant: "secondary",
                 size: "sm",
-                text: A.intl.string(A.t.k5WiPf),
+                text: C.intl.string(C.t.k5WiPf),
                 onClick: this.handleClickJump,
                 loading: e,
             }),
@@ -172,12 +172,12 @@ class B extends i.PureComponent {
         } = this.props;
         return null != e && (t || n || (null != i && i.isPrivate()))
             ? (0, r.jsx)("div", {
-                  className: C.buttonContainer,
+                  className: A.buttonContainer,
                   children: (0, r.jsx)(d.hU, {
                       icon: d.Dio,
                       size: "sm",
                       variant: "secondary",
-                      "aria-label": null != a ? a : A.intl.string(A.t.cpT0Cq),
+                      "aria-label": null != a ? a : C.intl.string(C.t.cpT0Cq),
                       onClick: this.handleClickClose,
                   }),
               })
@@ -185,7 +185,7 @@ class B extends i.PureComponent {
     }
     render() {
         return (0, r.jsxs)("div", {
-            className: C.actionButtons,
+            className: A.actionButtons,
             children: [this.renderJumpButton(), this.renderCloseButton()],
         });
     }
@@ -256,7 +256,7 @@ function V(e) {
               (0, r.jsx)(
                   "div",
                   {
-                      className: o()(C.emptyPlaceholder, C.loadingPlaceholder),
+                      className: o()(A.emptyPlaceholder, A.loadingPlaceholder),
                       children: (0, r.jsx)(d.$jN, {}),
                   },
                   "spinner",
@@ -277,31 +277,31 @@ function V(e) {
             ? (0, r.jsx)(
                   "div",
                   {
-                      className: C.loadingMore,
+                      className: A.loadingMore,
                       children: (0, r.jsx)(d.$jN, {}),
                   },
                   "loading-more-after",
               )
             : a
               ? (0, r.jsx)("div", {
-                    className: C.hasMore,
+                    className: A.hasMore,
                     children: (0, r.jsx)(d.Button, {
                         variant: "secondary",
                         size: "sm",
                         fullWidth: !0,
-                        text: A.intl.string(A.t.XBlaiC),
+                        text: C.intl.string(C.t.XBlaiC),
                         onClick: f,
                     }),
                 })
               : (0, r.jsx)("div", {
-                    className: C.scrollingFooterWrap,
+                    className: A.scrollingFooterWrap,
                     children: h(),
                 }));
     let Y = null == E ? void 0 : E(),
         W =
             V && null != Y
                 ? (0, r.jsx)("div", {
-                      className: C.footer,
+                      className: A.footer,
                       children: (0, r.jsx)(_.Z, {
                           style: {
                               width: "100%",
@@ -316,7 +316,7 @@ function V(e) {
     G && (K.maxHeight -= M);
     let z = null != f && a;
     return (0, r.jsx)("div", {
-        className: o()(I, C.messagesPopoutWrap),
+        className: o()(I, A.messagesPopoutWrap),
         style: K,
         onClick: U,
         onDoubleClick: U,
@@ -325,7 +325,7 @@ function V(e) {
             component: m(),
             children: [
                 (0, r.jsxs)(d.Den, {
-                    className: o()(C.messagesPopout, S),
+                    className: o()(A.messagesPopout, S),
                     onScroll: z ? B : void 0,
                     ref: R,
                     children: [
@@ -364,7 +364,7 @@ function H(e) {
             getProTip: y,
             scrollerClassName: O,
             className: v,
-            onCloseMessage: A,
+            onCloseMessage: C,
             listName: N,
             closeAriaLabel: P,
         } = e,
@@ -391,10 +391,10 @@ function H(e) {
                   (0, r.jsxs)(
                       "div",
                       {
-                          className: C.messageGroupWrapper,
+                          className: A.messageGroupWrapper,
                           children: [
                               (0, r.jsx)(I.Z, {
-                                  className: C.messageGroupCozy,
+                                  className: A.messageGroupCozy,
                                   message: t,
                                   channel: n,
                               }),
@@ -404,7 +404,7 @@ function H(e) {
                                   jumping: R,
                                   canCloseAllMessages: p,
                                   jumpTo: D,
-                                  onCloseMessage: A,
+                                  onCloseMessage: C,
                                   closeAriaLabel: P,
                               }),
                           ],

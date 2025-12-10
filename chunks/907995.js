@@ -26,7 +26,7 @@ function f(e) {
             (0, r.jsx)(s.d3s, { size: "md" }),
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/medium",
-                color: "interactive-active",
+                color: "interactive-text-active",
                 children:
                     null != a
                         ? u.intl.format(t, {

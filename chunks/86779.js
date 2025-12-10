@@ -115,7 +115,7 @@ let j = "mweb_handoff_nonce",
             ? (0, r.jsx)("div", {
                   className: v.errorContainer,
                   children: (0, r.jsx)(d.Text, {
-                      color: "interactive-normal",
+                      color: "interactive-text-default",
                       variant: "text-sm/semibold",
                       children: P,
                   }),

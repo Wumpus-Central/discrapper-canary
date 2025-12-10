@@ -7,7 +7,7 @@ var i = n(866442),
     s = n(229928);
 function l(e) {
     let { locked: t, role: n, textVariant: l = "text-xs/medium" } = e,
-        c = (0, a.dQu)(a.TVs.colors.INTERACTIVE_NORMAL).hex();
+        c = (0, a.dQu)(a.TVs.colors.INTERACTIVE_TEXT_DEFAULT).hex();
     return (0, r.jsx)("div", {
         className: s.roleTagContainer,
         children: (0, r.jsxs)("div", {

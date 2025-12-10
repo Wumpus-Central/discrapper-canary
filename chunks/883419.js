@@ -92,7 +92,7 @@ function S(e) {
                                 }),
                                 (0, i.jsx)(s.Text, {
                                     variant: "text-xs/medium",
-                                    color: "interactive-normal",
+                                    color: "interactive-text-default",
                                     children: O.intl.format(O.t.y4n0GS, {
                                         applicationName: null == D ? void 0 : D.name,
                                     }),

@@ -736,7 +736,7 @@ function ex() {
         className: ea.previewModeIndicator,
         children: (0, r.jsx)(p.Text, {
             variant: "text-sm/normal",
-            color: "interactive-normal",
+            color: "interactive-text-default",
             children: el.intl.string(el.t["WE/cYo"]),
         }),
     });

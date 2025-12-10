@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(457542), n(953529);
+n.d(t, { Z: () => A }), n(388685), n(457542), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(793030),
@@ -22,7 +22,7 @@ var r = n(54381),
     S = n(710111),
     I = n(388032),
     T = n(937309);
-function A(e) {
+function C(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: a } = e,
         o = i.useCallback(async () => {
             if ((n(), null != t))
@@ -51,14 +51,14 @@ function A(e) {
             })
           : null;
 }
-function C(e) {
+function A(e) {
     let { sound: t, channel: n, closePopout: l, refreshPosition: u } = e,
         E = t.guildId === S.X8,
         O = (0, o.e7)([g.Z], () => g.Z.getGuild(t.guildId)),
         v = !E && null != O,
-        [C, N] = i.useState(),
+        [A, N] = i.useState(),
         P = (0, b.V2)({ location: "SoundmojiGuildInfo" }),
-        R = E || v || null != C || !P,
+        R = E || v || null != A || !P,
         [D, w] = i.useState(!R);
     i.useEffect(() => {
         R ||
@@ -71,12 +71,12 @@ function C(e) {
                     w(!1), u();
                 }));
     }, [u, R, t.guildId, t.soundId]);
-    let { buttonType: x, description: L } = (0, y.Z)(t, n, v, C),
+    let { buttonType: x, description: L } = (0, y.Z)(t, n, v, A),
         j = x === y.y.JOIN_GUILD,
         M = !E && D,
         k = i.useMemo(
-            () => (v ? d.JO.createFromGuildRecord(O) : null != C ? d.JO.createFromDiscoverableGuild(C) : void 0),
-            [O, v, C],
+            () => (v ? d.JO.createFromGuildRecord(O) : null != A ? d.JO.createFromDiscoverableGuild(A) : void 0),
+            [O, v, A],
         );
     return M
         ? (0, r.jsx)(p.SE, {})
@@ -107,7 +107,7 @@ function C(e) {
                                   children: [
                                       (0, r.jsx)(a.xvT, {
                                           variant: "eyebrow",
-                                          color: "header-muted",
+                                          color: "text-muted",
                                           className: T.infoExpandedGuildTitle,
                                           children: v ? I.intl.string(I.t.tGDabk) : I.intl.string(I.t.rnOmOa),
                                       }),
@@ -119,9 +119,9 @@ function C(e) {
                                               isDisplayingJoinGuildButtonInPopout: j,
                                           }),
                                       }),
-                                      (0, r.jsx)(A, {
+                                      (0, r.jsx)(C, {
                                           buttonType: x,
-                                          discoverableGuildId: null == C ? void 0 : C.id,
+                                          discoverableGuildId: null == A ? void 0 : A.id,
                                           closePopout: l,
                                       }),
                                   ],
@@ -130,7 +130,7 @@ function C(e) {
                   }),
                   (0, r.jsx)(c.IGR, {
                       text: "BETA",
-                      color: s.Z.colors.BG_BRAND.css,
+                      color: s.Z.colors.BACKGROUND_BRAND.css,
                       className: T.betaBadge,
                   }),
               ],

@@ -56,7 +56,7 @@ function E() {
                             riveProps: {
                                 dataBinding: {
                                     locked: (null == (r = e.userStatus) ? void 0 : r.completedAt) === null,
-                                    fill: l.Z.colors.ICON_PRIMARY,
+                                    fill: l.Z.colors.ICON_STRONG,
                                 },
                             },
                         };

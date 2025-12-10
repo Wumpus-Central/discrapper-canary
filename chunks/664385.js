@@ -1,7 +1,7 @@
 n.d(t, { Z: () => G }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(205120),
+    a = n(148884),
     o = n(91192),
     s = n(442837),
     l = n(159691),
@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(283689),
     I = n(602667),
     T = n(659302),
-    A = n(644646),
-    C = n(110560),
+    C = n(644646),
+    A = n(110560),
     N = n(324805),
     P = n(981631),
     R = n(231338),
@@ -147,7 +147,7 @@ function U(e) {
                 trackGuildAndChannelMetadata: !0,
                 sourceQuestContent: b.jn.MEMBERS_LIST,
             }),
-                (0, C.openDisclosureModal)(Z, {
+                (0, A.openDisclosureModal)(Z, {
                     content: b.jn.MEMBERS_LIST,
                     ctaContent: E.jZ.OPEN_DISCLOSURE,
                     sourceQuestContent: b.jn.MEMBERS_LIST,
@@ -161,7 +161,7 @@ function U(e) {
                 trackGuildAndChannelMetadata: !0,
                 sourceQuestContent: b.jn.MEMBERS_LIST,
             }),
-                (0, C.navigateToQuestHome)({
+                (0, A.navigateToQuestHome)({
                     fromContent: b.jn.MEMBERS_LIST,
                     questId: Z.id,
                 });
@@ -286,7 +286,7 @@ function U(e) {
                                             className: w.helpIcon,
                                             width: M,
                                             height: M,
-                                            color: u.TVs.colors.INTERACTIVE_NORMAL,
+                                            color: u.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                         }),
                                     ],
                                 }),
@@ -315,7 +315,7 @@ function U(e) {
                                             src: (0, O.fh)(Z, O.eC.GAME_TILE, ee).url,
                                         }),
                                     "reward" === eg.tileAssetType &&
-                                        (0, r.jsx)(A.Z, {
+                                        (0, r.jsx)(C.Z, {
                                             className: w.assetTile,
                                             quest: Z,
                                             questContent: b.jn.MEMBERS_LIST,

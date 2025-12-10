@@ -29,8 +29,8 @@ function S(e) {
             priceOptions: S,
             shouldShowUpdatedPaymentModal: I,
             isEligibleForDiscount: T,
-            discountAmountOff: A,
-            isEligibleForTrial: C,
+            discountAmountOff: C,
+            isEligibleForTrial: A,
         } = e,
         N = (0, l.e7)([d.default], () => d.default.locale),
         P = (0, l.e7)([f.Z], () => f.Z.get(n)),
@@ -103,24 +103,24 @@ function S(e) {
                 ],
             }),
         K = () =>
-            T && null != A && P.interval === y.rV.MONTH
-                ? (0, h.T4)(k.amount - A, k.currency)
-                : C
+            T && null != C && P.interval === y.rV.MONTH
+                ? (0, h.T4)(k.amount - C, k.currency)
+                : A
                   ? (0, h.T4)(0, k.currency, {
                         minimumFractionDigits: 0,
                         maximumFractionDigits: 0,
                     })
                   : (0, h.T4)(k.amount, k.currency),
         z = () => {
-            if (T && null != A && P.interval === y.rV.MONTH) {
+            if (T && null != C && P.interval === y.rV.MONTH) {
                 var e;
                 return O.intl.format(O.t["VeE/4E"], {
                     numMonths: null != (e = null == Z ? void 0 : Z.discount.user_usage_limit) ? e : y.rt,
-                    discountedPrice: (0, h.T4)(k.amount - A, k.currency),
+                    discountedPrice: (0, h.T4)(k.amount - C, k.currency),
                     regularPrice: (0, h.T4)(k.amount, k.currency),
                 });
             }
-            return C
+            return A
                 ? O.intl.format(F, { price: (0, h.T4)(k.amount, k.currency) })
                 : P.interval === y.rV.YEAR
                   ? O.intl.formatToPlainString(O.t.rtLTJP, { percent: j })
@@ -185,7 +185,7 @@ function S(e) {
                     className: v.planOptionSubtextContainer,
                     children: (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
-                        color: o ? "text-default" : "interactive-normal",
+                        color: o ? "text-default" : "interactive-text-default",
                         className: a()(v.planOptionSubtext, { [v.discountPlanOptionSubtext]: T }),
                         children: z(),
                     }),

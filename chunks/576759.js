@@ -22,9 +22,9 @@ function b(e) {
         { data: S } = (0, u.IX)(n),
         I = (0, s.q)(S),
         { themeType: T } = (0, _.z)(),
-        A = T === h.l.MODAL || T === h.l.MODAL_V2,
-        C = (0, f.L)(null != (t = null == O ? void 0 : O.application_id) ? t : n),
-        N = I && A && null != S && !C,
+        C = T === h.l.MODAL || T === h.l.MODAL_V2,
+        A = (0, f.L)(null != (t = null == O ? void 0 : O.application_id) ? t : n),
+        N = I && C && null != S && !A,
         P = N ? [i.z.CLOUD_PLAY_NEW_BADGE] : [],
         [R] = (0, d.US)(P);
     return N
@@ -40,7 +40,7 @@ function b(e) {
                                   R === i.z.CLOUD_PLAY_NEW_BADGE &&
                                       (0, r.jsx)(o.IGR, {
                                           text: g.intl.string(g.t.y2b7CA),
-                                          color: a.Z.colors.BG_BRAND.css,
+                                          color: a.Z.colors.BACKGROUND_BRAND.css,
                                       }),
                                   (0, r.jsx)(o.Text, {
                                       variant: "text-xs/medium",

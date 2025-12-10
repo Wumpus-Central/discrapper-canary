@@ -41,7 +41,7 @@ function m(e) {
                         children: _,
                     }),
                     (0, r.jsx)(l.Text, {
-                        color: "interactive-normal",
+                        color: "interactive-text-default",
                         variant: "text-xs/medium",
                         children: v,
                     }),

@@ -149,17 +149,17 @@ function g(e) {
                         children: [
                             (0, a.jsx)(o.Text, {
                                 variant: "text-sm/medium",
-                                color: "interactive-normal",
+                                color: "interactive-text-default",
                                 children: n,
                             }),
                             l
                                 ? (0, a.jsx)(o.u04, {
                                       size: "xs",
-                                      color: o.TVs.colors.INTERACTIVE_NORMAL,
+                                      color: o.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                   })
                                 : (0, a.jsx)(o.CJ0, {
                                       size: "xs",
-                                      color: o.TVs.colors.INTERACTIVE_NORMAL,
+                                      color: o.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                   }),
                         ],
                     }),

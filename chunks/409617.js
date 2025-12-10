@@ -90,7 +90,7 @@ function C(n) {
                                 }),
                                 (0, i.jsx)(o.Text, {
                                     variant: "text-sm/normal",
-                                    color: "header-muted",
+                                    color: "text-muted",
                                     children: p.intl.string(p.t.xfNY3L),
                                 }),
                             ],

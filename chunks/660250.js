@@ -11,8 +11,8 @@ var n = r(54381),
     f = r(785792),
     p = r(190054),
     b = r(760373),
-    O = r(388032),
-    y = r(547990);
+    y = r(388032),
+    O = r(547990);
 let j = function (e) {
     var t, r;
     let { transitionState: j, streamKey: h, channelId: m, onClose: g } = e,
@@ -30,43 +30,43 @@ let j = function (e) {
         }, [m]),
         _ = {
             transitionState: j,
-            title: O.intl.string(O.t.QogHld),
-            subtitle: O.intl.string(O.t.qODBkW),
+            title: y.intl.string(y.t.QogHld),
+            subtitle: y.intl.string(y.t.qODBkW),
         },
         w = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)("div", {
-                    className: y.verification,
+                    className: O.verification,
                     children: [
                         (0, n.jsxs)("div", {
-                            className: y.header,
+                            className: O.header,
                             children: [
                                 (0, n.jsx)(l.Heading, {
                                     variant: "text-sm/bold",
                                     color: "header-primary",
-                                    children: O.intl.string(O.t.cgBTyO),
+                                    children: y.intl.string(y.t.cgBTyO),
                                 }),
                                 null != x &&
                                     (0, n.jsx)(p.H, {
-                                        className: y.copyIcon,
+                                        className: O.copyIcon,
                                         chunks: x,
-                                        color: l.TVs.colors.INTERACTIVE_NORMAL,
+                                        color: l.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                         onCopy: P,
                                     }),
                             ],
                         }),
                         (0, n.jsx)(f.b, {
-                            className: y.code,
+                            className: O.code,
                             chunks: x,
                             columns: b.WK,
                         }),
                     ],
                 }),
                 (0, n.jsx)(l.Text, {
-                    className: y.footer,
+                    className: O.footer,
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    children: O.intl.format(O.t["H3+ktv"], { helpArticle: (0, u.uV)() }),
+                    children: y.intl.format(y.t["H3+ktv"], { helpArticle: (0, u.uV)() }),
                 }),
             ],
         });

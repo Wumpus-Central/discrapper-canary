@@ -13,7 +13,7 @@ function s(e) {
                 className: a.iconWrapper,
                 children: (0, r.jsx)(i.Gzi, {
                     size: "md",
-                    color: i.TVs.colors.INTERACTIVE_ACTIVE,
+                    color: i.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
                 }),
             }),
             (0, r.jsx)(i.Heading, {

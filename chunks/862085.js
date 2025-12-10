@@ -30,7 +30,7 @@ function o(e) {
                         children: g,
                     }),
                     (0, r.jsx)(i.Text, {
-                        color: "interactive-normal",
+                        color: "interactive-text-default",
                         variant: "text-xs/medium",
                         children: m,
                     }),

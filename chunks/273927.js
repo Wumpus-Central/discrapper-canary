@@ -1,7 +1,7 @@
 n.d(t, {
     GF: () => T,
-    ZP: () => C,
-    yo: () => A,
+    ZP: () => A,
+    yo: () => C,
 }),
     n(388685);
 var r = n(54381),
@@ -38,7 +38,7 @@ function v(e) {
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/semibold",
-                        color: "interactive-active",
+                        color: "interactive-text-active",
                         children: b.intl.string(i ? b.t.PFOUKW : b.t["93ZDWE"]),
                     }),
                     (0, r.jsx)(l.Text, {
@@ -163,7 +163,7 @@ function T() {
         listType: "blocked",
     });
 }
-function A() {
+function C() {
     let e = (0, s.Wu)([f.Z], () => f.Z.getIgnoredIDs());
     return (0, r.jsx)(I, {
         setting: g.s6.IGNORED_USERS,
@@ -171,7 +171,7 @@ function A() {
         listType: "ignored",
     });
 }
-function C() {
+function A() {
     return (0, r.jsxs)(m.U, {
         setting: g.s6.RESTRICTED_USERS,
         scrollPosition: h.FY.RESTRICTED_ACCOUNTS,
@@ -184,7 +184,7 @@ function C() {
                 }),
             }),
             (0, r.jsx)(T, {}),
-            (0, r.jsx)(A, {}),
+            (0, r.jsx)(C, {}),
         ],
     });
 }

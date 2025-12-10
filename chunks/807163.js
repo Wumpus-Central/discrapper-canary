@@ -28,8 +28,8 @@ var r = n(54381),
     S = n(822179),
     I = n(419922),
     T = n(687158),
-    A = n(484459),
-    C = n(813549),
+    C = n(484459),
+    A = n(813549),
     N = n(867176),
     P = n(502762),
     R = n(652853),
@@ -156,7 +156,7 @@ function eg() {
 }
 function eE(e) {
     let { description: t, onLearnMore: n, renderVisual: i } = e,
-        a = eC();
+        a = eA();
     return (0, r.jsxs)("div", {
         className: o()(Q.whatYouLoseItem, { [Q.premiumRebrand]: a }),
         children: [
@@ -183,7 +183,7 @@ function eE(e) {
 function eb(e) {
     var t = ec({}, eu(e));
     let { theme: n } = (0, R.z)(),
-        i = (0, p.dQu)(p.TVs.colors.INTERACTIVE_ACTIVE, n).hex();
+        i = (0, p.dQu)(p.TVs.colors.INTERACTIVE_TEXT_ACTIVE, n).hex();
     return (0, r.jsx)(p.SrA, ep(ed({ size: "md" }, t), { color: i }));
 }
 function ey(e) {
@@ -226,7 +226,7 @@ function ey(e) {
                           (0, r.jsxs)("div", {
                               className: Q.profileUserInfo,
                               children: [
-                                  (0, r.jsx)(C.Z, {
+                                  (0, r.jsx)(A.Z, {
                                       className: Q.profileNameTag,
                                       usernameClass: Q.profileNameTagUsername,
                                       name: n.toString(),
@@ -248,7 +248,7 @@ function ey(e) {
                           (0, r.jsxs)("div", {
                               className: Q.profileUserInfoTier1,
                               children: [
-                                  (0, r.jsx)(C.Z, {
+                                  (0, r.jsx)(A.Z, {
                                       className: Q.profileNameTag,
                                       usernameClass: Q.profileNameTagUsername,
                                       name: n.toString(),
@@ -496,8 +496,8 @@ function eT(e) {
             }),
     });
 }
-let eA = i.createContext({ isPremiumRebrand: !1 }),
-    eC = () => i.useContext(eA).isPremiumRebrand;
+let eC = i.createContext({ isPremiumRebrand: !1 }),
+    eA = () => i.useContext(eC).isPremiumRebrand;
 function eN(e) {
     let { currentUser: t, premiumType: n, onClose: a, isDowngrade: s = !1, isPremiumRebrand: l = !1 } = e,
         c = i.useMemo(() => {
@@ -606,7 +606,7 @@ function eN(e) {
             }
             return e;
         }, [n, t, a, s]);
-    return (0, r.jsx)(eA.Provider, {
+    return (0, r.jsx)(eC.Provider, {
         value: { isPremiumRebrand: l },
         children: (0, r.jsx)("div", {
             className: o()(Q.whatYouLoseItemContainer, {
@@ -638,7 +638,7 @@ let eP = function (e) {
             return l()(null != e, "ProfileItem: currentUser cannot be undefined"), e;
         });
     i.useEffect(() => {
-        (0, A.Z)(b.id, b.getAvatarURL(null, 80));
+        (0, C.Z)(b.id, b.getAvatarURL(null, 80));
     }, [b]);
     let y = null != m && !_;
     return (i.useEffect(() => {

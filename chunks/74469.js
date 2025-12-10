@@ -23,12 +23,12 @@ let S = (0, c.hQ)(),
     I = i.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: c } = e,
             [I, T] = (0, u.US)([o.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
-            A = i.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            C = (0, a.e7)([h.default], () => {
+            C = i.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+            A = (0, a.e7)([h.default], () => {
                 var e;
                 return (0, f.Pb)(null == (e = h.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
             }),
-            N = void 0 !== n ? n : C,
+            N = void 0 !== n ? n : A,
             P = i.useMemo(
                 () =>
                     t.reduce((e, t) => {
@@ -48,7 +48,7 @@ let S = (0, c.hQ)(),
                 (e) => {
                     var t, n, i;
                     if (null == e) return null;
-                    let a = A.get(e.value);
+                    let a = C.get(e.value);
                     if (null == a) return null;
                     let o = null == (t = a.profile) ? void 0 : t.tag;
                     return null == o
@@ -62,13 +62,13 @@ let S = (0, c.hQ)(),
                               guildIconSize: 32,
                           });
                 },
-                [A],
+                [C],
             ),
             D = i.useCallback(
                 (e) => {
                     var t;
                     if (null == e) return null;
-                    let n = A.get(e.value);
+                    let n = C.get(e.value);
                     return null == n || null == (null == (t = n.profile) ? void 0 : t.tag)
                         ? null
                         : (0, r.jsx)(d.Ft, {
@@ -79,13 +79,13 @@ let S = (0, c.hQ)(),
                               animate: !1,
                           });
                 },
-                [A],
+                [C],
             ),
             w = i.useCallback(
                 (e) => {
                     var t, n, i;
                     if (null == e) return null;
-                    let a = A.get(e.value);
+                    let a = C.get(e.value);
                     if (null == a) return null;
                     let o = null == (t = a.profile) ? void 0 : t.tag;
                     return null == o
@@ -95,11 +95,11 @@ let S = (0, c.hQ)(),
                               guildTag: o,
                               guildBadge: null != (i = null == (n = a.profile) ? void 0 : n.badge) ? i : void 0,
                               badgeSize: b.Gg.SIZE_16,
-                              textColor: "interactive-normal",
+                              textColor: "interactive-text-default",
                               textVariant: "text-sm/semibold",
                           });
                 },
-                [A],
+                [C],
             ),
             x = i.useCallback(
                 (e) => {

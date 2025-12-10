@@ -29,8 +29,8 @@ var r = n(54381),
     S = n(981631),
     I = n(388032),
     T = n(737963),
-    A = n(180964),
-    C = n(730440);
+    C = n(180964),
+    A = n(730440);
 function N(e, t, n) {
     return (
         t in e
@@ -93,7 +93,7 @@ let w = {
                 dark: (0, r.jsx)(y.U3, {}),
                 light: (0, r.jsx)(y.gf, {}),
             },
-            asset: C.Z,
+            asset: A.Z,
         },
         [b.dh]: {
             title: I.t["9N8obd"],
@@ -104,13 +104,13 @@ let w = {
                 dark: (0, r.jsx)(y.dt, {}),
                 light: (0, r.jsx)(y.QD, {}),
             },
-            asset: A.Z,
+            asset: C.Z,
         },
     },
     x = (e) => ((0, o.e7)([l.Z], () => (0, a.wjy)(l.Z.theme)) ? w[e].logos.dark : w[e].logos.light),
     L = (e) => {
         let { recurrence: t } = e,
-            n = (0, r.jsx)(a.sV5, { color: s.TVs.colors.BUTTON_POSITIVE_BACKGROUND }),
+            n = (0, r.jsx)(a.sV5, { color: s.TVs.colors.CONTROL_CONNECT_BACKGROUND_DEFAULT }),
             o = (0, r.jsx)(a.hU, {
                 icon: a.TIy,
                 size: "sm",

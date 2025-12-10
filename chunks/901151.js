@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(642613), n(539854);
+n.d(t, { Z: () => A }), n(642613), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(524437),
@@ -114,12 +114,12 @@ function I(e) {
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: "text-xs/normal",
-                                color: "interactive-normal",
+                                color: "interactive-text-default",
                                 children: y.intl.format(y.t.oYaYOe, {}),
                             }),
                             (0, r.jsx)(s.Fbu, {
                                 size: "xxs",
-                                color: s.TVs.colors.INTERACTIVE_NORMAL,
+                                color: s.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                 className: O.manageGamesChevron,
                             }),
                         ],
@@ -146,7 +146,7 @@ function T() {
         }),
     });
 }
-function A() {
+function C() {
     let e = d.JG.useSetting(),
         t = e === a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
         n = [
@@ -178,7 +178,7 @@ function A() {
         ],
     });
 }
-function C() {
+function A() {
     let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, p.Z)(!0);
     return (0, r.jsx)(m.Z, {
         children: e
@@ -189,7 +189,7 @@ function C() {
                         (0, r.jsx)(I, { applications: t }),
                         (0, r.jsx)(T, {}),
                         (0, r.jsx)("div", { className: O.divider }),
-                        (0, r.jsx)(A, {}),
+                        (0, r.jsx)(C, {}),
                     ],
                 })
               : (0, r.jsxs)("div", {

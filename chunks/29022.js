@@ -36,7 +36,7 @@ function b(t) {
             (0, i.jsx)(_.Text, {
                 className: h.roleName,
                 variant: "text-sm/medium",
-                color: "interactive-active",
+                color: "interactive-text-active",
                 children: o,
             }),
         ],

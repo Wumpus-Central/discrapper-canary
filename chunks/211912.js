@@ -58,7 +58,7 @@ function b(e) {
                         }),
                         (0, r.jsx)(l.X6q, {
                             variant: "heading-md/medium",
-                            color: "header-muted",
+                            color: "text-muted",
                             children: j.intl.string(j.t.SiXpR2),
                         }),
                         (0, r.jsxs)("div", {

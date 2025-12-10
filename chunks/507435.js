@@ -72,7 +72,7 @@ function T() {
         width: "24",
         height: "24",
         viewBox: "0 0 24 24",
-        fill: l.Z.colors.INTERACTIVE_NORMAL.css,
+        fill: l.Z.colors.INTERACTIVE_TEXT_DEFAULT.css,
         "aria-hidden": !0,
         children: (0, r.jsx)("path", {
             fillRule: "evenodd",
@@ -82,7 +82,7 @@ function T() {
         }),
     });
 }
-function A(e) {
+function C(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
     if (n) t = (0, r.jsx)(T, {});
@@ -101,7 +101,7 @@ function A(e) {
           })
         : null;
 }
-function C(e) {
+function A(e) {
     if (0 === e.totalVotes) return { type: "NO_VOTES" };
     let t = null != e.victorAnswerId,
         n = e.totalVotes > 0 ? Math.round((e.victorAnswerVotes / e.totalVotes) * 100) : 0;
@@ -187,12 +187,12 @@ function N(e) {
 }
 function P(e) {
     let { className: t, data: n, onClickPollLink: a } = e,
-        s = i.useMemo(() => C(n), [n]),
+        s = i.useMemo(() => A(n), [n]),
         l = null != n.victorEmoji || "NO_VOTES" === s.type;
     return (0, r.jsxs)("div", {
         className: o()(b.container, { [b.containerWithImage]: l }, t),
         children: [
-            (0, r.jsx)(A, {
+            (0, r.jsx)(C, {
                 hasNoVotes: "NO_VOTES" === s.type,
                 victorEmoji: n.victorEmoji,
             }),

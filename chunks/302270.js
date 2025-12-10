@@ -155,7 +155,7 @@ function k(e) {
                         disabled: !0,
                         "aria-label": D.intl.string(D.t.EErMzA),
                         className: L.icon,
-                        color: null != h ? o.Z.colors.HEADER_MUTED.css : void 0,
+                        color: null != h ? o.Z.colors.TEXT_MUTED.css : void 0,
                     }),
                     (0, r.jsx)(y.ZP.Title, {
                         className: L.channelName,

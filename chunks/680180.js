@@ -37,7 +37,7 @@ function d(e) {
               onClick: _,
               children: (0, r.jsx)(s._Ve, {
                   size: "sm",
-                  color: s.TVs.colors.ICON_PRIMARY,
+                  color: s.TVs.colors.ICON_STRONG,
               }),
           })
         : (0, r.jsx)("div", {

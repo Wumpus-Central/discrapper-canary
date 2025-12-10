@@ -22,7 +22,7 @@ function s(e) {
                     color:
                         "text-feedback-critical" === c
                             ? i.TVs.colors.TEXT_FEEDBACK_CRITICAL
-                            : i.TVs.colors.INTERACTIVE_ACTIVE,
+                            : i.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
                 }),
             }),
             (0, r.jsx)(i.Heading, {

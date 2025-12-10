@@ -60,7 +60,7 @@ function h() {
                                 }),
                                 children: (0, r.jsx)(s.owK, {
                                     size: "xs",
-                                    color: S ? s.TVs.colors.ICON_PRIMARY.css : s.TVs.colors.ICON_TERTIARY.css,
+                                    color: S ? s.TVs.colors.ICON_STRONG.css : s.TVs.colors.ICON_MUTED.css,
                                 }),
                             }),
                             (0, r.jsx)(s.Heading, {

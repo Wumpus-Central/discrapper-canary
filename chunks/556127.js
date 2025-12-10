@@ -1,11 +1,11 @@
 r.d(t, {
     $X: () => m,
-    AJ: () => D,
+    AJ: () => S,
     Ei: () => g,
-    GC: () => w,
+    GC: () => M,
     WU: () => L,
     db: () => h,
-    dz: () => M,
+    dz: () => w,
     nm: () => y,
     ph: () => v,
     x5: () => O,
@@ -26,11 +26,11 @@ let d = String(0),
     R = "",
     T = (u.m9.navigator && u.m9.navigator.userAgent) || "",
     A = "",
-    N =
+    f =
         (u.m9.navigator && u.m9.navigator.language) ||
         (u.m9.navigator && u.m9.navigator.languages && u.m9.navigator.languages["0"]) ||
         "",
-    f = u.m9.navigator && u.m9.navigator.userAgentData;
+    N = u.m9.navigator && u.m9.navigator.userAgentData;
 function O(e) {
     return "pageload" === (0, a.XU)(e).op;
 }
@@ -39,7 +39,7 @@ function h(e, t) {
     for (let r of t) e[1].push([{ type: "profile" }, r]);
     return e;
 }
-function D(e) {
+function S(e) {
     let t = [];
     return (
         (0, c.gv)(e, (e, r) => {
@@ -52,11 +52,10 @@ function D(e) {
         t
     );
 }
-"object" == typeof f &&
-    null !== f &&
-    "getHighEntropyValues" in f &&
-    f
-        .getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"])
+"object" == typeof N &&
+    null !== N &&
+    "getHighEntropyValues" in N &&
+    N.getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"])
         .then((e) => {
             if (
                 ((I = e.platform || ""),
@@ -70,7 +69,7 @@ function D(e) {
             }
         })
         .catch((e) => void 0);
-let S = new WeakMap(),
+let D = new WeakMap(),
     C = !1,
     L = 30000;
 function g() {
@@ -147,7 +146,7 @@ function y(e, t, r, a) {
         throw TypeError("Profiling events may only be attached to transactions, this should never occur.");
     if (null == r)
         throw TypeError(`Cannot construct profiling event envelope without a valid profile. Got ${r} instead.`);
-    let f = (function (e) {
+    let N = (function (e) {
             let t = e && e.contexts && e.contexts.trace && e.contexts.trace.trace_id;
             return ("string" == typeof t &&
                 32 !== t.length &&
@@ -212,7 +211,7 @@ function y(e, t, r, a) {
                       );
                   })(c),
         h = t || ("number" == typeof a.start_timestamp ? 1000 * a.start_timestamp : 1000 * (0, _.ph)()),
-        D = "number" == typeof a.timestamp ? 1000 * a.timestamp : 1000 * (0, _.ph)();
+        S = "number" == typeof a.timestamp ? 1000 * a.timestamp : 1000 * (0, _.ph)();
     return {
         event_id: e,
         timestamp: new Date(h).toISOString(),
@@ -230,7 +229,7 @@ function y(e, t, r, a) {
             build_number: T,
         },
         device: {
-            locale: N,
+            locale: f,
             model: A,
             manufacturer: T,
             architecture: R,
@@ -245,8 +244,8 @@ function y(e, t, r, a) {
                     a = n && n.getOptions(),
                     o = a && a.stackParser;
                 if (!o) return [];
-                let _ = S.get(o);
-                _ ? (t = _) : ((t = new Map()), S.set(o, t));
+                let _ = D.get(o);
+                _ ? (t = _) : ((t = new Map()), D.set(o, t));
                 let s = Object.keys(r).reduce((e, n) => {
                         let a,
                             i = t.get(n);
@@ -278,10 +277,10 @@ function y(e, t, r, a) {
             {
                 name: a.transaction || "",
                 id: a.event_id || (0, s.DM)(),
-                trace_id: f,
+                trace_id: N,
                 active_thread_id: d,
                 relative_start_ns: "0",
-                relative_end_ns: ((D - h) * 1000000).toFixed(0),
+                relative_end_ns: ((S - h) * 1000000).toFixed(0),
             },
         ],
     };
@@ -290,11 +289,11 @@ let P = new Map();
 function v() {
     return P.size;
 }
-function w(e) {
+function M(e) {
     let t = P.get(e);
     return t && P.delete(e), t;
 }
-function M(e, t) {
+function w(e, t) {
     if ((P.set(e, t), P.size > 30)) {
         let e = P.keys().next().value;
         P.delete(e);

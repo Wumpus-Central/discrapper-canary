@@ -320,7 +320,7 @@ function W(e) {
                 (0, s.jsx)(h.Text, {
                     className: G.roleName,
                     variant: "text-sm/medium",
-                    color: "interactive-active",
+                    color: "interactive-text-active",
                     children: i,
                 }),
             ],

@@ -41,7 +41,7 @@ let d = (e) => {
                             children: t,
                         }),
                         (0, n.jsx)(o.Text, {
-                            color: "interactive-normal",
+                            color: "interactive-text-default",
                             variant: "text-sm/normal",
                             children: i,
                         }),

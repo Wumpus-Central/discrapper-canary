@@ -21,7 +21,7 @@ let b = (e) => {
                   children: (0, r.jsx)(o.tQf, {
                       size: "xs",
                       "aria-label": g.intl.string(g.t.VHXh8a),
-                      color: o.TVs.colors.INTERACTIVE_NORMAL,
+                      color: o.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                   }),
               })
             : null;

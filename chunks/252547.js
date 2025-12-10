@@ -57,7 +57,7 @@ function g(e) {
                                   children: [
                                       (0, a.jsx)(o.xvT, {
                                           variant: "text-xs/semibold",
-                                          color: "interactive-normal",
+                                          color: "interactive-text-default",
                                           children: d.intl.string(d.t.yohc6E),
                                       }),
                                       (0, a.jsx)(s.CJ0, { size: "xs" }),

@@ -22,7 +22,7 @@ var r = n(54381),
     S = n(981631),
     I = n(388032),
     T = n(736636);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -55,11 +55,11 @@ function N(e) {
     var t;
     let { guildId: n } = e,
         a = (0, l.e7)([E.Z], () => E.Z.getGuild(n)),
-        { loading: A, subscriptionsSettings: N } = (0, y.H)(n),
+        { loading: C, subscriptionsSettings: N } = (0, y.H)(n),
         { listingsLoaded: P } = (0, m.eD)(n),
         R = (0, m.ue)(n, { publishedOnly: !0 }),
         D = i.useCallback(async () => {
-            b.default.track(S.rMx.GUILD_SHOP_EMBED_CLICKED, C({}, (0, f.hH)(n))), await (0, h.Z)(S.Z5c.SERVER_SHOP(n));
+            b.default.track(S.rMx.GUILD_SHOP_EMBED_CLICKED, A({}, (0, f.hH)(n))), await (0, h.Z)(S.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, p.Z)(
         {
@@ -69,7 +69,7 @@ function N(e) {
         { disableTrack: null == a },
     );
     let w = R.length > 0 ? new Date(Math.min(...R.map((e) => Date.parse(e.published_at)))) : void 0;
-    return A || !P
+    return C || !P
         ? (0, r.jsx)("div", {
               className: o()(T.guildShopEmbed, T.spinnerContainer),
               children: (0, r.jsx)(d.$jN, {}),
@@ -87,11 +87,11 @@ function N(e) {
                             (0, r.jsx)(v.Z, {
                                 height: "16px",
                                 width: "16px",
-                                color: c.Z.colors.INTERACTIVE_NORMAL.css,
+                                color: c.Z.colors.INTERACTIVE_TEXT_DEFAULT.css,
                             }),
                             (0, r.jsx)(d.Heading, {
                                 variant: "heading-sm/semibold",
-                                color: "interactive-normal",
+                                color: "interactive-text-default",
                                 className: T.serverShopLabelText,
                                 children: I.intl.string(I.t.al5EXL),
                             }),

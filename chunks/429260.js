@@ -43,7 +43,7 @@ function S() {
             let { visibleContent: t } = e;
             return t === l.z.REPORT_TO_MOD_NEW_TAG
                 ? (0, r.jsx)(o.IGR, {
-                      color: a.Z.colors.BG_BRAND.css,
+                      color: a.Z.colors.BACKGROUND_BRAND.css,
                       text: v.intl.string(v.t.y2b7CA),
                   })
                 : (0, r.jsx)(o.U65, {

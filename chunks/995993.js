@@ -98,7 +98,7 @@ function C(e) {
             C ||
             Z ||
             (A = (0, r.jsx)(s.IGR, {
-                color: a.Z.colors.BADGE_BRAND_BG.css,
+                color: a.Z.colors.BADGE_BACKGROUND_DEFAULT.css,
                 text: j.intl.string(j.t.y2b7CA),
                 className: x.newChannel,
             })),

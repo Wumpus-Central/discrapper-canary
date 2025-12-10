@@ -202,7 +202,7 @@ let C = (e) => {
         return (0, r.jsx)(s.Text, {
             className: m.headerCell,
             variant: "text-xs/medium",
-            color: "interactive-normal",
+            color: "interactive-text-default",
             "aria-hidden": !0,
             children: t,
         });
@@ -212,7 +212,7 @@ let C = (e) => {
         return (0, r.jsx)(s.Text, {
             className: n,
             variant: "text-md/normal",
-            color: "interactive-normal",
+            color: "interactive-text-default",
             children: t,
         });
     },

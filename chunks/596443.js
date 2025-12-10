@@ -62,7 +62,7 @@ function L(e) {
                                     children: [
                                         (0, r.jsx)(E.Text, {
                                             variant: "text-xs/normal",
-                                            color: "header-muted",
+                                            color: "text-muted",
                                             children: f,
                                         }),
                                         b &&
@@ -109,7 +109,7 @@ function L(e) {
                                                         className: U.elevatedPermissionContainer,
                                                         children: (0, r.jsx)(E.Text, {
                                                             variant: "text-xs/normal",
-                                                            color: "header-muted",
+                                                            color: "text-muted",
                                                             children: C.intl.string(C.t.IfqUEM),
                                                         }),
                                                     }),

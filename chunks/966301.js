@@ -97,7 +97,7 @@ function N(e) {
                                           children: (0, r.jsxs)(s.Text, {
                                               className: y.channel,
                                               variant: "text-xs/normal",
-                                              color: "interactive-active",
+                                              color: "interactive-text-active",
                                               children: [
                                                   (0, r.jsx)(n, {
                                                       size: "xxs",

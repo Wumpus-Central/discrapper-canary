@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(127654),
     I = n(979956),
     T = n(970184),
-    A = n(292419),
-    C = n(756043),
+    C = n(292419),
+    A = n(756043),
     N = n(388032),
     P = n(975279);
 function R(e) {
@@ -40,7 +40,7 @@ function R(e) {
                 className: o()(P.mainBody, { [P.hidden]: t }),
                 children: [
                     (0, r.jsx)(u.xD0, {
-                        color: u.TVs.colors.ICON_PRIMARY,
+                        color: u.TVs.colors.ICON_STRONG,
                         size: "refresh_sm",
                     }),
                     (0, r.jsx)(u.Text, {
@@ -81,7 +81,7 @@ function R(e) {
                     className: o()(P.mainBody, P.absolutelyPositioned),
                     children: [
                         (0, r.jsx)(u.xD0, {
-                            color: u.TVs.colors.ICON_PRIMARY,
+                            color: u.TVs.colors.ICON_STRONG,
                             size: "refresh_sm",
                         }),
                         (0, r.jsx)(u.Text, {
@@ -99,7 +99,7 @@ function D() {
         className: o()(P.mainWrapper, P.mainBody),
         children: [
             (0, r.jsx)(u.owK, {
-                color: u.TVs.colors.ICON_PRIMARY,
+                color: u.TVs.colors.ICON_STRONG,
                 size: "refresh_sm",
             }),
             (0, r.jsx)(u.Text, {
@@ -163,7 +163,7 @@ function x(e) {
     l()(null != E, "FileUploadActionComponent must be used inside a channel");
     let O = null == (t = g.modal) ? void 0 : t.customId;
     l()(null != O, "FileUploadActionComponent requires modalCustomId from context");
-    let { uploadIds: v, setUploadIds: x, currentUploads: L, error: j } = (0, C.t)(e),
+    let { uploadIds: v, setUploadIds: x, currentUploads: L, error: j } = (0, A.t)(e),
         M = (0, c.e7)([b.Z], () => b.Z.getBasicChannel(E));
     l()(null != M, "FileUploadActionComponent requires a valid channel");
     let k = i.useCallback((e) => {
@@ -184,7 +184,7 @@ function x(e) {
                     });
                 if ((0, I.Bf)(e, M.guild_id)) return (0, S.G)(M, e);
                 let n = e.map((e) => {
-                    let n = (0, A.VD)(O),
+                    let n = (0, C.VD)(O),
                         r = {
                             id: n,
                             file: e,

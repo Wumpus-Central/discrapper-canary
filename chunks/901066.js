@@ -17,10 +17,10 @@ var l = n(54381),
     g = n(172751),
     p = n(892001),
     v = n(598077),
-    C = n(430824),
-    _ = n(709054),
-    S = n(51144),
-    T = n(981631),
+    _ = n(430824),
+    C = n(709054),
+    T = n(51144),
+    S = n(981631),
     E = n(131085),
     N = n(388032),
     O = n(59678),
@@ -29,7 +29,7 @@ function y(e) {
     let { icon: t, label: n, onClick: r, disabled: i } = e;
     return (0, l.jsxs)(d.P3F, {
         className: a()(O.actionButton, { [O.disabled]: i }),
-        onClick: i ? T.dG4 : r,
+        onClick: i ? S.dG4 : r,
         "aria-label": n,
         children: [
             (0, l.jsx)(t, {
@@ -102,7 +102,7 @@ function I(e) {
                                 children: (0, l.jsx)(d.Text, {
                                     variant: "text-md/medium",
                                     color: "text-default",
-                                    children: S.ZP.getUserTag(t),
+                                    children: T.ZP.getUserTag(t),
                                 }),
                             }),
                         ],
@@ -162,7 +162,7 @@ function w(e) {
             (0, l.jsx)(d.k$p, {
                 size: "lg",
                 color: d.TVs.colors.BACKGROUND_BASE_LOWER,
-                secondaryColor: d.TVs.colors.INTERACTIVE_NORMAL,
+                secondaryColor: d.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
             }),
             (0, l.jsxs)("div", {
                 children: [
@@ -186,7 +186,7 @@ function w(e) {
                                   (0, l.jsx)(d.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      children: o()(_.default.extractTimestamp(r)).format("ll"),
+                                      children: o()(C.default.extractTimestamp(r)).format("ll"),
                                   }),
                               ],
                           })
@@ -236,7 +236,7 @@ function A(e) {
                                   (0, l.jsx)(d.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      children: o()(_.default.extractTimestamp(r)).format("ll"),
+                                      children: o()(C.default.extractTimestamp(r)).format("ll"),
                                   }),
                               ],
                           })
@@ -270,7 +270,7 @@ function M(e) {
                             (0, l.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: o()(_.default.extractTimestamp(t.id)).format("ll"),
+                                children: o()(C.default.extractTimestamp(t.id)).format("ll"),
                             }),
                         ],
                     }),
@@ -303,7 +303,7 @@ function Z(e) {
             return null != (e = null == n ? void 0 : n.formResponses) ? e : [];
         }, [null == n ? void 0 : n.formResponses]),
         o = r.useMemo(() => (null != i ? new v.Z(i) : null), [i]),
-        u = (0, c.e7)([C.Z], () => C.Z.getGuild(t), [t]);
+        u = (0, c.e7)([_.Z], () => _.Z.getGuild(t), [t]);
     return ((0, m.Tt)({
         subsection: N.intl.string(N.t.nqrK8X),
         location: null == u ? void 0 : u.name,

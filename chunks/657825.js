@@ -27,7 +27,7 @@ let p = i.memo((e) => {
                           children: [
                               (0, r.jsx)(l.Text, {
                                   variant: "text-md/semibold",
-                                  color: "interactive-active",
+                                  color: "interactive-text-active",
                                   children: u.ZP.getName(a),
                               }),
                               null != n &&

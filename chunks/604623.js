@@ -84,7 +84,7 @@ let C = (e) => {
             className: _.checklistLabel,
             children: [
                 (0, n.jsx)(m.Text, {
-                    color: "interactive-active",
+                    color: "interactive-text-active",
                     variant: r,
                     children: l,
                 }),

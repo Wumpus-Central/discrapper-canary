@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(205120),
+    s = n(148884),
     o = n(692547),
     c = n(481060),
     d = n(259580),
@@ -17,7 +17,7 @@ function p(e) {
         children: [
             (0, r.jsx)(c.Text, {
                 variant: "text-md/normal",
-                color: "interactive-active",
+                color: "interactive-text-active",
                 className: m.rowText,
                 children: n,
             }),

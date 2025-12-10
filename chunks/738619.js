@@ -60,7 +60,7 @@ function T(e) {
     return e;
 }
 let C = [];
-class N extends r.PureComponent {
+class D extends r.PureComponent {
     componentDidMount() {
         this.timeout = setTimeout(() => {
             this.setState({ fadeIn: !0 }), (this.timeout = null), this.logShownEventIfNeeded();
@@ -107,7 +107,7 @@ class N extends r.PureComponent {
             });
     }
 }
-function D(e) {
+function N(e) {
     let {
             activityInviteEducationActivity: t,
             isFocused: n,
@@ -147,7 +147,7 @@ function D(e) {
         0 === o.length && !(f > 0))
     )
         return null != t
-            ? (0, i.jsx)(N, {
+            ? (0, i.jsx)(D, {
                   activity: t,
                   isFocused: n,
               })
@@ -261,8 +261,8 @@ function A(e) {
             ((t = T({}, l)),
             (n = n =
                 {
-                    baseTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
-                    activeTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_NORMAL).hex(),
+                    baseTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
+                    activeTextColor: (0, d.dQu)(u.Z.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
                     activityInviteEducationActivity: k(r),
                     typingUsers: o ? [] : s,
                     isFocused: (0, c.e7)([S.Z], () => S.Z.isFocused()),
@@ -283,5 +283,5 @@ function A(e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
             t);
-    return (0, i.jsx)(D, T({}, a));
+    return (0, i.jsx)(N, T({}, a));
 }

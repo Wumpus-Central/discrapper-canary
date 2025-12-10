@@ -12,7 +12,7 @@ let l = (e) => {
             text: s.intl.string(o.default["U/DzKb"]),
             children: (0, r.jsx)(a.oLu, {
                 size: "sm",
-                color: a.TVs.colors.ICON_PRIMARY,
+                color: a.TVs.colors.ICON_STRONG,
             }),
         }),
     });

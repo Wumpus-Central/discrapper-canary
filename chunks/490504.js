@@ -17,7 +17,7 @@ let o = function (e) {
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
-                color: "header-muted",
+                color: "text-muted",
                 children: t,
             }),
         ],

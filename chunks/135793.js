@@ -28,8 +28,8 @@ var r = n(54381),
     S = n(317951),
     I = n(287941),
     T = n(235894),
-    A = n(883998),
-    C = n(576645),
+    C = n(883998),
+    A = n(576645),
     N = n(981631),
     P = n(921944),
     R = n(388032),
@@ -140,10 +140,10 @@ function F(e) {
         l = null != n,
         c = l && (0, T.Uw)(n),
         d = (0, O.Qj)(t.id, l),
-        { price: _, fetchingPrice: m, error: g } = (0, C.R2)(S.D1),
-        { entitlement: E, fetchedEntitlement: b, error: v } = (0, C.t6)(S.D1),
+        { price: _, fetchingPrice: m, error: g } = (0, A.R2)(S.D1),
+        { entitlement: E, fetchedEntitlement: b, error: v } = (0, A.t6)(S.D1),
         I = g || v,
-        { analyticsLocations: A } = (0, p.ZP)([f.Z.CONFETTI_POTION_MODAL]),
+        { analyticsLocations: C } = (0, p.ZP)([f.Z.CONFETTI_POTION_MODAL]),
         P = null != E && !E.consumed,
         R = m || !b;
     (0, i.useEffect)(
@@ -158,13 +158,13 @@ function F(e) {
         w = (0, i.useCallback)(() => {
             (0, h.Z)({
                 skuId: S.D1,
-                analyticsLocations: A,
+                analyticsLocations: C,
                 onComplete: () => {
                     D(), (0, y.gA)(S.D1);
                 },
                 variantsReturnStyle: o.v.INDIVIDUAL_PRODUCTS,
             });
-        }, [D, A]),
+        }, [D, C]),
         x = (0, i.useCallback)(() => (P ? D() : w()), [D, w, P]),
         L = (0, i.useMemo)(() => {
             if (null != E) {
@@ -311,7 +311,7 @@ let V = (e) => {
                 [n],
             ),
             _ = (0, i.useRef)(null);
-        return (0, r.jsx)(A.Z, {
+        return (0, r.jsx)(C.Z, {
             channel: t,
             shouldShow: o,
             onRequestClose: l,
@@ -346,7 +346,7 @@ let V = (e) => {
                                                   }),
                                     }),
                                     (0, r.jsx)(u.Text, {
-                                        color: "interactive-active",
+                                        color: "interactive-text-active",
                                         variant: "text-sm/normal",
                                         children: p,
                                     }),
@@ -396,7 +396,7 @@ let V = (e) => {
         });
     },
     K = () => {
-        let { entitlement: e, numPotions: t } = (0, C.t6)(S.D1);
+        let { entitlement: e, numPotions: t } = (0, A.t6)(S.D1);
         if (null == t || 0 === t) return null;
         let n = (null == e ? void 0 : e.type) === N.qc2.DEVELOPER_GIFT ? R.t["b+P6ra"] : R.t.RiQ4ci;
         return (0, r.jsxs)("div", {

@@ -1,4 +1,4 @@
-i.d(t, { DesktopRefreshOnboardingModal: () => C }), i(388685), i(539854);
+i.d(t, { DesktopRefreshOnboardingModal: () => k }), i(388685), i(539854);
 var s = i(54381),
     n = i(473749),
     a = i(120356),
@@ -47,7 +47,7 @@ function N(e) {
                                     }),
                                 e.new &&
                                     (0, s.jsx)(c.IGR, {
-                                        color: c.TVs.colors.BG_BRAND.css,
+                                        color: c.TVs.colors.BACKGROUND_BRAND.css,
                                         text: _.intl.string(_.t.y2b7CA),
                                         className: O.new,
                                     }),
@@ -61,7 +61,7 @@ function N(e) {
         }),
     });
 }
-let v = [
+let C = [
         {
             id: b.BR.LIGHT,
             label: _.intl.string(_.t.K2sFfo),
@@ -85,7 +85,7 @@ let v = [
             new: !0,
         },
     ],
-    k = [
+    v = [
         {
             id: "compact",
             label: _.intl.string(_.t["7iegX4"]),
@@ -99,16 +99,16 @@ let v = [
             label: _.intl.string(_.t["4cuYHx"]),
         },
     ];
-function C(e) {
+function k(e) {
     let { transitionState: t, onClose: i } = e,
         [a] = n.useState(() => g.Z.gradientPreset),
         o = (0, r.e7)([x.Z], () => x.Z.theme),
         [b] = n.useState(() => u.ZP.useSystemTheme === j.KW.ON),
-        [C, K] = n.useState(() => (b ? "system" : null != a ? "gradient" : o)),
+        [k, K] = n.useState(() => (b ? "system" : null != a ? "gradient" : o)),
         { density: f } = (0, c.TCT)(),
-        w = n.useMemo(() => {
-            if (null == a && !b) return v;
-            let e = [...v];
+        R = n.useMemo(() => {
+            if (null == a && !b) return C;
+            let e = [...C];
             if (null != a) {
                 let { colors: t, angle: i, theme: s, getName: n } = a,
                     r = (0, p.VK)({
@@ -133,7 +133,7 @@ function C(e) {
                 e
             );
         }, [a, b]),
-        I = (0, h.Z)("(max-height: 800px)");
+        w = (0, h.Z)("(max-height: 800px)");
     return (0, s.jsxs)(c.Y0X, {
         transitionState: t,
         size: c.CgR.DYNAMIC,
@@ -145,21 +145,21 @@ function C(e) {
             (0, s.jsx)(c.xBx, {
                 className: O.header,
                 children: (0, s.jsxs)(c.Kqy, {
-                    gap: I ? 4 : 8,
+                    gap: w ? 4 : 8,
                     children: [
                         (0, s.jsxs)(c.Kqy, {
-                            gap: I ? 8 : 16,
+                            gap: w ? 8 : 16,
                             children: [
                                 (0, s.jsx)("div", { className: O.headerImage }),
                                 (0, s.jsx)(c.Heading, {
-                                    variant: I ? "heading-lg/semibold" : "heading-xl/semibold",
+                                    variant: w ? "heading-lg/semibold" : "heading-xl/semibold",
                                     color: "header-primary",
                                     children: _.intl.string(_.t["7+iCG4"]),
                                 }),
                             ],
                         }),
                         (0, s.jsx)(c.Heading, {
-                            variant: I ? "heading-sm/medium" : "heading-md/medium",
+                            variant: w ? "heading-sm/medium" : "heading-md/medium",
                             color: "text-subtle",
                             children: _.intl.string(_.t.fZMMqN),
                         }),
@@ -169,10 +169,10 @@ function C(e) {
             (0, s.jsx)(c.hzk, {
                 className: O.content,
                 children: (0, s.jsxs)(c.Kqy, {
-                    gap: I ? 20 : 24,
+                    gap: w ? 20 : 24,
                     children: [
                         (0, s.jsxs)(c.Kqy, {
-                            gap: I ? 8 : 12,
+                            gap: w ? 8 : 12,
                             children: [
                                 (0, s.jsx)(c.Heading, {
                                     variant: "heading-md/medium",
@@ -180,8 +180,8 @@ function C(e) {
                                 }),
                                 (0, s.jsx)(N, {
                                     showLabels: !1,
-                                    options: w,
-                                    selected: C,
+                                    options: R,
+                                    selected: k,
                                     onSelect: (e) => {
                                         K(e),
                                             "gradient" === e
@@ -219,7 +219,7 @@ function C(e) {
                             ],
                         }),
                         (0, s.jsxs)(c.Kqy, {
-                            gap: I ? 8 : 12,
+                            gap: w ? 8 : 12,
                             children: [
                                 (0, s.jsxs)(c.Kqy, {
                                     gap: 0,
@@ -234,7 +234,7 @@ function C(e) {
                                                     children: _.intl.string(_.t["C/5V0A"]),
                                                 }),
                                                 (0, s.jsx)(c.IGR, {
-                                                    color: c.TVs.colors.BG_BRAND.css,
+                                                    color: c.TVs.colors.BACKGROUND_BRAND.css,
                                                     text: _.intl.string(_.t.y2b7CA),
                                                 }),
                                             ],
@@ -248,7 +248,7 @@ function C(e) {
                                 }),
                                 (0, s.jsx)(N, {
                                     showLabels: !0,
-                                    options: k,
+                                    options: v,
                                     selected: f,
                                     onSelect: (e) => {
                                         switch (e) {

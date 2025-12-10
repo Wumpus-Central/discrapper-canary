@@ -48,7 +48,7 @@ function _(e) {
             children: [
                 (0, r.jsx)(o.Text, {
                     variant: n,
-                    color: null != t ? "text-link" : "interactive-hover",
+                    color: null != t ? "text-link" : "interactive-text-hover",
                     children: d.intl.string(d.t["5fmYjW"]),
                 }),
                 (0, r.jsx)(o.ZSh, {
@@ -89,8 +89,8 @@ function m(e) {
             hideRoleTag: S = !1,
             lineClamp: I = 1,
             cardWidth: T = 332,
-            cardHeight: A,
-            thumbnailHeight: C = 187,
+            cardHeight: C,
+            thumbnailHeight: A = 187,
             descriptionTextVariant: N = "text-sm/normal",
             isDraft: P = !1,
         } = e,
@@ -107,7 +107,7 @@ function m(e) {
                         alt: "",
                         src: t,
                         className: f.productThumbnail,
-                        style: { height: C },
+                        style: { height: A },
                     }),
                 }),
                 (0, r.jsxs)("div", {
@@ -151,7 +151,7 @@ function m(e) {
                     children: [
                         (0, r.jsx)(o.Text, {
                             variant: "text-md/medium",
-                            color: "interactive-active",
+                            color: "interactive-text-active",
                             className: f.__invalid_productPrice,
                             children: null != c ? c : d.intl.string(d.t["4uLhAp"]),
                         }),
@@ -179,7 +179,7 @@ function m(e) {
         : (0, r.jsx)("div", {
               style: {
                   width: T,
-                  height: A,
+                  height: C,
               },
               children: (0, r.jsx)(o.kL8, {
                   tag: "article",

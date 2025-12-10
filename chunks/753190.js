@@ -45,7 +45,7 @@ function p(e) {
             percents: n,
             size: i = "small",
             foregroundColors: o = [l.Z.unsafe_rawColors.BRAND_500.css],
-            backgroundColor: u = "var(--background-modifier-active)",
+            backgroundColor: u = "var(--interactive-background-active)",
             animate: f = !0,
         } = e,
         p = s()(null != n ? n : [], o)

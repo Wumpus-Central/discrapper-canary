@@ -19,7 +19,7 @@ function d(e) {
         "aria-label": c.intl.string(c.t.ybUZql),
         children: (0, r.jsx)(s.j9r, {
             size: "sm",
-            color: s.TVs.colors.INTERACTIVE_ACTIVE,
+            color: s.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
         }),
     });
 }

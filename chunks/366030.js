@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(598077),
     I = n(271383),
     T = n(626135),
-    A = n(275759),
-    C = n(107484),
+    C = n(275759),
+    A = n(107484),
     N = n(977392),
     P = n(134433),
     R = n(753194),
@@ -106,7 +106,7 @@ function B(e) {
                 t = s;
         }
     else
-        t = (0, A.n_)({
+        t = (0, C.n_)({
             connectionType: n,
             connectionMetadataField: i,
             operator: a,
@@ -148,7 +148,7 @@ function F(e) {
                 m = null == d ? void 0 : d.application,
                 g = (null == m ? void 0 : m.bot) != null ? new S.Z(m.bot) : null;
             return (
-                A.SJ.includes(null != (t = null == m ? void 0 : m.id) ? t : "")
+                C.SJ.includes(null != (t = null == m ? void 0 : m.id) ? t : "")
                     ? (l = (0, r.jsx)(R.Z, {
                           className: M.botTag,
                           color: i,
@@ -183,7 +183,7 @@ function F(e) {
                                         : null,
                                     (0, r.jsx)(_.Text, {
                                         variant: "text-sm/medium",
-                                        color: "interactive-active",
+                                        color: "interactive-text-active",
                                         children:
                                             null != (s = null == p ? void 0 : p.name) ? s : null == m ? void 0 : m.name,
                                     }),
@@ -300,7 +300,7 @@ function H(e) {
     let { userId: t, messageId: n, guild: a, channel: s } = e,
         { analyticsLocations: l } = (0, y.ZP)(),
         u = (0, N.Z)(a, t, s.id, !0),
-        f = (0, c.e7)([C.Z], () => C.Z.getGuildRoleConnectionEligibility(null == u ? void 0 : u.id)),
+        f = (0, c.e7)([A.Z], () => A.Z.getGuildRoleConnectionEligibility(null == u ? void 0 : u.id)),
         [p, h] = i.useState(null == f),
         g = i.useRef(null);
     if (null == u) return null;

@@ -51,7 +51,7 @@ function c(e, n) {
 }
 let d = {
     size: "md",
-    color: l.TVs.colors.INTERACTIVE_NORMAL,
+    color: l.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
 };
 function p(e) {
     let { subscriptions: n, color: t = "text-default" } = e,

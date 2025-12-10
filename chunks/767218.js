@@ -17,18 +17,17 @@ function c(e) {
                 children: [
                     (0, r.jsx)(i.Ucv, {
                         size: "sm",
-                        color:
-                            n !== s.br.AVAILABLE ? o.Z.colors.HEADER_MUTED : o.Z.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                        color: n !== s.br.AVAILABLE ? o.Z.colors.TEXT_MUTED : o.Z.unsafe_rawColors.GUILD_BOOSTING_PINK,
                     }),
                     (0, r.jsx)(l.X6q, {
-                        color: n !== s.br.AVAILABLE ? "header-muted" : "header-primary",
+                        color: n !== s.br.AVAILABLE ? "text-muted" : "header-primary",
                         variant: "heading-lg/semibold",
                         children: t,
                     }),
                 ],
             }),
             (0, r.jsx)(l.xvT, {
-                color: "header-muted",
+                color: "text-muted",
                 variant: "text-sm/medium",
                 children: (0, a.t)(t, n),
             }),

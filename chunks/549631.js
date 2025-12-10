@@ -80,7 +80,7 @@ function f(e, t) {
 function p(e) {
     var t,
         n,
-        { size: s = "md", width: c, height: f, color: p = a.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = "" } = e,
+        { size: s = "md", width: c, height: f, color: p = a.Z.colors.INTERACTIVE_TEXT_DEFAULT, colorClass: _ = "" } = e,
         m = d(e, ["size", "width", "height", "color", "colorClass"]);
     let h = (0, i.m)(s),
         g = null != (t = null == h ? void 0 : h.width) ? t : c,

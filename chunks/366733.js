@@ -151,7 +151,7 @@ let h = (e) => {
                             className: o()(p.userIconCircle, p.avatar),
                             children: (0, r.jsx)(l.tBG, {
                                 size: "xxs",
-                                color: s.Z.colors.ICON_SECONDARY,
+                                color: s.Z.colors.ICON_SUBTLE,
                             }),
                         }),
                         (0, r.jsx)(l.Text, {

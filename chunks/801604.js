@@ -84,8 +84,8 @@ function B(e, t) {
 }
 function W(e) {
     var t, n, s, p, I;
-    let { channelId: W, quest: G, previewQuest: z, isParticipatingOverride: F } = e,
-        K = (0, b.O5)(),
+    let { channelId: W, quest: G, previewQuest: z, isParticipatingOverride: K } = e,
+        F = (0, b.O5)(),
         [X, Y] = l.useState(!1),
         $ = l.useCallback(() => Y(!0), []),
         J = l.useCallback(() => Y(!1), []),
@@ -120,7 +120,7 @@ function W(e) {
             let t = null != ee ? E.Z.findActivity(ee.id, (e) => e.type !== D.IIU.CUSTOM_STATUS) : null;
             return !!(null != t && (0, O.$J)(G) && (0, C._D)(t, G));
         }, [G, ee, ea]),
-        eu = !0 === F || es || eo,
+        eu = !0 === K || es || eo,
         ec = (0, a.e7)([h.Z], () => null != G && h.Z.isEnrolling(G.id), [G]),
         ed = (0, a.e7)(
             [c.Z],
@@ -139,7 +139,7 @@ function W(e) {
                 (0, N.Rt)(G) && em();
         }, [G, em]),
         ej = l.useCallback(() => {
-            K({
+            F({
                 questId: G.id,
                 questContent: S.jn.QUEST_LIVE_STREAM,
                 questContentCTA: b.jZ.TRACK_PROGRESS,
@@ -149,9 +149,9 @@ function W(e) {
                     fromContent: S.jn.QUEST_LIVE_STREAM,
                     questId: G.id,
                 });
-        }, [G, K]),
+        }, [G, F]),
         ev = l.useCallback(() => {
-            K({
+            F({
                 questId: G.id,
                 questContent: S.jn.QUEST_LIVE_STREAM,
                 questContentCTA: b.jZ.LEARN_MORE,
@@ -161,7 +161,7 @@ function W(e) {
                     fromContent: S.jn.QUEST_LIVE_STREAM,
                     questId: G.id,
                 });
-        }, [G, K]),
+        }, [G, F]),
         eb = (0, L.hf)({
             quest: G,
             questContent: S.jn.QUEST_LIVE_STREAM,
@@ -322,7 +322,7 @@ function W(e) {
                                 !eg &&
                                 eu &&
                                 (0, r.jsx)(P.Z, {
-                                    color: u.TVs.colors.BG_BRAND,
+                                    color: u.TVs.colors.BACKGROUND_BRAND,
                                     quest: G,
                                 }),
                             ey &&

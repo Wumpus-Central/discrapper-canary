@@ -78,7 +78,7 @@ let g = [f.OV, f.EE, f.Af, f.U9, f.wO, f.f, f.n8, f.v1, f.pQ],
                                         className: m.cloudPlaySectionTextContainer,
                                         children: [
                                             (0, r.jsx)(o.v3n, {
-                                                color: o.TVs.colors.ICON_SECONDARY,
+                                                color: o.TVs.colors.ICON_SUBTLE,
                                                 size: "xxs",
                                             }),
                                             (0, r.jsx)(o.Text, {
@@ -91,7 +91,7 @@ let g = [f.OV, f.EE, f.Af, f.U9, f.wO, f.f, f.n8, f.v1, f.pQ],
                                     T === a.z.CLOUD_PLAY_NEW_BADGE &&
                                         (0, r.jsx)(o.IGR, {
                                             text: _.intl.string(_.t.y2b7CA),
-                                            color: o.TVs.colors.BG_BRAND.css,
+                                            color: o.TVs.colors.BACKGROUND_BRAND.css,
                                         }),
                                 ],
                             }),

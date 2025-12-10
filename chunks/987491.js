@@ -17,10 +17,10 @@ var l = n(54381),
     g = n(98493),
     p = n(328977),
     v = n(412222),
-    C = n(223312),
-    _ = n(172751),
-    S = n(768762),
-    T = n(892001),
+    _ = n(223312),
+    C = n(172751),
+    T = n(768762),
+    S = n(892001),
     E = n(598077),
     N = n(430824),
     O = n(51144),
@@ -73,7 +73,7 @@ function M(e) {
                     className: y.headerCell,
                     children: (0, l.jsx)(u.Text, {
                         variant: "eyebrow",
-                        color: "interactive-normal",
+                        color: "interactive-text-default",
                         children: P.intl.string(P.t.Es7n9c),
                     }),
                 }),
@@ -85,17 +85,17 @@ function M(e) {
                         children: [
                             (0, l.jsx)(u.Text, {
                                 variant: "eyebrow",
-                                color: "interactive-normal",
+                                color: "interactive-text-default",
                                 children: P.intl.string(P.t.EZ5QWL),
                             }),
                             t === f.Nw.TIMESTAMP_ASC
-                                ? (0, l.jsx)(S.Z, {
+                                ? (0, l.jsx)(T.Z, {
                                       className: y.sortIcon,
-                                      direction: S.Z.Directions.UP,
+                                      direction: T.Z.Directions.UP,
                                   })
-                                : (0, l.jsx)(S.Z, {
+                                : (0, l.jsx)(T.Z, {
                                       className: y.sortIcon,
-                                      direction: S.Z.Directions.DOWN,
+                                      direction: T.Z.Directions.DOWN,
                                   }),
                         ],
                     }),
@@ -104,7 +104,7 @@ function M(e) {
                     className: a()(y.headerCell, y.moreOptionsCol),
                     children: (0, l.jsx)(u.Text, {
                         variant: "eyebrow",
-                        color: "interactive-normal",
+                        color: "interactive-text-default",
                         children: P.intl.string(P.t["5Q9xGr"]),
                     }),
                 }),
@@ -120,7 +120,7 @@ let Z = r.memo(function (e) {
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
-                        (0, T.openUserProfileModal)({
+                        (0, S.openUserProfileModal)({
                             userId: n.id,
                             joinRequestId: i,
                             sourceAnalyticsLocations: s,
@@ -145,7 +145,7 @@ let Z = r.memo(function (e) {
                             className: w.nameContainer,
                             children: [
                                 n.globalName,
-                                (0, l.jsx)(_.ZP, {
+                                (0, l.jsx)(C.ZP, {
                                     primaryGuild: null == n ? void 0 : n.primaryGuild,
                                     userId: null == n ? void 0 : n.id,
                                     contextGuildId: a,
@@ -339,7 +339,7 @@ function L(e) {
         a = (0, c.e7)([N.Z], () => N.Z.getGuild(t)),
         s = (0, v.C)({ guildId: t }),
         o = (0, c.e7)([h.Z], () => h.Z.isFetching()),
-        { guildJoinRequests: d } = (0, C.j)({
+        { guildJoinRequests: d } = (0, _.j)({
             guildId: t,
             applicationStatus: n,
             sortOrder: s,

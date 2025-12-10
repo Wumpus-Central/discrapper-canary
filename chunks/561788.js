@@ -18,7 +18,7 @@ function c(e) {
                   (0, r.jsx)(c, { className: s.channelIcon }),
                   (0, r.jsx)(l.Text, {
                       variant: "text-md/semibold",
-                      color: "interactive-normal",
+                      color: "interactive-text-default",
                       className: s.channelName,
                       children: t.name,
                   }),

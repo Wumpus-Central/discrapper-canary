@@ -8,7 +8,7 @@ let o = (e) => {
         n,
         o,
         s,
-        { size: c = "md", width: u, height: d, color: p = a.Z.colors.INTERACTIVE_NORMAL, colorClass: h = "" } = e,
+        { size: c = "md", width: u, height: d, color: p = a.Z.colors.INTERACTIVE_TEXT_DEFAULT, colorClass: h = "" } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,

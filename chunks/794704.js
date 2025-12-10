@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(493773),
     I = n(100527),
     T = n(812206),
-    A = n(835473),
-    C = n(243778),
+    C = n(835473),
+    A = n(243778),
     N = n(594190),
     P = n(137920),
     R = n(320724),
@@ -127,7 +127,7 @@ function eT(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = eA(e, t);
+        i = eC(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -135,7 +135,7 @@ function eT(e, t) {
     }
     return i;
 }
-function eA(e, t) {
+function eC(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -144,15 +144,15 @@ function eA(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let eC = eL(null),
+let eA = eL(null),
     eN = 20,
     eP = 16,
     eR = 1,
     eD = 25,
     ew = [0, 5, 10, 15, 20, 25];
 function ex() {
-    let e = eL(eC);
-    f().isEqual(e, eC) || (es.default.track(ep.rMx.OVERLAY_SETTINGS_UPDATED, e), (eC = e));
+    let e = eL(eA);
+    f().isEqual(e, eA) || (es.default.track(ep.rMx.OVERLAY_SETTINGS_UPDATED, e), (eA = e));
 }
 function eL(e) {
     var t;
@@ -273,13 +273,13 @@ function eM(e) {
                                       size: "custom",
                                       width: eN,
                                       height: eN,
-                                      color: "var(--interactive-active)",
+                                      color: "var(--interactive-text-active)",
                                   })
                                 : (0, r.jsx)(h.Fbu, {
                                       size: "custom",
                                       width: eN,
                                       height: eN,
-                                      color: "var(--interactive-active)",
+                                      color: "var(--interactive-text-active)",
                                   }),
                         ],
                     }),
@@ -334,8 +334,8 @@ function eG(e) {
     i.useEffect(() => {
         E(f), O(d);
     }, [f, d]);
-    let A = !(0, ed.supportsLegacy)(),
-        C = !(0, ed.supportsOutOfProcess)(),
+    let C = !(0, ed.supportsLegacy)(),
+        A = !(0, ed.supportsOutOfProcess)(),
         { legacyEnabled: P, oopEnabled: R } = (0, p.cj)([U.default], () => U.default.getGlobalEnabledStatus()),
         L = (e, t) => {
             var n, r, i;
@@ -415,10 +415,10 @@ function eG(e) {
                 (0, F.l)(i, null != (a = o.id) ? a : null);
             }
         },
-        G = A && C,
+        G = C && A,
         Z = !P && !R,
-        B = !m && !P && b && !A,
-        V = !b && !R && m && !C,
+        B = !m && !P && b && !C,
+        V = !b && !R && m && !A,
         H = (null == u ? void 0 : u.overlayMethod) === j.gl.Disabled,
         Y = (null == u ? void 0 : u.state) === j.mM.OVERLAY_RENDERING && !H,
         W = (null == u ? void 0 : u.state) != null && ek.has(u.state) && !H,
@@ -477,7 +477,7 @@ function eG(e) {
                         switch (!0) {
                             case (null == u ? void 0 : u.fullscreenType) !== v.Jx.BORDERLESS_FULLSCREEN:
                                 return eg.intl.string(eg.t.mJmbeC);
-                            case C:
+                            case A:
                                 return eg.intl.string(eg.t.C7bLTQ);
                             case !(null != (e = null == u ? void 0 : u.oopEnabled) && e):
                                 return eg.intl.string(eg.t.WiY24u);
@@ -550,7 +550,7 @@ function eG(e) {
                     ? ["text-feedback-positive", h.TVs.colors.TEXT_FEEDBACK_POSITIVE.css]
                     : Y && q
                       ? ["text-strong", h.TVs.colors.TEXT_STRONG.css]
-                      : ["interactive-normal", h.TVs.colors.INTERACTIVE_NORMAL.css],
+                      : ["interactive-text-default", h.TVs.colors.INTERACTIVE_TEXT_DEFAULT.css],
         [W, Y, z, K, q],
     );
     return null == o
@@ -580,7 +580,7 @@ function eG(e) {
                                             ev(
                                                 {
                                                     size: eP,
-                                                    color: h.TVs.colors.BG_BRAND.css,
+                                                    color: h.TVs.colors.BACKGROUND_BRAND.css,
                                                 },
                                                 e,
                                             ),
@@ -645,7 +645,7 @@ function eG(e) {
                           children: [
                               (0, r.jsx)(h.rsf, {
                                   checked: m && R,
-                                  disabled: C,
+                                  disabled: A,
                                   onChange: (e) => {
                                       e && !R
                                           ? L(e, x.OverlayToggledClientSettingType.OOP)
@@ -665,7 +665,7 @@ function eG(e) {
                           children: [
                               (0, r.jsx)(h.rsf, {
                                   checked: b && P,
-                                  disabled: A,
+                                  disabled: C,
                                   onChange: (e) => {
                                       e && !P
                                           ? L(e, x.OverlayToggledClientSettingType.LEGACY)
@@ -736,7 +736,7 @@ function eF() {
     let [e, t] = i.useState(!1),
         { legacyEnabled: n, oopEnabled: a } = (0, p.cj)([U.default], () => U.default.getGlobalEnabledStatus()),
         o = (0, p.Wu)([N.ZP], () => N.ZP.getGamesSeen(!0)).filter((e) => !(0, z.le)(e)),
-        s = (0, A.Z)(o.map((e) => e.id)),
+        s = (0, C.Z)(o.map((e) => e.id)),
         l = !(0, ed.supportsLegacy)(),
         c = (e) => {
             var t, r;
@@ -827,7 +827,7 @@ function eV() {
         { oopEnabled: n, legacyEnabled: a } = (0, p.cj)([U.default], () => U.default.getGlobalEnabledStatus()),
         o = !(0, ed.supportsOutOfProcess)(),
         s = (0, p.Wu)([N.ZP], () => N.ZP.getGamesSeen(!0)).filter((e) => !(0, z.le)(e)),
-        l = (0, A.Z)(s.map((e) => e.id)),
+        l = (0, C.Z)(s.map((e) => e.id)),
         c = (e) => {
             var t, r;
             let i = !e && n;
@@ -1259,7 +1259,7 @@ function eX() {
                     onValueChange: g,
                     markers: ew,
                     barStyles: { background: h.TVs.colors.BACKGROUND_MOD_STRONG.css },
-                    fillStyles: { background: h.TVs.colors.BG_BRAND.css },
+                    fillStyles: { background: h.TVs.colors.BACKGROUND_BRAND.css },
                     onMarkerRender: (e) => (e < eR ? eg.intl.string(eg.t.nrUzFL) : "".concat(Math.floor(e))),
                 }),
             }),
@@ -1267,7 +1267,7 @@ function eX() {
     });
 }
 function eJ() {
-    let [e, t] = (0, C.US)([_.z.OVERLAY_OOP_SETTINGS_NUX], void 0, !0),
+    let [e, t] = (0, A.US)([_.z.OVERLAY_OOP_SETTINGS_NUX], void 0, !0),
         n = () => {
             t(e_.L.DISMISS);
         };

@@ -20,7 +20,7 @@ let m = (0, p.Mg)(o.Z.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
 function _(e) {
     var t, n, o;
     let { title: p, onClose: _ } = e,
-        { applicationIconURL: v, applicationName: y, queryParams: x, iframeUrl: I } = (0, f.b8)(e),
+        { applicationIconURL: v, applicationName: x, queryParams: y, iframeUrl: I } = (0, f.b8)(e),
         { width: M, height: N } = (0, d.Z)(),
         A = a.useMemo(() => {
             let e = Math.min(((N - w - 2 * j) * 16) / 9, g);
@@ -70,7 +70,7 @@ function _(e) {
                                 (0, r.jsx)(c.qEK, {
                                     src: v,
                                     size: c.EFr.SIZE_32,
-                                    "aria-label": y,
+                                    "aria-label": x,
                                     className: h.applicationIcon,
                                 }),
                                 (0, r.jsxs)("div", {
@@ -80,11 +80,11 @@ function _(e) {
                                             children: [
                                                 (0, r.jsx)(c.Heading, {
                                                     variant: "heading-sm/bold",
-                                                    children: y,
+                                                    children: x,
                                                 }),
                                                 (0, r.jsx)(c.Text, {
                                                     variant: "text-xs/medium",
-                                                    color: "interactive-normal",
+                                                    color: "interactive-text-default",
                                                     children: p,
                                                 }),
                                             ],
@@ -118,7 +118,7 @@ function _(e) {
                                 url: I,
                                 shouldRefocus: !0,
                                 className: h.iframe,
-                                queryParams: x,
+                                queryParams: y,
                             }),
                         }),
                     ],

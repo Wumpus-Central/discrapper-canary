@@ -26,8 +26,8 @@ var r = n(54381),
     S = n(626135),
     I = n(585483),
     T = n(70956),
-    A = n(324701),
-    C = n(575016),
+    C = n(324701),
+    A = n(575016),
     N = n(768943),
     P = n(686478),
     R = n(664559),
@@ -243,11 +243,11 @@ function K(e) {
 }
 function z(e) {
     let { savedMessage: t, closePopout: n, throttledNow: a } = e,
-        s = (0, C.gr)(t),
+        s = (0, A.gr)(t),
         l = i.useCallback(
             async (e) => {
                 var r;
-                await (0, C.fC)(t, s),
+                await (0, A.fC)(t, s),
                     e.shiftKey || n(),
                     S.default.track(L.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
@@ -310,7 +310,7 @@ function z(e) {
                       className: M.deleteIcon,
                       children: (0, r.jsx)(_.Mgn, {
                           size: "xxs",
-                          color: _.TVs.colors.INTERACTIVE_ACTIVE,
+                          color: _.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
                       }),
                   }),
                   (0, r.jsx)(_.Heading, {
@@ -326,7 +326,7 @@ function z(e) {
                               label: j.intl.string(j.t.SvXS1Z),
                               icon: _.XHJ,
                               dangerous: !0,
-                              onClick: () => (0, A.x)(t.saveData),
+                              onClick: () => (0, C.x)(t.saveData),
                           },
                           "delete",
                       ),
@@ -357,7 +357,7 @@ function Q(e) {
                           label: j.intl.string(j.t.yjGtdJ),
                           icon: _.dz2,
                           onClick: () =>
-                              (0, A.z)({
+                              (0, C.z)({
                                   channelId: t.saveData.channelId,
                                   messageId: t.saveData.messageId,
                                   dueAt: void 0,
@@ -400,7 +400,7 @@ function Q(e) {
                       {
                           label: j.intl.string(j.t.SvXS1Z),
                           icon: _.plf,
-                          onClick: () => (0, A.x)(t.saveData),
+                          onClick: () => (0, C.x)(t.saveData),
                       },
                       "remove-reminder",
                   ),
@@ -442,7 +442,7 @@ function Q(e) {
                       {
                           label: j.intl.string(j.t.SvXS1Z),
                           icon: _.plf,
-                          onClick: () => (0, A.x)(t.saveData),
+                          onClick: () => (0, C.x)(t.saveData),
                       },
                       "remove-bookmark",
                   ),

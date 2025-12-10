@@ -19,7 +19,7 @@ let c = function (e) {
                     className: o.iconWrapper,
                     children: (0, r.jsx)(l.wGF, {
                         size: "md",
-                        color: l.TVs.colors.INTERACTIVE_ACTIVE,
+                        color: l.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
                     }),
                 }),
                 (0, r.jsxs)("div", {

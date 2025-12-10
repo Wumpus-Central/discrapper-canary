@@ -22,7 +22,7 @@ var r = n(54381),
     S = n(981631),
     I = n(388032),
     T = n(73704);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -186,7 +186,7 @@ function L(e) {
                 className: T.tooltipBodyContainer,
                 children: [
                     (0, r.jsx)(u.Text, {
-                        color: "interactive-active",
+                        color: "interactive-text-active",
                         variant: "text-xs/bold",
                         children: i,
                     }),
@@ -222,7 +222,7 @@ function j(e) {
             iconClassName: b,
             badgeStrokeColor: v,
             badgeColor: I,
-            disableBoostClick: A,
+            disableBoostClick: C,
             "aria-label": N = !1,
         } = e;
     let D =
@@ -248,7 +248,7 @@ function j(e) {
         j = (0, s.e7)([_.Z], () => _.Z.theme),
         M = (0, O.XX)(o),
         k = (0, y.i)(M),
-        U = i.useMemo(() => M.premium && x && !A, [A, M.premium, x]),
+        U = i.useMemo(() => M.premium && x && !C, [C, M.premium, x]),
         G = i.useCallback(
             (e) => {
                 U &&
@@ -296,7 +296,7 @@ function j(e) {
                 tabIndex: U ? 0 : -1,
                 children: (0, r.jsx)(
                     p.Z,
-                    P(C({}, e), {
+                    P(A({}, e), {
                         className: g,
                         flowerStarClassName: E,
                         allowFullSizedIcon: !0,

@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(148884),
     l = n(481060),
     c = n(110924),
     u = n(372840);
@@ -38,9 +38,9 @@ function f(e) {
 }
 let p = 8;
 function _() {
-    let e = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
-        t = (0, l.dQu)(l.TVs.colors.BG_BACKDROP).spring(),
-        n = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_IMMERSIVE).spring(),
+    let e = (0, l.dQu)(l.TVs.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE).spring({ opacity: 0.25 }),
+        t = (0, l.dQu)(l.TVs.colors.BACKGROUND_SCRIM).spring(),
+        n = (0, l.dQu)(l.TVs.colors.BACKGROUND_SCRIM_LIGHTBOX).spring(),
         r = (0, l.dQu)(l.TVs.colors.OVERLAY_BACKDROP_LIGHTBOX).spring();
     return {
         [l.fCB.SUBTLE]: e,
@@ -61,7 +61,7 @@ let m = i.forwardRef(function (e, t) {
             onClose: h,
         } = e,
         g = _()[n],
-        E = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
+        E = (0, l.dQu)(l.TVs.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE).spring({ opacity: 0 }),
         b = n === l.fCB.BLUR ? p : 0,
         y = {
             background: E,

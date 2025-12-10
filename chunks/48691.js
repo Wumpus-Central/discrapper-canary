@@ -9,7 +9,12 @@ var i = n(692547),
     o = n(388032),
     s = n(803635);
 function l(e) {
-    let { label: t, backgroundColor: n = i.Z.colors.BUTTON_SECONDARY_BACKGROUND.css, icon: o, iconColor: l } = e;
+    let {
+        label: t,
+        backgroundColor: n = i.Z.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT.css,
+        icon: o,
+        iconColor: l,
+    } = e;
     return (0, r.jsxs)("div", {
         className: s.badge,
         style: { backgroundColor: n },
