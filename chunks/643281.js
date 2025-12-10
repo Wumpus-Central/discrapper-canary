@@ -1,9 +1,11 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => S });
 var r,
     i = n(442837),
     a = n(570140),
-    o = n(78839);
-function s(e, t, n) {
+    o = n(78839),
+    s = n(80721),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,85 +18,103 @@ function s(e, t, n) {
         e
     );
 }
-let l = {
-    premiumGroupMembers: null,
-    isFetchingMembers: !1,
-    premiumGroupMembership: null,
-    isFetchingMembership: !1,
-    _hasFetchedMembership: !1,
+let u = {
+    membersData: {
+        data: null,
+        isFetching: !1,
+    },
+    membershipData: {
+        data: null,
+        isFetching: !1,
+        hasFetched: !1,
+    },
 };
-function c() {
-    l.isFetchingMembers = !0;
-}
-function u(e) {
-    let { members: t } = e;
-    (l.premiumGroupMembers = t), (l.isFetchingMembers = !1);
-}
 function d() {
-    l.isFetchingMembers = !1;
+    u.membersData.isFetching = !0;
 }
-function f() {
-    l.isFetchingMembership = !0;
+function f(e) {
+    let { members: t } = e;
+    (u.membersData.data = t), (u.membersData.isFetching = !1);
 }
-function p(e) {
-    let { membership: t } = e;
-    (l.premiumGroupMembership = t), (l.isFetchingMembership = !1), (l._hasFetchedMembership = !0);
+function p() {
+    u.membersData.isFetching = !1;
 }
 function _() {
-    (l.isFetchingMembership = !1), (l._hasFetchedMembership = !0);
+    u.membershipData.isFetching = !0;
 }
-function m() {
-    (l.isFetchingMembership = !1), (l._hasFetchedMembership = !0);
+function m(e) {
+    let { membership: t } = e;
+    (u.membershipData.data = t), (u.membershipData.isFetching = !1), (u.membershipData.hasFetched = !0);
 }
 function h() {
-    l = {
-        premiumGroupMembers: null,
-        isFetchingMembers: !1,
-        premiumGroupMembership: null,
-        isFetchingMembership: !1,
-        _hasFetchedMembership: !1,
+    (u.membershipData.isFetching = !1), (u.membershipData.hasFetched = !0);
+}
+function g() {
+    (u.membershipData.isFetching = !1), (u.membershipData.hasFetched = !0);
+}
+function E() {
+    return (
+        !u.membershipData.isFetching && !u.membershipData.hasFetched && (a.Z.wait(() => (0, s.WH)().catch(l.VqG)), !0)
+    );
+}
+function b() {
+    var e, t, n;
+    let r = null == (e = o.Z.getPremiumGroupSubscription()) ? void 0 : e.id;
+    return null != r ? r : null != (n = null == (t = u.membershipData.data) ? void 0 : t.subscriptionId) ? n : null;
+}
+function y(e) {
+    let { subscriptionId: t } = e;
+    return null != t && !u.membersData.isFetching && (a.Z.wait(() => (0, s.i1)(t).catch(l.VqG)), !0);
+}
+function O() {
+    u = {
+        membersData: {
+            data: null,
+            isFetching: !1,
+        },
+        membershipData: {
+            data: null,
+            isFetching: !1,
+            hasFetched: !1,
+        },
     };
 }
-class g extends (r = i.ZP.Store) {
+class v extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(o.Z);
     }
     getMembers() {
-        return l.premiumGroupMembers;
+        return u.membersData.data;
     }
     isFetchingMembers() {
-        return l.isFetchingMembers;
+        return u.membersData.isFetching;
     }
     hasFetchedMembers() {
-        return null !== l.premiumGroupMembers;
+        return null !== u.membersData.data;
     }
     getMembership() {
-        return l.premiumGroupMembership;
+        return u.membershipData.data;
     }
     isFetchingMembership() {
-        return l.isFetchingMembership;
+        return u.membershipData.isFetching;
     }
     hasFetchedMembership() {
-        return l._hasFetchedMembership;
+        return u.membershipData.hasFetched;
     }
-    getSubscriptionId() {
-        var e, t, n;
-        let r = null == (e = o.Z.getPremiumGroupSubscription()) ? void 0 : e.id;
-        return null != r
-            ? r
-            : null != (n = null == (t = l.premiumGroupMembership) ? void 0 : t.subscriptionId)
-              ? n
-              : null;
+    getPremiumGroupSubscriptionId() {
+        return b();
     }
 }
-s(g, "displayName", "PremiumGroupStore");
-let E = new g(a.Z, {
-    PREMIUM_GROUP_MEMBERS_FETCH_START: c,
-    PREMIUM_GROUP_MEMBERS_FETCH_SUCCESS: u,
-    PREMIUM_GROUP_MEMBERS_FETCH_FAILURE: d,
-    PREMIUM_GROUP_MEMBERSHIP_FETCH_START: f,
-    PREMIUM_GROUP_MEMBERSHIP_FETCH_SUCCESS: p,
-    PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND: _,
-    PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE: m,
-    LOGOUT: h,
+c(v, "displayName", "PremiumGroupStore");
+let S = new v(a.Z, {
+    PREMIUM_GROUP_MEMBERS_REQUEST: y,
+    PREMIUM_GROUP_MEMBERS_FETCH_START: d,
+    PREMIUM_GROUP_MEMBERS_FETCH_SUCCESS: f,
+    PREMIUM_GROUP_MEMBERS_FETCH_FAILURE: p,
+    PREMIUM_GROUP_MEMBERSHIP_REQUEST: E,
+    PREMIUM_GROUP_MEMBERSHIP_FETCH_START: _,
+    PREMIUM_GROUP_MEMBERSHIP_FETCH_SUCCESS: m,
+    PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND: h,
+    PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE: g,
+    LOGOUT: O,
 });

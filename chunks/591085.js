@@ -1,23 +1,28 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(473749),
     i = n(442837),
-    a = n(80721),
-    o = n(643281),
-    s = n(602307);
-function l() {
+    a = n(570140),
+    o = n(643281);
+function s() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = (0, i.e7)([o.Z], () => o.Z.getMembers()),
-        n = (0, i.e7)([o.Z], () => !o.Z.hasFetchedMembers()),
-        l = (0, s.Z)(e);
+        n = (0, i.e7)([o.Z], () => o.Z.getPremiumGroupSubscriptionId()),
+        s = (0, i.e7)([o.Z], () => o.Z.hasFetchedMembers()),
+        l = !s;
     return (
         (0, r.useEffect)(() => {
-            !(async function () {
-                !e || o.Z.isFetchingMembers() || o.Z.hasFetchedMembers() || (null != l && (await (0, a.i1)(l)));
-            })();
-        }, [l, e]),
+            e &&
+                (s ||
+                    (null != n
+                        ? a.Z.dispatch({
+                              type: "PREMIUM_GROUP_MEMBERS_REQUEST",
+                              subscriptionId: n,
+                          })
+                        : a.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_REQUEST" })));
+        }, [e, n, s]),
         {
             premiumGroupMembers: t,
-            isLoading: n,
+            isLoading: l,
         }
     );
 }
