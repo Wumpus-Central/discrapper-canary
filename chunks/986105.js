@@ -1,23 +1,24 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(442837),
     s = n(481060),
     o = n(393903),
     a = n(448986),
-    c = n(381585),
-    u = n(597688),
-    d = n(763941),
-    g = n(370039),
-    f = n(937510),
-    p = n(653126),
-    m = n(786040),
-    C = n(401975),
-    h = n(934760),
-    _ = n(619899),
-    b = n(215023),
-    v = n(310582);
-function E(e) {
+    c = n(624968),
+    u = n(381585),
+    d = n(597688),
+    g = n(763941),
+    f = n(370039),
+    p = n(937510),
+    m = n(653126),
+    C = n(786040),
+    h = n(401975),
+    _ = n(934760),
+    b = n(619899),
+    v = n(215023),
+    E = n(310582);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,11 +67,11 @@ let O = (e) => {
             };
         })();
         return (0, r.jsx)("div", {
-            className: v.row,
+            className: E.row,
             ref: i,
             children: (0, r.jsx)(
-                x,
-                ((t = E({}, e)),
+                j,
+                ((t = S({}, e)),
                 (n = n = { totalCards: c }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -88,29 +89,34 @@ let O = (e) => {
             ),
         });
     },
-    S = (e) =>
+    x = (e) =>
         (0, r.jsx)("div", {
-            className: v.feed,
-            children: (0, r.jsx)(x, E({}, e)),
+            className: E.feed,
+            children: (0, r.jsx)(j, S({}, e)),
         }),
-    x = (e) => {
+    y = (e) =>
+        (0, r.jsx)(c.Z, {
+            gap: "xl",
+            children: (0, r.jsx)(j, S({}, e)),
+        }),
+    j = (e) => {
         let { heroBlockRecord: t, isLoading: n, products: l, tab: i, totalCards: s } = e,
-            o = (0, c.sp)(),
-            a = (0, d.Pc)("HeroBlockCards") && t.categorySkuId === b.Hi,
-            g = (0, d.IT)("HeroBlockCards");
+            o = (0, u.sp)(),
+            a = (0, g.Pc)("HeroBlockCards") && t.categorySkuId === v.Hi,
+            c = (0, g.IT)("HeroBlockCards");
         if (n)
             return (0, r.jsx)(r.Fragment, {
-                children: [...Array(null != s ? s : 4)].map((e, t) => (0, r.jsx)(C.Z, {}, t)),
+                children: [...Array(null != s ? s : 4)].map((e, t) => (0, r.jsx)(h.Z, {}, t)),
             });
         let f = null != s ? l.slice(0, s) : l;
-        return (0, r.jsx)(m.zp.Provider, {
-            value: { rentalDuration: a ? g : void 0 },
+        return (0, r.jsx)(C.zp.Provider, {
+            value: { rentalDuration: a ? c : void 0 },
             children: f.map((e, t) => {
-                let n = u.Z.getCategoryForProduct(e.skuId);
+                let n = d.Z.getCategoryForProduct(e.skuId);
                 return null == e || null == n
                     ? null
                     : (0, r.jsx)(
-                          c.k0,
+                          u.k0,
                           {
                               newValue: {
                                   tilePosition: t,
@@ -118,11 +124,11 @@ let O = (e) => {
                                   categoryPosition: 0,
                               },
                               children: (0, r.jsx)(
-                                  p.Z,
+                                  m.Z,
                                   {
                                       skuId: null == e ? void 0 : e.skuId,
-                                      prioritizedCurrency: i === b.AW.ORBS ? m.tA.ORBS : void 0,
-                                      onClickAnalytics: (0, m.wO)(e, i, o),
+                                      prioritizedCurrency: i === v.AW.ORBS ? C.tA.ORBS : void 0,
+                                      onClickAnalytics: (0, C.wO)(e, i, o),
                                   },
                                   e.skuId,
                               ),
@@ -132,15 +138,15 @@ let O = (e) => {
             }),
         });
     },
-    y = (e) => {
+    k = (e) => {
         let { heroBlockRecord: t, layout: n, tab: s, isBlockLoading: o = !1 } = e,
             { products: a } = ((e, t) => {
-                let n = (0, h.Z)(),
-                    r = (0, i.e7)([u.Z], () => u.Z.products),
+                let n = (0, _.Z)(),
+                    r = (0, i.e7)([d.Z], () => d.Z.products),
                     s = l.useMemo(() => (e ? [] : r.size > 0 ? n(t.rankedSkuIds) : []), [e, n, t.rankedSkuIds, r]),
-                    o = (0, g.a)()(s),
-                    a = (0, f.l)(o);
-                return { products: (0, _.St)(a) };
+                    o = (0, f.a)()(s),
+                    a = (0, p.l)(o);
+                return { products: (0, b.St)(a) };
             })(o, t),
             c = l.useMemo(
                 () =>
@@ -149,22 +155,32 @@ let O = (e) => {
                     !(a.length > 0) &&
                     t.rankedSkuIds.every((e) => {
                         var t;
-                        return (null == (t = u.Z.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
+                        return (null == (t = d.Z.getProduct(e)) ? void 0 : t.variantGroupStoreListingId) != null;
                     }),
                 [o, t.rankedSkuIds, a.length],
             ),
-            d = o || c;
-        return "row" === n
-            ? (0, r.jsx)(O, {
-                  heroBlockRecord: t,
-                  isLoading: d,
-                  products: a,
-                  tab: s,
-              })
-            : (0, r.jsx)(S, {
-                  heroBlockRecord: t,
-                  isLoading: d,
-                  products: a,
-                  tab: s,
-              });
+            u = o || c;
+        switch (n) {
+            case "row":
+                return (0, r.jsx)(O, {
+                    heroBlockRecord: t,
+                    isLoading: u,
+                    products: a,
+                    tab: s,
+                });
+            case "feed":
+                return (0, r.jsx)(x, {
+                    heroBlockRecord: t,
+                    isLoading: u,
+                    products: a,
+                    tab: s,
+                });
+            case "hscroll":
+                return (0, r.jsx)(y, {
+                    heroBlockRecord: t,
+                    isLoading: u,
+                    products: a,
+                    tab: s,
+                });
+        }
     };
