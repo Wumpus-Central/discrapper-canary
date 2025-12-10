@@ -9,15 +9,15 @@ var l = n(657707),
     o = n(509613),
     c = n(970013),
     d = n(313789),
-    g = n(620163),
-    S = n(55467),
+    S = n(620163),
+    g = n(55467),
     T = n(726985),
     E = n(388032),
     I = n(237396);
 let _ = (0, o.wf)(d.n.PRIVATE_BROWSING_PANEL, {
         useTitle: () => E.intl.string(I.default.bU5ANm),
         useBadge: () => (0, i.jsx)(s.Z, {}),
-        StronglyDiscouragedCustomComponent: S.R,
+        StronglyDiscouragedCustomComponent: g.R,
         buildLayout: () => [],
     }),
     O = (0, o.m7)(d.n.PRIVATE_BROWSING_SIDEBAR_ITEM, {
@@ -33,7 +33,6 @@ let _ = (0, o.wf)(d.n.PRIVATE_BROWSING_PANEL, {
         buildLayout: () => [_],
         trailing: {
             type: c.W.BADGE_NEW,
-            getDismissibleContentTypes: g._x,
-            stronglyDiscouragedBadgeComponent: g.ec,
+            getDismissibleContentTypes: S._x,
         },
     });

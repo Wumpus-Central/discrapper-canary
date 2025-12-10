@@ -1,79 +1,69 @@
-n.d(t, { M: () => S });
+n.d(t, { M: () => y });
 var r = n(473749),
     i = n(286379),
     a = n(399606),
-    o = n(704215),
-    s = n(493773),
-    l = n(758119),
-    c = n(266454),
-    u = n(797614),
-    d = n(108427),
-    f = n(594174),
-    p = n(626135),
-    _ = n(914788),
-    m = n(841409),
-    h = n(652262),
-    g = n(880257),
-    E = n(631885),
-    b = n(292352),
-    y = n(981631),
-    O = n(723359),
-    v = n(921944);
-function S(e) {
+    o = n(493773),
+    s = n(758119),
+    l = n(797614),
+    c = n(108427),
+    u = n(594174),
+    d = n(626135),
+    f = n(914788),
+    p = n(841409),
+    _ = n(652262),
+    m = n(880257),
+    h = n(631885),
+    g = n(292352),
+    E = n(981631),
+    b = n(723359);
+function y(e) {
     let { location: t, onMountEffect: n } = e,
-        S = (0, g.Z)(),
-        I = (0, E.M8)(),
-        T = (0, c.Nj)(o.z.FAMILY_CENTER_NEW_BADGE),
-        { familyCenterInitialized: C, isLoading: A } = (0, a.cj)([_.Z], () => ({
-            familyCenterInitialized: _.Z.getIsInitialized(),
-            isLoading: _.Z.isLoading(),
+        y = (0, m.Z)(),
+        O = (0, h.M8)(),
+        { familyCenterInitialized: v, isLoading: S } = (0, a.cj)([f.Z], () => ({
+            familyCenterInitialized: f.Z.getIsInitialized(),
+            isLoading: f.Z.isLoading(),
         })),
-        N = (0, h.M)(),
-        { selectedTab: P, handleTabChange: R } = (0, m.Z)(),
-        D = f.default.getCurrentUser(),
-        w = null != S,
-        x = C && null != D && !w;
-    (0, s.ZP)(() => {
-        (0, d.e)("family-center"),
-            null != n && n(),
-            T ||
-                (0, c.Q3)(o.z.FAMILY_CENTER_NEW_BADGE, {
-                    dismissAction: v.L.AUTO,
-                    forceTrack: !0,
-                });
+        I = (0, _.M)(),
+        { selectedTab: T, handleTabChange: C } = (0, p.Z)(),
+        A = u.default.getCurrentUser(),
+        N = null != y,
+        P = v && null != A && !N;
+    (0, o.ZP)(() => {
+        (0, c.e)("family-center"), null != n && n();
     });
-    let L = {
-            isConsideredAdult: S,
-            numOfAcceptedRequests: I,
-            selectedTab: P,
-            selectedTeenId: N,
+    let R = {
+            isConsideredAdult: y,
+            numOfAcceptedRequests: O,
+            selectedTab: T,
+            selectedTeenId: I,
         },
-        j = r.useRef(L);
+        D = r.useRef(R);
     return (
         r.useEffect(() => {
-            j.current = L;
+            D.current = R;
         }),
         r.useEffect(() => {
-            if (C && w) {
-                let { isConsideredAdult: e, numOfAcceptedRequests: n, selectedTab: r, selectedTeenId: a } = j.current;
-                p.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
+            if (v && N) {
+                let { isConsideredAdult: e, numOfAcceptedRequests: n, selectedTab: r, selectedTeenId: a } = D.current;
+                d.default.track(E.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: e,
                     num_of_accepted_links: n,
                     selected_teen_id: a,
-                    initial_page: b.QH[r],
-                    source: b._6[t],
+                    initial_page: g.QH[r],
+                    source: g._6[t],
                 }),
-                    u.Z.increment({ name: i.V.FAMILY_CENTER_VIEW });
+                    l.Z.increment({ name: i.V.FAMILY_CENTER_VIEW });
             }
-        }, [C, w, t]),
+        }, [v, N, t]),
         r.useEffect(() => {
-            x && (0, l.mN)(O.L0.FAMILY_CENTER);
-        }, [x]),
+            P && (0, s.mN)(b.L0.FAMILY_CENTER);
+        }, [P]),
         {
-            isLoading: A,
-            selectedTab: P,
-            handleTabChange: R,
-            showAgeGateModal: x,
+            isLoading: S,
+            selectedTab: T,
+            handleTabChange: C,
+            showAgeGateModal: P,
         }
     );
 }

@@ -8,8 +8,8 @@ var i = n(54381),
     o = n(564344),
     c = n(509613),
     d = n(970013),
-    g = n(518950),
-    S = n(25990),
+    S = n(518950),
+    g = n(25990),
     T = n(594174),
     E = n(313789),
     I = n(620163),
@@ -19,7 +19,7 @@ var i = n(54381),
 let A = (0, c.wf)(E.n.PROFILE_PANEL, {
         useTitle: () => O.intl.string(O.t["vi7f+q"]),
         notice: {
-            stores: [u.Z, S.Z],
+            stores: [u.Z, g.Z],
             element: a.Z,
         },
         StronglyDiscouragedCustomComponent: o.Z,
@@ -32,7 +32,7 @@ let A = (0, c.wf)(E.n.PROFILE_PANEL, {
         stronglyDiscouragedCustomComponent: () => {
             var t;
             let e = (0, s.e7)([T.default], () => T.default.getCurrentUser()),
-                { avatarSrc: n, avatarDecorationSrc: u } = (0, g.Z)({
+                { avatarSrc: n, avatarDecorationSrc: u } = (0, S.Z)({
                     userId: null == e ? void 0 : e.id,
                     size: r.EFr.SIZE_48,
                 });
@@ -79,7 +79,6 @@ let A = (0, c.wf)(E.n.PROFILE_PANEL, {
         trailing: {
             type: d.W.BADGE_NEW,
             getDismissibleContentTypes: I.OF,
-            stronglyDiscouragedBadgeComponent: I.W8,
         },
         buildLayout: () => [A],
     });

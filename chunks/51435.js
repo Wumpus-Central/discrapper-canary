@@ -1,18 +1,24 @@
-n.d(e, { J: () => c });
+n.d(e, { J: () => S });
 var i = n(657707),
-    l = n(509613),
-    s = n(313789),
-    r = n(327192),
-    u = n(726985),
-    a = n(388032);
-let o = (0, l.wf)(s.n.CONNECTIONS_PANEL, {
-        useTitle: () => a.intl.string(a.t["3fe7U5"]),
-        StronglyDiscouragedCustomComponent: r.Z,
+    l = n(704215),
+    s = n(509613),
+    r = n(970013),
+    u = n(313789),
+    a = n(327192),
+    o = n(726985),
+    c = n(388032);
+let d = (0, s.wf)(u.n.CONNECTIONS_PANEL, {
+        useTitle: () => c.intl.string(c.t["3fe7U5"]),
+        StronglyDiscouragedCustomComponent: a.Z,
         buildLayout: () => [],
     }),
-    c = (0, l.m7)(s.n.CONNECTIONS_SIDEBAR_ITEM, {
-        useTitle: () => a.intl.string(a.t["3fe7U5"]),
-        getLegacySearchKey: () => u.s6.CONNECTIONS,
+    S = (0, s.m7)(u.n.CONNECTIONS_SIDEBAR_ITEM, {
+        useTitle: () => c.intl.string(c.t["3fe7U5"]),
+        getLegacySearchKey: () => o.s6.CONNECTIONS,
         icon: i.xPt,
-        buildLayout: () => [o],
+        trailing: {
+            type: r.W.BADGE_NEW,
+            getDismissibleContentTypes: () => [l.z.NEW_CRUNCHYROLL_CONNECTION],
+        },
+        buildLayout: () => [d],
     });
