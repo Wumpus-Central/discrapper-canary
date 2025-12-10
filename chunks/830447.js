@@ -1,6 +1,6 @@
 n.d(t, {
-    T: () => D,
-    v: () => R,
+    T: () => N,
+    v: () => A,
 }),
     n(361932),
     n(187205),
@@ -75,28 +75,7 @@ function v(e, t) {
         e
     );
 }
-function S(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = I(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function I(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-function T(e) {
+function S(e) {
     return null == e
         ? []
         : i.Children.toArray(e).flatMap((e) => {
@@ -104,23 +83,18 @@ function T(e) {
               return null == e
                   ? []
                   : Array.isArray(e)
-                    ? T(e)
+                    ? S(e)
                     : e.type === i.Fragment
-                      ? null != (t = T(e.props.children))
+                      ? null != (t = S(e.props.children))
                           ? t
                           : []
                       : [e];
           });
 }
-function A(e, t) {
-    if (!t || !e.icon || e.iconLeft) return e;
-    let { icon: n } = e;
-    return v(y({}, S(e, ["icon"])), { iconLeft: n });
-}
-function C(e, t) {
-    return T(e).reduce((e, n) => {
-        var r, i;
-        if (n.type === _.Cl)
+function I(e) {
+    return S(e).reduce((e, t) => {
+        var n, r;
+        if (t.type === _.Cl)
             return (
                 e.push({
                     type: "separator",
@@ -128,125 +102,123 @@ function C(e, t) {
                 }),
                 e
             );
-        if (n.type === _.kS) {
-            let r = C(n.props.children, t);
+        if (t.type === _.kS) {
+            let n = I(t.props.children);
             return (
-                r.length > 0 &&
+                n.length > 0 &&
                     (e.push({
                         type: "groupstart",
-                        length: r.length,
+                        length: n.length,
                         navigable: !1,
-                        props: n.props,
+                        props: t.props,
                     }),
-                    e.push(...r),
+                    e.push(...n),
                     e.push({
                         type: "groupend",
-                        length: r.length,
+                        length: n.length,
                         navigable: !1,
-                        props: n.props,
+                        props: t.props,
                     })),
                 e
             );
         }
-        if (n.type === _.sN) {
-            let r = A(n.props, t);
+        if (t.type === _.sN)
             return (
                 e.push(
-                    null != n.props.render
+                    null != t.props.render
                         ? {
                               type: "customitem",
-                              key: n.props.id,
-                              navigable: null == n.props.navigable || n.props.navigable,
-                              render: n.props.render,
-                              props: r,
+                              key: t.props.id,
+                              navigable: null == t.props.navigable || t.props.navigable,
+                              render: t.props.render,
+                              props: t.props,
                           }
                         : {
                               type: "item",
-                              key: n.props.id,
+                              key: t.props.id,
                               navigable: !0,
-                              label: n.props.label,
-                              children: n.props.children ? C(n.props.children, t) : void 0,
-                              onChildrenScroll: n.props.onChildrenScroll,
-                              props: r,
-                              childRowHeight: n.props.childRowHeight,
-                              listClassName: n.props.listClassName,
-                              subMenuClassName: n.props.subMenuClassName,
+                              label: t.props.label,
+                              children: t.props.children ? I(t.props.children) : void 0,
+                              onChildrenScroll: t.props.onChildrenScroll,
+                              props: t.props,
+                              childRowHeight: t.props.childRowHeight,
+                              listClassName: t.props.listClassName,
+                              subMenuClassName: t.props.subMenuClassName,
                           },
                 ),
                 e
             );
-        }
-        if (n.type === _.S8)
+        if (t.type === _.S8)
             return (
                 e.push({
                     type: "checkbox",
-                    key: n.props.id,
+                    key: t.props.id,
                     navigable: !0,
-                    props: n.props,
+                    props: t.props,
                 }),
                 e
             );
-        if (n.type === _.k5)
+        if (t.type === _.k5)
             return (
                 e.push({
                     type: "radio",
-                    key: n.props.id,
+                    key: t.props.id,
                     navigable: !0,
-                    props: n.props,
+                    props: t.props,
                 }),
                 e
             );
-        else if (n.type === _.m7)
+        else if (t.type === _.m7)
             return (
                 e.push({
                     type: "switch",
-                    key: n.props.id,
+                    key: t.props.id,
                     navigable: !0,
-                    props: n.props,
+                    props: t.props,
                 }),
                 e
             );
-        else if (n.type === _.II)
+        else if (t.type === _.II)
             return (
                 e.push(
-                    null != n.props.control
+                    null != t.props.control
                         ? {
                               type: "control",
-                              key: n.props.id,
+                              key: t.props.id,
                               navigable: !0,
-                              props: n.props,
+                              props: t.props,
                           }
                         : {
                               type: "compositecontrol",
-                              key: n.props.id,
-                              navigable: !1 !== n.props.interactive,
-                              children: n.props.children,
-                              props: n.props,
+                              key: t.props.id,
+                              navigable: !1 !== t.props.interactive,
+                              children: t.props.children,
+                              props: t.props,
                           },
                 ),
                 e
             );
         throw Error(
             "Menu API only allows Items and groups of Items as children. Received "
-                .concat(null != (i = null != (r = null == n ? void 0 : n.type) ? r : n) ? i : typeof n, " (")
-                .concat(typeof n, ") instead"),
+                .concat(null != (r = null != (n = null == t ? void 0 : t.type) ? n : t) ? r : typeof t, " (")
+                .concat(typeof t, ") instead"),
         );
     }, []);
 }
-function N(e) {
+function T(e) {
     return e.reduce(
         (e, t) => (
             t.navigable &&
                 e.push({
                     key: t.key,
-                    children: "item" === t.type && null != t.children ? N(t.children) : void 0,
+                    children: "item" === t.type && null != t.children ? T(t.children) : void 0,
                 }),
             e
         ),
         [],
     );
 }
-function P(e, t, n, i) {
+function C(e, t, n, i) {
     let a = 0,
         o = [];
     return e.reduce((e, s, l) => {
@@ -294,7 +266,7 @@ function P(e, t, n, i) {
                                       parentItem: g,
                                       isFocused: _,
                                       menuSubmenuProps: t.getSubmenuProps({ path: p }),
-                                      rows: P(e, t, p, i),
+                                      rows: C(e, t, p, i),
                                       rowHeight: o,
                                       onScroll: l,
                                       listClassName: u,
@@ -310,7 +282,7 @@ function P(e, t, n, i) {
                                       parentItem: g,
                                       isFocused: _,
                                       menuSubmenuProps: t.getSubmenuProps({ path: p }),
-                                      renderSubmenu: () => P(e, t, p, i),
+                                      renderSubmenu: () => C(e, t, p, i),
                                   }),
                                   "".concat(s.key, "-submenu"),
                               ),
@@ -429,7 +401,7 @@ function P(e, t, n, i) {
         return e;
     }, []);
 }
-function R(e) {
+function A(e) {
     var t;
     let {
             navId: n,
@@ -439,63 +411,62 @@ function R(e) {
             children: b,
             onClose: O,
             onSelect: S,
-            onInteraction: I,
-            forceIconsLeft: T,
+            onInteraction: A,
         } = e,
-        A = C(b, T),
-        R = N(A),
+        N = I(b),
+        R = T(N),
         D = i.useRef([]);
     l()(D.current, R) || (D.current = R);
-    let x = (0, p.c)("Menu"),
-        L = null == (t = A.find((e) => null != e.key)) ? void 0 : t.key,
-        j = (0, c.Z)({
+    let w = (0, p.c)("Menu"),
+        x = null == (t = N.find((e) => null != e.key)) ? void 0 : t.key,
+        L = (0, c.Z)({
             navId: n,
             items: D.current,
-            initialFocusPath: f.Z.keyboardModeEnabled && null != L ? [L] : [],
+            initialFocusPath: f.Z.keyboardModeEnabled && null != x ? [x] : [],
             closeMenu: O,
             defaultIsUsingKeyboardNavigation: f.Z.keyboardModeEnabled,
         });
     i.useEffect(() => {
-        j.isUsingKeyboardNavigation ? f.Z.keyboardModeEnabled || (0, d.Qj)() : f.Z.keyboardModeEnabled && (0, d.rf)();
-    }, [j.isUsingKeyboardNavigation]);
-    let M = i.useRef(null);
-    (0, u.Tbt)(M);
-    let k = s ? u.u2D : u.zJl,
-        U = i.useMemo(
+        L.isUsingKeyboardNavigation ? f.Z.keyboardModeEnabled || (0, d.Qj)() : f.Z.keyboardModeEnabled && (0, d.rf)();
+    }, [L.isUsingKeyboardNavigation]);
+    let j = i.useRef(null);
+    (0, u.Tbt)(j);
+    let M = s ? u.u2D : u.zJl,
+        k = i.useMemo(
             () => ({
                 onSelect: S,
-                onInteraction: I,
+                onInteraction: A,
             }),
-            [S, I],
+            [S, A],
         );
     return (0, r.jsx)(m.p.Provider, {
-        value: U,
+        value: k,
         children: (0, r.jsx)(
             "div",
             v(
                 y(
                     {
                         className: o()(E.menu, E[a], _),
-                        style: { "--custom-menu-viewport-padding": x ? "".concat(g.sb, "px") : "".concat(g.F3, "px") },
+                        style: { "--custom-menu-viewport-padding": w ? "".concat(g.sb, "px") : "".concat(g.F3, "px") },
                     },
-                    j.getContainerProps(),
+                    L.getContainerProps(),
                 ),
                 {
-                    ref: M,
+                    ref: j,
                     "aria-label": e["aria-label"],
-                    children: (0, r.jsxs)(k, {
+                    children: (0, r.jsxs)(M, {
                         className: E.scroller,
                         children: [
-                            0 === A.length &&
+                            0 === N.length &&
                                 (0, r.jsx)(h.ck, {
                                     disabled: !0,
-                                    label: () => (0, r.jsx)(w, {}),
-                                    menuItemProps: j.getItemProps({ path: ["empty"] }),
+                                    label: () => (0, r.jsx)(P, {}),
+                                    menuItemProps: L.getItemProps({ path: ["empty"] }),
                                     isFocused: !1,
                                     onFocus: () => {},
                                     onClose: O,
                                 }),
-                            A.length > 0 && P(A, j, [], O),
+                            N.length > 0 && C(N, L, [], O),
                         ],
                     }),
                 },
@@ -503,13 +474,13 @@ function R(e) {
         ),
     });
 }
-function D() {
+function N() {
     return (0, r.jsx)("div", {
         className: o()(E.menu, E.loader, E.flexible),
         children: (0, r.jsx)(u.$jN, {}),
     });
 }
-function w() {
+function P() {
     let e = "\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A",
         t = "\u266B \u2282(\uFF61\u25D5‿‿\u25D5\uFF61\u2282) \u266A",
         [n, a] = i.useState(e);
