@@ -1,8 +1,4 @@
 e.exports = {
-    container: "container_e45886",
-    containerWithHeader: "containerWithHeader_e45886",
-    header: "header_e45886",
-    closeButton: "closeButton_e45886",
     separator: "separator_e45886",
     formGroup: "formGroup_e45886",
     splitGroup: "splitGroup_e45886",

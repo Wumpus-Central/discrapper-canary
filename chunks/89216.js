@@ -1,25 +1,25 @@
-a.r(l), a.d(l, { default: () => g }), a(388685);
-var t = a(54381),
-    n = a(473749),
-    s = a(392711),
-    i = a.n(s),
-    r = a(793030),
-    c = a(442837),
-    o = a(481060),
-    d = a(741361),
-    m = a(596454),
-    x = a(447003),
-    h = a(471445),
-    u = a(605436),
-    C = a(633302),
-    p = a(984933),
-    j = a(388032),
-    v = a(809822);
-function b(e) {
-    var l, s, i;
-    let { onClose: c, handleReviewPermissions: d } = e,
-        x = (e) =>
-            (0, t.jsx)(o.Text, {
+t.r(l), t.d(l, { default: () => g }), t(388685);
+var a = t(54381),
+    n = t(473749),
+    s = t(392711),
+    i = t.n(s),
+    r = t(793030),
+    c = t(442837),
+    o = t(481060),
+    d = t(741361),
+    x = t(596454),
+    m = t(447003),
+    h = t(471445),
+    u = t(605436),
+    C = t(633302),
+    p = t(984933),
+    v = t(388032),
+    f = t(809822);
+function j(e) {
+    var l, t, s;
+    let { onClose: i, handleReviewPermissions: c, transitionState: d } = e,
+        m = (e) =>
+            (0, a.jsx)(o.Text, {
                 tag: "span",
                 variant: "text-md/medium",
                 color: "header-primary",
@@ -29,249 +29,224 @@ function b(e) {
             () => [
                 {
                     variant: "secondary",
-                    text: j.intl.string(j.t["ETE/oC"]),
-                    onClick: c,
+                    text: v.intl.string(v.t["ETE/oC"]),
+                    onClick: i,
                 },
                 {
                     variant: "primary",
-                    text: j.intl.string(j.t.bEnleq),
-                    onClick: d,
+                    text: v.intl.string(v.t.bEnleq),
+                    onClick: c,
                 },
             ],
-            [d, c],
+            [c, i],
         );
-    return (0, t.jsxs)(t.Fragment, {
-        children: [
-            (0, t.jsxs)(r.fef, {
-                children: [
-                    (0, t.jsxs)("div", {
-                        className: v.modalHeader,
-                        children: [
-                            (0, t.jsx)("img", {
-                                className: v.modalImage,
-                                "data-accessibility": "desaturate",
-                                alt: "",
-                                src: a(592614),
+    return (0, a.jsx)(r.Modal, {
+        title: v.intl.string(v.t.PJOCL6),
+        actions: h,
+        onClose: i,
+        transitionState: d,
+        children: (0, a.jsxs)("ul", {
+            className: f.infoList,
+            children: [
+                (0, a.jsxs)("li", {
+                    className: f.infoListItem,
+                    children: [
+                        (0, a.jsx)("div", {
+                            className: f.iconWrapper,
+                            children: (0, a.jsx)(x.Z, {
+                                emojiName: null == (l = C.ZP.getByName("eyes")) ? void 0 : l.surrogates,
                             }),
-                            (0, t.jsx)(o.Heading, {
-                                variant: "heading-lg/semibold",
-                                color: "header-primary",
-                                children: j.intl.string(j.t.PJOCL6),
+                        }),
+                        (0, a.jsx)(o.Text, {
+                            variant: "text-md/normal",
+                            color: "text-muted",
+                            children: v.intl.format(v.t["8JzOBn"], { emphasisHook: m }),
+                        }),
+                    ],
+                }),
+                (0, a.jsxs)("li", {
+                    className: f.infoListItem,
+                    children: [
+                        (0, a.jsx)("div", {
+                            className: f.iconWrapper,
+                            children: (0, a.jsx)(x.Z, {
+                                emojiName: null == (t = C.ZP.getByName("star_struck")) ? void 0 : t.surrogates,
                             }),
-                        ],
-                    }),
-                    (0, t.jsxs)("ul", {
-                        children: [
-                            (0, t.jsxs)("li", {
-                                className: v.infoListItem,
-                                children: [
-                                    (0, t.jsx)("div", {
-                                        className: v.iconWrapper,
-                                        children: (0, t.jsx)(m.Z, {
-                                            emojiName: null == (l = C.ZP.getByName("eyes")) ? void 0 : l.surrogates,
-                                        }),
-                                    }),
-                                    (0, t.jsx)(o.Text, {
-                                        variant: "text-md/normal",
-                                        color: "text-muted",
-                                        children: j.intl.format(j.t["8JzOBn"], { emphasisHook: x }),
-                                    }),
-                                ],
+                        }),
+                        (0, a.jsx)(o.Text, {
+                            variant: "text-md/normal",
+                            color: "text-muted",
+                            children: v.intl.format(v.t.UcGDkt, { emphasisHook: m }),
+                        }),
+                    ],
+                }),
+                (0, a.jsxs)("li", {
+                    className: f.infoListItem,
+                    children: [
+                        (0, a.jsx)("div", {
+                            className: f.iconWrapper,
+                            children: (0, a.jsx)(x.Z, {
+                                emojiName: null == (s = C.ZP.getByName("books")) ? void 0 : s.surrogates,
                             }),
-                            (0, t.jsxs)("li", {
-                                className: v.infoListItem,
-                                children: [
-                                    (0, t.jsx)("div", {
-                                        className: v.iconWrapper,
-                                        children: (0, t.jsx)(m.Z, {
-                                            emojiName:
-                                                null == (s = C.ZP.getByName("star_struck")) ? void 0 : s.surrogates,
-                                        }),
-                                    }),
-                                    (0, t.jsx)(o.Text, {
-                                        variant: "text-md/normal",
-                                        color: "text-muted",
-                                        children: j.intl.format(j.t.UcGDkt, { emphasisHook: x }),
-                                    }),
-                                ],
-                            }),
-                            (0, t.jsxs)("li", {
-                                className: v.infoListItem,
-                                children: [
-                                    (0, t.jsx)("div", {
-                                        className: v.iconWrapper,
-                                        children: (0, t.jsx)(m.Z, {
-                                            emojiName: null == (i = C.ZP.getByName("books")) ? void 0 : i.surrogates,
-                                        }),
-                                    }),
-                                    (0, t.jsx)(o.Text, {
-                                        variant: "text-md/normal",
-                                        color: "text-muted",
-                                        children: j.intl.format(j.t.kALJ5q, { emphasisHook: x }),
-                                    }),
-                                ],
-                            }),
-                        ],
-                    }),
-                ],
-            }),
-            (0, t.jsx)(r.Go$, {
-                actions: h,
-                actionsFullWidth: !0,
-            }),
-        ],
+                        }),
+                        (0, a.jsx)(o.Text, {
+                            variant: "text-md/normal",
+                            color: "text-muted",
+                            children: v.intl.format(v.t.kALJ5q, { emphasisHook: m }),
+                        }),
+                    ],
+                }),
+            ],
+        }),
     });
 }
-function f(e) {
+function b(e) {
     var l;
-    let { channel: a, selected: s, onChange: i } = e,
-        r = null != (l = (0, h.KS)(a)) ? l : o.VL1,
+    let { channel: t, selected: s, onChange: i } = e,
+        r = null != (l = (0, h.KS)(t)) ? l : o.VL1,
         c = n.useCallback(() => {
-            i(a);
-        }, [a, i]);
-    return (0, t.jsxs)(o.P3F, {
-        "aria-label": a.name,
+            i(t);
+        }, [t, i]);
+    return (0, a.jsxs)(o.P3F, {
+        "aria-label": t.name,
         "aria-checked": s,
-        className: v.selectableChannelRow,
+        className: f.selectableChannelRow,
         onClick: c,
         children: [
-            (0, t.jsxs)("div", {
-                className: v.selectableChannelCellFirst,
+            (0, a.jsxs)("div", {
+                className: f.selectableChannelCellFirst,
                 children: [
-                    (0, t.jsx)(r, {
-                        className: v.channelIcon,
+                    (0, a.jsx)(r, {
+                        className: f.channelIcon,
                         size: "xs",
                         color: "currentColor",
                     }),
-                    (0, t.jsx)(o.Text, {
-                        className: v.channelName,
+                    (0, a.jsx)(o.Text, {
+                        className: f.channelName,
                         variant: "text-md/medium",
                         color: "text-default",
                         lineClamp: 1,
-                        children: a.name,
+                        children: t.name,
                     }),
                 ],
             }),
-            (0, t.jsx)("div", {
-                className: v.selectableChannelCellSecond,
-                children: (0, t.jsx)(o.FZ5, { checked: s }),
+            (0, a.jsx)("div", {
+                className: f.selectableChannelCellSecond,
+                children: (0, a.jsx)(o.FZ5, { checked: s }),
             }),
         ],
     });
 }
 function g(e) {
-    let { transitionState: l, onClose: a, guildId: s, startingChannelId: m } = e,
+    let { transitionState: l, onClose: t, guildId: s, startingChannelId: x } = e,
         h = (0, c.Wu)([p.ZP], () => {
             var e, l;
-            let a = p.ZP.getChannels(s);
-            return (null != (e = a[p.sH]) ? e : [])
-                .concat(null != (l = a[p.Zb]) ? l : [])
-                .filter((e) => (0, x.Z)(e.channel))
+            let t = p.ZP.getChannels(s);
+            return (null != (e = t[p.sH]) ? e : [])
+                .concat(null != (l = t[p.Zb]) ? l : [])
+                .filter((e) => (0, m.Z)(e.channel))
                 .map((e) => e.channel);
         }),
         [C, g] = n.useState(0),
-        k = h.find((e) => e.id === m),
+        k = h.find((e) => e.id === x),
         [N, T] = n.useState(null != k ? [k] : []),
         _ = N.length === h.length,
         y = n.useCallback(() => {
             g(1);
         }, [g]),
-        I = n.useCallback(
+        P = n.useCallback(
             (e) => {
                 T((l) => (l.includes(e) ? [...i().pull(l, e)] : [...l, e]));
             },
             [T],
         ),
-        P = n.useCallback(() => {
+        Z = n.useCallback(() => {
             _ ? T([]) : T(h);
         }, [_, h, T]),
-        Z = n.useCallback(() => {
+        A = n.useCallback(() => {
             N.forEach((e) => {
                 let l = (0, u._A)(e, e.accessPermissions, !0);
-                (0, d.hw)(e.id, [l]), a();
+                (0, d.hw)(e.id, [l]), t();
             });
-        }, [N, a]),
-        A = n.useMemo(
+        }, [N, t]),
+        L = n.useMemo(
             () => [
                 {
                     variant: "secondary",
-                    text: j.intl.string(j.t["ETE/oC"]),
-                    onClick: a,
+                    text: v.intl.string(v.t["ETE/oC"]),
+                    onClick: t,
                 },
                 {
                     variant: "primary",
-                    text: j.intl.string(j.t.PggHmu),
-                    onClick: Z,
+                    text: v.intl.string(v.t.PggHmu),
+                    onClick: A,
                     disabled: 0 === N.length,
                 },
             ],
-            [Z, a, N.length],
+            [A, t, N.length],
         );
     return 0 === C
-        ? (0, t.jsx)(r.IX, {
-              onClose: a,
+        ? (0, a.jsx)(j, {
+              handleReviewPermissions: y,
+              onClose: t,
               transitionState: l,
-              children: (0, t.jsx)(b, {
-                  handleReviewPermissions: y,
-                  onClose: a,
-              }),
           })
-        : (0, t.jsxs)(r.Modal, {
-              title: j.intl.string(j.t.y77PiT),
-              subtitle: j.intl.string(j.t.ZSzBe5),
-              actions: A,
-              onClose: a,
+        : (0, a.jsxs)(r.Modal, {
+              title: v.intl.string(v.t.y77PiT),
+              subtitle: v.intl.string(v.t.ZSzBe5),
+              actions: L,
+              onClose: t,
               transitionState: l,
-              input: (0, t.jsxs)("div", {
-                  className: v.selectAllContainer,
+              input: (0, a.jsxs)("div", {
+                  className: f.selectAllContainer,
                   children: [
-                      (0, t.jsx)(o.Text, {
-                          className: v.selectAllTitle,
+                      (0, a.jsx)(o.Text, {
+                          className: f.selectAllTitle,
                           variant: "text-xs/semibold",
                           color: "text-muted",
-                          children: j.intl.format(j.t.rrYCq2, { count: h.length }),
+                          children: v.intl.format(v.t.rrYCq2, { count: h.length }),
                       }),
-                      (0, t.jsx)("div", {
-                          className: v.selectAllCheckbox,
-                          children: (0, t.jsx)(o.Checkbox, {
-                              onChange: P,
+                      (0, a.jsx)("div", {
+                          className: f.selectAllCheckbox,
+                          children: (0, a.jsx)(o.Checkbox, {
+                              onChange: Z,
                               checked: _,
-                              label: j.intl.string(j.t.l4rqaz),
+                              label: v.intl.string(v.t.l4rqaz),
                               labelType: "secondary",
                           }),
                       }),
                   ],
               }),
               children: [
-                  (0, t.jsx)("div", {
-                      className: v.deprivateTableBody,
+                  (0, a.jsx)("div", {
+                      className: f.deprivateTableBody,
                       children: h.map((e) =>
-                          (0, t.jsx)(
-                              f,
+                          (0, a.jsx)(
+                              b,
                               {
                                   channel: e,
                                   selected: N.includes(e),
-                                  onChange: I,
+                                  onChange: P,
                               },
                               e.id,
                           ),
                       ),
                   }),
-                  (0, t.jsx)("div", {
-                      className: v.deprivateExplainer,
-                      children: (0, t.jsx)(o.Text, {
+                  (0, a.jsx)("div", {
+                      className: f.deprivateExplainer,
+                      children: (0, a.jsx)(o.Text, {
                           variant: "text-xs/normal",
                           color: "text-muted",
-                          children: j.intl.format(j.t["OP/pKr"], {
+                          children: v.intl.format(v.t["OP/pKr"], {
                               emphasisHook: (e) =>
-                                  (0, t.jsx)(o.Text, {
+                                  (0, a.jsx)(o.Text, {
                                       tag: "span",
                                       variant: "text-xs/medium",
                                       color: "interactive-text-active",
                                       children: e,
                                   }),
                               brandHook: (e) =>
-                                  (0, t.jsx)(o.Text, {
+                                  (0, a.jsx)(o.Text, {
                                       tag: "span",
                                       variant: "text-xs/normal",
                                       color: "text-brand",
