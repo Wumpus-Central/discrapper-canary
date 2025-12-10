@@ -25,7 +25,7 @@ function h(e) {
             children: g,
         } = e,
         f = (0, o.ZP)(),
-        { enabled: _ } = (0, d.WX)({ location: "global_discovery_header_bar" });
+        { enabled: _ } = (0, d.W)({ location: "global_discovery_header_bar" });
     return (0, a.jsx)(s.f6W, {
         theme: f,
         children: (e) =>

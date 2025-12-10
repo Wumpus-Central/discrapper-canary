@@ -47,8 +47,8 @@ var r = n(54381),
     K = n(635552),
     Y = n(83479),
     J = n(290175),
-    X = n(724994),
-    Q = n(328456),
+    Q = n(724994),
+    X = n(328456),
     $ = n(27123),
     ee = n(330349),
     et = n(556971),
@@ -132,7 +132,7 @@ let eZ = (e) => {
         let { item: t, product: n, user: l } = e,
             a = i.useRef(null),
             o = (0, q.x6)(n),
-            { firstAvatarDecoration: s } = (0, Q.Rj)(n);
+            { firstAvatarDecoration: s } = (0, X.Rj)(n);
         return t.type === c.Z.AVATAR_DECORATION
             ? (0, r.jsx)("div", {
                   className: o ? ek.bundleAvatarPreviewContainer : ek.avatarPreviewContainer,
@@ -259,8 +259,8 @@ let eZ = (e) => {
             S = (0, eP.N)(t, y),
             R = (0, ej.W)(t, P);
         s()(null != R, "Selected product should not be null");
-        let k = (0, X.L)(t),
-            { isPurchased: D, isPartiallyOwnedBundle: U, isRented: M } = (0, X.L)(R),
+        let k = (0, Q.L)(t),
+            { isPurchased: D, isPartiallyOwnedBundle: U, isRented: M } = (0, Q.L)(R),
             { isDisabled: F, disabledReason: W } = (0, J.G)(R.skuId),
             ee = (0, q.ne)({
                 product: R,
@@ -274,7 +274,7 @@ let eZ = (e) => {
             em = (0, q.G1)(R),
             ep = (0, q.ql)(R, eA.tuJ.DEFAULT),
             eh = (null == ep ? void 0 : ep.amount) === 0,
-            { firstAvatarDecoration: ex } = (0, Q.Rj)(null != S ? S : R),
+            { firstAvatarDecoration: ex } = (0, X.Rj)(null != S ? S : R),
             eb = i.useMemo(() => (0, q.BH)(R, I), [R, I]),
             { handleUseNow: eC, isApplying: eI } = (0, K.W)({
                 product: R,
@@ -282,7 +282,7 @@ let eZ = (e) => {
             }),
             eL = (0, ey.To)(R),
             eB = (0, eO.J)(R),
-            { enabled: eZ } = (0, B.WX)({ location: "collectibles_shop_product_details_modal" }),
+            { enabled: eZ } = (0, B.W)({ location: "collectibles_shop_product_details_modal" }),
             eD = (0, Y.G)(R, !1, _),
             eF = (0, e_.Iw)(t),
             eG = null != eF,
@@ -742,7 +742,7 @@ let eZ = (e) => {
             }),
             v = t.type === c.Z.AVATAR_DECORATION,
             [h] = t.items,
-            { firstAvatarDecoration: x, firstProfileEffect: b, firstNameplate: P } = (0, Q.Rj)(t),
+            { firstAvatarDecoration: x, firstProfileEffect: b, firstNameplate: P } = (0, X.Rj)(t),
             j = null != b,
             _ = () =>
                 (0, r.jsxs)(r.Fragment, {

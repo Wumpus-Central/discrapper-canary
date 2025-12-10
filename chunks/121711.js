@@ -93,7 +93,7 @@ function eh(e) {
 let em = i.createContext({});
 function e_(e) {
     let { onLoadComplete: t } = e,
-        { enabled: n } = (0, Z.WX)({ location: er.dr.QUEST_HOME_DESKTOP }),
+        { enabled: n } = (0, Z.W)({ location: er.dr.QUEST_HOME_DESKTOP }),
         l = (0, u.e7)([g.Z], () => g.Z.useReducedMotion),
         s = (0, u.e7)([L.Z], () => L.Z.isFocused()),
         { ref: o, inViewport: c } = (0, K.a)(),
@@ -160,7 +160,7 @@ function eE(e) {
         { isInDiscoverQuestHomeTab: o, onScroll: c, onSelectTab: u, scrollerRef: d, selectedTab: p } = i.useContext(em),
         f = (0, G._)({ location: er.dr.QUEST_HOME_DESKTOP }) ? J.Z : J.j,
         { takeover: g, isLoading: h } = (0, z.Nm)(),
-        { enabled: m } = (0, Z.WX)({ location: er.dr.QUEST_HOME_DESKTOP }),
+        { enabled: m } = (0, Z.W)({ location: er.dr.QUEST_HOME_DESKTOP }),
         { enabled: _ } = V.n0.useConfig({ location: er.dr.QUEST_HOME_DESKTOP }),
         b = i.useRef(null),
         E = i.useCallback(() => {
@@ -241,7 +241,7 @@ let eO = function (e) {
                 },
             });
         }, [T]);
-    let { enabled: Q } = (0, Z.WX)({ location: er.dr.QUEST_HOME_DESKTOP }),
+    let { enabled: Q } = (0, Z.W)({ location: er.dr.QUEST_HOME_DESKTOP }),
         J = i.useCallback(() => {
             if (Q) return void window.open(ei.EYA.PAID_TERMS_ORBS);
             window.open(M.Z.getArticleURL(ei.BhN.QUESTS_LEARN_MORE));

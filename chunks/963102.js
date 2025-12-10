@@ -148,7 +148,7 @@ function B(e) {
     let { selectedTab: t, handleTransition: n } = e,
         i = (0, u.ZP)(),
         d = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
-        { enabled: g } = (0, _.WX)({ location: "collectibles_shop_header_bar" }),
+        { enabled: g } = (0, _.W)({ location: "collectibles_shop_header_bar" }),
         S = (0, m.Y)({ location: "CollectiblesShopHeaderBar" }),
         B = [
             {

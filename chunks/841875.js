@@ -21,7 +21,7 @@ var r = n(54381),
 function S() {
     let { onToggleOrbEligible: e, orbEligible: t, reset: n, hasFilters: i } = (0, h.S)(),
         s = i(),
-        { enabled: a } = (0, f.WX)({ location: "Shop" }),
+        { enabled: a } = (0, f.W)({ location: "Shop" }),
         c = (0, m.sp)(),
         u = l.useCallback(
             (e) => {

@@ -14,7 +14,7 @@ var r = n(932563),
 let d = (e) => {
         var t;
         let { product: n, isPremiumUser: r } = e,
-            { enabled: a } = (0, i.CE)({ location: "getShopBasePricingData" }),
+            { enabled: a } = (0, i.C)({ location: "getShopBasePricingData" }),
             o = a
                 ? (0, s.T4)({
                       product: n,

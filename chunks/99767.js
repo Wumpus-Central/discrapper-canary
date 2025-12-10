@@ -14,7 +14,7 @@ let d = {
         [c.AW.BUNDLES]: i.G.BUNDLE,
     },
     g = (e) => {
-        let { enabled: t } = (0, o.WX)({ location: "useShopViewTransition" }),
+        let { enabled: t } = (0, o.W)({ location: "useShopViewTransition" }),
             { setItemTypeFilter: n, reset: i, setCurrentTab: g } = (0, s.S)(),
             f = r.useMemo(() => (e !== c.AW.ORBS || t ? ((0, c.RE)(e) ? c.AW.CATALOG : e) : c.AW.HOME), [e, t]),
             [p, m] = r.useState(f),

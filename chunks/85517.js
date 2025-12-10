@@ -108,7 +108,7 @@ function j(e) {
     let { config: t, onQuestCtaClick: n } = e,
         l = (0, s.TH)(),
         j = (0, s.k6)(),
-        { enabled: P } = (0, g.WX)({ location: O.dr.QUEST_HOME_DESKTOP }),
+        { enabled: P } = (0, g.W)({ location: O.dr.QUEST_HOME_DESKTOP }),
         x = (0, p.ZP)(),
         [A, Z] = i.useState("display-lg"),
         w = i.useCallback((e) => {
