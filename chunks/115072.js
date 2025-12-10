@@ -10,8 +10,8 @@ var i = n(54381),
     d = n(481060),
     m = n(53281),
     p = n(476326),
-    f = n(304761),
-    v = n(273031),
+    v = n(304761),
+    f = n(273031),
     h = n(859235),
     g = n(898463),
     x = n(951394),
@@ -24,8 +24,8 @@ var i = n(54381),
     w = n(223356),
     P = n(225452),
     C = n(388032),
-    k = n(176059);
-function E(e) {
+    E = n(176059);
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -55,7 +55,7 @@ let D = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map
     value: e,
 }));
 function T(e) {
-    var t, T, I, L;
+    var t, T, L, I;
     let { transitionState: N, onClose: A } = e,
         M = r.useRef(null),
         R = r.useRef(null),
@@ -86,7 +86,7 @@ function T(e) {
         [es, eu] = r.useState(""),
         [ec, ed] = r.useState(""),
         [em, ep] = r.useState(!1),
-        [ef, ev] = r.useState(!1),
+        [ev, ef] = r.useState(!1),
         [eh, eg] = r.useState(!1),
         [ex, eb] = r.useState(null);
     r.useEffect(() => {
@@ -102,8 +102,8 @@ function T(e) {
                 rejectWithError: !0,
             })
             .then((e) => {
-                if (null != e.body && "3cc912906fe3704d1381dfd1204fbf764b5dd480" !== e.body.hash) {
-                    let e = new Date("1765306432409"),
+                if (null != e.body && "9c28d664576b006b967cfe9c953327ae3caa4f68" !== e.body.hash) {
+                    let e = new Date("1765342394074"),
                         t = new Date(),
                         n = (0, O.TD)(t, e);
                     n.hours > 6 && eb(n.hours);
@@ -114,13 +114,13 @@ function T(e) {
             let e = j.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        ej = (0, a.e7)([f.C], () => {
+        ej = (0, a.e7)([v.C], () => {
             var e;
-            return null == (e = f.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web;
+            return null == (e = v.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web;
         }),
         { overridesInfo: e_ } = (0, y.sI)(),
         { overridesInfo: eO } = (0, b.Qb)(),
-        eS = Object.entries(E({}, e_, eO)).map((e) => {
+        eS = Object.entries(k({}, e_, eO)).map((e) => {
             let [t, { variantId: n }] = e;
             return {
                 experimentId: t,
@@ -131,7 +131,7 @@ function T(e) {
         var e, t;
         if ((eg(!1), "" === Z || "" === B || null == H)) return void ep(!0);
         let r = null == X || null == (e = X.features) ? void 0 : e.find((e) => (0, w.pD)(e) === K);
-        ev(!0), ep(!1);
+        ef(!0), ep(!1);
         let l = (0, P.D)(
                 U.map((e) => {
                     let { item: t } = e;
@@ -161,7 +161,7 @@ function T(e) {
                     : { overridePlatformInformation: Q },
                 l,
             ).catch(() => eg(!0));
-        ev(!1),
+        ef(!1),
             null != a && a.ok
                 ? (ey && window.open(a.body.permalink_url, "_blank"),
                   A(),
@@ -171,7 +171,7 @@ function T(e) {
                           var n, r;
                           return (0, i.jsx)(
                               e,
-                              ((n = E({}, t)),
+                              ((n = k({}, t)),
                               (r = r = { asanaTask: a.body }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -191,12 +191,13 @@ function T(e) {
                   }))
                 : eg(!0);
     }
-    r.useEffect(() => {
-        async function e() {
-            F(await (0, w.WG)());
-        }
-        ey && e();
-    }, [ey]),
+    return (
+        r.useEffect(() => {
+            async function e() {
+                F(await (0, w.WG)());
+            }
+            ey && e();
+        }, [ey]),
         r.useEffect(() => {
             if (U.length > 0) {
                 var e;
@@ -206,368 +207,383 @@ function T(e) {
                         block: "end",
                     });
             }
-        }, [U]);
-    let eP = r.useCallback(
-        (e) => {
-            let t = Array.from(e.clipboardData.files)
-                .filter((e) => e.type.startsWith("image/"))
-                .at(0);
-            void 0 === t ||
-                U.some((e) => {
-                    var n;
-                    return e.filename === t.name && (null == (n = e.item.file) ? void 0 : n.size) === t.size;
-                }) ||
-                Y([
-                    ...U,
-                    new p.ZP({
-                        id: (0, l.Z)(),
-                        file: t,
-                        platform: p.ow.WEB,
-                        origin: "clipboard",
-                    }),
-                ]);
-        },
-        [U],
-    );
-    return (0, i.jsx)(c.u_l, {
-        size: "md",
-        transitionState: N,
-        "aria-label": C.intl.string(C.t.mCCdwi),
-        title: C.intl.string(C.t["5LqopY"]),
-        actions: [
-            {
-                variant: "secondary",
-                text: C.intl.string(C.t["ETE/oC"]),
-                onClick: A,
-                autoFocus: !1,
-            },
-            {
-                variant: "primary",
-                text: ey ? "Submit and Open Report" : "Submit Report",
-                loading: ef,
-                onClick: ew,
-                autoFocus: !1,
-            },
-        ],
-        onClose: A,
-        children: (0, i.jsxs)("div", {
-            onPaste: eP,
-            children: [
-                (0, i.jsxs)(d.Kqy, {
-                    gap: 8,
-                    children: [
-                        null != ej &&
-                            (0, i.jsxs)(d.M14, {
-                                type: "critical",
-                                children: [
-                                    (0, i.jsx)(d.Heading, {
-                                        variant: "heading-md/medium",
-                                        children: C.intl.string(C.t["ZP/hEx"]),
-                                    }),
-                                    (0, i.jsx)(d.Text, {
-                                        variant: "text-sm/normal",
-                                        children: C.intl.format(C.t["yY60+7"], {
-                                            buildOverrideHook: () =>
-                                                (0, i.jsx)("b", { children: null == ej ? void 0 : ej.id }),
+        }, [U]),
+        r.useEffect(() => {
+            let e = (e) => {
+                var t;
+                let n = null == (t = e.clipboardData) ? void 0 : t.files;
+                if (null == n || 0 === n.length) return;
+                let i = Array.from(n).filter((e) => e.type.startsWith("image/"));
+                if (0 === i.length) return;
+                e.preventDefault(), e.stopPropagation();
+                let r = i.at(0);
+                void 0 !== r &&
+                    Y((e) =>
+                        e.some((e) => {
+                            var t;
+                            return e.filename === r.name && (null == (t = e.item.file) ? void 0 : t.size) === r.size;
+                        })
+                            ? e
+                            : [
+                                  ...e,
+                                  new p.ZP({
+                                      id: (0, l.Z)(),
+                                      file: r,
+                                      platform: p.ow.WEB,
+                                      origin: "clipboard",
+                                  }),
+                              ],
+                    );
+            };
+            return (
+                document.addEventListener("paste", e, !0),
+                () => {
+                    document.removeEventListener("paste", e, !0);
+                }
+            );
+        }, []),
+        (0, i.jsx)(c.u_l, {
+            size: "md",
+            transitionState: N,
+            "aria-label": C.intl.string(C.t.mCCdwi),
+            title: C.intl.string(C.t["5LqopY"]),
+            actions: [
+                {
+                    variant: "secondary",
+                    text: C.intl.string(C.t["ETE/oC"]),
+                    onClick: A,
+                    autoFocus: !1,
+                },
+                {
+                    variant: "primary",
+                    text: ey ? "Submit and Open Report" : "Submit Report",
+                    loading: ev,
+                    onClick: ew,
+                    autoFocus: !1,
+                },
+            ],
+            onClose: A,
+            children: (0, i.jsxs)("div", {
+                children: [
+                    (0, i.jsxs)(d.Kqy, {
+                        gap: 8,
+                        children: [
+                            null != ej &&
+                                (0, i.jsxs)(d.M14, {
+                                    type: "critical",
+                                    children: [
+                                        (0, i.jsx)(d.Heading, {
+                                            variant: "heading-md/medium",
+                                            children: C.intl.string(C.t["ZP/hEx"]),
                                         }),
-                                    }),
-                                ],
-                            }),
-                        null == ej &&
-                            null != ex &&
-                            (0, i.jsxs)(d.M14, {
-                                type: "critical",
-                                children: [
-                                    (0, i.jsx)(d.Heading, {
-                                        variant: "heading-md/medium",
-                                        children: C.intl.formatToPlainString(C.t["ql2Q/e"], { hours: ex }),
-                                    }),
-                                    (0, i.jsx)(d.Text, {
-                                        variant: "text-sm/normal",
-                                        children: C.intl.string(C.t.x18RUs),
-                                    }),
-                                ],
-                            }),
-                        ey &&
-                            Object.keys(eS).length > 0 &&
-                            (0, i.jsxs)(d.M14, {
-                                type: "critical",
-                                children: [
-                                    (0, i.jsx)(d.Heading, {
-                                        variant: "heading-md/medium",
-                                        children: "You have the following experiments overridden:",
-                                    }),
-                                    (0, i.jsx)(d.Text, {
-                                        variant: "text-sm/normal",
-                                        children: eS.map((e) =>
-                                            (0, i.jsxs)(
-                                                "div",
-                                                {
-                                                    children: [e.experimentId, " (variant ", e.variantId, ")"],
-                                                },
-                                                e.experimentId,
+                                        (0, i.jsx)(d.Text, {
+                                            variant: "text-sm/normal",
+                                            children: C.intl.format(C.t["yY60+7"], {
+                                                buildOverrideHook: () =>
+                                                    (0, i.jsx)("b", { children: null == ej ? void 0 : ej.id }),
+                                            }),
+                                        }),
+                                    ],
+                                }),
+                            null == ej &&
+                                null != ex &&
+                                (0, i.jsxs)(d.M14, {
+                                    type: "critical",
+                                    children: [
+                                        (0, i.jsx)(d.Heading, {
+                                            variant: "heading-md/medium",
+                                            children: C.intl.formatToPlainString(C.t["ql2Q/e"], { hours: ex }),
+                                        }),
+                                        (0, i.jsx)(d.Text, {
+                                            variant: "text-sm/normal",
+                                            children: C.intl.string(C.t.x18RUs),
+                                        }),
+                                    ],
+                                }),
+                            ey &&
+                                Object.keys(eS).length > 0 &&
+                                (0, i.jsxs)(d.M14, {
+                                    type: "critical",
+                                    children: [
+                                        (0, i.jsx)(d.Heading, {
+                                            variant: "heading-md/medium",
+                                            children: "You have the following experiments overridden:",
+                                        }),
+                                        (0, i.jsx)(d.Text, {
+                                            variant: "text-sm/normal",
+                                            children: eS.map((e) =>
+                                                (0, i.jsxs)(
+                                                    "div",
+                                                    {
+                                                        children: [e.experimentId, " (variant ", e.variantId, ")"],
+                                                    },
+                                                    e.experimentId,
+                                                ),
                                             ),
-                                        ),
-                                    }),
-                                ],
+                                        }),
+                                    ],
+                                }),
+                        ],
+                    }),
+                    (0, i.jsxs)(d.Kqy, {
+                        gap: 24,
+                        padding: {
+                            top: 8,
+                            bottom: 8,
+                        },
+                        children: [
+                            (0, i.jsx)(d.oil, {
+                                label: C.intl.string(C.t.OZRgjw),
+                                error: em && "" === Z ? C.intl.string(C.t.EkokLy) : null,
+                                placeholder: "Something is broken on this screen.",
+                                type: "text",
+                                value: Z,
+                                maxLength: 100,
+                                onChange: W,
+                                autoFocus: !0,
                             }),
-                    ],
-                }),
-                (0, i.jsxs)(d.Kqy, {
-                    gap: 24,
-                    padding: {
-                        top: 8,
-                        bottom: 8,
-                    },
-                    children: [
-                        (0, i.jsx)(d.oil, {
-                            label: C.intl.string(C.t.OZRgjw),
-                            error: em && "" === Z ? C.intl.string(C.t.EkokLy) : null,
-                            placeholder: "Something is broken on this screen.",
-                            type: "text",
-                            value: Z,
-                            maxLength: 100,
-                            onChange: W,
-                            autoFocus: !0,
-                        }),
-                        (0, i.jsx)(d.Kx8, {
-                            label: C.intl.string(C.t["1SplH2"]),
-                            error: em && "" === B ? C.intl.string(C.t.EkokLy) : null,
-                            placeholder: "What did you expect to see?",
-                            value: B,
-                            onChange: V,
-                            description: ey
-                                ? "You can add additional information/media on the ticket after submitting"
-                                : void 0,
-                        }),
-                        (0, i.jsx)(u.y6, {
-                            label: C.intl.string(C.t.xMXLda),
-                            errorMessage: em && void 0 === H ? C.intl.string(C.t.EkokLy) : null,
-                            renderOptionLabel: (e) =>
-                                (function (e) {
-                                    let t = e.priority;
-                                    return (0, i.jsxs)("div", {
-                                        className: k.formPriorityImageContainer,
-                                        children: [
-                                            (0, i.jsxs)("div", {
-                                                className: k.formPriorityTitleContainer,
-                                                children: [
-                                                    (0, i.jsx)("img", {
-                                                        alt: "",
-                                                        className: k.formPriorityImage,
-                                                        src: (0, _.gT)({
-                                                            id: t.emoji,
-                                                            animated: !0,
-                                                            size: 48,
+                            (0, i.jsx)(d.Kx8, {
+                                label: C.intl.string(C.t["1SplH2"]),
+                                error: em && "" === B ? C.intl.string(C.t.EkokLy) : null,
+                                placeholder: "What did you expect to see?",
+                                value: B,
+                                onChange: V,
+                                description: ey
+                                    ? "You can add additional information/media on the ticket after submitting"
+                                    : void 0,
+                            }),
+                            (0, i.jsx)(u.y6, {
+                                label: C.intl.string(C.t.xMXLda),
+                                errorMessage: em && void 0 === H ? C.intl.string(C.t.EkokLy) : null,
+                                renderOptionLabel: (e) =>
+                                    (function (e) {
+                                        let t = e.priority;
+                                        return (0, i.jsxs)("div", {
+                                            className: E.formPriorityImageContainer,
+                                            children: [
+                                                (0, i.jsxs)("div", {
+                                                    className: E.formPriorityTitleContainer,
+                                                    children: [
+                                                        (0, i.jsx)("img", {
+                                                            alt: "",
+                                                            className: E.formPriorityImage,
+                                                            src: (0, _.gT)({
+                                                                id: t.emoji,
+                                                                animated: !0,
+                                                                size: 48,
+                                                            }),
                                                         }),
-                                                    }),
-                                                    (0, i.jsx)(d.Text, {
-                                                        color: "header-primary",
-                                                        variant: "text-sm/semibold",
-                                                        className: k.formPriorityTitle,
-                                                        children: t.title,
-                                                    }),
-                                                ],
-                                            }),
-                                            (0, i.jsx)(d.Text, {
-                                                color: "text-default",
-                                                variant: "text-xs/normal",
-                                                className: k.formPriorityDescription,
-                                                children: t.description,
-                                            }),
-                                        ],
-                                    });
-                                })(e),
-                            onChange: q,
-                            options: (0, w.Tj)().map((e) => ({
-                                priority: e,
-                                value: e.value,
-                                label: e.title,
-                            })),
-                            optionClassName: k.formPriorityOption,
-                            value: H,
-                            maxVisibleItems: 4,
-                            closeOnSelect: !0,
-                        }),
-                        ey &&
-                            (0, i.jsx)(s.d, {
-                                label: C.intl.string(C.t["77VVd8"]),
-                                value: K,
-                                options:
-                                    null !=
-                                    (L =
-                                        null == X ||
-                                        null == (I = X.features) ||
-                                        null == (T = I.filter((e) => "" !== (0, w.pD)(e))) ||
-                                        null ==
-                                            (t = T.map((e) => {
-                                                var t;
-                                                return {
-                                                    label: null != (t = e.name) ? t : "",
-                                                    value: (0, w.pD)(e),
-                                                };
-                                            }))
-                                            ? void 0
-                                            : t.sort((e, t) => e.label.localeCompare(t.label)))
-                                        ? L
-                                        : [],
-                                isDisabled: null == X,
-                                onChange: (e) => J(e),
+                                                        (0, i.jsx)(d.Text, {
+                                                            color: "header-primary",
+                                                            variant: "text-sm/semibold",
+                                                            className: E.formPriorityTitle,
+                                                            children: t.title,
+                                                        }),
+                                                    ],
+                                                }),
+                                                (0, i.jsx)(d.Text, {
+                                                    color: "text-default",
+                                                    variant: "text-xs/normal",
+                                                    className: E.formPriorityDescription,
+                                                    children: t.description,
+                                                }),
+                                            ],
+                                        });
+                                    })(e),
+                                onChange: q,
+                                options: (0, w.Tj)().map((e) => ({
+                                    priority: e,
+                                    value: e.value,
+                                    label: e.title,
+                                })),
+                                optionClassName: E.formPriorityOption,
+                                value: H,
+                                maxVisibleItems: 4,
+                                closeOnSelect: !0,
                             }),
-                        (0, i.jsx)(d.oil, {
-                            label: C.intl.string(C.t["7p5pqh"]),
-                            placeholder: C.intl.string(C.t.HewMzo),
-                            type: "text",
-                            value: z,
-                            maxLength: 5000,
-                            onChange: G,
-                        }),
-                        (0, i.jsx)(d.Checkbox, {
-                            checked: Q,
-                            onChange: (e) => $(e),
-                            label: C.intl.string(C.t.ayhqiH),
-                        }),
-                        Q
-                            ? (0, i.jsxs)(i.Fragment, {
-                                  children: [
-                                      (0, i.jsx)(d.oil, {
-                                          label: C.intl.string(C.t.rrI4Tk),
-                                          placeholder: "Device",
-                                          value: ee,
-                                          onChange: (e) => et(e),
-                                      }),
-                                      (0, i.jsx)(u.y6, {
-                                          label: C.intl.string(C.t.kcHxi6),
-                                          value: en,
-                                          options: D,
-                                          onChange: (e) => ei(e),
-                                      }),
-                                      (0, i.jsx)(d.oil, {
-                                          label: C.intl.string(C.t.rEtxdg),
-                                          placeholder: "Operating System Version",
-                                          value: er,
-                                          onChange: (e) => el(e),
-                                      }),
-                                      (0, i.jsx)(d.oil, {
-                                          label: C.intl.string(C.t["wy1M/t"]),
-                                          placeholder: "Client Version",
-                                          value: ea,
-                                          onChange: (e) => eo(e),
-                                      }),
-                                      (0, i.jsx)(d.oil, {
-                                          label: C.intl.string(C.t.f7kbVu),
-                                          placeholder: "Client Build Number",
-                                          value: es,
-                                          onChange: (e) => eu(e),
-                                      }),
-                                      (0, i.jsx)(d.oil, {
-                                          label: C.intl.string(C.t["4Z5+zg"]),
-                                          placeholder: "Locale",
-                                          value: ec,
-                                          onChange: (e) => ed(e),
-                                      }),
-                                  ],
-                              })
-                            : null,
-                        (0, i.jsx)(d.Button, {
-                            variant: "secondary",
-                            text: C.intl.string(C.t.HVxmOD),
-                            onClick: () => {
-                                var e;
-                                null == (e = M.current) || e.activateUploadDialogue();
-                            },
-                            fullWidth: !0,
-                        }),
-                        (0, i.jsx)("div", {
-                            className: k.fileInput,
-                            children: (0, i.jsx)(m.Z, {
-                                ref: M,
-                                onChange: (e) => {
-                                    var t, n;
-                                    (null == (n = e.currentTarget) || null == (t = n.files) ? void 0 : t[0]) != null &&
-                                        Y([
-                                            ...U,
-                                            ...Array.from(e.currentTarget.files).map(
-                                                (e) =>
-                                                    new p.ZP({
-                                                        id: (0, l.Z)(),
-                                                        file: e,
-                                                        platform: p.ow.WEB,
-                                                        origin: "file_picker",
-                                                    }),
-                                            ),
-                                        ]);
+                            ey &&
+                                (0, i.jsx)(s.d, {
+                                    label: C.intl.string(C.t["77VVd8"]),
+                                    value: K,
+                                    options:
+                                        null !=
+                                        (I =
+                                            null == X ||
+                                            null == (L = X.features) ||
+                                            null == (T = L.filter((e) => "" !== (0, w.pD)(e))) ||
+                                            null ==
+                                                (t = T.map((e) => {
+                                                    var t;
+                                                    return {
+                                                        label: null != (t = e.name) ? t : "",
+                                                        value: (0, w.pD)(e),
+                                                    };
+                                                }))
+                                                ? void 0
+                                                : t.sort((e, t) => e.label.localeCompare(t.label)))
+                                            ? I
+                                            : [],
+                                    isDisabled: null == X,
+                                    onChange: (e) => J(e),
+                                }),
+                            (0, i.jsx)(d.oil, {
+                                label: C.intl.string(C.t["7p5pqh"]),
+                                placeholder: C.intl.string(C.t.HewMzo),
+                                type: "text",
+                                value: z,
+                                maxLength: 5000,
+                                onChange: G,
+                            }),
+                            (0, i.jsx)(d.Checkbox, {
+                                checked: Q,
+                                onChange: (e) => $(e),
+                                label: C.intl.string(C.t.ayhqiH),
+                            }),
+                            Q
+                                ? (0, i.jsxs)(i.Fragment, {
+                                      children: [
+                                          (0, i.jsx)(d.oil, {
+                                              label: C.intl.string(C.t.rrI4Tk),
+                                              placeholder: "Device",
+                                              value: ee,
+                                              onChange: (e) => et(e),
+                                          }),
+                                          (0, i.jsx)(u.y6, {
+                                              label: C.intl.string(C.t.kcHxi6),
+                                              value: en,
+                                              options: D,
+                                              onChange: (e) => ei(e),
+                                          }),
+                                          (0, i.jsx)(d.oil, {
+                                              label: C.intl.string(C.t.rEtxdg),
+                                              placeholder: "Operating System Version",
+                                              value: er,
+                                              onChange: (e) => el(e),
+                                          }),
+                                          (0, i.jsx)(d.oil, {
+                                              label: C.intl.string(C.t["wy1M/t"]),
+                                              placeholder: "Client Version",
+                                              value: ea,
+                                              onChange: (e) => eo(e),
+                                          }),
+                                          (0, i.jsx)(d.oil, {
+                                              label: C.intl.string(C.t.f7kbVu),
+                                              placeholder: "Client Build Number",
+                                              value: es,
+                                              onChange: (e) => eu(e),
+                                          }),
+                                          (0, i.jsx)(d.oil, {
+                                              label: C.intl.string(C.t["4Z5+zg"]),
+                                              placeholder: "Locale",
+                                              value: ec,
+                                              onChange: (e) => ed(e),
+                                          }),
+                                      ],
+                                  })
+                                : null,
+                            (0, i.jsx)(d.Button, {
+                                variant: "secondary",
+                                text: C.intl.string(C.t.HVxmOD),
+                                onClick: () => {
+                                    var e;
+                                    null == (e = M.current) || e.activateUploadDialogue();
                                 },
-                                multiple: !0,
+                                fullWidth: !0,
                             }),
-                        }),
-                        U.length > 0
-                            ? (0, i.jsx)(d.gNt, {
-                                  label: "Preview",
-                                  children: (0, i.jsx)("div", {
-                                      ref: R,
-                                      className: k.attachments,
-                                      children:
-                                          U.length > 0 &&
-                                          U.map((e) =>
-                                              (0, i.jsxs)(
-                                                  "div",
-                                                  {
-                                                      className: k.attachment,
-                                                      children: [
-                                                          (0, i.jsxs)("div", {
-                                                              children: [
-                                                                  (0, i.jsx)(g.r, {
-                                                                      size: h.q.SMALL,
-                                                                      upload: e,
-                                                                  }),
-                                                                  (0, i.jsx)("div", {
-                                                                      className: k.removeAttachment,
-                                                                      children: (0, i.jsx)(x.ZP, {
-                                                                          children: (0, i.jsx)(v.Z, {
-                                                                              tooltip: C.intl.string(C.t.vN7REz),
-                                                                              onClick: () => {
-                                                                                  var t;
-                                                                                  return (
-                                                                                      (t = e.id),
-                                                                                      void Y(
-                                                                                          U.filter((e) => e.id !== t),
-                                                                                      )
-                                                                                  );
-                                                                              },
-                                                                              dangerous: !0,
-                                                                              children: (0, i.jsx)(d.XHJ, {
-                                                                                  size: "md",
-                                                                                  color: "currentColor",
+                            (0, i.jsx)("div", {
+                                className: E.fileInput,
+                                children: (0, i.jsx)(m.Z, {
+                                    ref: M,
+                                    onChange: (e) => {
+                                        var t, n;
+                                        (null == (n = e.currentTarget) || null == (t = n.files) ? void 0 : t[0]) !=
+                                            null &&
+                                            Y([
+                                                ...U,
+                                                ...Array.from(e.currentTarget.files).map(
+                                                    (e) =>
+                                                        new p.ZP({
+                                                            id: (0, l.Z)(),
+                                                            file: e,
+                                                            platform: p.ow.WEB,
+                                                            origin: "file_picker",
+                                                        }),
+                                                ),
+                                            ]);
+                                    },
+                                    multiple: !0,
+                                }),
+                            }),
+                            U.length > 0
+                                ? (0, i.jsx)(d.gNt, {
+                                      label: "Preview",
+                                      children: (0, i.jsx)("div", {
+                                          ref: R,
+                                          className: E.attachments,
+                                          children:
+                                              U.length > 0 &&
+                                              U.map((e) =>
+                                                  (0, i.jsxs)(
+                                                      "div",
+                                                      {
+                                                          className: E.attachment,
+                                                          children: [
+                                                              (0, i.jsxs)("div", {
+                                                                  children: [
+                                                                      (0, i.jsx)(g.r, {
+                                                                          size: h.q.SMALL,
+                                                                          upload: e,
+                                                                      }),
+                                                                      (0, i.jsx)("div", {
+                                                                          className: E.removeAttachment,
+                                                                          children: (0, i.jsx)(x.ZP, {
+                                                                              children: (0, i.jsx)(f.Z, {
+                                                                                  tooltip: C.intl.string(C.t.vN7REz),
+                                                                                  onClick: () => {
+                                                                                      var t;
+                                                                                      return (
+                                                                                          (t = e.id),
+                                                                                          void Y(
+                                                                                              U.filter(
+                                                                                                  (e) => e.id !== t,
+                                                                                              ),
+                                                                                          )
+                                                                                      );
+                                                                                  },
+                                                                                  dangerous: !0,
+                                                                                  children: (0, i.jsx)(d.XHJ, {
+                                                                                      size: "md",
+                                                                                      color: "currentColor",
+                                                                                  }),
                                                                               }),
                                                                           }),
                                                                       }),
-                                                                  }),
-                                                              ],
-                                                          }),
-                                                          (0, i.jsx)(d.Text, {
-                                                              variant: "text-xxs/medium",
-                                                              color: "text-subtle",
-                                                              children: e.filename,
-                                                          }),
-                                                      ],
-                                                  },
-                                                  e.id,
+                                                                  ],
+                                                              }),
+                                                              (0, i.jsx)(d.Text, {
+                                                                  variant: "text-xxs/medium",
+                                                                  color: "text-subtle",
+                                                                  children: e.filename,
+                                                              }),
+                                                          ],
+                                                      },
+                                                      e.id,
+                                                  ),
                                               ),
-                                          ),
-                                  }),
-                              })
-                            : null,
-                        eh
-                            ? (0, i.jsx)(d.Text, {
-                                  color: "text-feedback-critical",
-                                  variant: "text-sm/normal",
-                                  children: "Something went wrong, try again!",
-                              })
-                            : null,
-                    ],
-                }),
-            ],
-        }),
-    });
+                                      }),
+                                  })
+                                : null,
+                            eh
+                                ? (0, i.jsx)(d.Text, {
+                                      color: "text-feedback-critical",
+                                      variant: "text-sm/normal",
+                                      children: "Something went wrong, try again!",
+                                  })
+                                : null,
+                        ],
+                    }),
+                ],
+            }),
+        })
+    );
 }
