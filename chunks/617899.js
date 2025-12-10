@@ -1,16 +1,15 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(904245),
-    s = n(340541),
-    o = n(944486),
-    c = n(82950),
-    u = n(981631),
-    d = n(921944),
-    p = n(388032),
-    f = n(589148);
-function g(e, t, n) {
+    s = n(944486),
+    o = n(82950),
+    c = n(981631),
+    u = n(921944),
+    d = n(388032),
+    p = n(589148);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,30 +22,24 @@ function g(e, t, n) {
         e
     );
 }
-class h extends i.PureComponent {
-    getInviteText() {
-        return (0, s.LK)({ location: "invite_notice" }).isGuildEntrypointEnabled
-            ? p.intl.string(p.t.Sd8Ixw)
-            : p.intl.string(p.t.BN75l9);
-    }
+class g extends i.PureComponent {
     render() {
-        let e = "".concat(p.intl.string(p.t.VWqWZQ), "\n").concat(p.intl.string(p.t["0Lgb/K"])),
-            t = this.getInviteText();
-        return (0, r.jsx)(c.Z, {
+        let e = "".concat(d.intl.string(d.t.VWqWZQ), "\n").concat(d.intl.string(d.t["0Lgb/K"]));
+        return (0, r.jsx)(o.Z, {
             guild: this.props.guild,
             onDismissed: this.handleClose,
             onClick: this.handleInvite,
             message: e,
-            cta: t,
-            trackingSource: u.PsQ.INVITE_NOTICE,
-            type: u.vID.INVITE,
-            image: f,
+            cta: d.intl.string(d.t.Sd8Ixw),
+            trackingSource: c.PsQ.INVITE_NOTICE,
+            type: c.vID.INVITE,
+            image: p,
             imageMarginX: 46,
         });
     }
     constructor(...e) {
         super(...e),
-            g(this, "handleInvite", () => {
+            f(this, "handleInvite", () => {
                 let { guild: e } = this.props;
                 (0, l.ZDy)(async () => {
                     let { default: t } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
@@ -82,24 +75,24 @@ class h extends i.PureComponent {
                                                 }),
                                             )),
                                             r.forEach(function (t) {
-                                                g(e, t, n[t]);
+                                                f(e, t, n[t]);
                                             });
                                     }
                                     return e;
                                 })({}, n),
                                 {
                                     guild: e,
-                                    source: u.t4x.INVITE_NOTICE,
+                                    source: c.t4x.INVITE_NOTICE,
                                 },
                             ),
                         );
                 });
             }),
-            g(this, "handleClose", () => {
-                let e = o.Z.getChannelId(),
-                    t = p.intl.formatToPlainString(p.t.DEn7nu, { invitePeople: this.getInviteText() });
-                this.props.markAsDismissed(d.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, t);
+            f(this, "handleClose", () => {
+                let e = s.Z.getChannelId(),
+                    t = d.intl.formatToPlainString(d.t.DEn7nu, { invitePeople: d.intl.string(d.t.Sd8Ixw) });
+                this.props.markAsDismissed(u.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, t);
             });
     }
 }
-let m = h;
+let h = g;
