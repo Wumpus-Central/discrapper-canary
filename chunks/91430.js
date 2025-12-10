@@ -501,7 +501,11 @@ function es(e) {
                             openInvoiceId: ea.id,
                         })
                       : null,
-                  er && (0, r.jsx)(k.L, { subscription: a }),
+                  er &&
+                      (0, r.jsx)(k.L, {
+                          subscription: a,
+                          analyticsLocations: O,
+                      }),
                   n,
                   w &&
                       (0, r.jsx)(m.Wn, {

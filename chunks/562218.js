@@ -1,4 +1,4 @@
-n.d(t, { G: () => _ }), n(388685), n(539854);
+n.d(t, { G: () => h }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(793030),
@@ -8,111 +8,120 @@ var r = n(54381),
     c = n(45474),
     u = n(594135),
     d = n(474936),
-    f = n(981631),
-    p = n(388032);
-let _ = () => {
+    f = n(282793),
+    p = n(981631),
+    _ = n(441677),
+    m = n(388032);
+let h = () => {
         var e;
         let {
                 transitionState: t,
                 onClose: n,
                 premiumType: s,
                 setStep: f,
-                premiumSubscription: _,
+                premiumSubscription: p,
                 paymentsBlocked: h,
-                planId: g,
-                handleCancellation: E,
+                planId: E,
+                handleCancellation: b,
             } = (0, u.a)(),
-            [b, y] = (0, i.useState)(!1),
-            [O, v] = (0, i.useState)(!1),
-            S = async () => {
-                y(!0), v(!1);
+            [y, O] = (0, i.useState)(!1),
+            [v, S] = (0, i.useState)(!1),
+            I = async () => {
+                O(!0), S(!1);
                 try {
-                    await E(), n();
+                    await b(), n();
                 } catch (e) {
-                    v(!0), y(!1);
+                    S(!0), O(!1);
                 }
             },
-            I =
-                (_.items.some((e) => {
+            T =
+                (p.items.some((e) => {
                     let { planId: t } = e;
                     return !d.dJ.has(t);
                 }) &&
-                    null == _.renewalMutations) ||
-                (null == (e = _.renewalMutations)
+                    null == p.renewalMutations) ||
+                (null == (e = p.renewalMutations)
                     ? void 0
                     : e.items.find((e) => {
                           let { planId: t } = e;
                           return !d.dJ.has(t);
                       })) != null,
-            T = [];
-        return (
-            T.push({
-                text: p.intl.string(p.t.h9tkAK),
-                onClick: () => n(),
-                variant: "secondary",
-            }),
-            I
-                ? T.push({
-                      text: p.intl.string(p.t.PDTjLN),
+            C = [];
+        C.push({
+            text: m.intl.string(m.t.h9tkAK),
+            onClick: () => n(),
+            variant: "secondary",
+        }),
+            T
+                ? C.push({
+                      text: m.intl.string(m.t.PDTjLN),
                       onClick: () => f(c.R.PREVIEW),
-                      disabled: b,
+                      disabled: y,
                       variant: "critical-primary",
-                      loading: b,
+                      loading: y,
                   })
-                : T.push({
-                      text: p.intl.string(p.t["cY+Oob"]),
-                      onClick: () => S(),
-                      disabled: b,
+                : C.push({
+                      text: m.intl.string(m.t["cY+Oob"]),
+                      onClick: () => I(),
+                      disabled: y,
                       variant: "critical-primary",
-                      loading: b,
-                  }),
-            (0, r.jsx)(a.Modal, {
-                size: "md",
-                transitionState: t,
-                title: "".concat(
-                    p.intl.format(p.t.LZunzZ, { planPremiumType: l.ZP.getTierDisplayNameByPlanId("".concat(g)) }),
-                ),
-                subtitle: m(h, s, _),
-                actions: T,
-                onClose: async () => n(),
-                children: O
-                    ? (0, r.jsx)(o.M14, {
-                          type: "critical",
-                          children: p.intl.string(p.t["5mlOCW"]),
-                      })
-                    : null,
-            })
-        );
+                      loading: y,
+                  });
+        let A = (0, l.Ju)(E),
+            N = A
+                ? m.intl.string(_.default.qbDPGM)
+                : m.intl.formatToPlainString(m.t.LZunzZ, {
+                      planPremiumType: l.ZP.getTierDisplayNameByPlanId("".concat(E)),
+                  });
+        return (0, r.jsx)(a.Modal, {
+            size: "md",
+            transitionState: t,
+            title: N,
+            subtitle: g(h, s, p, A),
+            actions: C,
+            onClose: async () => n(),
+            children: v
+                ? (0, r.jsx)(o.M14, {
+                      type: "critical",
+                      children: m.intl.string(m.t["5mlOCW"]),
+                  })
+                : null,
+        });
     },
-    m = (e, t, n) => {
+    g = (e, t, n, r) => {
         switch (n.status) {
-            case f.O0b.PAST_DUE:
-            case f.O0b.PAUSED:
-            case f.O0b.BILLING_RETRY:
-                return p.intl.string(p.t.FClXh9);
+            case p.O0b.PAST_DUE:
+            case p.O0b.PAUSED:
+            case p.O0b.BILLING_RETRY:
+                return m.intl.string(m.t.FClXh9);
             default:
+                if (r)
+                    return m.intl.formatToPlainString(_.default.MI8Rml, {
+                        endDate: n.currentPeriodEnd,
+                        premiumGroupProductName: (0, f.sO)(),
+                    });
                 switch (t) {
                     case d.PremiumTypes.TIER_0:
                         return e
-                            ? p.intl.format(p.t["l+A50F"], {
+                            ? m.intl.format(m.t["l+A50F"], {
                                   date: n.currentPeriodEnd,
-                                  helpdeskArticle: s.Z.getArticleURL(f.BhN.BLOCKED_PAYMENTS),
+                                  helpdeskArticle: s.Z.getArticleURL(p.BhN.BLOCKED_PAYMENTS),
                               })
-                            : p.intl.format(p.t.Y6Wfaw, { date: n.currentPeriodEnd });
+                            : m.intl.format(m.t.Y6Wfaw, { date: n.currentPeriodEnd });
                     case d.PremiumTypes.TIER_1:
                         return e
-                            ? p.intl.format(p.t.QN7eIt, {
+                            ? m.intl.format(m.t.QN7eIt, {
                                   date: n.currentPeriodEnd,
-                                  helpdeskArticle: s.Z.getArticleURL(f.BhN.BLOCKED_PAYMENTS),
+                                  helpdeskArticle: s.Z.getArticleURL(p.BhN.BLOCKED_PAYMENTS),
                               })
-                            : p.intl.format(p.t.X7i9D8, { date: n.currentPeriodEnd });
+                            : m.intl.format(m.t.X7i9D8, { date: n.currentPeriodEnd });
                     default:
                         return e
-                            ? p.intl.format(p.t.vuSNhj, {
+                            ? m.intl.format(m.t.vuSNhj, {
                                   date: n.currentPeriodEnd,
-                                  helpdeskArticle: s.Z.getArticleURL(f.BhN.BLOCKED_PAYMENTS),
+                                  helpdeskArticle: s.Z.getArticleURL(p.BhN.BLOCKED_PAYMENTS),
                               })
-                            : p.intl.format(p.t.fCdmNs, { date: n.currentPeriodEnd });
+                            : m.intl.format(m.t.fCdmNs, { date: n.currentPeriodEnd });
                 }
         }
     };
