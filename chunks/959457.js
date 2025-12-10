@@ -34,8 +34,8 @@ function I(e, t, n) {
     );
 }
 let T = {},
-    A = {},
     C = {},
+    A = {},
     N = {},
     P = {},
     R = {},
@@ -51,7 +51,6 @@ function x(e, t, n, i) {
             channelId: n,
             initialLayout: D,
             analyticsContext: i,
-            isStreamer: null != A[e],
             parentMediaSessionId: O.Z.getMediaSessionId(),
         })
     );
@@ -68,50 +67,52 @@ function M() {
     (r = null), L();
 }
 function k(e) {
+    var t, n;
     let {
-            streamType: t,
-            guildId: n,
-            channelId: r,
-            appContext: i,
-            pid: a,
-            sourceId: o,
-            sourcePid: s,
-            nativePickerStyleUsed: c,
-            goLiveModalDurationMs: u,
-            analyticsLocations: d,
+            streamType: r,
+            guildId: i,
+            channelId: a,
+            appContext: o,
+            pid: s,
+            sourceId: c,
+            sourcePid: u,
+            nativePickerStyleUsed: d,
+            goLiveModalDurationMs: p,
+            analyticsLocations: m,
         } = e,
-        p = (0, _.V9)({
-            streamType: t,
-            guildId: n,
-            channelId: r,
+        h = (0, _.V9)({
+            streamType: r,
+            guildId: i,
+            channelId: a,
             ownerId: E.default.getId(),
         });
     if (
-        ((T[p] = {
-            appContext: i,
-            analyticsLocations: d,
+        ((T[h] = {
+            appContext: o,
+            analyticsLocations: m,
         }),
         l().forEach(w, (e) => {
             let { analyticsContext: t, isOwner: n } = e;
-            t.setActionContext(i), t.setNativePickerStyleUsed(c), n && t.trackStart();
+            t.setActionContext(o), t.setNativePickerStyleUsed(d), n && t.trackStart();
         }),
-        null == a && (a = s),
-        (N[p] = o),
-        (C[p] = a),
-        null != a)
+        null == s && (s = u),
+        (N[h] = c),
+        (A[h] = s),
+        null != s)
     ) {
-        let e = f.ZP.getGameForPID(a);
+        let e = f.ZP.getGameForPID(s);
         null != e &&
-            (A[p] = {
+            (C[h] = {
                 name: e.name,
                 id: e.id,
                 exe: e.exeName,
                 distributor: e.distributor,
                 sku: e.sku,
                 gameMetadata: e.gameMetadata,
-            });
-    }
-    null != u ? (P[p] = u) : delete P[p];
+            }),
+            null == (t = w[h]) || t.analyticsContext.updateStreamApplication(C[h]);
+    } else null == (n = w[h]) || n.analyticsContext.updateStreamApplication(null);
+    null != p ? (P[h] = p) : delete P[h];
 }
 function U(e) {
     let { appContext: t, streamKey: n } = e;
@@ -124,7 +125,7 @@ function U(e) {
             n.setActionContext(t), r && n.trackEnd();
         }),
         (N[n] = null),
-        (C[n] = null),
+        (A[n] = null),
         delete P[n];
 }
 function G(e) {
@@ -133,10 +134,10 @@ function G(e) {
         s = (0, _.my)(t);
     if (null == o && null != n) {
         var l, c;
-        null == C[t] && (A[t] = null), null == A[t] && null == N[t] && (A[t] = (0, m.L2)(s, y.Z));
+        null == A[t] && (C[t] = null), null == C[t] && null == N[t] && (C[t] = (0, m.L2)(s, y.Z));
         let e = new p.A({
             streamRegion: i,
-            streamApplication: A[t],
+            streamApplication: C[t],
             streamSourceType: X(N[t]),
             actionContext: null == (l = T[t]) ? void 0 : l.appContext,
             numViewers: null != a ? a.length : 0,
