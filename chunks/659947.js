@@ -1,20 +1,21 @@
-n.d(t, { Z: () => R }), n(539854), n(388685);
+n.d(t, { Z: () => N }), n(539854), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(442837),
-    o = n(481060),
-    s = n(660216),
-    l = n(40908),
-    c = n(600164),
-    u = n(415795),
-    d = n(592125),
-    f = n(984933),
-    p = n(430824),
-    _ = n(914010),
-    m = n(727785),
-    h = n(388032),
-    g = n(704563);
-function E(e, t, n) {
+    a = n(793030),
+    o = n(442837),
+    s = n(481060),
+    l = n(660216),
+    c = n(40908),
+    u = n(600164),
+    d = n(415795),
+    f = n(592125),
+    p = n(984933),
+    _ = n(430824),
+    m = n(914010),
+    h = n(727785),
+    g = n(388032),
+    E = n(704563);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +28,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +39,12 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,95 +56,85 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function v() {}
-let S = [m.h8.VOICE_CHANNEL];
-function I(e) {
+function S() {}
+let I = [h.h8.VOICE_CHANNEL];
+function T(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function T(e) {
-    let { height: t } = e;
-    return (0, r.jsx)("div", { style: { height: t } });
-}
 function A() {
-    return (0, r.jsx)(T, { height: 16 }, "footer");
-}
-function C() {
-    return (0, r.jsx)(T, { height: 8 }, "header");
-}
-function N() {
     return (0, r.jsx)("div", {
-        className: g.voiceListSearchEmpty,
-        children: (0, r.jsx)(o.Text, {
+        className: E.voiceListSearchEmpty,
+        children: (0, r.jsx)(s.Text, {
             variant: "text-md/medium",
             color: "text-muted",
-            className: g.noVoiceChannelSelected,
-            children: h.intl.string(h.t.zHjCd1),
+            className: E.noVoiceChannelSelected,
+            children: g.intl.string(g.t.zHjCd1),
         }),
     });
 }
-function P(e) {
+function C(e) {
     let t = "" !== e,
-        n = (0, a.Wu)([f.ZP, d.Z, _.Z], () => {
-            let e = _.Z.getGuildId();
+        n = (0, o.Wu)([p.ZP, f.Z, m.Z], () => {
+            let e = m.Z.getGuildId();
             if (t || null == e) return [];
             let n = [];
-            for (let t of f.ZP.getVocalChannelIds(e)) {
-                let e = d.Z.getChannel(t);
+            for (let t of p.ZP.getVocalChannelIds(e)) {
+                let e = f.Z.getChannel(t);
                 null != e && n.push(e);
             }
             return n;
         }, [t]);
     return t ? null : n;
 }
-function R(e) {
+function N(e) {
     var t, n;
     let { keybind: a } = e,
-        l = i.useRef(a);
+        o = i.useRef(a);
     i.useEffect(() => {
-        l.current = a;
+        o.current = a;
     });
-    let [u, d] = i.useState(null != (n = null == (t = a.params) ? void 0 : t.channelId) ? n : void 0),
+    let [c, d] = i.useState(null != (n = null == (t = a.params) ? void 0 : t.channelId) ? n : void 0),
         f = i.useCallback(() => {
-            (0, o.ZDy)(
+            (0, s.ZDy)(
                 async () => (e) =>
                     (0, r.jsx)(
-                        x,
-                        O(b({}, e), {
+                        R,
+                        v(y({}, e), {
                             onSelect: (e) => {
-                                d(e), s.Z.setKeybind(O(b({}, l.current), { params: { channelId: e } }));
+                                d(e), l.Z.setKeybind(v(y({}, o.current), { params: { channelId: e } }));
                             },
                         }),
                     ),
             );
         }, []);
     return (0, r.jsx)("div", {
-        className: g.channelIdSection,
-        children: (0, r.jsx)(o.gNt, {
-            label: h.intl.string(h.t.q4JpM8),
-            children: (0, r.jsxs)(c.Z, {
-                align: c.Z.Align.STRETCH,
+        className: E.channelIdSection,
+        children: (0, r.jsx)(s.gNt, {
+            label: g.intl.string(g.t.q4JpM8),
+            children: (0, r.jsxs)(u.Z, {
+                align: u.Z.Align.STRETCH,
                 children: [
                     (0, r.jsx)("div", {
-                        className: g.selectedVoiceChannel,
-                        children: (0, r.jsx)(L, { channelId: u }),
+                        className: E.selectedVoiceChannel,
+                        children: (0, r.jsx)(D, { channelId: c }),
                     }),
-                    (0, r.jsx)(c.Z.Child, {
+                    (0, r.jsx)(u.Z.Child, {
                         grow: 0,
                         shrink: 0,
-                        children: (0, r.jsx)(o.Button, {
+                        children: (0, r.jsx)(s.Button, {
                             variant: "primary",
-                            text: h.intl.string(h.t.Dm8O4e),
+                            text: g.intl.string(g.t.Dm8O4e),
                             onClick: f,
                         }),
                     }),
@@ -152,21 +143,7 @@ function R(e) {
         }),
     });
 }
-function D() {
-    let e = i.useRef(!1),
-        t = i.useCallback(() => {
-            e.current = !0;
-        }, []),
-        n = i.useCallback(() => {
-            e.current = !1;
-        }, []);
-    return {
-        mouseFocusEnabled: e,
-        enableMouseFocus: t,
-        disableMouseFocus: n,
-    };
-}
-function w(e) {
+function P(e) {
     let [t, n] = i.useState(0),
         r = i.useRef(e);
     return (
@@ -180,58 +157,57 @@ function w(e) {
         }
     );
 }
-function x(e) {
-    let { transitionState: t, onClose: n, onSelect: a } = e,
-        s = i.useId(),
-        c = i.useRef(null),
-        { mouseFocusEnabled: f, enableMouseFocus: _, disableMouseFocus: E } = D(),
+function R(e) {
+    let { transitionState: t, onClose: n, onSelect: o } = e,
+        l = i.useId(),
+        u = i.useRef(null),
         {
-            query: b,
-            updateQuery: y,
-            queryResults: O,
-        } = (0, l.Z)({
+            query: p,
+            updateQuery: m,
+            queryResults: b,
+        } = (0, c.Z)({
             visible: !0,
-            autocompleterResultTypes: S,
-            autocompleterBeforeCreateSearchContext: I,
+            autocompleterResultTypes: I,
+            autocompleterBeforeCreateSearchContext: T,
         }),
-        v = P(b),
-        { focusedIndex: T, setFocusedIndex: R } = w(b);
+        y = C(p),
+        { focusedIndex: O, setFocusedIndex: v } = P(p);
     i.useEffect(() => {
-        let { current: e } = c;
+        let { current: e } = u;
         null == e ||
-            e.isItemVisible(0, T, !0) ||
+            e.isItemVisible(0, O, !0) ||
             e.scrollToIndex({
                 section: 0,
-                row: T,
+                row: O,
             });
-    }, [T]);
-    let x = null != v ? v.length : O.length;
-    function L(e) {
+    }, [O]);
+    let S = null != y ? y.length : b.length;
+    function N(e) {
         let { row: t } = e,
             i = (() => {
-                if (null != v) return v[t];
-                let e = O[t];
-                if ((null == e ? void 0 : e.type) === m.h8.VOICE_CHANNEL) return e.record;
+                if (null != y) return y[t];
+                let e = b[t];
+                if ((null == e ? void 0 : e.type) === h.h8.VOICE_CHANNEL) return e.record;
             })();
         if (null == i) return null;
-        let o = null != i.parent_id ? d.Z.getChannel(i.parent_id) : void 0,
-            s = p.Z.getGuild(i.guild_id);
+        let a = null != i.parent_id ? f.Z.getChannel(i.parent_id) : void 0,
+            s = _.Z.getGuild(i.guild_id);
         return (0, r.jsx)(
-            u.$W,
+            d.$W,
             {
                 id: i.id,
                 channel: i,
-                category: o,
-                focused: T === t,
-                onMouseEnter: () => f.current && R(t),
+                category: a,
+                focused: O === t,
+                onMouseEnter: () => v(t),
                 onClick: () => {
-                    a(i.id), n();
+                    o(i.id), n();
                 },
-                onFocus: () => R(t),
+                onFocus: () => v(t),
                 children:
                     null != s
                         ? (0, r.jsx)("div", {
-                              className: g.guildName,
+                              className: E.guildName,
                               children: s.name,
                           })
                         : null,
@@ -239,8 +215,7 @@ function x(e) {
             i.id,
         );
     }
-    function j(e) {
-        E();
+    function R(e) {
         let t = e.key.toLowerCase();
         if ("arrowdown" === t || "arrowup" === t || "enter" === t || "escape" === t)
             switch ((e.preventDefault(), t)) {
@@ -249,85 +224,81 @@ function x(e) {
                     break;
                 case "enter": {
                     let e = (() => {
-                        if (null != v) return v[T];
-                        let e = O[T];
-                        if ((null == e ? void 0 : e.type) === m.h8.VOICE_CHANNEL) return e.record;
+                        if (null != y) return y[O];
+                        let e = b[O];
+                        if ((null == e ? void 0 : e.type) === h.h8.VOICE_CHANNEL) return e.record;
                     })();
-                    null == e ? a(void 0) : a(e.id), n();
+                    null == e ? o(void 0) : o(e.id), n();
                     break;
                 }
                 case "arrowup":
-                    0 === T ? R(x - 1) : R(T - 1);
+                    0 === O ? v(S - 1) : v(O - 1);
                     break;
                 case "arrowdown":
-                    T >= x - 1 ? R(0) : R(T + 1);
+                    O >= S - 1 ? v(0) : v(O + 1);
             }
     }
-    let M = (() => {
-        if (null != v) {
-            var e;
-            return null == (e = v[T]) ? void 0 : e.id;
-        }
-        let t = O[T];
-        if ((null == t ? void 0 : t.type) === m.h8.VOICE_CHANNEL) return t.record.id;
-    })();
-    return (0, r.jsx)(o.IX, {
+    let D = (() => {
+            if (null != y) {
+                var e;
+                return null == (e = y[O]) ? void 0 : e.id;
+            }
+            let t = b[O];
+            if ((null == t ? void 0 : t.type) === h.h8.VOICE_CHANNEL) return t.record.id;
+        })(),
+        w =
+            S > 0 || "" === p
+                ? {
+                      innerId: l,
+                      innerRole: "listbox",
+                      innerAriaLabel: g.intl.string(g.t["+N3fW7"]),
+                      ref: u,
+                      sections: [S],
+                      renderRow: N,
+                      sectionHeight: 0,
+                      rowHeight: 34,
+                  }
+                : {
+                      sections: [1],
+                      renderRow: () => (0, r.jsx)(A, {}),
+                      sectionHeight: 0,
+                      rowHeight: 52,
+                  };
+    return (0, r.jsx)(a.Modal, {
         transitionState: t,
-        size: "lg",
         onClose: n,
-        children: (0, r.jsxs)("div", {
-            className: g.container,
-            onMouseMove: _,
-            children: [
-                (0, r.jsx)("div", {
-                    className: g.inputWrapper,
-                    children: (0, r.jsx)(o.oil, {
-                        value: b,
-                        onChange: y,
-                        onKeyDown: j,
-                        placeholder: h.intl.string(h.t.tG0r7g),
-                        role: "combobox",
-                        "aria-controls": s,
-                        "aria-expanded": x > 0,
-                        "aria-activedescendant": x > 0 && null != M ? M : void 0,
-                        "aria-autocomplete": "list",
-                        spellCheck: !1,
-                    }),
-                }),
-                0 === x && "" !== b && (0, r.jsx)(N, {}),
-                (x > 0 || "" === b) &&
-                    (0, r.jsx)(o.Tvr, {
-                        innerId: s,
-                        innerRole: "listbox",
-                        "aria-label": h.intl.string(h.t["+N3fW7"]),
-                        ref: c,
-                        sections: [x],
-                        renderRow: L,
-                        renderListHeader: C,
-                        renderFooter: A,
-                        sectionHeight: 0,
-                        rowHeight: 34,
-                        className: g.voiceChannelList,
-                        listHeaderHeight: 8,
-                        footerHeight: 16,
-                    }),
-            ],
+        title: g.intl.string(g.t.Dm8O4e),
+        subtitle: g.intl.string(g.t.q4JpM8),
+        actions: void 0,
+        input: (0, r.jsx)(s.oil, {
+            value: p,
+            onChange: m,
+            onKeyDown: R,
+            placeholder: g.intl.string(g.t.tG0r7g),
+            role: "combobox",
+            "aria-controls": l,
+            "aria-expanded": S > 0,
+            "aria-activedescendant": S > 0 && null != D ? D : void 0,
+            "aria-autocomplete": "list",
+            spellCheck: !1,
+            autoFocus: !0,
         }),
+        listProps: w,
     });
 }
-function L(e) {
+function D(e) {
     let { channelId: t } = e,
         {
             channel: n,
             category: i,
-            guild: s,
-        } = (0, a.cj)([d.Z, p.Z], () => {
-            let e = null != t ? d.Z.getChannel(t) : void 0;
+            guild: a,
+        } = (0, o.cj)([f.Z, _.Z], () => {
+            let e = null != t ? f.Z.getChannel(t) : void 0;
             return null != e
                 ? {
                       channel: e,
-                      category: null != e.parent_id ? d.Z.getChannel(e.parent_id) : void 0,
-                      guild: null != e.guild_id ? p.Z.getGuild(e.guild_id) : void 0,
+                      category: null != e.parent_id ? f.Z.getChannel(e.parent_id) : void 0,
+                      guild: null != e.guild_id ? _.Z.getGuild(e.guild_id) : void 0,
                   }
                 : {
                       channel: void 0,
@@ -336,25 +307,25 @@ function L(e) {
                   };
         });
     return null == n
-        ? (0, r.jsx)(o.Text, {
+        ? (0, r.jsx)(s.Text, {
               variant: "text-md/medium",
               color: "text-muted",
-              className: g.noVoiceChannelSelected,
-              children: h.intl.string(h.t["/fYIK7"]),
+              className: E.noVoiceChannelSelected,
+              children: g.intl.string(g.t["/fYIK7"]),
           })
-        : (0, r.jsx)(u.$W, {
+        : (0, r.jsx)(d.$W, {
               channel: n,
               id: n.id,
               category: i,
-              onClick: v,
-              onFocus: v,
-              onMouseEnter: v,
+              onClick: S,
+              onFocus: S,
+              onMouseEnter: S,
               focused: !1,
               children:
-                  null != s
+                  null != a
                       ? (0, r.jsx)("div", {
-                            className: g.guildName,
-                            children: s.name,
+                            className: E.guildName,
+                            children: a.name,
                         })
                       : null,
           });

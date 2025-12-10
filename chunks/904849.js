@@ -13,12 +13,14 @@ function r(e, t, n) {
 }
 n.d(t, { Z: () => i }), n(388685);
 class i {
-    register(e, t, n, r) {
-        this.map.set(e.key, {
-            node: e,
-            parentPanelKey: t,
-            parentCategoryKey: n,
-            parentAccordionKey: r,
+    register(e) {
+        let { node: t, parentPanelKey: n, parentTabKey: r, parentCategoryKey: i, parentAccordionKey: a } = e;
+        this.map.set(t.key, {
+            node: t,
+            parentPanelKey: n,
+            parentTabKey: r,
+            parentCategoryKey: i,
+            parentAccordionKey: a,
         });
     }
     entry(e) {

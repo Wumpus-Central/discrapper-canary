@@ -53,34 +53,37 @@ function s(e, t) {
     );
 }
 function l(e, t, n) {
-    var i, o, c, u, d, f;
-    let p = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    var i, o, c, u, d, f, p, _;
+    let m = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (!t.has(e.key)) return null;
     if (!(0, r.L)(e))
         return (
-            n.register(
-                e,
-                null == (u = p.panel) ? void 0 : u.key,
-                null == (d = p.category) ? void 0 : d.key,
-                null == (f = p.accordion) ? void 0 : f.key,
-            ),
+            n.register({
+                node: e,
+                parentPanelKey: null == (d = m.panel) ? void 0 : d.key,
+                parentTabKey: null == (f = m.tab) ? void 0 : f.key,
+                parentCategoryKey: null == (p = m.category) ? void 0 : p.key,
+                parentAccordionKey: null == (_ = m.accordion) ? void 0 : _.key,
+            }),
             e
         );
-    let _ = p;
-    e.type === r.J.SIDEBAR_ITEM && (_ = s(a({}, p), { panel: e.layout[0] })),
-        e.type === r.J.PANEL && (_ = s(a({}, p), { panel: e })),
-        e.type === r.J.CATEGORY && (_ = s(a({}, p), { category: e })),
-        e.type === r.J.ACCORDION && (_ = s(a({}, p), { accordion: e }));
-    let m = e.layout.map((e) => l(e, t, n, _)).filter((e) => null != e);
-    if (0 === m.length && !("render" in e || (e.type === r.J.SIDEBAR_ITEM && "onClick" in e))) return null;
-    let h = s(a({}, e), { layout: m });
+    let h = m;
+    e.type === r.J.SIDEBAR_ITEM && (h = s(a({}, m), { panel: e.layout[0] })),
+        e.type === r.J.PANEL && (h = s(a({}, m), { panel: e })),
+        e.type === r.J.CATEGORY && (h = s(a({}, m), { category: e })),
+        e.type === r.J.ACCORDION && (h = s(a({}, m), { accordion: e })),
+        e.type === r.J.TAB_ITEM && (h = s(a({}, m), { tab: e }));
+    let g = e.layout.map((e) => l(e, t, n, h)).filter((e) => null != e);
+    if (0 === g.length && !("render" in e || (e.type === r.J.SIDEBAR_ITEM && "onClick" in e))) return null;
+    let E = s(a({}, e), { layout: g });
     return (
-        n.register(
-            h,
-            null == (i = _.panel) ? void 0 : i.key,
-            null == (o = _.category) ? void 0 : o.key,
-            null == (c = _.accordion) ? void 0 : c.key,
-        ),
-        h
+        n.register({
+            node: E,
+            parentPanelKey: null == (i = h.panel) ? void 0 : i.key,
+            parentTabKey: null == (o = h.tab) ? void 0 : o.key,
+            parentCategoryKey: null == (c = h.category) ? void 0 : c.key,
+            parentAccordionKey: null == (u = h.accordion) ? void 0 : u.key,
+        }),
+        E
     );
 }

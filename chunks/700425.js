@@ -8,29 +8,29 @@ var r = n(473749),
     i = n(392711),
     a = n.n(i),
     o = n(996435);
-function s(e, t) {
-    let n = r.useRef(null),
-        i = r.useRef(new Set());
+function s(e, t, n) {
+    let i = r.useRef(null),
+        a = r.useRef(new Set());
     r.useEffect(() => {
-        let e = t.current;
+        let e = n.current;
         if (null == e) return;
-        let r = Array.from(e.querySelectorAll("[data-settings-category-key]")).filter(
+        let t = Array.from(e.querySelectorAll("[data-settings-category-key]")).filter(
                 (e) => null != e.getAttribute("data-settings-category-key"),
             ),
-            a = new Map(),
+            r = new Map(),
             s = [];
         return (
-            r.forEach((e) => {
+            t.forEach((e) => {
                 let t = e.getAttribute("data-settings-category-key");
-                null != t && (a.set(e, t), s.push(t));
+                null != t && (r.set(e, t), s.push(t));
             }),
-            (n.current = new IntersectionObserver(
+            (i.current = new IntersectionObserver(
                 (e) => {
                     if (
                         (e.forEach((e) => {
                             let { isIntersecting: t, target: n } = e,
-                                r = a.get(n);
-                            null != r && (t ? i.current.add(r) : i.current.delete(r));
+                                i = r.get(n);
+                            null != i && (t ? a.current.add(i) : a.current.delete(i));
                         }),
                         o.Z.getField("disableSidebarCategoryAutoSelect"))
                     )
@@ -38,7 +38,7 @@ function s(e, t) {
                     let t = [];
                     if (
                         (s.forEach((e) => {
-                            i.current.has(e) && t.push(e);
+                            a.current.has(e) && t.push(e);
                         }),
                         0 === t.length)
                     )
@@ -52,21 +52,21 @@ function s(e, t) {
                     threshold: 1,
                 },
             )),
-            r.forEach((e) => {
+            t.forEach((e) => {
                 var t;
-                return null == (t = n.current) ? void 0 : t.observe(e);
+                return null == (t = i.current) ? void 0 : t.observe(e);
             }),
             () => {
                 var e;
-                r.forEach((e) => {
+                t.forEach((e) => {
                     var t;
-                    return null == (t = n.current) ? void 0 : t.unobserve(e);
+                    return null == (t = i.current) ? void 0 : t.unobserve(e);
                 }),
-                    null == (e = n.current) || e.disconnect(),
-                    (n.current = null);
+                    null == (e = i.current) || e.disconnect(),
+                    (i.current = null);
             }
         );
-    }, [t, e.key, e.layout]);
+    }, [n, e, t]);
 }
 function l() {
     r.useEffect(() => {
