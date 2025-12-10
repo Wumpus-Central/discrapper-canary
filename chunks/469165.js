@@ -398,7 +398,7 @@ let w = {
                     });
             },
             O = () => {
-                let e = new Date(),
+                let e = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" })),
                     t = new Date(e.getFullYear(), e.getMonth() + 1, 0).getDate(),
                     n = (e.getDate() / t) * 100;
                 return m
