@@ -1,34 +1,33 @@
 n.d(t, { W: () => c }), n(953529);
 var i = n(54381),
     r = n(473749),
-    l = n(481060),
-    a = n(388032),
-    o = n(582220),
-    s = n(560580);
+    l = n(970683),
+    a = n(481060),
+    o = n(388032),
+    s = n(582220);
 function c(e) {
     let { header: t, description: n, onDismiss: c, buttons: u, dismissible: d = !0 } = e,
         p = r.useCallback(() => {
             null == c || c();
         }, [c]);
     return (0, i.jsxs)("div", {
-        className: o.safetyBanner,
+        className: s.safetyBanner,
         children: [
             (0, i.jsxs)("div", {
-                className: o.shieldAndHeading,
+                className: s.shieldAndHeading,
                 children: [
-                    (0, i.jsx)("img", {
-                        className: o.safetyShieldIcon,
-                        src: s,
+                    (0, i.jsx)(l.i$, {
                         alt: "",
+                        size: 32,
                     }),
                     (0, i.jsxs)("div", {
                         children: [
-                            (0, i.jsx)(l.Heading, {
+                            (0, i.jsx)(a.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "text-strong",
                                 children: t,
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-strong",
                                 children: n,
@@ -38,14 +37,14 @@ function c(e) {
                 ],
             }),
             (0, i.jsx)("div", {
-                className: o.buttons,
+                className: s.buttons,
                 children:
                     null == u
                         ? void 0
                         : u.map((e, t) => {
                               var n;
                               return (0, i.jsx)(
-                                  l.Button,
+                                  a.Button,
                                   {
                                       text: e.text,
                                       variant: null != (n = e.variant) ? n : "secondary",
@@ -57,15 +56,15 @@ function c(e) {
                           }),
             }),
             d
-                ? (0, i.jsx)(l.P3F, {
-                      className: o.closeButton,
+                ? (0, i.jsx)(a.P3F, {
+                      className: s.closeButton,
                       onClick: p,
                       role: "button",
-                      "aria-label": a.intl.string(a.t.WAI6xu),
-                      children: (0, i.jsx)(l.Dio, {
+                      "aria-label": o.intl.string(o.t.WAI6xu),
+                      children: (0, i.jsx)(a.Dio, {
                           size: "md",
                           color: "currentColor",
-                          className: o.closeButton,
+                          className: s.closeButton,
                       }),
                   })
                 : null,
