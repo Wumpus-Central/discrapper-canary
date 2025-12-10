@@ -48,7 +48,17 @@ let i = (0, r.le)({
             },
         },
     }),
-    o = (e) => i.getConfig({ location: e }).enabled,
+    o =
+        ((0, r.le)({
+            name: "2025-12-user-settings-redesign-3",
+            kind: "user",
+            defaultConfig: { enabled: !1 },
+            variations: {
+                0: { enabled: !1 },
+                1: { enabled: !0 },
+            },
+        }),
+        (e) => i.getConfig({ location: e }).enabled),
     s = (e) => i.useConfig({ location: e }).enabled,
     l = (e) => {
         let t = s(e),
