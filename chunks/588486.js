@@ -95,6 +95,7 @@ class E extends o.C {
             assignmentMode: 0,
             enableEditRawJsonUi: !1,
             winningVariationId: 0,
+            extraOutcomeContext: "",
             type: 0,
             isTemplate: !1,
             fieldNumbersToCopy: [],
@@ -190,6 +191,9 @@ class E extends o.C {
                 case 24:
                     a.winningVariationId = e.int32();
                     break;
+                case 34:
+                    a.extraOutcomeContext = e.string();
+                    break;
                 case 26:
                     a.type = e.int32();
                     break;
@@ -212,6 +216,9 @@ class E extends o.C {
                     break;
                 case 32:
                     a.isAutomatedChange = e.bool();
+                    break;
+                case 33:
+                    a.archiveAt = c.E.internalBinaryRead(e, e.uint32(), n, a.archiveAt);
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -257,6 +264,7 @@ class E extends o.C {
             0 !== e.assignmentMode && t.tag(25, r.TD.Varint).int32(e.assignmentMode),
             !1 !== e.enableEditRawJsonUi && t.tag(23, r.TD.Varint).bool(e.enableEditRawJsonUi),
             0 !== e.winningVariationId && t.tag(24, r.TD.Varint).int32(e.winningVariationId),
+            "" !== e.extraOutcomeContext && t.tag(34, r.TD.LengthDelimited).string(e.extraOutcomeContext),
             0 !== e.type && t.tag(26, r.TD.Varint).int32(e.type),
             !1 !== e.isTemplate && t.tag(27, r.TD.Varint).bool(e.isTemplate),
             e.fieldNumbersToCopy.length)
@@ -270,7 +278,8 @@ class E extends o.C {
         e.debugConfig && I.internalBinaryWrite(e.debugConfig, t.tag(30, r.TD.LengthDelimited).fork(), n).join(),
             e.expectedEndDate &&
                 c.E.internalBinaryWrite(e.expectedEndDate, t.tag(31, r.TD.LengthDelimited).fork(), n).join(),
-            !1 !== e.isAutomatedChange && t.tag(32, r.TD.Varint).bool(e.isAutomatedChange);
+            !1 !== e.isAutomatedChange && t.tag(32, r.TD.Varint).bool(e.isAutomatedChange),
+            e.archiveAt && c.E.internalBinaryWrite(e.archiveAt, t.tag(33, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -424,6 +433,12 @@ class E extends o.C {
                 T: 5,
             },
             {
+                no: 34,
+                name: "extra_outcome_context",
+                kind: "scalar",
+                T: 9,
+            },
+            {
                 no: 26,
                 name: "type",
                 kind: "enum",
@@ -466,6 +481,12 @@ class E extends o.C {
                 name: "is_automated_change",
                 kind: "scalar",
                 T: 8,
+            },
+            {
+                no: 33,
+                name: "archive_at",
+                kind: "message",
+                T: () => c.E,
             },
         ]);
     }
