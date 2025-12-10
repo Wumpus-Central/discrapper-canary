@@ -213,56 +213,62 @@ let M = i.memo(function (e) {
                           e_ || eb(!1);
                       },
                   })
-                : (0, r.jsx)(
-                      f.LYs,
-                      R(
-                          A(
-                              {
-                                  ariaLabel: w.intl.formatToPlainString(w.t["/uzRss"], {
-                                      guildName: V.name,
-                                      mentions: q,
-                                  }),
-                                  name: V.name,
-                                  onClick: ev,
-                                  onMouseEnter: function () {
-                                      $ || ep(!0);
+                : (0, r.jsx)(f.aRk, {
+                      selected: W,
+                      children: (0, r.jsx)("div", {
+                          ref: J
+                              ? (e) => {
+                                    ed(e);
+                                }
+                              : void 0,
+                          "data-dnd-name": V.name,
+                          "data-drop-hovering": e_,
+                          children: (0, r.jsx)(
+                              f.LYs,
+                              R(
+                                  A(
+                                      {
+                                          ariaLabel: w.intl.formatToPlainString(w.t["/uzRss"], {
+                                              guildName: V.name,
+                                              mentions: q,
+                                          }),
+                                          name: V.name,
+                                          onClick: ev,
+                                          onMouseEnter: function () {
+                                              $ || ep(!0);
+                                          },
+                                          onMouseLeave: function () {
+                                              $ || ep(!1);
+                                          },
+                                          onMouseDown: ej,
+                                          onContextMenu: eC,
+                                          onKeyDown: eE,
+                                          icon: (0, y.EB)(V, 2 * eP, eg && H, !0),
+                                          selected: W || eg,
+                                      },
+                                      ef,
+                                  ),
+                                  {
+                                      "aria-setsize": er,
+                                      "aria-posinset": ei,
+                                      "aria-selected": W,
                                   },
-                                  onMouseLeave: function () {
-                                      $ || ep(!1);
-                                  },
-                                  onMouseDown: ej,
-                                  onContextMenu: eC,
-                                  onKeyDown: eE,
-                                  icon: (0, y.EB)(V, 2 * eP, eg && H, !0),
-                                  selected: W || eg,
-                              },
-                              ef,
+                              ),
                           ),
-                          {
-                              "aria-setsize": er,
-                              "aria-posinset": ei,
-                              "aria-selected": W,
-                          },
-                      ),
-                  ),
+                      }),
+                  }),
         eZ = eu
             ? (0, r.jsx)(E.OG, { children: (0, r.jsx)(I.Z, {}) })
             : (0, r.jsx)(s.animated.div, {
-                  ref: J
-                      ? (e) => {
-                            ed(e);
-                        }
-                      : void 0,
-                  "data-dnd-name": V.name,
                   style: { scale: null == en ? 1 : en },
-                  "data-drop-hovering": e_,
                   className: o()(T.blobContainer, {
                       [T.sorting]: $,
                       [T.wobble]: e_,
                       [T.selected]: e_ || W,
                   }),
+                  "data-drop-hovering": e_,
                   children: (0, r.jsx)(f.aRk, {
-                      selected: !0,
+                      selected: W,
                       upperBadge: ea,
                       lowerBadge: es,
                       lowerBadgeSize: ec,
