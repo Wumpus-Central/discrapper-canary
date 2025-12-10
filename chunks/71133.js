@@ -1,16 +1,15 @@
 n.d(t, {
-    W: () => o,
-    o: () => s,
+    W: () => a,
+    o: () => o,
 });
 var r = n(818083),
-    i = n(973285),
-    a = n(987338);
-let o = (0, r.B)({
+    i = n(987338);
+let a = (0, r.B)({
     kind: "guild",
     id: "2025-10_voice_invite_suggestions",
     label: "Voice Invite Suggestions",
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: a.$P.VOICE_CALL,
+    commonTriggerPoint: i.$P.VOICE_CALL,
     treatments: [
         {
             id: 1,
@@ -19,20 +18,13 @@ let o = (0, r.B)({
         },
     ],
 });
-function s(e) {
-    let { autoTrackExposure: t, location: n, guildId: r } = e,
-        { enabled: a } = i.W.useExperiment({
-            guildId: r,
-            location: n,
-        });
-    return o.useExperiment(
+function o(e) {
+    let { autoTrackExposure: t, location: n, guildId: r } = e;
+    return a.useExperiment(
         {
             guildId: r,
             location: n,
         },
-        {
-            autoTrackExposure: t,
-            disable: !a,
-        },
+        { autoTrackExposure: t },
     );
 }

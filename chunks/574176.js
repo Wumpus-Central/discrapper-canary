@@ -1,12 +1,11 @@
 n.d(t, {
-    bN: () => s,
-    gx: () => l,
-    n5: () => o,
+    bN: () => o,
+    gx: () => s,
+    n5: () => a,
 });
-var r = n(973285),
-    i = n(818083),
-    a = n(987338);
-let o = (0, i.B)({
+var r = n(818083),
+    i = n(987338);
+let a = (0, r.B)({
     kind: "guild",
     id: "2025-07_hang_status",
     label: "Hang Statuses",
@@ -17,7 +16,7 @@ let o = (0, i.B)({
         allowPermanentClear: !1,
         defaultStatusVariant: "twemoji",
     },
-    commonTriggerPoint: a.$P.VOICE_CALL,
+    commonTriggerPoint: i.$P.VOICE_CALL,
     treatments: [
         {
             id: 1,
@@ -65,37 +64,23 @@ let o = (0, i.B)({
         },
     ],
 });
-function s(e) {
-    let { guildId: t, location: n } = e,
-        { enabled: i } = r.W.useExperiment({
-            guildId: t,
-            location: n,
-        });
-    return o.useExperiment(
+function o(e) {
+    let { guildId: t, location: n } = e;
+    return a.useExperiment(
         {
             guildId: t,
             location: n,
         },
-        {
-            disable: !i,
-            autoTrackExposure: !0,
-        },
+        { autoTrackExposure: !0 },
     );
 }
-function l(e) {
-    let { guildId: t, location: n } = e,
-        { enabled: i } = r.W.getCurrentConfig({
-            guildId: t,
-            location: n,
-        });
-    return o.getCurrentConfig(
+function s(e) {
+    let { guildId: t, location: n } = e;
+    return a.getCurrentConfig(
         {
             guildId: t,
             location: n,
         },
-        {
-            disable: !i,
-            autoTrackExposure: !0,
-        },
+        { autoTrackExposure: !0 },
     );
 }
