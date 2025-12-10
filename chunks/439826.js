@@ -1,40 +1,58 @@
-n.d(t, { Z: () => A }), n(784620), n(973216);
+n.d(t, { Z: () => M }), n(784620), n(973216);
 var a = n(54381),
     r = n(473749),
     i = n(120356),
     l = n.n(i),
     s = n(205120),
-    o = n(28664),
-    c = n(780384),
-    d = n(481060),
-    u = n(393238),
-    m = n(410030),
-    p = n(297700),
-    h = n(22095),
-    x = n(617136),
-    f = n(49436),
-    g = n(111131),
-    b = n(968843),
-    v = n(862657),
-    j = n(254579),
-    _ = n(623249),
-    y = n(477005),
-    C = n(698716),
-    S = n(685613),
-    E = n(110560),
-    O = n(251360),
-    T = n(19148),
-    N = n(324805),
-    P = n(642145),
-    w = n(981631),
-    I = n(388032),
-    k = n(518388);
-function R(e) {
+    o = n(399606),
+    c = n(28664),
+    d = n(780384),
+    u = n(481060),
+    m = n(393238),
+    p = n(410030),
+    h = n(297700),
+    x = n(22095),
+    f = n(617136),
+    g = n(616022),
+    b = n(49436),
+    v = n(111131),
+    j = n(968843),
+    _ = n(862657),
+    y = n(254579),
+    C = n(283689),
+    S = n(623249),
+    E = n(477005),
+    O = n(698716),
+    T = n(685613),
+    N = n(110560),
+    P = n(251360),
+    w = n(19148),
+    I = n(324805),
+    k = n(642145),
+    R = n(981631),
+    A = n(388032),
+    D = n(518388);
+function Z(e) {
+    let { children: t, variant: n = "default" } = e;
+    return (0, a.jsx)("div", {
+        className: l()(D.pill, {
+            [D.pillBrand]: "brand" === n,
+            "theme-light": "default" === n,
+        }),
+        children: (0, a.jsx)(u.Text, {
+            variant: "eyebrow",
+            color: "brand" === n ? "always-white" : "text-default",
+            className: D.eyebrowText,
+            children: t,
+        }),
+    });
+}
+function L(e) {
     var t;
     let { quest: n, errorHints: i, warningHints: l, isDarkTheme: o, sourceQuestContent: c } = e,
-        { ref: m, height: p = 0 } = (0, u.ZP)([i]),
+        { ref: d, height: p = 0 } = (0, m.ZP)([i]),
         h = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-        x = (0, b.z)(n),
+        x = (0, j.z)(n),
         { type: f, hints: g } = r.useMemo(
             () =>
                 h || x
@@ -58,29 +76,29 @@ function R(e) {
                           },
             [i, h, x, l],
         ),
-        v = 2 !== f,
-        j = (0, d.q_F)({
-            opacity: +!!v,
-            height: v ? p : 0,
-            config: P.Y,
+        b = 2 !== f,
+        v = (0, u.q_F)({
+            opacity: +!!b,
+            height: b ? p : 0,
+            config: k.Y,
         }),
-        y = 0 === f ? d.Mgn : d.d3s,
-        C = d.TVs.unsafe_rawColors.RED_345.css,
-        S = 0 === f ? C : o ? d.TVs.colors.TEXT_DEFAULT : d.TVs.colors.WHITE;
+        _ = 0 === f ? u.Mgn : u.d3s,
+        y = u.TVs.unsafe_rawColors.RED_345.css,
+        C = 0 === f ? y : o ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
     return (0, a.jsx)(s.animated.div, {
-        style: j,
+        style: v,
         children: (0, a.jsxs)("div", {
-            ref: m,
-            className: k.hints,
+            ref: d,
+            className: D.hints,
             children: [
                 (0, a.jsxs)("div", {
-                    className: k.hintsContainer,
+                    className: D.hintsContainer,
                     children: [
-                        (0, a.jsx)(y, {
+                        (0, a.jsx)(_, {
                             size: "xs",
-                            color: S,
+                            color: C,
                         }),
-                        (0, a.jsx)(d.Text, {
+                        (0, a.jsx)(u.Text, {
                             variant: "text-xs/medium",
                             color: o ? "text-muted" : "always-white",
                             children: g.at(0),
@@ -88,10 +106,10 @@ function R(e) {
                     ],
                 }),
                 0 === f &&
-                    (0, a.jsx)(d.Avr, {
-                        text: I.intl.string(I.t["yKJi+/"]),
+                    (0, a.jsx)(u.Avr, {
+                        text: A.intl.string(A.t["yKJi+/"]),
                         onClick: () =>
-                            (0, _.y)({
+                            (0, S.y)({
                                 quest: n,
                                 errorHints: i,
                                 sourceQuestContent: c,
@@ -103,138 +121,147 @@ function R(e) {
         }),
     });
 }
-function A(e) {
-    var t, n, i, s, u;
+function M(e) {
+    var t, n, i, s, m;
     let {
-            quest: _,
-            isHovering: P,
-            errorHints: A,
-            warningHints: D,
-            isVisibleInViewport: Z,
-            onCtxMenuClose: L,
-            onCtxMenuOpen: M,
-            onCtxMenuSelect: U,
-            sourceQuestContent: B,
+            quest: S,
+            isHovering: k,
+            errorHints: M,
+            warningHints: U,
+            isVisibleInViewport: B,
+            onCtxMenuClose: F,
+            onCtxMenuOpen: G,
+            onCtxMenuSelect: V,
+            sourceQuestContent: H,
         } = e,
-        F = (0, j.PB)(_),
-        G = (0, m.ZP)(),
-        V = ((0, c.wj)(G) ? w.BRd.DARK : w.BRd.LIGHT) === w.BRd.DARK,
-        H = (0, b.tP)(_),
-        W = (null == (t = _.userStatus) ? void 0 : t.claimedAt) != null,
-        z = (0, b.B6)(_.config.expiresAt, {
+        W = (0, y.PB)(S),
+        z = (0, p.ZP)(),
+        q = ((0, d.wj)(z) ? R.BRd.DARK : R.BRd.LIGHT) === R.BRd.DARK,
+        K = (0, j.tP)(S),
+        Q = (null == (t = S.userStatus) ? void 0 : t.claimedAt) != null,
+        Y = (0, j.B6)(S.config.expiresAt, {
             month: "numeric",
             day: "numeric",
         }),
-        K = (null == (n = _.userStatus) ? void 0 : n.enrolledAt) != null,
-        q = (null == (i = _.userStatus) ? void 0 : i.completedAt) != null,
-        { onAssetLoadComplete: Q } = r.useContext(O.k),
-        Y = V ? "text-muted" : "always-white",
-        X = r.useCallback(async () => {
-            F &&
-                ((0, v.zi)(_) || K
-                    ? (0, E.openVideoQuestModal)({
-                          quest: _,
-                          questContent: f.jn.QUEST_HOME_DESKTOP,
-                          sourceQuestContent: B,
-                          sourceQuestContentCTA: x.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
+        X = (null == (n = S.userStatus) ? void 0 : n.enrolledAt) != null,
+        J = (null == (i = S.userStatus) ? void 0 : i.completedAt) != null,
+        { onAssetLoadComplete: $ } = r.useContext(P.k),
+        ee = q ? "text-muted" : "always-white",
+        et = r.useCallback(async () => {
+            W &&
+                ((0, _.zi)(S) || X
+                    ? (0, N.openVideoQuestModal)({
+                          quest: S,
+                          questContent: b.jn.QUEST_HOME_DESKTOP,
+                          sourceQuestContent: H,
+                          sourceQuestContentCTA: f.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
                       })
-                    : (0, g.R)(N.dr.QUEST_HOME_DESKTOP)
-                      ? await (0, E.enrollAndStartVideoQuestWithErrorHandling)(_, {
-                            questContent: f.jn.QUEST_HOME_DESKTOP,
-                            questContentCTA: x.jZ.ACCEPT_QUEST,
-                            sourceQuestContent: B,
-                            sourceQuestContentCTA: x.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
+                    : (0, v.R)(I.dr.QUEST_HOME_DESKTOP)
+                      ? await (0, N.enrollAndStartVideoQuestWithErrorHandling)(S, {
+                            questContent: b.jn.QUEST_HOME_DESKTOP,
+                            questContentCTA: f.jZ.ACCEPT_QUEST,
+                            sourceQuestContent: H,
+                            sourceQuestContentCTA: f.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
                         })
-                      : ((0, h.AH)(_.id, {
-                            questContent: f.jn.QUEST_HOME_DESKTOP,
-                            questContentCTA: x.jZ.ACCEPT_QUEST,
-                            sourceQuestContent: B,
+                      : ((0, x.AH)(S.id, {
+                            questContent: b.jn.QUEST_HOME_DESKTOP,
+                            questContentCTA: f.jZ.ACCEPT_QUEST,
+                            sourceQuestContent: H,
                         }),
-                        (0, E.openVideoQuestModal)({
-                            quest: _,
-                            questContent: f.jn.QUEST_HOME_DESKTOP,
-                            sourceQuestContent: B,
-                            sourceQuestContentCTA: x.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
+                        (0, N.openVideoQuestModal)({
+                            quest: S,
+                            questContent: b.jn.QUEST_HOME_DESKTOP,
+                            sourceQuestContent: H,
+                            sourceQuestContentCTA: f.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
                         })));
-        }, [F, _, K, B]);
+        }, [W, S, X, H]),
+        en = (0, o.e7)([g.Z], () => g.Z.getQuestHomeTakeoverConfig()),
+        ea = r.useMemo(() => null != en && (0, C.P9)(en, S.id), [en, S.id]);
     return (0, a.jsxs)("div", {
-        className: k.container,
+        className: D.container,
         children: [
             (0, a.jsx)("div", {
-                className: k.heroAssetWrapper,
-                children: (0, a.jsx)(y.Z, {
-                    quest: _,
-                    isInteracting: P,
-                    hideAssets: !Z,
+                className: D.heroAssetWrapper,
+                children: (0, a.jsx)(E.Z, {
+                    quest: S,
+                    isInteracting: k,
+                    hideAssets: !B,
                     imageSize: {
                         width: 1320,
                         height: 370,
                     },
-                    containerClassName: k.heroAssetCont,
+                    containerClassName: D.heroAssetCont,
                 }),
             }),
             (0, a.jsx)("div", {
-                className: l()(k.overlay, {
-                    [k.lightThemeGradient]: G === w.BRd.LIGHT,
-                    [k.darkThemeGradient]: G === w.BRd.DARK,
-                    [k.darkerThemeGradient]: G === w.BRd.DARKER,
-                    [k.midnightThemeGradient]: G === w.BRd.MIDNIGHT,
+                className: l()(D.overlay, {
+                    [D.lightThemeGradient]: z === R.BRd.LIGHT,
+                    [D.darkThemeGradient]: z === R.BRd.DARK,
+                    [D.darkerThemeGradient]: z === R.BRd.DARKER,
+                    [D.midnightThemeGradient]: z === R.BRd.MIDNIGHT,
                 }),
             }),
             (0, a.jsxs)("div", {
-                className: k.positionContentOverBackground,
+                className: D.positionContentOverBackground,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: k.contents,
+                        className: D.contents,
                         children: [
                             (0, a.jsxs)("div", {
-                                className: k.topRow,
+                                className: D.topRow,
                                 children: [
-                                    _.preview &&
-                                        (0, a.jsx)("div", {
-                                            className: k.pill,
-                                            children: (0, a.jsx)(d.Text, {
-                                                variant: "eyebrow",
-                                                color: "always-white",
-                                                className: k.eyebrowText,
-                                                children: I.intl.string(I.t.SKNnqq),
-                                            }),
+                                    (ea || S.preview) &&
+                                        (0, a.jsxs)(u.Kqy, {
+                                            className: D.pills,
+                                            direction: "horizontal",
+                                            fullWidth: !1,
+                                            gap: 8,
+                                            children: [
+                                                ea &&
+                                                    !(0, _.zi)(S) &&
+                                                    (0, a.jsx)(Z, { children: A.intl.string(A.t.Jt6u7B) }),
+                                                S.preview &&
+                                                    (0, a.jsx)(Z, {
+                                                        variant: "brand",
+                                                        children: A.intl.string(A.t.SKNnqq),
+                                                    }),
+                                            ],
                                         }),
-                                    F &&
-                                        (0, a.jsx)(o.u, {
-                                            text: q
-                                                ? I.intl.string(I.t.YsCuyF)
-                                                : K
-                                                  ? I.intl.string(I.t["74KqrR"])
-                                                  : (0, v.zi)(_)
-                                                    ? I.intl.string(I.t.I6JG46)
-                                                    : I.intl.string(I.t.umdNin),
+                                    W &&
+                                        (0, a.jsx)(c.u, {
+                                            text: J
+                                                ? A.intl.string(A.t.YsCuyF)
+                                                : X
+                                                  ? A.intl.string(A.t["74KqrR"])
+                                                  : (0, _.zi)(S)
+                                                    ? A.intl.string(A.t.I6JG46)
+                                                    : A.intl.string(A.t.umdNin),
                                             asContainer: !0,
                                             tag: "span",
-                                            children: (0, a.jsx)(d.P3F, {
-                                                className: k.utilButtonWrapper,
-                                                "aria-label": I.intl.string(I.t.RscU7I),
-                                                onClick: X,
-                                                children: (0, a.jsx)(d.o1U, {
+                                            children: (0, a.jsx)(u.P3F, {
+                                                className: D.utilButtonWrapper,
+                                                "aria-label": A.intl.string(A.t.RscU7I),
+                                                onClick: et,
+                                                children: (0, a.jsx)(u.o1U, {
                                                     color: "currentColor",
-                                                    className: k.utilButtonIcon,
+                                                    className: D.utilButtonIcon,
                                                 }),
                                             }),
                                         }),
-                                    (0, a.jsx)(C.i, {
-                                        onOpen: M,
-                                        onClose: L,
-                                        onSelect: U,
-                                        questContent: f.jn.QUEST_HOME_DESKTOP,
-                                        quest: _,
+                                    (0, a.jsx)(O.i, {
+                                        onOpen: G,
+                                        onClose: F,
+                                        onSelect: V,
+                                        questContent: b.jn.QUEST_HOME_DESKTOP,
+                                        quest: S,
                                         hideLearnMore: !0,
                                         shouldShowDisclosure: !0,
                                         showShareLink: !0,
-                                        sourceQuestContent: B,
+                                        sourceQuestContent: H,
                                         children: (e) => {
                                             var t, n;
                                             return (0, a.jsx)(
-                                                d.P3F,
+                                                u.P3F,
                                                 ((t = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -263,12 +290,12 @@ function A(e) {
                                                 })({}, e)),
                                                 (n = n =
                                                     {
-                                                        className: k.utilButtonWrapper,
-                                                        "aria-label": I.intl.string(I.t.DEoVWZ),
-                                                        children: (0, a.jsx)(d.xhG, {
+                                                        className: D.utilButtonWrapper,
+                                                        "aria-label": A.intl.string(A.t.DEoVWZ),
+                                                        children: (0, a.jsx)(u.xhG, {
                                                             size: "md",
                                                             color: "currentColor",
-                                                            className: k.utilButtonIcon,
+                                                            className: D.utilButtonIcon,
                                                         }),
                                                     }),
                                                 Object.getOwnPropertyDescriptors
@@ -293,71 +320,71 @@ function A(e) {
                                     }),
                                 ],
                             }),
-                            (0, a.jsx)(T.E, {
-                                showPlaceholder: !Z,
+                            (0, a.jsx)(w.E, {
+                                showPlaceholder: !B,
                                 width: 100,
                                 height: 30,
-                                className: k.partnerBranding,
-                                children: (0, a.jsx)(S.ZP, {
-                                    className: k.partnerBranding,
-                                    logotypeClassName: k.partnerLogotypes,
-                                    quest: _,
-                                    separatorSpacing: S.US.MEDIUM,
+                                className: D.partnerBranding,
+                                children: (0, a.jsx)(T.ZP, {
+                                    className: D.partnerBranding,
+                                    logotypeClassName: D.partnerLogotypes,
+                                    quest: S,
+                                    separatorSpacing: T.US.MEDIUM,
                                     withGameTile: !1,
-                                    onLoadComplete: Q,
+                                    onLoadComplete: $,
                                 }),
                             }),
                             (0, a.jsxs)("div", {
-                                className: k.bottomRow,
+                                className: D.bottomRow,
                                 children: [
                                     (0, a.jsxs)("span", {
-                                        className: k.promotedByRow,
+                                        className: D.promotedByRow,
                                         children: [
-                                            (0, a.jsx)(d.Text, {
+                                            (0, a.jsx)(u.Text, {
                                                 variant: "text-sm/medium",
-                                                color: Y,
-                                                children: I.intl.string(I.t.VAbKhK),
+                                                color: ee,
+                                                children: A.intl.string(A.t.VAbKhK),
                                             }),
-                                            (0, a.jsx)(p.Z, {
-                                                className: k.verifiedIcon,
+                                            (0, a.jsx)(h.Z, {
+                                                className: D.verifiedIcon,
                                                 size: 16,
-                                                color: d.TVs.unsafe_rawColors.GREEN_360.css,
+                                                color: u.TVs.unsafe_rawColors.GREEN_360.css,
                                                 allowFullSizedIcon: !0,
-                                                children: (0, a.jsx)(d.kSu, {
-                                                    color: d.TVs.unsafe_rawColors.WHITE_500.css,
+                                                children: (0, a.jsx)(u.kSu, {
+                                                    color: u.TVs.unsafe_rawColors.WHITE_500.css,
                                                     size: "custom",
                                                     width: 13,
                                                     height: 13,
                                                 }),
                                             }),
-                                            (0, a.jsx)(d.Text, {
+                                            (0, a.jsx)(u.Text, {
                                                 variant: "text-sm/medium",
                                                 color: "always-white",
                                                 children:
                                                     null !=
-                                                    (u = null == (s = _.config.cosponsorMetadata) ? void 0 : s.name)
-                                                        ? u
-                                                        : _.config.messages.gamePublisher,
+                                                    (m = null == (s = S.config.cosponsorMetadata) ? void 0 : s.name)
+                                                        ? m
+                                                        : S.config.messages.gamePublisher,
                                             }),
                                         ],
                                     }),
-                                    H || W
+                                    K || Q
                                         ? null
-                                        : (0, a.jsx)(d.Text, {
+                                        : (0, a.jsx)(u.Text, {
                                               variant: "text-sm/medium",
-                                              color: Y,
-                                              children: I.intl.format(I.t["7D8r4F"], { expiryDate: z }),
+                                              color: ee,
+                                              children: A.intl.format(A.t["7D8r4F"], { expiryDate: Y }),
                                           }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, a.jsx)(R, {
-                        quest: _,
-                        errorHints: A,
-                        warningHints: D,
-                        isDarkTheme: V,
-                        sourceQuestContent: B,
+                    (0, a.jsx)(L, {
+                        quest: S,
+                        errorHints: M,
+                        warningHints: U,
+                        isDarkTheme: q,
+                        sourceQuestContent: H,
                     }),
                 ],
             }),

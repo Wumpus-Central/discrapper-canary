@@ -2,6 +2,7 @@ n.d(t, {
     BI: () => y,
     KM: () => _,
     NI: () => g,
+    P9: () => O,
     Pb: () => p,
     Rc: () => b,
     Rt: () => h,
@@ -52,4 +53,7 @@ function b(e, t) {
 }
 function y(e) {
     return (0, d.q8)({ config: e }) ? i.W.VIDEO : i.W.GAMEPLAY;
+}
+function O(e, t) {
+    return e.ctaQuests.some((e) => e.questId === t);
 }
