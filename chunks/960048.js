@@ -145,4 +145,6 @@ let f = {
     crash() {
         throw Error("crash");
     },
+    markCrashHandled(e) {},
+    getLastCrashReport: () => Promise.resolve(null),
 };
