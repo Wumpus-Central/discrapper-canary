@@ -20,7 +20,6 @@ e.exports = {
     expandedProgressBarSelectFriendsCTAInner: "expandedProgressBarSelectFriendsCTAInner_a61c56",
     expandedProgressBarSelectFriendsIcon: "expandedProgressBarSelectFriendsIcon_a61c56",
     expandedProgressBarHeader: "expandedProgressBarHeader_a61c56",
-    unsentTooltipContent: "unsentTooltipContent_a61c56",
     referralProgressBarIcon: "referralProgressBarIcon_a61c56",
     referralProgressBarIconSettings: "referralProgressBarIconSettings_a61c56",
     userAvatarProgressBarUnitNum: "userAvatarProgressBarUnitNum_a61c56",
