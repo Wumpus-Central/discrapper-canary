@@ -1,4 +1,4 @@
-n.d(t, { J: () => I }), n(388685), n(539854), n(415506);
+n.d(t, { J: () => T }), n(388685), n(539854), n(415506);
 var r = n(54381),
     i = n(772848),
     a = n(481060),
@@ -7,14 +7,15 @@ var r = n(54381),
     l = n(961830),
     c = n(152521),
     u = n(733579),
-    d = n(108135),
-    f = n(899560),
-    p = n(147332),
-    _ = n(333133),
-    m = n(100788),
-    h = n(981631),
-    g = n(388032);
-function E(e, t, n) {
+    d = n(508869),
+    f = n(108135),
+    p = n(899560),
+    _ = n(147332),
+    m = n(333133),
+    h = n(100788),
+    g = n(981631),
+    E = n(388032);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +28,7 @@ function E(e, t, n) {
         e
     );
 }
-function b(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +39,12 @@ function b(e) {
                 }),
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,19 +56,19 @@ function y(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let v = (e, t) => null != t && t.implemented && t.flowType === e,
-    S = {
+let S = (e, t) => null != t && t.implemented && t.flowType === e,
+    I = {
         [u.G.ORB_CHECKOUT]: {
             allowGiftCustomization: !1,
             disablePaymentAuthSteps: !0,
@@ -75,7 +76,7 @@ let v = (e, t) => null != t && t.implemented && t.flowType === e,
         [u.G.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0 },
         [u.G.PREMIUM_CHECKOUT]: { allowGiftCustomization: !1 },
     };
-class I {
+class T {
     getUnifiedStepDefinition(e) {
         return this.tenantCheckoutFlowConfig.UnifiedCheckoutStepDefinitions[e];
     }
@@ -96,14 +97,14 @@ class I {
               ? {
                     key: null,
                     renderStep: (e) =>
-                        (0, r.jsx)(_.I, {
+                        (0, r.jsx)(m.I, {
                             paymentModalStepProps: e,
                             defaultStep: o.h8.REVIEW,
                         }),
                 }
               : {
                     key: null,
-                    renderStep: (e) => (0, r.jsx)(s.I, b({}, e)),
+                    renderStep: (e) => (0, r.jsx)(s.I, y({}, e)),
                 };
     }
     getAddPaymentStepConfig(e) {
@@ -113,7 +114,7 @@ class I {
             return {
                 key: o.h8.ADD_PAYMENT_STEPS,
                 renderStep: (e) =>
-                    (0, r.jsx)(f.a, {
+                    (0, r.jsx)(p.a, {
                         paymentModalStepProps: e,
                         returnStep: o.h8.REVIEW,
                         returnStepIfNoPaymentSources: t && n ? o.h8.GIFT_CUSTOMIZATION : void 0,
@@ -128,29 +129,29 @@ class I {
             ? {
                   key: o.h8.GIFT_CUSTOMIZATION,
                   renderStep: (e) =>
-                      (0, r.jsx)(p.P, {
+                      (0, r.jsx)(_.P, {
                           paymentModalStepProps: e,
                           unifiedStepDefinition: this.getUnifiedStepDefinition(o.h8.GIFT_CUSTOMIZATION),
                       }),
                   options: {
                       isLargeModal: !0,
-                      useBreadcrumbLabel: () => g.intl.string(g.t["W685+b"]),
+                      useBreadcrumbLabel: () => E.intl.string(E.t["W685+b"]),
                   },
               }
             : void 0;
     }
     getReviewStepConfig() {
-        let { LEGACY_PAYMENT_STEPS: e = [] } = this.checkoutFlowConfiguration.TENANT_CHECKOUT_FLOW_CONFIG;
-        return e.includes(o.h8.REVIEW)
+        let e = this.getUnifiedStepDefinition(o.h8.REVIEW);
+        return (0, d._)(e)
             ? l.wo
             : {
                   key: o.h8.REVIEW,
-                  renderStep: (e) =>
-                      (0, r.jsx)(m.z, {
-                          paymentModalStepProps: e,
-                          unifiedStepDefinition: this.getUnifiedStepDefinition(o.h8.REVIEW),
+                  renderStep: (t) =>
+                      (0, r.jsx)(h.z, {
+                          paymentModalStepProps: t,
+                          unifiedStepDefinition: e,
                       }),
-                  options: { useBreadcrumbLabel: () => g.intl.string(g.t.QBnNHq) },
+                  options: { useBreadcrumbLabel: () => E.intl.string(E.t.QBnNHq) },
               };
     }
     createDefinedStepConfigsArray(e) {
@@ -176,10 +177,10 @@ class I {
         );
     }
     getApplicationId(e) {
-        return this.checkoutFlow === u.G.ORB_CHECKOUT && null != e
+        return this.checkoutFlow === u.G.ORB_CHECKOUT
             ? (0, c.Nb)(e)
             : this.checkoutFlow === u.G.COLLECTIBLES_CHECKOUT
-              ? h.XAJ
+              ? g.XAJ
               : void 0;
     }
     openCheckoutModal(e) {
@@ -199,7 +200,7 @@ class I {
             { modalKey: h } = t,
             g = this.generateRenderHeader(),
             E = null != f ? f : this.getApplicationId(u),
-            y = !1;
+            b = !1;
         return (0, a.ZDy)(
             async () => {
                 let { WrappedUnifiedPaymentModal: e } = await n.e("9172").then(n.bind(n, 325906));
@@ -210,7 +211,7 @@ class I {
                         tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
                         stepConfigs: this.generateCheckoutStepConfigs({ isGift: !!(null != s && s.isGift) }),
                         onComplete: (e) => {
-                            null != l && l(e), (y = !0);
+                            null != l && l(e), (b = !0);
                         },
                         onClose: c,
                         renderHeader: g,
@@ -224,24 +225,24 @@ class I {
                         flowSpecificOptions: o,
                     });
             },
-            O(b({}, t), {
+            v(y({}, t), {
                 onCloseRequest() {
-                    null != t.onCloseRequest && t.onCloseRequest(y, m), (0, a.Mr3)(h);
+                    null != t.onCloseRequest && t.onCloseRequest(b, m), (0, a.Mr3)(h);
                 },
                 modalKey: h,
             }),
         );
     }
     constructor({ checkoutFlow: e }) {
-        E(this, "checkoutFlow", void 0),
-            E(this, "checkoutFlowConfiguration", void 0),
-            E(this, "tenantCheckoutFlowConfig", void 0),
-            E(this, "internalCheckoutFlowControls", void 0),
+        b(this, "checkoutFlow", void 0),
+            b(this, "checkoutFlowConfiguration", void 0),
+            b(this, "tenantCheckoutFlowConfig", void 0),
+            b(this, "internalCheckoutFlowControls", void 0),
             (this.checkoutFlow = e);
-        let t = d.d[e];
-        if (!v(e, t)) throw Error("Checkout flow ".concat(e, " is not implemented"));
+        let t = f.d[e];
+        if (!S(e, t)) throw Error("Checkout flow ".concat(e, " is not implemented"));
         (this.checkoutFlowConfiguration = t),
             (this.tenantCheckoutFlowConfig = t.TENANT_CHECKOUT_FLOW_CONFIG),
-            (this.internalCheckoutFlowControls = S[e]);
+            (this.internalCheckoutFlowControls = I[e]);
     }
 }

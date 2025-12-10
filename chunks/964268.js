@@ -91,10 +91,7 @@ let f = (e) => {
                 onRedeemVirtualCurrency: m,
                 rentalDuration: l,
             });
-        return n({
-            unifiedStepProps: h,
-            paymentModalStepProps: r,
-        });
+        return n({ unifiedStepProps: h });
     },
     _ = (e) => {
         let { onClose: t, step: n } = e;

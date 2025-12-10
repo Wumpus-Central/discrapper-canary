@@ -40,24 +40,22 @@ function p(e) {
 }
 let _ = (e) => (0, r.jsx)(m, p({}, e)),
     m = (e) => {
-        let { paymentModalStepProps: t, unifiedStepProps: n } = e,
+        let { unifiedStepProps: t } = e,
             {
-                isStepLoading: a,
-                reviewBodyContent: c,
-                reviewBodyLegalContent: f,
-                errorMessage: _,
-                warningMessage: m,
-                primaryCTAButtonProps: h,
-                SideEffectComponent: g,
-            } = n;
-        return a
+                isStepLoading: n,
+                reviewBodyContent: a,
+                reviewBodyLegalContent: c,
+                errorMessage: f,
+                warningMessage: p,
+                primaryCTAButtonProps: _,
+            } = t;
+        return n
             ? (0, r.jsx)("div", {
                   className: d.stepBody,
                   children: (0, r.jsx)(i.$jN, { type: i.$jN.Type.WANDERING_CUBES }),
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      null != g ? (0, r.jsx)(g, p({}, t)) : null,
                       (0, r.jsx)(o.Z, {}),
                       (0, r.jsxs)(s.C3, {
                           children: [
@@ -65,19 +63,19 @@ let _ = (e) => (0, r.jsx)(m, p({}, e)),
                                   direction: "vertical",
                                   gap: 8,
                                   children: [
-                                      null != _ ? (0, r.jsx)(u.vw, { message: _ }) : null,
-                                      null != m ? (0, r.jsx)(l.Z, { message: m }) : null,
+                                      null != f ? (0, r.jsx)(u.vw, { message: f }) : null,
+                                      null != p ? (0, r.jsx)(l.Z, { message: p }) : null,
                                   ],
                               }),
                               (0, r.jsxs)("div", {
                                   className: d.stepBody,
-                                  children: [c, f],
+                                  children: [a, c],
                               }),
                           ],
                       }),
                       (0, r.jsx)(s.O3, {
                           children: (0, r.jsx)(u.Ds, {
-                              primaryCTAButtonProps: h,
+                              primaryCTAButtonProps: _,
                               showLockIcon: !0,
                           }),
                       }),

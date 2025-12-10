@@ -37,20 +37,20 @@ function d(e) {
 }
 let f = (e) => (0, r.jsx)(p, d({}, e)),
     p = (e) => {
-        let { paymentModalStepProps: t, unifiedStepProps: n } = e,
-            { leftColumnComponent: a, rightColumnComponent: s, primaryCTAButtonProps: u, onBackClick: d } = n;
+        let { unifiedStepProps: t } = e,
+            { leftColumnComponent: n, rightColumnComponent: a, primaryCTAButtonProps: s, onBackClick: u } = t;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.C3, {
                     children: (0, r.jsxs)("div", {
                         className: c.stepBody,
-                        children: [a, s],
+                        children: [n, a],
                     }),
                 }),
                 (0, r.jsx)(o.O3, {
                     children: (0, r.jsx)(l.Ds, {
-                        onBackClick: d,
-                        primaryCTAButtonProps: u,
+                        onBackClick: u,
+                        primaryCTAButtonProps: s,
                         justify: i.Z.Justify.BETWEEN,
                         align: i.Z.Align.CENTER,
                     }),
