@@ -15,9 +15,13 @@ var r = n(473749),
     c = n(591759);
 let u = (e) => null != e.text;
 function d(e) {
-    let t = 0 | Math.round(e),
-        n = t % 60;
-    return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"));
+    let t = 0 | e,
+        n = Math.floor(t / 3600),
+        r = Math.floor((t % 3600) / 60),
+        o = t % 60;
+    return n > 0
+        ? "".concat(n, ":").concat(String(r).padStart(2, "0"), ":").concat(String(o).padStart(2, "0"))
+        : "".concat(r, ":").concat(String(o).padStart(2, "0"));
 }
 function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2000,

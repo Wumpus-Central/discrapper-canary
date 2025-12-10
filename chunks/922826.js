@@ -17,21 +17,21 @@ var r = n(54381),
     O = n(954633),
     h = n(325916),
     b = n(939389),
-    C = n(388032),
-    S = n(273339);
+    S = n(388032),
+    C = n(273339);
 let _ = "-:--",
     y = {
         [h.rq.PLAYING]: {
             icon: m.fpf,
-            label: C.intl.string(C.t.ZcgDJX),
+            label: S.intl.string(S.t.ZcgDJX),
         },
         [h.rq.PAUSED]: {
             icon: m.o1U,
-            label: C.intl.string(C.t.RscU7I),
+            label: S.intl.string(S.t.RscU7I),
         },
         [h.rq.ENDED]: {
             icon: m.Oe7,
-            label: C.intl.string(C.t.hsvh0i),
+            label: S.intl.string(S.t.hsvh0i),
         },
     },
     x = {
@@ -46,29 +46,26 @@ function P(e) {
     let { current: t, duration: n } = e,
         o = null != t ? (0, b.yv)(t) : _,
         l = null != n ? (0, b.yv)(n) : _;
-    return (
-        (o = o.padStart(l.length, "0")),
-        (0, r.jsxs)("div", {
-            className: i()(S.durationTimeWrapper, S.controlsBarItem),
-            children: [
-                (0, r.jsx)(m.Text, {
-                    variant: "text-xs/normal",
-                    className: S.durationTimeDisplay,
-                    children: o,
-                }),
-                (0, r.jsx)(m.Text, {
-                    variant: "text-xs/normal",
-                    className: S.durationTimeSeparator,
-                    children: "/",
-                }),
-                (0, r.jsx)(m.Text, {
-                    variant: "text-xs/normal",
-                    className: S.durationTimeDisplay,
-                    children: l,
-                }),
-            ],
-        })
-    );
+    return (0, r.jsxs)("div", {
+        className: i()(C.durationTimeWrapper, C.controlsBarItem),
+        children: [
+            (0, r.jsx)(m.Text, {
+                variant: "text-xs/normal",
+                className: C.durationTimeDisplay,
+                children: o,
+            }),
+            (0, r.jsx)(m.Text, {
+                variant: "text-xs/normal",
+                className: C.durationTimeSeparator,
+                children: "/",
+            }),
+            (0, r.jsx)(m.Text, {
+                variant: "text-xs/normal",
+                className: C.durationTimeDisplay,
+                children: l,
+            }),
+        ],
+    });
 }
 let D = o.forwardRef(function (e, t) {
     let {
@@ -116,12 +113,12 @@ let D = o.forwardRef(function (e, t) {
                 (p = p =
                     {
                         onClick: !0 === f ? void 0 : g,
-                        className: i()(S.videoControlsBtnCont, { [S.videoControlsBtnContDisabled]: f }),
+                        className: i()(C.videoControlsBtnCont, { [C.videoControlsBtnContDisabled]: f }),
                         "aria-label": s,
                         "aria-disabled": f,
                         innerRef: t,
                         children: (0, r.jsx)(a.animated.div, {
-                            className: S.videoControlsBtnCont,
+                            className: C.videoControlsBtnCont,
                             style: {
                                 opacity: (0, a.to)(
                                     [
@@ -140,9 +137,9 @@ let D = o.forwardRef(function (e, t) {
                             children: (0, r.jsx)(n, {
                                 size: j[O],
                                 color: !0 !== f ? c.Z.colors.WHITE : c.Z.colors.TEXT_MUTED,
-                                className: i()(S.controlsBarItem, {
-                                    [S.controlsBarItemActive]: u,
-                                    [S.videoControlsBtn]: !f,
+                                className: i()(C.controlsBarItem, {
+                                    [C.controlsBarItemActive]: u,
+                                    [C.videoControlsBtn]: !f,
                                 }),
                             }),
                         }),
@@ -285,7 +282,7 @@ function T(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: S.videoControlsGroup,
+                className: C.videoControlsGroup,
                 children: [
                     (0, r.jsx)(D, {
                         iconComponent: em,
@@ -306,8 +303,8 @@ function T(e) {
                                     animationTime: b,
                                     visible: _,
                                     onClick: M,
-                                    ariaLabel: C.intl.string(C.t.r9s3Uv),
-                                    tooltipLabel: C.intl.string(C.t.r9s3Uv),
+                                    ariaLabel: S.intl.string(S.t.r9s3Uv),
+                                    tooltipLabel: S.intl.string(S.t.r9s3Uv),
                                     shortcut: h.Y1.SEEK_BACK,
                                     buttonSize: x[N],
                                 }),
@@ -317,8 +314,8 @@ function T(e) {
                                     visible: _,
                                     onClick: V,
                                     disabled: !j,
-                                    ariaLabel: j ? C.intl.string(C.t.zWDcNP) : C.intl.string(C.t.xXh3yw),
-                                    tooltipLabel: j ? C.intl.string(C.t.zWDcNP) : C.intl.string(C.t.xXh3yw),
+                                    ariaLabel: j ? S.intl.string(S.t.zWDcNP) : S.intl.string(S.t.xXh3yw),
+                                    tooltipLabel: j ? S.intl.string(S.t.zWDcNP) : S.intl.string(S.t.xXh3yw),
                                     tooltipDelayMs: 1500 * !!j,
                                     shortcut: h.Y1.SEEK_FORWARD,
                                     buttonSize: x[N],
@@ -328,7 +325,7 @@ function T(e) {
                 ],
             }),
             (0, r.jsxs)(a.animated.div, {
-                className: i()(S.videoControlsGroup, S.videoControlsGroupMid),
+                className: i()(C.videoControlsGroup, C.videoControlsGroupMid),
                 style: {
                     opacity: (0, a.to)(
                         [
@@ -346,20 +343,20 @@ function T(e) {
                         onMouseLeave: ec,
                         onFocus: es,
                         onBlur: ec,
-                        className: S.volumeControlGroup,
+                        className: C.volumeControlGroup,
                         children: [
                             (0, r.jsx)(D, {
                                 iconComponent: ed,
                                 animationTime: b,
                                 visible: _,
                                 onClick: ea,
-                                ariaLabel: C.intl.string(C.t["eIl+AK"]),
-                                tooltipLabel: C.intl.string(C.t["eIl+AK"]),
+                                ariaLabel: S.intl.string(S.t["eIl+AK"]),
+                                tooltipLabel: S.intl.string(S.t["eIl+AK"]),
                                 shortcut: h.Y1.MUTE,
                                 buttonSize: x[N],
                             }),
                             (0, r.jsx)(a.animated.div, {
-                                className: S.volumeSlider,
+                                className: C.volumeSlider,
                                 style: {
                                     opacity: (0, a.to)(
                                         [
@@ -394,7 +391,7 @@ function T(e) {
                                     },
                                     fillStyles: { backgroundColor: c.Z.colors.WHITE.css },
                                     orientation: "horizontal",
-                                    "aria-label": C.intl.string(C.t["eIl+AK"]),
+                                    "aria-label": S.intl.string(S.t["eIl+AK"]),
                                 }),
                             }),
                         ],
@@ -406,7 +403,7 @@ function T(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: i()(S.videoControlsGroup, S.videoControlsGroupEnd),
+                className: i()(C.videoControlsGroup, C.videoControlsGroupEnd),
                 children: [
                     !R &&
                         (0, r.jsx)(D, {
@@ -416,8 +413,8 @@ function T(e) {
                             onClick: w,
                             active: H && d !== h.rq.ENDED,
                             disabled: d === h.rq.ENDED,
-                            ariaLabel: C.intl.string(C.t.KCzjTi),
-                            tooltipLabel: C.intl.string(C.t.KCzjTi),
+                            ariaLabel: S.intl.string(S.t.KCzjTi),
+                            tooltipLabel: S.intl.string(S.t.KCzjTi),
                             buttonSize: x[N],
                         }),
                     !T &&
@@ -427,8 +424,8 @@ function T(e) {
                             visible: _,
                             active: Q,
                             onClick: L,
-                            ariaLabel: C.intl.string(C.t.bDSZO1),
-                            tooltipLabel: C.intl.string(C.t.bDSZO1),
+                            ariaLabel: S.intl.string(S.t.bDSZO1),
+                            tooltipLabel: S.intl.string(S.t.bDSZO1),
                             shortcut: h.Y1.CAPTION,
                             buttonSize: x[N],
                         }),
@@ -437,8 +434,8 @@ function T(e) {
                         animationTime: b,
                         visible: _,
                         onClick: k,
-                        ariaLabel: C.intl.string(C.t.vKZT5t),
-                        tooltipLabel: C.intl.string(C.t.vKZT5t),
+                        ariaLabel: S.intl.string(S.t.vKZT5t),
+                        tooltipLabel: S.intl.string(S.t.vKZT5t),
                         shortcut: h.Y1.FULLSCREEN,
                         buttonSize: x[N],
                     }),
