@@ -1,5 +1,4 @@
 e.exports = {
-    productVariantsOuterContainer: "productVariantsOuterContainer__2c397",
     productVariantsContainer: "productVariantsContainer__2c397",
     productVariant: "productVariant__2c397",
     productVariantCheckmark: "productVariantCheckmark__2c397",

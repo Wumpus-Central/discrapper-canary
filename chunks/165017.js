@@ -1,4 +1,4 @@
-n.d(t, { H: () => p });
+n.d(t, { H: () => f });
 var r = n(498607),
     i = n.n(r),
     a = n(442837),
@@ -9,21 +9,10 @@ var r = n(498607),
     u = n(945577),
     d = n(981631);
 function f(e) {
-    let {
-        isSearchDesktopXDMExperimentEnabled: t,
-        crossDMSearchSettingUnsetValue: n,
-        isCrossDMSearchEnabledSetting: r,
-    } = e;
-    return t ? (null != r ? r : n) : !!t;
-}
-function p(e) {
     let { guildId: t, channelId: n } = e,
-        r = (0, u.xy)({ location: "useDesktopSearchContext" }),
-        p = f({
-            isSearchDesktopXDMExperimentEnabled: (0, u.UX)({ location: "useDesktopSearchContext" }),
-            crossDMSearchSettingUnsetValue: r,
-            isCrossDMSearchEnabledSetting: o.rR.useSetting(),
-        });
+        r = (0, u.U)({ location: "useDesktopSearchContext" }),
+        f = o.rR.useSetting(),
+        p = r && f;
     return (0, a.e7)(
         [l.Z, s.Z, c.Z],
         () => {

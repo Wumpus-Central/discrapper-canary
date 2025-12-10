@@ -1060,6 +1060,9 @@ let e1 = (0, f.Zc)(
     e8 = (0, f.Zc)(
         "textAndImages",
         "isCrossDmSearchEnabled",
-        (e) => (null == e ? void 0 : e.value),
+        (e) => {
+            var t;
+            return null != (t = null == e ? void 0 : e.value) && t;
+        },
         (e) => o.D5.create({ value: e }),
     );

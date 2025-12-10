@@ -529,7 +529,7 @@ function q(e) {
             return null;
         }),
         W = (0, P.kU)({ location: "Search" }),
-        q = (0, N.UX)({ location: "Search" }),
+        q = (0, N.U)({ location: "Search" }),
         Q = i.useMemo(
             () =>
                 t.type === B.aib.DMS

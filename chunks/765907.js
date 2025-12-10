@@ -26,7 +26,7 @@ function m(e) {
         E = r.useMemo(() => null != m && m.some((e) => e.guild.id === _.ON), [m]),
         b = r.useMemo(() => {
             if ((null == t ? void 0 : t.widgets) == null) return !1;
-            let e =
+            let e = new Set(
                 null == t
                     ? void 0
                     : t.widgets
@@ -38,8 +38,10 @@ function m(e) {
                                     : void 0,
                           )
                           .filter(f.lm)
-                          .flat();
-            return _.RI.intersection(new Set(e)).size > 0;
+                          .flat(),
+            );
+            for (let t of _.RI) if (e.has(t)) return !0;
+            return !1;
         }, [null == t ? void 0 : t.widgets]),
         y = r.useMemo(() => null != h && h.some((e) => null != e.application_id && _.RI.has(e.application_id)), [h]),
         O = r.useMemo(() => {

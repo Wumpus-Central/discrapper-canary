@@ -106,7 +106,7 @@ function E(e) {
             k(null), _.Z.openSearchFiltersModal(t);
         }, [t, k]),
         H = i.useMemo(() => (E > 0 ? v.intl.format(v.t.uaR4sI, { filterCount: E }) : v.intl.string(v.t.UdhTtk)), [E]),
-        F = (0, g.UX)({ location: "SearchHeader" }),
+        F = (0, g.U)({ location: "SearchHeader" }),
         B = t.type === x.aib.DMS || t.type === x.aib.CHANNEL,
         V = i.useMemo(
             () =>
@@ -298,24 +298,22 @@ function R(e) {
         : i;
 }
 function w(e) {
-    var t;
     let {
-            searchContext: n,
-            selectedChannelId: l,
-            isPopoutOpen: a,
-            setOpenPopout: s,
-            onPopoverRequestClose: c,
-            isPopoverVisible: u,
+            searchContext: t,
+            selectedChannelId: n,
+            isPopoutOpen: l,
+            setOpenPopout: a,
+            onPopoverRequestClose: s,
+            isPopoverVisible: c,
         } = e,
-        h = i.useRef(null),
-        f = (0, g.xy)({ location: "SearchSettingsPopout" }),
-        m = null != (t = p.rR.useSetting()) ? t : f,
-        b = i.useCallback(
+        u = i.useRef(null),
+        h = p.rR.useSetting(),
+        f = i.useCallback(
             (e) => {
-                if (m !== e) {
+                if (h !== e) {
                     if (
                         ((0, O.yn)({
-                            searchContext: n,
+                            searchContext: t,
                             prevIsCrossDMSettingEnabled: p.rR.getSetting(),
                             isCrossDMSettingEnabled: e,
                             location: O.Ix.SEARCH_HEADER,
@@ -323,43 +321,43 @@ function w(e) {
                         e)
                     ) {
                         let e = { type: x.aib.DMS };
-                        _.Z.transitionStateToSearchContext(n, e, _.Z.cleanUpPrivateChannelSearchState);
+                        _.Z.transitionStateToSearchContext(t, e, _.Z.cleanUpPrivateChannelSearchState);
                     } else {
                         let e = {
                             type: x.aib.CHANNEL,
-                            channelId: l,
+                            channelId: n,
                         };
-                        _.Z.transitionStateToSearchContext(n, e);
+                        _.Z.transitionStateToSearchContext(t, e);
                     }
-                    s(null), p.rR.updateSetting(e);
+                    a(null), p.rR.updateSetting(e);
                 }
             },
-            [m, s, n, l],
+            [h, a, t, n],
         ),
-        [y, j] = i.useMemo(
+        [g, m] = i.useMemo(
             () => [
-                m ? v.intl.string(v.t["8lklch"]) : v.intl.string(v.t.ji3jTF),
-                m ? v.intl.string(v.t.RMQZCa) : v.intl.string(v.t["v/PagC"]),
+                h ? v.intl.string(v.t["8lklch"]) : v.intl.string(v.t.ji3jTF),
+                h ? v.intl.string(v.t.RMQZCa) : v.intl.string(v.t["v/PagC"]),
             ],
-            [m],
+            [h],
         ),
-        C = i.useMemo(() => ({ align: "end" }), []);
+        b = i.useMemo(() => ({ align: "end" }), []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(d.yRy, {
-                targetElementRef: h,
-                shouldShow: a,
+                targetElementRef: u,
+                shouldShow: l,
                 animation: d.yRy.Animation.NONE,
                 position: "bottom",
                 align: "right",
-                onRequestClose: () => s(null),
+                onRequestClose: () => a(null),
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsx)(d.v2r, {
                         navId: "search-settings-cog",
                         onClose: t,
                         "aria-label": v.intl.string(v.t.fb59v0),
-                        onSelect: () => s(null),
+                        onSelect: () => a(null),
                         children: (0, r.jsxs)(
                             d.kSQ,
                             {
@@ -369,15 +367,15 @@ function w(e) {
                                         id: "xdm-search-disabled",
                                         group: "xdm-search-items",
                                         label: v.intl.string(v.t.jRkYAh),
-                                        checked: !m,
-                                        action: () => b(!1),
+                                        checked: !h,
+                                        action: () => f(!1),
                                     }),
                                     (0, r.jsx)(d.k5B, {
                                         id: "xdm-search-enabled",
                                         group: "xdm-search-items",
                                         label: v.intl.string(v.t["lWpJ/t"]),
-                                        checked: m,
-                                        action: () => b(!0),
+                                        checked: h,
+                                        action: () => f(!0),
                                     }),
                                 ],
                             },
@@ -389,11 +387,11 @@ function w(e) {
                     (0, r.jsx)(
                         d.hU,
                         S(I({}, e), {
-                            buttonRef: h,
+                            buttonRef: u,
                             variant: "secondary",
                             icon: d.ewm,
                             onClick: () => {
-                                s(a ? null : "settings");
+                                a(l ? null : "settings");
                             },
                             "aria-label": v.intl.string(v.t["3D5yo/"]),
                             size: "sm",
@@ -401,12 +399,12 @@ function w(e) {
                     ),
             }),
             (0, r.jsx)(o.J2, {
-                targetElementRef: h,
-                shouldShow: u,
-                onRequestClose: c,
-                title: y,
-                body: j,
-                caretConfig: C,
+                targetElementRef: u,
+                shouldShow: c,
+                onRequestClose: s,
+                title: g,
+                body: m,
+                caretConfig: b,
                 badge: "new",
             }),
         ],

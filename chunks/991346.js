@@ -239,7 +239,7 @@ function Y() {
             isInputProfileCustom: I.Z.isInputProfileCustom(),
         })),
         { enabled: ea } = (0, u.zM)("useGenerateUserSettingsSections", { autoTrackExposure: !1 }),
-        eo = (0, E.UX)({ location: "useGenerateUserSettingsSections" }),
+        eo = (0, E.U)({ location: "useGenerateUserSettingsSections" }),
         es = (0, w.gj)("useGenerateUserSettingsSections");
     return r.useMemo(
         () =>
