@@ -1,89 +1,59 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => P });
 var r = n(54381);
 n(473749);
-var i = n(952265),
-    a = n(588468),
-    o = n(125900),
-    s = n(12327),
-    l = n(285651),
-    c = n(268350),
-    u = n(926491),
-    d = n(373228),
-    f = n(419922),
-    p = n(430824),
-    _ = n(626135),
-    m = n(483360),
-    h = n(877565),
-    g = n(590921),
-    E = n(761652),
-    b = n(981631),
-    y = n(388032),
-    O = n(913235);
-function v(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function S(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                v(e, t, n[t]);
-            });
-    }
-    return e;
-}
-let I = 8,
-    T = 4,
-    C = 4,
-    A = 40,
-    N = 6;
-function P(e, t) {
-    return (0, r.jsx)(f.Z, {
+var i = n(588468),
+    a = n(125900),
+    o = n(12327),
+    s = n(285651),
+    l = n(268350),
+    c = n(926491),
+    u = n(373228),
+    d = n(419922),
+    f = n(430824),
+    p = n(626135),
+    _ = n(483360),
+    m = n(877565),
+    h = n(590921),
+    g = n(761652),
+    E = n(981631),
+    b = n(388032),
+    y = n(913235);
+let O = 8,
+    v = 4,
+    S = 4,
+    I = 40,
+    T = 6;
+function C(e, t) {
+    return (0, r.jsx)(d.Z, {
         sticker: e,
         isInteracting: t,
         size: 40,
     });
 }
-function R(e) {
-    return "".concat(E.Iv).concat(e.name).concat(E.Iv);
+function A(e) {
+    return "".concat(g.Iv).concat(e.name).concat(g.Iv);
 }
-function D(e) {
+function N(e) {
     var t;
     let n = e.animated ? "a" : "";
     return e.managed || null == e.id
-        ? "".concat(E.Iv).concat(e.name).concat(E.Iv)
+        ? "".concat(g.Iv).concat(e.name).concat(g.Iv)
         : "<"
               .concat(n, ":")
               .concat(null != (t = e.originalName) ? t : e.name, ":")
               .concat(e.id, ">");
 }
-let w = {
-    sentinel: E.Iv,
-    stores: [u.Z],
+let P = {
+    sentinel: g.Iv,
+    stores: [c.Z],
     matches: (e, t, n, r, i) => n.length > 1,
     queryResults(e, t, n, r, i) {
-        let a = r.allowSoundmoji && (0, o.dX)({ location: "queryResults" }),
-            s = r.allowStickers || a ? 0 : A,
-            u = b.rnv + s,
+        let o = r.allowSoundmoji && (0, a.dX)({ location: "queryResults" }),
+            c = r.allowStickers || o ? 0 : I,
+            u = E.rnv + c,
             {
                 emojis: { unlocked: d },
-            } = m.ZP.queryEmojiResults({
+            } = _.ZP.queryEmojiResults({
                 query: n,
                 channel: e,
                 intention: r.emojiIntention,
@@ -98,28 +68,26 @@ let w = {
         }
         let f = [];
         if (r.allowStickers) {
-            (0, c.$p)();
-            let t = m.ZP.queryStickers([n], !0, [e, (e, t) => t === l.eb.SENDABLE]),
-                r = Math.max(T, I - d.length);
+            (0, l.$p)();
+            let t = _.ZP.queryStickers([n], !0, [e, (e, t) => t === s.eb.SENDABLE]),
+                r = Math.max(v, O - d.length);
             (f = t.slice(0, r)), "-" === n[0] && (f = t.filter((e) => e.sticker.name === n));
         }
         let p = [];
-        a &&
-            ((p = m.ZP.querySoundmoji(n, e)
+        o &&
+            ((p = _.ZP.querySoundmoji(n, e)
                 .map((e) => ({ sound: e }))
-                .slice(0, C)),
+                .slice(0, S)),
             "-" === n[0] && (p = p.filter((e) => e.sound.name === n)));
-        let _ = d.slice(0, Math.max(N, u - f.length - p.length));
+        let m = d.slice(0, Math.max(T, u - f.length - p.length));
         return {
             results: {
-                emojis: _,
-                emojisLocked: [],
+                emojis: m,
                 stickers: f,
                 soundmoji: p,
             },
             metadata: {
-                numEmojiResults: _.length,
-                numLockedEmojiResults: 0,
+                numEmojiResults: m.length,
                 numStickerResults: f.length,
                 numSoundmojiResults: p.length,
             },
@@ -127,76 +95,48 @@ let w = {
     },
     renderResults(e) {
         let {
-                results: { emojis: t, stickers: o, soundmoji: s, emojisLocked: l },
-                selectedIndex: c,
-                query: u,
-                onHover: d,
-                onClick: f,
+                results: { emojis: t, stickers: n, soundmoji: a },
+                selectedIndex: o,
+                query: s,
+                onHover: l,
+                onClick: c,
             } = e,
-            _ = () => {
-                (0, i.openModalLazy)(async () => {
-                    let { default: e } = await n.e("63227").then(n.bind(n, 428263));
-                    return (t) => (0, r.jsx)(e, S({}, t));
-                });
-            },
-            m = t.length > 0 || l.length > 0,
-            g = o.length > 0;
+            u = t.length > 0,
+            d = n.length > 0;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, h.HI)({
-                    query: u,
-                    selectedIndex: c,
+                (0, m.HI)({
+                    query: s,
+                    selectedIndex: o,
                     autocompletes: t,
-                    onHover: d,
-                    onClick: f,
-                    titleWithQuery: y.t.ksAVYt,
-                    titleWithoutQuery: y.intl.string(y.t.sMOuuS),
-                    Component: a.ZP.Emoji,
+                    onHover: l,
+                    onClick: c,
+                    titleWithQuery: b.t.ksAVYt,
+                    titleWithoutQuery: b.intl.string(b.t.sMOuuS),
+                    Component: i.ZP.Emoji,
                     getProps: (e) => ({
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
-                        sentinel: E.Iv,
-                        guild: null != e.guildId ? p.Z.getGuild(e.guildId) : null,
+                        sentinel: g.Iv,
+                        guild: null != e.guildId ? f.Z.getGuild(e.guildId) : null,
                     }),
-                    getQuery: (e) => "".concat(E.Iv).concat(e),
+                    getQuery: (e) => "".concat(g.Iv).concat(e),
                     key: "emoji",
                 }),
-                l.length > 0
-                    ? (0, h.HI)({
-                          query: u,
-                          selectedIndex: c,
-                          autocompletes: l,
-                          onHover: d,
-                          onClick: _,
-                          titleWithQuery: 0 === t.length ? y.t.ksAVYt : null,
-                          titleWithoutQuery: 0 === t.length ? y.intl.string(y.t.sMOuuS) : null,
-                          Component: a.ZP.EmojiUpsell,
-                          getProps: (e) => {
-                              let { emojis: t } = e;
-                              return {
-                                  key: "emoji-upsell",
-                                  emojis: t,
-                              };
-                          },
-                          getQuery: (e) => "".concat(E.Iv).concat(e),
-                          key: "emoji-upsell",
-                          indexOffset: t.length,
-                      })
-                    : null,
-                m && g && (0, r.jsx)(a.ZP.Divider, { className: O.divider }),
-                (0, h.HI)({
-                    query: u,
-                    selectedIndex: c,
-                    autocompletes: o,
-                    onHover: d,
-                    onClick: f,
-                    titleWithQuery: y.t.uferGG,
-                    titleWithoutQuery: y.intl.string(y.t["fT+Yjp"]),
-                    Component: a.ZP.Sticker,
+                u && d && (0, r.jsx)(i.ZP.Divider, { className: y.divider }),
+                (0, m.HI)({
+                    query: s,
+                    selectedIndex: o,
+                    autocompletes: n,
+                    onHover: l,
+                    onClick: c,
+                    titleWithQuery: b.t.uferGG,
+                    titleWithoutQuery: b.intl.string(b.t["fT+Yjp"]),
+                    Component: i.ZP.Sticker,
                     getProps: (e) => {
                         let { comparator: t, sticker: n } = e;
                         return {
-                            renderSticker: P,
+                            renderSticker: C,
                             queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
                             sticker: n,
                             key: n.id,
@@ -204,19 +144,19 @@ let w = {
                     },
                     getQuery: (e) => e,
                     key: "stickers",
-                    indexOffset: t.length + l.length,
-                    headerClassName: m ? O.secondarySection : void 0,
+                    indexOffset: t.length,
+                    headerClassName: u ? y.secondarySection : void 0,
                 }),
-                (m || g) && s.length > 0 && (0, r.jsx)(a.ZP.Divider, { className: O.divider }),
-                (0, h.HI)({
-                    query: u,
-                    selectedIndex: c,
-                    autocompletes: s,
-                    onHover: d,
-                    onClick: f,
-                    titleWithQuery: y.t["0cKBGM"],
-                    titleWithoutQuery: y.intl.string(y.t.EHlAMc),
-                    Component: a.ZP.Soundmoji,
+                (u || d) && a.length > 0 && (0, r.jsx)(i.ZP.Divider, { className: y.divider }),
+                (0, m.HI)({
+                    query: s,
+                    selectedIndex: o,
+                    autocompletes: a,
+                    onHover: l,
+                    onClick: c,
+                    titleWithQuery: b.t["0cKBGM"],
+                    titleWithoutQuery: b.intl.string(b.t.EHlAMc),
+                    Component: i.ZP.Soundmoji,
                     getProps: (e) => {
                         let { sound: t } = e;
                         return {
@@ -226,29 +166,29 @@ let w = {
                     },
                     getQuery: (e) => e,
                     key: "soundmoji",
-                    indexOffset: t.length + l.length + o.length,
-                    headerClassName: m || g ? O.secondarySection : void 0,
+                    indexOffset: t.length + n.length,
+                    headerClassName: u || d ? y.secondarySection : void 0,
                 }),
             ],
         });
     },
     onSelect(e) {
         let {
-            results: { emojis: t, emojisLocked: n, soundmoji: r, stickers: i },
-            index: a,
-            options: o,
-            channel: l,
+            results: { emojis: t, soundmoji: n, stickers: r },
+            index: i,
+            options: a,
+            channel: s,
         } = e;
-        if (a < t.length) {
-            let e = t[a];
+        if (i < t.length) {
+            let e = t[i];
             return (
-                o.insertText(R(e), D(e)),
+                a.insertText(A(e), N(e)),
                 {
-                    type: g.z2.EMOJI,
+                    type: h.z2.EMOJI,
                     metadata: {
                         emojiId: e.id,
                         numEmojiResults: t.length,
-                        numStickerResults: i.length,
+                        numStickerResults: r.length,
                         expressionName: e.name,
                         isCustom: null != e.id,
                         isAnimated: e.animated,
@@ -256,38 +196,37 @@ let w = {
                 }
             );
         }
-        if ((a -= t.length) < n.length) return { type: null };
-        if ((a -= n.length) < i.length) {
-            let e = i[a];
+        if ((i -= t.length) < r.length) {
+            let e = r[i];
             return (
-                o.insertText(""),
-                o.sendSticker(e.sticker, d.V0.AUTOCOMPLETE),
+                a.insertText(""),
+                a.sendSticker(e.sticker, u.V0.AUTOCOMPLETE),
                 {
-                    type: g.z2.STICKER,
+                    type: h.z2.STICKER,
                     metadata: {
                         numEmojiResults: t.length,
-                        numStickerResults: i.length,
+                        numStickerResults: r.length,
                         stickerId: e.sticker.id,
                     },
                 }
             );
         }
-        if ((a -= i.length) < r.length) {
-            let e = r[a];
+        if ((i -= r.length) < n.length) {
+            let e = n[i];
             return (
-                o.insertText((0, s.Z)(e.sound.guildId, e.sound.soundId)),
-                _.default.track(b.rMx.SOUNDMOJI_SELECT, {
-                    channel_id: l.id,
-                    guild_id: l.guild_id,
+                a.insertText((0, o.Z)(e.sound.guildId, e.sound.soundId)),
+                p.default.track(E.rMx.SOUNDMOJI_SELECT, {
+                    channel_id: s.id,
+                    guild_id: s.guild_id,
                     sound_guild_id: e.sound.guildId,
                     sound_id: e.sound.soundId,
                     source: "autocomplete",
                 }),
                 {
-                    type: g.z2.SOUNDMOJI,
+                    type: h.z2.SOUNDMOJI,
                     metadata: {
                         numEmojiResults: t.length,
-                        numStickerResults: i.length,
+                        numStickerResults: r.length,
                     },
                 }
             );
