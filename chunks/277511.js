@@ -150,4 +150,52 @@ let p = {
                 );
             }
     },
+    async reorderWishlistItem(e, t, n) {
+        let { previousSkuId: a, nextSkuId: s, newWishlistData: l, analyticsLocations: p } = n;
+        i.Z.dispatch({
+            type: "WISHLIST_REORDER_START",
+            wishlistId: e,
+            skuId: t,
+            previousSkuId: a,
+            nextSkuId: s,
+            newWishlistData: l,
+        });
+        try {
+            let n = await r.tn.patch({
+                    url: f.ANM.USER_WISHLIST_ITEM(e, t),
+                    body: {
+                        previous_sku_id: a,
+                        next_sku_id: s,
+                    },
+                    rejectWithError: !0,
+                }),
+                o = d.Z.fromServer(n.body);
+            if (
+                (i.Z.dispatch({
+                    type: "WISHLIST_REORDER_SUCCESS",
+                    wishlistId: e,
+                    wishlistData: o,
+                }),
+                null != p)
+            )
+                try {
+                    let n = o.getSkuIds();
+                    c.default.track(f.rMx.WISHLIST_UPDATED, {
+                        wishlist_id: e,
+                        action_type: "REORDER",
+                        sku_id: t,
+                        sku_ids: n,
+                        location_stack: p,
+                    });
+                } catch (e) {}
+        } catch (n) {
+            i.Z.dispatch({
+                type: "WISHLIST_REORDER_FAILURE",
+                wishlistId: e,
+                skuId: t,
+                error: new o.Hx(n),
+            }),
+                u.Z.captureException(n);
+        }
+    },
 };

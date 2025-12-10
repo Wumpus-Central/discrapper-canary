@@ -3,4 +3,5 @@ e.exports = {
     widgetPreview: "widgetPreview_ab64fd",
     gameDetailsCardPreview: "gameDetailsCardPreview_ab64fd",
     gamePreview: "gamePreview_ab64fd",
+    wishlistItemPreview: "wishlistItemPreview_ab64fd",
 };

@@ -39,9 +39,10 @@ let f = (e) => {
               children: [
                   (0, r.jsx)("img", {
                       src: d,
-                      alt: " ",
+                      alt: "",
                       className: u.preview,
                       "aria-hidden": !0,
+                      draggable: !1,
                   }),
                   !m &&
                       (0, r.jsx)("div", {

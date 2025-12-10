@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => S });
 var r = n(442837),
     i = n(570140),
     a = n(960048);
@@ -54,12 +54,25 @@ function g(e) {
     a.Z.captureException(t);
 }
 function E(e) {
+    let { wishlistId: t, newWishlistData: n } = e;
+    l(t).data = n;
+}
+function b(e) {
+    let { wishlistId: t, wishlistData: n } = e,
+        r = l(t);
+    (r.data = n), (r.status = "success"), (r.error = void 0);
+}
+function y(e) {
+    let { wishlistId: t, error: n } = e;
+    (l(t).updatedAt = void 0), a.Z.captureException(n);
+}
+function O(e) {
     var t;
     let { recipientId: r, skuId: i } = e,
         a = n(621853).Z.getFirstWishlistId(r);
     null != a && null != o[a] && (null == (t = o[a].data) ? void 0 : t.hasSkuId(i)) && (o[a].updatedAt = void 0);
 }
-class b extends r.ZP.Store {
+class v extends r.ZP.Store {
     get(e) {
         var t;
         return null != (t = o[e]) ? t : s();
@@ -91,7 +104,7 @@ class b extends r.ZP.Store {
         return this.get(e).updatedAt;
     }
 }
-let y = new b(i.Z, {
+let S = new v(i.Z, {
     WISHLIST_FETCH_START: c,
     WISHLIST_FETCH_SUCCESS: u,
     WISHLIST_FETCH_FAILURE: d,
@@ -101,5 +114,8 @@ let y = new b(i.Z, {
     WISHLIST_REMOVE_SKU_FAILURE: m,
     WISHLIST_UPDATE_VISIBILITY_SUCCESS: h,
     WISHLIST_UPDATE_VISIBILITY_FAILURE: g,
-    WISHLIST_ITEM_PURCHASED: E,
+    WISHLIST_REORDER_START: E,
+    WISHLIST_REORDER_SUCCESS: b,
+    WISHLIST_REORDER_FAILURE: y,
+    WISHLIST_ITEM_PURCHASED: O,
 });

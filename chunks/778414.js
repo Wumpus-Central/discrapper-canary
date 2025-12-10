@@ -185,7 +185,7 @@ function W(e) {
     var { user: t } = e,
         n = L(e, ["user"]);
     let l = i.useRef(null);
-    (0, x.r)({ container: l.current });
+    (0, x.r)({ containerRef: l });
     let o = (0, k.h)(t.id);
     return (0, r.jsxs)(N.F, {
         "data-scroller": !0,

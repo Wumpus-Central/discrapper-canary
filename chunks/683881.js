@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
     l = n(85707),
@@ -8,41 +8,42 @@ var r = n(54381),
     s = n(817053),
     u = n(623132),
     d = n(778414),
-    f = n(707804);
-function g(e) {
+    f = n(796483),
+    g = n(707804);
+function p(e) {
     var t;
     let { scrollerRef: n } = e,
         {
-            isDragging: g,
-            item: p,
-            sourceClientOffset: m,
+            isDragging: p,
+            item: m,
+            sourceClientOffset: b,
         } = (0, l.f)((e) => ({
             isDragging: e.isDragging(),
             item: e.getItem(),
             sourceClientOffset: e.getSourceClientOffset(),
         })),
-        b = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
-        h = (0, o.zPA)(),
-        y = i.useMemo(() => {
-            if (null == b || null == p) return null;
-            let { id: e, itemType: t, itemPreviewProps: n } = p;
+        h = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        y = (0, o.zPA)(),
+        v = i.useMemo(() => {
+            if (null == h || null == m) return null;
+            let { id: e, itemType: t, itemPreviewProps: n } = m;
             if ("WIDGET" === t && (null == n ? void 0 : n.widget) != null)
                 return (0, r.jsx)("div", {
-                    className: f.widgetPreview,
+                    className: g.widgetPreview,
                     children: (0, r.jsx)(d.Z, {
                         widget: n.widget,
-                        user: b,
+                        user: h,
                         disableInteraction: !0,
                     }),
                 });
             if ("GAME_COVER" === t && (null == n ? void 0 : n.gameName) != null) {
                 let { imageSrc: t, gameName: i } = n;
                 return (0, r.jsx)(s.Z, {
-                    className: f.gamePreview,
+                    className: g.gamePreview,
                     imageSrc: t,
                     gameName: i,
                     applicationId: e,
-                    userId: null == b ? void 0 : b.id,
+                    userId: null == h ? void 0 : h.id,
                     disableInteraction: !0,
                 });
             }
@@ -53,48 +54,63 @@ function g(e) {
             ) {
                 let { game: e, widgetType: t } = n;
                 return (0, r.jsx)(u.Z, {
-                    className: f.gameDetailsCardPreview,
-                    user: b,
+                    className: g.gameDetailsCardPreview,
+                    user: h,
                     widgetType: t,
                     game: e,
                     disableInteraction: !0,
                 });
             }
+            if ("WISHLIST_ITEM" === t && (null == n ? void 0 : n.item) != null) {
+                let { item: e } = n;
+                return (0, r.jsx)("div", {
+                    className: g.wishlistItemPreview,
+                    children: (0, r.jsx)(f.Z, {
+                        item: e,
+                        profileOwner: h,
+                        wishlistId: null,
+                        isOwner: !1,
+                        showOverlayButton: !1,
+                        showIcons: !1,
+                        isDragging: !0,
+                    }),
+                });
+            }
             return null;
-        }, [p, b]),
-        v = i.useRef(null),
-        O = i.useCallback(() => {
+        }, [m, h]),
+        O = i.useRef(null),
+        j = i.useCallback(() => {
             if (null == n.current) return;
             let e = n.current.getBoundingClientRect();
-            v.current = {
+            O.current = {
                 x: e.left,
                 y: e.top,
             };
         }, [n]);
     if (
         (i.useEffect(() => {
-            if (!g) {
-                v.current = null;
+            if (!p) {
+                O.current = null;
                 return;
             }
-            null == v.current && O();
-        }, [g, O]),
-        !0 !== g || null == m || null == y)
+            null == O.current && j();
+        }, [p, j]),
+        !0 !== p || null == b || null == v)
     )
         return null;
-    null == v.current && O();
-    let { x: j, y: x } =
-            null != (t = v.current)
+    null == O.current && j();
+    let { x: x, y: _ } =
+            null != (t = O.current)
                 ? t
                 : {
                       x: 0,
                       y: 0,
                   },
-        _ = m.x - j - 60 * !!h,
-        P = m.y - x;
+        P = b.x - x - 60 * !!y,
+        I = b.y - _;
     return (0, r.jsx)("div", {
-        className: f.container,
-        style: { transform: "translate3d(".concat(_, "px, ").concat(P, "px, 0)") },
-        children: y,
+        className: g.container,
+        style: { transform: "translate3d(".concat(P, "px, ").concat(I, "px, 0)") },
+        children: v,
     });
 }

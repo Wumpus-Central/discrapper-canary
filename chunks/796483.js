@@ -1,12 +1,12 @@
-r.d(t, { Z: () => u });
-var n = r(54381);
-r(473749);
-var i = r(851397),
-    l = r(541699),
-    o = r(321947),
-    s = r(835255),
+r.d(t, { Z: () => d });
+var n = r(54381),
+    i = r(473749),
+    l = r(851397),
+    o = r(541699),
+    s = r(321947),
+    a = r(835255),
     c = r(688192);
-function a(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -31,9 +31,9 @@ function a(e) {
     }
     return e;
 }
-function u(e) {
-    var { item: t, cardSize: r = c.U.MEDIUM, showOverlayButton: u = !0 } = e,
-        d = (function (e, t) {
+let d = i.memo(function (e) {
+    var { item: t, cardSize: r = c.U.MEDIUM, showOverlayButton: i = !0, isDragging: d = !1 } = e,
+        f = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -53,30 +53,31 @@ function u(e) {
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
             }
             return i;
-        })(e, ["item", "cardSize", "showOverlayButton"]);
-    return (0, l.Q)(t)
+        })(e, ["item", "cardSize", "showOverlayButton", "isDragging"]);
+    return (0, o.Q)(t)
         ? (0, n.jsx)(
-              s.ZP,
-              a(
+              a.ZP,
+              u(
                   {
                       item: t,
                       cardSize: r,
-                      showOverlayButton: u,
+                      showOverlayButton: i,
+                      isDragging: d,
                   },
-                  d,
+                  f,
               ),
           )
-        : (0, o.F)(t)
+        : (0, s.F)(t)
           ? (0, n.jsx)(
-                i.Z,
-                a(
+                l.Z,
+                u(
                     {
                         item: t,
                         cardSize: r,
-                        showOverlayButton: u,
+                        showOverlayButton: i,
                     },
-                    d,
+                    f,
                 ),
             )
           : null;
-}
+});

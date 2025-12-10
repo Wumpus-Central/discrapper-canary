@@ -39,6 +39,7 @@ function p(e) {
             (0, r.jsx)("img", {
                 src: t.toString(),
                 alt: a,
+                draggable: !1,
                 className: l()(d.skuImage, { [d.square]: "square" === _ }, p),
             }),
         ],
