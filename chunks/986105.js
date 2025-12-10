@@ -110,7 +110,10 @@ let O = (e) => {
             });
         let f = null != o ? l.slice(0, o) : l;
         return (0, r.jsx)(h.zp.Provider, {
-            value: { rentalDuration: a ? c : void 0 },
+            value: {
+                rentalDuration: a ? c : void 0,
+                flattenProductVariants: a,
+            },
             children: f.map((e, t) => {
                 let n = d.Z.getCategoryForProduct(e.skuId);
                 return null == e || null == n

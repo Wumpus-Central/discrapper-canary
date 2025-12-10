@@ -47,7 +47,10 @@ let m = (e) => {
                         children: (0, r.jsx)("div", {
                             className: b.grid,
                             children: (0, r.jsx)(p.zp.Provider, {
-                                value: { rentalDuration: j },
+                                value: {
+                                    rentalDuration: j,
+                                    flattenProductVariants: !0,
+                                },
                                 children: g.map((e) =>
                                     (0, r.jsx)(
                                         h.Z,
