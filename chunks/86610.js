@@ -176,7 +176,7 @@ class I {
         );
     }
     getApplicationId(e) {
-        return this.checkoutFlow === u.G.ORB_CHECKOUT
+        return this.checkoutFlow === u.G.ORB_CHECKOUT && null != e
             ? (0, c.Nb)(e)
             : this.checkoutFlow === u.G.COLLECTIBLES_CHECKOUT
               ? h.XAJ

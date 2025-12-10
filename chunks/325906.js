@@ -2,8 +2,8 @@ n.d(t, { WrappedUnifiedPaymentModal: () => b });
 var r = n(54381),
     o = n(473749),
     i = n(987209),
-    a = n(563132),
-    l = n(791785),
+    l = n(563132),
+    a = n(791785),
     c = n(467368);
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -53,7 +53,7 @@ let u = (e) => {
                 skuId: t,
                 applicationId: n,
                 transitionState: i,
-                returnRef: a,
+                returnRef: l,
                 onComplete: p,
                 onClose: u,
                 modalOnClose: d,
@@ -69,11 +69,11 @@ let u = (e) => {
                 [d, u],
             );
         return (0, r.jsx)(
-            l.PaymentModal,
+            a.PaymentModal,
             s(
                 {
                     transitionState: i,
-                    returnRef: a,
+                    returnRef: l,
                     applicationId: n,
                     onComplete: p,
                     onClose: j,
@@ -91,9 +91,9 @@ let u = (e) => {
     d = (e) => {
         let { skuId: t } = e;
         return (0, r.jsx)(
-            a.PaymentContextProvider,
+            l.PaymentContextProvider,
             p(s({}, e), {
-                skuIDs: [t],
+                skuIDs: null != t ? [t] : [],
                 children: e.children,
             }),
         );
@@ -103,8 +103,8 @@ let u = (e) => {
                 loadId: t,
                 skuId: n,
                 applicationId: o,
-                analyticsLocations: a,
-                analyticsSourceLocation: l,
+                analyticsLocations: l,
+                analyticsSourceLocation: a,
                 giftContextProps: c,
                 flowSpecificOptions: b,
                 onComplete: y,
@@ -133,8 +133,8 @@ let u = (e) => {
                     children: (0, r.jsx)(S, {
                         skuId: n,
                         loadId: t,
-                        analyticsLocations: a,
-                        analyticsSourceLocation: l,
+                        analyticsLocations: l,
+                        analyticsSourceLocation: a,
                         onComplete: y,
                         onClose: f,
                         renderModalProps: O,
@@ -143,7 +143,7 @@ let u = (e) => {
                             applicationId: o,
                             skuId: n,
                             renderHeader: h,
-                            analyticsLocations: a,
+                            analyticsLocations: l,
                             onComplete: y,
                             onClose: f,
                             modalOnClose: O.onClose,
