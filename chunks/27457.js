@@ -2,7 +2,8 @@ n.d(t, {
     BP: () => eu,
     ZP: () => ed,
 }),
-    n(388685);
+    n(388685),
+    n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -512,7 +513,7 @@ function ea(e) {
     });
 }
 function es(e) {
-    let { channelId: t, participantId: n, isContextMenuOpen: l } = e,
+    let { channelId: t, participantId: n, hideWhenInactive: l } = e,
         o = i.useMemo(() => (0, _.Z)(t, n), [t, n]),
         s = (0, a.e7)([E.Z], () => E.Z.getIsAlwaysOnTop(o)),
         c = i.useCallback(() => {
@@ -523,7 +524,7 @@ function es(e) {
               onClick: c,
               tooltipText: s ? en.intl.string(en.t.YdyDM9) : en.intl.string(en.t.ZVGHwP),
               icon: s ? u.QVc : u.k5M,
-              hideWhenInactive: !l,
+              hideWhenInactive: l,
           })
         : null;
 }
@@ -580,138 +581,157 @@ let ec = i.memo((e) => {
             serverDeafened: Z,
             deafened: I,
             muted: S,
-        });
-    return (0, r.jsxs)("div", {
-        className: o()(er.overlayContainer, {
-            [er.compact]: B,
-            [er.noPointerEvents]: d,
         }),
-        children: [
-            (0, r.jsx)("div", {
-                className: o()(er.overlayTop, { [er.small]: l < 195 }),
-                children:
-                    D || f === J.ZUi.AUTO_PROBING
-                        ? t
-                            ? (0, r.jsx)("div", {
-                                  className: er.status,
-                                  children: (0, r.jsx)(u.Amn, {
-                                      size: "md",
-                                      color: "currentColor",
-                                  }),
-                              })
-                            : (0, r.jsxs)("div", {
-                                  className: o()(er.overlayTitle, er.videoDisabledTitle),
-                                  children: [
-                                      (0, r.jsx)("div", {
-                                          className: er.status,
-                                          children: (0, r.jsx)(u.Amn, {
-                                              size: "md",
-                                              color: "currentColor",
-                                          }),
-                                      }),
-                                      (0, r.jsx)(u.Text, {
-                                          variant: "text-sm/normal",
-                                          className: er.overlayTitleText,
-                                          children: en.intl.string(en.t.m2Hyj0),
-                                      }),
-                                  ],
-                              })
-                        : null,
+        z = [];
+    return (
+        d
+            ? R === m.P.CALL_TILE &&
+              z.push(
+                  (0, r.jsx)(
+                      es,
+                      {
+                          channelId: j.id,
+                          participantId: b,
+                          hideWhenInactive: !F,
+                      },
+                      "stay-on-top",
+                  ),
+              )
+            : (z.push(
+                  (0, r.jsx)(
+                      ea,
+                      {
+                          onClick: (e) => {
+                              e.stopPropagation(), V(!0), E(e, !0, $.A5.THREE_DOT);
+                          },
+                          tooltipText: en.intl.string(en.t["+1H47t"]),
+                          icon: u.xhG,
+                          hideWhenInactive: !F,
+                      },
+                      "options",
+                  ),
+              ),
+              H &&
+                  z.push(
+                      (0, r.jsx)(
+                          ea,
+                          {
+                              onClick: A,
+                              tooltipText: P ? en.intl.string(en.t.YqAjXy) : en.intl.string(en.t.w4m945),
+                              icon: P ? u.OyP : u.gj8,
+                              hideWhenInactive: !P && !F,
+                          },
+                          "mute",
+                      ),
+                  )),
+        (0, r.jsxs)("div", {
+            className: o()(er.overlayContainer, {
+                [er.compact]: B,
+                [er.noPointerEvents]: d,
             }),
-            !U &&
-                (0, r.jsxs)("div", {
-                    className: o()(er.overlayBottom, { [er.small]: l < 195 }),
-                    children: [
-                        (0, r.jsxs)(u.Text, {
-                            className: er.experimentOverlayTitle,
-                            color: "none",
-                            variant: B ? "text-sm/normal" : "text-md/normal",
-                            children: [
-                                null != W &&
-                                    _ === $.fO.USER &&
-                                    (0, r.jsx)(W, {
-                                        className: o()(er.experimentTitleIcon, { [er.compact]: B }),
-                                        size: "xs",
-                                        color: "currentColor",
-                                    }),
-                                h
-                                    ? (0, r.jsx)("div", {
-                                          className: er.blocked,
-                                          children: (0, r.jsx)(u.t6m, {
-                                              size: "lg",
-                                              className: er.blockedIcon,
-                                              color: s.Z.unsafe_rawColors.RED_400.css,
-                                          }),
-                                      })
-                                    : null,
-                                p
-                                    ? (0, r.jsx)("div", {
-                                          className: er.ignored,
-                                          children: (0, r.jsx)(u.kZF, {
-                                              size: "lg",
-                                              className: er.blockedIcon,
-                                          }),
-                                      })
-                                    : null,
-                                t
-                                    ? null
-                                    : (0, r.jsx)(eo, {
-                                          participantType: _,
-                                          platform: x,
-                                          className: o()(er.experimentTitleIcon, { [er.compact]: B }),
+            children: [
+                (0, r.jsx)("div", {
+                    className: o()(er.overlayTop, { [er.small]: l < 195 }),
+                    children:
+                        D || f === J.ZUi.AUTO_PROBING
+                            ? t
+                                ? (0, r.jsx)("div", {
+                                      className: er.status,
+                                      children: (0, r.jsx)(u.Amn, {
+                                          size: "md",
+                                          color: "currentColor",
                                       }),
-                                null == n || "" === n || t
-                                    ? null
-                                    : (0, r.jsx)("span", {
-                                          className: o()(er.overlayTitleText, k),
-                                          children: n,
-                                      }),
-                                C &&
-                                    (0, r.jsx)(c.u, {
-                                        text: en.intl.string(en.t.ZEem6O),
-                                        children: (0, r.jsx)(u.tQf, {
-                                            className: er.secureFramesIcon,
-                                            size: "xs",
-                                            color: s.Z.colors.HEADER_PRIMARY,
-                                            "aria-label": en.intl.string(en.t.mR9cf3),
-                                        }),
-                                    }),
-                            ],
-                        }),
-                        d
-                            ? R === m.P.CALL_TILE
-                                ? (0, r.jsx)(es, {
-                                      channelId: j.id,
-                                      participantId: b,
-                                      isContextMenuOpen: F,
                                   })
-                                : null
-                            : (0, r.jsxs)("div", {
-                                  className: er.overlayButtonContainer,
-                                  children: [
-                                      (0, r.jsx)(ea, {
-                                          onClick: (e) => {
-                                              e.stopPropagation(), V(!0), E(e, !0, $.A5.THREE_DOT);
-                                          },
-                                          tooltipText: en.intl.string(en.t["+1H47t"]),
-                                          icon: u.xhG,
-                                          hideWhenInactive: !F,
-                                      }),
-                                      H &&
-                                          (0, r.jsx)(ea, {
-                                              onClick: A,
-                                              tooltipText: P
-                                                  ? en.intl.string(en.t.YqAjXy)
-                                                  : en.intl.string(en.t.w4m945),
-                                              icon: P ? u.OyP : u.gj8,
-                                              hideWhenInactive: !P && !F,
+                                : (0, r.jsxs)("div", {
+                                      className: o()(er.overlayTitle, er.videoDisabledTitle),
+                                      children: [
+                                          (0, r.jsx)("div", {
+                                              className: er.status,
+                                              children: (0, r.jsx)(u.Amn, {
+                                                  size: "md",
+                                                  color: "currentColor",
+                                              }),
                                           }),
-                                  ],
-                              }),
-                    ],
+                                          (0, r.jsx)(u.Text, {
+                                              variant: "text-sm/normal",
+                                              className: er.overlayTitleText,
+                                              children: en.intl.string(en.t.m2Hyj0),
+                                          }),
+                                      ],
+                                  })
+                            : null,
                 }),
-        ],
-    });
+                !U &&
+                    (0, r.jsxs)("div", {
+                        className: o()(er.overlayBottom, { [er.small]: l < 195 }),
+                        children: [
+                            (0, r.jsxs)(u.Text, {
+                                className: er.experimentOverlayTitle,
+                                color: "none",
+                                variant: B ? "text-sm/normal" : "text-md/normal",
+                                children: [
+                                    null != W &&
+                                        _ === $.fO.USER &&
+                                        (0, r.jsx)(W, {
+                                            className: o()(er.experimentTitleIcon, { [er.compact]: B }),
+                                            size: "xs",
+                                            color: "currentColor",
+                                        }),
+                                    h
+                                        ? (0, r.jsx)("div", {
+                                              className: er.blocked,
+                                              children: (0, r.jsx)(u.t6m, {
+                                                  size: "lg",
+                                                  className: er.blockedIcon,
+                                                  color: s.Z.unsafe_rawColors.RED_400.css,
+                                              }),
+                                          })
+                                        : null,
+                                    p
+                                        ? (0, r.jsx)("div", {
+                                              className: er.ignored,
+                                              children: (0, r.jsx)(u.kZF, {
+                                                  size: "lg",
+                                                  className: er.blockedIcon,
+                                              }),
+                                          })
+                                        : null,
+                                    t
+                                        ? null
+                                        : (0, r.jsx)(eo, {
+                                              participantType: _,
+                                              platform: x,
+                                              className: o()(er.experimentTitleIcon, { [er.compact]: B }),
+                                          }),
+                                    null == n || "" === n || t
+                                        ? null
+                                        : (0, r.jsx)("span", {
+                                              className: o()(er.overlayTitleText, k),
+                                              children: n,
+                                          }),
+                                    C &&
+                                        (0, r.jsx)(c.u, {
+                                            text: en.intl.string(en.t.ZEem6O),
+                                            children: (0, r.jsx)(u.tQf, {
+                                                className: er.secureFramesIcon,
+                                                size: "xs",
+                                                color: s.Z.colors.HEADER_PRIMARY,
+                                                "aria-label": en.intl.string(en.t.mR9cf3),
+                                            }),
+                                        }),
+                                ],
+                            }),
+                            z.length > 0
+                                ? (0, r.jsx)("div", {
+                                      className: er.overlayButtonContainer,
+                                      children: z,
+                                  })
+                                : null,
+                        ],
+                    }),
+            ],
+        })
+    );
 });
 ec.displayName = "CallTileOverlay";
 let eu = j.L,
