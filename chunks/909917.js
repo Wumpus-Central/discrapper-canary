@@ -58,9 +58,7 @@ function u(e) {
     let { giftRecipient: t, onClose: a, analyticsLocations: s, analyticsObject: u } = e;
     return (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("21976"), n.e("16"), n.e("12356"), n.e("76334")]).then(
-                n.bind(n, 841081),
-            );
+            let { default: e } = await Promise.all([n.e("74330"), n.e("16"), n.e("12693")]).then(n.bind(n, 841081));
             return (n) =>
                 (0, r.jsx)(
                     e,

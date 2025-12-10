@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(544891),
     i = n(570140),
     a = n(232567),
@@ -7,27 +7,29 @@ var r = n(544891),
     l = n(594174),
     c = n(626135),
     u = n(960048),
-    d = n(22494),
-    f = n(981631);
-let p = {
-    async fetchWishlist(e, t) {
+    d = n(602733),
+    f = n(22494),
+    p = n(981631);
+let _ = {
+    async fetchWishlist(e, t, n) {
         i.Z.dispatch({
             type: "WISHLIST_FETCH_START",
             wishlistId: e,
         });
         try {
-            var n;
-            let a = await r.tn.get({
-                url: f.ANM.USER_WISHLIST(e),
+            var a;
+            let o = await r.tn.get({
+                url: p.ANM.USER_WISHLIST(e),
+                query: { source: null != n ? n : d.Yw.USER_PROFILE },
                 rejectWithError: !0,
             });
-            (null == (n = a.body) ? void 0 : n.wishlist_items) == null &&
+            (null == (a = o.body) ? void 0 : a.wishlist_items) == null &&
                 u.Z.captureMessage("Wishlist items not found in response");
-            let o = d.Z.fromServer(a.body);
+            let s = f.Z.fromServer(o.body);
             i.Z.dispatch({
                 type: "WISHLIST_FETCH_SUCCESS",
                 wishlistId: e,
-                wishlistData: o,
+                wishlistData: s,
                 updatedAt: t,
             });
         } catch (t) {
@@ -43,11 +45,11 @@ let p = {
         let n = null;
         try {
             n = await r.tn.post({
-                url: f.ANM.USER_WISHLIST_ITEMS,
+                url: p.ANM.USER_WISHLIST_ITEMS,
                 body: { sku_id: e },
                 rejectWithError: !0,
             });
-            let a = d.Z.fromServer(n.body);
+            let a = f.Z.fromServer(n.body);
             if (
                 (i.Z.dispatch({
                     type: "WISHLIST_ADD_SKU_SUCCESS",
@@ -59,7 +61,7 @@ let p = {
             )
                 try {
                     let n = a.getSkuIds();
-                    c.default.track(f.rMx.WISHLIST_UPDATED, {
+                    c.default.track(p.rMx.WISHLIST_UPDATED, {
                         wishlist_id: a.id,
                         action_type: "ADD",
                         sku_id: e,
@@ -87,10 +89,10 @@ let p = {
     async removeSkuFromWishlist(e, t, n) {
         try {
             let a = await r.tn.del({
-                    url: f.ANM.USER_WISHLIST_ITEM(e, t),
+                    url: p.ANM.USER_WISHLIST_ITEM(e, t),
                     rejectWithError: !0,
                 }),
-                o = d.Z.fromServer(a.body);
+                o = f.Z.fromServer(a.body);
             if (
                 (i.Z.dispatch({
                     type: "WISHLIST_REMOVE_SKU_SUCCESS",
@@ -102,7 +104,7 @@ let p = {
             )
                 try {
                     let e = o.getSkuIds();
-                    c.default.track(f.rMx.WISHLIST_UPDATED, {
+                    c.default.track(p.rMx.WISHLIST_UPDATED, {
                         wishlist_id: o.id,
                         action_type: "REMOVE",
                         sku_id: t,
@@ -127,7 +129,7 @@ let p = {
         if (null != n)
             try {
                 await r.tn.patch({
-                    url: f.ANM.USER_WISHLIST_PATCH(e),
+                    url: p.ANM.USER_WISHLIST_PATCH(e),
                     body: { visibility: t },
                     rejectWithError: !0,
                 }),
@@ -151,7 +153,7 @@ let p = {
             }
     },
     async reorderWishlistItem(e, t, n) {
-        let { previousSkuId: a, nextSkuId: s, newWishlistData: l, analyticsLocations: p } = n;
+        let { previousSkuId: a, nextSkuId: s, newWishlistData: l, analyticsLocations: d } = n;
         i.Z.dispatch({
             type: "WISHLIST_REORDER_START",
             wishlistId: e,
@@ -162,30 +164,30 @@ let p = {
         });
         try {
             let n = await r.tn.patch({
-                    url: f.ANM.USER_WISHLIST_ITEM(e, t),
+                    url: p.ANM.USER_WISHLIST_ITEM(e, t),
                     body: {
                         previous_sku_id: a,
                         next_sku_id: s,
                     },
                     rejectWithError: !0,
                 }),
-                o = d.Z.fromServer(n.body);
+                o = f.Z.fromServer(n.body);
             if (
                 (i.Z.dispatch({
                     type: "WISHLIST_REORDER_SUCCESS",
                     wishlistId: e,
                     wishlistData: o,
                 }),
-                null != p)
+                null != d)
             )
                 try {
                     let n = o.getSkuIds();
-                    c.default.track(f.rMx.WISHLIST_UPDATED, {
+                    c.default.track(p.rMx.WISHLIST_UPDATED, {
                         wishlist_id: e,
                         action_type: "REORDER",
                         sku_id: t,
                         sku_ids: n,
-                        location_stack: p,
+                        location_stack: d,
                     });
                 } catch (e) {}
         } catch (n) {

@@ -32,7 +32,7 @@ var r = n(54381),
     N = n(981631),
     P = n(188785),
     R = n(436620);
-function D(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -161,13 +161,13 @@ let j = (0, m.Un)({
                 n.e("46931"),
                 n.e("22516"),
                 n.e("37220"),
-                n.e("29419"),
+                n.e("43778"),
                 n.e("22173"),
                 n.e("20598"),
                 n.e("30634"),
                 n.e("95546"),
                 n.e("13873"),
-                n.e("73755"),
+                n.e("7891"),
                 n.e("77069"),
                 n.e("60831"),
                 n.e("51333"),
@@ -175,7 +175,7 @@ let j = (0, m.Un)({
                 n.e("77803"),
                 n.e("5410"),
                 n.e("53950"),
-                n.e("83037"),
+                n.e("17302"),
                 n.e("69844"),
                 n.e("29709"),
                 n.e("74969"),
@@ -243,15 +243,15 @@ let j = (0, m.Un)({
                 n.e("91053"),
                 n.e("46931"),
                 n.e("37220"),
-                n.e("29419"),
+                n.e("43778"),
                 n.e("22173"),
                 n.e("20598"),
                 n.e("95546"),
                 n.e("13873"),
-                n.e("73755"),
+                n.e("7891"),
                 n.e("60831"),
                 n.e("51333"),
-                n.e("83037"),
+                n.e("17302"),
                 n.e("63141"),
             ]).then(n.bind(n, 290161)),
         webpackId: 290161,
@@ -533,7 +533,7 @@ class ea extends i.Component {
                                     }),
                                     (0, r.jsx)(o.l_, {
                                         from: N.Z5c.CONNECT_AUTHORIZE,
-                                        to: L(w({}, location), { pathname: N.Z5c.OAUTH2_AUTHORIZE }),
+                                        to: L(D({}, location), { pathname: N.Z5c.OAUTH2_AUTHORIZE }),
                                     }),
                                     (0, r.jsx)(o.AW, {
                                         path: [
@@ -588,7 +588,7 @@ function eo() {
 }
 function es(e) {
     let t = eo();
-    return (0, r.jsx)(ea, L(w({}, e), { skipsSettingDefaultPageTitle: t }));
+    return (0, r.jsx)(ea, L(D({}, e), { skipsSettingDefaultPageTitle: t }));
 }
 let el = d.ZP.connectStores(
     [v.default, g.Z],

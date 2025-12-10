@@ -4,8 +4,8 @@ var r = n(54381),
     l = n(370523),
     a = n(442837),
     o = n(952265),
-    c = n(28664),
-    s = n(481060),
+    s = n(28664),
+    c = n(481060),
     u = n(100527),
     d = n(906732),
     f = n(335131),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(621853),
     j = n(5136),
     x = n(471341),
-    _ = n(683881),
-    P = n(661462),
+    P = n(683881),
+    _ = n(661462),
     I = n(319396),
     w = n(654544),
     S = n(778567),
@@ -37,10 +37,10 @@ function k(e) {
               handleOpenGameShop: i,
               socialLayerStorefrontApplicationId: T.t9,
           })
-        : (0, r.jsx)(s.Button, {
+        : (0, r.jsx)(c.Button, {
               variant: "secondary",
               size: "sm",
-              icon: s.EOn,
+              icon: c.EOn,
               text: C.intl.string(C.t["i/yzHs"]),
               onClick: n,
           });
@@ -64,10 +64,10 @@ function N(e) {
                       handleOpenGameShop: l,
                       socialLayerStorefrontApplicationId: o,
                   })
-                : (0, r.jsx)(s.Button, {
+                : (0, r.jsx)(c.Button, {
                       variant: "secondary",
                       size: "sm",
-                      icon: s.qJs,
+                      icon: c.qJs,
                       text: C.intl.string(C.t.SDUwM0),
                       onClick: i,
                   }),
@@ -108,7 +108,10 @@ function A(e) {
     i.useEffect(() => {
         (null == Z ? void 0 : Z.visibility) != null && U(Z.visibility === l.f.PUBLIC);
     }, [null == Z ? void 0 : Z.visibility]);
-    let { wishlist: W, error: H } = (0, h.kZ)(S, n.id),
+    let { wishlist: W, error: H } = (0, h.kZ)({
+            wishlistId: S,
+            userId: n.id,
+        }),
         z = (0, p.Z)({
             location: "user-profile-modal-v2-wishlist",
             wishlist: W,
@@ -157,7 +160,7 @@ function A(e) {
     return null != H
         ? null
         : null == W || 0 === W.items.length
-          ? (0, r.jsx)(P.F, {
+          ? (0, r.jsx)(_.F, {
                 fade: !0,
                 children: (0, r.jsxs)("div", {
                     className: D.emptyStateContainer,
@@ -165,34 +168,34 @@ function A(e) {
                         (0, r.jsxs)("div", {
                             className: D.emptyStateText,
                             children: [
-                                (0, r.jsx)(s.Heading, {
+                                (0, r.jsx)(c.Heading, {
                                     variant: "heading-md/medium",
                                     color: "header-primary",
                                     children: C.intl.string(C.t.HGnLLT),
                                 }),
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(c.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
                                     children: C.intl.string(C.t["/X1ny6"]),
                                 }),
                             ],
                         }),
-                        (0, r.jsxs)(s.ButtonGroup, {
+                        (0, r.jsxs)(c.ButtonGroup, {
                             size: "sm",
                             children: [
                                 L &&
-                                    (0, r.jsx)(s.Button, {
+                                    (0, r.jsx)(c.Button, {
                                         variant: "primary",
                                         size: "sm",
-                                        icon: s.EOn,
+                                        icon: c.EOn,
                                         text: C.intl.string(C.t.ZbS4QB),
                                         onClick: Y,
                                     }),
                                 z &&
-                                    (0, r.jsx)(s.Button, {
+                                    (0, r.jsx)(c.Button, {
                                         variant: "primary",
                                         size: "sm",
-                                        icon: s.EOn,
+                                        icon: c.EOn,
                                         text: B === T.t9 ? C.intl.string(C.t["kq/75v"]) : C.intl.string(C.t.apFNLU),
                                         onMouseDown: X,
                                         onClick: Q,
@@ -202,12 +205,12 @@ function A(e) {
                     ],
                 }),
             })
-          : (0, r.jsxs)(P.F, {
+          : (0, r.jsxs)(_.F, {
                 scrollerRef: w,
                 className: D.scroller,
                 fade: !0,
                 children: [
-                    (0, r.jsx)(_.Z, { scrollerRef: w }),
+                    (0, r.jsx)(P.Z, { scrollerRef: w }),
                     (0, r.jsxs)("div", {
                         ref: V,
                         className: D.headerRow,
@@ -215,20 +218,20 @@ function A(e) {
                             (0, r.jsxs)("div", {
                                 className: D.teenDisclaimer,
                                 children: [
-                                    (0, r.jsx)(s.Text, {
+                                    (0, r.jsx)(c.Text, {
                                         variant: "text-xs/semibold",
                                         color: "text-subtle",
                                         children: C.intl.format(C.t.r6Y1Lg, { count: W.items.length }),
                                     }),
                                     !F &&
-                                        (0, r.jsx)(c.u, {
+                                        (0, r.jsx)(s.u, {
                                             text: C.intl.string(C.t.RX7D9h),
                                             asContainer: !0,
-                                            children: (0, r.jsx)(s.tEY, {
+                                            children: (0, r.jsx)(c.tEY, {
                                                 children: (0, r.jsx)("div", {
                                                     role: "tooltip",
                                                     tabIndex: 0,
-                                                    children: (0, r.jsx)(s.kZF, {
+                                                    children: (0, r.jsx)(c.kZF, {
                                                         size: "custom",
                                                         width: 16,
                                                         height: 16,
@@ -238,14 +241,14 @@ function A(e) {
                                         }),
                                     F &&
                                         M &&
-                                        (0, r.jsx)(c.u, {
+                                        (0, r.jsx)(s.u, {
                                             text: C.intl.string(C.t.d78ChW),
                                             asContainer: !0,
-                                            children: (0, r.jsx)(s.tEY, {
+                                            children: (0, r.jsx)(c.tEY, {
                                                 children: (0, r.jsx)("div", {
                                                     role: "tooltip",
                                                     tabIndex: 0,
-                                                    children: (0, r.jsx)(s.d3s, {
+                                                    children: (0, r.jsx)(c.d3s, {
                                                         size: "custom",
                                                         width: 16,
                                                         height: 16,

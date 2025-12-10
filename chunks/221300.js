@@ -1,23 +1,25 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(979554),
-    l = n(481060),
+    a = n(481060),
     o = n(616066),
-    a = n(566697),
-    s = n(876917),
+    s = n(566697),
+    l = n(876917),
     c = n(688192),
     u = n(232644);
-function d(e) {
-    let { item: t, profileOwner: n, isHighlighted: d, cardSize: f = c.U.MEDIUM } = e,
-        h = t.collectiblesItem;
-    switch (h.type) {
+let d = 136,
+    f = 200;
+function p(e) {
+    let { item: t, profileOwner: n, isHighlighted: p, cardSize: _ = c.U.MEDIUM } = e,
+        m = t.collectiblesItem;
+    switch (m.type) {
         case i.Z.PROFILE_EFFECT:
             return (0, r.jsx)("div", {
                 className: u.profileEffectPreview,
-                children: (0, r.jsx)(s.Z, {
-                    skuId: h.skuId,
-                    isHighlighted: d,
+                children: (0, r.jsx)(l.Z, {
+                    skuId: m.skuId,
+                    isHighlighted: p,
                     isPurchased: !1,
                     removeSetHeight: !0,
                 }),
@@ -26,11 +28,11 @@ function d(e) {
             return (0, r.jsx)("div", {
                 className: u.avatarDecorationPreview,
                 children: (0, r.jsx)(o.R, {
-                    item: h,
+                    item: m,
                     user: n,
-                    isHighlighted: d,
+                    isHighlighted: p,
                     isPurchased: !1,
-                    avatarSize: l.EFr.SIZE_80,
+                    avatarSize: a.EFr.SIZE_80,
                 }),
             });
         case i.Z.NAMEPLATE:
@@ -39,29 +41,29 @@ function d(e) {
                 children: [
                     (0, r.jsx)("div", {
                         className: u.nameplateTopLeft,
-                        children: (0, r.jsx)(a.Z, {
+                        children: (0, r.jsx)(s.Z, {
                             user: n,
-                            nameplate: h,
-                            isHighlighted: d,
+                            nameplate: m,
+                            isHighlighted: p,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             isPurchased: !1,
                             nameplatePreviewSize: "default",
-                            width: f === c.U.SMALL ? 136 : 200,
+                            width: _ === c.U.SMALL ? d : f,
                         }),
                     }),
                     (0, r.jsx)("div", {
                         className: u.nameplateBottomRight,
                         "aria-hidden": !0,
-                        children: (0, r.jsx)(a.Z, {
+                        children: (0, r.jsx)(s.Z, {
                             user: n,
-                            nameplate: h,
-                            isHighlighted: d,
+                            nameplate: m,
+                            isHighlighted: p,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             isPurchased: !1,
                             nameplatePreviewSize: "default",
-                            width: f === c.U.SMALL ? 136 : 200,
+                            width: _ === c.U.SMALL ? d : f,
                         }),
                     }),
                 ],

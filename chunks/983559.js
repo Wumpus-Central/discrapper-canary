@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(787309),
     y = n(687158),
     O = n(612600),
-    x = n(510659),
-    j = n(892001),
+    j = n(510659),
+    x = n(892001),
     v = n(899007),
     C = n(867176),
     I = n(451834),
@@ -76,13 +76,13 @@ function H(e) {
         }),
         q = i.useRef(null),
         { isHoveringOrFocusing: K, isHovering: Q } = (0, p.Z)(q),
-        X = (0, x.$m)(),
+        X = (0, j.$m)(),
         J = (0, o.q_F)({
             opacity: +(null != X.interactionType),
             config: { duration: 150 },
         }),
         $ = (e) => {
-            (0, j.openUserProfileModal)(
+            (0, x.openUserProfileModal)(
                 G(
                     {
                         sourceAnalyticsLocations: W,
@@ -97,7 +97,10 @@ function H(e) {
         et = (null == B ? void 0 : B.widgets) != null && B.widgets.length > 0,
         en = (0, _.g)({ location: "UserProfileSidebar" }),
         { defaultWishlistId: er } = (0, s.cj)([b.Z], () => ({ defaultWishlistId: b.Z.getFirstWishlistId(n.id) })),
-        { wishlist: ei } = (0, f.kZ)(er, n.id),
+        { wishlist: ei } = (0, f.kZ)({
+            wishlistId: er,
+            userId: n.id,
+        }),
         el = en && null != ei && ei.items.length > 0;
     return (0, r.jsx)(u.Gt, {
         value: W,
@@ -107,7 +110,7 @@ function H(e) {
             fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
             fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
             isLoaded: null == B ? void 0 : B.isLoaded,
-            children: (0, r.jsx)(x.NJ, {
+            children: (0, r.jsx)(j.NJ, {
                 value: X,
                 children: (0, r.jsxs)(E.Z, {
                     ref: q,
