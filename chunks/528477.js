@@ -145,6 +145,7 @@ let O = (e) => {
                                       buttonTextOverride: C.intl.string(C.t["8x0jKT"]),
                                       subscriptionTier: _.Si.TIER_2,
                                       size: "sm",
+                                      premiumModalAnalyticsLocation: { page: s.Z.MASKED_LINK },
                                   }),
                               }),
                       ],

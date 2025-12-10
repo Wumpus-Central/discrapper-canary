@@ -3,8 +3,8 @@ var r = n(54381);
 n(473749);
 var l = n(120356),
     i = n.n(l),
-    s = n(87290),
-    o = n(381585),
+    o = n(87290),
+    s = n(381585),
     a = n(953528),
     c = n(788822),
     u = n(388032),
@@ -18,7 +18,7 @@ let g = (e) => {
                 null == n
                     ? void 0
                     : n.subblocks.map((e, n) => {
-                          if (e.type === s.O.CATEGORY) {
+                          if (e.type === o.O.CATEGORY) {
                               let i =
                                   null != e.unpublishedAt
                                       ? u.intl.string(u.t["h/uBCR"])
@@ -39,7 +39,7 @@ let g = (e) => {
                                         ? u.intl.string(u.t.soka7y)
                                         : void 0;
                               return (0, r.jsx)(
-                                  o.k0,
+                                  s.k0,
                                   {
                                       newValue: {
                                           categoryPosition: 1,
@@ -68,9 +68,9 @@ let g = (e) => {
         let { handleTransition: t, categories: n } = e,
             l = (0, a.QH)("collectibles_featured_block");
         if (null == n || n.length < 2) return null;
-        let [s, g] = n,
+        let [o, g] = n,
             f =
-                (null == s ? void 0 : s.unpublishedAt) != null
+                (null == o ? void 0 : o.unpublishedAt) != null
                     ? u.intl.string(u.t["h/uBCR"])
                     : (() => {
                             switch (l) {
@@ -81,8 +81,8 @@ let g = (e) => {
                                     return !1;
                             }
                         })() &&
-                        (null == s ? void 0 : s.storeListingId) != null &&
-                        "" !== s.storeListingId
+                        (null == o ? void 0 : o.storeListingId) != null &&
+                        "" !== o.storeListingId
                       ? u.intl.string(u.t.soka7y)
                       : void 0,
             p =
@@ -103,17 +103,17 @@ let g = (e) => {
                       : u.intl.string(u.t["o/oRJB"]);
         return (0, r.jsx)("div", {
             className: i()(d.col2, d.centeredSection),
-            children: (0, r.jsxs)(o.k0, {
+            children: (0, r.jsxs)(s.k0, {
                 newValue: {
                     categoryPosition: 1,
-                    pageCategory: null != s ? s.name : null == g ? void 0 : g.name,
+                    pageCategory: null != o ? o.name : null == g ? void 0 : g.name,
                     pageSection: "featured_block",
-                    tilePosition: +(null == s),
+                    tilePosition: +(null == o),
                 },
                 children: [
-                    null != s &&
+                    null != o &&
                         (0, r.jsx)(c.q, {
-                            category: s,
+                            category: o,
                             badgeText: f,
                             handleTransition: t,
                         }),
@@ -128,24 +128,24 @@ let g = (e) => {
         });
     },
     p = (e) => {
-        let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: s } = e;
+        let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: o } = e;
         return t
             ? (0, r.jsxs)("div", {
                   className: i()(d.col2, d.centeredSection),
                   children: [
                       (0, r.jsx)("div", {
-                          className: i()(d.skeleton, d.featuredBlock),
-                          children: (0, r.jsx)("div", { className: d.skeletonBody }),
+                          className: i()(d.featuredBlockSkeleton, d.featuredBlock),
+                          children: (0, r.jsx)("div", { className: d.featuredBlockSkeletonLogo }),
                       }),
                       (0, r.jsx)("div", {
-                          className: i()(d.skeleton, d.featuredBlock),
-                          children: (0, r.jsx)("div", { className: d.skeletonBody }),
+                          className: i()(d.featuredBlockSkeleton, d.featuredBlock),
+                          children: (0, r.jsx)("div", { className: d.featuredBlockSkeletonLogo }),
                       }),
                   ],
               })
-            : null != s
+            : null != o
               ? (0, r.jsx)(g, {
-                    featuredBlockRecord: s,
+                    featuredBlockRecord: o,
                     handleTransition: n,
                     isLoading: !1,
                 })
