@@ -33,6 +33,7 @@ function p(e) {
                     className: u.browser,
                     channel: t,
                     onClose: g,
+                    context: "popout",
                 }),
             });
         },

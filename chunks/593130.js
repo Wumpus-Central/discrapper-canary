@@ -10,27 +10,27 @@ var r = n(54381),
     d = n(346479),
     h = n(665906),
     g = n(91159),
-    f = n(443671),
-    m = n(342449),
+    m = n(443671),
+    f = n(342449),
     j = n(488131),
     v = n(124368),
     x = n(981631),
     p = n(388032),
     b = n(715);
 function Z(e) {
-    let { channel: t, className: n, onClose: a } = e,
-        Z = (0, o.e7)([u.Z], () => u.Z.can(x.Plq.READ_MESSAGE_HISTORY, t)),
-        O = (0, h.cD)(t),
-        y = () => {
+    let { channel: t, className: n, onClose: a, context: Z } = e,
+        O = (0, o.e7)([u.Z], () => u.Z.can(x.Plq.READ_MESSAGE_HISTORY, t)),
+        y = (0, h.cD)(t),
+        S = () => {
             a(), (0, j.R6)(t, void 0, "Thread Browser Empty State");
         },
-        S = l.useCallback(
+        N = l.useCallback(
             (e, t) => {
                 a(), (0, j.ok)(e, !t, v.on.BROWSER);
             },
             [a],
         ),
-        N = (function (e, t) {
+        P = (function (e, t) {
             let [n, r] = l.useState(""),
                 [a, s] = l.useState(!1),
                 [o, i] = l.useState(!1),
@@ -77,7 +77,7 @@ function Z(e) {
                             className: b.title,
                             children: p.intl.string(p.t.E3H5lE),
                         }),
-                        Z
+                        O
                             ? (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)("div", { className: b.divider }),
@@ -107,13 +107,13 @@ function Z(e) {
                                                       });
                                               }
                                               return e;
-                                          })({}, N),
+                                          })({}, P),
                                       ),
                                   ],
                               })
                             : null,
                         (0, r.jsx)("div", { className: b.spacer }),
-                        O
+                        y
                             ? (0, r.jsx)("div", {
                                   className: b.createButton,
                                   children: (0, r.jsx)(i.zxk, {
@@ -125,28 +125,28 @@ function Z(e) {
                                   }),
                               })
                             : null,
-                        (0, r.jsx)(c.P3F, {
-                            className: b.closeIcon,
-                            onClick: a,
-                            "aria-label": p.intl.string(p.t.cpT0Cq),
-                            children: (0, r.jsx)(c.Dio, {
-                                size: "md",
-                                color: "currentColor",
-                            }),
-                        }),
+                        "modal" === Z
+                            ? (0, r.jsx)("div", {
+                                  className: b.closeIcon,
+                                  children: (0, r.jsx)(i.PZ7, {
+                                      size: "sm",
+                                      onClick: a,
+                                  }),
+                              })
+                            : null,
                     ],
                 }),
-                children: N.hasResults
-                    ? (0, r.jsx)(f.Z, {
+                children: P.hasResults
+                    ? (0, r.jsx)(m.Z, {
                           channel: t,
-                          startThread: y,
-                          goToThread: S,
-                          threadIds: N.results,
+                          startThread: S,
+                          goToThread: N,
+                          threadIds: P.results,
                       })
-                    : (0, r.jsx)(m.Z, {
+                    : (0, r.jsx)(f.Z, {
                           channel: t,
-                          startThread: y,
-                          goToThread: S,
+                          startThread: S,
+                          goToThread: N,
                       }),
             }),
         })
