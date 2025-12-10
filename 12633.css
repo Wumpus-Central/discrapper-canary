@@ -45247,10 +45247,10 @@ body .headerAnimation_b54a5b {
 }
 
 .bundleMiniProfileEffectContainer__0b5ea {
-    height: 40px;
-    inset-inline-start: 0;
+    height: 44px;
+    inset-inline-start: 6px;
     position: absolute;
-    top: 0;
+    top: 2px;
     transform: rotate(-8deg);
     width: 36px
 }
@@ -45262,7 +45262,7 @@ body .headerAnimation_b54a5b {
 
 .bundleMiniAvatarDecorationContainer__0b5ea {
     height: 26px;
-    inset-inline-end: 3px;
+    inset-inline-end: 0;
     position: absolute;
     top: 5px;
     transform: rotate(8deg);
@@ -45276,12 +45276,12 @@ body .headerAnimation_b54a5b {
 
 .bundleMiniNameplateContainer__0b5ea {
     border-radius: var(--radius-xs);
-    bottom: 0;
+    bottom: 10px;
     height: 12px;
     inset-inline-start: 0;
     overflow: hidden;
     position: absolute;
-    width: 46px
+    width: 100%
 }
 
 .bundleMiniNameplateContainer__0b5ea .nameplateContainer__0b5ea {

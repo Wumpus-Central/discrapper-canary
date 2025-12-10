@@ -6,71 +6,34 @@ var r = n(54381),
     s = n(278074),
     l = n(979554),
     c = n(442837),
-    u = n(481060),
-    d = n(1585),
-    f = n(125988),
+    u = n(780384),
+    d = n(481060),
+    f = n(410030),
     p = n(359135),
     _ = n(516817),
     m = n(731896),
-    h = n(594174),
-    g = n(597688),
-    E = n(328456),
-    b = n(578976),
-    y = n(579407),
-    O = n(755419),
+    h = n(597688),
+    g = n(328456),
+    E = n(578976),
+    b = n(579407),
+    y = n(755419),
+    O = n(616066),
     v = n(187951),
-    S = n(223223);
-function I(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function T(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                I(e, t, n[t]);
-            });
-    }
-    return e;
-}
+    S = n(63243),
+    I = n(244488),
+    T = n(223223);
 let C = (e) => {
-        let { avatarDecoration: t, fallbackLabel: n } = e,
-            i = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
-            { avatarDecorationSrc: a, eventHandlers: o } = (0, f.Z)({
-                user: i,
-                onlyAnimateOnHoverOrFocus: !0,
-                avatarDecorationOverride: t,
-                size: (0, d.y9)(u.EFr.SIZE_40),
-            });
-        return null == t
-            ? n
-            : (0, r.jsx)(
-                  "img",
-                  T(
-                      {
-                          src: a,
-                          alt: t.label,
-                          className: v.avatarDecoration,
-                      },
-                      o,
-                  ),
-              );
+        let { avatarDecoration: t, avatarSize: n } = e,
+            i = (0, f.ZP)(),
+            a = (0, u.ap)(i) ? I : S;
+        return (0, r.jsx)(O.R, {
+            item: t,
+            avatarSize: n,
+            isHighlighted: !1,
+            isPurchased: !1,
+            avatarPlaceholderSrc: a,
+            className: v.avatarDecoration,
+        });
     },
     A = (e) => {
         var t;
@@ -81,14 +44,14 @@ let C = (e) => {
                 thumbnailPreviewSrc: l,
                 title: c,
             } = null != (t = null == o ? void 0 : o.config) ? t : {},
-            u = i.useMemo(() => (0, b.JE)(l), [l]);
+            u = i.useMemo(() => (0, E.JE)(l), [l]);
         return null == o
             ? a
             : (0, r.jsxs)("div", {
                   className: v.profileEffectContainer,
                   children: [
                       (0, r.jsx)("img", {
-                          src: S,
+                          src: T,
                           alt: s,
                           className: v.profileEffectBackground,
                       }),
@@ -112,7 +75,7 @@ let C = (e) => {
                   onMouseEnter: s,
                   onMouseLeave: l,
                   children: (0, r.jsx)(_.Z, {
-                      nameplate: (0, y.EU)(t),
+                      nameplate: (0, b.EU)(t),
                       hovered: a,
                       placement: p.i.MINI_PREVIEW,
                   }),
@@ -120,7 +83,7 @@ let C = (e) => {
     },
     P = (e) => {
         let { product: t, fallbackLabel: n } = e,
-            { firstAvatarDecoration: i, firstProfileEffect: a, firstNameplate: o } = (0, E.Rj)(t);
+            { firstAvatarDecoration: i, firstProfileEffect: a, firstNameplate: o } = (0, g.Rj)(t);
         return null == i && null == a && null == o
             ? n
             : (0, r.jsxs)("div", {
@@ -134,20 +97,20 @@ let C = (e) => {
                                   fallbackLabel: null,
                               }),
                           }),
-                      null != i &&
-                          (0, r.jsx)("div", {
-                              className: v.bundleMiniAvatarDecorationContainer,
-                              children: (0, r.jsx)(C, {
-                                  avatarDecoration: i,
-                                  fallbackLabel: null,
-                              }),
-                          }),
                       null != o &&
                           (0, r.jsx)("div", {
                               className: v.bundleMiniNameplateContainer,
                               children: (0, r.jsx)(N, {
                                   nameplate: o,
                                   fallbackLabel: null,
+                              }),
+                          }),
+                      null != i &&
+                          (0, r.jsx)("div", {
+                              className: v.bundleMiniAvatarDecorationContainer,
+                              children: (0, r.jsx)(C, {
+                                  avatarDecoration: i,
+                                  avatarSize: d.EFr.SIZE_24,
                               }),
                           }),
                   ],
@@ -157,36 +120,36 @@ let C = (e) => {
         var t;
         let { product: n, sku: i, fallbackLabel: a } = e,
             u = null == i ? void 0 : i.id,
-            d = (0, c.e7)([g.Z], () => g.Z.getProduct(null == i ? void 0 : i.id)),
-            f = null != n ? n : d;
-        if ((null == f ? void 0 : f.type) === l.Z.BUNDLE)
+            f = (0, c.e7)([h.Z], () => h.Z.getProduct(null == i ? void 0 : i.id)),
+            p = null != n ? n : f;
+        if ((null == p ? void 0 : p.type) === l.Z.BUNDLE)
             return (0, r.jsx)(P, {
-                product: f,
+                product: p,
                 fallbackLabel: a,
             });
-        let [p] = null != (t = null == f ? void 0 : f.items) ? t : [];
-        return void 0 !== u && u in O.K
-            ? O.K[u].render({
+        let [_] = null != (t = null == p ? void 0 : p.items) ? t : [];
+        return void 0 !== u && u in y.K
+            ? y.K[u].render({
                   animationState: "on_hover",
                   className: v.externalProductAsset,
               })
-            : (0, s.EQ)(null == p ? void 0 : p.type)
+            : (0, s.EQ)(null == _ ? void 0 : _.type)
                   .with(
                       l.Z.AVATAR_DECORATION,
                       () => (
-                          o()(p.type === l.Z.AVATAR_DECORATION, "ts-match checked the type"),
+                          o()(_.type === l.Z.AVATAR_DECORATION, "ts-match checked the type"),
                           (0, r.jsx)(C, {
-                              avatarDecoration: p,
-                              fallbackLabel: a,
+                              avatarDecoration: _,
+                              avatarSize: d.EFr.SIZE_40,
                           })
                       ),
                   )
                   .with(
                       l.Z.PROFILE_EFFECT,
                       () => (
-                          o()(p.type === l.Z.PROFILE_EFFECT, "ts-match checked the type"),
+                          o()(_.type === l.Z.PROFILE_EFFECT, "ts-match checked the type"),
                           (0, r.jsx)(A, {
-                              profileEffect: p,
+                              profileEffect: _,
                               fallbackLabel: a,
                           })
                       ),
@@ -194,9 +157,9 @@ let C = (e) => {
                   .with(
                       l.Z.NAMEPLATE,
                       () => (
-                          o()(p.type === l.Z.NAMEPLATE, "ts-match checked the type"),
+                          o()(_.type === l.Z.NAMEPLATE, "ts-match checked the type"),
                           (0, r.jsx)(N, {
-                              nameplate: p,
+                              nameplate: _,
                               fallbackLabel: a,
                           })
                       ),
