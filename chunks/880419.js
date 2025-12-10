@@ -7,8 +7,8 @@ var r = n(54381),
     s = n(159691),
     c = n(481060),
     u = n(762762),
-    d = n(973772),
-    f = n(279604),
+    d = n(448222),
+    f = n(973772),
     h = n(535396),
     p = n(810878),
     g = n(388032),
@@ -16,8 +16,8 @@ var r = n(54381),
 function b(e) {
     var t, n;
     let { guildId: l, powerup: b, compact: _, iconSize: y, size: O, grow: v, className: j, onError: x } = e,
-        { onActivate: C, isLoading: E, error: S, onShowDeactivate: I } = (0, f.ZP)(l, b),
-        P = (0, d.ZP)(l, b),
+        { onActivate: C, isLoading: E, error: S, onShowDeactivate: I } = (0, d.Z)(l, b),
+        P = (0, f.ZP)(l, b),
         N = P.type !== h.A3.INACTIVE,
         { disabled: Z, reason: w } = (0, u.Z)(l, b, N),
         T =
@@ -128,7 +128,9 @@ function b(e) {
                                 variant: N ? "secondary" : "primary",
                                 "aria-label": g.intl.string(N ? p.default.TZsu1U : p.default.gSxlHf),
                                 disabled: Z,
-                                onClick: N ? I : C,
+                                onClick: (e) => {
+                                    e.stopPropagation(), N ? I() : C();
+                                },
                                 loading: E,
                                 fullWidth: v,
                                 size: null != O ? O : _ ? "md" : void 0,

@@ -15,9 +15,9 @@ var r = n(54381),
     f = n(430824),
     b = n(870246),
     m = n(158638),
-    p = n(795338),
-    k = n(17622),
-    g = n(279604),
+    p = n(448222),
+    k = n(795338),
+    g = n(17622),
     x = n(535396),
     v = n(810878),
     O = n(388032),
@@ -159,13 +159,14 @@ function T(e) {
 function h(e) {
     var { guildId: t, powerup: n } = e,
         l = _(e, ["guildId", "powerup"]);
-    let { onDeactivate: h, error: y, isLoading: w } = (0, g.ZP)(t, n),
+    let { onDeactivate: h, error: y, isLoading: w } = (0, p.Z)(t, n),
         { onClose: C } = l,
         E = o.useCallback(
             (e) => {
-                h(e).then(() => {
-                    null == C || C();
-                });
+                e.stopPropagation(),
+                    h().then(() => {
+                        null == C || C();
+                    });
             },
             [C, h],
         ),
@@ -253,9 +254,9 @@ function h(e) {
                     body: (() => {
                         switch (n.type) {
                             case x.Us.LEVEL:
-                                return (0, r.jsx)(k.Z, { powerup: n });
+                                return (0, r.jsx)(g.Z, { powerup: n });
                             case x.Us.PERK:
-                                return (0, r.jsx)(p.m, {
+                                return (0, r.jsx)(k.m, {
                                     className: I.image,
                                     powerup: n,
                                 });

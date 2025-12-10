@@ -14,7 +14,7 @@ var l = t(54381),
     c = t(975104),
     d = t(823379),
     m = t(713081),
-    v = t(279604),
+    v = t(473952),
     f = t(905551),
     g = t(578756),
     p = t(60482),
@@ -47,7 +47,7 @@ function y(e) {
         T = (0, a.e7)([o.Z], () => o.Z.getGuild(k)),
         { analyticsLocations: G } = (0, r.ZP)(w),
         [L, R] = i.useState(null != (n = P.initialStep) ? n : Object.keys(P.steps)[0]),
-        A = (0, v.Td)(k, void 0),
+        A = (0, v.Z)(k, void 0),
         D = P.steps[L],
         [B, V] = i.useState(null == C ? void 0 : C.id);
     i.useEffect(() => {

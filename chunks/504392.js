@@ -26,15 +26,15 @@ var r = n(54381),
     g = n(773149),
     v = n(713081),
     x = n(905128),
-    _ = n(639777),
-    b = n(169010),
-    h = n(27237),
-    j = n(426771),
-    C = n(51859),
-    Z = n(184478),
-    w = n(877362),
-    I = n(460608),
-    E = n(279604),
+    _ = n(238343),
+    b = n(639777),
+    h = n(169010),
+    j = n(27237),
+    C = n(426771),
+    Z = n(51859),
+    w = n(184478),
+    I = n(877362),
+    E = n(460608),
     P = n(385902),
     T = n(332538),
     y = n(857666),
@@ -54,14 +54,14 @@ function R(e) {
         }, [t]),
         (0, T.Wj)(t);
     let L = (0, a.e7)([x.Z], () => x.Z.getStateForGuild(t)),
-        U = (0, _.Z)(t),
+        U = (0, b.Z)(t),
         M = i.useRef(!1),
         { shouldShow: D, modalConfig: V } = (0, P.K)(t, "GuildPowerupsOverview"),
         G = null == l && null != V,
         B = [];
     D && G && B.push(s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
     let [W, F] = (0, c.US)(B),
-        z = (0, b._P)(t, R),
+        z = (0, h._P)(t, R),
         K = z
             .flatMap((e) => e.listings)
             .filter((e) => "multiPerk" === e.type)
@@ -72,7 +72,7 @@ function R(e) {
             for (let e of z)
                 for (let n of e.listings) {
                     if (("singleLevel" === n.type || "singlePerk" === n.type) && n.powerup.skuId === l) {
-                        (0, E.KE)(t, n.powerup), (M.current = !0);
+                        (0, _.KE)(t, n.powerup), (M.current = !0);
                         return;
                     }
                     if ("multiPerk" === n.type && (n.group === l || n.powerups.some((e) => e.skuId === l))) {
@@ -211,7 +211,7 @@ function R(e) {
                                                           case "singleLevel":
                                                               var l;
                                                               return (0, r.jsx)(
-                                                                  h.ZP,
+                                                                  j.ZP,
                                                                   {
                                                                       guildId: t,
                                                                       index: n,
@@ -223,7 +223,7 @@ function R(e) {
                                                               );
                                                           case "singlePerk":
                                                               return (0, r.jsx)(
-                                                                  C.Z,
+                                                                  Z.Z,
                                                                   {
                                                                       guildId: t,
                                                                       powerup: e.powerup,
@@ -232,7 +232,7 @@ function R(e) {
                                                               );
                                                           case "multiPerk":
                                                               return (0, r.jsx)(
-                                                                  j.Z,
+                                                                  C.Z,
                                                                   {
                                                                       guildId: t,
                                                                       group: e.group,
@@ -258,8 +258,8 @@ function R(e) {
                           (0, r.jsxs)("div", {
                               className: k.sidebarContainer,
                               children: [
-                                  U ? (0, r.jsx)(Z.Z, { guildId: t }) : (0, r.jsx)(w.Z, { guildId: t }),
-                                  (0, r.jsx)(I.Z, { guildId: t }),
+                                  U ? (0, r.jsx)(w.Z, { guildId: t }) : (0, r.jsx)(I.Z, { guildId: t }),
+                                  (0, r.jsx)(E.Z, { guildId: t }),
                               ],
                           }),
                       ],
