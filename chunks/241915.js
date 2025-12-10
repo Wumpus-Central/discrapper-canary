@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => N,
-    _: () => A,
+    _: () => C,
 }),
     n(388685);
 var r,
@@ -87,7 +87,7 @@ function T(e) {
         className: s()(_.resizeHandle, v[l]),
     });
 }
-class A extends (r = a.PureComponent) {
+class C extends (r = a.PureComponent) {
     componentDidMount() {
         this.setPosition(this.props.position);
     }
@@ -356,11 +356,11 @@ class A extends (r = a.PureComponent) {
             });
     }
 }
-m(A, "defaultProps", {
+m(C, "defaultProps", {
     hidden: !1,
     roundCorners: !0,
 });
-let C = (e) => {
+let A = (e) => {
         let {
                 selectedPIPWindow: t,
                 pipWindows: n,
@@ -377,7 +377,7 @@ let C = (e) => {
                 className: S,
                 getDockedRectPositionY: I,
             } = e,
-            [T, C] = a.useState(!1),
+            [T, A] = a.useState(!1),
             N = a.useMemo(
                 () =>
                     null == t
@@ -391,10 +391,10 @@ let C = (e) => {
                 [n, t, r, m],
             ),
             P = a.useCallback(() => {
-                C(!0);
+                A(!0);
             }, []),
             R = a.useCallback(() => {
-                C(!1);
+                A(!1);
             }, []),
             D = a.useMemo(() => n.some((e) => e.component === f.NYg.ACTIVITY), [n]),
             w = a.useMemo(() => n.some((e) => e.component === f.NYg.FRAME), [n]);
@@ -403,7 +403,7 @@ let C = (e) => {
             : (0, i.jsx)(d.ZP, {
                   children: (0, i.jsx)("div", {
                       className: s()(_.pictureInPicture, { [_.dragging]: T }, S),
-                      children: (0, i.jsx)(A, {
+                      children: (0, i.jsx)(C, {
                           appContext: g,
                           position: t.position,
                           id: t.id,
@@ -428,4 +428,4 @@ let C = (e) => {
                   }),
               });
     },
-    N = a.memo(C);
+    N = a.memo(A);

@@ -26,8 +26,8 @@ var r = n(473749),
     S = n(880511),
     I = n(985443),
     T = n(612253),
-    A = n(872532),
-    C = n(398300),
+    C = n(872532),
+    A = n(398300),
     N = n(184071),
     P = n(368243),
     R = n(119121),
@@ -112,7 +112,7 @@ let ef = (e, t) =>
         ec(
             {
                 serverProfiles: {
-                    thumbnail: A,
+                    thumbnail: C,
                     assetUrl: e ? en.ZP : er.ZP,
                 },
                 customThemes: {
@@ -124,7 +124,7 @@ let ef = (e, t) =>
                     assetUrl: e ? N.Z : R.Z,
                 },
                 recurring3PPromotions: {
-                    thumbnail: C.Z,
+                    thumbnail: A.Z,
                     assetUrl: " ",
                 },
             },
@@ -201,9 +201,9 @@ let ef = (e, t) =>
                     });
                 }
             },
-            A = (0, f.rO)(),
-            C = p.Z.getArticleURL(g.BhN.REFERRAL_PROGRAM),
-            N = ef(A, (0, _.Z)({ location: "useBentoBoxes" })),
+            C = (0, f.rO)(),
+            A = p.Z.getArticleURL(g.BhN.REFERRAL_PROGRAM),
+            N = ef(C, (0, _.Z)({ location: "useBentoBoxes" })),
             P = {
                 name: "serverProfiles",
                 title: b.intl.string(b.t.I9TYMg),
@@ -216,7 +216,7 @@ let ef = (e, t) =>
             R = {
                 name: "referralProgram",
                 title: b.intl.string(b.t.tPY4o9),
-                description: b.intl.format(b.t.jRPQUH, { learnMoreLink: C }),
+                description: b.intl.format(b.t.jRPQUH, { learnMoreLink: A }),
                 previewImage: N.referralProgram.thumbnail,
                 videoUrl: N.referralProgram.assetUrl,
             },

@@ -211,9 +211,9 @@ function T(e) {
                             }),
                         }),
                     }),
-                    (0, r.jsx)(A, { badge: i }),
+                    (0, r.jsx)(C, { badge: i }),
                     null != n && null != a && j,
-                    null != l && (0, r.jsx)(C, { subtitle: l }),
+                    null != l && (0, r.jsx)(A, { subtitle: l }),
                 ],
             }),
         });
@@ -225,7 +225,7 @@ function T(e) {
           })
         : k;
 }
-function A(e) {
+function C(e) {
     let { badge: t } = e;
     if (null == t) return null;
     let n = (0, l.R)(t);
@@ -234,7 +234,7 @@ function A(e) {
         children: (0, r.jsx)(l.C, y({}, n)),
     });
 }
-function C(e) {
+function A(e) {
     let { subtitle: t } = e;
     if (null == t) return null;
     let n = (0, r.jsx)(h.x, {

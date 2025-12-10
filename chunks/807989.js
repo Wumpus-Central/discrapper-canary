@@ -31,17 +31,17 @@ function b(e) {
         { application: i, scopes: l, redirectUri: b, approximateGuildCount: O, isEmbeddedFlow: v, disclosures: S } = e,
         I = new Date(f.default.extractTimestamp(i.id)),
         T = (0, _.W3)(l),
-        A = (0, s.yE)(null != (t = i.flags) ? t : 0, m.udG.EMBEDDED);
-    if (null != b && !A && !v)
+        C = (0, s.yE)(null != (t = i.flags) ? t : 0, m.udG.EMBEDDED);
+    if (null != b && !C && !v)
         try {
             let e = new URL(b);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href;
         } catch (e) {
             n = null;
         }
-    let C = u.w.useExperiment({ location: "oauth2_authorize" });
+    let A = u.w.useExperiment({ location: "oauth2_authorize" });
     return (0, r.jsxs)("div", {
-        className: a()(g.applicationDetails, { [g.noPadding]: C.enabled }),
+        className: a()(g.applicationDetails, { [g.noPadding]: A.enabled }),
         children: [
             null != n
                 ? (0, r.jsx)(y, {

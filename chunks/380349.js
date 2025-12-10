@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -11,31 +11,31 @@ var i = n(442837),
     d = n(203777),
     p = n(616922),
     f = n(388032);
-function h(e, t, n) {
-    let h = (0, i.e7)([s.Z, a.default], () => (null != t ? (0, c.Z)(s.Z, a.default, t, e) : void 0), [e, t]);
-    if (null == h || null == e || null == t) return null;
-    let g = h.isCurrentUser || h.notPlayable || h.playingSameTrack,
-        m = h.isCurrentUser || h.syncingWithUser || h.syncingWithParty;
+function g(e, t, n) {
+    let g = (0, i.e7)([s.Z, a.default], () => (null != t ? (0, c.Z)(s.Z, a.default, t, e) : void 0), [e, t]);
+    if (null == g || null == e || null == t) return null;
+    let h = g.isCurrentUser || g.notPlayable || g.playingSameTrack,
+        m = g.isCurrentUser || g.syncingWithUser || g.syncingWithParty;
     return [
         (0, r.jsx)(
             l.sNh,
             {
                 id: "spotify-play-".concat(e.session_id),
-                action: () => (0, d.Z)(h, p.kG.USER_ACTIVITY_PLAY, n),
+                action: () => (0, d.Z)(g, p.kG.USER_ACTIVITY_PLAY, n),
                 label: f.intl.string(f.t.rRffNz),
-                subtext: g ? (0, o.Z)(h, p.kG.USER_ACTIVITY_PLAY) : void 0,
-                disabled: g,
+                subtext: h ? (0, o.Z)(g, p.kG.USER_ACTIVITY_PLAY) : void 0,
+                disabled: h,
             },
             "spotify-play-".concat(e.session_id),
         ),
-        h.canPlaySpotify
+        g.canPlaySpotify
             ? (0, r.jsx)(
                   l.sNh,
                   {
                       id: "spotify-sync-".concat(e.session_id),
-                      action: () => (0, u.Z)(h, p.kG.USER_ACTIVITY_SYNC, n),
+                      action: () => (0, u.Z)(g, p.kG.USER_ACTIVITY_SYNC, n),
                       label: f.intl.string(f.t.eU3inB),
-                      subtext: m ? (0, o.Z)(h, p.kG.USER_ACTIVITY_SYNC) : void 0,
+                      subtext: m ? (0, o.Z)(g, p.kG.USER_ACTIVITY_SYNC) : void 0,
                       disabled: m,
                   },
                   "spotify-sync-".concat(e.session_id),

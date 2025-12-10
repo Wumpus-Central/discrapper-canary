@@ -29,10 +29,10 @@ function m(e, t, n) {
                         ? null == E || E(new Set(t.selectionManager.selectedKeys))
                         : null == E || E(new Set([m.key]))));
         },
-        A = (0, u.Kf)();
-    "virtual" === A && "undefined" != typeof window && "ontouchstart" in window && (A = "pointer");
-    let C = E && ("keyboard" === A || "virtual" === A) ? h.format("removeDescription") : "",
-        N = (0, o.P)(C),
+        C = (0, u.Kf)();
+    "virtual" === C && "undefined" != typeof window && "ontouchstart" in window && (C = "pointer");
+    let A = E && ("keyboard" === C || "virtual" === C) ? h.format("removeDescription") : "",
+        N = (0, o.P)(A),
         P = m.key === t.selectionManager.focusedKey,
         R = null != t.selectionManager.focusedKey,
         D = -1;

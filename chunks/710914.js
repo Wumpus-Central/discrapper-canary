@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -10,13 +10,13 @@ var r = n(54381),
     d = n(862657),
     p = n(415104),
     f = n(388032),
-    h = n(334525);
-function g(e) {
+    g = n(334525);
+function h(e) {
     let {
             quests: t,
             excludedQuests: n,
             isFetching: l,
-            hasFetched: g,
+            hasFetched: h,
             hasFiltersApplied: m = !1,
             onClearFilters: _,
         } = e,
@@ -34,7 +34,7 @@ function g(e) {
         b.current = !1;
     }, [E.hash]),
         i.useEffect(() => {
-            if (null == O || b.current || l || !g) return;
+            if (null == O || b.current || l || !h) return;
             let e = document.getElementById("quest-tile-".concat(O));
             null == e ||
                 e.scrollIntoView({
@@ -42,7 +42,7 @@ function g(e) {
                     block: "center",
                 }),
                 (b.current = !0);
-        }, [t, O, E, l, g]);
+        }, [t, O, E, l, h]);
     let v = null != O,
         [y, I] = i.useState(window.innerWidth);
     i.useEffect(() => {
@@ -58,10 +58,10 @@ function g(e) {
     }, []);
     let C = y >= 1610 ? 3 : y >= 1340 ? 2 : 1;
     return l && 0 === t.length
-        ? (0, r.jsx)(c.$jN, { className: h.spinner })
+        ? (0, r.jsx)(c.$jN, { className: g.spinner })
         : 0 === t.length
           ? (0, r.jsxs)("div", {
-                className: h.emptyStateContainer,
+                className: g.emptyStateContainer,
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-xl/semibold",
@@ -77,7 +77,7 @@ function g(e) {
           : (0, r.jsx)(
                 "div",
                 {
-                    className: h.container,
+                    className: g.container,
                     children: t.map((e, t) => {
                         let n = Math.floor(t / C);
                         return (0, r.jsx)(
@@ -87,9 +87,9 @@ function g(e) {
                                 questContent: u.jn.QUEST_HOME_DESKTOP,
                                 contentPosition: t,
                                 rowIndex: n,
-                                className: a()(h.questTile, {
-                                    [h.selected]: v && e.id === O,
-                                    [h.unselected]: v && e.id !== O,
+                                className: a()(g.questTile, {
+                                    [g.selected]: v && e.id === O,
+                                    [g.unselected]: v && e.id !== O,
                                 }),
                                 sourceQuestContent: u.jn.QUEST_HOME_DESKTOP,
                             },

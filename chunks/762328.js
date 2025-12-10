@@ -83,8 +83,8 @@ function b(e) {
             autoFlip: S = !0,
             autoShift: I = !0,
             strategy: T = "fixed",
-            portal: A = !0,
-            blockPointerEvents: C = !1,
+            portal: C = !0,
+            blockPointerEvents: A = !1,
             children: N,
             renderLayer: P,
             viewportPadding: R = g,
@@ -137,7 +137,7 @@ function b(e) {
         }),
         { getReferenceProps: F, getFloatingProps: V } = (0, o.NI)([Z, B]),
         H = (null == (t = k.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
-        Y = A ? d.UU : i.Fragment;
+        Y = C ? d.UU : i.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             N({
@@ -147,7 +147,7 @@ function b(e) {
             l &&
                 (0, r.jsxs)(Y, {
                     children: [
-                        C ? (0, r.jsx)(o.y0, {}) : null,
+                        A ? (0, r.jsx)(o.y0, {}) : null,
                         (0, r.jsx)(
                             "div",
                             h(

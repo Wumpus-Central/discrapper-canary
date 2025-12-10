@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(264418),
@@ -11,26 +11,26 @@ var i = n(264418),
     d = n(474936),
     p = n(921944),
     f = n(388032),
-    h = n(21299);
-let g = (e) => {
-    let { targetElementRef: t, discountOffer: g, premiumSubscription: m, dismissCoachmark: _, children: b } = e,
+    g = n(21299);
+let h = (e) => {
+    let { targetElementRef: t, discountOffer: h, premiumSubscription: m, dismissCoachmark: _, children: b } = e,
         { analyticsLocations: E } = (0, s.ZP)(a.Z.CHURN_DISCOUNT_POPOVER),
-        O = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, g, m),
+        O = (0, c.W7)(d.Xh.PREMIUM_MONTH_TIER_2, h, m),
         v = (0, r.jsx)(i.Z, {
             targetElementRef: t,
             position: "right",
             align: "top",
             size: "md",
             caretConfig: { align: "start" },
-            title: f.intl.format(f.t["3yZP0G"], { percent: g.discount.amount }).toString(),
+            title: f.intl.format(f.t["3yZP0G"], { percent: h.discount.amount }).toString(),
             body: f.intl.format(f.t["3Q4wCy"], {
                 discountedPrice: O,
-                billingPeriod: (0, o.JP)(g.discount.user_usage_limit_interval),
-                numMonths: g.discount.user_usage_limit,
+                billingPeriod: (0, o.JP)(h.discount.user_usage_limit_interval),
+                numMonths: h.discount.user_usage_limit,
             }),
             graphic: {
                 type: "image",
-                src: h.Z,
+                src: g.Z,
             },
             gradientColor: "nitro-pink",
             actions: [

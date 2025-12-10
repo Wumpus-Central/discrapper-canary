@@ -39,8 +39,8 @@ var O = n(807675),
     S = n(226951),
     I = n(591759),
     T = n(960904),
-    A = n(981631);
-let C = 10,
+    C = n(981631);
+let A = 10,
     N = /^\/([a-zA-Z0-9-]+)$/,
     P = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
     R = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
@@ -57,9 +57,9 @@ let C = 10,
     B = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     F = X(window.GLOBAL_ENV.INVITE_HOST),
     V = X(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    H = X(null != (o = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? o : "//canary.".concat(A.$R1)),
-    Y = X("//canary.".concat(A.$R1)),
-    W = X("//ptb.".concat(A.$R1)),
+    H = X(null != (o = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? o : "//canary.".concat(C.$R1)),
+    Y = X("//canary.".concat(C.$R1)),
+    W = X("//ptb.".concat(C.$R1)),
     K = X("discordapp.com"),
     z = X("discord.com"),
     q = [
@@ -169,7 +169,7 @@ function es(e) {
     if (null == (r = (null != r ? r : []).concat(null != i ? i : [])) || 0 === r.length) return [];
     for (let e of r) {
         var a, o, s, l;
-        if (n.length >= C) break;
+        if (n.length >= A) break;
         let { url: r, inviteHostRemainingPath: i, templateHostRemainingPath: c, primaryHostRemainingPath: u } = ea(e);
         if (null == r || null == r.pathname) continue;
         let d = (r, i) => {
@@ -237,8 +237,8 @@ function es(e) {
         null != S && d(T.g.GUILD_PRODUCT, "".concat(S[1], "-").concat(S[2]));
         let I = null == u ? void 0 : u.match(k);
         null != I && d(T.g.SERVER_SHOP, I[1]);
-        let A = null == u ? void 0 : u.match(M);
-        null != A && d(T.g.SOCIAL_LAYER_STOREFRONT, "".concat(A[3], "-").concat(null != (o = A[1]) ? o : A[2]));
+        let C = null == u ? void 0 : u.match(M);
+        null != C && d(T.g.SOCIAL_LAYER_STOREFRONT, "".concat(C[3], "-").concat(null != (o = C[1]) ? o : C[2]));
         let D = el(e);
         if ((null != D && d(T.g.QUESTS_EMBED, D), "/shop" === u)) {
             let e = null != r.query ? (0, _.parse)(r.query).tab : null,

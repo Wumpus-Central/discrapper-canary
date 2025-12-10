@@ -53,7 +53,7 @@ let h = {
                         y(!0);
                 }
             }, [p, w, P, N, b, C, t]),
-            M = a.useCallback(
+            k = a.useCallback(
                 (e) => {
                     x(e),
                         null == v ||
@@ -64,7 +64,7 @@ let h = {
                 },
                 [v],
             ),
-            k = a.useCallback(
+            M = a.useCallback(
                 (e) => {
                     null != p && (p.currentTime = e);
                 },
@@ -111,9 +111,9 @@ let h = {
                 }),
                 (0, l.jsx)(d.Z, {
                     playing: b,
-                    onPlaybackChange: k,
+                    onPlaybackChange: M,
                     onPausePlayback: P,
-                    onChangePosition: M,
+                    onChangePosition: k,
                     disabled: i,
                 }),
             ],

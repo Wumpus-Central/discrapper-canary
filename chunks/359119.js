@@ -82,7 +82,7 @@ function g(e) {
     let { safetyWarnings: t } = e;
     null != t &&
         ((_[e.id] = t),
-        t.some((e) => h(e) && null != e.dismiss_timestamp && !A(e.dismiss_timestamp)) ? m.add(e.id) : m.delete(e.id)),
+        t.some((e) => h(e) && null != e.dismiss_timestamp && !C(e.dismiss_timestamp)) ? m.add(e.id) : m.delete(e.id)),
         null == t && (null != _[e.id] && delete _[e.id], m.delete(e.id));
 }
 function E(e) {
@@ -124,10 +124,10 @@ function T() {
             g(e);
         });
 }
-function A(e) {
+function C(e) {
     return new Date(e).getTime() > Date.now() - u;
 }
-class C extends r.ZP.Store {
+class A extends r.ZP.Store {
     initialize() {
         this.waitFor(a.Z);
     }
@@ -143,7 +143,7 @@ class C extends r.ZP.Store {
         return m.has(e);
     }
 }
-let N = new C(i.Z, {
+let N = new A(i.Z, {
     CHANNEL_CREATE: E,
     CHANNEL_DELETE: y,
     CHANNEL_UPDATES: b,

@@ -1,7 +1,7 @@
 n.d(t, {
     L6: () => N,
     ZP: () => m,
-    iF: () => C,
+    iF: () => A,
 }),
     n(388685),
     n(539854),
@@ -57,7 +57,7 @@ function E(e) {
 }
 function b(e, t, n, r, i) {
     var a;
-    let o = A(t),
+    let o = C(t),
         l = o[0],
         c = o[o.length - 1],
         u = null;
@@ -170,7 +170,7 @@ function T(e, t) {
     let a = i.value.split("\n");
     return I.set(n, a), a;
 }
-function A(e) {
+function C(e) {
     let t,
         [n, r] = e;
     if (!p.has(n.type)) return [];
@@ -192,7 +192,7 @@ function A(e) {
     }
     return i;
 }
-function C(e, t) {
+function A(e, t) {
     let n = 0;
     for (let i of d.bN.nodes(e, {
         at: {
@@ -216,5 +216,5 @@ function C(e, t) {
 function N(e) {
     if (null == e.selection) return !1;
     let t = d.M8.start(e.selection);
-    return C(e, t);
+    return A(e, t);
 }

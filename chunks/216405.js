@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(579092),
     i = n(46973),
     a = n(846027),
@@ -46,9 +46,9 @@ class T extends o.Z {
         if (T.preset !== E.ApplicationStreamPresets.PRESET_AUTO) return;
         if ((null == (e = c.Z.getStreamerActiveStreamMetadata()) ? void 0 : e.id) != null)
             return void S.info("Skipping auto quality checker for game stream.");
-        let A = s.Z.getAccumulatedPerformanceStats(m.getMediaEngineConnectionId(), o.ownerId, "long"),
-            C = (null != (t = m.analyticsContext.getDuration()) ? t : 30) >= 30 * _.Z.Millis.SECOND ? 30 : 15;
-        if (null == A || A.numDatapoints < C) return;
+        let C = s.Z.getAccumulatedPerformanceStats(m.getMediaEngineConnectionId(), o.ownerId, "long"),
+            A = (null != (t = m.analyticsContext.getDuration()) ? t : 30) >= 30 * _.Z.Millis.SECOND ? 30 : 15;
+        if (null == C || C.numDatapoints < A) return;
         let N = p.default.getCurrentUser(),
             P = u.Z.getGuild(o.guildId),
             [R, D] =
@@ -62,7 +62,7 @@ class T extends o.Z {
                     : [E.ApplicationStreamResolutions.RESOLUTION_720, E.ApplicationStreamFPS.FPS_30],
             L = null;
         if (
-            (A.entropy < y && (T.resolution !== R || T.fps !== D)
+            (C.entropy < y && (T.resolution !== R || T.fps !== D)
                 ? (S.info("Low entropy average, switching to screenshare preset."),
                   (L = {
                       qualityOptions: {
@@ -72,7 +72,7 @@ class T extends o.Z {
                       },
                       context: i.Yn.STREAM,
                   }))
-                : A.entropy > O &&
+                : C.entropy > O &&
                   (T.resolution !== w || T.fps !== x) &&
                   (S.info("High entropy average, switching to video preset."),
                   (L = {
@@ -111,4 +111,4 @@ class T extends o.Z {
             });
     }
 }
-let A = new T();
+let C = new T();

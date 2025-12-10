@@ -72,8 +72,8 @@ function S(e) {
         { analyticsLocations: b } = (0, c.ZP)(l.Z.GIFT_BUTTON),
         O = (0, _.Ft)(i),
         { Component: S, events: I, play: T } = (0, a.$)(),
-        { enabled: A } = d.G.useExperiment({ location: "gift-button" }, { autoTrackExposure: !1 }),
-        C = i.type === h.d4z.DM,
+        { enabled: C } = d.G.useExperiment({ location: "gift-button" }, { autoTrackExposure: !1 }),
+        A = i.type === h.d4z.DM,
         N = (0, p.ao)({
             location: "gift-button",
             isGift: !0,
@@ -81,7 +81,7 @@ function S(e) {
         });
     if (t) return null;
     let P = () => {
-        N && C && null != O
+        N && A && null != O
             ? (0, f.Z)({
                   giftRecipient: O,
                   analyticsLocations: b,
@@ -92,7 +92,7 @@ function S(e) {
                       objectType: h.AnalyticsObjectTypes.GIFT,
                   },
               })
-            : A && C && null != O
+            : C && A && null != O
               ? (0, s.ZDy)(async () => {
                     let { default: e } = await n.e("59207").then(n.bind(n, 435626));
                     return (t) =>

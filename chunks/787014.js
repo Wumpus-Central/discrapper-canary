@@ -110,8 +110,8 @@ async function m(e, t) {
             videoQualityMode: S,
             autoArchiveDuration: I,
             locked: T,
-            invitable: A,
-            availableTags: C,
+            invitable: C,
+            availableTags: A,
             defaultSortOrder: N,
             defaultForumLayout: P,
             defaultTagSetting: R,
@@ -143,7 +143,7 @@ async function m(e, t) {
                     video_quality_mode: S,
                     auto_archive_duration: I,
                     locked: T,
-                    invitable: A,
+                    invitable: C,
                     default_reaction_emoji:
                         null != O
                             ? {
@@ -154,9 +154,9 @@ async function m(e, t) {
                               ? null
                               : void 0,
                     available_tags:
-                        null == C
+                        null == A
                             ? void 0
-                            : C.map((e) => ({
+                            : A.map((e) => ({
                                   id: e.id,
                                   name: e.name,
                                   emoji_id: e.emojiId,

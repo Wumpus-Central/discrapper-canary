@@ -185,9 +185,9 @@ let C = (e) => {
                 isSupportedPrivateBrowsingPerkPlatform: H,
                 setGetWarpInstallationStatus: W,
                 perkAvailableToUser: z,
-                setPerkAvailableToUser: K,
+                setPerkAvailableToUser: q,
             } = (0, i.o)(R),
-            q = r.useCallback(
+            K = r.useCallback(
                 async () => (
                     L(p.Ij.INITIALIZING),
                     t(
@@ -200,12 +200,12 @@ let C = (e) => {
                 [L, t],
             );
         r.useEffect(() => {
-            M(q);
-        }, [q, M]);
+            M(K);
+        }, [K, M]);
         let Q = r.useCallback(async () => p._n.INSTALLING, []);
         r.useEffect(() => {
-            K(k);
-        }, [k, K]),
+            q(k);
+        }, [k, q]),
             r.useEffect(() => {
                 W(Q);
             }, [W, Q]);

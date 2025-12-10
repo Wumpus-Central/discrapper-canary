@@ -10,7 +10,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(793030),
     c = n(438784),
     u = n(696826),
@@ -96,11 +96,11 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let A = {
+let C = {
     tension: 1200,
     friction: 70,
 };
-function C() {
+function A() {
     return document.hasFocus();
 }
 function N(e) {
@@ -540,22 +540,22 @@ function B(e) {
             width: (0, g.px)(n),
             height: (0, g.px)(n),
         },
-        A = null == _ || m ? void 0 : P(_, E, y),
-        C = I.size * h.hs,
+        C = null == _ || m ? void 0 : P(_, E, y),
+        A = I.size * h.hs,
         N = R(E, n, y, O),
         D =
             null != v &&
             (0, r.jsx)("svg", {
-                width: C + S,
-                height: C,
-                viewBox: "0 0 ".concat(C + S, " ").concat(C),
+                width: A + S,
+                height: A,
+                viewBox: "0 0 ".concat(A + S, " ").concat(A),
                 className: b.avatarDecoration,
                 "aria-hidden": !0,
                 children: (0, r.jsx)("foreignObject", {
                     x: 0,
                     y: 0,
-                    width: C,
-                    height: C,
+                    width: A,
+                    height: A,
                     mask: null != N ? "url(#".concat(N, ")") : void 0,
                     children: (0, r.jsx)("div", {
                         className: b.avatarStack,
@@ -579,7 +579,7 @@ function B(e) {
               onKeyDown: s,
               onMouseEnter: null != u ? u : void 0,
               onMouseLeave: null != d ? d : void 0,
-              "aria-label": A,
+              "aria-label": C,
               "aria-hidden": m,
               children: [t, D],
           })
@@ -590,7 +590,7 @@ function B(e) {
               onMouseEnter: null != u ? u : void 0,
               onMouseLeave: null != d ? d : void 0,
               role: "img",
-              "aria-label": A,
+              "aria-label": C,
               "aria-hidden": m,
               children: [t, D],
           });
@@ -630,8 +630,8 @@ function V(e) {
             statusTooltip: v = !1,
             statusTooltipDelay: I,
             statusBackdropColor: T,
-            "aria-hidden": A = !1,
-            "aria-label": C,
+            "aria-hidden": C = !1,
+            "aria-label": A,
             imageClassName: N,
             ref: P,
             CutoutIcon: R,
@@ -648,8 +648,8 @@ function V(e) {
     return (0, r.jsx)(
         B,
         S(O({}, e), {
-            ariaLabel: C,
-            ariaHidden: A,
+            ariaLabel: A,
+            ariaHidden: C,
             status: Z,
             specs: V,
             typingOffset: H,
@@ -804,11 +804,11 @@ function W(e) {
         ),
         et = (0, l.q_F)(
             {
-                config: A,
+                config: C,
                 from: $,
                 to: ee,
             },
-            C() ? "animate-always" : "animate-never",
+            A() ? "animate-always" : "animate-never",
         ),
         {
             avatarCutoutX: en,
@@ -842,7 +842,7 @@ function W(e) {
                 from: { scale: 1 },
                 to: V ? [{ scale: 0.8 }, { scale: 1.1 }, { scale: 1 }] : [],
             },
-            C() ? "animate-always" : "animate-never",
+            A() ? "animate-always" : "animate-never",
             [V, T],
         );
     return (0, r.jsx)(

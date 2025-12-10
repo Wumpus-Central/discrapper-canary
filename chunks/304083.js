@@ -3,7 +3,7 @@ var a = n(54381),
     r = n(473749),
     i = n(120356),
     l = n.n(i),
-    s = n(205120),
+    s = n(467721),
     o = n(278074),
     c = n(442837),
     d = n(692547),
@@ -262,7 +262,7 @@ let z = r.forwardRef(function (e, t) {
         })
     );
 });
-function K(e) {
+function q(e) {
     var t;
     let {
             quest: n,
@@ -286,8 +286,8 @@ function K(e) {
         H = r.useRef(null),
         W = (0, y._s)({ quest: n }),
         z = (0, E.q8)(n),
-        K = (0, y.Jf)(n),
-        q = r.useCallback(() => {
+        q = (0, y.Jf)(n),
+        K = r.useCallback(() => {
             (0, P.openVideoQuestModal)({
                 quest: n,
                 questContent: b.jn.QUEST_BAR_V2,
@@ -295,7 +295,7 @@ function K(e) {
                 sourceQuestContentCTA: f.jZ.QUEST_BAR_VIDEO_QUEST_PREVIEW,
             });
         }, [n]),
-        Q = null != K ? K.percentComplete : i.percentComplete;
+        Q = null != q ? q.percentComplete : i.percentComplete;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(s.animated.div, {
@@ -366,7 +366,7 @@ function K(e) {
                                 (0, a.jsx)(G, {
                                     isExpanded: u,
                                     quest: n,
-                                    onClick: q,
+                                    onClick: K,
                                     reducedMotion: m,
                                 }),
                             (0, a.jsx)(w.r, {
@@ -395,7 +395,7 @@ function K(e) {
         ],
     });
 }
-async function q(e, t, n, a) {
+async function K(e, t, n, a) {
     let r = (0, E.q8)(e);
     return r && (0, j.R)(M.dr.QUESTS_BAR)
         ? void (await (0, P.enrollAndStartVideoQuestWithErrorHandling)(e, {
@@ -446,7 +446,7 @@ let Q = r.forwardRef(function (e, t) {
         T = (0, O.Rt)(_),
         N = r.useCallback(async () => {
             let e = T ? f.jZ.START_QUEST : f.jZ.ACCEPT_QUEST;
-            await q(_, b.jn.QUEST_BAR_V2, e, b.jn.QUEST_BAR_V2), T && E();
+            await K(_, b.jn.QUEST_BAR_V2, e, b.jn.QUEST_BAR_V2), T && E();
         }, [_, E, T]),
         P = (null == (n = _.userStatus) ? void 0 : n.enrolledAt) != null,
         w = d && u;
@@ -476,7 +476,7 @@ let Q = r.forwardRef(function (e, t) {
             (0, a.jsx)(s.animated.div, {
                 style: { opacity: 1 },
                 children: P
-                    ? (0, a.jsx)(K, {
+                    ? (0, a.jsx)(q, {
                           quest: _,
                           taskDetails: S,
                           expansionSpring: m,

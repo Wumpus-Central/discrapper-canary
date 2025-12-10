@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(709054),
     I = n(51144),
     T = n(713913),
-    A = n(897291),
-    C = n(443603),
+    C = n(897291),
+    A = n(443603),
     N = n(981631),
     P = n(921944),
     R = n(388032),
@@ -86,7 +86,7 @@ function k(e) {
     return (0, r.jsx)(u.u, {
         shouldShow: t,
         text: R.intl.string(R.t.Ve9Ge6),
-        children: (0, r.jsx)(C.Z, {
+        children: (0, r.jsx)(A.Z, {
             className: w.button,
             "aria-label": R.intl.string(R.t.Z1RnTk),
             isActive: !1,
@@ -115,7 +115,7 @@ function U(e) {
         shouldShow: a,
         text: R.intl.string(R.t.Ve9Ge6),
         children: (0, r.jsx)(
-            C.Z,
+            A.Z,
             M(
                 L(
                     {
@@ -162,8 +162,8 @@ function Z(e) {
         { analyticsLocations: u } = (0, p.ZP)(f.Z.GIFT_BUTTON),
         [d, v] = i.useState(!1),
         T = (0, s.e7)([y.Z], () => !(null === y.Z || void 0 === y.Z ? void 0 : y.Z.hasLayers())),
-        C = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
-        R = null != C ? S.default.age(C.id) : 0,
+        A = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
+        R = null != A ? S.default.age(A.id) : 0,
         { giftBoxAnimation: w, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         L = null != n.firstTimeNotice && !a && T && R >= G,
         [j, M] = (0, m.XR)(
@@ -221,7 +221,7 @@ function Z(e) {
                         hovered: B,
                         onClick: W,
                     })
-                  : (0, r.jsx)(A.Z, {
+                  : (0, r.jsx)(C.Z, {
                         disabled: a,
                         channel: c,
                     });

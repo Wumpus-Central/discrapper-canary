@@ -1,7 +1,7 @@
 n.d(t, {
     Wf: () => T,
-    ZP: () => C,
-    wz: () => A,
+    ZP: () => A,
+    wz: () => C,
 });
 var r = n(54381),
     i = n(473749),
@@ -95,14 +95,14 @@ function T(e) {
                 : { type: "contextless" },
         { command: S } = u.YZ(b, null != (t = n.commandKey) ? t : ""),
         T = _.dN.useSetting(),
-        A = i.useMemo(() => {
+        C = i.useMemo(() => {
             if (null == S || null == l || S.untranslatedName !== n.commandName || T) return !1;
             let e = l.isPrivate();
             if ((0, p.xl)(l) || (!e && !c)) return !1;
             let t = (null == S ? void 0 : S.applicationId) === O.bi.BUILT_IN;
             return !!e || !!t || !!h;
         }, [l, S, c, h, n.commandName, T]),
-        C = i.useCallback(
+        A = i.useCallback(
             (e) => {
                 null == e || e.stopPropagation(),
                     null != l &&
@@ -112,12 +112,12 @@ function T(e) {
             },
             [l, n.commandKey, n.commandName],
         );
-    return A
+    return C
         ? (0, r.jsxs)(
               f.Z,
               {
                   role: "link",
-                  onClick: C,
+                  onClick: A,
                   children: [v.GI, s],
               },
               o,
@@ -126,7 +126,7 @@ function T(e) {
               children: [v.GI, s],
           });
 }
-function A(e) {
+function C(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: o, onClick: c } = e,
         u = (0, a.e7)([E.Z], () => E.Z.getChannelId()),
         f = (e) => {
@@ -143,7 +143,7 @@ function A(e) {
         }),
     });
 }
-function C(e) {
+function A(e) {
     return {
         react: (e, t, n) =>
             (0, r.jsx)(T, {

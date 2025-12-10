@@ -104,7 +104,7 @@ let I = (e) => {
                   }),
         });
     },
-    A = (e) => {
+    C = (e) => {
         let { reason: t = m.wk.SPOILER, className: n, isSingleMosaicItem: i = !1 } = e;
         switch (t) {
             case m.wk.SPOILER:
@@ -126,7 +126,7 @@ let I = (e) => {
                 return (0, h.vE)(t);
         }
     },
-    C = (e) => {
+    A = (e) => {
         let { obscureReason: t, isVisible: n, handleToggleObscurity: i, obscurityControlClassName: a } = e;
         return t !== m.wk.EXPLICIT_CONTENT && t !== m.wk.GORE_CONTENT && t !== m.wk.SELF_HARM_CONTENT
             ? null
@@ -192,7 +192,7 @@ class P extends i.PureComponent {
                               children: [
                                   g || t
                                       ? null
-                                      : (0, r.jsx)(A, {
+                                      : (0, r.jsx)(C, {
                                             reason: s,
                                             isSingleMosaicItem: l,
                                         }),
@@ -203,7 +203,7 @@ class P extends i.PureComponent {
                                   }),
                                   f
                                       ? null
-                                      : (0, r.jsx)(C, {
+                                      : (0, r.jsx)(A, {
                                             obscureReason: s,
                                             isVisible: _,
                                             handleToggleObscurity: this.handleToggleObscurity,
@@ -225,7 +225,7 @@ class P extends i.PureComponent {
                               children: [
                                   g || t
                                       ? null
-                                      : (0, r.jsx)(A, {
+                                      : (0, r.jsx)(C, {
                                             reason: s,
                                             isSingleMosaicItem: l,
                                         }),
@@ -270,7 +270,7 @@ class P extends i.PureComponent {
                           children: [
                               _
                                   ? null
-                                  : (0, r.jsx)(A, {
+                                  : (0, r.jsx)(C, {
                                         reason: s,
                                         isSingleMosaicItem: i,
                                     }),
@@ -281,7 +281,7 @@ class P extends i.PureComponent {
                               }),
                               u
                                   ? null
-                                  : (0, r.jsx)(C, {
+                                  : (0, r.jsx)(A, {
                                         obscureReason: s,
                                         isVisible: f,
                                         handleToggleObscurity: this.handleToggleObscurity,
@@ -300,7 +300,7 @@ class P extends i.PureComponent {
                           children: [
                               _
                                   ? null
-                                  : (0, r.jsx)(A, {
+                                  : (0, r.jsx)(C, {
                                         reason: s,
                                         className: E.embed,
                                     }),

@@ -9,7 +9,7 @@ n.d(t, {
     Op: () => f,
     PW: () => S,
     Pu: () => g,
-    Ue: () => A,
+    Ue: () => C,
     Z: () => u,
     bg: () => m,
     eF: () => c,
@@ -58,4 +58,4 @@ let r =
     S = 12,
     I = 18,
     T = ["gg sans", "sans-serif"],
-    A = 500;
+    C = 500;

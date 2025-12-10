@@ -14,20 +14,20 @@ function d(e) {
             product: i,
             isPremiumUser: d,
             discount: m,
-            className: f,
-            discountOfferAmount: p,
+            className: p,
+            discountOfferAmount: f,
             hideStrikethroughPrice: v = !1,
-            nitroIconType: g,
-            nitroIconSize: h = "md",
+            nitroIconType: h,
+            nitroIconSize: g = "md",
         } = e,
-        b = (0, a.ql)(i, c.tuJ.DEFAULT);
-    if (null == b) return null;
-    if (b.amount <= 0)
+        x = (0, a.ql)(i, c.tuJ.DEFAULT);
+    if (null == x) return null;
+    if (x.amount <= 0)
         return (0, r.jsx)("div", {
-            className: l()(u.priceTagsContainer, f),
-            children: (0, r.jsx)(s.F, { price: b }),
+            className: l()(u.priceTagsContainer, p),
+            children: (0, r.jsx)(s.F, { price: x }),
         });
-    let x = (0, a.ql)(i, c.tuJ.PREMIUM_TIER_2),
+    let b = (0, a.ql)(i, c.tuJ.PREMIUM_TIER_2),
         P =
             (0, a.x6)(i) && d
                 ? ((t = (function (e) {
@@ -54,7 +54,7 @@ function d(e) {
                               });
                       }
                       return e;
-                  })({}, b)),
+                  })({}, x)),
                   (n = n = { amount: m.original }),
                   Object.getOwnPropertyDescriptors
                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -69,10 +69,10 @@ function d(e) {
                             Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                         }),
                   t)
-                : b,
-        j = d && null != x;
+                : x,
+        j = d && null != b;
     return (0, r.jsxs)("div", {
-        className: l()(u.priceTagsContainer, f),
+        className: l()(u.priceTagsContainer, p),
         children: [
             v
                 ? null
@@ -81,12 +81,12 @@ function d(e) {
                       className: u.price,
                   }),
             (0, r.jsx)(s.F, {
-                price: j ? x : P,
+                price: j ? b : P,
                 discount: m,
-                className: l()({ [u.price]: null == p }),
-                nitroIconType: j ? g : void 0,
-                nitroIconSize: h,
-                discountOfferAmount: p,
+                className: l()({ [u.price]: null == f }),
+                nitroIconType: j ? h : void 0,
+                nitroIconSize: g,
+                discountOfferAmount: f,
             }),
         ],
     });

@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(924557),
     p = n(435064),
     f = n(779618),
-    h = n(175470),
-    g = n(203259),
+    g = n(175470),
+    h = n(203259),
     m = n(356659),
     _ = n(388032);
 function b(e) {
@@ -30,8 +30,8 @@ function b(e) {
             hasAnyClipAnimations: p.Z.hasAnyClipAnimations(),
         })),
         S = null != y && y.newClipIds.length > 0,
-        T = (0, h.n)((e) => e.clipsButtonRef),
-        N = (0, h.n)((e) => e.setClipsButtonRef),
+        T = (0, g.n)((e) => e.clipsButtonRef),
+        N = (0, g.n)((e) => e.setClipsButtonRef),
         j = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: P, allowIdle: x } = (0, o.Y)("animation");
     function A() {
@@ -80,7 +80,7 @@ function b(e) {
                       S &&
                       !(0, a.$sL)() &&
                       !j &&
-                      (0, r.jsx)(g.Z, {
+                      (0, r.jsx)(h.Z, {
                           clipIconRef: T,
                           lastClipsSession: y,
                           onOpenClipsGallery: A,

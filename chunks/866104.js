@@ -28,7 +28,7 @@ var r = n(54381),
     S = n(893182),
     I = n(388032),
     T = n(793701);
-function A(e) {
+function C(e) {
     let { onClick: t } = e;
     return (0, r.jsxs)(l.P3F, {
         onClick: t,
@@ -50,7 +50,7 @@ function A(e) {
         ],
     });
 }
-function C(e) {
+function A(e) {
     return (0, s.cj)([m.ZP, h.default], () => {
         var t, n;
         let r = h.default.getCurrentUser();
@@ -98,7 +98,7 @@ function P(e) {
     var t, n;
     let { guild: a, subscriptionsSettings: o } = e,
         s = a.id,
-        { nickname: d, nickcolor: p } = C(s),
+        { nickname: d, nickcolor: p } = A(s),
         { isTruncated: _, ExpandableTextContainer: m } = (0, y.s)(),
         h = () => (0, S.Z)({ guildId: s }),
         g = (null != (n = null == o || null == (t = o.description) ? void 0 : t.trim().length) ? n : 0) > 0,
@@ -132,7 +132,7 @@ function P(e) {
                   }),
                   _ &&
                       (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(l.LZC, { size: 4 }), (0, r.jsx)(A, { onClick: h })],
+                          children: [(0, r.jsx)(l.LZC, { size: 4 }), (0, r.jsx)(C, { onClick: h })],
                       }),
               ],
           })

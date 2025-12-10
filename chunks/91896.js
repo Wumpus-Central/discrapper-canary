@@ -81,10 +81,10 @@ function I(e) {
 function T(e) {
     O(e.gameRelationship), y();
 }
-function A(e) {
+function C(e) {
     v(e.userId, e.applicationId), y();
 }
-class C extends (r = i.ZP.Store) {
+class A extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z);
     }
@@ -122,10 +122,10 @@ class C extends (r = i.ZP.Store) {
         return h.version;
     }
 }
-c(C, "displayName", "GameRelationshipStore");
-let N = new C(o.Z, {
+c(A, "displayName", "GameRelationshipStore");
+let N = new A(o.Z, {
     CONNECTION_OPEN: I,
     GAME_RELATIONSHIP_ADD: T,
-    GAME_RELATIONSHIP_REMOVE: A,
+    GAME_RELATIONSHIP_REMOVE: C,
     APPLICATIONS_FETCH_SUCCESS: S,
 });

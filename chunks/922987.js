@@ -27,7 +27,7 @@ var r = n(54381),
     S = n(748714),
     I = n(981631),
     T = n(388032);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -127,8 +127,8 @@ let R = (e) => {
                         h(_.A.COMPLETED), O(I.rMx.PAYMENT_FLOW_SUCCEEDED);
                     });
             }, [r, h, E, O]),
-            A = null != (t = b.current) ? t : E,
-            C = null != l ? l.orbPriceAmount : null;
+            C = null != (t = b.current) ? t : E,
+            A = null != l ? l.orbPriceAmount : null;
         return {
             isStepLoading: null == m || null == g,
             showCollectiblesDiscountWarning: (0, u.N3)({
@@ -146,8 +146,8 @@ let R = (e) => {
                             : T.intl.string(T.t.fqJZ11),
                 [a],
             ),
-            orbPriceAmount: C,
-            orbBalanceToDisplay: A,
+            orbPriceAmount: A,
+            orbBalanceToDisplay: C,
             onClickCheckout: S,
             selectedSkuId: m,
             product: g,
@@ -224,11 +224,11 @@ let R = (e) => {
     L = [
         {
             key: null,
-            renderStep: (e) => (0, r.jsx)(R, C({}, e)),
+            renderStep: (e) => (0, r.jsx)(R, A({}, e)),
         },
         {
             key: p.h8.REVIEW,
-            renderStep: (e) => (0, r.jsx)(x, C({}, e)),
+            renderStep: (e) => (0, r.jsx)(x, A({}, e)),
             options: { useBreadcrumbLabel: () => T.intl.string(T.t.QBnNHq) },
         },
     ],
@@ -324,7 +324,7 @@ let R = (e) => {
                 children: (0, r.jsx)(d.b6, {
                     children: (0, r.jsx)(
                         k,
-                        C(
+                        A(
                             {
                                 skuId: t,
                                 analyticsLocations: o,

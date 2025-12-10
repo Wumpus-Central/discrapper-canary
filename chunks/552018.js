@@ -263,7 +263,7 @@ class p extends o.C {
                 case 18:
                     a.filter = {
                         oneofKind: "clientSystemLocale",
-                        clientSystemLocale: A.internalBinaryRead(e, e.uint32(), n, a.filter.clientSystemLocale),
+                        clientSystemLocale: C.internalBinaryRead(e, e.uint32(), n, a.filter.clientSystemLocale),
                     };
                     break;
                 case 19:
@@ -281,7 +281,7 @@ class p extends o.C {
                 case 21:
                     a.filter = {
                         oneofKind: "unitIdMatchesFilterSnapshot",
-                        unitIdMatchesFilterSnapshot: eA.internalBinaryRead(
+                        unitIdMatchesFilterSnapshot: eC.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -335,13 +335,13 @@ class p extends o.C {
             "always" === e.filter.oneofKind &&
                 ey.internalBinaryWrite(e.filter.always, t.tag(17, r.TD.LengthDelimited).fork(), n).join(),
             "clientSystemLocale" === e.filter.oneofKind &&
-                A.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, r.TD.LengthDelimited).fork(), n).join(),
+                C.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, r.TD.LengthDelimited).fork(), n).join(),
             "unitIdInExperiment" === e.filter.oneofKind &&
                 ev.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, r.TD.LengthDelimited).fork(), n).join(),
             "userPremiumType" === e.filter.oneofKind &&
                 eI.internalBinaryWrite(e.filter.userPremiumType, t.tag(20, r.TD.LengthDelimited).fork(), n).join(),
             "unitIdMatchesFilterSnapshot" === e.filter.oneofKind &&
-                eA
+                eC
                     .internalBinaryWrite(
                         e.filter.unitIdMatchesFilterSnapshot,
                         t.tag(21, r.TD.LengthDelimited).fork(),
@@ -470,7 +470,7 @@ class p extends o.C {
                 name: "client_system_locale",
                 kind: "message",
                 oneof: "filter",
-                T: () => A,
+                T: () => C,
             },
             {
                 no: 19,
@@ -491,7 +491,7 @@ class p extends o.C {
                 name: "unit_id_matches_filter_snapshot",
                 kind: "message",
                 oneof: "filter",
-                T: () => eA,
+                T: () => eC,
             },
         ]);
     }
@@ -813,8 +813,8 @@ class T extends o.C {
         ]);
     }
 }
-let A = new T();
-class C extends o.C {
+let C = new T();
+class A extends o.C {
     create(e) {
         let t = { locations: [] };
         return (
@@ -862,7 +862,7 @@ class C extends o.C {
         ]);
     }
 }
-let N = new C();
+let N = new A();
 class P extends o.C {
     create(e) {
         let t = {
@@ -2519,4 +2519,4 @@ class eT extends o.C {
         ]);
     }
 }
-let eA = new eT();
+let eC = new eT();

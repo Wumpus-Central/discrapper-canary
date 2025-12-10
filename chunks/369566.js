@@ -25,7 +25,7 @@ function y(e) {
         S = (0, a.e7)([m.Z], () => m.Z.getVoiceStateForUser(e)),
         I = (0, a.e7)([p.Z], () => p.Z.getChannel(null == S ? void 0 : S.channelId)),
         T = (0, d.E)("UserProfileActivity", I),
-        A = (0, r.useMemo)(
+        C = (0, r.useMemo)(
             () =>
                 O.filter((e) => {
                     let { type: t } = e;
@@ -33,9 +33,9 @@ function y(e) {
                 }),
             [O, T],
         ),
-        { live: C, recent: N } = (0, r.useMemo)(() => {
+        { live: A, recent: N } = (0, r.useMemo)(() => {
             let e = (0, i.uniqWith)(
-                    A,
+                    C,
                     (e, t) =>
                         (null != e.application_id &&
                             null != t.application_id &&
@@ -58,9 +58,9 @@ function y(e) {
                 live: 0 === e.length ? E : e,
                 recent: null == t || 0 === t.length ? b : t,
             };
-        }, [A, null == v ? void 0 : v.entries]);
+        }, [C, null == v ? void 0 : v.entries]);
     return {
-        live: C,
+        live: A,
         recent: N,
         stream: y,
         outbox: v,

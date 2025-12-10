@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(592125),
     I = n(366050),
     T = n(944486),
-    A = n(451478),
-    C = n(823379),
+    C = n(451478),
+    A = n(823379),
     N = n(981631),
     P = n(918559),
     R = n(354459),
@@ -108,7 +108,7 @@ class k extends i.PureComponent {
             });
     }
 }
-let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, S.Z, T.Z, I.Z, f.Z, O.ZP, _.Z], (e) => {
+let U = a.ZP.connectStores([b.Z, s.ZP, C.Z, y.Z, S.Z, T.Z, I.Z, f.Z, O.ZP, _.Z], (e) => {
     var t, n, r, i, a, o, d;
     let m,
         { popoutWindowKey: h, popoutWindowHasTitleBar: g = !1 } = e,
@@ -125,7 +125,7 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, S.Z, T.Z, I.Z, f.Z, O.ZP, _.Z],
         F = null != h,
         V = F ? b.Z.getWindow(h) : null,
         H = !!F && b.Z.isWindowFullScreen(h),
-        Y = A.Z.windowSize();
+        Y = C.Z.windowSize();
     F &&
         (Y =
             null == V
@@ -163,7 +163,7 @@ let U = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, S.Z, T.Z, I.Z, f.Z, O.ZP, _.Z],
         q = I.Z.pipWidth(R.cL.VIDEO),
         Q = z.find((e) => e.component === N.NYg.VIDEO),
         X = z.find((e) => e.component === N.NYg.ACTIVITY),
-        J = [Q, X, z.find((e) => e.component === N.NYg.FRAME)].filter(C.lm),
+        J = [Q, X, z.find((e) => e.component === N.NYg.FRAME)].filter(A.lm),
         $ = O.ZP.callChatSidebarWidth,
         ee = T.Z.getVoiceChannelId(),
         et = T.Z.getChannelId() === ee,

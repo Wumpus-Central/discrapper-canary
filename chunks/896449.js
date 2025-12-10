@@ -73,13 +73,13 @@ function O(e) {
     let { user: n, guildId: h, channel: E, entry: O, onSelect: v, disableGameProfileLinks: S } = e,
         I = i.useRef(null),
         T = i.useContext(p.Ir),
-        A = (0, d.Z)({
+        C = (0, d.Z)({
             userId: n.id,
             guildId: h,
             channelId: null == E ? void 0 : E.id,
             onAction: T,
         }),
-        C = (0, l.Z)({
+        A = (0, l.Z)({
             id: n.id,
             label: _.intl.string(_.t["/AXYnE"]),
         }),
@@ -114,7 +114,7 @@ function O(e) {
                     children: [
                         (0, r.jsxs)(o.kSQ, {
                             children: [
-                                A,
+                                C,
                                 null != D &&
                                     (0, r.jsx)(o.sNh, {
                                         id: "game-profile",
@@ -126,7 +126,7 @@ function O(e) {
                             ],
                         }),
                         (0, r.jsxs)(o.kSQ, {
-                            children: [C, P],
+                            children: [A, P],
                         }),
                     ],
                 }),

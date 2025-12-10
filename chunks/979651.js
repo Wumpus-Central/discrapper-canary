@@ -44,16 +44,16 @@ function T(e) {
         t.channelId === e && P(d.ME, n, () => null);
     });
 }
-function A(e) {
+function C(e) {
     var t;
     return null != (t = E.get(e)) ? t : new Set();
 }
-function C(e, t) {
-    let n = A(e);
+function A(e, t) {
+    let n = C(e);
     n.has(t) || ((n = new Set(n)).add(t), E.set(e, n));
 }
 function N(e, t) {
-    let n = A(e);
+    let n = C(e);
     n.has(t) && ((n = new Set(n)).delete(t), 0 === n.size ? E.delete(e) : E.set(e, n));
 }
 function P(e, t, n) {
@@ -70,7 +70,7 @@ function P(e, t, n) {
           null != a &&
               ((r[t] = a),
               null != a.channelId &&
-                  ((I(b, a.channelId)[t] = a), a.selfVideo && ((I(y, a.channelId)[t] = a), C(null != e ? e : d.ME, t))),
+                  ((I(b, a.channelId)[t] = a), a.selfVideo && ((I(y, a.channelId)[t] = a), A(null != e ? e : d.ME, t))),
               null != a.sessionId && (I(O, t)[a.sessionId] = a)),
           [!0, a, i]);
 }

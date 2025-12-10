@@ -3,7 +3,7 @@ var l = n(54381),
     r = n(473749),
     i = n(120356),
     a = n.n(i),
-    s = n(205120),
+    s = n(467721),
     o = n(399606),
     c = n(481060),
     d = n(201070),
@@ -33,19 +33,19 @@ function g(e) {
         g = t.id,
         p = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(g), [g]),
         v = (0, d.$j)(g),
-        C = (0, d.M3)(g),
-        _ = r.useCallback(
+        _ = (0, d.M3)(g),
+        C = r.useCallback(
             (e) => {
                 null != e && (null == s || s(e));
             },
             [s],
         ),
-        S = (0, m.xb)(C, v, p),
-        T = r.useRef(null),
+        T = (0, m.xb)(_, v, p),
+        S = r.useRef(null),
         E = r.useRef(null),
         N = r.useCallback(() => {
             var e;
-            null == (e = T.current) || e.resetSearchText();
+            null == (e = S.current) || e.resetSearchText();
         }, []);
     return (0, l.jsx)("div", {
         className: a()(h.mainTableContainer, n),
@@ -56,16 +56,16 @@ function g(e) {
             children: [
                 (0, l.jsx)(b.Z, {
                     guild: t,
-                    ref: T,
+                    ref: S,
                 }),
                 (0, l.jsx)(f, { guild: t }),
                 (0, l.jsx)(x.Z, {
                     guild: t,
-                    onSelectRow: _,
-                    searchState: S,
+                    onSelectRow: C,
+                    searchState: T,
                     onResetForNewMembers: N,
                 }),
-                S !== m.po.SUCCESS_STILL_INDEXING &&
+                T !== m.po.SUCCESS_STILL_INDEXING &&
                     (0, l.jsx)(j.Z, {
                         guildId: t.id,
                         onPageChange: i,

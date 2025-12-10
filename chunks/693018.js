@@ -35,9 +35,9 @@ let _ = 256,
     S = [0, 0, 2],
     I = [0, 1, 0],
     T = [0, 0, 0],
-    A =
-        "\nattribute vec4 a_position;\nattribute vec2 a_texcoord;\nuniform mat4 u_normalMatrix;\nattribute vec3 a_vertexNormal;\n\nuniform mat4 u_matrix;\n\nvarying vec2 v_texcoord;\nvarying highp vec3 v_lighting;\n\nvoid main() {\n  // Multiply the position by the matrix.\n  gl_Position = u_matrix * a_position;\n\n  // Pass the texcoord to the fragment shader.\n  v_texcoord = a_texcoord;\n\n  highp vec3 ambientLight = vec3(0.4, 0.4, 0.4);\n  highp vec3 directionalLightColor = vec3(0.6, 0.6, 0.6);\n  highp vec3 directionalVector = normalize(vec3(0.0, 0.0, 1.0));\n\n  highp vec4 transformedNormal = u_normalMatrix * vec4(a_vertexNormal, 0.0);\n\n  highp float directional = max(dot(transformedNormal.xyz, directionalVector), 0.0);\n  v_lighting = ambientLight + (directionalLightColor * directional);\n}\n",
     C =
+        "\nattribute vec4 a_position;\nattribute vec2 a_texcoord;\nuniform mat4 u_normalMatrix;\nattribute vec3 a_vertexNormal;\n\nuniform mat4 u_matrix;\n\nvarying vec2 v_texcoord;\nvarying highp vec3 v_lighting;\n\nvoid main() {\n  // Multiply the position by the matrix.\n  gl_Position = u_matrix * a_position;\n\n  // Pass the texcoord to the fragment shader.\n  v_texcoord = a_texcoord;\n\n  highp vec3 ambientLight = vec3(0.4, 0.4, 0.4);\n  highp vec3 directionalLightColor = vec3(0.6, 0.6, 0.6);\n  highp vec3 directionalVector = normalize(vec3(0.0, 0.0, 1.0));\n\n  highp vec4 transformedNormal = u_normalMatrix * vec4(a_vertexNormal, 0.0);\n\n  highp float directional = max(dot(transformedNormal.xyz, directionalVector), 0.0);\n  v_lighting = ambientLight + (directionalLightColor * directional);\n}\n",
+    A =
         "\nprecision mediump float;\n\nvarying vec2 v_texcoord;\nvarying highp vec3 v_lighting;\n\nuniform sampler2D u_texture;\n\nvoid main() {\n  highp vec4 texelColor = texture2D(u_texture, v_texcoord);\n  gl_FragColor = vec4(texelColor.rgb * v_lighting, texelColor.a);\n}\n",
     N = [
         -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5,
@@ -86,8 +86,8 @@ function L(e, t, n, r, s) {
                 u = i.createShader(i.FRAGMENT_SHADER);
             if (null == c || null == u) return;
             if (
-                (i.shaderSource(c, A),
-                i.shaderSource(u, C),
+                (i.shaderSource(c, C),
+                i.shaderSource(u, A),
                 i.compileShader(c),
                 !i.getShaderParameter(c, i.COMPILE_STATUS))
             )
@@ -134,14 +134,14 @@ function L(e, t, n, r, s) {
                         u = o.G3(o.Ue(), O, c, 1, 2000),
                         h = o.zB(o.Ue(), S, T, I),
                         E = o.Jp(o.Ue(), u, h),
-                        A = o.Ue();
-                    o.lM(A, A, t), o.uD(A, A, l);
-                    let C = o.Jp(o.Ue(), E, A),
+                        C = o.Ue();
+                    o.lM(C, C, t), o.uD(C, C, l);
+                    let A = o.Jp(o.Ue(), E, C),
                         N = o.Ue();
-                    o.U_(N, A),
+                    o.U_(N, C),
                         o.p4(N, N),
                         i.uniformMatrix4fv(g, !1, N),
-                        i.uniformMatrix4fv(_, !1, C),
+                        i.uniformMatrix4fv(_, !1, A),
                         i.uniform1i(m, 0),
                         i.drawArrays(i.TRIANGLES, 0, 36),
                         (n = requestAnimationFrame(v));
@@ -154,8 +154,8 @@ function j(e) {
         [n, a] = i.useState(null),
         [o, S] = i.useState(null),
         I = i.useRef(new Image()),
-        [T, A] = i.useState(null),
-        [C, N] = i.useState(!1),
+        [T, C] = i.useState(null),
+        [A, N] = i.useState(!1),
         P = i.useRef(0),
         R = i.useRef(0),
         D = d.E[f.yD.EMOJIS],
@@ -183,11 +183,11 @@ function j(e) {
             e.fillRect(0, 0, v, o.height),
             e.fillRect(0, o.height - v, o.width, v),
             e.fillRect(o.width - v, 0, v, o.height),
-            A(t),
+            C(t),
             N(!0));
     }, [t, I, w, o]);
     i.useEffect(() => {
-        A(null),
+        C(null),
             (I.current.crossOrigin = "anonymous"),
             (I.current.src = (0, u.qc)(t, _)),
             (I.current.onload = H),
@@ -240,7 +240,7 @@ function j(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("canvas", {
-                    className: C ? p.visibleCanvas : p.invisible,
+                    className: A ? p.visibleCanvas : p.invisible,
                     ref: a,
                     height: m,
                     width: m,

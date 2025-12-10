@@ -32,8 +32,8 @@ var r,
     S = n(222709),
     I = n(446411),
     T = n(36129),
-    A = n(960904),
-    C = n(161314),
+    C = n(960904),
+    A = n(161314),
     N = n(247206),
     P = n(629710),
     R = n(262777),
@@ -86,8 +86,8 @@ var r,
     eS = n(591759),
     eI = n(594173),
     eT = n(169525),
-    eA = n(786761),
-    eC = n(161010),
+    eC = n(786761),
+    eA = n(161010),
     eN = n(255269),
     eP = n(461157),
     eR = n(901461),
@@ -278,14 +278,14 @@ class tn extends (r = a.Component) {
     }
     renderSocialProofingFileSizeNitroUpsell(e) {
         let t = e.attachments.some((e) => e.size > eQ.Lw);
-        return (0, eC.M)("attachment") && t ? (0, i.jsx)(e8, {}) : null;
+        return (0, eA.M)("attachment") && t ? (0, i.jsx)(e8, {}) : null;
     }
     renderCodedLinks(e) {
         return 0 === e.codedLinks.length
             ? null
             : e.codedLinks.map((t) => {
                   let { type: n, code: r, url: a } = t;
-                  if (n === A.g.INVITE)
+                  if (n === C.g.INVITE)
                       return this.shouldRenderInvite(r)
                           ? (0, i.jsx)(
                                 eM.Z,
@@ -297,9 +297,9 @@ class tn extends (r = a.Component) {
                                 r,
                             )
                           : null;
-                  if (n === A.g.TEMPLATE) return (0, i.jsx)(Z.Z, { code: r }, r);
-                  if (n === A.g.EVENT) return (0, i.jsx)(G.Z, { code: r }, r);
-                  if (n === A.g.CHANNEL_LINK)
+                  if (n === C.g.TEMPLATE) return (0, i.jsx)(Z.Z, { code: r }, r);
+                  if (n === C.g.EVENT) return (0, i.jsx)(G.Z, { code: r }, r);
+                  if (n === C.g.CHANNEL_LINK)
                       return (0, i.jsx)(
                           ew.Z,
                           {
@@ -308,7 +308,7 @@ class tn extends (r = a.Component) {
                           },
                           r,
                       );
-                  if (n === A.g.APP_DIRECTORY_PROFILE)
+                  if (n === C.g.APP_DIRECTORY_PROFILE)
                       return (0, i.jsx)(
                           j.Z,
                           {
@@ -317,7 +317,7 @@ class tn extends (r = a.Component) {
                           },
                           r,
                       );
-                  else if (n === A.g.ACTIVITY_BOOKMARK) {
+                  else if (n === C.g.ACTIVITY_BOOKMARK) {
                       let { referrerId: t = e.author.id, customId: n, linkId: o } = (0, O.U)(a);
                       return (0, i.jsx)(
                           g.Z,
@@ -330,9 +330,9 @@ class tn extends (r = a.Component) {
                           },
                           r,
                       );
-                  } else if (n === A.g.GUILD_PRODUCT) return (0, i.jsx)(U.Z, { code: r }, r);
-                  else if (n === A.g.SERVER_SHOP) return (0, i.jsx)(C.Z, { guildId: r }, r);
-                  else if (n === A.g.SOCIAL_LAYER_STOREFRONT) {
+                  } else if (n === C.g.GUILD_PRODUCT) return (0, i.jsx)(U.Z, { code: r }, r);
+                  else if (n === C.g.SERVER_SHOP) return (0, i.jsx)(A.Z, { guildId: r }, r);
+                  else if (n === C.g.SOCIAL_LAYER_STOREFRONT) {
                       let [e, t] = r.split("-"),
                           { channel: n } = this.props;
                       return (0, i.jsx)(
@@ -344,8 +344,8 @@ class tn extends (r = a.Component) {
                           },
                           r,
                       );
-                  } else if (n === A.g.QUESTS_EMBED) return (0, i.jsx)(et.Z, { questId: r }, r);
-                  else if (n === A.g.APP_DIRECTORY_STOREFRONT)
+                  } else if (n === C.g.QUESTS_EMBED) return (0, i.jsx)(et.Z, { questId: r }, r);
+                  else if (n === C.g.APP_DIRECTORY_STOREFRONT)
                       return (0, i.jsx)(
                           y.P,
                           {
@@ -354,7 +354,7 @@ class tn extends (r = a.Component) {
                           },
                           r,
                       );
-                  else if (n === A.g.APP_DIRECTORY_STOREFRONT_SKU) {
+                  else if (n === C.g.APP_DIRECTORY_STOREFRONT_SKU) {
                       let t = (0, b.Q)(r);
                       return null == t
                           ? null
@@ -367,7 +367,7 @@ class tn extends (r = a.Component) {
                                 },
                                 r,
                             );
-                  } else if (n === A.g.APP_OAUTH2_LINK)
+                  } else if (n === C.g.APP_OAUTH2_LINK)
                       return (0, i.jsx)(
                           v.Z,
                           {
@@ -376,8 +376,8 @@ class tn extends (r = a.Component) {
                           },
                           r,
                       );
-                  else if (n === A.g.COLLECTIBLES_SHOP) return null;
-                  else if (n === A.g.EXPERIMENT) return null;
+                  else if (n === C.g.COLLECTIBLES_SHOP) return null;
+                  else if (n === C.g.EXPERIMENT) return null;
                   else throw Error("Unknown coded link type: ".concat(n));
               });
     }
@@ -595,7 +595,7 @@ class tn extends (r = a.Component) {
               });
     }
     renderEphemeralAccessories(e) {
-        return (0, eA.Pv)(e)
+        return (0, eC.Pv)(e)
             ? (0, i.jsx)(eL.Z, {
                   message: e,
                   onDeleteMessage: () => {
@@ -791,8 +791,8 @@ class tn extends (r = a.Component) {
             S = this.renderEmbeddedApplicationInstanceEmbed(t),
             I = this.renderInteractionPremiumUpsell(t),
             T = this.renderMediaPostEmbeds(t),
-            A = this.renderSafetyPolicyNotice(t),
-            C = this.renderSafetySystemNotification(t),
+            C = this.renderSafetyPolicyNotice(t),
+            A = this.renderSafetySystemNotification(t),
             N = this.renderMediaObscureNotice(t),
             P = this.renderPoll(t, n),
             R = this.renderForwardedMessage(t),
@@ -812,7 +812,7 @@ class tn extends (r = a.Component) {
             null == S &&
             null == v &&
             null == T &&
-            null == A &&
+            null == C &&
             null != I &&
             null == P &&
             null == R &&
@@ -848,8 +848,8 @@ class tn extends (r = a.Component) {
                       a && this.renderSuppressConfirmModal(),
                       o && this.renderRemoveAttachmentConfirmModal(),
                       y,
-                      A,
                       C,
+                      A,
                   ],
               });
     }
@@ -992,8 +992,8 @@ function tr(e) {
             S &&
             1 === (0, eP.Z)(r),
         T = s === r.author.id && S && !o,
-        A = r.author.id === s,
-        C = r.isFirstMessageInForumPost(n),
+        C = r.author.id === s,
+        A = r.isFirstMessageInForumPost(n),
         P = (0, eD.Z)({
             channel: n,
             canChat: m,
@@ -1024,7 +1024,7 @@ function tr(e) {
                         },
                         P,
                     ),
-                    { disableReactionReads: !!C || P.disableReactionReads },
+                    { disableReactionReads: !!A || P.disableReactionReads },
                 ),
                 e,
             ),
@@ -1034,7 +1034,7 @@ function tr(e) {
                 isLurking: h && m,
                 isGuest: g && m,
                 isPendingMember: E && m,
-                isCurrentUser: A,
+                isCurrentUser: C,
                 inlineAttachmentMedia: l,
                 inlineEmbedMedia: d,
                 renderEmbeds: f,

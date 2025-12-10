@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(579806),
     p = n(603113),
     f = n(367907),
-    h = n(731429),
-    g = n(188471),
+    g = n(731429),
+    h = n(188471),
     m = n(176881),
     _ = n(318885),
     b = n(358221),
@@ -86,8 +86,8 @@ async function ee(e) {
             overlayStatus: c,
             overlayMethod: p,
             sharedGuildIds: f,
-            voiceChannelId: h,
-            voiceChannelType: g,
+            voiceChannelId: g,
+            voiceChannelType: h,
             voiceChannelBitrate: m,
             voiceChannelGuildId: _,
         } = e,
@@ -122,8 +122,8 @@ async function ee(e) {
         current_user_status: V.Z.getStatus(),
         game_detection_enabled: (0, v.ik)(a),
         executable_path: I,
-        voice_channel_id: h,
-        voice_channel_type: g,
+        voice_channel_id: g,
+        voice_channel_type: h,
         voice_channel_bitrate: m,
         voice_channel_guild_id: _,
         distributor_game_id: a.sku,
@@ -139,7 +139,7 @@ class et extends i.PureComponent {
             voiceChannelId: u,
             voiceChannelGuildId: d,
             voiceChannelType: p,
-            voiceChannelBitrate: h,
+            voiceChannelBitrate: g,
             videoEnabled: m,
             isScreenSharing: y,
             runningGame: I,
@@ -184,7 +184,7 @@ class et extends i.PureComponent {
                 n = Z.Z.getStageInstanceByChannel(u),
                 r = C.ZP.getActiveEventByChannel(u);
             (0, f.yw)(J.rMx.CHANNEL_OPENED, $({}, (0, f.$H)(u))),
-                (0, g.a)(J.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: u });
+                (0, h.a)(J.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: u });
             let i = null,
                 l = q.default.getFocusedPID();
             null != l &&
@@ -200,7 +200,7 @@ class et extends i.PureComponent {
                             location: i,
                             channel_id: u,
                             channel_type: p,
-                            channel_bitrate: h,
+                            channel_bitrate: g,
                             guild_id: d,
                             game_name: t,
                             game_platform: this.props.gamePlatform,
@@ -230,7 +230,7 @@ class et extends i.PureComponent {
                 s = v.ZP.getOverrideForGame(I),
                 o = M.Z.getGuildIds(),
                 f = w.SE.getSetting(),
-                g = o.filter((e) => !f.includes(e)).slice(0, 200),
+                h = o.filter((e) => !f.includes(e)).slice(0, 200),
                 m = null;
             m = null != s ? "custom_override" : null != t ? "verified_game" : "launcher";
             let _ = P.default.getTrackedGameByPid(I.pid),
@@ -251,10 +251,10 @@ class et extends i.PureComponent {
                         detectionMethod: m,
                         overlayStatus: y,
                         overlayMethod: C,
-                        sharedGuildIds: g,
+                        sharedGuildIds: h,
                         voiceChannelId: u,
                         voiceChannelType: p,
-                        voiceChannelBitrate: h,
+                        voiceChannelBitrate: g,
                         voiceChannelGuildId: d,
                     });
                 }, 10000),
@@ -400,9 +400,9 @@ function en() {
     } = w;
     i.useEffect(() => {
         if (U && null != X) {
-            let e = (0, h.K)(L.Z.getChannel(X), !0);
+            let e = (0, g.K)(L.Z.getChannel(X), !0);
             (0, f.yw)(J.rMx.CHANNEL_OPENED, $({}, e, (0, f.$H)(X))),
-                (0, g.a)(J.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: X }),
+                (0, h.a)(J.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: X }),
                 R.current.isTextInVoice &&
                     (0, f.yw)(J.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: R.current.isNSFWChannel });
         }
@@ -448,7 +448,7 @@ function en() {
                               Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                           }),
                     n);
-                (0, f.yw)(J.rMx.GUILD_VIEWED, i), (0, g.a)(J.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: ee });
+                (0, f.yw)(J.rMx.GUILD_VIEWED, i), (0, h.a)(J.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: ee });
             }
         }, [U, ee, Q]);
     let en = i.useRef(!1);

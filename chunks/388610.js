@@ -55,7 +55,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ function A(e, t) {
         e
     );
 }
-let C = v.QZA.CLOSED,
+let A = v.QZA.CLOSED,
     N = {},
     P = {},
     R = !1,
@@ -114,7 +114,7 @@ function L(e) {
 function j(e) {
     let t = O.Z.getChannel(e.channelId);
     if (null == t) return k();
-    (C = v.QZA.OPEN),
+    (A = v.QZA.OPEN),
         (o = a = t),
         (w = "location" in e && null != e.location ? e.location : null),
         (i = "subsection" in e ? e.subsection : null),
@@ -156,17 +156,17 @@ function M(e) {
                 ));
 }
 function k() {
-    (D = !1), (C = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (P = {});
+    (D = !1), (A = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (P = {});
 }
 function U() {
-    (C = v.QZA.SUBMITTING), (N = {});
+    (A = v.QZA.SUBMITTING), (N = {});
 }
 function G() {
-    (a = o), (C = v.QZA.OPEN);
+    (a = o), (A = v.QZA.OPEN);
 }
 function Z(e) {
     var t;
-    (C = v.QZA.OPEN),
+    (A = v.QZA.OPEN),
         (N = Object.keys(null != (t = e.errors) ? t : {}).reduce((t, n) => {
             let r = e.errors[n];
             return (0, u.isArray)(r) ? (t[n] = r.join("\n")) : (t[n] = r), t;
@@ -213,9 +213,9 @@ function F(e) {
         null != l && (o = o.set("flags", l)),
         null != c && (o = o.set("rateLimitPerUser", c)),
         null != u && (o = o.set("defaultThreadRateLimitPerUser", u)),
-        null != d && (o = o.set("threadMetadata", A(I({}, o.threadMetadata), { autoArchiveDuration: d }))),
-        null != f && (o = o.set("threadMetadata", A(I({}, o.threadMetadata), { locked: f }))),
-        null != p && (o = o.set("threadMetadata", A(I({}, o.threadMetadata), { invitable: p }))),
+        null != d && (o = o.set("threadMetadata", C(I({}, o.threadMetadata), { autoArchiveDuration: d }))),
+        null != f && (o = o.set("threadMetadata", C(I({}, o.threadMetadata), { locked: f }))),
+        null != p && (o = o.set("threadMetadata", C(I({}, o.threadMetadata), { invitable: p }))),
         null != _ && (o = o.set("defaultAutoArchiveDuration", _)),
         null != m && (o = o.set("template", m)),
         null != n && (o = o.set("type", n)),
@@ -255,7 +255,7 @@ function Y(e) {
     (P = I({}, P)), delete P[e.code];
 }
 function W(e) {
-    P = A(I({}, P), { [e.invite.code]: V(e.invite) });
+    P = C(I({}, P), { [e.invite.code]: V(e.invite) });
 }
 function K(e) {
     return !!L(e) && null != o && (null != l && null == o.permissionOverwrites[l] && (l = o.getGuildId()), !0);
@@ -276,7 +276,7 @@ function Q(e) {
         channel: { id: t },
     } = e;
     if (null == o || o.id !== t) return !1;
-    C = v.QZA.CLOSED;
+    A = v.QZA.CLOSED;
 }
 function X(e) {
     let { overwriteId: t } = e;
@@ -308,14 +308,14 @@ class J extends (c = _.ZP.Store) {
         return o;
     }
     getFormState() {
-        return C;
+        return A;
     }
     getCategory() {
         return s;
     }
     getProps() {
         return {
-            submitting: C === v.QZA.SUBMITTING,
+            submitting: A === v.QZA.SUBMITTING,
             errors: N,
             channel: o,
             section: r,

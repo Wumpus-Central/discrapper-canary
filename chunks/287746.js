@@ -37,8 +37,8 @@ var i = n(54381),
     k = n(974251),
     U = n(893718),
     V = n(436660),
-    B = n(680835),
-    F = n(28546),
+    F = n(680835),
+    B = n(28546),
     H = n(295474),
     G = n(521476),
     W = n(69882),
@@ -91,8 +91,8 @@ var i = n(54381),
     ek = n(655687),
     eU = n(583027),
     eV = n(25007),
-    eB = n(685722),
-    eF = n(199649),
+    eF = n(685722),
+    eB = n(199649),
     eH = n(1397),
     eG = n(641861),
     eW = n(981631),
@@ -725,7 +725,7 @@ class e3 extends r.PureComponent {
                     : eq.t.UbNmGc;
         let A = (0, i.jsx)("div", {
                 className: eK.channelBottomBarArea,
-                children: (0, i.jsx)(eB.Z, {}),
+                children: (0, i.jsx)(eF.Z, {}),
             }),
             w = (0, i.jsx)("div", {
                 className: eK.channelBottomBarArea,
@@ -840,7 +840,7 @@ class e3 extends r.PureComponent {
                                                             children: [
                                                                 _ && (0, i.jsx)(ea.Z, { channelId: n.id }),
                                                                 n.isPrivate()
-                                                                    ? (0, i.jsx)(eF.Z, {
+                                                                    ? (0, i.jsx)(eB.Z, {
                                                                           channel: n,
                                                                           children: R,
                                                                       })
@@ -927,7 +927,7 @@ class e3 extends r.PureComponent {
             }),
             eY(this, "handleOpenExpressionPicker", (e) => {
                 let { activeView: t } = e;
-                (0, F.PG)(t, this.props.chatInputType, this.props.channel.id);
+                (0, B.PG)(t, this.props.chatInputType, this.props.channel.id);
             }),
             eY(this, "handleOpenAppLauncher", (e) => {
                 let { applicationId: t } = e;
@@ -995,7 +995,7 @@ let e4 = r.memo(function (e) {
         S = (0, C.d7)(t),
         P = j.length > 0 || t.rateLimitPerUser > 0 || null != E || null != S,
         { showLinkedLobbyApplicationLoadingIndicator: I } = (0, eD.Z)(t.linkedLobby),
-        Z = (0, B.Z)("ChannelChat");
+        Z = (0, F.Z)("ChannelChat");
     return (0, i.jsx)(e3, {
         channel: t,
         isEditing: null != (0, p.e7)([eO.Z], () => eO.Z.getEditingMessageId(t.id)),

@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(719961),
     p = n(916069),
     f = n(591472),
-    h = n(565138),
-    g = n(370774),
+    g = n(565138),
+    h = n(370774),
     m = n(51596),
     _ = n(592125),
     b = n(430824),
@@ -33,7 +33,7 @@ function N(e) {
         A = null != j ? j : null == x ? void 0 : x.guild_id,
         Z = (0, o.e7)([b.Z], () => b.Z.getGuild(A), [A]),
         w = (0, p.Z)(),
-        L = (0, g.D)(),
+        L = (0, h.D)(),
         { guildTitleIconSize: R, guildIconSize: D } = (0, d.T)({ location: "GuildTitle" }),
         { application: M, isFrameInFocusedMode: k } = (0, o.cj)([u.Z, f.Z], () => {
             let e = f.Z.getConnectedFrame();
@@ -65,7 +65,7 @@ function N(e) {
           : null != Z
             ? ((G = w
                   ? (0, r.jsx)(c.r7p, { size: R })
-                  : (0, r.jsx)(h.Z, {
+                  : (0, r.jsx)(g.Z, {
                         guild: Z,
                         size: D,
                         active: !0,

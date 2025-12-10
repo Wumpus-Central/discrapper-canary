@@ -34,8 +34,8 @@ let y = 4,
     S = 15 * f.Z.Millis.MINUTE,
     I = new Map(),
     T = new Set(),
-    A = new Map(),
-    C = null,
+    C = new Map(),
+    A = null,
     N = (0, r.debounce)(_.yK, 3000, { trailing: !0 });
 function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
@@ -74,12 +74,12 @@ function w(e) {
 }
 function x() {
     var e;
-    let t = null != (e = A.get(v)) ? e : 0;
+    let t = null != (e = C.get(v)) ? e : 0;
     if ((t > 0 && t <= y) || (w(v), !D(v))) return;
     let n = h.Z.getFeed(v);
-    if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && null == C) return;
+    if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && null == A) return;
     let r = (null == n ? void 0 : n.expired_at) == null ? 0 : new Date(n.expired_at).getTime() - Date.now(),
-        a = Math.max(0, null == C ? 0 : new Date(C).getTime() - Date.now(), r) + (t > 0 ? P() : 0);
+        a = Math.max(0, null == A ? 0 : new Date(A).getTime() - Date.now(), r) + (t > 0 ? P() : 0);
     R(v, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + a),
@@ -112,13 +112,13 @@ async function L(e) {
                 feedId: t,
                 feed: r,
             }),
-                A.set(t, 0),
+                C.set(t, 0),
                 T.delete(t),
                 R(t, { loading: !1 }),
-                t === v && ((C = null), x());
+                t === v && ((A = null), x());
         } catch (o) {
             var i;
-            let e = null != (i = A.get(t)) ? i : 0;
+            let e = null != (i = C.get(t)) ? i : 0;
             if (e < y) {
                 let i = f.Z.Millis.MINUTE * Math.pow(2, e) + P(e);
                 I.set(
@@ -133,7 +133,7 @@ async function L(e) {
                         i,
                     ),
                 ),
-                    A.set(t, e + 1);
+                    C.set(t, e + 1);
             } else
                 a.Z.dispatch({
                     type: "CONTENT_INVENTORY_CLEAR_FEED",
@@ -164,7 +164,7 @@ function G(e) {
     let { refreshAfterMs: t } = e,
         n = h.Z.getFeed(v);
     (null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null &&
-        ((C = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), x());
+        ((A = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), x());
 }
 function Z(e) {
     var t;

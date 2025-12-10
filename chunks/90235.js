@@ -2,10 +2,10 @@ n.d(e, { f: () => o });
 var i = n(442837),
     l = n(435064),
     s = n(39604),
-    r = n(509613),
-    u = n(313789),
+    u = n(509613),
+    r = n(313789),
     a = n(388032);
-let o = (0, r.qs)(u.n.CLIPS_ENABLE_PHRASE_SIGNALS, {
+let o = (0, u.qs)(r.n.CLIPS_ENABLE_PHRASE_SIGNALS, {
     useTitle: () => a.intl.string(a.t.nHsilt),
     useSubtitle: () => a.intl.string(a.t["s6wq+m"]),
     useValue: () => (0, i.e7)([l.Z], () => l.Z.getSettings().clipSignals.enablePhraseSignals),

@@ -90,28 +90,28 @@ function T(e) {
         elasticSearchCursor: null,
     };
 }
-let A = (0, o.U)((e) => ({}));
-function C(e, t) {
-    let n = A.getState()[e];
+let C = (0, o.U)((e) => ({}));
+function A(e, t) {
+    let n = C.getState()[e];
     return (
         null == n && (n = T(1)),
         (n = b({}, n, t)),
         (0, s.j)(() => {
-            A.setState((t) => O(b({}, t), { [e]: n }));
+            C.setState((t) => O(b({}, t), { [e]: n }));
         }),
         n
     );
 }
 function N(e) {
-    return A.getState()[e];
+    return C.getState()[e];
 }
 function P(e) {
     let t = N(e);
-    return null == t && C(e, (t = T(1))), t;
+    return null == t && A(e, (t = T(1))), t;
 }
 function R(e) {
     (0, s.j)(() => {
-        A.setState((t) => {
+        C.setState((t) => {
             let n = b({}, t);
             return delete n[e], n;
         });
@@ -123,7 +123,7 @@ function D(e, t, n, r, i) {
         var o;
         null == (o = a.abortController) || o.abort();
     }
-    return C(e, {
+    return A(e, {
         requestState: 2,
         abortController: new AbortController(),
         lastUpdated: Date.now(),
@@ -135,7 +135,7 @@ function D(e, t, n, r, i) {
 }
 function w(e) {
     null != N(e) &&
-        C(e, {
+        A(e, {
             requestState: 0,
             abortController: null,
             lastUpdated: Date.now(),
@@ -144,14 +144,14 @@ function w(e) {
 async function x(e) {
     await (0, l._v)(200),
         null != N(e) &&
-            C(e, {
+            A(e, {
                 requestState: 3,
                 abortController: null,
                 lastUpdated: Date.now(),
             });
 }
 function L(e) {
-    C(e, {
+    A(e, {
         requestState: 4,
         abortController: null,
         lastUpdated: Date.now(),
@@ -326,13 +326,13 @@ async function H(e) {
     await x(s);
 }
 function Y(e) {
-    return A((t) => {
+    return C((t) => {
         var n;
         return (null == (n = t[I(e)]) ? void 0 : n.requestState) === 2;
     });
 }
 function W(e) {
-    return A((t) => {
+    return C((t) => {
         var n;
         return (null == (n = t[I(e)]) ? void 0 : n.requestState) === 4;
     });

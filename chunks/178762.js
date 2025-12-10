@@ -29,8 +29,8 @@ var r = n(54381),
     S = n(278399),
     I = n(886217),
     T = n(555672),
-    A = n(644548),
-    C = n(335326),
+    C = n(644548),
+    A = n(335326),
     N = n(268010),
     P = n(797342),
     R = n(206583);
@@ -119,7 +119,7 @@ let Z = (e) => {
             case l.s.PLAYED_GAME:
                 return (0, r.jsx)(E.Z, L(w({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(C.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(A.Z, L(w({}, n), { entry: t }));
             case l.s.TOP_GAME:
                 return (0, r.jsx)(T.ZP, L(w({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
@@ -179,7 +179,7 @@ let Z = (e) => {
             case l.s.WATCHED_MEDIA:
                 return (0, r.jsx)(N.Z, L(w({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(A.Z, L(w({}, n), { entry: t }));
+                return (0, r.jsx)(C.Z, L(w({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
                 return (0, r.jsx)(I.Z, L(w({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
@@ -211,13 +211,13 @@ let Z = (e) => {
                 }),
                 [I, p.channel.guild_id, p.channel.id, p.entry, p.requestId, S],
             ),
-            A = i.useRef(!1),
-            [C, N] = i.useState(!1),
+            C = i.useRef(!1),
+            [A, N] = i.useState(!1),
             [D, x] = i.useState(!1),
             M = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled);
         i.useEffect(() => {
-            C && M && x(!0);
-        }, [C, M]),
+            A && M && x(!0);
+        }, [A, M]),
             i.useLayoutEffect(() => {
                 null != h.current && y(!0);
             }, []);
@@ -260,9 +260,9 @@ let Z = (e) => {
                 [],
             ),
             W = () => {
-                (A.current = !1),
+                (C.current = !1),
                     setTimeout(() => {
-                        A.current || (N(!1), x(M));
+                        C.current || (N(!1), x(M));
                     }, 100);
             };
         return (0, r.jsxs)(r.Fragment, {
@@ -271,9 +271,9 @@ let Z = (e) => {
                 (0, r.jsx)("div", {
                     ref: l,
                     onMouseEnter: () => {
-                        (A.current = !0),
+                        (C.current = !0),
                             setTimeout(() => {
-                                A.current && N(!0), Y(T);
+                                C.current && N(!0), Y(T);
                             }, 100);
                     },
                     onMouseLeave: W,
@@ -297,7 +297,7 @@ let Z = (e) => {
                             });
                         },
                         position: "left",
-                        shouldShow: C,
+                        shouldShow: A,
                         positionKey: g,
                         onRequestOpen: () => Y(T),
                         onRequestClose: () => {
@@ -319,14 +319,14 @@ let Z = (e) => {
                                         },
                                     },
                                     onClick: () => {
-                                        C || N(!0);
+                                        A || N(!0);
                                     },
                                     onContextMenu: k,
                                     children: (0, r.jsx)(
                                         Z,
                                         L(w({}, p), {
                                             selected: n,
-                                            hovered: A.current,
+                                            hovered: C.current,
                                         }),
                                     ),
                                 }),

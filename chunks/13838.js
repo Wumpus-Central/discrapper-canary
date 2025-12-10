@@ -10,8 +10,8 @@ var r = n(392711),
     d = n(601964),
     p = n(199902),
     f = n(592125),
-    h = n(271383),
-    g = n(430824),
+    g = n(271383),
+    h = n(430824),
     m = n(131951),
     _ = n(19780),
     b = n(594174),
@@ -52,12 +52,12 @@ let w = {
             let {
                 args: { guild_id: t },
             } = e;
-            if (null == g.Z.getGuild(t))
+            if (null == h.Z.getGuild(t))
                 throw new O.Z({ errorCode: j.lTL.INVALID_GUILD }, "Invalid guild id: ".concat(t));
             return (e) => {
                 var n;
                 let { prevState: r, dispatch: l } = e,
-                    a = g.Z.getGuild(t);
+                    a = h.Z.getGuild(t);
                 if (null == a) return;
                 let s = {
                     guild: {
@@ -301,7 +301,7 @@ let w = {
             } = e;
             return (e) => {
                 let { prevState: n, dispatch: r } = e,
-                    i = { currentGuildMember: h.ZP.getSelfMember(t) };
+                    i = { currentGuildMember: g.ZP.getSelfMember(t) };
                 return (
                     null == i.currentGuildMember || (null != n && (0, s.Z)(i, n)) || r((0, S.Z)(i.currentGuildMember)),
                     i

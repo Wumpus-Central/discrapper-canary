@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(626135),
     p = n(823379),
     f = n(900849),
-    h = n(356164),
-    g = n(164991),
+    g = n(356164),
+    h = n(164991),
     m = n(726115),
     _ = n(28494),
     b = n(746728),
@@ -80,7 +80,7 @@ function P(e) {
                 loadId: t,
                 searchId: w,
                 query: I,
-                guildResults: o.map(h.Z.getGuild).filter(p.lm),
+                guildResults: o.map(g.Z.getGuild).filter(p.lm),
                 analyticsContext: Z,
                 categoryId: x,
             });
@@ -158,7 +158,7 @@ function P(e) {
                 var i, a;
                 await l(e, t, n, r);
                 let s = null == (a = B.current) || null == (i = a.getScrollerState()) ? void 0 : i.scrollTop;
-                null != s && g.Z.setState({ scrollPosition: s });
+                null != s && h.Z.setState({ scrollPosition: s });
             },
             [l],
         ),
@@ -188,11 +188,11 @@ function P(e) {
         return () => {
             var t;
             let n = null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollTop;
-            null != n && g.Z.setState({ scrollPosition: n });
+            null != n && h.Z.setState({ scrollPosition: n });
         };
     }, []),
         i.useLayoutEffect(() => {
-            let e = g.Z.getField("scrollPosition");
+            let e = h.Z.getField("scrollPosition");
             null != e &&
                 setTimeout(() => {
                     var t;
@@ -201,7 +201,7 @@ function P(e) {
                             to: e,
                             animate: !1,
                             callback: () => {
-                                g.Z.setState({ scrollPosition: null });
+                                h.Z.setState({ scrollPosition: null });
                             },
                         });
                 });

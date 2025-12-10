@@ -66,10 +66,10 @@ function I() {
 function T() {
     return (h = u.Z.getNativeModule()), I(), !0;
 }
-function A() {
+function C() {
     return (h = null), I(), !0;
 }
-function C(e) {
+function A(e) {
     let { locked: t, pid: n } = e;
     return (0, c.PY)(n, "setInputLocked called", { locked: t }), v(t, n), !0;
 }
@@ -104,11 +104,11 @@ p(x, "displayName", "Overlay-v3-Native-Input-Lock-Store");
 let L = new x(
         a.Z,
         __OVERLAY__ || !d.iP
-            ? { OVERLAY_SET_INPUT_LOCKED: C }
+            ? { OVERLAY_SET_INPUT_LOCKED: A }
             : {
                   OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: T,
-                  OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: A,
-                  OVERLAY_SET_INPUT_LOCKED: C,
+                  OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: C,
+                  OVERLAY_SET_INPUT_LOCKED: A,
                   OVERLAY_ACTIVATE_REGION: N,
                   OVERLAY_DEACTIVATE_ALL_REGIONS: P,
                   OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: w,

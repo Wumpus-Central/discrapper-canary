@@ -36,10 +36,10 @@ function c(e) {
 function u() {
     let e = {};
     {
-        let A = s.Z.getMemoryUsageElectronRenderer();
-        null != A && (e.client_heartbeat_renderer_memory = A);
-        let C = s.Z.getMemoryUsageElectronRendererUsedHeapSize();
-        null != C && (e.client_heartbeat_renderer_memory_used_heap = C);
+        let C = s.Z.getMemoryUsageElectronRenderer();
+        null != C && (e.client_heartbeat_renderer_memory = C);
+        let A = s.Z.getMemoryUsageElectronRendererUsedHeapSize();
+        null != A && (e.client_heartbeat_renderer_memory_used_heap = A);
         let N = s.Z.getMemoryUsageElectronProcessTypeDetails();
         if (null != N) {
             var t, n, r, i, a, o, l, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T;

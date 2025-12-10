@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => P,
-    fD: () => C,
+    fD: () => A,
 }),
     n(388685);
 var r = n(54381),
@@ -53,21 +53,21 @@ function T(e) {
     }
     return e;
 }
-let A = "AppHardwareAcceleration";
-function C() {
+let C = "AppHardwareAcceleration";
+function A() {
     if ((0, f.Y)("DesktopNativeUtils")) {
-        let e = o.K.get(A);
+        let e = o.K.get(C);
         if ("boolean" == typeof e) return e;
     }
     return m.ZP.getEnableHardwareAcceleration();
 }
 function N(e) {
     (0, f.Y)("DesktopNativeUtils")
-        ? (o.K.set(A, e), m.ZP.setEnableHardwareAcceleration(!0))
+        ? (o.K.set(C, e), m.ZP.setEnableHardwareAcceleration(!0))
         : m.ZP.setEnableHardwareAcceleration(e);
 }
 function P() {
-    let [e] = i.useState(() => C()),
+    let [e] = i.useState(() => A()),
         t = g.bm.useSetting(),
         n = g.Sb.useSetting(),
         o = (0, a.e7)([_.Z], () => _.Z.testModeApplicationId),
@@ -78,7 +78,7 @@ function P() {
         I = i.useCallback((e) => {
             e ? (0, l.h7j)((e) => (0, r.jsx)(b.Z, T({}, e))) : c.mc();
         }, []),
-        A = i.useCallback((e) => {
+        C = i.useCallback((e) => {
             (0, d.BV)(e, u.Z.USER_SETTINGS);
         }, []),
         P = i.useCallback((e) => {
@@ -158,7 +158,7 @@ function P() {
                             label: S.intl.string(S.t.qDZryG),
                             description: S.intl.string(S.t["B/qU4K"]),
                             checked: f,
-                            onChange: A,
+                            onChange: C,
                         }),
                         (0, r.jsx)(l.izJ, {}),
                     ],

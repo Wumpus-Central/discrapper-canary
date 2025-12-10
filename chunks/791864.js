@@ -32,8 +32,8 @@ function u(e) {
             }),
             [m, e.hourCycle, e.shouldForceLeadingZeros, h, e.hideTimeZone, I],
         ),
-        { minValue: A, maxValue: C, isDateUnavailable: N } = e,
-        P = (0, c.useMemo)(() => (0, r.p2)(d, A, C, N, T), [d, A, C, N, T]),
+        { minValue: C, maxValue: A, isDateUnavailable: N } = e,
+        P = (0, c.useMemo)(() => (0, r.p2)(d, C, A, N, T), [d, C, A, N, T]),
         R = (0, o.Q3)({
             ...e,
             value: d,

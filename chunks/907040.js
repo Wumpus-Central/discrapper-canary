@@ -27,8 +27,8 @@ var r = n(54381),
     S = n(664437),
     I = n(806966),
     T = n(28546),
-    A = n(691251),
-    C = n(98528),
+    C = n(691251),
+    A = n(98528),
     N = n(770812),
     P = n(434404),
     R = n(536442),
@@ -121,7 +121,7 @@ var ec = (function (e) {
     );
 })({});
 let eu = (e, t) => {
-        I.kJ.setInspectedExpressionPosition(e, t, A.u.GRID_NAVIGATOR_EVENT);
+        I.kJ.setInspectedExpressionPosition(e, t, C.u.GRID_NAVIGATOR_EVENT);
     },
     ed = (e) => {
         let {
@@ -192,7 +192,7 @@ let eu = (e, t) => {
                 gridContainerProps: E,
                 handleGridContainerKeyDown: b,
                 isUsingKeyboardNavigation: y,
-            } = (0, C.VO)({
+            } = (0, A.VO)({
                 columnCounts: r,
                 gridNavigatorId: Q.Vr,
                 itemGrid: o,
@@ -208,7 +208,7 @@ let eu = (e, t) => {
                         (e) => {
                             if (null == e) return;
                             let { columnIndex: t, rowIndex: n, source: r } = e;
-                            r !== A.u.GRID_NAVIGATOR_EVENT &&
+                            r !== C.u.GRID_NAVIGATOR_EVENT &&
                                 m({
                                     type: c.s.SET_FOCUSED_POSITION,
                                     x: t,
@@ -263,7 +263,7 @@ let eu = (e, t) => {
                 channel: c,
                 guildId: f,
                 closePopout: _,
-                emojiSize: A = Q.Su.MEDIUM,
+                emojiSize: C = Q.Su.MEDIUM,
                 hasTabWrapper: P = !1,
                 containerContext: k = 0,
                 includeCreateEmojiButton: et,
@@ -279,8 +279,8 @@ let eu = (e, t) => {
                 wrapper: eS,
                 shouldHidePickerActions: eI = !1,
                 messageId: eT,
-                renderHeader: eA,
-                listHeaderClassName: eC,
+                renderHeader: eC,
+                listHeaderClassName: eA,
                 categoryListClassName: eN,
                 shouldShowSoundmojiInEmojiPicker: eP = !1,
                 showOnlyUnicode: eR = !1,
@@ -312,7 +312,7 @@ let eu = (e, t) => {
             e7 = i.useCallback((e) => {
                 w.d4.updateSetting(Array.from(e));
             }, []),
-            e9 = (0, C.ep)({
+            e9 = (0, A.ep)({
                 gridWrapperRef: eB,
                 containerWidth: eu,
                 listPaddingLeft: eo,
@@ -332,7 +332,7 @@ let eu = (e, t) => {
                 emojiSearchResults: e4,
                 collapsedSections: e6,
                 emojiPaddingHorizontal: ea,
-                emojiSpriteSize: A,
+                emojiSpriteSize: C,
                 shouldShowSoundmojiInEmojiPicker: eP,
                 showOnlyUnicode: eR,
             }),
@@ -487,7 +487,7 @@ let eu = (e, t) => {
                 diversitySurrogate: e2,
                 isBurstReaction: eY,
                 onBurstReactionToggle: th,
-                renderHeader: eA,
+                renderHeader: eC,
                 showAddEmojiButton: eD,
             }),
             tE = [];
@@ -546,7 +546,7 @@ let eu = (e, t) => {
                                                                     diversitySurrogate: e2,
                                                                     emojiGrid: tn,
                                                                     emojiListRef: eF,
-                                                                    emojiSize: A,
+                                                                    emojiSize: C,
                                                                     getEmojiItemProps: tl,
                                                                     getEmojiRowProps: tc,
                                                                     gridWidth: e9,
@@ -562,7 +562,7 @@ let eu = (e, t) => {
                                                                     channelId: null == c ? void 0 : c.id,
                                                                     messageId: eT,
                                                                     isBurstReaction: eY,
-                                                                    listHeaderClassName: eC,
+                                                                    listHeaderClassName: eA,
                                                                 })
                                                               : null,
                                                       },

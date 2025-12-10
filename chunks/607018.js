@@ -17,10 +17,10 @@ let _ = i.forwardRef(function (e, t) {
         [y, O] = i.useState(null),
         [v, S] = i.useState(null),
         [I, T] = i.useState(null),
-        [A, C] = i.useState(!1),
+        [C, A] = i.useState(!1),
         N = i.useCallback(
             async (e) => {
-                C(!0);
+                A(!0);
                 try {
                     d.Z.isPhoneReverification(E, b)
                         ? await s.Z.beginReverifyPhone(e, h)
@@ -30,21 +30,21 @@ let _ = i.forwardRef(function (e, t) {
                 } catch (e) {
                     T(new o.Z(e));
                 }
-                C(!1);
+                A(!1);
             },
             [E, h, b],
         ),
         P = i.useCallback(
             async (e) => {
                 if (null != y && null != E) {
-                    C(!0);
+                    A(!0);
                     try {
                         let { token: t } = await s.Z.verifyPhone(y, e);
                         T(null), S(t);
                     } catch (e) {
                         T(new o.Z(e));
                     }
-                    C(!1);
+                    A(!1);
                 }
             },
             [E, y],
@@ -69,7 +69,7 @@ let _ = i.forwardRef(function (e, t) {
               onClose: _,
               transitionState: m,
               error: null == I ? void 0 : I.getAnyErrorMessage(),
-              working: A,
+              working: C,
               validPhone: null != y,
               onAddPhone: N,
               onVerifyPhone: P,

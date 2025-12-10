@@ -21,10 +21,10 @@ var r = n(507604),
     S = n(923646),
     I = n(204954),
     T = v("match"),
-    A = i.RegExp,
-    C = A.prototype,
+    C = i.RegExp,
+    A = C.prototype,
     N = i.SyntaxError,
-    P = a(C.exec),
+    P = a(A.exec),
     R = a("".charAt),
     D = a("".replace),
     w = a("".indexOf),
@@ -32,7 +32,7 @@ var r = n(507604),
     L = /^\?<[^\s\d!#%&*+<=>@^][^\s!#%&*+<=>@^]*>/,
     j = /a/g,
     M = /a/g,
-    k = new A(j) !== j,
+    k = new C(j) !== j,
     U = m.MISSED_STICKY,
     G = m.UNSUPPORTED_Y,
     Z =
@@ -42,7 +42,7 @@ var r = n(507604),
             S ||
             I ||
             E(function () {
-                return (M[T] = !1), A(j) !== j || A(M) === M || "/a/i" !== String(A(j, "i"));
+                return (M[T] = !1), C(j) !== j || C(M) === M || "/a/i" !== String(C(j, "i"));
             })),
     B = function (e) {
         for (var t, n = e.length, r = 0, i = "", a = !1; r <= n; r++) {
@@ -85,14 +85,14 @@ if (o("RegExp", Z)) {
                     a,
                     o,
                     c,
-                    u = d(C, this),
+                    u = d(A, this),
                     m = f(e),
                     h = void 0 === t,
                     g = [],
                     E = e;
                 if (!u && m && h && e.constructor === V) return e;
                 if (
-                    ((m || d(C, e)) && ((e = e.source), h && (t = _(E))),
+                    ((m || d(A, e)) && ((e = e.source), h && (t = _(E))),
                     (e = void 0 === e ? "" : p(e)),
                     (t = void 0 === t ? "" : p(t)),
                     (E = e),
@@ -100,7 +100,7 @@ if (o("RegExp", Z)) {
                     (n = t),
                     U && "sticky" in j && (i = !!t && w(t, "y") > -1) && G && (t = D(t, /y/g, "")),
                     I && ((e = (a = F(e))[0]), (g = a[1])),
-                    (o = s(A(e, t), u ? this : C, V)),
+                    (o = s(C(e, t), u ? this : A, V)),
                     (r || i || g.length) &&
                         ((c = y(o)),
                         r && ((c.dotAll = !0), (c.raw = V(B(e), n))),
@@ -113,11 +113,11 @@ if (o("RegExp", Z)) {
                     } catch (e) {}
                 return o;
             },
-            H = u(A),
+            H = u(C),
             Y = 0;
         H.length > Y;
     )
-        h(V, A, H[Y++]);
-    (C.constructor = V), (V.prototype = C), g(i, "RegExp", V, { constructor: !0 });
+        h(V, C, H[Y++]);
+    (A.constructor = V), (V.prototype = A), g(i, "RegExp", V, { constructor: !0 });
 }
 O("RegExp");

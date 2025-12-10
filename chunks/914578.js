@@ -7,9 +7,9 @@ var r = n(54381),
     c = n(782568),
     s = n(163379),
     u = n(63063),
-    d = n(604227),
+    b = n(604227),
     f = n(981631),
-    b = n(388032),
+    d = n(388032),
     y = n(989281);
 function p(e) {
     let { onClose: t } = e;
@@ -22,17 +22,17 @@ function p(e) {
             children: [
                 (0, r.jsx)(a.sNh, {
                     id: "changelog",
-                    label: b.intl.string(b.t.LRmNAl),
+                    label: d.intl.string(d.t.LRmNAl),
                     action: () => (0, s.Z)(!0),
                 }),
                 (0, r.jsx)(a.sNh, {
                     id: "acknowledgements",
-                    label: b.intl.string(b.t["0nUKy3"]),
+                    label: d.intl.string(d.t["0nUKy3"]),
                     action: () => (0, c.Z)(f.EYA.ACKNOWLEDGEMENTS),
                 }),
                 (0, r.jsx)(a.sNh, {
                     id: "support",
-                    label: b.intl.string(b.t["Yl/Riu"]),
+                    label: d.intl.string(d.t["Yl/Riu"]),
                     action: () => (0, c.Z)(u.w),
                 }),
             ],
@@ -43,7 +43,7 @@ function g() {
     let e = o.useRef(null);
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(d.Z, { compact: !0 }),
+            (0, r.jsx)(b.Z, { compact: !0 }),
             (0, r.jsxs)("div", {
                 className: y.links,
                 children: [
@@ -53,7 +53,7 @@ function g() {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: b.intl.string(b.t["Knf/f/"]),
+                            children: d.intl.string(d.t["Knf/f/"]),
                         }),
                     }),
                     (0, r.jsx)("span", {
@@ -67,7 +67,7 @@ function g() {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: b.intl.string(b.t.uFSTGq),
+                            children: d.intl.string(d.t.uFSTGq),
                         }),
                     }),
                     (0, r.jsx)("span", {
@@ -123,7 +123,7 @@ function g() {
                                             tag: "span",
                                             variant: "text-xxs/normal",
                                             color: "currentColor",
-                                            children: b.intl.string(b.t["UKOtz+"]),
+                                            children: d.intl.string(d.t["UKOtz+"]),
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors

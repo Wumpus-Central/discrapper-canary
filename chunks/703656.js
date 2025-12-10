@@ -3,11 +3,11 @@ n.d(t, {
     At: () => I,
     DB: () => N,
     DR: () => T,
-    Wf: () => C,
+    Wf: () => A,
     XU: () => y,
     dL: () => v,
     eH: () => R,
-    m1: () => A,
+    m1: () => C,
     op: () => P,
     s1: () => S,
     uL: () => b,
@@ -132,14 +132,14 @@ function I() {
 function T() {
     return a;
 }
-function A(e) {
+function C(e) {
     if (null == e) {
         var t;
         e = null != (t = r.location.pathname) ? t : "";
     }
     return !e.startsWith(u.Z5c.HANDOFF);
 }
-function C(e) {
+function A(e) {
     if (null == e) {
         var t;
         e = null != (t = r.location.pathname) ? t : "";

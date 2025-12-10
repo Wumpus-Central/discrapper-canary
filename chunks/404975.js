@@ -7,9 +7,9 @@ var r = n(54381),
     c = n(873546),
     s = n(704215),
     u = n(481060),
-    f = n(607070),
-    d = n(724757),
-    b = n(243778),
+    b = n(607070),
+    f = n(724757),
+    d = n(243778),
     y = n(984802),
     p = n(970013),
     g = n(996435),
@@ -53,30 +53,30 @@ function h(e) {
                 [e, n]
             );
         }, [t.layout]),
-        k = (0, y.Ll)(),
-        E = (0, d.Z)("settings-sidebar", P),
-        N = g.Z.useField("currentPanelKey");
+        T = (0, y.Ll)(),
+        k = (0, f.Z)("settings-sidebar", P),
+        E = g.Z.useField("currentPanelKey");
     return (
         o.useEffect(() => {
             var e;
-            if (null == P.current || null == N) return;
+            if (null == P.current || null == E) return;
             let t = g.Z.getField("navTransition"),
                 n = null == t || t.animateScroll,
                 r =
                     null == (e = P.current.getScrollerNode())
                         ? void 0
-                        : e.querySelector('[data-settings-sidebar-item="'.concat(N, '"]'));
+                        : e.querySelector('[data-settings-sidebar-item="'.concat(E, '"]'));
             null != r &&
                 P.current.scrollIntoViewNode({
                     node: r,
                     padding: 8,
-                    animate: !f.Z.useReducedMotion && n,
+                    animate: !b.Z.useReducedMotion && n,
                 });
-        }, [N]),
+        }, [E]),
         (0, r.jsx)(u.f6W, {
-            theme: k,
+            theme: T,
             children: (e) =>
-                (0, r.jsx)(b.ZP, {
+                (0, r.jsx)(d.ZP, {
                     contentTypes: C,
                     children: (t) => {
                         let { visibleContent: o } = t;
@@ -123,7 +123,7 @@ function h(e) {
                                     ],
                                 }),
                                 (0, r.jsx)(a.bG, {
-                                    navigator: E,
+                                    navigator: k,
                                     children: (0, r.jsx)(a.SJ, {
                                         children: (e) => {
                                             var t,
@@ -278,11 +278,11 @@ function x(e) {
 function S(e) {
     let { searchQuery: t, onSearchChange: n } = e,
         i = o.useRef(null),
-        [l, a] = (0, b.US)([s.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
+        [l, a] = (0, d.US)([s.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
         c = o.useCallback(() => {
             n("");
         }, [n]),
-        f = o.useMemo(
+        b = o.useMemo(
             () => ({
                 title: j.intl.string(j.t.Kv519a),
                 body: j.intl.string(j.t.cTGJBZ),
@@ -311,7 +311,7 @@ function S(e) {
                 targetElementRef: i,
                 visibleContent: l,
                 markAsDismissed: a,
-                props: f,
+                props: b,
             }),
         ],
     });

@@ -82,8 +82,8 @@ function v(e, t) {
 let S = window.DiscordNative,
     I = new Set(["jpg", "jpeg", "jfif", "png"]),
     T = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]),
-    A = (e) => e.startsWith("image/"),
-    C = 5,
+    C = (e) => e.startsWith("image/"),
+    A = 5,
     N = null,
     P = null,
     R = null,
@@ -177,7 +177,7 @@ function W(e) {
 }
 function K(e, t) {
     var n, r, i, a;
-    if (null != t && A(t)) {
+    if (null != t && C(t)) {
         let e = null == (a = t.split("/")[1]) ? void 0 : a.toLowerCase();
         if ("jpeg" === e) return "jpg";
         if (null != e) return e;
@@ -185,7 +185,7 @@ function K(e, t) {
     let o = h.Z.toURLSafe(e);
     if (null == o) return;
     let s = null == (i = o.pathname) || null == (r = i.split(".")) || null == (n = r.pop()) ? void 0 : n.toLowerCase();
-    return null != s && s.length <= C ? s : void 0;
+    return null != s && s.length <= A ? s : void 0;
 }
 function z(e) {
     if ((0, m.isDesktop)())

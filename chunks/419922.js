@@ -10,7 +10,7 @@ var r = n(54381),
     o = n.n(a),
     s = n(512722),
     l = n.n(s),
-    c = n(205120),
+    c = n(467721),
     u = n(442837),
     d = n(622535),
     f = n(481060),
@@ -27,11 +27,11 @@ let v = (e) => e.preventDefault(),
     S = 0.7,
     I = 33,
     T = 1.55,
-    A = {
+    C = {
         tension: 1100,
         friction: 40,
     },
-    C = {
+    A = {
         tension: 1600,
         friction: 60,
     };
@@ -98,12 +98,12 @@ let R = (e) => {
             E = i.useRef(null),
             [v, S] = i.useState(!0),
             [I, T] = i.useState(!1),
-            A = i.useRef(!1);
-        A.current = t && u;
-        let C = null == s ? (0, b.Q6)(o) : s;
-        return (l()(null != C, "Unable to determine sticker asset URL. Sticker ID: ".concat(o.id)),
+            C = i.useRef(!1);
+        C.current = t && u;
+        let A = null == s ? (0, b.Q6)(o) : s;
+        return (l()(null != A, "Unable to determine sticker asset URL. Sticker ID: ".concat(o.id)),
         i.useEffect(() => {
-            if (null == g.current || null == C) return;
+            if (null == g.current || null == A) return;
             let e = Math.min(2, (0, _.x_)());
             (g.current.width = a * e), (g.current.height = a * e);
             let t = !1;
@@ -114,7 +114,7 @@ let R = (e) => {
                         ((E.current = new e({
                             canvas: g.current,
                             animationId: o.id,
-                            assetUrl: C,
+                            assetUrl: A,
                             assetData: c,
                             onInitialDraw: () => {
                                 t || S(!1);
@@ -123,20 +123,20 @@ let R = (e) => {
                                 t || (S(!1), T(!0), null == h || h());
                             },
                         })),
-                        A.current && E.current.setState(!0));
+                        C.current && E.current.setState(!0));
                 })(),
                 () => {
                     var e;
                     null == (e = E.current) || e.drop(), (E.current = null), (t = !0);
                 }
             );
-        }, [C, a, o.id, c, h]),
+        }, [A, a, o.id, c, h]),
         i.useEffect(() => {
             var e;
             let n;
             t || (n = 0), null == (e = E.current) || e.setState(t && u, n);
         }, [o, t, u]),
-        null == C)
+        null == A)
             ? null
             : (0, r.jsx)("div", {
                   role: "img",
@@ -176,14 +176,14 @@ let R = (e) => {
             [E, y] = i.useState(!1),
             I = i.useRef(null),
             T = i.useRef(null),
-            A =
+            C =
                 null != p
                     ? p
                     : (0, b.Q6)(n, {
                           isPreview: !t || !_ || !a,
                           size: s,
                       }),
-            C = i.useCallback(() => {
+            A = i.useCallback(() => {
                 g(!1);
             }, []),
             D = i.useCallback(() => {
@@ -199,7 +199,7 @@ let R = (e) => {
             var e;
             (null == (e = T.current) ? void 0 : e.complete) === !0 && g(!1);
         }, []),
-        null == A)
+        null == C)
             ? null
             : (0, r.jsx)(d.$, {
                   innerRef: u,
@@ -219,10 +219,10 @@ let R = (e) => {
                               (0, r.jsx)("img", {
                                   className: O.pngImage,
                                   alt: P(n),
-                                  src: A,
+                                  src: C,
                                   draggable: !1,
                                   onError: D,
-                                  onLoad: C,
+                                  onLoad: A,
                                   onContextMenu: v,
                                   ref: T,
                               }),
@@ -256,7 +256,7 @@ let R = (e) => {
                     opacity: 1,
                 },
                 leave: g,
-                config: A,
+                config: C,
             }),
             b = i.useRef(null),
             y = (0, f.q_F)(
@@ -264,7 +264,7 @@ let R = (e) => {
                     ref: b,
                     transform: o || _ ? "translateY(0)" : "translateY(-25px)",
                     opacity: +!!o,
-                    config: C,
+                    config: A,
                 },
                 "animate-always",
             );

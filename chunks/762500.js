@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(417183),
     p = n(825682),
     f = n(170245),
-    h = n(752048),
-    g = n(699516),
+    g = n(752048),
+    h = n(699516),
     m = n(626135),
     _ = n(795448),
     b = n(474936),
@@ -36,7 +36,7 @@ function y(e) {
         { analyticsLocations: w } = (0, o.ZP)(),
         { Component: L } = (0, a.V)();
     i.useEffect(() => {
-        let e = h.Z.getUserAffinity(A.id);
+        let e = g.Z.getUserAffinity(A.id);
         (0, c.h)({
             name: l.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
             type: l.ImpressionTypes.VIEW,
@@ -48,7 +48,7 @@ function y(e) {
     }, [A, Z]);
     let R = (e) => {
             e.stopPropagation();
-            let t = h.Z.getUserAffinity(A.id);
+            let t = g.Z.getUserAffinity(A.id);
             m.default.track(E.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
                 gift_intent_type: Z,
                 affinity: null == t ? void 0 : t.communicationProbability,
@@ -89,7 +89,7 @@ function y(e) {
                             applicationStream: T,
                             status: C,
                             user: A,
-                            userIgnored: g.Z.isIgnored(A.id),
+                            userIgnored: h.Z.isIgnored(A.id),
                         }),
                         hovered: e,
                         showAccountIdentifier: !N && !A.isProvisional,

@@ -175,7 +175,7 @@ class E extends o.C {
                     a.primaryGuild = P.internalBinaryRead(e, e.uint32(), n, a.primaryGuild);
                     break;
                 case 11:
-                    a.collectibles = C.internalBinaryRead(e, e.uint32(), n, a.collectibles);
+                    a.collectibles = A.internalBinaryRead(e, e.uint32(), n, a.collectibles);
                     break;
                 case 12:
                     a.safetyState = et.internalBinaryRead(e, e.uint32(), n, a.safetyState);
@@ -206,7 +206,7 @@ class E extends o.C {
             e.avatarDecorationData &&
                 O.internalBinaryWrite(e.avatarDecorationData, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
             e.primaryGuild && P.internalBinaryWrite(e.primaryGuild, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
-            e.collectibles && C.internalBinaryWrite(e.collectibles, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
+            e.collectibles && A.internalBinaryWrite(e.collectibles, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
             e.safetyState && et.internalBinaryWrite(e.safetyState, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&
                 T.internalBinaryWrite(e.displayNameStyles, t.tag(13, r.TD.LengthDelimited).fork(), n).join();
@@ -273,7 +273,7 @@ class E extends o.C {
                 no: 11,
                 name: "collectibles",
                 kind: "message",
-                T: () => C,
+                T: () => A,
             },
             {
                 no: 12,
@@ -664,7 +664,7 @@ class I extends o.C {
     }
 }
 let T = new I();
-class A extends o.C {
+class C extends o.C {
     create(e) {
         let t = {};
         return (
@@ -710,7 +710,7 @@ class A extends o.C {
         ]);
     }
 }
-let C = new A();
+let A = new C();
 class N extends o.C {
     create(e) {
         let t = {};
@@ -895,7 +895,7 @@ class w extends o.C {
                     a.crossPlatformRestriction = D.internalBinaryRead(e, e.uint32(), n, a.crossPlatformRestriction);
                     break;
                 case 7:
-                    a.collectibles = C.internalBinaryRead(e, e.uint32(), n, a.collectibles);
+                    a.collectibles = A.internalBinaryRead(e, e.uint32(), n, a.collectibles);
                     break;
                 case 8:
                     a.safetyState = et.internalBinaryRead(e, e.uint32(), n, a.safetyState);
@@ -1004,7 +1004,7 @@ class w extends o.C {
             e.primaryGuild && P.internalBinaryWrite(e.primaryGuild, t.tag(5, r.TD.LengthDelimited).fork(), n).join(),
             e.crossPlatformRestriction &&
                 D.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
-            e.collectibles && C.internalBinaryWrite(e.collectibles, t.tag(7, r.TD.LengthDelimited).fork(), n).join(),
+            e.collectibles && A.internalBinaryWrite(e.collectibles, t.tag(7, r.TD.LengthDelimited).fork(), n).join(),
             e.safetyState && et.internalBinaryWrite(e.safetyState, t.tag(8, r.TD.LengthDelimited).fork(), n).join(),
             e.premiumState && er.internalBinaryWrite(e.premiumState, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&
@@ -1066,7 +1066,7 @@ class w extends o.C {
                 no: 7,
                 name: "collectibles",
                 kind: "message",
-                T: () => C,
+                T: () => A,
             },
             {
                 no: 8,

@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => C,
-    c: () => A,
+    Z: () => A,
+    c: () => C,
 });
 var r = n(54381),
     i = n(473749),
@@ -38,19 +38,19 @@ function T() {
     let e = S();
     return null != e ? (0, f.YN)(e) : 0;
 }
-function A(e, t) {
+function C(e, t) {
     let n = (0, _.kG)(),
         r = I(),
         i = (0, p.S)(e, t);
     return null != n && r && i;
 }
-let C = (e) => {
+let A = (e) => {
     var t;
     let { markAsDismissed: n, children: a, mode: u = "popover", tooltipDelay: f = 300, targetElementRef: p } = e,
         { analyticsLocations: S } = (0, l.ZP)(s.Z.TIERED_TENURE_BADGE_CHURN_REMINDER),
         I = v(),
-        A = T(),
-        C = null != (t = (0, _.kG)()) ? t : h.VU.PREMIUM_TENURE_1_MONTH,
+        C = T(),
+        A = null != (t = (0, _.kG)()) ? t : h.VU.PREMIUM_TENURE_1_MONTH,
         N = (0, i.useCallback)(() => {
             d.default.track(g.rMx.TOOLTIP_VIEWED, { type: "tiered_tenure_badge_churn_reminder" });
         }, []),
@@ -71,16 +71,16 @@ let C = (e) => {
                 onClick: P,
             },
         ],
-        D = A >= y && A <= O ? Math.max(1, Math.min(100, ((O - A) / O) * 100)) : 1,
-        w = A <= 10 ? "critical" : "warning";
+        D = C >= y && C <= O ? Math.max(1, Math.min(100, ((O - C) / O) * 100)) : 1,
+        w = C <= 10 ? "critical" : "warning";
     return (0, r.jsx)(m.Z, {
-        badgeId: C,
+        badgeId: A,
         targetElementRef: p,
         body: I,
         mode: u,
         tooltipDelay: f,
         markAsDismissed: n,
-        progressCircleText: "" + A,
+        progressCircleText: "" + C,
         progressCirclePercent: D,
         progressCircleUrgency: w,
         actions: R,

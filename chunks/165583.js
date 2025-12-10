@@ -27,8 +27,8 @@ var r = n(54381),
     S = n(74538),
     I = n(960048),
     T = n(861990),
-    A = n(98278),
-    C = n(639119),
+    C = n(98278),
+    A = n(639119),
     N = n(767714),
     P = n(382791),
     R = n(474936),
@@ -130,7 +130,7 @@ function k(e) {
 }
 function U(e) {
     var t, n;
-    let i = null == (t = (0, C.N)()) ? void 0 : t.subscription_trial,
+    let i = null == (t = (0, A.N)()) ? void 0 : t.subscription_trial,
         a = null != (n = null == i ? void 0 : i.sku_id) ? n : R.Si.TIER_2;
     return (0, r.jsx)(m.Text, {
         variant: "text-xs/bold",
@@ -171,7 +171,7 @@ function G(e) {
 }
 function Z(e) {
     let { onClose: t, analyticsLocationObject: n } = e,
-        i = (0, C.N)();
+        i = (0, A.N)();
     return (0, r.jsxs)("div", {
         className: x.tryOutUpsellContainer,
         children: [
@@ -183,7 +183,7 @@ function Z(e) {
             (0, r.jsx)(m.Heading, {
                 variant: "heading-md/semibold",
                 color: "text-default",
-                children: w.intl.format(w.t["fF+cgd"], { onClick: () => (0, A.z)() }),
+                children: w.intl.format(w.t["fF+cgd"], { onClick: () => (0, C.z)() }),
             }),
             (0, r.jsx)(k, {
                 trialOffer: i,
@@ -235,8 +235,8 @@ function F(e) {
             trialOffer: y,
             discountOffer: O,
         } = e,
-        A = (0, d.e7)([g.Z], () => g.Z.useReducedMotion),
-        C = (0, h.ZP)(),
+        C = (0, d.e7)([g.Z], () => g.Z.useReducedMotion),
+        A = (0, h.ZP)(),
         N = (0, v.BU)(T.zz / v.XD, { useKibibytes: !0 });
     switch (c) {
         case R.cd.EMPTY_STICKER_PICKER_UPSELL:
@@ -328,7 +328,7 @@ function F(e) {
             );
         case R.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI:
             l()(null != a, "You must specify children for this upsell type");
-            let P = (0, p.ap)(C) ? n(537381) : n(341048);
+            let P = (0, p.ap)(A) ? n(537381) : n(341048);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
@@ -472,7 +472,7 @@ function F(e) {
             );
         case R.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
             return (0, r.jsxs)("div", {
-                className: o()(x.messageLengthUpsellContainer, { [x.messageLengthUpsellAppearAnimation]: !A }),
+                className: o()(x.messageLengthUpsellContainer, { [x.messageLengthUpsellAppearAnimation]: !C }),
                 children: [
                     (0, r.jsx)(m.Text, {
                         variant: "text-lg/bold",

@@ -35,7 +35,7 @@ function T(e) {
         children: a,
     });
 }
-function A(e, t, n) {
+function C(e, t, n) {
     i.useEffect(() => {
         let r;
         function i() {
@@ -50,7 +50,7 @@ function A(e, t, n) {
         );
     }, [e, t, n]);
 }
-function C(e, t, n) {
+function A(e, t, n) {
     i.useEffect(() => {
         if (t)
             return (
@@ -205,8 +205,8 @@ let N = i.memo(function (e) {
                     null == n || n(t, i), ea(t), (em.current = null);
                 }
         }, [Y, n, B, ea]),
-        A(L, Y, Z),
-        C(n, Y, W);
+        C(L, Y, Z),
+        A(n, Y, W);
     let eE = Y ? l.fpf : l.o1U,
         eb = Y ? O.intl.string(O.t.ZcgDJX) : O.intl.string(O.t.RscU7I),
         ey = O.intl.formatToPlainString(O.t.LgCPMt, { playbackRate: M }),

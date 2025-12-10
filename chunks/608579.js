@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(49308),
     I = n(117652),
     T = n(126982),
-    A = n(981631),
-    C = n(302800),
+    C = n(981631),
+    A = n(302800),
     N = n(215023),
     P = n(231338),
     R = n(206051);
@@ -72,7 +72,7 @@ let x = (e) => {
             [o, l] = i.useState(!1),
             c = i.useMemo(
                 () =>
-                    (0, C.UY)({
+                    (0, A.UY)({
                         purchaseType: N.o8.FIAT,
                         skuId: t,
                     }),
@@ -165,7 +165,7 @@ function Z(e) {
         } = e,
         { analyticsLocations: T } = x({ analyticsLocations: _ }),
         {
-            confettiCanvas: C,
+            confettiCanvas: A,
             environment: N,
             setConfettiCanvas: R,
             customConfettiVisible: D,
@@ -205,7 +205,7 @@ function Z(e) {
                             S.x,
                             w(
                                 {
-                                    confettiCanvas: C,
+                                    confettiCanvas: A,
                                     analyticsLocations: T,
                                     hideConfetti: F,
                                 },
@@ -215,7 +215,7 @@ function Z(e) {
                     options: L,
                 },
             ],
-            [T, C, F, c],
+            [T, A, F, c],
         );
     return (0, r.jsxs)(d.Gt, {
         value: T,
@@ -229,7 +229,7 @@ function Z(e) {
             (0, r.jsx)(h.PaymentContextProvider, {
                 loadId: s,
                 stepConfigs: q,
-                applicationId: A.XAJ,
+                applicationId: C.XAJ,
                 skuIDs: V,
                 isGift: c,
                 activeSubscription: null,
@@ -245,7 +245,7 @@ function Z(e) {
                             skuId: Y,
                             onClose: W,
                             onComplete: K,
-                            applicationId: A.XAJ,
+                            applicationId: C.XAJ,
                             initialPlanId: null,
                             analyticsLocations: T,
                             renderHeader: z,

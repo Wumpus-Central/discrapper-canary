@@ -74,10 +74,10 @@
             for (i = 0, a = l.length; i < a && g.timeRemaining() > o; i++) (n = l.shift()), h++, n && n(g);
         l.length ? I() : (c = 0);
     }
-    function A(e) {
+    function C(e) {
         return _++, l.push(e), I(), _;
     }
-    function C(e) {
+    function A(e) {
         var t = e - 1 - h;
         l[t] && (l[t] = null);
     }
@@ -105,8 +105,8 @@
             })(a.requestIdleCallback);
         }
     else
-        (a.requestIdleCallback = A),
-            (a.cancelIdleCallback = C),
+        (a.requestIdleCallback = C),
+            (a.cancelIdleCallback = A),
             a.document &&
                 document.addEventListener &&
                 (a.addEventListener("scroll", O, !0),
@@ -126,7 +126,7 @@
                         attributes: !0,
                     }));
     return {
-        request: A,
-        cancel: C,
+        request: C,
+        cancel: A,
     };
 });

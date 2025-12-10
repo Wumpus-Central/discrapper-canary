@@ -12,7 +12,7 @@ n.d(t, {
     kQ: () => V,
     mR: () => b,
     n$: () => L,
-    np: () => C,
+    np: () => A,
     ou: () => W,
     qH: () => w,
     tk: () => F,
@@ -111,16 +111,16 @@ function I(e) {
 function T(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
-function A(e, t) {
+function C(e, t) {
     return [...e].sort(() => 0.5 - Math.random()).slice(0, t);
 }
-function C(e) {
+function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Set(),
         n = p.J6.filter((e) => !t.has(e)),
         r = { applicationId: T(n.length > 0 ? n : p.J6) };
     return (
         v(e) && (r.comment = Math.random() > 0.5 ? T(f.x) : void 0),
-        S(e) && (r.tags = Math.random() > 0.3 ? A(f.T, f.T.length) : void 0),
+        S(e) && (r.tags = Math.random() > 0.3 ? C(f.T, f.T.length) : void 0),
         r
     );
 }

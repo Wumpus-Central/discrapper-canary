@@ -1,11 +1,11 @@
 n.d(t, {
     Df: () => d,
-    S_: () => c,
+    S_: () => u,
     V5: () => a,
     VX: () => o,
     ZP: () => h,
     ih: () => s,
-    xc: () => u,
+    xc: () => c,
 });
 var i = n(972959);
 let r = {
@@ -16,8 +16,8 @@ let r = {
     o = 10000,
     a = 20000,
     s = 500,
-    u = 1000;
-function c(e) {
+    c = 1000;
+function u(e) {
     l.setState({ timeToLiveMs: e });
 }
 function d(e) {

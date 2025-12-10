@@ -6,7 +6,7 @@ n.d(t, {
     PL: () => v,
     UY: () => L,
     YI: () => I,
-    _F: () => A,
+    _F: () => C,
     h_: () => N,
     ji: () => u,
     lG: () => M,
@@ -492,7 +492,7 @@ class g extends o.C {
                     a = t.fixed64().toString();
                     break;
                 case 2:
-                    o = A.internalBinaryRead(t, t.uint32(), n);
+                    o = C.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -500,13 +500,13 @@ class g extends o.C {
                     );
             }
         }
-        e[null != a ? a : "0"] = null != o ? o : A.create();
+        e[null != a ? a : "0"] = null != o ? o : C.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.stickers))
             t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i),
                 t.tag(2, r.TD.LengthDelimited).fork(),
-                A.internalBinaryWrite(e.stickers[i], t, n),
+                C.internalBinaryWrite(e.stickers[i], t, n),
                 t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
@@ -520,7 +520,7 @@ class g extends o.C {
                 K: 6,
                 V: {
                     kind: "message",
-                    T: () => A,
+                    T: () => C,
                 },
             },
         ]);
@@ -617,7 +617,7 @@ class O extends o.C {
                     a = t.string();
                     break;
                 case 2:
-                    o = A.internalBinaryRead(t, t.uint32(), n);
+                    o = C.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -625,13 +625,13 @@ class O extends o.C {
                     );
             }
         }
-        e[null != a ? a : ""] = null != o ? o : A.create();
+        e[null != a ? a : ""] = null != o ? o : C.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.emojis))
             t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i),
                 t.tag(2, r.TD.LengthDelimited).fork(),
-                A.internalBinaryWrite(e.emojis[i], t, n),
+                C.internalBinaryWrite(e.emojis[i], t, n),
                 t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
@@ -645,7 +645,7 @@ class O extends o.C {
                 K: 9,
                 V: {
                     kind: "message",
-                    T: () => A,
+                    T: () => C,
                 },
             },
         ]);
@@ -694,7 +694,7 @@ class S extends o.C {
                     a = t.string();
                     break;
                 case 2:
-                    o = A.internalBinaryRead(t, t.uint32(), n);
+                    o = C.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -702,13 +702,13 @@ class S extends o.C {
                     );
             }
         }
-        e[null != a ? a : ""] = null != o ? o : A.create();
+        e[null != a ? a : ""] = null != o ? o : C.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.applicationCommands))
             t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i),
                 t.tag(2, r.TD.LengthDelimited).fork(),
-                A.internalBinaryWrite(e.applicationCommands[i], t, n),
+                C.internalBinaryWrite(e.applicationCommands[i], t, n),
                 t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
@@ -722,7 +722,7 @@ class S extends o.C {
                 K: 9,
                 V: {
                     kind: "message",
-                    T: () => A,
+                    T: () => C,
                 },
             },
         ]);
@@ -819,8 +819,8 @@ class T extends o.C {
         ]);
     }
 }
-let A = new T();
-class C extends o.C {
+let C = new T();
+class A extends o.C {
     create(e) {
         let t = { soundIds: [] };
         return (
@@ -874,7 +874,7 @@ class C extends o.C {
         ]);
     }
 }
-let N = new C();
+let N = new A();
 class P extends o.C {
     create(e) {
         let t = { heardSounds: {} };
@@ -917,7 +917,7 @@ class P extends o.C {
                     a = t.string();
                     break;
                 case 2:
-                    o = A.internalBinaryRead(t, t.uint32(), n);
+                    o = C.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -925,13 +925,13 @@ class P extends o.C {
                     );
             }
         }
-        e[null != a ? a : ""] = null != o ? o : A.create();
+        e[null != a ? a : ""] = null != o ? o : C.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.heardSounds))
             t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i),
                 t.tag(2, r.TD.LengthDelimited).fork(),
-                A.internalBinaryWrite(e.heardSounds[i], t, n),
+                C.internalBinaryWrite(e.heardSounds[i], t, n),
                 t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
@@ -945,7 +945,7 @@ class P extends o.C {
                 K: 9,
                 V: {
                     kind: "message",
-                    T: () => A,
+                    T: () => C,
                 },
             },
         ]);
@@ -994,7 +994,7 @@ class D extends o.C {
                     a = t.string();
                     break;
                 case 2:
-                    o = A.internalBinaryRead(t, t.uint32(), n);
+                    o = C.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -1002,13 +1002,13 @@ class D extends o.C {
                     );
             }
         }
-        e[null != a ? a : ""] = null != o ? o : A.create();
+        e[null != a ? a : ""] = null != o ? o : C.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.playedSounds))
             t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i),
                 t.tag(2, r.TD.LengthDelimited).fork(),
-                A.internalBinaryWrite(e.playedSounds[i], t, n),
+                C.internalBinaryWrite(e.playedSounds[i], t, n),
                 t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
@@ -1022,7 +1022,7 @@ class D extends o.C {
                 K: 9,
                 V: {
                     kind: "message",
-                    T: () => A,
+                    T: () => C,
                 },
             },
         ]);
@@ -1071,7 +1071,7 @@ class x extends o.C {
                     a = t.string();
                     break;
                 case 2:
-                    o = A.internalBinaryRead(t, t.uint32(), n);
+                    o = C.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -1079,13 +1079,13 @@ class x extends o.C {
                     );
             }
         }
-        e[null != a ? a : ""] = null != o ? o : A.create();
+        e[null != a ? a : ""] = null != o ? o : C.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.applications))
             t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.LengthDelimited).string(i),
                 t.tag(2, r.TD.LengthDelimited).fork(),
-                A.internalBinaryWrite(e.applications[i], t, n),
+                C.internalBinaryWrite(e.applications[i], t, n),
                 t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
@@ -1099,7 +1099,7 @@ class x extends o.C {
                 K: 9,
                 V: {
                     kind: "message",
-                    T: () => A,
+                    T: () => C,
                 },
             },
         ]);
@@ -1148,7 +1148,7 @@ class j extends o.C {
                     a = t.fixed64().toString();
                     break;
                 case 2:
-                    o = A.internalBinaryRead(t, t.uint32(), n);
+                    o = C.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -1156,13 +1156,13 @@ class j extends o.C {
                     );
             }
         }
-        e[null != a ? a : "0"] = null != o ? o : A.create();
+        e[null != a ? a : "0"] = null != o ? o : C.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.guildAndChannels))
             t.tag(1, r.TD.LengthDelimited).fork().tag(1, r.TD.Bit64).fixed64(i),
                 t.tag(2, r.TD.LengthDelimited).fork(),
-                A.internalBinaryWrite(e.guildAndChannels[i], t, n),
+                C.internalBinaryWrite(e.guildAndChannels[i], t, n),
                 t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
@@ -1176,7 +1176,7 @@ class j extends o.C {
                 K: 6,
                 V: {
                     kind: "message",
-                    T: () => A,
+                    T: () => C,
                 },
             },
         ]);

@@ -74,11 +74,11 @@ function T(e, t, n) {
     }
     return !0;
 }
-function A(e) {
+function C(e) {
     let { user: t, sessionId: n } = e;
     (h = t.id), (g = n), (E = null);
 }
-function C(e) {
+function A(e) {
     let { context: t, userId: n, speakingFlags: r, voiceDb: i } = e;
     if ((r & p.Dg.PRIORITY) === p.Dg.PRIORITY) {
         let e = l.Z.getChannel(d.Z.getVoiceChannelId());
@@ -182,9 +182,9 @@ class R extends (r = i.ZP.Store) {
 }
 _(R, "displayName", "SpeakingStore");
 let D = new R(a.Z, {
-    CONNECTION_OPEN: A,
-    OVERLAY_INITIALIZE: A,
-    SPEAKING: C,
+    CONNECTION_OPEN: C,
+    OVERLAY_INITIALIZE: C,
+    SPEAKING: A,
     VOICE_STATE_UPDATES: N,
     PUSH_TO_TALK_STATE_CHANGE: P,
 });

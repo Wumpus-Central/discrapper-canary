@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(205120),
+    a = n(467721),
     o = n(393238),
     s = n(254109),
     l = n(212459);
@@ -65,7 +65,7 @@ function d(e) {
                     y: e.clientY,
                 }));
         },
-        A = (e) => {
+        C = (e) => {
             if (!_) {
                 if (0 === e.button) {
                     (0, s.yg)(s.uG.ZOOM_IN_IMAGE_PRESSED), m(!0);
@@ -93,7 +93,7 @@ function d(e) {
     return (0, r.jsx)(a.animated.div, {
         ref: h,
         onMouseDown: T,
-        onMouseUp: A,
+        onMouseUp: C,
         onMouseMove: (e) => O.current && I(e.movementX, e.movementY),
         onWheel: (e) => !e.ctrlKey && I(-e.deltaX, -e.deltaY),
         onMouseLeave: () => (O.current = !1),

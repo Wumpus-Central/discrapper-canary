@@ -2,14 +2,14 @@ n.d(e, { K: () => a });
 var i = n(846027),
     l = n(509613),
     s = n(313789),
-    r = n(680924),
-    u = n(388032);
+    u = n(680924),
+    r = n(388032);
 let a = (0, l.ax)(s.n.VOICE_AND_VIDEO_RESET_ALL_SETTINGS, {
-    useTitle: () => u.intl.string(u.t.SXfv1v),
-    useSubtitle: () => u.intl.string(u.t["buA5/q"]),
-    useLabel: () => u.intl.string(u.t.yBZMsQ),
+    useTitle: () => r.intl.string(r.t.SXfv1v),
+    useSubtitle: () => r.intl.string(r.t["buA5/q"]),
+    useLabel: () => r.intl.string(r.t.yBZMsQ),
     onClick: function () {
-        (0, r.Z)(u.intl.string(u.t["4iKQ/3"]), u.intl.string(u.t.sQ42iT), i.Z.reset);
+        (0, u.Z)(r.intl.string(r.t["4iKQ/3"]), r.intl.string(r.t.sQ42iT), i.Z.reset);
     },
     useVariant: () => "critical-secondary",
 });

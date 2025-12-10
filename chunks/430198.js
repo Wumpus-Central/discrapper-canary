@@ -43,7 +43,7 @@ function T(e) {
     let { guildId: t, role: n, isPreviewingRoles: r } = e;
     return !!(0, u.Z)(n) && !!(r || (0, u.h)(null != n ? n : void 0) || I(n, t));
 }
-function A(e, t) {
+function C(e, t) {
     if (
         !t.features.has(y.GuildFeatures.CREATOR_MONETIZABLE) &&
         !t.features.has(y.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)
@@ -80,7 +80,7 @@ function A(e, t) {
     }
     return !1;
 }
-function C(e) {
+function A(e) {
     let t = E.Z.getGuild(e);
     if (null == t) return;
     let n = (v[e] = new Set());
@@ -88,7 +88,7 @@ function C(e) {
     let r = m.Z.getMutableGuildChannelsForGuild(e);
     for (let e in r) {
         let i = r[e];
-        A(i, t) && n.add(i.id);
+        C(i, t) && n.add(i.id);
     }
 }
 function N(e, t) {
@@ -99,7 +99,7 @@ function N(e, t) {
     let i = E.Z.getGuild(r.getGuildId());
     if (null == i) return !1;
     let a = n.has(t),
-        o = A(r, i);
+        o = C(r, i);
     return a !== o && (o ? n.add(t) : n.delete(t), !0);
 }
 function P() {
@@ -138,7 +138,7 @@ class M extends (r = i.ZP.Store) {
     isChannelGated(e, t) {
         if (null == e) return !1;
         let n = v[e];
-        return null == n && (C(e), (n = v[e])), null != n && n.has(t);
+        return null == n && (A(e), (n = v[e])), null != n && n.has(t);
     }
     isChannelGatedAndVisible(e, t) {
         return null != e && this.isChannelGated(e, t) && !S.has(e);

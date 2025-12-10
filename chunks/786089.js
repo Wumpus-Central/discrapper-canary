@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(481060),
     p = n(393238),
     f = n(410030),
-    h = n(204418),
-    g = n(70097),
+    g = n(204418),
+    h = n(70097),
     m = n(594174),
     _ = n(626135),
     b = n(617136),
@@ -143,7 +143,7 @@ let j = (0, i.memo)(function (e) {
                               ref: G,
                               className: N.decoWrapper,
                               style: { top: L },
-                              children: (0, r.jsx)(h.Z, {
+                              children: (0, r.jsx)(g.Z, {
                                   avatarDecorationOverride: X,
                                   user: B,
                                   guildId: null,
@@ -159,7 +159,7 @@ let j = (0, i.memo)(function (e) {
                                   questName: A.config.messages.questName,
                               })
                             : et.isAnimated
-                              ? (0, r.jsx)(g.Z, {
+                              ? (0, r.jsx)(h.Z, {
                                     className: N.assetBlurred,
                                     autoPlay: !1,
                                     children: (0, r.jsx)("source", {

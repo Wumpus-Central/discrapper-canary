@@ -1,6 +1,6 @@
 n.d(t, {
     XX: () => U,
-    ZP: () => B,
+    ZP: () => F,
     ul: () => V,
 }),
     n(388685);
@@ -114,15 +114,15 @@ function V(e) {
         ],
     });
 }
-let B = (0, h.$)(function (e) {
+let F = (0, h.$)(function (e) {
     var t;
     let {
             collapsed: l,
             user: h,
             channel: U,
             mute: V,
-            localMute: B,
-            localVideoDisabled: F,
+            localMute: F,
+            localVideoDisabled: B,
             deaf: H,
             video: G,
             embeddedApplication: W,
@@ -222,7 +222,7 @@ let B = (0, h.$)(function (e) {
                     );
             });
         },
-        eB = (e) =>
+        eF = (e) =>
             ef
                 ? (0, i.jsx)(
                       x.$,
@@ -242,7 +242,7 @@ let B = (0, h.$)(function (e) {
                         }),
                     )
                   : null,
-        eF = () =>
+        eB = () =>
             (0, i.jsx)(j.Z, {
                 userId: h.id,
                 channel: U,
@@ -285,8 +285,8 @@ let B = (0, h.$)(function (e) {
                                 latched: J,
                                 disconnected: Q,
                                 mute: V,
-                                localMute: B,
-                                localVideoDisabled: F,
+                                localMute: F,
+                                localVideoDisabled: B,
                                 isStreaming: et,
                                 isGuest: ei,
                                 video: G,
@@ -325,12 +325,12 @@ let B = (0, h.$)(function (e) {
                         let c = () => null;
                         return (
                             eC && eA
-                                ? (c = eB)
+                                ? (c = eF)
                                 : et
                                   ? (c = eH)
                                   : ew && h.id !== I.default.getId()
-                                    ? (c = eF)
-                                    : eC && (c = eB),
+                                    ? (c = eB)
+                                    : eC && (c = eF),
                             (0, i.jsx)(s.yRy, {
                                 targetElementRef: ey,
                                 position: "right",

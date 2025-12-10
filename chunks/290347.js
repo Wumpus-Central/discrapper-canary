@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(159691),
     p = n(481060),
     f = n(607070),
-    h = n(213609),
-    g = n(446411),
+    g = n(213609),
+    h = n(446411),
     m = n(468846),
     _ = n(313201),
     b = n(70097),
@@ -150,7 +150,7 @@ function Z(e) {
         return es.current && (J((n += t)), eo.current || $((r += t))), K(e), [n, r];
     }
     return (
-        (0, h.Z)({
+        (0, g.Z)({
             type: s.ImpressionTypes.MODAL,
             name: s.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
             properties: {
@@ -291,7 +291,7 @@ function Z(e) {
                                                 }),
                                   })
                                 : "embed" === Z.type
-                                  ? (0, r.jsx)(g.BC, {
+                                  ? (0, r.jsx)(h.BC, {
                                         className: a()(T.video, w),
                                         allowFullScreen: !1,
                                         href: Z.href,

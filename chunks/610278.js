@@ -15,7 +15,7 @@ let p = null;
 function f(e) {
     return "framepip:".concat(e.applicationId);
 }
-function h() {
+function g() {
     let e = u.Z.getConnectedFrame();
     if (null == e) {
         let e = p;
@@ -30,7 +30,7 @@ function h() {
     }
     return r.Z.wait(() => i.bA(t, d.NYg.FRAME, {})), void (p = t);
 }
-function g() {
+function h() {
     if (
         (0, a.Z)({
             LayerStore: o.Z,
@@ -46,10 +46,10 @@ function g() {
 }
 class m extends l.Z {
     _initialize() {
-        u.Z.addChangeListener(h), o.Z.addChangeListener(g);
+        u.Z.addChangeListener(g), o.Z.addChangeListener(h);
     }
     _terminate() {
-        u.Z.removeChangeListener(h), o.Z.removeChangeListener(g);
+        u.Z.removeChangeListener(g), o.Z.removeChangeListener(h);
     }
 }
 let _ = new m();

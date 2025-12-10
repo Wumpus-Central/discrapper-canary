@@ -128,18 +128,18 @@ let S = (e) => {
             name: E,
             properties: b,
         });
-    let A = (0, p.Aq)(),
-        C = i.useCallback(() => {
-            A.dispatch(g.CkL.POPOUT_SHOW);
-        }, [A]),
+    let C = (0, p.Aq)(),
+        A = i.useCallback(() => {
+            C.dispatch(g.CkL.POPOUT_SHOW);
+        }, [C]),
         N = i.useCallback(() => {
-            A.dispatch(g.CkL.POPOUT_HIDE);
-        }, [A]);
+            C.dispatch(g.CkL.POPOUT_HIDE);
+        }, [C]);
     return (0, l.E)("ContextMenu")
         ? (0, r.jsx)(o.pS, {
               open: !0,
               onOpenChange: (e) => {
-                  e ? C() : (N(), v(), I.current());
+                  e ? A() : (N(), v(), I.current());
               },
               overrideTargetRect: _,
               placement: (0, o.a_)(null != m ? m : "right", null != h ? h : "top"),
@@ -151,7 +151,7 @@ let S = (e) => {
               children: () => null,
           })
         : (0, r.jsx)(f.W5, {
-              onMount: C,
+              onMount: A,
               onUnmount: N,
               targetRef: S,
               overrideTargetRect: _,

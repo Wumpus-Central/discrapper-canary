@@ -23,14 +23,14 @@ function b(e) {
             isFetching: S,
             fetchFailed: I,
             isFetchingDetectable: T,
-            detectableFetchFailed: A,
+            detectableFetchFailed: C,
         } = (0, s.cj)([f.Z, _.Z], () => ({
             isFetching: f.Z.isFetchingApplication(t),
             fetchFailed: f.Z.didFetchingApplicationFail(t),
             isFetchingDetectable: _.Z.isFetching(t),
             detectableFetchFailed: _.Z.didFetchingFail(t),
         })),
-        C = i.useRef(null),
+        A = i.useRef(null),
         N = i.useMemo(() => (0, m.fP)(), []);
     i.useEffect(() => {
         c.Z.getDetectableGamesSupplemental([t]);
@@ -39,8 +39,8 @@ function b(e) {
         d.ZP.fetchApplication(t), c.Z.getDetectableGamesSupplemental([t]);
     }, [t]);
     i.useEffect(() => {
-        null == a || a(null == C ? void 0 : C.current);
-    }, [C, a]),
+        null == a || a(null == A ? void 0 : A.current);
+    }, [A, a]),
         (0, u.ZP)(() => {
             var e;
             (0, m.IS)({
@@ -58,7 +58,7 @@ function b(e) {
                       className: o()(E.container, E.spinnerContainer),
                       children: (0, r.jsx)(l.$jN, {}),
                   })
-                : I || A || null == O || null == v
+                : I || C || null == O || null == v
                   ? (0, r.jsx)("div", {
                         className: E.container,
                         children: (0, r.jsx)(h.Z, {
@@ -74,10 +74,10 @@ function b(e) {
                             onClose: b,
                         }),
                     }),
-        [S, T, I, A, O, v, n, P, b],
+        [S, T, I, C, O, v, n, P, b],
     );
     return (0, r.jsx)(l.VqE, {
-        ref: C,
+        ref: A,
         "aria-label": null == O ? void 0 : O.name,
         children: R,
     });

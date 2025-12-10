@@ -16,8 +16,8 @@ var r = n(54381),
     d = n(393903),
     p = n(410030),
     f = n(782568),
-    h = n(825102),
-    g = n(626135),
+    g = n(825102),
+    h = n(626135),
     m = n(617136),
     _ = n(616022),
     b = n(49436),
@@ -108,7 +108,7 @@ function j(e) {
     let { config: t, onQuestCtaClick: n } = e,
         l = (0, s.TH)(),
         j = (0, s.k6)(),
-        { enabled: P } = (0, h.WX)({ location: O.dr.QUEST_HOME_DESKTOP }),
+        { enabled: P } = (0, g.WX)({ location: O.dr.QUEST_HOME_DESKTOP }),
         x = (0, p.ZP)(),
         [A, Z] = i.useState("display-lg"),
         w = i.useCallback((e) => {
@@ -118,7 +118,7 @@ function j(e) {
         R = (0, c.e7)([_.Z], () => _.Z.quests);
     return (
         i.useEffect(() => {
-            g.default.track(
+            h.default.track(
                 v.rMx.QUEST_CONTENT_VIEWED,
                 T(S({}, (0, m.mH)(b.jn.QUEST_HOME_TAKEOVER)), {
                     quest_id: t.campaignId,
@@ -184,7 +184,7 @@ function j(e) {
                                             (0, r.jsx)(u.Button, {
                                                 onClick: () => {
                                                     (0, f.Z)(t.ctaSponsorUrl.url),
-                                                        g.default.track(
+                                                        h.default.track(
                                                             v.rMx.QUEST_CONTENT_CLICKED,
                                                             S(
                                                                 {
@@ -214,7 +214,7 @@ function j(e) {
                                                                               questId: e.questId,
                                                                           });
                                                                       }),
-                                                                      g.default.track(
+                                                                      h.default.track(
                                                                           v.rMx.QUEST_CONTENT_CLICKED,
                                                                           S(
                                                                               {

@@ -10,8 +10,8 @@ var r = n(846027),
     d = n(592125),
     p = n(131951),
     f = n(19780),
-    h = n(594174),
-    g = n(981631),
+    g = n(594174),
+    h = n(981631),
     m = n(65154);
 function _() {
     var e, t;
@@ -21,7 +21,7 @@ function _() {
         b = !1 === (null == (t = null == _ ? void 0 : _.disabled) || t),
         E = p.Z.supportsInApp(m.AN.VIDEO) && p.Z.supportsInApp(m.AN.DESKTOP_CAPTURE),
         O = d.Z.getChannel(f.Z.getChannelId()),
-        v = null == (e = h.default.getCurrentUser()) ? void 0 : e.id;
+        v = null == (e = g.default.getCurrentUser()) ? void 0 : e.id;
     if (null == O || null == v) return;
     let { reachedLimit: y } = (0, o.t)(O);
     if (!y) {
@@ -44,7 +44,7 @@ function _() {
                         () => {
                             r.Z.setVideoEnabled(!0);
                         },
-                        g.IlC.APP,
+                        h.IlC.APP,
                         !0,
                     )
                   : b || (0, c.Z)(),

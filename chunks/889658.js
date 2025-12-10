@@ -114,7 +114,7 @@ let a = new (n(147567))(),
         l("comp", e, t),
         l("caret", (e = I(e, t))),
         l("tildes", (e = v(e, t))),
-        l("xrange", (e = A(e, t))),
+        l("xrange", (e = C(e, t))),
         l("stars", (e = N(e, t))),
         e
     ),
@@ -188,14 +188,14 @@ let a = new (n(147567))(),
             );
         });
     },
-    A = (e, t) => (
+    C = (e, t) => (
         l("replaceXRanges", e, t),
         e
             .split(/\s+/)
-            .map((e) => C(e, t))
+            .map((e) => A(e, t))
             .join(" ")
     ),
-    C = (e, t) => {
+    A = (e, t) => {
         e = e.trim();
         let n = t.loose ? u[d.XRANGELOOSE] : u[d.XRANGE];
         return e.replace(n, (n, r, i, a, o, s) => {

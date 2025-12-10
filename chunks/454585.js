@@ -80,7 +80,7 @@ let m = {
     S = _(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, o.Z)(m)]),
     I = _(s.Z.GUILD_EVENT_RULES, [(0, o.Z)(m)]),
     T = _(s.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, o.Z)(m)]),
-    A = i().omit(
+    C = i().omit(
         _(s.Z.RULES, [(0, o.Z)(m)]),
         "paragraph",
         "newline",
@@ -95,15 +95,15 @@ let m = {
         "heading",
         "subtext",
     ),
-    C = { text: s.Z.RULES.text },
+    A = { text: s.Z.RULES.text },
     N = {
         combineAndInjectMentionRule: _,
         createReactRules: o.Z,
         defaultReactRuleOptions: m,
         defaultRules: h,
         guildEventRules: I,
-        notifCenterV2MessagePreviewRules: A,
-        lockscreenWidgetMessageRules: C,
+        notifCenterV2MessagePreviewRules: C,
+        lockscreenWidgetMessageRules: A,
         astParserFor: a._p,
         reactParserFor: a.w4,
         parse: a.w4(h),

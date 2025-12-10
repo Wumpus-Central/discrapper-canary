@@ -71,8 +71,8 @@ let y = "default",
     S = [],
     I = 0,
     T = null,
-    A = null,
-    C = {},
+    C = null,
+    A = {},
     N = null,
     P = [],
     R = null,
@@ -178,16 +178,16 @@ function F(e) {
     var t, n;
     let { clip: r } = e;
     (I = Math.max(I - 1, 0)),
-        (A = b(
+        (C = b(
             g(
                 {
                     applicationName: r.applicationName,
                     ended: !1,
                 },
-                A,
+                C,
             ),
             {
-                newClipIds: [...(null != (t = null == A ? void 0 : A.newClipIds) ? t : []), r.id],
+                newClipIds: [...(null != (t = null == C ? void 0 : C.newClipIds) ? t : []), r.id],
             },
         )),
         (L = b(g({}, L), {
@@ -222,7 +222,7 @@ function W(e) {
 function K(e) {
     let { applicationName: t } = e;
     if (((N = null), !L.clipsSettings.clipsEnabled)) return !1;
-    A = {
+    C = {
         applicationName: t,
         newClipIds: [],
         ended: !1,
@@ -242,7 +242,7 @@ function q(e) {
         r = null != (i = null == e ? void 0 : e.name) ? i : r;
     }
     if (null == r || "" === r) return !1;
-    A = {
+    C = {
         applicationName: r,
         newClipIds: [],
         ended: !1,
@@ -250,8 +250,8 @@ function q(e) {
 }
 function Q(e) {
     let { streamKey: t } = e;
-    if (((R = null), (D[t] = []), null == A || (0, c.my)(t).ownerId !== u.default.getId())) return !1;
-    A = 0 === A.newClipIds.length ? null : b(g({}, A), { ended: !0 });
+    if (((R = null), (D[t] = []), null == C || (0, c.my)(t).ownerId !== u.default.getId())) return !1;
+    C = 0 === C.newClipIds.length ? null : b(g({}, C), { ended: !0 });
 }
 function X(e) {
     (L.hasClips = e.clips.length > 0), (v = e.clips);
@@ -264,14 +264,14 @@ function J(e) {
         })).length && (L.hasClips = !1);
 }
 function $() {
-    if (null == A) return !1;
-    A = null;
+    if (null == C) return !1;
+    C = null;
 }
 function ee() {
     L.newClipIds = [];
 }
 function et(e) {
-    C[e.userId] = {
+    A[e.userId] = {
         clipsEnabled: (0, i.yE)(e.flags, _.BVn.CLIPS_ENABLED),
         allowVoiceRecording: (0, i.yE)(e.flags, _.BVn.ALLOW_VOICE_RECORDING),
         allowAnyViewerClips: (0, i.yE)(e.flags, _.BVn.ALLOW_ANY_VIEWER_CLIPS),
@@ -343,7 +343,7 @@ class el extends (r = a.ZP.DeviceSettingsStore) {
         return L.clipsSettings;
     }
     getLastClipsSession() {
-        return A;
+        return C;
     }
     getClipsWarningShown(e) {
         return T === e;
@@ -375,15 +375,15 @@ class el extends (r = a.ZP.DeviceSettingsStore) {
     }
     isClipsEnabledForUser(e) {
         var t, n;
-        return null != (n = null == (t = C[e]) ? void 0 : t.clipsEnabled) && n;
+        return null != (n = null == (t = A[e]) ? void 0 : t.clipsEnabled) && n;
     }
     isVoiceRecordingAllowedForUser(e) {
         var t, n;
-        return null != (n = null == (t = C[e]) ? void 0 : t.allowVoiceRecording) && n;
+        return null != (n = null == (t = A[e]) ? void 0 : t.allowVoiceRecording) && n;
     }
     isViewerClippingAllowedForUser(e) {
         var t, n;
-        return null != (n = null == (t = C[e]) ? void 0 : t.allowAnyViewerClips) && n;
+        return null != (n = null == (t = A[e]) ? void 0 : t.allowAnyViewerClips) && n;
     }
     hasClips() {
         return L.hasClips;

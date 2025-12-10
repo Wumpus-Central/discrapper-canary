@@ -50,8 +50,8 @@ function S(e) {
 function I(e) {
     var t, v, I;
     let T,
-        A,
         C,
+        A,
         {
             onTransitionToInviteChannel: N,
             onAcceptInstantInvite: P,
@@ -104,7 +104,7 @@ function I(e) {
         isStream: !1,
     });
     return (
-        (A = (0, r.jsxs)("span", {
+        (C = (0, r.jsxs)("span", {
             className: O.infoTitle,
             children: [
                 (0, r.jsx)(f.Z, {
@@ -130,7 +130,7 @@ function I(e) {
             ],
         })),
         H &&
-            (C = (0, r.jsx)(s.u, {
+            (A = (0, r.jsx)(s.u, {
                 asContainer: !0,
                 text: y.intl.string(y.t["/FeTK6"]),
                 children: (0, r.jsx)(l.d3s, {
@@ -140,7 +140,7 @@ function I(e) {
                 }),
             })),
         F
-            ? ((A = (0, r.jsx)(_.Z.Channel, { channel: G })),
+            ? ((C = (0, r.jsx)(_.Z.Channel, { channel: G })),
               (T = (0, r.jsxs)("span", {
                   className: O.infoTitle,
                   children: [
@@ -169,7 +169,7 @@ function I(e) {
                 (0, r.jsx)(_.Z.GuildSplash, { guild: R }),
                 (0, r.jsx)(_.Z.Header, {
                     text: ee,
-                    extra: C,
+                    extra: A,
                 }),
                 (0, r.jsxs)(_.Z.Body, {
                     children: [
@@ -178,7 +178,7 @@ function I(e) {
                             children: [
                                 (0, r.jsx)(_.Z.Icon, { guild: R }),
                                 (0, r.jsx)(_.Z.Info, {
-                                    title: A,
+                                    title: C,
                                     onClick: J,
                                     children: T,
                                 }),

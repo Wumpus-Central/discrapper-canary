@@ -1,5 +1,5 @@
 n.d(t, {
-    H: () => h,
+    H: () => g,
     f: () => f,
 }),
     n(781311);
@@ -34,8 +34,8 @@ function f(e) {
             var e;
             return null != (e = o.Z.getIsFetching(u)) && e;
         }),
-        h = c.Z.useField("resultsQuery"),
-        g = h !== n,
+        g = c.Z.useField("resultsQuery"),
+        h = g !== n,
         m = r.useCallback(() => {
             let e = o.Z.getGuildIds(u),
                 n = o.Z.getTotal(u);
@@ -56,15 +56,15 @@ function f(e) {
     return r.useMemo(
         () => ({
             guildIds: d,
-            loading: g || f,
-            searchResultsQuery: h,
+            loading: h || f,
+            searchResultsQuery: g,
             loadMore: m,
             searchCategoryId: l,
         }),
-        [d, g, f, h, m, l],
+        [d, h, f, g, m, l],
     );
 }
-function h(e) {
+function g(e) {
     let { loadId: t } = e,
         n = d.Z.useField("isSearchVisible"),
         i = c.Z.useField("query");

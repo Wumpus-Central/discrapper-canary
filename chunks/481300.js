@@ -3,13 +3,13 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(991621),
-    a = n(629710),
-    o = n(388032);
+    o = n(629710),
+    a = n(388032);
 function s(e, t) {
-    let s = (0, a.rb)(e),
+    let s = (0, o.rb)(e),
         c =
             null != t &&
-            (0, a.g4)(
+            (0, o.g4)(
                 {
                     type: l.l.GenericMedia,
                     media: t,
@@ -21,7 +21,7 @@ function s(e, t) {
               i.sNh,
               {
                   id: "report-image-false-positive",
-                  label: o.intl.string(o.t.ZH7P2h),
+                  label: a.intl.string(a.t.ZH7P2h),
                   action: () => {
                       (0, i.ZDy)(async () => {
                           let { default: i } = await n(788679);

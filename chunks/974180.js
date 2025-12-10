@@ -34,16 +34,16 @@ var l,
     Z = n(695346),
     A = n(601964),
     j = n(592125),
-    R = n(430824),
-    D = n(375954),
+    D = n(430824),
+    R = n(375954),
     w = n(292959),
     k = n(496675),
-    M = n(306680),
-    U = n(699516),
+    U = n(306680),
+    M = n(699516),
     L = n(944486),
     G = n(885110),
-    V = n(246946),
-    F = n(594174),
+    F = n(246946),
+    V = n(594174),
     B = n(979651),
     W = n(626135),
     H = n(5192),
@@ -130,7 +130,7 @@ function ed(e) {
 }
 class ef extends (l = r.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, j.Z, R.Z, y.Z, D.Z, w.Z, k.Z, U.Z, L.Z, G.Z, x.Z, V.Z, F.default, B.Z);
+        this.waitFor(h.Z, j.Z, D.Z, y.Z, R.Z, w.Z, k.Z, M.Z, L.Z, G.Z, x.Z, F.Z, V.default, B.Z);
     }
 }
 $(ef, "displayName", "NotificationStore"),
@@ -176,8 +176,8 @@ $(ef, "displayName", "NotificationStore"),
                       let { channelId: r, message: a, optimistic: s } = e;
                       if (s) return !1;
                       let c = j.Z.getChannel(r),
-                          f = F.default.getUser(null == (t = a.author) ? void 0 : t.id),
-                          g = F.default.getCurrentUser();
+                          f = V.default.getUser(null == (t = a.author) ? void 0 : t.id),
+                          g = V.default.getCurrentUser();
                       if (null == c || null == f || null == g) return !1;
                       let p = (0, _.eF)(a, r, !er),
                           E = w.Z.getNotifyMessagesInSelectedChannel() && (0, _.N_)(a, r);
@@ -194,7 +194,7 @@ $(ef, "displayName", "NotificationStore"),
                       if (
                           null != O.getFocusedPID() &&
                           !y.isNotificationDisabled(q.n0.TextChat) &&
-                          !V.Z.disableNotifications
+                          !F.Z.disableNotifications
                       )
                           return !1;
                       let { icon: I, title: S, body: v, emoji: x } = (0, _.Xi)(c, a, f),
@@ -212,7 +212,7 @@ $(ef, "displayName", "NotificationStore"),
                           w.Z.getDesktopType() === z.qrD.NEVER)
                       )
                           return N && Y.Z.playNotificationSound(et, en), !1;
-                      let Z = null != (i = D.Z.getMessage(r, a.id)) ? i : (0, C.e5)(a);
+                      let Z = null != (i = R.Z.getMessage(r, a.id)) ? i : (0, C.e5)(a);
                       Y.Z.showNotification(
                           I,
                           S,
@@ -225,7 +225,7 @@ $(ef, "displayName", "NotificationStore"),
                               channel_id: c.id,
                               channel_type: c.type,
                               guild_id: c.guild_id,
-                              badge: (0, M.Ex)(Z, g),
+                              badge: (0, U.Ex)(Z, g),
                           },
                           {
                               omitViewTracking: P,
@@ -259,7 +259,7 @@ $(ef, "displayName", "NotificationStore"),
                       let { userId: t, activity: n } = e;
                       if (ec() || n.type !== z.IIU.PLAYING) return !1;
                       {
-                          let e = F.default.getUser(t);
+                          let e = V.default.getUser(t);
                           if (null == e) return !1;
                           let l = Q.ZP.getName(e),
                               i = n.name,
@@ -297,13 +297,13 @@ $(ef, "displayName", "NotificationStore"),
                   VOICE_STATE_UPDATES: function (e) {
                       let { voiceStates: t } = e;
                       if (ec()) return;
-                      let n = F.default.getCurrentUser();
+                      let n = V.default.getCurrentUser();
                       if (null == n) return;
                       let l = t.find((e) => e.userId === n.id);
                       if (null == l) return;
                       let { channelId: i, guildId: r, suppress: a, requestToSpeakTimestamp: o } = l;
                       if (null == i || null == r || !(!a && null != o)) return;
-                      let s = R.Z.getGuild(r),
+                      let s = D.Z.getGuild(r),
                           u = j.Z.getChannel(i),
                           c = x.Z.getStageInstanceByChannel(i);
                       null != s &&
@@ -313,7 +313,7 @@ $(ef, "displayName", "NotificationStore"),
                               (0, A.EB)(s, 128),
                               u.name,
                               J.intl.formatToPlainString(J.t.sqnsSP, {
-                                  channelName: (0, p.F6)(u, F.default, U.Z),
+                                  channelName: (0, p.F6)(u, V.default, M.Z),
                                   channelTopic: null == c ? void 0 : c.topic,
                               }),
                               { notif_type: "Stage Speak Invite" },
@@ -323,10 +323,10 @@ $(ef, "displayName", "NotificationStore"),
                   STAGE_INSTANCE_UPDATE: function (e) {
                       let { instance: t } = e;
                       if (ec() || !t.send_start_notification || ed(t.channel_id)) return !1;
-                      let n = F.default.getCurrentUser(),
-                          l = R.Z.getGuild(t.guild_id),
+                      let n = V.default.getCurrentUser(),
+                          l = D.Z.getGuild(t.guild_id),
                           r = j.Z.getChannel(t.channel_id),
-                          a = F.default.getUser(t.host_id);
+                          a = V.default.getUser(t.host_id);
                       if (
                           null == n ||
                           null == r ||
@@ -371,10 +371,10 @@ $(ef, "displayName", "NotificationStore"),
                                     if (ec()) return;
                                     let t = e.channel_id;
                                     if (null == t || ed(t)) return;
-                                    let n = F.default.getCurrentUser(),
-                                        l = R.Z.getGuild(e.guild_id),
+                                    let n = V.default.getCurrentUser(),
+                                        l = D.Z.getGuild(e.guild_id),
                                         r = j.Z.getChannel(e.channel_id),
-                                        a = F.default.getUser(e.host_id);
+                                        a = V.default.getUser(e.host_id);
                                     if (
                                         null != n &&
                                         null != r &&
@@ -407,8 +407,8 @@ $(ef, "displayName", "NotificationStore"),
                               : t.entity_type === X.WX.EXTERNAL &&
                                 (function (e) {
                                     if (ec()) return;
-                                    let t = F.default.getCurrentUser(),
-                                        n = R.Z.getGuild(e.guild_id);
+                                    let t = V.default.getCurrentUser(),
+                                        n = D.Z.getGuild(e.guild_id);
                                     if (null != t && null != n)
                                         Y.Z.showNotification(
                                             (0, A.EB)(n, 128),
@@ -435,7 +435,7 @@ $(ef, "displayName", "NotificationStore"),
                       if (null == i || !z.TPd.GUILD_THREADS_ONLY.has(i.type) || !l || !(0, _.FI)(n, i, !er)) return !1;
                       let { author: r, user: a } = (0, E.MC)(n);
                       if (null == a) return !1;
-                      let o = R.Z.getGuild(i.guild_id);
+                      let o = D.Z.getGuild(i.guild_id);
                       if (null == o) return !1;
                       let s = J.intl.formatToPlainString(J.t["2IGVl5"], {
                               channelName: i.name,

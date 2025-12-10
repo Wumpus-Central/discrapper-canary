@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(518596),
     I = n(594174),
     T = n(626135),
-    A = n(74538),
-    C = n(514361),
+    C = n(74538),
+    A = n(514361),
     N = n(55358),
     P = n(572397),
     R = n(708154),
@@ -77,12 +77,12 @@ let k = () =>
         var t, n, i;
         let { onSubscribeSuccess: a, markAsDismissed: o } = e,
             { analyticsLocations: s } = (0, h.ZP)(m.Z.CLIENT_THEMES_EDITOR),
-            [u, d] = (0, l.Wu)([I.default, C.Z], () => [
-                C.Z.gradientPreset,
-                A.ZP.isPremium(I.default.getCurrentUser()),
+            [u, d] = (0, l.Wu)([I.default, A.Z], () => [
+                A.Z.gradientPreset,
+                C.ZP.isPremium(I.default.getCurrentUser()),
             ]),
             p = (0, b.N)(),
-            _ = (0, A.Rt)({
+            _ = (0, C.Rt)({
                 intervalType: null == p || null == (t = p.subscription_trial) ? void 0 : t.interval,
                 intervalCount: null == p || null == (n = p.subscription_trial) ? void 0 : n.interval_count,
             }),
@@ -119,7 +119,7 @@ let k = () =>
     },
     Z = (e) => {
         let { markAsDismissed: t, isCoachmark: n } = e,
-            { isPreview: a } = (0, l.cj)([C.Z], () => ({ isPreview: C.Z.isPreview })),
+            { isPreview: a } = (0, l.cj)([A.Z], () => ({ isPreview: A.Z.isPreview })),
             [o, c] = i.useState(!1),
             d = (0, P.q)(),
             f = () => {
@@ -167,8 +167,8 @@ let k = () =>
 function B(e) {
     let { markAsDismissed: t, showClientThemesCoachmark: n } = e,
         { analyticsLocations: a } = (0, h.ZP)(m.Z.CLIENT_THEMES_EDITOR),
-        { isPreview: s, shouldEditorAnimate: c } = (0, l.cj)([C.Z, _.Z], () => ({
-            isPreview: C.Z.isPreview,
+        { isPreview: s, shouldEditorAnimate: c } = (0, l.cj)([A.Z, _.Z], () => ({
+            isPreview: A.Z.isPreview,
             shouldEditorAnimate: n && !_.Z.useReducedMotion,
         })),
         u = (0, g.oq)().activePanel === g.wh.CLIENT_THEMES,

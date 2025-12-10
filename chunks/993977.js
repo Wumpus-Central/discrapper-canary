@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(490983),
     p = n(626135),
     f = n(804739),
-    h = n(957657),
-    g = n(34305),
+    g = n(957657),
+    h = n(34305),
     m = n(981631),
     _ = n(388032),
     b = n(77839);
@@ -133,7 +133,7 @@ class y extends i.PureComponent {
                                   onChange: this.handleToggleShortcutStartMenu,
                               }),
                               (0, r.jsx)(s.izJ, {}),
-                              (0, r.jsx)(g.Z, {}),
+                              (0, r.jsx)(h.Z, {}),
                           ],
                       })
                     : null,
@@ -147,7 +147,7 @@ class y extends i.PureComponent {
     render() {
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(h.Z, { currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS }),
+                (0, r.jsx)(g.Z, { currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS }),
                 (0, r.jsx)(s.w0Z, {
                     className: b.scroller,
                     children: this.renderBody(),

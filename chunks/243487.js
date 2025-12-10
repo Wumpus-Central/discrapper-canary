@@ -27,8 +27,8 @@ var r = n(54381),
     S = n(594174),
     I = n(979651),
     T = n(938475),
-    A = n(237997),
-    C = n(823379),
+    C = n(237997),
+    A = n(823379),
     N = n(136015),
     P = n(426563),
     R = n(444295),
@@ -112,7 +112,7 @@ function Y(e) {
                         let r = y.Z.getChannel(null == (t = a.get(e)) ? void 0 : t.voiceState.channelId);
                         return n.getAvatarURL(null == r ? void 0 : r.getGuildId(), p, !1);
                     })
-                    .filter(C.lm),
+                    .filter(A.lm),
             [i, a, p],
         ),
         m = null != (t = _[0]) ? t : H(0),
@@ -169,14 +169,14 @@ let K = i.memo(function (e) {
             () =>
                 Array.from(O)
                     .map((e) => E.Z.getStreamForUser(e, p))
-                    .filter(C.lm)
+                    .filter(A.lm)
                     .map((e) => e.ownerId),
             [p, O],
         );
     i.useEffect(() => {
         I &&
             (0, R.zi)(M.Odu.VOICE_V3, {
-                locked: A.default.isInstanceLocked(),
+                locked: C.default.isInstanceLocked(),
                 shownUserIds: Array.from(O),
                 liveUserIds: T,
                 contentInventoryIds: [],
@@ -327,12 +327,12 @@ function q(e) {
         l = (0, s.e7)([E.Z], () => E.Z.getStreamerActiveStreamMetadata()),
         c = (0, x.II)(),
         d = (0, u.q)(null == c ? void 0 : c.id),
-        _ = (0, s.cj)([E.Z, A.default, w.Z], () => {
+        _ = (0, s.cj)([E.Z, C.default, w.Z], () => {
             let e = E.Z.getCurrentUserActiveStream();
             return {
-                displayUserMode: A.default.getDisplayUserMode(),
-                displayNameMode: A.default.getDisplayNameMode(),
-                avatarSizeMode: A.default.getAvatarSizeMode(),
+                displayUserMode: C.default.getDisplayUserMode(),
+                displayNameMode: C.default.getDisplayNameMode(),
+                avatarSizeMode: C.default.getAvatarSizeMode(),
                 streamApplication: (null == l ? void 0 : l.pid) === w.Z.getTargetPID() ? (0, p.Z)(c) : null,
                 stream: e,
             };

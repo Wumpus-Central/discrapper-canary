@@ -9,7 +9,7 @@ var n = t(54381),
     d = t(481060),
     u = t(100527),
     m = t(906732),
-    _ = t(684263),
+    _ = t(216541),
     h = t(164670),
     p = t(765907),
     f = t(81939),
@@ -106,7 +106,7 @@ function W(e) {
                                   let t = { items: i.item.bundleItems };
                                   return (0, n.jsx)("div", {
                                       className: R.bundlePreviewBanner,
-                                      children: (0, n.jsx)(_.U, {
+                                      children: (0, n.jsx)(_.d, {
                                           product: t,
                                           isPurchased: !1,
                                           isHighlighted: e,

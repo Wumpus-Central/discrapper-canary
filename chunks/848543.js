@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(755721),
     p = n(481060),
     f = n(239091),
-    h = n(100527),
-    g = n(906732),
+    g = n(100527),
+    h = n(906732),
     m = n(522651),
     _ = n(795318),
     b = n(706140),
@@ -99,7 +99,7 @@ function A(e) {
         k = t.getGuildId(),
         U = (0, y.sR)({ isSoundboardButtonDisabled: R }),
         [G, B] = (0, b.cv)(U),
-        { analyticsLocations: H, parentAnalyticsLocation: V } = (0, g.ZP)(h.Z.SOUNDBOARD_BUTTON);
+        { analyticsLocations: H, parentAnalyticsLocation: V } = (0, h.ZP)(g.Z.SOUNDBOARD_BUTTON);
     function F(e) {
         null != k &&
             (0, f.jW)(e, async () => {
@@ -115,7 +115,7 @@ function A(e) {
                                 },
                                 t,
                             ),
-                            { onInteraction: (0, _.u)("SoundboardContextMenu", h.Z.RTC_PANEL) },
+                            { onInteraction: (0, _.u)("SoundboardContextMenu", g.Z.RTC_PANEL) },
                         ),
                     );
             });
@@ -133,7 +133,7 @@ function A(e) {
             event: S.CkL.TOGGLE_SOUNDBOARD,
             handler: K,
         }),
-        (0, r.jsx)(g.Gt, {
+        (0, r.jsx)(h.Gt, {
             value: H,
             children: (0, r.jsx)(u.u, {
                 targetElementRef: A,

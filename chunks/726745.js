@@ -136,11 +136,11 @@ function T(e) {
     let { multiAccountMobileExperimentEnabled: t } = e;
     i = t;
 }
-function A(e) {
+function C(e) {
     let { userId: t, pushSyncToken: n } = e;
     g = g.map((e) => (e.id === t ? m(p({}, e), { pushSyncToken: n }) : e));
 }
-function C(e) {
+function A(e) {
     let { invalidPushSyncTokens: t } = e;
     g = g.map((e) =>
         null != e.pushSyncToken && t.includes(e.pushSyncToken) ? m(p({}, e), { pushSyncToken: null }) : e,
@@ -218,6 +218,6 @@ let P = new N(l.Z, {
     MULTI_ACCOUNT_MOVE_ACCOUNT: I,
     CURRENT_USER_UPDATE: v,
     MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: T,
-    MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: A,
-    MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: C,
+    MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: C,
+    MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: A,
 });

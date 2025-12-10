@@ -23,11 +23,11 @@ function h(e) {
         P = (0, i.e7)([o.Z], () => o.Z.getGuild(p), [p]),
         j = (0, i.e7)([d.Z], () => (null != h ? d.Z.getVoiceStateForChannel(h, e.id) : null), [h, e.id]),
         v = (null == (n = s.default.getCurrentUser()) ? void 0 : n.id) === e.id,
-        y = (0, f.Z)(),
-        N = (0, i.e7)([Z.ZP], () => Z.ZP.getPermissionsForUser(e.id, h), [h, e.id]),
+        N = (0, f.Z)(),
+        y = (0, i.e7)([Z.ZP], () => Z.ZP.getPermissionsForUser(e.id, h), [h, e.id]),
         x = (0, g.B)(h),
         E = (0, O.sP)();
-    if (null == t || null == P || null == j || N.speaker) return null;
+    if (null == t || null == P || null == j || y.speaker) return null;
     let _ = () => {
         if (v) {
             if ((0, O.u1)())
@@ -43,7 +43,7 @@ function h(e) {
                 label: v ? m.intl.string(m.t["W6c/Vf"]) : m.intl.string(m.t.VUCWcO),
                 action: _,
             })
-          : y && v
+          : N && v
             ? (0, l.jsx)(r.sNh, {
                   id: "invite-speaker",
                   label: m.intl.string(m.t["W6c/Vf"]),

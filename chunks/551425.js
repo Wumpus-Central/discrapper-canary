@@ -12,7 +12,7 @@ var r = n(979554),
     f = n(876917),
     p = n(594174),
     m = n(583434),
-    h = n(684263),
+    h = n(216541),
     g = n(948067);
 let b = s.EFr.SIZE_152,
     y = (0, a.y9)(b),
@@ -108,7 +108,7 @@ let b = s.EFr.SIZE_152,
         let { product: t } = e;
         return (0, i.jsx)("div", {
             className: g.bundlePreview,
-            children: (0, i.jsx)(h.U, {
+            children: (0, i.jsx)(h.d, {
                 product: t,
                 isPurchased: !1,
                 isHighlighted: !1,

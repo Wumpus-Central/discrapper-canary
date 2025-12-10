@@ -82,7 +82,7 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -90,7 +90,7 @@ function T(e, t) {
     }
     return i;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -99,7 +99,7 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let C = new p.Z("ReadyPayloadUtils"),
+let A = new p.Z("ReadyPayloadUtils"),
     N = {},
     P = null,
     R = {};
@@ -309,7 +309,7 @@ function B(e) {
         };
     if (null == c)
         throw (
-            (C.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: ready)")),
+            (A.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: ready)")),
             Error("Guild data was missing from store, but hash was still available."))
         );
     return {
@@ -378,7 +378,7 @@ function F(e, t) {
         };
     if (null == t)
         throw (
-            (C.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: post_ready)")),
+            (A.log("no cache entry for partial guild (guild: ".concat(e.id, ", type: post_ready)")),
             Error("Guild data was missing from store, but hash was still available."))
         );
     return {

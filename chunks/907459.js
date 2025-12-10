@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(74538),
     I = n(874926),
     T = n(737604),
-    A = n(539873),
-    C = n(981631),
+    C = n(539873),
+    A = n(981631),
     N = n(921944),
     P = n(474936),
     R = n(388032),
@@ -85,7 +85,7 @@ let w = () => {
                 null == n || n(N.L.DISMISS),
                     (0, m.Ll)(),
                     (0, I.O)(),
-                    t || (0, y.openUserSettings)(b.n.APPEARANCE_PANEL, { section: C.oAB.APPEARANCE });
+                    t || (0, y.openUserSettings)(b.n.APPEARANCE_PANEL, { section: A.oAB.APPEARANCE });
             };
         return (0, r.jsxs)("div", {
             className: D.editorFooter,
@@ -111,12 +111,12 @@ function j(e) {
         g = m.oq.getState().activePanel === m.wh.APP_ICON;
     i.useEffect(() => {
         c &&
-            v.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
+            v.default.track(A.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: P.cd.APP_ICON_UPSELL,
                 location_stack: a,
             });
     }, [c, a]);
-    let E = (0, d.Z)(null, c ? I.O : C.dG4);
+    let E = (0, d.Z)(null, c ? I.O : A.dG4);
     return (i.useEffect(() => {
         if (c && !g) return I.O;
     }, [c, g]),
@@ -133,7 +133,7 @@ function j(e) {
                           (0, r.jsx)(x, { markAsDismissed: n }),
                           (0, r.jsx)(u.Ttm, {
                               className: D.editorBody,
-                              children: (0, r.jsx)(A.Z, {
+                              children: (0, r.jsx)(C.Z, {
                                   className: D.selectionGroup,
                                   isEditor: !0,
                               }),

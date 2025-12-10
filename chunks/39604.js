@@ -53,8 +53,8 @@ var r = n(46973),
     S = n(435064),
     I = n(894694),
     T = n(61994),
-    A = n(550351),
-    C = n(341569),
+    C = n(550351),
+    A = n(341569),
     N = n(659487),
     P = n(711644),
     R = n(259612),
@@ -249,7 +249,7 @@ async function K(e) {
         n = arguments.length > 2 ? arguments[2] : void 0,
         r = arguments.length > 3 ? arguments[3] : void 0,
         i = S.Z.getSettings().storageLocation,
-        s = (0, A.Z)(e, t, I.NJ.CLIP, n, r),
+        s = (0, C.Z)(e, t, I.NJ.CLIP, n, r),
         l = "".concat((0, T.Z)(s.applicationName.substring(0, 20)), "_").concat(s.id, ".mp4"),
         u = o.Z.fileManager.join(i, l),
         d = h.Z.getMediaEngine(),
@@ -314,24 +314,24 @@ async function z(e) {
         s = arguments.length > 3 ? arguments[3] : void 0,
         { enableViewerClipping: f } = u.Z.getCurrentConfig({ location: "SaveClip" }, { autoTrackExposure: !1 });
     if (S.Z.getIsAtMaxSaveClipOperations()) return;
-    let p = (0, C.LI)() && null != _.Z.getCurrentUserActiveStream(),
+    let p = (0, A.LI)() && null != _.Z.getCurrentUserActiveStream(),
         E =
-            (0, C.CY)() &&
+            (0, A.CY)() &&
             (null == (t = l.ZP.getVisibleGame()) ? void 0 : t.windowHandle) != null &&
             h.Z.hasClipsSource(),
         y = null != e && null != _.Z.getActiveStreamForStreamKey(e) && f,
-        O = (0, v.n7)() && (0, C.LI)() && null == _.Z.getCurrentUserActiveStream() && null != g.Z.getChannelId();
+        O = (0, v.n7)() && (0, A.LI)() && null == _.Z.getCurrentUserActiveStream() && null != g.Z.getChannelId();
     if (!p && !E && !y && !O) return;
     let I = _.Z.getCurrentUserActiveStream(),
         T = null != I ? (0, c.V9)(I) : void 0,
-        A = null != e ? e : T,
+        C = null != e ? e : T,
         N = (() => {
-            let e = null != A ? (0, c.my)(A).ownerId : void 0;
+            let e = null != C ? (0, c.my)(C).ownerId : void 0;
             return e === m.default.getId() ? D.X9.STREAMER : null != e ? D.X9.VIEWER : E ? D.X9.DECOUPLED : D.X9.VOICE;
         })(),
         P = await (async () => {
-            if (null == A) return;
-            let { ownerId: e, guildId: t } = (0, c.my)(A),
+            if (null == C) return;
+            let { ownerId: e, guildId: t } = (0, c.my)(C),
                 n = b.Z.getStreamId(e, t, r.Yn.STREAM);
             if (null != n)
                 try {
@@ -345,7 +345,7 @@ async function z(e) {
     a.Z.dispatch({
         type: "CLIPS_SAVE_CLIP_START",
         clipType: N,
-        streamKey: A,
+        streamKey: C,
         thumbnail: P,
         clipMethod: n,
     });
@@ -375,7 +375,7 @@ async function z(e) {
                     }
             }
         }
-        let e = await K(A, n, o, s);
+        let e = await K(C, n, o, s);
         a.Z.dispatch({
             type: "CLIPS_SAVE_CLIP",
             clip: e,
@@ -399,7 +399,7 @@ async function q(e, t) {
         s = null != i ? (0, c.V9)(i) : void 0,
         u = null != e ? e : s,
         f = h.Z.getMediaEngine(),
-        p = (0, A.Z)(u, t, I.NJ.SCREENSHOT),
+        p = (0, C.Z)(u, t, I.NJ.SCREENSHOT),
         g = S.Z.getSettings().storageLocation,
         E = "jpeg",
         b = ""
@@ -432,7 +432,7 @@ async function q(e, t) {
         clipMethod: null != t ? t : "manual",
     });
     let v = (0, d.GN)("clip_save", 0.5),
-        C = performance.now();
+        A = performance.now();
     try {
         let e = M(L({}, p), {
                 filepath: y,
@@ -446,7 +446,7 @@ async function q(e, t) {
                 type: "CLIPS_SAVE_CLIP",
                 clip: e,
             }),
-            D.jF.info("Screenshot save took ".concat(Math.round(performance.now() - C), "ms")),
+            D.jF.info("Screenshot save took ".concat(Math.round(performance.now() - A), "ms")),
             D.jF.log("Successfully saved screenshot to:", y);
     } catch (e) {
         throw (

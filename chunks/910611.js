@@ -1,5 +1,5 @@
 n.d(t, {
-    TS: () => B,
+    TS: () => F,
     ud: () => D,
     v0: () => U,
 }),
@@ -394,7 +394,7 @@ function V(e, t) {
         ],
     });
 }
-function B(e) {
+function F(e) {
     let { guild: t, channel: n, caretPosition: l = "left" } = e,
         a = (0, o.e7)([O.Z], () => O.Z.getGuildId()),
         s = (0, b.D)(),

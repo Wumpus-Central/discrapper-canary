@@ -22,8 +22,8 @@ let h = {
     };
 function E(e, t, n) {
     var E, y, O, v, S, I;
-    let { node: T, isVirtualized: A } = e,
-        { direction: C } = (0, m.j)(),
+    let { node: T, isVirtualized: C } = e,
+        { direction: A } = (0, m.j)(),
         { onAction: N, linkBehavior: P, keyboardNavigationBehavior: R, shouldSelectOnPressUp: D } = r.Co.get(t),
         w = (0, i.mp)(),
         x = (0, f.useRef)(null),
@@ -61,7 +61,7 @@ function E(e, t, n) {
             selectionManager: t.selectionManager,
             key: T.key,
             ref: n,
-            isVirtualized: A,
+            isVirtualized: C,
             shouldSelectOnPressUp: e.shouldSelectOnPressUp || D,
             onAction:
                 N || (null == (E = T.props) ? void 0 : E.onAction)
@@ -76,11 +76,11 @@ function E(e, t, n) {
             if (
                 ((r.currentNode = document.activeElement), "expandedKeys" in t && document.activeElement === n.current)
             ) {
-                if (e.key === h[C] && t.selectionManager.focusedKey === T.key && M && !t.expandedKeys.has(T.key)) {
+                if (e.key === h[A] && t.selectionManager.focusedKey === T.key && M && !t.expandedKeys.has(T.key)) {
                     t.toggleKey(T.key), e.stopPropagation();
                     return;
                 } else if (
-                    e.key === g[C] &&
+                    e.key === g[A] &&
                     t.selectionManager.focusedKey === T.key &&
                     M &&
                     t.expandedKeys.has(T.key)
@@ -92,13 +92,13 @@ function E(e, t, n) {
             switch (e.key) {
                 case "ArrowLeft":
                     if ("arrow" === R) {
-                        let t = "rtl" === C ? r.nextNode() : r.previousNode();
+                        let t = "rtl" === A ? r.nextNode() : r.previousNode();
                         if (t)
                             e.preventDefault(),
                                 e.stopPropagation(),
                                 (0, u.e)(t),
                                 (0, o.G)(t, { containingElement: (0, s.r)(n.current) });
-                        else if ((e.preventDefault(), e.stopPropagation(), "rtl" === C))
+                        else if ((e.preventDefault(), e.stopPropagation(), "rtl" === A))
                             (0, u.e)(n.current), (0, o.G)(n.current, { containingElement: (0, s.r)(n.current) });
                         else {
                             r.currentNode = n.current;
@@ -109,13 +109,13 @@ function E(e, t, n) {
                     break;
                 case "ArrowRight":
                     if ("arrow" === R) {
-                        let t = "rtl" === C ? r.previousNode() : r.nextNode();
+                        let t = "rtl" === A ? r.previousNode() : r.nextNode();
                         if (t)
                             e.preventDefault(),
                                 e.stopPropagation(),
                                 (0, u.e)(t),
                                 (0, o.G)(t, { containingElement: (0, s.r)(n.current) });
-                        else if ((e.preventDefault(), e.stopPropagation(), "ltr" === C))
+                        else if ((e.preventDefault(), e.stopPropagation(), "ltr" === A))
                             (0, u.e)(n.current), (0, o.G)(n.current, { containingElement: (0, s.r)(n.current) });
                         else {
                             r.currentNode = n.current;
@@ -167,7 +167,7 @@ function E(e, t, n) {
             "aria-labelledby": w && T.textValue ? `${(0, r.XQ)(t, T.key)} ${w}` : void 0,
             id: (0, r.XQ)(t, T.key),
         });
-    if (A) {
+    if (C) {
         let { collection: e } = t,
             n = [...e];
         Y["aria-rowindex"] = n.find((e) => "section" === e.type)

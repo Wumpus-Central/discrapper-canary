@@ -29,8 +29,8 @@ var r = n(525654),
     S = n(972830),
     I = n(305325),
     T = n(281956),
-    A = n(931261),
-    C = n(15274),
+    C = n(931261),
+    A = n(15274),
     N = n(924301),
     P = n(461014),
     R = n(82085),
@@ -149,7 +149,7 @@ function ep(e, t) {
 function e_(e, t, n) {
     var r, i;
     if ((null == n ? void 0 : n.targetType) === ei.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return en.oC.ROLE_SUBSCRIPTIONS;
-    if ((null == n ? void 0 : n.targetType) == null && !k.tx.has(t.type) && (0, A.s)(e)) return en.oC.GUILD_HOME;
+    if ((null == n ? void 0 : n.targetType) == null && !k.tx.has(t.type) && (0, C.s)(e)) return en.oC.GUILD_HOME;
     let a = G.Z.getChannel(t.id);
     return H.Z.can(ee.Plq.VIEW_CHANNEL, a)
         ? t.id
@@ -244,7 +244,7 @@ function eg(e) {
     null != t &&
         (0, S.h)(() => {
             let e = { guildScheduledEventId: t.id };
-            null != n && (e.welcomeModalChannelId = n), (0, C.P3)(t, e);
+            null != n && (e.welcomeModalChannelId = n), (0, A.P3)(t, e);
         });
 }
 function eE(e, t, n) {

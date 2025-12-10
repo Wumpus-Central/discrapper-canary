@@ -43,7 +43,7 @@
             return d(t, "toString") && (e.toString = t.toString), d(t, "valueOf") && (e.valueOf = t.valueOf), e;
         }
         function p(e, t, n, r) {
-            return nC(e, t, n, r, !0).utc();
+            return nA(e, t, n, r, !0).utc();
         }
         function _() {
             return {
@@ -128,15 +128,15 @@
                 for (n = 0; n < I.length; n++) s((i = t[(r = I[n])])) || (e[r] = i);
             return e;
         }
-        var A = !1;
-        function C(e) {
+        var C = !1;
+        function A(e) {
             T(this, e),
                 (this._d = new Date(null != e._d ? e._d.getTime() : NaN)),
                 this.isValid() || (this._d = new Date(NaN)),
-                !1 === A && ((A = !0), t.updateOffset(this), (A = !1));
+                !1 === C && ((C = !0), t.updateOffset(this), (C = !1));
         }
         function N(e) {
-            return e instanceof C || (null != e && null != e._isAMomentObject);
+            return e instanceof A || (null != e && null != e._isAMomentObject);
         }
         function P(e) {
             return e < 0 ? Math.ceil(e) || 0 : Math.floor(e);
@@ -384,8 +384,8 @@
             eS = /\d{1,3}/,
             eI = /\d{1,4}/,
             eT = /[+-]?\d{1,6}/,
-            eA = /\d+/,
-            eC = /[+-]?\d+/,
+            eC = /\d+/,
+            eA = /[+-]?\d+/,
             eN = /Z|[+-]\d\d:?\d\d/gi,
             eP = /Z|[+-]\d\d(?::?\d\d)?/gi,
             eR = /[+-]?\d+(\.\d{1,3})?/,
@@ -463,7 +463,7 @@
             eu(0, ["YYYYYY", 6, !0], 0, "year"),
             $("year", "y"),
             er("year", 1),
-            ex("Y", eC),
+            ex("Y", eA),
             ex("YY", ey, eh),
             ex("YYYY", eI, eE),
             ex("YYYYY", eT, eb),
@@ -810,8 +810,8 @@
             eG(["d", "e", "E"], function (e, t, n, r) {
                 t[r] = R(e);
             });
-        var tA = "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_");
-        function tC(e, t) {
+        var tC = "Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday".split("_");
+        function tA(e, t) {
             return e
                 ? i(this._weekdays)
                     ? this._weekdays[e.day()]
@@ -1079,7 +1079,7 @@
                 months: e7,
                 monthsShort: te,
                 week: tb,
-                weekdays: tA,
+                weekdays: tC,
                 weekdaysMin: tR,
                 weekdaysShort: tN,
                 meridiemParse: tq,
@@ -1484,7 +1484,7 @@
             }
         }
         function nI(e) {
-            var t = new C(t9(nT(e)));
+            var t = new A(t9(nT(e)));
             return t._nextDay && (t.add(1, "d"), (t._nextDay = void 0)), t;
         }
         function nT(e) {
@@ -1493,10 +1493,10 @@
             return ((e._locale = e._locale || t6(e._l)), null === t || (void 0 === n && "" === t))
                 ? g({ nullInput: !0 })
                 : ("string" == typeof t && (e._i = t = e._locale.preparse(t)), N(t))
-                  ? new C(t9(t))
-                  : (c(t) ? (e._d = t) : i(n) ? nv(e) : n ? ny(e) : nA(e), h(e) || (e._d = null), e);
+                  ? new A(t9(t))
+                  : (c(t) ? (e._d = t) : i(n) ? nv(e) : n ? ny(e) : nC(e), h(e) || (e._d = null), e);
         }
-        function nA(e) {
+        function nC(e) {
             var n = e._i;
             s(n)
                 ? (e._d = new Date(t.now()))
@@ -1515,7 +1515,7 @@
                           ? (e._d = new Date(n))
                           : t.createFromInputFallback(e);
         }
-        function nC(e, t, n, r, s) {
+        function nA(e, t, n, r, s) {
             var l = {};
             return (
                 (!0 === n || !1 === n) && ((r = n), (n = void 0)),
@@ -1530,7 +1530,7 @@
             );
         }
         function nN(e, t, n, r) {
-            return nC(e, t, n, r, !1);
+            return nA(e, t, n, r, !1);
         }
         (t.createFromInputFallback = x(
             "value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are discouraged and will be removed in an upcoming major release. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.",
@@ -1851,7 +1851,7 @@
             return this.format(o || this.localeData().calendar(a, this, nN(r)));
         }
         function ro() {
-            return new C(this);
+            return new A(this);
         }
         function rs(e, t) {
             var n = N(e) ? e : nN(e);
@@ -2013,7 +2013,7 @@
         function rT() {
             return this._locale;
         }
-        function rA(e) {
+        function rC(e) {
             switch ((e = ee(e))) {
                 case "year":
                     this.month(0);
@@ -2039,7 +2039,7 @@
                 this
             );
         }
-        function rC(e) {
+        function rA(e) {
             return void 0 === (e = ee(e)) || "millisecond" === e
                 ? this
                 : ("date" === e && (e = "day"),
@@ -2142,8 +2142,8 @@
             $("isoWeekYear", "GG"),
             er("weekYear", 1),
             er("isoWeekYear", 1),
-            ex("G", eC),
-            ex("g", eC),
+            ex("G", eA),
+            ex("g", eA),
             ex("GG", ey, eh),
             ex("gg", ey, eh),
             ex("GGGG", eI, eE),
@@ -2237,7 +2237,7 @@
             v.length <= 9;
             v += "S"
         )
-            ex(v, eA);
+            ex(v, eC);
         function rQ(e, t) {
             t[eK] = R(("0." + e) * 1000);
         }
@@ -2250,7 +2250,7 @@
             return this._isUTC ? "Coordinated Universal Time" : "";
         }
         eu("z", 0, 0, "zoneAbbr"), eu("zz", 0, 0, "zoneName");
-        var r0 = C.prototype;
+        var r0 = A.prototype;
         function r1(e) {
             return nN(1000 * e);
         }
@@ -2264,7 +2264,7 @@
             (r0.calendar = ra),
             (r0.clone = ro),
             (r0.diff = rp),
-            (r0.endOf = rC),
+            (r0.endOf = rA),
             (r0.format = rE),
             (r0.from = rb),
             (r0.fromNow = ry),
@@ -2286,7 +2286,7 @@
             (r0.min = nP),
             (r0.parsingFlags = rj),
             (r0.set = e4),
-            (r0.startOf = rA),
+            (r0.startOf = rC),
             (r0.subtract = rr),
             (r0.toArray = rD),
             (r0.toObject = rw),
@@ -2396,7 +2396,7 @@
             (r4.week = tE),
             (r4.firstDayOfYear = tO),
             (r4.firstDayOfWeek = ty),
-            (r4.weekdays = tC),
+            (r4.weekdays = tA),
             (r4.weekdaysMin = tD),
             (r4.weekdaysShort = tP),
             (r4.weekdaysParse = tx),
@@ -2532,21 +2532,21 @@
         function iT() {
             return n8(this);
         }
-        function iA(e) {
+        function iC(e) {
             return (e = ee(e)), this.isValid() ? this[e + "s"]() : NaN;
         }
-        function iC(e) {
+        function iA(e) {
             return function () {
                 return this.isValid() ? this._data[e] : NaN;
             };
         }
-        var iN = iC("milliseconds"),
-            iP = iC("seconds"),
-            iR = iC("minutes"),
-            iD = iC("hours"),
-            iw = iC("days"),
-            ix = iC("months"),
-            iL = iC("years");
+        var iN = iA("milliseconds"),
+            iP = iA("seconds"),
+            iR = iA("minutes"),
+            iD = iA("hours"),
+            iw = iA("days"),
+            ix = iA("months"),
+            iL = iA("years");
         function ij() {
             return P(this.days() / 7);
         }
@@ -2649,7 +2649,7 @@
             (iW.valueOf = im),
             (iW._bubble = iu),
             (iW.clone = iT),
-            (iW.get = iA),
+            (iW.get = iC),
             (iW.milliseconds = iN),
             (iW.seconds = iP),
             (iW.minutes = iR),
@@ -2671,7 +2671,7 @@
             (iW.lang = rI),
             eu("X", 0, 0, "unix"),
             eu("x", 0, 0, "valueOf"),
-            ex("x", eC),
+            ex("x", eA),
             ex("X", eR),
             eU("X", function (e, t, n) {
                 n._d = new Date(1000 * parseFloat(e, 10));

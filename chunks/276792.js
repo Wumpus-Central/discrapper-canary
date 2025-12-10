@@ -1,4 +1,4 @@
-n.d(t, { N: () => g });
+n.d(t, { N: () => h });
 var r = n(54381);
 n(473749);
 var i = n(657707),
@@ -11,9 +11,9 @@ var i = n(657707),
     d = n(671728),
     p = n(981631),
     f = n(388032),
-    h = n(605548);
-function g(e) {
-    var t, n, g, m;
+    g = n(605548);
+function h(e) {
+    var t, n, h, m;
     let {
             componentId: _,
             promotionId: b,
@@ -31,7 +31,7 @@ function g(e) {
                 ? "jump_to_mkt_button"
                 : "get_nitro_button",
         j = (0, d.K)({
-            buttonAction: null == (g = E.button) ? void 0 : g.buttonAction,
+            buttonAction: null == (h = E.button) ? void 0 : h.buttonAction,
             analyticsLocations: v,
             analyticsLocation: y,
             onClose: S,
@@ -43,7 +43,7 @@ function g(e) {
                           children: [
                               "\xA0",
                               (0, r.jsx)(s.Anchor, {
-                                  className: h.termsApplyAnchor,
+                                  className: g.termsApplyAnchor,
                                   href: c.Z.getArticleURL(E.helpArticleId),
                                   children: f.intl.string(f.t["sBp+u0"]),
                               }),
@@ -70,7 +70,7 @@ function g(e) {
             ? () =>
                   (0, r.jsx)(u.mn, {
                       text: E.modalTopPill,
-                      className: h.modalTopPill,
+                      className: g.modalTopPill,
                   })
             : void 0;
     return {

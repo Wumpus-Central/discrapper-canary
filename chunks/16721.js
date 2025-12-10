@@ -34,9 +34,9 @@ var r = n(580983),
             S = this,
             I = u(S),
             T = a(e),
-            A = I.raw;
-        if (A) return (A.lastIndex = S.lastIndex), (t = r(m, A, T)), (S.lastIndex = A.lastIndex), t;
-        var C = I.groups,
+            C = I.raw;
+        if (C) return (C.lastIndex = S.lastIndex), (t = r(m, C, T)), (S.lastIndex = C.lastIndex), t;
+        var A = I.groups,
             N = O && S.sticky,
             P = r(o, S),
             R = S.source,
@@ -67,9 +67,9 @@ var r = n(580983),
                 r(p, s[0], n, function () {
                     for (l = 1; l < arguments.length - 2; l++) void 0 === arguments[l] && (s[l] = void 0);
                 }),
-            s && C)
+            s && A)
         )
-            for (l = 0, s.groups = d = c(null); l < C.length; l++) d[(f = C[l])[0]] = s[f[1]];
+            for (l = 0, s.groups = d = c(null); l < A.length; l++) d[(f = A[l])[0]] = s[f[1]];
         return s;
     }),
     (e.exports = m);

@@ -34,8 +34,8 @@ function I() {
         } = (0, o.e7)([c.Z], () => c.Z.getCheckpointData()),
         I = i.useContext(l.Q),
         T = (0, s.dQu)(I.primaryColor).hex(),
-        { monthName: A } = (0, u.CE)(n, b.intl.currentLocale),
-        C = null != t;
+        { monthName: C } = (0, u.CE)(n, b.intl.currentLocale),
+        A = null != t;
     return (0, r.jsxs)(_.Z, {
         className: O.container,
         children: [
@@ -67,13 +67,13 @@ function I() {
                     (0, r.jsx)(m.Z, {
                         variant: "heading-xxl/medium",
                         className: O.subtitle,
-                        children: C
+                        children: A
                             ? b.intl.format(E.default.ixvOza, {
                                   percent: 100 - t,
                                   percentHook: (e, t) => (0, r.jsx)(f.Z, { children: e }, t),
                               })
                             : b.intl.format(E.default["Zd+Ej+"], {
-                                  month: A,
+                                  month: C,
                                   monthHook: (e, t) => (0, r.jsx)(f.Z, { children: e }, t),
                               }),
                     }),

@@ -1,4 +1,4 @@
-n.d(t, { m: () => C });
+n.d(t, { m: () => A });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -51,7 +51,7 @@ function I(e) {
 let T = (e, t) => {
         (0, p.default)(), d.Z.openPrivateChannel({ recipientIds: e }), t();
     },
-    A = (e) => {
+    C = (e) => {
         let { recipient: t, status: n, onClose: i } = e,
             { avatarSrc: a, eventHandlers: s } = (0, f.Z)({
                 userId: null == t ? void 0 : t.id,
@@ -107,7 +107,7 @@ let T = (e, t) => {
             ],
         });
     },
-    C = (e) => {
+    A = (e) => {
         let { results: t, onClose: n, isReminderConfirmation: a } = e,
             o = (0, l.e7)([E.Z], () => E.Z.getReferralsRemaining());
         _.default.track(b.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
@@ -138,7 +138,7 @@ let T = (e, t) => {
                     className: O.trialRecipientContainer,
                     children: t.map((e) =>
                         (0, r.jsx)(
-                            A,
+                            C,
                             {
                                 recipient: e.recipient,
                                 status: e.status,

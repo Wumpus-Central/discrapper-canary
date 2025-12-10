@@ -27,8 +27,8 @@ function S(e) {
         {
             selectedSkuId: I,
             step: T,
-            selectedPlan: A,
-            purchaseState: C,
+            selectedPlan: C,
+            purchaseState: A,
             purchaseType: N,
             selectedSku: P,
             enablePremiumBrandRefresh: R,
@@ -68,7 +68,7 @@ function S(e) {
                       ],
                   }))
                 : G
-                  ? (e = n(null != A ? A : null, S, T))
+                  ? (e = n(null != C ? C : null, S, T))
                   : N === y.GZ.ONE_TIME
                     ? (e = (0, r.jsx)(p.t, {
                           step: T,
@@ -78,7 +78,7 @@ function S(e) {
                       (o()(v(I, b.y7), "invalid sku id: ".concat(I)),
                       (e = (0, r.jsx)(f.Z, {
                           currentStep: null != T ? T : void 0,
-                          purchaseState: C,
+                          purchaseState: A,
                           premiumType: b.y7[I],
                           onClose: S,
                           showTrialBadge: V,
@@ -92,5 +92,5 @@ function S(e) {
                       }))),
             e
         );
-    }, [L, S, C, n, A, I, T, V, W, U, B, G, N, x, j, R, D, w]);
+    }, [L, S, A, n, C, I, T, V, W, U, B, G, N, x, j, R, D, w]);
 }

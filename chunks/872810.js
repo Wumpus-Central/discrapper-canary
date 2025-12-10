@@ -37,8 +37,8 @@ n(26151), n(493683);
 var I = n(475179);
 n(287734);
 var T = n(981631),
-    A = n(70722);
-function C(e, t, n) {
+    C = n(70722);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -62,7 +62,7 @@ function N(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -73,7 +73,7 @@ function R(e, t, n) {
         N(
             {
                 type: "STREAM_START",
-                streamType: null != e ? A.lo.GUILD : A.lo.CALL,
+                streamType: null != e ? C.lo.GUILD : C.lo.CALL,
                 guildId: e,
                 channelId: t,
                 appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP,
@@ -149,7 +149,7 @@ function k(e) {
 async function U(e, t, n) {
     if (!p.Z.shouldFetchPreview(e, t, n)) return;
     let r = (0, u.V9)({
-        streamType: null != e ? A.lo.GUILD : A.lo.CALL,
+        streamType: null != e ? C.lo.GUILD : C.lo.CALL,
         guildId: e,
         channelId: t,
         ownerId: n,

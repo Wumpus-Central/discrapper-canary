@@ -9,8 +9,8 @@ var l,
     d = n(700785),
     p = n(388610),
     f = n(592125),
-    h = n(981631),
-    g = n(71080);
+    g = n(981631),
+    h = n(71080);
 function m(e, t, n) {
     return (
         t in e
@@ -59,7 +59,7 @@ function b(e, t) {
     );
 }
 let E = new Set(),
-    O = h.QZA.CLOSED,
+    O = g.QZA.CLOSED,
     v = !1,
     y = null,
     I = null,
@@ -67,7 +67,7 @@ let E = new Set(),
     S = null,
     T = null,
     N = null,
-    j = c.K.get(g.kf) || !1;
+    j = c.K.get(h.kf) || !1;
 function P(e) {
     let t = e.getGuildId(),
         n = _({}, e.permissionOverwrites);
@@ -82,7 +82,7 @@ function x() {
         (r = d.o4(C, S)),
         (N = null),
         (v = !1),
-        (O = h.QZA.CLOSED),
+        (O = g.QZA.CLOSED),
         E.clear();
 }
 class A extends (l = o.ZP.Store) {
@@ -130,7 +130,7 @@ m(A, "displayName", "ChannelSettingsPermissionsStore");
 let Z = new A(u.Z, {
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let { section: t } = e;
-        if (null != C || t !== h.CoT.PERMISSIONS) return !1;
+        if (null != C || t !== g.CoT.PERMISSIONS) return !1;
         x();
     },
     CHANNEL_SETTINGS_PERMISSIONS_INIT: x,
@@ -144,7 +144,7 @@ let Z = new A(u.Z, {
         })),
             (y = b(_({}, y), { [t]: l })),
             E.add(t),
-            (O = h.QZA.OPEN),
+            (O = g.QZA.OPEN),
             (v = !s().isEqual(y, I)),
             (r = d.o4(C, S));
     },
@@ -157,10 +157,10 @@ let Z = new A(u.Z, {
         }
     },
     CHANNEL_SETTINGS_INIT: function () {
-        p.Z.getSection() === h.CoT.PERMISSIONS && x();
+        p.Z.getSection() === g.CoT.PERMISSIONS && x();
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        (O = h.QZA.CLOSED), (y = null), (I = null), (C = null), (S = null), (v = !1), E.clear(), (T = null), (N = null);
+        (O = g.QZA.CLOSED), (y = null), (I = null), (C = null), (S = null), (v = !1), E.clear(), (T = null), (N = null);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -190,14 +190,14 @@ let Z = new A(u.Z, {
         return n;
     },
     CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING: function () {
-        O = h.QZA.SUBMITTING;
+        O = g.QZA.SUBMITTING;
     },
     CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function (e) {
         let { silent: t } = e;
-        t ? (O = h.QZA.OPEN) : ((O = h.QZA.CLOSED), x());
+        t ? (O = g.QZA.OPEN) : ((O = g.QZA.CLOSED), x());
     },
     CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
         let { advancedMode: t } = e;
-        (j = t), c.K.set(g.kf, t);
+        (j = t), c.K.set(h.kf, t);
     },
 });

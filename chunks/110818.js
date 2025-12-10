@@ -1,5 +1,5 @@
 n.d(t, {
-    Db: () => C,
+    Db: () => A,
     HC: () => O,
     NQ: () => E,
     fe: () => L,
@@ -13,7 +13,7 @@ var r,
     l = n(473749),
     c = n(120356),
     u = n.n(c),
-    d = n(205120),
+    d = n(467721),
     f = n(748780),
     p = n(481060),
     _ = n(298185);
@@ -281,20 +281,20 @@ let T = Object.freeze({
             delay: 1000,
         },
     }),
-    A = 1.2;
-class C extends (a = l.PureComponent) {
+    C = 1.2;
+class A extends (a = l.PureComponent) {
     static getNextScene(e) {
         switch (e) {
-            case C.Scenes.IDLE_ENTRY:
-                return C.Scenes.IDLE_LOOP;
-            case C.Scenes.BOOST_START:
-                return C.Scenes.BOOST_LOOP;
-            case C.Scenes.BOOST_END:
-                return C.Scenes.VICTORY;
-            case C.Scenes.VICTORY:
-                return C.Scenes.IDLE_ENTRY;
-            case C.Scenes.ERROR:
-                return C.Scenes.IDLE_LOOP;
+            case A.Scenes.IDLE_ENTRY:
+                return A.Scenes.IDLE_LOOP;
+            case A.Scenes.BOOST_START:
+                return A.Scenes.BOOST_LOOP;
+            case A.Scenes.BOOST_END:
+                return A.Scenes.VICTORY;
+            case A.Scenes.VICTORY:
+                return A.Scenes.IDLE_ENTRY;
+            case A.Scenes.ERROR:
+                return A.Scenes.IDLE_LOOP;
             default:
                 return e;
         }
@@ -320,7 +320,7 @@ class C extends (a = l.PureComponent) {
             }),
             f.Z.timing(this.backgroundAnimation.y, {
                 toValue: e.toValue,
-                duration: e.duration * A,
+                duration: e.duration * C,
                 delay: e.delay || 0,
             }),
         ]).start();
@@ -343,7 +343,7 @@ class C extends (a = l.PureComponent) {
             }),
             f.Z.timing(this.backgroundAnimation.y, {
                 toValue: T.BOOST_START.toValue,
-                duration: T.BOOST_START.duration * A,
+                duration: T.BOOST_START.duration * C,
                 delay: T.BOOST_START.delay,
             }),
         ]).start();
@@ -410,7 +410,7 @@ class C extends (a = l.PureComponent) {
                     (this.backgroundAnimation.x.setValue(0),
                     f.Z.timing(this.backgroundAnimation.x, {
                         toValue: T.IDLE_LOOP.toValue,
-                        duration: T.IDLE_LOOP.duration * A,
+                        duration: T.IDLE_LOOP.duration * C,
                         easing: f.Z.Easing.linear,
                     }).start(this.animateIdleLoopBackground));
             }),
@@ -439,7 +439,7 @@ class C extends (a = l.PureComponent) {
             });
     }
 }
-m(C, "Scenes", v);
+m(A, "Scenes", v);
 var N = (function (e) {
     return (e.ENTRY = "entry"), (e.IDLE = "idle"), (e.STARS = "stars"), (e.ERROR = "error"), (e.SUCCESS = "success"), e;
 })(N || {});

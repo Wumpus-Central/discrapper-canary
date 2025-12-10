@@ -1,7 +1,7 @@
 n.d(t, {
     PH: () => P,
     ZP: () => F,
-    sQ: () => C,
+    sQ: () => A,
 }),
     n(388685);
 var r,
@@ -80,22 +80,22 @@ function I(e) {
 function T(e, t) {
     return f.ZP.getMember(e, t.id);
 }
-function A(e, t, n) {
+function C(e, t, n) {
     var r;
     let i = null != (r = null == t ? void 0 : t.nick) ? r : h.ZP.getName(n);
     return {
         member: t,
-        comparator: C(e, i),
+        comparator: A(e, i),
     };
 }
-function C(e, t) {
+function A(e, t) {
     return ""
         .concat(e.selfStream ? "\0" : "\x01")
         .concat(t.toLowerCase(), "\0")
         .concat(e.userId);
 }
 function N(e, t, n) {
-    return A(n, T(e, t), t);
+    return C(n, T(e, t), t);
 }
 function P(e, t, n, r) {
     var i;
@@ -135,7 +135,7 @@ class R {
                         e,
                         O(b({}, n), {
                             member: a,
-                            comparator: C(t, o),
+                            comparator: A(t, o),
                             nick: o,
                             voiceState: t,
                         }),
@@ -157,7 +157,7 @@ class R {
                 (null == a ? void 0 : a.nick) !== (null == (r = t.member) ? void 0 : r.nick) ||
                 (null == a ? void 0 : a.avatar) !== (null == (i = t.member) ? void 0 : i.avatar)
             ) {
-                let { comparator: r } = A(t.voiceState, a, n);
+                let { comparator: r } = C(t.voiceState, a, n);
                 return (
                     this._voiceStates.set(
                         e,

@@ -26,7 +26,7 @@ function l(e, t, n) {
         I = (e) => {
             e.stopPropagation(), t.setSelected(e.target.checked);
         },
-        { pressProps: T, isPressed: A } = (0, o.r)({
+        { pressProps: T, isPressed: C } = (0, o.r)({
             onPressStart: E,
             onPressEnd: b,
             onPressChange: y,
@@ -35,7 +35,7 @@ function l(e, t, n) {
             onClick: S,
             isDisabled: l,
         }),
-        { pressProps: C, isPressed: N } = (0, o.r)({
+        { pressProps: A, isPressed: N } = (0, o.r)({
             onPressStart: E,
             onPressEnd: b,
             onPressChange: y,
@@ -53,7 +53,7 @@ function l(e, t, n) {
     return (
         (0, a.y)(n, t.defaultSelected, t.setSelected),
         {
-            labelProps: (0, r.d)(C, { onClick: (e) => e.preventDefault() }),
+            labelProps: (0, r.d)(A, { onClick: (e) => e.preventDefault() }),
             inputProps: (0, r.d)(D, {
                 "aria-invalid": g || "invalid" === h || void 0,
                 "aria-errormessage": e["aria-errormessage"],
@@ -68,7 +68,7 @@ function l(e, t, n) {
                 ...R,
             }),
             isSelected: t.isSelected,
-            isPressed: A || N,
+            isPressed: C || N,
             isDisabled: l,
             isReadOnly: c,
             isInvalid: g || "invalid" === h,

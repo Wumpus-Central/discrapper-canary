@@ -27,8 +27,8 @@ var r = n(997945),
     S = n(234912),
     I = n(405571),
     T = n(730886),
-    A = n(473974),
-    C = n(563856);
+    C = n(473974),
+    A = n(563856);
 let N = 60;
 function P() {
     return {
@@ -84,7 +84,7 @@ function R() {
         },
         {
             id: r.Ru.SUNSET,
-            iconSource: A,
+            iconSource: C,
             isPremium: !0,
             name: i.intl.string(i.t.ixdjPB),
         },
@@ -96,7 +96,7 @@ function R() {
         },
         {
             id: r.Ru.Y2K,
-            iconSource: C,
+            iconSource: A,
             isPremium: !0,
             name: i.intl.string(i.t["s+KoXO"]),
         },

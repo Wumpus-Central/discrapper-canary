@@ -65,12 +65,12 @@ function I(e) {
     }, []);
     let y = (0, l.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
         [I, T] = i.useState(1),
-        [A, C] = i.useState(!1),
+        [C, A] = i.useState(!1),
         [N, P] = i.useState(null),
         R = i.useCallback(async () => {
             if (null != y)
                 try {
-                    C(!0), P(null);
+                    A(!0), P(null);
                     let e = (0, h.g)(y, 1);
                     o()(
                         (0, E.uV)(e) <= (0, E.uV)(y.additionalPlans),
@@ -80,7 +80,7 @@ function I(e) {
                         T(2);
                 } catch (t) {
                     let e = t instanceof f.HF ? t : new f.HF(t, t.code);
-                    P(b.intl.string(e.code === p.SM.BILLING_PAUSE_INVALID_UPDATE ? b.t.dq4vq7 : b.t["5mlOCW"])), C(!1);
+                    P(b.intl.string(e.code === p.SM.BILLING_PAUSE_INVALID_UPDATE ? b.t.dq4vq7 : b.t["5mlOCW"])), A(!1);
                 }
         }, [y, t, d]),
         D = () => {
@@ -100,13 +100,13 @@ function I(e) {
                         {
                             variant: "secondary",
                             text: b.intl.string(b.t.oEAioF),
-                            disabled: A,
+                            disabled: C,
                             onClick: a,
                         },
                         {
                             variant: "primary",
                             text: b.intl.string(b.t.etZP4B),
-                            loading: A,
+                            loading: C,
                             onClick: R,
                         },
                     ];

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(539854), n(388685);
+n.d(t, { Z: () => C }), n(539854), n(388685);
 var r = n(392711),
     i = n(570140),
     a = n(235820),
@@ -129,7 +129,7 @@ async function T(e) {
         i.Z.dispatch({ type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE" });
     }
 }
-let A = {
+let C = {
     loadMoreInbox() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         var { preload: t = !1 } = e,

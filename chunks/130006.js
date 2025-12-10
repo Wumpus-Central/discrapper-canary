@@ -23,9 +23,9 @@ var r = n(98405),
     T = function () {
         return this;
     };
-e.exports = function (e, t, n, o, _, h, A) {
+e.exports = function (e, t, n, o, _, h, C) {
     l(n, t, o);
-    var C,
+    var A,
         N,
         P,
         R = function (e) {
@@ -51,9 +51,9 @@ e.exports = function (e, t, n, o, _, h, A) {
         M = ("Array" === t && x.entries) || L;
     if (
         (M &&
-            (C = c(M.call(new e()))) !== Object.prototype &&
-            C.next &&
-            (!a && c(C) !== b && (u ? u(C, b) : s(C[O]) || p(C, O, T)), d(C, D, !0, !0), a && (m[D] = T)),
+            (A = c(M.call(new e()))) !== Object.prototype &&
+            A.next &&
+            (!a && c(A) !== b && (u ? u(A, b) : s(A[O]) || p(A, O, T)), d(A, D, !0, !0), a && (m[D] = T)),
         g &&
             _ === S &&
             L &&
@@ -72,7 +72,7 @@ e.exports = function (e, t, n, o, _, h, A) {
                 keys: h ? j : R(v),
                 entries: R(I),
             }),
-            A)
+            C)
         )
             for (P in N) (!y && !w && P in x) || p(x, P, N[P]);
         else
@@ -84,5 +84,5 @@ e.exports = function (e, t, n, o, _, h, A) {
                 },
                 N,
             );
-    return (!a || A) && x[O] !== j && p(x, O, j, { name: _ }), (m[t] = j), N;
+    return (!a || C) && x[O] !== j && p(x, O, j, { name: _ }), (m[t] = j), N;
 };

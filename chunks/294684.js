@@ -22,8 +22,8 @@ var r = n(98405),
     S = n(434431),
     I = n(382698),
     T = n(713411),
-    A = n(530575),
-    C = n(533610),
+    C = n(530575),
+    A = n(533610),
     N = n(800054),
     P = n(682564),
     R = n(338045),
@@ -189,8 +189,8 @@ eh.prototype = {
             c = this.entries,
             u = N(e);
         if (u)
-            for (n = (t = C(e, u)).next; !(r = s(n, t)).done; ) {
-                if ((o = s((a = (i = C(v(r.value))).next), i)).done || (l = s(a, i)).done || !s(a, i).done)
+            for (n = (t = A(e, u)).next; !(r = s(n, t)).done; ) {
+                if ((o = s((a = (i = A(v(r.value))).next), i)).done || (l = s(a, i)).done || !s(a, i).done)
                     throw new H("Expected sequence with length 2");
                 X(c, {
                     key: I(o.value),
@@ -370,8 +370,8 @@ if (
                         eb((t = e.headers ? new B(e.headers) : new B()), "content-type") ||
                             ey(t, "content-type", "application/x-www-form-urlencoded;charset=UTF-8"),
                         T(e, {
-                            body: A(0, I(n)),
-                            headers: A(0, t),
+                            body: C(0, I(n)),
+                            headers: C(0, t),
                         })
                     );
             }

@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function A(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -99,7 +99,7 @@ let R = 490,
     x = 200,
     L = 120,
     j = i.forwardRef(function (e, t) {
-        var n, a, I, A, P, j, M, k, U;
+        var n, a, I, C, P, j, M, k, U;
         let { channel: G, type: Z, editorHeight: B, onVisibilityChange: F, editorScrollerRef: V, barsHeight: H } = e,
             Y = (0, m.Dt)(),
             W = (0, l.e7)([E.Z], () => {
@@ -107,7 +107,7 @@ let R = 490,
                 return null != (e = E.Z.getGuild(G.guild_id)) ? e : null;
             }, [G.guild_id]),
             K = i.useRef(null),
-            [z, q, Q] = (0, O.Z)(C(T({}, e), { guild: W }), t, K),
+            [z, q, Q] = (0, O.Z)(A(T({}, e), { guild: W }), t, K),
             X = (null == (n = Z.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : h.ZP,
             J = (0, p.DJ)(z.selectedIndex);
         (0, _.KR)(Y, z.isVisible, J);
@@ -173,7 +173,7 @@ let R = 490,
                 : (null == (M = z.query) ? void 0 : M.type) === b.eq.EMOJIS_AND_STICKERS
                   ? D
                   : w);
-        let ea = Math.max(B, null != (k = null == V || null == (A = V.current) ? void 0 : A.clientHeight) ? k : 0),
+        let ea = Math.max(B, null != (k = null == V || null == (C = V.current) ? void 0 : C.clientHeight) ? k : 0),
             eo = Math.min(0.5 * window.innerHeight, ea);
         ei = Math.min(window.innerHeight - L - eo - (null != H ? H : 0), ei);
         let es = (0, r.jsx)(p.ZP, {
@@ -189,7 +189,7 @@ let R = 490,
                             n = N(e, ["ref"]);
                         return (0, r.jsx)(
                             c.h21,
-                            C(
+                            A(
                                 T(
                                     {
                                         id: Y,

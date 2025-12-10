@@ -25,7 +25,7 @@ let f = 200,
             ),
             [v, S] = i.useState(!1),
             [I, T] = i.useState(!1),
-            [A, C] = i.useState(!0),
+            [C, A] = i.useState(!0),
             N = () => {
                 S(g.current > h.current);
             },
@@ -36,7 +36,7 @@ let f = 200,
             }, []),
             R = i.useCallback(() => {
                 let e = w.current;
-                null != e && (T(E.current > 0), C(E.current + e.clientWidth < e.scrollWidth), P());
+                null != e && (T(E.current > 0), A(E.current + e.clientWidth < e.scrollWidth), P());
             }, [P]),
             D = (0, c.y)((e) => {
                 let { contentRect: t } = e;
@@ -147,14 +147,14 @@ let f = 200,
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: o()(d.button, { [d.disabled]: !A && m }),
+                                className: o()(d.button, { [d.disabled]: !C && m }),
                                 children: (0, r.jsx)(l.hU, {
                                     icon: l.d4D,
                                     variant: "overlay-secondary",
                                     onClick: L,
-                                    disabled: !A,
+                                    disabled: !C,
                                     "aria-label": u.intl.string(u.t.H4hwjn),
-                                    "aria-hidden": !A && m,
+                                    "aria-hidden": !C && m,
                                 }),
                             }),
                         ],
@@ -165,8 +165,8 @@ let f = 200,
                     ref: w,
                     className: o()(d.children, {
                         [d.scrollLeft]: I,
-                        [d.scrollRight]: A,
-                        [d.scrollBoth]: I && A,
+                        [d.scrollRight]: C,
+                        [d.scrollBoth]: I && C,
                     }),
                     tabIndex: 0,
                     onFocus: (e) => {

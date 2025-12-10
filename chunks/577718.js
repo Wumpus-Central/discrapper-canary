@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(782959),
     p = n(933104),
     f = n(337721),
-    h = n(921944);
-function g(e) {
+    g = n(921944);
+function h(e) {
     let { renderPopout: t, renderGuildHeaderDropdownButton: n } = e,
         l = i.useRef(null);
     return (0, r.jsx)(a.yRy, {
@@ -34,12 +34,12 @@ function g(e) {
 }
 let m = i.memo(function (e) {
     let { contentTypes: t, guild: n, renderGuildHeaderDropdownButton: i } = e,
-        [a, m] = (0, s.US)(t, h.R.GUILD_HEADER_TOOLTIPS);
+        [a, m] = (0, s.US)(t, g.R.GUILD_HEADER_TOOLTIPS);
     return (0, r.jsx)(r.Fragment, {
         children: (() => {
             switch (a) {
                 case l.z.GUILD_POWERUP_PERKS_COACHMARK:
-                    return (0, r.jsx)(g, {
+                    return (0, r.jsx)(h, {
                         renderPopout: (e) =>
                             (0, r.jsx)(p.$h, {
                                 guildId: n.id,
@@ -49,7 +49,7 @@ let m = i.memo(function (e) {
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
-                    return (0, r.jsx)(g, {
+                    return (0, r.jsx)(h, {
                         renderPopout: (e) =>
                             (0, r.jsx)(o.Z, {
                                 guildId: n.id,
@@ -59,7 +59,7 @@ let m = i.memo(function (e) {
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
-                    return (0, r.jsx)(g, {
+                    return (0, r.jsx)(h, {
                         renderPopout: (e) =>
                             (0, r.jsx)(f.Z, {
                                 guild: n,
@@ -69,7 +69,7 @@ let m = i.memo(function (e) {
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
-                    return (0, r.jsx)(g, {
+                    return (0, r.jsx)(h, {
                         renderPopout: (0, r.jsx)(u.Z, { markAsDismissed: m }),
                         renderGuildHeaderDropdownButton: i,
                     });
@@ -80,7 +80,7 @@ let m = i.memo(function (e) {
                         renderTargetElement: i,
                     });
                 case l.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
-                    return (0, r.jsx)(g, {
+                    return (0, r.jsx)(h, {
                         renderPopout: (e) =>
                             (0, r.jsx)(c.Z, {
                                 guildId: n.id,

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(981631),
     I = n(647086),
     T = n(526761),
-    A = n(726985),
-    C = n(388032),
+    C = n(726985),
+    A = n(388032),
     N = n(455734);
 function P() {
     u.Z.useExperiment({ location: "profile_customization_auto" });
@@ -58,11 +58,11 @@ function P() {
     return (
         w &&
             1 === x.length &&
-            (x.includes(A.s6.PROFILE_SERVER_PROFILES)
+            (x.includes(C.s6.PROFILE_SERVER_PROFILES)
                 ? (L(T.NB.GUILD), (M = !1))
-                : x.includes(A.s6.PROFILE_USER_PROFILE) && (L(T.NB.USER_PROFILE), (j = !1))),
+                : x.includes(C.s6.PROFILE_USER_PROFILE) && (L(T.NB.USER_PROFILE), (j = !1))),
         (0, r.jsxs)(m.N, {
-            header: C.intl.string(C.t["vi7f+q"]),
+            header: A.intl.string(A.t["vi7f+q"]),
             children: [
                 (0, r.jsxs)(l.njP, {
                     className: N.tabBar,
@@ -77,7 +77,7 @@ function P() {
                                   {
                                       className: N.tabBarItem,
                                       id: T.NB.USER_PROFILE,
-                                      children: C.intl.string(C.t["2p07FR"]),
+                                      children: A.intl.string(A.t["2p07FR"]),
                                   },
                                   T.NB.USER_PROFILE,
                               )
@@ -87,9 +87,9 @@ function P() {
                                   l.njP.Item,
                                   {
                                       className: o()(N.tabBarItem, N.guildTabBarItem),
-                                      "aria-label": C.intl.string(C.t.kPHroX),
+                                      "aria-label": A.intl.string(A.t.kPHroX),
                                       id: T.NB.GUILD,
-                                      children: C.intl.string(C.t.kPHroX),
+                                      children: A.intl.string(A.t.kPHroX),
                                   },
                                   T.NB.GUILD,
                               )

@@ -40,7 +40,7 @@ let I = (0, a._I)((e = {}) => {
                                             (!(o = n) && a instanceof Request) || (a instanceof Request && a.bodyUsed)
                                                 ? a
                                                 : new Request(a, o));
-                                    N() && (([e, s] = p("Cookie", E)), ([_, c] = p("Set-Cookie", r)));
+                                    f() && (([e, s] = p("Cookie", E)), ([_, c] = p("Set-Cookie", r)));
                                     let l = A({
                                         url: E.url,
                                         method: E.method,
@@ -67,7 +67,7 @@ let I = (0, a._I)((e = {}) => {
                             !(function (e, t, r, n) {
                                 if (T(e, t.status, t.responseURL)) {
                                     let e, a, o;
-                                    if (N()) {
+                                    if (f()) {
                                         try {
                                             let e =
                                                 t.getResponseHeader("Set-Cookie") ||
@@ -184,7 +184,7 @@ function A(e) {
         r
     );
 }
-function N() {
+function f() {
     let e = (0, o.s3)();
     return !!e && !!e.getOptions().sendDefaultPii;
 }

@@ -4,11 +4,11 @@ n.d(t, {
     Jm: () => T,
     L0: () => P,
     L5: () => S,
-    M$: () => A,
+    M$: () => C,
     WD: () => x,
     bj: () => O,
     g0: () => N,
-    gD: () => C,
+    gD: () => A,
     kJ: () => D,
     l6: () => w,
     pY: () => R,
@@ -59,11 +59,11 @@ function T() {
     let e = (0, i.e7)([p.default], () => p.default.getCurrentUser());
     return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_TEEN;
 }
-function A() {
+function C() {
     let e = p.default.getCurrentUser();
     return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_ADULT;
 }
-function C() {
+function A() {
     let e = (0, i.e7)([p.default], () => p.default.getCurrentUser());
     return (null == e ? void 0 : e.ageVerificationStatus) === o.F$.VERIFIED_ADULT;
 }

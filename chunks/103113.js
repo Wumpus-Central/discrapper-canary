@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(679332),
     I = n(544989),
     T = n(671955),
-    A = n(388032),
-    C = n(116649);
+    C = n(388032),
+    A = n(116649);
 function N(e, t, n) {
     return (
         t in e
@@ -100,7 +100,7 @@ function R(e) {
             Y
                 ? (0, r.jsx)(a.sNh, {
                       id: "view-profile",
-                      label: A.intl.string(A.t["+Xp3hq"]),
+                      label: C.intl.string(C.t["+Xp3hq"]),
                       action: () => {
                           H(),
                               (0, _.pQ)(
@@ -133,7 +133,7 @@ function R(e) {
                     (0, r.jsx)(a.nn4, {
                         children: (0, r.jsx)(a.H, {
                             id: z,
-                            children: A.intl.format(A.t.KRe1Fk, { name: q }),
+                            children: C.intl.format(C.t.KRe1Fk, { name: q }),
                         }),
                     }),
                     (0, r.jsxs)(O.Z, {
@@ -148,7 +148,7 @@ function R(e) {
                                 }),
                             }),
                             (0, r.jsxs)("div", {
-                                className: C.header,
+                                className: A.header,
                                 children: [
                                     (0, r.jsx)(b.Z, {
                                         user: n,
@@ -168,7 +168,7 @@ function R(e) {
                             }),
                             (0, r.jsxs)(a.Ttm, {
                                 fade: !0,
-                                className: C.body,
+                                className: A.body,
                                 children: [
                                     (0, r.jsx)(v.Z, {
                                         user: n,
@@ -189,7 +189,7 @@ function R(e) {
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)("div", { className: C.footer }),
+                            (0, r.jsx)("div", { className: A.footer }),
                         ],
                     }),
                     (null == G ? void 0 : G.profileEffect) != null &&

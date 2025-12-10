@@ -187,7 +187,7 @@ function c(e) {
                 subLanguage: "css",
             },
         },
-        A = {
+        C = {
             begin: ".?gql`",
             end: "",
             starts: {
@@ -197,7 +197,7 @@ function c(e) {
                 subLanguage: "graphql",
             },
         },
-        C = {
+        A = {
             className: "string",
             begin: "`",
             end: "`",
@@ -243,7 +243,7 @@ function c(e) {
                 e.C_LINE_COMMENT_MODE,
             ],
         },
-        P = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, I, T, A, C, { match: /\$\d+/ }, v];
+        P = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, I, T, C, A, { match: /\$\d+/ }, v];
     S.contains = P.concat({
         begin: /\{/,
         end: /\}/,
@@ -383,8 +383,8 @@ function c(e) {
             e.QUOTE_STRING_MODE,
             I,
             T,
-            A,
             C,
+            A,
             N,
             { match: /\$\d+/ },
             v,

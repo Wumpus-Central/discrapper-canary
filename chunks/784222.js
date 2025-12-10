@@ -30,8 +30,8 @@ var r = n(473749),
     S = n(267642),
     I = n(111361),
     T = n(392552),
-    A = n(543241),
-    C = n(304852),
+    C = n(543241),
+    A = n(304852),
     N = n(199257),
     P = n(149203),
     R = n(185923),
@@ -118,9 +118,9 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
             V = (0, s.e7)([E.Z], () => E.Z.getGuild(null == n ? void 0 : n.getGuildId()), [n]),
             H = null != (t = null == n ? void 0 : n.getGuildId()) ? t : i,
             Y = (0, s.e7)([c.ZP], () => c.ZP.getDisambiguatedEmojiContext(H), [H]),
-            W = (0, A.NJ)(H),
-            K = (0, A.wC)(H),
-            z = (0, A.q5)(H),
+            W = (0, C.NJ)(H),
+            K = (0, C.wC)(H),
+            z = (0, C.q5)(H),
             { topEmojis: q, newlyAddedEmojis: Q } = (0, N.Z)(H, p),
             X = (0, s.Wu)([y.ZP], () => y.ZP.getFlattenedGuildIds(), []),
             J = (0, s.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
@@ -165,10 +165,10 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                             y = g.concat(E),
                             O = d.guild,
                             I = b.Z.getGuildId(),
-                            C = d.sectionId === P.En.TOP_GUILD_EMOJI,
-                            N = !C && null != O && I === O.id && y.length < (0, S.y4)(O),
-                            R = C && y.length < u && !eo,
-                            w = null != O && C && eo && es === T.B.WITH_TOP_LIST && ea[O.id].length < (0, S.y4)(O),
+                            A = d.sectionId === P.En.TOP_GUILD_EMOJI,
+                            N = !A && null != O && I === O.id && y.length < (0, S.y4)(O),
+                            R = A && y.length < u && !eo,
+                            w = null != O && A && eo && es === T.B.WITH_TOP_LIST && ea[O.id].length < (0, S.y4)(O),
                             L = f && $ && null != O && (N || R || w);
                         L && w && y.length === u && y.shift();
                         let M = y.length > _ && null != O && d.isNitroLocked,
@@ -197,7 +197,7 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                                         category: d.type,
                                         subCategory:
                                             d.sectionId === P.En.TOP_GUILD_EMOJI
-                                                ? (0, A.IP)(
+                                                ? (0, C.IP)(
                                                       q,
                                                       Q,
                                                       null != (i = null != (r = e.id) ? r : e.uniqueName) ? i : e.name,
@@ -331,7 +331,7 @@ let k = [R.Z5.DISALLOW_EXTERNAL, R.Z5.DISALLOW_CUSTOM],
                                 for (let e of X) (null == V || V.id !== e) && t(e);
                         } else if (e === P.UX.TOP_GUILD_EMOJI) {
                             if (null != V) {
-                                let { allEmojis: t } = (0, C.J)({
+                                let { allEmojis: t } = (0, A.J)({
                                     topEmojis: q,
                                     newlyAddedEmojis: Q,
                                 });

@@ -70,8 +70,8 @@ let p = "mp4",
     S = "downsized_small.mp4",
     I = "original.mp4",
     T = h,
-    A = M(T) ? a.EO.VIDEO : a.EO.IMAGE,
-    C = null,
+    C = M(T) ? a.EO.VIDEO : a.EO.IMAGE,
+    A = null,
     N = "",
     P = "",
     R = [],
@@ -79,7 +79,7 @@ let p = "mp4",
     w = [],
     x = [];
 function L(e) {
-    C = e.analyticsID;
+    A = e.analyticsID;
 }
 function j(e) {
     "" === (N = e.query) && ((P = ""), (R = []), (w = []));
@@ -118,7 +118,7 @@ function U(e) {
                 gifSrc: k(i),
                 url: a,
                 id: o,
-                format: A,
+                format: C,
             };
         }));
 }
@@ -136,7 +136,7 @@ function Z(e) {
                       type: s.wI2.TRENDING_GIFS,
                       name: l.intl.string(l.t.H6zNFz),
                       src: k(e.trendingGIFPreview.src),
-                      format: A,
+                      format: C,
                   },
               ]
             : []),
@@ -144,7 +144,7 @@ function Z(e) {
             f(u({}, e), {
                 src: k(e.src),
                 type: s.wI2.TRENDING_CATEGORY,
-                format: A,
+                format: C,
             }),
         ),
     ];
@@ -159,7 +159,7 @@ function F(e) {
 }
 class V extends (r = i.ZP.Store) {
     getAnalyticsID() {
-        return C;
+        return A;
     }
     getQuery() {
         return N;

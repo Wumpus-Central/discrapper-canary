@@ -6,10 +6,10 @@ n.d(t, {
     Tj: () => c,
     XN: () => b,
     _H: () => _,
-    c0: () => A,
+    c0: () => C,
     fD: () => v,
     kD: () => T,
-    pt: () => C,
+    pt: () => A,
     rn: () => p,
     rv: () => m,
     zp: () => d,
@@ -144,14 +144,14 @@ function T(e) {
     for (var i = 0; i < t.length; i++) r[i] = t.charCodeAt(i);
     return new Blob([r], { type: n });
 }
-async function A(e) {
+async function C(e) {
     var t;
     if ("image/png" !== (null == (t = e.type) ? void 0 : t.split(";")[0])) throw Error("File is not a PNG");
     let n = await e.text(),
         r = n.indexOf("IDAT");
     return !!(r > 0) && -1 !== n.substring(0, r).indexOf("acTL");
 }
-function C(e) {
+function A(e) {
     return new Promise((t, n) => {
         let r = new Image();
         r.addEventListener("load", t), r.addEventListener("error", n), (r.src = e);

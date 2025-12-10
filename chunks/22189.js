@@ -25,8 +25,8 @@ var r = n(54381),
     S = n(131951),
     I = n(594174),
     T = n(78839),
-    A = n(424218),
-    C = n(63063),
+    C = n(424218),
+    A = n(63063),
     N = n(74538),
     P = n(469165),
     R = n(554930),
@@ -111,7 +111,7 @@ var r = n(54381),
 let ey = () => {
     let { analyticsLocations: e } = (0, c.ZP)(l.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, s.ZP)(),
-        n = (0, A.BU)(j.Uq / 1024, { useKibibytes: !0 }),
+        n = (0, C.BU)(j.Uq / 1024, { useKibibytes: !0 }),
         eb = (0, a.e7)([T.Z], () => T.Z.getPremiumTypeSubscription()),
         ey = null != eb ? N.ZP.getPremiumPlanItem(eb) : null,
         eO = (null != ey ? N.ZP.getSkuIdForPlan(ey.planId) : null) === j.Si.TIER_2,
@@ -119,8 +119,8 @@ let ey = () => {
         eS = (0, N.I5)(ev, j.PremiumTypes.TIER_2),
         eI = (0, N.I5)(ev, j.PremiumTypes.TIER_0),
         eT = (0, d.Z)(S.Z),
-        { isFractionalPremiumActive: eA } = (0, u.Z)(),
-        eC = null != eb && eb.hasPremiumAtLeast(j.PremiumTypes.TIER_2),
+        { isFractionalPremiumActive: eC } = (0, u.Z)(),
+        eA = null != eb && eb.hasPremiumAtLeast(j.PremiumTypes.TIER_2),
         eN = (0, p.Nj)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
         eP = _.JH.useExperiment({ location: "usePremiumPerksCards" }).enabled,
         eR = (0, h.Z)({
@@ -160,7 +160,7 @@ let ey = () => {
             });
         },
         ek = () => {
-            window.open(C.Z.getArticleURL(M.BhN.CLIPS), "_blank");
+            window.open(A.Z.getArticleURL(M.BhN.CLIPS), "_blank");
         },
         eU = () => {
             eN || (0, p.Q3)(o.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: k.L.TAKE_ACTION }), eR();
@@ -294,12 +294,12 @@ let ey = () => {
                 name: "serverBoosts",
                 title: B.intl.string(B.t["NyDu/6"]),
                 subtitle: B.intl.string(B.t["4pEwXL"]),
-                description: eA ? "" : B.intl.string(B.t.jsyNHm),
+                description: eC ? "" : B.intl.string(B.t.jsyNHm),
                 descriptionCta: B.intl.string(B.t.jVcuVY),
-                onCtaClick: eA ? void 0 : ew,
+                onCtaClick: eC ? void 0 : ew,
                 perkImage: Q,
-                hideOnNarrowScreen: !eA,
-                imageOverlayText: eA ? B.intl.string(B.t["/VzCKE"]).toLocaleUpperCase() : void 0,
+                hideOnNarrowScreen: !eC,
+                imageOverlayText: eC ? B.intl.string(B.t["/VzCKE"]).toLocaleUpperCase() : void 0,
             },
             greyServerBoosts: {
                 name: "greyServerBoosts",
@@ -423,7 +423,7 @@ let ey = () => {
                 title: B.intl.string(B.t.tPY4o9),
                 subtitle: B.intl.string(B.t.JY0grC),
                 description: B.intl.format(B.t["2JqTF6"], {
-                    helpdeskArticle: C.Z.getArticleURL(M.BhN.REFERRAL_PROGRAM),
+                    helpdeskArticle: A.Z.getArticleURL(M.BhN.REFERRAL_PROGRAM),
                 }),
                 descriptionCta: B.intl.string(B.t.JST6jl),
                 isPremiumGetCta: !eO || void 0,
@@ -442,7 +442,7 @@ let ey = () => {
                 name: "permadecos",
                 title: B.intl.string(B.t["57ngoo"]),
                 subtitle: B.intl.string(B.t.piFFjd),
-                description: B.intl.format(B.t.Pd7olh, { learnMoreLink: C.Z.getArticleURL(M.BhN.PERMADECOS) }),
+                description: B.intl.format(B.t.Pd7olh, { learnMoreLink: A.Z.getArticleURL(M.BhN.PERMADECOS) }),
                 descriptionCta: eS ? B.intl.string(B.t.jVcuVY) : B.intl.string(B.t.JST6jl),
                 isPremiumGetCta: !eS,
                 onCtaClick: eS ? eU : void 0,
@@ -492,7 +492,7 @@ let ey = () => {
         };
     return (
         eS &&
-            eC &&
+            eA &&
             (eH.tenureBadge = {
                 name: "tenureBadge",
                 title: B.intl.string(B.t.rnsqpa),

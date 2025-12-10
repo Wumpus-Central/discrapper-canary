@@ -2,7 +2,7 @@ n.d(t, {
     Hg: () => T,
     KC: () => g,
     QX: () => N,
-    TD: () => C,
+    TD: () => A,
     Xf: () => O,
     Y4: () => y,
     _w: () => E,
@@ -96,7 +96,7 @@ function T(e) {
 s.default.addChangeListener(() => {
     p = Object.create(null);
 });
-let A = [
+let C = [
     {
         key: "days",
         millisecondsInUnit: 86400000,
@@ -114,7 +114,7 @@ let A = [
         millisecondsInUnit: 1000,
     },
 ];
-function C(e, t) {
+function A(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = {
             days: 0,
@@ -125,7 +125,7 @@ function C(e, t) {
     if (e > t || (n && Number(e) + 1200 > Number(t))) return r;
     let i = Number(t) - Number(e);
     return (
-        A.forEach((e) => {
+        C.forEach((e) => {
             let { key: t, millisecondsInUnit: n } = e;
             (r[t] = Math.floor(i / n)), (i -= r[t] * n);
         }),

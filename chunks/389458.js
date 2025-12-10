@@ -74,13 +74,13 @@ function T() {
         t = (0, c.kB)("WordFrequencyStore", { autoTrackExposure: !1 }).enabled;
     return e || t;
 }
-function A() {
+function C() {
     return (
         !!s.Z.hasLoadedExperiments &&
         u.V.getCurrentConfig({ location: "WordFrequencyStore" }, { autoTrackExposure: !1 }).resetDataIfUnused
     );
 }
-let C = () => {
+let A = () => {
     (r = void 0), g.clear(), (E = 0);
 };
 function N(e) {
@@ -89,7 +89,7 @@ function N(e) {
               I(e);
           }),
           !1)
-        : !!A() && g.size > 0 && (C(), !0);
+        : !!C() && g.size > 0 && (A(), !0);
 }
 let P = (e) => {
         let { messages: t } = e;
@@ -138,6 +138,6 @@ d(D, "displayName", "WordFrequencyStore"), d(D, "persistKey", "WordFrequencyStor
 let w = new D(o.Z, {
         LOAD_MESSAGES_SUCCESS: P,
         MESSAGE_CREATE: R,
-        DEV_TOOLS_WORD_FREQUENCY_RESET: C,
+        DEV_TOOLS_WORD_FREQUENCY_RESET: A,
     }),
     x = w;

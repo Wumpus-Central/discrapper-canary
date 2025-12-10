@@ -61,13 +61,13 @@ let v = {
             routeDirectlyToChannel: S = !1,
             bypassChangeModal: I,
             bypassBlockedWarningModal: T,
-            bypassGuildIdCheck: A = !1,
+            bypassGuildIdCheck: C = !1,
         } = e;
         t.isThread() &&
             (await d.Z.unarchiveThreadIfNecessary(t.id),
             u.Z.hasJoined(t.id) || (await d.Z.joinThread(t, "Join Voice")));
-        let C = o.default.getRemoteSessionId(),
-            N = _.Z.getVoiceStateForSession(f.default.getId(), C),
+        let A = o.default.getRemoteSessionId(),
+            N = _.Z.getVoiceStateForSession(f.default.getId(), A),
             P =
                 (null == N ? void 0 : N.channelId) === t.id ||
                 p.Z.getChannelId() === _.Z.getCurrentClientVoiceChannelId(t.guild_id),
@@ -101,7 +101,7 @@ let v = {
                               );
                       });
                   })
-                : (v || s || a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || P || b || S) && O(t, A), !0)
+                : (v || s || a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || P || b || S) && O(t, C), !0)
             : new Promise((e) => {
                   (0, i.ZDy)(
                       async () => {

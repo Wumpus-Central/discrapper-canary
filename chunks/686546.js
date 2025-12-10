@@ -398,7 +398,7 @@ function T(e) {
         ],
     });
 }
-function A(e) {
+function C(e) {
     let t = 48;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -419,7 +419,7 @@ function A(e) {
         ],
     });
 }
-function C(e) {
+function A(e) {
     let t = e.size,
         n = e.size / (s.z3 + s.o),
         r = n * s.z3,
@@ -468,7 +468,7 @@ function N(e) {
     });
 }
 function P(e, t) {
-    let n = C((0, c.UC)(t));
+    let n = A((0, c.UC)(t));
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -478,7 +478,7 @@ function P(e, t) {
 }
 function R(e, t) {
     let n = (0, c.UC)(t),
-        i = C(n),
+        i = A(n),
         a = i.totalSize,
         o = n.status / 2;
     return (0, r.jsxs)("mask", {
@@ -498,7 +498,7 @@ function R(e, t) {
 }
 function D(e, t) {
     let n = (0, c.UC)(t),
-        i = C(n),
+        i = A(n),
         a = i.totalSize,
         o = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
         l = n.size - n.status - o - n.offset,
@@ -1208,7 +1208,7 @@ let el = es,
                     w("svg-mask-squircle"),
                     I("svg-mask-header-bar-badge-top", 0.25),
                     I("svg-mask-header-bar-badge-bottom", 0.75),
-                    A("svg-mask-voice-user-summary-item"),
+                    C("svg-mask-voice-user-summary-item"),
                     x("svg-mask-vertical-fade"),
                     T("svg-mask-panel-button"),
                     v("svg-mask-channel-call-control-button"),

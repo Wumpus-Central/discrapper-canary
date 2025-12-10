@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(361932), n(187205);
+n.d(t, { Z: () => C }), n(361932), n(187205);
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -71,7 +71,7 @@ function I(e) {
     });
 }
 let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.string(m.t["t9uG/o"])),
-    A = function (e) {
+    C = function (e) {
         var t, n, i;
         let {
                 hideCloseButton: u = !1,
@@ -81,13 +81,13 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                 isEligibleForTrial: E = !1,
                 showTrialBadge: b = !1,
                 showDiscountBadge: y = !1,
-                isPremiumGroupPurchase: A = !1,
+                isPremiumGroupPurchase: C = !1,
             } = e,
-            C = g === p.PremiumTypes.TIER_2,
+            A = g === p.PremiumTypes.TIER_2,
             N = (0, c.Fv)(E),
             P = (0, d.N)(),
             R = null == P || null == (t = P.discount) ? void 0 : t.amount,
-            D = C ? v : O,
+            D = A ? v : O,
             {
                 step: w,
                 breadcrumbs: x,
@@ -108,7 +108,7 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
         });
         if (0 === M.length) return null;
         let k = (M = M.filter((e) => {
-                if (A && e.id === l.h8.PLAN_SELECT) return !1;
+                if (C && e.id === l.h8.PLAN_SELECT) return !1;
                 let t = e.id !== l.h8.ADD_PAYMENT_STEPS,
                     n = e.id === l.h8.ADD_PAYMENT_STEPS && !L.current;
                 return !E || (E && (t || n));
@@ -121,8 +121,8 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                       : k.label,
             G = null != U && null != w,
             Z = N && G && w === l.h8.REVIEW,
-            B = C ? "nitro-pink" : "nitro-green",
-            F = T(C, A);
+            B = A ? "nitro-pink" : "nitro-green",
+            F = T(A, C);
         return j
             ? (0, r.jsx)("div", {
                   className: h.container,
@@ -138,7 +138,7 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                           color: B,
                           className: a()(h.headerContainer, { [h.containerBottomPadding]: !G }),
                           children: [
-                              (0, r.jsx)(I, { isTier2: C }),
+                              (0, r.jsx)(I, { isTier2: A }),
                               !u &&
                                   (0, r.jsx)(o.olH, {
                                       "data-migration-pending": !0,
@@ -154,7 +154,7 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                               (0, r.jsxs)("div", {
                                   className: h.textContainer,
                                   children: [
-                                      A &&
+                                      C &&
                                           (0, r.jsx)("div", {
                                               className: h.betaBadgeContainer,
                                               children: (0, r.jsx)(o.Cts, {

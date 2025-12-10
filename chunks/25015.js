@@ -25,8 +25,8 @@ function h(e, t) {
             previewLinkTarget: I = !1,
             viewingChannelId: T,
         } = t,
-        A = a.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
-        C = (0, d.o)({ location: "useMessageRenderedContent" }),
+        C = a.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
+        A = (0, d.o)({ location: "useMessageRenderedContent" }),
         [N, P] = i.useState(!1),
         R = i.useCallback((e) => {
             e && P(!0);
@@ -52,7 +52,7 @@ function h(e, t) {
                     },
                 });
             }
-            return C.enabled
+            return A.enabled
                 ? {
                       content: (0, r.jsx)(i.Suspense, {
                           children: (0, r.jsx)(u.v.Provider, {
@@ -80,7 +80,7 @@ function h(e, t) {
                       allowDevLinks: S,
                       previewLinkTarget: I,
                       viewingChannelId: T,
-                      allowGameMentions: A,
+                      allowGameMentions: C,
                   });
         }, [
             e.content,
@@ -99,8 +99,8 @@ function h(e, t) {
             I,
             S,
             T,
-            C.enabled,
-            A,
+            A.enabled,
+            C,
             N,
         ])
     );

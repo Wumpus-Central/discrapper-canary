@@ -62,11 +62,11 @@ function T(e) {
     if (null != f[t] && null != f[t][n]) return !1;
     null == p[t] && (p[t] = {}), (p[t][n] = u.LU.LOADED_FAILURE);
 }
-function A(e) {
+function C(e) {
     let { id: t } = e;
     m = t;
 }
-function C(e) {
+function A(e) {
     let { changelogDate: t } = e;
     (b = new Date(t)), a.K.set(g, t);
 }
@@ -129,6 +129,6 @@ let R = new P(o.Z, {
     CHANGE_LOG_SET_CONFIG: S,
     CHANGE_LOG_FETCH_SUCCESS: I,
     CHANGE_LOG_FETCH_FAILED: T,
-    CHANGE_LOG_SET_OVERRIDE: A,
-    CHANGE_LOG_MARK_SEEN: C,
+    CHANGE_LOG_SET_OVERRIDE: C,
+    CHANGE_LOG_MARK_SEEN: A,
 });

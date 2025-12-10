@@ -23,12 +23,12 @@ var r = n(48657),
                     S = r(m, h),
                     I = 0,
                     T = g || l,
-                    A = t ? T(_, v) : n || f ? T(_, 0) : void 0;
+                    C = t ? T(_, v) : n || f ? T(_, 0) : void 0;
                 v > I;
                 I++
             )
                 if ((p || I in O) && ((b = S((E = O[I]), I, y)), e))
-                    if (t) A[I] = b;
+                    if (t) C[I] = b;
                     else if (b)
                         switch (e) {
                             case 3:
@@ -38,16 +38,16 @@ var r = n(48657),
                             case 6:
                                 return I;
                             case 2:
-                                c(A, E);
+                                c(C, E);
                         }
                     else
                         switch (e) {
                             case 4:
                                 return !1;
                             case 7:
-                                c(A, E);
+                                c(C, E);
                         }
-            return d ? -1 : i || u ? u : A;
+            return d ? -1 : i || u ? u : C;
         };
     };
 e.exports = {

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(639119),
     I = n(736519),
     T = n(784238),
-    A = n(230916),
-    C = n(346497),
+    C = n(230916),
+    A = n(346497),
     N = n(382791),
     P = n(21023),
     R = n(474936),
@@ -86,7 +86,7 @@ function Z(e, t) {
     );
 }
 let B = () => {
-        let e = (0, C.W)();
+        let e = (0, A.W)();
         return (0, r.jsx)(N.Cy, {
             text: e,
             className: w.bogoPillWithSparkles,
@@ -182,7 +182,7 @@ let B = () => {
         let n,
             {
                 className: a,
-                hideCTAs: C = !1,
+                hideCTAs: A = !1,
                 headingOverride: x,
                 hidePill: L = !1,
                 selectedPlanColumnClassName: j,
@@ -199,8 +199,8 @@ let B = () => {
             J = null == X || null == (t = X.subscription_trial) ? void 0 : t.sku_id,
             $ = (0, y.rT)(),
             ee = (0, v.N)(),
-            et = null != ee && (0, A.Wp)(ee, R.Si.TIER_2),
-            en = (0, A.Aq)(R.Xh.PREMIUM_MONTH_TIER_2),
+            et = null != ee && (0, C.Wp)(ee, R.Si.TIER_2),
+            en = (0, C.Aq)(R.Xh.PREMIUM_MONTH_TIER_2),
             er = "".concat(en, "/").concat((0, E.eP)(R.rV.MONTH)),
             ei = (0, E.CY)(R.Xh.PREMIUM_MONTH_TIER_0),
             ea = (0, E.CY)(R.Xh.PREMIUM_MONTH_TIER_2),
@@ -219,7 +219,7 @@ let B = () => {
                 column1: (0, r.jsx)(V, { premiumType: R.PremiumTypes.TIER_0 }),
                 column2: (0, r.jsx)(V, { premiumType: R.PremiumTypes.TIER_2 }),
             };
-        C
+        A
             ? es.push({
                   label: null,
                   column1: null,

@@ -70,7 +70,7 @@ function I(e, t) {
     );
 }
 let T = (0, g.F)();
-async function A(e) {
+async function C(e) {
     return (
         await o.tn.post({
             url: E.ANM.ORDER_SIGN(e),
@@ -78,7 +78,7 @@ async function A(e) {
         })
     ).body;
 }
-async function C(e) {
+async function A(e) {
     return (
         await o.tn.get({
             url: E.ANM.ORDER_UPDATE(e),
@@ -129,7 +129,7 @@ function P(e, t, n, r) {
             let e = Date.now() - u;
             if (e >= c) {
                 try {
-                    let e = await C(t);
+                    let e = await A(t);
                     _(e.status);
                 } catch (r) {
                     let e = r instanceof Error ? r.message : String(r);
@@ -138,7 +138,7 @@ function P(e, t, n, r) {
                 return;
             }
             try {
-                let e = (await C(t)).status;
+                let e = (await A(t)).status;
                 if (2 === e) {
                     n("Order signed successfully!\nOrder ID: ".concat(t, "\nPayment redirect completed.")),
                         r(null),
@@ -191,7 +191,7 @@ function D() {
         [n, o] = i.useState(!1),
         [f, m] = i.useState(null),
         [g, O] = i.useState(null),
-        [S, C] = i.useState(T.defaultValue),
+        [S, A] = i.useState(T.defaultValue),
         [D, w] = i.useState(null),
         x = (0, a.e7)([_.Z], () => _.Z.paymentSources),
         L = (0, a.e7)([_.Z], () => _.Z.hasFetchedPaymentSources),
@@ -250,7 +250,7 @@ function D() {
         }),
         G = (0, s.nV)({
             value: S,
-            onChange: C,
+            onChange: A,
         }),
         Z = async () => {
             if (null == D || "" === D) return void m("Please select a payment source first.");
@@ -281,7 +281,7 @@ function D() {
             if (null == g || "" === g) return void m("No order ID available. Please create an order first.");
             o(!0);
             try {
-                let e = await A(g);
+                let e = await C(g);
                 if (null == e.errors) {
                     m("Order signed successfully! Order ID: ".concat(g)), O(null);
                     return;

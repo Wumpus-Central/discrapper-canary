@@ -70,11 +70,11 @@ function T(e, t) {
         e
     );
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -82,7 +82,7 @@ function A(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -372,7 +372,7 @@ class N extends i.PureComponent {
                 renderExtraElement: E,
                 renderExtraLeaf: b,
             } = e,
-            v = A(e, [
+            v = C(e, [
                 "editor",
                 "className",
                 "containerClassName",

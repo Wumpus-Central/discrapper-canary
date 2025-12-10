@@ -24,19 +24,19 @@ function v(e) {
         { analyticsLocations: S } = (0, c.ZP)(),
         I = (0, _.W)(t),
         T = (0, u.ZP)(t, !0),
-        A = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
-        C = i.useMemo(
-            () => (null == A || "" === A ? null : p.Z.parseVoiceChannelStatus(A, !0, { channelId: t.id })),
-            [A, t.id],
+        C = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
+        A = i.useMemo(
+            () => (null == C || "" === C ? null : p.Z.parseVoiceChannelStatus(C, !0, { channelId: t.id })),
+            [C, t.id],
         );
     i.useEffect(() => {
-        null != C &&
+        null != A &&
             m.default.track(E.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                 channel_id: t.id,
                 guild_id: t.guild_id,
                 location_stack: S,
             });
-    }, [C, t.id, t.guild_id, S]);
+    }, [A, t.id, t.guild_id, S]);
     let N = (e) => {
         e.stopPropagation(),
             n({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
@@ -52,7 +52,7 @@ function v(e) {
               onClick: N,
               children: [
                   (0, r.jsx)(g.Z, {
-                      text: null != C ? C : y.intl.string(y.t.Mgpxiw),
+                      text: null != A ? A : y.intl.string(y.t.Mgpxiw),
                       variant: "text-xs/normal",
                       color: "text-subtle",
                       className: O.text,
@@ -60,14 +60,14 @@ function v(e) {
                   (0, r.jsx)(l.vdY, {
                       color: "currentColor",
                       size: "xxs",
-                      className: o()(O.pencilIcon, null != C ? O.hidden : void 0),
+                      className: o()(O.pencilIcon, null != A ? O.hidden : void 0),
                       "aria-label": y.intl.string(y.t.bt75uw),
                   }),
               ],
           })
-        : null != C
+        : null != A
           ? (0, r.jsx)(g.Z, {
-                text: C,
+                text: A,
                 variant: "text-xs/normal",
                 color: "text-subtle",
                 className: O.text,

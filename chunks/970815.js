@@ -63,24 +63,24 @@ let m = () =>
                 className: S,
             } = e,
             [I, T] = (0, i.useState)(!1),
-            A = (0, i.useMemo)(() => g(p, I), [p, I]),
-            [C, N] = (0, i.useState)(!1),
+            C = (0, i.useMemo)(() => g(p, I), [p, I]),
+            [A, N] = (0, i.useState)(!1),
             [P, R] = (0, i.useState)(!1),
             [D, w] = (0, i.useState)(0.9 * l.D2),
             x = null === a;
         (0, i.useEffect)(() => {
             x &&
-                !C &&
+                !A &&
                 (N(!0),
                 setTimeout(() => {
                     R(!0);
                 }, 500));
-        }, [x, N, C]),
+        }, [x, N, A]),
             (0, i.useEffect)(() => {
                 P && !x && N(!1);
             }, [x, P]);
-        let L = x || C,
-            j = C ? null : a,
+        let L = x || A,
+            j = A ? null : a,
             [M, k] = (0, i.useState)(null),
             U = (0, i.useRef)(null),
             G = (0, i.useCallback)(() => {
@@ -107,7 +107,7 @@ let m = () =>
                 onMouseEnter: O ? void 0 : () => T(!0),
                 onMouseLeave: O ? void 0 : () => T(!1),
                 ref: t,
-                className: o()(f.container, A, S, {
+                className: o()(f.container, C, S, {
                     [f.containerLoading]: L,
                     [f.inModalOverlay]: v,
                     [f.disabled]: O,

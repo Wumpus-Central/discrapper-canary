@@ -85,16 +85,16 @@ function O(e) {
     if (c && u) return null;
     let { text: S, tooltip: I } = (0, f.Z)(t, E || b),
         T = y(t),
-        A = u && !h && null != I;
+        C = u && !h && null != I;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !c &&
                 null != T &&
                 (0, r.jsx)(_.Z, {
                     icon: T,
-                    tooltipText: A ? I : void 0,
+                    tooltipText: C ? I : void 0,
                     className: o,
-                    onTooltipShow: A ? v : void 0,
+                    onTooltipShow: C ? v : void 0,
                 }),
             !u &&
                 (0, r.jsx)(m.Z, {

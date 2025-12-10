@@ -2,11 +2,11 @@ n.d(e, { r: () => c });
 var i = n(846027),
     l = n(100527),
     s = n(509613),
-    r = n(131951),
-    u = n(313789),
+    u = n(131951),
+    r = n(313789),
     a = n(65154),
     o = n(388032);
-let c = (0, s.UO)(u.n.STREAMING_STREAM_ATTENUATION_STRENGTH, {
+let c = (0, s.UO)(r.n.STREAMING_STREAM_ATTENUATION_STRENGTH, {
     useTitle: () => o.intl.string(o.t.fhEzfj),
     setValue: function (t) {
         let e = [l.Z.USER_SETTINGS_VOICE_AND_VIDEO];
@@ -14,8 +14,8 @@ let c = (0, s.UO)(u.n.STREAMING_STREAM_ATTENUATION_STRENGTH, {
     },
     minValue: 1,
     maxValue: 100,
-    getInitialValue: r.Z.getSidechainCompressionStrength,
+    getInitialValue: u.Z.getSidechainCompressionStrength,
     usePredicate: function () {
-        return r.Z.supports(a.AN.SIDECHAIN_COMPRESSION);
+        return u.Z.supports(a.AN.SIDECHAIN_COMPRESSION);
     },
 });

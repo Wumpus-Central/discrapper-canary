@@ -74,10 +74,10 @@ function f(e) {
     l(y, o) || O(o);
     let [v, S] = i.useState(null),
         [I, T] = i.useState(null),
-        A = i.useCallback((e) => {
+        C = i.useCallback((e) => {
             e !== R.current && ((R.current = e), S(e));
         }, []),
-        C = i.useCallback((e) => {
+        A = i.useCallback((e) => {
             e !== D.current && ((D.current = e), T(e));
         }, []),
         N = p || v,
@@ -139,10 +139,10 @@ function f(e) {
             () => ({
                 reference: R,
                 floating: D,
-                setReference: A,
-                setFloating: C,
+                setReference: C,
+                setFloating: A,
             }),
-            [A, C],
+            [C, A],
         ),
         Z = i.useMemo(
             () => ({

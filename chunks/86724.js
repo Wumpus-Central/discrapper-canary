@@ -1,6 +1,6 @@
 n.d(t, {
     L: () => R,
-    Z: () => C,
+    Z: () => A,
 }),
     n(388685),
     n(781311),
@@ -33,8 +33,8 @@ var r = n(373793),
     S = n(761652);
 let I = new Set(["applicationCommandOption"]),
     T = new Set([i.jw.ATTACHMENT]),
-    A = new Set(["line", "applicationCommand"]);
-function C(e, t, n, r) {
+    C = new Set(["line", "applicationCommand"]);
+function A(e, t, n, r) {
     let {
         insertData: i,
         isInline: d,
@@ -194,7 +194,7 @@ function N(e) {
             );
         let e = y.bN.richValue(i)[0],
             t = e.children[0];
-        if (A.has(e.type) && y.LC.isText(t)) {
+        if (C.has(e.type) && y.LC.isText(t)) {
             let e = M(t.text, s);
             if (null != e)
                 return (
@@ -254,7 +254,7 @@ function P(e, t, n) {
     _.startsWith(m) ? (p = f.substring(m.length).trim()) : _.startsWith(g) && (p = f.substring(g.length).trim());
     let v = [],
         I = null,
-        A = null;
+        C = null;
     if (null != u.options) {
         let e = new Set();
         if (null != d)
@@ -281,7 +281,7 @@ function P(e, t, n) {
                     optionType: r.type,
                     children: [{ text: e }],
                 };
-                v.push(a), 0 === e.length && null == I && (I = a), null == i && (A = a);
+                v.push(a), 0 === e.length && null == I && (I = a), null == i && (C = a);
             }
     }
     (l =
@@ -291,7 +291,7 @@ function P(e, t, n) {
               ? "".concat(S.GI).concat(u.displayName, " ")
               : "".concat(S.GI).concat(u.displayName)),
         v.unshift({ text: l });
-    let C = {
+    let A = {
         type: "applicationCommand",
         children: v,
         command: {
@@ -301,7 +301,7 @@ function P(e, t, n) {
         },
     };
     y.bN.withoutNormalizing(e, () => {
-        for (let [, t] of (b.Q.insertNodes(e, [C], { at: O.YD }), y.bN.blocks(e).reverse()))
+        for (let [, t] of (b.Q.insertNodes(e, [A], { at: O.YD }), y.bN.blocks(e).reverse()))
             y.C0.isAfter(t, O.YD) &&
                 b.Q.removeNodes(e, {
                     at: t,
@@ -312,10 +312,10 @@ function P(e, t, n) {
     return (
         null != I
             ? (b.Q.selectCommandOption(e, I.optionName), (N = I.optionName))
-            : null != A
-              ? (b.Q.selectCommandOption(e, A.optionName, !1), (N = A.optionName))
+            : null != C
+              ? (b.Q.selectCommandOption(e, C.optionName, !1), (N = C.optionName))
               : b.Q.resetSelectionToEditorEnd(e),
-        null == A && w(e, u),
+        null == C && w(e, u),
         N
     );
 }

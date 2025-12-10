@@ -1,5 +1,5 @@
 n.d(t, {
-    G: () => h,
+    G: () => g,
     Z: () => m,
 });
 var r,
@@ -13,8 +13,8 @@ var r,
     d = n(16084),
     p = n(855775),
     f = n(388032),
-    h = (((r = {}).SHORT = "SHORT"), (r.LONG = "LONG"), r);
-class g extends (a = o.PureComponent) {
+    g = (((r = {}).SHORT = "SHORT"), (r.LONG = "LONG"), r);
+class h extends (a = o.PureComponent) {
     getText(e, t) {
         if (429 === e.status)
             switch (t) {
@@ -44,12 +44,12 @@ class g extends (a = o.PureComponent) {
     }
 }
 (l = { messageStyle: "LONG" }),
-    (i = "defaultProps") in g
-        ? Object.defineProperty(g, i, {
+    (i = "defaultProps") in h
+        ? Object.defineProperty(h, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0,
           })
-        : (g[i] = l);
-let m = c.ZP.connectStores([p.Z], () => ({ purchaseError: p.Z.error }))(g);
+        : (h[i] = l);
+let m = c.ZP.connectStores([p.Z], () => ({ purchaseError: p.Z.error }))(h);

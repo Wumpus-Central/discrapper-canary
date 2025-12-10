@@ -76,10 +76,10 @@ let I = (e) => {
             emojiDescriptor: v,
             pickerIntention: I,
             analyticsLocation: T,
-            containerContext: A,
+            containerContext: C,
         } = e,
-        C = (0, a.e7)([f.Z], () => f.Z.theme) === h.BRd.LIGHT ? "light" : "dark",
-        N = "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_".concat(C, ".png"),
+        A = (0, a.e7)([f.Z], () => f.Z.theme) === h.BRd.LIGHT ? "light" : "dark",
+        N = "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_".concat(A, ".png"),
         P = (0, c.Iu)((e) => e.searchQuery),
         { analyticsLocations: R } = (0, l.ZP)(s.Z.EMOJI_PICKER);
     t =
@@ -102,7 +102,7 @@ let I = (e) => {
             j || o.MH();
         }, [j]),
         (0, r.jsx)(d.Z, {
-            containerContext: A,
+            containerContext: C,
             image: {
                 url: N,
                 width: 220,

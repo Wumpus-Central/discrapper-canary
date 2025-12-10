@@ -205,20 +205,20 @@ n.d(t, {
                             },
                             reset: { placement: T }
                         };
-                    let A = I.map(e => {
+                    let C = I.map(e => {
                             let t = (0, r.hp)(e.placement);
                             return [
                                 e.placement,
                                 t && p ? e.overflows.slice(0, 2).reduce((e, t) => e + t, 0) : e.overflows[0],
                                 e.overflows
                             ];
-                        }).sort((e, t) => e[1] - t[1]), C = (null == (a = A.filter(e => e[2].slice(0, (0, r.hp)(e[0]) ? 2 : 3).every(e => e <= 0))[0]) ? void 0 : a[0]) || A[0][0];
-                    return C !== u ? {
+                        }).sort((e, t) => e[1] - t[1]), A = (null == (a = C.filter(e => e[2].slice(0, (0, r.hp)(e[0]) ? 2 : 3).every(e => e <= 0))[0]) ? void 0 : a[0]) || C[0][0];
+                    return A !== u ? {
                         data: {
                             index: y + 1,
                             overflows: I
                         },
-                        reset: { placement: C }
+                        reset: { placement: A }
                     } : {};
                 }
             };
@@ -246,11 +246,11 @@ n.d(t, {
                         } = (0, r.ku)(e, t);
                     if (null != (n = u.arrow) && n.alignmentOffset)
                         return {};
-                    let v = (0, r.k3)(c), S = (0, r.Qq)(f), I = (0, r.k3)(f) === f, T = await (null == p.isRTL ? void 0 : p.isRTL(_.floating)), A = g || (I || !y ? [(0, r.pw)(f)] : (0, r.gy)(f)), C = 'none' !== b;
-                    !g && C && A.push(...(0, r.KX)(f, y, b, T));
+                    let v = (0, r.k3)(c), S = (0, r.Qq)(f), I = (0, r.k3)(f) === f, T = await (null == p.isRTL ? void 0 : p.isRTL(_.floating)), C = g || (I || !y ? [(0, r.pw)(f)] : (0, r.gy)(f)), A = 'none' !== b;
+                    !g && A && C.push(...(0, r.KX)(f, y, b, T));
                     let N = [
                             f,
-                            ...A
+                            ...C
                         ], P = await o(t, O), R = [], D = (null == (i = u.flip) ? void 0 : i.overflows) || [];
                     if (m && R.push(P[v]), h) {
                         let e = (0, r.i8)(c, d, T);
@@ -277,7 +277,7 @@ n.d(t, {
                             switch (E) {
                             case 'bestFit': {
                                     let e = null == (l = D.filter(e => {
-                                        if (C) {
+                                        if (A) {
                                             let t = (0, r.Qq)(e.placement);
                                             return t === S || 'y' === t;
                                         }
@@ -526,18 +526,18 @@ n.d(t, {
                             height: b
                         } = c.floating;
                     'top' === m || 'bottom' === m ? (a = m, s = h === (await (null == u.isRTL ? void 0 : u.isRTL(d.floating)) ? 'start' : 'end') ? 'left' : 'right') : (s = m, a = 'end' === h ? 'top' : 'bottom');
-                    let y = b - _.top - _.bottom, O = E - _.left - _.right, v = (0, r.VV)(b - _[a], y), S = (0, r.VV)(E - _[s], O), I = !t.middlewareData.shift, T = v, A = S;
-                    if (null != (n = t.middlewareData.shift) && n.enabled.x && (A = O), null != (i = t.middlewareData.shift) && i.enabled.y && (T = y), I && !h) {
+                    let y = b - _.top - _.bottom, O = E - _.left - _.right, v = (0, r.VV)(b - _[a], y), S = (0, r.VV)(E - _[s], O), I = !t.middlewareData.shift, T = v, C = S;
+                    if (null != (n = t.middlewareData.shift) && n.enabled.x && (C = O), null != (i = t.middlewareData.shift) && i.enabled.y && (T = y), I && !h) {
                         let e = (0, r.Fp)(_.left, 0), t = (0, r.Fp)(_.right, 0), n = (0, r.Fp)(_.top, 0), i = (0, r.Fp)(_.bottom, 0);
-                        g ? A = E - 2 * (0 !== e || 0 !== t ? e + t : (0, r.Fp)(_.left, _.right)) : T = b - 2 * (0 !== n || 0 !== i ? n + i : (0, r.Fp)(_.top, _.bottom));
+                        g ? C = E - 2 * (0 !== e || 0 !== t ? e + t : (0, r.Fp)(_.left, _.right)) : T = b - 2 * (0 !== n || 0 !== i ? n + i : (0, r.Fp)(_.top, _.bottom));
                     }
                     await f({
                         ...t,
-                        availableWidth: A,
+                        availableWidth: C,
                         availableHeight: T
                     });
-                    let C = await u.getDimensions(d.floating);
-                    return E !== C.width || b !== C.height ? { reset: { rects: !0 } } : {};
+                    let A = await u.getDimensions(d.floating);
+                    return E !== A.width || b !== A.height ? { reset: { rects: !0 } } : {};
                 }
             };
         };

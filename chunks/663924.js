@@ -68,8 +68,8 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let A = { height: g.lv };
-function C(e) {
+let C = { height: g.lv };
+function A(e) {
     var { positionTargetRef: t, align: n } = e,
         i = I(e, ["positionTargetRef", "align"]);
     return (0, r.jsx)("span", {
@@ -88,7 +88,7 @@ function C(e) {
                 return (0, r.jsx)("section", {
                     className: O.positionContainer,
                     role: "dialog",
-                    style: A,
+                    style: C,
                     "aria-label": y.intl.string(y.t["3CNGLK"]),
                     children: t && (0, r.jsx)(P, S({}, i)),
                 });
@@ -153,4 +153,4 @@ function P(e) {
         initHistory: T,
     });
 }
-let R = i.memo(C);
+let R = i.memo(A);

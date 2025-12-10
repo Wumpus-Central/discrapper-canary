@@ -95,15 +95,15 @@ function T(e) {
     let { settings: t } = e;
     a.TO.CAMERA_BACKGROUND_LIVE in t && (h = !0);
 }
-function A() {
+function C() {
     g !== c.Z.getVoiceChannelId() && (E = !1), S() && (E = !0), (g = c.Z.getVoiceChannelId());
 }
-function C() {
+function A() {
     (h = !1), (E = !1), (g = null), (b = {});
 }
 class N extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z, c.Z, s.Z, u.default), this.syncWith([c.Z, l.Z], A);
+        this.waitFor(l.Z, c.Z, s.Z, u.default), this.syncWith([c.Z, l.Z], C);
     }
     get videoFilterAssets() {
         return b;
@@ -122,5 +122,5 @@ let P = new N(o.Z, {
     VIDEO_FILTER_ASSET_DELETE_SUCCESS: v,
     VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: I,
     MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: T,
-    LOGOUT: C,
+    LOGOUT: A,
 });

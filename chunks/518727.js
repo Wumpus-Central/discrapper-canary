@@ -32,17 +32,17 @@ let b = 1000,
                     null == (e = S.current) || e.play();
                 }
             }, [O]),
-            A = (0, i.useCallback)(() => {
+            C = (0, i.useCallback)(() => {
                 if ("exit" !== O && (v("exit"), null != I.current)) {
                     var e;
                     null == (e = I.current) || e.play();
                 }
             }, [O]),
-            [C, N] = (0, i.useState)(!1);
+            [A, N] = (0, i.useState)(!1);
         (0, i.useEffect)(() => {
             b && N(!0);
         }, [b]);
-        let { mediaUrls: P, isSuccess: R } = (0, _.Z)(!y && a && C),
+        let { mediaUrls: P, isSuccess: R } = (0, _.Z)(!y && a && A),
             D = (0, i.useRef)(null),
             [w, x] = (0, i.useState)(!1),
             [L, j] = (0, i.useState)(!1),
@@ -75,7 +75,7 @@ let b = 1000,
             }, [y, a, n, R, U, M]),
             (0, i.useEffect)(() => {
                 function e() {
-                    x(!0), A();
+                    x(!0), C();
                 }
                 return (
                     p.S.subscribe(m.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
@@ -83,7 +83,7 @@ let b = 1000,
                         p.S.unsubscribe(m.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
                     }
                 );
-            }, [A]),
+            }, [C]),
             (0, i.useEffect)(
                 () => () => {
                     c.Z.dispatch({

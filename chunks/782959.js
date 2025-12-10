@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(54381),
     i = n(473749),
     l = n(907862),
@@ -34,13 +34,13 @@ function f(e) {
     }
     return e;
 }
-function h(e) {
-    let { guildId: t, markAsDismissed: h, renderTargetElement: g } = e,
+function g(e) {
+    let { guildId: t, markAsDismissed: g, renderTargetElement: h } = e,
         m = {
             text: p.intl.string(p.t.JzJpg4),
             onClick: () => {
                 o.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, f({}, (0, s.hH)(t))),
-                    h(d.L.PRIMARY),
+                    g(d.L.PRIMARY),
                     (0, a.ZDy)(async () => {
                         let { default: e } = await Promise.all([n.e("29497"), n.e("53781")]).then(n.bind(n, 241865));
                         return (n) => {
@@ -77,7 +77,7 @@ function h(e) {
         children: [
             (0, r.jsx)("div", {
                 ref: _,
-                children: g(),
+                children: h(),
             }),
             (0, r.jsx)(l.Mb, {
                 title: p.intl.string(p.t.fW7UqM),
@@ -91,7 +91,7 @@ function h(e) {
                     text: p.intl.string(p.t.w4DutA),
                 },
                 targetElementRef: _,
-                onRequestClose: () => h(d.L.DISMISS),
+                onRequestClose: () => g(d.L.DISMISS),
             }),
         ],
     });

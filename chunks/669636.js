@@ -3,7 +3,7 @@ var n = r(54381),
     i = r(473749),
     a = r(512722),
     s = r.n(a),
-    l = r(205120),
+    l = r(467721),
     o = r(278074),
     c = r(979554),
     u = r(314794),
@@ -15,7 +15,7 @@ var n = r(54381),
     m = r(594174),
     j = r(508925),
     b = r(616066),
-    y = r(684263),
+    y = r(216541),
     w = r(302800),
     v = r(388032),
     O = r(186175),
@@ -90,7 +90,7 @@ let S = (e) => {
             .with(c.Z.BUNDLE, () =>
                 (0, n.jsx)("div", {
                     className: O.bundlePreview,
-                    children: (0, n.jsx)(y.U, {
+                    children: (0, n.jsx)(y.d, {
                         product: t,
                         user: l,
                         isPurchased: !1,

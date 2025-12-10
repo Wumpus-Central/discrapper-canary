@@ -114,8 +114,8 @@ function b(e) {
             maxLength: S = 999,
             value: I,
             defaultValue: T,
-            minLength: A,
-            error: C,
+            minLength: C,
+            error: A,
             defaultDirty: N = !1,
         } = e,
         P = h(e, [
@@ -154,19 +154,19 @@ function b(e) {
         },
         M = i.useMemo(() => {
             var e, t;
-            return null === C || "" === C
+            return null === A || "" === A
                 ? null
-                : null != C
-                  ? C
+                : null != A
+                  ? A
                   : R
-                    ? null != A && (null != (e = null == I ? void 0 : I.length) ? e : 0) < A
-                        ? u.intl.formatToPlainString(u.t["62rk1K"], { minLength: A })
+                    ? null != C && (null != (e = null == I ? void 0 : I.length) ? e : 0) < C
+                        ? u.intl.formatToPlainString(u.t["62rk1K"], { minLength: C })
                         : null != S && (null != (t = null == I ? void 0 : I.length) ? t : 0) > S
                           ? u.intl.formatToPlainString(u.t.ICT5S6, { maxLength: S })
                           : null
                     : null;
-        }, [C, R, A, S, null == I ? void 0 : I.length]),
-        k = (null != C && "" !== C) || null != M;
+        }, [A, R, C, S, null == I ? void 0 : I.length]),
+        k = (null != A && "" !== A) || null != M;
     return (0, r.jsxs)("div", {
         className: o()(d.inputWrapper, n),
         children: [
@@ -190,7 +190,7 @@ function b(e) {
                                     type: O,
                                     placeholder: v,
                                     maxLength: S,
-                                    minLength: A,
+                                    minLength: C,
                                     value: I,
                                     defaultValue: T,
                                 },

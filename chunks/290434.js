@@ -2,8 +2,8 @@ n.d(e, { R: () => a });
 var i = n(509613),
     l = n(313789),
     s = n(30644),
-    r = n(400639),
-    u = n(50052);
+    u = n(400639),
+    r = n(50052);
 let a = (0, i.k4)(l.n.STREAMER_MODE_CATEGORY, {
-    buildLayout: () => [r.E, s.u, u.Q],
+    buildLayout: () => [u.E, s.u, r.Q],
 });

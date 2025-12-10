@@ -110,10 +110,10 @@ let g = (e) => {
             },
             [O, E],
         ),
-        A = {};
+        C = {};
     return (
         null != d &&
-            (A = {
+            (C = {
                 color: (0, s.Rf)(d),
                 backgroundColor: y ? (0, s.br)(d, 0.3) : (0, s.br)(d, 0.1),
             }),
@@ -128,7 +128,7 @@ let g = (e) => {
                 }),
                 onMouseEnter: I,
                 onMouseLeave: T,
-                style: A,
+                style: C,
                 tabIndex: null != b.onClick ? 0 : -1,
                 children:
                     null != h

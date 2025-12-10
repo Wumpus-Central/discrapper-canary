@@ -22,10 +22,10 @@ function O(e) {
         { invite: n, message: a, currentUserId: O, onTransitionToInviteChannel: v, onAcceptInstantInvite: S } = e,
         I = O === a.author.id,
         T = n.state === E.r2o.ACCEPTING,
-        A = (0, l.e7)([_.Z], () => (null != n.channel ? _.Z.getChannel(n.channel.id) : null), [n]);
-    o()(null == A || A.isPrivate(), "must be a private channel");
-    let { analyticsLocations: C } = (0, d.ZP)(u.Z.INVITE_EMBED),
-        N = null != A,
+        C = (0, l.e7)([_.Z], () => (null != n.channel ? _.Z.getChannel(n.channel.id) : null), [n]);
+    o()(null == C || C.isPrivate(), "must be a private channel");
+    let { analyticsLocations: A } = (0, d.ZP)(u.Z.INVITE_EMBED),
+        N = null != C,
         P = i.useCallback(() => {
             let e = "noop";
             N ? (v(), (e = "transition")) : (S(), (e = "accept")),
@@ -36,21 +36,21 @@ function O(e) {
                         inviter_id: a.author.id,
                         invite_message_id: a.id,
                     },
-                    C,
+                    A,
                 );
-        }, [n, a, C, N, v, S]);
-    if (null == A) {
+        }, [n, a, A, N, v, S]);
+    if (null == C) {
         if (null == n.channel) return (0, r.jsx)(g.Z, {});
-        (A = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
+        (C = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
     } else {
-        t = A.recipients.reduce((e, t) => {
+        t = C.recipients.reduce((e, t) => {
             let n = m.default.getUser(t);
             return null != n && e.push(n), e;
         }, []);
         let e = m.default.getCurrentUser();
         N && null != e && t.push(e);
     }
-    let R = A.name;
+    let R = C.name;
     (null == R || "" === R) &&
         (R =
             t.length > 0
@@ -74,7 +74,7 @@ function O(e) {
                             className: y.headerLine,
                             children: [
                                 (0, r.jsx)(f.Z.Icon, {
-                                    channel: A,
+                                    channel: C,
                                     onClick: N ? P : void 0,
                                 }),
                                 (0, r.jsx)(f.Z.Info, {

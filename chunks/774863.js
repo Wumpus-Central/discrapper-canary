@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i,
     a = n(442837),
     o = n(570140),
@@ -114,7 +114,7 @@ class T extends (i = a.ZP.Store) {
     }
 }
 u(T, "displayName", "FalsePositiveStore");
-let A = new T(o.Z, {
+let C = new T(o.Z, {
     LOGOUT: v,
     CONNECTION_OPEN: S,
     MESSAGE_EXPLICIT_CONTENT_FP_CREATE: y,

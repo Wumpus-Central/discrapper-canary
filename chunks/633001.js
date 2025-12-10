@@ -43,8 +43,8 @@ var a = n(54381),
     H = n(257785),
     W = n(484036),
     z = n(681619),
-    K = n(621060),
-    q = n(981631),
+    q = n(621060),
+    K = n(981631),
     Q = n(757744),
     Y = n(388032),
     X = n(454741),
@@ -93,11 +93,11 @@ function ee(e, t) {
     );
 }
 let et = {
-        [q.Odu.CLICK_ZONE_DEBUG]: (e) =>
+        [K.Odu.CLICK_ZONE_DEBUG]: (e) =>
             ee(
                 $(
                     {
-                        type: q.Odu.CLICK_ZONE_DEBUG,
+                        type: K.Odu.CLICK_ZONE_DEBUG,
                         id: (0, c.Z)(),
                         layoutId: e,
                         anchor: {
@@ -109,15 +109,15 @@ let et = {
                             height: 100,
                         },
                     },
-                    R.Z.getWidgetDefaultSettings(q.Odu.CLICK_ZONE_DEBUG),
+                    R.Z.getWidgetDefaultSettings(K.Odu.CLICK_ZONE_DEBUG),
                 ),
                 { pinned: !0 },
             ),
-        [q.Odu.PERFORMANCE_DEBUG]: (e) =>
+        [K.Odu.PERFORMANCE_DEBUG]: (e) =>
             ee(
                 $(
                     {
-                        type: q.Odu.PERFORMANCE_DEBUG,
+                        type: K.Odu.PERFORMANCE_DEBUG,
                         id: (0, c.Z)(),
                         layoutId: e,
                         anchor: {
@@ -130,7 +130,7 @@ let et = {
                             height: "auto",
                         },
                     },
-                    R.Z.getWidgetDefaultSettings(q.Odu.PERFORMANCE_DEBUG),
+                    R.Z.getWidgetDefaultSettings(K.Odu.PERFORMANCE_DEBUG),
                 ),
                 { pinned: !0 },
             ),
@@ -737,8 +737,8 @@ let ed = r.memo(function (e) {
         },
     ],
     eh = r.memo(function () {
-        let [e, t] = el(q.Odu.CLICK_ZONE_DEBUG),
-            [n, i] = el(q.Odu.PERFORMANCE_DEBUG),
+        let [e, t] = el(K.Odu.CLICK_ZONE_DEBUG),
+            [n, i] = el(K.Odu.PERFORMANCE_DEBUG),
             l = (0, d.e7)([N.Z], () => N.Z.getRenderDebugModes()),
             [s, o] = r.useState({});
         return (
@@ -1090,7 +1090,7 @@ let eC = ["__webpack_require__", "fn"],
         {
             id: "details",
             name: "Details",
-            group: K.v0.NONE,
+            group: q.v0.NONE,
             render: (e) => {
                 var t, n, r, i;
                 let { breadcrumb: s, onClose: c } = e,
@@ -1274,7 +1274,7 @@ function eT() {
         A = r.useCallback((e) => {
             P(e);
         }, []),
-        { renderSelectedTab: D } = (0, K.ZP)({ tabs: eE }, []);
+        { renderSelectedTab: D } = (0, q.ZP)({ tabs: eE }, []);
     (0, I.BO)(S, O, A, eO, [y]);
     let Z = r.useCallback((e) => {
             s(e), f.Z.setModuleLogging(e);

@@ -1,8 +1,8 @@
-n.d(t, { B: () => a });
+n.d(t, { B: () => o });
 var r = n(913527),
     i = n.n(r),
     l = n(388032);
-let a = [
+let o = [
     {
         getDueAt: () => i()().add(30, "minutes").toDate(),
         getLabel: () => l.intl.string(l.t["OV8l/H"]),

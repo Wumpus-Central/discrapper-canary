@@ -66,9 +66,9 @@ let O = function (e, t) {
                 });
             if (!(0, o.Z)(S, m.Z)) return;
         }
-        b && (0, u.eH)(), (0, d.Z)(A, e, O, b);
+        b && (0, u.eH)(), (0, d.Z)(C, e, O, b);
     }
-    function A() {
+    function C() {
         let n = (0, r.Z)();
         a.Z.dispatch({
             type: "VOICE_CHANNEL_SELECT",

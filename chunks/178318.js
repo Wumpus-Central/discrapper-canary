@@ -9,8 +9,8 @@ var l = n(836560),
     d = n(591759),
     p = n(998502),
     f = n(996106),
-    h = n(901077),
-    g = n(76238),
+    g = n(901077),
+    h = n(76238),
     m = n(852926),
     _ = n(186901),
     b = n(981631),
@@ -107,10 +107,10 @@ function j(e, t, n, r) {
         n,
     );
 }
-class P extends g.Z {
+class P extends h.Z {
     send(e) {
         (u.default.isLoggingOverlayEvents || (e.cmd !== b.Etm.OVERLAY && e.evt !== b.zMe.OVERLAY)) &&
-            I.info("Socket Emit: ".concat(this.id), (0, h.Z)(e)),
+            I.info("Socket Emit: ".concat(this.id), (0, g.Z)(e)),
             null != r && "etf" === this.encoding
                 ? this._socket.send(r.pack(e), { binary: !0 })
                 : this._socket.send(JSON.stringify(e));
@@ -126,7 +126,7 @@ class P extends g.Z {
         this._socket = e;
     }
 }
-class x extends g.Z {
+class x extends h.Z {
     send(e) {
         (u.default.isLoggingOverlayEvents || e.cmd !== b.Etm.OVERLAY) && I.info("Socket Emit: ".concat(this.id), e),
             this._sendCallback(e);
@@ -219,7 +219,7 @@ class A extends l.EventEmitter {
             return;
         }
         (u.default.isLoggingOverlayEvents || n.cmd !== b.Etm.OVERLAY) &&
-            I.info("Socket Message: ".concat(e.id), (0, h.Z)(n)),
+            I.info("Socket Message: ".concat(e.id), (0, g.Z)(n)),
             this.emit("request", e, n);
     }
     constructor() {

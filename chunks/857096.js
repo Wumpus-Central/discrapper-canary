@@ -30,11 +30,11 @@ function I(e) {
         I = i === b.U.PIP && !d,
         T = I && null != m.Z.pipVideoWindow && null != m.Z.pipFrameWindow;
     if (null == n || null == u) return null;
-    let A = {
+    let C = {
         instance_id: "example-cl-instance",
         platform: y.S4.DESKTOP,
     };
-    function C(e) {
+    function A(e) {
         let { onActive: t, onForceIdle: i, idle: a } = e;
         return I && null != n
             ? (0, r.jsxs)(r.Fragment, {
@@ -63,7 +63,7 @@ function I(e) {
             : null;
     }
     return (
-        null != n.proxyTicket && (A.discord_proxy_ticket = n.proxyTicket),
+        null != n.proxyTicket && (C.discord_proxy_ticket = n.proxyTicket),
         (0, r.jsx)(_.ZP, {
             timeout: 2000,
             children: (e) => {
@@ -81,7 +81,7 @@ function I(e) {
                     children: [
                         (0, r.jsx)("div", {
                             className: "theme-dark",
-                            children: C({
+                            children: A({
                                 onActive: o,
                                 onForceIdle: f,
                                 idle: i,
@@ -93,7 +93,7 @@ function I(e) {
                                   allowPopups: (0, l.h)(u),
                                   referrerPolicy: "origin",
                                   url: n.url,
-                                  queryParams: A,
+                                  queryParams: C,
                                   className: a()(O.iframe, {
                                       [O.pipModeShort]: I,
                                       [O.pipNonInteractive]: I,

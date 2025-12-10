@@ -131,10 +131,10 @@ function g(e) {
             interactiveLabel: S = !1,
             auxiliaryContentPosition: I = "under-control",
             trailingAuxiliaryContent: T,
-            ref: A,
+            ref: C,
         } = e,
-        C = m(e),
-        { labelId: N, controlId: P, errorMessageId: R, describedById: D, helperTextId: w, descriptionId: x } = C,
+        A = m(e),
+        { labelId: N, controlId: P, errorMessageId: R, describedById: D, helperTextId: w, descriptionId: x } = A,
         L = null == y ? void 0 : y.horizontalControlColumnWidth,
         j = "group" === g || "radiogroup" === g,
         M = j ? "span" : "label",
@@ -192,10 +192,10 @@ function g(e) {
             errorMessageId: R,
         });
     return (0, r.jsx)(d.z.Provider, {
-        value: C,
+        value: A,
         children: (0, r.jsxs)(k, {
             role: g,
-            ref: A,
+            ref: C,
             className: f.container,
             "data-layout": b,
             style: null != L ? { "--custom-field-horizontal-control-width": L } : void 0,
@@ -224,7 +224,7 @@ function g(e) {
                     : null,
                 (0, r.jsxs)("div", {
                     className: f.control,
-                    children: ["function" == typeof p ? p(C) : p, "under-control" === I ? F : null],
+                    children: ["function" == typeof p ? p(A) : p, "under-control" === I ? F : null],
                 }),
             ],
         }),

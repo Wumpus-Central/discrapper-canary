@@ -22,7 +22,7 @@ var r = n(772848),
     S = n(938038),
     I = n(981631),
     T = n(987650);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -95,7 +95,7 @@ class x {
               };
     }
     constructor() {
-        A(this, "actions", {
+        C(this, "actions", {
             [T.bv.Viewed]: 0,
             [T.bv.Clicked]: 0,
         });
@@ -158,15 +158,15 @@ class L {
             .filter((e) => null != e);
     }
     constructor() {
-        A(this, "actionCounters", {
+        C(this, "actionCounters", {
             [T.bv.Viewed]: 0,
             [T.bv.Clicked]: 0,
         }),
-            A(this, "groupCounters", {
+            C(this, "groupCounters", {
                 [T.bv.Viewed]: L.makeEmptyGroupAnalytics(),
                 [T.bv.Clicked]: L.makeEmptyGroupAnalytics(),
             }),
-            A(this, "counters", L.makeCounters());
+            C(this, "counters", L.makeCounters());
     }
 }
 class j {
@@ -204,7 +204,7 @@ class j {
         };
     }
     constructor() {
-        A(this, "types", {
+        C(this, "types", {
             0: j.makeEmptyAnalytics(),
             1: j.makeEmptyAnalytics(),
         });
@@ -257,7 +257,7 @@ class M {
             screentype_fullscreen_duration: i[o.Jx.FULLSCREEN],
             screentype_minimized_duration: i[o.Jx.MINIMIZED],
         };
-        return P(C({}, u), {
+        return P(A({}, u), {
             screentype_global_supported_duration:
                 u.screentype_windowed_duration +
                 u.screentype_maximized_duration +
@@ -274,10 +274,10 @@ class M {
         clearInterval(this.updateScreenInterval);
     }
     constructor(e) {
-        A(this, "game", void 0),
-            A(this, "counters", void 0),
-            A(this, "lastscreenType", void 0),
-            A(this, "updateScreenInterval", void 0),
+        C(this, "game", void 0),
+            C(this, "counters", void 0),
+            C(this, "lastscreenType", void 0),
+            C(this, "updateScreenInterval", void 0),
             (this.game = e),
             (this.counters = {
                 [o.Jx.UNKNOWN]: new i.G9(),
@@ -328,11 +328,11 @@ class U {
         }
         if (null == e) {
             let e = null != t ? p.default.getRenderMethod(t.pid) : null;
-            return C({ original_method: null != e ? e : f.gl.Disabled }, a);
+            return A({ original_method: null != e ? e : f.gl.Disabled }, a);
         }
-        if (null == n) return C({ original_method: e }, a);
+        if (null == n) return A({ original_method: e }, a);
         let s = e !== n.original_method ? e : void 0;
-        return C(P(C({}, n), { any_other_method: null != s ? s : n.any_other_method }), a);
+        return A(P(A({}, n), { any_other_method: null != s ? s : n.any_other_method }), a);
     }
     static getGameName(e) {
         var t, n;
@@ -345,7 +345,7 @@ class U {
     static create(e) {
         let t = U.getGameName(e);
         if (U.ignoreGame(e) || null == t) return null;
-        let n = new U(C({}, e));
+        let n = new U(A({}, e));
         return (
             (n.gameConcurrentGameCount = Object.values(U.gamesByPid).length),
             (U.gamesByPid[e.pid] = n),
@@ -420,9 +420,9 @@ class U {
             S = E.enabledLegacy || E.enabledOOP;
         return {
             usage: P(
-                C(
+                A(
                     P(
-                        C(
+                        A(
                             {
                                 event_uuid: this.uuid,
                                 overlay_usage_stats_version: R,
@@ -525,37 +525,37 @@ class U {
     }
     constructor(e) {
         var t, n;
-        A(this, "game", void 0),
-            A(this, "uuid", void 0),
-            A(this, "overlayStatus", void 0),
-            A(this, "overlayMethod", void 0),
-            A(this, "overlayMethodStats", void 0),
-            A(this, "overlayState", void 0),
-            A(this, "overlayStateRaw", void 0),
-            A(this, "overlayStateReason", void 0),
-            A(this, "overlayStateRawReason", void 0),
-            A(this, "notificationAnalytics", void 0),
-            A(this, "widgetAnalytics", void 0),
-            A(this, "screenAnalytics", void 0),
-            A(this, "uiUnlockedCount", void 0),
-            A(this, "uiLockedCount", void 0),
-            A(this, "gameFocusChangedCount", void 0),
-            A(this, "gameConcurrentGameCount", void 0),
-            A(this, "overlayMessageAckCount", void 0),
-            A(this, "overlayMessageCreateCount", void 0),
-            A(this, "gameTimer", void 0),
-            A(this, "gameFocusedTimer", void 0),
-            A(this, "unlockedTimer", void 0),
-            A(this, "rtcConnectionTimer", void 0),
-            A(this, "desktopFocusedTimer", void 0),
-            A(this, "desktopFocusChangedCount", void 0),
-            A(this, "desktopMessageAckCount", void 0),
-            A(this, "desktopMessageCreateCount", void 0),
-            A(this, "soundboardShownTimer", void 0),
-            A(this, "soundboardShownCount", void 0),
-            A(this, "soundboardKeepOpenCount", void 0),
-            A(this, "muteToggledCount", void 0),
-            A(this, "_successfullyShown", void 0),
+        C(this, "game", void 0),
+            C(this, "uuid", void 0),
+            C(this, "overlayStatus", void 0),
+            C(this, "overlayMethod", void 0),
+            C(this, "overlayMethodStats", void 0),
+            C(this, "overlayState", void 0),
+            C(this, "overlayStateRaw", void 0),
+            C(this, "overlayStateReason", void 0),
+            C(this, "overlayStateRawReason", void 0),
+            C(this, "notificationAnalytics", void 0),
+            C(this, "widgetAnalytics", void 0),
+            C(this, "screenAnalytics", void 0),
+            C(this, "uiUnlockedCount", void 0),
+            C(this, "uiLockedCount", void 0),
+            C(this, "gameFocusChangedCount", void 0),
+            C(this, "gameConcurrentGameCount", void 0),
+            C(this, "overlayMessageAckCount", void 0),
+            C(this, "overlayMessageCreateCount", void 0),
+            C(this, "gameTimer", void 0),
+            C(this, "gameFocusedTimer", void 0),
+            C(this, "unlockedTimer", void 0),
+            C(this, "rtcConnectionTimer", void 0),
+            C(this, "desktopFocusedTimer", void 0),
+            C(this, "desktopFocusChangedCount", void 0),
+            C(this, "desktopMessageAckCount", void 0),
+            C(this, "desktopMessageCreateCount", void 0),
+            C(this, "soundboardShownTimer", void 0),
+            C(this, "soundboardShownCount", void 0),
+            C(this, "soundboardKeepOpenCount", void 0),
+            C(this, "muteToggledCount", void 0),
+            C(this, "_successfullyShown", void 0),
             (this.game = e),
             (this.uuid = k()),
             (this.overlayMethod = null),
@@ -733,7 +733,7 @@ function $(e) {
         t.setOverlayState(e.newState, e.reason, !1);
     }
 }
-A(U, "gamesByPid", {}), A(U, "gamesByName", {}), A(U, "desktopMainWindowHasFocus", document.hasFocus());
+C(U, "gamesByPid", {}), C(U, "gamesByName", {}), C(U, "desktopMainWindowHasFocus", document.hasFocus());
 class ee {
     static hasConnection() {
         return ee.connections.size > 0;
@@ -752,7 +752,7 @@ class ee {
         ee.previousHasConnection !== r && (U.toggleRtcConnection(r), (ee.previousHasConnection = r));
     }
 }
-A(ee, "connections", new Set()), A(ee, "previousHasConnection", !1);
+C(ee, "connections", new Set()), C(ee, "previousHasConnection", !1);
 class et {
     static handleMessageAcked(e) {
         w.verbose("MESSAGE_ACKED", e);
@@ -786,7 +786,7 @@ D &&
 class en extends s.Z {
     constructor(...e) {
         super(...e),
-            A(
+            C(
                 this,
                 "actions",
                 __OVERLAY__

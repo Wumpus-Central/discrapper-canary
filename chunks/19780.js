@@ -48,8 +48,8 @@ let E = [],
     S = !1,
     I = !1,
     T = null,
-    A = !1,
-    C = null;
+    C = !1,
+    A = null;
 function N(e, t) {
     if (null == i) throw Error("Creating RTCConnection without session.");
     let r = f.default.getId(),
@@ -58,7 +58,7 @@ function N(e, t) {
             sessionId: i,
             guildId: e,
             channelId: t,
-            joinVoiceId: C,
+            joinVoiceId: A,
         });
     return (
         a.on(l.z.State, (e, t, n) => {
@@ -199,7 +199,7 @@ function P() {
         r.destroy(),
         (r = null),
         (v = null),
-        (A = !1);
+        (C = !1);
 }
 function R(e) {
     return (i = e.sessionId), (b = null), (O = null), P(), !1;
@@ -222,7 +222,7 @@ function w(e) {
                 ? (null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId)
                     ? null == t.channelId
                         ? P()
-                        : (r.setNextChannelId(t.channelId), (A = !0), (C = null), r.clearJoinVoiceId())
+                        : (r.setNextChannelId(t.channelId), (C = !0), (A = null), r.clearJoinVoiceId())
                     : ((t.guildId !== r.guildId && null == t.channelId) || P(),
                       null != t.channelId &&
                           ((b = null),
@@ -275,7 +275,7 @@ function U(e) {
 }
 function G(e) {
     let { channelId: t, joinVoiceId: n } = e;
-    null != r && (null == t || r.channelId !== t) && P(), (C = n);
+    null != r && (null == t || r.channelId !== t) && P(), (A = n);
 }
 function Z(e) {
     return e.state === _.$7l.ACTIVE && null != r && r.resetBackoff("App state is active"), !1;
@@ -396,7 +396,7 @@ class z extends (a = o.ZP.Store) {
         return null == r ? void 0 : r.getUserIds();
     }
     getJoinVoiceId() {
-        return C;
+        return A;
     }
     isUserConnected(e) {
         return null == r ? void 0 : r.getIsUserConnected(e);
@@ -412,7 +412,7 @@ class z extends (a = o.ZP.Store) {
         return T;
     }
     getWasMoved() {
-        return A;
+        return C;
     }
 }
 h(z, "displayName", "RTCConnectionStore");

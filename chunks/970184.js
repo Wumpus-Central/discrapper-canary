@@ -68,7 +68,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,7 +79,7 @@ function A(e, t) {
         e
     );
 }
-let C = (e) => {
+let A = (e) => {
         switch (e.type) {
             case s.re.BUTTON:
                 return e.style !== s.ZJ.LINK;
@@ -103,8 +103,8 @@ let C = (e) => {
                 e.state !== d.F.FAILED &&
                 (e.data.interactionType === s.B8.MESSAGE_COMPONENT && e.data.componentId === t.id
                     ? (r = b.gH.LOADING)
-                    : C(t) && (r = b.gH.DISABLED)),
-            n && C(t) && (r = b.gH.DISABLED),
+                    : A(t) && (r = b.gH.DISABLED)),
+            n && A(t) && (r = b.gH.DISABLED),
             r
         );
     };
@@ -148,7 +148,7 @@ function D(e, t) {
             (t) => {
                 var n;
                 let r = (0, v.Z)(e, t, null != a.modal ? "modal" : "message");
-                return null == (n = a.setValidationErrors) || n.call(a, (t) => A(I({}, t), { [e.id]: r })), null == r;
+                return null == (n = a.setValidationErrors) || n.call(a, (t) => C(I({}, t), { [e.id]: r })), null == r;
             },
             [e, a],
         );
@@ -202,7 +202,7 @@ function w(e, t, n, r) {
             },
             [e.channel_id, e.flags, e.id, n.customId, n.type, n.id, _, p],
         ),
-        isDisabled: c && C(n),
+        isDisabled: c && A(n),
         visualState: N(l, n, c),
         error: d,
     };

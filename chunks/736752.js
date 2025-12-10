@@ -25,8 +25,8 @@ var r = n(54381),
     S = n(325067),
     I = n(246946),
     T = n(663389),
-    A = n(594174),
-    C = n(626135),
+    C = n(594174),
+    A = n(626135),
     N = n(706454),
     P = n(210887),
     R = n(418632),
@@ -320,7 +320,7 @@ class K extends i.PureComponent {
                 settingsSection: U.oAB.ACCOUNT,
                 panelClassName: B.tabPanel,
                 onTabChange: (e) => {
-                    C.default.track(U.rMx.MY_ACCOUNT_PAGE_TAB_NAVIGATE, {
+                    A.default.track(U.rMx.MY_ACCOUNT_PAGE_TAB_NAVIGATE, {
                         target_tab_name: e === k.s6.ACCOUNT_SECURITY_TAB ? "SECURITY" : "STANDING",
                     });
                 },
@@ -388,8 +388,8 @@ class K extends i.PureComponent {
     }
 }
 let z = () => {
-    let e = (0, s.e7)([A.default], () => {
-            let e = A.default.getCurrentUser();
+    let e = (0, s.e7)([C.default], () => {
+            let e = C.default.getCurrentUser();
             return o()(null != e, "ConnectedUserAccountSettings: currentUser cannot be undefined"), e;
         }),
         t = (0, s.e7)([S.Z], () => S.Z.getBackupCodes()),

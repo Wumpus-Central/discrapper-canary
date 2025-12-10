@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(718805),
     I = n(871118),
     T = n(981631),
-    A = n(388032),
-    C = n(839021);
+    C = n(388032),
+    A = n(839021);
 function N(e, t, n) {
     return (
         t in e
@@ -113,19 +113,19 @@ class L extends i.PureComponent {
         let { onWatch: t, activeStream: n, currentUserId: i, canWatch: a, unavailableReason: o } = this.props;
         return (0, r.jsxs)(l.P3F, {
             onClick: t,
-            className: C.previewContainer,
+            className: A.previewContainer,
             children: [
                 (0, r.jsx)(I.Z, {
-                    className: C.previewImage,
+                    className: A.previewImage,
                     stream: e,
                 }),
                 a
                     ? (0, r.jsx)("div", {
-                          className: C.previewHover,
+                          className: A.previewHover,
                           children: (0, r.jsx)(l.Text, {
                               variant: "text-sm/normal",
                               color: "none",
-                              className: C.white,
+                              className: A.white,
                               children: (0, S.Z)(e, n, i, o),
                           }),
                       })
@@ -138,13 +138,13 @@ class L extends i.PureComponent {
         return null == n
             ? null
             : (0, r.jsx)("div", {
-                  className: o()(C.streamPreviewWrapper, { [C.mounted]: i }),
+                  className: o()(A.streamPreviewWrapper, { [A.mounted]: i }),
                   children: (0, r.jsxs)("div", {
-                      className: C.streamPreview,
+                      className: A.streamPreview,
                       children: [
                           this.renderPreview(n),
                           (0, r.jsxs)("div", {
-                              className: C.body,
+                              className: A.body,
                               children: [
                                   null != e
                                       ? (0, r.jsx)(c.Z, {
@@ -168,14 +168,14 @@ class L extends i.PureComponent {
                                             user: t,
                                             guildId: n.guildId,
                                             channelId: n.channelId,
-                                            className: C.activityActions,
+                                            className: A.activityActions,
                                             onAction: a,
                                         }),
                                   !s &&
                                       (0, r.jsx)(f.Z, {
                                           type: f.Z.Types.INLINE,
-                                          className: C.protip,
-                                          children: __OVERLAY__ ? A.intl.string(A.t.YRdw70) : A.intl.string(A.t.CCTgbF),
+                                          className: A.protip,
+                                          children: __OVERLAY__ ? C.intl.string(C.t.YRdw70) : C.intl.string(C.t.CCTgbF),
                                       }),
                               ],
                           }),

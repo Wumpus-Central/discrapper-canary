@@ -6,7 +6,7 @@ n.d(t, {
     hi: () => O,
     s2: () => v,
     sU: () => P,
-    wt: () => A,
+    wt: () => C,
 }),
     n(415506);
 var r = n(442837),
@@ -83,7 +83,7 @@ async function T(e) {
             );
         }
 }
-async function A() {
+async function C() {
     c.isPlatformEmbedded &&
         (d.ZP.InputEventServiceSetAllowed(!1),
         d.ZP.ToolServiceSetAllowed(!1),
@@ -99,7 +99,7 @@ async function A() {
         }),
         m.info("System service terminated."));
 }
-function C(e) {
+function A(e) {
     if (e instanceof Error)
         try {
             let t = JSON.parse(e.message);
@@ -125,7 +125,7 @@ async function P(e) {
                 N((0, i.createToast)(_.intl.string(_.t.kQnWby), i.ToastType.SUCCESS), t),
                 I("after-install");
         } catch (r) {
-            let n = C(r);
+            let n = A(r);
             if (null == n && r instanceof Error) {
                 N(
                     (0, i.createToast)(
@@ -185,7 +185,7 @@ async function R(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (c.isPlatformEmbedded)
         try {
-            await A(),
+            await C(),
                 await d.ZP.UninstallSystemService(),
                 m.info("System service uninstalled."),
                 N((0, i.createToast)(_.intl.string(_.t.dThS5H), i.ToastType.SUCCESS), t),
@@ -194,7 +194,7 @@ async function R(e) {
                     source: e,
                 });
         } catch (r) {
-            let n = C(r);
+            let n = A(r);
             if (null == n && r instanceof Error) {
                 N(
                     (0, i.createToast)(

@@ -25,8 +25,8 @@ function b(e, t, n) {
         S,
         I,
         T,
-        A,
         C,
+        A,
         N,
         P,
         R,
@@ -53,9 +53,9 @@ function b(e, t, n) {
                             ? v
                             : k.firstWeekContainsDate)
                         ? O
-                        : null == (A = k.locale) || null == (C = A.options)
+                        : null == (C = k.locale) || null == (A = C.options)
                           ? void 0
-                          : C.firstWeekContainsDate)
+                          : A.firstWeekContainsDate)
                 ? b
                 : 1,
         );

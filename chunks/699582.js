@@ -65,7 +65,7 @@ var r,
     S = !1,
     I = /^[A-Z]{3}$/,
     T = /-u(?:-[0-9a-z]{2,8})+/gi,
-    A = {
+    C = {
         "art-lojban": "jbo",
         "i-ami": "ami",
         "i-bnn": "bnn",
@@ -112,7 +112,7 @@ var r,
         "zh-wuu": "wuu",
         "zh-yue": "yue",
     },
-    C = {
+    A = {
         BU: "MM",
         DD: "DE",
         FX: "FR",
@@ -418,11 +418,11 @@ function D(e) {
     (t = (e = h.call(n, "-")).match(i.expExtSequences)) &&
         t.length > 1 &&
         (t.sort(), (e = e.replace(RegExp("(?:" + i.expExtSequences.source + ")+", "i"), h.call(t, "")))),
-        c.call(A, e) && (e = A[e]),
+        c.call(C, e) && (e = C[e]),
         (n = e.split("-"));
     for (var r = 1, a = n.length; r < a; r++)
-        c.call(C, n[r])
-            ? (n[r] = C[n[r]])
+        c.call(A, n[r])
+            ? (n[r] = A[n[r]])
             : c.call(N, n[r]) &&
               ((n[r] = N[n[r]][0]), 1 === r && N[n[1]][1] === n[0] && ((n = p.call(n, r++)), (a -= 1)));
     return h.call(n, "-");
@@ -512,15 +512,15 @@ function U(e, t, n, r, i) {
                 }
         }
         if (c.call(n, "[[" + E + "]]")) {
-            var A = n["[[" + E + "]]"];
-            -1 !== v.call(b, A) && A !== y && ((y = A), (O = ""));
+            var C = n["[[" + E + "]]"];
+            -1 !== v.call(b, C) && C !== y && ((y = C), (O = ""));
         }
         (_["[[" + E + "]]"] = y), (m += O), h++;
     }
     if (m.length > 2)
-        var C = o.substring(0, l),
+        var A = o.substring(0, l),
             N = o.substring(l),
-            o = C + m + N;
+            o = A + m + N;
     return (_["[[locale]]"] = o), _;
 }
 function G(e, t) {
@@ -623,10 +623,10 @@ function Y(e, t, n) {
         (r["[[maximumSignificantDigits]]"] = I));
     var T = F(n, "useGrouping", "boolean", void 0, !0);
     r["[[useGrouping]]"] = T;
-    var A = c[f].patterns[p];
+    var C = c[f].patterns[p];
     return (
-        (r["[[positivePattern]]"] = A.positivePattern),
-        (r["[[negativePattern]]"] = A.negativePattern),
+        (r["[[positivePattern]]"] = C.positivePattern),
+        (r["[[negativePattern]]"] = C.negativePattern),
         (r["[[boundFormat]]"] = void 0),
         (r["[[initializedNumberFormat]]"] = !0),
         l && (e.format = K.call(e)),
@@ -700,8 +700,8 @@ function z(e, t) {
     if (((S = S.replace("{number}", n)), "currency" === i["[[style]]"])) {
         var I,
             T = i["[[currency]]"],
-            A = s.currencies[T];
-        (I = ("symbol" === i["[[currencyDisplay]]"] && A) || T), (S = S.replace("{currency}", I));
+            C = s.currencies[T];
+        (I = ("symbol" === i["[[currencyDisplay]]"] && C) || T), (S = S.replace("{currency}", I));
     }
     return r.exp.test(r.input), S;
 }
@@ -836,8 +836,8 @@ function $(e, t, n) {
         T = F(n, "hour12", "boolean");
     if (r["[[hour]]"])
         if (((T = void 0 === T ? E.hour12 : T), (r["[[hour12]]"] = T), !0 === T)) {
-            var A = E.hourNo0;
-            (r["[[hourNo0]]"] = A), (I = g.pattern12);
+            var C = E.hourNo0;
+            (r["[[hourNo0]]"] = C), (I = g.pattern12);
         } else I = g.pattern;
     else I = g.pattern;
     return (

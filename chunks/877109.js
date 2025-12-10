@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(606033),
     p = n(778680),
     f = n(751586),
-    h = n(981631);
-function g(e) {
+    g = n(981631);
+function h(e) {
     return new URLSearchParams(e).get(u.tR.QUEST_ID);
 }
 let m = function (e) {
@@ -22,15 +22,15 @@ let m = function (e) {
                 { search: a } = (0, l.TH)();
             return (
                 i.useEffect(() => {
-                    let t = g(a);
+                    let t = h(a);
                     null != t ? r(t) : null != e && r(e);
                 }, [e, a]),
                 i.useEffect(() => {
-                    if (null == n || g(a) === n) return;
+                    if (null == n || h(a) === n) return;
                     let e = new URLSearchParams();
                     e.set(u.tR.TAB, u.e5.PREVIEW_TOOL),
                         e.set(u.tR.QUEST_ID, n),
-                        t.push("".concat(h.Z5c.QUEST_HOME_V2, "?").concat(e.toString()));
+                        t.push("".concat(g.Z5c.QUEST_HOME_V2, "?").concat(e.toString()));
                 }, [n, t, a]),
                 {
                     questId: n,

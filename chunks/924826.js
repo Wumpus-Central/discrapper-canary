@@ -32,26 +32,26 @@ function u(e) {
         S = r.useRef(!1),
         I = r.useRef(null),
         T = r.useRef(u);
-    function A(e) {
+    function C(e) {
         var t;
         return (null != (t = I.current) ? t : document).querySelector(e);
     }
-    function C(e) {
+    function A(e) {
         var t;
-        null == (t = A(e)) || t.focus();
+        null == (t = C(e)) || t.focus();
     }
     r.useLayoutEffect(() => {
         T.current = u;
     }, [u]);
     let N = r.useCallback(
             (e, t) => {
-                T.current && (null != m ? m : C)(e, t);
+                T.current && (null != m ? m : A)(e, t);
             },
             [m],
         ),
         P = r.useCallback(
             (e) => {
-                T.current && (null != h ? h : C)(e);
+                T.current && (null != h ? h : A)(e);
             },
             [h],
         ),
@@ -105,7 +105,7 @@ function u(e) {
                     (x(!1),
                     requestAnimationFrame(() => {
                         let e = v.current;
-                        null !== e && null == A((0, l.P1)(e)) && P((0, l.P1)(t, l.kn));
+                        null !== e && null == C((0, l.P1)(e)) && P((0, l.P1)(t, l.kn));
                     }));
             }
             async function i() {
@@ -114,7 +114,7 @@ function u(e) {
                 let n = v.current;
                 if (g && null !== n) {
                     let t = (0, l.P1)(n),
-                        r = A(t);
+                        r = C(t);
                     if (null != r) {
                         if (!0 !== S.current) return N(t, (0, l.x3)(n));
                         else if (await (0, o.JJ)(e, r)) return N(t, (0, l.x3)(n));
@@ -135,7 +135,7 @@ function u(e) {
                     let t = v.current;
                     if (null != t) {
                         var e;
-                        return null != (e = A((0, l.P1)(t))) ? e : void 0;
+                        return null != (e = C((0, l.P1)(t))) ? e : void 0;
                     }
                     return;
                 },
@@ -189,7 +189,7 @@ function u(e) {
                         let t = v.current;
                         if (null != t) {
                             var i;
-                            let n = A((0, l.P1)(t)),
+                            let n = C((0, l.P1)(t)),
                                 r = null != (i = null == n ? void 0 : n.ownerDocument) ? i : document,
                                 a = E || n === r.activeElement;
                             null != n && a && (e.preventDefault(), e.stopPropagation(), null == n || n.click());

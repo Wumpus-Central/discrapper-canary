@@ -25,8 +25,8 @@ var r = n(54381),
     S = n(485386),
     I = n(768581),
     T = n(935910),
-    A = n(392819),
-    C = n(131085),
+    C = n(392819),
+    A = n(131085),
     N = n(724913);
 function P(e, t, n) {
     return (
@@ -145,7 +145,7 @@ function M(e) {
         ef = el && (0, y.S2)(n),
         ep = ei && ef,
         e_ = (null == P ? void 0 : P.isPrivate()) && null != en;
-    (0, A.Z)({
+    (0, C.Z)({
         shouldSubscribe: e_ || ep,
         subscribeToGroupId: W,
         authorId: a.author.id,
@@ -195,7 +195,7 @@ function M(e) {
                           userId: a.author.id,
                           contextGuildId: q,
                           className: N.clanTagChiplet,
-                          badgeSize: C.Gg.SIZE_12,
+                          badgeSize: A.Gg.SIZE_12,
                       })
                     : null,
             [L, n.primaryGuild, q, a.author.id, k],

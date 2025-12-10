@@ -70,8 +70,8 @@ let m = null,
     S = !1,
     I = !1,
     T = null,
-    A = null,
-    C = [],
+    C = null,
+    A = [],
     N = [],
     P = null,
     R = null,
@@ -183,7 +183,7 @@ function F(e) {
         G(i),
         M(t),
         null != p && Z(p),
-        (C = c),
+        (A = c),
         (N = u),
         (P = d),
         (R = f),
@@ -220,7 +220,7 @@ function Y(e) {
         k(r),
         G(i),
         null != f && Z(f),
-        (C = l),
+        (A = l),
         (N = c),
         (I = !1),
         (T = s.default.fromTimestamp(Date.now())),
@@ -267,7 +267,7 @@ function J(e) {
 function $(e) {
     var t;
     let { countryCode: n } = e;
-    null != n && (A = null != (t = (0, r.Zz)(n)) ? t : null);
+    null != n && (C = null != (t = (0, r.Zz)(n)) ? t : null);
 }
 function ee() {
     let e = [];
@@ -302,7 +302,7 @@ function er() {
         (T = null),
         (v = x()),
         (E = !1),
-        (C = []),
+        (A = []),
         (N = []),
         (P = null),
         (R = null),
@@ -367,13 +367,13 @@ class ei extends i.Z {
         return E;
     }
     getUserCountry() {
-        return A;
+        return C;
     }
     isLoading() {
         return I;
     }
     getTopUserActivities() {
-        return C;
+        return A;
     }
     getTopGuildActivities() {
         return N;

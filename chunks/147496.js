@@ -19,16 +19,16 @@ function g(e) {
     let { onClose: b, transitionState: y, skuId: O, appId: v, onHeaderTitleClick: S } = e,
         I = (0, a.e7)([l.Z], () => l.Z.getForSKU(O), [O]),
         T = (0, a.e7)([s.Z], () => s.Z.get(O), [O]),
-        A = (0, d.M)(O);
+        C = (0, d.M)(O);
     if (null == T) return null;
-    let C = null != (n = T.name) ? n : "",
+    let A = null != (n = T.name) ? n : "",
         N = null != (g = null == I || null == (t = I.description) ? void 0 : t.trim()) ? g : void 0,
         P =
             (null == I ? void 0 : I.headerBackground) != null &&
             null != (E = u.Z.toURLSafe((0, c._W)(v, I.headerBackground, 256)))
                 ? E
                 : void 0,
-        R = T.type === m.epS.DURABLE && A,
+        R = T.type === m.epS.DURABLE && C,
         D = T.type === m.epS.DURABLE ? (R ? h.intl.string(h.t.bm82mm) : h.intl.string(h.t["6gprwf"])) : void 0,
         { price: w } = T;
     return null == w
@@ -46,7 +46,7 @@ function g(e) {
               children: (0, r.jsx)(_.i, {
                   appId: v,
                   skuId: T.id,
-                  title: C,
+                  title: A,
                   description: N,
                   imgSrc: P,
                   tag: null != D ? (0, r.jsx)(i.V, { text: D }) : void 0,

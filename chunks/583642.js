@@ -67,7 +67,7 @@ function T(e) {
         }),
     });
 }
-let A = i.forwardRef(function (e, t) {
+let C = i.forwardRef(function (e, t) {
         let { searchContext: n, navId: a, resultsState: o, onSelectedIndexChanged: s, selectedChannel: l } = e,
             [c, d] = i.useState(-1),
             f = (e) => {
@@ -126,14 +126,14 @@ let A = i.forwardRef(function (e, t) {
             I = (e) => {
                 y(c + e);
             },
-            A = i.useRef({
+            C = i.useRef({
                 itemsData: [],
                 selectedIndex: -1,
                 modeType: o.mode.type,
             });
         return (
             i.useEffect(() => {
-                let { itemsData: e, selectedIndex: t, modeType: n } = A.current,
+                let { itemsData: e, selectedIndex: t, modeType: n } = C.current,
                     r = o.mode.type;
                 if (r !== n) r === v.Sap.FILTER ? p(0) : p(-1);
                 else if (t >= 0 && (t === c || e.length !== h.length)) {
@@ -144,7 +144,7 @@ let A = i.forwardRef(function (e, t) {
                         -1 !== e ? p(e) : t >= h.length && p(Math.max(0, h.length - 1));
                     } else t >= h.length && p(Math.max(0, h.length - 1));
                 }
-                A.current = {
+                C.current = {
                     itemsData: h,
                     selectedIndex: c,
                     modeType: r,
@@ -175,7 +175,7 @@ let A = i.forwardRef(function (e, t) {
             })
         );
     }),
-    C = i.forwardRef(function (e, t) {
+    A = i.forwardRef(function (e, t) {
         let { navId: n, resultsState: a, searchContext: s } = e,
             c = -1,
             d = (e) => {
@@ -234,12 +234,12 @@ let A = i.forwardRef(function (e, t) {
                 return [e, d.Z.getChannel(t)];
             });
         return (0, _.Fz)(o.mode.filter)
-            ? (0, r.jsx)(C, {
+            ? (0, r.jsx)(A, {
                   navId: i,
                   resultsState: o,
                   searchContext: n,
               })
-            : (0, r.jsx)(A, {
+            : (0, r.jsx)(C, {
                   ref: t,
                   searchContext: n,
                   navId: i,

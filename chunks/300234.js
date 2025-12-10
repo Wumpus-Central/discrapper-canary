@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(720202),
     h = n(594174),
     g = n(260483),
-    f = n(314208),
-    m = n(124368),
+    m = n(314208),
+    f = n(124368),
     j = n(712335);
 let v = l.memo(function (e) {
     let { threadId: t, goToThread: l, showChannelName: i } = e,
@@ -91,7 +91,7 @@ let v = l.memo(function (e) {
                                 : null,
                         ],
                     }),
-                    (0, f.Z)(c),
+                    (0, m.Z)(c),
                 ],
             }),
             (0, r.jsx)(x, { channel: c }),
@@ -122,6 +122,6 @@ function x(e) {
               guildId: t.guild_id,
               users: s,
               count: l,
-              max: m.yX,
+              max: f.yX,
           });
 }

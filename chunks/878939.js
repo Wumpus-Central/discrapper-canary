@@ -5,8 +5,8 @@ var i = n(54381),
     o = n(638730),
     a = n(167762),
     s = n(293273),
-    u = n(594174),
-    c = n(444295),
+    c = n(594174),
+    u = n(444295),
     d = n(603618),
     h = n(388627),
     p = n(981631),
@@ -16,12 +16,12 @@ function m(e) {
         n = (0, h.II)(),
         m = null == n ? void 0 : n.id,
         g = null == n ? void 0 : n.altId,
-        O = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
-        y = null != g ? g : m,
-        [E, v] = r.useState(new Set()),
-        [b, S] = r.useState(new Set()),
-        x = r.useCallback((e, t, n) => {
-            v((n) => {
+        y = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        O = null != g ? g : m,
+        [v, E] = r.useState(new Set()),
+        [b, _] = r.useState(new Set()),
+        S = r.useCallback((e, t, n) => {
+            E((n) => {
                 if (t) {
                     if (n.has(e)) return n;
                     n.add(e);
@@ -31,7 +31,7 @@ function m(e) {
                 }
                 return new Set(n);
             }),
-                S((i) => {
+                _((i) => {
                     if (n && t) {
                         if (i.has(e)) return i;
                         i.add(e);
@@ -42,77 +42,77 @@ function m(e) {
                     return new Set(i);
                 });
         }, []),
-        j = (0, c.ee)(() => E, [E]),
-        I = (0, c.ee)(() => b, [b]),
-        C = (0, o.h)(c.zi, 3000, []);
+        x = (0, u.ee)(() => v, [v]),
+        I = (0, u.ee)(() => b, [b]),
+        j = (0, o.h)(u.zi, 3000, []);
     r.useEffect(() => {
-        0 === j.size ||
+        0 === x.size ||
             t ||
-            C(p.Odu.FRIENDS, {
+            j(p.Odu.FRIENDS, {
                 locked: t,
-                shownUserIds: Array.from(j),
+                shownUserIds: Array.from(x),
                 liveUserIds: Array.from(I),
                 contentInventoryIds: [],
             });
-    }, [j, I, t, C]);
-    let Z = (0, l.e7)([s.Z], () => (null == y ? null : s.Z.getApplicationActivity(y)), [y]),
-        N = (0, r.useCallback)((e, t) => {
+    }, [x, I, t, j]);
+    let C = (0, l.e7)([s.Z], () => (null == O ? null : s.Z.getApplicationActivity(O)), [O]),
+        Z = (0, r.useCallback)((e, t) => {
             let n = (function (e) {
                 switch (e) {
                     case a.sG.OPEN_DIRECT_MESSAGE:
                         return {
-                            type: c.Qu.FRIEND_LIST,
-                            value: c.bk.CHAT,
+                            type: u.Qu.FRIEND_LIST,
+                            value: u.bk.CHAT,
                         };
                     case a.sG.ACCEPT_FRIEND_REQUEST:
                         return {
-                            type: c.Qu.FRIEND_REQUEST,
-                            value: c.bk.ACCEPT_REQUEST,
+                            type: u.Qu.FRIEND_REQUEST,
+                            value: u.bk.ACCEPT_REQUEST,
                         };
                     case a.sG.DECLINE_FRIEND_REQUEST:
                         return {
-                            type: c.Qu.FRIEND_REQUEST,
-                            value: c.bk.DECLINE_REQUEST,
+                            type: u.Qu.FRIEND_REQUEST,
+                            value: u.bk.DECLINE_REQUEST,
                         };
                     case a.sG.CANCEL_FRIEND_REQUEST:
                         return {
-                            type: c.Qu.FRIEND_REQUEST,
-                            value: c.bk.CANCEL_REQUEST,
+                            type: u.Qu.FRIEND_REQUEST,
+                            value: u.bk.CANCEL_REQUEST,
                         };
                     case a.sG.SEND_FRIEND_REQUEST:
                         return {
-                            type: c.Qu.FRIEND_REQUEST,
-                            value: c.bk.SEND_REQUEST,
+                            type: u.Qu.FRIEND_REQUEST,
+                            value: u.bk.SEND_REQUEST,
                         };
                     case a.sG.SEND_ACTIVITY_INVITE:
                         return {
-                            type: c.Qu.INVITE,
-                            value: c.bk.INVITE_SENT,
+                            type: u.Qu.INVITE,
+                            value: u.bk.INVITE_SENT,
                         };
                     case a.sG.ASK_TO_JOIN:
                         return {
-                            type: c.Qu.INVITE,
-                            value: c.bk.JOIN_REQUEST_SENT,
+                            type: u.Qu.INVITE,
+                            value: u.bk.JOIN_REQUEST_SENT,
                         };
                     case a.sG.USER_CONTEXT_MENU:
                         return {
-                            type: c.Qu.FRIEND_LIST,
-                            value: c.bk.SETTINGS_OPENED,
+                            type: u.Qu.FRIEND_LIST,
+                            value: u.bk.SETTINGS_OPENED,
                         };
                     case a.sG.OPEN_FRIEND_MODAL:
                         return {
-                            type: c.Qu.FRIEND_LIST,
-                            value: c.bk.PROFILE_OPENED,
+                            type: u.Qu.FRIEND_LIST,
+                            value: u.bk.PROFILE_OPENED,
                         };
                     case a.sG.OPEN_SETTINGS_MODAL:
                         return {
-                            type: c.Qu.FRIEND_LIST,
-                            value: c.bk.SETTINGS_OPENED,
+                            type: u.Qu.FRIEND_LIST,
+                            value: u.bk.SETTINGS_OPENED,
                         };
                     case a.sG.SEARCH_FRIENDS:
                         return {
-                            type: c.Qu.FRIEND_LIST,
-                            value: c.bk.SEARCH,
+                            type: u.Qu.FRIEND_LIST,
+                            value: u.bk.SEARCH,
                         };
                     default:
                         return null;
@@ -120,7 +120,7 @@ function m(e) {
             })(e);
             if (null != n) {
                 var i, r;
-                (0, c.Ws)(
+                (0, u.Ws)(
                     p.Odu.FRIENDS,
                     ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -164,25 +164,25 @@ function m(e) {
                 );
             }
         }, []),
-        w = (0, r.useCallback)(() => {}, []),
-        T = (0, r.useCallback)(
+        N = (0, r.useCallback)(() => {}, []),
+        w = (0, r.useCallback)(
             () =>
                 (0, i.jsx)(d.lE, {
-                    activity: Z,
-                    currentUser: O,
+                    activity: C,
+                    currentUser: y,
                     showInviteButton: !1,
                 }),
-            [Z, O],
+            [C, y],
         );
     return t
         ? null
         : (0, i.jsx)(a.r1, {
               containerClassName: f.container,
               listClassName: f.list,
-              closePopout: w,
-              renderHeader: T,
+              closePopout: N,
+              renderHeader: w,
               appContext: p.IlC.OVERLAY,
-              onAction: N,
-              onFriendVisible: x,
+              onAction: Z,
+              onFriendVisible: S,
           });
 }

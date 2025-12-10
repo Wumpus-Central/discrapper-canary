@@ -22,8 +22,8 @@ var r,
     S = n(439944),
     I = n(789407),
     T = n(630186),
-    A = n(250889),
-    C = n(199902),
+    C = n(250889),
+    A = n(199902),
     N = n(592125),
     P = n(480294),
     R = n(831506),
@@ -116,7 +116,7 @@ function en(e) {
     return x.Z.findActivity(e, (e) => e.type !== U.IIU.CUSTOM_STATUS);
 }
 function er(e) {
-    return null == X[e] && (X = F(Z({}, X), { [e]: new A.Z({ name: e }) })), X[e];
+    return null == X[e] && (X = F(Z({}, X), { [e]: new C.Z({ name: e }) })), X[e];
 }
 function ei(e) {
     return null == J[e] && (J = F(Z({}, J), { [e]: new T.Z({ url: e }) })), J[e];
@@ -146,8 +146,8 @@ function es(e) {
             null)
           : e === I.XB
             ? I.r9
-            : e.startsWith(A.H)
-              ? er(e.slice(A.H.length))
+            : e.startsWith(C.H)
+              ? er(e.slice(C.H.length))
               : e.startsWith(T._)
                 ? ei(e.slice(T._.length))
                 : (ea(e), null);
@@ -191,8 +191,8 @@ function ef(e, t, n) {
         g = !1,
         E = [];
     for (let e of s) {
-        var T, A, P, L;
-        let t = C.Z.getAnyStreamForUser(e.id),
+        var T, C, P, L;
+        let t = A.Z.getAnyStreamForUser(e.id),
             n = N.Z.getChannel(null == t ? void 0 : t.channelId);
         if ((0, _.Y3)(n)) continue;
         let r = en(e.id);
@@ -217,7 +217,7 @@ function ef(e, t, n) {
                     activity: r,
                     userId: e.id,
                     application: d,
-                    channelId: null == (A = M.Z.getVoiceStateForUser(e.id)) ? void 0 : A.channelId,
+                    channelId: null == (C = M.Z.getVoiceStateForUser(e.id)) ? void 0 : C.channelId,
                     currentUser: i,
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: N.Z,
@@ -415,16 +415,16 @@ function eI() {
 function eT() {
     (K = !1), (q = []), (Q = []), $.clear();
 }
-function eA() {
+function eC() {
     (K = !0), eS();
 }
-function eC() {
+function eA() {
     K = !1;
 }
 class eN extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([j.default, h.Z, x.Z, R.Z, M.Z, C.Z, L.Z, P.Z, O.Z], eI),
-            this.waitFor(h.Z, C.Z, N.Z, P.Z, R.Z, E.Z, D.Z, w.Z, x.Z, L.Z, O.Z, j.default, M.Z);
+        this.syncWith([j.default, h.Z, x.Z, R.Z, M.Z, A.Z, L.Z, P.Z, O.Z], eI),
+            this.waitFor(h.Z, A.Z, N.Z, P.Z, R.Z, E.Z, D.Z, w.Z, x.Z, L.Z, O.Z, j.default, M.Z);
     }
     get currentActivityParties() {
         return q;
@@ -442,7 +442,7 @@ class eN extends (r = o.ZP.Store) {
 G(eN, "displayName", "NowPlayingViewStore");
 let eP = new eN(s.Z, {
         LOGOUT: eT,
-        NOW_PLAYING_MOUNTED: eA,
-        NOW_PLAYING_UNMOUNTED: eC,
+        NOW_PLAYING_MOUNTED: eC,
+        NOW_PLAYING_UNMOUNTED: eA,
     }),
     eR = eP;

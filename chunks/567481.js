@@ -11,8 +11,8 @@ var i = n(481060),
     d = n(293273),
     p = n(885110),
     f = n(996106),
-    h = n(914946),
-    g = n(452426),
+    g = n(914946),
+    h = n(452426),
     m = n(852926),
     _ = n(186901),
     b = n(981631);
@@ -21,7 +21,7 @@ let E = new u.Z("RPCCommandsOverlay"),
         [b.Etm.SET_OVERLAY_LOCKED]: {
             scope: _.lH,
             validation: (e) =>
-                (0, g.Z)(e)
+                (0, h.Z)(e)
                     .required()
                     .keys({
                         locked: e.boolean().required(),
@@ -46,7 +46,7 @@ let E = new u.Z("RPCCommandsOverlay"),
         [b.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
             scope: _.lH,
             validation: (e) =>
-                (0, g.Z)(e)
+                (0, h.Z)(e)
                     .required()
                     .keys({
                         type: e.number().required().valid([b.mFx.JOIN]),
@@ -60,7 +60,7 @@ let E = new u.Z("RPCCommandsOverlay"),
                     i = t.application.id;
                 if (null == i) throw new f.Z({ errorCode: b.lTL.INVALID_COMMAND }, "No application.");
                 let l = d.Z.getApplicationActivity(i);
-                if (null == l || null == l.secrets || !(0, h.t9)(n, l.party, l.secrets))
+                if (null == l || null == l.secrets || !(0, g.t9)(n, l.party, l.secrets))
                     throw new f.Z(
                         { errorCode: b.lTL.NO_ELIGIBLE_ACTIVITY },
                         "No eligible activity for application. Ensure an activity includes a party and appropriate secret.",
@@ -79,7 +79,7 @@ let E = new u.Z("RPCCommandsOverlay"),
         [b.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
             scope: _.lH,
             validation: (e) =>
-                (0, g.Z)(e)
+                (0, h.Z)(e)
                     .required()
                     .keys({
                         code: e.string().required(),
@@ -110,7 +110,7 @@ let E = new u.Z("RPCCommandsOverlay"),
         [b.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
             scope: _.lH,
             validation: (e) =>
-                (0, g.Z)(e)
+                (0, h.Z)(e)
                     .required()
                     .keys({ pid: e.number().min(0).required() }),
             handler(e) {

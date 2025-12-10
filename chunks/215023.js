@@ -1,7 +1,7 @@
 n.d(t, {
     AW: () => O,
     As: () => G,
-    Cm: () => A,
+    Cm: () => C,
     HU: () => w,
     Hi: () => B,
     Hl: () => F,
@@ -23,7 +23,7 @@ n.d(t, {
     xg: () => k,
     y8: () => H,
     yf: () => b,
-    yo: () => C,
+    yo: () => A,
 }),
     n(388685);
 var r = n(463570),
@@ -92,8 +92,8 @@ let v = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
     S = (e) => v.includes(e),
     I = (e) => null != e && "home" !== e && "catalog" !== e,
     T = 800,
-    A = 604800000,
-    C = [
+    C = 604800000,
+    A = [
         "1212569433839636530",
         "1144308439720394944",
         "1314020996201713685",

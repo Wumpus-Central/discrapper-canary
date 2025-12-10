@@ -457,7 +457,7 @@ function eP(e) {
         i.useEffect(() => {
             var e, t;
             let { editorHeight: n, isGridLayout: r } = eJ.current,
-                i = r ? e4 : eo,
+                i = r ? e6 : eo,
                 l = null == (e = i.current) ? void 0 : e.getScrollerState();
             null != l && !eX && l.scrollTop > n && (null == (t = i.current) || t.scrollTo({ to: 0 }));
         }, [eX]);
@@ -560,13 +560,13 @@ function eP(e) {
             observePostVisibilityAnalytics: ec,
             isShowingSearchResult: ew,
         }),
-        e4 = i.useRef(null),
+        e6 = i.useRef(null),
         {
-            updateMasonryListScrollerRef: e6,
+            updateMasonryListScrollerRef: e4,
             getItemKey: e8,
             renderGridSection: e9,
-            renderGridItem: e5,
-            getGridSectionHeight: e2,
+            renderGridItem: e2,
+            getGridSectionHeight: e5,
             getSectionProps: e7,
             handleGridFocus: te,
         } = (function (e) {
@@ -705,7 +705,7 @@ function eP(e) {
                 ),
             };
         })({
-            masonryListScrollerRef: e4,
+            masonryListScrollerRef: e6,
             threadIdsBySection: eG,
             goToThread: eV,
             renderSectionOrItem: eK,
@@ -748,7 +748,7 @@ function eP(e) {
             }
         }, [s, n, r, l, a, t]);
     })({
-        masonryListScrollerRef: e4,
+        masonryListScrollerRef: e6,
         containerWidth: ek,
         isGridLayout: eu,
         threadIdsBySection: eG,
@@ -759,7 +759,7 @@ function eP(e) {
             var e, n;
             if (ew) return;
             let r = eu
-                ? null == (e = e4.current)
+                ? null == (e = e6.current)
                     ? void 0
                     : e.getScrollerState()
                 : null == (n = eo.current)
@@ -837,7 +837,7 @@ function eP(e) {
                                                       null != (t = null == e ? void 0 : e.getScrollerNode())
                                                           ? t
                                                           : null),
-                                                      e6(e);
+                                                      e4(e);
                                               },
                                               itemGutter: 16,
                                               padding: 24,
@@ -845,10 +845,10 @@ function eP(e) {
                                               columns: eA,
                                               sections: eU,
                                               getItemKey: e8,
-                                              getSectionHeight: e2,
+                                              getSectionHeight: e5,
                                               getItemHeight: ta,
                                               renderSection: e9,
-                                              renderItem: e5,
+                                              renderItem: e2,
                                               getSectionProps: e7,
                                               onScroll: C ? tt : void 0,
                                               chunkSize: 350,

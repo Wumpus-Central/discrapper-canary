@@ -1,5 +1,5 @@
 n.d(t, {
-    Y: () => A,
+    Y: () => C,
     c: () => T,
 }),
     n(388685);
@@ -108,7 +108,7 @@ let T = (e) => {
                             shouldShow: !g,
                             onTooltipShow: () => {
                                 s &&
-                                    C({
+                                    A({
                                         emojiNode: n,
                                         isCustomEmoji: !1,
                                     });
@@ -149,7 +149,7 @@ let T = (e) => {
             children: S,
         });
     },
-    A = (e) => {
+    C = (e) => {
         let {
                 node: t,
                 isInteracting: n,
@@ -159,7 +159,7 @@ let T = (e) => {
                 messageId: O,
             } = e,
             [S, T] = i.useState(String(Date.now())),
-            [A, N] = i.useState(!1),
+            [C, N] = i.useState(!1),
             [P, R] = i.useState(!1),
             D = i.useRef(null),
             w = (e) =>
@@ -192,7 +192,7 @@ let T = (e) => {
                             onTooltipShow: () => {
                                 N(!0),
                                     d &&
-                                        (C({
+                                        (A({
                                             emojiNode: t,
                                             isCustomEmoji: !0,
                                             nonce: x,
@@ -214,7 +214,7 @@ let T = (e) => {
                                           }
                                         : void 0,
                                     onMouseLeave: () => {
-                                        A && (p.default.track(h.rMx.CLOSE_POPOUT, { nonce: x }), N(!1));
+                                        C && (p.default.track(h.rMx.CLOSE_POPOUT, { nonce: x }), N(!1));
                                     },
                                     tag: "span",
                                     className: o()(y.emojiContainer, {
@@ -252,7 +252,7 @@ let T = (e) => {
             children: L,
         });
     },
-    C = (e) => {
+    A = (e) => {
         let { emojiNode: t, isCustomEmoji: n, nonce: r } = e;
         d.ZP.trackWithMetadata(h.rMx.EXPRESSION_TOOLTIP_VIEWED, {
             type: E.cd.EMOJI_IN_MESSAGE_HOVER,

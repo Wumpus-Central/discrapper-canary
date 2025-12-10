@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -115,7 +115,7 @@ function R(e) {
 }
 function D(e) {
     var { hideBadges: t = !1, stream: n, location: u } = e,
-        m = C(e, ["hideBadges", "stream", "location"]);
+        m = A(e, ["hideBadges", "stream", "location"]);
     let v = i.useRef(null),
         { analyticsLocations: S, parentAnalyticsLocation: T } = (0, s.ZP)(),
         N = (0, a.e7)([_.default], () => h.ZP.isPremium(_.default.getCurrentUser(), y.PremiumTypes.TIER_1)),
@@ -152,7 +152,7 @@ function D(e) {
                 (0, r.jsx)(
                     E.Z,
                     I(
-                        A(I({}, e), {
+                        C(I({}, e), {
                             buttonRef: v,
                             label: O.intl.string(O.t.tmiYpF),
                             iconComponent: L,

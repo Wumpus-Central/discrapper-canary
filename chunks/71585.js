@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(539854);
+n.d(t, { Z: () => A }), n(388685), n(539854);
 var r,
     i = n(442837),
     a = n(570140),
@@ -86,7 +86,7 @@ function I() {
 function T() {
     p.hidden = !p.hidden;
 }
-class A extends (r = i.ZP.PersistedStore) {
+class C extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         p = l({}, p, null != e ? e : {});
     }
@@ -106,8 +106,8 @@ class A extends (r = i.ZP.PersistedStore) {
         p = f();
     }
 }
-s(A, "displayName", "ContentInventoryPersistedStore"), s(A, "persistKey", "ContentInventoryPersistedStore");
-let C = new A(a.Z, {
+s(C, "displayName", "ContentInventoryPersistedStore"), s(C, "persistKey", "ContentInventoryPersistedStore");
+let A = new C(a.Z, {
     CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: O,
     CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: v,
     CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: S,

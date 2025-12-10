@@ -7,7 +7,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(793030),
     c = n(442837),
     u = n(930295),
@@ -93,8 +93,8 @@ function v(e, t) {
 let S = i.createContext(null),
     I = 20,
     T = 22,
-    A = 240,
-    C = 10,
+    C = 240,
+    A = 10,
     N = 4,
     P = m.Vq;
 function R() {
@@ -104,7 +104,7 @@ function R() {
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
     if ("center" === e || "custom" === e) return 0;
     let i = "left" === t || "right" === t,
-        a = i ? r : null != n ? n : A,
+        a = i ? r : null != n ? n : C,
         o = i ? T : I;
     if (0 === a) return 0;
     let s = a / 2 - o;
@@ -226,7 +226,7 @@ function D(e) {
                         style: y(E({}, e), {
                             "--custom-caret-edge-offset-horizontal": "".concat(I, "px"),
                             "--custom-caret-edge-offset-vertical": "".concat(T, "px"),
-                            "--custom-popover-width": "".concat(A, "px"),
+                            "--custom-popover-width": "".concat(C, "px"),
                         }),
                         children:
                             null != L
@@ -247,7 +247,7 @@ function D(e) {
         onRequestClose: g,
         position: H,
         align: ei,
-        spacing: C + N,
+        spacing: A + N,
         offset: ea,
         layerContext: void 0,
         positionKey: null != ea ? "".concat(H, "-").concat(ea) : void 0,

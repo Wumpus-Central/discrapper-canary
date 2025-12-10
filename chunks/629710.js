@@ -1,8 +1,8 @@
 n.d(t, {
     AT: () => E,
-    DQ: () => A,
+    DQ: () => C,
     Hz: () => D,
-    LD: () => C,
+    LD: () => A,
     MD: () => T,
     SI: () => R,
     UJ: () => P,
@@ -68,7 +68,7 @@ function S(e, t) {
             ? void 0
             : n.some(
                   (e) =>
-                      C(
+                      A(
                           {
                               type: _.l.Attachment,
                               media: e,
@@ -80,7 +80,7 @@ function S(e, t) {
             ? void 0
             : r.some(
                   (e) =>
-                      C(
+                      A(
                           {
                               type: _.l.Embed,
                               media: e,
@@ -166,7 +166,7 @@ function T(e, t) {
     for (let e of a) if (T(e.message, i)) return !0;
     return !1;
 }
-function A(e) {
+function C(e) {
     var t, n, r, i;
     let a = b(e);
     if (a === h.qn.NONE)
@@ -203,7 +203,7 @@ function A(e) {
         embedIds: null != (i = null == s ? void 0 : s.map((e, t) => "embed_".concat(t)).filter(Boolean)) ? i : [],
     };
 }
-function C(e, t) {
+function A(e, t) {
     if (t === h.qn.NONE) return [];
     let n = w(t);
     return 0 === n.length ? [] : n.filter((t) => R(t, e)).map((e) => h.Fj[e].obscureReason);

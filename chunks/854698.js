@@ -44,7 +44,7 @@ let _ = 365,
     S = [o.Ci.SA.weekday, o.Ci.SU.weekday],
     I = [o.Ci.FR.weekday, o.Ci.SA.weekday],
     T = [o.Ci.SU.weekday, o.Ci.MO.weekday],
-    A = [
+    C = [
         o.Ci.SU.weekday,
         o.Ci.MO.weekday,
         o.Ci.TU.weekday,
@@ -53,7 +53,7 @@ let _ = 365,
         o.Ci.FR.weekday,
         o.Ci.SA.weekday,
     ],
-    C = new Set([0, 6]);
+    A = new Set([0, 6]);
 function N(e) {
     var t;
     let n = e.toDate(),
@@ -90,7 +90,7 @@ function N(e) {
             },
         ];
     return (
-        C.has(n.getDay())
+        A.has(n.getDay())
             ? (null == (t = s.default.getCurrentUser()) ? void 0 : t.isStaff()) &&
               a.push({
                   value: d.z.WEEKEND_ONLY,
@@ -128,7 +128,7 @@ function w(e, t, n) {
     };
 }
 function x(e) {
-    return new o.OG(A[e]);
+    return new o.OG(C[e]);
 }
 function L(e, t) {
     let n;

@@ -30,10 +30,10 @@ function b(e) {
         T = i.useCallback(() => {
             O(!0);
         }, []),
-        A = i.useCallback(() => {
+        C = i.useCallback(() => {
             O(!1);
         }, []),
-        C = i.useCallback(
+        A = i.useCallback(
             (e) => {
                 var r;
                 O(!1);
@@ -58,15 +58,15 @@ function b(e) {
         return (
             null == v &&
                 (null == e || e.addEventListener("dragover", T, !1),
-                null == e || e.addEventListener("dragleave", A, !1),
-                null == e || e.addEventListener("drop", C, !1)),
+                null == e || e.addEventListener("dragleave", C, !1),
+                null == e || e.addEventListener("drop", A, !1)),
             () => {
                 null == e || e.removeEventListener("dragover", T, !1),
-                    null == e || e.removeEventListener("dragleave", A, !1),
-                    null == e || e.removeEventListener("drop", C, !1);
+                    null == e || e.removeEventListener("dragleave", C, !1),
+                    null == e || e.removeEventListener("drop", A, !1);
             }
         );
-    }, [v, T, A, C]);
+    }, [v, T, C, A]);
     let N = (e) => {
         var r, i;
         if (null != t && (null == (i = e.currentTarget) || null == (r = i.files) ? void 0 : r[0]) != null) {

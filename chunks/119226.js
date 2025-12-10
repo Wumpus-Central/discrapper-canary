@@ -7,7 +7,7 @@ var i = n(278074),
     s = n(1585),
     l = n(125988),
     c = n(583434),
-    u = n(684263),
+    u = n(216541),
     d = n(566697),
     f = n(479446),
     p = n(981632),
@@ -71,8 +71,8 @@ function T(e, t) {
         e
     );
 }
-let A = h.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
-function C(e) {
+let C = h.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
+function A(e) {
     let { avatarDecoration: t } = e,
         {
             avatarDecorationSrc: n,
@@ -85,7 +85,7 @@ function C(e) {
     return (0, r.jsx)("div", {
         className: y.giftMainAnimationWrapper,
         children: (0, r.jsx)(
-            A,
+            C,
             T(S({}, i), {
                 avatarDecoration: n,
                 src: a,
@@ -133,14 +133,14 @@ let R = (e) => {
     if ((null == o ? void 0 : o.type) === a.Z.BUNDLE)
         return (0, r.jsx)("div", {
             className: y.bundlePreviewWrapper,
-            children: (0, r.jsx)(u.U, {
+            children: (0, r.jsx)(u.d, {
                 product: o,
                 isPurchased: !1,
                 isHighlighted: !1,
             }),
         });
     let l = (0, i.EQ)(s)
-        .with({ type: a.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(C, { avatarDecoration: e }))
+        .with({ type: a.Z.AVATAR_DECORATION }, (e) => (0, r.jsx)(A, { avatarDecoration: e }))
         .with({ type: a.Z.PROFILE_EFFECT }, (e) => (0, r.jsx)(N, { skuId: e.skuId }))
         .with({ type: a.Z.NAMEPLATE }, (e) => (0, r.jsx)(P, { nameplate: e }))
         .otherwise(() => null);

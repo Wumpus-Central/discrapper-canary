@@ -103,22 +103,22 @@ function I(e) {
 }
 function T(e) {
     let { guildId: t, members: n } = e;
-    return C(
+    return A(
         t,
         n.map((e) => e.presence),
     );
 }
-function A(e) {
+function C(e) {
     let { guildId: t, addedMembers: n } = e;
     return (
         null != n &&
-        C(
+        A(
             t,
             n.map((e) => e.presence),
         )
     );
 }
-function C(e, t) {
+function A(e, t) {
     let n = !1;
     return (
         t.forEach((t) => {
@@ -173,7 +173,7 @@ let w = new D(s.Z, {
     PRESENCES_REPLACE: S,
     PRESENCE_UPDATES: I,
     THREAD_MEMBER_LIST_UPDATE: T,
-    THREAD_MEMBERS_UPDATE: A,
+    THREAD_MEMBERS_UPDATE: C,
     RELATIONSHIP_ADD: P,
     RELATIONSHIP_UPDATE: P,
     RELATIONSHIP_REMOVE: R,

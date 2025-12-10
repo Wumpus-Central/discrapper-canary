@@ -22,7 +22,7 @@ function E(e) {
             icon: n.icon,
         }),
         T = u.ZP.getUserAvatarURL(t),
-        A = i.useMemo(
+        C = i.useMemo(
             () =>
                 v.some((e) => (0, f.sg)(e))
                     ? (0, r.jsxs)(r.Fragment, {
@@ -100,7 +100,7 @@ function E(e) {
                     }),
                 ],
             }),
-            A,
+            C,
             y
                 ? (0, r.jsx)("div", {
                       className: g.currentUser,

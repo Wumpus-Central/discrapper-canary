@@ -1,7 +1,7 @@
 n.d(t, {
     PK: () => S,
-    ZP: () => C,
-    _O: () => A,
+    ZP: () => A,
+    _O: () => C,
 }),
     n(953529);
 var r = n(54381),
@@ -79,7 +79,7 @@ let S = (e) => {
             { analyticsLocations: E } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_HERO_CTA),
             y = (0, h._O)(),
             T = (0, m.Nx)(),
-            C = (0, _.Vi)(),
+            A = (0, _.Vi)(),
             N = (0, s.e7)([p.Z], () => p.Z.affinities).length > 0,
             P = O.intl.string(O.t.YCZldK);
         return (0, r.jsx)(d.Gt, {
@@ -108,8 +108,8 @@ let S = (e) => {
                                           smallerText: !T,
                                       }),
                                   })
-                                : (0, r.jsx)(A, {}),
-                            C || y
+                                : (0, r.jsx)(C, {}),
+                            A || y
                                 ? (0, r.jsx)("div", {
                                       className: v.buttonContainer,
                                       children: (0, r.jsx)(g.Z, {
@@ -124,7 +124,7 @@ let S = (e) => {
                                       isDarkMode: f,
                                   }),
                             N &&
-                                (0, r.jsx)(A, {
+                                (0, r.jsx)(C, {
                                     variant: "text-md/normal",
                                     withBottomMargin: !1,
                                 }),
@@ -135,7 +135,7 @@ let S = (e) => {
             }),
         });
     };
-function A(e) {
+function C(e) {
     let { variant: t = "text-lg/normal", withBottomMargin: n = !0, isApplicationHome: i } = e,
         a = (0, y.$)();
     return (0, r.jsx)(c.Text, {
@@ -148,4 +148,4 @@ function A(e) {
         children: O.intl.format(O.t.kt9wxs, { cheapestMonthlyPrice: a }),
     });
 }
-let C = i.forwardRef(T);
+let A = i.forwardRef(T);

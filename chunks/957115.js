@@ -1,21 +1,21 @@
 n.d(t, {
-    Bi: () => f,
-    Ez: () => p,
-    NX: () => E,
-    Uv: () => O,
-    Z1: () => _,
-    hP: () => g,
-    w9: () => m,
+    Bi: () => O,
+    Ez: () => g,
+    NX: () => N,
+    Uv: () => E,
+    Z1: () => f,
+    hP: () => S,
+    w9: () => h,
 }),
     n(539854);
 var a = n(392711),
     l = n.n(a),
     i = n(695346),
     r = n(626135),
-    o = n(531578),
-    s = n(981631),
+    s = n(531578),
+    d = n(981631),
     u = n(336084),
-    d = n(388032);
+    b = n(388032);
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,7 +41,7 @@ function c(e) {
     }
     return e;
 }
-function b(e, t) {
+function o(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function b(e, t) {
         e
     );
 }
-let f = (e, t) => {
+let O = (e, t) => {
     let n = l().shuffle(e),
         a = n.findIndex((e) => e.value === t);
     if (a > -1) {
@@ -68,13 +68,13 @@ let f = (e, t) => {
     }
     return n;
 };
-function O(e) {
+function E(e) {
     let { feedbackType: t, location: n } = e;
-    r.default.track(s.rMx.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, {
-        feedback_type: o.nw[t],
-        opted_out_until: o.uf,
+    r.default.track(d.rMx.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, {
+        feedback_type: s.nw[t],
+        opted_out_until: s.uf,
     }),
-        i.A2.updateSetting((e) => b(c({}, e), { [t]: b(c({}, e[t]), { optOutExpiryTime: o.uf }) }));
+        i.A2.updateSetting((e) => o(c({}, e), { [t]: o(c({}, e[t]), { optOutExpiryTime: s.uf }) }));
 }
 function v(e) {
     return e
@@ -107,270 +107,270 @@ function v(e) {
             })(e, ["disabled"]);
         });
 }
-function _() {
+function f() {
     return v([
         {
-            variant: o.$7.SELF,
-            value: o.T_.COULD_NOT_CONNECT,
-            label: d.intl.string(u.default.gMHKDJ),
+            variant: s.$7.SELF,
+            value: s.T_.COULD_NOT_CONNECT,
+            label: b.intl.string(u.default.gMHKDJ),
         },
         {
-            value: o.T_.HIGH_TTC,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default.y06Ayn),
+            value: s.T_.HIGH_TTC,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default.y06Ayn),
         },
         {
-            value: o.T_.HIGH_LATENCY,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default.y5k8Jq),
+            value: s.T_.HIGH_LATENCY,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default.y5k8Jq),
         },
         {
-            value: o.T_.ROBOT_VOICE,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.f2914v),
+            value: s.T_.ROBOT_VOICE,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.f2914v),
         },
         {
-            value: o.T_.DESYNC,
-            variant: o.$7.UNSPECIFIED,
-            label: d.intl.string(u.default["zk+QL1"]),
+            value: s.T_.DESYNC,
+            variant: s.$7.UNSPECIFIED,
+            label: b.intl.string(u.default["zk+QL1"]),
         },
         {
-            value: o.T_.CUTTING,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.K5vYQA),
+            value: s.T_.CUTTING,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.K5vYQA),
         },
     ]);
 }
-function m(e) {
+function h(e) {
     let { isMobile: t } = e;
     return v([
         {
-            value: o.b9.NO_AUDIO,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default["GWypH+"]),
+            value: s.b9.NO_AUDIO,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default["GWypH+"]),
         },
         {
-            value: o.b9.NO_AUDIO,
-            variant: o.$7.OTHERS,
-            label: d.intl.string(u.default.ftSvQ0),
+            value: s.b9.NO_AUDIO,
+            variant: s.$7.OTHERS,
+            label: b.intl.string(u.default.ftSvQ0),
         },
         {
-            value: o.b9.LOW_QUALITY_AUDIO,
-            variant: o.$7.OTHERS,
-            label: d.intl.string(u.default["1DnNRO"]),
+            value: s.b9.LOW_QUALITY_AUDIO,
+            variant: s.$7.OTHERS,
+            label: b.intl.string(u.default["1DnNRO"]),
         },
         {
-            value: o.b9.ROBOT_VOICE,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.yGe0BL),
+            value: s.b9.ROBOT_VOICE,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.yGe0BL),
         },
         {
-            value: o.b9.ECHO,
-            variant: o.$7.OTHERS,
-            label: d.intl.string(u.default.Q5Dsaz),
+            value: s.b9.ECHO,
+            variant: s.$7.OTHERS,
+            label: b.intl.string(u.default.Q5Dsaz),
         },
         {
-            value: o.b9.TOO_QUIET_OR_LOUD,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default["1o77I3"]),
+            value: s.b9.TOO_QUIET_OR_LOUD,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default["1o77I3"]),
         },
         {
-            value: o.b9.CUTTING,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.RK9DUi),
+            value: s.b9.CUTTING,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.RK9DUi),
         },
         {
-            value: o.b9.DELAYED,
-            variant: o.$7.UNSPECIFIED,
-            label: d.intl.string(u.default.RGRgmM),
+            value: s.b9.DELAYED,
+            variant: s.$7.UNSPECIFIED,
+            label: b.intl.string(u.default.RGRgmM),
         },
         {
-            value: o.b9.BACKGROUND_NOISE,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default["anHk1/"]),
+            value: s.b9.BACKGROUND_NOISE,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default["anHk1/"]),
         },
         {
-            value: o.b9.UNABLE_TO_FIND_DEVICE,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default["05VSjm"]),
+            value: s.b9.UNABLE_TO_FIND_DEVICE,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default["05VSjm"]),
         },
         {
-            value: o.b9.COMPLAINTS,
-            variant: o.$7.OTHERS,
-            label: d.intl.string(u.default.kbbtwi),
+            value: s.b9.COMPLAINTS,
+            variant: s.$7.OTHERS,
+            label: b.intl.string(u.default.kbbtwi),
         },
         {
-            value: o.b9.TROUBLE_WITH_SPEAKERPHONE,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default["4qlGrO"]),
+            value: s.b9.TROUBLE_WITH_SPEAKERPHONE,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default["4qlGrO"]),
             disabled: !t,
         },
         {
-            value: o.b9.NO_GAME_AUDIO,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default["2IG95D"]),
+            value: s.b9.NO_GAME_AUDIO,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default["2IG95D"]),
         },
     ]);
 }
-function E() {
+function N() {
     return v([
         {
-            value: o.ct.NO_VIDEO,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default["Bh+02d"]),
+            value: s.ct.NO_VIDEO,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default["Bh+02d"]),
         },
         {
-            value: o.ct.NO_VIDEO,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default["R+wqwU"]),
+            value: s.ct.NO_VIDEO,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default["R+wqwU"]),
         },
         {
-            value: o.ct.FREEZING_OR_HITCHING,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default["8I/GUL"]),
+            value: s.ct.FREEZING_OR_HITCHING,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default["8I/GUL"]),
         },
         {
-            value: o.ct.BLURRY_OR_PIXELATED,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.k7Idoz),
+            value: s.ct.BLURRY_OR_PIXELATED,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.k7Idoz),
         },
         {
-            value: o.ct.UNABLE_TO_ENABLE_DEVICE,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default.QbC6La),
+            value: s.ct.UNABLE_TO_ENABLE_DEVICE,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default.QbC6La),
         },
         {
-            value: o.ct.DESYNC,
-            variant: o.$7.UNSPECIFIED,
-            label: d.intl.string(u.default.vRDE5O),
+            value: s.ct.DESYNC,
+            variant: s.$7.UNSPECIFIED,
+            label: b.intl.string(u.default.vRDE5O),
         },
     ]);
 }
-function p(e) {
+function g(e) {
     let { isStreamer: t } = e;
     return v([
         {
-            value: o.MJ.COULD_NOT_LOAD,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default["w+kiDF"]),
+            value: s.MJ.COULD_NOT_LOAD,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default["w+kiDF"]),
             disabled: !t,
         },
         {
-            value: o.MJ.BLACK_SCREEN,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default.RRZZZb),
+            value: s.MJ.BLACK_SCREEN,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default.RRZZZb),
             disabled: !t,
         },
         {
-            value: o.MJ.FREEZING_OR_HITCHING,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default["3PKSkd"]),
+            value: s.MJ.FREEZING_OR_HITCHING,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default["3PKSkd"]),
             disabled: !t,
         },
         {
-            value: o.MJ.LAG,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default.iMxexK),
+            value: s.MJ.LAG,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default.iMxexK),
             disabled: !t,
         },
         {
-            value: o.MJ.BLURRY_OR_PIXELATED,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default["8ceyQy"]),
+            value: s.MJ.BLURRY_OR_PIXELATED,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default["8ceyQy"]),
             disabled: !t,
         },
         {
-            value: o.MJ.NO_AUDIO,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default.HaZSC3),
+            value: s.MJ.NO_AUDIO,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default.HaZSC3),
             disabled: !t,
         },
         {
-            value: o.MJ.BAD_AUDIO,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default["zIC+8Y"]),
+            value: s.MJ.BAD_AUDIO,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default["zIC+8Y"]),
             disabled: !t,
         },
         {
-            value: o.MJ.STOPPED_UNEXPECTEDLY,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default["/nlKuG"]),
+            value: s.MJ.STOPPED_UNEXPECTEDLY,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default["/nlKuG"]),
             disabled: !t,
         },
         {
-            value: o.MJ.DESYNC,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default.JS6akP),
+            value: s.MJ.DESYNC,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default.JS6akP),
             disabled: !t,
         },
         {
-            value: o.MJ.NO_GAME_AUDIO,
-            variant: o.$7.SELF,
-            label: d.intl.string(u.default.TaIrh5),
+            value: s.MJ.NO_GAME_AUDIO,
+            variant: s.$7.SELF,
+            label: b.intl.string(u.default.TaIrh5),
             disabled: !t,
         },
         {
-            value: o.MJ.COULD_NOT_LOAD,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.jU9Zs8),
+            value: s.MJ.COULD_NOT_LOAD,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.jU9Zs8),
             disabled: t,
         },
         {
-            value: o.MJ.BLACK_SCREEN,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.aml28x),
+            value: s.MJ.BLACK_SCREEN,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.aml28x),
             disabled: t,
         },
         {
-            value: o.MJ.FREEZING_OR_HITCHING,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.V3EeCH),
+            value: s.MJ.FREEZING_OR_HITCHING,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.V3EeCH),
             disabled: t,
         },
         {
-            value: o.MJ.LAG,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.hi1Y39),
+            value: s.MJ.LAG,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.hi1Y39),
             disabled: t,
         },
         {
-            value: o.MJ.BLURRY_OR_PIXELATED,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.qdBn3L),
+            value: s.MJ.BLURRY_OR_PIXELATED,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.qdBn3L),
             disabled: t,
         },
         {
-            value: o.MJ.NO_AUDIO,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.DOOlop),
+            value: s.MJ.NO_AUDIO,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.DOOlop),
             disabled: t,
         },
         {
-            value: o.MJ.BAD_AUDIO,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.k7bdGE),
+            value: s.MJ.BAD_AUDIO,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.k7bdGE),
             disabled: t,
         },
         {
-            value: o.MJ.STOPPED_UNEXPECTEDLY,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.jPD998),
+            value: s.MJ.STOPPED_UNEXPECTEDLY,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.jPD998),
             disabled: t,
         },
         {
-            value: o.MJ.DESYNC,
-            variant: o.$7.SOMEONE,
-            label: d.intl.string(u.default.JfAvQp),
+            value: s.MJ.DESYNC,
+            variant: s.$7.SOMEONE,
+            label: b.intl.string(u.default.JfAvQp),
             disabled: t,
         },
     ]);
 }
-function g() {
+function S() {
     return v([
         {
-            value: o.s_.TOXIC_OR_INAPPROPRIATE,
-            variant: o.$7.OTHERS,
-            label: d.intl.string(u.default.PLBRzF),
+            value: s.s_.TOXIC_OR_INAPPROPRIATE,
+            variant: s.$7.OTHERS,
+            label: b.intl.string(u.default.PLBRzF),
         },
     ]);
 }

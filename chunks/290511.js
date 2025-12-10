@@ -10,7 +10,7 @@ n.d(t, {
     X: () => b,
     YW: () => p,
     a4: () => L,
-    ae: () => A,
+    ae: () => C,
     b3: () => g,
     cf: () => R,
     dr: () => N,
@@ -22,7 +22,7 @@ n.d(t, {
     qm: () => _,
     rZ: () => k,
     t9: () => M,
-    yZ: () => C,
+    yZ: () => A,
     yx: () => m,
     zz: () => I,
 }),
@@ -89,14 +89,14 @@ var O = (function (e) {
     })({});
 function T(e) {
     if (e.options.length > 0) return !1;
-    let t = A(),
+    let t = C(),
         { id: n } = t,
         r = l(t, ["id"]),
         { id: a } = e,
         o = l(e, ["id"]);
     return i()(r, o);
 }
-function A() {
+function C() {
     return {
         id: String(Date.now()),
         title: s.intl.string(s.t.vY91C9),
@@ -107,7 +107,7 @@ function A() {
         type: 0,
     };
 }
-function C(e) {
+function A(e) {
     return {
         id: String(Date.now()),
         title: "",

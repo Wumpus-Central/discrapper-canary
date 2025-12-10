@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(77603),
     I = n(732067),
     T = n(328886),
-    A = n(388032);
-function C(e, t) {
+    C = n(388032);
+function A(e, t) {
     var n;
     let r = (0, h.h)(e),
         i = (0, a.e7)([d.Z, g.Z], () => {
@@ -85,7 +85,7 @@ function P(e) {
             }))
                 ? n
                 : void 0,
-        { openGameProfileModal: j, launchableAppId: M } = C(d.id, E.author.id),
+        { openGameProfileModal: j, launchableAppId: M } = A(d.id, E.author.id),
         k = (0, v.Z)({
             application: d,
             analyticsLocations: a,
@@ -93,7 +93,7 @@ function P(e) {
         U = i.useMemo(() => {
             if (null != k)
                 return {
-                    label: A.intl.string(A.t["jaYS/h"]),
+                    label: C.intl.string(C.t["jaYS/h"]),
                     icon: o.v3n,
                     trackingArea: f.j_.CLOUD_PLAY,
                     onClick: k,

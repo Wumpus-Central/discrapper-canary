@@ -14,8 +14,8 @@ var l = n(54381),
     u = n(471445),
     m = n(592125),
     g = n(271383),
-    h = n(430824),
-    f = n(496675),
+    f = n(430824),
+    h = n(496675),
     N = n(186523),
     I = n(768581),
     p = n(526120),
@@ -51,7 +51,7 @@ function v(e) {
         })(e, ["title", "emojiId", "emojiName", "icon", "completed", "Icon", "onClick"]);
     let m = "channel" === u.variant ? u.channelId : null,
         g = "static" === u.variant ? u.subtitle : u.channelName,
-        h =
+        f =
             null != m
                 ? I.ZP.getNewMemberActionIconURL({
                       channelId: m,
@@ -62,9 +62,9 @@ function v(e) {
         className: a()(j.action, { [j.clickableAction]: null != d }),
         onClick: d,
         children: [
-            null != h
+            null != f
                 ? (0, l.jsx)("img", {
-                      src: h,
+                      src: f,
                       className: j.icon,
                       width: 32,
                       height: 32,
@@ -118,11 +118,11 @@ function v(e) {
 function b(e) {
     var t;
     let { action: n, completed: r } = e,
-        { channelId: a, title: s, emoji: g, icon: h } = n,
+        { channelId: a, title: s, emoji: g, icon: f } = n,
         { id: N, name: I } = null != g ? g : {},
         O = (0, o.e7)([m.Z], () => m.Z.getChannel(a)),
         E = (0, d.ZP)(O, !0),
-        S = (0, o.e7)([f.Z], () => f.Z.can(x.Plq.VIEW_CHANNEL, O)),
+        S = (0, o.e7)([h.Z], () => h.Z.can(x.Plq.VIEW_CHANNEL, O)),
         T = i.useMemo(() => {
             if (null != O) return () => (0, p.gp)(O.guild_id, O.id);
         }, [O]);
@@ -135,7 +135,7 @@ function b(e) {
         channelName: E,
         emojiId: N,
         emojiName: I,
-        icon: h,
+        icon: f,
         completed: r,
         Icon: _,
         onClick: T,
@@ -146,7 +146,7 @@ function D(e) {
         n = (0, o.e7)([O.Z], () => O.Z.getNewMemberActions(t), [t]),
         r = (0, o.e7)([E.Z], () => E.Z.getCompletedActions(t)),
         d = (0, o.e7)([g.ZP], () => g.ZP.getSelfMember(t)),
-        u = (0, o.e7)([h.Z], () => h.Z.getGuild(t));
+        u = (0, o.e7)([f.Z], () => f.Z.getGuild(t));
     i.useEffect(() => {
         var e;
         null == r &&

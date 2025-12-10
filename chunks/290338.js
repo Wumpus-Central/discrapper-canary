@@ -24,11 +24,11 @@ let v = (0, O.createContext)(null),
     T = (0, O.forwardRef)(function (e, t) {
         var n, T;
         [e, t] = (0, a.pE)(e, t, v);
-        let { validationBehavior: A } = (0, a.jn)(c.q) || {},
-            C = null != (T = null != (n = e.validationBehavior) ? n : A) ? T : "native",
+        let { validationBehavior: C } = (0, a.jn)(c.q) || {},
+            A = null != (T = null != (n = e.validationBehavior) ? n : C) ? T : "native",
             N = (0, g.N)({
                 ...e,
-                validationBehavior: C,
+                validationBehavior: A,
             }),
             P = (0, O.useRef)(null),
             [R, D] = (0, a.xc)(!e["aria-label"] && !e["aria-labelledby"]),
@@ -46,7 +46,7 @@ let v = (0, O.createContext)(null),
                 {
                     ...(0, a.vl)(e),
                     label: D,
-                    validationBehavior: C,
+                    validationBehavior: A,
                 },
                 N,
                 P,

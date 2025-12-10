@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685), n(539854);
+n.d(t, { Z: () => C }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(149765),
@@ -49,11 +49,11 @@ function T(e) {
     }
     return e;
 }
-function A(e) {
+function C(e) {
     let { guildId: t } = e,
         n = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         I = (0, o.e7)([_.Z], () => _.Z.getGuild(t)),
-        A = (0, o.e7)([p.Z], () => p.Z.getRolesSnapshot(t)),
+        C = (0, o.e7)([p.Z], () => p.Z.getRolesSnapshot(t)),
         N = (0, o.e7)([p.Z], () => p.Z.getSortedRoles(t)),
         { impersonateType: P, viewingRoles: R } = (0, o.cj)([b.Z], () => ({
             impersonateType: b.Z.getImpersonateType(t),
@@ -61,7 +61,7 @@ function A(e) {
         })),
         D = P === y.z.SERVER_SHOP,
         w = (0, o.e7)([f.ZP], () => (null != n ? f.ZP.getTrueMember(t, n.id) : null)),
-        x = null != I ? A[(0, u.lV)(I)] : null,
+        x = null != I ? C[(0, u.lV)(I)] : null,
         [L, j] = i.useState(() => {
             let e = null == R ? [] : g.default.keys(R);
             return null != x && e.push(x.id), e;
@@ -72,7 +72,7 @@ function A(e) {
             t = M.current;
         if (null != t && null != P) {
             for (let t of L) {
-                let n = A[t];
+                let n = C[t];
                 null != n && (e[t] = n);
             }
             (0, E.Zm)(t.id, {
@@ -80,7 +80,7 @@ function A(e) {
                 roles: e,
             });
         }
-    }, [L, P, A]);
+    }, [L, P, C]);
     let k = null != I && null != n && null != w ? N.find((e) => w.roles.includes(e.id)) : void 0,
         U = i.useMemo(
             () =>
@@ -96,7 +96,7 @@ function A(e) {
         ),
         G = i.useMemo(() => {
             let e = Array.from(U).map((e) => ({
-                leading: C(e),
+                leading: A(e),
                 value: e.id,
                 label: e.name,
                 id: e.id.toString(),
@@ -106,7 +106,7 @@ function A(e) {
                 null != I &&
                     null != x &&
                     e.push({
-                        leading: C(x),
+                        leading: A(x),
                         value: x.id,
                         label: x.name,
                         id: x.id.toString(),
@@ -118,7 +118,7 @@ function A(e) {
     if (null == n || null == I || null == w) return null;
     let Z = {};
     return (w.roles.forEach((e) => {
-        let t = A[e];
+        let t = C[e];
         null != t && (Z[t.id] = t);
     }),
     a.e$(
@@ -152,7 +152,7 @@ function A(e) {
               children: v.intl.string(v.t.MNSTbY),
           });
 }
-function C(e) {
+function A(e) {
     return () => {
         var t;
         return (0, r.jsx)("svg", {

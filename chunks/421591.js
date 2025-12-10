@@ -100,7 +100,7 @@ function S(e, t) {
                     value: d,
                     children: (0, r.jsx)(T, {
                         initHistory: u,
-                        children: (0, r.jsx)(A, {
+                        children: (0, r.jsx)(C, {
                             context: n,
                             entrypoint: a,
                         }),
@@ -146,10 +146,10 @@ function T(e) {
         children: n,
     });
 }
-function A(e) {
+function C(e) {
     let { context: t, entrypoint: n } = e,
         [o, s] = i.useState(""),
-        { setScroller: l, isCloseToBottom: c } = C(o),
+        { setScroller: l, isCloseToBottom: c } = A(o),
         { currentView: m, getMostRecentHistoryItemByType: g, setSlideReady: E } = (0, u.hH)();
     i.useEffect(() => {
         E(!1);
@@ -215,7 +215,7 @@ function A(e) {
         ],
     });
 }
-function C(e) {
+function A(e) {
     let [t, n] = i.useState(null),
         [r, a] = i.useState(!1),
         o = i.useRef(0);

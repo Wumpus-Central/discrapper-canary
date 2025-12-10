@@ -86,7 +86,7 @@ var u = n(365702),
         });
         return e.concat(i.reverse());
     },
-    A = function (e, t) {
+    C = function (e, t) {
         return e.map(I).reduce(function (n, i, a) {
             Array.isArray(i.children) || g(!1);
             var s = i.children.map(I),
@@ -130,7 +130,7 @@ var u = n(365702),
             return n;
         }, O());
     },
-    C = function (e, t) {
+    A = function (e, t) {
         return O(
             e.map(function (e) {
                 var n = new a(v(e, t));
@@ -143,7 +143,7 @@ var u = n(365702),
                 return Array.isArray(e.children) && e.children.length > 0;
             }),
             r = E && !n ? c.fromRawStateToRawTreeState(e).blocks : e.blocks;
-        return E ? A(r, t) : C(n ? c.fromRawTreeStateToRawState(e).blocks : r, t);
+        return E ? C(r, t) : A(n ? c.fromRawTreeStateToRawState(e).blocks : r, t);
     },
     P = function (e) {
         var t = e.entityMap,

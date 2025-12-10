@@ -69,14 +69,14 @@ function T(e, t) {
     let r = l.Z.getChannel(t);
     return null != r && !!r.isGuildStageVoice() && (null == (n = b[t]) || delete n[e], !0);
 }
-function A(e, t) {
+function C(e, t) {
     for (let n in b) {
         let r = l.Z.getBasicChannel(n);
         null != r && r.guild_id === t && delete b[n][e];
     }
     return !0;
 }
-function C(e) {
+function A(e) {
     let t = Object.values(l.Z.getMutableGuildChannelsForGuild(e)).filter((e) => e.isGuildStageVoice());
     for (let e of t) delete b[e.id];
     return t.length > 0;
@@ -87,11 +87,11 @@ function N(e) {
 }
 function P(e) {
     let { guildId: t } = e;
-    C(t);
+    A(t);
 }
 function R(e) {
     let { guildId: t, user: n } = e;
-    return null != n && null != t && A(n.id, t);
+    return null != n && null != t && C(n.id, t);
 }
 function D(e) {
     let { voiceStates: t } = e;
@@ -104,7 +104,7 @@ function D(e) {
     );
 }
 function w(e) {
-    return C(e.guildId);
+    return A(e.guildId);
 }
 function x() {
     b = {};

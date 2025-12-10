@@ -14,8 +14,8 @@ var i = n(581282),
     d = n(906732),
     p = n(266454),
     f = n(960048),
-    h = n(276792),
-    g = n(290347);
+    g = n(276792),
+    h = n(290347);
 function m(e) {
     let { promotionId: t, content: n, isPreview: r } = e,
         s = a.t.fromBinary((0, i.c)(n));
@@ -32,7 +32,7 @@ function _(e) {
         m = (0, c.ZP)(),
         _ = (0, s.apv)(m);
     if ("announcementModalVariant1" === l.properties.oneofKind) {
-        let e = (0, h.N)({
+        let e = (0, g.N)({
             componentId: t,
             promotionId: n,
             content: l.properties.announcementModalVariant1,
@@ -42,7 +42,7 @@ function _(e) {
             isLightTheme: _,
         });
         return (0, r.jsx)(
-            g.Z,
+            h.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

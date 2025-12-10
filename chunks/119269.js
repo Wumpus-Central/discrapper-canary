@@ -56,12 +56,12 @@ let h = (e) => {
                 circleStroke: I,
             } = e,
             T = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-            A = t && !T,
-            C = () => {
+            C = t && !T,
+            A = () => {
                 switch (E) {
                     case 0:
                         return (0, r.jsx)(d.Z, {
-                            className: A ? _.nitroGemAnimation : void 0,
+                            className: C ? _.nitroGemAnimation : void 0,
                             backgroundColor: o()(_.gemBackgroundFill, a),
                             backgroundCircleSize: u,
                         });
@@ -85,15 +85,15 @@ let h = (e) => {
             className: o()(_.progressCircle, n),
             children: (0, r.jsx)(p.Z, {
                 animationClassName: o()(_.activeProgressCircle, {
-                    [_.activeProgressCircleAnimation]: A,
-                    [null != v ? v : ""]: A,
+                    [_.activeProgressCircleAnimation]: C,
+                    [null != v ? v : ""]: C,
                 }),
                 progressCircleStroke: I,
                 progressCircleStrokeSize: l,
                 percentage: null != i ? i : m,
                 initialPercentage: null != i ? i : g,
                 progressCircleVariation: E,
-                children: C(),
+                children: A(),
             }),
         });
     };

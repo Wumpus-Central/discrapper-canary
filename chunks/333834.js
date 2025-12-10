@@ -203,11 +203,11 @@ function R(e) {
             );
         }, [t, n]),
         q = 0 === t.length && 0 === n.length && B,
-        Q = 0 === t.length && 0 === n.length && !F && U,
-        X = i.useMemo(() => {
+        X = 0 === t.length && 0 === n.length && !F && U,
+        Q = i.useMemo(() => {
             let e = [];
             return (
-                Q
+                X
                     ? e.push(a())
                     : q
                       ? e.push((0, r.jsx)(A, {}, "empty-state"))
@@ -238,13 +238,13 @@ function R(e) {
                           }),
                 e
             );
-        }, [t, n, a, H, W, Y, R, h, q, Q, D]),
-        J = X[X.length - 1],
+        }, [t, n, a, H, W, Y, R, h, q, X, D]),
+        J = Q[Q.length - 1],
         $ = i.isValidElement(J) && J.type === w,
         ee = (0, x.d)((e) => e.setInboxReadState);
     i.useEffect(() => {
-        Q || ee(0 === Y.UNREAD.length);
-    }, [Y, Q, ee]);
+        X || ee(0 === Y.UNREAD.length);
+    }, [Y, X, ee]);
     let et = (t.length > 0 || n.length > 0) && null != l && U;
     !(function (e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
@@ -265,8 +265,8 @@ function R(e) {
         return null == n ? 0 : Math.max(0, Math.ceil(n.offsetHeight / 64) - t);
     }, [H, Y]);
     i.useEffect(() => {
-        Q || U || 0 >= en() || ((!$ || z) && (null == l || l(E.X.FILL_SCROLLER)));
-    }, [en, l, Q, U, $, z]);
+        X || U || 0 >= en() || ((!$ || z) && (null == l || l(E.X.FILL_SCROLLER)));
+    }, [en, l, X, U, $, z]);
     let er = i.useMemo(() => {
         let e = Math.min(Math.max(2, en()), 20);
         return (0, r.jsx)(C.Z, {
@@ -360,7 +360,7 @@ function R(e) {
                             )),
                             (n = n =
                                 {
-                                    children: [X, et && !$ ? er : null],
+                                    children: [Q, et && !$ ? er : null],
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

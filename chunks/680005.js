@@ -118,7 +118,7 @@ function I(e) {
         u = null != o ? (0, f.xg)(o) : null,
         d = 1 === l;
     return 0 === l || d
-        ? (0, r.jsx)(A, {
+        ? (0, r.jsx)(C, {
               appId: t,
               skuId: a,
               onClick: c,
@@ -126,7 +126,7 @@ function I(e) {
               icon: s,
               text: null != u ? m.intl.formatToPlainString(m.t.i4T8vz, { rate: u }) : m.intl.string(m.t.uuzaAK),
           })
-        : (0, r.jsx)(C, { text: S(l, null != u ? u : "") });
+        : (0, r.jsx)(A, { text: S(l, null != u ? u : "") });
 }
 function T(e) {
     let { appId: t, onClick: n, onHasClicked: i, sku: a, icon: l } = e,
@@ -146,8 +146,8 @@ function T(e) {
         (null != n ? n : d)(e), null == i || i();
     };
     return g
-        ? (0, r.jsx)(C, { text: m.intl.string(m.t["6cfuDj"]) })
-        : (0, r.jsx)(A, {
+        ? (0, r.jsx)(A, { text: m.intl.string(m.t["6cfuDj"]) })
+        : (0, r.jsx)(C, {
               appId: t,
               skuId: a.id,
               onClick: b,
@@ -155,7 +155,7 @@ function T(e) {
               icon: l,
           });
 }
-function A(e) {
+function C(e) {
     var { appId: t, skuId: n, onClick: o } = e,
         s = y(e, ["appId", "skuId", "onClick"]);
     let c = (0, l.Z)(),
@@ -177,7 +177,7 @@ function A(e) {
         };
     return (0, r.jsx)(a.Button, b(g({}, s), { onClick: f }));
 }
-function C(e) {
+function A(e) {
     let { text: t } = e;
     return (0, r.jsx)(a.Button, {
         text: t,

@@ -143,7 +143,7 @@ function T(e) {
         m.set(t, _(f({}, e), { hidden: !1 }));
     }
 }
-function A(e) {
+function C(e) {
     let { id: t } = e,
         n = m.get(t);
     null != n &&
@@ -153,7 +153,7 @@ function A(e) {
               ? (i = t)
               : n.component === c.NYg.FRAME && (a = t));
 }
-function C() {
+function A() {
     (r = null), (i = null), (a = null), (m = new Map());
 }
 class N extends (o = s.ZP.PersistedStore) {
@@ -230,6 +230,6 @@ let P = new N(l.Z, {
     PICTURE_IN_PICTURE_HIDE: I,
     PICTURE_IN_PICTURE_SHOW: T,
     PICTURE_IN_PICTURE_UPDATE_RECT: S,
-    PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: A,
-    LOGOUT: C,
+    PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: C,
+    LOGOUT: A,
 });

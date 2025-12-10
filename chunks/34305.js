@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(579022),
     p = n(391690),
     f = n(424218),
-    h = n(358085),
-    g = n(998502),
+    g = n(358085),
+    h = n(998502),
     m = n(388032),
     _ = n(499126),
     b = n(197571);
@@ -262,7 +262,7 @@ class v extends i.PureComponent {
                             variant: "primary",
                             size: "sm",
                             text: m.intl.string(m.t.pnZ2uk),
-                            disabled: !h.isPlatformEmbedded,
+                            disabled: !g.isPlatformEmbedded,
                             onClick: this.handleAddInstallationLocation,
                         }),
                     }),
@@ -274,7 +274,7 @@ class v extends i.PureComponent {
         super(...e),
             E(this, "state", { editingPath: null }),
             E(this, "handleAddInstallationLocation", () => {
-                g.ZP.showOpenDialog(["openDirectory"]).then((e) => {
+                h.ZP.showOpenDialog(["openDirectory"]).then((e) => {
                     null != e && 0 !== e.length && null != e[0] && "undefined" !== e[0] && (0, o.RY)(e[0]);
                 });
             }),

@@ -276,7 +276,7 @@ let R = (e) => {
             }),
             { analyticsLocations: W } = (0, o.ZP)(s.Z.COLLECTIBLES_SHOP_CARD),
             z = (0, C.J7)(t, s.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON, u),
-            [K, q] = (0, i.Wu)([g.Z], () => [
+            [q, K] = (0, i.Wu)([g.Z], () => [
                 g.Z.isClaiming === t.skuId,
                 null != g.Z.isClaiming && g.Z.isClaiming !== t.skuId,
             ]),
@@ -289,7 +289,7 @@ let R = (e) => {
             });
         if (E && !p && !N)
             return (0, a.jsx)(A, {
-                isClaimPremiumProductDisabled: q,
+                isClaimPremiumProductDisabled: K,
                 text: c,
             });
         if (!w || P)
@@ -306,8 +306,8 @@ let R = (e) => {
         if (E)
             return (0, a.jsx)(M, {
                 product: t,
-                isClaimPremiumProductDisabled: q,
-                isClaiming: K,
+                isClaimPremiumProductDisabled: K,
+                isClaiming: q,
                 analyticsLocations: W,
                 text: c,
                 onClickAnalytics: u,

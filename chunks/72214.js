@@ -1,11 +1,11 @@
-n.d(t, { s: () => m }), n(388685), n(35282);
+n.d(t, { s: () => h }), n(388685), n(35282);
 var l = n(473749),
     r = n(442837),
-    i = n(38618),
+    s = n(38618),
     a = n(51596),
-    s = n(516373),
-    o = n(314897),
-    u = n(580005),
+    i = n(516373),
+    u = n(314897),
+    o = n(580005),
     c = n(987509),
     d = n(601565),
     b = n(41837);
@@ -22,57 +22,57 @@ function f(e) {
         }
     );
 }
-function m(e) {
+function h(e) {
     let { targetDestination: t, selectedDestinations: n, originDestination: a, includeMissingDMs: b = !1 } = e,
-        m = (0, r.e7)([o.default], () => o.default.getId()),
-        p = l.useMemo(
+        h = (0, r.e7)([u.default], () => u.default.getId()),
+        m = l.useMemo(
             () => ({
                 searchOptions: {
-                    blacklist: new Set(["user:".concat(m)]),
+                    blacklist: new Set(["user:".concat(h)]),
                     frecencyBoosters: !0,
                     userFilters: null,
                 },
             }),
-            [m],
+            [h],
         ),
-        { search: h, query: g, results: v } = (0, d.Z)(p),
-        [x, y] = l.useState(f("")),
-        j = l.useCallback((e) => y(f(e)), [y]),
-        { queryMode: S } = x,
-        O = l.useRef(null),
-        P = l.useRef(n),
-        _ = g !== O.current ? n : P.current;
+        { search: p, query: g, results: x } = (0, d.Z)(m),
+        [y, j] = l.useState(f("")),
+        v = l.useCallback((e) => j(f(e)), [j]),
+        { queryMode: S } = y,
+        P = l.useRef(null),
+        O = l.useRef(n),
+        _ = g !== P.current ? n : O.current;
     l.useEffect(() => {
-        g !== O.current && (P.current = n), (O.current = g);
+        g !== P.current && (O.current = n), (P.current = g);
     }, [g, n]),
         l.useLayoutEffect(() => {
-            let { query: e, resultTypes: t } = x;
-            h({
+            let { query: e, resultTypes: t } = y;
+            p({
                 query: e,
                 resultTypes: t,
             });
-        }, [h, x]),
-        (0, s.D)();
-    let w = (0, r.e7)([u.Z], () => u.Z.getFrequentlyWithoutFetchingLatest()),
-        C = (0, r.e7)([i.Z], () => i.Z.isConnected()),
-        Z = "" !== g;
+        }, [p, y]),
+        (0, i.D)();
+    let Z = (0, r.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
+        E = (0, r.e7)([s.Z], () => s.Z.isConnected()),
+        L = "" !== g;
     return {
         results: l.useMemo(
             () =>
                 (0, c.ZP)({
-                    results: v,
-                    hasQuery: Z,
+                    results: x,
+                    hasQuery: L,
                     queryMode: S,
                     targetDestination: t,
-                    frequentChannels: w,
+                    frequentChannels: Z,
                     selectedDestinations: n,
                     pinnedDestinations: _,
                     originDestination: a,
                     includeMissingDMs: b,
-                    isConnected: C,
+                    isConnected: E,
                 }),
-            [v, Z, S, t, w, n, _, a, b, C],
+            [x, L, S, t, Z, n, _, a, b, E],
         ),
-        updateSearchText: j,
+        updateSearchText: v,
     };
 }

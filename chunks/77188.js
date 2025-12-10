@@ -35,7 +35,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function A(e) {
     }
     return e;
 }
-function C(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,7 +68,7 @@ function N(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -86,7 +86,7 @@ function P(e) {
                     focus: I.nO,
                 }),
                 R(
-                    N(A({}, e), {
+                    N(C({}, e), {
                         editor: r,
                         windowContext: t,
                         previewMarkdown: n,
@@ -123,8 +123,8 @@ function R(e) {
             windowContext: u,
             previewMarkdown: I,
             forTests: T,
-            onChangeStart: A,
-            onChangeEnd: C,
+            onChangeStart: C,
+            onChangeEnd: A,
             updateState: N,
         } = e,
         P = a,
@@ -149,7 +149,7 @@ function R(e) {
         (P = (0, h.Z)(P)),
         (P = (0, _.Z)(P)),
         (P = (0, O.Z)(P)),
-        (P = (0, S.Z)(P, A, C)),
+        (P = (0, S.Z)(P, C, A)),
         (P = (0, m.Z)(P, (e) => {
             let { newValue: t, newSelection: n } = e;
             return N(P, "undo", {

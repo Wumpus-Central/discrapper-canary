@@ -39,8 +39,8 @@ let O = [],
     S = null,
     I = new Set(),
     T = l.z.LATEST_ACTIVITY,
-    A = s.z.MATCH_SOME,
-    C = 0,
+    C = s.z.MATCH_SOME,
+    A = 0,
     N = [],
     P = !1,
     R = [],
@@ -83,8 +83,8 @@ function G() {
         (S = null),
         (I = new Set()),
         (T = l.z.LATEST_ACTIVITY),
-        (A = s.z.MATCH_SOME),
-        (C = 0),
+        (C = s.z.MATCH_SOME),
+        (A = 0),
         (R = []),
         (D = o().chain(O)),
         (w = o().chain(O)),
@@ -116,14 +116,14 @@ function F(e) {
             let { id: t } = e;
             return t;
         })),
-        (C = 0),
+        (A = 0),
         (P = !0)),
         0 !== x.size && ((R = R.filter((e) => !x.has(e))), x.clear()),
         0 !== L.size && ((R = Array.from(new Set([...R, ...L]))), L.clear()),
         ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) &&
             ((w = o().chain(R).sort(k(l.z.LATEST_ACTIVITY))), (D = o().chain(R).sort(k(l.z.CREATION_DATE))));
     let n = (T === l.z.LATEST_ACTIVITY ? w : D).value(),
-        i = (N = 0 === I.size ? n : n.filter(U(I, A))).find((e) => M(e));
+        i = (N = 0 === I.size ? n : n.filter(U(I, C))).find((e) => M(e));
     r = null == i ? null : i;
 }
 function V(e) {
@@ -146,7 +146,7 @@ function H(e) {
 function Y(e) {
     let { channel: t, isNewlyCreated: n } = e;
     if (null == t.parent_id || t.parent_id !== S || !n) return !1;
-    t.ownerId !== _.default.getId() ? C++ : (v = t.id);
+    t.ownerId !== _.default.getId() ? A++ : (v = t.id);
 }
 function W(e) {
     let { channel: t } = e;
@@ -173,7 +173,7 @@ class Q extends (i = u.ZP.Store) {
         this.waitFor(f.Z, _.default, m.Z, h.ZP, g.Z, p.Z);
     }
     getNewThreadCount() {
-        return C;
+        return A;
     }
     getCanAckThreads() {
         return P;
@@ -182,12 +182,12 @@ class Q extends (i = u.ZP.Store) {
         let i = e !== S,
             a = !(0, c.O)(n, I),
             o = t !== T,
-            s = r !== A;
+            s = r !== C;
         return (
             (S = e),
             (I = n),
             (T = t),
-            (A = r),
+            (C = r),
             i ? F({ refreshThreadIds: !0 }) : o ? F({ sortThreadIds: !0 }) : (a || s) && F(),
             N
         );

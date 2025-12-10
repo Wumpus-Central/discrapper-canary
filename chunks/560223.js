@@ -107,12 +107,12 @@ let S = (e) => {
                 headerClassname: I,
             } = e,
             T = i.useRef(null),
-            A = n === m.gM.WHATS_NEW,
-            C = (0, p.x)();
+            C = n === m.gM.WHATS_NEW,
+            A = (0, p.x)();
         i.useEffect(() => {
-            A && C();
-        }, [C, A]);
-        let N = (0, h.re)(A),
+            C && A();
+        }, [A, C]);
+        let N = (0, h.re)(C),
             P = (0, _.Z)(),
             R = (0, h.mN)(),
             { fractionalState: D } = (0, l.Z)(),
@@ -155,7 +155,7 @@ let S = (e) => {
                     className: o()(E.subtitle, {
                         [E.subtitle]: null == O || b,
                         [E.subtitleWithButton]: null != O && !b,
-                        [E.fullWidth]: A || b,
+                        [E.fullWidth]: C || b,
                         [E.moreSubtitleMargin]: k,
                         [E.leftAlignSubtitle]: b,
                         [E.centerAlignSubtitle]: !b,

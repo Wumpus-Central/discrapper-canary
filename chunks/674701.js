@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => A });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,12 +50,12 @@ function A(e) {
     }
     return e;
 }
-function C(e) {
+function A(e) {
     let {
             giftIntentType: t,
             recipientUser: a,
             onMouseEnter: T,
-            onMouseLeave: C,
+            onMouseLeave: A,
             popoutPosition: N,
             analyticsPage: P,
             analyticsSection: R,
@@ -106,7 +106,7 @@ function C(e) {
         ref: w,
         className: o()(I.content, { [I.outerGlow]: D }),
         onMouseEnter: T,
-        onMouseLeave: C,
+        onMouseLeave: A,
         children: (0, r.jsxs)("div", {
             className: o()(I.innerContent, { [I.innerGlow]: D }),
             children: [
@@ -168,7 +168,7 @@ function C(e) {
                             onClick: () => {
                                 (0, u.ZDy)(async () => {
                                     let { default: e } = await n.e("5890").then(n.bind(n, 171793));
-                                    return (t) => (0, r.jsx)(e, A({}, t));
+                                    return (t) => (0, r.jsx)(e, C({}, t));
                                 });
                             },
                         }),

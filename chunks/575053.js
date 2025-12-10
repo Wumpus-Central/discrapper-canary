@@ -223,7 +223,7 @@
         T = function (e) {
             return I(e) && "function" == typeof e.then;
         },
-        A = function (e) {
+        C = function (e) {
             return (
                 I(e) &&
                 "function" == typeof e.elements &&
@@ -232,13 +232,13 @@
                 "function" == typeof e.confirmCardPayment
             );
         },
-        C = "[object Object]",
+        A = "[object Object]",
         N = function e(t, n) {
             if (!I(t) || !I(n)) return t === n;
             var r = Array.isArray(t);
             if (r !== Array.isArray(n)) return !1;
-            var i = Object.prototype.toString.call(t) === C;
-            if (i !== (Object.prototype.toString.call(n) === C)) return !1;
+            var i = Object.prototype.toString.call(t) === A;
+            if (i !== (Object.prototype.toString.call(n) === A)) return !1;
             if (!i && !r) return t === n;
             var a = Object.keys(t),
                 o = Object.keys(n);
@@ -274,7 +274,7 @@
             "Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.",
         D = function (e) {
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : R;
-            if (null === e || A(e)) return e;
+            if (null === e || C(e)) return e;
             throw Error(t);
         },
         w = function (e) {
@@ -597,9 +597,9 @@
                         O = n.onCancel,
                         I = n.onShippingAddressChange,
                         T = n.onShippingRateChange,
-                        A = z("mounts <".concat(r, ">")),
-                        C = "elements" in A ? A.elements : null,
-                        N = "checkoutSdk" in A ? A.checkoutSdk : null,
+                        C = z("mounts <".concat(r, ">")),
+                        A = "elements" in C ? C.elements : null,
+                        N = "checkoutSdk" in C ? C.checkoutSdk : null,
                         R = l(t.useState(null), 2),
                         D = R[0],
                         w = R[1],
@@ -627,7 +627,7 @@
                         v(D, "ready", i),
                         t.useLayoutEffect(
                             function () {
-                                if (null === x.current && null !== L.current && (C || N)) {
+                                if (null === x.current && null !== L.current && (A || N)) {
                                     var t = null;
                                     if (N)
                                         switch (e) {
@@ -663,11 +663,11 @@
                                                     ),
                                                 );
                                         }
-                                    else C && (t = C.create(e, u));
+                                    else A && (t = A.create(e, u));
                                     (x.current = t), w(t), t && t.mount(L.current);
                                 }
                             },
-                            [C, N, u],
+                            [A, N, u],
                         );
                     var j = S(u);
                     return (
@@ -911,11 +911,11 @@
         eS = J("address", $),
         eI = J("shippingAddress", $),
         eT = J("paymentMethodMessaging", $),
-        eA = J("affirmMessage", $),
-        eC = J("afterpayClearpayMessage", $);
+        eC = J("affirmMessage", $),
+        eA = J("afterpayClearpayMessage", $);
     (e.AddressElement = eS),
-        (e.AffirmMessageElement = eA),
-        (e.AfterpayClearpayMessageElement = eC),
+        (e.AffirmMessageElement = eC),
+        (e.AfterpayClearpayMessageElement = eA),
         (e.AuBankAccountElement = el),
         (e.CardCvcElement = ef),
         (e.CardElement = ec),

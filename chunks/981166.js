@@ -1,8 +1,8 @@
 n.d(t, {
     E: () => T,
-    Jz: () => A,
+    Jz: () => C,
     Kf: () => N,
-    _w: () => C,
+    _w: () => A,
     mG: () => D,
 });
 var r = n(990415),
@@ -111,10 +111,10 @@ function I(e) {
 function T() {
     return "pointer" !== c;
 }
-function A() {
+function C() {
     return c;
 }
-function C(e) {
+function A(e) {
     (c = e), m(e, null);
 }
 function N() {

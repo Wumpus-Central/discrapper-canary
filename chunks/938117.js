@@ -75,12 +75,12 @@ function I(e) {
             onSelectBackgroundOption: v,
             currentDeviceId: I,
             responsiveBackgroundOptions: T,
-            className: A,
+            className: C,
         } = e,
-        C = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
+        A = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
         [N, P] = i.useState(null),
         R = (0, _.Z)(),
-        D = c.ZP.canUseCustomBackgrounds(C);
+        D = c.ZP.canUseCustomBackgrounds(A);
     i.useEffect(() => {
         (0, u.XV)();
     }, []);
@@ -135,7 +135,7 @@ function I(e) {
         };
     return R
         ? (0, r.jsx)("div", {
-              className: A,
+              className: C,
               children: (0, r.jsx)(o.gNt, {
                   label: b.intl.string(b.t.lZTUPs),
                   errorMessage: N,

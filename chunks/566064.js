@@ -51,7 +51,7 @@ function f(e) {
         v = r.useRef(b),
         S = u(c(t, f, p)),
         [I, T] = r.useState(!1),
-        [A, C] = r.useState(!1),
+        [C, A] = r.useState(!1),
         [N, P] = r.useState(!1),
         [R] = r.useState(
             () =>
@@ -80,7 +80,7 @@ function f(e) {
                 let r = c(t, e, n);
                 (null != m ? m(e, n, r) : Promise.resolve()).then(() => {
                     let e = u(r);
-                    null != e ? (D(e), C(!1)) : requestAnimationFrame(() => C(!0));
+                    null != e ? (D(e), A(!1)) : requestAnimationFrame(() => A(!0));
                 });
             },
             [t, m, D],
@@ -118,8 +118,8 @@ function f(e) {
         v.current && null == e && j(!0);
     }, []);
     r.useEffect(() => {
-        I && A && null != S && (D(S), C(!1));
-    }, [A, S]),
+        I && C && null != S && (D(S), A(!1));
+    }, [C, S]),
         r.useEffect(() => {
             I && (N || w(f, p), P(!1));
         }, [f, p]);

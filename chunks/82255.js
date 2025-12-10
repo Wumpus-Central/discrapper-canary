@@ -6,7 +6,7 @@ r.d(t, {
     HR: () => p,
     Hb: () => T,
     Tt: () => O,
-    XU: () => f,
+    XU: () => N,
     _4: () => h,
     ed: () => L,
     i0: () => I,
@@ -29,7 +29,7 @@ let d = 0,
     I = 1;
 function p(e) {
     let { spanId: t, traceId: r } = e.spanContext(),
-        { data: a, op: i, parent_span_id: o, status: _, origin: s } = f(e);
+        { data: a, op: i, parent_span_id: o, status: _, origin: s } = N(e);
     return (0, n.Jr)({
         parent_span_id: o,
         span_id: t,
@@ -42,7 +42,7 @@ function p(e) {
 }
 function R(e) {
     let { spanId: t, traceId: r } = e.spanContext(),
-        { parent_span_id: a } = f(e);
+        { parent_span_id: a } = N(e);
     return (0, n.Jr)({
         parent_span_id: a,
         span_id: t,
@@ -56,17 +56,17 @@ function T(e) {
 }
 function A(e) {
     return "number" == typeof e
-        ? N(e)
+        ? f(e)
         : Array.isArray(e)
           ? e[0] + e[1] / 1000000000
           : e instanceof Date
-            ? N(e.getTime())
+            ? f(e.getTime())
             : (0, i.ph)();
 }
-function N(e) {
+function f(e) {
     return e > 9999999999 ? e / 1000 : e;
 }
-function f(e) {
+function N(e) {
     if ("function" == typeof e.getSpanJSON) return e.getSpanJSON();
     try {
         var t;
@@ -102,26 +102,26 @@ function O(e) {
 function h(e) {
     if (e && e.code !== l.pq) return e.code === l.OP ? "ok" : e.message || "unknown_error";
 }
-let D = "_sentryChildSpans",
-    S = "_sentryRootSpan";
+let S = "_sentryChildSpans",
+    D = "_sentryRootSpan";
 function C(e, t) {
-    let r = e[S] || e;
-    (0, n.xp)(t, S, r), e[D] ? e[D].add(t) : (0, n.xp)(e, D, new Set([t]));
+    let r = e[D] || e;
+    (0, n.xp)(t, D, r), e[S] ? e[S].add(t) : (0, n.xp)(e, S, new Set([t]));
 }
 function L(e, t) {
-    e[D] && e[D].delete(t);
+    e[S] && e[S].delete(t);
 }
 function g(e) {
     let t = new Set();
     return (
         !(function e(r) {
-            if (!t.has(r) && O(r)) for (let n of (t.add(r), r[D] ? Array.from(r[D]) : [])) e(n);
+            if (!t.has(r) && O(r)) for (let n of (t.add(r), r[S] ? Array.from(r[S]) : [])) e(n);
         })(e),
         Array.from(t)
     );
 }
 function m(e) {
-    return e[S] || e;
+    return e[D] || e;
 }
 function y() {
     let e = (0, _.c)(),

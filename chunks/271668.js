@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(581364),
     I = n(56801),
     T = n(342687),
-    A = n(826298),
-    C = n(689079),
+    C = n(826298),
+    A = n(689079),
     N = n(981631),
     P = n(388032),
     R = n(57507),
@@ -71,7 +71,7 @@ let w = 512,
                 },
                 options: {
                     placeholderCount: x,
-                    limit: C.tn,
+                    limit: A.tn,
                     includeFrecency: !0,
                 },
                 allowFetch: !0,
@@ -114,7 +114,7 @@ let w = 512,
             }, [J, $]);
         let es = i.useCallback(
                 (e) => {
-                    if (e.id === $ || e.id === C.bi.FRECENCY) {
+                    if (e.id === $ || e.id === A.bi.FRECENCY) {
                         var t;
                         et(null), null == (t = H.current) || t.scrollToSectionTop(0);
                     } else et(e.id);
@@ -164,7 +164,7 @@ let w = 512,
                 (e) => {
                     let t = q[e];
                     if (null == t) return null;
-                    let i = (0, A.ky)(t),
+                    let i = (0, C.ky)(t),
                         a = (0, r.jsx)(i, {
                             channel: n,
                             section: t,
@@ -218,7 +218,7 @@ let w = 512,
                         s = "".concat(a.section.id, ":").concat(null != (i = null == o ? void 0 : o.id) ? i : e);
                     if (
                         null == o ||
-                        (a.section.id !== o.applicationId && a.section.id !== C.bi.FRECENCY) ||
+                        (a.section.id !== o.applicationId && a.section.id !== A.bi.FRECENCY) ||
                         o.inputType === v.iw.PLACEHOLDER
                     )
                         return (0, r.jsx)(T.Z, {}, s);

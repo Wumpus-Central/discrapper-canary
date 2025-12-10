@@ -190,8 +190,8 @@ let S = new c.Z("MarkdownToSlate"),
         },
     },
     T = new Set(["*", "_", "\\"]),
-    A = {},
-    C = {};
+    C = {},
+    A = {};
 for (let e in d.Z.RULES) {
     if (!(e in I))
         throw Error(
@@ -199,8 +199,8 @@ for (let e in d.Z.RULES) {
                 "then you probably need to add it to this file so that the rich chat box understands it.",
         );
     let t = I[e];
-    "skip" !== t.type && (A[e] = N(d.Z.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (C[e] = N("text" === e ? f.ZP : d.Z.RULES[e]));
+    "skip" !== t.type && (C[e] = N(d.Z.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (A[e] = N("text" === e ? f.ZP : d.Z.RULES[e]));
 }
 function N(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
@@ -271,8 +271,8 @@ let R = {
         },
     },
     D = /(-# +)/,
-    w = (0, p.Z)([A, R]),
-    x = (0, p.Z)([C, R]),
+    w = (0, p.Z)([C, R]),
+    x = (0, p.Z)([A, R]),
     L = l._p(w),
     j = l._p(x),
     M = {

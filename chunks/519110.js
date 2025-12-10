@@ -1,9 +1,9 @@
-n.d(t, { Z: () => S }), n(704826), n(35282);
+n.d(t, { Z: () => E }), n(704826), n(35282);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
-    a = n(481060),
-    o = n(80932),
+    o = n(481060),
+    a = n(80932),
     s = n(2052),
     c = n(543241),
     u = n(339085),
@@ -14,9 +14,9 @@ var r = n(54381),
     p = n(453070),
     m = n(926491),
     O = n(378233),
-    y = n(981631),
-    h = n(388032);
-function v(e) {
+    v = n(981631),
+    y = n(388032);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,63 +59,63 @@ function j(e, t) {
         e
     );
 }
-function E(e) {
+function S(e) {
     return d.ZP.getByName(e.replace(/(^:|:$)/g, ""));
 }
-function S(e) {
-    let { type: t, id: n, name: S, isInExpressionPicker: P = !1 } = e,
-        { location: _ } = (0, s.O)(),
-        Z = i.useMemo(() => j(v({}, _), { section: P ? y.jXE.EXPRESSION_PICKER : y.jXE.CONTEXT_MENU }), [_, P]),
-        I = (0, p.Go)(),
-        T = (0, l.e7)([m.Z], () => (t === f.S.STICKER && null != n ? m.Z.getStickerById(n) : null)),
-        N = null != T && I.includes(T.id),
-        M = (0, l.e7)([u.ZP], () => {
+function E(e) {
+    let { type: t, id: n, name: E, isInExpressionPicker: P = !1 } = e,
+        { location: I } = (0, s.O)(),
+        _ = i.useMemo(() => j(h({}, I), { section: P ? v.jXE.EXPRESSION_PICKER : v.jXE.CONTEXT_MENU }), [I, P]),
+        T = (0, p.Go)(),
+        Z = (0, l.e7)([m.Z], () => (t === f.S.STICKER && null != n ? m.Z.getStickerById(n) : null)),
+        N = null != Z && T.includes(Z.id),
+        w = (0, l.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
-                else if (null != S) {
+                else if (null != E) {
                     var e;
-                    return null != (e = E(S)) ? e : E(d.ZP.convertSurrogateToName(S));
+                    return null != (e = S(E)) ? e : S(d.ZP.convertSurrogateToName(E));
                 }
             }
         }),
-        w = (0, c.C1)(null, M);
-    return null != T && t === f.S.STICKER
-        ? (0, O.J8)(T) && !(0, O.V9)(T)
+        A = (0, c.C1)(null, w);
+    return null != Z && t === f.S.STICKER
+        ? (0, O.J8)(Z) && !(0, O.V9)(Z)
             ? null
             : N
-              ? (0, r.jsx)(a.sNh, {
+              ? (0, r.jsx)(o.sNh, {
                     id: "unfavorite",
-                    action: () => (0, g.hW)(T.id),
-                    label: h.intl.string(h.t.XhzKyF),
+                    action: () => (0, g.hW)(Z.id),
+                    label: y.intl.string(y.t.XhzKyF),
                 })
-              : (0, r.jsx)(a.sNh, {
+              : (0, r.jsx)(o.sNh, {
                     id: "favorite",
                     action: () => {
                         (0, b.cQ)({
-                            sticker: T,
-                            location: j(v({}, Z), { object: y.qAy.STICKER }),
+                            sticker: Z,
+                            location: j(h({}, _), { object: v.qAy.STICKER }),
                         }),
-                            (0, g.SA)(null == T ? void 0 : T.id);
+                            (0, g.SA)(null == Z ? void 0 : Z.id);
                     },
-                    label: h.intl.string(h.t.kWmiPW),
+                    label: y.intl.string(y.t.kWmiPW),
                 })
-        : null != M && t === f.S.EMOJI
-          ? w
-              ? (0, r.jsx)(a.sNh, {
+        : null != w && t === f.S.EMOJI
+          ? A
+              ? (0, r.jsx)(o.sNh, {
                     id: "unfavorite",
-                    action: () => (0, o.Xe)(M),
-                    label: h.intl.string(h.t.Ay49KA),
+                    action: () => (0, a.Xe)(w),
+                    label: y.intl.string(y.t.Ay49KA),
                 })
-              : (0, r.jsx)(a.sNh, {
+              : (0, r.jsx)(o.sNh, {
                     id: "favorite",
                     action: () => {
                         (0, c.J1)({
-                            emoji: M,
-                            location: j(v({}, Z), { object: y.qAy.EMOJI }),
+                            emoji: w,
+                            location: j(h({}, _), { object: v.qAy.EMOJI }),
                         }),
-                            (0, o.$K)(M);
+                            (0, a.$K)(w);
                     },
-                    label: h.intl.string(h.t.nNsr67),
+                    label: y.intl.string(y.t.nNsr67),
                 })
           : void 0;
 }

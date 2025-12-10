@@ -126,18 +126,18 @@ function T(e, t) {
     if (null == i) return !1;
     delete i[t], a().isEmpty(i) && delete r[e];
 }
-function A() {
+function C() {
     let e = u.default.getId();
     if (null == e || f.Z.totalUnavailableGuilds > 0) return;
     let t = O(e);
     for (let e in t) null == d.Z.getChannel(e) && delete t[e];
 }
-function C() {
+function A() {
     let e = u.default.getId();
-    return e in b || (b[e] = {}), A(), !1;
+    return e in b || (b[e] = {}), C(), !1;
 }
 function N() {
-    return A(), !1;
+    return C(), !1;
 }
 function P(e) {
     let {
@@ -260,7 +260,7 @@ p(L, "displayName", "DraftStore"),
         },
     ]);
 let j = new L(s.Z, {
-    CONNECTION_OPEN: C,
+    CONNECTION_OPEN: A,
     LOGOUT: D,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: w,
     GUILD_DELETE: N,

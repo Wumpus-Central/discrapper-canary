@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(423000),
     p = n(200876),
     f = n(674180),
-    h = n(38618),
-    g = n(984370),
+    g = n(38618),
+    h = n(984370),
     m = n(430824),
     _ = n(351402),
     b = n(730647),
@@ -27,7 +27,7 @@ var r = n(54381),
 function j(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([m.Z], () => m.Z.getGuild(t), [t]),
-        j = (0, a.e7)([h.Z], () => h.Z.isConnected()),
+        j = (0, a.e7)([g.Z], () => g.Z.isConnected()),
         P = (0, p.Z)(t),
         x = (0, E.Z)(t),
         A = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
@@ -55,15 +55,15 @@ function j(e) {
     return (0, r.jsxs)("div", {
         className: N.container,
         children: [
-            (0, r.jsxs)(g.Z, {
+            (0, r.jsxs)(h.Z, {
                 toolbar: (0, r.jsx)(i.Fragment, {}),
                 className: N.headerBar,
                 children: [
-                    (0, r.jsx)(g.Z.Icon, {
+                    (0, r.jsx)(h.Z.Icon, {
                         icon: (0, s.GSL)(O.Z),
                         "aria-hidden": !0,
                     }),
-                    (0, r.jsx)(g.Z.Title, { children: T.intl.string(T.t["KzCF/6"]) }),
+                    (0, r.jsx)(h.Z.Title, { children: T.intl.string(T.t["KzCF/6"]) }),
                 ],
             }),
             (0, r.jsx)("div", { id: C.v }),

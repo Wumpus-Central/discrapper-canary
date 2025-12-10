@@ -30,8 +30,8 @@ var r,
     S = n(569545),
     I = n(528011),
     T = n(487419),
-    A = n(715903),
-    C = n(223606),
+    C = n(715903),
+    A = n(223606),
     N = n(160404),
     P = n(41776),
     R = n(332473),
@@ -84,8 +84,8 @@ var r,
     eS = n(941128),
     eI = n(981631),
     eT = n(188785),
-    eA = n(474936),
-    eC = n(324805),
+    eC = n(474936),
+    eA = n(324805),
     eN = n(231338),
     eP = n(65154);
 function eR(e, t, n) {
@@ -325,7 +325,7 @@ let eQ = [
                 let { currentUser: t, selectedGuildId: n } = e;
                 if (null == n) return !1;
                 let r = $.ZP.getMember(n, t.id);
-                return null != r && !r.isPending && (0, A.EY)(r);
+                return null != r && !r.isPending && (0, C.EY)(r);
             },
         },
         [eI.kVF.QUARANTINED]: {
@@ -515,15 +515,15 @@ let eQ = [
         },
         [eI.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: {
             predicate: () =>
-                eh.Z.getAlmostExpiringTrialOffers([eA.Si.TIER_2]).length > 0 && !eq(eI.kVF.PREMIUM_TIER_2_TRIAL_ENDING),
+                eh.Z.getAlmostExpiringTrialOffers([eC.Si.TIER_2]).length > 0 && !eq(eI.kVF.PREMIUM_TIER_2_TRIAL_ENDING),
         },
         [eI.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: {
             predicate: () =>
-                eh.Z.getAlmostExpiringTrialOffers([eA.Si.TIER_0]).length > 0 && !eq(eI.kVF.PREMIUM_TIER_0_TRIAL_ENDING),
+                eh.Z.getAlmostExpiringTrialOffers([eC.Si.TIER_0]).length > 0 && !eq(eI.kVF.PREMIUM_TIER_0_TRIAL_ENDING),
         },
         [eI.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING]: {
             predicate: () =>
-                eh.Z.getAlmostExpiringDiscountOffers([eA.Si.TIER_2]).length > 0 &&
+                eh.Z.getAlmostExpiringDiscountOffers([eC.Si.TIER_2]).length > 0 &&
                 !eq(eI.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING),
         },
         [eI.kVF.PREMIUM_UNCANCEL]: {
@@ -541,7 +541,7 @@ let eQ = [
                         !o &&
                         r <= 7 &&
                         r >= 0 &&
-                        (0, ey.M5)(n, eA.PremiumTypes.TIER_2) &&
+                        (0, ey.M5)(n, eC.PremiumTypes.TIER_2) &&
                         !i &&
                         !n.hasFreePremium() &&
                         !t.isPurchasedExternally;
@@ -570,8 +570,8 @@ let eQ = [
                             ? 7
                             : 2,
                     o = null != t && a()(t.currentPeriodEnd).isBefore(a()()),
-                    s = eg.Z.applicationIdsFetched.has(eA.CL),
-                    l = eg.Z.getForApplication(eA.CL),
+                    s = eg.Z.applicationIdsFetched.has(eC.CL),
+                    l = eg.Z.getForApplication(eC.CL),
                     c = null != t ? (0, ey.Af)(t) : null,
                     u = null != c ? ey.ZP.getSkuIdForPlan(c.planId) : null,
                     d =
@@ -694,7 +694,7 @@ let eQ = [
                     n = null != t ? ee.Z.getGuild(t) : null;
                 return (
                     (null != t &&
-                        null != C.Z.getMentionRaidDetected(t) &&
+                        null != A.Z.getMentionRaidDetected(t) &&
                         (null == n ? void 0 : n.features.has(eI.GuildFeatures.COMMUNITY)) &&
                         !eq(eI.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION)) ||
                     !1
@@ -704,7 +704,7 @@ let eQ = [
                 let { selectedGuildId: t } = e,
                     n = { dismissUntil: a()().add(2, "hours").toDate() };
                 if (null != t) {
-                    let e = C.Z.getMentionRaidDetected(t);
+                    let e = A.Z.getMentionRaidDetected(t);
                     null != e && (n.decisionId = e.decisionId);
                 }
                 return n;
@@ -728,7 +728,7 @@ let eQ = [
                 if (null == e) return !1;
                 let t = (0, S.V9)(e),
                     n = U.Z.getStreamHeartbeatFailure(t);
-                return null != n && Date.now() - n.firstFailedAt >= eC.Ot;
+                return null != n && Date.now() - n.firstFailedAt >= eA.Ot;
             },
             metadata: () => {
                 let e = W.Z.getCurrentUserActiveStream();
@@ -875,7 +875,7 @@ class tt extends (r = o.ZP.Store) {
                 eg.Z,
                 y.Z,
                 v.Z,
-                C.Z,
+                A.Z,
                 T.Z,
                 $.ZP,
                 ee.Z,

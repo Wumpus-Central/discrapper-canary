@@ -3,8 +3,8 @@ n.d(t, {
     Gg: () => L,
     Kb: () => P,
     Ww: () => M,
-    ZI: () => A,
-    _W: () => C,
+    ZI: () => C,
+    _W: () => A,
     uF: () => R,
 }),
     n(539854),
@@ -65,7 +65,7 @@ function S(e) {
 n(388032), l().shim();
 let I = !c.tq && !c.Em && -1 !== (0, E.vu)(),
     T = 3;
-function A(e, t) {
+function C(e, t) {
     let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: o, guildId: s } = t,
         l = {
             state: {
@@ -79,7 +79,7 @@ function A(e, t) {
         l,
     );
 }
-function C(e, t, n, r) {
+function A(e, t, n, r) {
     var i;
     let a,
         o = window.GLOBAL_ENV.CDN_HOST;

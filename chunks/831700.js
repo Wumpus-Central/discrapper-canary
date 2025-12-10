@@ -46,8 +46,8 @@ var r = n(54381),
     K = n(830993),
     Y = n(653577),
     q = n(207055),
-    Q = n(981631),
-    X = n(647086),
+    X = n(981631),
+    Q = n(647086),
     J = n(388032),
     $ = n(55940);
 function ee(e, t, n) {
@@ -141,7 +141,7 @@ class er extends H.ZP {
             voiceStates: t,
             withGuildIcon: i,
             tabIndex: l,
-            location: Q.Sbl.GUILD_CHANNEL_LIST,
+            location: X.Sbl.GUILD_CHANNEL_LIST,
         });
     }
     renderChannelInfo() {
@@ -433,14 +433,14 @@ function el(e) {
             let e = L.Z.getChannel(n.parent_id),
                 r = k.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: G.Z.can(Q.Plq.MANAGE_CHANNELS, n),
+                canManageChannel: G.Z.can(X.Plq.MANAGE_CHANNELS, n),
                 canReorderChannel:
                     !0 !== i &&
-                    (t.id === X._ ||
-                        (null != e ? G.Z.can(Q.Plq.MANAGE_CHANNELS, e) : G.Z.can(Q.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: G.Z.can(Q.Plq.MOVE_MEMBERS, n),
-                locked: !G.Z.can(Q.Plq.CONNECT, n),
-                bypassLimit: G.Z.can(Q.Plq.MOVE_MEMBERS, n),
+                    (t.id === Q._ ||
+                        (null != e ? G.Z.can(X.Plq.MANAGE_CHANNELS, e) : G.Z.can(X.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: G.Z.can(X.Plq.MOVE_MEMBERS, n),
+                locked: !G.Z.can(X.Plq.CONNECT, n),
+                bypassLimit: G.Z.can(X.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !r.canChat,
             };
         }),
@@ -490,7 +490,7 @@ function el(e) {
                 {
                     channelName: m,
                     embeddedApps: p,
-                    embeddedActivityType: Q.IIU.PLAYING,
+                    embeddedActivityType: X.IIU.PLAYING,
                     video: h,
                     hasActiveEvent: null != O,
                     isSubscriptionGated: C,

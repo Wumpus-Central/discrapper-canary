@@ -41,8 +41,8 @@ var r = n(512722),
     S = n(131704),
     I = n(680089),
     T = n(592125),
-    A = n(58468),
-    C = n(430824),
+    C = n(58468),
+    A = n(430824),
     N = n(496675),
     P = n(306680),
     R = n(944486),
@@ -324,7 +324,7 @@ class en {
         return this.firstVoiceChannel;
     }
     getSectionRowsFromChannel(e) {
-        let t = eA(e);
+        let t = eC(e);
         if (null != t)
             return [
                 {
@@ -522,7 +522,7 @@ class en {
             (this.suggestedFavoriteChannelId = m.Z.getSuggestedChannelId(this.id)),
             (this.collapsedCategoryIds = I.Z.getCollapsedCategories());
         let s = T.Z.getMutableGuildChannelsForGuild(this.id),
-            l = C.Z.getGuild(this.id);
+            l = A.Z.getGuild(this.id);
         (this.moderatorReportChannelId = null != l ? (0, b.Z)(l) : null),
             (this.moderatorReportChannelEnabled = null != l && (0, y.Z)(l));
         let c = {},
@@ -951,7 +951,7 @@ class ep {
         return this.category.guild.mutedChannelIds.has(this.id);
     }
     get isCollapsed() {
-        return A.Z.isCollapsed(this.id);
+        return C.Z.isCollapsed(this.id);
     }
     get isFirstVoiceChannel() {
         return this.category.getFirstVoiceChannel() === this;
@@ -1266,7 +1266,7 @@ function eI(e, t, n) {
     return !!((a.has(t.id) && s.indexOf(t.id) < K) || P.ZP.hasRecentlyVisitedAndRead(t.id));
 }
 let eT = new Set(Object.values(U.z));
-function eA(e) {
+function eC(e) {
     if (null == e) return null;
     if (eT.has(e)) return e;
     let t = T.Z.getChannel(e);

@@ -44,7 +44,7 @@ function c(e) {
         T = i.useCallback(async () => {
             await d();
         }, [d]),
-        A =
+        C =
             i.Children.count(c) > 0
                 ? (0, r.jsx)(o.Zbd, {
                       type: o.Zbd.Types.WARNING,
@@ -75,7 +75,7 @@ function c(e) {
             onClose: T,
             transitionState: u,
             children: [
-                A,
+                C,
                 (0, r.jsxs)("div", {
                     className: l.spacing,
                     children: [

@@ -25,7 +25,7 @@ function b(e) {
         { data: I } = (0, u.Z)(n);
     if (null == S) return null;
     let T = (0, f.y)(S, 25),
-        { termsOfServiceUrl: A, privacyPolicyUrl: C } = S;
+        { termsOfServiceUrl: C, privacyPolicyUrl: A } = S;
     if ((null == I ? void 0 : I.applicationId) !== t)
         return (0, r.jsx)(a.Modal, {
             actions: [
@@ -73,13 +73,13 @@ function b(e) {
                 children: (0, r.jsxs)("div", {
                     className: g.footer,
                     children: [
-                        null != A || null != C
+                        null != C || null != A
                             ? (0, r.jsx)(s.Text, {
                                   color: "header-primary",
                                   variant: "text-sm/normal",
                                   children: (0, r.jsx)(_.Z, {
-                                      termsOfServiceUrl: A,
-                                      privacyPolicyUrl: C,
+                                      termsOfServiceUrl: C,
+                                      privacyPolicyUrl: A,
                                   }),
                               })
                             : (0, r.jsx)(s.Text, {

@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     o = n.n(l),
-    a = n(205120),
+    a = n(467721),
     s = n(442837),
     c = n(692547);
 n(28664);
@@ -169,7 +169,7 @@ function U(e) {
             [K],
         ),
         q = F(Z, c, P),
-        Q = F(D, c, null);
+        X = F(D, c, null);
     (0, h.ZP)(() => {
         var e;
         d.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
@@ -206,7 +206,7 @@ function U(e) {
                       },
                       isUnread: null != (i = O.ZP.hasUnread(c)) && i,
                   };
-        })(q, Q);
+        })(q, X);
         null != r &&
             x.Z.inboxItemClick({
                 message: r,
@@ -220,9 +220,9 @@ function U(e) {
         (0, h.zq)(() => {
             d.Z.dispatch({ type: "NOTIFICATIONS_INBOX_CLOSE" });
         });
-    let { filterStyle: X } = (0, j.pN)({ location: "NotificationsInboxSidebar" }),
+    let { filterStyle: Q } = (0, j.pN)({ location: "NotificationsInboxSidebar" }),
         J = (0, g._k)({ location: "NotificationsInboxSidebar" }),
-        $ = X === j.v8.DROPDOWN && c !== A.V5.ALL,
+        $ = Q === j.v8.DROPDOWN && c !== A.V5.ALL,
         ee = (0, A.H_)(c);
     return (0, r.jsx)("nav", {
         className: o()(L.container, { [L.panelSpacing]: l }),
@@ -243,7 +243,7 @@ function U(e) {
                             direction: "horizontal",
                             gap: 4,
                             style: { marginRight: -4 },
-                            children: X === j.v8.DROPDOWN && !J.isGuildEntrypointEnabled && (0, r.jsx)(w.p, {}),
+                            children: Q === j.v8.DROPDOWN && !J.isGuildEntrypointEnabled && (0, r.jsx)(w.p, {}),
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
@@ -267,7 +267,7 @@ function U(e) {
                     className: L.messageList,
                     renderMessageGroup: H,
                     messages: c === A.V5.BOOKMARKS ? Y : q,
-                    unreadMessages: c === A.V5.BOOKMARKS ? [] : Q,
+                    unreadMessages: c === A.V5.BOOKMARKS ? [] : X,
                     listName: "notifications-inbox",
                     renderLoadingState: V,
                     ignoreGrouping: c === A.V5.BOOKMARKS,

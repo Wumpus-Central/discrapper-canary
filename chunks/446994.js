@@ -865,13 +865,13 @@
                                                             S = 1 + (h >> 1),
                                                             I = [0, 0],
                                                             T = [],
-                                                            A = [],
                                                             C = [],
+                                                            A = [],
                                                             N = [];
                                                         for (m = 0; m < 2; m++)
                                                             T.push(r.float_array(S)),
-                                                                A.push(r.float_array(S)),
                                                                 C.push(r.float_array(S)),
+                                                                A.push(r.float_array(S)),
                                                                 N.push(r.float_array(h));
                                                         var P = r.float_array(S),
                                                             R = r.float_array(S),
@@ -982,8 +982,8 @@
                                                                         u = N[c],
                                                                         d = I[c],
                                                                         f = T[c],
-                                                                        p = A[c],
-                                                                        _ = C[c],
+                                                                        p = C[c],
+                                                                        _ = A[c],
                                                                         m = N[l],
                                                                         h = 1;
                                                                     h < m.length;
@@ -1019,8 +1019,8 @@
                                                                         }
                                                                         return a;
                                                                     })(m, g)),
-                                                                    b = A[l],
-                                                                    y = C[l];
+                                                                    b = C[l],
+                                                                    y = A[l];
                                                                 if (0 != e && 0 != E) {
                                                                     var O = 0;
                                                                     for (G = 0; G < E; G++) {
@@ -1236,14 +1236,14 @@
                                                             }
                                                             (o >>= 1), (s >>= 1), (l >>= 1);
                                                         }
-                                                        for (var T, A, C = n.m_revTgt, N = 0; N < i; N++)
-                                                            C[N] > N &&
-                                                                ((A = t[(T = C[N])]),
+                                                        for (var T, C, A = n.m_revTgt, N = 0; N < i; N++)
+                                                            A[N] > N &&
+                                                                ((C = t[(T = A[N])]),
                                                                 (t[T] = t[N]),
-                                                                (t[N] = A),
-                                                                (A = r[T]),
+                                                                (t[N] = C),
+                                                                (C = r[T]),
                                                                 (r[T] = r[N]),
-                                                                (r[N] = A));
+                                                                (r[N] = C));
                                                     };
                                                     var d = t >> 1;
                                                     return (
@@ -1989,8 +1989,8 @@
                             HAVE_FUTURE_DATA: 3,
                             HAVE_ENOUGH_DATA: 4,
                         },
-                        A = "INITIAL",
-                        C = "SEEKING_END",
+                        C = "INITIAL",
+                        A = "SEEKING_END",
                         N = "LOADED",
                         P = "PRELOAD",
                         R = "READY",
@@ -2037,7 +2037,7 @@
                             return (
                                 (r._enableThreading = !!e.threading),
                                 (r._enableSIMD = !!e.simd),
-                                (r._state = A),
+                                (r._state = C),
                                 (r._seekState = L),
                                 (r._detectedType = null),
                                 (r._canvas = document.createElement("canvas")),
@@ -2581,7 +2581,7 @@
                                         key: "_stopVideo",
                                         value: function () {
                                             this._log("STOPPING"),
-                                                (this._state = A),
+                                                (this._state = C),
                                                 (this._seekState = L),
                                                 (this._started = !1),
                                                 (this._ended = !1),
@@ -3032,8 +3032,8 @@
                                         key: "_doProcessingLoop",
                                         value: function () {
                                             if (this._actionQueue.length) this._actionQueue.shift()();
-                                            else if (this._state == A) this._doProcessInitial();
-                                            else if (this._state == C) this._doProcessSeekingEnd();
+                                            else if (this._state == C) this._doProcessInitial();
+                                            else if (this._state == A) this._doProcessSeekingEnd();
                                             else if (this._state == N) this._doProcessLoaded();
                                             else if (this._state == P) this._doProcessPreload();
                                             else if (this._state == R) this._doProcessReady();
@@ -3062,7 +3062,7 @@
                                                     null === this._duration &&
                                                     this._stream.seekable &&
                                                     "video/ogg" == this._detectedType
-                                                        ? ((this._state = C),
+                                                        ? ((this._state = A),
                                                           (this._lastSeenTimestamp = -1),
                                                           this._codec.flush(function () {
                                                               e._seekStream(Math.max(0, e._stream.length - 131072));
@@ -3447,13 +3447,13 @@
                                                         this._thumbnail &&
                                                             (this.removeChild(this._thumbnail),
                                                             (this._thumbnail = null));
-                                                    var A = this._decodedFrames.shift();
-                                                    (this._currentVideoCpuTime = A.videoCpuTime),
+                                                    var C = this._decodedFrames.shift();
+                                                    (this._currentVideoCpuTime = C.videoCpuTime),
                                                         (this._drawingTime += this._time(function () {
-                                                            e._drawFrame(A.yCbCrBuffer);
+                                                            e._drawFrame(C.yCbCrBuffer);
                                                         })),
                                                         this._framesProcessed++,
-                                                        this._doFrameComplete(A),
+                                                        this._doFrameComplete(C),
                                                         this._pingProcessing();
                                                 } else if (
                                                     !this._decodedFrames.length ||
@@ -3476,13 +3476,13 @@
                                                                     this._decodedFrames.length,
                                                                 ],
                                                         );
-                                                        var C = 0;
+                                                        var A = 0;
                                                         this._codec.hasAudio &&
                                                             this._audioFeeder &&
-                                                            (C = 1000 * this._audioFeeder.durationBuffered),
-                                                            C > 0
-                                                                ? (this._log("play loop: ending pending " + C + " ms"),
-                                                                  this._pingProcessing(Math.max(0, C)))
+                                                            (A = 1000 * this._audioFeeder.durationBuffered),
+                                                            A > 0
+                                                                ? (this._log("play loop: ending pending " + A + " ms"),
+                                                                  this._pingProcessing(Math.max(0, A)))
                                                                 : (this._log(
                                                                       "play loop: ENDING NOW: playback time " +
                                                                           this._getPlaybackTime() +
@@ -6110,7 +6110,7 @@
                                     o.texParameteri(o.TEXTURE_2D, o.TEXTURE_MAG_FILTER, o.LINEAR),
                                     o.uniform1i(o.getUniformLocation(t, e), r);
                             }
-                            function A(e, t) {
+                            function C(e, t) {
                                 var n = s(o.VERTEX_SHADER, e),
                                     r = s(o.FRAGMENT_SHADER, t),
                                     i = o.createProgram();
@@ -6134,7 +6134,7 @@
                                         t ||
                                             (function () {
                                                 if (i.stripe) {
-                                                    (n = A(r.vertexStripe, r.fragmentStripe)),
+                                                    (n = C(r.vertexStripe, r.fragmentStripe)),
                                                         o.getAttribLocation(n, "aPosition"),
                                                         (u = o.createBuffer());
                                                     var e = new Float32Array([0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1]);
@@ -6144,7 +6144,7 @@
                                                         (f = o.getUniformLocation(n, "uStripe")),
                                                         (p = o.getUniformLocation(n, "uTexture"));
                                                 }
-                                                (t = A(r.vertex, r.fragment)),
+                                                (t = C(r.vertex, r.fragment)),
                                                     (l = o.createBuffer()),
                                                     o.bindBuffer(o.ARRAY_BUFFER, l),
                                                     o.bufferData(o.ARRAY_BUFFER, E, o.STATIC_DRAW),
@@ -6270,8 +6270,8 @@
                                     S = 0,
                                     I = 0,
                                     T = 0,
-                                    A = 0,
                                     C = 0,
+                                    A = 0,
                                     N = 0,
                                     P = 0,
                                     R = 0,
@@ -6285,27 +6285,27 @@
                                         )
                                             (v = 0 | l[g++]),
                                                 (T = (((409 * (S = 0 | c[E++])) | 0) - 57088) | 0),
-                                                (A = (((100 * v) | 0) + ((208 * S) | 0) - 34816) | 0),
-                                                (C = (((516 * v) | 0) - 70912) | 0),
+                                                (C = (((100 * v) | 0) + ((208 * S) | 0) - 34816) | 0),
+                                                (A = (((516 * v) | 0) - 70912) | 0),
                                                 (I = (298 * s[m++]) | 0),
                                                 (n[y] = (I + T) >> 8),
-                                                (n[y + 1] = (I - A) >> 8),
-                                                (n[y + 2] = (I + C) >> 8),
+                                                (n[y + 1] = (I - C) >> 8),
+                                                (n[y + 2] = (I + A) >> 8),
                                                 (y += 4),
                                                 (I = (298 * s[m++]) | 0),
                                                 (n[y] = (I + T) >> 8),
-                                                (n[y + 1] = (I - A) >> 8),
-                                                (n[y + 2] = (I + C) >> 8),
+                                                (n[y + 1] = (I - C) >> 8),
+                                                (n[y + 2] = (I + A) >> 8),
                                                 (y += 4),
                                                 (I = (298 * s[h++]) | 0),
                                                 (n[O] = (I + T) >> 8),
-                                                (n[O + 1] = (I - A) >> 8),
-                                                (n[O + 2] = (I + C) >> 8),
+                                                (n[O + 1] = (I - C) >> 8),
+                                                (n[O + 2] = (I + A) >> 8),
                                                 (O += 4),
                                                 (I = (298 * s[h++]) | 0),
                                                 (n[O] = (I + T) >> 8),
-                                                (n[O + 1] = (I - A) >> 8),
-                                                (n[O + 2] = (I + C) >> 8),
+                                                (n[O + 1] = (I - C) >> 8),
+                                                (n[O + 2] = (I + A) >> 8),
                                                 (O += 4);
                                         (y += p), (O += p), D++;
                                     }
@@ -6318,12 +6318,12 @@
                                         )
                                             (v = 0 | l[g + (R = N >> a)]),
                                                 (T = (((409 * (S = 0 | c[E + R])) | 0) - 57088) | 0),
-                                                (A = (((100 * v) | 0) + ((208 * S) | 0) - 34816) | 0),
-                                                (C = (((516 * v) | 0) - 70912) | 0),
+                                                (C = (((100 * v) | 0) + ((208 * S) | 0) - 34816) | 0),
+                                                (A = (((516 * v) | 0) - 70912) | 0),
                                                 (I = (298 * s[_++]) | 0),
                                                 (n[b] = (I + T) >> 8),
-                                                (n[b + 1] = (I - A) >> 8),
-                                                (n[b + 2] = (I + C) >> 8),
+                                                (n[b + 1] = (I - C) >> 8),
+                                                (n[b + 2] = (I + A) >> 8),
                                                 (b += 4);
                             },
                         };

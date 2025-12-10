@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(481060),
     p = n(205355),
     f = n(607070),
-    h = n(38618),
-    g = n(197344),
+    g = n(38618),
+    h = n(197344),
     m = n(460181),
     _ = n(474873),
     b = n(108427),
@@ -354,7 +354,7 @@ class P extends i.PureComponent {
                 this,
                 "_eventLoadingText",
                 (function () {
-                    let e = g.Z.getLoadingTips();
+                    let e = h.Z.getLoadingTips();
                     if (null != e && e.length > 0) return e[o().random(e.length - 1)];
                 })(),
             ),
@@ -384,9 +384,9 @@ class P extends i.PureComponent {
             (this._connectedSound.volume = 1);
     }
 }
-let x = c.ZP.connectStores([h.Z, O.Z, _.Z, f.Z], () => ({
-    isTryingToConnect: h.Z.isTryingToConnect(),
-    connected: h.Z.isConnected(),
+let x = c.ZP.connectStores([g.Z, O.Z, _.Z, f.Z], () => ({
+    isTryingToConnect: g.Z.isTryingToConnect(),
+    connected: g.Z.isConnected(),
     incident: O.Z.getIncident(),
     soundpack: _.Z.getSoundpack(),
     reducedMotion: f.Z.useReducedMotion,

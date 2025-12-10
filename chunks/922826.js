@@ -1,9 +1,9 @@
-n.d(t, { Z: () => R }), n(781311), n(388685);
+n.d(t, { Z: () => T }), n(781311), n(388685);
 var r = n(54381),
     o = n(473749),
     l = n(120356),
     i = n.n(l),
-    a = n(205120),
+    a = n(467721),
     s = n(442837),
     c = n(692547),
     u = n(561779),
@@ -171,7 +171,7 @@ let D = o.forwardRef(function (e, t) {
           })
         : b();
 });
-function R(e) {
+function T(e) {
     var t, n;
     let {
             videoRef: l,
@@ -179,8 +179,8 @@ function R(e) {
             animSpring: b,
             visible: _,
             seekForwardEnabled: j,
-            hideCaptionBtn: R,
-            hideTranscriptBtn: T,
+            hideCaptionBtn: T,
+            hideTranscriptBtn: R,
             videoTask: I,
             size: N,
             handlePlaybackBtnClick: A,
@@ -194,14 +194,14 @@ function R(e) {
         } = e,
         B = (0, p.km)((e) => e.volume),
         U = (0, p.km)((e) => e.setVolume),
-        Y = (0, p.km)((e) => e.muted),
-        q = (0, p.km)((e) => e.setMuted),
+        q = (0, p.km)((e) => e.muted),
+        Y = (0, p.km)((e) => e.setMuted),
         H = (0, p.km)((e) => e.transcriptEnabled),
         Q = (0, p.km)((e) => e.captionEnabled),
         G = (0, p.km)((e) => e.fullScreenEnabled),
         K = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
         W = (0, s.e7)([f.Z], () => f.Z.keyboardModeEnabled),
-        [z, X] = o.useState(Y ? 0 : B),
+        [z, X] = o.useState(q ? 0 : B),
         [$, J] = o.useState(!1),
         [ee, et] = o.useState(!1),
         [{ volumeAnimSpring: en }, er] = (0, m.q_F)(() => ({
@@ -221,8 +221,8 @@ function R(e) {
             [l, z],
         ),
         ea = o.useCallback(() => {
-            null != l.current && (0 === z ? (ei(B), q(!1), F(B)) : (U(z), ei(0), q(!0), F(0)));
-        }, [l, z, ei, B, q, U, F]),
+            null != l.current && (0 === z ? (ei(B), Y(!1), F(B)) : (U(z), ei(0), Y(!0), F(0)));
+        }, [l, z, ei, B, Y, U, F]),
         es = () => {
             J(!0);
         },
@@ -387,7 +387,7 @@ function R(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        ei(e), U(e), F(e), ee && (et(!1), Z(!1)), Y && e > 0 && q(!1);
+                                        ei(e), U(e), F(e), ee && (et(!1), Z(!1)), q && e > 0 && Y(!1);
                                     },
                                     asValueChanges: (e) => {
                                         ei(e), ee || (et(!0), Z(!0));
@@ -408,7 +408,7 @@ function R(e) {
             (0, r.jsxs)("div", {
                 className: i()(S.videoControlsGroup, S.videoControlsGroupEnd),
                 children: [
-                    !T &&
+                    !R &&
                         (0, r.jsx)(D, {
                             iconComponent: m.hH0,
                             animationTime: b,
@@ -420,7 +420,7 @@ function R(e) {
                             tooltipLabel: C.intl.string(C.t.KCzjTi),
                             buttonSize: x[N],
                         }),
-                    !R &&
+                    !T &&
                         (0, r.jsx)(D, {
                             iconComponent: E.c,
                             animationTime: b,

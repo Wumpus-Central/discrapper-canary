@@ -33,7 +33,7 @@ function h(e) {
         } = e,
         { newestAnalyticsLocation: I } = (0, c.ZP)(),
         T = S ? l.gtL : s.zx,
-        A = i.useCallback(() => {
+        C = i.useCallback(() => {
             (0, u.$r)({
                 uploadType: f.pC.AVATAR,
                 analyticsSource: I,
@@ -54,7 +54,7 @@ function h(e) {
                 (0, r.jsx)(T, {
                     className: o()({ [_.buttonHighlighted]: S }),
                     size: s.zx.Sizes.SMALL,
-                    onClick: A,
+                    onClick: C,
                     children: null != g ? g : p.intl.string(p.t["4OynCD"]),
                 }),
                 t &&

@@ -26,7 +26,7 @@ var r = n(54381),
     S = n(921944),
     I = n(388032),
     T = n(890088);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -153,8 +153,8 @@ function D(e) {
             nuxGraphic: O,
             onClick: v,
         } = e,
-        [A, N] = (0, p.US)([l.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
-        R = A === l.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
+        [C, N] = (0, p.US)([l.z.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
+        R = C === l.z.WISHLIST_NUX_TOOLTIP_AND_MODAL,
         { analyticsLocations: D } = (0, d.ZP)(),
         w = b.default.getCurrentUser(),
         x = null != w ? _.Z.getFirstWishlistId(w.id) : null,
@@ -188,7 +188,7 @@ function D(e) {
                                 null != O &&
                                 ((0, u.ZDy)(async () => {
                                     let { default: e } = await n.e("36340").then(n.bind(n, 874533));
-                                    return (t) => (0, r.jsx)(e, P(C({}, t), { graphic: O }));
+                                    return (t) => (0, r.jsx)(e, P(A({}, t), { graphic: O }));
                                 }),
                                 N(S.L.USER_DISMISS));
                     } catch (e) {

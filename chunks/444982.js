@@ -1,22 +1,22 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => S });
 var i = n(54381),
     r = n(239091),
     l = n(482798),
     o = n(603618),
     a = n(926086),
     s = n(878939),
-    u = n(761374),
-    c = n(68286),
+    c = n(761374),
+    u = n(68286),
     d = n(340101),
     h = n(273816),
     p = n(2923),
     f = n(586742),
     m = n(243487),
     g = n(430561),
-    O = n(134849),
-    y = n(501787),
-    E = n(981631),
-    v = n(388032);
+    y = n(134849),
+    O = n(501787),
+    v = n(981631),
+    E = n(388032);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,7 +42,7 @@ function b(e) {
     }
     return e;
 }
-function S(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,8 +60,8 @@ function S(e, t) {
         e
     );
 }
-let x = {
-    [E.Odu.VIDEO]: {
+let S = {
+    [v.Odu.VIDEO]: {
         renderWidget(e) {
             let { widget: t, locked: n, size: r, padding: l, borderWidth: o, showEmpty: a } = e;
             return (0, d.js)(t)
@@ -77,7 +77,7 @@ let x = {
                   })
                 : null;
         },
-        renderTitle: () => (0, i.jsx)(g.PI, { children: v.intl.string(v.t.UPvOia) }),
+        renderTitle: () => (0, i.jsx)(g.PI, { children: E.intl.string(E.t.UPvOia) }),
         renderButtons: (e) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -86,7 +86,7 @@ let x = {
                             (0, d.js)(e) &&
                                 (0, r.jW)(t, async () => {
                                     let { default: t } = await n.e("26775").then(n.bind(n, 740579));
-                                    return (n) => (0, i.jsx)(t, S(b({}, n), { widget: e }));
+                                    return (n) => (0, i.jsx)(t, _(b({}, n), { widget: e }));
                                 });
                         },
                     }),
@@ -98,7 +98,7 @@ let x = {
             }),
         resizeValidation: f.R,
     },
-    [E.Odu.VOICE_V3]: {
+    [v.Odu.VOICE_V3]: {
         renderWidget(e) {
             var t;
             let { widget: n, anchorLeft: r, locked: l, showEmpty: o } = e;
@@ -108,14 +108,14 @@ let x = {
                       id: n.id,
                       locked: l,
                       pinned: n.pinned,
-                      widget: E.Odu.VOICE_V3,
-                      maxDisplayedVoiceStates: null != (t = n.meta.voiceStatesMaxShown) ? t : y.At,
+                      widget: v.Odu.VOICE_V3,
+                      maxDisplayedVoiceStates: null != (t = n.meta.voiceStatesMaxShown) ? t : O.At,
                       isPreviewingInGame: !1,
                       showEmpty: o,
                   })
                 : null;
         },
-        renderTitle: () => (0, i.jsx)(g.PI, { children: v.intl.string(v.t.nFv3Gb) }),
+        renderTitle: () => (0, i.jsx)(g.PI, { children: E.intl.string(E.t.nFv3Gb) }),
         renderButtons: (e) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -134,7 +134,7 @@ let x = {
                 ],
             }),
     },
-    [E.Odu.CLICK_ZONE_DEBUG]: {
+    [v.Odu.CLICK_ZONE_DEBUG]: {
         renderWidget(e) {
             let { widget: t, locked: n } = e;
             return (0, i.jsx)(a.Z, {
@@ -162,7 +162,7 @@ let x = {
                 ],
             }),
     },
-    [E.Odu.PERFORMANCE_DEBUG]: {
+    [v.Odu.PERFORMANCE_DEBUG]: {
         renderWidget(e) {
             let { widget: t, locked: n, anchorLeft: r } = e;
             return (0, i.jsx)(h.Z, {
@@ -179,7 +179,7 @@ let x = {
                 pinned: e.pinned,
             }),
     },
-    [E.Odu.GO_LIVE]: {
+    [v.Odu.GO_LIVE]: {
         renderWidget(e) {
             var t;
             let {
@@ -189,12 +189,12 @@ let x = {
                 dragStart: o,
                 anchorTop: a,
                 anchorLeft: s,
-                showEmpty: c,
+                showEmpty: u,
                 padding: h,
                 borderWidth: p,
             } = e;
             return (0, d.ZL)(n)
-                ? (0, i.jsx)(u.Z, {
+                ? (0, i.jsx)(c.Z, {
                       id: n.id,
                       locked: r,
                       pinned: n.pinned,
@@ -208,14 +208,14 @@ let x = {
                       horizontal: null != (t = n.meta.horizontal) && t,
                       padding: h,
                       borderWidth: p,
-                      showEmpty: c,
+                      showEmpty: u,
                   })
                 : null;
         },
         renderTitle: (e) =>
             (0, i.jsx)(g.XM, {
                 widgetId: e.id,
-                children: v.intl.string(v.t["386XRo"]),
+                children: E.intl.string(E.t["386XRo"]),
             }),
         renderButtons(e) {
             var t;
@@ -227,7 +227,7 @@ let x = {
                                   (0, d.ZL)(e) &&
                                       (0, r.jW)(t, async () => {
                                           let { default: t } = await n.e("34684").then(n.bind(n, 68738));
-                                          return (n) => (0, i.jsx)(t, S(b({}, n), { widget: e }));
+                                          return (n) => (0, i.jsx)(t, _(b({}, n), { widget: e }));
                                       });
                               },
                           }),
@@ -243,24 +243,24 @@ let x = {
                   })
                 : null;
         },
-        resizeValidation: c.wD,
+        resizeValidation: u.wD,
     },
-    [E.Odu.QUICK_ACTIONS]: {
+    [v.Odu.QUICK_ACTIONS]: {
         renderWidget(e) {
             let { locked: t } = e;
             return (0, i.jsx)(p.Z, { locked: t });
         },
     },
-    [E.Odu.NOTIFICATIONS]: {
+    [v.Odu.NOTIFICATIONS]: {
         renderWidget(e) {
             let { locked: t, showEmpty: n, widget: r } = e;
-            return (0, i.jsx)(O.Z, {
+            return (0, i.jsx)(y.Z, {
                 pinned: r.pinned,
                 locked: t,
                 showEmpty: n,
             });
         },
-        renderTitle: () => (0, i.jsx)(g.PI, { children: v.intl.string(v.t.gnKWdS) }),
+        renderTitle: () => (0, i.jsx)(g.PI, { children: E.intl.string(E.t.gnKWdS) }),
         renderButtons: (e) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -279,21 +279,21 @@ let x = {
                 ],
             }),
     },
-    [E.Odu.ACTIVITY]: {
+    [v.Odu.ACTIVITY]: {
         renderWidget(e) {
             let { locked: t } = e;
             return (0, i.jsx)(o.ZP, { locked: t });
         },
-        renderTitle: () => (0, i.jsx)(g.PI, { children: v.intl.string(v.t["6gwSFY"]) }),
+        renderTitle: () => (0, i.jsx)(g.PI, { children: E.intl.string(E.t["6gwSFY"]) }),
         renderButtons: () => null,
         predicate: () => !(0, l.XU)("FriendsPopout").enableOverlayWidget,
     },
-    [E.Odu.FRIENDS]: {
+    [v.Odu.FRIENDS]: {
         renderWidget(e) {
             let { locked: t } = e;
             return (0, i.jsx)(s.Z, { locked: t });
         },
-        renderTitle: () => (0, i.jsx)(g.PI, { children: v.intl.string(v.t.TdEu5X) }),
+        renderTitle: () => (0, i.jsx)(g.PI, { children: E.intl.string(E.t.TdEu5X) }),
         renderButtons: () => null,
         predicate: () => (0, l.XU)("FriendsPopout").enableOverlayWidget,
     },

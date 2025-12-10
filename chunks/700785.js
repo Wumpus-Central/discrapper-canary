@@ -1,6 +1,6 @@
 n.d(t, {
     BT: () => W,
-    Hn: () => A,
+    Hn: () => C,
     Hu: () => H,
     I0: () => k,
     Og: () => G,
@@ -66,8 +66,8 @@ function T(e) {
     }
     return e;
 }
-let A = a.vB(0),
-    C = a.$e(...i().values(S.Plq)),
+let C = a.vB(0),
+    A = a.$e(...i().values(S.Plq)),
     N = a.$e(
         S.Plq.CREATE_INSTANT_INVITE,
         S.Plq.CHANGE_NICKNAME,
@@ -135,8 +135,8 @@ function L(e, t, n) {
 function j(e, t, n, r) {
     let i = r[e];
     if ((null != i && ((n = a.Od(n, i.deny)), (n = a.IH(n, i.allow))), null != t)) {
-        let e = A,
-            i = A;
+        let e = C,
+            i = C;
         for (let n = 0; n < t.roles.length; n++) {
             let o = r[t.roles[n]];
             null != o && ((e = a.IH(e, o.allow)), (i = a.IH(i, o.deny)));
@@ -160,7 +160,7 @@ function M(e) {
         excludeGuildPermissions: l = !1,
         lurkerPermissionsMask: c = P,
     } = e;
-    if (l) return j(r.id, n, A, i);
+    if (l) return j(r.id, n, C, i);
     let d = (o = null != o ? T({}, E.Z.getUnsafeMutableRoles(r.id), o) : E.Z.getUnsafeMutableRoles(r.id))[(0, p.lV)(r)],
         f = null != d ? d.permissions : N;
     if (null != n)
@@ -169,7 +169,7 @@ function M(e) {
             void 0 !== t && (f = a.IH(f, t.permissions));
         }
     return (
-        (f = a.e$(f, S.Plq.ADMINISTRATOR) ? C : j(r.id, n, f, i)),
+        (f = a.e$(f, S.Plq.ADMINISTRATOR) ? A : j(r.id, n, f, i)),
         (u.Z.isLurking(r.id) || (null == n ? void 0 : n.isPending)) && (f = a.hX(f, c)),
         g.ZP.isCurrentUserGuest(r.id) && (f = a.hX(f, R)),
         L(f, r, t, s)
@@ -181,11 +181,11 @@ function k(e) {
         l = P;
     if (r instanceof f.Sf) {
         var c;
-        if (r.isScheduledForDeletion()) return A;
+        if (r.isScheduledForDeletion()) return C;
         if (f.Ec.has(r.type)) {
             let e = h.Z.getChannel(r.parent_id);
             return null == e
-                ? A
+                ? C
                 : G(
                       r,
                       k({
@@ -204,7 +204,7 @@ function k(e) {
         let e = r.getGuildId();
         t = null != e ? b.Z.getGuild(e) : null;
     } else (i = null != i ? i : {}), (t = r);
-    if (null == t) return A;
+    if (null == t) return C;
     let u = {
         userId: S.lds,
         nick: "",
@@ -234,14 +234,14 @@ function U(e) {
     var t, n, r;
     let i,
         { user: a, context: o, overwrites: s, roles: l, checkElevated: u = !0, excludeGuildPermissions: _ = !1 } = e;
-    if (null == a) return A;
+    if (null == a) return C;
     let m = "string" == typeof a ? a : a.id,
         E = P;
     if (o instanceof f.Sf) {
-        if (o.isScheduledForDeletion()) return A;
+        if (o.isScheduledForDeletion()) return C;
         if (f.Ec.has(o.type)) {
             let e = h.Z.getChannel(o.parent_id);
-            if (null == e || e.isScheduledForDeletion()) return A;
+            if (null == e || e.isScheduledForDeletion()) return C;
             let t = m === (null == (n = y.default.getCurrentUser()) ? void 0 : n.id) && d.Z.hasJoined(o.id);
             return G(
                 o,
@@ -261,12 +261,12 @@ function U(e) {
         let e = o.getGuildId();
         i = null != e ? b.Z.getGuild(e) : null;
     } else (s = null != s ? s : {}), (i = o);
-    if (null == i) return A;
+    if (null == i) return C;
     if (
         !(m === (null == (t = y.default.getCurrentUser()) ? void 0 : t.id) && c.Z.isViewingRoles(i.id)) &&
         (0, p.eM)(i, m)
     )
-        return L(C, i, m, u);
+        return L(A, i, m, u);
     let O = g.ZP.getMember(i.id, m);
     return M({
         userId: m,
@@ -286,7 +286,7 @@ function G(e, t, n) {
                 ? a.Od(t, S.Plq.SEND_MESSAGES)
                 : a.$e(t, S.Plq.SEND_MESSAGES)
             : a.Od(t, S.Plq.SEND_MESSAGES)
-        : A;
+        : C;
 }
 function Z(e, t) {
     if (f.Ec.has(e.type)) return !0;
@@ -327,8 +327,8 @@ function Y(e) {
     return {
         id: e,
         type: o.BN.ROLE,
-        allow: A,
-        deny: A,
+        allow: C,
+        deny: C,
     };
 }
 function W(e) {

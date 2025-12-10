@@ -28,7 +28,7 @@ let E = () => {
             [y, O] = (0, i.useState)(0),
             { installedDiscordPrivateBrowsingPerk: v } = (0, s.e7)([m.Z], () => m.Z.getState(), []),
             [S, I] = (0, i.useState)(!1),
-            [T, A] = (0, i.useState)(null);
+            [T, C] = (0, i.useState)(null);
         return (
             (0, i.useEffect)(() => {
                 S ||
@@ -90,8 +90,8 @@ let E = () => {
                         });
             }, [e, t, r, o]),
             (0, i.useEffect)(() => {
-                if (![p._n.INSTALLING, p._n.WAITING_FOR_TERMS].includes(e)) return void A(null);
-                if ((null == T && A(Date.now()), null != T)) {
+                if (![p._n.INSTALLING, p._n.WAITING_FOR_TERMS].includes(e)) return void C(null);
+                if ((null == T && C(Date.now()), null != T)) {
                     let e = T + E - Date.now();
                     if (e <= 0) return void t(p._n.INSTALLING_TIMEOUT);
                     let n = setTimeout(() => {
@@ -99,7 +99,7 @@ let E = () => {
                     }, e);
                     return () => clearTimeout(n);
                 }
-            }, [e, T, A, t, E]),
+            }, [e, T, C, t, E]),
             (0, i.useEffect)(() => {
                 if (![p._n.INSTALLING, p._n.WAITING_FOR_TERMS, p._n.INSTALLING_TIMEOUT].includes(e)) return;
                 let n = setInterval(async () => {

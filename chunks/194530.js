@@ -15,8 +15,8 @@ function p(e) {
         [b, y] = i.useState(""),
         [O, v] = i.useState(""),
         [S, I] = i.useState(""),
-        [T, A] = i.useState(null),
-        [C, N] = i.useState(null),
+        [T, C] = i.useState(null),
+        [A, N] = i.useState(null),
         P = (0, o.e7)([c.Z], () => c.Z.getErrors()),
         R = (0, o.e7)([c.Z], () => c.Z.getFormState()),
         D = i.useRef(null);
@@ -24,7 +24,7 @@ function p(e) {
         e.preventDefault(), (0, l.b9)();
         let t = !1;
         if (
-            ("" === O ? (A(f.intl.string(f.t["/7/oPU"])), (t = !0)) : A(null),
+            ("" === O ? (C(f.intl.string(f.t["/7/oPU"])), (t = !0)) : C(null),
             O !== S ? (N(f.intl.string(f.t["IEKYZ/"])), (t = !0)) : N(null),
             t)
         )
@@ -94,7 +94,7 @@ function p(e) {
                         }),
                         (0, r.jsx)(s.oil, {
                             label: f.intl.string(f.t.iQG2KC),
-                            error: null != C ? C : void 0,
+                            error: null != A ? A : void 0,
                             type: "password",
                             value: S,
                             onChange: I,

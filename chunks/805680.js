@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(455708),
     I = n(314910),
     T = n(728285),
-    A = n(125900),
-    C = n(603074),
+    C = n(125900),
+    A = n(603074),
     N = n(453070),
     P = n(926491),
     R = n(457040),
@@ -230,7 +230,7 @@ function J(e) {
         eu = (0, N.fQ)(K),
         { renderWindow: ed, windowDispatch: ef } = i.useContext(T.ZP),
         ep = (0, d.e7)([P.Z], () => !P.Z.hasLoadedStickerPacks),
-        e_ = (0, A.V2)({ location: "expression_picker" }),
+        e_ = (0, C.V2)({ location: "expression_picker" }),
         em = (0, d.e7)([w.Z], () => w.Z.isOpen()),
         eh = null != en,
         eg = (0, p.useIsModalAtTop)(null != en ? en : ""),
@@ -286,16 +286,16 @@ function J(e) {
         );
     }, [ec, eI, eS, ed, ef]),
         (0, _.Tbt)(er);
-    let [eT, eA] = (0, y.US)(e_ ? [f.z.SOUNDMOJI_BADGE] : [], void 0, !1),
-        [eC, eN] = i.useState(!1);
+    let [eT, eC] = (0, y.US)(e_ ? [f.z.SOUNDMOJI_BADGE] : [], void 0, !1),
+        [eA, eN] = i.useState(!1);
     i.useEffect(() => {
         ec === j.X1.SOUNDBOARD && eN(!0);
     }, [ec]),
         i.useEffect(
             () => () => {
-                eC && eA(k.L.TAKE_ACTION);
+                eA && eC(k.L.TAKE_ACTION);
             },
-            [eC, eA],
+            [eA, eC],
         ),
         i.useEffect(() => {
             (0, L.ql)("");
@@ -476,7 +476,7 @@ function J(e) {
                                           ec === j.X1.SOUNDBOARD
                                               ? (0, r.jsx)("div", {
                                                     className: F.soundboardContainer,
-                                                    children: (0, r.jsx)(C.Z, {
+                                                    children: (0, r.jsx)(A.Z, {
                                                         guildId: K.guild_id,
                                                         channel: K,
                                                         containerWidth: es,

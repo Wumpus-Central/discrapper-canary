@@ -124,7 +124,7 @@ async function T(e) {
     let t = await v(e);
     return null == t ? void 0 : t.assets;
 }
-async function A(e, t) {
+async function C(e, t) {
     let n = t.filter((e) => null != e && !Object.prototype.hasOwnProperty.call(b, e) && null == b[e]);
     if (0 === n.length) return;
     let { body: r } = await a.tn.post({
@@ -135,7 +135,7 @@ async function A(e, t) {
     });
     for (let { url: e, external_asset_path: t } of r) b[e] = t;
 }
-function C(e, t) {
+function A(e, t) {
     let n = 0;
     if (
         e.filter((e) => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")))
@@ -176,7 +176,7 @@ async function P(e, t) {
         i = t.filter(
             (e) => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")),
         );
-    if ((i.length > 0 && (await A(e, i)), C(t, r)))
+    if ((i.length > 0 && (await C(e, i)), A(t, r)))
         return (
             o.Z.dispatch({
                 type: "APPLICATION_ASSETS_FETCH_SUCCESS",

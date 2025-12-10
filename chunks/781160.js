@@ -247,7 +247,7 @@ function I(e) {
 function T(e) {
     if (e) return parseInt(e) > 0 ? e : void 0;
 }
-class A {
+class C {
     constructor() {
         c(this, "targetElement"),
             c(this, "targetAncestry"),
@@ -365,9 +365,9 @@ class A {
         return t;
     }
 }
-let C = new A();
-"u" > typeof window && C.setContainer(document.body);
-let N = a.createContext(C);
+let A = new C();
+"u" > typeof window && A.setContainer(document.body);
+let N = a.createContext(A);
 var P = function (e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
@@ -411,7 +411,7 @@ let L = !1,
     };
 function M(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
-        i = a.useRef(new A());
+        i = a.useRef(new C());
     return (
         a.useEffect(() => {
             i.current.setContainer(t.current), i.current.setThemeOptions(r);

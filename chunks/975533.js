@@ -10,8 +10,8 @@ var r = n(570140),
     d = n(100527),
     p = n(924557),
     f = n(341569),
-    h = n(39604),
-    g = n(891304),
+    g = n(39604),
+    h = n(891304),
     m = n(569545),
     _ = n(722835),
     b = n(837968),
@@ -219,7 +219,7 @@ let U = {
         },
     },
     [w.kg4.NAVIGATE_BACK]: {
-        onTrigger: () => (0, g.Hm)("global_keybind"),
+        onTrigger: () => (0, h.Hm)("global_keybind"),
         keyEvents: {
             keyup: !0,
             keydown: !1,
@@ -228,7 +228,7 @@ let U = {
         },
     },
     [w.kg4.NAVIGATE_FORWARD]: {
-        onTrigger: () => (0, g.TL)("global_keybind"),
+        onTrigger: () => (0, h.TL)("global_keybind"),
         keyEvents: {
             keyup: !0,
             keydown: !1,
@@ -269,7 +269,7 @@ let U = {
     },
     [w.kg4.SAVE_CLIP]: {
         onTrigger: () => {
-            (0, f.LI)() && (x.default.track(w.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, h.br)());
+            (0, f.LI)() && (x.default.track(w.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, g.br)());
         },
         keyEvents: {
             keyup: !1,
@@ -278,7 +278,7 @@ let U = {
     },
     [w.kg4.SAVE_SCREENSHOT]: {
         onTrigger: () => {
-            (0, f.LI)() && (0, p.iL)() && (x.default.track(w.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, h.ZW)());
+            (0, f.LI)() && (0, p.iL)() && (x.default.track(w.rMx.CLIP_SAVE_KEYBIND_PRESSED), (0, g.ZW)());
         },
         keyEvents: {
             keyup: !1,

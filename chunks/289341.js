@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(35282), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => h }), n(35282), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var r = n(473749),
     i = n(442837),
     l = n(668781),
@@ -10,13 +10,13 @@ var r = n(473749),
     d = n(594174),
     p = n(122613),
     f = n(649256),
-    h = n(388032);
-function g(e) {
+    g = n(388032);
+function h(e) {
     var t, n;
-    let { match: g } = e,
+    let { match: h } = e,
         m = null != (n = (0, u.DR)()) ? n : [],
         { analyticsLocations: _ } = (0, o.ZP)([...m, s.Z.ACTIVITY_DETAIL_PAGE]),
-        { applicationId: b } = g.params,
+        { applicationId: b } = h.params,
         [E] = (0, c.Z)([b]),
         O = null == E || null == (t = E.bot) ? void 0 : t.id,
         v = (0, i.e7)([d.default], () => d.default.getCurrentUser());
@@ -49,8 +49,8 @@ function g(e) {
             let e = setTimeout(() => {
                 null == O &&
                     l.Z.show({
-                        title: h.intl.string(h.t.PtobXW),
-                        body: h.intl.string(h.t["IOy+I5"]),
+                        title: g.intl.string(g.t.PtobXW),
+                        body: g.intl.string(g.t["IOy+I5"]),
                     });
             }, 5000);
             return () => {

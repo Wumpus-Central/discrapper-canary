@@ -71,13 +71,13 @@ function I(e) {
 function T() {
     E.clear(), b.clear(), y.clear(), (O = {}), (v = {});
 }
-function A(e) {
+function C(e) {
     let { applicationId: t, groupListingId: n } = e;
     O[t] = 1;
     let r = E.get(n);
     if (null != r) for (let e of r.subscription_listings_ids) b.delete(e);
 }
-function C(e) {
+function A(e) {
     let { applicationId: t, groupListing: n } = e;
     (O[t] = 2), S(n);
 }
@@ -127,8 +127,8 @@ class R extends (r = o.yh) {
 d(R, "displayName", "ApplicationSubscriptionStore");
 let D = new R(l.Z, {
     LOGOUT: T,
-    APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: A,
-    APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: C,
+    APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: C,
+    APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: A,
     APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: N,
     APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS(e) {
         let { guildId: t } = e;

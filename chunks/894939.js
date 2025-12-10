@@ -26,8 +26,8 @@ var r = n(54381),
     S = n(981631),
     I = n(710111),
     T = n(388032),
-    A = n(647484);
-function C(e) {
+    C = n(647484);
+function A(e) {
     return (0, a.e7)([p.Z], () => {
         if (null == e) return null;
         let { guildId: t, soundId: n } = e;
@@ -52,7 +52,7 @@ function P() {
     let { analyticsLocations: e } = (0, l.ZP)(),
         [t, n] = i.useState(I.hY),
         s = (0, m.tT)(t),
-        d = C(s),
+        d = A(s),
         E = (null == s ? void 0 : s.type) === m.zx.GLOBAL,
         y = (0, a.e7)([p.Z], () => p.Z.hasFetchedAllSounds()) && null != s && null == d;
     i.useEffect(() => {
@@ -72,7 +72,7 @@ function P() {
             children: [
                 (0, r.jsx)(c.Z, {
                     guildId: t,
-                    className: A.guildSelector,
+                    className: C.guildSelector,
                     globalOption: {
                         label: T.intl.string(T.t["CpEUP/"]),
                         value: I.hY,
@@ -89,7 +89,7 @@ function P() {
                             (0, r.jsx)(o.SrA, {
                                 size: "md",
                                 color: "currentColor",
-                                className: A.nitroWheel,
+                                className: C.nitroWheel,
                             }),
                     }),
                     children: [
@@ -102,7 +102,7 @@ function P() {
                         }),
                         y &&
                             (0, r.jsx)(o.Wn, {
-                                className: A.notice,
+                                className: C.notice,
                                 messageType: o.QYI.WARNING,
                                 children: T.intl.string(T.t.WkPsFR),
                             }),
@@ -120,26 +120,26 @@ function R(e) {
                 ? void 0
                 : e.joinSound;
         }),
-        i = C(n);
+        i = A(n);
     if (null == n || null == i) return null;
     let { emojiId: l, emojiName: c } = i,
         u = null != l || null != c;
     return (0, r.jsxs)("div", {
-        className: A.pill,
+        className: C.pill,
         children: [
             u
                 ? (0, r.jsx)(s.Z, {
                       emojiId: l,
                       emojiName: c,
-                      className: A.pillIcon,
+                      className: C.pillIcon,
                   })
                 : (0, r.jsx)(o.gj8, {
                       size: "md",
                       color: "currentColor",
-                      className: A.pillIcon,
+                      className: C.pillIcon,
                   }),
             (0, r.jsx)(o.Text, {
-                className: A.pillText,
+                className: C.pillText,
                 variant: "text-xs/medium",
                 children: i.name,
             }),

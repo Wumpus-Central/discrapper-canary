@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(865427),
     I = n(802098),
     T = n(600164),
-    A = n(482215),
-    C = n(581612),
+    C = n(482215),
+    A = n(581612),
     N = n(580747),
     P = n(38618),
     R = n(375657),
@@ -657,7 +657,7 @@ class eo extends i.Component {
     }
 }
 function es() {
-    let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: a } = (0, A.i)(),
+    let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: a } = (0, C.i)(),
         o = i.useMemo(() => Array.from({ length: n + 1 }, (e, t) => t), [n]),
         s = i.useMemo(() => Array.from({ length: a + 1 }, (e, t) => t), [a]),
         { cssDebuggingEnabled: l, layoutDebuggingEnabled: c } = (0, d.cj)([L.default], () => ({
@@ -702,7 +702,7 @@ function es() {
                         minValue: 0,
                         maxValue: n,
                         markers: o,
-                        onValueChange: (e) => A.i.getState().setHorizontalSpacing(e),
+                        onValueChange: (e) => C.i.getState().setHorizontalSpacing(e),
                         onValueRender: (e) => "".concat(Math.round(e), "px"),
                         onMarkerRender: (e) => (e % 4 == 0 ? "".concat(e) : void 0),
                         equidistant: !0,
@@ -715,7 +715,7 @@ function es() {
                         minValue: 0,
                         maxValue: a,
                         markers: s,
-                        onValueChange: (e) => A.i.getState().setVerticalSpacing(e),
+                        onValueChange: (e) => C.i.getState().setVerticalSpacing(e),
                         onValueRender: (e) => "".concat(Math.round(e), "px"),
                         onMarkerRender: (e) => (e % 4 == 0 ? "".concat(e) : void 0),
                         equidistant: !0,
@@ -728,7 +728,7 @@ function es() {
                     label: "Highlight Mana Components",
                     description: "Highlights all Mana design system components for easier debugging",
                     checked: f,
-                    onChange: (e) => (0, C.Z)("highlight_mana_components", e),
+                    onChange: (e) => (0, A.Z)("highlight_mana_components", e),
                 }),
             }),
             (0, r.jsx)(x.F, {
@@ -738,7 +738,7 @@ function es() {
                     description:
                         "Highlights deprecated toggleable components: VoidCheckbox (green), VoidRadioGroup (yellow), VoidSwitch (blue)",
                     checked: u,
-                    onChange: (e) => (0, C.Z)("highlight_void_toggleables", e),
+                    onChange: (e) => (0, A.Z)("highlight_void_toggleables", e),
                 }),
             }),
         ],

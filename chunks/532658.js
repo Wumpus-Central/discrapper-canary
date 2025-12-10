@@ -8,7 +8,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(442837),
     c = n(481060),
     u = n(239091),
@@ -27,8 +27,8 @@ var r = n(54381),
     S = n(199902),
     I = n(314897),
     T = n(355863),
-    A = n(131951),
-    C = n(979651),
+    C = n(131951),
+    A = n(979651),
     N = n(136015),
     P = n(51144),
     R = n(444295),
@@ -292,12 +292,12 @@ let K = i.memo(function (e) {
             Q = t.id,
             X = s.id,
             [J] = (0, l.e7)(
-                [C.Z],
+                [A.Z],
                 () => {
                     var e;
                     return [
-                        null != (e = C.Z.getVoiceStateForChannel(Q, X)) ? e : C.Z.getVoiceStateForSession(X, Y),
-                        C.Z.getVoiceStateVersion(),
+                        null != (e = A.Z.getVoiceStateForChannel(Q, X)) ? e : A.Z.getVoiceStateForSession(X, Y),
+                        A.Z.getVoiceStateVersion(),
                     ];
                 },
                 [Q, X, Y],
@@ -305,11 +305,11 @@ let K = i.memo(function (e) {
             ),
             $ = P ? w : null != J ? J : w,
             [ee, et, en] = (0, l.Wu)(
-                [A.Z],
+                [C.Z],
                 () =>
                     B
-                        ? [!A.Z.isSupported() || A.Z.isSelfMute() || A.Z.isSelfMutedTemporarily(), A.Z.isSelfDeaf(), !1]
-                        : [!A.Z.isSupported() || A.Z.isLocalMute(s.id), !1, A.Z.isLocalVideoDisabled(s.id)],
+                        ? [!C.Z.isSupported() || C.Z.isSelfMute() || C.Z.isSelfMutedTemporarily(), C.Z.isSelfDeaf(), !1]
+                        : [!C.Z.isSupported() || C.Z.isLocalMute(s.id), !1, C.Z.isLocalVideoDisabled(s.id)],
                 [B, s.id],
             ),
             er = (0, l.e7)([S.Z], () => {
@@ -550,8 +550,8 @@ let K = i.memo(function (e) {
             } = e,
             E = i.useRef(null),
             { user: b, member: y, voiceState: v, connectedOn: S } = o,
-            [I, A] = i.useState(null),
-            [C, N] = i.useState(null);
+            [I, C] = i.useState(null),
+            [A, N] = i.useState(null);
         i.useEffect(() => {
             c && N(null);
         }, [c]),
@@ -563,7 +563,7 @@ let K = i.memo(function (e) {
                     });
             }, [I]);
         let w = (e) => {
-                A(e);
+                C(e);
             },
             x = (e, t) => {
                 h ||
@@ -637,7 +637,7 @@ let K = i.memo(function (e) {
                 guildId: a.guild_id,
                 channelId: a.id,
                 appContext: D.IlC.OVERLAY,
-                shouldShow: C === b.id,
+                shouldShow: A === b.id,
                 onRequestClose: () => N(null),
                 spacing: 24,
                 children: () => {

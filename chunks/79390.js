@@ -7,7 +7,7 @@ n.d(t, {
     cZ: () => k,
     e1: () => Z,
     eQ: () => N,
-    fw: () => C,
+    fw: () => A,
     uY: () => w,
     x9: () => L,
 }),
@@ -89,13 +89,13 @@ function T() {
     return {
         text: void 0,
         image: void 0,
-        localCreationAnswerId: A(),
+        localCreationAnswerId: C(),
     };
 }
-function A() {
+function C() {
     return (0, a.Z)();
 }
-function C(e) {
+function A(e) {
     let t = /\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i;
     return e.replace(t, "");
 }

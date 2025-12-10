@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -22,10 +22,10 @@ var r = n(54381),
     S = n(388032),
     I = n(677599),
     T = n(865215);
-let A = (e) => {
+let C = (e) => {
     let t,
         n,
-        { isAllPerksVisible: a, setIsAllPerksVisible: A, previousComponent: C, enablePremiumBrandRefresh: N } = e,
+        { isAllPerksVisible: a, setIsAllPerksVisible: C, previousComponent: A, enablePremiumBrandRefresh: N } = e,
         P = i.useRef(null),
         R = i.useRef(null),
         D = Object.entries((0, b.Z)()).reduce((e, t) => {
@@ -42,10 +42,10 @@ let A = (e) => {
         ? ((t = S.intl.string(S.t["+vt7w9"])), (n = S.intl.string(S.t.LgHbnL)))
         : ((t = S.intl.string(S.t.LgHbnL)), (n = S.intl.string(S.t["+vt7w9"])));
     let G = () => {
-        A(!1),
+        C(!1),
             _.default.track(v.rMx.NITRO_HOME_NAVIGATION, {
                 current_component: y.MQ.SEE_ALL,
-                next_component: C,
+                next_component: A,
                 interaction_component: "Back Button",
             });
     };

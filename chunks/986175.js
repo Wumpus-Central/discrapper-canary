@@ -1,4 +1,4 @@
-n.d(t, { I: () => C }), n(35282), n(539854), n(415506), n(388685);
+n.d(t, { I: () => A }), n(35282), n(539854), n(415506), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(164617),
@@ -166,7 +166,7 @@ function T() {
         })
     );
 }
-function A(e) {
+function C(e) {
     var t = m({}, h(e));
     let [n, a] = i.useState("intro"),
         s = [
@@ -206,7 +206,7 @@ function A(e) {
         ),
     );
 }
-let C = {
+let A = {
     title: "Modal",
     stories: [
         {
@@ -862,7 +862,7 @@ let C = {
                         (0, r.jsx)(u.Button, {
                             variant: "primary",
                             text: "Open MultiStepModal",
-                            onClick: () => (0, u.h7j)((e) => (0, r.jsx)(A, g({}, e)), { dismissable: t.dismissable }),
+                            onClick: () => (0, u.h7j)((e) => (0, r.jsx)(C, g({}, e)), { dismissable: t.dismissable }),
                         }),
                     ],
                 });

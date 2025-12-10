@@ -1,5 +1,5 @@
 n.d(t, {
-    FS: () => A,
+    FS: () => C,
     ZP: () => T,
 }),
     n(388685),
@@ -109,7 +109,7 @@ function T(e) {
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         o = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
         u = d.ZP.isPremium(o, b.PremiumTypes.TIER_2),
-        [y, T, A] = (0, i.Wu)([_.Z], () => [_.Z.getSounds(), _.Z.getFavorites(), _.Z.isFetching()]),
+        [y, T, C] = (0, i.Wu)([_.Z], () => [_.Z.getSounds(), _.Z.getFavorites(), _.Z.isFetching()]),
         N = (0, g.t)(),
         P = (0, h.h)(e, !1),
         R = (0, i.Wu)([s.Z], () => {
@@ -132,7 +132,7 @@ function T(e) {
             location: "soundboard-useSoundGrid",
             autoTrackExposure: !0,
         }),
-        M = C(),
+        M = A(),
         k = (0, i.Wu)([p.Z], () => p.Z.recentlyHeardSoundIds);
     return r.useMemo(() => {
         let e = 0,
@@ -145,7 +145,7 @@ function T(e) {
                 {
                     categories: i,
                     availableSounds: null != (a = y.get(E.X8)) ? a : E.Hy,
-                    isFetching: A,
+                    isFetching: C,
                     soundCounts: {
                         favoriteSoundCount: 0,
                         unlockedCustomSoundCount: 0,
@@ -203,7 +203,7 @@ function T(e) {
             {
                 categories: i,
                 availableSounds: Array.from(y.values()).flat(),
-                isFetching: A,
+                isFetching: C,
                 soundCounts: {
                     favoriteSoundCount: T.size,
                     unlockedCustomSoundCount: e,
@@ -211,9 +211,9 @@ function T(e) {
                 },
             }
         );
-    }, [P, y, T, k, M, j, L, w, x, t, D, R, n, A, u, N]);
+    }, [P, y, T, k, M, j, L, w, x, t, D, R, n, C, u, N]);
 }
-function A(e, t, n) {
+function C(e, t, n) {
     return r.useMemo(
         () =>
             n.length > 0
@@ -228,7 +228,7 @@ function A(e, t, n) {
         [e, n.length, t],
     );
 }
-function C() {
+function A() {
     return (
         r.useEffect(() => {
             o.DZ.loadIfNecessary();

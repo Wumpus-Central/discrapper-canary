@@ -84,18 +84,18 @@ function I(e) {
     return e.replace(/start|end/g, (e) => f[e]);
 }
 let T = ["left", "right"],
-    A = ["right", "left"],
-    C = ["top", "bottom"],
+    C = ["right", "left"],
+    A = ["top", "bottom"],
     N = ["bottom", "top"];
 function P(e, t, n) {
     switch (e) {
         case "top":
         case "bottom":
-            if (n) return t ? A : T;
-            return t ? T : A;
+            if (n) return t ? C : T;
+            return t ? T : C;
         case "left":
         case "right":
-            return t ? C : N;
+            return t ? A : N;
         default:
             return [];
     }

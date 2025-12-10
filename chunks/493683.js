@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(544891),
     i = n(780384),
     a = n(570140),
@@ -70,7 +70,7 @@ function T(e, t) {
         e
     );
 }
-let A = {
+let C = {
     async openPrivateChannel(e) {
         let {
                 recipientIds: t,

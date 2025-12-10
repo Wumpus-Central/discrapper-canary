@@ -97,14 +97,14 @@ let I = (e) => {
             t.id,
         );
     },
-    A = (e) => {
+    C = (e) => {
         let { slotIndex: t } = e;
         return (0, r.jsx)("div", {
             className: E.availableReferralSlot,
             children: t,
         });
     },
-    C = (e) => {
+    A = (e) => {
         let { referralSentUsers: t } = e,
             n = () => {
                 let e = [];
@@ -113,7 +113,7 @@ let I = (e) => {
                         let i = (0, r.jsx)(T, { user: t[n] }, t[n].id);
                         e.push(i);
                     } else {
-                        let t = (0, r.jsx)(A, { slotIndex: n + 1 }, n);
+                        let t = (0, r.jsx)(C, { slotIndex: n + 1 }, n);
                         e.push(t);
                     }
                 return e;
@@ -166,7 +166,7 @@ let I = (e) => {
                 (0, r.jsxs)("div", {
                     className: E.bannerContent,
                     children: [
-                        (0, r.jsx)(C, { referralSentUsers: n }),
+                        (0, r.jsx)(A, { referralSentUsers: n }),
                         (0, r.jsxs)("div", {
                             className: E.bannerContentText,
                             children: [

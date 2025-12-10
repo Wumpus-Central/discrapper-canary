@@ -466,7 +466,7 @@ function T(e) {
           }
         : e;
 }
-function A(e) {
+function C(e) {
     return (function (e) {
         switch (e.type) {
             case "static":
@@ -491,7 +491,7 @@ function A(e) {
         }
     })(f(f({}, e), { valueType: "number" }));
 }
-function C(e) {
+function A(e) {
     return (function (e) {
         switch (e.type) {
             case "static":
@@ -530,10 +530,10 @@ function C(e) {
                     m = I(e.minDuration),
                     g = I(e.maxDuration),
                     T = I(e.minDirection),
-                    A = I(e.maxDirection);
+                    C = I(e.maxDirection);
                 return new h(
-                    new y(O(n.x, r.x), O(d.x, f.x), O(p.x, _.x), O(m.x, g.x), S(T.x, A.x), v(e.easingFunctions)[0]),
-                    new y(O(n.y, r.y), O(d.y, f.y), O(p.y, _.y), O(m.y, g.y), S(T.y, A.y), v(e.easingFunctions)[0]),
+                    new y(O(n.x, r.x), O(d.x, f.x), O(p.x, _.x), O(m.x, g.x), S(T.x, C.x), v(e.easingFunctions)[0]),
+                    new y(O(n.y, r.y), O(d.y, f.y), O(p.y, _.y), O(m.y, g.y), S(T.y, C.y), v(e.easingFunctions)[0]),
                     e.uniformVectorValues,
                 );
         }
@@ -584,11 +584,11 @@ function N(e) {
                     m = T(e.minDuration),
                     h = T(e.maxDuration),
                     I = T(e.minDirection),
-                    A = T(e.maxDirection);
+                    C = T(e.maxDirection);
                 return new g(
-                    new y(O(n.x, r.x), O(d.x, f.x), O(p.x, _.x), O(m.x, h.x), S(I.x, A.x), v(e.easingFunctions)[0]),
-                    new y(O(n.y, r.y), O(d.y, f.y), O(p.y, _.y), O(m.y, h.y), S(I.y, A.y), v(e.easingFunctions)[0]),
-                    new y(O(n.z, r.z), O(d.z, f.z), O(p.z, _.z), O(m.z, h.z), S(I.z, A.z), v(e.easingFunctions)[0]),
+                    new y(O(n.x, r.x), O(d.x, f.x), O(p.x, _.x), O(m.x, h.x), S(I.x, C.x), v(e.easingFunctions)[0]),
+                    new y(O(n.y, r.y), O(d.y, f.y), O(p.y, _.y), O(m.y, h.y), S(I.y, C.y), v(e.easingFunctions)[0]),
+                    new y(O(n.z, r.z), O(d.z, f.z), O(p.z, _.z), O(m.z, h.z), S(I.z, C.z), v(e.easingFunctions)[0]),
                     e.uniformVectorValues,
                 );
         }
@@ -632,13 +632,13 @@ function P(e, t, n, r, i) {
         })(null != r ? r : c, i, n);
     return new s({
         id: e,
-        position: C(a.position),
-        velocity: C(a.velocity),
+        position: A(a.position),
+        velocity: A(a.velocity),
         rotation: N(a.rotation),
-        dragCoefficient: C(a.dragCoefficient),
-        size: C(a.size),
-        opacity: A(a.opacity),
-        airResistanceArea: C(a.airResistanceArea),
+        dragCoefficient: A(a.dragCoefficient),
+        size: A(a.size),
+        opacity: C(a.opacity),
+        airResistanceArea: A(a.airResistanceArea),
         spriteX: d * n.spriteWidth + 2 * d,
         spriteY: u * n.spriteHeight + 2 * u,
         spriteWidth: n.spriteWidth,
@@ -722,8 +722,8 @@ var D = r.forwardRef(function (e, t) {
             S = O.addReadyListener,
             I = O.removeReadyListener,
             T = O.setIsReady,
-            A = r.useRef(new Map()),
-            C = r.useRef(null),
+            C = r.useRef(new Map()),
+            A = r.useRef(null),
             N = r.useRef(0),
             D = r.useRef(0),
             w = r.useCallback(
@@ -734,15 +734,15 @@ var D = r.forwardRef(function (e, t) {
                         if (null != t) {
                             t.clearRect(0, 0, e.width, e.height),
                                 null == p || p(t),
-                                A.current.forEach(function (n, r) {
+                                C.current.forEach(function (n, r) {
                                     var i = n.confetti,
                                         a = n.spriteCanvas;
-                                    i.update(s), i.draw(a, t), i.shouldDestroy(e, s) && A.current.delete(r);
+                                    i.update(s), i.draw(a, t), i.shouldDestroy(e, s) && C.current.delete(r);
                                 }),
                                 null == _ || _(t),
-                                A.current.size > 0
-                                    ? (C.current = h(w))
-                                    : (t.clearRect(0, 0, e.width, e.height), (C.current = null));
+                                C.current.size > 0
+                                    ? (A.current = h(w))
+                                    : (t.clearRect(0, 0, e.width, e.height), (A.current = null));
                             var n = Date.now();
                             0 !== N.current && (D.current = 1000 / (n - N.current)), (N.current = n);
                         }
@@ -752,17 +752,17 @@ var D = r.forwardRef(function (e, t) {
             );
         r.useEffect(
             function () {
-                null != C.current && (E(C.current), (C.current = h(w)));
+                null != A.current && (E(A.current), (A.current = h(w)));
             },
             [E, w, h],
         );
         var x = r.useCallback(
                 function (e, t) {
-                    A.current.set(e.id, {
+                    C.current.set(e.id, {
                         confetti: e,
                         spriteCanvas: t,
                     }),
-                        null == C.current && w();
+                        null == A.current && w();
                 },
                 [w],
             ),
@@ -775,10 +775,10 @@ var D = r.forwardRef(function (e, t) {
                 [x],
             ),
             j = r.useCallback(function (e) {
-                A.current.delete(e);
+                C.current.delete(e);
             }, []),
             M = r.useCallback(function () {
-                return A.current.clear();
+                return C.current.clear();
             }, []),
             k = r.useCallback(function () {
                 return y.current;
@@ -833,7 +833,7 @@ var D = r.forwardRef(function (e, t) {
                                                 if (null != i && t(i)) return i;
                                             }
                                             return null;
-                                        })(A.current, function (e) {
+                                        })(C.current, function (e) {
                                             var t = e.confetti,
                                                 n = t.previewPositionUpdate(s, u);
                                             return a(c, {

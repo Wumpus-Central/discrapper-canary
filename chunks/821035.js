@@ -69,17 +69,17 @@ function O() {
                 label: g.intl.string(g.t["D/157Y"]),
             },
         ],
-        A = [
+        C = [
             {
                 value: i.Q4.BLUR,
                 label: g.intl.string(g.t.S49Uad),
             },
         ],
-        C = {
+        A = {
             value: i.Q4.SHOW,
             label: g.intl.string(g.t["5k5OFp"]),
         };
-    t && (T.unshift(C), A.unshift(C));
+    t && (T.unshift(A), C.unshift(A));
     let N = {
         isDisabled: b,
         tooltipText: n ? g.intl.string(E.default["6Af/cw"]) : void 0,
@@ -119,7 +119,7 @@ function O() {
                 onChange: (e) => I({ explicitContentGuilds: e }),
                 isDisabled: !t || b,
                 tooltipText: n ? g.intl.string(E.default["6Af/cw"]) : void 0,
-                options: A,
+                options: C,
             }),
         ],
     });

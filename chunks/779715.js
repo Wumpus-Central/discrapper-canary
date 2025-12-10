@@ -10,14 +10,14 @@ var r = n(54381),
     d = n(199104),
     p = n(108427),
     f = n(210887),
-    h = n(626135),
-    g = n(270759),
+    g = n(626135),
+    h = n(270759),
     m = n(981631),
     _ = n(388032),
     b = n(236202);
 let E = function () {
     i.useEffect(() => {
-        s.Y(m.Z5c.ME_ACTIVITY), (0, p.e)("activity"), h.default.track(m.rMx.ACTIVITY_FEED_VIEWED, {});
+        s.Y(m.Z5c.ME_ACTIVITY), (0, p.e)("activity"), g.default.track(m.rMx.ACTIVITY_FEED_VIEWED, {});
     }, []);
     let e = (0, l.e7)([f.Z], () => f.Z.theme),
         t = (0, c.Dt)();
@@ -31,7 +31,7 @@ let E = function () {
                 children: (e) =>
                     (0, r.jsxs)(u.Z, {
                         className: e,
-                        toolbar: (0, r.jsx)(g.F, {}),
+                        toolbar: (0, r.jsx)(h.F, {}),
                         role: "navigation",
                         "aria-labelledby": t,
                         children: [

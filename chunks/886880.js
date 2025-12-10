@@ -6,13 +6,13 @@ var r = n(54381),
     a = n(921944);
 function c(e) {
     let { dismissibleContentType: t, targetElementRef: n, visibleContent: c, markAsDismissed: s, props: u } = e,
-        [d, f] = o.useState(!1),
-        b = o.useRef(null);
+        [b, f] = o.useState(!1),
+        d = o.useRef(null);
     (0, l.ZP)(
         () => (
-            (b.current = setTimeout(() => f(!0), 250)),
+            (d.current = setTimeout(() => f(!0), 250)),
             () => {
-                clearTimeout(b.current), s(a.L.AUTO_DISMISS);
+                clearTimeout(d.current), s(a.L.AUTO_DISMISS);
             }
         ),
     );
@@ -51,7 +51,7 @@ function c(e) {
         })(
             {
                 targetElementRef: n,
-                shouldShow: d && c === t,
+                shouldShow: b && c === t,
                 onRequestClose: y,
             },
             u,

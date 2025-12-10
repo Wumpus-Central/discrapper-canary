@@ -318,7 +318,7 @@ e.exports = function (e) {
             keywords: b,
             contains: [I, o, S, e.C_BLOCK_COMMENT_MODE, _, m, O],
         },
-        A = {
+        C = {
             relevance: 0,
             match: [
                 /\b/,
@@ -330,8 +330,8 @@ e.exports = function (e) {
             scope: { 3: "title.function.invoke" },
             contains: [T],
         };
-    T.contains.push(A);
-    let C = [I, S, e.C_BLOCK_COMMENT_MODE, _, m, O],
+    T.contains.push(C);
+    let A = [I, S, e.C_BLOCK_COMMENT_MODE, _, m, O],
         N = {
             begin: t.concat(/#\[\s*\\?/, t.either(i, a)),
             beginScope: "meta",
@@ -349,9 +349,9 @@ e.exports = function (e) {
                         literal: h,
                         keyword: ["new", "array"],
                     },
-                    contains: ["self", ...C],
+                    contains: ["self", ...A],
                 },
-                ...C,
+                ...A,
                 {
                     scope: "meta",
                     variants: [{ match: i }, { match: a }],
@@ -394,7 +394,7 @@ e.exports = function (e) {
                 match: /\$this\b/,
             },
             o,
-            A,
+            C,
             S,
             {
                 match: [/const/, /\s/, r],

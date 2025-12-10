@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(880949),
     I = n(784222),
     T = n(149203),
-    A = n(981631),
-    C = n(957825),
+    C = n(981631),
+    A = n(957825),
     N = n(388032),
     P = n(911166);
 function R(e, t, n) {
@@ -118,9 +118,9 @@ function K(e) {
                 }),
                 onClick: () => {
                     null != E &&
-                        b.default.track(A.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                        b.default.track(C.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                             location: null == a ? void 0 : a.location,
-                            tab: C.X1.EMOJI,
+                            tab: A.X1.EMOJI,
                             guild_id: E.id,
                         }),
                         u(n);
@@ -177,9 +177,9 @@ let z = (e) => {
             sectionDescriptors: s,
             emojiListRef: a,
         }),
-        A = (0, p.O)(),
-        C = (0, O.kI)(c, d, null != (t = null == d ? void 0 : d.guild_id) ? t : g, b),
-        R = i.useMemo(() => (y ? (0, O.ZF)() : C), [C, y]),
+        C = (0, p.O)(),
+        A = (0, O.kI)(c, d, null != (t = null == d ? void 0 : d.guild_id) ? t : g, b),
+        R = i.useMemo(() => (y ? (0, O.ZF)() : A), [A, y]),
         D = i.useRef(null),
         w = (0, u.e7)([E.Z], () => E.Z.isFocused()),
         x = (0, u.e7)([_.Z], () => _.Z.useReducedMotion, []),
@@ -192,7 +192,7 @@ let z = (e) => {
                             K,
                             {
                                 activeIndex: v,
-                                analyticsContext: A,
+                                analyticsContext: C,
                                 categories: R,
                                 category: n,
                                 categoryIndex: t,
@@ -203,7 +203,7 @@ let z = (e) => {
                             t,
                         );
                 }),
-            [v, A, R, S, w, x],
+            [v, C, R, S, w, x],
         ),
         U = i.useMemo(() => [8, 8, 0, 8], []),
         z = i.useCallback(

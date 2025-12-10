@@ -33,8 +33,8 @@ var r = n(54381),
     S = n(585602),
     I = n(474936),
     T = n(282793),
-    A = n(981631),
-    C = n(441677),
+    C = n(981631),
+    A = n(441677),
     N = n(388032),
     P = n(146911);
 function R(e, t, n) {
@@ -106,7 +106,7 @@ function M(e, t, n, r) {
     let i = L(e, d.eW.PREMIUM_TRIAL);
     switch (e.subscriptionPlanId) {
         case I.Xh.PREMIUM_GROUP_MONTH:
-            return N.intl.formatToPlainString(C.default["8bPDtb"], { premiumGroupProductName: (0, T.sO)() });
+            return N.intl.formatToPlainString(A.default["8bPDtb"], { premiumGroupProductName: (0, T.sO)() });
         case I.Xh.PREMIUM_MONTH_LEGACY:
         case I.Xh.PREMIUM_YEAR_LEGACY:
         case I.Xh.PREMIUM_MONTH_TIER_0:
@@ -270,7 +270,7 @@ function G(e) {
             (0, r.jsx)(v.az, {
                 label: N.intl.format(t.taxInclusive ? (n ? N.t.BqdxQt : N.t.XH4raN) : N.t.RUI48E, {}),
                 value:
-                    t.currency === A.pKx.USD
+                    t.currency === C.pKx.USD
                         ? (0, E.T4)(t.total, t.currency)
                         : "".concat((0, E.T4)(t.total, t.currency), "*"),
             }),
@@ -335,7 +335,7 @@ function Z(e) {
             (0, r.jsx)(v.az, {
                 label: N.intl.format(t.taxInclusive ? (i ? N.t.BqdxQt : N.t.XH4raN) : N.t.RUI48E, {}),
                 value:
-                    t.currency === A.pKx.USD
+                    t.currency === C.pKx.USD
                         ? (0, E.T4)(t.total, t.currency)
                         : "".concat((0, E.T4)(t.total, t.currency), "*"),
             }),
@@ -453,8 +453,8 @@ function Y(e) {
             : N.intl.format(N.t["2FvcjG"], {
                   duration: e,
                   days: t,
-                  contactLink: A.EYA.CONTACT,
-                  helpdeskArticle: h.Z.getArticleURL(A.BhN.PREMIUM_TRIAL),
+                  contactLink: C.EYA.CONTACT,
+                  helpdeskArticle: h.Z.getArticleURL(C.BhN.PREMIUM_TRIAL),
               });
     }
     let f = i.taxInclusive ? N.t["hay+gu"] : N.t.da0lki;
@@ -469,8 +469,8 @@ function Y(e) {
                           ? n.subscriptionPeriodEnd
                           : i.subscriptionPeriodStart
                       : i.subscriptionPeriodEnd,
-            contactLink: A.EYA.CONTACT,
-            helpdeskArticle: h.Z.getArticleURL(A.BhN.BILLING),
+            contactLink: C.EYA.CONTACT,
+            helpdeskArticle: h.Z.getArticleURL(C.BhN.BILLING),
         }),
     });
 }

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(74538),
     I = n(296810),
     T = n(532432),
-    A = n(235433),
-    C = n(504983),
+    C = n(235433),
+    A = n(504983),
     N = n(134795),
     P = n(451392),
     R = n(490220),
@@ -135,10 +135,10 @@ function Z(e) {
     return Z
         ? (0, r.jsx)(c.Gt, {
               value: X,
-              children: (0, r.jsxs)(C.Z, {
+              children: (0, r.jsxs)(A.Z, {
                   ref: Q,
                   className: j.tryItOutSection,
-                  type: C.Y.PREMIUM,
+                  type: A.Y.PREMIUM,
                   isShown: !0,
                   hasBackground: !0,
                   children: [
@@ -207,7 +207,7 @@ function Z(e) {
                                           changeAvatarButtonText: L.intl.string(L.t["7z0D1c"]),
                                           sectionTitle: L.intl.string(L.t.vtFfPX),
                                       }),
-                                  (0, r.jsx)(A.Z, {
+                                  (0, r.jsx)(C.Z, {
                                       user: M,
                                       className: j.customizationSection,
                                   }),

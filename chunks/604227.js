@@ -85,18 +85,18 @@ function O(e) {
     let { compact: p = !1 } = e,
         h = (0, d.Dt)(),
         E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        O = "477609",
-        v = "3cc912906fe3704d1381dfd1204fbf764b5dd480".substring(0, 7),
+        O = "478273",
+        v = "1b4a4225212609b70ea55b6ebd1dbdfab293b54d".substring(0, 7),
         S = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
         I = null === c.Z || void 0 === c.Z || null == (t = (n = c.Z.remoteApp).getBuildNumber) ? void 0 : t.call(n),
         T = null === c.Z || void 0 === c.Z || null == (i = (o = c.Z.remoteApp).getAppArch) ? void 0 : i.call(o),
-        A = null == (s = u.C.getCurrentBuildOverride().overrides) ? void 0 : s.discord_web,
-        C = y(),
+        C = null == (s = u.C.getCurrentBuildOverride().overrides) ? void 0 : s.discord_web,
+        A = y(),
         N = [E, O, "(".concat(v, ")")];
     return (null != S &&
         (N.push("Host ".concat(S)), null != T && N.push(T.toLowerCase()), null != I && N.push("(".concat(I, ")"))),
-    N.push("Build Override: ".concat(null != A ? A.id : "N/A")),
-    null != C && N.push(C),
+    N.push("Build Override: ".concat(null != C ? C.id : "N/A")),
+    null != A && N.push(A),
     p)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
@@ -151,14 +151,14 @@ function O(e) {
                                                   }),
                                           ],
                                       }),
-                                      null != A &&
+                                      null != C &&
                                           (0, r.jsx)(l.Text, {
                                               tag: "span",
                                               variant: "text-xxs/normal",
                                               color: "text-muted",
                                               children: (0, r.jsxs)("span", {
                                                   className: m.versionHash,
-                                                  children: ["Build Override: ", A.id],
+                                                  children: ["Build Override: ", C.id],
                                               }),
                                           }),
                                   ],
@@ -205,7 +205,7 @@ function O(e) {
                                               ],
                                           }),
                                           " ",
-                                          null != A &&
+                                          null != C &&
                                               (0, r.jsx)(l.Text, {
                                                   tag: "span",
                                                   className: m.line,
@@ -213,7 +213,7 @@ function O(e) {
                                                   color: "text-muted",
                                                   children: (0, r.jsxs)("span", {
                                                       className: m.versionHash,
-                                                      children: ["Build Override: ", A.id],
+                                                      children: ["Build Override: ", C.id],
                                                   }),
                                               }),
                                           null != S
@@ -245,13 +245,13 @@ function O(e) {
                                                     ],
                                                 })
                                               : null,
-                                          null != C
+                                          null != A
                                               ? (0, r.jsx)(l.Text, {
                                                     tag: "span",
                                                     className: a()(m.line, m.os),
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: C,
+                                                    children: A,
                                                 })
                                               : null,
                                       ],

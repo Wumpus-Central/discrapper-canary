@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(410575),
     p = n(613311),
     f = n(601564),
-    h = n(981631),
-    g = n(430355);
+    g = n(981631),
+    h = n(430355);
 function m(e, t, n) {
     return (
         t in e
@@ -32,10 +32,10 @@ class _ extends i.Component {
     render() {
         return null != this.props.skuId
             ? (0, r.jsx)(d.Z, {
-                  page: h.ZY5.CHANNEL_STORE_LISTING,
+                  page: g.ZY5.CHANNEL_STORE_LISTING,
                   root: !0,
                   children: (0, r.jsx)("div", {
-                      className: g.applicationStore,
+                      className: h.applicationStore,
                       children: (0, r.jsx)(l.AW, {
                           path: "*",
                           render: this.renderApplicationListing,

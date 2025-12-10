@@ -1,52 +1,52 @@
-t.d(l, { Z: () => d });
-var n = t(54381);
-t(473749);
-var i = t(399606),
-    a = t(481060),
-    r = t(700582),
-    s = t(594174),
-    u = t(388032),
-    c = t(105156);
-function d(e) {
-    let { friendMemberIds: l } = e,
-        t = (0, i.Wu)([s.default], () =>
-            l
+n.d(t, { Z: () => u });
+var r = n(54381);
+n(473749);
+var i = n(399606),
+    s = n(481060),
+    l = n(700582),
+    a = n(594174),
+    o = n(388032),
+    c = n(105156);
+function u(e) {
+    let { friendMemberIds: t } = e,
+        n = (0, i.Wu)([a.default], () =>
+            t
                 .slice(0, 3)
-                .map((e) => s.default.getUser(e))
+                .map((e) => a.default.getUser(e))
                 .filter((e) => null != e),
         );
-    if (0 === t.length) return null;
-    let d = t[0],
-        o = {
-            count: l.length - 1,
-            username: d.username,
-            username2: 2 === l.length && t.length >= 2 ? t[1].username : "",
+    if (0 === n.length) return null;
+    let u = n[0],
+        d = {
+            count: t.length - 1,
+            username: u.username,
+            username2: 2 === t.length && n.length >= 2 ? n[1].username : "",
         },
-        m = u.intl.format(u.t["5NHEPu"], o);
-    return (0, n.jsxs)("div", {
+        h = o.intl.format(o.t["5NHEPu"], d);
+    return (0, r.jsxs)("div", {
         className: c.container,
         children: [
-            (0, n.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: c.avatarStack,
-                children: t.map((e, l) =>
-                    (0, n.jsx)(
+                children: n.map((e, t) =>
+                    (0, r.jsx)(
                         "div",
                         {
                             className: c.avatarWrapper,
-                            style: { zIndex: t.length - l },
-                            children: (0, n.jsx)(r.Z, {
+                            style: { zIndex: n.length - t },
+                            children: (0, r.jsx)(l.Z, {
                                 user: e,
-                                size: a.EFr.SIZE_16,
+                                size: s.EFr.SIZE_16,
                             }),
                         },
                         e.id,
                     ),
                 ),
             }),
-            (0, n.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-sm/medium",
                 color: "text-subtle",
-                children: m,
+                children: h,
             }),
         ],
     });

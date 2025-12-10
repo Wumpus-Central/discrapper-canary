@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(164991),
     p = n(444324),
     f = n(726115),
-    h = n(859921),
-    g = n(750910),
+    g = n(859921),
+    h = n(750910),
     m = n(28494),
     _ = n(29086),
     b = n(590771),
@@ -33,7 +33,7 @@ function C() {
             onSearchSubmit: w,
             isSearchVisible: L,
         } = (0, m.H)({ loadId: e.current }),
-        R = h.Z.useField("searchBarState"),
+        R = g.Z.useField("searchBarState"),
         {
             onTabsAvailableWidthChange: D,
             onCollapsedSearchBarClick: M,
@@ -43,7 +43,7 @@ function C() {
             isSearchBarVisible: P,
             isSearchBarEmpty: "" === x.trim(),
             searchBarState: R,
-            setSearchBarState: (e) => h.Z.setState({ searchBarState: e }),
+            setSearchBarState: (e) => g.Z.setState({ searchBarState: e }),
         }),
         G = d.Z.useField("fetchedQuery"),
         B = i.useCallback(
@@ -63,7 +63,7 @@ function C() {
             [S, L],
         ),
         V = i.useRef(new p.Z(j)),
-        { onGuildCardSeen: F, onGuildCardClick: z } = (0, g.H)({
+        { onGuildCardSeen: F, onGuildCardClick: z } = (0, h.H)({
             guildDiscoveryCardSeenManager: V.current,
             loadId: e.current,
         });

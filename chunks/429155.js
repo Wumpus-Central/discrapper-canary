@@ -26,8 +26,8 @@ let f = 20,
                 rowHeight: S,
                 sectionHeaderHeight: I,
                 sectionFooterHeight: T,
-                renderUpsell: A,
-                onScroll: C,
+                renderUpsell: C,
+                onScroll: A,
             } = e,
             N = i.useRef(!1),
             P = i.useRef(null),
@@ -59,9 +59,9 @@ let f = 20,
                             nitroLockedSectionStates: w,
                             scrollTop: e,
                         }),
-                        null == C || C(e);
+                        null == A || A(e);
                 },
-                [x, R, w, C],
+                [x, R, w, A],
             );
         return (
             i.useEffect(() => {
@@ -136,7 +136,7 @@ let f = 20,
                               stickyHeaders: !0,
                               ref: P,
                           }),
-                    null == A ? void 0 : A(),
+                    null == C ? void 0 : C(),
                     null == b ? void 0 : b(),
                 ],
             })

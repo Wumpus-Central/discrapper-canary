@@ -1,11 +1,11 @@
 n.d(t, {
     CO: () => c,
     NU: () => T,
-    X2: () => C,
+    X2: () => A,
     cb: () => S,
     d$: () => f,
     tw: () => u,
-    yn: () => A,
+    yn: () => C,
 }),
     n(388685),
     n(35282);
@@ -40,5 +40,5 @@ let o = (e, t) => {
     S = (e) => o(e, O) || v(e),
     I = (e) => null != e && (0, a.W)() && i.Z.getConfig({ location: "isWebPlayerVideoFile" }).enabled && h.test(e),
     T = (e) => null != e && (O.test(e) || I(e)),
-    A = (e) => null != e && y.test(e),
-    C = (e) => s(e, "video");
+    C = (e) => null != e && y.test(e),
+    A = (e) => s(e, "video");

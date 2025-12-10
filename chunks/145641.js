@@ -10,14 +10,14 @@ var r = n(54381),
     d = n(983703);
 let p = function (e) {
     let { rows: t, renderRow: n, renderSection: p, footer: f } = e,
-        h = (e) => {
+        g = (e) => {
             let { section: r, row: i } = e,
                 l = t[r];
             if (null == l || null == i) return null;
             let a = l[i];
             return null == a ? null : n(a);
         },
-        g = i.useCallback(
+        h = i.useCallback(
             (e) => {
                 let { section: t } = e;
                 return p(t);
@@ -127,9 +127,9 @@ let p = function (e) {
                                             (t.current =
                                                 null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
                                     },
-                                    renderRow: h,
+                                    renderRow: g,
                                     rowHeight: u.NV,
-                                    renderSection: g,
+                                    renderSection: h,
                                     sectionHeight: u.aS,
                                     sections: y,
                                     className: d.peopleList,

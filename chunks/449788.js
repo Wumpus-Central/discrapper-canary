@@ -23,7 +23,7 @@ function g(e) {
         [x, j] = o.useState(!1),
         P = o.useRef(null),
         D = (0, m.VB)(n.config),
-        R = o.useCallback(() => {
+        T = o.useCallback(() => {
             D &&
                 ((0, d.f2)(n.id, {
                     content: c.jn.VIDEO_MODAL,
@@ -54,7 +54,7 @@ function g(e) {
                           ? (0, r.jsx)(i.hU, {
                                 variant: "active",
                                 icon: i.owK,
-                                onClick: R,
+                                onClick: T,
                                 "aria-label": E.intl.string(E.t.RDE0Sc),
                             })
                           : (0, r.jsx)(l.u, {
@@ -63,14 +63,14 @@ function g(e) {
                                     variant: S ? "overlay-secondary" : "secondary",
                                     icon: b ? i.xPt : i.TIy,
                                     "aria-label": E.intl.string(E.t.RDE0Sc),
-                                    onClick: R,
+                                    onClick: T,
                                 }),
                             }),
               })
             : (0, r.jsx)(i.Button, {
                   variant: "secondary",
                   text: _,
-                  onClick: R,
+                  onClick: T,
               })
         : null;
 }

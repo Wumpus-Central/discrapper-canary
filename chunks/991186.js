@@ -1,5 +1,5 @@
 n.d(t, {
-    FM: () => A,
+    FM: () => C,
     Wx: () => S,
     ZP: () => P,
     Zh: () => I,
@@ -88,10 +88,10 @@ let S = () => {
     T = (e) => {
         v({ overrideIsNewOverlayUser: e });
     };
-function A(e) {
+function C(e) {
     v({ overrideIsUsingDefaultOverlayKeybind: e });
 }
-function C() {
+function A() {
     let e = u.ZP.getKeybindForAction(p.kg4.TOGGLE_OVERLAY_INPUT_LOCK, !0);
     if (null == e) return !0;
     let t = (0, u.vN)();
@@ -156,7 +156,7 @@ class N extends l.Z {
                     : O().isNewOverlayUser,
             ),
             _(this, "isUsingDefaultOverlayKeybind", () =>
-                (null == O().isUsingDefaultOverlayKeybind && v({ isUsingDefaultOverlayKeybind: C() }),
+                (null == O().isUsingDefaultOverlayKeybind && v({ isUsingDefaultOverlayKeybind: A() }),
                 null != O().overrideIsUsingDefaultOverlayKeybind)
                     ? O().overrideIsUsingDefaultOverlayKeybind
                     : O().isUsingDefaultOverlayKeybind,

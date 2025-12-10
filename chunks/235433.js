@@ -24,8 +24,8 @@ function v(e) {
         I = _.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: T } = (0, l.ZP)(),
         {
-            userDisplayNameStyles: A,
-            guildDisplayNameStyles: C,
+            userDisplayNameStyles: C,
+            guildDisplayNameStyles: A,
             pendingDisplayNameStyles: N,
             pendingErrors: P,
         } = (0, m.mD)(t, n),
@@ -47,9 +47,9 @@ function v(e) {
         M = (0, i.useCallback)(() => {
             (0, f.N_)(null);
         }, []),
-        k = void 0 !== N || (null != n ? null != C : null != A);
+        k = void 0 !== N || (null != n ? null != A : null != C);
     if (!S && !k) return null;
-    let U = void 0 !== N ? N : C;
+    let U = void 0 !== N ? N : A;
     return (0, r.jsx)(h.Z, {
         title: b.intl.string(y.default["86GtGH"]),
         titleIcon: x

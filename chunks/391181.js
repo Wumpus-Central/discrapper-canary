@@ -231,8 +231,8 @@ function S(e) {
             disabled: I = !1,
         } = e,
         T = (0, c.U)(t, y),
-        A = null !== t.price_tier ? (0, u.T4)(t.price_tier, p.pK.USD) : void 0,
-        C = (0, d.C)(t);
+        C = null !== t.price_tier ? (0, u.T4)(t.price_tier, p.pK.USD) : void 0,
+        A = (0, d.C)(t);
     function N(e) {
         (0, l.jW)(e, () =>
             Promise.resolve((e) =>
@@ -290,16 +290,16 @@ function S(e) {
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-md/normal",
                                         color: "text-default",
-                                        children: A,
+                                        children: C,
                                     }),
-                                    null != C
+                                    null != A
                                         ? (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   (0, r.jsx)("div", { className: m.dotSeparator }),
                                                   (0, r.jsx)(s.Text, {
                                                       variant: "text-md/normal",
                                                       color: "text-default",
-                                                      children: C,
+                                                      children: A,
                                                   }),
                                               ],
                                           })

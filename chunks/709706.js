@@ -161,10 +161,10 @@ function T(e) {
                 ? (E.modelState = n)
                 : g.warn("Attempted to replace existing model state with initial model state"));
 }
-function A() {
+function C() {
     E.catalogFetchFailed = !0;
 }
-class C extends (r = o.ZP.Store) {
+class A extends (r = o.ZP.Store) {
     getVoiceFilterModels() {
         return E.models;
     }
@@ -281,14 +281,14 @@ function M() {
 function k() {
     b = Date.now();
 }
-f(C, "displayName", "VoiceFilterStore");
-let U = new C(s.Z, {
+f(A, "displayName", "VoiceFilterStore");
+let U = new A(s.Z, {
     VOICE_FILTER_DOWNLOAD_STARTED: P,
     VOICE_FILTER_DOWNLOAD_PROGRESS: R,
     VOICE_FILTER_DOWNLOAD_FAILED: D,
     VOICE_FILTER_FILE_READY: w,
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: T,
-    VOICE_FILTER_CATALOG_FETCH_FAILED: A,
+    VOICE_FILTER_CATALOG_FETCH_FAILED: C,
     VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: N,
     VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: x,
     VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: L,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(793030),
@@ -45,7 +45,7 @@ function T(e) {
         }),
     });
 }
-function A() {
+function C() {
     let e = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         t = i.useContext(u.Q),
         n = (0, s.dQu)(t.primaryColor).hex(),
@@ -56,7 +56,7 @@ function A() {
             },
         } = (0, o.e7)([d.Z], () => d.Z.getCheckpointData()),
         g = 0 === l || 0 === f.length,
-        [A, C] = i.useState(
+        [C, A] = i.useState(
             g
                 ? {
                       name: "\uD83D\uDE22",
@@ -69,7 +69,7 @@ function A() {
         children: (0, r.jsxs)("div", {
             className: I.container,
             children: [
-                (0, r.jsx)(E.Z, { emoji: A }),
+                (0, r.jsx)(E.Z, { emoji: C }),
                 (0, r.jsxs)("div", {
                     className: I.content,
                     children: [
@@ -111,11 +111,11 @@ function A() {
                                               (0, r.jsx)(
                                                   T,
                                                   {
-                                                      onClick: () => C(t),
+                                                      onClick: () => A(t),
                                                       emoji: t,
                                                       index: n,
                                                       reducedMotion: e,
-                                                      isActive: t === A,
+                                                      isActive: t === C,
                                                   },
                                                   "emoji-".concat(n),
                                               ),

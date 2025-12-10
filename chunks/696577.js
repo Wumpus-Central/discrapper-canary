@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(79712),
     p = n(892001),
     f = n(594174),
-    h = n(51144),
-    g = n(743056),
+    g = n(51144),
+    h = n(743056),
     m = n(321488),
     _ = n(417183),
     b = n(170245),
@@ -22,13 +22,13 @@ function y(e) {
     var t;
     let { user: n, applicationId: l, isGameRelationship: o, active: c } = e,
         u = (null == (t = f.default.getCurrentUser()) ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
-        { acceptFriendRequest: d, cancelFriendRequest: p } = (0, g.u)({
+        { acceptFriendRequest: d, cancelFriendRequest: p } = (0, h.u)({
             userId: n.id,
             applicationId: l,
             isGameRelationship: o,
             location: "Friends",
         }),
-        h = i.useCallback(
+        g = i.useCallback(
             (e) => {
                 e.stopPropagation(), d();
             },
@@ -54,7 +54,7 @@ function y(e) {
                 icon: s.dz2,
                 actionType: m.Z.ActionTypes.ACCEPT,
                 tooltip: O.intl.string(O.t.Zcibdf),
-                onClick: h,
+                onClick: g,
                 shouldHighlight: c,
             }),
             (0, r.jsx)(m.Z, {
@@ -69,7 +69,7 @@ function y(e) {
 }
 function I(e) {
     let { userId: t, applicationId: n, isGameRelationship: l, active: a } = e,
-        { cancelFriendRequest: o } = (0, g.u)({
+        { cancelFriendRequest: o } = (0, h.u)({
             userId: t,
             applicationId: n,
             isGameRelationship: l,
@@ -126,7 +126,7 @@ function C(e) {
 }
 function S(e) {
     let { user: t, hovered: n, status: i, isGameRelationship: l, applicationId: a } = e,
-        s = h.ZP.useUserTag(t);
+        s = g.ZP.useUserTag(t);
     return (0, r.jsx)(b.Z, {
         user: t,
         hovered: n,

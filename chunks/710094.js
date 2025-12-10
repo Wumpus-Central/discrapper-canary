@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(614223),
     I = n(481595),
     T = n(435020),
-    A = n(51499),
-    C = n(678334),
+    C = n(51499),
+    A = n(678334),
     N = n(614277),
     P = n(474936),
     R = n(231338),
@@ -81,15 +81,15 @@ function L(e) {
         } = (0, g.JL)(),
         { isGift: ev, giftMessage: eS, giftRecipient: eI, claimableRewards: eT } = (0, h.wD)();
     o()(null != ec, "Step should be set");
-    let eA = i.useRef(null),
-        [eC, eN] = (0, l.Z)(!1, x),
+    let eC = i.useRef(null),
+        [eA, eN] = (0, l.Z)(!1, x),
         eP = null != (n = null != j ? j : F) ? n : null,
         eR = null != eP && (!ed || P.nG[eP].skus.includes(er)) ? eP : null,
         eD = (0, f.N)(F),
         ew = (0, d.N)(),
         ex = { user_trial_offer_id: null == eD ? void 0 : eD.id };
     i.useEffect(() => {
-        null != $ && null != eA.current && eA.current.scrollIntoView({ behavior: "smooth" });
+        null != $ && null != eC.current && eC.current.scrollIntoView({ behavior: "smooth" });
     }, [$]);
     let eL = i.useCallback(
             (e, t, n) => {
@@ -144,7 +144,7 @@ function L(e) {
         ep === R.GZ.ONE_TIME
             ? ((eQ = (null == ei && null != Q) || null != ee),
               (a = (0, r.jsx)(I.Z, {
-                  hasLegalTermsFlash: eC,
+                  hasLegalTermsFlash: eA,
                   legalTermsNodeRef: ek,
                   onPaymentSourceChange: (e) => eo(null != e ? e.id : null),
                   handlePaymentSourceAdd: () => L(E.h8.ADD_PAYMENT_STEPS),
@@ -163,7 +163,7 @@ function L(e) {
                         handlePaymentSourceAdd: () => L(E.h8.ADD_PAYMENT_STEPS),
                         setHasAcceptedTerms: ef,
                         legalTermsNodeRef: ek,
-                        hasLegalTermsFlash: eC,
+                        hasLegalTermsFlash: eA,
                         trialId: eR,
                         trialFooterMessageOverride: M,
                         reviewWarningMessage: k,
@@ -185,7 +185,7 @@ function L(e) {
                         planId: en.id,
                         setHasAcceptedTerms: ef,
                         legalTermsNodeRef: ek,
-                        hasLegalTermsFlash: eC,
+                        hasLegalTermsFlash: eA,
                         onInvoiceError: (e) => eG(e),
                         planGroup: U,
                         currencies: q,
@@ -198,7 +198,7 @@ function L(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(b.P, { giftMessage: eS }),
-                !eV && (0, r.jsx)(A.Z, { isEligibleForTrial: eZ }),
+                !eV && (0, r.jsx)(C.Z, { isEligibleForTrial: eZ }),
                 (0, r.jsxs)(N.C3, {
                     children: [
                         eb && eY && !eO && (0, r.jsx)("div", { className: w.bodyGradientPadding }),
@@ -211,7 +211,7 @@ function L(e) {
                     ],
                 }),
                 (0, r.jsx)(N.O3, {
-                    children: (0, r.jsx)(C.Z, {
+                    children: (0, r.jsx)(A.Z, {
                         premiumSubscription: null != W ? W : null,
                         setPurchaseState: es,
                         onBack: eq,

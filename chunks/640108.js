@@ -27,8 +27,8 @@ var r,
     S = n(36703),
     I = n(228488),
     T = n(156077),
-    A = n(540026),
-    C = n(455813),
+    C = n(540026),
+    A = n(455813),
     N = n(283756),
     P = n(921135),
     R = n(428940),
@@ -257,13 +257,13 @@ class Q extends (r = o.Component) {
                           duration: r,
                       })
                     : null,
-                (0, a.jsx)(A.Z, {
+                (0, a.jsx)(C.Z, {
                     buffers: e,
                     value: null != r ? r : 0,
                     onDrag: o,
                     onDragEnd: s,
                     onDragStart: l,
-                    type: A.Z.Types.DURATION,
+                    type: C.Z.Types.DURATION,
                     ref: this.setDurationRef,
                 }),
                 (0, a.jsx)("div", {
@@ -275,7 +275,7 @@ class Q extends (r = o.Component) {
                         minValue: 0,
                         maxValue: 1,
                         currentWindow: window,
-                        onValueChange: (e) => o(e, A.Z.Types.VOLUME),
+                        onValueChange: (e) => o(e, C.Z.Types.VOLUME),
                         onToggleMute: c,
                         onVolumeShow: u,
                         onVolumeHide: f,
@@ -657,9 +657,9 @@ class et extends (i = o.PureComponent) {
               t.fullscreen &&
               null != m &&
               (m.removeEventListener(I.NO, this.handleFullScreenExit), (0, I.Pr)(m, m.ownerDocument)),
-            u === A.Z.Types.DURATION && t.dragging !== A.Z.Types.DURATION && s
+            u === C.Z.Types.DURATION && t.dragging !== C.Z.Types.DURATION && s
                 ? p.pause()
-                : u !== A.Z.Types.DURATION && t.dragging === A.Z.Types.DURATION && s && p.play(),
+                : u !== C.Z.Types.DURATION && t.dragging === C.Z.Types.DURATION && s && p.play(),
             c !== t.muted && ((p.muted = c), null == i || i(c)),
             d !== t.volume && ((p.volume = d), null == r || r(d));
     }
@@ -843,7 +843,7 @@ class et extends (i = o.PureComponent) {
                             })
                           : null,
               })
-            : (0, a.jsx)(C.Z, {
+            : (0, a.jsx)(A.Z, {
                   onPlay: this.handleVideoClick,
                   inactive: !r,
               });
@@ -1040,8 +1040,8 @@ class et extends (i = o.PureComponent) {
             }),
             k(this, "handleDrag", (e, t) => {
                 let { current: n } = this.mediaRef;
-                if (t === A.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
-                else if (t === A.Z.Types.VOLUME) {
+                if (t === C.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
+                else if (t === C.Z.Types.VOLUME) {
                     let t = (0, S.A)(e, 1);
                     0 === t
                         ? this.setState({

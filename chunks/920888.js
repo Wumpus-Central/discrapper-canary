@@ -102,17 +102,17 @@ class I extends i.PureComponent {
                 forceHideReactionCreates: S,
                 remainingReactions: I,
                 combinedReactions: T,
-                visibleReactionsCount: A,
+                visibleReactionsCount: C,
             } = this.props,
-            { disableTransitionAppear: C } = this.state,
+            { disableTransitionAppear: A } = this.state,
             N = v ? h : m,
-            P = A > 0;
+            P = C > 0;
         if (!P && !y) return null;
         let R = y || P;
         return (0, r.jsxs)(s.W, {
             component: "div",
             className: o()(N.reactions, b),
-            transitionAppear: !C,
+            transitionAppear: !A,
             role: "group",
             transitionLeave: !1,
             id: (0, d.bY)(e),

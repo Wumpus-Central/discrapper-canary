@@ -54,11 +54,11 @@ function C(e) {
             label: F,
             errorMessage: y,
         } = e,
-        I = (0, o.Gc0)(),
-        [N, K] = r.useState(() => (0, s.JM)(x)),
+        N = (0, o.Gc0)(),
+        [I, K] = r.useState(() => (0, s.JM)(x)),
         T = r.useRef(!0 === u),
-        Z = null != A ? A : null == I ? void 0 : I.titleId,
-        W = null != (t = null == I ? void 0 : I.errorId) ? t : v;
+        Z = null != A ? A : null == N ? void 0 : N.titleId,
+        W = null != (t = null == N ? void 0 : N.errorId) ? t : v;
     function X(e, t, A) {
         m(t), K(A);
     }
@@ -101,7 +101,7 @@ function C(e) {
                 required: V,
                 channel: h,
                 textValue: x,
-                richValue: N,
+                richValue: I,
                 type: Q,
                 onBlur: () => {
                     T.current = !1;
@@ -117,7 +117,7 @@ function C(e) {
                 children: [
                     !0 === U &&
                         (0, n.jsx)(b, {
-                            hasError: null != I.error || (null != g && x.length > g),
+                            hasError: null != N.error || (null != g && x.length > g),
                             text: x,
                             maxLength: g,
                         }),

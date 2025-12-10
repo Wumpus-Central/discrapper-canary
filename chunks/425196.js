@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(392711),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(793030),
     c = n(442837),
     u = n(379649),
@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(26118),
     I = n(482617),
     T = n(639949),
-    A = n(829468),
-    C = n(198358),
+    C = n(829468),
+    A = n(198358),
     N = n(225055),
     P = n(391876),
     R = n(883166),
@@ -99,14 +99,14 @@ function F(e) {
         h = (0, i.useContext)(O.Q),
         g = (0, I.Z)((0, d.dQu)(h.primaryColor).hex()),
         b = (0, y.a7)(g),
-        A = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
-        C = (0, i.useRef)(null),
+        C = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
+        A = (0, i.useRef)(null),
         [N, R] = (0, i.useState)(void 0),
         M = (0, i.useMemo)(() => (n <= D.ij.END_REWARD ? 1 : n === D.ij.END_CLAIM ? 2 : 3), [n]),
         k = (0, i.useMemo)(
             () =>
                 o().throttle(() => {
-                    null != C.current && R(C.current.clientWidth);
+                    null != A.current && R(A.current.clientWidth);
                 }, B),
             [],
         ),
@@ -173,7 +173,7 @@ function F(e) {
                     }),
                 }),
                 (0, r.jsx)(s.animated.div, {
-                    ref: C,
+                    ref: A,
                     className: j.cardAnimation,
                     style: H,
                     children: (0, r.jsx)(
@@ -195,7 +195,7 @@ function F(e) {
                                 PowerMeter: (0, S.QB)(f),
                                 Icon: G[_],
                                 Illustration: U[_],
-                                reducedMotion: A,
+                                reducedMotion: C,
                             },
                             withReducedMotion: "play",
                         },
@@ -240,7 +240,7 @@ function V() {
                     guildId: null,
                     avatarDecorationOverride: t,
                 }),
-            (0, r.jsx)(A.Z, { className: j.claimButton }),
+            (0, r.jsx)(C.Z, { className: j.claimButton }),
             (0, r.jsx)(P.Z, {
                 variant: "heading-sm/medium",
                 children: x.intl.format(x.t.eZSTa5, {
@@ -271,8 +271,8 @@ function H(e) {
         y = s.length > 0 ? s[0] : null,
         O = d.length > 0 ? d[0].guild : null,
         I = _.length > 0 ? _[0].game : null,
-        { unit: T, duration: A } = (0, S.Bi)(a),
-        C = (0, c.e7)([g.Z], () => g.Z.getGuild(null == O ? void 0 : O.id)),
+        { unit: T, duration: C } = (0, S.Bi)(a),
+        A = (0, c.e7)([g.Z], () => g.Z.getGuild(null == O ? void 0 : O.id)),
         N =
             null != I && null != I.icon
                 ? b.ZP.getApplicationIconURL({
@@ -296,12 +296,12 @@ function H(e) {
                     icon: l.S6n,
                     title:
                         T === u.J6.HOURS
-                            ? x.intl.formatToPlainString(w.default.Xu0QsX, { numHours: A })
+                            ? x.intl.formatToPlainString(w.default.Xu0QsX, { numHours: C })
                             : x.intl.string(w.default.RmVTph),
                     content: (0, r.jsx)(P.Z, {
                         variant: "heading-xxl/medium",
                         className: L.numeric,
-                        children: A,
+                        children: C,
                     }),
                 },
                 {
@@ -381,9 +381,9 @@ function H(e) {
                     content: (0, r.jsxs)("div", {
                         className: L.title,
                         children: [
-                            null != C
+                            null != A
                                 ? (0, r.jsx)(h.Z, {
-                                      guild: C,
+                                      guild: A,
                                       className: j.statIcon,
                                   })
                                 : (0, r.jsx)(l.IMN, {
@@ -393,13 +393,13 @@ function H(e) {
                                   }),
                             (0, r.jsx)(P.Z, {
                                 variant: "text-md/medium",
-                                children: null != C ? C.name : x.intl.string(x.t.PoWNfe),
+                                children: null != A ? A.name : x.intl.string(x.t.PoWNfe),
                             }),
                         ],
                     }),
                 },
             ],
-            [n, A, T, o, y, E, t, N, I, C],
+            [n, C, T, o, y, E, t, N, I, A],
         );
     return (0, r.jsx)(R.Qr.Provider, {
         value: D,
@@ -498,7 +498,7 @@ function W(e) {
 }
 function K(e) {
     let { step: t, onNext: n } = e;
-    return (0, r.jsxs)(C.Z, {
+    return (0, r.jsxs)(A.Z, {
         noPadding: !0,
         centered: !1,
         className: j.container,

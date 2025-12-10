@@ -26,11 +26,11 @@ e.exports = function (e, t, n, h, g, E) {
     }
     if (T && !S) return E || (E = new r()), b || u(e) ? i(e, t, n, h, g, E) : a(e, t, O, n, h, g, E);
     if (!(n & d)) {
-        var A = S && m.call(e, "__wrapped__"),
-            C = I && m.call(t, "__wrapped__");
-        if (A || C) {
-            var N = A ? e.value() : e,
-                P = C ? t.value() : t;
+        var C = S && m.call(e, "__wrapped__"),
+            A = I && m.call(t, "__wrapped__");
+        if (C || A) {
+            var N = C ? e.value() : e,
+                P = A ? t.value() : t;
             return E || (E = new r()), g(N, P, n, h, E);
         }
     }

@@ -30,8 +30,8 @@ var r = n(54381),
     S = n(594174),
     I = n(768581),
     T = n(433534),
-    A = n(506895),
-    C = n(758199),
+    C = n(506895),
+    A = n(758199),
     N = n(943762),
     P = n(914498),
     R = n(172109),
@@ -54,7 +54,7 @@ function M(e) {
         { staticBannerSrc: N, videoBannerSrc: x, bannerAspectRatio: j } = (0, D.E)(n),
         M = (0, s.e7)([b.default], () => (null != l ? l : b.default.getId()), [l]),
         { analyticsLocations: G } = (0, f.ZP)(d.Z.APP_MESSAGE_EMBED),
-        { currentChannelId: Z, instanceId: B, isCurrentlyInInstance: F, canLaunchInChannel: V } = (0, A.c)(n.id),
+        { currentChannelId: Z, instanceId: B, isCurrentlyInInstance: F, canLaunchInChannel: V } = (0, C.c)(n.id),
         H = (0, u.Z)(),
         Y = (0, m.ms)({
             context: { type: "contextless" },
@@ -111,7 +111,7 @@ function M(e) {
             );
         }, [K, W, B, F, Z, n.id, H, o, M, G, S, q, v]),
         X = S ? (0, r.jsx)(U, { app: n }) : (0, r.jsx)(k, { app: n });
-    return (0, r.jsx)(C.W, {
+    return (0, r.jsx)(A.W, {
         title: E,
         staticBannerSrc: N,
         videoBannerSrc: x,

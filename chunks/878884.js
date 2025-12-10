@@ -80,10 +80,10 @@ function I() {
 function T() {
     b.clear(), y.clear(), O.clear();
 }
-function A() {
+function C() {
     T();
 }
-function C(e) {
+function A(e) {
     let { state: t, context: n } = e;
     if (n !== a.Yn.DEFAULT || t !== h.hes.DISCONNECTED) return !1;
     T();
@@ -133,9 +133,9 @@ class D extends (r = i.ZP.Store) {
 }
 E(D, "displayName", "RTCConnectionDesyncStore");
 let w = new D(o.Z, {
-    CONNECTION_OPEN: A,
+    CONNECTION_OPEN: C,
     VOICE_CHANNEL_SELECT: T,
-    RTC_CONNECTION_STATE: C,
+    RTC_CONNECTION_STATE: A,
     VOICE_STATE_UPDATES: N,
     RTC_CONNECTION_CLIENT_CONNECT: P,
     RTC_CONNECTION_CLIENT_DISCONNECT: R,

@@ -62,26 +62,26 @@ function l(e) {
             },
             [v, m],
         ),
-        A = r.useCallback(
+        C = r.useCallback(
             (e) => {
                 o.Z.keyboardModeEnabled && (null == m.current && (m.current = e.currentTarget), (b.current = !1), v());
             },
             [v, m],
         ),
-        C = r.useCallback(() => {
+        A = r.useCallback(() => {
             var e;
             null == (e = E.current) || e.stop(), S();
         }, [S]),
         N = r.useMemo(
             () => ({
                 onMouseEnter: T,
-                onMouseLeave: C,
-                onFocus: A,
+                onMouseLeave: A,
+                onFocus: C,
                 onBlur: S,
                 onContextMenu: S,
                 onClick: I,
             }),
-            [T, C, A, S, I],
+            [T, A, C, S, I],
         );
     return (
         r.useEffect(() => {

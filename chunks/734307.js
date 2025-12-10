@@ -22,8 +22,8 @@ var r,
     S = n(9156),
     I = n(823379),
     T = n(709054),
-    A = n(540126),
-    C = n(526761);
+    C = n(540126),
+    A = n(526761);
 function N(e, t, n) {
     return (
         t in e
@@ -39,7 +39,7 @@ function N(e, t, n) {
 }
 let P = null,
     R = null,
-    D = new A.ZP();
+    D = new C.ZP();
 function w() {
     let e = v.Z.getChannelId(),
         t = v.Z.getVoiceChannelId();
@@ -208,7 +208,7 @@ function es(e) {
 function el(e) {
     var t;
     let { settings: n } = e;
-    if (n.type !== C.yP.PRELOADED_USER_SETTINGS) return !1;
+    if (n.type !== A.yP.PRELOADED_USER_SETTINGS) return !1;
     let r = null == (t = n.proto.guilds) ? void 0 : t.guilds,
         i = !1;
     return (

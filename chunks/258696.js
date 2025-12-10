@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(713913),
     I = n(541716),
     T = n(94161),
-    A = n(9277),
-    C = n(655678),
+    C = n(9277),
+    A = n(655678),
     N = n(897291),
     P = n(466711),
     R = n(319417),
@@ -101,7 +101,7 @@ function M(e) {
                 $.push({
                     key: "gif",
                     node: (0, r.jsx)(
-                        A.Z,
+                        C.Z,
                         {
                             disabled: U,
                             type: M,
@@ -115,7 +115,7 @@ function M(e) {
                 $.push({
                     key: "confetti",
                     node: (0, r.jsx)(
-                        C.Z,
+                        A.Z,
                         {
                             disabled: U,
                             channel: G,

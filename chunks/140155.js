@@ -107,14 +107,14 @@ function I() {
 function T() {
     (y.loading = !1), (y.initialized = !0), (y.errored = !0);
 }
-function A(e) {
+function C(e) {
     return b(g({}, e), {
         kind: "notification-center-item",
         message: null != e.message ? (0, l.e5)(e.message) : void 0,
         applicationId: null != e.application ? e.application.id : void 0,
     });
 }
-function C(e) {
+function A(e) {
     let { unknownApplicationIds: t } = e;
     if (null == t) return;
     let n = new Set(t);
@@ -153,12 +153,12 @@ function P(e) {
         (y.isDataStale = !1),
         (null != r && y.notifCenterIds.has(r)) ||
             ((y.paginationHasMore = t.length > 0 && n), (y.paginationCursor = t.length > 0 ? r : void 0)),
-        (y.notifCenterItems = [...y.notifCenterItems, ...t.map(A).filter((e) => !y.notifCenterIds.has(e.id))]),
+        (y.notifCenterItems = [...y.notifCenterItems, ...t.map(C).filter((e) => !y.notifCenterIds.has(e.id))]),
         y.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id)),
         t.forEach((e) => y.notifCenterIds.add(e.id)));
 }
 function R(e) {
-    let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? A(e.item) : e.item;
+    let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? C(e.item) : e.item;
     if (!y.initialized || !O(t) || y.notifCenterIds.has(t.id)) return !1;
     y.notifCenterIds.add(t.id),
         (y.notifCenterItems = [t, ...y.notifCenterItems]),
@@ -368,5 +368,5 @@ let z = new K(a.Z, {
     NOTIFICATION_CENTER_ITEM_COMPLETED: V,
     SET_RECENT_MENTIONS_FILTER: () => S(),
     MOBILE_NATIVE_UPDATE_CHECK_FINISHED: W,
-    APPLICATIONS_FETCH_SUCCESS: C,
+    APPLICATIONS_FETCH_SUCCESS: A,
 });

@@ -79,8 +79,8 @@ let h = "Stats for Nerds",
     S = "Audio",
     I = "Audio Channels",
     T = "Container",
-    A = "Format",
-    C = "Buffer Health",
+    C = "Format",
+    A = "Buffer Health",
     N = "Error";
 function P(e) {
     var t, n, r, i, a, o, s, l, c, u, d, f, p, _, m;
@@ -247,7 +247,7 @@ function R(e) {
                             children: [
                                 (0, r.jsx)("span", {
                                     className: l.statLabel,
-                                    children: A,
+                                    children: C,
                                 }),
                                 (0, r.jsx)("span", {
                                     className: l.statValue,
@@ -362,7 +362,7 @@ function R(e) {
                         children: [
                             (0, r.jsx)("span", {
                                 className: l.statLabel,
-                                children: C,
+                                children: A,
                             }),
                             (0, r.jsx)("span", {
                                 className: l.statValue,

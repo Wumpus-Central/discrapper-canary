@@ -63,8 +63,8 @@ var c = n(329554),
     S = n(606166),
     I = n(703579),
     T = n(797487),
-    A = n(685536),
-    C = n(40375),
+    C = n(685536),
+    A = n(40375),
     N = n(581079),
     P = n(207303),
     R = n(467159),
@@ -157,7 +157,7 @@ var c = n(329554),
                         i = n.editor;
                     if (i) {
                         var a = O.getScrollParent(i),
-                            o = e || A(a),
+                            o = e || C(a),
                             s = o.x,
                             l = o.y;
                         P(i) || N(!1),
@@ -382,7 +382,7 @@ var c = n(329554),
             }),
             (r.componentDidMount = function () {
                 (this._blockSelectEvents = !1),
-                    !L && C("draft_ods_enabled") && ((L = !0), g.initODS()),
+                    !L && A("draft_ods_enabled") && ((L = !0), g.initODS()),
                     this.setMode("edit"),
                     D &&
                         (this.editor

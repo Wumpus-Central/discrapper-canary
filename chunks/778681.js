@@ -65,8 +65,8 @@ e.exports = function (e, t) {
                     var I = S.contentBlocks,
                         T = S.entityMap;
                     if (I) {
-                        var A = r.createFromArray(I);
-                        e.update(_(e._latestEditorState, A, T));
+                        var C = r.createFromArray(I);
+                        e.update(_(e._latestEditorState, C, T));
                         return;
                     }
                 }
@@ -74,12 +74,12 @@ e.exports = function (e, t) {
             e.setClipboard(null);
         }
         if (E.length) {
-            var C = i.create({
+            var A = i.create({
                     style: O.getCurrentInlineStyle(),
                     entity: u(O.getCurrentContent(), O.getSelection()),
                 }),
                 N = c.getCurrentBlockType(O),
-                P = s.processText(E, C, N),
+                P = s.processText(E, A, N),
                 R = r.createFromArray(P);
             e.update(_(e._latestEditorState, R));
         }

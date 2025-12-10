@@ -11,8 +11,8 @@ var i = n(442837),
     d = n(1585),
     p = n(125988),
     f = n(43267),
-    h = n(699516),
-    g = n(51144),
+    g = n(699516),
+    h = n(51144),
     m = n(998502),
     _ = n(620924),
     b = n(332712),
@@ -52,7 +52,7 @@ function C(e) {
     var t;
     let { channel: n, otherUser: l, active: u } = e,
         m = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        b = (0, i.e7)([h.Z], () => (null == l ? null : h.Z.getNickname(l.id))),
+        b = (0, i.e7)([g.Z], () => (null == l ? null : g.Z.getNickname(l.id))),
         C = !m && u,
         S = (0, _.c)(n),
         { avatarDecorationSrc: T } = (0, p.Z)({
@@ -81,7 +81,7 @@ function C(e) {
                                 showAccountIdentifier: !0,
                                 className: v.tagContainer,
                                 usernameClass: v.username,
-                                discriminatorClass: null != g.ZP.getGlobalName(l) ? v.globalName : v.discriminator,
+                                discriminatorClass: null != h.ZP.getGlobalName(l) ? v.globalName : v.discriminator,
                             }),
                             (0, r.jsx)(a.Text, {
                                 className: v.timestampWithPreview,

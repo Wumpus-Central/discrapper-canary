@@ -72,11 +72,11 @@ let y = 0,
 function T() {
     return __OVERLAY__ || null == I ? (0, c.Z)(v, O, S) : I;
 }
-function A() {
+function C() {
     let e = T();
     return e !== S && ((S = e), (0, u.Z)(S), !0);
 }
-class C extends (r = i.ZP.PersistedStore) {
+class A extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (null == e ? void 0 : e.theme) != null &&
             ((y = 1),
@@ -104,48 +104,48 @@ class C extends (r = i.ZP.PersistedStore) {
     }
 }
 function N() {
-    return 0 === y && ((O = b(g({}, O), { [_.zd.DARK]: m.BRd.DARKER })), (y = 1)), A();
+    return 0 === y && ((O = b(g({}, O), { [_.zd.DARK]: m.BRd.DARKER })), (y = 1)), C();
 }
 function P() {
     return (0, a.ap)(T());
 }
 function R(e) {
-    return (I = null), !e.isSwitchingAccount && S !== m.BRd.DARK && ((S = m.BRd.DARK), (0, u.Z)(S), A());
+    return (I = null), !e.isSwitchingAccount && S !== m.BRd.DARK && ((S = m.BRd.DARK), (0, u.Z)(S), C());
 }
 function D(e) {
     let { systemTheme: t } = e;
-    return (v = t), A();
+    return (v = t), C();
 }
 function w(e) {
-    return (O = g({}, O, e.preferences)), A();
+    return (O = g({}, O, e.preferences)), C();
 }
 function x(e) {
-    return (I = e.theme), A();
+    return (I = e.theme), C();
 }
 function L() {
-    return (I = null), A();
+    return (I = null), C();
 }
 function j() {
-    return A();
+    return C();
 }
-h(C, "displayName", "ThemeStore"),
-    h(C, "persistKey", "ThemeStore"),
-    h(C, "migrations", [
+h(A, "displayName", "ThemeStore"),
+    h(A, "persistKey", "ThemeStore"),
+    h(A, "migrations", [
         (e) => {
             let t = e.theme;
             return "amoled" === t && (t = "midnight"), b(g({}, e), { theme: t });
         },
         (e) => e,
     ]);
-let M = new C(o.Z, {
-    CACHE_LOADED: A,
+let M = new A(o.Z, {
+    CACHE_LOADED: C,
     CONNECTION_OPEN: N,
     LOGOUT: R,
-    OVERLAY_INITIALIZE: A,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: A,
-    UNSYNCED_USER_SETTINGS_UPDATE: A,
-    USER_SETTINGS_PROTO_UPDATE: A,
-    RESET_PREVIEW_CLIENT_THEME: A,
+    OVERLAY_INITIALIZE: C,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: C,
+    UNSYNCED_USER_SETTINGS_UPDATE: C,
+    USER_SETTINGS_PROTO_UPDATE: C,
+    RESET_PREVIEW_CLIENT_THEME: C,
     SYSTEM_THEME_CHANGE: D,
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: P,
     UPDATE_THEME_PREFERENCES: w,

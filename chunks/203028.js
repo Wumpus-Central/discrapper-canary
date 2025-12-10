@@ -11,8 +11,8 @@ var i = n(512722),
     d = n(810568),
     p = n(168524),
     f = n(707409),
-    h = n(51144),
-    g = n(761282),
+    g = n(51144),
+    h = n(761282),
     m = n(358924),
     _ = n(817915),
     b = n(981631),
@@ -31,8 +31,8 @@ function O(e) {
                     }),
                 ),
                 i = n.filter((e) => !r.has(e.id)),
-                l = h.ZP.getName(t[0].user),
-                a = null != t[1] ? h.ZP.getName(t[1].user) : null != i[0] ? h.ZP.getName(i[0]) : null;
+                l = g.ZP.getName(t[0].user),
+                a = null != t[1] ? g.ZP.getName(t[1].user) : null != i[0] ? g.ZP.getName(i[0]) : null;
             switch (n.length) {
                 case 1:
                     return l;
@@ -53,7 +53,7 @@ function O(e) {
             var t;
             let { priorityMembers: i, partiedMembers: c, voiceChannels: u, currentActivities: d } = e,
                 p = i.length,
-                h = c.length - p,
+                g = c.length - p,
                 O = d[0],
                 v = null == O ? void 0 : O.activity,
                 y = null == O ? void 0 : O.startedPlayingTime,
@@ -67,14 +67,14 @@ function O(e) {
                     }),
                     icon: null,
                 };
-            if (p + h === 1 && null != O) {
+            if (p + g === 1 && null != O) {
                 let { game: e } = O;
                 if (null == v)
                     return {
                         subtitle: null,
                         icon: null,
                     };
-                let t = g.dc(v);
+                let t = h.dc(v);
                 if (null != t) return t;
                 switch (v.type) {
                     case b.IIU.PLAYING:
@@ -142,7 +142,7 @@ function O(e) {
                 if (null != e) {
                     let { activity: t } = e;
                     if (null != t) {
-                        let e = g.dc(t);
+                        let e = h.dc(t);
                         if (null != e) return e;
                     }
                     if (null != t && t.type === b.IIU.LISTENING)

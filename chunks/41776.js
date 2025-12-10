@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -90,7 +90,7 @@ function T() {
         .filter((e) => (0, o.zN)(e))
         .map((e) => e.id);
 }
-class A extends (r = i.ZP.Store) {
+class C extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.ZP, l.Z, c.default);
     }
@@ -114,8 +114,8 @@ class A extends (r = i.ZP.Store) {
         return null != e ? p[e] : null;
     }
 }
-d(A, "displayName", "LurkingStore");
-let C = new A(a.Z, {
+d(C, "displayName", "LurkingStore");
+let A = new C(a.Z, {
     CONNECTION_OPEN: T,
     GUILD_JOIN: b,
     GUILD_STOP_LURKING: S,

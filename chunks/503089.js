@@ -1,8 +1,8 @@
 n.d(t, {
     $x: () => T,
     ZP: () => R,
-    d7: () => C,
-    w6: () => A,
+    d7: () => A,
+    w6: () => C,
 }),
     n(539854),
     n(361932),
@@ -83,8 +83,8 @@ let I = Object.freeze({
         sidebarOpen: !0,
     }),
     T = 1.4,
-    A = 15,
-    C = 2;
+    C = 15,
+    A = 2;
 function N(e) {
     var t, n;
     let { section: i, setPreventNavigation: o, scrollerRef: s } = e;
@@ -142,7 +142,7 @@ class P extends i.PureComponent {
                   duration: 300,
                   intensity: this._intensity,
               }),
-              (this._intensity = Math.min(this._intensity + C, A)),
+              (this._intensity = Math.min(this._intensity + A, C)),
               p.S.dispatch(g.CkL.EMPHASIZE_NOTICE),
               !1)
             : ((this._intensity = T), !0);

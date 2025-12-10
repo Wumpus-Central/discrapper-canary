@@ -4,8 +4,8 @@ var v,
     S = n(979554),
     I = n(442837),
     T = n(570140),
-    A = n(981631);
-function C(e, t, n) {
+    C = n(981631);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,25 +18,25 @@ function C(e, t, n) {
         e
     );
 }
-let N = A.QZA.CLOSED,
+let N = C.QZA.CLOSED,
     P = {};
 function R() {
-    (N = A.QZA.OPEN), (P = {});
+    (N = C.QZA.OPEN), (P = {});
 }
 function D() {
-    (N = A.QZA.CLOSED), (P = {});
+    (N = C.QZA.CLOSED), (P = {});
 }
 function w() {
-    (N = A.QZA.SUBMITTING), (P = {});
+    (N = C.QZA.SUBMITTING), (P = {});
 }
 function x(e) {
     var t;
-    if (N !== A.QZA.SUBMITTING) return !1;
-    (N = A.QZA.OPEN), (P = null != (t = e.errors) ? t : {});
+    if (N !== C.QZA.SUBMITTING) return !1;
+    (N = C.QZA.OPEN), (P = null != (t = e.errors) ? t : {});
 }
 function L(e) {
     let { section: t } = e;
-    return t === A.oAB.ACCOUNT && R();
+    return t === C.oAB.ACCOUNT && R();
 }
 function j(e) {
     let { avatar: t } = e;
@@ -166,7 +166,7 @@ class el extends (v = I.ZP.Store) {
         );
     }
     getIsSubmitDisabled() {
-        return void 0 !== c && c.length > A.tPV;
+        return void 0 !== c && c.length > C.tPV;
     }
     getPendingAvatar() {
         return r;
@@ -247,7 +247,7 @@ class el extends (v = I.ZP.Store) {
         };
     }
 }
-C(el, "displayName", "UserSettingsAccountStore");
+A(el, "displayName", "UserSettingsAccountStore");
 let ec = new el(T.Z, {
     USER_SETTINGS_ACCOUNT_INIT: R,
     USER_SETTINGS_MODAL_INIT: R,

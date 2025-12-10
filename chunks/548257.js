@@ -1,10 +1,10 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => C });
 var r = n(54381);
 n(473749);
 var l = n(120356),
     i = n.n(l),
-    s = n(907331),
-    o = n(685816),
+    o = n(907331),
+    s = n(685816),
     a = n(442837),
     c = n(481060),
     u = n(594174),
@@ -14,7 +14,7 @@ var l = n(120356),
     p = n(497788),
     m = n(310582);
 (0, d.IC)(90);
-let C = {
+let h = {
         rankedSkuIds: [],
         name: "",
         unpublishedAt: void 0,
@@ -22,14 +22,14 @@ let C = {
         categorySkuId: void 0,
         bannerAsset: void 0,
         summary: "",
-        type: o.z.REWARD_HERO,
+        type: s.z.REWARD_HERO,
         categoryStoreListingId: "",
         rewardSkuId: void 0,
     },
-    h = (e) => {
+    C = (e) => {
         var t;
-        let { isLoading: n = !1, heroBlock: l, tab: o, onVisibilityChange: d } = e,
-            h = (0, s.O)(
+        let { isLoading: n = !1, heroBlock: l, tab: s, onVisibilityChange: d } = e,
+            C = (0, o.O)(
                 (e) => {
                     null == d || d(e);
                 },
@@ -39,34 +39,34 @@ let C = {
             _ = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
             {
                 bannerStyleOverrides: b,
-                logoStyleOverrides: E,
-                heroLogo: v,
+                logoStyleOverrides: v,
+                heroLogo: E,
                 heroBannerStatic: S,
-                heroBannerAnimated: x,
+                heroBannerAnimated: O,
             } = (0, g.hr)(l),
-            O = null != (t = null == b ? void 0 : b.responsive) && t,
+            x = null != (t = null == b ? void 0 : b.responsive) && t,
             y = null == b ? void 0 : b.backgroundStyle;
-        return null != _ && (n || l !== C)
+        return null != _ && (n || l !== h)
             ? (0, r.jsxs)("div", {
-                  ref: h,
+                  ref: C,
                   className: m.heroBlock,
                   children: [
                       (0, r.jsx)("div", {
-                          className: i()(m.banner, { [m.responsive]: O }),
+                          className: i()(m.banner, { [m.responsive]: x }),
                           style: null != y ? { background: y } : void 0,
                           children:
                               null != S &&
                               (0, r.jsx)(f.Z, {
                                   bannerStatic: S,
-                                  bannerAnimated: x,
-                                  isResponsive: O,
+                                  bannerAnimated: O,
+                                  isResponsive: x,
                               }),
                       }),
                       (0, r.jsxs)("div", {
                           className: m.heroBlockContent,
                           children: [
                               (0, r.jsx)("div", {
-                                  className: i()(m.heroHeaderContainer, { [m.responsive]: O }),
+                                  className: i()(m.heroHeaderContainer, { [m.responsive]: x }),
                                   children: n
                                       ? (0, r.jsx)("div", { className: m.heroHeaderBadgeLogoSummaryContainer })
                                       : (0, r.jsx)("div", {
@@ -74,12 +74,12 @@ let C = {
                                             children: (0, r.jsxs)("div", {
                                                 className: m.heroLogoNameContainer,
                                                 children: [
-                                                    null != v &&
+                                                    null != E &&
                                                         (0, r.jsx)("img", {
                                                             className: m.heroHeaderLogo,
-                                                            src: v,
+                                                            src: E,
                                                             alt: l.name,
-                                                            style: null == E ? void 0 : E.toDesktopStyles(),
+                                                            style: null == v ? void 0 : v.toDesktopStyles(),
                                                         }),
                                                     null != l.title &&
                                                         (0, r.jsx)(c.Heading, {
@@ -105,7 +105,7 @@ let C = {
                               (0, r.jsx)(p.Z, {
                                   isBlockLoading: n,
                                   heroBlock: l,
-                                  tab: o,
+                                  tab: s,
                               }),
                           ],
                       }),

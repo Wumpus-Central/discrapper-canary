@@ -76,8 +76,8 @@ function _(e) {
             renderSectionHeader: S,
             renderSectionFooter: I,
             renderInspector: T,
-            renderEmptySearchState: A,
-            renderCategoryList: C,
+            renderEmptySearchState: C,
+            renderCategoryList: A,
             renderHeaderAccessories: N,
             rowHeight: P,
             sectionHeaderHeight: R,
@@ -194,7 +194,7 @@ function _(e) {
                 ? y(c.emptyState)
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          C(B),
+                          A(B),
                           null != k &&
                               (0, r.jsx)("div", {
                                   className: c.gridNoticeWrapper,
@@ -225,7 +225,7 @@ function _(e) {
                                                     renderSectionHeader: null != S ? ei : void 0,
                                                     renderSectionFooter: null != I ? ea : void 0,
                                                     renderInspector: null != T ? eo : void 0,
-                                                    renderEmptySearchState: A,
+                                                    renderEmptySearchState: C,
                                                     rowCount: z,
                                                     rowCountBySection: q,
                                                     rowHeight: P,

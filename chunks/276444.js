@@ -34,8 +34,8 @@ let d = 5,
     S = 0,
     I = !1,
     T = !1,
-    A = null;
-function C() {
+    C = null;
+function A() {
     (f = null),
         (p = new Set()),
         (m = !1),
@@ -49,21 +49,21 @@ function C() {
         (S = 0),
         (I = !1),
         (T = !1),
-        (A = null),
+        (C = null),
         (_ = new Map());
 }
 let N = () => !0;
 function P(e) {
     let {} = e;
-    (A = null), (m = !0);
+    (C = null), (m = !0);
 }
 function R(e) {
     let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a } = e;
-    (I = !0), (T = a), (m = !1), (f = t), (p = new Set(n)), (A = r), (_ = i);
+    (I = !0), (T = a), (m = !1), (f = t), (p = new Set(n)), (C = r), (_ = i);
 }
 function D(e) {
     let {} = e;
-    (I = !1), (T = !1), (A = null), (m = !1), (b += 1), (y = Date.now() + 1000 * Math.pow(2, b));
+    (I = !1), (T = !1), (C = null), (m = !1), (b += 1), (y = Date.now() + 1000 * Math.pow(2, b));
 }
 function w(e) {
     let { userTrialOffer: t } = e;
@@ -149,7 +149,7 @@ class H extends (r = a.ZP.Store) {
         return T;
     }
     getRefreshAt() {
-        return A;
+        return C;
     }
     getAllRelevantReferralTrialOffers() {
         return Array.from(E.values());
@@ -174,5 +174,5 @@ let Y = new H(o.Z, {
     LOAD_MESSAGES_SUCCESS: U,
     MESSAGE_CREATE: k,
     LOAD_MESSAGES_AROUND_SUCCESS: U,
-    LOGOUT: C,
+    LOGOUT: A,
 });

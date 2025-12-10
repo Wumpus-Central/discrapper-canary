@@ -27,8 +27,8 @@ let O = (e) => {
             guildId: n,
             messageId: O,
         })((0, u.JZ)(S, s)),
-        A = null != S ? S.getAvatarURL(n, (0, c.dcp)(c.EFr.SIZE_16)) : y,
-        C =
+        C = null != S ? S.getAvatarURL(n, (0, c.dcp)(c.EFr.SIZE_16)) : y,
+        A =
             null != S
                 ? g.intl.format(h.default["+zqXZs"], {
                       username: S.username,
@@ -39,7 +39,7 @@ let O = (e) => {
         className: o()(b.messageSpine, b.repliedMessage, I),
         children: [
             (0, r.jsx)(c.qEK, {
-                src: A,
+                src: C,
                 size: c.EFr.SIZE_16,
                 className: E.avatar,
                 "aria-label": "",
@@ -48,7 +48,7 @@ let O = (e) => {
                 variant: "text-sm/medium",
                 color: "text-subtle",
                 className: E.username,
-                children: C,
+                children: A,
             }),
             (0, r.jsxs)(c.Text, {
                 variant: "text-sm/medium",

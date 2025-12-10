@@ -29,8 +29,8 @@ var r = n(54381),
     S = n(243317),
     I = n(621853),
     T = n(369111),
-    A = n(518950),
-    C = n(484459),
+    C = n(518950),
+    A = n(484459),
     N = n(670188),
     P = n(740492),
     R = n(430824),
@@ -181,13 +181,13 @@ let et = i.memo(function (e) {
             [t, a, s],
         ),
         T = i.useRef(null),
-        A = (0, c.e7)([R.Z], () => R.Z.getGuild(o)),
-        C = i.useMemo(() => eo(s, h, l, A), [s, h, l, A]),
+        C = (0, c.e7)([R.Z], () => R.Z.getGuild(o)),
+        A = i.useMemo(() => eo(s, h, l, C), [s, h, l, C]),
         N = i.useMemo(
             () =>
                 null == l
                     ? null
-                    : 1 === C && null != A
+                    : 1 === A && null != C
                       ? (0, r.jsx)(
                             d.yRy,
                             {
@@ -200,7 +200,7 @@ let et = i.memo(function (e) {
                                 renderPopout: () =>
                                     (0, r.jsx)(B.Z, {
                                         roleIcon: l,
-                                        guild: A,
+                                        guild: C,
                                     }),
                                 clickTrap: !0,
                                 children: (e) => {
@@ -216,10 +216,10 @@ let et = i.memo(function (e) {
                             },
                             "role-icon-children",
                         )
-                      : 2 === C
+                      : 2 === A
                         ? (0, r.jsx)(v.Z, X(q({}, l), { className: W.roleIcon }), "role-icon-children")
                         : null,
-            [C, l, A],
+            [A, l, C],
         ),
         P = (0, c.e7)([w.default], () => w.default.getCurrentUser()),
         D = i.useMemo(() => {
@@ -243,24 +243,24 @@ let et = i.memo(function (e) {
                         ),
                     ),
                 null != N && e.push(N),
-                null != A &&
+                null != C &&
                     e.push(
                         (0, r.jsx)(
                             g.Z,
                             {
-                                guild: A,
+                                guild: C,
                                 message: t,
                             },
                             "new-member",
                         ),
                     ),
                 null != a &&
-                    null != A &&
+                    null != C &&
                     e.push(
                         (0, r.jsx)(
                             m.Z,
                             {
-                                guild: A,
+                                guild: C,
                                 channel: a,
                                 userId: t.author.id,
                                 messageId: t.id,
@@ -270,7 +270,7 @@ let et = i.memo(function (e) {
                     ),
                 e
             );
-        }, [t, a, l, s, N, A, P]);
+        }, [t, a, l, s, N, C, P]);
     return null == S
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -363,7 +363,7 @@ function er(e) {
             onPopoutRequestClose: S,
             showAvatarPopout: I,
         } = o,
-        C = i.useRef(null),
+        A = i.useRef(null),
         [R, D] = i.useState(!1),
         { analyticsLocations: j } = (0, p.ZP)(f.Z.AVATAR),
         M = (0, c.e7)([w.default], () => w.default.getCurrentUser()),
@@ -384,7 +384,7 @@ function er(e) {
             avatarSrc: F,
             avatarDecorationSrc: Y,
             eventHandlers: W,
-        } = (0, A.Z)({
+        } = (0, C.Z)({
             userId: m.author.id,
             guildId: l,
             size: G,
@@ -446,7 +446,7 @@ function er(e) {
             ? (0, r.jsx)(p.Gt, {
                   value: j,
                   children: (0, r.jsx)(N.Z, {
-                      targetElementRef: C,
+                      targetElementRef: A,
                       user: m.author,
                       guildId: l,
                       channelId: m.channel_id,
@@ -470,7 +470,7 @@ function er(e) {
                                   onKeyDown: e.onKeyDown,
                                   showCommunicationDisabledStyles: d,
                                   className: _,
-                                  avatarImgRef: C,
+                                  avatarImgRef: A,
                               }),
                           ),
                   }),
@@ -570,7 +570,7 @@ let es = i.memo(function (e) {
             asContainer: !0,
             shouldShow: null != i,
             text: Y.intl.formatToPlainString(Y.t["8zbGNR"], { date: i }),
-            onTooltipShow: () => (0, C.Z)(n.id),
+            onTooltipShow: () => (0, A.Z)(n.id),
             children: (0, r.jsx)(d.P3F, {
                 className: W.nitroAuthorBadgeContainer,
                 onClick: () => ea(t),
@@ -600,16 +600,16 @@ let es = i.memo(function (e) {
             } = e,
             I = i.useMemo(() => (null != s ? (e) => s(e, t) : void 0), [s, t]),
             [, T] = (0, h.ZP)(t.author.id, e.guildId),
-            A = (0, c.e7)([D.Z, R.Z], () => {
+            C = (0, c.e7)([D.Z, R.Z], () => {
                 let n = R.Z.getGuild(e.guildId);
                 return null != t.author && null != n && D.Z.canManageUser(H.Plq.MODERATE_MEMBERS, t.author, n);
             }, [t.author, e.guildId]),
-            C = T && A,
+            A = T && C,
             N = er({
                 props: e,
                 guildId: e.guildId,
                 handleRenderPopout: I,
-                showCommunicationDisabledStyles: C,
+                showCommunicationDisabledStyles: A,
             }),
             w = (0, c.e7)([P.ZP], () => {
                 var t;
@@ -646,7 +646,7 @@ let es = i.memo(function (e) {
             avatar: N,
             username: (0, r.jsxs)(r.Fragment, {
                 children: [
-                    C &&
+                    A &&
                         (0, r.jsx)(u.u, {
                             text: Y.intl.string(Y.t["AeYyL+"]),
                             children: (0, r.jsxs)(r.Fragment, {

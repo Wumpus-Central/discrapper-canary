@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(926243),
     I = n(149203),
     T = n(981631),
-    A = n(388032),
-    C = n(999642);
+    C = n(388032),
+    A = n(999642);
 function N(e, t, n) {
     return (
         t in e
@@ -179,12 +179,12 @@ let L = (e) => {
                             children: (0, r.jsx)("button", {
                                 "aria-label": d,
                                 ref: h,
-                                className: o()(C.emojiItem, {
-                                    [C.emojiItemLarge]: ep,
-                                    [C.emojiItemMedium]: e_,
-                                    [C.emojiItemSelected]: y && !f,
+                                className: o()(A.emojiItem, {
+                                    [A.emojiItemLarge]: ep,
+                                    [A.emojiItemMedium]: e_,
+                                    [A.emojiItemSelected]: y && !f,
                                     [null != H ? H : ""]: y,
-                                    [C.showPulse]: eu === t,
+                                    [A.showPulse]: eu === t,
                                 }),
                                 onFocus: null != E ? E : O,
                                 onMouseOver: O,
@@ -231,11 +231,11 @@ let L = (e) => {
                               : (0, s.wj)(eo)
                                 ? ee
                                 : et,
-                        c = A.intl.string(e.sectionCollapsedToThreeRows ? A.t.NZI2Zk : A.t["/K2RDH"]);
+                        c = C.intl.string(e.sectionCollapsedToThreeRows ? C.t.NZI2Zk : C.t["/K2RDH"]);
                     return n({
                         handleSelect: o,
                         icon: (0, r.jsx)("img", {
-                            className: C.icon,
+                            className: A.icon,
                             src: l,
                             alt: "",
                         }),
@@ -260,10 +260,10 @@ let L = (e) => {
                         icon: (0, r.jsx)(l.oFk, {
                             size: "md",
                             color: "currentColor",
-                            className: C.icon,
-                            colorClass: C.icon,
+                            className: A.icon,
+                            colorClass: A.icon,
                         }),
-                        ariaLabel: A.intl.string(A.t["Z/r7IS"]),
+                        ariaLabel: C.intl.string(C.t["Z/r7IS"]),
                         shouldShowRoundHighlight: !1,
                     });
                 }
@@ -308,9 +308,9 @@ let L = (e) => {
             (0, r.jsx)(
                 "ul",
                 D(P({}, M(G)), {
-                    className: o()(C.emojiListRow, {
-                        [C.emojiListRowLargeSize]: ep,
-                        [C.emojiListRowMediumSize]: e_,
+                    className: o()(A.emojiListRow, {
+                        [A.emojiListRowLargeSize]: ep,
+                        [A.emojiListRowMediumSize]: e_,
                     }),
                     ref: ef,
                     children: e.map(em),
@@ -318,7 +318,7 @@ let L = (e) => {
             );
     if (V === I.UX.SOUNDMOJI)
         return (0, r.jsx)("ul", {
-            className: C.emojiListRow,
+            className: A.emojiListRow,
             ref: ef,
             children: (0, r.jsx)(g.Z, {
                 channelId: Y,
@@ -347,34 +347,34 @@ let L = (e) => {
     return 0 === eE.length
         ? eh(t)
         : (0, r.jsxs)("div", {
-              className: C.topEmojiSectionContainer,
+              className: A.topEmojiSectionContainer,
               children: [
                   (0, r.jsx)("div", {
-                      className: o()(C.topEmojiContainer, { [C.noEmojis]: 0 === eg.length }),
+                      className: o()(A.topEmojiContainer, { [A.noEmojis]: 0 === eg.length }),
                       children: eh(eg),
                   }),
                   (0, r.jsxs)("div", {
-                      className: C.newlyAddedHighlightContainer,
+                      className: A.newlyAddedHighlightContainer,
                       children: [
                           (0, r.jsx)("div", {
-                              className: o()(C.newlyAddedHighlight, {
-                                  [C.oneItem]: 1 === eE.length,
-                                  [C.alignRight]: eg.length > 0,
+                              className: o()(A.newlyAddedHighlight, {
+                                  [A.oneItem]: 1 === eE.length,
+                                  [A.alignRight]: eg.length > 0,
                               }),
                               children: eh(eE),
                           }),
                           (0, r.jsxs)("div", {
-                              className: o()(C.newlyAddedBadge, {
-                                  [C.newlyAddedBadgeLarge]: ep,
-                                  [C.newlyAddedBadgeMedium]: e_,
-                                  [C.alignRight]: eg.length > 0,
+                              className: o()(A.newlyAddedBadge, {
+                                  [A.newlyAddedBadgeLarge]: ep,
+                                  [A.newlyAddedBadgeMedium]: e_,
+                                  [A.alignRight]: eg.length > 0,
                               }),
                               children: [
-                                  (0, r.jsx)(b.Z, { foreground: C.newlyAddedBadgeStar }),
+                                  (0, r.jsx)(b.Z, { foreground: A.newlyAddedBadgeStar }),
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-xs/semibold",
                                       color: "always-white",
-                                      children: A.intl.string(A.t.y2b7CA),
+                                      children: C.intl.string(C.t.y2b7CA),
                                   }),
                               ],
                           }),

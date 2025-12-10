@@ -1,6 +1,6 @@
 n.d(t, {
     Ac: () => b,
-    DI: () => C,
+    DI: () => A,
     HA: () => R,
     HV: () => S,
     J4: () => m,
@@ -9,7 +9,7 @@ n.d(t, {
     Om: () => I,
     P0: () => _,
     PI: () => O,
-    Vb: () => A,
+    Vb: () => C,
     fR: () => y,
     gG: () => h,
     hf: () => P,
@@ -74,10 +74,10 @@ let f = "manual",
     T = () => {
         (f = "manual"), l.default.track(c.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
     },
-    A = () => {
+    C = () => {
         l.default.track(c.rMx.CUSTOM_THEMES_BACK_BUTTON_CLICKED, {});
     },
-    C = (e) => {
+    A = (e) => {
         l.default.track(c.rMx.CUSTOM_THEMES_BANNER_CLICKED, { banner_location: e });
     },
     N = (e, t, n, r, i) => {

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(438075),
     I = n(359110),
     T = n(6025),
-    A = n(695346),
-    C = n(433355),
+    C = n(695346),
+    A = n(433355),
     N = n(592125),
     P = n(906467),
     R = n(430824),
@@ -51,7 +51,7 @@ function Z(e) {
                 i = R.Z.getGuild(null == r ? void 0 : r.guild_id),
                 a = null == (e = t.messageReference) ? void 0 : e.channel_id,
                 o = x.Z.getCurrentlySelectedChannelId(),
-                s = C.ZP.getCurrentSidebarChannelId(null == (n = t.messageReference) ? void 0 : n.channel_id),
+                s = A.ZP.getCurrentSidebarChannelId(null == (n = t.messageReference) ? void 0 : n.channel_id),
                 l = o === a && s === (null == r ? void 0 : r.id);
             null == r ||
                 null == i ||
@@ -181,8 +181,8 @@ function V(e) {
                 ? t.set("author", d)
                 : t;
         }, [s, l, d]),
-        h = A.RS.useSetting(),
-        g = A.NA.useSetting(),
+        h = C.RS.useSetting(),
+        g = C.NA.useSetting(),
         E = h && g,
         b = (0, o.e7)([P.Z], () => P.Z.isDeveloper),
         y = (0, _.A)((null != (a = m.editedTimestamp) ? a : m.timestamp).valueOf()),
@@ -200,8 +200,8 @@ function V(e) {
             allowDevLinks: b,
             previewLinkTarget: !0,
         }),
-        C = (0, o.e7)([N.Z], () => N.Z.getChannel(s.channel_id));
-    return null == C
+        A = (0, o.e7)([N.Z], () => N.Z.getChannel(s.channel_id));
+    return null == A
         ? null
         : (0, r.jsx)(
               "div",
@@ -213,7 +213,7 @@ function V(e) {
                           (0, r.jsx)(F, {
                               mergedMessageRecord: m,
                               content: O,
-                              channel: C,
+                              channel: A,
                               reportingUserId:
                                   null == l || null == (n = l.moderatorReport) ? void 0 : n.reporting_user_id,
                               reportedTimestamp: s.timestamp,
@@ -221,7 +221,7 @@ function V(e) {
                           (0, S.Z)({
                               channelMessageProps: {
                                   message: m,
-                                  channel: C,
+                                  channel: A,
                                   compact: !1,
                               },
                               hasSpoilerEmbeds: I,

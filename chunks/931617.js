@@ -44,8 +44,8 @@ function P(e, n) {
         P = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         j = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n)),
         v = (0, i.e7)([g.Z], () => g.Z.getSortedRoles(n)),
-        y = (0, i.e7)([a.Z], () => a.Z.roleStyle),
-        N = (0, u.sE)(n, {
+        N = (0, i.e7)([a.Z], () => a.Z.roleStyle),
+        y = (0, u.sE)(n, {
             location: h,
             targetUserId: e,
         }),
@@ -76,7 +76,7 @@ function P(e, n) {
                                 r.S89,
                                 {
                                     id: t.id,
-                                    label: () => p(t, y, C),
+                                    label: () => p(t, N, C),
                                     disabled: i,
                                     action: () => {
                                         x.includes(t.id)
@@ -87,9 +87,9 @@ function P(e, n) {
                                                   [],
                                                   [t.id],
                                               ),
-                                              N(u.jQ.REMOVE_ROLE))
+                                              y(u.jQ.REMOVE_ROLE))
                                             : (o.Z.updateMemberRoles(n, e, x.concat([t.id]), [t.id], []),
-                                              N(u.jQ.ADD_ROLE));
+                                              y(u.jQ.ADD_ROLE));
                                     },
                                     checked: a,
                                 },
@@ -103,7 +103,7 @@ function P(e, n) {
                                 r.sNh,
                                 {
                                     id: e.id,
-                                    label: () => p(e, y, C),
+                                    label: () => p(e, N, C),
                                 },
                                 e.id,
                             ),

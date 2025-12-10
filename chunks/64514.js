@@ -22,8 +22,8 @@ function f(e, t, n) {
         e
     );
 }
-let h = a.default.getToken();
-class g extends l.Z {
+let g = a.default.getToken();
+class h extends l.Z {
     _initialize() {
         (this.focusedOrForegrounded = (0, d.H)()),
             a.default.addChangeListener(this.handleAuthenticationChange),
@@ -99,7 +99,7 @@ class g extends l.Z {
             }),
             f(this, "scheduleHeartbeatTracking", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "DEFAULT";
-                if (t.focusedOrForegrounded && null != h)
+                if (t.focusedOrForegrounded && null != g)
                     try {
                         t.startAnalyticHeartbeat();
                     } catch (e) {
@@ -126,8 +126,8 @@ class g extends l.Z {
             }),
             f(this, "handleAuthenticationChange", () => {
                 let e = a.default.getToken();
-                h !== e && ((h = e), (0, u.GG)(), this.stopAnalyticHeartbeat()), this.scheduleHeartbeatTracking();
+                g !== e && ((g = e), (0, u.GG)(), this.stopAnalyticHeartbeat()), this.scheduleHeartbeatTracking();
             });
     }
 }
-let m = new g();
+let m = new h();

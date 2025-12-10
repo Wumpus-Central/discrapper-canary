@@ -33,7 +33,7 @@ function E(e) {
             activeCommandOptionStates: o.Z.getOptionStates(t.id),
         })),
         T = (0, c.e)(t),
-        A = (0, f.LN)(t.id);
+        C = (0, f.LN)(t.id);
     return i.useMemo(() => {
         let e = [],
             i = [];
@@ -64,7 +64,7 @@ function E(e) {
                     }),
                 ),
             T && e.push((0, r.jsx)(c.V, {})),
-            A && e.push((0, r.jsx)(p.Z, { channel: t })),
+            C && e.push((0, r.jsx)(p.Z, { channel: t })),
             null != y && e.push((0, r.jsx)(_.y, { pendingScheduledMessage: y })),
             "gameMentionInput" === O && i.push((0, r.jsx)(l.i, {})),
             "timestampMentionInput" === O && i.push((0, r.jsx)(u.a, { error: null != v && v })),
@@ -73,7 +73,7 @@ function E(e) {
                 floating: i,
             }
         );
-    }, [E, S, I, t, b, T, n, A, y, O, v]);
+    }, [E, S, I, t, b, T, n, C, y, O, v]);
 }
 function b(e) {
     let { bars: t } = e,

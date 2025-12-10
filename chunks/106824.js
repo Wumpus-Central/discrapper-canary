@@ -206,12 +206,12 @@ class g extends r.EventEmitter {
         let S = l.eR.getSetting();
         p.allowSoundmoji = p.allowSoundmoji ? S : p.allowSoundmoji;
         let { results: I, metadata: T } = b.queryResults(this.props.channel, this.props.guild, y, p, O),
-            A = 0;
-        for (let e of Object.values(I)) Array.isArray(e) && (A += e.length);
-        let C = !0 === I.isLoading,
-            N = this.shouldShow(A, C, b),
+            C = 0;
+        for (let e of Object.values(I)) Array.isArray(e) && (C += e.length);
+        let A = !0 === I.isLoading,
+            N = this.shouldShow(C, A, b),
             P = this.state.selectedIndex;
-        !N || C ? (P = null) : null != P && P >= A && (P = A - 1);
+        !N || A ? (P = null) : null != P && P >= C && (P = C - 1);
         let R =
             null != this.props.guild &&
             s.N.getCurrentConfig(
@@ -228,9 +228,9 @@ class g extends r.EventEmitter {
                     typeInfo: b,
                     queryText: y,
                     results: I,
-                    resultCount: A,
+                    resultCount: C,
                     options: p,
-                    isLoading: C,
+                    isLoading: A,
                 },
                 isVisible: N,
                 selectedIndex: P,

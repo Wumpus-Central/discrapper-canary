@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     categoryRow: "categoryRow_d295eb",
     channelRow: "channelRow_d295eb",
     channelName: "channelName_d295eb",

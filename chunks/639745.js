@@ -34,11 +34,11 @@ function v(e, t, n, r) {
         S = i()(e[c.indexOf(Math.max(...c))]),
         I = "linear-gradient(".concat(t, "deg, ").concat(a.join(", "), ")"),
         T = (0, o.wj)(r),
-        A = {
+        C = {
             light: i()(S).set("hsl.s", 1).set("hsl.l", d),
             dark: i()(v).set("hsl.s", 1).set("hsl.l", u),
         },
-        C = 100 - n,
+        A = 100 - n,
         N = "\n      --custom-theme-background: "
             .concat(
                 I,
@@ -50,11 +50,11 @@ function v(e, t, n, r) {
                 "--custom-background-gradient-opacity-mix-amount",
                 ": ",
             )
-            .concat(((f + p * C) / 100).toFixed(2), ";\n      ", "--custom-theme-border-color-amount", ": 5%;\n      "),
+            .concat(((f + p * A) / 100).toFixed(2), ";\n      ", "--custom-theme-border-color-amount", ": 5%;\n      "),
         P = T
             ? "\n      "
                   .concat(s.Yk.THEME_BASE_MIX_AMOUNT, ": ")
-                  .concat(_ + m * C, "%;\n      ")
+                  .concat(_ + m * A, "%;\n      ")
                   .concat(s.Yk.THEME_TEXT_MIX_AMOUNT, ": ")
                   .concat(E, "%;\n    ")
             : "\n      "
@@ -64,25 +64,25 @@ function v(e, t, n, r) {
                   .concat(b, "%;\n    "),
         R = "\n      "
             .concat(s.Yk.DARK_THEME_BASE_COLOR, ": ")
-            .concat(A.dark.css(), ";\n      ")
+            .concat(C.dark.css(), ";\n      ")
             .concat(s.Yk.DARK_THEME_BASE_COLOR_HSL, ": ")
-            .concat((0, s.dw)(A.dark), ";\n      ")
+            .concat((0, s.dw)(C.dark), ";\n      ")
             .concat(s.Yk.DARK_THEME_TEXT_COLOR, ": ")
             .concat(
                 i()(v)
-                    .set("hsl.l", ((100 - y * C) / 100).toFixed(2))
+                    .set("hsl.l", ((100 - y * A) / 100).toFixed(2))
                     .css(),
                 ";\n    ",
             ),
         D = "\n      "
             .concat(s.Yk.LIGHT_THEME_BASE_COLOR, ": ")
-            .concat(A.light.css(), ";\n      ")
+            .concat(C.light.css(), ";\n      ")
             .concat(s.Yk.LIGHT_THEME_BASE_COLOR_HSL, ": ")
-            .concat((0, s.dw)(A.light), ";\n      ")
+            .concat((0, s.dw)(C.light), ";\n      ")
             .concat(s.Yk.LIGHT_THEME_TEXT_COLOR, ": ")
             .concat(
                 i()(S)
-                    .set("hsl.l", ((O * C) / 100).toFixed(2))
+                    .set("hsl.l", ((O * A) / 100).toFixed(2))
                     .css(),
                 ";\n    ",
             );

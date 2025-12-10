@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(907862),
     p = n(481060),
     f = n(150063),
-    h = n(112724),
-    g = n(183126),
+    g = n(112724),
+    h = n(183126),
     m = n(493773),
     _ = n(209613),
     b = n(325708),
@@ -100,13 +100,13 @@ function ei() {
         t = (0, V.q)(),
         n = (0, F.Z)(),
         l = (0, G.K)(),
-        c = (0, g.N)(),
+        c = (0, h.N)(),
         u = i.useCallback(() => {
             (0, p.showToast)((0, p.createToast)($.intl.string($.t["EDYbS+"]), p.ToastType.FAILURE));
         }, []),
         { rejectAll: d } = (0, B.m)({ onError: u }),
         f = (0, _.Z)("message-requests-list"),
-        { channelId: h } = (0, H._)(),
+        { channelId: g } = (0, H._)(),
         m = i.useCallback(() => {
             d(n.map((e) => e.channel.id));
         }, [n, d]),
@@ -122,8 +122,8 @@ function ei() {
                     {
                         index: s,
                         className: a()({
-                            [ee.selected]: null != h && h === u,
-                            [ee.siblingSelected]: null != h && h === c,
+                            [ee.selected]: null != g && g === u,
+                            [ee.siblingSelected]: null != g && g === c,
                         }),
                         channel: o.channel,
                         user: o.user,
@@ -132,7 +132,7 @@ function ei() {
                     u,
                 );
             },
-            [l, n, h],
+            [l, n, g],
         ),
         E = i.useCallback(
             () =>
@@ -318,7 +318,7 @@ function es(e) {
     let { section: t } = e;
     return t === K.pS.SPAM ? (0, r.jsx)(q.Z, {}) : (0, r.jsx)(ei, {});
 }
-let eo = (0, h.Z)(function (e) {
+let eo = (0, g.Z)(function (e) {
     let { width: t } = e,
         n = (0, V.q)();
     (0, m.ZP)(() => {
@@ -330,18 +330,18 @@ let eo = (0, h.Z)(function (e) {
     let l = (0, c.e7)([x.Z], () => x.Z.theme),
         s = (0, z.w)(),
         [u, d] = i.useState(!1),
-        h = (0, c.e7)([w.ZP], () => {
+        g = (0, c.e7)([w.ZP], () => {
             let e = w.ZP.getSidebarState(w.uZ);
             return null != e && e.type === j.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
-        g = null == h ? void 0 : h.channelId,
-        _ = null != h,
-        b = (0, k.T)(g),
-        E = (0, M.J)(g),
+        h = null == g ? void 0 : g.channelId,
+        _ = null != g,
+        b = (0, k.T)(h),
+        E = (0, M.J)(h),
         O = i.useRef(null);
     i.useEffect(() => {
-        null != g && !b && E && _ && ((0, T.Kh)(g), N.Z.closeChannelSidebar(w.uZ));
-    }, [g, E, _, b]);
+        null != h && !b && E && _ && ((0, T.Kh)(h), N.Z.closeChannelSidebar(w.uZ));
+    }, [h, E, _, b]);
     let [y, I] = i.useState(K.pS.REQUESTS),
         A = (e) => {
             I(e);

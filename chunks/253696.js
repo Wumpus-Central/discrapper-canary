@@ -69,13 +69,13 @@ function g(e) {
                 ? t
                 : {},
         ).reduce((e, t) => (e += t.length), 0),
-        { topEmojis: A, newlyAddedEmojis: C } = (0, u._)({
+        { topEmojis: C, newlyAddedEmojis: A } = (0, u._)({
             guildId: null == E ? void 0 : E.getGuildId(),
             pickerIntention: n,
         }),
         { visibleTopEmojis: N, visibleNewlyAddedEmojis: P } = (0, c.J)({
-            topEmojis: A,
-            newlyAddedEmojis: C,
+            topEmojis: C,
+            newlyAddedEmojis: A,
             rowSize: _,
         });
     i.ZP.trackWithMetadata(

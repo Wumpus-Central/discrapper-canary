@@ -46,11 +46,11 @@ function v(e) {
 }
 let g = a.forwardRef(function (e, t) {
     let { clip: n, applicationAudioEnabled: g, voiceAudioEnabled: b, soundboardAudioEnabled: j } = e,
-        { cropStart: x, cropEnd: y, setVideoPlayerRef: C, videoURL: k, audioURL: N } = (0, d.D)(),
+        { cropStart: x, cropEnd: y, setVideoPlayerRef: N, videoURL: C, audioURL: k } = (0, d.D)(),
         E = a.useRef({}),
-        w = a.useRef(!1),
-        [S, I] = a.useState([]),
-        O = a.useCallback(() => {
+        S = a.useRef(!1),
+        [w, O] = a.useState([]),
+        T = a.useCallback(() => {
             let e = E.current.main;
             if (null == e) return;
             let t = (0, i.round)(e.currentTime, 3),
@@ -60,7 +60,7 @@ let g = a.forwardRef(function (e, t) {
                 return !0;
             }
         }, [x, y]),
-        T = a.useCallback((e) => {
+        I = a.useCallback((e) => {
             let t = [];
             for (let n of Object.values(e.currentTarget.audioTracks))
                 n.label.includes(m.zh.APPLICATION)
@@ -68,27 +68,27 @@ let g = a.forwardRef(function (e, t) {
                     : n.label.includes(m.zh.VOICE) || n.label.includes(m.zh.SOUNDBOARD)
                       ? ((n.enabled = !1), t.includes(n.label) || t.push(n.label))
                       : (n.enabled = !1);
-            I(t);
+            O(t);
         }, []);
     (0, r.Z)(() => {
-        w.current && O() && R();
+        S.current && T() && R();
     });
     let R = a.useCallback(() => {
-            for (let e of ((w.current = !0), O(), Object.values(E.current))) null != e && e.play();
-        }, [O]),
-        P = a.useCallback(() => {
+            for (let e of ((S.current = !0), T(), Object.values(E.current))) null != e && e.play();
+        }, [T]),
+        L = a.useCallback(() => {
             for (let e of Object.values(E.current)) null != e && e.pause();
         }, []),
-        A = a.useCallback((e) => {
+        P = a.useCallback((e) => {
             var t;
-            for (let n of ((null == (t = E.current.main) ? void 0 : t.paused) && (w.current = !1),
+            for (let n of ((null == (t = E.current.main) ? void 0 : t.paused) && (S.current = !1),
             Object.values(E.current)))
                 null != n && (n.currentTime = e);
         }, []),
-        L = a.useCallback(() => {
+        A = a.useCallback(() => {
             var e;
-            (null == (e = E.current.main) ? void 0 : e.paused) ? R() : P();
-        }, [R, P]),
+            (null == (e = E.current.main) ? void 0 : e.paused) ? R() : L();
+        }, [R, L]),
         M = a.useCallback((e) => {
             E.current.main = e;
         }, []),
@@ -98,16 +98,16 @@ let g = a.forwardRef(function (e, t) {
     a.useImperativeHandle(t, () => {
         let e = {
             play: R,
-            seek: A,
-            pause: P,
+            seek: P,
+            pause: L,
             videoElement: E.current.main,
         };
-        return C(e), e;
-    }, [R, A, P, C]);
+        return N(e), e;
+    }, [R, P, L, N]);
     let U = a.useCallback(() => {
-        A(x);
-    }, [A, x]);
-    if (null == k) return null;
+        P(x);
+    }, [P, x]);
+    if (null == C) return null;
     let Z = n.type === o.NJ.VOICE_CLIP;
     return (0, l.jsxs)("div", {
         className: h.clipsPlayer,
@@ -117,7 +117,7 @@ let g = a.forwardRef(function (e, t) {
                       children: [
                           (0, l.jsx)("audio", {
                               ref: M,
-                              src: k,
+                              src: C,
                               muted: !0,
                               preload: "auto",
                           }),
@@ -125,10 +125,10 @@ let g = a.forwardRef(function (e, t) {
                       ],
                   })
                 : (0, l.jsx)(s.Z, {
-                      onClick: L,
+                      onClick: A,
                       className: h.displayVideo,
                       ref: M,
-                      src: k,
+                      src: C,
                       muted: f(":all", {
                           applicationAudioEnabled: g,
                           voiceAudioEnabled: b,
@@ -145,7 +145,7 @@ let g = a.forwardRef(function (e, t) {
             }),
             (0, l.jsx)("audio", {
                 id: "ClipsPlayerAudioTrack:application",
-                src: null != N ? N : void 0,
+                src: null != k ? k : void 0,
                 muted: f(":application", {
                     applicationAudioEnabled: g,
                     voiceAudioEnabled: b,
@@ -155,15 +155,15 @@ let g = a.forwardRef(function (e, t) {
                 className: p.hidden,
                 preload: "auto",
                 ref: (e) => D(e, "main:application"),
-                onLoadedMetadata: T,
+                onLoadedMetadata: I,
             }),
-            S.map((e) =>
+            w.map((e) =>
                 (0, l.jsx)(
                     v,
                     {
                         setRef: D,
                         audioTrackLabel: e,
-                        src: N,
+                        src: k,
                         muted: f(e, {
                             applicationAudioEnabled: g,
                             voiceAudioEnabled: b,

@@ -1,6 +1,6 @@
 n.d(t, {
     hQ: () => T,
-    lo: () => C,
+    lo: () => A,
     yn: () => v,
 }),
     n(388685);
@@ -122,8 +122,8 @@ function T(e) {
             "aria-label": O,
             multiSelect: v = !1,
             autoFocus: T = !1,
-            maxVisibleItems: A = 5,
-            itemToString: C = S,
+            maxVisibleItems: C = 5,
+            itemToString: A = S,
             emptyStateText: N,
             emptyStateHeader: P,
             onQueryChange: R,
@@ -241,12 +241,12 @@ function T(e) {
                                               activeDescendant: j,
                                               selected: a,
                                               setSelected: p,
-                                              itemToString: C,
+                                              itemToString: A,
                                           },
                                           children: (0, r.jsx)(
                                               u.Tvr,
                                               h(_({}, s), {
-                                                  style: { maxHeight: A * (y + 6) },
+                                                  style: { maxHeight: C * (y + 6) },
                                                   "aria-multiselectable": v,
                                                   id: k,
                                                   ref: U,
@@ -269,8 +269,8 @@ function T(e) {
         }),
     });
 }
-let A = i.createContext(null);
-function C(e) {
+let C = i.createContext(null);
+function A(e) {
     var t,
         { value: n, children: a, disabled: s = !1, selectedColor: c = O.STANDARD } = e,
         d = g(e, ["value", "children", "disabled", "selectedColor"]);
@@ -278,7 +278,7 @@ function C(e) {
         v = y(n),
         S = p === v,
         T = null != (t = null == d ? void 0 : d.selected) ? t : m.has(n),
-        C = (0, l.JA)(v);
+        A = (0, l.JA)(v);
     return (0, r.jsx)(
         u.P3F,
         h(
@@ -294,13 +294,13 @@ function C(e) {
                         [f.disabled]: s,
                     }),
                 },
-                C,
+                A,
             ),
             {
                 role: "option",
                 "aria-selected": T,
                 "aria-disabled": s,
-                children: (0, r.jsx)(A.Provider, {
+                children: (0, r.jsx)(C.Provider, {
                     value: n,
                     children: a,
                 }),
@@ -308,33 +308,33 @@ function C(e) {
         ),
     );
 }
-(C.Colors = O),
-    (C.Label = function (e) {
+(A.Colors = O),
+    (A.Label = function (e) {
         let { children: t } = e;
         return (0, r.jsx)("span", {
             className: f.itemLabel,
             children: t,
         });
     }),
-    (C.Icon = function (e) {
+    (A.Icon = function (e) {
         let { children: t } = e;
         return (0, r.jsx)("span", {
             className: f.itemCheckbox,
             children: t,
         });
     }),
-    (C.Checkbox = function (e) {
+    (A.Checkbox = function (e) {
         let { checked: t } = e,
             { selected: n } = i.useContext(I),
-            a = i.useContext(A);
+            a = i.useContext(C);
         return (0, r.jsx)("span", {
             className: f.itemCheckbox,
             children: (0, r.jsx)(u.FZ5, { checked: null != t ? t : null != a && n.has(a) }),
         });
     }),
-    (C.Checkmark = function () {
+    (A.Checkmark = function () {
         let { selected: e } = i.useContext(I),
-            t = i.useContext(A);
+            t = i.useContext(C);
         return e.has(t)
             ? (0, r.jsx)("span", {
                   className: f.itemCheckbox,

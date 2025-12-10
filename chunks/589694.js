@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(54381),
     i = n(473749),
     l = n(481060),
@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(860160),
     p = n(981631),
     f = n(715632);
-function h(e) {
+function g(e) {
     let { item: t } = e,
         n = i.useCallback(
             (e) => {

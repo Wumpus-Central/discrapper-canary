@@ -6,7 +6,7 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(205120),
+    a = n(467721),
     o = n(399606),
     s = n(481060),
     l = n(607070),
@@ -65,7 +65,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function A(e, t) {
         e
     );
 }
-let C = 3000;
+let A = 3000;
 function N(e) {
     if (null == e || e === b.Eu4.NONE) return "";
     let t = [
@@ -163,7 +163,7 @@ function R(e) {
         y = (0, p.tl)(n),
         S = (0, c.Z)(),
         T = i.useRef(null);
-    function C(e) {
+    function A(e) {
         let { closePopout: t } = e;
         return (0, r.jsx)(u.Z, {
             onClose: t,
@@ -203,13 +203,13 @@ function R(e) {
                     }),
                     (0, r.jsx)(s.yRy, {
                         targetElementRef: T,
-                        renderPopout: C,
+                        renderPopout: A,
                         position: "right",
                         align: "center",
                         children: (e) =>
                             (0, r.jsx)(
                                 s.P3F,
-                                A(I({}, e), {
+                                C(I({}, e), {
                                     innerRef: T,
                                     "aria-label": O.intl.string(O.t.PdRCRg),
                                     className: v.boostSlotMenuIcon,
@@ -351,7 +351,7 @@ function L(e) {
             null != n &&
                 (e = setInterval(() => {
                     o((e) => !e);
-                }, C)),
+                }, A)),
             () => {
                 clearInterval(e);
             }

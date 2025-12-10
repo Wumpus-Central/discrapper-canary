@@ -217,7 +217,7 @@ function T(e) {
     let { guildId: t, enabled: n } = e;
     null != t && n && p.delete(t);
 }
-function A(e) {
+function C(e) {
     var t, n, r;
     let { guild: i } = e,
         a = p.get(i.id);
@@ -230,7 +230,7 @@ function A(e) {
     });
     p.set(i.id, d(c({}, a), { profile: o }));
 }
-class C extends (r = i.ZP.Store) {
+class A extends (r = i.ZP.Store) {
     getProfile(e) {
         var t, n;
         return null == e ? null : null != (n = null == (t = p.get(e)) ? void 0 : t.profile) ? n : null;
@@ -260,8 +260,8 @@ class C extends (r = i.ZP.Store) {
               : null;
     }
 }
-l(C, "displayName", "GuildProfileStore");
-let N = new C(a.Z, {
+l(A, "displayName", "GuildProfileStore");
+let N = new A(a.Z, {
     GUILD_PROFILE_FETCH: m,
     GUILD_PROFILE_FETCH_SUCCESS: h,
     GUILD_PROFILE_FETCH_FAILURE: g,
@@ -273,7 +273,7 @@ let N = new C(a.Z, {
     INSTANT_INVITE_CREATE_SUCCESS: S,
     CHANNEL_CREATE: I,
     GUILD_SETTINGS_SET_WIDGET: T,
-    GUILD_UPDATE: A,
+    GUILD_UPDATE: C,
     GUILD_PROFILE_UPDATE_VISIBILITY: E,
     GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: O,
     GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: y,

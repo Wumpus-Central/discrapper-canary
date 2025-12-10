@@ -62,10 +62,10 @@ function T(e) {
     let { guildId: t, user: n } = e;
     return n.id === u.default.getId() && S(t);
 }
-function A() {
+function C() {
     (h = null), (g = null);
 }
-class C extends (r = a.ZP.PersistedStore) {
+class A extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         var t, n, r, a;
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type),
@@ -94,12 +94,12 @@ class C extends (r = a.ZP.PersistedStore) {
         return h === e ? m : E[e];
     }
 }
-_(C, "displayName", "SelectedGuildStore"), _(C, "persistKey", "SelectedGuildStore");
-let N = new C(o.Z, {
+_(A, "displayName", "SelectedGuildStore"), _(A, "persistKey", "SelectedGuildStore");
+let N = new A(o.Z, {
     CONNECTION_OPEN: b,
     OVERLAY_INITIALIZE: y,
     CHANNEL_SELECT: v,
     GUILD_MEMBER_REMOVE: T,
     GUILD_DELETE: I,
-    LOGOUT: A,
+    LOGOUT: C,
 });

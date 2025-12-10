@@ -11,8 +11,8 @@ var i = n(92951),
     d = n(840767),
     p = n(639949),
     f = n(612776),
-    h = n(921944),
-    g = n(860076),
+    g = n(921944),
+    h = n(860076),
     m = n(388032),
     _ = n(519236),
     b = n(807808),
@@ -91,16 +91,16 @@ function O(e) {
                                 variant: "display-sm",
                                 style: { color: y },
                                 className: _.display,
-                                children: m.intl.string(g.default["CdU/PF"]),
+                                children: m.intl.string(h.default["CdU/PF"]),
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: "text-md/medium",
                                 style: { color: y },
-                                children: m.intl.string(g.default["M/LvW0"]),
+                                children: m.intl.string(h.default["M/LvW0"]),
                             }),
                             (0, r.jsx)(a.P3F, {
                                 className: _.dismissButton,
-                                onClick: () => O(h.L.DISMISS),
+                                onClick: () => O(g.L.DISMISS),
                                 style: { color: y },
                                 children: (0, r.jsx)(a.Text, {
                                     variant: "text-xxs/normal",
@@ -114,7 +114,7 @@ function O(e) {
                         className: _.clickable,
                         contentClassName: _.button,
                         onClick: () => {
-                            (0, d.Z)("coachmark"), O(h.L.TAKE_ACTION);
+                            (0, d.Z)("coachmark"), O(g.L.TAKE_ACTION);
                         },
                         children: (0, r.jsx)(a.d4D, {
                             color: y,

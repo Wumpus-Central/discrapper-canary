@@ -38,7 +38,7 @@ let y = (e, t, n, r) => {
         let { channel: t, entry: n, disableGameProfileLinks: a, onReaction: s, onVoiceChannelPreview: b } = e,
             { largeImage: v } = (0, l.rv)({ entry: n }),
             { user: S, details: I, appName: T } = (0, g.n)(n),
-            { primaryColor: A, secondaryColor: C } = (0, d.Z)(null == v ? void 0 : v.src),
+            { primaryColor: C, secondaryColor: A } = (0, d.Z)(null == v ? void 0 : v.src),
             N = (0, c.yA)(n),
             P = (0, c.Nq)(n),
             R = i.useCallback(
@@ -52,11 +52,11 @@ let y = (e, t, n, r) => {
                             timestamp: E.intl.formatToPlainString(E.t.YL7UE3, {
                                 hours: Math.round(N / o.Z.Seconds.HOUR),
                             }),
-                            colors: [A, C],
+                            colors: [C, A],
                             channelId: e,
                         });
                 },
-                [null == v ? void 0 : v.src, t, N, n, A, P, C, S],
+                [null == v ? void 0 : v.src, t, N, n, C, P, A, S],
             );
         if (null == S || null == N || null == P || !(0, p.qy)(P)) return null;
         let D = null != n.extra.platform ? f.v[n.extra.platform] : null;

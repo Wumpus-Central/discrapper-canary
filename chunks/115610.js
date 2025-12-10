@@ -72,8 +72,8 @@ async function y(e, t) {
     let T = Array.from(l.Z.getAllPackStickers().values())
             .flat()
             .filter((e) => e.type === c.n0.STANDARD),
-        A = [T[Math.floor(Math.random() * T.length)].id];
-    r.Z.sendStickers(t.id, A, "", {
+        C = [T[Math.floor(Math.random() * T.length)].id];
+    r.Z.sendStickers(t.id, C, "", {
         messageReference: {
             guild_id: null != (y = t.getGuildId()) ? y : void 0,
             channel_id: t.id,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -99,7 +99,7 @@ function I() {
 function T() {
     S();
 }
-class A extends (r = i.ZP.Store) {
+class C extends (r = i.ZP.Store) {
     getMatchingOutboxEntry(e) {
         let { activity: t, userId: n } = e,
             r = d.get(n);
@@ -121,8 +121,8 @@ class A extends (r = i.ZP.Store) {
         return m;
     }
 }
-s(A, "displayName", "ContentInventoryOutboxStore");
-let C = new A(a.Z, {
+s(C, "displayName", "ContentInventoryOutboxStore");
+let A = new C(a.Z, {
     CONNECTION_OPEN: I,
     LOGOUT: T,
     CONTENT_INVENTORY_FETCH_OUTBOX_START: h,

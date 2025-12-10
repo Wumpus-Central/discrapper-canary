@@ -41,8 +41,8 @@ var r = n(54381),
     S = n(80966),
     I = n(593545),
     T = n(479313),
-    A = n(765104),
-    C = n(505953),
+    C = n(765104),
+    A = n(505953),
     N = n(695346),
     P = n(201542),
     R = n(306680),
@@ -176,8 +176,8 @@ function J(e) {
     let [y, O] = i.useState(!0),
         [v, I] = i.useState(!1),
         T = m === k.hV.MOSAIC || !0 === _,
-        A = (y || v) && !f && N.H1.getSetting() && null != l && "" !== l && !0 !== p,
-        C = (e) => {
+        C = (y || v) && !f && N.H1.getSetting() && null != l && "" !== l && !0 !== p,
+        A = (e) => {
             let { altText: t } = e;
             return (0, r.jsxs)(d.VqE, {
                 "aria-label": B.intl.string(B.t.fSiQ3A),
@@ -221,13 +221,13 @@ function J(e) {
             ),
             null != c && c(),
             T &&
-                A &&
+                C &&
                 (0, r.jsx)("div", {
                     className: F.mediaMosaicVideoAltTextContainer,
                     children: (0, r.jsx)(d.yRy, {
                         targetElementRef: P,
                         animation: d.yRy.Animation.FADE,
-                        renderPopout: () => (0, r.jsx)(C, { altText: l }),
+                        renderPopout: () => (0, r.jsx)(A, { altText: l }),
                         children: (e) =>
                             (0, r.jsx)(d.tEY, {
                                 offset: 4,
@@ -250,7 +250,7 @@ function J(e) {
                     }),
                 }),
             !T &&
-                A &&
+                C &&
                 (0, r.jsx)("span", {
                     className: F.altText,
                     children: l,
@@ -563,9 +563,9 @@ function ef(e) {
         S = i.useRef(null),
         [I, N] = i.useState(null),
         P = i.useRef(null),
-        j = (0, u.Wu)([A.Z], () => {
+        j = (0, u.Wu)([C.Z], () => {
             var e;
-            return null != (e = A.Z.summaries(s.id)) ? e : [];
+            return null != (e = C.Z.summaries(s.id)) ? e : [];
         }, [s]),
         k = (0, g.Z)(j);
     i.useEffect(() => {
@@ -606,7 +606,7 @@ function ef(e) {
             [j],
             e_,
         ),
-        V = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
+        V = null != (n = (0, u.e7)([C.Z], () => C.Z.visibleSummaryIndex())) ? n : -1,
         H = null == j || null == (t = j[V]) ? void 0 : t.topic;
     null == H && null == y && (null == j ? void 0 : j.length) >= 1 && (H = null == (a = j[0]) ? void 0 : a.topic);
     let Y = i.useMemo(
@@ -736,7 +736,7 @@ function ef(e) {
         );
     let ee = i.useMemo(
             () =>
-                (0, r.jsx)(C.Z, {
+                (0, r.jsx)(A.Z, {
                     channel: s,
                     summaries: j,
                     summariesMembers: Z,
@@ -892,9 +892,9 @@ function em(e) {
         y = i.useRef(null),
         [v, S] = i.useState(null),
         I = i.useRef(null),
-        N = (0, u.Wu)([A.Z], () => {
+        N = (0, u.Wu)([C.Z], () => {
             var e;
-            return null != (e = A.Z.summaries(s.id)) ? e : [];
+            return null != (e = C.Z.summaries(s.id)) ? e : [];
         }, [s]),
         P = (0, g.Z)(N);
     i.useEffect(() => {
@@ -935,7 +935,7 @@ function em(e) {
             [N],
             e_,
         ),
-        j = null != (n = (0, u.e7)([A.Z], () => A.Z.visibleSummaryIndex())) ? n : -1,
+        j = null != (n = (0, u.e7)([C.Z], () => C.Z.visibleSummaryIndex())) ? n : -1,
         M = null == N || null == (t = N[j]) ? void 0 : t.topic;
     null == M && null == m && (null == N ? void 0 : N.length) >= 1 && (M = null == (a = N[0]) ? void 0 : a.topic);
     let k = i.useMemo(() => l().get(N, j - 1), [j, N]),
@@ -1073,7 +1073,7 @@ function em(e) {
         );
     let ee = i.useMemo(
         () =>
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(A.Z, {
                 channel: s,
                 summaries: N,
                 summariesMembers: R,
@@ -1082,7 +1082,7 @@ function em(e) {
             }),
         [N, R, q, J, s],
     );
-    if (!(0, u.e7)([A.Z], () => A.Z.shouldShowTopicsBar())) return null;
+    if (!(0, u.e7)([C.Z], () => C.Z.shouldShowTopicsBar())) return null;
     let et = B.intl.string(B.t["38qwgO"]);
     return (
         N.length > 0 && (et = "" === M || null == M ? B.intl.string(B.t.DwnFuG) : M),

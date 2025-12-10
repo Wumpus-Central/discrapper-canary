@@ -1,91 +1,91 @@
-n.d(t, { ZP: () => H }), n(539854), n(388685);
-var r,
-    i = n(392711),
-    l = n.n(i),
-    a = n(442837),
-    s = n(570140),
-    o = n(194359),
-    c = n(81825),
-    u = n(353926),
-    d = n(633289),
-    p = n(5254),
-    f = n(91896),
-    h = n(441623),
-    g = n(199902),
-    m = n(271383),
-    _ = n(430824),
-    b = n(158776),
-    E = n(699516),
-    O = n(594174),
-    v = n(981631),
-    y = n(474936);
-function I(e, t, n) {
+i.d(t, { ZP: () => J }), i(539854), i(388685);
+var n,
+    s = i(392711),
+    r = i.n(s),
+    o = i(442837),
+    a = i(570140),
+    l = i(194359),
+    u = i(81825),
+    c = i(353926),
+    h = i(633289),
+    p = i(5254),
+    d = i(91896),
+    m = i(441623),
+    N = i(199902),
+    O = i(271383),
+    y = i(430824),
+    f = i(158776),
+    g = i(699516),
+    I = i(594174),
+    v = i(981631),
+    E = i(474936);
+function b(e, t, i) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = n),
+            : (e[t] = i),
         e
     );
 }
-function C(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var i = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(i);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(i).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(i, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                I(e, t, n[t]);
+            n.forEach(function (t) {
+                b(e, t, i[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var n = Object.keys(e);
+                  var i = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var n = Object.getOwnPropertySymbols(e);
+                      i.push.apply(i, n);
                   }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  return i;
+              })(Object(t)).forEach(function (i) {
+                  Object.defineProperty(e, i, Object.getOwnPropertyDescriptor(t, i));
               }),
         e
     );
 }
-function T(e) {
-    let t = O.default.getUser(e);
+function G(e) {
+    let t = I.default.getUser(e);
     return {
         user: t,
         usernameLower: null != t ? t.username.toLowerCase() : null,
     };
 }
-function N(e) {
+function P(e) {
     return {
-        status: b.Z.getStatus(e),
-        isMobile: b.Z.isMobileOnline(e),
-        activities: b.Z.getActivities(e),
-        applicationStream: g.Z.getAnyStreamForUser(e),
+        status: f.Z.getStatus(e),
+        isMobile: f.Z.isMobileOnline(e),
+        activities: f.Z.getActivities(e),
+        applicationStream: N.Z.getAnyStreamForUser(e),
     };
 }
-function j(e) {
+function S(e) {
     let t = [];
     return (
-        l()(m.ZP.memberOf(e))
-            .map(_.Z.getGuild)
+        r()(O.ZP.memberOf(e))
+            .map(y.Z.getGuild)
             .sortBy((e) => (null != e ? e.name.toLowerCase() : null))
             .forEach((e) => {
                 null != e && t.push(e);
@@ -96,43 +96,43 @@ function j(e) {
         }
     );
 }
-class P extends c.Z {
+class D extends u.Z {
     get comparator() {
-        var e, t, n, r, i;
+        var e, t, i, n, s;
         return [
             this.type,
-            +(this.giftIntentType !== y.hX.FRIEND_ANNIVERSARY),
+            +(this.giftIntentType !== E.hX.FRIEND_ANNIVERSARY),
             null !=
-            (i =
-                null != (r = null == (e = this.nickname) ? void 0 : e.toLowerCase())
-                    ? r
-                    : null == (n = this.user) || null == (t = n.globalName)
+            (s =
+                null != (n = null == (e = this.nickname) ? void 0 : e.toLowerCase())
+                    ? n
+                    : null == (i = this.user) || null == (t = i.globalName)
                       ? void 0
                       : t.toLowerCase())
-                ? i
+                ? s
                 : this.usernameLower,
         ];
     }
     constructor(e) {
         var t;
         super(),
-            I(this, "key", void 0),
-            I(this, "userId", void 0),
-            I(this, "type", void 0),
-            I(this, "status", void 0),
-            I(this, "isMobile", void 0),
-            I(this, "activities", void 0),
-            I(this, "applicationStream", void 0),
-            I(this, "user", void 0),
-            I(this, "usernameLower", void 0),
-            I(this, "mutualGuildsLength", void 0),
-            I(this, "mutualGuilds", void 0),
-            I(this, "nickname", void 0),
-            I(this, "spam", void 0),
-            I(this, "giftIntentType", void 0),
-            I(this, "ignoredUser", void 0),
-            I(this, "applicationId", void 0),
-            I(this, "isGameRelationship", void 0),
+            b(this, "key", void 0),
+            b(this, "userId", void 0),
+            b(this, "type", void 0),
+            b(this, "status", void 0),
+            b(this, "isMobile", void 0),
+            b(this, "activities", void 0),
+            b(this, "applicationStream", void 0),
+            b(this, "user", void 0),
+            b(this, "usernameLower", void 0),
+            b(this, "mutualGuildsLength", void 0),
+            b(this, "mutualGuilds", void 0),
+            b(this, "nickname", void 0),
+            b(this, "spam", void 0),
+            b(this, "giftIntentType", void 0),
+            b(this, "ignoredUser", void 0),
+            b(this, "applicationId", void 0),
+            b(this, "isGameRelationship", void 0),
             (this.key = e.key),
             (this.userId = e.userId),
             (this.type = e.type),
@@ -152,111 +152,111 @@ class P extends c.Z {
             (this.isGameRelationship = null != (t = e.isGameRelationship) && t);
     }
 }
-class x {
+class C {
     reset() {
         let e = new Set(),
-            t = Array.from(E.Z.getMutableRelationships().entries()).map((t) => {
-                let [n, r] = t;
+            t = Array.from(g.Z.getMutableRelationships().entries()).map((t) => {
+                let [i, n] = t;
                 return (
-                    r === v.OGo.FRIEND && e.add(n),
-                    new P(
-                        S(
-                            C(
+                    n === v.OGo.FRIEND && e.add(i),
+                    new D(
+                        Z(
+                            w(
                                 {
-                                    key: n,
-                                    type: r,
-                                    userId: n,
-                                    nickname: E.Z.getNickname(n),
+                                    key: i,
+                                    type: n,
+                                    userId: i,
+                                    nickname: g.Z.getNickname(i),
                                 },
-                                T(n),
-                                N(n),
-                                j(n),
+                                G(i),
+                                P(i),
+                                S(i),
                             ),
                             {
-                                spam: E.Z.isSpam(n),
-                                ignoredUser: E.Z.isIgnored(n),
+                                spam: g.Z.isSpam(i),
+                                ignoredUser: g.Z.isIgnored(i),
                                 giftIntentType:
-                                    r === v.OGo.FRIEND && h.ZP.getFriendAnniversaries().includes(n)
-                                        ? y.hX.FRIEND_ANNIVERSARY
+                                    n === v.OGo.FRIEND && m.ZP.getFriendAnniversaries().includes(i)
+                                        ? E.hX.FRIEND_ANNIVERSARY
                                         : void 0,
-                                applicationId: E.Z.getOriginApplicationId(n),
+                                applicationId: g.Z.getOriginApplicationId(i),
                             },
                         ),
                     )
                 );
             }),
-            n = [],
-            r = f.Z.getGameRelationships().values(),
-            i = new Set();
-        r.forEach((t) => {
-            let { id: r, applicationId: l, type: a } = t;
-            !(a === v.OGo.FRIEND && e.has(r)) &&
-                ((a === v.OGo.FRIEND && i.has(r)) ||
-                    (a === v.OGo.FRIEND && i.add(r),
-                    n.push(
-                        new P(
-                            S(
-                                C(
+            i = [],
+            n = d.Z.getGameRelationships().values(),
+            s = new Set();
+        n.forEach((t) => {
+            let { id: n, applicationId: r, type: o } = t;
+            !(o === v.OGo.FRIEND && e.has(n)) &&
+                ((o === v.OGo.FRIEND && s.has(n)) ||
+                    (o === v.OGo.FRIEND && s.add(n),
+                    i.push(
+                        new D(
+                            Z(
+                                w(
                                     {
-                                        key: "".concat(r, "-").concat(l),
-                                        type: a,
-                                        userId: r,
-                                        applicationId: l,
-                                        nickname: E.Z.getNickname(r),
+                                        key: "".concat(n, "-").concat(r),
+                                        type: o,
+                                        userId: n,
+                                        applicationId: r,
+                                        nickname: g.Z.getNickname(n),
                                     },
-                                    T(r),
-                                    N(r),
-                                    j(r),
+                                    G(n),
+                                    P(n),
+                                    S(n),
                                 ),
                                 {
-                                    spam: E.Z.isSpam(r),
-                                    ignoredUser: E.Z.isIgnored(r),
+                                    spam: g.Z.isSpam(n),
+                                    ignoredUser: g.Z.isIgnored(n),
                                     isGameRelationship: !0,
                                 },
                             ),
                         ),
                     )));
         });
-        let a = l().map(
+        let o = r().map(
             p.Z.getSuggestions(),
             (e) =>
-                new P(
-                    C(
+                new D(
+                    w(
                         {
                             key: e.key,
                             userId: e.key,
                             type: 99,
                             nickname: e.name,
                         },
-                        T(e.key),
-                        N(e.key),
-                        j(e.key),
+                        G(e.key),
+                        P(e.key),
+                        S(e.key),
                     ),
                 ),
         );
-        return new x(l().concat(t, n, a));
+        return new C(r().concat(t, i, o));
     }
     clone() {
-        return new x(this._rows);
+        return new C(this._rows);
     }
     update(e) {
         let t = !1;
-        for (let n = 0; n < this._rows.length; n++) {
-            let r = this._rows[n],
-                i = r.merge(e(r.userId));
-            (t = t || i !== r), (this._rows[n] = i);
+        for (let i = 0; i < this._rows.length; i++) {
+            let n = this._rows[i],
+                s = n.merge(e(n.userId));
+            (t = t || s !== n), (this._rows[i] = s);
         }
         return t;
     }
     filter(e, t) {
-        return l()(this._rows)
+        return r()(this._rows)
             .filter((e) => {
                 if (null == e.user) return !1;
                 if (null != t && "" !== t) {
-                    let n = t.toLowerCase();
+                    let i = t.toLowerCase();
                     return [e.usernameLower, e.nickname, e.user.globalName]
                         .map((e) => (null == e ? void 0 : e.toLowerCase()))
-                        .some((e) => (null == e ? void 0 : e.includes(n)));
+                        .some((e) => (null == e ? void 0 : e.includes(i)));
                 }
                 return !0;
             })
@@ -299,70 +299,70 @@ class x {
         );
     }
     constructor(e = []) {
-        I(this, "_rows", void 0), (this._rows = e);
+        b(this, "_rows", void 0), (this._rows = e);
     }
 }
-let A = !0,
-    Z = !1,
-    w = v.pJs.ONLINE,
-    L = new x(),
+let j = !0,
+    L = !1,
+    k = v.pJs.ONLINE,
+    _ = new C(),
     R = !0,
-    D = !1;
-function M() {
+    A = !1;
+function F() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    A && (e || (w !== v.pJs.ONLINE && w !== v.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), o.Z.fetchRelationships());
+    j && (e || (k !== v.pJs.ONLINE && k !== v.pJs.ADD_FRIEND)) && !L && ((j = !1), (L = !0), l.Z.fetchRelationships());
 }
-function k() {
-    if (((A = !0), R ? (Z = !1) : M(), (L = L.reset()), D)) return;
-    let e = L.getRelationshipCounts();
-    w = 0 === e[v.OGo.FRIEND] ? (0 !== e[v.OGo.PENDING_INCOMING] ? v.pJs.PENDING : v.pJs.ADD_FRIEND) : v.pJs.ONLINE;
+function M() {
+    if (((j = !0), R ? (L = !1) : F(), (_ = _.reset()), A)) return;
+    let e = _.getRelationshipCounts();
+    k = 0 === e[v.OGo.FRIEND] ? (0 !== e[v.OGo.PENDING_INCOMING] ? v.pJs.PENDING : v.pJs.ADD_FRIEND) : v.pJs.ONLINE;
 }
-function U() {
-    L = R ? new x() : L.reset();
+function x() {
+    _ = R ? new C() : _.reset();
 }
-function G(e) {
+function T(e) {
     return function () {
-        return !R && !!L.update(e) && ((L = L.clone()), !0);
+        return !R && !!_.update(e) && ((_ = _.clone()), !0);
     };
 }
-class B extends (r = a.ZP.Store) {
+class U extends (n = o.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, g.Z, u.Z, p.Z, f.Z, m.ZP, _.Z, h.ZP, b.Z, E.Z, O.default),
-            this.syncWith([E.Z], U),
-            this.syncWith([f.Z], U),
-            this.syncWith([p.Z], U),
-            this.syncWith([h.ZP], U),
-            this.syncWith([O.default], G(T)),
-            this.syncWith([b.Z, g.Z], G(N)),
-            k();
+        this.waitFor(h.Z, N.Z, c.Z, p.Z, d.Z, O.ZP, y.Z, m.ZP, f.Z, g.Z, I.default),
+            this.syncWith([g.Z], x),
+            this.syncWith([d.Z], x),
+            this.syncWith([p.Z], x),
+            this.syncWith([m.ZP], x),
+            this.syncWith([I.default], T(G)),
+            this.syncWith([f.Z, N.Z], T(P)),
+            M();
     }
     getState() {
         return {
-            fetching: Z,
-            section: w,
-            rows: L,
+            fetching: L,
+            section: k,
+            rows: _,
         };
     }
 }
-I(B, "displayName", "FriendsStore");
-let H = new B(s.Z, {
+b(U, "displayName", "FriendsStore");
+let J = new U(a.Z, {
     CONNECTION_OPEN: function () {
-        k();
+        M();
     },
     FRIENDS_SET_SECTION: function (e) {
-        (w = e.section), M();
+        (k = e.section), F();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (R = null != t), U(), !R;
+        return (R = null != t), x(), !R;
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
-        Z = !1;
+        L = !1;
     },
     LOAD_RELATIONSHIPS_FAILURE: function () {
-        (A = !0), (Z = !0);
+        (j = !0), (L = !0);
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
-        (w = e.section), (D = !0);
+        (k = e.section), (A = !0);
     },
 });

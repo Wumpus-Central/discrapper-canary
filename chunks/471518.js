@@ -3,8 +3,8 @@ n.d(t, {
     T4: () => P,
     XK: () => w,
     g5: () => x,
-    gZ: () => A,
-    i6: () => C,
+    gZ: () => C,
+    i6: () => A,
     yC: () => R,
 }),
     n(388685);
@@ -32,7 +32,7 @@ let y = 1000,
     S = 86400000,
     I = 600000,
     T = new Map();
-async function A(e) {
+async function C(e) {
     var t;
     let n = Date.now(),
         i = null != (t = T.get(e)) ? t : 0;
@@ -72,7 +72,7 @@ async function A(e) {
         });
     }
 }
-async function C(e) {
+async function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = Date.now(),
         r = p.Z.getApplicationFetchState(e),

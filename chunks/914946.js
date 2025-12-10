@@ -38,8 +38,8 @@ var r,
     d = n(812206),
     p = n(454585),
     f = n(739566),
-    h = n(973616),
-    g = n(131704),
+    g = n(973616),
+    h = n(131704),
     m = n(598077),
     _ = n(592125),
     b = n(430824),
@@ -137,7 +137,7 @@ function H(e, t) {
     let n = [],
         r = e.getGuildId();
     return (
-        [A.d4z.GUILD_CATEGORY, ...g.tx].includes(e.type) ||
+        [A.d4z.GUILD_CATEGORY, ...h.tx].includes(e.type) ||
             n.push(
                 new Promise((t) => {
                     O.Z.whenReady(e.id, () => t()),
@@ -292,10 +292,10 @@ async function X(e, t, n) {
             if (null == e || !B(n, [e])) throw new j.Z({ closeCode: A.$VG.INVALID_ORIGIN }, "Invalid Origin");
         } else {
             let e = await J(t);
-            if (((r = h.ZP.createFromServer(e)), !B(n, e.rpc_origins)))
+            if (((r = g.ZP.createFromServer(e)), !B(n, e.rpc_origins)))
                 throw new j.Z({ closeCode: A.$VG.INVALID_ORIGIN }, "Invalid Origin");
         }
-    null == r && (r = h.ZP.createFromServer(await J(t)));
+    null == r && (r = g.ZP.createFromServer(await J(t)));
     let { id: i, name: l, icon: a, coverImage: s, flags: o } = r;
     e.application = {
         id: i,

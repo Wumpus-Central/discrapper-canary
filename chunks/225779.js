@@ -3,7 +3,7 @@ n.d(t, {
     Ey: () => b,
     No: () => S,
     Ry: () => T,
-    qX: () => A,
+    qX: () => C,
     u3: () => I,
 });
 var r = n(54381);
@@ -171,7 +171,7 @@ function T(e) {
         }),
     });
 }
-function A(e) {
+function C(e) {
     let { color: t = E.DEFAULT, className: n, style: i, ref: s, children: l } = e;
     return (0, r.jsx)("div", {
         ref: s,

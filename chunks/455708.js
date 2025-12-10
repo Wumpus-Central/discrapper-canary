@@ -70,8 +70,8 @@ function T(e, t) {
         e
     );
 }
-let A = (e) => e.stopPropagation();
-class C extends i.PureComponent {
+let C = (e) => e.stopPropagation();
+class A extends i.PureComponent {
     componentDidMount() {
         u.gK(),
             document.addEventListener("keydown", this.backToFrontPage),
@@ -178,7 +178,7 @@ class C extends i.PureComponent {
             role: "tabpanel",
             "aria-labelledby": E._3,
             className: o()(O.container, e),
-            onClick: A,
+            onClick: C,
             ref: t,
             children: [
                 (0, r.jsx)("div", {
@@ -247,7 +247,7 @@ let N = i.forwardRef((e, t) => {
         m = (0, _.HI)(),
         h = i.useRef(null);
     return (0, r.jsx)(
-        C,
+        A,
         T(S({}, e), {
             forwardedRef: t,
             query: d,

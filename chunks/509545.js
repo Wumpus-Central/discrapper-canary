@@ -80,11 +80,11 @@ function T(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.subscription_plan && y(e.subscription_plan);
 }
-function A() {
+function C() {
     (0, s.Ti)(f), (0, s.Ti)(p), _.clear(), m.clear(), (0, s.Ti)(h), (0, s.Ti)(g), b();
 }
 b();
-let C = [u.rV.DAY, u.rV.MONTH, u.rV.YEAR];
+let A = [u.rV.DAY, u.rV.MONTH, u.rV.YEAR];
 class N extends (r = i.ZP.Store) {
     getPlanIdsForSkus(e) {
         let t = [];
@@ -94,7 +94,7 @@ class N extends (r = i.ZP.Store) {
             e.sort((e, t) => {
                 let n = f[e],
                     r = f[t];
-                return C.indexOf(n.interval) - C.indexOf(r.interval) || n.intervalCount - r.intervalCount;
+                return A.indexOf(n.interval) - A.indexOf(r.interval) || n.intervalCount - r.intervalCount;
             }),
                 t.push(...e);
         }
@@ -154,8 +154,8 @@ let P = new N(a.Z, {
     SUBSCRIPTION_PLANS_FETCH: O,
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: v,
     SUBSCRIPTION_PLANS_FETCH_FAILURE: I,
-    SUBSCRIPTION_PLANS_RESET: A,
+    SUBSCRIPTION_PLANS_RESET: C,
     GIFT_CODE_RESOLVE_SUCCESS: S,
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: T,
-    LOGOUT: A,
+    LOGOUT: C,
 });

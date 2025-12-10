@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -22,12 +22,12 @@ var r = n(54381),
     S = n(492681);
 let I = 292,
     T = 36,
-    A = 48;
-function C(e) {
+    C = 48;
+function A(e) {
     let { invite: t, isMemberOfGuild: n, message: a, onTransitionToInviteChannel: c, onAcceptInstantInvite: d } = e,
         f = i.useRef(null),
         [_, h] = i.useState(!0),
-        [C, P] = i.useState(!1),
+        [A, P] = i.useState(!1),
         R = t.state === O.r2o.ACCEPTING,
         D = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
     i.useLayoutEffect(() => {
@@ -36,24 +36,24 @@ function C(e) {
     }, [P]);
     let w = (0, p.PC)(t),
         x = i.useCallback(() => {
-            C && _ && h(!1);
-        }, [_, C]),
+            A && _ && h(!1);
+        }, [_, A]),
         L = i.useCallback(() => {
-            C && (_ || h(!0));
-        }, [_, C]),
+            A && (_ || h(!0));
+        }, [_, A]),
         j = i.useMemo(() => {
             var e;
-            return C && (null == (e = f.current) ? void 0 : e.clientHeight) != null
+            return A && (null == (e = f.current) ? void 0 : e.clientHeight) != null
                 ? {
-                      height: _ ? I : f.current.clientHeight + T + A,
+                      height: _ ? I : f.current.clientHeight + T + C,
                       transition: D ? void 0 : "height 0.2s ease",
                   }
                 : {};
-        }, [_, C, D]);
+        }, [_, A, D]);
     return null == w
         ? (0, r.jsx)(y.Z, {})
         : (0, r.jsxs)(l.kL8, {
-              className: o()(S.guildInviteContainer, { [S.clickable]: C && _ }),
+              className: o()(S.guildInviteContainer, { [S.clickable]: A && _ }),
               onClick: x,
               style: j,
               "aria-label": v.intl.string(v.t.dcl9MQ),
@@ -75,7 +75,7 @@ function C(e) {
                           (0, r.jsx)(b.Z, { invite: t }),
                       ],
                   }),
-                  C && !_
+                  A && !_
                       ? (0, r.jsx)("div", {
                             className: S.hideDetailsButtonContainer,
                             children: (0, r.jsx)(l.Avr, {
@@ -88,11 +88,11 @@ function C(e) {
                         })
                       : null,
                   (0, r.jsxs)("div", {
-                      className: o()(S.footer, { [S.floatingFooter]: C }),
+                      className: o()(S.footer, { [S.floatingFooter]: A }),
                       children: [
-                          C && _ ? (0, r.jsx)("div", { className: S.gradient }) : null,
+                          A && _ ? (0, r.jsx)("div", { className: S.gradient }) : null,
                           (0, r.jsx)("div", {
-                              className: o()(S.footerContent, { [S.collapsedFooterContent]: C && _ }),
+                              className: o()(S.footerContent, { [S.collapsedFooterContent]: A && _ }),
                               children: (0, r.jsx)("div", {
                                   className: S.buttonContainer,
                                   children: (0, r.jsx)(N, {

@@ -1,7 +1,7 @@
 n.d(t, {
     Z7: () => O,
-    g: () => A,
-    k9: () => C,
+    g: () => C,
+    k9: () => A,
     lJ: () => v,
 });
 var r = n(54381),
@@ -149,7 +149,7 @@ let I = {
         [f.OGo.PENDING_OUTGOING]: () => p.intl.string(p.t["s/+byI"]),
         [f.OGo.PENDING_INCOMING]: () => p.intl.string(p.t["6QQCQ+"]),
     };
-function A(e) {
+function C(e) {
     var { type: t, user: n, relationshipType: i, analyticsLocation: a, shouldShowTooltip: o } = e,
         s = E(e, ["type", "user", "relationshipType", "analyticsLocation", "shouldShowTooltip"]);
     let l = I[i],
@@ -169,7 +169,7 @@ function A(e) {
         ),
     );
 }
-function C(e) {
+function A(e) {
     var {
             type: t,
             user: n,

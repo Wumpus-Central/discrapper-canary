@@ -82,7 +82,7 @@ let T = new d.Z({
     id: "???",
     username: "???",
 });
-function A(e) {
+function C(e) {
     var t;
     return null == e.author
         ? T
@@ -92,7 +92,7 @@ function A(e) {
             ? t
             : new d.Z(e.author);
 }
-function C(e) {
+function A(e) {
     return !1;
 }
 function N(e) {
@@ -119,7 +119,7 @@ function P(e) {
         R = null != (o = e.mention_channels) ? o : [],
         D = null != (l = e.mention_games) ? l : [],
         w = e.message_reference,
-        L = A(e),
+        L = C(e),
         k = null,
         U = null == e ? void 0 : e.gift_info,
         G = e.gifting_prompt,
@@ -136,7 +136,7 @@ function P(e) {
             ((_ = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (F = "")),
         e.type === y.uaV.PREMIUM_GROUP_INVITE &&
             ((m = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (F = "")),
-        C(e))
+        A(e))
             ? I(v({}, k), {
                   id: e.id,
                   channel_id: e.channel_id,

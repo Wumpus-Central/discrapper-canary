@@ -25,8 +25,8 @@ var r = n(771356),
     S = n(936643),
     I = n(357826),
     T = n(486527),
-    A = n(151589),
-    C = n(711814),
+    C = n(151589),
+    A = n(711814),
     N = n(149334),
     P = n(409863),
     R = n(357196),
@@ -95,7 +95,7 @@ function Y(e, t) {
 }
 let W = {
         skye: {
-            name: A.default.tzvUK3,
+            name: C.default.tzvUK3,
             iconURL: k.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(242, 96, 195, 0.50) 0%, rgba(242, 96, 195, 0.00) 100%)",
@@ -104,7 +104,7 @@ let W = {
             previewSoundURLs: [h.Z],
         },
         quinn: {
-            name: A.default["biQVN/"],
+            name: C.default["biQVN/"],
             iconURL: L.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, #5F549D 0%, rgba(95, 84, 157, 0.00) 100%)",
@@ -113,8 +113,8 @@ let W = {
             previewSoundURLs: [_.Z],
         },
         axel: {
-            name: A.default.VCZdns,
-            iconURL: C.Z,
+            name: C.default.VCZdns,
+            iconURL: A.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(40, 84, 54, 0.50) 0%, rgba(40, 84, 54, 0.00) 100%)",
             baseColor: "#14291B",
@@ -122,7 +122,7 @@ let W = {
             previewSoundURLs: [r.Z],
         },
         sebastien: {
-            name: A.default["NmbfH+"],
+            name: C.default["NmbfH+"],
             iconURL: M.Z,
             splashGradient:
                 "radial-gradient(9% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(92, 119, 31, 0.50) 0%, rgba(92, 119, 31, 0.00) 100%)",
@@ -131,7 +131,7 @@ let W = {
             previewSoundURLs: [m.Z],
         },
         megaphone: {
-            name: A.default.fPU01d,
+            name: C.default.fPU01d,
             iconURL: x.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(230, 90, 205, 0.50) 0%, rgba(230, 90, 205, 0.00) 100%)",
@@ -140,7 +140,7 @@ let W = {
             previewSoundURLs: [p.Z],
         },
         robot: {
-            name: A.default.anBE8T,
+            name: C.default.anBE8T,
             iconURL: j.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(61, 72, 79, 0.50) 0%, rgba(61, 72, 79, 0.00) 100%)",
@@ -149,7 +149,7 @@ let W = {
             previewSoundURLs: [o.Z],
         },
         tunes: {
-            name: A.default.sem63B,
+            name: C.default.sem63B,
             iconURL: Z.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(111, 134, 253, 0.50) 0%, rgba(111, 134, 253, 0.00) 100%)",
@@ -158,7 +158,7 @@ let W = {
             previewSoundURLs: [O.Z],
         },
         ghost: {
-            name: A.default["lFIyM/"],
+            name: C.default["lFIyM/"],
             iconURL: R.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(110, 73, 156, 0.50) 0%, rgba(110, 73, 156, 0.00) 100%)",
@@ -167,7 +167,7 @@ let W = {
             previewSoundURLs: [u.Z],
         },
         space_bunny: {
-            name: A.default["KN+v77"],
+            name: C.default["KN+v77"],
             iconURL: G.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(100% 555.56% at 0% 100%, rgba(110, 60, 223, 0.40) 0%, rgba(110, 60, 223, 0.00) 100%)",
@@ -176,7 +176,7 @@ let W = {
             previewSoundURLs: [E.Z, b.Z, y.Z],
         },
         justus: {
-            name: A.default.ZVrsKC,
+            name: C.default.ZVrsKC,
             iconURL: w.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(5, 86, 248, 0.50) 0%, rgba(5, 86, 248, 0.00) 100%)",
@@ -185,7 +185,7 @@ let W = {
             previewSoundURLs: [f.Z],
         },
         harper: {
-            name: A.default.vIrxZS,
+            name: C.default.vIrxZS,
             iconURL: D.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(125, 87, 179, 0.50) 0%, rgba(125, 87, 179, 0.00) 100%)",
@@ -194,7 +194,7 @@ let W = {
             previewSoundURLs: [d.Z],
         },
         villain: {
-            name: A.default.kHmvdt,
+            name: C.default.kHmvdt,
             iconURL: B.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(219, 2, 34, 0.50) 0%, rgba(219, 2, 34, 0.00) 100%)",
@@ -203,7 +203,7 @@ let W = {
             previewSoundURLs: [v.Z, S.Z, I.Z, T.Z],
         },
         solara: {
-            name: A.default.ndNi1j,
+            name: C.default.ndNi1j,
             iconURL: U.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(214, 155, 56, 0.50) 0%, rgba(214, 155, 56, 0.00) 100%)",
@@ -212,7 +212,7 @@ let W = {
             previewSoundURLs: [g.Z],
         },
         cave: {
-            name: A.default.Xypb3z,
+            name: C.default.Xypb3z,
             iconURL: N.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(207, 122, 124, 0.50) 0%, rgba(207, 122, 124, 0.00) 100%)",
@@ -221,7 +221,7 @@ let W = {
             previewSoundURLs: [i.Z, a.Z],
         },
         deepfried: {
-            name: A.default.qRFFLK,
+            name: C.default.qRFFLK,
             iconURL: P.Z,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(253, 177, 45, 0.50) 0%, rgba(253, 177, 45, 0.00) 100%)",
@@ -243,12 +243,12 @@ let W = {
 function z(e) {
     return "".concat(e, ".onnx");
 }
-(W["robot-synthetic"] = K(W.robot, { name: A.default["Ur/62B"] })),
-    (W["chords-2part"] = K(W.tunes, { name: A.default.TYbrfK })),
-    (W["chords-choir"] = K(W.tunes, { name: A.default.OnZ6g9 })),
-    (W["chords-dev"] = K(W.tunes, { name: A.default["2XH8tr"] })),
-    (W["robot-dev"] = K(W.robot, { name: A.default.XhhSOi })),
-    (W["ghost-dev"] = K(W.ghost, { name: A.default.KmHwvD })),
-    (W["wobble-dev"] = K(W.ghost, { name: A.default["6PDpse"] })),
-    (W["fan-dev"] = K(W.robot, { name: A.default["87aX+2"] })),
-    (W["autotune-dev"] = K(W.tunes, { name: A.default.EYDrRx }));
+(W["robot-synthetic"] = K(W.robot, { name: C.default["Ur/62B"] })),
+    (W["chords-2part"] = K(W.tunes, { name: C.default.TYbrfK })),
+    (W["chords-choir"] = K(W.tunes, { name: C.default.OnZ6g9 })),
+    (W["chords-dev"] = K(W.tunes, { name: C.default["2XH8tr"] })),
+    (W["robot-dev"] = K(W.robot, { name: C.default.XhhSOi })),
+    (W["ghost-dev"] = K(W.ghost, { name: C.default.KmHwvD })),
+    (W["wobble-dev"] = K(W.ghost, { name: C.default["6PDpse"] })),
+    (W["fan-dev"] = K(W.robot, { name: C.default["87aX+2"] })),
+    (W["autotune-dev"] = K(W.tunes, { name: C.default.EYDrRx }));

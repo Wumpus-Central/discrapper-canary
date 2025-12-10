@@ -26,7 +26,7 @@ var r = n(54381),
     S = n(981631),
     I = n(388032),
     T = n(476034);
-let A = (e) => {
+let C = (e) => {
         let { onClose: t, onShare: n } = e,
             a = (0, l.e7)([b.Z], () => b.Z.getReferralsRemaining()),
             u = (0, l.e7)([b.Z], () => b.Z.getHasEligibleFriends()),
@@ -34,8 +34,8 @@ let A = (e) => {
             [m, E] = i.useState(""),
             v = (0, f.Z)(m, 400),
             {
-                eligibleUsers: A,
-                fetchUsers: C,
+                eligibleUsers: C,
+                fetchUsers: A,
                 hasError: N,
                 isFetching: P,
                 resendUsers: R,
@@ -44,7 +44,7 @@ let A = (e) => {
                 selectedUsers: p,
             }),
             [D, w] = i.useState(!1),
-            x = A.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map()),
+            x = C.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map()),
             L = () =>
                 (0, r.jsx)(d.Z, {
                     className: T.searchbar,
@@ -101,7 +101,7 @@ let A = (e) => {
                         });
                     },
                     isFetching: P,
-                    onFetchMore: C,
+                    onFetchMore: A,
                     isUserDisabled: (e) =>
                         null !== a &&
                         0 !== a &&
@@ -150,7 +150,7 @@ let A = (e) => {
                       children: M({ eligibleRecipients: x }),
                   });
     },
-    C = (e) => {
+    A = (e) => {
         let { onClose: t, onShare: n } = e,
             a = (0, l.e7)([b.Z], () => b.Z.getRecipientStatus()),
             [d, f] = i.useState(new Map()),
@@ -242,12 +242,12 @@ let P = (e) => {
         });
     }
     return 1 === o
-        ? (0, r.jsx)(A, {
+        ? (0, r.jsx)(C, {
               onClose: t,
               onShare: h,
           })
         : 3 === o
-          ? (0, r.jsx)(C, {
+          ? (0, r.jsx)(A, {
                 onClose: t,
                 onShare: h,
             })

@@ -34,8 +34,8 @@ var r = n(473749),
     S = n(709054),
     I = n(861990),
     T = n(968437),
-    A = n(665906),
-    C = n(456077),
+    C = n(665906),
+    A = n(456077),
     N = n(124368),
     P = n(981631),
     R = n(959517),
@@ -49,8 +49,8 @@ var r = n(473749),
         );
     })({});
 function x(e) {
-    let t = (0, A.NE)(e);
-    return (0, A.Xu)(e) ? (t ? 2 : 3) : 1;
+    let t = (0, C.NE)(e);
+    return (0, C.Xu)(e) ? (t ? 2 : 3) : 1;
 }
 function L(e, t) {
     var n;
@@ -68,7 +68,7 @@ function M(e, t) {
     {
         if ("" !== d) return j(d, 80);
         let t = m.ZP.unparse(null != (l = null == c ? void 0 : c.content) ? l : "", e.id, !0),
-            n = (0, C.Z)(t.split("\n")[0], !0);
+            n = (0, A.Z)(t.split("\n")[0], !0);
         n = n.replace(/^[ #-]+/, "");
         let r = [];
         for (;;) {
@@ -189,7 +189,7 @@ function G(e) {
                         i)
                     );
                 }
-            let A = await B(t, s, m, () =>
+            let C = await B(t, s, m, () =>
                 a.tn.post({
                     url: v,
                     body: S,
@@ -203,10 +203,10 @@ function G(e) {
                 (0, p.Je)({
                     guildId: t.guild_id,
                     channelId: t.id,
-                    postId: A.id,
+                    postId: C.id,
                 }),
-                null == c || c(A),
-                A
+                null == c || c(C),
+                C
             );
         },
         [t, n, o, c, s, d],

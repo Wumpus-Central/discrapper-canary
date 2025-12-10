@@ -22,8 +22,8 @@ var r,
     S = n(796974),
     I = n(984933),
     T = n(271383),
-    A = n(430824),
-    C = n(496675),
+    C = n(430824),
+    A = n(496675),
     N = n(699516),
     P = n(944486),
     R = n(914010),
@@ -345,14 +345,14 @@ function e_(e) {
 }
 class em extends (r = s.ZP.Store) {
     initialize() {
-        this.waitFor(O.default, v.Z, S.Z, I.ZP, T.ZP, A.Z, m.Z, b.default, C.Z, N.Z, P.Z, R.Z, D.default),
+        this.waitFor(O.default, v.Z, S.Z, I.ZP, T.ZP, C.Z, m.Z, b.default, A.Z, N.Z, P.Z, R.Z, D.default),
             this.syncWith([m.Z], () => {});
     }
     getMessages(e) {
         if (m.Z.hasViewingRoles()) {
             let t = v.Z.getChannel(e),
                 n = null == t ? void 0 : t.getGuildId();
-            if (m.Z.isViewingRoles(n) && !C.Z.can(w.Plq.VIEW_CHANNEL, t)) return new u.Z(e);
+            if (m.Z.isViewingRoles(n) && !A.Z.can(w.Plq.VIEW_CHANNEL, t)) return new u.Z(e);
         }
         return u.Z.getOrCreate(e);
     }

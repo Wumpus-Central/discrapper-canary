@@ -28,8 +28,8 @@ var r = n(54381),
     S = n(435020),
     I = n(374649),
     T = n(591548),
-    A = n(847903),
-    C = n(639119),
+    C = n(847903),
+    A = n(639119),
     N = n(53900),
     P = n(811334),
     R = n(110818),
@@ -198,7 +198,7 @@ function ed(e) {
         T(ef);
     }, [T, ef]);
     let e_ = !ei && null == ef && null == ep,
-        em = (null == (n = (0, C.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === J.Si.TIER_2,
+        em = (null == (n = (0, A.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === J.Si.TIER_2,
         eh = K.ZP.hasBoostDiscount(j),
         eg = null == ef ? void 0 : ef.findInvoiceItemByPlanId(L.id),
         eE =
@@ -224,14 +224,14 @@ function ed(e) {
                   }),
         ev = g.filter((e) => (0, H.tl)(e)).length,
         eS = (0, K.Ap)(S.paymentSourceId),
-        { ipCountryCode: eI } = (0, A.Z)(),
+        { ipCountryCode: eI } = (0, C.Z)(),
         eT = "HR" === eI && eE.currency === $.pK.EUR,
-        eA = U.fractionalState === J.a$.FP_SUB_PAUSED;
+        eC = U.fractionalState === J.a$.FP_SUB_PAUSED;
     return (
         f(e_),
         (0, r.jsxs)("div", {
             children: [
-                eA && (0, r.jsx)(x.n, { fractionalPremiumInfo: U }),
+                eC && (0, r.jsx)(x.n, { fractionalPremiumInfo: U }),
                 ey && null != _
                     ? (0, r.jsx)(eu, { endDate: _.currentPeriodEnd })
                     : (0, r.jsx)("div", {
@@ -391,13 +391,13 @@ function ef(e) {
             let t = e.amount / p.quantity;
             return ea(er({}, e), { amount: t * m });
         }),
-        A = (0, K.Ap)(o.paymentSourceId),
-        C = (0, u.e7)([V.Z], () => V.Z.inReverseTrial());
+        C = (0, K.Ap)(o.paymentSourceId),
+        A = (0, u.e7)([V.Z], () => V.Z.inReverseTrial());
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            A
+            C
                 ? null
-                : C && null != t
+                : A && null != t
                   ? (0, r.jsx)(eu, {
                         endDate: t.currentPeriodEnd,
                         className: et.reverseTrialContextMarginBottom,
@@ -412,9 +412,9 @@ function ef(e) {
                     (0, r.jsx)(P.i$, {
                         label: ee.intl.formatToPlainString(ee.t.a3cAOg, {
                             numGuildSubscriptions: m,
-                            planName: (0, K.Gf)(d.id, !1, A),
+                            planName: (0, K.Gf)(d.id, !1, C),
                         }),
-                        value: A ? b : y,
+                        value: C ? b : y,
                         discounts: S,
                         originalAmount: p.subscriptionPlanPrice * m,
                         currency: i.currency,
@@ -443,7 +443,7 @@ function ef(e) {
                         : null,
                     (0, r.jsx)(P.UN, {}),
                     (0, r.jsx)(P.az, {
-                        label: ee.intl.format(i.taxInclusive ? (A ? ee.t.BqdxQt : ee.t.XH4raN) : ee.t.RUI48E, {}),
+                        label: ee.intl.format(i.taxInclusive ? (C ? ee.t.BqdxQt : ee.t.XH4raN) : ee.t.RUI48E, {}),
                         value: O,
                     }),
                     null != t
@@ -452,13 +452,13 @@ function ef(e) {
                               proratedInvoice: i,
                               renewalInvoice: a,
                               isUpdate: !0,
-                              isPrepaidPaymentSource: A,
-                              isTrial: C,
+                              isPrepaidPaymentSource: C,
+                              isTrial: A,
                           })
                         : (0, r.jsx)(j.nd, {
                               renewalInvoice: a,
                               priceOptions: o,
-                              isPrepaidPaymentSource: A,
+                              isPrepaidPaymentSource: C,
                           }),
                 ],
             }),
@@ -478,8 +478,8 @@ function ep(e) {
             newAdditionalPlans: y,
             onPaymentSourceChange: O,
             onPaymentSourceAdd: T,
-            onPurchaseTermsChange: A,
-            legalTermsNodeRef: C,
+            onPurchaseTermsChange: C,
+            legalTermsNodeRef: A,
             hasLegalTermsFlash: N,
         } = e,
         { setInvoicePreview: P } = (0, v.JL)(),
@@ -560,11 +560,11 @@ function ep(e) {
                 }),
                 (0, r.jsx)(L.Z, {
                     isActive: N,
-                    ref: C,
+                    ref: A,
                     children:
                         null != a &&
                         (0, r.jsx)(g.Z, {
-                            onChange: A,
+                            onChange: C,
                             forceShow: !0,
                             finePrint: (0, r.jsx)(_.Z, {
                                 subscriptionPlan: m,

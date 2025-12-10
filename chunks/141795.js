@@ -30,8 +30,8 @@ var i = n(392711),
     S = n(476326),
     I = n(983544),
     T = n(596956),
-    A = n(125186),
-    C = n(981631);
+    C = n(125186),
+    A = n(981631);
 function N(e, t, n) {
     return (
         t in e
@@ -402,7 +402,7 @@ class k extends S.ZP {
             o = (0, I.F)(this.item.target),
             l = (0, d.G)({ location: "CloudUpload.upload" });
         if (null == a.filename || "" === a.filename) {
-            w.error("File does not have a filename.", JSON.stringify(a)), this.handleError(C.evJ.INVALID_FILE_ASSET);
+            w.error("File does not have a filename.", JSON.stringify(a)), this.handleError(A.evJ.INVALID_FILE_ASSET);
             return;
         }
         if (l.useDetectedFileSize && 0 === this.currentSize && null != this.item.file)
@@ -415,9 +415,9 @@ class k extends S.ZP {
                     error: e instanceof Error ? e.message : String(e),
                 });
             }
-        if (0 === this.currentSize) return void this.handleError(C.evJ.INVALID_FILE_ASSET);
+        if (0 === this.currentSize) return void this.handleError(A.evJ.INVALID_FILE_ASSET);
         if ((null != (e = this.currentSize) ? e : 0) > o.getMaxFileSize(this.channelId))
-            return void this.handleError(C.evJ.ENTITY_TOO_LARGE);
+            return void this.handleError(A.evJ.ENTITY_TOO_LARGE);
         if (c.ZP.get("upload_fail_50") && 0.5 > Math.random())
             return void setTimeout(() => {
                 this.handleError(500);
@@ -446,7 +446,7 @@ class k extends S.ZP {
                 this.setUploadedFilename(e.body.attachments[0].upload_filename);
         } catch (r) {
             let e = null != (n = null == r || null == (t = r.body) ? void 0 : t.code) ? n : r.status;
-            e !== C.evJ.ENTITY_TOO_LARGE &&
+            e !== A.evJ.ENTITY_TOO_LARGE &&
                 (w.error(
                     "Requesting upload url failed with code "
                         .concat(null != e ? e : JSON.stringify(r.body), " for ")
@@ -477,7 +477,7 @@ class k extends S.ZP {
                         )
                         .concat(this.etag, ", expected ")
                         .concat(this.contentHash);
-                    w.error(e), O.Z.captureMessage(e), this.handleError(C.evJ.INVALID_FILE_ASSET);
+                    w.error(e), O.Z.captureMessage(e), this.handleError(A.evJ.INVALID_FILE_ASSET);
                     return;
                 }
             }
@@ -598,7 +598,7 @@ class k extends S.ZP {
         let l = performance.now(),
             c = { compressTimeMs: 0 };
         try {
-            if (((o = await (0, A.t3)(e)), t())) return null;
+            if (((o = await (0, C.t3)(e)), t())) return null;
             if (o.success && null != o.convertedBlob)
                 w.log(
                     "webp conversion worked for "
@@ -614,11 +614,11 @@ class k extends S.ZP {
                     (c.convertedMimeType = "image/webp"),
                     (c.hashTimeMs = null != (r = o.hashTimeMs) ? r : void 0);
             else {
-                let e = null != (i = o.reason) ? i : A.S8.UNKNOWN_ERROR;
+                let e = null != (i = o.reason) ? i : C.S8.UNKNOWN_ERROR;
                 w.log("webp conversion skipped for ".concat(n, ": ").concat(e)), (c.conversionFailureReason = e);
             }
         } catch (e) {
-            w.warn("webp conversion failed for ".concat(n, ":"), e), (c.conversionFailureReason = A.S8.UNKNOWN_ERROR);
+            w.warn("webp conversion failed for ".concat(n, ":"), e), (c.conversionFailureReason = C.S8.UNKNOWN_ERROR);
         }
         let u = Math.round(performance.now() - l);
         return (c.compressTimeMs = null != (a = null == o ? void 0 : o.compressTimeMs) ? a : u), c;
@@ -690,7 +690,7 @@ class k extends S.ZP {
     }
     trackUploadStart() {
         var e;
-        g.default.track(C.rMx.ATTACHMENT_UPLOAD_STARTED, {
+        g.default.track(A.rMx.ATTACHMENT_UPLOAD_STARTED, {
             file_size: this.currentSize,
             mime_type: null != (e = this.mimeType) ? e : "unknown",
             video_upload_quality: m.ZP.videoUploadQuality,
@@ -705,7 +705,7 @@ class k extends S.ZP {
     trackUploadFinished(e) {
         var t, n, r, i, a;
         let o = null != this.startTime ? performance.now() - this.startTime : -1;
-        g.default.track(C.rMx.ATTACHMENT_UPLOAD_FINISHED, {
+        g.default.track(A.rMx.ATTACHMENT_UPLOAD_FINISHED, {
             duration_ms: o,
             file_size: this.currentSize,
             pre_compression_file_size: this.preCompressionSize,

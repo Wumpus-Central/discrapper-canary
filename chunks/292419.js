@@ -1,6 +1,6 @@
 n.d(t, {
     SD: () => E,
-    VD: () => C,
+    VD: () => A,
     Wo: () => b,
     cd: () => T,
     kS: () => O,
@@ -118,7 +118,7 @@ function T(e, t) {
     function n(e) {
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
         for (let i of e) {
-            let e = A(i);
+            let e = C(i);
             if (e.some((e) => e.id === t.id)) return [i, ...r];
             let a = n(e, [i, ...r]);
             if (null != a) return a;
@@ -127,7 +127,7 @@ function T(e, t) {
     }
     return n(e);
 }
-function A(e) {
+function C(e) {
     switch (e.type) {
         case a.re.ACTION_ROW:
             return e.components;
@@ -157,7 +157,7 @@ function A(e) {
             return m.warn("getComponentChildren: Unknown component type", e.type), [];
     }
 }
-function C(e) {
+function A(e) {
     var t, n, i;
     return JSON.stringify({
         type: "component-upload",

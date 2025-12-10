@@ -30,22 +30,22 @@ let y = (0, a.U)((e) => ({
             }),
             I = (0, m.Nj)(s.z.CLOUD_PLAY_NEW_BADGE),
             T = null != S && !I && n,
-            { activeEntryId: A, setActiveEntryId: C } = y(),
-            N = A === t.id,
+            { activeEntryId: C, setActiveEntryId: A } = y(),
+            N = C === t.id,
             P = T && N ? [s.z.CLOUD_PLAY_POPOVER] : [],
             [R, D] = (0, h.US)(P),
             w = R === s.z.CLOUD_PLAY_POPOVER;
         i.useEffect(() => {
-            T && null === A && C(t.id);
-        }, [A, T, t.id, C]);
+            T && null === C && A(t.id);
+        }, [C, T, t.id, A]);
         let x = () => {
             null == S || S();
         };
         i.useEffect(
             () => () => {
-                w && (D(g.L.USER_DISMISS), C(null));
+                w && (D(g.L.USER_DISMISS), A(null));
             },
-            [w, D, C],
+            [w, D, A],
         );
         let [L, j] = i.useState(!1);
         i.useEffect(() => {
@@ -61,7 +61,7 @@ let y = (0, a.U)((e) => ({
                 [L],
             );
         let M = () => {
-            D(g.L.USER_DISMISS), C(null);
+            D(g.L.USER_DISMISS), A(null);
         };
         return (0, r.jsx)(l.J2, {
             title: E.intl.string(E.t["+WNDtV"]),

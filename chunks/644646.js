@@ -39,8 +39,8 @@ let I = function (e) {
             autoplay: _ = !0,
             learnMoreStyle: I = null,
             learnMoreFontSize: T,
-            sourceQuestContent: A,
-            lazyLoad: C = !1,
+            sourceQuestContent: C,
+            lazyLoad: A = !1,
             style: N,
             showShine: P = !0,
             location: R,
@@ -59,7 +59,7 @@ let I = function (e) {
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
                         questContentCTA: p.jZ.REWARD_LEARN_MORE,
-                        sourceQuestContent: A,
+                        sourceQuestContent: C,
                     }),
                     (0, y.navigateToQuestHome)({
                         fromContent: e.questContent,
@@ -67,7 +67,7 @@ let I = function (e) {
                     }),
                     null == (n = e.onClick) || n.call(e, t);
             },
-            [D, a.id, e, A],
+            [D, a.id, e, C],
         ),
         k = i.useRef(null),
         U = i.useRef(_),
@@ -94,7 +94,7 @@ let I = function (e) {
                           className: v.questRewardTileAsset,
                       }),
               })
-            : C
+            : A
               ? (0, r.jsx)(E.K, {
                     showVideo: _,
                     imageAsset:

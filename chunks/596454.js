@@ -90,7 +90,7 @@ function I(e, t) {
 }
 n(54453);
 let T = __OVERLAY__ ? () => (0, s.e7)([_.default], () => _.default.isInstanceFocused()) : g.n;
-function A(e) {
+function C(e) {
     var t,
         n,
         {
@@ -103,8 +103,8 @@ function A(e) {
             messageId: b,
             animated: O,
             size: I = "default",
-            isInteracting: A = !1,
-            shouldAnimate: C,
+            isInteracting: C = !1,
+            shouldAnimate: A,
             onMouseEnter: N,
             onMouseLeave: P,
             canSelect: R = !0,
@@ -145,16 +145,16 @@ function A(e) {
         z = i.useMemo(() => {
             if (null != a) return a;
             if (null != f) {
-                let e = !0 === C && Y;
+                let e = !0 === A && Y;
                 return m.ZP.getEmojiURL({
                     id: f,
-                    animated: H && !0 === O && (e || M || !0 === A),
+                    animated: H && !0 === O && (e || M || !0 === C),
                     size: W,
                 });
             }
             if (null != _) return h.ZP.getURL(_);
             throw Error("Unknown Src for Emoji");
-        }, [O, Y, f, _, W, H, M, A, C, a]),
+        }, [O, Y, f, _, W, H, M, C, A, a]),
         q = i.useCallback(() => {
             null != z &&
                 (Z.current = (0, d.po)(z, (e) => {
@@ -247,12 +247,12 @@ function A(e) {
               ],
           });
 }
-function C(e) {
+function A(e) {
     let { useThoughtfullyAnimated: t } = i.useContext(f.q),
         { animate: n, registerRef: a } = t(),
         { disableAnimations: o } = i.useContext(c.G);
     return (0, r.jsx)(
-        A,
+        C,
         v(y({}, e), {
             registerAnimatedElementRef: a,
             shouldAnimate: n && !o,
@@ -263,6 +263,6 @@ function N(e) {
     return null == e.emojiId && null == e.emojiName && null == e.src
         ? null
         : e.animated && void 0 === e.shouldAnimate
-          ? (0, r.jsx)(C, y({}, e))
-          : (0, r.jsx)(A, y({}, e));
+          ? (0, r.jsx)(A, y({}, e))
+          : (0, r.jsx)(C, y({}, e));
 }

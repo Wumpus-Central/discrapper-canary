@@ -79,10 +79,10 @@ function S(e) {
         y = i.useRef(null),
         [S, I] = (0, s.Wu)([u.Z], () => [u.Z.useReducedMotion, u.Z.keyboardModeEnabled]),
         T = !n || S || I ? 0 : O,
-        A = () => {
+        C = () => {
             E({ action: "PRESS_EDIT_CUSTOM_STATUS" }), v(g), null == a || a();
         },
-        C = () => {
+        A = () => {
             E({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), p.Ok.updateSetting(void 0);
         };
     return (0, r.jsxs)(f.ZP, {
@@ -102,7 +102,7 @@ function S(e) {
                     className: o()(h.button, h.left),
                     "aria-label": m.intl.string(m.t.QdHxos),
                     "aria-haspopup": "dialog",
-                    onClick: A,
+                    onClick: C,
                     children: (0, r.jsx)(c.vdY, {
                         size: "xs",
                         colorClass: h.icon,
@@ -118,7 +118,7 @@ function S(e) {
                     ref: y,
                     className: o()(h.button, h.right),
                     "aria-label": m.intl.string(m.t.wfYTHe),
-                    onClick: C,
+                    onClick: A,
                     children: (0, r.jsx)(c.XHJ, {
                         size: "xs",
                         colorClass: h.icon,

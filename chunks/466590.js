@@ -97,8 +97,8 @@ function O(e) {
             onStepChange: S,
             onRequestClose: I,
             popoverRef: T,
-            shouldShow: A,
-            position: C,
+            shouldShow: C,
+            position: A,
         } = e,
         N = b(e, [
             "steps",
@@ -112,8 +112,8 @@ function O(e) {
         ]);
     let [P, R] = i.useState(0);
     i.useEffect(() => {
-        A && R(0);
-    }, [A]),
+        C && R(0);
+    }, [C]),
         i.useEffect(() => {
             null == S || S(P);
         }, [P, S]);
@@ -129,7 +129,7 @@ function O(e) {
         j = i.useCallback(() => {
             null == I || I();
         }, [I]);
-    if (!A || null == D) return null;
+    if (!C || null == D) return null;
     let M = h(
             {
                 text:
@@ -148,8 +148,8 @@ function O(e) {
                 targetElementRef: N.targetElementRef,
                 hasVideo: N.hasVideo,
                 scrollBehavior: N.scrollBehavior,
-                position: C,
-                shouldShow: A,
+                position: A,
+                shouldShow: C,
                 onRequestClose: L,
                 gradientColor: D.gradientColor,
                 caretConfig: O,

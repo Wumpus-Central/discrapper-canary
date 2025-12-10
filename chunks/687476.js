@@ -81,11 +81,11 @@ function T(e) {
     }
     return !1;
 }
-function A(e) {
+function C(e) {
     let { guildId: t } = e;
     return !!h.has(t) && O(t);
 }
-function C(e) {
+function A(e) {
     let { guildId: t, user: n } = e,
         r = d.default.getCurrentUser();
     return !!(n.id === (null == r ? void 0 : r.id) && h.has(t)) && O(t);
@@ -124,8 +124,8 @@ let P = new N(a.Z, {
     GUILD_CREATE: T,
     GUILD_DELETE: I,
     GUILD_UPDATE: T,
-    GUILD_ROLE_CREATE: A,
-    GUILD_ROLE_UPDATE: A,
-    GUILD_ROLE_DELETE: A,
-    GUILD_MEMBER_UPDATE: C,
+    GUILD_ROLE_CREATE: C,
+    GUILD_ROLE_UPDATE: C,
+    GUILD_ROLE_DELETE: C,
+    GUILD_MEMBER_UPDATE: A,
 });

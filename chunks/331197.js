@@ -35,7 +35,7 @@ function E(e) {
         D = (0, m.sR)({ isSoundboardButtonDisabled: L }),
         [k, U] = (0, h.cv)(D),
         { analyticsLocations: V } = (0, u.ZP)(),
-        { isHovered: B, setIsHovered: F, onMouseEnter: H, onMouseLeave: G } = (0, f.Z)(200, 300);
+        { isHovered: F, setIsHovered: B, onMouseEnter: H, onMouseLeave: G } = (0, f.Z)(200, 300);
     function W(e) {
         null != A &&
             (0, c.jW)(e, async () => {
@@ -102,14 +102,14 @@ function E(e) {
     let q = r.useRef(null);
     return (0, i.jsx)(s.y, {
         targetElementRef: q,
-        shouldShow: (B && (j === O.D.SOUNDBOARD || null == j)) || j === O.D.SOUNDBOARD,
+        shouldShow: (F && (j === O.D.SOUNDBOARD || null == j)) || j === O.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: "top",
         position: "top",
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            F(!1), null == S || S(void 0);
+            B(!1), null == S || S(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -156,8 +156,8 @@ function E(e) {
                 onMouseLeave: () => {
                     null == j && (G(), N());
                 },
-                isActive: B || j === O.D.SOUNDBOARD,
-                color: B || j === O.D.SOUNDBOARD ? "primaryDark" : void 0,
+                isActive: F || j === O.D.SOUNDBOARD,
+                color: F || j === O.D.SOUNDBOARD ? "primaryDark" : void 0,
             }),
     });
 }

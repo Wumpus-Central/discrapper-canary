@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(19780),
     p = n(665149),
     f = n(388032),
-    h = n(979905);
-function g(e, t, n) {
+    g = n(979905);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ class m extends i.PureComponent {
                                 }),
                             )),
                             r.forEach(function (t) {
-                                g(e, t, n[t]);
+                                h(e, t, n[t]);
                             });
                     }
                     return e;
@@ -62,8 +62,8 @@ class m extends i.PureComponent {
                 return (0, r.jsx)(p.JO, {
                     hideOnClick: !1,
                     tooltip: f.intl.string(f.t["zp9d/4"]),
-                    foreground: h.downloadArrow,
-                    background: h.cloud,
+                    foreground: g.downloadArrow,
+                    background: g.cloud,
                     icon: a._8t,
                     className: this.props.className,
                 });
@@ -71,7 +71,7 @@ class m extends i.PureComponent {
             case "UPDATE_DOWNLOADED":
                 return (0, r.jsx)(p.JO, {
                     tooltip: f.intl.string(f.t.u18OXF),
-                    foreground: h.updateIconForeground,
+                    foreground: g.updateIconForeground,
                     onClick: this.handleInstallDownload,
                     icon: a._8t,
                     className: this.props.className,
@@ -82,11 +82,11 @@ class m extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            g(this, "state", {
+            h(this, "state", {
                 memoizedMode: this.props.mode,
                 clicked: !1,
             }),
-            g(this, "handleInstallDownload", () => {
+            h(this, "handleInstallDownload", () => {
                 d.Z.isConnected()
                     ? s.Z.show({
                           title: f.intl.string(f.t.tiu1ly),
@@ -98,7 +98,7 @@ class m extends i.PureComponent {
                       })
                     : this.doUpdate();
             }),
-            g(this, "doUpdate", () => {
+            h(this, "doUpdate", () => {
                 this.state.clicked || (this.setState({ clicked: !0 }), (0, o.Q)());
             });
     }

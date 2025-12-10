@@ -42,10 +42,10 @@ function P(e) {
             },
             [R],
         ),
-        B = (0, _.bp)() === E.IlC.POPOUT,
-        { parentAnalyticsLocation: F, newestAnalyticsLocation: H } = (0, g.ZP)(),
+        F = (0, _.bp)() === E.IlC.POPOUT,
+        { parentAnalyticsLocation: B, newestAnalyticsLocation: H } = (0, g.ZP)(),
         G = r.useCallback(() => {
-            (0, C.v)(F, C.d.ACTIVITY),
+            (0, C.v)(B, C.d.ACTIVITY),
                 (0, b.Z)({
                     context:
                         null != t
@@ -54,10 +54,10 @@ function P(e) {
                                   channel: t,
                               }
                             : { type: "contextless" },
-                    openInPopout: B,
+                    openInPopout: F,
                     analyticsLocation: H,
                 });
-        }, [t, B, H, F]),
+        }, [t, F, H, B]),
         W = [];
     A || W.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES),
         (0, h.Z)(t.id) && !A && W.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE),

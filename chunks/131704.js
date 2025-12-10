@@ -11,7 +11,7 @@ n.d(t, {
     Qm: () => U,
     Sf: () => eh,
     TK: () => X,
-    Ti: () => C,
+    Ti: () => A,
     Um: () => en,
     X_: () => ee,
     Y0: () => Q,
@@ -38,7 +38,7 @@ n.d(t, {
     vg: () => et,
     xL: () => $,
     zS: () => z,
-    zi: () => A,
+    zi: () => C,
 }),
     n(388685),
     n(997841),
@@ -149,10 +149,10 @@ let I = new Set([
         h.d4z.PUBLIC_THREAD,
         h.d4z.PRIVATE_THREAD,
     ]);
-function A(e) {
+function C(e) {
     return T.has(e);
 }
-let C = new Set([
+let A = new Set([
         h.d4z.GUILD_TEXT,
         h.d4z.GUILD_ANNOUNCEMENT,
         h.d4z.GUILD_FORUM,
@@ -872,8 +872,8 @@ class ev extends eb {}
 class eS extends eE {}
 class eI extends eb {}
 class eT extends eb {}
-class eA extends eE {}
-class eC extends eh {
+class eC extends eE {}
+class eA extends eh {
     static fromServer(e, t) {
         var n, r, i, a;
         let o = {
@@ -909,7 +909,7 @@ class eC extends eh {
             type: null != e.type ? e.type : h.d4z.GUILD_TEXT,
             version: e.version,
         };
-        return (0, f.gh)(o, eC);
+        return (0, f.gh)(o, eA);
     }
     constructor(e) {
         var t, n;
@@ -1112,8 +1112,8 @@ let ej = {
     [h.d4z.PUBLIC_THREAD]: eL.fromServer,
     [h.d4z.PRIVATE_THREAD]: eL.fromServer,
     [h.d4z.GUILD_DIRECTORY]: eb.fromServer,
-    [h.d4z.GUILD_FORUM]: eC.fromServer,
-    [h.d4z.GUILD_MEDIA]: eC.fromServer,
+    [h.d4z.GUILD_FORUM]: eA.fromServer,
+    [h.d4z.GUILD_MEDIA]: eA.fromServer,
 };
 function eM(e, t) {
     var n, r;
@@ -1126,7 +1126,7 @@ let eU = {
     [h.d4z.DM]: ew,
     [h.d4z.GROUP_DM]: ex,
     [h.d4z.GUILD_TEXT]: eT,
-    [h.d4z.GUILD_VOICE]: eA,
+    [h.d4z.GUILD_VOICE]: eC,
     [h.d4z.GUILD_STAGE_VOICE]: eS,
     [h.d4z.GUILD_CATEGORY]: eO,
     [h.d4z.GUILD_ANNOUNCEMENT]: ey,
@@ -1135,8 +1135,8 @@ let eU = {
     [h.d4z.PUBLIC_THREAD]: eL,
     [h.d4z.PRIVATE_THREAD]: eL,
     [h.d4z.GUILD_DIRECTORY]: ev,
-    [h.d4z.GUILD_FORUM]: eC,
-    [h.d4z.GUILD_MEDIA]: eC,
+    [h.d4z.GUILD_FORUM]: eA,
+    [h.d4z.GUILD_MEDIA]: eA,
 };
 function eG(e) {
     var t, n;

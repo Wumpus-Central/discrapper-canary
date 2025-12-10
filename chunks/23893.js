@@ -39,15 +39,15 @@ let _ = (0, p.createContext)({}),
                 defaultClassName: "react-aria-Button",
             }),
             T = (0, c.Me)(m.id),
-            A = (0, c.Me)(),
-            C = m["aria-labelledby"];
-        d && (C ? (C = `${C} ${A}`) : m["aria-label"] && (C = `${T} ${A}`));
+            C = (0, c.Me)(),
+            A = m["aria-labelledby"];
+        d && (A ? (A = `${A} ${C}`) : m["aria-label"] && (A = `${T} ${C}`));
         let N = (0, p.useRef)(d);
         (0, p.useEffect)(() => {
-            let e = { "aria-labelledby": C || T };
+            let e = { "aria-labelledby": A || T };
             !N.current && b && d ? (0, a.xQ)(e, "assertive") : N.current && b && !d && (0, a.xQ)(e, "assertive"),
                 (N.current = d);
-        }, [d, b, C, T]);
+        }, [d, b, A, T]);
         let P = (0, f.z)(e, { global: !0 });
         return (
             delete P.onClick,
@@ -58,7 +58,7 @@ let _ = (0, p.createContext)({}),
                     type: "submit" === m.type && d ? "button" : m.type,
                     id: T,
                     ref: t,
-                    "aria-labelledby": C,
+                    "aria-labelledby": A,
                     slot: e.slot || void 0,
                     "aria-disabled": d ? "true" : m["aria-disabled"],
                     "data-disabled": e.isDisabled || void 0,
@@ -68,7 +68,7 @@ let _ = (0, p.createContext)({}),
                     "data-pending": d || void 0,
                     "data-focus-visible": y || void 0,
                 },
-                p.createElement(i.p.Provider, { value: { id: A } }, I.children),
+                p.createElement(i.p.Provider, { value: { id: C } }, I.children),
             )
         );
     });

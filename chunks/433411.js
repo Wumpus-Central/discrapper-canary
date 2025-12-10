@@ -24,13 +24,13 @@ function g(e) {
         }),
         { pendingAvatarDecoration: S, errors: I } = (0, p.Tb)(null == n ? void 0 : n.id),
         T = void 0 === S ? null != v : null != S,
-        A = () => {
+        C = () => {
             (0, u.ps)({
                 analyticsLocations: y,
                 guild: n,
             });
         },
-        C = () => {
+        A = () => {
             (0, p.PO)(null, null == n ? void 0 : n.id);
         },
         N = E ? s.gtL : o.zx;
@@ -46,7 +46,7 @@ function g(e) {
                 children: [
                     (0, r.jsx)(N, {
                         size: o.zx.Sizes.SMALL,
-                        onClick: A,
+                        onClick: C,
                         className: a()({ [h.buttonHighlighted]: E }),
                         children: m.intl.string(m.t.BVcYCx),
                     }),
@@ -58,7 +58,7 @@ function g(e) {
                                 variant: "secondary",
                                 size: "sm",
                                 text: (0, c.ad)(t, n) ? m.intl.string(m.t.CHf9iJ) : m.intl.string(m.t.OrokWm),
-                                onClick: C,
+                                onClick: A,
                             }),
                         }),
                 ],

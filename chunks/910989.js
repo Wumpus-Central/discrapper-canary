@@ -86,7 +86,7 @@ let b = {
                 },
                 [f],
             ),
-            A =
+            C =
                 null != E
                     ? (0, r.jsx)("div", {
                           className: o()(
@@ -98,16 +98,16 @@ let b = {
                           children: E,
                       })
                     : null,
-            C = a ? "span" : "label",
+            A = a ? "span" : "label",
             N = t ? _.inputDisabled : n ? _.inputReadonly : _.inputDefault;
-        return (0, r.jsxs)(C, {
+        return (0, r.jsxs)(A, {
             "data-toggleable-component": "checkbox",
             className: o()(t ? _.checkboxWrapperDisabled : _.checkboxWrapper, y[u], h, {
                 [_.row]: "row" === c,
                 [_.checked]: s,
             }),
             children: [
-                O ? A : null,
+                O ? C : null,
                 !a &&
                     (0, r.jsx)(d.tE, {
                         children: (0, r.jsx)("input", {
@@ -129,7 +129,7 @@ let b = {
                     checkboxColor: I,
                     disabled: t,
                 }),
-                O ? null : A,
+                O ? null : C,
             ],
         });
     };

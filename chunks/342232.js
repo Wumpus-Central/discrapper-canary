@@ -24,8 +24,8 @@ function E(e, t, n) {
         { isInvalid: v, validationErrors: S, validationDetails: I } = t.displayValidation,
         {
             labelProps: T,
-            fieldProps: A,
-            descriptionProps: C,
+            fieldProps: C,
+            descriptionProps: A,
             errorMessageProps: N,
         } = (0, f.U)({
             ...e,
@@ -34,12 +34,12 @@ function E(e, t, n) {
             errorMessage: e.errorMessage || S,
         }),
         P = (0, a.H)(t, n),
-        R = A["aria-labelledby"] || A.id,
+        R = C["aria-labelledby"] || C.id,
         { locale: D } = (0, m.j)(),
         w = t.formatValue(D, { month: "long" }),
         x = w ? O.format("selectedDateDescription", { date: w }) : "",
         L = (0, l.P)(x),
-        j = [L["aria-describedby"], A["aria-describedby"]].filter(Boolean).join(" ") || void 0,
+        j = [L["aria-describedby"], C["aria-describedby"]].filter(Boolean).join(" ") || void 0,
         M = (0, c.z)(e),
         k = (0, h.useMemo)(() => (0, o.E7)(n), [n]),
         U = (0, h.useRef)(!1),
@@ -65,7 +65,7 @@ function E(e, t, n) {
             },
         });
     return {
-        groupProps: (0, u.d)(M, P, A, L, G, {
+        groupProps: (0, u.d)(M, P, C, L, G, {
             role: "group",
             "aria-disabled": e.isDisabled || null,
             "aria-labelledby": R,
@@ -84,7 +84,7 @@ function E(e, t, n) {
             },
         },
         fieldProps: {
-            ...A,
+            ...C,
             id: y,
             [i.KX]: "presentation",
             "aria-describedby": j,
@@ -105,7 +105,7 @@ function E(e, t, n) {
             name: e.name,
             form: e.form,
         },
-        descriptionProps: C,
+        descriptionProps: A,
         errorMessageProps: N,
         buttonProps: {
             ...L,

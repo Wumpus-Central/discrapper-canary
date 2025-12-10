@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(45521),
     I = n(285651),
     T = n(217590),
-    A = n(453070),
-    C = n(926491),
+    C = n(453070),
+    A = n(926491),
     N = n(373228),
     P = n(462109),
     R = n(422195),
@@ -114,7 +114,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             [ea, eo] = (0, m.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], s.X),
             es = i.useRef("");
         i.useImperativeHandle(t, () => ({ onPickerOpen: eL }));
-        let el = (0, A.Sd)(c),
+        let el = (0, C.Sd)(c),
             ec = 0 === el.filter((e) => e.type !== N.Ih.EMPTY_GUILD_UPSELL).length,
             eu = (0, h.ep)({
                 gridWrapperRef: Q,
@@ -127,9 +127,9 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ef = i.useMemo(() => new Set(ed), [ed]),
             ep = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
             e_ = i.useMemo(() => (0, L.S)(ea, ep, c), [ea, ep, c]),
-            em = (0, A.RJ)(),
-            eh = (0, A.LZ)(),
-            eg = (0, l.cj)([C.Z], () => C.Z.getAllGuildStickers()),
+            em = (0, C.RJ)(),
+            eh = (0, C.LZ)(),
+            eg = (0, l.cj)([A.Z], () => A.Z.getAllGuildStickers()),
             { sendable: eE = [], sendableWithPremium: eb = [] } = null != e_ ? e_ : {},
             ey = eE.length + eb.length,
             eO = i.useCallback(
@@ -143,9 +143,9 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 rowCount: eS,
                 rowCountBySection: eI,
                 stickersGrid: eT,
-                gutterWidth: eA,
-                columnCounts: eC,
-            } = (0, A.el)({
+                gutterWidth: eC,
+                columnCounts: eA,
+            } = (0, C.el)({
                 filteredStickers: e_,
                 stickersCategories: el,
                 collapsedStickersCategories: ef,
@@ -183,7 +183,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 handleGridContainerKeyDown: ew,
                 isUsingKeyboardNavigation: ex,
             } = (0, P.t)({
-                columnCounts: eC,
+                columnCounts: eA,
                 stickersListRef: ee,
                 stickersGrid: eT,
                 onGridItemSelect: eN,
@@ -197,7 +197,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 t = [];
             if (null !== e) {
                 var n;
-                t = null != (n = C.Z.getStickersByGuildId(e)) ? n : [];
+                t = null != (n = A.Z.getStickersByGuildId(e)) ? n : [];
             }
             let r = 0;
             null != eg &&
@@ -268,7 +268,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                         getStickerItemProps: eP,
                                                         getStickerRowProps: eR,
                                                         gridWidth: eu,
-                                                        gutterWidth: eA,
+                                                        gutterWidth: eC,
                                                         isUsingKeyboardNavigation: ex,
                                                         onSelectSticker: eO,
                                                         rowCount: eS,
@@ -292,7 +292,7 @@ let V = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         });
     }),
     ei = (e, t) => (
-        (0, A.fP)(),
+        (0, C.fP)(),
         (0, r.jsx)("div", {
             className: U.wrapper,
             id: M.nZ,

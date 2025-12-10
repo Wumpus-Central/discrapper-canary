@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(533307),
     p = n(749210),
     f = n(287734),
-    h = n(401430),
-    g = n(773244),
+    g = n(401430),
+    h = n(773244),
     m = n(951752),
     _ = n(607070),
     b = n(627845),
@@ -64,8 +64,8 @@ var r = n(54381),
     ed = n(122333),
     ep = n(960275),
     ef = n(818765),
-    eh = n(678492),
-    eg = n(269089),
+    eg = n(678492),
+    eh = n(269089),
     em = n(380570),
     e_ = n(837689),
     eb = n(930114),
@@ -195,7 +195,7 @@ let tr = (0, m.l)((e) => {
                         urlOrigin: "deeplink",
                     });
                 }),
-            (0, r.jsx)(g.Z, {
+            (0, r.jsx)(h.Z, {
                 deepLinkType: e6.jE.USER_SETTINGS,
                 path: t.pathname,
                 search: t.search,
@@ -324,7 +324,7 @@ let tc = [
                                 break;
                             }
                             case "test-mode":
-                                e$.Z.whenInitialized(() => h.Wt(n));
+                                e$.Z.whenInitialized(() => g.Wt(n));
                                 break;
                             case "uninstall": {
                                 let e = eQ.Z.getActiveLibraryApplication(n);
@@ -538,7 +538,7 @@ class tp extends i.PureComponent {
             y.ZP.initialize(),
             H.ZP.initialize(),
             eH.Z.initialize(),
-            eg.Z.initialize(),
+            eh.Z.initialize(),
             v.Z.initialize(),
             er.Z.init(),
             Z.Z.init(),
@@ -557,7 +557,7 @@ class tp extends i.PureComponent {
             eP.Z.initialize(),
             ef.Z.initialize(),
             ep.Z.initialize(),
-            eh.Z.initialize(),
+            eg.Z.initialize(),
             w.Z.initialize(),
             L.Z.initialize(),
             F.Z.initialize(),
@@ -591,7 +591,7 @@ class tp extends i.PureComponent {
             eH.Z.terminate(),
             v.Z.terminate(),
             eO.Z.terminate(),
-            eg.Z.terminate(),
+            eh.Z.terminate(),
             eD.Z.terminate(),
             O.Z.terminate(),
             G.Z.terminate(),
@@ -602,7 +602,7 @@ class tp extends i.PureComponent {
             eP.Z.terminate(),
             ef.Z.terminate(),
             ep.Z.terminate(),
-            eh.Z.terminate(),
+            eg.Z.terminate(),
             w.Z.terminate(),
             L.Z.terminate(),
             e_.Z.terminate(),
@@ -640,13 +640,13 @@ class tp extends i.PureComponent {
                     c = (0, eI.Ss)(r),
                     u = (0, eI.cq)(i),
                     d = (0, eI.cq)(o),
-                    h = eX.Z.getGuildId(),
-                    g = h !== r;
-                if ((c && g && p.Z.selectGuild(r), c && u)) {
-                    let n = eJ.Z.getChannelId(h),
+                    g = eX.Z.getGuildId(),
+                    h = g !== r;
+                if ((c && h && p.Z.selectGuild(r), c && u)) {
+                    let n = eJ.Z.getChannelId(g),
                         a = n !== i,
                         c = null != ez.ZP.getGuildSidebarState(r);
-                    if (!tn || g || a || null != s) {
+                    if (!tn || h || a || null != s) {
                         (tn = !0),
                             f.default.selectChannel({
                                 guildId: r,
@@ -682,11 +682,11 @@ class tp extends i.PureComponent {
                     } else null == i || a || eN.Z.closeChannelSidebar(i);
                     let u = ec.Z.getIsOpen();
                     if (i === e2.oC.ROLE_SUBSCRIPTIONS) eo.Z.closeSidebar();
-                    else if (g && u) {
-                        let t = null == h && r === e7.ME,
+                    else if (h && u) {
+                        let t = null == g && r === e7.ME,
                             n = e === e7.Z5c.GUILD_DISCOVERY;
                         t || n ? eo.Z.closeSidebar() : eo.Z.openSidebar();
-                    } else ((a && u) || (!g && !a)) && eo.Z.closeSidebar();
+                    } else ((a && u) || (!h && !a)) && eo.Z.closeSidebar();
                 } else
                     ts.some((t) => {
                         var n;

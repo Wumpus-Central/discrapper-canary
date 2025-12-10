@@ -7,7 +7,7 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     o = n.n(l),
-    a = n(205120),
+    a = n(467721),
     s = n(873546),
     c = n(442837),
     u = n(28664),
@@ -331,8 +331,8 @@ let D = i.memo(function (e) {
             let { renderBanner: t, guildBanner: n } = e;
             return null != n && !t;
         },
-        Q = (0, h._k)({ location: "guild_header" }),
-        X = {
+        X = (0, h._k)({ location: "guild_header" }),
+        Q = {
             bannerVisible: n,
             guild: j,
             onClick: c,
@@ -352,16 +352,16 @@ let D = i.memo(function (e) {
                         ref: z,
                         className: o()(a, {
                             [C.container]: !0,
-                            [C.clickable]: !Q.isGuildEntrypointEnabled && null != c,
-                            [C.selected]: !Q.isGuildEntrypointEnabled && null != c && b,
+                            [C.clickable]: !X.isGuildEntrypointEnabled && null != c,
+                            [C.selected]: !X.isGuildEntrypointEnabled && null != c && b,
                             [C.hasBanner]: q(),
                             [C.bannerVisible]: n,
                             [e]: !1,
                             [C.communityInfoVisible]: U || (D && G),
-                            [C.invitesRefresh]: Q.isGuildEntrypointEnabled,
+                            [C.invitesRefresh]: X.isGuildEntrypointEnabled,
                         }),
                         onMouseDown: p,
-                        onClick: Q.isGuildEntrypointEnabled ? void 0 : c,
+                        onClick: X.isGuildEntrypointEnabled ? void 0 : c,
                         onContextMenu: u,
                         children: [
                             (0, r.jsxs)("header", {
@@ -369,9 +369,9 @@ let D = i.memo(function (e) {
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: o()(C.headerContent, C.primaryInfo),
-                                        children: Q.isGuildEntrypointEnabled
-                                            ? (0, r.jsx)(R, S(E({}, X), { children: Z }))
-                                            : (0, r.jsx)(T, S(E({}, X), { children: Z })),
+                                        children: X.isGuildEntrypointEnabled
+                                            ? (0, r.jsx)(R, S(E({}, Q), { children: Z }))
+                                            : (0, r.jsx)(T, S(E({}, Q), { children: Z })),
                                     }),
                                     G &&
                                         (0, r.jsx)(P, {

@@ -21,8 +21,8 @@ var r,
     S = 4,
     I = 0,
     T = 2,
-    A = 8,
-    C = 9,
+    C = 8,
+    A = 9,
     N = 15,
     P = 8,
     R = 286,
@@ -368,7 +368,7 @@ function ep() {
         (this.wrap = 0),
         (this.gzhead = null),
         (this.gzindex = 0),
-        (this.method = A),
+        (this.method = C),
         (this.last_flush = -1),
         (this.w_size = 0),
         (this.w_bits = 0),
@@ -451,7 +451,7 @@ function eg(e, t, n, r, a, o) {
     if (
         (t === b && (t = 6),
         r < 0 ? ((s = 0), (r = -r)) : r > 15 && ((s = 2), (r -= 16)),
-        a < 1 || a > C || n !== A || r < 8 || r > 15 || t < 0 || t > 9 || o < 0 || o > S)
+        a < 1 || a > A || n !== C || r < 8 || r > 15 || t < 0 || t > 9 || o < 0 || o > S)
     )
         return X(e, h);
     8 === r && (r = 9);
@@ -526,7 +526,7 @@ function eE(e, t) {
                 i,
                 o,
                 l,
-                g = (A + ((i.w_bits - 8) << 4)) << 8,
+                g = (C + ((i.w_bits - 8) << 4)) << 8,
                 b = -1;
             (g |= (b = i.strategy >= O || i.level < 2 ? 0 : i.level < 6 ? 1 : 6 === i.level ? 2 : 3) << 6),
                 0 !== i.strstart && (g |= U),
@@ -730,7 +730,7 @@ function ey(e, t) {
     new ed(32, 258, 258, 4096, el),
 ]),
     (t.deflateInit = function (e, t) {
-        return eg(e, t, A, N, P, I);
+        return eg(e, t, C, N, P, I);
     }),
     (t.deflateInit2 = eg),
     (t.deflateReset = em),

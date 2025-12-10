@@ -2,8 +2,8 @@ n.d(t, { l: () => a }), n(388685), n(642613);
 var r = n(473749),
     l = n(979554),
     i = n(399606),
-    s = n(1870);
-let o = (e, t) => {
+    o = n(1870);
+let s = (e, t) => {
         if (e.type === l.Z.BUNDLE && e.items.some((e) => t.includes(e.skuId))) return 2;
         if (e.type === l.Z.VARIANTS_GROUP) {
             var n, r;
@@ -12,7 +12,7 @@ let o = (e, t) => {
         return 3 * !!t.includes(e.skuId);
     },
     a = (e) => {
-        let t = (0, i.e7)([s.Z], () => s.Z.purchases),
+        let t = (0, i.e7)([o.Z], () => o.Z.purchases),
             n = (0, r.useMemo)(
                 () =>
                     [...t].map((e) => {
@@ -21,5 +21,5 @@ let o = (e, t) => {
                     }),
                 [t],
             );
-        return (0, r.useMemo)(() => [...e].sort((e, t) => o(e, n) - o(t, n)), [e, n]);
+        return (0, r.useMemo)(() => [...e].sort((e, t) => s(e, n) - s(t, n)), [e, n]);
     };

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(594174),
     I = n(566620),
     T = n(317381),
-    A = n(531826),
-    C = n(175894),
+    C = n(531826),
+    A = n(175894),
     N = n(963614),
     P = n(917107),
     R = n(208156),
@@ -88,7 +88,7 @@ function F(e, t) {
 function V(e) {
     var t, n, a;
     let { channel: p, isLoading: _ } = e,
-        [C, G] = i.useState(!1),
+        [A, G] = i.useState(!1),
         Z = (0, s.e7)([T.ZP], () => T.ZP.getCurrentEmbeddedActivity()),
         B = null == Z ? void 0 : Z.applicationId,
         F = (0, s.e7)([T.ZP], () => null != B && T.ZP.isProxyTicketRefreshing(B), [B]),
@@ -103,7 +103,7 @@ function V(e) {
                 isHidden: O.Z.isEmbeddedActivityHidden(),
             };
         }),
-        q = (0, A.sU)({ channelId: null == p ? void 0 : p.id }),
+        q = (0, C.sU)({ channelId: null == p ? void 0 : p.id }),
         {
             activityParticipant: Q,
             selectedParticipant: X,
@@ -146,7 +146,7 @@ function V(e) {
         null == q && (0, f.Ou)();
     }
     function es() {
-        G(!C);
+        G(!A);
     }
     function el(e) {
         var t;
@@ -162,7 +162,7 @@ function V(e) {
                       onMouseMove: n,
                       onMouseLeave: i,
                       onToggleHeight: es,
-                      isExpanded: C,
+                      isExpanded: A,
                       hideExpandedButton: o,
                       embeddedActivity: Z,
                   })
@@ -246,8 +246,8 @@ function V(e) {
                         [M.pipMode]: ei,
                         [U.elevationHigh]: ei,
                         [k.idle]: i && !(null == (t = Z.config) ? void 0 : t.useInteractivePIP),
-                        [M.pipModeShort]: ei && !C,
-                        [M.pipModeTall]: ei && C,
+                        [M.pipModeShort]: ei && !A,
+                        [M.pipModeTall]: ei && A,
                         [M.hidden]: z,
                         [M.multiPIPMode]: ea,
                     }),
@@ -266,8 +266,8 @@ function V(e) {
                         _ || F
                             ? (0, r.jsx)(l.$jN, {
                                   className: o()(M.iframe, {
-                                      [M.pipModeShort]: ei && !C,
-                                      [M.pipModeTall]: ei && C,
+                                      [M.pipModeShort]: ei && !A,
+                                      [M.pipModeTall]: ei && A,
                                   }),
                               })
                             : (0, r.jsx)(R.J, {
@@ -276,8 +276,8 @@ function V(e) {
                                   url: Z.url,
                                   queryParams: eu,
                                   className: o()(M.iframe, {
-                                      [M.pipModeShort]: ei && !C,
-                                      [M.pipModeTall]: ei && C,
+                                      [M.pipModeShort]: ei && !A,
+                                      [M.pipModeTall]: ei && A,
                                       [M.pipNonInteractive]:
                                           ei && !(null == (n = Z.config) ? void 0 : n.useInteractivePIP),
                                   }),
@@ -300,7 +300,7 @@ let H = (e) => {
     var { channel: t } = e,
         n = B(e, ["channel"]);
     let i = T.ZP.getCurrentEmbeddedActivity();
-    (0, C.Z)({ connectedEmbeddedActivity: i });
+    (0, A.Z)({ connectedEmbeddedActivity: i });
     let { analyticsLocations: a } = (0, _.ZP)(p.Z.ACTIVITY_PIP),
         o = null == i;
     return (0, r.jsx)(_.Gt, {

@@ -93,10 +93,10 @@ function I(e) {
 function T(e) {
     E[e.integrationId] = e.joining;
 }
-function A(e) {
+function C(e) {
     O[e.integrationId] = void 0 !== e.error ? e.error : "";
 }
-function C(e) {
+function A(e) {
     let { platformType: t, id: n, revoked: r, accessToken: i } = e,
         a = h.find((e) => e.id === n && e.type === t);
     if (null == a) return !1;
@@ -150,7 +150,7 @@ let R = new P(a.Z, {
     CONNECTION_OPEN: S,
     USER_CONNECTIONS_UPDATE: I,
     USER_CONNECTIONS_INTEGRATION_JOINING: T,
-    USER_CONNECTION_UPDATE: C,
-    USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: A,
+    USER_CONNECTION_UPDATE: A,
+    USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: C,
     USER_CONNECTIONS_CALLBACK: N,
 });

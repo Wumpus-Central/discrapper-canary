@@ -75,11 +75,11 @@ function T(e, t) {
         e
     );
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -87,7 +87,7 @@ function A(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -121,8 +121,8 @@ function P(e) {
             hidden: S = !1,
             toolbar: I,
             mobileToolbar: T,
-            "aria-label": A,
-            "aria-labelledby": C,
+            "aria-label": C,
+            "aria-labelledby": A,
             scrollable: P,
             role: R,
             hideSearch: D,
@@ -177,8 +177,8 @@ function P(e) {
         transparent: v,
         hidden: S,
         onDoubleClick: () => N(x),
-        "aria-label": A,
-        "aria-labelledby": C,
+        "aria-label": C,
+        "aria-labelledby": A,
         role: R,
         scrollable: P,
         children: t,
@@ -197,7 +197,7 @@ function R(e) {
 }
 function D(e) {
     var { isAuthenticated: t = !0 } = e,
-        n = A(e, ["isAuthenticated"]);
+        n = C(e, ["isAuthenticated"]);
     let { analyticsLocations: i } = (0, l.ZP)(s.Z.HEADER_BAR);
     return (0, r.jsx)(l.Gt, {
         value: i,

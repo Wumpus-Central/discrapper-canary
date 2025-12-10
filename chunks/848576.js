@@ -1,4 +1,4 @@
-r.d(t, { f: () => N });
+r.d(t, { f: () => f });
 var n = r(274078),
     a = r(568538),
     i = r(106260),
@@ -15,7 +15,7 @@ var n = r(274078),
     R = r(840247),
     T = r(549040),
     A = r(889929);
-let N = (0, o._I)((e = {}) => {
+let f = (0, o._I)((e = {}) => {
     let t = {
         console: !0,
         dom: !0,
@@ -28,7 +28,7 @@ let N = (0, o._I)((e = {}) => {
     return {
         name: "Breadcrumbs",
         setup(e) {
-            var r, o, N, f, O, h, D;
+            var r, o, f, N, O, h, S;
             t.console &&
                 (0, c.e)(
                     ((r = e),
@@ -57,14 +57,14 @@ let N = (0, o._I)((e = {}) => {
                 t.dom &&
                     (0, n.O)(
                         ((o = e),
-                        (N = t.dom),
+                        (f = t.dom),
                         function (e) {
                             let t, r;
                             if ((0, _.s3)() !== o) return;
-                            let n = "object" == typeof N ? N.serializeAttribute : void 0,
+                            let n = "object" == typeof f ? f.serializeAttribute : void 0,
                                 a =
-                                    "object" == typeof N && "number" == typeof N.maxStringLength
-                                        ? N.maxStringLength
+                                    "object" == typeof f && "number" == typeof f.maxStringLength
+                                        ? f.maxStringLength
                                         : void 0;
                             a &&
                                 a > 1024 &&
@@ -101,9 +101,9 @@ let N = (0, o._I)((e = {}) => {
                     ),
                 t.xhr &&
                     (0, a.UK)(
-                        ((f = e),
+                        ((N = e),
                         function (e) {
-                            if ((0, _.s3)() !== f) return;
+                            if ((0, _.s3)() !== N) return;
                             let { startTimestamp: t, endTimestamp: r } = e,
                                 n = e.xhr[a.xU];
                             if (!t || !r || !n) return;
@@ -200,9 +200,9 @@ let N = (0, o._I)((e = {}) => {
                 t.sentry &&
                     e.on(
                         "beforeSendEvent",
-                        ((D = e),
+                        ((S = e),
                         function (e) {
-                            (0, _.s3)() === D &&
+                            (0, _.s3)() === S &&
                                 (0, s.n)(
                                     {
                                         category: `sentry.${"transaction" === e.type ? "transaction" : "event"}`,

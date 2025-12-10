@@ -13,8 +13,8 @@ let p = {
         (o.Z[d.yP.PRELOADED_USER_SETTINGS] = s.Z),
             (o.Z[d.yP.FRECENCY_AND_FAVORITES_SETTINGS] = a.Z),
             l.Z.subscribe("CONNECTION_OPEN", f),
-            l.Z.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", h),
-            l.Z.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", g),
+            l.Z.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", g),
+            l.Z.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", h),
             l.Z.subscribe("APP_STATE_UPDATE", m);
     },
 };
@@ -29,7 +29,7 @@ function f() {
                 t.scheduleSaveFromOfflineEdit();
         });
 }
-function h(e) {
+function g(e) {
     let {
         settings: { proto: t, type: n },
         delaySeconds: r,
@@ -40,7 +40,7 @@ function h(e) {
         jitter: i,
     });
 }
-function g(e) {
+function h(e) {
     let { settingsType: t } = e;
     c.aj[t].loadIfNecessary();
 }

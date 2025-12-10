@@ -90,12 +90,12 @@ function T(e) {
     for (let { guild_id: e } of t) null != e && ((m[e] = void 0), (n = !0), _ === e && y(e));
     return n;
 }
-function A(e) {
+function C(e) {
     let { guildId: t, user: n } = e;
     if (l.default.getId() !== n.id) return !1;
     (m[t] = void 0), t === _ && y(t);
 }
-function C() {
+function A() {
     if (null == _) return !1;
     y(_);
 }
@@ -151,8 +151,8 @@ let M = new j(a.Z, {
     CHANNEL_CREATE: I,
     CHANNEL_DELETE: I,
     CHANNEL_UPDATES: T,
-    GUILD_MEMBER_UPDATE: A,
-    CURRENT_USER_UPDATE: C,
+    GUILD_MEMBER_UPDATE: C,
+    CURRENT_USER_UPDATE: A,
     GUILD_ROLE_CREATE: N,
     GUILD_ROLE_UPDATE: N,
     GUILD_ROLE_DELETE: N,

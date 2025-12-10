@@ -22,8 +22,8 @@ var r = n(473749),
     S = n(757266),
     I = n(650774),
     T = n(430824),
-    A = n(283595),
-    C = n(496675),
+    C = n(283595),
+    A = n(496675),
     N = n(699516),
     P = n(944486),
     R = n(594174),
@@ -59,12 +59,12 @@ function G(e) {
             activity: Z,
         }),
         et = (0, i.e7)(
-            [A.Z, O.Z, x.Z, S.Z],
+            [C.Z, O.Z, x.Z, S.Z],
             () =>
                 X ||
                 (null != Q &&
                     (0, j.t)({
-                        LibraryApplicationStore: A.Z,
+                        LibraryApplicationStore: C.Z,
                         LaunchableGameStore: O.Z,
                         DispatchApplicationStore: x.Z,
                         ConnectedAppsStore: S.Z,
@@ -92,7 +92,7 @@ function G(e) {
             channelId: ee,
             application: ei,
         }),
-        es = (0, i.e7)([v.Z, T.Z, I.Z, N.Z, P.Z, D.Z, C.Z], () =>
+        es = (0, i.e7)([v.Z, T.Z, I.Z, N.Z, P.Z, D.Z, A.Z], () =>
             null != B
                 ? eo === _.Fw.CAN_JOIN
                 : (0, d.Z)({
@@ -108,7 +108,7 @@ function G(e) {
                       RelationshipStore: N.Z,
                       SelectedChannelStore: P.Z,
                       VoiceStateStore: D.Z,
-                      PermissionStore: C.Z,
+                      PermissionStore: A.Z,
                   }),
         ),
         el = (0, i.e7)([c.ZP], () => {

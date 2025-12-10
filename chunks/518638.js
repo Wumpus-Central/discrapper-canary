@@ -1,6 +1,6 @@
 n.d(t, {
-    A2: () => A,
-    BU: () => C,
+    A2: () => C,
+    BU: () => A,
     Pz: () => S,
     Qf: () => D,
     ZC: () => R,
@@ -64,7 +64,7 @@ async function T() {
         })
     ).body.map(I);
 }
-async function A(e) {
+async function C(e) {
     let t,
         { promotionId: n, analyticsLocations: r } = e,
         a = await i.tn.post({
@@ -82,7 +82,7 @@ async function A(e) {
         I(o)
     );
 }
-function C(e, t) {
+function A(e, t) {
     var n;
     return null != t.outboundRedemptionUrlFormat && "" !== t.outboundRedemptionUrlFormat
         ? t.outboundRedemptionUrlFormat.replace(O, encodeURIComponent(e))

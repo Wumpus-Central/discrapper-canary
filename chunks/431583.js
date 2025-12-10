@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(442837),
     p = n(159691),
     f = n(481060),
-    h = n(391650),
-    g = n(314897),
+    g = n(391650),
+    h = n(314897),
     m = n(594174),
     _ = n(626135),
     b = n(361207),
@@ -204,7 +204,7 @@ let y = [
 function T(e) {
     let { source: t, onClose: n, transitionState: l } = e,
         s = (0, d.e7)([m.default], () => m.default.getCurrentUser()),
-        b = (0, d.e7)([g.default], () => g.default.getFingerprint()),
+        b = (0, d.e7)([h.default], () => h.default.getFingerprint()),
         C = null == s || s.isClaimed(),
         [T, N] = i.useState(
             (function () {
@@ -240,7 +240,7 @@ function T(e) {
                 referring_location: t,
                 qr_code: !1,
             }),
-            C ? window.open(r, "_blank") : (n(), h.j());
+            C ? window.open(r, "_blank") : (n(), g.j());
     }
     function P(e) {
         N(e);

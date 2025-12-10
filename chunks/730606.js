@@ -1,5 +1,5 @@
 n.d(t, {
-    Qk: () => C,
+    Qk: () => A,
     WG: () => R,
     ZP: () => D,
 }),
@@ -27,8 +27,8 @@ var r = n(54381),
     S = n(549635),
     I = n(981631),
     T = n(388032),
-    A = n(810348);
-function C(e) {
+    C = n(810348);
+function A(e) {
     let { src: t, width: n, height: r, hasMultiple: i = !1, options: a } = e,
         { width: o, height: s } = (0, b.p)(i, {
             width: n,
@@ -67,7 +67,7 @@ function P(e) {
                       onToggleObscurity: u,
                       children: (e) =>
                           (0, r.jsx)("div", {
-                              className: o()(A.obscureWrapper, { [A.obscure]: e }),
+                              className: o()(C.obscureWrapper, { [C.obscure]: e }),
                               children: t(e),
                           }),
                   },
@@ -79,7 +79,7 @@ function P(e) {
 function R(e, t) {
     if ("IMAGE" === e.type) {
         if (!(0, h._H)(e)) return void (0, d.po)(e.url);
-        C({
+        A({
             src: (0, _.q)({
                 proxyURL: e.proxyUrl,
                 url: e.url,
@@ -101,12 +101,12 @@ function D(e) {
         } = e,
         [f, p] = i.useState(a),
         _ = i.useRef(a),
-        { zoomed: h, setZoomed: C } = (0, E.Y)(),
+        { zoomed: h, setZoomed: A } = (0, E.Y)(),
         R = i.useCallback(
             (e) => {
-                p((e = N(e, t.length))), (_.current = e), null == n || n(e), C(!1);
+                p((e = N(e, t.length))), (_.current = e), null == n || n(e), A(!1);
             },
-            [n, t, C],
+            [n, t, A],
         );
     i.useEffect(() => {
         let e = () => R(_.current + 1),
@@ -118,7 +118,7 @@ function D(e) {
                 m.S.unsubscribe(I.CkL.MODAL_CAROUSEL_NEXT, e), m.S.unsubscribe(I.CkL.MODAL_CAROUSEL_PREV, t);
             }
         );
-    }, [R, C]);
+    }, [R, A]);
     let D = t[f],
         w = (0, u.g4)(
             {
@@ -146,7 +146,7 @@ function D(e) {
                                       },
                                       icon: s.j9r,
                                       tooltip: T.intl.string(T.t.vgfxaA),
-                                      className: o()(A.navPrev, e),
+                                      className: o()(C.navPrev, e),
                                   }),
                                   (0, r.jsx)(v.Z, {
                                       onClick: (e) => {
@@ -154,7 +154,7 @@ function D(e) {
                                       },
                                       icon: s.d4D,
                                       tooltip: T.intl.string(T.t.XiOHRX),
-                                      className: o()(A.navNext, e),
+                                      className: o()(C.navNext, e),
                                   }),
                               ],
                           })

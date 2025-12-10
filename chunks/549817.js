@@ -22,8 +22,8 @@ var r = n(392711),
     S = n(816436),
     I = n(981631),
     T = n(372897),
-    A = n(490897);
-function C(e, t, n) {
+    C = n(490897);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function N(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -173,8 +173,8 @@ let x = {
             s = O.Z.getEnabled(e) ? O.Z.getDefaultChannelIds(e) : [],
             [u, p] = (0, v.Ee)(e, t, s),
             b = [...o, ...s],
-            C = b.map((e) => _.Z.getChannel(e)).filter(E.lm),
-            P = (0, S.v)(e, new Set(b), C, !0).length,
+            A = b.map((e) => _.Z.getChannel(e)).filter(E.lm),
+            P = (0, S.v)(e, new Set(b), A, !0).length,
             w = null == n ? [] : n.options.map((e) => e.id),
             x = O.Z.getConnections(e),
             L = (0, v.OZ)(x),
@@ -199,7 +199,7 @@ let x = {
                     application_connections_not_connected: j.notConnected,
                 }),
             ),
-            (0, l.Ju)(e, A.W.GUILD_ONBOARDING_QUESTION, y.default.fromTimestamp(Date.now())),
+            (0, l.Ju)(e, C.W.GUILD_ONBOARDING_QUESTION, y.default.fromTimestamp(Date.now())),
             D(e, !0),
             f.Z.isFullServerPreview(e))
         ) {

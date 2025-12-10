@@ -65,11 +65,11 @@ e.exports = {
         var S = [new h(O), new h(v)],
             I = a.createFromArray(S),
             T = c.replaceWithFragment(b, _, I),
-            A = T.merge({
+            C = T.merge({
                 selectionBefore: s,
                 selectionAfter: T.getSelectionAfter().set("hasFocus", !0),
             });
-        return u.push(e, A, "insert-fragment");
+        return u.push(e, C, "insert-fragment");
     },
     moveAtomicBlock: function (e, t, n, r) {
         var i,

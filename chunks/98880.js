@@ -31,8 +31,8 @@ var r = n(54381),
     S = n(220082),
     I = n(70097),
     T = n(591472),
-    A = n(973616),
-    C = n(594174),
+    C = n(973616),
+    A = n(594174),
     N = n(695103),
     P = n(880448),
     R = n(768581),
@@ -194,7 +194,7 @@ function J(e) {
         h = i.useCallback(
             (e) => {
                 if ((0, w.BQ)(t)) {
-                    let n = t instanceof A.ZP ? t : A.ZP.createFromServer(t);
+                    let n = t instanceof C.ZP ? t : C.ZP.createFromServer(t);
                     (0, u.vq)(e, (e) => (0, r.jsx)(M.Z, Y({ application: n }, e)));
                 }
             },
@@ -276,8 +276,8 @@ function ee(e) {
         T = i.useCallback(() => {
             !0 === l && I(!0);
         }, [l]),
-        A = m || (0, w.lf)(t),
-        C = "large_banner" === n || "medium_banner" === n,
+        C = m || (0, w.lf)(t),
+        A = "large_banner" === n || "medium_banner" === n,
         P = i.useCallback(() => I(!1), []),
         R = (0, s.e7)([_.Z, N.Z], () => _.Z.inDevModeForApplication(t.id) || N.Z.inTestModeForApplication(t.id), [
             t.id,
@@ -285,7 +285,7 @@ function ee(e) {
         D = (0, w.WA)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            C
+            A
                 ? (0, r.jsxs)("div", {
                       onMouseEnter: T,
                       onFocus: T,
@@ -306,11 +306,11 @@ function ee(e) {
                                   overrideImageUrl: p,
                               }),
                           }),
-                          R || A || D !== d.ww.NONE
+                          R || C || D !== d.ww.NONE
                               ? (0, r.jsxs)("div", {
                                     className: B.bannerUpperRightContainer,
                                     children: [
-                                        A &&
+                                        C &&
                                             (0, r.jsx)("div", {
                                                 className: B.promotedLabelWrapperBanner,
                                                 children: (0, r.jsx)(c.Heading, {
@@ -352,7 +352,7 @@ function ee(e) {
                                         lineClamp: 1,
                                         children: g,
                                     }),
-                                    !C && A
+                                    !A && C
                                         ? (0, r.jsx)("div", {
                                               className: B.promotedLabelWrapperNonBanner,
                                               children: (0, r.jsx)(c.Text, {
@@ -390,7 +390,7 @@ function et() {
 }
 function en(e) {
     let { application: t } = e,
-        n = C.default.getCurrentUser();
+        n = A.default.getCurrentUser();
     if (!(null == n ? void 0 : n.isStaff()) && !(null == n ? void 0 : n.isStaffPersonal())) return null;
     let i = (0, w.yJ)(t);
     if (null == i || !(0, w.BQ)(t)) return null;

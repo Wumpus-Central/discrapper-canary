@@ -23,8 +23,8 @@ var i = n(442837),
     S = n(166584),
     I = n(915014),
     T = n(671955),
-    A = n(388032),
-    C = n(57842),
+    C = n(388032),
+    A = n(57842),
     N = n(116649);
 function P(e) {
     let {
@@ -77,7 +77,7 @@ function P(e) {
                 onOpenProfile: (e) => (null == w ? void 0 : w({ section: e })),
             }),
             (0, r.jsxs)("div", {
-                className: C.buttons,
+                className: A.buttons,
                 children: [
                     (0, r.jsx)(b.Z, {
                         user: t,
@@ -122,7 +122,7 @@ function P(e) {
                 }),
             null != R &&
                 (0, r.jsx)(h.Z, {
-                    heading: A.intl.string(A.t["LPJmL/"]),
+                    heading: C.intl.string(C.t["LPJmL/"]),
                     children: (0, r.jsx)(S.Z, {
                         user: t,
                         currentUser: n,

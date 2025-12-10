@@ -4,13 +4,13 @@ n.r(t),
         encryptAndStoreTokens: () => R,
         getAnalyticsToken: () => O,
         getToken: () => v,
-        hideToken: () => A,
+        hideToken: () => C,
         init: () => y,
         removeAnalyticsToken: () => P,
         removeToken: () => N,
         setAnalyticsToken: () => S,
         setToken: () => I,
-        showToken: () => C,
+        showToken: () => A,
     }),
     n(388685);
 var a = n(433517),
@@ -96,10 +96,10 @@ function I(e, t) {
 function T(e, t) {
     null != t && (p[t] = e), f ? R() : ((i = r), (_ = p), g());
 }
-function A() {
+function C() {
     m || ((m = !0), g());
 }
-function C() {
+function A() {
     m && ((m = !1), g());
 }
 function N(e) {

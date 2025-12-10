@@ -1,6 +1,6 @@
 r.d(t, {
-    E8: () => D,
-    Wo: () => S,
+    E8: () => S,
+    Wo: () => D,
     og: () => C,
 });
 var n = r(390138),
@@ -19,8 +19,8 @@ var n = r(390138),
     R = r(974352),
     T = r(309063),
     A = r(549040),
-    N = r(889929),
-    f = r(497000),
+    f = r(889929),
+    N = r(497000),
     O = r(958113);
 let h = {
         ...o.A,
@@ -33,20 +33,20 @@ let h = {
         _experiments: {},
         ...O.k3,
     },
-    D = (e = {}) => {
+    S = (e = {}) => {
         (0, _.a)();
         let {
                 enableInp: t,
                 enableLongTask: r,
                 enableLongAnimationFrame: R,
-                _experiments: { enableInteractions: T, enableStandaloneClsSpans: D },
+                _experiments: { enableInteractions: T, enableStandaloneClsSpans: S },
                 beforeStartSpan: g,
                 idleTimeout: m,
                 finalTimeout: y,
                 childSpanTimeout: P,
                 markBackgroundSpan: v,
-                traceFetch: w,
-                traceXHR: M,
+                traceFetch: M,
+                traceXHR: w,
                 shouldCreateSpanForRequest: G,
                 enableHTTPTimings: b,
                 instrumentPageLoad: U,
@@ -55,7 +55,7 @@ let h = {
                 ...h,
                 ...e,
             },
-            K = (0, n.PR)({ recordClsStandaloneSpans: D || !1 });
+            K = (0, n.PR)({ recordClsStandaloneSpans: S || !1 });
         t && (0, a.N)(),
             R &&
             u.n.PerformanceObserver &&
@@ -64,31 +64,31 @@ let h = {
                 ? (0, n.Jk)()
                 : r && (0, n.Fv)(),
             T && (0, n.sn)();
-        let B = {
+        let W = {
             name: void 0,
             source: void 0,
         };
-        function W(e, t) {
+        function B(e, t) {
             let r = "pageload" === t.op,
                 a = g ? g(t) : t,
                 i = a.attributes || {};
-            t.name !== a.name && ((i[s.Zj] = "custom"), (a.attributes = i)), (B.name = a.name), (B.source = i[s.Zj]);
+            t.name !== a.name && ((i[s.Zj] = "custom"), (a.attributes = i)), (W.name = a.name), (W.source = i[s.Zj]);
             let _ = (0, o.R)(a, {
                 idleTimeout: m,
                 finalTimeout: y,
                 childSpanTimeout: P,
                 disableAutoFinish: r,
                 beforeSpanEnd: (e) => {
-                    K(), (0, n.f7)(e, { recordClsOnPageloadSpan: !D });
+                    K(), (0, n.f7)(e, { recordClsOnPageloadSpan: !S });
                 },
             });
             function c() {
-                ["interactive", "complete"].includes(N.m9.document.readyState) && e.emit("idleSpanEnableAutoFinish", _);
+                ["interactive", "complete"].includes(f.m9.document.readyState) && e.emit("idleSpanEnableAutoFinish", _);
             }
             return (
                 r &&
-                    N.m9.document &&
-                    (N.m9.document.addEventListener("readystatechange", () => {
+                    f.m9.document &&
+                    (f.m9.document.addEventListener("readystatechange", () => {
                         c();
                     }),
                     c()),
@@ -101,14 +101,14 @@ let h = {
                 var r, n, _, u;
                 let R,
                     h,
-                    D = N.m9.location && N.m9.location.href;
+                    S = f.m9.location && f.m9.location.href;
                 e.on("startNavigationSpan", (t) => {
                     (0, c.s3)() === e &&
                         (h &&
                             !(0, E.XU)(h).timestamp &&
                             (A.X && d.kg.log(`[Tracing] Finishing current root span with op: ${((0, E.XU))(h).op}`),
                             h.end()),
-                        (h = W(e, {
+                        (h = B(e, {
                             op: "navigation",
                             ...t,
                         })));
@@ -123,7 +123,7 @@ let h = {
                             a = r.baggage || L("baggage"),
                             i = (0, I.pT)(n, a);
                         (0, c.nZ)().setPropagationContext(i),
-                            (h = W(e, {
+                            (h = B(e, {
                                 op: "pageload",
                                 ...t,
                             }));
@@ -139,10 +139,10 @@ let h = {
                             dsc: n.dsc || (0, l.jC)(e),
                         });
                     }),
-                    N.m9.location &&
+                    f.m9.location &&
                         (U &&
-                            S(e, {
-                                name: N.m9.location.pathname,
+                            D(e, {
+                                name: f.m9.location.pathname,
                                 startTime: p.Z1 ? p.Z1 / 1000 : void 0,
                                 attributes: {
                                     [s.Zj]: "url",
@@ -151,27 +151,27 @@ let h = {
                             }),
                         H &&
                             (0, i.a)(({ to: t, from: r }) => {
-                                if (void 0 === r && D && -1 !== D.indexOf(t)) {
-                                    D = void 0;
+                                if (void 0 === r && S && -1 !== S.indexOf(t)) {
+                                    S = void 0;
                                     return;
                                 }
                                 r !== t &&
-                                    ((D = void 0),
+                                    ((S = void 0),
                                     C(e, {
-                                        name: N.m9.location.pathname,
+                                        name: f.m9.location.pathname,
                                         attributes: {
                                             [s.Zj]: "url",
                                             [s.S3]: "auto.navigation.browser",
                                         },
                                     }));
                             })),
-                    v && (0, f.j)(),
+                    v && (0, N.j)(),
                     T &&
                         ((r = m),
                         (n = y),
                         (_ = P),
-                        (u = B),
-                        N.m9.document &&
+                        (u = W),
+                        f.m9.document &&
                             addEventListener(
                                 "click",
                                 () => {
@@ -215,8 +215,8 @@ let h = {
                             )),
                     t && (0, a.D)(),
                     (0, O.L7)(e, {
-                        traceFetch: w,
-                        traceXHR: M,
+                        traceFetch: M,
+                        traceXHR: w,
                         tracePropagationTargets: e.getOptions().tracePropagationTargets,
                         shouldCreateSpanForRequest: G,
                         enableHTTPTimings: b,
@@ -224,7 +224,7 @@ let h = {
             },
         };
     };
-function S(e, t, r) {
+function D(e, t, r) {
     e.emit("startPageLoadSpan", t, r), (0, c.nZ)().setTransactionName(t.name);
     let n = (0, E.HN)();
     return "pageload" === (n && (0, E.XU)(n).op) ? n : void 0;

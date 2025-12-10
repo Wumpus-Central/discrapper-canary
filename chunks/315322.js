@@ -288,7 +288,7 @@ function T(e) {
         });
 }
 new i.Z("SearchTracking");
-let A = new Map([
+let C = new Map([
         [c.dCx.ANSWER_IN, "in"],
         [c.dCx.FILTER_IN, "in"],
         [c.dCx.ANSWER_USERNAME_FROM, "from"],
@@ -306,7 +306,7 @@ let A = new Map([
         [c.dCx.ANSWER_PINNED, "pinned"],
         [c.dCx.FILTER_PINNED, "pinned"],
     ]),
-    C = new Map([
+    A = new Map([
         [c.rtL.HISTORY, "history"],
         [c.rtL.DATES, "dates"],
         [c.rtL.SEARCH_OPTIONS, "search_options"],
@@ -338,8 +338,8 @@ function P(e) {
         searchAutocompleteSelectAction: b,
     } = e;
     c.rtL.HISTORY;
-    let y = null != (t = A.get(_)) ? t : C.get(_),
-        O = null != p ? A.get(p) : null;
+    let y = null != (t = C.get(_)) ? t : A.get(_),
+        O = null != p ? C.get(p) : null;
     r.ZP.trackWithMetadata(c.rMx.SEARCH_MESSAGES_AUTOCOMPLETE_CLICKED, {
         search_id: f(n),
         search_type: n.type,

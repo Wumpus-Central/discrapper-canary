@@ -56,7 +56,7 @@ let E = 5,
     S = 1,
     I = 5,
     T = 0.7;
-function A() {
+function C() {
     return {
         messageGiftIntentLastShownMap: {},
         lastShownFriendsListGiftIntents: [],
@@ -64,7 +64,7 @@ function A() {
         giftUnreadNotificationLastDismissedTimes: [],
     };
 }
-let C = A(),
+let A = C(),
     N = [],
     P = new Set(),
     R = {},
@@ -108,7 +108,7 @@ function j(e) {
     return Math.round(s()().diff(e, "years", !0));
 }
 function M() {
-    return Array.from(P).some((e) => null == C.messageGiftIntentLastShownMap[e]);
+    return Array.from(P).some((e) => null == A.messageGiftIntentLastShownMap[e]);
 }
 function k() {
     (N.length = 0), P.clear(), (R = {});
@@ -117,20 +117,20 @@ function U() {
     k();
 }
 function G() {
-    (C = A()), k();
+    (A = C()), k();
 }
 function Z() {
-    C.lastShownFriendsListGiftIntents = Array.from(P);
+    A.lastShownFriendsListGiftIntents = Array.from(P);
 }
 function B(e) {
     let { recipientUserId: t } = e;
     Y(t);
 }
 function F() {
-    C.giftUnreadNotificationLastDismissedTimes.push(Date.now());
+    A.giftUnreadNotificationLastDismissedTimes.push(Date.now());
 }
 function V() {
-    C.giftUnreadNotificationLastDismissedTimes = C.giftUnreadNotificationLastDismissedTimes.filter(
+    A.giftUnreadNotificationLastDismissedTimes = A.giftUnreadNotificationLastDismissedTimes.filter(
         (e) => Date.now() - e <= 7 * y,
     );
 }
@@ -139,22 +139,22 @@ function H(e) {
     Y(t);
 }
 function Y(e) {
-    null == C.messageGiftIntentLastShownMap[e] && (C.messageGiftIntentLastShownMap[e] = Date.now());
+    null == A.messageGiftIntentLastShownMap[e] && (A.messageGiftIntentLastShownMap[e] = Date.now());
 }
 function W() {
-    for (let e in C.messageGiftIntentLastShownMap) {
-        let t = C.messageGiftIntentLastShownMap[e];
-        Date.now() - t > v && delete C.messageGiftIntentLastShownMap[e];
+    for (let e in A.messageGiftIntentLastShownMap) {
+        let t = A.messageGiftIntentLastShownMap[e];
+        Date.now() - t > v && delete A.messageGiftIntentLastShownMap[e];
     }
 }
 function K() {
-    C.lastShownFriendsListGiftIntents = [];
+    A.lastShownFriendsListGiftIntents = [];
 }
 function z() {
-    C.messageGiftIntentLastShownMap = {};
+    A.messageGiftIntentLastShownMap = {};
 }
 function q() {
-    C.giftUnreadNotificationLastDismissedTimes = [];
+    A.giftUnreadNotificationLastDismissedTimes = [];
 }
 function Q(e) {
     let { total: t } = e;
@@ -180,34 +180,34 @@ function X(e) {
             }
         });
     let r = 0;
-    for (let e of N) if (null == C.messageGiftIntentLastShownMap[e] && (P.add(e), ++r >= E)) break;
+    for (let e of N) if (null == A.messageGiftIntentLastShownMap[e] && (P.add(e), ++r >= E)) break;
 }
 class J extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        if (((C = A()), null != e)) {
+        if (((A = C()), null != e)) {
             var t;
-            (C.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime),
-                (C.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)),
-                (C.messageGiftIntentLastShownMap = g({}, e.messageGiftIntentLastShownMap)),
-                (C.giftUnreadNotificationLastDismissedTimes = Array.from(
+            (A.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime),
+                (A.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)),
+                (A.messageGiftIntentLastShownMap = g({}, e.messageGiftIntentLastShownMap)),
+                (A.giftUnreadNotificationLastDismissedTimes = Array.from(
                     null != (t = e.giftUnreadNotificationLastDismissedTimes) ? t : [],
                 ));
         }
         this.syncWith([p.Z, d.Z, f.Z, u.Z], L), W(), V();
     }
     getState() {
-        return C;
+        return A;
     }
     getFriendAnniversaries() {
         return N;
     }
     isFreshTopAffinityFriendAnniversary(e) {
         let { userId: t } = e;
-        return P.has(t) && null == C.messageGiftIntentLastShownMap[t];
+        return P.has(t) && null == A.messageGiftIntentLastShownMap[t];
     }
     canShowGiftNotification() {
         V();
-        let e = C.giftUnreadNotificationLastDismissedTimes;
+        let e = A.giftUnreadNotificationLastDismissedTimes;
         return !!M() && (0 === e.length || (!(e.length >= I) && !(e.filter((e) => Date.now() - e <= y).length >= S)));
     }
     canShowFriendsTabBadge() {
@@ -218,7 +218,7 @@ class J extends (r = l.ZP.PersistedStore) {
         return null == t ? 0 : j(t.friendsSince);
     }
     isGiftIntentMessageInCooldown(e) {
-        return null != C.messageGiftIntentLastShownMap[e];
+        return null != A.messageGiftIntentLastShownMap[e];
     }
     getDevToolTotalFriendAnniversaries() {
         return D;

@@ -50,7 +50,7 @@ function y(e) {
         { analyticsLocations: v, newestAnalyticsLocation: S } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
         I = (0, a.e7)([m.Z], () => m.Z.getUserProfile(t.id)),
         T = null == I ? void 0 : I.application,
-        A = (0, f.Z)({
+        C = (0, f.Z)({
             user: t,
             guildId: n,
             location: S,
@@ -66,7 +66,7 @@ function y(e) {
                     analyticsLocations: v,
                 }),
         }),
-        C = (0, p.Z)({
+        A = (0, p.Z)({
             user: t,
             guildId: n,
             location: S,
@@ -103,7 +103,7 @@ function y(e) {
         }),
         R = [
             [E],
-            [C, A, N],
+            [A, C, N],
             [
                 (0, c.Z)({
                     application: T,

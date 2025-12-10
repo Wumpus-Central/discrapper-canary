@@ -57,11 +57,11 @@ function I(e) {
 function T() {
     return (b = null), O(), !1;
 }
-function A(e) {
+function C(e) {
     let { isCrashedDisabled: t, error: n } = e;
     return !0 === t && (E = !0), null != n && (b = n instanceof Error ? n.message : String(n)), !0;
 }
-function C() {
+function A() {
     return O(), !1;
 }
 class N extends (r = i.ZP.Store) {
@@ -96,11 +96,11 @@ let P = new N(
         __OVERLAY__ || !f.iP
             ? {}
             : {
-                  CONNECTION_OPEN: C,
+                  CONNECTION_OPEN: A,
                   EXPERIMENT_OVERRIDE_BUCKET: S,
                   OVERLAY_SET_ENABLED: I,
                   OVERLAY_V3_LOAD_NATIVE_MODULE: T,
-                  OVERLAY_CRASHED: A,
+                  OVERLAY_CRASHED: C,
               },
     ),
     R = P;

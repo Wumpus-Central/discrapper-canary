@@ -4,11 +4,11 @@ n.d(t, {
     N4: () => U,
     O5: () => S,
     OZ: () => k,
-    V7: () => C,
+    V7: () => A,
     VF: () => L,
     b$: () => y,
     d9: () => w,
-    dF: () => A,
+    dF: () => C,
     dX: () => M,
     iF: () => N,
     kl: () => P,
@@ -104,7 +104,7 @@ function T(e, t, n) {
         }),
     );
 }
-function A(e, t, n) {
+function C(e, t, n) {
     return I(
         t,
         n,
@@ -114,7 +114,7 @@ function A(e, t, n) {
         }),
     );
 }
-function C(e) {
+function A(e) {
     return N(s.Z.getChannel(e));
 }
 function N(e) {

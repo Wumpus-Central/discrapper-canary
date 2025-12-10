@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => A });
+t.r(n), t.d(n, { default: () => Z });
 var r = t(54381),
     i = t(473749),
     o = t(442837),
@@ -18,8 +18,8 @@ var r = t(54381),
     y = t(194201),
     I = t(984802),
     m = t(210887),
-    C = t(524329),
-    S = t(995532),
+    S = t(524329),
+    C = t(995532),
     O = t(984933),
     w = t(650774),
     P = t(496675),
@@ -109,8 +109,8 @@ class x extends i.PureComponent {
             canViewGuildAnalytics: y,
             isOwner: I,
             isOwnerWithRequiredMfaLevel: m,
-            showDirtyGuildTemplateIndicator: C,
-            memberCount: S,
+            showDirtyGuildTemplateIndicator: S,
+            memberCount: C,
             onboardingStep: O,
             onboardingEnabled: w,
             welcomeScreenEmpty: P,
@@ -132,8 +132,8 @@ class x extends i.PureComponent {
                 canViewGuildAnalytics: y,
                 isOwner: I,
                 isOwnerWithRequiredMfaLevel: m,
-                showDirtyGuildTemplateIndicator: C,
-                memberCount: S,
+                showDirtyGuildTemplateIndicator: S,
+                memberCount: C,
                 onboardingStep: O,
                 onboardingEnabled: w,
                 welcomeScreenEmpty: P,
@@ -159,7 +159,7 @@ class x extends i.PureComponent {
         });
     }
 }
-function A() {
+function Z() {
     var e, n, t;
     let {
             guild: a,
@@ -171,8 +171,8 @@ function A() {
         { analyticsLocations: N } = (0, u.ZP)(s.Z.GUILD_SETTINGS),
         R = (0, o.e7)([m.Z], () => m.Z.theme),
         j = (0, I.Ll)(),
-        A = (0, o.e7)([O.ZP], () => (null != a ? O.ZP.getChannels(a.id).SELECTABLE : null), [a]),
-        Z = (0, o.cj)([P.Z], () => (null != a ? P.Z.getGuildPermissionProps(a) : G)),
+        Z = (0, o.e7)([O.ZP], () => (null != a ? O.ZP.getChannels(a.id).SELECTABLE : null), [a]),
+        A = (0, o.cj)([P.Z], () => (null != a ? P.Z.getGuildPermissionProps(a) : G)),
         L = null == a ? void 0 : a.id,
         W = (0, o.e7)([P.Z], () => null != a && P.Z.canAccessGuildSettings(a));
     i.useEffect(() => {
@@ -180,7 +180,7 @@ function A() {
     }, [T, L]);
     let U = null != (e = null == a ? void 0 : a.features.has(E.GuildFeatures.COMMUNITY)) && e;
     i.useEffect(() => {
-        null != L && U && ((0, h.eM)(L), (0, C.RM)(L));
+        null != L && U && ((0, h.eM)(L), (0, S.RM)(L));
     }, [L, U]),
         i.useEffect(() => {
             null != L && (0, f.cP)(L);
@@ -193,14 +193,14 @@ function A() {
         }, [a]),
         B = (0, o.e7)([w.Z], () => w.Z.getMemberCount(null == a ? void 0 : a.id), [a]);
     i.useEffect(() => {
-        null != L && Z.canManageGuild && v.Z.loadTemplatesForGuild(L);
-    }, [L, Z.canManageGuild]),
+        null != L && A.canManageGuild && v.Z.loadTemplatesForGuild(L);
+    }, [L, A.canManageGuild]),
         i.useEffect(() => {
             W || k.Z.close();
         }, [W]);
     let F = (0, o.e7)([M.Z], () => M.Z.getCurrentPage()),
         K = (0, o.e7)([g.Z], () => null != L && g.Z.getEnabled(L)),
-        V = (0, o.e7)([S.Z], () => null != L && S.Z.isEmpty(L)),
+        V = (0, o.e7)([C.Z], () => null != L && C.Z.isEmpty(L)),
         Y = (0, b.F)(L).length > 0,
         q = (0, y.Z)(a);
     return (0, r.jsx)(u.Gt, {
@@ -237,17 +237,17 @@ function A() {
                     section: c,
                     theme: R,
                     sidebarTheme: j,
-                    channels: A,
+                    channels: Z,
                     showDirtyGuildTemplateIndicator: H,
                     analyticsLocation: l,
                     memberCount: B,
                 },
-                Z,
+                A,
             )),
             (t = t =
                 {
                     canUnlinkChannels: Y,
-                    canViewGuildAnalytics: Z.canViewGuildAnalytics,
+                    canViewGuildAnalytics: A.canViewGuildAnalytics,
                     onboardingStep: F,
                     onboardingEnabled: K,
                     welcomeScreenEmpty: V,

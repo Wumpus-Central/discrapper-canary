@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(670188),
     p = n(237583),
     f = n(63063),
-    h = n(870569),
-    g = n(345243),
+    g = n(870569),
+    h = n(345243),
     m = n(115530),
     _ = n(981631),
     b = n(388032),
@@ -76,7 +76,7 @@ class I extends i.PureComponent {
                         ? b.intl.formatToPlainString(b.t["6UJ7mh"], { count: this.props.party.length })
                         : b.intl.string(b.t.RZufbH),
                 }),
-                (0, r.jsx)(g.Z, { children: b.intl.string(b.t["0ZHLIi"]) }),
+                (0, r.jsx)(h.Z, { children: b.intl.string(b.t["0ZHLIi"]) }),
             ],
         });
     }
@@ -84,7 +84,7 @@ class I extends i.PureComponent {
         let { onStopListening: e } = this.props;
         return this.isHost()
             ? null
-            : (0, r.jsx)(h.Z, {
+            : (0, r.jsx)(g.Z, {
                   tooltipText: b.intl.string(b.t.LeZSpz),
                   onClick: e,
                   icon: o.Dio,
@@ -92,7 +92,7 @@ class I extends i.PureComponent {
     }
     renderHelpIcon() {
         return this.isHost()
-            ? (0, r.jsx)(h.Z, {
+            ? (0, r.jsx)(g.Z, {
                   tooltipText: b.intl.string(b.t.U7N2Hs),
                   onClick: () => {
                       window.open(f.Z.getArticleURL(_.BhN.SPOTIFY_CONNECTION), "_blank");

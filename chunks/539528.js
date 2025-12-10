@@ -2,7 +2,7 @@ n.d(t, {
     Ep: () => p,
     Hp: () => m,
     PP: () => j,
-    lX: () => A,
+    lX: () => C,
     ob: () => _,
     q_: () => x,
 });
@@ -164,7 +164,7 @@ function T() {
         return {};
     }
 }
-function A(e) {
+function C(e) {
     void 0 === e && (e = {}), g || (0, o.Z)(!1);
     var t = window.history,
         n = b(),
@@ -175,18 +175,18 @@ function A(e) {
         f = a.getUserConfirmation,
         m = void 0 === f ? E : f,
         O = a.keyLength,
-        A = void 0 === O ? 6 : O,
-        C = e.basename ? d(s(e.basename)) : "";
+        C = void 0 === O ? 6 : O,
+        A = e.basename ? d(s(e.basename)) : "";
     function N(e) {
         var t = e || {},
             n = t.key,
             r = t.state,
             i = window.location,
             a = i.pathname + i.search + i.hash;
-        return C && (a = u(a, C)), _(a, r, n);
+        return A && (a = u(a, A)), _(a, r, n);
     }
     function P() {
-        return Math.random().toString(36).substr(2, A);
+        return Math.random().toString(36).substr(2, C);
     }
     var R = h();
     function D(e) {
@@ -225,7 +225,7 @@ function A(e) {
     var k = N(T()),
         U = [k.key];
     function G(e) {
-        return C + p(e);
+        return A + p(e);
     }
     function Z(e, r) {
         var i = "PUSH",
@@ -345,7 +345,7 @@ function A(e) {
     };
     return Q;
 }
-var C = "hashchange",
+var A = "hashchange",
     N = {
         hashbang: {
             encodePath: function (e) {
@@ -401,7 +401,7 @@ function x(e) {
         (0, r.Z)(J, e), (J.length = t.length), S.notifyListeners(J.location, J.action);
     }
     var T = !1,
-        A = null;
+        C = null;
     function x(e, t) {
         return e.pathname === t.pathname && e.search === t.search && e.hash === t.hash;
     }
@@ -412,8 +412,8 @@ function x(e) {
         else {
             var n = v(),
                 r = J.location;
-            if ((!T && x(r, n)) || A === p(n)) return;
-            (A = null), j(n);
+            if ((!T && x(r, n)) || C === p(n)) return;
+            (C = null), j(n);
         }
     }
     function j(e) {
@@ -458,7 +458,7 @@ function x(e) {
                     i = b(f + t),
                     a = R() !== i;
                 if (a) {
-                    (A = t), D(i);
+                    (C = t), D(i);
                     var o = Z.lastIndexOf(p(J.location)),
                         s = Z.slice(0, o + 1);
                     s.push(t),
@@ -479,7 +479,7 @@ function x(e) {
                 var t = p(r),
                     i = b(f + t),
                     a = R() !== i;
-                a && ((A = t), w(i));
+                a && ((C = t), w(i));
                 var o = Z.indexOf(p(J.location));
                 -1 !== o && (Z[o] = t),
                     I({
@@ -500,7 +500,7 @@ function x(e) {
     }
     var K = 0;
     function z(e) {
-        1 === (K += e) && 1 === e ? window.addEventListener(C, L) : 0 === K && window.removeEventListener(C, L);
+        1 === (K += e) && 1 === e ? window.addEventListener(A, L) : 0 === K && window.removeEventListener(A, L);
     }
     var q = !1;
     function Q(e) {
@@ -552,7 +552,7 @@ function j(e) {
         c = void 0 === l ? 6 : l,
         u = h();
     function d(e) {
-        (0, r.Z)(C, e), (C.length = C.entries.length), u.notifyListeners(C.location, C.action);
+        (0, r.Z)(A, e), (A.length = A.entries.length), u.notifyListeners(A.location, A.action);
     }
     function f() {
         return Math.random().toString(36).substr(2, c);
@@ -564,12 +564,12 @@ function j(e) {
         E = p;
     function b(e, t) {
         var r = "PUSH",
-            i = _(e, t, f(), C.location);
+            i = _(e, t, f(), A.location);
         u.confirmTransitionTo(i, r, n, function (e) {
             if (e) {
-                var t = C.index,
+                var t = A.index,
                     n = t + 1,
-                    a = C.entries.slice(0);
+                    a = A.entries.slice(0);
                 a.length > n ? a.splice(n, a.length - n, i) : a.push(i),
                     d({
                         action: r,
@@ -582,10 +582,10 @@ function j(e) {
     }
     function y(e, t) {
         var r = "REPLACE",
-            i = _(e, t, f(), C.location);
+            i = _(e, t, f(), A.location);
         u.confirmTransitionTo(i, r, n, function (e) {
             e &&
-                ((C.entries[C.index] = i),
+                ((A.entries[A.index] = i),
                 d({
                     action: r,
                     location: i,
@@ -593,9 +593,9 @@ function j(e) {
         });
     }
     function O(e) {
-        var t = L(C.index + e, 0, C.entries.length - 1),
+        var t = L(A.index + e, 0, A.entries.length - 1),
             r = "POP",
-            i = C.entries[t];
+            i = A.entries[t];
         u.confirmTransitionTo(i, r, n, function (e) {
             e
                 ? d({
@@ -613,16 +613,16 @@ function j(e) {
         O(1);
     }
     function I(e) {
-        var t = C.index + e;
-        return t >= 0 && t < C.entries.length;
+        var t = A.index + e;
+        return t >= 0 && t < A.entries.length;
     }
     function T(e) {
         return void 0 === e && (e = !1), u.setPrompt(e);
     }
-    function A(e) {
+    function C(e) {
         return u.appendListener(e);
     }
-    var C = {
+    var A = {
         length: g.length,
         action: "POP",
         location: g[m],
@@ -636,7 +636,7 @@ function j(e) {
         goForward: S,
         canGo: I,
         block: T,
-        listen: A,
+        listen: C,
     };
-    return C;
+    return A;
 }

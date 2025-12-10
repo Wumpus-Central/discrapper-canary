@@ -1,9 +1,9 @@
-n.d(e, { G: () => T });
+n.d(e, { G: () => S });
 var i = n(323472),
     l = n(509613),
     s = n(313789),
-    r = n(291011),
-    u = n(392231),
+    u = n(291011),
+    r = n(392231),
     a = n(271524),
     o = n(388032);
 let c = s.n.NOTIFICATIONS_ADVANCED_ACCORDION,
@@ -21,9 +21,9 @@ let c = s.n.NOTIFICATIONS_ADVANCED_ACCORDION,
                 },
             });
         },
-        buildLayout: () => [r.i, u.F, a.l],
+        buildLayout: () => [u.i, r.F, a.l],
     }),
-    T = (0, l.k4)(s.n.NOTIFICATIONS_ADVANCED_CATEGORY, {
+    S = (0, l.k4)(s.n.NOTIFICATIONS_ADVANCED_CATEGORY, {
         useTitle: () => o.intl.string(o.t["31DySj"]),
         buildLayout: () => [d],
     });

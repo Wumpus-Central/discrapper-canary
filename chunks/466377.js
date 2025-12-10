@@ -1,5 +1,5 @@
 n.d(t, {
-    Cg: () => C,
+    Cg: () => A,
     Y0: () => R,
     YA: () => M,
     fM: () => P,
@@ -12,7 +12,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(990547),
     c = n(748780),
     u = n(197723),
@@ -82,7 +82,7 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -90,7 +90,7 @@ function T(e, t) {
     }
     return i;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -99,7 +99,7 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var C = (function (e) {
+var A = (function (e) {
     return (e.SMALL = "small"), (e.MEDIUM = "medium"), (e.LARGE = "large"), (e.DYNAMIC = "dynamic"), e;
 })({});
 let N = Object.freeze({
@@ -123,8 +123,8 @@ function R(e) {
             hideShadow: b = !1,
             onAnimationEnd: O = E.dG,
             returnRef: S,
-            animation: A = "default",
-            parentComponent: C,
+            animation: C = "default",
+            parentComponent: A,
         } = e,
         P = T(e, [
             "transitionState",
@@ -143,13 +143,13 @@ function R(e) {
     i.useContext(m.Z)({
         type: l.ImpressionTypes.PAGE,
         name: l.ImpressionNames.MODAL_ROOT_LEGACY,
-        properties: { variant: C },
+        properties: { variant: A },
     });
     let { reducedMotion: D } = i.useContext(d.Sfi),
         w = (0, d.q_F)(
             {
                 opacity: +!!R,
-                transform: R || D.enabled || "subtle" === A ? "scale(1)" : "scale(0.7)",
+                transform: R || D.enabled || "subtle" === C ? "scale(1)" : "scale(0.7)",
                 config: {
                     duration: 200,
                     easing: c.Z.Easing.out(c.Z.Easing.quad),

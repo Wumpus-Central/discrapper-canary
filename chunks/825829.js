@@ -95,14 +95,14 @@ function I(e) {
 function T(e) {
     return e.type === g.hBH.AUTO_MODERATION_NOTIFICATION;
 }
-function A(e) {
+function C(e) {
     return e.type === g.hBH.AUTO_MODERATION_MESSAGE;
 }
-function C(e, t) {
+function A(e, t) {
     var n, r, i, a, o;
     let [s] = null != (n = e.embeds) ? n : [];
     if (null != s) {
-        if (A(s))
+        if (C(s))
             return null == s ||
                 null == (i = s.fields) ||
                 null ==
@@ -130,23 +130,23 @@ function N(e) {
     return null != (n = null == r ? void 0 : r.rawDescription) ? n : "";
 }
 function P(e) {
-    let t = C(e, s.G.DECISION_OUTCOME);
+    let t = A(e, s.G.DECISION_OUTCOME);
     if (null != t) return t;
 }
 function R(e) {
-    let t = C(e, s.G.QUARANTINE_USER);
+    let t = A(e, s.G.QUARANTINE_USER);
     if (null != t) return t;
 }
 function D(e) {
-    let t = C(e, s.G.QUARANTINE_USER_ACTION);
+    let t = A(e, s.G.QUARANTINE_USER_ACTION);
     if (null != t) return t;
 }
 function w(e) {
-    let t = C(e, s.G.BLOCK_PROFILE_UPDATE_TYPE);
+    let t = A(e, s.G.BLOCK_PROFILE_UPDATE_TYPE);
     if (null != t) return t;
 }
 function x(e) {
-    let t = C(e, s.G.QUARANTINE_EVENT);
+    let t = A(e, s.G.QUARANTINE_EVENT);
     if (null != t) return t;
 }
 function L(e, t, n) {
@@ -195,7 +195,7 @@ function j(e, t) {
         : E.intl.string(E.t["/YzI63"]);
 }
 function M(e, t, n) {
-    let r = C(e, s.G.VOICE_CHANNEL_STATUS_OUTCOME);
+    let r = A(e, s.G.VOICE_CHANNEL_STATUS_OUTCOME);
     if (null == r) return null;
     let i = "blocked" === r ? E.t.cLQrqz : E.t.bma6cs;
     return E.intl.format(i, {
@@ -212,8 +212,8 @@ function k(e, t) {
         u = x(e),
         d = R(e),
         f = P(e),
-        p = C(e, s.G.INTERACTION_CALLBACK_TYPE),
-        m = C(e, s.G.APPLICATION_NAME);
+        p = A(e, s.G.INTERACTION_CALLBACK_TYPE),
+        m = A(e, s.G.APPLICATION_NAME);
     if (null != d) {
         let e = L(l, c, u);
         if (null != e) return e;
@@ -279,14 +279,14 @@ function G(e) {
 }
 function Z(e) {
     var t;
-    let n = C(e, l.D.NOTIFICATION_TYPE),
-        r = C(e, l.D.JOIN_ATTEMPTS),
-        i = C(e, l.D.RAID_DATETIME),
-        a = C(e, l.D.DMS_SENT),
-        o = C(e, l.D.RAID_TYPE),
-        s = C(e, l.D.RESOLVED_REASON),
-        c = C(e, l.D.DECISION_ID),
-        u = C(e, l.D.SUSPICIOUS_MENTION_ACTIVITY_UNTIL);
+    let n = A(e, l.D.NOTIFICATION_TYPE),
+        r = A(e, l.D.JOIN_ATTEMPTS),
+        i = A(e, l.D.RAID_DATETIME),
+        a = A(e, l.D.DMS_SENT),
+        o = A(e, l.D.RAID_TYPE),
+        s = A(e, l.D.RESOLVED_REASON),
+        c = A(e, l.D.DECISION_ID),
+        u = A(e, l.D.SUSPICIOUS_MENTION_ACTIVITY_UNTIL);
     return {
         notificationType: null != (t = G(n)) ? t : void 0,
         joinAttempts: null != r ? parseInt(r) : void 0,
@@ -299,23 +299,23 @@ function Z(e) {
     };
 }
 function B(e) {
-    let t = C(e, s.G.CHANNEL_ID),
-        n = C(e, s.G.ALERT_ACTIONS_EXECUTION),
+    let t = A(e, s.G.CHANNEL_ID),
+        n = A(e, s.G.ALERT_ACTIONS_EXECUTION),
         r = (0, m.t)(n);
     return {
         content: N(e),
-        ruleName: C(e, s.G.RULE_NAME),
-        decisionId: C(e, s.G.DECISION_ID),
-        keyword: C(e, s.G.KEYWORD),
-        keywordMatchedContent: C(e, s.G.KEYWORD_MATCHED_CONTENT),
-        flaggedMessageId: C(e, s.G.FLAGGED_MESSAGE_ID),
-        timeoutDuration: C(e, s.G.TIMEOUT_DURATION),
-        quarantineType: C(e, s.G.QUARANTINE_USER),
-        quarantineAction: C(e, s.G.QUARANTINE_USER_ACTION),
-        decisionReason: C(e, s.G.DECISION_REASON),
-        applicationName: C(e, s.G.APPLICATION_NAME),
-        interactionUserId: C(e, s.G.INTERACTION_USER_ID),
-        interactionCallbackType: C(e, s.G.INTERACTION_CALLBACK_TYPE),
+        ruleName: A(e, s.G.RULE_NAME),
+        decisionId: A(e, s.G.DECISION_ID),
+        keyword: A(e, s.G.KEYWORD),
+        keywordMatchedContent: A(e, s.G.KEYWORD_MATCHED_CONTENT),
+        flaggedMessageId: A(e, s.G.FLAGGED_MESSAGE_ID),
+        timeoutDuration: A(e, s.G.TIMEOUT_DURATION),
+        quarantineType: A(e, s.G.QUARANTINE_USER),
+        quarantineAction: A(e, s.G.QUARANTINE_USER_ACTION),
+        decisionReason: A(e, s.G.DECISION_REASON),
+        applicationName: A(e, s.G.APPLICATION_NAME),
+        interactionUserId: A(e, s.G.INTERACTION_USER_ID),
+        interactionCallbackType: A(e, s.G.INTERACTION_CALLBACK_TYPE),
         embedChannel: p.Z.getChannel(t),
         embedChannelId: t,
         alertActionsExecution: null != r ? r : void 0,
@@ -345,6 +345,6 @@ function H(e) {
     }
 }
 function Y(e) {
-    return C(e, l.D.ACTION_BY_USER_ID);
+    return A(e, l.D.ACTION_BY_USER_ID);
 }
 let W = void 0;

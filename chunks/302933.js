@@ -2,8 +2,8 @@ n.d(t, { J: () => f });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    s = n.n(i),
-    o = n(205120),
+    o = n.n(i),
+    s = n(467721),
     a = n(873546),
     c = n(435935),
     u = n(481060),
@@ -19,8 +19,8 @@ let f = l.memo(function (e) {
                 friction: 12,
             },
         });
-    return (0, r.jsxs)(o.animated.div, {
-        className: s()([g.countDownWrapper, a.tq && g.mobileWrapper]),
+    return (0, r.jsxs)(s.animated.div, {
+        className: o()([g.countDownWrapper, a.tq && g.mobileWrapper]),
         role: "status",
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(481060),
@@ -17,11 +17,11 @@ function f(e) {
         name: i,
     });
 }
-function h(e) {
+function g(e) {
     let { loadId: t } = e,
         n = s.Z.useField("categoryId"),
-        h = (0, c.q)(),
-        g = (0, o.E)({ categoryId: n }),
+        g = (0, c.q)(),
+        h = (0, o.E)({ categoryId: n }),
         m = i.useCallback(
             (e) => {
                 (0, u.I)({
@@ -33,9 +33,9 @@ function h(e) {
         ),
         _ = i.useMemo(
             () =>
-                null == h
+                null == g
                     ? []
-                    : h.map((e) => {
+                    : g.map((e) => {
                           let [t, n] = e;
                           return {
                               id: "".concat(t),
@@ -45,9 +45,9 @@ function h(e) {
                               }),
                           };
                       }),
-            [h],
+            [g],
         );
-    return null == h
+    return null == g
         ? null
         : (0, r.jsxs)("div", {
               className: p.container,
@@ -59,7 +59,7 @@ function h(e) {
                   }),
                   (0, r.jsx)(a.ZP, {
                       items: _,
-                      title: g,
+                      title: h,
                       onSelect: m,
                       selected: "".concat(n),
                       "aria-label": d.intl.string(d.t.Ng5cTK),

@@ -232,7 +232,7 @@ function E(e) {
             );
         }, [D, B, l, T, A]),
         H = l.joinType === j.A.DISCOVERABLE && l.settingsView === _.U.ELIGIBLE_DISABLED,
-        z = null != E.description && I.primaryCategoryId !== O.o3 && I.keywords.length > 0;
+        W = null != E.description && I.primaryCategoryId !== O.o3 && I.keywords.length > 0;
     return (0, r.jsx)(a.Z, {
         message: H ? C.intl.string(C.t.V2G2Yr) : void 0,
         onSaveText: H ? C.intl.string(C.t["qjtt/p"]) : void 0,
@@ -240,7 +240,7 @@ function E(e) {
         errorMessage: Z,
         onReset: L,
         onSave: F,
-        disabled: H && !z,
+        disabled: H && !W,
     });
 }
 function I() {

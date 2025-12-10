@@ -76,10 +76,10 @@ let d = (e) => {
             "aria-label": S,
             "aria-describedby": I,
             ref: T,
-            buttonRef: A,
+            buttonRef: C,
         } = e,
-        C = i.useRef(null),
-        N = null != T ? T : C;
+        A = i.useRef(null),
+        N = null != T ? T : A;
     return (0, r.jsxs)(t, {
         ref: N,
         className: s,
@@ -95,7 +95,7 @@ let d = (e) => {
             (0, r.jsx)(
                 a.P,
                 u(l({}, v), {
-                    innerRef: A,
+                    innerRef: C,
                     focusProps: l({ ringTarget: N }, d),
                     className: o.focusTarget,
                     "aria-label": S,

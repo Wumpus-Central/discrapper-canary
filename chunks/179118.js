@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(590783),
     I = n(699516),
     T = n(246946),
-    A = n(594174),
-    C = n(572004),
+    C = n(594174),
+    A = n(572004),
     N = n(669079),
     P = n(74538),
     R = n(51144),
@@ -48,7 +48,7 @@ function k(e) {
         } = e,
         [O, v] = i.useState(p.kO8.Modes.DEFAULT),
         I = (0, c.e7)([T.Z], () => T.Z.enabled),
-        A = d || (null != l && null != _),
+        C = d || (null != l && null != _),
         k = (null == a ? void 0 : a.productLine) === w.POd.COLLECTIBLES,
         G = (0, b.Z)(),
         { selectedGiftingPromotionReward: Z } = (0, D.wD)(),
@@ -64,12 +64,12 @@ function k(e) {
                   ? null
                   : ((e =
                         s.interval === x.rV.MONTH
-                            ? A
+                            ? C
                                 ? V
                                     ? B.monthGiftText
                                     : L.t["4ZJ+7Z"]
                                 : L.t["P+z55d"]
-                            : A
+                            : C
                               ? V
                                   ? B.yearGiftText
                                   : L.t.p0pZXP
@@ -94,7 +94,7 @@ function k(e) {
                     }),
                     a,
                 ),
-                (0, C.JG)(
+                (0, A.JG)(
                     e,
                     () => v(p.kO8.Modes.SUCCESS),
                     () => v(p.kO8.Modes.ERROR),
@@ -128,7 +128,7 @@ function k(e) {
                                 mode: O,
                                 text: e,
                                 onCopy: (e) => K(e, t),
-                                supportsCopy: C.wS,
+                                supportsCopy: A.wS,
                                 className: j.__invalid_copyInput,
                                 buttonColor: f.Tt.LINK,
                                 buttonLook: f.iL.LINK,
@@ -222,7 +222,7 @@ function k(e) {
                       }),
                       children: W(),
                   }),
-                  (d && null != _ && null == m) || A ? Q() : q(),
+                  (d && null != _ && null == m) || C ? Q() : q(),
               ],
           });
 }
@@ -239,10 +239,10 @@ let U = (e) => {
             isLoading: v.Z.isFetching(),
         })),
         T = Array.from(y.keys()).sort((e, t) => v.Z.compare(e, t)),
-        C = (0, c.e7)([I.Z], () => I.Z.getFriendIDs()),
-        N = l().difference(C, T),
+        A = (0, c.e7)([I.Z], () => I.Z.getFriendIDs()),
+        N = l().difference(A, T),
         P = [...T, ...N],
-        D = (0, c.e7)([A.default], () => A.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
+        D = (0, c.e7)([C.default], () => C.default.filter((e) => P.includes(e.id) && !e.bot), [P]);
     if (null == D || 0 === D.length) return null;
     let w = l().sortBy(D, (e) => P.indexOf(e.id));
     return (0, r.jsxs)("div", {

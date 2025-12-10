@@ -10,7 +10,7 @@ var i = n(54381),
     u = n(388032),
     m = n(172107);
 let j = (e) => {
-    var t, n, j, p, b, h, x;
+    var t, n, j, p, b, x, h;
     let { channel: f, onClose: v, transitionState: y } = e,
         [g, O] = o.useState(null != (j = f.defaultReactionEmoji) ? j : null),
         [N, w] = o.useState(!1),
@@ -20,8 +20,8 @@ let j = (e) => {
             (null != (p = null == (t = f.defaultReactionEmoji) ? void 0 : t.emojiId) ? p : null) !==
             (null != (b = null == g ? void 0 : g.emojiId) ? b : null),
         C =
-            (null != (h = null == (n = f.defaultReactionEmoji) ? void 0 : n.emojiName) ? h : null) !==
-            (null != (x = null == g ? void 0 : g.emojiName) ? x : null),
+            (null != (x = null == (n = f.defaultReactionEmoji) ? void 0 : n.emojiName) ? x : null) !==
+            (null != (h = null == g ? void 0 : g.emojiName) ? h : null),
         R = _ || C,
         B = (e) => {
             O(

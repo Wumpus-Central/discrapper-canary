@@ -123,16 +123,16 @@ let T = o.forwardRef(function (e, t) {
         b(g({}, i), {
             ref: t,
             role: "tabpanel",
-            id: A(r),
+            id: C(r),
             tabIndex: -1,
             children: n,
         }),
     );
 });
-function A(e) {
+function C(e) {
     return "".concat(e.replace(/\s+/g, "-").toLowerCase(), "-tab");
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return;
     let n = {};
     return (
@@ -147,7 +147,7 @@ class N extends (r = o.Component) {
         let { color: e, id: t, selectedItem: n, itemType: r } = this.props,
             { hover: i, active: a } = this.state;
         if (null != e) {
-            if ("side" === r) return (null != t && n === t) || a ? C(e, "Selected") : i ? C(e, "Hover") : C(e);
+            if ("side" === r) return (null != t && n === t) || a ? A(e, "Selected") : i ? A(e, "Hover") : A(e);
             if ("top" === r)
                 if (n === t)
                     return {
@@ -206,7 +206,7 @@ class N extends (r = o.Component) {
             style: this.getStyle(),
             role: "tab",
             "aria-selected": g,
-            "aria-controls": g ? A("".concat(n)) : void 0,
+            "aria-controls": g ? C("".concat(n)) : void 0,
             "aria-disabled": s,
             tabIndex: g ? 0 : -1,
             onMouseEnter: null != i ? this.handleMouseOver : void 0,

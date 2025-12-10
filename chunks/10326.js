@@ -119,8 +119,8 @@ let h = {
                 estimatedTooltipHeight: I,
             } = e,
             T = i.useRef(null),
-            A = i.useRef(null),
-            C = i.useMemo(
+            C = i.useRef(null),
+            A = i.useMemo(
                 () =>
                     ({
                         bronze: u.VU.PREMIUM_TENURE_1_MONTH,
@@ -134,12 +134,12 @@ let h = {
                     })[_],
                 [_],
             ),
-            N = null != C ? (0, c.J)(C) : null,
+            N = null != A ? (0, c.J)(A) : null,
             P = i.useMemo(() => {
-                if (null == C) return "";
-                let e = u.vK[C];
+                if (null == A) return "";
+                let e = u.vK[A];
                 return (d.intl.string(d.t.lG6a5x) + " " + d.intl.string(e.nameUnformatted)).toLocaleUpperCase();
-            }, [C]),
+            }, [A]),
             R = i.useMemo(() => {
                 if (!a || null == N) return;
                 let e = g
@@ -209,9 +209,9 @@ let h = {
                         ),
                         (0, r.jsx)(
                             l.B,
-                            m(p({ targetElementRef: A }, D), {
+                            m(p({ targetElementRef: C }, D), {
                                 children: (0, r.jsx)(s.Button, {
-                                    buttonRef: A,
+                                    buttonRef: C,
                                     variant: "primary",
                                     text: "Right",
                                 }),

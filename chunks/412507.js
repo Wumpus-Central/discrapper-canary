@@ -63,7 +63,7 @@ function d(e, t, r, n, a = window) {
                 ? r
                 : {
                       set(e) {
-                          N(() => {
+                          f(() => {
                               r.set.call(this, e);
                           }, 0),
                               i && i.set && i.set.call(this, e);
@@ -132,10 +132,10 @@ function T(e) {
 function A(...e) {
     return T("requestAnimationFrame")(...e);
 }
-function N(...e) {
+function f(...e) {
     return T("setTimeout")(...e);
 }
-var f = (((i = f || {})[(i["2D"] = 0)] = "2D"), (i[(i.WebGL = 1)] = "WebGL"), (i[(i.WebGL2 = 2)] = "WebGL2"), i);
+var N = (((i = N || {})[(i["2D"] = 0)] = "2D"), (i[(i.WebGL = 1)] = "WebGL"), (i[(i.WebGL2 = 2)] = "WebGL2"), i);
 let O = (e) =>
     n
         ? (...t) => {
@@ -149,12 +149,12 @@ let O = (e) =>
         : e;
 for (
     var h = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
-        D = "undefined" == typeof Uint8Array ? [] : new Uint8Array(256),
-        S = 0;
-    S < h.length;
-    S++
+        S = "undefined" == typeof Uint8Array ? [] : new Uint8Array(256),
+        D = 0;
+    D < h.length;
+    D++
 )
-    D[h.charCodeAt(S)] = S;
+    S[h.charCodeAt(D)] = D;
 var C = function (e) {
     var t,
         r = new Uint8Array(e),
@@ -311,7 +311,7 @@ function v(e, t, r, n, a, i, o, _) {
             }
     return s;
 }
-class w {
+class M {
     reset() {
         this.pendingCanvasMutations.clear(),
             this.restoreHandlers.forEach((e) => {
@@ -438,7 +438,7 @@ class w {
                 let { base64: n, type: a, width: i, height: o } = t;
                 this.mutationCb({
                     id: r,
-                    type: f["2D"],
+                    type: N["2D"],
                     commands: [
                         {
                             property: "clearRect",
@@ -491,10 +491,10 @@ class w {
                             return function (..._) {
                                 return (
                                     p(this.canvas, r, n, a, !0) ||
-                                        N(() => {
+                                        f(() => {
                                             let r = m(_, t, this);
                                             e(this.canvas, {
-                                                type: f["2D"],
+                                                type: N["2D"],
                                                 property: o,
                                                 args: r,
                                             });
@@ -508,7 +508,7 @@ class w {
                         let r = d(t.CanvasRenderingContext2D.prototype, o, {
                             set(t) {
                                 e(this.canvas, {
-                                    type: f["2D"],
+                                    type: N["2D"],
                                     property: o,
                                     args: [t],
                                     setter: !0,
@@ -524,9 +524,9 @@ class w {
             o = (function (e, t, r, n, a, i) {
                 let o = [];
                 return (
-                    o.push(...v(t.WebGLRenderingContext.prototype, f.WebGL, e, r, n, a, i, t)),
+                    o.push(...v(t.WebGLRenderingContext.prototype, N.WebGL, e, r, n, a, i, t)),
                     void 0 !== t.WebGL2RenderingContext &&
-                        o.push(...v(t.WebGL2RenderingContext.prototype, f.WebGL2, e, r, n, a, i, t)),
+                        o.push(...v(t.WebGL2RenderingContext.prototype, N.WebGL2, e, r, n, a, i, t)),
                     () => {
                         o.forEach((e) => e());
                     }
@@ -665,7 +665,7 @@ class w {
             this.pendingCanvasMutations.delete(e);
     }
 }
-let M = {
+let w = {
         low: {
             sampling: { canvas: 1 },
             dataURLOptions: {
@@ -705,7 +705,7 @@ let M = {
                     enableManualSnapshot: r,
                     recordCanvas: !0,
                     getCanvasManager: (e) => {
-                        let a = new w({
+                        let a = new M({
                             ...e,
                             enableManualSnapshot: r,
                             maxCanvasSize: n,
@@ -717,7 +717,7 @@ let M = {
                         });
                         return t(a), a;
                     },
-                    ...(M[e || "medium"] || M.medium),
+                    ...(w[e || "medium"] || w.medium),
                 };
             },
             async snapshot(e) {

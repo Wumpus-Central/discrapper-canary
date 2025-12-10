@@ -98,9 +98,9 @@ let S = i.forwardRef(function (e, t) {
         } = e,
         I = O(e, ["children", "className", "subsection", "onAction", "onClose", "aria-label", "aria-labelledby"]);
     let { themeType: T } = (0, f.z)(),
-        { analyticsLocations: A } = (0, l.ZP)(),
-        { context: C } = (0, c.KZ)();
-    return T === _.l.MODAL || T === _.l.MODAL_V2 || (null == C ? void 0 : C.userId) == null
+        { analyticsLocations: C } = (0, l.ZP)(),
+        { context: A } = (0, c.KZ)();
+    return T === _.l.MODAL || T === _.l.MODAL_V2 || (null == A ? void 0 : A.userId) == null
         ? (0, r.jsx)("article", {
               "aria-label": v,
               "aria-labelledby": S,
@@ -130,10 +130,10 @@ let S = i.forwardRef(function (e, t) {
                               E(
                                   {
                                       section: p.oh.ACTIVITY,
-                                      sourceAnalyticsLocations: A,
+                                      sourceAnalyticsLocations: C,
                                       subsection: a,
                                   },
-                                  C,
+                                  A,
                               ),
                           ),
                           null == b || b();

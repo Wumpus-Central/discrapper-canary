@@ -7,7 +7,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(442837),
     c = n(704215),
     u = n(681715),
@@ -77,7 +77,7 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -85,7 +85,7 @@ function T(e, t) {
     }
     return i;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -94,7 +94,7 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let C = 20,
+let A = 20,
     N = 18,
     P = 77,
     R = {
@@ -125,8 +125,8 @@ function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
     return {
         "--custom-emoji-sprite-size": "".concat(t, "px"),
-        "--custom-emoji-sprite-row": Math.floor(e / C),
-        "--custom-emoji-sprite-col": e % C,
+        "--custom-emoji-sprite-row": Math.floor(e / A),
+        "--custom-emoji-sprite-col": e % A,
     };
 }
 function x(e) {
@@ -154,19 +154,19 @@ function x(e) {
             "spriteSize",
             "ref",
         ]);
-    let [A, C] = i.useState(!1),
+    let [C, A] = i.useState(!1),
         [N, D] = i.useState(50),
-        x = A || a,
+        x = C || a,
         L = (0, h.l)(y, "emojiButton", x ? "Hovered" : "Normal"),
         j = w(N, b),
         M = i.useCallback(() => {
             if (x) return;
             let e = Math.floor(Math.random() * P);
-            C(!0), D(e), (0, _.x)(E.qR.EmojiButtonMouseEntered);
-        }, [x, C, D]),
+            A(!0), D(e), (0, _.x)(E.qR.EmojiButtonMouseEntered);
+        }, [x, A, D]),
         k = i.useCallback(() => {
-            C(!1);
-        }, [C]),
+            A(!1);
+        }, [A]),
         U = i.useCallback(() => (0, _.x)(E.qR.EmojiButtonFocused), []),
         G = (0, l.e7)([f.Z], () => f.Z.useReducedMotion);
     return (0, r.jsx)(
@@ -250,9 +250,9 @@ function L(e) {
     let E = (0, m.B4)(),
         [O, S] = (0, p.US)(E ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
         I = _ && O === c.z.TRIAL_NUX_EMOJI_BUTTON,
-        A = !a && I,
-        C = i.useRef(null),
-        N = null != l ? l : C,
+        C = !a && I,
+        A = i.useRef(null),
+        N = null != l ? l : A,
         P = (e) =>
             (0, r.jsx)(
                 x,
@@ -281,7 +281,7 @@ function L(e) {
             );
     return null == n
         ? P({})
-        : A
+        : C
           ? (0, r.jsx)(d.aML, {
                 "data-migration-pending": !0,
                 targetElementRef: N,

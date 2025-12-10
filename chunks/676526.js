@@ -28,8 +28,8 @@ var i = n(120356),
     S = n(157813),
     I = n(25827),
     T = n(131951),
-    A = n(636449),
-    C = n(566620),
+    C = n(636449),
+    A = n(566620),
     N = n(884338),
     P = n(617552),
     R = n(981631),
@@ -77,7 +77,7 @@ function M(e) {
                 null != a &&
                     (0, P.Z)({
                         onConfirm: async () => {
-                            await (0, C.nJ)(s, a.id), m.openChannelCallPopout(a);
+                            await (0, A.nJ)(s, a.id), m.openChannelCallPopout(a);
                         },
                     });
         };
@@ -135,7 +135,7 @@ function M(e) {
                         basis: "50%",
                         align: p.Z.Align.CENTER,
                         children: [
-                            U || (0, A.R)()
+                            U || (0, C.R)()
                                 ? null
                                 : (0, r.jsx)(v.Z, {
                                       className: x.rightPipIcon,

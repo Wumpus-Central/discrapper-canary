@@ -50,8 +50,8 @@ function S(e) {
 }
 let I = 8,
     T = 4,
-    A = 4,
-    C = 40,
+    C = 4,
+    A = 40,
     N = 6;
 function P(e, t) {
     return (0, r.jsx)(f.Z, {
@@ -79,7 +79,7 @@ let w = {
     matches: (e, t, n, r, i) => n.length > 1,
     queryResults(e, t, n, r, i) {
         let a = r.allowSoundmoji && (0, o.dX)({ location: "queryResults" }),
-            s = r.allowStickers || a ? 0 : C,
+            s = r.allowStickers || a ? 0 : A,
             u = b.rnv + s,
             {
                 emojis: { unlocked: d },
@@ -107,7 +107,7 @@ let w = {
         a &&
             ((p = m.ZP.querySoundmoji(n, e)
                 .map((e) => ({ sound: e }))
-                .slice(0, A)),
+                .slice(0, C)),
             "-" === n[0] && (p = p.filter((e) => e.sound.name === n)));
         let _ = d.slice(0, Math.max(N, u - f.length - p.length));
         return {

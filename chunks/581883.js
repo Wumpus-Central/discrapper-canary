@@ -62,7 +62,7 @@ let y = {
     S = !1,
     I = new p.Z("UserSettingsProtoStore"),
     T = new _.Z("UserSettingsProtoStore");
-function A(e) {
+function C(e) {
     let { userSettingsProto: t } = e;
     null != t && ((y.proto = t), a()("string" != typeof y.proto, "UserSettingsProto cannot be a string"));
     let { proto: n, isDirty: r, cleanupFuncs: i } = (0, h.xt)(y.proto, m.Z[g.yP.PRELOADED_USER_SETTINGS]);
@@ -77,7 +77,7 @@ function A(e) {
         }),
         P();
 }
-function C() {
+function A() {
     P();
 }
 function N() {
@@ -267,9 +267,9 @@ let G = new U(f.Z, {
     USER_SETTINGS_PROTO_UPDATE: w,
     USER_SETTINGS_PROTO_ENQUEUE_UPDATE: w,
     USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: x,
-    CONNECTION_OPEN: A,
-    CONNECTION_CLOSED: C,
-    CONNECTION_RESUMED: C,
+    CONNECTION_OPEN: C,
+    CONNECTION_CLOSED: A,
+    CONNECTION_RESUMED: A,
     OVERLAY_INITIALIZE: D,
     LOGOUT: N,
 });

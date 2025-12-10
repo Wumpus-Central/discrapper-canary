@@ -23,8 +23,8 @@ var c = n(748721),
     S = n(513566),
     I = n(534713),
     T = n(358085),
-    A = n(703656),
-    C = n(284737),
+    C = n(703656),
+    A = n(284737),
     N = n(473159),
     P = n(846519),
     R = n(579806),
@@ -51,7 +51,7 @@ let V = (0, c.createRoot)(F),
 function Y(e, t, n) {
     var r;
     let i = null != n ? new URLSearchParams(n) : null;
-    (null != (r = H[t]) && r.call(H, i)) || (0, A.uL)(t);
+    (null != (r = H[t]) && r.call(H, i)) || (0, C.uL)(t);
 }
 let W = (e) => V.render((0, l.jsx)(w.w, { children: (0, l.jsx)(D.Z, { children: (0, l.jsx)(e, {}) }) }));
 if (null != R.Z) {
@@ -88,14 +88,14 @@ else {
             v.ZP.on("HELP_OPEN", () => window.open(y.Z.getCommunityURL()));
         let e = new P.sW(B, () => v.ZP.purgeMemory());
         v.ZP.on("MAIN_WINDOW_BLUR", () => {
-            e.delay(), v.ZP.setFocused(!1), (0, C.T_)(window, !1);
+            e.delay(), v.ZP.setFocused(!1), (0, A.T_)(window, !1);
         }),
             v.ZP.on("MAIN_WINDOW_FOCUS", () => {
-                e.cancel(), v.ZP.setFocused(!0), (0, C.T_)(window, !0);
+                e.cancel(), v.ZP.setFocused(!0), (0, A.T_)(window, !0);
             }),
             v.ZP.on("MAIN_WINDOW_PATH", Y),
             v.ZP.on("MAIN_WINDOW_HIDDEN", () => {
-                (0, C.al)(window);
+                (0, A.al)(window);
             });
     }
     h.Z.initialize(),

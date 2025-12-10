@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(78839),
     I = n(267642),
     T = n(74538),
-    A = n(937615),
-    C = n(518062),
+    C = n(937615),
+    A = n(518062),
     N = n(474936),
     P = n(231338),
     R = n(388032),
@@ -167,7 +167,7 @@ function j(e) {
             (z = R.intl.format(R.t.eb0xgS, { expirationDate: u.endsAt.toDate() })),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(C.Z, {
+                (0, r.jsx)(A.Z, {
                     "data-migration-pending": !0,
                     onClose: O,
                 }),
@@ -190,7 +190,7 @@ function j(e) {
                                 (0, r.jsx)(E.Z9, { children: R.intl.string(R.t.iqhIp4) }),
                                 (0, r.jsx)(E.B1, {
                                     label: R.intl.format(R.t["Vg+LRr"], { subscriptionCount: 1 }),
-                                    value: (0, A.og)((0, A.T4)(Y, o.currency), W, K),
+                                    value: (0, C.og)((0, C.T4)(Y, o.currency), W, K),
                                     className: D.invoiceCancelRow,
                                 }),
                                 null != B && B.length > 0

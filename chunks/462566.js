@@ -75,7 +75,7 @@ let y = function (e) {
             postalCode: "",
         }),
         [I, T] = i.useState({}),
-        [A, C] = i.useState({}),
+        [C, A] = i.useState({}),
         { setFocusLockDisabled: N } = i.useContext(s.M);
     i.useEffect(() => () => {
         void 0 !== N && N(!1);
@@ -95,7 +95,7 @@ let y = function (e) {
         [I, v],
     );
     function w() {
-        C(D());
+        A(D());
     }
     i.useEffect(() => {
         let e = y.cardNumber && y.cardExpiry && y.cardCvc && 0 === Object.keys(D(!0)).length;
@@ -170,13 +170,13 @@ let y = function (e) {
         if ("name" !== t && "country" !== t && "postalCode" !== t) return;
         let n = g({}, v),
             r = g({}, I),
-            i = { name: A.name };
+            i = { name: C.name };
         I[t] || "" === e || (r[t] = !0),
             (n[t] = e),
             r[t] && "" === e ? "name" === t && (i.name = p.intl.string(p.t.lIkVsi)) : delete i[t],
             S(n),
             T(r),
-            C(i);
+            A(i);
     }
     function j() {
         var e;
@@ -211,7 +211,7 @@ let y = function (e) {
             j(),
             (0, r.jsx)(d.Z, {
                 form: x,
-                errors: A,
+                errors: C,
                 formError: n,
                 values: v,
                 onFieldChange: L,

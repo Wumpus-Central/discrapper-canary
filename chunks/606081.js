@@ -68,14 +68,14 @@ f.Image = function (e) {
     let t = e.filter((e) => null != e && "" !== e);
     return 0 === t.length ? null : 1 === t.length ? t[0] : t;
 };
-var h =
-        (((i = h || {}).DAMAGED = "http://schema.org/DamagedCondition"),
+var g =
+        (((i = g || {}).DAMAGED = "http://schema.org/DamagedCondition"),
         (i.NEW = "http://schema.org/NewCondition"),
         (i.REFURBISHED = "http://schema.org/RefurbishedCondition"),
         (i.USED = "http://schema.org/UsedCondition"),
         i),
-    g =
-        (((l = g || {}).DISCONTINUED = "http://schema.org/Discontinued"),
+    h =
+        (((l = h || {}).DISCONTINUED = "http://schema.org/Discontinued"),
         (l.IN_STOCK = "http://schema.org/InStock"),
         (l.IN_STORE_ONLY = "http://schema.org/InStoreOnly"),
         (l.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability"),
@@ -88,7 +88,7 @@ var h =
 function m(e) {
     return d("Offer", e);
 }
-(m.ItemConditions = h), (m.ItemAvailability = g);
+(m.ItemConditions = g), (m.ItemAvailability = h);
 var _ = (((a = _ || {}).YEARLY = "ANN"), (a.MONTHLY = "MON"), a);
 function b(e) {
     return d("QuantitativeValue", e);

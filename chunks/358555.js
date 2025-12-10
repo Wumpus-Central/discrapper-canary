@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => C });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -152,7 +152,7 @@ function T(e) {
               }),
           });
 }
-function A(e) {
+function C(e) {
     let { guild: t, disableBoostClick: n } = e,
         i = !1;
     return (0, l.Z)(t)

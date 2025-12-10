@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -11,9 +11,9 @@ var i = n(481060),
     d = n(170245),
     p = n(981631),
     f = n(388032),
-    h = n(475823);
-function g(e) {
-    let { user: t, nickname: n, status: g, isFocused: m } = e,
+    g = n(475823);
+function h(e) {
+    let { user: t, nickname: n, status: h, isFocused: m } = e,
         { analyticsLocations: _ } = (0, a.ZP)(),
         b = (e) => {
             null == e || e.stopPropagation(),
@@ -27,7 +27,7 @@ function g(e) {
         E = (e) => {
             null == e || e.stopPropagation(), s.Z.ignore(t.id);
         },
-        O = g === p.Skl.OFFLINE ? p.Skl.UNKNOWN : g;
+        O = h === p.Skl.OFFLINE ? p.Skl.UNKNOWN : h;
     return (0, r.jsx)(u.Z, {
         isFocused: m,
         user: t,
@@ -56,17 +56,17 @@ function g(e) {
                 ],
             });
             return (0, r.jsxs)("div", {
-                className: h.listItemContents,
+                className: g.listItemContents,
                 children: [
                     (0, r.jsx)(d.Z, {
                         user: t,
                         hovered: e,
                         status: O,
                         subText: n,
-                        className: h.__invalid_userInfo,
+                        className: g.__invalid_userInfo,
                     }),
                     (0, r.jsx)("div", {
-                        className: h.actions,
+                        className: g.actions,
                         children: l,
                     }),
                 ],

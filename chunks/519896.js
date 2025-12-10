@@ -26,16 +26,16 @@ function g(e) {
         } = e,
         { data: I } = (0, c.H)(y),
         T = null == I ? void 0 : I[0],
-        { data: A } = (0, l.Z)(y),
-        C = i.useMemo(() => {
+        { data: C } = (0, l.Z)(y),
+        A = i.useMemo(() => {
             var e;
-            return (null == A ? void 0 : A.thumbnail) != null &&
-                null != (e = p.Z.toURLSafe((0, f._W)(g, A.thumbnail, 256)))
+            return (null == C ? void 0 : C.thumbnail) != null &&
+                null != (e = p.Z.toURLSafe((0, f._W)(g, C.thumbnail, 256)))
                 ? e
                 : void 0;
-        }, [g, null == A ? void 0 : A.thumbnail]),
+        }, [g, null == C ? void 0 : C.thumbnail]),
         N = i.useMemo(() => {
-            let e = null == A ? void 0 : A.benefits;
+            let e = null == C ? void 0 : C.benefits;
             if (null != e && 0 !== e.length)
                 return e.map((e) => ({
                     id: e.id,
@@ -43,12 +43,12 @@ function g(e) {
                     description: e.description,
                     icon: (0, u.n)(g, e.icon),
                 }));
-        }, [g, null == A ? void 0 : A.benefits]),
+        }, [g, null == C ? void 0 : C.benefits]),
         { openModal: P, subscriptionPurchaseButtonState: R } = (0, d.Z)({
             skuId: y,
             initialSubscribeForGuild: null != O ? O : void 0,
         });
-    return null == A
+    return null == C
         ? null
         : (0, r.jsx)(_.A, {
               appId: g,
@@ -81,9 +81,9 @@ function g(e) {
                                 ),
                             )
                           : void 0,
-                  description: null != (t = A.description) ? t : void 0,
-                  imgSrc: C,
-                  title: null != (n = null == T ? void 0 : T.name) ? n : A.summary,
+                  description: null != (t = C.description) ? t : void 0,
+                  imgSrc: A,
+                  title: null != (n = null == T ? void 0 : T.name) ? n : C.summary,
                   tag: (0, r.jsx)(o.Z, { type: E }),
                   FallbackIcon: s.Vh5,
               }),

@@ -185,8 +185,8 @@ let v = [
         i.useEffect(() => {
             I.current || null == b || ((I.current = !0), O(b));
         }, [b, y]);
-        let { isLoadedForPremiumSKUs: T, selectedPlan: A } = (0, d.rC)({ subscriptionPlanId: y });
-        return !p && null != h && T && E && null != A
+        let { isLoadedForPremiumSKUs: T, selectedPlan: C } = (0, d.rC)({ subscriptionPlanId: y });
+        return !p && null != h && T && E && null != C
             ? (0, r.jsxs)("div", {
                   className: g.verticalContainerCentered,
                   children: [
@@ -204,7 +204,7 @@ let v = [
                           onClose: l,
                           onComplete: c,
                           paymentContextOverrides: {
-                              selectedPlan: A,
+                              selectedPlan: C,
                               setSelectedPlanId: O,
                           },
                       }),
@@ -213,7 +213,7 @@ let v = [
               })
             : (0, r.jsx)(f.T, {});
     },
-    A = {
+    C = {
         isGift: {
             label: "Is Gift",
             type: "boolean",
@@ -225,7 +225,7 @@ let v = [
             defaultValue: !0,
         },
     },
-    C = (0, p.F)(),
+    A = (0, p.F)(),
     N = {
         title: "Checkout Review Step",
         stories: [
@@ -238,11 +238,11 @@ let v = [
                         skuId: {
                             label: "SKU ID",
                             type: "select",
-                            options: C.options,
-                            defaultValue: C.defaultValue,
+                            options: A.options,
+                            defaultValue: A.defaultValue,
                         },
                     },
-                    A,
+                    C,
                 ),
             },
             {
@@ -267,7 +267,7 @@ let v = [
                             defaultValue: m.Si.TIER_0,
                         },
                     },
-                    A,
+                    C,
                 ),
             },
         ],

@@ -11,8 +11,8 @@ var i = n(120356),
     d = n(906732),
     p = n(313201),
     f = n(243778),
-    h = n(365113),
-    g = n(352455),
+    g = n(365113),
+    h = n(352455),
     m = n(480294),
     _ = n(791359),
     b = n(981631),
@@ -22,8 +22,8 @@ function v(e) {
     let { isStandalone: t } = e,
         { analyticsLocations: n } = (0, d.ZP)(u.Z.ACTIVE_NOW_COLUMN),
         i = (0, a.e7)([m.Z], () => m.Z.hasConsented(b.pjP.PERSONALIZATION)) ? [] : [s.z.NOW_PLAYING_CONSENT_CARD],
-        v = h.o.useConfig({ location: "nowplaying" }).demureActivityCards,
-        y = h.o.useConfig({ location: "nowplaying" }).friendsTab,
+        v = g.o.useConfig({ location: "nowplaying" }).demureActivityCards,
+        y = g.o.useConfig({ location: "nowplaying" }).friendsTab,
         I = (0, p.Dt)();
     return (0, r.jsx)(d.Gt, {
         value: n,
@@ -53,7 +53,7 @@ function v(e) {
                                 children: (e) => {
                                     let { visibleContent: t, markAsDismissed: n } = e;
                                     if (t === s.z.NOW_PLAYING_CONSENT_CARD)
-                                        return (0, r.jsx)(g.Z, {
+                                        return (0, r.jsx)(h.Z, {
                                             className: O.__invalid_consentCard,
                                             markAsDismissed: n,
                                         });

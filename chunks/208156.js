@@ -80,8 +80,8 @@ function v(e) {
         S = (0, f.sU)({}),
         I = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
         T = i.useRef(null),
-        A = (0, p.Z)(T, g, null == S ? window : S),
-        C = O(b({}, E), {
+        C = (0, p.Z)(T, g, null == S ? window : S),
+        A = O(b({}, E), {
             frame_id: I,
             platform: m.S4.DESKTOP,
         }),
@@ -92,8 +92,8 @@ function v(e) {
         var n;
         null == o || o(e.target),
             (T.current = e.target),
-            A(!0),
-            null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, C], null != t ? t : "");
+            C(!0),
+            null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, A], null != t ? t : "");
     }
     return (
         R === h.BRd.LIGHT ? (D.colorScheme = "light") : (D.colorScheme = "dark"),
@@ -127,7 +127,7 @@ function v(e) {
                   onLoad: w,
                   sandbox: (0, _.Z)({ allowPopups: y }),
                   className: n,
-                  src: "".concat(t, "?").concat(new URLSearchParams(C)),
+                  src: "".concat(t, "?").concat(new URLSearchParams(A)),
               })
             : null
     );

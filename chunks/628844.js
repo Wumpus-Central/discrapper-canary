@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(981631),
     I = n(388032),
     T = n(860076),
-    A = n(606582),
-    C = n(754545),
+    C = n(606582),
+    A = n(754545),
     N = n(745020),
     P = n(51089);
 function R(e, t, n) {
@@ -95,7 +95,7 @@ function w(e) {
             let e = [];
             e.push(P);
             for (let t = 0; t < 8; t++) e.push(N);
-            return e.push(C), e;
+            return e.push(A), e;
         }, []),
         J = () => {
             var e, t;
@@ -111,23 +111,23 @@ function w(e) {
                 (0, m.Z)("message_component");
         };
     return (0, r.jsxs)("div", {
-        className: A.container,
+        className: C.container,
         style: { backgroundColor: H },
         children: [
             (0, r.jsxs)("div", {
-                className: A.card,
+                className: C.card,
                 children: [
                     (0, r.jsx)("img", {
                         src: F,
                         alt: "",
-                        className: A.asset,
+                        className: C.asset,
                         style: { backgroundColor: H },
                     }),
                     (0, r.jsxs)("div", {
-                        className: A.stats,
+                        className: C.stats,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: A.stat,
+                                className: C.stat,
                                 children: [
                                     (0, r.jsx)(a.kBi, {
                                         color: s.Z.colors.BLACK,
@@ -135,13 +135,13 @@ function w(e) {
                                     }),
                                     (0, r.jsx)(a.xvT, {
                                         variant: "text-sm/medium",
-                                        className: A.statText,
+                                        className: C.statText,
                                         children: G,
                                     }),
                                 ],
                             }),
                             (0, r.jsxs)("div", {
-                                className: A.stat,
+                                className: C.stat,
                                 children: [
                                     (0, r.jsx)(a.S6n, {
                                         color: s.Z.colors.BLACK,
@@ -149,13 +149,13 @@ function w(e) {
                                     }),
                                     (0, r.jsx)(a.xvT, {
                                         variant: "text-sm/medium",
-                                        className: A.statText,
+                                        className: C.statText,
                                         children: B,
                                     }),
                                 ],
                             }),
                             (0, r.jsxs)("div", {
-                                className: A.stat,
+                                className: C.stat,
                                 children: [
                                     (0, r.jsx)(a.EO4, {
                                         color: s.Z.colors.BLACK,
@@ -163,13 +163,13 @@ function w(e) {
                                     }),
                                     (0, r.jsx)(a.xvT, {
                                         variant: "text-sm/medium",
-                                        className: A.statText,
+                                        className: C.statText,
                                         children: Z,
                                     }),
                                 ],
                             }),
                             (0, r.jsx)("div", {
-                                className: A.stat,
+                                className: C.stat,
                                 children:
                                     null == L
                                         ? (0, r.jsxs)(r.Fragment, {
@@ -180,7 +180,7 @@ function w(e) {
                                                   }),
                                                   (0, r.jsx)(a.xvT, {
                                                       variant: "text-sm/medium",
-                                                      className: A.statText,
+                                                      className: C.statText,
                                                       children: I.intl.string(T.default["fn+gnp"]),
                                                   }),
                                               ],
@@ -190,11 +190,11 @@ function w(e) {
                                                   (0, r.jsx)(u.Z, {
                                                       emojiId: L.emojiId,
                                                       emojiName: L.emojiName,
-                                                      className: A.statImage,
+                                                      className: C.statImage,
                                                   }),
                                                   (0, r.jsx)(a.xvT, {
                                                       variant: "text-sm/medium",
-                                                      className: A.statText,
+                                                      className: C.statText,
                                                       children:
                                                           null == L.emojiId
                                                               ? h.ZP.convertSurrogateToName(L.emojiName)
@@ -204,7 +204,7 @@ function w(e) {
                                           }),
                             }),
                             (0, r.jsx)("div", {
-                                className: A.stat,
+                                className: C.stat,
                                 children:
                                     null == j
                                         ? (0, r.jsxs)(r.Fragment, {
@@ -215,7 +215,7 @@ function w(e) {
                                                   }),
                                                   (0, r.jsx)(a.xvT, {
                                                       variant: "text-sm/medium",
-                                                      className: A.statText,
+                                                      className: C.statText,
                                                       children: I.intl.string(T.default["26V/4h"]),
                                                   }),
                                               ],
@@ -228,18 +228,18 @@ function w(e) {
                                                           icon: j.applicationImageId,
                                                       }),
                                                       alt: "",
-                                                      className: A.statImage,
+                                                      className: C.statImage,
                                                   }),
                                                   (0, r.jsx)(a.xvT, {
                                                       variant: "text-sm/medium",
-                                                      className: A.statText,
+                                                      className: C.statText,
                                                       children: j.applicationName,
                                                   }),
                                               ],
                                           }),
                             }),
                             (0, r.jsx)("div", {
-                                className: A.stat,
+                                className: C.stat,
                                 children:
                                     null == M
                                         ? (0, r.jsxs)(r.Fragment, {
@@ -250,7 +250,7 @@ function w(e) {
                                                   }),
                                                   (0, r.jsx)(a.xvT, {
                                                       variant: "text-sm/medium",
-                                                      className: A.statText,
+                                                      className: C.statText,
                                                       children: I.intl.string(T.default.eoLmk1),
                                                   }),
                                               ],
@@ -261,7 +261,7 @@ function w(e) {
                                                       ? (0, r.jsx)(g.Z, {
                                                             guild: W,
                                                             size: g.Z.Sizes.SMOL,
-                                                            className: A.statImage,
+                                                            className: C.statImage,
                                                         })
                                                       : (0, r.jsx)(a.QTo, {
                                                             color: s.Z.colors.BLACK,
@@ -269,7 +269,7 @@ function w(e) {
                                                         }),
                                                   (0, r.jsx)(a.xvT, {
                                                       variant: "text-sm/medium",
-                                                      className: A.statText,
+                                                      className: C.statText,
                                                       children: M.guildName,
                                                   }),
                                               ],
@@ -280,12 +280,12 @@ function w(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: A.footer,
+                className: C.footer,
                 style: { backgroundColor: Y },
                 children: [
                     (0, r.jsx)(a.X6q, {
                         variant: "display-sm",
-                        className: A.title,
+                        className: C.title,
                         children: I.intl.string(T.default["CdU/PF"]),
                     }),
                     z
@@ -293,12 +293,12 @@ function w(e) {
                               text: I.intl.string(T.default.r8GEbK),
                               "aria-label": !1,
                               children: (0, r.jsxs)(a.P3F, {
-                                  className: A.cta,
+                                  className: C.cta,
                                   onClick: J,
                                   children: [
                                       (0, r.jsx)(a.xvT, {
                                           variant: "text-sm/bold",
-                                          className: A.ctaText,
+                                          className: C.ctaText,
                                           children: I.intl.string(I.t.I0v0Qv),
                                       }),
                                       (0, r.jsx)(a.d4D, {
@@ -312,16 +312,16 @@ function w(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: A.powerContainer,
+                className: C.powerContainer,
                 style: { backgroundColor: H },
                 children: [
                     (0, r.jsx)("div", {
-                        className: A.powerBar,
+                        className: C.powerBar,
                         children: X.map((e, t) =>
                             (0, r.jsx)(
                                 "img",
                                 {
-                                    className: A.noDrag,
+                                    className: C.noDrag,
                                     src: e,
                                     width: 4,
                                     alt: "",
@@ -332,16 +332,16 @@ function w(e) {
                         ),
                     }),
                     (0, r.jsxs)("div", {
-                        className: A.powerText,
+                        className: C.powerText,
                         children: [
                             (0, r.jsx)(a.xvT, {
                                 variant: "text-xs/normal",
-                                className: A.statText,
+                                className: C.statText,
                                 children: "LVL",
                             }),
                             (0, r.jsx)(a.xvT, {
                                 variant: "text-xs/bold",
-                                className: A.statText,
+                                className: C.statText,
                                 children: q.format(null != k ? k : 0),
                             }),
                         ],

@@ -5,7 +5,7 @@ n.d(t, {
     Fq: () => p,
     H2: () => g,
     Hk: () => O,
-    NL: () => A,
+    NL: () => C,
     NO: () => d,
     Q1: () => h,
     Rx: () => S,
@@ -17,7 +17,7 @@ n.d(t, {
     br: () => P,
     cG: () => v,
     d5: () => y,
-    os: () => C,
+    os: () => A,
     uc: () => b,
 }),
     n(388685);
@@ -138,10 +138,10 @@ var I = (function (e) {
             e
         );
     })({});
-let A = new Set([r.MB, r.Vk]),
-    C = {
+let C = new Set([r.MB, r.Vk]),
+    A = {
         1: new Set([r.A$]),
-        2: A,
+        2: C,
         3: new Set(),
     },
     N = "powerupId";

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(457542);
+n.d(t, { Z: () => g }), n(388685), n(457542);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -10,11 +10,11 @@ var r = n(54381),
     d = n(589694),
     p = n(62001),
     f = n(869886);
-let h = function (e) {
+let g = function (e) {
     let { scrollContainerRef: t } = e,
         n = (0, l.e7)([a.Z], () => a.Z.notificationItem(), []),
-        { showDot: h } = (0, c.Z)(),
-        g = i.useRef(null),
+        { showDot: g } = (0, c.Z)(),
+        h = i.useRef(null),
         [m, _] = i.useState(!1),
         {
             data: b,
@@ -23,7 +23,7 @@ let h = function (e) {
             handleOnRefresh: v,
             viewabilityConfigCallbackPairs: y,
         } = (0, u.a)({
-            showDot: h,
+            showDot: g,
             notificationItem: n,
         }),
         I = (0, o.G)();
@@ -162,7 +162,7 @@ let h = function (e) {
                           }),
                       }),
                   (0, r.jsxs)("div", {
-                      ref: g,
+                      ref: h,
                       className: f.scrollContainer,
                       children: [
                           b.map((e) => Z(e)),

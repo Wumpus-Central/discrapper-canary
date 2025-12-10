@@ -30,12 +30,12 @@ function E(e) {
         v = (0, i.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
         [S, I] = (0, d.wq)(v),
         T = (0, f.Aq)(),
-        A = null != y && null != n && y.state !== h.jm8.ENDED && y.ownerId === n.ownerId,
-        C = (e) => {
+        C = null != y && null != n && y.state !== h.jm8.ENDED && y.ownerId === n.ownerId,
+        A = (e) => {
             null != n &&
                 (null == E || E(),
                 l.default.selectVoiceChannel(n.channelId),
-                A || (0, c.iV)(n, { forceMultiple: e }),
+                C || (0, c.iV)(n, { forceMultiple: e }),
                 T.dispatch(h.CkL.POPOUT_CLOSE),
                 m.S.dispatch(h.CkL.MODAL_CLOSE),
                 s.Z.popAll());
@@ -43,19 +43,19 @@ function E(e) {
     if (null == n) return null;
     let N = (0, d.P9)(I);
     return (
-        t ? (N = g.intl.string(g.t.XvBdeT)) : A && (N = g.intl.string(g.t["JH1SJ+"])),
+        t ? (N = g.intl.string(g.t.XvBdeT)) : C && (N = g.intl.string(g.t["JH1SJ+"])),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.Button, {
                     size: "sm",
-                    variant: A ? "secondary" : "active",
+                    variant: C ? "secondary" : "active",
                     icon: o.hGI,
                     text: N,
-                    disabled: t || A || !S,
-                    onClick: () => C(!1),
+                    disabled: t || C || !S,
+                    onClick: () => A(!1),
                     fullWidth: !0,
                 }),
-                !O || A || b
+                !O || C || b
                     ? null
                     : (0, r.jsx)(a.u, {
                           text: g.intl.string(g.t.wCrzut),
@@ -65,7 +65,7 @@ function E(e) {
                               icon: o.OgY,
                               "aria-label": g.intl.string(g.t.wCrzut),
                               onClick: () => {
-                                  C(!0);
+                                  A(!0);
                               },
                           }),
                       }),

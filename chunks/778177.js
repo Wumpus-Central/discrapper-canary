@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(944486),
     I = n(246946),
     T = n(594174),
-    A = n(585483),
-    C = n(63063),
+    C = n(585483),
+    A = n(63063),
     N = n(51144),
     P = n(738018),
     R = n(607802),
@@ -349,7 +349,7 @@ let er = {
                 children: (0, r.jsx)("div", {
                     className: Z.searchLearnMore,
                     children: (0, r.jsx)(h.Anchor, {
-                        href: C.Z.getArticleURL(U.BhN.USING_SEARCH),
+                        href: A.Z.getArticleURL(U.BhN.USING_SEARCH),
                         title: G.intl.string(G.t.hvVgAZ),
                         children: (0, r.jsx)(h.idN, {
                             size: "md",
@@ -638,7 +638,7 @@ class ei extends i.PureComponent {
                 this.setSearchQuery(this.state.dateHint, !0);
             }),
             B(this, "performSearch", (e) => {
-                A.S.dispatch(U.CkL.PERFORM_SEARCH, e);
+                C.S.dispatch(U.CkL.PERFORM_SEARCH, e);
             }),
             B(this, "renderAutocompletes", () => {
                 let { selectedIndex: e } = this.state,

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(512729),
     I = n(77188),
     T = n(230554),
-    A = n(780748),
-    C = n(464581),
+    C = n(780748),
+    A = n(464581),
     N = n(732659),
     P = n(86724),
     R = n(847302),
@@ -81,8 +81,8 @@ let k = i.forwardRef(function (e, t) {
         eS = i.useRef(null),
         eI = i.useRef(!0),
         eT = i.useRef(!0),
-        eA = Z || B,
-        eC = i.useCallback(
+        eC = Z || B,
+        eA = i.useCallback(
             (e, t, n) => {
                 var r;
                 let { value: i, selection: a } = n,
@@ -145,7 +145,7 @@ let k = i.forwardRef(function (e, t) {
             canOnlyUseTextCommands: es,
             onChangeStart: eN,
             onChangeEnd: eP,
-            updateState: eC,
+            updateState: eA,
         }),
         eD = i.useCallback(
             (e, t) => {
@@ -210,7 +210,7 @@ let k = i.forwardRef(function (e, t) {
                 );
         }, [k.id, eR, ee, et, eD, eo]);
     (0, T.Z)(t, eR, k, ew), (0, N.Z)(eR, ev, K);
-    let { handleKeyDown: ex, handleKeyUp: eL } = (0, A.Z)({
+    let { handleKeyDown: ex, handleKeyUp: eL } = (0, C.Z)({
             editor: eR,
             channel: k,
             disableEnterToSubmit: ec,
@@ -223,7 +223,7 @@ let k = i.forwardRef(function (e, t) {
             hideAutocomplete: er,
             moveSelection: ei,
         }),
-        { handlePaste: ej, handleGlobalPaste: eM } = (0, C.Z)(eR, eA, W),
+        { handlePaste: ej, handleGlobalPaste: eM } = (0, A.Z)(eR, eC, W),
         ek = i.useCallback(
             (e) => {
                 null == en || en();
@@ -239,8 +239,8 @@ let k = i.forwardRef(function (e, t) {
             [en, Y],
         );
     i.useLayoutEffect(() => {
-        eI.current && ((eS.current = n), eC(eR, "parent", { value: n }));
-    }, [eR, n, eC]),
+        eI.current && ((eS.current = n), eA(eR, "parent", { value: n }));
+    }, [eR, n, eA]),
         i.useEffect(() => {
             let e = () => {
                 var e;
@@ -285,7 +285,7 @@ let k = i.forwardRef(function (e, t) {
                     guildId: k.guild_id,
                     className: o()(M.slateTextArea, H),
                     placeholder: F,
-                    readOnly: eA,
+                    readOnly: eC,
                     spellCheck: ea,
                     autoFocus: !el,
                     canFocus: !Z,

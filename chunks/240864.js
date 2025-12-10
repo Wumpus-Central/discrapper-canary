@@ -80,11 +80,11 @@ function T(e) {
     let { productId: t } = e;
     f[t] = 1;
 }
-function A(e) {
+function C(e) {
     let { product: t } = e;
     (f[t.id] = 2), b.set(t.id, t);
 }
-function C(e) {
+function A(e) {
     let { productId: t, error: n } = e;
     (f[t] = 2), 404 === n.status && b.delete(t);
 }
@@ -131,6 +131,6 @@ let w = new D(o.Z, {
     GUILD_PRODUCT_UPDATE: P,
     GUILD_PRODUCT_DELETE: R,
     GUILD_PRODUCT_FETCH: T,
-    GUILD_PRODUCT_FETCH_SUCCESS: A,
-    GUILD_PRODUCT_FETCH_FAILURE: C,
+    GUILD_PRODUCT_FETCH_SUCCESS: C,
+    GUILD_PRODUCT_FETCH_FAILURE: A,
 });

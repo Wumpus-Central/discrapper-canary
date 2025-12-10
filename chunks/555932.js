@@ -1,7 +1,7 @@
 n.d(t, { Z: () => O }), n(388685), n(583741);
 var r = n(54381),
     i = n(473749),
-    a = n(205120),
+    a = n(467721),
     o = n(442837),
     s = n(481060),
     l = n(607070),
@@ -77,8 +77,8 @@ function O(e) {
         { fillFactor: S, totalAvailableBoostsCount: I } = i.useMemo(() => (0, c.Hl)(t), [t]),
         {
             progressBarFillWidthFactor: T,
-            isProgressBarAnimationComplete: A,
-            setShouldFireConfetti: C,
+            isProgressBarAnimationComplete: C,
+            setShouldFireConfetti: A,
             shouldFireConfetti: N,
             tierMarkerAnimationPosition: P,
         } = y({
@@ -130,9 +130,9 @@ function O(e) {
                         {
                             confettiTriggerRef: O,
                             guild: t,
-                            isProgressBarAnimationComplete: A,
+                            isProgressBarAnimationComplete: C,
                             setConfettiCount: E,
-                            setShouldFireConfetti: C,
+                            setShouldFireConfetti: A,
                             tier: e,
                             tierMarkerAnimationPosition: P,
                             totalAvailableBoostsCount: I,

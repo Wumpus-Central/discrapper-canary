@@ -195,27 +195,27 @@ function I(e) {
     });
 }
 function T(e) {
-    let { attachments: t, embeds: n } = A(e),
-        r = C(e);
+    let { attachments: t, embeds: n } = C(e),
+        r = A(e);
     return (e = e.merge({
         attachments: t,
         embeds: n,
         messageSnapshots: r,
     }));
 }
-function A(e) {
+function C(e) {
     return {
         attachments: e.attachments.map((e) => ((e.content_scan_version = -1), e)),
         embeds: e.embeds.map((e) => ((e.contentScanVersion = -1), e)),
     };
 }
-function C(e) {
+function A(e) {
     let { messageSnapshots: t } = e;
     return null == t || 0 === t.length
         ? t
         : t.map((e) => {
               let { message: t } = e,
-                  { attachments: n, embeds: r } = A(t);
+                  { attachments: n, embeds: r } = C(t);
               return (
                   (t = t.merge({
                       attachments: n,

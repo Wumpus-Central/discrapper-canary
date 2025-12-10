@@ -28,8 +28,8 @@ var r = n(54381),
     S = n(342386),
     I = n(626135),
     T = n(238302),
-    A = n(514361),
-    C = n(717953),
+    C = n(514361),
+    A = n(717953),
     N = n(583901),
     P = n(469115),
     R = n(981631),
@@ -208,7 +208,7 @@ let H = Object.freeze({
         var t, n;
         let { renderCTAButtons: a, isCoachmark: s } = e,
             { type: l } = i.useContext(Y),
-            [c] = (0, o.Wu)([A.Z], () => [A.Z.isPreview]),
+            [c] = (0, o.Wu)([C.Z], () => [C.Z.isPreview]),
             u = (null == (n = (0, g.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === D.Si.TIER_2;
         return "EDITOR" === l && c && u
             ? (0, r.jsx)(E.ZP, {
@@ -242,9 +242,9 @@ let H = Object.freeze({
         let { disabled: t } = e,
             { type: a, delay: l } = i.useContext(Y),
             { analyticsLocations: m } = (0, p.ZP)(f.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [h, g] = (0, o.Wu)([A.Z], () => {
+            [h, g] = (0, o.Wu)([C.Z], () => {
                 var e;
-                return [A.Z.isPreview, null == (e = A.Z.gradientPreset) ? void 0 : e.id];
+                return [C.Z.isPreview, null == (e = C.Z.gradientPreset) ? void 0 : e.id];
             }),
             [E, b] = i.useState(!1),
             [y, O] = i.useState(-1),
@@ -314,7 +314,7 @@ let H = Object.freeze({
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(C.Z, {
+                (0, r.jsx)(A.Z, {
                     isDisabled: t,
                     onSelect: () => {
                         (0, _.XO)(_.wh.CUSTOM_THEME, {
@@ -368,9 +368,9 @@ let H = Object.freeze({
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
             { delay: a } = i.useContext(Y),
             { analyticsLocations: s } = (0, p.ZP)(f.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [l, c, d] = (0, o.Wu)([y.Z, O.ZP, A.Z], () => [
+            [l, c, d] = (0, o.Wu)([y.Z, O.ZP, C.Z], () => [
                 y.Z.theme,
-                null == A.Z.gradientPreset && null == v.L1.getSetting().customUserThemeSettings,
+                null == C.Z.gradientPreset && null == v.L1.getSetting().customUserThemeSettings,
                 O.ZP.useSystemTheme === w.KW.ON,
             ]),
             _ = (e) => {

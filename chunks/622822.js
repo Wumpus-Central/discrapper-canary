@@ -96,15 +96,15 @@ function T(e) {
         agreement: e ? y.intl.string(y.t.PBG51l) : y.intl.string(y.t["5B+npG"]),
     };
 }
-let A = new Date("06/16/2020"),
-    C = [b.V_K.AGE_RESTRICTED, b.V_K.EXPLICIT],
+let C = new Date("06/16/2020"),
+    A = [b.V_K.AGE_RESTRICTED, b.V_K.EXPLICIT],
     N = new Set([E.L0.NSFW_SERVER, E.L0.NSFW_SERVER_INVITE, E.L0.NSFW_SERVER_INVITE_EMBED]);
 function P() {
     let e = _.default.getCurrentUser();
-    return null != e && h.default.extractTimestamp(e.id) > A.getTime() && null == e.nsfwAllowed;
+    return null != e && h.default.extractTimestamp(e.id) > C.getTime() && null == e.nsfwAllowed;
 }
 function R(e) {
-    return C.includes(e.nsfwLevel);
+    return A.includes(e.nsfwLevel);
 }
 function D(e) {
     return null != e && w(p.Z.getGuild(e));

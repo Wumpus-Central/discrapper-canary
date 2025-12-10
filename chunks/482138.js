@@ -22,8 +22,8 @@ var r,
     S = n(199838),
     I = S.set,
     T = S.getterFor("URL"),
-    A = v.URLSearchParams,
-    C = v.getState,
+    C = v.URLSearchParams,
+    A = v.getState,
     N = s.URL,
     P = s.TypeError,
     R = s.parseInt,
@@ -227,8 +227,8 @@ var r,
     eS = {},
     eI = {},
     eT = {},
-    eA = {},
     eC = {},
+    eA = {},
     eN = {},
     eP = {},
     eR = {},
@@ -253,7 +253,7 @@ var r,
             this.searchParams = null;
         } else {
             if ((void 0 !== n && (r = new eF(n, !0)), (i = this.parse(o, null, r)))) throw new P(i);
-            (a = C(new A())).bindURL(this), (this.searchParams = a);
+            (a = A(new C())).bindURL(this), (this.searchParams = a);
         }
     };
 eF.prototype = {
@@ -337,12 +337,12 @@ eF.prototype = {
                             (c = eB);
                         break;
                     }
-                    c = "file" === n.scheme ? eL : eA;
+                    c = "file" === n.scheme ? eL : eC;
                     continue;
                 case eI:
                     if ("/" === a && "/" === i[u + 1]) (c = eP), u++;
                     else {
-                        c = eA;
+                        c = eC;
                         continue;
                     }
                     break;
@@ -353,7 +353,7 @@ eF.prototype = {
                     }
                     c = eU;
                     continue;
-                case eA:
+                case eC:
                     if (((l.scheme = n.scheme), a === r))
                         (l.username = n.username),
                             (l.password = n.password),
@@ -361,7 +361,7 @@ eF.prototype = {
                             (l.port = n.port),
                             (l.path = h(n.path)),
                             (l.query = n.query);
-                    else if ("/" === a || ("\\" === a && l.isSpecial())) c = eC;
+                    else if ("/" === a || ("\\" === a && l.isSpecial())) c = eA;
                     else if ("?" === a)
                         (l.username = n.username),
                             (l.password = n.password),
@@ -390,7 +390,7 @@ eF.prototype = {
                         continue;
                     }
                     break;
-                case eC:
+                case eA:
                     if (l.isSpecial() && ("/" === a || "\\" === a)) c = eP;
                     else if ("/" === a) c = eR;
                     else {

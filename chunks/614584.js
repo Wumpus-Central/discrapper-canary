@@ -151,8 +151,8 @@ let j = r.memo(function (e) {
             [w],
         ),
         V = (0, _.wq)(null == w ? void 0 : w.author.id, S.id),
-        B = (0, _.$3)(n, w),
-        F = (0, _.Wl)(w, S, I, T),
+        F = (0, _.$3)(n, w),
+        B = (0, _.Wl)(w, S, I, T),
         H = (0, _.rY)(Z, T),
         G = r.useCallback(() => {
             T({
@@ -175,8 +175,8 @@ let j = r.memo(function (e) {
         showUsernamePopout: I,
         renderPopout: y.Z,
         onClickAvatar: H,
-        onClickUsername: F,
-        onClickReply: B,
+        onClickUsername: B,
+        onClickReply: F,
         onContextMenu: V,
         onPopoutRequestClose: G,
         isReplySpineClickable: N,

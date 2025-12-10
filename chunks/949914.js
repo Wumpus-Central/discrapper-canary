@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(342386),
     I = n(518596),
     T = n(853872),
-    A = n(245950),
-    C = n(404203),
+    C = n(245950),
+    A = n(404203),
     N = n(330181),
     P = n(954821),
     R = n(980864),
@@ -131,7 +131,7 @@ let M = (e) => {
                 expanded: p,
                 handleToggleExpanded: m,
                 subscriptionInfo: b,
-            } = (0, A.Z)(t),
+            } = (0, C.Z)(t),
             [y, T] = i.useState(!1),
             G = (0, h.Dt)(),
             { analyticsLocations: Z } = (0, _.ZP)(),
@@ -259,7 +259,7 @@ let M = (e) => {
         return (0, r.jsxs)("div", {
             className: j.container,
             children: [
-                (0, r.jsx)(C.Z, {
+                (0, r.jsx)(A.Z, {
                     onClick: m,
                     className: j.headerContainer,
                     children: (e) => {

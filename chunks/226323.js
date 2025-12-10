@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(586902),
     p = n(393903),
     f = n(448986),
-    h = n(100527),
-    g = n(906732),
+    g = n(100527),
+    h = n(906732),
     m = n(522651),
     _ = n(795318),
     b = n(512384),
@@ -96,7 +96,7 @@ let j = { offset: 2 },
 function x(e) {
     var t, l;
     let p = i.useRef(null),
-        { parentAnalyticsLocation: f } = (0, g.ZP)(),
+        { parentAnalyticsLocation: f } = (0, h.ZP)(),
         { channel: O, user: x, nick: A, mute: Z, deaf: w, serverMute: L, serverDeaf: R } = e,
         D = (0, s.e7)([v.Z], () => v.Z.isLocalMute(x.id)),
         M = (0, d.Z)({
@@ -152,7 +152,7 @@ function x(e) {
                               guildId: k,
                               channel: O,
                               showMediaItems: !0,
-                              onInteraction: (0, _.u)("GuildChannelUserContextMenu", h.Z.RTC_PANEL, {
+                              onInteraction: (0, _.u)("GuildChannelUserContextMenu", g.Z.RTC_PANEL, {
                                   targetUserId: x.id,
                               }),
                           }),
@@ -168,7 +168,7 @@ function x(e) {
                           N(T({}, t), {
                               user: x,
                               showMediaItems: !0,
-                              onInteraction: (0, _.u)("UserGenericContextMenu", h.Z.RTC_PANEL, { targetUserId: x.id }),
+                              onInteraction: (0, _.u)("UserGenericContextMenu", g.Z.RTC_PANEL, { targetUserId: x.id }),
                           }),
                       );
               });
@@ -214,8 +214,8 @@ function x(e) {
 function A(e) {
     let { voiceStates: t, channel: n, className: l } = e,
         [u, d] = i.useState(!1),
-        h = (0, s.e7)([O.default], () => O.default.getId()),
-        { containerRef: g, maxVisibleAvatars: m } = (function (e) {
+        g = (0, s.e7)([O.default], () => O.default.getId()),
+        { containerRef: h, maxVisibleAvatars: m } = (function (e) {
             let [t, n] = i.useState(7),
                 r = (0, f.Z)(() => {
                     let t = null == l ? void 0 : l.current;
@@ -240,7 +240,7 @@ function A(e) {
                     r.push(i);
                 }
             return [r, !1];
-        })(t, h, m),
+        })(t, g, m),
         E = u ? c.V_R : c.qJs,
         v = u ? C.intl.string(C.t["Z/Tya5"]) : C.intl.string(C.t.XR5BAc),
         y = (0, r.jsx)(o.u, {
@@ -261,14 +261,14 @@ function A(e) {
               className: a()(S.scroller, l),
               fade: !0,
               children: (0, r.jsxs)("div", {
-                  ref: g,
+                  ref: h,
                   className: a()(S.voiceUsers, !u && S.collapsed),
                   role: "group",
                   "aria-label": C.intl.string(C.t["/ZgaVU"]),
                   children: [
                       I.map((e) => {
                           let { user: t, nick: i, voiceState: l } = e;
-                          return t.id !== h
+                          return t.id !== g
                               ? (0, r.jsx)(
                                     x,
                                     {

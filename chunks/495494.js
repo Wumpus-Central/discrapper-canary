@@ -1,8 +1,8 @@
-r.d(t, { default: () => y }), r(388685);
+r.d(t, { default: () => h }), r(388685);
 var n = r(54381),
-    o = r(473749),
-    l = r(793030),
-    i = r(442837),
+    l = r(473749),
+    i = r(793030),
+    o = r(442837),
     a = r(481060),
     c = r(749210),
     s = r(910693),
@@ -12,8 +12,8 @@ var n = r(54381),
     f = r(981631),
     g = r(864309),
     b = r(388032),
-    O = r(582604);
-function h(e) {
+    m = r(582604);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -38,7 +38,7 @@ function h(e) {
     }
     return e;
 }
-function m(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,67 +56,67 @@ function m(e, t) {
         e
     );
 }
-function y(e) {
-    var { guildId: t, user: r, location: y, modReportId: j } = e,
+function h(e) {
+    var { guildId: t, user: r, location: h, modReportId: j } = e,
         v = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                o = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        o = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
-                    return o;
+                        l = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++)
-                    (r = l[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
+                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
             }
-            return o;
+            return l;
         })(e, ["guildId", "user", "location", "modReportId"]);
-    let [P, x] = o.useState(""),
-        [C, E] = o.useState(!1),
-        w = (0, s.sE)(t, {
-            location: y,
+    let [x, P] = l.useState(""),
+        [C, w] = l.useState(!1),
+        k = (0, s.sE)(t, {
+            location: h,
             targetUserId: r.id,
         }),
-        { isModReportClosed: T, isModReport: k } = (0, i.cj)([u.Z], () => {
+        { isModReportClosed: T, isModReport: S } = (0, o.cj)([u.Z], () => {
             let e = u.Z.getChannel(j);
             return {
                 isModReportClosed: null == e ? void 0 : e.isArchivedThread(),
                 isModReport: null == e ? void 0 : e.isModeratorReportChannel(),
             };
         }),
-        R = o.useCallback(() => {
+        Z = l.useCallback(() => {
             if (
-                (c.Z.kickUser(t, r.id, P, j).then(() => {
+                (c.Z.kickUser(t, r.id, x, j).then(() => {
                     C && null != j && d.Z.resolveFlag(j);
                 }),
-                w(s.jQ.KICK),
+                k(s.jQ.KICK),
                 null != j)
             ) {
                 var e;
                 null == (e = v.onClose) || e.call(v);
             }
-        }, [t, r.id, P, w, j, C, v]),
-        S = o.useCallback((e) => {
-            x(e);
+        }, [t, r.id, x, k, j, C, v]),
+        E = l.useCallback((e) => {
+            P(e);
         }, []);
-    return null != j && k
+    return null != j && S
         ? (0, n.jsx)(
-              l.Modal,
-              m(h({}, v), {
+              i.Modal,
+              O(y({}, v), {
                   title: b.intl.formatToPlainString(b.t["1Ie87p"], { user: r.username }),
                   subtitle: b.intl.format(b.t["/yH0UT"], { user: "@".concat(p.ZP.getName(r)) }),
                   actions: [
                       {
                           text: b.intl.string(b.t["3glT6Z"]),
-                          onClick: R,
+                          onClick: Z,
                           size: "sm",
                           variant: "critical-primary",
                       },
@@ -126,28 +126,28 @@ function y(e) {
                       : (0, n.jsx)(a.Checkbox, {
                             checked: C,
                             onChange: (e) => {
-                                E(e);
+                                w(e);
                             },
                             label: b.intl.string(g.default["8yIKem"]),
                         }),
                   children: (0, n.jsx)(a.Kx8, {
                       label: b.intl.string(null != j ? b.t.hmKy8E : b.t["+2QEPt"]),
                       maxLength: f.GNZ,
-                      onChange: S,
-                      value: P,
+                      onChange: E,
+                      value: x,
                       rows: 2,
                   }),
               }),
           )
         : (0, n.jsxs)(
               a.VoidConfirmModal,
-              m(
-                  h(
+              O(
+                  y(
                       {
                           header: b.intl.formatToPlainString(b.t["1Ie87p"], { user: r.username }),
                           confirmText: b.intl.string(b.t["3glT6Z"]),
                           cancelText: b.intl.string(b.t["ETE/oC"]),
-                          onConfirm: R,
+                          onConfirm: Z,
                       },
                       v,
                   ),
@@ -155,16 +155,16 @@ function y(e) {
                       children: [
                           (0, n.jsx)(a.Text, {
                               variant: "text-md/normal",
-                              className: O.spacing,
+                              className: m.spacing,
                               children: b.intl.format(b.t["/yH0UT"], { user: "@".concat(p.ZP.getName(r)) }),
                           }),
                           (0, n.jsx)("div", {
-                              className: O.spacing,
+                              className: m.spacing,
                               children: (0, n.jsx)(a.Kx8, {
                                   label: b.intl.string(b.t["+2QEPt"]),
                                   maxLength: f.GNZ,
-                                  onChange: S,
-                                  value: P,
+                                  onChange: E,
+                                  value: x,
                                   rows: 2,
                               }),
                           }),

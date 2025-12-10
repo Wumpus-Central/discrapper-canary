@@ -77,7 +77,7 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -85,7 +85,7 @@ function T(e, t) {
     }
     return i;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -94,7 +94,7 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let C = (e) => {
+let A = (e) => {
     let { size: t, stroke: n } = (0, u.UCu)(e);
     return t / 2 + n;
 };
@@ -109,7 +109,7 @@ function N(e) {
             className: S,
             avatarSize: I,
             avatarOffsetX: T,
-            avatarOffsetY: A,
+            avatarOffsetY: C,
             bannerWidth: N,
             bannerHeight: P,
             themePadding: R,
@@ -130,9 +130,9 @@ function N(e) {
         B = n.getAvatarURL(b, (0, u.dcp)(I)),
         F = (0, s._i)((0, d.ZP)(B, Z, !1)),
         V = (0, f.Z)(null != (t = null != D ? D : null == a ? void 0 : a.primaryColor) ? t : F).hex,
-        H = C(I),
+        H = A(I),
         Y = H + T - R,
-        W = P - A - R;
+        W = P - C - R;
     return (0, r.jsxs)("svg", {
         className: y.mask,
         viewBox: "0 0 ".concat(N, " ").concat(P),

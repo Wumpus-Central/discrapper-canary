@@ -10,8 +10,8 @@ var r,
     d = n(28664),
     p = n(477690),
     f = n(755721),
-    h = n(481060),
-    g = n(570140),
+    g = n(481060),
+    h = n(570140),
     m = n(239091),
     _ = n(287259),
     b = n(785547),
@@ -118,7 +118,7 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                           text: x.intl.string(x.t.tG2SzG),
                                           children: [
                                               "(",
-                                              (0, i.jsx)(h.SrA, {
+                                              (0, i.jsx)(g.SrA, {
                                                   size: "md",
                                                   color: "currentColor",
                                                   className: A.nitroIcon,
@@ -189,13 +189,13 @@ let R = (0, N.Mg)(p.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.PRIVATE,
                                     item: e,
-                                    icon: h.kZF,
+                                    icon: g.kZF,
                                     tooltip: x.intl.string(x.t.NozAop),
                                 }),
                                 (0, i.jsx)(k, {
                                     flag: P.eHb.OVERLAY_DISABLED,
                                     item: e,
-                                    icon: h.o8v,
+                                    icon: g.o8v,
                                     tooltip: x.intl.string(x.t.Az9eqn),
                                 }),
                                 (0, i.jsx)(j.Z, {
@@ -296,7 +296,7 @@ class B extends (r = l.PureComponent) {
         let t = this.props.activeRowKey;
         if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
             let e = this._rowRefs[t];
-            null != e && (g.Z.wait(m.Zy), this.props.scrollToRow(e, R));
+            null != e && (h.Z.wait(m.Zy), this.props.scrollToRow(e, R));
         }
     }
     handleHighlightedApplicationKey() {

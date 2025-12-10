@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(891304),
     p = n(388032),
     f = n(861265);
-function h(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function h(e) {
     }
     return e;
 }
-function g(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,9 +77,9 @@ let m = o.Nx.binds["0"],
                     children: (e) =>
                         (0, r.jsx)(
                             s.P3F,
-                            g(
-                                h(
-                                    g(h({}, e), {
+                            h(
+                                g(
+                                    h(g({}, e), {
                                         "aria-disabled": !i,
                                         className: l()(f.button, f.back, { [f.disabled]: !i }),
                                         onClick: () => (0, d.Hm)("nav_button"),
@@ -106,7 +106,7 @@ let m = o.Nx.binds["0"],
                     children: (e) =>
                         (0, r.jsx)(
                             s.P3F,
-                            g(h({}, e), {
+                            h(g({}, e), {
                                 "aria-disabled": !o,
                                 className: l()(f.button, f.forward, { [f.disabled]: !o }),
                                 onClick: () => (0, d.TL)("nav_button"),

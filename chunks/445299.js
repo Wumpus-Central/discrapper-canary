@@ -8,12 +8,12 @@ e.exports = function (e, t, n, o) {
     t = i(t, e);
     for (var c = -1, u = t.length, d = u - 1, h = e; null != h && ++c < u; ) {
         var g = a(t[c]),
-            p = n;
+            m = n;
         if (c != d) {
-            var m = h[g];
-            void 0 === (p = o ? o(m, g, h) : void 0) && (p = l(m) ? m : s(t[c + 1]) ? [] : {});
+            var p = h[g];
+            void 0 === (m = o ? o(p, g, h) : void 0) && (m = l(p) ? p : s(t[c + 1]) ? [] : {});
         }
-        r(h, g, p), (h = h[g]);
+        r(h, g, m), (h = h[g]);
     }
     return e;
 };

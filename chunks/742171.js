@@ -14,18 +14,18 @@ function d(e) {
         d = null == n ? void 0 : n.extra,
         p = null == n ? void 0 : n.author_id,
         f = null == n ? void 0 : n.content_type,
-        h =
+        g =
             (null == d ? void 0 : d.type) === "played_game_extra" ||
             (null == d ? void 0 : d.type) === "launched_activity_extra"
                 ? d.application_id
                 : void 0,
-        g = (0, s.q)(h),
+        h = (0, s.q)(g),
         m = (0, l.e7)([o.default], () => (null != p ? o.default.getUser(p) : null), [p]),
         _ = f === i.s.TOP_GAME,
-        b = null == g ? void 0 : g.getIconURL(240);
+        b = null == h ? void 0 : h.getIconURL(240);
     return (null == d ? void 0 : d.type) !== "played_game_extra" ||
         "contentInventory" !== t.data.kind ||
-        null == g ||
+        null == h ||
         null == m ||
         null == b
         ? null
@@ -36,7 +36,7 @@ function d(e) {
                   children: [
                       (0, r.jsx)("img", {
                           src: b,
-                          alt: g.name,
+                          alt: h.name,
                           className: u.gameIcon,
                       }),
                       (0, r.jsxs)("div", {
@@ -45,7 +45,7 @@ function d(e) {
                               (0, r.jsx)(a.Text, {
                                   variant: "text-md/semibold",
                                   color: "text-strong",
-                                  children: g.name,
+                                  children: h.name,
                               }),
                               _ &&
                                   (0, r.jsx)("div", {

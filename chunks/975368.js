@@ -3,8 +3,8 @@ var r = n(54381);
 n(473749);
 var i = n(95015),
     l = n(481060),
-    a = n(296182),
-    o = n(49012),
+    o = n(296182),
+    a = n(49012),
     s = n(694859),
     c = n(981631),
     u = n(388032);
@@ -16,8 +16,8 @@ function d(e) {
               label: u.intl.string(u.t.vbAEaA),
               icon: l._8t,
               action: () => {
-                  let t = (0, a.s$)(e.attachments[0].url);
-                  (0, o.q)({ href: t });
+                  let t = (0, o.s$)(e.attachments[0].url);
+                  (0, a.q)({ href: t });
               },
           })
         : null;

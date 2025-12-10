@@ -7,14 +7,14 @@ n.d(t, {
     Gd: () => eY,
     I: () => eG,
     J2: () => q,
-    Jf: () => eC,
+    Jf: () => eA,
     KX: () => eM,
     MP: () => eX,
     N8: () => eJ,
     Nm: () => e2,
     OH: () => ek,
     Qy: () => eW,
-    Rf: () => eA,
+    Rf: () => eC,
     SU: () => e0,
     Wi: () => eb,
     _Q: () => eU,
@@ -67,8 +67,8 @@ var _ = n(706454),
     S = n(358085),
     I = n(74538),
     T = n(22095),
-    A = n(617136),
-    C = n(915750),
+    C = n(617136),
+    A = n(915750),
     N = n(616022),
     P = n(49436),
     R = n(937797),
@@ -399,7 +399,7 @@ function eI(e) {
     return t || n || r;
 }
 let eT = 1,
-    eA = (e) => {
+    eC = (e) => {
         let t = r.useCallback(() => (0, Z.il)(e), [e]),
             [n, i] = r.useState(t()),
             a = r.useCallback(() => i(t()), [t]),
@@ -424,20 +424,20 @@ let eT = 1,
             n
         );
     };
-function eC(e) {
+function eA(e) {
     return r.useMemo(() => (0, Z.b7)(e), [e]);
 }
 let eN = (e) => {
     let { quest: t, questContent: n, sourceQuestContent: r } = e,
         i = ej({ quest: t }),
-        a = (0, C.WD)();
+        a = (0, A.WD)();
     return () => {
         i
             ? (0, U.gI)(
                   { quest: t },
                   {
                       content: n,
-                      ctaContent: A.jZ.CONNECT_CONSOLE_LINK,
+                      ctaContent: C.jZ.CONNECT_CONSOLE_LINK,
                       impressionId: null == a ? void 0 : a.getId(),
                       sourceQuestContent: r,
                   },
@@ -446,7 +446,7 @@ let eN = (e) => {
                   { quest: t },
                   {
                       content: n,
-                      ctaContent: A.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
+                      ctaContent: C.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
                       impressionId: null == a ? void 0 : a.getId(),
                       sourceQuestContent: r,
                   },
@@ -604,13 +604,13 @@ function eU(e) {
     let i = (null == (t = e.userStatus) ? void 0 : t.enrolledAt) != null,
         a = (null == (n = e.userStatus) ? void 0 : n.completedAt) != null,
         o = (null == (r = e.userStatus) ? void 0 : r.claimedAt) != null,
-        s = eA(e).percentComplete > 0;
+        s = eC(e).percentComplete > 0;
     return o ? 4 : a ? 3 : s && i ? 2 : 1 * !!i;
 }
 function eG(e) {
     let t = (0, c.e7)([_.default], () => _.default.locale),
-        { percentComplete: n } = eA(e),
-        r = eC(e),
+        { percentComplete: n } = eC(e),
+        r = eA(e),
         i = null != r ? r.percentComplete : n,
         a = 100 * i,
         o =
@@ -708,8 +708,8 @@ function eB(e, t) {
 }
 function eF(e) {
     var t, n;
-    let r = eC(e),
-        i = eA(e),
+    let r = eA(e),
+        i = eC(e),
         [a] = eB(e, i),
         s = eE(e),
         l = (null == (t = e.userStatus) ? void 0 : t.enrolledAt) != null,
@@ -733,7 +733,7 @@ function eH(e) {
     r.useEffect(() => {
         null != a &&
             o.current !== t &&
-            ((0, A.Ic)({
+            ((0, C.Ic)({
                 mode: t,
                 prevMode: o.current,
                 questContent: n,
@@ -745,7 +745,7 @@ function eH(e) {
         r.useEffect(() => {
             if (null != a)
                 return () => {
-                    (0, A.Ic)({
+                    (0, C.Ic)({
                         mode: null,
                         prevMode: o.current,
                         questContent: n,

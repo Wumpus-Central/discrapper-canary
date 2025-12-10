@@ -10,8 +10,8 @@ var r = n(913527),
     d = n(594174),
     p = n(374023),
     f = n(709054),
-    h = n(645792),
-    g = n(981631),
+    g = n(645792),
+    h = n(981631),
     m = n(921944);
 let _ = {
     init(e) {
@@ -21,11 +21,11 @@ let _ = {
                 if ((0, a.Z)()) return;
                 let e = d.default.getCurrentUser(),
                     r = null != e && 7 > i()().diff(i()(f.default.extractTimestamp(e.id)), "days"),
-                    c = null != u.Z.getGuildsArray().find((e) => e.features.has(g.GuildFeatures.HUB)),
+                    c = null != u.Z.getGuildsArray().find((e) => e.features.has(h.GuildFeatures.HUB)),
                     p = !(0, s.zu)(l.z.HUB_BACK_TO_SCHOOL_UPSELL);
                 !(r || t() || c || !p) &&
-                    (0, h.b)() &&
-                    (h.Z.trackExposure({ location: "8b792a_1" }), n(), (0, o.kk)(l.z.HUB_BACK_TO_SCHOOL_UPSELL));
+                    (0, g.b)() &&
+                    (g.Z.trackExposure({ location: "8b792a_1" }), n(), (0, o.kk)(l.z.HUB_BACK_TO_SCHOOL_UPSELL));
             });
     },
     hideHubUpsell() {

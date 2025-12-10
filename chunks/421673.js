@@ -1,4 +1,4 @@
-n.d(t, { cK: () => C }), n(642613);
+n.d(t, { cK: () => A }), n(642613);
 var r = n(658722),
     i = n.n(r),
     a = n(954955),
@@ -36,7 +36,7 @@ function T(e, t, n, r) {
         location_stack: t,
     });
 }
-function A(e, t, n, r) {
+function C(e, t, n, r) {
     var a;
     let o = 0,
         c = t.name.toLocaleLowerCase(),
@@ -57,9 +57,9 @@ function A(e, t, n, r) {
         o
     );
 }
-function C(e, t, n, r, i) {
+function A(e, t, n, r, i) {
     let a = t.reduce(
-            (t, a) => (v(i, null == r ? void 0 : r.id), (t[a.soundId] = A(e.toLocaleLowerCase(), a, n, r)), t),
+            (t, a) => (v(i, null == r ? void 0 : r.id), (t[a.soundId] = C(e.toLocaleLowerCase(), a, n, r)), t),
             {},
         ),
         o = t.filter((e) => a[e.soundId] > 0).sort((e, t) => a[t.soundId] - a[e.soundId]);

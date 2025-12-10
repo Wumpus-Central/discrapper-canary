@@ -21,23 +21,23 @@ var r = n(54381),
     v = n(252633);
 let S = (e) => {
     let { guildBoostSlots: t, selectedGuild: n, locationSection: a, intent: S, transitionState: I, onClose: T } = e,
-        A = (0, m.vx)(p.Z.boostSlots);
+        C = (0, m.vx)(p.Z.boostSlots);
     o()(null != t || null != n, "Must either provide slots or an initial selected guild"),
         o()(
             !(null == t ? void 0 : t.some((e) => e.isOnCooldown())),
             "If slots are provided, they must not be on cooldown",
         );
-    let C = [
+    let A = [
             null == t ? "UNUSED_QUANTITY_SELECT" : null,
             null == n ? "GUILD_SELECT" : null,
             "CONFIRM",
             "SUCCESS",
         ].filter((e) => null != e),
         [N, P] = (0, l.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
-        [R, D] = i.useState(C[0]),
+        [R, D] = i.useState(A[0]),
         [w, x] = i.useState(!1),
         [L, j] = i.useState(n),
-        [M, k] = i.useState(null != t ? t : A.slice(0, 1)),
+        [M, k] = i.useState(null != t ? t : C.slice(0, 1)),
         U = i.useMemo(
             () =>
                 null == M
@@ -62,7 +62,7 @@ let S = (e) => {
         ),
         B = {
             UNUSED_QUANTITY_SELECT: () => (
-                o()(null != t || 0 !== A.length, "Cannot provide no slots if there are no other available slots"),
+                o()(null != t || 0 !== C.length, "Cannot provide no slots if there are no other available slots"),
                 (0, r.jsx)(s.Modal, {
                     transitionState: I,
                     onClose: Z,
@@ -93,9 +93,9 @@ let S = (e) => {
                                 children: [
                                     (0, r.jsx)(c.FiK, {
                                         value: M.length,
-                                        onChange: (e) => k(A.slice(0, e)),
+                                        onChange: (e) => k(C.slice(0, e)),
                                         minValue: 1,
-                                        maxValue: A.length,
+                                        maxValue: C.length,
                                     }),
                                     (0, r.jsx)(c.Text, {
                                         className: v.quantitySelectorLabel,
@@ -123,7 +123,7 @@ let S = (e) => {
                 let e = M.filter((e) => (0, m.tl)(e)).length,
                     t = M.length,
                     n = U.length,
-                    i = "CONFIRM" === C[0] ? Z : () => D(C[C.indexOf(R) - 1]),
+                    i = "CONFIRM" === A[0] ? Z : () => D(A[A.indexOf(R) - 1]),
                     a = async () => {
                         if ((x(!1), null != L && (null == M ? void 0 : M.length) !== 0)) {
                             o()(

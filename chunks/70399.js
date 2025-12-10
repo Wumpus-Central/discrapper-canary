@@ -13,12 +13,12 @@ var r = n(54381),
     d = n(524995),
     p = n(835473),
     f = n(785717),
-    h = n(621853),
-    g = n(388032),
+    g = n(621853),
+    h = n(388032),
     m = n(685009);
 function _(e) {
     let { applicationId: t, size: n = "default" } = e,
-        i = (0, o.e7)([h.Z], () => h.Z.getApplicationWidgetApplicationConfig(t));
+        i = (0, o.e7)([g.Z], () => g.Z.getApplicationWidgetApplicationConfig(t));
     return (0, r.jsxs)("div", {
         className: a()(m.container, { [m.sizeSmall]: "small" === n }),
         children: [
@@ -58,16 +58,16 @@ function b(e) {
     let { applicationId: t, size: n = "default" } = e,
         { trackUserProfileAction: l } = (0, f.KZ)(),
         a = (0, p.q)(t),
-        { hasAlreadyLinked: o, canStartAuthorization: h, startAuthorization: _, fetched: b } = (0, d.F)(a),
+        { hasAlreadyLinked: o, canStartAuthorization: g, startAuthorization: _, fetched: b } = (0, d.F)(a),
         { analyticsLocations: E } = (0, u.ZP)(c.Z.USER_PROFILE_APPLICATION_WIDGET),
         O = i.useCallback(() => {
-            h &&
+            g &&
                 (l({
                     action: "PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT",
                     applicationId: t,
                 }),
                 _({ analyticsLocations: E }));
-        }, [h, l, t, _, E]);
+        }, [g, l, t, _, E]);
     return "default" !== n || null == a
         ? null
         : (0, r.jsxs)("div", {
@@ -79,10 +79,10 @@ function b(e) {
                       color: "text-subtle",
                       children: b
                           ? o
-                              ? g.intl.format(g.t.wiyuG9, { applicationName: a.name })
-                              : h
-                                ? g.intl.format(g.t.RNWFOQ, { onConnect: O })
-                                : g.intl.string(g.t["9TX4UT"])
+                              ? h.intl.format(h.t.wiyuG9, { applicationName: a.name })
+                              : g
+                                ? h.intl.format(h.t.RNWFOQ, { onConnect: O })
+                                : h.intl.string(h.t["9TX4UT"])
                           : (0, r.jsx)("div", { className: m.footerPlaceholder }),
                   }),
               ],

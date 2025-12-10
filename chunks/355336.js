@@ -113,7 +113,7 @@ function h(e, t) {
             ]);
         let I = i.useRef(null),
             T = i.useRef(null),
-            [A, C] = i.useState(!1),
+            [C, A] = i.useState(!1),
             { scrollerRef: N, getScrollerState: P } = (0, l.Ke)(),
             R = (0, l.t2)(N);
         i.useImperativeHandle(
@@ -131,9 +131,9 @@ function h(e, t) {
         );
         let D = i.useCallback(
             (e) => {
-                null == I.current ? C(!0) : clearTimeout(I.current),
+                null == I.current ? A(!0) : clearTimeout(I.current),
                     (I.current = setTimeout(() => {
-                        (I.current = null), C(!1);
+                        (I.current = null), A(!1);
                     }, 200)),
                     null != E && E(e);
             },
@@ -166,7 +166,7 @@ function h(e, t) {
                                 [c.customTheme]: O,
                                 [e]: !0,
                                 [c.managedReactiveScroller]: !0,
-                                [c.scrolling]: A && y,
+                                [c.scrolling]: C && y,
                             }),
                             style: v,
                             dir: b,
@@ -180,7 +180,7 @@ function h(e, t) {
                             children: (0, r.jsxs)("div", {
                                 ref: T,
                                 className: o()(g, c.content),
-                                children: [f, A && (0, r.jsx)("div", { className: c.pointerCover })],
+                                children: [f, C && (0, r.jsx)("div", { className: c.pointerCover })],
                             }),
                         }),
                     },

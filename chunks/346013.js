@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(271383),
     I = n(594174),
     T = n(768581),
-    A = n(900849),
-    C = n(506071),
+    C = n(900849),
+    A = n(506071),
     N = n(495114),
     P = n(170140),
     R = n(981631),
@@ -92,7 +92,7 @@ function G(e) {
         { setPopout: H } = (0, b.Z)(G.id, D.d$),
         Y = (0, E.qo)(G, Z, H, !0),
         W = v.QK.useSetting(),
-        K = (0, C.n)(),
+        K = (0, A.n)(),
         [z, q] = i.useState(!1),
         [Q, X] = i.useState((null == V ? void 0 : V.coverImage) == null),
         J = (0, l.e7)([S.ZP, I.default], () => {
@@ -143,7 +143,7 @@ function G(e) {
                     ? (0, h.Z)(R.Z5c.CHANNEL(V.guildId, V.threadId, V.messageId))
                     : J
                       ? (0, h.Z)(R.Z5c.CHANNEL(V.guildId, V.parentChannelId))
-                      : await A.Ub(V.guildId, {}, { channelId: V.parentChannelId }));
+                      : await C.Ub(V.guildId, {}, { channelId: V.parentChannelId }));
         }, [V, Z, J]);
     if (null == V) return null;
     let ed = (0, T.NZ)({

@@ -1,23 +1,23 @@
 n.d(e, {
-    WY: () => T,
-    j$: () => E,
+    WY: () => S,
+    j$: () => T,
 }),
     n(539854);
 var i = n(442837),
     l = n(292556),
     s = n(972959),
-    r = n(509613),
-    u = n(460181),
+    u = n(509613),
+    r = n(460181),
     a = n(292959),
     o = n(313789),
     c = n(388032);
 let d = (0, s.H)(() => ({ currentPlayingSound: null }));
-function T() {
+function S() {
     let t = d.getField("currentPlayingSound");
     null == t || t.stop(), d.setState({ currentPlayingSound: null });
 }
-function E(t) {
-    return (0, r.qs)("".concat(o.n.SOUNDS_LIST_ITEM_PREFIX).concat(t.sound), {
+function T(t) {
+    return (0, u.qs)("".concat(o.n.SOUNDS_LIST_ITEM_PREFIX).concat(t.sound), {
         useTitle: t.useTitle,
         useSubtitle: () =>
             c.intl.format(c.t.OOiGCM, {
@@ -25,7 +25,7 @@ function E(t) {
                     (function (t) {
                         let e = d.getField("currentPlayingSound");
                         null == e || e.stop();
-                        let n = (0, u.GN)(t);
+                        let n = (0, r.GN)(t);
                         d.setState({ currentPlayingSound: n });
                     })(t.sound),
             }),

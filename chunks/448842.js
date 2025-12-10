@@ -21,11 +21,11 @@ var r = n(54381),
 function v(e) {
     let { resultsState: t, searchContext: n, selectedChannel: v, setSearchQuery: S } = e,
         { autocompletes: I, mode: T } = t,
-        A = (0, h.Z)({
+        C = (0, h.Z)({
             autocompletes: I,
             mode: T,
         }),
-        C = (0, g.Z)({
+        A = (0, g.Z)({
             setSearchQuery: S,
             searchContext: n,
             mode: T,
@@ -132,15 +132,15 @@ function v(e) {
                         });
                     e.push(o);
                 }
-                let t = [...C, R({ hasOtherSearchFiltersVisible: !0 })];
+                let t = [...A, R({ hasOtherSearchFiltersVisible: !0 })];
                 e.push(
                     (0, f.fC)(d.i.GROUP, {
                         rows: t,
                         title: y.intl.string(y.t.UdhTtk),
                     }),
                 );
-                let i = e.length + C.length,
-                    { autocompleteCount: o, autocompleteGroups: s } = A({
+                let i = e.length + A.length,
+                    { autocompleteCount: o, autocompleteGroups: s } = C({
                         filterFn: (e) => e.group === b.rtL.HISTORY && e.results.length > 0,
                         getAutocompleteRowItem: (e) => {
                             let { result: t, modeType: r, group: s } = e,
@@ -229,7 +229,7 @@ function v(e) {
                         e.push(t);
                     }
                 }
-                let { autocompleteCount: i, autocompleteGroups: o } = A({
+                let { autocompleteCount: i, autocompleteGroups: o } = C({
                         filterFn: (e) =>
                             e.group !== b.rtL.DATES &&
                             e.group !== b.rtL.SEARCH_OPTIONS &&
@@ -290,7 +290,7 @@ function v(e) {
                     }),
                     s = R({ hasOtherSearchFiltersVisible: 0 !== i });
                 if (0 === i) {
-                    let t = [...C, s];
+                    let t = [...A, s];
                     e.push(
                         (0, f.fC)(d.i.GROUP, {
                             rows: t,
@@ -301,7 +301,7 @@ function v(e) {
                 return i > 0 && e.push(...o), { items: e };
             },
             [b.Sap.FILTER]: () => {
-                let { autocompleteCount: e, autocompleteGroups: t } = A({
+                let { autocompleteCount: e, autocompleteGroups: t } = C({
                     filterFn: (e) => e.results.length > 0,
                     getAutocompleteRowItem: (t) => {
                         let { result: n, modeType: r, group: i } = t,

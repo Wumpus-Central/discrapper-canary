@@ -1,9 +1,9 @@
-n.d(t, { Z: () => a }), n(997841);
+n.d(t, { Z: () => o }), n(997841);
 var r = n(904245),
     i = n(667204),
     l = n(959517);
-function a(e, t, n) {
-    var a, o;
+function o(e, t, n) {
+    var o, a;
     let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if ((r.Z.deleteMessage(e.id, t.id, !0), t.isCommandType())) {
         null != t.interactionData && null != s.applicationId && (0, i.d)(t, e, s);
@@ -19,7 +19,7 @@ function a(e, t, n) {
             validNonShortcutEmojis: [],
         },
         void 0,
-        ((a = (function (e) {
+        ((o = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
@@ -51,9 +51,9 @@ function a(e, t, n) {
             },
             s,
         )),
-        (o = o = { location: l.dy.RETRY }),
+        (a = a = { location: l.dy.RETRY }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o))
+            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
@@ -61,9 +61,9 @@ function a(e, t, n) {
                       n.push.apply(n, r);
                   }
                   return n;
-              })(Object(o)).forEach(function (e) {
-                  Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(o, e));
+              })(Object(a)).forEach(function (e) {
+                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(a, e));
               }),
-        a),
+        o),
     );
 }

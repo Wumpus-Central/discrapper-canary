@@ -6,7 +6,7 @@ n.d(t, {
     lm: () => O,
     qb: () => R,
     rs: () => N,
-    vP: () => C,
+    vP: () => A,
     vj: () => y,
 }),
     n(388685);
@@ -14,7 +14,7 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(205120),
+    o = n(467721),
     s = n(692547),
     l = n(780384);
 n(481060);
@@ -250,7 +250,7 @@ function T(e) {
             };
     }
 }
-function A(e) {
+function C(e) {
     return "-"
         .concat(0.216506 * e, ",-")
         .concat(0.25 * e, " ")
@@ -258,7 +258,7 @@ function A(e) {
         .concat(0.216506 * e, ",")
         .concat(0.25 * e);
 }
-function C(e, t, n) {
+function A(e, t, n) {
     let {
         bgRadius: i,
         bgY: a,
@@ -298,7 +298,7 @@ function C(e, t, n) {
                 fill: "black",
             }),
             (0, r.jsx)(o.animated.polygon, {
-                points: A(t),
+                points: C(t),
                 fill: "black",
                 transform: m,
                 style: { transformOrigin: h },

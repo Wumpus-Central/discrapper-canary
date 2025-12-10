@@ -34,8 +34,8 @@ function I(e, t, n) {
     );
 }
 let T = new c.Z("GameConsoleManager"),
-    A = 3000,
-    C = 60000,
+    C = 3000,
+    A = 60000,
     N = 180000;
 async function P(e) {
     let t = f.Z.getChannelId();
@@ -90,7 +90,7 @@ class D extends l.Z {
                         selfDeaf: r,
                         selfMute: i,
                     }),
-                    this.rollbackCommandTimeout.start(A, () => {
+                    this.rollbackCommandTimeout.start(C, () => {
                         P(s);
                     }));
             }),
@@ -118,7 +118,7 @@ class D extends l.Z {
                     null == e && this.maybeConnect(Object.values(p.Z.getSessions()));
             }),
             I(this, "handleWaitForRemoteSession", () => {
-                this.awaitRemoteTimeout.start(C, () => {
+                this.awaitRemoteTimeout.start(A, () => {
                     (0, h.s6)(),
                         o.Z.show({
                             title: S.intl.string(S.t.wGMxr3),

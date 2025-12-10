@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => C }), n(415506), n(388685);
+n.d(t, { ZP: () => A }), n(415506), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -137,7 +137,7 @@ function T(e, t, n) {
         children: t.label,
     });
 }
-function A(e, t) {
+function C(e, t) {
     let n = null;
     return (
         e && null != t && !t.canRedeemTrial()
@@ -151,7 +151,7 @@ function A(e, t) {
         n
     );
 }
-function C(e) {
+function A(e) {
     let {
             label: t,
             selectedPaymentSourceId: n,
@@ -164,7 +164,7 @@ function C(e) {
             disabled: b = !1,
             className: y,
             optionClassName: O,
-            dropdownLoading: C,
+            dropdownLoading: A,
             paymentGatewayRestrictions: N,
         } = e,
         P = 0 === a.length,
@@ -192,7 +192,7 @@ function C(e) {
             };
         }),
         w = i.useMemo(() => new Map(a.map((e) => [e.id, e])), [a]),
-        x = A(
+        x = C(
             h,
             i.useMemo(() => a.find((e) => e.id === n), [a, n]),
         );
@@ -220,7 +220,7 @@ function C(e) {
                       placeholder: g.intl.string(g.t["8lqkf8"]),
                       renderOptionValue: (e) => {
                           let [t] = e;
-                          return C
+                          return A
                               ? (0, r.jsx)(u.$jN, { type: u.RAz.SPINNING_CIRCLE })
                               : T(null == t.value ? void 0 : w.get(t.value), t, f);
                       },

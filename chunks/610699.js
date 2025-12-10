@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(592125),
     I = n(430824),
     T = n(496675),
-    A = n(594174),
-    C = n(626135),
+    C = n(594174),
+    A = n(626135),
     N = n(768581),
     P = n(411198),
     R = n(358595),
@@ -182,7 +182,7 @@ function F(e) {
     l()(E === x.Iq.EMBEDDED_APPLICATION && null != b, "invalid application invite");
     let y = i.useCallback(() => {
             var e;
-            C.default.track(D.rMx.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED, {
+            A.default.track(D.rMx.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED, {
                 application_id: b.id,
                 invite_inviter_id: null == (e = s.inviter) ? void 0 : e.id,
             });
@@ -220,7 +220,7 @@ function F(e) {
                     : [],
             [M, b.id],
         ),
-        Z = (0, c.Wu)([A.default], () => G.map((e) => A.default.getUser(e)).filter((e) => null != e), [G]),
+        Z = (0, c.Wu)([C.default], () => G.map((e) => C.default.getUser(e)).filter((e) => null != e), [G]),
         B = i.useCallback(() => {
             (0, f.r$)(
                 {
@@ -298,8 +298,8 @@ function V(e) {
             icon: I,
             bot: S,
         }),
-        A = (0, y.G)(t),
-        C = (0, b.E)(t),
+        C = (0, y.G)(t),
+        A = (0, b.E)(t),
         P = n.length,
         R = i.useMemo(
             () => [
@@ -323,10 +323,10 @@ function V(e) {
                     title: L.intl.string(L.t["7vb6nw"]),
                     iconSrc: T,
                 },
-                C,
+                A,
             ),
             {
-                onClickBanner: A,
+                onClickBanner: C,
                 info: (0, r.jsxs)("div", {
                     className: j.infoWrapper,
                     children: [
@@ -351,7 +351,7 @@ function V(e) {
                     ],
                 }),
                 actions: R,
-                onClickContent: A,
+                onClickContent: C,
                 trackingConfig: {
                     id: t.id,
                     linkType: w.U.ACTIVITY_INVITE,

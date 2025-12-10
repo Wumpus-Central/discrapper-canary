@@ -70,11 +70,11 @@ function T(e, t) {
         e
     );
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -82,7 +82,7 @@ function A(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -101,7 +101,7 @@ function R(e) {
             clearable: f,
             fullWidth: v,
             closeOnSelect: I = !0,
-            shouldFocusWrap: C,
+            shouldFocusWrap: A,
             placeholder: R = y.intl.string(b.default["A+pfVR"]),
             name: x,
             form: L,
@@ -113,7 +113,7 @@ function R(e) {
             value: Z,
             wrapTags: B = !1,
         } = e,
-        F = A(e, [
+        F = C(e, [
             "selectionMode",
             "readOnly",
             "autoFocus",
@@ -367,7 +367,7 @@ function R(e) {
                                                     selectionMode: t,
                                                     selectedItems: eh,
                                                     onSelectionChange: eE,
-                                                    shouldFocusWrap: C,
+                                                    shouldFocusWrap: A,
                                                     renderListItem: (e) => (0, r.jsx)(_.W, S({}, e)),
                                                     maxVisibleItems: M,
                                                     loading: ei,

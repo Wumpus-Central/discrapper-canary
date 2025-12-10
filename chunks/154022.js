@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(3148),
     I = n(739566),
     T = n(753206),
-    A = n(440849),
-    C = n(921801),
+    C = n(440849),
+    A = n(921801),
     N = n(196051),
     P = n(441729),
     R = n(626135),
@@ -115,18 +115,18 @@ function en(e) {
             gap: 16,
             children: [
                 (0, r.jsx)(er, {}),
-                (0, r.jsxs)(C.F, {
+                (0, r.jsxs)(A.F, {
                     setting: G.s6.ACCESSIBILITY_SATURATION,
                     children: [(0, r.jsx)(eo, {}), (0, r.jsx)(c.izJ, {})],
                 }),
-                (0, r.jsxs)(C.F, {
+                (0, r.jsxs)(A.F, {
                     setting: G.s6.ACCESSIBILITY_LINK_DECORATIONS,
                     children: [(0, r.jsx)(es, {}), (0, r.jsx)(c.izJ, {})],
                 }),
                 t
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(C.F, {
+                              (0, r.jsx)(A.F, {
                                   setting: G.s6.ACCESSIBILITY_CUSTOM_CURSOR,
                                   children: (0, r.jsx)(el, {}),
                               }),
@@ -134,42 +134,42 @@ function en(e) {
                           ],
                       })
                     : null,
-                (0, r.jsxs)(C.F, {
+                (0, r.jsxs)(A.F, {
                     setting: G.s6.ACCESSIBILITY_ROLE_STYLE,
                     children: [(0, r.jsx)(ec, {}), (0, r.jsx)(c.izJ, {})],
                 }),
                 n &&
-                    (0, r.jsxs)(C.F, {
+                    (0, r.jsxs)(A.F, {
                         setting: G.s6.ACCESSIBILITY_DISPLAY_NAME_STYLES,
                         children: [(0, r.jsx)(eu, {}), (0, r.jsx)(c.izJ, {})],
                     }),
-                (0, r.jsxs)(C.F, {
+                (0, r.jsxs)(A.F, {
                     setting: G.s6.ACCESSIBILITY_PROFILE_COLORS,
                     children: [(0, r.jsx)(ed, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
                 }),
-                (0, r.jsxs)(C.F, {
+                (0, r.jsxs)(A.F, {
                     setting: G.s6.ACCESSIBILITY_CONTRAST,
                     children: [(0, r.jsx)(ef, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
                 }),
-                (0, r.jsxs)(C.F, {
+                (0, r.jsxs)(A.F, {
                     setting: G.s6.ACCESSIBILITY_STICKERS,
                     children: [(0, r.jsx)(e_, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
                 }),
-                (0, r.jsxs)(C.F, {
+                (0, r.jsxs)(A.F, {
                     setting: G.s6.ACCESSIBILITY_REDUCED_MOTION,
                     children: [(0, r.jsx)(ep, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
                 }),
-                (0, r.jsxs)(C.F, {
+                (0, r.jsxs)(A.F, {
                     setting: G.s6.ACCESSIBILITY_MESSAGES,
                     children: [(0, r.jsx)(em, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
                 }),
                 i &&
-                    (0, r.jsxs)(C.F, {
+                    (0, r.jsxs)(A.F, {
                         setting: G.s6.ACCESSIBILITY_SWITCH_ICON,
                         children: [(0, r.jsx)(ea, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
                     }),
                 (0, r.jsx)(eh, {}),
-                (0, r.jsx)(C.F, {
+                (0, r.jsx)(A.F, {
                     setting: G.s6.ACCESSIBILITY_APPEARANCE_UPSELL,
                     children: (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
@@ -300,7 +300,7 @@ function eo() {
                 onValueChange: ee,
                 onMarkerRender: (e) => ((100 * e) % 2 == 0 ? "".concat(100 * e, "%") : void 0),
             }),
-            (0, r.jsx)(C.F, {
+            (0, r.jsx)(A.F, {
                 setting: G.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR,
                 children: (0, r.jsx)(c.rsf, {
                     label: V.intl.string(V.t.bQCodD),
@@ -388,7 +388,7 @@ function ed() {
             ref: t,
             children: (0, r.jsx)(c.C3N, {
                 label: V.intl.string(V.t.BT8Bmp),
-                children: (0, r.jsx)(C.F, {
+                children: (0, r.jsx)(A.F, {
                     setting: G.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
                     children: (0, r.jsx)(c.rsf, {
                         label: V.intl.string(V.t["sSY+mD"]),
@@ -420,12 +420,12 @@ function ef() {
     return (0, r.jsxs)(c.C3N, {
         label: V.intl.string(V.t["TYyfO/"]),
         children: [
-            (0, r.jsx)(C.F, {
+            (0, r.jsx)(A.F, {
                 setting: G.s6.ACCESSIBILITY_HIGH_CONTRAST,
                 children: (0, r.jsx)(ei, {}),
             }),
             (0, _.b)()
-                ? (0, r.jsx)(C.F, {
+                ? (0, r.jsx)(A.F, {
                       setting: G.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
                       children: (0, r.jsx)(c.rsf, {
                           label: V.intl.string(V.t.cguiec),
@@ -479,7 +479,7 @@ function ep() {
                     onChange: m,
                     label: V.intl.string(V.t["+Dx+HD"]),
                 }),
-                (0, r.jsx)(C.F, {
+                (0, r.jsx)(A.F, {
                     setting: G.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,
                     children: (0, r.jsx)(c.rsf, {
                         label: V.intl.string(V.t.b3XBzg),
@@ -487,20 +487,20 @@ function ep() {
                         onChange: h,
                     }),
                 }),
-                (0, r.jsx)(C.F, {
+                (0, r.jsx)(A.F, {
                     setting: G.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS,
                     children: (0, r.jsx)(c.rsf, {
                         label: V.intl.string(V.t.Iayoh5),
-                        description: null != l ? (0, A.Z)(l) : void 0,
+                        description: null != l ? (0, C.Z)(l) : void 0,
                         checked: e,
                         onChange: w.QK.updateSetting,
                     }),
                 }),
-                (0, r.jsx)(C.F, {
+                (0, r.jsx)(A.F, {
                     setting: G.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI,
                     children: (0, r.jsx)(c.rsf, {
                         label: V.intl.string(V.t.iIaOlc),
-                        description: null != u ? (0, A.Z)(u) : void 0,
+                        description: null != u ? (0, C.Z)(u) : void 0,
                         checked: t,
                         onChange: w.Yk.updateSetting,
                     }),
@@ -517,7 +517,7 @@ function e_() {
         }, []);
     return (0, r.jsx)(c.FXm, {
         label: V.intl.string(V.t["6NtAuJ"]),
-        description: null != t ? (0, A.Z)(t) : V.intl.string(V.t.GRa6U7),
+        description: null != t ? (0, C.Z)(t) : V.intl.string(V.t.GRa6U7),
         options: [
             {
                 name: V.intl.string(V.t["Xp+X2U"]),
@@ -548,7 +548,7 @@ function em() {
             children: (0, r.jsxs)(c.C3N, {
                 label: V.intl.string(V.t.onqU6o),
                 children: [
-                    (0, r.jsx)(C.F, {
+                    (0, r.jsx)(A.F, {
                         setting: G.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
                         children: (0, r.jsx)(c.rsf, {
                             label: V.intl.string(V.t["3Fztn5"]),
@@ -556,7 +556,7 @@ function em() {
                             onChange: d.eN,
                         }),
                     }),
-                    (0, r.jsx)(C.F, {
+                    (0, r.jsx)(A.F, {
                         setting: G.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT,
                         children: (0, r.jsx)(c.rsf, {
                             label: V.intl.string(V.t.TZ2hZH),
@@ -590,12 +590,12 @@ function eh() {
             t = () => a(!1);
         (0, N.cP)(V.intl.string(V.t.PKaNJL), !0, void 0, e, t), a(!0);
     };
-    return (0, r.jsx)(C.F, {
+    return (0, r.jsx)(A.F, {
         setting: G.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
         children: (0, r.jsxs)(c.C3N, {
             label: V.intl.string(V.t.VpSKeO),
             children: [
-                (0, r.jsx)(C.F, {
+                (0, r.jsx)(A.F, {
                     setting: G.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND,
                     children: (0, r.jsx)(c.rsf, {
                         label: V.intl.string(V.t.qvTIwX),
@@ -603,7 +603,7 @@ function eh() {
                         onChange: w.OW.updateSetting,
                     }),
                 }),
-                (0, r.jsx)(C.F, {
+                (0, r.jsx)(A.F, {
                     setting: G.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE,
                     children: (0, r.jsxs)(c.Kqy, {
                         gap: 16,

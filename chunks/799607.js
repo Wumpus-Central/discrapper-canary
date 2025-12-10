@@ -80,10 +80,10 @@ function _(e) {
         [v, S] = i.useState("closed"),
         I = i.useRef(null),
         T = i.useRef(!1),
-        A = "opening-mouse" === v || "open-mouse" === v,
-        C = "opening-keyboard" === v || "open-keyboard" === v,
+        C = "opening-mouse" === v || "open-mouse" === v,
+        A = "opening-keyboard" === v || "open-keyboard" === v,
         N = "open-mouse" === v || "open-keyboard" === v,
-        P = (O.keyboardModeEnabled || C) && null != b,
+        P = (O.keyboardModeEnabled || A) && null != b,
         R = P,
         [D, w] = i.useState(0),
         x = (0, l.$)(n, c, v),
@@ -101,8 +101,8 @@ function _(e) {
             ("closed" === v || "closing" === v) && (L(), S("opening-mouse"));
         }, [L, v]),
         k = i.useCallback(() => {
-            A && j(!1);
-        }, [j, A]),
+            C && j(!1);
+        }, [j, C]),
         U = i.useCallback(() => {
             if (T.current || ("closed" !== v && "closing" !== v)) {
                 T.current = !1;

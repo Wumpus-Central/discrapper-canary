@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(442837),
     c = n(704215),
     u = n(454399),
@@ -27,7 +27,7 @@ function O(e) {
         v = _.default.getCurrentUser(),
         S = null == v || (0, m.I5)(v) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
         [I, T] = (0, p.US)(S),
-        [A, C] = i.useState(!1),
+        [C, A] = i.useState(!1),
         [N, P] = (0, d.q_F)(() => ({})),
         R = (0, s.animated)(d.Pt5);
     function D() {
@@ -37,14 +37,14 @@ function O(e) {
             config: b,
         }),
             null == n || n(),
-            C(!1);
+            A(!1);
     }
     i.useEffect(() => {
         let e = I === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (T(h.L.DISMISS), setTimeout(() => C(e), 200));
+        e && (T(h.L.DISMISS), setTimeout(() => A(e), 200));
     }, [I, T]);
-    let w = A ? g.intl.string(g.t["Osi/uy"]) : t ? g.intl.string(g.t["5cRA/b"]) : g.intl.string(g.t.buV4av),
-        x = A ? g.intl.string(g.t.ORK94p) : void 0;
+    let w = C ? g.intl.string(g.t["Osi/uy"]) : t ? g.intl.string(g.t["5cRA/b"]) : g.intl.string(g.t.buV4av),
+        x = C ? g.intl.string(g.t.ORK94p) : void 0;
     return (0, r.jsx)(u.i, {
         position: "top",
         title: x,
@@ -54,7 +54,7 @@ function O(e) {
             color: "currentColor",
         }),
         assetSize: 20,
-        forceOpen: A,
+        forceOpen: C,
         children: (0, r.jsxs)("div", {
             "aria-label": w,
             children: [

@@ -36,8 +36,8 @@ let p = new Map(),
         let { clipId: t, voiceAudioTracks: i, onMouseDown: f, className: v } = e,
             g = a.useRef(null),
             { ref: b, width: j, height: x } = (0, u.ZP)(),
-            [y, C] = a.useState(null),
-            k = (0, o.dQu)(s.Z.colors.BACKGROUND_MOD_STRONG).hex();
+            [y, N] = a.useState(null),
+            C = (0, o.dQu)(s.Z.colors.BACKGROUND_MOD_STRONG).hex();
         return (a.useEffect(
             () => (
                 (g.current = new Worker(new URL("/assets/" + n.u("1088"), n.b))),
@@ -55,14 +55,14 @@ let p = new Map(),
                     .concat(i.map((e) => e.trackName).join(","), "-")
                     .concat(j),
                 n = p.get(e);
-            if (null != n) return void C(n.waveform);
+            if (null != n) return void N(n.waveform);
             let l = g.current,
                 a = !1,
                 r = (t) => {
                     if (a) return;
                     let { waveform: n, error: l } = t.data;
                     if (null != l) return void d.jF.error("Failed to load waveform:", l);
-                    p.set(e, { waveform: n }), C(n);
+                    p.set(e, { waveform: n }), N(n);
                 };
             return (
                 l.addEventListener("message", r),
@@ -107,13 +107,13 @@ let p = new Map(),
             let { width: n, height: l } = e,
                 a = n / y.length,
                 i = -(a * (m.nl.waveformBarWidth - 1));
-            t.clearRect(0, 0, n, l), (t.fillStyle = k);
+            t.clearRect(0, 0, n, l), (t.fillStyle = C);
             for (let e = 0; e < y.length; e++) {
                 let n = y[e] * l,
                     r = e * a + i;
                 t.fillRect(r, l, a - i, -n);
             }
-        }, [k, j, b, x, y]),
+        }, [C, j, b, x, y]),
         0 === i.length)
             ? null
             : (0, l.jsx)("div", {

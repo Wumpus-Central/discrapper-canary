@@ -51,16 +51,16 @@ var r = n(250683),
     S = n(352954),
     I = n(571826),
     T = n(760373),
-    A = n(981631),
-    C = n(388032);
+    C = n(981631),
+    A = n(388032);
 function N() {
-    return g.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
+    return g.Z.getArticleURL(C.BhN.END_TO_END_ENCRYPTION);
 }
 function P() {
-    return g.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
+    return g.Z.getArticleURL(C.BhN.END_TO_END_ENCRYPTION);
 }
 function R() {
-    return g.Z.getArticleURL(A.BhN.END_TO_END_ENCRYPTION);
+    return g.Z.getArticleURL(C.BhN.END_TO_END_ENCRYPTION);
 }
 function D(e, t, n, r, i) {
     n ? O.Z.createSecureFramesVerifiedKey(e, t) : O.Z.createSecureFramesTransientKey(e, t),
@@ -78,8 +78,8 @@ function w(e, t, n) {
 }
 function x(e, t) {
     S.Z.openSecureFramesUpdateConfirmation({
-        title: C.intl.string(C.t.hdL152),
-        subtitle: C.intl.string(C.t["8VGYKg"]),
+        title: A.intl.string(A.t.hdL152),
+        subtitle: A.intl.string(A.t["8VGYKg"]),
         onConfirm: () => {
             O.Z.deleteSecureFramesVerifiedKey(e, t), (0, I.Pn)();
         },
@@ -89,8 +89,8 @@ function L(e) {
     let t = m.default.getUser(e),
         n = y.ZP.getName(t);
     S.Z.openSecureFramesUpdateConfirmation({
-        title: C.intl.formatToPlainString(C.t.K6NGBy, { username: n }),
-        subtitle: C.intl.string(C.t.F1BQK3),
+        title: A.intl.formatToPlainString(A.t.K6NGBy, { username: n }),
+        subtitle: A.intl.string(A.t.F1BQK3),
         onConfirm: () => {
             O.Z.deleteSecureFramesUserVerifiedKeys(e), (0, I.DF)();
         },
@@ -101,41 +101,41 @@ function j(e) {
         n = s()().diff(t, "s");
     if (n > 12 * h.Z.Seconds.DAYS_30) {
         let e = Math.round(n / (12 * h.Z.Seconds.DAYS_30));
-        return C.intl.formatToPlainString(C.t.F1wqkD, { count: e });
+        return A.intl.formatToPlainString(A.t.F1wqkD, { count: e });
     }
     if (n > h.Z.Seconds.DAYS_30) {
         let e = Math.round(n / h.Z.Seconds.DAYS_30);
-        return C.intl.formatToPlainString(C.t["iT+b+2"], { count: e });
+        return A.intl.formatToPlainString(A.t["iT+b+2"], { count: e });
     }
     if (n > 7 * h.Z.Seconds.DAY) {
         let e = Math.round(n / (7 * h.Z.Seconds.DAY));
-        return C.intl.formatToPlainString(C.t.dLurKZ, { count: e });
+        return A.intl.formatToPlainString(A.t.dLurKZ, { count: e });
     }
     if (n > h.Z.Seconds.DAY) {
         let e = Math.round(n / h.Z.Seconds.DAY);
-        return C.intl.formatToPlainString(C.t.LE8a2H, { count: e });
+        return A.intl.formatToPlainString(A.t.LE8a2H, { count: e });
     }
     if (n > h.Z.Seconds.HOUR) {
         let e = Math.round(n / h.Z.Seconds.HOUR);
-        return C.intl.formatToPlainString(C.t.KULxVS, { count: e });
+        return A.intl.formatToPlainString(A.t.KULxVS, { count: e });
     } else {
-        if (!(n > h.Z.Seconds.MINUTE)) return C.intl.formatToPlainString(C.t["/w0Qpw"], { count: n });
+        if (!(n > h.Z.Seconds.MINUTE)) return A.intl.formatToPlainString(A.t["/w0Qpw"], { count: n });
         let e = Math.round(n / h.Z.Seconds.MINUTE);
-        return C.intl.formatToPlainString(C.t.ws6rWq, { count: e });
+        return A.intl.formatToPlainString(A.t.ws6rWq, { count: e });
     }
 }
 function M(e) {
     let { isCurrentUserKeyPersistent: t, isOtherUserKeyPersistent: n, otherUserNickname: r } = e;
     return t && n
-        ? C.intl.format(C.t["FJN+kh"], { helpArticle: N() })
+        ? A.intl.format(A.t["FJN+kh"], { helpArticle: N() })
         : t
-          ? C.intl.format(C.t["p/9PGp"], {
+          ? A.intl.format(A.t["p/9PGp"], {
                 username: r,
                 helpArticle: N(),
             })
           : n
-            ? C.intl.format(C.t.qT5z87, { helpArticle: N() })
-            : C.intl.format(C.t["6JLy+i"], { helpArticle: N() });
+            ? A.intl.format(A.t.qT5z87, { helpArticle: N() })
+            : A.intl.format(A.t["6JLy+i"], { helpArticle: N() });
 }
 async function k(e) {
     let t = d.default.getStaticAuthSessionId();
@@ -149,7 +149,7 @@ async function G(e, t, n) {
     try {
         return (
             await l.tn.post({
-                url: A.ANM.VOICE_MATCH_PUBLIC_KEY(e),
+                url: C.ANM.VOICE_MATCH_PUBLIC_KEY(e),
                 body: {
                     public_key: U(t),
                     key_version: n,
@@ -165,7 +165,7 @@ async function Z(e) {
     let { key: t, signature: n } = await k(e);
     try {
         await l.tn.put({
-            url: A.ANM.VOICE_PUBLIC_KEYS(),
+            url: C.ANM.VOICE_PUBLIC_KEYS(),
             body: {
                 public_key: U(t),
                 signature: U(n),
@@ -215,8 +215,8 @@ function Y(e) {
         reason: T.Xe.OTHER_USER_INCONSISTENT_KEYS,
     }),
         u.Z.show({
-            title: C.intl.string(C.t.mznLyR),
-            body: C.intl.format(C.t.WY6IKb, { username: r }),
+            title: A.intl.string(A.t.mznLyR),
+            body: A.intl.format(A.t.WY6IKb, { username: r }),
         });
 }
 function W(e) {

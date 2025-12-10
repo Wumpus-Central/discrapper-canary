@@ -37,8 +37,8 @@ var i = n(54381),
     k = n(862679),
     U = n(981631),
     V = n(701488),
-    B = n(815660),
-    F = n(388032),
+    F = n(815660),
+    B = n(388032),
     H = n(97508);
 function G(e, t, n) {
     return (
@@ -129,59 +129,59 @@ class q extends r.PureComponent {
                 useReducedMotion: b,
             };
         if (e && !h) {
-            if (((j.message = F.intl.string(F.t.Hl0Mqh)), null != f && f >= 1000)) {
+            if (((j.message = B.intl.string(B.t.Hl0Mqh)), null != f && f >= 1000)) {
                 let e = 1000 * Math.floor(f / 1000);
-                j.subtitle = F.intl.formatToPlainString(F.t.C5bgrC, { count: e.toLocaleString() });
+                j.subtitle = B.intl.formatToPlainString(B.t.C5bgrC, { count: e.toLocaleString() });
             }
-            (j.buttonText = F.intl.string(F.t["3aOv+h"])),
+            (j.buttonText = B.intl.string(B.t["3aOv+h"])),
                 (j.onButtonClick = this.handleFollowAnnouncement),
                 t &&
                     ((j.onSecondaryButtonClick = this.handleJoinServer),
-                    (j.secondaryButtonText = F.intl.string(F.t.RLch70)));
+                    (j.secondaryButtonText = B.intl.string(B.t.RLch70)));
         } else if (n)
-            (j.message = F.intl.string(F.t["Eg3/c9"])),
-                (j.buttonText = F.intl.string(F.t.fiNVin)),
+            (j.message = B.intl.string(B.t["Eg3/c9"])),
+                (j.buttonText = B.intl.string(B.t.fiNVin)),
                 (j.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount);
         else if (g)
             switch (null == _ ? void 0 : _.applicationStatus) {
                 case y.wB.SUBMITTED:
-                    (j.message = F.intl.string(F.t["5iLvSx"])),
-                        (j.subtitle = F.intl.string(F.t.FdsK4h)),
-                        (j.buttonText = F.intl.string(F.t.mqtdmQ)),
+                    (j.message = B.intl.string(B.t["5iLvSx"])),
+                        (j.subtitle = B.intl.string(B.t.FdsK4h)),
+                        (j.buttonText = B.intl.string(B.t.mqtdmQ)),
                         (j.onButtonClick = this.handleCancelApplication);
                     break;
                 case y.wB.REJECTED:
-                    (j.message = F.intl.string(F.t.lk30cY)),
-                        (j.buttonText = F.intl.string(F.t["8RrsHr"])),
+                    (j.message = B.intl.string(B.t.lk30cY)),
+                        (j.buttonText = B.intl.string(B.t["8RrsHr"])),
                         (j.onButtonClick = this.handleViewApplicationRejection);
                     break;
                 default:
-                    (j.message = F.intl.string(F.t.rEBKvg)),
-                        (j.buttonText = F.intl.string(F.t["r8/DT+"])),
+                    (j.message = B.intl.string(B.t.rEBKvg)),
+                        (j.buttonText = B.intl.string(B.t["r8/DT+"])),
                         (j.buttonVariant = "primary"),
                         (j.onButtonClick = this.handleShowMemberVerification);
             }
         else if (v || null == O)
             r && !C
-                ? ((j.message = F.intl.string(F.t["2dThMM"])),
-                  (j.buttonText = F.intl.string(F.t["50gfOv"])),
+                ? ((j.message = B.intl.string(B.t["2dThMM"])),
+                  (j.buttonText = B.intl.string(B.t["50gfOv"])),
                   (j.onButtonClick = this.handleVerifyPhone))
                 : l
-                  ? ((j.message = F.intl.string(F.t.FkGPS5)),
-                    (j.buttonText = F.intl.string(F.t.lm1UKt)),
+                  ? ((j.message = B.intl.string(B.t.FkGPS5)),
+                    (j.buttonText = B.intl.string(B.t.lm1UKt)),
                     (j.onButtonClick = this.handleResendVerification))
                   : a
-                    ? ((j.message = F.intl.formatToPlainString(F.t.IH7RMF, { min: U.YeM.MEMBER_AGE })),
+                    ? ((j.message = B.intl.formatToPlainString(B.t.IH7RMF, { min: U.YeM.MEMBER_AGE })),
                       (j.countdown = o))
                     : s &&
-                      ((j.message = F.intl.formatToPlainString(F.t["2JA2GH"], { min: U.YeM.ACCOUNT_AGE })),
+                      ((j.message = B.intl.formatToPlainString(B.t["2JA2GH"], { min: U.YeM.ACCOUNT_AGE })),
                       (j.countdown = c));
         else {
             var S;
             (j.imageSrc = null != (S = O.getIconURL(V.Si.SMALL)) ? S : void 0),
-                (j.message = F.intl.format(F.t.EvDn1D, { name: O.name })),
+                (j.message = B.intl.format(B.t.EvDn1D, { name: O.name })),
                 null != O.connectionEntrypointUrl &&
-                    ((j.buttonText = F.intl.string(F.t.S0W8Z5)),
+                    ((j.buttonText = B.intl.string(B.t.S0W8Z5)),
                     (j.onButtonClick = () => {
                         window.open(O.connectionEntrypointUrl, "_blank");
                     }));
@@ -248,10 +248,10 @@ class q extends r.PureComponent {
                 let { guild: e } = this.props;
                 null != e &&
                     (0, c.Z)({
-                        title: F.intl.string(F.t.aIz1oV),
-                        subtitle: F.intl.string(F.t["13tjTU"]),
+                        title: B.intl.string(B.t.aIz1oV),
+                        subtitle: B.intl.string(B.t["13tjTU"]),
                         variant: "primary",
-                        confirmText: F.intl.string(F.t["cY+Oob"]),
+                        confirmText: B.intl.string(B.t["cY+Oob"]),
                         onConfirm: () => g.Z.removeGuildJoinRequest(e.id),
                     });
             }),
@@ -276,7 +276,7 @@ class q extends r.PureComponent {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
                         return (t) => (0, i.jsx)(e, W({ reason: P.L.GUILD_PHONE_REQUIRED }, t));
                     },
-                    { modalKey: B.M },
+                    { modalKey: F.M },
                 );
             }),
             G(this, "handleResendVerification", () => {
@@ -285,8 +285,8 @@ class q extends r.PureComponent {
                 let t = null == (e = R.default.getCurrentUser()) ? void 0 : e.email;
                 null != t &&
                     (0, s.Z)({
-                        title: F.intl.string(F.t.LykQYk),
-                        subtitle: F.intl.format(F.t.azKEPy, { email: t }),
+                        title: B.intl.string(B.t.LykQYk),
+                        subtitle: B.intl.format(B.t.azKEPy, { email: t }),
                     });
             }),
             G(this, "handleTextAreaClick", () => {

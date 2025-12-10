@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(473749),
     i = n(21890),
     a = n(854062),
@@ -22,8 +22,8 @@ var r = n(473749),
     S = n(868981),
     I = n(918746),
     T = n(228137);
-let A = [u.Z, d.Z, p.Z, _.Z, f.Z, E.Z, b.Z, y.Z, O.Z, v.Z, S.Z, I.Z, T.Z, a.Z, c.Z, l.Z, i.Z, o.Z, s.Z];
-function C() {
+let C = [u.Z, d.Z, p.Z, _.Z, f.Z, E.Z, b.Z, y.Z, O.Z, v.Z, S.Z, I.Z, T.Z, a.Z, c.Z, l.Z, i.Z, o.Z, s.Z];
+function A() {
     let e = r.useRef(0),
         t = r.useRef(!0),
         n = (0, g.d)(),
@@ -31,14 +31,14 @@ function C() {
         [a, o] = r.useState(!1);
     return (
         (0, r.useEffect)(() => {
-            A.forEach((n) =>
+            C.forEach((n) =>
                 m.tn
                     .get({
                         url: n,
                         rejectWithError: !0,
                     })
                     .then(() => {
-                        t.current && ((e.current += 1), e.current === A.length && o(!0));
+                        t.current && ((e.current += 1), e.current === C.length && o(!0));
                     }),
             );
         }, []),

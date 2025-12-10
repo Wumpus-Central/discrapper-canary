@@ -35,7 +35,7 @@ var r = n(512722),
     S = n(709054),
     I = n(612776),
     T = n(981631);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +59,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -97,7 +97,7 @@ function R() {
             return (
                 i()(null != t, "Guild must exist"),
                 {
-                    guild: (0, v.yS)(P(C({}, t), { features: [...t.features] })),
+                    guild: (0, v.yS)(P(A({}, t), { features: [...t.features] })),
                     numMessagesSent: 10382504,
                     numVoiceMinutes: 409516.21576666617,
                 }
@@ -214,7 +214,7 @@ async function D() {
                 users: O,
                 sidekick: I,
                 applications: T,
-                quests: A,
+                quests: C,
                 avatar_decoration: N,
             } = e;
         o.Z.dispatch({
@@ -239,7 +239,7 @@ async function D() {
                     null != g
                         ? {
                               emojis: g.emojis.map((e) =>
-                                  P(C({}, e), { id: S.default.isProbablyAValidSnowflake(e.id) ? e.id : void 0 }),
+                                  P(A({}, e), { id: S.default.isProbablyAValidSnowflake(e.id) ? e.id : void 0 }),
                               ),
                               numEmojisSent: g.num_emojis_sent,
                           }
@@ -278,17 +278,17 @@ async function D() {
                     null != T
                         ? {
                               applications: T.applications.map((e) => ({
-                                  game: P(C({}, (0, h.m)(e.game)), { coverImageHash: e.game.cover_image_hash }),
+                                  game: P(A({}, (0, h.m)(e.game)), { coverImageHash: e.game.cover_image_hash }),
                                   numDaysPlayed: e.num_sessions,
                               })),
                               totalGamesPlayed: T.total_games_played,
                           }
                         : void 0,
                 quests:
-                    null != A
+                    null != C
                         ? {
-                              numCompleted: A.num_completed,
-                              numOrbs: A.num_orbs,
+                              numCompleted: C.num_completed,
+                              numOrbs: C.num_orbs,
                           }
                         : void 0,
                 sidekick:

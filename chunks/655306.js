@@ -1,7 +1,7 @@
 n.d(t, {
     Yy: () => O,
     ZP: () => N,
-    ai: () => C,
+    ai: () => A,
 }),
     n(388685),
     n(539854);
@@ -40,8 +40,8 @@ let b = 100,
     S = 3,
     I = 30 * f.Z.Millis.SECOND,
     T = 120 * f.Z.Millis.SECOND,
-    A = -1 !== (0, d.hY)();
-var C = (function (e) {
+    C = -1 !== (0, d.hY)();
+var A = (function (e) {
     return (e.UserSSRCUpdate = "user-ssrc-update"), (e.Update = "update"), e;
 })({});
 class N extends a.Z {
@@ -328,7 +328,7 @@ class N extends a.Z {
                 }
                 for (let [e, n] of Object.entries(a.audioSsrcs))
                     (null == (t = a.connection) ? void 0 : t.getLocalMute(e)) && (o[n] = 0);
-                return A
+                return C
                     ? a.latestWants
                     : (null == a.connection ||
                           i().isEqual(a.latestWants, o) ||

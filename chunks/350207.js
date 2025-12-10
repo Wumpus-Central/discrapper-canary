@@ -37,7 +37,7 @@ function I(e) {
     let { widgets: t = [], onClick: n, className: a } = e,
         { trackUserProfileAction: u } = (0, _.KZ)(),
         I = S(t.filter((e) => e instanceof m.q)),
-        A = (0, i.useMemo)(
+        C = (0, i.useMemo)(
             () => [
                 ...new Set(
                     t
@@ -54,16 +54,16 @@ function I(e) {
             ],
             [t, I],
         ),
-        C = (0, s.e7)([d.Z], () => d.Z.canFetchDetectableGames()),
+        A = (0, s.e7)([d.Z], () => d.Z.canFetchDetectableGames()),
         [N, P] = (0, i.useState)([]),
         { themeType: R } = (0, E.z)(),
         D = R === b.l.SIDEBAR,
         w = (0, i.useRef)(!1);
     return (
         (0, i.useEffect)(() => {
-            if (C) return void c.Z.getDetectableGames();
+            if (A) return void c.Z.getDetectableGames();
             P(
-                A.map((e) => d.Z.getDetectableGame(e))
+                C.map((e) => d.Z.getDetectableGame(e))
                     .filter((e) => null != e)
                     .map((e) => {
                         var t;
@@ -82,7 +82,7 @@ function I(e) {
                     .filter((e) => "" !== e.image)
                     .slice(0, v),
             );
-        }, [A, C]),
+        }, [C, A]),
         (0, i.useEffect)(() => {
             0 !== N.length && (w.current || (u({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (w.current = !0)));
         }, [u, N.length]),
@@ -107,8 +107,8 @@ function I(e) {
                                 {
                                     iconUrl: e.image,
                                     name: e.name,
-                                    displayCount: t === N.length - 1 && A.length > v,
-                                    gameCount: A.length - N.length,
+                                    displayCount: t === N.length - 1 && C.length > v,
+                                    gameCount: C.length - N.length,
                                 },
                                 t,
                             ),

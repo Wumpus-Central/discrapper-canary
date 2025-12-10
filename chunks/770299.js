@@ -276,7 +276,7 @@ e.exports = function (e) {
             relevance: 0,
         },
         T = u.filter((e) => "string" == typeof e).concat(["_|0"]),
-        A = {
+        C = {
             variants: [
                 {
                     className: "keyword",
@@ -290,12 +290,12 @@ e.exports = function (e) {
                 },
             ],
         },
-        C = {
+        A = {
             $pattern: a(/\b\w+/, /#\w+/),
             keyword: T.concat(p),
             literal: d,
         },
-        N = [E, I, A],
+        N = [E, I, C],
         P = [
             {
                 match: r(/\./, a(..._)),
@@ -458,7 +458,7 @@ e.exports = function (e) {
         q = {
             begin: /</,
             end: />/,
-            keywords: C,
+            keywords: A,
             contains: [...m, ...N, ...K, R, z],
         };
     z.contains.push(q);
@@ -466,7 +466,7 @@ e.exports = function (e) {
             begin: /\(/,
             end: /\)/,
             relevance: 0,
-            keywords: C,
+            keywords: A,
             contains: [
                 "self",
                 {
@@ -495,7 +495,7 @@ e.exports = function (e) {
         J = {
             begin: /\(/,
             end: /\)/,
-            keywords: C,
+            keywords: A,
             contains: [
                 {
                     begin: a(n(r(y, /\s*:/)), n(r(y, /\s+/, y, /\s*:/))),
@@ -577,14 +577,14 @@ e.exports = function (e) {
                 1: "keyword",
                 3: "title.class",
             },
-            keywords: C,
+            keywords: A,
             contains: [
                 X,
                 ...N,
                 {
                     begin: /:/,
                     end: /\{/,
-                    keywords: C,
+                    keywords: A,
                     contains: [
                         {
                             scope: "title.class.inherited",
@@ -598,7 +598,7 @@ e.exports = function (e) {
         };
     for (let e of Z.variants) {
         let t = e.contains.find((e) => "interpol" === e.label);
-        t.keywords = C;
+        t.keywords = A;
         let n = [...N, ...P, ...D, L, Z, ...W];
         t.contains = [
             ...n,
@@ -611,7 +611,7 @@ e.exports = function (e) {
     }
     return {
         name: "Swift",
-        keywords: C,
+        keywords: A,
         contains: [
             ...m,
             $,

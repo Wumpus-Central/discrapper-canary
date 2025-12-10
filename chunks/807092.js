@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -127,7 +127,7 @@ function I() {
 function T() {
     (p = {}), (_ = {}), (m = {});
 }
-class A extends (r = i.ZP.PersistedStore) {
+class C extends (r = i.ZP.PersistedStore) {
     getState() {
         let e = {};
         for (let [t, n] of l.default.entries(p))
@@ -149,10 +149,10 @@ class A extends (r = i.ZP.PersistedStore) {
         return m[e];
     }
 }
-c(A, "displayName", "PendingReplyStore"),
-    c(A, "persistKey", "PendingReplyStore"),
-    c(A, "migrations", [(e) => (null != e ? e : {})]);
-let C = new A(a.Z, {
+c(C, "displayName", "PendingReplyStore"),
+    c(C, "persistKey", "PendingReplyStore"),
+    c(C, "migrations", [(e) => (null != e ? e : {})]);
+let A = new C(a.Z, {
     CREATE_PENDING_REPLY: h,
     CREATE_SHALLOW_PENDING_REPLY: g,
     SET_PENDING_REPLY_SHOULD_MENTION: E,

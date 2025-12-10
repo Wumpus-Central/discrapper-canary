@@ -37,7 +37,7 @@ var i = n(120356),
     S = n(268685),
     I = n(388032),
     T = n(493090);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -100,7 +100,7 @@ function R(e) {
     return (0, r.jsx)(
         l.P3F,
         P(
-            C(
+            A(
                 {
                     className: T.itemContainer,
                     onClick: u,

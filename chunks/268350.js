@@ -4,8 +4,8 @@ n.d(t, {
     Il: () => T,
     Jf: () => P,
     SA: () => x,
-    SV: () => A,
-    Um: () => C,
+    SV: () => C,
+    Um: () => A,
     eu: () => R,
     hW: () => L,
     lY: () => N,
@@ -132,7 +132,7 @@ let S = async (e, t) => {
             });
         else throw Error("Invalid sticker type");
     },
-    A = async (e, t) => {
+    C = async (e, t) => {
         let { body: n } = await a.tn.get({
             url: h.ANM.GUILD_STICKER_PACKS(e),
             rejectWithError: !1,
@@ -151,7 +151,7 @@ let S = async (e, t) => {
             ),
         });
     },
-    C = async (e) => {
+    A = async (e) => {
         await a.tn.del({
             url: h.ANM.GUILD_STICKER(e.guild_id, e.id),
             rejectWithError: !1,

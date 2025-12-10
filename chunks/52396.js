@@ -88,9 +88,9 @@ function O(e) {
         case s.s.TOP_GAME:
             return (0, r.jsx)(T, h({ entry: t }, i));
         case s.s.PLAYED_GAME:
-            return (0, r.jsx)(A, h({ entry: t }, i));
-        case s.s.WATCHED_MEDIA:
             return (0, r.jsx)(C, h({ entry: t }, i));
+        case s.s.WATCHED_MEDIA:
+            return (0, r.jsx)(A, h({ entry: t }, i));
         case s.s.LISTENED_SESSION:
             return (0, r.jsx)(N, h({ entry: t }, i));
         case s.s.LAUNCHED_ACTIVITY:
@@ -134,7 +134,7 @@ function T(e) {
         children: n,
     });
 }
-function A(e) {
+function C(e) {
     var { entry: t, children: n } = e,
         i = g(e, ["entry", "children"]);
     let a = (0, d.Z)(h({ entry: t }, i));
@@ -143,7 +143,7 @@ function A(e) {
         children: n,
     });
 }
-function C(e) {
+function A(e) {
     var { entry: t, children: n } = e,
         i = g(e, ["entry", "children"]);
     let a = (0, _.Z)(h({ entry: t }, i));

@@ -76,8 +76,8 @@ function I(e, t) {
     );
 }
 let T = {},
-    A = {},
-    C = !1,
+    C = {},
+    A = !1,
     N = !1,
     P = { flags: 0 },
     R = new c.ZP(),
@@ -124,7 +124,7 @@ function B(e, t) {
         var t;
         return o.yE(null != (t = e.flags) ? t : 0, y.ic.OPT_IN_ENABLED);
     });
-    (j[e] = new Set(c.map((e) => e.channel_id))), V(e), delete A[e];
+    (j[e] = new Set(c.map((e) => e.channel_id))), V(e), delete C[e];
 }
 function F(e, t) {
     !0 === t.muted &&
@@ -261,7 +261,7 @@ function et(e) {
     en(t);
 }
 function en(e) {
-    (C = o.yE(e.flags, E.c.USE_NEW_NOTIFICATIONS)), (N = o.yE(e.flags, E.c.MENTION_ON_ALL_MESSAGES)), (P = e);
+    (A = o.yE(e.flags, E.c.USE_NEW_NOTIFICATIONS)), (N = o.yE(e.flags, E.c.MENTION_ON_ALL_MESSAGES)), (P = e);
 }
 function er(e) {
     let { userGuildSettings: t } = e;
@@ -319,13 +319,13 @@ function ef() {
     return !0;
 }
 function ep() {
-    return C;
+    return A;
 }
 class e_ extends (r = s.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(_.Z, m.Z, u.Z, d.Z, h.default), null != e)) {
             var t, n;
-            (C = null != (t = e.useNewNotifications) && t),
+            (A = null != (t = e.useNewNotifications) && t),
                 "userGuildSettings" in e &&
                     ((T = e.userGuildSettings),
                     (j = a().mapValues(null != (n = e.optedInChannelsByGuild) ? n : {}, (e) => new Set(e))),
@@ -335,7 +335,7 @@ class e_ extends (r = s.ZP.PersistedStore) {
         }
     }
     getState() {
-        return { useNewNotifications: C };
+        return { useNewNotifications: A };
     }
     get mentionOnAllMessages() {
         return N;
@@ -511,7 +511,7 @@ class e_ extends (r = s.ZP.PersistedStore) {
     }
     getGuildFavorites(e) {
         if (u.Z.isFullServerPreview(e)) return null;
-        if (null == A[e]) {
+        if (null == C[e]) {
             let t = a().filter(this.getChannelOverrides(e), (t) => {
                 var n, r;
                 return (
@@ -519,9 +519,9 @@ class e_ extends (r = s.ZP.PersistedStore) {
                     (null == (n = _.Z.getChannel(t.channel_id)) ? void 0 : n.guild_id) === e
                 );
             });
-            A[e] = t.map((e) => e.channel_id);
+            C[e] = t.map((e) => e.channel_id);
         }
-        return A[e];
+        return C[e];
     }
     isFavorite(e, t) {
         var n;
@@ -545,7 +545,7 @@ class e_ extends (r = s.ZP.PersistedStore) {
         return P;
     }
     get useNewNotifications() {
-        return C;
+        return A;
     }
     getGuildUnreadSetting(e) {
         if (!ep()) return b.i.ALL_MESSAGES;

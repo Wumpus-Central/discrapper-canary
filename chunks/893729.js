@@ -95,7 +95,7 @@ function v(e) {
                 ),
             [v, E],
         ),
-        A = {
+        C = {
             nick: S,
             colorString: n.colorString,
             colorStrings: n.colorStrings,
@@ -107,7 +107,7 @@ function v(e) {
                 className: o()(e, g.container, y),
                 children: (0, r.jsx)(f.Z, {
                     hideTimestamp: !0,
-                    author: A,
+                    author: C,
                     roleIcon: I,
                     message: T,
                     isGroupStart: !0,

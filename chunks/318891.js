@@ -48,7 +48,7 @@ function T() {
         r = l.Z.getChannel(n);
     return null == t || null == r ? v() : O(r, (0, E.Z)(t.location.id, t.applicationId));
 }
-function A() {
+function C() {
     return (0, b.Z)({
         LayerStore: c.Z,
         PopoutWindowStore: s.Z,
@@ -56,7 +56,7 @@ function A() {
         ? S()
         : I();
 }
-class C extends o.Z {
+class A extends o.Z {
     _initialize() {
         f.Z.addChangeListener(T),
             p.Z.addChangeListener(T),
@@ -64,7 +64,7 @@ class C extends o.Z {
             _.Z.addChangeListener(T),
             s.Z.addChangeListener(T),
             h.ZP.addChangeListener(T),
-            c.Z.addChangeListener(A);
+            c.Z.addChangeListener(C);
     }
     _terminate() {
         f.Z.removeChangeListener(T),
@@ -73,7 +73,7 @@ class C extends o.Z {
             _.Z.removeChangeListener(T),
             s.Z.removeChangeListener(T),
             h.ZP.removeChangeListener(T),
-            c.Z.removeChangeListener(A);
+            c.Z.removeChangeListener(C);
     }
 }
-let N = new C();
+let N = new A();

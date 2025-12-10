@@ -34,7 +34,7 @@ function d(e, t, n) {
             onClick: y,
             isDisabled: O,
         }),
-        { pressProps: A, isPressed: C } = (0, l.r)({
+        { pressProps: C, isPressed: A } = (0, l.r)({
             onPressStart: m,
             onPressEnd: h,
             onPressChange: g,
@@ -60,7 +60,7 @@ function d(e, t, n) {
         (0, u.Q)({ validationBehavior: M }, t, n),
         {
             labelProps: (0, i.d)(
-                A,
+                C,
                 (0, s.useMemo)(
                     () => ({
                         onClick: (e) => e.preventDefault(),
@@ -85,7 +85,7 @@ function d(e, t, n) {
             }),
             isDisabled: O,
             isSelected: v,
-            isPressed: T || C,
+            isPressed: T || A,
         }
     );
 }

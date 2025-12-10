@@ -33,8 +33,8 @@ function T(e, t, n) {
         e
     );
 }
-let A = !0,
-    C = !1,
+let C = !0,
+    A = !1,
     N = (e) => {
         let { presetId: t } = e;
         if (null == t) {
@@ -59,15 +59,15 @@ let A = !0,
             r = E.default.getCurrentUser();
         if (null == t || null == n || (0, c.zu)(s.z.CLIENT_THEMES_COACHMARK) || !(0, y.Fc)(r)) return;
         let i = g.Z.getChannel(t);
-        null != i && (0, h.zi)(i.type) && (C = !0);
+        null != i && (0, h.zi)(i.type) && (A = !0);
     };
 function w() {
-    A && (r = void 0), (C = !1);
+    C && (r = void 0), (A = !1);
 }
 let x = () => {
         let e = !b.ZP.canUseClientThemes(E.default.getCurrentUser());
-        if (e === A) return !1;
-        A = e;
+        if (e === C) return !1;
+        C = e;
     },
     L = () => {
         if (!u.Z.shouldSync("appearance")) return !1;
@@ -100,7 +100,7 @@ class M extends (a = o.ZP.PersistedStore) {
             this.syncWith([u.Z], L);
     }
     getState() {
-        return A ? {} : { gradientPresetId: null == r ? void 0 : r.id };
+        return C ? {} : { gradientPresetId: null == r ? void 0 : r.id };
     }
     get gradientPreset() {
         return r;
@@ -109,10 +109,10 @@ class M extends (a = o.ZP.PersistedStore) {
         return null == this.gradientPreset ? null : (0, O.VK)(this.gradientPreset);
     }
     get isPreview() {
-        return A;
+        return C;
     }
     get isCoachmark() {
-        return C;
+        return A;
     }
     get mobilePendingThemeIndex() {
         return i;

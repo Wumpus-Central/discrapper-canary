@@ -23,7 +23,7 @@ var i = n(704215),
     S = n(474936),
     I = n(388032),
     T = n(655227);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -76,7 +76,7 @@ function P(e, t) {
     );
 }
 let R = (e) => {
-    let { dismissibleContent: t, noticeType: A } = e;
+    let { dismissibleContent: t, noticeType: C } = e;
     return (0, r.jsx)(b.ZP, {
         contentTypes: [t],
         groupName: y.R.NOTICE_BAR,
@@ -90,20 +90,20 @@ let R = (e) => {
                         children: [
                             (0, r.jsx)(a.RyX, {
                                 onClick: () => b(y.L.UNKNOWN),
-                                noticeType: A,
+                                noticeType: C,
                             }),
                             I.intl.string(I.t["+xn1o5"]),
                             (0, r.jsx)("i", { className: T.iconApple }),
                             (0, r.jsx)("i", { className: T.iconAndroid }),
                             (0, r.jsx)("i", { className: T.iconWindows }),
                             (0, r.jsx)(a.NoS, {
-                                noticeType: A,
+                                noticeType: C,
                                 onClick: () => {
                                     (0, a.ZDy)(async () => {
                                         let { default: e } = await Promise.all([n.e("32996"), n.e("74023")]).then(
                                             n.bind(n, 431583),
                                         );
-                                        return (t) => (0, r.jsx)(e, C({ source: "Top Bar Nag" }, t));
+                                        return (t) => (0, r.jsx)(e, A({ source: "Top Bar Nag" }, t));
                                     });
                                 },
                                 children: I.intl.string(I.t["1WjMbC"]),
@@ -116,7 +116,7 @@ let R = (e) => {
                         children: [
                             (0, r.jsx)(a.RyX, {
                                 onClick: () => b(y.L.UNKNOWN),
-                                noticeType: A,
+                                noticeType: C,
                             }),
                             (0, r.jsx)(g.Z, { className: T.platformIcon }),
                             I.intl.string(I.t["5NUVHH"]),
@@ -126,7 +126,7 @@ let R = (e) => {
                                         platformType: O.ABu.SPOTIFY,
                                         location: "Notice Bar",
                                     }),
-                                noticeType: A,
+                                noticeType: C,
                                 children: I.intl.string(I.t.S0W8Z5),
                             }),
                         ],
@@ -136,7 +136,7 @@ let R = (e) => {
                         color: a.DM8.PLAYSTATION,
                         children: [
                             (0, r.jsx)(a.RyX, {
-                                noticeType: A,
+                                noticeType: C,
                                 onClick: () => b(y.L.UNKNOWN),
                             }),
                             (0, r.jsx)("img", {
@@ -161,7 +161,7 @@ let R = (e) => {
                         children: [
                             (0, r.jsx)(a.RyX, {
                                 onClick: () => b(y.L.USER_DISMISS),
-                                noticeType: A,
+                                noticeType: C,
                             }),
                             I.intl.string(I.t["3qKN/h"]),
                             (0, r.jsx)(a.NoS, {
@@ -179,7 +179,7 @@ let R = (e) => {
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     e,
-                                                    P(C({}, n), {
+                                                    P(A({}, n), {
                                                         ticket: t,
                                                         challenge: i,
                                                         showAccountSettingsButton: !0,
@@ -192,7 +192,7 @@ let R = (e) => {
                                         );
                                     }
                                 },
-                                noticeType: A,
+                                noticeType: C,
                                 children: I.intl.string(I.t["ff/XXy"]),
                             }),
                         ],
@@ -208,7 +208,7 @@ let R = (e) => {
                             }),
                             (0, r.jsx)(a.NoS, {
                                 className: T.premiumAction,
-                                noticeType: A,
+                                noticeType: C,
                                 onClick: () => {
                                     E.default.track(O.rMx.PREMIUM_PROMOTION_OPENED, {
                                         location_section: O.jXE.NOTIFICATION_BAR,
@@ -222,7 +222,7 @@ let R = (e) => {
                                 onClick: () => {
                                     b(y.L.UNKNOWN), (0, o.mB)(O.xW$.PREMIUM_PROMO_DISMISSED, !0);
                                 },
-                                noticeType: A,
+                                noticeType: C,
                             }),
                         ],
                     });
@@ -241,12 +241,12 @@ let R = (e) => {
                         color: a.DM8.PREMIUM_TIER_2,
                         children: [
                             (0, r.jsx)(a.RyX, {
-                                noticeType: A,
+                                noticeType: C,
                                 onClick: () => b(y.L.UNKNOWN),
                             }),
                             I.intl.string(I.t["0KFB2B"]),
                             (0, r.jsx)(a.NoS, {
-                                noticeType: A,
+                                noticeType: C,
                                 onClick: () => {
                                     b(y.L.UNKNOWN),
                                         (0, h.openUserSettings)(m.n.NITRO_PANEL, { section: O.oAB.PREMIUM });
@@ -261,11 +261,11 @@ let R = (e) => {
                         children: [
                             (0, r.jsx)(a.RyX, {
                                 onClick: () => b(y.L.UNKNOWN),
-                                noticeType: A,
+                                noticeType: C,
                             }),
                             I.intl.string(I.t["7490vQ"]),
                             (0, r.jsx)(a.NoS, {
-                                noticeType: A,
+                                noticeType: C,
                                 onClick: () => {
                                     (0, _.uL)(O.Z5c.SETTINGS("account"));
                                 },
@@ -280,11 +280,11 @@ let R = (e) => {
                         children: [
                             (0, r.jsx)(a.RyX, {
                                 onClick: () => b(y.L.UNKNOWN),
-                                noticeType: A,
+                                noticeType: C,
                             }),
                             I.intl.string(I.t.pJ4hJE),
                             (0, r.jsx)(a.NoS, {
-                                noticeType: A,
+                                noticeType: C,
                                 onClick: () => {
                                     b(y.L.PRIMARY),
                                         (0, _.uL)(
@@ -307,12 +307,12 @@ let R = (e) => {
                         children: [
                             (0, r.jsx)(a.RyX, {
                                 onClick: () => b(y.L.UNKNOWN),
-                                noticeType: A,
+                                noticeType: C,
                             }),
                             I.intl.format(I.t.pdYZyg, {}),
                             (0, r.jsx)(a.NoS, {
                                 onClick: () => (0, f.Z)(v.Kq.NOTICE),
-                                noticeType: A,
+                                noticeType: C,
                                 children: I.intl.string(I.t.LhlgY9),
                             }),
                         ],
@@ -323,7 +323,7 @@ let R = (e) => {
                         children: [
                             (0, r.jsx)(a.RyX, {
                                 onClick: () => b(y.L.UNKNOWN),
-                                noticeType: A,
+                                noticeType: C,
                             }),
                             I.intl.string(I.t["O9GI+k"]),
                             (0, r.jsx)(a.NoS, {
@@ -335,7 +335,7 @@ let R = (e) => {
                                         onClose: () => b(y.L.UNKNOWN),
                                     });
                                 },
-                                noticeType: A,
+                                noticeType: C,
                                 children: I.intl.string(I.t.Zi69D4),
                             }),
                         ],

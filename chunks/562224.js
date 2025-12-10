@@ -70,12 +70,12 @@ function T(e, t) {
         e
     );
 }
-function A(e) {
+function C(e) {
     return e.hasOwnProperty("pid");
 }
-function C(e) {
+function A(e) {
     var t;
-    if (A(e)) return { pid: e.pid };
+    if (C(e)) return { pid: e.pid };
     let n = (0, b.Z)(void 0, e, a.ZP.getRunningGames()),
         i = !(0, _.isWindows)() || null == n || (null == e ? void 0 : e.id.startsWith(r.vA.CAMERA)),
         o = null != n ? n.pid : null;
@@ -92,7 +92,7 @@ function C(e) {
         : { pid: o };
 }
 async function N(e, t) {
-    var n, _, E, b, v, I, A, N;
+    var n, _, E, b, v, I, C, N;
     let P = p.default.getCurrentUser(),
         R = f.Z.getVoiceChannelId(),
         D = c.Z.getChannel(R),
@@ -114,7 +114,7 @@ async function N(e, t) {
         [F, V] = null != (b = (0, g.Z)(B, P, x)) ? b : [],
         H = null != (v = null != F ? F : null == t ? void 0 : t.resolution) ? v : M,
         Y = null != (I = null != V ? V : null == t ? void 0 : t.fps) ? I : k,
-        W = null != (A = null == t ? void 0 : t.previewDisabled) ? A : s.I0.getSetting(),
+        W = null != (C = null == t ? void 0 : t.previewDisabled) ? C : s.I0.getSetting(),
         K = null != (N = null == t ? void 0 : t.soundshareEnabled) ? N : U;
     return (
         (0, h.Z)(B, H, Y, P, x, D) ||
@@ -130,7 +130,7 @@ async function N(e, t) {
         (0, i.WH)(
             w,
             R,
-            T(S({}, C(L)), {
+            T(S({}, A(L)), {
                 audioSourceId: (null == (_ = L.id) ? void 0 : _.startsWith(r.vA.CAMERA))
                     ? null == t
                         ? void 0

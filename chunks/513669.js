@@ -110,11 +110,11 @@ function v(e) {
         v !== p && (V(null), O(null));
     }, [v]);
     let y = null != x ? u.intl.formatToPlainString(u.t["Kw+5YX"], { filename: x }) : u.intl.string(u.t.SNPvSv),
-        I = (0, o.Jb)({
+        N = (0, o.Jb)({
             orientation: "horizontal",
             isDisabled: C,
         }),
-        { ref: N } = I,
+        { ref: I } = N,
         K = (function (e, t) {
             if (null == e) return {};
             var A,
@@ -135,7 +135,7 @@ function v(e) {
                         !(t.indexOf(A) >= 0) && Object.prototype.propertyIsEnumerable.call(e, A) && (r[A] = e[A]);
             }
             return r;
-        })(I, ["ref"]);
+        })(N, ["ref"]);
     return (
         r.useEffect(() => {
             if (U && null != x) {
@@ -222,7 +222,7 @@ function v(e) {
                         g(
                             {
                                 "aria-label": b,
-                                ref: N,
+                                ref: I,
                             },
                             K,
                         ),

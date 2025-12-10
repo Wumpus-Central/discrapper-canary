@@ -20,8 +20,8 @@ var o,
     S = n(606304),
     I = n(979651),
     T = n(626135),
-    A = n(81063),
-    C = n(70956),
+    C = n(81063),
+    A = n(70956),
     N = n(823379),
     P = n(781518),
     R = n(616922),
@@ -81,16 +81,16 @@ function j(e, t) {
 let M = m.Z.get(D.ABu.SPOTIFY),
     k = "wss://dealer.spotify.com/?access_token=",
     U = "hm://pusher/v1/connections/",
-    G = 30 * C.Z.Millis.SECOND,
-    Z = 30 * C.Z.Millis.SECOND,
+    G = 30 * A.Z.Millis.SECOND,
+    Z = 30 * A.Z.Millis.SECOND,
     B = 100,
-    F = 5 * C.Z.Millis.MINUTE,
-    V = 5 * C.Z.Millis.SECOND,
-    H = 1.5 * C.Z.Millis.SECOND,
+    F = 5 * A.Z.Millis.MINUTE,
+    V = 5 * A.Z.Millis.SECOND,
+    H = 1.5 * A.Z.Millis.SECOND,
     Y = "Computer",
     W = 5,
-    K = +C.Z.Millis.MINUTE,
-    z = 3 * C.Z.Millis.SECOND,
+    K = +A.Z.Millis.MINUTE,
+    z = 3 * A.Z.Millis.SECOND,
     q = 128,
     Q = "message",
     X = "ping",
@@ -408,11 +408,11 @@ function eT(e) {
     let { id: t } = e;
     a = t;
 }
-function eA(e) {
+function eC(e) {
     let { accountId: t, devices: n } = e;
     (eo[t] = n), $.info("Devices updated for ".concat(t, ":"), n);
 }
-function eC(e) {
+function eA(e) {
     let { accountId: t, deviceId: n } = e;
     eE(t, n);
 }
@@ -658,7 +658,7 @@ class eG extends (o = u.ZP.Store) {
                 return t.replace(/;/g, "");
             }).join("; "));
         let m = {},
-            h = null != o.image ? (0, A.f)(D.ABu.SPOTIFY, o.image.url) : null;
+            h = null != o.image ? (0, C.f)(D.ABu.SPOTIFY, o.image.url) : null;
         null != o.image && null != h && (m.large_image = h),
             o.type !== J && (m.large_text = o.name),
             null != p && (t = p.uri),
@@ -700,8 +700,8 @@ let eZ = new eG(p.Z, {
         ACTIVITY_PLAY: eN,
         ACTIVITY_SYNC: eP,
         ACTIVITY_SYNC_STOP: ey,
-        SPOTIFY_SET_DEVICES: eA,
-        SPOTIFY_SET_ACTIVE_DEVICE: eC,
+        SPOTIFY_SET_DEVICES: eC,
+        SPOTIFY_SET_ACTIVE_DEVICE: eA,
         SPEAKING: ex,
         VOICE_STATE_UPDATES: eL,
         MEDIA_ENGINE_SET_GO_LIVE_SOURCE: eM,

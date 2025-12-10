@@ -7,9 +7,9 @@ var r = n(54381),
     c = n(159691),
     s = n(481060),
     u = n(984802),
-    d = n(996435),
+    b = n(996435),
     f = n(36361),
-    b = n(388032),
+    d = n(388032),
     y = n(214779);
 function p(e) {
     let { icon: t, label: n, onClick: o } = e;
@@ -36,8 +36,8 @@ function g(e) {
                             a.tq &&
                                 (0, r.jsx)(p, {
                                     icon: s.yFM,
-                                    onClick: () => d.Z.setState({ showNavigationMobile: !0 }),
-                                    label: b.intl.string(b.t["13/7kX"]),
+                                    onClick: () => b.Z.setState({ showNavigationMobile: !0 }),
+                                    label: d.intl.string(d.t["13/7kX"]),
                                 }),
                             (0, r.jsx)(s.Heading, {
                                 variant: "heading-md/medium",
@@ -50,7 +50,7 @@ function g(e) {
                     (0, r.jsx)(p, {
                         icon: s.Uz9,
                         onClick: o,
-                        label: b.intl.string(b.t.cpT0Cq),
+                        label: d.intl.string(d.t.cpT0Cq),
                     }),
                 ],
             }),
@@ -61,7 +61,7 @@ let O = o.memo(function (e) {
     let { onClose: o, setting: i } = e,
         c = null != (n = null == i ? void 0 : i.useTitle()) ? n : "",
         s = null == i || null == (t = i.useBadge) ? void 0 : t.call(i),
-        u = d.Z.useField("showNavigationMobile");
+        u = b.Z.useField("showNavigationMobile");
     return (0, r.jsxs)("div", {
         className: l()(y.content, {
             [y.mobile]: a.tq,

@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(194359),
     p = n(313201),
     f = n(657682),
-    h = n(981631),
-    g = n(295907),
+    g = n(981631),
+    h = n(295907),
     m = n(388032),
     _ = n(470840),
     b = n(197571);
@@ -162,14 +162,14 @@ function N(e) {
                                 inputClassName: _.input,
                                 onKeyPress: (e) => {
                                     let t = e.currentTarget.value;
-                                    if (e.key !== g.mR.Enter && t.includes("#")) {
+                                    if (e.key !== h.mR.Enter && t.includes("#")) {
                                         o()(null != n.current, "Input is handling keypress when not mounted");
                                         let r = t.indexOf("#"),
                                             i = n.current.selectionStart,
                                             l =
-                                                e.key === g.mR.Backspace ||
-                                                e.key === g.mR.ArrowRight ||
-                                                e.key === g.mR.ArrowLeft,
+                                                e.key === h.mR.Backspace ||
+                                                e.key === h.mR.ArrowRight ||
+                                                e.key === h.mR.ArrowLeft,
                                             a = e.which >= 48 && e.which <= 57;
                                         null != i && i > r && /^(.+?#\d{4})$/.test(t) && !l
                                             ? e.preventDefault()
@@ -180,7 +180,7 @@ function N(e) {
                                     if (e.length <= 0) return void p({ type: "RESET" });
                                     let t = "",
                                         [, n] = e.split("#");
-                                    null != n && (t = e + h.LYt.slice(null != n ? n.length + 1 : 0)),
+                                    null != n && (t = e + g.LYt.slice(null != n ? n.length + 1 : 0)),
                                         p({
                                             type: "HINT",
                                             text: t,

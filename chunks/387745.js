@@ -5,7 +5,7 @@ n.d(t, {
     V$: () => T,
     _j: () => b,
     fY: () => y,
-    gI: () => A,
+    gI: () => C,
     nc: () => S,
     yH: () => h,
 }),
@@ -115,7 +115,7 @@ function T(e, t) {
     }),
         I();
 }
-function A(e, t) {
+function C(e, t) {
     let { quest: n } = e;
     (0, u._3)({
         questId: n.id,

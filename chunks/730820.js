@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(287880),
     I = n(714565),
     T = n(202858),
-    A = n(726985),
-    C = n(981631),
+    C = n(726985),
+    A = n(981631),
     N = n(815660),
     P = n(388032),
     R = n(343396),
@@ -124,7 +124,7 @@ class k extends i.PureComponent {
             { revealed: n } = this.state,
             { currentUser: i, togglingSMS: a, hasTOTPEnabled: o } = this.props,
             s = null != i.phone,
-            c = i.hasFlag(C.xW$.MFA_SMS);
+            c = i.hasFlag(A.xW$.MFA_SMS);
         if (o) {
             if (s || c) {
                 let e = n ? i.phone : this.maskPhoneNumber(i.phone);
@@ -173,7 +173,7 @@ class k extends i.PureComponent {
                 });
             }
             return (0, r.jsx)(m.F, {
-                setting: A.s6.ACCOUNT_SMS_BACKUP,
+                setting: C.s6.ACCOUNT_SMS_BACKUP,
                 children: (0, r.jsxs)(l.gNt, {
                     label: P.intl.string(P.t.uHAJ5v),
                     description: P.intl.string(P.t.fspJ4H),
@@ -186,7 +186,7 @@ class k extends i.PureComponent {
         let e,
             { backupCodes: t } = this.props,
             n = (0, r.jsx)(m.F, {
-                setting: A.s6.ACCOUNT_VIEW_BACKUP_CODES,
+                setting: C.s6.ACCOUNT_VIEW_BACKUP_CODES,
                 children: (0, r.jsx)(l.Button, {
                     variant: "primary",
                     size: "sm",
@@ -250,7 +250,7 @@ class k extends i.PureComponent {
                         children: [
                             n,
                             (0, r.jsx)(m.F, {
-                                setting: A.s6.ACCOUNT_REMOVE_2FA,
+                                setting: C.s6.ACCOUNT_REMOVE_2FA,
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "critical-secondary",
                                     size: "sm",
@@ -259,7 +259,7 @@ class k extends i.PureComponent {
                                 }),
                             }),
                             (0, r.jsx)(m.F, {
-                                setting: A.s6.ACCOUNT_ENABLE_2FA,
+                                setting: C.s6.ACCOUNT_ENABLE_2FA,
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     size: "sm",
@@ -273,7 +273,7 @@ class k extends i.PureComponent {
                 e,
                 this.renderMFASMS(),
                 (0, r.jsx)(m.F, {
-                    setting: A.s6.ACCOUNT_SECURITY_KEYS,
+                    setting: C.s6.ACCOUNT_SECURITY_KEYS,
                     children: (0, r.jsx)(E.Z, {}),
                 }),
             ],

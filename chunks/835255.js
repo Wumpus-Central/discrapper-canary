@@ -17,7 +17,7 @@ var n = r(54381),
     m = r(906732),
     h = r(597688),
     O = r(237031),
-    g = r(684263),
+    g = r(216541),
     p = r(956472),
     I = r(104505),
     b = r(333867),
@@ -231,7 +231,7 @@ function _(e) {
                 let e = { items: Z.bundleItems };
                 return (0, n.jsx)("div", {
                     className: k.bundlePreview,
-                    children: (0, n.jsx)(g.U, {
+                    children: (0, n.jsx)(g.d, {
                         product: e,
                         isPurchased: B,
                         isHighlighted: z && !N,

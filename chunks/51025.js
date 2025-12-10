@@ -1,5 +1,5 @@
 n.d(t, {
-    A1: () => C,
+    A1: () => A,
     LO: () => y,
     S1: () => E,
     Wx: () => R,
@@ -10,7 +10,7 @@ n.d(t, {
     ob: () => b,
     pC: () => I,
     v4: () => T,
-    wO: () => A,
+    wO: () => C,
     wi: () => P,
 }),
     n(415506);
@@ -135,10 +135,10 @@ function I(e, t, n) {
 function T() {
     p.Z.resume();
 }
-function A() {
+function C() {
     p.Z.pause();
 }
-function C(e, t) {
+function A(e, t) {
     i.Z.dispatch({
         type: "DISPATCH_APPLICATION_MOVE_UP",
         applicationId: e,

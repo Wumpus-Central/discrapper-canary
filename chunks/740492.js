@@ -63,15 +63,15 @@ function I() {}
 function T() {
     return (y.darkSidebar = !y.darkSidebar), !0;
 }
-function A() {
+function C() {
     var e;
     let t = o.ZP.PersistedStore.migrateAndReadStoreState("AccessibilityStore", []).state;
     return null != (e = null == t ? void 0 : t.darkSidebar) && e;
 }
-class C extends (r = o.ZP.DeviceSettingsStore) {
+class A extends (r = o.ZP.DeviceSettingsStore) {
     initialize(e) {
         var t;
-        (y = null != e ? e : {}).darkSidebar = null != (t = y.darkSidebar) ? t : A();
+        (y = null != e ? e : {}).darkSidebar = null != (t = y.darkSidebar) ? t : C();
     }
     getUserAgnosticState() {
         return y;
@@ -187,9 +187,9 @@ class C extends (r = o.ZP.DeviceSettingsStore) {
         return null != (e = y.listDensity) ? e : p.fx.COZY;
     }
 }
-_(C, "displayName", "UnsyncedUserSettingsStore"),
-    _(C, "persistKey", "UnsyncedUserSettingsStore"),
-    _(C, "migrations", [
+_(A, "displayName", "UnsyncedUserSettingsStore"),
+    _(A, "persistKey", "UnsyncedUserSettingsStore"),
+    _(A, "migrations", [
         () => {
             let e = s.K.get("UserSettingsStore");
             return (
@@ -219,7 +219,7 @@ _(C, "displayName", "UnsyncedUserSettingsStore"),
             delete e.disableVisualRefresh;
         },
     ]);
-let N = new C(l.Z, {
+let N = new A(l.Z, {
     UNSYNCED_USER_SETTINGS_UPDATE: O,
     LOGOUT: v,
     LOGIN_SUCCESS: S,

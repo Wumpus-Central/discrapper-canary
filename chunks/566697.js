@@ -25,8 +25,8 @@ var r = n(54381),
     S = n(516817),
     I = n(388032),
     T = n(63053),
-    A = n(460400),
-    C = n(943549);
+    C = n(460400),
+    A = n(943549);
 let N = {
         xlarge: c.EFr.SIZE_48,
         large: c.EFr.SIZE_40,
@@ -153,7 +153,7 @@ let N = {
                                 className: o()(T.avatarContainer, L && T.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
-                                        src: H ? A : C,
+                                        src: H ? C : A,
                                         size: J,
                                         "aria-hidden": !0,
                                         status: c.Skl.ONLINE,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(804061), n(704826), n(35282);
+n.d(t, { Z: () => A }), n(804061), n(704826), n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(317261),
@@ -34,14 +34,14 @@ let T = (e, t, n, r) => {
             })
             .replaceAll("*", "");
     },
-    A = (e, t) =>
+    C = (e, t) =>
         S.intl.formatToPlainString(S.t.Osmpr9, {
             username: t.username,
             artist: e.extra.artist.name,
         }),
-    C = (e) => {
+    A = (e) => {
         let { channel: t, entry: n, onReaction: a, onVoiceChannelPreview: f } = e,
-            { parent_title: I, provider: C, image_url: N } = n.extra.media,
+            { parent_title: I, provider: A, image_url: N } = n.extra.media,
             P = n.extra.artist.name,
             R = (0, s.e7)([c.default], () => c.default.getUser(n.author_id)),
             { primaryColor: D, secondaryColor: w } = (0, h.Z)(N),
@@ -84,7 +84,7 @@ let T = (e, t, n, r) => {
                     channel: t,
                     entry: n,
                     headerIcons:
-                        C === o.p.SPOTIFY
+                        A === o.p.SPOTIFY
                             ? (0, r.jsx)(y.Z, {
                                   onClick: j,
                                   Icon: u.Z,
@@ -106,7 +106,7 @@ let T = (e, t, n, r) => {
                         user: R,
                         channel: t,
                         generateReactionImage: L,
-                        reactionImageAltText: A(n, R),
+                        reactionImageAltText: C(n, R),
                         entry: n,
                     }),
                 }),

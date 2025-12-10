@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(329520),
     I = n(233023),
     T = n(868781),
-    A = n(122943),
-    C = n(556638),
+    C = n(122943),
+    A = n(556638),
     N = n(981631),
     P = n(388032),
     R = n(80568);
@@ -124,7 +124,7 @@ function G(e) {
     return (0, r.jsx)(l.xvT, {
         variant: t,
         className: o()(R.dot, n),
-        children: C.l,
+        children: A.l,
     });
 }
 function Z(e) {
@@ -231,7 +231,7 @@ function Z(e) {
                       hideTooltip: t,
                   })
                 : null != l
-                  ? (0, r.jsx)(A.Z, {
+                  ? (0, r.jsx)(C.Z, {
                         channel: l,
                         textVariant: "text-".concat(y, "/medium"),
                         textClassName: p,
@@ -271,7 +271,7 @@ function Z(e) {
                 H.forEach((n, i) => {
                     e.push((0, r.jsx)(T.Z, w({ activity: n }, t), "activity-".concat(i)));
                 }),
-                Q && e.push((0, r.jsx)(A.Z, L(w({ channel: l }, t), { showChannelName: !0 }), "voice")),
+                Q && e.push((0, r.jsx)(C.Z, L(w({ channel: l }, t), { showChannelName: !0 }), "voice")),
                 e
             );
         },
@@ -294,7 +294,7 @@ function Z(e) {
                       : (0, r.jsx)(u.aML, {
                             "data-migration-pending": !0,
                             tooltipContentClassName: o()(R.container, R.activitiesTooltip, R.hasMultipleActivities),
-                            delay: C.X,
+                            delay: A.X,
                             text: en(),
                             "aria-label": ee,
                             children: (e) =>

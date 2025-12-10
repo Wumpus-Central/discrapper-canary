@@ -28,8 +28,8 @@ var r = n(54381),
     S = n(726985),
     I = n(981631),
     T = n(65154),
-    A = n(388032),
-    C = n(197571);
+    C = n(388032),
+    A = n(197571);
 function N(e, t, n) {
     return (
         t in e
@@ -87,8 +87,8 @@ async function w() {
     p.Z.fileManager.showItemInFolder(e);
 }
 function x() {
-    let e = A.intl.string(A.t["fKBB8+"]),
-        t = A.intl.string(A.t.BvyxE7);
+    let e = C.intl.string(C.t["fKBB8+"]),
+        t = C.intl.string(C.t.BvyxE7);
     (0, o.Z)({
         title: e,
         subtitle: t,
@@ -96,10 +96,10 @@ function x() {
 }
 function L(e) {
     var t;
-    let n = A.intl.string(A.t.QZg0J7),
-        i = null != e ? e : A.intl.string(A.t.VzHcSm),
+    let n = C.intl.string(C.t.QZg0J7),
+        i = null != e ? e : C.intl.string(C.t.VzHcSm),
         a = null == (t = (0, h.hp)(h.u.DEBUG_LOG_UPLOAD_FAILED)) ? void 0 : t.errorCode,
-        o = A.intl.formatToPlainString(A.t.ejOT95, { errorCode: a });
+        o = C.intl.formatToPlainString(C.t.ejOT95, { errorCode: a });
     (0, c.h7j)((e) =>
         (0, r.jsx)(
             c.VoidConfirmModal,
@@ -108,7 +108,7 @@ function L(e) {
                     {
                         header: n,
                         confirmButtonColor: l.zx.Colors.BRAND,
-                        confirmText: A.intl.string(A.t.BddRzS),
+                        confirmText: C.intl.string(C.t.BddRzS),
                     },
                     e,
                 ),
@@ -139,9 +139,9 @@ function L(e) {
 }
 function j(e) {
     (0, s.Z)({
-        title: A.intl.string(A.t["7UXEF2"]),
-        subtitle: A.intl.string(A.t.IYPrRl),
-        confirmText: A.intl.string(A.t.BddRzS),
+        title: C.intl.string(C.t["7UXEF2"]),
+        subtitle: C.intl.string(C.t.IYPrRl),
+        confirmText: C.intl.string(C.t.BddRzS),
         onConfirm: () => u.Z.setDebugLogging(e),
     });
 }
@@ -177,8 +177,8 @@ function k() {
             (0, r.jsx)(g.F, {
                 setting: S.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, r.jsx)(c.rsf, {
-                    label: A.intl.string(A.t["0CEP6e"]),
-                    description: A.intl.string(A.t["kBXuW+"]),
+                    label: C.intl.string(C.t["0CEP6e"]),
+                    description: C.intl.string(C.t["kBXuW+"]),
                     checked: s,
                     onChange: (e) => {
                         (0, v.Z)("stream_info_overlay_enabled", e, s), (0, d.y)({ isStreamInfoOverlayEnabled: e });
@@ -188,8 +188,8 @@ function k() {
             (0, r.jsx)(g.F, {
                 setting: S.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
                 children: (0, r.jsx)(c.rsf, {
-                    label: A.intl.string(A.t["r6K+TL"]),
-                    description: A.intl.string(A.t["xl9+I6"]),
+                    label: C.intl.string(C.t["r6K+TL"]),
+                    description: C.intl.string(C.t["xl9+I6"]),
                     checked: o,
                     onChange: (e) => u.Z.setAecDump(e),
                 }),
@@ -198,20 +198,20 @@ function k() {
                 setting: S.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
                     (0, r.jsx)(c.rsf, {
-                        label: A.intl.string(A.t.U4FgFK),
-                        description: A.intl.string(A.t.Lm72RU),
+                        label: C.intl.string(C.t.U4FgFK),
+                        description: C.intl.string(C.t.Lm72RU),
                         checked: l,
                         onChange: (e) => f.TC(e),
                     }),
                     (0, r.jsx)(_.Z, {
-                        className: C.marginBottom20,
+                        className: A.marginBottom20,
                         children: (0, r.jsx)(_.Z.Child, {
                             grow: 0,
                             shrink: 0,
                             children: (0, r.jsx)(c.Button, {
                                 variant: "primary",
                                 size: "sm",
-                                text: A.intl.string(A.t.nJnOHO),
+                                text: C.intl.string(C.t.nJnOHO),
                                 onClick: () => f.z4(),
                             }),
                         }),
@@ -223,8 +223,8 @@ function k() {
                 children: (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(c.rsf, {
-                            label: A.intl.string(A.t["726JHL"]),
-                            description: A.intl.string(A.t["/7ak9Q"]),
+                            label: C.intl.string(C.t["726JHL"]),
+                            description: C.intl.string(C.t["/7ak9Q"]),
                             checked: n,
                             onChange: j,
                         }),
@@ -233,13 +233,13 @@ function k() {
                             children: [
                                 (0, r.jsx)(c.Button, {
                                     variant: "primary",
-                                    text: A.intl.string(A.t["3UB9ad"]),
+                                    text: C.intl.string(C.t["3UB9ad"]),
                                     disabled: e,
                                     onClick: p,
                                 }),
                                 (0, r.jsx)(c.Button, {
                                     variant: "secondary",
-                                    text: A.intl.string(A.t.nuPtYi),
+                                    text: C.intl.string(C.t.nuPtYi),
                                     onClick: w,
                                 }),
                             ],

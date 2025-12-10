@@ -100,8 +100,8 @@ function y(e) {
             onRequestClose: S,
             popoverRef: I,
             position: T,
-            caretConfig: A,
-            scrollBehavior: C,
+            caretConfig: C,
+            scrollBehavior: A,
         } = e,
         N = E(e, [
             "title",
@@ -133,10 +133,10 @@ function y(e) {
                 shouldShow: N.shouldShow,
                 hasVideo: N.hasVideo,
                 position: T,
-                caretConfig: A,
+                caretConfig: C,
                 onRequestClose: P,
                 gradientColor: v,
-                scrollBehavior: C,
+                scrollBehavior: A,
             },
             "edge" === N.alignmentStrategy
                 ? {

@@ -22,8 +22,8 @@ var r = n(392711),
     S = n(430824),
     I = n(496675),
     T = n(699516),
-    A = n(246946),
-    C = n(594174),
+    C = n(246946),
+    A = n(594174),
     N = n(483360),
     P = n(176354),
     R = n(5192),
@@ -293,9 +293,9 @@ let V = f.Z.RULES,
             match: o().anyScopeRegex(Y),
             parse(e, t, n) {
                 let { isNotification: r, guild: a, channelId: o } = n,
-                    s = C.default.getUser(e[1]);
+                    s = A.default.getUser(e[1]);
                 if (null == s) return { content: e[0] };
-                let l = D.ZP.getUserTag(s, { identifiable: r && A.Z.enabled ? "never" : "always" });
+                let l = D.ZP.getUserTag(s, { identifiable: r && C.Z.enabled ? "never" : "always" });
                 if (r) {
                     var c;
                     let e = null != (c = R.ZP.getNickname(null == a ? void 0 : a.id, o, s)) ? c : D.ZP.getGlobalName(s);
@@ -351,7 +351,7 @@ let V = f.Z.RULES,
             match: o().anyScopeRegex(z),
             parse(e) {
                 let t = E.Z.getChannel(e[1]);
-                return { content: null == t ? e[0] : (0, l.F6)(t, C.default, T.Z, !0, !0) };
+                return { content: null == t ? e[0] : (0, l.F6)(t, A.default, T.Z, !0, !0) };
             },
         },
         emoji: {
@@ -478,7 +478,7 @@ function ea(e) {
     let o = i()(
             t.reduce((e, t) => {
                 let { userId: n } = t,
-                    r = C.default.getUser(n);
+                    r = A.default.getUser(n);
                 return (
                     null == r ||
                         e.push({

@@ -22,11 +22,11 @@ var r = n(54381),
     S = n(441007),
     I = n(726985),
     T = n(583139),
-    A = n(981631),
-    C = n(388032);
+    C = n(981631),
+    A = n(388032);
 let N = () =>
         (0, r.jsxs)(m.Z, {
-            title: C.intl.string(C.t.xVRG4P),
+            title: A.intl.string(A.t.xVRG4P),
             webSetting: I.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             children: [
                 (0, r.jsx)(g.n, {}),
@@ -38,7 +38,7 @@ let N = () =>
         }),
     P = () =>
         (0, r.jsxs)(m.Z, {
-            title: C.intl.string(C.t["y62Z/d"]),
+            title: A.intl.string(A.t["y62Z/d"]),
             webSetting: I.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
             children: [
                 (0, r.jsx)(a.F, {
@@ -53,7 +53,7 @@ let N = () =>
         }),
     R = () =>
         (0, r.jsxs)(m.Z, {
-            title: C.intl.string(C.t["1Qn8iV"]),
+            title: A.intl.string(A.t["1Qn8iV"]),
             webSetting: I.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
             children: [(0, r.jsx)(p.Z, {}), (0, r.jsx)(h.ZP, {})],
         }),
@@ -65,22 +65,22 @@ function w() {
     let e = (0, i.e7)([o.Z], () => o.Z.getSubsection()),
         t = [
             {
-                title: C.intl.string(C.t["/7xJCF"]),
+                title: A.intl.string(A.t["/7xJCF"]),
                 component: () => (0, r.jsx)(D, {}),
                 setting: I.s6.CONTENT_SOCIAL_DISCORD_TAB,
             },
             {
-                title: C.intl.string(C.t.YpCiMt),
+                title: A.intl.string(A.t.YpCiMt),
                 component: u.Z,
                 setting: I.s6.CONTENT_SOCIAL_CONNECTED_GAMES,
             },
         ];
     return (0, r.jsx)(s.N, {
-        header: C.intl.string(C.t["+o1pDZ"]),
+        header: A.intl.string(A.t["+o1pDZ"]),
         notice: (0, r.jsx)(S.Z, { page: S.N.CONTENT_AND_SOCIAL }),
         children: (0, r.jsx)(l.Z, {
             parentSetting: I.s6.CONTENT_SOCIAL,
-            settingsSection: A.oAB.CONTENT_AND_SOCIAL,
+            settingsSection: C.oAB.CONTENT_AND_SOCIAL,
             tabs: t,
             defaultTabIndex: e === T.C ? 1 : void 0,
         }),

@@ -118,18 +118,18 @@ class I extends o.Z {
             b(this, "actions", {
                 POST_CONNECTION_OPEN: T,
                 CONNECTION_RESUMED: T,
-                CONNECTION_CLOSED: C,
-                APP_STATE_UPDATE: A,
+                CONNECTION_CLOSED: A,
+                APP_STATE_UPDATE: C,
             });
     }
 }
 function T() {
     (S = !0), P(y, !0);
 }
-function A(e) {
+function C(e) {
     S && "active" !== e.state && (clearTimeout(v), (v = null), N(!1));
 }
-function C() {
+function A() {
     S && (clearTimeout(v), (v = null), N(!1));
 }
 async function N(e) {

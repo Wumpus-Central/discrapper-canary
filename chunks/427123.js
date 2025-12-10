@@ -81,10 +81,10 @@ function T(e) {
     if ((delete y[t], v.includes(t))) return !1;
     v.push(t), s.K.set(b, v);
 }
-function A() {
+function C() {
     (y = {}), (O = {});
 }
-class C extends (r = o.ZP.Store) {
+class A extends (r = o.ZP.Store) {
     initialize() {
         var e;
         this.waitFor(f.Z, m.Z, p.ZP, h.Z, _.default), (v = null != (e = s.K.get(b)) ? e : v);
@@ -93,9 +93,9 @@ class C extends (r = o.ZP.Store) {
         return a().values(y);
     }
 }
-E(C, "displayName", "DetectedOffPlatformPremiumPerksStore");
-let N = new C(l.Z, {
-    LOGOUT: A,
+E(A, "displayName", "DetectedOffPlatformPremiumPerksStore");
+let N = new A(l.Z, {
+    LOGOUT: C,
     SKU_FETCH_SUCCESS: I,
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: I,
     ENTITLEMENT_CREATE: I,

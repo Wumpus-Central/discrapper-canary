@@ -30,10 +30,10 @@ function E(e, t, n) {
             timeZone: t.timeZone,
         }),
         T = t.isSelected(b),
-        A = t.isCellFocused(b) && !e.isOutsideMonth;
+        C = t.isCellFocused(b) && !e.isOutsideMonth;
     y = y || t.isCellDisabled(b);
-    let C = t.isCellUnavailable(b),
-        N = !y && !C,
+    let A = t.isCellUnavailable(b),
+        N = !y && !A,
         P =
             t.isValueInvalid &&
             !!("highlightedRange" in t
@@ -65,7 +65,7 @@ function E(e, t, n) {
         }, [I, R, S, T, D, b, t, v]),
         x = "";
     "anchorDate" in t &&
-        A &&
+        C &&
         !t.isReadOnly &&
         N &&
         (x = t.anchorDate ? S.format("finishRangeSelectionPrompt") : S.format("startRangeSelectionPrompt"));
@@ -129,13 +129,13 @@ function E(e, t, n) {
         });
     y || (E = (0, a.KC)(b, t.focusedDate) ? 0 : -1),
         (0, h.useEffect)(() => {
-            A &&
+            C &&
                 n.current &&
                 ((0, l.A)(n.current),
                 "pointer" !== (0, p.Jz)() &&
                     document.activeElement === n.current &&
                     (0, c.G)(n.current, { containingElement: (0, u.r)(n.current) }));
-        }, [A, n]);
+        }, [C, n]);
     let Z = (0, m.a)({
             day: "numeric",
             timeZone: t.timeZone,
@@ -170,10 +170,10 @@ function E(e, t, n) {
             },
         }),
         isPressed: G,
-        isFocused: A,
+        isFocused: C,
         isSelected: T,
         isDisabled: y,
-        isUnavailable: C,
+        isUnavailable: A,
         isOutsideVisibleRange: 0 > b.compare(t.visibleRange.start) || b.compare(t.visibleRange.end) > 0,
         isInvalid: P,
         formattedDate: B,

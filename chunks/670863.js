@@ -49,11 +49,11 @@ function T(e) {
     }
     return e;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -61,7 +61,7 @@ function A(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -107,9 +107,9 @@ function R(e) {
             selectedDeviceId: _,
             onSelectDevice: O,
             hideDeviceTypeIcon: I = !1,
-            label: C,
+            label: A,
         } = e,
-        R = A(e, [
+        R = C(e, [
             "deviceType",
             "location",
             "showAllDevices",
@@ -240,7 +240,7 @@ function R(e) {
                 l.y6,
                 T(
                     {
-                        label: C,
+                        label: A,
                         value: H,
                         onChange: z,
                         options: Q(),

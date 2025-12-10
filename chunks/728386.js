@@ -70,8 +70,8 @@ function O(e, t) {
         [b, O, v, S] = (0, d.Iu)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], s.X),
         I = !1,
         T = b === _.X1.STICKER && S === a && v === g.id,
-        A = !1,
-        C = i.useCallback(() => {
+        C = !1,
+        A = i.useCallback(() => {
             (0, d.RO)(_.X1.STICKER, a, g.id);
         }, [a, g.id]),
         { Component: N, events: P, play: R } = (0, l.z)(),
@@ -89,7 +89,7 @@ function O(e, t) {
                       p.Z,
                       y(E({ className: o()(h.button, h.stickerButton) }, P), {
                           onClick: () => {
-                              C(), R();
+                              A(), R();
                           },
                           isActive: T,
                           "aria-label": m.intl.string(m.t.rZpidU),
@@ -97,7 +97,7 @@ function O(e, t) {
                           "aria-haspopup": "dialog",
                           "aria-controls": O,
                           sparkle: I,
-                          notification: A ? p.j.UPDATE : null,
+                          notification: C ? p.j.UPDATE : null,
                           children: (0, r.jsx)(N, {
                               size: "refresh_sm",
                               color: "currentColor",

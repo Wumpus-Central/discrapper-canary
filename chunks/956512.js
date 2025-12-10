@@ -50,7 +50,7 @@ function T(e) {
     }
     return e;
 }
-function A(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,29 +62,29 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function N(e) {
-    let { currentUserId: t, message: I, application: A, channel: N, analyticsLocations: P, onView: R } = e,
-        { staticBannerSrc: D, videoBannerSrc: w, bannerAspectRatio: x } = (0, d.E)(A),
+    let { currentUserId: t, message: I, application: C, channel: N, analyticsLocations: P, onView: R } = e,
+        { staticBannerSrc: D, videoBannerSrc: w, bannerAspectRatio: x } = (0, d.E)(C),
         L = g.ZP.getApplicationIconURL({
-            id: A.id,
-            icon: A.icon,
+            id: C.id,
+            icon: C.icon,
         }),
         j = (0, i.e7)([f.ZP, m.Z], () =>
             f.ZP.getVisibleRunningGames().find((e) => {
                 let { id: t } = e;
-                if (t === A.id) return !0;
-                let n = m.Z.getGameByApplication(A);
+                if (t === C.id) return !0;
+                let n = m.Z.getGameByApplication(C);
                 return null != n && t === n.id;
             }),
         ),
@@ -105,7 +105,7 @@ function N(e) {
                 : null == j && ((B = S.intl.string(v.default["43zohO"])), (F = !0)),
         (0, r.jsx)(c.W, {
             header: S.intl.string(v.default.nAyuPp),
-            title: A.name,
+            title: C.name,
             staticBannerSrc: D,
             videoBannerSrc: w,
             bannerAspectRatio: x,
@@ -130,13 +130,13 @@ function N(e) {
                                                     n.e("47863"),
                                                     n.e("59416"),
                                                 ]).then(n.bind(n, 60594));
-                                                return (t) => (0, r.jsx)(e, C(T({}, t), { analyticsLocation: Z }));
+                                                return (t) => (0, r.jsx)(e, A(T({}, t), { analyticsLocation: Z }));
                                             }));
                               },
                           },
                       ],
             trackingConfig: {
-                id: A.id,
+                id: C.id,
                 linkType: O.U.REQUEST_TO_STREAM,
                 guildId: N.guild_id,
                 channelId: N.id,

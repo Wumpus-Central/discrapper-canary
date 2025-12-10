@@ -153,8 +153,8 @@ function O(e) {
             });
         case u.j.SWITCH_APP_PLANS:
             let { route: T } = a,
-                A = g(a, ["route"]);
-            return (0, r.jsx)(d.Z, h(_({}, A), { navigateToHome: E }));
+                C = g(a, ["route"]);
+            return (0, r.jsx)(d.Z, h(_({}, C), { navigateToHome: E }));
         default:
             (0, o.vE)(m);
     }

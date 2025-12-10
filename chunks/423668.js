@@ -29,8 +29,8 @@ let l = {
                     [b, y] = i.useState(!0),
                     [O, v] = i.useState(!1),
                     [S, I] = i.useState("text"),
-                    [T, A] = i.useState("cozy"),
-                    [C, N] = i.useState(!0),
+                    [T, C] = i.useState("cozy"),
+                    [A, N] = i.useState(!0),
                     P = (e) =>
                         (0, r.jsxs)(o.v2r, {
                             navId: "menu-story",
@@ -186,14 +186,14 @@ let l = {
                                                         group: "view-mode",
                                                         label: "Cozy",
                                                         checked: "cozy" === T,
-                                                        action: () => A("cozy"),
+                                                        action: () => C("cozy"),
                                                     }),
                                                     (0, r.jsx)(o.k5B, {
                                                         id: "radio-compact",
                                                         group: "view-mode",
                                                         label: "Compact",
                                                         checked: "compact" === T,
-                                                        action: () => A("compact"),
+                                                        action: () => C("compact"),
                                                     }),
                                                 ],
                                             }),
@@ -239,7 +239,7 @@ let l = {
                 return (0, r.jsxs)("div", {
                     className: s.container,
                     children: [
-                        !C &&
+                        !A &&
                             (0, r.jsx)(a.zxk, {
                                 text: "Open Menu",
                                 onClick: () => N(!0),

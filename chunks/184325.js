@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(594174),
     I = n(626135),
     T = n(111361),
-    A = n(291175),
-    C = n(785717),
+    C = n(291175),
+    A = n(785717),
     N = n(221292),
     P = n(485341),
     R = n(687158),
@@ -110,7 +110,7 @@ function V(e) {
         } = e,
         H = i.useRef(null),
         { analyticsLocations: Y } = (0, u.ZP)(c.Z.BADGE),
-        { context: W, trackUserProfileAction: K } = (0, C.KZ)(),
+        { context: W, trackUserProfileAction: K } = (0, A.KZ)(),
         z = S.default.getCurrentUser(),
         q = (0, T.yd)(null == z ? void 0 : z.premiumType, L.PremiumTypes.TIER_2),
         Q = (0, R.Of)(null != (t = null == z ? void 0 : z.id) ? t : null),
@@ -124,7 +124,7 @@ function V(e) {
         children: n.map((e, t) => {
             var n;
             let i = e.id === O.l.ORB_PROFILE_BADGE,
-                a = (0, A.fv)(e.id),
+                a = (0, C.fv)(e.id),
                 u = null != a || e.id === j.a,
                 p = (null == v ? void 0 : v.userId) === (null == z ? void 0 : z.id),
                 S = (t) => {
@@ -198,8 +198,8 @@ function V(e) {
                             ),
                         );
                 },
-                C = void 0 !== a && e.id !== j.a,
-                R = p && J && C,
+                A = void 0 !== a && e.id !== j.a,
+                R = p && J && A,
                 Q = (0, r.jsx)("img", {
                     alt: " ",
                     "aria-hidden": !0,
@@ -234,7 +234,7 @@ function V(e) {
                     "".concat(e.id, "-").concat(t),
                 );
             }
-            if (C) {
+            if (A) {
                 let n = (0, r.jsx)(
                         s.Anchor,
                         B(G({}, ee), {

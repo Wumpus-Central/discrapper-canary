@@ -23,8 +23,8 @@ var i = n(120356),
     S = n(384298),
     I = n(670451),
     T = n(671955),
-    A = n(388032),
-    C = n(704543);
+    C = n(388032),
+    A = n(704543);
 function N(e) {
     let { user: t, currentUser: n, voiceChannel: i, className: N, onClose: P } = e,
         { themeType: R } = (0, g.z)(),
@@ -46,7 +46,7 @@ function N(e) {
         { channelStatusEnabled: k } = (0, p.D)({ location: "UserProfileVoiceActivityCard" }),
         U = () => {
             if (t.id !== n.id) return null;
-            let e = i.isDM() || i.isGroupDM() ? A.intl.string(A.t["+DsWbX"]) : A.intl.string(A.t.xOVEjc);
+            let e = i.isDM() || i.isGroupDM() ? C.intl.string(C.t["+DsWbX"]) : C.intl.string(C.t.xOVEjc);
             return (0, r.jsx)(s.u, {
                 text: e,
                 children: (0, r.jsx)(l.d3s, { size: "xxs" }),
@@ -54,7 +54,7 @@ function N(e) {
         },
         G = () =>
             (0, r.jsx)("div", {
-                className: C.actions,
+                className: A.actions,
                 children: (0, r.jsx)(S.Z, {
                     channel: i,
                     onAction: w,
@@ -63,15 +63,15 @@ function N(e) {
             }),
         Z =
             i.isDM() || i.isGroupDM()
-                ? A.intl.string(A.t["9FaEzi"])
+                ? C.intl.string(C.t["9FaEzi"])
                 : i.isGuildStageVoice()
-                  ? A.intl.string(A.t.QygGCN)
-                  : A.intl.string(A.t.msxteM);
+                  ? C.intl.string(C.t.QygGCN)
+                  : C.intl.string(C.t.msxteM);
     return (0, r.jsx)(u.Gt, {
         value: D,
         children: (0, r.jsxs)(E.Z, {
             ref: x,
-            className: a()(C.card, N),
+            className: a()(A.card, N),
             onAction: w,
             onClose: P,
             "aria-label": "".concat(Z, ", ").concat(M),
@@ -86,16 +86,16 @@ function N(e) {
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: C.body,
+                    className: A.body,
                     children: (0, r.jsxs)("div", {
-                        className: C.content,
+                        className: A.content,
                         children: [
                             (0, r.jsx)(O.Z, {
                                 users: j,
                                 channel: i,
                             }),
                             (0, r.jsxs)("div", {
-                                className: C.details,
+                                className: A.details,
                                 children: [
                                     (0, r.jsx)(y.Z, {
                                         channel: i,

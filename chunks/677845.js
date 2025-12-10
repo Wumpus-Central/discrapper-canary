@@ -53,8 +53,8 @@ function S(e) {
     }, [I.id, R]);
     let U = (0, o.e7)([y.Z], () => I.isPrivate() || (0, f.b)(y.Z, M, I), [M, I]),
         V = (null == M ? void 0 : M.afkChannelId) === I.id,
-        B = I.userLimit <= 0 || I.userLimit > 1,
-        F = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
+        F = I.userLimit <= 0 || I.userLimit > 1,
+        B = (0, o.e7)([c.ZP], () => c.ZP.getEmbeddedActivitiesForChannel(I.id).length <= 0),
         H = (0, h.Nj)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         G = (0, u.KF)(I.id) !== u.jy.CAN_LAUNCH,
         W = null != R && R === I.id,
@@ -92,11 +92,11 @@ function S(e) {
     ),
         null != M &&
             !V &&
-            (!(L >= 2) || !F || G || H || W
-                ? B &&
+            (!(L >= 2) || !B || G || H || W
+                ? F &&
                   1 === L &&
                   U &&
-                  (F && !G
+                  (B && !G
                       ? z.push((e) =>
                             (0, i.jsx)(_.h, {
                                 channel: I,

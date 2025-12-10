@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(594174),
     I = n(580130),
     T = n(669079),
-    A = n(74538),
-    C = n(313789),
+    C = n(74538),
+    A = n(313789),
     N = n(317941),
     P = n(342386),
     R = n(518596),
@@ -116,7 +116,7 @@ function G(e) {
               }));
     let I = v ? x.intl.string(x.t["2cHUti"]) : x.intl.string(x.t.O13yhz),
         T = i.useCallback(() => m(!1), []),
-        { outboundTitle: A, outboundTermsAndConditions: C } = n;
+        { outboundTitle: C, outboundTermsAndConditions: A } = n;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
@@ -140,7 +140,7 @@ function G(e) {
                                         children: [
                                             (0, r.jsx)(u.Heading, {
                                                 variant: "heading-md/semibold",
-                                                children: A,
+                                                children: C,
                                             }),
                                             (0, r.jsx)(u.Text, {
                                                 variant: "text-sm/normal",
@@ -166,7 +166,7 @@ function G(e) {
                             className: L.promotionLegalese,
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: _.Z.parse(C, !1, { allowLinks: !0 }),
+                            children: _.Z.parse(A, !1, { allowLinks: !0 }),
                         }),
                 ],
             }),
@@ -193,7 +193,7 @@ let Z = function () {
             let { giftCodeBatchId: t } = e;
             return null == t;
         }),
-        a = (0, c.e7)([S.default], () => A.ZP.isPremiumExactly(S.default.getCurrentUser(), w.PremiumTypes.TIER_2)),
+        a = (0, c.e7)([S.default], () => C.ZP.isPremiumExactly(S.default.getCurrentUser(), w.PremiumTypes.TIER_2)),
         s = l().groupBy(t, (e) => (0, T.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
         [p, _] = i.useState(!1);
     i.useEffect(() => {
@@ -218,7 +218,7 @@ let Z = function () {
                 },
             ).enabled && k;
     function Z() {
-        (0, R.openUserSettings)(C.n.NITRO_PANEL, { section: D.oAB.PREMIUM });
+        (0, R.openUserSettings)(A.n.NITRO_PANEL, { section: D.oAB.PREMIUM });
     }
     function B() {
         var e;

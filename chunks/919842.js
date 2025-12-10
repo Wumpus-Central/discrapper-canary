@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(243778),
     p = n(665149),
     f = n(515970),
-    h = n(5888),
-    g = n(840767),
+    g = n(5888),
+    h = n(840767),
     m = n(45173),
     _ = n(921944),
     b = n(860076),
@@ -20,7 +20,7 @@ var r = n(54381),
 function v(e) {
     let { className: t } = e,
         [n, l] = (0, d.US)([c.z.CHECKPOINT_2025_DESKTOP_UPSELL]),
-        v = (0, o.e7)([h.Z], () => h.Z.hasOpenedCheckpointThisSession && !h.Z.hasSeenRewatchPopover),
+        v = (0, o.e7)([g.Z], () => g.Z.hasOpenedCheckpointThisSession && !g.Z.hasSeenRewatchPopover),
         y = i.useRef(null),
         I = n === c.z.CHECKPOINT_2025_DESKTOP_UPSELL,
         C = () => {
@@ -32,7 +32,7 @@ function v(e) {
                 ref: y,
                 className: t,
                 onClick: () => {
-                    (0, g.Z)("header_bar"), I && l(_.L.INDIRECT_ACTION);
+                    (0, h.Z)("header_bar"), I && l(_.L.INDIRECT_ACTION);
                 },
                 icon: s.d5i,
                 tooltip: E.intl.string(b.default["CdU/PF"]),

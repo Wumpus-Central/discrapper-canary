@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -180,7 +180,7 @@ class T extends (r = i.ZP.Store) {
     }
 }
 s(T, "displayName", "GameServerStore");
-let A = new T(a.Z, {
+let C = new T(a.Z, {
     LOGOUT: f,
     GAME_SERVER_FETCH_CATALOG_SUCCESS: _,
     GAME_SERVER_FETCH_INSTANCES_SUCCESS: m,

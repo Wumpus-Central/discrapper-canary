@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(539854);
+n.d(t, { Z: () => h }), n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(481060),
@@ -10,13 +10,13 @@ var r = n(54381),
     d = n(294330),
     p = n(981631),
     f = n(663448);
-let h = {
+let g = {
     page: p.ZY5.GUILD_DISCOVERY,
     object: p.qAy.CARD,
     section: p.jXE.DISCOVER_POPULAR,
 };
-function g(e) {
-    let { tab: t, guildIds: n, loading: p, onScroll: g, onGuildCardClick: m, onGuildCardSeen: _ } = e,
+function h(e) {
+    let { tab: t, guildIds: n, loading: p, onScroll: h, onGuildCardClick: m, onGuildCardSeen: _ } = e,
         b = (0, u.Mf)(t),
         E = (0, u.a$)(t),
         O = (0, u.QW)(t),
@@ -32,7 +32,7 @@ function g(e) {
                         {
                             guildId: null != (i = n[a]) ? i : null,
                             index: a,
-                            onClick: (e) => m(e, a, v, h),
+                            onClick: (e) => m(e, a, v, g),
                             onView: (e) => _(e, v),
                         },
                         null != (l = n[a]) ? l : a,
@@ -42,7 +42,7 @@ function g(e) {
             return t;
         }, [v, n, p, m, _]);
     return (0, r.jsxs)(c.Z, {
-        onScroll: g,
+        onScroll: h,
         children: [
             (0, r.jsx)(s.Z, {
                 title: b,

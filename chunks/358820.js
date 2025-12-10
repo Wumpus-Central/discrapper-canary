@@ -79,12 +79,12 @@ function I(e, t) {
     );
 }
 let T = new l.Z("VoiceFilterActionCreators"),
-    A = 1000,
-    C = (0, r.debounce)(
+    C = 1000,
+    A = (0, r.debounce)(
         () => {
             s.Z.dispatch({ type: "VOICE_FILTER_LAGGING" });
         },
-        A,
+        C,
         { leading: !0 },
     ),
     N = !1,
@@ -246,7 +246,7 @@ async function M() {
                 await _.ZP.ensureModule("discord_voice_filters");
             let t = _.ZP.getVoiceFilters();
             await t.setupResources(),
-                void 0 !== t.setVoiceFilterLaggingCallback && (await t.setVoiceFilterLaggingCallback(C)),
+                void 0 !== t.setVoiceFilterLaggingCallback && (await t.setVoiceFilterLaggingCallback(A)),
                 void 0 !== t.setVoiceFilterReadyCallback &&
                     (await t.setVoiceFilterReadyCallback((e) => {
                         s.Z.dispatch({

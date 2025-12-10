@@ -134,11 +134,11 @@ function T(e) {
     if (t > f.yqN.FONT_SIZE_MAX || t < f.yqN.FONT_SIZE_MIN || v.fontSize === t) return !1;
     (v = m({}, v)).fontSize = t;
 }
-function A(e) {
+function C(e) {
     if (e.zoom < f.yqN.ZOOM_MIN || e.zoom > f.yqN.ZOOM_MAX || v.zoom === e.zoom) return !1;
     ((v = m({}, v)).zoom = e.zoom), d.Z.setZoomFactor(v.zoom);
 }
-function C() {
+function A() {
     let e = v.fontSize !== f.yqN.FONT_SIZE_DEFAULT,
         t = v.zoom !== f.yqN.ZOOM_DEFAULT;
     if (!e && !t) return !1;
@@ -432,8 +432,8 @@ _(J, "displayName", "AccessibilityStore"),
     ]);
 let $ = new J(s.Z, {
     ACCESSIBILITY_SET_FONT_SIZE: T,
-    ACCESSIBILITY_SET_ZOOM: A,
-    ACCESSIBILITY_RESET_TO_DEFAULT: C,
+    ACCESSIBILITY_SET_ZOOM: C,
+    ACCESSIBILITY_RESET_TO_DEFAULT: A,
     ACCESSIBILITY_KEYBOARD_MODE_ENABLE: N,
     ACCESSIBILITY_KEYBOARD_MODE_DISABLE: P,
     ACCESSIBILITY_COLORBLIND_TOGGLE: R,

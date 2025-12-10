@@ -11,8 +11,8 @@ var i = n(481060),
     d = n(914010),
     p = n(622822),
     f = n(165540),
-    h = n(920644),
-    g = n(723359),
+    g = n(920644),
+    h = n(723359),
     m = n(981631),
     _ = n(484710);
 function b(e) {
@@ -76,21 +76,21 @@ class E extends a.Z {
                 return (n) => (0, r.jsx)(e, b({ source: t }, n));
             },
             {
-                modalKey: g.dG,
+                modalKey: h.dG,
                 onCloseRequest: m.dG4,
                 backdropStyle: (0, s.bj)(t) ? i.fCB.LIGHTBOX : void 0,
             },
         );
     }
     handleAgeGateSuccess() {
-        o.Z.showSuccessToast(_.wQ.EXISTING_USER_AGE_GATE_SUCCESS), (0, i.Mr3)(g.dG);
+        o.Z.showSuccessToast(_.wQ.EXISTING_USER_AGE_GATE_SUCCESS), (0, i.Mr3)(h.dG);
     }
     handleAgeGateFailure(e) {
         let { underageMessage: t } = e;
-        (0, i.oav)(g.dG, (e) => (0, r.jsx)(h.default, b({ underageMessage: t }, e)));
+        (0, i.oav)(h.dG, (e) => (0, r.jsx)(g.default, b({ underageMessage: t }, e)));
     }
     handleAgeGateModalClose() {
-        (0, i.Mr3)(g.dG);
+        (0, i.Mr3)(h.dG);
     }
     handleGuildUpdate(e) {
         let { guild: t } = e,

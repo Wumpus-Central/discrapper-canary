@@ -4,7 +4,7 @@ var r = n(54381),
     l = n(120356),
     o = n.n(l),
     a = n(891371),
-    s = n(205120),
+    s = n(467721),
     c = n(91192),
     u = n(866442),
     d = n(477690),
@@ -51,8 +51,8 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             } = e,
             { id: H, name: W, children: z } = t,
             [K, Y] = i.useState(!1),
-            [q, Q] = i.useState(!1),
-            X = K || q,
+            [q, X] = i.useState(!1),
+            Q = K || q,
             J = (0, p.Ml)("FolderItem");
         i.useEffect(() => {
             R && Y(!1);
@@ -72,7 +72,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
             et = i.useCallback((e) => {
-                Q(e);
+                X(e);
             }, []),
             en = i.useCallback(
                 (e) => {
@@ -158,7 +158,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             ref: es,
             className: o()(S.folderGroup, {
                 [S.isExpanded]: s,
-                [S.isHovering]: X,
+                [S.isHovering]: Q,
             }),
             style: { "--custom-folder-color": null != ed ? ed : "" },
             "data-drop-hovering": q,

@@ -3,8 +3,8 @@ var r = n(54381);
 n(473749);
 var l = n(120356),
     i = n.n(l),
-    s = n(401975),
-    o = n(638758),
+    o = n(401975),
+    s = n(638758),
     a = n(887353),
     c = n(198501);
 let u = () =>
@@ -16,8 +16,8 @@ let u = () =>
                 {
                     className: a.cardsContainer,
                     children: [
-                        (0, r.jsx)("div", { className: i()(o.catalogBanner, c.bannerSkeleton) }),
-                        Array.from({ length: 12 }, (e, t) => (0, r.jsx)(s.Z, {}, t)),
+                        (0, r.jsx)("div", { className: i()(s.catalogBanner, c.bannerSkeleton) }),
+                        Array.from({ length: 12 }, (e, t) => (0, r.jsx)(o.Z, {}, t)),
                     ],
                 },
                 t,

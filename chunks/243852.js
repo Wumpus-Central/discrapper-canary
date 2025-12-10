@@ -10,8 +10,8 @@ var r,
     d = n(581567),
     p = n(594190),
     f = n(581883),
-    h = n(70956),
-    g = n(780570),
+    g = n(70956),
+    h = n(780570),
     m = n(314897),
     _ = n(77498),
     b = n(283595),
@@ -19,8 +19,8 @@ var r,
     O = n(944486),
     v = n(981631);
 let y = "ActivityTrackingStore",
-    I = 30 * h.Z.Millis.MINUTE,
-    C = 5 * h.Z.Millis.MINUTE,
+    I = 30 * g.Z.Millis.MINUTE,
+    C = 5 * g.Z.Millis.MINUTE,
     S = null != (r = s.K.get(y)) ? r : {},
     T = {},
     N = !1;
@@ -35,7 +35,7 @@ function P(e) {
         n = Date.now(),
         r = null != e.updatedAt ? n - e.updatedAt : 0;
     r > I + C && (r = 0);
-    let i = (0, g.OT)(e.applicationId, b.Z),
+    let i = (0, h.OT)(e.applicationId, b.Z),
         l = O.Z.getVoiceChannelId(),
         a = m.default.getSessionId(),
         c = E.Z.getMediaSessionId();

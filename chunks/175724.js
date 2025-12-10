@@ -1,4 +1,4 @@
-n.d(t, { f: () => A });
+n.d(t, { f: () => C });
 var r = n(475179),
     i = n(904245),
     a = n(45114),
@@ -22,7 +22,7 @@ var r = n(475179),
     S = n(451478),
     I = n(585483),
     T = n(981631);
-let A = {
+let C = {
     binds: ["esc", "shift+pagedown"],
     comboKeysBindGlobal: !0,
     action(e) {
@@ -49,7 +49,7 @@ let A = {
                 (null == l ? void 0 : l.type) === d.tI.VIEW_CHANNEL
                     ? l.channelId
                     : null;
-        if (!1 === C(i) || !1 === C(c)) return !1;
+        if (!1 === A(i) || !1 === A(c)) return !1;
         if (null != i && (null == l ? void 0 : l.type) === d.tI.CREATE_THREAD) return u.Z.closeChannelSidebar(i), !1;
         let f = N(i),
             p = N(c);
@@ -63,7 +63,7 @@ let A = {
         );
     },
 };
-function C(e) {
+function A(e) {
     if (null != e) {
         if (g.Z.isEditingAny(e)) return i.Z.endEditMessage(e), !1;
         if (null != c.Z.getPendingReply(e)) return (0, l.A6)(e), !1;

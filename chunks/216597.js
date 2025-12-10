@@ -38,9 +38,9 @@ function _(e, t, n) {
         I = (null == (_ = t.sortDescriptor) ? void 0 : _.column) === E.key,
         T = null == (m = t.sortDescriptor) ? void 0 : m.direction;
     E.props.allowsSorting && !(0, a.Dt)() && (g = I ? T : "none");
-    let A = (0, f.q)(p(i.Z), "@react-aria/table");
-    b && ((h = `${A.format("sortable")}`), I && T && (0, a.Dt)() && (h = `${h}, ${A.format(T)}`));
-    let C = (0, o.P)(h),
+    let C = (0, f.q)(p(i.Z), "@react-aria/table");
+    b && ((h = `${C.format("sortable")}`), I && T && (0, a.Dt)() && (h = `${h}, ${C.format(T)}`));
+    let A = (0, o.P)(h),
         N = 0 === t.collection.size;
     return (
         (0, l.useEffect)(() => {
@@ -48,7 +48,7 @@ function _(e, t, n) {
         }, [N, t.selectionManager, E.key]),
         {
             columnHeaderProps: {
-                ...(0, s.d)(S, y, v, C, N ? { tabIndex: -1 } : null),
+                ...(0, s.d)(S, y, v, A, N ? { tabIndex: -1 } : null),
                 role: "columnheader",
                 id: (0, r.z9)(t, E.key),
                 "aria-colspan": E.colSpan && E.colSpan > 1 ? E.colSpan : void 0,

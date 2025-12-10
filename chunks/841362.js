@@ -38,7 +38,7 @@ let O = (0, y.createContext)(null),
                 labelProps: v,
                 descriptionProps: I,
                 errorMessageProps: T,
-                ...A
+                ...C
             } = (0, u.a)(
                 {
                     ...e,
@@ -47,7 +47,7 @@ let O = (0, y.createContext)(null),
                 },
                 p,
             ),
-            C = (0, r.aX)({
+            A = (0, r.aX)({
                 ...e,
                 values: {
                     orientation: e.orientation || "vertical",
@@ -63,7 +63,7 @@ let O = (0, y.createContext)(null),
         return y.createElement(
             "div",
             {
-                ...(0, h.d)(N, C, E),
+                ...(0, h.d)(N, A, E),
                 ref: t,
                 slot: e.slot || void 0,
                 "data-orientation": e.orientation || "vertical",
@@ -94,10 +94,10 @@ let O = (0, y.createContext)(null),
                                 },
                             },
                         ],
-                        [i.E, A],
+                        [i.E, C],
                     ],
                 },
-                y.createElement(l.y, null, C.children),
+                y.createElement(l.y, null, A.children),
             ),
         );
     }),
@@ -120,11 +120,11 @@ let O = (0, y.createContext)(null),
                 a,
                 o,
             ),
-            { isFocused: I, isFocusVisible: T, focusProps: A } = (0, f.F)(),
-            C = b || a.isReadOnly,
+            { isFocused: I, isFocusVisible: T, focusProps: C } = (0, f.F)(),
+            A = b || a.isReadOnly,
             { hoverProps: N, isHovered: P } = (0, p.X)({
                 ...e,
-                isDisabled: C,
+                isDisabled: A,
             }),
             R = (0, r.aX)({
                 ...e,
@@ -164,7 +164,7 @@ let O = (0, y.createContext)(null),
                     _.T,
                     { elementType: "span" },
                     y.createElement("input", {
-                        ...(0, h.d)(c, A),
+                        ...(0, h.d)(c, C),
                         ref: o,
                     }),
                 ),

@@ -71,11 +71,11 @@ function T(e) {
     }
     return e;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -83,7 +83,7 @@ function A(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -95,7 +95,7 @@ function C(e, t) {
 n(328347), n(874703), n(52030);
 let N = (e) => {
         var { tab: t } = e,
-            r = A(e, ["tab"]);
+            r = C(e, ["tab"]);
         {
             let { default: e } = n(342386);
             P(r), e(), (0, u.uL)(t ? S.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t) : S.Z5c.COLLECTIBLES_SHOP);

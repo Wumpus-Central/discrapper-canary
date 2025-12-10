@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r,
     i = n(442837),
     l = n(570140),
-    a = n(959517);
-function o(e, t, n) {
+    o = n(959517);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ class c extends (r = i.ZP.Store) {
         return s[e];
     }
 }
-o(c, "displayName", "SendMessageOptionsStore");
+a(c, "displayName", "SendMessageOptionsStore");
 let u = new c(l.Z, {
     MESSAGE_CREATE: function (e) {
         let { message: t, sendMessageOptions: n } = e;
@@ -40,12 +40,12 @@ let u = new c(l.Z, {
                                 }),
                             )),
                             r.forEach(function (t) {
-                                o(e, t, n[t]);
+                                a(e, t, n[t]);
                             });
                     }
                     return e;
                 })({}, n)),
-                (l = l = { location: null != (r = n.location) ? r : a.dy.OTHER }),
+                (l = l = { location: null != (r = n.location) ? r : o.dy.OTHER }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {

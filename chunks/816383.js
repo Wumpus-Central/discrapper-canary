@@ -57,8 +57,8 @@ var s = (function () {
             s = p[S];
             var I = m[S],
                 T = 1 / f[S],
-                A = I + m[S + 1] - s - s;
-            O.push((s - I - A) * T), v.push(A * T * T);
+                C = I + m[S + 1] - s - s;
+            O.push((s - I - C) * T), v.push(C * T * T);
         }
         (this.xs = t), (this.ys = n), (this.c1s = m), (this.c2s = O), (this.c3s = v);
     }

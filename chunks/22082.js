@@ -45,11 +45,11 @@ function T(e) {
     if (null == O[t]) return !1;
     n.forEach((e) => O[t].delete(e)), 0 === O[t].size && delete O[t];
 }
-function A(e) {
+function C(e) {
     let { guildId: t, channelId: n } = e;
     return null != t && (null == O[t] || v[t] < Date.now() - h.Z.Millis.HOUR ? (R(t), !0) : (null != n && P(t, n), !1));
 }
-function C(e) {
+function A(e) {
     let { guildId: t, channelId: n, sidebarType: r } = e;
     return null != t && r === s.tI.VIEW_CHANNEL && (P(t, n), !1);
 }
@@ -131,8 +131,8 @@ b(w, "displayName", "NewChannelsStore");
 let x = new w(a.Z, {
     BULK_CLEAR_RECENTS: T,
     CHANNEL_ACK: () => !0,
-    CHANNEL_SELECT: A,
-    SIDEBAR_VIEW_CHANNEL: C,
+    CHANNEL_SELECT: C,
+    SIDEBAR_VIEW_CHANNEL: A,
     SIDEBAR_VIEW_GUILD: N,
     GUILD_DELETE: S,
     CHANNEL_CREATE: I,

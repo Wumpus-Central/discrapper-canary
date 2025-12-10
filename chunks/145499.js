@@ -178,8 +178,8 @@ let T = (e) => {
                     B = (0, _.ig)(v.tier),
                     F = A.slice(M, U),
                     H = F.length > 0,
-                    z = Z < v.tier,
-                    W =
+                    W = Z < v.tier,
+                    z =
                         ((i = A.length),
                         i < (0, _.A3)(N.Eu4.NONE)
                             ? N.Eu4.NONE
@@ -193,7 +193,7 @@ let T = (e) => {
                                         i < d.D.MAX_STICKER_SLOTS)
                                   ? N.Eu4.TIER_3
                                   : N.Eu4.NONE),
-                    V = L && !z && W === v.tier && U !== F.length,
+                    V = L && !W && z === v.tier && U !== F.length,
                     K = V || F.length > 0,
                     Y = U - M,
                     q = n(872732),
@@ -238,7 +238,7 @@ let T = (e) => {
                           (ee = I.intl.string(I.t.g7lkrU)),
                           t.premiumTier + 1 !== v.tier && ((en = !0), (l = I.intl.string(I.t.mTMkY2))))
                         : ((en = !0), (l = I.intl.string(I.t.hwPEJR))));
-                let er = W === T + 1 && W > Z,
+                let er = z === T + 1 && z > Z,
                     ei = V || er || T > Z;
                 return (
                     er
@@ -277,7 +277,7 @@ let T = (e) => {
                                                 (0, r.jsx)(
                                                     O.Z,
                                                     {
-                                                        isDisabled: z,
+                                                        isDisabled: W,
                                                         sticker: e,
                                                         canManageSticker: k(e),
                                                     },
@@ -287,7 +287,7 @@ let T = (e) => {
                                             Q,
                                         ],
                                     }),
-                                !z &&
+                                !W &&
                                     !V &&
                                     0 === F.length &&
                                     (0, r.jsx)("div", {
@@ -298,7 +298,7 @@ let T = (e) => {
                                             children: I.intl.string(I.t.lqwv0J),
                                         }),
                                     }),
-                                z &&
+                                W &&
                                     !H &&
                                     (0, r.jsxs)("div", {
                                         className: S.emptyTierWrapper,

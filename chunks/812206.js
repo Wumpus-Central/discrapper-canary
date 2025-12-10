@@ -106,13 +106,13 @@ function I(e) {
 }
 function T(e) {
     let { application: t } = e;
-    C(t);
-}
-function A(e) {
-    let { application: t } = e;
-    C(t);
+    A(t);
 }
 function C(e) {
+    let { application: t } = e;
+    A(t);
+}
+function A(e) {
     b(o.ZP.createFromServer(e));
 }
 function N(e) {
@@ -320,7 +320,7 @@ let q = new z(a.Z, {
     LOGOUT: y,
     OVERLAY_INITIALIZE: S,
     APPLICATION_FETCH: I,
-    APPLICATION_FETCH_SUCCESS: A,
+    APPLICATION_FETCH_SUCCESS: C,
     APPLICATION_FETCH_FAIL: P,
     APPLICATIONS_FETCH: R,
     APPLICATIONS_FETCH_SUCCESS: w,

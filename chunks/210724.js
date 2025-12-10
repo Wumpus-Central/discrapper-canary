@@ -7,7 +7,7 @@ var a = n(54381),
     r = n(473749),
     i = n(120356),
     l = n.n(i),
-    s = n(205120),
+    s = n(467721),
     o = n(286379),
     c = n(442837),
     d = n(481060),
@@ -74,9 +74,9 @@ function B(e) {
         H = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         W = (0, c.e7)([x.Z], () => x.Z.hasLayers()),
         z = r.useRef(null),
-        K = r.useMemo(() => (0, C.q8)(i), [i]),
-        q = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
-        Q = (0, u.Z)(q),
+        q = r.useMemo(() => (0, C.q8)(i), [i]),
+        K = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
+        Q = (0, u.Z)(K),
         Y = (null == (n = i.userStatus) ? void 0 : n.completedAt) != null,
         { hasError: X, isLoading: J } = (0, S.kC)(),
         $ = r.useContext(R.T) || (B && G && !J && !F),
@@ -166,15 +166,15 @@ function B(e) {
         ei && eN();
     }, [ei, eN]),
         r.useLayoutEffect(() => {
-            q && !Q && en.current && eb();
-        }, [eb, q, Q]),
+            K && !Q && en.current && eb();
+        }, [eb, K, Q]),
         r.useLayoutEffect(() => {
-            Y || !q || Q || en.current || eg(!1);
-        }, [q, Y, Q, eg]),
+            Y || !K || Q || en.current || eg(!1);
+        }, [K, Y, Q, eg]),
         r.useLayoutEffect(() => {
             $ !== ee.current && em(!1), (ee.current = $);
         }, [$]);
-    let eP = q ? D.XZ : D.R4,
+    let eP = K ? D.XZ : D.R4,
         [{ expansionSpring: ew }, eI] = (0, d.q_F)(() => ({
             from: { expansionSpring: 0 },
             config: eP,
@@ -208,8 +208,8 @@ function B(e) {
     });
     if (
         (r.useEffect(() => {
-            K && (0, T.loadVideoQuestModal)();
-        }, [K]),
+            q && (0, T.loadVideoQuestModal)();
+        }, [q]),
         r.useEffect(() => {
             if (X) {
                 var e;
@@ -308,7 +308,7 @@ function B(e) {
                         children: (0, a.jsx)(s.animated.div, {
                             className: l()(L.contentWrapper, {
                                 [L.contentWrapperExpanded]: es,
-                                [L.contentWrapperAccepted]: q,
+                                [L.contentWrapperAccepted]: K,
                             }),
                             children: (0, a.jsx)(k.t, {
                                 springConfig: eP,
@@ -358,7 +358,7 @@ function B(e) {
                                                         expansionSpring: ew,
                                                         isExpanded: es,
                                                     }),
-                                                    !q &&
+                                                    !K &&
                                                         (0, a.jsx)(N.Z, {
                                                             quest: i,
                                                             expansionSpring: ew,

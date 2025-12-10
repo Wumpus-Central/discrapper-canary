@@ -28,8 +28,8 @@ var r = n(990547),
     S = n(626135),
     I = n(700785),
     T = n(74538),
-    A = n(573261),
-    C = n(668781),
+    C = n(573261),
+    A = n(668781),
     N = n(981631),
     P = n(723359),
     R = n(388032);
@@ -107,7 +107,7 @@ function M(e, t) {
     return i;
 }
 let k = (e) => {
-        C.Z.show({
+        A.Z.show({
             title: R.intl.string(R.t.cTaRxF),
             body: R.intl.formatToPlainString(R.t["VSd+Aj"], { quantity: e }),
         });
@@ -119,7 +119,7 @@ let k = (e) => {
         });
     },
     G = () => {
-        C.Z.show({
+        A.Z.show({
             title: R.intl.string(R.t.ZZlox4),
             body: R.intl.string(R.t.ZUEGFn),
         });
@@ -296,7 +296,7 @@ let F = {
             location: s,
             moderatorReportId: l,
         } = e;
-        return A.Z.patch({
+        return C.Z.patch({
             url: N.ANM.GUILD_MEMBER(t, n),
             reason: o,
             body: {

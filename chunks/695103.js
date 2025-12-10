@@ -1,5 +1,5 @@
 let r, i, a;
-n.d(t, { Z: () => A }), n(388685), n(358797);
+n.d(t, { Z: () => C }), n(388685), n(358797);
 var o,
     s = n(442837),
     l = n(570140),
@@ -112,7 +112,7 @@ class T extends (o = s.ZP.PersistedStore) {
     }
 }
 p(T, "displayName", "TestModeStore"), p(T, "persistKey", "TestModeStore");
-let A = new T(l.Z, {
+let C = new T(l.Z, {
     DEVELOPER_TEST_MODE_AUTHORIZATION_START: O,
     DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: v,
     DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: S,

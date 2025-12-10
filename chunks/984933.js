@@ -41,8 +41,8 @@ function S(e, t, n) {
 }
 let I = "SELECTABLE",
     T = "VOCAL",
-    A = null,
-    C = {},
+    C = null,
+    A = {},
     N = {},
     P = {},
     R = null,
@@ -68,7 +68,7 @@ function M(e) {
     };
 }
 function k(e) {
-    let t = C[e];
+    let t = A[e];
     return null == t && (t = Y(e)), t;
 }
 function U(e, t) {
@@ -130,11 +130,11 @@ function V(e) {
     );
 }
 function H() {
-    (C = {}), (D = {}), (N = {}), (P = {}), null != A && Y(A);
+    (A = {}), (D = {}), (N = {}), (P = {}), null != C && Y(C);
 }
 function Y(e) {
     let t = M(e);
-    return (C[e] = t), (D[e] = []), V(t), G(t), W(t), en(e), t;
+    return (A[e] = t), (D[e] = []), V(t), G(t), W(t), en(e), t;
 }
 function W(e) {
     let t = (N[e.id] = {}),
@@ -155,18 +155,18 @@ function K(e) {
         guild: { id: t },
     } = e;
     if (null == t) return !1;
-    (C[t] = void 0), A === t && Y(t);
+    (A[t] = void 0), C === t && Y(t);
 }
 function z(e) {
     let {
         guild: { id: t },
     } = e;
-    return delete C[t], delete N[t], delete P[t], delete D[t], !0;
+    return delete A[t], delete N[t], delete P[t], delete D[t], !0;
 }
 function q(e) {
     let { guildId: t, user: n } = e;
     if (m.default.getId() !== n.id) return !1;
-    (C[t] = void 0), t === A && Y(t);
+    (A[t] = void 0), t === C && Y(t);
 }
 function Q(e) {
     let t = h.Z.getBasicChannel(e.id);
@@ -177,20 +177,20 @@ function X(e) {
         channel: { guild_id: t },
     } = e;
     if (null == t) return !1;
-    (C[t] = void 0), t === A && Y(t);
+    (A[t] = void 0), t === C && Y(t);
 }
 function J(e) {
     let { channels: t } = e,
         n = !1;
     for (let e of t) {
         let { guild_id: t } = e;
-        null != t && ((C[t] = void 0), (n = !0), A === t && Y(t));
+        null != t && ((A[t] = void 0), (n = !0), C === t && Y(t));
     }
     return n;
 }
 function $(e) {
     let { guildId: t } = e;
-    (C[t] = void 0), t === A && Y(t);
+    (A[t] = void 0), t === C && Y(t);
 }
 function ee(e, t) {
     return o.Db(
@@ -205,7 +205,7 @@ function ee(e, t) {
 function et(e, t) {
     let n = E.Z.getGuild(t);
     if (null != n && ee(e, n)) return !0;
-    let r = C[t];
+    let r = A[t];
     null == r && (r = Y(t));
     let { [I]: i, [T]: a } = r;
     for (let { channel: t } of i) if (ee(e, t)) return !0;
@@ -220,7 +220,7 @@ function er(e, t) {
     R = t;
     let r = null != (n = null == e ? void 0 : e.getGuildId()) ? n : null;
     if (null == r) return !1;
-    (C[r] = void 0), r === A && Y(r);
+    (A[r] = void 0), r === C && Y(r);
 }
 function ei(e) {
     let { channelId: t } = e;
@@ -235,7 +235,7 @@ function ea(e) {
 }
 function eo(e) {
     let { guildId: t } = e;
-    if (((A = null != t ? t : null), null == t || null != C[t])) return !1;
+    if (((C = null != t ? t : null), null == t || null != A[t])) return !1;
     Y(t);
 }
 function es() {
@@ -246,7 +246,7 @@ class el extends (r = s.ZP.Store) {
         this.waitFor(m.default, h.Z, d.Z, c.Z, g.ZP, E.Z, b.Z, O.default), this.syncWith([d.Z], es);
     }
     getAllGuilds() {
-        return C;
+        return A;
     }
     getChannels(e) {
         return null != e ? k(e) : x;

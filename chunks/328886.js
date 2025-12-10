@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(931271),
     I = n(565201),
     T = n(150248),
-    A = n(691731),
-    C = n(935153),
+    C = n(691731),
+    A = n(935153),
     N = n(620662),
     P = n(275920),
     R = n(561766),
@@ -83,7 +83,7 @@ function k(e) {
             [a],
         );
     if (!(null != n || l.length > 0)) return null;
-    let u = null != n ? (0, C.V)(n) : j.intl.string(j.t["4dGUP0"]);
+    let u = null != n ? (0, A.V)(n) : j.intl.string(j.t["4dGUP0"]);
     return (0, r.jsxs)("div", {
         className: M.footer,
         children: [
@@ -114,7 +114,7 @@ function U(e) {
     let {
             message: s,
             application: O,
-            applicationName: C,
+            applicationName: A,
             channel: R,
             header: D,
             currentUserId: U,
@@ -187,9 +187,9 @@ function U(e) {
                     className: M.tagline,
                     color: "none",
                     lineClamp: 2,
-                    children: [en ? (0, v.$v)(s, C, R, U, !1) : et, en ? null : ei],
+                    children: [en ? (0, v.$v)(s, A, R, U, !1) : et, en ? null : ei],
                 }),
-            [en, s, C, R, U, et, ei],
+            [en, s, A, R, U, et, ei],
         ),
         eo = i.useMemo(
             () =>
@@ -213,7 +213,7 @@ function U(e) {
         }),
         ed = (0, S.p)(W, K, s, O),
         ef = (0, I.L)(W, s, O, U),
-        ep = (0, A.g)(K, W),
+        ep = (0, C.g)(K, W),
         e_ = (0, l.e7)(
             [y.Z],
             () => null != W && null != W.application_id && y.Z.getState(W.application_id, x.mFx.JOIN) === x.OcF.LOADING,
@@ -318,7 +318,7 @@ function U(e) {
     );
     return (0, r.jsx)(p.W, {
         header: D,
-        title: C,
+        title: A,
         staticBannerSrc: F,
         onClickBanner: V,
         bannerAspectRatio: p.u.ACTIVITY,

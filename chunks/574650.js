@@ -54,12 +54,12 @@ let I = () => {
         v = (0, s.e7)([u.Z], () => u.Z.getGuild(i), [i]),
         I = (0, s.e7)([h.Z], () => (null != i ? h.Z.getRequest(i) : null), [i]),
         T = (0, o.TH)(),
-        A =
+        C =
             (null == (e = (0, o.LX)(T.pathname, g.Z5c.CHANNEL(null == v ? void 0 : v.id, E.oC.GUILD_ONBOARDING)))
                 ? void 0
                 : e.isExact) === !0;
-    if (null == v || !(0, m.Dc)(v) || A) return null;
-    let C = () => {
+    if (null == v || !(0, m.Dc)(v) || C) return null;
+    let A = () => {
             (0, p.hk)(v.id);
         },
         N = () => {
@@ -90,7 +90,7 @@ let I = () => {
             (D = b.intl.string(b.t.lk30cY)), (w = b.intl.string(b.t["8RrsHr"])), (x = P), L.push(y.error);
             break;
         default:
-            (D = b.intl.string(b.t.G5YKXP)), (w = b.intl.string(b.t["r8/DT+"])), (x = C);
+            (D = b.intl.string(b.t.G5YKXP)), (w = b.intl.string(b.t["r8/DT+"])), (x = A);
     }
     return (0, r.jsxs)("div", {
         className: a()(...L),

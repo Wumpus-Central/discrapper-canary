@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(559407),
     I = n(556766),
     T = n(195302),
-    A = n(260035),
-    C = n(482215),
+    C = n(260035),
+    A = n(482215),
     N = n(366841),
     P = n(947519),
     R = n(248687),
@@ -128,11 +128,11 @@ let ee = (0, W.Un)({
                                                                 f && $.mobileAppAsidePanelWrapper,
                                                             ),
                                                             children: [
-                                                                (0, r.jsx)(C.K, {}),
+                                                                (0, r.jsx)(A.K, {}),
                                                                 (0, r.jsx)("div", {
                                                                     className: $.notAppAsidePanel,
                                                                     "data-app-not-dev-tools": !0,
-                                                                    children: (0, r.jsx)(A.m, {
+                                                                    children: (0, r.jsx)(C.m, {
                                                                         children: (0, r.jsx)(j.OR, {
                                                                             children: (0, r.jsx)(y.Z.Provider, {
                                                                                 value: O.Z,

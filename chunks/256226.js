@@ -70,11 +70,11 @@ function T(e, t) {
         e
     );
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -82,7 +82,7 @@ function A(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,11 +93,11 @@ function C(e, t) {
 }
 let N = i.forwardRef(function (e, t) {
     var a, v, I;
-    let C,
+    let A,
         { canRemove: N, className: P, role: R, onRemove: D, guildId: w, disableBorderColor: x, onMouseDown: L } = e,
         j = (0, s.JA)(R.id),
         { tabIndex: M } = j,
-        k = A(j, ["tabIndex"]),
+        k = C(j, ["tabIndex"]),
         U = (0, g.p9)({
             roleId: R.id,
             size: 16,
@@ -128,7 +128,7 @@ let N = i.forwardRef(function (e, t) {
         W = (0, l._i)(V);
     null != W && 0.3 > (0, l.Bd)(W) && (Y = u.Z.unsafe_rawColors.PRIMARY_630.css);
     let K = (0, E._f)(w, R, R.colorStrings);
-    C = Z
+    A = Z
         ? (0, r.jsx)(h.Z, {
               className: O.roleFlowerStar,
               iconClassName: N ? O.roleVerifiedIcon : void 0,
@@ -165,7 +165,7 @@ let N = i.forwardRef(function (e, t) {
                           "aria-hidden": !1,
                           "aria-label": y.intl.formatToPlainString(y.t.QrxwhY, { roleName: R.name }),
                           children: [
-                              C,
+                              A,
                               (0, r.jsx)(p.Dio, {
                                   size: "md",
                                   color: Y,
@@ -181,7 +181,7 @@ let N = i.forwardRef(function (e, t) {
                       focusProps: { focusClassName: O.roleRemoveIconFocused },
                       "aria-hidden": !0,
                       "aria-label": y.intl.formatToPlainString(y.t.QrxwhY, { roleName: R.name }),
-                      children: C,
+                      children: A,
                   });
     return (0, r.jsx)(p.tEY, {
         children: (0, r.jsxs)(

@@ -2,7 +2,7 @@ n.d(t, {
     AZ: () => N,
     BM: () => j,
     Cj: () => d,
-    WY: () => C,
+    WY: () => A,
     YD: () => w,
     a7: () => p,
     aD: () => m,
@@ -247,15 +247,15 @@ let O = 30,
     S = 20,
     I = 30,
     T = 40,
-    A = 15;
-function C(e) {
+    C = 15;
+function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
         n = [],
         { h: r, s: i, l: a } = h(e[0], e[1], e[2]),
         o = r,
         s = i,
         l = a;
-    s < O && (s += I), l > v && (l -= T), l < S && (l += A);
+    s < O && (s += I), l > v && (l -= T), l < S && (l += C);
     let c = 360 / (t + 1);
     for (; n.length < t; ) {
         (o -= c) < 0 && (o += 360);

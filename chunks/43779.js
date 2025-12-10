@@ -3,7 +3,7 @@ var a = n(54381),
     r = n(473749),
     i = n(120356),
     l = n.n(i),
-    s = n(205120),
+    s = n(467721),
     o = n(442837),
     c = n(481060),
     d = n(393238),
@@ -85,15 +85,15 @@ function T(e) {
                       }),
                 T),
         }),
-        K = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
-        q = (null == (i = w.userStatus) ? void 0 : i.claimedAt) != null,
+        q = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
+        K = (null == (i = w.userStatus) ? void 0 : i.claimedAt) != null,
         Q = (0, f.xN)(w.config),
         Y = (0, f.LM)(w.config),
         { completedRatio: X, completedRatioDisplay: J } = (0, h.I)(w),
         $ = (0, p.Bd)(w, L, M),
         ee = r.useMemo(
             () =>
-                q && Q
+                K && Q
                     ? S.intl.format(S.t["8Op4c4"], {
                           balanceHook: () =>
                               (0, a.jsxs)(
@@ -112,7 +112,7 @@ function T(e) {
                                   w.id,
                               ),
                       })
-                    : q
+                    : K
                       ? (0, a.jsx)(N, {
                             questId: w.id,
                             children: U,
@@ -147,7 +147,7 @@ function T(e) {
                                       w.id,
                                   ),
                           }),
-            [U, q, B, w.id, Y, Q],
+            [U, K, B, w.id, Y, Q],
         ),
         et = r.useMemo(() => {
             if (null != $)
@@ -176,12 +176,12 @@ function T(e) {
                         children: (0, a.jsxs)("div", {
                             className: E.assetWrapper,
                             children: [
-                                !q && K && (0, a.jsx)("div", { className: E.completionAnimation }),
+                                !K && q && (0, a.jsx)("div", { className: E.completionAnimation }),
                                 F
                                     ? (0, a.jsxs)("div", {
                                           className: E.progressWrapper,
                                           children: [
-                                              K &&
+                                              q &&
                                                   (0, a.jsx)(c.Fmz, {
                                                       importData: O,
                                                       className: E.confetti,

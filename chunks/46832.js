@@ -10,7 +10,7 @@ var r = n(836560),
     d = n(452426),
     p = n(186901),
     f = n(981631);
-function h(e, t, n) {
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function h(e, t, n) {
         e
     );
 }
-let g = 10 * o.Z.Millis.SECOND,
+let h = 10 * o.Z.Millis.SECOND,
     m = new Map(),
     _ = new Set(),
     b = (e, t, n) => {
@@ -52,12 +52,12 @@ class E extends r.EventEmitter {
         var u;
         super(),
             (u = this),
-            h(this, "validateSocketClient", void 0),
-            h(this, "logger", void 0),
-            h(this, "createPostMessageProxySocket", void 0),
-            h(this, "onFrameHandled", void 0),
-            h(this, "handshakeFailureTimeoutId", void 0),
-            h(this, "disconnectSocket", function (e, t) {
+            g(this, "validateSocketClient", void 0),
+            g(this, "logger", void 0),
+            g(this, "createPostMessageProxySocket", void 0),
+            g(this, "onFrameHandled", void 0),
+            g(this, "handshakeFailureTimeoutId", void 0),
+            g(this, "disconnectSocket", function (e, t) {
                 var n, r;
                 let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                 u.emit("disconnect", e, i ? void 0 : t), e.close(t.code, null != (n = t.message) ? n : "Unknown");
@@ -71,7 +71,7 @@ class E extends r.EventEmitter {
                         : [null, null];
                 null != l && m.delete(l);
             }),
-            h(this, "handleIFrameMount", (e) => {
+            g(this, "handleIFrameMount", (e) => {
                 let { id: t } = e;
                 _.add(t),
                     (this.handshakeFailureTimeoutId = setTimeout(() => {
@@ -81,12 +81,12 @@ class E extends r.EventEmitter {
                                 application_id: t,
                                 channel_id: (0, l.p)(n.location),
                                 guild_id: (0, l.j)(n.location),
-                                timeout_ms: g,
+                                timeout_ms: h,
                             });
                         });
-                    }, g));
+                    }, h));
             }),
-            h(this, "handleIFrameUnmount", (e) => {
+            g(this, "handleIFrameUnmount", (e) => {
                 var t;
                 let { id: n } = e;
                 _.delete(n);
@@ -110,7 +110,7 @@ class E extends r.EventEmitter {
                     ),
                     m.delete(r));
             }),
-            h(this, "handleMessage", (e, t, n) => {
+            g(this, "handleMessage", (e, t, n) => {
                 let r = m.get(t);
                 try {
                     this.routeEvent(r, t, e, n);
@@ -135,7 +135,7 @@ class E extends r.EventEmitter {
                           );
                 }
             }),
-            h(this, "handleFrame", (e, t, n) => {
+            g(this, "handleFrame", (e, t, n) => {
                 var r;
                 let i;
                 if (e !== t.origin) throw new c.Z({ closeCode: f.$VG.INVALID_ORIGIN }, "Origin has changed");
@@ -146,7 +146,7 @@ class E extends r.EventEmitter {
                 }
                 null == (r = this.onFrameHandled) || r.call(this, i, this.logger, t), this.emit("request", t, i);
             }),
-            h(this, "handleHandshake", async (e, t, r) => {
+            g(this, "handleHandshake", async (e, t, r) => {
                 let i;
                 null != this.handshakeFailureTimeoutId && clearTimeout(this.handshakeFailureTimeoutId);
                 let l = (await n.e("85441").then(n.t.bind(n, 826753, 23))).default;
@@ -207,7 +207,7 @@ class E extends r.EventEmitter {
                     throw (this.logger.info("Socket Closed: ".concat(i.id, ", ").concat(e.message)), e);
                 }
             }),
-            h(this, "handleClose", async (e, t) => {
+            g(this, "handleClose", async (e, t) => {
                 let r = (await n.e("85441").then(n.t.bind(n, 826753, 23))).default;
                 try {
                     r.assert(

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(933557),
     I = n(502053),
     T = n(965048),
-    A = n(569545),
-    C = n(74299),
+    C = n(569545),
+    A = n(74299),
     N = n(863908),
     P = n(803647),
     R = n(266910),
@@ -129,11 +129,11 @@ class ef extends i.PureComponent {
     }
     get streamerPaused() {
         let { isMainWindowFocused: e, activeSelfStream: t, participantOnScreen: n } = this.props;
-        return null != t && (null == n ? void 0 : n.id) === (0, A.V9)(t) && !e;
+        return null != t && (null == n ? void 0 : n.id) === (0, C.V9)(t) && !e;
     }
     get activeStreamForSelectedParticipant() {
         let { participantOnScreen: e, activeStreams: t } = this.props;
-        return (0, ea._5)(e) ? t.find((t) => (0, A.V9)(t) === e.id) : null;
+        return (0, ea._5)(e) ? t.find((t) => (0, C.V9)(t) === e.id) : null;
     }
     getScreenMessage() {
         let { participantOnScreen: e, currentUserId: t } = this.props;
@@ -283,7 +283,7 @@ class ef extends i.PureComponent {
                 let n = null != (e = t.getGuildId()) ? e : ei.ME;
                 (0, w.XU)(n, t.id), _.Z.channelListScrollTo(n, t.id);
                 let r = this.activeStreamForSelectedParticipant;
-                null != r && p.Z.selectParticipant(r.channelId, (0, A.V9)(r));
+                null != r && p.Z.selectParticipant(r.channelId, (0, C.V9)(r));
             }),
             el(this, "handleStopStream", () => {
                 let { participantOnScreen: e } = this.props;
@@ -364,7 +364,7 @@ class ef extends i.PureComponent {
             el(this, "renderSettingsIcon", () => {
                 let { participantOnScreen: e, activeStreams: t } = this.props;
                 o()((0, ea._5)(e), "Cannot render settings for non stream participant");
-                let n = t.find((t) => (0, A.V9)(t) === e.id);
+                let n = t.find((t) => (0, C.V9)(t) === e.id);
                 return null == n || n.state === ei.jm8.ENDED
                     ? null
                     : (0, r.jsx)(G.Z, {
@@ -392,7 +392,7 @@ function ep(e) {
         d = null == o || o.disabled,
         f = !d,
         p = (0, c.e7)([F.Z], () => !d && F.Z.isVideoEnabled(), [d]),
-        _ = (0, c.e7)([F.Z], () => (0, C.Z)(F.Z)),
+        _ = (0, c.e7)([F.Z], () => (0, A.Z)(F.Z)),
         m = (0, c.e7)([B.default], () => B.default.getId()),
         h = (0, c.e7)([Z.Z], () => Z.Z.getCurrentUserActiveStream()),
         g = null != a && "user" in a ? a.user.id : "",

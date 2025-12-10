@@ -57,15 +57,15 @@ function s(e) {
                         let s = n[0],
                             p = n[1],
                             T = null != p && "object" == typeof p && "type" in p,
-                            A = T ? p.type : r[s],
-                            C = T ? p.value : p;
-                        switch (A) {
+                            C = T ? p.type : r[s],
+                            A = T ? p.value : p;
+                        switch (C) {
                             case "color":
-                                if ("number" == typeof C) {
+                                if ("number" == typeof A) {
                                     let e = null == (i = t.viewModelInstance) ? void 0 : i.color(s);
-                                    null != e && (e.value = C);
-                                } else if ("object" == typeof C) {
-                                    let e = C;
+                                    null != e && (e.value = A);
+                                } else if ("object" == typeof A) {
+                                    let e = A;
                                     if ("resolve" in e) {
                                         let [n, r, i, l] = e
                                             .resolve({
@@ -85,26 +85,26 @@ function s(e) {
                                 break;
                             case "number":
                                 let N = null == (d = t.viewModelInstance) ? void 0 : d.number(s);
-                                null != N && (N.value = C);
+                                null != N && (N.value = A);
                                 break;
                             case "boolean":
                                 let P = null == (f = t.viewModelInstance) ? void 0 : f.boolean(s);
-                                null != P && (P.value = C);
+                                null != P && (P.value = A);
                                 break;
                             case "trigger":
-                                let R = null != C && ("boolean" == typeof C ? C : 0 !== C),
+                                let R = null != A && ("boolean" == typeof A ? A : 0 !== A),
                                     D = y(E.current, s);
                                 R &&
-                                    D !== C &&
+                                    D !== A &&
                                     (null == (O = t.viewModelInstance) || null == (_ = O.trigger(s)) || _.trigger());
                                 break;
                             case "string":
                                 let w = null == (v = t.viewModelInstance) ? void 0 : v.string(s);
-                                null != w && (w.value = C);
+                                null != w && (w.value = A);
                                 break;
                             case "image":
-                                if (null != C) {
-                                    let n = await b(C, e.signal);
+                                if (null != A) {
+                                    let n = await b(A, e.signal);
                                     if (e.signal.aborted) return;
                                     let r = null == (S = t.viewModelInstance) ? void 0 : S.image(s);
                                     null != r && (r.value = n);
@@ -112,11 +112,11 @@ function s(e) {
                                 break;
                             case "artboard":
                                 let x = null == (I = t.viewModelInstance) ? void 0 : I.artboard(s),
-                                    L = t.getBindableArtboard(C);
+                                    L = t.getBindableArtboard(A);
                                 null != x && null != L && (x.value = L);
                                 break;
                             default:
-                                console.warn("Unknown property type: ".concat(A));
+                                console.warn("Unknown property type: ".concat(C));
                         }
                     }
                 })(),

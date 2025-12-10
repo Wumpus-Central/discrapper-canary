@@ -3,7 +3,7 @@ n.d(t, {
     Cd: () => M,
     DZ: () => P,
     PS: () => D,
-    T6: () => A,
+    T6: () => C,
     Z1: () => G,
     aj: () => R,
     fy: () => b.fy,
@@ -77,7 +77,7 @@ function v(e) {
 let S = 5000,
     I = "UserSettingsProtoLastWriteTimes",
     T = Date.now();
-function A() {}
+function C() {}
 u.Z.subscribe("CONNECTION_OPEN", () => {
     T = Date.now();
 }),
@@ -91,7 +91,7 @@ u.Z.subscribe("CONNECTION_OPEN", () => {
         document.addEventListener("keydown", () => {
             T = 0;
         }));
-class C {
+class A {
     getEditInfo() {
         return h.Z.getFullState()[this.type];
     }
@@ -331,8 +331,8 @@ class C {
             (this.logger = new d.Z(this.ProtoClass.typeName));
     }
 }
-let N = new C(l.o8, b.yP.PRELOADED_USER_SETTINGS),
-    P = new C(s.ji, b.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+let N = new A(l.o8, b.yP.PRELOADED_USER_SETTINGS),
+    P = new A(s.ji, b.yP.FRECENCY_AND_FAVORITES_SETTINGS),
     R = {
         [b.yP.PRELOADED_USER_SETTINGS]: N,
         [b.yP.FRECENCY_AND_FAVORITES_SETTINGS]: P,

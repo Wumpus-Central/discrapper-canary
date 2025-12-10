@@ -96,8 +96,8 @@ function T(e) {
             title: O,
             body: I,
             assetUrl: T,
-            previewUrl: A = T,
-            disableMediaViewer: C = !1,
+            previewUrl: C = T,
+            disableMediaViewer: A = !1,
             action: N,
             caretConfig: P = { align: "center" },
             badge: R,
@@ -126,7 +126,7 @@ function T(e) {
         U = (0, a.C)(),
         G = null != (b = null == (t = (n = (0, o.ZFG)()).isWindowFocused) ? void 0 : t.call(n)) ? b : U,
         Z = i.useRef(null),
-        B = (0, o.j1L)(A),
+        B = (0, o.j1L)(C),
         F = i.useCallback(
             () => ({
                 type: "VIDEO",
@@ -165,13 +165,13 @@ function T(e) {
         W = B
             ? (0, r.jsx)(o.zsu, {
                   type: "image",
-                  src: A,
+                  src: C,
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(l.Z, {
                           ref: Z,
-                          src: A,
+                          src: C,
                           width: 232,
                           height: 131,
                           autoPlay: !k.enabled && G,
@@ -181,7 +181,7 @@ function T(e) {
                           controls: !1,
                           preload: "metadata",
                       }),
-                      !C &&
+                      !A &&
                           (0, r.jsx)("div", {
                               className: E.playButton,
                               children: (0, r.jsx)(s.JM1, {

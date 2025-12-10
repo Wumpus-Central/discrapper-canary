@@ -108,7 +108,7 @@ function T(e) {
     if ((null != E[t.id] && delete E[t.id], null == g[t.id])) return !1;
     delete g[t.id];
 }
-function A(e) {
+function C(e) {
     let { channelId: t, messageId: n, region: r, ringing: i } = e;
     if (
         ((g[t] = {
@@ -132,7 +132,7 @@ function A(e) {
             });
     }
 }
-function C(e) {
+function A(e) {
     var t;
     let { channelId: n, recipients: r } = e;
     E[n] = a().union(null != (t = E[n]) ? t : [], null != r ? r : ["all"]);
@@ -204,9 +204,9 @@ let w = new D(l.Z, {
     CONNECTION_RESUMED: S,
     CHANNEL_SELECT: I,
     CHANNEL_DELETE: T,
-    CALL_CREATE: A,
+    CALL_CREATE: C,
     CALL_UPDATE: N,
     CALL_DELETE: P,
-    CALL_ENQUEUE_RING: C,
+    CALL_ENQUEUE_RING: A,
     VOICE_CHANNEL_SELECT: R,
 });

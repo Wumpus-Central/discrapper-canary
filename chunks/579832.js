@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => C });
 var r = n(54381),
     i = n(793030),
     a = n(442837),
@@ -159,7 +159,7 @@ let S = (e) => {
             ],
         });
     },
-    A = (e) => {
+    C = (e) => {
         let { message: t, channel: n, compact: i } = e,
             o = t.premiumGroupInviteId,
             {

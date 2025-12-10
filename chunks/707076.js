@@ -14,8 +14,8 @@ var i = n(120356),
     u = n(869764),
     m = n(150512),
     g = n(430824),
-    h = n(594174),
-    f = n(626135),
+    f = n(594174),
+    h = n(626135),
     N = n(999382),
     I = n(983135),
     p = n(84658),
@@ -138,7 +138,7 @@ function T() {
 function _() {
     let e = (0, a.e7)([N.Z], () => N.Z.getGuildId()),
         t = (0, a.e7)([g.Z], () => g.Z.getGuild(e)),
-        n = (0, a.e7)([h.default], () => h.default.getCurrentUser());
+        n = (0, a.e7)([f.default], () => f.default.getCurrentUser());
     return null == e || null == t || null == n
         ? null
         : (0, l.jsxs)("div", {
@@ -180,7 +180,7 @@ function _() {
                                   onClick: function () {
                                       if (null != e) {
                                           var t, n;
-                                          f.default.track(
+                                          h.default.track(
                                               O.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                                               ((t = (function (e) {
                                                   for (var t = 1; t < arguments.length; t++) {

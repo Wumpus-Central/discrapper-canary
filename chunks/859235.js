@@ -112,13 +112,13 @@ function I(e, t) {
             keyboardModeEnabled: v,
             onKeyDown: I,
             draftType: T,
-            size: A = 1,
+            size: C = 1,
         } = e,
-        C = (0, s.JA)(n),
-        { onFocus: N } = C,
-        P = y(C, ["onFocus"]),
+        A = (0, s.JA)(n),
+        { onFocus: N } = A,
+        P = y(A, ["onFocus"]),
         { handleFocus: R, handleBlur: D } = (0, f.b)(N),
-        w = 0 === A,
+        w = 0 === C,
         x = null != E,
         L = (e) => {
             if (v) {
@@ -149,7 +149,7 @@ function I(e, t) {
                 onFocus: R,
                 onBlur: D,
                 onKeyDown: L,
-                className: o()(m.upload, a, { [m.sizeClip]: 2 === A }),
+                className: o()(m.upload, a, { [m.sizeClip]: 2 === C }),
                 ref: t,
                 children: (0, r.jsxs)("div", {
                     className: m.uploadContainer,

@@ -1,5 +1,5 @@
 n.d(t, {
-    $R: () => K,
+    $R: () => q,
     A0: () => et,
     GU: () => Q,
     H8: () => X,
@@ -16,7 +16,7 @@ n.d(t, {
     iw: () => en,
     jC: () => H,
     jQ: () => G,
-    lT: () => q,
+    lT: () => K,
     rd: () => ed,
     t4: () => ec,
     uF: () => em,
@@ -150,7 +150,7 @@ function z(e, t) {
         [n, a]
     );
 }
-function K(e) {
+function q(e) {
     let t = H[e];
     return {
         name: e,
@@ -166,7 +166,7 @@ function K(e) {
         highlight: !1,
     };
 }
-function q(e, t, n, a, r) {
+function K(e, t, n, a, r) {
     return {
         name: t,
         colors: B(U({}, e.colors), {

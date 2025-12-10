@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(891353),
     I = n(801056),
     T = n(666383),
-    A = n(106371),
-    C = n(995774),
+    C = n(106371),
+    A = n(995774),
     N = n(921801),
     P = n(460181),
     R = n(210176),
@@ -590,9 +590,9 @@ function ed() {
             },
         ],
         n = (t) => {
-            (0, C.MR)(t.value, e);
+            (0, A.MR)(t.value, e);
         };
-    return A.Z.getCurrentConfig({ location: "webSettings" }).enableInAppNotifications
+    return C.Z.getCurrentConfig({ location: "webSettings" }).enableInAppNotifications
         ? (0, r.jsxs)(N.F, {
               setting: V.s6.NOTIFICATIONS_REACTIONS,
               children: [

@@ -1,6 +1,6 @@
 n.d(t, {
-    C1: () => A,
-    Mo: () => C,
+    C1: () => C,
+    Mo: () => A,
     QG: () => N,
     XQ: () => S,
     _U: () => D,
@@ -160,8 +160,8 @@ async function T(e, t) {
             updates: t,
         });
 }
-let A = (0, r.debounce)((e, t) => T(e, t), 1000);
-function C(e, t) {
+let C = (0, r.debounce)((e, t) => T(e, t), 1000);
+function A(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;
     if (null == e) return;

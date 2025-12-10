@@ -22,7 +22,7 @@ var r = n(54381),
     S = n(877565),
     I = n(590921),
     T = n(388032);
-let A = [
+let C = [
         "YYYYMMDD",
         "YYYY-MM-DD",
         "LL",
@@ -58,8 +58,8 @@ let A = [
         "dddd",
         "ddd",
     ],
-    C = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"],
-    N = [b().ISO_8601, ...A.flatMap((e) => [...C.map((t) => "".concat(e, " ").concat(t)), ...C])];
+    A = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"],
+    N = [b().ISO_8601, ...C.flatMap((e) => [...A.map((t) => "".concat(e, " ").concat(t)), ...A])];
 function P() {
     let e = v.default.locale;
     if ("en-US" === e) return a;

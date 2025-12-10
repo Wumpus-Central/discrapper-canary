@@ -25,8 +25,8 @@ function h(e) {
             [E, O, h, t, n],
         ),
         [I, T] = i.useState(!1),
-        A = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        C = c.Yk.useSetting(),
+        C = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        A = c.Yk.useSetting(),
         N = i.useCallback(() => {
             o.Z.dispatch({
                 type: "BURST_REACTION_EFFECT_CLEAR",
@@ -48,13 +48,13 @@ function h(e) {
                     key: u.I.RANDOM,
                 }));
         };
-        if (I || (A && !C) || !C) return;
+        if (I || (C && !A) || !A) return;
         e();
         let r = setInterval(e, 5000);
         return () => {
             clearInterval(r);
         };
-    }, [C, t, b, h, h.name, I, n, A]),
+    }, [A, t, b, h, h.name, I, n, C]),
     null == O)
         ? null
         : (0, r.jsx)(f.Z, {

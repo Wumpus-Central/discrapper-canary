@@ -16,7 +16,7 @@ n.d(t, {
     WU: () => K,
     X$: () => ee,
     X3: () => J,
-    b7: () => C,
+    b7: () => A,
     cl: () => V,
     g9: () => U,
     i3: () => B,
@@ -25,7 +25,7 @@ n.d(t, {
     nI: () => k,
     nl: () => $,
     qc: () => G,
-    s5: () => A,
+    s5: () => C,
     zH: () => P,
 }),
     n(35282),
@@ -108,7 +108,7 @@ function T(e) {
     }
     return I(e);
 }
-function A(e) {
+function C(e) {
     switch (e.type) {
         case y.aib.GUILD_CHANNEL:
         case y.aib.GUILD:
@@ -124,7 +124,7 @@ function A(e) {
             return null;
     }
 }
-function C(e) {
+function A(e) {
     return e.type === y.aib.GUILD || e.type === y.aib.GUILD_CHANNEL || e.type === y.aib.THREAD;
 }
 function N(e) {
@@ -418,7 +418,7 @@ function Q() {
     i()(e).forOwn((e, t) => Y.addRule(S({ type: t }, e))), h.Z.markSearchTokensRefreshed();
 }
 function X(e) {
-    return !!C(e) || (e.type === y.aib.DMS && !f.Z.hidePersonalInformation);
+    return !!A(e) || (e.type === y.aib.DMS && !f.Z.hidePersonalInformation);
 }
 function J(e) {
     let t = e.name,

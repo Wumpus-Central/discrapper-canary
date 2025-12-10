@@ -105,10 +105,10 @@ function T(e, t) {
         a = null == (r = y[e]) ? void 0 : r.error_description;
     (y[e] = g({}, y[e], t)), null != i && (y[e].error = i), null != a && (y[e].error_description = a);
 }
-function A(e) {
+function C(e) {
     s.default.track(m.rMx.OVERLAY_HOOK_RESULT, I(e));
 }
-function C(e, t) {
+function A(e, t) {
     e !== l.UNSET_PID &&
         T(e, {
             host_crash_count: 1,
@@ -139,7 +139,7 @@ function D(e) {
         i = n instanceof Error ? n : Error(null != n ? n : "Unknown error");
     return (
         "native" === r
-            ? (C(t, i), (0, c.V6)(i, u.gl.OutOfProcess, { extra: R(t, "host") }))
+            ? (A(t, i), (0, c.V6)(i, u.gl.OutOfProcess, { extra: R(t, "host") }))
             : (N(t, i), (0, c.V6)(i, u.gl.OutOfProcess, { extra: R(t, "renderer") })),
         !0
     );
@@ -171,7 +171,7 @@ function j(e) {
 }
 function M(e) {
     let { lastAssociatedPID: t } = e;
-    if (t !== l.UNSET_PID) return A(t), P(), !0;
+    if (t !== l.UNSET_PID) return C(t), P(), !0;
 }
 function k(e) {
     var t, n;

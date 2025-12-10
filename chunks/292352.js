@@ -4,8 +4,8 @@ n.d(t, {
     Mu: () => v,
     Of: () => l,
     QH: () => O,
-    TX: () => C,
-    U: () => A,
+    TX: () => A,
+    U: () => C,
     Wz: () => N,
     YC: () => I,
     _6: () => S,
@@ -201,7 +201,7 @@ let T = new Map([
             },
         ],
     ]),
-    A = new Map([
+    C = new Map([
         [
             6,
             {
@@ -223,7 +223,7 @@ let T = new Map([
             },
         ],
     ]),
-    C = () => ({
+    A = () => ({
         seconds: s.intl.string(o.default.CJdoee),
         minutes: o.default.InzMn3,
         hours: o.default.ErkYCI,

@@ -59,7 +59,7 @@ function O(e, t) {
                     offset: f + d,
                 });
         } else if (T(e, f)) (a.hasAppMarkers = !0), (a.tiffHeaderOffset = f + d);
-        else if (i.Z.USE_ICC && t && A(e, f)) {
+        else if (i.Z.USE_ICC && t && C(e, f)) {
             a.hasAppMarkers = !0;
             let t = e.getUint32(f + c),
                 n = f + d,
@@ -74,7 +74,7 @@ function O(e, t) {
                     compressionMethod: i,
                 });
         } else
-            C(e, f) &&
+            A(e, f) &&
                 ((a.hasAppMarkers = !0), a.pngChunkOffsets || (a.pngChunkOffsets = []), a.pngChunkOffsets.push(f + c));
         f += e.getUint32(f + c) + s + l + n;
     }
@@ -94,10 +94,10 @@ function I(e, t, n) {
 function T(e, t) {
     return (0, r.oH)(e, t + u, l) === E;
 }
-function A(e, t) {
+function C(e, t) {
     return (0, r.oH)(e, t + u, l) === b;
 }
-function C(e, t) {
+function A(e, t) {
     return [h, g].includes((0, r.oH)(e, t + u, l));
 }
 function N(e, t) {

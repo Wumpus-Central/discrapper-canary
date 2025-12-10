@@ -38,19 +38,19 @@ var r,
           })()
         : S,
     T = n(738146)(),
-    A = n(143988),
-    C = n(764459),
+    C = n(143988),
+    A = n(764459),
     N = n(138676),
     P = n(365088),
     R = n(947599),
     D = {},
-    w = "undefined" != typeof Uint8Array && A ? A(Uint8Array) : r,
+    w = "undefined" != typeof Uint8Array && C ? C(Uint8Array) : r,
     x = {
         __proto__: null,
         "%AggregateError%": "undefined" == typeof AggregateError ? r : AggregateError,
         "%Array%": Array,
         "%ArrayBuffer%": "undefined" == typeof ArrayBuffer ? r : ArrayBuffer,
-        "%ArrayIteratorPrototype%": T && A ? A([][Symbol.iterator]()) : r,
+        "%ArrayIteratorPrototype%": T && C ? C([][Symbol.iterator]()) : r,
         "%AsyncFromSyncIteratorPrototype%": r,
         "%AsyncFunction%": D,
         "%AsyncGenerator%": D,
@@ -81,10 +81,10 @@ var r,
         "%Int32Array%": "undefined" == typeof Int32Array ? r : Int32Array,
         "%isFinite%": isFinite,
         "%isNaN%": isNaN,
-        "%IteratorPrototype%": T && A ? A(A([][Symbol.iterator]())) : r,
+        "%IteratorPrototype%": T && C ? C(C([][Symbol.iterator]())) : r,
         "%JSON%": "object" == typeof JSON ? JSON : r,
         "%Map%": "undefined" == typeof Map ? r : Map,
-        "%MapIteratorPrototype%": "undefined" != typeof Map && T && A ? A(new Map()[Symbol.iterator]()) : r,
+        "%MapIteratorPrototype%": "undefined" != typeof Map && T && C ? C(new Map()[Symbol.iterator]()) : r,
         "%Math%": Math,
         "%Number%": Number,
         "%Object%": i,
@@ -98,10 +98,10 @@ var r,
         "%Reflect%": "undefined" == typeof Reflect ? r : Reflect,
         "%RegExp%": RegExp,
         "%Set%": "undefined" == typeof Set ? r : Set,
-        "%SetIteratorPrototype%": "undefined" != typeof Set && T && A ? A(new Set()[Symbol.iterator]()) : r,
+        "%SetIteratorPrototype%": "undefined" != typeof Set && T && C ? C(new Set()[Symbol.iterator]()) : r,
         "%SharedArrayBuffer%": "undefined" == typeof SharedArrayBuffer ? r : SharedArrayBuffer,
         "%String%": String,
-        "%StringIteratorPrototype%": T && A ? A(""[Symbol.iterator]()) : r,
+        "%StringIteratorPrototype%": T && C ? C(""[Symbol.iterator]()) : r,
         "%Symbol%": T ? Symbol : r,
         "%SyntaxError%": c,
         "%ThrowTypeError%": I,
@@ -118,7 +118,7 @@ var r,
         "%Function.prototype.call%": R,
         "%Function.prototype.apply%": P,
         "%Object.defineProperty%": v,
-        "%Object.getPrototypeOf%": C,
+        "%Object.getPrototypeOf%": A,
         "%Math.abs%": f,
         "%Math.floor%": p,
         "%Math.max%": _,
@@ -128,11 +128,11 @@ var r,
         "%Math.sign%": E,
         "%Reflect.getPrototypeOf%": N,
     };
-if (A)
+if (C)
     try {
         null.error;
     } catch (e) {
-        var L = A(A(e));
+        var L = C(C(e));
         x["%Error.prototype%"] = L;
     }
 var j = function e(t) {
@@ -145,7 +145,7 @@ var j = function e(t) {
             r && (n = r.prototype);
         } else if ("%AsyncIteratorPrototype%" === t) {
             var i = e("%AsyncGenerator%");
-            i && A && (n = A(i.prototype));
+            i && C && (n = C(i.prototype));
         }
         return (x[t] = n), n;
     },

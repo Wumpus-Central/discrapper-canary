@@ -176,7 +176,7 @@ function V() {
             V(Z(D({}, e), { preview: !0 }));
         }, []),
         [W, z] = r.useState(w.a.UNENROLLED),
-        [K, q] = r.useState(!1),
+        [q, K] = r.useState(!1),
         [Q, Y] = r.useState(!1),
         [X, J] = r.useState(null),
         $ =
@@ -734,7 +734,7 @@ function V() {
                                         children: (0, a.jsx)(v.Z, {
                                             channelId: "123",
                                             previewQuest: F,
-                                            isParticipatingOverride: K,
+                                            isParticipatingOverride: q,
                                         }),
                                     }),
                                 }),
@@ -745,9 +745,9 @@ function V() {
                         className: R.toggleSwitch,
                         children: (0, a.jsx)(m.rsf, {
                             label: "Is Participating:",
-                            checked: K,
+                            checked: q,
                             onChange: function (e) {
-                                q(e);
+                                K(e);
                             },
                         }),
                     }),

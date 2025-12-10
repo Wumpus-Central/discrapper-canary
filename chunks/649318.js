@@ -4,7 +4,7 @@ n.d(t, {
     Mg: () => O,
     Nl: () => N,
     Ns: () => b,
-    Rx: () => A,
+    Rx: () => C,
     nX: () => D,
     sc: () => P,
 }),
@@ -404,7 +404,7 @@ function T(e) {
         sdp: S(_),
     });
 }
-function A(e) {
+function C(e) {
     let {
             type: t,
             baseSDP: n,
@@ -457,7 +457,7 @@ function A(e) {
         })
     );
 }
-function C(e, t, n, r, i) {
+function A(e, t, n, r, i) {
     let a = e.find((e) => e.codec === r);
     if (null == a) return null;
     let o = t.find((e) => RegExp("^apt=".concat(a.payload)).test(e.config)),
@@ -489,7 +489,7 @@ function N(e, t) {
             ) {
                 case "audio":
                     [p.ad.OPUS].forEach((t, n) => {
-                        let r = C(a, s, i, t, n);
+                        let r = A(a, s, i, t, n);
                         null != r && e.codecs.push(r);
                     }),
                         "sendrecv" === l &&
@@ -499,7 +499,7 @@ function N(e, t) {
                 case "video":
                     (t ? [p.ad.H265, p.ad.H264, p.ad.VP8, p.ad.VP9] : [p.ad.H264, p.ad.VP8, p.ad.VP9]).forEach(
                         (t, n) => {
-                            let r = C(a, s, i, t, n);
+                            let r = A(a, s, i, t, n);
                             null != r && e.codecs.push(r);
                         },
                     ),

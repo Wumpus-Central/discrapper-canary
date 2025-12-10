@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(726033),
     I = n(496675),
     T = n(594174),
-    A = n(5192),
-    C = n(51144),
+    C = n(5192),
+    A = n(51144),
     N = n(937889),
     P = n(739566),
     R = n(779125),
@@ -194,7 +194,7 @@ function ee(e) {
 }
 function et(e, t, n) {
     var r;
-    let i = null != (r = A.ZP.getNickname(n, null, t)) ? r : C.ZP.getUserTag(t),
+    let i = null != (r = C.ZP.getNickname(n, null, t)) ? r : A.ZP.getUserTag(t),
         a = l()(e.ts),
         o = "".concat(i, " ").concat(a.fromNow());
     try {
@@ -317,10 +317,10 @@ function ea(e) {
             avatarSrc: f,
             eventHandlers: { onMouseEnter: S, onMouseLeave: T },
         } = (0, M.m)(!0),
-        A = (0, c.JA)(null != n ? n : ""),
-        { onFocus: C } = A,
-        P = z(A, ["onFocus"]),
-        { isFocused: R, handleFocus: x, handleBlur: j } = (0, L.bb)(C),
+        C = (0, c.JA)(null != n ? n : ""),
+        { onFocus: A } = C,
+        P = z(C, ["onFocus"]),
+        { isFocused: R, handleFocus: x, handleBlur: j } = (0, L.bb)(A),
         U = (0, u.e7)([m.Z], () => m.Z.keyboardModeEnabled),
         H = (0, u.e7)([I.Z], () => I.Z.can(G.Plq.MANAGE_MESSAGES, l), [l]),
         {

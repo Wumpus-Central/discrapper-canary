@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => A,
+    ZP: () => C,
     ku: () => I,
 });
 var r = n(54381),
@@ -80,7 +80,7 @@ function T(e) {
           })
         : null;
 }
-let A = function (e) {
+let C = function (e) {
     let { channelId: t, messageId: n, soundId: a, messageSounds: o, jumbo: c = !1 } = e,
         u = b.jU.useSetting(),
         f = (0, s.e7)([h.Z], () => h.Z.getSoundById(a), [a]),
@@ -89,16 +89,16 @@ let A = function (e) {
             return null != (e = (0, p.Z)(t, n, a, o)) ? e : f;
         }, [t, n, a, o, f]),
         I = (0, s.e7)([y.Z], () => y.Z.getChannel(t)),
-        A = (0, d.X0)({ location: "SoundboardMention" }),
-        C = i.useRef(null),
+        C = (0, d.X0)({ location: "SoundboardMention" }),
+        A = i.useRef(null),
         { isPlaying: N, playSound: P } = (0, m.Z)(O, I),
         R = i.useCallback(async () => {
             if (await P()) {
                 var e;
-                null == (e = C.current) || e.addAnimation();
+                null == (e = A.current) || e.addAnimation();
             }
         }, [P]);
-    return A
+    return C
         ? null == O
             ? (0, r.jsx)(S, { playSound: R })
             : c && !u
@@ -116,7 +116,7 @@ let A = function (e) {
                         tooltipClassName: v.tooltip,
                         tooltipContentClassName: v.tooltipContainer,
                         tooltipOverride: (0, r.jsx)(_.Dp, { sound: O }),
-                        soundmojiVisualEffectRef: C,
+                        soundmojiVisualEffectRef: A,
                     },
                     "".concat(O.soundId),
                 )

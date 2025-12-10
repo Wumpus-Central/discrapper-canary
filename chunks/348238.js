@@ -41,8 +41,8 @@ var r = n(54381),
     S = n(91047),
     I = n(50284),
     T = n(804063),
-    A = n(981631);
-function C(e, t, n) {
+    C = n(981631);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -66,7 +66,7 @@ function N(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -107,7 +107,7 @@ function w(e, t, n) {
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
             let a = "@".concat(v.ZP.getUserTag(i, { decoration: "never" })),
                 o = "<@".concat(e, ">");
-            y.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
+            y.S.dispatchToLastSubscribed(C.CkL.INSERT_TEXT, {
                 plainText: a,
                 rawText: o,
             }),
@@ -152,7 +152,7 @@ function Z(e, t) {
 function B(e, t, a, l) {
     let { id: c } = t,
         { id: d, flags: f } = e,
-        p = (0, o.yE)(f, A.iLy.EPHEMERAL),
+        p = (0, o.yE)(f, C.iLy.EPHEMERAL),
         _ = (0, u.bp)();
     return i.useCallback(
         (e, t) => {
@@ -169,7 +169,7 @@ function B(e, t, a, l) {
             null == i ||
                 null == o ||
                 u ||
-                (b.default.track(A.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                (b.default.track(C.rMx.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: d,
                     channel: c,
                     location: "right_click",
@@ -261,12 +261,12 @@ function W(e) {
     l.current = u || l.current;
     let f = i.useCallback(
             (e) => {
-                (0, _.T6)(), u || (y.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, s, !0), c(e), d(!0));
+                (0, _.T6)(), u || (y.S.dispatchKeyed(C.LPv.ANIMATE_CHAT_AVATAR, s, !0), c(e), d(!0));
             },
             [u, s, c],
         ),
         p = i.useCallback(() => {
-            y.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, s, !1), d(!1);
+            y.S.dispatchKeyed(C.LPv.ANIMATE_CHAT_AVATAR, s, !1), d(!1);
         }, [s]);
     return {
         hasHovered: l.current,

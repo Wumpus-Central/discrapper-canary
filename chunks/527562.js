@@ -21,7 +21,7 @@ function b(e) {
         { guildProfile: O, fetchGuildProfile: v, fetchStatus: S } = (0, p.u)(t),
         I = (0, s.e7)([f.Z], () => f.Z.getErrorCode(t)),
         T = i.useRef(null),
-        A = i.useCallback(() => {
+        C = i.useCallback(() => {
             v(!0);
         }, [v]);
     i.useEffect(() => {
@@ -33,7 +33,7 @@ function b(e) {
         i.useEffect(() => {
             null == a || a(null == T ? void 0 : T.current);
         }, [T, a]);
-    let C = i.useMemo(
+    let A = i.useMemo(
         () =>
             S === f.a.NOT_FETCHED || S === f.a.FETCHING
                 ? (0, r.jsx)("div", {
@@ -53,7 +53,7 @@ function b(e) {
                           className: g.container,
                           children: (0, r.jsx)(_.Z, {
                               name: n,
-                              onRetry: A,
+                              onRetry: C,
                           }),
                       })
                     : (0, r.jsx)("div", {
@@ -63,11 +63,11 @@ function b(e) {
                               onClose: b,
                           }),
                       }),
-        [S, O, I, t, n, A, b],
+        [S, O, I, t, n, C, b],
     );
     return (0, r.jsx)(l.VqE, {
         ref: T,
         "aria-label": null == O ? void 0 : O.name,
-        children: C,
+        children: A,
     });
 }

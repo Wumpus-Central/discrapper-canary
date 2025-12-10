@@ -12,7 +12,7 @@ var r,
     o = n(120356),
     s = n.n(o),
     l = n(24156),
-    c = n(205120),
+    c = n(467721),
     u = n(873546),
     d = n(374470),
     f = n(793030),
@@ -98,8 +98,8 @@ function I(e, t) {
 var T = (function (e) {
     return (e.PRIMARY = "primary"), (e.GREY = "grey"), (e.BRAND = "brand"), (e.GREEN = "green"), (e.RED = "red"), e;
 })({});
-let A = 16,
-    C = 10,
+let C = 16,
+    A = 10,
     N = 8,
     P = Object.freeze({}),
     R = Object.freeze({
@@ -123,7 +123,7 @@ function D(e, t, n) {
         s = "50%",
         l = n;
     return (
-        t === a ? ((s = "0%"), (l += A)) : t === o && ((s = "100%"), (l -= C + C)),
+        t === a ? ((s = "0%"), (l += C)) : t === o && ((s = "100%"), (l -= A + A)),
         { [i]: "calc(".concat(s, " + ").concat(l, "px)") }
     );
 }

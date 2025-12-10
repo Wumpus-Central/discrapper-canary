@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B });
+n.d(t, { Z: () => F });
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -47,7 +47,7 @@ function V(e) {
     if (r) return (0, i.jsx)(N.Z, { channel: n });
     return (0, i.jsx)(A.Z, { channel: n });
 }
-function B(e) {
+function F(e) {
     var t;
     let { channel: n, showingBanner: p } = e,
         h = (0, d.ZP)(n),
@@ -60,7 +60,7 @@ function B(e) {
         })),
         w = (0, l.e7)([g.Z], () => (C === R.d4z.DM ? g.Z.getMutualGuilds(n.getRecipientId()) : null), [n, C]),
         M = (0, u.Z)(null != (t = null == _ ? void 0 : _.id) ? t : R.lds),
-        { authorizedAppToken: B, authorizedAppsFetchState: F } = (0, l.cj)([y.default], () => ({
+        { authorizedAppToken: F, authorizedAppsFetchState: B } = (0, l.cj)([y.default], () => ({
             authorizedAppToken: y.default.getNewestTokenForApplication(null == M ? void 0 : M.id),
             authorizedAppsFetchState: y.default.getFetchState(),
         })),
@@ -73,8 +73,8 @@ function B(e) {
                 o.Z.wait(() => (0, b.Z)(n.getRecipientId(), _.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
         }, [w, C, n, _]),
         r.useEffect(() => {
-            (null == _ ? void 0 : _.bot) && F === y.FetchState.NOT_FETCHED && s.Z.fetch();
-        }, [null == _ ? void 0 : _.bot, F]),
+            (null == _ ? void 0 : _.bot) && B === y.FetchState.NOT_FETCHED && s.Z.fetch();
+        }, [null == _ ? void 0 : _.bot, B]),
         n.isSystemDM())
     )
         return (0, i.jsx)(T.Z, {
@@ -85,7 +85,7 @@ function B(e) {
         let e;
         return (
             null != _ && null != M
-                ? null != B &&
+                ? null != F &&
                   (e = (0, i.jsxs)("div", {
                       className: k.buttonContainer,
                       children: [
@@ -97,7 +97,7 @@ function B(e) {
                               user: _,
                               application: M,
                               channel: n,
-                              oauth2Token: B,
+                              oauth2Token: F,
                           }),
                           H && (0, i.jsx)(f.Z, { channel: n }),
                       ],

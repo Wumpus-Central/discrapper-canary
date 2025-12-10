@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function A(e) {
     }
     return e;
 }
-function C(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,7 +67,7 @@ function N(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -166,7 +166,7 @@ function L(e) {
             maxVisibleUsers: S = 3,
         } = e,
         T = i.useRef(null),
-        C = (0, m.Z)(),
+        A = (0, m.Z)(),
         [R, L] = i.useState(!1),
         j = i.useRef(new u.sW(P, () => L(!1))),
         M = (0, c.Wu)([g.Z, E.default], () => {
@@ -181,8 +181,8 @@ function L(e) {
                 : x;
         }, [s]);
     i.useEffect(() => {
-        C && (j.current.cancel(), L(!1));
-    }, [C]);
+        A && (j.current.cancel(), L(!1));
+    }, [A]);
     let k = i.useCallback(() => {
             j.current.cancel(), L(!0);
         }, []),
@@ -198,7 +198,7 @@ function L(e) {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("77635")]).then(
                                 n.bind(n, 881351),
                             );
-                            return (n) => (0, r.jsx)(e, N(A({}, n), { user: t }));
+                            return (n) => (0, r.jsx)(e, N(C({}, n), { user: t }));
                         },
                         { onClose: U },
                     );
@@ -256,7 +256,7 @@ function L(e) {
                             users: M,
                             disableInteraction: y,
                         }),
-                    shouldShow: R && !C,
+                    shouldShow: R && !A,
                     position: "top",
                     children: () =>
                         (0, r.jsx)("div", {

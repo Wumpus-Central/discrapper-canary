@@ -1,6 +1,6 @@
 n.r(t),
     n.d(t, {
-        enable: () => C,
+        enable: () => A,
         isNotSupported: () => T,
         trackToggleSelfDeaf: () => P,
         trackToggleSelfMute: () => N,
@@ -110,13 +110,13 @@ function T() {
         !0)
     );
 }
-function A(e) {
+function C(e) {
     p.default.track(h.rMx.PERMISSIONS_ACKED, {
         type: "audio",
         action: e,
     });
 }
-function C() {
+function A() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return T()
         ? Promise.resolve(!1)
@@ -130,21 +130,21 @@ function C() {
                           enabled: !0,
                           unmute: e,
                       }),
-                          A(g.PQ.ACCEPTED);
+                          C(g.PQ.ACCEPTED);
                   },
                   (e) => {
                       switch (e) {
                           case h.ETv.NO_DEVICES_FOUND:
-                              A(g.PQ.NO_DEVICES);
+                              C(g.PQ.NO_DEVICES);
                               break;
                           case h.ETv.PERMISSION_DENIED:
-                              A(g.PQ.DENIED);
+                              C(g.PQ.DENIED);
                               break;
                           case h.ETv.PERMISSION_DISMISSED:
-                              A(g.PQ.DISMISSED);
+                              C(g.PQ.DISMISSED);
                               break;
                           default:
-                              A(g.PQ.ERROR), S.warn("unknown getUserMedia error: ".concat(e));
+                              C(g.PQ.ERROR), S.warn("unknown getUserMedia error: ".concat(e));
                       }
                   },
               )

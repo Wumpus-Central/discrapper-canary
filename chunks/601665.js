@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(895697),
     I = n(161572),
     T = n(671955),
-    A = n(388032),
-    C = n(116649);
+    C = n(388032),
+    A = n(116649);
 function N(e, t, n) {
     return (
         t in e
@@ -102,7 +102,7 @@ function R(e) {
                 ? null
                 : (0, r.jsx)(o.sNh, {
                       id: "view-profile",
-                      label: A.intl.string(A.t["+Xp3hq"]),
+                      label: C.intl.string(C.t["+Xp3hq"]),
                       action: () => {
                           Y(),
                               (0, _.pQ)(
@@ -134,7 +134,7 @@ function R(e) {
                     (0, r.jsx)(o.nn4, {
                         children: (0, r.jsx)(o.H, {
                             id: z,
-                            children: A.intl.format(A.t.KRe1Fk, { name: q }),
+                            children: C.intl.format(C.t.KRe1Fk, { name: q }),
                         }),
                     }),
                     (0, r.jsxs)(b.Z, {
@@ -150,7 +150,7 @@ function R(e) {
                                 }),
                             }),
                             (0, r.jsxs)("div", {
-                                className: C.header,
+                                className: A.header,
                                 children: [
                                     (0, r.jsx)(E.Z, {
                                         user: t,

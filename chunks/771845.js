@@ -55,7 +55,7 @@ let I = new c.g8();
 function T(e, t) {
     for (let n of g.Z.getGuildIds()) !e(n) || u.Z.isLurking(n) || h.ZP.isCurrentUserGuest(n) || t(n);
 }
-function A(e) {
+function C(e) {
     switch (e.type) {
         case c.eD.FOLDER:
             return {
@@ -74,7 +74,7 @@ function A(e) {
             throw Error("[SortedGuildStore] Unexpected guilds tree node type.");
     }
 }
-function C(e, t) {
+function A(e, t) {
     let n = I;
     if (((I = new c.g8()), 0 === e.length && t.length > 0)) for (let e of t) I.addNode((0, c.Mg)(e));
     else
@@ -102,7 +102,7 @@ function C(e, t) {
 }
 function N() {
     var e, t, n;
-    return C(
+    return A(
         null != (t = d.Z.getGuildFolders()) ? t : [],
         null != (n = null == (e = d.Z.settings.guildFolders) ? void 0 : e.guildPositions) ? n : [],
     );
@@ -112,7 +112,7 @@ function P() {
     let n = d.Z.getGuildFolders();
     return (
         !(null != r && a()(r, n)) &&
-        C(
+        A(
             null != (r = n) ? r : [],
             null != (t = null == (e = d.Z.settings.guildFolders) ? void 0 : e.guildPositions) ? t : [],
         )
@@ -227,7 +227,7 @@ function U(e, t) {
         I.replaceNode(e, n);
 }
 let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
-    Z = (0, f.oH)((e, t) => e.getRoots().map(A)),
+    Z = (0, f.oH)((e, t) => e.getRoots().map(C)),
     B = (0, f.oH)((e, t) => {
         let n = [];
         function r(e) {
@@ -240,7 +240,7 @@ let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
         }
         return r(e.root), n;
     }),
-    F = (0, f.oH)((e, t) => e.root.children.map(A));
+    F = (0, f.oH)((e, t) => e.root.children.map(C));
 class V extends E.Z {
     initialize() {
         this.waitFor(g.Z, b.ZP, d.Z, m.Z, u.Z, _.Z, l.Z);

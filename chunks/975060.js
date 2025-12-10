@@ -34,8 +34,8 @@ let c = "",
     S = !1,
     I = null,
     T = null,
-    A = null,
-    C = null;
+    C = null,
+    A = null;
 function N() {
     (f = null),
         (c = ""),
@@ -54,8 +54,8 @@ function N() {
         (S = !1),
         (I = null),
         (T = null),
-        (A = null),
-        (C = null);
+        (C = null),
+        (A = null);
 }
 function P(e) {
     (h = e.name),
@@ -123,18 +123,18 @@ function Z(e) {
 function B(e) {
     let { query: t } = e;
     (null == t ? void 0 : t.payment_id) != null
-        ? ((A = !0), (T = t.payment_id))
-        : (null == t ? void 0 : t.payment_source_id) != null && ((A = !0), (C = t.payment_source_id));
+        ? ((C = !0), (T = t.payment_id))
+        : (null == t ? void 0 : t.payment_source_id) != null && ((C = !0), (A = t.payment_source_id));
 }
 function F() {
-    (A = !1), (T = null);
+    (C = !1), (T = null);
 }
 class V extends (r = i.ZP.Store) {
     get stripePaymentMethod() {
         return f;
     }
     get popupCallbackCalled() {
-        return A;
+        return C;
     }
     get braintreeEmail() {
         return c;
@@ -152,10 +152,10 @@ class V extends (r = i.ZP.Store) {
         return _;
     }
     get redirectedPaymentSourceId() {
-        return C;
+        return A;
     }
     clearRedirectedPaymentSourceId() {
-        C = null;
+        A = null;
     }
     getCreditCardInfo() {
         return { name: h };

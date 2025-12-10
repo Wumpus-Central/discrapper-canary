@@ -179,19 +179,19 @@ function C() {
                 vadKrispActivationThreshold: void 0,
             });
         });
-    let K = [];
+    let q = [];
     return (
         U &&
-            K.push({
+            q.push({
                 label: "Krisp",
                 value: "KRISP",
             }),
         M &&
-            K.push({
+            q.push({
                 label: "Standard",
                 value: "STANDARD",
             }),
-        K.push({
+        q.push({
             label: "Disabled",
             value: "NONE",
         }),
@@ -215,7 +215,7 @@ function C() {
                         onChange: (e) => {
                             u.Z.setNoiseCancellation("KRISP" === e), u.Z.setNoiseSuppression("STANDARD" === e);
                         },
-                        options: K,
+                        options: q,
                         popoutLayerContext: g.O$,
                     }),
                     "KRISP" === G &&

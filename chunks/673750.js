@@ -1,5 +1,5 @@
 n.d(t, {
-    $V: () => C,
+    $V: () => A,
     Bz: () => P,
     ZP: () => x,
     hc: () => R,
@@ -80,7 +80,7 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function T(e, t) {
     }
     return i;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,7 +97,7 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var C = (function (e) {
+var A = (function (e) {
     return (
         (e[(e.SEND = 0)] = "SEND"),
         (e[(e.EDIT = 1)] = "EDIT"),

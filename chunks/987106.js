@@ -102,7 +102,7 @@ function I(e) {
 function T(e) {
     let t,
         { label: n, style: i, disabled: p, emoji: g, url: b, skuId: O } = e,
-        { executeStateUpdate: T, visualState: A, isDisabled: C } = (0, m.Ee)(e),
+        { executeStateUpdate: T, visualState: C, isDisabled: A } = (0, m.Ee)(e),
         N = (0, f.s)(O),
         P = null != O && i === d.ZJ.PREMIUM,
         R = P && (null == N ? void 0 : N.disabled),
@@ -110,7 +110,7 @@ function T(e) {
         w = null != g,
         x = null != D && D.length > 0,
         L = i === d.ZJ.LINK && null != b && b.length > 0,
-        j = A === h.gH.LOADING || (P && null == N);
+        j = C === h.gH.LOADING || (P && null == N);
     return (
         (t = L
             ? () => {
@@ -128,7 +128,7 @@ function T(e) {
             "data-migration-pending": !0,
             color: S(i),
             size: s.zx.Sizes.SMALL,
-            disabled: p || A === h.gH.DISABLED || C || R,
+            disabled: p || C === h.gH.DISABLED || A || R,
             onClick: t,
             onContextMenu: (e) => {
                 L && (0, c.vq)(e, (e) => (0, r.jsx)(I, v(y({}, e), { url: b })));

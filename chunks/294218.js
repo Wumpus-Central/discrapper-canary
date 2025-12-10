@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(295790),
     I = n(145807),
     T = n(56744),
-    A = n(981631),
-    C = n(360514);
+    C = n(981631),
+    A = n(360514);
 function N(e, t, n) {
     return (
         t in e
@@ -127,7 +127,7 @@ function L(e) {
             "renderThreadAccessory",
             "trackAnnouncementViews",
         ]),
-        F = i.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
+        F = i.type === C.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
         V = i.isFirstMessageInForumPost(j),
         H = (0, u.A)((null != (n = i.editedTimestamp) ? n : i.timestamp).valueOf()),
         {
@@ -141,13 +141,13 @@ function L(e) {
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        z = i.type === A.uaV.REPLY ? i.messageReference : void 0,
+        z = i.type === C.uaV.REPLY ? i.messageReference : void 0,
         q = (0, l.e7)([d.Z], () => d.Z.getMessageByReference(z)),
         Q = (0, s.JA)(i.id),
         X = (0, m.ZP)(i),
         J = (0, l.e7)(
             [f.Z],
-            () => i.hasFlag(A.iLy.HAS_THREAD) && f.Z.getChannel(p.default.castMessageIdAsChannelId(i.id)),
+            () => i.hasFlag(C.iLy.HAS_THREAD) && f.Z.getChannel(p.default.castMessageIdAsChannelId(i.id)),
         ),
         $ = (0, c.p9)({
             guildId: j.guild_id,
@@ -166,8 +166,8 @@ function L(e) {
             {
                 compact: a,
                 className: o()(N, {
-                    [C.ephemeral]: (0, _.Pv)(i),
-                    [C.disableInteraction]: F,
+                    [A.ephemeral]: (0, _.Pv)(i),
+                    [A.disableInteraction]: F,
                 }),
                 disableInteraction: F,
                 childrenRepliedMessage: (0, T.Z)(i, j, z, q, a),
@@ -184,8 +184,8 @@ function L(e) {
                 childrenSystemMessage: (0, S.Z)(D(P({}, e), { disableInteraction: F })),
                 onContextMenu: R,
                 onClick: x,
-                hasThread: G && null != J && i.hasFlag(A.iLy.HAS_THREAD),
-                hasReply: i.type === A.uaV.REPLY,
+                hasThread: G && null != J && i.hasFlag(C.iLy.HAS_THREAD),
+                hasReply: i.type === C.uaV.REPLY,
                 "aria-labelledby": et,
                 "aria-describedby": en,
                 messageRef: ee,

@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function A(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -152,7 +152,7 @@ let D = ["TOP_LEFT", "TOP_RIGHT"],
             },
             leafRotationDirection: -1,
         },
-        BOTTOM_LEFT: C(T({}, j), {
+        BOTTOM_LEFT: A(T({}, j), {
             getConfettiPosition: (e) => ({
                 x: e - x,
                 y: L,
@@ -162,7 +162,7 @@ let D = ["TOP_LEFT", "TOP_RIGHT"],
                 y: -1,
             },
         }),
-        BOTTOM_RIGHT: C(T({}, j), {
+        BOTTOM_RIGHT: A(T({}, j), {
             getConfettiPosition: (e) => ({
                 x: x,
                 y: L,
@@ -268,10 +268,10 @@ function et(e) {
         T = i.useCallback((e) => {
             _(e);
         }, []),
-        A = i.useCallback(() => {
+        C = i.useCallback(() => {
             "exit" === p && (null == t || t());
         }, [t, p]),
-        C = i.useCallback((e) => {
+        A = i.useCallback((e) => {
             u.current = e;
         }, []);
     return (
@@ -354,12 +354,12 @@ function et(e) {
                         [S.easterEggAnimationClickTargetBottomRight]: "BOTTOM_RIGHT" === m,
                     }),
                     children: (0, r.jsx)(d.kci, {
-                        animationRef: C,
+                        animationRef: A,
                         className: o()(S.easterEggAnimation, { [S.easterEggAnimationHideLeaf]: I }),
                         nextScene: O,
                         sceneSegments: P,
                         onScenePlay: T,
-                        onSceneComplete: A,
+                        onSceneComplete: C,
                         importData: X,
                         pauseWhileUnfocused: !1,
                     }),
@@ -374,7 +374,7 @@ function en(e) {
         c = H(n),
         u = (0, m.Z)(n),
         { createMultipleConfettiAt: I, addClickListener: T } = i.useContext(f.h),
-        [A, C] = i.useState(!1),
+        [C, A] = i.useState(!1),
         P = i.useRef(null),
         { reducedMotion: R } = i.useContext(d.Sfi),
         D = (0, b.ZP)(n),
@@ -408,20 +408,20 @@ function en(e) {
                 });
     let L = i.useCallback(() => {
             if (!R.enabled)
-                if (A || 0 !== Math.floor(Math.random() * N)) {
+                if (C || 0 !== Math.floor(Math.random() * N)) {
                     var e;
                     let t = null == (e = P.current) ? void 0 : e.getBoundingClientRect();
                     if (null == t) return;
                     I(t.left + t.width / 2, t.top + t.height / 2);
-                } else C(!0);
-        }, [I, R, A]),
+                } else A(!0);
+        }, [I, R, C]),
         j = i.useCallback(() => {
-            C(!1);
+            A(!1);
         }, []),
         M = i.useCallback(() => {
             (0, _.AI)({ settingsVisible: !0 }),
                 (0, g.openUserSettings)(h.n.POGGERMODE_PANEL, { section: O.oAB.POGGERMODE }),
-                C(!1);
+                A(!1);
         }, []),
         k = i.useCallback(
             (e, t) => {
@@ -456,7 +456,7 @@ function en(e) {
                 className: S.message,
                 children: t,
             }),
-            A
+            C
                 ? (0, r.jsx)(p.ZP, {
                       children: (0, r.jsx)("div", {
                           className: S.cannonWrapper,

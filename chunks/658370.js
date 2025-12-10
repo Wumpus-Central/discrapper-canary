@@ -29,18 +29,18 @@ let g = (e) => {
         } = e,
         I = (0, u.N)(),
         T = null == I ? void 0 : I.subscription_trial,
-        A = (0, c.N)(),
-        C = (0, s.Rt)({
+        C = (0, c.N)(),
+        A = (0, s.Rt)({
             intervalType: null == T ? void 0 : T.interval,
             intervalCount: null == T ? void 0 : T.interval_count,
         }),
         N = (0, l._)({
             defaultResponse: m.intl.string(m.t["8x0jKT"]),
             onNonTier2Subscriber: m.intl.string(m.t.IJI7yk),
-            onTier2TrialOffer: C,
-            onTier0TrialOffer: C,
+            onTier2TrialOffer: A,
+            onTier0TrialOffer: A,
             onDiscountOffer: m.intl.formatToPlainString(m.t.bkQ4bH, {
-                percent: null == A ? void 0 : A.discount.amount,
+                percent: null == C ? void 0 : C.discount.amount,
             }),
         }),
         P = (0, f._)(S),

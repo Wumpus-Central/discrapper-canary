@@ -70,8 +70,8 @@ let m = null,
     S = !1,
     I = null,
     T = !1,
-    A = null;
-function C(e) {
+    C = null;
+function A(e) {
     let { subscriptions: t, lastLazyPerkSync: n } = e,
         r = {},
         i = {},
@@ -91,7 +91,7 @@ function C(e) {
         (h = i),
         (E = a),
         (b = o),
-        (A = n);
+        (C = n);
 }
 function N(e) {
     let { activeSubscriptions: t, record: n } = e,
@@ -169,7 +169,7 @@ function k() {
         (v = !1),
         (S = !1),
         (T = !1),
-        (A = null);
+        (C = null);
 }
 function U(e) {
     return e.status !== c.O0b.UNPAID;
@@ -251,7 +251,7 @@ class Z extends (r = i.ZP.Store) {
         return T;
     }
     getLastLazyPerkSync() {
-        return A;
+        return C;
     }
     getPremiumGroupSubscription() {
         return G(c.NYc.PREMIUM, (e) => e.hasAnyPremiumGroup, !0);
@@ -259,7 +259,7 @@ class Z extends (r = i.ZP.Store) {
 }
 d(Z, "displayName", "SubscriptionStore");
 let B = new Z(a.Z, {
-    BILLING_SUBSCRIPTION_FETCH_SUCCESS: C,
+    BILLING_SUBSCRIPTION_FETCH_SUCCESS: A,
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: P,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: L,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: R,

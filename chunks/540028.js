@@ -111,7 +111,7 @@ function I(e) {
             e
         );
     }
-    function A(e) {
+    function C(e) {
         var t;
         let n = e.pipWindow.id,
             i = null == (t = e.participant) ? void 0 : t.id,
@@ -132,7 +132,7 @@ function I(e) {
         "aria-label": "switch PIP",
         onClose: t,
         onSelect: m,
-        children: T().map(A),
+        children: T().map(C),
     });
 }
 let T = function (e) {

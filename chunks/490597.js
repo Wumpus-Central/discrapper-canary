@@ -1,4 +1,4 @@
-n.d(t, { X: () => C }), n(997841), n(388685);
+n.d(t, { X: () => A }), n(997841), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-class C extends i.Component {
+class A extends i.Component {
     render() {
         let { message: e, className: t, children: n, useChatFontScaling: i, tabIndex: a = 0 } = this.props,
             { isReactionPickerActive: s } = this.state;
@@ -100,7 +100,7 @@ class C extends i.Component {
                           text: y.intl.string(y.t.lfIHs4),
                           children: (0, r.jsxs)(
                               f.P3F,
-                              A(I({}, e), {
+                              C(I({}, e), {
                                   innerRef: this.ref,
                                   tabIndex: a,
                                   onClick: (e) => {

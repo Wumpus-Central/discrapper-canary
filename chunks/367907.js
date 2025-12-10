@@ -32,8 +32,8 @@ var r = n(392711),
     S = n(9156),
     I = n(594174),
     T = n(979651),
-    A = n(626135),
-    C = n(70956),
+    C = n(626135),
+    A = n(70956),
     N = n(700785),
     P = n(546416),
     R = n(981631),
@@ -162,13 +162,13 @@ function Z(e, t) {
 function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (A.default.isThrottled(e)) return;
+    if (C.default.isThrottled(e)) return;
     let r = !("location" in t) || t.location !== R.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
         i = "guild_id" in t ? t.guild_id : r ? v.Z.getGuildId() : null,
         a = "channel_id" in t ? t.channel_id : r ? O.Z.getChannelId(i) : null,
         o = u.Z.getChannel(a),
         s = x({}, t, j(Z(o, i)), null != i && null != a && (0, D.AB)(a) ? M(i, a) : U(o));
-    A.default.track(e, s, { flush: n });
+    C.default.track(e, s, { flush: n });
 }
 function F(e) {
     if ((0, D.AB)(e)) return { channel_static_route: e };
@@ -186,7 +186,7 @@ function F(e) {
             is_app_dm: n,
         };
     }
-    let r = y.ZP.getSnapshot(e, 10 * C.Z.Millis.SECOND);
+    let r = y.ZP.getSnapshot(e, 10 * A.Z.Millis.SECOND);
     return {
         channel_id: e,
         channel_was_unread: r.unread,

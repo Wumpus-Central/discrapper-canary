@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(739566),
     h = n(267128),
     g = n(884902),
-    f = n(271383),
-    m = n(306680),
+    m = n(271383),
+    f = n(306680),
     j = n(699516),
     v = n(594174),
     x = n(709054),
@@ -51,7 +51,7 @@ function T(e) {
             var e;
             return null != (e = v.default.getUser(n.author.id)) ? e : n.author;
         }),
-        { nick: f, colorString: m, colorStrings: p } = (0, d.ZP)(n),
+        { nick: m, colorString: f, colorStrings: p } = (0, d.ZP)(n),
         b = (0, g.X7)(t.guild_id, c.id, p),
         { isBlocked: O, isIgnored: S } = (0, a.cj)(
             [j.Z],
@@ -88,8 +88,8 @@ function T(e) {
                 size: s.EFr.SIZE_16,
             }),
             (0, r.jsx)(s.PUh, {
-                name: f,
-                colorString: m,
+                name: m,
+                colorString: f,
                 colorStrings: b,
                 className: y.authorName,
             }),
@@ -103,7 +103,7 @@ function T(e) {
 function C(e) {
     var t, n, l, u;
     let { channel: d } = e,
-        h = (0, a.e7)([m.ZP], () => m.ZP.lastMessageId(d.id)),
+        h = (0, a.e7)([f.ZP], () => f.ZP.lastMessageId(d.id)),
         j =
             null == h
                 ? new Date(
@@ -112,7 +112,7 @@ function C(e) {
                 : x.default.extractTimestamp(h);
     (0, i.$)({ [d.guild_id]: [d.ownerId] }, "ThreadBrowserRowSubtext");
     let b = (0, a.e7)([v.default], () => v.default.getUser(d.ownerId)),
-        w = (0, a.e7)([f.ZP], () => f.ZP.getMember(d.guild_id, d.ownerId)),
+        w = (0, a.e7)([m.ZP], () => m.ZP.getMember(d.guild_id, d.ownerId)),
         S = (0, g.X7)(
             d.guild_id,
             null == b ? void 0 : b.id,

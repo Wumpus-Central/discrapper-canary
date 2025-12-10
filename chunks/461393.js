@@ -3,9 +3,9 @@ n.d(t, {
     GB: () => o,
     MH: () => a,
     Se: () => d,
-    bj: () => u,
+    bj: () => c,
     eJ: () => s,
-    f8: () => c,
+    f8: () => u,
     hJ: () => h,
 });
 let i = 9 / 16,
@@ -14,13 +14,13 @@ let i = 9 / 16,
     o = (e, t) => e * t,
     a = (e) => l(e, i),
     s = (e) => o(e, r);
-function u(e, t) {
+function c(e, t) {
     return t * (Math.max(1, e) - 1);
 }
-function c(e) {
+function u(e) {
     let { width: t, height: n, containerOffset: i, gapSize: r, tileCount: l, isVertical: o } = e,
-        a = o ? t : t - u(l, r),
-        s = o ? n - u(l, r) : n;
+        a = o ? t : t - c(l, r),
+        s = o ? n - c(l, r) : n;
     return {
         verticalRatio: (s - i) / (a - i),
         horizontalRatio: (a - i) / (s - i),
@@ -33,8 +33,8 @@ function d(e, t, n) {
         f = e.width > d,
         m = e.height > h;
     if (!f && !m) return e;
-    let g = u(a, r),
-        { verticalRatio: O, horizontalRatio: y } = c({
+    let g = c(a, r),
+        { verticalRatio: y, horizontalRatio: O } = u({
             width: e.width,
             height: e.height,
             containerOffset: i,
@@ -42,19 +42,19 @@ function d(e, t, n) {
             tileCount: p,
             isVertical: s,
         }),
-        E = e.width - i,
-        v = e.height - i,
+        v = e.width - i,
+        E = e.height - i,
         b = d - i,
-        S = h - i;
+        _ = h - i;
     return (
-        s ? ((S -= g), (v -= g)) : ((b -= g), (E -= g)),
-        f && m && (e.width > e.height ? (v = l((E = b), O)) : (E = o((v = S), y)), (f = E > b), (m = v > S)),
-        f && (v = l((E = b), O)),
-        m && (E = o((v = S), y)),
-        s ? (v += u(a, r)) : (E += u(a, r)),
+        s ? ((_ -= g), (E -= g)) : ((b -= g), (v -= g)),
+        f && m && (e.width > e.height ? (E = l((v = b), y)) : (v = o((E = _), O)), (f = v > b), (m = E > _)),
+        f && (E = l((v = b), y)),
+        m && (v = o((E = _), O)),
+        s ? (E += c(a, r)) : (v += c(a, r)),
         {
-            width: E + i,
-            height: v + i,
+            width: v + i,
+            height: E + i,
         }
     );
 }

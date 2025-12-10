@@ -31,8 +31,8 @@ var r = n(54381),
     S = n(981631),
     I = n(388032),
     T = n(337595),
-    A = n(374299);
-function C(e, t, n) {
+    C = n(374299);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +56,7 @@ function N(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -140,7 +140,7 @@ let k = (e) => {
                 {
                     text: I.intl.string(I.t["/XT3ij"]),
                     children: (0, r.jsx)(c.P3F, {
-                        className: o()(A.hoverButton, T.removeMosaicItemHoverButton),
+                        className: o()(C.hoverButton, T.removeMosaicItemHoverButton),
                         focusProps: { offset: 2 },
                         onClick: a,
                         "aria-label": I.intl.string(I.t["0+xZH0"]),
@@ -164,7 +164,7 @@ let k = (e) => {
                         children: (0, r.jsx)(d.Z, {
                             target: "_blank",
                             rel: "noreferrer noopener",
-                            className: A.hoverButton,
+                            className: C.hoverButton,
                             iconClassName: T.downloadHoverButtonIcon,
                             focusProps: { offset: 2 },
                             href: n,
@@ -180,12 +180,12 @@ let k = (e) => {
             _ > 0 &&
                 h.length > 0 &&
                 (0, r.jsx)("div", {
-                    className: o()(A.hoverButtonGroup, { [A.nonMediaMosaicItem]: !f }),
+                    className: o()(C.hoverButtonGroup, { [C.nonMediaMosaicItem]: !f }),
                     children: h.slice(g),
                 }),
             (0, r.jsx)("div", {
                 ref: p,
-                className: A.sizer,
+                className: C.sizer,
             }),
         ],
     });
@@ -204,8 +204,8 @@ function U(e) {
             renderImageComponent: _,
             renderVideoComponent: g,
             renderAudioComponent: O,
-            renderPlaintextFilePreview: A,
-            renderGenericFileComponent: C,
+            renderPlaintextFilePreview: C,
+            renderGenericFileComponent: A,
             renderVisualPlaceholderComponent: N,
             className: P,
             imgContainerClassName: R,
@@ -369,7 +369,7 @@ function U(e) {
                 onPlay: p,
             });
         case "PLAINTEXT_PREVIEW":
-            return (0, r.jsx)(A, {
+            return (0, r.jsx)(C, {
                 item: n,
                 message: t,
                 className: P,
@@ -378,7 +378,7 @@ function U(e) {
                 renderAdjacentContent: ei,
             });
         case "OTHER":
-            return (0, r.jsx)(C, {
+            return (0, r.jsx)(A, {
                 item: n,
                 message: t,
                 className: P,
@@ -433,8 +433,8 @@ let Z = function (e) {
         ]);
     let { width: E, height: b, type: y } = n,
         S = s(n, (0, _.v)(a)),
-        [I, A] = i.useState(null != S),
-        C = (0, f.JO)(S),
+        [I, C] = i.useState(null != S),
+        A = (0, f.JO)(S),
         P = c === v.hV.MOSAIC,
         w = !P && ((null != E && E < x) || (null != b && b < L)),
         M = j(y),
@@ -470,7 +470,7 @@ let Z = function (e) {
                     isVisualMediaType: k,
                     onVideoControlsShow: V,
                     onVideoControlsHide: H,
-                    forcePlaceholder: C && I,
+                    forcePlaceholder: A && I,
                 }),
             );
         };
@@ -498,7 +498,7 @@ let Z = function (e) {
                       obscured: I,
                       containerStyles: G(n, M, c),
                       obscurityControlClassName: o()({ [T.obscureVideoSpacing]: "VIDEO" === y && u && !I && B }),
-                      onToggleObscurity: () => A((e) => !e),
+                      onToggleObscurity: () => C((e) => !e),
                       children: (e) => Y(e),
                   })
                 : Y(),

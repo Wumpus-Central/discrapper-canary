@@ -60,13 +60,13 @@ function T(e) {
         isRequest: u.Z.isMessageRequest(e.id) || d.Z.isSpam(e.id),
     };
 }
-function A() {
+function C() {
     v.clear(),
         Object.values(p.Z.getMutablePrivateChannels()).forEach((e) => {
             v.set(e.id, T(e));
         });
 }
-function C(e) {
+function A(e) {
     let { channel: t } = e;
     if (!(0, f.hv)(t.type) || t.id === c.V) return !1;
     v.set(t.id, T(t));
@@ -121,7 +121,7 @@ let x = (() => {
 })();
 class L extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, _.Z, u.Z, m.ZP, d.Z, h.ZP, g.default), this.syncWith([h.ZP, u.Z], A);
+        this.waitFor(p.Z, _.Z, u.Z, m.ZP, d.Z, h.ZP, g.default), this.syncWith([h.ZP, u.Z], C);
     }
     getPrivateChannelIds() {
         return x();
@@ -142,13 +142,13 @@ class L extends (r = o.ZP.Store) {
 }
 b(L, "displayName", "PrivateChannelSortStore");
 let j = new L(l.Z, {
-    CONNECTION_OPEN: A,
-    CONNECTION_OPEN_SUPPLEMENTAL: A,
-    OVERLAY_INITIALIZE: A,
+    CONNECTION_OPEN: C,
+    CONNECTION_OPEN_SUPPLEMENTAL: C,
+    OVERLAY_INITIALIZE: C,
     CACHE_LOADED: w,
     CACHE_LOADED_LAZY: w,
     CHANNEL_UPDATES: N,
-    CHANNEL_CREATE: C,
+    CHANNEL_CREATE: A,
     CHANNEL_DELETE: P,
     MESSAGE_CREATE: R,
     GUILD_CREATE: D,

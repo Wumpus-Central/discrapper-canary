@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(210887),
     I = n(451478),
     T = n(998502),
-    A = n(264783),
-    C = n(892071),
+    C = n(264783),
+    A = n(892071),
     N = n(245034),
     P = n(388032);
 function R(e, t, n, r, o) {
@@ -144,7 +144,7 @@ function D(e) {
         V = (0, m.Z)(P, __OVERLAY__ || N),
         H = 0;
     1 !== L && (H = (0, u.OdO)(H, u.bgu.REDUCE_SATURATION_ENABLED));
-    let Y = (0, A.A)(),
+    let Y = (0, C.A)(),
         W = (0, h.Ml)("RootThemeContextProvider"),
         K = (0, h.CL)("RootThemeContextProvider"),
         z = (0, h.VM)("RootThemeContextProvider"),
@@ -175,7 +175,7 @@ function D(e) {
             flags: H,
             saturation: L,
             density: Y,
-            children: (0, r.jsx)(C.cE, {
+            children: (0, r.jsx)(A.cE, {
                 lang: p,
                 theme: b,
                 density: Y,

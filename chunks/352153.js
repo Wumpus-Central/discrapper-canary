@@ -1,4 +1,4 @@
-n.d(t, { a: () => g }), n(388685), n(539854);
+n.d(t, { a: () => h }), n(388685), n(539854);
 var r = n(473749),
     i = n(442837),
     l = n(699682),
@@ -10,9 +10,9 @@ var r = n(473749),
     d = n(613928),
     p = n(769102),
     f = n(390536),
-    h = n(11543);
-function g(e) {
-    let { showDot: t, notificationItem: n, setScrollState: g } = e,
+    g = n(11543);
+function h(e) {
+    let { showDot: t, notificationItem: n, setScrollState: h } = e,
         [m, _] = r.useState(!1),
         { unreadItems: b, readItems: E, allUnreadItemsHydrated: O } = (0, p.Z)(),
         v = (0, i.e7)([c.Z], () => c.Z.getVersion(), []),
@@ -40,7 +40,7 @@ function g(e) {
     r.useEffect(() => {
         if (I || y || null == x || null == P || P === x) return;
         let e = Date.now();
-        e - j > h.C && (a.Z.gravityScrollEvent(e), s.m.trackFeedFirstScrollStarted());
+        e - j > g.C && (a.Z.gravityScrollEvent(e), s.m.trackFeedFirstScrollStarted());
     }, [I, j, x, P, N, y]);
     let A = r.useCallback(
             (e) => {
@@ -48,7 +48,7 @@ function g(e) {
                 let { viewableItems: r } = e;
                 if ((r.some((e) => "end" === e.item.data.kind) && _(!0), 0 === r.length)) return;
                 T(r),
-                    (null != (n = null == (t = r[r.length - 1]) ? void 0 : t.index) ? n : 0) > 10 && (null == g || g());
+                    (null != (n = null == (t = r[r.length - 1]) ? void 0 : t.index) ? n : 0) > 10 && (null == h || h());
                 let i = [];
                 r.forEach((e) => {
                     let { item: t } = e;
@@ -80,7 +80,7 @@ function g(e) {
                         v,
                     );
             },
-            [v, _, g],
+            [v, _, h],
         ),
         Z = r.useCallback(
             (e) => {

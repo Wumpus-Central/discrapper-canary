@@ -7,9 +7,9 @@ var r = n(54381),
     c = n(493773),
     s = n(82084),
     u = n(663389),
-    f = n(585483),
-    d = n(88658),
-    b = n(996733),
+    b = n(585483),
+    f = n(88658),
+    d = n(996733),
     y = n(313789),
     p = n(914578),
     g = n(342386),
@@ -20,7 +20,7 @@ var r = n(54381),
     h = n(942408);
 function x(e) {
     let { destinationPanel: t, originPanel: n } = e;
-    (0, d.QB)({
+    (0, f.QB)({
         destinationPane: t,
         originPane: n,
         subsection: u.Z.getSubsection(),
@@ -51,8 +51,8 @@ function S(e) {
             }
             return o;
         })(e, ["target"]);
-    let l = b.Z.useField("query"),
-        d = o.useRef(null);
+    let l = d.Z.useField("query"),
+        f = o.useRef(null);
     (0, c.ZP)(() => {
         let e = u.Z.getSection();
         null != e &&
@@ -60,10 +60,10 @@ function S(e) {
                 destinationPanel: e,
                 originPanel: null,
             }),
-            (d.current = e));
+            (f.current = e));
     });
     let v = o.useCallback((e) => {
-            b.Z.setState({ query: e });
+            d.Z.setState({ query: e });
         }, []),
         [h, S] = o.useState(!1);
     return (o.useEffect(() => {
@@ -76,9 +76,9 @@ function S(e) {
                 });
         };
         return (
-            f.S.subscribe(j.CkL.SETTINGS_TRIGGER_LOGOUT, e),
+            b.S.subscribe(j.CkL.SETTINGS_TRIGGER_LOGOUT, e),
             () => {
-                f.S.unsubscribe(j.CkL.SETTINGS_TRIGGER_LOGOUT, e);
+                b.S.unsubscribe(j.CkL.SETTINGS_TRIGGER_LOGOUT, e);
             }
         );
     }, []),
@@ -120,9 +120,9 @@ function S(e) {
                           null != t &&
                               (x({
                                   destinationPanel: t,
-                                  originPanel: d.current,
+                                  originPanel: f.current,
                               }),
-                              (d.current = t));
+                              (f.current = t));
                       },
                       target: t,
                       defaultTarget: y.n.ACCOUNT_PANEL,

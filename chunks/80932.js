@@ -1,5 +1,5 @@
 n.d(t, {
-    $K: () => C,
+    $K: () => A,
     OQ: () => O,
     RE: () => S,
     Xe: () => N,
@@ -138,7 +138,7 @@ function T(e) {
         .filter(m.lm);
     return [...(0, d.Z)(t).keys()];
 }
-function A(e) {
+function C(e) {
     var t, n, r;
     return null == e
         ? null
@@ -147,8 +147,8 @@ function A(e) {
           ? r
           : e.name;
 }
-function C(e) {
-    let t = A(e);
+function A(e) {
+    let t = C(e);
     null != t &&
         p.DZ.updateAsync(
             "favoriteEmojis",
@@ -164,7 +164,7 @@ function C(e) {
         );
 }
 function N(e) {
-    let t = A(e);
+    let t = C(e);
     null != t &&
         p.DZ.updateAsync(
             "favoriteEmojis",

@@ -41,8 +41,8 @@ let b = "GameStoreReportedGames",
     S = {},
     I = {},
     T = null != (i = s.K.get(b)) ? i : {},
-    A = "",
-    C = null,
+    C = "",
+    A = null,
     N = !1,
     P = null,
     R = [],
@@ -100,8 +100,8 @@ function k() {
 }
 function U(e) {
     let { games: t, etag: n } = e;
-    for (let e of (null != n && A !== n && (v.clear(), (S = {}), (I = {}), (A = n)), t)) L(w(e));
-    (r = void 0), (C = Date.now()), (N = !0);
+    for (let e of (null != n && C !== n && (v.clear(), (S = {}), (I = {}), (C = n)), t)) L(w(e));
+    (r = void 0), (A = Date.now()), (N = !0);
 }
 function G(e) {
     let { executables: t, patterns: n } = e;
@@ -111,13 +111,13 @@ class Z extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
         null != e &&
-            (null != e.detectableGamesEtag && (A = e.detectableGamesEtag),
+            (null != e.detectableGamesEtag && (C = e.detectableGamesEtag),
             null == (t = e.detectableGames) || t.forEach((e) => L(e)));
     }
     getState() {
         return (0, m.isDesktop)()
             ? {
-                  detectableGamesEtag: A,
+                  detectableGamesEtag: C,
                   detectableGames: v.values(),
               }
             : {
@@ -164,10 +164,10 @@ class Z extends (a = o.ZP.PersistedStore) {
         return !0 === r;
     }
     get detectableGamesEtag() {
-        return A;
+        return C;
     }
     get lastFetched() {
-        return C;
+        return A;
     }
     get hasAttemptedFetch() {
         return N;
@@ -176,7 +176,7 @@ class Z extends (a = o.ZP.PersistedStore) {
         return O;
     }
     canFetchDetectableGames() {
-        return !0 !== r && (null == C || Date.now() >= C + O);
+        return !0 !== r && (null == A || Date.now() >= A + O);
     }
     canFetchExecutableBlocklist() {
         return null == P || Date.now() >= P + O;

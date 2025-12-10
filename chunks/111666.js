@@ -1,7 +1,7 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(205120),
+    l = n(467721),
     a = n(442837),
     s = n(481060),
     o = n(570140),
@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(665149),
     p = n(670188),
     f = n(592125),
-    h = n(158776),
-    g = n(699516),
+    g = n(158776),
+    h = n(699516),
     m = n(594174),
     _ = n(482798),
     b = n(167762),
@@ -64,7 +64,7 @@ function C(e, t) {
 }
 function S(e) {
     let { className: t } = e,
-        n = (0, a.e7)([g.Z], () => g.Z.getPendingCount() > 0),
+        n = (0, a.e7)([h.Z], () => h.Z.getPendingCount() > 0),
         _ = (0, s.dQu)(s.TVs.modules.chat.INPUT_ICON_SIZE),
         S = (function () {
             let [e, t] = i.useState(null),
@@ -83,8 +83,8 @@ function S(e) {
                                 0 === Object.keys(r.current[e]).length && delete r.current[e];
                         },
                         i = (n, i, a) => {
-                            var s, o, c, u, d, p, h, _, b;
-                            if (!g.Z.isFriend(n)) return !1;
+                            var s, o, c, u, d, p, g, _, b;
+                            if (!h.Z.isFriend(n)) return !1;
                             let E = m.default.getUser(n);
                             if (null == E) return !1;
                             let v = !1,
@@ -109,7 +109,7 @@ function S(e) {
                                                   .concat(null != (u = i.name) ? u : "", "-")
                                                   .concat(null != (d = i.state) ? d : "", "-")
                                                   .concat(null != (p = i.details) ? p : "")
-                                            : "".concat(t, "-").concat(null != (h = i.name) ? h : "");
+                                            : "".concat(t, "-").concat(null != (g = i.name) ? g : "");
                                     (null == (c = r.current[n]) ? void 0 : c.presence) !== l &&
                                         ((v = !0),
                                         e(n, "presence", l),
@@ -151,7 +151,7 @@ function S(e) {
                         a = (e) => {
                             for (let t of e.updates) {
                                 let e = t.user.id,
-                                    n = h.Z.getPrimaryActivity(e);
+                                    n = g.Z.getPrimaryActivity(e);
                                 if (i(e, n)) break;
                             }
                         },

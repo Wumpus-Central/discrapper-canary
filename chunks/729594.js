@@ -89,20 +89,20 @@ function O(e, t) {
         I && !(v && m[v]) && ((y = y.substr(2)), (this.slashes = !0));
     }
     if (!m[v] && (I || (v && !h[v]))) {
-        for (var T, A, C = -1, N = 0; N < u.length; N++) {
+        for (var T, C, A = -1, N = 0; N < u.length; N++) {
             var P = y.indexOf(u[N]);
-            -1 !== P && (-1 === C || P < C) && (C = P);
+            -1 !== P && (-1 === A || P < A) && (A = P);
         }
-        -1 !== (A = -1 === C ? y.lastIndexOf("@") : y.lastIndexOf("@", C)) &&
-            ((T = y.slice(0, A)), (y = y.slice(A + 1)), (this.auth = decodeURIComponent(T))),
-            (C = -1);
+        -1 !== (C = -1 === A ? y.lastIndexOf("@") : y.lastIndexOf("@", A)) &&
+            ((T = y.slice(0, C)), (y = y.slice(C + 1)), (this.auth = decodeURIComponent(T))),
+            (A = -1);
         for (var N = 0; N < c.length; N++) {
             var P = y.indexOf(c[N]);
-            -1 !== P && (-1 === C || P < C) && (C = P);
+            -1 !== P && (-1 === A || P < A) && (A = P);
         }
-        -1 === C && (C = y.length),
-            (this.host = y.slice(0, C)),
-            (y = y.slice(C)),
+        -1 === A && (A = y.length),
+            (this.host = y.slice(0, A)),
+            (y = y.slice(A)),
             this.parseHost(),
             (this.hostname = this.hostname || "");
         var R = "[" === this.hostname[0] && "]" === this.hostname[this.hostname.length - 1];
@@ -299,16 +299,16 @@ function O(e, t) {
             );
         for (
             var T = v.slice(-1)[0],
-                A = ((n.host || e.host || v.length > 1) && ("." === T || ".." === T)) || "" === T,
-                C = 0,
+                C = ((n.host || e.host || v.length > 1) && ("." === T || ".." === T)) || "" === T,
+                A = 0,
                 N = v.length;
             N >= 0;
             N--
         )
-            "." === (T = v[N]) ? v.splice(N, 1) : ".." === T ? (v.splice(N, 1), C++) : C && (v.splice(N, 1), C--);
-        if (!y && !O) for (; C--; ) v.unshift("..");
+            "." === (T = v[N]) ? v.splice(N, 1) : ".." === T ? (v.splice(N, 1), A++) : A && (v.splice(N, 1), A--);
+        if (!y && !O) for (; A--; ) v.unshift("..");
         y && "" !== v[0] && (!v[0] || "/" !== v[0].charAt(0)) && v.unshift(""),
-            A && "/" !== v.join("/").substr(-1) && v.push("");
+            C && "/" !== v.join("/").substr(-1) && v.push("");
         var P = "" === v[0] || (v[0] && "/" === v[0].charAt(0));
         if (S) {
             (n.hostname = P ? "" : v.length ? v.shift() : ""), (n.host = n.hostname);

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(710220),
     I = n(164662),
     T = n(638631),
-    A = n(254139),
-    C = n(388032),
+    C = n(254139),
+    A = n(388032),
     N = n(350169);
 let P = (e, t) => {
         let { className: n, subscriptionTier: i, isEligibleForBogoPromotion: a, offerExpiresAt: P } = e,
@@ -48,7 +48,7 @@ let P = (e, t) => {
                     children: (0, r.jsxs)("div", {
                         className: N.contentContainer,
                         children: [
-                            (0, r.jsx)(A.Z, { containerVisibilityPercentage: k }),
+                            (0, r.jsx)(C.Z, { containerVisibilityPercentage: k }),
                             D &&
                                 (null != P
                                     ? (0, r.jsx)(y.Z, {
@@ -65,7 +65,7 @@ let P = (e, t) => {
                                     variant: "display-md",
                                     color: "header-primary",
                                     className: N.header,
-                                    children: C.intl.string(C.t.YCZldK),
+                                    children: A.intl.string(A.t.YCZldK),
                                 }),
                             }),
                             (0, r.jsxs)("div", {
@@ -110,7 +110,7 @@ let P = (e, t) => {
                                         children: (0, r.jsx)(c.Text, {
                                             color: "text-muted",
                                             variant: "text-xs/medium",
-                                            children: C.intl.format(C.t.kt9wxs, { cheapestMonthlyPrice: w }),
+                                            children: A.intl.format(A.t.kt9wxs, { cheapestMonthlyPrice: w }),
                                         }),
                                     }),
                                     null != Z &&

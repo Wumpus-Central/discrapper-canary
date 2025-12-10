@@ -359,7 +359,7 @@ function ee(e) {
 }
 function et(e) {
     (0, s.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e("97012"), n.e("53145")]).then(n.bind(n, 627080));
+        let { default: t } = await Promise.all([n.e("10695"), n.e("53145")]).then(n.bind(n, 627080));
         return (n) =>
             (0, r.jsx)(
                 t,

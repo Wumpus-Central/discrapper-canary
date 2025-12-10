@@ -1,27 +1,27 @@
 a.d(t, {
-    fw: () => r,
-    qy: () => c,
-    sJ: () => o,
+    fw: () => A,
+    qy: () => r,
+    sJ: () => u,
 });
 var n,
-    s,
-    l = a(544891),
-    i = a(981631),
-    r =
+    l,
+    i = a(544891),
+    s = a(981631),
+    A =
         (((n = {}).HCAPTCHA_RQDATA = "hCaptchaRqdata"),
         (n.SMITE_RQDATA = "SmiteRqdata"),
         (n.RECAPTCHA = "Recaptcha"),
         (n.RECAPTCHA_ENTERPRISE = "RecaptchaEnterprise"),
         n),
-    o =
-        (((s = {})[(s.EASY = 1)] = "EASY"),
-        (s[(s.MODERATE = 2)] = "MODERATE"),
-        (s[(s.DIFFICULT = 3)] = "DIFFICULT"),
-        (s[(s.VERY_DIFFICULT = 4)] = "VERY_DIFFICULT"),
-        s);
-async function c(e, t) {
-    await l.tn.post({
-        url: i.ANM.CAPTCHA_TEST,
+    u =
+        (((l = {})[(l.EASY = 1)] = "EASY"),
+        (l[(l.MODERATE = 2)] = "MODERATE"),
+        (l[(l.DIFFICULT = 3)] = "DIFFICULT"),
+        (l[(l.VERY_DIFFICULT = 4)] = "VERY_DIFFICULT"),
+        l);
+async function r(e, t) {
+    await i.tn.post({
+        url: s.ANM.CAPTCHA_TEST,
         body: {
             decider: e,
             options: t,

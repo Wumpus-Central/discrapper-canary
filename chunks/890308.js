@@ -29,15 +29,15 @@
         function T(e) {
             throw RangeError(O[e]);
         }
-        function A(e, t) {
+        function C(e, t) {
             for (var n = e.length, r = []; n--; ) r[n] = t(e[n]);
             return r;
         }
-        function C(e, t) {
+        function A(e, t) {
             var n = e.split("@"),
                 r = "";
             return (
-                n.length > 1 && ((r = n[0] + "@"), (e = n[1])), r + A((e = e.replace(y, ".")).split("."), t).join(".")
+                n.length > 1 && ((r = n[0] + "@"), (e = n[1])), r + C((e = e.replace(y, ".")).split("."), t).join(".")
             );
         }
         function N(e) {
@@ -50,7 +50,7 @@
             return r;
         }
         function P(e) {
-            return A(e, function (e) {
+            return C(e, function (e) {
                 var t = "";
                 return (
                     e > 65535 && ((e -= 65536), (t += I(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))),
@@ -121,27 +121,27 @@
                 y,
                 O,
                 v,
-                A = [];
-            for (o = 0, b = (e = N(e)).length, t = h, n = 0, a = m; o < b; ++o) (E = e[o]) < 128 && A.push(I(E));
-            for (r = i = A.length, i && A.push(g); r < b; ) {
+                C = [];
+            for (o = 0, b = (e = N(e)).length, t = h, n = 0, a = m; o < b; ++o) (E = e[o]) < 128 && C.push(I(E));
+            for (r = i = C.length, i && C.push(g); r < b; ) {
                 for (s = c, o = 0; o < b; ++o) (E = e[o]) >= t && E < s && (s = E);
                 for (s - t > S((c - n) / (y = r + 1)) && T("overflow"), n += (s - t) * y, t = s, o = 0; o < b; ++o)
                     if (((E = e[o]) < t && ++n > c && T("overflow"), E == t)) {
                         for (l = n, p = u; !(l < (_ = p <= a ? d : p >= a + f ? f : p - a)); p += u)
-                            (v = l - _), (O = u - _), A.push(I(D(_ + (v % O), 0))), (l = S(v / O));
-                        A.push(I(D(l, 0))), (a = w(n, y, r == i)), (n = 0), ++r;
+                            (v = l - _), (O = u - _), C.push(I(D(_ + (v % O), 0))), (l = S(v / O));
+                        C.push(I(D(l, 0))), (a = w(n, y, r == i)), (n = 0), ++r;
                     }
                 ++n, ++t;
             }
-            return A.join("");
+            return C.join("");
         }
         function j(e) {
-            return C(e, function (e) {
+            return A(e, function (e) {
                 return E.test(e) ? x(e.slice(4).toLowerCase()) : e;
             });
         }
         function M(e) {
-            return C(e, function (e) {
+            return A(e, function (e) {
                 return b.test(e) ? "xn--" + L(e) : e;
             });
         }

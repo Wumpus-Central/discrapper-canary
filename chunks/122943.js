@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => C });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -80,8 +80,8 @@ function I(e) {
             showChannelName: I = !1,
         } = e,
         T = (0, s.vjg)(s.Skl.ONLINE),
-        A = (0, u.ZP)(t),
-        C = t.isDM() || t.isGroupDM(),
+        C = (0, u.ZP)(t),
+        A = t.isDM() || t.isGroupDM(),
         { enableTopNavButton: N } = (0, d.Cq)({ location: "VoiceActivityStatus" }),
         P = !N && I,
         { analyticsLocations: R } = (0, l.ZP)(),
@@ -93,7 +93,7 @@ function I(e) {
             });
         }, [R, t.id]),
         w = () =>
-            y || C
+            y || A
                 ? (0, r.jsx)(p.Z, {
                       size: "custom",
                       color: T,
@@ -102,7 +102,7 @@ function I(e) {
                   })
                 : (0, r.jsx)(s.aML, {
                       "data-migration-pending": !0,
-                      text: A,
+                      text: C,
                       "aria-label": (0, c.ZP)({ channel: t }),
                       delay: g.X,
                       onTooltipShow: D,
@@ -119,8 +119,8 @@ function I(e) {
                   }),
         x = () =>
             N
-                ? A
-                : C
+                ? C
+                : A
                   ? E.intl.string(E.t["9FaEzi"])
                   : t.isGuildStageVoice()
                     ? E.intl.string(E.t.QygGCN)
@@ -134,7 +134,7 @@ function I(e) {
                     className: a,
                     canTruncate: v,
                     hideTooltip: y,
-                    children: [x(), P && null != A && " (".concat(A, ")")],
+                    children: [x(), P && null != C && " (".concat(C, ")")],
                 }),
         ],
     });
@@ -181,7 +181,7 @@ function T(e) {
         hideText: l,
     });
 }
-function A(e) {
+function C(e) {
     return (0, f.b)({ location: "VoiceActivityStatusExperimentWrapper" })
         ? (0, r.jsx)(T, O({}, e))
         : (0, r.jsx)(I, O({}, e));

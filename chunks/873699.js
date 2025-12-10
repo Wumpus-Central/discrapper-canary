@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
-    a = n(481060),
-    o = n(668781),
+    o = n(481060),
+    a = n(668781),
     s = n(79390),
     c = n(222677),
     u = n(665906),
@@ -13,7 +13,7 @@ var r = n(54381),
     b = n(981631),
     p = n(388032);
 function m(e, t) {
-    let { reducedMotion: n } = i.useContext(a.Sfi),
+    let { reducedMotion: n } = i.useContext(o.Sfi),
         f = (0, u.$R)(t),
         g = (0, l.e7)([d.Z], () => d.Z.can(b.Plq.MANAGE_MESSAGES, t) && f, [t, f]),
         m = e.reactions.reduce((e, t) => {
@@ -25,21 +25,21 @@ function m(e, t) {
         }, []);
     return !g || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, s.eQ)(e))
         ? null
-        : (0, r.jsx)(a.sNh, {
+        : (0, r.jsx)(o.sNh, {
               id: "remove-emoji-reactions",
               label: p.intl.string(p.t["zx/e4P"]),
               color: "danger",
               children: m.map((i) => {
                   var l, s;
                   return (0, r.jsx)(
-                      a.sNh,
+                      o.sNh,
                       {
                           id: "remove-emoji-reactions-".concat(null != (l = i.name) ? l : i.id),
                           label: null == i.id ? i.name : ":".concat(i.name, ":"),
                           action: (n) => {
                               n.shiftKey
                                   ? (0, c.$E)(t.id, e.id, i)
-                                  : o.Z.show({
+                                  : a.Z.show({
                                         title: p.intl.string(p.t["73GqTz"]),
                                         body: p.intl.string(p.t.dmy5bn),
                                         confirmText: p.intl.string(p.t.p89ACt),
@@ -108,14 +108,14 @@ function m(e, t) {
 }
 function O(e) {
     var t;
-    let { emoji: n, reducedMotionEnabled: i, className: l = "", isFocused: a = !1 } = e;
+    let { emoji: n, reducedMotionEnabled: i, className: l = "", isFocused: o = !1 } = e;
     return (0, r.jsx)("img", {
         className: l,
         src:
             null != n.id
                 ? f.ZP.getEmojiURL({
                       id: n.id,
-                      animated: n.animated && (!i || a),
+                      animated: n.animated && (!i || o),
                       size: 18,
                   })
                 : g.ZP.getURL(null != (t = n.name) ? t : ""),

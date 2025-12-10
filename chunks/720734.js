@@ -48,8 +48,8 @@ var a = n(54381),
     H = n(812055),
     W = n(243778),
     z = n(594928),
-    K = n(386725),
-    q = n(821795),
+    q = n(386725),
+    K = n(821795),
     Q = n(287647),
     Y = n(892567),
     X = n(258609),
@@ -102,8 +102,8 @@ var a = n(54381),
     eH = n(885110),
     eW = n(606304),
     ez = n(246946),
-    eK = n(594174),
-    eq = n(78839),
+    eq = n(594174),
+    eK = n(78839),
     eQ = n(626135),
     eY = n(768581),
     eX = n(572004),
@@ -201,7 +201,7 @@ function tx(e) {
             avatarDecoration: g,
             size: (0, I.y9)(f.EFr.SIZE_32),
         }),
-        S = (0, K.Z)(),
+        S = (0, q.Z)(),
         {
             updateOpenPopoutRef: E,
             highlightBadge: O,
@@ -727,7 +727,7 @@ class tf extends r.PureComponent {
                                       children: (0, a.jsx)(Y.Z, {
                                           userName: n,
                                           displayNameStyles: e,
-                                          effectDisplayType: this.state.hovered ? q.F.ANIMATED : q.F.STATIC,
+                                          effectDisplayType: this.state.hovered ? K.F.ANIMATED : K.F.STATIC,
                                           loop: !0,
                                           inProfile: !0,
                                       }),
@@ -851,7 +851,7 @@ function tb(e) {
 }
 function tv() {
     var e;
-    let t = (0, d.e7)([eK.default], () => eK.default.getCurrentUser()),
+    let t = (0, d.e7)([eq.default], () => eq.default.getCurrentUser()),
         n = (0, d.e7)([eL.default], () => eL.default.getId()),
         r = e7.K.useConfig({ location: "AccountConnected" }).transitionAccountPanel,
         {
@@ -890,7 +890,7 @@ function tv() {
                     : e.discord_web
                 : null;
         }),
-        O = (0, d.e7)([eq.Z], () => eq.Z.getPremiumTypeSubscription()),
+        O = (0, d.e7)([eK.Z], () => eK.Z.getPremiumTypeSubscription()),
         I = (0, d.e7)([eF.Z], () => eF.Z.getSpeakingWhileMuted()),
         D = (0, d.e7)([A.Z], () => A.Z.isFullscreenInContext()),
         Z = (0, d.e7)([eB.Z], () => eB.Z.hasLayers()),
@@ -902,8 +902,8 @@ function tv() {
         G = (0, P.R)(t, null != B ? B : void 0),
         V = (0, w.Z)(r ? G : F),
         W = e4.ZP.useName(null != B ? B : void 0, null, t),
-        K = null != (e = e8.ZP.useName(t)) ? e : "",
-        { voiceActivityStatusEnabled: q } = (0, y.U)({ location: "Account" }),
+        q = null != (e = e8.ZP.useName(t)) ? e : "",
+        { voiceActivityStatusEnabled: K } = (0, y.U)({ location: "Account" }),
         [Q, Y] = (0, $.G)(null != B ? B : null),
         [J, ee] = (0, H.b)(),
         et = z.JH.useExperiment({ location: "Account" }).enabled,
@@ -915,7 +915,7 @@ function tv() {
             guildId: r && null != B ? B : void 0,
         }),
         { isQuestBarEmpty: eo, hasLoadedQuestBar: ed } = (0, ep.Ws)({ location: tr.dr.CONFLICT_CHECKS }),
-        em = (0, d.e7)([eh.Z, eK.default, eU.Z], () => {
+        em = (0, d.e7)([eh.Z, eq.default, eU.Z], () => {
             let e,
                 t = eh.Z.getSyncingWith(),
                 n = eh.Z.getActivity(),
@@ -926,7 +926,7 @@ function tv() {
             ) {
                 var r;
                 a = o()(Array.from(null != (r = eU.Z.getParty(e)) ? r : []))
-                    .map((e) => eK.default.getUser(e))
+                    .map((e) => eq.default.getUser(e))
                     .filter(e1.lm)
                     .value();
             }
@@ -948,7 +948,7 @@ function tv() {
         value: ei,
         children: (0, a.jsx)(tf, {
             currentUser: t,
-            username: r ? W : K,
+            username: r ? W : q,
             transitionAccountPanel: r,
             activities: i,
             applicationStream: c,
@@ -975,7 +975,7 @@ function tv() {
             webBuildOverride: E,
             awaitingRemote: U,
             isEligibleForPomelo: M,
-            voiceActivityStatusEnabled: q,
+            voiceActivityStatusEnabled: K,
             nameplate: el,
             selectedGuildId: B,
             avatarDecoration: V,
@@ -1099,10 +1099,10 @@ function t_(e) {
         { Component: B, events: F, play: V } = P,
         H = i || s ? f.v0G : B,
         z = (0, Z.Z)(n, i, s, o),
-        K = R ? tl.intl.string(tl.t.ARRV6m) : null;
+        q = R ? tl.intl.string(tl.t.ARRV6m) : null;
     t = _
         ? tl.intl.string(tl.t["29gnR4"])
-        : null != K
+        : null != q
           ? (0, a.jsxs)("div", {
                 className: ts.tooltipWithSubtext,
                 children: [
@@ -1114,12 +1114,12 @@ function t_(e) {
                     (0, a.jsx)(f.Text, {
                         variant: "text-xs/medium",
                         color: "text-feedback-warning",
-                        children: K,
+                        children: q,
                     }),
                 ],
             })
           : z;
-    let { analyticsLocations: q } = (0, N.ZP)(T.Z.AUDIO_INPUT_BUTTON),
+    let { analyticsLocations: K } = (0, N.ZP)(T.Z.AUDIO_INPUT_BUTTON),
         Q = (0, eS.Hu)({
             location: T.Z.AUDIO_INPUT_BUTTON,
             autoTrackExposure: !0,
@@ -1131,9 +1131,9 @@ function t_(e) {
     r.useEffect(() => () => V(), [S, V]);
     let X = r.useCallback(
             (e) => {
-                b(e, q);
+                b(e, K);
             },
-            [b, q],
+            [b, K],
         ),
         [J, $] = r.useState(!1),
         ee = r.useCallback((e) => {
@@ -1176,7 +1176,7 @@ function t_(e) {
         { enabledInputProfiles: eu } = (0, ej.G)({ location: "MicrophoneButton" });
     return ed
         ? (0, a.jsx)(N.Gt, {
-              value: q,
+              value: K,
               children: (0, a.jsx)(f.yRy, {
                   targetElementRef: E,
                   renderPopout: (e) => {
@@ -1184,7 +1184,7 @@ function t_(e) {
                       return (
                           C(),
                           (0, a.jsx)(N.Gt, {
-                              value: q,
+                              value: K,
                               children: ed
                                   ? (0, a.jsx)(M.Z, {
                                         onInteraction: (0, G.u)("AudioDeviceMenu", T.Z.ACCOUNT),
@@ -1288,7 +1288,7 @@ function t_(e) {
               }),
           })
         : (0, a.jsx)(N.Gt, {
-              value: q,
+              value: K,
               children: (0, a.jsxs)("div", {
                   ref: E,
                   className: l()(ts.micButtonParent, { [ts.hasColorGlow]: el }),

@@ -22,7 +22,7 @@ var r = n(54381),
     S = n(388032),
     I = n(417788),
     T = n(154326);
-function A(e) {
+function C(e) {
     let { guild: t, checkpointGuild: n, primaryColor: i } = e,
         a = (0, y.gl)(),
         { unit: s, duration: l } = (0, m.Bi)(n.numVoiceMinutes);
@@ -99,7 +99,7 @@ function A(e) {
         t.id,
     );
 }
-function C(e) {
+function A(e) {
     let { guild: t, rank: n, primaryColor: i } = e,
         a = (0, y.gl)();
     return (0, r.jsx)(
@@ -204,7 +204,7 @@ function N() {
                     ],
                 }),
                 null != o &&
-                    (0, r.jsx)(A, {
+                    (0, r.jsx)(C, {
                         guild: o,
                         checkpointGuild: a[0],
                         primaryColor: t,
@@ -216,7 +216,7 @@ function N() {
                         return 0 === n
                             ? null
                             : (0, r.jsx)(
-                                  C,
+                                  A,
                                   {
                                       guild: i,
                                       rank: n + 1,

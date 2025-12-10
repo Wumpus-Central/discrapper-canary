@@ -4,7 +4,7 @@ n.d(t, {
     iD: () => v,
     mL: () => I,
     og: () => N,
-    zS: () => C,
+    zS: () => A,
 }),
     n(388685);
 var r = n(570140),
@@ -119,7 +119,7 @@ function T(e) {
         null != t && (0, a.uL)(h.Z5c.CHANNEL(e, t.id));
     }
 }
-function A(e, t) {
+function C(e, t) {
     let n = [...s.ZP.getSelectableChannelIds(e), ...s.ZP.getVocalChannelIds(e)],
         r = Array.from(t);
     s.ZP.addConditionalChangeListener(() => {
@@ -127,10 +127,10 @@ function A(e, t) {
         if (null == t) return !1;
         if (r.some((e) => !t.roles.includes(e))) return !0;
         let i = [...s.ZP.getSelectableChannelIds(e), ...s.ZP.getVocalChannelIds(e)].filter((e) => !n.includes(e));
-        return i.length > 0 && C(e, i, []), !1;
+        return i.length > 0 && A(e, i, []), !1;
     });
 }
-function C(e, t, n) {
+function A(e, t, n) {
     let r = new Set(f.ZP.getOptedInChannels(e));
     t.forEach((e) => r.add(e)),
         n.forEach((e) => r.delete(e)),
@@ -140,7 +140,7 @@ function C(e, t, n) {
         });
 }
 function N(e, t) {
-    A(e, t);
+    C(e, t);
     let n = {};
     for (let r of c.Z.getManyRoles(e, t)) n[r.id] = r;
     S(e, {

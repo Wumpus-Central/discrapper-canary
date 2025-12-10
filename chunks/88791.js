@@ -1,15 +1,15 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(79390),
-    a = n(388032);
-function o(e) {
+    o = n(388032);
+function a(e) {
     return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, l.eQ)(e))
         ? null
         : (0, r.jsx)(i.sNh, {
               id: "reactions",
-              label: a.intl.string(a.t.wikODq),
+              label: o.intl.string(o.t.wikODq),
               icon: i.EO4,
               action: () =>
                   (0, i.ZDy)(async () => {

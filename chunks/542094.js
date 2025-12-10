@@ -1,8 +1,8 @@
 n.d(t, {
     JS: () => S,
-    Qv: () => C,
+    Qv: () => A,
     ZP: () => T,
-    fD: () => A,
+    fD: () => C,
     w1: () => N,
 }),
     n(997841),
@@ -64,7 +64,7 @@ function T(e) {
             let { embeddedActivity: t } = e;
             return p.id === t.applicationId;
         }),
-        P = C({
+        P = A({
             context: n,
             applicationId: p.id,
         }),
@@ -78,7 +78,7 @@ function T(e) {
             commandOrigin: d,
             source: f,
         }),
-        D = A(p, t.activity);
+        D = C(p, t.activity);
     return {
         imageBackground: v,
         videoUrl: S,
@@ -89,14 +89,14 @@ function T(e) {
         staffReleasePhase: D,
     };
 }
-function A(e, t) {
+function C(e, t) {
     var n;
     let i = null != (n = e.flags) ? n : 0;
     if (!((0, r.yE)(i, v.udG.EMBEDDED_RELEASED) || (0, r.yE)(i, v.udG.EMBEDDED_FIRST_PARTY))) return;
     let a = t.client_platform_config[(0, h.Z)((0, u.getOS)())].release_phase;
     return O.eB.includes(a) ? a.replace("_", " ").replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
-function C(e) {
+function A(e) {
     let { context: t, applicationId: n, fetchesApplication: r = !0 } = e,
         i = 0,
         a = "channel" === t.type ? t.channel : void 0,
@@ -130,12 +130,12 @@ function N(e) {
             onConfirmActivityLaunchChecksAlertOpen: S,
         } = e,
         I = null != (t = null == n ? void 0 : n.id) ? t : "",
-        T = C({
+        T = A({
             context: a,
             applicationId: I,
             fetchesApplication: y,
         }),
-        { analyticsLocations: A } = (0, o.ZP)(),
+        { analyticsLocations: C } = (0, o.ZP)(),
         N = (0, E.Z)(),
         P = (0, c.A)(n);
     if (null == n)
@@ -165,7 +165,7 @@ function N(e) {
                     targetApplicationId: I,
                     locationObject: s,
                     channelId: e,
-                    analyticsLocations: A,
+                    analyticsLocations: C,
                     componentId: m,
                     commandOrigin: h,
                     sectionName: g,
@@ -182,7 +182,7 @@ function N(e) {
                         applicationId: I,
                         activityChannelId: "channel" === a.type ? a.channel.id : void 0,
                         locationObject: s,
-                        analyticsLocations: A,
+                        analyticsLocations: C,
                         componentId: m,
                         sectionName: g,
                         source: b,

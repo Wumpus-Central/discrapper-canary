@@ -43,8 +43,8 @@ var a = n(54381),
     H = n(5192),
     W = n(74538),
     z = n(7093),
-    K = n(175015),
-    q = n(474376),
+    q = n(175015),
+    K = n(474376),
     Q = n(905953),
     Y = n(431282),
     X = n(213928),
@@ -113,7 +113,7 @@ function eo(e) {
         eE = (0, g.p)(),
         eO = B.Sb.useSetting(),
         eT = (0, $.I)(e_),
-        eN = (0, q.g)(n),
+        eN = (0, K.g)(n),
         eP = (0, v.Z)({ analyticsLocations: ex }),
         ew = (0, W.I5)(t),
         eI = (0, h.p)({ location: "UserProfileAccountPopout" }),
@@ -149,11 +149,11 @@ function eo(e) {
         ez = r.useCallback(() => {
             eH(en.L.USER_DISMISS), n();
         }, [eH, n]),
-        eK = r.useCallback(() => {
+        eq = r.useCallback(() => {
             (em && null != eu) || (eP(), ez());
         }, [eP, ez, em, eu]),
-        eq = em && null != eu,
-        eQ = (0, K.K)(eu, ex, eW, n, ez),
+        eK = em && null != eu,
+        eQ = (0, q.K)(eu, ex, eW, n, ez),
         eY = (0, y.k)({ location: "UserProfileAccountPopout" });
     return (0, a.jsx)(m.Gt, {
         value: ex,
@@ -272,8 +272,8 @@ function eo(e) {
                                                                 ? er.intl.string(er.t.Ip9nBS)
                                                                 : er.intl.string(er.t.s5vZlQ),
                                                             icon: c.vdY,
-                                                            onClick: eK,
-                                                            renderSubmenu: eq
+                                                            onClick: eq,
+                                                            renderSubmenu: eK
                                                                 ? (e) => {
                                                                       let { closePopout: t } = e;
                                                                       return (0, a.jsx)(Y.gp, {
@@ -526,7 +526,7 @@ function eo(e) {
                                 }),
                         ],
                     }),
-                    !eq && eY
+                    !eK && eY
                         ? (0, a.jsx)(Q.Z, {
                               targetElementRef: eA,
                               onClose: n,

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(63063),
     I = n(74538),
     T = n(18438),
-    A = n(778825),
-    C = n(856607),
+    C = n(778825),
+    A = n(856607),
     N = n(594496),
     P = n(856768),
     R = n(981631),
@@ -119,7 +119,7 @@ function Z(e) {
         U = (0, s.e7)([y.ZP], () => (null != a ? y.ZP.getMember(a.id, j.id) : null)),
         Z = (0, s.e7)([b.Z], () => !b.Z.isFetchingProfile(j.id, null == a ? void 0 : a.id)),
         B = (0, s.e7)([O.Z], () => O.Z.hidePersonalInformation),
-        F = (0, s.cj)([A.Z], () => M(L({}, A.Z.getAllPending()), { source: A.Z.getSource() })),
+        F = (0, s.cj)([C.Z], () => M(L({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
         { source: V, pendingAvatar: H, pendingNameplate: Y } = F,
         W = k(F, ["source", "pendingAvatar", "pendingNameplate"]),
         K = (0, E.SD)({
@@ -197,7 +197,7 @@ function Z(e) {
                                   }),
                               ],
                           })
-                        : (0, r.jsx)(C.Z, {}),
+                        : (0, r.jsx)(A.Z, {}),
                 ],
             })
           : (0, r.jsx)(l.$jN, {});

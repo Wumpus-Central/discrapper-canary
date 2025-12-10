@@ -21,8 +21,8 @@ var r,
     S = 8,
     I = 1,
     T = 2,
-    A = 3,
-    C = 4,
+    C = 3,
+    A = 4,
     N = 5,
     P = 6,
     R = 7,
@@ -189,8 +189,8 @@ function e_(e, t) {
         eS,
         eI,
         eT = 0,
-        eA = new a.Buf8(4),
-        eC = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
+        eC = new a.Buf8(4),
+        eA = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
     if (!e || !e.state || !e.output || (!e.input && 0 !== e.avail_in)) return b;
     (n = e.state).mode === j && (n.mode = M),
         (en = e.next_out),
@@ -217,9 +217,9 @@ function e_(e, t) {
                 }
                 if (2 & n.wrap && 35615 === eo) {
                     (n.check = 0),
-                        (eA[0] = 255 & eo),
-                        (eA[1] = (eo >>> 8) & 255),
-                        (n.check = s(n.check, eA, 2, 0)),
+                        (eC[0] = 255 & eo),
+                        (eC[1] = (eo >>> 8) & 255),
+                        (n.check = s(n.check, eC, 2, 0)),
                         (eo = 0),
                         (es = 0),
                         (n.mode = T);
@@ -256,32 +256,32 @@ function e_(e, t) {
                     break;
                 }
                 n.head && (n.head.text = (eo >> 8) & 1),
-                    512 & n.flags && ((eA[0] = 255 & eo), (eA[1] = (eo >>> 8) & 255), (n.check = s(n.check, eA, 2, 0))),
+                    512 & n.flags && ((eC[0] = 255 & eo), (eC[1] = (eo >>> 8) & 255), (n.check = s(n.check, eC, 2, 0))),
                     (eo = 0),
                     (es = 0),
-                    (n.mode = A);
-            case A:
+                    (n.mode = C);
+            case C:
                 for (; es < 32; ) {
                     if (0 === er) break i;
                     er--, (eo += r[et++] << es), (es += 8);
                 }
                 n.head && (n.head.time = eo),
                     512 & n.flags &&
-                        ((eA[0] = 255 & eo),
-                        (eA[1] = (eo >>> 8) & 255),
-                        (eA[2] = (eo >>> 16) & 255),
-                        (eA[3] = (eo >>> 24) & 255),
-                        (n.check = s(n.check, eA, 4, 0))),
+                        ((eC[0] = 255 & eo),
+                        (eC[1] = (eo >>> 8) & 255),
+                        (eC[2] = (eo >>> 16) & 255),
+                        (eC[3] = (eo >>> 24) & 255),
+                        (n.check = s(n.check, eC, 4, 0))),
                     (eo = 0),
                     (es = 0),
-                    (n.mode = C);
-            case C:
+                    (n.mode = A);
+            case A:
                 for (; es < 16; ) {
                     if (0 === er) break i;
                     er--, (eo += r[et++] << es), (es += 8);
                 }
                 n.head && ((n.head.xflags = 255 & eo), (n.head.os = eo >> 8)),
-                    512 & n.flags && ((eA[0] = 255 & eo), (eA[1] = (eo >>> 8) & 255), (n.check = s(n.check, eA, 2, 0))),
+                    512 & n.flags && ((eC[0] = 255 & eo), (eC[1] = (eo >>> 8) & 255), (n.check = s(n.check, eC, 2, 0))),
                     (eo = 0),
                     (es = 0),
                     (n.mode = N);
@@ -294,7 +294,7 @@ function e_(e, t) {
                     (n.length = eo),
                         n.head && (n.head.extra_len = eo),
                         512 & n.flags &&
-                            ((eA[0] = 255 & eo), (eA[1] = (eo >>> 8) & 255), (n.check = s(n.check, eA, 2, 0))),
+                            ((eC[0] = 255 & eo), (eC[1] = (eo >>> 8) & 255), (n.check = s(n.check, eC, 2, 0))),
                         (eo = 0),
                         (es = 0);
                 } else n.head && (n.head.extra = null);
@@ -446,9 +446,9 @@ function e_(e, t) {
                         if (0 === er) break i;
                         er--, (eo += r[et++] << es), (es += 8);
                     }
-                    (n.lens[eC[n.have++]] = 7 & eo), (eo >>>= 3), (es -= 3);
+                    (n.lens[eA[n.have++]] = 7 & eo), (eo >>>= 3), (es -= 3);
                 }
-                for (; n.have < 19; ) n.lens[eC[n.have++]] = 0;
+                for (; n.have < 19; ) n.lens[eA[n.have++]] = 0;
                 if (
                     ((n.lencode = n.lendyn),
                     (n.lenbits = 7),

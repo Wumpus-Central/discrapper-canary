@@ -440,9 +440,9 @@
                                 }
                                 function n() {
                                     for (let e of (0 < I.length &&
-                                        (p.Mb(S.drawWidth(), S.drawHeight(), I, T, A),
+                                        (p.Mb(S.drawWidth(), S.drawHeight(), I, T, C),
                                         (I = []),
-                                        (A = T = 0),
+                                        (C = T = 0),
                                         S.reset(512, 512)),
                                     v)) {
                                         for (let t of e.H) t();
@@ -633,8 +633,8 @@
                                     S = null,
                                     I = [],
                                     T = 0,
-                                    A = 0;
-                                var C = (a.CanvasRenderer = s.extend("Renderer", {
+                                    C = 0;
+                                var A = (a.CanvasRenderer = s.extend("Renderer", {
                                     __construct: function (e) {
                                         this.__parent.__construct.call(this),
                                             (this.S = [1, 0, 0, 1, 0, 0]),
@@ -713,12 +713,12 @@
                                                 S || (S = new a.DynamicRectanizer(m)).reset(512, 512),
                                                 0 > (m = S.addRect(y, O)) &&
                                                     (n(), v.add(this), console.assert(0 <= (m = S.addRect(y, O))));
-                                            var C = 65535 & m,
+                                            var A = 65535 & m,
                                                 N = m >> 16;
                                             I.push({
                                                 ga: this.S.slice(this.S.length - 6),
                                                 image: t,
-                                                Ya: C,
+                                                Ya: A,
                                                 Za: N,
                                                 bc: u,
                                                 cc: d,
@@ -733,7 +733,7 @@
                                                 ub: (t.Ia << 1) | !!f,
                                             }),
                                                 (T += s.length),
-                                                (A += c.length);
+                                                (C += c.length);
                                             var P = this.B,
                                                 R = e(i);
                                             this.H.push(function () {
@@ -742,7 +742,7 @@
                                                     (P.globalCompositeOperation = R),
                                                     (P.globalAlpha = o);
                                                 let e = p.canvas();
-                                                e && P.drawImage(e, C, N, y, O, u, d, E, b), P.restore();
+                                                e && P.drawImage(e, A, N, y, O, u, d, E, b), P.restore();
                                             });
                                         }
                                     },
@@ -761,7 +761,7 @@
                                     },
                                 }));
                                 (a.makeRenderer = function (e) {
-                                    let t = new C(e),
+                                    let t = new A(e),
                                         n = t.B;
                                     return new Proxy(t, {
                                         get(e, r) {
@@ -907,8 +907,8 @@
                                 S,
                                 I,
                                 T,
-                                A,
                                 C,
+                                A,
                                 N,
                                 P,
                                 R,
@@ -917,9 +917,9 @@
                             function x() {
                                 var e = S.buffer;
                                 (a.HEAP8 = I = new Int8Array(e)),
-                                    (a.HEAP16 = A = new Int16Array(e)),
+                                    (a.HEAP16 = C = new Int16Array(e)),
                                     (a.HEAPU8 = T = new Uint8Array(e)),
-                                    (a.HEAPU16 = C = new Uint16Array(e)),
+                                    (a.HEAPU16 = A = new Uint16Array(e)),
                                     (a.HEAP32 = N = new Int32Array(e)),
                                     (a.HEAPU32 = P = new Uint32Array(e)),
                                     (a.HEAPF32 = R = new Float32Array(e)),
@@ -1106,7 +1106,7 @@
                                                     nT(a, r, i);
                                                 }
                                                 if (e == window.h.I.wa || e == window.h.I.Ja)
-                                                    for (nA(a, r, i), s = 0; s < n.outputBuffer.numberOfChannels; ++s)
+                                                    for (nC(a, r, i), s = 0; s < n.outputBuffer.numberOfChannels; ++s)
                                                         for (
                                                             l = n.outputBuffer.getChannelData(s), c = o.qa, u = 0;
                                                             u < r;
@@ -1313,7 +1313,7 @@
                             var em = {
                                     open(e) {
                                         var t = ep[e.node.xa];
-                                        if (!t) throw new eC(43);
+                                        if (!t) throw new eA(43);
                                         (e.s = t), (e.seekable = !1);
                                     },
                                     close(e) {
@@ -1323,25 +1323,25 @@
                                         e.s.V.oa(e.s);
                                     },
                                     read(e, t, n, r) {
-                                        if (!e.s || !e.s.V.hb) throw new eC(60);
+                                        if (!e.s || !e.s.V.hb) throw new eA(60);
                                         for (var i = 0, a = 0; a < r; a++) {
                                             try {
                                                 var o = e.s.V.hb(e.s);
                                             } catch (e) {
-                                                throw new eC(29);
+                                                throw new eA(29);
                                             }
-                                            if (void 0 === o && 0 === i) throw new eC(6);
+                                            if (void 0 === o && 0 === i) throw new eA(6);
                                             if (null == o) break;
                                             i++, (t[n + a] = o);
                                         }
                                         return i && (e.node.timestamp = Date.now()), i;
                                     },
                                     write(e, t, n, r) {
-                                        if (!e.s || !e.s.V.Ma) throw new eC(60);
+                                        if (!e.s || !e.s.V.Ma) throw new eA(60);
                                         try {
                                             for (var i = 0; i < r; i++) e.s.V.Ma(e.s, t[n + i]);
                                         } catch (e) {
-                                            throw new eC(29);
+                                            throw new eA(29);
                                         }
                                         return r && (e.node.timestamp = Date.now()), i;
                                     },
@@ -1407,7 +1407,7 @@
                                     N: null,
                                     U: () => eb.createNode(null, "/", 16895, 0),
                                     createNode(e, t, n, r) {
-                                        if (24576 == (61440 & n) || 4096 == (61440 & n)) throw new eC(63);
+                                        if (24576 == (61440 & n) || 4096 == (61440 & n)) throw new eA(63);
                                         return (
                                             eb.N ||
                                                 (eb.N = {
@@ -1526,7 +1526,7 @@
                                                 try {
                                                     var r = eL(t, n);
                                                 } catch (e) {}
-                                                if (r) for (var i in r.l) throw new eC(55);
+                                                if (r) for (var i in r.l) throw new eA(55);
                                             }
                                             delete e.parent.l[e.name],
                                                 (e.parent.timestamp = Date.now()),
@@ -1540,7 +1540,7 @@
                                         tb(e, t) {
                                             var n,
                                                 r = eL(e, t);
-                                            for (n in r.l) throw new eC(55);
+                                            for (n in r.l) throw new eA(55);
                                             delete e.l[t], (e.timestamp = Date.now());
                                         },
                                         rb(e) {
@@ -1551,7 +1551,7 @@
                                         },
                                         Ca: (e, t, n) => (((e = eb.createNode(e, t, 41471, 0)).link = n), e),
                                         la(e) {
-                                            if (40960 != (61440 & e.mode)) throw new eC(28);
+                                            if (40960 != (61440 & e.mode)) throw new eA(28);
                                             return e.link;
                                         },
                                     },
@@ -1586,14 +1586,14 @@
                                                     : 2 === n && 32768 == (61440 & e.node.mode) && (t += e.node.v),
                                                 0 > t)
                                             )
-                                                throw new eC(28);
+                                                throw new eA(28);
                                             return t;
                                         },
                                         Xa(e, t, n) {
                                             eE(e.node, t + n), (e.node.v = Math.max(e.node.v, t + n));
                                         },
                                         kb(e, t, n, r, i) {
-                                            if (32768 != (61440 & e.node.mode)) throw new eC(43);
+                                            if (32768 != (61440 & e.node.mode)) throw new eA(43);
                                             if (((e = e.node.l), 2 & i || e.buffer !== I.buffer))
                                                 throw (
                                                     ((0 < n || n + t < e.length) &&
@@ -1603,7 +1603,7 @@
                                                     (n = !0),
                                                     B(),
                                                     (t = void 0),
-                                                    new eC(48))
+                                                    new eA(48))
                                                 );
                                             return (
                                                 (n = !1),
@@ -1626,8 +1626,8 @@
                                 eS = [],
                                 eI = 1,
                                 eT = null,
-                                eA = !0,
-                                eC = class {
+                                eC = !0,
+                                eA = class {
                                     constructor(e) {
                                         (this.name = "ErrnoError"), (this.$ = e);
                                     }
@@ -1692,7 +1692,7 @@
                                         t,
                                     )).Oa
                                 )
-                                    throw new eC(32);
+                                    throw new eA(32);
                                 e = e.split("/").filter((e) => !!e);
                                 for (var n = eO, r = "/", i = 0; i < e.length; i++) {
                                     var a = i === e.length - 1;
@@ -1709,7 +1709,7 @@
                                                 (n = eD((r = eo(en(r), n)), { Oa: t.Oa + 1 }).node),
                                                 40 < a++)
                                             )
-                                                throw new eC(32);
+                                                throw new eA(32);
                                     }
                                 }
                                 return {
@@ -1730,7 +1730,7 @@
                             }
                             function eL(e, t) {
                                 var n = 16384 == (61440 & e.mode) ? ((n = ek(e, "x")) ? n : 2 * !e.j.ja) : 54;
-                                if (n) throw new eC(n);
+                                if (n) throw new eA(n);
                                 for (n = eT[ex(e.id, t)]; n; n = n.ec) {
                                     var r = n.name;
                                     if (n.parent.id === e.id && r === t) return n;
@@ -1747,7 +1747,7 @@
                                 return 512 & e && (t += "w"), t;
                             }
                             function ek(e, t) {
-                                return eA
+                                return eC
                                     ? 0
                                     : (t.includes("r") && !(292 & e.mode)) ||
                                         (t.includes("w") && !(146 & e.mode)) ||
@@ -1762,14 +1762,14 @@
                                 return ek(e, "wx");
                             }
                             function eG(e) {
-                                if (!(e = eS[e])) throw new eC(8);
+                                if (!(e = eS[e])) throw new eA(8);
                                 return e;
                             }
                             function eZ(e, t = -1) {
                                 if (((e = Object.assign(new eP(), e)), -1 == t))
                                     e: {
                                         for (t = 0; 4096 >= t; t++) if (!eS[t]) break e;
-                                        throw new eC(33);
+                                        throw new eA(33);
                                     }
                                 return (e.W = t), (eS[t] = e);
                             }
@@ -1781,7 +1781,7 @@
                                     (e.m = ev[e.node.xa].m), e.m.open?.(e);
                                 },
                                 aa() {
-                                    throw new eC(70);
+                                    throw new eA(70);
                                 },
                             };
                             function eV(e, t) {
@@ -1789,11 +1789,11 @@
                             }
                             function eH(e, t) {
                                 var n = "/" === t;
-                                if (n && eO) throw new eC(10);
+                                if (n && eO) throw new eA(10);
                                 if (!n && t) {
                                     var r = eD(t, { gb: !1 });
-                                    if (((t = r.path), (r = r.node).ua)) throw new eC(10);
-                                    if (16384 != (61440 & r.mode)) throw new eC(54);
+                                    if (((t = r.path), (r = r.node).ua)) throw new eA(10);
+                                    if (16384 != (61440 & r.mode)) throw new eA(54);
                                 }
                                 (t = {
                                     type: e,
@@ -1807,10 +1807,10 @@
                             }
                             function eY(e, t, n) {
                                 var r = eD(e, { parent: !0 }).node;
-                                if (!(e = er(e)) || "." === e || ".." === e) throw new eC(28);
+                                if (!(e = er(e)) || "." === e || ".." === e) throw new eA(28);
                                 var i = eU(r, e);
-                                if (i) throw new eC(i);
-                                if (!r.j.ta) throw new eC(63);
+                                if (i) throw new eA(i);
+                                if (!r.j.ta) throw new eA(63);
                                 return r.j.ta(r, e, t, n);
                             }
                             function eW(e) {
@@ -1820,21 +1820,21 @@
                                 void 0 === n && ((n = t), (t = 438)), eY(e, 8192 | t, n);
                             }
                             function ez(e, t) {
-                                if (!eo(e)) throw new eC(44);
+                                if (!eo(e)) throw new eA(44);
                                 var n = eD(t, { parent: !0 }).node;
-                                if (!n) throw new eC(44);
+                                if (!n) throw new eA(44);
                                 var r = eU(n, (t = er(t)));
-                                if (r) throw new eC(r);
-                                if (!n.j.Ca) throw new eC(63);
+                                if (r) throw new eA(r);
+                                if (!n.j.Ca) throw new eA(63);
                                 n.j.Ca(n, t, e);
                             }
                             function eq(e) {
-                                if (!(e = eD(e).node)) throw new eC(44);
-                                if (!e.j.la) throw new eC(28);
+                                if (!(e = eD(e).node)) throw new eA(44);
+                                if (!e.j.la) throw new eA(28);
                                 return eo(ew(e.parent), e.j.la(e));
                             }
                             function eQ(e, t, n) {
-                                if ("" === e) throw new eC(44);
+                                if ("" === e) throw new eA(44);
                                 if ("string" == typeof t) {
                                     var r = {
                                         r: 0,
@@ -1859,11 +1859,11 @@
                                 }
                                 if (((r = !1), 64 & t))
                                     if (i) {
-                                        if (128 & t) throw new eC(20);
+                                        if (128 & t) throw new eA(20);
                                     } else (i = eY(e, n, 0)), (r = !0);
-                                if (!i) throw new eC(44);
+                                if (!i) throw new eA(44);
                                 if ((8192 == (61440 & i.mode) && (t &= -513), 65536 & t && 16384 != (61440 & i.mode)))
-                                    throw new eC(54);
+                                    throw new eA(54);
                                 if (
                                     !r &&
                                     (n = i
@@ -1874,13 +1874,13 @@
                                               : ek(i, eM(t))
                                         : 44)
                                 )
-                                    throw new eC(n);
+                                    throw new eA(n);
                                 if (512 & t && !r) {
                                     if (!(n = "string" == typeof (n = i) ? eD(n, { fb: !0 }).node : n).j.P)
-                                        throw new eC(63);
-                                    if (16384 == (61440 & n.mode)) throw new eC(31);
-                                    if (32768 != (61440 & n.mode)) throw new eC(28);
-                                    if ((r = ek(n, "w"))) throw new eC(r);
+                                        throw new eA(63);
+                                    if (16384 == (61440 & n.mode)) throw new eA(31);
+                                    if (32768 != (61440 & n.mode)) throw new eA(28);
+                                    if ((r = ek(n, "w"))) throw new eA(r);
                                     n.j.P(n, {
                                         size: 0,
                                         timestamp: Date.now(),
@@ -1903,9 +1903,9 @@
                                 );
                             }
                             function eX(e, t, n) {
-                                if (null === e.W) throw new eC(8);
-                                if (!e.seekable || !e.m.aa) throw new eC(70);
-                                if (0 != n && 1 != n && 2 != n) throw new eC(28);
+                                if (null === e.W) throw new eA(8);
+                                if (!e.seekable || !e.m.aa) throw new eA(70);
+                                if (0 != n && 1 != n && 2 != n) throw new eA(28);
                                 (e.position = e.m.aa(e, t, n)), (e.sc = []);
                             }
                             function eJ(e, t, n) {
@@ -1925,9 +1925,9 @@
                                             try {
                                                 var s = t();
                                             } catch (e) {
-                                                throw new eC(29);
+                                                throw new eA(29);
                                             }
-                                            if (void 0 === s && 0 === a) throw new eC(6);
+                                            if (void 0 === s && 0 === a) throw new eA(6);
                                             if (null == s) break;
                                             a++, (n[r + o] = s);
                                         }
@@ -1938,7 +1938,7 @@
                                             try {
                                                 n(t[r + a]);
                                             } catch (e) {
-                                                throw new eC(29);
+                                                throw new eA(29);
                                             }
                                         return i && (e.node.timestamp = Date.now()), a;
                                     },
@@ -2078,7 +2078,7 @@
                                     function r(t) {
                                         if ((t = n(t)).length !== e.length)
                                             throw new e8("Mismatched type converter count");
-                                        for (var r = 0; r < e.length; ++r) tC(e[r], t[r]);
+                                        for (var r = 0; r < e.length; ++r) tA(e[r], t[r]);
                                     }
                                     e.forEach(function (e) {
                                         tI[e] = t;
@@ -2097,7 +2097,7 @@
                                     }),
                                         0 === a.length && r(i);
                                 };
-                            function tA(e, t, n = {}) {
+                            function tC(e, t, n = {}) {
                                 var r = t.name;
                                 if (!e) throw new e3(`type "${r}" must have a positive integer typeid pointer`);
                                 if (tu.hasOwnProperty(e)) {
@@ -2108,10 +2108,10 @@
                                     delete tI[e],
                                     tS.hasOwnProperty(e) && ((t = tS[e]), delete tS[e], t.forEach((e) => e()));
                             }
-                            function tC(e, t, n = {}) {
+                            function tA(e, t, n = {}) {
                                 if (!("argPackAdvance" in t))
                                     throw TypeError("registerType registeredInstance requires argPackAdvance");
-                                return tA(e, t, n);
+                                return tC(e, t, n);
                             }
                             var tN = (e) => {
                                 throw new e3(e.g.u.i.name + " instance already deleted");
@@ -2366,10 +2366,10 @@
                                         case 2:
                                             return n
                                                 ? function (e) {
-                                                      return this.fromWireType(A[e >> 1]);
+                                                      return this.fromWireType(C[e >> 1]);
                                                   }
                                                 : function (e) {
-                                                      return this.fromWireType(C[e >> 1]);
+                                                      return this.fromWireType(A[e >> 1]);
                                                   };
                                         case 4:
                                             return n
@@ -2407,7 +2407,7 @@
                                         case 1:
                                             return n ? (e) => I[e] : (e) => T[e];
                                         case 2:
-                                            return n ? (e) => A[e >> 1] : (e) => C[e >> 1];
+                                            return n ? (e) => C[e >> 1] : (e) => A[e >> 1];
                                         case 4:
                                             return n ? (e) => N[e >> 2] : (e) => P[e >> 2];
                                         default:
@@ -2416,10 +2416,10 @@
                                 },
                                 t8 = "undefined" != typeof TextDecoder ? new TextDecoder("utf-16le") : void 0,
                                 t6 = (e, t) => {
-                                    for (var n = e >> 1, r = n + t / 2; !(n >= r) && C[n]; ) ++n;
+                                    for (var n = e >> 1, r = n + t / 2; !(n >= r) && A[n]; ) ++n;
                                     if (32 < (n <<= 1) - e && t8) return t8.decode(T.subarray(e, n));
                                     for (r = 0, n = ""; !(r >= t / 2); ++r) {
-                                        var i = A[(e + 2 * r) >> 1];
+                                        var i = C[(e + 2 * r) >> 1];
                                         if (0 == i) break;
                                         n += String.fromCharCode(i);
                                     }
@@ -2430,8 +2430,8 @@
                                     n -= 2;
                                     var r = t;
                                     n = n < 2 * e.length ? n / 2 : e.length;
-                                    for (var i = 0; i < n; ++i) (A[t >> 1] = e.charCodeAt(i)), (t += 2);
-                                    return (A[t >> 1] = 0), t - r;
+                                    for (var i = 0; i < n; ++i) (C[t >> 1] = e.charCodeAt(i)), (t += 2);
+                                    return (C[t >> 1] = 0), t - r;
                                 },
                                 t9 = (e) => 2 * e.length,
                                 ne = (e, t) => {
@@ -2703,7 +2703,7 @@
                                         : (I.set(u, e), u.length - 1);
                                 };
                             [44].forEach((e) => {
-                                (eN[e] = new eC(e)), (eN[e].stack = "<generic error, no stack>");
+                                (eN[e] = new eA(e)), (eN[e].stack = "<generic error, no stack>");
                             }),
                                 (eT = Array(4096)),
                                 eH(eb, "/"),
@@ -2907,7 +2907,7 @@
                                                 case 4:
                                                     return (i = $()), (r.flags |= i), 0;
                                                 case 12:
-                                                    return (A[((i = $()) + 0) >> 1] = 2), 0;
+                                                    return (C[((i = $()) + 0) >> 1] = 2), 0;
                                             }
                                             return -28;
                                         } catch (e) {
@@ -2955,15 +2955,15 @@
                                                 case 21520:
                                                     return r.s ? -28 : -59;
                                                 case 21531:
-                                                    if (((i = $()), !r.m.Wb)) throw new eC(59);
+                                                    if (((i = $()), !r.m.Wb)) throw new eA(59);
                                                     return r.m.Wb(r, t, i);
                                                 case 21523:
                                                     if (!r.s) return -59;
                                                     return (
                                                         r.s.V.Zb &&
                                                             ((a = [24, 80]),
-                                                            (A[(i = $()) >> 1] = a[0]),
-                                                            (A[(i + 2) >> 1] = a[1])),
+                                                            (C[(i = $()) >> 1] = a[0]),
+                                                            (C[(i + 2) >> 1] = a[1])),
                                                         0
                                                     );
                                                 default:
@@ -2981,7 +2981,7 @@
                                             if ("/" === i.charAt(0)) t = i;
                                             else {
                                                 var a = -100 === e ? "/" : eG(e).path;
-                                                if (0 == i.length) throw new eC(44);
+                                                if (0 == i.length) throw new eA(44);
                                                 t = et(a + "/" + i);
                                             }
                                             var o = r ? $() : 0;
@@ -3090,7 +3090,7 @@
                                     },
                                     _embind_register_bigint: () => {},
                                     _embind_register_bool: (e, t, n, r) => {
-                                        tC(e, {
+                                        tA(e, {
                                             name: (t = ta(t)),
                                             fromWireType: function (e) {
                                                 return !!e;
@@ -3329,12 +3329,12 @@
                                                 );
                                             });
                                     },
-                                    _embind_register_emval: (e) => tC(e, t1),
+                                    _embind_register_emval: (e) => tA(e, t1),
                                     _embind_register_enum: (e, t, n, r) => {
                                         function i() {}
                                         (t = ta(t)),
                                             (i.values = {}),
-                                            tC(e, {
+                                            tA(e, {
                                                 name: t,
                                                 constructor: i,
                                                 fromWireType: function (e) {
@@ -3361,7 +3361,7 @@
                                             (e[t] = r);
                                     },
                                     _embind_register_float: (e, t, n) => {
-                                        tC(e, {
+                                        tA(e, {
                                             name: (t = ta(t)),
                                             fromWireType: (e) => e,
                                             toWireType: (e, t) => t,
@@ -3401,7 +3401,7 @@
                                             : function (e, t) {
                                                   return t;
                                               };
-                                        tC(e, {
+                                        tA(e, {
                                             name: t,
                                             fromWireType: i,
                                             toWireType: o,
@@ -3424,7 +3424,7 @@
                                             Float32Array,
                                             Float64Array,
                                         ][t];
-                                        tC(
+                                        tA(
                                             e,
                                             {
                                                 name: (n = ta(n)),
@@ -3437,7 +3437,7 @@
                                     },
                                     _embind_register_std_string: (e, t) => {
                                         var n = "std::string" === (t = ta(t));
-                                        tC(e, {
+                                        tA(e, {
                                             name: t,
                                             fromWireType: function (e) {
                                                 var t = P[e >> 2],
@@ -3502,9 +3502,9 @@
                                             var r = t6,
                                                 i = t7,
                                                 a = t9,
-                                                o = (e) => C[e >> 1];
+                                                o = (e) => A[e >> 1];
                                         else 4 === t && ((r = ne), (i = nt), (a = nn), (o = (e) => P[e >> 2]));
-                                        tC(e, {
+                                        tA(e, {
                                             name: n,
                                             fromWireType: (e) => {
                                                 for (var n, i = P[e >> 2], a = e + 4, s = 0; s <= i; ++s) {
@@ -3555,7 +3555,7 @@
                                         });
                                     },
                                     _embind_register_void: (e, t) => {
-                                        tC(e, {
+                                        tA(e, {
                                             Ic: !0,
                                             name: (t = ta(t)),
                                             argPackAdvance: 0,
@@ -3661,7 +3661,7 @@
                                     fd_close: function (e) {
                                         try {
                                             var t = eG(e);
-                                            if (null === t.W) throw new eC(8);
+                                            if (null === t.W) throw new eA(8);
                                             t.Ka && (t.Ka = null);
                                             try {
                                                 t.m.close && t.m.close(t);
@@ -3688,13 +3688,13 @@
                                                     var c = i,
                                                         u = a,
                                                         d = I;
-                                                    if (0 > l || 0 > u) throw new eC(28);
-                                                    if (null === c.W || 1 == (2097155 & c.flags)) throw new eC(8);
-                                                    if (16384 == (61440 & c.node.mode)) throw new eC(31);
-                                                    if (!c.m.read) throw new eC(28);
+                                                    if (0 > l || 0 > u) throw new eA(28);
+                                                    if (null === c.W || 1 == (2097155 & c.flags)) throw new eA(8);
+                                                    if (16384 == (61440 & c.node.mode)) throw new eA(31);
+                                                    if (!c.m.read) throw new eA(28);
                                                     var f = void 0 !== u;
                                                     if (f) {
-                                                        if (!c.seekable) throw new eC(70);
+                                                        if (!c.seekable) throw new eA(70);
                                                     } else u = c.position;
                                                     var p = c.m.read(c, d, s, l, u);
                                                     f || (c.position += p);
@@ -3754,14 +3754,14 @@
                                                         d = l,
                                                         f = a,
                                                         p = I;
-                                                    if (0 > d || 0 > f) throw new eC(28);
-                                                    if (null === c.W || 0 == (2097155 & c.flags)) throw new eC(8);
-                                                    if (16384 == (61440 & c.node.mode)) throw new eC(31);
-                                                    if (!c.m.write) throw new eC(28);
+                                                    if (0 > d || 0 > f) throw new eA(28);
+                                                    if (null === c.W || 0 == (2097155 & c.flags)) throw new eA(8);
+                                                    if (16384 == (61440 & c.node.mode)) throw new eA(31);
+                                                    if (!c.m.write) throw new eA(28);
                                                     c.seekable && 1024 & c.flags && eX(c, 0, 2);
                                                     var _ = void 0 !== f;
                                                     if (_) {
-                                                        if (!c.seekable) throw new eC(70);
+                                                        if (!c.seekable) throw new eA(70);
                                                     } else f = c.position;
                                                     var m = c.m.write(c, p, u, d, f, void 0);
                                                     _ || (c.position += m);
@@ -3832,10 +3832,10 @@
                             var nT = (a._ma_device_process_pcm_frames_capture__webaudio = (e, t, n) =>
                                     (nT = a._ma_device_process_pcm_frames_capture__webaudio =
                                         ny.ma_device_process_pcm_frames_capture__webaudio)(e, t, n)),
-                                nA = (a._ma_device_process_pcm_frames_playback__webaudio = (e, t, n) =>
-                                    (nA = a._ma_device_process_pcm_frames_playback__webaudio =
+                                nC = (a._ma_device_process_pcm_frames_playback__webaudio = (e, t, n) =>
+                                    (nC = a._ma_device_process_pcm_frames_playback__webaudio =
                                         ny.ma_device_process_pcm_frames_playback__webaudio)(e, t, n));
-                            function nC() {
+                            function nA() {
                                 function e() {
                                     if (!n && ((n = !0), (a.calledRun = !0), !w)) {
                                         if (
@@ -3853,7 +3853,7 @@
                                                 eQ("/dev/stdin", 0),
                                                 eQ("/dev/stdout", 1),
                                                 eQ("/dev/stderr", 1)),
-                                            (eA = !1),
+                                            (eC = !1),
                                             J(j),
                                             r(a),
                                             a.onRuntimeInitialized && a.onRuntimeInitialized(),
@@ -3906,7 +3906,7 @@
                                 (a.dynCall_iiiiiijj = (e, t, n, r, i, o, s, l, c, u) =>
                                     (a.dynCall_iiiiiijj = ny.dynCall_iiiiiijj)(e, t, n, r, i, o, s, l, c, u)),
                                 (Z = function e() {
-                                    n || nC(), n || (Z = e);
+                                    n || nA(), n || (Z = e);
                                 }),
                                 a.preInit)
                             )
@@ -3915,7 +3915,7 @@
                                     0 < a.preInit.length;
                                 )
                                     a.preInit.pop()();
-                            return nC(), o;
+                            return nA(), o;
                         };
                     })();
                 },
@@ -4176,18 +4176,18 @@
                                         case "touchstart":
                                         case "mousedown":
                                             for (
-                                                var A = function (e) {
+                                                var C = function (e) {
                                                         p.forEach(function (t) {
                                                             e.pointerDown(t.transformedX, t.transformedY, t.identifier);
                                                         });
                                                     },
-                                                    C = 0,
+                                                    A = 0,
                                                     N = o;
-                                                C < N.length;
-                                                C++
+                                                A < N.length;
+                                                A++
                                             ) {
-                                                var y = N[C];
-                                                A(y);
+                                                var y = N[A];
+                                                C(y);
                                             }
                                             break;
                                         case "touchend":
@@ -5056,7 +5056,7 @@
                         }
                         return _(t, e), t;
                     })(I),
-                    A = (function (e) {
+                    C = (function (e) {
                         function t(t) {
                             var n = e.call(this, !0) || this;
                             return (n.selfUnref = !1), (n.nativeArtboard = t), n;
@@ -5069,7 +5069,7 @@
                             t
                         );
                     })(I),
-                    C = (function () {
+                    A = (function () {
                         function e(e, t, n, r) {
                             (this.stateMachine = e),
                                 (this.playing = n),
@@ -5180,7 +5180,7 @@
                                             } else {
                                                 var d = this.artboard.stateMachineByName(e[a]);
                                                 if (d) {
-                                                    var p = new C(d, this.runtime, t, this.artboard);
+                                                    var p = new A(d, this.runtime, t, this.artboard);
                                                     this.stateMachines.push(p);
                                                 }
                                             }
@@ -5234,7 +5234,7 @@
                                     else {
                                         var a = this.artboard.stateMachineByName(e[r]);
                                         if (a) {
-                                            var o = new C(a, this.runtime, t, this.artboard);
+                                            var o = new A(a, this.runtime, t, this.artboard);
                                             this.stateMachines.push(o);
                                         } else
                                             console.warn("State Machine with name ".concat(e[r], " not found.")),
@@ -5861,7 +5861,7 @@
                             }),
                             (e.prototype.createBindableArtboard = function (e) {
                                 if (null != e) {
-                                    var t = new A(e);
+                                    var t = new C(e);
                                     return (
                                         (0, p.createFinalization)(t, t.nativeArtboard),
                                         this.bindableArtboards.push(t),

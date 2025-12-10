@@ -108,8 +108,8 @@ let L = function () {
             gift: "true",
         }),
         W = "true" !== V.gift && null != L,
-        [z, K] = r.useState(M.length > 0 ? M[0].value : null),
-        { analyticsLocations: q } = (0, f.ZP)(x.Z.PAYMENT_FLOW_TEST_PAGE),
+        [z, q] = r.useState(M.length > 0 ? M[0].value : null),
+        { analyticsLocations: K } = (0, f.ZP)(x.Z.PAYMENT_FLOW_TEST_PAGE),
         [Q, Y] = r.useState(""),
         [X, J] = r.useState(I.lds),
         { balance: $, isFetching: ee, error: et } = (0, O.A)(),
@@ -119,7 +119,7 @@ let L = function () {
         [ec, ed] = r.useState(I.lds),
         [eu, em] = r.useState(I.lds);
     return (0, a.jsx)(f.Gt, {
-        value: q,
+        value: K,
         children: (0, a.jsx)(u.zJl, {
             className: R.scroller,
             children: (0, a.jsxs)(u.Kqy, {
@@ -199,7 +199,7 @@ let L = function () {
                                 onClick: () =>
                                     (0, C.Z)({
                                         subscriptionTier: n,
-                                        analyticsLocations: q,
+                                        analyticsLocations: K,
                                     }),
                             }),
                         ],
@@ -402,7 +402,7 @@ let L = function () {
                                 label: "Premium Server Subscription For",
                                 value: z,
                                 options: M,
-                                onChange: (e) => K(e),
+                                onChange: (e) => q(e),
                                 popoutLayerContext: w.O$,
                             }),
                             (0, a.jsx)(v.l, {
@@ -480,7 +480,7 @@ let L = function () {
                                             (0, S.Z)({
                                                 applicationId: es,
                                                 skuId: ec,
-                                                analyticsLocations: q,
+                                                analyticsLocations: K,
                                             }),
                                     }),
                                 ],
@@ -505,7 +505,7 @@ let L = function () {
                                 onClick: () =>
                                     (0, y.Z)({
                                         skuId: eu,
-                                        analyticsLocations: q,
+                                        analyticsLocations: K,
                                         variantsReturnStyle: s.v.VARIANTS_GROUP,
                                     }),
                             }),

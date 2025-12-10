@@ -12,7 +12,7 @@ n.d(t, {
     o9: () => P,
     oo: () => R,
     vQ: () => b,
-    w8: () => C,
+    w8: () => A,
     wj: () => y,
     xN: () => g,
     xn: () => p,
@@ -96,16 +96,16 @@ function T(e) {
     let r = null != (n = null == (t = e.userStatus) ? void 0 : t.claimedTier) ? n : 0;
     return "rewardsConfig" in e.config ? e.config.rewardsConfig.rewards[r] : e.config.rewards[r];
 }
-function A(e, t) {
+function C(e, t) {
     if (h(e)) return (0, l.o8)(e);
     let n = (0, c.M1)(e);
     return t ? n.messages.nameWithArticle : n.messages.name;
 }
-function C(e) {
-    return A(e, !1);
+function A(e) {
+    return C(e, !1);
 }
 function N(e) {
-    return A(e, !0);
+    return C(e, !0);
 }
 function P(e) {
     let { quest: t, idx: n } = e;

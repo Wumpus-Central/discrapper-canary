@@ -127,16 +127,16 @@ e.exports = (function (e) {
                         S = f.first().get("start"),
                         I = f.last().get("end"),
                         T = r.slice(S, I),
-                        A = t.getEntityAt(s.get("start")),
-                        C = _.getHTMLDirIfDifferent(p.getDirection(T), e.props.direction),
+                        C = t.getEntityAt(s.get("start")),
+                        A = _.getHTMLDirIfDifferent(p.getDirection(T), e.props.direction),
                         N = {
                             contentState: e.props.contentState,
                             decoratedText: T,
-                            dir: C,
+                            dir: A,
                             start: S,
                             end: I,
                             blockKey: n,
-                            entityKey: A,
+                            entityKey: C,
                             offsetKey: v,
                         };
                     return u.createElement(b, i({}, y, N, { key: v }), h);

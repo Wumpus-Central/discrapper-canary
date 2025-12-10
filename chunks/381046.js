@@ -55,7 +55,7 @@ var r = n(260674),
     },
     m = {},
     h = function e(t, n, a, o, s, c, d, f, h, g, E, b, y, O, v, S, I, T) {
-        for (var A, C = t, N = T, P = 0, R = !1; void 0 !== (N = N.get(m)) && !R; ) {
+        for (var C, A = t, N = T, P = 0, R = !1; void 0 !== (N = N.get(m)) && !R; ) {
             var D = N.get(t);
             if (((P += 1), void 0 !== D))
                 if (D === P) throw RangeError("Cyclic object value");
@@ -64,45 +64,45 @@ var r = n(260674),
         }
         if (
             ("function" == typeof g
-                ? (C = g(n, C))
-                : C instanceof Date
-                  ? (C = y(C))
+                ? (A = g(n, A))
+                : A instanceof Date
+                  ? (A = y(A))
                   : "comma" === a &&
-                    l(C) &&
-                    (C = i.maybeMap(C, function (e) {
+                    l(A) &&
+                    (A = i.maybeMap(A, function (e) {
                         return e instanceof Date ? y(e) : e;
                     })),
-            null === C)
+            null === A)
         ) {
             if (c) return h && !S ? h(n, p.encoder, I, "key", O) : n;
-            C = "";
+            A = "";
         }
-        if (_(C) || i.isBuffer(C))
+        if (_(A) || i.isBuffer(A))
             return h
-                ? [v(S ? n : h(n, p.encoder, I, "key", O)) + "=" + v(h(C, p.encoder, I, "value", O))]
-                : [v(n) + "=" + v(String(C))];
+                ? [v(S ? n : h(n, p.encoder, I, "key", O)) + "=" + v(h(A, p.encoder, I, "value", O))]
+                : [v(n) + "=" + v(String(A))];
         var w = [];
-        if (void 0 === C) return w;
-        if ("comma" === a && l(C))
-            S && h && (C = i.maybeMap(C, h)), (A = [{ value: C.length > 0 ? C.join(",") || null : void 0 }]);
-        else if (l(g)) A = g;
+        if (void 0 === A) return w;
+        if ("comma" === a && l(A))
+            S && h && (A = i.maybeMap(A, h)), (C = [{ value: A.length > 0 ? A.join(",") || null : void 0 }]);
+        else if (l(g)) C = g;
         else {
-            var x = Object.keys(C);
-            A = E ? x.sort(E) : x;
+            var x = Object.keys(A);
+            C = E ? x.sort(E) : x;
         }
         var L = f ? String(n).replace(/\./g, "%2E") : String(n),
-            j = o && l(C) && 1 === C.length ? L + "[]" : L;
-        if (s && l(C) && 0 === C.length) return j + "[]";
-        for (var M = 0; M < A.length; ++M) {
-            var k = A[M],
-                U = "object" == typeof k && k && void 0 !== k.value ? k.value : C[k];
+            j = o && l(A) && 1 === A.length ? L + "[]" : L;
+        if (s && l(A) && 0 === A.length) return j + "[]";
+        for (var M = 0; M < C.length; ++M) {
+            var k = C[M],
+                U = "object" == typeof k && k && void 0 !== k.value ? k.value : A[k];
             if (!d || null !== U) {
                 var G = b && f ? String(k).replace(/\./g, "%2E") : String(k),
-                    Z = l(C) ? ("function" == typeof a ? a(j, G) : j) : j + (b ? "." + G : "[" + G + "]");
+                    Z = l(A) ? ("function" == typeof a ? a(j, G) : j) : j + (b ? "." + G : "[" + G + "]");
                 T.set(t, P);
                 var B = r();
                 B.set(m, T),
-                    u(w, e(U, Z, a, o, s, c, d, f, "comma" === a && S && l(C) ? null : h, g, E, b, y, O, v, S, I, B));
+                    u(w, e(U, Z, a, o, s, c, d, f, "comma" === a && S && l(A) ? null : h, g, E, b, y, O, v, S, I, B));
             }
         }
         return w;

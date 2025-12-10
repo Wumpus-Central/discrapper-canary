@@ -139,7 +139,7 @@ function v(e) {
                     sourceQuestContent: g,
                 });
         }, [h, t, v, n, C, E, g]),
-        R = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 null != t.current &&
                     C({
@@ -159,7 +159,7 @@ function v(e) {
             },
             [h, t, v, n, C, E, g],
         ),
-        T = r.useCallback(
+        R = r.useCallback(
             (e) => {
                 null != t.current &&
                     null != e &&
@@ -413,8 +413,8 @@ function v(e) {
         trackQuestVideoLoadingEnded: j,
         trackQuestVideoTimeToFirstFrame: P,
         trackQuestVideoProgressed: D,
-        trackQuestVideoResumed: R,
-        trackQuestVideoPaused: T,
+        trackQuestVideoResumed: T,
+        trackQuestVideoPaused: R,
         trackQuestVideoFocusChange: I,
         trackQuestContentClick: w,
         trackQuestVideoBufferingStarted: N,

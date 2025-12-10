@@ -21,12 +21,12 @@ let y = (e, t) => {
             { analyticsLocations: S } = (0, c.ZP)(l.Z.PREMIUM_MARKETING_FOOTER_CTA),
             I = (0, f.Nx)(),
             T = (0, d.rO)(),
-            A = i.useRef(null),
-            [C, N] = i.useState(!1);
+            C = i.useRef(null),
+            [A, N] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !a || O || C || null == A.current || A.current.play();
-            }, [a, O, C]),
+                !a || O || A || null == C.current || C.current.play();
+            }, [a, O, A]),
             (0, r.jsx)(c.Gt, {
                 value: S,
                 children: (0, r.jsxs)("div", {
@@ -57,7 +57,7 @@ let y = (e, t) => {
                                 onEnded: () => {
                                     N(!0);
                                 },
-                                ref: A,
+                                ref: C,
                                 children: (0, r.jsx)("source", {
                                     src: T ? g.Z : b.Z,
                                     type: T ? _.m.MP4 : _.m.WEBM,

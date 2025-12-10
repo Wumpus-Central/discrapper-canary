@@ -101,7 +101,7 @@ let y = 10,
     }),
     I = null,
     T = null;
-function A(e) {
+function C(e) {
     let { guildId: t, channelId: n } = e,
         r = !1;
     return (
@@ -128,7 +128,7 @@ function A(e) {
         r
     );
 }
-function C(e) {
+function A(e) {
     let {
         settings: { type: t },
         wasSaved: n,
@@ -180,7 +180,7 @@ class R extends (r = o.ZP.PersistedStore) {
 }
 h(R, "displayName", "FrecencyStore"), h(R, "persistKey", "FrecencyStore");
 let D = new R(s.Z, {
-    CHANNEL_SELECT: A,
-    VOICE_CHANNEL_SELECT: A,
-    USER_SETTINGS_PROTO_UPDATE: C,
+    CHANNEL_SELECT: C,
+    VOICE_CHANNEL_SELECT: C,
+    USER_SETTINGS_PROTO_UPDATE: A,
 });

@@ -329,10 +329,10 @@ function I(e, t) {
 function T(e, t) {
     return I(t, e);
 }
-function A(e, t) {
+function C(e, t) {
     return new y(e, t).major;
 }
-function C(e, t) {
+function A(e, t) {
     return new y(e, t).minor;
 }
 function N(e, t) {
@@ -424,8 +424,8 @@ function F(e, t) {
         r("comp", this);
 }
 (t.rcompareIdentifiers = T),
-    (t.major = A),
-    (t.minor = C),
+    (t.major = C),
+    (t.minor = A),
     (t.patch = N),
     (t.compare = P),
     (t.compareLoose = R),

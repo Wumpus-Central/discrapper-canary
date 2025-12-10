@@ -117,13 +117,13 @@ function v(e) {
     let T = i.useCallback(() => {
             null != I.current && I.current();
         }, [I]),
-        A = null != p;
+        C = null != p;
     return (
         i.useLayoutEffect(() => {
             var e, t;
             let n = new ResizeObserver(() => {
                     var e, t;
-                    if (A) return void y(!0);
+                    if (C) return void y(!0);
                     let n =
                         null != (t = null == O || null == (e = O.current) ? void 0 : e.getScrollerNode()) ? t : null;
                     if (null == n || (null == S ? void 0 : S.current) == null) return;
@@ -136,7 +136,7 @@ function v(e) {
                 (null == S ? void 0 : S.current) != null && n.observe(S.current),
                 () => n.disconnect()
             );
-        }, [A]),
+        }, [C]),
         (0, r.jsxs)(u.y, {
             children: [
                 (0, r.jsx)("div", { className: o()(_.bodySpacerTop, { [_.bodySpacerTopBorder]: b && null == a }) }),

@@ -16,8 +16,8 @@ var r = n(54381),
     d = n(410030),
     p = n(686546),
     f = n(66637),
-    h = n(782738),
-    g = n(371260),
+    g = n(782738),
+    h = n(371260),
     m = n(372769),
     _ = n(134432),
     b = n(768581),
@@ -31,7 +31,7 @@ var r = n(54381),
     T = n(755386);
 function N(e) {
     let { guild: t, onClick: l, onView: s } = e,
-        [h, g] = i.useState(!1),
+        [g, h] = i.useState(!1),
         [E, N] = i.useState(!1),
         [j, P] = i.useState(!1),
         x = i.useRef(null),
@@ -45,9 +45,9 @@ function N(e) {
         }, [t.id, l]),
         Z = i.useCallback(
             (e) => {
-                e && !h && (g(!0), null == s || s(t.id));
+                e && !g && (h(!0), null == s || s(t.id));
             },
-            [t.id, h, s],
+            [t.id, g, s],
         ),
         w = i.useCallback(
             (e) => {
@@ -142,7 +142,7 @@ function N(e) {
             (0, r.jsx)(o.$, {
                 innerRef: x,
                 onChange: Z,
-                active: !h,
+                active: !g,
                 threshold: 0.55,
                 children: (0, r.jsxs)(f.Z, {
                     ref: x,
@@ -274,16 +274,16 @@ function P(e) {
             (e, t, n, i) =>
                 null == t.guildId
                     ? (0, r.jsx)(
-                          g.Z,
+                          h.Z,
                           {
                               state: n,
                               cleanUp: i,
-                              children: (0, r.jsx)(h.Z, { className: I.placeholder }),
+                              children: (0, r.jsx)(g.Z, { className: I.placeholder }),
                           },
                           e,
                       )
                     : (0, r.jsx)(
-                          g.Z,
+                          h.Z,
                           {
                               state: n,
                               cleanUp: i,

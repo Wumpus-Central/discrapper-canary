@@ -40,8 +40,8 @@ var r = n(54381),
     B = n(810878),
     F = n(12574),
     H = n(21321),
-    z = n(179517),
-    W = n(79829);
+    W = n(179517),
+    z = n(79829);
 let V = (0, x.Un)({
         createPromise: () => n.e("4848").then(n.bind(n, 797967)),
         webpackId: 797967,
@@ -74,11 +74,11 @@ function q(e) {
         h = (0, _.oC)(n, t),
         x = {
             dark: {
-                src: z,
+                src: W,
                 name: t.name,
             },
             light: {
-                src: W,
+                src: z,
                 name: t.name,
             },
         };
@@ -271,11 +271,11 @@ function Q(e) {
             colorString: t.colorString,
         },
         c = {
-            src: z,
+            src: W,
             name: t.name,
         },
         d = {
-            src: W,
+            src: z,
             name: t.name,
         },
         u = (0, _.oC)(n, t),

@@ -1,10 +1,10 @@
 let n, a, i, o, _;
 r.d(t, {
-    $A: () => f,
-    PR: () => N,
-    YF: () => D,
+    $A: () => N,
+    PR: () => f,
+    YF: () => S,
     _4: () => h,
-    _j: () => S,
+    _j: () => D,
     cN: () => G,
     to: () => O,
 });
@@ -19,10 +19,10 @@ var s = r(98076),
     R = r(154320);
 let T = {},
     A = {};
-function N(e, t = !1) {
+function f(e, t = !1) {
     return v("cls", e, L, n, t);
 }
-function f(e, t = !1) {
+function N(e, t = !1) {
     return v("lcp", e, m, i, t);
 }
 function O(e) {
@@ -31,12 +31,12 @@ function O(e) {
 function h(e) {
     return v("ttfb", e, y, o);
 }
-function D(e) {
+function S(e) {
     return v("inp", e, P, _);
 }
-function S(e, t) {
+function D(e, t) {
     return (
-        w(e, t),
+        M(e, t),
         A[e] ||
             ((function (e) {
                 let t = {};
@@ -50,7 +50,7 @@ function S(e, t) {
                     );
             })(e),
             (A[e] = !0)),
-        M(e, t)
+        w(e, t)
     );
 }
 function C(e, t) {
@@ -103,12 +103,12 @@ function P() {
 }
 function v(e, t, r, n, a = !1) {
     let i;
-    return w(e, t), A[e] || ((i = r()), (A[e] = !0)), n && t({ metric: n }), M(e, t, a ? i : void 0);
+    return M(e, t), A[e] || ((i = r()), (A[e] = !0)), n && t({ metric: n }), w(e, t, a ? i : void 0);
 }
-function w(e, t) {
+function M(e, t) {
     (T[e] = T[e] || []), T[e].push(t);
 }
-function M(e, t, r) {
+function w(e, t, r) {
     return () => {
         r && r();
         let n = T[e];

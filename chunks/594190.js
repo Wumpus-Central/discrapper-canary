@@ -35,8 +35,8 @@ var i,
     S = n(509003),
     I = n(77498),
     T = n(283595),
-    A = n(417363),
-    C = n(626135),
+    C = n(417363),
+    A = n(626135),
     N = n(70956),
     P = n(877481),
     R = n(823379),
@@ -295,11 +295,11 @@ function eT(e) {
     }
     return null;
 }
-function eA(e) {
+function eC(e) {
     let t = eT(e);
     return (null == t ? void 0 : t.streamerTool) === !0;
 }
-function eC() {
+function eA() {
     if (et.length > 0) {
         let e = er;
         (er = et[0]), null != e && er.pid === e.pid ? (er.start = e.start) : (er.start = Date.now());
@@ -484,7 +484,7 @@ function eG() {
             .reduce((t, n) => {
                 let r = I.Z.getDetectableGame(n.id);
                 if (null == r) return t;
-                for (let i of A.Z.getLaunchOptions(n.id, n.branchId)) {
+                for (let i of C.Z.getLaunchOptions(n.id, n.branchId)) {
                     let a = "".concat(n.id, ":").concat(n.branchId);
                     J.has(a) || ((e = !0), J.add(a));
                     let { fullExecutablePath: o } = i,
@@ -602,7 +602,7 @@ function eX(e) {
         eF(et),
         eZ(),
         eM(),
-        eC();
+        eA();
 }
 function eJ() {
     eZ();
@@ -629,7 +629,7 @@ function e1(e) {
         })
         .map((e) => e.cleanedExePath);
     t.length > 0 &&
-        C.default.track(k.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
+        A.default.track(k.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
             keywords: q,
             paths: t,
             debugging_level: eg,
@@ -654,7 +654,7 @@ function e3(e) {
 function e2(e) {
     let { game: t } = e,
         n = eL(t);
-    (es.enableDetection[eP(t)] = !n), eM(), C.default.track(k.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
+    (es.enableDetection[eP(t)] = !n), eM(), A.default.track(k.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
 }
 function e4(e) {
     let t = eP(e.game),
@@ -675,7 +675,7 @@ function e4(e) {
     }),
         eZ(),
         eM(),
-        i && eC();
+        i && eA();
 }
 function e5(e) {
     let t = eP(e.game);
@@ -688,7 +688,7 @@ function e5(e) {
                 t === eP(e) && (e.hidden = !0);
             }),
             delete eo[t]),
-        et.some((e) => eP(e) === t) && eC(),
+        et.some((e) => eP(e) === t) && eA(),
         eZ(),
         eM();
 }
@@ -796,7 +796,7 @@ function e7(e) {
                           ? (n.push(e), !1)
                           : !I.Z.shouldBlock(e),
                 );
-                let o = n.filter(eA).length;
+                let o = n.filter(eC).length;
                 o !== eu &&
                     ((eu = o),
                     d.Z.dispatch({
@@ -807,7 +807,7 @@ function e7(e) {
                     (en = a),
                     (ei = n),
                     (r = i),
-                    eC(),
+                    eA(),
                     eN();
             }),
             eZ(),
@@ -830,7 +830,7 @@ function e7(e) {
                                           : l.id)
                                     ? n
                                     : "";
-                        C.default.track(k.rMx.GAME_DETECTION_COMPARISON, {
+                        A.default.track(k.rMx.GAME_DETECTION_COMPARISON, {
                             game_platform: k.M7m.DESKTOP,
                             detection_method: "process_observer_v2",
                             game_v1: o.name,
@@ -867,7 +867,7 @@ function e7(e) {
         let p = j.g.getConfig({ location: "RunningGameStore.handleGamesDatabaseUpdate" }).enabled;
         w.ZP.setGameDetectionErrorCallback((e, t, n, r, i) => {
             p &&
-                C.default.track(k.rMx.GAME_DETECTION_ERROR, {
+                A.default.track(k.rMx.GAME_DETECTION_ERROR, {
                     error_code: e.toString(),
                     distributor: t,
                     commit_hash: n,
@@ -906,10 +906,10 @@ class e9 extends (i = c.ZP.Store) {
         )
             for (let e of a.gamesSeen)
                 "number" == typeof e.id && ((e.nativeProcessObserverId = e.id), delete e.id, (s = !0));
-        this.waitFor(A.Z, h.Z, I.Z, T.Z, M.Z),
+        this.waitFor(C.Z, h.Z, I.Z, T.Z, M.Z),
             (K = a.gamesSeen.filter((e) => !(0, S.le)(e))),
             this.syncWith([h.Z], e6),
-            this.syncWith([T.Z, I.Z, A.Z], o().throttle(eG, 1000)),
+            this.syncWith([T.Z, I.Z, C.Z], o().throttle(eG, 1000)),
             s && eM();
     }
     getVisibleGame() {

@@ -65,11 +65,11 @@ function p(e) {
 function f(e) {
     let { className: t, focusSectionProps: n } = e,
         [a, s] = i.useState(!1),
-        [f, h] = i.useState(0),
-        g = i.useRef(null),
+        [f, g] = i.useState(0),
+        h = i.useRef(null),
         m = (e) => {
             clearTimeout(f),
-                h(
+                g(
                     setTimeout(() => {
                         s(e);
                     }, 100),
@@ -79,7 +79,7 @@ function f(e) {
         onMouseEnter: () => m(!0),
         onMouseLeave: () => m(!1),
         children: (0, r.jsx)(l.yRy, {
-            targetElementRef: g,
+            targetElementRef: h,
             shouldShow: a,
             animation: l.yRy.Animation.NONE,
             position: "bottom",
@@ -94,7 +94,7 @@ function f(e) {
                     o.JO,
                     u(
                         {
-                            ref: g,
+                            ref: h,
                             onClick: d,
                             icon: l.nnZ,
                             "aria-label": c.intl.string(c.t["5LqopY"]),

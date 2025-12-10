@@ -2,7 +2,7 @@ n.d(t, {
     EM: () => b,
     PR: () => g,
     Tt: () => v,
-    ZD: () => A,
+    ZD: () => C,
     yY: () => S,
 }),
     n(388685);
@@ -168,7 +168,7 @@ function T() {
         );
     }, []);
 }
-function A() {
+function C() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     T();
     let t = I();

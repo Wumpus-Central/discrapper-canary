@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(351402),
     I = n(853872),
     T = n(855775),
-    A = n(695103),
-    C = n(4912),
+    C = n(695103),
+    A = n(4912),
     N = n(669079),
     P = n(987209),
     R = n(563132),
@@ -82,7 +82,7 @@ function G(e) {
         ec = null != F ? F : T.c,
         eu = null != el ? el[ec] : null;
     o()(null != eo, "SKU must exist and be fetched."), o()(null != G, "Application must exist.");
-    let ed = (0, c.e7)([h.Z, A.Z], () => A.Z.inTestModeForApplication(G.id) || h.Z.inDevModeForApplication(G.id), [
+    let ed = (0, c.e7)([h.Z, C.Z], () => C.Z.inTestModeForApplication(G.id) || h.Z.inDevModeForApplication(G.id), [
             G.id,
         ]),
         ef = (0, c.e7)([v.Z], () => v.Z.enabled),
@@ -114,7 +114,7 @@ function G(e) {
                 ? (0, r.jsx)(
                       p.Z,
                       {
-                          icon: (0, u.GSL)(C.Z),
+                          icon: (0, u.GSL)(A.Z),
                           iconSize: p.Z.Sizes.SMALL,
                           color: p.Z.Colors.WARNING,
                           className: k.errorBlock,
@@ -127,7 +127,7 @@ function G(e) {
                 ? (0, r.jsx)(
                       p.Z,
                       {
-                          icon: (0, u.GSL)(C.Z),
+                          icon: (0, u.GSL)(A.Z),
                           iconSize: p.Z.Sizes.SMALL,
                           color: p.Z.Colors.ERROR,
                           className: k.errorBlock,

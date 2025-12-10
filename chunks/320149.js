@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(333984),
     p = n(26373),
     f = n(486622),
-    h = n(718538),
-    g = n(359110),
+    g = n(718538),
+    h = n(359110),
     m = n(6025),
     _ = n(433355),
     b = n(933557),
@@ -26,9 +26,9 @@ function I(e) {
         S = (0, p.V)(),
         T = (0, l.e7)([u.Z], () => u.Z.isMessageRequest(t.id)),
         N = (0, l.e7)([d.Z], () => d.Z.isSpam(t.id)),
-        j = (0, h.V)(t.id, t.getRecipientId()),
+        j = (0, g.V)(t.id, t.getRecipientId()),
         P = i.useCallback(() => {
-            m.Z.closeChannelSidebar(_.uZ), T && C && (0, g.Kh)(t.id), N && S && (0, g.Kh)(t.id);
+            m.Z.closeChannelSidebar(_.uZ), T && C && (0, h.Kh)(t.id), N && S && (0, h.Kh)(t.id);
         }, [t.id, N, S, T, C]),
         x = i.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(O.intl.string(O.t.pIQ3h4), a.ToastType.FAILURE));

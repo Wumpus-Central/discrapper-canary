@@ -24,12 +24,12 @@ function p(e, t) {
         abortSignal: T,
     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if ("" === e || u.Z.isFetchingProfile(e, v)) return Promise.resolve();
-    let A = u.Z.getUserProfile(e),
-        C = Date.now() - (null != (m = null == A ? void 0 : A.fetchEndedAt) ? m : 0) >= f;
+    let C = u.Z.getUserProfile(e),
+        A = Date.now() - (null != (m = null == C ? void 0 : C.fetchEndedAt) ? m : 0) >= f;
     if (
-        ((null == A || null == (n = A.fetchError) ? void 0 : n.status) === 404 ||
-            (null == A || null == (p = A.fetchError) ? void 0 : p.status) === 429) &&
-        !C
+        ((null == C || null == (n = C.fetchError) ? void 0 : n.status) === 404 ||
+            (null == C || null == (p = C.fetchError) ? void 0 : p.status) === 429) &&
+        !A
     )
         return Promise.resolve();
     let N = u.Z.getGuildMemberProfile(e, v),
@@ -39,10 +39,10 @@ function p(e, t) {
         w = null == R && b,
         x = null == D && E,
         L = (null == P && g) || w || x,
-        j = null == v ? null == A : null == N,
-        M = !j && (C || L);
+        j = null == v ? null == C : null == N,
+        M = !j && (A || L);
     if (!j && !M) return Promise.resolve();
-    let k = null != v ? (null == N ? void 0 : N.profileEffect) : null == A ? void 0 : A.profileEffect;
+    let k = null != v ? (null == N ? void 0 : N.profileEffect) : null == C ? void 0 : C.profileEffect;
     null != k && (0, o.lW)(k.skuId), null != t && (0, a.vM)(t);
     let U = {
         type: h,

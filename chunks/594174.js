@@ -3,7 +3,7 @@ n.r(t),
         ASSISTANT_WUMPUS_VOICE_USER: () => S,
         default: () => ek,
         mergeUser: () => P,
-        transformUser: () => C,
+        transformUser: () => A,
         users: () => O,
     }),
     n(388685),
@@ -60,7 +60,7 @@ function T(e, t) {
         ((n.primaryGuild = (0, u.l)(t.primary_guild)), (O[n.id] = n), v++, !0)
     );
 }
-function A(e, t) {
+function C(e, t) {
     switch (!0) {
         case null == e.primaryGuild && null == t.primary_guild:
             break;
@@ -73,7 +73,7 @@ function A(e, t) {
     }
     return t;
 }
-function C(e) {
+function A(e) {
     let t = e.mfa_enabled;
     null != t && ((e.mfaEnabled = t), delete e.mfa_enabled);
     let n = (0, p.G)(e.premium_type);
@@ -114,9 +114,9 @@ function P(e) {
         void 0 !== (t = (r = new _.Z(e)).premiumType) && i && (r.premiumType = D((0, p.QI)(r), r.premiumType));
     else if (n) {
         var a;
-        let n = C(e);
+        let n = A(e);
         void 0 !== (t = null != (a = n.premium_type) ? a : n.premiumType) && i && (0, p.VR)(n) && (n = R(n)),
-            (n = A(r, n)),
+            (n = C(r, n)),
             (r = r.merge(n));
     }
     (0, p.jX)((0, p.QI)(r), t, r.premiumType);
@@ -501,11 +501,11 @@ function eT(e) {
     let { users: t } = e;
     return t.reduce((e, t) => P(t) || e, !1);
 }
-function eA(e) {
+function eC(e) {
     let { users: t } = e;
     return t.reduce((e, t) => P(t) || e, !1);
 }
-function eC(e) {
+function eA(e) {
     let { familyCenterTeenActivity: t } = e;
     if (void 0 === t) return;
     let { users: n } = t;
@@ -666,9 +666,9 @@ class eM extends g.Z {
             LOCAL_MESSAGES_LOADED: ed,
             FAMILY_CENTER_INITIAL_LOAD: eI,
             FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: eT,
-            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eC,
+            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: eA,
             FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: eN,
-            FAMILY_CENTER_REQUEST_LINK_SUCCESS: eA,
+            FAMILY_CENTER_REQUEST_LINK_SUCCESS: eC,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eP,
             LOAD_ICYMI_HYDRATED: eR,
             EMBEDDED_ACTIVITY_UPDATE_V2: eD,

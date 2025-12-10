@@ -34,8 +34,8 @@ let E = "IncomingCallStore",
     S = [],
     I = new Map(),
     T = new Set(),
-    A = !1;
-function C() {
+    C = !1;
+function A() {
     let e = m.Z.windowSize();
     return null != r && r.x + b < e.width && r.y + y < e.height
         ? r
@@ -63,7 +63,7 @@ function P(e) {
         let e = p.Z.getChannel(t);
         if (null == e) return !1;
         let n = O * T.size,
-            { x: r, y: i } = C();
+            { x: r, y: i } = A();
         return (
             I.set(t, {
                 channel: e,
@@ -107,7 +107,7 @@ function x(e) {
     return N(t.id);
 }
 function L() {
-    A = _.Z.getStatus() === h.Skl.DND || c.QZ.getSetting();
+    C = _.Z.getStatus() === h.Skl.DND || c.QZ.getSetting();
 }
 function j() {
     let e = f.default.getId();
@@ -125,16 +125,16 @@ class M extends (i = a.ZP.Store) {
             this.syncWith([l.Z], j);
     }
     getIncomingCalls() {
-        return A ? S : Array.from(I.values());
+        return C ? S : Array.from(I.values());
     }
     getIncomingCallChannelIds() {
-        return A ? v : T;
+        return C ? v : T;
     }
     getFirstIncomingCallId() {
-        return A ? null : T.values().next().value;
+        return C ? null : T.values().next().value;
     }
     hasIncomingCalls() {
-        return !A && T.size > 0;
+        return !C && T.size > 0;
     }
 }
 g(M, "displayName", "IncomingCallStore");

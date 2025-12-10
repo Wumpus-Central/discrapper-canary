@@ -1,12 +1,12 @@
 n.d(t, {
     H: () => N,
-    M: () => C,
+    M: () => A,
 });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(990547),
     c = n(872175),
     u = n(873546),
@@ -99,7 +99,7 @@ let I = {
 function T(e, t) {
     return null == e ? null : e.index > t.index ? "backwards" : e.index < t.index ? "forwards" : null;
 }
-function A(e, t) {
+function C(e, t) {
     return (n) => {
         if (0 === n) return "auto";
         let r = "forwards" === t.current,
@@ -114,7 +114,7 @@ function A(e, t) {
         );
     };
 }
-function C(e) {
+function A(e) {
     return null;
 }
 function N(e) {
@@ -123,10 +123,10 @@ function N(e) {
         a,
         { contentDisplay: E, fadeInOut: y = !1 } = e,
         S = v(e, ["contentDisplay", "fadeInOut"]);
-    let C = {},
+    let A = {},
         { analyticsLocations: N } = (0, h.ZP)();
     i.Children.forEach(S.children, (e, t) => {
-        C[e.props.id] = {
+        A[e.props.id] = {
             children: e.props.children,
             impressionName: e.props.impressionName,
             impressionProperties: e.props.impressionProperties,
@@ -135,11 +135,11 @@ function N(e) {
     });
     let P = S.activeSlide,
         R = (0, _.Z)(S.activeSlide),
-        D = null != (t = S.directionOverride) ? t : T(null != R ? C[R] : null, C[P]),
+        D = null != (t = S.directionOverride) ? t : T(null != R ? A[R] : null, A[P]),
         { reducedMotion: w } = i.useContext(d.Sfi),
         x = i.useContext(m.Z),
-        L = C[P].impressionName,
-        j = O(b({}, C[P].impressionProperties), { location_stack: N });
+        L = A[P].impressionName,
+        j = O(b({}, A[P].impressionProperties), { location_stack: N });
     x({
         type: l.ImpressionTypes.MODAL,
         name: L,
@@ -221,14 +221,14 @@ function N(e) {
                             ? a
                             : b(
                                   {
-                                      left: e.value.to(A("left", F)),
-                                      right: e.value.to(A("right", F)),
+                                      left: e.value.to(C("left", F)),
+                                      right: e.value.to(C("right", F)),
                                   },
                                   y && a,
                               ),
                     ),
                     className: o()({ [g.innerAnimatedDivDynamicSizing]: S.shouldUseMediaQueriesForSizing }),
-                    children: C[t].children,
+                    children: A[t].children,
                 },
                 i,
             );

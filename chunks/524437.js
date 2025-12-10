@@ -1,6 +1,6 @@
 n.d(t, {
     C4: () => Z,
-    Dd: () => C,
+    Dd: () => A,
     E5: () => g,
     Fm: () => ey,
     GI: () => E,
@@ -24,7 +24,7 @@ n.d(t, {
     f9: () => L,
     hg: () => I,
     l1: () => T,
-    n9: () => A,
+    n9: () => C,
     nI: () => d,
     o8: () => w,
     os: () => M,
@@ -215,7 +215,7 @@ var r = n(230367),
             e
         );
     })({}),
-    A = (function (e) {
+    C = (function (e) {
         return (
             (e[(e.SWIPE_RIGHT_TO_LEFT_UNSET = 0)] = "SWIPE_RIGHT_TO_LEFT_UNSET"),
             (e[(e.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS = 1)] = "SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS"),
@@ -223,7 +223,7 @@ var r = n(230367),
             e
         );
     })({}),
-    C = (function (e) {
+    A = (function (e) {
         return (
             (e[(e.UNSET_FAVORITE_CHANNEL_TYPE = 0)] = "UNSET_FAVORITE_CHANNEL_TYPE"),
             (e[(e.REFERENCE_ORIGINAL = 1)] = "REFERENCE_ORIGINAL"),
@@ -316,7 +316,7 @@ class D extends o.C {
                     a.status = ev.internalBinaryRead(e, e.uint32(), n, a.status);
                     break;
                 case 12:
-                    a.localization = eA.internalBinaryRead(e, e.uint32(), n, a.localization);
+                    a.localization = eC.internalBinaryRead(e, e.uint32(), n, a.localization);
                     break;
                 case 13:
                     a.appearance = eR.internalBinaryRead(e, e.uint32(), n, a.appearance);
@@ -381,7 +381,7 @@ class D extends o.C {
             e.debug && eE.internalBinaryWrite(e.debug, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
             e.gameLibrary && ey.internalBinaryWrite(e.gameLibrary, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
             e.status && ev.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(),
-            e.localization && eA.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
+            e.localization && eC.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(),
             e.appearance && eR.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(),
             e.guildFolders && eM.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(),
             e.favorites && eZ.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(),
@@ -474,7 +474,7 @@ class D extends o.C {
                 no: 12,
                 name: "localization",
                 kind: "message",
-                T: () => eA,
+                T: () => eC,
             },
             {
                 no: 13,
@@ -3668,8 +3668,8 @@ class eT extends o.C {
         ]);
     }
 }
-let eA = new eT();
-class eC extends o.C {
+let eC = new eT();
+class eA extends o.C {
     create(e) {
         let t = {};
         return (
@@ -3729,7 +3729,7 @@ class eC extends o.C {
         ]);
     }
 }
-let eN = new eC();
+let eN = new eA();
 class eP extends o.C {
     create(e) {
         let t = {
@@ -3911,7 +3911,7 @@ class eP extends o.C {
                 no: 13,
                 name: "swipe_right_to_left_mode",
                 kind: "enum",
-                T: () => ["discord_protos.discord_users.v1.SwipeRightToLeftMode", A],
+                T: () => ["discord_protos.discord_users.v1.SwipeRightToLeftMode", C],
             },
         ]);
     }
@@ -4396,7 +4396,7 @@ class eB extends o.C {
                 no: 2,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_users.v1.FavoriteChannelType", C],
+                T: () => ["discord_protos.discord_users.v1.FavoriteChannelType", A],
             },
             {
                 no: 3,

@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => E,
     c2: () => x,
-    cK: () => p,
+    cK: () => m,
 });
 var r,
     i,
@@ -10,7 +10,7 @@ var r,
     a = n(473749),
     o = n(120356),
     c = n.n(o),
-    u = n(936052),
+    u = n(814554),
     d = n(678249);
 function h(e, t, n) {
     return (
@@ -41,8 +41,8 @@ function g(e) {
     }
     return e;
 }
-var p = (((r = {}).SIZE_40 = "SIZE_40"), (r.SIZE_60 = "SIZE_60"), r);
-let m = Object.freeze({
+var m = (((r = {}).SIZE_40 = "SIZE_40"), (r.SIZE_60 = "SIZE_60"), r);
+let p = Object.freeze({
         SIZE_40: "size-40",
         SIZE_60: "size-60",
     }),
@@ -100,7 +100,7 @@ h(_, "defaultProps", {
 class x extends (s = a.PureComponent) {
     render() {
         let { overlaySize: e } = this.props,
-            t = m[null != e ? e : "SIZE_40"];
+            t = p[null != e ? e : "SIZE_40"];
         return (0, l.jsxs)("div", {
             className: d.qrCodeOverlayContainer,
             children: [

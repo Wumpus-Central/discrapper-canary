@@ -156,7 +156,7 @@ let W = c.ZP.connectStores([E.ZP, v.Z], (e) => {
             isMobile: C.Z.isMobileOnline(t.id),
         };
     })(R.n5);
-function Q(e, t, n) {
+function X(e, t, n) {
     return (0, i.jsx)(
         u.u,
         {
@@ -169,7 +169,7 @@ function Q(e, t, n) {
         e,
     );
 }
-class X extends l.PureComponent {
+class Q extends l.PureComponent {
     componentDidMount() {
         p.Z.disable(), p.Z.enableTemp(h.u);
     }
@@ -270,10 +270,10 @@ class X extends l.PureComponent {
             className: a()(G.protip, { [G.hasContent]: this.state.query.length > 0 }),
             type: _.Z.Types.INLINE,
             children: k.intl.format(k.t.wukqXQ, {
-                userSymbolHook: (e, t) => Q(t, g.xQ.USER, k.intl.string(k.t.GQRCGn)),
-                textChannelSymbolHook: (e, t) => Q(t, g.xQ.TEXT_CHANNEL, k.intl.string(k.t.wrwhuZ)),
-                voiceChannelSymbolHook: (e, t) => Q(t, g.xQ.VOICE_CHANNEL, k.intl.string(k.t["jz+hJp"])),
-                guildSymbolHook: (e, t) => Q(t, g.xQ.GUILD, k.intl.string(k.t.WuwCWi)),
+                userSymbolHook: (e, t) => X(t, g.xQ.USER, k.intl.string(k.t.GQRCGn)),
+                textChannelSymbolHook: (e, t) => X(t, g.xQ.TEXT_CHANNEL, k.intl.string(k.t.wrwhuZ)),
+                voiceChannelSymbolHook: (e, t) => X(t, g.xQ.VOICE_CHANNEL, k.intl.string(k.t["jz+hJp"])),
+                guildSymbolHook: (e, t) => X(t, g.xQ.GUILD, k.intl.string(k.t.WuwCWi)),
                 helpdeskArticle: w.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
             }),
         });
@@ -688,6 +688,6 @@ function J(e) {
             }),
                 (0, P.gF)(e);
         }, [o, r]),
-        (0, i.jsx)(X, B({}, t, e))
+        (0, i.jsx)(Q, B({}, t, e))
     );
 }

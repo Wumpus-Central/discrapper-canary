@@ -52,7 +52,7 @@ function T(e) {
         t.start(Math.min(_, n), () => T(e));
     }
 }
-function A(e) {
+function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (t && !S.has(e.channel_id)) return !1;
     let n = (0, d.Fp)(e)
@@ -68,7 +68,7 @@ function A(e) {
         !1)
     );
 }
-function C() {
+function A() {
     return S.clear(), !1;
 }
 function N(e) {
@@ -148,21 +148,21 @@ function Z(e) {
 }
 function B(e) {
     let { message: t } = e;
-    return A(t, !0);
+    return C(t, !0);
 }
 function F(e) {
     let { channelId: t, messages: n } = e;
-    S.add(t), n.forEach((e) => A(e, !0));
+    S.add(t), n.forEach((e) => C(e, !0));
 }
 function V(e) {
     let { messages: t } = e;
-    t.forEach((e) => A(e));
+    t.forEach((e) => C(e));
 }
 function H(e) {
     let { pins: t } = e;
     t.forEach((e) => {
         let { message: t } = e;
-        return A(t);
+        return C(t);
     });
 }
 function Y(e) {
@@ -170,20 +170,20 @@ function Y(e) {
     t.forEach((e) => {
         let { messages: t } = e;
         t.forEach((e) => {
-            e.forEach((e) => A(e));
+            e.forEach((e) => C(e));
         });
     });
 }
 function W(e) {
     let { firstMessages: t } = e;
     if (null == t) return !1;
-    null == t || t.forEach((e) => A(e));
+    null == t || t.forEach((e) => C(e));
 }
 function K(e) {
     let { threads: t } = e;
     Object.values(t).map((e) => {
         let { first_message: t } = e;
-        return null != t && A(t);
+        return null != t && C(t);
     });
 }
 class z extends (r = o.ZP.Store) {
@@ -226,7 +226,7 @@ class z extends (r = o.ZP.Store) {
 }
 p(z, "displayName", "GiftCodeStore");
 let q = new z(l.Z, {
-        CONNECTION_OPEN: C,
+        CONNECTION_OPEN: A,
         CHANNEL_SELECT: N,
         GIFT_CODE_RESOLVE: P,
         GIFT_CODE_RESOLVE_SUCCESS: R,

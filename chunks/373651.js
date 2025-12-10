@@ -1,4 +1,4 @@
-n.d(t, { default: () => T });
+n.d(t, { default: () => M });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -25,8 +25,8 @@ var i = n(481060),
     C = n(218035),
     S = n(775666),
     Z = n(593589),
-    k = n(442754),
-    E = n(981631),
+    E = n(442754),
+    k = n(981631),
     I = n(388032);
 function w(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -63,15 +63,15 @@ function N(e) {
         v = (0, b.Z)(t),
         y = (0, p.Z)(t),
         O = (0, P.ZP)(t),
-        k = (0, C.Z)(t),
-        E = (0, x.Z)(t),
+        E = (0, C.Z)(t),
+        k = (0, x.Z)(t),
         w = (0, d.Z)({
             id: t.id,
             label: I.intl.string(I.t.gFHI3k),
         }),
         N = (0, s.Z)(t),
-        M = (0, S.ZP)(t),
-        T = (0, m.Mn)("ChannelContextFavoritesMenu"),
+        T = (0, S.ZP)(t),
+        M = (0, m.Mn)("ChannelContextFavoritesMenu"),
         D = (0, Z.Z)(t, "list_favorites_text_channel_context_menu");
     return (0, r.jsxs)(i.v2r, {
         navId: "channel-context",
@@ -84,9 +84,9 @@ function N(e) {
                 children: [v, y, g, c],
             }),
             (0, r.jsxs)(i.kSQ, {
-                children: [O, T ? M : k],
+                children: [O, M ? T : E],
             }),
-            (0, r.jsx)(i.kSQ, { children: E }),
+            (0, r.jsx)(i.kSQ, { children: k }),
             (0, r.jsx)(i.kSQ, { children: N }),
             (0, r.jsx)(i.kSQ, { children: u }),
             (0, r.jsxs)(i.kSQ, {
@@ -96,28 +96,28 @@ function N(e) {
         ],
     });
 }
-function M(e) {
+function T(e) {
     let { channel: t, guild: n, onSelect: o } = e,
         l = (0, _.Z)(t),
         c = (0, j.Z)(t),
         u = (0, h.l)(t),
         f = (0, h.P)(t),
-        b = (0, k.Z)(t),
+        b = (0, E.Z)(t),
         p = (0, P.ZP)(t),
-        E = (0, x.Z)(t),
+        k = (0, x.Z)(t),
         w = (0, O.Z)(t, n),
         N = (0, g.Z)(t, n),
-        M = (0, v.Z)(t, n),
-        T = (0, y.Z)(t),
+        T = (0, v.Z)(t, n),
+        M = (0, y.Z)(t),
         D = (0, d.Z)({
             id: t.id,
             label: I.intl.string(I.t.gFHI3k),
         }),
         A = (0, s.Z)(t),
-        L = (0, Z.Z)(t, "list_text_channel_context_menu"),
-        F = (0, C.Z)(t),
+        F = (0, Z.Z)(t, "list_text_channel_context_menu"),
+        L = (0, C.Z)(t),
         U = (0, S.ZP)(t),
-        R = (0, m.Mn)("ChannelContextMenuNormal");
+        B = (0, m.Mn)("ChannelContextMenuNormal");
     return (0, r.jsxs)(i.v2r, {
         navId: "channel-context",
         onClose: a.Zy,
@@ -134,21 +134,21 @@ function M(e) {
             (0, r.jsxs)(
                 i.kSQ,
                 {
-                    children: [w, b, c, L],
+                    children: [w, b, c, F],
                 },
                 "channel-actions",
             ),
             (0, r.jsxs)(
                 i.kSQ,
                 {
-                    children: [p, R ? U : F],
+                    children: [p, B ? U : L],
                 },
                 "notifications",
             ),
             (0, r.jsxs)(
                 i.kSQ,
                 {
-                    children: [E, N, M, T],
+                    children: [k, N, T, M],
                 },
                 "admin-actions",
             ),
@@ -158,12 +158,12 @@ function M(e) {
         ],
     });
 }
-let T = (0, l.Z)(
+let M = (0, l.Z)(
     (0, o.Z)(
         function (e) {
-            return (0, u.Z)() ? (0, r.jsx)(N, w({}, e)) : (0, r.jsx)(M, w({}, e));
+            return (0, u.Z)() ? (0, r.jsx)(N, w({}, e)) : (0, r.jsx)(T, w({}, e));
         },
-        { object: E.qAy.CONTEXT_MENU },
+        { object: k.qAy.CONTEXT_MENU },
     ),
     [c.Z.CONTEXT_MENU, c.Z.CHANNEL_LIST_TEXT_CHANNEL_MENU],
 );

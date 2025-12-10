@@ -1,7 +1,7 @@
 n.d(t, {
-    $W: () => A,
+    $W: () => C,
     Mx: () => P,
-    PZ: () => C,
+    PZ: () => A,
     h4: () => R,
     ic: () => T,
     n5: () => N,
@@ -154,7 +154,7 @@ class T extends a.Component {
         });
     }
 }
-class A extends (r = a.Component) {
+class C extends (r = a.Component) {
     renderIcon() {
         var e;
         let { channel: t } = this.props,
@@ -259,8 +259,8 @@ class A extends (r = a.Component) {
         });
     }
 }
-S(A, "defaultProps", { unread: !1 });
-class C extends a.Component {
+S(C, "defaultProps", { unread: !1 });
+class A extends a.Component {
     renderIcon() {
         let { channel: e, status: t } = this.props;
         return (0, i.jsx)("div", {

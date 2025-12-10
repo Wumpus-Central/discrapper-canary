@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(642613);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    s = n.n(i),
-    o = n(497598),
+    o = n.n(i),
+    s = n(497598),
     a = n(792091),
     c = n(199849),
     u = n(626135),
@@ -12,71 +12,71 @@ var r = n(54381),
     f = n(811847),
     p = n(215023),
     m = n(981631),
-    C = n(388032),
-    h = n(182668),
+    h = n(388032),
+    C = n(182668),
     _ = n(219588);
 let b = () => {
     let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, g.S)(),
         i = (0, d.sp)(),
         b = (0, f.B)("CollectiblesSortSelect"),
-        E = n(),
-        v = l.useMemo(() => p.aP.filter((e) => e.sortType !== a.E.RELEVANCE || E), [E]),
+        v = n(),
+        E = l.useMemo(() => p.aP.filter((e) => e.sortType !== a.E.RELEVANCE || v), [v]),
         S = l.useCallback((e) => {
             let { sortType: t, sortDirection: n } = e;
             return t === a.E.RECENCY
                 ? {
-                      label: C.intl.string(C.t["51Bhiz"]),
+                      label: h.intl.string(h.t["51Bhiz"]),
                       value: "recent",
                   }
                 : t === a.E.PRICE
-                  ? n === o.F.ASC
+                  ? n === s.F.ASC
                       ? {
-                            label: C.intl.string(C.t.m8RVU2),
+                            label: h.intl.string(h.t.m8RVU2),
                             value: "price-asc",
                         }
                       : {
-                            label: C.intl.string(C.t.zBwQJO),
+                            label: h.intl.string(h.t.zBwQJO),
                             value: "price-desc",
                         }
                   : t === a.E.RELEVANCE
                     ? {
-                          label: C.intl.string(C.t["XoeT/z"]),
+                          label: h.intl.string(h.t["XoeT/z"]),
                           value: "relevance",
                       }
                     : {
-                          label: C.intl.string(C.t.Y68e5p),
+                          label: h.intl.string(h.t.Y68e5p),
                           value: "popularity",
                       };
         }, []),
-        x = l.useCallback(
+        O = l.useCallback(
             (e) =>
                 ({
                     recent: {
                         sortType: a.E.RECENCY,
-                        sortDirection: o.F.DESC,
+                        sortDirection: s.F.DESC,
                     },
                     "price-asc": {
                         sortType: a.E.PRICE,
-                        sortDirection: o.F.ASC,
+                        sortDirection: s.F.ASC,
                     },
                     "price-desc": {
                         sortType: a.E.PRICE,
-                        sortDirection: o.F.DESC,
+                        sortDirection: s.F.DESC,
                     },
                     popularity: {
                         sortType: a.E.POPULARITY,
-                        sortDirection: o.F.DESC,
+                        sortDirection: s.F.DESC,
                     },
                     relevance: {
                         sortType: a.E.RELEVANCE,
-                        sortDirection: o.F.DESC,
+                        sortDirection: s.F.DESC,
                     },
                 })[e],
             [],
         ),
-        O = l.useCallback(
+        x = l.useCallback(
             (e) => {
-                let n = S(x(e));
+                let n = S(O(e));
                 u.default.track(m.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: null == i ? void 0 : i.sessionId,
                     page_section: null == i ? void 0 : i.pageSection,
@@ -86,20 +86,20 @@ let b = () => {
                     cta_name: "sort by ".concat(n.label.toLowerCase()),
                     page_type: "catalog",
                 }),
-                    t(x(e));
+                    t(O(e));
             },
-            [i, S, x, t],
+            [i, S, O, t],
         ),
         y = S(e);
     return (0, r.jsx)("div", {
-        className: s()(h.container, { [_.customCursors]: b }),
+        className: o()(C.container, { [_.customCursors]: b }),
         children: (0, r.jsx)(c.B6, {
-            options: v.map(S),
-            select: O,
+            options: E.map(S),
+            select: x,
             isSelected: (e) => e === y.value,
             serialize: (e) => e,
             popoutWidth: 224,
-            popoutClassName: s()({ [_.customCursors]: b }),
+            popoutClassName: o()({ [_.customCursors]: b }),
         }),
     });
 };

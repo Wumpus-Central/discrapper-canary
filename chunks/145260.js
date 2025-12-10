@@ -48,8 +48,8 @@ let g = [],
     S = !1,
     I = _.QZA.CLOSED,
     T = {},
-    A = !1,
-    C = null;
+    C = !1,
+    A = null;
 function N(e) {
     let { section: t } = e;
     if (t !== _.pNK.INTEGRATIONS) return !1;
@@ -60,7 +60,7 @@ function N(e) {
 }
 function P(e) {
     let { section: t, sectionId: n } = e;
-    (i = t), (C = n);
+    (i = t), (A = n);
 }
 function R(e) {
     if (null != (r = p.Z.getProps().guild) && d.Z.can(_.Plq.MANAGE_GUILD, r)) {
@@ -75,15 +75,15 @@ function R(e) {
         let e = z(O.id);
         null != e && (O = e);
     }
-    (b = null), (I = _.QZA.OPEN), (T = {}), (A = !1);
+    (b = null), (I = _.QZA.OPEN), (T = {}), (C = !1);
 }
 function D() {
-    (r = null), (g = []), (E = []), (b = null), (y = null), (O = null), (I = _.QZA.CLOSED), (A = !1);
+    (r = null), (g = []), (E = []), (b = null), (y = null), (O = null), (I = _.QZA.CLOSED), (C = !1);
 }
 let w = s().debounce(() => {
-    A &&
-        (null != y ? s().isEqual(y, K(y.id)) && (A = !1) : null != O && s().isEqual(O, z(O.id)) && (A = !1),
-        A || Q.emitChange());
+    C &&
+        (null != y ? s().isEqual(y, K(y.id)) && (C = !1) : null != O && s().isEqual(O, z(O.id)) && (C = !1),
+        C || Q.emitChange());
 }, 500);
 function x(e) {
     let { settings: t } = e;
@@ -91,23 +91,23 @@ function x(e) {
     (y = h({}, y)),
         null != t.enableEmoticons &&
             y.enable_emoticons !== t.enableEmoticons &&
-            ((y.enable_emoticons = t.enableEmoticons), (A = !0)),
+            ((y.enable_emoticons = t.enableEmoticons), (C = !0)),
         null != t.expireBehavior &&
             y.expire_behavior !== t.expireBehavior &&
-            ((y.expire_behavior = t.expireBehavior), (A = !0)),
+            ((y.expire_behavior = t.expireBehavior), (C = !0)),
         null != t.expireGracePeriod &&
             y.expire_grace_period !== t.expireGracePeriod &&
-            ((y.expire_grace_period = t.expireGracePeriod), (A = !0)),
-        A && w();
+            ((y.expire_grace_period = t.expireGracePeriod), (C = !0)),
+        C && w();
 }
 function L(e) {
     let { settings: t } = e;
     if (null == O) return !1;
     (O = h({}, O)),
-        null != t.name && O.name !== t.name && ((O.name = t.name), (A = !0)),
-        void 0 !== t.avatar && O.avatar !== t.avatar && ((O.avatar = t.avatar), (A = !0)),
-        null != t.channelId && O.channel_id !== t.channelId && ((O.channel_id = t.channelId), (A = !0)),
-        A && w();
+        null != t.name && O.name !== t.name && ((O.name = t.name), (C = !0)),
+        void 0 !== t.avatar && O.avatar !== t.avatar && ((O.avatar = t.avatar), (C = !0)),
+        null != t.channelId && O.channel_id !== t.channelId && ((O.channel_id = t.channelId), (C = !0)),
+        C && w();
 }
 function j() {
     (I = _.QZA.SUBMITTING), (T = {});
@@ -142,7 +142,7 @@ function k(e) {
             });
         if (null != r) {
             let n = h({}, t, r);
-            (null == y ? void 0 : y.id) === n.id && (!1 === n.enabled ? (y = null) : A || (y = n)), (g[e] = n);
+            (null == y ? void 0 : y.id) === n.id && (!1 === n.enabled ? (y = null) : C || (y = n)), (g[e] = n);
         } else (null == y ? void 0 : y.id) === t.id && (y = null), g.splice(e, 1);
     }
     (g = [...g]), w();
@@ -159,7 +159,7 @@ function U(e) {
             });
             if (null != r) {
                 let n = h({}, t, r);
-                (E[e] = n), A || (null == O ? void 0 : O.id) !== n.id || (O = n);
+                (E[e] = n), C || (null == O ? void 0 : O.id) !== n.id || (O = n);
             } else (null == O ? void 0 : O.id) === t.id && (O = null), E.splice(e, 1);
         }
         for (let e of i)
@@ -173,30 +173,30 @@ function U(e) {
 }
 function G(e) {
     let { commandId: t } = e;
-    (b = t), (y = null), (O = null), (T = {}), (A = !0);
+    (b = t), (y = null), (O = null), (T = {}), (C = !0);
 }
 function Z(e) {
     let { commandId: t } = e;
     if (null == b || b !== t) return !1;
-    (b = null), (T = {}), (A = !1);
+    (b = null), (T = {}), (C = !1);
 }
 function B(e) {
     let { integrationId: t } = e,
         n = K(t);
     if (null == n) return !1;
-    (y = n), (b = null), (O = null), (T = {}), (A = !1);
+    (y = n), (b = null), (O = null), (T = {}), (C = !1);
 }
 function F() {
-    (y = null), (T = {}), (A = !1);
+    (y = null), (T = {}), (C = !1);
 }
 function V(e) {
     let { webhookId: t } = e,
         n = z(t);
     if (null == n) return !1;
-    (O = n), (b = null), (y = null), (T = {}), (A = !1);
+    (O = n), (b = null), (y = null), (T = {}), (C = !1);
 }
 function H() {
-    (O = null), (T = {}), (A = !1);
+    (O = null), (T = {}), (C = !1);
 }
 function Y() {
     return R(!1);
@@ -221,7 +221,7 @@ class q extends (a = l.ZP.Store) {
         this.waitFor(p.Z, f.Z, d.Z);
     }
     hasChanges() {
-        return A;
+        return C;
     }
     get guild() {
         return r;
@@ -251,7 +251,7 @@ class q extends (a = l.ZP.Store) {
         return null != i ? i : _.b4C.OVERVIEW;
     }
     getSectionId() {
-        return C;
+        return A;
     }
     getIntegration(e) {
         return K(e);

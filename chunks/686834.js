@@ -1,7 +1,7 @@
 n.d(t, { X: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(205120);
+    a = n(467721);
 n(442837), n(616022);
 var o = n(49436),
     s = n(968843),
@@ -50,9 +50,9 @@ function h(e) {
                     quest: t,
                 }),
         }),
-        [T, A] = i.useState(!1),
-        C = () => A(!0),
-        N = () => A(!1),
+        [T, C] = i.useState(!1),
+        A = () => C(!0),
+        N = () => C(!1),
         P = null != y ? y : f.U0;
     return (0, r.jsx)(l.A, {
         questOrQuests: t,
@@ -72,9 +72,9 @@ function h(e) {
                               }),
                 },
                 className: p.questsCard,
-                onMouseEnter: C,
+                onMouseEnter: A,
                 onMouseLeave: N,
-                onFocus: C,
+                onFocus: A,
                 onBlur: N,
                 children: (0, r.jsxs)("div", {
                     ref: (t) => {

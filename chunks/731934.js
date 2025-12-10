@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(225753),
     I = n(388032),
     T = n(519279),
-    A = n(790680),
-    C = n(197571),
+    C = n(790680),
+    A = n(197571),
     N = n(926895);
 function P(e, t, n) {
     return (
@@ -78,10 +78,10 @@ function w(e, t) {
 function x(e) {
     let { header: t, description: n, stepNumber: i } = e;
     return (0, r.jsxs)("div", {
-        className: A.step,
+        className: C.step,
         children: [
             (0, r.jsx)("div", {
-                className: A.stepNumber,
+                className: C.stepNumber,
                 children: (0, r.jsx)(c.Heading, {
                     variant: "heading-md/semibold",
                     color: "text-brand",
@@ -106,35 +106,35 @@ function x(e) {
 }
 function L() {
     return (0, r.jsxs)("div", {
-        className: o()(A.box, T.box, A.linkingBanner, A.linkingBannerParent),
+        className: o()(C.box, T.box, C.linkingBanner, C.linkingBannerParent),
         children: [
             (0, r.jsxs)("div", {
-                className: A.linkingBannerUpper,
+                className: C.linkingBannerUpper,
                 children: [
                     (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)(c.Heading, {
-                                className: C.marginBottom8,
+                                className: A.marginBottom8,
                                 variant: "heading-xl/medium",
                                 children: (0, r.jsx)(c.y5t, { children: I.intl.string(S.default.pHEnV5) }),
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                className: C.marginBottom20,
+                                className: A.marginBottom20,
                                 children: I.intl.string(S.default["1J/gZ4"]),
                             }),
                         ],
                     }),
                     (0, r.jsx)("img", {
-                        className: A.bannerArt,
+                        className: C.bannerArt,
                         src: N,
                         alt: I.intl.string(S.default["r+PDmu"]),
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: A.steps,
+                className: C.steps,
                 children: [
                     (0, r.jsx)(x, {
                         header: I.intl.string(S.default["7xxAni"]),
@@ -159,19 +159,19 @@ function L() {
 function j() {
     let e = (0, m.VM)();
     return (0, r.jsxs)("div", {
-        className: o()(A.box, T.box, A.linkingBanner),
+        className: o()(C.box, T.box, C.linkingBanner),
         children: [
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(c.Heading, {
-                        className: C.marginBottom8,
+                        className: A.marginBottom8,
                         variant: "heading-xl/medium",
                         children: (0, r.jsx)(c.y5t, { children: I.intl.string(S.default.zUCWEL) }),
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-sm/medium",
                         color: "text-muted",
-                        className: C.marginBottom20,
+                        className: A.marginBottom20,
                         children: I.intl.format(S.default.yMnoDl, {
                             link: "https://support.discord.com/hc/articles/14155060633623",
                         }),
@@ -180,7 +180,7 @@ function j() {
                 ],
             }),
             (0, r.jsx)("img", {
-                className: A.bannerArt,
+                className: C.bannerArt,
                 src: N,
                 alt: I.intl.string(S.default["r+PDmu"]),
             }),
@@ -218,7 +218,7 @@ function M(e) {
                     d.Z,
                     {
                         children: (0, r.jsx)(c.Text, {
-                            className: C.marginBottom8,
+                            className: A.marginBottom8,
                             variant: "eyebrow",
                             color: "text-default",
                             children: n,
@@ -229,7 +229,7 @@ function M(e) {
             [n],
         );
     return (0, r.jsx)("div", {
-        className: A.section,
+        className: C.section,
         children: (0, r.jsx)(l.bG, {
             navigator: f,
             children: (0, r.jsx)(l.SJ, {
@@ -283,16 +283,16 @@ let k = () => {
                   requests: t,
               })
             : (0, r.jsxs)("div", {
-                  className: A.section,
+                  className: C.section,
                   children: [
                       (0, r.jsx)(c.Text, {
-                          className: C.marginBottom8,
+                          className: A.marginBottom8,
                           variant: "eyebrow",
                           color: "text-default",
                           children: a,
                       }),
                       (0, r.jsx)("div", {
-                          className: A.box,
+                          className: C.box,
                           children: (0, r.jsx)(h.Z, { text: I.intl.string(S.default.C4ScLD) }),
                       }),
                   ],
@@ -307,7 +307,7 @@ let k = () => {
             );
         return e
             ? (0, r.jsx)("div", {
-                  className: A.maxConnectionInfo,
+                  className: C.maxConnectionInfo,
                   children: (0, r.jsx)(c.Text, {
                       variant: "text-xxs/medium",
                       color: "text-muted",
@@ -333,10 +333,10 @@ let k = () => {
         return null == n
             ? null
             : (0, r.jsxs)("div", {
-                  className: C.marginTop20,
+                  className: A.marginTop20,
                   children: [
                       (0, r.jsx)(c.Heading, {
-                          className: A.supportHeader,
+                          className: C.supportHeader,
                           variant: "heading-sm/semibold",
                           children: (0, r.jsx)(c.y5t, { children: I.intl.string(S.default["7/tVhv"]) }),
                       }),
@@ -365,7 +365,7 @@ let k = () => {
     B = () => {
         let e = (0, _.Z)();
         return (0, r.jsxs)("div", {
-            className: A.container,
+            className: C.container,
             children: [
                 e ? (0, r.jsx)(L, {}) : (0, r.jsx)(j, {}),
                 (0, r.jsx)(k, {}),

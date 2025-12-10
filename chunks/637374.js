@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(164670),
     I = n(436585),
     T = n(313789),
-    A = n(518596),
-    C = n(314897),
+    C = n(518596),
+    A = n(314897),
     N = n(82142),
     P = n(283595),
     R = n(594174),
@@ -112,7 +112,7 @@ class z extends i.PureComponent {
         return e >= f.aL;
     }
     handleViewInventory() {
-        (0, A.openUserSettings)(T.n.GIFT_PANEL, { section: G.oAB.INVENTORY });
+        (0, C.openUserSettings)(T.n.GIFT_PANEL, { section: G.oAB.INVENTORY });
     }
     render() {
         return (0, r.jsx)(f.$G, {
@@ -374,7 +374,7 @@ class q extends i.Component {
             V(this, "handleVerificationClick", (e) => {
                 e.stopPropagation(),
                     e.preventDefault(),
-                    (0, A.openUserSettings)(T.n.ACCOUNT_PANEL, { section: G.oAB.ACCOUNT });
+                    (0, C.openUserSettings)(T.n.ACCOUNT_PANEL, { section: G.oAB.ACCOUNT });
             }),
             V(this, "handleAccept", (e) => {
                 let { channelId: t, code: n, content: r, type: i, giftInfo: a } = this.props;
@@ -405,7 +405,7 @@ class q extends i.Component {
                       }))
                     : null != t &&
                       t.isSubscription &&
-                      (e.preventDefault(), (0, A.openUserSettings)(T.n.NITRO_PANEL, { section: G.oAB.PREMIUM }));
+                      (e.preventDefault(), (0, C.openUserSettings)(T.n.NITRO_PANEL, { section: G.oAB.PREMIUM }));
             }),
             V(this, "handleClaimPromotion", (e) => {
                 var t;
@@ -458,7 +458,7 @@ let Q = (0, _.Z)((0, p.Z)(q)),
             ),
             u = (0, h.q)(null == s ? void 0 : s.applicationId),
             d = (0, M.IV)(null == i ? void 0 : i.subscriptionPlanId),
-            f = (0, c.e7)([C.default], () => (null != i ? C.default.getId() === i.userId : C.default.getId() === n.id));
+            f = (0, c.e7)([A.default], () => (null != i ? A.default.getId() === i.userId : A.default.getId() === n.id));
         return (0, r.jsx)(
             Q,
             W(H({}, e), {

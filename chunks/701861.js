@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(239091),
     p = n(100527),
     f = n(522558),
-    h = n(762500),
-    g = n(703656),
+    g = n(762500),
+    h = n(703656),
     m = n(592125),
     _ = n(131951),
     b = n(699516),
@@ -54,14 +54,14 @@ function A(e) {
                 joinCallVideo: !0,
             });
         }, [t.id]),
-        h = i.useCallback(() => {
+        g = i.useCallback(() => {
             O.Z.removeFriend({
                 userId: t.id,
                 applicationId: l ? n : null,
                 location: "Friends",
             });
         }, [n, l, t.id]),
-        g = i.useCallback(() => {
+        h = i.useCallback(() => {
             let e = l ? j.intl.string(j.t.RLcE6x) : j.intl.string(j.t.cvSt1J);
             c.Z.show({
                 title: j.intl.formatToPlainString(j.t.fPLvZd, { name: E.ZP.getName(t) }),
@@ -69,9 +69,9 @@ function A(e) {
                 confirmText: e,
                 confirmVariant: "critical-primary",
                 cancelText: j.intl.string(j.t["ETE/oC"]),
-                onConfirm: h,
+                onConfirm: g,
             });
-        }, [h, l, t]),
+        }, [g, l, t]),
         m = (0, s.e7)([_.Z], () => _.Z.supports(N.AN.VIDEO)),
         b = t.isProvisional,
         v = l ? j.intl.string(j.t.RLcE6x) : j.intl.string(j.t.cvSt1J);
@@ -97,7 +97,7 @@ function A(e) {
             (0, r.jsx)(o.sNh, {
                 id: "remove-friend",
                 label: v,
-                action: g,
+                action: h,
                 color: "danger",
             }),
         ],
@@ -122,14 +122,14 @@ class Z extends i.PureComponent {
                 giftIntentType: c,
                 hasFriendAnniversarySection: u,
             } = this.props,
-            { isActiveRow: g } = this.state;
+            { isActiveRow: h } = this.state;
         return (0, f.i)(p.Z.FRIENDS_LIST) && c === T.hX.FRIEND_ANNIVERSARY && u
-            ? (0, r.jsx)(h.Z, {
+            ? (0, r.jsx)(g.Z, {
                   ref: this.peopleListItemRef,
                   isFocused: t,
-                  isActive: g,
+                  isActive: h,
                   recipientUser: e,
-                  onOtherHover: () => (g ? null : (0, d.Zy)()),
+                  onOtherHover: () => (h ? null : (0, d.Zy)()),
                   onClick: this.handleOpenPrivateChannel,
                   giftIntentType: c,
                   status: l,
@@ -141,9 +141,9 @@ class Z extends i.PureComponent {
             : (0, r.jsx)(y.Z, {
                   ref: this.peopleListItemRef,
                   isFocused: t,
-                  isActive: g,
+                  isActive: h,
                   user: e,
-                  onOtherHover: () => (g ? null : (0, d.Zy)()),
+                  onOtherHover: () => (h ? null : (0, d.Zy)()),
                   onClick: this.handleOpenPrivateChannel,
                   children: (t) =>
                       (0, r.jsxs)("div", {
@@ -196,7 +196,7 @@ class Z extends i.PureComponent {
                     m.Z.getMutablePrivateChannels(),
                     (e) => e.type === S.d4z.DM && e.getRecipientId() === t.id,
                 );
-                null != n ? (0, g.uL)(S.Z5c.CHANNEL(S.ME, n.id)) : u.Z.openPrivateChannel({ recipientIds: t.id });
+                null != n ? (0, h.uL)(S.Z5c.CHANNEL(S.ME, n.id)) : u.Z.openPrivateChannel({ recipientIds: t.id });
             }),
             x(this, "handleOpenActionsMenu", (e) => {
                 let { user: t, isGameRelationship: n, applicationId: i } = this.props;

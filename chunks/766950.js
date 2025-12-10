@@ -22,10 +22,10 @@ var l = n(54381),
     v = n(579346),
     P = n(438759),
     N = n(512070),
-    k = n(299939),
-    O = n(305813),
-    y = n(981631),
-    T = n(905170),
+    O = n(299939),
+    k = n(305813),
+    T = n(981631),
+    y = n(905170),
     E = n(388032),
     D = n(300119);
 function R(e) {
@@ -71,7 +71,7 @@ function R(e) {
         }),
         er = o.useCallback(() => {
             let { fontId: e, effectId: t, colors: n } = (0, _.aY)();
-            U(e), K(t), t === i.m.GRADIENT ? ee(n) : J(n[0]), x.default.track(y.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
+            U(e), K(t), t === i.m.GRADIENT ? ee(n) : J(n[0]), x.default.track(T.rMx.DISPLAY_NAME_STYLES_SURPRISE_ME);
         }, [ee, J]),
         ei = o.useCallback(
             (e) => {
@@ -112,7 +112,7 @@ function R(e) {
                                               className: D.sectionHeader,
                                               children: (0, l.jsx)(d.Heading, {
                                                   variant: "heading-lg/semibold",
-                                                  children: E.intl.string(T.default.ZPMAlX),
+                                                  children: E.intl.string(y.default.ZPMAlX),
                                               }),
                                           }),
                                           (0, l.jsx)(N.Z, {
@@ -135,7 +135,7 @@ function R(e) {
                                           }),
                                       ],
                                   }),
-                                  (0, l.jsx)(O.Z, {
+                                  (0, l.jsx)(k.Z, {
                                       user: B,
                                       guild: M,
                                       displayName: Z,
@@ -146,7 +146,7 @@ function R(e) {
                                   }),
                               ],
                           }),
-                          (0, l.jsx)(k.B, {
+                          (0, l.jsx)(O.B, {
                               onApply: eo,
                               onSurpriseMe: er,
                               onClose: w,

@@ -25,8 +25,8 @@ let a = {
     S = 65474,
     I = 65476,
     T = 65499,
-    A = 65501,
-    C = 65498,
+    C = 65501,
+    A = 65498,
     N = 65504,
     P = 65505,
     R = 65506,
@@ -147,7 +147,7 @@ function ee(e, t) {
 }
 function et(e, t) {
     let n = e.getUint16(t);
-    return (n >= N && n <= w) || n === x || n === v || n === S || n === I || n === T || n === A || n === C;
+    return (n >= N && n <= w) || n === x || n === v || n === S || n === I || n === T || n === C || n === A;
 }
 function en(e, t) {
     return e.getUint16(t) === L;

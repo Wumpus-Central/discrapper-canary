@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(736519),
     I = n(43747),
     T = n(970815),
-    A = n(430824),
-    C = n(78839),
+    C = n(430824),
+    A = n(78839),
     N = n(981631),
     P = n(474936),
     R = n(616926);
@@ -107,8 +107,8 @@ let M = {
             component: () => {
                 let [e, t] = i.useState(P.Si.TIER_2),
                     [n, b] = i.useState(null),
-                    y = (0, s.Wu)([A.Z], () => A.Z.getGuildsArray()),
-                    [D] = (0, s.Wu)([C.Z], () => [C.Z.getPremiumSubscription()]),
+                    y = (0, s.Wu)([C.Z], () => C.Z.getGuildsArray()),
+                    [D] = (0, s.Wu)([A.Z], () => [A.Z.getPremiumSubscription()]),
                     x = y.map((e) => ({
                         value: e,
                         label: e.name,

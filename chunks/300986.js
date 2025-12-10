@@ -11,8 +11,8 @@ var i = n(442837),
     d = n(51144),
     p = n(665149),
     f = n(981631),
-    h = n(388032);
-let g = new Set(["ko", "ja"]);
+    g = n(388032);
+let h = new Set(["ko", "ja"]);
 function m(e) {
     let { className: t, focusSectionProps: n } = e,
         m = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
@@ -54,8 +54,8 @@ function m(e) {
                     className: t,
                     onClick: () => c.default.track(f.rMx.HELP_CLICKED, { highlighted: b }),
                     icon: a.idN,
-                    tooltipPosition: g.has(_) ? "left" : void 0,
-                    tooltip: h.intl.string(h.t["cqEoj/"]),
+                    tooltipPosition: h.has(_) ? "left" : void 0,
+                    tooltip: g.intl.string(g.t["cqEoj/"]),
                 },
                 n,
             ),

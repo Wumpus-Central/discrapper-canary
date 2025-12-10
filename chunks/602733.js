@@ -73,7 +73,7 @@ function T(e) {
     };
     return h.Z.fromServer(t);
 }
-function A(e) {
+function C(e) {
     let [t, n] = r.useState([]),
         [i, o] = r.useState(!1);
     return (
@@ -103,7 +103,7 @@ function A(e) {
         }
     );
 }
-function C(e) {
+function A(e) {
     let t = e.slice(0, b),
         n = (0, i.e7)([o.Z], () => t.some((e) => o.Z.isFetchingProduct(e)));
     return (
@@ -130,8 +130,8 @@ function P(e) {
     let { defaultWishlistId: t } = (0, i.cj)([c.Z], () => ({ defaultWishlistId: c.Z.getFirstWishlistId(e.id) })),
         { wishlist: n, isFetching: a, error: o } = S(t),
         s = r.useMemo(() => null != n && n.items.filter((e) => !0 !== e.isOwned).length >= b, [n]),
-        { validatedSkuIds: l, isValidating: u } = A(e.id),
-        { isFetching: d } = C(l);
+        { validatedSkuIds: l, isValidating: u } = C(e.id),
+        { isFetching: d } = A(l);
     return {
         defaultWishlistId: t,
         wishlist: n,

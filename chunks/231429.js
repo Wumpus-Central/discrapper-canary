@@ -22,7 +22,7 @@ var r = n(54381),
     S = n(616922),
     I = n(837262);
 let T = 8;
-function A(e) {
+function C(e) {
     let { partyMembers: t, partySize: n, maxPartySize: i, guildId: a, activityActionType: s } = e,
         l = Math.max(n, t.length),
         c = (0, h.yy)({
@@ -52,7 +52,7 @@ function A(e) {
         ],
     });
 }
-function C(e) {
+function A(e) {
     var t;
     return (null == (t = e.activity) ? void 0 : t.type) === v.mFx.STREAM_REQUEST;
 }
@@ -90,7 +90,7 @@ function N(e) {
         ),
         U = i.useMemo(() => {
             var e;
-            return (0, r.jsx)(A, {
+            return (0, r.jsx)(C, {
                 partyMembers: k,
                 partySize: j,
                 maxPartySize: M,
@@ -109,7 +109,7 @@ function N(e) {
               presenceActivity: w,
               guildId: I.guild_id,
           })
-        : C(T)
+        : A(T)
           ? (0, r.jsx)(l.Z, {
                 analyticsLocations: o,
                 application: R,

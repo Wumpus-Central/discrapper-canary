@@ -54,8 +54,8 @@ function I(e) {
             setPopoutRef: v,
             channelId: I,
             messageId: T,
-            roleId: A,
-            openedAt: C,
+            roleId: C,
+            openedAt: A,
             onHide: N,
             newAnalyticsLocations: P = [],
             disableAutoFocus: R = !1,
@@ -68,7 +68,7 @@ function I(e) {
             guildId: n,
             channelId: I,
             messageId: T,
-            roleId: A,
+            roleId: C,
         }),
         L = i.useRef(null),
         j = (0, p.ZP)(t.id, n);
@@ -81,7 +81,7 @@ function I(e) {
         value: w,
         children: (0, r.jsx)(d.Mt, {
             value: x,
-            openedAt: C,
+            openedAt: A,
             fetchStartedAt: null == j ? void 0 : j.fetchStartedAt,
             fetchEndedAt: null == j ? void 0 : j.fetchEndedAt,
             isLoaded: null == j ? void 0 : j.isLoaded,

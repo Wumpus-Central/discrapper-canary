@@ -16,8 +16,8 @@ var l = n(54381),
     u = n(493773),
     m = n(607070),
     g = n(367907),
-    h = n(601964),
-    f = n(626135),
+    f = n(601964),
+    h = n(626135),
     N = n(768581),
     I = n(956664),
     p = n(45966),
@@ -176,7 +176,7 @@ function L(e) {
     i.useEffect(() => {
         if (!s)
             return (
-                f.default.track(
+                h.default.track(
                     j.rMx.GUILD_ONBOARDING_STEP_VIEWED,
                     G(D({}, (0, g.hH)(t.id)), {
                         step: -1,
@@ -184,7 +184,7 @@ function L(e) {
                     }),
                 ),
                 () => {
-                    f.default.track(
+                    h.default.track(
                         j.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
                         G(D({}, (0, g.hH)(t.id)), {
                             step: -1,
@@ -196,7 +196,7 @@ function L(e) {
                 }
             );
     }, [t.id, m, s]);
-    let N = i.useMemo(() => (0, h.EB)(t, 135, !1, !0), [t]);
+    let N = i.useMemo(() => (0, f.EB)(t, 135, !1, !0), [t]);
     return (
         (0, u.ZP)(() => {
             setTimeout(() => {

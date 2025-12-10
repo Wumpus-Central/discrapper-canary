@@ -26,8 +26,8 @@ var r = n(54381),
     S = n(405613),
     I = n(95291),
     T = n(742593),
-    A = n(217804),
-    C = n(139712),
+    C = n(217804),
+    A = n(139712),
     N = n(765305),
     P = n(388032),
     R = n(182279);
@@ -56,7 +56,7 @@ let D = (e, t) => (n) => {
                 let e = m.Z.getGuild(n.id);
                 return null != e ? e : (0, h.lM)(n) ? n : (0, h.Qs)(n);
             }, [n]),
-            _ = (0, A.u)(a, o),
+            _ = (0, C.u)(a, o),
             g = i.useCallback(
                 (e) => {
                     u && null != a && (e.stopPropagation(), (0, c.Bk)(a));
@@ -146,7 +146,7 @@ let D = (e, t) => (n) => {
             } = e,
             p = (0, s.e7)([E.ZP], () => E.ZP.isInterestedInEventRecurrence(n, i), [n, i]),
             _ = (e) => {
-                e.stopPropagation(), (0, C.Z)(n, i, t);
+                e.stopPropagation(), (0, A.Z)(n, i, t);
             },
             m = (e) => {
                 e.stopPropagation(), c ? a && f() : d();
@@ -214,8 +214,8 @@ let D = (e, t) => (n) => {
                     });
             }, [c, n, _]);
         if (null == n || !m) return null;
-        let A = (0, E.xt)(n),
-            C = (0, E.Z2)(n),
+        let C = (0, E.xt)(n),
+            A = (0, E.Z2)(n),
             P = n.entity_type === N.WX.EXTERNAL;
         return (0, r.jsx)(f.Z, {
             className: o()({ [R.clickable]: c }),
@@ -247,8 +247,8 @@ let D = (e, t) => (n) => {
                                 isMember: c,
                             }),
                             (0, r.jsx)(M, {
-                                isActive: A,
-                                isEnded: C,
+                                isActive: C,
+                                isEnded: A,
                                 isMember: c,
                                 guildId: n.guild_id,
                                 guildScheduledEventId: n.id,

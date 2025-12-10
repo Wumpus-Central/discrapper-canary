@@ -31,8 +31,8 @@ var i,
     S = n(356659),
     I = n(710111),
     T = n(295907),
-    A = n(444675);
-function C(e, t, n) {
+    C = n(444675);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +56,7 @@ function N(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -293,7 +293,7 @@ function eo(e) {
             let n = F[e];
             if (null != n) {
                 let e = Y[n.action];
-                (null == e ? void 0 : e.isPressed) === !0 && A.nextTick(() => J(!1, e, n));
+                (null == e ? void 0 : e.isPressed) === !0 && C.nextTick(() => J(!1, e, n));
             }
             t.reset(), (B[e] = null);
         }
@@ -549,9 +549,9 @@ class ey extends (i = c.ZP.DeviceSettingsStore) {
         return this.getKeybindForAction(v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, !0);
     }
 }
-C(ey, "displayName", "KeybindsStore"),
-    C(ey, "persistKey", "keybinds"),
-    C(ey, "migrations", [
+A(ey, "displayName", "KeybindsStore"),
+    A(ey, "persistKey", "keybinds"),
+    A(ey, "migrations", [
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                 { v: t, keybinds: n = e } = e;

@@ -22,14 +22,14 @@ var n = r(721890),
     R = r(549040),
     T = r(889929),
     A = r(848576),
-    N = r(941200),
-    f = r(382792),
+    f = r(941200),
+    N = r(382792),
     O = r(844880),
     h = r(495600),
-    D = r(202829),
-    S = r(235387);
+    S = r(202829),
+    D = r(235387);
 function C(e) {
-    return [(0, n.S)(), (0, a.C)(), (0, N.t)(), (0, A.f)(), (0, f.k)(), (0, h.O)(), (0, i.R)(), (0, O.s)()];
+    return [(0, n.S)(), (0, a.C)(), (0, f.t)(), (0, A.f)(), (0, N.k)(), (0, h.O)(), (0, i.R)(), (0, O.s)()];
 }
 function L(e = {}) {
     let t = (function (e = {}) {
@@ -82,9 +82,9 @@ function L(e = {}) {
         );
     let r = {
             ...t,
-            stackParser: (0, d.Sq)(t.stackParser || D.Dt),
+            stackParser: (0, d.Sq)(t.stackParser || S.Dt),
             integrations: (0, o.m8)(t),
-            transport: t.transport || S.f,
+            transport: t.transport || D.f,
         },
         n = (0, _.M)(p.R, r);
     return (

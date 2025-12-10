@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(786761),
     I = n(3148),
     T = n(739566),
-    A = n(753206),
-    C = n(921801),
+    C = n(753206),
+    A = n(921801),
     N = n(984802),
     P = n(594174),
     R = n(358085),
@@ -269,7 +269,7 @@ class ei extends i.Component {
                 "aria-hidden": !0,
                 children: a.map((t, n) =>
                     (0, r.jsx)(
-                        A.Z,
+                        C.Z,
                         {
                             author: (0, T.ZH)(t),
                             message: t,
@@ -329,11 +329,11 @@ class ei extends i.Component {
     }
     render() {
         let { density: e } = this.props,
-            t = (0, r.jsxs)(C.F, {
+            t = (0, r.jsxs)(A.F, {
                 setting: G.s6.APPEARANCE_THEME,
                 children: [this.renderPreview(), this.renderTheme()],
             }),
-            n = (0, r.jsx)(C.F, {
+            n = (0, r.jsx)(A.F, {
                 setting: G.s6.APPEARANCE_ICON,
                 children: (0, r.jsx)(M.c, {}),
             }),
@@ -351,7 +351,7 @@ class ei extends i.Component {
                     value: c.Pi.COZY,
                 },
             ],
-            a = (0, r.jsxs)(C.F, {
+            a = (0, r.jsxs)(A.F, {
                 setting: G.s6.APPEARANCE_LIST_SPACING,
                 children: [
                     (0, r.jsx)(d.FXm, {
@@ -364,7 +364,7 @@ class ei extends i.Component {
                     (0, r.jsx)(d.izJ, { className: H.divider }),
                 ],
             }),
-            o = (0, r.jsxs)(C.F, {
+            o = (0, r.jsxs)(A.F, {
                 setting: G.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                 children: [
                     (0, r.jsxs)(d.C3N, {
@@ -399,7 +399,7 @@ class ei extends i.Component {
                     (0, r.jsx)(d.izJ, { className: H.divider }),
                 ],
             }),
-            s = (0, r.jsxs)(C.F, {
+            s = (0, r.jsxs)(A.F, {
                 setting: G.s6.APPEARANCE_SCALING_SPACING,
                 children: [
                     (0, r.jsxs)(d.C3N, {

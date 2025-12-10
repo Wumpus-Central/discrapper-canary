@@ -109,10 +109,10 @@ function T(e) {
     if (!h(e.message) || e.message.channel_id === e.message.id) return !1;
     E(e.message.channel_id, e.message);
 }
-function A(e) {
+function C(e) {
     return b(e.channelId, e.id);
 }
-function C(e) {
+function A(e) {
     let { threads: t, mostRecentMessages: n } = e;
     t.forEach((e) => g(e.id, null)),
         null == n ||
@@ -140,8 +140,8 @@ d(N, "displayName", "ForumPostRecentMessageStore"),
         CONNECTION_OPEN: v,
         MESSAGE_CREATE: I,
         MESSAGE_UPDATE: T,
-        MESSAGE_DELETE: A,
+        MESSAGE_DELETE: C,
         LOAD_FORUM_POSTS: S,
-        LOAD_ARCHIVED_THREADS_SUCCESS: C,
-        LOAD_THREADS_SUCCESS: C,
+        LOAD_ARCHIVED_THREADS_SUCCESS: A,
+        LOAD_THREADS_SUCCESS: A,
     });

@@ -26,8 +26,8 @@ function E() {
         S = p.RS.useSetting(),
         I = p.NA.useSetting(),
         T = p.nc.useSetting(),
-        A = p.HV.useSetting(),
-        C = p.rR.useSetting(),
+        C = p.HV.useSetting(),
+        A = p.rR.useSetting(),
         { analyticsLocations: N } = (0, s.ZP)(o.Z.TEXT_AND_IMAGES),
         P = i.useCallback((e) => {
             let t = 1 === e;
@@ -218,7 +218,7 @@ function E() {
                                 (0, r.jsx)(d.F, {
                                     setting: m.s6.CHAT_MENTION_SUGGESTIONS,
                                     children: (0, r.jsx)(a.rsf, {
-                                        checked: A,
+                                        checked: C,
                                         description: g.intl.string(g.t.AaXigo),
                                         onChange: (e) => {
                                             p.HV.updateSetting(e);
@@ -266,7 +266,7 @@ function E() {
                                     },
                                 ],
                                 onChange: P,
-                                value: +!!C,
+                                value: +!!A,
                             }),
                         }),
                     ],

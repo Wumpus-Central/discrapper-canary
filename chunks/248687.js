@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function A() {
+function C() {
     let [e, t] = i.useState(!1);
     if (
         null ==
@@ -63,7 +63,7 @@ function A() {
         loading: e,
     });
 }
-let C = o().throttle(
+let A = o().throttle(
     (e) => {
         h.Z.increment(
             {
@@ -101,7 +101,7 @@ class N extends i.PureComponent {
             uses_client_mods: r,
             error_level: "fatal",
         }),
-            C(r),
+            A(r),
             y.ZP.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
@@ -136,7 +136,7 @@ class N extends i.PureComponent {
                             text: S.intl.string(S.t["+hivLW"]),
                             onClick: this._handleSubmitReport,
                         }),
-                        (0, r.jsx)(A, {}),
+                        (0, r.jsx)(C, {}),
                     ],
                 });
             return (0, r.jsx)(O.Z, {

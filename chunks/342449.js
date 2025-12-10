@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     l = n(473749),
     a = n(697988),
@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(388032),
     h = n(836227);
 let g = new Set();
-function f(e) {
-    let { channel: t, startThread: n, goToThread: f } = e,
+function m(e) {
+    let { channel: t, startThread: n, goToThread: m } = e,
         { joinedThreadIds: j, unjoinedThreadIds: v } = (0, i.FO)(t),
         {
             threadIds: x,
@@ -28,20 +28,20 @@ function f(e) {
                     u.Z,
                     {
                         threadId: t[e.row],
-                        goToThread: f,
+                        goToThread: m,
                     },
                     "".concat(e.section, "-").concat(e.row),
                 );
             },
-            [x, j, v, f],
+            [x, j, v, m],
         ),
         y = l.useCallback(
             (e) =>
                 0 === e.section
-                    ? (0, r.jsx)(m, { text: d.intl.formatToPlainString(d.t["4E27fz"], { count: j.length }) }, e.section)
+                    ? (0, r.jsx)(f, { text: d.intl.formatToPlainString(d.t["4E27fz"], { count: j.length }) }, e.section)
                     : 1 === e.section
-                      ? (0, r.jsx)(m, { text: d.intl.formatToPlainString(d.t.csPc4D, { count: v.length }) }, e.section)
-                      : (0, r.jsx)(m, { text: d.intl.string(d.t["wUNQ+w"]) }, e.section),
+                      ? (0, r.jsx)(f, { text: d.intl.formatToPlainString(d.t.csPc4D, { count: v.length }) }, e.section)
+                      : (0, r.jsx)(f, { text: d.intl.string(d.t["wUNQ+w"]) }, e.section),
             [j.length, v.length],
         ),
         S = l.useCallback(
@@ -83,7 +83,7 @@ function f(e) {
         onScroll: p ? N : void 0,
     });
 }
-function m(e) {
+function f(e) {
     let { text: t } = e;
     return (0, r.jsx)(o.Text, {
         color: "text-default",

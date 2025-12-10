@@ -11,7 +11,7 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(205120),
+    a = n(467721),
     o = n(442837),
     s = n(481060),
     l = n(638730);
@@ -33,8 +33,8 @@ var c = n(98278),
     S = n(304696),
     I = n(862657),
     T = n(387745),
-    A = n(115179),
-    C = n(254579),
+    C = n(115179),
+    A = n(254579),
     N = n(283689),
     P = n(542347),
     R = n(300917),
@@ -57,16 +57,16 @@ function L(e) {
                 questContentRowIndex: a,
                 sourceQuestContent: s,
             }),
-            (0, A.xN)(t.config) && !f
+            (0, C.xN)(t.config) && !f
                 ? (0, R.B)()
                 : d
-                  ? (0, A.Bg)(t.config)
+                  ? (0, C.Bg)(t.config)
                       ? (0, c.$)()
-                      : (0, A.Xv)(t.config)
+                      : (0, C.Xv)(t.config)
                         ? (0, D.openQuestCollectibleRewardModal)(t, n, s)
-                        : (0, A.vQ)(t.config)
+                        : (0, C.vQ)(t.config)
                           ? (0, D.openQuestInGameRewardModal)(t, n, s)
-                          : (0, A.xN)(t.config)
+                          : (0, C.xN)(t.config)
                             ? (0, D.openQuestOrbsRewardModal)(t, n, s)
                             : (0, D.openQuestsRewardCodeModal)({
                                   quest: t,
@@ -132,7 +132,7 @@ let j = (e) => {
     };
 function k(e) {
     return e.config.features.includes(w.S7.START_QUEST_CTA)
-        ? (0, C.pO)(e)
+        ? (0, A.pO)(e)
             ? e.config.features.includes(w.S7.CLOUD_GAMING_ACTIVITY)
                 ? {
                       text: x.intl.string(x.t["+qoymD"]),
@@ -183,12 +183,12 @@ function U(e) {
                     t = p.jZ.ACCEPT_QUEST;
                 return (
                     c && ((e = x.intl.string(x.t.umdNin)), (t = p.jZ.START_QUEST)),
-                    (u || (0, C.pO)(n)) && ({ text: e, questContentCTA: t } = k(n)),
+                    (u || (0, A.pO)(n)) && ({ text: e, questContentCTA: t } = k(n)),
                     {
                         text: e,
                         tooltipText: null,
                         onClick: async () => {
-                            if ((0, C.HJ)(n)) {
+                            if ((0, A.HJ)(n)) {
                                 await (0, f.AH)(n.id, {
                                     questContent: a,
                                     questContentCTA: t,
@@ -270,7 +270,7 @@ function U(e) {
                                 },
                             ),
                     };
-                if ((0, C.HJ)(n))
+                if ((0, A.HJ)(n))
                     return {
                         text: x.intl.string(x.t.IsH2Sp),
                         tooltipText: null,
@@ -315,7 +315,7 @@ function U(e) {
                 return {
                     tooltipText: null,
                     onClick: m,
-                    text: (0, A.wj)(n.config) ? x.intl.string(x.t.bAGFz3) : x.intl.string(x.t.vTgCWx),
+                    text: (0, C.wj)(n.config) ? x.intl.string(x.t.bAGFz3) : x.intl.string(x.t.vTgCWx),
                 };
         }
     }, [r, c, h, l, m, n, a, o, s, E, g, u, b, d, v]);
@@ -351,7 +351,7 @@ function Z(e) {
             isQuestBarVisible: !1,
             reason: "quest_is_null",
         };
-    if ((0, A.Bg)(r.config)) {
+    if ((0, C.Bg)(r.config)) {
         if (!s && !c)
             return {
                 isQuestBarVisible: !1,

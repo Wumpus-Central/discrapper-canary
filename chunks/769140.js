@@ -23,8 +23,8 @@ var i = n(120356),
     S = n(158776),
     I = n(938475),
     T = n(960870),
-    A = n(139793),
-    C = n(652853),
+    C = n(139793),
+    A = n(652853),
     N = n(336383),
     P = n(194811),
     R = n(265386),
@@ -40,7 +40,7 @@ var i = n(120356),
     Z = n(774797);
 function B(e) {
     let { user: t, currentUser: n, stream: i, className: B, onClose: F } = e,
-        { themeType: V, theme: H } = (0, C.z)(),
+        { themeType: V, theme: H } = (0, A.z)(),
         Y = (0, o.e7)([O.Z], () => O.Z.getGuild(null == i ? void 0 : i.guildId)),
         W = (0, o.e7)([y.Z], () => y.Z.getChannel(null == i ? void 0 : i.channelId)),
         K = (0, o.Wu)([I.ZP], () =>
@@ -60,7 +60,7 @@ function B(e) {
             stream: i,
             analyticsLocations: q,
         }),
-        X = (0, A.Z)({
+        X = (0, C.Z)({
             userId: t.id,
             onAction: Q,
         }),

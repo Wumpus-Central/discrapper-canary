@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(570140),
     p = n(365113),
     f = n(616022),
-    h = n(968843),
-    g = n(759479),
+    g = n(968843),
+    h = n(759479),
     m = n(283689),
     _ = n(93127),
     b = n(752048),
@@ -42,14 +42,14 @@ let w = 15 * y.Z.Millis.MINUTE,
                 onChannelContextMenu: l,
                 quest: a,
             }),
-            { partiedMembers: f, applicationStreams: h, currentActivities: g, voiceChannels: m } = t,
+            { partiedMembers: f, applicationStreams: g, currentActivities: h, voiceChannels: m } = t,
             _ = f.length,
-            b = h.length,
-            E = g.length,
+            b = g.length,
+            E = h.length,
             O = m.length > 0,
             y = p.o.useConfig({ location: "itemcard" }).demureActivityCards,
             I = i.useCallback(() => {
-                let e = g
+                let e = h
                     .filter((e) => {
                         var t, n;
                         return (
@@ -65,7 +65,7 @@ let w = 15 * y.Z.Millis.MINUTE,
                     in_voice_channel: O,
                     games_detected: e,
                 });
-            }, [_, b, E, O, g]),
+            }, [_, b, E, O, h]),
             j = i.useMemo(() => o()(I, w), [I]);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
@@ -155,7 +155,7 @@ function D() {
             currentUser: E.default.getCurrentUser(),
         })),
         s = (0, c.e7)([f.Z], () => f.Z.quests),
-        o = (0, h.Fy)(Array.from(s.values()));
+        o = (0, g.Fy)(Array.from(s.values()));
     i.useEffect(() => (d.Z.wait(() => I.L()), () => d.Z.wait(() => I.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
             n && !l && R();
@@ -168,7 +168,7 @@ function D() {
                 i.party.currentActivities.forEach((e) => {
                     let { activity: l } = e;
                     if (null == l) return;
-                    let a = (0, g.ZZ)(r, l);
+                    let a = (0, h.ZZ)(r, l);
                     null == a || n.has(a.id) || (t.set(i.party.id, a), n.add(a.id));
                 });
             return t;

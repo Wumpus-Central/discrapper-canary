@@ -37,8 +37,8 @@ var i = n(54381),
     k = n(186877),
     U = n(294218),
     V = n(534469),
-    B = n(993397),
-    F = n(511010),
+    F = n(993397),
+    B = n(511010),
     H = n(524444),
     G = n(977391),
     W = n(921235),
@@ -170,7 +170,7 @@ function et(e) {
                             isBeforeGroup: null == e.content && $(el[t + 1]),
                         })
                       : (0, i.jsx)(
-                            F.Z,
+                            B.Z,
                             {
                                 isUnread: l,
                                 isBeforeGroup: null == e.content && $(el[t + 1]),
@@ -205,7 +205,7 @@ function et(e) {
                               ? J.t["VFWjc+"]
                               : J.t.xfkfTK),
                     (0, i.jsx)(
-                        B.Z,
+                        F.Z,
                         {
                             unreadId: K.j1,
                             messages: e,

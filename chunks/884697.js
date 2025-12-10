@@ -23,7 +23,7 @@ n.d(t, {
     mO: () => K,
     ne: () => ea,
     qS: () => v,
-    ql: () => C,
+    ql: () => A,
     rN: () => R,
     uV: () => j,
     v5: () => et,
@@ -105,7 +105,7 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
     v = (e) => (null == e ? void 0 : e.purchaseType) === m.qc2.PREMIUM_PURCHASE,
     S = (e, t, n) => {
         let r;
-        return C(
+        return A(
             e,
             (r = n ? (t ? m.tuJ.MOBILE_PREMIUM_TIER_2 : m.tuJ.MOBILE) : t ? m.tuJ.PREMIUM_TIER_2 : m.tuJ.DEFAULT),
         );
@@ -122,17 +122,17 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
             : e
               ? m.tuJ.PREMIUM_TIER_2
               : m.tuJ.DEFAULT,
-    A = (e) => {
+    C = (e) => {
         let t = e.bundledProducts;
         if (null == t) return 0;
         let n = T(!1);
         return t.reduce((e, t) => {
             var r;
-            let i = C(t, n);
+            let i = A(t, n);
             return e + (null != (r = null == i ? void 0 : i.amount) ? r : 0);
         }, 0);
     },
-    C = (e, t) => {
+    A = (e, t) => {
         var n, r, i;
         let a = null != (i = e.prices[t]) ? i : null;
         return null != a ? (null == (r = a.countryPrices) || null == (n = r.prices) ? void 0 : n[0]) : null;
@@ -142,9 +142,9 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
         discountPercentage: -1,
     },
     P = (e, t) => {
-        let n = A(e);
+        let n = C(e);
         if (n <= 0) return N;
-        let r = C(e, T(t));
+        let r = A(e, T(t));
         return null == r
             ? N
             : {
@@ -154,7 +154,7 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
     },
     R = (e) => {
         var t;
-        return (null == (t = C(e, m.tuJ.DEFAULT)) ? void 0 : t.amount) === 0;
+        return (null == (t = A(e, m.tuJ.DEFAULT)) ? void 0 : t.amount) === 0;
     },
     D = (e) =>
         e.reduce(
@@ -282,8 +282,8 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
         h.pK.NGN,
         h.pK.EGP,
         (e, t, n) => {
-            if ($(e)) return A(e);
-            let r = C(
+            if ($(e)) return C(e);
+            let r = A(
                 e,
                 t ? (n ? m.tuJ.MOBILE : m.tuJ.DEFAULT) : n ? m.tuJ.MOBILE_PREMIUM_TIER_2 : m.tuJ.PREMIUM_TIER_2,
             );

@@ -1,4 +1,4 @@
-n.d(t, { q: () => C }), n(35282);
+n.d(t, { q: () => A }), n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(392711),
@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(202283),
     I = n(388032),
     T = n(306518);
-let A = (e) => e.map((e) => "#".concat(e)),
-    C = (e) => {
+let C = (e) => e.map((e) => "#".concat(e)),
+    A = (e) => {
         let { message: t } = e,
             { sharedClientTheme: n } = t,
             { setAll: i } = (0, E.Ig)();
@@ -40,7 +40,7 @@ let A = (e) => e.map((e) => "#".concat(e)),
                               g.default.track(v.rMx.CUSTOM_THEME_SHARE_PREVIEWED, {}),
                                   (0, _.XO)(_.wh.CUSTOM_THEME, { from: _.tE.SHARE_MESSAGE }),
                                   i({
-                                      colors: A(n.colors),
+                                      colors: C(n.colors),
                                       chassisMixAmount: n.base_mix,
                                       gradientAngle: n.gradient_angle,
                                   }),
@@ -103,7 +103,7 @@ let A = (e) => e.map((e) => "#".concat(e)),
             }),
             h = i.useMemo(() => {
                 var e;
-                return void 0 === n ? "" : (0, O.yz)(A(n.colors), null != (e = n.gradient_angle) ? e : 0);
+                return void 0 === n ? "" : (0, O.yz)(C(n.colors), null != (e = n.gradient_angle) ? e : 0);
             }, [n]);
         return void 0 === n
             ? null

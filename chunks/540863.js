@@ -106,9 +106,9 @@ let _ = i.forwardRef(function (e, t) {
         v = i.useId(),
         S = null != b ? b : O,
         I = null != E ? v : void 0,
-        [T, A] = i.useState(void 0),
-        [C, N] = i.useState(void 0),
-        P = void 0 !== C;
+        [T, C] = i.useState(void 0),
+        [A, N] = i.useState(void 0),
+        P = void 0 !== A;
     return (0, r.jsx)("div", {
         ref: t,
         className: null != u ? u : void 0,
@@ -119,8 +119,8 @@ let _ = i.forwardRef(function (e, t) {
             errorId: I,
             error: null != E ? E : void 0,
             isFocused: T,
-            setIsFocused: A,
-            hasValue: C,
+            setIsFocused: C,
+            hasValue: A,
             setHasValue: N,
             children: (0, r.jsxs)("div", {
                 className: P ? s.fieldWrapper : void 0,

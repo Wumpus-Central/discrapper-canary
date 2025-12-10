@@ -37,14 +37,14 @@ e.exports = function (e, t, n, r, v, I, T) {
         case E:
             return e == t + "";
         case _:
-            var A = s;
+            var C = s;
         case g:
-            var C = r & c;
-            if ((A || (A = l), e.size != t.size && !C)) break;
+            var A = r & c;
+            if ((C || (C = l), e.size != t.size && !A)) break;
             var N = T.get(e);
             if (N) return N == t;
             (r |= u), T.set(e, t);
-            var P = o(A(e), A(t), r, v, I, T);
+            var P = o(C(e), C(t), r, v, I, T);
             return T.delete(e), P;
         case b:
             if (S) return S.call(e) == S.call(t);

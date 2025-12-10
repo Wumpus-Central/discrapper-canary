@@ -14,8 +14,8 @@ var r = n(54381),
     d = n(812206),
     p = n(870822),
     f = n(174556),
-    h = n(99977),
-    g = n(919842),
+    g = n(99977),
+    h = n(919842),
     m = n(320007),
     _ = n(719961),
     b = n(336219),
@@ -59,7 +59,7 @@ let V = i.memo(function () {
         { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, b.t)({ location: "AppTitleBar" }),
         { backForwardButtons: s, titlebarIconSize: O } = (0, _.T)({ location: "AppTitleBar" }),
         { hasBugReporterAccess: T } = f.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
-        { enabled: B } = h.c.useConfig({ location: "AppTitleBar" }),
+        { enabled: B } = g.c.useConfig({ location: "AppTitleBar" }),
         V = (0, o.e7)([w.Z], () => w.Z.isDeveloper),
         F = (0, o.e7)(
             [L.Z, d.Z],
@@ -129,7 +129,7 @@ let V = i.memo(function () {
                         trailing: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(v.Z, { className: Q }),
-                                B && (0, r.jsx)(g.Z, { className: Q }),
+                                B && (0, r.jsx)(h.Z, { className: Q }),
                                 (0, r.jsx)(m.Z, {
                                     canShowReminder: !0,
                                     className: Q,

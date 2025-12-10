@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(228168),
     I = n(981631),
     T = n(921944),
-    A = n(474936),
-    C = n(671955),
+    C = n(474936),
+    A = n(671955),
     N = n(388032),
     P = n(131151);
 function R(e) {
@@ -65,7 +65,7 @@ function D(e) {
                               s({ action: S.yM.GET_PREMIUM }), null == i || i();
                           },
                           textOptions: { textOverride: N.intl.string(N.t.x6rkDp) },
-                          subscriptionTier: A.Si.TIER_2,
+                          subscriptionTier: C.Si.TIER_2,
                           premiumModalAnalyticsLocation: { section: I.jXE.USER_PROFILE },
                           className: P.matchManaColors,
                           size: t ? c.zx.Sizes.TINY : c.zx.Sizes.SMALL,
@@ -100,7 +100,7 @@ function w(e) {
     let { isPremiumUser: t, onInteraction: n, className: a } = e,
         c = (0, p.Dt)(),
         { themeType: d } = (0, O.z)(),
-        f = d === C.l.MODAL,
+        f = d === A.l.MODAL,
         g = (0, m.Nj)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
         E = (0, s.e7)([b.Z], () => b.Z.getGuildId());
     if (

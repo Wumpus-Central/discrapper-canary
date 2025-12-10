@@ -51,8 +51,8 @@ function p(e) {
                   };
     (O = I.x), (S = I.y);
     var T = _.hasOwnProperty("x"),
-        A = _.hasOwnProperty("y"),
-        C = r.t$,
+        C = _.hasOwnProperty("y"),
+        A = r.t$,
         N = r.we,
         P = window;
     if (g) {
@@ -67,7 +67,7 @@ function p(e) {
                 (S -= (b && R === P && P.visualViewport ? P.visualViewport.height : R[D]) - c.height),
                 (S *= h ? 1 : -1)),
             (u === r.t$ || ((u === r.we || u === r.I) && p === r.ut)) &&
-                ((C = r.F2),
+                ((A = r.F2),
                 (O -= (b && R === P && P.visualViewport ? P.visualViewport.width : R[w]) - c.width),
                 (O *= h ? 1 : -1));
     }
@@ -89,15 +89,15 @@ function p(e) {
         ? Object.assign(
               {},
               x,
-              (((n = {})[N] = A ? "0" : ""),
-              (n[C] = T ? "0" : ""),
+              (((n = {})[N] = C ? "0" : ""),
+              (n[A] = T ? "0" : ""),
               (n.transform =
                   1 >= (P.devicePixelRatio || 1)
                       ? "translate(" + O + "px, " + S + "px)"
                       : "translate3d(" + O + "px, " + S + "px, 0)"),
               n),
           )
-        : Object.assign({}, x, (((t = {})[N] = A ? S + "px" : ""), (t[C] = T ? O + "px" : ""), (t.transform = ""), t));
+        : Object.assign({}, x, (((t = {})[N] = C ? S + "px" : ""), (t[A] = T ? O + "px" : ""), (t.transform = ""), t));
 }
 let _ = {
     name: "computeStyles",

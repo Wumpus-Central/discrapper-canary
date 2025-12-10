@@ -21,8 +21,8 @@ var r = n(98405),
     S = n(713411),
     I = n(568033),
     T = n(769827),
-    A = n(264750).f,
-    C = n(522169),
+    C = n(264750).f,
+    A = n(522169),
     N = n(920029).forEach,
     P = n(108015),
     R = n(573078),
@@ -134,7 +134,7 @@ o
                                               : new p(t)
                                         : q(t)
                                           ? x(E, t)
-                                          : a(C, E, t)
+                                          : a(A, E, t)
                                     : new p(m(t));
                             })(),
                             e,
@@ -143,7 +143,7 @@ o
                     );
                 })),
                 T && T(E, K),
-                N(A(p), function (e) {
+                N(C(p), function (e) {
                     e in E || f(E, e, p[e]);
                 }),
                 (E.prototype = b))
@@ -163,7 +163,7 @@ o
                             } else if ((s = _(r) * o) + d > f) throw new B(X);
                             l = s / o;
                         } else if (q(t)) return x(E, t);
-                        else return a(C, E, t);
+                        else return a(A, E, t);
                     else i = new F((s = (l = m(t)) * o));
                     for (
                         k(e, {

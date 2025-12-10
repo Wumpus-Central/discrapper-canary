@@ -46,8 +46,8 @@ var r = n(54381),
     K = n(690221),
     Y = n(522474),
     q = n(231664),
-    Q = n(759198),
-    X = n(659302),
+    X = n(759198),
+    Q = n(659302),
     J = n(131704),
     $ = n(199902),
     ee = n(314897),
@@ -308,7 +308,7 @@ class eZ extends i.PureComponent {
                                         size: "xxs",
                                         color: L.JX.PREMIUM_TIER_2,
                                     }),
-                                    (0, r.jsx)(Q.Z, {
+                                    (0, r.jsx)(X.Z, {
                                         className: eE.perksDemoText,
                                         variant: "text-xxs/semibold",
                                         children: n,
@@ -554,7 +554,7 @@ let ew = (0, O.Z)(function (e) {
         W = (0, u.e7)([Y.Z], () => Y.Z.getWindowOpen(ey.KJ3.ACTIVITY_POPOUT)),
         {
             hasAlreadyLinked: K,
-            canStartAuthorization: Q,
+            canStartAuthorization: X,
             connectionApp: J,
             startAuthorization: ef,
         } = (0, N.F)(O, {
@@ -565,7 +565,7 @@ let ew = (0, O.Z)(function (e) {
     i.useEffect(() => {
         eb !== (null == O ? void 0 : O.id) && em(!1);
     }, [O, eb]);
-    let { isQuestBarEmpty: e_, hasLoadedQuestBar: eO } = (0, X.Ws)({ location: ex.dr.CONFLICT_CHECKS }),
+    let { isQuestBarEmpty: e_, hasLoadedQuestBar: eO } = (0, Q.Ws)({ location: ex.dr.CONFLICT_CHECKS }),
         { parentAnalyticsLocation: ev, analyticsLocations: ej } = (0, P.ZP)(),
         eC = ep.Z.useConfig({ location: "ActivityPanelGameCard" }),
         eE = (0, c.O)((e) => {
@@ -605,7 +605,7 @@ let ew = (0, O.Z)(function (e) {
             accountLinkCopyConfig: eC,
             parentAnalyticsLocation: ev,
             analyticsLocations: ej,
-            canStartAuthorization: Q,
+            canStartAuthorization: X,
             accountLinkButtonRef: eE,
             startAuthorization: function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

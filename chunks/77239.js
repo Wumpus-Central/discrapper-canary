@@ -29,8 +29,8 @@ e.exports = function (e, t, n, _, m, h, g, E) {
         S,
         I,
         T,
-        A,
         C,
+        A,
         N = E.bits,
         P = 0,
         R = 0,
@@ -76,10 +76,10 @@ e.exports = function (e, t, n, _, m, h, g, E) {
         return 1;
     for (;;) {
         (T = P - j),
-            g[R] < I ? ((A = 0), (C = g[R])) : g[R] > I ? ((A = V[H + g[R]]), (C = G[Z + g[R]])) : ((A = 96), (C = 0)),
+            g[R] < I ? ((C = 0), (A = g[R])) : g[R] > I ? ((C = V[H + g[R]]), (A = G[Z + g[R]])) : ((C = 96), (A = 0)),
             (b = 1 << (P - j)),
             (D = y = 1 << L);
-        do m[S + (U >> j) + (y -= b)] = (T << 24) | (A << 16) | C;
+        do m[S + (U >> j) + (y -= b)] = (T << 24) | (C << 16) | A;
         while (0 !== y);
         for (b = 1 << (P - 1); U & b; ) b >>= 1;
         if ((0 !== b ? ((U &= b - 1), (U += b)) : (U = 0), R++, 0 == --B[P])) {

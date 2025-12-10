@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-let C = "https://www.paypal.com",
+let A = "https://www.paypal.com",
     N = "isDefault";
 class P extends (r = a.PureComponent) {
     componentWillUnmount() {
@@ -113,7 +113,7 @@ class P extends (r = a.PureComponent) {
                 }),
                 (0, i.jsx)(
                     E.ZP,
-                    A(I({}, e), {
+                    C(I({}, e), {
                         mode: E.ZP.Modes.EDIT,
                         layout: r,
                         onBillingAddressChange: this.handleAddressUpdate,
@@ -240,7 +240,7 @@ class P extends (r = a.PureComponent) {
                                 : null,
                             (0, i.jsx)("div", {
                                 className: v.subText,
-                                children: l ? O.intl.format(O.t.w9WkBl, { paypalURL: C }) : O.intl.string(O.t.VXndyr),
+                                children: l ? O.intl.format(O.t.w9WkBl, { paypalURL: A }) : O.intl.string(O.t.VXndyr),
                             }),
                         ],
                     }),
@@ -293,7 +293,7 @@ class P extends (r = a.PureComponent) {
                 this.setState({
                     billingAddress: e,
                     billingAddressValid: t,
-                    dirtyFields: A(I({}, this.state.dirtyFields), { billingAddress: n }),
+                    dirtyFields: C(I({}, this.state.dirtyFields), { billingAddress: n }),
                 });
             }),
             S(this, "handleExpirationDateUpdate", (e, t) => {
@@ -310,7 +310,7 @@ class P extends (r = a.PureComponent) {
                 null != t &&
                     this.setState({
                         [t]: e,
-                        dirtyFields: A(I({}, this.state.dirtyFields), { [t]: !0 }),
+                        dirtyFields: C(I({}, this.state.dirtyFields), { [t]: !0 }),
                     });
             });
         let { paymentSource: l, isDefault: c } = e,

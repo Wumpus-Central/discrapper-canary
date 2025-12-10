@@ -70,8 +70,8 @@ let b = [],
     S = -100,
     I = 11,
     T = 125,
-    A = 20,
-    C = 12,
+    C = 20,
+    A = 12,
     N = 48,
     P = 0.01,
     R = new Set(["jack_o_lantern", "nose"]),
@@ -152,7 +152,7 @@ let M = i.forwardRef(function (e, t) {
                             },
                             size: {
                                 type: "static-random",
-                                minValue: C,
+                                minValue: A,
                                 maxValue: N,
                             },
                             dragCoefficient: {
@@ -160,7 +160,7 @@ let M = i.forwardRef(function (e, t) {
                                 value: P,
                             },
                         }),
-                        A,
+                        C,
                     );
                 },
             }),

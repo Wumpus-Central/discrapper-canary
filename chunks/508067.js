@@ -32,7 +32,7 @@ function v(e) {
         [_, y] = o.useState(null),
         [x, j] = o.useState(null),
         [P, D] = o.useState(null),
-        [R, T] = o.useState(!1),
+        [T, R] = o.useState(!1),
         I = o.useRef(null),
         N = (e) => {
             (I.current = e), y(e);
@@ -81,13 +81,13 @@ function v(e) {
                     l && null != b && b(f(e.clientX, e.currentTarget.getBoundingClientRect(), g));
                 },
                 onMouseEnter: (e) => {
-                    l && (null != w.current && N(w.current.getBoundingClientRect()), T(!0), L(e));
+                    l && (null != w.current && N(w.current.getBoundingClientRect()), R(!0), L(e));
                 },
                 onMouseLeave: (e) => {
-                    l && (T(!1), j(null));
+                    l && (R(!1), j(null));
                 },
                 onMouseMove: (e) => {
-                    l && R && L(e);
+                    l && T && L(e);
                 },
                 onKeyDown: k,
                 tabIndex: l ? void 0 : -1,
@@ -105,7 +105,7 @@ function v(e) {
                                   "div",
                                   {
                                       className: i()(m.buffer, {
-                                          [m.bufferHovered]: R,
+                                          [m.bufferHovered]: T,
                                           [m.rounded]: O,
                                       }),
                                       style: {
@@ -131,10 +131,10 @@ function v(e) {
                         percent: t,
                         foregroundColor: "#FFFFFF",
                         backgroundColor: null != v ? v : void 0,
-                        size: R ? a.Exd.Sizes.XSMALL : a.Exd.Sizes.XXSMALL,
+                        size: T ? a.Exd.Sizes.XSMALL : a.Exd.Sizes.XXSMALL,
                         animate: n,
                     }),
-                    R &&
+                    T &&
                         null != V &&
                         (0, r.jsx)(a.Text, {
                             className: m.timeDisplay,
@@ -145,7 +145,7 @@ function v(e) {
                             },
                             children: V,
                         }),
-                    R &&
+                    T &&
                         l &&
                         null != Z &&
                         (0, r.jsx)("div", {

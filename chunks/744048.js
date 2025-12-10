@@ -24,10 +24,10 @@ let v = function (e) {
         v = (0, i.e7)([h.default], () => g.ZP.canUseClientThemes(h.default.getCurrentUser())),
         S = (0, i.e7)([l.Z], () => l.Z.isCoachmark),
         I = (0, c.g)(),
-        { activePanel: T, metadata: A } = (0, E.oq)(),
-        C = [];
-    !n && null == T && (S && !v && C.push(a.z.CLIENT_THEMES_COACHMARK), I && C.push(a.z.CUSTOM_THEME_COACHMARK));
-    let [N, P] = (0, _.US)(C, y.R.SIDEBAR, !0),
+        { activePanel: T, metadata: C } = (0, E.oq)(),
+        A = [];
+    !n && null == T && (S && !v && A.push(a.z.CLIENT_THEMES_COACHMARK), I && A.push(a.z.CUSTOM_THEME_COACHMARK));
+    let [N, P] = (0, _.US)(A, y.R.SIDEBAR, !0),
         R = N === a.z.CLIENT_THEMES_COACHMARK,
         D = N === a.z.CUSTOM_THEME_COACHMARK;
     if (((0, d.HA)(I, N), n)) return null;
@@ -58,7 +58,7 @@ let v = function (e) {
                     }),
                 L &&
                     (0, r.jsx)(f.Z, {
-                        metadata: null != A ? A : {},
+                        metadata: null != C ? C : {},
                         markAsDismissed: P,
                         isCoachmark: D,
                         isMobile: t,

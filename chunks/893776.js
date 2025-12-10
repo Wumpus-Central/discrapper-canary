@@ -76,8 +76,8 @@ function I(e, t) {
     );
 }
 let T = new d.Z("AuthenticationActionCreators"),
-    A = 5000,
-    C = null;
+    C = 5000,
+    A = null;
 var N = (function (e) {
     return (e.MFA = "MFA"), (e.SUCCESS = "SUCCESS"), e;
 })({});
@@ -587,16 +587,16 @@ let D = {
         });
     },
     getLocationMetadata: () =>
-        null != C
-            ? C
+        null != A
+            ? A
             : (clearTimeout(r),
               (r = setTimeout(() => {
                   l.Z.dispatch({
                       type: "SET_CONSENT_REQUIRED",
                       consentRequired: !0,
                   });
-              }, A)),
-              (C = o.tn
+              }, C)),
+              (A = o.tn
                   .get({
                       url: b.ANM.AUTH_LOCATION_METADATA,
                       retries: 2,
@@ -622,7 +622,7 @@ let D = {
                                           ? o
                                           : void 0,
                               }),
-                              (C = null),
+                              (A = null),
                               (null == e || null == (n = e.body) ? void 0 : n.promotional_email_opt_in) != null)
                           ) {
                               let t = e.body.promotional_email_opt_in;
@@ -639,7 +639,7 @@ let D = {
                                   type: "SET_CONSENT_REQUIRED",
                                   consentRequired: !0,
                               }),
-                              (C = null);
+                              (A = null);
                       },
                   ))),
     closeSuspendedUser() {

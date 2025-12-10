@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function A(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -235,7 +235,7 @@ let k = {
             (0, a.openModalLazy)(
                 async () => {
                     let { default: t } = await n.e("37979").then(n.bind(n, 238088));
-                    return (n) => (0, r.jsx)(t, C(T({}, n), { searchContext: e }));
+                    return (n) => (0, r.jsx)(t, A(T({}, n), { searchContext: e }));
                 },
                 { modalKey: v.L },
             );

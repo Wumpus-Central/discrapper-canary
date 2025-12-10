@@ -1241,7 +1241,7 @@ let y = {
             );
     },
     FamilyCenterQRCodeModal: async () => {
-        let { default: e } = await Promise.all([n.e("97012"), n.e("90688")]).then(n.bind(n, 978305));
+        let { default: e } = await Promise.all([n.e("10695"), n.e("90688")]).then(n.bind(n, 978305));
         return (t) => (0, a.jsx)(e, j({}, t));
     },
     PremiumGroupFriendsSelectorModal: async () => {

@@ -41,12 +41,12 @@ function E(e) {
                       srcToOnClickOverride: {},
                       srcToHandlePreloadImage: {},
                   };
-    function A(e, n) {
+    function C(e, n) {
         var r;
         let i = e.originalItem;
         return (0, c.lK)(i.media, n, i.spoiler, null != (r = null == t ? void 0 : t.author.bot) && r);
     }
-    let C = e.items.map((e, n) => {
+    let A = e.items.map((e, n) => {
         let r = e.media,
             a = (e, t, n) => {},
             s = null == v ? void 0 : v(r),
@@ -65,7 +65,7 @@ function E(e) {
                 },
                 onContextMenu: s,
                 autoPlayGif: y,
-                getObscureReason: A,
+                getObscureReason: C,
                 renderImageComponent: d.aB,
                 renderVideoComponent: d.rJ,
                 renderVisualPlaceholderComponent: d.yF,
@@ -86,7 +86,7 @@ function E(e) {
     });
     return (0, r.jsx)("div", {
         children: (0, r.jsx)(p.Z, {
-            items: C,
+            items: A,
             isInAppComponentsV2: !0,
         }),
     });

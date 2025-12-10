@@ -1,8 +1,8 @@
 let n, a;
 r.d(t, {
-    Fv: () => S,
+    Fv: () => D,
     Jk: () => C,
-    PR: () => D,
+    PR: () => S,
     f7: () => g,
     sn: () => L,
 });
@@ -20,11 +20,11 @@ var i = r(82255),
     R = r(687566),
     T = r(13379),
     A = r(560684),
-    N = r(24931),
-    f = r(722778);
+    f = r(24931),
+    N = r(722778);
 let O = 0,
     h = {};
-function D({ recordClsStandaloneSpans: e }) {
+function S({ recordClsStandaloneSpans: e }) {
     let t = (0, T.QV)();
     if (t && c.Z1) {
         t.mark && I.m.performance.mark("sentry-tracing-init");
@@ -79,7 +79,7 @@ function D({ recordClsStandaloneSpans: e }) {
     }
     return () => void 0;
 }
-function S() {
+function D() {
     (0, R._j)("longtask", ({ entries: e }) => {
         if ((0, i.HN)())
             for (let t of e) {
@@ -155,12 +155,12 @@ function g(e, t) {
     d.X && l.kg.log("[Tracing] Adding & adjusting spans using Performance API");
     let o = (0, T.XL)(c.Z1),
         p = r.getEntries(),
-        { op: R, start_timestamp: D } = (0, i.XU)(e);
+        { op: R, start_timestamp: S } = (0, i.XU)(e);
     if (
         (p.slice(O).forEach((t) => {
             let r = (0, T.XL)(t.startTime),
                 n = (0, T.XL)(Math.max(0, t.duration));
-            if ("navigation" !== R || !D || !(o + r < D))
+            if ("navigation" !== R || !S || !(o + r < S))
                 switch (t.entryType) {
                     case "navigation":
                         var a, i, s;
@@ -200,7 +200,7 @@ function g(e, t) {
                             p = r,
                             A = n,
                             O = o;
-                        let a = (0, N.W)(),
+                        let a = (0, f.W)(),
                             i = O + Math.max(p, (0, T.XL)(a ? a.requestStart : 0)),
                             s = O + p,
                             u = { [_.S3]: "auto.resource.browser.metrics" };
@@ -212,7 +212,7 @@ function g(e, t) {
                                 op: E.entryType,
                                 attributes: u,
                             });
-                        let I = (0, f.Y)(),
+                        let I = (0, N.Y)(),
                             R = t.startTime < I.firstHiddenTime;
                         "first-paint" === t.name &&
                             R &&
@@ -271,9 +271,9 @@ function g(e, t) {
         })(e),
         "pageload" === R)
     ) {
-        var S;
+        var D;
         !(function (e) {
-            let t = (0, N.W)();
+            let t = (0, f.W)();
             if (!t) return;
             let { responseStart: r, requestStart: n } = t;
             n <= r &&
@@ -298,17 +298,17 @@ function g(e, t) {
             }),
             e.setAttribute("performance.timeOrigin", o),
             e.setAttribute("performance.activationStart", (0, A.A)()),
-            (S = e),
+            (D = e),
             n &&
                 (d.X && l.kg.log("[Measurements] Adding LCP Data"),
-                n.element && S.setAttribute("lcp.element", (0, E.Rt)(n.element)),
-                n.id && S.setAttribute("lcp.id", n.id),
-                n.url && S.setAttribute("lcp.url", n.url.trim().slice(0, 200)),
-                S.setAttribute("lcp.size", n.size)),
+                n.element && D.setAttribute("lcp.element", (0, E.Rt)(n.element)),
+                n.id && D.setAttribute("lcp.id", n.id),
+                n.url && D.setAttribute("lcp.url", n.url.trim().slice(0, 200)),
+                D.setAttribute("lcp.size", n.size)),
             a &&
                 a.sources &&
                 (d.X && l.kg.log("[Measurements] Adding CLS Data"),
-                a.sources.forEach((e, t) => S.setAttribute(`cls.source.${t + 1}`, (0, E.Rt)(e.node))));
+                a.sources.forEach((e, t) => D.setAttribute(`cls.source.${t + 1}`, (0, E.Rt)(e.node))));
     }
     (n = void 0), (a = void 0), (h = {});
 }

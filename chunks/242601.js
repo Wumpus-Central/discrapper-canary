@@ -1,17 +1,17 @@
-n.d(t, { Z: () => eg }), n(388685), n(539854);
+n.d(t, { Z: () => eh }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(205120),
+    s = n(467721),
     o = n(55160),
     c = n(442837),
     u = n(704215),
     d = n(846519),
     p = n(907862),
     f = n(481060),
-    h = n(570140),
-    g = n(239091),
+    g = n(570140),
+    h = n(239091),
     m = n(269128),
     _ = n(711237),
     b = n(110924),
@@ -138,7 +138,7 @@ let ep = "server-settings",
             y: 0,
         },
     };
-class eh extends i.PureComponent {
+class eg extends i.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t, hasChannelNotice: n } = e;
         return null == t || null == t.banner || n
@@ -151,7 +151,7 @@ class eh extends i.PureComponent {
     componentDidMount() {
         var e;
         this.setAnimatedValue(0),
-            h.Z.subscribe("LAYER_PUSH", this.closeAllHeaderNotices),
+            g.Z.subscribe("LAYER_PUSH", this.closeAllHeaderNotices),
             (this.historyUnlisten = D.Z.addRouteChangeListener(this.handleHistoryChange));
         let { location: t } = D.Z.getHistory();
         (null == (e = t.state) ? void 0 : e.shouldShowSubscribeTooltip) &&
@@ -161,7 +161,7 @@ class eh extends i.PureComponent {
         this.showTimeout.stop(),
             this.state.controller.dispose(),
             this.historyUnlisten(),
-            h.Z.unsubscribe("LAYER_PUSH", this.closeAllHeaderNotices);
+            g.Z.unsubscribe("LAYER_PUSH", this.closeAllHeaderNotices);
     }
     getGuildBannerHash() {
         let { guild: e, hasChannelNotice: t } = this.props;
@@ -230,7 +230,7 @@ class eh extends i.PureComponent {
                 bannerVisibleHeight: d,
                 communityInfoVisible: p,
             } = this.state,
-            h = i || l || a;
+            g = i || l || a;
         return null == t
             ? null
             : (0, r.jsx)(O.Gt, {
@@ -264,7 +264,7 @@ class eh extends i.PureComponent {
                                           guildBanner: this.getGuildBannerHash(),
                                           onClick: this.handleHeaderMenuToggle,
                                           onContextMenu: this.handleHeaderContextMenu,
-                                          disableBannerAnimation: h,
+                                          disableBannerAnimation: g,
                                           animationOverlayHeight: d,
                                       },
                                       a,
@@ -372,7 +372,7 @@ class eh extends i.PureComponent {
             eo(this, "handleContextMenu", (e) => {
                 let { guild: t } = this.props;
                 null != t &&
-                    (0, g.jW)(e, async () => {
+                    (0, h.jW)(e, async () => {
                         let { default: e } = await n.e("78248").then(n.bind(n, 652171));
                         return (n) => (0, r.jsx)(e, eu(ec({}, n), { guild: t }));
                     });
@@ -380,7 +380,7 @@ class eh extends i.PureComponent {
             eo(this, "handleHeaderContextMenu", (e) => {
                 let { guild: t } = this.props;
                 null != t &&
-                    (0, g.jW)(e, async () => {
+                    (0, h.jW)(e, async () => {
                         let { default: e } = await Promise.all([
                             n.e("36599"),
                             n.e("7654"),
@@ -506,15 +506,15 @@ class eh extends i.PureComponent {
             });
     }
 }
-function eg(e) {
+function eh(e) {
     var t;
     let { guildId: n, hideSelectedChannel: l, selectedChannelId: a } = e,
         s = (0, c.e7)([V.Z], () => V.Z.getGuild(n));
     (0, _.J_)(n);
     let d = (0, C.Z)(n),
         p = (0, c.e7)([G.Z], () => G.Z.getGuildDimensions(n).scrollTo),
-        h = (0, c.e7)([W.Z], () => W.Z.getChannelId()),
-        g = (0, c.e7)([z.Z], () => z.Z.can(en.Plq.MANAGE_GUILD, s)),
+        g = (0, c.e7)([W.Z], () => W.Z.getChannelId()),
+        h = (0, c.e7)([z.Z], () => z.Z.can(en.Plq.MANAGE_GUILD, s)),
         m = (0, c.e7)([B.Z], () => B.Z.isUnavailable(n)),
         P = (0, c.e7)([q.default], () => q.default.getCurrentUser()),
         { enableStudyGroup: Z } = (0, A.s)(s),
@@ -538,16 +538,16 @@ function eg(e) {
         el = (0, c.e7)([k.Z], () => k.Z.shouldShow(ep)),
         ea = (0, j.Z)(n),
         es = (null == s ? void 0 : s.features.has(en.GuildFeatures.HUB)) === !0,
-        eo = g && (null == s ? void 0 : s.features.has(en.GuildFeatures.DISCOVERABLE)) === !0,
+        eo = h && (null == s ? void 0 : s.features.has(en.GuildFeatures.DISCOVERABLE)) === !0,
         ec = (0, c.e7)(
             [x.Z, F.Z],
-            () => null != s && null != P && g && !F.Z.hasLayers() && x.Z.shouldShowGuildTemplateDirtyTooltip(n),
+            () => null != s && null != P && h && !F.Z.hasLayers() && x.Z.shouldShowGuildTemplateDirtyTooltip(n),
         ),
         eu = (0, c.e7)([U.Z], () => U.Z.getChannel(a)),
         { isPopoutOpen: ed } = (0, S.y)(),
         ef = null != (t = null == s ? void 0 : s.features.has(en.GuildFeatures.COMMUNITY)) && t,
-        eg = K.ZP.isNewUser(P),
-        em = D && !eg;
+        eh = K.ZP.isNewUser(P),
+        em = D && !eh;
     (0, T.Z)(s);
     let e_ = (0, I.Nj)(u.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eb = (0, L.Z)(n),
@@ -555,14 +555,14 @@ function eg(e) {
         eO = (0, c.e7)([W.Z], () => W.Z.getChannelId()),
         ev = (0, c.e7)([Y.Z], () => Y.Z.desyncedVoiceStatesCount),
         ey = (0, R.Z)(n);
-    return (0, r.jsx)(eh, {
+    return (0, r.jsx)(eg, {
         guildId: n,
         hideSelectedChannel: l,
         guild: s,
         scrollToChannel: p,
         selectedChannelId: l ? null : a,
         selectedChannel: eu,
-        selectedVoiceChannelId: h,
+        selectedVoiceChannelId: g,
         voiceStates: d,
         rtcConnectedChannelId: eO,
         rtcDesyncedVoiceStatesCount: ev,

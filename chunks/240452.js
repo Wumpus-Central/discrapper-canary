@@ -1,4 +1,4 @@
-n.d(t, { w: () => a });
+n.d(t, { w: () => o });
 var r = n(427164),
     i = n(480218);
 let l = (0, r.le)({
@@ -10,7 +10,7 @@ let l = (0, r.le)({
         1: { enableVideoStatsForNerds: !0 },
     },
 });
-function a(e) {
+function o(e) {
     let { location: t } = e,
         { isInHoldout: n } = i._.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
     return n ? { enableVideoStatsForNerds: !1 } : l.getConfig({ location: t });

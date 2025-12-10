@@ -20,8 +20,8 @@ var u,
     S = n(430824),
     I = n(131951),
     T = n(496675),
-    A = n(914010),
-    C = n(981631),
+    C = n(914010),
+    A = n(981631),
     N = n(176505);
 function P(e, t, n) {
     return (
@@ -121,7 +121,7 @@ function V(e, t) {
 }
 function H(e) {
     let t = O.Z.getMutableBasicGuildChannelsForGuild(e),
-        n = f().find(t, (e) => e.type === C.d4z.GUILD_VOICE);
+        n = f().find(t, (e) => e.type === A.d4z.GUILD_VOICE);
     return null == n ? void 0 : n.id;
 }
 function Y() {
@@ -146,7 +146,7 @@ function Y() {
 function W(e) {
     if (((r = e.sessionId), null != s)) {
         let e = O.Z.getChannel(s);
-        (null != e && T.Z.can(p.$e(C.Plq.VIEW_CHANNEL, C.Plq.CONNECT), e)) || (s = null);
+        (null != e && T.Z.can(p.$e(A.Plq.VIEW_CHANNEL, A.Plq.CONNECT), e)) || (s = null);
     }
     Y() && B();
 }
@@ -178,14 +178,14 @@ function Q(e) {
     if (null == t) {
         let e = O.Z.getChannel(s),
             t = null == e ? void 0 : e.guild_id;
-        null != t && t !== A.Z.getGuildId() && M[t] === s && (M[t] = F(t));
+        null != t && t !== C.Z.getGuildId() && M[t] === s && (M[t] = F(t));
     }
     (s = t), B();
 }
 function X(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     if ((G.delete(e), null == t)) {
-        let n = A.Z.getGuildId();
+        let n = C.Z.getGuildId();
         M[Z(n)] === e && (t = n);
     }
     let i = null != S.Z.getGuild(t) ? t : null,
@@ -193,7 +193,7 @@ function X(e, t, n) {
     s === e && ((s = null), (a = !0)),
         M[Z(i)] === e &&
             ((M[Z(i)] = r && null != n ? n : F(Z(i))),
-            A.Z.getGuildId() === i && (0, g.dL)(C.Z5c.CHANNEL(t, M[Z(i)])),
+            C.Z.getGuildId() === i && (0, g.dL)(A.Z5c.CHANNEL(t, M[Z(i)])),
             (a = !0)),
         null != i && U[i] === e && (delete U[i], (a = !0)),
         a && B();
@@ -263,8 +263,8 @@ function ei() {
 function ea(e) {
     let { channel: t } = e;
     switch (t.type) {
-        case C.d4z.GUILD_ANNOUNCEMENT:
-        case C.d4z.GUILD_TEXT:
+        case A.d4z.GUILD_ANNOUNCEMENT:
+        case A.d4z.GUILD_TEXT:
             let n = t.guild_id;
             if ((null != n && null == U[n] && (U[n] = t.id), null != n && null == M[n])) return (M[n] = F(n)), !0;
     }
@@ -293,12 +293,12 @@ class eo extends (u = _.ZP.Store) {
                 null != n.selectedChannelIds && (M = w(R({}, n.selectedChannelIds), { null: null }));
         }
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
-            this.waitFor(y.default, O.Z, v.ZP, S.Z, I.Z, T.Z, A.Z);
+            this.waitFor(y.default, O.Z, v.ZP, S.Z, I.Z, T.Z, C.Z);
     }
     getChannelId(e) {
         var t, n;
         let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            i = Z(e === C.ME ? null : null != (t = null != e ? e : A.Z.getGuildId()) ? t : null);
+            i = Z(e === A.ME ? null : null != (t = null != e ? e : C.Z.getGuildId()) ? t : null);
         return r ? (null != (n = M[i]) ? n : F(i)) : M[i];
     }
     getVoiceChannelId() {

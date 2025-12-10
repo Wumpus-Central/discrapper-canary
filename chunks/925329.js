@@ -83,9 +83,9 @@ let O = i.forwardRef(function (e, t) {
             className: S,
             guildClassName: I,
             size: T = g.MEDIUM,
-            allowUnknownGameIcon: A = !0,
+            allowUnknownGameIcon: C = !0,
         } = e,
-        [C, N] = i.useState(null),
+        [A, N] = i.useState(null),
         [P, R] = i.useState(!1),
         D = i.useCallback((e) => {
             R(e);
@@ -138,7 +138,7 @@ let O = i.forwardRef(function (e, t) {
         });
     }
     if (null == n || "" === n)
-        return A
+        return C
             ? (0, r.jsx)(l.IMN, {
                   size: "md",
                   color: "currentColor",
@@ -152,7 +152,7 @@ let O = i.forwardRef(function (e, t) {
                 : m.intl.string(m.t["2B/phM"]),
         M = (0, p.pU)(n),
         k = (0, d.Vv)(n),
-        U = C === n || M || k;
+        U = A === n || M || k;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             U ? null : (0, r.jsx)("div", { className: o()(h.gameIconLoading, T, S) }),

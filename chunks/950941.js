@@ -58,7 +58,7 @@ function u(e) {
         u = null != n ? (0, r.jsx)(n, {}) : (0, r.jsx)(o.IGR, { text: l.intl.string(l.t.y2b7CA) });
     return s ? u : null;
 }
-function d(e) {
+function b(e) {
     let { useCustomDecoration: t, visibleContent: n, isSelected: r } = e;
     return t(n, r);
 }
@@ -78,7 +78,7 @@ function f(e) {
             );
         case i.W.STRONGLY_DISCOURAGED_CUSTOM:
             return (0, r.jsx)(
-                d,
+                b,
                 c(a({}, t), {
                     visibleContent: n,
                     isSelected: o,

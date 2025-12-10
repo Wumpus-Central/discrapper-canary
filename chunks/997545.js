@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-let C = 50,
+let A = 50,
     N = 0.9,
     P = 0.1,
     R = 0;
@@ -1012,7 +1012,7 @@ class x extends p.Z {
                 (n.params["hardware-h264"] = this.useElectronVideo ? "1" : "0"),
                 c.push(n),
                 o.name === t &&
-                    ((u = A(I({}, n), { params: this.getCodecParams(o.name, !1) })),
+                    ((u = C(I({}, n), { params: this.getCodecParams(o.name, !1) })),
                     this.experimentFlags.has(O.V8.VIDEOTOOLBOX_RATE_CONTROL) &&
                         (u.params["fixed-rate-presentation-timestamps"] = "1"),
                     this.experimentFlags.has(O.V8.LOW_LATENCY_RATE_CONTROL) &&
@@ -1031,7 +1031,7 @@ class x extends p.Z {
             : Math.max(this.keyframeInterval, this.clipsKeyFrameInterval);
     }
     getConnectionTransportOptions() {
-        let e = A(
+        let e = C(
             I(
                 {
                     selfMute: this.selfMute,
@@ -1251,7 +1251,7 @@ class x extends p.Z {
                               i.forEach((t, n) => {
                                   if (t.rid === e.rid) {
                                       let r = this.simulcastLQDisabledSsrc !== e.ssrc && e.active;
-                                      i[n] = A(I({}, t), {
+                                      i[n] = C(I({}, t), {
                                           ssrc: e.ssrc,
                                           rtxSsrc: e.rtxSsrc,
                                           active: r,
@@ -1366,7 +1366,7 @@ class x extends p.Z {
                                         : e;
                             if (
                                 this.noiseCancellation &&
-                                t > C &&
+                                t > A &&
                                 null != o.noiseCancellerProcessTime &&
                                 null != s.noiseCancellerProcessTime
                             ) {
@@ -1378,7 +1378,7 @@ class x extends p.Z {
                             this.inputMode === v.pM.VOICE_ACTIVITY &&
                                 this.vadAutoThreshold &&
                                 this.vadUseKrisp &&
-                                e > C &&
+                                e > A &&
                                 null != o.voiceActivityDetectorProcessTime &&
                                 null != s.voiceActivityDetectorProcessTime &&
                                 (o.voiceActivityDetectorProcessTime - s.voiceActivityDetectorProcessTime) / e > 4 &&

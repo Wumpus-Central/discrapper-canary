@@ -24,8 +24,8 @@ let S = function (e) {
         S = i.useRef(null),
         I = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         T = (0, s.e7)([h.Z], () => h.Z.boostSlots),
-        { analyticsLocations: A } = (0, d.ZP)(),
-        C = i.useMemo(
+        { analyticsLocations: C } = (0, d.ZP)(),
+        A = i.useMemo(
             () =>
                 Object.keys(T).filter((e) => {
                     let t = T[e];
@@ -38,7 +38,7 @@ let S = function (e) {
         (0, p.Z)({
             initialPlanId: null,
             subscriptionTier: y.Si.TIER_2,
-            analyticsLocations: A,
+            analyticsLocations: C,
             analyticsObject: {
                 page: b.ZY5.PREMIUM_GUILD_USER_MODAL,
                 section: b.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -53,7 +53,7 @@ let S = function (e) {
             initialPlanId: null,
             subscriptionTier: y.Si.TIER_2,
             isGift: !0,
-            analyticsLocations: A,
+            analyticsLocations: C,
             analyticsObject: {
                 page: b.ZY5.PREMIUM_GUILD_USER_MODAL,
                 section: b.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -94,11 +94,11 @@ let S = function (e) {
                             }),
                         ],
                     }),
-                    C > 0
+                    A > 0
                         ? (0, r.jsx)(u.Text, {
                               className: v.guildBoostCountCurrentUser,
                               variant: "text-sm/normal",
-                              children: O.intl.format(O.t.Jeto2u, { numSubscriptions: C }),
+                              children: O.intl.format(O.t.Jeto2u, { numSubscriptions: A }),
                           })
                         : null,
                 ],

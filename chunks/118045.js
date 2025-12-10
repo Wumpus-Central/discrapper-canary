@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function A(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,10 +85,10 @@ function N(e) {
                       id: m,
                       hash: b,
                   }),
-        A = (0, E.gl)();
+        C = (0, E.gl)();
     return (0, r.jsxs)(E.QR, {
         className: o()(S.gameContainer, { [S.largerGameContainer]: 0 === a }),
-        spring: A,
+        spring: C,
         children: [
             (0, r.jsx)(_.Z, {
                 children: (0, r.jsxs)("div", {
@@ -195,7 +195,7 @@ function P() {
             }),
             (0, r.jsx)("div", {
                 className: S.games,
-                children: a.map((e, t) => (0, r.jsx)(N, C(T({}, e), { index: t }), "game-".concat(t))),
+                children: a.map((e, t) => (0, r.jsx)(N, A(T({}, e), { index: t }), "game-".concat(t))),
             }),
         ],
     });

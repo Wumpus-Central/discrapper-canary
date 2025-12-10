@@ -67,7 +67,7 @@ let S = (e) => {
             S = i.useRef(null),
             [I, T] = i.useState([]);
         (0, b.Z)(E);
-        let [A, C] = i.useState(0),
+        let [C, A] = i.useState(0),
             [N, P] = i.useState(0),
             { accessibilityLabel: R } = E,
             D = v ? f.JH : 0.1,
@@ -93,7 +93,7 @@ let S = (e) => {
                     let r = n.start + n.duration;
                     r > e && (e = r), n.loop && n.start < t && (t = n.start);
                 }),
-                    C(t),
+                    A(t),
                     P(e);
             }, [P, I]);
         let [U, G] = i.useState(!1);
@@ -105,8 +105,8 @@ let S = (e) => {
                         l &&
                         !M.current &&
                         (j(),
-                        E.animationType === s.y.ANIMATION_TYPE_PERSISTENT ? x(d === p.Q.FromStart ? 0 : A) : x(0));
-            }, [l, U, A, a, L, j, M, E.animationType, u, d]),
+                        E.animationType === s.y.ANIMATION_TYPE_PERSISTENT ? x(d === p.Q.FromStart ? 0 : C) : x(0));
+            }, [l, U, C, a, L, j, M, E.animationType, u, d]),
             (0, r.jsx)("div", {
                 ref: S,
                 className: o()(y.profileEffects, { [y.hovered]: l && c }),

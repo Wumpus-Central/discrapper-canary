@@ -38,7 +38,7 @@ var r = n(444675),
         n < i;
         s = r[++n]
     )
-        O(s) || !A(s) ? (o += " " + s) : (o += " " + c(s));
+        O(s) || !C(s) ? (o += " " + s) : (o += " " + c(s));
     return o;
 }),
     (t.deprecate = function (e, n) {
@@ -131,7 +131,7 @@ function p(e, n, r) {
             return e.stylize("[Function" + c + "]", "special");
         }
         if (T(n)) return e.stylize(RegExp.prototype.toString.call(n), "regexp");
-        if (C(n)) return e.stylize(Date.prototype.toString.call(n), "date");
+        if (A(n)) return e.stylize(Date.prototype.toString.call(n), "date");
         if (N(n)) return m(n);
     }
     var u = "",
@@ -141,7 +141,7 @@ function p(e, n, r) {
         (b(n) && ((d = !0), (y = ["[", "]"])),
         P(n) && (u = " [Function" + (n.name ? ": " + n.name : "") + "]"),
         T(n) && (u = " " + RegExp.prototype.toString.call(n)),
-        C(n) && (u = " " + Date.prototype.toUTCString.call(n)),
+        A(n) && (u = " " + Date.prototype.toUTCString.call(n)),
         N(n) && (u = " " + m(n)),
         0 === s.length && (!d || 0 == n.length))
     )
@@ -253,16 +253,16 @@ function I(e) {
     return void 0 === e;
 }
 function T(e) {
-    return A(e) && "[object RegExp]" === R(e);
-}
-function A(e) {
-    return "object" == typeof e && null !== e;
+    return C(e) && "[object RegExp]" === R(e);
 }
 function C(e) {
-    return A(e) && "[object Date]" === R(e);
+    return "object" == typeof e && null !== e;
+}
+function A(e) {
+    return C(e) && "[object Date]" === R(e);
 }
 function N(e) {
-    return A(e) && ("[object Error]" === R(e) || e instanceof Error);
+    return C(e) && ("[object Error]" === R(e) || e instanceof Error);
 }
 function P(e) {
     return "function" == typeof e;
@@ -325,9 +325,9 @@ function D(e) {
     (t.isUndefined = I),
     (t.isRegExp = T),
     (t.types.isRegExp = T),
-    (t.isObject = A),
-    (t.isDate = C),
-    (t.types.isDate = C),
+    (t.isObject = C),
+    (t.isDate = A),
+    (t.types.isDate = A),
     (t.isError = N),
     (t.types.isNativeError = N),
     (t.isFunction = P),
@@ -356,7 +356,7 @@ function L(e, t) {
 }),
     (t.inherits = n(689118)),
     (t._extend = function (e, t) {
-        if (!t || !A(t)) return e;
+        if (!t || !C(t)) return e;
         for (var n = Object.keys(t), r = n.length; r--; ) e[n[r]] = t[n[r]];
         return e;
     });

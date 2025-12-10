@@ -1,8 +1,8 @@
 n.d(t, {
     NK: () => N,
-    R6: () => A,
+    R6: () => C,
     ok: () => T,
-    vN: () => C,
+    vN: () => A,
 });
 var r = n(512722),
     i = n.n(r),
@@ -58,7 +58,7 @@ function T(e, t, n) {
             O.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0);
 }
-function A(e, t, n) {
+function C(e, t, n) {
     if (
         (i()(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"),
         i()(!__OVERLAY__, "Cannot create threads in the overlay."),
@@ -83,7 +83,7 @@ function A(e, t, n) {
         });
     }, 0);
 }
-function C(e, t) {
+function A(e, t) {
     (0, _.uL)(S.Z5c.CHANNEL(e, (0, I.ME)(t) ? I.oC.GUILD_HOME : t)),
         s.Z.dispatch({
             type: "SIDEBAR_CLOSE",

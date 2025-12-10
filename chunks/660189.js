@@ -135,13 +135,13 @@ function T(e) {
     if (null == r || null == r.firstMessage || n !== r.firstMessage.id) return !1;
     _[t] = p(d({}, r), { firstMessage: r.firstMessage.set("reactions", []) });
 }
-function A(e) {
+function C(e) {
     let { channelId: t, messageId: n, emoji: r } = e,
         i = _[t];
     if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
     _[t] = p(d({}, i), { firstMessage: i.firstMessage.removeReactionsForEmoji(r) });
 }
-function C(e) {
+function A(e) {
     let { channelId: t, messages: n } = e,
         r = n[n.length - 1];
     null != r &&
@@ -180,10 +180,10 @@ let P = new N(a.Z, {
     MESSAGE_REACTION_ADD: S,
     MESSAGE_REACTION_REMOVE: S,
     MESSAGE_REACTION_REMOVE_ALL: T,
-    MESSAGE_REACTION_REMOVE_EMOJI: A,
+    MESSAGE_REACTION_REMOVE_EMOJI: C,
     MESSAGE_REACTION_ADD_MANY: I,
     LOAD_FORUM_POSTS: h,
     LOAD_THREADS_SUCCESS: g,
     LOAD_ARCHIVED_THREADS_SUCCESS: g,
-    LOAD_MESSAGES_SUCCESS: C,
+    LOAD_MESSAGES_SUCCESS: A,
 });

@@ -11,13 +11,13 @@ var i = n(120356),
     d = n(565473),
     p = n(927923),
     f = n(388032),
-    h = n(971108);
-function g(e) {
+    g = n(971108);
+function h(e) {
     let { platform: t } = e;
     return t === p.YE.XBOX
-        ? (0, r.jsx)(u.Z, { className: h.icon })
+        ? (0, r.jsx)(u.Z, { className: g.icon })
         : t === p.YE.PLAYSTATION
-          ? (0, r.jsx)(c.Z, { className: h.icon })
+          ? (0, r.jsx)(c.Z, { className: g.icon })
           : null;
 }
 function m(e) {
@@ -40,9 +40,9 @@ function m(e) {
               ? f.intl.format(f.t["ynEs/Y"], {})
               : f.intl.format(f.t.TZ17Bg, {});
     return (0, r.jsxs)("div", {
-        className: l()(h.root, m ? h.connecting : h.connected),
+        className: l()(g.root, m ? g.connecting : g.connected),
         children: [
-            (0, r.jsx)(g, { platform: u }),
+            (0, r.jsx)(h, { platform: u }),
             (0, r.jsx)(s.Text, {
                 color: m ? "header-primary" : "always-white",
                 variant: "text-xs/medium",

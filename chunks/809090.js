@@ -98,7 +98,7 @@ function y(e) {
             onMouseOver: I,
             onMouseLeave: T,
         } = e,
-        A = E(e, [
+        C = E(e, [
             "section",
             "channel",
             "isSelected",
@@ -112,7 +112,7 @@ function y(e) {
             "onMouseOver",
             "onMouseLeave",
         ]);
-    let [C, N] = i.useState(!1),
+    let [A, N] = i.useState(!1),
         P = i.useCallback(() => {
             N(!0), null == v || v();
         }, [v]),
@@ -146,7 +146,7 @@ function y(e) {
         }, [t, _, x]);
     return (0, r.jsx)(
         "div",
-        g(m({}, A), {
+        g(m({}, C), {
             className: o()(f.wrapper, b, {
                 [f.selectable]: y,
                 [f.selected]: y && a,
@@ -157,7 +157,7 @@ function y(e) {
             onMouseLeave: w,
             children: (0, r.jsx)(l.ZP, {
                 className: f.mask,
-                mask: O || (y && (a || C)) ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
+                mask: O || (y && (a || A)) ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
                 width: _,
                 height: h,
                 children: (0, r.jsx)("img", {

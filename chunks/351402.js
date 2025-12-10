@@ -38,10 +38,10 @@ function I() {
 function T() {
     m = !0;
 }
-function A() {
+function C() {
     m = !1;
 }
-function C(e) {
+function A(e) {
     let { error: t } = e;
     (m = !1), (b = t);
 }
@@ -169,8 +169,8 @@ let K = new W(u.Z, {
     BILLING_PAYMENT_SOURCE_CREATE_FAIL: I,
     STRIPE_TOKEN_FAILURE: I,
     BILLING_PAYMENT_SOURCE_REMOVE_START: T,
-    BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: A,
-    BILLING_PAYMENT_SOURCE_REMOVE_FAIL: C,
+    BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: C,
+    BILLING_PAYMENT_SOURCE_REMOVE_FAIL: A,
     BILLING_PAYMENT_SOURCE_REMOVE_CLEAR_ERROR: N,
     BILLING_PAYMENT_SOURCE_UPDATE_START: P,
     BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: R,

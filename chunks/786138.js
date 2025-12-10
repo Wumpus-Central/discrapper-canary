@@ -24,9 +24,9 @@ function y(e) {
             showReportOption: S = !1,
             disableChangeWindows: I = !1,
             minimal: T = !1,
-            appContext: A = h.IlC.APP,
+            appContext: C = h.IlC.APP,
         } = e,
-        { desktopSourceId: C, lastPickedContent: N } = (0, a.cj)([c.ZP, f.Z], () => {
+        { desktopSourceId: A, lastPickedContent: N } = (0, a.cj)([c.ZP, f.Z], () => {
             var e;
             let { desktopSource: t } = null != (e = f.Z.getGoLiveSource()) ? e : {},
                 n = c.ZP.getLastPickedContent();
@@ -39,18 +39,18 @@ function y(e) {
         R = f.Z.supports(E.AN.DESKTOP_CAPTURE_APPLICATIONS),
         D = (0, a.e7)([f.Z], () => f.Z.supports(E.AN.SOUNDSHARE)),
         w = (0, a.e7)([f.Z], () => f.Z.supportsScreenSoundshare()),
-        x = (0, m.Z)(O, A),
-        L = (0, _.Z)(O, A, g.Vq),
-        j = null != C && D && (!C.startsWith("screen") || w),
+        x = (0, m.Z)(O, C),
+        L = (0, _.Z)(O, C, g.Vq),
+        j = null != A && D && (!A.startsWith("screen") || w),
         M = (0, a.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, p.isLinux)()),
         k = i.useCallback(() => {
-            (null == C ? void 0 : C.startsWith("prepicked:"))
+            (null == A ? void 0 : A.startsWith("prepicked:"))
                 ? f.Z.getMediaEngine().eachConnection((e) => {
                       e.context === E.Yn.STREAM && e.presentDesktopSourcePicker("window");
                   })
                 : v();
-        }, [C, v]),
-        U = null != (t = null == C ? void 0 : C.startsWith("prepicked:")) && t,
+        }, [A, v]),
+        U = null != (t = null == A ? void 0 : A.startsWith("prepicked:")) && t,
         G =
             (0, p.isMac)() &&
             p.isPlatformEmbedded &&
@@ -78,9 +78,9 @@ function y(e) {
                     },
                     context: E.Yn.STREAM,
                 };
-            null != C &&
+            null != A &&
                 (r.desktopSettings = {
-                    sourceId: C,
+                    sourceId: A,
                     sound: !P,
                 }),
                 (0, l.Rc)({
@@ -90,7 +90,7 @@ function y(e) {
                     soundshareEnabled: !P,
                 }),
                 s.Z.setGoLiveSource(r);
-        }, [C, P]);
+        }, [A, P]);
     if (null == O)
         return (0, r.jsx)(o.sNh, {
             id: "share-your-screen",

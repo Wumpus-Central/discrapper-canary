@@ -26,8 +26,8 @@ var r = n(54381),
     S = n(211242),
     I = n(975298),
     T = n(15640),
-    A = n(89057),
-    C = n(406128),
+    C = n(89057),
+    A = n(406128),
     N = n(703656),
     P = n(313789),
     R = n(342386),
@@ -381,11 +381,11 @@ let em = function () {
     }, [b, t]);
     let [P, R] = i.useState(!1);
     if (b) return (0, r.jsx)(E.Z, {});
-    if (t) return (0, r.jsx)(A.c8, {});
+    if (t) return (0, r.jsx)(C.c8, {});
     let D = o && null !== a && s,
         L = f.fetched && f.isFractionalPremiumActive;
     if (!D && !L && !l)
-        return (0, r.jsx)(C.Z, {
+        return (0, r.jsx)(A.Z, {
             title: et.intl.string(et.t.dyq9TR),
             note: null,
         });

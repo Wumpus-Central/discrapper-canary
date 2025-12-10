@@ -4,7 +4,7 @@ var r = n(54381),
     a = n(120356),
     o = n.n(a),
     s = n(485853),
-    l = n(205120),
+    l = n(467721),
     c = n(278074),
     u = n(748780),
     d = n(28664),
@@ -68,8 +68,8 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let A = 24,
-    C = 24,
+let C = 24,
+    A = 24,
     N = 20;
 function P(e) {
     let { percentage: t, label: n, canShowVoterDetails: a, answerId: o } = e,
@@ -84,10 +84,10 @@ function P(e) {
         T = i.useCallback(() => {
             I(), v(!0);
         }, [I]),
-        A = i.useCallback(() => {
+        C = i.useCallback(() => {
             v(!1);
         }, []),
-        C = i.useCallback(() => {
+        A = i.useCallback(() => {
             (0, m.n)({
                 channelId: c,
                 messageId: u,
@@ -122,10 +122,10 @@ function P(e) {
                                         "aria-label": !1,
                                         children: (0, r.jsx)(f.Avr, {
                                             onMouseEnter: T,
-                                            onMouseLeave: A,
+                                            onMouseLeave: C,
                                             onFocus: T,
-                                            onBlur: A,
-                                            onClick: C,
+                                            onBlur: C,
+                                            onClick: A,
                                             "aria-describedby": S ? l : void 0,
                                             text: n,
                                             variant: "secondary",
@@ -134,10 +134,10 @@ function P(e) {
                                     })
                                   : (0, r.jsx)(f.Avr, {
                                         onMouseEnter: T,
-                                        onMouseLeave: A,
+                                        onMouseLeave: C,
                                         onFocus: T,
-                                        onBlur: A,
-                                        onClick: C,
+                                        onBlur: C,
+                                        onClick: A,
                                         text: n,
                                         variant: "secondary",
                                         textVariant: "text-xs/semibold",
@@ -193,7 +193,7 @@ function D(e) {
         .with({ answersInteraction: g.Y7.RADIO_BUTTONS }, () =>
             (0, r.jsx)(E.Og, {
                 isSelected: n,
-                size: C,
+                size: A,
                 className: s,
             }),
         )
@@ -213,7 +213,7 @@ function D(e) {
                 (0, r.jsx)(E.ZY, {
                     isVictor: a,
                     isExpired: o,
-                    size: A,
+                    size: C,
                     className: s,
                 }),
         )

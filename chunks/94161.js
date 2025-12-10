@@ -18,8 +18,8 @@ function h(e, t) {
         v = (0, d.v)(l.S),
         S = a === f.Ie.NORMAL,
         { tooltipsWithKeybinds: I, expressionsCombinedIntoEmojiButton: T } = d.n.useConfig({ location: "EmojiButton" }),
-        A = T ? void 0 : S ? v : void 0,
-        C = I && T && S ? _.intl.string(_.t.DSBQ6F) : void 0,
+        C = T ? void 0 : S ? v : void 0,
+        A = I && T && S ? _.intl.string(_.t.DSBQ6F) : void 0,
         N = i.useCallback(() => {
             (0, u.RO)(g, a, h);
         }, [a, g, h]);
@@ -29,8 +29,8 @@ function h(e, t) {
               className: o()(p.CT, m.buttonContainer),
               ref: t,
               children: (0, r.jsx)(c.Z, {
-                  "aria-label": C,
-                  tooltipText: C,
+                  "aria-label": A,
+                  tooltipText: A,
                   className: m.emojiButton,
                   onClick: N,
                   active: E === g && b === a && O === h,
@@ -44,7 +44,7 @@ function h(e, t) {
                           right: -4,
                       },
                   },
-                  keyboardShortcut: A,
+                  keyboardShortcut: C,
                   canShowNUXPremiumTooltip: S,
               }),
           });

@@ -36,8 +36,8 @@ var r,
     S = n(699516),
     I = n(246946),
     T = n(594174),
-    A = n(626135),
-    C = n(768581),
+    C = n(626135),
+    A = n(768581),
     N = n(5192),
     P = n(358085),
     R = n(998502),
@@ -206,8 +206,8 @@ if (null === c.Z || void 0 === c.Z ? void 0 : c.Z.features.supports("notificatio
                 if ((P.isPlatformEmbedded ? R.ZP.focus() : window.focus(), null != e)) {
                     var a, o, s;
                     (null == (a = e.options) ? void 0 : a.omitClickTracking) ||
-                        (A.default.track(D.rMx.NOTIFICATION_ACTION, x({ action: "CLICK" }, e.trackingProps)),
-                        A.default.track(D.rMx.NOTIFICATION_CLICKED, e.clickTrackingProps)),
+                        (C.default.track(D.rMx.NOTIFICATION_ACTION, x({ action: "CLICK" }, e.trackingProps)),
+                        C.default.track(D.rMx.NOTIFICATION_CLICKED, e.clickTrackingProps)),
                         null == (s = e.options) || null == (o = s.onClick) || o.call(s, r);
                     return;
                 }
@@ -292,7 +292,7 @@ async function et(e, t, n, r, i) {
             !1 !== i.playSoundIfDisabled &&
             (ee(i.sound, null != (a = i.volume) ? a : 1, i.soundpack),
             (r.ping = !0),
-            i.omitViewTracking || A.default.track(D.rMx.NOTIFICATION_ACTION, x({ action: "VIEW" }, r)));
+            i.omitViewTracking || C.default.track(D.rMx.NOTIFICATION_ACTION, x({ action: "VIEW" }, r)));
         return;
     }
     t.includes("\0") && (G.warn("Notification title contains null character, setting to empty string"), (t = "")),
@@ -303,8 +303,8 @@ async function et(e, t, n, r, i) {
             var n;
             null == (n = i.onShown) || n.call(i),
                 i.omitViewTracking ||
-                    (A.default.track(D.rMx.NOTIFICATION_ACTION, x({ action: "VIEW" }, t)),
-                    A.default.track(D.rMx.NOTIFICATION_VIEWED, z)),
+                    (C.default.track(D.rMx.NOTIFICATION_ACTION, x({ action: "VIEW" }, t)),
+                    C.default.track(D.rMx.NOTIFICATION_VIEWED, z)),
                 Z && setTimeout(() => e.close(), 5000);
         };
     if (
@@ -365,7 +365,7 @@ async function et(e, t, n, r, i) {
                 (a.emoji = i.emoji.map((e) =>
                     x(
                         {
-                            url: (0, C.gT)({
+                            url: (0, A.gT)({
                                 id: e.id,
                                 animated: !1,
                                 size: 96,
@@ -419,8 +419,8 @@ async function et(e, t, n, r, i) {
         var t;
         P.isPlatformEmbedded ? R.ZP.focus() : (window.focus(), E.close()),
             i.omitClickTracking ||
-                (A.default.track(D.rMx.NOTIFICATION_ACTION, x({ action: "CLICK" }, r)),
-                A.default.track(D.rMx.NOTIFICATION_CLICKED, K));
+                (C.default.track(D.rMx.NOTIFICATION_ACTION, x({ action: "CLICK" }, r)),
+                C.default.track(D.rMx.NOTIFICATION_CLICKED, K));
         let n = "";
         null == (t = i.onClick) || t.call(i, n);
     }),

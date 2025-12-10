@@ -39,7 +39,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,13 +55,13 @@ function A(e) {
     }
     return e;
 }
-let C = "recentMentionFilterSettings",
+let A = "recentMentionFilterSettings",
     N = [],
     P = {},
     R = {},
     D = !1,
     w = !0,
-    x = s.K.get(C, {
+    x = s.K.get(A, {
         guildFilter: I.NgX.ALL_SERVERS,
         everyoneFilter: !0,
         roleFilter: !0,
@@ -223,8 +223,8 @@ function q(e) {
     a().forEach(t, K);
 }
 function Q(e) {
-    let t = A({}, x);
-    (x = a().defaults(a().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), x)), s.K.set(C, x);
+    let t = C({}, x);
+    (x = a().defaults(a().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), x)), s.K.set(A, x);
     let n = (e, n) => t[e] !== x[e] && x[e] === n,
         r = n("guildFilter", I.NgX.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
     R = {};

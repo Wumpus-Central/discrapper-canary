@@ -32,10 +32,10 @@ let u = {
                 i = t.body.guilds.map(s.Iv),
                 a = t.body.total_count;
             if (f) {
-                var h;
+                var g;
                 let n = [];
-                null == (h = t.body.categories) ||
-                    h.slice(0, 8).forEach((e) => {
+                null == (g = t.body.categories) ||
+                    g.slice(0, 8).forEach((e) => {
                         let { id: t, count: r } = e;
                         n.push([Number(t), r]);
                     }),

@@ -94,12 +94,12 @@ function S(e) {
             maxWidth: n,
         });
     if (3 === a)
-        return (0, r.jsx)(A, {
+        return (0, r.jsx)(C, {
             itemsForLayout: t,
             maxWidth: n,
         });
     if (4 === a)
-        return (0, r.jsx)(C, {
+        return (0, r.jsx)(A, {
             itemsForLayout: t,
             maxWidth: n,
         });
@@ -167,7 +167,7 @@ function T(e) {
         ),
     });
 }
-function A(e) {
+function C(e) {
     let { itemsForLayout: t, maxWidth: n } = e,
         i = Math.round((2 * (n - y)) / 3),
         a = i / 2;
@@ -204,7 +204,7 @@ function A(e) {
         ],
     });
 }
-function C(e) {
+function A(e) {
     let { itemsForLayout: t, maxWidth: n } = e,
         i = Math.round((n - y) / 2);
     return (0, r.jsx)("div", {

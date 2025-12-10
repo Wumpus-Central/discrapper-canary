@@ -76,15 +76,15 @@ function S(e) {
 }
 var I = !1,
     T = -1,
-    A = 5,
-    C = -1;
+    C = 5,
+    A = -1;
 function N() {
-    return !!E || !(t.unstable_now() - C < A);
+    return !!E || !(t.unstable_now() - A < C);
 }
 function P() {
     if (((E = !1), I)) {
         var e = t.unstable_now();
-        C = e;
+        A = e;
         var n = !0;
         try {
             e: {
@@ -155,7 +155,7 @@ function w(e, n) {
             ? console.error(
                   "forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported",
               )
-            : (A = 0 < e ? Math.floor(1000 / e) : 5);
+            : (C = 0 < e ? Math.floor(1000 / e) : 5);
     }),
     (t.unstable_getCurrentPriorityLevel = function () {
         return _;

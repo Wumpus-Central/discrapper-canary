@@ -215,20 +215,20 @@ function I(e) {
     );
 }
 function T(e, t) {
-    return t ? C(e) : "paragraph" === e[0].type && e[0].content instanceof Array && C(e[0].content);
+    return t ? A(e) : "paragraph" === e[0].type && e[0].content instanceof Array && A(e[0].content);
 }
-function A(e, t) {
-    if (e instanceof Array) return e.some((e) => A(e, t));
+function C(e, t) {
+    if (e instanceof Array) return e.some((e) => C(e, t));
     let n = t(e);
     return null != n
         ? n
         : e.content instanceof Array
-          ? A(e.content, t)
-          : e.items instanceof Array && e.items.some((e) => A(e, t));
+          ? C(e.content, t)
+          : e.items instanceof Array && e.items.some((e) => C(e, t));
 }
-function C(e) {
-    return A(e, (e) =>
-        "spoiler" === e.type ? A(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
+function A(e) {
+    return C(e, (e) =>
+        "spoiler" === e.type ? C(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
     );
 }
 function N(e, t) {

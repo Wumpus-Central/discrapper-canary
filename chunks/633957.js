@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(429551),
     I = n(973616),
     T = n(314897),
-    A = n(592125),
-    C = n(158776),
+    C = n(592125),
+    A = n(158776),
     N = n(594174),
     P = n(626135),
     R = n(768581),
@@ -42,7 +42,7 @@ function Z(e) {
         { application: d, channelId: S, guildId: D, message: x } = e,
         { analyticsLocations: Z } = (0, g.ZP)(h.Z.ACTIVITY_INSTANCE_EMBED),
         F = (0, u.O)(),
-        V = (0, s.e7)([A.Z], () => A.Z.getChannel(S), [S]),
+        V = (0, s.e7)([C.Z], () => C.Z.getChannel(S), [S]),
         H = (null == V || null == (t = V.isThread) ? void 0 : t.call(V)) ? (null == V ? void 0 : V.parent_id) : S,
         Y = (0, s.e7)([T.default], () => T.default.getId()),
         {
@@ -69,10 +69,10 @@ function Z(e) {
                     .filter(w.lm),
             [q],
         ),
-        X = (0, s.e7)([C.Z], () => {
+        X = (0, s.e7)([A.Z], () => {
             if (null == q) return null;
             for (let e of q) {
-                let t = C.Z.findActivity(e, (e) => e.application_id === d.id);
+                let t = A.Z.findActivity(e, (e) => e.application_id === d.id);
                 if (null != t) return t;
             }
             return null;

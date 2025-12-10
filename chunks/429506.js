@@ -1,7 +1,7 @@
-t.d(a, { Z: () => o });
-var n = t(626135),
-    i = t(981631);
-function o(e) {
-    let { rating: a = null } = e;
-    n.default.track(i.rMx.SAFETY_USER_SENTIMENT_FEEDBACK_SUBMITTED, { rating: a });
+a.d(t, { Z: () => i });
+var n = a(626135),
+    c = a(981631);
+function i(e) {
+    let { rating: t = null } = e;
+    n.default.track(c.rMx.SAFETY_USER_SENTIMENT_FEEDBACK_SUBMITTED, { rating: t });
 }

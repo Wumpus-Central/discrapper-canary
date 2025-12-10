@@ -1,4 +1,4 @@
-n.d(t, { w: () => A }), n(388685);
+n.d(t, { w: () => C }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -89,7 +89,7 @@ function I(e, t) {
     return i;
 }
 let T = u.Z.modules.select.OPTION_HEIGHT.resolve();
-function A(e) {
+function C(e) {
     let t,
         {
             id: n,
@@ -100,7 +100,7 @@ function A(e) {
             defaultSelectedItems: b,
             selectedItems: O,
             onSelectionChange: I,
-            activeDescendantIndex: A,
+            activeDescendantIndex: C,
             shouldFocusWrap: P = !1,
             renderListItem: R,
             renderEmptyState: D,
@@ -178,13 +178,13 @@ function A(e) {
                     a = (0, g.cA)(U, n),
                     o = 0 !== V.length && null != V.find((e) => e.id === i.id);
                 return (0, r.jsx)(
-                    C,
+                    A,
                     v(y({}, i), {
                         id: a,
                         selectionMode: d,
                         selected: o,
                         disabled: u || i.disabled,
-                        focused: n === A,
+                        focused: n === C,
                         onClick: () => {
                             u || i.disabled || K(i);
                         },
@@ -232,7 +232,7 @@ function A(e) {
         }),
     });
 }
-function C(e) {
+function A(e) {
     let { children: t, id: n, selected: i, disabled: a, focused: o, selectionMode: s, onClick: l } = e,
         u = (0, c.JA)(n);
     function p() {

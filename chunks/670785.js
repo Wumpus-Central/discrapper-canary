@@ -51,7 +51,7 @@ function T(e) {
         return null != r && clearTimeout(r), (v[e.name] = t), n;
     });
 }
-function A(e, t) {
+function C(e, t) {
     var n;
     if (null == b) return void g.error("Overlay module not found");
     let r = null != (n = null == b ? void 0 : b.getLastAssociatedPID()) ? n : u.UNSET_PID;
@@ -68,17 +68,17 @@ function A(e, t) {
         g.error("Error setting capture zones:", e);
     }
 }
-function C(e) {
+function A(e) {
     return Object.keys(v).filter((t) => v[t] === e);
 }
 function N() {
     return O.length > 0 && 0 === y.length;
 }
 function P(e) {
-    let t = C(e);
+    let t = A(e);
     for (let n of (null != e && clearTimeout(e), t)) delete v[n];
     let n = O.filter((e) => !t.includes(e.name));
-    N() || ((y = n), A(n, "timer_expired")), (O = [...n]);
+    N() || ((y = n), C(n, "timer_expired")), (O = [...n]);
 }
 function R(e, t) {
     if (!f.Z.isOverlayEnabled) {
@@ -86,17 +86,17 @@ function R(e, t) {
         D("overlay_disabled");
         return;
     }
-    A(e, t), (y = e), (O = [...e]);
+    C(e, t), (y = e), (O = [...e]);
 }
 function D(e) {
     for (let e of Object.values(v)) null != e && clearTimeout(e);
-    (v = {}), (y = []), (O = []), A([], e);
+    (v = {}), (y = []), (O = []), C([], e);
 }
 function w() {
-    0 !== y.length && ((O = [...y]), (y = []), A([], "store_click_zones"));
+    0 !== y.length && ((O = [...y]), (y = []), C([], "store_click_zones"));
 }
 function x() {
-    y.length > 0 || A((y = [...O]), "refresh_click_zones");
+    y.length > 0 || C((y = [...O]), "refresh_click_zones");
 }
 function L(e, t, n, r) {
     let i = c.Z.getWindow(m.$J);

@@ -124,8 +124,8 @@ let h = new (n(499303).I)(),
         );
     },
     T = (e, t) => (e.candidates.set(t.content, t), e),
-    A = (e, t) => (e.candidates.delete(t.content), e),
-    C = (e, t) => I(S(e, e.shownFatigableCandidate), t),
+    C = (e, t) => (e.candidates.delete(t.content), e),
+    A = (e, t) => I(S(e, e.shownFatigableCandidate), t),
     N = (e) => (null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0),
     P = (e) => {
         let t = [...e.candidates.keys()];
@@ -148,7 +148,7 @@ let h = new (n(499303).I)(),
         if (0 === e.candidates.size) return e;
         let t = new Date().getTime() - e.lastWinnerTime > g;
         return R(e) && !t
-            ? (h.unschedule(), C(e, N(e)))
+            ? (h.unschedule(), A(e, N(e)))
             : ((null != e.shownFatigableCandidate && !t) ||
                   h.scheduled() ||
                   x(e) ||
@@ -156,7 +156,7 @@ let h = new (n(499303).I)(),
                       (0, a.j)(() => {
                           y.setState((e) => {
                               let t = v(e);
-                              return C(t, P(t));
+                              return A(t, P(t));
                           });
                       });
                   }, 250),
@@ -180,7 +180,7 @@ let h = new (n(499303).I)(),
         (0, a.j)(() => {
             y.setState((n) => {
                 let r = v(n);
-                return t ? D(S(A(r, e), e)) : S(A(r, e), e);
+                return t ? D(S(C(r, e), e)) : S(C(r, e), e);
             });
         });
     },

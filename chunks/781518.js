@@ -1,11 +1,11 @@
 n.d(t, {
     Ai: () => v,
     PW: () => S,
-    Tu: () => C,
+    Tu: () => A,
     am: () => O,
     hP: () => y,
     hY: () => I,
-    k1: () => A,
+    k1: () => C,
     rC: () => b,
     wO: () => T,
 }),
@@ -203,7 +203,7 @@ function I(e, t, n, r) {
 function T(e, t) {
     return b.put(e, t, { url: u.C7.PLAYER_PAUSE }).then((e) => (a.Z.dispatch({ type: "SPOTIFY_PLAYER_PAUSE" }), e));
 }
-function A() {
+function C() {
     !c.Z.isProtocolRegistered() &&
         (0, l.isDesktop)() &&
         s.Z.isProtocolRegistered(u.M5).then((e) => {
@@ -213,7 +213,7 @@ function A() {
             });
         });
 }
-function C(e, t) {
+function A(e, t) {
     a.Z.dispatch({
         type: "SPOTIFY_SET_ACTIVE_DEVICE",
         accountId: e,

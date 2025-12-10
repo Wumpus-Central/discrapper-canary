@@ -68,11 +68,11 @@ function v(e) {
         iconSrc: S,
         actions: I = [],
         primaryActionFirst: T = !1,
-        trackingConfig: A,
-        onClickContent: C,
+        trackingConfig: C,
+        onClickContent: A,
         onClickBanner: N,
     } = e;
-    A = y(A);
+    C = y(C);
     let { primaryColor: P, secondaryColor: R } = (0, p.Z)(null != S ? S : h),
         D = "linear-gradient(45deg, ".concat(P, ", ").concat(R, ")"),
         w = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
@@ -81,15 +81,15 @@ function v(e) {
             (e) => {
                 if (!1 === x.current && e) {
                     var t;
-                    null == A || null == (t = A.onView) || t.call(A),
+                    null == C || null == (t = C.onView) || t.call(C),
                         (0, m.GF)({
-                            appId: A.id,
-                            linkType: A.linkType,
-                            referrerId: A.referrerId,
-                            customId: A.activityCustomId,
-                            guildId: A.guildId,
-                            channelId: A.channelId,
-                            messageId: A.messageId,
+                            appId: C.id,
+                            linkType: C.linkType,
+                            referrerId: C.referrerId,
+                            customId: C.activityCustomId,
+                            guildId: C.guildId,
+                            channelId: C.channelId,
+                            messageId: C.messageId,
                         }),
                         (x.current = !0);
                 }
@@ -107,33 +107,33 @@ function v(e) {
         }, []),
         B = i.useMemo(() => !!M && new URL(b).pathname.endsWith(".gif"), [M, b]),
         F = i.useMemo(() => {
-            if (null != C)
+            if (null != A)
                 return (e) => {
-                    C(e),
+                    A(e),
                         (0, m.KX)({
-                            applicationId: A.id,
-                            linkType: A.linkType,
+                            applicationId: C.id,
+                            linkType: C.linkType,
                             area: m.j_.CONTENT,
-                            referrerId: A.referrerId,
-                            customId: A.activityCustomId,
-                            isDeadEnd: A.isDeadEnd,
+                            referrerId: C.referrerId,
+                            customId: C.activityCustomId,
+                            isDeadEnd: C.isDeadEnd,
                         });
                 };
-        }, [C, A]),
+        }, [A, C]),
         V = i.useMemo(() => {
             if (null != N)
                 return (e) => {
                     N(e),
                         (0, m.KX)({
-                            applicationId: A.id,
-                            linkType: A.linkType,
+                            applicationId: C.id,
+                            linkType: C.linkType,
                             area: m.j_.BANNER,
-                            referrerId: A.referrerId,
-                            customId: A.activityCustomId,
-                            isDeadEnd: A.isDeadEnd,
+                            referrerId: C.referrerId,
+                            customId: C.activityCustomId,
+                            isDeadEnd: C.isDeadEnd,
                         });
                 };
-        }, [N, A]);
+        }, [N, C]);
     return (0, r.jsxs)("div", {
         ref: L,
         className: E.embed,
@@ -235,11 +235,11 @@ function v(e) {
                                                           onClick: (e) => {
                                                               a(e),
                                                                   (0, m.KX)({
-                                                                      applicationId: A.id,
-                                                                      linkType: A.linkType,
+                                                                      applicationId: C.id,
+                                                                      linkType: C.linkType,
                                                                       area: u,
-                                                                      referrerId: A.referrerId,
-                                                                      customId: A.activityCustomId,
+                                                                      referrerId: C.referrerId,
+                                                                      customId: C.activityCustomId,
                                                                       isDeadEnd: f,
                                                                   });
                                                           },
@@ -261,11 +261,11 @@ function v(e) {
                                                               onClick: (e) => {
                                                                   a(e),
                                                                       (0, m.KX)({
-                                                                          applicationId: A.id,
-                                                                          linkType: A.linkType,
+                                                                          applicationId: C.id,
+                                                                          linkType: C.linkType,
                                                                           area: u,
-                                                                          referrerId: A.referrerId,
-                                                                          customId: A.activityCustomId,
+                                                                          referrerId: C.referrerId,
+                                                                          customId: C.activityCustomId,
                                                                           isDeadEnd: f,
                                                                       });
                                                               },

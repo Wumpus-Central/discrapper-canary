@@ -1,10 +1,10 @@
 n.d(t, {
     $z: () => P,
     D0: () => E,
-    JC: () => A,
+    JC: () => C,
     Om: () => T,
     Sf: () => m,
-    U4: () => C,
+    U4: () => A,
     Vg: () => g,
     Xc: () => I,
     ZP: () => f,
@@ -138,9 +138,9 @@ class f extends i.Z {
             case s.HeQ.KAKAOPAY:
                 return new T(c({}, r));
             case s.HeQ.GOPAY_WALLET:
-                return new A(c({}, r));
-            case s.HeQ.BANCONTACT:
                 return new C(c({}, r));
+            case s.HeQ.BANCONTACT:
+                return new A(c({}, r));
             case s.HeQ.IDEAL:
                 return new b(d(c({}, r), { bank: e.bank }));
             case s.HeQ.CASH_APP:
@@ -176,9 +176,9 @@ class f extends i.Z {
             case s.HeQ.KAKAOPAY:
                 return new T(e);
             case s.HeQ.GOPAY_WALLET:
-                return new A(e);
-            case s.HeQ.BANCONTACT:
                 return new C(e);
+            case s.HeQ.BANCONTACT:
+                return new A(e);
             case s.HeQ.EPS:
                 return new E(e);
             case s.HeQ.IDEAL:
@@ -362,7 +362,7 @@ class T extends f {
             );
     }
 }
-class A extends f {
+class C extends f {
     constructor(e) {
         if ((super(e), e.type !== s.HeQ.GOPAY_WALLET))
             throw Error(
@@ -372,7 +372,7 @@ class A extends f {
             );
     }
 }
-class C extends f {
+class A extends f {
     constructor(e) {
         if ((super(e), e.type !== s.HeQ.BANCONTACT))
             throw Error(

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => C });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -68,29 +68,29 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function A(e) {
+function C(e) {
     var { user: t, closePopout: n } = e,
         v = I(e, ["user", "closePopout"]);
     let T = i.useRef(null),
-        A = (0, a.e7)([g.Z], () => {
+        C = (0, a.e7)([g.Z], () => {
             var e;
             return null == (e = g.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        C = (0, a.e7)([f.Z, d.Z], () => d.Z.getChannel(f.Z.getChannelId())),
-        N = (0, s.Z)(C),
+        A = (0, a.e7)([f.Z, d.Z], () => d.Z.getChannel(f.Z.getChannelId())),
+        N = (0, s.Z)(A),
         P = t.id,
         R = i.useCallback(() => {
-            null != A &&
+            null != C &&
                 (N
-                    ? ((0, l.X)(A.id),
-                      (0, o.Mr3)((0, E.z)(P, null == C ? void 0 : C.guild_id)),
+                    ? ((0, l.X)(C.id),
+                      (0, o.Mr3)((0, E.z)(P, null == A ? void 0 : A.guild_id)),
                       null == n || n(),
-                      p.default.track(y.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: A.id }))
-                    : (0, h.L)(S({ applicationId: A.id }, A)));
-        }, [A, N, P, null == C ? void 0 : C.guild_id, n]),
+                      p.default.track(y.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: C.id }))
+                    : (0, h.L)(S({ applicationId: C.id }, C)));
+        }, [C, N, P, null == A ? void 0 : A.guild_id, n]),
         D = N ? O.intl.string(O.t["Cia+A8"]) : O.intl.string(O.t.NgXl3C);
-    if (null == A || !(0, u.Eb)(A)) return null;
-    let { customInstallUrl: w } = A,
+    if (null == C || !(0, u.Eb)(C)) return null;
+    let { customInstallUrl: w } = C,
         x = null == w || m.Z.isDiscordUrl(w) ? o.qJs : o.Gr1,
         L = N ? void 0 : x;
     return _.wS
@@ -107,7 +107,7 @@ function A(e) {
                           children: (0, r.jsx)(o.sNh, {
                               id: "copy",
                               label: O.intl.string(O.t.XWDihq),
-                              action: () => (0, _.JG)((0, c.J)(A)),
+                              action: () => (0, _.JG)((0, c.J)(C)),
                           }),
                       }),
                   });

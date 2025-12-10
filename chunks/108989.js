@@ -56,9 +56,9 @@ let a = [n(123353)],
     };
 function u(e) {
     let { className: t, firing: n = !0, wind: u = 2, sprites: d = a, spriteColors: p = s, confettiConfig: f } = e,
-        [h, g] = i.useState(null),
+        [g, h] = i.useState(null),
         [m, _] = i.useState(null),
-        b = (0, l.uR)(m, h),
+        b = (0, l.uR)(m, g),
         E = i.useMemo(() => new l.qA({ wind: u }), [u]),
         O = i.useCallback(() => {
             var e, t;
@@ -133,7 +133,7 @@ function u(e) {
                     environment: E,
                 }),
                 (0, r.jsx)(l.Ji, {
-                    ref: g,
+                    ref: h,
                     colors: p,
                     sprites: d,
                     spriteWidth: 6,

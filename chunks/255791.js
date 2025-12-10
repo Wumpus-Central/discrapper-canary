@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r,
     i,
     l = n(442837),
@@ -35,7 +35,7 @@ class f extends (r = l.ZP.Store) {
           writable: !0,
       })
     : (f[i] = "MaxMemberCountChannelNoticeStore");
-let h = new f(s.Z, {
+let g = new f(s.Z, {
     MAX_MEMBER_COUNT_NOTICE_DISMISS: function (e) {
         let t = e.guildId;
         if (!p[d.vID.MAX_MEMBER_COUNT].has(t))

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => A });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -34,7 +34,7 @@ function T(e, t) {
         return I;
     }, [n, r]);
 }
-function A(e) {
+function C(e) {
     let { channel: t, message: n, replyChainLength: a } = e;
     function o() {
         (0, _.A6)(t.id), (0, g.R6)(t, n, "Reply Chain Nudge");
@@ -78,19 +78,19 @@ function A(e) {
         })
     );
 }
-function C(e) {
+function A(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: a, shouldMention: s, showMentionToggle: u } = t,
         {
             guildId: g,
             nick: E,
             colorString: I,
-            colorStrings: C,
+            colorStrings: A,
             colorRoleName: N,
             authorId: P,
             displayNameStyles: R,
         } = (0, f.ZP)(a),
-        D = (0, p.X7)(g, P, C),
+        D = (0, p.X7)(g, P, A),
         w = (0, d.j)({ displayNameStyles: R }),
         x = T(i, a),
         L = (0, h.NE)(i, a),
@@ -182,7 +182,7 @@ function C(e) {
                     ],
                 }),
                 j &&
-                    (0, r.jsx)(A, {
+                    (0, r.jsx)(C, {
                         channel: i,
                         message: a,
                         replyChainLength: x,

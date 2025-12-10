@@ -17,7 +17,7 @@ let a = (e) => {
             onClose: p,
             transitionState: v,
         } = e,
-        { maxAgeOptions: I, maxAge: m, maxUses: S, temporary: x, flags: f } = n;
+        { maxAgeOptions: I, maxAge: m, maxUses: x, temporary: S, flags: f } = n;
     return (0, i.jsx)(l.Modal, {
         transitionState: v,
         onClose: p,
@@ -40,8 +40,8 @@ let a = (e) => {
             shouldHideTemporaryInviteToggle: a,
             maxAgeOptions: I,
             maxAge: m,
-            maxUses: S,
-            temporary: x,
+            maxUses: x,
+            temporary: S,
             onToggleTemporary: u,
             onSelectMaxAge: d,
             onSelectMaxUses: c,

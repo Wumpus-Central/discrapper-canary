@@ -244,8 +244,8 @@ class h extends m {
             S,
             I,
             T,
-            A,
             C,
+            A,
             N,
             P,
             R,
@@ -290,8 +290,8 @@ class h extends m {
             eulaId: null != (S = e.eulaId) ? S : this.eulaId,
             slug: null != (I = e.slug) ? I : this.slug,
             coverImage: null != (T = e.coverImage) ? T : this.coverImage,
-            bot: null != (A = e.bot) ? A : this.bot,
-            flags: null != (C = e.flags) ? C : this.flags,
+            bot: null != (C = e.bot) ? C : this.bot,
+            flags: null != (A = e.flags) ? A : this.flags,
             maxParticipants: null != (N = e.maxParticipants) ? N : this.maxParticipants,
             tags: null != (P = e.tags) ? P : this.tags,
             embeddedActivityConfig:
@@ -340,7 +340,7 @@ class h extends m {
         return null != e && (e & t) === t;
     }
     constructor(e) {
-        var t, n, i, a, o, s, l, d, p, m, g, E, b, y, O, v, S, I, T, A;
+        var t, n, i, a, o, s, l, d, p, m, g, E, b, y, O, v, S, I, T, C;
         super(e),
             c(this, "overlay", void 0),
             c(this, "overlayWarn", void 0),
@@ -414,6 +414,6 @@ class h extends m {
                           ))
                     ? T
                     : e.linkedGames),
-            (this.deepLinkUri = null != (A = e.deepLinkUri) ? A : e.deeplink_uri);
+            (this.deepLinkUri = null != (C = e.deepLinkUri) ? C : e.deeplink_uri);
     }
 }

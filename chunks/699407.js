@@ -77,8 +77,8 @@ let h = "x-science-test",
     S = y,
     I = O,
     T = g,
-    A = 0,
     C = 0,
+    A = 0,
     N = 0,
     P = 0,
     R = 0,
@@ -92,7 +92,7 @@ let h = "x-science-test",
     U = null,
     G = null;
 function Z() {
-    (C = 0), (N = 0), (P = 0), (w = 0), (x = Number.MAX_SAFE_INTEGER), (L = 0), (j = 0), (D = Date.now()), (R = A);
+    (A = 0), (N = 0), (P = 0), (w = 0), (x = Number.MAX_SAFE_INTEGER), (L = 0), (j = 0), (D = Date.now()), (R = C);
 }
 function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
@@ -195,10 +195,10 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                     rpc_success_count: N,
                     rpc_failure_count: P,
                     first_seen_event_sequence_number: R,
-                    last_seen_event_sequence_number: A,
+                    last_seen_event_sequence_number: C,
                     telemetry_period_start_timestamp: D,
                     telemetry_period_end_timestamp: Date.now(),
-                    event_queue_rejection_count: C,
+                    event_queue_rejection_count: A,
                     event_queue_batch_count: w,
                     event_queue_batch_min_size: x === Number.MAX_SAFE_INTEGER ? 0 : x,
                     event_queue_batch_max_size: L,
@@ -274,7 +274,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                                     {
                                         client_track_timestamp: Date.now(),
                                         client_heartbeat_session_id: o,
-                                        event_sequence_number: ++A,
+                                        event_sequence_number: ++C,
                                     },
                                     n,
                                 ),
@@ -283,7 +283,7 @@ let F = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() =>
                             l = Q(s);
                         if ((null != l && (s.properties.client_uuid = V.generate(l)), Y.push(s), Y.length > E)) {
                             let e = Y.length - E;
-                            (C = B(C, e)), (Y = Y.slice(-E));
+                            (A = B(A, e)), (Y = Y.slice(-E));
                         }
                         r ? J({ shouldFlushOnNextTick: !0 }) : J({ shouldFlushOnNextTick: !1 });
                     }),

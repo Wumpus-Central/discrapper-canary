@@ -3,8 +3,8 @@ var r = n(54381);
 n(473749);
 var l = n(907331),
     i = n(481060),
-    s = n(168020),
-    o = n(794324),
+    o = n(168020),
+    s = n(794324),
     a = n(859788),
     c = n(388032),
     u = n(449177);
@@ -42,10 +42,10 @@ let g = (e) => {
             0.33,
             null != n,
         ),
-        { bannerUrl: f, bannerAnimatedUrl: p } = (0, o._M)(t),
+        { bannerUrl: f, bannerAnimatedUrl: p } = (0, s._M)(t),
         m = null != t.textColor ? { color: t.textColor } : void 0,
-        C = null != t.body && "" !== t.body,
-        h = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
+        h = null != t.body && "" !== t.body,
+        C = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, r.jsxs)("div", {
         ref: g,
         className: u.immersiveBannerBlock,
@@ -65,7 +65,7 @@ let g = (e) => {
                     className: u.immersiveBannerTextContainer,
                     children: [
                         null != t.endTime
-                            ? (0, r.jsx)(s.R, {
+                            ? (0, r.jsx)(o.R, {
                                   endDate: t.endTime,
                                   size: "lg",
                               })
@@ -77,14 +77,14 @@ let g = (e) => {
                             style: d({}, m),
                             children: t.title,
                         }),
-                        C || h
+                        h || C
                             ? (0, r.jsxs)(i.Text, {
                                   variant: "text-md/medium",
                                   style: d({}, m),
                                   children: [
-                                      C && t.body,
-                                      C && h && " ",
-                                      h &&
+                                      h && t.body,
+                                      h && C && " ",
+                                      C &&
                                           (0, r.jsx)(i.Anchor, {
                                               href: t.helpCenterUrl,
                                               className: u.learnMoreLink,

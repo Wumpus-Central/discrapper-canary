@@ -28,8 +28,8 @@ var r = n(512722),
     S = n(51144),
     I = n(895924),
     T = n(689079),
-    A = n(981631),
-    C = n(590433),
+    C = n(981631),
+    A = n(590433),
     N = n(959517),
     P = n(388032);
 function R(e, t, n) {
@@ -232,7 +232,7 @@ let L = n(227419).Z,
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return null != t && !t.isPrivate() && E.OW.getSetting() && y.Z.can(A.Plq.SEND_TTS_MESSAGES, t);
+                return null != t && !t.isPrivate() && E.OW.getSetting() && y.Z.can(C.Plq.SEND_TTS_MESSAGES, t);
             },
             execute: (e) => {
                 var t;
@@ -305,7 +305,7 @@ let L = n(227419).Z,
             execute: (e) => {
                 var t;
                 let n = null != (t = j(e, "message")) ? t : "";
-                return { content: (0, A.XmY)(n).trim() };
+                return { content: (0, C.XmY)(n).trim() };
             },
         },
         {
@@ -339,7 +339,7 @@ let L = n(227419).Z,
                 return (
                     null != t &&
                     !t.isPrivate() &&
-                    (y.Z.can(A.Plq.CHANGE_NICKNAME, t) || y.Z.can(A.Plq.MANAGE_NICKNAMES, t))
+                    (y.Z.can(C.Plq.CHANGE_NICKNAME, t) || y.Z.can(C.Plq.MANAGE_NICKNAMES, t))
                 );
             },
             execute: (e, t) => {
@@ -347,7 +347,7 @@ let L = n(227419).Z,
                 let { guild: r, channel: i } = t;
                 if (null == r || null == i) return;
                 let a = null != (n = j(e, "new_nick")) ? n : "";
-                l.Z.changeNickname(r.id, i.id, A.ME, a || "");
+                l.Z.changeNickname(r.id, i.id, C.ME, a || "");
             },
         },
         {
@@ -443,14 +443,14 @@ let L = n(227419).Z,
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return y.Z.can(A.Plq.KICK_MEMBERS, t);
+                return y.Z.can(C.Plq.KICK_MEMBERS, t);
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
                 if (null == r || null == i) return;
                 let a = null != (n = j(e, "user")) ? n : "";
-                if (!y.Z.canManageUser(A.Plq.KICK_MEMBERS, a, r))
+                if (!y.Z.canManageUser(C.Plq.KICK_MEMBERS, a, r))
                     return void d.Z.sendBotMessage(i.id, P.intl.string(P.t["6RIwPI"]));
                 (async () => {
                     var t;
@@ -558,14 +558,14 @@ let L = n(227419).Z,
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return y.Z.can(A.Plq.BAN_MEMBERS, t);
+                return y.Z.can(C.Plq.BAN_MEMBERS, t);
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
                 if (null == r || null == i) return;
                 let a = null != (n = j(e, "user")) ? n : "";
-                if (!y.Z.canManageUser(A.Plq.BAN_MEMBERS, a, r))
+                if (!y.Z.canManageUser(C.Plq.BAN_MEMBERS, a, r))
                     return void d.Z.sendBotMessage(i.id, P.intl.string(P.t.R27LJl));
                 (async () => {
                     var t, n;
@@ -621,7 +621,7 @@ let L = n(227419).Z,
                     },
                     required: !0,
                     get choices() {
-                        return (0, C.tr)().map((e) =>
+                        return (0, A.tr)().map((e) =>
                             x(D({}, e), {
                                 name: e.label,
                                 displayName: e.label,
@@ -644,7 +644,7 @@ let L = n(227419).Z,
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return y.Z.can(A.Plq.MODERATE_MEMBERS, t);
+                return y.Z.can(C.Plq.MODERATE_MEMBERS, t);
             },
             execute: (e, t) => {
                 let { guild: n, channel: r } = t;
@@ -715,7 +715,7 @@ let L = n(227419).Z,
                     required: !0,
                     get maxLength() {
                         var U;
-                        return (null == (U = O.default.getCurrentUser()) ? void 0 : U.premiumType) ? A.en1 : A.J6R;
+                        return (null == (U = O.default.getCurrentUser()) ? void 0 : U.premiumType) ? C.en1 : C.J6R;
                     },
                 },
             ],

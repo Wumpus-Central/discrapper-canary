@@ -23,13 +23,13 @@ function p(e, t = {}) {
         R = new Map(),
         T = !1,
         A = "externalFinish",
-        N = !t.disableAutoFinish,
-        f = [],
+        f = !t.disableAutoFinish,
+        N = [],
         {
             idleTimeout: O = I.idleTimeout,
             finalTimeout: h = I.finalTimeout,
-            childSpanTimeout: D = I.childSpanTimeout,
-            beforeSpanEnd: S,
+            childSpanTimeout: S = I.childSpanTimeout,
+            beforeSpanEnd: D,
         } = t,
         C = (0, i.s3)();
     if (!C || !(0, s.z)()) return new l.b();
@@ -45,16 +45,16 @@ function p(e, t = {}) {
     function P(e) {
         y(),
             (r = setTimeout(() => {
-                !T && 0 === R.size && N && ((A = "idleTimeout"), m.end(e));
+                !T && 0 === R.size && f && ((A = "idleTimeout"), m.end(e));
             }, O));
     }
     function v(e) {
         r = setTimeout(() => {
-            !T && N && ((A = "heartbeatFailed"), m.end(e));
-        }, D);
+            !T && f && ((A = "heartbeatFailed"), m.end(e));
+        }, S);
     }
-    function w(e) {
-        (T = !0), R.clear(), f.forEach((e) => e()), (0, c.D)(L, g);
+    function M(e) {
+        (T = !0), R.clear(), N.forEach((e) => e()), (0, c.D)(L, g);
         let t = (0, E.XU)(m),
             { start_timestamp: r } = t;
         if (!r) return;
@@ -85,30 +85,30 @@ function p(e, t = {}) {
     return (
         (m.end = new Proxy(m.end, {
             apply(e, t, r) {
-                S && S(m);
+                D && D(m);
                 let [a, ...i] = r,
                     o = a || (0, n.ph)(),
                     _ = (0, E.$k)(o),
                     s = (0, E.Dp)(m).filter((e) => e !== m);
-                if (!s.length) return w(_), Reflect.apply(e, t, [_, ...i]);
+                if (!s.length) return M(_), Reflect.apply(e, t, [_, ...i]);
                 let c = s.map((e) => (0, E.XU)(e).timestamp).filter((e) => !!e),
                     l = c.length ? Math.max(...c) : void 0,
                     u = (0, E.XU)(m).start_timestamp,
                     d = Math.min(u ? u + h / 1000 : 1 / 0, Math.max(u || -1 / 0, Math.min(_, l || 1 / 0)));
-                return w(d), Reflect.apply(e, t, [d, ...i]);
+                return M(d), Reflect.apply(e, t, [d, ...i]);
             },
         })),
-        f.push(
+        N.push(
             C.on("spanStart", (e) => {
                 var t;
                 T ||
                     e === m ||
                     (0, E.XU)(e).timestamp ||
                     ((0, E.Dp)(m).includes(e) &&
-                        ((t = e.spanContext().spanId), y(), R.set(t, !0), v((0, n.ph)() + D / 1000)));
+                        ((t = e.spanContext().spanId), y(), R.set(t, !0), v((0, n.ph)() + S / 1000)));
             }),
         ),
-        f.push(
+        N.push(
             C.on("spanEnd", (e) => {
                 if (!T) {
                     var t;
@@ -116,9 +116,9 @@ function p(e, t = {}) {
                 }
             }),
         ),
-        f.push(
+        N.push(
             C.on("idleSpanEnableAutoFinish", (e) => {
-                e === m && ((N = !0), P(), R.size && v());
+                e === m && ((f = !0), P(), R.size && v());
             }),
         ),
         t.disableAutoFinish || P(),

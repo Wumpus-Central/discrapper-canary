@@ -51,11 +51,11 @@ let I = new o.Z("AudioActionCreators");
 function T() {
     (0, s.GN)("mention3", void 0, void 0, void 0, y.w.VOICE);
 }
-function A() {
+function C() {
     let e = p.Z.getInputDevices()[p.Z.getInputDeviceId()];
     return null != e ? e.name : "";
 }
-function C(e, t, n, r) {
+function A(e, t, n, r) {
     let { location: i, analyticsLocations: a } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     if (t === n) return;
     let o = m.Z.getVoiceChannelId(),
@@ -233,7 +233,7 @@ let N = i()((e, t, n) => {
                     n = p.Z.getMediaEngine().getAudioLayer(),
                     i = m.Z.getVoiceChannelId(),
                     a = null != i ? f.Z.getChannel(i) : null,
-                    o = A();
+                    o = C();
                 g.default.track(b.rMx.VOICE_ACTIVATION_MODE_CHANGED, {
                     mode: e,
                     location_stack: r,
@@ -247,7 +247,7 @@ let N = i()((e, t, n) => {
                     n = p.Z.getMediaEngine().getAudioLayer(),
                     i = m.Z.getVoiceChannelId(),
                     a = null != i ? f.Z.getChannel(i) : null,
-                    s = A();
+                    s = C();
                 g.default.track(b.rMx.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
                     location_stack: r,
                     voice_channel_type: null == a ? void 0 : a.type,
@@ -305,7 +305,7 @@ let N = i()((e, t, n) => {
             if (D()) return;
             let r = p.Z.getInputDeviceId();
             (null != t || null != n) &&
-                C(p.Z.getInputDevices(), r, e, "Audio Input", {
+                A(p.Z.getInputDevices(), r, e, "Audio Input", {
                     location: t,
                     analyticsLocations: n,
                 }),
@@ -322,7 +322,7 @@ let N = i()((e, t, n) => {
             if (D()) return;
             let r = p.Z.getOutputDeviceId();
             (null != t || null != n) &&
-                C(p.Z.getOutputDevices(), r, e, "Audio Output", {
+                A(p.Z.getOutputDevices(), r, e, "Audio Output", {
                     location: t,
                     analyticsLocations: n,
                 }),
@@ -339,7 +339,7 @@ let N = i()((e, t, n) => {
             if (D()) return;
             let r = p.Z.getVideoDeviceId();
             (null != t || null != n) &&
-                C(p.Z.getVideoDevices(), r, e, "Video", {
+                A(p.Z.getVideoDevices(), r, e, "Video", {
                     location: t,
                     analyticsLocations: n,
                 }),

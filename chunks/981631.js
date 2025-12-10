@@ -73,7 +73,7 @@ n.d(t, {
     JuI: () => eY,
     JwP: () => nc,
     K3D: () => rO,
-    KA4: () => tA,
+    KA4: () => tC,
     KFR: () => nN,
     KJ3: () => rg,
     KsC: () => I,
@@ -146,11 +146,11 @@ n.d(t, {
     TaA: () => rt,
     TzF: () => nK,
     U66: () => m.U6,
-    ULH: () => C,
+    ULH: () => A,
     UWR: () => t$,
     Ucd: () => rx,
     Uk1: () => m.Uk,
-    UkZ: () => rA,
+    UkZ: () => rC,
     Usc: () => F,
     Uvt: () => a.U,
     V$x: () => o.V,
@@ -177,7 +177,7 @@ n.d(t, {
     Z9p: () => nd,
     ZUi: () => B,
     ZY5: () => tx,
-    ZfP: () => A,
+    ZfP: () => C,
     Zuq: () => m.Zu,
     _1z: () => ee,
     _8R: () => rD,
@@ -194,7 +194,7 @@ n.d(t, {
     b2L: () => ne,
     b4C: () => rN,
     b8q: () => tL,
-    bL: () => eC,
+    bL: () => eA,
     c2C: () => nD,
     d4z: () => r.d,
     dAT: () => tH,
@@ -203,13 +203,13 @@ n.d(t, {
     dGM: () => e7,
     dGm: () => m.yA,
     dN1: () => eq,
-    dYL: () => tC,
+    dYL: () => tA,
     e3s: () => n4,
     eBq: () => n3,
     eHb: () => nW,
     eRX: () => t8,
     eWB: () => tn,
-    ecB: () => nC,
+    ecB: () => nA,
     eez: () => tu,
     en1: () => ek,
     epS: () => ra,
@@ -239,7 +239,7 @@ n.d(t, {
     j8d: () => m.j8,
     jXE: () => tj,
     jm8: () => rb,
-    jwA: () => nA,
+    jwA: () => nC,
     kEZ: () => j,
     kGb: () => ro,
     kNB: () => rr,
@@ -318,14 +318,14 @@ n.d(t, {
     xGv: () => ts,
     xPJ: () => z,
     xW$: () => nh,
-    xjy: () => eA,
+    xjy: () => eC,
     xmn: () => k,
     xr4: () => m.xr,
     yXg: () => nM,
     yXt: () => m.yX,
     yYS: () => m.yY,
     yb: () => V,
-    ylB: () => rC,
+    ylB: () => rA,
     yqN: () => nf,
     ys_: () => e3,
     z7k: () => ty,
@@ -591,10 +591,10 @@ var r = n(106351),
             e
         );
     })({}),
-    A = (function (e) {
+    C = (function (e) {
         return (e.TOPIC = "TOPIC"), e;
     })({}),
-    C = (function (e) {
+    A = (function (e) {
         return (
             (e.NONE = "NONE"),
             (e.MEMBERS = "MEMBERS"),
@@ -2147,7 +2147,7 @@ let ep = "@me",
     }),
     eI = (0, c.Ft)(ev),
     eT = (0, c.Ft)(eS, [":", "?", "@"]);
-var eA = (function (e) {
+var eC = (function (e) {
         return (
             (e[(e.INSTANCE = 1)] = "INSTANCE"),
             (e[(e.JOIN = 2)] = "JOIN"),
@@ -2161,7 +2161,7 @@ var eA = (function (e) {
             e
         );
     })({}),
-    eC = (function (e) {
+    eA = (function (e) {
         return (
             (e[(e.ALL_MESSAGES = 0)] = "ALL_MESSAGES"),
             (e[(e.ONLY_MENTIONS = 1)] = "ONLY_MENTIONS"),
@@ -2338,8 +2338,8 @@ let e6 = 128,
     tS = 10,
     tI = 25,
     tT = /^FILTER_/,
-    tA = /^ANSWER_/,
-    tC = 32;
+    tC = /^ANSWER_/,
+    tA = 32;
 var tN = (function (e) {
         return (
             (e.GUILD = "GUILD"),
@@ -5608,10 +5608,10 @@ let nI = Object.freeze({
 var nT = (function (e) {
         return (e.ALL = "ALL"), (e.CREATE = "CREATE"), (e.UPDATE = "UPDATE"), (e.DELETE = "DELETE"), e;
     })({}),
-    nA = (function (e) {
+    nC = (function (e) {
         return (e.USER = "1"), (e.ROLE = "0"), e;
     })({}),
-    nC = (function (e) {
+    nA = (function (e) {
         return (e[(e.ROLE = 1)] = "ROLE"), (e[(e.USER = 2)] = "USER"), (e[(e.CHANNEL = 3)] = "CHANNEL"), e;
     })({}),
     nN = (function (e) {
@@ -6404,10 +6404,10 @@ var rg = (function (e) {
         );
     })({});
 let rT = "discodoEasterEgg";
-var rA = (function (e) {
+var rC = (function (e) {
         return (e.INITIAL = "initial"), (e.ENTER = "enter"), (e.UPDATE = "update"), (e.LEAVE = "leave"), e;
     })({}),
-    rC = (function (e) {
+    rA = (function (e) {
         return (e[(e.INCOMING = 1)] = "INCOMING"), (e[(e.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), e;
     })({}),
     rN = (function (e) {

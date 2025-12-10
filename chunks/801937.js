@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-let C = new _.Z("ChoosePaymentSourceType"),
+let A = new _.Z("ChoosePaymentSourceType"),
     N = {
         [b.HeQ.CARD]: m.ZP.Types.UNKNOWN,
         [b.HeQ.PAYPAL]: m.ZP.Types.PAYPAL,
@@ -105,12 +105,12 @@ class D extends i.PureComponent {
         var e;
         let t = null != (e = this.props.paymentRequestWallets) ? e : [];
         if (0 === t.length || !this.arePaymentRequestWalletsLoading()) return;
-        C.warn(
+        A.warn(
             "Payment request wallets failed to load in time: "
                 .concat(t.join(", "), ". Max time allowed: ")
                 .concat(P, " ms"),
         );
-        let n = t.reduce((e, t) => A(I({}, e), { ["".concat(t, "Loaded")]: !0 }), {});
+        let n = t.reduce((e, t) => C(I({}, e), { ["".concat(t, "Loaded")]: !0 }), {});
         this.setState(n);
     }
     arePaymentRequestWalletsLoading() {

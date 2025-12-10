@@ -79,7 +79,7 @@ function u(e) {
     return t;
 }
 function d(e, t) {
-    var n, i, a, o, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, A, C, N, P, R, D, w;
+    var n, i, a, o, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, C, A, N, P, R, D, w;
     let x = e.substreams.find((e) => !e.isRTX && !e.isFlexFEC);
     if (null == x) return;
     let L = e.substreams.reduce((e, t) => e + s(t.rtpStats), 0),
@@ -123,9 +123,9 @@ function d(e, t) {
         framesDroppedEncoder: e.framesDroppedEncoder,
         cpuLimitedResolution: e.cpuLimitedResolution,
         encoderQualityVmaf:
-            null != (A = null == (u = x.encoderQualityStats) ? void 0 : u.imageQualityVmaf_v061) ? A : void 0,
+            null != (C = null == (u = x.encoderQualityStats) ? void 0 : u.imageQualityVmaf_v061) ? C : void 0,
         encoderQualityPsnr:
-            null != (C = null == (d = x.encoderQualityStats) ? void 0 : d.imageQualityWebrtcPsnrDb) ? C : void 0,
+            null != (A = null == (d = x.encoderQualityStats) ? void 0 : d.imageQualityWebrtcPsnrDb) ? A : void 0,
         qualityDecodeErrors: null != (N = null == (f = x.encoderQualityStats) ? void 0 : f.decodeErrors) ? N : void 0,
         qualityDecoderReboots:
             null != (P = null == (p = x.encoderQualityStats) ? void 0 : p.decoderReboots) ? P : void 0,
@@ -380,7 +380,7 @@ function p(e, t, n, i) {
             (S.bytesReceived = null != (p = null != (c = null == O ? void 0 : O.bytesReceived) ? c : h) ? p : void 0),
         ((null == O ? void 0 : O.bytesSent) == null && (null == g || Number.isNaN(g))) ||
             (S.bytesSent = null != (m = null != (_ = null == O ? void 0 : O.bytesSent) ? _ : g) ? m : void 0);
-    let { screenshare: I, camera: T, audioDevice: A } = E;
+    let { screenshare: I, camera: T, audioDevice: C } = E;
     return {
         mediaEngineConnectionId: e,
         transport: S,
@@ -395,7 +395,7 @@ function p(e, t, n, i) {
                   }
                 : null,
         clips: v,
-        audioDevice: A,
+        audioDevice: C,
         rtp: {
             inbound: y,
             outbound: b,

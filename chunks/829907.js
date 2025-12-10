@@ -1,6 +1,6 @@
 n.d(t, {
     DH: () => P,
-    H8: () => A,
+    H8: () => C,
     HD: () => f,
     O0: () => _,
     PD: () => R,
@@ -107,11 +107,11 @@ function T(e) {
     let n = null == (t = o.Z.getGameByName(e.name)) ? void 0 : t.id;
     return null != n && O.has(n);
 }
-function A(e) {
+function C(e) {
     let t = a.ZP.getGameOrTransformedSubgameForPID(e);
     return null != t && null != t.name && T(t);
 }
-let C = new Set([r.Jx.UNKNOWN, r.Jx.FULLSCREEN]);
+let A = new Set([r.Jx.UNKNOWN, r.Jx.FULLSCREEN]);
 function N(e) {
     let t = Object.keys(e)
         .map(Number)
@@ -123,7 +123,7 @@ function P(e, t, n) {
     if (!n) return !0;
     switch (t) {
         case r.Jx.UNKNOWN:
-            return C.has(N(e.fullscreenHistory));
+            return A.has(N(e.fullscreenHistory));
         case r.Jx.FULLSCREEN:
             return !0;
     }

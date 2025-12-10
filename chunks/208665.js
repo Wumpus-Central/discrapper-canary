@@ -10,36 +10,36 @@ var l,
     u = n(981631),
     m = n(290511);
 let g = !1,
-    h = null,
-    f = [],
+    f = null,
+    h = [],
     N = !1,
     I = [];
 function p() {
     (g = !1),
-        (h = null),
+        (f = null),
         (I = []),
         (N = !1),
-        null != (h = d.Z.getGuildId()) &&
+        null != (f = d.Z.getGuildId()) &&
             d.Z.getSection() === u.pNK.ONBOARDING &&
-            ((f = c.Z.getOnboardingPrompts(h)), (N = c.Z.isAdvancedMode(h)));
+            ((h = c.Z.getOnboardingPrompts(f)), (N = c.Z.isAdvancedMode(f)));
 }
 class O extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, c.Z);
     }
     hasChanges() {
-        return null != h && !a().isEqual(c.Z.getOnboardingPrompts(h), f);
+        return null != f && !a().isEqual(c.Z.getOnboardingPrompts(f), h);
     }
     getChangedPrompts() {
-        if (null == h) return [];
-        let e = c.Z.getOnboardingPrompts(h);
-        return f.filter((t) => {
+        if (null == f) return [];
+        let e = c.Z.getOnboardingPrompts(f);
+        return h.filter((t) => {
             let n = e.find((e) => e.id === t.id);
             return null == n || !a().isEqual(t, n);
         });
     }
     get guildId() {
-        return h;
+        return f;
     }
     get submitting() {
         return g;
@@ -48,7 +48,7 @@ class O extends (i = s.ZP.Store) {
         return I;
     }
     get editedOnboardingPrompts() {
-        return f;
+        return h;
     }
     get advancedMode() {
         return N;
@@ -75,7 +75,7 @@ let E = new O(o.Z, {
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
         let { prompts: t } = e;
-        f = t;
+        h = t;
     },
     GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
         (g = !0), (I = []);

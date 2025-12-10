@@ -3,7 +3,7 @@ var i = n(54381),
     r = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(205120),
+    o = n(467721),
     s = n(990547),
     c = n(442837),
     u = n(681715),
@@ -68,9 +68,9 @@ function I(e) {
     let R = (0, c.e7)([C.Z], () => C.Z.can(O.Plq.CREATE_INSTANT_INVITE, t), [t]),
         [L, D] = r.useState(null),
         [k, U] = r.useState(!1),
-        [V, B] = r.useState("unknown"),
-        F = r.useRef(null),
-        { isHoveringOrFocusing: H } = (0, v.Tu)(null == L ? F : l),
+        [V, F] = r.useState("unknown"),
+        B = r.useRef(null),
+        { isHoveringOrFocusing: H } = (0, v.Tu)(null == L ? B : l),
         [G, W] = r.useState(!1),
         z = H || G,
         q = r.useCallback(
@@ -102,7 +102,7 @@ function I(e) {
         }),
         Y = r.useCallback(function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-            U(!0), B(e);
+            U(!0), F(e);
         }, []),
         X = r.useCallback(
             () => (

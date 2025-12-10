@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(616022),
     p = n(968843),
     f = n(253010),
-    h = n(6809),
-    g = n(231338),
+    g = n(6809),
+    h = n(231338),
     m = n(388032),
     _ = n(982538);
 let b = function (e) {
@@ -94,7 +94,7 @@ let b = function (e) {
                     children: (0, r.jsxs)("div", {
                         className: _.questSelectorWrapper,
                         children: [
-                            (0, r.jsx)(h.Z, {}),
+                            (0, r.jsx)(g.Z, {}),
                             (0, r.jsxs)("div", {
                                 className: _.questInput,
                                 children: [
@@ -188,7 +188,7 @@ let b = function (e) {
                                         children: (0, r.jsx)("div", {
                                             className: _.copyInput,
                                             children: (0, r.jsx)(o.Z, {
-                                                value: g.$w.QUEST_PREVIEW_TOOL_2(E),
+                                                value: h.$w.QUEST_PREVIEW_TOOL_2(E),
                                                 text: m.intl.string(m.t.WqhZss),
                                             }),
                                         }),

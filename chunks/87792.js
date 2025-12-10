@@ -26,8 +26,8 @@ var r = n(54381),
     S = n(631885),
     I = n(240351),
     T = n(792258),
-    A = n(381190),
-    C = n(657825),
+    C = n(381190),
+    A = n(657825),
     N = n(198952),
     P = n(329242),
     R = n(895328),
@@ -113,7 +113,7 @@ function F(e) {
                     let e = p.default.extractTimestamp(n.event_id),
                         t = (0, m.LI)(e, O.timestampFormatter);
                     return (0, r.jsx)(
-                        C.Z,
+                        A.Z,
                         {
                             userId: n.entity_id,
                             subText: t,
@@ -127,7 +127,7 @@ function F(e) {
                     return null == e
                         ? null
                         : (0, r.jsx)(
-                              A.Z,
+                              C.Z,
                               {
                                   skuId: e.sku_id,
                                   subscriptionPlanId: e.subscription_plan_id,

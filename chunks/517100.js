@@ -36,7 +36,7 @@ let b = Date.now(),
 function T() {
     return v || S || ((0, _.isAndroid)() && I);
 }
-function A() {
+function C() {
     let e = f.CM.getSetting();
     0 === e || null != r || Date.now() - b > Math.min(e * p.Z.Millis.SECOND, h.OSm) || T()
         ? O ||
@@ -50,7 +50,7 @@ function A() {
               afk: !1,
           });
 }
-function C() {
+function A() {
     Date.now() - b > h.OSm || T()
         ? y ||
           l.Z.dispatch({
@@ -65,7 +65,7 @@ function C() {
           });
 }
 function N() {
-    C(), A();
+    A(), C();
 }
 function P() {
     var e;

@@ -1,53 +1,53 @@
-n.d(e, { Q: () => I });
+n.d(e, { Q: () => g });
 var i = n(442837),
     l = n(223245),
     s = n(579806),
-    r = n(509613),
-    u = n(246946),
+    u = n(509613),
+    r = n(246946),
     a = n(313789),
     o = n(388032);
-let c = (0, r.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
+let c = (0, u.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
         useTitle: () => o.intl.string(o.t.MkvEgl),
         useValue: () =>
-            (0, i.e7)([u.Z], () => {
-                let { hidePersonalInformation: t } = u.Z.getSettings();
+            (0, i.e7)([r.Z], () => {
+                let { hidePersonalInformation: t } = r.Z.getSettings();
                 return t;
             }),
         setValue: (t) => l.Z.update({ hidePersonalInformation: t }),
     }),
-    d = (0, r.qs)(a.n.STREAMER_MODE_HIDE_INVITE_LINKS, {
+    d = (0, u.qs)(a.n.STREAMER_MODE_HIDE_INVITE_LINKS, {
         useTitle: () => o.intl.string(o.t.uWBOri),
         useValue: () =>
-            (0, i.e7)([u.Z], () => {
-                let { hideInstantInvites: t } = u.Z.getSettings();
+            (0, i.e7)([r.Z], () => {
+                let { hideInstantInvites: t } = r.Z.getSettings();
                 return t;
             }),
         setValue: (t) => l.Z.update({ hideInstantInvites: t }),
     }),
-    T = (0, r.qs)(a.n.STREAMER_MODE_DISABLE_SOUNDS, {
+    S = (0, u.qs)(a.n.STREAMER_MODE_DISABLE_SOUNDS, {
         useTitle: () => o.intl.string(o.t.OrqYDP),
         useValue: () =>
-            (0, i.e7)([u.Z], () => {
-                let { disableSounds: t } = u.Z.getSettings();
+            (0, i.e7)([r.Z], () => {
+                let { disableSounds: t } = r.Z.getSettings();
                 return t;
             }),
         setValue: (t) => l.Z.update({ disableSounds: t }),
     }),
-    E = (0, r.qs)(a.n.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
+    T = (0, u.qs)(a.n.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
         useTitle: () => o.intl.string(o.t.sUAbLd),
         useValue: () =>
-            (0, i.e7)([u.Z], () => {
-                let { disableNotifications: t } = u.Z.getSettings();
+            (0, i.e7)([r.Z], () => {
+                let { disableNotifications: t } = r.Z.getSettings();
                 return t;
             }),
         setValue: (t) => l.Z.update({ disableNotifications: t }),
     }),
-    S = (0, r.qs)(a.n.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
+    E = (0, u.qs)(a.n.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
         useTitle: () => o.intl.string(o.t["iA81+a"]),
         useSubtitle: () => o.intl.string(o.t.P4vj0h),
         useValue: () =>
-            (0, i.e7)([u.Z], () => {
-                let { enableContentProtection: t } = u.Z.getSettings();
+            (0, i.e7)([r.Z], () => {
+                let { enableContentProtection: t } = r.Z.getSettings();
                 return t;
             }),
         setValue: (t) => l.Z.update({ enableContentProtection: t }),
@@ -65,8 +65,8 @@ let c = (0, r.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             );
         },
     }),
-    I = (0, r.Uc)(a.n.STREAMER_MODE_OPTIONS_LIST, {
+    g = (0, u.Uc)(a.n.STREAMER_MODE_OPTIONS_LIST, {
         useTitle: () => o.intl.string(o.t.UtW8R6),
         variant: "separators",
-        buildLayout: () => [c, d, T, E, S],
+        buildLayout: () => [c, d, S, T, E],
     });

@@ -1,4 +1,4 @@
-i.d(t, { default: () => j }), i(953529);
+i.d(t, { default: () => f }), i(953529);
 var n = i(54381),
     r = i(473749),
     c = i(793030),
@@ -12,7 +12,7 @@ var n = i(54381),
     b = i(388032);
 function p(e) {
     let { eligibility: t, eligibilityLoading: i, eligibilityError: c, guildId: b, onEligibilityBecameStale: p } = e,
-        j = r.useMemo(
+        f = r.useMemo(
             () => ({
                 onEligibilityBecameStale: p,
                 sortedByIneligible: !0,
@@ -25,7 +25,7 @@ function p(e) {
             }),
             [b, p],
         ),
-        f = (0, o.Z)(t, j);
+        j = (0, o.Z)(t, f);
     return null != c
         ? (0, n.jsx)("div", {
               children: (0, n.jsx)(l.M14, {
@@ -33,10 +33,10 @@ function p(e) {
                   children: c.message,
               }),
           })
-        : null == f || i
+        : null == j || i
           ? (0, n.jsx)("div", { children: (0, n.jsx)(l.$jN, {}) })
           : (0, n.jsx)("div", {
-                children: f.map((e, t) =>
+                children: j.map((e, t) =>
                     (0, n.jsxs)(
                         r.Fragment,
                         {
@@ -48,7 +48,7 @@ function p(e) {
                                     actionLabel: e.actionLabel,
                                     actionHandler: e.actionHandler,
                                 }),
-                                t < f.length - 1 ? (0, n.jsx)(l.izJ, {}) : null,
+                                t < j.length - 1 ? (0, n.jsx)(l.izJ, {}) : null,
                             ],
                         },
                         e.checkedLabel,
@@ -56,7 +56,7 @@ function p(e) {
                 ),
             });
 }
-function j(e) {
+function f(e) {
     let {
         eligibility: t,
         eligibilityLoading: i,

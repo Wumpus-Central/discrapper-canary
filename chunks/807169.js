@@ -32,7 +32,7 @@ function h(e, t) {
         {
             computedPermissions: I,
             hasBaseAccessPermissions: T,
-            hasSendMessagesPermission: A,
+            hasSendMessagesPermission: C,
         } = b(p, e instanceof c.Sf && e.isThread());
     return {
         context: p,
@@ -42,7 +42,7 @@ function h(e, t) {
         commandTypes: t,
         computedPermissions: I,
         hasBaseAccessPermissions: T,
-        hasSendMessagesPermission: A,
+        hasSendMessagesPermission: C,
         allowNsfw: E(p, y, h),
     };
 }

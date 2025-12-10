@@ -77,8 +77,8 @@ async function y(e) {
         analyticsLocation: S,
         analyticsLocations: I,
         flowStartTime: T,
-        subscriptionPlan: A,
-        planGroup: C,
+        subscriptionPlan: C,
+        planGroup: A,
         trialId: N,
         priceOptions: P,
         paymentSource: R,
@@ -126,24 +126,24 @@ async function y(e) {
                     orderId: V,
                 }));
         else {
-            i()(null != A, "Missing subscriptionPlan"), i()(null != F, "Missing invoicePreview");
+            i()(null != C, "Missing subscriptionPlan"), i()(null != F, "Missing invoicePreview");
             let t = {
                     amount: F.total,
                     currency: F.currency,
                 },
-                n = (0, f.BK)((0, f.aS)(A.id, !1, !1, P));
+                n = (0, f.BK)((0, f.aS)(C.id, !1, !1, P));
             if (null != x) {
-                let e = (0, f.al)(x, A.id, 1, new Set(C));
+                let e = (0, f.al)(x, C.id, 1, new Set(A));
                 (e = (0, f.gB)(e)), (n = (0, f.UX)(e, P.currency.toLowerCase(), P.paymentSourceId));
             }
             if (O) {
                 let t = F.total,
                     n = F.currency;
-                e = await (0, c.ZZ)(m.CL, A.skuId, {
+                e = await (0, c.ZZ)(m.CL, C.skuId, {
                     expectedAmount: t,
                     expectedCurrency: n,
                     paymentSource: R,
-                    subscriptionPlanId: A.id,
+                    subscriptionPlanId: C.id,
                     isGift: !0,
                     loadId: Z,
                     giftInfoOptions: B,
@@ -165,7 +165,7 @@ async function y(e) {
                           Z,
                       );
             else if (null != x) {
-                let r = (0, f.al)(x, A.id, 1, new Set(C)),
+                let r = (0, f.al)(x, C.id, 1, new Set(A)),
                     i = {
                         paymentSource: R,
                         currency: P.currency,
@@ -175,7 +175,7 @@ async function y(e) {
                     (e = await (0, o.Mg)(x, i, t, n, I, S, Z));
             } else
                 e = await (0, l.Ld)({
-                    planId: A.id,
+                    planId: C.id,
                     currency: P.currency,
                     paymentSource: R,
                     trialId: N,

@@ -94,7 +94,7 @@ function Z(e) {
             },
             [V],
         ),
-        Q = (0, b.Us)({ location: "ForYou" });
+        X = (0, b.Us)({ location: "ForYou" });
     return (0, r.jsx)(f.Gt, {
         value: L,
         children: (0, r.jsx)(u.yRy, {
@@ -110,7 +110,7 @@ function Z(e) {
                     "aria-label": P.intl.string(P.t.GSmTKJ),
                     className: D,
                     children: (0, r.jsx)("div", {
-                        className: o()(N.container, { [N.widerInbox]: Q }),
+                        className: o()(N.container, { [N.widerInbox]: X }),
                         children: (0, r.jsx)(u.y5t, {
                             component: (0, r.jsx)(x.Z, {
                                 tab: G,

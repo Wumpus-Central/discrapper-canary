@@ -61,7 +61,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function A(e, t) {
         e
     );
 }
-let C = 40,
+let A = 40,
     N = (e) => {
         let { roleIcon: t, guild: n } = e,
             { name: S } = t;
@@ -93,9 +93,9 @@ let C = 40,
             P = N
                 ? O.intl.formatToPlainString(O.t.t0928V, { name: S })
                 : O.intl.formatToPlainString(O.t.UDDkGy, { name: S }),
-            R = A(I({}, t), {
-                src: null == t.src ? t.src : (0, c.o)(t.src, C),
-                size: C,
+            R = C(I({}, t), {
+                src: null == t.src ? t.src : (0, c.o)(t.src, A),
+                size: A,
             }),
             D = () => {
                 (0, u.f)({
@@ -119,7 +119,7 @@ let C = 40,
                                     className: v.roleIconContainer,
                                     children: (0, r.jsx)(
                                         f.Z,
-                                        A(I({}, R), {
+                                        C(I({}, R), {
                                             enableTooltip: !1,
                                             className: v.__invalid_roleIcon,
                                             enableHeight: !1,

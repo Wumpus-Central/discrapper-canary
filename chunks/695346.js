@@ -15,9 +15,9 @@ n.d(t, {
     JG: () => eW,
     JN: () => el,
     JT: () => eu,
-    JY: () => C,
+    JY: () => A,
     L1: () => ex,
-    NA: () => eC,
+    NA: () => eA,
     OW: () => em,
     Ok: () => eS,
     Ou: () => z,
@@ -26,7 +26,7 @@ n.d(t, {
     QK: () => eL,
     QZ: () => w,
     R$: () => y,
-    RS: () => eA,
+    RS: () => eC,
     R_: () => eH,
     Rt: () => e3,
     SE: () => eU,
@@ -51,7 +51,7 @@ n.d(t, {
     co: () => ey,
     d$: () => H,
     d4: () => j,
-    d8: () => A,
+    d8: () => C,
     dN: () => b,
     eR: () => v,
     eo: () => F,
@@ -181,7 +181,7 @@ let T = (0, f.Zc)(
     (e) => (null != e ? e : a.Oi.STATUS_PUSH_UNSET),
     (e) => e,
 );
-let A = (0, f.Zc)(
+let C = (0, f.Zc)(
         "notifications",
         "enableVoiceActivityNotifications",
         (e) => {
@@ -190,7 +190,7 @@ let A = (0, f.Zc)(
         },
         (e) => o.D5.create({ value: !!e }),
     ),
-    C = (0, f.Zc)(
+    A = (0, f.Zc)(
         "notifications",
         "enableFriendOnlineNotifications",
         (e) => {
@@ -654,7 +654,7 @@ let eb = new Set(Object.values(h.Skl)),
         "text",
         "inlineAttachmentMedia",
     ),
-    eA = (0, f.KM)(
+    eC = (0, f.KM)(
         (0, f.Zc)(
             "textAndImages",
             "inlineEmbedMedia",
@@ -667,7 +667,7 @@ let eb = new Set(Object.values(h.Skl)),
         "text",
         "inlineEmbedMedia",
     ),
-    eC = (0, f.KM)(
+    eA = (0, f.KM)(
         (0, f.Zc)(
             "textAndImages",
             "renderEmbeds",

@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(469988),
     p = n(526383),
     f = n(294330),
-    h = n(388032),
-    g = n(663448),
+    g = n(388032),
+    h = n(663448),
     m = n(988050);
 let _ = function (e) {
     let { onScroll: t } = e,
@@ -74,8 +74,8 @@ let _ = function (e) {
         onScroll: t,
         children: [
             (0, r.jsx)(o.Z, {
-                title: h.intl.string(h.t.X5xPlb),
-                description: h.intl.string(h.t["F/IQCI"]),
+                title: g.intl.string(g.t.X5xPlb),
+                description: g.intl.string(g.t["F/IQCI"]),
                 children: (0, r.jsx)(s.Z, {}),
             }),
             (0, r.jsxs)(c.Z, {
@@ -84,13 +84,13 @@ let _ = function (e) {
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(l.Heading, {
-                                      className: g.sectionTitle,
+                                      className: h.sectionTitle,
                                       variant: "heading-lg/semibold",
                                       color: "header-primary",
-                                      children: h.intl.string(h.t["2DfZIQ"]),
+                                      children: g.intl.string(g.t["2DfZIQ"]),
                                   }),
                                   (0, r.jsxs)("div", {
-                                      className: g.content,
+                                      className: h.content,
                                       children: [
                                           _.map((e) =>
                                               (0, r.jsx)(
@@ -108,7 +108,7 @@ let _ = function (e) {
                               ],
                           })
                         : (0, r.jsx)("div", {
-                              className: g.content,
+                              className: h.content,
                               children: (0, r.jsx)(d.Z, { hasHub: !1 }),
                           }),
                     (0, r.jsx)("div", { className: m.divider }),
@@ -119,13 +119,13 @@ let _ = function (e) {
                                 className: m.text,
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: [h.intl.string(h.t.O1k9XX), " "],
+                                children: [g.intl.string(g.t.O1k9XX), " "],
                             }),
                             (0, r.jsx)(l.Text, {
                                 className: m.text,
                                 variant: "text-sm/medium",
                                 color: "text-default",
-                                children: h.intl.string(h.t.FV5dvh),
+                                children: g.intl.string(g.t.FV5dvh),
                             }),
                         ],
                     }),

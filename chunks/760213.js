@@ -1,5 +1,5 @@
 n.d(t, {
-    W: () => S,
+    W: () => y,
     Z: () => C,
 }),
     n(457542);
@@ -14,8 +14,8 @@ var r,
     d = n(239091),
     h = n(623602),
     g = n(598077),
-    p = n(314897),
-    m = n(246946),
+    m = n(314897),
+    p = n(246946),
     f = n(594174),
     _ = n(626135),
     x = n(51144),
@@ -24,65 +24,65 @@ var r,
     j = n(251423),
     b = n(981631),
     I = n(388032),
-    y = n(878709),
-    S =
+    N = n(878709),
+    y =
         (((r = {})[(r.LOGIN_REQUIRED = 0)] = "LOGIN_REQUIRED"),
         (r[(r.SWITCHED = 1)] = "SWITCHED"),
         (r[(r.REMOVED = 2)] = "REMOVED"),
         r);
-function N(e) {
+function S(e) {
     let { actionText: t, user: n, onAction: r } = e,
         {
             currentUser: s,
             hidePrivateData: l,
             isAuthenticated: j,
-        } = (0, o.cj)([f.default, m.Z, p.default], () => ({
+        } = (0, o.cj)([f.default, p.Z, m.default], () => ({
             currentUser: f.default.getCurrentUser(),
-            hidePrivateData: m.Z.hidePersonalInformation,
-            isAuthenticated: p.default.isAuthenticated(),
+            hidePrivateData: p.Z.hidePersonalInformation,
+            isAuthenticated: m.default.isAuthenticated(),
         })),
-        S = new g.Z(n),
-        N = j && (null == s ? void 0 : s.id) === S.id,
+        y = new g.Z(n),
+        S = j && (null == s ? void 0 : s.id) === y.id,
         C = n.tokenStatus === v.q.INVALID,
-        O = l || S.hasUniqueUsername() ? null : "#".concat(S.discriminator),
+        O = l || y.hasUniqueUsername() ? null : "#".concat(y.discriminator),
         T = null;
     return (
         h.Z.useConfig({ location: "Account card load" }),
-        N
+        S
             ? (T = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
-                  className: y.hintText,
+                  className: N.hintText,
                   color: "text-feedback-positive",
                   children: I.intl.string(I.t.seV8yt),
               }))
             : C &&
               (T = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
-                  className: y.hintText,
+                  className: N.hintText,
                   color: "text-feedback-critical",
                   children: I.intl.string(I.t.tYX2ps),
               })),
         (0, i.jsx)("div", {
-            className: y.accountCard,
+            className: N.accountCard,
             children: (0, i.jsxs)("div", {
-                className: y.userDetails,
+                className: N.userDetails,
                 children: [
                     (0, i.jsx)(c.qEK, {
-                        src: S.getAvatarURL(void 0, 40),
+                        src: y.getAvatarURL(void 0, 40),
                         size: c.EFr.SIZE_40,
                         "aria-label": n.username,
                     }),
                     (0, i.jsxs)("div", {
-                        className: a()(y.usernameSection, { [y.hasActionMaxWidth]: !N }),
+                        className: a()(N.usernameSection, { [N.hasActionMaxWidth]: !S }),
                         children: [
                             (0, i.jsxs)("div", {
-                                className: y.username,
+                                className: N.username,
                                 children: [
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-md/semibold",
                                         color: "header-primary",
                                         lineClamp: 1,
-                                        children: x.ZP.getUserTag(S, {
+                                        children: x.ZP.getUserTag(y, {
                                             mode: "username",
                                             identifiable: l ? "never" : "always",
                                         }),
@@ -98,9 +98,9 @@ function N(e) {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: y.userActions,
+                        className: N.userActions,
                         children: [
-                            !N &&
+                            !S &&
                                 (0, i.jsx)(c.Button, {
                                     variant: "secondary",
                                     text: C ? I.intl.string(I.t["DSN+hw"]) : t,
@@ -159,16 +159,16 @@ function C(e) {
     let { actionText: t, onAction: n } = e,
         { isLoading: r, multiAccountUsers: l } = (0, j.L)();
     return (0, i.jsx)("div", {
-        className: y.list,
+        className: N.list,
         children: r
-            ? (0, i.jsx)(c.$jN, { className: y.spinner })
+            ? (0, i.jsx)(c.$jN, { className: N.spinner })
             : l.map((e, r) =>
                   (0, i.jsxs)(
                       s.Fragment,
                       {
                           children: [
                               (0, i.jsx)(
-                                  N,
+                                  S,
                                   {
                                       user: e,
                                       actionText: t,
@@ -179,7 +179,7 @@ function C(e) {
                               l.length - 1 !== r &&
                                   (0, i.jsx)("div", {
                                       role: "separator",
-                                      className: y.separator,
+                                      className: N.separator,
                                   }),
                           ],
                       },

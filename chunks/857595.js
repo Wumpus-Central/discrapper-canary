@@ -5,7 +5,7 @@ n.d(t, {
     Qj: () => p,
     TX: () => S,
     Uv: () => P,
-    X2: () => C,
+    X2: () => A,
     ZZ: () => d,
     Zt: () => y,
     cq: () => f,
@@ -19,7 +19,7 @@ n.d(t, {
     qz: () => O,
     r_: () => g,
     rf: () => _,
-    u1: () => A,
+    u1: () => C,
     vW: () => R,
 });
 var r = n(570140),
@@ -131,14 +131,14 @@ function T(e) {
         enableCustomCursor: e,
     });
 }
-function A(e) {
+function C(e) {
     r.Z.dispatch({
         type: "ACCESSIBILITY_SET_ROLE_STYLE",
         roleStyle: e,
     }),
         a.default.track(s.rMx.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
 }
-function C(e) {
+function A(e) {
     r.Z.dispatch({
         type: "ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED",
         enabled: e,

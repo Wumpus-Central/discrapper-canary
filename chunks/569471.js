@@ -118,11 +118,11 @@ function T(e) {
     let { guild: t } = e;
     E(t.id);
 }
-function A(e) {
+function C(e) {
     let { channel: t } = e;
     y(t);
 }
-function C(e) {
+function A(e) {
     let { guildId: t, members: n } = e;
     null != t &&
         null != n &&
@@ -246,12 +246,12 @@ let L = new x(s.Z, {
         OVERLAY_INITIALIZE: S,
         GUILD_CREATE: I,
         GUILD_DELETE: T,
-        THREAD_CREATE: A,
-        THREAD_LIST_SYNC: C,
+        THREAD_CREATE: C,
+        THREAD_LIST_SYNC: A,
         SEARCH_MESSAGES_SUCCESS: N,
         MOD_VIEW_SEARCH_MESSAGES_SUCCESS: N,
-        LOAD_THREADS_SUCCESS: C,
-        LOAD_ARCHIVED_THREADS_SUCCESS: C,
+        LOAD_THREADS_SUCCESS: A,
+        LOAD_ARCHIVED_THREADS_SUCCESS: A,
         THREAD_DELETE: P,
         THREAD_MEMBER_UPDATE: R,
         THREAD_MEMBER_LOCAL_UPDATE: D,

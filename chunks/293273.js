@@ -22,8 +22,8 @@ var r,
     S = n(581883),
     I = n(199902),
     T = n(592125),
-    A = n(272053),
-    C = n(77498),
+    C = n(272053),
+    A = n(77498),
     N = n(944486),
     P = n(797258),
     R = n(981631);
@@ -90,7 +90,7 @@ function k() {
         n.push((0, _.I)(r));
     let i = E.Z.getActivities();
     n.push(...i);
-    let o = A.Z.getStream();
+    let o = C.Z.getStream();
     null != o && n.push(w({ type: R.IIU.STREAMING }, o));
     let l = new Set();
     s().forEach(M, (e) => {
@@ -103,7 +103,7 @@ function k() {
         f = null != I.Z.getCurrentUserActiveStream(),
         p = u || (d && !f);
     if (null != c && null != c.name && !p) {
-        let t = C.Z.getGameByName(c.name);
+        let t = A.Z.getGameByName(c.name);
         n.push(
             w(
                 {
@@ -173,7 +173,7 @@ function V() {
 }
 class H extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, I.Z, T.Z, d.ZP, A.Z, E.Z, C.Z, g.Z, m.ZP, N.Z, P.Z, O.Z, S.Z),
+        this.waitFor(p.Z, I.Z, T.Z, d.ZP, C.Z, E.Z, A.Z, g.Z, m.ZP, N.Z, P.Z, O.Z, S.Z),
             this.syncWith([E.Z, g.Z], () => k());
     }
     getActivities() {

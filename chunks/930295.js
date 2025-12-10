@@ -1,6 +1,6 @@
 n.d(t, {
     F: () => T,
-    H: () => C,
+    H: () => A,
 }),
     n(953529),
     n(388685),
@@ -76,8 +76,8 @@ function I(e, t) {
     );
 }
 let T = Symbol("POPOUT_PREVENT_CLOSE"),
-    A = new Set(["Spacebar", " ", "Enter"]);
-class C extends (r = a.Component) {
+    C = new Set(["Spacebar", " ", "Enter"]);
+class A extends (r = a.Component) {
     shouldShowPopout(e, t) {
         return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout;
     }
@@ -303,7 +303,7 @@ class C extends (r = a.Component) {
                 }
             }),
             O(this, "handleKeyboardPreload", (e) => {
-                A.has(e.key) && this.handlePreload();
+                C.has(e.key) && this.handlePreload();
             }),
             O(this, "handleDocumentMouseDown", (e) => {
                 let { ignoreModalClicks: t, closeOnClickOutside: n } = this.props;
@@ -344,14 +344,14 @@ class C extends (r = a.Component) {
             );
     }
 }
-O(C, "defaultProps", {
+O(A, "defaultProps", {
     autoInvert: !1,
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     loadingComponent: (0, i.jsx)(b.x, {}),
     closeOnClickOutside: !0,
 }),
-    O(C, "contextType", h.ZP);
+    O(A, "contextType", h.ZP);
 let N = (e) => {
     var t, n, r, i, a, o;
     let s = e.getBoundingClientRect(),

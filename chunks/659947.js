@@ -72,7 +72,7 @@ let I = [h.h8.VOICE_CHANNEL];
 function T(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function A() {
+function C() {
     return (0, r.jsx)("div", {
         className: E.voiceListSearchEmpty,
         children: (0, r.jsx)(s.Text, {
@@ -83,7 +83,7 @@ function A() {
         }),
     });
 }
-function C(e) {
+function A(e) {
     let t = "" !== e,
         n = (0, o.Wu)([p.ZP, f.Z, m.Z], () => {
             let e = m.Z.getGuildId();
@@ -170,7 +170,7 @@ function R(e) {
             autocompleterResultTypes: I,
             autocompleterBeforeCreateSearchContext: T,
         }),
-        y = C(p),
+        y = A(p),
         { focusedIndex: O, setFocusedIndex: v } = P(p);
     i.useEffect(() => {
         let { current: e } = u;
@@ -260,7 +260,7 @@ function R(e) {
                   }
                 : {
                       sections: [1],
-                      renderRow: () => (0, r.jsx)(A, {}),
+                      renderRow: () => (0, r.jsx)(C, {}),
                       sectionHeight: 0,
                       rowHeight: 52,
                   };

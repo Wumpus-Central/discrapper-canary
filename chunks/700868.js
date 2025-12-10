@@ -1,7 +1,7 @@
 r.d(t, {
-    GK: () => D,
+    GK: () => S,
     Iw: () => m,
-    V0: () => S,
+    V0: () => D,
     _d: () => g,
     qp: () => C,
     yn: () => L,
@@ -22,11 +22,11 @@ var n = r(490990),
     R = r(149821),
     T = r(671926),
     A = r(25855),
-    N = r(74518),
-    f = r(366000),
+    f = r(74518),
+    N = r(366000),
     O = r(39137);
 let h = "__SENTRY_SUPPRESS_TRACING__";
-function D(e, t) {
+function S(e, t) {
     let r = v();
     if (r.startSpan) return r.startSpan(e, t);
     let n = P(e),
@@ -34,7 +34,7 @@ function D(e, t) {
     return (0, _.$e)(e.scope, () =>
         G(i)(() => {
             let r = (0, _.nZ)(),
-                i = M(r),
+                i = w(r),
                 o =
                     e.onlyIfParent && !i
                         ? new A.b()
@@ -53,7 +53,7 @@ function D(e, t) {
                         o.isRecording() &&
                             (!e || "ok" === e) &&
                             o.setStatus({
-                                code: f.jt,
+                                code: N.jt,
                                 message: "internal_error",
                             });
                     },
@@ -63,7 +63,7 @@ function D(e, t) {
         }),
     );
 }
-function S(e, t) {
+function D(e, t) {
     let r = v();
     if (r.startSpanManual) return r.startSpanManual(e, t);
     let n = P(e),
@@ -71,7 +71,7 @@ function S(e, t) {
     return (0, _.$e)(e.scope, () =>
         G(i)(() => {
             let r = (0, _.nZ)(),
-                i = M(r),
+                i = w(r),
                 o =
                     e.onlyIfParent && !i
                         ? new A.b()
@@ -93,7 +93,7 @@ function S(e, t) {
                         o.isRecording() &&
                             (!e || "ok" === e) &&
                             o.setStatus({
-                                code: f.jt,
+                                code: N.jt,
                                 message: "internal_error",
                             });
                     },
@@ -109,7 +109,7 @@ function C(e) {
         { forceTransaction: n, parentSpan: a } = e;
     return (e.scope ? (t) => (0, _.$e)(e.scope, t) : void 0 !== a ? (e) => g(a, e) : (e) => e())(() => {
         let t = (0, _.nZ)(),
-            a = M(t);
+            a = w(t);
         return e.onlyIfParent && !a
             ? new A.b()
             : y({
@@ -147,7 +147,7 @@ function y({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: n }) {
             let { spanId: n, traceId: a } = e.spanContext(),
                 i = !t.getScopeData().sdkProcessingMetadata[h] && (0, I.Tt)(e),
                 o = i
-                    ? new N.s({
+                    ? new f.s({
                           ...r,
                           parentSpanId: n,
                           traceId: a,
@@ -163,7 +163,7 @@ function y({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: n }) {
         let r = (0, p.jC)(e),
             { traceId: i, spanId: o } = e.spanContext(),
             _ = (0, I.Tt)(e);
-        (a = w(
+        (a = M(
             {
                 traceId: i,
                 parentSpanId: o,
@@ -183,7 +183,7 @@ function y({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: n }) {
             ...i.getPropagationContext(),
             ...n.getPropagationContext(),
         };
-        (a = w(
+        (a = M(
             {
                 traceId: e,
                 parentSpanId: o,
@@ -211,7 +211,7 @@ function v() {
     let e = (0, o.c)();
     return (0, s.G)(e);
 }
-function w(e, t, r) {
+function M(e, t, r) {
     let n = (0, _.s3)(),
         a = (n && n.getOptions()) || {},
         { name: i = "", attributes: o } = e,
@@ -226,7 +226,7 @@ function w(e, t, r) {
                       parentSampled: r,
                   },
               }),
-        l = new N.s({
+        l = new f.s({
             ...e,
             attributes: {
                 [E.Zj]: "custom",
@@ -236,7 +236,7 @@ function w(e, t, r) {
         });
     return void 0 !== c && l.setAttribute(E.TE, c), n && n.emit("spanStart", l), l;
 }
-function M(e) {
+function w(e) {
     let t = (0, d.Y)(e);
     if (!t) return;
     let r = (0, _.s3)();

@@ -108,22 +108,22 @@ function I(e, t, n) {
 function T(e, t, n) {
     return I(e, t, n).add({ days: 6 });
 }
-let A = new Map(),
-    C = new Map();
+let C = new Map(),
+    A = new Map();
 function N(e) {
     if (Intl.Locale) {
-        let t = A.get(e);
-        return !t && (t = new Intl.Locale(e).maximize().region) && A.set(e, t), t;
+        let t = C.get(e);
+        return !t && (t = new Intl.Locale(e).maximize().region) && C.set(e, t), t;
     }
     let t = e.split("-")[1];
     return "u" === t ? void 0 : t;
 }
 function P(e) {
-    let t = C.get(e);
+    let t = A.get(e);
     if (!t) {
         if (Intl.Locale) {
             let n = new Intl.Locale(e);
-            if ("getWeekInfo" in n && (t = n.getWeekInfo())) return C.set(e, t), t.firstDay;
+            if ("getWeekInfo" in n && (t = n.getWeekInfo())) return A.set(e, t), t.firstDay;
         }
         let n = N(e);
         if (e.includes("-fw-")) {
@@ -143,7 +143,7 @@ function P(e) {
                               ? { firstDay: 6 }
                               : { firstDay: 0 };
         } else t = e.includes("-ca-iso8601") ? { firstDay: 1 } : { firstDay: (n && i.U[n]) || 0 };
-        C.set(e, t);
+        A.set(e, t);
     }
     return t.firstDay;
 }

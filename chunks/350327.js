@@ -1,5 +1,5 @@
 n.d(t, {
-    CM: () => A,
+    CM: () => C,
     Cf: () => I,
     ID: () => T,
     Ls: () => y,
@@ -14,7 +14,7 @@ n.d(t, {
     rf: () => D,
     uV: () => j,
     x3: () => x,
-    z5: () => C,
+    z5: () => A,
 });
 var r = n(442837),
     i = n(544891),
@@ -151,13 +151,13 @@ function T(e) {
         pronouns: e,
     });
 }
-function A(e) {
+function C(e) {
     a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
         color: e,
     });
 }
-function C(e) {
+function A(e) {
     a.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
         themeColors: e,

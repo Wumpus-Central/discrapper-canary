@@ -107,12 +107,12 @@ e.exports = (function (e) {
                     S = E.getBlocksAsArray(),
                     I = [],
                     T = null,
-                    A = null,
-                    C = 0;
-                C < S.length;
-                C++
+                    C = null,
+                    A = 0;
+                A < S.length;
+                A++
             ) {
-                var N = S[C],
+                var N = S[A],
                     P = N.getKey(),
                     R = N.getType(),
                     D = n(N),
@@ -143,7 +143,7 @@ e.exports = (function (e) {
                     B = N.getDepth(),
                     F = "";
                 if ((r && (F = r(N)), "li" === Z)) {
-                    var V = A !== G || null === T || B > T;
+                    var V = C !== G || null === T || B > T;
                     F = f(F, _(R, B, V, j));
                 }
                 var H = w || l,
@@ -167,7 +167,7 @@ e.exports = (function (e) {
                     offsetKey: M,
                 }),
                     (T = G ? N.getDepth() : null),
-                    (A = G);
+                    (C = G);
             }
             for (var K = [], z = 0; z < I.length; ) {
                 var q = I[z];

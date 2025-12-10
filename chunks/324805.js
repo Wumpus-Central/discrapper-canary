@@ -1,5 +1,5 @@
 n.d(t, {
-    $z: () => A,
+    $z: () => C,
     Dp: () => O,
     Ew: () => U,
     HO: () => E,
@@ -23,7 +23,7 @@ n.d(t, {
     oH: () => x,
     tD: () => g,
     tt: () => R,
-    v6: () => C,
+    v6: () => A,
     wF: () => I,
     yq: () => w,
 }),
@@ -129,8 +129,8 @@ var v = (function (e) {
 let S = "1333839522189938740",
     I = "1410358070831480904",
     T = "1420556874629251124",
-    A = "1402418703554842694",
-    C = new Set([l.Ok.DESKTOP_ACCOUNT_PANEL_AREA, l.Ok.MOBILE_HOME_DOCK_AREA]),
+    C = "1402418703554842694",
+    A = new Set([l.Ok.DESKTOP_ACCOUNT_PANEL_AREA, l.Ok.MOBILE_HOME_DOCK_AREA]),
     N = new Set([
         i.X.STREAM_ON_DESKTOP,
         i.X.PLAY_ON_DESKTOP,

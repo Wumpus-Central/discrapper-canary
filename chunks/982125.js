@@ -27,17 +27,17 @@ function _(e) {
         v = (0, i.useRef)(null),
         S = (0, i.useRef)(null),
         I = (0, i.useRef)(null),
-        [T, A] = (0, i.useState)(void 0),
-        C = (0, i.useRef)(!1),
+        [T, C] = (0, i.useState)(void 0),
+        A = (0, i.useRef)(!1),
         N = null != h && "" !== h,
         P = null != n && "" !== n,
         R = null != E ? E : null;
     (0, i.useEffect)(() => {
-        if (!C.current) {
-            C.current = !0;
+        if (!A.current) {
+            A.current = !0;
             return;
         }
-        A(t ? "animateIn" : "animateOut");
+        C(t ? "animateIn" : "animateOut");
     }, [t]);
     let D = (e) => {
             null != a && a(e);

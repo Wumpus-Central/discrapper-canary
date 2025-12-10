@@ -1,5 +1,5 @@
 n.d(t, {
-    Dg: () => A,
+    Dg: () => C,
     On: () => E,
     TF: () => T,
     Y7: () => b,
@@ -94,7 +94,7 @@ function T(e) {
         ],
     });
 }
-function A(e) {
+function C(e) {
     let { fixed: t = !1, show: n, windowKey: a } = e,
         s = (0, p.getPlatform)(),
         u = i.useCallback(() => {

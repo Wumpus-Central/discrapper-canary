@@ -14,7 +14,7 @@ var n = r(431660),
     u = r(841122);
 function d(e, t, r, d, p, R) {
     var T, A;
-    let { normalizeDepth: N = 3, normalizeMaxBreadth: f = 1000 } = e,
+    let { normalizeDepth: f = 3, normalizeMaxBreadth: N = 1000 } = e,
         O = {
             ...t,
             event_id: t.event_id || r.event_id || (0, n.DM)(),
@@ -63,25 +63,25 @@ function d(e, t, r, d, p, R) {
                     });
                 } catch (e) {}
             })(O, e.stackParser);
-    let D = (function (e, t) {
+    let S = (function (e, t) {
         if (!t) return e;
         let r = e ? e.clone() : new l.s();
         return r.update(t), r;
     })(d, r.captureContext);
     r.mechanism && (0, n.EG)(O, r.mechanism);
-    let S = p ? p.getEventProcessors() : [],
+    let D = p ? p.getEventProcessors() : [],
         C = (0, c.lW)().getScopeData();
     if (R) {
         let e = R.getScopeData();
         (0, u.yo)(C, e);
     }
-    if (D) {
-        let e = D.getScopeData();
+    if (S) {
+        let e = S.getScopeData();
         (0, u.yo)(C, e);
     }
     let L = [...(r.attachments || []), ...C.attachments];
     L.length && (r.attachments = L), (0, u.gi)(O, C);
-    let g = [...S, ...C.eventProcessors];
+    let g = [...D, ...C.eventProcessors];
     return (0, E.R)(g, O, r).then((e) =>
         (e &&
             (function (e) {
@@ -106,7 +106,7 @@ function d(e, t, r, d, p, R) {
                     });
                 });
             })(e),
-        "number" == typeof N && N > 0)
+        "number" == typeof f && f > 0)
             ? (function (e, t, r) {
                   if (!e) return null;
                   let n = {
@@ -134,7 +134,7 @@ function d(e, t, r, d, p, R) {
                           }))),
                       n
                   );
-              })(e, N, f)
+              })(e, f, N)
             : e,
     );
 }

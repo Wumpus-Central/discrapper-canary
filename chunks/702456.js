@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(493683),
     p = n(393903),
     f = n(81643),
-    h = n(100527),
-    g = n(367907),
+    g = n(100527),
+    h = n(367907),
     m = n(791250),
     _ = n(752048),
     b = n(518950),
@@ -89,13 +89,13 @@ function w(e) {
         _ = async () => {
             await d.Z.openPrivateChannel({
                 recipientIds: [i.id],
-                location: h.Z.FREQUENT_FRIENDS_ROW,
+                location: g.Z.FREQUENT_FRIENDS_ROW,
             });
             let e = E.Z.getDMFromUserId(i.id);
             null != e &&
-                (0, g.yw)(
+                (0, h.yw)(
                     j.rMx.CHANNEL_OPENED,
-                    Z(A({}, (0, g.$H)(e)), { location: "".concat(h.Z.FREQUENT_FRIENDS_ROW, " ").concat(l + 1) }),
+                    Z(A({}, (0, h.$H)(e)), { location: "".concat(g.Z.FREQUENT_FRIENDS_ROW, " ").concat(l + 1) }),
                 );
         },
         O = 0 === l,
@@ -163,19 +163,19 @@ function L() {
             var e, t;
             return null != (t = null == (e = C.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) && t;
         }),
-        [d, h] = i.useState({
+        [d, g] = i.useState({
             scrollLeft: 0,
             scrollWidth: 0,
             clientWidth: 0,
         }),
-        g = i.useRef(null),
+        h = i.useRef(null),
         b = (0, o.e7)([S.Z], () => S.Z.ipCountryCode),
         E = (0, f.gD)(),
         v = i.useCallback(() => {
             var e;
-            let t = null == (e = g.current) ? void 0 : e.getScrollerNode();
+            let t = null == (e = h.current) ? void 0 : e.getScrollerNode();
             null != t &&
-                h({
+                g({
                     scrollLeft: t.scrollLeft,
                     scrollWidth: t.scrollWidth,
                     clientWidth: t.clientWidth,
@@ -188,13 +188,13 @@ function L() {
         L = i.useCallback(
             (e) => {
                 let t = e.currentTarget;
-                h({
+                g({
                     scrollLeft: t.scrollLeft,
                     scrollWidth: t.scrollWidth,
                     clientWidth: t.clientWidth,
                 });
             },
-            [h],
+            [g],
         );
     if (
         (i.useEffect(() => {
@@ -233,7 +233,7 @@ function L() {
                     }),
                     (0, r.jsx)(c.xVE, {
                         ref: (e) => {
-                            (g.current = e),
+                            (h.current = e),
                                 (I.current =
                                     (null == e ? void 0 : e.getScrollerNode()) != null ? e.getScrollerNode() : null);
                         },

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685), n(290780), n(539854);
+n.d(t, { Z: () => F }), n(388685), n(290780), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -40,7 +40,7 @@ let U = r.memo((e) => {
     let { mute: a, deaf: s, user: C, channel: y, sessionId: E, nick: Z } = e,
         T = C.id,
         k = (0, o.e7)([S.default], () => S.default.getId() === T, [T]),
-        [U, V, B] = (0, o.Wu)(
+        [U, V, F] = (0, o.Wu)(
             [I.Z],
             () =>
                 k
@@ -48,7 +48,7 @@ let U = r.memo((e) => {
                     : [!I.Z.isSupported() || I.Z.isLocalMute(T), !1, I.Z.isLocalVideoDisabled(T)],
             [k, T],
         ),
-        F = (0, o.e7)([A.Z], () => A.Z.isPrioritySpeaker(T)),
+        B = (0, o.e7)([A.Z], () => A.Z.isPrioritySpeaker(T)),
         H = (0, c.Z)({
             userId: T,
             checkSoundSharing: !0,
@@ -130,13 +130,13 @@ let U = r.memo((e) => {
                     otherClientSessionType: null == ee || null == (t = ee.clientInfo) ? void 0 : t.os,
                     voicePlatform: en,
                     localMute: U && !k,
-                    localVideoDisabled: B,
+                    localVideoDisabled: F,
                     mute: a || U,
                     deaf: s || V,
                     speaking: H,
                     latched: W,
                     ringing: q,
-                    priority: F,
+                    priority: B,
                     embeddedApplication: Y[0],
                     isStreaming: null != Q && Q.channelId === y.id,
                     isWatching: null != $ && $.state !== L.jm8.ENDED,
@@ -165,7 +165,7 @@ let U = r.memo((e) => {
 });
 U.displayName = "ConnectedVoiceUser";
 let V = [],
-    B = function (e) {
+    F = function (e) {
         let {
                 allowPreviews: t = !0,
                 allowDragging: n = !0,
@@ -186,25 +186,25 @@ let V = [],
             A = r.useRef(null),
             w = (0, x.Es)(l.id, null != c ? c : V),
             { shouldShow: M, dismiss: D } = (0, y.UM)(l),
-            B = r.useRef(
+            F = r.useRef(
                 new s.sW(50, () => {
                     P(A.current), (A.current = null);
                 }),
             ),
-            F = r.useRef(
+            B = r.useRef(
                 new s.sW(175, () => {
                     P(null);
                 }),
             ),
             H = r.useCallback(
                 (e) => {
-                    t && (N(!0), F.current.cancel(), (A.current = e), B.current.delay());
+                    t && (N(!0), B.current.cancel(), (A.current = e), F.current.delay());
                 },
                 [t],
             ),
             G = r.useCallback(
                 (e) => {
-                    t && (B.current.cancel(), (A.current = null), N(!1), F.current.delay());
+                    t && (F.current.cancel(), (A.current = null), N(!1), B.current.delay());
                 },
                 [t],
             ),

@@ -40,7 +40,7 @@ let T = new c.ZP((e) => {
         subscriptions: e,
     });
 });
-function A(e, t) {
+function C(e, t) {
     let n = {};
     T.forEach((i) => {
         var a;
@@ -56,7 +56,7 @@ function A(e, t) {
                 subscriptions: n,
             });
 }
-function C(e, t) {
+function A(e, t) {
     return T.subscribeToGuild(e), null != t && _.ZP.getSection(t) === S.ULH.MEMBERS && N(e, t, c.KV);
 }
 function N(e, t, n) {
@@ -72,9 +72,9 @@ function N(e, t, n) {
 }
 function P(e) {
     let { type: t } = e;
-    "CONNECTION_OPEN" === t && A(!0, !1);
+    "CONNECTION_OPEN" === t && C(!0, !1);
     let n = v.Z.getGuildId();
-    null != n && C(n, O.Z.getChannelId(n));
+    null != n && A(n, O.Z.getChannelId(n));
     let r = {};
     T.forEach((e) => {
         null == E.Z.getGuild(e) ? T.clearWithoutFlushing(e, !0) : (r[e] = T.get(e));
@@ -86,12 +86,12 @@ function P(e) {
             });
 }
 function R() {
-    A(!1, !1);
+    C(!1, !1);
 }
 function D(e) {
     let { idle: t } = e;
     if (!t) return !1;
-    A(!1, !0);
+    C(!1, !0);
 }
 function w() {
     T.reset();
@@ -140,14 +140,14 @@ function Z(e) {
 }
 function B(e) {
     let { guildId: t, channelId: n } = e;
-    return C(t, n);
+    return A(t, n);
 }
 function F(e) {
     let { guildId: t, channelId: n } = e;
-    return !h.Z.isUnavailable(t) && C(t, n);
+    return !h.Z.isUnavailable(t) && A(t, n);
 }
 function V() {
-    return C(v.Z.getGuildId(), O.Z.getChannelId());
+    return A(v.Z.getGuildId(), O.Z.getChannelId());
 }
 function H(e) {
     let { channel: t } = e;

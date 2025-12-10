@@ -37,13 +37,13 @@ r(
     },
     { DOMException: T ? b : E },
 );
-var A = a(h),
-    C = A.prototype;
-if (C.constructor !== A) {
-    for (var N in (m || s(C, "constructor", o(1, A)), f))
+var C = a(h),
+    A = C.prototype;
+if (A.constructor !== C) {
+    for (var N in (m || s(A, "constructor", o(1, C)), f))
         if (l(f, N)) {
             var P = f[N],
                 R = P.s;
-            l(A, R) || s(A, R, o(6, P.c));
+            l(C, R) || s(C, R, o(6, P.c));
         }
 }

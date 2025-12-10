@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(804919),
     p = n(931847),
     f = n(836197),
-    h = n(86419),
-    g = n(50130),
+    g = n(86419),
+    h = n(50130),
     m = n(872269),
     _ = n(248554),
     b = n(70399),
@@ -70,7 +70,7 @@ function I(e) {
         { widgetType: n, onAddWidget: l, size: c = "default", loading: d = !1, trackUserProfileEditAction: O } = e,
         { placeholder: I, getAriaLabel: C, icon: S } = y[n],
         T = "small" === c,
-        { config: N } = (0, g.G)(),
+        { config: N } = (0, h.G)(),
         j = i.useMemo(() => {
             switch (n) {
                 case s.l.CURRENT_GAMES:
@@ -93,7 +93,7 @@ function I(e) {
         P = i.useCallback(() => {
             d ||
                 null == j ||
-                ((0, h.qH)(n, j),
+                ((0, g.qH)(n, j),
                 O(
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -174,7 +174,7 @@ function I(e) {
                                           (0, r.jsx)(o.Text, {
                                               variant: "text-md/medium",
                                               color: "header-primary",
-                                              children: (0, h.mR)(j),
+                                              children: (0, g.mR)(j),
                                           }),
                                           null != t
                                               ? (0, r.jsx)("img", {

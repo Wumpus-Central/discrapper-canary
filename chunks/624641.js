@@ -26,7 +26,7 @@ function _(e) {
         } = e,
         T = (0, i.tv)();
     t = (0, a.Me)(t);
-    let A = (e) => {
+    let C = (e) => {
         if ("keyboard" === e.pointerType && (0, r.FJ)(e)) n.toggleSelection(_);
         else {
             if ("none" === n.selectionMode) return;
@@ -59,13 +59,13 @@ function _(e) {
                   : document.activeElement !== g.current && g.current && (0, c.e)(g.current));
     }, [g, _, n.focusedKey, n.childFocusStrategy, n.isFocused, b]),
         (O = O || n.isDisabled(_));
-    let C = {};
+    let A = {};
     b || O
         ? O &&
-          (C.onMouseDown = (e) => {
+          (A.onMouseDown = (e) => {
               e.preventDefault();
           })
-        : (C = {
+        : (A = {
               tabIndex: _ === n.focusedKey ? 0 : -1,
               onFocus(e) {
                   e.target === g.current && n.setFocusedKey(_);
@@ -97,29 +97,29 @@ function _(e) {
     if (
         (E
             ? ((F.onPressStart = (e) => {
-                  (M.current = e.pointerType), (U.current = k), "keyboard" === e.pointerType && (!j || h()) && A(e);
+                  (M.current = e.pointerType), (U.current = k), "keyboard" === e.pointerType && (!j || h()) && C(e);
               }),
               S
                   ? ((F.onPressUp = x
                         ? void 0
                         : (e) => {
-                              "mouse" === e.pointerType && D && A(e);
+                              "mouse" === e.pointerType && D && C(e);
                           }),
                     (F.onPress = x
                         ? B
                         : (e) => {
-                              "keyboard" !== e.pointerType && "mouse" !== e.pointerType && D && A(e);
+                              "keyboard" !== e.pointerType && "mouse" !== e.pointerType && D && C(e);
                           }))
                   : (F.onPress = (e) => {
                         x || (L && "mouse" !== e.pointerType)
                             ? ("keyboard" !== e.pointerType || m()) && B(e)
-                            : "keyboard" !== e.pointerType && D && A(e);
+                            : "keyboard" !== e.pointerType && D && C(e);
                     }))
             : ((F.onPressStart = (e) => {
                   (M.current = e.pointerType),
                       (U.current = k),
                       (G.current = x),
-                      D && (("mouse" === e.pointerType && !x) || ("keyboard" === e.pointerType && (!w || h()))) && A(e);
+                      D && (("mouse" === e.pointerType && !x) || ("keyboard" === e.pointerType && (!w || h()))) && C(e);
               }),
               (F.onPress = (e) => {
                   ("touch" === e.pointerType ||
@@ -127,10 +127,10 @@ function _(e) {
                       "virtual" === e.pointerType ||
                       ("keyboard" === e.pointerType && j && m()) ||
                       ("mouse" === e.pointerType && G.current)) &&
-                      (j ? B(e) : D && A(e));
+                      (j ? B(e) : D && C(e));
               })),
-        (C["data-collection"] = (0, r.Zx)(n.collection)),
-        (C["data-key"] = _),
+        (A["data-collection"] = (0, r.Zx)(n.collection)),
+        (A["data-key"] = _),
         (F.preventFocusOnPress = b),
         b &&
             (F = (0, s.d)(F, {
@@ -154,7 +154,7 @@ function _(e) {
         { longPressProps: W } = (0, d.T)({
             isDisabled: !k,
             onLongPress(e) {
-                "touch" === e.pointerType && (A(e), n.setSelectionBehavior("toggle"));
+                "touch" === e.pointerType && (C(e), n.setSelectionBehavior("toggle"));
             },
         }),
         K = (e) => {
@@ -168,7 +168,7 @@ function _(e) {
                 : void 0;
     return {
         itemProps: (0, s.d)(
-            C,
+            A,
             D || x || (b && !O) ? V : {},
             k ? W : {},
             {

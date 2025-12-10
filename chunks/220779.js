@@ -1,6 +1,6 @@
 n.d(t, {
     A7: () => T,
-    dE: () => C,
+    dE: () => A,
 }),
     n(388685);
 var r = n(54381),
@@ -93,16 +93,16 @@ function T(e) {
         T = () => {
             E(""), v((0, d.JM)(""));
         },
-        A = u.Ie.ATOMIC_REACTOR_REPLY_INPUT,
-        C = i.useRef(null),
+        C = u.Ie.ATOMIC_REACTOR_REPLY_INPUT,
+        A = i.useRef(null),
         N = () => {
-            if (null == C.current) return "top";
-            let e = C.current.getBoundingClientRect(),
+            if (null == A.current) return "top";
+            let e = A.current.getBoundingClientRect(),
                 t = window.innerHeight;
             return e.top < t / 2 ? "bottom" : "top";
         };
     return (0, r.jsx)(f.ZP, {
-        ref: C,
+        ref: A,
         placeholder: t,
         editorClassName: m,
         className: o()(b.replyInput, m),
@@ -113,7 +113,7 @@ function T(e) {
         onChange: (e, t, n) => {
             E(t), v(n);
         },
-        type: s ? S(O({}, A), { emojis: { button: !0 } }) : A,
+        type: s ? S(O({}, C), { emojis: { button: !0 } }) : C,
         textValue: g,
         richValue: y,
         onSubmit: (e) => {
@@ -140,7 +140,7 @@ function T(e) {
         renderAttachButton: l,
     });
 }
-let A = (e, t) => {
+let C = (e, t) => {
         i.useEffect(() => {
             let n = (t) => {
                     "Escape" === t.key && e();
@@ -160,14 +160,14 @@ let A = (e, t) => {
             );
         }, [e, t]);
     },
-    C = (e) => {
+    A = (e) => {
         let { onSelectEmoji: t, onClick: n } = e,
             a = (0, c.ZP)(),
             [o, u] = i.useState(!1),
             d = i.useRef(null),
             f = i.useRef(null);
         return (
-            A(() => u(!1), d),
+            C(() => u(!1), d),
             (0, r.jsx)(l.yRy, {
                 targetElementRef: f,
                 align: "right",

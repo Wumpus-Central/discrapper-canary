@@ -455,8 +455,8 @@ class y extends o.Z {
                 framesCodec: S,
                 framesNetwork: I,
                 packets: T,
-                packetsLost: A,
-                nackCount: C,
+                packetsLost: C,
+                nackCount: A,
                 pliCount: N,
                 qpSum: P,
                 pauseCount: R,
@@ -493,13 +493,13 @@ class y extends o.Z {
                 avg_bitrate: i > 0 ? Math.round(((null != y ? y : 0) * 8) / i) : 0,
                 avg_fps: i > 0 ? Math.round((null != S ? S : 0) / i) : 0,
                 num_bytes: y,
-                num_packets_lost: A,
+                num_packets_lost: C,
                 num_packets: T,
                 num_frames: I,
                 num_frames_codec_error: v,
                 time_to_first_frame_ms: e.timeToFirstFrame,
                 num_frames_dropped: O,
-                num_nacks: C,
+                num_nacks: A,
                 num_plis: N,
                 qp_sum: P,
                 num_keyframes: j,
@@ -571,8 +571,8 @@ class y extends o.Z {
                             (S = this.connection.getRemoteVideoSinkWants("any")),
                             (v = (null != S ? S : 0) > 0);
                     }
-                    let A = this.videoStopped.value || !v;
-                    if ((A !== I.isVideoStopped && I.setVideoStopped(A, p.Mq.SenderStopped), !A)) {
+                    let C = this.videoStopped.value || !v;
+                    if ((C !== I.isVideoStopped && I.setVideoStopped(C, p.Mq.SenderStopped), !C)) {
                         I.appendAndIncrementStats(p.z4.parseOutboundStats(r, e)),
                             I.encoderCodec !== p.u7.UNKNOWN && d.add(I.encoderCodec);
                         let t = null == T ? void 0 : T.maxBitrate;

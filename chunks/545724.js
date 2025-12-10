@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -34,7 +34,7 @@ function f(e) {
     }
     return e;
 }
-function h(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,11 +52,11 @@ function h(e, t) {
         e
     );
 }
-let g = function (e) {
+let h = function (e) {
     let {
             index: t,
             children: l,
-            user: g,
+            user: h,
             channel: m,
             onClick: _,
             isFocused: b,
@@ -82,7 +82,7 @@ let g = function (e) {
                 },
                 children: (0, r.jsx)(
                     s.Z.div,
-                    h(
+                    g(
                         f(
                             {
                                 className: a()(p.messageRequestItem, v, {
@@ -90,7 +90,7 @@ let g = function (e) {
                                     [p.firstItem]: 0 === t,
                                 }),
                                 onContextMenu: (e) => {
-                                    null != g &&
+                                    null != h &&
                                         (S(!0),
                                         (0, u.jW)(
                                             e,
@@ -100,7 +100,7 @@ let g = function (e) {
                                                     n.e("69220"),
                                                     n.e("74820"),
                                                 ]).then(n.bind(n, 881351));
-                                                return (t) => (0, r.jsx)(e, h(f({}, t), { user: g }));
+                                                return (t) => (0, r.jsx)(e, g(f({}, t), { user: h }));
                                             },
                                             {
                                                 onClose: () => {

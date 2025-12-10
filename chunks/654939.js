@@ -77,8 +77,8 @@ let g = (e) => {
             onShow: I,
             estimatedTooltipHeight: T = 300,
         } = e,
-        A = u.vK[t].nameUnformatted,
-        C = (f.intl.string(f.t.lG6a5x) + " " + f.intl.string(A)).toLocaleUpperCase(),
+        C = u.vK[t].nameUnformatted,
+        A = (f.intl.string(f.t.lG6a5x) + " " + f.intl.string(C)).toLocaleUpperCase(),
         N = (0, o.Z)(t),
         P = (0, s.J)(t);
     (0, i.useEffect)(() => {
@@ -96,13 +96,13 @@ let g = (e) => {
                 aspectRatio: "6/4",
                 props: {
                     src: P,
-                    alt: C,
+                    alt: A,
                     progressCircleText: y,
                     progressCirclePercent: O,
                     progressCircleUrgency: v,
                 },
             },
-            title: C,
+            title: A,
             body: b,
             actions: S,
         };

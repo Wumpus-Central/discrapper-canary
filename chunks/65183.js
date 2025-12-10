@@ -58,8 +58,8 @@
         S = "@@__IMMUTABLE_INDEXED__@@",
         I = "@@__IMMUTABLE_ORDERED__@@",
         T = "delete",
-        A = 5,
-        C = 32,
+        C = 5,
+        A = 32,
         N = 31,
         P = {},
         R = { value: !1 },
@@ -368,20 +368,20 @@
             });
         return o && e.size === s;
     }
-    function eA(e, n) {
-        if (!(this instanceof eA)) return new eA(e, n);
+    function eC(e, n) {
+        if (!(this instanceof eC)) return new eC(e, n);
         if (((this._value = e), (this.size = void 0 === n ? 1 / 0 : Math.max(0, n)), 0 === this.size)) {
             if (t) return t;
             t = this;
         }
     }
-    function eC(e, t) {
+    function eA(e, t) {
         if (!e) throw Error(t);
     }
     function eN(e, t, r) {
         if (!(this instanceof eN)) return new eN(e, t, r);
         if (
-            (eC(0 !== r, "Cannot step a Range by 0"),
+            (eA(0 !== r, "Cannot step a Range by 0"),
             (e = e || 0),
             void 0 === t && (t = 1 / 0),
             (r = void 0 === r ? 1 : Math.abs(r)),
@@ -489,42 +489,42 @@
                 return Q(e, i, r[i++]);
             });
         }),
-        d(eA, ea),
-        (eA.prototype.toString = function () {
+        d(eC, ea),
+        (eC.prototype.toString = function () {
             return 0 === this.size ? "Repeat []" : "Repeat [ " + this._value + " " + this.size + " times ]";
         }),
-        (eA.prototype.get = function (e, t) {
+        (eC.prototype.get = function (e, t) {
             return this.has(e) ? this._value : t;
         }),
-        (eA.prototype.includes = function (e) {
+        (eC.prototype.includes = function (e) {
             return eI(this._value, e);
         }),
-        (eA.prototype.slice = function (e, t) {
+        (eC.prototype.slice = function (e, t) {
             var n = this.size;
-            return G(e, t, n) ? this : new eA(this._value, B(t, n) - Z(e, n));
+            return G(e, t, n) ? this : new eC(this._value, B(t, n) - Z(e, n));
         }),
-        (eA.prototype.reverse = function () {
+        (eC.prototype.reverse = function () {
             return this;
         }),
-        (eA.prototype.indexOf = function (e) {
+        (eC.prototype.indexOf = function (e) {
             return eI(this._value, e) ? 0 : -1;
         }),
-        (eA.prototype.lastIndexOf = function (e) {
+        (eC.prototype.lastIndexOf = function (e) {
             return eI(this._value, e) ? this.size : -1;
         }),
-        (eA.prototype.__iterate = function (e, t) {
+        (eC.prototype.__iterate = function (e, t) {
             for (var n = 0; n < this.size; n++) if (!1 === e(this._value, n, this)) return n + 1;
             return n;
         }),
-        (eA.prototype.__iterator = function (e, t) {
+        (eC.prototype.__iterator = function (e, t) {
             var n = this,
                 r = 0;
             return new q(function () {
                 return r < n.size ? Q(e, r++, n._value) : X();
             });
         }),
-        (eA.prototype.equals = function (e) {
-            return e instanceof eA ? eI(this._value, e._value) : eT(e);
+        (eC.prototype.equals = function (e) {
+            return e instanceof eC ? eI(this._value, e._value) : eT(e);
         }),
         d(eN, ea),
         (eN.prototype.toString = function () {
@@ -677,7 +677,7 @@
         eK = 0,
         ez = {};
     function eq(e) {
-        eC(e !== 1 / 0, "Cannot perform this action with an infinite size.");
+        eA(e !== 1 / 0, "Cannot perform this action with an infinite size.");
     }
     function eQ(e) {
         return null == e
@@ -866,7 +866,7 @@
         var a,
             o = (0 === n ? e.keyHash : e.keyHash >>> n) & N,
             s = (0 === n ? r : r >>> n) & N,
-            l = o === s ? [tr(e, t, n + A, r, i)] : ((a = new e4(t, r, i)), o < s ? [e, a] : [a, e]);
+            l = o === s ? [tr(e, t, n + C, r, i)] : ((a = new e4(t, r, i)), o < s ? [e, a] : [a, e]);
         return new e1(t, (1 << o) | (1 << s), l);
     }
     function ti(e, t, n, r) {
@@ -885,7 +885,7 @@
         return new e1(e, i, o);
     }
     function to(e, t, n, r, i) {
-        for (var a = 0, o = Array(C), s = 0; 0 !== n; s++, n >>>= 1) o[s] = 1 & n ? t[a++] : void 0;
+        for (var a = 0, o = Array(A), s = 0; 0 !== n; s++, n >>>= 1) o[s] = 1 & n ? t[a++] : void 0;
         return (o[r] = i), new e3(e, a + 1, o);
     }
     function ts(e, t, n) {
@@ -944,7 +944,7 @@
                 s = r(o);
             return s === o ? e : s;
         }
-        eC(i || (e && e.set), "invalid keyPath");
+        eA(i || (e && e.set), "invalid keyPath");
         var l = a.value,
             c = i ? P : e.get(l, P),
             u = td(c, t, n, r);
@@ -998,7 +998,7 @@
             void 0 === t && (t = ej(n));
             var i = 1 << ((0 === e ? t : t >>> e) & N),
                 a = this.bitmap;
-            return (a & i) == 0 ? r : this.nodes[tf(a & (i - 1))].get(e + A, t, n, r);
+            return (a & i) == 0 ? r : this.nodes[tf(a & (i - 1))].get(e + C, t, n, r);
         }),
         (e1.prototype.update = function (e, t, n, r, i, a, o) {
             void 0 === n && (n = ej(r));
@@ -1010,7 +1010,7 @@
             var d = tf(c & (l - 1)),
                 f = this.nodes,
                 p = u ? f[d] : void 0,
-                _ = tt(p, e, t + A, n, r, i, a, o);
+                _ = tt(p, e, t + C, n, r, i, a, o);
             if (_ === p) return this;
             if (!u && _ && f.length >= tg) return to(e, f, c, s, _);
             if (u && !_ && 2 === f.length && tn(f[1 ^ d])) return f[1 ^ d];
@@ -1024,7 +1024,7 @@
             void 0 === t && (t = ej(n));
             var i = (0 === e ? t : t >>> e) & N,
                 a = this.nodes[i];
-            return a ? a.get(e + A, t, n, r) : r;
+            return a ? a.get(e + C, t, n, r) : r;
         }),
         (e3.prototype.update = function (e, t, n, r, i, a, o) {
             void 0 === n && (n = ej(r));
@@ -1033,7 +1033,7 @@
                 c = this.nodes,
                 u = c[s];
             if (l && !u) return this;
-            var d = tt(u, e, t + A, n, r, i, a, o);
+            var d = tt(u, e, t + C, n, r, i, a, o);
             if (d === u) return this;
             var f = this.count;
             if (u) {
@@ -1114,19 +1114,19 @@
             }
             return X();
         });
-    var th = C / 4,
-        tg = C / 2,
-        tE = C / 4;
+    var th = A / 4,
+        tg = A / 2,
+        tE = A / 4;
     function tb(e) {
-        var t = tC();
+        var t = tA();
         if (null == e) return t;
         if (ty(e)) return e;
         var n = _(e),
             r = n.size;
         return 0 === r
             ? t
-            : (eq(r), r > 0 && r < C)
-              ? tA(0, r, A, null, new tS(n.toArray()))
+            : (eq(r), r > 0 && r < A)
+              ? tC(0, r, C, null, new tS(n.toArray()))
               : t.withMutations(function (e) {
                     e.setSize(r),
                         n.forEach(function (t, n) {
@@ -1165,12 +1165,12 @@
                 ? this
                 : this.__ownerID
                   ? ((this.size = this._origin = this._capacity = 0),
-                    (this._level = A),
+                    (this._level = C),
                     (this._root = this._tail = null),
                     (this.__hash = void 0),
                     (this.__altered = !0),
                     this)
-                  : tC();
+                  : tA();
         }),
         (tb.prototype.push = function () {
             var e = arguments,
@@ -1230,7 +1230,7 @@
             return e === this.__ownerID
                 ? this
                 : e
-                  ? tA(this._origin, this._capacity, this._level, this._root, this._tail, e, this.__hash)
+                  ? tC(this._origin, this._capacity, this._level, this._root, this._tail, e, this.__hash)
                   : ((this.__ownerID = e), this);
         }),
         (tb.isList = ty);
@@ -1259,7 +1259,7 @@
             var a = 0 === i;
             if (t > 0) {
                 var o = this.array[i];
-                if ((r = o && o.removeBefore(e, t - A, n)) === o && a) return this;
+                if ((r = o && o.removeBefore(e, t - C, n)) === o && a) return this;
             }
             if (a && !r) return this;
             var s = tR(this, e);
@@ -1273,7 +1273,7 @@
             if (i >= this.array.length) return this;
             if (t > 0) {
                 var a = this.array[i];
-                if ((r = a && a.removeAfter(e, t - A, n)) === a && i === this.array.length - 1) return this;
+                if ((r = a && a.removeAfter(e, t - C, n)) === a && i === this.array.length - 1) return this;
             }
             var o = tR(this, e);
             return o.array.splice(i + 1), r && (o.array[i] = r), o;
@@ -1293,7 +1293,7 @@
                 l = o > n ? 0 : n - o,
                 c = r - o;
             return (
-                c > C && (c = C),
+                c > A && (c = A),
                 function () {
                     if (l === c) return tI;
                     var e = t ? --c : l++;
@@ -1307,7 +1307,7 @@
                 c = a > n ? 0 : (n - a) >> i,
                 u = ((r - a) >> i) + 1;
             return (
-                u > C && (u = C),
+                u > A && (u = A),
                 function () {
                     for (;;) {
                         if (s) {
@@ -1317,13 +1317,13 @@
                         }
                         if (c === u) return tI;
                         var n = t ? --u : c++;
-                        s = o(l && l[n], i - A, a + (n << i));
+                        s = o(l && l[n], i - C, a + (n << i));
                     }
                 }
             );
         }
     }
-    function tA(e, t, n, r, i, a, o) {
+    function tC(e, t, n, r, i, a, o) {
         var s = Object.create(tv);
         return (
             (s.size = t - e),
@@ -1338,8 +1338,8 @@
             s
         );
     }
-    function tC() {
-        return a || (a = tA(0, 0, A));
+    function tA() {
+        return a || (a = tC(0, 0, C));
     }
     function tN(e, t, n) {
         if ((t = k(e, t)) != t) return e;
@@ -1357,7 +1357,7 @@
         a.value)
             ? e.__ownerID
                 ? ((e._root = i), (e._tail = r), (e.__hash = void 0), (e.__altered = !0), e)
-                : tA(e._origin, e._capacity, e._level, i, r)
+                : tC(e._origin, e._capacity, e._level, i, r)
             : e;
     }
     function tP(e, t, n, r, i, a) {
@@ -1367,7 +1367,7 @@
         if (!l && void 0 === i) return e;
         if (n > 0) {
             var c = e && e.array[s],
-                u = tP(c, t, n - A, r, i, a);
+                u = tP(c, t, n - C, r, i, a);
             return u === c ? e : (((o = tR(e, t)).array[s] = u), o);
         }
         return l && e.array[s] === i
@@ -1379,8 +1379,8 @@
     }
     function tD(e, t) {
         if (t >= tL(e._capacity)) return e._tail;
-        if (t < 1 << (e._level + A)) {
-            for (var n = e._root, r = e._level; n && r > 0; ) (n = n.array[(t >>> r) & N]), (r -= A);
+        if (t < 1 << (e._level + C)) {
+            for (var n = e._root, r = e._level; n && r > 0; ) (n = n.array[(t >>> r) & N]), (r -= C);
             return n;
         }
     }
@@ -1394,25 +1394,25 @@
         if (o === i && s === a) return e;
         if (o >= s) return e.clear();
         for (var l = e._level, c = e._root, u = 0; o + u < 0; )
-            (c = new tS(c && c.array.length ? [void 0, c] : [], r)), (l += A), (u += 1 << l);
+            (c = new tS(c && c.array.length ? [void 0, c] : [], r)), (l += C), (u += 1 << l);
         u && ((o += u), (i += u), (s += u), (a += u));
-        for (var d = tL(a), f = tL(s); f >= 1 << (l + A); ) (c = new tS(c && c.array.length ? [c] : [], r)), (l += A);
+        for (var d = tL(a), f = tL(s); f >= 1 << (l + C); ) (c = new tS(c && c.array.length ? [c] : [], r)), (l += C);
         var p = e._tail,
             _ = f < d ? tD(e, s - 1) : f > d ? new tS([], r) : p;
         if (p && f > d && o < a && p.array.length) {
-            for (var m = (c = tR(c, r)), h = l; h > A; h -= A) {
+            for (var m = (c = tR(c, r)), h = l; h > C; h -= C) {
                 var g = (d >>> h) & N;
                 m = m.array[g] = tR(m.array[g], r);
             }
-            m.array[(d >>> A) & N] = p;
+            m.array[(d >>> C) & N] = p;
         }
         if ((s < a && (_ = _ && _.removeAfter(r, 0, s)), o >= f))
-            (o -= f), (s -= f), (l = A), (c = null), (_ = _ && _.removeBefore(r, 0, o));
+            (o -= f), (s -= f), (l = C), (c = null), (_ = _ && _.removeBefore(r, 0, o));
         else if (o > i || f < d) {
             for (u = 0; c; ) {
                 var E = (o >>> l) & N;
                 if ((E !== f >>> l) & N) break;
-                E && (u += (1 << l) * E), (l -= A), (c = c.array[E]);
+                E && (u += (1 << l) * E), (l -= C), (c = c.array[E]);
             }
             c && o > i && (c = c.removeBefore(r, l, o - u)),
                 c && f < d && (c = c.removeAfter(r, l, f - u)),
@@ -1428,7 +1428,7 @@
               (e.__hash = void 0),
               (e.__altered = !0),
               e)
-            : tA(o, s, l, c, _);
+            : tC(o, s, l, c, _);
     }
     function tx(e, t, n) {
         for (var r = [], i = 0, a = 0; a < n.length; a++) {
@@ -1444,7 +1444,7 @@
         return i > e.size && (e = e.setSize(i)), tu(e, t, r);
     }
     function tL(e) {
-        return e < C ? 0 : ((e - 1) >>> A) << A;
+        return e < A ? 0 : ((e - 1) >>> C) << C;
     }
     function tj(e) {
         return null == e
@@ -1467,7 +1467,7 @@
         return (i.size = e ? e.size : 0), (i._map = e), (i._list = t), (i.__ownerID = n), (i.__hash = r), i;
     }
     function tU() {
-        return o || (o = tk(e9(), tC()));
+        return o || (o = tk(e9(), tA()));
     }
     function tG(e, t, n) {
         var r,
@@ -1478,7 +1478,7 @@
             l = void 0 !== s;
         if (n === P) {
             if (!l) return e;
-            o.size >= C && o.size >= 2 * a.size
+            o.size >= A && o.size >= 2 * a.size
                 ? ((r = (i = o.filter(function (e, t) {
                       return void 0 !== e && s !== t;
                   }))
@@ -2277,7 +2277,7 @@
                 return this.get(t);
             },
             set: function (e) {
-                eC(this.__ownerID, "Cannot set on an immutable record."), this.set(t, e);
+                eA(this.__ownerID, "Cannot set on an immutable record."), this.set(t, e);
             },
         });
     }
@@ -2509,7 +2509,7 @@
                 };
             return this.__ownerID
                 ? ((this.size = e), (this._head = t), (this.__hash = void 0), (this.__altered = !0), this)
-                : nC(e, t);
+                : nA(e, t);
         }),
         (nS.prototype.pushAll = function (e) {
             if (0 === (e = _(e)).size) return this;
@@ -2525,7 +2525,7 @@
             }),
             this.__ownerID)
                 ? ((this.size = t), (this._head = n), (this.__hash = void 0), (this.__altered = !0), this)
-                : nC(t, n);
+                : nA(t, n);
         }),
         (nS.prototype.pop = function () {
             return this.slice(1);
@@ -2553,13 +2553,13 @@
             for (var r = this.size - n, i = this._head; n--; ) i = i.next;
             return this.__ownerID
                 ? ((this.size = r), (this._head = i), (this.__hash = void 0), (this.__altered = !0), this)
-                : nC(r, i);
+                : nA(r, i);
         }),
         (nS.prototype.__ensureOwner = function (e) {
             return e === this.__ownerID
                 ? this
                 : e
-                  ? nC(this.size, this._head, e, this.__hash)
+                  ? nA(this.size, this._head, e, this.__hash)
                   : ((this.__ownerID = e), (this.__altered = !1), this);
         }),
         (nS.prototype.__iterate = function (e, t) {
@@ -2581,13 +2581,13 @@
         }),
         (nS.isStack = nI);
     var nT = "@@__IMMUTABLE_STACK__@@",
-        nA = nS.prototype;
-    function nC(e, t, n, r) {
-        var i = Object.create(nA);
+        nC = nS.prototype;
+    function nA(e, t, n, r) {
+        var i = Object.create(nC);
         return (i.size = e), (i._head = t), (i.__ownerID = n), (i.__hash = r), (i.__altered = !1), i;
     }
     function nN() {
-        return c || (c = nC(0));
+        return c || (c = nA(0));
     }
     function nP(e, t) {
         var n = function (n) {
@@ -2595,11 +2595,11 @@
         };
         return Object.keys(t).forEach(n), Object.getOwnPropertySymbols && Object.getOwnPropertySymbols(t).forEach(n), e;
     }
-    (nA[nT] = !0),
-        (nA.withMutations = e$.withMutations),
-        (nA.asMutable = e$.asMutable),
-        (nA.asImmutable = e$.asImmutable),
-        (nA.wasAltered = e$.wasAltered),
+    (nC[nT] = !0),
+        (nC.withMutations = e$.withMutations),
+        (nC.asMutable = e$.asMutable),
+        (nC.asImmutable = e$.asImmutable),
+        (nC.wasAltered = e$.wasAltered),
         (f.Iterator = q),
         nP(f, {
             toArray: function () {
@@ -3171,7 +3171,7 @@
             OrderedSet: nE,
             Record: na,
             Range: eN,
-            Repeat: eA,
+            Repeat: eC,
             is: eI,
             fromJS: ey,
         }

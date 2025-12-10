@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(493773),
     p = n(209613),
     f = n(82295),
-    h = n(797614),
-    g = n(626135),
+    g = n(797614),
+    h = n(626135),
     m = n(26373),
     _ = n(486622),
     b = n(488634),
@@ -39,8 +39,8 @@ function N() {
             A(t.map((e) => e.channel.id));
         }, [t, A]);
     (0, d.ZP)(() => {
-        g.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
-            h.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+        h.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }),
+            g.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let w = i.useCallback(
             (e) => {

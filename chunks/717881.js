@@ -76,7 +76,7 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -84,7 +84,7 @@ function T(e, t) {
     }
     return i;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,7 +93,7 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function C(e) {
+function A(e) {
     let { type: t, source: n, activity: i, applicationStream: a, user: o, guildId: s, channelId: c, onAction: u } = e;
     return (0, r.jsx)(l.Z, {
         className: (0, E.l)(y, "actions", t),
@@ -118,13 +118,13 @@ function N(e) {
             showChannelDetails: O = !1,
         } = e,
         S = T(e, ["activity", "user", "useStoreStream", "showActions", "hideHeader", "showChannelDetails"]);
-    let A = (0, a.e7)([h.Z, _.Z], () => {
+    let C = (0, a.e7)([h.Z, _.Z], () => {
             var e;
             return _.Z.getChannel(null == (e = h.Z.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
         }),
-        N = (0, d.E)("UserActivityContainer", A),
+        N = (0, d.E)("UserActivityContainer", C),
         P = (0, a.e7)([p.Z], () => (l ? p.Z.getAnyStreamForUser(n.id) : null)),
-        R = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && N ? A : null,
+        R = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && N ? C : null,
         D = (0, a.e7)([m.Z, h.Z, _.Z], () => {
             var e, r;
             return (0, o.Z)(t, b.xjy.EMBEDDED)
@@ -173,11 +173,11 @@ function N(e) {
                   hideHeader: y,
                   activityGuild: null != D ? D : w,
                   showChannelDetails: O,
-                  channel: O ? A : void 0,
+                  channel: O ? C : void 0,
                   renderActions: E
                       ? () =>
                             (0, r.jsx)(
-                                C,
+                                A,
                                 I(v({}, S), {
                                     applicationStream: P,
                                     activity: t,

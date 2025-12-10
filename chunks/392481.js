@@ -10,7 +10,7 @@ n.r(t),
         createCasualConfiguration: () => S,
         createConfiguration: () => I,
         parse: () => T,
-        parseDate: () => A,
+        parseDate: () => C,
         strict: () => v,
     });
 var r = n(792158),
@@ -56,6 +56,6 @@ function I(e) {
 function T(e, t, n) {
     return O.parse(e, t, n);
 }
-function A(e, t, n) {
+function C(e, t, n) {
     return O.parseDate(e, t, n);
 }

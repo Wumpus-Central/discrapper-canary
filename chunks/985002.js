@@ -31,7 +31,7 @@ function l(e) {
             },
             [I, t, n],
         ),
-        A = r.useCallback(
+        C = r.useCallback(
             async (e) => {
                 if (!I) {
                     d(!0);
@@ -47,7 +47,7 @@ function l(e) {
             },
             [I, t, n],
         ),
-        C = r.useCallback(
+        A = r.useCallback(
             async (e) => {
                 if (!I) {
                     p(!0);
@@ -110,8 +110,8 @@ function l(e) {
         );
     return {
         acceptLinkRequest: T,
-        declineLinkRequest: A,
-        disconnectLinkRequest: C,
+        declineLinkRequest: C,
+        disconnectLinkRequest: A,
         cancelLinkRequest: N,
         selectTeenUser: R,
         getLinkCode: P,

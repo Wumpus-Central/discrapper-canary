@@ -22,7 +22,7 @@ let { Themes: E } = n(15202).VV,
     { Shadows: S } = h.V,
     { Spacing: I } = g.V,
     { Modules: T } = _.V,
-    { Layout: A, Space: C } = p.VV,
+    { Layout: C, Space: A } = p.VV,
     N = l()(y, (e) => i()(e)),
     P = {
         themes: E,
@@ -74,8 +74,8 @@ let { Themes: E } = n(15202).VV,
         })),
         radii: m.w,
         spacing: l()(I, (e) => "".concat(e, "px")),
-        layout: l()(A, (e) => ("number" == typeof e ? "".concat(e, "px") : e)),
-        space: l()(C, (e) => ({
+        layout: l()(C, (e) => ("number" == typeof e ? "".concat(e, "px") : e)),
+        space: l()(A, (e) => ({
             css: e.css,
             resolve(t) {
                 let { density: n } = t;

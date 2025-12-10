@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(289341),
     p = n(981631),
     f = n(186901),
-    h = n(388032),
-    g = n(87805);
+    g = n(388032),
+    h = n(87805);
 function m(e) {
     let { applicationId: t } = e.match.params,
         [m, _] = i.useState(!1),
@@ -60,29 +60,29 @@ function m(e) {
     v && !1 !== E)
         ? !0 === E
             ? (0, r.jsxs)("div", {
-                  className: g.container,
+                  className: h.container,
                   children: [
                       (0, r.jsx)(o.Heading, {
                           variant: "heading-xxl/bold",
-                          children: h.intl.string(h.t.csrAMJ),
+                          children: g.intl.string(g.t.csrAMJ),
                       }),
                       (0, r.jsx)(o.Text, {
                           variant: "text-xs/semibold",
-                          children: h.intl.string(h.t["m1+IBn"]),
+                          children: g.intl.string(g.t["m1+IBn"]),
                       }),
                       (0, r.jsx)(s.zxk, {
                           variant: "primary",
-                          text: h.intl.string(h.t.fIv16B),
+                          text: g.intl.string(g.t.fIv16B),
                           onClick: () => _(!0),
                       }),
                   ],
               })
             : (0, r.jsxs)("div", {
-                  className: g.container,
+                  className: h.container,
                   children: [
                       (0, r.jsx)(o.Heading, {
                           variant: "heading-xxl/bold",
-                          children: h.intl.string(h.t["Z+hCVU"]),
+                          children: g.intl.string(g.t["Z+hCVU"]),
                       }),
                       (0, r.jsx)(o.$jN, {}),
                   ],

@@ -1,6 +1,6 @@
 n.d(t, {
     F3: () => R,
-    KK: () => A,
+    KK: () => C,
     RD: () => _,
     Se: () => u,
     Sy: () => I,
@@ -284,11 +284,11 @@ let T = (0, a.B)({
         },
     ],
 });
-function A(e) {
+function C(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return T.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let C = (0, a.B)({
+let A = (0, a.B)({
     id: "2025-11_overlay_bug_reporter",
     label: "Overlay Bug Reporter",
     kind: "user",
@@ -303,15 +303,15 @@ let C = (0, a.B)({
 });
 function N(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return C.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return A.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
 function P(e) {
-    return C.useExperiment({ location: e }).enabled;
+    return A.useExperiment({ location: e }).enabled;
 }
 function R() {
     h("OVERLAY_INITIALIZED"),
         b("OVERLAY_INITIALIZED"),
         I("OVERLAY_INITIALIZED"),
-        A("OVERLAY_INITIALIZED"),
+        C("OVERLAY_INITIALIZED"),
         N("OVERLAY_INITIALIZED");
 }

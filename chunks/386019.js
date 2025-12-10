@@ -32,8 +32,8 @@ function p(e) {
             analyticsLocations: S,
         }),
         T = (0, u.yi)(),
-        A = i.useRef(null),
-        C = null != (t = null == T ? void 0 : T.interactionPopoutTargetRef) ? t : A,
+        C = i.useRef(null),
+        A = null != (t = null == T ? void 0 : T.interactionPopoutTargetRef) ? t : C,
         N = (0, d.Z)({
             entry: m,
             activity: _,
@@ -47,7 +47,7 @@ function p(e) {
     return 0 === N.length || p.bot
         ? null
         : (0, r.jsx)(a.yRy, {
-              targetElementRef: null != y ? y : C,
+              targetElementRef: null != y ? y : A,
               align: "top",
               position: "right",
               disablePointerEvents: !1,

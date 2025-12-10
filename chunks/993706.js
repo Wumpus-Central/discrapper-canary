@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(388685), n(467055);
 var r,
     i = n(442837),
     l = n(570140),
-    a = n(914010);
-function o(e, t, n) {
+    o = n(914010);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ let s = null,
     c = null,
     u = { reportedMessages: {} };
 function d() {
-    let e = a.Z.getLastSelectedGuildId();
+    let e = o.Z.getLastSelectedGuildId();
     e !== s && ((c = null), (s = null != e ? e : null));
 }
 class f extends (r = i.ZP.PersistedStore) {
@@ -32,7 +32,7 @@ class f extends (r = i.ZP.PersistedStore) {
                     return [t, new Set(n)];
                 }),
             )),
-            this.syncWith([a.Z], d);
+            this.syncWith([o.Z], d);
     }
     getState() {
         return u;
@@ -49,9 +49,9 @@ class f extends (r = i.ZP.PersistedStore) {
         return null != (r = null == (n = u.reportedMessages[e]) ? void 0 : n.has(t)) && r;
     }
 }
-o(f, "displayName", "ReportToModStore"),
-    o(f, "persistKey", "ReportToModStore"),
-    o(f, "migrations", [
+a(f, "displayName", "ReportToModStore"),
+    a(f, "persistKey", "ReportToModStore"),
+    a(f, "migrations", [
         (e) => {
             var t;
             return { reportedMessages: null != (t = null == e ? void 0 : e.reportedMessages) ? t : {} };

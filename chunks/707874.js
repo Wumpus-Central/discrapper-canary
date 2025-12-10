@@ -48,8 +48,8 @@ function p(e) {
                     };
             }
         }, [t]),
-        h = (0, l.e7)([a.Z], () => (null != n ? a.Z.getChannel(n) : null), [n]),
-        g = (0, l.e7)([s.Z], () => ((null == h ? void 0 : h.guild_id) != null ? s.Z.getGuild(h.guild_id) : null), [h]),
+        g = (0, l.e7)([a.Z], () => (null != n ? a.Z.getChannel(n) : null), [n]),
+        h = (0, l.e7)([s.Z], () => ((null == g ? void 0 : g.guild_id) != null ? s.Z.getGuild(g.guild_id) : null), [g]),
         m = (0, l.Wu)(
             [c.Z, o.Z],
             () =>
@@ -63,7 +63,7 @@ function p(e) {
                           .filter((e) => null != e),
             [n, p],
         );
-    return null == h || null == g || 0 === m.length
+    return null == g || null == h || 0 === m.length
         ? null
         : (0, r.jsxs)("div", {
               className: d.container,
@@ -83,7 +83,7 @@ function p(e) {
                           (0, r.jsx)(
                               u.Z,
                               {
-                                  channel: h,
+                                  channel: g,
                                   message: e,
                                   renderThreadAccessory: !1,
                                   disableReactionCreates: !1,

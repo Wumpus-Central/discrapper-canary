@@ -56,11 +56,11 @@ function S() {
 }
 let I = i.createContext(null),
     T = i.createContext(null),
-    A = () => {
+    C = () => {
         var e;
         return (null == (e = i.useContext(I)) ? void 0 : e.id) || null;
     },
-    C = () => i.useContext(T);
+    A = () => i.useContext(T);
 function N(e) {
     return "data-floating-ui-" + e;
 }
@@ -84,8 +84,8 @@ function x(e, t) {
     void 0 === t && (t = {});
     let { open: n, onOpenChange: r, dataRef: o, events: l, elements: c } = e,
         { enabled: u = !0, delay: d = 0, handleClose: f = null, mouseOnly: p = !1, restMs: _ = 0, move: m = !0 } = t,
-        h = C(),
-        g = A(),
+        h = A(),
+        g = C(),
         E = (0, a.II)(f),
         b = (0, a.II)(d),
         y = (0, a.II)(n),
@@ -494,16 +494,16 @@ function es(e, t) {
             bubbles: h,
             capture: g,
         } = t,
-        E = C(),
+        E = A(),
         b = (0, a.iW)("function" == typeof d ? d : () => !1),
         y = "function" == typeof d ? b : d,
         O = i.useRef(!1),
         { escapeKey: v, outsidePress: S } = eo(h),
         { escapeKey: I, outsidePress: T } = eo(g),
-        A = i.useRef(!1),
+        C = i.useRef(!1),
         P = (0, a.iW)((e) => {
             var t;
-            if (!n || !c || !u || "Escape" !== e.key || A.current) return;
+            if (!n || !c || !u || "Escape" !== e.key || C.current) return;
             let i = null == (t = l.current.floatingContext) ? void 0 : t.nodeId,
                 o = E ? (0, a.El)(E.nodesRef.current, i) : [];
             if (!v && (e.stopPropagation(), o.length > 0)) {
@@ -607,12 +607,12 @@ function es(e, t) {
             r(!1, e, "ancestor-scroll");
         }
         function i() {
-            window.clearTimeout(e), (A.current = !0);
+            window.clearTimeout(e), (C.current = !0);
         }
         function d() {
             e = window.setTimeout(
                 () => {
-                    A.current = !1;
+                    C.current = !1;
                 },
                 5 * !!(0, s.Pf)(),
             );
@@ -701,7 +701,7 @@ function el(e) {
         o = v(),
         s = i.useRef({}),
         [l] = i.useState(() => S()),
-        c = null != A(),
+        c = null != C(),
         [u, d] = i.useState(r.reference),
         f = (0, a.iW)((e, t, r) => {
             (s.current.openEvent = e ? t : void 0),
@@ -752,7 +752,7 @@ function ec(e) {
         [d, f] = i.useState(null),
         p = (null == o ? void 0 : o.domReference) || l,
         _ = i.useRef(null),
-        m = C();
+        m = A();
     (0, a.Xj)(() => {
         p && (_.current = p);
     }, [p]);
@@ -1074,8 +1074,8 @@ function ev(e) {
                 S = c.floating.getBoundingClientRect(),
                 I = l.split("-")[0],
                 T = n > S.right - S.width / 2,
-                A = o > S.bottom - S.height / 2,
-                C = eO(g, v),
+                C = o > S.bottom - S.height / 2,
+                A = eO(g, v),
                 N = S.width > v.width,
                 R = S.height > v.height,
                 D = (N ? v : S).left,
@@ -1151,26 +1151,26 @@ function ev(e) {
                             [S.right, T ? (N ? S.top + t : S.bottom) : S.top + t],
                         ];
                     case "left": {
-                        let e = [n + t + 1, R ? r + t / 2 : A ? r + 4 * t : r - 4 * t],
-                            i = [n + t + 1, R ? r - t / 2 : A ? r + 4 * t : r - 4 * t];
+                        let e = [n + t + 1, R ? r + t / 2 : C ? r + 4 * t : r - 4 * t],
+                            i = [n + t + 1, R ? r - t / 2 : C ? r + 4 * t : r - 4 * t];
                         return [
-                            [A || R ? S.right - t : S.left, S.top],
-                            [A ? (R ? S.right - t : S.left) : S.right - t, S.bottom],
+                            [C || R ? S.right - t : S.left, S.top],
+                            [C ? (R ? S.right - t : S.left) : S.right - t, S.bottom],
                             e,
                             i,
                         ];
                     }
                     case "right":
                         return [
-                            [n - t, R ? r + t / 2 : A ? r + 4 * t : r - 4 * t],
-                            [n - t, R ? r - t / 2 : A ? r + 4 * t : r - 4 * t],
-                            [A || R ? S.left + t : S.right, S.top],
-                            [A ? (R ? S.left + t : S.right) : S.left + t, S.bottom],
+                            [n - t, R ? r + t / 2 : C ? r + 4 * t : r - 4 * t],
+                            [n - t, R ? r - t / 2 : C ? r + 4 * t : r - 4 * t],
+                            [C || R ? S.left + t : S.right, S.top],
+                            [C ? (R ? S.left + t : S.right) : S.left + t, S.bottom],
                         ];
                 }
             }
             if (!ey([m, h], j)) {
-                if (a && !C) return _();
+                if (a && !A) return _();
                 if (!b && r) {
                     let t = u(e.clientX, e.clientY),
                         n = 0.1;

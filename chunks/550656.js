@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(793030),
     c = n(481060),
     u = n(337363),
@@ -27,9 +27,9 @@ function g(e) {
             caretConfig: S,
             layerContext: I,
             animationStyle: T,
-            positionKey: A,
+            positionKey: C,
         } = e,
-        C = i.useRef(null),
+        A = i.useRef(null),
         { isRichTooltip: N } = (0, d.nr)(),
         P = i.useMemo(() => (("left" === y || "right" === y ? h : m).includes(O) ? O : "center"), [y, O]);
     if (!n) return null;
@@ -38,7 +38,7 @@ function g(e) {
         position: y,
         align: P,
         spacing: v,
-        positionKey: A,
+        positionKey: C,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
         children: (e) => {
@@ -53,7 +53,7 @@ function g(e) {
                     customOffset: "custom" === m ? h : void 0,
                 },
                 O = (0, r.jsxs)("div", {
-                    ref: C,
+                    ref: A,
                     id: E,
                     className: o()(p.tooltip, { [p.richTooltip]: N }),
                     role: "tooltip",

@@ -30,7 +30,7 @@ function E(e) {
             e && S(!0);
         }, []),
         T = (0, a.O)(I),
-        A = i.useCallback(() => {
+        C = i.useCallback(() => {
             f.default.track(m.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                 application_id: t,
                 device_platform: o.tq ? "mobile_web" : "desktop_web",
@@ -43,8 +43,8 @@ function E(e) {
         (0, p.gZ)(t);
     }, [t]),
     i.useEffect(() => {
-        v && y === _.M.FETCHED && A();
-    }, [v, y, A]),
+        v && y === _.M.FETCHED && C();
+    }, [v, y, C]),
     i.useEffect(() => {
         v &&
             b &&
@@ -86,7 +86,7 @@ function E(e) {
           : (0, r.jsx)(l.O, {
                 app: u.ZP.createFromServer(E),
                 linkType: l.U.APP_DISCOVERY,
-                onView: A,
+                onView: C,
                 message: n,
             });
 }

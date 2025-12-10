@@ -75,7 +75,7 @@ let T = {
     section: g.jXE.SETTINGS_PREMIUM,
     object: g.qAy.CARD,
 };
-function A(e) {
+function C(e) {
     let { premiumSubscription: t, discountInfo: n, invoicePreview: a, isDiscountActive: o } = e,
         s = d.ZP.getPlanIdFromInvoice(t, a),
         l = c.Z.get(s);
@@ -117,7 +117,7 @@ function A(e) {
         ],
     });
 }
-function C(e) {
+function A(e) {
     let { discountOffer: t, premiumSubscription: n } = e,
         a = (0, p._n)(n, h.Xh.PREMIUM_MONTH_TIER_2, t);
     return (0, r.jsxs)(r.Fragment, {
@@ -250,11 +250,11 @@ let N = function (e) {
                                       className: b.churnDiscountBannerDetails,
                                       children: [
                                           null != S
-                                              ? (0, r.jsx)(C, {
+                                              ? (0, r.jsx)(A, {
                                                     discountOffer: S,
                                                     premiumSubscription: t,
                                                 })
-                                              : (0, r.jsx)(A, {
+                                              : (0, r.jsx)(C, {
                                                     premiumSubscription: t,
                                                     discountInfo: null != h ? h : O,
                                                     invoicePreview: c,

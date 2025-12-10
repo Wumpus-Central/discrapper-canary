@@ -78,7 +78,7 @@ let b = 200,
             hotspot: o.v6.VOICE_CALL_FEEDBACK,
             storageKey: "lastVoiceFeedback",
             feedbackType: _.nw.VOICE,
-            eligibilityChecks: [C],
+            eligibilityChecks: [A],
         }),
         [_.nw.STREAM]: E(h({}, y), {
             group: _.FB.AV,
@@ -121,7 +121,7 @@ let b = 200,
             hotspot: o.v6.VOICE_FILTER_FEEDBACK,
             storageKey: "lastVoiceFilterFeedback",
             feedbackType: _.nw.VOICE_FILTER,
-            eligibilityChecks: [C],
+            eligibilityChecks: [A],
         }),
         [_.nw.SEARCH_RESULTS]: E(h({}, y), {
             group: _.FB.SEARCH,
@@ -145,7 +145,7 @@ function v(e) {
     let { overrideEligibility: r } = (0, p.j)({ location: "FeedbackManager" });
     if (r) return !0;
     let i = null != (t = f.Z.getFeedbackConfig(e)) ? t : O[e],
-        a = [I, S, A],
+        a = [I, S, C],
         o = null != (n = i.eligibilityChecks) ? n : [];
     return a.every((e) => e(i)) && o.every((e) => e(i));
 }
@@ -181,7 +181,7 @@ function T(e, t) {
         (null != (o = (0, r.max)([l, s])) ? o : 0) + e.cooldown < Date.now()
     );
 }
-function A(e) {
+function C(e) {
     for (let t of Object.values(O).filter((t) => {
         let { group: n } = t;
         return n === e.group;
@@ -189,7 +189,7 @@ function A(e) {
         if (!T(e, t)) return !1;
     return !0;
 }
-function C(e) {
+function A(e) {
     return !d.Z.getWasEverRtcConnected() || d.Z.getWasEverMultiParticipant();
 }
 function N(e) {

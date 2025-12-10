@@ -21,8 +21,8 @@ var r = n(127849),
     S = n(190289),
     I = n(25124),
     T = n(199838),
-    A = s.PROPER,
-    C = s.CONFIGURABLE,
+    C = s.PROPER,
+    A = s.CONFIGURABLE,
     N = "ArrayBuffer",
     P = "DataView",
     R = "prototype",
@@ -88,7 +88,7 @@ var r = n(127849),
         for (var u = o.bytes, d = s + o.byteOffset, f = 0; f < t; f++) u[d + f] = l[c ? f : t - f - 1];
     };
 if (o) {
-    var er = A && M.name !== N;
+    var er = C && M.name !== N;
     !d(function () {
         M(1);
     }) ||
@@ -96,14 +96,14 @@ if (o) {
         new M(-1);
     }) ||
     d(function () {
-        return new M(), new M(1.5), new M(NaN), 1 !== M.length || (er && !C);
+        return new M(), new M(1.5), new M(NaN), 1 !== M.length || (er && !A);
     })
         ? (((k = function (e) {
               return f(this, U), v(new M(m(e)), this, k);
           })[R] = U),
           (U.constructor = k),
           S(k, M))
-        : er && C && l(M, "name", N),
+        : er && A && l(M, "name", N),
         b && E(Z) !== B && b(Z, B);
     var ei = new G(new k(2)),
         ea = i(Z.setInt8);

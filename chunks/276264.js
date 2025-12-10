@@ -26,8 +26,8 @@ var r = n(54381),
     S = n(172751),
     I = n(736144),
     T = n(884902),
-    A = n(968843),
-    C = n(664385),
+    C = n(968843),
+    A = n(664385),
     N = n(518950),
     P = n(624138),
     R = n(51144),
@@ -383,14 +383,14 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             }),
             eI = null != eo ? eo : {},
             { onFocus: eT } = eI,
-            eA = Z(eI, ["onFocus"]),
-            eC = (0, T.X7)(L, el, null != a ? a : null),
+            eC = Z(eI, ["onFocus"]),
+            eA = (0, T.X7)(L, el, null != a ? a : null),
             [eN, eP] = i.useState(!1);
         i.useEffect(() => {
             t && eP(!1);
         }, [t]);
-        let eR = (0, A.fN)(O),
-            eD = (0, A.Wi)(eR, v, el) && t && !eN,
+        let eR = (0, C.fN)(O),
+            eD = (0, C.Wi)(eR, v, el) && t && !eN,
             ew = i.useCallback(() => {
                 ep(!0);
             }, []),
@@ -411,7 +411,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     null == eR
                         ? null
                         : (0, r.jsx)(
-                              C.Z,
+                              A.Z,
                               G(
                                   k(
                                       {
@@ -469,7 +469,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                                     colorRoleName: l,
                                                     colorString: null != n ? n : null,
                                                     name: null != E ? E : ec,
-                                                    colorStrings: eC,
+                                                    colorStrings: eA,
                                                     hideClanTag: B,
                                                     user: b,
                                                     guildId: L,
@@ -484,7 +484,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                                         colorRoleName: l,
                                                         colorString: null != n ? n : null,
                                                         name: null != E ? E : ec,
-                                                        colorStrings: eC,
+                                                        colorStrings: eA,
                                                         hideClanTag: B,
                                                         user: b,
                                                         guildId: L,
@@ -543,7 +543,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       },
                                   },
                               },
-                              eA,
+                              eC,
                           ),
                       ),
               });

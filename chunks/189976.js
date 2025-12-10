@@ -2,8 +2,8 @@ n.d(t, { Z: () => p }), n(388685), n(781311);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
-    a = n(544891),
-    o = n(481060),
+    o = n(544891),
+    a = n(481060),
     s = n(570140),
     c = n(39952),
     u = n(706454),
@@ -16,7 +16,7 @@ function p(e, t) {
             handleTranslate: p,
             handleRevertTranslation: m,
             isTranslating: O,
-            isTranslated: y,
+            isTranslated: v,
         } = (function (e) {
             let [t, n] = i.useState(!1),
                 r = (0, l.e7)([u.default], () => u.default.locale);
@@ -38,14 +38,14 @@ function p(e, t) {
                                 ? u
                                 : g;
                         b.has(e.id) || b.set(e.id, e.content),
-                            (0, o.showToast)(
-                                (0, o.createToast)(
+                            (0, a.showToast)(
+                                (0, a.createToast)(
                                     f.intl.formatToPlainString(f.t.Znl8Z8, { targetLanguage: p }),
-                                    o.ToastType.AI,
+                                    a.ToastType.AI,
                                 ),
                             );
                         try {
-                            let t = await a.tn.post({
+                            let t = await o.tn.post({
                                 url: d.ANM.AI_TRANSLATE,
                                 body: {
                                     content: e.content,
@@ -63,10 +63,10 @@ function p(e, t) {
                                         content: t.body.content,
                                     },
                                 }),
-                                (0, o.showToast)(
-                                    (0, o.createToast)(
+                                (0, a.showToast)(
+                                    (0, a.createToast)(
                                         f.intl.formatToPlainString(f.t.FtVUqm, { targetLanguage: p }),
-                                        o.ToastType.SUCCESS,
+                                        a.ToastType.SUCCESS,
                                     ),
                                 ));
                         } finally {
@@ -92,7 +92,7 @@ function p(e, t) {
                 isTranslated: b.has(e.id),
             };
         })(e),
-        h = (function (e, t) {
+        y = (function (e, t) {
             let l = (0, f.getAvailableLocales)();
             return i.useMemo(
                 () =>
@@ -104,7 +104,7 @@ function p(e, t) {
                             l = n(1474);
                         }
                         return (0, r.jsx)(
-                            o.sNh,
+                            a.sNh,
                             {
                                 id: "translate-".concat(i.value),
                                 label: i.name,
@@ -123,22 +123,22 @@ function p(e, t) {
                 [e, t, l],
             );
         })(p, O),
-        v = (0, c.o)();
-    return null != e.content && "" !== e.content.trim() && v
-        ? y
-            ? (0, r.jsx)(o.sNh, {
+        h = (0, c.o)();
+    return null != e.content && "" !== e.content.trim() && h
+        ? v
+            ? (0, r.jsx)(a.sNh, {
                   id: "revert-translation",
                   label: f.intl.string(f.t.JC9BXn),
-                  icon: o.os0,
+                  icon: a.os0,
                   action: m,
                   disabled: O,
               })
-            : (0, r.jsx)(o.sNh, {
+            : (0, r.jsx)(a.sNh, {
                   id: "translate",
                   label: O ? f.intl.string(f.t.SVKIdU) : f.intl.string(f.t["6epDlR"]),
                   action: () => p(),
                   disabled: O,
-                  children: h,
+                  children: y,
               })
         : null;
 }

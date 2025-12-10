@@ -11,8 +11,8 @@ var i = n(772848),
     d = n(457330),
     p = n(533307),
     f = n(317381),
-    h = n(122613),
-    g = n(649256),
+    g = n(122613),
+    h = n(649256),
     m = n(100527),
     _ = n(728345),
     b = n(962220),
@@ -284,12 +284,12 @@ let M = {
                                     let o = await u.Z.openPrivateChannel({ recipientIds: s }),
                                         c = new URL(t),
                                         d = null != (i = c.searchParams.get("referrer_id")) ? i : void 0,
-                                        { customId: p } = await (0, g.ur)(
+                                        { customId: p } = await (0, h.ur)(
                                             e,
                                             c.searchParams.get("link_id"),
                                             c.searchParams.get("custom_id"),
                                         );
-                                    await (0, h.Z)({
+                                    await (0, g.Z)({
                                         targetApplicationId: e,
                                         channelId: o,
                                         analyticsLocations: [m.Z.DEEPLINK],

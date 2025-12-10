@@ -433,8 +433,8 @@ class g extends a.Z {
                             if ("audio" === t.type) {
                                 var r, a, o, s, l, c, u, d, p, _, m, h, g, E, b, y, O, v, S, I;
                                 let T = null != (r = e.transport.ping) ? r : 0,
-                                    A = t.packetsReceived,
-                                    C = t.packetsLost,
+                                    C = t.packetsReceived,
+                                    A = t.packetsLost,
                                     N = t.bytesReceived,
                                     P = t.nackCount,
                                     R = null != (a = t.fecPacketsReceived) ? a : 0,
@@ -467,8 +467,8 @@ class g extends a.Z {
                                     };
                                 if (null != this.inboundStats[n]) {
                                     let e = this.inboundStats[n],
-                                        r = A - e.packetsReceived,
-                                        a = C - e.packetsLost,
+                                        r = C - e.packetsReceived,
+                                        a = A - e.packetsLost,
                                         o = 0,
                                         s = e.mosBuckets,
                                         l =
@@ -483,9 +483,9 @@ class g extends a.Z {
                                         s[Math.floor(o)]++),
                                         (this.inboundStats[n] = f(
                                             {
-                                                packetsReceived: A,
+                                                packetsReceived: C,
                                                 bytesReceived: N,
-                                                packetsLost: C,
+                                                packetsLost: A,
                                                 nackCount: null != P ? P : 0,
                                                 fecPacketsReceived: R,
                                                 fecPacketsDiscarded: D,
@@ -521,9 +521,9 @@ class g extends a.Z {
                                 } else
                                     (this.inboundStats[n] = f(
                                         {
-                                            packetsReceived: A,
+                                            packetsReceived: C,
                                             bytesReceived: N,
-                                            packetsLost: C,
+                                            packetsLost: A,
                                             nackCount: null != P ? P : 0,
                                             fecPacketsReceived: R,
                                             fecPacketsDiscarded: D,

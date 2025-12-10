@@ -246,8 +246,8 @@ function P(e) {
             I();
         },
         z = (null == (t = _.GP[w.planIdFromItems]) ? void 0 : t.premiumType) === _.PremiumTypes.TIER_0,
-        K = null == (n = w.metadata) ? void 0 : n.ended_at,
-        q = null != K ? new Date(K).toISOString().substring(0, 10) : "",
+        q = null == (n = w.metadata) ? void 0 : n.ended_at,
+        K = null != q ? new Date(q).toISOString().substring(0, 10) : "",
         Q = [
             {
                 id: "id",
@@ -562,7 +562,7 @@ function P(e) {
                                         }),
                                         (0, a.jsx)(m.Wrb, {
                                             label: "Metadata Ended At Date",
-                                            value: o()(q),
+                                            value: o()(K),
                                             onSelect: (e) => H({ endedAt: e.toISOString() }),
                                         }),
                                     ],

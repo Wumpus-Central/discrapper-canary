@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(287259),
     p = n(819640),
     f = n(490983),
-    h = n(799777),
-    g = n(346329),
+    g = n(799777),
+    h = n(346329),
     m = n(981631),
     _ = n(388032),
     b = n(108201);
@@ -95,7 +95,7 @@ class O extends i.Component {
                                 let t = a.find((e) => e.key === i);
                                 if (null == t) return;
                                 let n = t.libraryApplication;
-                                g.performDefaultLibraryApplicationAction(n, {
+                                h.performDefaultLibraryApplicationAction(n, {
                                     analyticsParams: {
                                         source: m.Sbl.APPLICATION_LIBRARY,
                                         location: {
@@ -123,7 +123,7 @@ function v() {
     let e = (0, o.e7)([p.Z], () => p.Z.hasLayers()),
         t = (0, c.s9z)(c.JQI);
     return (0, r.jsx)(O, {
-        activeRowKey: (0, o.e7)([h.Z], () => h.Z.activeRowKey),
+        activeRowKey: (0, o.e7)([g.Z], () => g.Z.activeRowKey),
         hasModalOpen: t || e,
         filterQuery: (0, o.e7)([f.Z], () => f.Z.applicationFilterQuery),
         applicationViewItems: (0, o.e7)([f.Z], () => f.Z.sortedFilteredLibraryApplicationViewItems),

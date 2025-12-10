@@ -385,12 +385,12 @@ let v = "migrated",
             version: g.HN,
         },
     };
-function A(e) {
+function C(e) {
     let { layoutId: t, widgets: n, version: a, defaultResolution: o } = e;
     if (null != r[t] && r[t].version === a) return !1;
     let s = [];
     n.forEach((e, t) => {
-        let n = C(e.type),
+        let n = A(e.type),
             r = O(b({}, e), { zIndex: t });
         "" === r.id && (r.id = (0, l.Z)()),
             null != n &&
@@ -408,7 +408,7 @@ function A(e) {
             }),
         }));
 }
-function C(e) {
+function A(e) {
     let t = r[v];
     if (null != t)
         for (let n of t.widgets) {
@@ -823,7 +823,7 @@ E(z, "displayName", "LayoutStore"),
         },
     ]);
 let q = new z(d.Z, {
-    LAYOUT_CREATE: A,
+    LAYOUT_CREATE: C,
     LAYOUT_SET_PINNED: L,
     LAYOUT_UPDATE_WIDGET: P,
     LAYOUT_SET_TOP_WIDGET: R,

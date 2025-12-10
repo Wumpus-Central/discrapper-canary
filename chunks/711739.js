@@ -114,12 +114,12 @@ let O = function (e) {
         }
         return a.join("");
     },
-    A = function (e) {
+    C = function (e) {
         return b(e, function (e) {
             return u.test(e) ? I(e.slice(4).toLowerCase()) : e;
         });
     },
-    C = function (e) {
+    A = function (e) {
         return b(e, function (e) {
             return d.test(e) ? "xn--" + T(e) : e;
         });
@@ -132,6 +132,6 @@ e.exports = {
     },
     decode: I,
     encode: T,
-    toASCII: C,
-    toUnicode: A,
+    toASCII: A,
+    toUnicode: C,
 };

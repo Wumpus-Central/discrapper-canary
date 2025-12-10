@@ -10,13 +10,13 @@ var r = n(54381),
     d = n(823379),
     p = n(358085),
     f = n(843445),
-    h = n(981631),
-    g = n(388032),
+    g = n(981631),
+    h = n(388032),
     m = n(688510);
 let _ = {
-    [h.TaA.WINDOWS]: p.PlatformTypes.WINDOWS,
-    [h.TaA.MACOS]: p.PlatformTypes.OSX,
-    [h.TaA.LINUX]: p.PlatformTypes.LINUX,
+    [g.TaA.WINDOWS]: p.PlatformTypes.WINDOWS,
+    [g.TaA.MACOS]: p.PlatformTypes.OSX,
+    [g.TaA.LINUX]: p.PlatformTypes.LINUX,
 };
 class b extends i.PureComponent {
     render() {
@@ -63,12 +63,12 @@ class E extends i.PureComponent {
                                   pageSize: e,
                                   children: (function (e) {
                                       switch (e) {
-                                          case h.TaA.WINDOWS:
-                                              return g.intl.string(g.t["0/xHFO"]);
-                                          case h.TaA.MACOS:
-                                              return g.intl.string(g.t.E4u4n5);
-                                          case h.TaA.LINUX:
-                                              return g.intl.string(g.t.tcawo3);
+                                          case g.TaA.WINDOWS:
+                                              return h.intl.string(h.t["0/xHFO"]);
+                                          case g.TaA.MACOS:
+                                              return h.intl.string(h.t.E4u4n5);
+                                          case g.TaA.LINUX:
+                                              return h.intl.string(h.t.tcawo3);
                                       }
                                   })(t),
                               },
@@ -82,40 +82,40 @@ class E extends i.PureComponent {
         if (null == e) return null;
         let n = [
             {
-                key: g.intl.string(g.t["0TcHzv"]),
+                key: h.intl.string(h.t["0TcHzv"]),
                 value: e.operating_system_version,
             },
             {
-                key: g.intl.string(g.t.eOX6Hq),
+                key: h.intl.string(h.t.eOX6Hq),
                 value: e.cpu,
             },
             {
-                key: g.intl.string(g.t["+WJ5XQ"]),
+                key: h.intl.string(h.t["+WJ5XQ"]),
                 value:
                     null != e.ram
-                        ? g.intl.formatToPlainString(g.t.RNRSl6, {
+                        ? h.intl.formatToPlainString(h.t.RNRSl6, {
                               size: (0, u.BU)(1000 * e.ram, { showDecimalForGB: !1 }),
                           })
                         : null,
             },
             {
-                key: g.intl.string(g.t["+3s/V/"]),
+                key: h.intl.string(h.t["+3s/V/"]),
                 value: e.gpu,
             },
             {
-                key: g.intl.string(g.t["L+x5wB"]),
+                key: h.intl.string(h.t["L+x5wB"]),
                 value: null != e.disk ? (0, u.BU)(1000 * e.disk, { showDecimalForGB: !1 }) : null,
             },
             {
-                key: g.intl.string(g.t["Ghp2/B"]),
+                key: h.intl.string(h.t["Ghp2/B"]),
                 value: e.sound_card,
             },
             {
-                key: g.intl.string(g.t["+w6nJg"]),
+                key: h.intl.string(h.t["+w6nJg"]),
                 value: e.network,
             },
             {
-                key: g.intl.string(g.t.Au3Vbp),
+                key: h.intl.string(h.t.Au3Vbp),
                 value: e.notes,
             },
         ]
@@ -155,15 +155,15 @@ class E extends i.PureComponent {
         return (0, r.jsxs)("div", {
             className: m.requirementsContainer,
             children: [
-                this.renderRequirementsSection(e, g.intl.string(g.t.QCCMXE)),
-                this.renderRequirementsSection(t, g.intl.string(g.t.He39wq)),
+                this.renderRequirementsSection(e, h.intl.string(h.t.QCCMXE)),
+                this.renderRequirementsSection(t, h.intl.string(h.t.He39wq)),
             ],
         });
     }
     render() {
         return (0, r.jsxs)("div", {
             className: this.props.className,
-            children: [(0, r.jsx)(o.Z, { children: g.intl.string(g.t.IkOAol) }), this.renderTabs(), this.renderBody()],
+            children: [(0, r.jsx)(o.Z, { children: h.intl.string(h.t.IkOAol) }), this.renderTabs(), this.renderBody()],
         });
     }
     constructor(e) {

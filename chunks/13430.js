@@ -10,11 +10,11 @@ var r = n(54381),
     d = n(388032),
     h = n(67706);
 let g = o()().localeData().months(),
-    p = Array.from(Array(31).keys()).map((e) => ({
+    m = Array.from(Array(31).keys()).map((e) => ({
         value: e + 1,
         label: "".concat(e + 1),
     })),
-    m = Array.from(Array(12).keys()).map((e) => ({
+    p = Array.from(Array(12).keys()).map((e) => ({
         value: e + 1,
         label: g[e],
     })),
@@ -80,9 +80,9 @@ let E = i.forwardRef(function (e, t) {
             name: I,
         } = e,
         {
-            day: y,
-            setDay: S,
-            month: N,
+            day: N,
+            setDay: y,
+            month: S,
             setMonth: C,
             year: O,
             setYear: T,
@@ -105,10 +105,10 @@ let E = i.forwardRef(function (e, t) {
         })(n),
         A = i.useMemo(
             () =>
-                null != y && null != N && null != O
-                    ? o()("".concat(y, "/").concat(N, "/").concat(O), "DD/MM/YYYY")
+                null != N && null != S && null != O
+                    ? o()("".concat(N, "/").concat(S, "/").concat(O), "DD/MM/YYYY")
                     : null,
-            [y, N, O],
+            [N, S, O],
         );
     i.useEffect(() => {
         a((null == A ? void 0 : A.isValid()) ? A : null);
@@ -135,16 +135,16 @@ let E = i.forwardRef(function (e, t) {
         })(),
         [R, L] = i.useState(E ? 0 : -1),
         w = i.useMemo(x, []),
-        k = {
+        D = {
             onPopulated: g,
             sortedInputs: w,
         },
-        D = i.useRef(k);
+        k = i.useRef(D);
     i.useEffect(() => {
-        D.current = k;
+        k.current = D;
     }),
         i.useEffect(() => {
-            let { onPopulated: e, sortedInputs: t } = D.current;
+            let { onPopulated: e, sortedInputs: t } = k.current;
             if (R >= t.length) {
                 null == e || e();
                 return;
@@ -158,16 +158,16 @@ let E = i.forwardRef(function (e, t) {
                 M.push({
                     key: "day",
                     input: (0, r.jsx)(_, {
-                        options: p,
-                        selectOption: S,
+                        options: m,
+                        selectOption: y,
                         children: (0, r.jsx)(c.y6, {
                             "aria-label": d.intl.string(d.t.Voklre),
                             popoutPosition: "top",
                             placeholder: d.intl.string(d.t.Voklre),
-                            options: p,
-                            value: y,
+                            options: m,
+                            value: N,
                             onChange: (t) => {
-                                S(t), L(e + 1);
+                                y(t), L(e + 1);
                             },
                             maxVisibleItems: 6,
                             autoFocus: R === e,
@@ -181,14 +181,14 @@ let E = i.forwardRef(function (e, t) {
                 M.push({
                     key: "month",
                     input: (0, r.jsx)(_, {
-                        options: m,
+                        options: p,
                         selectOption: C,
                         children: (0, r.jsx)(c.y6, {
                             "aria-label": d.intl.string(d.t.UDlN8W),
                             popoutPosition: "top",
                             placeholder: d.intl.string(d.t.UDlN8W),
-                            options: m,
-                            value: N,
+                            options: p,
+                            value: S,
                             onChange: (t) => {
                                 C(t), L(e + 1);
                             },

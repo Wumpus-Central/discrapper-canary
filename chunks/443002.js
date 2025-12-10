@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(362948),
     I = n(383881),
     T = n(981631),
-    A = n(388032),
-    C = n(517872);
+    C = n(388032),
+    A = n(517872);
 let N = function (e) {
     let { analyticsLocation: t, guild: n, onClose: N } = e,
         [P, R] = i.useState(!0),
@@ -97,9 +97,9 @@ let N = function (e) {
             children: [
                 null != N &&
                     (0, r.jsx)("div", {
-                        className: C.closeIconWrapper,
+                        className: A.closeIconWrapper,
                         children: (0, r.jsx)(l.Z, {
-                            className: C.closeIcon,
+                            className: A.closeIcon,
                             closeAction: U,
                             keybind: "ESC",
                             variant: l.Z.Variants.BOLD,
@@ -107,13 +107,13 @@ let N = function (e) {
                     }),
                 (0, r.jsxs)(s.yWw, {
                     ref: j,
-                    className: C.scroller,
+                    className: A.scroller,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: C.header,
+                            className: A.header,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: C.headerContentWrapper,
+                                    className: A.headerContentWrapper,
                                     children: [
                                         (0, r.jsx)(_.Z, {
                                             guild: e.guild,
@@ -121,10 +121,10 @@ let N = function (e) {
                                             onButtonClick: k,
                                         }),
                                         (0, r.jsx)(s.Heading, {
-                                            className: C.heading,
+                                            className: A.heading,
                                             color: "always-white",
                                             variant: "display-lg",
-                                            children: A.intl.string(A.t.N4sqzL),
+                                            children: C.intl.string(C.t.N4sqzL),
                                         }),
                                         (0, r.jsx)(E.Z, {
                                             guild: n,
@@ -139,7 +139,7 @@ let N = function (e) {
                             ],
                         }),
                         (0, r.jsx)("div", {
-                            className: C.middleBodyContentWrapper,
+                            className: A.middleBodyContentWrapper,
                             children: (0, r.jsx)(m.Z, {
                                 ref: M,
                                 guild: e.guild,
@@ -147,13 +147,13 @@ let N = function (e) {
                             }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: C.lowerBody,
+                            className: A.lowerBody,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: C.lowerBodyContentWrapper,
+                                    className: A.lowerBodyContentWrapper,
                                     children: [
                                         (0, r.jsx)(S.Z, {
-                                            className: C.tierComparisonTable,
+                                            className: A.tierComparisonTable,
                                             guild: n,
                                         }),
                                         (0, r.jsx)(g.Z, {}),
@@ -161,7 +161,7 @@ let N = function (e) {
                                     ],
                                 }),
                                 (0, r.jsx)(I.A, {}),
-                                (0, r.jsx)("div", { className: C.lowerBodyBackgroundImage }),
+                                (0, r.jsx)("div", { className: A.lowerBodyBackgroundImage }),
                             ],
                         }),
                         (0, r.jsx)(o.$, {
@@ -169,7 +169,7 @@ let N = function (e) {
                             onChange: G,
                             children: (0, r.jsx)("div", {
                                 ref: L,
-                                className: C.persistentCtaSpacer,
+                                className: A.persistentCtaSpacer,
                             }),
                         }),
                     ],

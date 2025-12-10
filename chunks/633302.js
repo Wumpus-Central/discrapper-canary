@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => K,
-    dy: () => A,
+    dy: () => C,
     gw: () => d,
 }),
     n(388685),
@@ -57,7 +57,7 @@ function T(e) {
     let t = O[e];
     return null == t ? null : E[t];
 }
-class A {
+class C {
     get names() {
         return this.emojiObject.names;
     }
@@ -139,15 +139,15 @@ class A {
                 let e = E[t];
                 if (null != e.diversity) {
                     let t = e.diversity.join("-");
-                    this.diversityChildren[t] = new A(e);
+                    this.diversityChildren[t] = new C(e);
                 }
             }
     }
 }
-function C(e) {
+function A(e) {
     let t = u.get(e);
     if (null != t) return t;
-    let n = new A(e);
+    let n = new C(e);
     return u.set(e, n), n;
 }
 function N(e) {
@@ -165,14 +165,14 @@ function D() {
 }
 function w(e) {
     let t = I(e);
-    return null != t ? C(t) : null;
+    return null != t ? A(t) : null;
 }
 let x = new Map();
 function L(e) {
     let t = x.get(e);
     if (null == t) {
         let n = b[e];
-        (t = o.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(C)), x.set(e, t);
+        (t = o.ZP.filterUnsupportedEmojis(E.slice(n[0], n[1])).map(A)), x.set(e, t);
     }
     return t;
 }
@@ -288,7 +288,7 @@ let K = {
     },
     convertSurrogateToBase: W,
     forEach: (e) => {
-        for (let t of E) t.hasDiversityParent || t.hasMultiDiversityParent || e(C(t));
+        for (let t of E) t.hasDiversityParent || t.hasMultiDiversityParent || e(A(t));
     },
     numDiversitySprites: v,
     numNonDiversitySprites: S,

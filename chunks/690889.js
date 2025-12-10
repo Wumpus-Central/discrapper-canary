@@ -1,6 +1,6 @@
 r.d(t, {
     BO: () => s,
-    Cd: () => N,
+    Cd: () => f,
     HY: () => A,
     Jd: () => _,
     KQ: () => I,
@@ -143,7 +143,7 @@ function A(e) {
         version: r,
     };
 }
-function N(e, t, r, a) {
+function f(e, t, r, a) {
     let o = e.sdkProcessingMetadata && e.sdkProcessingMetadata.dynamicSamplingContext;
     return {
         event_id: e.event_id,

@@ -23,10 +23,10 @@ var i = n(120356),
 let S = "#ffffff",
     I = (e) => y.ZP.close(e),
     T = (e) => y.ZP.minimize(e),
-    A = (e, t) => {
+    C = (e, t) => {
         (0, b.isMac)() && !t.altKey ? y.ZP.fullscreen(e) : y.ZP.maximize(e);
     },
-    C = (e) => {
+    A = (e) => {
         let { children: t, windowKey: n, themeOverride: i, hasOpenLayer: o } = e,
             l = (0, r.jsx)(s.P3F, {
                 className: v.winButtonClose,
@@ -37,7 +37,7 @@ let S = "#ffffff",
             }),
             c = (0, r.jsx)(s.P3F, {
                 className: v.winButtonMinMax,
-                onClick: (e) => A(n, e),
+                onClick: (e) => C(n, e),
                 "aria-label": O.intl.string(O.t.G1u0hK),
                 tabIndex: -1,
                 children: (0, r.jsx)(m.Z, {}),
@@ -101,7 +101,7 @@ let S = "#ffffff",
                                       }),
                                       (0, r.jsx)(s.P3F, {
                                           className: v.macButtonMaximize,
-                                          onClick: (e) => A(n, e),
+                                          onClick: (e) => C(n, e),
                                           "aria-label": O.intl.string(O.t["2nM3Pk"]),
                                           tabIndex: -1,
                                           children: (0, r.jsx)(h.Z, { color: "#006500" }),
@@ -126,7 +126,7 @@ function P(e) {
     if (f) return null;
     switch (n) {
         case b.PlatformTypes.WINDOWS:
-            return (0, r.jsx)(C, {
+            return (0, r.jsx)(A, {
                 windowKey: i,
                 themeOverride: s,
                 hasOpenLayer: p,

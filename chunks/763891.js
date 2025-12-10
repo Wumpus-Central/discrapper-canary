@@ -1,9 +1,9 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(979554),
-    s = n(399606),
-    o = n(780384),
+    o = n(399606),
+    s = n(780384),
     a = n(481060),
     c = n(410030),
     u = n(594174),
@@ -12,44 +12,44 @@ var r = n(54381),
     f = n(597688),
     p = n(370039),
     m = n(937510),
-    C = n(303952),
-    h = n(38900),
+    h = n(303952),
+    C = n(38900),
     _ = n(653126),
     b = n(786040),
-    E = n(81136),
-    v = n(215023),
+    v = n(81136),
+    E = n(215023),
     S = n(981631),
-    x = n(388032),
-    O = n(887353),
+    O = n(388032),
+    x = n(887353),
     y = n(558513),
-    k = n(662128),
-    T = n(676790),
-    j = n(665195),
+    j = n(662128),
+    k = n(676790),
+    T = n(665195),
     I = n(42742),
     L = n(283727),
     B = n(266058),
-    N = n(719138);
-function A(e) {
+    A = n(719138);
+function N(e) {
     var t;
-    let { isFetchingCategories: n, scrollerRef: A, tab: P } = e,
+    let { isFetchingCategories: n, scrollerRef: N, tab: P } = e,
         R = (0, g.sp)(),
         Z = null != (t = null == R ? void 0 : R.sessionId) ? t : "",
-        { noCache: w, includeUnpublished: D } = (0, E.Z)(),
-        H = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
-        M = (0, s.e7)([f.Z], () => f.Z.productsWithVariantsAsGroup),
+        { noCache: w, includeUnpublished: H } = (0, v.Z)(),
+        D = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+        M = (0, o.e7)([f.Z], () => f.Z.productsWithVariantsAsGroup),
         [F, W] = l.useState(1),
         U = (0, c.Fg)(),
-        V = (0, o.ap)(U),
+        V = (0, s.ap)(U),
         [z, G, K] = l.useMemo(() => {
             switch (P) {
-                case v.AW.AVATAR_DECORATIONS:
-                    return [x.intl.string(x.t.dRZYNE), V ? j.Z : T.Z, i.Z.AVATAR_DECORATION];
-                case v.AW.PROFILE_EFFECTS:
-                    return [x.intl.string(x.t["1cNjtx"]), V ? N.Z : B.Z, i.Z.PROFILE_EFFECT];
-                case v.AW.NAMEPLATES:
-                    return [x.intl.string(x.t.V68Fqz), V ? L.Z : I.Z, i.Z.NAMEPLATE];
-                case v.AW.BUNDLES:
-                    return [x.intl.string(x.t.FYFpps), V ? k.Z : y.Z, i.Z.BUNDLE];
+                case E.AW.AVATAR_DECORATIONS:
+                    return [O.intl.string(O.t.dRZYNE), V ? T.Z : k.Z, i.Z.AVATAR_DECORATION];
+                case E.AW.PROFILE_EFFECTS:
+                    return [O.intl.string(O.t["1cNjtx"]), V ? A.Z : B.Z, i.Z.PROFILE_EFFECT];
+                case E.AW.NAMEPLATES:
+                    return [O.intl.string(O.t.V68Fqz), V ? L.Z : I.Z, i.Z.NAMEPLATE];
+                case E.AW.BUNDLES:
+                    return [O.intl.string(O.t.FYFpps), V ? j.Z : y.Z, i.Z.BUNDLE];
             }
         }, [P, V]),
         Y = (0, p.a)(),
@@ -62,7 +62,7 @@ function A(e) {
                             (e.type === K ||
                                 (e.type === i.Z.VARIANTS_GROUP &&
                                     (null == (t = e.variants) ? void 0 : t.some((e) => e.type === K)) === !0)) &&
-                            !v.y8.some((t) => {
+                            !E.y8.some((t) => {
                                 let { categorySkuId: n } = t;
                                 return n === e.categorySkuId;
                             })
@@ -73,38 +73,38 @@ function A(e) {
         ),
         Q = (0, m.l)(q);
     return (l.useEffect(() => {
-        (0, C.n)({
+        (0, h.n)({
             sessionId: Z,
-            checkpoint: C.a.SHOP_MOUNTED,
+            checkpoint: h.a.SHOP_MOUNTED,
             tab: P,
-            unpublishedCategoriesShown: D,
+            unpublishedCategoriesShown: H,
             cacheDisabled: w,
         });
     }, []),
     l.useEffect(() => {
         n ||
-            (0, C.n)({
+            (0, h.n)({
                 sessionId: Z,
-                checkpoint: C.a.SHOP_RENDERED,
+                checkpoint: h.a.SHOP_RENDERED,
                 tab: P,
-                unpublishedCategoriesShown: D,
+                unpublishedCategoriesShown: H,
                 cacheDisabled: w,
             });
-    }, [Z, D, w, n, P]),
-    n || null == H)
-        ? (0, r.jsx)(h.Z, {})
+    }, [Z, H, w, n, P]),
+    n || null == D)
+        ? (0, r.jsx)(C.Z, {})
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)("div", {
                       style: { backgroundImage: "url(".concat(G, ")") },
-                      className: O.bannerContainer,
+                      className: x.bannerContainer,
                       children: (0, r.jsx)(a.Heading, {
                           variant: "heading-xxl/extrabold",
                           children: z,
                       }),
                   }),
                   (0, r.jsx)("div", {
-                      className: O.products,
+                      className: x.products,
                       children: Q.slice(40 * (F - 1), 40 * F).map((e, t) =>
                           null == f.Z.getCategory(e.categorySkuId)
                               ? null
@@ -127,7 +127,7 @@ function A(e) {
                   }),
                   Q.length > 40 &&
                       (0, r.jsx)("div", {
-                          className: O.paginationContainer,
+                          className: x.paginationContainer,
                           children: (0, r.jsx)("div", {
                               children: (0, r.jsx)(a.DsT, {
                                   currentPage: F,
@@ -145,7 +145,7 @@ function A(e) {
                                           page_type: P,
                                       }),
                                           W(e),
-                                          null == A || null == (t = A.current) || t.scrollToTop({ animate: !0 });
+                                          null == N || null == (t = N.current) || t.scrollToTop({ animate: !0 });
                                   },
                                   disablePaginationGap: !0,
                               }),

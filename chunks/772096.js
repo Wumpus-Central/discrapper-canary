@@ -121,19 +121,19 @@ let y = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
         f.b.BLOCK_QUOTE,
         f.b.SUBTEXT,
     ];
-function A(e, t) {
+function C(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let r of (Array.isArray(e) || (e = [e]), e)) {
         if (void 0 === r || !t.includes(r.type)) return null;
         if (r.type === f.b.INLINE_CODE) {
             let e = [...t, ...n];
-            if (null == A(r.validationChildContent, e)) return null;
+            if (null == C(r.validationChildContent, e)) return null;
         }
-        if (Array.isArray(r.content) && null == A(r.content, t)) return null;
+        if (Array.isArray(r.content) && null == C(r.content, t)) return null;
     }
     return e;
 }
-function C(e) {
+function A(e) {
     let t = "";
     for (let n of e)
         switch (n.type) {
@@ -155,7 +155,7 @@ function C(e) {
             case f.b.UNDERLINE:
             case f.b.STRIKETHROUGH:
             case f.b.SPOILER:
-                t += C(n.content);
+                t += A(n.content);
                 break;
             case f.b.TIMESTAMP:
                 t += "<timestamp>";
@@ -227,9 +227,9 @@ let R = g(m({}, l().defaultRules.link), {
             j = n.allowEmojiLinks ? v : O,
             M = [...j, ...S],
             k = [...I, ...T],
-            U = A(t(E, L), M, [f.b.EMOJI]),
-            G = A(t(y, L), k);
-        if (null == U || null == G || 0 === C(U).trim().length) return u();
+            U = C(t(E, L), M, [f.b.EMOJI]),
+            G = C(t(y, L), k);
+        if (null == U || null == G || 0 === A(U).trim().length) return u();
         let Z = i().pick(t.rules, j),
             B = l().parserFor(Z)(p.whitespaceSanitized, L),
             F = _.whitespaceSanitized,

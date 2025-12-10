@@ -100,7 +100,7 @@ async function T(e, t, n) {
     if (null != c && c.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
     let v = t.getGuildId(),
         T = Array.from(e),
-        A = T.map((e) => ({
+        C = T.map((e) => ({
             originalContentType: e.type,
             preCompressionSize: e.size,
         }));
@@ -129,7 +129,7 @@ async function T(e, t, n) {
                     platform: l.ow.WEB,
                     isThumbnail: h,
                     origin: y,
-                    compressionMetadata: A[t],
+                    compressionMetadata: C[t],
                 },
                 null == c ? void 0 : c[t],
             ),
@@ -150,7 +150,7 @@ async function T(e, t, n) {
                         platform: l.ow.WEB,
                         isThumbnail: h,
                         origin: y,
-                        compressionMetadata: A[n],
+                        compressionMetadata: C[n],
                     },
                     r,
                 ),

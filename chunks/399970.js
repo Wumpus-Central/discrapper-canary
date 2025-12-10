@@ -36,21 +36,21 @@ function b(e) {
         })),
         [O, v] = i.useState(null != d ? d : ""),
         [S, I] = i.useState("8080"),
-        [T, A] = i.useState("localhost"),
-        C = g.test(O);
+        [T, C] = i.useState("localhost"),
+        A = g.test(O);
     async function N() {
         u.q$();
         let e = E(T, S, O);
         null != (await u.Wt(O, e)) && t();
     }
     function P() {
-        u.mc(), v(""), A(null);
+        u.mc(), v(""), C(null);
     }
     function R(e) {
         v(e);
     }
     function D(e) {
-        A(e);
+        C(e);
     }
     function w() {
         return null == b
@@ -85,13 +85,13 @@ function b(e) {
             () => [
                 {
                     loading: y,
-                    disabled: !C || 0 === O.length || ("localhost" === T && 0 === S.length),
+                    disabled: !A || 0 === O.length || ("localhost" === T && 0 === S.length),
                     variant: L ? "critical-primary" : "active",
                     text: L ? _.intl.string(_.t.d6TR3I) : _.intl.string(_.t.qwuK5I),
                     onClick: j,
                 },
             ],
-            [O.length, y, L, C, S.length, j, T],
+            [O.length, y, L, A, S.length, j, T],
         );
     return (0, r.jsxs)(a.Modal, {
         title: _.intl.string(_.t.f8fzky),
@@ -112,7 +112,7 @@ function b(e) {
                             required: !0,
                             value: O,
                             maxLength: 19,
-                            error: C ? null : _.intl.string(_.t.gPNgKO),
+                            error: A ? null : _.intl.string(_.t.gPNgKO),
                             onChange: R,
                             disabled: y,
                         }),
@@ -121,7 +121,7 @@ function b(e) {
                         className: m.inputWrapper,
                         children: (0, r.jsx)(s.y6, {
                             label: _.intl.string(_.t["/GTqXG"]),
-                            isDisabled: !C || "" === O,
+                            isDisabled: !A || "" === O,
                             value: T,
                             options: [
                                 {

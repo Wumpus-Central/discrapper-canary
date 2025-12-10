@@ -55,16 +55,16 @@ let b = function (e) {
                     : h.intl.string(h.t.hvVgAZ),
             [y, b],
         ),
-        [A, C] = i.useState(!1 === s);
+        [C, A] = i.useState(!1 === s);
     i.useEffect(() => {
         !1 === s && v();
     }, [s, v]);
     let N = i.useCallback(() => {
-            C(!1);
+            A(!1);
         }, []),
         P = i.useCallback(
             (e) => {
-                O(e), C(!1);
+                O(e), A(!1);
             },
             [O],
         ),
@@ -82,7 +82,7 @@ let b = function (e) {
         children: [
             (0, r.jsx)(p.Z, {
                 channel: t,
-                shouldShow: A,
+                shouldShow: C,
                 onRequestClose: N,
                 setEmojiConfetti: P,
                 positionRef: D,
@@ -91,7 +91,7 @@ let b = function (e) {
                 children: () =>
                     (0, r.jsxs)(o.P3F, {
                         innerRef: D,
-                        onClick: () => C(!A),
+                        onClick: () => A(!C),
                         className: g.emojiSelectContainer,
                         children: [
                             (0, r.jsx)("div", {

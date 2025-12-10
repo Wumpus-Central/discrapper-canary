@@ -54,8 +54,8 @@ function I(e) {
     return e;
 }
 let T = 2000,
-    A = -100;
-class C extends i.PureComponent {
+    C = -100;
+class A extends i.PureComponent {
     componentDidMount() {
         this._initTimeout.start(1000, this.setupVoiceActivity);
     }
@@ -201,7 +201,7 @@ class C extends i.PureComponent {
             S(this, "_messageTimeout", new d.V7()),
             S(this, "_micTestStartTime", void 0),
             S(this, "state", {
-                volume: A,
+                volume: C,
                 isMicTesting: !1,
                 isDetectingInput: !0,
                 didDeafenUser: !1,
@@ -211,12 +211,12 @@ class C extends i.PureComponent {
             }),
             S(this, "handleVoiceActivity", (e) => {
                 let { isMicTesting: t } = this.state;
-                if (t && e <= A) {
+                if (t && e <= C) {
                     this._silenceTimeout.isStarted() ||
                         this._silenceTimeout.start(T, () => {
                             this.setState({ isDetectingInput: !1 });
                         }),
-                        this.setState({ volume: A });
+                        this.setState({ volume: C });
                     return;
                 }
                 this._silenceTimeout.stop(),
@@ -271,7 +271,7 @@ function N(e) {
         _ = (0, c.e7)([E.Z], () => E.Z.isConnected()),
         { ref: h, width: b } = (0, m.ZP)();
     return (0, r.jsx)(
-        C,
+        A,
         I(
             {
                 isVoiceConnected: _,

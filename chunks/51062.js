@@ -67,7 +67,7 @@ function O(e, t) {
     );
 }
 function v(e, t, n) {
-    var E, y, v, S, I, T, A, C, N, P, R;
+    var E, y, v, S, I, T, C, A, N, P, R;
     let { channel: D, type: w } = e,
         [x, L] = r.useState(() => (0, _.PA)()),
         j = (0, i.Z)(),
@@ -105,13 +105,13 @@ function v(e, t, n) {
         F = null == (E = e.editorRef.current) ? void 0 : E.getCurrentWord(),
         V = null == (y = e.editorRef.current) ? void 0 : y.getSlateEditor(),
         H = null;
-    null != V && (H = null != (A = null == (T = c.bN.getSelectedParentOfType(V, _.un)) ? void 0 : T[0]) ? A : null);
+    null != V && (H = null != (C = null == (T = c.bN.getSelectedParentOfType(V, _.un)) ? void 0 : T[0]) ? C : null);
     let Y = O(b({}, e), {
             navigator: B,
             activeCommand: G,
             activeCommandOption: Z,
             activeInlineAutocompleteInput: H,
-            canMentionUsers: null != (C = null == (v = w.users) ? void 0 : v.allowMentioning) && C,
+            canMentionUsers: null != (A = null == (v = w.users) ? void 0 : v.allowMentioning) && A,
             canMentionEveryone: k,
             hidePersonalInformation: U,
             hideMentionDescription: w === l.Ie.RULES_INPUT,

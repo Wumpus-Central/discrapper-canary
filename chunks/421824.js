@@ -10,14 +10,14 @@ var r = n(481060),
     o = n(522474),
     a = n(556296),
     s = n(13140),
-    u = n(44359),
-    c = n(624864),
+    c = n(44359),
+    u = n(624864),
     d = n(620954),
     h = n(987650),
     p = n(981631),
     f = n(388032);
 function m() {
-    if (c.Z.isNotificationDisabled(h.n0.ClipsReminderNotification) || o.Z.getWindowOpen(p.KJ3.ACTIVITY_POPOUT))
+    if (u.Z.isNotificationDisabled(h.n0.ClipsReminderNotification) || o.Z.getWindowOpen(p.KJ3.ACTIVITY_POPOUT))
         return null;
     let { trackView: e, trackClick: t } = (0, d.Rg)(h.n0.ClipsReminderNotification, {
             notif_type: h.n0.ClipsReminderNotification,
@@ -29,7 +29,7 @@ function m() {
     return {
         title: f.intl.format(f.t.S5uhCN, {
             keybind: g,
-            keybindHook: (e, t) => (0, i.jsx)(u.t, { keybind: g.split("+") }, t),
+            keybindHook: (e, t) => (0, i.jsx)(c.t, { keybind: g.split("+") }, t),
         }),
         icon: (0, i.jsx)(r.AlX, {
             size: "lg",

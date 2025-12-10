@@ -1,6 +1,6 @@
 r.d(t, {
-    L7: () => S,
-    k3: () => D,
+    L7: () => D,
+    k3: () => S,
 });
 var n = r(568538),
     a = r(687566),
@@ -18,31 +18,31 @@ var n = r(568538),
     R = r(343573),
     T = r(1693),
     A = r(490990),
-    N = r(288101),
-    f = r(889929);
+    f = r(288101),
+    N = r(889929);
 let O = new WeakMap(),
     h = new Map(),
-    D = {
+    S = {
         traceFetch: !0,
         traceXHR: !0,
         enableHTTPTimings: !0,
     };
-function S(e, t) {
+function D(e, t) {
     let {
             traceFetch: r,
             traceXHR: a,
             shouldCreateSpanForRequest: R,
-            enableHTTPTimings: S,
+            enableHTTPTimings: D,
             tracePropagationTargets: L,
         } = {
-            traceFetch: D.traceFetch,
-            traceXHR: D.traceXHR,
+            traceFetch: S.traceFetch,
+            traceXHR: S.traceXHR,
             ...t,
         },
         m = "function" == typeof R ? R : (e) => !0,
         y = (e) =>
             (function (e, t) {
-                let r = f.m9.location && f.m9.location.href;
+                let r = N.m9.location && N.m9.location.href;
                 if (r) {
                     let n, a;
                     try {
@@ -89,7 +89,7 @@ function S(e, t) {
                     "server.address": n,
                 });
             }
-            S && t && C(t);
+            D && t && C(t);
         })),
         a &&
             (0, n.UK)((e) => {
@@ -106,7 +106,7 @@ function S(e, t) {
                         return;
                     }
                     let T = g(I.url),
-                        f = T ? (0, p.en)(T).host : void 0,
+                        N = T ? (0, p.en)(T).host : void 0,
                         O = !!(0, o.HN)(),
                         h =
                             R && O
@@ -117,18 +117,18 @@ function S(e, t) {
                                           "http.method": I.method,
                                           "http.url": T,
                                           url: I.url,
-                                          "server.address": f,
+                                          "server.address": N,
                                           [E.S3]: "auto.http.browser",
                                           [E.$J]: "http.client",
                                       },
                                   })
                                 : new l.b();
                     (i.__sentry_xhr_span_id__ = h.spanContext().spanId), (a[i.__sentry_xhr_span_id__] = h);
-                    let D = (0, u.s3)();
+                    let S = (0, u.s3)();
                     return (
                         i.setRequestHeader &&
                             r(I.url) &&
-                            D &&
+                            S &&
                             (function (e, t, r) {
                                 let n = (0, u.nZ)(),
                                     {
@@ -143,15 +143,15 @@ function S(e, t) {
                                     E = r && (0, _.z)() ? (0, o.Hb)(r) : (0, A.$p)(a, i, s);
                                 var l = e,
                                     I = E,
-                                    p = (0, N.IQ)(c || (r ? (0, d.jC)(r) : (0, d._l)(a, t)));
+                                    p = (0, f.IQ)(c || (r ? (0, d.jC)(r) : (0, d._l)(a, t)));
                                 try {
-                                    l.setRequestHeader("sentry-trace", I), p && l.setRequestHeader(N.bU, p);
+                                    l.setRequestHeader("sentry-trace", I), p && l.setRequestHeader(f.bU, p);
                                 } catch (e) {}
-                            })(i, D, (0, _.z)() && O ? h : void 0),
+                            })(i, S, (0, _.z)() && O ? h : void 0),
                         h
                     );
                 })(e, m, y, P);
-                S && t && C(t);
+                D && t && C(t);
             });
 }
 function C(e) {
@@ -214,7 +214,7 @@ function L(e = 0) {
 }
 function g(e) {
     try {
-        return new URL(e, f.m9.location.origin).href;
+        return new URL(e, N.m9.location.origin).href;
     } catch (e) {
         return;
     }

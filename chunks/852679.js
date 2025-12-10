@@ -27,15 +27,15 @@ async function _(e) {
             applicationId: I,
             intent: T,
         } = e,
-        A = S ? i.u1M : i.z1l,
-        C = l.Z.getPremiumTypeSubscription();
-    if (null != C && C.isPurchasedExternally && null != C.paymentGateway) {
+        C = S ? i.u1M : i.z1l,
+        A = l.Z.getPremiumTypeSubscription();
+    if (null != A && A.isPurchasedExternally && null != A.paymentGateway) {
         null != g && g(),
             a.Z.show({
-                title: f.intl.formatToPlainString(f.t["rTk9v/"], { paymentGatewayName: d.Vzj[C.paymentGateway] }),
+                title: f.intl.formatToPlainString(f.t["rTk9v/"], { paymentGatewayName: d.Vzj[A.paymentGateway] }),
                 body: f.intl.format(f.t.NY03WF, {
-                    paymentGatewayName: d.Vzj[C.paymentGateway],
-                    subscriptionManagementLink: (0, u.JE)(C.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
+                    paymentGatewayName: d.Vzj[A.paymentGateway],
+                    subscriptionManagementLink: (0, u.JE)(A.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
                 }),
             });
         return;
@@ -77,7 +77,7 @@ async function _(e) {
             onCloseRequest: () => {
                 (0, i.Mr3)(p), null == E || E(!1);
             },
-            contextKey: A,
+            contextKey: C,
         },
     );
 }

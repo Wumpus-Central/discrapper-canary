@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(796634),
     I = n(656139),
     T = n(740594),
-    A = n(786397),
-    C = n(474936),
+    C = n(786397),
+    A = n(474936),
     N = n(981631),
     P = n(388032),
     R = n(269143),
@@ -128,7 +128,7 @@ class U extends i.Component {
                 this.currentUser.id !== this.trialOffer.user_id ||
                 (0, y.I5)(this.currentUser) ||
                 !this.currentUser.verified ||
-                (0, A.B)(this.trialOffer),
+                (0, C.B)(this.trialOffer),
             t = this.renderExpirationDate();
         return (0, r.jsxs)("div", {
             className: R.buttonContainer,
@@ -142,7 +142,7 @@ class U extends i.Component {
                         onClick: () => {
                             (0, _.Z)({
                                 initialPlanId: null,
-                                subscriptionTier: C.Si.TIER_2,
+                                subscriptionTier: A.Si.TIER_2,
                                 analyticsLocations: this.analyticsLocations,
                                 trialId: this.trialOffer.trial_id,
                                 referralTrialOfferId: this.trialOffer.id,
@@ -202,7 +202,7 @@ class U extends i.Component {
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(T.Z, {
-                        subscriptionTier: C.Si.TIER_2,
+                        subscriptionTier: A.Si.TIER_2,
                         buttonTextOverride: P.intl.string(P.t.O0etsF),
                         size: "md",
                         variantOverride: "expressive",
@@ -301,7 +301,7 @@ class U extends i.Component {
             (this.trialEndsAt = e.trialEndsAt),
             (this.analyticsLocations = e.analyticsLocations),
             (this.compact = !0 === e.compact),
-            (this.offerExpired = (0, A.B)(this.trialOffer)),
+            (this.offerExpired = (0, C.B)(this.trialOffer)),
             (this.isSender = this.currentUser.id === this.trialOffer.referrer_id);
     }
 }

@@ -22,8 +22,8 @@ var r,
     S = n(138859),
     I = n(955132),
     T = n(645436),
-    A = n(344651),
-    C = n(981631),
+    C = n(344651),
+    A = n(981631),
     N = n(526761);
 function P(e, t, n) {
     return (
@@ -39,7 +39,7 @@ function P(e, t, n) {
     );
 }
 let R = window.DiscordNative;
-I.Wb.dispatcher.getDispatchHandler = A.Z;
+I.Wb.dispatcher.getDispatchHandler = C.Z;
 let D = new c.Z("ConnectionStore"),
     w = 100,
     x = 0,
@@ -111,7 +111,7 @@ function Y(e) {
         }),
         (k = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
         (0, v.isIOS)() &&
-            M === C.$7l.BACKGROUND &&
+            M === A.$7l.BACKGROUND &&
             (null == e.channelId ? I.Wb.close(!0) : I.Wb.isClosed() && (T.Y(!1), I.Wb.connect())),
         !1
     );
@@ -171,21 +171,21 @@ function X(e) {
         });
 }
 function J(e) {
-    if (e.state !== C.hes.DISCONNECTED) return !1;
+    if (e.state !== A.hes.DISCONNECTED) return !1;
     e.willReconnect && (null != e.streamKey ? I.Wb.streamPing(e.streamKey) : I.Wb.voiceServerPing());
 }
 function $(e) {
     return (
         (0, v.isIOS)()
             ? (p.default.isAuthenticated() &&
-                  (M === C.$7l.INACTIVE && e.state === C.$7l.BACKGROUND && null == I.GC.channelId
+                  (M === A.$7l.INACTIVE && e.state === A.$7l.BACKGROUND && null == I.GC.channelId
                       ? I.Wb.close(!0)
-                      : M === C.$7l.BACKGROUND &&
-                        e.state === C.$7l.ACTIVE &&
+                      : M === A.$7l.BACKGROUND &&
+                        e.state === A.$7l.ACTIVE &&
                         I.Wb.isClosed() &&
                         (T.Y(!1), I.Wb.connect())),
               (M = e.state))
-            : e.state === C.$7l.ACTIVE &&
+            : e.state === A.$7l.ACTIVE &&
               (T.Y(!1), p.default.isAuthenticated() && I.Wb.resetBackoff("App state is active")),
         !1
     );

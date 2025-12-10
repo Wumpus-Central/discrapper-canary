@@ -5,7 +5,7 @@ n.d(t, {
     R8: () => k,
     Sq: () => N,
     Wg: () => U,
-    Zn: () => C,
+    Zn: () => A,
     c2: () => x,
     eE: () => M,
     iE: () => B,
@@ -17,7 +17,7 @@ n.d(t, {
     q0: () => a.a,
     x0: () => T,
     xb: () => V,
-    yd: () => A,
+    yd: () => C,
 }),
     n(388685),
     n(539854);
@@ -80,7 +80,7 @@ function T(e, t, n, i) {
         r.EditorState.push(t, l, o)
     );
 }
-function A(e, t) {
+function C(e, t) {
     switch (e) {
         case "delete":
             return O()(t);
@@ -96,7 +96,7 @@ function A(e, t) {
             return t;
     }
 }
-function C(e, t) {
+function A(e, t) {
     switch (e) {
         case "transpose-characters":
             return S()(t);

@@ -3,13 +3,13 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(203143),
-    a = n(615669),
-    o = n(388032);
+    o = n(615669),
+    a = n(388032);
 let s = {
-    [a.z.END_EARLY]: (e) =>
+    [o.z.END_EARLY]: (e) =>
         (0, r.jsx)(i.sNh, {
             id: "end-poll-early",
-            label: o.intl.string(o.t.grdwwt),
+            label: a.intl.string(a.t.grdwwt),
             icon: i.e0C,
             action: () => {
                 l.Z.endPollEarly({
@@ -21,6 +21,6 @@ let s = {
         }),
 };
 function c(e) {
-    let t = (0, a.Z)(e);
+    let t = (0, o.Z)(e);
     return 0 === t.length ? null : (0, r.jsx)(r.Fragment, { children: t.map((t) => s[t](e)) });
 }

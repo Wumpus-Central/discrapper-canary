@@ -30,9 +30,9 @@ function b(e) {
         S = (0, s.y)(n, 100),
         I = (0, p.KK)(O.flags),
         T = I ? o.QTo : o.tBG,
-        A = I ? g.intl.string(g.t["46YF2D"]) : g.intl.string(g.t.fFyGiA),
-        C = null == (t = a.metadata) ? void 0 : t.application_subscription_guild_id,
-        N = (0, i.e7)([d.Z], () => (I && null != C ? d.Z.getGuild(C) : void 0), [C, I]),
+        C = I ? g.intl.string(g.t["46YF2D"]) : g.intl.string(g.t.fFyGiA),
+        A = null == (t = a.metadata) ? void 0 : t.application_subscription_guild_id,
+        N = (0, i.e7)([d.Z], () => (I && null != A ? d.Z.getGuild(A) : void 0), [A, I]),
         P = (0, i.e7)([f.Z], () => {
             if (null != v) return f.Z.get(v);
         }, [v]),
@@ -67,7 +67,7 @@ function b(e) {
                                                 color: "currentColor",
                                             }),
                                             " ",
-                                            A,
+                                            C,
                                         ],
                                     }),
                                     null != N &&
@@ -170,7 +170,7 @@ function b(e) {
                                   y,
                                   {
                                       storeListing: e,
-                                      guildId: C,
+                                      guildId: A,
                                       navigateToHome: b,
                                   },
                                   e.id,

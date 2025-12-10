@@ -25,8 +25,8 @@ var r = n(54381),
     S = n(984802),
     I = n(626135),
     T = n(210887),
-    A = n(695346),
-    C = n(342386),
+    C = n(695346),
+    A = n(342386),
     N = n(981631),
     P = n(921944),
     R = n(474936),
@@ -38,7 +38,7 @@ let x = () => {
             forceTrack: !0,
         }),
             (0, h.XO)(h.wh.CLIENT_THEMES),
-            (0, C.default)();
+            (0, A.default)();
     },
     L = () => {
         var e, t;
@@ -145,7 +145,7 @@ function j() {
             useForcedColors: u.Z.useForcedColors,
             gradientPreset: p.Z.gradientPreset,
         })),
-        o = null != A.L1.useSetting().customUserThemeSettings;
+        o = null != C.L1.useSetting().customUserThemeSettings;
     return t !== N.BRd.LIGHT
         ? null
         : (0, r.jsxs)(r.Fragment, {

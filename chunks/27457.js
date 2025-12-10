@@ -51,8 +51,8 @@ var r = n(54381),
     K = n(607187),
     Y = n(833519),
     q = n(462061),
-    Q = n(623825),
-    X = n(839662),
+    X = n(623825),
+    Q = n(839662),
     J = n(981631),
     $ = n(354459),
     ee = n(524484),
@@ -72,7 +72,7 @@ let ei = [$.fO.ACTIVITY],
                 onKeyDown: B,
                 className: F,
                 style: V,
-                containerStyle: Q,
+                containerStyle: X,
                 channel: el,
                 width: eo,
                 onVideoResize: ea,
@@ -104,7 +104,7 @@ let ei = [$.fO.ACTIVITY],
                 y.type,
             ]),
             eR = eA === J.ZUi.AUTO_PROBING,
-            { speaking: eD, latched: eL, ringing: eM, hasVideo: ek } = (0, X.Z)(y, eP),
+            { speaking: eD, latched: eL, ringing: eM, hasVideo: ek } = (0, Q.Z)(y, eP),
             eG = (0, a.e7)([P.Z], () => null !== eZ && P.Z.isUserPlayingSounds(eZ), [eZ]),
             eU = (function (e, t, n) {
                 var r, i, l, o;
@@ -174,14 +174,14 @@ let ei = [$.fO.ACTIVITY],
                 streamKey: y.type === $.fO.STREAM ? y.id : null,
                 channelId: el.id,
             }),
-            eQ = i.useMemo(
+            eX = i.useMemo(
                 () => (y.type === $.fO.STREAM ? null != eq && eq : y.type === $.fO.USER && null != eY && eY),
                 [eq, eY, y.type],
             );
         i.useEffect(() => {
             ex(eh);
         }, [eh]);
-        let eX = i.useCallback(() => {
+        let eQ = i.useCallback(() => {
                 null != eZ && d.Z.toggleLocalMute(eZ, et.Yn.STREAM);
             }, [eZ]),
             eJ = i.useCallback(
@@ -280,7 +280,7 @@ let ei = [$.fO.ACTIVITY],
             section: J.jXE.VOICE_CHANNEL_TILE,
             children: (0, r.jsx)("div", {
                 className: o()(er.wrapper, { [er.ringing]: eM }, F),
-                style: Q,
+                style: X,
                 onMouseEnter: () => {
                     eI(!0);
                 },
@@ -415,11 +415,11 @@ let ei = [$.fO.ACTIVITY],
                                                       videoToggleState: eA,
                                                       hideAudioIcon: eB,
                                                       onContextMenu: e0,
-                                                      onToggleMute: eX,
+                                                      onToggleMute: eQ,
                                                       participantUserId: eZ,
                                                       channel: el,
                                                       application: eK,
-                                                      secureFramesVerified: eQ,
+                                                      secureFramesVerified: eX,
                                                       isHovered: eS,
                                                       popoutType: O,
                                                   }),
@@ -561,8 +561,8 @@ let ec = i.memo((e) => {
             guildId: j.getGuildId(),
         }),
         k = (0, O.j)({ displayNameStyles: M }),
-        U = (0, Q.N)(l),
-        B = (0, Q.K)(l),
+        U = (0, X.N)(l),
+        B = (0, X.K)(l),
         [F, V] = i.useState(!1);
     i.useEffect(() => {
         let e = !1,

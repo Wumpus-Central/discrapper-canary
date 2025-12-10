@@ -40,7 +40,7 @@ function p(e) {
             canAnimate: !1,
         }));
     let T = m(c.thumbnail) && !O,
-        A =
+        C =
             (null == (t = c.thumbnail) ? void 0 : t.filename) != null &&
             (null == (r = c.thumbnail) || null == (n = r.filename) ? void 0 : n.startsWith(u._j));
     return {
@@ -62,7 +62,7 @@ function p(e) {
         avatarUrl: I,
         shouldShowBlurredThumbnailImage: O,
         shouldContainMediaWithBackground: T,
-        shouldSpoiler: A,
+        shouldSpoiler: C,
         obscureAwaitingScan: !1,
         flags: c.flags,
         contentScanVersion: c.content_scan_version,

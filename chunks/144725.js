@@ -10,8 +10,8 @@ var r,
     d = n(924301),
     p = n(786761),
     f = n(418088),
-    h = n(314897),
-    g = n(592125),
+    g = n(314897),
+    h = n(592125),
     m = n(165630),
     _ = n(430824),
     b = n(375954),
@@ -108,8 +108,8 @@ let M = +I.Z.Millis.DAY,
     ed = !1,
     ep = !1,
     ef = 0,
-    eh = 0;
-function eg(e, t) {
+    eg = 0;
+function eh(e, t) {
     if (Date.now() - B > 6 * I.Z.Millis.HOUR) {
         let n = new Set(e.map((e) => e.id));
         return t.slice(0, 20).filter((e) => n.has(e.id)).length >= 3;
@@ -195,7 +195,7 @@ function eO(e) {
                     for (let r of e)
                         if (!(0, d.Z2)(r)) {
                             if (null != r.channel_id) {
-                                let e = g.Z.getChannel(r.channel_id);
+                                let e = h.Z.getChannel(r.channel_id);
                                 if (!E.Z.can(Z.Plq.VIEW_CHANNEL, e)) continue;
                             }
                             if ((0, d.BQ)(r, 2 * I.Z.Seconds.DAY) || (0, d.xt)(r)) {
@@ -343,7 +343,7 @@ function eN(e) {
     let { type: t, messageId: n, userId: r, emoji: i, reactionType: l } = e,
         a = Y[n];
     if (null == a || a.type !== P.Ni.MESSAGE) return !1;
-    let s = h.default.getId() === r;
+    let s = g.default.getId() === r;
     "MESSAGE_REACTION_ADD" === t
         ? (a.message = a.message.addReaction(i, s, e.colors, l))
         : (a.message = a.message.removeReaction(i, s, l));
@@ -359,12 +359,12 @@ function ej(e) {
     });
     let i = X,
         [l, a] = ev(H);
-    if (((V = ey(l, t)), (X = $ ? i && V.length >= P.Lb : i && eg(r, H)), 0 === n.length && i === X)) return !1;
+    if (((V = ey(l, t)), (X = $ ? i && V.length >= P.Lb : i && eh(r, H)), 0 === n.length && i === X)) return !1;
     0 !== n.length && ((er = r), (ei = [...ei, ...n]));
 }
 class eP extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(h.default, g.Z, s.Z, u.Z, m.Z, d.ZP, _.Z, j.Z, x.Z, b.Z, E.Z, O.ZP, v.Z, y.ZP), null != e)) {
+        if ((this.waitFor(g.default, h.Z, s.Z, u.Z, m.Z, d.ZP, _.Z, j.Z, x.Z, b.Z, E.Z, O.ZP, v.Z, y.ZP), null != e)) {
             var t, n, r, i, l, a, o;
             (U = null != (t = e.dehydratedItems) ? t : []).forEach((e) => {
                 z[e.id] = e;
@@ -374,7 +374,7 @@ class eP extends (r = l.ZP.PersistedStore) {
                 (en = null != (i = e.numOpens) ? i : 0),
                 (B = null != (l = e.lastOpened) ? l : 0),
                 (es = null != (a = e.lastJoinedRecommendedGuild) ? a : 0),
-                (eh = null != (o = e.lastTakenICYMISurvey) ? o : 0);
+                (eg = null != (o = e.lastTakenICYMISurvey) ? o : 0);
         }
     }
     getVersion() {
@@ -469,7 +469,7 @@ class eP extends (r = l.ZP.PersistedStore) {
         return ef;
     }
     lastTakenICYMISurvey() {
-        return eh;
+        return eg;
     }
     getIndexInHydratedFeed(e) {
         return "recommended_guilds" === e || "recommendedGuilds" === e
@@ -484,7 +484,7 @@ class eP extends (r = l.ZP.PersistedStore) {
             customChannelScoresByGuild: K,
             lastOpened: B,
             lastJoinedRecommendedGuild: es,
-            lastTakenICYMISurvey: eh,
+            lastTakenICYMISurvey: eg,
         };
     }
 }
@@ -592,7 +592,7 @@ let ex = new eP(a.Z, {
         let [a, s] = ev(H);
         if (((V = ey(a)), !$ || 0 === Q || i))
             (Q = 0),
-                !ed && eg(a, H) ? ((X = !0), (J = !0)) : (X = !1),
+                !ed && eh(a, H) ? ((X = !0), (J = !0)) : (X = !1),
                 eO({
                     newUnread: a,
                     newRead: s,
@@ -627,7 +627,7 @@ let ex = new eP(a.Z, {
         let d = t.reduce((e, t) => ((e[t.message.id] = t), e), {}),
             p = n.reduce((e, t) => ((e[t.id] = t), e), {}),
             f = r.reduce((e, t) => ((e[t.id] = t), e), {}),
-            h = i.reduce((e, t) => ((e[t.content_id] = t), e), {});
+            g = i.reduce((e, t) => ((e[t.content_id] = t), e), {});
         l.forEach((e) => {
             let t = d[e.message_id];
             if (null == t) {
@@ -681,7 +681,7 @@ let ex = new eP(a.Z, {
                 Y[t.id] = D(R({}, n), { activity: t });
             }),
             o.forEach((e) => {
-                let t = h[e.content_id];
+                let t = g[e.content_id];
                 if (null == t) {
                     W[e.content_id] = !0;
                     return;
@@ -735,7 +735,7 @@ let ex = new eP(a.Z, {
         let { messageId: t, reactions: n } = e,
             r = Y[t];
         if (null == r || r.type !== P.Ni.MESSAGE) return !1;
-        let i = h.default.getId();
+        let i = g.default.getId();
         r.message = r.message.addReactionBatch(n, i);
     },
     MESSAGE_REACTION_REMOVE: eN,
@@ -776,7 +776,7 @@ let ex = new eP(a.Z, {
         var t;
         let { channelId: n, messages: r, forICYMI: i } = e;
         if (!i) return !1;
-        let l = g.Z.getChannel(n);
+        let l = h.Z.getChannel(n);
         if (null == l || l.type !== Z.d4z.GUILD_TEXT) return !1;
         let a = null == (t = K[l.guild_id]) ? void 0 : t[n];
         if ((null != a && (0, A.jv)(a) === A.aL.MUTED) || y.ZP.isChannelMuted(l.guild_id, n) || 0 === r.length)
@@ -853,6 +853,6 @@ let ex = new eP(a.Z, {
     },
     ICYMI_TAKE_SURVEY: function (e) {
         let { takenAt: t } = e;
-        eh = t;
+        eg = t;
     },
 });

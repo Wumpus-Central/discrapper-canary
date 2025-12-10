@@ -137,25 +137,25 @@ let S = (e) => {
             "function" == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading,
         ),
     }),
-    A = (e) =>
+    C = (e) =>
         p(d({}, I(e)), {
             newline: d({}, a().defaultRules.newline),
             text: l.ZP,
             list: o.Z,
             subtext: s.Z,
         });
-function C(e) {
+function A(e) {
     return d({}, I(e));
 }
 let N = {
-    getDefaultRules: C,
+    getDefaultRules: A,
     getSpecialRules: (e) => d({}, I(e), T(e)),
-    getMessageRules: (e) => d({}, A(e)),
+    getMessageRules: (e) => d({}, C(e)),
 };
 function P(e, t, n) {
     return {
         hasSpoilerEmbeds: !1,
         hasBailedAst: !1,
-        content: c.Z.reactParserFor(C(t))(e.content, !1, null != n ? { changeLog: n } : {}),
+        content: c.Z.reactParserFor(A(t))(e.content, !1, null != n ? { changeLog: n } : {}),
     };
 }

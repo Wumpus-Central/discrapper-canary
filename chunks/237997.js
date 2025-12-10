@@ -70,11 +70,11 @@ function T(e, t) {
         e
     );
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -82,7 +82,7 @@ function A(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -597,7 +597,7 @@ v(eI, "displayName", "OverlayStore"),
         () => {
             let e = S({}, a.K.get("OverlayStore")),
                 { pinnedWidgets: t, positions: n, sizes: r, v: i } = e,
-                o = A(e, ["pinnedWidgets", "positions", "sizes", "v"]);
+                o = C(e, ["pinnedWidgets", "positions", "sizes", "v"]);
             return S({}, N, 5 === i ? o : null);
         },
         (e) => {

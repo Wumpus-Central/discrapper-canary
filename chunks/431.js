@@ -76,13 +76,13 @@ function y() {
 }
 function O(e) {
     let { userTrialOffer: t } = e;
-    null != t ? (b.userTrialOffers[t.trial_id] = t) : A(),
+    null != t ? (b.userTrialOffers[t.trial_id] = t) : C(),
         (b.userOffersLastFetchedAtDate = Date.now()),
         (b.isFetching = !1);
 }
 function v(e) {
     let { userTrialOffer: t, userDiscount: n, userDiscountOffer: r } = e;
-    null == t && null == n && null == r && A(),
+    null == t && null == n && null == r && C(),
         null != t
             ? ((b.userTrialOffers[t.trial_id] = t), (b.userDiscountOffers = {}))
             : null != n
@@ -93,7 +93,7 @@ function v(e) {
         (b.lastFetchSuccessful = !0);
 }
 function S() {
-    A(), (b.userOffersLastFetchedAtDate = Date.now()), (b.isFetching = !1), (b.lastFetchSuccessful = !1);
+    C(), (b.userOffersLastFetchedAtDate = Date.now()), (b.isFetching = !1), (b.lastFetchSuccessful = !1);
 }
 function I(e) {
     let { userTrialOffer: t } = e;
@@ -110,13 +110,13 @@ function T(e) {
               : (b.userDiscountOffers = {}),
         (b.userOffersLastFetchedAtDate = Date.now());
 }
-function A() {
+function C() {
     (b.userTrialOffers = {}),
         (b.userDiscountOffers = {}),
         (b.userOffersLastFetchedAtDate = void 0),
         (b.isFetching = !1);
 }
-let C = () => !0;
+let A = () => !0;
 function N() {
     return (
         null != d.Z.getPremiumTypeSubscription() &&
@@ -148,7 +148,7 @@ class D extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (b = null != e ? e : E),
             this.waitFor(c.Z, o.Z, d.Z, l.default),
-            this.syncWith([l.default], C),
+            this.syncWith([l.default], A),
             this.syncWith([d.Z], N),
             this.syncWith([o.Z], R);
     }
@@ -246,7 +246,7 @@ class D extends (r = i.ZP.PersistedStore) {
         return b;
     }
     forceReset() {
-        A();
+        C();
     }
     lastFetchSuccessful() {
         return b.lastFetchSuccessful;
@@ -279,5 +279,5 @@ let w = new D(a.Z, {
     BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: P,
     BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: P,
     BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: P,
-    LOGOUT: A,
+    LOGOUT: C,
 });

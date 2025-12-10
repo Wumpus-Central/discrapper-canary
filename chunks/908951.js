@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(296848),
     I = n(374649),
     T = n(981631),
-    A = n(388032),
-    C = n(318877),
+    C = n(388032),
+    A = n(318877),
     N = n(149715);
 function P(e, t, n) {
     return (
@@ -163,7 +163,7 @@ function x(e) {
                 prependOption:
                     null == e
                         ? {
-                              label: A.intl.string(A.t.iA5vA1),
+                              label: C.intl.string(C.t.iA5vA1),
                               value: null,
                           }
                         : null,
@@ -183,7 +183,7 @@ function x(e) {
                 fullWidth: !0,
                 variant: a ? "primary" : "secondary",
                 onClick: Q,
-                text: A.intl.string(A.t.CpOiEO),
+                text: C.intl.string(C.t.CpOiEO),
             }),
         $ = (e) => {
             l()(null != e.paymentGateway, "Expected payment gateway when managed externally");
@@ -191,10 +191,10 @@ function x(e) {
             return (0, r.jsx)(u.Anchor, {
                 href: t,
                 useDefaultUnderlineStyles: !1,
-                className: C.externalLink,
+                className: A.externalLink,
                 children: (0, r.jsx)(u.Button, {
                     variant: "secondary",
-                    text: A.intl.string(A.t.SgX7Ra),
+                    text: C.intl.string(C.t.SgX7Ra),
                     fullWidth: !0,
                 }),
             });
@@ -213,11 +213,11 @@ function x(e) {
                     ? (0, r.jsx)(_.b, {
                           currencies: n,
                           children: (0, r.jsxs)("div", {
-                              className: o()(C.currency, N.flex, N.alignCenter),
+                              className: o()(A.currency, N.flex, N.alignCenter),
                               children: [
-                                  (0, r.jsx)("div", { children: A.intl.string(A.t["0YjaXf"]) }),
+                                  (0, r.jsx)("div", { children: C.intl.string(C.t["0YjaXf"]) }),
                                   (0, r.jsx)(_.Z, {
-                                      className: C.currencyDropdown,
+                                      className: A.currencyDropdown,
                                       selectedCurrency: V,
                                       currencies: n,
                                       onChange: (e) => {

@@ -1,4 +1,4 @@
-n.d(t, { x: () => A });
+n.d(t, { x: () => C });
 var r = n(54381),
     i = n(473749),
     a = n(512722),
@@ -86,7 +86,7 @@ function T(e) {
         ? (0, r.jsx)(E.C3, { children: (0, r.jsx)(b.Z, {}) })
         : null;
 }
-function A(e) {
+function C(e) {
     let {
             isGift: t,
             giftCode: n,
@@ -99,21 +99,21 @@ function A(e) {
         } = (0, m.wD)(),
         v = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         S = i.useRef(null),
-        { selectedSkuId: A } = (0, h.JL)(),
-        C = (0, s.e7)([u.Z], () => u.Z.getProduct(A)),
-        { confettiColors: N } = (0, d.Z)(null == C ? void 0 : C.styles);
+        { selectedSkuId: C } = (0, h.JL)(),
+        A = (0, s.e7)([u.Z], () => u.Z.getProduct(C)),
+        { confettiColors: N } = (0, d.Z)(null == A ? void 0 : A.styles);
     return (
         i.useEffect(() => {
             t &&
                 null != _ &&
-                null != A &&
+                null != C &&
                 (y === O.Wt.USER_PROFILE_WISHLIST || y === O.Wt.DM_CHANNEL_WISHLIST) &&
                 l.Z.dispatch({
                     type: "WISHLIST_GIFT_SENT",
-                    skuId: A,
+                    skuId: C,
                     recipientId: _.id,
                 });
-        }, [t, _, A, y]),
+        }, [t, _, C, y]),
         t
             ? (0, r.jsxs)("div", {
                   ref: S,
@@ -132,7 +132,7 @@ function A(e) {
                           (0, r.jsx)(f.Z, {
                               confettiTarget: S.current,
                               confettiCanvas: e.confettiCanvas,
-                              sprites: (0, p.vK)(null == C ? void 0 : C.categorySkuId),
+                              sprites: (0, p.vK)(null == A ? void 0 : A.categorySkuId),
                               colors: null == N ? void 0 : N.map((e) => e.toHexString()),
                           }),
                   ],

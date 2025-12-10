@@ -1,6 +1,6 @@
 n.d(t, {
     n: () => P,
-    v: () => A,
+    v: () => C,
 }),
     n(388685),
     n(290780),
@@ -136,10 +136,10 @@ class T extends i.PureComponent {
             );
     }
 }
-function A() {
+function C() {
     return (0, h.modalContextFromAppContext)((0, _.bp)());
 }
-function C(e) {
+function A(e) {
     let t = [],
         n = !1;
     for (let i = e.length - 1; i >= 0; i--) {
@@ -153,9 +153,9 @@ function C(e) {
 }
 let N = [];
 function P() {
-    let e = A(),
+    let e = C(),
         t = (0, h.useModalsStore)((t) => (void 0 !== t[e] ? t[e] : N)),
-        n = i.useMemo(() => C(t), [t]),
+        n = i.useMemo(() => A(t), [t]),
         a = i.useRef(void 0);
     i.useLayoutEffect(() => {
         a.current = t[t.length - 1];

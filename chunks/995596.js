@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var l = n(54381),
     r = n(473749),
     i = n(120356),
@@ -17,7 +17,7 @@ var l = n(54381),
     g = n(384433),
     p = n(388032),
     v = n(350013);
-let C = (e) => {
+let _ = (e) => {
     let { tabs: t, selectedTab: n, onTabSelect: r, onClose: i } = e;
     return (0, l.jsx)(d.v2r, {
         navId: "members-tabs-overflow-menu",
@@ -46,7 +46,7 @@ let C = (e) => {
         ),
     });
 };
-function _(e) {
+function C(e) {
     let { onTabSelect: t, tabs: n, selectedTab: i } = e,
         s = r.useRef(null),
         o = (0, x.ZP)(),
@@ -66,7 +66,7 @@ function _(e) {
         targetElementRef: s,
         renderPopout: (e) => {
             let { closePopout: r } = e;
-            return (0, l.jsx)(C, {
+            return (0, l.jsx)(_, {
                 selectedTab: i,
                 onClose: r,
                 tabs: n,
@@ -146,15 +146,15 @@ function _(e) {
         },
     });
 }
-function S(e) {
+function T(e) {
     let t,
         { guildId: n, currentTab: i, onTabSelect: a } = e,
         [c, x] = r.useState(0),
-        C = r.useRef(null),
-        S = r.useRef(c),
-        T = (0, b.A)({ guildId: n }),
+        _ = r.useRef(null),
+        T = r.useRef(c),
+        S = (0, b.A)({ guildId: n }),
         E =
-            ((t = null != T ? T : 0),
+            ((t = null != S ? S : 0),
             [
                 {
                     id: g.e.ALL_MEMBERS,
@@ -191,16 +191,16 @@ function S(e) {
         A = r.useMemo(() => E.slice(N + 1), [N, E]),
         M = (0, m.Z)((e) => {
             let t = e.contentRect.width;
-            null != t && S.current !== t && (x(t), (S.current = t));
+            null != t && T.current !== t && (x(t), (T.current = t));
         });
     return (
-        (0, u.s)(C, M, [R]),
+        (0, u.s)(_, M, [R]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(h.Z.Divider, { className: v.divider }),
                 (0, l.jsxs)("div", {
                     className: v.tabsContainer,
-                    ref: C,
+                    ref: _,
                     children: [
                         (0, l.jsxs)("div", {
                             className: v.measurements,
@@ -222,7 +222,7 @@ function S(e) {
                                 ),
                                 (0, l.jsx)("div", {
                                     ref: P,
-                                    children: (0, l.jsx)(_, {
+                                    children: (0, l.jsx)(C, {
                                         tabs: A,
                                         onTabSelect: a,
                                         selectedTab: i,
@@ -248,7 +248,7 @@ function S(e) {
                                     ),
                                 ),
                                 0 !== A.length
-                                    ? (0, l.jsx)(_, {
+                                    ? (0, l.jsx)(C, {
                                           tabs: A,
                                           onTabSelect: a,
                                           selectedTab: i,

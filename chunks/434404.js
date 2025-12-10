@@ -73,7 +73,7 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -81,7 +81,7 @@ function T(e, t) {
     }
     return i;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,7 +90,7 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let C = new s.Z("GuildSettingsActionCreators"),
+let A = new s.Z("GuildSettingsActionCreators"),
     N = {
         init(e, t, n, r) {
             a.Z.dispatch({
@@ -272,7 +272,7 @@ let C = new s.Z("GuildSettingsActionCreators"),
                     preferredLocale: O,
                     rulesChannelId: S,
                     safetyAlertsChannelId: T,
-                    ownerConfiguredContentLevel: A,
+                    ownerConfiguredContentLevel: C,
                     discoverySplash: N,
                     publicUpdatesChannelId: P,
                     premiumProgressBarEnabled: R,
@@ -299,7 +299,7 @@ let C = new s.Z("GuildSettingsActionCreators"),
                             explicit_content_filter: g,
                             system_channel_flags: b,
                             rules_channel_id: S,
-                            owner_configured_content_level: A,
+                            owner_configured_content_level: C,
                             discovery_splash: N,
                             public_updates_channel_id: P,
                             safety_alerts_channel_id: T,
@@ -335,7 +335,7 @@ let C = new s.Z("GuildSettingsActionCreators"),
                                     type: "GUILD_SETTINGS_SUBMIT_FAILURE",
                                     errors: e.body,
                                 }),
-                                C.error("Failed to save guild settings", { errors: e.body }),
+                                A.error("Failed to save guild settings", { errors: e.body }),
                                 x.throwErr)
                             )
                                 throw e.body;

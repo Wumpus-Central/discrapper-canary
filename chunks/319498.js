@@ -108,8 +108,8 @@ void 0 === b && (b = E),
             S = e.strict,
             I = e.style,
             T = e.to,
-            A = e.innerRef,
-            C = (0, l.Z)(e, [
+            C = e.innerRef,
+            A = (0, l.Z)(e, [
                 "aria-current",
                 "activeClassName",
                 "activeStyle",
@@ -147,8 +147,8 @@ void 0 === b && (b = E),
                         style: w,
                         to: o,
                     },
-                    C,
+                    A,
                 );
-            return E !== b ? (x.ref = t || A) : (x.innerRef = A), a.createElement(g, x);
+            return E !== b ? (x.ref = t || C) : (x.innerRef = C), a.createElement(g, x);
         });
     });

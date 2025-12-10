@@ -108,7 +108,7 @@ function h(e) {
     }, [n]);
     let { focusPath: S } = y,
         [I, T] = r.useState(!1),
-        [A, C] = r.useState(E),
+        [C, A] = r.useState(E),
         [{ onItemFocusMemoizer: N, onItemMouseEnterMemoizer: P }] = r.useState(() => ({
             onItemFocusMemoizer: new o.$o((e) => () => {
                 T(!0),
@@ -118,7 +118,7 @@ function h(e) {
                     });
             }),
             onItemMouseEnterMemoizer: new o.$o((e) => () => {
-                C(!1),
+                A(!1),
                     O({
                         type: i.B.SET_FOCUS_PATH,
                         path: e.split(d),
@@ -135,12 +135,12 @@ function h(e) {
                     case a.Us.NAVIGATE_DOWN:
                     case a.Us.NAVIGATE_IN:
                     case a.Us.NAVIGATE_OUT:
-                        e.preventDefault(), e.stopPropagation(), C(!0), v({ type: n });
+                        e.preventDefault(), e.stopPropagation(), A(!0), v({ type: n });
                         return;
                     case a.Us.SELECT_FOCUSED_ITEM:
                         var r;
                         if (e.repeat || m(e.target)) return;
-                        if ((e.preventDefault(), e.stopPropagation(), C(!1), v({ type: n }), null != c))
+                        if ((e.preventDefault(), e.stopPropagation(), A(!1), v({ type: n }), null != c))
                             return void c(S);
                         let i = _(null != (r = e.target.ownerDocument) ? r : document, p(t, S));
                         null == i || i.click();
@@ -186,10 +186,10 @@ function h(e) {
                     tabIndex: -1,
                     "aria-activedescendant": L(n) ? (0, o.qR)(t, S.join(d)) : void 0,
                     focusIndex: y.focusIndex,
-                    isUsingKeyboardNavigation: A,
+                    isUsingKeyboardNavigation: C,
                 };
             },
-            [t, S, L, y.focusIndex, A],
+            [t, S, L, y.focusIndex, C],
         ),
         k = r.useCallback(
             (e) => {
@@ -223,8 +223,8 @@ function h(e) {
             getSubmenuProps: M,
             getItemProps: k,
             isFocused: L,
-            isUsingKeyboardNavigation: A,
+            isUsingKeyboardNavigation: C,
         }),
-        [v, j, M, k, L, A],
+        [v, j, M, k, L, C],
     );
 }

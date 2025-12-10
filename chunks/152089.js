@@ -35,8 +35,8 @@ function f(e, t) {
             onSendMessage: S,
             onSendSticker: I,
             setValue: T,
-            isEditorIdle: A,
-            currentFullWord: C,
+            isEditorIdle: C,
+            currentFullWord: A,
         } = e,
         { query: N } = t,
         P = {
@@ -57,8 +57,8 @@ function f(e, t) {
             emojiIntention: O,
             sendMessage: S,
             sendSticker: I,
-            currentFullWord: C,
-            isEditorIdle: A,
+            currentFullWord: A,
+            isEditorIdle: C,
             currentAutocompleteType: null != (r = null == N ? void 0 : N.type) ? r : null,
             insertText: function (e, t) {
                 var n;

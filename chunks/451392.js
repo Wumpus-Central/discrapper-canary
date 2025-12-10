@@ -29,23 +29,23 @@ function E(e) {
             forcedDivider: S,
         } = e,
         I = (0, d.ZP)(t.id, b),
-        { primaryColor: T, secondaryColor: A } = (0, f.Z)({
+        { primaryColor: T, secondaryColor: C } = (0, f.Z)({
             user: t,
             displayProfile: I,
             pendingThemeColors: i,
             isPreview: !0,
         }),
-        C = p.ZP.canUsePremiumProfileCustomization(t),
+        A = p.ZP.canUsePremiumProfileCustomization(t),
         N = null != n ? n : t.getAvatarURL(b, 80),
         P = (0, c.dQu)(l.Z.unsafe_rawColors.PRIMARY_530).hex(),
         R = (0, u.Cf)(N, P, !1);
-    if (null == T || null == A) return null;
+    if (null == T || null == C) return null;
     let D = (e) => {
         o(s()(e, null == I ? void 0 : I.themeColors) ? void 0 : e);
     };
     return (0, r.jsx)(m.Z, {
         title: h.intl.string(h.t.DMeO2X),
-        disabled: !C && !E,
+        disabled: !A && !E,
         className: a()(g.__invalid_profileThemesSection, y),
         showPremiumIcon: O,
         forcedDivider: S,
@@ -55,7 +55,7 @@ function E(e) {
                 (0, r.jsx)("div", {
                     className: g.sparkleContainer,
                     children: (0, r.jsx)(_.Z, {
-                        onChange: (e) => D([e, A]),
+                        onChange: (e) => D([e, C]),
                         color: T,
                         suggestedColors: R,
                         showEyeDropper: !0,
@@ -72,7 +72,7 @@ function E(e) {
                     className: g.sparkleContainer,
                     children: (0, r.jsx)(_.Z, {
                         onChange: (e) => D([T, e]),
-                        color: A,
+                        color: C,
                         suggestedColors: R,
                         showEyeDropper: !0,
                         label: (0, r.jsx)(c.Text, {

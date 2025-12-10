@@ -1,12 +1,12 @@
 n.d(t, {
     En: () => x,
     HK: () => R,
-    dY: () => C,
+    dY: () => A,
     eC: () => w,
     jz: () => P,
     kC: () => I,
     l3: () => N,
-    o3: () => A,
+    o3: () => C,
     vP: () => D,
 }),
     n(413496),
@@ -153,7 +153,7 @@ function T(e, t) {
         n.toString()
     );
 }
-function A(e) {
+function C(e) {
     let t = new Map(),
         n = [];
     return (
@@ -171,7 +171,7 @@ function A(e) {
         n
     );
 }
-function C(e) {
+function A(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
     return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == a));
 }

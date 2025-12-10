@@ -39,8 +39,8 @@ function O() {
         S = null != t && o()().diff(o()(t.created_at), "days") < g.eBq,
         I = v && S,
         T = e.isStaff(),
-        A = !e.verified,
-        C = () => {
+        C = !e.verified,
+        A = () => {
             y({
                 onConfirm: (e) => {
                     O(!0),
@@ -97,7 +97,7 @@ function O() {
                     })
                   : (0, r.jsxs)(r.Fragment, {
                         children: [
-                            A
+                            C
                                 ? (0, r.jsx)(l.Zbd, {
                                       className: b.card,
                                       children: (0, r.jsx)(l.Text, {
@@ -112,7 +112,7 @@ function O() {
                                     variant: "primary",
                                     text: E.intl.string(E.t.dmBSKo),
                                     disabled: v,
-                                    onClick: C,
+                                    onClick: A,
                                     loading: a || n,
                                 }),
                             }),

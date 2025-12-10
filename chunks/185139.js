@@ -28,8 +28,8 @@ function O(e) {
             header: S,
             footer: I,
             isGift: T = !1,
-            giftMessage: A = E.intl.string(E.t["DrgnS+"]),
-            hideBreadcrumbs: C = !1,
+            giftMessage: C = E.intl.string(E.t["DrgnS+"]),
+            hideBreadcrumbs: A = !1,
             isLoading: N = !1,
             purchaseError: P,
             purchaseErrorBlockRef: R,
@@ -77,11 +77,11 @@ function O(e) {
                               className: b.paymentNote,
                               iconSize: u.Z.Sizes.SMALL,
                               icon: c.OgN,
-                              color: null == A ? u.Z.Colors.PRIMARY : u.Z.Colors.SECONDARY,
-                              children: A,
+                              color: null == C ? u.Z.Colors.PRIMARY : u.Z.Colors.SECONDARY,
+                              children: C,
                           })
                         : null,
-                    C
+                    A
                         ? null
                         : (0, r.jsx)("div", {
                               className: b.breadcrumbsWrapper,

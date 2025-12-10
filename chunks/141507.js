@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(199257),
     I = n(880949),
     T = n(784222),
-    A = n(149203),
-    C = n(388032),
+    C = n(149203),
+    A = n(388032),
     N = n(545424);
 let P = 250;
 function R(e) {
@@ -32,7 +32,7 @@ function R(e) {
 let D = (e) => {
         let { inspectedEmoji: t, guild: n } = e,
             r = R(t);
-        return null != n && r ? C.intl.format(C.t.KFW2aY, { guildName: n.name }) : null;
+        return null != n && r ? A.intl.format(A.t.KFW2aY, { guildName: n.name }) : null;
     },
     w = i.memo(function (e) {
         let t,
@@ -75,15 +75,15 @@ let D = (e) => {
             W = (0, v.C1)(M, R(t) ? t : null),
             K = (0, a.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: z } = (0, S.Z)(M, k),
-            q = (null == B ? void 0 : B.type) === T.ld.EMOJI ? B.subCategory : A.t0.NONE;
+            q = (null == B ? void 0 : B.type) === T.ld.EMOJI ? B.subCategory : C.t0.NONE;
         if (
             (i.useEffect(() => {
                 let e = Date.now();
                 return () => {
                     Date.now() - e >= P &&
                         R(t) &&
-                        q !== A.t0.NONE &&
-                        (q === A.t0.NEWLY_ADDED_EMOJI &&
+                        q !== C.t0.NONE &&
+                        (q === C.t0.NEWLY_ADDED_EMOJI &&
                             null !== t &&
                             t.type === u.B.GUILD &&
                             (0, f.Zg)(t.guildId, z[0].id),
@@ -92,7 +92,7 @@ let D = (e) => {
                                 emoji: t,
                                 subCategory: q,
                                 position: B.columnIndex + 1,
-                                newlyAddedHighlight: q === A.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(M, t.id),
+                                newlyAddedHighlight: q === C.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(M, t.id),
                             }));
                 };
             }),
@@ -156,15 +156,15 @@ let D = (e) => {
                 : null;
         x =
             G && "CREATE_EMOJI" === t.type
-                ? C.intl.string(C.t.XCmLfG)
+                ? A.intl.string(A.t.XCmLfG)
                 : "EXPAND_OR_COLLAPSE_EMOJI" === t.type
                   ? K.has(t.guildId)
-                      ? C.intl.string(C.t["/K2RDH"])
-                      : C.intl.string(C.t.NZI2Zk)
+                      ? A.intl.string(A.t["/K2RDH"])
+                      : A.intl.string(A.t.NZI2Zk)
                   : (0, y.nY)(t);
         let $ =
             G && "CREATE_EMOJI" === t.type
-                ? C.intl.string(C.t["Z/r7IS"])
+                ? A.intl.string(A.t["Z/r7IS"])
                 : D({
                       inspectedEmoji: t,
                       channel: U,

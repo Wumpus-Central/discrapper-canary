@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(561160),
     I = n(41558),
     T = n(106771),
-    A = n(79984),
-    C = n(314734),
+    C = n(79984),
+    A = n(314734),
     N = n(981631),
     P = n(388032),
     R = n(399235);
@@ -147,10 +147,10 @@ function B(e) {
             ];
         }, [y, h]),
         T = I.length > 0,
-        A = f && !T && !v;
+        C = f && !T && !v;
     return d
         ? (0, r.jsx)(W, {})
-        : A
+        : C
           ? (0, r.jsx)(S.A, {
                 type: g.LG.SEARCH_EMPTY,
                 searchQuery: n,
@@ -183,9 +183,9 @@ function F(e) {
         [b, y] = i.useState(!1),
         v = null != (t = (0, l.Z)(b)) ? t : b,
         S = i.useCallback(() => y((e) => !e), []),
-        A = (null != (n = (0, l.Z)(s)) ? n : s)[0] !== s[0],
-        D = b && !A;
-    i.useLayoutEffect(() => y(!1), [A]);
+        C = (null != (n = (0, l.Z)(s)) ? n : s)[0] !== s[0],
+        D = b && !C;
+    i.useLayoutEffect(() => y(!1), [C]);
     let {
         ref: w,
         isTransitioning: x,
@@ -194,7 +194,7 @@ function F(e) {
         key: s,
         isExpanded: D,
         durationMs: 200,
-        maxAnimationHeight: C.K7,
+        maxAnimationHeight: A.K7,
     });
     i.useEffect(() => {
         !v &&
@@ -304,7 +304,7 @@ function H(e) {
                                   i.id,
                               );
                           }),
-                          i && M.map((e) => (0, r.jsx)(A.Z, {}, e)),
+                          i && M.map((e) => (0, r.jsx)(C.Z, {}, e)),
                       ],
                   }),
               ],
@@ -353,12 +353,12 @@ function W() {
             (0, r.jsx)(I.Z, { title: P.intl.string(P.t["0hKkS+"]) }),
             (0, r.jsx)("div", {
                 className: R.sectionContentContainer,
-                children: j.map((e) => (0, r.jsx)(A.Z, {}, e)),
+                children: j.map((e) => (0, r.jsx)(C.Z, {}, e)),
             }),
             (0, r.jsx)(I.Z, { title: P.intl.string(P.t.PHjkRE) }),
             (0, r.jsx)("div", {
                 className: R.sectionContentContainer,
-                children: M.map((e) => (0, r.jsx)(A.Z, {}, e)),
+                children: M.map((e) => (0, r.jsx)(C.Z, {}, e)),
             }),
         ],
     });

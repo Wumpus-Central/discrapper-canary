@@ -36,8 +36,8 @@ var i = n(512722),
     S = n(65154);
 let I = 300000,
     T = 60000,
-    A = {},
-    C = new f.V7(),
+    C = {},
+    A = new f.V7(),
     N = !1,
     P = window.document.createElement("canvas"),
     R = 512,
@@ -45,7 +45,7 @@ let I = 300000,
 (P.width = 512), (P.height = D);
 let w = P.getContext("2d");
 function x() {
-    C.stop(), null != r && (u.Z.removeSink(r, A), (r = null));
+    A.stop(), null != r && (u.Z.removeSink(r, C), (r = null));
 }
 let L = s().debounce((e, t, n, r) => {
     M(
@@ -109,10 +109,10 @@ async function M(e, t) {
                 });
         } catch (t) {
             new _.Z("ApplicationStreamPreviewUploadManager").error("Failed to post stream preview", t),
-                r === e && C.start(T, n);
+                r === e && A.start(T, n);
             return;
         }
-    r === e && (N ? C.start(T, n) : C.start(I, n));
+    r === e && (N ? A.start(T, n) : A.start(I, n));
 }
 function k(e, t) {
     let n = 0;
@@ -159,9 +159,9 @@ function G(e, t) {
             ? n.getNextVideoOutputFrame(e).then(s, (t) => {
                   if (r === e) throw t;
               })
-            : u.Z.addSink(e, A, s);
+            : u.Z.addSink(e, C, s);
     }).finally(() => {
-        i || u.Z.removeSink(e, A);
+        i || u.Z.removeSink(e, C);
     });
 }
 let Z = {

@@ -20,10 +20,10 @@ function E(e) {
         S = null != (t = null == b ? void 0 : b.id) ? t : null == E ? void 0 : E.id,
         I = _.Z.getGuild(y),
         T = (0, a.e7)([m.Z], () => (null != I ? m.Z.can(h.Plq.MANAGE_GUILD, I) : null)),
-        A = !0,
         C = !0,
-        N = (0, l.LD)(y, C),
-        P = (0, l.PL)(A, C),
+        A = !0,
+        N = (0, l.LD)(y, A),
+        P = (0, l.PL)(C, A),
         R = (0, a.e7)([p.default], () => null != p.default.getNewestTokenForApplication(S)),
         { isUserApp: D, isGuildApp: w } = i.useMemo(() => {
             var e, t, n, r;

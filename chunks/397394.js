@@ -34,8 +34,8 @@ var r = n(54381),
     S = n(585483),
     I = n(591759),
     T = n(787025),
-    A = n(981631),
-    C = n(388032),
+    C = n(981631),
+    A = n(388032),
     N = n(295880);
 function P(e, t, n) {
     return (
@@ -113,7 +113,7 @@ function L(e, t) {
 function j(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: s } = e;
     return (
-        (0, _.Tt)({ location: C.intl.string(C.t["3S2494"]) }),
+        (0, _.Tt)({ location: A.intl.string(A.t["3S2494"]) }),
         (0, r.jsxs)("div", {
             className: N.wrapper,
             children: [
@@ -130,7 +130,7 @@ function j(e) {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           className: N.cta,
-                          children: C.intl.string(C.t["k7J/w/"]),
+                          children: A.intl.string(A.t["k7J/w/"]),
                       })
                     : null,
             ],
@@ -148,7 +148,7 @@ function k(e) {
             (null == t ? void 0 : t.id) != null &&
                 ((0, g.X)(null == t ? void 0 : t.id),
                 null == o || o(),
-                O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
+                O.default.track(C.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
                     application_id: null == n ? void 0 : n.id,
                     guild_id: null == t ? void 0 : t.id,
                 }));
@@ -156,22 +156,22 @@ function k(e) {
         l = m.z8.getField("entrypoint"),
         c = i.useCallback(() => {
             null == o || o(),
-                O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
+                O.default.track(C.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
                     application_id: null == n ? void 0 : n.id,
                 });
         }, [o, null == n ? void 0 : n.id]),
-        d = window.location.pathname.startsWith(A.Z5c.APPLICATION_DIRECTORY),
+        d = window.location.pathname.startsWith(C.Z5c.APPLICATION_DIRECTORY),
         f = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null &&
                 (null == o || o(),
                 null != l && (0, h.uL)(""),
                 setImmediate(() => {
-                    S.S.dispatchToLastSubscribed(A.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }),
-                        O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
+                    S.S.dispatchToLastSubscribed(C.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }),
+                        O.default.track(C.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
                 }));
         }, [null == n ? void 0 : n.id, o, l]),
         p = (0, u.e7)([y.Z, E.Z], () => E.Z.getChannel(y.Z.getChannelId())),
-        _ = (0, u.e7)([b.Z], () => b.Z.can(A.Plq.SEND_MESSAGES, p)),
+        _ = (0, u.e7)([b.Z], () => b.Z.can(C.Plq.SEND_MESSAGES, p)),
         v = null != t,
         I = null == t && _ && (!d || null != l),
         N = [];
@@ -180,7 +180,7 @@ function k(e) {
             (null != o &&
                 N.push({
                     variant: "secondary",
-                    text: C.intl.string(C.t.cpT0Cq),
+                    text: A.intl.string(A.t.cpT0Cq),
                     onClick: c,
                 }),
             v &&
@@ -188,14 +188,14 @@ function k(e) {
                     variant: "primary",
                     text:
                         (null == t ? void 0 : t.name.length) > 30
-                            ? C.intl.string(C.t.M35zFB)
-                            : C.intl.format(C.t.UdYYP3, { guildName: null == t ? void 0 : t.name }),
+                            ? A.intl.string(A.t.M35zFB)
+                            : A.intl.format(A.t.UdYYP3, { guildName: null == t ? void 0 : t.name }),
                     onClick: s,
                 }),
             I &&
                 N.push({
                     variant: "primary",
-                    text: C.intl.string(C.t["0cCDKP"]),
+                    text: A.intl.string(A.t["0cCDKP"]),
                     onClick: f,
                 })),
         (0, r.jsx)(
@@ -219,20 +219,20 @@ function k(e) {
 function U(e) {
     var { guild: t, application: n } = e,
         a = x(e, ["guild", "application"]);
-    let o = C.intl.string(C.t.se5gLj);
+    let o = A.intl.string(A.t.se5gLj);
     i.useEffect(() => {
-        O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
+        O.default.track(C.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
     }, [null == n ? void 0 : n.id]);
     let s = i.useMemo(
             () =>
                 null != n
                     ? null != t
-                        ? C.intl.format(C.t.IlF6IY, {
+                        ? A.intl.format(A.t.IlF6IY, {
                               installedApplicationName: null == n ? void 0 : n.name,
                               guildName: null == t ? void 0 : t.name,
                           })
-                        : C.intl.format(C.t.vTVC5T, { installedApplicationName: null == n ? void 0 : n.name })
-                    : C.intl.string(C.t["Dp+rgP"]),
+                        : A.intl.format(A.t.vTVC5T, { installedApplicationName: null == n ? void 0 : n.name })
+                    : A.intl.string(A.t["Dp+rgP"]),
             [n, t],
         ),
         l = (0, r.jsx)(d.x, {
@@ -256,10 +256,10 @@ function G(e) {
         n = x(e, ["application"]);
     let { onClose: a } = n;
     i.useEffect(() => {
-        O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: t.id });
+        O.default.track(C.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: t.id });
     }, [t.id]);
     let o = i.useCallback(() => {
-        null == a || a(), O.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: t.id });
+        null == a || a(), O.default.track(C.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: t.id });
     }, [a, t.id]);
     return (0, r.jsx)(
         T.j,
@@ -267,7 +267,7 @@ function G(e) {
             actions: [
                 {
                     variant: "primary",
-                    text: C.intl.string(C.t["31Bci5"]),
+                    text: A.intl.string(A.t["31Bci5"]),
                     onClick: o,
                 },
             ],
@@ -291,12 +291,12 @@ function G(e) {
                             (0, r.jsx)(f.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
-                                children: C.intl.format(C.t["1Q+p1k"], { appName: t.name }),
+                                children: A.intl.format(A.t["1Q+p1k"], { appName: t.name }),
                             }),
                             (0, r.jsx)(d.x, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
-                                children: C.intl.format(C.t.Mr7x5U, { appName: t.name }),
+                                children: A.intl.format(A.t.Mr7x5U, { appName: t.name }),
                             }),
                         ],
                     }),
@@ -309,11 +309,11 @@ function Z(e) {
     return (0, r.jsx)(
         T.j,
         w(R({}, e), {
-            title: C.intl.string(C.t.j2d6Km),
-            subtitle: C.intl.string(C.t["/B7kXy"]),
+            title: A.intl.string(A.t.j2d6Km),
+            subtitle: A.intl.string(A.t["/B7kXy"]),
             actions: [
                 {
-                    text: C.intl.string(C.t["31Bci5"]),
+                    text: A.intl.string(A.t["31Bci5"]),
                     onClick: e.onClose,
                 },
             ],
@@ -345,11 +345,11 @@ function V(e) {
     i.useEffect(() => {
         if (null == a || "" === a.search) return;
         let e = null != document.referrer && "" !== document.referrer ? I.Z.toURLSafe(document.referrer) : null;
-        (null == e || e.host !== window.location.host || e.pathname !== A.Z5c.OAUTH2_AUTHORIZE) &&
-            (0, h.uL)(A.Z5c.INDEX);
+        (null == e || e.host !== window.location.host || e.pathname !== C.Z5c.OAUTH2_AUTHORIZE) &&
+            (0, h.uL)(C.Z5c.INDEX);
     }, [a]);
     let o = null != a ? (0, s.parse)(a.search) : {},
-        l = null != (n = null != (t = o.error_description) ? t : o.error) ? n : C.intl.string(C.t.mqn873);
+        l = null != (n = null != (t = o.error_description) ? t : o.error) ? n : A.intl.string(A.t.mqn873);
     return (0, r.jsx)(T.G, {
         removeChildWrapper: !0,
         children: (0, r.jsx)(T.j, {

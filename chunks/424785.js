@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685), n(415506);
+n.d(t, { Z: () => X }), n(388685), n(415506);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -282,7 +282,7 @@ class Y extends L.ZP {
     }
 }
 let q = (0, h.B)((0, p.Q)(Y));
-function Q(e) {
+function X(e) {
     let { guild: t, channel: n, disableSorting: i, isFavoriteCategory: l, collapsed: o, voiceStates: s } = e,
         c = (0, a.cj)([T.ZP], () => ({
             unread: T.ZP.hasUnread(n.id),

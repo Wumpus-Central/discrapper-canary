@@ -42,10 +42,10 @@ let y = null,
     T = (e) => {
         delete S[e];
     },
-    A = () => {
+    C = () => {
         S = {};
     },
-    C = () =>
+    A = () =>
         Object.entries(S).map((e) => {
             let [t, n] = e;
             return {
@@ -80,11 +80,11 @@ function P() {
 function R() {
     let e = a.Z.getWindow(p.$J),
         t = null != e && "function" == typeof e.cancelAnimationFrame;
-    C().forEach((n) => {
+    A().forEach((n) => {
         let { timeoutId: r, callback: i } = n;
         t && e.cancelAnimationFrame(r), h(i);
     }),
-        A();
+        C();
 }
 function D(e) {
     if (e === v) return;

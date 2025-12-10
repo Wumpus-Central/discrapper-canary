@@ -54,10 +54,10 @@ function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null != e && (d.test(e) || (t && I(e)));
 }
-function A(e) {
+function C(e) {
     return null != e && "discord:" === e;
 }
-function C(e) {
+function A(e) {
     if (null == e) return !1;
     let t = c.Z.toURLSafe(e);
     return (
@@ -77,7 +77,7 @@ function N(e, t, n) {
     );
 }
 function P(e, t, n) {
-    return !!(C(e) || N(e, t, n));
+    return !!(A(e) || N(e, t, n));
 }
 function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -89,7 +89,7 @@ function R(e) {
     return !1;
 }
 function D(e) {
-    return null != e && A(s.parse(e).protocol);
+    return null != e && C(s.parse(e).protocol);
 }
 let w = {
     URL_REGEX: O,
@@ -102,13 +102,13 @@ let w = {
     isDiscordLocalhost: function (e, t) {
         return null != e && null != t && window.location.host === e;
     },
-    isDiscordProtocol: A,
+    isDiscordProtocol: C,
     isDiscordUrl: R,
     isDiscordUri: D,
     isDiscordCdnUrl: function (e) {
         return null != e && s.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
     },
-    isDiscordDirectAssetUrl: C,
+    isDiscordDirectAssetUrl: A,
     isDiscordProxiedAssetUrl: N,
     isDiscordAssetUrl: P,
     isDiscordUrlOrUri: (e) => R(e) || D(e),

@@ -227,7 +227,7 @@ function v(e, t, n, r) {
             default:
                 continue;
         }
-        if (!A(n, t[0], l)) continue;
+        if (!C(n, t[0], l)) continue;
         let p = (0, c.t)(e, i, r.serializedChildren, u.start),
             _ = (0, c.t)(e, i, r.serializedChildren, u.start + u.text.length);
         d.Q.textToVoid(e, l, {
@@ -265,7 +265,7 @@ function S(e, t, n, r, i) {
             )
                 continue;
             let a = (0, s.i)(u[0], n, r);
-            null != a && A(r, t[0], a)
+            null != a && C(r, t[0], a)
                 ? m.push({
                       index: u.index,
                       length: u[0].length,
@@ -312,7 +312,7 @@ function T(e, t, n, r) {
     }
     return !1;
 }
-function A(e, t, n) {
+function C(e, t, n) {
     if ("applicationCommandOption" !== t.type) return !0;
     switch (t.optionType) {
         case a.jw.CHANNEL:

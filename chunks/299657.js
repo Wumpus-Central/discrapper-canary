@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(853872),
     I = n(78839),
     T = n(626135),
-    A = n(111361),
-    C = n(357355),
+    C = n(111361),
+    A = n(357355),
     N = n(937579),
     P = n(283066),
     R = n(622909),
@@ -47,9 +47,9 @@ let k = function (e) {
         H = (0, g.V)(L.nS),
         [Y, W] = i.useState(!0),
         K = i.useRef(0),
-        z = (0, A.M5)(Z, L.PremiumTypes.TIER_2),
+        z = (0, C.M5)(Z, L.PremiumTypes.TIER_2),
         q = (0, P.Z)({ location: "PremiumMarketingPage" }),
-        Q = (0, s.e7)([C.Z], () => C.Z.hasFetched);
+        Q = (0, s.e7)([A.Z], () => A.Z.hasFetched);
     i.useEffect(() => {
         Q || u.MH();
     }, [Q]),

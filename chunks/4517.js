@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(442837),
     c = n(846519),
     u = n(481060),
@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(810097),
     I = n(913002),
     T = n(228168),
-    A = n(244096),
-    C = n(388032),
+    C = n(244096),
+    A = n(388032),
     N = n(516089);
 function P(e, t, n) {
     return (
@@ -131,7 +131,7 @@ let M = i.forwardRef(function (e, t) {
                             );
                     });
             },
-            f = null != a ? a.label() : C.intl.string(C.t.evw0oz),
+            f = null != a ? a.label() : A.intl.string(A.t.evw0oz),
             p = (0, r.jsxs)("div", {
                 className: N.content,
                 children: [
@@ -155,7 +155,7 @@ let M = i.forwardRef(function (e, t) {
                     ref: t,
                     children: (0, r.jsx)(u.P3F, {
                         className: N.outer,
-                        "aria-label": C.intl.string(C.t["zrpF/b"]),
+                        "aria-label": A.intl.string(A.t["zrpF/b"]),
                         "aria-describedby": s,
                         onClick: d,
                         focusProps: { ringClassName: N.ring },
@@ -169,7 +169,7 @@ let M = i.forwardRef(function (e, t) {
                                 }),
                                 (0, r.jsxs)(u.nn4, {
                                     id: s,
-                                    children: [C.intl.string(C.t.EVV6uZ), ": ", f],
+                                    children: [A.intl.string(A.t.EVV6uZ), ": ", f],
                                 }),
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-sm/normal",
@@ -199,9 +199,9 @@ let M = i.forwardRef(function (e, t) {
             I = (0, O.yi)(),
             { trackUserProfileAction: P } = (0, y.KZ)(),
             R = (0, h.p)({ location: "CustomStatusBubble" }),
-            D = null != p ? A.Hp : 0,
-            w = A.hT + D,
-            x = A.YF + D,
+            D = null != p ? C.Hp : 0,
+            w = C.hT + D,
+            x = C.YF + D,
             L = i.useRef(null),
             M = i.useRef(null),
             k = i.useRef(null),
@@ -222,7 +222,7 @@ let M = i.forwardRef(function (e, t) {
             maxHeight: "".concat(U.current, "px"),
             config: {
                 clamp: !0,
-                duration: A.R1,
+                duration: C.R1,
             },
         }));
         i.useLayoutEffect(() => {
@@ -239,17 +239,17 @@ let M = i.forwardRef(function (e, t) {
                     (e
                         ? X({
                               maxHeight: "".concat(Math.min(G.current, x), "px"),
-                              delay: z ? 0 : A.zS,
+                              delay: z ? 0 : C.zS,
                               config: {
                                   clamp: !0,
-                                  duration: z ? 0 : A.R1,
+                                  duration: z ? 0 : C.R1,
                               },
                           })
                         : X({
                               maxHeight: "".concat(Math.min(U.current, w), "px"),
                               delay: 0,
                           }),
-                    z ? H(!e) : q.start(e ? A.zS : A.Sq, () => H(!e)));
+                    z ? H(!e) : q.start(e ? C.zS : C.Sq, () => H(!e)));
             },
             $ =
                 null != p
@@ -275,7 +275,7 @@ let M = i.forwardRef(function (e, t) {
                     : (0, r.jsx)(u.Text, {
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          "aria-label": "".concat(C.intl.string(C.t.EVV6uZ), ": ").concat(v),
+                          "aria-label": "".concat(A.intl.string(A.t.EVV6uZ), ": ").concat(v),
                           className: o()(N.statusText, R && N.italicPrompt),
                           children: null != v ? v : "",
                       }),
@@ -326,7 +326,7 @@ let M = i.forwardRef(function (e, t) {
                                       className: N.ring,
                                       role: "tooltip",
                                       tabIndex: 0,
-                                      "aria-label": C.intl.formatToPlainString(C.t.UpF5Qa, {
+                                      "aria-label": A.intl.formatToPlainString(A.t.UpF5Qa, {
                                           emoji: null != (n = null == p ? void 0 : p.name) ? n : "",
                                           status: _,
                                       }),
@@ -363,7 +363,7 @@ let M = i.forwardRef(function (e, t) {
                                       className: N.ring,
                                       role: "tooltip",
                                       tabIndex: 0,
-                                      "aria-label": C.intl.formatToPlainString(C.t.UpF5Qa, {
+                                      "aria-label": A.intl.formatToPlainString(A.t.UpF5Qa, {
                                           emoji: null != (a = null == p ? void 0 : p.name) ? a : "",
                                           status: _,
                                       }),
@@ -411,10 +411,10 @@ function G(e) {
     i.useEffect(() => {
         f === T.n_.STATUS && ((b.current !== t || I.current !== n) && p(), (b.current = t), (I.current = n));
     }, [f, p, t, n]);
-    let [A, C] = i.useState(!1),
+    let [C, A] = i.useState(!1),
         P = i.useCallback(
             (e) => {
-                (e || !h) && C(e);
+                (e || !h) && A(e);
             },
             [h],
         ),
@@ -437,7 +437,7 @@ function G(e) {
         sourceDetails: j(),
         sourceType: T.n_.STATUS,
         onAction: u,
-        onClose: () => C(!1),
+        onClose: () => A(!1),
         children: () =>
             (0, r.jsx)(
                 k,
@@ -453,7 +453,7 @@ function G(e) {
                             targetRef: g,
                             user: a,
                             sourceType: T.n_.STATUS,
-                            isVisible: A && !h,
+                            isVisible: C && !h,
                             isExpandable: e,
                             onAction: u,
                         }),

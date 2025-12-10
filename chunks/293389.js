@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(358085),
     I = n(210887),
     T = n(273313),
-    A = n(981631),
-    C = n(295907),
+    C = n(981631),
+    A = n(295907),
     N = n(388032),
     P = n(740508),
     R = n(315091),
@@ -174,7 +174,7 @@ function F(e) {
         S.name !== k && d.Z.editName(S, k);
     }
     function Y(e) {
-        e.key === C.vn.ENTER && (e.currentTarget.blur(), e.preventDefault());
+        e.key === A.vn.ENTER && (e.currentTarget.blur(), e.preventDefault());
     }
     function W(e) {
         d.Z.toggleOverlay(S, e, e);
@@ -211,7 +211,7 @@ function F(e) {
     function z() {
         if (w) return;
         let e = null != S.id ? b.Z.getDetectableGame(S.id) : null;
-        O.default.track(A.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+        O.default.track(C.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
             game_name: (0, E.le)(S) ? S.gameName : S.name,
         }),
@@ -227,7 +227,7 @@ function F(e) {
                                 name: null != (i = S.name) ? i : "",
                                 application_id:
                                     null != (o = null != (a = null == e ? void 0 : e.id) ? a : S.id) ? o : void 0,
-                                type: A.IIU.PLAYING,
+                                type: C.IIU.PLAYING,
                             },
                             onSubmitted: () => {},
                         }),

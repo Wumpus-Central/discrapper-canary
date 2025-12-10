@@ -29,11 +29,11 @@ function O(e) {
         I = null != g ? g : O,
         T = (0, o.e7)([c.ZP], () => c.ZP.getNick(i, null == n ? void 0 : n.id), [i, n]);
     v = null == I || null != v ? v : (0, m.DK)(I);
-    let { startTime: A } = (0, f.ZP)(null != g ? g : O, v),
-        C = (0, d.Z)(v, g.id),
+    let { startTime: C } = (0, f.ZP)(null != g ? g : O, v),
+        A = (0, d.Z)(v, g.id),
         N =
             (null == I ? void 0 : I.scheduled_start_time) != null
-                ? (0, m.lh)(C, A, new Date(I.scheduled_start_time))
+                ? (0, m.lh)(A, C, new Date(I.scheduled_start_time))
                 : null;
     if (null == I) return null;
     let { entity_type: P, status: R, recurrence_rule: D } = I;
@@ -41,7 +41,7 @@ function O(e) {
         className: a()(y.statusContainer, t),
         children: [
             (0, r.jsx)(E.z, {
-                startTime: A.toISOString(),
+                startTime: C.toISOString(),
                 status: null != N ? N : R,
                 eventType: P,
                 isNew: h,

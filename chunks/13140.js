@@ -1,8 +1,8 @@
 n.d(t, {
     Al: () => Z,
     BB: () => U,
-    C$: () => C,
-    H9: () => A,
+    C$: () => A,
+    H9: () => C,
     Kd: () => k,
     UR: () => v,
     d2: () => M,
@@ -137,14 +137,14 @@ function T(e) {
     }
     return null != t ? t : null;
 }
-function A(e) {
+function C(e) {
     let [, t, n] = e,
         r = T(e);
     if (null != r) return S(t, r, n);
     let i = (0, u._v)(t);
     return null != i ? S(i.keyCode, i.key, n) : null;
 }
-function C(e) {
+function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.Mo.KEYBOARD_KEY,
         r = P(e, t, n);
@@ -244,12 +244,12 @@ function M(e) {
     return null == e
         ? []
         : e.reduce((e, n) => {
-              let r = A(n),
+              let r = C(n),
                   i = p({}, t);
               if (null == r) return e.push(m(p({}, i), { combo: n })), e;
               if (x.test(r) && L(r)) return (t[j(r)] = !0), e.map((e) => ((e[j(r)] = !0), e));
               {
-                  let t = C(r, d.Cg.BROWSER);
+                  let t = A(r, d.Cg.BROWSER);
                   return null != t && (i.keyCode = t), e.push(i), e;
               }
           }, []);
@@ -264,7 +264,7 @@ function k(e) {
         .split("+")
         .map((e) => e.trim().replace("plus", "+"))
         .reduce((e, r) => {
-            let i = C(w(r), t, n);
+            let i = A(w(r), t, n);
             return null != i && e.push([n, i, t]), e;
         }, []);
 }
@@ -276,7 +276,7 @@ function U(e) {
                     i = "number" == typeof r ? r : I();
                 if (t === d.Mo.KEYBOARD_KEY || t === d.Mo.KEYBOARD_MODIFIER_KEY) {
                     var a;
-                    return null != (a = A(null != i ? [t, n, i] : [t, n])) ? a : "UNK".concat(n);
+                    return null != (a = C(null != i ? [t, n, i] : [t, n])) ? a : "UNK".concat(n);
                 }
                 return t === d.Mo.MOUSE_BUTTON
                     ? "mouse".concat(n)

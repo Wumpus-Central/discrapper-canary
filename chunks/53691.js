@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(205120),
+    o = n(467721),
     s = n(481060),
     l = n(436774),
     c = n(597276),
@@ -64,7 +64,7 @@ function h(e) {
                 friction: 14,
             },
         }),
-        A = S
+        C = S
             ? (0, r.jsx)(s.d$P, {
                   size: "custom",
                   height: 20,
@@ -88,7 +88,7 @@ function h(e) {
             g,
         ),
         children: [
-            !I && A,
+            !I && C,
             (0, r.jsx)(s.Text, {
                 variant: null != i ? i : "text-sm/medium",
                 color: "header-primary",

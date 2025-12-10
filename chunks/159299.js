@@ -191,7 +191,7 @@ function I(e) {
 function T(e) {
     return N(e.user.id);
 }
-function A(e) {
+function C(e) {
     let { updates: t } = e;
     return t
         .map((e) => {
@@ -200,7 +200,7 @@ function A(e) {
         })
         .some((e) => e);
 }
-function C(e) {
+function A(e) {
     return e.members.reduce((e, t) => N(t.user.id) || e, !1);
 }
 function N(e) {
@@ -295,7 +295,7 @@ let M = new j(s.Z, {
     CHANNEL_UPDATES: L,
     THREAD_MEMBER_LIST_UPDATE: I,
     USER_UPDATE: T,
-    PRESENCE_UPDATES: A,
+    PRESENCE_UPDATES: C,
     GUILD_MEMBER_ADD: T,
     GUILD_MEMBER_UPDATE: T,
     GUILD_MEMBER_REMOVE: T,
@@ -303,5 +303,5 @@ let M = new j(s.Z, {
     GUILD_MEMBERS_CHUNK_BATCH: R,
     GUILD_ROLE_UPDATE: x,
     GUILD_ROLE_DELETE: x,
-    PASSIVE_UPDATE_V2: C,
+    PASSIVE_UPDATE_V2: A,
 });

@@ -27,8 +27,8 @@ function I(e) {
             user: i,
             guild: I,
             canUsePremiumCustomization: T,
-            onUpsellClick: A,
-            pendingBanner: C,
+            onUpsellClick: C,
+            pendingBanner: A,
             pendingAccentColor: N,
             pendingBio: P,
             pendingPronouns: R,
@@ -96,11 +96,11 @@ function I(e) {
                             displayProfile: Q,
                             guildId: null == I ? void 0 : I.id,
                             canUsePremiumCustomization: T,
-                            pendingBanner: C,
+                            pendingBanner: A,
                             pendingAccentColor: N,
                             isTryItOut: B,
                             disabledInputs: F,
-                            onUpsellClick: () => (null == A ? void 0 : A({ object: y.qAy.EDIT_PROFILE_BANNER })),
+                            onUpsellClick: () => (null == C ? void 0 : C({ object: y.qAy.EDIT_PROFILE_BANNER })),
                         }),
                         (0, r.jsx)(h.Z, {
                             user: i,
@@ -114,7 +114,7 @@ function I(e) {
                             className: G,
                             disabledInputs: F,
                             isTryItOut: B,
-                            onUpsellClick: () => (null == A ? void 0 : A({ object: y.qAy.AVATAR })),
+                            onUpsellClick: () => (null == C ? void 0 : C({ object: y.qAy.AVATAR })),
                         }),
                         !V &&
                             (0, r.jsx)(p.Z, {

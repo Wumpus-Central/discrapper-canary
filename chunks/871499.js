@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => S,
-    d: () => A,
+    d: () => C,
 });
 var r = n(54381),
     i = n(473749),
@@ -106,8 +106,8 @@ function S(e) {
         disabled: S = !1,
         isActive: I = !1,
         tooltipPosition: T = "top",
-        shouldShowTooltip: A = !0,
-        forceTooltipOpen: C = !1,
+        shouldShowTooltip: C = !0,
+        forceTooltipOpen: A = !1,
         buttonRef: N,
         grow: P,
         "aria-label": R,
@@ -122,11 +122,11 @@ function S(e) {
             position: T,
             text: t,
             "aria-label": R,
-            shouldShow: A,
-            forceOpen: C,
+            shouldShow: C,
+            forceOpen: A,
             children: (e) => {
                 var { onClick: t, onContextMenu: c, onMouseEnter: p, onMouseLeave: T } = e,
-                    A = O(e, ["onClick", "onContextMenu", "onMouseEnter", "onMouseLeave"]);
+                    C = O(e, ["onClick", "onContextMenu", "onMouseEnter", "onMouseLeave"]);
                 return (0, r.jsxs)(
                     l.zx,
                     y(
@@ -168,7 +168,7 @@ function S(e) {
                                 grow: P,
                                 "aria-label": R,
                             },
-                            A,
+                            C,
                         ),
                         {
                             children: [
@@ -214,7 +214,7 @@ let I = {
         activeLight: h.activeLight,
         premiumGradient: h.premiumGradient,
     };
-function A(e) {
+function C(e) {
     var t,
         {
             ref: n,
@@ -224,8 +224,8 @@ function A(e) {
             className: g,
             iconClassName: b,
             onPopoutClick: v,
-            popoutOpen: A = !1,
-            popoutDisabled: C = !1,
+            popoutOpen: C = !1,
+            popoutDisabled: A = !1,
             isTrayButton: N,
             applyStyles: P = !1,
         } = e,
@@ -276,7 +276,7 @@ function A(e) {
               ref: n,
               className: o()(
                   h.attachedCaretButtonContainer,
-                  A && h.popoutOpen,
+                  C && h.popoutOpen,
                   g,
                   U && [h.fullRegionDropdownButton, I[D]],
               ),
@@ -286,16 +286,16 @@ function A(e) {
                       ? (0, r.jsx)(p.Z, {
                             children: (0, r.jsx)(c.P3F, {
                                 "aria-label": m.intl.string(m.t.PdRCRg),
-                                onClick: C ? void 0 : v,
+                                onClick: A ? void 0 : v,
                                 className: o()(
                                     h.contextMenuNub,
                                     N && h.attachedCaret,
                                     T[w],
-                                    A && [h.popoutOpen, h.active],
-                                    C && h.disabled,
+                                    C && [h.popoutOpen, h.active],
+                                    A && h.disabled,
                                 ),
                                 children: (0, r.jsx)(d.Z, {
-                                    className: o()(h.contextMenuCaret, A && h.open, C && h.disabled),
+                                    className: o()(h.contextMenuCaret, C && h.open, A && h.disabled),
                                 }),
                             }),
                         })

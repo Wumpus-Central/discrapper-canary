@@ -4,11 +4,11 @@ n.d(t, {
     Mn: () => h,
     NI: () => S,
     OU: () => P,
-    P6: () => C,
+    P6: () => A,
     S2: () => m,
     V3: () => g,
     W0: () => b,
-    W3: () => A,
+    W3: () => C,
     ZB: () => O,
     Zy: () => p,
     b9: () => I,
@@ -122,9 +122,9 @@ function h(e) {
     let I = i.K.get(c.JkL),
         T = (0, u.xJ)();
     null != T && null != I && ((S.push_provider = T), (S.push_token = I));
-    let A = i.K.get(c.scU);
+    let C = i.K.get(c.scU);
     return (
-        null != u.mv && null != A && ((S.push_voip_provider = u.mv), (S.push_voip_token = A)),
+        null != u.mv && null != C && ((S.push_voip_provider = u.mv), (S.push_voip_token = C)),
         m(S).then(
             (e) => (
                 o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS" }),
@@ -192,10 +192,10 @@ function I() {
 function T() {
     o.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 }
-function A() {
+function C() {
     o.Z.dispatch({ type: "USER_SETTINGS_RESET_ALL_PENDING" });
 }
-function C() {
+function A() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM" });
 }
 function N() {

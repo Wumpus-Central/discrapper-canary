@@ -34,8 +34,8 @@ let y = [E.ff.AUTHENTICATION_FAILED, E.ff.NOT_ENTITLED],
     S = [],
     I = !1,
     T = null,
-    A = null,
-    C = !1,
+    C = null,
+    A = !1,
     N = new Map(),
     P = !1,
     R = null;
@@ -50,7 +50,7 @@ function D() {
 function w(e, t) {
     return (
         (null != T && T.applicationId === e && T.branchId === t) ||
-        (null != A && A.applicationId === e && A.branchId === t)
+        (null != C && C.applicationId === e && C.branchId === t)
     );
 }
 function x() {
@@ -123,9 +123,9 @@ function V(e) {
 }
 function H(e) {
     let { state: t } = e;
-    !C && ((C = !0), x(), I || _.Z.resume());
+    !A && ((A = !0), x(), I || _.Z.resume());
     let n = I;
-    (I = t.paused), (T = t.currentTask), (A = t.nextTask);
+    (I = t.paused), (T = t.currentTask), (C = t.nextTask);
     let r = !1;
     (v = v.filter((e) => {
         let { comboId: t } = e,

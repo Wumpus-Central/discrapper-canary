@@ -21,8 +21,8 @@ var l = n(544891),
     u = n(208665),
     m = n(981631),
     g = n(290511),
-    h = n(388032);
-function f(e) {
+    f = n(388032);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -71,7 +71,7 @@ function I() {
 function p(e, t, n) {
     E(
         e,
-        u.Z.editedOnboardingPrompts.map((e) => (e.id === t ? f({}, e, n) : e)),
+        u.Z.editedOnboardingPrompts.map((e) => (e.id === t ? h({}, e, n) : e)),
     );
 }
 function O(e, t) {
@@ -105,7 +105,7 @@ async function S(e, t) {
             let l = t.options.map((t) => {
                 let n = null == t.roleIds ? t.roleIds : t.roleIds.filter((t) => null != c.Z.getRole(e.id, t)),
                     l = null == t.channelIds ? t.channelIds : t.channelIds.filter((e) => null != o.Z.getChannel(e));
-                return N(f({}, t), {
+                return N(h({}, t), {
                     roleIds: n,
                     channelIds: l,
                     emoji: (function (e) {
@@ -119,7 +119,7 @@ async function S(e, t) {
                     })(t),
                 });
             });
-            return N(f({}, t), {
+            return N(h({}, t), {
                 options: l,
                 type: l.length >= g.fY ? g.FN.DROPDOWN : g.FN.MULTIPLE_CHOICE,
             });
@@ -138,8 +138,8 @@ async function S(e, t) {
     if (m.length > g.b3)
         throw (
             (r.Z.show({
-                title: h.intl.string(h.t.iLdiqY),
-                body: h.intl.formatToPlainString(h.t["cTb/rg"], { numQuestions: g.b3 }),
+                title: f.intl.string(f.t.iLdiqY),
+                body: f.intl.formatToPlainString(f.t["cTb/rg"], { numQuestions: g.b3 }),
             }),
             i.Z.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
@@ -161,7 +161,7 @@ async function S(e, t) {
         let { fieldName: e, error: t } = null != (E = new a.Hx(n).getAnyErrorMessageAndField()) ? E : {};
         throw (
             (r.Z.show({
-                title: h.intl.string(h.t.iLdiqY),
+                title: f.intl.string(f.t.iLdiqY),
                 body: [e, t].filter(d.lm).join(": "),
             }),
             i.Z.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED" }),
@@ -181,7 +181,7 @@ async function x(e, t) {
         var n;
         let { fieldName: e, error: t } = null != (n = new a.Hx(l).getAnyErrorMessageAndField()) ? n : {};
         r.Z.show({
-            title: h.intl.string(h.t.iLdiqY),
+            title: f.intl.string(f.t.iLdiqY),
             body: [e, t].filter(d.lm).join(": "),
         });
     }
@@ -197,11 +197,11 @@ function _(e, t, n) {
     let l = { optionErrors: [] },
         i = !1;
     return (
-        n.title.length <= 0 && ((l.title = h.intl.string(h.t.h8Hg1T)), (i = !0)),
-        n.options.length <= 0 && ((l.options = h.intl.string(h.t["64tF+W"])), (i = !0)),
+        n.title.length <= 0 && ((l.title = f.intl.string(f.t.h8Hg1T)), (i = !0)),
+        n.options.length <= 0 && ((l.options = f.intl.string(f.t["64tF+W"])), (i = !0)),
         n.inOnboarding &&
             t.filter((e) => e.inOnboarding).length > g.b3 &&
-            ((l.config = h.intl.formatToPlainString(h.t["cTb/rg"], { numQuestions: g.b3 })), (i = !0)),
+            ((l.config = f.intl.formatToPlainString(f.t["cTb/rg"], { numQuestions: g.b3 })), (i = !0)),
         (l.optionErrors = n.options.map((l) => j(e, t, n, l))),
         (i = i || l.optionErrors.some((e) => null != e)) ? l : null
     );
@@ -213,10 +213,10 @@ function j(e, t, n, l) {
         for (let l of t)
             if (l.id !== n.id) {
                 for (let t of l.options)
-                    if (null != t.roleIds && t.roleIds.some((t) => e.has(t))) return h.intl.string(h.t.rKxyvd);
+                    if (null != t.roleIds && t.roleIds.some((t) => e.has(t))) return f.intl.string(f.t.rKxyvd);
             }
     }
     let s = (null != (r = l.roleIds) ? r : []).filter((t) => null != c.Z.getRole(e.id, t)),
         d = (null != (a = l.channelIds) ? a : []).filter((e) => null != o.Z.getChannel(e));
-    return 0 === s.length && 0 === d.length ? h.intl.string(h.t.F6SUWB) : null;
+    return 0 === s.length && 0 === d.length ? f.intl.string(f.t.F6SUWB) : null;
 }

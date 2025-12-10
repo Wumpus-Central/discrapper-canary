@@ -118,25 +118,25 @@ let y = (e) => {
             "onClick",
             "selected",
         ]);
-    let A = (0, s.k6)();
+    let C = (0, s.k6)();
     null == p && null != h && (n = E((t = (0, c.Zg)(h))));
-    let C = i.useCallback(
+    let A = i.useCallback(
             (e) => {
                 if (null == v);
-                else if ("string" == typeof v) A.push(v);
+                else if ("string" == typeof v) C.push(v);
                 else {
                     let { pathname: e = "", state: t } = v;
-                    A.push(e, t);
+                    C.push(e, t);
                 }
                 null != S && S(e);
             },
-            [A, v, S],
+            [C, v, S],
         ),
         N = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, r.jsxs)(
         l.P3F,
         _(f({}, T), {
-            onClick: C,
+            onClick: A,
             className: o()(y, u.wrapper, { [u.selected]: I }),
             style: _(f({}, O), { fontSize: n }),
             focusProps: { enabled: !1 },

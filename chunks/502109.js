@@ -1,6 +1,6 @@
 n.d(t, {
-    Ch: () => C,
-    Tr: () => A,
+    Ch: () => A,
+    Tr: () => C,
 }),
     n(642613),
     n(388685);
@@ -258,7 +258,7 @@ class T extends i.Component {
             });
     }
 }
-class A extends T {
+class C extends T {
     validatePaymentRequest() {
         let { paymentRequest: e, canMakePaymentResult: t } = this.state;
         if (null == e) {
@@ -319,7 +319,7 @@ class A extends T {
             b(this, "paymentRequestWalletName", "Google Pay");
     }
 }
-class C extends T {
+class A extends T {
     validatePaymentRequest() {
         let { paymentRequest: e, canMakePaymentResult: t } = this.state;
         if (null == e) {

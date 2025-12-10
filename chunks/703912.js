@@ -10,8 +10,8 @@ var r = n(664751),
     d = n(433517),
     p = n(570140),
     f = n(812206),
-    h = n(979200),
-    g = n(489863),
+    g = n(979200),
+    h = n(489863),
     m = n(166148),
     _ = n(307643),
     b = n(973616),
@@ -119,7 +119,7 @@ async function P(e, t, n) {
     }
     try {
         [o, { disclosures: c, allAcked: u }] = await Promise.all([
-            (0, g.Ww)({
+            (0, h.Ww)({
                 clientId: d,
                 scopes: U,
                 responseType: p,
@@ -130,7 +130,7 @@ async function P(e, t, n) {
                 integrationType: l,
                 signal: M,
             }),
-            (0, h.de)(d),
+            (0, g.de)(d),
         ]);
     } catch (t) {
         let { body: e } = t;
@@ -142,7 +142,7 @@ async function P(e, t, n) {
     if (w === m.s.NONE && null != o && o.authorized && u)
         try {
             return (
-                await (0, g.Iq)({
+                await (0, h.Iq)({
                     authorize: !0,
                     clientId: d,
                     scopes: U,

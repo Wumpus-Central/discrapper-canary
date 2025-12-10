@@ -34,8 +34,8 @@ let v = new Set(),
     S = {},
     I = new Set(),
     T = {},
-    A = new Set(),
-    C = {},
+    C = new Set(),
+    A = {},
     N = 10 * E.Z.Millis.MINUTE,
     P = 6 * E.Z.Millis.HOUR,
     R = 10 * E.Z.Millis.MINUTE,
@@ -50,15 +50,15 @@ function L() {
     if (!(0, y.Q)() || p.bm.getSetting()) return !1;
     let e = m.Z.entitledBranchIds,
         t = [];
-    for (let n of e) C.hasOwnProperty(n) || ((C[n] = null), t.push(n));
+    for (let n of e) A.hasOwnProperty(n) || ((A[n] = null), t.push(n));
     if (0 === t.length) return !1;
     l.Z.wait(() => c.o(t));
 }
 function j() {
     if (!(0, y.Q)()) return !1;
-    for (let e of A) {
+    for (let e of C) {
         let { applicationId: t, branchId: n } = (0, b.CP)(e);
-        null != f.Z.getApplication(t) && (A.delete(e), M(t, n));
+        null != f.Z.getApplication(t) && (C.delete(e), M(t, n));
     }
 }
 function M(e, t) {
@@ -71,7 +71,7 @@ function M(e, t) {
             (i.buildId !== n.id || !a().isEqual(i.manifestIds, r)) &&
             l.Z.wait(() => {
                 let i = f.Z.getApplication(e);
-                null != i ? (A.delete((0, b.Tu)(e, t)), (0, d.li)(i, t, n.id, r, !0)) : A.add((0, b.Tu)(e, t));
+                null != i ? (C.delete((0, b.Tu)(e, t)), (0, d.li)(i, t, n.id, r, !0)) : C.add((0, b.Tu)(e, t));
             });
     }
 }
@@ -122,11 +122,11 @@ function V(e) {
     }
     for (let e of t) {
         let { id: t, liveBuildId: r } = e;
-        if (r !== C[t]) {
+        if (r !== A[t]) {
             let e = n[t];
             null != e && l.Z.wait(() => u.l(e.id, e.branchId, !0));
         }
-        C[t] = r;
+        A[t] = r;
     }
     w(P);
 }

@@ -34,8 +34,8 @@ var r,
     S = n(706454),
     I = n(581883),
     T = n(271383),
-    A = n(93093),
-    C = n(485386),
+    C = n(93093),
+    A = n(485386),
     N = n(430824),
     P = n(771845),
     R = n(594174),
@@ -206,7 +206,7 @@ async function ed() {
 }
 function ef(e) {
     let { emojis: t } = e;
-    for (let [e] of t) !Object.hasOwn(ea, e) && A.Z.isMember(e) && ev(e);
+    for (let [e] of t) !Object.hasOwn(ea, e) && C.Z.isMember(e) && ev(e);
     eO();
 }
 let ep = (e) => ({
@@ -503,10 +503,10 @@ function eI(e) {
 function eT() {
     (X.pendingUsages = []), (X.emojiReactionPendingUsages = []);
 }
-function eA() {
+function eC() {
     eb();
 }
-function eC(e) {
+function eA(e) {
     1 === er && "update" === e.guild.emojis.op && null == e.guild.emojis.items && (er = 0), ev(e.guild.id), eO();
 }
 function eN(e) {
@@ -635,7 +635,7 @@ function eG(e) {
             guildId: t,
             role: { id: n },
         } = e,
-        r = C.Z.getRole(t, n);
+        r = A.Z.getRole(t, n);
     if (!(null != r && (0, b.Z)(r))) return !1;
     ev(t), eO();
 }
@@ -653,7 +653,7 @@ function eB(e) {
 }
 class eF extends (r = d.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(E.Z, T.ZP, A.Z, C.Z, N.Z, S.default, U.Z, P.ZP, O.Z, Z.Z, I.Z, R.default),
+        this.waitFor(E.Z, T.ZP, C.Z, A.Z, N.Z, S.default, U.Z, P.ZP, O.Z, Z.Z, I.Z, R.default),
             null != e &&
                 (null != e.pendingUsages && (X.pendingUsages = e.pendingUsages),
                 null != e.emojiReactionPendingUsages && (X.emojiReactionPendingUsages = e.emojiReactionPendingUsages),
@@ -814,12 +814,12 @@ class eF extends (r = d.ZP.PersistedStore) {
 W(eF, "displayName", "EmojiStore"), W(eF, "persistKey", "EmojiStoreV2"), W(eF, "migrations", [(e) => K({}, e)]);
 let eV = new eF(f.Z, {
     LOGOUT: eT,
-    BACKGROUND_SYNC: eA,
+    BACKGROUND_SYNC: eC,
     CONNECTION_OPEN: eS,
     OVERLAY_INITIALIZE: eI,
     CACHED_EMOJIS_LOADED: ef,
     GUILD_MEMBER_UPDATE: eD,
-    GUILD_CREATE: eC,
+    GUILD_CREATE: eA,
     GUILD_UPDATE: eN,
     GUILD_EMOJIS_UPDATE: eP,
     GUILD_DELETE: eR,

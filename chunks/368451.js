@@ -168,8 +168,8 @@ function I(e) {
         T = (0, p.CJ)();
     l()(null != T, "StringSelectActionComponent must be rendered inside a ComponentStateContext");
     let {
-            state: A,
-            executeStateUpdate: C,
+            state: C,
+            executeStateUpdate: A,
             visualState: N,
             isDisabled: P,
             error: R,
@@ -190,22 +190,22 @@ function I(e) {
         [U, G] = i.useState(M),
         Z = i.useMemo(() => n.some((e) => null != e.emoji), [n]);
     i.useEffect(() => {
-        if ((null == A ? void 0 : A.type) === d.re.STRING_SELECT) {
-            let e = new Set(A.values);
+        if ((null == C ? void 0 : C.type) === d.re.STRING_SELECT) {
+            let e = new Set(C.values);
             k(e), G(e);
         } else {
             let e = new Set(I);
             k(e), G(e);
         }
-    }, [a, I, A]);
+    }, [a, I, C]);
     let B = i.useCallback(() => {
         U !== M &&
-            C({
+            A({
                 type: d.re.STRING_SELECT,
                 values: Array.from(M),
             }) &&
             G(M);
-    }, [M, U, G, C]);
+    }, [M, U, G, A]);
     i.useEffect(() => {
         !L && ((M.size === U.size && Array.from(U).every((e) => M.has(e))) || B());
     }, [L, M, U, B]);

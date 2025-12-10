@@ -33,8 +33,8 @@ var r = n(512722),
     S = n(12647),
     I = n(70956),
     T = n(358085),
-    A = n(960048),
-    C = n(138859),
+    C = n(960048),
+    A = n(138859),
     N = n(14639),
     P = n(639655),
     R = n(249308),
@@ -224,7 +224,7 @@ class ei extends L.Z {
             (this.heartbeatQOSState.upcomingState = e);
     }
     handleUpdateTimeSpentSessionId(e, t, n) {
-        this.connectionState_ === C.Z.SESSION_ESTABLISHED &&
+        this.connectionState_ === A.Z.SESSION_ESTABLISHED &&
             (this.send(L.j.UPDATE_TIME_SPENT_SESSION_ID, {
                 initialization_timestamp: e,
                 session_id: t,
@@ -236,7 +236,7 @@ class ei extends L.Z {
         if (!this.willReconnect()) return void V.verbose("Skipping _connect because willReconnect is false");
         let t = j.a();
         if ((t || !M.RZ()) && (V.info("Skipping _connect because socket is paused"), Y({ reason: e }), t)) return;
-        (this.connectionState = C.Z.CONNECTING), (this.nextReconnectIsImmediate = !1);
+        (this.connectionState = A.Z.CONNECTING), (this.nextReconnectIsImmediate = !1);
         let n = this.compressionHandler.getAlgorithm(),
             r = H.getName(),
             i = this._getGatewayUrl(),
@@ -356,7 +356,7 @@ class ei extends L.Z {
     _handleReconnect() {
         V.verbose("[RECONNECT] gateway requested I reconnect."),
             this._cleanup((e) => e.close(4000)),
-            (this.connectionState = C.Z.WILL_RECONNECT),
+            (this.connectionState = A.Z.WILL_RECONNECT),
             this._connect("reconnect");
     }
     _handleInvalidSession(e) {
@@ -372,19 +372,19 @@ class ei extends L.Z {
             o.Z.setServerTrace(n),
                 V.info("[READY] took ".concat(r, "ms, as ").concat(t)),
                 V.verbose("".concat(n)),
-                (this.connectionState = C.Z.SESSION_ESTABLISHED),
+                (this.connectionState = A.Z.SESSION_ESTABLISHED),
                 this.gatewayBackoff.succeed(),
                 (this.iosGoingAwayEventCount = 0),
                 this.setResumeUrl(e.resume_gateway_url);
         } else
             "READY_SUPPLEMENTAL" === t
                 ? (V.info("[READY_SUPPLEMENTAL] took ".concat(r, "ms")),
-                  (this.connectionState = C.Z.SESSION_ESTABLISHED),
+                  (this.connectionState = A.Z.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0))
                 : "RESUMED" === t &&
                   (V.verbose((0, w.TO)(e)),
-                  (this.connectionState = C.Z.SESSION_ESTABLISHED),
+                  (this.connectionState = A.Z.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0));
         this.dispatcher.receiveDispatch(e, t, n);
@@ -420,7 +420,7 @@ class ei extends L.Z {
                 V.verbose("Expedited heartbeat succeeded"));
     }
     _handleHeartbeatTimeout() {
-        this._cleanup((e) => e.close(4000)), (this.connectionState = C.Z.WILL_RECONNECT);
+        this._cleanup((e) => e.close(4000)), (this.connectionState = A.Z.WILL_RECONNECT);
         let e = this.gatewayBackoff.fail(() => this._connect("_handleHeartbeatTimeout"));
         V.warn("[ACK TIMEOUT] reconnecting in ".concat((e / 1000).toFixed(2), " seconds."));
     }
@@ -435,13 +435,13 @@ class ei extends L.Z {
             t === X)
         )
             return (
-                (this.connectionState = C.Z.CLOSED),
+                (this.connectionState = A.Z.CLOSED),
                 V.warn("[WS CLOSED] because of authentication failure, marking as closed."),
                 this._reset(e, t, n)
             );
         if (
             (this._tryDetectInvalidIOSToken(t, n, e),
-            (this.connectionState = C.Z.WILL_RECONNECT),
+            (this.connectionState = A.Z.WILL_RECONNECT),
             this.nextReconnectIsImmediate)
         )
             V.info("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying immediately.")),
@@ -479,7 +479,7 @@ class ei extends L.Z {
                         (e) => {
                             let { status: t } = e;
                             401 === t &&
-                                ((this.connectionState = C.Z.CLOSED),
+                                ((this.connectionState = A.Z.CLOSED),
                                 V.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
                                 this._reset(n, X, "invalid token manually detected")),
                                 v.default.track(U.rMx.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
@@ -542,7 +542,7 @@ class ei extends L.Z {
     }
     _doResume() {
         var e;
-        (this.connectionState = C.Z.RESUMING),
+        (this.connectionState = A.Z.RESUMING),
             (this.dispatcher.resumeAnalytics = (0, w.zH)(Date.now() - this.connectionStartTime)),
             V.info(
                 "[RESUME] resuming session ".concat(null != (e = this.sessionId) ? e : "", ", seq: ").concat(this.seq),
@@ -561,7 +561,7 @@ class ei extends L.Z {
         (this.seq = 0), (this.sessionId = null);
         let e = this.handleIdentify();
         if (null === e) return void this._handleClose(!0, X, "No connection info provided");
-        this.connectionState = C.Z.IDENTIFYING;
+        this.connectionState = A.Z.IDENTIFYING;
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, r, i] = await Promise.all([
@@ -581,7 +581,7 @@ class ei extends L.Z {
                       initial_guild_id: r.initial_guild_id,
                   }
                 : { guild_versions: {} };
-        if (this.connectionState !== C.Z.IDENTIFYING || this.identifyStartTime !== t)
+        if (this.connectionState !== A.Z.IDENTIFYING || this.identifyStartTime !== t)
             return void V.warn("Skipping identify because connectionState or identifyStartTime has changed");
         let { token: s, properties: l = {}, presence: c } = e;
         (this.token = s), V.verbose("[IDENTIFY]");
@@ -606,7 +606,7 @@ class ei extends L.Z {
         if (null === e) return void this._handleClose(!0, X, "No connection info provided");
         let { token: t } = e;
         (this.token = t),
-            (this.connectionState = C.Z.IDENTIFYING),
+            (this.connectionState = A.Z.IDENTIFYING),
             (this.identifyStartTime = Date.now()),
             (this.identifyCount += 1),
             V.verbose("[IDENTIFY, fast-connect]"),
@@ -648,25 +648,25 @@ class ei extends L.Z {
         return V;
     }
     willReconnect() {
-        return this.connectionState === C.Z.WILL_RECONNECT;
+        return this.connectionState === A.Z.WILL_RECONNECT;
     }
     isClosed() {
-        return this.connectionState === C.Z.CLOSED;
+        return this.connectionState === A.Z.CLOSED;
     }
     isSessionEstablished() {
-        return this.connectionState === C.Z.SESSION_ESTABLISHED || this.connectionState === C.Z.RESUMING;
+        return this.connectionState === A.Z.SESSION_ESTABLISHED || this.connectionState === A.Z.RESUMING;
     }
     isConnected() {
         return (
-            this.connectionState === C.Z.IDENTIFYING ||
-            this.connectionState === C.Z.RESUMING ||
-            this.connectionState === C.Z.SESSION_ESTABLISHED
+            this.connectionState === A.Z.IDENTIFYING ||
+            this.connectionState === A.Z.RESUMING ||
+            this.connectionState === A.Z.SESSION_ESTABLISHED
         );
     }
     connect() {
         return this.isClosed()
             ? (V.verbose(".connect() called, new state is WILL_RECONNECT"),
-              (this.connectionState = C.Z.WILL_RECONNECT),
+              (this.connectionState = A.Z.WILL_RECONNECT),
               this._connect("connect"),
               !0)
             : (V.error("Cannot start a new connection, connection state is not closed"), !1);
@@ -682,7 +682,7 @@ class ei extends L.Z {
             },
             !0,
         ),
-            !1 !== e.sentry && A.Z.captureException(n, { tags: { socketCrashedAction: t } }),
+            !1 !== e.sentry && C.Z.captureException(n, { tags: { socketCrashedAction: t } }),
             v.default.track(U.rMx.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
@@ -692,7 +692,7 @@ class ei extends L.Z {
             this._cleanup((e) => e.close()),
             this._reset(!0, 1000, "Resetting socket due to error."),
             this.dispatcher.clear(),
-            (this.connectionState = C.Z.WILL_RECONNECT),
+            (this.connectionState = A.Z.WILL_RECONNECT),
             this.dispatchExceptionBackoff.cancel();
         let a = e.clearCache || this.dispatchExceptionBackoff._fails > 0;
         0 === this.dispatchExceptionBackoff._fails
@@ -724,7 +724,7 @@ class ei extends L.Z {
         V.info("Closing connection, current state is ".concat(this.connectionState));
         let t = e ? 4000 : void 0;
         this._cleanup((e) => e.close(t)),
-            (this.connectionState = C.Z.CLOSED),
+            (this.connectionState = A.Z.CLOSED),
             e ||
                 setImmediate(() => {
                     this._reset(!0, 1000, "Disconnect requested by user");
@@ -773,7 +773,7 @@ class ei extends L.Z {
             (this.nextReconnectIsImmediate = !0),
             this.willReconnect()
                 ? this._connect(e)
-                : t && this.connectionState !== C.Z.SESSION_ESTABLISHED && this._handleClose(!0, 0, e);
+                : t && this.connectionState !== A.Z.SESSION_ESTABLISHED && this._handleClose(!0, 0, e);
     }
     constructor() {
         super(),
@@ -826,7 +826,7 @@ class ei extends L.Z {
             }),
             (this.dispatcher = new x.Z(this)),
             (this.gatewayBackoff = new s.Z(1000, 60000)),
-            (this.connectionState_ = C.Z.CLOSED),
+            (this.connectionState_ = A.Z.CLOSED),
             (this.webSocket = null),
             (this.seq = 0),
             (this.sessionId = null),

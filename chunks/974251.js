@@ -37,8 +37,8 @@ var i = n(54381),
     k = n(951211),
     U = n(981631),
     V = n(356659),
-    B = n(921944),
-    F = n(388032),
+    F = n(921944),
+    B = n(388032),
     H = n(90274);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -200,12 +200,12 @@ let z = r.memo(function (e) {
             position: "top",
             positionKey: null != eh ? eh : "null",
             onRequestOpen: () => {
-                ey && (0, _.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: B.L.TAKE_ACTION }),
+                ey && (0, _.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: F.L.TAKE_ACTION }),
                     ef("attachMenu");
             },
             onRequestClose: () => {
                 (0, c.$sL)() ||
-                    (ey && (0, _.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: B.L.TAKE_ACTION }), ef(null));
+                    (ey && (0, _.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: F.L.TAKE_ACTION }), ef(null));
             },
             renderPopout: (e) => {
                 switch (eh) {
@@ -249,7 +249,7 @@ let z = r.memo(function (e) {
                                 className: a()(H.attachButton, z),
                                 childClassName: H.attachButtonInner,
                                 isActive: !1,
-                                "aria-label": F.intl.string(F.t.d56gCa),
+                                "aria-label": B.intl.string(B.t.d56gCa),
                                 onDoubleClick: eb
                                     ? () => {
                                           var e;

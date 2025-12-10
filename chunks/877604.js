@@ -39,7 +39,7 @@ class u extends (r = l.PureComponent) {
     render() {
         var e, t;
         let { className: n, src: r, alt: l, width: a, height: u, onLoad: d, style: p, imageClassName: f } = this.props,
-            { loaded: h } = this.state;
+            { loaded: g } = this.state;
         return (0, i.jsx)("div", {
             className: n,
             style:
@@ -78,7 +78,7 @@ class u extends (r = l.PureComponent) {
                       }),
                 e),
             children: (0, i.jsx)("img", {
-                className: s()(o.image, f, { [o.loaded]: h }),
+                className: s()(o.image, f, { [o.loaded]: g }),
                 width: a,
                 height: u,
                 src: r,

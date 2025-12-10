@@ -1,10 +1,10 @@
 n.d(t, {
     Ng: () => O,
-    OC: () => A,
+    OC: () => C,
     dg: () => v,
     dp: () => g,
     f3: () => b,
-    iL: () => C,
+    iL: () => A,
     nA: () => S,
     qF: () => h,
     uV: () => y,
@@ -120,13 +120,13 @@ function I(e) {
     return t;
 }
 function T(e) {
-    return I(e) > A();
+    return I(e) > C();
 }
-function A() {
+function C() {
     let e = l.default.getCurrentUser();
     return null != e && e.isStaff() ? m : _;
 }
-function C(e) {
+function A(e) {
     let { guildId: t, onClick: n } = e,
         r = (0, c.BU)(v(t) / 1024, { useKibibytes: !0 }),
         i = (0, c.BU)(f.Uq / 1024, { useKibibytes: !0 });

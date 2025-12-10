@@ -10,8 +10,8 @@ var i = n(570140),
     d = n(199902),
     p = n(592125),
     f = n(819640),
-    h = n(131951),
-    g = n(366050),
+    g = n(131951),
+    h = n(366050),
     m = n(19780),
     _ = n(944486),
     b = n(914010),
@@ -21,7 +21,7 @@ var i = n(570140),
 function y() {
     var e;
     let t = r;
-    if (null == t || !g.Z.isOpen(t)) return !1;
+    if (null == t || !h.Z.isOpen(t)) return !1;
     i.Z.wait(() => l.xv(t)), null == (e = m.Z.getRTCConnection()) || e.setPipOpen(!1), (r = null);
 }
 function I() {
@@ -32,14 +32,14 @@ function I() {
         (function () {
             let e = m.Z.getChannelId(),
                 t = _.Z.getChannelId();
-            if (!h.Z.supports(v.AN.VIDEO) || u.Z.getWindowOpen(O.KJ3.CHANNEL_CALL_POPOUT)) return !0;
+            if (!g.Z.supports(v.AN.VIDEO) || u.Z.getWindowOpen(O.KJ3.CHANNEL_CALL_POPOUT)) return !0;
             let n = null != e && d.Z.getAllActiveStreams().some((t) => !o.Z.isParticipantPoppedOut(e, (0, c.V9)(t)));
             if (
                 !(
                     (null != e &&
                         Object.values(E.Z.getVideoVoiceStatesForChannel(e)).some((t) => {
                             let { userId: n } = t;
-                            return !h.Z.isLocalVideoDisabled(n) && !o.Z.isParticipantPoppedOut(e, n);
+                            return !g.Z.isLocalVideoDisabled(n) && !o.Z.isParticipantPoppedOut(e, n);
                         })) ||
                     n
                 )
@@ -53,7 +53,7 @@ function I() {
     if ((n || y(), null == t)) return !1;
     let a = p.Z.getChannel(t);
     return (
-        !(null == a || g.Z.isOpen(t)) &&
+        !(null == a || h.Z.isOpen(t)) &&
         (i.Z.wait(() => l.bA(a.id, O.NYg.VIDEO, { channel: a })),
         null == (e = m.Z.getRTCConnection()) || e.setPipOpen(!0),
         void (r = t))
@@ -68,7 +68,7 @@ class C extends a.Z {
             f.Z.addChangeListener(I),
             d.Z.addChangeListener(I),
             u.Z.addChangeListener(I),
-            h.Z.addChangeListener(I),
+            g.Z.addChangeListener(I),
             s.ZP.addChangeListener(I),
             o.Z.addChangeListener(I);
     }
@@ -80,7 +80,7 @@ class C extends a.Z {
             f.Z.removeChangeListener(I),
             d.Z.removeChangeListener(I),
             u.Z.removeChangeListener(I),
-            h.Z.removeChangeListener(I),
+            g.Z.removeChangeListener(I),
             s.ZP.removeChangeListener(I),
             o.Z.removeChangeListener(I);
     }

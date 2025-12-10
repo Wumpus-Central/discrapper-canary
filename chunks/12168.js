@@ -8,7 +8,7 @@ var r = n(54381),
     a = n(120356),
     o = n.n(a),
     s = n(392711),
-    l = n(205120),
+    l = n(467721),
     c = n(681715),
     u = n(481060),
     d = n(596454),
@@ -38,7 +38,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +54,7 @@ function A(e) {
     }
     return e;
 }
-function C(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,7 +71,7 @@ function N(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -148,7 +148,7 @@ function x(e) {
             emojiSearchProps: g,
             recentlyUsedEmojis: y,
             analyticsOverride: T,
-            ref: C,
+            ref: A,
         } = e,
         x = (0, f.Dt)(),
         [L, j] = i.useState(!1),
@@ -177,7 +177,7 @@ function x(e) {
         };
     return (0, r.jsxs)(u.VqE, {
         "aria-labelledby": x,
-        ref: C,
+        ref: A,
         children: [
             (0, r.jsx)(u.y5t, {
                 forceLevel: 2,
@@ -201,7 +201,7 @@ function x(e) {
                         shouldHidePickerActions: !L,
                         wrapper: "div",
                         pickerIntention: P,
-                        searchProps: N(A({}, g), {
+                        searchProps: N(C({}, g), {
                             accessory: (0, r.jsx)(w, {
                                 otherAccessories: null == g ? void 0 : g.accessory,
                                 isEmojiPickerExpanded: L,

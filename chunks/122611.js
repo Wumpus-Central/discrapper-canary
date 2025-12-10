@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(834743),
     p = n(862099),
     f = n(704631),
-    h = n(819792),
-    g = n(919285),
+    g = n(819792),
+    h = n(919285),
     m = n(118470),
     _ = n(413307),
     b = n(374023),
@@ -29,8 +29,8 @@ function N(e) {
 function j(e) {
     var t;
     let { guild: n } = e,
-        [p, h] = i.useState(null != (t = s.K.get(C.Iv)) ? t : 0),
-        g = (0, l.Wu)(
+        [p, g] = i.useState(null != (t = s.K.get(C.Iv)) ? t : 0),
+        h = (0, l.Wu)(
             C.HG,
             () =>
                 C.XN.filter((e) => {
@@ -40,13 +40,13 @@ function j(e) {
             [n, p],
         );
     return (0, r.jsx)(c.ZP, {
-        contentTypes: g,
+        contentTypes: h,
         groupName: S.R.CHANNEL_NOTICES,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e,
                 l = () => {
                     var e;
-                    (e = Date.now()), s.K.set(C.Iv, e), h(e), i(S.L.UNKNOWN);
+                    (e = Date.now()), s.K.set(C.Iv, e), g(e), i(S.L.UNKNOWN);
                 },
                 c = (() => {
                     switch (t) {
@@ -105,11 +105,11 @@ let P = (e) => {
         case I.R.GUILD_MFA_WARNING:
             return (0, r.jsx)(E.Z, { guild: t });
         case I.R.COMMANDS_MIGRATION:
-            return (0, r.jsx)(g.Z, { guild: t });
+            return (0, r.jsx)(h.Z, { guild: t });
         case I.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, r.jsx)(m.Z, { guild: t });
         case I.R.HUB_STUDY_ROOM:
-            return (0, r.jsx)(h.Z, { guild: t });
+            return (0, r.jsx)(g.Z, { guild: t });
     }
     return b.s.isDisallowPopupsSet() ? null : (0, r.jsx)(j, { guild: e.guild });
 };

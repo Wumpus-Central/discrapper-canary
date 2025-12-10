@@ -23,8 +23,8 @@ var a = n(442837),
     S = n(218543),
     I = n(314897),
     T = n(944486),
-    A = n(914010),
-    C = n(449934),
+    C = n(914010),
+    A = n(449934),
     N = n(358085),
     P = n(576376),
     R = n(38217),
@@ -117,7 +117,7 @@ async function J(e, t, n) {
     L.verbose("loading early cache");
     let c = O.Z.getSocket();
     c.connect();
-    let u = null != (r = A.Z.getGuildId()) ? r : null,
+    let u = null != (r = C.Z.getGuildId()) ? r : null,
         d = null != (o = T.Z.getChannelId()) ? o : null,
         f = performance.now(),
         p = S.Z.loadCachedMessages.measureAsyncWithoutNesting(() => X(e, u, d)),
@@ -132,11 +132,11 @@ async function J(e, t, n) {
                 ? Promise.resolve({})
                 : i.Z.timeAsync("\uD83D\uDCBE", "cache: user_settings", () => h.Z.getAll(e)),
         I = null == e ? Promise.resolve([]) : i.Z.timeAsync("\uD83D\uDCBE", "cache: read_states", () => _.Z.getAll(e)),
-        C =
+        A =
             null == e
                 ? Promise.resolve([])
                 : i.Z.timeAsync("\uD83D\uDCBE", "cache: user_guild_settings", () => m.Z.getAll(e)),
-        [[N, P], R, w, x, j, M, k] = await Promise.all([p, E, b, y, v, I, C]),
+        [[N, P], R, w, x, j, M, k] = await Promise.all([p, E, b, y, v, I, A]),
         U = performance.now() - f;
     if ((L.verbose("cache loaded in ".concat(U, "ms (channel_history ").concat(N, "ms)")), null == P))
         return (
@@ -410,7 +410,7 @@ function ea(e) {
 }
 class eo extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(I.default, O.Z, T.Z, A.Z), j || O.Z.getSocket().dispatcher.unpauseDispatchQueue();
+        this.waitFor(I.default, O.Z, T.Z, C.Z), j || O.Z.getSocket().dispatcher.unpauseDispatchQueue();
     }
     hasCache() {
         return !j || Z;
@@ -422,7 +422,7 @@ class eo extends (r = a.ZP.Store) {
         return G;
     }
     canWriteCaches(e) {
-        return (0, C.$8)()
+        return (0, A.$8)()
             ? k
                 ? (L.log("Not writing cache because caches cleared"), !1)
                 : !!e || !!F || (L.log("Not writing cache because never connected"), !1)

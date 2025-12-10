@@ -12,11 +12,11 @@ var a = n(54381),
     p = n(297651),
     h = n(993222),
     x = n(932083),
-    f = n(719075),
-    g = n(558261),
-    b = n(311583),
-    v = n(786040),
-    j = n(659755),
+    f = n(704469),
+    g = n(719075),
+    b = n(558261),
+    v = n(311583),
+    j = n(786040),
     _ = n(406667),
     y = n(268865),
     C = n(361110),
@@ -49,15 +49,15 @@ let T = r.memo(function (e) {
                 prioritizedCurrency: W,
                 onClickAnalytics: z,
             } = e,
-            { previewingVariantIndex: K, handleEntering: q, handleLeaving: Q } = (0, C.f)(t),
-            Y = (0, v.jB)(),
+            { previewingVariantIndex: q, handleEntering: K, handleLeaving: Q } = (0, C.f)(t),
+            Y = (0, j.jB)(),
             X = (0, m.Nd)(),
             J = null == X ? void 0 : X.tab,
             $ = (0, S.zQ)(t),
             ee = r.useRef(null),
             { isHoveringOrFocusing: et } = (0, u.Z)(ee),
             { handleCardVisibilityChange: en } = (0, p.E)(t.skuId, J === E.AW.CATALOG ? "full" : J),
-            ea = (0, v.J7)(t, d.Z.COLLECTIBLES_SHOP_CARD, z, Y),
+            ea = (0, j.J7)(t, d.Z.COLLECTIBLES_SHOP_CARD, z, Y),
             er = t.type === s.Z.VARIANTS_GROUP && !T,
             ei = !P || !w,
             el = !(N && i) || er,
@@ -81,10 +81,10 @@ let T = r.memo(function (e) {
                     children: [
                         (0, a.jsx)("div", {
                             className: l()(O.productPreviewContainer, { [O.hasBottomContent]: !i || el || eo }),
-                            children: (0, a.jsx)(j.Z, {
+                            children: (0, a.jsx)(f.Z, {
                                 skuId: t.skuId,
                                 isCardHovered: et,
-                                overrideVariantIndex: K,
+                                overrideVariantIndex: q,
                             }),
                         }),
                         (0, a.jsxs)("div", {
@@ -128,7 +128,7 @@ let T = r.memo(function (e) {
                                                                         (0, a.jsx)("div", {
                                                                             className: O.footerInfoShrinkOnHover,
                                                                             "aria-hidden": !0,
-                                                                            children: (0, a.jsx)(f.Z, {
+                                                                            children: (0, a.jsx)(g.Z, {
                                                                                 skuId: t.skuId,
                                                                                 prioritizedCurrency: W,
                                                                             }),
@@ -139,7 +139,7 @@ let T = r.memo(function (e) {
                                                             (0, a.jsx)(_.Z, {
                                                                 skuId: t.skuId,
                                                                 isCollapsed: !et,
-                                                                onVariantEnter: q,
+                                                                onVariantEnter: K,
                                                                 onVariantExit: Q,
                                                             }),
                                                     ],
@@ -153,7 +153,7 @@ let T = r.memo(function (e) {
                                                         fullWidth: !0,
                                                         children: [
                                                             !P &&
-                                                                (0, a.jsx)(g.Z, {
+                                                                (0, a.jsx)(b.Z, {
                                                                     skuId: t.skuId,
                                                                     cardRef: ee,
                                                                     onClick: A,
@@ -162,7 +162,7 @@ let T = r.memo(function (e) {
                                                                     onClickAnalytics: z,
                                                                 }),
                                                             !w &&
-                                                                (0, a.jsx)(b.Z, {
+                                                                (0, a.jsx)(v.Z, {
                                                                     skuId: t.skuId,
                                                                     cardRef: ee,
                                                                     onClick: D,
@@ -205,7 +205,7 @@ let T = r.memo(function (e) {
                 }
                 return r;
             })(e, ["skuId"]),
-            r = (0, v.LJ)(t);
+            r = (0, j.LJ)(t);
         return null == r
             ? null
             : (0, a.jsx)(

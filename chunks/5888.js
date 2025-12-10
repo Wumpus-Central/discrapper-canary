@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => A,
+    Z: () => C,
     p: () => c,
 });
 var r,
@@ -114,7 +114,7 @@ class T extends (r = i.ZP.PersistedStore) {
     }
 }
 s(T, "displayName", "CheckpointStore"), s(T, "persistKey", "CheckpointStore");
-let A = new T(a.Z, {
+let C = new T(a.Z, {
     CHECKPOINT_FETCH_START: g,
     CHECKPOINT_FETCH_SUCCESS: E,
     CHECKPOINT_FETCH_FAILED: b,

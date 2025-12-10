@@ -88,7 +88,7 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -96,7 +96,7 @@ function T(e, t) {
     }
     return i;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -105,7 +105,7 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let C = 250,
+let A = 250,
     N = /-/g;
 function P(e) {
     let t = null != e ? { [e]: 1 } : {};
@@ -165,7 +165,7 @@ function D(e, t, n) {
                     }),
             );
 }
-let w = i().debounce(D, C);
+let w = i().debounce(D, A);
 function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;

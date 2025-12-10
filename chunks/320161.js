@@ -101,8 +101,8 @@ let b = u.Z.Millis.SECOND,
 function S(e) {
     let { text: t, copyValue: n, children: u, onCopy: f, "aria-label": p, delay: m = O, dataMeticulousIgnore: E } = e,
         [S, I] = i.useState(0),
-        [T, A] = i.useState(!1),
-        [C, N] = i.useState(!1),
+        [T, C] = i.useState(!1),
+        [A, N] = i.useState(!1),
         [P] = i.useState(() => new o.V7()),
         [R] = i.useState(() => new o.V7());
     if (
@@ -129,15 +129,15 @@ function S(e) {
             });
         },
         j = (e, t) => {
-            !C && T && t.phase === d.UkZ.LEAVE && A(!1);
+            !A && T && t.phase === d.UkZ.LEAVE && C(!1);
         },
         M = () => {
             null == f || f(),
                 (0, c.JG)(n),
                 l.default.track(d.rMx.TEXT_COPIED),
-                C || I(S + 1),
+                A || I(S + 1),
                 N(!0),
-                A(!0),
+                C(!0),
                 P.start(b, () => N(!1)),
                 R.start(y, () => I(0));
         };
@@ -148,7 +148,7 @@ function S(e) {
         "aria-label": p,
         dataMeticulousIgnore: E,
         color: x,
-        forceOpen: C,
+        forceOpen: A,
         onAnimationRest: j,
         children: (e) => {
             var { onClick: t, onMouseEnter: n } = e;

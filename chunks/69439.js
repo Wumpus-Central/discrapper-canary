@@ -101,8 +101,8 @@ function N(e) {
         })),
         W = (null == (t = w.userStatus) ? void 0 : t.enrolledAt) != null,
         z = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
-        K = z && (null == (N = w.userStatus) ? void 0 : N.claimedAt) == null,
-        q = (0, g.iQ)(w),
+        q = z && (null == (N = w.userStatus) ? void 0 : N.claimedAt) == null,
+        K = (0, g.iQ)(w),
         Q = !(0, g.zi)(w),
         Y = (0, f._Q)(w),
         X = (0, b.PB)(w),
@@ -154,7 +154,7 @@ function N(e) {
             shortText: !0,
         }),
         ex = null;
-    return (q && K
+    return (K && q
         ? (ex = (0, a.jsx)("div", {
               className: S.button,
               children: (0, a.jsx)(s.zxk, {
@@ -222,7 +222,7 @@ function N(e) {
                         }),
                     }))
           : Q
-            ? Q && K
+            ? Q && q
                 ? (ex = (0, a.jsx)("div", {
                       className: S.button,
                       children: (0, a.jsx)(s.zxk, {

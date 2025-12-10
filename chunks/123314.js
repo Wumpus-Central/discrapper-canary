@@ -304,8 +304,8 @@ function b(e) {
         S = b[1],
         I = r.useState(!0),
         T = I[0],
-        A = I[1],
-        C = d.fitCanvasToArtboardHeight,
+        C = I[1],
+        A = d.fitCanvasToArtboardHeight,
         N = d.shouldResizeCanvasToContainer,
         P = d.useDevicePixelRatio,
         R = d.customDevicePixelRatio,
@@ -322,7 +322,7 @@ function b(e) {
                     r,
                     i = null != (t = null == (e = a.current) ? void 0 : e.clientWidth) ? t : 0,
                     o = null != (r = null == (n = a.current) ? void 0 : n.clientHeight) ? r : 0;
-                return C && c
+                return A && c
                     ? {
                           width: i,
                           height: i * (c.maxY / c.maxX),
@@ -332,7 +332,7 @@ function b(e) {
                           height: o,
                       };
             },
-            [a, C, L, j],
+            [a, A, L, j],
         );
     r.useEffect(
         function () {
@@ -374,10 +374,10 @@ function b(e) {
                         height: r,
                     });
                 }
-                l && (T || o) && l && l(), T && A(!1);
+                l && (T || o) && l && l(), T && C(!1);
             }
         },
-        [i, a, D, w, M, T, A, O, v, _, m, l, N, C, P, n],
+        [i, a, D, w, M, T, C, O, v, _, m, l, N, A, P, n],
     ),
         r.useEffect(
             function () {
@@ -466,7 +466,7 @@ function T(e) {
         ),
     );
 }
-function A(e, t) {
+function C(e, t) {
     void 0 === t && (t = {});
     var n = r.useState(null),
         l = n[0],
@@ -530,7 +530,7 @@ function A(e, t) {
     var S = r.useCallback(function (e) {
             d.current = e;
         }, []),
-        A = {
+        C = {
             observe: r.useCallback(function (e, t) {
                 I().registerCallback(e, t);
             }, []),
@@ -538,8 +538,8 @@ function A(e, t) {
                 I().removeCallback(e);
             }, []),
         },
-        C = A.observe,
-        N = A.unobserve;
+        A = C.observe,
+        N = C.unobserve;
     r.useEffect(
         function () {
             var e,
@@ -559,7 +559,7 @@ function A(e, t) {
             return (
                 l &&
                     !1 !== g.shouldUseIntersectionObserver &&
-                    C(l, function (r) {
+                    A(l, function (r) {
                         r.isIntersecting ? _ && _.startRendering() : _ && _.stopRendering(),
                             (t = !r.isIntersecting),
                             clearTimeout(e),
@@ -570,7 +570,7 @@ function A(e, t) {
                 }
             );
         },
-        [C, N, _, l, g.shouldUseIntersectionObserver],
+        [A, N, _, l, g.shouldUseIntersectionObserver],
     ),
         r.useEffect(
             function () {
@@ -620,7 +620,7 @@ function A(e, t) {
         RiveComponent: R,
     };
 }
-function C(e, t, n) {
+function A(e, t, n) {
     var i = r.useState(null),
         a = i[0],
         s = i[1],
@@ -717,7 +717,7 @@ function C(e, t, n) {
             "automaticallyHandleEvents",
             "children",
         ]),
-        b = A(
+        b = C(
             {
                 src: t,
                 artboard: n,
@@ -736,7 +736,7 @@ function C(e, t, n) {
     return a.default.createElement(b, o({}, E), g);
 }),
     (t.useResizeCanvas = b),
-    (t.useRive = A),
+    (t.useRive = C),
     (t.useRiveFile = function (e) {
         var t = this,
             n = r.useState(null),
@@ -883,7 +883,7 @@ function C(e, t, n) {
     }),
     (t.useViewModelInstanceArtboard = function (e, t) {
         return {
-            setValue: C(e, t, {
+            setValue: A(e, t, {
                 getProperty: r.useCallback(function (e, t) {
                     return e.artboard(t);
                 }, []),
@@ -902,7 +902,7 @@ function C(e, t, n) {
         };
     }),
     (t.useViewModelInstanceBoolean = function (e, t) {
-        var n = C(e, t, {
+        var n = A(e, t, {
             getProperty: r.useCallback(function (e, t) {
                 return e.boolean(t);
             }, []),
@@ -926,7 +926,7 @@ function C(e, t, n) {
         };
     }),
     (t.useViewModelInstanceColor = function (e, t) {
-        var n = C(e, t, {
+        var n = A(e, t, {
             getProperty: r.useCallback(function (e, t) {
                 return e.color(t);
             }, []),
@@ -974,7 +974,7 @@ function C(e, t, n) {
         };
     }),
     (t.useViewModelInstanceEnum = function (e, t) {
-        var n = C(e, t, {
+        var n = A(e, t, {
             getProperty: r.useCallback(function (e, t) {
                 return e.enum(t);
             }, []),
@@ -1003,7 +1003,7 @@ function C(e, t, n) {
     }),
     (t.useViewModelInstanceImage = function (e, t) {
         return {
-            setValue: C(e, t, {
+            setValue: A(e, t, {
                 getProperty: r.useCallback(function (e, t) {
                     return e.image(t);
                 }, []),
@@ -1024,7 +1024,7 @@ function C(e, t, n) {
     (t.useViewModelInstanceList = function (e, t) {
         var n,
             i = r.useState(0)[1],
-            a = C(e, t, {
+            a = A(e, t, {
                 getProperty: r.useCallback(function (e, t) {
                     return e.list(t);
                 }, []),
@@ -1091,7 +1091,7 @@ function C(e, t, n) {
         };
     }),
     (t.useViewModelInstanceNumber = function (e, t) {
-        var n = C(e, t, {
+        var n = A(e, t, {
             getProperty: r.useCallback(function (e, t) {
                 return e.number(t);
             }, []),
@@ -1115,7 +1115,7 @@ function C(e, t, n) {
         };
     }),
     (t.useViewModelInstanceString = function (e, t) {
-        var n = C(e, t, {
+        var n = A(e, t, {
             getProperty: r.useCallback(function (e, t) {
                 return e.string(t);
             }, []),
@@ -1141,7 +1141,7 @@ function C(e, t, n) {
     (t.useViewModelInstanceTrigger = function (e, t, n) {
         var i = (null != n ? n : {}).onTrigger;
         return {
-            trigger: C(e, t, {
+            trigger: A(e, t, {
                 getProperty: r.useCallback(function (e, t) {
                     return e.trigger(t);
                 }, []),

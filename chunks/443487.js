@@ -92,8 +92,8 @@ function v(e) {
         b = (0, o.e7)([p.default], () => p.default.getUser(E)),
         { displayParticipants: y, participant1: v, participant2: S, numOtherParticipants: I } = (0, m.Z)(a, l),
         T = (0, o.e7)([d.ZP], () => d.ZP.getMember(n, E)),
-        A = (0, c.j)({ displayNameStyles: null == b ? void 0 : b.displayNameStyles }),
-        C = (0, o.e7)([f.Z], () => {
+        C = (0, c.j)({ displayNameStyles: null == b ? void 0 : b.displayNameStyles }),
+        A = (0, o.e7)([f.Z], () => {
             var e;
             return (null == T ? void 0 : T.colorRoleId) != null
                 ? null == (e = f.Z.getRole(n, T.colorRoleId))
@@ -115,11 +115,11 @@ function v(e) {
             }),
             (0, r.jsx)(s.PUh, {
                 colorString: null != P ? P : null,
-                roleName: C,
+                roleName: A,
                 colorStrings: N,
                 name: R,
                 className: g.userName,
-                displayNameStylesFont: A,
+                displayNameStylesFont: C,
                 "aria-hidden": !0,
             }),
             I > 0

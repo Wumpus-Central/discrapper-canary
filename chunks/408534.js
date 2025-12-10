@@ -38,8 +38,8 @@ function j(e) {
         k = (0, h.Z)(Z),
         U = (0, _.Z)(),
         V = (0, c.$A)(Z),
-        B = (0, c.j8)(Z),
-        F = (0, C.Z)(w, I),
+        F = (0, c.j8)(Z),
+        B = (0, C.Z)(w, I),
         H = (0, b.Z)(M, Z),
         G = (0, m.Z)(),
         W = (0, o.Z)(j),
@@ -56,7 +56,7 @@ function j(e) {
             (0, i.jsxs)(l.kSQ, {
                 children: [
                     T === O.d4z.GUILD_STAGE_VOICE ? V : null,
-                    T === O.d4z.GUILD_STAGE_VOICE ? B : null,
+                    T === O.d4z.GUILD_STAGE_VOICE ? F : null,
                     S || T === O.d4z.GUILD_STAGE_VOICE ? null : k,
                     G,
                     T !== O.d4z.GUILD_STAGE_VOICE ? R : null,
@@ -68,7 +68,7 @@ function j(e) {
                 children: [!j.isManaged() && j.isPrivate() ? z : null, U],
             }),
             (0, i.jsxs)(l.kSQ, {
-                children: [null != w ? F : null, null != M ? H : null],
+                children: [null != w ? B : null, null != M ? H : null],
             }),
         ],
     });

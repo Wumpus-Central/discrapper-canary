@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(35282), n(388685);
+n.d(t, { Z: () => C }), n(35282), n(388685);
 var r = n(46973),
     i = n(570140),
     a = n(147913),
@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-class A extends a.Z {
+class C extends a.Z {
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: i } = e;
         if (!(0, g.w2)() || n !== S.hes.RTC_CONNECTED) return;

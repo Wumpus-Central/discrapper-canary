@@ -32,13 +32,13 @@ let S = (0, c.Un)({
     }),
     I = 5,
     T = "#000000";
-function A(e, t) {
+function C(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
 }
-function C(e) {
+function A(e) {
     let { colors: t, selectedIndex: n, onColorSelect: a } = e,
         [o, s] = i.useMemo(() => {
-            let e = t.map((e, n) => A(t, n)),
+            let e = t.map((e, n) => C(t, n)),
                 n = t.map((t, n) => "".concat(t, " ").concat(e[n], "%")).join(", ");
             return [e, { background: "linear-gradient(to right, ".concat(n, ")") }];
         }, [t]);
@@ -91,7 +91,7 @@ function R(e) {
     let { value: t, onChange: n, className: a, colors: o, setColors: s } = e,
         c = (0, m.Z)(),
         [v, T] = i.useState(0),
-        [A, R] = i.useState(t);
+        [C, R] = i.useState(t);
     i.useEffect(() => {
         if (o.length > 0 && v < o.length) {
             let e = o[v];
@@ -129,7 +129,7 @@ function R(e) {
         M = () => {
             if (o.length === I) return;
             0 === o.length && (0, g.ft)(), (0, E.gG)();
-            let e = o.length > 0 ? o[o.length - 1] : A,
+            let e = o.length > 0 ? o[o.length - 1] : C,
                 t = o.length > 0 ? P(e) : e,
                 n = [...o, t];
             s(n), T(n.length - 1);
@@ -149,7 +149,7 @@ function R(e) {
         className: l()(O.container, a),
         children: [
             G &&
-                (0, r.jsx)(C, {
+                (0, r.jsx)(A, {
                     colors: o,
                     selectedIndex: v,
                     onColorSelect: U,
@@ -157,15 +157,15 @@ function R(e) {
             (0, r.jsx)(S, {
                 onChange: x,
                 onChangeComplete: L,
-                color: A,
+                color: C,
             }),
             (0, r.jsxs)("div", {
                 className: O.hexInputContainer,
                 children: [
-                    (0, r.jsx)(N, { color: A }),
+                    (0, r.jsx)(N, { color: C }),
                     (0, r.jsx)("input", {
                         className: O.hexInput,
-                        value: A.toUpperCase(),
+                        value: C.toUpperCase(),
                         onChange: (e) => w(e.target.value),
                         maxLength: 7,
                         placeholder: h.Dp,

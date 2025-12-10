@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(681833),
     I = n(856888),
     T = n(921801),
-    A = n(313789),
-    C = n(518596),
+    C = n(313789),
+    A = n(518596),
     N = n(246946),
     P = n(663389),
     R = n(351402),
@@ -182,7 +182,7 @@ let J = function () {
                                           (0, r.jsx)(O.Z, {
                                               count: M,
                                               onClickManageSubscription: () =>
-                                                  (0, C.openUserSettings)(A.n.SUBSCRIPTIONS_PANEL, {
+                                                  (0, A.openUserSettings)(C.n.SUBSCRIPTIONS_PANEL, {
                                                       section: V.oAB.SUBSCRIPTIONS,
                                                       subsection: H.cP,
                                                   }),
@@ -196,7 +196,7 @@ let J = function () {
                                           (0, r.jsx)(S.Z, {
                                               count: j,
                                               onClickManageSubscription: () => {
-                                                  (0, C.openUserSettings)(A.n.SUBSCRIPTIONS_PANEL, {
+                                                  (0, A.openUserSettings)(C.n.SUBSCRIPTIONS_PANEL, {
                                                       section: V.oAB.SUBSCRIPTIONS,
                                                       subsection: H.XZ,
                                                   }),

@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-let A = (e) => {
+let C = (e) => {
         let { avatarDecoration: t, fallbackLabel: n } = e,
             i = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
             { avatarDecorationSrc: a, eventHandlers: o } = (0, f.Z)({
@@ -72,7 +72,7 @@ let A = (e) => {
                   ),
               );
     },
-    C = (e) => {
+    A = (e) => {
         var t;
         let { profileEffect: n, fallbackLabel: a } = e,
             o = (0, m.V)(null == n ? void 0 : n.skuId),
@@ -129,7 +129,7 @@ let A = (e) => {
                       null != a &&
                           (0, r.jsx)("div", {
                               className: v.bundleMiniProfileEffectContainer,
-                              children: (0, r.jsx)(C, {
+                              children: (0, r.jsx)(A, {
                                   profileEffect: a,
                                   fallbackLabel: null,
                               }),
@@ -137,7 +137,7 @@ let A = (e) => {
                       null != i &&
                           (0, r.jsx)("div", {
                               className: v.bundleMiniAvatarDecorationContainer,
-                              children: (0, r.jsx)(A, {
+                              children: (0, r.jsx)(C, {
                                   avatarDecoration: i,
                                   fallbackLabel: null,
                               }),
@@ -175,7 +175,7 @@ let A = (e) => {
                       l.Z.AVATAR_DECORATION,
                       () => (
                           o()(p.type === l.Z.AVATAR_DECORATION, "ts-match checked the type"),
-                          (0, r.jsx)(A, {
+                          (0, r.jsx)(C, {
                               avatarDecoration: p,
                               fallbackLabel: a,
                           })
@@ -185,7 +185,7 @@ let A = (e) => {
                       l.Z.PROFILE_EFFECT,
                       () => (
                           o()(p.type === l.Z.PROFILE_EFFECT, "ts-match checked the type"),
-                          (0, r.jsx)(C, {
+                          (0, r.jsx)(A, {
                               profileEffect: p,
                               fallbackLabel: a,
                           })

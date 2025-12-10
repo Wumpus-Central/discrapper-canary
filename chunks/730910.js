@@ -1,7 +1,7 @@
 n.d(t, { Z: () => A }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(205120),
+    l = n(467721),
     a = n(442837),
     s = n(692547),
     o = n(215569),
@@ -96,14 +96,14 @@ function L(e) {
         }),
         B = (0, u.ZP)(),
         F = i.useRef(null),
-        [{ spring: H }, z] = (0, d.q_F)(() => ({ spring: 0 }), "animate-always");
+        [{ spring: H }, W] = (0, d.q_F)(() => ({ spring: 0 }), "animate-always");
     i.useEffect(() => {
         function e() {
-            z({
+            W({
                 spring: 1,
                 config: l.config.gentle,
             }),
-                z({
+                W({
                     spring: 0,
                     config: l.config.gentle,
                     delay: 1000,
@@ -115,10 +115,10 @@ function L(e) {
                 p.S.unsubscribe(P.CkL.EMPHASIZE_NOTICE, e);
             }
         );
-    }, [z]);
-    let W = (0, d.dQu)(s.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
+    }, [W]);
+    let z = (0, d.dQu)(s.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
         V = (0, d.dQu)(s.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        K = (0, c.wj)(B) ? W : V,
+        K = (0, c.wj)(B) ? z : V,
         Y = H.to({
             range: [0, 1],
             output: [K, (0, d.dQu)(s.Z.colors.STATUS_DANGER).hex()],

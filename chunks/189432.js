@@ -72,9 +72,9 @@ function O(e, t, n) {
     if (!(0, p.Y)(e)) return Promise.resolve();
     let I = null != (g = S.modViewPanel) ? g : _.k.INFO,
         T = null != (b = S.sourceLocation) ? b : i.Z.MEMBER_SAFETY_PAGE,
-        A = d.Z.getCurrentlySelectedChannelId(),
-        C = null != A ? c.Z.getChannel(A) : null;
-    if (n !== h.oC.MEMBER_SAFETY && (null == C || C.getGuildId() !== e)) {
+        C = d.Z.getCurrentlySelectedChannelId(),
+        A = null != C ? c.Z.getChannel(C) : null;
+    if (n !== h.oC.MEMBER_SAFETY && (null == A || A.getGuildId() !== e)) {
         let t = u.ZP.getDefaultChannel(e);
         null == t || (0, r.Y3)(t) || (0, o.uL)(m.Z5c.CHANNEL(e, t.id));
     }

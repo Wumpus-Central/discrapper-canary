@@ -6,7 +6,7 @@ n.d(t, {
     SZ: () => M,
     aC: () => j,
     lF: () => G,
-    pI: () => A,
+    pI: () => C,
     sR: () => L,
     tt: () => U,
 }),
@@ -34,12 +34,12 @@ var r = n(399606),
     S = n(710111),
     I = n(981631),
     T = n(957825);
-function A() {
+function C() {
     var e;
     let t = s.kU.getSetting();
     return null != (e = null == t ? void 0 : t.volume) ? e : 100;
 }
-function C(e, t) {
+function A(e, t) {
     return (
         (null == t ? void 0 : t.guild_id) == null ||
         p.Z.can(I.Plq.USE_EXTERNAL_SOUNDS, t) ||
@@ -51,7 +51,7 @@ function N(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     return (
         (h.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === S.X8) &&
-        C(t, n) &&
+        A(t, n) &&
         (!r || t.available)
     );
 }
@@ -80,7 +80,7 @@ async function x(e) {
     let i = r.guildId === S.hY ? S.X8 : r.guildId,
         a = b.Z.getSound(i, r.soundId);
     if (null != a) {
-        if (!C(a, n) || !N(t, a, n, !0) || !P(n)) return null;
+        if (!A(a, n) || !N(t, a, n, !0) || !P(n)) return null;
         D(a, n.id);
     }
 }

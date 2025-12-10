@@ -23,8 +23,8 @@ var a = n(442837),
     S = n(271383),
     I = n(819640),
     T = n(594174),
-    A = n(979651),
-    C = n(509545),
+    C = n(979651),
+    A = n(509545),
     N = n(78839),
     P = n(936101),
     R = n(868158),
@@ -221,7 +221,7 @@ function z(e) {
                 selfStream: i.self_stream || !1,
                 requestToSpeakTimestamp: null != (n = i.request_to_speak_timestamp) ? n : null,
                 discoverable: null == (r = i.discoverable) || r,
-                oldChannelId: A.Z.getUserVoiceChannelId(i.guild_id, i.user_id),
+                oldChannelId: C.Z.getUserVoiceChannelId(i.guild_id, i.user_id),
             });
     }
     q({
@@ -1357,7 +1357,7 @@ W(
         });
     }),
     Y(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-        I.Z.hasLayers() && (n(355467).tZ(), l.Gn(C.Z.getFetchedSKUIDs()));
+        I.Z.hasLayers() && (n(355467).tZ(), l.Gn(A.Z.getFetchedSKUIDs()));
     }),
     Y(["USER_SUBSCRIPTIONS_UPDATE"], () => {
         c.k(), I.Z.hasLayers() && n(355467).jg();

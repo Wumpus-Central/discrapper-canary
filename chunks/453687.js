@@ -47,21 +47,21 @@ function f(e, t, n) {
         S = !O,
         I = l(e, t),
         T = s(e),
-        A = u ? T : I,
-        C = S ? "".concat(A, " ").concat(r.Z0) : "";
+        C = u ? T : I,
+        A = S ? "".concat(C, " ").concat(r.Z0) : "";
     if (y) {
         let t = o(e);
-        C += " ".concat(t);
+        A += " ".concat(t);
     }
     if (E) {
         let t = d(e);
-        C += " ".concat(t);
+        A += " ".concat(t);
     }
     if (v) {
         let t = c(e);
-        C += " ".concat(r.fy, " ").concat(t);
+        A += " ".concat(r.fy, " ").concat(t);
     }
-    return C.trim();
+    return A.trim();
 }
 function p(e) {
     if (0 === e.reactions.length) return;

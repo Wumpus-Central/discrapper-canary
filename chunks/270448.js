@@ -90,12 +90,12 @@ e.exports = (function (e) {
                 var T = O.getNextSiblingKey();
                 O = T ? _.getBlockForKey(T) : null;
             }
-            for (var A = [], C = 0; C < y.length; ) {
-                var N = y[C];
+            for (var C = [], A = 0; A < y.length; ) {
+                var N = y[A];
                 if (N.wrapperTemplate) {
                     var P = [];
-                    do P.push(y[C].block), C++;
-                    while (C < y.length && y[C].wrapperTemplate === N.wrapperTemplate);
+                    do P.push(y[A].block), A++;
+                    while (A < y.length && y[A].wrapperTemplate === N.wrapperTemplate);
                     var R = l.cloneElement(
                         N.wrapperTemplate,
                         {
@@ -104,10 +104,10 @@ e.exports = (function (e) {
                         },
                         P,
                     );
-                    A.push(R);
-                } else A.push(N.block), C++;
+                    C.push(R);
+                } else C.push(N.block), A++;
             }
-            return l.createElement("div", { "data-contents": "true" }, A);
+            return l.createElement("div", { "data-contents": "true" }, C);
         }),
         t
     );

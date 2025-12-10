@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -11,9 +11,9 @@ var i = n(481060),
     d = n(247530),
     p = n(260889),
     f = n(981631),
-    h = n(388032);
-function g(e) {
-    let { party: t, close: n, onSelect: g } = e,
+    g = n(388032);
+function h(e) {
+    let { party: t, close: n, onSelect: h } = e,
         m = (0, c.Z)(t),
         _ = (0, p.Z)(t),
         b = (0, d.Z)(t),
@@ -39,8 +39,8 @@ function g(e) {
         (0, r.jsxs)(i.v2r, {
             navId: "now-playing-menu",
             onClose: n,
-            "aria-label": h.intl.string(h.t.ogxXGq),
-            onSelect: g,
+            "aria-label": g.intl.string(g.t.ogxXGq),
+            onSelect: h,
             children: [
                 m,
                 (0, r.jsxs)(i.kSQ, {

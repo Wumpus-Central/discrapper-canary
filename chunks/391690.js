@@ -117,13 +117,13 @@ function T(e) {
     let n = new Set(r.installationPaths);
     n.delete(t), (r.installationPaths = n), E(t), y(t);
 }
-function A(e) {
+function C(e) {
     let { path: t, label: n, isDefault: i } = e;
     if (!r.installationPaths.has(t)) return !1;
     null != n && "" !== n && r.pathLabels[t] !== n && b(t, n),
         i && r.defaultInstallationPath !== t && (r.defaultInstallationPath = t);
 }
-function C(e) {
+function A(e) {
     let { metadataPayload: t } = e;
     for (let e in t) g(e, t[e]);
 }
@@ -189,7 +189,7 @@ let P = new N(o.Z, {
     DISPATCH_APPLICATION_CANCEL: v,
     INSTALLATION_LOCATION_ADD: I,
     INSTALLATION_LOCATION_REMOVE: T,
-    INSTALLATION_LOCATION_UPDATE: A,
-    INSTALLATION_LOCATION_FETCH_METADATA: C,
+    INSTALLATION_LOCATION_UPDATE: C,
+    INSTALLATION_LOCATION_FETCH_METADATA: A,
     DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: O,
 });

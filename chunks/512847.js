@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(569545),
     p = n(106301),
     f = n(460181),
-    h = n(979283),
-    g = n(590415),
+    g = n(979283),
+    h = n(590415),
     m = n(131704),
     _ = n(199902),
     b = n(314897),
@@ -74,7 +74,7 @@ function Z() {
             }),
             (e, t) => {
                 let { videoEnabled: n, inVoiceChannel: r } = t;
-                if (!(0, h.O)()) return;
+                if (!(0, g.O)()) return;
                 let { videoEnabled: i, inVoiceChannel: l } = e;
                 if (i !== n && l && r) return n ? "camera_on" : "camera_off";
             },
@@ -196,12 +196,12 @@ function U() {
             [C.Z, T.Z],
             () => {
                 let e = C.Z.getVoiceChannelId();
-                if (null == e) return g.xO.NONE;
+                if (null == e) return h.xO.NONE;
                 let t = T.Z.getVoiceStateForChannel(e);
-                return (0, g.gf)(t);
+                return (0, h.gf)(t);
             },
             (e, t) => {
-                if (e !== t && t === g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) return "reconnect";
+                if (e !== t && t === h.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) return "reconnect";
             },
         ),
         null

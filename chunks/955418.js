@@ -74,12 +74,12 @@ function O(e) {
         { trackUserProfileAction: O } = (0, d.KZ)(),
         [v, S] = i.useState(""),
         [I, T] = i.useState((0, s.JM)(v)),
-        A = i.useRef(!1),
-        C = i.useMemo(() => b(g({}, o.Ie.USER_PROFILE), { disableAutoFocus: h }), [h]);
+        C = i.useRef(!1),
+        A = i.useMemo(() => b(g({}, o.Ie.USER_PROFILE), { disableAutoFocus: h }), [h]);
     return (0, r.jsx)(l.ZP, {
         className: m.container,
         editorClassName: m.editor,
-        type: C,
+        type: A,
         placeholder: _.intl.formatToPlainString(_.t["0ZQw/X"], { name: u.ZP.getName(n, c, t) }),
         channel: y,
         textValue: v,
@@ -87,12 +87,12 @@ function O(e) {
         onChange: (e, t, n) => {
             t !== v && (S(t), T(n));
         },
-        focused: A.current,
+        focused: C.current,
         onFocus: () => {
-            A.current = !0;
+            C.current = !0;
         },
         onBlur: () => {
-            A.current = !1;
+            C.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e;

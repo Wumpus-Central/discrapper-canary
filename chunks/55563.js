@@ -70,18 +70,18 @@ function T(e) {
     for (let e of n) E(e);
     null != t && h.set(t, new Set(n.map((e) => e.id)));
 }
-function A(e) {
+function C(e) {
     g(e.sku),
         null != e.child_skus && e.child_skus.forEach((e) => g(e)),
         null != e.alternative_skus && e.alternative_skus.forEach((e) => g(e));
 }
-function C(e) {
+function A(e) {
     let { storeListings: t } = e;
-    for (let e of t) A(e);
+    for (let e of t) C(e);
 }
 function N(e) {
     let { storeListing: t } = e;
-    A(t);
+    C(t);
 }
 function P(e) {
     let { entitlements: t } = e;
@@ -123,7 +123,7 @@ u(w, "displayName", "SKUStore");
 let x = new w(o.Z, {
     STORE_LISTINGS_FETCH_START: b,
     STORE_LISTINGS_FETCH_FAIL: O,
-    STORE_LISTINGS_FETCH_SUCCESS: C,
+    STORE_LISTINGS_FETCH_SUCCESS: A,
     STORE_LISTING_FETCH_SUCCESS: N,
     GIFT_CODE_RESOLVE_SUCCESS: S,
     SKU_FETCH_START: y,

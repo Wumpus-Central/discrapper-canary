@@ -23,8 +23,8 @@ var i = n(512722),
     S = n(906364),
     I = n(643879),
     T = n(350327),
-    A = n(836197),
-    C = n(621853),
+    C = n(836197),
+    A = n(621853),
     N = n(687158),
     P = n(477448),
     R = n(25990),
@@ -90,7 +90,7 @@ function G() {
             let e = D.default.getCurrentUser();
             return a()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e;
         }),
-        V = (0, o.e7)([C.Z], () => C.Z.getUserProfile(F.id)),
+        V = (0, o.e7)([A.Z], () => A.Z.getUserProfile(F.id)),
         {
             pendingAvatar: H,
             pendingGlobalName: Y,
@@ -131,7 +131,7 @@ function G() {
                   : [],
         ec = (0, u.w)(),
         eu = (0, P.Z)({ location: "DefaultCustomizationSections" }),
-        ed = (null == V || null == (n = V.widgets) ? void 0 : n.some((e) => A.Ki.includes(e.type))) === !0,
+        ed = (null == V || null == (n = V.widgets) ? void 0 : n.some((e) => C.Ki.includes(e.type))) === !0,
         ef = eu || ed,
         ep = () =>
             en

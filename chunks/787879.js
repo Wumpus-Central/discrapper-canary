@@ -22,8 +22,8 @@ var r,
     S = n(709054),
     I = n(821020),
     T = n(370774),
-    A = n(810457),
-    C = n(982183),
+    C = n(810457),
+    A = n(982183),
     N = n(981631),
     P = n(124368);
 function R(e, t, n) {
@@ -42,7 +42,7 @@ function R(e, t, n) {
 let D = {},
     w = null,
     x = [],
-    L = new A.Z(),
+    L = new C.Z(),
     j = !1,
     M = !1,
     k = !1,
@@ -81,7 +81,7 @@ function H() {
         })
         .reduce(
             (e, t) => (
-                b.ZP.lastMessageTimestamp(t) > Date.now() - C.ib
+                b.ZP.lastMessageTimestamp(t) > Date.now() - A.ib
                     ? e.notifyingChannelIds.push(t)
                     : e.staleChannelIds.push(t),
                 e
@@ -114,7 +114,7 @@ function W() {
     }
     for (let e of w.toSorted((e, t) => S.default.compare(b.ZP.lastMessageId(t), b.ZP.lastMessageId(e)))) {
         let t = D[e];
-        if (t.loadState === C.a7.UNLOADED && null != t.mostRecentMessageId) {
+        if (t.loadState === A.a7.UNLOADED && null != t.mostRecentMessageId) {
             G = t.mostRecentMessageId;
             return;
         }
@@ -131,7 +131,7 @@ function K() {
     for (let e of n)
         if (
             ((D[e] = {
-                loadState: C.a7.UNLOADED,
+                loadState: A.a7.UNLOADED,
                 mostRecentMessageId: b.ZP.lastMessageId(e),
             }),
             E.Z.isReady(e))
@@ -139,7 +139,7 @@ function K() {
             let t = Y(e);
             if (null != t) {
                 var i, o;
-                (D[e].loadState = C.a7.LOADED),
+                (D[e].loadState = A.a7.LOADED),
                     (D[e].mostRecentMessageId =
                         null != (o = null == (i = t.last()) ? void 0 : i.id) ? o : D[e].mostRecentMessageId);
             }
@@ -150,7 +150,7 @@ function z() {
     (D = {}),
         (w = null),
         (x = []),
-        (L = new A.Z()),
+        (L = new C.Z()),
         (j = !1),
         (M = !1),
         (k = !1),
@@ -165,7 +165,7 @@ function q() {
     for (let n of (K(), null != w ? w : [])) {
         let r = Y(n);
         null != r &&
-            ((D[n].loadState = C.a7.LOADED),
+            ((D[n].loadState = A.a7.LOADED),
             (D[n].mostRecentMessageId = null != (t = null == (e = r.last()) ? void 0 : e.id) ? t : null),
             W());
     }
@@ -177,7 +177,7 @@ function q() {
                 id: e.id,
                 channelId: e.channel_id,
                 guildId: null == (t = h.Z.getBasicChannel(e.channel_id)) ? void 0 : t.guild_id,
-                kind: C.fL.MENTION,
+                kind: A.fL.MENTION,
                 message: e,
             };
         }),
@@ -215,7 +215,7 @@ function $(e) {
         id: a.id,
         channelId: a.channel_id,
         guildId: null == (r = h.Z.getBasicChannel(a.channel_id)) ? void 0 : r.guild_id,
-        kind: c ? C.fL.MENTION : C.fL.ALL_MESSAGES_CHANNEL,
+        kind: c ? A.fL.MENTION : A.fL.ALL_MESSAGES_CHANNEL,
         message: s,
     });
 }
@@ -224,8 +224,8 @@ function ee(e) {
     if (!(null == w ? void 0 : w.includes(t))) return !1;
     let n = Y(t);
     if (null == n) return !1;
-    let r = n.length >= C.AQ || (n.hasFetched && !n.hasMoreBefore);
-    D[t].loadState !== C.a7.LOADED && (D[t].loadState = r ? C.a7.LOADED : C.a7.LOADED_UNREAD), W();
+    let r = n.length >= A.AQ || (n.hasFetched && !n.hasMoreBefore);
+    D[t].loadState !== A.a7.LOADED && (D[t].loadState = r ? A.a7.LOADED : A.a7.LOADED_UNREAD), W();
 }
 function et(e) {
     let { messages: t } = e;
@@ -239,7 +239,7 @@ function et(e) {
                 id: e.id,
                 channelId: e.channel_id,
                 guildId: null == (t = h.Z.getBasicChannel(e.channel_id)) ? void 0 : t.guild_id,
-                kind: C.fL.MENTION,
+                kind: A.fL.MENTION,
                 message: e,
             };
         }),

@@ -118,10 +118,10 @@ let b = i.memo(function (e) {
                 onShowProfile: I,
                 onClose: T,
             } = e,
-            A = i.useRef(null),
-            C = (0, s.e7)([d.default], () => d.default.getUser(a), [a]),
+            C = i.useRef(null),
+            A = (0, s.e7)([d.default], () => d.default.getUser(a), [a]),
             N = (0, s.e7)([u.Z], () => u.Z.theme),
-            P = null != (t = null == C ? void 0 : C.primaryGuild) ? t : n,
+            P = null != (t = null == A ? void 0 : A.primaryGuild) ? t : n,
             { tag: R, badge: D, guildId: w } = (0, f.Pb)(P);
         return (0, f.yF)(a, p) && null != w
             ? v
@@ -141,11 +141,11 @@ let b = i.memo(function (e) {
                           guildId: w,
                           onRequestOpen: I,
                           onClose: T,
-                          targetElementRef: A,
+                          targetElementRef: C,
                           children: (e) =>
                               (0, r.jsx)("span", {
                                   className: m,
-                                  ref: A,
+                                  ref: C,
                                   children: (0, r.jsx)(
                                       y,
                                       E(

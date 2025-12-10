@@ -26,8 +26,8 @@ var r = n(54381),
     S = n(937615),
     I = n(296848),
     T = n(711459),
-    A = n(367074),
-    C = n(717401),
+    C = n(367074),
+    A = n(717401),
     N = n(847903),
     P = n(622909),
     R = n(639119),
@@ -201,7 +201,7 @@ function J(e) {
             claimableRewards: eg,
             setSelectedGiftingPromotionReward: eE,
         } = (0, _.wD)(),
-        eb = (0, C.cF)(ec, ef && (0, y.pO)(ep), eg),
+        eb = (0, A.cF)(ec, ef && (0, y.pO)(ep), eg),
         ey = (0, g.ao)({
             location: "PremiumPlanSelectStep",
             giftRecipient: ep,
@@ -212,8 +212,8 @@ function J(e) {
         eS = (0, R.N)(ee),
         eI = null == eS ? void 0 : eS.subscription_trial,
         eT = (0, P.N)(),
-        eA = (0, A.Vi)(),
-        eC = null == eT || null == (t = eT.discount) ? void 0 : t.plan_ids,
+        eC = (0, C.Vi)(),
+        eA = null == eT || null == (t = eT.discount) ? void 0 : t.plan_ids,
         eN = null != ev ? ev : ec,
         eP = i.useCallback(
             (e) => {
@@ -229,7 +229,7 @@ function J(e) {
             excludeReverseTrialFromCountdown: !0,
         }),
         ew = null != eS && Z.nG[eS.trial_id].skus.includes(M),
-        ex = null != eT && J.some((e) => (null == eC ? void 0 : eC.includes(e))) && null != eT.discount,
+        ex = null != eT && J.some((e) => (null == eA ? void 0 : eA.includes(e))) && null != eT.discount,
         eL = (0, v.aS)(Z.Xh.PREMIUM_MONTH_TIER_2, !1, ef, eR);
     i.useEffect(() => {
         $ && T.ZP.trackExposure({ location: "5f89bb_1" });
@@ -429,7 +429,7 @@ function J(e) {
                 }),
             null != eO &&
                 !eX &&
-                !eA &&
+                !eC &&
                 (0, r.jsx)("div", {
                     className: H.bodyText,
                     children: X(eO, M),
@@ -513,7 +513,7 @@ function ee(e) {
         O = h.h8.ADD_PAYMENT_STEPS;
     return (
         E && (O = h.h8.REVIEW),
-        (0, C.id)(_, i, a) && p !== h.h8.SELECT_FREE_SKU && (O = h.h8.SELECT_FREE_SKU),
+        (0, A.id)(_, i, a) && p !== h.h8.SELECT_FREE_SKU && (O = h.h8.SELECT_FREE_SKU),
         (0, r.jsx)(c.Button, {
             variant: "primary",
             text: y,

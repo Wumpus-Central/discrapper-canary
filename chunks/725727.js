@@ -71,23 +71,23 @@ function g() {
                     });
             });
         }, []);
-    let A = {};
-    for (let { code: e, promotion: t } of O) A[t.id] = e;
-    let C = h(n, g, E, A),
+    let C = {};
+    for (let { code: e, promotion: t } of O) C[t.id] = e;
+    let A = h(n, g, E, C),
         N = new Set(
-            C.map((e) => {
+            A.map((e) => {
                 let { id: t } = e;
                 return t;
             }),
         );
     return {
         promotionsLoaded: b && (!T || null != e || E),
-        activeOutboundPromotions: C,
+        activeOutboundPromotions: A,
         claimedEndedOutboundPromotions: O.filter((e) => {
             let { promotion: t } = e;
             return !N.has(t.id) && !1 === (0, f.pD)({ promotionPartner: t.outboundTitle });
         }).filter((e) => (0, f.ZC)(e.promotion)),
-        claimedOutboundPromotionCodeMap: A,
+        claimedOutboundPromotionCodeMap: C,
         addClaimedOutboundPromotionCode: S,
     };
 }

@@ -34,8 +34,8 @@ function T(e, t, n) {
         e
     );
 }
-let A = +_.Z.Millis.MINUTE,
-    C = 2,
+let C = +_.Z.Millis.MINUTE,
+    A = 2,
     N = +_.Z.Millis.SECOND,
     P = (0, y.T)({ location: I.dr.QUESTS_MANAGER });
 function R(e) {
@@ -139,7 +139,7 @@ class L extends a.Z {
     getActivelyProgressingStreamOnDesktopQuests() {
         let e = new Map(),
             t = d.Z.getCurrentUserActiveStream();
-        if (null == t || p.ZP.countVoiceStatesForChannel(t.channelId) < C) return e;
+        if (null == t || p.ZP.countVoiceStatesForChannel(t.channelId) < A) return e;
         let n = d.Z.getStreamerActiveStreamMetadata();
         if (null == n) return e;
         P.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", n);
@@ -183,10 +183,10 @@ class L extends a.Z {
             }),
             T(this, "calculateHeartbeatDurationMs", (e) => {
                 let t = E.Z.quests.get(e);
-                if (null == t || null == t.config || null == t.userStatus) return A;
+                if (null == t || null == t.config || null == t.userStatus) return C;
                 let { progressSeconds: n, targetSeconds: i } = (0, v.il)(t, r.T.DESKTOP),
                     a = Math.max(0, (i - n) * _.Z.Millis.SECOND);
-                return a <= A ? a + N : A;
+                return a <= C ? a + N : C;
             }),
             T(this, "initiateHeartbeat", (e, t, n) => {
                 let i = this.heartbeats[t];

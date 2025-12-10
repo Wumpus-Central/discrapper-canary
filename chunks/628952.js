@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-let C = (e) => {
+let A = (e) => {
     let {
             skuId: t,
             isSelected: n,
@@ -79,7 +79,7 @@ let C = (e) => {
             onSelect: s,
             shouldDisplayHeader: S = !1,
             className: T,
-            previewHeaderClassName: C,
+            previewHeaderClassName: A,
             hideProfilePreview: N = !1,
         } = e,
         { product: P } = (0, h.T)(t, !0),
@@ -117,7 +117,7 @@ let C = (e) => {
         children: [
             S &&
                 (0, r.jsx)("div", {
-                    className: o()(v.previewTitleContainer, C),
+                    className: o()(v.previewTitleContainer, A),
                     children: (0, r.jsx)(d.gNt, {
                         label: O.intl.string(O.t.PpoJzt),
                         children:
@@ -130,7 +130,7 @@ let C = (e) => {
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
                                             p.Z,
-                                            A(I({}, e), {
+                                            C(I({}, e), {
                                                 user: R,
                                                 pendingAvatar: R.getAvatarURL(null, (0, d.dcp)(d.EFr.SIZE_80)),
                                                 pendingAvatarDecoration: (0, g.M)(j) ? j : null,
@@ -145,7 +145,7 @@ let C = (e) => {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             d.P3F,
-                                            A(I({}, e), {
+                                            C(I({}, e), {
                                                 className: v.previewLink,
                                                 innerRef: L,
                                                 children: (0, r.jsx)(d.Text, {

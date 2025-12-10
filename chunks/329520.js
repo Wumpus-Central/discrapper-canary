@@ -58,7 +58,7 @@ function y(e) {
         S = (0, a.e7)([d.Z], () => d.Z.getChannel(t.channelId)),
         I = (0, c.ZP)(S),
         { analyticsLocations: T } = (0, s.ZP)(),
-        A = i.useCallback(() => {
+        C = i.useCallback(() => {
             (0, f.A)({
                 analyticsLocations: T,
                 activityType: h.IIU.STREAMING,
@@ -66,8 +66,8 @@ function y(e) {
             });
         }, [T, t.channelId]);
     if (b && y) return null;
-    let C = (null == n ? void 0 : n.name) === "" ? null : null == n ? void 0 : n.name,
-        N = null != C ? C : g.intl.string(g.t.eXan7B),
+    let A = (null == n ? void 0 : n.name) === "" ? null : null == n ? void 0 : n.name,
+        N = null != A ? A : g.intl.string(g.t.eXan7B),
         P = !O && null != S && null != I;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -77,7 +77,7 @@ function y(e) {
                     tooltipText: P ? I : void 0,
                     tooltipAriaLabel: P ? (0, l.ZP)({ channel: S }) : void 0,
                     className: E,
-                    onTooltipShow: P ? A : void 0,
+                    onTooltipShow: P ? C : void 0,
                 }),
             !y &&
                 (0, r.jsx)(_.Z, {
@@ -115,7 +115,7 @@ function O(e) {
                   })
                 : v,
         T = E ? I : v,
-        A = null != y ? "".concat(S, " (").concat(y, ")") : S;
+        C = null != y ? "".concat(S, " (").concat(y, ")") : S;
     return (0, r.jsx)(m.Z, {
         icon: u
             ? void 0
@@ -129,7 +129,7 @@ function O(e) {
         className: s,
         canTruncate: h,
         hideTooltip: _,
-        "aria-label": A,
+        "aria-label": C,
         hideText: f,
     });
 }

@@ -18,9 +18,9 @@ n.d(t, {
     rI: () => o,
     ry: () => l,
     sG: () => m,
-    uD: () => A,
+    uD: () => C,
     xO: () => h,
-    zg: () => C,
+    zg: () => A,
 });
 var r = n(570140),
     i = n(145597),
@@ -157,13 +157,13 @@ function T(e) {
         pid: e,
     });
 }
-function A(e) {
+function C(e) {
     return r.Z.dispatch({
         type: "OVERLAY_V3_NATIVE_SUCCESSFULLY_SHOWN",
         pid: e,
     });
 }
-function C(e) {
+function A(e) {
     return r.Z.dispatch({
         type: "OVERLAY_V3_NATIVE_WINDOW_HANDLE_INITIALIZED",
         initialized: e,

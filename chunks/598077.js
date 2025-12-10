@@ -232,7 +232,7 @@ class O extends o.Z {
             : a.bF.UNSPECIFIED;
     }
     constructor(e) {
-        var t, n, i, a, o, s, u, f, p, _, h, E, b, y, O, v, S, I, T, A, C, N, P, R, D, w, x, L, j, M, k, U, G, Z;
+        var t, n, i, a, o, s, u, f, p, _, h, E, b, y, O, v, S, I, T, C, A, N, P, R, D, w, x, L, j, M, k, U, G, Z;
         super(),
             g(this, "id", void 0),
             g(this, "username", void 0),
@@ -285,7 +285,7 @@ class O extends o.Z {
             (this.publicFlags = null != (S = null != (v = e.public_flags) ? v : e.publicFlags) ? S : 0),
             (this.purchasedFlags = null != (T = null != (I = e.purchased_flags) ? I : e.purchasedFlags) ? T : 0),
             (this.premiumUsageFlags =
-                null != (C = null != (A = e.premium_usage_flags) ? A : e.premiumUsageFlags) ? C : 0),
+                null != (A = null != (C = e.premium_usage_flags) ? C : e.premiumUsageFlags) ? A : 0),
             (this.phone = null != (N = e.phone) ? N : null),
             (this.nsfwAllowed = null != (P = e.nsfw_allowed) ? P : e.nsfwAllowed),
             (this.ageVerificationStatus = null != (R = e.age_verification_status) ? R : e.ageVerificationStatus),

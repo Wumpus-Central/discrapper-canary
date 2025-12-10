@@ -25,8 +25,8 @@ var r = n(54381),
     S = n(273879),
     I = n(830746),
     T = n(731934),
-    A = n(521450),
-    C = n(539086),
+    C = n(521450),
+    A = n(539086),
     N = n(292352),
     P = n(981631),
     R = n(225753),
@@ -35,7 +35,7 @@ var r = n(54381),
 let x = {
         [N.dG.REQUESTS]: T.Z,
         [N.dG.ACTIVITY]: I.Z,
-        [N.dG.SETTINGS]: A.Z,
+        [N.dG.SETTINGS]: C.Z,
         [N.dG.CONTENT_AND_SOCIAL]: v.Z,
         [N.dG.DATA_AND_PRIVACY]: S.Z,
     },
@@ -157,7 +157,7 @@ function U() {
             selectedTab: n,
             handleTabChange: i,
             showAgeGateModal: a,
-        } = (0, C.M)({
+        } = (0, A.M)({
             location: N.Mu.SETTINGS,
             onMountEffect: () => {
                 E.ZP.initialPageLoad();
@@ -197,7 +197,7 @@ function G() {
             selectedTab: O,
             handleTabChange: v,
             showAgeGateModal: S,
-        } = (0, C.M)({
+        } = (0, A.M)({
             location: N.Mu.SIDENAV,
             onMountEffect: () => {
                 u.Y(P.Z5c.FAMILY_CENTER), !b.Z.isLoading() && b.Z.canRefetch() && E.ZP.initialPageLoad();
@@ -212,7 +212,7 @@ function G() {
     };
     if (S) return null;
     let T = O !== N.dG.SETTINGS ? O : N.dG.ACTIVITY,
-        A = L[T];
+        C = L[T];
     return (0, r.jsx)(f.Gt, {
         value: e,
         children: (0, r.jsxs)("main", {
@@ -232,7 +232,7 @@ function G() {
                     children: (0, r.jsx)(c.Ttm, {
                         children: (0, r.jsx)("div", {
                             className: w.sideNavContent,
-                            children: m ? (0, r.jsx)(j, {}) : (0, r.jsx)(A, {}),
+                            children: m ? (0, r.jsx)(j, {}) : (0, r.jsx)(C, {}),
                         }),
                     }),
                 }),

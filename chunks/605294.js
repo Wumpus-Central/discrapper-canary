@@ -219,7 +219,7 @@ function y(e, t) {
                     : E(e) && !S((0, i.NI)(t), e)
                       ? n.current
                           ? n.current.focus()
-                          : _ && _.current && C(_.current)
+                          : _ && _.current && A(_.current)
                       : E(e) && (n.current = (0, i.NI)(t));
             },
             f = (t) => {
@@ -234,7 +234,7 @@ function y(e, t) {
                             if (r && r.isConnected) {
                                 var u;
                                 (n.current = r), null == (u = n.current) || u.focus();
-                            } else _.current && C(_.current);
+                            } else _.current && A(_.current);
                         }
                     }));
             };
@@ -289,7 +289,7 @@ function T(e, t = !1) {
             (0, u.e)(e);
         } catch {}
 }
-function A(e, t = !0) {
+function C(e, t = !0) {
     let n = e[0].previousElementSibling,
         r = g(e),
         i = x(r, { tabbable: t }, e);
@@ -297,8 +297,8 @@ function A(e, t = !0) {
     let a = i.nextNode();
     return t && !a && (((i = x((r = g(e)), { tabbable: !1 }, e)).currentNode = n), (a = i.nextNode())), a;
 }
-function C(e, t = !0) {
-    T(A(e, t));
+function A(e, t = !0) {
+    T(C(e, t));
 }
 function N(e, t) {
     let n = d.useRef(t);
@@ -306,7 +306,7 @@ function N(e, t) {
         if (n.current) {
             _ = e;
             let t = (0, a.r3)(e.current ? e.current[0] : void 0);
-            !v((0, i.vY)(t), _.current) && e.current && C(e.current);
+            !v((0, i.vY)(t), _.current) && e.current && A(e.current);
         }
         n.current = !1;
     }, [e]);
@@ -413,7 +413,7 @@ function D(e, t, n) {
                                     }
                                     for (n = t.getTreeNode(e); n; ) {
                                         if (n.scopeRef && n.scopeRef.current && U.getTreeNode(n.scopeRef))
-                                            return void w(A(n.scopeRef.current, !0));
+                                            return void w(C(n.scopeRef.current, !0));
                                         n = n.parent;
                                     }
                                 }

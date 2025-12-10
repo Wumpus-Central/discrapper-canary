@@ -22,8 +22,8 @@ var r,
     S = n(925329),
     I = n(267101),
     T = n(240864),
-    A = n(942833),
-    C = n(916001),
+    C = n(942833),
+    A = n(916001),
     N = n(298243),
     P = n(336197),
     R = n(690221),
@@ -194,7 +194,7 @@ let eO = (e) => {
 function ev(e) {
     let { guildId: t, guildProductListingId: n } = e,
         r = (0, I.hO)(t, n, { requireCurrentGuild: !1 }),
-        o = (0, A.C)(r),
+        o = (0, C.C)(r),
         s = (0, p.e7)([B.Z], () => B.Z.getGuild(t)),
         l =
             (null == r ? void 0 : r.role_id) != null && (null == r ? void 0 : r.attachments_count) === 0
@@ -268,7 +268,7 @@ function eS(e) {
                                     className: ei.guildProductBenefitLabel,
                                     children: er.intl.string(er.t.gWBNet),
                                 }),
-                                (0, i.jsx)(C.Z, { role: c }),
+                                (0, i.jsx)(A.Z, { role: c }),
                             ],
                         }),
                 ],
@@ -1002,8 +1002,8 @@ function eT(e) {
     }, [d, f]);
     let I = (0, p.e7)([B.Z], () => B.Z.getGuild(null == m ? void 0 : m.guildId)),
         T = c ? m : void 0,
-        A = r.subscription,
-        C = (0, p.e7)([H.Z], () => (null != A && A.type !== ee.NYc.PREMIUM ? H.Z.get(A.items[0].planId) : null)),
+        C = r.subscription,
+        A = (0, p.e7)([H.Z], () => (null != C && C.type !== ee.NYc.PREMIUM ? H.Z.get(C.items[0].planId) : null)),
         N = (0, p.e7)([F.default], () => {
             var e, t, n, i;
             let a = r.isGift
@@ -1034,7 +1034,7 @@ function eT(e) {
         compactMode: s,
         className: l,
         payment: r,
-        plan: C,
+        plan: A,
         claimedGiftUser: N,
         hasLinkedToApplication: O,
     });

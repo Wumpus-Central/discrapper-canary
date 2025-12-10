@@ -21,7 +21,7 @@ function O(e, t, n) {
     let O = (0, h.useRef)(""),
         { locale: S, direction: I } = (0, g.j)(),
         T = (0, i.J)(),
-        { ariaLabel: A, ariaLabelledBy: C, ariaDescribedBy: N, focusManager: P } = r.Lh.get(t),
+        { ariaLabel: C, ariaLabelledBy: A, ariaDescribedBy: N, focusManager: P } = r.Lh.get(t),
         R = e.isPlaceholder ? "" : e.text,
         D = (0, h.useMemo)(() => t.dateFormatter.resolvedOptions(), [t.dateFormatter]),
         w = (0, E.a)({
@@ -227,8 +227,8 @@ function O(e, t, n) {
         Q = !t.isDisabled && !t.isReadOnly && e.isEditable,
         X = "literal" === e.type ? "" : T.of(e.type),
         J = (0, p.b)({
-            "aria-label": `${X}${A ? `, ${A}` : ""}${C ? ", " : ""}`,
-            "aria-labelledby": C,
+            "aria-label": `${X}${C ? `, ${C}` : ""}${A ? ", " : ""}`,
+            "aria-labelledby": A,
         });
     if ("literal" === e.type) return { segmentProps: { "aria-hidden": !0 } };
     let $ = { caretColor: "transparent" };

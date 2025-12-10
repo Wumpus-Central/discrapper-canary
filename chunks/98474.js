@@ -2,7 +2,7 @@ n.d(t, { Z: () => I }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(921254),
-    o = n(205120),
+    o = n(467721),
     s = n(748780),
     l = n(481060),
     c = n(596454),
@@ -71,7 +71,7 @@ let O = 450,
 function I(e) {
     let { messageId: t, emoji: n, startPosition: g, targetPosition: b } = e,
         [I, T] = i.useState(0),
-        [A, C] = i.useState(0),
+        [C, A] = i.useState(0),
         [N, P] = i.useState(null),
         { confettiCanvas: R } = i.useContext(u.h),
         D = (0, a.uR)(R, N),
@@ -102,7 +102,7 @@ function I(e) {
             },
             onChange: (e) => {
                 let { y: t } = e;
-                C(t);
+                A(t);
             },
         }),
         M = (0, l.q_F)({
@@ -131,19 +131,19 @@ function I(e) {
     return (
         i.useEffect(() => {
             I > 0 &&
-                A > 0 &&
+                C > 0 &&
                 D.createConfetti(
                     y(E({}, m.We), {
                         position: {
                             type: "static",
                             value: {
                                 x: I,
-                                y: A,
+                                y: C,
                             },
                         },
                     }),
                 );
-        }, [D, I, A]),
+        }, [D, I, C]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(a.Ji, {

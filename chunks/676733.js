@@ -29,8 +29,8 @@ var r = n(23893),
     S = n(123865),
     I = n(101023),
     T = n(216597),
-    A = n(920932),
-    C = n(485853),
+    C = n(920932),
+    A = n(485853),
     N = n(287293),
     P = n(413565),
     R = n(401522),
@@ -199,13 +199,13 @@ function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
             UNSAFE_selectionState: n,
         }),
         T = (0, m.w)(I, O),
-        { isVirtualized: A, layoutDelegate: C, dropTargetDelegate: N, CollectionRoot: w } = (0, L.useContext)(a.Qk),
+        { isVirtualized: C, layoutDelegate: A, dropTargetDelegate: N, CollectionRoot: w } = (0, L.useContext)(a.Qk),
         { dragAndDropHooks: x } = e,
         { gridProps: j } = (0, h.x)(
             {
                 ...v,
-                layoutDelegate: C,
-                isVirtualized: A,
+                layoutDelegate: A,
+                isVirtualized: C,
             },
             T,
             t,
@@ -237,7 +237,7 @@ function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
                 disabledKeys: k.disabledKeys,
                 disabledBehavior: k.disabledBehavior,
                 ref: t,
-                layoutDelegate: C,
+                layoutDelegate: A,
             }),
             n = x.dropTargetDelegate || N || new x.ListDropTargetDelegate(r.rows, t);
         (f = x.useDroppableCollection(
@@ -267,7 +267,7 @@ function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
         J = null;
     S &&
         ((J = S.useTableColumnResizeState({ tableWidth: S.tableWidth }, T)),
-        A ||
+        C ||
             (X = {
                 ...X,
                 tableLayout: "fixed",
@@ -588,7 +588,7 @@ let $ = (0, d.IW)(
             f = (0, L.useContext)(U),
             { dragAndDropHooks: p, dragState: _, dropState: m } = (0, L.useContext)(s.Ed),
             { isVirtualized: h, CollectionBranch: g } = (0, L.useContext)(a.Qk),
-            { rowProps: b, ...O } = (0, A.U)(
+            { rowProps: b, ...O } = (0, C.U)(
                 {
                     node: n,
                     shouldSelectOnPressUp: !!_,
@@ -616,7 +616,7 @@ let $ = (0, d.IW)(
                 _,
             ));
         let k = (0, L.useRef)(null),
-            { visuallyHiddenProps: G } = (0, C.S)();
+            { visuallyHiddenProps: G } = (0, A.S)();
         m &&
             p &&
             (u = p.useDropIndicator(
@@ -823,7 +823,7 @@ function en(e, t) {
 function er(e, t) {
     let { dropIndicatorProps: n, isDropTarget: r, buttonRef: i, ...a } = e,
         s = (0, L.useContext)(U),
-        { visuallyHiddenProps: l } = (0, C.S)(),
+        { visuallyHiddenProps: l } = (0, A.S)(),
         c = (0, o.aX)({
             ...a,
             defaultClassName: "react-aria-DropIndicator",
@@ -864,7 +864,7 @@ function ea() {
         r = (0, L.useRef)(null),
         { dropIndicatorProps: i } = t.useDropIndicator({ target: { type: "root" } }, n, r),
         a = n.isDropTarget({ type: "root" }),
-        { visuallyHiddenProps: o } = (0, C.S)(),
+        { visuallyHiddenProps: o } = (0, A.S)(),
         l = F("tr"),
         c = F("td");
     return !a && i["aria-hidden"]

@@ -53,7 +53,7 @@ let v = function (e) {
         v = (0, f.N)(),
         S = (0, o.Z)(null != v && null != v.expires_at ? Date.parse(v.expires_at) : 0),
         { variant: I, showNagbar: T } = (0, d.ZP)("PremiumTrialEndingNotice"),
-        A =
+        C =
             null == v ||
             (null == (t = v.subscription_trial) ? void 0 : t.sku_id) !== s ||
             null == v.expires_at ||
@@ -66,12 +66,12 @@ let v = function (e) {
                 name: i.ImpressionNames.TRIAL_NOTICE,
                 properties: { trial_id: null == v ? void 0 : v.trial_id },
             },
-            { disableTrack: A },
+            { disableTrack: C },
         ),
-        A)
+        C)
     )
         return null;
-    let C = () => {
+    let A = () => {
         (0, u.Z)({
             trialId: v.trial_id,
             subscriptionTier: s,
@@ -89,7 +89,7 @@ let v = function (e) {
               children: [
                   (0, r.jsx)(p.Jy, { children: (0, _.kj)(s, S) }),
                   (0, r.jsx)(p.OJ, {
-                      onClick: C,
+                      onClick: A,
                       text: O(s),
                   }),
               ],
@@ -109,7 +109,7 @@ let v = function (e) {
                   }),
                   (0, _.kj)(s, S),
                   (0, r.jsx)(a.EyT, {
-                      onClick: C,
+                      onClick: A,
                       children: O(s),
                   }),
               ],

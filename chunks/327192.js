@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(888496),
     I = n(266454),
     T = n(565138),
-    A = n(297700),
-    C = n(553795),
+    C = n(297700),
+    A = n(553795),
     N = n(430824),
     P = n(246946),
     R = n(626135),
@@ -101,12 +101,12 @@ let z = (e) => {
             joinErrorMessage: s,
             showJoinErrorMessage: c,
         } = (0, l.cj)(
-            [C.Z],
+            [A.Z],
             () => ({
-                isJoining: C.Z.isJoining(a.id),
+                isJoining: A.Z.isJoining(a.id),
                 joinErrorMessage:
-                    "" === C.Z.joinErrorMessage(a.id) ? F.intl.string(F.t.j2d6Km) : C.Z.joinErrorMessage(a.id),
-                showJoinErrorMessage: void 0 !== C.Z.joinErrorMessage(a.id),
+                    "" === A.Z.joinErrorMessage(a.id) ? F.intl.string(F.t.j2d6Km) : A.Z.joinErrorMessage(a.id),
+                showJoinErrorMessage: void 0 !== A.Z.joinErrorMessage(a.id),
             }),
             [a.id],
         );
@@ -173,7 +173,7 @@ function q(e) {
         [c, _] = i.useState(n.friendSync),
         [h, g] = i.useState(n.visibility),
         [E, I] = i.useState(n.metadataVisibility),
-        [T, C] = i.useState(n.showActivity),
+        [T, A] = i.useState(n.showActivity),
         [N, P] = i.useState(null),
         [R, w] = i.useState(null),
         [M, B] = i.useState(!1),
@@ -181,7 +181,7 @@ function q(e) {
         q = (0, y.rR)(n.type),
         Q = b.Z.get(q);
     i.useEffect(() => {
-        _(n.friendSync), g(n.visibility), I(n.metadataVisibility), C(n.showActivity);
+        _(n.friendSync), g(n.visibility), I(n.metadataVisibility), A(n.showActivity);
     }, [n]);
     let X = {
             inProgressVisibility: N,
@@ -199,7 +199,7 @@ function q(e) {
                 o &&
                 (s = (0, r.jsx)(d.u, {
                     text: F.intl.string(F.t.Jebrww),
-                    children: (0, r.jsx)(A.Z, {
+                    children: (0, r.jsx)(C.Z, {
                         color: u.Z.unsafe_rawColors.TWITTER.css,
                         children: (0, r.jsx)(p.kmB, {
                             size: "xs",
@@ -499,7 +499,7 @@ function q(e) {
         _(e), m.Z.setFriendSync(n.type, n.id, e);
     }
     function eu(e) {
-        C(e), m.Z.setShowActivity(n.type, n.id, e);
+        A(e), m.Z.setShowActivity(n.type, n.id, e);
     }
     i.useEffect(() => {
         J.current = X;
@@ -624,8 +624,8 @@ function $(e) {
 }
 let ee = () => {
     let e = (0, l.e7)([P.Z], () => P.Z.hidePersonalInformation),
-        t = (0, l.e7)([C.Z], () => C.Z.isFetching()),
-        n = (0, l.e7)([C.Z], () => C.Z.getAccounts()),
+        t = (0, l.e7)([A.Z], () => A.Z.isFetching()),
+        n = (0, l.e7)([A.Z], () => A.Z.getAccounts()),
         a = (0, E.ZP)(),
         o = (0, l.e7)([w.default], () => w.default.locale);
     return (i.useEffect(() => {

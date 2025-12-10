@@ -6,8 +6,8 @@ var i = n(54381),
     a = n(518596),
     o = n(63063),
     c = n(378298),
-    d = n(584656),
-    T = n(993750),
+    T = n(584656),
+    d = n(993750),
     u = n(981631),
     S = n(526761),
     x = n(388032),
@@ -28,7 +28,7 @@ let E = function (t) {
                 (0, c.Uj)(n)
                     .then(() => {
                         e(),
-                            (0, d.t)({
+                            (0, T.t)({
                                 text: x.intl.string(x.t.FhgVWi),
                                 id: "safety-tools-report-false-positive",
                             });
@@ -37,7 +37,7 @@ let E = function (t) {
                         g(!1), (0, r.showToast)((0, r.createToast)(x.intl.string(x.t.R0RpRX), r.ToastType.FAILURE));
                     }));
         }, [n, e, E]);
-    return (0, i.jsxs)(T.Z, {
+    return (0, i.jsxs)(d.Z, {
         style: _.wrapperStyle,
         children: [
             (0, i.jsx)(r.Text, {

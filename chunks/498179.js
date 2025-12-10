@@ -88,8 +88,8 @@ function m(e) {
         },
         I = (0, i.e7)([o.Z], () => o.Z.getActiveLibraryApplication(t.id)),
         T = null != I ? I.sku.id : null,
-        A = null != T ? T : t.primarySkuId,
-        C = (0, i.e7)([s.Z], () => null != A && !s.Z.didFetchingSkuFail(A));
+        C = null != T ? T : t.primarySkuId,
+        A = (0, i.e7)([s.Z], () => null != C && !s.Z.didFetchingSkuFail(C));
     return null != I && (0, l.Je)(I)
         ? (0, r.jsx)(
               u.Z,
@@ -98,7 +98,7 @@ function m(e) {
                   source: y,
               }),
           )
-        : C
+        : A
           ? (0, r.jsx)("div", { children: "deprecated!" })
           : (0, r.jsx)(
                 c.Z,

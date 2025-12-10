@@ -31,8 +31,8 @@ function f(e, t) {
             isInvalid: t.isInvalid,
             errorMessage: e.errorMessage || y,
         }),
-        A = (0, i.z)(e, { labelable: !0 }),
-        { focusWithinProps: C } = (0, u.L)({
+        C = (0, i.z)(e, { labelable: !0 }),
+        { focusWithinProps: A } = (0, u.L)({
             onBlurWithin(n) {
                 var r;
                 null == (r = e.onBlur) || r.call(e, n), t.selectedValue || t.setLastFocusedValue(null);
@@ -78,7 +78,7 @@ function f(e, t) {
             validationBehavior: g,
         }),
         {
-            radioGroupProps: (0, s.d)(A, {
+            radioGroupProps: (0, s.d)(C, {
                 role: "radiogroup",
                 onKeyDown: N,
                 "aria-invalid": t.isInvalid || void 0,
@@ -88,7 +88,7 @@ function f(e, t) {
                 "aria-disabled": m || void 0,
                 "aria-orientation": h,
                 ...S,
-                ...C,
+                ...A,
             }),
             labelProps: v,
             descriptionProps: I,

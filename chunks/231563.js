@@ -15,8 +15,8 @@ var n = r(390873),
     R = r(688560),
     T = r(180710),
     A = r(464338),
-    N = r(380206),
-    f = r(392841);
+    f = r(380206),
+    N = r(392841);
 let O = "Not capturing exception because it's already been captured.";
 class h {
     constructor(e) {
@@ -192,7 +192,7 @@ class h {
             !t.integrations && i.length > 0 && (t.integrations = i),
             this.emit("preprocessEvent", e, t),
             e.type || n.setLastEventId(e.event_id || t.event_id),
-            (0, f.R)(a, e, t, r, this, n).then((e) => {
+            (0, N.R)(a, e, t, r, this, n).then((e) => {
                 if (null === e) return e;
                 let t = {
                     ...n.getPropagationContext(),
@@ -228,11 +228,11 @@ class h {
     _processEvent(e, t, r) {
         let n = this.getOptions(),
             { sampleRate: a } = n,
-            i = S(e),
-            s = D(e),
+            i = D(e),
+            s = S(e),
             c = e.type || "error",
             l = `before send for type \`${c}\``,
-            u = void 0 === a ? void 0 : (0, N.o)(a);
+            u = void 0 === a ? void 0 : (0, f.o)(a);
         if (s && "number" == typeof u && Math.random() > u)
             return (
                 this.recordDroppedEvent("sample_rate", "error", e),
@@ -271,8 +271,8 @@ class h {
                       })(
                           (function (e, t, r, n) {
                               let { beforeSend: a, beforeSendTransaction: i, beforeSendSpan: o } = t;
-                              if (D(r) && a) return a(r, n);
-                              if (S(r)) {
+                              if (S(r) && a) return a(r, n);
+                              if (D(r)) {
                                   if (r.spans && o) {
                                       let t = [];
                                       for (let n of r.spans) {
@@ -374,9 +374,9 @@ Reason: ${e}`))
         this.sendEnvelope(t);
     }
 }
-function D(e) {
+function S(e) {
     return void 0 === e.type;
 }
-function S(e) {
+function D(e) {
     return "transaction" === e.type;
 }

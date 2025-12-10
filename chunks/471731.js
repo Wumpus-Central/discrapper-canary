@@ -5,7 +5,7 @@ var l = n(325767);
 function i(e) {
     var t,
         n,
-        { width: i = 124, height: s = 24, color: o = "currentColor", foreground: a } = e,
+        { width: i = 124, height: o = 24, color: s = "currentColor", foreground: a } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -57,10 +57,10 @@ function i(e) {
         (n = n =
             {
                 width: i,
-                height: s,
+                height: o,
                 viewBox: "0 0 124 24",
                 children: (0, r.jsxs)("g", {
-                    fill: o,
+                    fill: s,
                     className: a,
                     children: [
                         (0, r.jsx)("path", {

@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -110,7 +110,7 @@ let P = (e, t) => "".concat(e, ":").concat(t),
                 selectedItemClassName: N,
                 inNitroLockedSection: P,
             } = e,
-            R = C(e, [
+            R = A(e, [
                 "emoji",
                 "isFavorite",
                 "isLargeSize",
@@ -142,7 +142,7 @@ let P = (e, t) => "".concat(e, ":").concat(t),
         return (0, r.jsx)(l.tEY, {
             children: (0, r.jsx)(
                 "button",
-                A(I({}, R), {
+                C(I({}, R), {
                     className: o()(v.emojiItem, {
                         [v.emojiItemLarge]: a,
                         [v.emojiItemMedium]: c,
@@ -225,10 +225,10 @@ function D(e) {
                     arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                 s = null != (e = D(q, f)) ? e : {},
                 { ref: l, tabIndex: c, onFocus: u } = s,
-                d = C(s, ["ref", "tabIndex", "onFocus"]);
+                d = A(s, ["ref", "tabIndex", "onFocus"]);
             return (0, i.createElement)(
                 "li",
-                A(I({}, d), {
+                C(I({}, d), {
                     key: a,
                     ref: Y,
                 }),

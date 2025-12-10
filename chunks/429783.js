@@ -247,7 +247,7 @@ var b = /^(matrix|translate|scale|rotate|skew)/,
             t
         );
     })(u.FluidValue),
-    A = [
+    C = [
         "a",
         "abbr",
         "address",
@@ -387,7 +387,7 @@ a.Globals.assign({
     createStringInterpolator: s.createStringInterpolator,
     batchedUpdates: o.unstable_batchedUpdates,
 });
-var C = c.createHost(A, {
+var A = c.createHost(C, {
     applyAnimatedValues: m,
     createAnimatedStyle: function (e) {
         return new I(e);
@@ -405,5 +405,5 @@ Object.keys(a).forEach(function (e) {
             },
         });
 }),
-    (t.a = C),
-    (t.animated = C);
+    (t.a = A),
+    (t.animated = A);

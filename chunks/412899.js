@@ -28,8 +28,8 @@ var r = n(54381),
     S = n(518738),
     I = n(434404),
     T = n(884902),
-    A = n(48950),
-    C = n(635042),
+    C = n(48950),
+    A = n(635042),
     N = n(608798),
     P = n(345162),
     R = n(271383),
@@ -160,7 +160,7 @@ function K(e) {
 let z = i.forwardRef(function (e, t) {
     var a, s, l;
     let c,
-        { canRemove: d, className: g, role: E, onRemove: O, guildId: v, disableBorderColor: I, onMouseDown: C } = e,
+        { canRemove: d, className: g, role: E, onRemove: O, guildId: v, disableBorderColor: I, onMouseDown: A } = e,
         N = (0, u.JA)(E.id),
         { tabIndex: P } = N,
         R = F(N, ["tabIndex"]),
@@ -227,7 +227,7 @@ let z = i.forwardRef(function (e, t) {
                         className: o()(k.role, g),
                         style: W,
                         onContextMenu: j,
-                        onMouseDown: C,
+                        onMouseDown: A,
                         "aria-label": E.name,
                         tabIndex: P,
                     },
@@ -254,7 +254,7 @@ let z = i.forwardRef(function (e, t) {
                                     : null,
                             ],
                         }),
-                        null != D ? (0, r.jsx)(A.Z, B(G({ className: k.roleIcon }, D), { enableTooltip: !1 })) : null,
+                        null != D ? (0, r.jsx)(C.Z, B(G({ className: k.roleIcon }, D), { enableTooltip: !1 })) : null,
                         (0, r.jsx)("div", {
                             "aria-hidden": !0,
                             className: k.roleName,
@@ -374,8 +374,8 @@ function X(e) {
             },
             [s, a.id, n.id],
         ),
-        [T, A] = i.useState(null),
-        N = (0, p.Wu)([D.Z], () => D.Z.getManyRoles(a.id, s).sort(C.Z)),
+        [T, C] = i.useState(null),
+        N = (0, p.Wu)([D.Z], () => D.Z.getManyRoles(a.id, s).sort(A.Z)),
         P = i.useMemo(() => (null != T ? N.slice(0, T) : N), [N, T]),
         R = s.length - P.length;
     i.useLayoutEffect(() => {
@@ -392,7 +392,7 @@ function X(e) {
                 e++;
             }
         }
-        A((t) => (e < P.length ? e : t));
+        C((t) => (e < P.length ? e : t));
     }, [f, _, P]);
     let U = x.default.getCurrentUser();
     l()(null != U, "MemberRolesList: currentUser cannot be undefined");

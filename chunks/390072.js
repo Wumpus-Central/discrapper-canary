@@ -11,13 +11,13 @@ function d(e) {
     let { guildScheduledEvent: t, channel: n, onClose: d } = e,
         h = t.entity_type === c.WX.EXTERNAL,
         g = i.useCallback((e) => (0, a.Qt)(t, d)(e), [t, d]),
-        p = (0, o.u)(t, n);
-    if (null == p) return null;
-    let { IconComponent: m, locationName: f } = p,
+        m = (0, o.u)(t, n);
+    if (null == m) return null;
+    let { IconComponent: p, locationName: f } = m,
         _ = (0, r.jsxs)(r.Fragment, {
             children: [
-                null != m &&
-                    (0, r.jsx)(m, {
+                null != p &&
+                    (0, r.jsx)(p, {
                         size: "custom",
                         color: "currentColor",
                         width: 20,

@@ -2,7 +2,7 @@ n.d(t, {
     A3: () => T,
     Do: () => O,
     f4: () => I,
-    f9: () => A,
+    f9: () => C,
 });
 var r = n(54381),
     i = n(473749),
@@ -147,7 +147,7 @@ let y = (e) => {
                   children: u,
               });
     },
-    A = (e) => {
+    C = (e) => {
         let { orbPriceAmount: t, orbBalance: n, isSubmitting: i, onClickCheckout: o, rentalDuration: s } = e,
             {
                 disabled: d,

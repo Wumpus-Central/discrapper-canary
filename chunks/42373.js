@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(953529);
+n.d(t, { Z: () => A }), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -101,7 +101,7 @@ function T(e) {
     }
     return t;
 }
-let A = (e) => {
+let C = (e) => {
         let { descriptionCta: t, onClick: n, debouncedOnClickAnalytics: i, enablePremiumBrandRefreshDesign: a } = e,
             s = (0, f.ZP)(),
             d = (0, c.wj)(s),
@@ -127,7 +127,7 @@ let A = (e) => {
                   children: t,
               });
     },
-    C = (e) => {
+    A = (e) => {
         let t,
             {
                 name: n,
@@ -138,7 +138,7 @@ let A = (e) => {
                 videoUrl: f,
                 shouldLoadVideo: O,
                 index: S,
-                customVideoStyle: C,
+                customVideoStyle: A,
                 isReducedMotion: N,
                 onClick: P,
                 badgeText: R,
@@ -201,7 +201,7 @@ let A = (e) => {
                         }),
                         null != c &&
                             null != P &&
-                            (0, r.jsx)(A, {
+                            (0, r.jsx)(C, {
                                 descriptionCta: c,
                                 onClick: P,
                                 debouncedOnClickAnalytics: k,
@@ -220,7 +220,7 @@ let A = (e) => {
                             muted: !0,
                             poster: u,
                             loop: !0,
-                            className: o()(Z.boxVideo, { [C]: null != C }),
+                            className: o()(Z.boxVideo, { [A]: null != A }),
                             ref: L,
                             children: (0, r.jsx)("source", {
                                 src: f,

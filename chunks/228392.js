@@ -5,7 +5,7 @@ n.d(t, {
     GX: () => M,
     HR: () => F,
     Hr: () => N,
-    Je: () => A,
+    Je: () => C,
     Js: () => b,
     KR: () => R,
     MO: () => U,
@@ -13,7 +13,7 @@ n.d(t, {
     Oq: () => T,
     P_: () => v,
     Vn: () => I,
-    ab: () => C,
+    ab: () => A,
     e5: () => x,
     e7: () => O,
     lN: () => Z,
@@ -201,7 +201,7 @@ function T(e) {
         }),
     );
 }
-function A(e) {
+function C(e) {
     let { guildId: t, channelId: n, postId: i } = e;
     function a() {
         r.ZP.trackWithMetadata(
@@ -214,7 +214,7 @@ function A(e) {
     }
     u.Z.isLoading(i) ? u.Z.addConditionalChangeListener(() => !!u.Z.isLoading(i) || (a(), !1)) : a();
 }
-function C(e) {
+function A(e) {
     let { guildId: t, channelId: n } = e;
     r.ZP.trackWithMetadata(
         p.rMx.FORUM_CHANNEL_SCROLLED,

@@ -27,8 +27,8 @@ var i = n(120356),
     S = n(48870),
     I = n(770009),
     T = n(889515),
-    A = n(985184),
-    C = n(424158),
+    C = n(985184),
+    A = n(424158),
     N = n(892519),
     P = n(429577);
 function R(e, t, n) {
@@ -121,9 +121,9 @@ function j(e, t) {
         case s.re.CONTENT_INVENTORY_ENTRY:
             return (0, r.jsx)(I.Z, D({}, e), t);
         case s.re.CONTAINER:
-            return (0, r.jsx)(A.Z, x(D({}, e), { renderComponents: L }), t);
+            return (0, r.jsx)(C.Z, x(D({}, e), { renderComponents: L }), t);
         case s.re.LABEL:
-            return (0, r.jsx)(C.Z, x(D({}, e), { renderComponent: j }), t);
+            return (0, r.jsx)(A.Z, x(D({}, e), { renderComponent: j }), t);
         case s.re.FILE_UPLOAD:
             return (0, r.jsx)(p.Z, D({}, e), t);
         case s.re.CHECKPOINT_CARD:

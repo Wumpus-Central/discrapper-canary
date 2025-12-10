@@ -2,95 +2,95 @@ n.d(e, { J: () => o });
 var i = n(323472),
     l = n(509613),
     s = n(313789),
-    r = n(407458),
-    u = n(388032);
+    u = n(407458),
+    r = n(388032);
 let a = [
         {
-            useTitle: () => u.intl.string(u.t.hK51Yg),
+            useTitle: () => r.intl.string(r.t.hK51Yg),
             sound: "deafen",
         },
         {
-            useTitle: () => u.intl.string(u.t.XiejaJ),
+            useTitle: () => r.intl.string(r.t.XiejaJ),
             sound: "undeafen",
         },
         {
-            useTitle: () => u.intl.string(u.t.w4m945),
+            useTitle: () => r.intl.string(r.t.w4m945),
             sound: "mute",
         },
         {
-            useTitle: () => u.intl.string(u.t.YqAjXy),
+            useTitle: () => r.intl.string(r.t.YqAjXy),
             sound: "unmute",
         },
         {
-            useTitle: () => u.intl.string(u.t.JoTq8n),
+            useTitle: () => r.intl.string(r.t.JoTq8n),
             sound: "camera_on",
         },
         {
-            useTitle: () => u.intl.string(u.t["8P6tQ6"]),
+            useTitle: () => r.intl.string(r.t["8P6tQ6"]),
             sound: "camera_off",
         },
         {
-            useTitle: () => u.intl.string(u.t["juL9/L"]),
+            useTitle: () => r.intl.string(r.t["juL9/L"]),
             sound: "disconnect",
         },
         {
-            useTitle: () => u.intl.string(u.t.x98vQq),
+            useTitle: () => r.intl.string(r.t.x98vQq),
             sound: "ptt_start",
         },
         {
-            useTitle: () => u.intl.string(u.t["1HjRqC"]),
+            useTitle: () => r.intl.string(r.t["1HjRqC"]),
             sound: "ptt_stop",
         },
         {
-            useTitle: () => u.intl.string(u.t["9JB1Ck"]),
+            useTitle: () => r.intl.string(r.t["9JB1Ck"]),
             sound: "user_join",
         },
         {
-            useTitle: () => u.intl.string(u.t.KUBBNt),
+            useTitle: () => r.intl.string(r.t.KUBBNt),
             sound: "user_leave",
         },
         {
-            useTitle: () => u.intl.string(u.t.EZjqUT),
+            useTitle: () => r.intl.string(r.t.EZjqUT),
             sound: "user_moved",
         },
         {
-            useTitle: () => u.intl.string(u.t.LnNlQh),
+            useTitle: () => r.intl.string(r.t.LnNlQh),
             sound: "call_calling",
         },
         {
-            useTitle: () => u.intl.string(u.t.Nd8P5y),
+            useTitle: () => r.intl.string(r.t.Nd8P5y),
             sound: "stream_started",
         },
         {
-            useTitle: () => u.intl.string(u.t["9bYj+G"]),
+            useTitle: () => r.intl.string(r.t["9bYj+G"]),
             sound: "stream_ended",
         },
         {
-            useTitle: () => u.intl.string(u.t.KccUI1),
+            useTitle: () => r.intl.string(r.t.KccUI1),
             sound: "stream_user_joined",
         },
         {
-            useTitle: () => u.intl.string(u.t.dsjkiN),
+            useTitle: () => r.intl.string(r.t.dsjkiN),
             sound: "stream_user_left",
         },
         {
-            useTitle: () => u.intl.string(u.t.nFOcf9),
+            useTitle: () => r.intl.string(r.t.nFOcf9),
             sound: "activity_launch",
         },
         {
-            useTitle: () => u.intl.string(u.t["a6lw/u"]),
+            useTitle: () => r.intl.string(r.t["a6lw/u"]),
             sound: "activity_end",
         },
         {
-            useTitle: () => u.intl.string(u.t.KaFxrY),
+            useTitle: () => r.intl.string(r.t.KaFxrY),
             sound: "activity_user_join",
         },
         {
-            useTitle: () => u.intl.string(u.t.S14z9n),
+            useTitle: () => r.intl.string(r.t.S14z9n),
             sound: "activity_user_left",
         },
         {
-            useTitle: () => u.intl.string(u.t.CP3DC3),
+            useTitle: () => r.intl.string(r.t.CP3DC3),
             sound: "reconnect",
         },
     ],
@@ -98,13 +98,13 @@ let a = [
         collapseAfter: 4,
         useCollapsibleTitle: (t, e) =>
             t
-                ? u.intl.formatToPlainString(u.t["0JYT98"], { count: e })
-                : u.intl.formatToPlainString(u.t.ji1uNt, { count: e }),
+                ? r.intl.formatToPlainString(r.t["0JYT98"], { count: e })
+                : r.intl.formatToPlainString(r.t.ji1uNt, { count: e }),
         useCollapsedSubtitle: () => (0, i.u)(s.n.VOICE_AND_VIDEO_SOUNDS_LIST, { limit: 3 }),
         initialize: function () {
             return () => {
-                (0, r.WY)();
+                (0, u.WY)();
             };
         },
-        buildLayout: () => a.map((t) => (0, r.j$)(t)),
+        buildLayout: () => a.map((t) => (0, u.j$)(t)),
     });

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(10718),
     I = n(895924),
     T = n(835473),
-    A = n(568100),
-    C = n(471518),
+    C = n(568100),
+    A = n(471518),
     N = n(425986),
     P = n(216780),
     R = n(857192),
@@ -79,8 +79,8 @@ function ea(e) {
         [y, O] = e_(u),
         [v, S] = e_(d),
         [I, T] = e_(f),
-        A = h && y && v && I,
-        C = (d || u) && !A,
+        C = h && y && v && I,
+        A = (d || u) && !C,
         N = f && c;
     i.useEffect(() => {
         var e;
@@ -138,13 +138,13 @@ function ea(e) {
                                       context: t,
                                       onEmptyState: T,
                                   }),
-                              A &&
+                              C &&
                                   (0, r.jsx)(F.A, {
                                       type: x.LG.HOME_EMPTY,
                                       textContent:
                                           n === x._b.TEXT ? q.intl.string(q.t.iKZctW) : q.intl.string(q.t.RL7Ncg),
                                   }),
-                              C && (0, r.jsx)(H.Z, {}),
+                              A && (0, r.jsx)(H.Z, {}),
                           ],
                       }),
             }),
@@ -632,14 +632,14 @@ function e_(e) {
 }
 function em() {
     let e = (0, _.e7)([R.default], () => R.default.onlyShowPreviewAppCollections),
-        t = A.Z.getCurrentConfig({ location: "App Launcher Home (Web)" }, { autoTrackExposure: !1 }).enabled;
+        t = C.Z.getCurrentConfig({ location: "App Launcher Home (Web)" }, { autoTrackExposure: !1 }).enabled;
     return e ? s.E.PREVIEW : t ? s.E.NON_STAFF_PREVIEW : s.E.ACTIVE;
 }
 function eh(e) {
     let { context: t, entrypoint: n } = e,
         r = em();
     i.useEffect(() => {
-        (0, C.XK)({
+        (0, A.XK)({
             surface: ei,
             activeState: r,
         });

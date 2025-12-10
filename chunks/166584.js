@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function A(e) {
     }
     return e;
 }
-function C(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,7 +67,7 @@ function N(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -115,7 +115,7 @@ function j(e) {
             onRemoveRole: b,
         } = e,
         T = i.useRef({}),
-        C = (e, t) => {
+        A = (e, t) => {
             null != t ? (T.current[e] = t) : delete T.current[e];
         },
         [R, j] = i.useState(f),
@@ -168,7 +168,7 @@ function j(e) {
                     guildId: l.id,
                     style: { maxWidth: U || i !== R.length - 1 ? w : M },
                     disableBorderColor: !0,
-                    ref: (t) => C(e.id, t),
+                    ref: (t) => A(e.id, t),
                     onRemove: () => b(e),
                     canRemove:
                         (null == (a = e.tags) ? void 0 : a.guild_connections) === null
@@ -194,7 +194,7 @@ function j(e) {
                 return (0, r.jsxs)(
                     "div",
                     N(
-                        A(
+                        C(
                             {
                                 className: I.root,
                                 "aria-label": W,

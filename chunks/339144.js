@@ -71,8 +71,8 @@ let D = i.memo(function (e) {
                 accountLinkButtonRef: K,
                 startAuthorization: Y,
                 canStartAuthorization: q,
-                hasAlreadyLinked: Q,
-                connectionApp: X,
+                hasAlreadyLinked: X,
+                connectionApp: Q,
             } = e,
             { showRefreshedGoLiveModal: J } = (0, v.a)({
                 location: "Activity Panel",
@@ -186,8 +186,8 @@ let D = i.memo(function (e) {
             [],
         ),
             i.useEffect(() => {
-                Q && (eu(!1), null != es.current && (clearTimeout(es.current), (es.current = null)));
-            }, [Q]);
+                X && (eu(!1), null != es.current && (clearTimeout(es.current), (es.current = null)));
+            }, [X]);
         let ed =
                 null == et || null == H
                     ? null
@@ -260,7 +260,7 @@ let D = i.memo(function (e) {
                       }),
             em = null == C ? null : (0, r.jsx)(_.Z, {}),
             eb =
-                !q || Q
+                !q || X
                     ? null
                     : (0, r.jsx)(L, {
                           runningGame: U,
@@ -272,11 +272,11 @@ let D = i.memo(function (e) {
                                       eu(!1);
                                   }, 90000)));
                           },
-                          connectionApp: X,
+                          connectionApp: Q,
                           ref: K,
                       }),
             e_ =
-                !q || Q
+                !q || X
                     ? null
                     : (0, r.jsx)(c.J2, {
                           title: T.intl.string(T.t.ULvRFd),

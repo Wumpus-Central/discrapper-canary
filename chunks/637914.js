@@ -48,8 +48,8 @@ var a,
     S = n(81894),
     I = m("draft_tree_data_support"),
     T = "&nbsp;",
-    A = " ",
-    C = RegExp("\r", "g"),
+    C = " ",
+    A = RegExp("\r", "g"),
     N = RegExp("\n", "g"),
     P = RegExp("^\n", "g"),
     R = RegExp(T, "g"),
@@ -292,7 +292,7 @@ var a,
             (t._addTextNode = function (e, t) {
                 var n = e.textContent;
                 "" === n.trim() && "pre" !== this.wrapper && (n = " "),
-                    "pre" !== this.wrapper && (n = (n = n.replace(P, "")).replace(N, A)),
+                    "pre" !== this.wrapper && (n = (n = n.replace(P, "")).replace(N, C)),
                     this._appendText(n, t);
             }),
             (t._addBreakNode = function (e, t) {
@@ -392,7 +392,7 @@ var a,
 e.exports = function (e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c,
-        r = t((e = e.trim().replace(C, "").replace(R, A).replace(D, "").replace(w, "")));
+        r = t((e = e.trim().replace(A, "").replace(R, C).replace(D, "").replace(w, "")));
     return r
         ? new Y(G(n), function (e, t) {
               return "li" === e ? ("ol" === t ? "ordered-list-item" : "unordered-list-item") : null;

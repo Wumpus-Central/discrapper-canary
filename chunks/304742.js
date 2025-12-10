@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    s = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    s = n(481060),
     a = n(811847),
     c = n(215023),
     u = n(388032),
@@ -37,16 +37,16 @@ function g(e) {
             [],
         );
     return (0, r.jsx)("div", {
-        className: s()({ [d.customCursors]: i }),
-        children: (0, r.jsx)(o.v2r, {
+        className: o()({ [d.customCursors]: i }),
+        children: (0, r.jsx)(s.v2r, {
             navId: "collectibles-index-page-menu",
-            className: s()({ [d.customCursors]: i }),
+            className: o()({ [d.customCursors]: i }),
             onClose: n,
             "aria-label": u.intl.string(u.t.xFcotU),
             onSelect: () => {},
             children: g.map((e) =>
                 (0, r.jsx)(
-                    o.sNh,
+                    s.sNh,
                     {
                         id: e.value,
                         label: e.label,

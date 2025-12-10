@@ -1,5 +1,5 @@
 n.d(t, {
-    E2: () => A,
+    E2: () => C,
     Kp: () => x,
     LI: () => b,
     MH: () => w,
@@ -14,7 +14,7 @@ n.d(t, {
     m4: () => S,
     nE: () => P,
     t3: () => g,
-    yH: () => C,
+    yH: () => A,
 }),
     n(388685),
     n(642613);
@@ -85,14 +85,14 @@ let f = 60,
         for (let t of Object.values(c.MY)) if (t.toString() === e) return t;
     },
     T = (e) => {
-        let t = A(e);
+        let t = C(e);
         return 0 === t.size ? [] : Array.from(t.entries()).sort((e, t) => e[1].priority - t[1].priority);
     },
-    A = (e) => {
+    C = (e) => {
         let t = new Map(c.tx);
         return e && (t = new Map([...t, ...c.U])), t;
     },
-    C = (e) => {
+    A = (e) => {
         let t = Math.floor(e / 60),
             n = e % 60;
         return t > 0 ? "".concat(t, "h ").concat(n, "m") : "".concat(n, "m");

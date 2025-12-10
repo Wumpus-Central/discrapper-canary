@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(470167),
     i = n(904245),
     a = n(911969),
@@ -59,7 +59,7 @@ function T(e) {
     ((null == t ? void 0 : t.type) === b.d4z.GUILD_FORUM || (null == t ? void 0 : t.type) === b.d4z.GUILD_MEDIA) &&
         (0, c.EB)(t);
 }
-class A extends o.Z {
+class C extends o.Z {
     constructor(...e) {
         super(...e),
             O(this, "_previousAgeVerificationStatus", null),
@@ -101,4 +101,4 @@ class A extends o.Z {
             });
     }
 }
-let C = new A();
+let A = new C();

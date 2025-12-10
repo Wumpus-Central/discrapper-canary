@@ -143,11 +143,11 @@ var r = (function (e) {
         for (; l > 0; ) (o[i++] = l % s), (l = Math.floor(l / s));
         return o;
     }
-    function A(e, t) {
+    function C(e, t) {
         for (var n = []; t-- > 0; ) n.push(0);
         return n.concat(e);
     }
-    function C(e, t) {
+    function A(e, t) {
         var n = Math.max(e.length, t.length);
         if (n <= 30) return I(e, t);
         n = Math.ceil(n / 2);
@@ -155,10 +155,10 @@ var r = (function (e) {
             i = e.slice(0, n),
             a = t.slice(n),
             o = t.slice(0, n),
-            s = C(i, o),
-            l = C(r, a),
-            c = C(b(i, r), b(o, a)),
-            u = b(b(s, A(O(O(c, s), l), n)), A(l, 2 * n));
+            s = A(i, o),
+            l = A(r, a),
+            c = A(b(i, r), b(o, a)),
+            u = b(b(s, C(O(O(c, s), l), n)), C(l, 2 * n));
         return m(u), u;
     }
     function N(e, t) {
@@ -390,7 +390,7 @@ var r = (function (e) {
                 if ((n = Math.abs(a)) < t) return new c(T(i, n), o);
                 a = p(n);
             }
-            return N(i.length, a.length) ? new c(C(i, a), o) : new c(I(i, a), o);
+            return N(i.length, a.length) ? new c(A(i, a), o) : new c(I(i, a), o);
         }),
         (c.prototype.times = c.prototype.multiply),
         (u.prototype._multiplyBySmall = function (e) {

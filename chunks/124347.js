@@ -1,6 +1,6 @@
 n.d(t, {
-    FH: () => C,
-    YG: () => A,
+    FH: () => A,
+    YG: () => C,
     ZP: () => D,
     uo: () => T,
 }),
@@ -77,8 +77,8 @@ function I(e, t) {
     );
 }
 let T = /\.gif($|\?|#)/i,
-    A = /\.webp($|\?|#)/i,
-    C = /\.avif($|\?|#)/i,
+    C = /\.webp($|\?|#)/i,
+    A = /\.avif($|\?|#)/i,
     N = /\.png($|\?|#)/i,
     P = 400,
     R = 300;
@@ -88,7 +88,7 @@ class D extends (r = a.Component) {
         return (
             r ||
             T.test(null != n && "" !== n ? n : t) ||
-            (null != i && i && (A.test(null != n && "" !== n ? n : t) || C.test(null != n && "" !== n ? n : t)))
+            (null != i && i && (C.test(null != n && "" !== n ? n : t) || A.test(null != n && "" !== n ? n : t)))
         );
     }
     static isSrcPNG(e) {
@@ -97,7 +97,7 @@ class D extends (r = a.Component) {
     }
     static isSrcAVIF(e) {
         let { src: t } = e;
-        return C.test(t);
+        return A.test(t);
     }
     static getFormatQuality(e) {
         let { src: t, original: n, animated: r, srcIsAnimated: i, freeze: a = !1 } = e,
@@ -300,8 +300,8 @@ class D extends (r = a.Component) {
                 onClick: S,
                 renderAccessory: I,
                 tabIndex: T,
-                limitResponsiveWidth: A,
-                useFullWidth: C,
+                limitResponsiveWidth: C,
+                useFullWidth: A,
                 placeholder: N,
                 placeholderVersion: P,
                 dataSafeSrc: R,
@@ -322,8 +322,8 @@ class D extends (r = a.Component) {
                 minWidth: g,
                 minHeight: E,
                 mediaLayoutType: this.getType(),
-                limitResponsiveWidth: A,
-                useFullWidth: C,
+                limitResponsiveWidth: C,
+                useFullWidth: A,
                 tabIndex: T,
                 width: U,
                 height: G,

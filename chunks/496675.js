@@ -22,7 +22,7 @@ var r,
     S = n(594174),
     I = n(981631),
     T = n(478743);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,20 +35,20 @@ function A(e, t, n) {
         e
     );
 }
-let C = {},
+let A = {},
     N = {},
     P = {},
     R = 0;
 function D(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = C[e];
+        n = A[e];
     if (null != n) return n;
     let r = S.default.getCurrentUser();
     if (null == r) return b.Hn;
     let i = v.Z.getGuild(e);
     return null == i
         ? b.Hn
-        : (C[e] = b.uB({
+        : (A[e] = b.uB({
               user: r,
               context: i,
               checkElevated: t,
@@ -83,7 +83,7 @@ function L(e) {
     }
 }
 function j() {
-    for (let e in ((C = {}), (N = {}), P)) P[e] += 1;
+    for (let e in ((A = {}), (N = {}), P)) P[e] += 1;
     R += 1;
 }
 function M() {
@@ -157,7 +157,7 @@ function K(e) {
 }
 function z(e) {
     let { guildId: t } = e;
-    delete C[t];
+    delete A[t];
     let n = y.Z.getMutableBasicGuildChannelsForGuild(t);
     a().forEach(n, (e) => {
         delete N[e.id];
@@ -179,7 +179,7 @@ function q(e) {
 }
 function Q(e) {
     let { guildId: t } = e;
-    delete C[t];
+    delete A[t];
     let n = y.Z.getMutableBasicGuildChannelsForGuild(t);
     a().forEach(n, (e) => {
         delete N[e.id];
@@ -295,9 +295,9 @@ class J extends (r = s.ZP.Store) {
     }
 }
 function $() {
-    (N = {}), (C = {}), (P = {}), (R = 0);
+    (N = {}), (A = {}), (P = {}), (R = 0);
 }
-A(J, "displayName", "PermissionStore");
+C(J, "displayName", "PermissionStore");
 let ee = new J(l.Z, {
     BACKGROUND_SYNC: M,
     CONNECTION_OPEN: M,

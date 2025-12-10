@@ -95,11 +95,11 @@ function T(e) {
     let { channel: t } = e;
     _(t.id);
 }
-function A(e) {
+function C(e) {
     let { channel: t } = e;
     delete f[t.id];
 }
-function C(e) {
+function A(e) {
     let t = !1;
     for (let n of e.messages) t = P(n.thread) || t;
     return t;
@@ -165,6 +165,6 @@ let w = new D(s.Z, {
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: N,
     LOAD_THREADS_SUCCESS: I,
     LOAD_ARCHIVED_THREADS_SUCCESS: I,
-    THREAD_DELETE: A,
-    LOAD_MESSAGES_SUCCESS: C,
+    THREAD_DELETE: C,
+    LOAD_MESSAGES_SUCCESS: A,
 });

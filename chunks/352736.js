@@ -68,7 +68,7 @@ function T(e) {
         }),
     );
 }
-function A(e) {
+function C(e) {
     return (0, a.Rp)(
         y.intl.formatToParts(y.t.ihxM9x, {
             username: e,
@@ -76,10 +76,10 @@ function A(e) {
         }),
     );
 }
-function C(e, t) {
+function A(e, t) {
     let n = _.Z.getChannel(t);
     return null == n || null == m.Z.getGuild(n.getGuildId())
-        ? A(e)
+        ? C(e)
         : (0, a.Rp)(
               y.intl.formatToParts(y.t.ihxM9x, {
                   username: e,
@@ -224,11 +224,11 @@ let w = {
             case b.uaV.EMOJI_ADDED:
                 return T(e);
             case b.uaV.GUILD_BOOST:
-                return A(O);
+                return C(O);
             case b.uaV.GUILD_BOOST_TIER_1:
             case b.uaV.GUILD_BOOST_TIER_2:
             case b.uaV.GUILD_BOOST_TIER_3:
-                return C(O, E);
+                return A(O, E);
             case b.uaV.GUILD_INVITE_REMINDER:
                 return y.intl.string(y.t.gxyKvr);
             case b.uaV.THREAD_STARTER_MESSAGE:

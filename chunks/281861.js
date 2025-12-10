@@ -9,8 +9,8 @@ n.r(t),
         casual: () => I,
         createCasualConfiguration: () => N,
         createConfiguration: () => P,
-        parse: () => A,
-        parseDate: () => C,
+        parse: () => C,
+        parseDate: () => A,
         strict: () => T,
     });
 var r = n(717319),
@@ -36,10 +36,10 @@ var r = n(717319),
     S = n(628269);
 let I = new i.k(N()),
     T = new i.k(P(!0));
-function A(e, t, n) {
+function C(e, t, n) {
     return I.parse(e, t, n);
 }
-function C(e, t, n) {
+function A(e, t, n) {
     return I.parseDate(e, t, n);
 }
 function N(e = !0) {

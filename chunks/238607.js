@@ -39,19 +39,19 @@ function m(e) {
             },
         });
     if (null == b) return null;
-    let { isJoining: O, handleJoinRequest: v, buttonCTA: S, tooltip: I, isEnabled: T, isEmbedded: A } = b;
+    let { isJoining: O, handleJoinRequest: v, buttonCTA: S, tooltip: I, isEnabled: T, isEmbedded: C } = b;
     return (0, r.jsx)(i.u, {
         text: I,
         asContainer: !T,
         children: (0, r.jsx)(d.O1, {
-            icon: A ? a.YVR : a.iWm,
+            icon: C ? a.YVR : a.iWm,
             text: S,
             disabled: !T,
             loading: O,
             fullWidth: g !== p.l.MODAL_V2,
             onClick: (e) => {
                 e.stopPropagation(),
-                    null == m || m({ action: A ? "PRESS_JOIN_BUTTON" : "PRESS_ASK_TO_JOIN_BUTTON" }),
+                    null == m || m({ action: C ? "PRESS_JOIN_BUTTON" : "PRESS_ASK_TO_JOIN_BUTTON" }),
                     v();
             },
         }),

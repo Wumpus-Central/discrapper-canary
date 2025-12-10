@@ -58,7 +58,7 @@ function T(e) {
         (h = Date.now()),
         (m = !1);
 }
-function A(e) {
+function C(e) {
     let { promotions: t, consumedInboundPromotionId: n } = e;
     t.forEach((e) => {
         let t = s.Z.createFromServer(e);
@@ -78,7 +78,7 @@ function A(e) {
         p.hasFetchedConsumedInboundPromotionId ||
             ((p.hasFetchedConsumedInboundPromotionId = !0), (p.consumedInboundPromotionId = n));
 }
-function C() {
+function A() {
     g = !0;
 }
 function N() {
@@ -198,8 +198,8 @@ d(j, "displayName", "PromotionsStore"),
         },
     ]);
 let M = new j(a.Z, {
-    ACTIVE_PROMOTIONS_FETCH_SUCCESS: A,
-    ACTIVE_PROMOTIONS_FETCH: C,
+    ACTIVE_PROMOTIONS_FETCH_SUCCESS: C,
+    ACTIVE_PROMOTIONS_FETCH: A,
     ACTIVE_PROMOTIONS_FETCH_FAIL: N,
     ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: T,
     ACTIVE_BOGO_PROMOTION_FETCH: S,

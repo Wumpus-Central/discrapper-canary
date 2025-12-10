@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(786761),
     p = n(739566),
     f = n(492593),
-    h = n(453687),
-    g = n(25015),
+    g = n(453687),
+    h = n(25015),
     m = n(438075),
     _ = n(963550),
     b = n(845080),
@@ -100,7 +100,7 @@ let N = i.memo(function (e) {
             content: B,
             hasSpoilerEmbeds: H,
             hasBailedAst: V,
-        } = (0, g.Z)(N, {
+        } = (0, h.Z)(N, {
             hideSimpleEmbedContent: A,
             allowList: U || G,
             allowHeading: U || G,
@@ -117,8 +117,8 @@ let N = i.memo(function (e) {
             guildId: Z.guild_id,
             roleId: z.iconRoleId,
         }),
-        q = (0, h.iG)(N),
-        K = (0, h.Gx)(N);
+        q = (0, g.iG)(N),
+        K = (0, g.Gx)(N);
     return (0, r.jsx)(
         f.Z,
         T(

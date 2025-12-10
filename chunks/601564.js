@@ -16,8 +16,8 @@ var r = n(54381),
     d = n(666743),
     p = n(112724),
     f = n(447269),
-    h = n(612226),
-    g = n(714338),
+    g = n(612226),
+    h = n(714338),
     m = n(663993),
     _ = n(248687),
     b = n(703656),
@@ -56,16 +56,16 @@ class P extends i.PureComponent {
                 e.pathname.startsWith(I.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
             })),
             this.props.isAuthenticated && (0, c.tZ)(),
-            g.Z.disable(),
-            g.Z.setLayout(f.r),
-            g.Z.enable(),
+            h.Z.disable(),
+            h.Z.setLayout(f.r),
+            h.Z.enable(),
             (0, E.e)("application_store");
     }
     componentWillUnmount() {
         null != this.stopListeningToHistory && this.stopListeningToHistory(),
-            g.Z.disable(),
-            g.Z.setLayout(h.oT),
-            g.Z.enable();
+            h.Z.disable(),
+            h.Z.setLayout(g.oT),
+            h.Z.enable();
     }
     renderCustomErrorMessage() {
         return (0, r.jsxs)("div", {

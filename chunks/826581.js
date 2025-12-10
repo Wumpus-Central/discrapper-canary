@@ -88,10 +88,10 @@ function I(e) {
     k(t);
 }
 let T = !1;
-function A() {
+function C() {
     T = !0;
 }
-function C(e) {
+function A(e) {
     let { status: t, requests: n, total: r, guildId: i } = e;
     (T = !1),
         t === f.wB.SUBMITTED && v(i, r),
@@ -204,8 +204,8 @@ class q extends (r = o.ZP.Store) {
 _(q, "displayName", "GuildJoinRequestStoreV2");
 let Q = new q(l.Z, {
     GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: I,
-    GUILD_JOIN_REQUESTS_FETCH_SUCCESS: C,
-    GUILD_JOIN_REQUESTS_FETCH_START: A,
+    GUILD_JOIN_REQUESTS_FETCH_SUCCESS: A,
+    GUILD_JOIN_REQUESTS_FETCH_START: C,
     GUILD_JOIN_REQUESTS_FETCH_FAILURE: N,
     GUILD_JOIN_REQUESTS_BULK_ACTION: Z,
     GUILD_JOIN_REQUEST_CREATE: U,

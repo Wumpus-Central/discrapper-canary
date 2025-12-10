@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(206295),
     I = n(297781),
     T = n(591853),
-    A = n(797342),
-    C = n(981631),
+    C = n(797342),
+    A = n(981631),
     N = n(388032);
 let P = (e, t) =>
         N.intl.formatToPlainString(N.t.tAwI1k, {
@@ -59,7 +59,7 @@ let P = (e, t) =>
                 entry: n,
                 showCoverImage: !1,
             }),
-            { user: j, details: M, activity: k, embeddedActivity: U } = (0, A.n)(n),
+            { user: j, details: M, activity: k, embeddedActivity: U } = (0, C.n)(n),
             { primaryColor: G, secondaryColor: Z } = (0, S.Z)(null == L ? void 0 : L.src),
             B = (0, a.e7)([h.default], () => h.default.locale),
             { displayParticipants: F, participant1: V, participant2: H, numOtherParticipants: Y } = (0, y.Z)(n, 3),
@@ -112,7 +112,7 @@ let P = (e, t) =>
                 onClickSubtitle: x ? void 0 : W,
                 onClickThumbnail: x ? void 0 : W,
             }),
-            J = (0, s.Z)(k, C.xjy.JOIN) || (0, l.Z)(k),
+            J = (0, s.Z)(k, A.xjy.JOIN) || (0, l.Z)(k),
             $ = J
                 ? (0, r.jsx)(u.Z, {
                       embeddedActivity: U,

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(860076),
     I = n(388032),
     T = n(417788),
-    A = n(284788),
-    C = n(228137);
+    C = n(284788),
+    A = n(228137);
 let N = 100,
     P = 1;
 function R() {
@@ -89,16 +89,16 @@ function R() {
                 muted: !0,
                 loop: !0,
                 playsInline: !0,
-                className: A.hidden,
+                className: C.hidden,
                 ref: L,
                 "aria-hidden": !0,
                 children: (0, r.jsx)("source", {
-                    src: C.Z,
+                    src: A.Z,
                     type: "video/webm",
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: A.content,
+                className: C.content,
                 children: [
                     (0, r.jsxs)("div", {
                         className: T.title,
@@ -128,7 +128,7 @@ function R() {
                     }),
                     (0, r.jsx)(y.Z, {
                         variant: "heading-xxl/medium",
-                        className: A.subtitle,
+                        className: C.subtitle,
                         children: B
                             ? I.intl.format(S.default["36PZwu"], {
                                   percent: 100 - t,

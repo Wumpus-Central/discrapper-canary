@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(907331),
     c = n(793030),
     u = n(481060),
@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(441536),
     I = n(619733),
     T = n(535396),
-    A = n(981631),
-    C = n(810878),
+    C = n(981631),
+    A = n(810878),
     N = n(388032),
     P = n(765179),
     R = n(630564);
@@ -104,8 +104,8 @@ function j(e) {
             null != e &&
                 (0, p.u)({
                     analyticsLocation: {
-                        page: A.ZY5.GUILD_POWERUPS_MARKETING,
-                        section: A.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
+                        page: C.ZY5.GUILD_POWERUPS_MARKETING,
+                        section: C.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
                     },
                     numberOfBoostsToAdd: 1,
                     analyticsLocations: D,
@@ -169,7 +169,7 @@ function j(e) {
                     (0, r.jsx)(_.xm, {
                         heading: a,
                         description: c,
-                        label: N.intl.formatToPlainString(C.default.QOacIS, {
+                        label: N.intl.formatToPlainString(A.default.QOacIS, {
                             quantity: h,
                             decorator: null != g ? g : "",
                         }),
@@ -249,12 +249,12 @@ let k = 3,
                   children: [
                       (0, r.jsx)(c.X6q, {
                           variant: "heading-xxl/extrabold",
-                          children: N.intl.string(C.default.wjI18Q),
+                          children: N.intl.string(A.default.wjI18Q),
                       }),
                       (0, r.jsx)(c.xvT, {
                           variant: "text-lg/medium",
-                          children: N.intl.format(C.default.S562fn, {
-                              helpDeskArticle: h.Z.getArticleURL(A.BhN.GUILD_BOOSTING_FAQ),
+                          children: N.intl.format(A.default.S562fn, {
+                              helpDeskArticle: h.Z.getArticleURL(C.BhN.GUILD_BOOSTING_FAQ),
                           }),
                       }),
                       (0, r.jsx)("div", {

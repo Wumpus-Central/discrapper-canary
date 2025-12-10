@@ -119,7 +119,7 @@ function T(e) {
         o
     );
 }
-class A {
+class C {
     setLimit(e) {
         (this._limit = e), null != this._nextQuery && (this._nextQuery.limit = e);
     }
@@ -200,7 +200,7 @@ class A {
             this.subscribe();
     }
 }
-class C extends s.Z {
+class A extends s.Z {
     _initialize() {
         this.rebootWebworker();
     }
@@ -244,7 +244,7 @@ class C extends s.Z {
         this.initialize();
         let { _worker: n } = this;
         if (null == n) throw Error("SearchContextManager: No webworker initialized");
-        return new A(n, e, t);
+        return new C(n, e, t);
     }
     requestDebugState() {
         this.initialize();
@@ -516,4 +516,4 @@ class C extends s.Z {
             });
     }
 }
-let N = new C();
+let N = new A();

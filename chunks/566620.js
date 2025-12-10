@@ -41,8 +41,8 @@ var r = n(990547),
     S = n(605236),
     I = n(233764),
     T = n(375824),
-    A = n(48131),
-    C = n(591472),
+    C = n(48131),
+    A = n(591472),
     N = n(813370),
     P = n(957730),
     R = n(48854),
@@ -142,9 +142,9 @@ async function el(e) {
             let { close: e } = n(788983);
             e(ee.KJ3.ACTIVITY_POPOUT);
         }
-        let e = C.Z.getConnectedFrame();
-        if ((null != e && A.Z.stopFrame({ applicationId: e.applicationId }), x))
-            return await A.Z.launchFrame({ applicationId: o }), !0;
+        let e = A.Z.getConnectedFrame();
+        if ((null != e && C.Z.stopFrame({ applicationId: e.applicationId }), x))
+            return await C.Z.launchFrame({ applicationId: o }), !0;
         l.Z.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_START",
             nonce: L,

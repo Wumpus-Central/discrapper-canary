@@ -1,5 +1,5 @@
 n.d(t, {
-    I: () => h,
+    I: () => g,
     Z: () => m,
 }),
     n(388685);
@@ -14,7 +14,7 @@ var r = n(54381),
     d = n(783393),
     p = n(112471),
     f = n(803638);
-function h(e) {
+function g(e) {
     let { categoryId: t, loadId: n } = e;
     u.Z.setState({ categoryId: t }),
         c.Z.loadCategoryResults({
@@ -24,16 +24,16 @@ function h(e) {
             languageCode: u.Z.getField("languageCode"),
         });
 }
-function g(e) {
+function h(e) {
     let { loadId: t, categoryId: n, count: l } = e,
         c = i.useCallback(() => {
-            h({
+            g({
                 categoryId: n,
                 loadId: t,
             });
         }, [n, t]),
         p = u.Z.useField("categoryId") === n,
-        g = l.toLocaleString(o.default.locale),
+        h = l.toLocaleString(o.default.locale),
         m = (0, d.E)({ categoryId: n });
     return (0, r.jsxs)(s.P3F, {
         onClick: c,
@@ -49,7 +49,7 @@ function g(e) {
                 className: f.count,
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: g,
+                children: h,
             }),
         ],
     });
@@ -64,7 +64,7 @@ let m = function (e) {
               children: n.map((e) => {
                   let [n, i] = e;
                   return (0, r.jsx)(
-                      g,
+                      h,
                       {
                           loadId: t,
                           categoryId: n,

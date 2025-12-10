@@ -13,8 +13,8 @@ function d(e) {
             var e;
             return null != (e = o.default.getFingerprint()) ? e : o.default.getId();
         }),
-        h = (0, l.e7)([s.Z], () => s.Z.getState(i), [i]),
-        g = r.useMemo(
+        g = (0, l.e7)([s.Z], () => s.Z.getState(i), [i]),
+        h = r.useMemo(
             () =>
                 null == d
                     ? {
@@ -28,12 +28,12 @@ function d(e) {
     return (
         r.useEffect(() => {
             u ||
-                (null == h &&
+                (null == g &&
                     a.Z.openNativeAppModal(i, c.Etm.DEEP_LINK, {
                         type: n,
-                        params: g,
+                        params: h,
                     }));
-        }, [h, i, g, n]),
+        }, [g, i, h, n]),
         t
     );
 }

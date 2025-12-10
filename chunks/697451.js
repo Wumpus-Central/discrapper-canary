@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(598077),
     I = n(594174),
     T = n(768581),
-    A = n(585483),
-    C = n(55935),
+    C = n(585483),
+    A = n(55935),
     N = n(739566),
     P = n(421399),
     R = n(310423),
@@ -175,12 +175,12 @@ function V(e, t, n, i, a, o) {
                 onContextMenu: 1 === n ? O : b,
                 ref: o,
             }),
-        A = 1 === n ? g : h;
-    return null != a && null != A && null != o
+        C = 1 === n ? g : h;
+    return null != a && null != C && null != o
         ? (0, r.jsx)(f.yRy, {
               targetElementRef: o,
               renderPopout: a,
-              shouldShow: A,
+              shouldShow: C,
               position: "right",
               onRequestClose: v,
               children: I,
@@ -258,7 +258,7 @@ function Y(e, t, n) {
                 });
             {
                 let e = () => {
-                        A.S.dispatchToLastSubscribed(w.CkL.OPEN_APP_LAUNCHER, { applicationId: a.applicationId });
+                        C.S.dispatchToLastSubscribed(w.CkL.OPEN_APP_LAUNCHER, { applicationId: a.applicationId });
                     },
                     t = (0, E.XZ)(c);
                 return (0, r.jsx)(
@@ -298,7 +298,7 @@ function K(e) {
         { message: a, channel: s } = e,
         { analyticsLocations: c, newestAnalyticsLocation: E } = (0, g.ZP)(h.Z.EXECUTED_COMMAND),
         T = (0, d.e7)([I.default], () => I.default.getCurrentUser()),
-        A = i.useRef(null),
+        C = i.useRef(null),
         P = i.useRef(null),
         w = i.useMemo(
             () => (e, t, n) => (
@@ -344,12 +344,12 @@ function K(e) {
             null != e.renderTargetMessage,
         B = (0, N.Sw)(null == (t = a.interaction) ? void 0 : t.user, s),
         F = (0, N.Sw)(G, s),
-        K = i.useMemo(() => (e.compact ? (0, D.Z)((0, C.vc)(u()(), "LT")) : null), [e.compact]),
+        K = i.useMemo(() => (e.compact ? (0, D.Z)((0, A.vc)(u()(), "LT")) : null), [e.compact]),
         z = (0, _.NX)(s.id),
         q = a.interaction;
     if (null == q || null == B) return null;
     let Q = () => {
-            let t = V(e, q.user, 0, B, (e) => w(e, q.user, [h.Z.AVATAR]), A),
+            let t = V(e, q.user, 0, B, (e) => w(e, q.user, [h.Z.AVATAR]), C),
                 n = H(e, q.user, 0, B, (e) => w(e, q.user));
             return (0, r.jsxs)(
                 i.Fragment,
@@ -361,7 +361,7 @@ function K(e) {
         },
         X = () => {
             if (null == G) return null;
-            let t = V(e, G, 1, F, (e) => w(e, G, [h.Z.AVATAR]), A),
+            let t = V(e, G, 1, F, (e) => w(e, G, [h.Z.AVATAR]), C),
                 n = H(e, G, 1, F, (e) => w(e, G));
             return (0, r.jsxs)(
                 i.Fragment,

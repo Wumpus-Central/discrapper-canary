@@ -49,13 +49,13 @@ let y = (e) => {
                 );
             }
         }, [n]),
-        A = i.useCallback(() => {
+        C = i.useCallback(() => {
             (0, s.Z)(u.Z.getArticleURL(g.BhN.CONFETTI_POTION));
         }, []);
     return O && null != I && (null == S ? void 0 : S.type) === m.B.CONFETTI
         ? (0, r.jsx)(o.P3F, {
               onFocus: T,
-              onClick: A,
+              onClick: C,
               "aria-label": E.intl.string(E.t.Mp5k6E),
               children: (0, r.jsx)(a.u, {
                   text: E.intl.formatToPlainString(E.t["FE++aN"], { user: I }),

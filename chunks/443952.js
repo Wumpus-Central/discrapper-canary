@@ -11,8 +11,8 @@ var i = n(243814),
     d = n(45114),
     p = n(479531),
     f = n(636449),
-    h = n(566620),
-    g = n(531826),
+    g = n(566620),
+    h = n(531826),
     m = n(596223),
     _ = n(838195),
     b = n(333861),
@@ -172,7 +172,7 @@ let G = {
                 i = t.application;
             if (null == i.id) throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "No application.");
             let { channel: l, guild: a, frame: o } = (0, L.T)(),
-                u = (0, g.ZP)({
+                u = (0, h.ZP)({
                     application: t.application,
                     channelId: null == l ? void 0 : l.id,
                 }),
@@ -292,7 +292,7 @@ let G = {
                         i.click();
                 })(
                     async (n) => {
-                        let l = await (0, h.kv)(r, i, n);
+                        let l = await (0, g.kv)(r, i, n);
                         (0, T.lm)(l) && (0, T.lm)(l.url) && !(l instanceof p.Z) ? e({ image_url: l.url }) : t(l);
                     },
                     () => t(Error("Upload canceled")),
@@ -353,8 +353,8 @@ let G = {
             if (!k.Cr.includes(f)) throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "Unsupported application.");
             if (!(0, l.yE)(null != (t = r.application.flags) ? t : 0, M.udG.EMBEDDED))
                 throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "This application cannot access this API");
-            let h = (0, w.Z)();
-            if (null == h && c) throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "No channel found");
+            let g = (0, w.Z)();
+            if (null == g && c) throw new x.Z({ errorCode: M.lTL.INVALID_COMMAND }, "No channel found");
             if (null !== a || null !== o || null !== u) {
                 let e = [];
                 void 0 !== a &&
@@ -384,7 +384,7 @@ let G = {
                 (O.Z.getWindowOpen(M.KJ3.ACTIVITY_POPOUT) || r.context === M.IlC.POPOUT) && (l = s.u1M),
                     (0, b.M)({
                         applicationId: f,
-                        channel: h,
+                        channel: g,
                         command: {
                             name: i,
                             options: d,

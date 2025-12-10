@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(591853),
     I = n(371991),
     T = n(410441),
-    A = n(981631),
-    C = n(616922),
+    C = n(981631),
+    A = n(616922),
     N = n(388032),
     P = n(119835),
     R = n(951948);
@@ -93,11 +93,11 @@ function L(e) {
         { largeImage: U } = (0, g.rv)({ entry: L }),
         { activity: G, currentEntry: Z, artist: B, title: F, user: V } = (0, v.pi)(L),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
-        W = (0, y.Z)(A.ABu.SPOTIFY),
+        W = (0, y.Z)(C.ABu.SPOTIFY),
         K = (0, o.e7)(
             [u.Z, _.default],
             () =>
-                (null == G ? void 0 : G.type) === A.IIU.LISTENING && null != V
+                (null == G ? void 0 : G.type) === C.IIU.LISTENING && null != V
                     ? (0, f.Z)(u.Z, _.default, V, G)
                     : void 0,
             [G, V],
@@ -152,7 +152,7 @@ function L(e) {
             (null == K ? void 0 : K.syncDisabled) === !1)
         ) {
             let e = () => {
-                (0, p.Z)(K, C.kG.USER_ACTIVITY_SYNC), j();
+                (0, p.Z)(K, A.kG.USER_ACTIVITY_SYNC), j();
             };
             Q.push(
                 (0, r.jsx)(

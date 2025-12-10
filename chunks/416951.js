@@ -17,13 +17,13 @@ var l = t(481060),
     b = t(158508),
     p = t(558924),
     m = t(37258),
-    Z = t(332031),
-    O = t(981631),
+    O = t(332031),
+    Z = t(981631),
     E = t(388032);
 let N = (0, o.Z)(
     (0, a.Z)(
         function (e) {
-            let { user: n, channel: t, channelSelected: a = !1, context: o, onSelect: O, onInteraction: N } = e,
+            let { user: n, channel: t, channelSelected: a = !1, context: o, onSelect: Z, onInteraction: N } = e,
                 C = (0, s.Z)(t),
                 j = (0, d.ZP)(t, void 0, !1),
                 y = (0, m.Z)({
@@ -37,7 +37,7 @@ let N = (0, o.Z)(
                 x = (0, p.O)(t.id, u.Z.DM_CONDENSED_MENU),
                 I = (0, p.Z)(n, x),
                 P = (0, f.Z)(n),
-                U = (0, Z.Z)(n.id),
+                U = (0, O.Z)(n.id),
                 T = (0, g.Z)({ user: n }),
                 S = (0, b.Z)({
                     user: n,
@@ -55,7 +55,7 @@ let N = (0, o.Z)(
                 navId: "dm-kebab-context",
                 onClose: r.Zy,
                 "aria-label": E.intl.string(E.t.liqwPJ),
-                onSelect: O,
+                onSelect: Z,
                 onInteraction: N,
                 children: [
                     (0, i.jsxs)(l.kSQ, {
@@ -79,7 +79,7 @@ let N = (0, o.Z)(
                 ],
             });
         },
-        { object: O.qAy.CONTEXT_MENU },
+        { object: Z.qAy.CONTEXT_MENU },
     ),
     [u.Z.CONTEXT_MENU, u.Z.DM_CONDENSED_MENU],
 );

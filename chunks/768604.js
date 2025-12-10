@@ -74,12 +74,12 @@ function y() {
                 label: h.intl.string(h.t.S49Uad),
             },
         ],
-        A = {
+        C = {
             value: i.Q4.SHOW,
             label: h.intl.string(h.t["5k5OFp"]),
         };
-    t && (I.unshift(A), T.unshift(A));
-    let C = {
+    t && (I.unshift(C), T.unshift(C));
+    let A = {
         isDisabled: E,
         tooltipText: n ? h.intl.string(g.default["6Af/cw"]) : void 0,
     };
@@ -96,7 +96,7 @@ function y() {
                         onChange: (e) => S({ goreContentFriendDm: e }),
                         options: I,
                     },
-                    C,
+                    A,
                 ),
             ),
             (0, r.jsx)(
@@ -108,7 +108,7 @@ function y() {
                         onChange: (e) => S({ goreContentNonFriendDm: e }),
                         options: I,
                     },
-                    C,
+                    A,
                 ),
             ),
             (0, r.jsx)(_.Z, {

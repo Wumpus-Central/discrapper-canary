@@ -114,11 +114,11 @@ function I(e) {
         S(new DataView(new ArrayBuffer(1), 0, 1))),
     (t.isDataView = I);
 var T = "undefined" != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
-function A(e) {
+function C(e) {
     return "[object SharedArrayBuffer]" === u(e);
 }
-function C(e) {
-    return void 0 !== T && (void 0 === A.working && (A.working = A(new T())), A.working ? A(e) : e instanceof T);
+function A(e) {
+    return void 0 !== T && (void 0 === C.working && (C.working = C(new T())), C.working ? C(e) : e instanceof T);
 }
 function N(e) {
     return h(e, d);
@@ -135,7 +135,7 @@ function D(e) {
 function w(e) {
     return c && h(e, m);
 }
-(t.isSharedArrayBuffer = C),
+(t.isSharedArrayBuffer = A),
     (t.isAsyncFunction = function (e) {
         return "[object AsyncFunction]" === u(e);
     }),
@@ -160,7 +160,7 @@ function w(e) {
         return N(e) || P(e) || R(e) || D(e) || w(e);
     }),
     (t.isAnyArrayBuffer = function (e) {
-        return "undefined" != typeof Uint8Array && (v(e) || C(e));
+        return "undefined" != typeof Uint8Array && (v(e) || A(e));
     }),
     ["isProxy", "isExternal", "isModuleNamespaceObject"].forEach(function (e) {
         Object.defineProperty(t, e, {

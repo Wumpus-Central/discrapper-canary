@@ -11,8 +11,8 @@ var i = n(481060),
     d = n(944486),
     p = n(556296),
     f = n(131468),
-    h = n(208049),
-    g = n(763296),
+    g = n(208049),
+    h = n(763296),
     m = n(641015),
     _ = n(22382),
     b = n(747071),
@@ -70,23 +70,23 @@ class C extends f.Z {
                     r = arguments.length > 2 ? arguments[2] : void 0,
                     i = arguments.length > 3 ? arguments[3] : void 0,
                     l = null != i && d.Z.getVoiceChannelId() === i;
-                if ((null == i || l) && !u.Z.isDeaf() && !g.Z.isLocalSoundboardMuted(r))
+                if ((null == i || l) && !u.Z.isDeaf() && !h.Z.isLocalSoundboardMuted(r))
                     try {
                         let i = {
                             soundKey: "".concat(r, "-").concat(e),
                             soundURL: (0, _.Z)(e),
                             soundVolume: (0, b.Z)(n),
-                            reportSoundStartedPlaying: () => (0, h.xR)(e, r),
+                            reportSoundStartedPlaying: () => (0, g.xR)(e, r),
                         };
                         u.Z.supports(v.AN.SAMPLE_PLAYBACK) ? await (0, E.$)(i) : await (0, E.h)(i, t.playingSoundsWeb);
                     } catch (e) {
                         I.warn("Error playing soundboard sound: ".concat(e.message));
                     } finally {
-                        (0, h.R)(e, r);
+                        (0, g.R)(e, r);
                     }
             }),
             y(this, "_handleOverlaySoundboardSoundsFetchRequest", () => {
-                (0, h.w)();
+                (0, g.w)();
             }),
             y(this, "_handleOpenEducationModal", (e, t) => {
                 if (null == e) return;

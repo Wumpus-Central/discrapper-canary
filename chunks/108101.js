@@ -21,8 +21,8 @@ var r = n(687249),
     S = n(438330),
     I = 1,
     T = 2,
-    A = 4,
-    C = "[object Arguments]",
+    C = 4,
+    A = "[object Arguments]",
     N = "[object Array]",
     P = "[object Boolean]",
     R = "[object Date]",
@@ -53,7 +53,7 @@ function ee(e, t, n, N, P, R) {
     var D,
         L = t & I,
         j = t & T,
-        k = t & A;
+        k = t & C;
     if ((n && (D = P ? n(e, N, P, R) : n(e)), void 0 !== D)) return D;
     if (!O(e)) return e;
     var U = E(e);
@@ -63,7 +63,7 @@ function ee(e, t, n, N, P, R) {
         var G = _(e),
             Z = G == w || G == x;
         if (b(e)) return l(e, L);
-        if (G == M || G == C || (Z && !P)) {
+        if (G == M || G == A || (Z && !P)) {
             if (((D = j || Z ? {} : g(e)), !L)) return j ? d(e, s(D, e)) : u(e, o(D, e));
         } else {
             if (!$[G]) return P ? e : {};
@@ -91,7 +91,7 @@ function ee(e, t, n, N, P, R) {
         D
     );
 }
-($[C] =
+($[A] =
     $[N] =
     $[F] =
     $[V] =

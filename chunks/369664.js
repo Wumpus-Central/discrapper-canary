@@ -26,8 +26,8 @@ var r = n(54381),
     S = n(491428),
     I = n(401430),
     T = n(72924),
-    A = n(69499),
-    C = n(579806),
+    C = n(69499),
+    A = n(579806),
     N = n(726542),
     P = n(100527),
     R = n(906732),
@@ -80,8 +80,8 @@ var r = n(54381),
     eS = n(358085),
     eI = n(981631),
     eT = n(70722),
-    eA = n(474936),
-    eC = n(610674),
+    eC = n(474936),
+    eA = n(610674),
     eN = n(65154),
     eP = n(388032),
     eR = n(655227);
@@ -182,7 +182,7 @@ let ej = (e) => {
     },
     ek = "ms-settings:sound-properties";
 function eU(e) {
-    return (0, eS.isWindows)() && c().satisfies(null === C.Z || void 0 === C.Z ? void 0 : C.Z.os.release, eT.lb)
+    return (0, eS.isWindows)() && c().satisfies(null === A.Z || void 0 === A.Z ? void 0 : A.Z.os.release, eT.lb)
         ? "".concat(ek, "?endpointId=").concat(e)
         : "ms-settings:sound";
 }
@@ -287,7 +287,7 @@ let eY = i.memo(function () {
         l = (0, u.e7)([eh.Z], () => eh.Z.getGuildId()),
         c = (0, u.e7)([ey.ZP], () => ey.ZP.getNotice()),
         { analyticsLocations: g } = (0, R.ZP)(),
-        C = (0, W.J)(l),
+        A = (0, W.J)(l),
         { windowsMuteAndZeroVolumeDetectionEnabled: P } = (0, J.U)({ location: "AppNotice" });
     i.useEffect(() => {
         (null == c ? void 0 : c.type) != null && eV(c.type, l);
@@ -503,7 +503,7 @@ let eY = i.memo(function () {
                     eP.intl.string(eP.t["f+Zaol"]),
                     (0, r.jsx)(f.NoS, {
                         noticeType: c.type,
-                        onClick: () => (C && null != l ? (0, Y.hk)(l) : w.j()),
+                        onClick: () => (A && null != l ? (0, Y.hk)(l) : w.j()),
                         children: eP.intl.string(eP.t.fiNVin),
                     }),
                 ],
@@ -635,7 +635,7 @@ let eY = i.memo(function () {
                                 openPremiumPaymentModal: () => {
                                     (0, ee.Z)({
                                         initialPlanId: null,
-                                        subscriptionTier: eA.Si.TIER_2,
+                                        subscriptionTier: eC.Si.TIER_2,
                                         analyticsLocations: g,
                                         analyticsObject: e5,
                                     });
@@ -826,12 +826,12 @@ let eY = i.memo(function () {
                         (0, r.jsx)("div", {
                             children: eP.intl.format(eP.t.Fv5HrE, { applicationName: c.metadata.applicationName }),
                         }),
-                        (0, r.jsx)(A.Z, {
-                            dropdownSize: A.E.DropdownSizes.SMALL,
+                        (0, r.jsx)(C.Z, {
+                            dropdownSize: C.E.DropdownSizes.SMALL,
                             className: eR.testModeSKUSelector,
-                            color: A.E.Colors.WHITE,
-                            look: A.E.Looks.OUTLINED,
-                            size: A.E.Sizes.MIN,
+                            color: C.E.Colors.WHITE,
+                            look: C.E.Looks.OUTLINED,
+                            size: C.E.Sizes.MIN,
                             onSKUSelect: (e) =>
                                 O.yt(e.id, {
                                     analyticsSource: {
@@ -855,9 +855,9 @@ let eY = i.memo(function () {
         case eI.kVF.PREMIUM_UNCANCEL:
             return (0, r.jsxs)(f.qXd, {
                 color:
-                    eK === eA.PremiumTypes.TIER_1
+                    eK === eC.PremiumTypes.TIER_1
                         ? f.DM8.PREMIUM_TIER_1
-                        : eK === eA.PremiumTypes.TIER_0
+                        : eK === eC.PremiumTypes.TIER_0
                           ? f.DM8.PREMIUM_TIER_0
                           : f.DM8.PREMIUM_TIER_2,
                 children: [
@@ -877,9 +877,9 @@ let eY = i.memo(function () {
                         color: "currentColor",
                         className: eR.premiumIcon,
                     }),
-                    eK === eA.PremiumTypes.TIER_1
+                    eK === eC.PremiumTypes.TIER_1
                         ? eP.intl.formatToPlainString(eP.t.fXv4wm, { daysLeft: c.metadata.daysLeft })
-                        : eK === eA.PremiumTypes.TIER_0
+                        : eK === eC.PremiumTypes.TIER_0
                           ? eP.intl.formatToPlainString(eP.t.ZOHZMr, { daysLeft: c.metadata.daysLeft })
                           : eP.intl.formatToPlainString(eP.t.outyHh, { daysLeft: c.metadata.daysLeft }),
                     (0, r.jsx)(f.NoS, {
@@ -908,9 +908,9 @@ let eY = i.memo(function () {
                                 });
                         },
                         children:
-                            eK === eA.PremiumTypes.TIER_1
+                            eK === eC.PremiumTypes.TIER_1
                                 ? eP.intl.string(eP.t.BkbUPM)
-                                : eK === eA.PremiumTypes.TIER_0
+                                : eK === eC.PremiumTypes.TIER_0
                                   ? eP.intl.string(eP.t.Px978X)
                                   : eP.intl.string(eP.t.LW5tCE),
                     }),
@@ -1015,9 +1015,9 @@ let eY = i.memo(function () {
                             );
                         },
                     }),
-                    eK === eA.PremiumTypes.TIER_1
+                    eK === eC.PremiumTypes.TIER_1
                         ? eP.intl.formatToPlainString(eP.t.b6QUvf, { daysLeft: c.metadata.daysLeft })
-                        : eK === eA.PremiumTypes.TIER_0
+                        : eK === eC.PremiumTypes.TIER_0
                           ? eP.intl.formatToPlainString(eP.t["tURZ/M"], { daysLeft: c.metadata.daysLeft })
                           : eP.intl.formatToPlainString(eP.t.AyC74I, { daysLeft: c.metadata.daysLeft }),
                     (0, r.jsx)(f.NoS, {
@@ -1032,9 +1032,9 @@ let eY = i.memo(function () {
                                 (0, ed.openUserSettings)(eu.n.SUBSCRIPTIONS_PANEL, { section: eI.oAB.SUBSCRIPTIONS });
                         },
                         children:
-                            eK === eA.PremiumTypes.TIER_1
+                            eK === eC.PremiumTypes.TIER_1
                                 ? eP.intl.string(eP.t.lboF5O)
-                                : eK === eA.PremiumTypes.TIER_0
+                                : eK === eC.PremiumTypes.TIER_0
                                   ? eP.intl.string(eP.t["4UPwOq"])
                                   : eP.intl.string(eP.t["P/VvGb"]),
                     }),
@@ -1058,7 +1058,7 @@ let eY = i.memo(function () {
                 children: [
                     eP.intl.string(eP.t.DVFJYf),
                     (0, r.jsx)(f.u3T, {
-                        href: eC.Z,
+                        href: eA.Z,
                         target: "_blank",
                         noticeType: c.type,
                         children: eP.intl.string(eP.t.kvHdFN),
@@ -1149,7 +1149,7 @@ let eY = i.memo(function () {
                 dismissCurrentNotice: () => {
                     (0, L.Q3)(ey.m9[eI.kVF.PREMIUM_TIER_2_TRIAL_ENDING]), eH(ti);
                 },
-                subscriptionTier: eA.Si.TIER_2,
+                subscriptionTier: eC.Si.TIER_2,
             });
         case eI.kVF.PREMIUM_TIER_2_DISCOUNT_ENDING:
             let ta = o()().add(5, "days").toDate();
@@ -1157,7 +1157,7 @@ let eY = i.memo(function () {
                 dismissCurrentNotice: () => {
                     eH(ta);
                 },
-                subscriptionTier: eA.Si.TIER_2,
+                subscriptionTier: eC.Si.TIER_2,
             });
         case eI.kVF.QUESTS_PROGRESS_INTERRUPTION:
             return (0, r.jsxs)(f.qXd, {

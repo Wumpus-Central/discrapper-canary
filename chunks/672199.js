@@ -5,8 +5,8 @@ var i = n(13245),
     o = n(562224),
     a = n(361291),
     s = n(624864),
-    u = n(610394),
-    c = n(620954),
+    c = n(610394),
+    u = n(620954),
     d = n(987650),
     h = n(981631),
     p = n(37113),
@@ -14,26 +14,26 @@ var i = n(13245),
     m = n(178473);
 function g(e, t, n, g) {
     if (s.Z.isNotificationDisabled(d.n0.RequestToStream)) return null;
-    let O = t.username,
-        y = f.intl.format(m.default.jTbTAF, {
+    let y = t.username,
+        O = f.intl.format(m.default.jTbTAF, {
             username: "",
             game: n.name,
         }),
-        E = t.getAvatarURL(e.guild_id, 80),
-        { trackView: v, trackClick: b } = (0, c.Rg)(d.n0.RequestToStream, {
+        v = t.getAvatarURL(e.guild_id, 80),
+        { trackView: E, trackClick: b } = (0, u.Rg)(d.n0.RequestToStream, {
             notif_type: d.n0.RequestToStream,
             notif_user_id: t.id,
             activity_type: h.mFx.STREAM_REQUEST,
             activity_name: g.name,
         });
     return {
-        icon: E,
-        title: O,
-        body: y,
+        icon: v,
+        title: y,
+        body: O,
         confirmText: f.intl.string(m.default.UGbmBp),
         cancelText: f.intl.string(f.t["tpXzJ+"]),
         onNotificationShow: () => {
-            v();
+            E();
         },
         onConfirmClick: (e, t) => {
             let n = a.Z.getState().preset;
@@ -41,7 +41,7 @@ function g(e, t, n, g) {
                 let { allowAutoQuality: e } = (0, l.IK)({ location: "requestToStreamNotification" });
                 n = e ? p.ApplicationStreamPresets.PRESET_AUTO : p.ApplicationStreamPresets.PRESET_VIDEO;
             }
-            (0, o.Z)(u.Z.getTargetPID(), { preset: n }), b("request-to-stream"), i.Z.updateNotificationStatus(t);
+            (0, o.Z)(c.Z.getTargetPID(), { preset: n }), b("request-to-stream"), i.Z.updateNotificationStatus(t);
         },
         onCancelClick: (t, n) => {
             (0, r.ack)(

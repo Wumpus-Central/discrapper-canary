@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(781311);
+n.d(t, { Z: () => A }), n(388685), n(781311);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -46,7 +46,7 @@ let I = (0, f.createChannelRecord)({
                 (0, p.vE)(r);
         }
     },
-    A = (e) => {
+    C = (e) => {
         switch (e) {
             case y.n_.ACTIVITY:
                 return v.t.Qn081O;
@@ -58,7 +58,7 @@ let I = (0, f.createChannelRecord)({
                 (0, p.vE)(e);
         }
     };
-function C(e) {
+function A(e) {
     let {
             user: t,
             guildId: n,
@@ -67,7 +67,7 @@ function C(e) {
             sourceDetails: f,
             setPopoutRef: p,
             modalKey: E,
-            onAction: C,
+            onAction: A,
             onClose: N,
             entry: P,
         } = e,
@@ -89,10 +89,10 @@ function C(e) {
     let Z = async (e) => {
             if (null == e) return;
             s === y.n_.AVATAR
-                ? C({ action: "SEND_REPLY_AVATAR" })
+                ? A({ action: "SEND_REPLY_AVATAR" })
                 : s === y.n_.STATUS
-                  ? C({ action: "SEND_REPLY_CUSTOM_STATUS" })
-                  : C({ action: "SEND_REPLY_ACTIVITY" });
+                  ? A({ action: "SEND_REPLY_CUSTOM_STATUS" })
+                  : A({ action: "SEND_REPLY_ACTIVITY" });
             let n = T({
                 input: e,
                 username: m.ZP.getName(t),
@@ -129,7 +129,7 @@ function C(e) {
                 innerClassName: S.inputInner,
                 editorClassName: S.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
-                placeholder: v.intl.formatToPlainString(A(s), { username: _.ZP.getName(n, a, t) }),
+                placeholder: v.intl.formatToPlainString(C(s), { username: _.ZP.getName(n, a, t) }),
                 channel: I,
                 textValue: x,
                 richValue: j,

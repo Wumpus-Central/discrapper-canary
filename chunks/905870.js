@@ -34,8 +34,8 @@ let y = 1048576,
     S = 3 * y,
     I = 4096,
     T = 12,
-    A = !0,
     C = !0,
+    A = !0,
     N = 15 * f.Z.Millis.MINUTE,
     P = +y,
     R = 1.5 * y,
@@ -86,7 +86,7 @@ class B extends a.Z {
                 p > v &&
                 _.Z.enablePerfMemoryHooks({
                     allocationThresholdKB: T,
-                    enableCallStackTracking: A,
+                    enableCallStackTracking: C,
                 }) &&
                 (this._nativeHeapHooksInstalled = !0),
             this._nativeHeapHooksInstalled)
@@ -124,7 +124,7 @@ class B extends a.Z {
                     module_version: s,
                     events_dropped: f,
                 };
-            if ((d.default.track(E.rMx.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, m), A)) {
+            if ((d.default.track(E.rMx.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, m), C)) {
                 let e = l.slice(0, 3).map((e) => e[0]),
                     t = 3;
                 for (let n of e
@@ -152,7 +152,7 @@ class B extends a.Z {
                     d.default.track(E.rMx.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, e);
                 }
             }
-            C &&
+            A &&
                 this._pushedNativeDeadlockMinidumpCount < 5 &&
                 (await h.ZP.submitLiveCrashReport({
                     message: "Desktop Memory Thread State",

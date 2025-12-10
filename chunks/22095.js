@@ -49,8 +49,8 @@ var r = n(990547),
     S = n(552943),
     I = n(324805),
     T = n(981631),
-    A = n(388032);
-function C(e, t, n) {
+    C = n(388032);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -74,7 +74,7 @@ function N(e) {
                 }),
             )),
             r.forEach(function (t) {
-                C(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
@@ -129,13 +129,13 @@ async function w(e) {
                 errorHints: [
                     {
                         type: b.HW.RATE_LIMITED,
-                        message: A.intl.string(A.t.Whhv4w),
+                        message: C.intl.string(C.t.Whhv4w),
                         connected_account_id: "",
                         connected_account_type: "",
                     },
                 ],
             };
-        let t = null != (n = e.getAnyErrorMessage()) ? n : A.intl.string(A.t.xSCvBf);
+        let t = null != (n = e.getAnyErrorMessage()) ? n : C.intl.string(C.t.xSCvBf);
         return {
             errorHints: [
                 {

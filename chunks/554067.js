@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(442837),
-    s = n(481060),
-    o = n(706454),
+    o = n(481060),
+    s = n(706454),
     a = n(626135),
     c = n(381585),
     u = n(501431),
@@ -13,21 +13,21 @@ var r = n(54381),
     p = n(535333);
 function m(e) {
     let { handleTransition: t, selectedTab: n } = e,
-        { searchQuery: m, onSetSearchQuery: C } = (0, u.S)(),
-        [h, _] = l.useState(""),
+        { searchQuery: m, onSetSearchQuery: h } = (0, u.S)(),
+        [C, _] = l.useState(""),
         b = (0, c.sp)(),
-        E = (0, i.e7)([o.default], () => o.default.locale);
+        v = (0, i.e7)([s.default], () => s.default.locale);
     return (
         l.useEffect(() => {
             let e = setTimeout(() => {
-                C(h);
+                h(C);
             }, 250);
             return () => clearTimeout(e);
-        }, [h, C]),
+        }, [C, h]),
         l.useEffect(() => {
             _(m);
         }, [m]),
-        (0, r.jsx)(s.P3F, {
+        (0, r.jsx)(o.P3F, {
             ignoreKeyPress: !0,
             className: p.searchBar,
             onClick: () => {
@@ -42,12 +42,12 @@ function m(e) {
                         page_type: n,
                     });
             },
-            children: (0, r.jsx)(s.E1j, {
+            children: (0, r.jsx)(o.E1j, {
                 size: "sm",
                 onKeyDown: (e) => {
-                    "Enter" === e.key && C(h);
+                    "Enter" === e.key && h(C);
                 },
-                query: h,
+                query: C,
                 onChange: _,
                 onClear: () => {
                     _(""),
@@ -61,7 +61,7 @@ function m(e) {
                             page_type: n,
                         });
                 },
-                placeholder: "en-US" === E ? f.intl.string(f.t.arz34K) : f.intl.string(f.t["hIt/Nm"]),
+                placeholder: "en-US" === v ? f.intl.string(f.t.arz34K) : f.intl.string(f.t["hIt/Nm"]),
             }),
         })
     );

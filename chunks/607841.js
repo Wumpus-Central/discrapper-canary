@@ -132,7 +132,7 @@ function T(e) {
         isUpdate: t,
     };
 }
-function A(e) {
+function C(e) {
     let t = [];
     if (("" !== e.name && t.push(e.name), null != e.nicks && t.push(...Object.values(e.nicks)), e.type === g.d4z.DM)) {
         let [n] = e.recipients.map(d.default.getUser).filter(p.lm);
@@ -147,14 +147,14 @@ function A(e) {
     }
     return t;
 }
-function C(e) {
+function A(e) {
     if (!O()) return;
     let t = null != e ? o.Z.getChannel(e) : void 0;
     if (null == t) return void m.Z.resignActivity();
     let n = s.Z.getGuild(t.guild_id),
         r = (0, a.F6)(t, d.default, c.Z, !0),
         i = r + (null != n ? " (".concat(n.name, ")") : ""),
-        l = [...new Set([r, ...A(t)])],
+        l = [...new Set([r, ...C(t)])],
         u = g.Z5c.CHANNEL(t.guild_id, t.id),
         f = {
             webpageURL: "".concat(g.yXt.BASE_URL).concat(u),
@@ -215,14 +215,14 @@ function R(e) {
 }
 class D extends r.Z {
     handleInit() {
-        C(u.Z.getCurrentlySelectedChannelId()), y() && m.Z.clearSearchIndex(), b() && N();
+        A(u.Z.getCurrentlySelectedChannelId()), y() && m.Z.clearSearchIndex(), b() && N();
     }
     handleLogout() {
         y() && m.Z.clearSearchIndex();
     }
     handleChannelSelect(e) {
         let { channelId: t } = e;
-        C(t);
+        A(t);
     }
     handleChannelCreate(e) {
         var t;

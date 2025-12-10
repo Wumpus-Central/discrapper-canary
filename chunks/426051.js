@@ -10,14 +10,14 @@ var r = n(54381),
     d = n(26373),
     p = n(486622),
     f = n(376191),
-    h = n(86203),
-    g = n(388032),
+    g = n(86203),
+    h = n(388032),
     m = n(539410);
 function _(e) {
     let { active: t, user: n, channel: _ } = e,
         b = (0, d.V)(),
         E = i.useCallback(() => {
-            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)),
+            (0, a.showToast)((0, a.createToast)(h.intl.string(h.t.pIQ3h4), a.ToastType.FAILURE)),
                 s.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
         O = i.useCallback(() => {
@@ -53,14 +53,14 @@ function _(e) {
                     (0, r.jsx)(a.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: g.intl.string(g.t.vicfl6),
+                        text: h.intl.string(h.t.vicfl6),
                         onClick: (e) => {
                             y(_.id), e.stopPropagation();
                         },
                         disabled: N,
                         loading: T,
                     }),
-                    (0, r.jsx)(h.Z, { channel: _ }),
+                    (0, r.jsx)(g.Z, { channel: _ }),
                 ],
             }),
         ],

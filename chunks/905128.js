@@ -139,10 +139,10 @@ function I(e) {
 function T(e) {
     S(e, !1);
 }
-function A() {
+function C() {
     m = {};
 }
-class C extends (r = i.ZP.PersistedStore) {
+class A extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(o.Z), null != e && (m = e);
     }
@@ -171,9 +171,9 @@ class C extends (r = i.ZP.PersistedStore) {
         return null != e && (null == (t = m[e]) ? void 0 : t.hasFetchedUnlockedPowerups) === !0;
     }
 }
-c(C, "displayName", "GuildPowerupsStore"),
-    c(C, "persistKey", "GuildPowerupsStore"),
-    c(C, "migrations", [
+c(A, "displayName", "GuildPowerupsStore"),
+    c(A, "persistKey", "GuildPowerupsStore"),
+    c(A, "migrations", [
         (e) =>
             null == e
                 ? e
@@ -198,8 +198,8 @@ c(C, "displayName", "GuildPowerupsStore"),
                           }),
                   ),
     ]);
-let N = new C(a.Z, {
-    LOGOUT: A,
+let N = new A(a.Z, {
+    LOGOUT: C,
     GUILD_POWERUP_CATALOG_FETCH_SUCCESS: O,
     GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: v,
     GUILD_POWERUP_ENTITLEMENTS_CREATE: I,

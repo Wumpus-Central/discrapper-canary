@@ -37,8 +37,8 @@ var i = n(54381),
     k = n(102172),
     U = n(728285),
     V = n(788983),
-    B = n(928518),
-    F = n(703656),
+    F = n(928518),
+    B = n(703656),
     H = n(880395),
     G = n(740492),
     W = n(793319),
@@ -135,13 +135,13 @@ function eV(e, t) {
         e
     );
 }
-let eB = {
+let eF = {
         [eR.AEg.NORMAL]: eD.normal,
         [eR.AEg.MINIMUM]: eD.minimum,
         [eR.AEg.NO_CHAT]: eD.noChat,
         [eR.AEg.FULL_SCREEN]: eD.fullScreen,
     },
-    eF = {
+    eB = {
         [eR.IlC.POPOUT]: eD.popout,
         [eR.IlC.APP]: null,
         [eR.IlC.OVERLAY]: null,
@@ -329,7 +329,7 @@ class eH extends r.PureComponent {
             m = e !== eR.AEg.NO_CHAT && e !== eR.AEg.FULL_SCREEN && null != c,
             g = eR.BRd.MIDNIGHT;
         return (0, i.jsxs)("div", {
-            className: a()(eD.wrapper, eB[e], eF[o], {
+            className: a()(eD.wrapper, eF[e], eB[o], {
                 [eD.poppedOut]: this.popoutOpen && !this.inPopout && e !== eR.AEg.NO_CHAT && t.isPrivate(),
                 [eD.video]: f,
                 [eD.sidebarOpen]: l || d,
@@ -636,7 +636,7 @@ class eH extends r.PureComponent {
                     n = async () => {
                         (null == t ? void 0 : t.applicationId) != null && (await (0, j.nJ)(t.applicationId, e.id));
                         let n = e.getGuildId();
-                        null != n && (0, F.uL)((0, em.LY)(n)), V.openChannelCallPopout(e);
+                        null != n && (0, B.uL)((0, em.LY)(n)), V.openChannelCallPopout(e);
                     };
                 null == t || (0, x.R)() ? n() : (0, I.Z)({ onConfirm: n });
             }),
@@ -886,7 +886,7 @@ let eG = function (e) {
             layout: D,
             participantsOpen: k,
             participantsListOpen: V,
-            chatOpen: F,
+            chatOpen: B,
             selectedParticipant: H,
         } = (0, u.cj)([e_.Z], () => {
             let e = C === eR.IlC.POPOUT,
@@ -917,9 +917,9 @@ let eG = function (e) {
         q = (0, u.e7)([es.Z], () => es.Z.getGuild(n.getGuildId())),
         K = (0, u.e7)([eu.ZP], () => eu.ZP.getMentionCount(n.id), [n.id]),
         Y = (0, u.e7)([ea.default], () => ea.default.getId()),
-        { popoutWindow: X, popoutWindowAlwaysOnTop: J } = (0, u.cj)([B.Z], () => ({
-            popoutWindow: B.Z.getWindow(eR.KJ3.CHANNEL_CALL_POPOUT),
-            popoutWindowAlwaysOnTop: B.Z.getIsAlwaysOnTop(eR.KJ3.CHANNEL_CALL_POPOUT),
+        { popoutWindow: X, popoutWindowAlwaysOnTop: J } = (0, u.cj)([F.Z], () => ({
+            popoutWindow: F.Z.getWindow(eR.KJ3.CHANNEL_CALL_POPOUT),
+            popoutWindowAlwaysOnTop: F.Z.getIsAlwaysOnTop(eR.KJ3.CHANNEL_CALL_POPOUT),
         })),
         Q = (0, u.e7)([ec.Z], () => ec.Z.can(eR.Plq.CONNECT, n)),
         $ = (0, u.e7)([eo.Z], () => eo.Z.getToastsEnabled(n.id)),
@@ -984,7 +984,7 @@ let eG = function (e) {
                             filteredParticipants: T,
                             participantsVersion: A,
                             layout: D,
-                            chatOpen: F,
+                            chatOpen: B,
                             maxSidebarWidth: ev,
                             shouldUseVoiceEffectsActionBar: em,
                             currentUserId: Y,

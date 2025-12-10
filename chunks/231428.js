@@ -22,8 +22,8 @@ var r,
     S = n(74538),
     I = n(807160),
     T = n(981631),
-    A = n(474936),
-    C = n(231338),
+    C = n(474936),
+    A = n(231338),
     N = n(388032),
     P = n(504333),
     R = n(982710);
@@ -181,12 +181,12 @@ class G extends (r = a.PureComponent) {
                 children: [
                     (0, i.jsx)("div", {
                         className: P.externalRowHeader,
-                        children: N.intl.format(N.t["6mIX6s"], { paymentGatewayName: C.Vz[e.paymentGateway] }),
+                        children: N.intl.format(N.t["6mIX6s"], { paymentGatewayName: A.Vz[e.paymentGateway] }),
                     }),
                     (0, i.jsx)("div", {
                         className: P.externalRowBody,
                         children: N.intl.format(N.t.eG0uZB, {
-                            paymentGatewayName: C.Vz[e.paymentGateway],
+                            paymentGatewayName: A.Vz[e.paymentGateway],
                             billingHistoryLink: (0, S.JE)(e.paymentGateway, "BILLING_HISTORY"),
                         }),
                     }),
@@ -249,7 +249,7 @@ function Z(e) {
     var t;
     let n = e.skuId,
         r = null == (t = e.subscription) ? void 0 : t.items[0].planId;
-    return !(null == n || null == r || Object.values(A.Si).includes(n) || (0, S.PV)(r));
+    return !(null == n || null == r || Object.values(C.Si).includes(n) || (0, S.PV)(r));
 }
 function B(e) {
     let t = (0, d.e7)([y.Z], () => y.Z.getPayments()),

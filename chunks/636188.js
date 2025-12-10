@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(678916),
     I = n(981631),
     T = n(190378),
-    A = n(486324),
-    C = n(474936),
+    C = n(486324),
+    A = n(474936),
     N = n(388032),
     P = n(199306);
 function R(e, t, n) {
@@ -178,7 +178,7 @@ function G(e) {
         v = (0, d.O)(),
         { analyticsLocations: S } = (0, _.ZP)(p.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
         T = (0, s.e7)([g.Z], () => null != y && g.Z.hasHotspot(y)),
-        A = b
+        C = b
             ? (0, r.jsx)(m.Z, {
                   className: P.backgroundImageOption,
                   src: i,
@@ -196,7 +196,7 @@ function G(e) {
             T &&
             (h.Kw(y),
             E.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: C.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
+                type: A.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
                 location: v.location,
                 location_stack: S,
             }));
@@ -222,7 +222,7 @@ function G(e) {
                 onFocus: R,
                 onMouseEnter: R,
                 className: P.backgroundOptionInner,
-                children: A,
+                children: C,
             }),
             b || f
                 ? (0, r.jsx)("div", {
@@ -311,7 +311,7 @@ function F(e) {
     return (
         (0, f.ZP)(() => {
             E.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: C.cd.VIDEO_BACKGROUNDS_INLINE,
+                type: A.cd.VIDEO_BACKGROUNDS_INLINE,
                 location: n.location,
                 location_stack: i,
             });
@@ -343,7 +343,7 @@ function V(e) {
                                     let { imageUri: n, file: r, isFromTenor: i } = e;
                                     return t(n, r, i);
                                 },
-                                uploadType: A.pC.VIDEO_BACKGROUND,
+                                uploadType: C.pC.VIDEO_BACKGROUND,
                                 filters: s,
                                 modalTitle: N.intl.string(N.t.yG2pUi),
                                 imageSpecifications: N.intl.string(N.t["72OaxN"]),

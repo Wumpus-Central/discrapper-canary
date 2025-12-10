@@ -42,10 +42,10 @@ function T(e) {
         [A, L] = i.useState(null == m ? void 0 : m.store_page_guild_products_default_sort),
         [k, G] = i.useState(null == m ? void 0 : m.server_shop_tab_order),
         { loading: M, error: U, updateSubscriptionsSettings: B } = (0, _.QV)(),
-        { imageCTA: F, imageAriaLabel: H, setFilename: z } = (0, O.Z)(null == m ? void 0 : m.cover_image_asset),
-        W = (0, f.Dt)();
+        { imageCTA: F, imageAriaLabel: H, setFilename: W } = (0, O.Z)(null == m ? void 0 : m.cover_image_asset),
+        z = (0, f.Dt)();
     function V(e, t) {
-        a()(null != e, "Null value not allowed"), null != t && z(t.name), D(e);
+        a()(null != e, "Null value not allowed"), null != t && W(t.name), D(e);
     }
     let K = i.useMemo(() => {
             var e;
@@ -142,7 +142,7 @@ function T(e) {
                 value: w,
                 autosize: !0,
                 onChange: Z,
-                "aria-labelledby": W,
+                "aria-labelledby": z,
                 disabled: q,
             }),
             (0, r.jsx)(p.izJ, { className: I.divider }),

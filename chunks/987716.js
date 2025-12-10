@@ -1,4 +1,4 @@
-n.d(t, { q: () => A }), n(388685);
+n.d(t, { q: () => C }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -89,14 +89,14 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let A = (e) => {
+let C = (e) => {
     let { isShopGift: t, className: n, optionsContainerClassName: a } = e,
         {
             giftRecipient: y,
             selectedGiftStyle: v,
             setSelectedGiftStyle: T,
-            emojiConfetti: A,
-            soundEffect: C,
+            emojiConfetti: C,
+            soundEffect: A,
             setEmojiConfetti: N,
             setSoundEffect: P,
         } = (0, c.wD)(),
@@ -133,12 +133,12 @@ let A = (e) => {
                                 className: o()(b.soundEmojiContainer, Z && b.refresh),
                                 children: [
                                     (0, r.jsx)(u.Z, {
-                                        sound: C,
+                                        sound: A,
                                         onSelect: B,
                                     }),
                                     (0, r.jsx)(h.Z, {
                                         setEmojiConfetti: N,
-                                        emojiConfetti: null == A ? void 0 : A,
+                                        emojiConfetti: null == C ? void 0 : C,
                                     }),
                                 ],
                             }),

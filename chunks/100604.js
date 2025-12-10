@@ -79,12 +79,12 @@ class h {
         }
         let T = null == (t = O.messageReference) ? void 0 : t.guild_id;
         if (null == T) return { snapshotIndex: y };
-        let A = null != (u = E.getGuild(T)) ? u : b.getGuild(T);
-        return null == A
+        let C = null != (u = E.getGuild(T)) ? u : b.getGuild(T);
+        return null == C
             ? { snapshotIndex: y }
             : {
                   snapshotIndex: y,
-                  footerInfo: m(A, S),
+                  footerInfo: m(C, S),
               };
     }
     constructor(e, t, n) {

@@ -1,6 +1,6 @@
 n.d(t, {
     Dt: () => I,
-    ZP: () => A,
+    ZP: () => C,
     ze: () => S,
 }),
     n(997841);
@@ -106,10 +106,10 @@ function I(e) {
 function T(e) {
     let t,
         { media: n, obscured: i = !1, maxWidth: a, maxHeight: o, onContextMenu: c } = e,
-        { width: d, height: p, url: g, proxyUrl: b, alt: v, type: S, maxWidth: T, maxHeight: A } = n,
+        { width: d, height: p, url: g, proxyUrl: b, alt: v, type: S, maxWidth: T, maxHeight: C } = n,
         N = O(n, ["width", "height", "url", "proxyUrl", "alt", "type", "maxWidth", "maxHeight"]),
         { zoomed: P } = (0, _.Y)(),
-        R = C(P, g, b, n.contentType, n.originalContentType),
+        R = A(P, g, b, n.contentType, n.originalContentType),
         D = null != d && 0 !== d && null != p && 0 !== p;
     if ("VIDEO" === S && D && null != b) {
         var w;
@@ -172,8 +172,8 @@ function T(e) {
         null != t ? (0, r.jsx)(m.Z, { children: t }) : null
     );
 }
-let A = i.memo(T);
-function C(e, t, n, r, i) {
+let C = i.memo(T);
+function A(e, t, n, r, i) {
     return e && p.Z.isDiscordAssetUrl(t, r, i)
         ? (0, c.s$)(t, r, i)
         : (0, d.q)({

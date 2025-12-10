@@ -25,8 +25,8 @@ function T(e) {
     let { premiumSubscription: t } = e,
         n = (0, a.e7)([m.Z], () => m.Z.boostSlots),
         T = i.useMemo(() => Object.values(n), [n]),
-        A = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
-        C = h.ZP.isPremium(A, S.PremiumTypes.TIER_2),
+        C = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        A = h.ZP.isPremium(C, S.PremiumTypes.TIER_2),
         N = (0, a.e7)([f.Z], () => f.Z.affinities),
         P = (0, a.e7)([p.ZP], () => p.ZP.getFlattenedGuildIds()),
         R = N.length > 0 || P.length > 0,
@@ -38,7 +38,7 @@ function T(e) {
         { fractionalState: M } = (0, o.Z)({ forceFetch: !0 }),
         k = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && M === S.a$.NONE,
         U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && M === S.a$.NONE,
-        G = C && M === S.a$.FP_SUB_PAUSED;
+        G = A && M === S.a$.FP_SUB_PAUSED;
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(s.oQ, { className: I.blockedPaymentsWarning }),

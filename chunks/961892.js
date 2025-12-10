@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -10,12 +10,12 @@ var r = n(54381),
     d = n(921944),
     p = n(388032),
     f = n(716651);
-let h = (e) => {
+let g = (e) => {
     let { isSelected: t, discountOffer: n } = e,
-        [l, h] = (0, c.US)([s.z.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], void 0, !0);
+        [l, g] = (0, c.US)([s.z.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], void 0, !0);
     return (i.useEffect(() => {
-        t && l === s.z.CHURN_DISCOUNT_PREMIUM_TAB_BADGE && h(d.L.TAKE_ACTION);
-    }, [t, h, l]),
+        t && l === s.z.CHURN_DISCOUNT_PREMIUM_TAB_BADGE && g(d.L.TAKE_ACTION);
+    }, [t, g, l]),
     l === s.z.CHURN_DISCOUNT_PREMIUM_TAB_BADGE)
         ? (0, r.jsx)(u._y, {
               badgeCopy: p.intl.format(p.t.AYcXGW, { discountOfferAmount: n.discount.amount }).toString(),

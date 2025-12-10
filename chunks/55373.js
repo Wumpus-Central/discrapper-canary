@@ -9,7 +9,7 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(205120),
+    a = n(467721),
     o = n(481060),
     s = n(745735);
 let l = 3000,
@@ -68,10 +68,10 @@ let p = (e) => {
         ),
         I = (0, i.useMemo)(() => Math.round((750 + (200 * Math.random() - 100)) * _), [_]),
         T = 5,
-        [A, C] = (0, i.useState)(0),
+        [C, A] = (0, i.useState)(0),
         [N, P] = (0, i.useState)(1),
         R = (0, o.q_F)({
-            xOffset: A,
+            xOffset: C,
             config: {
                 tension: 10,
                 friction: 10,
@@ -79,7 +79,7 @@ let p = (e) => {
             },
         });
     return ((0, s.Z)(() => {
-        C(N * (0.5 * Math.random() * T + T / 2)), P((e) => -1 * e);
+        A(N * (0.5 * Math.random() * T + T / 2)), P((e) => -1 * e);
     }, I),
     p)
         ? m

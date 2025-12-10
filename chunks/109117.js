@@ -97,7 +97,7 @@ function O(e, t, n) {
             ? null
             : n.storedInformation[e];
     }
-    let A = {
+    let C = {
         did_crash: t,
         renderer_crash_reason: null != (u = null == n ? void 0 : n.rendererCrashReason) ? u : null,
         renderer_crash_exit_code: null != (d = null == n ? void 0 : n.rendererCrashExitCode) ? d : null,
@@ -137,19 +137,19 @@ function O(e, t, n) {
                 minidump_exception_module_version: null,
                 minidump_exception_module_code_id: null,
             },
-            A,
+            C,
         );
     console.log("AppCrashedFatalReport lastCrash:", n, e);
-    let C = null == n ? void 0 : n.minidumpInformation;
+    let A = null == n ? void 0 : n.minidumpInformation;
     return p(
         {
             electron_crash_reporter_did_crash: e,
-            minidump_exception_type: null != (b = null == C ? void 0 : C.exceptionString) ? b : null,
-            minidump_exception_module_name: null != (y = null == C ? void 0 : C.exceptionModuleName) ? y : null,
-            minidump_relative_crash_address: null != (O = null == C ? void 0 : C.relativeCrashAddress) ? O : null,
-            minidump_exception_module_version: null != (v = null == C ? void 0 : C.exceptionModuleVersion) ? v : null,
-            minidump_exception_module_code_id: null != (S = null == C ? void 0 : C.exceptionModuleCodeId) ? S : null,
+            minidump_exception_type: null != (b = null == A ? void 0 : A.exceptionString) ? b : null,
+            minidump_exception_module_name: null != (y = null == A ? void 0 : A.exceptionModuleName) ? y : null,
+            minidump_relative_crash_address: null != (O = null == A ? void 0 : A.relativeCrashAddress) ? O : null,
+            minidump_exception_module_version: null != (v = null == A ? void 0 : A.exceptionModuleVersion) ? v : null,
+            minidump_exception_module_code_id: null != (S = null == A ? void 0 : A.exceptionModuleCodeId) ? S : null,
         },
-        A,
+        C,
     );
 }

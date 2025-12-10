@@ -26,8 +26,8 @@ function v(e) {
             ref: S,
             autoFocus: I = !1,
             shouldFocusWrap: T = !1,
-            disallowEmptySelection: A = !1,
-            disallowSelectAll: C = !1,
+            disallowEmptySelection: C = !1,
+            disallowSelectAll: A = !1,
             escapeKeyBehavior: N = "clearSelection",
             selectOnFocus: P = "replace" === n.selectionBehavior,
             disallowTypeAhead: R = !1,
@@ -172,11 +172,11 @@ function v(e) {
                     }
                     break;
                 case "a":
-                    (0, o.y)(e) && "multiple" === n.selectionMode && !0 !== C && (e.preventDefault(), n.selectAll());
+                    (0, o.y)(e) && "multiple" === n.selectionMode && !0 !== A && (e.preventDefault(), n.selectAll());
                     break;
                 case "Escape":
                     "clearSelection" !== N ||
-                        A ||
+                        C ||
                         0 === n.selectedKeys.size ||
                         (e.stopPropagation(), e.preventDefault(), n.clearSelection());
                     break;

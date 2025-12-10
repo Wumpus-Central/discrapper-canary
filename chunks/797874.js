@@ -74,8 +74,8 @@ let T = function (e) {
         O = i.useRef(null),
         S = (0, s.e7)([m.Z], () => m.Z.getDetectableGame(t)),
         T = (0, s.e7)([_.Z], () => _.Z.getChannel(a)),
-        A = null != T ? T.getGuildId() : null,
-        C =
+        C = null != T ? T.getGuildId() : null,
+        A =
             null != S
                 ? (e) => {
                       (0, u.jW)(e, async () => {
@@ -85,7 +85,7 @@ let T = function (e) {
                                   e,
                                   I(v({}, t), {
                                       game: S,
-                                      guildId: A,
+                                      guildId: C,
                                   }),
                               );
                       });
@@ -134,7 +134,7 @@ let T = function (e) {
                     I(
                         v(
                             {
-                                onContextMenu: C,
+                                onContextMenu: A,
                                 ref: O,
                             },
                             e,

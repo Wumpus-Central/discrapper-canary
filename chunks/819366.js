@@ -97,9 +97,9 @@ function I(e) {
             parsedUserId: O,
             content: I,
             inlinePreview: T = !1,
-            viewingChannelId: A,
+            viewingChannelId: C,
         } = e,
-        C = i.useRef(null),
+        A = i.useRef(null),
         { analyticsLocations: N } = (0, c.ZP)(l.Z.USER_MENTION),
         P = (0, o.e7)([h.default], () => h.default.getUser(u)),
         R = (0, o.e7)([p.Z], () => p.Z.getChannel(b)),
@@ -122,7 +122,7 @@ function I(e) {
                                   (0, r.jsx)(
                                       e,
                                       v(y({}, t), {
-                                          viewingChannelId: A,
+                                          viewingChannelId: C,
                                           user: P,
                                           channel: R,
                                           guildId: D,
@@ -144,7 +144,7 @@ function I(e) {
             v(
                 y(
                     {
-                        ref: C,
+                        ref: A,
                         className: t,
                         onContextMenu: w,
                     },
@@ -161,7 +161,7 @@ function I(e) {
         : (0, r.jsx)(c.Gt, {
               value: N,
               children: (0, r.jsx)(f.Z, {
-                  targetElementRef: C,
+                  targetElementRef: A,
                   user: P,
                   guildId: null != D ? D : void 0,
                   channelId: b,

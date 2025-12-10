@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function A(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -96,7 +96,7 @@ function P(e, t) {
 let R = [];
 function D(e) {
     let { channelId: t, type: n, ignoreFile: a, smallAttachments: I = !1 } = e,
-        A = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled),
+        C = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         P = (0, _.Z)("attachments", l.hy.HORIZONTAL),
         D = (0, c.e7)([h.Z], () => h.Z.getUploads(t, n.drafts.type)),
         {
@@ -184,7 +184,7 @@ function D(e) {
                           a = N(e, ["ref"]);
                       return (0, r.jsx)(
                           "ul",
-                          C(T({ ref: i }, a), {
+                          A(T({ ref: i }, a), {
                               className: o()(v.channelAttachmentArea, S.scrollbarGhost),
                               children: w
                                   ? j.map((e) =>
@@ -192,7 +192,7 @@ function D(e) {
                                             b.Z,
                                             {
                                                 channelId: t,
-                                                keyboardModeEnabled: A,
+                                                keyboardModeEnabled: C,
                                                 option: e,
                                             },
                                             e.name,
@@ -205,7 +205,7 @@ function D(e) {
                                                 channelId: t,
                                                 draftType: n.drafts.type,
                                                 upload: e,
-                                                keyboardModeEnabled: A,
+                                                keyboardModeEnabled: C,
                                                 clip: e.clip,
                                                 size: I ? E.q.SMALL : E.q.MEDIUM,
                                             },

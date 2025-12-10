@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    s = n.n(i),
-    o = n(979554),
+    o = n.n(i),
+    s = n(979554),
     a = n(876917),
     c = n(597688),
     u = n(616066),
@@ -102,8 +102,8 @@ let f = {
     m = (e) => {
         let { peaking: t, transitioning: n, style: i } = e,
             f = window.innerHeight,
-            [m, C] = l.useState(!1),
-            h = p.map((e) => {
+            [m, h] = l.useState(!1),
+            C = p.map((e) => {
                 let { skuId: t } = e;
                 return c.Z.getProduct(t);
             });
@@ -111,27 +111,27 @@ let f = {
             l.useEffect(() => {
                 n &&
                     setTimeout(() => {
-                        C(!0);
+                        h(!0);
                     }, d.lb);
             }, [n]),
             (0, r.jsx)("div", {
                 style: i,
-                className: s()(g.jumbleWrapper, {
+                className: o()(g.jumbleWrapper, {
                     [g.peaking]: t,
                     [g.transitioned]: m,
                 }),
                 children: p.map((e, t) => {
                     var l, i;
-                    let { top: s, left: c, rotation: p, size: m, skuId: C } = e,
-                        _ = null == (l = h[t]) ? void 0 : l.items[0],
-                        b = null == (i = h[t]) ? void 0 : i.type,
-                        E = b === o.Z.AVATAR_DECORATION ? 384 : 512;
+                    let { top: o, left: c, rotation: p, size: m, skuId: h } = e,
+                        _ = null == (l = C[t]) ? void 0 : l.items[0],
+                        b = null == (i = C[t]) ? void 0 : i.type,
+                        v = b === s.Z.AVATAR_DECORATION ? 384 : 512;
                     return (0, r.jsxs)(
                         "div",
                         {
                             className: g.asset,
                             style: {
-                                top: n ? -f - E : s,
+                                top: n ? -f - v : o,
                                 left: n ? "".concat(c - 75 - 350 * Math.random()) : c,
                                 transform: "rotate(".concat(p, "deg)"),
                                 height: m.y,
@@ -140,9 +140,9 @@ let f = {
                                 transitionDuration: "".concat(d.lb - 200 * Math.random(), "ms"),
                             },
                             children: [
-                                null != _ && b === o.Z.AVATAR_DECORATION && (0, r.jsx)(u.R, { item: _ }),
+                                null != _ && b === s.Z.AVATAR_DECORATION && (0, r.jsx)(u.R, { item: _ }),
                                 null != _ &&
-                                    b === o.Z.PROFILE_EFFECT &&
+                                    b === s.Z.PROFILE_EFFECT &&
                                     (0, r.jsx)(a.Z, {
                                         skuId: _.skuId,
                                         isPurchased: !1,
@@ -150,7 +150,7 @@ let f = {
                                     }),
                             ],
                         },
-                        C + t,
+                        h + t,
                     );
                 }),
             })

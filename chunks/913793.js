@@ -42,8 +42,8 @@ let p = (0, f.createContext)(null),
                 y,
                 O,
             ),
-            { isFocusVisible: T, focusProps: A } = (0, o.F)({ within: !0 }),
-            C = (0, i.aX)({
+            { isFocusVisible: T, focusProps: C } = (0, o.F)({ within: !0 }),
+            A = (0, i.aX)({
                 ...e,
                 id: void 0,
                 defaultClassName: "react-aria-Disclosure",
@@ -81,13 +81,13 @@ let p = (0, f.createContext)(null),
             f.createElement(
                 "div",
                 {
-                    ...(0, u.d)(N, C, A),
+                    ...(0, u.d)(N, A, C),
                     ref: t,
                     "data-expanded": y.isExpanded || void 0,
                     "data-disabled": v || void 0,
                     "data-focus-visible-within": T || void 0,
                 },
-                C.children,
+                A.children,
             ),
         );
     }),

@@ -1,4 +1,4 @@
-n.d(t, { C: () => h });
+n.d(t, { C: () => g });
 var r = n(54381),
     i = n(473749),
     l = n(481060),
@@ -10,9 +10,9 @@ var r = n(54381),
     d = n(376191),
     p = n(388032),
     f = n(513245);
-function h(e) {
-    let { active: t, user: n, channel: h } = e,
-        g = (0, c.K)(),
+function g(e) {
+    let { active: t, user: n, channel: g } = e,
+        h = (0, c.K)(),
         m = i.useCallback(() => {
             (0, l.showToast)((0, l.createToast)(p.intl.string(p.t["EDYbS+"]), l.ToastType.FAILURE));
         }, []),
@@ -20,8 +20,8 @@ function h(e) {
             s.Z.closeChannelSidebar(o.uZ);
         }, []),
         b = i.useCallback(() => {
-            s.Z.closeChannelSidebar(o.uZ), g && (0, a.Kh)(h.id);
-        }, [h.id, g]),
+            s.Z.closeChannelSidebar(o.uZ), h && (0, a.Kh)(g.id);
+        }, [g.id, h]),
         {
             acceptMessageRequest: E,
             rejectMessageRequest: O,
@@ -41,7 +41,7 @@ function h(e) {
         className: f.container,
         children: [
             (0, r.jsx)(d.Z, {
-                channel: h,
+                channel: g,
                 otherUser: n,
                 active: t,
             }),
@@ -56,7 +56,7 @@ function h(e) {
                             size: "sm",
                             text: p.intl.string(p.t.B2nygW),
                             onClick: (e) => {
-                                e.stopPropagation(), O(h.id);
+                                e.stopPropagation(), O(g.id);
                             },
                             disabled: T,
                             loading: y || S,
@@ -70,7 +70,7 @@ function h(e) {
                             size: "sm",
                             text: p.intl.string(p.t.Kz8Pwr),
                             onClick: (e) => {
-                                e.stopPropagation(), E(h.id);
+                                e.stopPropagation(), E(g.id);
                             },
                             disabled: T,
                             loading: v || I || C,

@@ -1,4 +1,4 @@
-n.d(t, { E: () => A });
+n.d(t, { E: () => C });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -89,7 +89,7 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let A = i.forwardRef((e, t) => {
+let C = i.forwardRef((e, t) => {
     let n;
     var {
             className: a,
@@ -102,7 +102,7 @@ let A = i.forwardRef((e, t) => {
             width: y,
             height: v,
             maxWidth: T = y,
-            maxHeight: A = v,
+            maxHeight: C = v,
             minWidth: R = 0,
             minHeight: D = 0,
             mediaLayoutType: w,
@@ -160,7 +160,7 @@ let A = i.forwardRef((e, t) => {
             width: y,
             height: v,
             maxWidth: T,
-            maxHeight: A,
+            maxHeight: C,
             minWidth: R,
             minHeight: D,
         }),
@@ -174,7 +174,7 @@ let A = i.forwardRef((e, t) => {
               mediaLayoutType: w,
           }))
         : c !== _.zo9.LOADING &&
-          (n = (0, r.jsx)(C, {
+          (n = (0, r.jsx)(A, {
               size: K,
               mediaLayoutType: w,
               alt: b,
@@ -251,7 +251,7 @@ let A = i.forwardRef((e, t) => {
         })
     );
 });
-function C(e) {
+function A(e) {
     let { size: t, mediaLayoutType: n, alt: i } = e,
         a = (0, c.ZP)();
     return (0, r.jsx)("div", {
@@ -323,4 +323,4 @@ function D(e) {
         aspectRatio: "".concat(t, " / ").concat(n),
     };
 }
-A.displayName = "Image";
+C.displayName = "Image";

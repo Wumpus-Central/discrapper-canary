@@ -21,11 +21,11 @@ var r,
     S = v.enforce,
     I = v.get,
     T = l.Int8Array,
-    A = T && T.prototype,
-    C = l.Uint8ClampedArray,
-    N = C && C.prototype,
+    C = T && T.prototype,
+    A = l.Uint8ClampedArray,
+    N = A && A.prototype,
     P = T && E(T),
-    R = A && E(A),
+    R = C && E(C),
     D = Object.prototype,
     w = l.TypeError,
     x = y("toStringTag"),
@@ -87,7 +87,7 @@ var r,
                             } catch (e) {}
                         }
                 }
-            (!R[e] || n) && m(R, e, n ? t : (M && A[e]) || t, r);
+            (!R[e] || n) && m(R, e, n ? t : (M && C[e]) || t, r);
         }
     },
     W = function (e, t, n) {

@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(508273),
     I = n(143708),
     T = n(358595),
-    A = n(135845),
-    C = n(981631);
+    C = n(135845),
+    A = n(981631);
 function N(e) {
     let { code: t, message: n, getAcceptInviteContext: N } = e,
         { invite: P, inviteError: R } = (0, a.cj)(
@@ -42,7 +42,7 @@ function N(e) {
             null != P
                 ? P
                 : {
-                      state: C.r2o.RESOLVING,
+                      state: A.r2o.RESOLVING,
                       code: "",
                   },
         { analyticsLocations: x } = (0, l.ZP)(),
@@ -76,18 +76,18 @@ function N(e) {
             message: n,
         });
     switch (w.state) {
-        case C.r2o.RESOLVING:
+        case A.r2o.RESOLVING:
             G = (0, r.jsx)(T.Z, {});
             break;
-        case C.r2o.EXPIRED:
-        case C.r2o.BANNED:
+        case A.r2o.EXPIRED:
+        case A.r2o.BANNED:
             G = (0, r.jsx)(I.Z, {
-                banned: w.state === C.r2o.BANNED,
+                banned: w.state === A.r2o.BANNED,
                 author: n.author,
                 channelId: n.channel_id,
             });
             break;
-        case C.r2o.ERROR:
+        case A.r2o.ERROR:
             G = (0, r.jsx)(b.Z, {
                 author: n.author,
                 inviteError: R,
@@ -113,7 +113,7 @@ function N(e) {
                     break;
                 default:
                     if ((0, f.TY)(w)) {
-                        G = (0, r.jsx)(A.Z, {
+                        G = (0, r.jsx)(C.Z, {
                             onTransitionToInviteChannel: k,
                             onAcceptInstantInvite: U,
                             currentUserId: j,
@@ -153,7 +153,7 @@ function N(e) {
             }
     }
     return (0, r.jsx)(s.Z, {
-        section: C.jXE.INVITE_LINK,
+        section: A.jXE.INVITE_LINK,
         children: G,
     });
 }

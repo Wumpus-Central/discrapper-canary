@@ -1,6 +1,6 @@
 n.r(t),
     n.d(t, {
-        baseRules: () => C,
+        baseRules: () => A,
         customRules: () => N,
     }),
     n(35282),
@@ -80,14 +80,14 @@ function I() {
 function T(e, t) {
     return null == t ? [] : t.split(" ").map((t) => e[t]);
 }
-let A = (e) => {
+let C = (e) => {
         let { level: t, children: n, className: r = null, styleSheet: a = {} } = e,
             s = (0, c.xSt)(),
             l = parseInt(t, 10),
             u = s + (isNaN(l) ? 1 : l) - 1;
         return i.createElement("h".concat(u), { className: o()(...T(a, r)) }, n);
     },
-    C = null != d.Z ? d.Z.defaultRules : null,
+    A = null != d.Z ? d.Z.defaultRules : null,
     N = {
         link: {
             parse(e, t, n) {
@@ -148,7 +148,7 @@ let A = (e) => {
         lheading: (e) => ({
             react: (t, n, i) =>
                 (0, r.jsx)(
-                    A,
+                    C,
                     {
                         level: t.level,
                         className: t.className,
@@ -161,7 +161,7 @@ let A = (e) => {
         heading: {
             react: (e, t, n) =>
                 (0, r.jsx)(
-                    A,
+                    C,
                     {
                         level: e.level,
                         children: t(e.content, n),
@@ -182,6 +182,6 @@ let A = (e) => {
                 );
             },
         },
-        blockQuote: { react: null == C ? void 0 : C.blockQuote.react },
+        blockQuote: { react: null == A ? void 0 : A.blockQuote.react },
         paragraph: { react: (e, t, n) => (0, r.jsx)("p", { children: t(e.content, n) }, n.key) },
     };

@@ -30,7 +30,7 @@ function p(e, t, n) {
                     (0, i.e)(n.current);
             }
         },
-        { itemProps: T, isPressed: A } = (0, f.C)({
+        { itemProps: T, isPressed: C } = (0, f.C)({
             selectionManager: t.selectionManager,
             key: m.key,
             ref: n,
@@ -40,7 +40,7 @@ function p(e, t, n) {
             onAction: v ? () => v(m.key) : b,
             isDisabled: 0 === t.collection.size,
         }),
-        C = (e) => {
+        A = (e) => {
             var r, a, c, u, d;
             if (
                 !e.currentTarget.contains(e.target) ||
@@ -108,7 +108,7 @@ function p(e, t, n) {
         },
         P = (0, c.d)(T, {
             role: "gridcell",
-            onKeyDownCapture: C,
+            onKeyDownCapture: A,
             "aria-colspan": m.colSpan,
             "aria-colindex": null != m.colIndex ? m.colIndex + 1 : void 0,
             colSpan: h ? void 0 : m.colSpan,
@@ -129,7 +129,7 @@ function p(e, t, n) {
             }),
         {
             gridCellProps: P,
-            isPressed: A,
+            isPressed: C,
         }
     );
 }

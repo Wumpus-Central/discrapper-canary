@@ -129,16 +129,16 @@ function T(e) {
         let i = e[n];
         Array.isArray(i) || (i = [i]),
             i.forEach((e) => {
-                (0, r.wB)(t, A(e.attributes)), "object" == typeof e.value && (0, r.wB)(t, L(e.value));
+                (0, r.wB)(t, C(e.attributes)), "object" == typeof e.value && (0, r.wB)(t, L(e.value));
             });
     }
     return t;
 }
-function A(e) {
+function C(e) {
     let t = {};
     for (let n in e)
         try {
-            C(n) &&
+            A(n) &&
                 (t[P(n)] = {
                     value: e[n],
                     attributes: {},
@@ -147,7 +147,7 @@ function A(e) {
         } catch (e) {}
     return t;
 }
-function C(e) {
+function A(e) {
     return "rdf:parseType" !== e && !N(e);
 }
 function N(e) {
@@ -274,7 +274,7 @@ function Y(e, t) {
     };
     return (
         void 0 !== e.value["rdf:Description"] &&
-            ((0, r.wB)(n.value, A(e.value["rdf:Description"].attributes)),
+            ((0, r.wB)(n.value, C(e.value["rdf:Description"].attributes)),
             (0, r.wB)(n.attributes, B(e)),
             (e = e.value["rdf:Description"])),
         (0, r.wB)(n.value, L(e.value)),
@@ -290,7 +290,7 @@ function W(e) {
     );
 }
 function K(e, t) {
-    let n = A(e.attributes);
+    let n = C(e.attributes);
     return {
         value: n,
         attributes: {},

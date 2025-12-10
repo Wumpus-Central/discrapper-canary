@@ -110,25 +110,25 @@ function T(e) {
     var t, n;
     let { channel: r } = e;
     if (!l.AW.has(r.type)) return !1;
-    if ((null == (t = r.threadMetadata) ? void 0 : t.archived) === !0) return C(r);
+    if ((null == (t = r.threadMetadata) ? void 0 : t.archived) === !0) return A(r);
     {
         let e = null != (n = m[r.guild_id]) ? n : {};
         m[r.guild_id] = _(f({}, e), { [r.parent_id]: _(f({}, e[r.parent_id]), { [r.id]: g(r) }) });
     }
 }
-function A(e) {
+function C(e) {
     let { guildId: t, threads: n, channelIds: r } = e;
     for (let e in (null == r && h.add(t), (m[t] = f({}, m[t])), m[t])) m[t][e] = f({}, m[t][e]);
     n.forEach((e) => y(t, e));
 }
-function C(e) {
+function A(e) {
     let { guild_id: t, parent_id: n, id: r } = e;
     if (null == t || null == n || !(t in m) || !(n in m[t]) || !(r in m[t][n])) return !1;
     (m[t] = _(f({}, m[t]), { [n]: f({}, m[t][n]) })), delete m[t][n][r], a().isEmpty(m[t][n]) && delete m[t][n];
 }
 function N(e) {
     let { channel: t } = e;
-    return C(t);
+    return A(t);
 }
 function P(e) {
     let { channel: t } = e;
@@ -171,7 +171,7 @@ let w = new D(s.Z, {
     GUILD_DELETE: I,
     THREAD_CREATE: T,
     THREAD_UPDATE: T,
-    THREAD_LIST_SYNC: A,
+    THREAD_LIST_SYNC: C,
     THREAD_DELETE: N,
     CHANNEL_DELETE: P,
 });

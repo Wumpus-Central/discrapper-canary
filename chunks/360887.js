@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(872549),
     h = n(703656),
     g = n(314897),
-    p = n(626135),
-    m = n(358085),
+    m = n(626135),
+    p = n(358085),
     f = n(954824),
     _ = n(259706),
     x = n(981631),
@@ -41,19 +41,19 @@ function b(e) {
         o = (0, s.parse)(l.search).token,
         [d, b] = i.useState("loading"),
         I = i.useRef(!1),
-        y = i.useCallback(async (e) => {
+        N = i.useCallback(async (e) => {
             try {
-                p.default.track(x.rMx.ONE_TIME_LOGIN_ATTEMPTED, { source: "web_page" }),
+                m.default.track(x.rMx.ONE_TIME_LOGIN_ATTEMPTED, { source: "web_page" }),
                     await c.Z.oneTimeLogin(e),
                     b("login_success"),
-                    p.default.track(x.rMx.LOGIN_SUCCESSFUL, {
+                    m.default.track(x.rMx.LOGIN_SUCCESSFUL, {
                         source: "web_page",
                         login_method: "one_time_login",
                     }),
                     n.g.location.assign(x.Z5c.APP);
             } catch (t) {
                 let e = t instanceof Error ? t.message : "Unknown error";
-                p.default.track(x.rMx.ONE_TIME_LOGIN_ERROR, {
+                m.default.track(x.rMx.ONE_TIME_LOGIN_ERROR, {
                     source: "web_page",
                     error_reason: "api_error",
                     error_message: e,
@@ -61,13 +61,13 @@ function b(e) {
                     b("error");
             }
         }, []),
-        S = i.useCallback((e) => {
+        y = i.useCallback((e) => {
             var t;
             let n = null != (t = g.default.getFingerprint()) ? t : g.default.getId(),
                 r = "discord://login/one-time?token=".concat(encodeURIComponent(e));
             f.Z.launch(r, (e) => {
                 e
-                    ? (p.default.track(x.rMx.DEEP_LINK_CLICKED, {
+                    ? (m.default.track(x.rMx.DEEP_LINK_CLICKED, {
                           source: "web_page",
                           destination: "discord://login/one-time",
                           deep_link_provider: "protocol",
@@ -77,7 +77,7 @@ function b(e) {
                     : b("app_launch_not_supported");
             });
         }, []),
-        N = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 var t;
                 let r = null != (t = g.default.getFingerprint()) ? t : g.default.getId();
@@ -94,29 +94,29 @@ function b(e) {
                         })
                             .then((t) => {
                                 null != t && t
-                                    ? (p.default.track(x.rMx.DEEP_LINK_CLICKED, {
+                                    ? (m.default.track(x.rMx.DEEP_LINK_CLICKED, {
                                           source: "web_page",
                                           destination: "one_time_login_modal",
                                           deep_link_provider: "rpc",
                                           fingerprint: r,
                                       }),
                                       b("app_launched"))
-                                    : S(e);
+                                    : y(e);
                             })
                             .catch(() => {
-                                S(e);
+                                y(e);
                             })
                             .then(() => n.disconnect());
                     });
             },
-            [S],
+            [y],
         );
     if (
         (i.useEffect(() => {
             let e = null != o && "string" == typeof o,
-                t = a.tq ? "mobile" : a.Em ? "tablet" : (0, m.isDesktop)() ? "desktop_app" : "web";
+                t = a.tq ? "mobile" : a.Em ? "tablet" : (0, p.isDesktop)() ? "desktop_app" : "web";
             if (
-                (p.default.track(x.rMx.ONE_TIME_LOGIN_PAGE_VIEWED, {
+                (m.default.track(x.rMx.ONE_TIME_LOGIN_PAGE_VIEWED, {
                     has_token: e,
                     device_type: t,
                 }),
@@ -125,17 +125,17 @@ function b(e) {
                 return void b("error");
             if (a.tq || a.Em) {
                 var n;
-                let e = null == (n = p.default.getSuperProperties()) ? void 0 : n.os;
-                p.default.track(x.rMx.ONE_TIME_LOGIN_APP_DETECTION_ATTEMPTED, {
+                let e = null == (n = m.default.getSuperProperties()) ? void 0 : n.os;
+                m.default.track(x.rMx.ONE_TIME_LOGIN_APP_DETECTION_ATTEMPTED, {
                     detection_type: "mobile_ui_shown",
                     device_type: t,
                     platform: e,
                 });
                 return;
             }
-            if ((0, m.isDesktop)()) return void y(o);
-            I.current || ((I.current = !0), b("rpc_attempting"), N(o));
-        }, [o, l, y, N]),
+            if ((0, p.isDesktop)()) return void N(o);
+            I.current || ((I.current = !0), b("rpc_attempting"), S(o));
+        }, [o, l, N, S]),
         a.tq || a.Em)
     ) {
         let e = null == o || "string" != typeof o ? "missing_token" : "invalid_token";
@@ -152,7 +152,7 @@ function b(e) {
             subtitle: v.intl.string(v.t["5/lR0g"]),
             buttonText: v.intl.string(v.t["2ixEBi"]),
             buttonOnClick: () => {
-                p.default.track(x.rMx.ONE_TIME_LOGIN_CONTINUE_IN_BROWSER_CLICKED, { previous_status: d }), y(o);
+                m.default.track(x.rMx.ONE_TIME_LOGIN_CONTINUE_IN_BROWSER_CLICKED, { previous_status: d }), N(o);
             },
         });
     if ("app_launch_not_supported" === d)
@@ -160,7 +160,7 @@ function b(e) {
             title: v.intl.string(v.t.qq4tjT),
             subtitle: v.intl.string(v.t.CVxYRo),
             buttonText: v.intl.string(v.t["2ixEBi"]),
-            buttonOnClick: () => y(o),
+            buttonOnClick: () => N(o),
         });
     if ("error" === d) {
         let e = null == o || "string" != typeof o ? "missing_token" : "invalid_token";
@@ -169,7 +169,7 @@ function b(e) {
             subtitle: v.intl.string(v.t["S+YjYJ"]),
             buttonText: v.intl.string(v.t.j3cG2p),
             buttonOnClick: () => {
-                p.default.track(x.rMx.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, { error_reason: e }),
+                m.default.track(x.rMx.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, { error_reason: e }),
                     (0, h.uL)(x.Z5c.LOGIN);
             },
         });

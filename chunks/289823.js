@@ -199,13 +199,13 @@ let T = function (e) {
             statusCoords: y,
             frontAvatarOffsetPx: S,
             frontAvatarSizePx: T,
-            backAvatarSizePx: A,
+            backAvatarSizePx: C,
         } = i.useMemo(() => {
             var e;
             let t = "".concat(b, "-").concat(s);
             return null != (e = g[t]) ? e : E(a, s, t);
         }, [b, s, a]),
-        C = I(null != l, s, a);
+        A = I(null != l, s, a);
     return (0, r.jsxs)("div", {
         style: _(
             {
@@ -219,15 +219,15 @@ let T = function (e) {
         className: o()(f.container, p),
         children: [
             (0, r.jsxs)(u.ZP, {
-                mask: C,
+                mask: A,
                 height: b,
                 width: b,
                 children: [
                     (0, r.jsx)("img", {
                         src: t,
                         alt: "",
-                        width: A,
-                        height: A,
+                        width: C,
+                        height: C,
                     }),
                     (0, r.jsx)("div", {
                         style: {

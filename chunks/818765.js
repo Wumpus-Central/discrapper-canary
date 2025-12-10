@@ -30,19 +30,19 @@ let _ = (0, a.uk)("poggermode_applause", o.Z.getSoundpack()),
             t = d.Z.comboSoundsEnabled;
         return !!e && !!t && null != c.Z.getChannelId();
     },
-    A = () => {
+    C = () => {
         if (0 === O.length || !T() || y) return;
         y = !0;
         let [e, t] = O[O.length - 1];
-        (0, a.GN)(e, t), (v = setTimeout(C, E));
+        (0, a.GN)(e, t), (v = setTimeout(A, E));
     },
-    C = () => {
-        O.pop(), (y = !1), A();
+    A = () => {
+        O.pop(), (y = !1), C();
     },
     N = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
             n = l.Z.isConnected() ? g : h;
-        O.push([e, t * n]), A();
+        O.push([e, t * n]), C();
     };
 class P extends i.Z {
     _initialize() {

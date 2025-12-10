@@ -74,8 +74,8 @@ function I(e, t) {
     );
 }
 let T = "message_requests",
-    A = !1,
     C = !1,
+    A = !1,
     N = !0,
     P = {},
     R = {},
@@ -99,10 +99,10 @@ function j(e) {
     return null != n && n in P && (delete P[n], (t = !0)), t && e ? e : !e;
 }
 function M() {
-    D && u.S.dispatch(E.CkL.SEARCH_RESULTS_CLOSE), C && (C = j(C)), (A = j(A));
+    D && u.S.dispatch(E.CkL.SEARCH_RESULTS_CLOSE), A && (A = j(A)), (C = j(C));
 }
 function k() {
-    A && (A = j(A)), (C = j(C));
+    C && (C = j(C)), (A = j(A));
 }
 function U() {
     N || u.S.dispatch(E.CkL.SEARCH_RESULTS_CLOSE), (N = j(N));
@@ -201,7 +201,7 @@ function z() {
     D = e;
 }
 function q() {
-    i.tq && A && ((A = !1), (C = !1));
+    i.tq && C && ((C = !1), (A = !1));
 }
 function Q(e) {
     return (w = e.searchContextId), z();
@@ -210,8 +210,8 @@ class X extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n, r, i, a;
-            (A = null != (t = e.isMembersOpen) && t),
-                (C = null != (n = e.isSummariesOpen) && n),
+            (C = null != (t = e.isMembersOpen) && t),
+                (A = null != (n = e.isSummariesOpen) && n),
                 (N = null == (r = e.isProfileOpen) || r),
                 (P = null != (i = e.sidebars) ? i : {}),
                 (R = null != (a = e.guildSidebars) ? a : {});
@@ -220,8 +220,8 @@ class X extends (r = a.ZP.PersistedStore) {
     }
     getState() {
         return {
-            isMembersOpen: A,
-            isSummariesOpen: C,
+            isMembersOpen: C,
+            isSummariesOpen: A,
             isProfileOpen: N,
             sidebars: P,
             guildSidebars: R,
@@ -234,9 +234,9 @@ class X extends (r = a.ZP.PersistedStore) {
             ? E.ULH.SIDEBAR_CHAT
             : t && N
               ? E.ULH.PROFILE
-              : C
+              : A
                 ? E.ULH.SUMMARIES
-                : A
+                : C
                   ? E.ULH.MEMBERS
                   : E.ULH.NONE;
     }

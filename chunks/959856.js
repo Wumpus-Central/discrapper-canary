@@ -22,7 +22,7 @@ var r = n(512722),
     S = n(825040),
     I = n(65154),
     T = n(436620);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function A(e, t, n) {
         e
     );
 }
-let C = new u.Yd("MediaEngineWebRTC");
+let A = new u.Yd("MediaEngineWebRTC");
 class N extends s.Z {
     destroy() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -53,7 +53,7 @@ class N extends s.Z {
             !__OVERLAY__ &&
             (T.fi && null != window.AudioContext && null != window.RTCPeerConnection
                 ? (n(266370), !0)
-                : (C.info("WebRTC is not supported on", o().name, o().version), !1))
+                : (A.info("WebRTC is not supported on", o().name, o().version), !1))
         );
     }
     supported() {
@@ -352,14 +352,14 @@ class N extends s.Z {
                                   (this.dave = t),
                                       (this.transientKeys = (0, b.Yk)()),
                                       (this.maxSupportedProtocolVersion = t.MaxSupportedProtocolVersion()),
-                                      C.info(
+                                      A.info(
                                           "Successfully initialized DAVE, version:",
                                           this.maxSupportedProtocolVersion,
                                       ),
                                       e();
                               })
                               .catch((e) => {
-                                  (this.maxSupportedProtocolVersion = 0), C.error("Failed to initialize DAVE", e), t(e);
+                                  (this.maxSupportedProtocolVersion = 0), A.error("Failed to initialize DAVE", e), t(e);
                               });
                       })
                     : ((this.maxSupportedProtocolVersion = 0),
@@ -370,29 +370,29 @@ class N extends s.Z {
     }
     constructor() {
         super(),
-            A(this, "Video", S.Z),
-            A(this, "Camera", v.Z),
-            A(this, "_audioContext", null),
-            A(this, "outputVolume", I.Qx),
-            A(this, "sourceId", I.w5),
-            A(this, "sinkId", I.w5),
-            A(this, "videoInputDeviceId", I.Av),
-            A(this, "enabled", !1),
-            A(this, "connections", new Set()),
-            A(this, "interacted", !1),
-            A(this, "loopback", null),
-            A(this, "voiceActivityInput", null),
-            A(this, "desktopInputPool", new O.Z()),
-            A(this, "enablePromise", null),
-            A(this, "dave", null),
-            A(this, "transientKeys", null),
-            A(this, "maxSupportedProtocolVersion", null),
-            A(this, "handleActiveSinksChange", (e, t) => {
+            C(this, "Video", S.Z),
+            C(this, "Camera", v.Z),
+            C(this, "_audioContext", null),
+            C(this, "outputVolume", I.Qx),
+            C(this, "sourceId", I.w5),
+            C(this, "sinkId", I.w5),
+            C(this, "videoInputDeviceId", I.Av),
+            C(this, "enabled", !1),
+            C(this, "connections", new Set()),
+            C(this, "interacted", !1),
+            C(this, "loopback", null),
+            C(this, "voiceActivityInput", null),
+            C(this, "desktopInputPool", new O.Z()),
+            C(this, "enablePromise", null),
+            C(this, "dave", null),
+            C(this, "transientKeys", null),
+            C(this, "maxSupportedProtocolVersion", null),
+            C(this, "handleActiveSinksChange", (e, t) => {
                 this.connections.forEach((n) =>
                     n.setHasActiveVideoOutputSink(e, t, "MediaEngineWebRTC.handleActiveSinksChange"),
                 );
             }),
-            A(this, "handleNewListener", (e) => {
+            C(this, "handleNewListener", (e) => {
                 switch (e) {
                     case f.aB.DeviceChange:
                         null != navigator.mediaDevices &&
@@ -410,7 +410,7 @@ class N extends s.Z {
                             this.enabled && this.voiceActivityInput.enable());
                 }
             }),
-            A(this, "handleRemoveListener", (e) => {
+            C(this, "handleRemoveListener", (e) => {
                 switch (e) {
                     case f.aB.DeviceChange:
                         var t;
@@ -424,22 +424,22 @@ class N extends s.Z {
                             (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null));
                 }
             }),
-            A(this, "handleDeviceChange", () =>
+            C(this, "handleDeviceChange", () =>
                 (0, g.PW)().then((e) => {
                     let [t, n, r] = e;
                     return this.emit(f.aB.DeviceChange, t, n, r);
                 }),
             ),
-            A(this, "handleVoiceActivity", (e) => {
+            C(this, "handleVoiceActivity", (e) => {
                 this.emit(f.aB.VoiceActivity, e, 0);
             }),
-            A(this, "handleDesktopSourceEnd", () => {
+            C(this, "handleDesktopSourceEnd", () => {
                 this.emit(f.aB.DesktopSourceEnd);
             }),
-            A(this, "handleAudioPermission", (e) => {
+            C(this, "handleAudioPermission", (e) => {
                 this.emit(f.aB.AudioPermission, e);
             }),
-            A(this, "handleVideoPermission", (e) => {
+            C(this, "handleVideoPermission", (e) => {
                 this.emit(f.aB.VideoPermission, e);
             }),
             this.on("newListener", this.handleNewListener),

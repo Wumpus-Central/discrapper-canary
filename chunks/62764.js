@@ -37,8 +37,8 @@ var i = n(54381),
     k = n(864309),
     U = n(319720),
     V = n(127947),
-    B = n(577650);
-function F(e) {
+    F = n(577650);
+function B(e) {
     let { channel: t } = e,
         l = t.isArchivedThread(),
         a = (0, E.P0)(t),
@@ -192,7 +192,7 @@ function H(e) {
                                           message: K,
                                           channel: q,
                                           useChatFontScaling: !1,
-                                          className: a()(B.secondary, U.addReactButton, { [U.hasNoReactions]: !es }),
+                                          className: a()(F.secondary, U.addReactButton, { [U.hasNoReactions]: !es }),
                                           isForumToolbar: !0,
                                           children: !es && D.intl.string(D.t.xpOyTO),
                                       }),
@@ -202,7 +202,7 @@ function H(e) {
                         className: U.buttons,
                         children: [
                             et
-                                ? (0, i.jsx)(F, { channel: q })
+                                ? (0, i.jsx)(B, { channel: q })
                                 : (0, i.jsx)(c.u, {
                                       text: D.intl.string(D.t.F7oeDv),
                                       children: (0, i.jsx)(u.Button, {

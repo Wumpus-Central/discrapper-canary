@@ -64,7 +64,7 @@ function I() {
             }),
             d.length > 0
                 ? d.map((e) => {
-                      let t = "guild" === e.experiment.kind ? A : T;
+                      let t = "guild" === e.experiment.kind ? C : T;
                       return (0, r.jsx)(
                           t,
                           {
@@ -95,8 +95,8 @@ function T(e) {
         }, []),
         I = (0, s.e7)([h.default], () => h.default.getId()),
         T = (0, _.qD)(t, I),
-        A = (0, _.aN)(t, I),
-        C = (0, s.Wu)([f.Z], () =>
+        C = (0, _.aN)(t, I),
+        A = (0, s.Wu)([f.Z], () =>
             o()
                 .sortBy(f.Z.getRecentExposures(y.xY.USER, n), (e) => {
                     let [t, n] = e;
@@ -187,7 +187,7 @@ function T(e) {
                 (0, r.jsx)("div", {
                     className: O.description,
                     children:
-                        null == A
+                        null == C
                             ? (0, r.jsx)(l.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-subtle",
@@ -207,7 +207,7 @@ function T(e) {
                               (0, r.jsx)(l.Text, {
                                   variant: "code",
                                   className: O.pre,
-                                  children: null == A ? "None" : JSON.stringify(A, void 0, 2),
+                                  children: null == C ? "None" : JSON.stringify(C, void 0, 2),
                               }),
                               (0, r.jsx)(l.Text, {
                                   variant: "text-lg/medium",
@@ -230,7 +230,7 @@ function T(e) {
                               (0, r.jsx)(l.Text, {
                                   variant: "code",
                                   className: O.pre,
-                                  children: 0 === C.length ? "None" : C.join("\n"),
+                                  children: 0 === A.length ? "None" : A.join("\n"),
                               }),
                           ],
                       })
@@ -247,7 +247,7 @@ function T(e) {
         })
     );
 }
-function A(e) {
+function C(e) {
     let { experiment: t, experimentId: n, overrideInfo: a } = e,
         [c, u] = i.useState(null != a),
         [p, _] = i.useState(!1),

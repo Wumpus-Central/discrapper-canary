@@ -22,7 +22,7 @@ var r = n(54381),
     S = n(652271),
     I = n(388032),
     T = n(428498);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -83,7 +83,7 @@ function R() {
             startAuthorization: o,
             preferredFlow: u,
             connectionApp: p,
-            debug: { isSubscribedToAuthorizeRequest: A, oauth2Token: C, hasConnectionEntrypointUrl: N, validFlows: P },
+            debug: { isSubscribedToAuthorizeRequest: C, oauth2Token: A, hasConnectionEntrypointUrl: N, validFlows: P },
         } = (0, v.F)(e, { debug: !0 }),
         R = (0, c.e7)([y.Z], () => null != e && y.Z.isConnected(e.id)),
         x = (0, c.e7)([_.ZP], () => _.ZP.getSelfEmbeddedActivities()),
@@ -164,7 +164,7 @@ function R() {
                                 children: I.intl.string(S.default["no+FQS"]),
                             }),
                             (0, r.jsx)(D, {
-                                overallStatus: A ? 0 : R ? 3 : 1,
+                                overallStatus: C ? 0 : R ? 3 : 1,
                                 name: I.intl.string(S.default.AGLx00),
                                 steps: [
                                     {
@@ -176,11 +176,11 @@ function R() {
                                             : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                     },
                                     {
-                                        status: A ? 2 : R ? 3 : 4,
+                                        status: C ? 2 : R ? 3 : 4,
                                         text: I.intl.string(S.default.S94dzs),
-                                        description: A || !R ? null : I.intl.string(S.default.aTULMB),
+                                        description: C || !R ? null : I.intl.string(S.default.aTULMB),
                                         learnMoreLink:
-                                            A || !R
+                                            C || !R
                                                 ? null
                                                 : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                     },
@@ -228,11 +228,11 @@ function R() {
                                 text: I.intl.string(S.default.w0pN4R),
                                 fullWidth: !0,
                             }),
-                            null != C &&
+                            null != A &&
                                 (0, r.jsx)(l.zxk, {
                                     variant: "secondary",
                                     onClick: () => {
-                                        f.Z.delete(C.id);
+                                        f.Z.delete(A.id);
                                         let t = x.get(e.id);
                                         null != t &&
                                             m.Z.leaveActivity({
@@ -264,7 +264,7 @@ function D(e) {
                 status: t,
                 text: n,
             }),
-            i.map((e, t) => (0, r.jsx)(x, C({}, e), t)),
+            i.map((e, t) => (0, r.jsx)(x, A({}, e), t)),
             a &&
                 (0, r.jsx)("div", {
                     className: T.calloutBox,
@@ -329,14 +329,14 @@ function L(e) {
         };
     switch (t) {
         case 0:
-            return (0, r.jsx)(l.owK, P(C({}, n), { color: u.Z.colors.ICON_FEEDBACK_POSITIVE }));
+            return (0, r.jsx)(l.owK, P(A({}, n), { color: u.Z.colors.ICON_FEEDBACK_POSITIVE }));
         case 1:
-            return (0, r.jsx)(l.k$p, P(C({}, n), { color: u.Z.colors.ICON_FEEDBACK_CRITICAL }));
+            return (0, r.jsx)(l.k$p, P(A({}, n), { color: u.Z.colors.ICON_FEEDBACK_CRITICAL }));
         case 2:
-            return (0, r.jsx)(l.kmB, P(C({}, n), { color: u.Z.colors.ICON_FEEDBACK_POSITIVE }));
+            return (0, r.jsx)(l.kmB, P(A({}, n), { color: u.Z.colors.ICON_FEEDBACK_POSITIVE }));
         case 3:
-            return (0, r.jsx)(l.aNP, P(C({}, n), { color: u.Z.colors.ICON_FEEDBACK_WARNING }));
+            return (0, r.jsx)(l.aNP, P(A({}, n), { color: u.Z.colors.ICON_FEEDBACK_WARNING }));
         case 4:
-            return (0, r.jsx)(l.Dio, P(C({}, n), { color: u.Z.colors.ICON_FEEDBACK_CRITICAL }));
+            return (0, r.jsx)(l.Dio, P(A({}, n), { color: u.Z.colors.ICON_FEEDBACK_CRITICAL }));
     }
 }

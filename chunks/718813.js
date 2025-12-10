@@ -10,8 +10,8 @@ var r,
     d = n(481060),
     p = n(37234),
     f = n(134616),
-    h = n(714338),
-    g = n(663993),
+    g = n(714338),
+    h = n(663993),
     m = n(84615),
     _ = n(984802),
     b = n(819640),
@@ -66,28 +66,28 @@ function S(e, t) {
         e
     );
 }
-let T = (0, g.Un)({
+let T = (0, h.Un)({
         createPromise: () => n.e("69470").then(n.bind(n, 989804)),
         webpackId: 989804,
         name: "UserSettings",
     }),
-    N = (0, g.Un)({
+    N = (0, h.Un)({
         createPromise: () => Promise.resolve().then(n.bind(n, 653592)),
         webpackId: 653592,
         name: "ComponentPlayground",
     }),
-    j = (0, g.Un)({
+    j = (0, h.Un)({
         createPromise: () =>
             Promise.all([n.e("36599"), n.e("7654"), n.e("86736"), n.e("86915")]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: "ChannelSettings",
     }),
-    P = (0, g.Un)({
+    P = (0, h.Un)({
         createPromise: () => n.e("45620").then(n.bind(n, 838819)),
         webpackId: 838819,
         name: "CollectiblesShop",
     }),
-    x = (0, g.Un)({
+    x = (0, h.Un)({
         createPromise: () =>
             Promise.all([
                 n.e("36599"),
@@ -121,7 +121,7 @@ let T = (0, g.Un)({
         tension: 100,
     };
 function R() {
-    return l.useEffect(() => (h.Z.enable(), h.Z.enableTemp(f.u), () => h.Z.disableTemp()), []), null;
+    return l.useEffect(() => (g.Z.enable(), g.Z.enableTemp(f.u), () => g.Z.disableTemp()), []), null;
 }
 class D extends (r = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
@@ -199,7 +199,7 @@ class D extends (r = l.PureComponent) {
             u = r === w,
             p = e || u ? this.getAnimatedStyle() : null,
             f = !u && !a,
-            h = (0, i.jsx)(
+            g = (0, i.jsx)(
                 o.Z.div,
                 S(
                     C(
@@ -238,10 +238,10 @@ class D extends (r = l.PureComponent) {
                 ),
             );
         return a
-            ? h
+            ? g
             : (0, i.jsx)(d.EqS, {
                   containerRef: this.containerRef,
-                  children: h,
+                  children: g,
               });
     }
     getAnimatedStyle() {

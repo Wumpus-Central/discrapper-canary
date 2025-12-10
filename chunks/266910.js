@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => A });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -73,7 +73,7 @@ function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = A(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -81,7 +81,7 @@ function T(e, t) {
     }
     return i;
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,15 +90,15 @@ function A(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let C = function (e) {
+let A = function (e) {
     var t,
         n,
         a,
         O,
         S,
-        A,
+        C,
         {
-            style: C,
+            style: A,
             src: N,
             backgroundSrc: P,
             userId: R,
@@ -116,7 +116,7 @@ let C = function (e) {
             theme: G,
             themeType: b.l.VIDEO_TILE_BACKGROUND,
             primaryColor: null != (S = null == U || null == (n = U.themeColors) ? void 0 : n[0]) ? S : null,
-            secondaryColor: null != (A = null == U || null == (a = U.themeColors) ? void 0 : a[1]) ? A : null,
+            secondaryColor: null != (C = null == U || null == (a = U.themeColors) ? void 0 : a[1]) ? C : null,
         }),
         F =
             null == U
@@ -149,11 +149,11 @@ let C = function (e) {
                 L,
             ),
         ),
-        W = I(v({}, C), { backgroundColor: M });
+        W = I(v({}, A), { backgroundColor: M });
     return (
         null != F && x && k && ((W.backgroundImage = "url(".concat(F, ")")), (W.backgroundSize = "cover")),
         (0, r.jsx)("div", {
-            style: V ? v({}, C, Z) : v({}, W),
+            style: V ? v({}, A, Z) : v({}, W),
             className: o()(y.background, { [B]: V }),
             children: w
                 ? (0, r.jsx)(d.Z, {

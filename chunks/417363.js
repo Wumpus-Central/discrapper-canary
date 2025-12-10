@@ -70,8 +70,8 @@ function S(e, t) {
 }
 let I = 200,
     T = 200,
-    A = +p.Z.Millis.MINUTE,
-    C = {},
+    C = +p.Z.Millis.MINUTE,
+    A = {},
     N = "content",
     P = "file://",
     R = !1,
@@ -233,7 +233,7 @@ function H(e) {
 }
 function Y(e) {
     let t = Date.now(),
-        n = t - A;
+        n = t - C;
     L = (L = [
         {
             bytes: e,
@@ -260,7 +260,7 @@ let K = a().throttle(H, I),
     z = a().throttle(Y, I),
     q = a().throttle(W, I);
 function Q(e, t, n) {
-    let r = n(C[t]),
+    let r = n(A[t]),
         i = n(e[t]);
     return null != r && null != i && 0 !== r ? Math.max(i - r, 0) : 0;
 }
@@ -274,7 +274,7 @@ function X(e) {
     for (let e in r)
         for (let t in r[e]) {
             let o = (0, _.Tu)(e, t);
-            if (((n[o] = Z(r[e][t])), null != C[o])) {
+            if (((n[o] = Z(r[e][t])), null != A[o])) {
                 let e = Q(n, o, B);
                 e > 0 && K((D += e));
                 let r = Q(n, o, F);
@@ -323,7 +323,7 @@ function X(e) {
             }
         }
     a || "dispatch_application_progress" !== c.Z.taskID || c.Z.clearProgress("dispatch_application_progress"),
-        (C = n),
+        (A = n),
         (k = !0);
 }
 class J extends (r = o.ZP.Store) {
@@ -331,38 +331,38 @@ class J extends (r = o.ZP.Store) {
         this.waitFor(u.default);
     }
     getState(e, t) {
-        return C[(0, _.Tu)(e, t)];
+        return A[(0, _.Tu)(e, t)];
     }
     isUpToDate(e, t) {
-        let n = C[(0, _.Tu)(e, t)];
+        let n = A[(0, _.Tu)(e, t)];
         return null != n && n.type === b.vxO.UP_TO_DATE;
     }
     shouldPatch(e, t) {
-        let n = C[(0, _.Tu)(e, t)];
+        let n = A[(0, _.Tu)(e, t)];
         return null != n && !0 === n.shouldPatch;
     }
     isInstalled(e, t) {
-        let n = C[(0, _.Tu)(e, t)];
+        let n = A[(0, _.Tu)(e, t)];
         return null != n ? n.type !== b.vxO.UNINSTALLING : E.Z.shouldBeInstalled(e, t);
     }
     supportsCloudSync(e, t) {
         null == t && (t = e);
-        let n = C[(0, _.Tu)(e, t)];
+        let n = A[(0, _.Tu)(e, t)];
         return null != n && null != n.storage && !!n.storage.sync;
     }
     isLaunchable(e, t) {
         if (!(0, h.Q)()) return !1;
-        let n = C[(0, _.Tu)(e, t)];
+        let n = A[(0, _.Tu)(e, t)];
         return null != n && n.type === b.vxO.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length;
     }
     getDefaultLaunchOption(e, t) {
-        let n = C[(0, _.Tu)(e, t)];
+        let n = A[(0, _.Tu)(e, t)];
         if (null == n) return null;
         let { defaultLaunchOptionId: r, launchOptions: i } = n;
         return null == r || null == i ? null : i[r];
     }
     getLaunchOptions(e, t) {
-        let n = C[(0, _.Tu)(e, t)];
+        let n = A[(0, _.Tu)(e, t)];
         return null == n || null == n.launchOptions ? [] : Object.values(n.launchOptions);
     }
     getHistoricalTotalBytesRead() {

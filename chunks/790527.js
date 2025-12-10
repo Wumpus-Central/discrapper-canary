@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(302945),
     I = n(474936),
     T = n(981631),
-    A = n(388032),
-    C = n(144867),
+    C = n(388032),
+    A = n(144867),
     N = n(769860);
 function P(e, t) {
     if (null == e) return {};
@@ -194,14 +194,14 @@ function w(e) {
     i.useEffect(() => {
         eT || u.MH();
     }, [eT]);
-    let eA = () => {
+    let eC = () => {
             if (eh)
                 return (0, r.jsx)(_.Z, {
                     analyticsLocation: j,
                     guild: x.guild,
                     onClose: W,
                 });
-            let e = eo ? A.intl.string(A.t.pj0XBN) : void 0;
+            let e = eo ? C.intl.string(C.t.pj0XBN) : void 0;
             if (eb)
                 if (null != eg) {
                     var t, n;
@@ -209,7 +209,7 @@ function w(e) {
                         intervalType: null == eg || null == (t = eg.subscription_trial) ? void 0 : t.interval,
                         intervalCount: null == eg || null == (n = eg.subscription_trial) ? void 0 : n.interval_count,
                     });
-                } else null != eE && (e = A.intl.formatToPlainString(A.t.bkQ4bH, { percent: eE.discount.amount }));
+                } else null != eE && (e = C.intl.formatToPlainString(C.t.bkQ4bH, { percent: eE.discount.amount }));
             return (0, r.jsx)(y.Z, {
                 className: el,
                 showGradient: eo || es,
@@ -224,31 +224,31 @@ function w(e) {
                 textOptions: { textOverride: null != J ? J : e },
             });
         },
-        eC = et ? o()(C.artContainer, C.artContainerBoxShadow, B) : o()(C.artContainer, B),
+        eA = et ? o()(A.artContainer, A.artContainerBoxShadow, B) : o()(A.artContainer, B),
         eN = null;
     return (
         null != em.artURL
             ? (eN = (0, r.jsx)("img", {
-                  className: o()(F, C.art),
+                  className: o()(F, A.art),
                   alt: "",
                   src: em.artURL,
               }))
             : null != em.artElement && (eN = em.artElement),
         (0, r.jsxs)(c.Y0X, {
             "data-migration-pending": !0,
-            className: o()(C.root, !eb && G),
+            className: o()(A.root, !eb && G),
             "aria-label": R,
             transitionState: Y,
             parentComponent: "PremiumUpsellModal",
             children: [
                 null != eN &&
                     (0, r.jsxs)("div", {
-                        className: eC,
+                        className: eA,
                         children: [
                             eN,
                             $
                                 ? (0, r.jsx)("img", {
-                                      className: C.sparkleBadge,
+                                      className: A.sparkleBadge,
                                       alt: "",
                                       src: N,
                                   })
@@ -258,7 +258,7 @@ function w(e) {
                 (0, r.jsx)(c.hzk, {
                     "data-migration-pending": !0,
                     scrollbarType: "none",
-                    className: o()(eo ? C.enhancedContent : C.content, !eb && Z),
+                    className: o()(eo ? A.enhancedContent : A.content, !eb && Z),
                     children: er
                         ? (0, r.jsx)(c.$jN, {})
                         : eb
@@ -277,22 +277,22 @@ function w(e) {
                                 children: U,
                             })
                           : (0, r.jsxs)("div", {
-                                className: C.contentContainer,
+                                className: A.contentContainer,
                                 children: [
                                     ed,
                                     (0, r.jsxs)("div", {
-                                        className: C.bodyContent,
+                                        className: A.bodyContent,
                                         children: [
                                             (0, r.jsxs)(c.Heading, {
-                                                className: o()(C.header, { [C.enhancedHeader]: eo }, V),
+                                                className: o()(A.header, { [A.enhancedHeader]: eo }, V),
                                                 variant: "heading-xl/bold",
-                                                children: [R, ee ? (0, r.jsx)(p.Z, { className: C.betaTag }) : null],
+                                                children: [R, ee ? (0, r.jsx)(p.Z, { className: A.betaTag }) : null],
                                             }),
                                             eI ? (0, r.jsx)(S.Z, { affinities: eS }) : void 0,
                                             eu,
                                             (0, r.jsx)(c.Text, {
                                                 variant: ep ? "text-sm/normal" : "text-md/normal",
-                                                className: o()(H, C.subHeader),
+                                                className: o()(H, A.subHeader),
                                                 children: M,
                                             }),
                                         ],
@@ -302,15 +302,15 @@ function w(e) {
                 }),
                 (0, r.jsxs)(c.mzw, {
                     "data-migration-pending": !0,
-                    className: o()(C.footer, e_, { [C.enhancedFooter]: eo }),
+                    className: o()(A.footer, e_, { [A.enhancedFooter]: eo }),
                     children: [
                         (0, r.jsxs)("div", {
-                            className: o()(C.primaryActions, { [C.enhancedPrimaryActions]: eo }),
+                            className: o()(A.primaryActions, { [A.enhancedPrimaryActions]: eo }),
                             children: [
                                 null != Q
                                     ? (0, r.jsx)(l.zx, {
                                           "data-migration-pending": !0,
-                                          className: o()(C.secondaryAction, X, { [C.enhancedSecondaryAction]: eo }),
+                                          className: o()(A.secondaryAction, X, { [A.enhancedSecondaryAction]: eo }),
                                           onClick: q,
                                           size: l.zx.Sizes.SMALL,
                                           color: eo ? l.zx.Colors.CUSTOM : l.zx.Colors.PRIMARY,
@@ -318,7 +318,7 @@ function w(e) {
                                           children: Q,
                                       })
                                     : null,
-                                eA(),
+                                eC(),
                             ],
                         }),
                         !ei &&
@@ -326,7 +326,7 @@ function w(e) {
                             (0, r.jsx)(c.Button, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: null != ea ? ea : A.intl.string(A.t["13/7kX"]),
+                                text: null != ea ? ea : C.intl.string(C.t["13/7kX"]),
                                 onClick: W,
                             }),
                     ],
@@ -335,7 +335,7 @@ function w(e) {
                     ? (0, r.jsx)(c.olH, {
                           "data-migration-pending": !0,
                           onClick: W,
-                          className: C.closeButton,
+                          className: A.closeButton,
                       })
                     : null,
                 ef,

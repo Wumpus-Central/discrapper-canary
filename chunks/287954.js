@@ -115,9 +115,9 @@ function E(e) {
             interactionPopoutTargetRef: I,
         } = (0, a.Xo)(),
         T = [u.l.MODAL, u.l.MODAL_V2].includes(p) ? (0, o.z)(t.id, n) : void 0,
-        A = O === b.sourceType && y === c.P.REACT,
-        C = O === b.sourceType && y === c.P.REPLY,
-        N = (A || C) && S === b.sourceId;
+        C = O === b.sourceType && y === c.P.REACT,
+        A = O === b.sourceType && y === c.P.REPLY,
+        N = (C || A) && S === b.sourceId;
     return (0, r.jsx)(
         i.yRy,
         _(
@@ -126,7 +126,7 @@ function E(e) {
                     targetElementRef: null != I ? I : void 0,
                     renderPopout: (e) => {
                         let { setPopoutRef: i } = e,
-                            a = A ? s.Z : l.Z;
+                            a = C ? s.Z : l.Z;
                         return (0, r.jsx)(
                             a,
                             f(

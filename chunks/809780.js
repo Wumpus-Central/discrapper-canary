@@ -1,6 +1,6 @@
 n.d(t, {
     As: () => F,
-    ZP: () => X,
+    ZP: () => Q,
     hC: () => H,
     jd: () => V,
 }),
@@ -467,7 +467,7 @@ function Y(e, t, n, r) {
             if (w.ZP.getMentionCount(t) > 0) return w.ZP.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
                 let e = L.default.extractTimestamp(n);
-                if (Date.now() - e > Q) return 8;
+                if (Date.now() - e > X) return 8;
                 if (Date.now() - e > q) return 6;
             }
             if (r.isThread()) {
@@ -494,8 +494,8 @@ function Y(e, t, n, r) {
             );
 }
 let q = 2 * R.Z.Millis.DAY,
-    Q = 10 * R.Z.Millis.DAY;
-function X(e) {
+    X = 10 * R.Z.Millis.DAY;
+function Q(e) {
     let [t, n] = l.useState(() => new W(K(), e)),
         [r, i] = l.useState(!1),
         o = l.useRef(Date.now()),

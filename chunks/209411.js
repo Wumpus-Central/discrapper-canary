@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(743142),
     h = n(893607),
     g = n(703656),
-    p = n(314897),
-    m = n(781428),
+    m = n(314897),
+    p = n(781428),
     f = n(981631),
     _ = n(176505);
 function x(e) {
@@ -33,20 +33,20 @@ function x(e) {
             },
             [e.transitionTo],
         ),
-        { isAuthenticated: E, loginStatus: v } = (0, a.cj)([p.default], () => ({
-            isAuthenticated: p.default.isAuthenticated(),
-            loginStatus: p.default.getLoginStatus(),
+        { isAuthenticated: E, loginStatus: v } = (0, a.cj)([m.default], () => ({
+            isAuthenticated: m.default.isAuthenticated(),
+            loginStatus: m.default.getLoginStatus(),
         })),
         { location: j, redirectTo: b } = e,
-        [I, y] = i.useState(E);
-    function S(e) {
+        [I, N] = i.useState(E);
+    function y(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: r } = e;
         (0, c.Yz)({
             handoffKey: t,
             handoffToken: n,
             handoffSource: r,
         }),
-            y(!1);
+            N(!1);
     }
     return ((0, u.ZP)(() => {
         if (null != j) {
@@ -55,13 +55,13 @@ function x(e) {
                 let n = null != b ? (0, d.L)(b) : void 0;
                 I
                     ? o.Z.logout("handoff", null).finally(() => {
-                          S({
+                          y({
                               handoffKey: e,
                               handoffToken: t,
                               handoffSource: n,
                           });
                       })
-                    : S({
+                    : y({
                           handoffKey: e,
                           handoffToken: t,
                           handoffSource: n,
@@ -70,9 +70,9 @@ function x(e) {
         }
     }),
     I || v === f.u34.LOGGING_IN)
-        ? (0, r.jsx)(m.q, {})
+        ? (0, r.jsx)(p.q, {})
         : (0, r.jsx)(
-              m.Z,
+              p.Z,
               ((t = (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

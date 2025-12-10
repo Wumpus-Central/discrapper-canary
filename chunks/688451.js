@@ -128,7 +128,7 @@ function v(e, t) {
     t && (b("Patches"), (e.u = []), (e.s = []), (e.v = t));
 }
 function S(e) {
-    I(e), e.p.forEach(A), (e.p = null);
+    I(e), e.p.forEach(C), (e.p = null);
 }
 function I(e) {
     e === G && (G = e.l);
@@ -142,11 +142,11 @@ function T(e) {
         _: 0,
     });
 }
-function A(e) {
+function C(e) {
     var t = e[W];
     0 === t.i || 1 === t.i ? t.j() : (t.g = !0);
 }
-function C(e, t) {
+function A(e, t) {
     t._ = t.p.length;
     var n = t.p[0],
         i = void 0 !== e && e !== n;
@@ -432,13 +432,13 @@ var ee = new ((function () {
                         return "undefined" != typeof Promise && o instanceof Promise
                             ? o.then(
                                   function (e) {
-                                      return v(c, i), C(e, c);
+                                      return v(c, i), A(e, c);
                                   },
                                   function (e) {
                                       throw (S(c), e);
                                   },
                               )
-                            : (v(c, i), C(o, c));
+                            : (v(c, i), A(o, c));
                     }
                     if (!e || "object" != typeof e) {
                         if ((void 0 === (o = n(e)) && (o = e), o === H && (o = void 0), t.D && h(o, !0), i)) {
@@ -483,7 +483,7 @@ var ee = new ((function () {
             }),
             (t.finishDraft = function (e, t) {
                 var n = (e && e[W]).A;
-                return v(n, t), C(void 0, n);
+                return v(n, t), A(void 0, n);
             }),
             (t.setAutoFreeze = function (e) {
                 this.D = e;

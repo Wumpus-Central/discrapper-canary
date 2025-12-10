@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function A(e) {
     }
     return e;
 }
-function C(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,7 +67,7 @@ function N(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -77,7 +77,7 @@ let P = i.memo((e) => {
     let { name: t, canReveal: n = !0, dismissibleContentType: a, forceShadow: m, cardType: b } = e,
         y = null == e ? void 0 : e.onCtaClick,
         T = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
-        [C, D] = i.useState(!1),
+        [A, D] = i.useState(!1),
         [w, x] = i.useState(!1),
         L =
             b === E.gM.CARD_CAROUSEL_FIRST_ROW ||
@@ -109,10 +109,10 @@ let P = i.memo((e) => {
         H = () => {
             null == y || y(), V();
         };
-    e = N(A({ onMouseEnter: F }, e), { onCtaClick: null != y ? H : void 0 });
+    e = N(C({ onMouseEnter: F }, e), { onCtaClick: null != y ? H : void 0 });
     let Y = M !== a || null == a || w,
         W = (e) => {
-            C &&
+            A &&
                 "transform" === e.propertyName &&
                 e.target.classList.contains(I.flipCard) &&
                 (x(!0),
@@ -121,11 +121,11 @@ let P = i.memo((e) => {
         };
     return (i.useEffect(() => {
         T &&
-            C &&
+            A &&
             (x(!0),
             _.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }),
             null != a && k(v.L.TAKE_ACTION));
-    }, [T, C, a, t, k]),
+    }, [T, A, a, t, k]),
     (0, f.Z)({
         type: l.ImpressionTypes.VIEW,
         name: l.ImpressionNames.PERK_DISCOVERABILITY_CARD,
@@ -151,11 +151,11 @@ let P = i.memo((e) => {
                           children: [
                               (0, r.jsx)("div", {
                                   className: I.flipCardFront,
-                                  children: (0, r.jsx)(R, N(A({}, e), { className: I.topCover })),
+                                  children: (0, r.jsx)(R, N(C({}, e), { className: I.topCover })),
                               }),
                               (0, r.jsx)("div", {
                                   className: I.flipCardBack,
-                                  children: (0, r.jsx)(R, N(A({}, e), { className: I.topCover })),
+                                  children: (0, r.jsx)(R, N(C({}, e), { className: I.topCover })),
                               }),
                           ],
                       }),
@@ -171,7 +171,7 @@ let P = i.memo((e) => {
                             [I.forceShadow]: m,
                             [I.reducedMotion]: T,
                         }),
-                        children: (0, r.jsx)(R, A({}, e)),
+                        children: (0, r.jsx)(R, C({}, e)),
                     }),
                 })
               : (0, r.jsx)("div", {
@@ -181,8 +181,8 @@ let P = i.memo((e) => {
                         children: (0, r.jsxs)(u.P3F, {
                             onClick: () => D(!0),
                             className: o()(I.flipCard, I.clickable, {
-                                [I.flipped]: C,
-                                [I.partialFlipCard]: !w && !C,
+                                [I.flipped]: A,
+                                [I.partialFlipCard]: !w && !A,
                                 [I.reducedMotion]: T,
                             }),
                             onTransitionEnd: W,
@@ -190,15 +190,15 @@ let P = i.memo((e) => {
                                 (0, r.jsx)("div", {
                                     className: I.flipCardHidden,
                                     "aria-hidden": !0,
-                                    children: (0, r.jsx)(R, A({}, e)),
+                                    children: (0, r.jsx)(R, C({}, e)),
                                 }),
                                 (0, r.jsx)("div", {
                                     className: I.flipCardFront,
-                                    children: (0, r.jsx)(R, N(A({}, j.upcomingDropUntimed), { pillText: "" })),
+                                    children: (0, r.jsx)(R, N(C({}, j.upcomingDropUntimed), { pillText: "" })),
                                 }),
                                 (0, r.jsx)("div", {
                                     className: I.flipCardBack,
-                                    children: (0, r.jsx)(R, N(A({}, e), { description: "" })),
+                                    children: (0, r.jsx)(R, N(C({}, e), { description: "" })),
                                 }),
                                 (0, r.jsx)("div", {
                                     className: I.flipCardButtonContainer,
@@ -212,7 +212,7 @@ let P = i.memo((e) => {
                         }),
                     }),
                 })
-        : (0, r.jsx)(P, N(A({}, j.upcomingDropUntimed), { forceShadow: m }));
+        : (0, r.jsx)(P, N(C({}, j.upcomingDropUntimed), { forceShadow: m }));
 });
 P.displayName = "PremiumPerkCard";
 let R = i.forwardRef((e, t) => {
@@ -233,8 +233,8 @@ let R = i.forwardRef((e, t) => {
             cardType: v,
             onClick: S,
             backgroundImage: T,
-            pillText: A,
-            perkImage: C,
+            pillText: C,
+            perkImage: A,
             imageOverlayText: N,
             hasNitroGradientBackground: P,
         } = e,
@@ -258,18 +258,18 @@ let R = i.forwardRef((e, t) => {
         },
         onClick: S,
         children: [
-            null != A &&
+            null != C &&
                 (0, r.jsx)(u.Text, {
                     variant: "text-xs/semibold",
                     className: I.pill,
-                    children: A,
+                    children: C,
                 }),
             (0, r.jsx)("div", { ref: t }),
             (0, r.jsx)(b.Z, {
                 title: i,
                 titleClassName: a,
                 subtitle: s,
-                perkImage: C,
+                perkImage: A,
                 isCarousel: R,
                 descriptionCta: c,
                 customContent: d,

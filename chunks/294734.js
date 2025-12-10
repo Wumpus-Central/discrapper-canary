@@ -22,22 +22,22 @@ var r = n(54381),
     S = n(694784),
     I = n(39154),
     T = n(245216),
-    A = n(388032),
-    C = n(823914);
+    C = n(388032),
+    A = n(823914);
 function N() {
     return (0, r.jsxs)("div", {
-        className: C.headerContainer,
+        className: A.headerContainer,
         children: [
             (0, r.jsx)(T.Z, {
                 size: "xs",
-                className: C.headerIcon,
+                className: A.headerIcon,
                 color: l.Z.colors.TEXT_LOW_CONTRAST,
             }),
             (0, r.jsx)(a.xvT, {
-                className: C.headerText,
+                className: A.headerText,
                 variant: "text-sm/semibold",
                 color: "text-low-contrast",
-                children: A.intl.string(A.t.ToyvLk),
+                children: C.intl.string(C.t.ToyvLk),
             }),
         ],
     });
@@ -57,19 +57,19 @@ function P(e) {
     return null == p
         ? null
         : (0, r.jsxs)(c.P3F, {
-              className: C.footerContainer,
+              className: A.footerContainer,
               onClick: _,
               "aria-label": p.accessibilityLabel,
               children: [
                   null != p.originIconUrl
                       ? (0, r.jsx)("img", {
-                            className: C.originIcon,
+                            className: A.originIcon,
                             src: p.originIconUrl,
                             alt: "",
                         })
                       : null,
                   (0, r.jsx)(a.xvT, {
-                      className: C.footerText,
+                      className: A.footerText,
                       variant: "text-sm/medium",
                       color: "none",
                       children: "".concat(p.originLabel, "  \u2022  ").concat(p.timestampLabel),
@@ -105,29 +105,29 @@ function R(e) {
             previewLinkTarget: !0,
         }),
         T = (0, o.e7)([h.Z], () => h.Z.getChannel(n.channel_id)),
-        A = m.jU.useSetting();
+        C = m.jU.useSetting();
     return null == T
         ? null
         : (0, r.jsxs)(
               "div",
               {
-                  className: C.container,
+                  className: A.container,
                   children: [
-                      (0, r.jsx)("div", { className: C.quote }),
+                      (0, r.jsx)("div", { className: A.quote }),
                       (0, r.jsxs)("div", {
-                          className: C.content,
+                          className: A.content,
                           children: [
                               (0, r.jsx)(N, {}),
                               (0, r.jsx)(f.ZP, {
                                   message: l,
                                   content: O,
-                                  compact: A,
+                                  compact: C,
                               }),
                               (0, _.Z)({
                                   channelMessageProps: {
                                       message: l,
                                       channel: T,
-                                      compact: A,
+                                      compact: C,
                                   },
                                   hasSpoilerEmbeds: v,
                                   hasBailedAst: S,

@@ -208,7 +208,7 @@ class y {
         );
     }
     static parseOutboundStats(e, t) {
-        var n, r, i, a, o, s, l, c, u, d, f, p, _, m, h, E, O, v, S, I, T, A, C, N, P;
+        var n, r, i, a, o, s, l, c, u, d, f, p, _, m, h, E, O, v, S, I, T, C, A, N, P;
         let R = new y();
         return null == e
             ? R
@@ -251,8 +251,8 @@ class y {
                   passthroughCount: null != (S = e.passthroughCount) ? S : 0,
                   cryptorSuccessCount: null != (I = e.encryptSuccessCount) ? I : 0,
                   cryptorFailureCount: null != (T = e.encryptFailureCount) ? T : 0,
-                  cryptorDuration: null != (A = e.encryptDuration) ? A : 0,
-                  cryptorAttempts: null != (C = e.encryptAttempts) ? C : 0,
+                  cryptorDuration: null != (C = e.encryptDuration) ? C : 0,
+                  cryptorAttempts: null != (A = e.encryptAttempts) ? A : 0,
                   cryptorMaxAttempts: null != (N = e.encryptMaxAttempts) ? N : 0,
                   cryptorMissingKeyCount: null != (P = e.encryptMissingKeyCount) ? P : 0,
                   cryptorInvalidNonceCount: 0,

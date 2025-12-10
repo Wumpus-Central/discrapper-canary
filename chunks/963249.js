@@ -61,7 +61,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function A(e, t) {
         e
     );
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -135,10 +135,10 @@ function P(e) {
             );
             return (t) => {
                 var { onClose: n } = t,
-                    a = C(t, ["onClose"]);
+                    a = A(t, ["onClose"]);
                 return (0, r.jsx)(
                     e,
-                    A(I({}, a), {
+                    C(I({}, a), {
                         loadId: Q,
                         subscriptionTier: G,
                         skuId: ee,

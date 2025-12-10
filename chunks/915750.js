@@ -45,7 +45,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function A(e) {
     }
     return e;
 }
-let C = 100,
+let A = 100,
     N = 60,
     P = 1,
     R = 0.5,
@@ -147,8 +147,8 @@ class x {
                 : null;
         return (
             null !== u && (c.selected_guild_banner_url = u),
-            c.guilds.length > C && ((c.guilds = c.guilds.slice(0, C)), (c.truncated = !0)),
-            c.channels.length > C && ((c.channels = c.channels.slice(0, C)), (c.truncated = !0)),
+            c.guilds.length > A && ((c.guilds = c.guilds.slice(0, A)), (c.truncated = !0)),
+            c.channels.length > A && ((c.channels = c.channels.slice(0, A)), (c.truncated = !0)),
             { brand_safety_context: JSON.stringify(c) }
         );
     }
@@ -201,7 +201,7 @@ class x {
                             questId: e.id,
                             event: I.rMx.QUEST_CONTENT_VIEWED,
                             trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
-                            properties: A(
+                            properties: C(
                                 {
                                     min_view_time_seconds: this.minViewTimeSeconds,
                                     min_viewport_percentage: this.minViewportPercentage,
@@ -236,7 +236,7 @@ class x {
                             (0, b.dA)({
                                 questId: t.id,
                                 event: I.rMx.QUEST_CONTENT_VIEW_TIME,
-                                properties: A(
+                                properties: C(
                                     {
                                         is_termination_beat: e,
                                         viewed_time_ms: n,
@@ -252,7 +252,7 @@ class x {
                     (_.lastBeatTime = Date.now());
             }),
             T(this, "commonProperties", (e) =>
-                A(
+                C(
                     {
                         impression_id: this.id,
                         is_quest_enrollment_blocked: this.isQuestEnrollmentBlocked,
@@ -297,7 +297,7 @@ class x {
                         (0, b.dA)({
                             questId: n.id,
                             event: I.rMx.QUEST_CONTENT_LOADED,
-                            properties: A(
+                            properties: C(
                                 {
                                     triggered_by_status_change: this.triggeredByStatusChange,
                                     metadata_raw: null != e ? e : null,

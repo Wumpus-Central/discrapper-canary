@@ -24,8 +24,8 @@ function O(e) {
         {
             guildScheduledEvent: I,
             guild: T,
-            channel: A,
-            isMember: C,
+            channel: C,
+            isMember: A,
         } = (0, a.cj)([g.ZP, _.Z, f.Z, p.ZP, m.default], () => {
             var e, t;
             let r = null != (t = g.ZP.getGuildScheduledEvent(O)) ? t : void 0,
@@ -42,7 +42,7 @@ function O(e) {
             if (
                 (0, u.o)({
                     guild: T,
-                    isMember: C,
+                    isMember: A,
                     analyticsLocations: S,
                 }) === u.e.PROCEED
             ) {
@@ -52,9 +52,9 @@ function O(e) {
         };
     function P() {
         if ((0, c.n)(n)) return void (0, l.hk)(n);
-        (null == A ? void 0 : A.isGuildStageVoice())
-            ? (0, d.Cq)(A)
-            : (null == A ? void 0 : A.isGuildVoice()) && E.Z.joinVoiceEvent(A.guild_id, A.id);
+        (null == C ? void 0 : C.isGuildStageVoice())
+            ? (0, d.Cq)(C)
+            : (null == C ? void 0 : C.isGuildVoice()) && E.Z.joinVoiceEvent(C.guild_id, C.id);
     }
     return (
         i.useEffect(() => {
@@ -64,9 +64,9 @@ function O(e) {
         }, [O, n, null == I ? void 0 : I.id, v]),
         (0, r.jsx)(b.ZP, {
             guild: T,
-            channel: A,
+            channel: C,
             guildScheduledEvent: I,
-            isMember: C,
+            isMember: A,
             onAcceptInstantInvite: N,
             onTransitionToInviteChannel: P,
             recurrenceId: v,

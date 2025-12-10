@@ -2,7 +2,7 @@ n.d(t, {
     B_: () => P,
     MO: () => b,
     _M: () => y,
-    k5: () => C,
+    k5: () => A,
     q5: () => O,
 }),
     n(35282),
@@ -71,12 +71,12 @@ function T(e) {
     let t = l.Z.toURLSafe(e.url);
     return null != t && !!b(t) && S(t);
 }
-function A(e) {
+function C(e) {
     var t;
     return T(e.image) || (null == (t = e.images) ? void 0 : t.some(T)) || T(e.video);
 }
-function C(e) {
-    return e.attachments.some(I) || e.embeds.some(A);
+function A(e) {
+    return e.attachments.some(I) || e.embeds.some(C);
 }
 async function N(e) {
     let t = await o.tn.post({

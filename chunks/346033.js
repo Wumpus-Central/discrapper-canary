@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(784238),
     I = n(218390),
     T = n(823188),
-    A = n(135785),
-    C = n(498765),
+    C = n(135785),
+    A = n(498765),
     N = n(635921),
     P = n(177839),
     R = n(349803),
@@ -36,14 +36,14 @@ var r = n(54381),
     k = n(865215);
 let U = (e) => {
         let { inOfferExperience: t } = e;
-        return t ? (0, r.jsx)(C.Z, { lifted: t }) : null;
+        return t ? (0, r.jsx)(A.Z, { lifted: t }) : null;
     },
     G = () => {
         var e, t;
         (0, m.z)(_.X);
         let n = i.useRef(null),
             a = i.useRef(null),
-            C = i.useRef(null),
+            A = i.useRef(null),
             G = (0, d.ZP)(),
             Z = (0, c.wj)(G),
             [B, F] = i.useState(!1),
@@ -108,7 +108,7 @@ let U = (e) => {
             className: M.container,
             "data-cy": "tier-0-marketing-page",
             children: [
-                (0, r.jsx)(A.Z, {
+                (0, r.jsx)(C.Z, {
                     premiumSubscription: Q,
                     className: o()(M.existingSubscriberSpacing, { [M.zIndex1]: en }),
                 }),
@@ -157,7 +157,7 @@ let U = (e) => {
                     isEligibleForBogoPromotion: er,
                 }),
                 (0, r.jsx)(l.$, {
-                    innerRef: C,
+                    innerRef: A,
                     onChange: (e) => {
                         e &&
                             !Y &&
@@ -165,7 +165,7 @@ let U = (e) => {
                             W(!0));
                     },
                     children: (0, r.jsx)("div", {
-                        ref: C,
+                        ref: A,
                         className: M.bottomOfPageVisibilitySensor,
                     }),
                 }),

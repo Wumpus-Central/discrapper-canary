@@ -3,7 +3,7 @@ var i = n(54381),
     r = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(205120),
+    o = n(467721),
     s = n(91192),
     c = n(442837),
     u = n(481060),
@@ -37,8 +37,8 @@ var i = n(54381),
     k = n(73274),
     U = n(419388),
     V = n(406534),
-    B = n(981631),
-    F = n(388032),
+    F = n(981631),
+    B = n(388032),
     H = n(151227);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -169,7 +169,7 @@ let q = (0, o.animated)(u.eTT),
                     hasMoreAfter: g.hasMoreAfter,
                 }),
                 Q = (0, c.e7)([y.Z], () =>
-                    Z.Z.can(B.Plq.READ_MESSAGE_HISTORY, m) ? null : y.Z.getViewingRolesTimestamp(m.getGuildId()),
+                    Z.Z.can(F.Plq.READ_MESSAGE_HISTORY, m) ? null : y.Z.getViewingRolesTimestamp(m.getGuildId()),
                 ),
                 {
                     channelStreamMarkup: $,
@@ -195,7 +195,7 @@ let q = (0, o.animated)(u.eTT),
                         if (g.hasPresent()) {
                             var e;
                             null == (e = X.ref.current) || e.scrollToBottom({ animate: !f.Z.useReducedMotion });
-                        } else d.Z.jumpToPresent(m.id, B.AQB);
+                        } else d.Z.jumpToPresent(m.id, F.AQB);
                     },
                     jumpBarClassName: M,
                 });
@@ -213,15 +213,15 @@ let q = (0, o.animated)(u.eTT),
                         return null == (t = e.current) ? void 0 : t.scrollPageDown({ animate: !f.Z.useReducedMotion });
                     }, [e]);
                 (0, w.yp)({
-                    event: B.CkL.SCROLLTO_PRESENT,
+                    event: F.CkL.SCROLLTO_PRESENT,
                     handler: t,
                 }),
                     (0, w.yp)({
-                        event: B.CkL.SCROLL_PAGE_UP,
+                        event: F.CkL.SCROLL_PAGE_UP,
                         handler: n,
                     }),
                     (0, w.yp)({
-                        event: B.CkL.SCROLL_PAGE_DOWN,
+                        event: F.CkL.SCROLL_PAGE_DOWN,
                         handler: i,
                     });
             })(X.ref);
@@ -287,7 +287,7 @@ let q = (0, o.animated)(u.eTT),
                                                             className: a()(H.scrollerInner, {
                                                                 [H.scrollerAllowSticky]: m.isModeratorReportChannel(),
                                                             }),
-                                                            "aria-label": F.intl.formatToPlainString(F.t.XarRiL, {
+                                                            "aria-label": B.intl.formatToPlainString(B.t.XarRiL, {
                                                                 channelName: m.name,
                                                             }),
                                                         },
@@ -299,7 +299,7 @@ let q = (0, o.animated)(u.eTT),
                                                                 className: H.navigationDescription,
                                                                 id: "messagesNavigationDescription",
                                                                 "aria-hidden": !0,
-                                                                children: F.intl.string(F.t["Spb3s/"]),
+                                                                children: B.intl.string(B.t["Spb3s/"]),
                                                             }),
                                                             $,
                                                             (0, i.jsx)("div", {
@@ -359,7 +359,7 @@ let q = (0, o.animated)(u.eTT),
                     { canManageMessages: i, permissionVersion: r } = (0, c.cj)(
                         [Z.Z],
                         () => ({
-                            canManageMessages: Z.Z.can(B.Plq.MANAGE_MESSAGES, e),
+                            canManageMessages: Z.Z.can(F.Plq.MANAGE_MESSAGES, e),
                             permissionVersion: null != t ? Z.Z.getGuildVersion(t) : null,
                         }),
                         [e, t],
@@ -402,7 +402,7 @@ let q = (0, o.animated)(u.eTT),
             {
                 messages: U,
                 channelStream: V,
-                oldestUnreadMessageId: F,
+                oldestUnreadMessageId: B,
                 editingMessageId: H,
             } = (function (e) {
                 var t, n;
@@ -417,7 +417,7 @@ let q = (0, o.animated)(u.eTT),
                             (n =
                                 null == (t = A.default.getUser(E.default.getId()))
                                     ? void 0
-                                    : t.hasFlag(B.xW$.SPAMMER)) && n,
+                                    : t.hasFlag(F.xW$.SPAMMER)) && n,
                     s = (0, p.ts)(e),
                     u = (0, b.Z)("use_topic_dividers_in_chat"),
                     d = (0, c.Wu)([v.Z], () => {
@@ -475,7 +475,7 @@ let q = (0, o.animated)(u.eTT),
                         permissionVersion: h,
                         uploads: (0, c.e7)([N.Z], () => N.Z.getFiles(t.id), [t]),
                         unreadCount: (0, c.e7)([T.ZP], () => T.ZP.getUnreadCount(t.id), [t]),
-                        hasUnreads: null != F,
+                        hasUnreads: null != B,
                         canChat: y,
                         editingMessageId: H,
                         fontSize: j,

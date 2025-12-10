@@ -22,8 +22,8 @@ var r = n(664751),
     S = n(417363),
     I = n(626135),
     T = n(877481),
-    A = n(358085),
-    C = n(573261),
+    C = n(358085),
+    A = n(573261),
     N = n(278323),
     P = n(58642),
     R = n(254854),
@@ -290,7 +290,7 @@ let Z = {
         let e = O.Z.detectableGamesEtag;
         c.Z.wait(() => {
             c.Z.dispatch({ type: "GAMES_DATABASE_FETCH" }),
-                C.Z.get({
+                A.Z.get({
                     url: D.ANM.GAMES_DETECTABLE,
                     headers: { "If-None-Match": e },
                     retries: 1,
@@ -409,7 +409,7 @@ let Z = {
                         url: D.ANM.UNVERIFIED_APPLICATIONS,
                         body: {
                             name: t,
-                            os: (0, A.getPlatformName)(),
+                            os: (0, C.getPlatformName)(),
                             icon: n,
                             distributor_application: k(i, a),
                             executable: l,
@@ -484,7 +484,7 @@ let Z = {
             remotePartyId: f,
         });
         try {
-            let e = (0, A.platformPrefersDeepLink)(),
+            let e = (0, C.platformPrefersDeepLink)(),
                 c = await N.Z.getJoinSecret(t, n, r, i, a);
             return (
                 null == f &&

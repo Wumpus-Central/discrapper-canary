@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(373826),
     I = n(262210),
     T = n(666984),
-    A = n(670451),
-    C = n(671955),
+    C = n(670451),
+    A = n(671955),
     N = n(704543);
 function P(e, t, n) {
     return (
@@ -170,7 +170,7 @@ function x(e) {
                 (0, r.jsx)(
                     v.Z,
                     w(R({ textId: L }, k), {
-                        contextMenu: (0, r.jsx)(A.Z, {
+                        contextMenu: (0, r.jsx)(C.Z, {
                             display: "live",
                             user: t,
                             activity: a,
@@ -186,7 +186,7 @@ function x(e) {
                         children: [
                             (0, r.jsx)(f.E, {
                                 image: G,
-                                size: j === C.l.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
+                                size: j === A.l.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
                                 className: N.clickableImage,
                                 onClick: (e) => {
                                     e.stopPropagation(), B({ action: "OPEN_SPOTIFY_ALBUM" }), (0, m.Z5)(a, t.id);
@@ -214,14 +214,14 @@ function x(e) {
                                         className: N.badges,
                                     }),
                                     H(),
-                                    j === C.l.MODAL_V2 && Y(),
+                                    j === A.l.MODAL_V2 && Y(),
                                 ],
                             }),
-                            j === C.l.MODAL && Y(),
+                            j === A.l.MODAL && Y(),
                         ],
                     }),
                 }),
-                j !== C.l.MODAL && j !== C.l.MODAL_V2 && Y(),
+                j !== A.l.MODAL && j !== A.l.MODAL_V2 && Y(),
             ],
         }),
     });

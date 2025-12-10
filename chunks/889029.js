@@ -91,7 +91,7 @@ function b() {
         T = (e, t) => {
             o.Z.update({ [e]: t });
         },
-        A = () => {
+        C = () => {
             (0, f.openUserSettings)(u.n.KEYBINDS_PANEL, { section: _.oAB.KEYBINDS });
         };
     return (0, r.jsx)(d.Z, {
@@ -110,7 +110,7 @@ function b() {
                         children: [
                             (0, r.jsx)(a.rsf, {
                                 label: m.intl.string(m.t.p9ZAJZ),
-                                description: m.intl.format(m.t.MLVL2M, { onClick: A }),
+                                description: m.intl.format(m.t.MLVL2M, { onClick: C }),
                                 checked: e,
                                 onChange: (e) => T("enabled", e),
                             }),

@@ -1,6 +1,6 @@
 n.d(t, {
     JO: () => v,
-    ZP: () => C,
+    ZP: () => A,
     iz: () => I,
 });
 var r = n(54381),
@@ -147,8 +147,8 @@ let y = 24,
                 tooltip: S = null,
                 tooltipColor: I,
                 tooltipPosition: T = "bottom",
-                tooltipAlign: A,
-                tooltipDisabled: C,
+                tooltipAlign: C,
+                tooltipDisabled: A,
                 tooltipSpacing: N,
                 hideOnClick: P = !0,
                 role: R,
@@ -184,9 +184,9 @@ let y = 24,
                 text: S,
                 color: I,
                 position: T,
-                align: A,
+                align: C,
                 hideOnClick: P,
-                shouldShow: !C,
+                shouldShow: !A,
                 spacing: N,
                 children: (e) => {
                     let { onMouseEnter: g, onMouseLeave: y, onFocus: S, onBlur: I } = e;
@@ -295,7 +295,7 @@ function T(e) {
               className: o()(p.caret, n),
           });
 }
-let A = (e) => {
+let C = (e) => {
     let {
             className: t,
             innerClassName: n,
@@ -356,5 +356,5 @@ let A = (e) => {
         }),
     });
 };
-(A.Icon = v), (A.ChannelIcon = S), (A.Title = O), (A.Divider = I), (A.Caret = T);
-let C = A;
+(C.Icon = v), (C.ChannelIcon = S), (C.Title = O), (C.Divider = I), (C.Caret = T);
+let A = C;

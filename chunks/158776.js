@@ -43,8 +43,8 @@ let y = Object.freeze([]),
     S = {},
     I = {},
     T = {},
-    A = {},
-    C = {};
+    C = {},
+    A = {};
 function N(e, t) {
     let n = O[e];
     return null != n ? n[t] : null;
@@ -121,7 +121,7 @@ function U(e, t) {
     };
 }
 function G(e) {
-    if ((delete v[e], k(e), delete T[e], delete A[e], null == O[e])) return;
+    if ((delete v[e], k(e), delete T[e], delete C[e], null == O[e])) return;
     let t = Object.values(O[e]),
         n = t.reduce((e, t) => {
             let n = t.processedAtTimestamp,
@@ -139,7 +139,7 @@ function G(e) {
                   return null != (t = e.hiddenActivities) ? t : [];
               }),
           )),
-          null != n.clientStatus && (A[e] = n.clientStatus))
+          null != n.clientStatus && (C[e] = n.clientStatus))
         : s().every(
                 O[e],
                 (e) => e.status === E.Skl.OFFLINE && (null == e.hiddenActivities || 0 === e.hiddenActivities.length),
@@ -175,7 +175,7 @@ function B(e) {
         (v[e] = n.status),
             M(e, n.activities),
             (T[e] = null != (r = n.hiddenActivities) ? r : []),
-            null != n.clientStatus && (A[e] = n.clientStatus);
+            null != n.clientStatus && (C[e] = n.clientStatus);
     }
 }
 function F(e) {
@@ -216,7 +216,7 @@ function F(e) {
                 processedAtTimestamp: l,
             });
     }
-    return delete C[n], G(n), !0;
+    return delete A[n], G(n), !0;
 }
 function V(e) {
     let {
@@ -271,12 +271,12 @@ function K(e) {
     let { guilds: t, presences: n } = e,
         r = h.default.getId();
     (O = {}),
-        (C = {}),
+        (A = {}),
         (v = { [r]: v[r] }),
         (S = { [r]: S[r] }),
         (I = { [r]: I[r] }),
         (T = { [r]: T[r] }),
-        (A = { [r]: {} });
+        (C = { [r]: {} });
     let i = new Set();
     t.forEach((e) => {
         e.presences.forEach((t) => {
@@ -330,7 +330,7 @@ function z(e) {
         (v = t.statuses),
         (S = t.activities),
         (T = t.hiddenActivities),
-        (C = t.activityMetadata);
+        (A = t.activityMetadata);
 }
 function q(e) {
     let { presences: t } = e;
@@ -438,11 +438,11 @@ function et(e) {
 function en(e) {
     let t = h.default.getId();
     if (v[t] === e.status && S[t] === e.activities && T[t] === e.hiddenActivities) return !1;
-    (v[t] = e.status), M(t, [...e.activities].sort(L)), (T[t] = [...e.hiddenActivities].sort(L)), delete C[t];
+    (v[t] = e.status), M(t, [...e.activities].sort(L)), (T[t] = [...e.hiddenActivities].sort(L)), delete A[t];
 }
 function er(e) {
     let { userId: t, metadata: n } = e;
-    return (C[t] = n), !1;
+    return (A[t] = n), !1;
 }
 class ei extends (r = l.ZP.Store) {
     initialize() {
@@ -517,17 +517,17 @@ class ei extends (r = l.ZP.Store) {
         return r && (i = i.concat(this.getHiddenActivities(e, n))), i.find(t);
     }
     getActivityMetadata(e) {
-        return C[e];
+        return A[e];
     }
     getUserIds() {
         return m.default.keys(S);
     }
     isMobileOnline(e) {
-        let t = A[e];
+        let t = C[e];
         return null != t && t[E.X5t.MOBILE] === E.Skl.ONLINE && t[E.X5t.DESKTOP] !== E.Skl.ONLINE;
     }
     getClientStatus(e) {
-        return A[e];
+        return C[e];
     }
     getState() {
         return {
@@ -536,8 +536,8 @@ class ei extends (r = l.ZP.Store) {
             activities: S,
             filteredActivities: I,
             hiddenActivities: T,
-            activityMetadata: C,
-            clientStatuses: A,
+            activityMetadata: A,
+            clientStatuses: C,
         };
     }
 }

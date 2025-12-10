@@ -81,11 +81,11 @@ let E = i.memo(function (e) {
             } = e,
             I = i.useMemo(() => g(p), [p]),
             T = i.useMemo(() => (0, l.Hg)(I), [I]),
-            A = i.useMemo(() => (null != _ ? (0, l.vc)(I, _) : a ? (0, l.vc)(I, "LT") : (0, l.Y4)(I, !0)), [I, _, a]),
-            C = i.useMemo(() => (a ? (0, u.Z)(A) : null), [a, A]),
+            C = i.useMemo(() => (null != _ ? (0, l.vc)(I, _) : a ? (0, l.vc)(I, "LT") : (0, l.Y4)(I, !0)), [I, _, a]),
+            A = i.useMemo(() => (a ? (0, u.Z)(C) : null), [a, C]),
             N = i.useMemo(() => (O ? d.intl.formatToPlainString(d.t.CDzOFd, { timeFormatted: T }) : T), [O, T]);
         return (0, r.jsx)("span", {
-            className: o()(n, C, {
+            className: o()(n, A, {
                 [f.timestamp]: !0,
                 [f.timestampVisibleOnHover]: m,
                 [f.timestampInline]: E,
@@ -100,7 +100,7 @@ let E = i.memo(function (e) {
                           position: S,
                           delay: 750,
                           children: (0, r.jsx)(b, {
-                              timeFormatted: A,
+                              timeFormatted: C,
                               timestamp: I,
                               id: y,
                               compact: a,
@@ -111,7 +111,7 @@ let E = i.memo(function (e) {
                           application: v,
                           compact: a,
                           children: (0, r.jsx)(b, {
-                              timeFormatted: A,
+                              timeFormatted: C,
                               timestamp: I,
                               id: y,
                               compact: a,

@@ -29,8 +29,8 @@ var r = n(392711),
     S = n(660020),
     I = n(980084),
     T = n(24688),
-    A = n(200997),
-    C = n(633302),
+    C = n(200997),
+    A = n(633302),
     N = n(134432),
     P = n(594174),
     R = n(768581),
@@ -42,7 +42,7 @@ let L = {
         end: 15,
     },
     j = [a],
-    M = [o, s, l, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, A],
+    M = [o, s, l, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, C],
     k = {
         [w.q.BASIC]: j,
         [w.q.PREMIUM]: M,
@@ -85,8 +85,8 @@ function Z(e) {
             size: t,
         });
     }
-    let r = C.ZP.convertSurrogateToName(e.name, !1),
-        i = C.ZP.getByName(r);
+    let r = A.ZP.convertSurrogateToName(e.name, !1),
+        i = A.ZP.getByName(r);
     return null != i ? D.ZP.getURL(i.surrogates) : "";
 }
 function B(e, t) {

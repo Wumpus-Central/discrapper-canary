@@ -38,17 +38,17 @@ function p(e, t, r, R, T = "auto.http.browser") {
             delete R[t]);
         return;
     }
-    let N = (0, _.nZ)(),
-        f = (0, _.s3)(),
+    let f = (0, _.nZ)(),
+        N = (0, _.s3)(),
         { method: O, url: h } = e.fetchData,
-        D = (function (e) {
+        S = (function (e) {
             try {
                 return new URL(e).href;
             } catch (e) {
                 return;
             }
         })(h),
-        S = D ? (0, n.en)(D).host : void 0,
+        D = S ? (0, n.en)(S).host : void 0,
         C = !!(0, E.HN)(),
         L =
             A && C
@@ -58,14 +58,14 @@ function p(e, t, r, R, T = "auto.http.browser") {
                           url: h,
                           type: "fetch",
                           "http.method": O,
-                          "http.url": D,
-                          "server.address": S,
+                          "http.url": S,
+                          "server.address": D,
                           [s.S3]: T,
                           [s.$J]: "http.client",
                       },
                   })
                 : new l.b();
-    if (((e.fetchData.__span = L.spanContext().spanId), (R[L.spanContext().spanId] = L), r(e.fetchData.url) && f)) {
+    if (((e.fetchData.__span = L.spanContext().spanId), (R[L.spanContext().spanId] = L), r(e.fetchData.url) && N)) {
         let t = e.args[0];
         e.args[1] = e.args[1] || {};
         let r = e.args[1];
@@ -108,7 +108,7 @@ function p(e, t, r, R, T = "auto.http.browser") {
                     }
                 );
             }
-        })(t, f, N, r, (0, c.z)() && C ? L : void 0);
+        })(t, N, f, r, (0, c.z)() && C ? L : void 0);
     }
     return L;
 }

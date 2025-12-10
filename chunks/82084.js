@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     o = n(473749),
     i = n(442837),
@@ -7,13 +7,13 @@ var r = n(54381),
     c = n(607070),
     s = n(451478),
     u = n(585483),
-    f = n(79808),
-    d = n(981631);
-function b(e) {
+    b = n(79808),
+    f = n(981631);
+function d(e) {
     var t,
         n,
         {
-            partialRoot: b,
+            partialRoot: d,
             target: y,
             defaultTarget: p,
             onPanelChange: g,
@@ -56,25 +56,25 @@ function b(e) {
         [P, C] = o.useState(1.4),
         _ = o.useRef(null),
         w = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
-        k = (0, i.e7)([s.Z], () => s.Z.isFocused());
+        T = (0, i.e7)([s.Z], () => s.Z.isFocused());
     return (
         o.useEffect(() => {
             let e = (e) => {
                 let { intensity: t, duration: n } = e;
                 !w &&
-                    k &&
+                    T &&
                     (S(!0),
                     C(null != t ? t : 1.4),
                     clearTimeout(_.current),
                     (_.current = setTimeout(() => S(!1), null != n ? n : 1000)));
             };
             return (
-                u.S.subscribe(d.CkL.SHAKE_SETTINGS_MODAL, e),
+                u.S.subscribe(f.CkL.SHAKE_SETTINGS_MODAL, e),
                 () => {
-                    u.S.unsubscribe(d.CkL.SHAKE_SETTINGS_MODAL, e), clearTimeout(_.current);
+                    u.S.unsubscribe(f.CkL.SHAKE_SETTINGS_MODAL, e), clearTimeout(_.current);
                 }
             );
-        }, [w, k]),
+        }, [w, T]),
         (0, r.jsx)(a.UkV, {
             isShaking: x,
             intensity: P,
@@ -107,9 +107,9 @@ function b(e) {
                 })({}, h)),
                 (n = n =
                     {
-                        children: (0, r.jsx)(f.Z, {
+                        children: (0, r.jsx)(b.Z, {
                             onClose: h.onClose,
-                            partialRoot: b,
+                            partialRoot: d,
                             target: y,
                             defaultTarget: p,
                             onPanelChange: g,

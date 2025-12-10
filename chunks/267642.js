@@ -16,7 +16,7 @@ n.d(t, {
     ee: () => z,
     gZ: () => B,
     ge: () => x,
-    ig: () => A,
+    ig: () => C,
     nL: () => H,
     nW: () => R,
     tb: () => j,
@@ -85,8 +85,8 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
         null != t && t.features.has(g.GuildFeatures.MORE_STICKERS) && e === g.Eu4.TIER_3
             ? a.D.MAX_STICKER_SLOTS
             : b.$8[e],
-    A = (e) => b.pH[e],
-    C = (e, t) => (null != t && t.features.has(g.GuildFeatures.MORE_SOUNDBOARD) ? b.w1 : b._k[e]),
+    C = (e) => b.pH[e],
+    A = (e, t) => (null != t && t.features.has(g.GuildFeatures.MORE_SOUNDBOARD) ? b.w1 : b._k[e]),
     N = (e) => {
         if (e === g.Eu4.NONE) return b._k[e];
         let t = v[v.indexOf(e) - 1];
@@ -107,7 +107,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                 },
                 {
                     title: y.intl.formatToPlainString(y.t["/9p2/g"], {
-                        adding: A(g.Eu4.TIER_1),
+                        adding: C(g.Eu4.TIER_1),
                         total: T(g.Eu4.TIER_1),
                     }),
                     description: y.intl.string(y.t.JfsnDQ),
@@ -116,7 +116,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                 {
                     title: y.intl.formatToPlainString(y.t.NRuk5m, {
                         soundCount: N(g.Eu4.TIER_1),
-                        totalSoundCount: C(g.Eu4.TIER_1),
+                        totalSoundCount: A(g.Eu4.TIER_1),
                     }),
                     description: y.intl.string(y.t.Oq7OVl),
                     icon: 13,
@@ -159,7 +159,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                 },
                 {
                     title: y.intl.formatToPlainString(y.t["/9p2/g"], {
-                        adding: A(g.Eu4.TIER_2),
+                        adding: C(g.Eu4.TIER_2),
                         total: T(g.Eu4.TIER_2),
                     }),
                     description: y.intl.string(y.t.t4TM28),
@@ -168,7 +168,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                 {
                     title: y.intl.formatToPlainString(y.t.NRuk5m, {
                         soundCount: N(g.Eu4.TIER_2),
-                        totalSoundCount: C(g.Eu4.TIER_2),
+                        totalSoundCount: A(g.Eu4.TIER_2),
                     }),
                     description: y.intl.string(y.t.pEYlPZ),
                     icon: 13,
@@ -225,7 +225,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                 },
                 {
                     title: y.intl.formatToPlainString(y.t["/9p2/g"], {
-                        adding: A(g.Eu4.TIER_3),
+                        adding: C(g.Eu4.TIER_3),
                         total: T(g.Eu4.TIER_3),
                     }),
                     description: y.intl.string(y.t["+ZI4QZ"]),
@@ -234,7 +234,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                 {
                     title: y.intl.formatToPlainString(y.t.NRuk5m, {
                         soundCount: N(g.Eu4.TIER_3),
-                        totalSoundCount: C(g.Eu4.TIER_3),
+                        totalSoundCount: A(g.Eu4.TIER_3),
                     }),
                     description: y.intl.string(y.t["8omJSY"]),
                     icon: 13,
@@ -410,7 +410,7 @@ function B(e, t) {
     return null;
 }
 function F(e, t) {
-    let n = A(t),
+    let n = C(t),
         r = v.indexOf(t);
     if (-1 === r) return 0;
     let i = v[r - 1],

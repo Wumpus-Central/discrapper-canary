@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(442837),
     c = n(481060),
     u = n(26151),
@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(898531),
     I = n(923973),
     T = n(189771),
-    A = n(560688),
-    C = n(88479),
+    C = n(560688),
+    A = n(88479),
     N = n(136995),
     P = n(25827),
     R = n(163612),
@@ -154,7 +154,7 @@ function es(e) {
     return (0, r.jsxs)("div", {
         className: o()(q.wrapper, q.actions),
         children: [
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(A.Z, {
                 iconComponent: c.Dio,
                 label: K.intl.string(K.t.WAI6xu),
                 className: q.actionButton,
@@ -201,7 +201,7 @@ function es(e) {
                             channel: n,
                             onPopoutClick: g ? i : null,
                             popoutOpen: a,
-                            onCameraUnavailable: A.Z,
+                            onCameraUnavailable: C.Z,
                             onChange: () => {
                                 var e;
                                 (0, B.v)(s, B.d.JOIN_VIDEO_CALL),
@@ -256,9 +256,9 @@ function el(e) {
                   })
                 : null,
         T = null != (t = (0, g.x)(m, ea, !0)) ? t : I,
-        A = (0, E.ZP)(m),
-        [C, N] = (0, l.Wu)([x.Z], () => [x.Z.supports(W.AN.VIDEO), Object.keys(x.Z.getVideoDevices()).length]),
-        P = null != S ? "".concat(A, ", ").concat(S.name) : A,
+        C = (0, E.ZP)(m),
+        [A, N] = (0, l.Wu)([x.Z], () => [x.Z.supports(W.AN.VIDEO), Object.keys(x.Z.getVideoDevices()).length]),
+        P = null != S ? "".concat(C, ", ").concat(S.name) : C,
         L = (0, l.e7)([j.Z], () => j.Z.isFocused()),
         M = (0, l.e7)([U.Z], () => U.Z.getMode(m.id)),
         Z = i.useCallback((e) => {
@@ -277,7 +277,7 @@ function el(e) {
         };
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [m]);
-    let F = M === H.WtW.VIDEO && C && N > 0,
+    let F = M === H.WtW.VIDEO && A && N > 0,
         { enabled: V } = R.Z.useExperiment({
             guildId: null == m ? void 0 : m.guild_id,
             location: "IncomingCallModal",

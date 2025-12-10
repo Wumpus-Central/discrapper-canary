@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(388032),
     I = n(417788),
     T = n(763645),
-    A = n(868981),
-    C = n(918746);
+    C = n(868981),
+    A = n(918746);
 function N() {
     let e = (0, i.useContext)(f.Q),
         t = (0, c.dQu)(e.primaryColor).hex(),
@@ -44,8 +44,8 @@ function N() {
             (0, r.jsx)(_.Z, {
                 className: T.video,
                 slide: y.yD.QUESTS,
-                videoEntrySrc: A.Z,
-                videoLoopSrc: C.Z,
+                videoEntrySrc: C.Z,
+                videoLoopSrc: A.Z,
             }),
             (0, r.jsxs)("div", {
                 children: [

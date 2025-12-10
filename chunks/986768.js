@@ -8,7 +8,7 @@ var s = n(238679),
     o = n(981631),
     c = n(701488);
 function u(e, t, n) {
-    var u, d, p, f, h, g;
+    var u, d, p, f, g, h;
     switch (t) {
         case o.zMe.ACTIVITY_PIP_MODE_UPDATE: {
             let t = null == (u = e.application) ? void 0 : u.id,
@@ -38,7 +38,7 @@ function u(e, t, n) {
             return {
                 quest_id: t,
                 is_enrolled: (null == (f = r.userStatus) ? void 0 : f.enrolledAt) != null,
-                enrolled_at: null != (g = null == (h = r.userStatus) ? void 0 : h.enrolledAt) ? g : null,
+                enrolled_at: null != (h = null == (g = r.userStatus) ? void 0 : g.enrolledAt) ? h : null,
             };
         }
         default:

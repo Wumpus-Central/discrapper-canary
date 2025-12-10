@@ -72,12 +72,12 @@ function S(e) {
         S = (0, a.e7)([s.Z], () => s.Z.theme),
         I = (0, a.e7)([l.Z], () => l.Z.getGuildId()),
         T = S === h.BRd.LIGHT ? "light" : "dark",
-        A = (0, r.jsx)("img", {
+        C = (0, r.jsx)("img", {
             className: E.art,
             alt: "File Upload Nitro Perk",
             src: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_".concat(T, "_v2.png"),
         }),
-        C = i.useMemo(() => {
+        A = i.useMemo(() => {
             let e = p.ZP.getUserMaxFileSize(v);
             return (0, u.BU)(e / 1024, { useKibibytes: !0 });
         }, [v]),
@@ -98,13 +98,13 @@ function S(e) {
         _.Z,
         y(
             {
-                artElement: A,
+                artElement: C,
                 artContainerClassName: E.artContainer,
                 enableArtBoxShadow: !1,
                 type: m.cd.UPLOAD_ERROR_UPSELL,
                 title: g.intl.string(g.t["9C+41g"]),
                 body: P,
-                context: g.intl.formatToPlainString(g.t.q5fTZp, { maxSize: C }),
+                context: g.intl.formatToPlainString(g.t.q5fTZp, { maxSize: A }),
                 glowUp: N,
                 analyticsLocation: { section: h.jXE.FILE_UPLOAD_POPOUT },
                 onClose: t,

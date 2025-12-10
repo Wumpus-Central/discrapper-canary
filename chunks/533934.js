@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(873546),
     p = n(442837),
     f = n(433517),
-    h = n(481060),
-    g = n(904245),
+    g = n(481060),
+    h = n(904245),
     m = n(409292),
     _ = n(697309),
     b = n(425369),
@@ -64,8 +64,8 @@ var r = n(54381),
     ed = n(862657),
     ep = n(121711),
     ef = n(982168),
-    eh = n(893908),
-    eg = n(905423),
+    eg = n(893908),
+    eh = n(905423),
     em = n(304445),
     e_ = n(893607),
     eb = n(703656),
@@ -120,7 +120,7 @@ let eU = (0, u.Un)({
     eG = () =>
         (0, r.jsx)("div", {
             className: eM.loader,
-            children: (0, r.jsx)(h.$jN, {}),
+            children: (0, r.jsx)(g.$jN, {}),
         }),
     eB = (0, u.Un)({
         createPromise: () => n.e("78431").then(n.bind(n, 650788)),
@@ -199,10 +199,10 @@ let eU = (0, u.Un)({
             { guildId: s, channelId: c, messageId: u, threadId: d } = i.params,
             f = null != c ? c : void 0;
         null == f && null != i.params.gameShopPageIndex && (f = ew.oC.GAME_SHOP);
-        let h = (0, p.e7)([eC.Z], () => eC.Z.getGuild(s)),
-            g = (0, p.e7)([eI.ZP], () => (null == s ? null : eI.ZP.getSelfMember(s))),
+        let g = (0, p.e7)([eC.Z], () => eC.Z.getGuild(s)),
+            h = (0, p.e7)([eI.ZP], () => (null == s ? null : eI.ZP.getSelfMember(s))),
             _ = (0, ec.BU)(s, "ChannelRenderer"),
-            b = (null == h || null == (t = h.features) ? void 0 : t.has(eZ.GuildFeatures.GAME_SERVERS)) === !0,
+            b = (null == g || null == (t = g.features) ? void 0 : t.has(eZ.GuildFeatures.GAME_SERVERS)) === !0,
             E = (0, p.e7)([K.Z], () => {
                 if (null == s) return;
                 let e = K.Z.getData(s);
@@ -216,7 +216,7 @@ let eU = (0, u.Un)({
                             return;
                     }
             });
-        ((0, ef.WF)(f) && (0, ef.WF)(d)) || (null != h && (0, eb.uL)(eZ.Z5c.CHANNEL(h.id, (0, eh.Z)(h))), (0, J.V)());
+        ((0, ef.WF)(f) && (0, ef.WF)(d)) || (null != g && (0, eb.uL)(eZ.Z5c.CHANNEL(g.id, (0, eg.Z)(g))), (0, J.V)());
         let O = (0, w.C4)(s, "channel_renderer");
         if (null != s && null != f && (0, ew.AB)(f))
             switch (f) {
@@ -268,7 +268,7 @@ let eU = (0, u.Un)({
                 default:
                     (0, eP.vE)(f);
             }
-        if ((0, H.p3)(h, g))
+        if ((0, H.p3)(g, h))
             return (0, r.jsx)(V.Z, {
                 guildId: s,
                 channelId: f,
@@ -287,7 +287,7 @@ let eU = (0, u.Un)({
         return (0, r.jsx)(P.Z, {});
     },
     eJ = i.memo(function () {
-        let { guildId: e, channelId: t } = (0, eg.Z)(),
+        let { guildId: e, channelId: t } = (0, eh.Z)(),
             { notificationCenterVariant: n } = (0, en.pN)({ location: "Sidebar" }),
             i = (0, p.e7)([eS.Z], () => (null != t ? t : eS.Z.getChannelId(e)));
         if (window.location.pathname.startsWith(eZ.Z5c.CHANNEL(eZ.STv)))
@@ -321,7 +321,7 @@ let eU = (0, u.Un)({
         return (i.useEffect(() => {
             null != t &&
                 null != n &&
-                g.Z.jumpToMessage({
+                h.Z.jumpToMessage({
                     channelId: t,
                     messageId: n,
                     flash: !0,
@@ -417,15 +417,15 @@ function ta(e) {
     let c = "app view user trigger debugging";
     v.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), v.R6.trackExposure({ location: c });
     let u = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
-        g = (0, R.T)("ChannelSidebar"),
-        m = (0, Z.useAppSidebarState)((e) => !e.isOpen) && g;
+        h = (0, R.T)("ChannelSidebar"),
+        m = (0, Z.useAppSidebarState)((e) => !e.isOpen) && h;
     i.useLayoutEffect(() => {
-        if (g) {
+        if (h) {
             var e;
             let t = parseInt(null != (e = f.K.get(_.nT)) ? e : "");
             Number.isNaN(t) && (t = _.qO),
                 (t = Math.min(Math.max(t, _.li), _.zx)),
-                !g && t <= _.p8 && (t = _.qO),
+                !h && t <= _.p8 && (t = _.qO),
                 tl(t);
             let n = (e) => {
                 e.metaKey && "b" === e.key && Z.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
@@ -437,7 +437,7 @@ function ta(e) {
                 }
             );
         }
-    }, [g]),
+    }, [h]),
         i.useLayoutEffect(() => {
             if (m) tl(_.p8);
             else {
@@ -461,9 +461,9 @@ function ta(e) {
                 let i = t - e;
                 null == (n = b.current) ||
                     n.style.setProperty("--custom-overdrag", "".concat(1 + Math.min(Math.abs(i / _.p8), 0.25))),
-                    g && (Z.useAppSidebarState.setState({ isOpen: !r }), r && tl(_.p8));
+                    h && (Z.useAppSidebarState.setState({ isOpen: !r }), r && tl(_.p8));
             },
-            [g],
+            [h],
         ),
         O = i.useCallback(() => {
             document.body.classList.add(eM.dragging);
@@ -499,7 +499,7 @@ function ta(e) {
     )
         return null;
     let N = { className: a()(eM.sidebarList, { [eM.sidebarListRounded]: !t }) };
-    return (0, r.jsx)(h.f6W, {
+    return (0, r.jsx)(g.f6W, {
         theme: n,
         children: (e) => {
             var t, i;
@@ -538,7 +538,7 @@ function ta(e) {
                                           }),
                                     t),
                                 ),
-                                (0, r.jsx)(h.P3F, {
+                                (0, r.jsx)(g.P3F, {
                                     onClick: T,
                                     "aria-label": "Resize Sidebar",
                                     className: eM.sidebarResizeHandle,
@@ -581,15 +581,15 @@ function ts() {
         s = (0, p.e7)([ee.Z], () => ee.Z.getIsOpen()),
         { notificationCenterVariant: u } = (0, en.pN)({ location: "Sidebar" }),
         f = ea.o.useConfig({ location: "AppView" }).trackFirstPages,
-        h = (0, o.TH)();
+        g = (0, o.TH)();
     i.useEffect(() => {
-        f && eE.Z.trackPageView(h.pathname);
-    }, [f, h.pathname]);
-    let g = (0, o.$B)([
+        f && eE.Z.trackPageView(g.pathname);
+    }, [f, g.pathname]);
+    let h = (0, o.$B)([
             eZ.Z5c.CHANNEL(eZ.ME, e_.Hw.channelId()),
             eZ.Z5c.CHANNEL(e_.Hw.guildId(), e_.Hw.channelId({ optional: !0 }), ":messageId?"),
         ]),
-        m = (null == g || null == (e = g.params) ? void 0 : e.channelId) === ew.oC.GUILD_ONBOARDING,
+        m = (null == h || null == (e = h.params) ? void 0 : e.channelId) === ew.oC.GUILD_ONBOARDING,
         _ = i.useCallback(() => $.Z.openSidebar(), []),
         b = (0, R.T)("AppView"),
         E = (0, Z.useAppSidebarState)((e) => !e.isOpen),
@@ -598,7 +598,7 @@ function ts() {
     return (0, r.jsx)("div", {
         className: eM.container,
         children: (0, r.jsx)(G.Z.Provider, {
-            value: (null == g ? void 0 : g.params.guildId) === eZ.ME || null == g ? void 0 : g.params.guildId,
+            value: (null == h ? void 0 : h.params.guildId) === eZ.ME || null == h ? void 0 : h.params.guildId,
             children: (0, r.jsxs)("div", {
                 className: eM.base,
                 "data-fullscreen": O,

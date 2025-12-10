@@ -64,9 +64,9 @@ function O(e) {
             };
         }),
         T = (0, d.E)("UserProfileActivityCardWrapper", I),
-        A = (null == b ? void 0 : b.type) === E.IIU.HANG_STATUS && T ? I : null;
+        C = (null == b ? void 0 : b.type) === E.IIU.HANG_STATUS && T ? I : null;
     (0, c.q)(null == b ? void 0 : b.application_id);
-    let C = (0, a.e7)([l.Z], () =>
+    let A = (0, a.e7)([l.Z], () =>
         (null == b ? void 0 : b.application_id) != null
             ? l.Z.getApplication(b.application_id)
             : (null == b ? void 0 : b.name) != null
@@ -83,10 +83,10 @@ function O(e) {
                         source: "UserProfilePopout",
                         other_user_id: t.id,
                     },
-                    (0, u.Z)(null == A ? void 0 : A.id),
+                    (0, u.Z)(null == C ? void 0 : C.id),
                 ),
             );
-    }, [null == b ? void 0 : b.type, T, null == A ? void 0 : A.id, t.id]),
+    }, [null == b ? void 0 : b.type, T, null == C ? void 0 : C.id, t.id]),
     (null == b ? void 0 : b.type) !== E.IIU.CUSTOM_STATUS && ((null == b ? void 0 : b.type) !== E.IIU.HANG_STATUS || T))
         ? (0, s.Z)(b)
             ? (0, r.jsx)(g.Z, {
@@ -100,7 +100,7 @@ function O(e) {
                   user: t,
                   currentUser: n,
                   activity: b,
-                  application: C,
+                  application: A,
                   voiceGuild: S,
                   voiceChannel: I,
                   className: O,

@@ -30,8 +30,8 @@ async function O(e) {
             sectionName: S,
             source: I,
             inviterUserId: T,
-            customId: A,
-            referrerId: C,
+            customId: C,
+            referrerId: A,
         } = e,
         N = (0, m.Z)(),
         P = i.Z.getChannel(l),
@@ -89,8 +89,8 @@ async function O(e) {
             sectionName: S,
             source: I,
             inviterUserId: T,
-            customId: A,
-            referrerId: C,
+            customId: C,
+            referrerId: A,
         })
     );
 }

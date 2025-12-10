@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => A });
 var r = n(54381);
 n(473749);
 var i = n(620662),
@@ -23,62 +23,62 @@ var i = n(620662),
     S = n(715547),
     I = n(994102),
     T = n(981631),
-    A = n(671955);
-function C(e) {
+    C = n(671955);
+function A(e) {
     var t;
-    let { user: n, activity: C, onAction: N, onClose: P, application: R } = e,
+    let { user: n, activity: A, onAction: N, onClose: P, application: R } = e,
         { themeType: D } = (0, h.z)(),
         w = (0, c.q)(R),
-        x = (0, f.L)(null != (t = null == C ? void 0 : C.application_id) ? t : null == R ? void 0 : R.id),
+        x = (0, f.L)(null != (t = null == A ? void 0 : A.application_id) ? t : null == R ? void 0 : R.id),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.USER_PROFILE_ACTIVITY_BUTTONS),
-        j = D === A.l.MODAL || D === A.l.MODAL_V2;
+        j = D === C.l.MODAL || D === C.l.MODAL_V2;
     return x || !w || null == R || j
-        ? (0, s.Z)(C)
+        ? (0, s.Z)(A)
             ? (0, r.jsx)(O.Z, {
                   platformType: T.ABu.XBOX,
                   icon: () => (0, r.jsx)(m.Z, {}),
                   onAction: N,
               })
-            : (0, o.Z)(C)
+            : (0, o.Z)(A)
               ? (0, r.jsx)(O.Z, {
                     platformType: T.ABu.PLAYSTATION,
                     icon: () => (0, r.jsx)(_.Z, {}),
                     onAction: N,
                 })
-              : (0, l.Z)(C)
+              : (0, l.Z)(A)
                 ? (0, r.jsx)(S.Z, {
-                      activity: C,
+                      activity: A,
                       onAction: N,
                   })
-                : (0, i.Z)(C, T.xjy.JOIN) || (0, a.Z)(C)
+                : (0, i.Z)(A, T.xjy.JOIN) || (0, a.Z)(A)
                   ? (0, r.jsx)(b.Z, {
                         user: n,
-                        activity: C,
+                        activity: A,
                         onAction: N,
                         onClose: P,
                     })
-                  : (null == C ? void 0 : C.type) === T.IIU.HANG_STATUS
+                  : (null == A ? void 0 : A.type) === T.IIU.HANG_STATUS
                     ? (0, r.jsx)(E.Z, {
                           user: n,
-                          activity: C,
+                          activity: A,
                           onAction: N,
                           onClose: P,
                       })
-                    : (null == C ? void 0 : C.buttons) != null && (null == C ? void 0 : C.buttons.length) >= 1
+                    : (null == A ? void 0 : A.buttons) != null && (null == A ? void 0 : A.buttons.length) >= 1
                       ? (0, r.jsx)(g.Z, {
                             user: n,
-                            activity: C,
+                            activity: A,
                             onAction: N,
                         })
-                      : (0, i.Z)(C, T.xjy.INSTANCE)
+                      : (0, i.Z)(A, T.xjy.INSTANCE)
                         ? (0, r.jsx)(y.Z, {
                               user: n,
-                              activity: C,
+                              activity: A,
                               onAction: N,
                           })
-                        : (0, p.dS)(C)
+                        : (0, p.dS)(A)
                           ? (0, r.jsx)(v.Z, {
-                                activity: C,
+                                activity: A,
                                 onAction: N,
                                 onClose: P,
                             })

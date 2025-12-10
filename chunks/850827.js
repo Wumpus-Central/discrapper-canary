@@ -23,8 +23,8 @@ var i = n(120356),
     S = n(276149),
     I = n(636245),
     T = n(697761),
-    A = n(611459),
-    C = n(544671),
+    C = n(611459),
+    A = n(544671),
     N = n(757182),
     P = n(910424),
     R = n(981631),
@@ -71,7 +71,7 @@ let w = (0, u.Z)((e) => {
                     icon: c.Tsp,
                 });
             if (Z) {
-                let e = (0, r.jsx)(C.Z, {
+                let e = (0, r.jsx)(A.Z, {
                         activity: t,
                         user: i,
                         guildId: w,
@@ -79,7 +79,7 @@ let w = (0, u.Z)((e) => {
                         source: L,
                         onAction: k,
                     }),
-                    n = (0, r.jsx)(A.Z, {
+                    n = (0, r.jsx)(C.Z, {
                         activity: t,
                         user: i,
                         source: L,

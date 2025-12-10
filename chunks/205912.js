@@ -98,7 +98,7 @@ function I(e) {
             hourCycle: I,
             hideTimeZone: T = !1,
         } = e,
-        A = v(e, [
+        C = v(e, [
             "value",
             "onChange",
             "minValue",
@@ -108,8 +108,8 @@ function I(e) {
             "hourCycle",
             "hideTimeZone",
         ]);
-    let { i18n: C } = (0, h.ZF)(),
-        { fieldProps: N } = (0, p.X)(A),
+    let { i18n: A } = (0, h.ZF)(),
+        { fieldProps: N } = (0, p.X)(C),
         { disabled: P, errorMessage: R, required: D = !1 } = N,
         w = { hasError: null != R && "" !== R },
         {
@@ -186,7 +186,7 @@ function I(e) {
                                             (0, r.jsx)(c.z, {
                                                 className: g.calendarButton,
                                                 onClick: () => M(!j),
-                                                "aria-label": C.DATE_INPUT_OPEN_CALENDAR_LABEL,
+                                                "aria-label": A.DATE_INPUT_OPEN_CALENDAR_LABEL,
                                                 children: (0, r.jsx)(_.Que, {
                                                     size: "sm",
                                                     color: "currentColor",

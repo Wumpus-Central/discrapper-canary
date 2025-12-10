@@ -1,16 +1,16 @@
 n.d(t, {
     ID: () => S,
-    NM: () => A,
+    NM: () => C,
     Xi: () => T,
     ZP: () => R,
-    bT: () => C,
+    bT: () => A,
 });
 var r,
     i = n(54381),
     a = n(473749),
     o = n(120356),
     s = n.n(o),
-    l = n(205120),
+    l = n(467721),
     c = n(608863),
     u = n(873546),
     d = n(215569),
@@ -121,7 +121,7 @@ class T extends (r = a.PureComponent) {
         });
     }
 }
-function A(e) {
+function C(e) {
     let { children: t } = e;
     return (0, i.jsx)("div", {
         className: h.customColumn,
@@ -138,7 +138,7 @@ g(T, "defaultProps", {
     paddingTop: 60,
     paddingBottom: 60,
 });
-var C = (function (e) {
+var A = (function (e) {
     return (
         (e.MINIMAL = "minimal"),
         (e.CUSTOM = "custom"),
@@ -198,7 +198,7 @@ let R = function (e) {
         v = a.useRef(null),
         S = a.useRef(null),
         T = (0, p.Z)(o),
-        A = (0, f.Yzy)(
+        C = (0, f.Yzy)(
             O,
             {
                 from: {
@@ -211,7 +211,7 @@ let R = function (e) {
             },
             "animate-always",
         ),
-        C = a.useCallback(
+        A = a.useCallback(
             (e) => {
                 (v.current = e), null != E && (E.current = e);
             },
@@ -262,7 +262,7 @@ let R = function (e) {
                             h.contentRegionScroller,
                             O ? h.contentRegionHiddenSidebar : h.contentRegionShownSidebar,
                         ),
-                        ref: C,
+                        ref: A,
                         children: [
                             (0, i.jsx)(I.Provider, {
                                 value: v.current,
@@ -295,7 +295,7 @@ let R = function (e) {
                                 h.contentRegionScroller,
                                 O ? h.contentRegionHiddenSidebar : h.contentRegionShownSidebar,
                             ),
-                            ref: C,
+                            ref: A,
                             children: [
                                 (0, i.jsx)(I.Provider, {
                                     value: v.current,
@@ -351,7 +351,7 @@ let R = function (e) {
               });
     }
     return (0, i.jsx)(i.Fragment, {
-        children: A((e, t) =>
+        children: C((e, t) =>
             (0, i.jsxs)(l.animated.div, {
                 style: e,
                 className: h.standardSidebarView,

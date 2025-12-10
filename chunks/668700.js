@@ -25,8 +25,8 @@ var i = n(442837),
     v = n(704543);
 let S = 3;
 function I(e) {
-    let { user: t, guild: n, channel: I, onAction: T, onClose: A } = e,
-        { themeType: C } = (0, g.z)(),
+    let { user: t, guild: n, channel: I, onAction: T, onClose: C } = e,
+        { themeType: A } = (0, g.z)(),
         N = (0, m.Z)(I),
         P = (0, u.ZP)(I),
         { canViewChannel: R, canConnect: D } = (0, i.cj)([_.Z], () => ({
@@ -36,7 +36,7 @@ function I(e) {
     if (!R) return null;
     let w = () => {
             let e = (e) => {
-                e.stopPropagation(), (0, p.X)(n.id), null == T || T({ action: "OPEN_VOICE_GUILD" }), null == A || A();
+                e.stopPropagation(), (0, p.X)(n.id), null == T || T({ action: "OPEN_VOICE_GUILD" }), null == C || C();
             };
             return (0, r.jsx)(s.u, {
                 asContainer: !0,
@@ -63,7 +63,7 @@ function I(e) {
                     c.default.selectVoiceChannel(I.id),
                     (0, f.Kh)(I.id),
                     null == T || T({ action: "OPEN_VOICE_CHANNEL" }),
-                    null == A || A();
+                    null == C || C();
             };
             return (0, r.jsx)(l.P3F, {
                 onClick: e,
@@ -76,7 +76,7 @@ function I(e) {
                 }),
             });
         },
-        L = C !== y.l.MODAL && C !== y.l.MODAL_V2 && C !== y.l.SIDEBAR;
+        L = A !== y.l.MODAL && A !== y.l.MODAL_V2 && A !== y.l.SIDEBAR;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(h.Z, { className: v.voiceChannelDivider }),

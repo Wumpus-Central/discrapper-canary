@@ -1,5 +1,5 @@
 n.d(t, {
-    FE: () => A,
+    FE: () => C,
     G5: () => v,
     IW: () => S,
     yF: () => _,
@@ -112,7 +112,7 @@ function I(e) {
     });
 }
 let T = (0, c.createContext)(null);
-function A(e) {
+function C(e) {
     let t = (0, c.useContext)(T),
         n = ((null == t ? void 0 : t.dependencies) || []).concat(e.dependencies),
         r = e.idScope || (null == t ? void 0 : t.idScope),
@@ -122,7 +122,7 @@ function A(e) {
             dependencies: n,
         });
     return (
-        (0, c.useContext)(p) && (i = c.createElement(C, null, i)),
+        (0, c.useContext)(p) && (i = c.createElement(A, null, i)),
         (t = (0, c.useMemo)(
             () => ({
                 dependencies: n,
@@ -133,7 +133,7 @@ function A(e) {
         c.createElement(T.Provider, { value: t }, i)
     );
 }
-function C({ children: e }) {
+function A({ children: e }) {
     let t = (0, c.useContext)(p),
         n = (0, c.useMemo)(
             () => c.createElement(p.Provider, { value: null }, c.createElement(f.Provider, { value: !0 }, e)),

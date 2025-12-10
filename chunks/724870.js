@@ -86,8 +86,8 @@ function v(e) {
             reviewWarningMessage: S,
             applicationId: I,
             showBenefitsFirst: T,
-            onComplete: A,
-            forcesTransitionToGuild: C,
+            onComplete: C,
+            forcesTransitionToGuild: A,
         } = e,
         N = (0, o.Z)(),
         P = !1;
@@ -124,9 +124,9 @@ function v(e) {
                                     applicationId: I,
                                     guildId: null != v ? v : void 0,
                                     onComplete: () => {
-                                        (P = !0), null == A || A();
+                                        (P = !0), null == C || C();
                                     },
-                                    forcesTransitionToGuild: C,
+                                    forcesTransitionToGuild: A,
                                 }),
                             ),
                         }),

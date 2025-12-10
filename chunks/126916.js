@@ -75,13 +75,13 @@ function b(e) {
         O = (0, d.l6)(n),
         [v, S] = i.useState(O.blockId),
         [I, T] = i.useState(O.pageIndex),
-        [A, C] = i.useState(!1),
+        [C, A] = i.useState(!1),
         N = (e, n) => {
             g(t, e, n);
         },
         P = i.useCallback(
             () => (
-                A
+                C
                     ? o()
                     : (0, s.h7j)((e) =>
                           (0, r.jsx)(
@@ -118,7 +118,7 @@ function b(e) {
                       ),
                 Promise.resolve()
             ),
-            [o, A],
+            [o, C],
         ),
         R = i.useMemo(
             () =>
@@ -138,7 +138,7 @@ function b(e) {
                 pageIndex: I,
                 responses: y,
             });
-            b(t, R), e.isComplete && l.ZP.submitSurveyResponse(t, y), S(e.blockId), T(e.pageIndex), C(e.isComplete);
+            b(t, R), e.isComplete && l.ZP.submitSurveyResponse(t, y), S(e.blockId), T(e.pageIndex), A(e.isComplete);
         }, [n, v, I, y, t, R, b]);
     i.useEffect(() => {
         0 === R.length && D();
@@ -165,7 +165,7 @@ function b(e) {
                       }),
                   }),
         x = i.useMemo(() => {
-            if (A) return !1;
+            if (C) return !1;
             for (let r of R) {
                 var e, t;
                 let i = n.Questions[r];
@@ -178,8 +178,8 @@ function b(e) {
                 }
             }
             return !0;
-        }, [A, R, n, y]);
-    return A
+        }, [C, R, n, y]);
+    return C
         ? (0, r.jsxs)(a.Modal, {
               transitionState: u,
               onClose: o,

@@ -1,5 +1,5 @@
 n.d(t, {
-    DT: () => C,
+    DT: () => A,
     Ef: () => D,
     HO: () => R,
     NZ: () => w,
@@ -8,7 +8,7 @@ n.d(t, {
     RK: () => T,
     _0: () => I,
     hz: () => N,
-    yi: () => A,
+    yi: () => C,
 });
 var r = n(512722),
     i = n.n(r),
@@ -118,7 +118,7 @@ function T(e, t) {
         })
     );
 }
-function A(e) {
+function C(e) {
     let t = null == e ? void 0 : e.getGuildId();
     return (
         i()(null != t, "This channel cannot be guildless."),
@@ -134,7 +134,7 @@ function A(e) {
         })
     );
 }
-function C(e, t, n) {
+function A(e, t, n) {
     let r = e.getGuildId();
     return (
         i()(null != r, "This channel cannot be guildless."),
@@ -160,7 +160,7 @@ function N(e, t) {
     let n = t.getGuildId();
     return (
         i()(null != n, "This channel cannot be guildless."),
-        C(t, e.id, !0),
+        A(t, e.id, !0),
         o.tn.patch({
             url: b.ANM.UPDATE_VOICE_STATE(n, e.id),
             body: {

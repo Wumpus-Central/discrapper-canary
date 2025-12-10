@@ -30,8 +30,8 @@ var r = n(54381),
     S = n(231053),
     I = n(944386),
     T = n(565138),
-    A = n(372769),
-    C = n(889564),
+    C = n(372769),
+    A = n(889564),
     N = n(687476),
     P = n(761966),
     R = n(98278),
@@ -258,7 +258,7 @@ let J = 32,
                         (0, r.jsxs)(b.Z, {
                             align: b.Z.Align.CENTER,
                             children: [
-                                (0, r.jsx)(A.Z, {
+                                (0, r.jsx)(C.Z, {
                                     guild: t,
                                     className: K.guildBadge,
                                 }),
@@ -313,7 +313,7 @@ let J = 32,
                 expressionSourceApplication: y,
                 expressionSourceGuild: v,
                 joinedEmojiSourceGuildRecord: T,
-                closePopout: A,
+                closePopout: C,
                 onToggleShowMoreEmojis: w,
                 guildEmoji: x,
                 demoMode: k = !1,
@@ -340,8 +340,8 @@ let J = 32,
                               userIsRoleSubscriber: !1,
                           }
                         : {
-                              isRoleSubscriptionEmoji: C.yH(x),
-                              isUnusableRoleSubscriptionEmoji: C.Fv(x, null != z ? z : void 0),
+                              isRoleSubscriptionEmoji: A.yH(x),
+                              isUnusableRoleSubscriptionEmoji: A.Fv(x, null != z ? z : void 0),
                               userIsRoleSubscriber: N.Z.getUserSubscriptionRoles(x.guildId).size > 0,
                           },
                 [x, z],
@@ -373,7 +373,7 @@ let J = 32,
                 isDiscoverable: J,
                 shouldHideRoleSubscriptionCTA: eo,
                 onOpenPremiumSettings: () => {
-                    A(),
+                    C(),
                         M.default.track(V.rMx.PREMIUM_PROMOTION_OPENED, {
                             location_page: $.page,
                             location_section: $.section,
@@ -396,14 +396,14 @@ let J = 32,
             em = () => {
                 let e = async () => {
                         if (k || null == v || X) return;
-                        A();
+                        C();
                         let e = v.id;
                         try {
                             await _.Z.joinGuild(e), _.Z.transitionToGuildSync(e);
                         } catch (e) {}
                     },
                     t = () => {
-                        A(),
+                        C(),
                             (null == T ? void 0 : T.id) != null &&
                                 _.Z.transitionToGuildSync(
                                     T.id,
@@ -420,7 +420,7 @@ let J = 32,
                                   size: f.zx.Sizes.SMALL,
                                   fullWidth: !0,
                                   textOptions: { textOverride: ec.text },
-                                  onSubscribeModalClose: (t) => (t ? e() : A()),
+                                  onSubscribeModalClose: (t) => (t ? e() : C()),
                                   postSuccessGuild: n && null != v ? v : void 0,
                                   premiumModalAnalyticsLocation: $,
                               })
@@ -541,7 +541,7 @@ let J = 32,
                                             emojiId: c.emojiId,
                                             expressionSourceGuild: v,
                                             popoutData: ec,
-                                            onClose: A,
+                                            onClose: C,
                                             hasJoinedEmojiSourceGuild: X,
                                             isDisplayingButtonInTopSection: ep || e_,
                                         }),

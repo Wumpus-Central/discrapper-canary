@@ -55,8 +55,8 @@ function S(e) {
 }
 let I = 27,
     T = 15 * m.Z.Millis.MINUTE,
-    A = m.Z.Millis.SECOND,
-    C = "LAST_CLIENT_HEARTBEAT_SESSION",
+    C = m.Z.Millis.SECOND,
+    A = "LAST_CLIENT_HEARTBEAT_SESSION",
     N = "user",
     P = new c.Z("SessionHeartbeatScheduler"),
     R = null,
@@ -179,9 +179,9 @@ function z() {
 }
 function q(e) {
     let t = performance.now();
-    if (!(t - w < A))
+    if (!(t - w < C))
         try {
-            o.K.set(C, e), (w = t);
+            o.K.set(A, e), (w = t);
         } catch (e) {
             h.Z.captureException(e);
         }
@@ -197,7 +197,7 @@ function Q(e) {
           : e;
 }
 function X() {
-    o.K.remove(C),
+    o.K.remove(A),
         (L = {
             state: "loaded",
             session: null,
@@ -253,7 +253,7 @@ async function eo() {
         n = null,
         a = "loaded" === L.state ? (null == (e = L.session) ? void 0 : e.uuid) : null;
     try {
-        n = "uninitialized" === L.state ? Q(await o.K.getAfterRefresh(C)) : L.session;
+        n = "uninitialized" === L.state ? Q(await o.K.getAfterRefresh(A)) : L.session;
     } catch (e) {
         h.Z.captureException(e);
     }
@@ -285,6 +285,6 @@ async function eo() {
     })();
 }
 function es() {
-    let e = "uninitialized" === L.state ? Q(o.K.get(C)) : L.session;
+    let e = "uninitialized" === L.state ? Q(o.K.get(A)) : L.session;
     return null == e || (0, b.qK)(e) ? null : e;
 }

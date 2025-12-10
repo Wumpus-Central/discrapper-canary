@@ -45,7 +45,7 @@ function m(e) {
                 return [];
             }
         }, []),
-        A = (0, r.useCallback)(
+        C = (0, r.useCallback)(
             async (e, t, n) => {
                 let r = O.current;
                 if (null == r) {
@@ -87,7 +87,7 @@ function m(e) {
             },
             [T],
         ),
-        C = (0, r.useCallback)(function (e, t, n) {
+        A = (0, r.useCallback)(function (e, t, n) {
             let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
                 i = () => {
                     y(!0), E(null);
@@ -115,10 +115,10 @@ function m(e) {
                         E(new o.ZP("Rental orders are not supported via Orders API yet")), y(!1);
                         return;
                     }
-                    A(e, t, n);
-                } else C(e, t, n, r);
+                    C(e, t, n);
+                } else A(e, t, n, r);
             },
-            [v, A, C],
+            [v, C, A],
         );
     return (
         (0, r.useEffect)(() => {

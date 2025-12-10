@@ -1,5 +1,5 @@
 n.d(t, {
-    PS: () => C,
+    PS: () => A,
     QS: () => T,
     Vp: () => P,
 });
@@ -32,7 +32,7 @@ let S = (0, v.createContext)(null),
                 s.a$.Provider,
                 { value: null },
                 v.createElement(h.yF, { content: e.children }, (n) =>
-                    v.createElement(A, {
+                    v.createElement(C, {
                         props: e,
                         forwardedRef: t,
                         collection: n,
@@ -41,7 +41,7 @@ let S = (0, v.createContext)(null),
             )
         );
     });
-function A({ props: e, forwardedRef: t, collection: n }) {
+function C({ props: e, forwardedRef: t, collection: n }) {
     var r;
     let i = (0, v.useRef)(null),
         { id: c, ...u } = e;
@@ -57,8 +57,8 @@ function A({ props: e, forwardedRef: t, collection: n }) {
         S = (0, E.z)(u, { global: !0 }),
         T = Object.fromEntries(Object.entries(S).map(([e, t]) => [e, "id" === e ? t : void 0])),
         {
-            gridProps: A,
-            labelProps: C,
+            gridProps: C,
+            labelProps: A,
             descriptionProps: N,
             errorMessageProps: P,
         } = (0, f.H)(
@@ -87,7 +87,7 @@ function A({ props: e, forwardedRef: t, collection: n }) {
                     [
                         o.n,
                         {
-                            ...C,
+                            ...A,
                             elementType: "span",
                             ref: h,
                         },
@@ -95,7 +95,7 @@ function A({ props: e, forwardedRef: t, collection: n }) {
                     [
                         I,
                         {
-                            ...A,
+                            ...C,
                             ref: i,
                         },
                     ],
@@ -115,7 +115,7 @@ function A({ props: e, forwardedRef: t, collection: n }) {
         ),
     );
 }
-let C = (0, v.forwardRef)(function (e, t) {
+let A = (0, v.forwardRef)(function (e, t) {
     return (0, v.useContext)(s.a$)
         ? v.createElement(N, {
               props: e,
@@ -190,15 +190,15 @@ let P = (0, h.G5)(g.s$, (e, t, n) => {
     (0, v.useEffect)(() => {
         n.textValue;
     }, [n.textValue]);
-    let A = (0, E.z)(e, { global: !0 });
+    let C = (0, E.z)(e, { global: !0 });
     return (
-        delete A.id,
-        delete A.onClick,
+        delete C.id,
+        delete C.onClick,
         v.createElement(
             "div",
             {
                 ref: l,
-                ...(0, b.d)(A, T, f, u, S),
+                ...(0, b.d)(C, T, f, u, S),
                 "data-selected": O.isSelected || void 0,
                 "data-disabled": O.isDisabled || void 0,
                 "data-hovered": I || void 0,

@@ -100,9 +100,9 @@ function S(e) {
 function I(e, t) {
     try {
         let n = T(t).itemId,
-            r = A(t, n),
+            r = C(t, n),
             i = r.baseOffset + r.extents[0].extentOffset;
-        return C(e, i);
+        return A(e, i);
     } catch (e) {
         return;
     }
@@ -110,17 +110,17 @@ function I(e, t) {
 function T(e) {
     return e.subBoxes.find((e) => "iinf" === e.type).itemInfos.find((e) => e.itemType === _);
 }
-function A(e, t) {
+function C(e, t) {
     return e.subBoxes.find((e) => "iloc" === e.type).items.find((e) => e.itemId === t);
 }
-function C(e, t) {
+function A(e, t) {
     return t + 4 + e.getUint32(t);
 }
 function N(e) {
     try {
         let t = P(e).itemId,
-            n = A(e, t),
-            r = A(e, t).extents[0];
+            n = C(e, t),
+            r = C(e, t).extents[0];
         return [
             {
                 dataOffset: n.baseOffset + r.extentOffset,

@@ -14,7 +14,7 @@ var r,
     d = n(358085),
     p = n(533583),
     f = n(65154);
-function h(e, t, n) {
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,8 +27,8 @@ function h(e, t, n) {
         e
     );
 }
-let g = { ignoredDevices: {} },
-    m = g,
+let h = { ignoredDevices: {} },
+    m = h,
     _ = !1,
     b = {},
     E = {},
@@ -64,7 +64,7 @@ function S(e, t, n) {
 }
 class T extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
-        this.waitFor(u.Z, c.Z), (m = null != e ? e : g);
+        this.waitFor(u.Z, c.Z), (m = null != e ? e : h);
     }
     getUserAgnosticState() {
         return m;
@@ -88,9 +88,9 @@ class T extends (r = a.ZP.DeviceSettingsStore) {
         return y;
     }
 }
-h(T, "displayName", "ConnectedDeviceStore"),
-    h(T, "persistKey", "ConnectedDeviceStore"),
-    h(T, "migrations", [
+g(T, "displayName", "ConnectedDeviceStore"),
+    g(T, "persistKey", "ConnectedDeviceStore"),
+    g(T, "migrations", [
         (e) => {
             if (null == e.ignoredDevices) {
                 var t, n;
@@ -106,7 +106,7 @@ h(T, "displayName", "ConnectedDeviceStore"),
                                     }),
                                 )),
                                 r.forEach(function (t) {
-                                    h(e, t, n[t]);
+                                    g(e, t, n[t]);
                                 });
                         }
                         return e;

@@ -23,8 +23,8 @@ var i = n(120356),
     S = n(644646),
     I = n(110560),
     T = n(231919),
-    A = n(324805),
-    C = n(981631),
+    C = n(324805),
+    A = n(981631),
     N = n(388032),
     P = n(467415);
 let R = (e, t, n) =>
@@ -109,7 +109,7 @@ function w(e) {
           ? N.intl.format(N.t["4bMK1z"], {
                 maxReward: g.messages.nameWithArticle,
                 maxRewardCount: (0, _.Bs)(g.approximateCount, s),
-                helpCenterLink: p.Z.getArticleURL(C.BhN.QUESTS_LEARN_MORE),
+                helpCenterLink: p.Z.getArticleURL(A.BhN.QUESTS_LEARN_MORE),
             })
           : c;
 }
@@ -196,16 +196,16 @@ let j = (e) => {
             month: "long",
             day: "numeric",
         }),
-        C = v >= b.OH.ACCEPTED,
+        A = v >= b.OH.ACCEPTED,
         L = v >= b.OH.COMPLETED,
         j = _ || g,
-        M = (0, E.t5)(n, A.dr.QUESTS_CARD, i, O),
+        M = (0, E.t5)(n, C.dr.QUESTS_CARD, i, O),
         k = (0, m.O5)(),
         U = (0, b.Rf)(n),
         G = (0, E.DD)({
             quest: n,
             taskDetails: U,
-            location: A.dr.QUESTS_CARD,
+            location: C.dr.QUESTS_CARD,
             questContent: o.j.QUESTS_EMBED,
             sourceQuestContent: O,
         }),
@@ -254,7 +254,7 @@ let j = (e) => {
                                     [P.questRewardEmbedXs]: "xs" === c,
                                 }),
                                 learnMoreStyle: "text",
-                                location: A.dr.QUESTS_CARD,
+                                location: C.dr.QUESTS_CARD,
                                 quest: n,
                                 questContent: i,
                                 questContentPosition: y,
@@ -267,7 +267,7 @@ let j = (e) => {
                     className: P.taskDetails,
                     children: [
                         (0, r.jsx)(u.Text, {
-                            variant: R(i, c, C),
+                            variant: R(i, c, A),
                             className: P.taskInstructions,
                             children: p
                                 ? N.intl.formatToPlainString(N.t["ge+AJp"], { questName: n.config.messages.questName })

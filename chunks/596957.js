@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(906732),
     p = n(835473),
     f = n(522558),
-    h = n(795448),
-    g = n(441623),
+    g = n(795448),
+    h = n(441623),
     m = n(699516),
     _ = n(974042),
     b = n(451478),
@@ -215,7 +215,7 @@ let M = function (e) {
                             K.forEach((n) => {
                                 n.giftIntentType === j.hX.FRIEND_ANNIVERSARY ? e.push(n) : t.push(n);
                             }),
-                            [V ? e : e.slice(0, g.zj), t]
+                            [V ? e : e.slice(0, h.zj), t]
                         );
                     }
                 default:
@@ -299,7 +299,7 @@ let M = function (e) {
         ),
         el = i.useCallback(
             (e) =>
-                L === N.pJs.ALL && 0 === e && H && X > g.zj
+                L === N.pJs.ALL && 0 === e && H && X > h.zj
                     ? (0, r.jsx)("div", {
                           className: x.sectionFooter,
                           children: (0, r.jsx)(a.Button, {
@@ -316,7 +316,7 @@ let M = function (e) {
         );
     if (
         (i.useEffect(() => {
-            L === N.pJs.ALL && (0, h.d$)();
+            L === N.pJs.ALL && (0, g.d$)();
         }, [L]),
         i.useEffect(() => {
             F(!1);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => C });
 var r = n(547750),
     i = n(540469),
     a = n(890378),
@@ -22,7 +22,7 @@ var r = n(547750),
     S = n(411307),
     I = n(198435),
     T = n(859126);
-class A {
+class C {
     createCasualConfiguration(e = !1) {
         let t = this.createConfiguration(!1, e);
         return (

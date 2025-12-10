@@ -97,7 +97,7 @@ function S(e) {
             maxLength: g,
             error: y,
             defaultDirty: S,
-            showCharacterCount: C,
+            showCharacterCount: A,
             showRemainingCharacterCount: N = !0,
             rows: P = 3,
             inputRef: R,
@@ -138,7 +138,7 @@ function S(e) {
             null == t || t(e.currentTarget.value), M.setShouldValidate(!0);
         },
         G =
-            j && C
+            j && A
                 ? (0, r.jsx)(c.H, {
                       value: n,
                       maxLength: N && null != g ? g : void 0,
@@ -184,16 +184,16 @@ function S(e) {
                         ? null
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  C
+                                  A
                                       ? (0, r.jsx)(T, {
                                             value: n,
                                             maxLength: g,
                                             hasError: M.hasError,
                                         })
                                       : null,
-                                  C || !1 === N
+                                  A || !1 === N
                                       ? null
-                                      : (0, r.jsx)(A, {
+                                      : (0, r.jsx)(C, {
                                             value: n,
                                             maxLength: g,
                                         }),
@@ -230,7 +230,7 @@ function T(e) {
         children: [null != (t = null == n ? void 0 : n.length) ? t : 0, " ", null != i && "/ ".concat(i)],
     });
 }
-function A(e) {
+function C(e) {
     let { value: t, maxLength: n } = e,
         a = i.useMemo(() => (null == n ? null : n - (null != t ? t.length : 0)), [n, t]);
     return null == a

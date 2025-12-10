@@ -23,8 +23,8 @@ var f = 0,
     S = 15,
     I = 16,
     T = 7,
-    A = 256,
-    C = 16,
+    C = 256,
+    A = 16,
     N = 17,
     P = 18,
     R = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0],
@@ -153,7 +153,7 @@ function J(e) {
     for (t = 0; t < b; t++) e.dyn_ltree[2 * t] = 0;
     for (t = 0; t < y; t++) e.dyn_dtree[2 * t] = 0;
     for (t = 0; t < O; t++) e.bl_tree[2 * t] = 0;
-    (e.dyn_ltree[2 * A] = 1), (e.opt_len = e.static_len = 0), (e.last_lit = e.matches = 0);
+    (e.dyn_ltree[2 * C] = 1), (e.opt_len = e.static_len = 0), (e.last_lit = e.matches = 0);
 }
 function $(e) {
     e.bi_valid > 8 ? H(e, e.bi_buf) : e.bi_valid > 0 && (e.pending_buf[e.pending++] = e.bi_buf),
@@ -195,7 +195,7 @@ function er(e, t, n) {
                       W(e, (a = V(--r)), n),
                       0 !== (o = D[a]) && Y(e, (r -= Z[a]), o));
         while (s < e.last_lit);
-    W(e, A, t);
+    W(e, C, t);
 }
 function ei(e, t) {
     var n,
@@ -245,7 +245,7 @@ function ea(e, t, n) {
                 (s < c
                     ? (e.bl_tree[2 * i] += s)
                     : 0 !== i
-                      ? (i !== a && e.bl_tree[2 * i]++, e.bl_tree[2 * C]++)
+                      ? (i !== a && e.bl_tree[2 * i]++, e.bl_tree[2 * A]++)
                       : s <= 10
                         ? e.bl_tree[2 * N]++
                         : e.bl_tree[2 * P]++,
@@ -268,7 +268,7 @@ function eo(e, t, n) {
                 while (0 != --s);
             else
                 0 !== i
-                    ? (i !== a && (W(e, i, e.bl_tree), s--), W(e, C, e.bl_tree), Y(e, s - 3, 2))
+                    ? (i !== a && (W(e, i, e.bl_tree), s--), W(e, A, e.bl_tree), Y(e, s - 3, 2))
                     : s <= 10
                       ? (W(e, N, e.bl_tree), Y(e, s - 3, 3))
                       : (W(e, P, e.bl_tree), Y(e, s - 11, 7));
@@ -303,7 +303,7 @@ function ed(e, t, n, r) {
     Y(e, (f << 1) + +!!r, 3), ee(e, t, n, !0);
 }
 function ef(e) {
-    Y(e, p << 1, 3), W(e, A, j), z(e);
+    Y(e, p << 1, 3), W(e, C, j), z(e);
 }
 function ep(e, t, n, r) {
     var i,

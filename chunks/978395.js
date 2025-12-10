@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(502762),
     I = n(530),
     T = n(827313),
-    A = n(420654),
-    C = n(116854),
+    C = n(420654),
+    A = n(116854),
     N = n(166584),
     P = n(915014),
     R = n(981631),
@@ -65,7 +65,7 @@ function L(e) {
                 onClose: G,
                 usernameIcon:
                     t.hasAvatarForGuild(null == j ? void 0 : j.id) &&
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(A.Z, {
                         user: t,
                         nickname: Z,
                     }),
@@ -130,7 +130,7 @@ function L(e) {
                           children: (0, r.jsx)(s.n, { userId: t.id }),
                       }),
                   })
-                : (0, r.jsx)(A.Z, {
+                : (0, r.jsx)(C.Z, {
                       user: t,
                       bio: null == L ? void 0 : L.bio,
                       hidePersonalInformation: H,

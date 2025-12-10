@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(100527),
     p = n(906732),
     f = n(316243),
-    h = n(720734),
-    g = n(840780),
+    g = n(720734),
+    h = n(840780),
     m = n(235555),
     _ = n(746508),
     b = n(210724),
@@ -29,7 +29,7 @@ function I(e) {
     return (0, r.jsx)(p.Gt, {
         value: i,
         children: (0, r.jsx)(
-            g.Z,
+            h.Z,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -103,7 +103,7 @@ let C = i.memo(function () {
                 }),
                 (0, r.jsx)(c.Z, {
                     section: O.jXE.ACCOUNT_PANEL,
-                    children: (0, r.jsx)(h.Z, {}),
+                    children: (0, r.jsx)(g.Z, {}),
                 }),
             ],
         }),

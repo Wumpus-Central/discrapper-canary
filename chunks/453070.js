@@ -6,7 +6,7 @@ n.d(t, {
     Sd: () => j,
     XW: () => L,
     el: () => I,
-    fP: () => A,
+    fP: () => C,
     fQ: () => T,
     t$: () => S,
 }),
@@ -33,7 +33,7 @@ var r = n(473749),
     y = n(981631),
     O = n(388032);
 let v = (e) => {
-        A();
+        C();
         let t = (0, i.e7)([g.Z], () => g.Z.hasLoadedStickerPacks);
         r.useEffect(() => {
             t && null == g.Z.getStickerPack(e) && (0, m.FQ)(e);
@@ -124,12 +124,12 @@ let v = (e) => {
         }, [t, n, i, o, s, u, d]);
     },
     T = (e) => !0,
-    A = () => {
+    C = () => {
         r.useEffect(() => {
             (0, m.$p)();
         }, []);
     },
-    C = (e) => {
+    A = (e) => {
         let t = (0, i.e7)([g.Z], () => g.Z.getAllGuildStickers()),
             n = (0, i.Wu)([u.ZP, l.Z], () => {
                 let e = u.ZP.getFlattenedGuildIds(),
@@ -220,7 +220,7 @@ let x = (e) => {
                 [],
             ),
             o = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
-            s = C(e);
+            s = A(e);
         return r.useMemo(() => {
             var r;
             let i = n.map(b.z);

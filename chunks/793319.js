@@ -10,7 +10,7 @@ var i = n(54381),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(205120),
+    c = n(467721),
     u = n(442837),
     d = n(704215),
     p = n(481060),
@@ -42,8 +42,8 @@ var i = n(54381),
     k = n(728285),
     U = n(853170),
     V = n(140465),
-    B = n(800966),
-    F = n(675547),
+    F = n(800966),
+    B = n(675547),
     H = n(641015),
     G = n(618158),
     W = n(390322),
@@ -171,7 +171,7 @@ function eP(e) {
                             if (t === d.z.TRIAL_NUX_STREAM_COACH_MARK)
                                 return (
                                     E(!0),
-                                    (0, i.jsx)(B.h, {
+                                    (0, i.jsx)(F.h, {
                                         buttonRef: b,
                                         dismissed: !1,
                                         onDismiss: () => {
@@ -487,11 +487,11 @@ let eA = function (e) {
         L = (0, N.Z)(),
         k = (0, u.e7)([T.default], () => null != T.default.getAwaitingRemoteSessionInfo()),
         V = null != L,
-        B = (0, u.e7)([el.Z], () => {
+        F = (0, u.e7)([el.Z], () => {
             var e;
             return (null != (e = null == L ? void 0 : L.channelId) ? e : el.Z.getVoiceChannelId()) === n.id;
         }),
-        G = (0, F.Z)({
+        G = (0, B.Z)({
             channelId: n.id,
             location: "center-control-tray",
         }),
@@ -525,7 +525,7 @@ let eA = function (e) {
                   );
               }
             : void 0;
-    return B
+    return F
         ? (0, i.jsx)(v.Gt, {
               value: Y,
               children: (0, i.jsxs)(b.Z, {

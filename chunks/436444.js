@@ -1,13 +1,13 @@
 n.d(t, {
     P: () => T,
-    Z: () => A,
+    Z: () => C,
 }),
     n(415506);
 var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(205120),
+    o = n(467721),
     s = n(681715),
     l = n(481060),
     c = n(906732),
@@ -91,30 +91,30 @@ let T = {
         [m.Eu4.TIER_2]: 2 / 3,
         [m.Eu4.TIER_3]: 1,
     },
-    A = function (e) {
+    C = function (e) {
         let {
                 children: t,
                 confettiTriggerRef: n,
                 guild: i,
                 isProgressBarAnimationComplete: y,
                 setConfettiCount: v,
-                setShouldFireConfetti: A,
-                tier: C,
+                setShouldFireConfetti: C,
+                tier: A,
                 tierMarkerAnimationPosition: N,
                 totalAvailableBoostsCount: P,
             } = e,
             { analyticsLocations: R } = (0, c.ZP)(),
             D = (0, u.Z)(),
-            w = m.oCV[C],
+            w = m.oCV[A],
             x = w - P,
-            L = C <= N || y,
-            j = L && C <= i.premiumTier,
-            M = L && C < i.premiumTier,
-            k = L && C === i.premiumTier,
-            U = i.premiumTier < C && P >= w,
+            L = A <= N || y,
+            j = L && A <= i.premiumTier,
+            M = L && A < i.premiumTier,
+            k = L && A === i.premiumTier,
+            U = i.premiumTier < A && P >= w,
             { scaleFactor: G } = (0, l.q_F)({
                 from: { scaleFactor: 0 },
-                to: { scaleFactor: N >= C || (y && N + 1 === C) || (y && -1 === N && C === m.Eu4.NONE) ? 1 : 0 },
+                to: { scaleFactor: N >= A || (y && N + 1 === A) || (y && -1 === N && A === m.Eu4.NONE) ? 1 : 0 },
                 config: {
                     tension: 360,
                     friction: 12,
@@ -126,7 +126,7 @@ let T = {
                         className: b.progressBarMarkerIndicator,
                         style: { transform: G.to((e) => "translate(-50%, -50%) scale(".concat(e, ")")) },
                     }),
-                    C !== m.Eu4.NONE
+                    A !== m.Eu4.NONE
                         ? U
                             ? (0, r.jsx)(l.zkc, {
                                   className: a()(b.boostedTierIcon, b.disabledIndicator),
@@ -134,7 +134,7 @@ let T = {
                                   color: "currentColor",
                               })
                             : (0, r.jsx)(d.Z, {
-                                  tier: C,
+                                  tier: A,
                                   color: "currentColor",
                                   className: b.boostedTierIcon,
                               })
@@ -150,7 +150,7 @@ let T = {
                             page: m.ZY5.PREMIUM_GUILD_USER_MODAL,
                             section: m.jXE.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
                             object: m.qAy.SUBSCRIBE_TO_TIER_BUTTON,
-                            objectType: I(C),
+                            objectType: I(A),
                         },
                         numberOfBoostsToAdd: x,
                         guild: i,
@@ -160,12 +160,12 @@ let T = {
             V = F ? l.P3F : "div",
             H = F ? { onClick: B } : {},
             Y = j
-                ? g.intl.formatToPlainString(g.t["1o48ki"], { tierName: (0, f.nW)(C, { useLevels: !1 }) })
+                ? g.intl.formatToPlainString(g.t["1o48ki"], { tierName: (0, f.nW)(A, { useLevels: !1 }) })
                 : U
-                  ? g.intl.formatToPlainString(E.default["9CtPjt"], { perk: (0, f.nW)(C, { useLevels: !1 }) })
+                  ? g.intl.formatToPlainString(E.default["9CtPjt"], { perk: (0, f.nW)(A, { useLevels: !1 }) })
                   : g.intl.formatToPlainString(g.t.r6NN6Q, {
                         numBoostsRequired: x,
-                        tierName: (0, f.nW)(C, { useLevels: !1 }),
+                        tierName: (0, f.nW)(A, { useLevels: !1 }),
                     }),
             W = (0, r.jsxs)(
                 V,
@@ -178,18 +178,18 @@ let T = {
                                 [b.progressBarMarkerLower]: M,
                                 [b.progressBarMarkerCurrent]: k,
                             }),
-                            style: { left: "".concat(100 * T[C], "%") },
+                            style: { left: "".concat(100 * T[A], "%") },
                         },
                         H,
                     ),
                     {
                         children: [
                             !j && (0, r.jsx)("div", { className: b.boostedTierIconBackground }),
-                            j && C === m.Eu4.TIER_3
+                            j && A === m.Eu4.TIER_3
                                 ? (0, r.jsx)(_.m, {
                                       confettiTriggerRef: n,
                                       setConfettiCount: v,
-                                      setShouldFireConfetti: A,
+                                      setShouldFireConfetti: C,
                                       children: Z,
                                   })
                                 : Z,
@@ -198,7 +198,7 @@ let T = {
                                 variant: "text-md/normal",
                                 children: [
                                     j &&
-                                        C !== m.Eu4.NONE &&
+                                        A !== m.Eu4.NONE &&
                                         (0, r.jsx)(l.dz2, {
                                             size: "md",
                                             color: "currentColor",
@@ -211,7 +211,7 @@ let T = {
                     },
                 ),
             );
-        return C !== m.Eu4.NONE
+        return A !== m.Eu4.NONE
             ? (0, r.jsx)(s.u, {
                   text: Y,
                   children: W,

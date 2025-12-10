@@ -25,8 +25,8 @@ var r = n(54381),
     S = n(962086),
     I = n(160404),
     T = n(889695),
-    A = n(981631),
-    C = n(176505),
+    C = n(981631),
+    A = n(176505),
     N = n(302463),
     P = n(293810),
     R = n(388032),
@@ -53,18 +53,18 @@ function x(e) {
 }
 function L(e) {
     switch (e) {
-        case A.pNK.INTEGRATIONS:
+        case C.pNK.INTEGRATIONS:
             return R.intl.string(R.t.k7LGdh);
-        case A.pNK.ROLE_SUBSCRIPTIONS:
+        case C.pNK.ROLE_SUBSCRIPTIONS:
             return R.intl.string(R.t.bRqiqa);
-        case A.pNK.ONBOARDING:
+        case C.pNK.ONBOARDING:
             return R.intl.string(R.t.qZpU3S);
         default:
             return R.intl.string(R.t.MTIXhi);
     }
 }
 function j(e) {
-    return e === A.pNK.ROLE_SUBSCRIPTIONS ? R.intl.string(R.t.hZUCzd) : R.intl.string(R.t["/djIh7"]);
+    return e === C.pNK.ROLE_SUBSCRIPTIONS ? R.intl.string(R.t.hZUCzd) : R.intl.string(R.t["/djIh7"]);
 }
 function M() {
     let e = i.useRef(null),
@@ -84,15 +84,15 @@ function M() {
     if (null == a || null == t) return null;
     let M = L(o),
         k = j(o),
-        U = n === C.oC.GUILD_ONBOARDING,
+        U = n === A.oC.GUILD_ONBOARDING,
         G = (e) => {
             let { backToSettings: n } = e;
             null != t &&
-                (I.Z.isFullServerPreview(t) && (0, g.uL)(A.Z5c.CHANNEL(t)),
+                (I.Z.isFullServerPreview(t) && (0, g.uL)(C.Z5c.CHANNEL(t)),
                 p.ZP.shouldShowOnboarding(t) && (f.Z.finishOnboarding(t), (0, _.EI)(t)),
                 (0, S.mL)(t),
                 n && h.Z.open(t, o),
-                o === A.pNK.ROLE_SUBSCRIPTIONS && (0, m.GN)(t));
+                o === C.pNK.ROLE_SUBSCRIPTIONS && (0, m.GN)(t));
         };
     return (0, r.jsxs)(d.qXd, {
         color: d.DM8.BRAND,
@@ -172,7 +172,7 @@ function M() {
                               }),
                       ],
                   }),
-            u || o === A.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(x, { onClick: () => G({ backToSettings: !1 }) }),
+            u || o === C.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(x, { onClick: () => G({ backToSettings: !1 }) }),
         ],
     });
 }

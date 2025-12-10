@@ -1,4 +1,4 @@
-n.d(t, { l: () => A });
+n.d(t, { l: () => C });
 var r = n(54381),
     i = n(473749),
     a = n(756715),
@@ -97,7 +97,7 @@ function T(e, t) {
         [e, t],
     );
 }
-function A(e) {
+function C(e) {
     let {
             user: t,
             channelId: n,
@@ -107,8 +107,8 @@ function A(e) {
             ariaLabel: O,
             enableDisplayNameStyles: I = !1,
         } = e,
-        A = i.useRef(null),
-        { analyticsLocations: C } = (0, c.ZP)(l.Z.USERNAME),
+        C = i.useRef(null),
+        { analyticsLocations: A } = (0, c.ZP)(l.Z.USERNAME),
         N = (0, _.ZP)(h, null == t ? void 0 : t.id),
         P = (0, u.Z)({
             userId: null == t ? void 0 : t.id,
@@ -133,7 +133,7 @@ function A(e) {
                             return (0, r.jsx)(
                                 s.rz2,
                                 v(y({}, null != t ? t : {}), {
-                                    ref: A,
+                                    ref: C,
                                     onContextMenu: D,
                                     name: null != (c = (0, s.qgQ)(i)) ? c : "",
                                     colorString: null != (p = null == e ? void 0 : e.colorString) ? p : null,
@@ -151,7 +151,7 @@ function A(e) {
                             return (0, r.jsx)(
                                 a.Anchor,
                                 v(y({}, null != t ? t : {}), {
-                                    ref: A,
+                                    ref: C,
                                     onContextMenu: D,
                                     "aria-label": O,
                                     children: (0, r.jsx)(f.Z, {
@@ -171,11 +171,11 @@ function A(e) {
                 return (0, r.jsx)(
                     c.Gt,
                     {
-                        value: C,
+                        value: A,
                         children:
                             null != t
                                 ? (0, r.jsx)(m.Z, {
-                                      targetElementRef: A,
+                                      targetElementRef: C,
                                       user: t,
                                       guildId: h,
                                       channelId: n,
@@ -193,7 +193,7 @@ function A(e) {
                     o,
                 );
             },
-            [C, t, n, h, g, D, b, O, N, R, null == w ? void 0 : w.animate, P, I],
+            [A, t, n, h, g, D, b, O, N, R, null == w ? void 0 : w.animate, P, I],
         )
     );
 }

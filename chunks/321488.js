@@ -1,32 +1,32 @@
-n.d(t, { Z: () => p });
-var r,
-    i = n(54381);
-n(473749);
-var l = n(120356),
-    a = n.n(l),
-    s = n(28664),
-    o = n(481060),
-    c = n(286389),
-    u = (((r = u || {})[(r.ACCEPT = 0)] = "ACCEPT"), (r[(r.DENY = 1)] = "DENY"), (r[(r.DEFAULT = 2)] = "DEFAULT"), r);
-function d(e) {
-    let { icon: t, tooltip: n, onClick: r, actionType: l = 2, shouldHighlight: u } = e;
-    return (0, i.jsx)(s.u, {
-        text: n,
-        children: (0, i.jsx)(o.P3F, {
+i.d(t, { Z: () => p });
+var n,
+    s = i(54381);
+i(473749);
+var r = i(120356),
+    o = i.n(r),
+    a = i(28664),
+    l = i(481060),
+    u = i(286389),
+    c = (((n = c || {})[(n.ACCEPT = 0)] = "ACCEPT"), (n[(n.DENY = 1)] = "DENY"), (n[(n.DEFAULT = 2)] = "DEFAULT"), n);
+function h(e) {
+    let { icon: t, tooltip: i, onClick: n, actionType: r = 2, shouldHighlight: c } = e;
+    return (0, s.jsx)(a.u, {
+        text: i,
+        children: (0, s.jsx)(l.P3F, {
             tag: "div",
-            "aria-label": n,
-            onClick: r,
-            className: a()(c.actionButton, {
-                [c.actionAccept]: 0 === l,
-                [c.actionDeny]: 1 === l,
-                [c.highlight]: u,
+            "aria-label": i,
+            onClick: n,
+            className: o()(u.actionButton, {
+                [u.actionAccept]: 0 === r,
+                [u.actionDeny]: 1 === r,
+                [u.highlight]: c,
             }),
-            children: (0, i.jsx)(t, {
-                className: c.icon,
+            children: (0, s.jsx)(t, {
+                className: u.icon,
                 color: "currentColor",
             }),
         }),
     });
 }
-d.ActionTypes = u;
-let p = d;
+h.ActionTypes = c;
+let p = h;

@@ -17,10 +17,10 @@ var l = n(54381),
     g = n(223312),
     p = n(571728),
     v = n(984370),
-    C = n(703656),
-    _ = n(433355),
-    S = n(984933),
-    T = n(430824),
+    _ = n(703656),
+    C = n(433355),
+    T = n(984933),
+    S = n(430824),
     E = n(384433),
     N = n(241559),
     O = n(575766),
@@ -73,7 +73,7 @@ function U(e) {
     let { guildId: n } = e,
         i = null != (t = (0, p.A)({ guildId: n })) ? t : 0,
         [u, b] = r.useState(i > 0 ? E.e.PENDING : E.e.ALL_MEMBERS),
-        v = (0, s.e7)([T.Z], () => T.Z.getGuild(n)),
+        v = (0, s.e7)([S.Z], () => S.Z.getGuild(n)),
         { analyticsLocations: R } = (0, d.ZP)(c.Z.MEMBER_SAFETY_PAGE),
         D = (0, f.C)({ guildId: n }),
         { guildJoinRequests: k } = (0, g.j)({
@@ -108,11 +108,11 @@ function U(e) {
     r.useEffect(() => {
         if (!U && null != v) {
             var e;
-            let t = null == (e = S.ZP.getDefaultChannel(v.id)) ? void 0 : e.id;
-            (0, C.XU)(v.id, t);
+            let t = null == (e = T.ZP.getDefaultChannel(v.id)) ? void 0 : e.id;
+            (0, _.XU)(v.id, t);
         }
     }, [v, U]);
-    let K = (0, s.e7)([_.ZP], () => null != _.ZP.getGuildSidebarState(n), [n]);
+    let K = (0, s.e7)([C.ZP], () => null != C.ZP.getGuildSidebarState(n), [n]);
     return null != v && U
         ? (0, l.jsxs)(d.Gt, {
               value: R,

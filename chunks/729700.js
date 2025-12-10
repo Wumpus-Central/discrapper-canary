@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => g });
 var r = n(54381),
     i = n(473749),
     l = n(907862),
@@ -10,14 +10,14 @@ var r = n(54381),
     d = n(335131),
     p = n(981631),
     f = n(388032);
-let h = (e) => {
-    let { displayOptions: t, targetElementRef: n, onRequestClose: h, onClick: g } = e,
+let g = (e) => {
+    let { displayOptions: t, targetElementRef: n, onRequestClose: g, onClick: h } = e,
         { analyticsLocations: m } = (0, c.ZP)(o.Z.HOME_PAGE_SHOP_TAB),
         _ = (0, s.ZP)(),
         b = (0, a.wj)(_) ? t.assetDark : t.assetLight,
-        E = i.useRef(h);
+        E = i.useRef(g);
     return (
-        (E.current = h),
+        (E.current = g),
         i.useEffect(
             () => () => {
                 var e;
@@ -42,7 +42,7 @@ let h = (e) => {
                     text: f.intl.string(f.t.fYfGgK),
                     variant: "primary",
                     onClick: () => {
-                        null == g || g(),
+                        null == h || h(),
                             (0, u.uL)(p.Z5c.COLLECTIBLES_SHOP),
                             (0, d.mK)({
                                 analyticsLocations: m,
@@ -51,7 +51,7 @@ let h = (e) => {
                     },
                 },
             ],
-            onRequestClose: h,
+            onRequestClose: g,
         })
     );
 };

@@ -80,8 +80,8 @@ let v = {
     S = v,
     I = !1,
     T = !1,
-    A = {},
-    C = null,
+    C = {},
+    A = null,
     N = !1,
     P = d.Z.Millis.DAY,
     R = 10 * d.Z.Millis.HOUR,
@@ -145,7 +145,7 @@ function k(e) {
             c = (null == l ? void 0 : l.id) === s.ownerId,
             u = _.Z.can(g.Plq.ADMINISTRATOR, s);
         if ((t.includes("is_owner") && !c) || (t.includes("is_admin") && !u)) continue;
-        null == (A = null != A ? A : {})[e.key] && (A[e.key] = e);
+        null == (C = null != C ? C : {})[e.key] && (C[e.key] = e);
         let d = m.Z.getGuildId(),
             p = null != d && d === s.id;
         if ((!t.includes("is_viewing") || p) && !i) return !0;
@@ -170,7 +170,7 @@ function Z(e) {
         a = r && M(t);
     G(D);
     let o = !1;
-    C = i && a && !o ? t : null;
+    A = i && a && !o ? t : null;
 }
 function B(e) {
     let { id: t } = e;
@@ -184,25 +184,25 @@ function V() {
 }
 function H(e) {
     let { key: t } = e;
-    (S.hiddenSurveys[t] = !0), (C = null), (A = null != A ? A : {}), delete A[t];
+    (S.hiddenSurveys[t] = !0), (A = null), (C = null != C ? C : {}), delete C[t];
 }
 function Y() {
     S.hiddenSurveys = {};
 }
 function W(e) {
-    return !!M(e) || ((C = null), !1);
+    return !!M(e) || ((A = null), !1);
 }
 function K() {
-    let e = Object.values((A = null != A ? A : {}))[0];
+    let e = Object.values((C = null != C ? C : {}))[0];
     return null != e && M(e)
         ? void Z({
               type: "SURVEY_FETCHED",
               survey: e,
           })
-        : null != C && void (C = null);
+        : null != A && void (A = null);
 }
 function z() {
-    if (null != C && W(C)) return !1;
+    if (null != A && W(A)) return !1;
     K();
 }
 function q() {
@@ -216,7 +216,7 @@ class Q extends (r = s.ZP.PersistedStore) {
         return S;
     }
     getCurrentSurvey() {
-        return L() ? null : C;
+        return L() ? null : A;
     }
     getSurveyOverride() {
         return S.surveyOverride;

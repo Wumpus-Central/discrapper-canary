@@ -22,8 +22,8 @@ var r,
     S = n(346329),
     I = n(701560),
     T = n(981631),
-    A = n(388032),
-    C = n(767248);
+    C = n(388032),
+    A = n(767248);
 function N(e, t, n) {
     return (
         t in e
@@ -102,20 +102,20 @@ let x = Object.freeze({
         [T.apO.RESUME]: "paused",
     }),
     L = () => [
-        A.intl.string(A.t.r9wmKn),
-        A.intl.string(A.t["6CpimS"]),
-        A.intl.string(A.t.ysbNDc),
-        A.intl.string(A.t["TLnXx/"]),
-        A.intl.string(A.t.Qi8mne),
-        A.intl.string(A.t.yvMu3S),
-        A.intl.string(A.t["PnNUZ/"]),
-        A.intl.string(A.t.hU2TEJ),
-        A.intl.string(A.t["YyY51/"]),
-        A.intl.string(A.t.PbHJb3),
+        C.intl.string(C.t.r9wmKn),
+        C.intl.string(C.t["6CpimS"]),
+        C.intl.string(C.t.ysbNDc),
+        C.intl.string(C.t["TLnXx/"]),
+        C.intl.string(C.t.Qi8mne),
+        C.intl.string(C.t.yvMu3S),
+        C.intl.string(C.t["PnNUZ/"]),
+        C.intl.string(C.t.hU2TEJ),
+        C.intl.string(C.t["YyY51/"]),
+        C.intl.string(C.t.PbHJb3),
     ];
 function j(e) {
     let t = v.en(e.sku);
-    return null != t ? A.intl.formatToPlainString(A.t.Aqe2ZC, { date: t }) : null;
+    return null != t ? C.intl.formatToPlainString(C.t.Aqe2ZC, { date: t }) : null;
 }
 class M extends (r = a.Component) {
     get analyticsLocation() {
@@ -125,13 +125,13 @@ class M extends (r = a.Component) {
         switch (("uninstalling" !== e && (this._uninstallStringIndex = null), e)) {
             case "install":
             case "unsupported_os":
-                return A.intl.string(A.t.nL0WvC);
+                return C.intl.string(C.t.nL0WvC);
             case "update":
-                return A.intl.string(A.t.tkhwp9);
+                return C.intl.string(C.t.tkhwp9);
             case "paused":
-                return A.intl.string(A.t["6EKrh4"]);
+                return C.intl.string(C.t["6EKrh4"]);
             case "locate":
-                return A.intl.string(A.t["nIj+a0"]);
+                return C.intl.string(C.t["nIj+a0"]);
             case "uninstalling":
                 let t = L();
                 return (
@@ -140,13 +140,13 @@ class M extends (r = a.Component) {
                     t[this._uninstallStringIndex]
                 );
             case "queued":
-                return A.intl.string(A.t.TiJg5l);
+                return C.intl.string(C.t.TiJg5l);
             case "downloading":
-                return A.intl.string(A.t.Tdhepf);
+                return C.intl.string(C.t.Tdhepf);
             case "preorder_wait":
-                return A.intl.string(A.t.xiXyPc);
+                return C.intl.string(C.t.xiXyPc);
             case "add_to_library":
-                return A.intl.string(A.t.r3fwuQ);
+                return C.intl.string(C.t.r3fwuQ);
             default:
                 throw Error("Unexpected button state");
         }
@@ -194,20 +194,20 @@ class M extends (r = a.Component) {
     renderDisabledButton(e, t) {
         let { className: n, fullWidth: r, size: a, customDisabledColor: o, tooltipPosition: s } = this.props;
         return (0, i.jsxs)("div", {
-            className: C.disabledButtonWrapper,
+            className: A.disabledButtonWrapper,
             children: [
                 (0, i.jsxs)(c.zx, {
                     className: n,
                     fullWidth: r,
                     size: a,
-                    color: null != o ? o : C.disabledButtonColor,
+                    color: null != o ? o : A.disabledButtonColor,
                     disabled: !0,
                     children: [this.getText(e), this.renderProgressBar()],
                 }),
                 (0, i.jsx)(l.u, {
                     text: t,
                     position: s,
-                    children: (0, i.jsx)("div", { className: C.disabledButtonOverlay }),
+                    children: (0, i.jsx)("div", { className: A.disabledButtonOverlay }),
                 }),
             ],
         });
@@ -223,7 +223,7 @@ class M extends (r = a.Component) {
             size: u.Exd.Sizes.XSMALL,
             foregroundColor: n.paused ? s.Z.unsafe_rawColors.PRIMARY_500.css : s.Z.unsafe_rawColors.GREEN_360.css,
             backgroundColor: s.Z.unsafe_rawColors.TRANSPARENT.css,
-            className: C.progress,
+            className: A.progress,
         });
     }
     renderActionButton(e, t) {
@@ -246,9 +246,9 @@ class M extends (r = a.Component) {
         if ("unsupported_os" === n)
             return this.renderDisabledButton(
                 n,
-                A.intl.formatToPlainString(A.t.LBm0A4, { operatingSystem: A.intl.string(A.t["0/xHFO"]) }),
+                C.intl.formatToPlainString(C.t.LBm0A4, { operatingSystem: C.intl.string(C.t["0/xHFO"]) }),
             );
-        if ("install" === n && e) return this.renderDisabledButton(n, A.intl.string(A.t.QUSQIA));
+        if ("install" === n && e) return this.renderDisabledButton(n, C.intl.string(C.t.QUSQIA));
         let r = this.onClickHandlers[n];
         return null == r ? this.renderDisabledButton(n) : this.renderActionButton(n, r);
     }

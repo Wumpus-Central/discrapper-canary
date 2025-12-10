@@ -108,19 +108,19 @@ function T(e) {
         .concat(s)
         .concat((0, i.Z)(o, a));
 }
-function A(e) {
+function C(e) {
     let { user: t, voiceState: n } = e,
         r = n.requestToSpeakTimestamp;
     return null == r ? t.id : "".concat(Date.parse(r)).concat(t.id);
 }
-function C(e) {
+function A(e) {
     return e === g.xO.REQUESTED_TO_SPEAK || e === g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 }
 function N(e) {
     let { speaker: t, role: n, rtsState: r, blocked: i, ignored: a, isFriend: o } = e,
         s = [];
     return (
-        C(r) && s.push("ALL_REQUESTED_TO_SPEAK"),
+        A(r) && s.push("ALL_REQUESTED_TO_SPEAK"),
         r === g.xO.REQUESTED_TO_SPEAK && s.push("REQUESTED_TO_SPEAK_ONLY"),
         t ? s.push("SPEAKER") : (null != n ? s.push(n.id) : s.push("NO_ROLE"), s.push("AUDIENCE")),
         i ? s.push("BLOCKED") : a && s.push("IGNORED"),
@@ -140,12 +140,12 @@ class P {
             return null != this.guildId && h.Z.isPublic(this.channelId) && l.Z.requestMember(this.guildId, e), b;
         let I = null != t ? t[0] : null,
             T = null != this.guildId ? c.ZP.getMember(this.guildId, e) : null,
-            A = null != (n = null == T ? void 0 : T.nick) ? n : _.ZP.getName(this.guildId, this.channelId, S),
-            C = {
+            C = null != (n = null == T ? void 0 : T.nick) ? n : _.ZP.getName(this.guildId, this.channelId, S),
+            A = {
                 user: S,
                 userNick: _.ZP.getName(this.guildId, this.channelId, S),
-                nick: A,
-                comparator: (0, p.sQ)(O, A),
+                nick: C,
+                comparator: (0, p.sQ)(O, C),
                 voiceState: O,
                 role: (0, E.H)(this.guildId, e),
                 speaker: m.ZP.isSpeaker(e, this.channelId),
@@ -155,7 +155,7 @@ class P {
                 isFriend: u.Z.isFriend(S.id),
                 connectedOn: null != (r = null == I ? void 0 : I.connectedOn) ? r : Date.now(),
             },
-            N = v(y({}, C), {
+            N = v(y({}, A), {
                 type: "VOICE",
                 id: S.id,
                 rtsState: (0, g.gf)(O),
@@ -164,7 +164,7 @@ class P {
         let P = null != (i = o.Z.getStreamForUser(e, this.guildId)) ? i : o.Z.getActiveStreamForUser(e, this.guildId);
         if (null != P && P.channelId === this.channelId) {
             let e = (0, a.V9)(P);
-            (s = v(y({}, C), {
+            (s = v(y({}, A), {
                 id: e,
                 type: "STREAM",
                 rtsState: g.xO.NONE,
@@ -184,7 +184,7 @@ class P {
                 }),
             n.forEach((t) => {
                 this._participantsIndex.set(t.id, t),
-                    t.id === e && C(t.rtsState)
+                    t.id === e && A(t.rtsState)
                         ? this._requestToSpeakIndex.set(e, t)
                         : this._requestToSpeakIndex.delete(e);
             }),
@@ -229,7 +229,7 @@ class P {
             b(this, "guildId", void 0),
             b(this, "participants", {}),
             b(this, "_participantsIndex", new r.h(N, T)),
-            b(this, "_requestToSpeakIndex", new r.h(() => [], A)),
+            b(this, "_requestToSpeakIndex", new r.h(() => [], C)),
             (this.channelId = e),
             (this.guildId = null == (t = s.Z.getChannel(e)) ? void 0 : t.getGuildId());
     }

@@ -31,8 +31,8 @@ let d = i.memo(
                 listHeaderHeight: S,
                 stickyHeaders: I = !1,
                 className: T,
-                hideScrollbar: A = !1,
-                fade: C = !1,
+                hideScrollbar: C = !1,
+                fade: A = !1,
                 initialScrollTop: N = 0,
                 role: P = "list",
             } = e,
@@ -310,9 +310,9 @@ let d = i.memo(
                 };
             }, [Q, d]),
             J = i.useMemo(() => ({ height: H }), [H]),
-            $ = A ? s.xVE : s.h21;
+            $ = C ? s.xVE : s.h21;
         return (0, r.jsxs)($, {
-            fade: C,
+            fade: A,
             className: o()(c.scroller, T),
             ref: L,
             onScroll: z,

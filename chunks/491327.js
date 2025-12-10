@@ -10,8 +10,8 @@ var r = n(392711),
     d = n(430824),
     p = n(496675),
     f = n(944486),
-    h = n(979651),
-    g = n(934415),
+    g = n(979651),
+    h = n(934415),
     m = n(996106),
     _ = n(914946),
     b = n(452426),
@@ -122,7 +122,7 @@ let y = {
                 .then((e) => {
                     let [t, n] = e;
                     if (n.guild_id) {
-                        if ((0, g.rY)(t, h.Z, d.Z))
+                        if ((0, h.rY)(t, g.Z, d.Z))
                             throw new m.Z({ errorCode: v.lTL.INVALID_CHANNEL }, "Channel is full");
                         if (!p.Z.can(v.Plq.CONNECT, t))
                             throw new m.Z(

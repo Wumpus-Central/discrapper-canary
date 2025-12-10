@@ -39,8 +39,8 @@ var i = n(658722),
     S = n(277078),
     I = n(208049),
     T = n(763296),
-    A = n(421673),
-    C = n(285651),
+    C = n(421673),
+    A = n(285651),
     N = n(822179),
     P = n(926491),
     R = n(373228),
@@ -143,8 +143,8 @@ let ey = new h.Z("AutocompleteUtils"),
     eS = 7,
     eI = 5,
     eT = 3,
-    eA = 1,
     eC = 1,
+    eA = 1,
     eN = 3,
     eP = 5,
     eR = 3,
@@ -224,7 +224,7 @@ function eX(e, t) {
         }
         if (r.test(e)) return eI;
         if (eQ(i, e)) return eT;
-        if (o && a()(i, e)) return eA;
+        if (o && a()(i, e)) return eC;
     } catch (e) {
         ey.error(e);
     }
@@ -251,7 +251,7 @@ function e0(e) {
         h = 0,
         g = 0;
     for (; h < m; ) {
-        var E, b, y, O, v, S, I, T, A;
+        var E, b, y, O, v, S, I, T, C;
         let e,
             r,
             f = n[h];
@@ -285,7 +285,7 @@ function e0(e) {
                   ? p.push({
                         type: eu.h8.USER,
                         record: r,
-                        score: eK(eA, null == s ? void 0 : s[r.id]),
+                        score: eK(eC, null == s ? void 0 : s[r.id]),
                         comparator: null != (S = null != m ? m : e) ? S : n,
                         sortable: null != (I = null != h ? h : c) ? I : i,
                     })
@@ -299,9 +299,9 @@ function e0(e) {
                     (_.push({
                         type: eu.h8.USER,
                         record: r,
-                        score: eK(eA, null == s ? void 0 : s[r.id]),
+                        score: eK(eC, null == s ? void 0 : s[r.id]),
                         comparator: null != (T = null != m ? m : e) ? T : n,
-                        sortable: null != (A = null != h ? h : c) ? A : i,
+                        sortable: null != (C = null != h ? h : c) ? C : i,
                     }),
                     (g += 1));
         }
@@ -623,12 +623,12 @@ let te = (0, ee.oH)((e, t, n) => {
                             let e = e8(n, t, !1);
                             0 !== e && (c += 0.5 * e);
                         }
-                        c = Math.min(eS - eA, c);
+                        c = Math.min(eS - eC, c);
                     }
                     0 !== c &&
                         !(t.length > 1) &&
                         (1 !== t.length || t[0].isFullMatch || s) &&
-                        (e4(l, e.type) && (c = Math.max(c - eC, eA / 2)),
+                        (e4(l, e.type) && (c = Math.max(c - eA, eC / 2)),
                         e.isThread() && (e.isActiveThread() || (c -= eN), w.Z.hasJoined(e.id) || (c -= eP)),
                         (c = Math.min(
                             c + Math.min(null != (O = G.Z.getScoreWithoutFetchingLatest(e.id)) ? O : 0 / y, 1) * eR,
@@ -1181,7 +1181,7 @@ let te = (0, ee.oH)((e, t, n) => {
                         let d = 0,
                             f = null,
                             p = P.Z.getStickerById(l);
-                        if (null == p || !r(p, (0, C.cO)(p, i, n))) return;
+                        if (null == p || !r(p, (0, A.cO)(p, i, n))) return;
                         for (let n of s) {
                             let { type: r, value: i } = n,
                                 a = e1(r),
@@ -1231,7 +1231,7 @@ let te = (0, ee.oH)((e, t, n) => {
                 ),
                 [],
             );
-            return (0, A.cK)(e, r, n, t);
+            return (0, C.cK)(e, r, n, t);
         },
         queryGames(e) {
             let t = E.ZP.getRunningVerifiedApplicationIds();
@@ -1336,8 +1336,8 @@ let te = (0, ee.oH)((e, t, n) => {
                     O = (0, es._I)(y),
                     v = (0, es.Fv)(O),
                     [S, I] = e$(t),
-                    [T, A] = e$(f),
-                    [C, N] = e$(E),
+                    [T, C] = e$(f),
+                    [A, N] = e$(E),
                     P = [
                         [y, y],
                         [O, y],
@@ -1346,7 +1346,7 @@ let te = (0, ee.oH)((e, t, n) => {
                         [f, f],
                         [T, f],
                         [E, E],
-                        [C, E],
+                        [A, E],
                     ].filter((e) => null != e[0] && null != e[1]);
                 for (let [e, t] of P)
                     if (u === e) {
@@ -1368,7 +1368,7 @@ let te = (0, ee.oH)((e, t, n) => {
                     for (let [e, n] of [
                         [v, y],
                         [I, t],
-                        [A, f],
+                        [C, f],
                         [N, E],
                     ])
                         if (null != e && null != n && e.startsWith(d)) {

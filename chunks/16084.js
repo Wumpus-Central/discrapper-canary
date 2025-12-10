@@ -1,8 +1,8 @@
 n.d(t, {
     $N: () => v,
-    ZZ: () => C,
+    ZZ: () => A,
     pB: () => P,
-    t_: () => A,
+    t_: () => C,
     uE: () => S,
     x2: () => I,
     xA: () => N,
@@ -167,7 +167,7 @@ async function I(e, t, n, r) {
     return i;
 }
 let T = { isGift: !1 };
-async function A(e, t, n, r, s) {
+async function C(e, t, n, r, s) {
     a.Z.dispatch({ type: "ORDER_CREATE_START" });
     try {
         let o = {
@@ -214,7 +214,7 @@ async function A(e, t, n, r, s) {
         throw (a.Z.dispatch({ type: "ORDER_CREATE_FAIL" }), new o.HF("Failed to create order: ".concat(e)));
     }
 }
-async function C(e, t, n) {
+async function A(e, t, n) {
     let {
         paymentSource: r,
         expectedAmount: l,
@@ -225,7 +225,7 @@ async function C(e, t, n) {
         subscriptionPlanId: v,
         loadId: S,
         countryCode: I,
-        orderId: A,
+        orderId: C,
     } = b({}, T, n);
     a.Z.wait(() => {
         a.Z.dispatch({
@@ -234,7 +234,7 @@ async function C(e, t, n) {
             skuId: t,
         });
     });
-    let C = d.Z.inTestModeForApplication(e) || c.Z.inDevModeForApplication(e);
+    let A = d.Z.inTestModeForApplication(e) || c.Z.inDevModeForApplication(e);
     try {
         let e = {
             gift: E,
@@ -243,7 +243,7 @@ async function C(e, t, n) {
             load_id: S,
             gift_info_options: y,
         };
-        if (C) e.test_mode = !0;
+        if (A) e.test_mode = !0;
         else {
             if (
                 null != r &&
@@ -259,7 +259,7 @@ async function C(e, t, n) {
         null != l && (e.expected_amount = l),
             null != u && (e.expected_currency = u),
             (e.purchase_token = (0, _.d)()),
-            null != A && (e.order_id = A);
+            null != C && (e.order_id = C);
         let n = await i.tn.post({
             url: g.ANM.STORE_SKU_PURCHASE(t),
             body: e,

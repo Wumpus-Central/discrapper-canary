@@ -28,7 +28,7 @@ var r = n(54381),
     S = n(981631),
     I = n(388032),
     T = n(421156);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -90,7 +90,7 @@ function R(e) {
             initialSlide: h = v.x.INIT,
         } = e,
         O = (0, d.Dt)(),
-        [A, C] = i.useState(I.intl.string(I.t["I/sJtJ"])),
+        [C, A] = i.useState(I.intl.string(I.t["I/sJtJ"])),
         [N, P] = i.useState(!1),
         [R, D] = i.useState(h),
         [w, x] = i.useState(""),
@@ -214,7 +214,7 @@ function R(e) {
                             onSubmit: (e) => {
                                 e.preventDefault(),
                                     y
-                                        .Sr(A, s, w)
+                                        .Sr(C, s, w)
                                         .then(async () => {
                                             u ? D(v.x.SUCCESS) : (await (0, _.Yn)(!1), o());
                                         })
@@ -241,9 +241,9 @@ function R(e) {
                                                     children: I.intl.string(I.t["Jzd+z/"]),
                                                 }),
                                                 (0, r.jsx)(l.oil, {
-                                                    value: A,
+                                                    value: C,
                                                     onChange: (e) => {
-                                                        C(e), P(0 === e.length);
+                                                        A(e), P(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1,
@@ -341,7 +341,7 @@ function D(e) {
                 action: () => {
                     (0, l.ZDy)(async () => {
                         let { default: e } = await n.e("804").then(n.bind(n, 89616));
-                        return (t) => (0, r.jsx)(e, C({ credential: i }, t));
+                        return (t) => (0, r.jsx)(e, A({ credential: i }, t));
                     });
                 },
             }),
@@ -385,7 +385,7 @@ function w() {
                         (0, l.h7j)((e) =>
                             (0, r.jsx)(
                                 R,
-                                P(C({}, e), {
+                                P(A({}, e), {
                                     ticket: t,
                                     challenge: n,
                                 }),
@@ -449,7 +449,7 @@ function L(e) {
                     color: s.zx.Colors.TRANSPARENT,
                     size: s.zx.Sizes.ICON,
                     onClick: (t) => {
-                        (0, c.vq)(t, (t) => (0, r.jsx)(D, P(C({}, t), { credential: e })));
+                        (0, c.vq)(t, (t) => (0, r.jsx)(D, P(A({}, t), { credential: e })));
                     },
                     "aria-label": I.intl.string(I.t["+nrTbK"]),
                     innerClassName: T.credentialOptions,

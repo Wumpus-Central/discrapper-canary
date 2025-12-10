@@ -32,7 +32,7 @@ function v(e, t) {
                 ).length <= 2
             );
         }),
-        [A, C, N, P] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], s.X),
+        [C, A, N, P] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], s.X),
         R = i.useRef(0),
         D = i.useCallback(() => {
             I(!0),
@@ -52,7 +52,7 @@ function v(e, t) {
         M = (0, m.v)(d.O),
         k = a === h.Ie.NORMAL ? M : void 0;
     if (n) return null;
-    let U = A === b.X1.GIF && C === a && P === v.id;
+    let U = C === b.X1.GIF && A === a && P === v.id;
     return (0, r.jsx)(u.u, {
         keyboardShortcut: T ? void 0 : k,
         text: y.intl.string(T ? y.t.mE2e8A : y.t.nffuyb),

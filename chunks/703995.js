@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r,
     i = n(275726),
     a = n(442837),
@@ -93,7 +93,7 @@ function T(e) {
         !0)
     );
 }
-class A extends (r = a.ZP.Store) {
+class C extends (r = a.ZP.Store) {
     getInvite(e) {
         var t;
         return null != (t = f.get(e)) ? t : null;
@@ -117,8 +117,8 @@ class A extends (r = a.ZP.Store) {
         return _;
     }
 }
-d(A, "displayName", "PremiumGroupInviteStore");
-let C = new A(o.Z, {
+d(C, "displayName", "PremiumGroupInviteStore");
+let A = new C(o.Z, {
     PREMIUM_GROUP_INVITES_FETCH_START: h,
     PREMIUM_GROUP_INVITES_FETCH_SUCCESS: g,
     PREMIUM_GROUP_INVITES_FETCH_FAIL: E,

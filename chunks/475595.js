@@ -1,6 +1,6 @@
 n.d(t, {
     eC: () => m,
-    f0: () => A,
+    f0: () => C,
     fh: () => b,
     nK: () => I,
     sN: () => T,
@@ -251,7 +251,7 @@ function T(e) {
           null != t.height && n.searchParams.append("height", "".concat(S(t.height))),
           n.toString());
 }
-function A(e, t) {
+function C(e, t) {
     if (e.startsWith("blob:")) return e;
     let n = a.Z.toURLSafe(e);
     return null == n

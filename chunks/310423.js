@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-let C = {
+let A = {
         tag: "span",
         variant: "text-md/normal",
         color: "text-default",
@@ -80,7 +80,7 @@ let C = {
 function P(e) {
     return (0, r.jsx)(
         l.Text,
-        A(I({}, C), {
+        C(I({}, A), {
             color: "header-primary",
             children: e,
         }),
@@ -108,7 +108,7 @@ function R(e) {
                             " ",
                             (0, r.jsx)(
                                 l.Text,
-                                A(I({}, C), {
+                                C(I({}, A), {
                                     children: null != (n = null == w ? void 0 : w.name_localized) ? n : g.name,
                                 }),
                             ),
@@ -146,7 +146,7 @@ function R(e) {
                     let e = (0, b.ij)(t, v);
                     f = (0, r.jsxs)(
                         p.Z,
-                        A(I({}, N), {
+                        C(I({}, N), {
                             onClick: () =>
                                 (0, _.openUserProfileModal)({
                                     userId: t.id,
@@ -167,7 +167,7 @@ function R(e) {
                 null != t &&
                     (f = (0, r.jsxs)(
                         p.Z,
-                        A(I({}, N), {
+                        C(I({}, N), {
                             children: [y.zy, t.name],
                         }),
                     ));
@@ -179,7 +179,7 @@ function R(e) {
                 null != t &&
                     (f = (0, r.jsxs)(
                         p.Z,
-                        A(I({}, N), {
+                        C(I({}, N), {
                             children: [y.ME, t.name],
                         }),
                     ));
@@ -198,7 +198,7 @@ function R(e) {
                         let e = (0, b.ij)(t, v);
                         f = (0, r.jsxs)(
                             p.Z,
-                            A(I({}, N), {
+                            C(I({}, N), {
                                 onClick: () =>
                                     (0, _.openUserProfileModal)({
                                         userId: t.id,
@@ -229,7 +229,7 @@ function R(e) {
                     children: [
                         (0, r.jsxs)(
                             l.Text,
-                            A(I({}, C), {
+                            C(I({}, A), {
                                 children: [" ", null != (d = null == w ? void 0 : w.name_localized) ? d : g.name, ": "],
                             }),
                         ),
@@ -282,7 +282,7 @@ function D(e) {
             children: [
                 (0, r.jsxs)(
                     l.Text,
-                    A(I({}, C), {
+                    C(I({}, A), {
                         children: [
                             "/",
                             null != (_ = null == (a = b.application_command) ? void 0 : a.name_localized) ? _ : b.name,

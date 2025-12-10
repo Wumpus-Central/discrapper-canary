@@ -4,7 +4,7 @@ var r = n(54381),
     l = n(120356),
     o = n.n(l),
     a = n(891371),
-    s = n(205120),
+    s = n(467721),
     c = n(91192),
     u = n(399606),
     d = n(846519),
@@ -117,8 +117,8 @@ let M = i.memo(function (e) {
             mediaState: K,
             unavailable: Y = !1,
             badge: q = 0,
-            isMentionLowImportance: Q,
-            contextMenu: X = L,
+            isMentionLowImportance: X,
+            contextMenu: Q = L,
             draggable: J = !1,
             sorting: $ = !1,
             preloadOnClick: ee = !0,
@@ -132,7 +132,7 @@ let M = i.memo(function (e) {
         es = null != (n = e.lowerBadge) ? n : void 0;
     null == es && q > 0
         ? (es =
-              null != (l = (0, N.Ne)(q, Q ? f.TVs.colors.BACKGROUND_ACCENT.css : f.TVs.colors.STATUS_DANGER.css))
+              null != (l = (0, N.Ne)(q, X ? f.TVs.colors.BACKGROUND_ACCENT.css : f.TVs.colors.STATUS_DANGER.css))
                   ? l
                   : void 0)
         : null == es && null != et && (es = null != (p = (0, N.jt)({ guildJoinRequestStatus: et })) ? p : void 0);
@@ -172,9 +172,9 @@ let M = i.memo(function (e) {
         ex = (0, u.e7)([O.ZP], () => O.ZP.isCurrentUserGuest(el)),
         eC = i.useCallback(
             (e) => {
-                null == V || ex || X(e, V);
+                null == V || ex || Q(e, V);
             },
-            [V, X, ex],
+            [V, Q, ex],
         ),
         eE = i.useCallback(
             (e) => {

@@ -23,8 +23,8 @@ var i = n(442837),
     S = n(626135),
     I = n(937615),
     T = n(987209),
-    A = n(563132),
-    C = n(409813),
+    C = n(563132),
+    A = n(409813),
     N = n(614277),
     P = n(981631),
     R = n(474936),
@@ -61,7 +61,7 @@ function j(e) {
     return e;
 }
 let M = {
-    key: C.h8.GIFT_CUSTOMIZATION,
+    key: A.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) => (0, r.jsx)(G, j({}, e)),
     options: {
         isLargeModal: !0,
@@ -70,8 +70,8 @@ let M = {
 };
 function k(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: o = !1, loading: s = !1 } = e,
-        { hasPaymentSources: l } = (0, A.JL)(),
-        c = l ? C.h8.REVIEW : C.h8.ADD_PAYMENT_STEPS;
+        { hasPaymentSources: l } = (0, C.JL)(),
+        c = l ? A.h8.REVIEW : A.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.Button, {
@@ -92,7 +92,7 @@ let U = (e) => {
             giftRecipientError: _,
             setGiftRecipientError: E,
             validatingGiftRecipient: y,
-            giftRecipient: C,
+            giftRecipient: A,
             recommendedGiftSkuIds: N,
             giftingOrigin: L,
             setValidatingGiftRecipient: j,
@@ -104,7 +104,7 @@ let U = (e) => {
             paymentSourceId: G,
             skuPricePreviewsById: F,
             skusById: V,
-        } = (0, A.JL)(),
+        } = (0, C.JL)(),
         H = (0, i.e7)([O.default], () => O.default.getCurrentUser()),
         { enabled: Y, giftRecommendationAlgorithm: W } = m.G.useExperiment(
             { location: "CollectiblesPaymentModalGiftCustomizationStep" },
@@ -118,15 +118,15 @@ let U = (e) => {
         };
     (0, o.ZP)(() => {
         null != M &&
-            null != C &&
+            null != A &&
             (L !== R.Wt.DM_CHANNEL_WISHLIST &&
                 S.default.track(P.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: M }),
-            Q(C, M));
+            Q(A, M));
     });
     let X = (e) => {
             L !== R.Wt.DM_CHANNEL_WISHLIST &&
                 S.default.track(P.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }),
-                null != C && Q(C, e),
+                null != A && Q(A, e),
                 k(e);
         },
         J = (e) => {
@@ -165,7 +165,7 @@ let U = (e) => {
                 return (0, r.jsxs)("div", {
                     className: w.bodyColumnRight,
                     children: [
-                        (0, r.jsx)(b.s, { giftRecipient: C }),
+                        (0, r.jsx)(b.s, { giftRecipient: A }),
                         (0, r.jsx)(g.q, {
                             isShopGift: !0,
                             className: x.adjustedGiftMainAnimation,
@@ -186,7 +186,7 @@ let U = (e) => {
                 ? (0, r.jsxs)("div", {
                       className: w.bodyColumnRight,
                       children: [
-                          (0, r.jsx)(b.s, { giftRecipient: C }),
+                          (0, r.jsx)(b.s, { giftRecipient: A }),
                           $(),
                           null != e &&
                               null != M &&
@@ -251,7 +251,7 @@ let U = (e) => {
         rightColumnComponent: ee(),
         onStepChange: t,
         onBackClick: n,
-        ctaDisabled: null != _ || null == C || C.id === (null == H ? void 0 : H.id) || s.length > R.$n,
+        ctaDisabled: null != _ || null == A || A.id === (null == H ? void 0 : H.id) || s.length > R.$n,
         loading: y,
     };
 };

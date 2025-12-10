@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(704215),
     p = n(481060),
     f = n(150063),
-    h = n(607070),
-    g = n(100527),
+    g = n(607070),
+    h = n(100527),
     m = n(213609),
     _ = n(625128),
     b = n(362762),
@@ -64,8 +64,8 @@ var r = n(54381),
     ed = n(164792),
     ep = n(524777),
     ef = n(913713),
-    eh = n(431115);
-function eg(e) {
+    eg = n(431115);
+function eh(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -94,7 +94,7 @@ let em = i.createContext({});
 function e_(e) {
     let { onLoadComplete: t } = e,
         { enabled: n } = (0, Z.WX)({ location: er.dr.QUEST_HOME_DESKTOP }),
-        l = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
+        l = (0, u.e7)([g.Z], () => g.Z.useReducedMotion),
         s = (0, u.e7)([L.Z], () => L.Z.isFocused()),
         { ref: o, inViewport: c } = (0, K.a)(),
         d = i.useRef(null);
@@ -142,7 +142,7 @@ function eb(e) {
                 alt: "",
             }),
             (0, r.jsx)("img", {
-                src: eh.ZP,
+                src: eg.ZP,
                 className: a()(eo.bannerAsset, eo.redirectNoticeBannerAsset),
                 alt: "",
                 onLoad: t,
@@ -159,7 +159,7 @@ function eE(e) {
     let { renderBanner: t, children: n, header: l, withQuestsGrid: s = !0 } = e,
         { isInDiscoverQuestHomeTab: o, onScroll: c, onSelectTab: u, scrollerRef: d, selectedTab: p } = i.useContext(em),
         f = (0, G._)({ location: er.dr.QUEST_HOME_DESKTOP }) ? J.Z : J.j,
-        { takeover: h, isLoading: g } = (0, z.Ut)(),
+        { takeover: g, isLoading: h } = (0, z.Nm)(),
         { enabled: m } = (0, Z.WX)({ location: er.dr.QUEST_HOME_DESKTOP }),
         { enabled: _ } = V.n0.useConfig({ location: er.dr.QUEST_HOME_DESKTOP }),
         b = i.useRef(null),
@@ -178,10 +178,10 @@ function eE(e) {
                     (function () {
                         if (!o && _) {
                             if (p !== z.e5.ALL) return null;
-                            if (g) return (0, r.jsx)(et.o, {});
-                            if (null != h)
+                            if (h) return (0, r.jsx)(et.o, {});
+                            if (null != g)
                                 return (0, r.jsx)(et.Z, {
-                                    config: h,
+                                    config: g,
                                     onQuestCtaClick: E,
                                 });
                         }
@@ -211,15 +211,15 @@ let eO = function (e) {
     let { topLevelRoute: t } = e,
         n = (0, s.TH)(),
         l = (0, s.k6)(),
-        h = i.useMemo(() => {
+        g = i.useMemo(() => {
             var e;
             return (null == (e = (0, s.LX)(n.pathname, ei.Z5c.QUEST_HOME)) ? void 0 : e.isExact) === !0;
         }, [n.pathname]),
         v = (0, u.e7)([b.Z], () => b.Z.getState("quests")),
-        { selectedTab: T, onSelectTab: x, tabs: L } = (0, en.z)({ withClaimedQuestsTab: !h });
+        { selectedTab: T, onSelectTab: x, tabs: L } = (0, en.z)({ withClaimedQuestsTab: !g });
     i.useLayoutEffect(() => {
-        h && T === z.e5.CLAIMED && H.Z.setState({ tab: z.e5.ALL });
-    }, [h, T]);
+        g && T === z.e5.CLAIMED && H.Z.setState({ tab: z.e5.ALL });
+    }, [g, T]);
     let { onScroll: D, scrollPosition: G } = (0, C.M)(),
         V = q.Z.getState().getUtmCurrentContext(),
         Y = (0, X.z)((e) => e.registerAssetLoad),
@@ -259,7 +259,7 @@ let eO = function (e) {
                 (0, E.mK)({
                     tab: el.AW.ORBS,
                     analyticsLocations: [],
-                    analyticsSource: g.Z.ORBS_BALANCE_MENU,
+                    analyticsSource: h.Z.ORBS_BALANCE_MENU,
                 });
         }, []);
     i.useEffect(() => {
@@ -306,7 +306,7 @@ let eO = function (e) {
             (0, W.navigateToQuestHome)({ fromContent: B.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
                 R.default.track(
                     ei.rMx.QUEST_CONTENT_CLICKED,
-                    eg(
+                    eh(
                         {
                             cta_name: U.jZ.VIEW_QUESTS,
                             click_id: (0, o.Z)(),
@@ -320,7 +320,7 @@ let eO = function (e) {
             (e) => {
                 var t, n, r;
                 l.replace(
-                    ((n = eg({}, l.location)),
+                    ((n = eh({}, l.location)),
                     (r = r = { hash: void 0 }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -346,17 +346,17 @@ let eO = function (e) {
         children: (0, r.jsx)(em.Provider, {
             value: i.useMemo(
                 () => ({
-                    isInDiscoverQuestHomeTab: h,
+                    isInDiscoverQuestHomeTab: g,
                     onScroll: D,
                     onSelectTab: ef,
                     scrollerRef: ec,
                     selectedTab: T,
                 }),
-                [h, D, ef, ec, T],
+                [g, D, ef, ec, T],
             ),
             children: (0, r.jsx)("div", {
                 className: a()(eo.container, { [eo.withoutTopBorder]: !t }),
-                children: h
+                children: g
                     ? (0, r.jsx)(eE, {
                           renderBanner: () =>
                               (0, r.jsx)(S.Z, {
@@ -414,7 +414,7 @@ let eO = function (e) {
                                                     (0, E.mK)({
                                                         tab: el.AW.ORBS,
                                                         analyticsLocations: [],
-                                                        analyticsSource: g.Z.INTRO_TO_ORBS_QUEST_BANNER,
+                                                        analyticsSource: h.Z.INTRO_TO_ORBS_QUEST_BANNER,
                                                     }),
                                             }),
                                             (0, r.jsx)(p.Button, {

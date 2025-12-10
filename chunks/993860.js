@@ -63,7 +63,7 @@ function E(e, t, n) {
                   };
         }, [h, n]),
         T = (0, l.Z)(),
-        A = r.useMemo(() => {
+        C = r.useMemo(() => {
             if (O) {
                 if ("INVITE" === t && null != I && I.length > 0 && null != y) {
                     var n;
@@ -92,7 +92,7 @@ function E(e, t, n) {
         }, [O, T, h, g, v, e.visibility, e.tag, S, t, b, I, y]);
     return {
         guildId: h,
-        ctaType: A,
+        ctaType: C,
         validInviteKey: v,
     };
 }

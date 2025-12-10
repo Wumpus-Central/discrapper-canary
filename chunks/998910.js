@@ -24,7 +24,7 @@ var t = "\uD800-\uDFFF",
     S = "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])",
     I = y + b + O,
     T = "(?:" + [c, f, p].join("|") + ")" + I,
-    A = RegExp(
+    C = RegExp(
         [
             _ + "?" + u + "+" + g + "(?=" + [s, _, "$"].join("|") + ")",
             h + "+" + E + "(?=" + [s, _ + m, "$"].join("|") + ")",
@@ -38,5 +38,5 @@ var t = "\uD800-\uDFFF",
         "g",
     );
 e.exports = function (e) {
-    return e.match(A) || [];
+    return e.match(C) || [];
 };

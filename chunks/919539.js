@@ -22,10 +22,10 @@ var r = n(54381),
     S = n(736530),
     I = n(981631),
     T = n(388032),
-    A = n(225753);
-function C(e) {
+    C = n(225753);
+function A(e) {
     let { ingress: t, guildId: n } = e,
-        C = (0, h.c_)(),
+        A = (0, h.c_)(),
         N = (0, _.q)(),
         P = m.h2.useSetting().includes(n),
         R = (0, l.LN)(),
@@ -82,7 +82,7 @@ function C(e) {
                       value: !N && !D,
                       onChange: (e) => j(e, !1),
                       disabled: N || R,
-                      tooltipText: R ? T.intl.string(A.default["6Af/cw"]) : void 0,
+                      tooltipText: R ? T.intl.string(C.default["6Af/cw"]) : void 0,
                       note: T.intl.format(T.t.wkm9a3, { helpdeskArticle: d.Z.getArticleURL(I.BhN.MESSAGE_REQUESTS) }),
                   })
                 : (0, r.jsx)(E.ZP, {
@@ -90,7 +90,7 @@ function C(e) {
                       value: !P && !w,
                       onChange: (e) => j(e, !0),
                       disabled: P,
-                      note: C
+                      note: A
                           ? T.intl.format(T.t.WpnWLc, { helpdeskArticle: d.Z.getArticleURL(I.BhN.MESSAGE_REQUESTS) })
                           : T.intl.format(T.t.wkm9a3, { helpdeskArticle: d.Z.getArticleURL(I.BhN.MESSAGE_REQUESTS) }),
                   }),
@@ -99,7 +99,7 @@ function C(e) {
 function N(e) {
     let { ingress: t = O.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
         i = (0, h.is)();
-    return (0, r.jsx)(C, {
+    return (0, r.jsx)(A, {
         ingress: t,
         guildId: null != n ? n : i,
     });

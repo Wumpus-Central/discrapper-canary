@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => C });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -72,22 +72,22 @@ let I = i.forwardRef(function (e, t) {
     let { type: n, channelId: a } = e,
         { tooltipsWithKeybinds: y } = m.n.useConfig({ location: "ChannelAppLauncherButton" }),
         v = (0, l.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n && p.Z.activeChannelId() === a),
-        { Component: I, events: T, play: A } = (0, c.w)(),
-        C = i.useContext(h.ZP);
+        { Component: I, events: T, play: C } = (0, c.w)(),
+        A = i.useContext(h.ZP);
     i.useEffect(() => {
         let e = () => {
             T.onMouseEnter();
         };
         return (
-            C.on("command-sentinel-typed", e),
+            A.on("command-sentinel-typed", e),
             () => {
-                C.off("command-sentinel-typed", e);
+                A.off("command-sentinel-typed", e);
             }
         );
-    }, [C, T]);
+    }, [A, T]);
     let N = i.useCallback(() => {
-            v ? f.y(_.ti.DISMISSED) : (f._(_._b.TEXT, n, void 0, a), d.ux()), A();
-        }, [v, n, a, A]),
+            v ? f.y(_.ti.DISMISSED) : (f._(_._b.TEXT, n, void 0, a), d.ux()), C();
+        }, [v, n, a, C]),
         P = (0, r.jsx)(I, {
             size: "refresh_sm",
             color: "currentColor",
@@ -133,4 +133,4 @@ function T(e) {
         channelId: n,
     });
 }
-let A = i.memo(T);
+let C = i.memo(T);

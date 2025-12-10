@@ -61,9 +61,9 @@ let y = (e) => {
                 upgradeToPremiumType: S,
                 className: I,
                 showTrialBadge: T = !1,
-                showDiscountBadge: A = !1,
+                showDiscountBadge: C = !1,
             } = e,
-            C = S === h.PremiumTypes.TIER_2;
+            A = S === h.PremiumTypes.TIER_2;
         n = S === h.PremiumTypes.TIER_0 ? c.Z : S === h.PremiumTypes.TIER_1 ? u.Z : l.Z;
         let N = (0, _.N)(),
             P = null == N || null == (t = N.discount) ? void 0 : t.amount;
@@ -71,13 +71,13 @@ let y = (e) => {
             "aria-hidden": !0,
             className: a()(
                 {
-                    [E.headerBackground]: !C,
-                    [E.tier2HeaderBackground]: C,
+                    [E.headerBackground]: !A,
+                    [E.tier2HeaderBackground]: A,
                 },
                 I,
             ),
             children: [
-                (T || A) && (0, r.jsx)(d.Z, { className: E.trialBadgeSparkles }),
+                (T || C) && (0, r.jsx)(d.Z, { className: E.trialBadgeSparkles }),
                 g(),
                 (0, r.jsxs)(s.Z, {
                     align: s.Z.Align.START,
@@ -86,11 +86,11 @@ let y = (e) => {
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
-                                (0, r.jsx)(n, { className: a()(E.headerIcon, { [E.nonTier2]: !C }) }),
-                                (T || A) &&
+                                (0, r.jsx)(n, { className: a()(E.headerIcon, { [E.nonTier2]: !A }) }),
+                                (T || C) &&
                                     (0, r.jsx)(y, {
                                         isTier0: S === h.PremiumTypes.TIER_0,
-                                        discountAmount: A ? P : void 0,
+                                        discountAmount: C ? P : void 0,
                                     }),
                             ],
                         }),

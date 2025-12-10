@@ -97,7 +97,7 @@ let y = !1,
         let e = S("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
         return (0, _.sI)("maybeFetchDefaultSounds") && v(), O(), e;
     },
-    A = () => {
+    C = () => {
         let e = (0, m.D)();
         if (0 === e.length) return Promise.resolve();
         let t = S("SOUNDBOARD_SOUNDS_RECEIVED");
@@ -110,7 +110,7 @@ let y = !1,
             t
         );
     },
-    C = () => {
+    A = () => {
         if (!f.Z.shouldFetchTopSoundsForGuilds()) return Promise.resolve();
         o.Z.dispatch({ type: "SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FETCH" });
         let e = I(["SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_SUCCESS", "SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FAILURE"]);
@@ -121,7 +121,7 @@ let y = !1,
         let e = performance.now(),
             t = !y;
         y = !0;
-        let n = await Promise.all([T(), A(), C()]);
+        let n = await Promise.all([T(), C(), A()]);
         if (t) {
             let t = performance.now() - e;
             u.default.track(g.rMx.EXPRESSION_PICKER_SOUNDBOARD_SOUNDS_LOADED, { elapsed_ms: t });

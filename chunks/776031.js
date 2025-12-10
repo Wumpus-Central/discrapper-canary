@@ -79,8 +79,8 @@ function I(e, t) {
 }
 function T(e, t) {
     let { preset: n, resolution: y, fps: v, soundshareEnabled: T } = (0, a.cj)([u.Z], () => u.Z.getState()),
-        A = (0, a.e7)([p.Z], () => p.Z.getGoLiveSource()),
-        C = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
+        C = (0, a.e7)([p.Z], () => p.Z.getGoLiveSource()),
+        A = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         N = (0, a.e7)([f.Z], () => {
             var t;
             return null == (t = f.Z.getGuild(null == e ? void 0 : e.guildId)) ? void 0 : t.premiumTier;
@@ -90,7 +90,7 @@ function T(e, t) {
         D = i.useCallback(
             (e, n, r, i) => {
                 if (e) {
-                    if (null != A) {
+                    if (null != C) {
                         let e = {
                             qualityOptions: {
                                 preset: g.ApplicationStreamPresets.PRESET_CUSTOM,
@@ -99,15 +99,15 @@ function T(e, t) {
                             },
                             context: E.Yn.STREAM,
                         };
-                        null != A.desktopSource
+                        null != C.desktopSource
                             ? (e.desktopSettings = {
-                                  sourceId: A.desktopSource.id,
+                                  sourceId: C.desktopSource.id,
                                   sound: T,
                               })
-                            : null != A.cameraSource &&
+                            : null != C.cameraSource &&
                               (e.cameraSettings = {
-                                  videoDeviceGuid: A.cameraSource.videoDeviceGuid,
-                                  audioDeviceGuid: A.cameraSource.audioDeviceGuid,
+                                  videoDeviceGuid: C.cameraSource.videoDeviceGuid,
+                                  audioDeviceGuid: C.cameraSource.audioDeviceGuid,
                               }),
                             s.Z.setGoLiveSource(e);
                     }
@@ -120,13 +120,13 @@ function T(e, t) {
                         }),
                     );
             },
-            [t, P, T, A],
+            [t, P, T, C],
         );
     if (null == e) return null;
     let w = n === g.ApplicationStreamPresets.PRESET_DOCUMENTS ? g.ApplicationStreamFPS.FPS_30 : v,
         x = g.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, y, t, C, N, R);
+                i = (0, c.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, y, t, A, N, R);
             return (0, r.jsx)(
                 o.k5B,
                 {
@@ -141,7 +141,7 @@ function T(e, t) {
         }),
         L = g.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, t, w, C, N, R);
+                i = (0, c.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, t, w, A, N, R);
             return (0, r.jsx)(
                 o.k5B,
                 {

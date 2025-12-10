@@ -27,8 +27,8 @@ var r,
     S = n(833858),
     I = n(223135),
     T = n(707409),
-    A = n(769654),
-    C = n(424678),
+    C = n(769654),
+    A = n(424678),
     N = n(750154),
     P = n(81063),
     R = n(768581),
@@ -408,13 +408,13 @@ class $ extends (r = a.PureComponent) {
         else if (e.type === Z.IIU.HANG_STATUS && null != a)
             (o = B.intl.formatToPlainString(B.t.IAZiW2, { guildName: a.name })),
                 (t = () => {
-                    (0, A.X)(a.id);
+                    (0, C.X)(a.id);
                 });
         else if (!(0, L.Z)(e)) {
             if (((o = r), (s = r), (0, j.Z)(e) && null != r)) {
                 let t = (t, n) =>
                     (0, i.jsx)(
-                        C.Z,
+                        A.Z,
                         {
                             artists: r,
                             linkClassName: F.bodyLink,

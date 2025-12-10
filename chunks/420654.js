@@ -70,12 +70,12 @@ let E = 57.75,
             [O, v] = i.useState(!1),
             [S, I] = i.useState(!1),
             T = i.useRef(null),
-            A = (e) => {
+            C = (e) => {
                 (T.current = e),
                     null != e &&
                         (v(!S && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > E && I(!0));
             },
-            C = () => {
+            A = () => {
                 null == n || n(),
                     (0, u.openUserProfileModal)(
                         g(m({}, b), {
@@ -92,7 +92,7 @@ let E = 57.75,
             : (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)("div", {
-                          ref: A,
+                          ref: C,
                           className: o()(p.descriptionClamp, S && p.maxBioHeight),
                           onBlur: N,
                           children: (0, r.jsx)(d.Z, {
@@ -109,7 +109,7 @@ let E = 57.75,
                                   size: "sm",
                                   variant: "secondary",
                                   text: f.intl.string(f.t.YDiPq8),
-                                  onClick: C,
+                                  onClick: A,
                                   disabled: h,
                               }),
                           }),

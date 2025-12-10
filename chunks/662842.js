@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(100527),
     p = n(471445),
     f = n(15274),
-    h = n(924301),
-    g = n(504160),
+    g = n(924301),
+    h = n(504160),
     m = n(151864),
     _ = n(725436),
     b = n(497656),
@@ -123,7 +123,7 @@ function D(e) {
                                 }),
                                 canListenIn: l,
                                 buttonText: e,
-                                onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
+                                onClose: () => (0, h.ji)({ stageId: null == n ? void 0 : n.id }),
                                 users: o.length > 5 ? o.slice(0, 5) : o,
                                 overflowUsers:
                                     u < 1
@@ -168,7 +168,7 @@ function D(e) {
                             }),
                             canListenIn: l,
                             buttonText: e,
-                            onClose: () => (0, g.ji)({ stageId: null == n ? void 0 : n.id }),
+                            onClose: () => (0, h.ji)({ stageId: null == n ? void 0 : n.id }),
                             users: o.length > 5 ? o.slice(0, 5) : o,
                             overflowUsers:
                                 u < 1
@@ -196,7 +196,7 @@ function D(e) {
                 } else if (t.entity_type === w.WX.EXTERNAL) {
                     let e = (0, O.cS)(t);
                     if (null == e) return { noticeType: null };
-                    let n = h.ZP.getUserCount(t.id, E);
+                    let n = g.ZP.getUserCount(t.id, E);
                     return {
                         noticeType: 1,
                         title: t.name,
@@ -210,7 +210,7 @@ function D(e) {
                         }),
                         canListenIn: !1,
                         buttonText: L.intl.string(L.t.iW6Xuo),
-                        onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
+                        onClose: () => (0, h.ji)({ eventId: null == t ? void 0 : t.id }),
                         users: null == s ? [] : [s],
                         overflowUsers:
                             n < 1
@@ -236,7 +236,7 @@ function D(e) {
                     };
                 } else if (t.entity_type === w.WX.VOICE && null != i) {
                     let e = (0, p.KS)(i),
-                        n = h.ZP.getUserCount(t.id, E);
+                        n = g.ZP.getUserCount(t.id, E);
                     return {
                         noticeType: 2,
                         title: t.name,
@@ -251,7 +251,7 @@ function D(e) {
                                 : null,
                         canListenIn: l,
                         buttonText: L.intl.string(L.t.nxUtoQ),
-                        onClose: () => (0, g.ji)({ eventId: null == t ? void 0 : t.id }),
+                        onClose: () => (0, h.ji)({ eventId: null == t ? void 0 : t.id }),
                         users: null == s ? [] : [s],
                         overflowUsers:
                             n < 1

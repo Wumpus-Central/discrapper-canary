@@ -11,8 +11,8 @@ var i = n(828700),
     d = n(600164),
     p = n(299657),
     f = n(594174),
-    h = n(632257),
-    g = n(981631),
+    g = n(632257),
+    h = n(981631),
     m = n(474936),
     _ = n(125321);
 let b = l.ZP.connectStores([f.default], () => ({ user: f.default.getCurrentUser() }))(
@@ -24,7 +24,7 @@ let b = l.ZP.connectStores([f.default], () => ({ user: f.default.getCurrentUser(
                 ? (0, r.jsxs)("div", {
                       className: _.homeWrapperNormal,
                       children: [
-                          null == n && (0, r.jsx)(h.Z, {}),
+                          null == n && (0, r.jsx)(g.Z, {}),
                           (0, r.jsx)(u.Gt, {
                               value: l,
                               children:
@@ -38,7 +38,7 @@ let b = l.ZP.connectStores([f.default], () => ({ user: f.default.getCurrentUser(
                           }),
                       ],
                   })
-                : (0, r.jsx)(i.l_, { to: g.Z5c.LOGIN });
+                : (0, r.jsx)(i.l_, { to: h.Z5c.LOGIN });
         }),
     ),
 );

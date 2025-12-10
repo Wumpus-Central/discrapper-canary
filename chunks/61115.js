@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => C,
+    C: () => A,
     default: () => T,
 }),
     n(388685);
@@ -7,7 +7,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(481060),
     c = n(493773),
     u = n(600164),
@@ -77,7 +77,7 @@ function T(e) {
     let { questId: t, survey: n, transitionState: a, onClose: o, onSubmit: f } = e,
         p = (0, _.B4)(t),
         [b, O] = i.useState(0),
-        [T, C] = (0, l.q_F)(() => ({
+        [T, A] = (0, l.q_F)(() => ({
             from: { width: "0%" },
             config: { duration: S },
         })),
@@ -94,7 +94,7 @@ function T(e) {
                     );
         },
         R = async (e) => {
-            1 === e && (await C({ width: "100%" }), o());
+            1 === e && (await A({ width: "100%" }), o());
         };
     return (
         (0, c.ZP)(() => {
@@ -147,7 +147,7 @@ function T(e) {
                                 className: g.modalContent,
                                 children: n.choices.map((e) =>
                                     (0, r.jsx)(
-                                        A,
+                                        C,
                                         {
                                             choice: e,
                                             onClick: P,
@@ -205,7 +205,7 @@ function T(e) {
         })
     );
 }
-function A(e) {
+function C(e) {
     let { className: t, choice: n, onClick: i } = e;
     return (0, r.jsxs)(l.P3F, {
         className: o()(g.choiceContainer, t),
@@ -219,7 +219,7 @@ function A(e) {
         ],
     });
 }
-function C(e) {
+function A(e) {
     let t = !1;
     (0, l.ZDy)(
         async () => {

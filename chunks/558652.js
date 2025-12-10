@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(78606),
     p = n(710914),
     f = n(395995),
-    h = n(324805),
-    g = n(388032),
+    g = n(324805),
+    h = n(388032),
     m = n(872058);
 let _ = [],
     b = c.tR.SORT,
@@ -21,10 +21,10 @@ let _ = [],
             v = i.useMemo(() => {
                 var e, t;
                 return null !==
-                    ((t = n.get(b)), (e = (0, o.Ew)(t) ? null : Object.values(h.yq).find((e) => e === t) || null)) &&
+                    ((t = n.get(b)), (e = (0, o.Ew)(t) ? null : Object.values(g.yq).find((e) => e === t) || null)) &&
                     void 0 !== e
                     ? e
-                    : h.yq.SUGGESTED;
+                    : g.yq.SUGGESTED;
             }, [n]),
             y = i.useMemo(() => {
                 var e;
@@ -33,7 +33,7 @@ let _ = [],
                         if ((0, o.Ew)(e)) return null;
                         let t = e
                             .split(",")
-                            .map((e) => (0, h.fI)(e))
+                            .map((e) => (0, g.fI)(e))
                             .filter(s.lm);
                         return t.length > 0 ? t : null;
                     })(n.get(E)))
@@ -147,7 +147,7 @@ let _ = [],
                 t,
                 () => ({
                     resetSortingFiltering: () => {
-                        P(), I(h.yq.SUGGESTED);
+                        P(), I(g.yq.SUGGESTED);
                     },
                 }),
                 [P, I],
@@ -159,7 +159,7 @@ let _ = [],
                         children: [
                             (0, r.jsx)(a.Heading, {
                                 variant: "heading-lg/medium",
-                                children: g.intl.string(g.t.giYD00),
+                                children: h.intl.string(h.t.giYD00),
                             }),
                             (0, r.jsxs)("div", {
                                 className: m.headingControls,

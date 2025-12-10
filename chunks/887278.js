@@ -2,7 +2,7 @@ n.d(t, {
     $1: () => b,
     YT: () => I,
     pn: () => T,
-    u2: () => A,
+    u2: () => C,
 }),
     n(415506);
 var r = n(570140),
@@ -140,7 +140,7 @@ function T(e) {
         t.cancelAttachToProcess(e);
     });
 }
-function A() {
+function C() {
     return v()
         .then((e) => (null != e.findSteamProcess ? e.findSteamProcess() : null))
         .catch(() => null);

@@ -25,7 +25,7 @@ function f(e, t, n) {
     if ((0, l.OV)() && "expandedKeys" in t) {
         let e = t.keyMap.get(f.key);
         if (null != e) {
-            var E, b, y, O, v, S, I, T, A, C;
+            var E, b, y, O, v, S, I, T, C, A;
             let n =
                 (null == (E = e.props) ? void 0 : E.UNSTABLE_childItems) ||
                 (null == (y = e.props) || null == (b = y.children) ? void 0 : b.length) > t.userColumnCount;
@@ -49,7 +49,7 @@ function f(e, t, n) {
                 "aria-setsize":
                     e.level > 1
                         ? (null !=
-                          (A =
+                          (C =
                               null ==
                               (O = (0, i.s)(
                                   null != (T = null == (v = t.keyMap.get(e.parentKey)) ? void 0 : v.childNodes)
@@ -58,10 +58,10 @@ function f(e, t, n) {
                               ))
                                   ? void 0
                                   : O.indexOfType)
-                              ? A
-                              : 0) + 1
-                        : (null != (C = null == (S = (0, i.s)(t.collection.body.childNodes)) ? void 0 : S.indexOfType)
                               ? C
+                              : 0) + 1
+                        : (null != (A = null == (S = (0, i.s)(t.collection.body.childNodes)) ? void 0 : S.indexOfType)
+                              ? A
                               : 0) + 1,
             };
         }

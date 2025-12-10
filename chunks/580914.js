@@ -86,8 +86,8 @@ let B = (0, _.IC)(90),
                 heroBannerAnimated: q,
                 heroBannerRive: Q,
             } = (0, E.hr)(U),
-            J = null != (t = null == z ? void 0 : z.responsive) && t,
-            X = null == z ? void 0 : z.backgroundStyle,
+            X = null != (t = null == z ? void 0 : z.responsive) && t,
+            J = null == z ? void 0 : z.backgroundStyle,
             $ = null != Q,
             ee = R === k.AW.ORBS,
             et = null != N && N.isOrbsExclusive,
@@ -134,16 +134,16 @@ let B = (0, _.IC)(90),
                       (0, r.jsx)("div", {
                           className: o()(L.banner, {
                               [L.rivBanner]: $,
-                              [L.responsive]: J,
+                              [L.responsive]: X,
                           }),
-                          style: null != X ? { background: X } : void 0,
+                          style: null != J ? { background: J } : void 0,
                           children:
                               null != Y &&
                               (0, r.jsx)(y.Z, {
                                   bannerStatic: Y,
                                   bannerAnimated: q,
                                   bannerRive: Q,
-                                  isResponsive: J,
+                                  isResponsive: X,
                                   eventTargetRef: D,
                               }),
                       }),
@@ -162,7 +162,7 @@ let B = (0, _.IC)(90),
                                             }),
                                     })
                                   : (0, r.jsxs)("div", {
-                                        className: o()(L.heroHeaderContainer, { [L.responsive]: J }),
+                                        className: o()(L.heroHeaderContainer, { [L.responsive]: X }),
                                         children: [
                                             n
                                                 ? (0, r.jsx)("div", {

@@ -28,9 +28,9 @@ let v = "VoiceChannelStatusModal",
     S = 500;
 function I(e) {
     let { channel: t, transitionState: n, sourceAnalyticsLocations: I, onClose: T } = e,
-        A = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        C = (0, o.e7)([m.Z], () => m.Z.getMediaSessionId()),
-        [N, P] = i.useState(null != A ? A : ""),
+        C = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        A = (0, o.e7)([m.Z], () => m.Z.getMediaSessionId()),
+        [N, P] = i.useState(null != C ? C : ""),
         [R, D] = i.useState(!1),
         [w, x] = i.useState(null),
         L = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
@@ -54,7 +54,7 @@ function I(e) {
             return { hasErrors: !1 };
         },
         U = async (e) => {
-            N === A && T(), null == e || e.preventDefault(), x(null), D(!0);
+            N === C && T(), null == e || e.preventDefault(), x(null), D(!0);
             let n = N.length,
                 r = N.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
                 i = _.ZP.parse(t, N),
@@ -66,7 +66,7 @@ function I(e) {
                         ? (g.default.track(E.rMx.VOICE_CHANNEL_TOPIC_SET, {
                               guild_id: t.guild_id,
                               channel_id: t.id,
-                              media_session_id: C,
+                              media_session_id: A,
                               raw_length: n,
                               text_length: r,
                               location_stack: I,

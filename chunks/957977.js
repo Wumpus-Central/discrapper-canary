@@ -2,7 +2,7 @@ n.d(t, {
     DQ: () => v,
     Gu: () => N,
     Jb: () => T,
-    jm: () => A,
+    jm: () => C,
 }),
     n(953529);
 var r = n(54381),
@@ -300,7 +300,7 @@ function T() {
         "aria-disabled": t,
     };
 }
-function A(e) {
+function C(e) {
     let { isSelected: t, label: n } = e;
     return {
         role: "radio",
@@ -309,7 +309,7 @@ function A(e) {
         "aria-checked": t,
     };
 }
-function C(e) {
+function A(e) {
     let {
             itemInfoClassName: t,
             itemTitleClassName: n,
@@ -324,11 +324,11 @@ function C(e) {
             options: y = [],
             "aria-labelledby": v,
             orientation: S,
-            withTransparentBackground: A,
+            withTransparentBackground: C,
         } = e,
-        C = i.useContext(u.z),
+        A = i.useContext(u.z),
         N = T({
-            labelledBy: null != v ? v : null == C ? void 0 : C.labelId,
+            labelledBy: null != v ? v : null == A ? void 0 : A.labelId,
             orientation: S,
             isDisabled: g,
         }),
@@ -340,10 +340,10 @@ function C(e) {
         E(h({}, R), {
             ref: P,
             className: o()(_.container, l),
-            id: null == C ? void 0 : C.controlId,
-            "aria-describedby": null == C ? void 0 : C.describedById,
-            "aria-errormessage": null == C ? void 0 : C.errorMessageId,
-            "aria-invalid": (null == C ? void 0 : C.errorMessageId) != null,
+            id: null == A ? void 0 : A.controlId,
+            "aria-describedby": null == A ? void 0 : A.describedById,
+            "aria-errormessage": null == A ? void 0 : A.errorMessageId,
+            "aria-invalid": (null == A ? void 0 : A.errorMessageId) != null,
             children: y.map((e) =>
                 (0, r.jsx)(
                     I,
@@ -361,7 +361,7 @@ function C(e) {
                         radioItemIconClassName: e.radioItemIconClassName,
                         collapsibleClassName: s,
                         radioBarClassName: e.radioBarClassName,
-                        withTransparentBackground: A,
+                        withTransparentBackground: C,
                     },
                     e.value,
                 ),
@@ -377,6 +377,6 @@ function N(e) {
         description: n,
         required: i,
         errorMessage: a,
-        children: (0, r.jsx)(C, h({}, o)),
+        children: (0, r.jsx)(A, h({}, o)),
     });
 }

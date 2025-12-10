@@ -1,12 +1,12 @@
 n.d(t, {
     $H: () => b,
-    $J: () => C,
+    $J: () => A,
     Ah: () => W,
     Bz: () => P,
     DR: () => _,
     Dr: () => g,
     Gs: () => d,
-    HJ: () => A,
+    HJ: () => C,
     MC: () => c,
     Mo: () => f,
     Nj: () => h,
@@ -88,8 +88,8 @@ let v = y([i.X.PLAY_ON_XBOX, i.X.PLAY_ON_PLAYSTATION]),
     S = y([i.X.WATCH_VIDEO]),
     I = y([i.X.WATCH_VIDEO_ON_MOBILE]),
     T = y([i.X.WATCH_VIDEO, i.X.WATCH_VIDEO_ON_MOBILE]),
-    A = (e) => I(e) && !S(e);
-function C(e) {
+    C = (e) => I(e) && !S(e);
+function A(e) {
     return v(e);
 }
 let N = (e, t) => {

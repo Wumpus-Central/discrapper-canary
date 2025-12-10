@@ -59,7 +59,7 @@ function T(e) {
     if (null == n) return !1;
     O(n);
 }
-function A(e) {
+function C(e) {
     let { guildId: t, decisionId: n, suspiciousMentionActivityUntil: r } = e;
     return (
         (g[t] = {
@@ -70,7 +70,7 @@ function A(e) {
         !0
     );
 }
-function C(e) {
+function A(e) {
     let { guildId: t } = e;
     return delete g[t], !0;
 }
@@ -139,6 +139,6 @@ let D = new R(a.Z, {
     MESSAGE_EDIT_FAILED_AUTOMOD: S,
     REMOVE_AUTOMOD_MESSAGE_NOTICE: I,
     MESSAGE_END_EDIT: T,
-    AUTO_MODERATION_MENTION_RAID_DETECTION: A,
-    AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: C,
+    AUTO_MODERATION_MENTION_RAID_DETECTION: C,
+    AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: A,
 });

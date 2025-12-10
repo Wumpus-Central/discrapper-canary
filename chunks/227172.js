@@ -25,8 +25,8 @@ var r = n(54381),
     S = n(192918),
     I = n(22211),
     T = n(561308),
-    A = n(919394),
-    C = n(438226),
+    C = n(919394),
+    A = n(438226),
     N = n(31074),
     P = n(206295),
     R = n(91140),
@@ -82,14 +82,14 @@ let k = {
                     if ((null == V ? void 0 : V.src) == null || null == b || null == H) return;
                     let t =
                         er > 0
-                            ? (0, C.VY)({
+                            ? (0, A.VY)({
                                   entry: y,
                                   channel: b,
                                   users: [et, en],
                                   countOthers: er,
                               })
-                            : (0, C.HV)(y, b, H);
-                    return (0, A.SO)({
+                            : (0, A.HV)(y, b, H);
+                    return (0, C.SO)({
                         entry: y,
                         applicationImageSrc: null == V ? void 0 : V.src,
                         avatarSrcs: ee.map((e) => e.getAvatarURL(b.guild_id, 128)),
@@ -187,7 +187,7 @@ let k = {
                         user: H,
                         channel: b,
                         generateReactionImage: ed,
-                        reactionImageAltText: (0, C.IS)(y, H),
+                        reactionImageAltText: (0, A.IS)(y, H),
                         entry: y,
                         buttons: em,
                     }),

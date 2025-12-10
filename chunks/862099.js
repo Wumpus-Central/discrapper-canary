@@ -16,8 +16,8 @@ var r,
     d = n(471445),
     p = n(986332),
     f = n(662842),
-    h = n(703656),
-    g = n(922482),
+    g = n(703656),
+    h = n(922482),
     m = n(565799),
     _ = n(501655),
     b = n(192079),
@@ -182,17 +182,17 @@ function F(e) {
         o = null != a ? (0, x.m)(a, !0) : null,
         u = (0, L.nE)(n),
         p = (0, d.KS)(u),
-        { startTime: f, endTime: h } = (0, Z.ZP)(n),
+        { startTime: f, endTime: g } = (0, Z.ZP)(n),
         {
-            startDateTimeString: g,
+            startDateTimeString: h,
             upcomingEvent: m,
             diffMinutes: _,
-        } = (0, R.ub)(f.toISOString(), null == h ? void 0 : h.toISOString()),
+        } = (0, R.ub)(f.toISOString(), null == g ? void 0 : g.toISOString()),
         b = m
             ? _ > 0
                 ? U.intl.formatToPlainString(U.t.PQlCWk, { minutes: _ })
                 : U.intl.string(U.t.WINqKV)
-            : U.intl.formatToPlainString(U.t.DC6h3G, { date: g });
+            : U.intl.formatToPlainString(U.t.DC6h3G, { date: h });
     return (
         l.useEffect(() => {
             I.default.track(k.rMx.CHANNEL_NOTICE_VIEWED, {
@@ -331,7 +331,7 @@ function W(e) {
             text: n,
             fullWidth: !0,
             onClick: () => {
-                null != t && null != t.getGuildId() && ((0, g.Cq)(t), (0, h.XU)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, h.Cq)(t), (0, g.XU)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -377,19 +377,19 @@ function Q(e) {
         d = l.useMemo(() => n.slice(0, 3), [n]),
         p = (0, o.e7)([v.Z], () => v.Z.can(k.Plq.CONNECT, t)),
         f = (0, O.Z)(t.id),
-        h = U.intl.string(U.t.VJlc0S);
+        g = U.intl.string(U.t.VJlc0S);
     switch (r) {
         case 1:
-            h = U.intl.string(U.t.VJlc0S);
+            g = U.intl.string(U.t.VJlc0S);
             break;
         case 2:
-            (h = U.intl.string(U.t.ZYO5OK)),
+            (g = U.intl.string(U.t.ZYO5OK)),
                 (null == f ? void 0 : f.speaker)
-                    ? (h = U.intl.string(U.t["/cnSFc"]))
-                    : null != f && (h = U.intl.string(U.t.btSGOj));
+                    ? (g = U.intl.string(U.t["/cnSFc"]))
+                    : null != f && (g = U.intl.string(U.t.btSGOj));
             break;
         case 3:
-            h = U.intl.string(U.t.wBoE6L);
+            g = U.intl.string(U.t.wBoE6L);
             break;
         default:
             (0, C.vE)(r);
@@ -421,7 +421,7 @@ function Q(e) {
                       null == f &&
                       (0, i.jsx)(W, {
                           channel: t,
-                          label: h,
+                          label: g,
                       }),
               ],
           });
@@ -442,15 +442,15 @@ let J = l.memo(function (e) {
             [s, l],
         ),
         d = null,
-        h = null != s && null != r && !c;
+        g = null != s && null != r && !c;
     if (n) return (0, i.jsx)(f.Z, { guild: t });
     null == l || u
-        ? h &&
+        ? g &&
           (d = (0, i.jsx)(q, {
               stageInstance: s,
               channel: r,
           }))
-        : l.entity_type === M.WX.STAGE_INSTANCE && h
+        : l.entity_type === M.WX.STAGE_INSTANCE && g
           ? (d = (0, i.jsx)(q, {
                 stageInstance: s,
                 channel: r,
@@ -463,8 +463,8 @@ let J = l.memo(function (e) {
                   guildEvent: l,
                   channel: r,
               }));
-    let g = t.features.has(k.GuildFeatures.COMMUNITY);
-    if (null == d && null != a && !g) {
+    let h = t.features.has(k.GuildFeatures.COMMUNITY);
+    if (null == d && null != a && !h) {
         let { upcomingEvent: e, noticeType: t } = a;
         d = (0, i.jsx)(F, {
             guildEvent: e,

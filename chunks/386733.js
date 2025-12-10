@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function A(e) {
     }
     return e;
 }
-function C(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,7 +67,7 @@ function N(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -84,7 +84,7 @@ let P = (e) => {
             s = o
                 ? (0, r.jsx)(
                       c.qEK,
-                      A(
+                      C(
                           {
                               src: i,
                               "aria-label": t.username,
@@ -102,7 +102,7 @@ let P = (e) => {
             text: v.intl.string(v.t.UnKHdo),
             shouldShow: !o,
             tooltipContentClassName: S.unsentTooltipContent,
-            children: (e) => (0, r.jsx)("div", N(A({ className: S.userAvatarProgressBarUnit }, e), { children: s })),
+            children: (e) => (0, r.jsx)("div", N(C({ className: S.userAvatarProgressBarUnit }, e), { children: s })),
         });
     },
     R = (e) => {
@@ -157,7 +157,7 @@ let P = (e) => {
         _.default.track(O.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, c.ZDy)(async () => {
                 let { default: e } = await n.e("47435").then(n.bind(n, 204387));
-                return (n) => (0, r.jsx)(e, N(A({}, n), { sourceAnalyticsLocations: t }));
+                return (n) => (0, r.jsx)(e, N(C({}, n), { sourceAnalyticsLocations: t }));
             });
     },
     x = (e) => {
@@ -174,8 +174,8 @@ let P = (e) => {
             e === h.Fe.REDEEMED && _.redeemed++, e === h.Fe.CONVERTED && (_.redeemed++, _.converted++);
         });
         let T = _.sent === E.Q,
-            A = m.Z.getArticleURL(O.BhN.REFERRAL_PROGRAM),
-            { analyticsLocations: C } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+            C = m.Z.getArticleURL(O.BhN.REFERRAL_PROGRAM),
+            { analyticsLocations: A } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
             N = i.useRef(null),
             P = (_.sent / E.Q) * 100,
             R = (0, r.jsxs)("div", {
@@ -201,7 +201,7 @@ let P = (e) => {
                             (0, r.jsx)(c.Text, {
                                 variant: t ? "text-sm/normal" : "text-lg/medium",
                                 children: (0, y.Hg)({
-                                    helpdeskArticle: A,
+                                    helpdeskArticle: C,
                                     referralsStatuses: _,
                                 }),
                             }),
@@ -213,7 +213,7 @@ let P = (e) => {
                                     "data-migration-pending": !0,
                                     className: S.expandedProgressBarSelectFriendsCTA,
                                     color: l.Tt.CUSTOM,
-                                    onClick: () => w({ analyticsLocations: C }),
+                                    onClick: () => w({ analyticsLocations: A }),
                                     onlyShineOnHover: !0,
                                     children: (0, r.jsxs)("div", {
                                         className: S.expandedProgressBarSelectFriendsCTAInner,
@@ -234,7 +234,7 @@ let P = (e) => {
             }),
             x = _.redeemed === E.Q;
         return (0, r.jsx)(d.Gt, {
-            value: C,
+            value: A,
             children: (0, r.jsx)("div", {
                 className: o()({
                     [S.containerWithGlowWithoutBanner]: x,

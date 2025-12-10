@@ -71,8 +71,8 @@ function S(e, t) {
 function I(e) {
     let { user: t, currentUser: n, guildId: y, onOpenUserProfileModal: v, onClose: I } = e,
         { analyticsLocations: T } = (0, s.ZP)(),
-        { trackUserProfileAction: A } = (0, u.KZ)(),
-        { live: C, stream: N } = (0, d.Z)(t.id),
+        { trackUserProfileAction: C } = (0, u.KZ)(),
+        { live: A, stream: N } = (0, d.Z)(t.id),
         { voiceChannel: P, voiceActivity: R } = (0, f.Z)({
             userId: t.id,
             guildId: y,
@@ -94,14 +94,14 @@ function I(e) {
                     });
                 return (
                     null != N && i.push((0, r.jsx)(m.Z, O({ stream: N }, a), "stream")),
-                    C.forEach((e, t) => {
+                    A.forEach((e, t) => {
                         i.push((0, r.jsx)(_.Z, O({ activity: e }, a), "live-".concat(t)));
                     }),
                     L && i.push((0, r.jsx)(h.Z, O({ voiceChannel: P }, a), "voice")),
                     i
                 );
             },
-            [n, L, C, I, N, t, P],
+            [n, L, A, I, N, t, P],
         );
     return w
         ? null
@@ -109,7 +109,7 @@ function I(e) {
               renderCards: j,
               heading: b.intl.string(b.t.J6STd9),
               onExpand: () => {
-                  A({
+                  C({
                       action: "PRESS_SHOW_MORE_ACTIVITY",
                       analyticsLocations: T,
                   }),

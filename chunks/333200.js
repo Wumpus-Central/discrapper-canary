@@ -89,8 +89,8 @@ function m(e) {
             setIsOpen: S,
             refs: I,
             floatingStyles: T,
-            getFloatingProps: A,
-            getReferenceProps: C,
+            getFloatingProps: C,
+            getReferenceProps: A,
             transitionStyles: N,
         } = (0, s.C)();
     return (0, r.jsxs)(
@@ -117,7 +117,7 @@ function m(e) {
                             placeholder: O,
                         },
                         _,
-                        C(),
+                        A(),
                     ),
                 ),
                 v &&
@@ -130,7 +130,7 @@ function m(e) {
                                     className: l.selectDropdown,
                                     style: u({}, T, N),
                                 },
-                                A(),
+                                C(),
                             ),
                             {
                                 children: (0, r.jsx)(a.px, {

@@ -77,8 +77,8 @@ function E(e) {
             isFocused: S,
             menuItemProps: I,
             action: T,
-            onClose: A,
-            onFocus: C,
+            onClose: C,
+            onFocus: A,
             className: N,
             focusedClassName: P,
             subMenuIconClassName: R,
@@ -92,17 +92,17 @@ function E(e) {
             (e) => {
                 var t;
                 if ((null == j || j({ type: c.U.DEFAULT }), null == T)) return !1;
-                (e.shiftKey && D) || w || A(),
+                (e.shiftKey && D) || w || C(),
                     e.persist(),
                     null == L || L(),
                     (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => T(e));
             },
-            [T, A, L, D, w, j],
+            [T, C, L, D, w, j],
         );
     return (
         i.useEffect(() => {
-            S && ((0, u.F)(M), null == C || C());
-        }, [S, C]),
+            S && ((0, u.F)(M), null == A || A());
+        }, [S, A]),
         (0, r.jsxs)(
             s.P3F,
             g(

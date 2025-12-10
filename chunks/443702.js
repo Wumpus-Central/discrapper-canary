@@ -22,7 +22,7 @@ var r = n(54381),
     S = n(981631),
     I = n(388032),
     T = n(61365);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -164,5 +164,5 @@ function w() {
     if (!e.shouldRenderBillingSettings) return (0, r.jsx)(R, {});
     let { shouldRenderBillingSettings: t } = e,
         n = N(e, ["shouldRenderBillingSettings"]);
-    return (0, r.jsx)(D, C({}, n));
+    return (0, r.jsx)(D, A({}, n));
 }

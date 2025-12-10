@@ -6,13 +6,13 @@ n.d(t, {
 var r = n(54381),
     i = n(473749),
     l = n(481060),
-    a = n(239091),
-    o = n(324701),
+    o = n(239091),
+    a = n(324701),
     s = n(550727),
     c = n(388032);
 function u(e) {
     let { createReminder: t } = e,
-        a = i.useCallback(() => {
+        o = i.useCallback(() => {
             (0, l.ZDy)(async () => {
                 let { default: e } = await n.e("43866").then(n.bind(n, 423639));
                 return (n) => {
@@ -82,20 +82,20 @@ function u(e) {
                     {
                         id: "create-reminder-custom",
                         label: c.intl.string(c.t.OLA8Zi),
-                        action: a,
+                        action: o,
                     },
                     "custom",
                 ),
             ),
             e
         );
-    }, [t, a]);
+    }, [t, o]);
 }
 function d(e) {
     let { message: t, label: n } = e,
         i = u({
             createReminder: (e) =>
-                (0, o.z)({
+                (0, a.z)({
                     channelId: t.channel_id,
                     messageId: t.id,
                     dueAt: e,
@@ -103,7 +103,7 @@ function d(e) {
         });
     return (0, r.jsx)(l.v2r, {
         navId: "message-reminder-create",
-        onClose: a.Zy,
+        onClose: o.Zy,
         "aria-label": c.intl.string(c.t.mJ3P0N),
         onSelect: () => null,
         children: (0, r.jsx)(l.kSQ, {

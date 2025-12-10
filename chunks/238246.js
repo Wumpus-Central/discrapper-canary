@@ -26,8 +26,8 @@ var r,
     S = n(906732),
     I = n(999203),
     T = n(260035),
-    A = n(686546),
-    C = n(950796),
+    C = n(686546),
+    A = n(950796),
     N = n(587061),
     P = n(248687),
     R = n(280049),
@@ -198,7 +198,7 @@ class Q extends (r = a.Component) {
                                     className: l,
                                     children: (0, i.jsxs)(O, {
                                         children: [
-                                            (0, i.jsx)(A.Co, {}),
+                                            (0, i.jsx)(C.Co, {}),
                                             (0, i.jsx)(w.Wu, {
                                                 appContext: null != E ? E : F.IlC.POPOUT,
                                                 renderWindow: o,
@@ -212,7 +212,7 @@ class Q extends (r = a.Component) {
                                                                         (0, i.jsx)(p.f6W, {
                                                                             theme: _,
                                                                             children: (e) =>
-                                                                                (0, i.jsx)(C.TF, {
+                                                                                (0, i.jsx)(A.TF, {
                                                                                     windowKey: n,
                                                                                     className: s()(e, H.titleBar),
                                                                                 }),

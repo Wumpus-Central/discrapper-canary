@@ -14,8 +14,8 @@ let f = function (e) {
             rows: t,
             renderRow: n,
             renderSection: f,
-            hasSearchQuery: h,
-            sectionFilter: g,
+            hasSearchQuery: g,
+            sectionFilter: h,
             footer: m,
             renderSectionFooter: _,
         } = e,
@@ -27,8 +27,8 @@ let f = function (e) {
             async scrollToStart() {},
             async scrollToEnd() {},
         }),
-        v = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
-        y = E || h || v,
+        v = h !== d.pJs.ONLINE && h !== d.pJs.ALL,
+        y = E || g || v,
         I = i.useMemo(
             () =>
                 t.map((e, t) =>

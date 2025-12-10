@@ -2,7 +2,7 @@ n.r(t),
     n.d(t, {
         VideoQuestConfigContext: () => B,
         VideoQuestModalContext: () => F,
-        default: () => Y,
+        default: () => q,
     }),
     n(388685);
 var r = n(54381),
@@ -31,8 +31,8 @@ var r = n(54381),
     j = n(589313),
     P = n(877242),
     D = n(165317),
-    R = n(449788),
-    T = n(874010),
+    T = n(449788),
+    R = n(874010),
     I = n(656357),
     N = n(267322),
     A = n(684245),
@@ -101,12 +101,12 @@ function U(e) {
             videoSessionId: N,
             impressionRef: B,
             parentModalOpenStartClockTime: U,
-            sourceQuestContent: Y,
+            sourceQuestContent: q,
         } = e,
-        q = (0, S.il)(g),
+        Y = (0, S.il)(g),
         H = (0, b.tP)(g),
         Q = (0, E.aM)(),
-        [G, K] = o.useState(q.progressSeconds),
+        [G, K] = o.useState(Y.progressSeconds),
         [W, z] = o.useState(142),
         { variant: X, enabled: $ } = h.EO.useConfig({ location: w.dr.VIDEO_MODAL }),
         J = null == (n = g.config.taskConfigV2) || null == (t = n.tasks) ? void 0 : t[c.X.WATCH_VIDEO];
@@ -121,7 +121,7 @@ function U(e) {
         el = (0, A.e)({
             quest: g,
             onClose: a,
-            sourceQuestContent: Y,
+            sourceQuestContent: q,
             impressionId: Q,
         }),
         ei = (0, u.e7)([p.Z], () => p.Z.getState().theme),
@@ -129,12 +129,12 @@ function U(e) {
         es = o.useMemo(
             () => ({
                 quest: g,
-                sourceQuestContent: Y,
+                sourceQuestContent: q,
                 videoSessionId: N,
                 isPortrait: et,
                 onClose: a,
             }),
-            [g, Y, N, et, a],
+            [g, q, N, et, a],
         );
     return (0, r.jsx)(F.Provider, {
         value: es,
@@ -158,7 +158,7 @@ function U(e) {
                             icon: (e) =>
                                 (0, r.jsx)(
                                     d.Dio,
-                                    Z(V({}, e), { color: d.TVs.colors.CONTROL_TEXT_OVERLAY_SECONDARY_DEFAULT }),
+                                    Z(V({}, e), { color: d.TVs.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT }),
                                 ),
                             "aria-label": k.intl.string(k.t.cpT0Cq),
                             onClick: a,
@@ -193,7 +193,7 @@ function U(e) {
                                                           className: i()(M.contentHeaderLogotype, M.accentOnHover),
                                                           src: (0, C.fh)(g, C.eC.LOGO_TYPE, ea).url,
                                                       }),
-                                                      (0, r.jsx)(T.Z, {}),
+                                                      (0, r.jsx)(R.Z, {}),
                                                       (0, r.jsxs)("div", {
                                                           className: M.questHeading,
                                                           children: [
@@ -235,7 +235,7 @@ function U(e) {
                                                         children: [
                                                             H ? null : (0, r.jsx)(D.Z, { tooltipPosition: "top" }),
                                                             (0, r.jsx)(P.Z, {}),
-                                                            !eo && (0, r.jsx)(R.Z, { floatRight: !0 }),
+                                                            !eo && (0, r.jsx)(T.Z, { floatRight: !0 }),
                                                         ],
                                                     })
                                                   : null,
@@ -254,7 +254,7 @@ function U(e) {
                                                       }),
                                                       $
                                                           ? (0, r.jsx)(x.Z, { handlePrimaryCtaClick: el })
-                                                          : (0, r.jsx)(R.Z, {}),
+                                                          : (0, r.jsx)(T.Z, {}),
                                                   ],
                                               }),
                                           ],
@@ -280,7 +280,7 @@ function U(e) {
                                                       [M.contentFooterButtonContV2]: $,
                                                   }),
                                                   children: [
-                                                      !eo && (0, r.jsx)(R.Z, {}),
+                                                      !eo && (0, r.jsx)(T.Z, {}),
                                                       (0, r.jsx)(j.Z, {}),
                                                       $ ? (0, r.jsx)(x.Z, { handlePrimaryCtaClick: el }) : null,
                                                   ],
@@ -295,7 +295,7 @@ function U(e) {
         }),
     });
 }
-function Y(e) {
+function q(e) {
     var { questId: t, overrideQuest: n, autoplay: l, openStartClockTime: i } = e,
         a = (function (e, t) {
             if (null == e) return {};

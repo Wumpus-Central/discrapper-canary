@@ -25,13 +25,13 @@ function y(e) {
         I = i.useCallback(() => {
             f.Z.shouldShowModal() && S();
         }, [S]),
-        { submitting: T, wasSubmitting: A } = (0, h.Z)({
+        { submitting: T, wasSubmitting: C } = (0, h.Z)({
             applicationId: n.id,
             context: t,
             launchingComponentId: v,
             onSubmissionComplete: S,
         }),
-        [C, N] = i.useState(!1),
+        [A, N] = i.useState(!1),
         P = (0, s.Qv)({
             applicationId: n.id,
             context: t,
@@ -49,7 +49,7 @@ function y(e) {
             commandName: R,
             autoDismissOnClick: P === s.JS.LEAVE || (0, c.g)(n),
             launchingComponentId: v,
-            submitting: null != A ? A : T,
+            submitting: null != C ? C : T,
             onConfirmActivityLaunchChecksAlertOpen: I,
         }),
         { disabled: L, reason: j } = (0, _.Z)({
@@ -65,7 +65,7 @@ function y(e) {
             size: "md",
             variant: w,
             disabled: L,
-            loading: C,
+            loading: A,
             onClick: () => {
                 N(!0),
                     D(),

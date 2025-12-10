@@ -141,11 +141,11 @@ function T(e) {
         r = c.default.getId();
     return E(t, (e) => e.addReactionBatch(n, r));
 }
-function A(e) {
+function C(e) {
     let { messageId: t } = e;
     return E(t, (e) => e.set("reactions", []));
 }
-function C(e) {
+function A(e) {
     let { messageId: t, emoji: n } = e;
     return E(t, (e) => e.removeReactionsForEmoji(n));
 }
@@ -225,7 +225,7 @@ let x = new w(a.Z, {
     MESSAGE_REACTION_ADD: I,
     MESSAGE_REACTION_ADD_MANY: T,
     MESSAGE_REACTION_REMOVE: I,
-    MESSAGE_REACTION_REMOVE_ALL: A,
-    MESSAGE_REACTION_REMOVE_EMOJI: C,
+    MESSAGE_REACTION_REMOVE_ALL: C,
+    MESSAGE_REACTION_REMOVE_EMOJI: A,
     CONNECTION_OPEN: y,
 });

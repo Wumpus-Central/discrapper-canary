@@ -49,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function A(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,12 +61,12 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -99,7 +99,7 @@ let R = (e) => {
             analyticsSourceLocation: n,
             guild: a,
             buttonText: I,
-            targetBoostedGuildTier: A,
+            targetBoostedGuildTier: C,
             onClose: P = () => {},
             closeLayer: R = () => {},
             pauseAnimation: D = !1,
@@ -135,7 +135,7 @@ let R = (e) => {
         H || (0, f.X8)();
     }, [H]);
     let Y = (0, E.vx)(h.Z.boostSlots),
-        W = null != A ? Math.max((0, E.KK)(a, A), 1) : 1,
+        W = null != C ? Math.max((0, E.KK)(a, C), 1) : 1,
         K = (0, E.aq)({ fractionalState: V }),
         z = async () => {
             F(!0),
@@ -191,9 +191,9 @@ let R = (e) => {
                   children: (e) =>
                       (0, r.jsx)(
                           d.gtL,
-                          C(
+                          A(
                               T(
-                                  C(T({ "data-migration-pending": !0 }, e), {
+                                  A(T({ "data-migration-pending": !0 }, e), {
                                       disabled: !0,
                                       size: u.zx.Sizes.SMALL,
                                       pauseAnimation: D,
@@ -214,7 +214,7 @@ let R = (e) => {
             })
           : (0, r.jsx)(
                 d.gtL,
-                C(
+                A(
                     T(
                         {
                             "data-migration-pending": !0,

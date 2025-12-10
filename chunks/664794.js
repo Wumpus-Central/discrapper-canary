@@ -109,7 +109,7 @@ function O(e) {
                     analyticsLocations: O,
                 }),
         }),
-        A = (0, u.Z)({
+        C = (0, u.Z)({
             user: t,
             guildId: n,
             location: v,
@@ -130,7 +130,7 @@ function O(e) {
                     analyticsLocations: O,
                 }),
         }),
-        C = (0, f.Z)({
+        A = (0, f.Z)({
             user: t,
             guildId: n,
             location: v,
@@ -145,9 +145,9 @@ function O(e) {
         N = [
             [i, I],
             [
-                A,
-                T,
                 C,
+                T,
+                A,
                 (0, f.T)({
                     user: t,
                     guildId: n,

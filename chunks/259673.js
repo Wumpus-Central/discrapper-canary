@@ -11,8 +11,8 @@ let d = (e) => {
     var t, n;
     let { user: d } = e,
         m = s.ZP.canUsePremiumProfileCustomization(d),
-        f = (0, i.cj)([o.Z], () => o.Z.getAllPending()),
-        { pendingAvatar: p } = f,
+        p = (0, i.cj)([o.Z], () => o.Z.getAllPending()),
+        { pendingAvatar: f } = p,
         v = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -33,10 +33,10 @@ let d = (e) => {
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(f, ["pendingAvatar"]),
-        g = (0, a.SD)({
+        })(p, ["pendingAvatar"]),
+        h = (0, a.SD)({
             userId: d.id,
-            image: p,
+            image: f,
         });
     return (0, r.jsx)("div", {
         className: u.container,
@@ -69,7 +69,7 @@ let d = (e) => {
             })({}, v)),
             (n = n =
                 {
-                    pendingAvatar: g,
+                    pendingAvatar: h,
                     user: d,
                     pendingBadges: [(0, c.X)()],
                     canUsePremiumCustomization: m,

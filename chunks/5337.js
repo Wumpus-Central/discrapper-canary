@@ -7,7 +7,7 @@ var r = n(54381),
     l = n(311570),
     a = n(481060),
     s = n(525302),
-    o = n(684263),
+    o = n(216541),
     c = n(333867),
     d = n(221300),
     u = n(766717),
@@ -60,7 +60,7 @@ function b(e, t) {
                     let t = { items: e.bundleItems };
                     return (0, r.jsx)("div", {
                         className: f.bundlePreview,
-                        children: (0, r.jsx)(o.U, {
+                        children: (0, r.jsx)(o.d, {
                             product: t,
                             isPurchased: !1,
                             isHighlighted: !1,

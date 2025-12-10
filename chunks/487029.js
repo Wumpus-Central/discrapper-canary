@@ -51,13 +51,13 @@ function _(e) {
         P = (0, E.j)(),
         Z = i.useRef(null),
         [A, j] = i.useState(void 0),
-        R = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
-        { analyticsLocations: D } = (0, s.ZP)(o.Z.SOUNDBOARD_WHEEL),
+        D = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        { analyticsLocations: R } = (0, s.ZP)(o.Z.SOUNDBOARD_WHEEL),
         w = i.useCallback(
             (e) => {
-                (0, p.GN)(e, n.id, D), v();
+                (0, p.GN)(e, n.id, R), v();
             },
-            [D, n.id, v],
+            [R, n.id, v],
         );
     i.useEffect(() => {
         g.w(), c.DZ.loadIfNecessary();
@@ -79,7 +79,7 @@ function _(e) {
                 properties: {
                     source: b,
                     guild_id: t,
-                    media_session_id: R,
+                    media_session_id: D,
                 },
             },
             { disableTrack: !S },
@@ -87,7 +87,7 @@ function _(e) {
     let k = i.useCallback((e) => {
             (Z.current = e), j(null == e ? void 0 : e.soundId);
         }, []),
-        M = i.useCallback(
+        U = i.useCallback(
             (e) => {
                 if (null == e) return void k(null);
                 let t = x[e];
@@ -95,7 +95,7 @@ function _(e) {
             },
             [k, x],
         ),
-        U = i.useCallback(
+        M = i.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = x[e];
@@ -123,7 +123,7 @@ function _(e) {
     return 0 === x.length
         ? null
         : (0, l.jsx)(s.Gt, {
-              value: D,
+              value: R,
               children: (0, l.jsx)(O.Z, {
                   wheelWidth: _,
                   wheelHeight: m,
@@ -131,8 +131,8 @@ function _(e) {
                   itemHeight: 52,
                   showDeadZoneIndicator: !I,
                   activeItem: A,
-                  onItemSelect: M,
-                  onItemAction: U,
+                  onItemSelect: U,
+                  onItemAction: M,
                   onClose: v,
                   interactive: S,
                   children: L,

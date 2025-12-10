@@ -21,7 +21,7 @@ var r = n(54381),
     v = n(388032),
     S = n(54602);
 function I(e) {
-    var t, n, I, T, A, C, N, P;
+    var t, n, I, T, C, A, N, P;
     let { guildId: R, skuId: D, channel: w } = e,
         x = (0, o.e7)([p.Z], () => p.Z.isFetchingForSKU(D)),
         L = (0, o.e7)([f.Z], () => f.Z.get(D)),
@@ -111,9 +111,9 @@ function I(e) {
                                                 variant: "text-md/bold",
                                                 lineClamp: 1,
                                                 children: (0, _.T4)(
-                                                    null != (A = null == (t = L.price) ? void 0 : t.amount) ? A : 0,
-                                                    null != (C = null == (n = L.price) ? void 0 : n.currency)
-                                                        ? C
+                                                    null != (C = null == (t = L.price) ? void 0 : t.amount) ? C : 0,
+                                                    null != (A = null == (n = L.price) ? void 0 : n.currency)
+                                                        ? A
                                                         : O.pK.USD,
                                                 ),
                                             }),

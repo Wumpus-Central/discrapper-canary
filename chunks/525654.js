@@ -109,8 +109,8 @@
                 m = a && r.java ? "JavaPackage" : E(r.java),
                 I = a ? u : "RuntimeObject",
                 T = /\bJava/.test(m) && r.java,
-                A = T && E(r.environment) == p,
-                C = T ? "a" : "α",
+                C = T && E(r.environment) == p,
+                A = T ? "a" : "α",
                 N = T ? "b" : "β",
                 P = r.document || {},
                 R = r.operamini || r.opera,
@@ -498,7 +498,7 @@
                         (T &&
                             ((w = (t = T.lang.System).getProperty("os.arch")),
                             (B = B || t.getProperty("os.name") + " " + t.getProperty("os.version"))),
-                        A)
+                        C)
                     ) {
                         try {
                             (M = r.require("ringo/engine").version.join(".")), (U = "RingoJS");
@@ -550,7 +550,7 @@
                         /(?:alpha|beta)(?: ?\d)?/i.exec(e + ";" + (j && o.appMinorVersion)) ||
                         (/\bMinefield\b/i.test(e) && "a")) &&
                     ((L = /b/i.test(t) ? "beta" : "alpha"),
-                    (M = M.replace(RegExp(t + "\\+?$"), "") + ("beta" == L ? N : C) + (/\d+\+?/.exec(t) || ""))),
+                    (M = M.replace(RegExp(t + "\\+?$"), "") + ("beta" == L ? N : A) + (/\d+\+?/.exec(t) || ""))),
                 "Fennec" == U || ("Firefox" == U && /\b(?:Android|Firefox OS)\b/.test(B)))
             )
                 U = "Firefox Mobile";

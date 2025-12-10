@@ -52,8 +52,8 @@ var r,
     K = n(120818),
     Y = n(61642),
     q = n(848442),
-    Q = n(53425),
-    X = n(424785),
+    X = n(53425),
+    Q = n(424785),
     J = n(770202),
     $ = n(437621),
     ee = n(428127),
@@ -747,7 +747,7 @@ class ep extends (r = l.PureComponent) {
                                         withGuildIcon: g,
                                     }),
                                     _.threadCount > 0
-                                        ? (0, i.jsx)(Q.Z, {
+                                        ? (0, i.jsx)(X.Z, {
                                               withGuildIcon: g,
                                               channel: j,
                                               sortedThreadIds: _.threadIds,
@@ -764,7 +764,7 @@ class ep extends (r = l.PureComponent) {
                     case eo.d4z.GUILD_STAGE_VOICE:
                         var I, P;
                         return (0, i.jsx)(
-                            X.Z,
+                            Q.Z,
                             {
                                 channel: j,
                                 guild: r,

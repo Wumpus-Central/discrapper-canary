@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(485386),
     I = n(430824),
     T = n(572004),
-    A = n(746878),
-    C = n(285063),
+    C = n(746878),
+    A = n(285063),
     N = n(943362),
     P = n(551452),
     R = n(69626),
@@ -230,7 +230,7 @@ let K = {
                 "code",
                 {
                     className: "inline",
-                    children: (0, A.S)(e, t, n),
+                    children: (0, C.S)(e, t, n),
                 },
                 n.key,
             ),
@@ -240,7 +240,7 @@ let K = {
             let a = () =>
                 (0, r.jsx)("code", {
                     className: o()(U.scrollbarGhostHairline, "hljs"),
-                    children: (0, A.S)(e, t, i),
+                    children: (0, C.S)(e, t, i),
                 });
             return (0, r.jsx)(
                 "pre",
@@ -313,7 +313,7 @@ let K = {
             let i = () => {
                 Y(e.guildId, e.id, e.itemId);
             };
-            return (0, A.k)(e.id)
+            return (0, C.k)(e.id)
                 ? (0, r.jsxs)(
                       m.Z,
                       {
@@ -332,7 +332,7 @@ let K = {
                 : null;
         },
     },
-    timestamp: { react: (e, t, n) => (0, r.jsx)(C.Z, { node: e }, n.key) },
+    timestamp: { react: (e, t, n) => (0, r.jsx)(A.Z, { node: e }, n.key) },
     list: {
         react: (e, t, n) => {
             let i = e.ordered ? "ol" : "ul",
@@ -368,7 +368,7 @@ let K = {
                 _.Z,
                 {
                     guild: i,
-                    children: (0, A.S)(e, t, n),
+                    children: (0, C.S)(e, t, n),
                 },
                 n.key,
             );
@@ -380,7 +380,7 @@ let K = {
                 p.Z,
                 {
                     iconType: e.iconType,
-                    children: (0, A.S)(e, t, n),
+                    children: (0, C.S)(e, t, n),
                 },
                 n.key,
             ),

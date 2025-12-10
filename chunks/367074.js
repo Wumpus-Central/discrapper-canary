@@ -26,19 +26,19 @@ var r = n(913527),
     S = n(1844),
     I = n(474936),
     T = n(981631);
-let A = 10;
-function C(e) {
+let C = 10;
+function A(e) {
     let { experimentEnabled: t, premiumSubscription: n, mostRecentSubscription: r, previousPremiumSubscription: o } = e;
     if (!t) return !1;
     if (null != r && r.status === T.O0b.ENDED) {
         let e = r.endedAt,
             t = r.hasPremiumAtLeast(I.PremiumTypes.TIER_2);
-        if (null != e && t && i()().subtract(A, "days").isBefore(e)) return !1;
+        if (null != e && t && i()().subtract(C, "days").isBefore(e)) return !1;
     }
     if (null != o && o.status === T.O0b.ENDED) {
         let e = o.endedAt,
             t = o.hasPremiumAtLeast(I.PremiumTypes.TIER_2);
-        if (null != e && t && i()().subtract(A, "days").isBefore(e)) return !1;
+        if (null != e && t && i()().subtract(C, "days").isBefore(e)) return !1;
     }
     if (null != n) {
         let e = n.hasPremiumAtLeast(I.PremiumTypes.TIER_2),
@@ -71,14 +71,14 @@ function N() {
         I = Date.now(),
         T = I > S;
     (0, y.Z)({ delay: T ? -1 : S - I });
-    let A = !a.tq || ((0, p.isAndroid)() && s),
-        N = C({
+    let C = !a.tq || ((0, p.isAndroid)() && s),
+        N = A({
             experimentEnabled: i,
             premiumSubscription: d,
             mostRecentSubscription: c,
             previousPremiumSubscription: f,
         }),
-        P = A && N && null == _ && null != r && !n && null == O,
+        P = C && N && null == _ && null != r && !n && null == O,
         { enabled: R } = m.Z.useExperiment(
             { location: "153d31_2" },
             {
@@ -112,7 +112,7 @@ async function P() {
         (await (0, s.ou)()),
         u.Z.hasFetchedSubscriptions() || (await (0, s.jg)());
     let E = u.Z.getMostRecentPremiumTypeSubscription();
-    return C({
+    return A({
         experimentEnabled: o,
         premiumSubscription: u.Z.getPremiumTypeSubscription(),
         mostRecentSubscription: E,

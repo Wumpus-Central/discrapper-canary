@@ -10,17 +10,17 @@ var r = n(54381),
     d = n(563593),
     p = n(981631),
     f = n(388032);
-let h = (0, o.GSL)(u.Z),
-    g = (0, o.GSL)(d.Z),
+let g = (0, o.GSL)(u.Z),
+    h = (0, o.GSL)(d.Z),
     m = new Set([p.TzF.PUSHING, p.TzF.PULLING]),
     _ = Object.freeze({
-        [p.TzF.DONE]: h,
-        [p.TzF.PLANNING]: h,
-        [p.TzF.PREPARING]: h,
+        [p.TzF.DONE]: g,
+        [p.TzF.PLANNING]: g,
+        [p.TzF.PREPARING]: g,
         [p.TzF.PUSHING]: o.rG2,
         [p.TzF.PULLING]: o._8t,
-        [p.TzF.CONFLICT]: h,
-        [p.TzF.ERROR]: h,
+        [p.TzF.CONFLICT]: g,
+        [p.TzF.ERROR]: g,
     });
 class b extends i.PureComponent {
     componentDidMount() {
@@ -80,7 +80,7 @@ class b extends i.PureComponent {
             i = null == e ? { type: p.TzF.DONE } : e,
             l = this.getIsRecentlySynced();
         (m.has(i.type) || l) && (t.id, this.getStop(i, l));
-        let a = l ? g : _[i.type];
+        let a = l ? h : _[i.type];
         return (0, r.jsx)(s.u, {
             text: this.getTooltip(i, l),
             children: (0, r.jsx)(a, { className: n }),

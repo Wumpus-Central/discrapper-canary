@@ -71,7 +71,7 @@ async function O() {
         (null == e ? void 0 : e.commandId) != null &&
         (null == e ? void 0 : e.deviceId) != null &&
         n.push(D(e.type, e.deviceId, e.commandId)),
-        null != t && n.push(C(t));
+        null != t && n.push(A(t));
     try {
         await Promise.all(n);
     } catch (e) {
@@ -126,7 +126,7 @@ function T(e, t, n, r) {
         }),
         y("AUDIO_SETTINGS_UPDATE", e));
 }
-async function A() {
+async function C() {
     let e;
     try {
         let t = null != c.Z.getRTCConnectionId() ? i.o.TRANSFER_EXISTING_CALL : i.o.CREATE_NEW_CALL;
@@ -142,7 +142,7 @@ async function A() {
     }
     return e;
 }
-function C(e) {
+function A(e) {
     return a.tn.del({
         url: h.ANM.CONNECT_REQUEST(e),
         rejectWithError: !1,
@@ -259,6 +259,6 @@ async function D(e, t, n) {
 }
 async function w(e, t, n) {
     await p.Z.maybeShowPTTAlert(e), await O();
-    let r = await A();
+    let r = await C();
     await R(e, t, n, r), (0, m.Z)(n.id, e);
 }

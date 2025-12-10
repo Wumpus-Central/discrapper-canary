@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(54381),
     i = n(473749),
     s = n(990547),
@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(353926),
     h = n(82554),
     g = n(726521),
-    p = n(185625),
-    m = n(314897),
+    m = n(185625),
+    p = n(314897),
     f = n(63063),
     _ = n(981631),
     x = n(388032),
@@ -66,13 +66,13 @@ let I = {
         [h.BM.USER]: x.t.F4jrRW,
         [h.BM.GUILD]: x.t.gH3aMs,
     },
-    y = (e) => {
+    N = (e) => {
         let { title: t, menuType: i } = e,
             l = (e) => {
                 let t = async () => {
-                        await (0, p.yL)(i, e);
+                        await (0, m.yL)(i, e);
                     },
-                    l = async (t) => await (0, p.RV)(i, e, t),
+                    l = async (t) => await (0, m.RV)(i, e, t),
                     o = (e) => {
                         let t = null == e ? void 0 : e.token;
                         i === h.BM.MESSAGE
@@ -125,13 +125,13 @@ let I = {
             ],
         });
     },
-    S = () => {
+    y = () => {
         let [e, t] = i.useState(!0),
             [n, s] = i.useState([]),
-            h = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
+            h = (0, l.e7)([p.default], () => p.default.isAuthenticated()),
             g = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
             j = () => {
-                (0, p.Jj)()
+                (0, m.Jj)()
                     .then((e) => {
                         let {
                             body: { capabilities: n },
@@ -179,7 +179,7 @@ let I = {
                                   null == I[e]
                                       ? null
                                       : (0, r.jsx)(
-                                            y,
+                                            N,
                                             {
                                                 title: x.intl.string(I[e]),
                                                 menuType: e,

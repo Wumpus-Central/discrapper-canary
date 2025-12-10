@@ -126,7 +126,7 @@ function T(e) {
         },
     });
 }
-class A extends i.Component {
+class C extends i.Component {
     render() {
         var e;
         return this.props.upload.item.platform !== d.ow.WEB
@@ -138,7 +138,7 @@ class A extends i.Component {
                 });
     }
 }
-class C extends i.Component {
+class A extends i.Component {
     componentDidMount() {
         _.isPlatformEmbedded && m.ZP.focus();
     }
@@ -170,7 +170,7 @@ class C extends i.Component {
                 },
             ],
             children: [
-                (0, r.jsx)(A, { upload: e }),
+                (0, r.jsx)(C, { upload: e }),
                 (0, r.jsxs)(l.Kqy, {
                     gap: 24,
                     children: [
@@ -246,5 +246,5 @@ class C extends i.Component {
     }
 }
 function N(e) {
-    return e.upload.item.platform !== d.ow.WEB ? null : (0, r.jsx)(C, v(y({}, e), { file: e.upload.item.file }));
+    return e.upload.item.platform !== d.ow.WEB ? null : (0, r.jsx)(A, v(y({}, e), { file: e.upload.item.file }));
 }

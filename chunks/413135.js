@@ -244,14 +244,14 @@ function T(e, t, n, r) {
     }
     return o;
 }
-function A(e, t, n, r) {
+function C(e, t, n, r) {
     return Q(W(t, e.length - n), e, n, r);
 }
-function C(e, t, n, r) {
+function A(e, t, n, r) {
     return Q(K(t), e, n, r);
 }
 function N(e, t, n, r) {
-    return C(e, t, n, r);
+    return A(e, t, n, r);
 }
 function P(e, t, n, r) {
     return Q(q(t), e, n, r);
@@ -497,9 +497,9 @@ function w(e, t, n) {
                     return T(this, e, t, n);
                 case "utf8":
                 case "utf-8":
-                    return A(this, e, t, n);
-                case "ascii":
                     return C(this, e, t, n);
+                case "ascii":
+                    return A(this, e, t, n);
                 case "latin1":
                 case "binary":
                     return N(this, e, t, n);

@@ -34,8 +34,8 @@ var a = n(924301),
 n(375954);
 var p = n(306680),
     f = n(709054),
-    h = n(948053),
-    g = n(518929),
+    g = n(948053),
+    h = n(518929),
     m = n(940893),
     _ = n(144725),
     b = n(797394),
@@ -67,7 +67,7 @@ async function S(e, t, n) {
     let r = _.Z.getHydratedItems(),
         i = e.slice(t, n);
     if (0 === i.length) return;
-    h.Z.loadHydratedAttempt(v(t, n));
+    g.Z.loadHydratedAttempt(v(t, n));
     let l = i.filter((e) => null == r[e.id]),
         a = l
             .filter((e) => e.type === b.Ni.MESSAGE)
@@ -123,7 +123,7 @@ async function S(e, t, n) {
                 guild_id: e.data.guild_id,
                 channel_id: e.data.channel_id,
             }));
-    await h.Z.fetchHydrated(t, n, {
+    await g.Z.fetchHydrated(t, n, {
         messageItems: [...a, ...s],
         summaryItems: o,
         activityItems: c,
@@ -272,7 +272,7 @@ function A(e, t) {
     return null == n || f.default.extractTimestamp(t) > f.default.extractTimestamp(n);
 }
 function Z(e) {
-    return (0, g.VZ)(e);
+    return (0, h.VZ)(e);
 }
 function w(e) {
     var t;
@@ -406,12 +406,12 @@ async function k(e) {
                 f.default.atPreviousMillisecond(n.data.message_id),
             );
     }),
-        await h.Z.clearReadStates(),
-        await h.Z.fetchDehydrated({
+        await g.Z.clearReadStates(),
+        await g.Z.fetchDehydrated({
             isReloading: !0,
             forceRefresh: !0,
         }),
-        await h.Z.reloadICYMITab(),
-        await h.Z.getGuildChannelScores(),
-        h.Z.getRecommendedGuilds();
+        await g.Z.reloadICYMITab(),
+        await g.Z.getGuildChannelScores(),
+        g.Z.getRecommendedGuilds();
 }

@@ -54,8 +54,8 @@ function g(e, t) {
             markers: S,
             onBeforeDismount: I,
         } = e,
-        [T, A] = i.useState(null),
-        C = i.useRef(null),
+        [T, C] = i.useState(null),
+        A = i.useRef(null),
         N = i.useRef(null),
         P = i.useRef(null),
         R =
@@ -109,7 +109,7 @@ function g(e, t) {
             [L, D, S, v],
         ),
         i.useEffect(() => {
-            null == T && m().then((e) => A(e.default));
+            null == T && m().then((e) => C(e.default));
         }, [T, m]),
         i.useEffect(
             () => (
@@ -125,9 +125,9 @@ function g(e, t) {
                             let e = S[o];
                             r = [L ? e.start : null != v ? v : e.start, e.start + e.duration];
                         }
-                        null != C.current &&
+                        null != A.current &&
                             (P.current = i.loadAnimation({
-                                container: C.current,
+                                container: A.current,
                                 renderer: "svg",
                                 loop: !1,
                                 autoplay: !1,
@@ -151,7 +151,7 @@ function g(e, t) {
                 R,
             ),
             className: o()(_.lottieIcon, s ? void 0 : _.lottieIconColors, y),
-            ref: C,
+            ref: A,
         })
     );
 }

@@ -4,7 +4,7 @@ n.r(t),
         getUserSettingsSectionsByWebUserSettings: () => T,
         getWebUserSettingsByUserSettingsSections: () => I,
         openUserSettings: () => O,
-        openUserSettingsFromParsedUrl: () => A,
+        openUserSettingsFromParsedUrl: () => C,
     }),
     n(388685),
     n(35282);
@@ -184,7 +184,7 @@ function T() {
     for (let [n, r] of e.entries()) t.set(r, n);
     return t;
 }
-function A(e) {
+function C(e) {
     let { match: t, urlOrigin: n, analyticsLocations: r } = e;
     v({
         section: t.section,

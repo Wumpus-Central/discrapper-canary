@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(998730),
     p = n(546247),
     f = n(430824),
-    h = n(768581),
-    g = n(302221),
+    g = n(768581),
+    h = n(302221),
     m = n(745752),
     _ = n(17181),
     b = n(388032),
@@ -34,7 +34,7 @@ function v(e) {
             () =>
                 null == C
                     ? null
-                    : h.ZP.getGuildSplashURL({
+                    : g.ZP.getGuildSplashURL({
                           id: C.id,
                           splash: C.splash,
                       }),
@@ -60,8 +60,8 @@ function v(e) {
                     className: O.gradient,
                     style: {
                         background: "linear-gradient(180deg, "
-                            .concat((0, g.aD)(T, 0.16), " 0%, ")
-                            .concat((0, g.aD)(T, 1), " 100%)"),
+                            .concat((0, h.aD)(T, 0.16), " 0%, ")
+                            .concat((0, h.aD)(T, 1), " 100%)"),
                     },
                 }),
             null != S && (0, r.jsx)("div", { className: O.gradient }),

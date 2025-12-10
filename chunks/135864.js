@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(258971),
     p = n(164991),
     f = n(859921),
-    h = n(283833),
-    g = n(626135),
+    g = n(283833),
+    h = n(626135),
     m = n(836768),
     _ = n(766219),
     b = n(749681),
@@ -43,8 +43,8 @@ function C(e) {
             switch (t) {
                 case E.GlobalDiscoveryTab.QUESTS:
                     return (
-                        C && h.Z.resetState(),
-                        g.default.track(O.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, c.Gy)().uuid }),
+                        C && g.Z.resetState(),
+                        h.default.track(O.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, c.Gy)().uuid }),
                         (0, b.transitionToGlobalDiscovery)({
                             tab: E.GlobalDiscoveryTab.QUESTS,
                             location: v.dr.DISCOVERY_SIDEBAR,

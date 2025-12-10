@@ -41,7 +41,7 @@ function _() {
     return s.isPlatformEmbedded;
 }
 async function m() {
-    var e, t, n, r, a, o, s, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, A, C, N, P, R, D, w, x, L, j, M, k;
+    var e, t, n, r, a, o, s, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, C, A, N, P, R, D, w, x, L, j, M, k;
     let U = l.Z.getMemoryUsageElectronProcessTypeDetails();
     if (null == U) return null;
     let G = [
@@ -55,8 +55,8 @@ async function m() {
         Z = {
             electron_process_memory_private: G,
             electron_process_memory_private_and_shared: [
-                null != (A = null == (s = U.unknown) ? void 0 : s.wss_kb) ? A : -1,
-                null != (C = null == (c = U.main) ? void 0 : c.wss_kb) ? C : -1,
+                null != (C = null == (s = U.unknown) ? void 0 : s.wss_kb) ? C : -1,
+                null != (A = null == (c = U.main) ? void 0 : c.wss_kb) ? A : -1,
                 null != (N = null == (u = U.renderer) ? void 0 : u.wss_kb) ? N : -1,
                 null != (P = null == (d = U.gpu) ? void 0 : d.wss_kb) ? P : -1,
                 null != (R = null == (f = U.crashpad) ? void 0 : f.wss_kb) ? R : -1,

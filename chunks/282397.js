@@ -89,7 +89,7 @@ function T(e) {
             onFailure: s,
         });
 }
-function A(e) {
+function C(e) {
     var t;
     let { nonce: n, interactionId: r } = e;
     if (null == n) return !1;
@@ -97,7 +97,7 @@ function A(e) {
     if (null == i || i.state !== p.F.QUEUED) return !1;
     (i.state = p.F.CREATED), null == (t = i.onCreate) || t.call(i, r);
 }
-function C(e) {
+function A(e) {
     let { nonce: t } = e;
     M(t);
 }
@@ -212,8 +212,8 @@ _(U, "displayName", "InteractionStore");
 let G = new U(s.Z, {
     LOGOUT: I,
     INTERACTION_QUEUE: T,
-    INTERACTION_CREATE: A,
-    INTERACTION_SUCCESS: C,
+    INTERACTION_CREATE: C,
+    INTERACTION_SUCCESS: A,
     INTERACTION_FAILURE: P,
     MESSAGE_CREATE: N,
     CHANNEL_SELECT: R,

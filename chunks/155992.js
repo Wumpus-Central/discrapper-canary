@@ -1,8 +1,8 @@
 n.d(t, {
-    Gy: () => C,
+    Gy: () => A,
     Vy: () => N,
     a0: () => T,
-    rC: () => A,
+    rC: () => C,
 }),
     n(388685);
 var r = n(54381),
@@ -101,7 +101,7 @@ let T = (e) => {
             }
         );
     },
-    A = (e) => {
+    C = (e) => {
         let { subscriptionPlanId: t } = e;
         i.useEffect(() => {
             E.Z.isLoadedForPremiumSKUs() || c.Z.wait(() => (0, d.Y2)());
@@ -112,7 +112,7 @@ let T = (e) => {
             selectedPlan: n,
         };
     },
-    C = (e) =>
+    A = (e) =>
         (0, r.jsxs)("div", {
             style: { padding: 20 },
             children: [
@@ -157,7 +157,7 @@ let T = (e) => {
                   )
                 : v({}, S);
         O && (T.disablePurchasesForStorybook = !0);
-        let A = "".concat(i, "-").concat(a, "-").concat(f);
+        let C = "".concat(i, "-").concat(a, "-").concat(f);
         return (0, r.jsx)(
             m.PaymentContextProvider,
             {
@@ -187,13 +187,13 @@ let T = (e) => {
                                         hideShadow: !0,
                                         renderHeader: E,
                                     },
-                                    A,
+                                    C,
                                 ),
                             }),
                         }),
                     }),
                 ),
             },
-            A,
+            C,
         );
     };

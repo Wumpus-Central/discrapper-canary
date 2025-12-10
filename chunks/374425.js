@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(28664),
@@ -79,14 +79,14 @@ let I = (0, f.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 is_custom: (0, _.z)(e.type),
             });
     },
-    A = (e) => {
+    C = (e) => {
         let { renderableSticker: t, channel: n, isInteracting: o } = e,
             c = i.useRef(null),
             [f, _] = i.useState(!0),
             [g, E] = i.useState(String(Date.now())),
             [y] = (0, p.XW)(t, o),
             { analyticsLocations: v } = (0, u.ZP)(l.Z.STICKER_MESSAGE),
-            A = (0, r.jsxs)("span", {
+            C = (0, r.jsxs)("span", {
                 className: b.stickerName,
                 children: [
                     (0, r.jsx)(s.B7q, {
@@ -122,7 +122,7 @@ let I = (0, f.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                         a.u,
                         S(O({}, d.b_), {
                             shouldShow: f,
-                            __unsupportedReactNodeAsText: (0, d.Y)(A),
+                            __unsupportedReactNodeAsText: (0, d.Y)(C),
                             "aria-label": !1,
                             onTooltipShow: () => {
                                 T(y);

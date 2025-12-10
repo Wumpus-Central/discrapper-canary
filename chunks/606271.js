@@ -10,8 +10,8 @@ var r = n(442837),
     d = n(131951),
     p = n(158776),
     f = n(19780),
-    h = n(699516),
-    g = n(944486),
+    g = n(699516),
+    h = n(944486),
     m = n(594174),
     _ = n(979651),
     b = n(626135),
@@ -167,7 +167,7 @@ class P {
                 if (0 === this.rpcServer.subscriptions.length) return;
                 let t = 0 !== e.speakingFlags ? C.zMe.SPEAKING_START : C.zMe.SPEAKING_STOP;
                 if (e.context === N.Yn.DEFAULT) {
-                    let n = g.Z.getVoiceChannelId();
+                    let n = h.Z.getVoiceChannelId();
                     if (null != n) {
                         let r = o.Z.getChannel(n);
                         if (null == r) return;
@@ -403,7 +403,7 @@ class P {
                             return t.id;
                         }),
                     ).values()) {
-                        let t = h.Z.getRelationshipType(e);
+                        let t = g.Z.getRelationshipType(e);
                         if (t === C.OGo.NONE) continue;
                         let n = m.default.getUser(e);
                         if (null == n) continue;
@@ -415,7 +415,7 @@ class P {
             }),
             j(this, "handlePresencesReplace", () => {
                 if (0 !== this.rpcServer.subscriptions.length)
-                    for (let [e, t] of h.Z.getMutableRelationships().entries()) {
+                    for (let [e, t] of g.Z.getMutableRelationships().entries()) {
                         if (t === C.OGo.NONE) continue;
                         let n = m.default.getUser(e);
                         if (null == n) continue;
@@ -430,7 +430,7 @@ class P {
                     user: { id: t },
                 } = e;
                 if (0 === this.rpcServer.subscriptions.length) return;
-                let n = h.Z.getRelationshipType(t);
+                let n = g.Z.getRelationshipType(t);
                 if (n === C.OGo.NONE) return;
                 let r = m.default.getUser(t);
                 if (null == r) return;

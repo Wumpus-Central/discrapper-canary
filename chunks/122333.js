@@ -11,8 +11,8 @@ var l = n(481060),
     d = n(983736),
     p = n(341298),
     f = n(390885),
-    h = n(524329),
-    g = n(995532),
+    g = n(524329),
+    h = n(995532),
     m = n(486472),
     _ = n(430824),
     b = n(914010),
@@ -98,7 +98,7 @@ class Z extends s.Z {
             A = b.Z.getGuildId();
         if (a === C.M5.INVITE_UNCLAIMED) {
             let e = _.Z.getGuild(A);
-            null != e && (0, d.Dc)(e) && ((s = !0), (0, h.RM)(e.id));
+            null != e && (0, d.Dc)(e) && ((s = !0), (0, g.RM)(e.id));
         }
         let Z = () => 0 === m.Z.totalGuilds && !v.isPlatformEmbedded,
             w = o.bN();
@@ -188,7 +188,7 @@ class Z extends s.Z {
                         },
                         { onCloseCallback: e },
                     ),
-                predicate: () => null != A && null != g.Z.get(A) && g.Z.get(A) !== g.a,
+                predicate: () => null != A && null != h.Z.get(A) && h.Z.get(A) !== h.a,
             },
         ]),
             (t = () => {

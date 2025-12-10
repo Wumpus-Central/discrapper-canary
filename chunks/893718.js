@@ -1,5 +1,5 @@
 n.d(t, {
-    O1: () => eA,
+    O1: () => eC,
     Sg: () => eI,
     TE: () => ex,
     ZP: () => eZ,
@@ -40,8 +40,8 @@ var r = n(54381),
     S = n(998698),
     I = n(271668),
     T = n(61356),
-    A = n(326133),
-    C = n(106824),
+    C = n(326133),
+    A = n(106824),
     N = n(570220),
     P = n(28546),
     R = n(805680),
@@ -243,7 +243,7 @@ function eT(e) {
         [e],
     );
 }
-function eA(e) {
+function eC(e) {
     let { editorRef: t, disabled: n, textValue: r, channelId: a, chatInputType: o, submit: s } = e,
         { analyticsLocations: l } = (0, b.ZP)();
     return i.useCallback(
@@ -270,7 +270,7 @@ function eA(e) {
         [n, r, a, t, l, s, o],
     );
 }
-function eC(e, t) {
+function eA(e, t) {
     return i.useCallback(
         (n, r, i) => {
             let a = e.current;
@@ -464,7 +464,7 @@ function eM(e, t) {
             var e, n, i, a;
             let o,
                 s = null == (e = t.current) ? void 0 : e.getSlateEditor();
-            null != s && (o = null == (n = ec.bN.getSelectedParentOfType(s, C.un)) ? void 0 : n[0]),
+            null != s && (o = null == (n = ec.bN.getSelectedParentOfType(s, A.un)) ? void 0 : n[0]),
                 r({
                     selectedAutocompleteInputType: null != (i = null == o ? void 0 : o.type) ? i : null,
                     selectedAutocompleteInputError: null != (a = null == o ? void 0 : o.error) && a,
@@ -521,7 +521,7 @@ function eG(e, t) {
         textValue: f,
         richValue: m,
         className: O,
-        innerClassName: C,
+        innerClassName: A,
         editorClassName: P,
         id: D,
         required: w,
@@ -617,7 +617,7 @@ function eG(e, t) {
         { autocompleteRef: th, handleMaybeShowAutocomplete: tg, handleHideAutocomplete: tE } = eR(),
         tb = eI(t_, G, e$),
         ty = eT(e$),
-        tO = eA({
+        tO = eC({
             editorRef: e$,
             disabled: e9,
             textValue: f,
@@ -625,13 +625,13 @@ function eG(e, t) {
             chatInputType: G,
             submit: ec,
         }),
-        tv = eC(e$, U),
+        tv = eA(e$, U),
         tS = i.useCallback(() => {
             var e;
             return null == e1 || null == (e = e1.current) ? void 0 : e.hide();
         }, []),
         { editorHeight: tI, handleResize: tT } = ew(z),
-        { handleTab: tA, handleEnter: tC, handleMoveSelection: tN } = ej(th, eX, ta),
+        { handleTab: tC, handleEnter: tA, handleMoveSelection: tN } = ej(th, eX, ta),
         { expressionPickerView: tP, shouldHideExpressionPicker: tR, handleOuterClick: tD } = eL(G, e$, U.id),
         { selectedAutocompleteInputType: tw, selectedAutocompleteInputError: tx } = eM(tc, e$),
         tL = ek(f),
@@ -728,7 +728,7 @@ function eG(e, t) {
                         (0, r.jsxs)("div", {
                             ref: e0,
                             onScroll: tS,
-                            className: o()(C, {
+                            className: o()(A, {
                                 [e_.scrollableContainer]: !0,
                                 [e_.themedBackground]: !eH,
                                 [e_.hasStackedBar]: tY.stacked.length > 0,
@@ -789,8 +789,8 @@ function eG(e, t) {
                                                 onKeyDown: er,
                                                 onSubmit: t_,
                                                 onSubmitFailure: tG,
-                                                onTab: tA,
-                                                onEnter: tC,
+                                                onTab: tC,
+                                                onEnter: tA,
                                                 onMoveSelection: tN,
                                                 onSelectionChanged: tu,
                                                 onMaybeShowAutocomplete: tg,
@@ -826,7 +826,7 @@ function eG(e, t) {
                                   channel: U,
                                   canOnlyUseTextCommands: tZ,
                               }),
-                        (0, r.jsx)(A.Z, {
+                        (0, r.jsx)(C.Z, {
                             ref: th,
                             channel: U,
                             canMentionRoles: eh,

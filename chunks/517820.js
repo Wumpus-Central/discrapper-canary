@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(670188),
     I = n(592125),
     T = n(271383),
-    A = n(594174),
-    C = n(464891),
+    C = n(594174),
+    A = n(464891),
     N = n(348238),
     P = n(83561),
     R = n(834129),
@@ -163,7 +163,7 @@ function F(e) {
 function V(e) {
     var t;
     let { message: n, compact: a } = e,
-        o = A.default.getUser((0, g.Sw)(n)),
+        o = C.default.getUser((0, g.Sw)(n)),
         s = null == (t = I.Z.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
         c = null != s && null != o ? T.ZP.getMember(s, o.id) : null,
         {
@@ -280,12 +280,12 @@ function H(e) {
         T = (e) => {
             S(e);
         },
-        A = i.useCallback(() => {
+        C = i.useCallback(() => {
             let e = null == y ? void 0 : y.guild_id;
             null != e && (0, E.kW)(n.id, e);
         }, [n.id, y]),
-        C = _ === u.$.DM_RAID,
-        P = C ? p.Mgn : p.b6m;
+        A = _ === u.$.DM_RAID,
+        P = A ? p.Mgn : p.b6m;
     return (0, r.jsx)(W, {
         compact: a,
         header: (0, r.jsxs)(i.Fragment, {
@@ -297,7 +297,7 @@ function H(e) {
                 (0, r.jsx)(p.Text, {
                     variant: "text-md/semibold",
                     color: "text-feedback-critical",
-                    children: C ? x.intl.string(x.t["8+lHUb"]) : x.intl.string(x.t.xMwcwV),
+                    children: A ? x.intl.string(x.t["8+lHUb"]) : x.intl.string(x.t.xMwcwV),
                 }),
             ],
         }),
@@ -368,7 +368,7 @@ function H(e) {
                               textVariant: "text-xs/medium",
                               size: "sm",
                               text: (0, g.ge)(b),
-                              onClick: A,
+                              onClick: C,
                           }),
                       }),
                   ],
@@ -501,7 +501,7 @@ function K(e) {
             children: (0, r.jsxs)("div", {
                 className: o()(L.content, { [L.compact]: n }),
                 children: [
-                    (0, r.jsx)(C.nD, {
+                    (0, r.jsx)(A.nD, {
                         message: i,
                         messageClassname: L.spanCorrection,
                         className: o()(L.usernameContainer, L.spanCorrection, { [L.compact]: n }),

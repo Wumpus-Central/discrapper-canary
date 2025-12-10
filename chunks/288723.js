@@ -36,8 +36,8 @@ let d = {
                     S = t.options.placement,
                     I = (0, i.Z)(S),
                     T = I === S,
-                    A = m || (T || !O ? [(0, r.Z)(S)] : u(S)),
-                    C = [S].concat(A).reduce(function (e, n) {
+                    C = m || (T || !O ? [(0, r.Z)(S)] : u(S)),
+                    A = [S].concat(C).reduce(function (e, n) {
                         return e.concat(
                             (0, i.Z)(n) === l.d7
                                 ? (0, s.Z)(t, {
@@ -55,12 +55,12 @@ let d = {
                     P = t.rects.popper,
                     R = new Map(),
                     D = !0,
-                    w = C[0],
+                    w = A[0],
                     x = 0;
-                x < C.length;
+                x < A.length;
                 x++
             ) {
-                var L = C[x],
+                var L = A[x],
                     j = (0, i.Z)(L),
                     M = (0, c.Z)(L) === l.BL,
                     k = [l.we, l.I].indexOf(j) >= 0,
@@ -92,7 +92,7 @@ let d = {
                 for (
                     var V = O ? 3 : 1,
                         H = function (e) {
-                            var t = C.find(function (t) {
+                            var t = A.find(function (t) {
                                 var n = R.get(t);
                                 if (n)
                                     return n.slice(0, e).every(function (e) {

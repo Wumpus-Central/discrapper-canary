@@ -70,14 +70,14 @@ let p = 300000,
     S = 0,
     I = 0,
     T = 0,
-    A = {
+    C = {
         friends: void 0,
         blocked: void 0,
         ignored: void 0,
         blockedOrIgnored: void 0,
     };
-function C() {
-    (A.friends = void 0), (A.blocked = void 0), (A.ignored = void 0), (A.blockedOrIgnored = void 0);
+function A() {
+    (C.friends = void 0), (C.blocked = void 0), (C.ignored = void 0), (C.blockedOrIgnored = void 0);
 }
 let N = new Map();
 function P(e, t) {
@@ -89,12 +89,12 @@ function P(e, t) {
     }
     _.set(e, t);
     let i = N.get(t);
-    null != i ? i.add(e) : N.set(t, new Set([e])), C();
+    null != i ? i.add(e) : N.set(t, new Set([e])), A();
 }
 function R(e) {
     var t;
     let n = _.get(e);
-    null != n && (_.delete(e), null == (t = N.get(n)) || t.delete(e), C());
+    null != n && (_.delete(e), null == (t = N.get(n)) || t.delete(e), A());
 }
 function D() {
     var e, t;
@@ -114,7 +114,7 @@ function w(e) {
         E.clear(),
         g.clear(),
         b.clear(),
-        C(),
+        A(),
         (y = {}),
         (v = {}),
         e.relationships.forEach((e) => {
@@ -269,30 +269,30 @@ class G extends (r = i.ZP.Store) {
         return h;
     }
     getFriendIDs() {
-        if (null == A.friends) {
+        if (null == C.friends) {
             var e;
-            A.friends = Array.from(null != (e = N.get(l.OGo.FRIEND)) ? e : []);
+            C.friends = Array.from(null != (e = N.get(l.OGo.FRIEND)) ? e : []);
         }
-        return A.friends;
+        return C.friends;
     }
     getBlockedIDs() {
-        if (null == A.blocked) {
+        if (null == C.blocked) {
             var e;
-            A.blocked = Array.from(null != (e = N.get(l.OGo.BLOCKED)) ? e : []);
+            C.blocked = Array.from(null != (e = N.get(l.OGo.BLOCKED)) ? e : []);
         }
-        return A.blocked;
+        return C.blocked;
     }
     getIgnoredIDs() {
-        return null == A.ignored && (A.ignored = Array.from(E.values()).filter((e) => this.isIgnored(e))), A.ignored;
+        return null == C.ignored && (C.ignored = Array.from(E.values()).filter((e) => this.isIgnored(e))), C.ignored;
     }
     getBlockedOrIgnoredIDs() {
-        if (null == A.blockedOrIgnored) {
+        if (null == C.blockedOrIgnored) {
             let e = new Set(E),
                 t = N.get(l.OGo.BLOCKED);
             if (null != t) for (let n of t) e.add(n);
-            A.blockedOrIgnored = Array.from(e.values());
+            C.blockedOrIgnored = Array.from(e.values());
         }
-        return A.blockedOrIgnored;
+        return C.blockedOrIgnored;
     }
     getOriginApplicationId(e) {
         return y[e];

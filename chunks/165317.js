@@ -22,8 +22,8 @@ function C(e) {
     let { tooltipPosition: _ } = e,
         { quest: y, sourceQuestContent: x, onClose: j } = o.useContext(E.VideoQuestModalContext),
         { enabled: P } = u.EO.useConfig({ location: g.dr.VIDEO_MODAL }),
-        [D, R] = o.useState(!1),
-        T = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+        [D, T] = o.useState(!1),
+        R = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         I = o.useRef(null == (t = y.userStatus) ? void 0 : t.completedAt),
         [N, A] = o.useState(!1),
         w = (0, m.w8)(y.config),
@@ -53,16 +53,16 @@ function C(e) {
                     className: h.confetti,
                     loop: !1,
                     autoplay: !1,
-                    shouldAnimate: N && !T,
+                    shouldAnimate: N && !R,
                 }),
             (0, r.jsx)(i.u, {
                 position: _,
                 text: Z,
                 onTooltipShow: () => {
-                    R(!0);
+                    T(!0);
                 },
                 onTooltipHide: () => {
-                    R(!1);
+                    T(!1);
                 },
                 children: (0, r.jsx)(a.P3F, {
                     className: h.progressCont,

@@ -49,8 +49,8 @@ function T(e) {
     }
     return e;
 }
-let A = (0, r.debounce)(o.xc, 1000),
-    C = {},
+let C = (0, r.debounce)(o.xc, 1000),
+    A = {},
     N = {},
     P = 3 * b.Z.Millis.MINUTE,
     R = 5 * b.Z.Millis.SECOND,
@@ -58,7 +58,7 @@ let A = (0, r.debounce)(o.xc, 1000),
     w = null;
 function x(e) {
     var t;
-    null == (t = C[e]) || t.stop(), delete C[e];
+    null == (t = A[e]) || t.stop(), delete A[e];
 }
 function L(e) {
     var t;
@@ -135,7 +135,7 @@ class U extends s.Z {
                 )
                     return;
                 let a = _.Z.getMemberCount(i);
-                null == a || a < 2 || a > v.tB || (u.eo.getSetting() && A(n));
+                null == a || a < 2 || a > v.tB || (u.eo.getSetting() && C(n));
             }),
             I(this, "handleStreamUpdate", (e) => {
                 let { streamKey: t } = e;
@@ -174,8 +174,8 @@ class U extends s.Z {
                             if (!a && e.state !== S.jm8.ENDED) {
                                 var s;
                                 let t = (0, O.V9)(e),
-                                    n = null != (s = C[t]) ? s : new i.V7();
-                                n.start(P, () => (0, o.aP)(t, !1)), (C[t] = n);
+                                    n = null != (s = A[t]) ? s : new i.V7();
+                                n.start(P, () => (0, o.aP)(t, !1)), (A[t] = n);
                             }
                             if (a && e.state === S.jm8.ENDED) {
                                 x((0, O.V9)(e));

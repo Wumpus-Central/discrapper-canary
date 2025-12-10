@@ -34,7 +34,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function A(e) {
     }
     return e;
 }
-function C(e, t) {
+function A(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,7 +67,7 @@ function N(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
+            : A(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -79,7 +79,7 @@ function D(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: a } = e;
     return (0, r.jsx)(
         u.P3F,
-        N(A({}, a), {
+        N(C({}, a), {
             onClick: i,
             className: o()(I.categoryIcon, { [I.selected]: n }),
             children: (0, r.jsx)(t, {
@@ -127,7 +127,7 @@ function w(e, t, n, i, a) {
         case E.bg.GUILD:
             return (0, r.jsx)(
                 u.P3F,
-                N(A({}, i), {
+                N(C({}, i), {
                     className: I.category,
                     onClick: t,
                     children: (0, r.jsx)(d.Z, {

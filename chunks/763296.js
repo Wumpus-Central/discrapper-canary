@@ -34,12 +34,12 @@ let b = new Map(),
     S = 0,
     I = 0,
     T = 0,
-    A = 0,
-    C = new Set(),
+    C = 0,
+    A = new Set(),
     N = new Map(),
     P = !1;
 function R() {
-    b.clear(), y.clear(), (A = 0), O.clear(), N.clear(), (P = !1), (I = 0), (T = 0), (S = 0);
+    b.clear(), y.clear(), (C = 0), O.clear(), N.clear(), (P = !1), (I = 0), (T = 0), (S = 0);
 }
 function D() {
     O.clear(), N.clear();
@@ -89,10 +89,10 @@ function Z() {
 }
 function B(e) {
     let { topSoundsForGuilds: t } = e;
-    (y = new Map(t)), (T = 2), (A = Date.now());
+    (y = new Map(t)), (T = 2), (C = Date.now());
 }
 function F() {
-    (T = 2), (A = 0);
+    (T = 2), (C = 0);
 }
 function V(e) {
     var t, n, r;
@@ -130,7 +130,7 @@ function z(e) {
         { type: n, proto: r } = t;
     if (n === g.yP.FRECENCY_AND_FAVORITES_SETTINGS) {
         var i, a;
-        C = new Set(null != (a = null == r || null == (i = r.favoriteSoundboardSounds) ? void 0 : i.soundIds) ? a : []);
+        A = new Set(null != (a = null == r || null == (i = r.favoriteSoundboardSounds) ? void 0 : i.soundIds) ? a : []);
     } else n === g.yP.PRELOADED_USER_SETTINGS && K(r);
 }
 function q(e) {
@@ -140,7 +140,7 @@ function q(e) {
 function Q(e) {
     let { soundboardStoreState: t } = e;
     (b = new Map(p.default.entries(t.soundboardSounds))),
-        (C = new Set(t.favoritedSoundIds)),
+        (A = new Set(t.favoritedSoundIds)),
         (v = new Set(t.localSoundboardMutes));
 }
 class X extends (r = o.ZP.Store) {
@@ -150,7 +150,7 @@ class X extends (r = o.ZP.Store) {
     getOverlaySerializedState() {
         return {
             soundboardSounds: Object.fromEntries(b),
-            favoritedSoundIds: Array.from(C),
+            favoritedSoundIds: Array.from(A),
             localSoundboardMutes: Array.from(v),
         };
     }
@@ -192,10 +192,10 @@ class X extends (r = o.ZP.Store) {
         return null != O.get(e);
     }
     isFavoriteSound(e) {
-        return C.has(e);
+        return A.has(e);
     }
     getFavorites() {
-        return C;
+        return A;
     }
     getAllTopSoundsForGuilds() {
         return y;
@@ -207,7 +207,7 @@ class X extends (r = o.ZP.Store) {
         return P;
     }
     shouldFetchTopSoundsForGuilds() {
-        return (0, _.cI)("SoundboardStore") && (0 === T || (2 === T && Date.now() - A > 86400000));
+        return (0, _.cI)("SoundboardStore") && (0 === T || (2 === T && Date.now() - C > 86400000));
     }
     hasFetchedTopSoundsForGuilds() {
         return 2 === T;

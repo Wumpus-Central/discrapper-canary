@@ -19,8 +19,8 @@ function g(e) {
             temporary: v,
             onGenerateNewLink: I,
             onToggleTemporary: m,
-            onSelectMaxAge: S,
-            onSelectMaxUses: x,
+            onSelectMaxAge: x,
+            onSelectMaxUses: S,
             isGuestInviteCreationToggleEnabled: f,
             inviteFlags: y,
             onSetInviteFlags: E,
@@ -37,13 +37,13 @@ function g(e) {
                     label: u.intl.string(u.t["60qw2x"]),
                     options: g,
                     value: null != (t = null == _ ? void 0 : _.value) ? t : g[0].value,
-                    onChange: S,
+                    onChange: x,
                 }),
                 (0, i.jsx)(r.d, {
                     label: u.intl.string(u.t.jDqWHW),
                     options: c,
                     value: null == C ? void 0 : C.value,
-                    onChange: x,
+                    onChange: S,
                 }),
                 !n &&
                     (0, i.jsx)(a.rsf, {

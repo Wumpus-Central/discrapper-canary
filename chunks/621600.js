@@ -1,14 +1,14 @@
 n.d(t, {
     $R: () => b,
     GA: () => I,
-    I: () => A,
+    I: () => C,
     UE: () => E,
     Wq: () => y,
     ZB: () => g,
     jz: () => S,
     rU: () => T,
     sK: () => v,
-    wK: () => C,
+    wK: () => A,
 }),
     n(997841),
     n(388685);
@@ -215,7 +215,7 @@ function S(e) {
             label: I,
             location: T,
         } = e,
-        C = function (e) {
+        A = function (e) {
             var t, n;
             let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 i = null != (t = r.muted) ? t : null == e ? void 0 : e.channel_is_muted,
@@ -234,8 +234,8 @@ function S(e) {
                 channel_muted_until: v(r.mute_config),
             };
         },
-        N = C(S),
-        P = C(A(m, g), y),
+        N = A(S),
+        P = A(C(m, g), y),
         R = O(N, P, "RETURN_PREVIOUS_WHEN_CHANGED"),
         D = o.Z.getChannel(g),
         w = null != (n = R("channel_flags")) ? n : 0,
@@ -281,7 +281,7 @@ function T(e) {
     let t = new Map();
     return e.forEach((e) => t.set(e, I(e))), t;
 }
-function A(e, t) {
+function C(e, t) {
     let n = l.ZP.isChannelMuted(e, t),
         r = l.ZP.getChannelMuteConfig(e, t);
     return {
@@ -291,7 +291,7 @@ function A(e, t) {
         channel_flags: l.ZP.getChannelIdFlags(e, t),
     };
 }
-function C(e, t) {
+function A(e, t) {
     let n = new Map();
-    return t.forEach((t) => n.set(t, A(e, t))), n;
+    return t.forEach((t) => n.set(t, C(e, t))), n;
 }

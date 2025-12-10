@@ -95,7 +95,7 @@ function h(e, t, n) {
                 gap: I,
                 experimental_useStack: T,
             } = u,
-            A = _(u, [
+            C = _(u, [
                 "children",
                 "className",
                 "dir",
@@ -108,26 +108,26 @@ function h(e, t, n) {
                 "gap",
                 "experimental_useStack",
             ]);
-        let { scrollerRef: C, getScrollerState: N } = (0, c.Ke)(),
-            P = (0, c.t2)(C, E);
+        let { scrollerRef: A, getScrollerState: N } = (0, c.Ke)(),
+            P = (0, c.t2)(A, E);
         i.useImperativeHandle(
             f,
             () =>
                 d(
                     {
-                        getScrollerNode: () => C.current,
+                        getScrollerNode: () => A.current,
                         getScrollerState: N,
                     },
-                    (0, c.Ue)(C, N, P, E),
+                    (0, c.Ue)(A, N, P, E),
                 ),
-            [C, N, E, P],
+            [A, N, E, P],
         );
         let R = (0, c.tT)({
             paddingFix: v,
             orientation: E,
             dir: g,
             className: h,
-            scrollerRef: C,
+            scrollerRef: A,
             specs: a,
         });
         return T
@@ -137,7 +137,7 @@ function h(e, t, n) {
                       d(
                           {
                               gap: I,
-                              ref: C,
+                              ref: A,
                               className: o()(h, {
                                   [e]: !0,
                                   [t]: y,
@@ -146,11 +146,11 @@ function h(e, t, n) {
                               style: (0, c.uT)(S, E, b),
                               dir: g,
                           },
-                          A,
+                          C,
                       ),
                       {
                           children: (0, r.jsxs)(s.Jc, {
-                              containerRef: C,
+                              containerRef: A,
                               children: [m, R],
                           }),
                       },
@@ -161,7 +161,7 @@ function h(e, t, n) {
                   p(
                       d(
                           {
-                              ref: C,
+                              ref: A,
                               className: o()(h, {
                                   [e]: !0,
                                   [t]: y,
@@ -170,11 +170,11 @@ function h(e, t, n) {
                               style: (0, c.uT)(S, E, b),
                               dir: g,
                           },
-                          A,
+                          C,
                       ),
                       {
                           children: (0, r.jsxs)(s.Jc, {
-                              containerRef: C,
+                              containerRef: A,
                               children: [m, R],
                           }),
                       },

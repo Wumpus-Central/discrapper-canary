@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(617136),
     p = n(616022),
     f = n(49436),
-    h = n(373370),
-    g = n(968843),
+    g = n(373370),
+    h = n(968843),
     m = n(475595),
     _ = n(283689),
     b = n(602667),
@@ -52,8 +52,8 @@ function j(e) {
 function P(e) {
     var t;
     let { quest: n } = e,
-        i = (0, g.B6)(n.config.expiresAt),
-        l = (0, g.B6)(n.config.rewardsConfig.rewardsExpireAt),
+        i = (0, h.B6)(n.config.expiresAt),
+        l = (0, h.B6)(n.config.rewardsConfig.rewardsExpireAt),
         a = (0, s.e7)([c.Z], () => c.Z.getState().theme),
         u = (0, o.wjy)(a) ? S.BRd.DARK : S.BRd.LIGHT,
         d = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null;
@@ -95,7 +95,7 @@ function x(e) {
         [x, A] = i.useState(!1),
         Z = i.useCallback(() => A(!0), []),
         w = i.useCallback(() => A(!1), []),
-        { launchInGameActivity: L } = (0, g.zB)(m),
+        { launchInGameActivity: L } = (0, h.zB)(m),
         R = i.useCallback((e) => {
             e.stopPropagation();
         }, []),
@@ -139,8 +139,8 @@ function x(e) {
         }),
         G = (null == (t = m.userStatus) ? void 0 : t.enrolledAt) != null,
         B = (null == (n = m.userStatus) ? void 0 : n.completedAt) != null,
-        H = (0, g.Rf)(m),
-        V = (0, h.DD)({
+        H = (0, h.Rf)(m),
+        V = (0, g.DD)({
             quest: m,
             taskDetails: H,
             location: C.dr.ACTIVITY_PANEL,
@@ -148,7 +148,7 @@ function x(e) {
             sourceQuestContent: f.jn.ACTIVITY_PANEL,
         }),
         F = (0, _.Rt)(m),
-        z = (0, h.CR)({ quest: m }),
+        z = (0, g.CR)({ quest: m }),
         Y = F ? z : T.intl.string(T.t.l7E81v);
     return (0, r.jsxs)("div", {
         ref: (e) => {

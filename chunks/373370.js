@@ -80,8 +80,8 @@ function T(e, t) {
         e
     );
 }
-let A = "NVIDIA GeForce NOW";
-function C(e, t, n) {
+let C = "NVIDIA GeForce NOW";
+function A(e, t, n) {
     return n ? O.intl.formatToPlainString(e, t) : O.intl.format(e, t);
 }
 function N(e, t, n, r) {
@@ -143,7 +143,7 @@ function P(e) {
         u = (0, p.f$)(n.config),
         d = (0, p._p)(n.config),
         f = n.config.features.includes(E.S7.NON_GAMING_PLAY_QUEST);
-    return C(
+    return A(
         (t =
             a && u
                 ? d
@@ -178,7 +178,7 @@ function R(e) {
         c = n.config.messages.gameTitle,
         u = (0, p.f$)(n.config),
         d = (0, p._p)(n.config);
-    return C(
+    return A(
         (t = a && u ? (d ? O.t["eb/Sna"] : O.t.ziB0HF) : u || null != o ? O.t.AwuMRS : O.t.NIimTt),
         {
             gameTitle: c,
@@ -199,7 +199,7 @@ function D(e) {
         u = (0, p.f$)(n.config),
         d = (0, p._p)(n.config),
         f = n.config.features.includes(E.S7.NON_GAMING_PLAY_QUEST);
-    return C(
+    return A(
         (t =
             a && u
                 ? d
@@ -230,7 +230,7 @@ function w(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         { targetMinutes: i } = n,
         a = t.config.messages.gameTitle;
-    return C(
+    return A(
         O.t["a/ia7F"],
         {
             gameTitle: a,
@@ -247,7 +247,7 @@ function x(e, t, n, r) {
         l = (0, p.B3)(e.config),
         c = (0, p.f$)(e.config),
         u = (0, p._p)(e.config);
-    return C(
+    return A(
         (a =
             c && n
                 ? u
@@ -271,7 +271,7 @@ function L(e) {
         a = n.targetMinutes,
         o = (0, p.B3)(t.config);
     return (0, m.KM)(t)
-        ? C(
+        ? A(
               O.t.VYwSSu,
               {
                   streamingDurationRequirement: a,
@@ -281,28 +281,28 @@ function L(e) {
           )
         : t.config.features.includes(E.S7.CLOUD_GAMING_ACTIVITY)
           ? i === u.jn.QUESTS_EMBED
-              ? C(
+              ? A(
                     O.t["C+2RxC"],
                     {
                         activityName: t.config.messages.gameTitle,
-                        providerName: A,
+                        providerName: C,
                         providerLink: s.Z.getArticleURL(b.BhN.NVIDIA_GEFORCE_CLOUD_GAMING_QUEST),
                         questReward: o,
                     },
                     r,
                 )
-              : C(
+              : A(
                     O.t["0NNM3l"],
                     {
                         activityName: t.config.messages.gameTitle,
-                        providerName: A,
+                        providerName: C,
                         providerLink: s.Z.getArticleURL(b.BhN.NVIDIA_GEFORCE_CLOUD_GAMING_QUEST),
                         streamingDurationRequirement: a,
                         questReward: o,
                     },
                     r,
                 )
-          : C(
+          : A(
                 O.t.UuzHh8,
                 {
                     activityName: t.config.messages.gameTitle,
@@ -320,7 +320,7 @@ function j(e) {
         c = n.config.messages.gameTitle,
         u = (0, p.f$)(n.config),
         d = (0, p._p)(n.config);
-    return C(
+    return A(
         (t = a && u ? (d ? O.t["X8Yt/1"] : O.t.smG9ql) : u || null != o ? O.t.BLyDvO : O.t["hkJ+Gs"]),
         {
             gameTitle: c,
@@ -527,7 +527,7 @@ function F(e) {
         S = (null == (n = r.userStatus) ? void 0 : n.enrolledAt) != null,
         I = b.percentComplete > 0,
         T = (0, g.z)(r),
-        A = Z({
+        C = Z({
             quest: r,
             location: E.dr.QUESTS_BAR,
             questContent: u.jn.QUEST_BAR_V2,
@@ -537,12 +537,12 @@ function F(e) {
             onGameSheetOpened: l,
             onGameSheetClosed: c,
         }),
-        C = null != y ? y.percentComplete : b.percentComplete;
+        A = null != y ? y.percentComplete : b.percentComplete;
     if (v) return O.intl.formatToPlainString(O.t.APddvF, { expirationDate: h });
     if (i)
         if (o === u.LI.SELECT) return O.intl.string(O.t.sWUpN8);
         else {
-            if (!(0, m.Pb)(r) || !S || I) return A;
+            if (!(0, m.Pb)(r) || !S || I) return C;
             let e = (0, p.B3)(r.config);
             return O.intl.format(O.t["1votF6"], {
                 rewardNameWithArticle: e,
@@ -550,7 +550,7 @@ function F(e) {
             });
         }
     if ((0, _.q8)(r)) return O.intl.string(O.t["o+e9yh"]);
-    if (C > 0)
+    if (A > 0)
         if (!T) return O.intl.string(O.t.mOrpXG);
         else
             return (0, f.AV)({

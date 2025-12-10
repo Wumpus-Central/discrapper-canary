@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(481060),
     c = n(51636),
     u = n(329352);
@@ -89,11 +89,11 @@ let m = 910,
                 g((e) => (e >= y - E ? 0 : e + 1));
             },
             I = i.useCallback((e) => ({ x: (e - p) * 100 }), [p]),
-            [T, A] = (0, l.bYB)(t.length, I);
+            [T, C] = (0, l.bYB)(t.length, I);
         return (
             i.useEffect(() => {
-                A(I);
-            }, [A, I]),
+                C(I);
+            }, [C, I]),
             (0, r.jsx)("div", {
                 className: n,
                 children: (0, r.jsxs)("div", {

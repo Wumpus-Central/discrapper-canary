@@ -87,7 +87,7 @@ e.exports = function (e, n) {
           : new t.Request(e, n);
 };
 let E = (t = e.exports);
-(t.Request = A),
+(t.Request = C),
     (E.getXHR = () => {
         if (r.XMLHttpRequest) return new r.XMLHttpRequest();
         throw Error("Browser-only version of superagent could not find XHR");
@@ -166,7 +166,7 @@ function T(e) {
             : (this.body =
                   "HEAD" === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response));
 }
-function A(e, t) {
+function C(e, t) {
     let n = this;
     (this._query = this._query || []),
         (this.method = e),
@@ -236,15 +236,15 @@ function A(e, t) {
         return (r.status = this.status), (r.method = t), (r.url = n), r;
     }),
     (E.Response = T),
-    s(A.prototype),
-    p(A.prototype, u.prototype),
-    (A.prototype.type = function (e) {
+    s(C.prototype),
+    p(C.prototype, u.prototype),
+    (C.prototype.type = function (e) {
         return this.set("Content-Type", E.types[e] || e), this;
     }),
-    (A.prototype.accept = function (e) {
+    (C.prototype.accept = function (e) {
         return this.set("Accept", E.types[e] || e), this;
     }),
-    (A.prototype.auth = function (e, t, n) {
+    (C.prototype.auth = function (e, t, n) {
         1 == arguments.length && (t = ""),
             "object" == typeof t && null !== t && ((n = t), (t = "")),
             n || (n = { type: "function" == typeof btoa ? "basic" : "auto" });
@@ -256,52 +256,52 @@ function A(e, t) {
               };
         return this._auth(e, t, n, r);
     }),
-    (A.prototype.query = function (e) {
+    (C.prototype.query = function (e) {
         return "string" != typeof e && (e = y(e)), e && this._query.push(e), this;
     }),
-    (A.prototype.attach = function (e, t, n) {
+    (C.prototype.attach = function (e, t, n) {
         if (t) {
             if (this._data) throw Error("superagent can't mix .send() and .attach()");
             this._getFormData().append(e, t, n || t.name);
         }
         return this;
     }),
-    (A.prototype._getFormData = function () {
+    (C.prototype._getFormData = function () {
         return this._formData || (this._formData = new r.FormData()), this._formData;
     }),
-    (A.prototype.callback = function (e, t) {
+    (C.prototype.callback = function (e, t) {
         if (this._shouldRetry(e, t)) return this._retry();
         let n = this._callback;
         this.clearTimeout(), e && (this._maxRetries && (e.retries = this._retries - 1), this.emit("error", e)), n(e, t);
     }),
-    (A.prototype.crossDomainError = function () {
+    (C.prototype.crossDomainError = function () {
         let e = Error(
             "Request has been terminated\nPossible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.",
         );
         (e.crossDomain = !0), (e.status = this.status), (e.method = this.method), (e.url = this.url), this.callback(e);
     }),
-    (A.prototype.agent = function () {
+    (C.prototype.agent = function () {
         return console.warn("This is not supported in browser version of superagent"), this;
     }),
-    (A.prototype.ca = A.prototype.agent),
-    (A.prototype.buffer = A.prototype.ca),
-    (A.prototype.write = () => {
+    (C.prototype.ca = C.prototype.agent),
+    (C.prototype.buffer = C.prototype.ca),
+    (C.prototype.write = () => {
         throw Error("Streaming is not supported in browser version of superagent");
     }),
-    (A.prototype.pipe = A.prototype.write),
-    (A.prototype._isHost = function (e) {
+    (C.prototype.pipe = C.prototype.write),
+    (C.prototype._isHost = function (e) {
         return (
             e && "object" == typeof e && !Array.isArray(e) && "[object Object]" !== Object.prototype.toString.call(e)
         );
     }),
-    (A.prototype.end = function (e) {
+    (C.prototype.end = function (e) {
         this._endCalled && console.warn("Warning: .end() was called twice. This is not supported in superagent"),
             (this._endCalled = !0),
             (this._callback = e || g),
             this._finalizeQueryString(),
             this._end();
     }),
-    (A.prototype._setUploadTimeout = function () {
+    (C.prototype._setUploadTimeout = function () {
         let e = this;
         this._uploadTimeout &&
             !this._uploadTimeoutTimer &&
@@ -309,7 +309,7 @@ function A(e, t) {
                 e._timeoutError("Upload timeout of ", e._uploadTimeout, "ETIMEDOUT");
             }, this._uploadTimeout));
     }),
-    (A.prototype._end = function () {
+    (C.prototype._end = function () {
         if (this._aborted) return this.callback(Error("The request has been aborted even before .end() was called"));
         let e = this;
         this.xhr = E.getXHR();
@@ -370,8 +370,8 @@ function A(e, t) {
             t.send(void 0 === n ? null : n);
     }),
     (E.agent = () => new h());
-for (var C = 0, N = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; C < N.length; C++) {
-    let e = N[C];
+for (var A = 0, N = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; A < N.length; A++) {
+    let e = N[A];
     h.prototype[e.toLowerCase()] = function (t, n) {
         let r = new E.Request(e, t);
         return this._setDefaults(r), n && r.end(n), r;

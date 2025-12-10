@@ -87,8 +87,8 @@ function S(e) {
     let { selectActionComponent: t, queryOptions: n, renderIcon: a, renderOptionLabel: s, defaultValues: g } = e,
         { type: b, maxValues: v, disabled: S } = t,
         I = (0, _.Wo)(t),
-        [T, A] = i.useState(!1),
-        [C, N] = i.useState(!1),
+        [T, C] = i.useState(!1),
+        [A, N] = i.useState(!1),
         [P, R] = i.useState(new Map(null == g ? void 0 : g.map((e) => [e.value, e]))),
         [D, w] = i.useState(new Set(P.keys())),
         [x, L] = i.useState(() => (null != g ? g : []).map((e) => e.value)),
@@ -138,8 +138,8 @@ function S(e) {
         }) && w(new Set(P.keys()));
     }, [G, b, P]);
     i.useEffect(() => {
-        !T && !C && ((P.size === D.size && Array.from(P.keys()).every((e) => D.has(e))) || W());
-    }, [T, C, D, P, W]);
+        !T && !A && ((P.size === D.size && Array.from(P.keys()).every((e) => D.has(e))) || W());
+    }, [T, A, D, P, W]);
     let K = (e) => {
             T || N(!0), R(new Map(e.map((e) => [e.value, e])));
         },
@@ -166,8 +166,8 @@ function S(e) {
             wrapperClassName: o()(m.select, { [m.inModal]: V }),
             options: q,
             placeholder: X ? I : void 0,
-            onClose: () => A(!1),
-            onOpen: () => A(!0),
+            onClose: () => C(!1),
+            onOpen: () => C(!0),
             onBlur: () => N(!1),
             maxVisibleItems: 5,
             renderOptionPrefix: Q,

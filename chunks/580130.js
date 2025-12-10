@@ -34,10 +34,10 @@ let h = {},
     S = new Set(),
     I = new Set(),
     T = {};
-function A() {
+function C() {
     (h = {}), (E = {}), (b = {}), (y = !1), (O = !1), (v = !1), (S = new Set()), (I = new Set());
 }
-function C(e) {
+function A(e) {
     (h[e.id] = c.Z.createFromServer(e)),
         null == E[e.sku_id] && (E[e.sku_id] = new Set()),
         null == b[e.application_id] && (b[e.application_id] = new Set()),
@@ -65,7 +65,7 @@ function R(e) {
 }
 function D(e) {
     let { applicationId: t, entitlements: n } = e;
-    for (let e of (S.delete(t), I.add(t), n)) !0 !== e.consumed && C(e);
+    for (let e of (S.delete(t), I.add(t), n)) !0 !== e.consumed && A(e);
 }
 function w(e) {
     let { entitlements: t } = e;
@@ -77,21 +77,21 @@ function L() {
 }
 function j(e) {
     let { entitlements: t, excludeEnded: n } = e;
-    for (let e of ((O = !0), (y = !1), (v = !n), t)) C(e);
+    for (let e of ((O = !0), (y = !1), (v = !n), t)) A(e);
 }
 function M() {
     (O = !1), (y = !1), (v = !1);
 }
 function k(e) {
     let { entitlements: t } = e;
-    for (let e of t) C(e);
+    for (let e of t) A(e);
 }
 function U(e) {
     let { libraryApplications: t } = e;
-    for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) C(t);
+    for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) A(t);
 }
 function G(e) {
-    return C(e.entitlement);
+    return A(e.entitlement);
 }
 function Z(e) {
     return P(e.entitlement);
@@ -224,7 +224,7 @@ let F = new B(l.Z, {
     ENTITLEMENT_CREATE: G,
     ENTITLEMENT_UPDATE: G,
     ENTITLEMENT_DELETE: Z,
-    LOGOUT: A,
+    LOGOUT: C,
     ENTITLEMENTS_FETCH_FOR_USER_START: L,
     ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: j,
     ENTITLEMENTS_FETCH_FOR_USER_FAIL: M,

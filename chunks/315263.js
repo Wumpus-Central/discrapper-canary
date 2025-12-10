@@ -33,8 +33,8 @@ var r = n(873546),
     S = n(787695),
     I = n(36243),
     T = n(110560),
-    A = n(703656),
-    C = n(540709),
+    C = n(703656),
+    A = n(540709),
     N = n(881706);
 n(812513);
 var P = n(701190),
@@ -328,12 +328,12 @@ function B(e) {
     return H && (null == B ? void 0 : B.startsWith("/discovery/quests"))
         ? (e) => (null == e || e.preventDefault(), (0, T.navigateToQuestHome)({ fromContent: i.j.QUEST_BADGE }), !0)
         : H && (null == B ? void 0 : B.startsWith("/quest-home"))
-          ? (e) => (null == e || e.preventDefault(), (0, A.uL)(M.Z5c.QUEST_HOME_V2 + (null != F ? F : "")), !0)
+          ? (e) => (null == e || e.preventDefault(), (0, C.uL)(M.Z5c.QUEST_HOME_V2 + (null != F ? F : "")), !0)
           : H && (null == B ? void 0 : B.startsWith("/quest-preview"))
             ? (e) => {
                   if ((null == e || e.preventDefault(), (0, I.T)({ location: k.dr.NAVIGATE_TO_QUEST_HOME_UTIL })))
                       return (
-                          (0, A.uL)(M.Z5c.QUEST_HOME_V2 + "?tab=preview_tool&quest_id=".concat(B.split("/").at(-1))), !0
+                          (0, C.uL)(M.Z5c.QUEST_HOME_V2 + "?tab=preview_tool&quest_id=".concat(B.split("/").at(-1))), !0
                       );
               }
             : H && (null == B ? void 0 : B.startsWith("/discovery/servers"))
@@ -350,5 +350,5 @@ function B(e) {
                 )
               : a || null == (0, N.v)(e)
                 ? void 0
-                : (t) => (null == t || t.preventDefault(), C.Z.show(e), !0);
+                : (t) => (null == t || t.preventDefault(), A.Z.show(e), !0);
 }

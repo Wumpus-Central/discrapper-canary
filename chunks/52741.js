@@ -41,8 +41,8 @@ function v(e) {
             textVariant: S,
             className: I,
             isApplicationHome: T,
-            enablePremiumBrandRefresh: A,
-            headerClassName: C,
+            enablePremiumBrandRefresh: C,
+            headerClassName: A,
             headingVariant: N = "heading-md/normal",
             headingColor: P,
         } = e,
@@ -86,7 +86,7 @@ function v(e) {
         return (0, r.jsx)(c.Heading, {
             variant: N,
             color: P,
-            className: a()(y.trialHeader, C),
+            className: a()(y.trialHeader, A),
             children: i(),
         });
     }
@@ -100,7 +100,7 @@ function v(e) {
             return (0, r.jsx)(c.Heading, {
                 variant: N,
                 color: P,
-                className: a()(y.trialHeader, C),
+                className: a()(y.trialHeader, A),
                 children: b.intl.format(b.t["9vyovu"], {
                     planName: (0, f.MF)(
                         null != (Z = E.IW[null != (G = null == U ? void 0 : U.sku_id) ? G : E.Si.NONE])
@@ -120,7 +120,7 @@ function v(e) {
             return (0, r.jsx)(c.Heading, {
                 variant: N,
                 color: P,
-                className: a()(y.trialHeader, C),
+                className: a()(y.trialHeader, A),
                 children: (0, r.jsx)(O, {
                     defaultPriceString: e,
                     subscriptionPlan: E.Xh.PREMIUM_MONTH_TIER_2,
@@ -137,7 +137,7 @@ function v(e) {
                 priceOptions: v,
                 variant: S,
                 isApplicationHome: T,
-                enablePremiumBrandRefresh: A,
+                enablePremiumBrandRefresh: C,
             }),
             h &&
                 (0, r.jsx)(g.Z, {
@@ -148,7 +148,7 @@ function v(e) {
                     priceOptions: v,
                     variant: S,
                     isApplicationHome: T,
-                    enablePremiumBrandRefresh: A,
+                    enablePremiumBrandRefresh: C,
                 }),
         ],
     });

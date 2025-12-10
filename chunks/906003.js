@@ -1,4 +1,4 @@
-n.d(t, { Y: () => C }), n(388685);
+n.d(t, { Y: () => A }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -97,12 +97,12 @@ let I = {
         sm: "xs",
         md: "refresh_sm",
     },
-    A = {
+    C = {
         xs: "sm",
         sm: "sm",
         md: "md",
     };
-function C(e) {
+function A(e) {
     var t,
         n,
         {
@@ -114,8 +114,8 @@ function C(e) {
             iconPosition: y = "start",
             iconOpticalOffsetMargin: S = 0,
             fullWidth: T = !1,
-            focusProps: A,
-            loading: C,
+            focusProps: C,
+            loading: A,
             loadingStartedLabel: D,
             loadingFinishedLabel: w,
             rounded: x = !1,
@@ -183,13 +183,13 @@ function C(e) {
         eo = (0, s.a)(ei),
         es = i.useRef(!1);
     i.useEffect(() => {
-        !0 === C && ((es.current = !0), l.u.announce(null != D ? D : ea.BUTTON_LOADING_STARTED_LABEL)),
-            !1 === C &&
+        !0 === A && ((es.current = !0), l.u.announce(null != D ? D : ea.BUTTON_LOADING_STARTED_LABEL)),
+            !1 === A &&
                 !0 === es.current &&
                 (l.u.announce(null != w ? w : ea.BUTTON_LOADING_FINISHED_LABEL), (es.current = !1));
-    }, [C, D, w, ea.BUTTON_LOADING_STARTED_LABEL, ea.BUTTON_LOADING_FINISHED_LABEL]);
+    }, [A, D, w, ea.BUTTON_LOADING_STARTED_LABEL, ea.BUTTON_LOADING_FINISHED_LABEL]);
     let el = (0, r.jsxs)("div", {
-            className: o()(g.buttonChildren, { [g.loading]: C }),
+            className: o()(g.buttonChildren, { [g.loading]: A }),
             children: [
                 null != et && "start" === y && et,
                 J &&
@@ -203,12 +203,12 @@ function C(e) {
                 null != et && "end" === y && et,
             ],
         }),
-        ec = V || C,
+        ec = V || A,
         eu = H;
     null != eu && "number" == typeof eu && (eu = "".concat(eu, "px"));
     let ed = (0, r.jsx)(
         d.tE,
-        O(b({}, A), {
+        O(b({}, C), {
             children: (0, r.jsxs)(
                 "button",
                 O(
@@ -216,7 +216,7 @@ function C(e) {
                         {
                             "data-mana-component": "button",
                             role: a,
-                            "aria-busy": C,
+                            "aria-busy": A,
                             className: o()(g.button, g[Q], g[f], {
                                 [g.hasText]: J,
                                 [g.fullWidth]: X,
@@ -246,13 +246,13 @@ function C(e) {
                                     isLightMode: eo,
                                     disabled: V,
                                 }),
-                            null == C
+                            null == A
                                 ? (0, r.jsx)("div", {
                                       className: g.buttonChildrenWrapper,
                                       children: el,
                                   })
                                 : (0, r.jsx)(N, {
-                                      loading: C,
+                                      loading: A,
                                       size: Q,
                                       children: el,
                                   }),
@@ -417,7 +417,7 @@ function R(e) {
         } else if ("sticker" === t.type) {
             let e = t.component;
             c = (0, r.jsx)(e, {
-                size: f.Z[A[o]],
+                size: f.Z[C[o]],
                 sticker: t.asset,
                 isInteracting: d,
             });

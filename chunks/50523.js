@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(388032);
 function v(e) {
     var t, n, v;
-    let { application: S, customId: I, customLink: T, referrerId: A, message: C } = e,
+    let { application: S, customId: I, customLink: T, referrerId: C, message: A } = e,
         N = null == S || null == (t = S.bot) ? void 0 : t.id,
         P = (0, c.ms)({
             context: { type: "contextless" },
@@ -54,7 +54,7 @@ function v(e) {
                     isStart: null == j,
                     embeddedActivitiesManager: k,
                     customId: Z,
-                    referrerId: A,
+                    referrerId: C,
                     analyticsLocations: w,
                 });
             },
@@ -71,7 +71,7 @@ function v(e) {
                         botId: N,
                         analyticsLocations: w,
                         customId: Z,
-                        referrerId: A,
+                        referrerId: C,
                     });
                 },
             });
@@ -91,11 +91,11 @@ function v(e) {
         trackingConfig: {
             id: S.id,
             linkType: u.U.CUSTOM_ACTIVITY_LINK,
-            referrerId: A,
+            referrerId: C,
             activityCustomId: Z,
-            guildId: null == (v = _.Z.getChannel(C.channel_id)) ? void 0 : v.guild_id,
-            channelId: C.channel_id,
-            messageId: C.id,
+            guildId: null == (v = _.Z.getChannel(A.channel_id)) ? void 0 : v.guild_id,
+            channelId: A.channel_id,
+            messageId: A.id,
         },
     });
 }

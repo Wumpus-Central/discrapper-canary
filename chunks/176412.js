@@ -50,7 +50,7 @@ function T(e, t) {
     }
     return n;
 }
-let A = (function (e, t) {
+let C = (function (e, t) {
         return (
             (t = null != t ? t : {}),
             Object.getOwnPropertyDescriptors
@@ -79,10 +79,10 @@ let A = (function (e, t) {
         })({}, m.Z.RULES.commandMention),
         { parse: (e, t, n) => ({ content: m.Z.RULES.commandMention.parse(e, t, n).content }) },
     ),
-    C = a().pick(
+    A = a().pick(
         (0, h.Z)([
             m.Z.RULES,
-            { commandMention: A },
+            { commandMention: C },
             (0, _.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1,
@@ -105,7 +105,7 @@ let A = (function (e, t) {
             "spoiler",
         ],
     ),
-    N = s.w4(C);
+    N = s.w4(A);
 function P(e) {
     let {
             context: t,
@@ -120,12 +120,12 @@ function P(e) {
             onConfirmActivityLaunchChecksAlertOpen: I,
         } = e,
         T = (0, l.O)(),
-        A = (0, c.Qv)({
+        C = (0, c.Qv)({
             context: t,
             applicationId: n.id,
             fetchesApplication: g,
         }),
-        C = (0, O.Q)(A),
+        A = (0, O.Q)(C),
         N = (0, o.e7)([b.Z], () => b.Z.entrypoint()),
         P = r.useMemo(() => {
             var e, r, i;
@@ -149,7 +149,7 @@ function P(e) {
                         location: i,
                         application_id: t,
                         section_name: a,
-                        action: C,
+                        action: A,
                         source: N,
                     });
             },
@@ -163,12 +163,12 @@ function P(e) {
         D = "primary",
         w = null != s ? s : S.intl.string(S.t.zKX8Nu);
     return (
-        C === c.JS.JOIN
+        A === c.JS.JOIN
             ? ((D = "active"), (w = S.intl.string(S.t.d9PsMj)))
-            : C !== c.JS.LEAVE || h || ((D = "critical-primary"), (w = S.intl.string(S.t["Hi1/aQ"]))),
+            : A !== c.JS.LEAVE || h || ((D = "critical-primary"), (w = S.intl.string(S.t["Hi1/aQ"]))),
         {
             onActivityItemSelected: R,
-            activityAction: C,
+            activityAction: A,
             buttonVariant: D,
             buttonText: w,
         }

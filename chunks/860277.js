@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(989392),
     I = n(909397),
     T = n(198358),
-    A = n(225055),
-    C = n(391876),
+    C = n(225055),
+    A = n(391876),
     N = n(612776),
     P = n(860076),
     R = n(388032),
@@ -46,19 +46,19 @@ function M(e) {
                         colorClass: D.iconColor,
                         className: D.titleIcon,
                     }),
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(A.Z, {
                         variant: "eyebrow",
                         className: D.eyebrow,
                         children: R.intl.string(P.default.ZQakPR),
                     }),
                 ],
             }),
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(A.Z, {
                 variant: "display-lg",
                 className: w.display,
                 children: R.intl.string(P.default.OzY5Ns),
             }),
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(A.Z, {
                 variant: "heading-xxl/medium",
                 className: w.subtitle,
                 children: R.intl.string(P.default.sEPtGY),
@@ -70,7 +70,7 @@ function M(e) {
 function k() {
     return (0, r.jsx)("div", {
         className: w.content,
-        children: (0, r.jsx)(C.Z, {
+        children: (0, r.jsx)(A.Z, {
             variant: "heading-xxl/medium",
             children: R.intl.string(P.default.d5HUsD),
         }),
@@ -92,14 +92,14 @@ function U(e) {
                         colorClass: D.iconColor,
                         className: D.titleIcon,
                     }),
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(A.Z, {
                         variant: "eyebrow",
                         className: D.eyebrow,
                         children: R.intl.string(P.default.ZQakPR),
                     }),
                 ],
             }),
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(A.Z, {
                 variant: "display-lg",
                 className: o()(w.display, w.subtitle),
                 children: R.intl.string(P.default["+uwOHt"]),
@@ -109,11 +109,11 @@ function U(e) {
                 children: [
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(C.Z, {
+                            (0, r.jsx)(A.Z, {
                                 variant: "eyebrow",
                                 children: R.intl.string(P.default.wWKySP),
                             }),
-                            (0, r.jsx)(C.Z, {
+                            (0, r.jsx)(A.Z, {
                                 variant: "heading-xxl/normal",
                                 className: D.numeric,
                                 children: null == i ? void 0 : i.numMessagesSent,
@@ -122,14 +122,14 @@ function U(e) {
                     }),
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(C.Z, {
+                            (0, r.jsx)(A.Z, {
                                 variant: "eyebrow",
                                 children:
                                     a === d.J6.HOURS
                                         ? R.intl.format(P.default.Xu0QsX, { numHours: s })
                                         : R.intl.string(P.default.RmVTph),
                             }),
-                            (0, r.jsx)(C.Z, {
+                            (0, r.jsx)(A.Z, {
                                 variant: "heading-xxl/normal",
                                 className: D.numeric,
                                 children: s,
@@ -151,7 +151,7 @@ function G(e) {
         v = d[1],
         S = d[0],
         I = (0, u.e7)([h.default], () => h.default.getCurrentUser()),
-        C = (0, i.useRef)(0),
+        A = (0, i.useRef)(0),
         P = (0, i.useRef)(!0),
         R = (0, i.useRef)(null),
         D = null != (t = (0, E._T)(null == _ ? void 0 : _.user)) ? t : "",
@@ -166,10 +166,10 @@ function G(e) {
                     ? l()
                     : B
                       ? (s(), (P.current = !0))
-                      : (C.current = setTimeout(() => {
+                      : (A.current = setTimeout(() => {
                             s(), (P.current = !0);
                         }, x))),
-            () => clearTimeout(C.current)
+            () => clearTimeout(A.current)
         ),
         [s, l, B, o],
     );
@@ -188,7 +188,7 @@ function G(e) {
             }
         }, [o, B]),
         V = (0, i.useCallback)((e) => (null != e ? g.ZP.getUserAvatarURL(e, !1, 64, "png") : void 0), []);
-    (0, i.useEffect)(() => () => clearTimeout(C.current), []),
+    (0, i.useEffect)(() => () => clearTimeout(A.current), []),
         (0, i.useEffect)(() => {
             o !== N.ij.FRIENDS_LEAVE && (P.current = !1);
         }, [o]);
@@ -233,7 +233,7 @@ function G(e) {
             }),
             (0, r.jsx)("div", {
                 className: w.container,
-                children: (0, r.jsxs)(A.ZP, {
+                children: (0, r.jsxs)(C.ZP, {
                     activeSlide: Y,
                     className: w.animatedSlides,
                     slideClassName: w.animatedSlide,
@@ -271,27 +271,27 @@ function Z() {
         v = (0, _.Z)(null != (e = null == E ? void 0 : E.id) ? e : "0"),
         I = (0, u.e7)([m.Z], () => m.Z.isBlocked(null == E ? void 0 : E.id)),
         T = v && !I,
-        [A, C] = (0, i.useState)(!1),
-        x = A || null == p || p.length < 1 || p.length > j,
+        [C, A] = (0, i.useState)(!1),
+        x = C || null == p || p.length < 1 || p.length > j,
         L = (0, S.T)(l.Z),
-        M = A ? R.intl.string(R.t.fjcCk5) : "";
+        M = C ? R.intl.string(R.t.fjcCk5) : "";
     (0, i.useEffect)(() => {
         null != d.current && (d.current.style.height = "".concat(Math.min(d.current.scrollHeight, 140), "px"));
     }, [p]);
     let k = (0, i.useCallback)(() => {
-            if (A) return;
+            if (C) return;
             L();
             let e = (0, s.sample)(t);
             for (; null == e || e === p; ) e = (0, s.sample)(t);
             h(e);
-        }, [t, p, A, L]),
+        }, [t, p, C, L]),
         U = (0, i.useCallback)((e) => {
             h(e.target.value);
         }, []),
         G = (0, i.useCallback)(() => {
             x ||
                 (null == E ? void 0 : E.id) == null ||
-                (L(), (0, b.gq)(p, null == E ? void 0 : E.id), h(void 0), C(!0));
+                (L(), (0, b.gq)(p, null == E ? void 0 : E.id), h(void 0), A(!0));
         }, [x, L, p, null == E ? void 0 : E.id]);
     return T
         ? (0, r.jsxs)("div", {
@@ -313,15 +313,15 @@ function Z() {
                           scrollbarColor: "".concat(a, " black"),
                       },
                       maxLength: j + 1,
-                      disabled: A,
+                      disabled: C,
                   }),
                   (0, r.jsxs)("div", {
                       className: w.actions,
                       children: [
                           (0, r.jsx)(c.P3F, {
                               onClick: k,
-                              "aria-disabled": A,
-                              className: o()(D.clickable, { [w.disabled]: A }),
+                              "aria-disabled": C,
+                              className: o()(D.clickable, { [w.disabled]: C }),
                               children: (0, r.jsx)(c.kBK, {
                                   color: a,
                                   colorClass: D.iconColor,
@@ -329,8 +329,8 @@ function Z() {
                           }),
                           (0, r.jsx)(c.P3F, {
                               onClick: G,
-                              "aria-disabled": A || x,
-                              className: o()(D.clickable, { [w.disabled]: A || x }),
+                              "aria-disabled": C || x,
+                              className: o()(D.clickable, { [w.disabled]: C || x }),
                               children: (0, r.jsx)(c.Uuj, {
                                   color: a,
                                   colorClass: D.iconColor,

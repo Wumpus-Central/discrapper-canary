@@ -125,7 +125,7 @@ class T {
         t && ((0, R.I1)(this).scope || (0, _.nZ)()).captureEvent(t);
     }
     _convertSpanToTransaction() {
-        if (!N((0, u.XU)(this))) return;
+        if (!f((0, u.XU)(this))) return;
         this._name ||
             (s.X && o.kg.warn("Transaction has no name, falling back to `<unlabeled transaction>`."),
             (this._name = "<unlabeled transaction>"));
@@ -142,7 +142,7 @@ class T {
                     return e !== this && !((t = e) instanceof T && t.isStandaloneSpan());
                 })
                 .map((e) => (0, u.XU)(e))
-                .filter(N),
+                .filter(f),
             a = this._attributes[l.Zj],
             c = {
                 contexts: { trace: (0, u.HR)(this) },
@@ -173,6 +173,6 @@ class T {
 function A(e) {
     return (e && "number" == typeof e) || e instanceof Date || Array.isArray(e);
 }
-function N(e) {
+function f(e) {
     return !!e.start_timestamp && !!e.timestamp && !!e.span_id && !!e.trace_id;
 }

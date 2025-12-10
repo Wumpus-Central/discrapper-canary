@@ -60,7 +60,7 @@ function T(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function A(e, t) {
         e
     );
 }
-let C = (e) => {
+let A = (e) => {
         let { includes: t } = e;
         return t
             ? (0, r.jsxs)(r.Fragment, {
@@ -116,7 +116,7 @@ let C = (e) => {
                                   variant: "text-md/medium",
                                   children: n.text,
                               })
-                            : (0, r.jsx)(C, { includes: !!n.includes }),
+                            : (0, r.jsx)(A, { includes: !!n.includes }),
                 }),
                 (0, r.jsx)("td", {
                     className: y.cell,
@@ -126,7 +126,7 @@ let C = (e) => {
                                   variant: "text-md/medium",
                                   children: i.text,
                               })
-                            : (0, r.jsx)(C, { includes: !!i.includes }),
+                            : (0, r.jsx)(A, { includes: !!i.includes }),
                 }),
             ],
         });
@@ -214,7 +214,7 @@ let C = (e) => {
             { className: a, hidePill: s = !1, selectedPlanTier: f = E.PremiumTypes.TIER_2 } = e,
             { analyticsLocations: S } = (0, u.ZP)(c.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             T = (0, _.N)(),
-            C = null == T || null == (t = T.subscription_trial) ? void 0 : t.sku_id,
+            A = null == T || null == (t = T.subscription_trial) ? void 0 : t.sku_id,
             N = (0, p.N)(),
             R = null != N && (0, m.Wp)(N, E.Si.TIER_2),
             w = (0, m.Aq)(E.Xh.PREMIUM_MONTH_TIER_2),
@@ -230,7 +230,7 @@ let C = (e) => {
                 text: e,
             });
         }
-        let k = C === E.Si.TIER_0 || f === E.PremiumTypes.TIER_0;
+        let k = A === E.Si.TIER_0 || f === E.PremiumTypes.TIER_0;
         return (0, r.jsx)(u.Gt, {
             value: S,
             children: (0, r.jsxs)("div", {
@@ -279,7 +279,7 @@ let C = (e) => {
                                         shouldUseDiscountPrice: R,
                                         tier2DiscountedPriceString: x,
                                     }),
-                                    M.map((e) => (0, i.createElement)(P, A(I({}, e), { key: e.id }))),
+                                    M.map((e) => (0, i.createElement)(P, C(I({}, e), { key: e.id }))),
                                 ],
                             }),
                         ],

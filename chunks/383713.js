@@ -2,15 +2,15 @@ n.d(e, { A: () => d });
 var i = n(442837),
     l = n(846027),
     s = n(509613),
-    r = n(463395),
-    u = n(131951),
+    u = n(463395),
+    r = n(131951),
     a = n(313789),
     o = n(981631),
     c = n(388032);
 let d = (0, s.qs)(a.n.VOICE_ECHO_CANCELLATION_SETTING, {
     useTitle: () => c.intl.string(c.t.iWTwu6),
     useValue: function () {
-        return (0, i.e7)([u.Z], () => u.Z.getEchoCancellation());
+        return (0, i.e7)([r.Z], () => r.Z.getEchoCancellation());
     },
     setValue: function (t) {
         l.Z.setEchoCancellation(t, {
@@ -19,12 +19,12 @@ let d = (0, s.qs)(a.n.VOICE_ECHO_CANCELLATION_SETTING, {
         });
     },
     useDisabled: function () {
-        return (0, i.e7)([u.Z, r.Z], () => {
-            let t = u.Z.getInputDeviceId();
-            return r.Z.hasEchoCancellation(t);
+        return (0, i.e7)([r.Z, u.Z], () => {
+            let t = r.Z.getInputDeviceId();
+            return u.Z.hasEchoCancellation(t);
         });
     },
     usePredicate: function () {
-        return (0, i.e7)([u.Z], () => u.Z.isInputProfileCustom());
+        return (0, i.e7)([r.Z], () => r.Z.isInputProfileCustom());
     },
 });

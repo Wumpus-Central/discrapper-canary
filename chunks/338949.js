@@ -50,7 +50,7 @@ function T(e) {
         return O.reset(), u.default.fromTimestampWithSequence(t, O);
     }
 }
-function A(e, t, n) {
+function C(e, t, n) {
     var r;
     let i = T(e.timestamp);
     return {
@@ -66,7 +66,7 @@ function A(e, t, n) {
         stack: null != (r = Error().stack) ? r : "",
     };
 }
-function C() {
+function A() {
     return performance.timeOrigin + performance.now();
 }
 let N = new l.h(S, I),
@@ -80,11 +80,11 @@ function D() {
 function w(e, t, n) {
     let r = v(e);
     if (null == r) throw Error("Native breadcrumb has no native id");
-    return !(N.size(r) > 0) && ((P = Math.max(P, Number(e.id))), R(A(e, t, n)));
+    return !(N.size(r) > 0) && ((P = Math.max(P, Number(e.id))), R(C(e, t, n)));
 }
 function x(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : f.l6.Info,
-        a = C(),
+        a = A(),
         o = T(a);
     return R({
         id: o,

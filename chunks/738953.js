@@ -1,7 +1,7 @@
 n.d(t, { Z: () => B }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(205120),
+    a = n(467721),
     o = n(442837),
     s = n(481060),
     l = n(616780),
@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(899007),
     I = n(867176),
     T = n(451834),
-    A = n(502762),
-    C = n(544989),
+    C = n(502762),
+    A = n(544989),
     N = n(481932),
     P = n(195387),
     R = n(664794),
@@ -188,7 +188,7 @@ function B(e) {
                                 children: j.intl.format(j.t.KRe1Fk, { name: em }),
                             }),
                         }),
-                        (0, r.jsxs)(A.Z, {
+                        (0, r.jsxs)(C.Z, {
                             user: n,
                             displayProfile: en,
                             themeType: L.l.POPOUT,
@@ -198,7 +198,7 @@ function B(e) {
                                         style: eo,
                                         className: M.backdrop,
                                     }),
-                                (0, r.jsxs)(C.Z, {
+                                (0, r.jsxs)(A.Z, {
                                     children: [
                                         (0, r.jsx)(P.Z, {
                                             shouldShowTooltip: null === ea.interactionType,

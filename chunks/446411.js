@@ -29,8 +29,8 @@ var r,
     S = n(785992),
     I = n(400266),
     T = n(592125),
-    A = n(52824),
-    C = n(626135),
+    C = n(52824),
+    A = n(626135),
     N = n(585483),
     P = n(55935),
     R = n(408433),
@@ -135,7 +135,7 @@ function et(e) {
             onPlay: S,
             onPause: I,
             onEnded: T,
-            onControlsHide: C,
+            onControlsHide: A,
             onControlsShow: P,
             onVolumeChange: R,
             onMute: w,
@@ -171,7 +171,7 @@ function et(e) {
         maxHeight: c,
     });
     (Y = Math.max(K.width, z)), (W = Math.max(K.height, q));
-    let Q = (0, A.q)(u);
+    let Q = (0, C.q)(u);
     if (null != d && null != d.proxyURL)
         return (0, i.jsx)("div", {
             className: s()(Z.embedVideo, r),
@@ -194,7 +194,7 @@ function et(e) {
                 onPlay: S,
                 onPause: I,
                 onMute: w,
-                onControlsHide: C,
+                onControlsHide: A,
                 onControlsShow: P,
                 sourceMetadata: U,
             }),
@@ -312,8 +312,8 @@ function en(e) {
     return (0, i.jsx)(h.Z, {
         className: s()(Z.embedVideo, t),
         original: n,
-        poster: (0, A.q)(l),
-        src: (0, A.q)(c),
+        poster: (0, C.q)(l),
+        src: (0, C.q)(c),
         alt: f,
         width: l.width,
         height: l.height,
@@ -490,7 +490,7 @@ class er extends (r = a.PureComponent) {
                       let { disableAnimations: l } = i;
                       return a({
                           containerClassName: Z.embedThumbnail,
-                          src: (0, A.q)(t),
+                          src: (0, C.q)(t),
                           original: t.url,
                           width: t.width,
                           height: t.height,
@@ -633,7 +633,7 @@ class er extends (r = a.PureComponent) {
     handleImageHover() {
         var e;
         let t = T.Z.getChannel(null == (e = this.props.message) ? void 0 : e.channel_id);
-        C.default.track(k.rMx.IMAGE_HOVERED, {
+        A.default.track(k.rMx.IMAGE_HOVERED, {
             guild_id: null == t ? void 0 : t.guild_id,
             channel_id: null == t ? void 0 : t.id,
             image_recommendations_shown: !1,
@@ -652,7 +652,7 @@ class er extends (r = a.PureComponent) {
             { renderImageComponent: u, className: d, autoPlayGif: f } = this.props,
             { maxMediaWidth: m, maxMediaHeight: h, sourceMetadata: E } = this.state;
         if (null == a) return null;
-        let y = (0, A.q)(a),
+        let y = (0, C.q)(a),
             { srcToOnClickOverride: O, srcToHandlePreloadImage: v } =
                 null == c
                     ? {
@@ -670,7 +670,7 @@ class er extends (r = a.PureComponent) {
                           "Embed",
                       ),
             S = g.ZP.isAnimated({
-                src: (0, A.q)(a),
+                src: (0, C.q)(a),
                 original: a.url,
                 animated: !1,
                 srcIsAnimated: a.srcIsAnimated,
@@ -683,7 +683,7 @@ class er extends (r = a.PureComponent) {
                 }),
                 imageContainerClassName: o ? Z.galleryImageContainer : void 0,
                 imageClassName: o ? Z.embedGalleryImageElement : void 0,
-                src: (0, A.q)(a),
+                src: (0, C.q)(a),
                 alt: null == a.description || "" === a.description ? l : a.description,
                 responsive: !0,
                 limitResponsiveWidth: !o,

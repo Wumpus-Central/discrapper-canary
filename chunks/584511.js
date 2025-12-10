@@ -60,7 +60,7 @@ function _(e) {
             className: I,
         } = e,
         T = (0, o.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
-        A = () => {
+        C = () => {
             let e = T ? s.v0G : _ ? s.wE8 : s.nRN;
             return p || _ || T
                 ? (0, r.jsx)("div", {
@@ -76,7 +76,7 @@ function _(e) {
                   })
                 : null;
         },
-        C = () =>
+        A = () =>
             (0, r.jsx)(
                 "div",
                 {
@@ -90,11 +90,11 @@ function _(e) {
         N = () =>
             p && i
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [C(), A()],
+                      children: [A(), C()],
                   })
                 : p || _ || T
-                  ? (0, r.jsx)(r.Fragment, { children: A() })
-                  : (0, r.jsx)(r.Fragment, { children: C() }),
+                  ? (0, r.jsx)(r.Fragment, { children: C() })
+                  : (0, r.jsx)(r.Fragment, { children: A() }),
         P = () => {
             let e = (0, s.dcp)(n),
                 t = (0, r.jsx)("img", {

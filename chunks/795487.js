@@ -17,30 +17,30 @@ let _ = function (e) {
         [b, y] = i.useState(!1),
         [O, v] = i.useState(!1),
         [S, I] = i.useState(null),
-        [T, A] = i.useState({}),
-        C = (0, a.useElements)(),
+        [T, C] = i.useState({}),
+        A = (0, a.useElements)(),
         N = i.useCallback(() => {
-            if (null != C)
+            if (null != A)
                 switch (n) {
                     case "cardNumber": {
-                        let e = C.getElement(a.CardNumberElement);
+                        let e = A.getElement(a.CardNumberElement);
                         if (null == e) return;
                         e.off("change"), e.off("focus"), e.off("blur");
                         break;
                     }
                     case "cardExpiry": {
-                        let e = C.getElement(a.CardExpiryElement);
+                        let e = A.getElement(a.CardExpiryElement);
                         if (null == e) return;
                         e.off("change"), e.off("focus"), e.off("blur");
                         break;
                     }
                     case "cardCvc": {
-                        let e = C.getElement(a.CardCvcElement);
+                        let e = A.getElement(a.CardCvcElement);
                         if (null == e) return;
                         e.off("change"), e.off("focus"), e.off("blur");
                     }
                 }
-        }, [C, n]),
+        }, [A, n]),
         P = i.useCallback(
             (e) => {
                 O || e.empty || v(!0), null != _ && _(e.complete), null != e.error && y(!1);
@@ -54,10 +54,10 @@ let _ = function (e) {
             y(!1), null == h || h();
         }, [h]),
         w = i.useCallback(() => {
-            if (null != C)
+            if (null != A)
                 switch (n) {
                     case "cardNumber": {
-                        let e = C.getElement(a.CardNumberElement);
+                        let e = A.getElement(a.CardNumberElement);
                         if (null == e) return;
                         e.on("change", (e) => {
                             g !== e.brand && E(e.brand),
@@ -73,7 +73,7 @@ let _ = function (e) {
                         break;
                     }
                     case "cardExpiry": {
-                        let e = C.getElement(a.CardExpiryElement);
+                        let e = A.getElement(a.CardExpiryElement);
                         if (null == e) return;
                         e.on("change", (e) => {
                             null != e.error || (e.empty && O) ? I(d.intl.string(d.t["9/zZdl"])) : I(null), P(e);
@@ -83,7 +83,7 @@ let _ = function (e) {
                         break;
                     }
                     case "cardCvc": {
-                        let e = C.getElement(a.CardCvcElement);
+                        let e = A.getElement(a.CardCvcElement);
                         if (null == e) return;
                         e.on("change", (e) => {
                             null != e.error || (e.empty && O) ? I(d.intl.string(d.t.ro4isZ)) : I(null), P(e);
@@ -92,7 +92,7 @@ let _ = function (e) {
                             e.on("blur", D);
                     }
                 }
-        }, [D, P, R, g, C, O, n]);
+        }, [D, P, R, g, A, O, n]);
     i.useEffect(
         () => (
             w(),
@@ -155,7 +155,7 @@ let _ = function (e) {
             if (null == e) return;
             let n = window.getComputedStyle(e),
                 r = n.getPropertyValue("font-family");
-            A({
+            C({
                 base: {
                     fontFamily: r,
                     fontWeight: n.getPropertyValue("font-weight"),

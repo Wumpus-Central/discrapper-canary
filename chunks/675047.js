@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => A });
 var r = n(54381),
     i = n(481060),
     a = n(924628),
@@ -35,7 +35,7 @@ function T() {
         children: (0, r.jsx)(f.Z, {}),
     });
 }
-function A() {
+function C() {
     let e = (0, u.BK)("UserSettingsDataAndPrivacy");
     return (0, r.jsxs)(b.Z, {
         title: S.intl.string(S.t.SRZyHg),
@@ -50,7 +50,7 @@ function A() {
         ],
     });
 }
-function C() {
+function A() {
     return (
         (0, o.ZP)(() => {
             (0, a.I)(), (0, c.A)();
@@ -59,7 +59,7 @@ function C() {
             header: S.intl.string(S.t.OAuOHD),
             notice: (0, r.jsx)(y.Z, { page: y.N.DATA_AND_PRIVACY }),
             children: (0, r.jsxs)(i.l09, {
-                children: [(0, r.jsx)(A, {}), (0, r.jsx)(T, {}), (0, r.jsx)(I, {})],
+                children: [(0, r.jsx)(C, {}), (0, r.jsx)(T, {}), (0, r.jsx)(I, {})],
             }),
         })
     );

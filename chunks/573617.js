@@ -26,16 +26,16 @@ function I() {
                 R = (0, a.HN)(),
                 T = R ? (0, a.Gx)(R) : void 0,
                 A = (null != r ? d.get(r) : void 0) || T,
-                N = A ? (0, a.XU)(A).description : (0, i.nZ)().getScopeData().transactionName,
-                f = (0, s.Rt)(t.target),
+                f = A ? (0, a.XU)(A).description : (0, i.nZ)().getScopeData().transactionName,
+                N = (0, s.Rt)(t.target),
                 O = (0, c.Jr)({
                     [o.S3]: "auto.http.browser.inp",
                     [o.$J]: `ui.interaction.${E}`,
                     [o.JQ]: t.duration,
                 }),
                 h = (0, l.fi)({
-                    name: f,
-                    transaction: N,
+                    name: N,
+                    transaction: f,
                     attributes: O,
                     startTime: u,
                 });

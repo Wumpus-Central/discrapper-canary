@@ -11,8 +11,8 @@ var i = n(873546),
     d = n(86376),
     p = n(594174),
     f = n(431),
-    h = n(74538),
-    g = n(374023),
+    g = n(74538),
+    h = n(374023),
     m = n(709054),
     _ = n(367074),
     b = n(775412),
@@ -100,7 +100,7 @@ class P extends c.Z {
             }),
             N(this, "getOfferFromStore", () => {
                 let e = p.default.getCurrentUser();
-                if ((0, h.I5)(e)) return {};
+                if ((0, g.I5)(e)) return {};
                 let t = [T.hs, T.RU, T.rB, T.ih]
                     .map((e) => f.Z.getUserDiscountOffer(e))
                     .filter((e) => null != e && !(0, d.k)(e))
@@ -110,7 +110,7 @@ class P extends c.Z {
                 return null != n ? { userTrialOffer: n } : {};
             }),
             N(this, "mayShowAnnouncementModal", async () => {
-                if ((await (0, _.l2)(), g.s.isDisallowPopupsSet())) return;
+                if ((await (0, _.l2)(), h.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = v.Z.getCurrentConfig({ location: "announcementManager" }, { autoTrackExposure: !1 }).enabled,
                     n = (0, O.$)({ location: "mayShowAnnouncementModal" }),
@@ -120,7 +120,7 @@ class P extends c.Z {
                     (!t ||
                         r ||
                         (0, s.$sL)() ||
-                        (0, h.I5)(l) ||
+                        (0, g.I5)(l) ||
                         ((await (0, E.G)(e.userTrialOffer)) &&
                             (0, C.Z)({ upsellType: T.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })),
                     (null == l || l.verified) && !(0, s.$sL)() && !i.tq && !n)

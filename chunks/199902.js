@@ -17,8 +17,8 @@ var c,
     S = n(496675),
     I = n(19780),
     T = n(944486),
-    A = n(979651),
-    C = n(981631),
+    C = n(979651),
+    A = n(981631),
     N = n(70722);
 function P(e, t, n) {
     return (
@@ -80,11 +80,11 @@ function M() {
 }
 function k(e) {
     var t;
-    null == i[e.ownerId] && (i[e.ownerId] = {}), (i[e.ownerId][null != (t = e.guildId) ? t : C.kod] = e);
+    null == i[e.ownerId] && (i[e.ownerId] = {}), (i[e.ownerId][null != (t = e.guildId) ? t : A.kod] = e);
 }
 function U(e, t) {
     var n;
-    let r = null != t ? t : C.kod;
+    let r = null != t ? t : A.kod;
     return (null == (n = i[e]) ? void 0 : n[r]) != null && (delete i[e][r], !0);
 }
 function G(e) {
@@ -130,7 +130,7 @@ function V(e) {
     let { streamKey: t } = e,
         n = (0, _.my)(t);
     r.delete(t),
-        r.set(t, w(R({}, n), { state: C.jm8.CONNECTING })),
+        r.set(t, w(R({}, n), { state: A.jm8.CONNECTING })),
         n.ownerId === b.default.getId() && (L[n.channelId] = !1);
 }
 function H(e) {
@@ -178,7 +178,7 @@ function H(e) {
             guildId: i,
             channelId: a,
             ownerId: b.default.getId(),
-            state: C.jm8.CONNECTING,
+            state: A.jm8.CONNECTING,
         });
 }
 function Y(e) {
@@ -207,7 +207,7 @@ function W(e) {
             (r.set(
                 e,
                 w(R({}, t), {
-                    state: C.jm8.FAILED,
+                    state: A.jm8.FAILED,
                     endReason: n,
                     errorCode: i,
                 }),
@@ -239,7 +239,7 @@ function z(e) {
 }
 function q(e) {
     let { streamKey: t, region: n, viewerIds: i, paused: o } = e;
-    r.set(t, w(R({}, (0, _.my)(t)), { state: o ? C.jm8.PAUSED : C.jm8.ACTIVE })),
+    r.set(t, w(R({}, (0, _.my)(t)), { state: o ? A.jm8.PAUSED : A.jm8.ACTIVE })),
         (a[t] = {
             streamKey: t,
             region: n,
@@ -254,7 +254,7 @@ function X(e) {
     let { id: t, channelId: n } = e;
     (x = t),
         Array.from(r.values()).forEach((e) => {
-            (0, _.V9)(e) !== x && e.state === C.jm8.ENDED && G((0, _.V9)(e));
+            (0, _.V9)(e) !== x && e.state === A.jm8.ENDED && G((0, _.V9)(e));
         }),
         null != t && (0, _.DB)(t) && t.includes(b.default.getId()) && (L[n] = !1);
 }
@@ -263,10 +263,10 @@ function J(e) {
     delete a[t];
     let s = r.get(t);
     if (null == s) return !1;
-    let l = C.jm8.ENDED;
-    if (i) l = C.jm8.RECONNECTING;
-    else if (o === C.si2.UNAUTHORIZED) l = C.jm8.FAILED;
-    else if (o === C.si2.SAFETY_GUILD_RATE_LIMITED) {
+    let l = A.jm8.ENDED;
+    if (i) l = A.jm8.RECONNECTING;
+    else if (o === A.si2.UNAUTHORIZED) l = A.jm8.FAILED;
+    else if (o === A.si2.SAFETY_GUILD_RATE_LIMITED) {
         let { guildId: e } = (0, _.my)(t);
         n
             .e("76731")
@@ -275,29 +275,29 @@ function J(e) {
                 let { default: n } = t;
                 n(e);
             }),
-            (l = C.jm8.ENDED);
-    } else s.state === C.jm8.FAILED && o === C.si2.USER_REQUESTED && (l = C.jm8.FAILED);
-    r.set(t, w(R({}, s), { state: l })), l === C.jm8.ENDED && x !== t && G(t);
+            (l = A.jm8.ENDED);
+    } else s.state === A.jm8.FAILED && o === A.si2.USER_REQUESTED && (l = A.jm8.FAILED);
+    r.set(t, w(R({}, s), { state: l })), l === A.jm8.ENDED && x !== t && G(t);
 }
 function $(e) {
     let { streamKey: t } = e,
         n = r.get(t);
     if (null == n) return !1;
-    r.set(t, w(R({}, n), { state: C.jm8.FAILED }));
+    r.set(t, w(R({}, n), { state: A.jm8.FAILED }));
 }
 function ee(e) {
     let { streamKey: t, state: n } = e;
     if (null == t) return !1;
     let i = r.get(t);
-    if (null == i || i.state === C.jm8.ENDED || (i.state === C.jm8.FAILED && i.ownerId === b.default.getId()))
+    if (null == i || i.state === A.jm8.ENDED || (i.state === A.jm8.FAILED && i.ownerId === b.default.getId()))
         return !1;
     let a = i.state;
     switch (n) {
-        case C.hes.DISCONNECTED:
-            a = C.jm8.RECONNECTING;
+        case A.hes.DISCONNECTED:
+            a = A.jm8.RECONNECTING;
             break;
-        case C.hes.RTC_CONNECTED:
-            a = C.jm8.ACTIVE;
+        case A.hes.RTC_CONNECTED:
+            a = A.jm8.ACTIVE;
     }
     if (a === i.state) return !1;
     r.set(t, w(R({}, i), { state: a }));
@@ -313,12 +313,12 @@ function en(e) {
 }
 function er(e, t) {
     let n = y.Z.getBasicChannel(t);
-    return e === N.lo.CALL || (null != n && S.Z.canBasicChannel(C.S7T.VIEW_CHANNEL, n));
+    return e === N.lo.CALL || (null != n && S.Z.canBasicChannel(A.S7T.VIEW_CHANNEL, n));
 }
 function ei(e) {
     if (er(e.streamType, e.channelId)) return !0;
     let t = y.Z.getBasicChannel(e.channelId);
-    return null != t && (0, m.p9)(t, A.Z, O.Z, S.Z, f.default)[0];
+    return null != t && (0, m.p9)(t, C.Z, O.Z, S.Z, f.default)[0];
 }
 M();
 class ea extends (c = u.ZP.PersistedStore) {
@@ -401,7 +401,7 @@ class ea extends (c = u.ZP.PersistedStore) {
     getStreamForUser(e, t) {
         var n;
         if (!(0, h.Z)(v.Z)) return null;
-        let r = null == (n = i[e]) ? void 0 : n[null != t ? t : C.kod];
+        let r = null == (n = i[e]) ? void 0 : n[null != t ? t : A.kod];
         return null != r && ei(r) ? r : null;
     }
     getRTCStream(e) {

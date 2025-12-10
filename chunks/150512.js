@@ -10,17 +10,17 @@ var l = n(54381),
     u = n(903518),
     m = n(484459),
     g = n(430824),
-    h = n(594174),
-    f = n(5192),
+    f = n(594174),
+    h = n(5192),
     N = n(51144),
     I = n(180391);
 function p(e) {
     let { guildId: t, welcomeMessage: n, className: r } = e,
         p = (0, s.e7)([g.Z], () => g.Z.getGuild(t)),
         O = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        E = (0, s.e7)([h.default], () => h.default.getUser(null == n ? void 0 : n.authorIds[0])),
+        E = (0, s.e7)([f.default], () => f.default.getUser(null == n ? void 0 : n.authorIds[0])),
         S = i.useMemo(() => (null != p && null != E && (0, u.Y)(p, E) ? E : null), [p, E]),
-        x = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+        x = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
         T = i.useMemo(() => {
             var e;
             return null != (e = null == n ? void 0 : n.authorIds) ? e : [];
@@ -31,7 +31,7 @@ function p(e) {
         i.useEffect(() => {
             null != S && (0, m.Z)(S.id, S.getAvatarURL(t, 48), { guildId: t });
         }, [S, t]);
-    let _ = f.ZP.useName(t, null, S),
+    let _ = h.ZP.useName(t, null, S),
         j = (0, N._T)(x);
     if (null == S || null == x || null == n) return null;
     let v = null != p && p.ownerId === S.id;

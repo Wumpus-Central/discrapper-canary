@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(518596),
     I = n(981631),
     T = n(921944),
-    A = n(388032),
-    C = n(844642);
+    C = n(388032),
+    A = n(844642);
 function N() {
     let e,
         { currentSession: t, otherSessions: n } = (0, m.h)(),
@@ -50,7 +50,7 @@ function N() {
               null == t && 0 === n.length
                   ? p
                       ? (0, r.jsx)("div", {
-                            className: C.loading,
+                            className: A.loading,
                             children: (0, r.jsx)(d.$jN, {}),
                         })
                       : null
@@ -58,10 +58,10 @@ function N() {
                         children: [
                             (0, r.jsxs)(d.Kqy, {
                                 gap: 24,
-                                className: C.sessions,
+                                className: A.sessions,
                                 children: [
                                     (0, r.jsx)(d.C3N, {
-                                        label: A.intl.string(A.t.LLS19o),
+                                        label: C.intl.string(C.t.LLS19o),
                                         children:
                                             null != t
                                                 ? (0, r.jsx)(P, {
@@ -73,7 +73,7 @@ function N() {
                                     !(n.length > 0) && (null == o ? void 0 : o.mfaEnabled)
                                         ? null
                                         : (0, r.jsxs)(d.C3N, {
-                                              label: A.intl.string(A.t.xx1MWc),
+                                              label: C.intl.string(C.t.xx1MWc),
                                               children: [
                                                   n.map((e) =>
                                                       (0, r.jsx)(
@@ -97,18 +97,18 @@ function N() {
                             }),
                             n.length > 0
                                 ? (0, r.jsx)(d.gNt, {
-                                      label: O.size > 0 ? A.intl.string(A.t.mMEmRO) : A.intl.string(A.t.Vij32M),
-                                      description: A.intl.string(A.t.OTXyaf),
+                                      label: O.size > 0 ? C.intl.string(C.t.mMEmRO) : C.intl.string(C.t.Vij32M),
+                                      description: C.intl.string(C.t.OTXyaf),
                                       children: (0, r.jsx)("div", {
                                           "data-button-hoisted-classname-wrapper": !0,
-                                          className: C.logOutAllButton,
+                                          className: A.logOutAllButton,
                                           children: (0, r.jsx)(d.Button, {
                                               variant: "critical-secondary",
                                               size: "sm",
                                               text:
                                                   O.size > 0
-                                                      ? A.intl.formatToPlainString(A.t["83CPLj"], { count: O.size })
-                                                      : A.intl.string(A.t.cLmmeY),
+                                                      ? C.intl.formatToPlainString(C.t["83CPLj"], { count: O.size })
+                                                      : C.intl.string(C.t.cLmmeY),
                                               onClick: () => {
                                                   O.size > 0
                                                       ? (0, _.L$)(Array.from(O))
@@ -121,24 +121,24 @@ function N() {
                         ],
                     })),
           (0, r.jsxs)(v.N, {
-              header: A.intl.string(A.t["+1h0k/"]),
+              header: C.intl.string(C.t["+1h0k/"]),
               children: [
                   (0, r.jsx)(d.Text, {
                       variant: "text-sm/normal",
-                      className: C.description,
-                      children: A.intl.string(A.t.zZp618),
+                      className: A.description,
+                      children: C.intl.string(C.t.zZp618),
                   }),
                   (null == o ? void 0 : o.isStaff())
                       ? (0, r.jsxs)("div", {
-                            className: C.tools,
+                            className: A.tools,
                             children: [
                                 (0, r.jsx)(d.Text, {
-                                    className: C.toolsTitle,
+                                    className: A.toolsTitle,
                                     variant: "text-md/bold",
                                     children: "DEV TOOLS",
                                 }),
                                 (0, r.jsx)(d.Text, {
-                                    className: C.toolsTitle,
+                                    className: A.toolsTitle,
                                     variant: "text-sm/normal",
                                     color: "text-feedback-critical",
                                     children: "These tools are only shown to staff users.",
@@ -176,21 +176,21 @@ function P(e) {
     return (0, r.jsxs)(
         "div",
         {
-            className: o()(C.session, c ? C.currentSession : null),
+            className: o()(A.session, c ? A.currentSession : null),
             children: [
                 (0, r.jsx)("div", {
-                    className: C.sessionIcon,
+                    className: A.sessionIcon,
                     children: (0, r.jsx)(b, {
                         size: "md",
                         color: "currentColor",
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: C.sessionInfo,
+                    className: A.sessionInfo,
                     children: [
                         (0, r.jsxs)(d.Text, {
                             variant: "eyebrow",
-                            className: C.sessionInfoRow,
+                            className: A.sessionInfoRow,
                             children: [
                                 (0, r.jsx)("span", { children: v[0] }),
                                 v.length > 1 &&
@@ -204,7 +204,7 @@ function P(e) {
                         }),
                         (0, r.jsxs)(d.Text, {
                             variant: "text-sm/medium",
-                            className: C.sessionInfoRow,
+                            className: A.sessionInfoRow,
                             children: [
                                 (0, r.jsx)("span", { children: S[0] }),
                                 S.length > 1 &&
@@ -222,7 +222,7 @@ function P(e) {
                     ? null
                     : p
                       ? (0, r.jsx)("div", {
-                            className: C.sessionCheckbox,
+                            className: A.sessionCheckbox,
                             children: (0, r.jsx)(d.Cnq, {
                                 onChange: (e) => {
                                     null == u || u(e);
@@ -231,11 +231,11 @@ function P(e) {
                             }),
                         })
                       : (0, r.jsx)(d.P3F, {
-                            className: C.sessionMoreButton,
+                            className: A.sessionMoreButton,
                             onClick: (e) => {
                                 e.shiftKey ? null == u || u(!0) : (0, _.L$)(l.id_hash);
                             },
-                            "aria-label": A.intl.string(A.t.E4MJNt),
+                            "aria-label": C.intl.string(C.t.E4MJNt),
                             children: (0, r.jsx)(d.Dio, {
                                 size: "md",
                                 color: "currentColor",
@@ -248,30 +248,30 @@ function P(e) {
 }
 function R() {
     return (0, r.jsxs)("div", {
-        className: o()(C.session, C.legacySession),
+        className: o()(A.session, A.legacySession),
         children: [
             (0, r.jsx)("div", {
-                className: C.sessionIcon,
+                className: A.sessionIcon,
                 children: (0, r.jsx)(b.Z, {
                     width: "32",
                     height: "32",
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: C.sessionInfo,
+                className: A.sessionInfo,
                 children: [
                     (0, r.jsx)(d.Text, {
                         variant: "eyebrow",
-                        className: C.sessionInfoRow,
+                        className: A.sessionInfoRow,
                         color: "text-muted",
-                        children: (0, r.jsx)("span", { children: A.intl.string(A.t.iUa0sn) }),
+                        children: (0, r.jsx)("span", { children: C.intl.string(C.t.iUa0sn) }),
                     }),
                     (0, r.jsx)(d.Text, {
                         variant: "text-sm/medium",
-                        className: C.sessionInfoRow,
+                        className: A.sessionInfoRow,
                         color: "text-muted",
                         children: (0, r.jsx)("span", {
-                            children: A.intl.format(A.t["044+8i"], {
+                            children: C.intl.format(C.t["044+8i"], {
                                 onClick: () =>
                                     (0, S.openUserSettings)(O.n.ACCOUNT_PANEL, {
                                         section: I.oAB.ACCOUNT,
@@ -291,7 +291,7 @@ function D(e) {
         case void 0:
         case "":
             return {
-                text: A.intl.string(A.t.cDHCNY),
+                text: C.intl.string(C.t.cDHCNY),
                 icon: d.pzj,
             };
         case "ios":

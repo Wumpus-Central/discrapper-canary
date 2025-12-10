@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(205120),
+    s = n(467721),
     l = n(92951),
     c = n(442837),
     u = n(481060),
@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(612776),
     I = n(981631),
     T = n(860076),
-    A = n(388032),
-    C = n(296953),
+    C = n(388032),
+    A = n(296953),
     N = n(550770),
     P = n(807808);
 let R = 2.8,
@@ -70,14 +70,14 @@ function j(e) {
     };
     return n
         ? (0, r.jsxs)(b.Z, {
-              className: C.unavailableContainer,
+              className: A.unavailableContainer,
               children: [
                   (0, r.jsx)(l.Z, {
                       autoPlay: !G,
                       muted: !0,
                       playsInline: !0,
                       loop: !0,
-                      className: C.unavailableLogo,
+                      className: A.unavailableLogo,
                       children: (0, r.jsx)("source", {
                           src: P.Z,
                           type: "video/webm",
@@ -85,22 +85,22 @@ function j(e) {
                   }),
                   (0, r.jsx)(y.Z, {
                       variant: "display-lg",
-                      className: C.display,
-                      children: A.intl.string(T.default.kimsIr),
+                      className: A.display,
+                      children: C.intl.string(T.default.kimsIr),
                   }),
                   (0, r.jsx)(y.Z, {
                       variant: "heading-xl/medium",
-                      className: C.subtitle,
-                      children: A.intl.format(T.default.GNHD4i, {
+                      className: A.subtitle,
+                      children: C.intl.format(T.default.GNHD4i, {
                           learnMoreHook: (e, t) =>
                               (0, r.jsx)(
                                   u.P3F,
                                   {
                                       onClick: V,
-                                      className: C.learnMore,
+                                      className: A.learnMore,
                                       children: (0, r.jsx)(y.Z, {
                                           variant: "heading-xl/medium",
-                                          className: C.link,
+                                          className: A.link,
                                           children: e,
                                       }),
                                   },
@@ -110,32 +110,32 @@ function j(e) {
                   }),
                   (0, r.jsx)(y.Z, {
                       variant: "text-lg/medium",
-                      children: A.intl.string(T.default["xLI+Hj"]),
+                      children: C.intl.string(T.default["xLI+Hj"]),
                   }),
                   (0, r.jsx)(g.Z, {
-                      className: C.claimButton,
+                      className: A.claimButton,
                       textSize: 20,
                   }),
               ],
           })
         : (0, r.jsxs)(b.Z, {
-              className: C.content,
+              className: A.content,
               noPadding: !0,
               children: [
                   !a &&
                       (0, r.jsx)(y.Z, {
                           variant: "text-lg/medium",
-                          className: C.disclaimer,
-                          children: A.intl.format(T.default["1jPMeG"], {
+                          className: A.disclaimer,
+                          children: C.intl.format(T.default["1jPMeG"], {
                               learnMoreHook: (e, t) =>
                                   (0, r.jsx)(
                                       u.P3F,
                                       {
                                           onClick: V,
-                                          className: C.learnMore,
+                                          className: A.learnMore,
                                           children: (0, r.jsx)(y.Z, {
                                               variant: "text-lg/medium",
-                                              className: C.link,
+                                              className: A.link,
                                               children: e,
                                           }),
                                       },
@@ -146,8 +146,8 @@ function j(e) {
                   !a &&
                       (0, r.jsx)(y.Z, {
                           variant: "text-md/medium",
-                          className: C.attribution,
-                          children: A.intl.format(T.default.g476ZL, { name: "Exyl" }),
+                          className: A.attribution,
+                          children: C.intl.format(T.default.g476ZL, { name: "Exyl" }),
                       }),
                   a
                       ? null
@@ -158,7 +158,7 @@ function j(e) {
                                 muted: !0,
                                 playsInline: !0,
                                 loop: !0,
-                                className: C.logoVideo,
+                                className: A.logoVideo,
                                 children: (0, r.jsx)("source", {
                                     src: P.Z,
                                     type: "video/webm",
@@ -170,7 +170,7 @@ function j(e) {
                       autoPlay: !G,
                       muted: !0,
                       playsInline: !0,
-                      className: o()(C.introVideo, { [C.introVideoHidden]: !a }),
+                      className: o()(A.introVideo, { [A.introVideoHidden]: !a }),
                       onTimeUpdate: a ? Z : void 0,
                       children: (0, r.jsx)("source", {
                           src: N.Z,
@@ -183,16 +183,16 @@ function j(e) {
                             children: [
                                 (0, r.jsx)(v.Z, {
                                     variant: "display-lg",
-                                    className: C.title,
-                                    textClassName: C.text,
-                                    text: A.intl.string(T.default["CdU/PF"]),
+                                    className: A.title,
+                                    textClassName: A.text,
+                                    text: C.intl.string(T.default["CdU/PF"]),
                                     delay: x,
                                 }),
                                 (0, r.jsx)(v.Z, {
                                     variant: "text-lg/medium",
-                                    className: C.subtitleAnimated,
-                                    textClassName: C.text,
-                                    text: A.intl.string(T.default["M/LvW0"]),
+                                    className: A.subtitleAnimated,
+                                    textClassName: A.text,
+                                    text: C.intl.string(T.default["M/LvW0"]),
                                     delay: x + v.t,
                                 }),
                             ],
@@ -205,21 +205,21 @@ function j(e) {
                                     style: B,
                                     children: [
                                         (0, r.jsx)(E.Z, {
-                                            className: C.knickKnacks,
+                                            className: A.knickKnacks,
                                             slide: S.yD.WELCOME,
                                         }),
                                         (0, r.jsxs)(h.Z, {
-                                            contentClassName: C.startButtonContent,
+                                            contentClassName: A.startButtonContent,
                                             onClick: t,
-                                            "aria-label": A.intl.string(A.t.I0v0Qv),
+                                            "aria-label": C.intl.string(C.t.I0v0Qv),
                                             muteSound: !0,
                                             children: [
                                                 (0, r.jsx)(u.o1U, {
-                                                    colorClass: C.iconColor,
+                                                    colorClass: A.iconColor,
                                                     color: U,
                                                     size: "md",
                                                 }),
-                                                A.intl.string(A.t.I0v0Qv),
+                                                C.intl.string(C.t.I0v0Qv),
                                             ],
                                         }),
                                     ],
@@ -227,7 +227,7 @@ function j(e) {
                                 (0, r.jsx)(s.animated.div, {
                                     style: F,
                                     children: (0, r.jsx)(O.Z, {
-                                        className: C.ratingIcon,
+                                        className: A.ratingIcon,
                                         style: { color: U },
                                     }),
                                 }),

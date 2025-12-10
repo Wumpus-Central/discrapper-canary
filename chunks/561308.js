@@ -1,5 +1,5 @@
 n.d(t, {
-    GE: () => A,
+    GE: () => C,
     GL: () => m,
     Jd: () => P,
     Jg: () => O,
@@ -8,7 +8,7 @@ n.d(t, {
     PJ: () => g,
     T_: () => p,
     V5: () => I,
-    ap: () => C,
+    ap: () => A,
     bT: () => N,
     dw: () => T,
     ig: () => x,
@@ -128,7 +128,7 @@ function T(e) {
     let t = g(e, o.N.RESURRECTED);
     return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
-function A(e) {
+function C(e) {
     let {
         months: t = 0,
         weeks: n = 0,
@@ -143,7 +143,7 @@ function A(e) {
         days: t > 0 || n > 0 ? 0 : i,
     });
 }
-function C(e) {
+function A(e) {
     if (null == e || "" === e) return null;
     let t = /\w+ (\d+), \w+ (\d+)/.exec(e);
     return null == t

@@ -57,8 +57,8 @@ var I = Array.isArray,
         S: null,
         V: null,
     },
-    A = Object.prototype.hasOwnProperty;
-function C(e, t, n, r, a, o) {
+    C = Object.prototype.hasOwnProperty;
+function A(e, t, n, r, a, o) {
     return {
         $$typeof: i,
         type: e,
@@ -68,7 +68,7 @@ function C(e, t, n, r, a, o) {
     };
 }
 function N(e, t) {
-    return C(e.type, t, void 0, void 0, void 0, e.props);
+    return A(e.type, t, void 0, void 0, void 0, e.props);
 }
 function P(e) {
     return "object" == typeof e && null !== e && e.$$typeof === i;
@@ -279,7 +279,7 @@ function G() {}
             a = void 0;
         if (null != t)
             for (o in (void 0 !== t.ref && (a = void 0), void 0 !== t.key && (i = "" + t.key), t))
-                A.call(t, o) &&
+                C.call(t, o) &&
                     "key" !== o &&
                     "__self" !== o &&
                     "__source" !== o &&
@@ -291,7 +291,7 @@ function G() {}
             for (var s = Array(o), l = 0; l < o; l++) s[l] = arguments[l + 2];
             r.children = s;
         }
-        return C(e.type, i, void 0, void 0, a, r);
+        return A(e.type, i, void 0, void 0, a, r);
     }),
     (t.createContext = function (e) {
         return (
@@ -316,7 +316,7 @@ function G() {}
             a = null;
         if (null != t)
             for (r in (void 0 !== t.key && (a = "" + t.key), t))
-                A.call(t, r) && "key" !== r && "__self" !== r && "__source" !== r && (i[r] = t[r]);
+                C.call(t, r) && "key" !== r && "__self" !== r && "__source" !== r && (i[r] = t[r]);
         var o = arguments.length - 2;
         if (1 === o) i.children = n;
         else if (1 < o) {
@@ -324,7 +324,7 @@ function G() {}
             i.children = s;
         }
         if (e && e.defaultProps) for (r in (o = e.defaultProps)) void 0 === i[r] && (i[r] = o[r]);
-        return C(e, a, void 0, void 0, null, i);
+        return A(e, a, void 0, void 0, null, i);
     }),
     (t.createRef = function () {
         return { current: null };

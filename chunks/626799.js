@@ -27,7 +27,7 @@ var r,
     S = n(981631),
     I = n(388032),
     T = n(550125);
-function A(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function A(e, t, n) {
         e
     );
 }
-function C(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function C(e) {
                 }),
             )),
             r.forEach(function (t) {
-                A(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -85,7 +85,7 @@ class R extends (r = a.Component) {
             analyticsContext: { location: e },
             analyticsSection: t,
         } = this.props;
-        return P(C({}, e), {
+        return P(A({}, e), {
             section: null != t ? t : S.jXE.APPLICATION_EMBED,
             object: S.qAy.CARD,
         });
@@ -128,20 +128,20 @@ class R extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            A(this, "state", {
+            C(this, "state", {
                 playing: !1,
                 muted: !0,
             }),
-            A(this, "handleToggleMute", () => {
+            C(this, "handleToggleMute", () => {
                 this.setState({ muted: !this.state.muted });
             }),
-            A(this, "handleMouseEnter", () => {
+            C(this, "handleMouseEnter", () => {
                 this.setState({ playing: !0 });
             }),
-            A(this, "handleMouseLeave", () => {
+            C(this, "handleMouseLeave", () => {
                 this.setState({ playing: !1 });
             }),
-            A(this, "getStoreListingLocation", () => {
+            C(this, "getStoreListingLocation", () => {
                 let { sku: e } = this.props;
                 if (null == e) throw Error("Should not be link to ApplicationStoreListing without SKU");
                 return (0, v.ZI)(e.id, {
@@ -149,13 +149,13 @@ class R extends (r = a.Component) {
                     analyticsSource: this.analyticsLocation,
                 });
             }),
-            A(this, "handleActionButtonClick", (e) => e.preventDefault()),
-            A(this, "handleBuyButtonClick", (e) => e.preventDefault()),
-            A(this, "handleLinkClick", (e) => {
+            C(this, "handleActionButtonClick", (e) => e.preventDefault()),
+            C(this, "handleBuyButtonClick", (e) => e.preventDefault()),
+            C(this, "handleLinkClick", (e) => {
                 let { onEmbedClick: t } = this.props;
                 null != t && t(e);
             }),
-            A(this, "renderApplicationTile", (e, t) => {
+            C(this, "renderApplicationTile", (e, t) => {
                 let {
                         inLibrary: n,
                         width: r,
@@ -180,7 +180,7 @@ class R extends (r = a.Component) {
                     isEmbed: !0,
                 });
             }),
-            A(this, "renderActions", (e) => {
+            C(this, "renderActions", (e) => {
                 let {
                     inLibrary: t,
                     application: n,
@@ -221,7 +221,7 @@ class R extends (r = a.Component) {
             });
     }
 }
-A(R, "defaultProps", { renderFallback: S.dG4 });
+C(R, "defaultProps", { renderFallback: S.dG4 });
 let D = [y.Z, b.Z, E.Z, O.Z];
 function w(e) {
     let { skuId: t } = e,

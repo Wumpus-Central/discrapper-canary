@@ -18,14 +18,14 @@ var l = n(54381),
     j = n(709054),
     x = n(435064),
     y = n(894694),
-    C = n(39604),
-    k = n(930311),
-    N = n(680056),
+    N = n(39604),
+    C = n(930311),
+    k = n(680056),
     E = n(115559),
-    w = n(356659),
-    S = n(388032),
-    I = n(612683);
-function O(e) {
+    S = n(356659),
+    w = n(388032),
+    O = n(612683);
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -50,7 +50,7 @@ function O(e) {
     }
     return e;
 }
-function T(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,8 +70,8 @@ function T(e, t) {
 }
 function R(e) {
     var t;
-    let { clip: R, channelId: P, onClose: A } = e,
-        L = R.type === y.NJ.SCREENSHOT,
+    let { clip: R, channelId: L, onClose: P } = e,
+        A = R.type === y.NJ.SCREENSHOT,
         {
             getEditedClip: M,
             voiceAudioEnabled: D,
@@ -81,18 +81,18 @@ function R(e) {
             soundboardAudioEnabled: B,
             setSoundboardAudioEnabled: V,
             pause: F,
-            clipName: _,
-            setClipName: Y,
+            clipName: G,
+            setClipName: _,
             isTemporary: K,
             setIsTemporary: W,
         } = (0, E.D)(),
         H = (0, u.q)(R.applicationId),
-        G = (0, i.e7)([x.Z], () => x.Z.isClipExporting(R.id)),
-        { onShareClick: q } = (0, N.Z)(P),
+        q = (0, i.e7)([x.Z], () => x.Z.isClipExporting(R.id)),
+        { onShareClick: Y } = (0, k.Z)(L),
         J = (0, i.e7)([p.Z], () => p.Z.isDeveloper),
-        X = (0, k.q)(R),
+        X = (0, C.q)(R),
         $ = a.useCallback(async () => {
-            await (0, C.WY)(R.id), W(!1);
+            await (0, N.WY)(R.id), W(!1);
         }, [R.id, W]),
         Q = (0, i.Wu)([v.default], () => R.users.map(v.default.getUser).filter(b.lm)),
         ee = a.useMemo(() => new Date(j.default.extractTimestamp(R.id)), [R.id]),
@@ -100,13 +100,13 @@ function R(e) {
         en = (0, i.e7)([h.Z], () => (R.version >= 3 && null != R.channelId ? h.Z.getChannel(R.channelId) : null)),
         el = null != en ? (0, c.KS)(en, et) : null;
     return (0, l.jsxs)("div", {
-        className: I.clipForm,
+        className: O.clipForm,
         children: [
             (0, l.jsxs)("div", {
-                className: I.clipFormHeader,
+                className: O.clipFormHeader,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: I.headerContent,
+                        className: O.headerContent,
                         children: [
                             (0, l.jsx)(d.Z, {
                                 game: H,
@@ -115,13 +115,13 @@ function R(e) {
                             (0, l.jsx)(s.Heading, {
                                 variant: "heading-md/medium",
                                 color: "text-default",
-                                className: I.headerTitle,
+                                className: O.headerTitle,
                                 children: null != (t = null == H ? void 0 : H.name) ? t : R.applicationName,
                             }),
                         ],
                     }),
                     (0, l.jsxs)("div", {
-                        className: I.headerButtons,
+                        className: O.headerButtons,
                         children: [
                             J &&
                                 (0, l.jsx)(s.hU, {
@@ -129,7 +129,7 @@ function R(e) {
                                         (0, s.ZDy)(
                                             async () => {
                                                 let { default: e } = await n.e("90946").then(n.bind(n, 69480));
-                                                return (t) => (0, l.jsx)(e, T(O({}, t), { clip: R }));
+                                                return (t) => (0, l.jsx)(e, I(T({}, t), { clip: R }));
                                             },
                                             { stackingBehavior: "stack" },
                                         );
@@ -140,18 +140,18 @@ function R(e) {
                                     "aria-label": "Debug Info",
                                 }),
                             (0, l.jsx)(s.hU, {
-                                onClick: A,
+                                onClick: P,
                                 icon: s.Uz9,
                                 size: "sm",
                                 variant: "icon-only",
-                                "aria-label": S.intl.string(S.t.cpT0Cq),
+                                "aria-label": w.intl.string(w.t.cpT0Cq),
                             }),
                         ],
                     }),
                 ],
             }),
             (0, l.jsx)(s.zJl, {
-                className: I.clipFormSection,
+                className: O.clipFormSection,
                 children: (0, l.jsxs)(s.C3N, {
                     children: [
                         K &&
@@ -162,49 +162,49 @@ function R(e) {
                                     children: [
                                         (0, l.jsx)(s.Text, {
                                             variant: "text-sm/normal",
-                                            children: S.intl.string(S.t.EkUv4u),
+                                            children: w.intl.string(w.t.EkUv4u),
                                         }),
                                         (0, l.jsx)(s.Button, {
                                             size: "sm",
                                             variant: "primary",
                                             onClick: $,
-                                            text: S.intl.string(S.t["BfLmm+"]),
+                                            text: w.intl.string(w.t["BfLmm+"]),
                                         }),
                                     ],
                                 }),
                             }),
                         (0, l.jsx)(s.oil, {
-                            label: S.intl.string(S.t.SJKc5n),
+                            label: w.intl.string(w.t.SJKc5n),
                             onChange: (e) => {
-                                "" === e ? Y(void 0) : Y(e);
+                                "" === e ? _(void 0) : _(e);
                             },
-                            value: _,
-                            minLength: w.XH,
-                            maxLength: w.MG,
+                            value: G,
+                            minLength: S.XH,
+                            maxLength: S.MG,
                             placeholder: X,
                         }),
-                        !L &&
+                        !A &&
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
                                     (0, l.jsx)(s.kcT, {
-                                        label: S.intl.string(S.t.GnQui9),
+                                        label: w.intl.string(w.t.GnQui9),
                                         checked: Z,
                                         onChange: z,
                                     }),
                                     (0, l.jsx)(s.kcT, {
-                                        label: S.intl.string(S.t["5mVOCb"]),
+                                        label: w.intl.string(w.t["5mVOCb"]),
                                         checked: D,
                                         onChange: U,
                                     }),
                                     (0, l.jsx)(s.kcT, {
-                                        label: S.intl.string(S.t["8K7Ges"]),
+                                        label: w.intl.string(w.t["8K7Ges"]),
                                         checked: B,
                                         onChange: V,
                                     }),
                                 ],
                             }),
                         (0, l.jsx)(s.gNt, {
-                            label: S.intl.string(S.t.g8pDeY),
+                            label: w.intl.string(w.t.g8pDeY),
                             layout: "horizontal",
                             children: (0, l.jsx)(s.Text, {
                                 variant: "text-sm/normal",
@@ -213,7 +213,7 @@ function R(e) {
                             }),
                         }),
                         (0, l.jsx)(s.gNt, {
-                            label: S.intl.string(S.t.WTozwe),
+                            label: w.intl.string(w.t.WTozwe),
                             layout: "horizontal",
                             children: (0, l.jsx)(r.Z, {
                                 users: Q,
@@ -222,10 +222,10 @@ function R(e) {
                         }),
                         null != et &&
                             (0, l.jsx)(s.gNt, {
-                                label: S.intl.string(S.t.vVKqVh),
+                                label: w.intl.string(w.t.vVKqVh),
                                 layout: "horizontal",
                                 children: (0, l.jsxs)("div", {
-                                    className: I.fieldContent,
+                                    className: O.fieldContent,
                                     children: [
                                         (0, l.jsx)(m.ZP, {
                                             guild: et,
@@ -242,10 +242,10 @@ function R(e) {
                         null != en &&
                             null != el &&
                             (0, l.jsx)(s.gNt, {
-                                label: S.intl.string(S.t.GPxI1G),
+                                label: w.intl.string(w.t.GPxI1G),
                                 layout: "horizontal",
                                 children: (0, l.jsxs)("div", {
-                                    className: I.fieldContent,
+                                    className: O.fieldContent,
                                     children: [
                                         (0, l.jsx)(el, {
                                             size: "custom",
@@ -265,7 +265,7 @@ function R(e) {
                             null != R.activity &&
                             (null != R.activity.state || null != R.activity.details) &&
                             (0, l.jsx)(s.gNt, {
-                                label: S.intl.string(S.t.aTpwmw),
+                                label: w.intl.string(w.t.aTpwmw),
                                 layout: "horizontal",
                                 children: (0, l.jsx)(s.Text, {
                                     variant: "text-sm/normal",
@@ -277,24 +277,24 @@ function R(e) {
                 }),
             }),
             (0, l.jsx)("div", {
-                className: I.clipFormFooter,
+                className: O.clipFormFooter,
                 children: (0, l.jsxs)(s.ButtonGroup, {
                     direction: "horizontal",
                     fullWidth: !0,
                     children: [
                         (0, l.jsx)(s.Button, {
-                            loading: G,
-                            disabled: G,
+                            loading: q,
+                            disabled: q,
                             variant: "primary",
                             icon: s.aAc,
                             iconPosition: "start",
-                            onClick: () => q({ clips: [M()] }),
-                            text: S.intl.string(S.t.RDE0Sc),
+                            onClick: () => Y({ clips: [M()] }),
+                            text: w.intl.string(w.t.RDE0Sc),
                         }),
                         (0, l.jsx)(s.hU, {
-                            "aria-label": S.intl.string(S.t.PdRCRg),
-                            loading: G,
-                            disabled: G,
+                            "aria-label": w.intl.string(w.t.PdRCRg),
+                            loading: q,
+                            disabled: q,
                             variant: "secondary",
                             onClick: function (e) {
                                 F(),
@@ -303,10 +303,10 @@ function R(e) {
                                         return (t) =>
                                             (0, l.jsx)(
                                                 e,
-                                                T(O({}, t), {
+                                                I(T({}, t), {
                                                     clips: [M()],
-                                                    channelId: P,
-                                                    onAfterDelete: A,
+                                                    channelId: L,
+                                                    onAfterDelete: P,
                                                 }),
                                             );
                                     });

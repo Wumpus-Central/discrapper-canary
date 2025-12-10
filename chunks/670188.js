@@ -113,8 +113,8 @@ function O(e) {
             renderPopout: S,
             onRequestOpen: I,
             onRequestClose: T,
-            onClosePopout: A,
-            shouldShow: C,
+            onClosePopout: C,
+            shouldShow: A,
             shouldPreload: N = !0,
         } = e,
         P = h(e, [
@@ -169,11 +169,11 @@ function O(e) {
                               appContext: y,
                               openedAt: R.current,
                               closePopout: () => {
-                                  e.closePopout(), null == A || A();
+                                  e.closePopout(), null == C || C();
                               },
                           }),
                       ),
-            [n, a, S, s, d, _, f, g, b, y, A],
+            [n, a, S, s, d, _, f, g, b, y, C],
         );
     return (0, r.jsx)(
         o.yRy,
@@ -181,7 +181,7 @@ function O(e) {
             p(
                 {
                     popoutKey: u.Tg,
-                    shouldShow: C,
+                    shouldShow: A,
                     preload: N ? D : void 0,
                     renderPopout: w,
                     onRequestOpen: I,

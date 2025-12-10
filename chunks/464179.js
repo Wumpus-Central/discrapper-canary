@@ -159,11 +159,11 @@ let v = "US",
         "ZA",
         "ZW",
     ],
-    A = s.Z.map((e) => ({
+    C = s.Z.map((e) => ({
         value: e.alpha2,
         label: e.name,
     })).filter((e) => "KP" !== e.value && "SY" !== e.value),
-    C = Object.freeze(A.reduce((e, t) => b(g({}, e), { [t.label.toLowerCase()]: t.value }), {})),
+    A = Object.freeze(C.reduce((e, t) => b(g({}, e), { [t.label.toLowerCase()]: t.value }), {})),
     N = (0, d.hQ)(),
     P = (0, d.hQ)(),
     R = (0, d.hQ)(),
@@ -241,11 +241,11 @@ let k = {
                     autoFocus: !0,
                     maxVisibleItems: 8,
                     isDisabled: "edit" === t.mode,
-                    options: A,
+                    options: C,
                     onSearchChange: (t) => {
                         if (null == n) return;
                         let r = t.toLowerCase();
-                        r in C && n(C[r], e.name);
+                        r in A && n(A[r], e.name);
                     },
                     onChange: (t) => {
                         null != n && n(t, e.name);

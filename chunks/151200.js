@@ -150,17 +150,17 @@ function T(e) {
             providerIconProps: v,
             style: T = {},
         } = e,
-        A = (0, f.Dt)(),
-        { primaryColor: C, secondaryColor: N } = (0, u.Z)(g);
+        C = (0, f.Dt)(),
+        { primaryColor: A, secondaryColor: N } = (0, u.Z)(g);
     return (
-        null != g && (T.background = "linear-gradient(45deg, ".concat(C, ", ").concat(N, ")")),
+        null != g && (T.background = "linear-gradient(45deg, ".concat(A, ", ").concat(N, ")")),
         (0, r.jsx)(o.f6W, {
             theme: p.BR.DARK,
             disableAdaptiveTheme: !0,
             children: (e) =>
                 (0, r.jsxs)("figure", {
                     "aria-roledescription": _.intl.string(_.t.zFfUhF),
-                    "aria-labelledby": A,
+                    "aria-labelledby": C,
                     className: a()(m.container, e),
                     style: T,
                     children: [
@@ -188,7 +188,7 @@ function T(e) {
                                     clickable: b,
                                     className: m.clickableText,
                                     children: (0, r.jsx)(o.Heading, {
-                                        id: A,
+                                        id: C,
                                         variant: "heading-md/medium",
                                         lineClamp: 1,
                                         className: a()(m.textPrimary, m.truncatedText),

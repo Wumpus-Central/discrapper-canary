@@ -41,8 +41,8 @@ function m() {
         }, [m, h]),
         I = O[0],
         T = v[0],
-        A = null != (e = null == I ? void 0 : I.disabled) ? e : !n,
-        C = null != (t = null == T ? void 0 : T.disabled) ? t : !c;
+        C = null != (e = null == I ? void 0 : I.disabled) ? e : !n,
+        A = null != (t = null == T ? void 0 : T.disabled) ? t : !c;
     return (0, r.jsxs)("div", {
         className: p.devices,
         children: [
@@ -56,7 +56,7 @@ function m() {
                             deviceType: d.h7.AUDIO_INPUT,
                             location: "UserSettingsDevices",
                             hideDeviceTypeIcon: !0,
-                            isDisabled: A,
+                            isDisabled: C,
                         }),
                     }),
                     (0, r.jsx)("div", {
@@ -66,7 +66,7 @@ function m() {
                             deviceType: d.h7.AUDIO_OUTPUT,
                             location: "UserSettingsDevices",
                             hideDeviceTypeIcon: !0,
-                            isDisabled: C,
+                            isDisabled: A,
                         }),
                     }),
                 ],

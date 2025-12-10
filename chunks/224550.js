@@ -35,8 +35,8 @@ let g = (e, t, n, r) => {
                 rentalDuration: S,
                 isEmbeddedIAP: I,
                 renewalInvoice: T,
-                paymentSourceType: A,
-                hide: C,
+                paymentSourceType: C,
+                hide: A,
                 purchaseType: N,
                 productLine: P,
                 proratedAmount: R,
@@ -47,7 +47,7 @@ let g = (e, t, n, r) => {
                 hasAlreadyLinked: j,
             } = e,
             M = (0, i.e7)([o.Z], () => o.Z.inReverseTrial());
-        if (C) return null;
+        if (A) return null;
         let k = null == e.planGroup ? [] : e.planGroup;
         if (null != T) {
             let e = c.ZP.getIntervalForInvoice(T);
@@ -219,8 +219,8 @@ let g = (e, t, n, r) => {
             children: [
                 "" !== F && (0, r.jsx)("div", { children: F }),
                 "" !== B && (0, r.jsx)("div", { children: B }),
-                A === f.HeQ.PAYSAFE_CARD && (0, r.jsx)("div", { children: m.intl.string(m.t.kj9VLI) }),
-                A === f.HeQ.SOFORT && (0, r.jsx)("div", { children: m.intl.string(m.t["UYy1/h"]) }),
+                C === f.HeQ.PAYSAFE_CARD && (0, r.jsx)("div", { children: m.intl.string(m.t.kj9VLI) }),
+                C === f.HeQ.SOFORT && (0, r.jsx)("div", { children: m.intl.string(m.t["UYy1/h"]) }),
             ],
         });
     };

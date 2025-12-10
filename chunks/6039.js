@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(430824),
     p = n(768581),
     f = n(302221),
-    h = n(693546),
-    g = n(305325),
+    g = n(693546),
+    h = n(305325),
     m = n(246364),
     _ = n(937111),
     b = n(381416),
@@ -72,10 +72,10 @@ let T = (e) => {
         null != N && (0, u.uL)(v.Z5c.CHANNEL(t));
     }, [N, t]),
         i.useEffect(() => {
-            j || h.Z.fetchRequestToJoinGuilds();
+            j || g.Z.fetchRequestToJoinGuilds();
         }, [j]);
     let x = i.useCallback(() => {
-            f(Math.max(p, y.hO.FILLING)), h.Z.removeGuildJoinRequest(t), (0, u.uL)(v.Z5c.ME);
+            f(Math.max(p, y.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, u.uL)(v.Z5c.ME);
         }, [t, p]),
         A = (e, t) => () => {
             (0, a.Z)({
@@ -87,7 +87,7 @@ let T = (e) => {
             });
         },
         Z = async () => {
-            await h.Z.resetGuildJoinRequest(t), (0, g.hk)(t);
+            await g.Z.resetGuildJoinRequest(t), (0, h.hk)(t);
         },
         w = (e) => {
             if (!e) return void x();
@@ -125,7 +125,7 @@ let T = (e) => {
                         default:
                             return (0, r.jsx)(b.s, {
                                 onDiscardApplication: L,
-                                onContinueApplication: () => (0, g.hk)(t),
+                                onContinueApplication: () => (0, h.hk)(t),
                                 guild: P,
                             });
                     }

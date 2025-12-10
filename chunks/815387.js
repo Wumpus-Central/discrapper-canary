@@ -22,8 +22,8 @@ var r = n(54381),
     S = n(434404),
     I = n(507435),
     T = n(579832),
-    A = n(686380),
-    C = n(504733),
+    C = n(686380),
+    A = n(504733),
     N = n(563959),
     P = n(917318),
     R = n(703656),
@@ -76,8 +76,8 @@ var r = n(54381),
     eS = n(296571),
     eI = n(587737),
     eT = n(482239),
-    eA = n(328749),
-    eC = n(4305),
+    eC = n(328749),
+    eA = n(4305),
     eN = n(910548),
     eP = n(981631),
     eR = n(70722),
@@ -357,7 +357,7 @@ function eH(e) {
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(eC.Z, {
+            (0, r.jsx)(eA.Z, {
                 message: t,
                 compact: n,
                 usernameHook: s,
@@ -697,7 +697,7 @@ function tt(e) {
 }
 function tn(e) {
     let { message: t, compact: n } = e;
-    return (0, r.jsx)(A.Z, {
+    return (0, r.jsx)(C.Z, {
         userTrialOfferId: t.referralTrialOfferId,
         canRenderReferralEmbed: !0,
         compact: n,
@@ -756,7 +756,7 @@ let to = Object.freeze({
     [eP.uaV.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: eu.HL,
     [eP.uaV.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: eu.Yc,
     [eP.uaV.THREAD_CREATED]: eF,
-    [eP.uaV.THREAD_STARTER_MESSAGE]: eA.Z,
+    [eP.uaV.THREAD_STARTER_MESSAGE]: eC.Z,
     [eP.uaV.GUILD_INVITE_REMINDER]: void 0,
     [eP.uaV.AUTO_MODERATION_ACTION]: eq,
     [eP.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eQ,
@@ -771,7 +771,7 @@ let to = Object.freeze({
     [eP.uaV.STAGE_SPEAKER]: e3,
     [eP.uaV.STAGE_RAISE_HAND]: e2,
     [eP.uaV.STAGE_TOPIC]: e1,
-    [eP.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: C.Z,
+    [eP.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: A.Z,
     [eP.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED]: N.P,
     [eP.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: N.e,
     [eP.uaV.PREMIUM_REFERRAL]: tn,

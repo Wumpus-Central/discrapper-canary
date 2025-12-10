@@ -78,11 +78,11 @@ function T(e, t) {
         e
     );
 }
-function A(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -90,7 +90,7 @@ function A(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -109,7 +109,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
                 onChange: c,
                 step: u,
             } = e,
-            d = A(e, [
+            d = C(e, [
                 "wallets",
                 "customPaymentMethodIdsToSourceTypes",
                 "analyticsContext",
@@ -189,7 +189,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
     },
     D = i.memo(function (e) {
         var { options: t, renderAsStandaloneElement: n, billingAddressInfo: o, internalKey: s } = e,
-            l = A(e, ["options", "renderAsStandaloneElement", "billingAddressInfo", "internalKey"]);
+            l = C(e, ["options", "renderAsStandaloneElement", "billingAddressInfo", "internalKey"]);
         let c = i.useMemo(() => {
                 let { name: e, address: t } = (0, m.XZ)(o);
                 return S(
@@ -293,7 +293,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
         }),
     L = (e) => {
         var { onSetupError: t } = e,
-            n = A(e, ["onSetupError"]);
+            n = C(e, ["onSetupError"]);
         let {
                 elementsOptions: i,
                 isLoading: o,
