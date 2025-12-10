@@ -1,36 +1,36 @@
-n.d(e, { F: () => g });
+n.d(e, { F: () => I });
 var i = n(54381),
     l = n(657707),
     s = n(793030),
-    r = n(692547),
-    u = n(160913),
+    u = n(692547),
+    r = n(160913),
     a = n(813732),
     o = n(509613),
     c = n(970013),
     d = n(313789),
-    T = n(726985),
-    E = n(388032);
-let S = (0, o.x1)(d.n.SUBSCRIPTIONS_PANE, {
-        render: a.Z,
+    S = n(726985),
+    T = n(388032);
+let E = (0, o.x1)(d.n.SUBSCRIPTIONS_PANE, {
+        StronglyDiscouragedCustomComponent: a.Z,
         buildLayout: () => [],
     }),
-    I = (0, o.wf)(d.n.SUBSCRIPTIONS_PANEL, {
-        useTitle: () => E.intl.string(E.t.trSpHX),
-        buildLayout: () => [S],
+    g = (0, o.wf)(d.n.SUBSCRIPTIONS_PANEL, {
+        useTitle: () => T.intl.string(T.t.trSpHX),
+        buildLayout: () => [E],
     }),
-    g = (0, o.m7)(d.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
-        useTitle: () => E.intl.string(E.t.trSpHX),
-        getLegacySearchKey: () => T.s6.SUBSCRIPTIONS,
+    I = (0, o.m7)(d.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
+        useTitle: () => T.intl.string(T.t.trSpHX),
+        getLegacySearchKey: () => S.s6.SUBSCRIPTIONS,
         icon: l.XOf,
         trailing: {
             type: c.W.STRONGLY_DISCOURAGED_CUSTOM,
             useCustomDecoration: () =>
-                (0, u.U)()
+                (0, r.U)()
                     ? (0, i.jsx)(s.Mgn, {
                           size: "xs",
-                          color: r.Z.unsafe_rawColors.YELLOW_300,
+                          color: u.Z.unsafe_rawColors.YELLOW_300,
                       })
                     : null,
         },
-        buildLayout: () => [I],
+        buildLayout: () => [g],
     });

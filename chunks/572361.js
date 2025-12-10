@@ -7,5 +7,5 @@ var i = n(509613),
     s = n(388032);
 let l = (0, i.ON)(a.n.LANGUAGE_SELECT_SETTING, {
     useSearchTerms: () => [s.intl.string(s.t.IHMsPn)],
-    render: () => (0, r.jsx)(o.S, {}),
+    Component: () => (0, r.jsx)(o.S, {}),
 });

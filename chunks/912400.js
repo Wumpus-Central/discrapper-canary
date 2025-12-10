@@ -1,21 +1,21 @@
-n.d(e, { h: () => T });
+n.d(e, { h: () => S });
 var i = n(54381),
     l = n(657707),
     s = n(509613),
-    r = n(313789),
-    u = n(795594),
+    u = n(313789),
+    r = n(795594),
     a = n(726985),
     o = n(388032);
-let c = (0, s.x1)(r.n.AUTHORIZED_APPS_PANE, {
+let c = (0, s.x1)(u.n.AUTHORIZED_APPS_PANE, {
         useTitle: () => o.intl.string(o.t["f6kk+r"]),
-        render: () => (0, i.jsx)(u.Z, {}),
+        StronglyDiscouragedCustomComponent: () => (0, i.jsx)(r.Z, {}),
         buildLayout: () => [],
     }),
-    d = (0, s.wf)(r.n.AUTHORIZED_APPS_PANEL, {
+    d = (0, s.wf)(u.n.AUTHORIZED_APPS_PANEL, {
         useTitle: () => o.intl.string(o.t["f6kk+r"]),
         buildLayout: () => [c],
     }),
-    T = (0, s.m7)(r.n.AUTHORIZED_APPS_SIDEBAR_ITEM, {
+    S = (0, s.m7)(u.n.AUTHORIZED_APPS_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t["f6kk+r"]),
         getLegacySearchKey: () => a.s6.AUTHORIZED_APPS,
         icon: l.jje,

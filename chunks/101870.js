@@ -1,20 +1,20 @@
-n.d(e, { o: () => T });
+n.d(e, { o: () => S });
 var i = n(657707),
     l = n(509613),
     s = n(358085),
-    r = n(313789),
-    u = n(200645),
+    u = n(313789),
+    r = n(200645),
     a = n(726985),
     o = n(388032);
-let c = (0, l.x1)(r.n.LINUX_PANE, {
-        render: u.Z,
+let c = (0, l.x1)(u.n.LINUX_PANE, {
+        StronglyDiscouragedCustomComponent: r.Z,
         buildLayout: () => [],
     }),
-    d = (0, l.wf)(r.n.LINUX_PANEL, {
+    d = (0, l.wf)(u.n.LINUX_PANEL, {
         useTitle: () => o.intl.string(o.t["7pPjTW"]),
         buildLayout: () => [c],
     }),
-    T = (0, l.m7)(r.n.LINUX_SIDEBAR_ITEM, {
+    S = (0, l.m7)(u.n.LINUX_SIDEBAR_ITEM, {
         useTitle: () => o.intl.string(o.t["7pPjTW"]),
         getLegacySearchKey: () => a.s6.LINUX_SETTINGS,
         icon: i.pzj,

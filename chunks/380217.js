@@ -1,22 +1,21 @@
-n.d(e, { o: () => T });
-var i = n(54381),
-    l = n(657707),
-    s = n(509613),
-    r = n(313789),
+n.d(e, { o: () => d });
+var i = n(657707),
+    l = n(509613),
+    s = n(313789),
     u = n(443702),
-    a = n(726985),
-    o = n(388032);
-let c = (0, s.x1)(r.n.BILLING_PANE, {
-        render: () => (0, i.jsx)(u.Z, {}),
+    r = n(726985),
+    a = n(388032);
+let o = (0, l.x1)(s.n.BILLING_PANE, {
+        StronglyDiscouragedCustomComponent: u.Z,
         buildLayout: () => [],
     }),
-    d = (0, s.wf)(r.n.BILLING_PANEL, {
-        useTitle: () => o.intl.string(o.t.oeUm2s),
-        buildLayout: () => [c],
+    c = (0, l.wf)(s.n.BILLING_PANEL, {
+        useTitle: () => a.intl.string(a.t.oeUm2s),
+        buildLayout: () => [o],
     }),
-    T = (0, s.m7)(r.n.BILLING_SIDEBAR_ITEM, {
-        useTitle: () => o.intl.string(o.t.oeUm2s),
-        getLegacySearchKey: () => a.s6.BILLING,
-        icon: l.ciH,
-        buildLayout: () => [d],
+    d = (0, l.m7)(s.n.BILLING_SIDEBAR_ITEM, {
+        useTitle: () => a.intl.string(a.t.oeUm2s),
+        getLegacySearchKey: () => r.s6.BILLING,
+        icon: i.ciH,
+        buildLayout: () => [c],
     });

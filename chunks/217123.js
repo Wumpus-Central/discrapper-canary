@@ -1,23 +1,22 @@
-n.d(e, { r: () => T });
-var i = n(54381),
-    l = n(657707),
-    s = n(509613),
-    r = n(313789),
+n.d(e, { r: () => d });
+var i = n(657707),
+    l = n(509613),
+    s = n(313789),
     u = n(949493),
-    a = n(726985),
-    o = n(388032);
-let c = (0, s.x1)(r.n.CONTENT_AND_SOCIAL_PANE, {
-        useTitle: () => o.intl.string(o.t["+o1pDZ"]),
-        render: () => (0, i.jsx)(u.Z, {}),
+    r = n(726985),
+    a = n(388032);
+let o = (0, l.x1)(s.n.CONTENT_AND_SOCIAL_PANE, {
+        useTitle: () => a.intl.string(a.t["+o1pDZ"]),
+        StronglyDiscouragedCustomComponent: u.Z,
         buildLayout: () => [],
     }),
-    d = (0, s.wf)(r.n.CONTENT_AND_SOCIAL_PANEL, {
-        useTitle: () => o.intl.string(o.t["+o1pDZ"]),
-        buildLayout: () => [c],
+    c = (0, l.wf)(s.n.CONTENT_AND_SOCIAL_PANEL, {
+        useTitle: () => a.intl.string(a.t["+o1pDZ"]),
+        buildLayout: () => [o],
     }),
-    T = (0, s.m7)(r.n.CONTENT_AND_SOCIAL_SIDEBAR_ITEM, {
-        useTitle: () => o.intl.string(o.t["+o1pDZ"]),
-        getLegacySearchKey: () => a.s6.CONTENT_SOCIAL,
-        icon: l.lZ8,
-        buildLayout: () => [d],
+    d = (0, l.m7)(s.n.CONTENT_AND_SOCIAL_SIDEBAR_ITEM, {
+        useTitle: () => a.intl.string(a.t["+o1pDZ"]),
+        getLegacySearchKey: () => r.s6.CONTENT_SOCIAL,
+        icon: i.lZ8,
+        buildLayout: () => [c],
     });

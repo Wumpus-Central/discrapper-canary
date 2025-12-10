@@ -1,29 +1,28 @@
-n.d(e, { g: () => I });
-var i = n(54381),
-    l = n(657707),
-    s = n(509613),
-    r = n(313789),
+n.d(e, { g: () => E });
+var i = n(657707),
+    l = n(509613),
+    s = n(313789),
     u = n(526665),
-    a = n(889029),
-    o = n(290434),
-    c = n(726985),
-    d = n(388032);
-let T = (0, s.x1)(r.n.STREAMER_MODE_PANE, {
+    r = n(889029),
+    a = n(290434),
+    o = n(726985),
+    c = n(388032);
+let d = (0, l.x1)(s.n.STREAMER_MODE_PANE, {
         usePredicate: () => (0, u.BK)("StreamerModePane"),
-        buildLayout: () => [o.R],
+        buildLayout: () => [a.R],
     }),
-    E = (0, s.x1)(r.n.STREAMER_MODE_PANE, {
+    S = (0, l.x1)(s.n.STREAMER_MODE_PANE, {
         usePredicate: () => !(0, u.BK)("StreamerModePane"),
-        render: () => (0, i.jsx)(a.Z, {}),
+        StronglyDiscouragedCustomComponent: r.Z,
         buildLayout: () => [],
     }),
-    S = (0, s.wf)(r.n.STREAMER_MODE_PANEL, {
-        useTitle: () => d.intl.string(d.t.S5GfOW),
-        buildLayout: () => ((0, u.Ml)("StreamerModePanel") ? [T] : [E]),
+    T = (0, l.wf)(s.n.STREAMER_MODE_PANEL, {
+        useTitle: () => c.intl.string(c.t.S5GfOW),
+        buildLayout: () => ((0, u.Ml)("StreamerModePanel") ? [d] : [S]),
     }),
-    I = (0, s.m7)(r.n.STREAMER_MODE_SIDEBAR_ITEM, {
-        useTitle: () => d.intl.string(d.t.S5GfOW),
-        getLegacySearchKey: () => ((0, u.Ml)("StreamerModePanel") ? void 0 : c.s6.STREAMER_MODE),
-        icon: l.m3e,
-        buildLayout: () => [S],
+    E = (0, l.m7)(s.n.STREAMER_MODE_SIDEBAR_ITEM, {
+        useTitle: () => c.intl.string(c.t.S5GfOW),
+        getLegacySearchKey: () => ((0, u.Ml)("StreamerModePanel") ? void 0 : o.s6.STREAMER_MODE),
+        icon: i.m3e,
+        buildLayout: () => [T],
     });

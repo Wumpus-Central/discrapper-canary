@@ -145,6 +145,12 @@ class b extends a.Z {
     get premiumPlanIdFromItems() {
         return this.getCurrentSubscriptionPlanIdForGroup([...p.dJ]);
     }
+    get isPurchasedViaDesktop() {
+        return null == this.paymentGateway;
+    }
+    get isPurchasedViaAppleGeneric() {
+        return this.paymentGateway === d.gg$.APPLE_PARTNER || this.isACOM;
+    }
     get isPurchasedViaApple() {
         return this.paymentGateway === d.gg$.APPLE;
     }

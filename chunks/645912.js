@@ -1,22 +1,21 @@
-n.d(e, { G: () => T });
-var i = n(54381),
-    l = n(657707),
-    s = n(509613),
-    r = n(313789),
+n.d(e, { G: () => d });
+var i = n(657707),
+    l = n(509613),
+    s = n(313789),
     u = n(389650),
-    a = n(726985),
-    o = n(388032);
-let c = (0, s.x1)(r.n.KEYBINDS_PANE, {
-        render: () => (0, i.jsx)(u.Z, {}),
+    r = n(726985),
+    a = n(388032);
+let o = (0, l.x1)(s.n.KEYBINDS_PANE, {
+        StronglyDiscouragedCustomComponent: u.Z,
         buildLayout: () => [],
     }),
-    d = (0, s.wf)(r.n.KEYBINDS_PANEL, {
-        useTitle: () => o.intl.string(o.t.T9DA2K),
-        buildLayout: () => [c],
+    c = (0, l.wf)(s.n.KEYBINDS_PANEL, {
+        useTitle: () => a.intl.string(a.t.T9DA2K),
+        buildLayout: () => [o],
     }),
-    T = (0, s.m7)(r.n.KEYBINDS_SIDEBAR_ITEM, {
-        useTitle: () => o.intl.string(o.t.T9DA2K),
-        getLegacySearchKey: () => a.s6.KEYBINDS,
-        icon: l.YiA,
-        buildLayout: () => [d],
+    d = (0, l.m7)(s.n.KEYBINDS_SIDEBAR_ITEM, {
+        useTitle: () => a.intl.string(a.t.T9DA2K),
+        getLegacySearchKey: () => r.s6.KEYBINDS,
+        icon: i.YiA,
+        buildLayout: () => [c],
     });

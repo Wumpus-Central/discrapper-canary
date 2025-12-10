@@ -55,7 +55,7 @@ function v(e) {
         case i.J.NAVIGATOR:
             return (0, r.jsx)(l.Z, { node: t });
         case i.J.CUSTOM:
-            return (0, r.jsx)(o.X, { children: (0, r.jsx)(t.render, {}) });
+            return (0, r.jsx)(o.X, { children: (0, r.jsx)(t.Component, {}) });
         default:
             return (0, r.jsx)(c.W, { node: t });
     }

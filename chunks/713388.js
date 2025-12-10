@@ -42,9 +42,11 @@ function p(e) {
         r =
             (0, s.L)(t) &&
             ((t.type === s.J.SIDEBAR_ITEM &&
-                t.layout.some((e) => (null == e ? void 0 : e.layout.some((e) => null != e.render)))) ||
-                (t.type === s.J.PANEL && t.layout.some((e) => null != e.render)) ||
-                (t.type === s.J.PANE && null != t.render)),
+                t.layout.some((e) =>
+                    null == e ? void 0 : e.layout.some((e) => null != e.StronglyDiscouragedCustomComponent),
+                )) ||
+                (t.type === s.J.PANEL && t.layout.some((e) => null != e.StronglyDiscouragedCustomComponent)) ||
+                (t.type === s.J.PANE && null != t.StronglyDiscouragedCustomComponent)),
         i = null;
     if ((0, s.L)(t)) {
         var l, o, d;
