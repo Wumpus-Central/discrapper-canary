@@ -61,7 +61,7 @@ function I(e) {
                                 className: Z.sourceOverlayCTA,
                                 children: (0, r.jsx)(u.Text, {
                                     variant: "text-sm/medium",
-                                    color: "control-primary-text-default",
+                                    color: "currentColor",
                                     children: w.intl.string(w.t.z7WGhv),
                                 }),
                             }),
