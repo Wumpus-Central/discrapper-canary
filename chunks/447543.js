@@ -332,12 +332,9 @@ let eS = {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             n = arguments.length > 2 ? arguments[2] : void 0;
         try {
-            var r;
-            let i = es({}, t);
-            (null == (r = i.role_ids) ? void 0 : r.length) === 0 && delete i.role_ids;
-            let { body: a } = await d.tn.post({
+            let { body: r } = await d.tn.post({
                 url: ee.ANM.INSTANT_INVITES(e),
-                body: i,
+                body: t,
                 context: { location: n },
                 rejectWithError: !0,
             });
@@ -345,9 +342,9 @@ let eS = {
                 _.Z.dispatch({
                     type: "INSTANT_INVITE_CREATE_SUCCESS",
                     channelId: e,
-                    invite: a,
+                    invite: r,
                 }),
-                a
+                r
             );
         } catch (t) {
             throw (

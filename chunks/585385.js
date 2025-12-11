@@ -1,6 +1,6 @@
 n.d(t, { D: () => a }), n(997841);
-var l = n(54381),
-    i = n(775086),
+var i = n(54381),
+    l = n(775086),
     s = n(948851),
     r = n(388032);
 let a = (e) => {
@@ -16,12 +16,9 @@ let a = (e) => {
             onSetInviteFlags: h,
             onClose: p,
             transitionState: v,
-            isRoleAssignmentEnabled: I,
-            assignableRoles: m,
-            onToggleRole: S,
         } = e,
-        { maxAgeOptions: f, maxAge: x, maxUses: y, temporary: E, flags: _, roleIds: b } = n;
-    return (0, l.jsx)(i.Modal, {
+        { maxAgeOptions: I, maxAge: m, maxUses: x, temporary: S, flags: f } = n;
+    return (0, i.jsx)(l.Modal, {
         transitionState: v,
         onClose: p,
         title: r.intl.string(r.t.Atdlyu),
@@ -39,22 +36,19 @@ let a = (e) => {
                 },
             },
         ],
-        children: (0, l.jsx)(s.Z, {
+        children: (0, i.jsx)(s.Z, {
             shouldHideTemporaryInviteToggle: a,
-            maxAgeOptions: f,
-            maxAge: x,
-            maxUses: y,
-            temporary: E,
+            maxAgeOptions: I,
+            maxAge: m,
+            maxUses: x,
+            temporary: S,
             onToggleTemporary: u,
             onSelectMaxAge: d,
             onSelectMaxUses: c,
+            onGenerateNewLink: o,
             isGuestInviteCreationToggleEnabled: g,
             onSetInviteFlags: h,
-            inviteFlags: _,
-            isRoleAssignmentEnabled: I,
-            assignableRoles: m,
-            selectedRoleIds: b,
-            onToggleRole: S,
+            inviteFlags: f,
         }),
     });
 };
