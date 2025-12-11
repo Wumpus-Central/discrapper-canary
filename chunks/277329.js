@@ -13,7 +13,7 @@ var i = n(442837),
     p = n(332325),
     _ = n(981631),
     m = n(388032),
-    h = n(830260);
+    h = n(103554);
 function g() {
     let e = (0, f.b)(),
         t = (0, i.e7)([l.Z], () => l.Z.getSubsection()),
@@ -31,7 +31,7 @@ function g() {
                         showHeader: !1,
                     });
                 case p.Z.ACTIVITY_PRIVACY:
-                    return (0, r.jsx)(c.Z, {});
+                    return (0, r.jsx)(c.ZP, {});
                 case p.Z.MY_GAMES:
                 default:
                     return (0, r.jsx)(u.Z, {
