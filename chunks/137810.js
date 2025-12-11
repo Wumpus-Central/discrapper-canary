@@ -22,7 +22,7 @@ function p(e) {
                 subsection: d.gP,
                 analyticsLocations: t,
             }),
-                (0, o.i)(e);
+                (0, o.i)(e, e === u.IlC.POPOUT);
         },
         icon: i.ewm,
     });

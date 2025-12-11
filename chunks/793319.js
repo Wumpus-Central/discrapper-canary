@@ -485,28 +485,29 @@ let eA = function (e) {
         { suppress: Z, selfMute: A, mute: M } = (0, eu.Z)(n),
         { canGoLive: R } = (0, u.cj)([er.Z], () => ({ canGoLive: (0, w.Z)(er.Z) })),
         L = (0, N.Z)(),
-        k = (0, u.e7)([T.default], () => null != T.default.getAwaitingRemoteSessionInfo()),
-        V = null != L,
-        F = (0, u.e7)([el.Z], () => {
+        V = (0, u.e7)([T.default], () => null != T.default.getAwaitingRemoteSessionInfo()),
+        F = null != L,
+        G = (0, u.e7)([el.Z], () => {
             var e;
             return (null != (e = null == L ? void 0 : L.channelId) ? e : el.Z.getVoiceChannelId()) === n.id;
         }),
-        G = (0, B.Z)({
+        W = (0, B.Z)({
             channelId: n.id,
             location: "center-control-tray",
         }),
-        W = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
-        { reachedLimit: q, limit: K } = (0, es.Z)(n),
-        { analyticsLocations: Y } = (0, O.ZP)(v.Z.VOICE_CONTROL_TRAY),
-        Q = (0, ee.Hu)({
+        q = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
+        { reachedLimit: K, limit: Y } = (0, es.Z)(n),
+        { analyticsLocations: Q } = (0, O.ZP)(v.Z.VOICE_CONTROL_TRAY),
+        en = (0, ee.Hu)({
             location: v.Z.VOICE_CONTROL_TRAY,
             autoTrackExposure: !0,
         }),
-        { showRefreshedAudioContextMenu: en } = (0, U.e)({ location: v.Z.VOICE_CONTROL_TRAY }),
-        ei = (0, H.Z)(n),
-        ed = r.useRef(null),
+        { showRefreshedAudioContextMenu: ei } = (0, U.e)({ location: v.Z.VOICE_CONTROL_TRAY }),
+        ed = (0, H.Z)(n),
         eh = r.useRef(null),
-        eg = Q
+        eg = r.useRef(null),
+        eb = (0, k.bp)(),
+        eC = en
             ? (e) => {
                   (0, h.jW)(e, () =>
                       Promise.resolve(() =>
@@ -520,14 +521,15 @@ let eA = function (e) {
                               renderDeafen: !0,
                               minimal: !0,
                               onInteraction: eN("AudioDeviceMenu"),
+                              appContext: eb,
                           }),
                       ),
                   );
               }
             : void 0;
-    return F
+    return G
         ? (0, i.jsx)(O.Gt, {
-              value: Y,
+              value: Q,
               children: (0, i.jsxs)(b.Z, {
                   section: ey.jXE.VOICE_CONTROL_TRAY,
                   children: [
@@ -543,18 +545,18 @@ let eA = function (e) {
                                   className: ex.buttonSection,
                                   children: [
                                       (0, i.jsx)(p.yRy, {
-                                          targetElementRef: ed,
+                                          targetElementRef: eh,
                                           renderPopout: (e) => {
                                               let t,
                                                   { closePopout: n } = e;
                                               return (
-                                                  (t = Q
+                                                  (t = en
                                                       ? (0, i.jsx)(et.l, {
                                                             wide: !0,
                                                             showOutputDevices: !0,
                                                             onSettingsButtonClick: n,
                                                         })
-                                                      : en
+                                                      : ei
                                                         ? (0, i.jsx)(j.Z, {
                                                               onInteraction: eN("AudioDeviceMenu"),
                                                               onClose: n,
@@ -567,6 +569,7 @@ let eA = function (e) {
                                                               renderOutputDevices: !0,
                                                               renderOutputVolume: !0,
                                                               renderSettingsButton: !0,
+                                                              appContext: eb,
                                                           })
                                                         : (0, i.jsx)(E.default, {
                                                               onClose: n,
@@ -578,6 +581,7 @@ let eA = function (e) {
                                                               renderDeafen: !0,
                                                               minimal: !0,
                                                               onInteraction: eN("AudioDeviceMenu"),
+                                                              appContext: eb,
                                                           })),
                                                   (0, i.jsxs)(z.Z, {
                                                       children: [t, " "],
@@ -592,22 +596,22 @@ let eA = function (e) {
                                               let { onClick: n } = e,
                                                   { isShown: r } = t;
                                               return (0, i.jsx)(X.Z, {
-                                                  ref: ed,
+                                                  ref: eh,
                                                   centerButton: !0,
-                                                  onPopoutClick: V ? null : n,
+                                                  onPopoutClick: F ? null : n,
                                                   selfMute: A,
                                                   serverMute: M,
                                                   suppress: Z,
                                                   popoutOpen: r,
-                                                  awaitingRemote: k,
+                                                  awaitingRemote: V,
                                                   onClick: () => (0, _.Z)(M, Z, ey.jXE.VOICE_CONTROL_TRAY),
-                                                  onContextMenu: eg,
+                                                  onContextMenu: eC,
                                               });
                                           },
                                       }),
-                                      !V &&
+                                      !F &&
                                           (0, i.jsx)(p.yRy, {
-                                              targetElementRef: eh,
+                                              targetElementRef: eg,
                                               renderPopout: (e) => {
                                                   let { closePopout: t } = e;
                                                   return (0, i.jsx)(z.Z, {
@@ -615,6 +619,7 @@ let eA = function (e) {
                                                           onClose: t,
                                                           minimal: !0,
                                                           onInteraction: eN("VideoDeviceMenu"),
+                                                          appContext: eb,
                                                       }),
                                                   });
                                               },
@@ -626,15 +631,15 @@ let eA = function (e) {
                                                   let { onClick: n } = e,
                                                       { isShown: r } = t;
                                                   return (0, i.jsx)($.C, {
-                                                      ref: eh,
+                                                      ref: eg,
                                                       centerButton: !0,
                                                       hasPermission: I,
                                                       enabled: P,
                                                       cameraUnavailable: x,
                                                       onChange: e_,
                                                       onCameraUnavailable: em.Z,
-                                                      channelLimitReached: q,
-                                                      channelLimit: K,
+                                                      channelLimitReached: K,
+                                                      channelLimit: Y,
                                                       popoutOpen: r,
                                                       onPopoutClick: n,
                                                   });
@@ -645,7 +650,7 @@ let eA = function (e) {
                               (0, i.jsxs)("div", {
                                   className: ex.buttonSection,
                                   children: [
-                                      !V &&
+                                      !F &&
                                           (0, i.jsx)(eP, {
                                               channel: n,
                                               currentUser: y,
@@ -653,21 +658,21 @@ let eA = function (e) {
                                               canGoLive: R,
                                               hasPermission: I,
                                           }),
-                                      !V &&
+                                      !F &&
                                           (0, i.jsx)(eI, {
                                               channel: n,
                                               idle: null == (t = null == d ? void 0 : d.idle) || t,
                                               whichPopoutIsOpen: m,
                                               setWhichPopoutIsOpen: g,
                                           }),
-                                      ei &&
+                                      ed &&
                                           (0, i.jsx)(J.Z, {
                                               channel: n,
                                               themeable: !0,
                                               whichPopoutIsOpen: m,
                                               setWhichPopoutIsOpen: g,
                                           }),
-                                      G &&
+                                      W &&
                                           (0, i.jsx)(ef.Z, {
                                               channel: n,
                                               themeable: !0,
@@ -678,12 +683,12 @@ let eA = function (e) {
                                           channel: n,
                                           whichPopoutIsOpen: m,
                                           setWhichPopoutIsOpen: g,
-                                          remoteMode: V,
+                                          remoteMode: F,
                                       }),
                                   ],
                               }),
                               (0, i.jsx)(eZ, {
-                                  connectedEmbeddedActivity: W,
+                                  connectedEmbeddedActivity: q,
                                   currentUser: y,
                                   channel: n,
                                   onDisconnectCall: o,
@@ -694,7 +699,7 @@ let eA = function (e) {
               }),
           })
         : (0, i.jsx)(O.Gt, {
-              value: Y,
+              value: Q,
               children: (0, i.jsx)(eT, {
                   channel: n,
                   cameraUnavailable: x,

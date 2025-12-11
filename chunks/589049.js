@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var i = n(54381);
 n(473749);
 var r = n(481060),
@@ -10,17 +10,17 @@ var r = n(481060),
     u = n(518596),
     d = n(358085),
     p = n(981631),
-    h = n(388032);
-function f() {
+    f = n(388032);
+function h() {
     let e = (0, o.bp)(),
         { analyticsLocations: t, newestAnalyticsLocation: n } = (0, l.ZP)(),
-        f = (0, c.wy)(n);
-    return e === p.IlC.APP || d.isPlatformEmbedded || f
+        h = (0, c.wy)(n);
+    return e === p.IlC.APP || d.isPlatformEmbedded || h
         ? (0, i.jsx)(r.sNh, {
               id: "voice-and-video-settings",
-              label: h.intl.string(h.t.dsXapM),
+              label: f.intl.string(f.t.dsXapM),
               action: () => {
-                  f || (0, a.Z)(),
+                  (0, a.Z)(null, e === p.IlC.POPOUT),
                       (0, u.openUserSettings)(s.n.VOICE_AND_VIDEO_PANEL, {
                           section: p.oAB.VOICE,
                           analyticsLocations: t,
