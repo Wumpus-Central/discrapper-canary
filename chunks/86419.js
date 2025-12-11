@@ -8,14 +8,14 @@ n.d(t, {
     IM: () => U,
     M8: () => S,
     RZ: () => j,
-    X6: () => B,
+    X6: () => F,
     kQ: () => V,
     mR: () => b,
     n$: () => L,
     np: () => A,
     ou: () => W,
-    qH: () => w,
-    tk: () => F,
+    qH: () => D,
+    tk: () => B,
     vI: () => v,
     ww: () => O,
     y8: () => x,
@@ -137,19 +137,18 @@ function P() {
 function R(e) {
     return P().find((t) => t.type === e);
 }
-function D(e) {
+function w(e) {
     let t = P(),
         n = t.findIndex((t) => t.type === e.type);
-    if (-1 === n) return [...t, e];
+    if (-1 === n) return [e, ...t];
     {
         let r = [...t];
         return (r[n] = e), r;
     }
 }
-function w(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = P();
-    null == r.find((t) => t.type === e) && (n ? c.Z.setPendingWidgets([t, ...r]) : c.Z.setPendingWidgets([...r, t]));
+function D(e, t) {
+    let n = P();
+    null == n.find((t) => t.type === e) && c.Z.setPendingWidgets([t, ...n]);
 }
 function x(e) {
     let t = P().filter((t) => t.type !== e);
@@ -164,7 +163,7 @@ function L(e, t, n) {
     if (null == o) return;
     let l = E(h({}, o), { tags: n }),
         u = a.games.map((e) => (e.applicationId === t ? l : e)),
-        d = D(new s.zy(E(h({}, a), { games: u })));
+        d = w(new s.zy(E(h({}, a), { games: u })));
     c.Z.setPendingWidgets(d);
 }
 function j(e, t, n) {
@@ -182,7 +181,7 @@ function M(e, t, n) {
     if (null == i || n === i.comment) return;
     let a = E(h({}, i), { comment: n }),
         o = r.games.map((e) => (e.applicationId === t ? a : e)),
-        l = D(new s.zy(E(h({}, r), { games: o })));
+        l = w(new s.zy(E(h({}, r), { games: o })));
     c.Z.setPendingWidgets(l);
 }
 function k(e, t) {
@@ -201,8 +200,8 @@ function k(e, t) {
         comment: t.comment,
         tags: t.tags,
     };
-    l = null != u ? [...(null != (o = u.games) ? o : []), f] : [f];
-    let p = D(new s.zy(E(h({}, null != u ? u : { type: e }), { games: l })));
+    l = null != u ? [f, ...(null != (o = u.games) ? o : [])] : [f];
+    let p = w(new s.zy(E(h({}, null != u ? u : { type: e }), { games: l })));
     c.Z.setPendingWidgets(p), a.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
 function U(e, t) {
@@ -220,17 +219,17 @@ function G(e, t, n) {
     if (t < 0 || t >= i.length || n < 0 || n >= i.length) return;
     let [a] = i.splice(t, 1);
     i.splice(n, 0, a);
-    let o = D(new s.zy(E(h({}, r), { games: i })));
+    let o = w(new s.zy(E(h({}, r), { games: i })));
     c.Z.setPendingWidgets(o);
 }
 function Z(e, t) {
     let n = R(e);
     if (null == n) return;
     let r = (null != n.games ? n.games : []).filter((e) => e.applicationId !== t),
-        i = D(new s.zy(E(h({}, n), { games: r })));
+        i = w(new s.zy(E(h({}, n), { games: r })));
     c.Z.setPendingWidgets(i);
 }
-async function B() {
+async function F() {
     let e = u.Z.getPendingWidgets();
     if (null !== e)
         try {
@@ -239,7 +238,7 @@ async function B() {
             console.error("Failed to save sample widgets:", e);
         }
 }
-async function F() {
+async function B() {
     try {
         await c.Z.savePendingWidgets([]);
     } catch (e) {

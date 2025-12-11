@@ -19,15 +19,15 @@ var r = n(54381),
     m = n(351402),
     h = n(931847),
     y = n(836197),
-    v = n(880421),
-    O = n(206599),
+    O = n(880421),
+    v = n(206599),
     j = n(50130),
     x = n(5136),
     P = n(690760),
     I = n(517157),
     w = n(860717),
     S = n(28671),
-    E = n(430790),
+    E = n(729424),
     _ = n(34335),
     T = n(683881),
     C = n(190862),
@@ -110,7 +110,7 @@ function F(e) {
         { application: n } = (0, j.G)(),
         { token: i } = (0, d.o)(null == n ? void 0 : n.id),
         a = (0, I.Z)(t.id),
-        l = (0, v.k)({ location: "ApplicationWidgetUpsell" }),
+        l = (0, O.k)({ location: "ApplicationWidgetUpsell" }),
         o = a.some((e) => e instanceof h.q && e.applicationId === (null == n ? void 0 : n.id));
     return null == n || !l || null == i || o
         ? null
@@ -142,11 +142,11 @@ function U(e) {
                 "GB" === e && n
             );
         })(),
-        d = (0, v.k)({ location: "UserProfileModalV2Widgets" }),
+        d = (0, O.k)({ location: "UserProfileModalV2Widgets" }),
         f = 0 === l.length && c,
         j = i.useMemo(() => l.filter(y.Wc), [l]),
         x = i.useMemo(() => l.filter((e) => e instanceof h.q), [l]);
-    (0, O.J)(c, j);
+    (0, v.J)(c, j);
     var w = t.id;
     (0, P.s)(x);
     let { data: S, refetch: T } = (0, p.O)(w),
@@ -158,8 +158,14 @@ function U(e) {
     let k = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
-                c && s && (0, r.jsx)(B, {}),
-                c && (0, r.jsx)(F, { user: t }),
+                c &&
+                    (0, r.jsxs)(r.Fragment, {
+                        children: [
+                            (0, r.jsx)(E.Z, { className: R.editingHeader }),
+                            s && (0, r.jsx)(B, {}),
+                            (0, r.jsx)(F, { user: t }),
+                        ],
+                    }),
                 l.map((e, i) =>
                     (0, r.jsx)(
                         M,
@@ -173,7 +179,6 @@ function U(e) {
                         e instanceof h.q ? "".concat(e.type, "-").concat(e.applicationId) : "".concat(e.type),
                     ),
                 ),
-                c && (0, r.jsx)(E.Z, {}),
             ],
         });
     if (f)

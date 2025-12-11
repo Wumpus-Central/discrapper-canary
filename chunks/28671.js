@@ -1,8 +1,8 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
-    l = n(296009),
-    a = n(28664),
+    a = n(296009),
+    l = n(28664),
     o = n(481060),
     c = n(785717),
     s = n(931847),
@@ -11,21 +11,21 @@ var r = n(54381),
     f = n(860717),
     g = n(228168),
     p = n(921944),
-    m = n(388032);
-function b(e) {
-    let { user: t, application: n, onDismiss: b } = e,
+    b = n(388032);
+function m(e) {
+    let { user: t, application: n, onDismiss: m } = e,
         { trackUserProfileEditAction: h } = (0, c.KZ)(),
         y = i.useMemo(
             () =>
                 new s.q({
-                    type: l.l.APPLICATION,
+                    type: a.l.APPLICATION,
                     applicationId: n.id,
                 }),
             [n.id],
         ),
-        v = i.useCallback(() => {
+        O = i.useCallback(() => {
             null != y &&
-                ((0, u.qH)(y.type, y, !0),
+                ((0, u.qH)(y.type, y),
                 h(
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -61,33 +61,33 @@ function b(e) {
         subtle: !0,
         cta: (0, r.jsx)(f.Z.Cta, {
             showSuggestedForYou: !0,
-            heading: m.intl.format(m.t.OIzLCy, { applicationName: n.name }),
-            content: m.intl.format(m.t.BQySru, { applicationName: n.name }),
+            heading: b.intl.format(b.t.OIzLCy, { applicationName: n.name }),
+            content: b.intl.format(b.t.BQySru, { applicationName: n.name }),
             buttons: (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(a.u, {
-                        text: m.intl.string(m.t.WAI6xu),
+                    (0, r.jsx)(l.u, {
+                        text: b.intl.string(b.t.WAI6xu),
                         ariaHidden: !0,
                         children: (0, r.jsx)(o.Yd2, {
                             variant: "secondary",
                             size: "sm",
                             icon: o.Dio,
-                            "aria-label": m.intl.string(m.t.WAI6xu),
+                            "aria-label": b.intl.string(b.t.WAI6xu),
                             onClick: () => {
-                                b(p.L.USER_DISMISS);
+                                m(p.L.USER_DISMISS);
                             },
                         }),
                     }),
-                    (0, r.jsx)(a.u, {
-                        text: m.intl.string(m.t["lBG2s/"]),
+                    (0, r.jsx)(l.u, {
+                        text: b.intl.string(b.t["lBG2s/"]),
                         ariaHidden: !0,
                         children: (0, r.jsx)(o.Yd2, {
                             variant: "primary",
                             size: "sm",
                             icon: o.kmB,
-                            "aria-label": m.intl.formatToPlainString(m.t.KfGahB, { applicationName: n.name }),
+                            "aria-label": b.intl.formatToPlainString(b.t.KfGahB, { applicationName: n.name }),
                             onClick: () => {
-                                b(p.L.TAKE_ACTION), v();
+                                m(p.L.TAKE_ACTION), O();
                             },
                         }),
                     }),
