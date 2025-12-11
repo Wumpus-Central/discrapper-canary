@@ -1,110 +1,131 @@
 n.d(t, {
     B: () => D,
-    E: () => R,
+    E: () => w,
 }),
     n(953529);
-var r = n(54381);
-n(473749);
-var i = n(120356),
-    a = n.n(i),
-    o = n(512722),
-    s = n.n(o),
-    l = n(979554),
-    c = n(442837),
-    u = n(481060),
-    d = n(597688),
-    f = n(473608),
-    p = n(811334),
-    _ = n(703400),
-    m = n(848118),
-    h = n(706454),
-    g = n(930153),
-    E = n(937615),
-    b = n(981631),
-    y = n(388032),
-    O = n(221152);
-let v = (e, t) => {
-        let n = null != t && e.productLine === b.POd.COLLECTIBLES && t.type !== l.Z.BUNDLE,
-            r = e.productLine === b.POd.SOCIAL_LAYER_GAME_ITEM;
+var r = n(54381),
+    i = n(473749),
+    a = n(120356),
+    o = n.n(a),
+    s = n(512722),
+    l = n.n(s),
+    c = n(979554),
+    u = n(442837),
+    d = n(481060),
+    f = n(597688),
+    p = n(473608),
+    _ = n(811334),
+    m = n(703400),
+    h = n(848118),
+    g = n(706454),
+    E = n(930153),
+    b = n(937615),
+    y = n(981631),
+    O = n(388032),
+    v = n(316365);
+let S = (e, t) => {
+        let n = null != t && e.productLine === y.POd.COLLECTIBLES && t.type !== c.Z.BUNDLE,
+            r = e.productLine === y.POd.SOCIAL_LAYER_GAME_ITEM;
         return n || r ? "THREE_COLUMN" : "TWO_COLUMN";
     },
-    S = (e) => {
+    I = (e) => {
         if (null == e.discounts || 0 === e.discounts.length) return null;
         let t = e.discounts[0];
         return 0 === t.amount ? null : t;
     },
-    I = (e) => {
-        let { children: t, className: n } = e;
-        return (0, r.jsx)("div", {
-            className: a()(O.invoiceRow, n),
-            children: t,
-        });
-    },
     T = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)("div", {
-            className: a()(O.invoiceTagColumn, n),
+            className: o()(v.invoiceRow, n),
             children: t,
         });
     },
     C = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)("div", {
-            className: a()(O.invoiceDescriptionColumn, n),
+            className: o()(v.invoiceTagColumn, n),
             children: t,
         });
     },
     A = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)("div", {
-            className: n,
+            className: o()(v.invoiceDescriptionColumn, n),
             children: t,
         });
     },
     N = (e) => {
+        let { children: t, className: n } = e;
+        return (0, r.jsx)("div", {
+            className: n,
+            children: t,
+        });
+    },
+    P = (e) => {
         let { sku: t } = e,
-            n = (0, c.e7)([d.Z], () => d.Z.getProduct(t.id));
-        return null != n && t.productLine === b.POd.COLLECTIBLES && n.type !== l.Z.BUNDLE
-            ? (0, r.jsx)(f.O, {
+            n = (0, u.e7)([f.Z], () => f.Z.getProduct(t.id));
+        return null != n && t.productLine === y.POd.COLLECTIBLES && n.type !== c.Z.BUNDLE
+            ? (0, r.jsx)(p.O, {
                   sku: t,
                   fallbackLabel: null,
               })
-            : t.productLine === b.POd.SOCIAL_LAYER_GAME_ITEM
-              ? (0, r.jsx)(m.A, {
-                    containerClassName: O.slayerStorefrontProductPreview,
+            : t.productLine === y.POd.SOCIAL_LAYER_GAME_ITEM
+              ? (0, r.jsx)(h.A, {
+                    containerClassName: v.slayerStorefrontProductPreview,
                     sku: t,
                     shape: "square",
                 })
               : null;
     },
-    P = (e) => {
+    R = (e) => {
         let { discount: t } = e,
-            n = (0, c.e7)([h.default], () => h.default.locale),
-            i = null != t && null != t.percentage_amount ? (0, g.T3)(n, -((t.percentage_amount / 100) * 1)) : null;
+            n = (0, u.e7)([g.default], () => g.default.locale),
+            i = null != t && null != t.percentage_amount ? (0, E.T3)(n, -((t.percentage_amount / 100) * 1)) : null;
         return (0, r.jsx)("div", {
-            className: O.invoiceDiscountTag,
-            children: (0, r.jsx)(u.Text, {
+            className: v.invoiceDiscountTag,
+            children: (0, r.jsx)(d.Text, {
                 variant: "text-sm/semibold",
                 color: "always-white",
                 children: i,
             }),
         });
     },
-    R = (e) => {
-        let { sku: t, value: n } = e,
-            i = (0, c.e7)([d.Z], () => d.Z.getProduct(t.id)),
-            a = v(t, i);
-        return (0, r.jsx)(p.aO, {
-            className: O.invoiceTable,
-            children: (0, r.jsxs)(I, {
+    w = (e) => {
+        let { sku: t, value: n, rentalDuration: a } = e,
+            o = (0, u.e7)([f.Z], () => f.Z.getProduct(t.id)),
+            s = (0, u.e7)([g.default], () => g.default.locale),
+            l = S(t, o),
+            c = i.useMemo(() => {
+                if (null == a) return null;
+                let e = new Date();
+                return (
+                    e.setDate(e.getDate() + a),
+                    e.toLocaleDateString(s, {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                    })
+                );
+            }, [a, s]);
+        return (0, r.jsx)(_.aO, {
+            className: v.invoiceTable,
+            children: (0, r.jsxs)(T, {
                 children: [
-                    "THREE_COLUMN" === a && (0, r.jsx)(T, { children: (0, r.jsx)(N, { sku: t }) }),
-                    (0, r.jsx)(C, {
-                        className: O.invoiceRegularText,
-                        children: t.name,
+                    "THREE_COLUMN" === l && (0, r.jsx)(C, { children: (0, r.jsx)(P, { sku: t }) }),
+                    (0, r.jsxs)(A, {
+                        className: v.invoiceRegularText,
+                        children: [
+                            t.name,
+                            null != c &&
+                                (0, r.jsx)(d.Text, {
+                                    variant: "text-sm/normal",
+                                    className: v.rentalDescription,
+                                    children: O.intl.format(O.t["es/G6j"], { date: c }),
+                                }),
+                        ],
                     }),
-                    (0, r.jsx)(A, {
-                        className: O.invoiceRegularText,
+                    (0, r.jsx)(N, {
+                        className: v.invoiceRegularText,
                         children: n,
                     }),
                 ],
@@ -113,81 +134,81 @@ let v = (e, t) => {
     };
 function D(e) {
     let { sku: t, skuPricePreview: n, application: i } = e;
-    s()(null != n.amount, "SKU must have a price set."),
-        s()(null != n.invoice_items && 1 === n.invoice_items.length, "SKU preview must have single line item");
-    let a = (0, c.e7)([d.Z], () => d.Z.getProduct(t.id)),
-        o = v(t, a),
-        l = n.invoice_items[0],
-        f = l.unit_price.amount,
-        m = !n.tax_inclusive && n.tax > 0,
-        h = S(l),
-        g = f !== n.amount,
-        R = t.productLine === b.POd.SOCIAL_LAYER_GAME_ITEM;
-    return (0, r.jsxs)(p.aO, {
-        className: O.invoiceTable,
+    l()(null != n.amount, "SKU must have a price set."),
+        l()(null != n.invoice_items && 1 === n.invoice_items.length, "SKU preview must have single line item");
+    let a = (0, u.e7)([f.Z], () => f.Z.getProduct(t.id)),
+        o = S(t, a),
+        s = n.invoice_items[0],
+        c = s.unit_price.amount,
+        p = !n.tax_inclusive && n.tax > 0,
+        h = I(s),
+        g = c !== n.amount,
+        E = t.productLine === y.POd.SOCIAL_LAYER_GAME_ITEM;
+    return (0, r.jsxs)(_.aO, {
+        className: v.invoiceTable,
         children: [
-            (0, r.jsxs)(I, {
+            (0, r.jsxs)(T, {
                 children: [
-                    "THREE_COLUMN" === o && (0, r.jsx)(T, { children: (0, r.jsx)(N, { sku: t }) }),
-                    (0, r.jsxs)(C, {
-                        className: O.invoiceRegularText,
+                    "THREE_COLUMN" === o && (0, r.jsx)(C, { children: (0, r.jsx)(P, { sku: t }) }),
+                    (0, r.jsxs)(A, {
+                        className: v.invoiceRegularText,
                         children: [
-                            R && (0, r.jsx)(_.e, { application: i }),
-                            (0, r.jsx)(u.Text, {
+                            E && (0, r.jsx)(m.e, { application: i }),
+                            (0, r.jsx)(d.Text, {
                                 variant: "text-sm/semibold",
                                 children: t.name,
                             }),
                         ],
                     }),
-                    (0, r.jsx)(A, {
-                        className: O.invoiceRegularText,
-                        children: (0, E.T4)(f, n.currency),
+                    (0, r.jsx)(N, {
+                        className: v.invoiceRegularText,
+                        children: (0, b.T4)(c, n.currency),
                     }),
                 ],
             }),
             null != h &&
-                (0, r.jsxs)(I, {
+                (0, r.jsxs)(T, {
                     children: [
-                        "THREE_COLUMN" === o && (0, r.jsx)(T, { children: (0, r.jsx)(P, { discount: h }) }),
-                        (0, r.jsx)(C, {
-                            className: O.invoiceDiscountText,
+                        "THREE_COLUMN" === o && (0, r.jsx)(C, { children: (0, r.jsx)(R, { discount: h }) }),
+                        (0, r.jsx)(A, {
+                            className: v.invoiceDiscountText,
                             children: h.description,
                         }),
-                        (0, r.jsx)(A, {
-                            className: O.invoiceDiscountText,
-                            children: (0, E.T4)(-1 * h.amount, n.currency),
+                        (0, r.jsx)(N, {
+                            className: v.invoiceDiscountText,
+                            children: (0, b.T4)(-1 * h.amount, n.currency),
                         }),
                     ],
                 }),
-            m &&
-                (0, r.jsxs)(I, {
+            p &&
+                (0, r.jsxs)(T, {
                     children: [
-                        "THREE_COLUMN" === o && (0, r.jsx)(T, {}),
-                        (0, r.jsx)(C, {
-                            className: O.invoiceRegularText,
-                            children: y.intl.string(y.t["/I8zmP"]),
-                        }),
+                        "THREE_COLUMN" === o && (0, r.jsx)(C, {}),
                         (0, r.jsx)(A, {
-                            className: O.invoiceRegularText,
-                            children: (0, E.T4)(n.tax, n.currency),
+                            className: v.invoiceRegularText,
+                            children: O.intl.string(O.t["/I8zmP"]),
+                        }),
+                        (0, r.jsx)(N, {
+                            className: v.invoiceRegularText,
+                            children: (0, b.T4)(n.tax, n.currency),
                         }),
                     ],
                 }),
             g &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(p.UN, {}),
-                        (0, r.jsxs)(I, {
-                            className: O.totalRow,
+                        (0, r.jsx)(_.UN, {}),
+                        (0, r.jsxs)(T, {
+                            className: v.totalRow,
                             children: [
-                                (0, r.jsx)(T, {
-                                    className: O.invoiceRegularText,
-                                    children: y.intl.format(y.t["+B5KfG"], {}),
+                                (0, r.jsx)(C, {
+                                    className: v.invoiceRegularText,
+                                    children: O.intl.format(O.t["+B5KfG"], {}),
                                 }),
-                                "THREE_COLUMN" === o && (0, r.jsx)(C, {}),
-                                (0, r.jsx)(A, {
-                                    className: O.invoiceRegularText,
-                                    children: (0, E.T4)(n.amount, n.currency),
+                                "THREE_COLUMN" === o && (0, r.jsx)(A, {}),
+                                (0, r.jsx)(N, {
+                                    className: v.invoiceRegularText,
+                                    children: (0, b.T4)(n.amount, n.currency),
                                 }),
                             ],
                         }),

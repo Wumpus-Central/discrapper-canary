@@ -73,16 +73,16 @@ let y = (e) => {
         };
     },
     v = (e) => {
-        let { orbPriceAmount: t, skuId: n } = e,
-            { skusById: i } = (0, f.Z)({
+        let { orbPriceAmount: t, skuId: n, rentalDuration: i } = e,
+            { skusById: o } = (0, f.Z)({
                 applicationId: (0, m.Nb)(n),
                 skuIDs: [n],
                 isGift: !1,
                 currentPaymentSourceId: null,
                 excludeSKUPurchasePreviews: !0,
             }),
-            o = i[n];
-        return void 0 === o
+            s = o[n];
+        return void 0 === s
             ? (0, r.jsx)(_.aO, {
                   children: (0, r.jsx)(a.$jN, {
                       type: a.$jN.Type.PULSING_ELLIPSIS,
@@ -90,8 +90,9 @@ let y = (e) => {
                   }),
               })
             : (0, r.jsx)(p.E, {
-                  sku: o,
+                  sku: s,
                   value: (0, r.jsx)(y, { orbAmount: t }),
+                  rentalDuration: i,
               });
     },
     S = (e) => {
@@ -125,6 +126,7 @@ let y = (e) => {
                         children: (0, r.jsx)(v, {
                             skuId: t,
                             orbPriceAmount: n,
+                            rentalDuration: c,
                         }),
                     }),
                     (0, r.jsx)(S, { orbBalance: i }),
