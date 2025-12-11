@@ -62,6 +62,10 @@ let C = async () =>
             label: "Reverse Trial 2-week",
             value: v.xT,
         },
+        {
+            label: "Nitro Squad Monthly",
+            value: v.Xh.PREMIUM_GROUP_MONTH,
+        },
     ];
 function S() {
     let e = (0, s.e7)([f.Z], () => f.Z.getPremiumTypeSubscription()),

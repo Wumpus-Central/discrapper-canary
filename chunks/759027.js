@@ -213,17 +213,18 @@ function P(e) {
         [Z, L] = r.useState(!1),
         [M, U] = r.useState(!1),
         [B, F] = r.useState(null),
-        G = (e) => ((null == e && (e = w.status), e in E) ? E[e] : "Unknown status ".concat(e)),
-        V = (e) => {
+        [G, V] = r.useState(""),
+        H = (e) => ((null == e && (e = w.status), e in E) ? E[e] : "Unknown status ".concat(e)),
+        W = (e) => {
             let t = new Date(e);
             return f.default.fromTimestamp(t.getTime());
         },
-        H = async (e) => {
+        z = async (e) => {
             let { status: t = w.status, premiumStreakStart: n, endedAt: a } = e,
                 r = S(
                     { subscription_status: t },
-                    null != n ? { premium_streak_started_at: V(n) } : null,
-                    null != a ? { ended_at: V(a) } : null,
+                    null != n ? { premium_streak_started_at: W(n) } : null,
+                    null != a ? { ended_at: W(a) } : null,
                 );
             await d.tn.patch({
                 url: "/debug/subscriptions/".concat(w.id),
@@ -232,7 +233,7 @@ function P(e) {
             }),
                 I();
         },
-        W = async () => {
+        q = async () => {
             try {
                 await g.vc(w.id, g.cN.RENEW, {
                     targetDate: o()(new Date()),
@@ -245,10 +246,36 @@ function P(e) {
             }
             I();
         },
-        z = (null == (t = y.GP[w.planIdFromItems]) ? void 0 : t.premiumType) === y.PremiumTypes.TIER_0,
-        q = null == (n = w.metadata) ? void 0 : n.ended_at,
-        K = null != q ? new Date(q).toISOString().substring(0, 10) : "",
-        Q = [
+        K = async (e) => {
+            let { accepted: t } = e;
+            try {
+                await d.tn.post({
+                    url: "/debug/subscriptions/".concat(w.id, "/members/").concat(G),
+                    body: S({}, t ? { accepted: !0 } : {}),
+                    rejectWithError: !1,
+                }),
+                    V("");
+            } catch (e) {
+                var n;
+                F((null == (n = e.body) ? void 0 : n.message) || e.message || "Failed to add user to group");
+            }
+        },
+        Q = async () => {
+            try {
+                await d.tn.del({
+                    url: "/debug/subscriptions/".concat(w.id, "/members/").concat(G),
+                    rejectWithError: !1,
+                }),
+                    V("");
+            } catch (t) {
+                var e;
+                F((null == (e = t.body) ? void 0 : e.message) || t.message || "Failed to remove user from group");
+            }
+        },
+        Y = (null == (t = y.GP[w.planIdFromItems]) ? void 0 : t.premiumType) === y.PremiumTypes.TIER_0,
+        X = null == (n = w.metadata) ? void 0 : n.ended_at,
+        J = null != X ? new Date(X).toISOString().substring(0, 10) : "",
+        $ = [
             {
                 id: "id",
                 label: "ID: ".concat(w.id),
@@ -256,27 +283,27 @@ function P(e) {
             },
             {
                 id: "status",
-                label: "Status: ".concat(G()),
+                label: "Status: ".concat(H()),
                 isDisabled: !1,
             },
         ],
-        Y = w.hasActiveTrial,
-        X = (null == (i = w.metadata) ? void 0 : i.active_discount_id) != null;
+        ee = w.hasActiveTrial,
+        et = (null == (i = w.metadata) ? void 0 : i.active_discount_id) != null;
     return (
-        Y &&
-            Q.push({
+        ee &&
+            $.push({
                 id: "trial",
                 label: "Has Trial",
                 isDisabled: !1,
             }),
-        X &&
-            Q.push({
+        et &&
+            $.push({
                 id: "active-discount",
                 label: "Has Active Discount",
                 isDisabled: !1,
             }),
         w.status !== v.O0b.ACTIVE &&
-            Q.push({
+            $.push({
                 id: "dates",
                 label: "Dates: "
                     .concat((0, h.vc)(w.createdAt, "LL"), " - ")
@@ -284,7 +311,7 @@ function P(e) {
                 isDisabled: !1,
             }),
         w.status === v.O0b.PAUSED &&
-            Q.push({
+            $.push({
                 id: "pause-reason",
                 label: "Pause Reason: ".concat(
                     w.pauseReason in O ? O[w.pauseReason] : "Unknown pause reason ".concat(w.pauseReason),
@@ -292,7 +319,7 @@ function P(e) {
                 isDisabled: !1,
             }),
         (0, a.jsx)("div", {
-            className: l()(C.card, z ? C.gradientWrapperTier0 : C.gradientWrapperTier2),
+            className: l()(C.card, Y ? C.gradientWrapperTier0 : C.gradientWrapperTier2),
             children: (0, a.jsxs)(m.C3N, {
                 label: "Type: ".concat(
                     (() => {
@@ -303,13 +330,13 @@ function P(e) {
                 className: _.fieldset,
                 children: [
                     (0, a.jsx)(m.QSK, {
-                        items: Q,
+                        items: $,
                         label: "Tags",
                         selectionMode: "none",
                         selectionBehavior: "replace",
                         disabledKeys: new Set(),
                     }),
-                    Y &&
+                    ee &&
                         (0, a.jsxs)("div", {
                             className: _.collapsablePane,
                             children: [
@@ -363,7 +390,7 @@ function P(e) {
                                     }),
                             ],
                         }),
-                    X &&
+                    et &&
                         (0, a.jsxs)("div", {
                             className: _.collapsablePane,
                             children: [
@@ -495,10 +522,10 @@ function P(e) {
                                     children: [
                                         (0, a.jsx)(u.B6, {
                                             label: "Status",
-                                            serialize: (e) => G(e),
+                                            serialize: (e) => H(e),
                                             isSelected: (e) => e === w.status,
                                             options: T,
-                                            select: (e) => H({ status: e }),
+                                            select: (e) => z({ status: e }),
                                             popoutLayerContext: x.O$,
                                         }),
                                         (0, a.jsxs)("div", {
@@ -510,7 +537,7 @@ function P(e) {
                                                             variant: "primary",
                                                             size: "sm",
                                                             text: "Renew Subscription",
-                                                            onClick: (e) => W(),
+                                                            onClick: (e) => q(),
                                                         }),
                                                         (0, a.jsx)(m.Button, {
                                                             variant: "secondary",
@@ -555,16 +582,47 @@ function P(e) {
                                                             ? void 0
                                                             : P.toISOString().substring(0, 10),
                                                     ),
-                                                    onSelect: (e) => H({ premiumStreakStart: e.toISOString() }),
+                                                    onSelect: (e) => z({ premiumStreakStart: e.toISOString() }),
                                                 }),
                                                 (0, a.jsx)(b.Z, {}),
                                             ],
                                         }),
                                         (0, a.jsx)(m.Wrb, {
                                             label: "Metadata Ended At Date",
-                                            value: o()(K),
-                                            onSelect: (e) => H({ endedAt: e.toISOString() }),
+                                            value: o()(J),
+                                            onSelect: (e) => z({ endedAt: e.toISOString() }),
                                         }),
+                                        (null == w ? void 0 : w.planIdFromItems) === y.Xh.PREMIUM_GROUP_MONTH &&
+                                            (0, a.jsxs)(m.Kqy, {
+                                                gap: 8,
+                                                children: [
+                                                    (0, a.jsx)(m.oil, {
+                                                        label: "Subscription Group Member User ID",
+                                                        value: G,
+                                                        onChange: V,
+                                                    }),
+                                                    (0, a.jsxs)(m.Kqy, {
+                                                        gap: 8,
+                                                        direction: "horizontal",
+                                                        children: [
+                                                            (0, a.jsx)(m.Button, {
+                                                                variant: "primary",
+                                                                size: "sm",
+                                                                text: "Add",
+                                                                onClick: () => K({ accepted: !0 }),
+                                                                disabled: "" === G,
+                                                            }),
+                                                            (0, a.jsx)(m.Button, {
+                                                                variant: "secondary",
+                                                                size: "sm",
+                                                                text: "Remove",
+                                                                onClick: () => Q(),
+                                                                disabled: "" === G,
+                                                            }),
+                                                        ],
+                                                    }),
+                                                ],
+                                            }),
                                     ],
                                 }),
                         ],
