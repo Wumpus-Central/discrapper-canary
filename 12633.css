@@ -25834,9 +25834,9 @@ span.clanTag__5d473 {
     --control-primary-background-default: var(--profile-gradient-button-color);
     --control-primary-background-hover: color-mix(in srgb, var(--profile-gradient-button-color) 90%, var(--black));
     --control-primary-background-active: color-mix(in srgb, var(--profile-gradient-button-color) 80%, var(--black));
-    --control-secondary-background-default: var(--opacity-white-24);
-    --control-secondary-background-hover: var(--opacity-white-36);
-    --control-secondary-background-active: var(--opacity-white-32)
+    --control-secondary-background-default: var(--opacity-white-8);
+    --control-secondary-background-hover: var(--opacity-white-16);
+    --control-secondary-background-active: var(--opacity-white-12)
 }
 
 :root .custom-user-profile-theme.theme-light {
