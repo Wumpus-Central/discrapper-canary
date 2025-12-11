@@ -1,5 +1,6 @@
 n.d(t, {
-    ZP: () => P,
+    Am: () => P,
+    ZP: () => R,
     fD: () => A,
 }),
     n(388685);
@@ -68,20 +69,7 @@ function N(e) {
 }
 function P() {
     let [e] = i.useState(() => A()),
-        t = g.bm.useSetting(),
-        n = g.Sb.useSetting(),
-        o = (0, a.e7)([_.Z], () => _.Z.testModeApplicationId),
-        f = (0, a.e7)([h.ZP], () => h.ZP.showPlayAgain),
-        m = i.useCallback((e) => {
-            g.bm.updateSetting(!e);
-        }, []),
-        I = i.useCallback((e) => {
-            e ? (0, l.h7j)((e) => (0, r.jsx)(b.Z, T({}, e))) : c.mc();
-        }, []),
-        C = i.useCallback((e) => {
-            (0, d.BV)(e, u.Z.USER_SETTINGS);
-        }, []),
-        P = i.useCallback((e) => {
+        t = i.useCallback((e) => {
             let t = e ? S.intl.format(S.t.LYXRxL, {}) : S.intl.format(S.t.uDP3Kz, {});
             (0, s.Z)({
                 title: S.intl.string(S.t.aqpAvn),
@@ -89,6 +77,36 @@ function P() {
                 confirmText: S.intl.string(S.t.vT7ckk),
                 onConfirm: () => N(e),
             });
+        }, []);
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(l.rsf, {
+                label: S.intl.string(S.t["eOC/F2"]),
+                description: S.intl.string(S.t.Afc7l6),
+                checked: e,
+                onChange: t,
+            }),
+            !e &&
+                (0, r.jsx)(E.Z, {
+                    look: E.z.WARNING,
+                    children: S.intl.string(S.t.j7S6IX),
+                }),
+        ],
+    });
+}
+function R() {
+    let e = g.bm.useSetting(),
+        t = g.Sb.useSetting(),
+        n = (0, a.e7)([_.Z], () => _.Z.testModeApplicationId),
+        o = (0, a.e7)([h.ZP], () => h.ZP.showPlayAgain),
+        s = i.useCallback((e) => {
+            g.bm.updateSetting(!e);
+        }, []),
+        f = i.useCallback((e) => {
+            e ? (0, l.h7j)((e) => (0, r.jsx)(b.Z, T({}, e))) : c.mc();
+        }, []),
+        m = i.useCallback((e) => {
+            (0, d.BV)(e, u.Z.USER_SETTINGS);
         }, []);
     return (0, r.jsx)(y.Z, {
         title: S.intl.string(S.t["8/udY0"]),
@@ -101,7 +119,7 @@ function P() {
                         (0, r.jsx)(l.rsf, {
                             label: S.intl.string(S.t.ObIb1Q),
                             description: S.intl.format(S.t["CY6q/Q"], { apiDocsUrl: v.EYA.API_DOCS }),
-                            checked: n,
+                            checked: t,
                             onChange: g.Sb.updateSetting,
                         }),
                         (0, r.jsx)(l.izJ, {}),
@@ -111,20 +129,7 @@ function P() {
                     setting: O.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                     children: (0, r.jsxs)(l.Kqy, {
                         gap: 16,
-                        children: [
-                            (0, r.jsx)(l.rsf, {
-                                label: S.intl.string(S.t["eOC/F2"]),
-                                description: S.intl.string(S.t.Afc7l6),
-                                checked: e,
-                                onChange: P,
-                            }),
-                            !e &&
-                                (0, r.jsx)(E.Z, {
-                                    look: E.z.WARNING,
-                                    children: S.intl.string(S.t.j7S6IX),
-                                }),
-                            (0, r.jsx)(l.izJ, {}),
-                        ],
+                        children: [(0, r.jsx)(P, {}), (0, r.jsx)(l.izJ, {})],
                     }),
                 }),
                 (0, r.jsxs)(p.F, {
@@ -133,8 +138,8 @@ function P() {
                         (0, r.jsx)(l.rsf, {
                             label: S.intl.string(S.t.fi3UQN),
                             description: S.intl.string(S.t["8mYp37"]),
-                            checked: !t,
-                            onChange: m,
+                            checked: !e,
+                            onChange: s,
                         }),
                         (0, r.jsx)(l.izJ, {}),
                     ],
@@ -145,8 +150,8 @@ function P() {
                         (0, r.jsx)(l.rsf, {
                             label: S.intl.string(S.t.erOqlh),
                             description: S.intl.string(S.t["52hMnD"]),
-                            checked: null != o,
-                            onChange: I,
+                            checked: null != n,
+                            onChange: f,
                         }),
                         (0, r.jsx)(l.izJ, {}),
                     ],
@@ -157,8 +162,8 @@ function P() {
                         (0, r.jsx)(l.rsf, {
                             label: S.intl.string(S.t.qDZryG),
                             description: S.intl.string(S.t["B/qU4K"]),
-                            checked: f,
-                            onChange: C,
+                            checked: o,
+                            onChange: m,
                         }),
                         (0, r.jsx)(l.izJ, {}),
                     ],
