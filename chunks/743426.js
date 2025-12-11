@@ -163,6 +163,8 @@ class S extends a.Z {
                 return (0, d.eJ)(m.eR.ASYNC_VIDEO_INPUT_DEVICE_INIT);
             case m.AN.ASYNC_CLIPS_SOURCE_DEINIT:
                 return (0, d.eJ)(m.eR.ASYNC_CLIPS_SOURCE_DEINIT);
+            case m.AN.PORT_AWARE_LATENCY_TESTING:
+                return (0, d.eJ)(m.eR.PORT_AWARE_LATENCY_TESTING);
             case m.AN.DIAGNOSTICS:
             case m.AN.NATIVE_PING:
             case m.AN.AUTOMATIC_VAD:
