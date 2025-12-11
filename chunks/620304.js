@@ -9,13 +9,13 @@ var r = n(54381),
     u = n(481060),
     d = n(239091),
     f = n(100527),
-    h = n(667815),
-    p = n(531572),
+    p = n(667815),
+    h = n(531572),
     g = n(259580),
     m = n(639777),
     b = n(495804),
     _ = n(441536),
-    y = n(810878),
+    y = n(5238),
     O = n(388032),
     v = n(931942);
 function j(e) {
@@ -25,12 +25,12 @@ function j(e) {
         C = i.useCallback(() => {
             (0, _.Z)(t.id, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        E = (0, c.e7)([p.Z], () => {
+        E = (0, c.e7)([h.Z], () => {
             var e;
-            return null != (e = p.Z.getCountForGuild(t.id)) ? e : 0;
+            return null != (e = h.Z.getCountForGuild(t.id)) ? e : 0;
         });
     i.useEffect(() => {
-        E !== t.premiumSubscriberCount && (0, h.v)(t.id, t.premiumSubscriberCount);
+        E !== t.premiumSubscriberCount && (0, p.v)(t.id, t.premiumSubscriberCount);
     }, [t.id, E, t.premiumSubscriberCount]);
     let S = Math.min((E / j) * 100, 100),
         [I, P] = (0, u.q_F)(

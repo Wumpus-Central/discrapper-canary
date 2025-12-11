@@ -1,80 +1,24 @@
-var r;
-Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.astFormatter = t.RichTextNodeType = void 0),
-    (t.formatToAst = s);
-let i = n(28472);
-!(function (e) {
-    (e.Text = "text"),
-        (e.Strong = "strong"),
-        (e.Emphasis = "em"),
-        (e.Strikethrough = "s"),
-        (e.Code = "inlineCode"),
-        (e.Link = "link"),
-        (e.Paragraph = "paragraph");
-})(r || (t.RichTextNodeType = r = {}));
-let a = {
-    $b: (e) => ({
-        type: r.Strong,
-        content: e,
-    }),
-    $i: (e) => ({
-        type: r.Emphasis,
-        content: e,
-    }),
-    $del: (e) => ({
-        type: r.Strikethrough,
-        content: e,
-    }),
-    $code: (e) => ({
-        type: r.Code,
-        content: e,
-    }),
-    $link: (e, t, [n]) => ({
-        type: r.Link,
-        target: n,
-        content: e,
-    }),
-    $p: (e) => ({
-        type: r.Paragraph,
-        content: e,
-    }),
-};
-class o extends i.FormatBuilder {
-    constructor() {
-        super(...arguments), (this.result = []);
-    }
-    pushRichTextTag(e, t, n) {
-        if (!(e in a)) throw `${e} is not a known rich text formatting tag`;
-        let r = a[e](t, "", n);
-        Array.isArray(r) ? this.result.push(...r) : this.result.push(r);
-    }
-    pushLiteralText(e) {
-        let t = this.result[this.result.length - 1];
-        null != t && t.type === r.Text
-            ? (t.content += e)
-            : this.result.push({
-                  type: r.Text,
-                  content: e,
-              });
-    }
-    pushObject(e) {
-        this.result.push(e);
-    }
-    finish() {
-        return this.result;
+async function r(e) {
+    if (e.size > 0) return e.size;
+    try {
+        return await new Promise((t, n) => {
+            let r = new FileReader(),
+                i = setTimeout(() => {
+                    n(Error("File read timeout"));
+                }, 10000);
+            (r.onload = (e) => {
+                var r;
+                clearTimeout(i);
+                let a = null == (r = e.target) ? void 0 : r.result;
+                a instanceof ArrayBuffer ? t(a.byteLength) : n(Error("Unexpected FileReader result type"));
+            }),
+                (r.onerror = () => {
+                    clearTimeout(i), n(Error("Could not read file"));
+                }),
+                r.readAsArrayBuffer(e);
+        });
+    } catch (e) {
+        return 0;
     }
 }
-function s(e, t) {
-    return "string" == typeof e
-        ? [
-              {
-                  type: r.Text,
-                  content: e,
-              },
-          ]
-        : this.bindFormatValues(o, e, t);
-}
-t.astFormatter = {
-    format: s,
-    builder: o,
-};
+n.d(t, { M: () => r }), n(415506), n(644351), n(146733);

@@ -1,8 +1,5 @@
 e.exports = {
-    modal: "modal_edf440",
-    modalHeader: "modalHeader_edf440",
     modalContent: "modalContent_edf440",
-    modalCloseButton: "modalCloseButton_edf440",
     imageSelectionSection: "imageSelectionSection_edf440",
     optionsList: "optionsList_edf440",
     option: "option_edf440",

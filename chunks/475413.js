@@ -1,8 +1,4 @@
-n.d(t, {
-    ef: () => y,
-    j8: () => E,
-    oY: () => O,
-});
+n.d(t, { oY: () => y });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -85,14 +81,11 @@ function h(e, t) {
     return i;
 }
 let g = {
-    primary: o()(u.themeColor, u.primary),
-    secondary: o()(u.themeColor, u.secondary),
-    none: "",
-};
-var E = (function (e) {
-    return (e.TEXT = "text"), (e.ICON = "icon"), (e.BANNER = "banner"), (e.HOVER = "hover"), e;
-})({});
-let b = (e) => {
+        primary: o()(u.themeColor, u.primary),
+        secondary: o()(u.themeColor, u.secondary),
+        none: "",
+    },
+    E = (e) => {
         var {
                 action: t,
                 color: n = s.zx.Colors.PRIMARY,
@@ -126,7 +119,7 @@ let b = (e) => {
             ),
         );
     },
-    y = i.forwardRef(function (e, t) {
+    b = i.forwardRef(function (e, t) {
         var {
                 icon: n,
                 tooltipText: i,
@@ -136,7 +129,7 @@ let b = (e) => {
                 tooltipClassName: p,
                 tooltipContainerClassName: h,
                 ariaLabel: g,
-                className: E,
+                className: b,
                 innerClassName: y,
                 shouldShowTooltip: O = !0,
             } = e,
@@ -163,12 +156,12 @@ let b = (e) => {
             className: h,
             tooltipClassName: p,
             children: (0, r.jsx)(
-                b,
+                E,
                 _(
                     f(
                         {
                             buttonRef: t,
-                            className: o()(u.icon, E),
+                            className: o()(u.icon, b),
                             innerClassName: o()(u.icon, y),
                             look: s.zx.Looks.FILLED,
                             size: s.zx.Sizes.NONE,
@@ -187,11 +180,11 @@ let b = (e) => {
             ),
         });
     }),
-    O = i.forwardRef(function (e, t) {
+    y = i.forwardRef(function (e, t) {
         var { className: n, innerClassName: i } = e,
             a = m(e, ["className", "innerClassName"]);
         return (0, r.jsx)(
-            y,
+            b,
             f(
                 {
                     ref: t,

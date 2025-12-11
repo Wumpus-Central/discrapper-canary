@@ -1,8 +1,8 @@
 n.d(t, {
-    O1: () => h,
-    Q1: () => m,
-    f6: () => E,
-    pt: () => g,
+    O1: () => E,
+    Q1: () => g,
+    f6: () => y,
+    pt: () => b,
 });
 var r = n(54381);
 n(473749);
@@ -43,10 +43,33 @@ function f(e) {
     return e;
 }
 function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function _(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -54,7 +77,7 @@ function p(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -63,17 +86,17 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function g(e) {
     let { action: t, onClick: n } = e,
         { trackUserProfileAction: r } = (0, c.KZ)();
     return (e) => {
         null != t && r({ action: t }), null == n || n(e);
     };
 }
-function h(e) {
+function E(e) {
     var { action: t, onClick: n, variant: i = "secondary", size: a = "sm" } = e,
-        o = p(e, ["action", "onClick", "variant", "size"]);
-    let s = m({
+        o = m(e, ["action", "onClick", "variant", "size"]);
+    let s = g({
         action: t,
         onClick: n,
     });
@@ -89,58 +112,117 @@ function h(e) {
         ),
     );
 }
-function g(e) {
+function b(e) {
     var {
             action: t,
             onClick: n,
             variant: i = "secondary",
             size: a = "sm",
-            tooltipText: s,
-            "aria-label": c,
-            buttonRef: u,
+            "aria-label": s,
+            tooltipText: c,
+            __unsupportedReactNodeAsText: u,
+            tooltipPosition: d,
+            tooltipAlign: p,
+            buttonRef: _,
         } = e,
-        d = p(e, ["action", "onClick", "variant", "size", "tooltipText", "aria-label", "buttonRef"]);
-    let _ = m({
+        h = m(e, [
+            "action",
+            "onClick",
+            "variant",
+            "size",
+            "aria-label",
+            "tooltipText",
+            "__unsupportedReactNodeAsText",
+            "tooltipPosition",
+            "tooltipAlign",
+            "buttonRef",
+        ]);
+    let E = g({
         action: t,
         onClick: n,
     });
     return (0, r.jsx)(o.u, {
         asContainer: !0,
-        targetElementRef: u,
-        text: s,
+        targetElementRef: _,
+        text: c,
+        __unsupportedReactNodeAsText: u,
+        position: d,
+        align: p,
         children: (0, r.jsx)(
             l.hU,
             f(
                 {
-                    onClick: _,
+                    onClick: E,
                     variant: i,
                     size: a,
-                    "aria-label": null != c ? c : s,
+                    "aria-label": null != s ? s : c,
                 },
-                d,
+                h,
             ),
         ),
     });
 }
-function E(e) {
-    let { icon: t, tooltipText: n, action: i, onClick: l, buttonRef: c, disabled: d = !1 } = e,
-        f = m({
-            action: i,
-            onClick: l,
-        });
+function y(e) {
+    var {
+            icon: t,
+            tooltipText: n,
+            __unsupportedReactNodeAsText: i,
+            tooltipPosition: l,
+            tooltipAlign: c,
+            "aria-label": d,
+            action: p,
+            onClick: h,
+            buttonRef: E,
+            disabled: b = !1,
+            onMouseEnter: y,
+            onMouseLeave: O,
+        } = e,
+        v = m(e, [
+            "icon",
+            "tooltipText",
+            "__unsupportedReactNodeAsText",
+            "tooltipPosition",
+            "tooltipAlign",
+            "aria-label",
+            "action",
+            "onClick",
+            "buttonRef",
+            "disabled",
+            "onMouseEnter",
+            "onMouseLeave",
+        ]);
+    let S = g({
+        action: p,
+        onClick: h,
+    });
     return (0, r.jsx)(o.u, {
         asContainer: !0,
         text: n,
-        children: (0, r.jsx)(s.P3F, {
-            innerRef: c,
-            className: a()(u.bannerButton, { [u.disabled]: d }),
-            onClick: f,
-            "aria-label": n,
-            "aria-disabled": d,
-            children: (0, r.jsx)(t, {
-                size: "xs",
-                color: "currentColor",
-            }),
-        }),
+        __unsupportedReactNodeAsText: i,
+        position: l,
+        align: c,
+        children: (0, r.jsx)(
+            s.P3F,
+            _(
+                f(
+                    {
+                        innerRef: E,
+                        className: a()(u.bannerButton, { [u.disabled]: b }),
+                        onClick: S,
+                        "aria-label": null != d ? d : n,
+                        "aria-disabled": b,
+                        onMouseEnter: y,
+                        onMouseLeave: O,
+                    },
+                    v,
+                ),
+                {
+                    children: (0, r.jsx)(t, {
+                        size: "xs",
+                        color: "currentColor",
+                    }),
+                },
+            ),
+        ),
     });
 }

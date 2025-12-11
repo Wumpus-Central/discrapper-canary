@@ -14,7 +14,7 @@ var r = n(54381),
     l = n(481060),
     c = n(518950),
     u = n(51144),
-    d = n(441677),
+    d = n(96011),
     f = n(388032),
     p = n(740908);
 function _(e, t, n) {
@@ -55,7 +55,7 @@ let h = (e) => {
             g = (0, u.XM)(t),
             [E, b] = i.useState(!1);
         return (0, r.jsxs)("div", {
-            className: p.container,
+            className: o()(p.container, { [p.hoverBackground]: null != s }),
             onMouseEnter: () => b(!0),
             onMouseLeave: () => b(!1),
             children: [
@@ -137,12 +137,12 @@ let h = (e) => {
         });
     },
     O = (e) => {
-        let { onInvite: t } = e,
-            [n, a] = i.useState(!1);
+        let { onInvite: t, canInvite: n } = e,
+            [a, c] = i.useState(!1);
         return (0, r.jsxs)("div", {
-            className: p.container,
-            onMouseEnter: () => a(!0),
-            onMouseLeave: () => a(!1),
+            className: o()(p.container, { [p.hoverBackground]: n }),
+            onMouseEnter: () => c(!0),
+            onMouseLeave: () => c(!1),
             children: [
                 (0, r.jsxs)("div", {
                     className: p.userInfoContainer,
@@ -162,7 +162,8 @@ let h = (e) => {
                         }),
                     ],
                 }),
-                n &&
+                a &&
+                    n &&
                     (0, r.jsx)("div", {
                         className: p.textButtonContainer,
                         children: (0, r.jsx)(l.Avr, {

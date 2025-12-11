@@ -1,12 +1,13 @@
-n.d(t, { Z: () => E }), n(388685);
-var r = n(186102),
-    i = n(873741),
-    a = n(866960),
-    o = n(626135),
-    s = n(616022),
-    l = n(704161),
-    c = n(981631);
-function u(e, t, n) {
+n.d(t, { Z: () => b }), n(388685);
+var r = n(127438),
+    i = n(186102),
+    a = n(873741),
+    o = n(866960),
+    s = n(626135),
+    l = n(616022),
+    c = n(704161),
+    u = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +31,12 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,19 +48,19 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let _ = 0.1;
-function m(e, t) {
+let m = 0.1;
+function h(e, t) {
     let n = (e) => (null == e ? "null" : null == e.questId ? "no_serve" : "quest"),
         r = n(e),
         i = n(t);
@@ -69,22 +70,22 @@ function m(e, t) {
           ? "same_quest"
           : "different_quest";
 }
-function h(e, t, n) {
-    var s, l, u, f, m;
-    if (Math.random() > _) return;
-    let h = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        g = (0, i.d)();
-    o.default.track(
-        c.rMx.QUEST_DECISION_ROUNDTRIP,
-        p(
-            d(
-                p(d({}, (0, r.Z)()), {
+function g(e, t, n) {
+    var l, c, d, p, h;
+    if (Math.random() > m) return;
+    let g = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
+        E = (0, a.d)();
+    s.default.track(
+        u.rMx.QUEST_DECISION_ROUNDTRIP,
+        _(
+            f(
+                _(f({}, (0, i.Z)()), {
                     endpoint: e.endpoint,
                     was_successful: e.wasSuccessful,
-                    api_latency_ms: h,
-                    mobile_network_type: a.Z.getType(),
+                    api_latency_ms: g,
+                    mobile_network_type: o.Z.getType(),
                 }),
-                null != g && { mobile_signal_strength_level: g },
+                null != E && { mobile_signal_strength_level: E },
             ),
             {
                 caller_source: e.callerSource,
@@ -92,21 +93,22 @@ function h(e, t, n) {
                 fetched_at: n,
                 previous_ad_request_id:
                     null !=
-                    (f = null == (l = e.previousAdDecision) || null == (s = l.adDecisionData) ? void 0 : s.decision_id)
-                        ? f
+                    (p = null == (c = e.previousAdDecision) || null == (l = c.adDecisionData) ? void 0 : l.decision_id)
+                        ? p
                         : null,
-                previous_fetched_at: null != (m = null == (u = e.previousAdDecision) ? void 0 : u.fetchedAt) ? m : null,
+                previous_fetched_at: null != (h = null == (d = e.previousAdDecision) ? void 0 : d.fetchedAt) ? h : null,
                 transition_case: t,
+                is_foregrounded: (0, r.H)(),
             },
         ),
     );
 }
-class g {
+class E {
     recordQuestRequestAttempt(e, t) {
         var n;
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            { enableNewRequestBehavior: i } = l.Z.getConfig({ location: "recordQuestRequestAttempt" }),
-            a = i && null != r && null != (n = s.Z.questAdDecisionByPlacement.get(r)) ? n : null,
+            { enableNewRequestBehavior: i } = c.Z.getConfig({ location: "recordQuestRequestAttempt" }),
+            a = i && null != r && null != (n = l.Z.questAdDecisionByPlacement.get(r)) ? n : null,
             o = {
                 initialSendTimestamp: Date.now(),
                 endpoint: e,
@@ -120,7 +122,7 @@ class g {
         this.pendingRequests.set(e, o),
             setTimeout(() => {
                 let t = this.pendingRequests.get(e);
-                null != t && (h(t, "timeout", null), this.pendingRequests.delete(e));
+                null != t && (g(t, "timeout", null), this.pendingRequests.delete(e));
             }, 30000);
     }
     recordQuestRequestApiResponse(e, t) {
@@ -129,8 +131,8 @@ class g {
         if (null != o) {
             let t,
                 s,
-                { enableNewRequestBehavior: c } = l.Z.getConfig({ location: "recordQuestRequestApiResponse" });
-            if (c) {
+                { enableNewRequestBehavior: l } = c.Z.getConfig({ location: "recordQuestRequestApiResponse" });
+            if (l) {
                 let e =
                     null !== a
                         ? {
@@ -140,10 +142,10 @@ class g {
                               adDecisionData: null != r ? { decision_id: r } : void 0,
                           }
                         : null;
-                (t = m(o.previousAdDecision, e)), (s = a);
+                (t = h(o.previousAdDecision, e)), (s = a);
             } else (t = "legacy"), (s = null);
-            h(
-                p(d({}, o), {
+            g(
+                _(f({}, o), {
                     apiResponseTimestamp: Date.now(),
                     wasSuccessful: n,
                     adRequestId: r,
@@ -155,7 +157,7 @@ class g {
         }
     }
     constructor() {
-        u(this, "pendingRequests", new Map());
+        d(this, "pendingRequests", new Map());
     }
 }
-let E = new g();
+let b = new E();

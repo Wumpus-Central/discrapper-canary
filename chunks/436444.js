@@ -19,7 +19,7 @@ var i = n(120356),
     m = n(981631),
     h = n(474936),
     g = n(388032),
-    E = n(810878),
+    E = n(5238),
     b = n(724437);
 function y(e, t, n) {
     return (
@@ -104,14 +104,14 @@ let T = {
                 totalAvailableBoostsCount: P,
             } = e,
             { analyticsLocations: R } = (0, c.ZP)(),
-            D = (0, u.Z)(),
-            w = m.oCV[A],
-            x = w - P,
+            w = (0, u.Z)(),
+            D = m.oCV[A],
+            x = D - P,
             L = A <= N || y,
             j = L && A <= i.premiumTier,
             M = L && A < i.premiumTier,
             k = L && A === i.premiumTier,
-            U = i.premiumTier < A && P >= w,
+            U = i.premiumTier < A && P >= D,
             { scaleFactor: G } = (0, l.q_F)({
                 from: { scaleFactor: 0 },
                 to: { scaleFactor: N >= A || (y && N + 1 === A) || (y && -1 === N && A === m.Eu4.NONE) ? 1 : 0 },
@@ -156,7 +156,7 @@ let T = {
                         guild: i,
                     }));
         }
-        let F = !j && D.fractionalState === h.a$.NONE,
+        let F = !j && w.fractionalState === h.a$.NONE,
             V = F ? l.P3F : "div",
             H = F ? { onClick: B } : {},
             Y = j

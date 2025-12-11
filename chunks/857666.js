@@ -10,16 +10,16 @@ var r = n(54381),
     a = n(481060),
     s = n(434404),
     u = n(905128),
-    c = n(639777),
-    d = n(279604),
+    c = n(238343),
+    d = n(639777),
     p = n(981631),
-    f = n(810878),
+    f = n(5238),
     m = n(388032),
     g = n(46310),
     v = n(175435);
 function x(e, t) {
     var x;
-    let _ = null != (x = (0, c.Z)(t)) && x,
+    let _ = null != (x = (0, d.Z)(t)) && x,
         b = (0, o.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getStateForGuild(t)) ? void 0 : e.allPowerups;
@@ -33,7 +33,7 @@ function x(e, t) {
                 "guildTagsBadgePacks" === e
                     ? (function (e) {
                           let { guildId: t, canUseBoosts: i, allPowerups: o, unlockedPowerups: u } = e,
-                              c = m.intl.string(f.default.KC9HRW),
+                              d = m.intl.string(f.default.KC9HRW),
                               x = m.intl.string(f.default.GJiSmP),
                               _ = null == o ? void 0 : o[l.IN],
                               b = (null == u ? void 0 : u[l.IN]) != null,
@@ -46,12 +46,12 @@ function x(e, t) {
                                   ? () => {
                                         b
                                             ? s.Z.open(t, p.pNK.TAG, p.jXE.GUILD_POWERUPS_OVERVIEW_CARD)
-                                            : null != _ && (0, d.KE)(t, _),
+                                            : null != _ && (0, c.KE)(t, _),
                                             (0, a.pTH)();
                                     }
                                   : void 0;
                           return {
-                              title: c,
+                              title: d,
                               description: x,
                               openModal: function (e) {
                                   let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -89,7 +89,7 @@ function x(e, t) {
                                                   })(
                                                       {
                                                           guildId: t,
-                                                          title: c,
+                                                          title: d,
                                                           description: m.intl.string(f.default.BBRFRd),
                                                           powerups: e,
                                                           footerInfoText: C,

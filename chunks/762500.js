@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => C });
 var r = n(54381),
     i = n(473749),
     l = n(990547),
@@ -11,99 +11,120 @@ var r = n(54381),
     p = n(825682),
     f = n(170245),
     g = n(752048),
-    h = n(699516),
-    m = n(626135),
-    _ = n(795448),
-    b = n(474936),
-    E = n(981631),
-    O = n(388032),
-    v = n(934422);
-function y(e) {
+    h = n(602733),
+    m = n(699516),
+    _ = n(626135),
+    b = n(909917),
+    E = n(795448),
+    O = n(474936),
+    v = n(981631),
+    y = n(388032),
+    I = n(934422);
+function C(e) {
     let {
             ref: t,
-            isFocused: y,
-            isActive: I,
-            status: C,
-            activities: S,
-            applicationStream: T,
-            isGameRelationship: N,
-            isMobile: j,
-            onOtherHover: P,
-            onClick: x,
-            recipientUser: A,
-            giftIntentType: Z,
+            isFocused: C,
+            isActive: S,
+            status: T,
+            activities: N,
+            applicationStream: j,
+            isGameRelationship: P,
+            isMobile: x,
+            onOtherHover: A,
+            onClick: Z,
+            recipientUser: w,
+            giftIntentType: L,
         } = e,
-        { analyticsLocations: w } = (0, o.ZP)(),
-        { Component: L } = (0, a.V)();
+        { analyticsLocations: R } = (0, o.ZP)(),
+        { Component: D } = (0, a.V)(),
+        M = (0, h.ao)({
+            location: "gift-intent-friend-row",
+            isGift: !0,
+            giftRecipient: w,
+        });
     i.useEffect(() => {
-        let e = g.Z.getUserAffinity(A.id);
+        let e = g.Z.getUserAffinity(w.id);
         (0, c.h)({
             name: l.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
             type: l.ImpressionTypes.VIEW,
             properties: {
-                gift_intent_type: Z,
+                gift_intent_type: L,
                 affinity: null == e ? void 0 : e.communicationProbability,
             },
         });
-    }, [A, Z]);
-    let R = (e) => {
+    }, [w, L]);
+    let k = (e) => {
             e.stopPropagation();
-            let t = g.Z.getUserAffinity(A.id);
-            m.default.track(E.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
-                gift_intent_type: Z,
+            let t = g.Z.getUserAffinity(w.id);
+            _.default.track(v.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
+                gift_intent_type: L,
                 affinity: null == t ? void 0 : t.communicationProbability,
             }),
-                (0, u.Z)({
-                    isGift: !0,
-                    initialPlanId: null,
-                    giftRecipient: A,
-                    analyticsLocations: w,
-                    analyticsObject: {
-                        page: E.ZY5.FRIENDS_LIST,
-                        section: E.jXE.FRIENDS_LIST_FRIEND_ROW,
-                        object: E.qAy.BUTTON_CTA,
-                        objectType: E.AnalyticsObjectTypes.GIFT,
-                    },
-                    giftMessage: D(),
-                });
+                M
+                    ? (0, b.Z)({
+                          giftRecipient: w,
+                          analyticsLocations: R,
+                          analyticsLocation: v.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+                          analyticsObject: {
+                              page: v.ZY5.FRIENDS_LIST,
+                              section: v.jXE.FRIENDS_LIST_FRIEND_ROW,
+                              object: v.qAy.BUTTON_CTA,
+                              objectType: v.AnalyticsObjectTypes.GIFT,
+                          },
+                          giftMessage: U(),
+                      })
+                    : (0, u.Z)({
+                          isGift: !0,
+                          initialPlanId: null,
+                          giftRecipient: w,
+                          analyticsLocations: R,
+                          analyticsLocation: v.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+                          analyticsObject: {
+                              page: v.ZY5.FRIENDS_LIST,
+                              section: v.jXE.FRIENDS_LIST_FRIEND_ROW,
+                              object: v.qAy.BUTTON_CTA,
+                              objectType: v.AnalyticsObjectTypes.GIFT,
+                          },
+                          giftMessage: U(),
+                      });
         },
-        D = () => (Z === b.hX.FRIEND_ANNIVERSARY ? O.intl.string(O.t.OrwKgi) : void 0);
+        U = () => (L === O.hX.FRIEND_ANNIVERSARY ? y.intl.string(y.t.OrwKgi) : void 0);
     return (0, r.jsx)(d.Z, {
         ref: t,
-        isFocused: y,
-        isActive: I,
-        user: A,
-        onOtherHover: P,
-        onClick: x,
+        isFocused: C,
+        isActive: S,
+        user: w,
+        onOtherHover: A,
+        onClick: Z,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: v.listItemContents,
+                className: I.listItemContents,
                 children: [
                     (0, r.jsx)(f.Z, {
-                        user: A,
-                        status: C,
-                        isMobile: j,
+                        user: w,
+                        status: T,
+                        isMobile: x,
                         subText: (0, r.jsx)(p.Z, {
                             hovered: e,
-                            activities: S,
-                            applicationStream: T,
-                            status: C,
-                            user: A,
-                            userIgnored: h.Z.isIgnored(A.id),
+                            activities: N,
+                            applicationStream: j,
+                            status: T,
+                            user: w,
+                            userIgnored: m.Z.isIgnored(w.id),
                         }),
                         hovered: e,
-                        showAccountIdentifier: !N && !A.isProvisional,
+                        showAccountIdentifier: !P && !w.isProvisional,
                     }),
                     (0, r.jsxs)("div", {
-                        className: v.actions,
+                        className: I.actions,
                         children: [
                             (0, r.jsx)(s.hU, {
                                 size: "sm",
                                 variant: "secondary",
-                                icon: L,
-                                "aria-label": O.intl.string(O.t.I61IsE),
+                                icon: D,
+                                "aria-label": y.intl.string(y.t.I61IsE),
                                 onClick: () => {
-                                    (0, _.PV)(A.id),
+                                    (0, E.PV)(w.id),
                                         (0, s.ZDy)(async () => {
                                             let { default: e } = await n.e("5890").then(n.bind(n, 171793));
                                             return (t) =>
@@ -143,10 +164,10 @@ function y(e) {
                             }),
                             (0, r.jsx)(s.Button, {
                                 size: "sm",
-                                text: O.intl.string(O.t.PEjaCx),
+                                text: y.intl.string(y.t.PEjaCx),
                                 icon: s.OgN,
-                                "aria-label": O.intl.string(O.t.PEjaCx),
-                                onClick: R,
+                                "aria-label": y.intl.string(y.t.PEjaCx),
+                                onClick: k,
                             }),
                         ],
                     }),

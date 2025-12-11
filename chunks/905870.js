@@ -1,4 +1,4 @@
-n.d(t, { Z: () => F }), n(642613), n(388685), n(539854), n(361932), n(187205);
+n.d(t, { Z: () => V }), n(642613), n(388685), n(539854), n(361932), n(187205);
 var r = n(268146),
     i = n(433517),
     a = n(147913),
@@ -39,22 +39,23 @@ let y = 1048576,
     N = 15 * f.Z.Millis.MINUTE,
     P = +y,
     R = 1.5 * y,
-    D = 256,
-    w = 12,
+    w = 256,
+    D = 12,
     x = !0,
     L = 4 * y,
     j = 30 * f.Z.Millis.MINUTE,
     M = 8 * y,
     k = 60 * f.Z.Millis.MINUTE,
     U = "lastMemoryUsageRestart",
-    G = +f.Z.Millis.DAY;
-function Z() {
+    G = +f.Z.Millis.DAY,
+    Z = +f.Z.Millis.MINUTE;
+function B() {
     return p.isPlatformEmbedded && (0, p.isWindows)();
 }
-class B extends a.Z {
+class F extends a.Z {
     _initialize() {}
     _terminate() {
-        Z() &&
+        B() &&
             (clearInterval(this._checkIntervalNativeHeap),
             (this._checkIntervalNativeHeap = null),
             clearInterval(this._checkIntervalPA),
@@ -64,132 +65,139 @@ class B extends a.Z {
     }
     handlePostConnectionOpen() {
         var e, t;
-        if (!Z()) return;
+        if (!B()) return;
         let n = null == (e = (t = o.Z.remoteApp).getReleaseChannel) ? void 0 : e.call(t);
-        ("development" === n || "canary" === n) &&
-            (clearInterval(this._checkIntervalNativeHeap),
+        "development" !== n && "canary" !== n && (this._supportedNativeChannel = !1),
+            clearInterval(this._checkIntervalNativeHeap),
             (this._checkIntervalNativeHeap = setInterval(async () => {
                 await this.trackNativeHeapPerformanceStats();
             }, O)),
-            clearInterval(this._checkIntervalPA),
-            (this._checkIntervalPA = setInterval(async () => {
-                await this.trackPartitionAllocPerformanceStats();
-            }, N)));
+            this._supportedNativeChannel &&
+                (clearInterval(this._checkIntervalPA),
+                (this._checkIntervalPA = setInterval(async () => {
+                    await this.trackPartitionAllocPerformanceStats();
+                }, N)));
     }
     async trackNativeHeapPerformanceStats() {
-        var e, t, n, a, o;
-        let f = _.Z.getMemoryUsageElectronProcessTypeDetails();
-        if (null == f) return;
-        let p = null != (t = null == (e = f.renderer) ? void 0 : e.wss_priv_kb) ? t : 0;
-        if (
-            (!this._nativeHeapHooksInstalled &&
-                p > v &&
-                _.Z.enablePerfMemoryHooks({
-                    allocationThresholdKB: T,
-                    enableCallStackTracking: C,
-                }) &&
-                (this._nativeHeapHooksInstalled = !0),
-            this._nativeHeapHooksInstalled)
-        ) {
-            if (p < S) return;
-            let e = _.Z.getPerfAttributedMemory();
-            if (null == e) return;
-            let t = [],
-                r = [],
-                i = [],
-                s = [],
-                l = Object.entries(e);
-            for (let [e, c] of (l.sort((e, t) => {
-                var n, r;
-                let [, i] = e,
-                    [, a] = t;
-                return (
-                    (null != (n = null == a ? void 0 : a.total_allocation_kb) ? n : 0) -
-                    (null != (r = null == i ? void 0 : i.total_allocation_kb) ? r : 0)
-                );
-            }),
-            l.slice(0, 10)))
-                null != c &&
-                    (t.push(e),
-                    r.push(null != (n = c.total_allocation_kb) ? n : 0),
-                    i.push(null != (a = c.allocation_count) ? a : 0),
-                    s.push(null != (o = c.module_version) ? o : ""));
-            let u = _.Z.getPerfAttributedMemoryStats(),
-                f = null == u ? void 0 : u.events_dropped,
-                m = {
-                    memory_type: "native_heap",
-                    module_name: t,
-                    allocation_total_size_kb: r,
-                    allocation_count: i,
-                    module_version: s,
-                    events_dropped: f,
-                };
-            if ((d.default.track(E.rMx.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, m), C)) {
-                let e = l.slice(0, 3).map((e) => e[0]),
-                    t = 3;
-                for (let n of e
-                    .map((e) => _.Z.getPerfAttributedMemoryCallstacks(e))
-                    .filter((e) => null != e)
-                    .flatMap((e) => e)
-                    .sort((e, t) => {
-                        var n, r;
-                        return (null != (n = t.total_alloc_kb) ? n : 0) - (null != (r = e.total_alloc_kb) ? r : 0);
-                    })
-                    .slice(0, t)
-                    .filter((e) => {
-                        var t;
-                        return (null != (t = e.total_alloc_kb) ? t : 0) > I;
-                    })) {
-                    let e = {
-                        memory_type: "native_heap",
-                        module_name: n.module_name,
-                        callstack_allocation_total_size_kb: n.total_alloc_kb,
-                        callstack_frame_module_names: n.frame_module_names,
-                        callstack_frame_module_codeids: n.frame_module_codeids,
-                        callstack_frame_relative_offsets: n.frame_rel_offsets,
-                        events_dropped: f,
-                    };
-                    d.default.track(E.rMx.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, e);
-                }
+        var e, t;
+        let n = _.Z.getMemoryUsageElectronProcessTypeDetails();
+        if (null == n) return;
+        let r = null != (t = null == (e = n.renderer) ? void 0 : e.wss_priv_kb) ? t : 0;
+        !this._nativeHeapHooksInstalled &&
+            this._supportedNativeChannel &&
+            r > v &&
+            _.Z.enablePerfMemoryHooks({
+                allocationThresholdKB: T,
+                enableCallStackTracking: C,
+            }) &&
+            (this._nativeHeapHooksInstalled = !0),
+            this._nativeHeapHooksInstalled && (await this.trackNativeHeapHookStats(r)),
+            this.doRestartIfNeeded(r);
+    }
+    async trackNativeHeapHookStats(e) {
+        if (e < S) return;
+        let t = _.Z.getPerfAttributedMemory();
+        if (null == t) return;
+        let n = [],
+            r = [],
+            i = [],
+            a = [],
+            o = Object.entries(t);
+        for (let [e, t] of (o.sort((e, t) => {
+            var n, r;
+            let [, i] = e,
+                [, a] = t;
+            return (
+                (null != (n = null == a ? void 0 : a.total_allocation_kb) ? n : 0) -
+                (null != (r = null == i ? void 0 : i.total_allocation_kb) ? r : 0)
+            );
+        }),
+        o.slice(0, 10)))
+            if (null != t) {
+                var s, l, u;
+                n.push(e),
+                    r.push(null != (s = t.total_allocation_kb) ? s : 0),
+                    i.push(null != (l = t.allocation_count) ? l : 0),
+                    a.push(null != (u = t.module_version) ? u : "");
             }
-            A &&
-                this._pushedNativeDeadlockMinidumpCount < 5 &&
-                (await h.ZP.submitLiveCrashReport({
-                    message: "Desktop Memory Thread State",
-                    extra: {
-                        renderer_memory_kb: p,
-                        gpu_brand: c.Z.getGpuBrand(),
-                    },
-                }),
-                (this._pushedNativeDeadlockMinidumpCount += 1));
+        let f = _.Z.getPerfAttributedMemoryStats(),
+            p = null == f ? void 0 : f.events_dropped,
+            m = {
+                memory_type: "native_heap",
+                module_name: n,
+                allocation_total_size_kb: r,
+                allocation_count: i,
+                module_version: a,
+                events_dropped: p,
+            };
+        if ((d.default.track(E.rMx.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, m), C)) {
+            let e = o.slice(0, 3).map((e) => e[0]),
+                t = 3;
+            for (let n of e
+                .map((e) => _.Z.getPerfAttributedMemoryCallstacks(e))
+                .filter((e) => null != e)
+                .flatMap((e) => e)
+                .sort((e, t) => {
+                    var n, r;
+                    return (null != (n = t.total_alloc_kb) ? n : 0) - (null != (r = e.total_alloc_kb) ? r : 0);
+                })
+                .slice(0, t)
+                .filter((e) => {
+                    var t;
+                    return (null != (t = e.total_alloc_kb) ? t : 0) > I;
+                })) {
+                let e = {
+                    memory_type: "native_heap",
+                    module_name: n.module_name,
+                    callstack_allocation_total_size_kb: n.total_alloc_kb,
+                    callstack_frame_module_names: n.frame_module_names,
+                    callstack_frame_module_codeids: n.frame_module_codeids,
+                    callstack_frame_relative_offsets: n.frame_rel_offsets,
+                    events_dropped: p,
+                };
+                d.default.track(E.rMx.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, e);
+            }
         }
-        if (p >= L) {
-            let e = performance.now() - this._startupTime;
-            if (e < k) return;
-            let t = i.K.get(U);
-            if (null != t && t.timestamp >= Date.now() - G) return;
-            let n = !0,
-                { enable: a, enableForce: o } = g.Z.getConfig({ location: "DesktopPerfAnalyticsManager" });
-            if (!a) return;
-            if (p < M || !o) {
-                let e = l.Z.getIdleSince();
-                if (null == e || e > Date.now() - j || null != u.Z.getRTCConnection()) return;
-            } else n = !1;
-            s.Z.persist(),
-                i.K.set(U, {
-                    timeSinceStartup: e,
-                    timestamp: Date.now(),
-                }),
-                h.ZP.setCrashInformation(
-                    r.X4.IntentionalCrashReason,
-                    "excessive-memory-usage".concat(n ? "-forced" : ""),
-                ),
-                m.Z.addBreadcrumb({
-                    category: "excessive-memory-usage-restart",
-                    message: "Restarting due to excessive renderer memory usage: ".concat(p, "kB"),
-                }),
-                h.ZP.crash(3);
-        }
+        A &&
+            this._pushedNativeDeadlockMinidumpCount < 5 &&
+            (await h.ZP.submitLiveCrashReport({
+                message: "Desktop Memory Thread State",
+                extra: {
+                    renderer_memory_kb: e,
+                    gpu_brand: c.Z.getGpuBrand(),
+                },
+            }),
+            (this._pushedNativeDeadlockMinidumpCount += 1));
+    }
+    doRestartIfNeeded(e) {
+        if (e < L) return;
+        let t = performance.now() - this._startupTime;
+        if (t < k) return;
+        let n = i.K.get(U);
+        if (null != n && n.timestamp >= Date.now() - G) return;
+        let { enable: a, enableForce: o } = g.Z.getConfig({ location: "DesktopPerfAnalyticsManager" });
+        a &&
+            setTimeout(() => {
+                let n = !0;
+                if (e < M || !o) {
+                    let e = l.Z.getIdleSince();
+                    if (null == e || e > Date.now() - j || null != u.Z.getRTCConnection()) return;
+                } else n = !1;
+                s.Z.persist(),
+                    i.K.set(U, {
+                        timeSinceStartup: t,
+                        timestamp: Date.now(),
+                    }),
+                    h.ZP.setCrashInformation(
+                        r.X4.IntentionalCrashReason,
+                        "excessive-memory-usage".concat(n ? "-forced" : ""),
+                    ),
+                    m.Z.addBreadcrumb({
+                        category: "excessive-memory-usage-restart",
+                        message: "Restarting due to excessive renderer memory usage: ".concat(e, "kB"),
+                    }),
+                    h.ZP.crash(3);
+            }, Z);
     }
     trackPartitionAllocPerformanceStats() {
         var e, t, n;
@@ -198,7 +206,7 @@ class B extends a.Z {
         let i = null != (e = r.usedHeapSize) ? e : 0;
         if (!this._paHeapHooksInstalled && i > P) {
             let e = _.Z.enablePAMemoryProfiler({
-                allocationThresholdKB: w,
+                allocationThresholdKB: D,
                 enableCallStackTracking: x,
             });
             null != e && e && (this._paHeapHooksInstalled = !0);
@@ -249,7 +257,7 @@ class B extends a.Z {
                     .slice(0, t)
                     .filter((e) => {
                         var t;
-                        return (null != (t = e.total_alloc_kb) ? t : 0) > D;
+                        return (null != (t = e.total_alloc_kb) ? t : 0) > w;
                     })) {
                     let e = {
                         memory_type: "part_alloc",
@@ -273,7 +281,8 @@ class B extends a.Z {
             b(this, "_paHeapHooksInstalled", !1),
             b(this, "_pushedNativeDeadlockMinidumpCount", 0),
             b(this, "_startupTime", performance.now()),
+            b(this, "_supportedNativeChannel", !0),
             b(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
     }
 }
-let F = new B();
+let V = new F();

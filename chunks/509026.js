@@ -69,7 +69,7 @@ function f(e) {
                     null != e &&
                         null != i &&
                         (0, l.ZDy)(async () => {
-                            let { CreateEmojiWithRolesModal: l } = await n.e("38602").then(n.bind(n, 604623));
+                            let { CreateEmojiWithRolesModal: l } = await n.e("9007").then(n.bind(n, 604623));
                             return (n) =>
                                 (0, r.jsx)(
                                     l,
@@ -97,7 +97,7 @@ function f(e) {
                     emojis: h,
                     onEdit: (e, t) => {
                         (0, l.ZDy)(async () => {
-                            let { UpdateEmojiRolesModal: i } = await n.e("38602").then(n.bind(n, 604623));
+                            let { UpdateEmojiRolesModal: i } = await n.e("9007").then(n.bind(n, 604623));
                             return (n) =>
                                 (0, r.jsx)(
                                     i,

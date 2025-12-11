@@ -2,33 +2,33 @@ n.d(e, { C: () => d });
 var i = n(54381),
     l = n(473749),
     s = n(793030),
-    u = n(5900),
-    r = n(773275),
+    r = n(5900),
+    u = n(773275),
     a = n(388032),
-    o = n(237396),
+    o = n(36385),
     c = n(291771);
 let d = () => {
-        let { isWeb: t, installationStatus: e } = (0, r.xf)(),
+        let { isWeb: t, installationStatus: e } = (0, u.xf)(),
             n = (0, l.useMemo)(() => {
                 if (t) return a.intl.string(o.default.KN6HOb);
                 switch (e) {
-                    case u._n.ERROR:
+                    case r._n.ERROR:
                         return a.intl.string(o.default.cjqyz7);
-                    case u._n.INSTALLING_TIMEOUT:
+                    case r._n.INSTALLING_TIMEOUT:
                         return a.intl.string(o.default.an5PuY);
-                    case u._n.NOT_INSTALLED:
-                    case u._n.UNKNOWN:
+                    case r._n.NOT_INSTALLED:
+                    case r._n.UNKNOWN:
                         return a.intl.string(o.default.KN6HOb);
-                    case u._n.INSTALLING:
+                    case r._n.INSTALLING:
                         return a.intl.string(o.default.lYWqUK);
-                    case u._n.WAITING_FOR_TERMS:
-                    case u._n.READY_FOR_LICENSE:
+                    case r._n.WAITING_FOR_TERMS:
+                    case r._n.READY_FOR_LICENSE:
                         return a.intl.string(o.default.NSVz3Y);
-                    case u._n.EXISTING_INSTALLATION:
+                    case r._n.EXISTING_INSTALLATION:
                         return a.intl.string(o.default.FgL0HB);
-                    case u._n.ZERO_TRUST:
+                    case r._n.ZERO_TRUST:
                         return a.intl.string(o.default["7zgDRR"]);
-                    case u._n.INSTALLED:
+                    case r._n.INSTALLED:
                         return (0, i.jsx)(S, {});
                 }
             }, [t, e]);
@@ -38,8 +38,8 @@ let d = () => {
         });
     },
     S = () => {
-        switch ((0, r.xf)((t) => t.connectionStatus)) {
-            case u.Ij.INITIALIZING:
+        switch ((0, u.xf)((t) => t.connectionStatus)) {
+            case r.Ij.INITIALIZING:
                 return (0, i.jsxs)("span", {
                     className: c.connectedStatus,
                     children: [
@@ -53,11 +53,11 @@ let d = () => {
                         }),
                     ],
                 });
-            case u.Ij.CONNECTED:
+            case r.Ij.CONNECTED:
                 return a.intl.string(o.default.FBu3XJ);
-            case u.Ij.DISCONNECTED:
+            case r.Ij.DISCONNECTED:
                 return a.intl.string(o.default["9V78nW"]);
-            case u.Ij.ERROR:
+            case r.Ij.ERROR:
                 return a.intl.string(o.default.i4ZzK6);
         }
     };

@@ -9,12 +9,12 @@ var r = n(54381),
     u = n(434479),
     d = n(819640),
     f = n(713081),
-    h = n(326660),
-    p = n(441536),
+    p = n(326660),
+    h = n(441536),
     g = n(933104),
     m = n(332538),
     b = n(921944),
-    _ = n(810878),
+    _ = n(5238),
     y = n(388032),
     O = n(969649);
 function v(e) {
@@ -58,7 +58,7 @@ let j = {
             C = i.useCallback(() => {
                 var e;
                 (0, f.jd)(t),
-                    (0, p.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    (0, h.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
                     null == x || null == (e = x.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
             }, [t, x]),
             E = i.useRef(null),
@@ -69,7 +69,7 @@ let j = {
                 var e;
                 if ((null == x ? void 0 : x.popout) == null || P) return null;
                 switch (null == x || null == (e = x.popout) ? void 0 : e.type) {
-                    case h.J.LEVEL_REACHED:
+                    case p.J.LEVEL_REACHED:
                         return (0, r.jsx)(
                             g.jG,
                             v(
@@ -80,7 +80,7 @@ let j = {
                                 x.popout,
                             ),
                         );
-                    case h.J.PERKS_AVAILABLE:
+                    case p.J.PERKS_AVAILABLE:
                         return (0, r.jsx)(
                             g.$h,
                             v(
@@ -91,7 +91,7 @@ let j = {
                                 x.popout,
                             ),
                         );
-                    case h.J.PERKS_PURCHASABLE:
+                    case p.J.PERKS_PURCHASABLE:
                         return (0, r.jsx)(
                             g.yI,
                             v(
@@ -102,7 +102,7 @@ let j = {
                                 x.popout,
                             ),
                         );
-                    case h.J.NEW_PERK_AVAILABLE:
+                    case p.J.NEW_PERK_AVAILABLE:
                         return (0, r.jsx)(
                             g.cO,
                             v(
@@ -113,8 +113,8 @@ let j = {
                                 x.popout,
                             ),
                         );
-                    case h.J.GAME_SERVER_HOSTING_AVAILABLE:
-                    case h.J.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
+                    case p.J.GAME_SERVER_HOSTING_AVAILABLE:
+                    case p.J.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
                         return (0, r.jsx)(
                             g.dJ,
                             v(

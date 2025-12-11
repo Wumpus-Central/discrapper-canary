@@ -55,7 +55,14 @@ function l(e, t) {
 }
 let c = (e) => "gift-option-select-modal-".concat(e.id);
 function u(e) {
-    let { giftRecipient: t, onClose: a, analyticsLocations: s, analyticsObject: u } = e;
+    let {
+        giftRecipient: t,
+        onClose: a,
+        analyticsLocations: s,
+        analyticsLocation: u,
+        analyticsObject: d,
+        giftMessage: f,
+    } = e;
     return (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e("74330"), n.e("16"), n.e("12693")]).then(n.bind(n, 841081));
@@ -65,7 +72,9 @@ function u(e) {
                     l(o({}, n), {
                         giftRecipient: t,
                         analyticsLocations: s,
-                        analyticsObject: u,
+                        analyticsLocation: u,
+                        analyticsObject: d,
+                        giftMessage: f,
                     }),
                 );
         },

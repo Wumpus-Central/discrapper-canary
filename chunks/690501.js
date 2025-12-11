@@ -24,16 +24,34 @@ function f(e) {
         ),
         g = (0, o.Z)(h, p),
         E = i.useMemo(() => g.filter(s.lm), [g]),
-        b = i.useMemo(() => (t.length > 0 ? (0, c.A)(E) : void 0), [E, t.length]);
+        { tooltipText: b, ariaLabel: y } = i.useMemo(() => {
+            if (t.length > 0) {
+                var e;
+                return {
+                    tooltipText: (0, r.jsx)(l.k, { applications: E }),
+                    ariaLabel: null != (e = (0, c.A)(E)) ? e : u.intl.string(u.t.ujfP6f),
+                };
+            }
+            if (n) {
+                let e = u.intl.string(u.t["0eWeav"]);
+                return {
+                    tooltipText: e,
+                    ariaLabel: e,
+                };
+            }
+            if (f) {
+                let e = u.intl.string(u.t.MCgl9c);
+                return {
+                    tooltipText: e,
+                    ariaLabel: e,
+                };
+            }
+            throw Error("[GameRelationshipButton] Tooltip text and aria label should not be undefined.");
+        }, [E, t.length, n, f]);
     return {
         onMouseEnter: m,
-        ariaLabel: b,
-        tooltipText: i.useMemo(() => {
-            if (t.length > 0) return (0, r.jsx)(l.k, { applications: E });
-            if (n) return u.intl.string(u.t["0eWeav"]);
-            if (f) return u.intl.string(u.t.MCgl9c);
-            throw Error("[GameRelationshipButton] Tooltip text should not be undefined.");
-        }, [E, t.length, n, f]),
+        ariaLabel: y,
+        tooltipText: b,
         icon: i.useMemo(() => {
             if (t.length > 0) return a.KED;
             if (n || f) return a.iHX;

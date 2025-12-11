@@ -1,8 +1,8 @@
 n.d(t, {
     $h: () => A,
-    En: () => M,
+    En: () => L,
     cO: () => D,
-    dJ: () => L,
+    dJ: () => M,
     jG: () => T,
     yI: () => R,
 });
@@ -17,8 +17,8 @@ var i = n(120356),
     u = n(100527),
     d = n(703656),
     f = n(430824),
-    h = n(326660),
-    p = n(473952),
+    p = n(326660),
+    h = n(473952),
     g = n(156732),
     m = n(448222),
     b = n(639777),
@@ -28,8 +28,8 @@ var i = n(120356),
     v = n(981631),
     j = n(176505),
     x = n(921944),
-    C = n(816632),
-    E = n(810878),
+    C = n(400580),
+    E = n(5238),
     S = n(388032),
     I = n(428197),
     P = n(611087),
@@ -84,7 +84,7 @@ function R(e) {
         { onActivate: c } = (0, m.Z)(t, n[0]),
         d = (0, g.Z)(n[0], !0);
     if (0 === n.length) return;
-    let h =
+    let p =
             n.length >= 3
                 ? S.intl.formatToPlainString(E.default["6Sv+3M"], {
                       perk: n[0].title,
@@ -96,7 +96,7 @@ function R(e) {
                         perks: "".concat(n[0].title, " & ").concat(n[1].title),
                     })
                   : S.intl.formatToPlainString(E.default.ZF8NT6, { perk: n[0].title }),
-        p = 1 === n.length;
+        h = 1 === n.length;
     return (0, r.jsx)(k, {
         size: 1 === n.length ? "video" : "lg",
         asset:
@@ -108,13 +108,13 @@ function R(e) {
                       className: I.image,
                   }),
         title: S.intl.formatToPlainString(E.default.LmpChE, { guildName: s }),
-        body: h,
+        body: p,
         actions: [
             {
-                text: p ? S.intl.string(E.default.gSxlHf) : S.intl.string(S.t.RzWDqY),
+                text: h ? S.intl.string(E.default.gSxlHf) : S.intl.string(S.t.RzWDqY),
                 variant: "primary",
                 onClick: (e) => {
-                    e.stopPropagation(), p ? c() : (0, _.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS);
+                    e.stopPropagation(), h ? c() : (0, _.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS);
                 },
             },
         ],
@@ -167,9 +167,9 @@ function D(e) {
           })
         : null;
 }
-function L(e) {
+function M(e) {
     let { guildId: t, type: n, markAsDismissed: i, channelRowRef: o } = e,
-        a = (0, p.Z)(t, void 0);
+        a = (0, h.Z)(t, void 0);
     return (0, r.jsx)(k, {
         targetElementRef: o,
         asset: (0, r.jsx)("img", {
@@ -177,9 +177,9 @@ function L(e) {
             src: P.Z,
             className: l()(I.image, I.gameServerHostingImage),
         }),
-        title: S.intl.string(n === h.J.GAME_SERVER_HOSTING_AVAILABLE ? C.default.wXLChx : C.default["8z8RpY"]),
+        title: S.intl.string(n === p.J.GAME_SERVER_HOSTING_AVAILABLE ? C.default.wXLChx : C.default["8z8RpY"]),
         body:
-            n === h.J.GAME_SERVER_HOSTING_AVAILABLE
+            n === p.J.GAME_SERVER_HOSTING_AVAILABLE
                 ? S.intl.string(C.default.lZ6m7Q)
                 : S.intl.format(C.default["IQ1E+d"], { boostCount: a }),
         actions: [
@@ -192,7 +192,7 @@ function L(e) {
         markAsDismissed: i,
     });
 }
-function M(e) {
+function L(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e;
     return (0, r.jsx)(k, {
         size: "video",
@@ -228,7 +228,7 @@ function k(e) {
             size: d = "lg",
             asset: f,
         } = e,
-        h = (function (e, t) {
+        p = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -275,7 +275,7 @@ function k(e) {
                     });
             }
             return e;
-        })({}, h)),
+        })({}, p)),
         (n = n =
             {
                 graphic: {

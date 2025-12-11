@@ -15,8 +15,8 @@ var r = n(54381),
     h = n(981631),
     b = n(486324),
     A = n(485696),
-    j = n(388032),
-    y = n(916340);
+    y = n(388032),
+    j = n(916340);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -42,101 +42,106 @@ function C(e) {
     }
     return e;
 }
-function x(e) {
-    let { avatar: t, index: n, onSelectRecentAvatar: a, onDeleteRecentAvatar: l, avatarButtonRef: i } = e,
-        { id: s, storageHash: u, description: d = j.intl.string(j.t.lqaIxI) } = t,
-        { avatarSrc: f, eventHandlers: p } = (0, m.Z)({
-            avatarId: s,
-            storageHash: u,
+function v(e) {
+    let { avatar: t, index: n, onSelectRecentAvatar: l, onDeleteRecentAvatar: i, avatarButtonRef: s } = e,
+        { id: u, storageHash: d, description: f = y.intl.string(y.t.lqaIxI) } = t,
+        { avatarSrc: p, eventHandlers: g } = (0, m.Z)({
+            avatarId: u,
+            storageHash: d,
         }),
-        { onMouseEnter: g, onMouseLeave: h } = p,
-        b = null != d ? d : u.substring(0, 6).toUpperCase(),
-        A = j.intl.formatToPlainString(j.t.tmJ75y, {
+        { onMouseEnter: h, onMouseLeave: b } = g,
+        A = a.useRef(null),
+        C = null != f ? f : d.substring(0, 6).toUpperCase(),
+        v = y.intl.formatToPlainString(y.t.tmJ75y, {
             orderNumber: n + 1,
-            description: b,
+            description: C,
         }),
-        C = j.intl.formatToPlainString(j.t.pBzwhc, {
+        x = y.intl.formatToPlainString(y.t.pBzwhc, {
             orderNumber: n + 1,
-            description: b,
+            description: C,
         });
     return (0, r.jsxs)("div", {
-        className: y.recentAvatarButtonContainer,
+        className: j.recentAvatarButtonContainer,
         children: [
             (0, r.jsx)(c.P3F, {
-                onClick: () => a(t),
-                onMouseEnter: g,
-                onMouseLeave: h,
-                className: y.recentAvatarButton,
-                "aria-label": A,
-                innerRef: i,
+                onClick: () => l(t),
+                onMouseEnter: h,
+                onMouseLeave: b,
+                className: j.recentAvatarButton,
+                "aria-label": v,
+                innerRef: s,
                 children: (0, r.jsx)("img", {
-                    src: f,
-                    alt: d,
-                    className: y.recentAvatar,
+                    src: p,
+                    alt: f,
+                    className: j.recentAvatar,
                 }),
             }),
             (0, r.jsx)(o.u, {
-                text: j.intl.string(j.t.N86XcP),
-                children: (0, r.jsx)(c.P3F, {
-                    "aria-label": C,
-                    onClick: (e) => l(e, n, s, u, C),
-                    className: y.deleteButton,
-                    children: (0, r.jsx)(c.XHJ, {
-                        size: "xs",
-                        color: "currentColor",
-                        className: y.deleteIcon,
+                text: y.intl.string(y.t.N86XcP),
+                anchorRef: A,
+                asContainer: !0,
+                ariaHidden: !0,
+                children: (0, r.jsx)(c.tEY, {
+                    children: (0, r.jsx)("button", {
+                        type: "button",
+                        ref: A,
+                        "aria-label": x,
+                        onClick: (e) => i(e, n, u, d, x),
+                        className: j.deleteButton,
+                        children: (0, r.jsx)(c.XHJ, {
+                            size: "xs",
+                            color: "currentColor",
+                            className: j.deleteIcon,
+                        }),
                     }),
                 }),
             }),
         ],
     });
 }
-function v(e) {
-    let { onComplete: t } = e,
-        l = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
-        { avatars: i, loading: o, error: m } = (0, p.S)(),
-        v = a.useRef([]),
+function x(e) {
+    let { avatars: t, onComplete: l, setFetchError: o, className: p } = e,
+        m = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+        x = a.useRef([]),
         E = a.useRef(null),
-        O = a.useRef(i.length),
-        N = a.useRef(null),
-        [S, T] = a.useState(!1),
-        [w, P] = a.useState(!1),
-        [R, F] = a.useState(null),
-        _ = null != R ? R : null == m ? void 0 : m.message,
-        Z = i.length,
-        I = Math.max(A.iZ - Z, 0),
-        D = (0, c.vRw)(),
-        k = a.useCallback(
+        O = a.useRef(t.length),
+        S = a.useRef(null),
+        [N, T] = a.useState(!1),
+        [w, R] = a.useState(!1),
+        P = t.length,
+        _ = Math.max(A.iZ - P, 0),
+        F = (0, c.vRw)(),
+        Z = a.useCallback(
             async (e) => {
-                if (null == l || S) return;
-                T(!0), F(null);
-                let { id: a, storageHash: i, description: s } = e,
-                    o = (0, d.fD)({
-                        userId: l.id,
-                        avatarId: a,
-                        storageHash: i,
+                if (null == m || N) return;
+                T(!0), o(null);
+                let { id: t, storageHash: a, description: i } = e,
+                    s = (0, d.fD)({
+                        userId: m.id,
+                        avatarId: t,
+                        storageHash: a,
                         size: h.dGM,
                         canAnimate: !0,
                         allowWebp: !1,
                     });
                 try {
-                    let a = await fetch(o),
-                        l = await a.blob(),
-                        { filename: u, type: f } = (0, d.mh)(i, s);
+                    let t = await fetch(s),
+                        o = await t.blob(),
+                        { filename: u, type: f } = (0, d.mh)(a, i);
                     (0, c.ZDy)(
                         async () => {
-                            let { default: a } = await Promise.all([n.e("59732"), n.e("11866")]).then(
+                            let { default: t } = await Promise.all([n.e("59732"), n.e("11866")]).then(
                                 n.bind(n, 712451),
                             );
                             return (n) =>
                                 (0, r.jsx)(
-                                    a,
+                                    t,
                                     C(
                                         {
-                                            imageUri: o,
-                                            file: new File([l], u, { type: f }),
+                                            imageUri: s,
+                                            file: new File([o], u, { type: f }),
                                             originalAsset: e,
-                                            onCrop: t,
+                                            onCrop: l,
                                             uploadType: b.pC.AVATAR,
                                             showUpsellHeader: !0,
                                         },
@@ -144,28 +149,28 @@ function v(e) {
                                     ),
                                 );
                         },
-                        { contextKey: D },
+                        { contextKey: F },
                     );
                 } catch (e) {
-                    F(j.intl.string(j.t.fZRH9P));
+                    o(y.intl.string(y.t.fZRH9P));
                 } finally {
                     T(!1);
                 }
             },
-            [D, S, t, l],
+            [F, N, l, o, m],
         ),
-        M = a.useCallback(
-            (e, t, a, l, s) => {
-                let o = t + 1 < i.length ? t + 1 : t - 1;
-                (N.current = o >= 0 ? v.current[o] : E.current),
+        I = a.useCallback(
+            (e, a, l, i, s) => {
+                let o = a + 1 < t.length ? a + 1 : a - 1;
+                (S.current = o >= 0 ? x.current[o] : E.current),
                     e.shiftKey
-                        ? (0, f.B)(a)
-                        : (P(!0),
+                        ? (0, f.B)(l)
+                        : (R(!0),
                           (0, c.ZDy)(async () => {
                               let { default: e } = await n.e("70871").then(n.bind(n, 225525));
                               return (t) => {
                                   var { onClose: n } = t,
-                                      i = (function (e, t) {
+                                      a = (function (e, t) {
                                           if (null == e) return {};
                                           var n,
                                               r,
@@ -193,108 +198,110 @@ function v(e) {
                                       e,
                                       C(
                                           {
-                                              avatarId: a,
-                                              storageHash: l,
+                                              avatarId: l,
+                                              storageHash: i,
                                               avatarDescription: s,
-                                              onConfirmDelete: () => (0, f.B)(a),
+                                              onConfirmDelete: () => (0, f.B)(l),
                                               onClose: async () => {
                                                   await n(),
                                                       requestAnimationFrame(() => {
-                                                          P(!1);
+                                                          R(!1);
                                                       });
                                               },
                                           },
-                                          i,
+                                          a,
                                       ),
                                   );
                               };
                           }));
             },
-            [i],
+            [t],
         );
-    return (a.useEffect(() => {
-        (0, f.N)();
-    }, []),
-    a.useEffect(() => {
-        w ||
-            (i.length < O.current &&
-                null != N.current &&
-                requestAnimationFrame(() => {
-                    var e;
-                    null == (e = N.current) || e.focus();
-                }),
-            (O.current = i.length));
-    }, [i.length, w]),
-    o)
-        ? (0, r.jsx)(c.$jN, { className: y.spinner })
-        : (0, r.jsxs)("div", {
-              className: y.recentAvatarContainer,
-              children: [
-                  null != _ &&
-                      !o &&
-                      (0, r.jsx)(c.Text, {
-                          variant: "text-sm/normal",
-                          color: "text-feedback-critical",
-                          children: _,
-                      }),
-                  (0, r.jsxs)("div", {
-                      className: y.recentAvatarSlots,
-                      children: [
-                          Z > 0 &&
-                              (0, r.jsx)("ul", {
-                                  "aria-label": j.intl.string(j.t.lsU63N),
-                                  className: y.recentAvatarList,
-                                  children: i.map((e, t) =>
-                                      (0, r.jsx)(
-                                          "li",
-                                          {
-                                              children: (0, r.jsx)(x, {
-                                                  avatar: e,
-                                                  index: t,
-                                                  onSelectRecentAvatar: k,
-                                                  onDeleteRecentAvatar: M,
-                                                  avatarButtonRef: (e) => {
-                                                      v.current[t] = e;
-                                                  },
-                                              }),
-                                          },
-                                          e.id,
-                                      ),
-                                  ),
-                              }),
-                          I > 0 &&
-                              (0, r.jsxs)("div", {
-                                  className: y.emptyAvatarSlots,
-                                  tabIndex: -1,
-                                  ref: E,
-                                  children: [
-                                      (0, r.jsxs)(c.nn4, {
-                                          children: [
-                                              0 === Z &&
-                                                  (0, r.jsxs)(r.Fragment, {
-                                                      children: [j.intl.string(j.t.x0DsRS), " "],
-                                                  }),
-                                              j.intl.format(j.t["8W2HO3"], { numberOfEmptyAvatarSlots: I }),
-                                          ],
-                                      }),
-                                      [...Array(I)].map((e, t) =>
-                                          (0, r.jsx)(g.Z, { className: y.avatarPlaceholder }, t),
-                                      ),
-                                  ],
-                              }),
-                      ],
-                  }),
-              ],
-          });
+    return (
+        a.useEffect(() => {
+            w ||
+                (t.length < O.current &&
+                    null != S.current &&
+                    requestAnimationFrame(() => {
+                        var e;
+                        null == (e = S.current) || e.focus();
+                    }),
+                (O.current = t.length));
+        }, [t.length, w]),
+        (0, r.jsx)("div", {
+            className: i()(j.recentAvatarContainer, p),
+            children: (0, r.jsxs)("div", {
+                className: j.recentAvatarSlots,
+                children: [
+                    P > 0 &&
+                        (0, r.jsx)("ul", {
+                            "aria-label": y.intl.string(y.t.lsU63N),
+                            className: j.recentAvatarList,
+                            children: t.map((e, t) =>
+                                (0, r.jsx)(
+                                    "li",
+                                    {
+                                        children: (0, r.jsx)(v, {
+                                            avatar: e,
+                                            index: t,
+                                            onSelectRecentAvatar: Z,
+                                            onDeleteRecentAvatar: I,
+                                            avatarButtonRef: (e) => {
+                                                x.current[t] = e;
+                                            },
+                                        }),
+                                    },
+                                    e.id,
+                                ),
+                            ),
+                        }),
+                    _ > 0 &&
+                        (0, r.jsxs)("div", {
+                            className: j.emptyAvatarSlots,
+                            tabIndex: -1,
+                            ref: E,
+                            children: [
+                                (0, r.jsxs)(c.nn4, {
+                                    children: [
+                                        0 === P &&
+                                            (0, r.jsxs)(r.Fragment, {
+                                                children: [y.intl.string(y.t.x0DsRS), " "],
+                                            }),
+                                        y.intl.format(y.t["8W2HO3"], { numberOfEmptyAvatarSlots: _ }),
+                                    ],
+                                }),
+                                [...Array(_)].map((e, t) => (0, r.jsx)(g.Z, { className: j.avatarPlaceholder }, t)),
+                            ],
+                        }),
+                ],
+            }),
+        })
+    );
 }
 function E(e) {
-    let { className: t, onComplete: n } = e;
-    return (0, r.jsx)("div", {
-        className: i()(y.container, t),
-        children: (0, r.jsx)(c.gNt, {
-            label: j.intl.string(j.t.Bnq9zK),
-            description: j.intl.format(j.t["+CyJu3"], { recentAvatarsLimit: A.iZ }),
-            children: (0, r.jsx)(v, { onComplete: n }),
-        }),
-    });
+    let { className: t, onComplete: n } = e,
+        { avatars: l, loading: s, error: o } = (0, p.S)(),
+        [u, d] = a.useState(null),
+        g = null != u ? u : null == o ? void 0 : o.message;
+    return (
+        a.useEffect(() => {
+            (0, f.N)();
+        }, []),
+        (0, r.jsx)("div", {
+            className: i()(j.container, t),
+            children: (0, r.jsx)(c.gNt, {
+                label: y.intl.string(y.t.Bnq9zK),
+                description: y.intl.format(y.t["+CyJu3"], { recentAvatarsLimit: A.iZ }),
+                errorMessage: g,
+                children: s
+                    ? (0, r.jsx)(c.$jN, { className: j.spinner })
+                    : (0, r.jsx)(x, {
+                          avatars: l,
+                          onComplete: n,
+                          setFetchError: d,
+                          className: null != g ? j.hasError : void 0,
+                      }),
+            }),
+        })
+    );
 }

@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(762762),
     d = n(448222),
     f = n(973772),
-    h = n(535396),
-    p = n(810878),
+    p = n(535396),
+    h = n(5238),
     g = n(388032),
     m = n(362320);
 function b(e) {
@@ -18,7 +18,7 @@ function b(e) {
     let { guildId: l, powerup: b, compact: _, iconSize: y, size: O, grow: v, className: j, onError: x } = e,
         { onActivate: C, isLoading: E, error: S, onShowDeactivate: I } = (0, d.Z)(l, b),
         P = (0, f.ZP)(l, b),
-        N = P.type !== h.A3.INACTIVE,
+        N = P.type !== p.A3.INACTIVE,
         { disabled: Z, reason: w } = (0, u.Z)(l, b, N),
         T =
             null != w
@@ -27,11 +27,11 @@ function b(e) {
                       body: w,
                   }
                 : (function (e, t) {
-                      if (e.type === h.A3.LEVEL_ACTIVATED) {
+                      if (e.type === p.A3.LEVEL_ACTIVATED) {
                           var n, r;
                           return {
-                              title: g.intl.string(p.default["9oYuvb"]),
-                              body: g.intl.formatToPlainString(p.default.WRRYUT, {
+                              title: g.intl.string(h.default["9oYuvb"]),
+                              body: g.intl.formatToPlainString(h.default.WRRYUT, {
                                   perkName:
                                       null != (r = null == (n = e.sourcePowerup) ? void 0 : n.title)
                                           ? r
@@ -39,10 +39,10 @@ function b(e) {
                               }),
                           };
                       }
-                      return e.type === h.A3.POWERUP_ACTIVATED
+                      return e.type === p.A3.POWERUP_ACTIVATED
                           ? {
-                                title: g.intl.string(p.default.TZsu1U),
-                                body: g.intl.formatToPlainString(p.default["5HQUzD"], { boostCount: t.cost }),
+                                title: g.intl.string(h.default.TZsu1U),
+                                body: g.intl.formatToPlainString(h.default["5HQUzD"], { boostCount: t.cost }),
                             }
                           : null;
                   })(P, b);
@@ -55,7 +55,7 @@ function b(e) {
             title: null != (n = null == T ? void 0 : T.title) ? n : void 0,
             shouldShow: null != T,
             delay: 100,
-            "aria-label": null != w ? w : N ? g.intl.string(p.default.TZsu1U) : void 0,
+            "aria-label": null != w ? w : N ? g.intl.string(h.default.TZsu1U) : void 0,
             children: (0, r.jsx)("div", {
                 className: o()(
                     m.secondaryButton,
@@ -76,7 +76,7 @@ function b(e) {
                                   icon: a,
                               }
                             : {
-                                  text: g.intl.format(n ? p.default.uzQpQd : p.default.ad2Mfj, {
+                                  text: g.intl.format(n ? h.default.uzQpQd : h.default.ad2Mfj, {
                                       boostCount: t,
                                       dotHook: () =>
                                           (0, r.jsx)("span", {
@@ -126,7 +126,7 @@ function b(e) {
                         })(
                             {
                                 variant: N ? "secondary" : "primary",
-                                "aria-label": g.intl.string(N ? p.default.TZsu1U : p.default.gSxlHf),
+                                "aria-label": g.intl.string(N ? h.default.TZsu1U : h.default.gSxlHf),
                                 disabled: Z,
                                 onClick: (e) => {
                                     e.stopPropagation(), N ? I() : C();

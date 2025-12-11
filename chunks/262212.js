@@ -13,8 +13,8 @@ var i = n(120356),
     u = n(880419),
     d = n(827397),
     f = n(535396),
-    h = n(810878),
-    p = n(388032),
+    p = n(5238),
+    h = n(388032),
     g = n(292609);
 function m() {
     return (m =
@@ -62,7 +62,7 @@ function _(e) {
         children: (0, r.jsx)(o.zxk, {
             variant: "primary",
             fullWidth: !0,
-            text: m ? p.intl.string(h.default.g5Ds69) : p.intl.string(p.t["0Q61kF"]),
+            text: m ? h.intl.string(p.default.g5Ds69) : h.intl.string(h.t["0Q61kF"]),
             onClick: (e) => {
                 null == s || s(e), m ? null == c || c(e) : null == u || u();
             },
@@ -79,7 +79,7 @@ function y(e) {
             children: (0, r.jsx)(o.zxk, {
                 variant: "primary",
                 fullWidth: !0,
-                text: i.type === f.Us.LEVEL ? p.intl.string(p.t["0Q61kF"]) : p.intl.string(p.t.Xa11Ep),
+                text: i.type === f.Us.LEVEL ? h.intl.string(h.t["0Q61kF"]) : h.intl.string(h.t.Xa11Ep),
                 onClick: s,
             }),
         }),
