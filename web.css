@@ -45370,6 +45370,12 @@ body .b54a5b2f01b57ad8-headerAnimation {
     width: 48px
 }
 
+._257663d4c4e80a6b-rentalDescription {
+    color: var(--text-muted);
+    display: block;
+    margin-top: 4px
+}
+
 .b4496190fad054cc-stepBody {
     padding-top: var(--space-8)
 }
