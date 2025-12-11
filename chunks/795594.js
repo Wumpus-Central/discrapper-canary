@@ -1,6 +1,7 @@
 n.d(t, {
-    J: () => eh,
-    Z: () => eg,
+    JJ: () => eh,
+    Wg: () => eg,
+    ZP: () => eE,
 }),
     n(997841),
     n(388685),
@@ -36,8 +37,8 @@ var r = n(54381),
     N = n(870822),
     P = n(589414),
     R = n(600164),
-    D = n(240991),
-    w = n(713938),
+    w = n(240991),
+    D = n(713938),
     x = n(973616),
     L = n(881998),
     j = n(592125),
@@ -62,9 +63,9 @@ var r = n(54381),
     ee = n(981631),
     et = n(468788),
     en = n(388032),
-    er = n(392082),
-    ei = n(430864),
-    ea = n(197571);
+    er = n(380735),
+    ei = n(960324),
+    ea = n(478411);
 function eo(e, t, n) {
     return (
         t in e
@@ -320,7 +321,7 @@ let ef = (e) => {
             eo = () => {
                 let e = [];
                 for (let n of t)
-                    e.push(...(0, w.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRq));
+                    e.push(...(0, D.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRq));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(E.zF9, {
                         className: er.appDetailsSection,
@@ -411,7 +412,7 @@ let ef = (e) => {
                         className: ei.markup,
                         variant: "text-sm/normal",
                         color: "text-default",
-                        children: (0, D.parseBioReact)(a.description),
+                        children: (0, w.parseBioReact)(a.description),
                     });
             }, [a.description]),
             ec = () => {
@@ -648,17 +649,8 @@ let ef = (e) => {
             a = (0, m.e7)([V.default], () => V.default.locale),
             o = (0, m.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities()),
             s = (0, m.e7)([j.Z, M.Z], () => j.Z.getChannel(M.Z.getChannelId())),
-            c = null == s ? void 0 : s.getGuildId();
-        i.useEffect(() => {
-            b.Z.fetch();
-        }, []),
-            i.useEffect(
-                () => () => {
-                    eh.setState({ searchQuery: "" });
-                },
-                [],
-            );
-        let u = (e) => {
+            c = null == s ? void 0 : s.getGuildId(),
+            u = (e) => {
                 let { id: t, application: n } = e;
                 b.Z.delete(t);
                 let r = o.get(n.id);
@@ -740,24 +732,36 @@ let ef = (e) => {
                           });
         return e
             ? (0, r.jsx)(v.Z, {})
-            : (0, r.jsx)(X.Z, {
-                  title: en.intl.string(en.t["f6kk+r"]),
-                  children: (0, r.jsx)(E.y5t, {
-                      component: (0, r.jsxs)(E.Zbd, {
-                          type: E.Zbd.Types.PRIMARY,
-                          className: er.headingCard,
-                          children: [
-                              (0, r.jsx)(E.Heading, {
-                                  variant: "heading-md/medium",
-                                  children: en.intl.string(en.t.HU3RFw),
-                              }),
-                              (0, r.jsx)(E.Text, {
-                                  variant: "text-sm/normal",
-                                  children: en.intl.string(en.t.Nu5Yi0),
-                              }),
-                          ],
-                      }),
-                      children: O(),
+            : (0, r.jsx)(E.y5t, {
+                  component: (0, r.jsxs)(E.Zbd, {
+                      type: E.Zbd.Types.PRIMARY,
+                      className: er.headingCard,
+                      children: [
+                          (0, r.jsx)(E.Heading, {
+                              variant: "heading-md/medium",
+                              children: en.intl.string(en.t.HU3RFw),
+                          }),
+                          (0, r.jsx)(E.Text, {
+                              variant: "text-sm/normal",
+                              children: en.intl.string(en.t.Nu5Yi0),
+                          }),
+                      ],
                   }),
+                  children: O(),
               });
-    };
+    },
+    eE = () => (
+        i.useEffect(() => {
+            b.Z.fetch();
+        }, []),
+        i.useEffect(
+            () => () => {
+                eh.setState({ searchQuery: "" });
+            },
+            [],
+        ),
+        (0, r.jsx)(X.Z, {
+            title: en.intl.string(en.t["f6kk+r"]),
+            children: (0, r.jsx)(eg, {}),
+        })
+    );

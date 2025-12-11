@@ -25,7 +25,7 @@ function E(e) {
         N = (0, l.LD)(y, A),
         P = (0, l.PL)(C, A),
         R = (0, a.e7)([p.default], () => null != p.default.getNewestTokenForApplication(S)),
-        { isUserApp: D, isGuildApp: w } = i.useMemo(() => {
+        { isUserApp: w, isGuildApp: D } = i.useMemo(() => {
             var e, t, n, r;
             if (null == S)
                 return {
@@ -56,13 +56,13 @@ function E(e) {
             (0, f.openUserSettings)(u.n.AUTHORIZED_APPS_PANEL, { section: h.oAB.AUTHORIZED_APPS });
             let e = "";
             null != b ? (e = b.name) : null != E && (e = E.username),
-                "" !== e && d.J.setState({ searchQuery: e }),
+                "" !== e && d.JJ.setState({ searchQuery: e }),
                 null == v || v();
         }, [b, v, E]);
     if (O === h.IlC.POPOUT) return null;
     let j = [];
     return (
-        w &&
+        D &&
             T &&
             j.push(
                 (0, r.jsx)(
@@ -75,7 +75,7 @@ function E(e) {
                     "manage-server-integration",
                 ),
             ),
-        D &&
+        w &&
             R &&
             j.push(
                 (0, r.jsx)(

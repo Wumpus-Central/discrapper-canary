@@ -1,19 +1,36 @@
-n.d(e, { h: () => d });
-var i = n(54381),
-    l = n(657707),
+n.d(e, { h: () => E });
+var i = n(657707),
+    l = n(384275),
     s = n(509613),
     r = n(313789),
-    u = n(795594),
-    a = n(726985),
-    o = n(388032);
-let c = (0, s.wf)(r.n.AUTHORIZED_APPS_PANEL, {
-        useTitle: () => o.intl.string(o.t["f6kk+r"]),
-        StronglyDiscouragedCustomComponent: () => (0, i.jsx)(u.Z, {}),
+    u = n(526665),
+    a = n(795594),
+    o = n(134287),
+    c = n(726985),
+    d = n(388032);
+let T = (0, s.k4)(r.n.AUTHORIZED_APPS_CATEGORY, {
+        buildLayout: () => [o.Z],
+        initialize: () => (
+            l.Z.fetch(),
+            () => {
+                a.JJ.setState({ searchQuery: "" });
+            }
+        ),
+    }),
+    S = (0, s.wf)(r.n.AUTHORIZED_APPS_PANEL, {
+        usePredicate: () => !(0, u.gN)("LegacyAuthorizedAppsPanel"),
+        useTitle: () => d.intl.string(d.t["f6kk+r"]),
+        StronglyDiscouragedCustomComponent: a.ZP,
         buildLayout: () => [],
     }),
-    d = (0, s.m7)(r.n.AUTHORIZED_APPS_SIDEBAR_ITEM, {
-        useTitle: () => o.intl.string(o.t["f6kk+r"]),
-        getLegacySearchKey: () => a.s6.AUTHORIZED_APPS,
-        icon: l.jje,
-        buildLayout: () => [c],
+    g = (0, s.wf)(r.n.AUTHORIZED_APPS_PANEL, {
+        usePredicate: () => (0, u.gN)("AuthorizedAppsPanel"),
+        useTitle: () => d.intl.string(d.t["f6kk+r"]),
+        buildLayout: () => [T],
+    }),
+    E = (0, s.m7)(r.n.AUTHORIZED_APPS_SIDEBAR_ITEM, {
+        useTitle: () => d.intl.string(d.t["f6kk+r"]),
+        getLegacySearchKey: () => ((0, u.Gl)("AuthorizedAppsPanel") ? void 0 : c.s6.AUTHORIZED_APPS),
+        icon: i.jje,
+        buildLayout: () => ((0, u.Gl)("AuthorizedAppsPanel") ? [g] : [S]),
     });
