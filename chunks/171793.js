@@ -18,7 +18,7 @@ function h(t) {
             defaultText: C = u.intl.string(u.t.OrwKgi),
         } = t,
         [v, j] = l.useState(null),
-        [k, I] = l.useState(C),
+        [k, I] = l.useState(""),
         S = l.useCallback(
             (t) => {
                 j(t), null == h || h(t);
@@ -29,17 +29,18 @@ function h(t) {
             if (null != v) {
                 let t = c.Z.getChannelId();
                 null != t &&
-                    (await o.Z.sendMessage(
-                        t,
-                        {
-                            content: k,
-                            tts: !1,
-                            invalidEmojis: [],
-                            validNonShortcutEmojis: [],
-                        },
-                        !0,
-                        { location: d.dy.GIFTING },
-                    ),
+                    ("" !== k &&
+                        (await o.Z.sendMessage(
+                            t,
+                            {
+                                content: k,
+                                tts: !1,
+                                invalidEmojis: [],
+                                validNonShortcutEmojis: [],
+                            },
+                            !0,
+                            { location: d.dy.GIFTING },
+                        )),
                     await o.Z.sendMessage(
                         t,
                         {

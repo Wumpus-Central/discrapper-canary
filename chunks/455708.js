@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(149203),
     b = n(295907),
     y = n(388032),
-    O = n(577021);
+    O = n(277170);
 function v(e, t, n) {
     return (
         t in e
@@ -76,6 +76,12 @@ class A extends i.PureComponent {
         u.gK(),
             document.addEventListener("keydown", this.backToFrontPage),
             "" !== this.props.query && this.search(this.props.query, g.wI2.SEARCH);
+    }
+    componentDidUpdate(e) {
+        "" === e.query &&
+            "" !== this.props.query &&
+            null == this.state.resultType &&
+            this.search(this.props.query, g.wI2.SEARCH);
     }
     componentWillUnmount() {
         c.Z.wait(() => u.v2()), document.removeEventListener("keydown", this.backToFrontPage);
@@ -229,36 +235,40 @@ class A extends i.PureComponent {
     }
 }
 let N = i.forwardRef((e, t) => {
-    var n;
-    e.persistSearch || (0, f.ql)(null != (n = e.initialQuery) ? n : "");
+    i.useEffect(() => {
+        if (!e.persistSearch) {
+            var t;
+            (0, f.ql)(null != (t = e.initialQuery) ? t : "");
+        }
+    }, [e.persistSearch, e.initialQuery]);
     let {
-            query: a,
-            resultQuery: o,
-            resultItems: l,
-            suggestions: c,
+            query: n,
+            resultQuery: a,
+            resultItems: o,
+            suggestions: l,
         } = (0, s.cj)([p.Z], () => ({
             query: p.Z.getQuery(),
             resultQuery: p.Z.getResultQuery(),
             resultItems: p.Z.getResultItems(),
             suggestions: p.Z.getSuggestions(),
         })),
-        u = (0, f.Iu)((e) => e.searchQuery),
-        d = null != a && "" !== a ? a : u,
-        m = (0, _.HI)(),
-        h = i.useRef(null);
+        c = (0, f.Iu)((e) => e.searchQuery),
+        u = null != n && "" !== n ? n : c,
+        d = (0, _.HI)(),
+        m = i.useRef(null);
     return (0, r.jsx)(
         A,
         T(S({}, e), {
             forwardedRef: t,
-            query: d,
-            resultQuery: o,
-            resultItems: l,
-            suggestions: c,
-            favorites: m,
+            query: u,
+            resultQuery: a,
+            resultItems: o,
+            suggestions: l,
+            favorites: d,
             searchOffset: 0,
             searchTotalResults: p.Z.getResultItems().length,
             searchLimit: null,
-            searchBarRef: h,
+            searchBarRef: m,
             selectedGIF: e.selectedGIF,
         }),
     );
