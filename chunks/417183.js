@@ -70,6 +70,7 @@ class O extends s.PureComponent {
         ]).start(e);
     }
     componentWillEnter(e) {
+        var t;
         this.state.opacity.setValue(0),
             this.state.height.setValue(0),
             a.Z.parallel([
@@ -78,7 +79,7 @@ class O extends s.PureComponent {
                     duration: 200,
                 }),
                 a.Z.timing(this.state.height, {
-                    toValue: h.NV,
+                    toValue: null != (t = this.props.height) ? t : h.NV,
                     duration: 200,
                 }),
             ]).start(e);
@@ -120,9 +121,10 @@ class O extends s.PureComponent {
         });
     }
     constructor(...e) {
+        var t;
         super(...e),
             d(this, "state", {
-                height: new a.Z.Value(h.NV),
+                height: new a.Z.Value(null != (t = this.props.height) ? t : h.NV),
                 opacity: new a.Z.Value(1),
                 hovered: !1,
                 isContextMenuActive: !1,

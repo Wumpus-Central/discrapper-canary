@@ -20,6 +20,7 @@ function a(e) {
               renderRow: n,
               renderSection: a,
               footer: u,
+              sectionFilter: c,
           })
         : (0, r.jsx)(l.Z, {
               rows: t,

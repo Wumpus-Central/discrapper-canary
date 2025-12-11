@@ -1,131 +1,157 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => P });
 var r = n(54381),
     i = n(473749),
-    l = n(990547),
-    a = n(114101),
-    s = n(481060),
-    o = n(906732),
-    c = n(213609),
-    u = n(963249),
-    d = n(417183),
-    p = n(825682),
-    f = n(170245),
-    g = n(752048),
-    h = n(602733),
-    m = n(699516),
-    _ = n(626135),
-    b = n(909917),
-    E = n(795448),
-    O = n(474936),
-    v = n(981631),
-    y = n(388032),
-    I = n(934422);
-function C(e) {
+    l = n(120356),
+    a = n.n(l),
+    s = n(990547),
+    o = n(442837),
+    c = n(114101),
+    u = n(481060),
+    d = n(906732),
+    p = n(213609),
+    f = n(963249),
+    g = n(417183),
+    h = n(825682),
+    m = n(170245),
+    b = n(752048),
+    _ = n(602733),
+    E = n(699516),
+    O = n(626135),
+    v = n(909917),
+    y = n(795448),
+    I = n(441623),
+    C = n(474936),
+    S = n(981631),
+    T = n(617015),
+    N = n(388032),
+    j = n(756853);
+function P(e) {
     let {
             ref: t,
-            isFocused: C,
-            isActive: S,
-            status: T,
-            activities: N,
-            applicationStream: j,
-            isGameRelationship: P,
-            isMobile: x,
-            onOtherHover: A,
-            onClick: Z,
-            recipientUser: w,
-            giftIntentType: L,
+            isFocused: l,
+            isActive: P,
+            status: x,
+            activities: A,
+            applicationStream: Z,
+            isGameRelationship: w,
+            isMobile: L,
+            onOtherHover: R,
+            onClick: D,
+            recipientUser: M,
+            giftIntentType: k,
         } = e,
-        { analyticsLocations: R } = (0, o.ZP)(),
-        { Component: D } = (0, a.V)(),
-        M = (0, h.ao)({
+        { analyticsLocations: U } = (0, d.ZP)(),
+        { Component: G } = (0, c.V)(),
+        B = (0, o.e7)([I.ZP], () => I.ZP.getFriendAnniversaryYears(M.id)),
+        H = (0, _.ao)({
             location: "gift-intent-friend-row",
             isGift: !0,
-            giftRecipient: w,
+            giftRecipient: M,
         });
     i.useEffect(() => {
-        let e = g.Z.getUserAffinity(w.id);
-        (0, c.h)({
-            name: l.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
-            type: l.ImpressionTypes.VIEW,
+        let e = b.Z.getUserAffinity(M.id);
+        (0, p.h)({
+            name: s.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
+            type: s.ImpressionTypes.VIEW,
             properties: {
-                gift_intent_type: L,
+                gift_intent_type: k,
                 affinity: null == e ? void 0 : e.communicationProbability,
             },
         });
-    }, [w, L]);
-    let k = (e) => {
+    }, [M, k]);
+    let V = (e) => {
             e.stopPropagation();
-            let t = g.Z.getUserAffinity(w.id);
-            _.default.track(v.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
-                gift_intent_type: L,
+            let t = b.Z.getUserAffinity(M.id);
+            O.default.track(S.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
+                gift_intent_type: k,
                 affinity: null == t ? void 0 : t.communicationProbability,
             }),
-                M
-                    ? (0, b.Z)({
-                          giftRecipient: w,
-                          analyticsLocations: R,
-                          analyticsLocation: v.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+                H
+                    ? (0, v.Z)({
+                          giftRecipient: M,
+                          analyticsLocations: U,
+                          analyticsLocation: S.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
                           analyticsObject: {
-                              page: v.ZY5.FRIENDS_LIST,
-                              section: v.jXE.FRIENDS_LIST_FRIEND_ROW,
-                              object: v.qAy.BUTTON_CTA,
-                              objectType: v.AnalyticsObjectTypes.GIFT,
+                              page: S.ZY5.FRIENDS_LIST,
+                              section: S.jXE.FRIENDS_LIST_FRIEND_ROW,
+                              object: S.qAy.BUTTON_CTA,
+                              objectType: S.AnalyticsObjectTypes.GIFT,
                           },
-                          giftMessage: U(),
+                          giftMessage: F(),
                       })
-                    : (0, u.Z)({
+                    : (0, f.Z)({
                           isGift: !0,
                           initialPlanId: null,
-                          giftRecipient: w,
-                          analyticsLocations: R,
-                          analyticsLocation: v.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+                          giftRecipient: M,
+                          analyticsLocations: U,
+                          analyticsLocation: S.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
                           analyticsObject: {
-                              page: v.ZY5.FRIENDS_LIST,
-                              section: v.jXE.FRIENDS_LIST_FRIEND_ROW,
-                              object: v.qAy.BUTTON_CTA,
-                              objectType: v.AnalyticsObjectTypes.GIFT,
+                              page: S.ZY5.FRIENDS_LIST,
+                              section: S.jXE.FRIENDS_LIST_FRIEND_ROW,
+                              object: S.qAy.BUTTON_CTA,
+                              objectType: S.AnalyticsObjectTypes.GIFT,
                           },
-                          giftMessage: U(),
+                          giftMessage: F(),
                       });
         },
-        U = () => (L === O.hX.FRIEND_ANNIVERSARY ? y.intl.string(y.t.OrwKgi) : void 0);
-    return (0, r.jsx)(d.Z, {
+        F = () => (k === C.hX.FRIEND_ANNIVERSARY ? N.intl.string(N.t.OrwKgi) : void 0);
+    return (0, r.jsx)(g.Z, {
         ref: t,
-        isFocused: C,
-        isActive: S,
-        user: w,
-        onOtherHover: A,
-        onClick: Z,
+        isFocused: l,
+        isActive: P,
+        user: M,
+        onOtherHover: R,
+        onClick: D,
+        height: T.fJ,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: I.listItemContents,
+                className: a()(j.listItemContents, j.friendAnniversaryRow),
                 children: [
-                    (0, r.jsx)(f.Z, {
-                        user: w,
-                        status: T,
-                        isMobile: x,
-                        subText: (0, r.jsx)(p.Z, {
-                            hovered: e,
-                            activities: N,
-                            applicationStream: j,
-                            status: T,
-                            user: w,
-                            userIgnored: m.Z.isIgnored(w.id),
+                    (0, r.jsx)(m.Z, {
+                        className: j.userInfoCentered,
+                        user: M,
+                        status: x,
+                        isMobile: L,
+                        subText: (0, r.jsxs)(r.Fragment, {
+                            children: [
+                                (0, r.jsx)(h.Z, {
+                                    hovered: e,
+                                    activities: A,
+                                    applicationStream: Z,
+                                    status: x,
+                                    user: M,
+                                    userIgnored: E.Z.isIgnored(M.id),
+                                }),
+                                (0, r.jsxs)("div", {
+                                    className: j.anniversarySubtext,
+                                    children: [
+                                        (0, r.jsx)(u.iFz, {
+                                            size: "xxs",
+                                            color: "currentColor",
+                                        }),
+                                        (0, r.jsx)(u.Text, {
+                                            variant: "text-xs/normal",
+                                            color: "text-subtle",
+                                            children: N.intl.formatToPlainString(N.t.S3fdq7, { numberOfYears: B }),
+                                        }),
+                                    ],
+                                }),
+                            ],
                         }),
                         hovered: e,
-                        showAccountIdentifier: !P && !w.isProvisional,
+                        showAccountIdentifier: !w && !M.isProvisional,
                     }),
                     (0, r.jsxs)("div", {
-                        className: I.actions,
+                        className: j.actions,
                         children: [
-                            (0, r.jsx)(s.hU, {
+                            (0, r.jsx)(u.hU, {
                                 size: "sm",
                                 variant: "secondary",
-                                icon: D,
-                                "aria-label": y.intl.string(y.t.I61IsE),
+                                icon: G,
+                                "aria-label": N.intl.string(N.t.I61IsE),
                                 onClick: () => {
-                                    (0, E.PV)(w.id),
-                                        (0, s.ZDy)(async () => {
+                                    (0, y.PV)(M.id),
+                                        (0, u.ZDy)(async () => {
                                             let { default: e } = await n.e("5890").then(n.bind(n, 171793));
                                             return (t) =>
                                                 (0, r.jsx)(
@@ -162,12 +188,12 @@ function C(e) {
                                         });
                                 },
                             }),
-                            (0, r.jsx)(s.Button, {
+                            (0, r.jsx)(u.Button, {
                                 size: "sm",
-                                text: y.intl.string(y.t.PEjaCx),
-                                icon: s.OgN,
-                                "aria-label": y.intl.string(y.t.PEjaCx),
-                                onClick: k,
+                                text: N.intl.string(N.t.PEjaCx),
+                                icon: u.OgN,
+                                "aria-label": N.intl.string(N.t.PEjaCx),
+                                onClick: V,
                             }),
                         ],
                     }),
