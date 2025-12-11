@@ -12,17 +12,10 @@ var r = n(54381),
     p = n(502762),
     _ = n(179505),
     m = n(388032),
-    h = n(815743);
+    h = n(282082);
 let g = 4;
 function E(e) {
-    let {
-            wishlistItems: t = [],
-            profileOwner: n,
-            onClick: E,
-            wishlistId: b,
-            cardSize: y,
-            title: O = m.intl.string(m.t["7lZ31J"]),
-        } = e,
+    let { wishlistItems: t = [], profileOwner: n, onClick: E, wishlistId: b, cardSize: y, title: O } = e,
         { analyticsLocations: v } = (0, o.ZP)(),
         { trackUserProfileWishlistAction: S } = (0, d.KZ)(),
         I = (0, i.useCallback)(
@@ -125,7 +118,7 @@ function E(e) {
                     className: h.header,
                     children: (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
-                        children: O,
+                        children: null != O ? O : m.intl.string(m.t["7lZ31J"]),
                     }),
                 }),
                 (0, r.jsx)("div", {

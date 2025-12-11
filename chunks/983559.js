@@ -1,42 +1,41 @@
-n.d(t, { Z: () => H }), n(388685);
+n.d(t, { Z: () => G }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(467721),
     a = n(793030),
-    s = n(442837),
-    o = n(481060),
-    c = n(410030),
-    d = n(100527),
-    u = n(906732),
-    p = n(104505),
-    h = n(680295),
-    f = n(602733),
+    s = n(481060),
+    o = n(410030),
+    c = n(100527),
+    d = n(906732),
+    u = n(104505),
+    p = n(680295),
+    h = n(602733),
+    f = n(176879),
     g = n(785717),
     m = n(221292),
-    b = n(621853),
-    y = n(787309),
-    O = n(687158),
-    j = n(612600),
+    b = n(787309),
+    y = n(687158),
+    O = n(612600),
     x = n(510659),
-    v = n(892001),
-    C = n(899007),
-    I = n(867176),
-    _ = n(451834),
-    S = n(675893),
-    E = n(502762),
-    Z = n(952124),
-    P = n(544989),
-    T = n(481932),
-    N = n(664794),
-    R = n(4517),
-    w = n(277117),
-    A = n(52639),
-    D = n(874139),
-    L = n(228168),
-    M = n(671955),
-    k = n(388032),
-    U = n(960077);
-function G(e) {
+    j = n(892001),
+    v = n(899007),
+    C = n(867176),
+    I = n(451834),
+    _ = n(675893),
+    S = n(502762),
+    E = n(952124),
+    Z = n(544989),
+    P = n(481932),
+    T = n(664794),
+    N = n(4517),
+    R = n(277117),
+    w = n(52639),
+    A = n(874139),
+    D = n(228168),
+    L = n(671955),
+    M = n(388032),
+    k = n(960077);
+function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,155 +60,161 @@ function G(e) {
     }
     return e;
 }
-function H(e) {
+function G(e) {
     var t;
-    let { user: n, currentUser: m, channel: k } = e,
-        H = __OVERLAY__,
-        B = (0, O.ZP)(n.id),
-        V = (0, c.ZP)(),
-        z = i.useRef(Date.now()),
-        { analyticsLocations: W } = (0, u.ZP)(d.Z.USER_PROFILE_SIDEBAR),
-        Y = (0, g.ZB)({
+    let { user: n, currentUser: m, channel: M } = e,
+        G = __OVERLAY__,
+        F = (0, y.ZP)(n.id),
+        B = (0, o.ZP)(),
+        V = i.useRef(Date.now()),
+        { analyticsLocations: z } = (0, d.ZP)(c.Z.USER_PROFILE_SIDEBAR),
+        W = (0, g.ZB)({
             layout: "SIDEBAR",
             userId: n.id,
-            channelId: k.id,
+            channelId: M.id,
         }),
-        q = i.useRef(null),
-        { isHoveringOrFocusing: K, isHovering: Q } = (0, p.Z)(q),
-        X = (0, x.$m)(),
-        J = (0, o.q_F)({
-            opacity: +(null != X.interactionType),
+        Y = i.useRef(null),
+        { isHoveringOrFocusing: q, isHovering: K } = (0, u.Z)(Y),
+        Q = (0, x.$m)(),
+        X = (0, s.q_F)({
+            opacity: +(null != Q.interactionType),
             config: { duration: 150 },
         }),
-        $ = (e) => {
-            (0, v.openUserProfileModal)(
-                G(
+        J = (e) => {
+            (0, j.openUserProfileModal)(
+                U(
                     {
-                        sourceAnalyticsLocations: W,
+                        sourceAnalyticsLocations: z,
                         hideRestrictedProfile: !0,
                     },
-                    Y,
+                    W,
                     e,
                 ),
             );
         },
-        ee = (0, j.Z)({ location: "UserProfileSidebar" }),
-        et = (null == B ? void 0 : B.widgets) != null && B.widgets.length > 0,
-        en = (0, y.g)({ location: "UserProfileSidebar" }),
-        { defaultWishlistId: er } = (0, s.cj)([b.Z], () => ({ defaultWishlistId: b.Z.getFirstWishlistId(n.id) })),
-        { wishlist: ei } = (0, f.kZ)({
-            wishlistId: er,
-            userId: n.id,
+        $ = (0, O.Z)({ location: "UserProfileSidebar" }),
+        ee = (null == F ? void 0 : F.widgets) != null && F.widgets.length > 0,
+        et = (0, b.g)({ location: "UserProfileSidebar" }),
+        {
+            displayedWishlistItems: en,
+            defaultWishlistId: er,
+            title: ei,
+        } = (0, f.QX)({
+            user: n,
+            numItems: f.fA,
+            source: h.bd.DM_SIDE_PANEL,
+            location: "UserProfileSidebar",
         }),
-        el = en && null != ei && ei.items.length > 0;
-    return (0, r.jsx)(u.Gt, {
-        value: W,
+        el = et && null != en && en.length > 0;
+    return (0, r.jsx)(d.Gt, {
+        value: z,
         children: (0, r.jsx)(g.Mt, {
-            value: Y,
-            openedAt: z.current,
-            fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
-            fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
-            isLoaded: null == B ? void 0 : B.isLoaded,
+            value: W,
+            openedAt: V.current,
+            fetchStartedAt: null == F ? void 0 : F.fetchStartedAt,
+            fetchEndedAt: null == F ? void 0 : F.fetchEndedAt,
+            isLoaded: null == F ? void 0 : F.isLoaded,
             children: (0, r.jsx)(x.NJ, {
-                value: X,
-                children: (0, r.jsxs)(E.Z, {
-                    ref: q,
+                value: Q,
+                children: (0, r.jsxs)(S.Z, {
+                    ref: Y,
                     user: n,
-                    displayProfile: B,
-                    themeType: M.l.SIDEBAR,
-                    themeOverride: V,
+                    displayProfile: F,
+                    themeType: L.l.SIDEBAR,
+                    themeOverride: B,
                     children: [
-                        null != X.interactionType &&
+                        null != Q.interactionType &&
                             (0, r.jsx)(l.animated.div, {
-                                style: J,
-                                className: U.backdrop,
+                                style: X,
+                                className: k.backdrop,
                             }),
                         (0, r.jsxs)(a.u2D, {
                             children: [
-                                (0, r.jsxs)(P.Z, {
+                                (0, r.jsxs)(Z.Z, {
                                     children: [
-                                        (0, r.jsx)(T.Z, {
+                                        (0, r.jsx)(P.Z, {
                                             user: n,
-                                            themeType: M.l.SIDEBAR,
+                                            themeType: L.l.SIDEBAR,
                                         }),
-                                        n.bot ? (0, r.jsx)(Z.Z, { user: n }) : (0, r.jsx)(N.Cn, { user: n }),
+                                        n.bot ? (0, r.jsx)(E.Z, { user: n }) : (0, r.jsx)(T.Cn, { user: n }),
                                     ],
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: U.header,
+                                    className: k.header,
                                     children: [
-                                        (0, r.jsx)(I.Z, {
-                                            user: n,
-                                            displayProfile: B,
-                                            themeType: M.l.SIDEBAR,
-                                            animateOnHoverOrFocusOnly: !K,
-                                            className: U.banner,
-                                        }),
-                                        (0, r.jsx)(_.Z, {
-                                            userId: n.id,
-                                            className: U.toast,
-                                        }),
                                         (0, r.jsx)(C.Z, {
                                             user: n,
-                                            displayProfile: B,
-                                            channelId: k.id,
-                                            themeType: M.l.SIDEBAR,
-                                            onOpenProfile: H ? void 0 : $,
+                                            displayProfile: F,
+                                            themeType: L.l.SIDEBAR,
+                                            animateOnHoverOrFocusOnly: !q,
+                                            className: k.banner,
                                         }),
-                                        (0, r.jsx)(R.Z, {
+                                        (0, r.jsx)(I.Z, {
+                                            userId: n.id,
+                                            className: k.toast,
+                                        }),
+                                        (0, r.jsx)(v.Z, {
                                             user: n,
-                                            channelId: k.id,
-                                            themeType: M.l.SIDEBAR,
+                                            displayProfile: F,
+                                            channelId: M.id,
+                                            themeType: L.l.SIDEBAR,
+                                            onOpenProfile: G ? void 0 : J,
+                                        }),
+                                        (0, r.jsx)(N.Z, {
+                                            user: n,
+                                            channelId: M.id,
+                                            themeType: L.l.SIDEBAR,
                                             disableToolbar: n.bot,
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(w.Z, {
+                                (0, r.jsx)(R.Z, {
                                     user: n,
                                     currentUser: m,
-                                    displayProfile: B,
-                                    channel: k,
-                                    isHoveringOrFocusing: null == X.interactionType && K,
-                                    onOpenProfile: H ? void 0 : $,
+                                    displayProfile: F,
+                                    channel: M,
+                                    isHoveringOrFocusing: null == Q.interactionType && q,
+                                    onOpenProfile: G ? void 0 : J,
                                 }),
-                                ee &&
-                                    et &&
+                                $ &&
+                                    ee &&
                                     (0, r.jsx)("div", {
-                                        className: U.widgetPreviews,
-                                        children: (0, r.jsx)(S.Z, {
+                                        className: k.widgetPreviews,
+                                        children: (0, r.jsx)(_.Z, {
                                             user: n,
-                                            widgets: B.widgets,
-                                            onOpenUserProfileModal: $,
+                                            widgets: F.widgets,
+                                            onOpenUserProfileModal: J,
                                         }),
                                     }),
                                 el &&
                                     (0, r.jsx)("div", {
-                                        className: U.wishlistBreadcrumb,
-                                        children: (0, r.jsx)(D.Z, {
+                                        className: k.wishlistBreadcrumb,
+                                        children: (0, r.jsx)(A.Z, {
                                             profileOwner: n,
-                                            wishlistItems: ei.items,
+                                            wishlistItems: en,
                                             wishlistId: er,
+                                            title: ei,
                                             onClick: () => {
-                                                null == $ || $({ section: L.oh.WISHLIST });
+                                                null == J || J({ section: D.oh.WISHLIST });
                                             },
                                         }),
                                     }),
-                                (0, r.jsx)(A.Z, {
+                                (0, r.jsx)(w.Z, {
                                     user: n,
-                                    channelId: k.id,
+                                    channelId: M.id,
                                 }),
                             ],
                         }),
-                        !H &&
-                            (0, r.jsx)(F, {
-                                handleOpenProfile: $,
-                                analyticsLocations: W,
-                                context: Y,
+                        !G &&
+                            (0, r.jsx)(H, {
+                                handleOpenProfile: J,
+                                analyticsLocations: z,
+                                context: W,
                             }),
-                        (null == B ? void 0 : B.profileEffect) != null &&
-                            (0, r.jsx)(h.Z, {
-                                skuId: null == B || null == (t = B.profileEffect) ? void 0 : t.skuId,
-                                isHovering: Q,
+                        (null == F ? void 0 : F.profileEffect) != null &&
+                            (0, r.jsx)(p.Z, {
+                                skuId: null == F || null == (t = F.profileEffect) ? void 0 : t.skuId,
+                                isHovering: K,
                             }),
                     ],
                 }),
@@ -217,18 +222,18 @@ function H(e) {
         }),
     });
 }
-let F = (e) => {
+let H = (e) => {
     let { handleOpenProfile: t, analyticsLocations: n, context: l } = e,
-        [a, s] = i.useState("interactive-text-default");
+        [a, o] = i.useState("interactive-text-default");
     return (0, r.jsx)("div", {
-        className: U.footer,
-        children: (0, r.jsx)(o.P3F, {
-            onMouseEnter: () => s("interactive-text-hover"),
-            onMouseLeave: () => s("interactive-text-default"),
+        className: k.footer,
+        children: (0, r.jsx)(s.P3F, {
+            onMouseEnter: () => o("interactive-text-hover"),
+            onMouseLeave: () => o("interactive-text-default"),
             onClick: () => {
                 t(),
                     (0, m.pQ)(
-                        G(
+                        U(
                             {
                                 action: "PRESS_VIEW_PROFILE",
                                 analyticsLocations: n,
@@ -237,11 +242,11 @@ let F = (e) => {
                         ),
                     );
             },
-            className: U.footerButton,
-            children: (0, r.jsx)(o.Text, {
+            className: k.footerButton,
+            children: (0, r.jsx)(s.Text, {
                 color: a,
                 variant: "text-sm/normal",
-                children: k.intl.string(k.t["+Xp3hq"]),
+                children: M.intl.string(M.t["+Xp3hq"]),
             }),
         }),
     });

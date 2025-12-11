@@ -20,7 +20,10 @@ var r = n(473749),
 function m(e) {
     let { displayProfile: t, location: n } = e,
         u = (0, p.cZ)({ location: n }),
-        m = (0, i.e7)([c.Z], () => ((null == t ? void 0 : t.userId) != null ? c.Z.getMutualGuilds(t.userId) : [])),
+        m = (0, i.Wu)([c.Z], () => {
+            var e;
+            return (null == t ? void 0 : t.userId) == null ? [] : null != (e = c.Z.getMutualGuilds(t.userId)) ? e : [];
+        }),
         h = (0, i.Wu)([d.Z], () => ((null == t ? void 0 : t.userId) == null ? [] : d.Z.getActivities(t.userId))),
         g = (0, i.e7)([a.Z], () => ((null == t ? void 0 : t.userId) != null ? a.Z.getUserOutbox(t.userId) : null)),
         E = r.useMemo(() => null != m && m.some((e) => e.guild.id === _.ON), [m]),
