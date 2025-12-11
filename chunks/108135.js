@@ -1,20 +1,23 @@
-n.d(t, { d: () => o });
-var r = n(964268),
-    i = n(733579),
-    a = n(981631);
-let o = {
-    [i.G.ORB_CHECKOUT]: {
-        flowType: i.G.ORB_CHECKOUT,
+n.d(t, { d: () => s });
+var r = n(418144),
+    i = n(964268),
+    a = n(733579),
+    o = n(981631);
+let s = {
+    [a.G.ORB_CHECKOUT]: {
+        flowType: a.G.ORB_CHECKOUT,
         implemented: !0,
-        purchaseType: a.GZQ.ONE_TIME,
-        TENANT_CHECKOUT_FLOW_CONFIG: r.n,
+        purchaseType: o.GZQ.ONE_TIME,
+        TENANT_CHECKOUT_FLOW_CONFIG: i.n,
     },
-    [i.G.PREMIUM_CHECKOUT]: {
-        implemented: !1,
-        flowType: i.G.PREMIUM_CHECKOUT,
+    [a.G.COLLECTIBLES_CHECKOUT]: {
+        flowType: a.G.COLLECTIBLES_CHECKOUT,
+        implemented: !0,
+        purchaseType: o.GZQ.ONE_TIME,
+        TENANT_CHECKOUT_FLOW_CONFIG: r.NB,
     },
-    [i.G.COLLECTIBLES_CHECKOUT]: {
+    [a.G.PREMIUM_CHECKOUT]: {
         implemented: !1,
-        flowType: i.G.COLLECTIBLES_CHECKOUT,
+        flowType: a.G.PREMIUM_CHECKOUT,
     },
 };

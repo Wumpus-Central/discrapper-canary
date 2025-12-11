@@ -1,4 +1,14 @@
-n.d(t, { ZP: () => Z }), n(388685);
+n.d(t, {
+    $g: () => k,
+    Af: () => M,
+    Jb: () => x,
+    Kf: () => L,
+    ZP: () => Z,
+    dc: () => j,
+    sy: () => U,
+    tw: () => G,
+}),
+    n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -26,8 +36,8 @@ var r = n(54381),
     A = n(302800),
     N = n(215023),
     P = n(231338),
-    R = n(206051);
-function D(e, t, n) {
+    R = n(867219);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +50,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +61,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -168,7 +178,7 @@ function Z(e) {
             confettiCanvas: A,
             environment: N,
             setConfettiCanvas: R,
-            customConfettiVisible: D,
+            customConfettiVisible: w,
             setCustomConfettiVisible: Z,
             customConfettiDisplayOptions: B,
             hideConfirmStepConfetti: F,
@@ -203,7 +213,7 @@ function Z(e) {
                     renderStep: (e) =>
                         (0, r.jsx)(
                             S.x,
-                            w(
+                            D(
                                 {
                                     confettiCanvas: A,
                                     analyticsLocations: T,
@@ -224,7 +234,7 @@ function Z(e) {
                 environment: N,
                 setConfettiCanvas: R,
                 customConfettiDisplayOptions: B,
-                customConfettiVisible: D,
+                customConfettiVisible: w,
             }),
             (0, r.jsx)(h.PaymentContextProvider, {
                 loadId: s,
