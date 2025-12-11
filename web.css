@@ -31617,9 +31617,9 @@ div._3d3b08df7e9aa942-mobilePushContainer {
     border-radius: 3px;
     color: var(--white-500);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-bold);
-    line-height: 29px;
+    line-height: 1.8125rem;
     margin-top: 20px;
     padding: 10px 20px;
     text-transform: uppercase
@@ -49303,8 +49303,15 @@ html:not(.chat-input) .b1f01d03ecc7d736-inputInner {
     visibility: hidden
 }
 
-._23ba6c77dcde9924-container {
-    display: flex
+._079adf2c6804b7f3-container {
+    align-items: center;
+    align-self: stretch;
+    background: var(--background-feedback-warning);
+    border: 1px solid var(--icon-feedback-warning);
+    border-radius: var(--radius-sm);
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-8)
 }
 
 ._9d59731d47494e97-container {
