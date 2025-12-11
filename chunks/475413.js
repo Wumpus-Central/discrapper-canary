@@ -1,199 +1,69 @@
-n.d(t, { oY: () => y });
-var r = n(54381),
-    i = n(473749),
-    a = n(120356),
-    o = n.n(a),
-    s = n(693789),
-    l = n(481060),
-    c = n(785717),
-    u = n(471561);
-function d(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function f(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                d(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function p(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function m(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = h(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function h(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let g = {
-        primary: o()(u.themeColor, u.primary),
-        secondary: o()(u.themeColor, u.secondary),
-        none: "",
-    },
-    E = (e) => {
-        var {
-                action: t,
-                color: n = s.zx.Colors.PRIMARY,
-                themeColor: i = "primary",
-                className: a,
-                innerClassName: l,
-                onClick: d,
-                ref: p,
-            } = e,
-            h = m(e, ["action", "color", "themeColor", "className", "innerClassName", "onClick", "ref"]);
-        let { trackUserProfileAction: E } = (0, c.KZ)(),
-            b = (e) => {
-                null != t && E({ action: t }), null == d || d(e);
-            };
-        return (0, r.jsx)(
-            s.zx,
-            _(
-                f(
-                    {
-                        buttonRef: p,
-                        className: o()(u.button, a),
-                        innerClassName: o()(u.buttonInner, l),
-                        color: o()(n, g[i]),
-                        look: s.zx.Looks.FILLED,
-                        size: s.zx.Sizes.SMALL,
-                        onClick: b,
-                    },
-                    h,
-                ),
-                { "data-migration-pending": !0 },
-            ),
-        );
-    },
-    b = i.forwardRef(function (e, t) {
-        var {
-                icon: n,
-                tooltipText: i,
-                tooltipPosition: a,
-                tooltipAlign: c,
-                tooltipDelay: d,
-                tooltipClassName: p,
-                tooltipContainerClassName: h,
-                ariaLabel: g,
-                className: b,
-                innerClassName: y,
-                shouldShowTooltip: O = !0,
-            } = e,
-            v = m(e, [
-                "icon",
-                "tooltipText",
-                "tooltipPosition",
-                "tooltipAlign",
-                "tooltipDelay",
-                "tooltipClassName",
-                "tooltipContainerClassName",
-                "ariaLabel",
-                "className",
-                "innerClassName",
-                "shouldShowTooltip",
-            ]);
-        return (0, r.jsx)(l.jSM, {
-            text: i,
-            position: a,
-            align: c,
-            "aria-label": !1,
-            delay: d,
-            shouldShow: O,
-            className: h,
-            tooltipClassName: p,
-            children: (0, r.jsx)(
-                E,
-                _(
-                    f(
-                        {
-                            buttonRef: t,
-                            className: o()(u.icon, b),
-                            innerClassName: o()(u.icon, y),
-                            look: s.zx.Looks.FILLED,
-                            size: s.zx.Sizes.NONE,
-                            grow: !1,
-                            "aria-label": "string" == typeof i && null == g ? i : g,
-                        },
-                        v,
-                    ),
-                    {
-                        children: (0, r.jsx)(n, {
-                            size: "xs",
-                            color: "currentColor",
-                        }),
-                    },
-                ),
-            ),
-        });
-    }),
-    y = i.forwardRef(function (e, t) {
-        var { className: n, innerClassName: i } = e,
-            a = m(e, ["className", "innerClassName"]);
-        return (0, r.jsx)(
-            b,
-            f(
-                {
-                    ref: t,
-                    className: o()(u.banner, n),
-                    innerClassName: o()(u.banner, i),
-                    color: u.bannerColor,
-                    themeColor: "none",
-                },
-                a,
-            ),
-        );
+n.d(t, { Z: () => b }), n(953529);
+var r = n(54381);
+n(473749);
+var i = n(481060),
+    l = n(584825),
+    a = n(290348),
+    s = n(934826),
+    o = n(660196),
+    c = n(330181),
+    u = n(939225),
+    d = n(36246),
+    p = n(305342),
+    f = n(726324),
+    g = n(981631),
+    h = n(388032),
+    m = n(905442);
+let b = (e) => {
+    var t, n;
+    let { guild: b } = e,
+        _ = (0, l.GG)(b.id)[0];
+    (0, o.Z)({
+        guildId: b.id,
+        groupListingId: null == _ ? void 0 : _.id,
+        location: g.Sbl.ROLE_SUBSCRIPTIONS_TAB,
+        relevantSubscriptionListingIds: null == _ ? void 0 : _.subscription_listings_ids,
     });
+    let { activeSubscription: E } = (0, s.Z)(null == _ ? void 0 : _.id),
+        O = (0, l.YB)(b.id),
+        v = null == O ? void 0 : O.description,
+        { editStateIds: y } = a.B7(null != (t = null == _ ? void 0 : _.id) ? t : null, b.id);
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsxs)(f.Z, {
+                title: h.intl.format(h.t["rm+ojA"], { serverName: b.name }),
+                description: null != v ? v : null,
+                coverImageAsset: null != (n = null == O ? void 0 : O.cover_image_asset) ? n : null,
+                guild: b,
+                children: [
+                    null != _
+                        ? (0, r.jsx)(c.Z, {
+                              className: m.pendingPlanChangeNotice,
+                              groupListingId: _.id,
+                              subscription: E,
+                          })
+                        : null,
+                    (0, r.jsx)(u.Z, { subscription: E }),
+                ],
+            }),
+            (0, r.jsx)(i.y5t, {
+                children: (0, r.jsx)(d.Z, {
+                    guildId: b.id,
+                    children: y.map((e) => {
+                        var t;
+                        return (0, r.jsx)(
+                            p.Z,
+                            {
+                                guildId: b.id,
+                                groupListingId: null != (t = null == _ ? void 0 : _.id) ? t : "",
+                                listingId: e,
+                                analyticsLocation: g.Sbl.ROLE_SUBSCRIPTIONS_TAB,
+                            },
+                            e,
+                        );
+                    }),
+                }),
+            }),
+        ],
+    });
+};

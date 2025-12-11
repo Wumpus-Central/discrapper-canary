@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(906732),
     l = n(299206),
     c = n(785717),
-    u = n(475413),
+    u = n(732380),
     d = n(388032);
 function f(e, t, n) {
     return (
@@ -72,10 +72,10 @@ function _(e) {
               },
               children: (e) =>
                   (0, r.jsx)(
-                      u.oY,
+                      u.f6,
                       p(
                           {
-                              ref: f,
+                              buttonRef: f,
                               action: "PRESS_OPTIONS",
                               icon: a.xhG,
                               tooltipText: d.intl.string(d.t["UKOtz+"]),

@@ -140,16 +140,15 @@ function R(e) {
 function w(e) {
     let t = P(),
         n = t.findIndex((t) => t.type === e.type);
-    if (-1 === n) return [...t, e];
+    if (-1 === n) return [e, ...t];
     {
         let r = [...t];
         return (r[n] = e), r;
     }
 }
 function D(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = P();
-    null == r.find((t) => t.type === e) && (n ? c.Z.setPendingWidgets([t, ...r]) : c.Z.setPendingWidgets([...r, t]));
+    let n = P();
+    null == n.find((t) => t.type === e) && c.Z.setPendingWidgets([t, ...n]);
 }
 function x(e) {
     let t = P().filter((t) => t.type !== e);
@@ -201,7 +200,7 @@ function k(e, t) {
         comment: t.comment,
         tags: t.tags,
     };
-    l = null != u ? [...(null != (o = u.games) ? o : []), f] : [f];
+    l = null != u ? [f, ...(null != (o = u.games) ? o : [])] : [f];
     let p = w(new s.zy(E(h({}, null != u ? u : { type: e }), { games: l })));
     c.Z.setPendingWidgets(p), a.Z.getDetectableGamesSupplemental([t.applicationId]);
 }
