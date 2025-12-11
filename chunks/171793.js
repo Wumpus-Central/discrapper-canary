@@ -1,33 +1,34 @@
-n.d(i, { default: () => h }), n(388685);
-var a = n(54381),
-    l = n(473749),
-    e = n(793030),
-    s = n(481060),
-    o = n(904245),
-    r = n(455708),
-    c = n(944486),
-    d = n(959517),
-    u = n(388032);
-function h(t) {
+e.d(n, { default: () => g }), e(388685);
+var i = e(54381),
+    a = e(473749),
+    l = e(793030),
+    s = e(481060),
+    o = e(904245),
+    d = e(455708),
+    r = e(944486),
+    c = e(959517),
+    u = e(388032),
+    h = e(557142);
+function g(t) {
     let {
-            transitionState: i,
-            onClose: n,
-            onGIFSelected: h,
-            hideFavorites: g = !1,
-            modalTitle: p = u.intl.string(u.t["0VinIJ"]),
-            defaultText: C = u.intl.string(u.t.OrwKgi),
+            transitionState: n,
+            onClose: e,
+            onGIFSelected: g,
+            hideFavorites: p = !1,
+            modalTitle: C = u.intl.string(u.t["0VinIJ"]),
+            defaultText: m = u.intl.string(u.t.OrwKgi),
         } = t,
-        [v, j] = l.useState(null),
-        [k, I] = l.useState(""),
-        S = l.useCallback(
+        [v, j] = a.useState(null),
+        [k, I] = a.useState(""),
+        S = a.useCallback(
             (t) => {
-                j(t), null == h || h(t);
+                j(t), null == g || g(t);
             },
-            [h],
+            [g],
         ),
-        w = l.useCallback(async () => {
+        b = a.useCallback(async () => {
             if (null != v) {
-                let t = c.Z.getChannelId();
+                let t = r.Z.getChannelId();
                 null != t &&
                     ("" !== k &&
                         (await o.Z.sendMessage(
@@ -39,7 +40,7 @@ function h(t) {
                                 validNonShortcutEmojis: [],
                             },
                             !0,
-                            { location: d.dy.GIFTING },
+                            { location: c.dy.GIFTING },
                         )),
                     await o.Z.sendMessage(
                         t,
@@ -50,39 +51,40 @@ function h(t) {
                             validNonShortcutEmojis: [],
                         },
                         !0,
-                        { location: d.dy.GIFTING },
+                        { location: c.dy.GIFTING },
                     ),
-                    await n());
+                    await e());
             }
-        }, [v, k, n]);
-    return (0, a.jsx)(e.Modal, {
-        transitionState: i,
-        onClose: n,
-        title: p,
-        input: (0, a.jsx)(s.Kx8, {
+        }, [v, k, e]);
+    return (0, i.jsx)(l.Modal, {
+        transitionState: n,
+        onClose: e,
+        title: C,
+        input: (0, i.jsx)(s.Kx8, {
             value: k,
             onChange: (t) => I(t),
-            placeholder: C,
+            placeholder: m,
         }),
         actions: [
             {
                 variant: "secondary",
                 text: u.intl.string(u.t["ETE/oC"]),
-                onClick: n,
+                onClick: e,
             },
             {
                 variant: "primary",
                 text: u.intl.string(u.t.TXNS7S),
-                onClick: w,
+                onClick: b,
                 loading: !1,
                 disabled: null == v,
             },
         ],
-        children: (0, a.jsx)(r.Z, {
-            hideFavorites: g,
+        children: (0, i.jsx)(d.Z, {
+            hideFavorites: p,
             onSelectGIF: S,
             selectedGIF: v,
             initialQuery: u.intl.string(u.t.jrtJi4),
+            headerClassName: h.modalHeader,
         }),
     });
 }

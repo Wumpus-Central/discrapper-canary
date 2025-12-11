@@ -188,7 +188,7 @@ class A extends i.PureComponent {
             ref: t,
             children: [
                 (0, r.jsx)("div", {
-                    className: O.header,
+                    className: o()(O.header, this.props.headerClassName),
                     children: this.renderHeader(),
                 }),
                 (0, r.jsx)("div", {
