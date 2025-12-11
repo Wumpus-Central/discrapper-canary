@@ -1,51 +1,49 @@
-r.d(t, { ZP: () => k }), r(388685), r(953529), r(539854);
-var a = r(54381),
-    i = r(473749),
-    s = r(120356),
-    n = r.n(s),
-    l = r(512722),
-    o = r.n(l),
-    C = r(907331),
-    d = r(793030),
-    c = r(442837),
-    x = r(755721),
-    p = r(481060),
-    f = r(232567),
-    h = r(794433),
-    u = r(480466),
-    m = r(210887),
-    j = r(51144),
-    _ = r(281494),
-    g = r(276444),
-    L = r(955839),
-    y = r(514020),
-    v = r(529840),
-    S = r(388032),
-    b = r(107785),
-    w = r(724531),
-    N = r(99713),
-    Z = r(334202),
-    F = r(7234);
-function O(e) {
-    let { numOfSelectedUsers: t, anySelected: r } = e,
-        i = (0, y.Z)({
+a.d(t, { ZP: () => k }), a(388685), a(953529), a(539854);
+var r = a(54381),
+    i = a(473749),
+    s = a(120356),
+    n = a.n(s),
+    l = a(512722),
+    d = a.n(l),
+    o = a(907331),
+    C = a(793030),
+    c = a(442837),
+    x = a(481060),
+    p = a(232567),
+    f = a(480466),
+    h = a(210887),
+    u = a(51144),
+    j = a(281494),
+    m = a(276444),
+    _ = a(955839),
+    g = a(514020),
+    L = a(529840),
+    y = a(388032),
+    v = a(639236),
+    b = a(724531),
+    S = a(99713),
+    w = a(334202),
+    N = a(7234);
+function Z(e) {
+    let { numOfSelectedUsers: t, anySelected: a } = e,
+        i = (0, g.Z)({
             numNewSelected: t,
-            anySelected: r,
+            anySelected: a,
         });
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, a.jsxs)("div", {
-                className: b.title,
+            (0, r.jsxs)("div", {
+                className: v.title,
                 children: [
-                    (0, a.jsx)(M, { className: b.titleImage }),
-                    (0, a.jsx)(p.Heading, {
+                    (0, r.jsx)(R, { className: v.titleImage }),
+                    (0, r.jsx)(x.Heading, {
                         variant: "heading-xl/bold",
-                        children: S.intl.string(S.t.Lm2nFc),
+                        children: y.intl.string(y.t.Lm2nFc),
                     }),
                 ],
             }),
-            (0, a.jsx)(p.Text, {
-                className: b.description,
+            (0, r.jsx)(x.Text, {
+                className: v.description,
                 variant: "text-md/medium",
                 color: "text-default",
                 children: i,
@@ -53,132 +51,135 @@ function O(e) {
         ],
     });
 }
-function U() {
-    return (0, a.jsxs)(a.Fragment, {
+function F() {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, a.jsx)("div", {
-                className: b.title,
-                children: (0, a.jsx)(p.Heading, {
+            (0, r.jsx)("div", {
+                className: v.title,
+                children: (0, r.jsx)(x.Heading, {
                     variant: "heading-xl/bold",
-                    children: S.intl.string(S.t["PFp+aJ"]),
+                    children: y.intl.string(y.t["PFp+aJ"]),
                 }),
             }),
-            (0, a.jsx)(p.Text, {
-                className: b.description,
+            (0, r.jsx)(x.Text, {
+                className: v.description,
                 variant: "text-md/medium",
                 color: "text-default",
-                children: S.intl.string(S.t.eBIGB4),
+                children: y.intl.string(y.t.eBIGB4),
             }),
         ],
     });
 }
-function E() {
-    return (0, a.jsx)("div", {
-        className: b.erroredContent,
-        children: (0, a.jsx)(p.Eep, {
-            src: Z,
+function O() {
+    return (0, r.jsx)("div", {
+        className: v.erroredContent,
+        children: (0, r.jsx)(x.Eep, {
+            src: w,
             width: 225,
             height: 160,
         }),
     });
 }
-function R(e) {
+function E(e) {
     let { onClose: t } = e;
-    return (0, a.jsxs)("div", {
-        className: b.erroredContainer,
+    return (0, r.jsxs)("div", {
+        className: v.erroredContainer,
         children: [
-            (0, a.jsxs)("div", {
-                className: n()(b.erroredHeader, b.headerSeparator),
+            (0, r.jsxs)("div", {
+                className: n()(v.erroredHeader, v.headerSeparator),
                 children: [
-                    (0, a.jsx)("div", {
-                        className: b.title,
-                        children: (0, a.jsx)(p.Heading, {
+                    (0, r.jsx)("div", {
+                        className: v.title,
+                        children: (0, r.jsx)(x.Heading, {
                             variant: "heading-xl/bold",
-                            children: S.intl.string(S.t.a9HOKg),
+                            children: y.intl.string(y.t.a9HOKg),
                         }),
                     }),
-                    (0, a.jsx)(p.Text, {
-                        className: b.description,
+                    (0, r.jsx)(x.Text, {
+                        className: v.description,
                         variant: "text-md/medium",
                         color: "text-default",
-                        children: S.intl.string(S.t.JjjeZb),
+                        children: y.intl.string(y.t.JjjeZb),
                     }),
                 ],
             }),
-            (0, a.jsx)("div", {
-                className: b.erroredContent,
-                children: (0, a.jsx)(p.Eep, {
-                    src: N,
+            (0, r.jsx)("div", {
+                className: v.erroredContent,
+                children: (0, r.jsx)(x.Eep, {
+                    src: S,
                     width: 178,
                     height: 190,
                 }),
             }),
-            (0, a.jsx)("div", {
-                className: n()(b.footer, b.footerSeparator),
-                children: (0, a.jsx)(x.zx, {
-                    "data-migration-pending": !0,
-                    className: b.submit,
-                    onClick: () => t(),
-                    children: S.intl.string(S.t.wpSqAW),
+            (0, r.jsx)("div", {
+                className: n()(v.footer, v.footerSeparator),
+                children: (0, r.jsx)("div", {
+                    className: v.submit,
+                    children: (0, r.jsx)(C.zxk, {
+                        variant: "primary",
+                        fullWidth: !0,
+                        text: y.intl.string(y.t.wpSqAW),
+                        onClick: () => t(),
+                    }),
                 }),
             }),
         ],
     });
 }
-function B(e) {
+function U(e) {
     let { onShare: t } = e,
-        r = (0, c.e7)([g.Z], () => g.Z.getRecipientStatus()),
+        a = (0, c.e7)([m.Z], () => m.Z.getRecipientStatus()),
         [s, l] = i.useState([]),
-        [o, C] = i.useState(new Set()),
-        [d, h] = i.useState(!1);
+        [d, o] = i.useState(new Set()),
+        [f, h] = i.useState(!1);
     return (
         i.useEffect(() => {
             (async () => {
                 let e = [];
-                for (let [t, a] of r)
-                    if (a === _.Fe.PENDING) {
-                        let r = await (0, f.PR)(t);
-                        e.push(r);
+                for (let [t, r] of a)
+                    if (r === j.Fe.PENDING) {
+                        let a = await (0, p.PR)(t);
+                        e.push(a);
                     }
                 l(e);
             })();
-        }, [r]),
-        (0, a.jsxs)("div", {
-            className: b.remindContainer,
+        }, [a]),
+        (0, r.jsxs)("div", {
+            className: v.remindContainer,
             children: [
-                (0, a.jsxs)("div", {
-                    className: n()(b.remindHeader, b.headerSeparator),
+                (0, r.jsxs)("div", {
+                    className: n()(v.remindHeader, v.headerSeparator),
                     children: [
-                        (0, a.jsxs)("div", {
-                            className: b.title,
+                        (0, r.jsxs)("div", {
+                            className: v.title,
                             children: [
-                                (0, a.jsx)(M, { className: b.titleImage }),
-                                (0, a.jsx)(p.Heading, {
+                                (0, r.jsx)(R, { className: v.titleImage }),
+                                (0, r.jsx)(x.Heading, {
                                     variant: "heading-xl/bold",
-                                    children: S.intl.string(S.t.SY9tyI),
+                                    children: y.intl.string(y.t.SY9tyI),
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(p.Text, {
-                            className: b.description,
+                        (0, r.jsx)(x.Text, {
+                            className: v.description,
                             variant: "text-md/medium",
                             color: "text-default",
-                            children: S.intl.string(S.t.mPmPri),
+                            children: y.intl.string(y.t.mPmPri),
                         }),
                     ],
                 }),
-                (0, a.jsx)("div", {
-                    className: b.list,
+                (0, r.jsx)("div", {
+                    className: v.list,
                     children: s.map((e) =>
-                        (0, a.jsx)(
-                            v.Z,
+                        (0, r.jsx)(
+                            L.Z,
                             {
                                 user: e,
-                                checked: o.has(e),
+                                checked: d.has(e),
                                 onChange: (e, t) => {
-                                    C((r) => {
-                                        let a = new Set(r);
-                                        return t ? a.add(e) : a.delete(e), a;
+                                    o((a) => {
+                                        let r = new Set(a);
+                                        return t ? r.add(e) : r.delete(e), r;
                                     });
                                 },
                             },
@@ -186,131 +187,149 @@ function B(e) {
                         ),
                     ),
                 }),
-                (0, a.jsx)("div", {
-                    className: n()(b.footer, b.footerSeparator),
-                    children: (0, a.jsx)(x.zx, {
-                        "data-migration-pending": !0,
-                        className: b.submit,
-                        disabled: d,
-                        onClick: async () => {
-                            h(!0), await t([...o.values()]), h(!1);
-                        },
-                        children: S.intl.string(S.t.ItpQxk),
+                (0, r.jsx)("div", {
+                    className: n()(v.footer, v.footerSeparator),
+                    children: (0, r.jsx)("div", {
+                        className: v.submit,
+                        children: (0, r.jsx)(C.zxk, {
+                            text: y.intl.string(y.t.ItpQxk),
+                            fullWidth: !0,
+                            variant: "primary",
+                            disabled: f,
+                            onClick: async () => {
+                                h(!0), await t([...d.values()]), h(!1);
+                            },
+                        }),
                     }),
                 }),
             ],
         })
     );
 }
-function M(e) {
+function R(e) {
     let { className: t } = e;
-    return "light" === (0, c.e7)([m.Z], () => m.Z.theme)
-        ? (0, a.jsx)(p.Eep, {
+    return "light" === (0, c.e7)([h.Z], () => h.Z.theme)
+        ? (0, r.jsx)(x.Eep, {
               className: t,
-              src: w,
+              src: b,
               width: 55,
               height: 38,
           })
-        : (0, a.jsx)(p.Eep, {
+        : (0, r.jsx)(x.Eep, {
               className: t,
-              src: F,
+              src: N,
               width: 55,
               height: 38,
           });
 }
 let k = function (e) {
-    let { onClose: t, onShare: r } = e,
-        s = (0, c.e7)([g.Z], () => g.Z.getReferralsRemaining()),
-        [l, f] = i.useState(""),
-        m = (0, u.Z)(l, 400),
-        [_, y] = i.useState(new Map()),
-        [w, N] = i.useState(!1),
+    let { onClose: t, onShare: a } = e,
+        s = (0, c.e7)([m.Z], () => m.Z.getReferralsRemaining()),
+        [l, p] = i.useState(""),
+        h = (0, f.Z)(l, 400),
+        [j, g] = i.useState(new Map()),
+        [b, S] = i.useState(!1),
         {
-            eligibleUsers: Z,
-            fetchUsers: F,
-            hasError: M,
+            eligibleUsers: w,
+            fetchUsers: N,
+            hasError: R,
             isFetching: k,
-            resendUsers: A,
-        } = (0, L.q)({
-            searchQuery: m,
-            selectedUsers: _,
+            resendUsers: B,
+        } = (0, _.q)({
+            searchQuery: h,
+            selectedUsers: j,
         }),
-        P = i.useMemo(() => [..._.keys()].filter((e) => !A.has(e)), [_, A]);
-    o()(null != s, "Referrals remaining should not be null");
-    let I = (0, C.O)((e) => {
-        e && !k && F();
+        M = i.useMemo(() => [...j.keys()].filter((e) => !B.has(e)), [j, B]);
+    d()(null != s, "Referrals remaining should not be null");
+    let A = (0, o.O)((e) => {
+        e && !k && N();
     });
-    if (M) return (0, a.jsx)(R, { onClose: t });
-    if (0 === s) return (0, a.jsx)(B, { onShare: r });
-    let G = m.length > 0 && 0 === Z.length;
-    return (0, a.jsxs)("div", {
+    if (R) return (0, r.jsx)(E, { onClose: t });
+    if (0 === s) return (0, r.jsx)(U, { onShare: a });
+    let P = h.length > 0 && 0 === w.length;
+    return (0, r.jsxs)("div", {
         children: [
-            (0, a.jsxs)("div", {
-                className: n()(b.header, b.headerSeparator),
+            (0, r.jsxs)("div", {
+                className: n()(v.header, v.headerSeparator),
                 children: [
-                    G
-                        ? (0, a.jsx)(U, {})
-                        : (0, a.jsx)(O, {
-                              numOfSelectedUsers: P.length,
-                              anySelected: _.size > 0,
+                    P
+                        ? (0, r.jsx)(F, {})
+                        : (0, r.jsx)(Z, {
+                              numOfSelectedUsers: M.length,
+                              anySelected: j.size > 0,
                           }),
-                    (0, a.jsx)(h.Z, {
-                        className: b.searchbar,
-                        size: h.Z.Sizes.MEDIUM,
-                        tags: [..._.values()].map((e) => j.ZP.getName(e)),
-                        placeholder: S.intl.string(S.t.Kd5RaI),
-                        query: l,
-                        onRemoveTag: (e) => {
-                            y((t) => {
-                                let r = [...t.values()][e],
-                                    a = new Map(t);
-                                return a.delete(r.id), a;
-                            });
+                    (0, r.jsx)(x.uzC, {
+                        selectionMode: "multiple",
+                        value: Array.from(j.values()),
+                        options: w,
+                        formatOption: (e) => ({
+                            id: e.id,
+                            value: e,
+                            label: u.ZP.getName(e),
+                        }),
+                        onSelectionChange: (e) => {
+                            let t = Array.isArray(e) ? e : [e],
+                                a = new Map();
+                            t.forEach((e) => {
+                                null != e && a.set(e.id, e);
+                            }),
+                                g(a);
                         },
-                        onQueryChange: f,
+                        children: (0, r.jsx)("div", {
+                            className: v.searchbar,
+                            children: (0, r.jsx)(x.CtY, {
+                                placeholder: 0 === j.size ? y.intl.string(y.t.Kd5RaI) : "",
+                                onQueryChange: (e) => {
+                                    p(e.target.value);
+                                },
+                            }),
+                        }),
                     }),
                 ],
             }),
-            G
-                ? (0, a.jsx)(E, {})
-                : (0, a.jsxs)(d.w0Z, {
-                      className: b.list,
+            P
+                ? (0, r.jsx)(O, {})
+                : (0, r.jsxs)(C.w0Z, {
+                      className: v.list,
                       children: [
-                          Z.map((e) =>
-                              (0, a.jsx)(
-                                  v.Z,
+                          w.map((e) =>
+                              (0, r.jsx)(
+                                  L.Z,
                                   {
                                       disabled:
-                                          [..._.values()].filter((e) => !A.has(e.id)).length >= s &&
-                                          !_.has(e.id) &&
-                                          !A.has(e.id),
-                                      checked: _.has(e.id),
+                                          [...j.values()].filter((e) => !B.has(e.id)).length >= s &&
+                                          !j.has(e.id) &&
+                                          !B.has(e.id),
+                                      checked: j.has(e.id),
                                       user: e,
                                       onChange: (e, t) => {
-                                          y((r) => {
-                                              let a = new Map(r);
-                                              return t ? a.set(e.id, e) : a.delete(e.id), a;
+                                          g((a) => {
+                                              let r = new Map(a);
+                                              return t ? r.set(e.id, e) : r.delete(e.id), r;
                                           });
                                       },
                                   },
                                   e.id,
                               ),
                           ),
-                          k && (0, a.jsx)(p.$jN, {}),
-                          (0, a.jsx)("div", { ref: I }),
+                          k && (0, r.jsx)(x.$jN, {}),
+                          (0, r.jsx)("div", { ref: A }),
                       ],
                   }),
-            (0, a.jsx)("div", {
-                className: n()(b.footer, b.footerSeparator),
-                children: (0, a.jsx)(x.zx, {
-                    "data-migration-pending": !0,
-                    className: b.submit,
-                    disabled: (0 === _.size && !G) || w,
-                    onClick: async () => {
-                        if (G) return void t();
-                        N(!0), await r([..._.values()]), N(!1);
-                    },
-                    children: G ? S.intl.string(S.t.wpSqAW) : S.intl.string(S.t.ItpQxk),
+            (0, r.jsx)("div", {
+                className: n()(v.footer, v.footerSeparator),
+                children: (0, r.jsx)("div", {
+                    className: v.submit,
+                    children: (0, r.jsx)(C.zxk, {
+                        variant: "primary",
+                        fullWidth: !0,
+                        text: P ? y.intl.string(y.t.wpSqAW) : y.intl.string(y.t.ItpQxk),
+                        disabled: (0 === j.size && !P) || b,
+                        onClick: async () => {
+                            if (P) return void t();
+                            S(!0), await a([...j.values()]), S(!1);
+                        },
+                    }),
                 }),
             }),
         ],
