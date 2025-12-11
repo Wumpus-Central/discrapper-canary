@@ -1,4 +1,11 @@
-n.d(t, { Z: () => X }), n(388685), n(539854), n(457542);
+n.d(t, {
+    ZP: () => J,
+    mN: () => K,
+    vq: () => X,
+}),
+    n(388685),
+    n(539854),
+    n(457542);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -514,11 +521,13 @@ function W(e) {
     });
 }
 function K() {
-    return (0, r.jsx)(f.gNt, {
-        label: G.intl.string(G.t.ZeDrUf),
-        description: G.intl.format(G.t["oYc+Gz"], { privacyPolicyUrl: k.EYA.PRIVACY }),
-        children: (0, r.jsx)(q, {}),
-    });
+    return (0, l.e7)([A.Z], () => A.Z.hidePersonalInformation)
+        ? (0, r.jsx)(m.Z, {})
+        : (0, r.jsx)(f.gNt, {
+              label: G.intl.string(G.t.ZeDrUf),
+              description: G.intl.format(G.t["oYc+Gz"], { privacyPolicyUrl: k.EYA.PRIVACY }),
+              children: (0, r.jsx)(q, {}),
+          });
 }
 function z(e) {
     let t = E.Z.get(e);
@@ -611,7 +620,22 @@ function Q(e) {
         })
     );
 }
-let X = () => {
+function X() {
+    let e = (0, l.e7)([A.Z], () => A.Z.hidePersonalInformation),
+        t = (0, l.e7)([T.Z], () => T.Z.isFetching()),
+        n = (0, l.e7)([T.Z], () => T.Z.getAccounts()),
+        i = (0, g.ZP)(),
+        a = (0, l.e7)([R.default], () => R.default.locale);
+    return e
+        ? null
+        : (0, r.jsx)(Q, {
+              fetching: t,
+              accounts: n,
+              theme: i,
+              locale: a,
+          });
+}
+let J = () => {
     let e = (0, l.e7)([A.Z], () => A.Z.hidePersonalInformation),
         t = (0, l.e7)([T.Z], () => T.Z.isFetching()),
         n = (0, l.e7)([T.Z], () => T.Z.getAccounts()),
