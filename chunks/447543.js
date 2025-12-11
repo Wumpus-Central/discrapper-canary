@@ -34,8 +34,8 @@ var r = n(525654),
     N = n(924301),
     P = n(461014),
     R = n(82085),
-    D = n(264229),
-    w = n(652898),
+    w = n(264229),
+    D = n(652898),
     x = n(895886),
     L = n(143816),
     j = n(703656),
@@ -254,7 +254,7 @@ function eE(e, t, n) {
               type: "INVITE_RESOLVE",
               code: e,
           }),
-          (0, w.Z)(e, t, n).then((e) => {
+          (0, D.Z)(e, t, n).then((e) => {
               let { invite: t, code: n, banned: r } = e;
               return (
                   null != t
@@ -332,9 +332,12 @@ let eS = {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             n = arguments.length > 2 ? arguments[2] : void 0;
         try {
-            let { body: r } = await d.tn.post({
+            var r;
+            let i = es({}, t);
+            (null == (r = i.role_ids) ? void 0 : r.length) === 0 && delete i.role_ids;
+            let { body: a } = await d.tn.post({
                 url: ee.ANM.INSTANT_INVITES(e),
-                body: t,
+                body: i,
                 context: { location: n },
                 rejectWithError: !0,
             });
@@ -342,9 +345,9 @@ let eS = {
                 _.Z.dispatch({
                     type: "INSTANT_INVITE_CREATE_SUCCESS",
                     channelId: e,
-                    invite: r,
+                    invite: a,
                 }),
-                r
+                a
             );
         } catch (t) {
             throw (
@@ -507,7 +510,7 @@ let eS = {
     acceptInvite(e) {
         var t;
         let { inviteKey: r, context: i, callback: a, skipOnboarding: o } = e,
-            s = (0, D.fU)(r),
+            s = (0, w.fU)(r),
             l = s.baseCode,
             c = U.default.getSessionId(),
             u = ep(i, s),
@@ -620,7 +623,7 @@ let eS = {
     openApp(e, t, n, r, a) {
         var o, s;
         let d,
-            f = null != e ? (0, D.fU)(e) : null,
+            f = null != e ? (0, w.fU)(e) : null,
             p = null == f ? void 0 : f.baseCode;
         if (
             (_.Z.dispatch({
