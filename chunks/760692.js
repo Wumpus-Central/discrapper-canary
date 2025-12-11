@@ -1,4 +1,4 @@
-n.d(t, { K: () => y });
+n.d(t, { K: () => O });
 var r = n(522942),
     i = n(131016);
 function a(e, t, n) {
@@ -60,19 +60,21 @@ let c = "--custom-display-name-styles-gradient-start-color",
     p = "--custom-display-name-styles-light-2-color",
     _ = "--custom-display-name-styles-dark-1-color",
     m = "--custom-display-name-styles-dark-2-color",
-    h = "--custom-display-name-styles-wrap",
-    g = "--custom-display-name-styles-font-opacity";
-function E(e) {
-    let { main: t, light1: n, light2: r, dark1: a, dark2: o } = (0, i.hX)(e);
+    h = "--custom-display-name-styles-toon-stroke-color",
+    g = "--custom-display-name-styles-wrap",
+    E = "--custom-display-name-styles-font-opacity";
+function b(e) {
+    let { main: t, light1: n, light2: r, dark1: a, dark2: o, toonStroke: s } = (0, i.hX)(e);
     return {
         [d]: t,
         [f]: n,
         [p]: r,
         [_]: a,
         [m]: o,
+        [h]: s,
     };
 }
-function b(e) {
+function y(e) {
     return 0 === e.length
         ? {}
         : {
@@ -81,24 +83,24 @@ function b(e) {
               [d]: e[0],
           };
 }
-function y(e, t) {
+function O(e, t) {
     let { shouldWrap: n = !1, fontOpacity: i = 1 } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         a = {};
     switch (e) {
         case r.m.GRADIENT:
         case r.m.GLOW:
-            a = b(t);
+            a = y(t);
             break;
         case r.m.NEON:
         case r.m.POP:
         case r.m.TOON:
         case r.m.SOLID:
         default:
-            t.length > 0 && (a = E(t[0]));
+            t.length > 0 && (a = b(t[0]));
     }
     return l(o({}, a), {
-        [h]: n ? "wrap" : "nowrap",
-        [g]: i,
+        [g]: n ? "wrap" : "nowrap",
+        [E]: i,
     });
 }

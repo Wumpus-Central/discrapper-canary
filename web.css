@@ -21179,14 +21179,13 @@ screen and (max-width:485px) {
 }
 
 .dfb989b3f435152a-showEffect.dfb989b3f435152a-container .dfb989b3f435152a-toon {
-    --custom-toon-stroke-color: hsl(from var(--custom-display-name-styles-main-color) h s calc(max(12, l * 0.4)));
     --custom-toon-stroke-width: calc(1.6px + 0.04em);
     --custom-toon-margin: calc(var(--custom-toon-stroke-width)*-1);
     paint-order: stroke fill;
     position: relative;
     -webkit-text-stroke-width: var(--custom-toon-stroke-width);
-    -webkit-text-stroke-color: var(--custom-toon-stroke-color);
-    color: var(--custom-toon-stroke-color);
+    -webkit-text-stroke-color: var(--custom-display-name-styles-toon-stroke-color);
+    color: var(--custom-display-name-styles-toon-stroke-color);
     -webkit-padding-start: var(--custom-toon-stroke-width);
     padding-bottom: var(--custom-toon-stroke-width);
     padding-inline-start: var(--custom-toon-stroke-width);
