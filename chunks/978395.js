@@ -14,7 +14,7 @@ var r = n(54381),
     m = n(648052),
     h = n(537006),
     g = n(483424),
-    E = n(681837),
+    E = n(407699),
     b = n(91433),
     y = n(944043),
     O = n(678738),
@@ -31,7 +31,7 @@ var r = n(54381),
     D = n(981631),
     x = n(671955),
     L = n(388032),
-    j = n(116649);
+    j = n(155493);
 function M(e) {
     let {
             user: t,
@@ -61,6 +61,7 @@ function M(e) {
         fade: !0,
         className: j.body,
         children: [
+            (0, r.jsx)(E.Z, { userId: t.id }),
             (0, r.jsx)(T.Z, {
                 user: t,
                 guildId: null == k ? void 0 : k.id,
@@ -79,17 +80,13 @@ function M(e) {
                     themeType: x.l.POPOUT,
                     onClose: B,
                 }),
-                nicknameIcons: (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        (0, r.jsx)(E.Z, { userId: t.id }),
-                        !W &&
-                            (0, r.jsx)(C.Z, {
-                                userId: t.id,
-                                isVisible: U,
-                                onOpenProfile: G,
-                            }),
-                    ],
-                }),
+                nicknameIcons: W
+                    ? null
+                    : (0, r.jsx)(C.Z, {
+                          userId: t.id,
+                          isVisible: U,
+                          onOpenProfile: G,
+                      }),
             }),
             V === D.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(I.Z.Overlay, {

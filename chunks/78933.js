@@ -28,7 +28,7 @@ var a = n(54381),
     P = n(867176),
     w = n(537006),
     I = n(483424),
-    k = n(681837),
+    k = n(407699),
     R = n(638970),
     A = n(675893),
     D = n(502762),
@@ -207,6 +207,7 @@ function eo(e) {
                                 className: ei.body,
                                 style: { pointerEvents: eL ? "none" : void 0 },
                                 children: [
+                                    (0, a.jsx)(k.Z, { userId: t.id }),
                                     (0, a.jsx)(Z.Z, {
                                         user: t,
                                         className: ei.username,
@@ -220,14 +221,9 @@ function eo(e) {
                                             shouldOpenBadgeTooltip: null != ec ? (e) => e === ec : void 0,
                                             shouldGlowTenureBadge: eD.current,
                                         }),
-                                        nicknameIcons: (0, a.jsxs)(a.Fragment, {
-                                            children: [
-                                                (0, a.jsx)(k.Z, { userId: t.id }),
-                                                (0, a.jsx)(L.Z, {
-                                                    user: t,
-                                                    isVisible: ev,
-                                                }),
-                                            ],
+                                        nicknameIcons: (0, a.jsx)(L.Z, {
+                                            user: t,
+                                            isVisible: ev,
                                         }),
                                     }),
                                     (0, a.jsx)(U.Z, {

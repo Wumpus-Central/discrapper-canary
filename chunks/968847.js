@@ -4,6 +4,7 @@ e.exports = {
     headerButtons: "_24502a4069848acb-headerButtons",
     messageTextButton: "_24502a4069848acb-messageTextButton",
     messageIconButton: "_24502a4069848acb-messageIconButton",
+    fetchError: "_24502a4069848acb-fetchError",
     body: "_24502a4069848acb-body",
     username: "_24502a4069848acb-username",
 };

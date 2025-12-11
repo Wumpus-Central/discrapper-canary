@@ -16,7 +16,7 @@ var i = n(657707),
     m = n(648052),
     b = n(280885),
     y = n(483424),
-    O = n(681837),
+    O = n(407699),
     j = n(78806),
     x = n(91433),
     v = n(900927),
@@ -47,6 +47,7 @@ function w(e) {
     return (0, r.jsxs)("div", {
         className: R.body,
         children: [
+            (0, r.jsx)(O.Z, { userId: t.id }),
             (0, r.jsx)(E.Z, {
                 user: t,
                 guildId: A.guild_id,
@@ -57,17 +58,13 @@ function w(e) {
                     displayProfile: w,
                     themeType: T.l.SIDEBAR,
                 }),
-                nicknameIcons: (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        (0, r.jsx)(O.Z, { userId: t.id }),
-                        !H &&
-                            (0, r.jsx)(Z.Z, {
-                                userId: t.id,
-                                isVisible: D,
-                                onOpenProfile: L,
-                            }),
-                    ],
-                }),
+                nicknameIcons: H
+                    ? null
+                    : (0, r.jsx)(Z.Z, {
+                          userId: t.id,
+                          isVisible: D,
+                          onOpenProfile: L,
+                      }),
             }),
             M === P.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(S.Z.Overlay, {

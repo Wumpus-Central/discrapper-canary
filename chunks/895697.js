@@ -12,7 +12,7 @@ var i = n(442837),
     f = n(172351),
     p = n(648052),
     _ = n(483424),
-    m = n(681837),
+    m = n(407699),
     h = n(678738),
     g = n(638970),
     E = n(530),
@@ -49,6 +49,7 @@ function P(e) {
         fade: !0,
         className: N.body,
         children: [
+            (0, r.jsx)(m.Z, { userId: t.id }),
             (0, r.jsx)(E.Z, {
                 user: t,
                 guildId: null == R ? void 0 : R.id,
@@ -60,17 +61,13 @@ function P(e) {
                     themeType: T.l.POPOUT,
                     onClose: L,
                 }),
-                nicknameIcons: (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        (0, r.jsx)(m.Z, { userId: t.id }),
-                        !U &&
-                            (0, r.jsx)(O.Z, {
-                                userId: t.id,
-                                isVisible: w,
-                                onOpenProfile: D,
-                            }),
-                    ],
-                }),
+                nicknameIcons: U
+                    ? null
+                    : (0, r.jsx)(O.Z, {
+                          userId: t.id,
+                          isVisible: w,
+                          onOpenProfile: D,
+                      }),
             }),
             (0, r.jsx)(I.Z, {
                 user: t,
