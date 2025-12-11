@@ -24,6 +24,7 @@ function O(e) {
         case i.Jq.ROOT:
         case i.Jq.SECTION:
         case i.Jq.SIDEBAR_ITEM:
+        case i.Jq.TAB_ITEM:
             throw Error("".concat(t.type, " nodes should never be rendered directly"));
         case i.Jq.PANEL:
             return (0, r.jsx)(E.T, { node: t });
