@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(119837),
     l = n(802433),
     c = n(680295),
-    u = n(803580),
+    u = n(585258),
     d = n(241822);
 let f = (e) => {
     let {
@@ -55,7 +55,6 @@ let f = (e) => {
                               resetOnHover: !0,
                               isHovering: n,
                               useOpacityOnHover: !1,
-                              urlQueryString: "ProfileEffectShopPreview",
                               delayIntro: _,
                               shopPreview: !0,
                           }),

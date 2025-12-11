@@ -14,14 +14,14 @@ var r = n(54381),
     g = n(785717),
     m = n(221292),
     b = n(621853),
-    _ = n(787309),
-    y = n(687158),
-    O = n(612600),
-    j = n(510659),
-    x = n(892001),
-    v = n(899007),
-    C = n(867176),
-    I = n(451834),
+    y = n(787309),
+    O = n(687158),
+    j = n(612600),
+    x = n(510659),
+    v = n(892001),
+    C = n(899007),
+    I = n(867176),
+    _ = n(451834),
     S = n(675893),
     E = n(502762),
     Z = n(952124),
@@ -35,7 +35,7 @@ var r = n(54381),
     L = n(228168),
     M = n(671955),
     k = n(388032),
-    U = n(231688);
+    U = n(960077);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,7 +65,7 @@ function H(e) {
     var t;
     let { user: n, currentUser: m, channel: k } = e,
         H = __OVERLAY__,
-        B = (0, y.ZP)(n.id),
+        B = (0, O.ZP)(n.id),
         V = (0, c.ZP)(),
         z = i.useRef(Date.now()),
         { analyticsLocations: W } = (0, u.ZP)(d.Z.USER_PROFILE_SIDEBAR),
@@ -76,13 +76,13 @@ function H(e) {
         }),
         q = i.useRef(null),
         { isHoveringOrFocusing: K, isHovering: Q } = (0, p.Z)(q),
-        X = (0, j.$m)(),
+        X = (0, x.$m)(),
         J = (0, o.q_F)({
             opacity: +(null != X.interactionType),
             config: { duration: 150 },
         }),
         $ = (e) => {
-            (0, x.openUserProfileModal)(
+            (0, v.openUserProfileModal)(
                 G(
                     {
                         sourceAnalyticsLocations: W,
@@ -93,9 +93,9 @@ function H(e) {
                 ),
             );
         },
-        ee = (0, O.Z)({ location: "UserProfileSidebar" }),
+        ee = (0, j.Z)({ location: "UserProfileSidebar" }),
         et = (null == B ? void 0 : B.widgets) != null && B.widgets.length > 0,
-        en = (0, _.g)({ location: "UserProfileSidebar" }),
+        en = (0, y.g)({ location: "UserProfileSidebar" }),
         { defaultWishlistId: er } = (0, s.cj)([b.Z], () => ({ defaultWishlistId: b.Z.getFirstWishlistId(n.id) })),
         { wishlist: ei } = (0, f.kZ)({
             wishlistId: er,
@@ -110,7 +110,7 @@ function H(e) {
             fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
             fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
             isLoaded: null == B ? void 0 : B.isLoaded,
-            children: (0, r.jsx)(j.NJ, {
+            children: (0, r.jsx)(x.NJ, {
                 value: X,
                 children: (0, r.jsxs)(E.Z, {
                     ref: q,
@@ -138,18 +138,18 @@ function H(e) {
                                 (0, r.jsxs)("div", {
                                     className: U.header,
                                     children: [
-                                        (0, r.jsx)(C.Z, {
+                                        (0, r.jsx)(I.Z, {
                                             user: n,
                                             displayProfile: B,
                                             themeType: M.l.SIDEBAR,
                                             animateOnHoverOrFocusOnly: !K,
                                             className: U.banner,
                                         }),
-                                        (0, r.jsx)(I.Z, {
+                                        (0, r.jsx)(_.Z, {
                                             userId: n.id,
                                             className: U.toast,
                                         }),
-                                        (0, r.jsx)(v.Z, {
+                                        (0, r.jsx)(C.Z, {
                                             user: n,
                                             displayProfile: B,
                                             channelId: k.id,
@@ -210,7 +210,6 @@ function H(e) {
                             (0, r.jsx)(h.Z, {
                                 skuId: null == B || null == (t = B.profileEffect) ? void 0 : t.skuId,
                                 isHovering: Q,
-                                urlQueryString: "dmView",
                             }),
                     ],
                 }),
