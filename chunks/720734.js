@@ -183,29 +183,30 @@ function tf(e) {
             ref: t,
             speaking: n,
             latched: i,
-            streaming: s,
-            currentUser: o,
-            status: c,
-            handleClick: d,
-            handleMouseLeave: u,
-            renderNameTag: m,
-            nameplate: p,
-            selectedGuildId: h,
-            transitionAccountPanel: f,
-            avatarDecoration: b,
-            "data-jump-section": v,
+            voiceDb: s = -1 / 0,
+            streaming: o,
+            currentUser: c,
+            status: d,
+            handleClick: u,
+            handleMouseLeave: m,
+            renderNameTag: p,
+            nameplate: h,
+            selectedGuildId: f,
+            transitionAccountPanel: b,
+            avatarDecoration: v,
+            "data-jump-section": j,
         } = e,
-        j = r.useRef(null),
-        C = null != t ? t : j,
-        _ = (0, eY.NZ)({
-            avatarDecoration: b,
+        C = r.useRef(null),
+        _ = null != t ? t : C,
+        S = (0, eY.NZ)({
+            avatarDecoration: v,
             size: (0, I.y9)(x.EFr.SIZE_32),
         }),
-        S = (0, q.Z)(),
+        E = (0, q.Z)(),
         {
-            updateOpenPopoutRef: E,
-            highlightBadge: O,
-            setHighlightBadge: T,
+            updateOpenPopoutRef: O,
+            highlightBadge: T,
+            setHighlightBadge: N,
         } = (function () {
             let e = r.useRef(null),
                 t = r.useCallback((t) => {
@@ -237,34 +238,34 @@ function tf(e) {
                 }
             );
         })(),
-        N = (0, er.A)(p);
-    if (null == o) return null;
-    let P = f && h !== tn.I_8 && h !== tn.ME && null != h ? h : void 0;
+        P = (0, er.A)(h);
+    if (null == c) return null;
+    let w = b && f !== tn.I_8 && f !== tn.ME && null != f ? f : void 0;
     return (0, a.jsx)(g.Z, {
         object: tn.qAy.AVATAR,
         children: (0, a.jsx)(eb.Z, {
-            user: o,
-            targetElementRef: C,
+            user: c,
+            targetElementRef: _,
             clickTrap: !0,
             preload: () =>
-                (0, ex.Z)(o.id, o.getAvatarURL(P, eb.I), {
+                (0, ex.Z)(c.id, c.getAvatarURL(w, eb.I), {
                     type: "account_popout",
                     withMutualGuilds: !1,
                     withMutualFriends: !1,
-                    guildId: P,
+                    guildId: w,
                 }),
             renderPopout: (e, t) => {
                 let { closePopout: n, setPopoutRef: r } = e;
                 return (0, a.jsx)(en.Z, {
-                    currentUser: o,
-                    highlightBadge: O,
+                    currentUser: c,
+                    highlightBadge: T,
                     openedAt: t,
                     onClose: () => {
                         null == n || n();
                     },
                     setPopoutRef: r,
-                    guildId: P,
-                    guildProfileEnabled: f,
+                    guildId: w,
+                    guildProfileEnabled: b,
                 });
             },
             position: "top",
@@ -274,42 +275,43 @@ function tf(e) {
             fixed: !0,
             ignoreModalClicks: !0,
             onRequestClose: () => {
-                u(), T(void 0);
+                m(), N(void 0);
             },
             children: (e) => (
-                E(e),
+                O(e),
                 (0, a.jsxs)(
                     x.P3F,
                     td(
                         tc(
                             {
-                                innerRef: C,
-                                style: N,
+                                innerRef: _,
+                                style: P,
                             },
                             e,
                         ),
                         {
                             onClick: (t) => {
                                 var n;
-                                null == (n = e.onClick) || n.call(e, t), null == d || d(t);
+                                null == (n = e.onClick) || n.call(e, t), null == u || u(t);
                             },
                             "aria-label": tl.intl.string(tl.t["3Uj+2p"]),
-                            "data-jump-section": v,
-                            className: l()(ts.avatarWrapper, { [ts.plated]: null != p }),
+                            "data-jump-section": j,
+                            className: l()(ts.avatarWrapper, { [ts.plated]: null != h }),
                             children: [
                                 (0, a.jsx)(tu, {
                                     size: x.EFr["SIZE_".concat(32)],
-                                    src: o.getAvatarURL(f ? h : void 0, 28, !1),
-                                    avatarDecoration: _,
-                                    "aria-label": o.username,
-                                    status: s ? tn.Skl.STREAMING : c,
+                                    src: c.getAvatarURL(b ? f : void 0, 28, !1),
+                                    avatarDecoration: S,
+                                    "aria-label": c.username,
+                                    status: o ? tn.Skl.STREAMING : d,
                                     isSpeaking: n,
                                     isLatched: i,
+                                    voiceDb: s,
                                     className: ts.avatar,
                                 }),
                                 (0, a.jsx)("div", {
                                     className: l()(ts.nameTag, { [ts.canCopy]: eX.wS }),
-                                    children: m(S),
+                                    children: p(E),
                                 }),
                             ],
                         },
@@ -874,15 +876,16 @@ function tv() {
         c = (0, d.e7)([eZ.Z], () => eZ.Z.getAnyStreamForUser(n)),
         m = (0, v.Z)({ userId: n }),
         p = (0, d.e7)([eW.Z], () => eW.Z.isCurrentUserPTTLatched()),
-        h = e8.ZP.useUserTag(t, { decoration: "never" }),
-        f = (0, d.e7)([ez.Z], () => ez.Z.hidePersonalInformation),
-        b = (0, d.e7)([eG.Z, eM.Z], () => {
+        h = (0, d.e7)([eW.Z], () => eW.Z.getVoiceVolume(n)),
+        f = e8.ZP.useUserTag(t, { decoration: "never" }),
+        b = (0, d.e7)([ez.Z], () => ez.Z.hidePersonalInformation),
+        g = (0, d.e7)([eG.Z, eM.Z], () => {
             let e = eG.Z.getChannelId();
             return null != e ? eM.Z.getChannel(e) : null;
         }),
-        { mute: g, selfMute: j, suppress: y } = (0, e_.Z)(b),
-        { selfDeaf: _, deaf: S } = (0, eC.Z)(b),
-        E = (0, d.e7)([k.C], () => {
+        { mute: j, selfMute: y, suppress: _ } = (0, e_.Z)(g),
+        { selfDeaf: S, deaf: E } = (0, eC.Z)(g),
+        O = (0, d.e7)([k.C], () => {
             var e;
             return (0, R.fD)()
                 ? null == (e = k.C.getCurrentBuildOverride().overrides)
@@ -890,32 +893,32 @@ function tv() {
                     : e.discord_web
                 : null;
         }),
-        O = (0, d.e7)([eK.Z], () => eK.Z.getPremiumTypeSubscription()),
-        I = (0, d.e7)([eF.Z], () => eF.Z.getSpeakingWhileMuted()),
-        D = (0, d.e7)([A.Z], () => A.Z.isFullscreenInContext()),
-        Z = (0, d.e7)([eB.Z], () => eB.Z.hasLayers()),
-        L = (0, x.s9z)(x.JQI) || Z || e3.s.isDisallowPopupsSet() || D,
-        M = (0, es.b)(),
-        U = (0, d.e7)([X.default], () => null != X.default.getAwaitingRemoteSessionInfo()),
-        B = (0, d.e7)([eV.Z], () => eV.Z.getGuildId()),
-        F = null == t ? void 0 : t.avatarDecoration,
-        G = (0, P.R)(t, null != B ? B : void 0),
-        V = (0, w.Z)(r ? G : F),
-        W = e4.ZP.useName(null != B ? B : void 0, null, t),
-        q = null != (e = e8.ZP.useName(t)) ? e : "",
-        { voiceActivityStatusEnabled: K } = (0, C.U)({ location: "Account" }),
-        [Q, Y] = (0, $.G)(null != B ? B : null),
-        [J, ee] = (0, H.b)(),
-        et = z.JH.useExperiment({ location: "Account" }).enabled,
-        en = (0, ec.c)(t, "Account"),
-        er = eu.H.useConfig({ location: "Account" }).enabled,
-        { analyticsLocations: ei } = (0, N.ZP)(T.Z.ACCOUNT),
-        el = (0, ea.K)({
+        I = (0, d.e7)([eK.Z], () => eK.Z.getPremiumTypeSubscription()),
+        D = (0, d.e7)([eF.Z], () => eF.Z.getSpeakingWhileMuted()),
+        Z = (0, d.e7)([A.Z], () => A.Z.isFullscreenInContext()),
+        L = (0, d.e7)([eB.Z], () => eB.Z.hasLayers()),
+        M = (0, x.s9z)(x.JQI) || L || e3.s.isDisallowPopupsSet() || Z,
+        U = (0, es.b)(),
+        B = (0, d.e7)([X.default], () => null != X.default.getAwaitingRemoteSessionInfo()),
+        F = (0, d.e7)([eV.Z], () => eV.Z.getGuildId()),
+        G = null == t ? void 0 : t.avatarDecoration,
+        V = (0, P.R)(t, null != F ? F : void 0),
+        W = (0, w.Z)(r ? V : G),
+        q = e4.ZP.useName(null != F ? F : void 0, null, t),
+        K = null != (e = e8.ZP.useName(t)) ? e : "",
+        { voiceActivityStatusEnabled: Q } = (0, C.U)({ location: "Account" }),
+        [Y, J] = (0, $.G)(null != F ? F : null),
+        [ee, et] = (0, H.b)(),
+        en = z.JH.useExperiment({ location: "Account" }).enabled,
+        er = (0, ec.c)(t, "Account"),
+        ei = eu.H.useConfig({ location: "Account" }).enabled,
+        { analyticsLocations: el } = (0, N.ZP)(T.Z.ACCOUNT),
+        eo = (0, ea.K)({
             user: t,
-            guildId: r && null != B ? B : void 0,
+            guildId: r && null != F ? F : void 0,
         }),
-        { isQuestBarEmpty: eo, hasLoadedQuestBar: ed } = (0, ep.Ws)({ location: tr.dr.CONFLICT_CHECKS }),
-        em = (0, d.e7)([eh.Z, eq.default, eU.Z], () => {
+        { isQuestBarEmpty: ed, hasLoadedQuestBar: em } = (0, ep.Ws)({ location: tr.dr.CONFLICT_CHECKS }),
+        ex = (0, d.e7)([eh.Z, eq.default, eU.Z], () => {
             let e,
                 t = eh.Z.getSyncingWith(),
                 n = eh.Z.getActivity(),
@@ -932,60 +935,61 @@ function tv() {
             }
             return a.length > 1;
         }),
-        ex = (0, ef.Un)({ location: "AccountConnected" }),
-        eb = {
+        eb = (0, ef.Un)({ location: "AccountConnected" }),
+        eg = {
             avatar: [],
             settings: [],
         };
-    !L &&
-        (et && eb.avatar.push(u.z.DISPLAY_NAME_STYLES_COACHMARK),
-        en && eb.avatar.push(u.z.TENURE_BADGE_CHURN_REMINDER),
-        ex && eb.avatar.push(u.z.WIDGETS_RTC_UPSELL_COACHMARK),
-        er && eb.settings.push(u.z.NITRO_PRIVACY_PERK_BETA_COACHMARK));
-    let { shouldShowTooltip: eg, dismissTooltip: ev } = tg(ti.h7.AUDIO_INPUT),
-        { shouldShowTooltip: ej, dismissTooltip: ey } = tg(ti.h7.AUDIO_OUTPUT);
+    !M &&
+        (en && eg.avatar.push(u.z.DISPLAY_NAME_STYLES_COACHMARK),
+        er && eg.avatar.push(u.z.TENURE_BADGE_CHURN_REMINDER),
+        eb && eg.avatar.push(u.z.WIDGETS_RTC_UPSELL_COACHMARK),
+        ei && eg.settings.push(u.z.NITRO_PRIVACY_PERK_BETA_COACHMARK));
+    let { shouldShowTooltip: ev, dismissTooltip: ej } = tg(ti.h7.AUDIO_INPUT),
+        { shouldShowTooltip: ey, dismissTooltip: eS } = tg(ti.h7.AUDIO_OUTPUT);
     return (0, a.jsx)(N.Gt, {
-        value: ei,
+        value: el,
         children: (0, a.jsx)(tx, {
             currentUser: t,
-            username: r ? W : q,
+            username: r ? q : K,
             transitionAccountPanel: r,
             activities: i,
             applicationStream: c,
-            voiceChannel: b,
-            dismissibleContents: eb,
-            visibleRecurringAvatarDc: Q,
-            markRecurringAvatarDcAsDismissed: Y,
-            visibleRecurringDoNotDisturbReminderPopoverDc: J,
-            markRecurringDoNotDisturbReminderPopoverDcAsDismissed: ee,
-            userTag: h,
-            hidePrivateData: f,
-            occluded: L,
-            premiumSubscription: O,
-            selfDeaf: _,
-            selfMute: j,
-            serverDeaf: S,
-            serverMute: g,
+            voiceChannel: g,
+            dismissibleContents: eg,
+            visibleRecurringAvatarDc: Y,
+            markRecurringAvatarDcAsDismissed: J,
+            visibleRecurringDoNotDisturbReminderPopoverDc: ee,
+            markRecurringDoNotDisturbReminderPopoverDcAsDismissed: et,
+            userTag: f,
+            hidePrivateData: b,
+            occluded: M,
+            premiumSubscription: I,
+            selfDeaf: S,
+            selfMute: y,
+            serverDeaf: E,
+            serverMute: j,
             speaking: m,
-            speakingWhileMuted: I,
-            latched: p && null != b,
+            voiceDb: h,
+            speakingWhileMuted: D,
+            latched: p && null != g,
             status: s,
             streaming: l,
-            suppress: y,
-            webBuildOverride: E,
-            awaitingRemote: U,
-            isEligibleForPomelo: M,
-            voiceActivityStatusEnabled: K,
-            nameplate: el,
-            selectedGuildId: B,
-            avatarDecoration: V,
-            isQuestBarEmpty: eo,
-            hasLoadedQuestBar: ed,
-            isListenAlongVisible: em,
-            shouldShowInputDeviceChangedTooltip: eg,
-            shouldShowOutputDeviceChangedTooltip: ej,
-            dismissInputDeviceChangedTooltip: ev,
-            dismissOutputDeviceChangedTooltip: ey,
+            suppress: _,
+            webBuildOverride: O,
+            awaitingRemote: B,
+            isEligibleForPomelo: U,
+            voiceActivityStatusEnabled: Q,
+            nameplate: eo,
+            selectedGuildId: F,
+            avatarDecoration: W,
+            isQuestBarEmpty: ed,
+            hasLoadedQuestBar: em,
+            isListenAlongVisible: ex,
+            shouldShowInputDeviceChangedTooltip: ev,
+            shouldShowOutputDeviceChangedTooltip: ey,
+            dismissInputDeviceChangedTooltip: ej,
+            dismissOutputDeviceChangedTooltip: eS,
         }),
     });
 }

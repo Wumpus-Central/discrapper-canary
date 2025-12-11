@@ -1,65 +1,105 @@
-n.d(t, { Z: () => g });
-var i = n(54381);
-n(473749);
-var l = n(533800),
-    s = n(95015),
-    r = n(668339),
-    a = n(481060),
-    o = n(971130),
-    u = n(388032),
-    d = n(527540);
-let c = o.ZP.getMaxUsesOptions;
-function g(e) {
+n.d(t, { Z: () => v });
+var l = n(54381),
+    i = n(473749),
+    s = n(533800),
+    r = n(95015),
+    a = n(668339),
+    o = n(333200),
+    u = n(481060),
+    d = n(971130),
+    c = n(981631),
+    g = n(388032),
+    h = n(527540);
+let p = d.ZP.getMaxUsesOptions;
+function v(e) {
     var t;
     let {
             shouldHideTemporaryInviteToggle: n,
-            maxAgeOptions: g,
-            maxAge: h,
-            maxUses: p,
-            temporary: v,
-            onGenerateNewLink: I,
-            onToggleTemporary: m,
+            maxAgeOptions: v,
+            maxAge: I,
+            maxUses: m,
+            temporary: S,
+            onToggleTemporary: f,
             onSelectMaxAge: x,
-            onSelectMaxUses: S,
-            isGuestInviteCreationToggleEnabled: f,
-            inviteFlags: y,
-            onSetInviteFlags: E,
+            onSelectMaxUses: y,
+            isGuestInviteCreationToggleEnabled: E,
+            inviteFlags: _,
+            onSetInviteFlags: b,
+            isRoleAssignmentEnabled: C,
+            assignableRoles: T,
+            selectedRoleIds: A,
+            onToggleRole: N,
         } = e,
-        _ = o.ZP.getMaxAgeOptionByValue(h),
-        C = c.find((e) => e.value === p);
-    return (0, i.jsx)("div", {
-        className: d.settingsContent,
-        children: (0, i.jsxs)("form", {
-            onSubmit: I,
-            className: d.settingsForm,
-            children: [
-                (0, i.jsx)(r.d, {
-                    label: u.intl.string(u.t["60qw2x"]),
-                    options: g,
-                    value: null != (t = null == _ ? void 0 : _.value) ? t : g[0].value,
-                    onChange: x,
+        M = d.ZP.getMaxAgeOptionByValue(I),
+        P = p.find((e) => e.value === m),
+        Z = i.useMemo(
+            () =>
+                T.map((e) => ({
+                    id: e.id,
+                    value: e.id,
+                    label: e.name,
+                    leading: () => {
+                        var t;
+                        return (0, l.jsx)(u.FhE, {
+                            color: null != (t = e.colorString) ? t : c.Pbq,
+                            colors: e.colorStrings,
+                            background: !1,
+                            tooltip: !1,
+                        });
+                    },
+                })),
+            [T],
+        ),
+        j = i.useCallback(
+            (e) => {
+                let t = Array.from(A),
+                    n = null != e ? e : [],
+                    l = n.find((e) => !t.includes(e)),
+                    i = t.find((e) => !n.includes(e));
+                null != l ? N(l) : null != i && N(i);
+            },
+            [A, N],
+        );
+    return (0, l.jsxs)("div", {
+        className: h.settingsContent,
+        children: [
+            (0, l.jsx)(a.d, {
+                label: g.intl.string(g.t["60qw2x"]),
+                options: v,
+                value: null != (t = null == M ? void 0 : M.value) ? t : v[0].value,
+                onChange: x,
+            }),
+            (0, l.jsx)(a.d, {
+                label: g.intl.string(g.t.jDqWHW),
+                options: p,
+                value: null == P ? void 0 : P.value,
+                onChange: y,
+            }),
+            C &&
+                T.length > 0 &&
+                (0, l.jsx)(o.V, {
+                    label: g.intl.string(g.t.rPYJxL),
+                    placeholder: g.intl.string(g.t["/djIh7"]),
+                    options: Z,
+                    value: Array.from(A),
+                    onSelectionChange: j,
+                    selectionMode: "multiple",
+                    closeOnSelect: !1,
                 }),
-                (0, i.jsx)(r.d, {
-                    label: u.intl.string(u.t.jDqWHW),
-                    options: c,
-                    value: null == C ? void 0 : C.value,
-                    onChange: S,
+            !n &&
+                (0, l.jsx)(u.rsf, {
+                    checked: S,
+                    onChange: (e) => f(e),
+                    description: g.intl.string(g.t.UN5IRX),
+                    label: g.intl.string(g.t["wE+9dr"]),
                 }),
-                !n &&
-                    (0, i.jsx)(a.rsf, {
-                        checked: v,
-                        onChange: (e) => m(e),
-                        description: u.intl.string(u.t.UN5IRX),
-                        label: u.intl.string(u.t["wE+9dr"]),
-                    }),
-                f &&
-                    (0, i.jsx)(a.rsf, {
-                        checked: (0, s.yE)(y, l.$.IS_GUEST_INVITE),
-                        onChange: (e) => E((0, s.mB)(y, l.$.IS_GUEST_INVITE, e)),
-                        description: u.intl.string(u.t["/FeTK6"]),
-                        label: u.intl.string(u.t.siexRS),
-                    }),
-            ],
-        }),
+            E &&
+                (0, l.jsx)(u.rsf, {
+                    checked: (0, r.yE)(_, s.$.IS_GUEST_INVITE),
+                    onChange: (e) => b((0, r.mB)(_, s.$.IS_GUEST_INVITE, e)),
+                    description: g.intl.string(g.t["/FeTK6"]),
+                    label: g.intl.string(g.t.siexRS),
+                }),
+        ],
     });
 }

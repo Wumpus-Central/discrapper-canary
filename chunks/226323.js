@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A }), n(388685), n(539854);
+n.d(t, { Z: () => w }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -12,17 +12,19 @@ var r = n(54381),
     f = n(448986),
     g = n(100527),
     h = n(906732),
-    m = n(522651),
-    b = n(795318),
-    _ = n(512384),
-    E = n(670188),
-    O = n(314897),
-    v = n(131951),
-    y = n(51144),
-    I = n(524484),
-    C = n(388032),
-    S = n(328607);
-function T(e) {
+    m = n(538870),
+    b = n(522651),
+    _ = n(795318),
+    E = n(512384),
+    O = n(670188),
+    v = n(314897),
+    y = n(131951),
+    I = n(606304),
+    C = n(51144),
+    S = n(524484),
+    T = n(388032),
+    N = n(328607);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +49,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,77 +67,77 @@ function N(e, t) {
         e
     );
 }
-let j = { offset: 2 },
-    P = {
+let x = { offset: 2 },
+    A = {
         serverDeaf: {
             icon: c.Vm4,
             colorize: !0,
-            getStatus: () => C.intl.string(C.t.btxSdB),
+            getStatus: () => T.intl.string(T.t.btxSdB),
         },
         serverMute: {
             icon: c.v0G,
             colorize: !0,
-            getStatus: () => C.intl.string(C.t.uLddbQ),
+            getStatus: () => T.intl.string(T.t.uLddbQ),
         },
         deaf: {
             icon: c.wE8,
             colorize: !1,
-            getStatus: () => C.intl.string(C.t.NjmiOL),
+            getStatus: () => T.intl.string(T.t.NjmiOL),
         },
         mute: {
             icon: c.nRN,
             colorize: !1,
-            getStatus: () => C.intl.string(C.t.tjtv3P),
+            getStatus: () => T.intl.string(T.t.tjtv3P),
         },
         localMute: {
             icon: c.v0G,
             colorize: !1,
-            getStatus: () => C.intl.string(C.t["9F+xJU"]),
+            getStatus: () => T.intl.string(T.t["9F+xJU"]),
         },
     };
-function x(e) {
+function Z(e) {
     var t, l;
     let p = i.useRef(null),
         { parentAnalyticsLocation: f } = (0, h.ZP)(),
-        { channel: O, user: x, nick: A, mute: Z, deaf: w, serverMute: L, serverDeaf: R } = e,
-        D = (0, s.e7)([v.Z], () => v.Z.isLocalMute(x.id)),
-        M = (0, d.Z)({
-            userId: x.id,
+        { channel: v, user: Z, nick: w, mute: L, deaf: R, serverMute: D, serverDeaf: M } = e,
+        k = (0, s.e7)([y.Z], () => y.Z.isLocalMute(Z.id)),
+        U = (0, d.Z)({
+            userId: Z.id,
             checkSoundSharing: !0,
         }),
-        k = null != (t = O.getGuildId()) ? t : void 0,
-        U = x.getAvatarURL(O.guild_id, 24),
-        G = null != A ? A : y.ZP.getName(x),
+        G = null != (t = v.getGuildId()) ? t : void 0,
+        B = Z.getAvatarURL(v.guild_id, 24),
+        H = null != w ? w : C.ZP.getName(Z),
         {
-            icon: B,
-            colorize: H,
-            getStatus: V,
+            icon: V,
+            colorize: F,
+            getStatus: z,
         } = null !=
         (l = (function (e) {
             let { serverDeaf: t, deaf: n, serverMute: r, mute: i, localMute: l } = e;
-            if (t) return P.serverDeaf;
-            if (n) return P.deaf;
-            if (r) return P.serverMute;
-            if (l) return P.localMute;
-            if (i) return P.mute;
+            if (t) return A.serverDeaf;
+            if (n) return A.deaf;
+            if (r) return A.serverMute;
+            if (l) return A.localMute;
+            if (i) return A.mute;
         })({
-            serverDeaf: R,
-            deaf: w,
-            serverMute: L,
-            mute: Z,
-            localMute: D,
+            serverDeaf: M,
+            deaf: R,
+            serverMute: D,
+            mute: L,
+            localMute: k,
         }))
             ? l
             : {},
-        F =
-            null != V
-                ? C.intl.formatToPlainString(C.t["1+MVBP"], {
-                      userName: G,
-                      status: V(),
+        Y =
+            null != z
+                ? T.intl.formatToPlainString(T.t["1+MVBP"], {
+                      userName: H,
+                      status: z(),
                   })
-                : G;
-    function z(e) {
-        null != k
+                : H;
+    function W(e) {
+        null != G
             ? (0, u.jW)(e, async () => {
                   let { default: e } = await Promise.all([
                       n.e("79695"),
@@ -147,13 +149,13 @@ function x(e) {
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          N(T({}, t), {
-                              user: x,
-                              guildId: k,
-                              channel: O,
+                          P(j({}, t), {
+                              user: Z,
+                              guildId: G,
+                              channel: v,
                               showMediaItems: !0,
-                              onInteraction: (0, b.u)("GuildChannelUserContextMenu", g.Z.RTC_PANEL, {
-                                  targetUserId: x.id,
+                              onInteraction: (0, _.u)("GuildChannelUserContextMenu", g.Z.RTC_PANEL, {
+                                  targetUserId: Z.id,
                               }),
                           }),
                       );
@@ -165,42 +167,49 @@ function x(e) {
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          N(T({}, t), {
-                              user: x,
+                          P(j({}, t), {
+                              user: Z,
                               showMediaItems: !0,
-                              onInteraction: (0, b.u)("UserGenericContextMenu", g.Z.RTC_PANEL, { targetUserId: x.id }),
+                              onInteraction: (0, _.u)("UserGenericContextMenu", g.Z.RTC_PANEL, { targetUserId: Z.id }),
                           }),
                       );
               });
     }
-    return (0, r.jsx)(E.Z, {
+    let q = (0, s.e7)([I.Z], () => I.Z.getVoiceVolume(Z.id)),
+        K = (0, m._)({
+            isSpeaking: U,
+            voiceDb: q,
+            spreadDirection: m.h.INSET_ONLY,
+            maxInnerSpreadRadius: 5,
+        });
+    return (0, r.jsx)(O.Z, {
         targetElementRef: p,
-        user: x,
-        guildId: k,
-        channelId: O.id,
+        user: Z,
+        guildId: G,
+        channelId: v.id,
         position: "top",
         clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(o.u, {
-                text: F,
+                text: Y,
                 children: (0, r.jsx)(c.P3F, {
                     innerRef: p,
                     onClick: (t) => {
-                        e.onClick(t), (0, m.v)(f, m.d.VOICE_USER);
+                        e.onClick(t), (0, b.v)(f, b.d.VOICE_USER);
                     },
-                    className: S.avatarContainer,
-                    onContextMenu: z,
-                    focusProps: j,
-                    children: (0, r.jsx)(_.Z, {
-                        shakeLocation: I.oZ.VOICE_USER,
-                        isShaking: M,
+                    className: N.avatarContainer,
+                    onContextMenu: W,
+                    focusProps: x,
+                    children: (0, r.jsx)(E.Z, {
+                        shakeLocation: S.oZ.VOICE_USER,
+                        isShaking: U,
                         children: (0, r.jsx)("div", {
-                            className: a()(S.avatar, { [S.speaking]: M }),
-                            style: { backgroundImage: "url(".concat(U, ")") },
+                            className: N.avatar,
+                            style: j({ backgroundImage: "url(".concat(B, ")") }, K),
                             children:
-                                null != B
-                                    ? (0, r.jsx)(B, {
-                                          className: a()(S.avatarIconOverlay, { [S.avatarIconRed]: H }),
+                                null != V
+                                    ? (0, r.jsx)(V, {
+                                          className: a()(N.avatarIconOverlay, { [N.avatarIconRed]: F }),
                                           color: "currentColor",
                                           size: "xs",
                                       })
@@ -211,10 +220,10 @@ function x(e) {
             }),
     });
 }
-function A(e) {
+function w(e) {
     let { voiceStates: t, channel: n, className: l } = e,
         [u, d] = i.useState(!1),
-        g = (0, s.e7)([O.default], () => O.default.getId()),
+        g = (0, s.e7)([v.default], () => v.default.getId()),
         { containerRef: h, maxVisibleAvatars: m } = (function (e) {
             let [t, n] = i.useState(7),
                 r = (0, f.Z)(() => {
@@ -242,12 +251,12 @@ function A(e) {
             return [r, !1];
         })(t, g, m),
         E = u ? c.V_R : c.qJs,
-        v = u ? C.intl.string(C.t["Z/Tya5"]) : C.intl.string(C.t.XR5BAc),
+        O = u ? T.intl.string(T.t["Z/Tya5"]) : T.intl.string(T.t.XR5BAc),
         y = (0, r.jsx)(o.u, {
-            text: v,
+            text: O,
             ariaHidden: !0,
             children: (0, r.jsx)(c.hU, {
-                "aria-label": v,
+                "aria-label": O,
                 onClick: () => d(!u),
                 icon: () => (0, r.jsx)(E, { size: "md" }),
                 variant: "icon-only",
@@ -258,19 +267,19 @@ function A(e) {
     return I.length <= 0
         ? null
         : (0, r.jsx)(c.zJl, {
-              className: a()(S.scroller, l),
+              className: a()(N.scroller, l),
               fade: !0,
               children: (0, r.jsxs)("div", {
                   ref: h,
-                  className: a()(S.voiceUsers, !u && S.collapsed),
+                  className: a()(N.voiceUsers, !u && N.collapsed),
                   role: "group",
-                  "aria-label": C.intl.string(C.t["/ZgaVU"]),
+                  "aria-label": T.intl.string(T.t["/ZgaVU"]),
                   children: [
                       I.map((e) => {
                           let { user: t, nick: i, voiceState: l } = e;
                           return t.id !== g
                               ? (0, r.jsx)(
-                                    x,
+                                    Z,
                                     {
                                         channel: n,
                                         user: t,

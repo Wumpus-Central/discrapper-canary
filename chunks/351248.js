@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(539854), n(388685);
+n.d(t, { Z: () => x }), n(539854), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -9,12 +9,12 @@ var i = n(54381),
     u = n(780384),
     d = n(481060),
     p = n(410030),
-    h = n(451478),
-    f = n(584511),
+    f = n(451478),
+    h = n(584511),
     m = n(354459),
-    g = n(907894),
-    b = n(149715),
-    C = n(162130);
+    g = n(159310),
+    b = n(727829),
+    C = n(982681);
 function y(e, t, n) {
     return (
         t in e
@@ -28,7 +28,7 @@ function y(e, t, n) {
         e
     );
 }
-let _ = {
+let v = {
     SCALE_MIN: 0.7,
     SCALE_MAX: 1,
     DURATION_IN: 300,
@@ -36,7 +36,7 @@ let _ = {
     EASING_IN: o.Z.Easing.inOut(o.Z.Easing.back()),
     EASING_OUT: o.Z.Easing.quad,
 };
-class v extends r.PureComponent {
+class O extends r.PureComponent {
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -51,8 +51,8 @@ class v extends r.PureComponent {
             o.Z.parallel([
                 o.Z.timing(t, {
                     toValue: 1,
-                    duration: _.DURATION_IN,
-                    easing: _.EASING_IN,
+                    duration: v.DURATION_IN,
+                    easing: v.EASING_IN,
                 }),
                 o.Z.timing(n, {
                     toValue: 1,
@@ -74,8 +74,8 @@ class v extends r.PureComponent {
         o.Z.sequence([
             o.Z.timing(t, {
                 toValue: 0,
-                duration: _.DURATION_OUT,
-                easing: _.EASING_OUT,
+                duration: v.DURATION_OUT,
+                easing: v.EASING_OUT,
             }),
             o.Z.sequence(l),
             o.Z.timing(r, {
@@ -91,7 +91,7 @@ class v extends r.PureComponent {
                 {
                     scale: e.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [_.SCALE_MIN, _.SCALE_MAX],
+                        outputRange: [v.SCALE_MIN, v.SCALE_MAX],
                     }),
                 },
             ],
@@ -147,18 +147,18 @@ class v extends r.PureComponent {
             y(this, "widthAnimation", new o.Z.Value(0));
     }
 }
-function O(e) {
+function x(e) {
     var t;
     let { participants: n, onContextMenu: r, className: l, onClick: o, width: u, guildId: b } = e,
         C = (0, p.ZP)(),
         y = ((t = n.length), ((0, d.dcp)(d.EFr.SIZE_80) + 16) * t > u ? d.EFr.SIZE_40 : d.EFr.SIZE_80),
-        _ = (0, s.e7)([h.Z], () => h.Z.isFocused()),
-        O = n.map((e) => {
+        v = (0, s.e7)([f.Z], () => f.Z.isFocused()),
+        x = n.map((e) => {
             var t, n;
             if (e.type !== m.fO.USER) return null;
-            let { user: l, voiceState: a, speaking: s, latched: c, ringing: u } = e;
+            let { user: l, voiceState: a, speaking: s, voiceDb: c = -1 / 0, latched: u, ringing: p } = e;
             return (0, i.jsx)(
-                v,
+                O,
                 {
                     className: g.participant,
                     width: (0, d.dcp)(y),
@@ -168,16 +168,17 @@ function O(e) {
                         onClick: (t) => (null == o ? void 0 : o(e, t)),
                         onContextMenu: (t) => (null == r ? void 0 : r(e, t)),
                         children: (0, i.jsx)(
-                            f.Z,
+                            h.Z,
                             {
                                 userId: l.id,
-                                src: l.getAvatarURL(b, (0, d.dcp)(y), s && _),
+                                src: l.getAvatarURL(b, (0, d.dcp)(y), s && v),
                                 size: y,
                                 muted: null != (t = null == a ? void 0 : a.isVoiceMuted()) && t,
                                 deafen: null != (n = null == a ? void 0 : a.isVoiceDeafened()) && n,
                                 speaking: s,
-                                latched: c,
-                                ringing: u,
+                                voiceDb: c,
+                                latched: u,
+                                ringing: p,
                             },
                             e.id,
                         ),
@@ -190,6 +191,6 @@ function O(e) {
         component: "div",
         role: "list",
         className: a()(g.root, l),
-        children: O,
+        children: x,
     });
 }

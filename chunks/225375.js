@@ -9,8 +9,6 @@ e.exports = {
     status: "f910d08f42c82225-status",
     voiceAvatar: "f910d08f42c82225-voiceAvatar",
     border: "f910d08f42c82225-border",
-    speaking: "f910d08f42c82225-speaking",
-    latched: "f910d08f42c82225-latched",
     callAvatarMask: "f910d08f42c82225-callAvatarMask",
     callAvatarMaskContainer: "f910d08f42c82225-callAvatarMaskContainer",
 };

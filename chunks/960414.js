@@ -14,8 +14,6 @@ e.exports = {
     avatar: "_07f9193042954787-avatar",
     avatarSmall: "_07f9193042954787-avatarSmall",
     avatarLarge: "_07f9193042954787-avatarLarge",
-    avatarSpeaking: "_07f9193042954787-avatarSpeaking",
-    avatarLatched: "_07f9193042954787-avatarLatched",
     username: "_07f9193042954787-username",
     usernameFont: "_07f9193042954787-usernameFont",
     icons: "_07f9193042954787-icons",
