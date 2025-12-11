@@ -121,7 +121,7 @@ let T = (e) => {
                 },
                 text: I.intl.string(I.t.l4Emac),
             }),
-            d = (0, f.n)({ userId: r });
+            d = (0, f.n)(r);
         switch (n) {
             case _.OGo.NONE:
                 return (0, i.jsxs)(i.Fragment, {

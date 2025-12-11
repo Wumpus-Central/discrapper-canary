@@ -1,7 +1,6 @@
 n.d(t, {
-    hQ: () => T,
-    lo: () => A,
-    yn: () => v,
+    hQ: () => I,
+    lo: () => C,
 }),
     n(388685);
 var r = n(54381),
@@ -13,7 +12,7 @@ var r = n(54381),
     c = n(326452),
     u = n(481060),
     d = n(388032),
-    f = n(792323);
+    f = n(405100);
 function p(e, t, n) {
     return (
         t in e
@@ -94,24 +93,15 @@ let b = "data-listbox-item-id",
         BRAND: f.selectedBrand,
     });
 function v(e) {
-    let [t, n] = i.useState(() => new Set(null != e ? [e] : void 0));
-    return [
-        t,
-        i.useCallback((e) => {
-            n(new Set([e]));
-        }, []),
-    ];
-}
-function S(e) {
     return String(e);
 }
-let I = i.createContext({
+let S = i.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
-    itemToString: S,
+    itemToString: v,
 });
-function T(e) {
+function I(e) {
     let {
             placeholder: t,
             children: n,
@@ -120,18 +110,18 @@ function T(e) {
             className: m,
             listClassName: E,
             "aria-label": O,
-            multiSelect: v = !1,
+            multiSelect: I = !1,
             autoFocus: T = !1,
             maxVisibleItems: C = 5,
-            itemToString: A = S,
+            itemToString: A = v,
             emptyStateText: N,
             emptyStateHeader: P,
             onQueryChange: R,
         } = e,
-        [D, w] = i.useState(""),
+        [w, D] = i.useState(""),
         x = i.useCallback(
             (e) => {
-                w(e), null == R || R(e);
+                D(e), null == R || R(e);
             },
             [R],
         ),
@@ -149,10 +139,10 @@ function T(e) {
                 padding: 12,
             });
     }, [j]);
-    let G = n(D),
+    let G = n(w),
         Z = 0 === G.length,
-        B = null != P ? P : d.intl.string(d.t["4o4z3e"]),
-        F = i.useId(),
+        F = null != P ? P : d.intl.string(d.t["4o4z3e"]),
+        B = i.useId(),
         V = i.useCallback(
             () =>
                 new Promise((e) => {
@@ -178,7 +168,7 @@ function T(e) {
             null != r && null != n && r.scrollIntoViewNode({ node: n });
         }, []),
         W = (0, s.ZP)({
-            id: F,
+            id: B,
             isEnabled: !0,
             useVirtualFocus: !0,
             scrollToStart: V,
@@ -207,7 +197,7 @@ function T(e) {
                                 size: "sm",
                                 autoFocus: T,
                                 placeholder: t,
-                                query: D,
+                                query: w,
                                 onChange: x,
                                 onKeyDown: i,
                                 onBlur: () => M(null),
@@ -227,7 +217,7 @@ function T(e) {
                                           children: [
                                               (0, r.jsx)(u.Heading, {
                                                   variant: "heading-md/semibold",
-                                                  children: B,
+                                                  children: F,
                                               }),
                                               (0, r.jsx)(u.Text, {
                                                   color: "text-muted",
@@ -236,7 +226,7 @@ function T(e) {
                                               }),
                                           ],
                                       })
-                                    : (0, r.jsx)(I.Provider, {
+                                    : (0, r.jsx)(S.Provider, {
                                           value: {
                                               activeDescendant: j,
                                               selected: a,
@@ -247,7 +237,7 @@ function T(e) {
                                               u.Tvr,
                                               h(_({}, s), {
                                                   style: { maxHeight: C * (y + 6) },
-                                                  "aria-multiselectable": v,
+                                                  "aria-multiselectable": I,
                                                   id: k,
                                                   ref: U,
                                                   className: o()(f.list, f.scroller, E),
@@ -269,15 +259,15 @@ function T(e) {
         }),
     });
 }
-let C = i.createContext(null);
-function A(e) {
+let T = i.createContext(null);
+function C(e) {
     var t,
         { value: n, children: a, disabled: s = !1, selectedColor: c = O.STANDARD } = e,
         d = g(e, ["value", "children", "disabled", "selectedColor"]);
-    let { activeDescendant: p, selected: m, setSelected: E, itemToString: y } = i.useContext(I),
+    let { activeDescendant: p, selected: m, setSelected: E, itemToString: y } = i.useContext(S),
         v = y(n),
-        S = p === v,
-        T = null != (t = null == d ? void 0 : d.selected) ? t : m.has(n),
+        I = p === v,
+        C = null != (t = null == d ? void 0 : d.selected) ? t : m.has(n),
         A = (0, l.JA)(v);
     return (0, r.jsx)(
         u.P3F,
@@ -289,8 +279,8 @@ function A(e) {
                     onClick: () => (s ? null : E(n)),
                     [b]: n,
                     className: o()(f.item, {
-                        [f.focused]: S,
-                        [c]: T,
+                        [f.focused]: I,
+                        [c]: C,
                         [f.disabled]: s,
                     }),
                 },
@@ -298,9 +288,9 @@ function A(e) {
             ),
             {
                 role: "option",
-                "aria-selected": T,
+                "aria-selected": C,
                 "aria-disabled": s,
-                children: (0, r.jsx)(C.Provider, {
+                children: (0, r.jsx)(T.Provider, {
                     value: n,
                     children: a,
                 }),
@@ -308,33 +298,33 @@ function A(e) {
         ),
     );
 }
-(A.Colors = O),
-    (A.Label = function (e) {
+(C.Colors = O),
+    (C.Label = function (e) {
         let { children: t } = e;
         return (0, r.jsx)("span", {
             className: f.itemLabel,
             children: t,
         });
     }),
-    (A.Icon = function (e) {
+    (C.Icon = function (e) {
         let { children: t } = e;
         return (0, r.jsx)("span", {
             className: f.itemCheckbox,
             children: t,
         });
     }),
-    (A.Checkbox = function (e) {
+    (C.Checkbox = function (e) {
         let { checked: t } = e,
-            { selected: n } = i.useContext(I),
-            a = i.useContext(C);
+            { selected: n } = i.useContext(S),
+            a = i.useContext(T);
         return (0, r.jsx)("span", {
             className: f.itemCheckbox,
             children: (0, r.jsx)(u.FZ5, { checked: null != t ? t : null != a && n.has(a) }),
         });
     }),
-    (A.Checkmark = function () {
-        let { selected: e } = i.useContext(I),
-            t = i.useContext(C);
+    (C.Checkmark = function () {
+        let { selected: e } = i.useContext(S),
+            t = i.useContext(T);
         return e.has(t)
             ? (0, r.jsx)("span", {
                   className: f.itemCheckbox,

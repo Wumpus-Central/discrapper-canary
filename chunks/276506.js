@@ -1,24 +1,18 @@
-n.d(t, { n: () => c }), n(388685);
+n.d(t, { n: () => l });
 var r = n(442837),
     i = n(699516),
-    a = n(136015),
-    o = n(91896),
-    s = n(981631),
-    l = n(388032);
-function c(e) {
-    let { userId: t } = e,
-        [n] = (0, r.e7)(
-            [o.Z, i.Z],
-            () => {
-                let e = i.Z.getRelationshipType(t),
-                    n = o.Z.getGameRelationshipsForUser(t),
-                    r = o.Z.getGameRelationshipsVersion();
-                return e === s.OGo.PENDING_INCOMING
-                    ? [l.intl.string(l.t.wPI56w), r]
-                    : [n.length > 0 ? l.intl.string(l.t.LAcY7m) : l.intl.string(l.t.w5uwoI), r];
-            },
-            [t],
-            a.Q,
-        );
-    return n;
+    a = n(91896),
+    o = n(981631),
+    s = n(388032);
+function l(e) {
+    return (0, r.e7)(
+        [a.Z, i.Z],
+        () =>
+            i.Z.getRelationshipType(e) === o.OGo.PENDING_INCOMING
+                ? s.intl.string(s.t.wPI56w)
+                : a.Z.getGameRelationshipsForUser(e).length > 0
+                  ? s.intl.string(s.t.LAcY7m)
+                  : s.intl.string(s.t.w5uwoI),
+        [e],
+    );
 }

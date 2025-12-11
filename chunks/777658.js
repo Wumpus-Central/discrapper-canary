@@ -44,7 +44,7 @@ function _(e) {
             var e;
             return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === g;
         }, [g]),
-        O = (0, l.n)({ userId: g }),
+        O = (0, l.n)(g),
         [v, S] = (0, a.Wu)([c.Z], () => [c.Z.isFriend(g), c.Z.isBlocked(g)], [g]),
         [I, T] = i.useState(!1);
     if (b || y) return null;
