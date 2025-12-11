@@ -5,13 +5,13 @@ var r = e(481060),
     i = e(308569),
     l = e(388032),
     s = e(36884),
-    o = e(75277);
+    o = e(73377);
 function c(t) {
     let { onNext: n, onClose: e, transitionState: c } = t;
     return (0, a.jsxs)(r.Ioy, {
         graphic: {
             type: "image",
-            src: o,
+            src: o.Z,
         },
         title: l.intl.string(l.t.hhR7gX),
         onClose: e,
