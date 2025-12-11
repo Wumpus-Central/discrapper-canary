@@ -1,0 +1,17 @@
+e.exports = {
+    avatar: "_495084e7a0006942-avatar",
+    divider: "_495084e7a0006942-divider",
+    channelStatusClickable: "_495084e7a0006942-channelStatusClickable",
+    channelStatus: "_495084e7a0006942-channelStatus",
+    hoverable: "_495084e7a0006942-hoverable",
+    subtitleContainer: "_495084e7a0006942-subtitleContainer",
+    pencilIcon: "_495084e7a0006942-pencilIcon",
+    secureFramesIcon: "_495084e7a0006942-secureFramesIcon",
+    playingText: "_495084e7a0006942-playingText",
+    container: "_495084e7a0006942-container",
+    activityIcon: "_495084e7a0006942-activityIcon",
+    headerBar: "_495084e7a0006942-headerBar",
+    headerBarChildren: "_495084e7a0006942-headerBarChildren",
+    title: "_495084e7a0006942-title",
+    toolbar: "_495084e7a0006942-toolbar",
+};

@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(607070),
     u = n(193869),
     d = n(225055),
-    f = n(23839);
+    f = n(609150);
 function p(e) {
     let { className: t, slide: n, videoEntrySrc: a, videoLoopSrc: p } = e,
         _ = i.useRef(null),

@@ -26,8 +26,8 @@ var r = n(54381),
     A = n(556638),
     N = n(981631),
     P = n(388032),
-    R = n(80568);
-function D(e, t, n) {
+    R = n(175996);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -138,7 +138,7 @@ function Z(e) {
         textSize: y = "xs",
         animateEmoji: O = !0,
         hasQuest: P = !1,
-        hideEmoji: D = !1,
+        hideEmoji: w = !1,
         hideTooltip: x = !1,
     } = e;
     (0, f.Z)(null == t ? void 0 : t.id);
@@ -256,7 +256,7 @@ function Z(e) {
                         (0, r.jsx)(
                             S.Z,
                             L(
-                                w(
+                                D(
                                     {
                                         stream: j,
                                         game: null == n ? void 0 : n.find(d.Z),
@@ -269,9 +269,9 @@ function Z(e) {
                         ),
                     ),
                 H.forEach((n, i) => {
-                    e.push((0, r.jsx)(T.Z, w({ activity: n }, t), "activity-".concat(i)));
+                    e.push((0, r.jsx)(T.Z, D({ activity: n }, t), "activity-".concat(i)));
                 }),
-                Q && e.push((0, r.jsx)(C.Z, L(w({ channel: l }, t), { showChannelName: !0 }), "voice")),
+                Q && e.push((0, r.jsx)(C.Z, L(D({ channel: l }, t), { showChannelName: !0 }), "voice")),
                 e
             );
         },
@@ -300,7 +300,7 @@ function Z(e) {
                             children: (e) =>
                                 (0, r.jsxs)(
                                     "div",
-                                    L(w({ className: o()(R.activityContainer, $ && R.iconOnly) }, e), {
+                                    L(D({ className: o()(R.activityContainer, $ && R.iconOnly) }, e), {
                                         children: [et(!0), er()],
                                     }),
                                 ),
@@ -317,7 +317,7 @@ function Z(e) {
                       customStatusActivity: B,
                       textSize: y,
                       animateEmoji: O,
-                      hideEmoji: D,
+                      hideEmoji: w,
                       hideTooltip: x,
                       textClassName: p,
                       iconClassName: _,

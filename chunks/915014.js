@@ -10,7 +10,7 @@ var i = n(36563),
     u = n(146078),
     d = n(228168),
     f = n(268685),
-    p = n(99520);
+    p = n(407518);
 let _ = 3;
 function m(e) {
     let { user: t, onOpenProfile: n } = e,

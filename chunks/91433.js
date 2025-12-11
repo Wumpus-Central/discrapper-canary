@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(652853),
     m = n(671955),
     h = n(388032),
-    g = n(976794);
+    g = n(97057);
 function E(e) {
     let { user: t, guildId: n, channelId: a, applicationId: E, isGameRelationship: b = !1, className: y } = e,
         { themeType: O } = (0, _.z)(),
@@ -34,8 +34,8 @@ function E(e) {
             A(), I({ action: b ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" });
         }, [A, b, I]),
         R = null != E,
-        D = (0, c.q)(E);
-    return R && null == D
+        w = (0, c.q)(E);
+    return R && null == w
         ? null
         : (0, r.jsxs)("div", {
               className: o()(g.container, y),
@@ -50,12 +50,12 @@ function E(e) {
                                         u.Z,
                                         {
                                             className: g.gameIcon,
-                                            game: D,
+                                            game: w,
                                             size: u.A.XXSMALL,
                                         },
-                                        null == D ? void 0 : D.id,
+                                        null == w ? void 0 : w.id,
                                     ),
-                                applicationName: null == D ? void 0 : D.name,
+                                applicationName: null == w ? void 0 : w.name,
                             }),
                         })
                       : (0, r.jsx)(s.Text, {

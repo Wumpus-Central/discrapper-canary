@@ -16,7 +16,7 @@ var r = n(54381),
     p = n(510659),
     _ = n(228168),
     m = n(388032),
-    h = n(734623);
+    h = n(46833);
 function g(e, t, n) {
     return (
         t in e
@@ -97,7 +97,7 @@ function T(e) {
         N = (0, f.Z)(t.id),
         { onInteraction: P, onInteractionPopoutTargetRefChange: R } = (0, p.Xo)();
     if (t.bot || A || !N) return null;
-    let D = () => {
+    let w = () => {
             R(O),
                 n === _.n_.AVATAR
                     ? v({ action: "PRESS_REACT_AVATAR" })
@@ -111,7 +111,7 @@ function T(e) {
                         interactionSourceId: b,
                     });
         },
-        w = () => {
+        D = () => {
             R(O),
                 n === _.n_.AVATAR
                     ? v({ action: "PRESS_REPLY_AVATAR" })
@@ -141,7 +141,7 @@ function T(e) {
                 delay: 0,
                 ariaHidden: !0,
                 children: (0, r.jsx)(u.zx, {
-                    onClick: D,
+                    onClick: w,
                     className: h.button,
                     "aria-label": S[n](),
                     "aria-haspopup": "dialog",
@@ -158,7 +158,7 @@ function T(e) {
                 delay: 0,
                 ariaHidden: !0,
                 children: (0, r.jsx)(u.zx, {
-                    onClick: w,
+                    onClick: D,
                     className: h.button,
                     "aria-label": I[n](),
                     "aria-haspopup": "dialog",

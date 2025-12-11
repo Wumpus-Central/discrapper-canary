@@ -12,7 +12,7 @@ var i = n(442837),
     f = n(443603),
     p = n(981631),
     _ = n(388032),
-    m = n(564355);
+    m = n(72775);
 let h = [d.Ie.NORMAL, d.Ie.SIDEBAR, d.Ie.CREATE_FORUM_POST];
 function g(e) {
     let { disabled: t, channel: n, inputType: d } = e,

@@ -1,7 +1,7 @@
 n.d(t, { y: () => c });
 var r = n(54381),
     i = n(598869),
-    a = n(370921);
+    a = n(66333);
 let o = {
         name: "Chip",
         id: "chip",

@@ -1,0 +1,17 @@
+e.exports = {
+    channelHeader: "_35a7ecf3aba351b2-channelHeader",
+    showCollapseButton: "_35a7ecf3aba351b2-showCollapseButton",
+    collapseButton: "_35a7ecf3aba351b2-collapseButton",
+    collapsed: "_35a7ecf3aba351b2-collapsed",
+    dmIcon: "_35a7ecf3aba351b2-dmIcon",
+    guildIcon: "_35a7ecf3aba351b2-guildIcon",
+    channelNameSection: "_35a7ecf3aba351b2-channelNameSection",
+    badge: "_35a7ecf3aba351b2-badge",
+    channelName: "_35a7ecf3aba351b2-channelName",
+    subtext: "_35a7ecf3aba351b2-subtext",
+    guildName: "_35a7ecf3aba351b2-guildName",
+    channelNameSpan: "_35a7ecf3aba351b2-channelNameSpan",
+    forumIcon: "_35a7ecf3aba351b2-forumIcon",
+    channelNameHeader: "_35a7ecf3aba351b2-channelNameHeader",
+    subtextContainer: "_35a7ecf3aba351b2-subtextContainer",
+};

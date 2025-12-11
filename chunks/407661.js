@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(962293),
     y = n(981631),
     O = n(388032),
-    v = n(204427);
+    v = n(58804);
 let S = 2,
     I = 10;
 function T(e, t) {
@@ -90,8 +90,8 @@ function A(e) {
             authorId: P,
             displayNameStyles: R,
         } = (0, f.ZP)(a),
-        D = (0, p.X7)(g, P, A),
-        w = (0, d.j)({ displayNameStyles: R }),
+        w = (0, p.X7)(g, P, A),
+        D = (0, d.j)({ displayNameStyles: R }),
         x = T(i, a),
         L = (0, h.NE)(i, a),
         j = n.showThreadPromptOnReply && x >= S && L,
@@ -132,9 +132,9 @@ function A(e) {
                                                 className: v.name,
                                                 name: E,
                                                 colorString: I,
-                                                colorStrings: D,
+                                                colorStrings: w,
                                                 roleName: N,
-                                                displayNameStylesFont: w,
+                                                displayNameStylesFont: D,
                                             },
                                             t,
                                         ),

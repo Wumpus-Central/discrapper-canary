@@ -18,8 +18,8 @@ var r = n(54381),
     b = n(444282),
     y = n(898463),
     O = n(981631),
-    v = n(83120),
-    S = n(154257);
+    v = n(575817),
+    S = n(164701);
 function I(e, t, n) {
     return (
         t in e
@@ -94,13 +94,13 @@ function P(e, t) {
     return i;
 }
 let R = [];
-function D(e) {
+function w(e) {
     let { channelId: t, type: n, ignoreFile: a, smallAttachments: I = !1 } = e,
         C = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         P = (0, _.Z)("attachments", l.hy.HORIZONTAL),
-        D = (0, c.e7)([h.Z], () => h.Z.getUploads(t, n.drafts.type)),
+        w = (0, c.e7)([h.Z], () => h.Z.getUploads(t, n.drafts.type)),
         {
-            isApplicationCommand: w,
+            isApplicationCommand: D,
             commandOptions: x,
             commandOptionStates: L,
         } = (0, c.cj)([m.Z], () => {
@@ -152,7 +152,7 @@ function D(e) {
         handler: U,
     });
     let G = {
-            isApplicationCommand: w,
+            isApplicationCommand: D,
             previousUploadOptions: M,
             uploadOptions: j,
         },
@@ -173,8 +173,8 @@ function D(e) {
                     k(i);
             }
         }, [t, j.length, n]);
-    let B = D.filter((e) => e.filename !== a);
-    return (!w && 0 === B.length) || (w && 0 === j.length)
+    let B = w.filter((e) => e.filename !== a);
+    return (!D && 0 === B.length) || (D && 0 === j.length)
         ? null
         : (0, r.jsx)(s.bG, {
               navigator: P,
@@ -186,7 +186,7 @@ function D(e) {
                           "ul",
                           A(T({ ref: i }, a), {
                               className: o()(v.channelAttachmentArea, S.scrollbarGhost),
-                              children: w
+                              children: D
                                   ? j.map((e) =>
                                         (0, r.jsx)(
                                             b.Z,
@@ -218,10 +218,10 @@ function D(e) {
               }),
           });
 }
-function w(e) {
+function D(e) {
     let { channelId: t, type: n, canAttachFiles: i, ignoreFile: a, smallAttachments: o = !1 } = e;
     return i
-        ? (0, r.jsx)(D, {
+        ? (0, r.jsx)(w, {
               channelId: t,
               type: n,
               ignoreFile: a,
@@ -229,4 +229,4 @@ function w(e) {
           })
         : null;
 }
-let x = i.memo(w);
+let x = i.memo(D);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -21,7 +21,7 @@ var r = n(54381),
     v = n(726985),
     S = n(981631),
     I = n(388032),
-    T = n(61365);
+    T = n(330374);
 function C(e, t, n) {
     return (
         t in e
@@ -77,7 +77,7 @@ let R = () =>
         className: T.syncing,
         children: (0, r.jsx)(o.$jN, {}),
     });
-class D extends i.PureComponent {
+class w extends i.PureComponent {
     componentDidMount() {
         s.Z.wait(() => {
             l.tZ(), l.jg();
@@ -141,7 +141,7 @@ class D extends i.PureComponent {
               });
     }
 }
-function w() {
+function D() {
     let e = (0, a.cj)([b.default, h.Z, g.Z, m.default, _.Z, E.Z], () => {
         let e = E.Z.getPremiumTypeSubscription(),
             t = m.default.getCurrentUser();
@@ -164,5 +164,5 @@ function w() {
     if (!e.shouldRenderBillingSettings) return (0, r.jsx)(R, {});
     let { shouldRenderBillingSettings: t } = e,
         n = N(e, ["shouldRenderBillingSettings"]);
-    return (0, r.jsx)(D, A({}, n));
+    return (0, r.jsx)(w, A({}, n));
 }

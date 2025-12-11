@@ -112,7 +112,7 @@ let c = new (n(710845).Z)("MFAPlayground"),
                                             });
                                     (0, i.ZDy)(
                                         async () => {
-                                            let { MFAModal: i } = await Promise.all([n.e("52030"), n.e("45353")]).then(
+                                            let { MFAModal: i } = await Promise.all([n.e("52030"), n.e("3040")]).then(
                                                 n.bind(n, 124860),
                                             );
                                             return (n) =>

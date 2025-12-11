@@ -1,0 +1,18 @@
+e.exports = {
+    results: "_2dc39186a9b98da4-results",
+    result: "_2dc39186a9b98da4-result",
+    favButton: "_2dc39186a9b98da4-favButton",
+    gif: "_2dc39186a9b98da4-gif",
+    endContainer: "_2dc39186a9b98da4-endContainer",
+    endText: "_2dc39186a9b98da4-endText",
+    searchSuggestions: "_2dc39186a9b98da4-searchSuggestions",
+    noResults: "_2dc39186a9b98da4-noResults",
+    emptyHints: "_2dc39186a9b98da4-emptyHints",
+    emptyHint: "_2dc39186a9b98da4-emptyHint",
+    emptyHintCard: "_2dc39186a9b98da4-emptyHintCard",
+    emptyHintSpacer: "_2dc39186a9b98da4-emptyHintSpacer",
+    emptyHintText: "_2dc39186a9b98da4-emptyHintText",
+    emptyHintFavorite: "_2dc39186a9b98da4-emptyHintFavorite",
+    loadIN: "_2dc39186a9b98da4-loadIN",
+    placeholder: "_2dc39186a9b98da4-placeholder",
+};

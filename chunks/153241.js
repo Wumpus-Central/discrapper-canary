@@ -1,4 +1,4 @@
-r.d(t, { default: () => _ }), r(388685), r(539854);
+r.d(t, { default: () => M }), r(388685), r(539854);
 var n = r(54381),
     i = r(473749),
     s = r(512722),
@@ -7,8 +7,8 @@ var n = r(54381),
     l = r(442837),
     c = r(481060),
     u = r(794433),
-    d = r(480466),
-    f = r(313789),
+    f = r(480466),
+    d = r(313789),
     p = r(518596),
     b = r(78839),
     m = r(51144),
@@ -18,10 +18,10 @@ var n = r(54381),
     v = r(154122),
     O = r(282793),
     j = r(981631),
-    S = r(96011),
+    S = r(137427),
     x = r(388032),
-    w = r(781565),
-    P = r(383092);
+    w = r(992909),
+    P = r(135471);
 function C() {
     return (C =
         Object.assign ||
@@ -99,9 +99,9 @@ function Z(e, t) {
 let I = (e) => {
         var { onInvite: t, onClose: r, subscriptionId: s } = e,
             a = Z(e, ["onInvite", "onClose", "subscriptionId"]);
-        let [l, f] = i.useState([]),
+        let [l, d] = i.useState([]),
             [p, b] = i.useState(""),
-            y = (0, d.Z)(p, 400),
+            y = (0, f.Z)(p, 400),
             {
                 eligibleUsers: v,
                 getNextRows: j,
@@ -147,7 +147,7 @@ let I = (e) => {
                                     placeholder: 0 === l.length ? x.intl.string(S.default.wRS8vo) : "",
                                     query: p,
                                     onRemoveTag: (e) => {
-                                        f((t) => t.filter((t, r) => r !== e));
+                                        d((t) => t.filter((t, r) => r !== e));
                                     },
                                     onQueryChange: b,
                                     onClear: () => b(""),
@@ -175,7 +175,7 @@ let I = (e) => {
                                 users: v,
                                 isUserSelected: (e) => l.some((t) => t.id === e.id),
                                 onSelectionChange: (e, t) => {
-                                    f((r) => (t ? [...r, e] : r.filter((t) => t.id !== e.id)));
+                                    d((r) => (t ? [...r, e] : r.filter((t) => t.id !== e.id)));
                                 },
                                 isUserDisabled: () => l.length >= O.v$,
                                 isFetching: C,
@@ -222,7 +222,7 @@ let I = (e) => {
                         }),
                         subtitle: x.intl.format(S.default.olkQkj, {
                             onClick: () => {
-                                t(), (0, p.openUserSettings)(f.n.SUBSCRIPTIONS_PANEL, { section: j.oAB.SUBSCRIPTIONS });
+                                t(), (0, p.openUserSettings)(d.n.SUBSCRIPTIONS_PANEL, { section: j.oAB.SUBSCRIPTIONS });
                             },
                         }),
                         onClose: t,
@@ -245,7 +245,7 @@ let I = (e) => {
             ),
         );
     },
-    _ = (e) => {
+    M = (e) => {
         var t = C(
             {},
             (function (e) {
@@ -257,7 +257,7 @@ let I = (e) => {
             [s, o] = i.useState([]);
         a()(null != r, "Subscription not found");
         let [c, u] = i.useState(1),
-            d = async (e) => {
+            f = async (e) => {
                 let t = new Map(),
                     n = [];
                 for (let r of e) t.set(r.id, r), n.push(r.id);
@@ -289,7 +289,7 @@ let I = (e) => {
             ? (0, n.jsx)(
                   I,
                   k(N({}, t), {
-                      onInvite: d,
+                      onInvite: f,
                       subscriptionId: r.id,
                   }),
               )

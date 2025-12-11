@@ -1,10 +1,10 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => N });
 var r = n(54381);
 n(473749);
 var l = n(120356),
     i = n.n(l),
-    s = n(399606),
-    a = n(481060),
+    a = n(399606),
+    s = n(481060),
     o = n(271383),
     u = n(594174),
     c = n(777288),
@@ -15,59 +15,59 @@ var l = n(120356),
     T = n(908474),
     I = n(467014),
     m = n(388032),
-    g = n(87819);
-function N() {
+    f = n(280533);
+function g() {
     return (0, r.jsxs)("div", {
-        className: g.header,
+        className: f.header,
         children: [
             (0, r.jsxs)("div", {
-                className: g.headerTitle,
+                className: f.headerTitle,
                 children: [
                     (0, r.jsx)(c.Z, {
                         width: 16,
                         height: 16,
                     }),
-                    (0, r.jsx)(a.Heading, {
+                    (0, r.jsx)(s.Heading, {
                         variant: "heading-md/semibold",
                         children: m.intl.string(m.t.cf5lgh),
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                children: (0, r.jsx)(a.M2$, {
+                children: (0, r.jsx)(s.M2$, {
                     shortcut: "esc",
-                    keyClassName: g.keyComboInner,
-                    className: g.keyComboContainer,
+                    keyClassName: f.keyComboInner,
+                    className: f.keyComboContainer,
                 }),
             }),
         ],
     });
 }
-function h(e) {
+function N(e) {
     let { userId: t, guildId: n, location: l, className: c, onNavigate: m } = e,
-        h = (0, s.e7)([u.default], () => u.default.getUser(t), [t]),
-        O = (0, s.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
-    return null == h || null == O
+        N = (0, a.e7)([u.default], () => u.default.getUser(t), [t]),
+        h = (0, a.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
+    return null == N || null == h
         ? null
         : (0, r.jsxs)("div", {
-              className: i()(g.container, c),
+              className: i()(f.container, c),
               children: [
-                  (0, r.jsx)(N, {}),
-                  (0, r.jsxs)(a.Ttm, {
-                      className: g.innerContainer,
+                  (0, r.jsx)(g, {}),
+                  (0, r.jsxs)(s.Ttm, {
+                      className: f.innerContainer,
                       children: [
-                          (0, r.jsx)(T.Z, { member: O }),
+                          (0, r.jsx)(T.Z, { member: h }),
                           (0, r.jsx)(I.Z, {
                               userId: t,
                               guildId: n,
                           }),
                           (0, r.jsx)(A.Z, {
-                              member: O,
+                              member: h,
                               onNavigate: m,
                           }),
-                          (0, r.jsx)(d.Z, { member: O }),
-                          (0, r.jsx)(E.Z, { member: O }),
-                          (0, r.jsx)(_.Z, { member: O }),
+                          (0, r.jsx)(d.Z, { member: h }),
+                          (0, r.jsx)(E.Z, { member: h }),
+                          (0, r.jsx)(_.Z, { member: h }),
                       ],
                   }),
               ],

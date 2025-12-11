@@ -1,9 +1,9 @@
 t.r(r), t.d(r, { default: () => u });
 var n = t(54381),
-    o = t(473749),
-    c = t(167490),
-    i = t(505609),
-    a = t(858606);
+    c = t(473749),
+    o = t(167490),
+    a = t(505609),
+    i = t(30302);
 function s(e) {
     for (var r = 1; r < arguments.length; r++) {
         var t = null != arguments[r] ? arguments[r] : {},
@@ -29,19 +29,19 @@ function s(e) {
     }
     return e;
 }
-let p = (0, c.iS)((e) => {
+let p = (0, o.iS)((e) => {
         var r, t;
         return (0, n.jsxs)("div", {
-            className: a.wrapper,
+            className: i.wrapper,
             children: [
                 (0, n.jsx)("div", {
-                    className: a.saturation,
-                    children: (0, n.jsx)(i.Saturation, s({}, e)),
+                    className: i.saturation,
+                    children: (0, n.jsx)(a.Saturation, s({}, e)),
                 }),
                 (0, n.jsx)("div", {
-                    className: a.hue,
+                    className: i.hue,
                     children: (0, n.jsx)(
-                        i.Hue,
+                        a.Hue,
                         ((r = s({}, e)),
                         (t = t = { direction: "horizontal" }),
                         Object.getOwnPropertyDescriptors
@@ -62,4 +62,4 @@ let p = (0, c.iS)((e) => {
             ],
         });
     }),
-    u = o.memo(p);
+    u = c.memo(p);

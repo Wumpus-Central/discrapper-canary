@@ -1,0 +1,15 @@
+e.exports = {
+    container: "ca49a1898ddc29e3-container",
+    guidelines: "ca49a1898ddc29e3-guidelines",
+    guidelinesHeader: "ca49a1898ddc29e3-guidelinesHeader",
+    headerContainer: "ca49a1898ddc29e3-headerContainer",
+    descriptionContainer: "ca49a1898ddc29e3-descriptionContainer",
+    showMore: "ca49a1898ddc29e3-showMore",
+    gradient: "ca49a1898ddc29e3-gradient",
+    linkContainer: "ca49a1898ddc29e3-linkContainer",
+    showMoreLink: "ca49a1898ddc29e3-showMoreLink",
+    showMoreText: "ca49a1898ddc29e3-showMoreText",
+    showMoreIcon: "ca49a1898ddc29e3-showMoreIcon",
+    clickable: "ca49a1898ddc29e3-clickable",
+    hiddenVisually: "ca49a1898ddc29e3-hiddenVisually",
+};

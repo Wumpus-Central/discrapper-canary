@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(358085),
     y = n(288406),
     O = n(388032),
-    v = n(999642);
+    v = n(8905);
 function S(e, t, n) {
     return (
         t in e
@@ -126,13 +126,13 @@ let P = (e, t) => "".concat(e, ":").concat(t),
                 "selectedItemClassName",
                 "inNitroLockedSection",
             ]);
-        let D = (0, s.e7)([g.Z], () => (n.type === f.B.GUILD ? g.Z.getGuild(n.guildId) : void 0), [n]),
-            w = () => {
+        let w = (0, s.e7)([g.Z], () => (n.type === f.B.GUILD ? g.Z.getGuild(n.guildId) : void 0), [n]),
+            D = () => {
                 let e = (0, E.nY)(n);
-                return ((null == D ? void 0 : D.name) != null &&
+                return ((null == w ? void 0 : w.name) != null &&
                     (e = O.intl.formatToPlainString(O.t["nXv4/B"], {
                         names: e,
-                        guildName: D.name,
+                        guildName: w.name,
                     })),
                 i)
                     ? O.intl.formatToPlainString(O.t["9FI9Z0"], { names: e })
@@ -157,7 +157,7 @@ let P = (e, t) => "".concat(e, ":").concat(t),
                     "data-animated": n.animated ? "true" : null,
                     ref: t,
                     children: (0, r.jsx)(y.Z, {
-                        "aria-label": w(),
+                        "aria-label": D(),
                         columnIndex: m,
                         rowIndex: h,
                         emoji: n,
@@ -170,7 +170,7 @@ let P = (e, t) => "".concat(e, ":").concat(t),
             ),
         });
     });
-function D(e) {
+function w(e) {
     let {
             descriptor: t,
             emojiItemKey: a,
@@ -184,8 +184,8 @@ function D(e) {
             showEmojiFavoriteTooltip: S,
             surrogateCodePoint: T,
             selectedItemClassName: N,
-            getEmojiItemProps: D,
-            isMediumSize: w,
+            getEmojiItemProps: w,
+            isMediumSize: D,
             isLargeSize: x,
             pulseItemKey: L,
             allowAnimatedEmoji: j,
@@ -223,7 +223,7 @@ function D(e) {
             var e;
             let { onMouseEnter: t, onMouseLeave: n } =
                     arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                s = null != (e = D(q, f)) ? e : {},
+                s = null != (e = w(q, f)) ? e : {},
                 { ref: l, tabIndex: c, onFocus: u } = s,
                 d = A(s, ["ref", "tabIndex", "onFocus"]);
             return (0, i.createElement)(
@@ -238,7 +238,7 @@ function D(e) {
                         emoji: W,
                         isFavorite: H.isFavoriteEmojiWithoutFetchingLatest(W),
                         isLargeSize: x,
-                        isMediumSize: w,
+                        isMediumSize: D,
                         isInspected: o,
                         isDisabled: z,
                         showPulse: L === a,

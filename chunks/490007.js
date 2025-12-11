@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var a = n(54381),
     r = n(473749),
     i = n(120356),
@@ -7,8 +7,8 @@ var a = n(54381),
     o = n(481060),
     c = n(488922),
     d = n(595925),
-    u = n(451429),
-    m = n(226800);
+    u = n(663618),
+    m = n(13408);
 let p = [
         {
             id: "virtual-currency",
@@ -23,7 +23,7 @@ let p = [
         "virtual-currency": d.O,
         nitro: c.X,
     };
-function x() {
+function f() {
     let [e, t] = r.useState("virtual-currency"),
         n = r.useMemo(() => h[e], [e]);
     return (0, a.jsxs)("div", {

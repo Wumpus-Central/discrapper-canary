@@ -15,8 +15,8 @@ var n = i(54381),
     b = i(313741),
     C = i(526079),
     m = i(388032),
-    h = i(939964);
-function f(e) {
+    f = i(10805);
+function h(e) {
     let { className: t, guildId: i, onChange: l, isGuildIncluded: r } = e,
         { options: a } = (0, C.Z)({ isGuildIncluded: r });
     return (0, n.jsx)(o.d, {
@@ -39,8 +39,8 @@ function v(e) {
             description: F,
             isGuildSupported: I,
         } = (0, b.K)(r),
-        [_, M] = l.useState(),
-        [j, w] = l.useState(!1),
+        [M, j] = l.useState(),
+        [_, w] = l.useState(!1),
         y = async () => {
             w(!0);
             let e = await new Promise((e) => {
@@ -60,7 +60,7 @@ function v(e) {
         parentComponent: "GuildSettingsPickerModal",
         children: [
             (0, n.jsxs)(u.xBx, {
-                className: h.modalHeader,
+                className: f.modalHeader,
                 separator: !1,
                 children: [
                     (0, n.jsx)(u.Heading, {
@@ -72,7 +72,7 @@ function v(e) {
                 ],
             }),
             (0, n.jsxs)(u.hzk, {
-                className: h.modalContent,
+                className: f.modalContent,
                 children: [
                     (0, n.jsxs)(u.Kqy, {
                         direction: "vertical",
@@ -83,13 +83,13 @@ function v(e) {
                                 children: F,
                             }),
                             (0, n.jsxs)("div", {
-                                className: h.guildSelection,
+                                className: f.guildSelection,
                                 children: [
                                     (0, n.jsx)("div", {
-                                        className: h.guildSelectorContainer,
-                                        children: (0, n.jsx)(f, {
-                                            guildId: _,
-                                            onChange: M,
+                                        className: f.guildSelectorContainer,
+                                        children: (0, n.jsx)(h, {
+                                            guildId: M,
+                                            onChange: j,
                                             isGuildIncluded: I,
                                         }),
                                     }),
@@ -97,12 +97,12 @@ function v(e) {
                                         variant: "primary",
                                         text: E,
                                         onClick: () => {
-                                            a()(null != _, "Guild ID must not be null on click"),
-                                                g.Z.hasSeenCreatorOnboardingForGuild(_) || (0, p.k)(_),
-                                                G.Z.open(_, o, void 0, C),
+                                            a()(null != M, "Guild ID must not be null on click"),
+                                                g.Z.hasSeenCreatorOnboardingForGuild(M) || (0, p.k)(M),
+                                                G.Z.open(M, o, void 0, C),
                                                 null == i || i();
                                         },
-                                        disabled: null == _,
+                                        disabled: null == M,
                                     }),
                                 ],
                             }),
@@ -119,8 +119,8 @@ function v(e) {
                                 }),
                                 (0, n.jsx)(s.zx, {
                                     onClick: y,
-                                    submitting: j,
-                                    className: h.createGuildButton,
+                                    submitting: _,
+                                    className: f.createGuildButton,
                                     children: Z,
                                 }),
                             ],

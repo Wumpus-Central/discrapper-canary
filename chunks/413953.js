@@ -1,0 +1,15 @@
+e.exports = {
+    container: "dca174a2baed7ac1-container",
+    banner: "dca174a2baed7ac1-banner",
+    avatarContainer: "dca174a2baed7ac1-avatarContainer",
+    overlay: "dca174a2baed7ac1-overlay",
+    overlayIcon: "dca174a2baed7ac1-overlayIcon",
+    clickable: "dca174a2baed7ac1-clickable",
+    avatarWrapper: "dca174a2baed7ac1-avatarWrapper",
+    acronymText: "dca174a2baed7ac1-acronymText",
+    emptyBody: "dca174a2baed7ac1-emptyBody",
+    body: "dca174a2baed7ac1-body",
+    error: "dca174a2baed7ac1-error",
+    header: "dca174a2baed7ac1-header",
+    buttonContainer: "dca174a2baed7ac1-buttonContainer",
+};

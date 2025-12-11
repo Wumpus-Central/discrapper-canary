@@ -15,8 +15,8 @@ var l = n(54381),
     v = n(208665),
     h = n(460117),
     f = n(290511),
-    x = n(388032),
-    b = n(82513);
+    b = n(388032),
+    x = n(304256);
 function y(e) {
     let { transitionState: t, onClose: n, onSave: r, onDelete: j, option: g, guild: y, prompt: C, index: P } = e,
         I = (0, s.e7)([m.ZP], () => m.ZP.getDefaultChannel(y.id)),
@@ -36,17 +36,17 @@ function y(e) {
             var e;
             return new Set(null != (e = null == g ? void 0 : g.channelIds) ? e : []);
         }),
-        [T, _] = i.useState(() => {
+        [T, B] = i.useState(() => {
             var e;
             return new Set(null != (e = null == g ? void 0 : g.roleIds) ? e : []);
         }),
-        [B, z] = i.useState({}),
-        D = i.useRef(null);
+        [z, D] = i.useState({}),
+        A = i.useRef(null);
     i.useLayoutEffect(() => {
         var e;
-        return null == (e = D.current) ? void 0 : e.focus();
+        return null == (e = A.current) ? void 0 : e.focus();
     }, []);
-    let A = i.useCallback(() => {
+    let L = i.useCallback(() => {
             var e;
             let t = {
                     id: null != (e = null == g ? void 0 : g.id) ? e : "".concat(Date.now()),
@@ -58,59 +58,59 @@ function y(e) {
                 },
                 l = (function (e, t, n, l) {
                     let i = {};
-                    l.title.length <= 0 && (i.title = x.intl.string(x.t.p3PKzA));
+                    l.title.length <= 0 && (i.title = b.intl.string(b.t.p3PKzA));
                     let r = (0, p.en)(e, t, n, l);
                     return null != r && (i.roles = r), i;
                 })(y, v.Z.editedOnboardingPrompts, C, t);
-            z(l), o().isEmpty(l) && (r(t), n());
+            D(l), o().isEmpty(l) && (r(t), n());
         }, [M, E, S, y, n, r, null == g ? void 0 : g.id, C, T, Z]),
-        L = i.useMemo(
+        q = i.useMemo(
             () => [
                 {
-                    text: x.intl.string(x.t["ETE/oC"]),
+                    text: b.intl.string(b.t["ETE/oC"]),
                     onClick: n,
                     variant: "secondary",
                 },
                 {
-                    text: x.intl.string(x.t["R3BPH+"]),
-                    onClick: A,
+                    text: b.intl.string(b.t["R3BPH+"]),
+                    onClick: L,
                     variant: "primary",
                 },
             ],
-            [A, n],
+            [L, n],
         );
     return (0, l.jsx)(a.Modal, {
-        title: x.intl.formatToPlainString(x.t.yjS3zs, { index: P + 1 }),
-        subtitle: null != C.title && C.title.length > 0 ? C.title : x.intl.string(x.t.vY91C9),
+        title: b.intl.formatToPlainString(b.t.yjS3zs, { index: P + 1 }),
+        subtitle: null != C.title && C.title.length > 0 ? C.title : b.intl.string(b.t.vY91C9),
         transitionState: t,
         onClose: n,
-        actions: L,
+        actions: q,
         actionBarInput: (0, l.jsx)(c.Avr, {
-            text: x.intl.string(x.t.N86XcP),
+            text: b.intl.string(b.t.N86XcP),
             onClick: () => {
                 j(), n();
             },
             variant: "critical",
         }),
         children: (0, l.jsxs)("div", {
-            className: b.container,
+            className: x.container,
             children: [
                 (0, l.jsxs)(c.Kqy, {
                     gap: 8,
                     children: [
                         (0, l.jsx)(c.oil, {
-                            label: x.intl.string(x.t.VWdcBp),
+                            label: b.intl.string(b.t.VWdcBp),
                             required: !0,
-                            inputRef: D,
-                            placeholder: x.intl.string(x.t.EHe6gZ),
+                            inputRef: A,
+                            placeholder: b.intl.string(b.t.EHe6gZ),
                             value: Z,
                             onChange: (e) => w(e),
                             maxLength: f.NE,
                             autoFocus: !0,
-                            error: B.title,
+                            error: z.title,
                         }),
                         (0, l.jsx)(c.oil, {
-                            placeholder: x.intl.string(x.t.mIjgJK),
+                            placeholder: b.intl.string(b.t.mIjgJK),
                             value: E,
                             onChange: (e) => k(e),
                             maxLength: f.NO,
@@ -119,7 +119,7 @@ function y(e) {
                 }),
                 (0, l.jsx)(c.izJ, {}),
                 (0, l.jsxs)(a.gNt, {
-                    label: x.intl.string(x.t.TtIbPA),
+                    label: b.intl.string(b.t.TtIbPA),
                     children: [
                         (0, l.jsxs)(c.Kqy, {
                             gap: 8,
@@ -127,22 +127,22 @@ function y(e) {
                                 (0, l.jsx)(u.Z, {
                                     guildId: y.id,
                                     selectedChannelIds: M,
-                                    placeholder: x.intl.string(x.t.vephiL),
+                                    placeholder: b.intl.string(b.t.vephiL),
                                     onChange: R,
-                                    helperText: x.intl.string(x.t.SoT6we),
+                                    helperText: b.intl.string(b.t.SoT6we),
                                 }),
                                 (0, l.jsx)(d.Z, {
                                     guildId: y.id,
                                     selectedRoleIds: T,
                                     disableEveryoneRole: !0,
-                                    placeholder: x.intl.string(x.t.aFO1I6),
-                                    onChange: _,
-                                    helperText: x.intl.string(x.t.Mbvpv8),
+                                    placeholder: b.intl.string(b.t.aFO1I6),
+                                    onChange: B,
+                                    helperText: b.intl.string(b.t.Mbvpv8),
                                     selectableRoleFilter: (e) => !e.managed,
                                 }),
                             ],
                         }),
-                        null == B.roles ? null : (0, l.jsx)(c.pdY, { error: B.roles }),
+                        null == z.roles ? null : (0, l.jsx)(c.pdY, { error: z.roles }),
                         (0, l.jsx)(O, {
                             guild: y,
                             roleIds: T,
@@ -151,10 +151,10 @@ function y(e) {
                 }),
                 (0, l.jsx)(c.izJ, {}),
                 (0, l.jsx)("div", {
-                    className: b.emojiQuestionContainer,
+                    className: x.emojiQuestionContainer,
                     children: (0, l.jsx)(a.gNt, {
-                        label: x.intl.string(x.t["4ahTBl"]),
-                        description: x.intl.string(x.t.Iv9RGg),
+                        label: b.intl.string(b.t["4ahTBl"]),
+                        description: b.intl.string(b.t.Iv9RGg),
                         children: (0, l.jsx)(h.Z, {
                             emoji: S,
                             setEmoji: N,
@@ -172,20 +172,20 @@ function O(e) {
     return null == i
         ? null
         : (0, l.jsx)("div", {
-              className: b.notice,
+              className: x.notice,
               children: (0, l.jsxs)("div", {
-                  className: b.noticeMessage,
+                  className: x.noticeMessage,
                   children: [
                       (0, l.jsx)(c.Mgn, {
                           size: "custom",
                           width: 20,
                           height: 20,
                           color: "currentColor",
-                          className: b.noticeIcon,
+                          className: x.noticeIcon,
                       }),
                       (0, l.jsx)(c.Text, {
                           variant: "text-sm/normal",
-                          children: x.intl.format(x.t["5zPJEZ"], { permissions: (0, g.i)(t, i).join(", ") }),
+                          children: b.intl.format(b.t["5zPJEZ"], { permissions: (0, g.i)(t, i).join(", ") }),
                       }),
                   ],
               }),

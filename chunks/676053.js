@@ -12,9 +12,9 @@ var r = n(54381),
     p = n(562618),
     _ = n(803866),
     m = n(231338),
-    h = n(245034),
+    h = n(621786),
     g = n(388032),
-    E = n(37751);
+    E = n(310883);
 function b(e, t, n) {
     return (
         t in e
@@ -101,8 +101,8 @@ function T(e) {
             action: N,
             caretConfig: P = { align: "center" },
             badge: R,
-            textLink: D,
-            onWatchVideo: w,
+            textLink: w,
+            onWatchVideo: D,
             onRequestClose: x,
             popoverRef: L,
             position: j,
@@ -160,8 +160,8 @@ function T(e) {
                 shouldHideMediaOptions: !0,
             }),
                 null == x || x(),
-                null == w || w();
-        }, [F, w, x]),
+                null == D || D();
+        }, [F, D, x]),
         W = B
             ? (0, r.jsx)(o.zsu, {
                   type: "image",
@@ -226,7 +226,7 @@ function T(e) {
                         title: O,
                         body: I,
                         badge: R,
-                        textLink: D,
+                        textLink: w,
                     }),
                     null != N ? (0, r.jsx)(d.k, { actions: [N] }) : null,
                 ],

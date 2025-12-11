@@ -1,0 +1,17 @@
+e.exports = {
+    heading: "_686cf09df72934da-heading",
+    tableWrapper: "_686cf09df72934da-tableWrapper",
+    table: "_686cf09df72934da-table",
+    columnHeading: "_686cf09df72934da-columnHeading",
+    tableCell: "_686cf09df72934da-tableCell",
+    tableCellWrapper: "_686cf09df72934da-tableCellWrapper",
+    tableCellInner: "_686cf09df72934da-tableCellInner",
+    tableRowHeading: "_686cf09df72934da-tableRowHeading",
+    booleanValueIcon: "_686cf09df72934da-booleanValueIcon",
+    booleanValueTrue: "_686cf09df72934da-booleanValueTrue",
+    recommendedTierHighlight: "_686cf09df72934da-recommendedTierHighlight",
+    recommendedTierHighlightTier2: "_686cf09df72934da-recommendedTierHighlightTier2",
+    recommendedTierHighlightTier3: "_686cf09df72934da-recommendedTierHighlightTier3",
+    recommendedTierHighlightTag: "_686cf09df72934da-recommendedTierHighlightTag",
+    perkPreviewImage: "_686cf09df72934da-perkPreviewImage",
+};

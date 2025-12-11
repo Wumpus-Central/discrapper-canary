@@ -1,0 +1,16 @@
+e.exports = {
+    root: "_7f7273e3e762eb9d-root",
+    nativePicker: "_7f7273e3e762eb9d-nativePicker",
+    channelSelector: "_7f7273e3e762eb9d-channelSelector",
+    confirmStep: "_7f7273e3e762eb9d-confirmStep",
+    footer: "_7f7273e3e762eb9d-footer",
+    footerContent: "_7f7273e3e762eb9d-footerContent",
+    header: "_7f7273e3e762eb9d-header",
+    segmentedControl: "_7f7273e3e762eb9d-segmentedControl",
+    segmentedControlOption: "_7f7273e3e762eb9d-segmentedControlOption",
+    content: "_7f7273e3e762eb9d-content",
+    rightButtonGroup: "_7f7273e3e762eb9d-rightButtonGroup",
+    channelSelectorComponent: "_7f7273e3e762eb9d-channelSelectorComponent",
+    withFooter: "_7f7273e3e762eb9d-withFooter",
+    upsellRibbonContainer: "_7f7273e3e762eb9d-upsellRibbonContainer",
+};

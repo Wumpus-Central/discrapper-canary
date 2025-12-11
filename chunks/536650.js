@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(783097),
     _ = n(772606),
     m = n(488977),
-    h = n(42659);
+    h = n(438959);
 let g = 20;
 function E(e, t, n) {
     return t === n ? 1 : (0, s.clamp)((e - t) / (n - t), 0, 1);
@@ -38,7 +38,7 @@ function O(e) {
         N = i.useRef(null),
         P = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOW).hex(),
         R = (0, d.ZP)("number" == typeof O ? "" : O, null != P ? P : ""),
-        D = i.useMemo(() => {
+        w = i.useMemo(() => {
             var e, t;
             return null !=
                 (t =
@@ -54,7 +54,7 @@ function O(e) {
                 ? t
                 : R;
         }, [R, I]),
-        w = y(T),
+        D = y(T),
         x = y(C),
         L = i.useCallback(() => {
             var e, t, n;
@@ -62,7 +62,7 @@ function O(e) {
                 i = T.current,
                 a = A.current,
                 o = null == N ? void 0 : N.current,
-                l = parseInt(null != (e = null == w ? void 0 : w.height) ? e : ""),
+                l = parseInt(null != (e = null == D ? void 0 : D.height) ? e : ""),
                 c = parseInt(null != (t = null == x ? void 0 : x.height) ? t : "");
             if (null != r && null != i && null != a && !isNaN(l) && !isNaN(c)) {
                 let e = null != (n = r.scrollTop) ? n : 0,
@@ -75,12 +75,12 @@ function O(e) {
                     (i.style.backgroundColor = "color-mix(in oklab,"
                         .concat(R, " ")
                         .concat((1 - p) * 100, "%, ")
-                        .concat(D, ")")),
+                        .concat(w, ")")),
                     (a.style.opacity = "".concat(b(0, 1, p))),
                     (a.style.transform = "translateY(".concat(b(l / 4, 0, p), "px)")),
                     null != o && (o.style.opacity = "".concat(b(1, 0, p)));
             }
-        }, [D, R, null == x ? void 0 : x.height, I, v, null == w ? void 0 : w.height]);
+        }, [w, R, null == x ? void 0 : x.height, I, v, null == D ? void 0 : D.height]);
     return (
         i.useEffect(() => {
             L();

@@ -11,7 +11,7 @@ var r,
     f = n(823379),
     p = n(754103),
     _ = n(388032),
-    m = n(189068);
+    m = n(94627);
 function h(e, t, n) {
     return (
         t in e
@@ -167,8 +167,8 @@ let v = "US",
     N = (0, d.hQ)(),
     P = (0, d.hQ)(),
     R = (0, d.hQ)(),
-    D = (0, d.hQ)(),
     w = (0, d.hQ)(),
+    D = (0, d.hQ)(),
     x = (0, d.hQ)(),
     L = (0, d.hQ)();
 var j = (function (e) {
@@ -276,7 +276,7 @@ let k = {
     }),
     F = (e) => ({
         name: "line2",
-        id: D,
+        id: w,
         title: () => _.intl.string(_.t.i2Z0gI),
         placeholder: () => _.intl.string(_.t.fKLoNo),
         autoComplete: "address-line2",
@@ -296,7 +296,7 @@ let k = {
     }),
     V = (e) => ({
         name: "city",
-        id: w,
+        id: D,
         title: () => _.intl.string(_.t.bUSWlw),
         autoComplete: "address-level2",
         placeholder: () => _.intl.string(_.t["5rRx31"]),

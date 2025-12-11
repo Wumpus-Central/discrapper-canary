@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => j,
-    Z: () => _,
+    Z: () => v,
 });
 var r = n(54381),
     i = n(473749),
@@ -13,11 +13,11 @@ var r = n(54381),
     u = n(346163),
     g = n(271267),
     m = n(320893),
-    p = n(81509),
-    f = n(662379),
-    h = n(60533),
-    b = n(581050),
-    x = n(169400);
+    f = n(81509),
+    p = n(662379),
+    b = n(60533),
+    h = n(581050),
+    x = n(14562);
 function j(e) {
     let { onboardingMarketing: t, onboardingMarketingError: n } = e,
         i = (e) => {
@@ -26,8 +26,8 @@ function j(e) {
                 children: [(0, r.jsx)(a.izJ, { className: x.sectionDivider }), t],
             });
         },
-        l = (0, r.jsx)(i, { children: (0, r.jsx)(f.Z, {}) }, b.q.HOW_IT_WORKS),
-        s = (0, r.jsx)(i, { children: (0, r.jsx)(m.Z, {}) }, b.q.BENEFITS);
+        l = (0, r.jsx)(i, { children: (0, r.jsx)(p.Z, {}) }, h.q.HOW_IT_WORKS),
+        s = (0, r.jsx)(i, { children: (0, r.jsx)(m.Z, {}) }, h.q.BENEFITS);
     return null != n || (null == t ? void 0 : t.sections) == null
         ? (0, r.jsxs)(r.Fragment, {
               children: [l, s],
@@ -35,26 +35,26 @@ function j(e) {
         : (0, r.jsx)(r.Fragment, {
               children: t.sections.map((e) => {
                   switch (e.type) {
-                      case b.q.HOW_IT_WORKS:
+                      case h.q.HOW_IT_WORKS:
                           return l;
-                      case b.q.BENEFITS:
+                      case h.q.BENEFITS:
                           return s;
-                      case b.q.OTHER_CREATORS:
+                      case h.q.OTHER_CREATORS:
                           return (0, r.jsx)(
                               i,
-                              { children: (0, r.jsx)(p.Z, { highlightedCreators: e.creators }) },
-                              b.q.OTHER_CREATORS,
+                              { children: (0, r.jsx)(f.Z, { highlightedCreators: e.creators }) },
+                              h.q.OTHER_CREATORS,
                           );
                   }
               }),
           });
 }
-function _(e) {
+function v(e) {
     let { guild: t } = e,
         n = (0, u.Z)(t),
-        { eligibilityLoading: m, eligibilityError: p, eligibility: f } = n,
-        b = (0, c.j)(f),
-        { isLoading: _, error: v, creatorMonetizationOnboardingMarketing: O } = (0, d.Z)(t.id);
+        { eligibilityLoading: m, eligibilityError: f, eligibility: p } = n,
+        h = (0, c.j)(p),
+        { isLoading: v, error: O, creatorMonetizationOnboardingMarketing: C } = (0, d.Z)(t.id);
     return (i.useEffect(() => {
         (0, o.k)(t.id);
     }, [t.id]),
@@ -66,19 +66,19 @@ function _(e) {
                 guild_id: t.id,
                 is_owner: n.isGuildOwner,
                 is_eligible: n.eligibleForMonetization,
-                ineligible_reasons: b,
+                ineligible_reasons: h,
             },
         },
-        { disableTrack: null == t.id || null == f },
+        { disableTrack: null == t.id || null == p },
     ),
-    m || null == f || _)
+    m || null == p || v)
         ? (0, r.jsx)(a.$jN, {})
-        : f.actionRequired
-          ? (0, r.jsx)(h.Z, { guild: t })
-          : null != p
+        : p.actionRequired
+          ? (0, r.jsx)(b.Z, { guild: t })
+          : null != f
             ? (0, r.jsx)(a.M14, {
                   type: "critical",
-                  children: p.message,
+                  children: f.message,
               })
             : (0, r.jsxs)("div", {
                   className: x.container,
@@ -88,8 +88,8 @@ function _(e) {
                           monetizationEligibility: n,
                       }),
                       (0, r.jsx)(j, {
-                          onboardingMarketing: O,
-                          onboardingMarketingError: v,
+                          onboardingMarketing: C,
+                          onboardingMarketingError: O,
                       }),
                   ],
               });

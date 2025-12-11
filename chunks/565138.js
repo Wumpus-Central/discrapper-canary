@@ -16,7 +16,7 @@ var r,
     g = n(451478),
     E = n(956664),
     b = n(153066),
-    y = n(965005);
+    y = n(58776);
 function O(e, t, n) {
     return (
         t in e
@@ -165,7 +165,7 @@ class R extends a.PureComponent {
                 lossless: N,
                 iconSize: R,
             } = n,
-            D = T(n, [
+            w = T(n, [
                 "guild",
                 "className",
                 "showBadge",
@@ -185,7 +185,7 @@ class R extends a.PureComponent {
                 "lossless",
                 "iconSize",
             ]),
-            w = P[c],
+            D = P[c],
             x = null != m ? f.P3F : "div",
             L = (0, h.gM)(r);
         return (0, i.jsxs)(
@@ -201,12 +201,12 @@ class R extends a.PureComponent {
                         "aria-hidden": A,
                         style:
                             null == r.icon
-                                ? v({ fontSize: (null != (t = w[L.length]) ? t : w[w.length - 1]) * d }, u)
+                                ? v({ fontSize: (null != (t = D[L.length]) ? t : D[D.length - 1]) * d }, u)
                                 : u,
                         onClick: null != g || null == m ? void 0 : m,
                         tabIndex: S,
                     },
-                    D,
+                    w,
                 ),
                 {
                     children: [this.renderAcronym(), this.renderBadge()],
@@ -241,7 +241,7 @@ class R extends a.PureComponent {
             : this.renderTooltip();
     }
 }
-let D = c.ZP.connectStores([g.Z], (e) => {
+let w = c.ZP.connectStores([g.Z], (e) => {
     let { guild: t, animate: n, iconSrc: r, style: i, size: a, iconSize: o, lossless: s } = e;
     return (
         null == r &&
@@ -252,13 +252,13 @@ let D = c.ZP.connectStores([g.Z], (e) => {
         { style: I(v({}, i), { backgroundImage: (0, E.rv)(r) }) }
     );
 })((0, p.N)((e) => (0, i.jsx)(R, v({}, e))));
-class w extends (r = a.PureComponent) {
+class D extends (r = a.PureComponent) {
     render() {
-        return (0, i.jsx)(D, v({}, this.props));
+        return (0, i.jsx)(w, v({}, this.props));
     }
 }
-O(w, "Sizes", A),
-    O(w, "defaultProps", {
+O(D, "Sizes", A),
+    O(D, "defaultProps", {
         size: A.LARGE,
         textScale: 1,
         showBadge: !1,
@@ -268,4 +268,4 @@ O(w, "Sizes", A),
         badgeStrokeColor: u.Z.unsafe_rawColors.WHITE_500.css,
         animate: !1,
     });
-let x = w;
+let x = D;

@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(981631),
     b = n(474936),
     y = n(231338),
-    O = n(315);
+    O = n(455006);
 function v(e, t) {
     return e in t;
 }
@@ -32,8 +32,8 @@ function S(e) {
             purchaseType: N,
             selectedSku: P,
             enablePremiumBrandRefresh: R,
-            isDisplayingWowMomentConfirmation: D,
-            isPremiumGroupPurchase: w,
+            isDisplayingWowMomentConfirmation: w,
+            isPremiumGroupPurchase: D,
         } = (0, h.JL)(),
         { isGift: x, selectedGiftStyle: L, giftRecipient: j } = (0, m.wD)(),
         M = (null == P ? void 0 : P.productLine) === E.POd.COLLECTIBLES,
@@ -87,10 +87,10 @@ function S(e) {
                           giftRecipient: j,
                           isEligibleForTrial: V,
                           enablePremiumBrandRefresh: R,
-                          isDisplayingWowMomentConfirmation: D,
-                          isPremiumGroupPurchase: w,
+                          isDisplayingWowMomentConfirmation: w,
+                          isPremiumGroupPurchase: D,
                       }))),
             e
         );
-    }, [L, S, A, n, C, I, T, V, W, U, B, G, N, x, j, R, D, w]);
+    }, [L, S, A, n, C, I, T, V, W, U, B, G, N, x, j, R, w, D]);
 }

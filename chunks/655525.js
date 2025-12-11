@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(481060),
     l = n(266454),
     c = n(388032),
-    u = n(400963);
+    u = n(95735);
 let d = 14;
 function f() {
     return (0, l.zu)(o.z.BOGO_2025_NITRO_TAB_BADGE)

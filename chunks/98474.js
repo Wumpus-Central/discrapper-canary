@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(768581),
     _ = n(176354),
     m = n(675654),
-    h = n(42868);
+    h = n(700700);
 function g(e, t, n) {
     return (
         t in e
@@ -74,8 +74,8 @@ function I(e) {
         [C, A] = i.useState(0),
         [N, P] = i.useState(null),
         { confettiCanvas: R } = i.useContext(u.h),
-        D = (0, a.uR)(R, N),
-        w = i.useMemo(
+        w = (0, a.uR)(R, N),
+        D = i.useMemo(
             () => [
                 {
                     src:
@@ -132,7 +132,7 @@ function I(e) {
         i.useEffect(() => {
             I > 0 &&
                 C > 0 &&
-                D.createConfetti(
+                w.createConfetti(
                     y(E({}, m.We), {
                         position: {
                             type: "static",
@@ -143,12 +143,12 @@ function I(e) {
                         },
                     }),
                 );
-        }, [D, I, C]),
+        }, [w, I, C]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(a.Ji, {
                     ref: P,
-                    sprites: w,
+                    sprites: D,
                     colors: S,
                     spriteWidth: m.Ko,
                     spriteHeight: m.Ko,

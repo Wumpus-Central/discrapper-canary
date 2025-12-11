@@ -4,7 +4,7 @@ n(473749);
 var l = n(481060),
     i = n(565138),
     a = n(388032),
-    s = n(99563);
+    s = n(350544);
 let o = (e) => {
     let { guild: t } = e;
     return (0, r.jsxs)("div", {

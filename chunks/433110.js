@@ -1,0 +1,15 @@
+e.exports = {
+    container: "_34940b51cd19b69f-container",
+    topRow: "_34940b51cd19b69f-topRow",
+    memberNameAndTagContainer: "_34940b51cd19b69f-memberNameAndTagContainer",
+    memberNameContainer: "_34940b51cd19b69f-memberNameContainer",
+    memberNameTextContainer: "_34940b51cd19b69f-memberNameTextContainer",
+    memberClanTag: "_34940b51cd19b69f-memberClanTag",
+    memberClanTagContainer: "_34940b51cd19b69f-memberClanTagContainer",
+    memberAvatar: "_34940b51cd19b69f-memberAvatar",
+    closeAction: "_34940b51cd19b69f-closeAction",
+    bottomRow: "_34940b51cd19b69f-bottomRow",
+    bottomRowAction: "_34940b51cd19b69f-bottomRowAction",
+    innerBottomRowAction: "_34940b51cd19b69f-innerBottomRowAction",
+    bottomRowActionDisabled: "_34940b51cd19b69f-bottomRowActionDisabled",
+};

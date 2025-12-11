@@ -1,22 +1,22 @@
-n.d(e, { default: () => y }), n(388685);
-var a = n(54381),
-    i = n(473749),
-    l = n(793030),
-    r = n(442837),
-    o = n(379649),
-    s = n(481060),
-    d = n(493773),
-    u = n(579806),
-    c = n(594190),
-    m = n(77498),
-    _ = n(626135),
-    v = n(837268),
-    h = n(371651),
-    g = n(981631),
-    p = n(388032),
-    x = n(361902);
-function y(t) {
-    let { onClose: e, transitionState: n, clientSettingType: y, gameId: f } = t,
+a.d(e, { default: () => f }), a(388685);
+var n = a(54381),
+    i = a(473749),
+    l = a(793030),
+    r = a(442837),
+    o = a(379649),
+    s = a(481060),
+    d = a(493773),
+    u = a(579806),
+    c = a(594190),
+    m = a(77498),
+    _ = a(626135),
+    v = a(837268),
+    h = a(371651),
+    g = a(981631),
+    p = a(388032),
+    x = a(23898);
+function f(t) {
+    let { onClose: e, transitionState: a, clientSettingType: f, gameId: y } = t,
         [k, C] = i.useState("unreported"),
         [b, w] = i.useState(""),
         [S, j] = i.useState(!1),
@@ -25,7 +25,7 @@ function y(t) {
         [F, R] = i.useState(!1),
         D = (0, r.e7)([m.Z, c.ZP], () => {
             var t;
-            let e = null != f ? f : null == (t = c.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id;
+            let e = null != y ? y : null == (t = c.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id;
             return null == e ? null : m.Z.getDetectableGame(e);
         }),
         E = (0, r.e7)([h.default], () => {
@@ -54,7 +54,7 @@ function y(t) {
             }));
         }, []),
         O = i.useCallback(async () => {
-            var t, n, a;
+            var t, a, n;
             if ("unreported" === k && 0 === b.length) {
                 P(!0), await (0, o._v)(100), P(!1), R(!0);
                 return;
@@ -63,19 +63,19 @@ function y(t) {
                 await _.default.track(g.rMx.OVERLAY_DISABLED_SURVEY, {
                     reason: k,
                     comment: b,
-                    client_setting_type: y,
+                    client_setting_type: f,
                     application_id: null == D ? void 0 : D.id,
                     application_name: null == D ? void 0 : D.name,
                     most_recent_overlay_render_method: E,
                     hardware_display_count:
                         null !=
-                        (a = await (null === u.Z ||
+                        (n = await (null === u.Z ||
                         void 0 === u.Z ||
-                        null == (n = u.Z.hardware) ||
-                        null == (t = n.getDisplayCount)
+                        null == (a = u.Z.hardware) ||
+                        null == (t = a.getDisplayCount)
                             ? void 0
-                            : t.call(n)))
-                            ? a
+                            : t.call(a)))
+                            ? n
                             : null,
                 }),
                 await (0, o._v)(1000),
@@ -83,7 +83,7 @@ function y(t) {
                 M(!0),
                 await (0, o._v)(1500),
                 e();
-        }, [k, b, y, null == D ? void 0 : D.id, null == D ? void 0 : D.name, E, e]);
+        }, [k, b, f, null == D ? void 0 : D.id, null == D ? void 0 : D.name, E, e]);
     (0, d.ZP)(() => {
         _.default.track(g.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
     });
@@ -106,26 +106,26 @@ function y(t) {
         ],
         [e, S, Z, O, H],
     );
-    return (0, a.jsxs)(l.Modal, {
+    return (0, n.jsxs)(l.Modal, {
         onClose: e,
-        transitionState: n,
+        transitionState: a,
         title: p.intl.string(p.t["9JKzxe"]),
         subtitle: p.intl.string(p.t["2yjnmb"]),
         actions: U,
         children: [
-            (0, a.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 children: [
-                    (0, a.jsx)(s.UkV, {
+                    (0, n.jsx)(s.UkV, {
                         isShaking: H,
                         intensity: 1,
                         className: x.radioHeader,
-                        children: (0, a.jsx)(s.Text, {
+                        children: (0, n.jsx)(s.Text, {
                             variant: "text-sm/semibold",
                             color: F ? "text-feedback-critical" : "text-muted",
                             children: p.intl.string(p.t.yhUvdd),
                         }),
                     }),
-                    (0, a.jsx)(s.FXm, {
+                    (0, n.jsx)(s.FXm, {
                         value: k,
                         options: L,
                         onChange: (t) => {
@@ -134,16 +134,16 @@ function y(t) {
                     }),
                 ],
             }),
-            (0, a.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 className: x.commentContainer,
                 children: [
-                    (0, a.jsx)(s.Text, {
+                    (0, n.jsx)(s.Text, {
                         variant: "text-sm/semibold",
                         color: "text-muted",
                         className: x.commentHeader,
                         children: p.intl.string(p.t.LYnrhc),
                     }),
-                    (0, a.jsx)(s.Kx8, {
+                    (0, n.jsx)(s.Kx8, {
                         autosize: !0,
                         value: b,
                         maxLength: 1000,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(354459),
     y = n(474936),
     O = n(388032),
-    v = n(572065);
+    v = n(88783);
 function S(e, t, n) {
     return (
         t in e
@@ -113,18 +113,18 @@ function R(e) {
         ],
     });
 }
-function D(e) {
+function w(e) {
     var { hideBadges: t = !1, stream: n, location: u } = e,
         m = A(e, ["hideBadges", "stream", "location"]);
     let v = i.useRef(null),
         { analyticsLocations: S, parentAnalyticsLocation: T } = (0, s.ZP)(),
         N = (0, a.e7)([_.default], () => h.ZP.isPremium(_.default.getCurrentUser(), y.PremiumTypes.TIER_1)),
-        D = (0, a.e7)([p.Z], () => p.Z.getChannel(null == n ? void 0 : n.channelId)),
-        w = i.useMemo(() => (null != n ? [n] : []), [n]),
+        w = (0, a.e7)([p.Z], () => p.Z.getChannel(null == n ? void 0 : n.channelId)),
+        D = i.useMemo(() => (null != n ? [n] : []), [n]),
         x = i.useCallback(() => {
-            null != D && (0, f.Z)(D.getGuildId(), D.id, S);
-        }, [D, S]);
-    if (null == n || null == D) return null;
+            null != w && (0, f.Z)(w.getGuildId(), w.id, S);
+        }, [w, S]);
+    if (null == n || null == w) return null;
     let L = P;
     return (
         t || N || (L = R),
@@ -135,9 +135,9 @@ function D(e) {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(g.Z, {
                     children: (0, r.jsx)(d.Z, {
-                        channel: D,
+                        channel: w,
                         currentUser: _.default.getCurrentUser(),
-                        activeStreams: w,
+                        activeStreams: D,
                         onClose: t,
                         showReportOption: !0,
                         handleGoLive: x,

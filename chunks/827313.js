@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(531301),
     u = n(228168),
     d = n(388032),
-    f = n(925568);
+    f = n(42959);
 function p(e) {
     let { userId: t, isVisible: n, onOpenProfile: i } = e,
         { note: p } = (0, c.Z)(t),

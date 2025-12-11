@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(445924),
     _ = n(654904),
     m = n(486324),
-    h = n(86698);
+    h = n(802031);
 function g(e, t, n) {
     return (
         t in e
@@ -83,15 +83,15 @@ function v(e) {
         } = e,
         N = i.useRef(null),
         { analyticsLocations: P, newestAnalyticsLocation: R } = (0, c.ZP)(),
-        D = (0, s.e7)([d.Z], () => d.Z.getStatus(t.id)),
-        w = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
+        w = (0, s.e7)([d.Z], () => d.Z.getStatus(t.id)),
+        D = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
         x = (0, r.jsx)(O, {
             src: g,
             avatarDecoration: b,
             imageClassName: o()(I, { [h.overlay]: !T }),
             size: l.EFr.SIZE_80,
             "aria-label": t.username,
-            status: D,
+            status: w,
             statusTooltip: !1,
             statusBackdropColor: null != S ? (0, l.QFD)(v) : void 0,
         });
@@ -100,7 +100,7 @@ function v(e) {
               className: h.avatar,
               children: x,
           })
-        : w
+        : D
           ? (0, r.jsx)(l.yRy, {
                 targetElementRef: N,
                 renderPopout: (e) => {

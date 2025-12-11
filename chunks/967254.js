@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(800530),
     y = n(981631),
     O = n(388032),
-    v = n(712243);
+    v = n(16583);
 function S(e, t, n) {
     return (
         t in e
@@ -160,13 +160,13 @@ let A = (e) => {
             children: (0, m.XX)(t),
         });
     },
-    D = () =>
+    w = () =>
         (0, r.jsx)(l.Text, {
             variant: "text-xs/bold",
             className: v.newBadge,
             children: O.intl.string(O.t.QKMRC4),
         }),
-    w = (e) => {
+    D = (e) => {
         let { classification: t } = e,
             { id: a, description: s } = t,
             c = f.default.extractTimestamp(a),
@@ -219,7 +219,7 @@ let A = (e) => {
                 children: (0, r.jsxs)("div", {
                     className: v.descriptionContainer,
                     children: [
-                        u ? (0, r.jsx)(D, {}) : (0, r.jsx)(R, { timestamp: c }),
+                        u ? (0, r.jsx)(w, {}) : (0, r.jsx)(R, { timestamp: c }),
                         (0, r.jsx)(l.Heading, {
                             variant: "heading-lg/normal",
                             children: d,
@@ -268,7 +268,7 @@ let A = (e) => {
                                     width: "100%",
                                 },
                             }),
-                            m.length > 0 && m.map((e) => (0, r.jsx)(w, { classification: e }, e.id)),
+                            m.length > 0 && m.map((e) => (0, r.jsx)(D, { classification: e }, e.id)),
                             m.length < n.length &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [

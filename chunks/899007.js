@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(981631),
     v = n(474936),
     S = n(671955),
-    I = n(66856);
+    I = n(108096);
 function T(e, t, n) {
     return (
         t in e
@@ -83,8 +83,8 @@ function R(e) {
             themeType: T,
             animateOnHover: A,
             onOpenProfile: R,
-            className: D,
-            previewStatus: w,
+            className: w,
+            previewStatus: D,
         } = e,
         { theme: x } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
@@ -97,9 +97,9 @@ function R(e) {
             status: (0, c.Z)(G) ? O.Skl.STREAMING : p.Z.getStatus(t.id),
             isMobileOnline: p.Z.isMobileOnline(t.id),
         })),
-        F = void 0 !== w ? w : Z,
+        F = void 0 !== D ? D : Z,
         V = [S.l.MODAL, S.l.MODAL_V2].includes(T) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        H = o()(I.avatar, D),
+        H = o()(I.avatar, w),
         {
             avatarDecorationSrc: Y,
             avatarSrc: W,

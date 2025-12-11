@@ -1,4 +1,349 @@
-e.exports = {
-    editableGdmIcon: "editableGdmIcon_ec5bef",
-    editableGdmIconIndicator: "editableGdmIconIndicator_ec5bef",
-};
+n.d(t, { Z: () => G }), n(388685);
+var r = n(54381),
+    i = n(473749),
+    l = n(120356),
+    a = n.n(l),
+    o = n(442837),
+    s = n(481060),
+    c = n(493683),
+    u = n(239091),
+    d = n(146773),
+    f = n(595519),
+    h = n(619915),
+    p = n(622822),
+    g = n(201895),
+    b = n(873696),
+    m = n(66999),
+    y = n(22082),
+    O = n(665906),
+    v = n(592125),
+    j = n(430824),
+    C = n(496675),
+    x = n(306680),
+    E = n(9156),
+    S = n(594174),
+    I = n(109446),
+    _ = n(98597),
+    P = n(648501),
+    N = n(473403),
+    Z = n(304471),
+    w = n(981631),
+    T = n(647086),
+    A = n(642915);
+function R(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function D(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                R(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function M(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+class L extends _.ZP {
+    componentWillUnmount() {
+        this.resetTextChannelPopoutTimers();
+    }
+    resetTextChannelPopoutTimers() {
+        clearTimeout(this.enterTimer), clearTimeout(this.exitTimer);
+    }
+    renderChannelInfo() {
+        let { channelInfo: e } = this.props;
+        return null == e
+            ? null
+            : (0, r.jsx)("div", {
+                  className: A.channelInfo,
+                  children: e,
+              });
+    }
+    render() {
+        let {
+                channel: e,
+                guild: t,
+                selected: n,
+                muted: i,
+                unread: l,
+                hasActiveThreads: o,
+                hasMoreActiveThreads: c,
+                mentionCount: u,
+                connectChannelDropTarget: d,
+                connectChannelDragSource: f,
+                connectDragPreview: h,
+                canReorderChannel: p,
+                isSubscriptionGated: m,
+                isFavoriteSuggestion: y,
+                subtitle: O,
+                forceTopLevelThread: v,
+                embeddedApps: j,
+                resolvedUnreadSetting: C,
+                withGuildIcon: x,
+                enableActivities: E,
+            } = this.props,
+            S = E && null != j && j.length > 0,
+            I = (0, b.D)(O),
+            _ = (0, r.jsx)("li", {
+                className: a()(this.getClassName(), {
+                    [A.disabled]: this.isDisabled(),
+                    [A.selected]: n,
+                }),
+                "data-dnd-name": e.name,
+                onMouseEnter: c || S ? this.handleMouseEnter : void 0,
+                onMouseLeave: c || S ? this.handleMouseLeave : void 0,
+                children: (0, r.jsx)(s.yRy, {
+                    targetElementRef: this.channelItemRef,
+                    position: "right",
+                    renderPopout: this.renderPopout,
+                    onRequestClose: this.handleClosePopout,
+                    shouldShow: (c && this.state.shouldShowThreadsPopout) || (S && this.state.shouldShowActivities),
+                    children: () =>
+                        (0, r.jsxs)(N.ZP, {
+                            ref: this.channelItemRef,
+                            className: A.iconVisibility,
+                            channel: e,
+                            guild: t,
+                            selected: !y && n,
+                            muted: i,
+                            unread: l,
+                            mentionCount: u,
+                            hasActiveThreads: o,
+                            subtitle: null == I ? void 0 : I.subtitle,
+                            subtitleColor: null == I ? void 0 : I.color,
+                            onMouseDown: this.handleMouseDown,
+                            onContextMenu: this.handleContextMenu,
+                            connectDragPreview: p ? h : null,
+                            isFavoriteSuggestion: y,
+                            channelTypeOverride: v ? w.d4z.GUILD_TEXT : void 0,
+                            resolvedUnreadSetting: C,
+                            withGuildIcon: x,
+                            "aria-label": (0, g.ZP)({
+                                channel: e,
+                                unread: l,
+                                mentionCount: u,
+                                isSubscriptionGated: m,
+                            }),
+                            children: [
+                                y &&
+                                    (0, r.jsxs)(r.Fragment, {
+                                        children: [
+                                            this.renderAcceptSuggestionButton(),
+                                            this.renderRemoveSuggestionButton(),
+                                        ],
+                                    }),
+                                !y &&
+                                    (0, r.jsxs)(r.Fragment, {
+                                        children: [
+                                            this.renderChannelInfo(),
+                                            this.renderInviteButton(),
+                                            this.renderEditButton(),
+                                        ],
+                                    }),
+                            ],
+                        }),
+                }),
+            });
+        return p ? d(f(_)) : _;
+    }
+    constructor(...e) {
+        super(...e),
+            R(this, "state", {
+                shouldShowThreadsPopout: !1,
+                shouldShowActivities: !1,
+            }),
+            R(this, "channelItemRef", i.createRef()),
+            R(this, "enterTimer", 0),
+            R(this, "exitTimer", 0),
+            R(this, "handleMouseEnter", () => {
+                (this.props.channelIsContentGated && null == this.props.embeddedApps) ||
+                    (this.resetTextChannelPopoutTimers(),
+                    (this.enterTimer = setTimeout(() => {
+                        null != this.props.embeddedApps && this.props.embeddedApps.length > 0
+                            ? this.setState({ shouldShowActivities: !0 })
+                            : this.props.channelIsContentGated || this.setState({ shouldShowThreadsPopout: !0 });
+                    }, 200)));
+            }),
+            R(this, "handleMouseLeave", () => {
+                this.resetTextChannelPopoutTimers(),
+                    (this.exitTimer = setTimeout(() => {
+                        this.state.shouldShowActivities && this.setState({ shouldShowActivities: !1 }),
+                            this.state.shouldShowThreadsPopout && this.setState({ shouldShowThreadsPopout: !1 });
+                    }, 250));
+            }),
+            R(this, "handleThreadsPopoutClose", () => {
+                this.resetTextChannelPopoutTimers(), this.setState({ shouldShowThreadsPopout: !1 });
+            }),
+            R(this, "handleActivitiesPopoutClose", () => {
+                this.resetTextChannelPopoutTimers(), this.setState({ shouldShowActivities: !1 });
+            }),
+            R(this, "handleClosePopout", () => {
+                this.state.shouldShowActivities && this.handleActivitiesPopoutClose(),
+                    this.state.shouldShowThreadsPopout && this.handleThreadsPopoutClose();
+            }),
+            R(this, "handleMouseDown", () => {
+                this.handleActivitiesPopoutClose(), this.handleThreadsPopoutClose();
+                let { channel: e } = this.props,
+                    t = e.getGuildId();
+                c.Z.preload(null != t ? t : w.ME, e.id);
+            }),
+            R(this, "renderPopout", (e) => {
+                let { channel: t, sorting: n, embeddedApps: i, channelIsContentGated: l } = this.props,
+                    { shouldShowActivities: a } = this.state;
+                return t.isModeratorReportChannel() || l
+                    ? null
+                    : null != i && i.length > 0 && a && !n
+                      ? (0, r.jsx)(Z.Z, {
+                            onAction: this.handleActivitiesPopoutClose,
+                            channel: t,
+                        })
+                      : (0, r.jsx)(I.Z, M(D({}, e), { channel: this.props.channel }));
+            }),
+            R(this, "handleContextMenu", (e) => {
+                let { channel: t } = this.props;
+                if (t.type === w.d4z.GROUP_DM)
+                    return void (0, u.jW)(e, async () => {
+                        let { default: e } = await Promise.all([n.e("79695"), n.e("25421")]).then(n.bind(n, 354741));
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                M(D({}, n), {
+                                    channel: t,
+                                    selected: !0,
+                                }),
+                            );
+                    });
+                if (t.type === w.d4z.DM) {
+                    let i = S.default.getUser(t.getRecipientId());
+                    null != i &&
+                        (0, u.jW)(e, async () => {
+                            let { default: e } = await Promise.all([
+                                n.e("79695"),
+                                n.e("66165"),
+                                n.e("56826"),
+                                n.e("93896"),
+                            ]).then(n.bind(n, 131404));
+                            return (n) =>
+                                (0, r.jsx)(
+                                    e,
+                                    M(D({}, n), {
+                                        user: i,
+                                        channel: t,
+                                        showModalItems: !1,
+                                    }),
+                                );
+                        });
+                    return;
+                }
+                if (t.isModeratorReportChannel())
+                    return void (0, u.jW)(e, async () => {
+                        let { default: e } = await n.e("86715").then(n.bind(n, 466676));
+                        return (n) => (0, r.jsx)(e, M(D({}, n), { channel: t }));
+                    });
+                let i = j.Z.getGuild(t.getGuildId());
+                null != i &&
+                    (0, u.jW)(e, async () => {
+                        let { default: e } = await Promise.all([n.e("79695"), n.e("18320"), n.e("44011")]).then(
+                            n.bind(n, 373651),
+                        );
+                        return (n) =>
+                            (0, r.jsx)(
+                                e,
+                                M(D({}, n), {
+                                    channel: t,
+                                    guild: i,
+                                }),
+                            );
+                    });
+            });
+    }
+}
+let k = (0, d.B)(L);
+function G(e) {
+    let { channel: t, guild: n, disableSorting: i, isFavoriteCategory: l, muted: a, selected: s } = e,
+        { hasActiveThreads: c, hasMoreActiveThreads: u } = (0, O.JQ)(t),
+        d = (0, o.cj)([x.ZP], () => ({
+            unread: x.ZP.hasUnread(t.id),
+            ackMessageId: x.ZP.ackMessageId(t.id),
+            isLowImportanceMention: x.ZP.getIsMentionLowImportance(t.id),
+        })),
+        g = (0, o.e7)([E.ZP], () => E.ZP.resolveUnreadSetting(t)),
+        b = (0, o.cj)([v.Z, C.Z], () => {
+            let e = v.Z.getChannel(t.parent_id);
+            return {
+                canManageChannel: C.Z.can(w.Plq.MANAGE_CHANNELS, t),
+                canReorderChannel:
+                    !0 !== i &&
+                    (n.id === T._ ||
+                        (null != e ? C.Z.can(w.Plq.MANAGE_CHANNELS, e) : C.Z.can(w.Plq.MANAGE_CHANNELS, n))),
+            };
+        }),
+        j = (0, o.e7)([y.Z], () => y.Z.shouldIndicateNewChannel(n.id, t.id)),
+        { needSubscriptionToAccess: S, isSubscriptionGated: I } = (0, m.Z)(t.id),
+        _ = (0, o.e7)([E.ZP], () => E.ZP.isFavorite(n.id, t.id)),
+        N = (0, p.$5)(t),
+        Z = (0, f.NX)(t.id),
+        A = (0, P.Z)({
+            channel: t,
+            isChannelCollapsed: !1,
+            isChannelSelected: s,
+            isSubscriptionGated: I,
+            needSubscriptionToAccess: S,
+            isNewChannel: j,
+            muted: a,
+            enableActivities: Z,
+            resolvedUnreadSetting: g,
+        }),
+        R = (0, h.ZP)(t);
+    return (0, r.jsx)(
+        k,
+        M(D({}, d, b, e), {
+            hasActiveThreads: c,
+            hasMoreActiveThreads: u,
+            isSubscriptionGated: I,
+            needSubscriptionToAccess: S,
+            isNewChannel: j && e.canBeNewChannel,
+            isFavoriteSuggestion: l && !_,
+            channelIsContentGated: N,
+            channelInfo: A,
+            embeddedApps: R,
+            resolvedUnreadSetting: g,
+            hasChannelInfo: null != A,
+            enableActivities: Z,
+        }),
+    );
+}

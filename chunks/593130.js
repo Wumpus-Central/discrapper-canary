@@ -16,7 +16,7 @@ var r = n(54381),
     v = n(124368),
     x = n(981631),
     p = n(388032),
-    b = n(715);
+    b = n(627155);
 function Z(e) {
     let { channel: t, className: n, onClose: a, context: Z } = e,
         O = (0, o.e7)([u.Z], () => u.Z.can(x.Plq.READ_MESSAGE_HISTORY, t)),

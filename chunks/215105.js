@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(228168),
     O = n(295907),
     v = n(388032),
-    S = n(36190);
+    S = n(756065);
 let I = (0, f.createChannelRecord)({
         id: "1",
         type: s.d.DM,
@@ -71,8 +71,8 @@ function A(e) {
             onClose: N,
             entry: P,
         } = e,
-        { resetInteraction: R, setInteractionToast: D } = (0, g.Xo)(),
-        { primaryColor: w } = (0, b.z)(),
+        { resetInteraction: R, setInteractionToast: w } = (0, g.Xo)(),
+        { primaryColor: D } = (0, b.z)(),
         [x, L] = i.useState(""),
         [j, M] = i.useState((0, u.JM)(x)),
         k = i.useRef(!1),
@@ -99,7 +99,7 @@ function A(e) {
                 sourceType: s,
                 sourceDetails: f,
             });
-            D(null);
+            w(null);
             try {
                 await (0, h.Z)({
                     userId: t.id,
@@ -110,7 +110,7 @@ function A(e) {
                     entry: P,
                 });
             } catch (e) {}
-            D(y.P.REPLY);
+            w(y.P.REPLY);
         },
         B = {
             [S.status]: s === y.n_.STATUS,
@@ -121,7 +121,7 @@ function A(e) {
         ref: U,
         onKeyDown: G,
         children: (0, r.jsx)("div", {
-            className: o()(S.container, B, { [S.customProfileTheme]: null != w }),
+            className: o()(S.container, B, { [S.customProfileTheme]: null != D }),
             children: (0, r.jsx)(d.ZP, {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,

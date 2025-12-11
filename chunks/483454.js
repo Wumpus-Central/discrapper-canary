@@ -3,7 +3,7 @@ n.d(t, {
     Q5: () => P,
     hn: () => L,
     p7: () => x,
-    wk: () => D,
+    wk: () => w,
 }),
     n(467055),
     n(388685);
@@ -25,7 +25,7 @@ var r = n(54381),
     E = n(637286),
     b = n(981631),
     y = n(231338),
-    O = n(26973);
+    O = n(998595);
 function v(e, t, n) {
     return (
         t in e
@@ -187,7 +187,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
             children: t,
         });
     },
-    D = i.memo(function (e) {
+    w = i.memo(function (e) {
         var { options: t, renderAsStandaloneElement: n, billingAddressInfo: o, internalKey: s } = e,
             l = C(e, ["options", "renderAsStandaloneElement", "billingAddressInfo", "internalKey"]);
         let c = i.useMemo(() => {
@@ -236,7 +236,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
               })
             : u;
     }),
-    w = (e) => {
+    D = (e) => {
         let {
                 step: t,
                 billingAddressInfo: n,
@@ -275,7 +275,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
                 (0, r.jsx)("div", {
                     className: s()(O.addressElementContainer, g ? O.visible : [O.hidden, O.rightToLeftEntry]),
                     children: (0, r.jsx)(
-                        D,
+                        w,
                         T(S({}, c), {
                             internalKey: p,
                             renderAsStandaloneElement: d === y.He.PAYMENT_REQUEST,
@@ -306,7 +306,7 @@ let N = [f.h8.PAYMENT_ELEMENT],
             : (0, r.jsx)(a.Elements, {
                   stripe: c,
                   options: S({}, i),
-                  children: (0, r.jsx)(w, T(S({}, n), { customPaymentMethodIdsToSourceTypes: l })),
+                  children: (0, r.jsx)(D, T(S({}, n), { customPaymentMethodIdsToSourceTypes: l })),
               });
     },
     j = ["applePay", "googlePay", "link"],

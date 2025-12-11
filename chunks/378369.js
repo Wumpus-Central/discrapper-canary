@@ -1,0 +1,21 @@
+var r = {
+    reactions: "_23977d5b7cef7361-reactions",
+    icon: "_23977d5b7cef7361-icon",
+    reactionBtn: "_23977d5b7cef7361-reactionBtn",
+    active: "_23977d5b7cef7361-active",
+    visible: "_23977d5b7cef7361-visible",
+    forceShow: "_23977d5b7cef7361-forceShow",
+    hideEmoji: "_23977d5b7cef7361-hideEmoji",
+    reaction: "_23977d5b7cef7361-reaction",
+    reactionCount: "_23977d5b7cef7361-reactionCount",
+    shakeReaction: "_23977d5b7cef7361-shakeReaction",
+    shake: "_23977d5b7cef7361-shake",
+    reactionReadOnly: "_23977d5b7cef7361-reactionReadOnly",
+    reactionMe: "_23977d5b7cef7361-reactionMe",
+    reactionInner: "_23977d5b7cef7361-reactionInner",
+    remainingReactions: "_23977d5b7cef7361-remainingReactions",
+    premiumIcon: "_23977d5b7cef7361-premiumIcon",
+    sparkles: "_23977d5b7cef7361-sparkles",
+    burstGlow: "_23977d5b7cef7361-burstGlow",
+};
+n.r((e.exports = r));

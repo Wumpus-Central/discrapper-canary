@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(518950),
     P = n(184325),
     R = n(867176),
-    D = n(355497),
-    w = n(25990),
+    w = n(355497),
+    D = n(25990),
     x = n(594174),
     L = n(572004),
     j = n(51144),
@@ -42,7 +42,7 @@ var r = n(54381),
     V = n(815660),
     H = n(801461),
     Y = n(388032),
-    W = n(378846);
+    W = n(54497);
 function K(e, t, n) {
     return (
         t in e
@@ -385,7 +385,7 @@ function er(e) {
     function p() {
         (0, f.h7j)((e) =>
             (0, r.jsx)(
-                D.default,
+                w.default,
                 Q(z({}, e), {
                     title: Y.intl.string(Y.t["3CTiKi"]),
                     children: a.hasFlag(F.xW$.MFA_SMS) ? Y.intl.string(Y.t.jrhJyo) : void 0,
@@ -553,7 +553,7 @@ function eo() {
         n = (0, A.ZP)(t.id),
         i = (0, C.Z)(n),
         a = k.co.useSetting(),
-        o = (0, c.e7)([w.Z], () => w.Z.getErrors()),
+        o = (0, c.e7)([D.Z], () => D.Z.getErrors()),
         s = null == o || null == (e = o.avatar) ? void 0 : e[0],
         { avatarSrc: u, avatarDecorationSrc: d } = (0, N.Z)({
             userId: null == t ? void 0 : t.id,

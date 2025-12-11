@@ -8,9 +8,9 @@ var i = r(120356),
     l = r(518950),
     c = r(342386),
     u = r(51144),
-    d = r(96011),
-    f = r(388032),
-    p = r(456577);
+    f = r(137427),
+    d = r(388032),
+    p = r(116741);
 let b = (e) => {
     let { recipient: t, isSuccess: r, onClose: i } = e,
         { avatarSrc: b, eventHandlers: m } = (0, l.Z)({
@@ -71,7 +71,7 @@ let b = (e) => {
                               variant: "text-md/medium",
                               className: p.error,
                               color: "text-strong",
-                              children: f.intl.format(d.default["Y/oMwY"], { userName: g }),
+                              children: d.intl.format(f.default["Y/oMwY"], { userName: g }),
                           }),
                       ],
                   })
@@ -84,7 +84,7 @@ let b = (e) => {
             (0, n.jsx)(a.Button, {
                 variant: "secondary",
                 size: "sm",
-                text: f.intl.string(f.t["g33r/P"]),
+                text: d.intl.string(d.t["g33r/P"]),
                 icon: a.kBi,
                 onClick: () => {
                     var e;

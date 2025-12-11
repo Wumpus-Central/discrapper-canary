@@ -14,7 +14,7 @@ var i = n(120356),
     _ = n(981631),
     m = n(474936),
     h = n(388032),
-    g = n(717461);
+    g = n(87911);
 let E = "https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4",
     b = 32;
 function y(e) {

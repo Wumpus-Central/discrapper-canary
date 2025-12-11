@@ -1,5 +1,5 @@
 let n;
-a.d(t, { $: () => f });
+a.d(t, { $: () => O });
 var r,
     s = a(54381),
     l = a(473749),
@@ -8,13 +8,13 @@ var r,
     c = a(622535),
     d = a(213919),
     u = a(982905),
-    _ = a(794010),
-    N = a(66037),
-    m = a(231338),
+    N = a(794010),
+    m = a(66037),
+    f = a(231338),
     p = a(436620),
     h = a(330711),
-    I = a(10416);
-function k(e, t, a) {
+    I = a(997999);
+function b(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,12 +27,12 @@ function k(e, t, a) {
         e
     );
 }
-let g = "Footer Navigation",
-    A = {
+let k = "Footer Navigation",
+    g = {
         BLURPLE: "Blurple",
         PRIMARY: "Primary",
     },
-    O = (e) => {
+    A = (e) => {
         let { colorVariant: t, animate: a } = e;
         return (0, s.jsx)("svg", {
             className: (0, u.l)(I, "footerBackground", t),
@@ -49,7 +49,7 @@ let g = "Footer Navigation",
             }),
         });
     };
-class f extends (r = l.PureComponent) {
+class O extends (r = l.PureComponent) {
     componentDidMount() {
         this.setState({
             token: (0, d.getToken)(),
@@ -93,44 +93,44 @@ class f extends (r = l.PureComponent) {
                 },
                 alt: "Download Discord",
                 className: (0, u.l)(I, "button", i),
-                href: m.am.DOWNLOAD,
+                href: f.am.DOWNLOAD,
                 children: h.Z.Messages.NAVIGATION_DOWNLOAD,
             });
-        let d = null != o ? m.$w.REGISTER_WITH_REDIRECT(o) : m.$w.REGISTER,
-            _ = h.Z.Messages.COMMON_SIGN_UP_NOW;
+        let d = null != o ? f.$w.REGISTER_WITH_REDIRECT(o) : f.$w.REGISTER,
+            N = h.Z.Messages.COMMON_SIGN_UP_NOW;
         return (
-            e && ((d = m.$w.ME), (_ = h.Z.Messages.COMMON_OPEN_DISCORD)),
+            e && ((d = f.$w.ME), (N = h.Z.Messages.COMMON_OPEN_DISCORD)),
             (0, s.jsx)(n, {
-                eventName: g,
+                eventName: k,
                 className: (0, u.l)(I, "button", this.props.variant),
                 data: {
                     linkClicked: e ? "open" : "login",
                     googleAnalytics: !0,
                 },
                 href: d,
-                children: _,
+                children: N,
             })
         );
     }
     render() {
         let { variant: e, style: t, className: r, avoidRouter: l, showWave: i } = this.props,
-            { animateBackground: d, token: _ } = this.state,
+            { animateBackground: d, token: N } = this.state,
             p = [
                 {
                     title: h.Z.Messages.NAVIGATION_PRODUCT,
                     routes: [
                         {
-                            link: m.am.DOWNLOAD,
+                            link: f.am.DOWNLOAD,
                             title: h.Z.Messages.NAVIGATION_DOWNLOAD,
                             tracking: "download",
                         },
                         {
-                            link: m.am.BRANDING,
+                            link: f.am.BRANDING,
                             title: h.Z.Messages.NAVIGATION_BRANDING,
                             tracking: "branding",
                         },
                         {
-                            link: m.am.NITRO,
+                            link: f.am.NITRO,
                             title: h.Z.Messages.NAVIGATION_NITRO,
                             tracking: "nitro",
                             external: !0,
@@ -141,24 +141,24 @@ class f extends (r = l.PureComponent) {
                     title: h.Z.Messages.NAVIGATION_DEVELOPERS,
                     routes: [
                         {
-                            link: m.am.RICH_PRESENCE,
+                            link: f.am.RICH_PRESENCE,
                             title: h.Z.Messages.NAVIGATION_RICH_PRESENCE,
                             tracking: "rich_presence",
                         },
                         {
-                            link: m.am.VERIFICATION,
+                            link: f.am.VERIFICATION,
                             title: h.Z.Messages.NAVIGATION_VERIFICATION,
                             tracking: "verification",
                             external: !0,
                         },
                         {
-                            link: m.yX.DEV_PORTAL_APPLICATIONS,
+                            link: f.yX.DEV_PORTAL_APPLICATIONS,
                             title: h.Z.Messages.NAVIGATION_APPLICATIONS,
                             tracking: "developers",
                             external: !0,
                         },
                         {
-                            link: m.yX.DEV_PORTAL_DOCUMENTATION,
+                            link: f.yX.DEV_PORTAL_DOCUMENTATION,
                             title: h.Z.Messages.NAVIGATION_DOCUMENTATION,
                             tracking: "documentation",
                             external: !0,
@@ -169,48 +169,48 @@ class f extends (r = l.PureComponent) {
                     title: h.Z.Messages.NAVIGATION_RESOURCES,
                     routes: [
                         {
-                            link: m.yX.HELP_AND_SUPPORT,
+                            link: f.yX.HELP_AND_SUPPORT,
                             title: h.Z.Messages.NAVIGATION_HELP_AND_SUPPORT,
                             tracking: "helpandsupport",
                             external: !0,
                         },
                         {
-                            link: m.am.GUIDELINES,
+                            link: f.am.GUIDELINES,
                             title: h.Z.Messages.NAVIGATION_GUIDELINES,
                             tracking: "guidelines",
                             external: !0,
                         },
                         {
-                            link: m.yX.FEEDBACK,
+                            link: f.yX.FEEDBACK,
                             title: h.Z.Messages.NAVIGATION_FEEDBACK,
                             tracking: "feedback",
                             external: !0,
                         },
                         {
-                            link: m.am.TERMS,
+                            link: f.am.TERMS,
                             title: h.Z.Messages.NAVIGATION_TERMS,
                             tracking: "terms",
                             external: !0,
                         },
                         {
-                            link: m.am.PRIVACY,
+                            link: f.am.PRIVACY,
                             title: h.Z.Messages.NAVIGATION_PRIVACY,
                             tracking: "privacy",
                             external: !0,
                         },
                         {
-                            link: m.am.SECURITY,
+                            link: f.am.SECURITY,
                             title: h.Z.Messages.NAVIGATION_SECURITY,
                             tracking: "security",
                         },
                         {
-                            link: m.yX.STATUS,
+                            link: f.yX.STATUS,
                             title: h.Z.Messages.NAVIGATION_STATUS,
                             tracking: "status",
                             external: !0,
                         },
                         {
-                            link: m.am.SAFETY_LANDING,
+                            link: f.am.SAFETY_LANDING,
                             title: h.Z.Messages.NAVIGATION_SAFETY_CENTER,
                             tracking: "safetycenter",
                             external: !0,
@@ -221,18 +221,18 @@ class f extends (r = l.PureComponent) {
                     title: h.Z.Messages.NAVIGATION_COMPANY,
                     routes: [
                         {
-                            link: m.am.COMPANY,
+                            link: f.am.COMPANY,
                             title: h.Z.Messages.NAVIGATION_ABOUT,
                             tracking: "about",
                         },
                         {
-                            link: m.am.BLOG,
+                            link: f.am.BLOG,
                             title: h.Z.Messages.NAVIGATION_BLOG,
                             tracking: "blog",
                             external: !0,
                         },
                         {
-                            link: m.am.JOBS,
+                            link: f.am.JOBS,
                             title: h.Z.Messages.NAVIGATION_JOBS,
                             tracking: "join",
                             external: !0,
@@ -243,25 +243,25 @@ class f extends (r = l.PureComponent) {
                     title: h.Z.Messages.NAVIGATION_MORE,
                     routes: [
                         {
-                            link: m.am.PARTNERS,
+                            link: f.am.PARTNERS,
                             title: h.Z.Messages.NAVIGATION_PARTNERS,
                             tracking: "partners",
                             external: !0,
                         },
                         {
-                            link: m.am.HYPESQUAD,
+                            link: f.am.HYPESQUAD,
                             title: h.Z.Messages.NAVIGATION_HYPESQUAD,
                             tracking: "hypesquad",
                             external: !0,
                         },
                         {
-                            link: m.yX.PRESS_INQUIRIES,
+                            link: f.yX.PRESS_INQUIRIES,
                             title: h.Z.Messages.NAVIGATION_PRESS_INQUIRIES,
                             tracking: "pressinquiries",
                             external: !0,
                         },
                         {
-                            link: m.am.OPEN_SOURCE,
+                            link: f.am.OPEN_SOURCE,
                             title: h.Z.Messages.NAVIGATION_OPEN_SOURCE,
                             tracking: "open_source",
                         },
@@ -274,7 +274,7 @@ class f extends (r = l.PureComponent) {
                               n,
                               {
                                   className: I.route,
-                                  eventName: g,
+                                  eventName: k,
                                   data: { linkClicked: e.tracking },
                                   href: e.link,
                                   children: e.title,
@@ -282,7 +282,7 @@ class f extends (r = l.PureComponent) {
                               e.link || t,
                           )
                         : (0, s.jsx)(
-                              N.Z,
+                              m.Z,
                               {
                                   avoidRouter: l,
                                   to: e.link,
@@ -290,7 +290,7 @@ class f extends (r = l.PureComponent) {
                                   className: I.route,
                                   children: (0, s.jsx)(n, {
                                       tag: "span",
-                                      eventName: g,
+                                      eventName: k,
                                       data: { linkClicked: e.tracking },
                                       children: e.title,
                                   }),
@@ -322,7 +322,7 @@ class f extends (r = l.PureComponent) {
                 style: t,
                 children: [
                     i
-                        ? (0, s.jsx)(O, {
+                        ? (0, s.jsx)(A, {
                               colorVariant: e,
                               animate: d,
                           })
@@ -337,8 +337,8 @@ class f extends (r = l.PureComponent) {
                                         className: I.logoWrap,
                                         children: (0, s.jsx)(n, {
                                             className: I.logo,
-                                            href: m.am.INDEX,
-                                            eventName: g,
+                                            href: f.am.INDEX,
+                                            eventName: k,
                                             data: { linkClicked: "logo" },
                                             children: (0, s.jsx)("img", {
                                                 alt: h.Z.Messages.NAVIGATION_HOME,
@@ -363,12 +363,12 @@ class f extends (r = l.PureComponent) {
                                             (0, s.jsx)("h3", {
                                                 className: I.joinOtherPlayers,
                                                 children: h.Z.Messages.FOOTER_JOIN_OVER_PLAYERS_TODAY.format({
-                                                    num: m.vS,
+                                                    num: f.vS,
                                                 }),
                                             }),
                                         ],
                                     }),
-                                    this.renderAppButton(_),
+                                    this.renderAppButton(N),
                                 ],
                             }),
                         ],
@@ -379,20 +379,20 @@ class f extends (r = l.PureComponent) {
     }
     constructor(e) {
         super(e),
-            k(this, "state", {
+            b(this, "state", {
                 animateBackground: !1,
                 isMobile: null,
                 token: null,
                 isAppCompatible: !0,
             }),
-            k(this, "ref", l.createRef()),
-            k(this, "handleVisibility", (e) => {
+            b(this, "ref", l.createRef()),
+            b(this, "handleVisibility", (e) => {
                 this.setState({ animateBackground: e });
             }),
             null != e.locale && h.Z.setLocale(e.locale),
             (n = (t) =>
                 (0, s.jsx)(
-                    _.Z,
+                    N.Z,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var a = null != arguments[t] ? arguments[t] : {},
@@ -404,7 +404,7 @@ class f extends (r = l.PureComponent) {
                                     }),
                                 )),
                                 n.forEach(function (t) {
-                                    k(e, t, a[t]);
+                                    b(e, t, a[t]);
                                 });
                         }
                         return e;
@@ -418,8 +418,8 @@ class f extends (r = l.PureComponent) {
                 ));
     }
 }
-k(f, "Variants", A),
-    k(f, "defaultProps", {
-        variant: A.PRIMARY,
+b(O, "Variants", g),
+    b(O, "defaultProps", {
+        variant: g.PRIMARY,
         showWave: !0,
     });

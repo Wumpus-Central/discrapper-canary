@@ -13,15 +13,15 @@ var r = n(54381),
     g = n(607070),
     h = n(100527),
     m = n(213609),
-    _ = n(625128),
-    b = n(362762),
+    b = n(625128),
+    _ = n(362762),
     E = n(335131),
     O = n(252618),
     v = n(70097),
     y = n(266454),
-    I = n(114553),
+    I = n(632285),
     C = n(979233),
-    S = n(484474),
+    S = n(17845),
     T = n(374939),
     N = n(233374),
     j = n(611928),
@@ -58,13 +58,13 @@ var r = n(54381),
     el = n(215023),
     ea = n(186901),
     es = n(388032),
-    eo = n(728963),
-    ec = n(13299),
-    eu = n(890631),
-    ed = n(164792),
-    ep = n(524777),
-    ef = n(913713),
-    eg = n(431115);
+    eo = n(359236),
+    ec = n(770354),
+    eu = n(457218),
+    ed = n(179306),
+    ep = n(588),
+    ef = n(445620),
+    eg = n(120550);
 function eh(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -91,7 +91,7 @@ function eh(e) {
     return e;
 }
 let em = i.createContext({});
-function e_(e) {
+function eb(e) {
     let { onLoadComplete: t } = e,
         { enabled: n } = (0, Z.W)({ location: er.dr.QUEST_HOME_DESKTOP }),
         l = (0, u.e7)([g.Z], () => g.Z.useReducedMotion),
@@ -132,7 +132,7 @@ function e_(e) {
         onLoad: t,
     });
 }
-function eb(e) {
+function e_(e) {
     let { onLoadComplete: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -161,11 +161,11 @@ function eE(e) {
         f = (0, G._)({ location: er.dr.QUEST_HOME_DESKTOP }) ? J.Z : J.j,
         { takeover: g, isLoading: h } = (0, z.Nm)(),
         { enabled: m } = (0, Z.W)({ location: er.dr.QUEST_HOME_DESKTOP }),
-        { enabled: _ } = V.n0.useConfig({ location: er.dr.QUEST_HOME_DESKTOP }),
-        b = i.useRef(null),
+        { enabled: b } = V.n0.useConfig({ location: er.dr.QUEST_HOME_DESKTOP }),
+        _ = i.useRef(null),
         E = i.useCallback(() => {
             var e;
-            null == (e = b.current) || e.resetSortingFiltering();
+            null == (e = _.current) || e.resetSortingFiltering();
         }, []);
     return (0, r.jsxs)(ee.t.Provider, {
         value: d,
@@ -176,7 +176,7 @@ function eE(e) {
                 ref: d,
                 children: [
                     (function () {
-                        if (!o && _) {
+                        if (!o && b) {
                             if (p !== z.e5.ALL) return null;
                             if (h) return (0, r.jsx)(et.o, {});
                             if (null != g)
@@ -189,7 +189,7 @@ function eE(e) {
                     })(),
                     (0, r.jsx)(T.Z, {
                         children: (0, r.jsxs)("div", {
-                            className: a()(eo.content, { [eo.contentWithExtraPadding]: _ && !m && p !== z.e5.ALL }),
+                            className: a()(eo.content, { [eo.contentWithExtraPadding]: b && !m && p !== z.e5.ALL }),
                             children: [
                                 n,
                                 s
@@ -197,7 +197,7 @@ function eE(e) {
                                         ? (0, r.jsx)(f, { onSelectTab: u })
                                         : p === z.e5.PREVIEW_TOOL
                                           ? (0, r.jsx)(Y.Z, {})
-                                          : (0, r.jsx)(Q.Z, { ref: b })
+                                          : (0, r.jsx)(Q.Z, { ref: _ })
                                     : null,
                             ],
                         }),
@@ -215,7 +215,7 @@ let eO = function (e) {
             var e;
             return (null == (e = (0, s.LX)(n.pathname, ei.Z5c.QUEST_HOME)) ? void 0 : e.isExact) === !0;
         }, [n.pathname]),
-        v = (0, u.e7)([b.Z], () => b.Z.getState("quests")),
+        v = (0, u.e7)([_.Z], () => _.Z.getState("quests")),
         { selectedTab: T, onSelectTab: x, tabs: L } = (0, en.z)({ withClaimedQuestsTab: !g });
     i.useLayoutEffect(() => {
         g && T === z.e5.CLAIMED && H.Z.setState({ tab: z.e5.ALL });
@@ -275,7 +275,7 @@ let eO = function (e) {
             r = e.get(z.tR.TAB);
         if (ed && r === z.e5.PREVIEW_TOOL) {
             let t = e.get(z.tR.QUEST_ID);
-            _.Z.openNativeAppModal("quests", ei.Etm.DEEP_LINK, {
+            b.Z.openNativeAppModal("quests", ei.Etm.DEEP_LINK, {
                 type: ea.jE.QUEST_PREVIEW_TOOL,
                 params: {
                     questId: t,
@@ -289,7 +289,7 @@ let eO = function (e) {
             let t = (0, k.Ew)(n.hash) ? null : n.hash.substring(1),
                 r = e.get(z.tR.SORT),
                 i = e.get(z.tR.FILTER);
-            _.Z.openNativeAppModal("quests", ei.Etm.DEEP_LINK, {
+            b.Z.openNativeAppModal("quests", ei.Etm.DEEP_LINK, {
                 type: ea.jE.QUEST_HOME,
                 params: {
                     questId: (0, k.Ew)(t) ? void 0 : t,
@@ -368,7 +368,7 @@ let eO = function (e) {
                                       onClick: ep,
                                   }),
                                   className: eo.redirectNoticeBannerContainer,
-                                  children: (0, r.jsx)(eb, { onLoadComplete: Y }),
+                                  children: (0, r.jsx)(e_, { onLoadComplete: Y }),
                               }),
                           header: (0, r.jsx)(P.a, {
                               selectedTabId: T,
@@ -427,7 +427,7 @@ let eO = function (e) {
                                     className: a()(eo.bannerContainer, eo.orbsContainer),
                                     children: [
                                         (0, r.jsx)("div", { className: a()(eo.bannerGradient, eo.orbsGradient) }),
-                                        (0, r.jsx)(e_, { onLoadComplete: Y }),
+                                        (0, r.jsx)(eb, { onLoadComplete: Y }),
                                     ],
                                 }),
                             header: (0, r.jsx)(P.a, {
@@ -458,7 +458,7 @@ let eO = function (e) {
                                     className: eo.bannerContainer,
                                     children: [
                                         (0, r.jsx)("div", { className: eo.bannerGradient }),
-                                        (0, r.jsx)(e_, { onLoadComplete: Y }),
+                                        (0, r.jsx)(eb, { onLoadComplete: Y }),
                                     ],
                                 }),
                             header: (0, r.jsxs)(j.ZP, {

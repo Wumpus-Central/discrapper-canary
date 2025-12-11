@@ -5,7 +5,7 @@ var a = n(54381),
     l = n(592183),
     s = n(86419),
     o = n(172416),
-    c = n(667108);
+    c = n(87489);
 function d() {
     let e = (0, o.Un)({
             location: "DevToolsWidgetsPanel",

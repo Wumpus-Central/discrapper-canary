@@ -1,27 +1,27 @@
 n.d(t, {
-    default: () => h,
-    f: () => T,
+    default: () => y,
+    f: () => h,
 }),
     n(388685);
 var r = n(54381),
-    o = n(473749),
-    a = n(494497),
+    a = n(473749),
+    o = n(494497),
     i = n(793030),
     c = n(442837),
     l = n(481060),
     s = n(14263),
     u = n(650774),
     d = n(485386),
-    f = n(430824),
-    b = n(870246),
+    b = n(430824),
+    f = n(870246),
     m = n(158638),
     p = n(448222),
     k = n(795338),
     g = n(17622),
     x = n(535396),
-    v = n(5238),
+    v = n(44542),
     O = n(388032),
-    I = n(514186);
+    I = n(259819);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -47,47 +47,47 @@ function j(e) {
     }
     return e;
 }
-function _(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        o = (function (e, t) {
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                o = {},
-                a = Object.keys(e);
-            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-            return o;
+                a = {},
+                o = Object.keys(e);
+            for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+            return a;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
     }
-    return o;
+    return a;
 }
-function T(e) {
+function h(e) {
     var t,
         n,
         {
-            size: a,
+            size: o,
             title: c,
             body: s,
             warningText: u,
             acknowledgementText: d,
-            error: f,
-            isLoading: b,
+            error: b,
+            isLoading: f,
             onDeactivate: m,
         } = e,
-        p = _(e, ["size", "title", "body", "warningText", "acknowledgementText", "error", "isLoading", "onDeactivate"]);
-    let [k, g] = o.useState(!1);
+        p = T(e, ["size", "title", "body", "warningText", "acknowledgementText", "error", "isLoading", "onDeactivate"]);
+    let [k, g] = a.useState(!1);
     return (0, r.jsxs)(
         i.Modal,
         ((t = j({}, p)),
         (n = n =
             {
-                size: a,
+                size: o,
                 title: O.intl.formatToPlainString(v.default.iEBw1M, { perk: c }),
                 subtitle: O.intl.formatToPlainString(v.default["7o0K+2"], { perk: c }),
                 actions: [
@@ -99,7 +99,7 @@ function T(e) {
                     {
                         variant: "critical-primary",
                         text: O.intl.string(v.default.PYPdl4),
-                        loading: b,
+                        loading: f,
                         onClick: m,
                         disabled: null != d && !k,
                     },
@@ -122,12 +122,12 @@ function T(e) {
                             }),
                         ],
                     }),
-                    null != f &&
+                    null != b &&
                         (0, r.jsx)(i.xvT, {
                             className: I.errorText,
                             color: "text-feedback-critical",
                             variant: "text-sm/semibold",
-                            children: f,
+                            children: b,
                         }),
                     null != d &&
                         (0, r.jsx)("div", {
@@ -156,32 +156,32 @@ function T(e) {
         t),
     );
 }
-function h(e) {
+function y(e) {
     var { guildId: t, powerup: n } = e,
-        l = _(e, ["guildId", "powerup"]);
-    let { onDeactivate: h, error: y, isLoading: w } = (0, p.Z)(t, n),
-        { onClose: C } = l,
-        E = o.useCallback(
+        l = T(e, ["guildId", "powerup"]);
+    let { onDeactivate: y, error: w, isLoading: C } = (0, p.Z)(t, n),
+        { onClose: E } = l,
+        S = a.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    h().then(() => {
-                        null == C || C();
+                    y().then(() => {
+                        null == E || E();
                     });
             },
-            [C, h],
+            [E, y],
         ),
-        S = (function (e, t) {
+        N = (function (e, t) {
             let n = (0, c.e7)([u.Z], () => u.Z.getMemberCount(e)),
                 l = (0, s.Z)(e),
-                b = (0, c.e7)([f.Z], () => {
+                f = (0, c.e7)([b.Z], () => {
                     var t;
-                    return (null == (t = f.Z.getGuild(e)) ? void 0 : t.vanityURLCode) != null;
+                    return (null == (t = b.Z.getGuild(e)) ? void 0 : t.vanityURLCode) != null;
                 }),
                 p = (0, m.g1)(e, "Powerup Deactivate Modal"),
                 k = (0, c.e7)(
                     [d.Z],
                     () =>
-                        t.skuId !== a.If || null == l
+                        t.skuId !== o.If || null == l
                             ? 0
                             : d.Z.getSortedRoles(e).reduce((e, t) => {
                                   var n, r;
@@ -191,10 +191,10 @@ function h(e) {
                               }, 0),
                     [e, t.skuId, l],
                 );
-            return o.useMemo(() => {
+            return a.useMemo(() => {
                 let e;
                 switch (t.skuId) {
-                    case a.If:
+                    case o.If:
                         e =
                             k > 0
                                 ? O.intl.formatToPlainString(v.default["4jSvr1"], {
@@ -203,8 +203,8 @@ function h(e) {
                                   })
                                 : O.intl.formatToPlainString(v.default.cavtEo, { perk: t.title });
                         break;
-                    case a.A$:
-                        e = b
+                    case o.A$:
+                        e = f
                             ? (0, r.jsx)(i.xvT, {
                                   color: "text-feedback-critical",
                                   variant: "text-sm/semibold",
@@ -216,8 +216,8 @@ function h(e) {
                                   children: O.intl.string(v.default.Du91Rb),
                               });
                         break;
-                    case a.MB:
-                    case a.Vk:
+                    case o.MB:
+                    case o.Vk:
                         e = O.intl.string(v.default.Vf2ZcR);
                         break;
                     default:
@@ -227,8 +227,8 @@ function h(e) {
                         });
                 }
                 return (
-                    b &&
-                        t.skuId === a.XW &&
+                    f &&
+                        t.skuId === o.XW &&
                         (e = (0, r.jsxs)(r.Fragment, {
                             children: [
                                 e,
@@ -241,12 +241,12 @@ function h(e) {
                         })),
                     e
                 );
-            }, [t, k, n, b, p]);
+            }, [t, k, n, f, p]);
         })(t, n);
     return (
-        (0, b.$)(t, n, b.w.DEACTIVATE),
+        (0, f.$)(t, n, f.w.DEACTIVATE),
         (0, r.jsx)(
-            T,
+            h,
             j(
                 {
                     size: n.type === x.Us.LEVEL ? "md" : "sm",
@@ -262,10 +262,10 @@ function h(e) {
                                 });
                         }
                     })(),
-                    warningText: S,
-                    error: y,
-                    isLoading: w,
-                    onDeactivate: E,
+                    warningText: N,
+                    error: w,
+                    isLoading: C,
+                    onDeactivate: S,
                 },
                 l,
             ),

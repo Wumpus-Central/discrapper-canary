@@ -27,17 +27,17 @@ var r = n(54381),
     N = n(866419),
     P = n(36982),
     R = n(803038),
-    D = n(990924),
-    w = n(771934),
+    w = n(990924),
+    D = n(771934),
     x = n(857658),
     L = n(174278),
     j = n(714097),
     M = n(981631),
     k = n(921944),
     U = n(474936),
-    G = n(202283),
+    G = n(990551),
     Z = n(388032),
-    B = n(882741);
+    B = n(23766);
 let F = 0,
     V = 5000;
 function H(e) {
@@ -144,7 +144,7 @@ function Q(e) {
         let r = parseInt(t, 10);
         if (isNaN(r)) return;
         let i = Math.max(0, Math.min(360, r));
-        c("".concat(i, "\xB0")), (0, w.Ac)(), n(i);
+        c("".concat(i, "\xB0")), (0, D.Ac)(), n(i);
     };
     return (0, r.jsxs)("div", {
         className: o()(B.sliderContainer, B.gradientDirectionSliderContainer),
@@ -186,7 +186,7 @@ function Q(e) {
                             minValue: 0,
                             maxValue: 360,
                             onValueChange: (e) => {
-                                (0, w.fR)();
+                                (0, D.fR)();
                                 let t = q(e);
                                 t !== e || s(e), n(t);
                             },
@@ -213,7 +213,7 @@ function X(e) {
         let r = parseInt(t, 10);
         if (isNaN(r)) return;
         let i = Math.max(0, Math.min(100, r));
-        l("".concat(i, "%")), (0, w.PI)(), n(i);
+        l("".concat(i, "%")), (0, D.PI)(), n(i);
     };
     return (0, r.jsxs)("div", {
         className: B.sliderContainer,
@@ -242,7 +242,7 @@ function X(e) {
                     minValue: 0,
                     maxValue: 100,
                     onValueChange: (e) => {
-                        (0, w.z3)(), o(e), n(e);
+                        (0, D.z3)(), o(e), n(e);
                     },
                     onValueRender: () => null,
                     keyboardStep: 1,
@@ -261,7 +261,7 @@ function J(e) {
         _ = i.useRef(null),
         m = i.useCallback(() => {
             var e;
-            (0, w.Om)();
+            (0, D.Om)();
             let t = (0, A.C)();
             C.Ig.getState().setAll({
                 colors: t.colors,
@@ -343,7 +343,7 @@ function ee(e) {
     let { onSaveTheme: t, canApply: n } = e,
         i = (0, y.m)(U.PremiumTypes.TIER_2);
     return (
-        (0, w.hf)(i, m.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
+        (0, D.hf)(i, m.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, r.jsx)("div", {
             className: B.coachmarkFooterContainer,
             children: i
@@ -369,9 +369,9 @@ function et(e) {
     let { onSaveTheme: n, canApply: i, metadata: a } = e,
         s = (0, y.m)(U.PremiumTypes.TIER_2),
         c = (null == (t = (0, g.oq)().metadata) ? void 0 : t.from) === g.tE.SHARE_MESSAGE;
-    (0, w.hf)(s, m.Z.CUSTOM_THEMES_EDITOR);
+    (0, D.hf)(s, m.Z.CUSTOM_THEMES_EDITOR);
     let u = () => {
-            (0, w.Vb)(),
+            (0, D.Vb)(),
                 (0, E.Q3)(l.z.CUSTOM_THEME_COACHMARK),
                 (null == a ? void 0 : a.from) === g.tE.SETTING
                     ? ((0, I.openUserSettings)(S.n.APPEARANCE_PANEL, { section: M.oAB.APPEARANCE }), (0, g.Ll)())
@@ -424,7 +424,7 @@ function en(e) {
     var t;
     let { metadata: n, markAsDismissed: a, isCoachmark: o, isMobile: c } = e,
         u = R.Mc.useExperiment({ location: "ClientThemeColorPickerTools" }).enabled,
-        b = D.y.useConfig({ location: "CustomThemesEditorV2" }).enabled,
+        b = w.y.useConfig({ location: "CustomThemesEditorV2" }).enabled,
         y = (0, N.jJ)(),
         S = (0, N.SK)(),
         I = i.useRef(!1),
@@ -452,14 +452,14 @@ function en(e) {
                         baseMix: A,
                     },
                 }),
-                (0, w.u7)(T, A, L, Y, z),
+                (0, D.u7)(T, A, L, Y, z),
                 null == a || a(k.L.TAKE_ACTION),
                 W || (0, E.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, g.Ll)(),
                 (0, O.UD)();
         },
         en = () => {
-            y(N._m.RESET_BUTTON), (0, w.uf)();
+            y(N._m.RESET_BUTTON), (0, D.uf)();
         },
         er = T.length > 0;
     return (i.useEffect(

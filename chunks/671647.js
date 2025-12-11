@@ -1,7 +1,7 @@
 n.d(t, { i: () => a });
 var r = n(54381);
 n(473749);
-var i = n(20074);
+var i = n(884237);
 function a(e) {
     let { alt: t, ariaLabel: n, ariaHidden: a, role: o, size: s = 64 } = e;
     return (0, r.jsx)("img", {

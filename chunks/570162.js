@@ -1,0 +1,18 @@
+e.exports = {
+    modalContent: "edf4408c2c04bc10-modalContent",
+    imageSelectionSection: "edf4408c2c04bc10-imageSelectionSection",
+    optionsList: "edf4408c2c04bc10-optionsList",
+    option: "edf4408c2c04bc10-option",
+    optionDescription: "edf4408c2c04bc10-optionDescription",
+    hasBoostingPill: "edf4408c2c04bc10-hasBoostingPill",
+    optionIconAndLabel: "edf4408c2c04bc10-optionIconAndLabel",
+    optionLabelText: "edf4408c2c04bc10-optionLabelText",
+    hasPremiumIcon: "edf4408c2c04bc10-hasPremiumIcon",
+    gifGrid: "edf4408c2c04bc10-gifGrid",
+    imageUploadOption: "edf4408c2c04bc10-imageUploadOption",
+    gif: "edf4408c2c04bc10-gif",
+    premiumWheel: "edf4408c2c04bc10-premiumWheel",
+    boostingPill: "edf4408c2c04bc10-boostingPill",
+    imageSpecifications: "edf4408c2c04bc10-imageSpecifications",
+    premiumUpsell: "edf4408c2c04bc10-premiumUpsell",
+};

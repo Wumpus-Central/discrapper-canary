@@ -15,21 +15,21 @@ var i = n(657707),
     g = n(172351),
     m = n(648052),
     b = n(280885),
-    _ = n(483424),
-    y = n(681837),
-    O = n(78806),
+    y = n(483424),
+    O = n(681837),
+    j = n(78806),
     x = n(91433),
-    j = n(900927),
-    v = n(944043),
-    C = n(678738),
-    I = n(638970),
+    v = n(900927),
+    C = n(944043),
+    I = n(678738),
+    _ = n(638970),
     S = n(502762),
     E = n(530),
     Z = n(827313),
     P = n(981631),
     T = n(671955),
     N = n(388032),
-    R = n(892273);
+    R = n(82600);
 function w(e) {
     let { user: t, currentUser: n, displayProfile: w, channel: A, isHoveringOrFocusing: D, onOpenProfile: L } = e,
         { relationshipType: M, originApplicationId: k } = (0, l.cj)([d.Z], () => ({
@@ -59,7 +59,7 @@ function w(e) {
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(y.Z, { userId: t.id }),
+                        (0, r.jsx)(O.Z, { userId: t.id }),
                         !H &&
                             (0, r.jsx)(Z.Z, {
                                 userId: t.id,
@@ -91,14 +91,14 @@ function w(e) {
                     e.applicationId,
                 ),
             ),
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(C.Z, {
                 user: t,
                 className: R.card,
             }),
             t.isProvisional &&
                 (0, r.jsx)(S.Z.Overlay, {
                     className: R.card,
-                    children: (0, r.jsx)(C.Z, {
+                    children: (0, r.jsx)(I.Z, {
                         heading: N.intl.string(N.t.Iyka0U),
                         headingIcon: (0, r.jsx)(i.Mgn, {
                             size: "xxs",
@@ -109,12 +109,12 @@ function w(e) {
                     }),
                 }),
             B
-                ? (0, r.jsx)(I.Z, {
+                ? (0, r.jsx)(_.Z, {
                       user: t,
                       currentUser: n,
                       onOpenUserProfileModal: L,
                   })
-                : (0, r.jsx)(_.Z, {
+                : (0, r.jsx)(y.Z, {
                       user: t,
                       currentUser: n,
                       className: R.card,
@@ -125,7 +125,7 @@ function w(e) {
                     !H &&
                         (null == w ? void 0 : w.bio) != null &&
                         (null == w ? void 0 : w.bio) !== "" &&
-                        (0, r.jsx)(C.Z, {
+                        (0, r.jsx)(I.Z, {
                             heading: N.intl.string(N.t["61W33d"]),
                             headingColor: "header-primary",
                             children: (0, r.jsx)(b.Z, {
@@ -142,15 +142,15 @@ function w(e) {
                             channel: A,
                         }),
                     G.length > 0 &&
-                        (0, r.jsx)(C.Z, {
+                        (0, r.jsx)(I.Z, {
                             heading: N.intl.string(N.t["Uv/eTx"]),
                             headingColor: "header-primary",
-                            children: (0, r.jsx)(O.Z, { applicationIds: G }),
+                            children: (0, r.jsx)(j.Z, { applicationIds: G }),
                         }),
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(I.Z, {
                         heading: t.bot ? N.intl.string(N.t["A//N4k"]) : N.intl.string(N.t.a6XYD9),
                         headingColor: "header-primary",
-                        children: (0, r.jsx)(j.Z, { userId: t.id }),
+                        children: (0, r.jsx)(v.Z, { userId: t.id }),
                     }),
                 ],
             }),

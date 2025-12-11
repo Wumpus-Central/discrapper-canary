@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(139256),
     b = n(294608),
     y = n(388032),
-    O = n(390840);
+    O = n(75022);
 function v(e, t, n) {
     return (
         t in e
@@ -184,7 +184,7 @@ function R(e) {
         "aria-hidden": !0,
     });
 }
-function D(e) {
+function w(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: a, isExpired: o, className: s } = e;
     return (0, c.EQ)({
         answersInteraction: t,
@@ -219,7 +219,7 @@ function D(e) {
         )
         .otherwise(() => null);
 }
-function w(e) {
+function D(e) {
     let { answer: t, isExpired: n, answersInteraction: i, canShowVoteCounts: a, canShowVoterDetails: l } = e,
         c = !0 === t.isSelected,
         u = !0 === t.didSelfVote,
@@ -257,7 +257,7 @@ function w(e) {
                     canShowVoterDetails: l,
                     answerId: t.answerId,
                 }),
-            (0, r.jsx)(D, {
+            (0, r.jsx)(w, {
                 answersInteraction: i,
                 isSelected: c,
                 didSelfVote: u,
@@ -280,7 +280,7 @@ function x(e) {
                 answersInteraction: n,
                 canTapAnswers: a,
                 renderAnswerContent: (e) =>
-                    (0, r.jsx)(w, {
+                    (0, r.jsx)(D, {
                         answer: e,
                         isExpired: t,
                         answersInteraction: n,

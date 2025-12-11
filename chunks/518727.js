@@ -16,9 +16,9 @@ var r = n(54381),
     p = n(585483),
     _ = n(402426),
     m = n(981631),
-    h = n(839249),
-    g = n(293914),
-    E = n(503019);
+    h = n(872050),
+    g = n(77517),
+    E = n(493969);
 let b = 1000,
     y = (e) => {
         let { children: t, isConfirmationStep: n, isEligibleForWowMoment: a, shouldPrefetchWowMoment: b } = e,
@@ -43,8 +43,8 @@ let b = 1000,
             b && N(!0);
         }, [b]);
         let { mediaUrls: P, isSuccess: R } = (0, _.Z)(!y && a && A),
-            D = (0, i.useRef)(null),
-            [w, x] = (0, i.useState)(!1),
+            w = (0, i.useRef)(null),
+            [D, x] = (0, i.useState)(!1),
             [L, j] = (0, i.useState)(!1),
             [M, k] = (0, i.useState)("none"),
             [U, G] = (0, i.useState)(!1);
@@ -133,9 +133,9 @@ let b = 1000,
                         className: h.wowAnimation,
                         children: (0, r.jsx)(l.zec, {
                             fit: "layout",
-                            ref: D,
+                            ref: w,
                             dataBinding: {
-                                ExitTrigger: w,
+                                ExitTrigger: D,
                                 EntryTrigger: L,
                             },
                             listenOnDocumentBody: !0,
@@ -147,7 +147,7 @@ let b = 1000,
                     }),
                 ],
             });
-        let Z = !w;
+        let Z = !D;
         return "static" === M
             ? (0, r.jsxs)(r.Fragment, {
                   children: [

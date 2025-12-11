@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(112843),
     O = n(524484),
     v = n(388032),
-    S = n(749714);
+    S = n(5791);
 function I(e, t, n) {
     return (
         t in e
@@ -80,8 +80,8 @@ let N = {
     },
     P = (0, a.range)(0, 11),
     R = (0, a.range)(0, 2.25, 0.25),
-    D = (0, a.range)(1, 11),
-    w = (0, a.range)(1, 26),
+    w = (0, a.range)(1, 11),
+    D = (0, a.range)(1, 26),
     x = () => [
         {
             location: O.Hn.CHAT_INPUT,
@@ -215,10 +215,10 @@ function U(e) {
                     (0, r.jsx)(M, { children: v.intl.string(v.t.a18Sug) }),
                     (0, r.jsx)(c.iRW, {
                         disabled: l,
-                        markers: D,
+                        markers: w,
                         stickToMarkers: !0,
-                        minValue: D[0],
-                        maxValue: D[D.length - 1],
+                        minValue: w[0],
+                        maxValue: w[w.length - 1],
                         initialValue: i,
                         onValueChange: (e) => s({ confettiCount: e }, 0),
                         onValueRender: (e) => "".concat(e),
@@ -236,10 +236,10 @@ function U(e) {
                     (0, r.jsx)(M, { children: v.intl.string(v.t.xoldVn) }),
                     (0, r.jsx)(c.iRW, {
                         disabled: l,
-                        markers: w,
+                        markers: D,
                         stickToMarkers: !0,
-                        minValue: w[0],
-                        maxValue: w[w.length - 1],
+                        minValue: D[0],
+                        maxValue: D[D.length - 1],
                         initialValue: a,
                         onValueChange: (e) => s({ confettiSize: e }, 0),
                         onValueRender: (e) => "".concat(e),

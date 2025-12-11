@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(626135),
     P = n(63063),
     R = n(706454),
-    D = n(526665),
-    w = n(349728),
+    w = n(526665),
+    D = n(349728),
     x = n(494620),
     L = n(273313),
     j = n(205266),
@@ -36,7 +36,7 @@ var r = n(54381),
     k = n(981631),
     U = n(856651),
     G = n(388032),
-    Z = n(11049);
+    Z = n(454578);
 function B(e, t, n) {
     return (
         t in e
@@ -459,7 +459,7 @@ function W(e) {
                     ),
                     {
                         children:
-                            (0, w.Z)(n) &&
+                            (0, D.Z)(n) &&
                             (0, r.jsx)(x.Z, { children: G.intl.format(G.t.COW3Xn, { platformName: e.name }) }),
                     },
                 ),
@@ -507,7 +507,7 @@ function W(e) {
             null != e && (g(e), _.Z.setVisibility(n.type, n.id, e), R(null)),
                 null != t && (T(t), _.Z.setMetadataVisibility(n.type, n.id, t), B(null));
         }, [n]);
-    let ed = (0, D.wy)("ConnectedAccount");
+    let ed = (0, w.wy)("ConnectedAccount");
     return (0, r.jsxs)("div", {
         className: o()(Z.connection, { [Z.connectionUserSettingsRedesign]: ed }),
         children: [$(n), ee(n), et(n), en(Q), ei(), er()],

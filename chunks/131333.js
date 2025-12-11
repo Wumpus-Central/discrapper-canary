@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(146128),
     f = n(981631),
     p = n(675654),
-    _ = n(433661);
+    _ = n(81329);
 function m(e, t, n) {
     return (
         t in e
@@ -75,13 +75,13 @@ let b = [],
     N = 48,
     P = 0.01,
     R = new Set(["jack_o_lantern", "nose"]),
-    D = {
+    w = {
         jack_o_lantern: {
             sprites: (0, l.Z)(["chocolate_bar", "lollipop", "candy"]),
         },
         nose: { sprites: (0, l.Z)(["foot"]) },
     };
-function w(e) {
+function D(e) {
     if (null == e) return null;
     for (let t of R) if (null != e.match(new RegExp(":".concat(t, "(_tone[1-9])?")))) return t;
     return null;
@@ -187,7 +187,7 @@ function k(e) {
         b = i.useCallback(
             (e) => {
                 if (!m) {
-                    let t = w(e);
+                    let t = D(e);
                     null != t && ((g.current = t), h(!0), s(null));
                 }
             },
@@ -225,8 +225,8 @@ function k(e) {
               value: y,
               children: [
                   t,
-                  Object.keys(D).map((e) => {
-                      let t = D[e];
+                  Object.keys(w).map((e) => {
+                      let t = w[e];
                       return (0, r.jsx)(
                           M,
                           {

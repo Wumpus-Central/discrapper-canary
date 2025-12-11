@@ -10,19 +10,19 @@ var r = n(54381),
     u = n(768581),
     g = n(434404),
     m = n(981631),
-    p = n(30513),
-    f = n(486324),
-    h = n(200299),
-    b = n(388032),
-    x = n(197530);
+    f = n(30513),
+    p = n(486324),
+    b = n(200299),
+    h = n(388032),
+    x = n(551952);
 let j = function (e) {
     let { guild: t } = e,
         j = t.features.has(m.GuildFeatures.BANNER),
-        _ = i.useCallback(
+        v = i.useCallback(
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
                 (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("7016")]).then(
+                    let { default: l } = await Promise.all([n.e("91689"), n.e("59732"), n.e("76543")]).then(
                         n.bind(n, 712451),
                     );
                     return (n) =>
@@ -60,7 +60,7 @@ let j = function (e) {
                                         let { imageUri: n } = e;
                                         return g.Z.saveGuild(t.id, { homeHeader: n });
                                     },
-                                    uploadType: f.pC.HOME_HEADER,
+                                    uploadType: p.pC.HOME_HEADER,
                                 },
                                 n,
                             ),
@@ -69,7 +69,7 @@ let j = function (e) {
             },
             [t.id],
         ),
-        v = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -89,12 +89,12 @@ let j = function (e) {
                             page: m.ZY5.GUILD_SETTINGS,
                         },
                         guild: t,
-                        perks: (0, p.XO)(),
+                        perks: (0, f.XO)(),
                     });
             },
             [t],
         ),
-        O = (0, r.jsx)(c.Z, {
+        C = (0, r.jsx)(c.Z, {
             image: t.homeHeader,
             makeURL: (e) =>
                 null != e
@@ -104,10 +104,10 @@ let j = function (e) {
                       })
                     : null,
             disabled: !j,
-            onChange: _,
-            hint: b.intl.string(b.t.NyXznh),
+            onChange: v,
+            hint: h.intl.string(h.t.NyXznh),
             enabled: j,
-            maxFileSizeBytes: h.B,
+            maxFileSizeBytes: b.B,
         });
     return j
         ? (0, r.jsxs)(r.Fragment, {
@@ -118,13 +118,13 @@ let j = function (e) {
                           (0, r.jsx)(l.Heading, {
                               className: x.header,
                               variant: "heading-lg/extrabold",
-                              children: b.intl.string(b.t.BBj1nY),
+                              children: h.intl.string(h.t.BBj1nY),
                           }),
                           (0, r.jsx)(s.Z, {
                               className: x.boostIndicator,
                               guild: t,
                               guildFeature: m.GuildFeatures.BANNER,
-                              onClick: v,
+                              onClick: O,
                           }),
                       ],
                   }),
@@ -137,21 +137,21 @@ let j = function (e) {
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-default",
-                                      children: b.intl.string(b.t.Vwintv),
+                                      children: h.intl.string(h.t.Vwintv),
                                   }),
                                   (0, r.jsx)("div", {
                                       className: x.uploadButton,
                                       children: (0, r.jsx)(d.Z, {
-                                          onChange: _,
-                                          maxFileSizeBytes: h.B,
-                                          text: b.intl.string(b.t.yG2pUi),
+                                          onChange: v,
+                                          maxFileSizeBytes: b.B,
+                                          text: h.intl.string(h.t.yG2pUi),
                                           size: "md",
                                           variant: "primary",
                                       }),
                                   }),
                               ],
                           }),
-                          (0, r.jsx)("div", { children: O }),
+                          (0, r.jsx)("div", { children: C }),
                       ],
                   }),
               ],
@@ -164,13 +164,13 @@ let j = function (e) {
                           (0, r.jsx)(l.Heading, {
                               className: x.header,
                               variant: "heading-lg/extrabold",
-                              children: b.intl.string(b.t.BBj1nY),
+                              children: h.intl.string(h.t.BBj1nY),
                           }),
                           (0, r.jsx)(s.Z, {
                               className: x.boostIndicator,
                               guild: t,
                               guildFeature: m.GuildFeatures.BANNER,
-                              onClick: v,
+                              onClick: O,
                           }),
                       ],
                   }),
@@ -184,13 +184,13 @@ let j = function (e) {
                                       variant: "text-sm/normal",
                                       color: "text-default",
                                       className: x.bannerDescription,
-                                      children: b.intl.string(b.t.Vwintv),
+                                      children: h.intl.string(h.t.Vwintv),
                                   }),
                                   (0, r.jsx)(l.Button, {
                                       variant: "expressive",
                                       icon: l.Ucv,
-                                      text: b.intl.string(b.t["+7XY31"]),
-                                      onClick: v,
+                                      text: h.intl.string(h.t["+7XY31"]),
+                                      onClick: O,
                                   }),
                               ],
                           }),
@@ -198,8 +198,8 @@ let j = function (e) {
                               children: (0, r.jsx)(l.P3F, {
                                   "aria-hidden": !0,
                                   tabIndex: -1,
-                                  onClick: v,
-                                  children: O,
+                                  onClick: O,
+                                  children: C,
                               }),
                           }),
                       ],

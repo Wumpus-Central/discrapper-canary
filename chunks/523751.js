@@ -21,7 +21,7 @@ var r = n(54381),
     v = n(682947),
     S = n(981631),
     I = n(388032),
-    T = n(73704);
+    T = n(903442);
 function C(e, t, n) {
     return (
         t in e
@@ -78,7 +78,7 @@ function R(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = D(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -86,7 +86,7 @@ function R(e, t) {
     }
     return i;
 }
-function D(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -95,7 +95,7 @@ function D(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let w = {
+let D = {
     [y.Q.STAFF]: {
         IconComponent: u.Ymb,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
@@ -225,7 +225,7 @@ function j(e) {
             disableBoostClick: C,
             "aria-label": N = !1,
         } = e;
-    let D =
+    let w =
             null !=
             (a = R(e, [
                 "guild",
@@ -274,13 +274,13 @@ function j(e) {
         premiumBackgroundColor: Y,
         premiumForegroundColor: W,
         sizeAdjustment: K,
-    } = w[k];
+    } = D[k];
     if (null == Z) return null;
     M.premium && ((t = W), (n = Y));
     let z = (0, c.wj)(j) ? V : H,
         q = (0, c.wj)(j) ? B : F;
     (t = null != t ? t : z), (n = null != n ? n : q);
-    let Q = Math.floor(0.75 * D) - (null != K ? K : 0);
+    let Q = Math.floor(0.75 * w) - (null != K ? K : 0);
     return (0, r.jsx)(u.aML, {
         color: l,
         position: d,
@@ -302,7 +302,7 @@ function j(e) {
                         allowFullSizedIcon: !0,
                         color: null != n ? n : I,
                         stroke: v,
-                        size: D,
+                        size: w,
                         children: (0, r.jsx)(Z, {
                             size: "custom",
                             width: Q,

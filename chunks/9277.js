@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(981631),
     b = n(957825),
     y = n(388032),
-    O = n(564355);
+    O = n(72775);
 function v(e, t) {
     let { disabled: n, type: a, channel: v } = e,
         [S, I] = i.useState(!1),
@@ -34,7 +34,7 @@ function v(e, t) {
         }),
         [C, A, N, P] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], s.X),
         R = i.useRef(0),
-        D = i.useCallback(() => {
+        w = i.useCallback(() => {
             I(!0),
                 clearTimeout(R.current),
                 (R.current = setTimeout(() => {
@@ -43,9 +43,9 @@ function v(e, t) {
         }, []);
     (0, _.yp)({
         event: E.CkL.FAVORITE_GIF,
-        handler: D,
+        handler: w,
     });
-    let w = i.useCallback(() => {
+    let D = i.useCallback(() => {
             (0, f.RO)(b.X1.GIF, a, v.id);
         }, [a, v.id]),
         { Component: x, events: L, play: j } = (0, c.V)(),
@@ -66,7 +66,7 @@ function v(e, t) {
                 onMouseEnter: L.onMouseEnter,
                 onMouseLeave: L.onMouseLeave,
                 onClick: () => {
-                    w(), j();
+                    D(), j();
                 },
                 isActive: U,
                 pulse: S,

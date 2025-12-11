@@ -5,14 +5,14 @@ var r = n(979554),
     o = n(717401),
     s = n(981631),
     l = n(388032),
-    c = n(12901),
-    u = n(868592),
-    d = n(908637),
-    f = n(233634);
-n(337357), n(349927);
-var p = n(191333),
-    _ = n(81932),
-    m = n(770476);
+    c = n(135058),
+    u = n(728993),
+    d = n(925831),
+    f = n(52484);
+n(900285), n(164327);
+var p = n(895255),
+    _ = n(673650),
+    m = n(11120);
 let h = {
         skuId: i.d.SEASONAL_GIFTING_2025_HEAD_IN_THE_CLOUDS_SKU_ID,
         assetId: "a_670b722e56740d11d1e6fe55b8094013",
@@ -48,8 +48,8 @@ let h = {
             trinketsAnimation: {
                 getAnimationData: () =>
                     n
-                        .e("31675")
-                        .then(n.bind(n, 177648))
+                        .e("27569")
+                        .then(n.bind(n, 628011))
                         .then((e) => {
                             let { default: t } = e;
                             return fetch(t).then((e) => e.json());

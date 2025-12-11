@@ -8,20 +8,20 @@ var r = n(54381),
     c = n(140031),
     d = n(981631),
     u = n(388032),
-    g = n(49465);
+    g = n(822809);
 function m(e) {
     let { guild: t } = e,
         n = i.useId(),
         m = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
-        p = t.features.has(d.GuildFeatures.COMMUNITY),
-        [f, h] = i.useState(t.features.has(d.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        b = i.useCallback(
+        f = t.features.has(d.GuildFeatures.COMMUNITY),
+        [p, b] = i.useState(t.features.has(d.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        h = i.useCallback(
             async (e) => {
-                h(e), await (0, s.fp)(t, e);
+                b(e), await (0, s.fp)(t, e);
             },
             [t],
         );
-    return p
+    return f
         ? null
         : (0, r.jsxs)("div", {
               className: g.bannerContainer,
@@ -49,8 +49,8 @@ function m(e) {
                       className: g.buttonContainer,
                       children: (0, r.jsx)(a.rsf, {
                           id: n,
-                          checked: f,
-                          onChange: b,
+                          checked: p,
+                          onChange: h,
                           disabled: !m,
                       }),
                   }),

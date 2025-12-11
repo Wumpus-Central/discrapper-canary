@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(981631),
     P = n(921944),
     R = n(388032),
-    D = n(30989),
-    w = n(564355);
+    w = n(124907),
+    D = n(72775);
 function x(e, t, n) {
     return (
         t in e
@@ -87,16 +87,16 @@ function k(e) {
         shouldShow: t,
         text: R.intl.string(R.t.Ve9Ge6),
         children: (0, r.jsx)(A.Z, {
-            className: w.button,
+            className: D.button,
             "aria-label": R.intl.string(R.t.Z1RnTk),
             isActive: !1,
             noHover: !0,
             onClick: e.onClick,
             children: (0, r.jsx)("div", {
-                className: D.iconContainer,
+                className: w.iconContainer,
                 children: e.hovered
                     ? (0, r.jsx)(d.Fmz, {
-                          className: D.giftBoxIcon,
+                          className: w.giftBoxIcon,
                           importData: e.config.getAnimationData,
                       })
                     : (0, r.jsx)(d.OgN, {}),
@@ -119,7 +119,7 @@ function U(e) {
             M(
                 L(
                     {
-                        className: w.button,
+                        className: D.button,
                         "aria-label": R.intl.string(R.t.Z1RnTk),
                         isActive: !1,
                         noHover: !0,
@@ -129,21 +129,21 @@ function U(e) {
                 ),
                 {
                     children: (0, r.jsxs)("div", {
-                        className: D.iconContainer,
+                        className: w.iconContainer,
                         children: [
                             (0, r.jsx)(t, {
-                                className: D.trinketsIcon,
+                                className: w.trinketsIcon,
                                 color: "currentColor",
                             }),
                             e.hovered &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(d.Fmz, {
-                                            className: D.trinketsDecoration,
+                                            className: w.trinketsDecoration,
                                             importData: e.config.getAnimationData,
                                         }),
                                         (0, r.jsx)(d.Fmz, {
-                                            className: D.trinketsGlow,
+                                            className: w.trinketsGlow,
                                             importData: e.config.getGlowAnimationData,
                                         }),
                                     ],
@@ -164,7 +164,7 @@ function Z(e) {
         T = (0, s.e7)([y.Z], () => !(null === y.Z || void 0 === y.Z ? void 0 : y.Z.hasLayers())),
         A = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
         R = null != A ? S.default.age(A.id) : 0,
-        { giftBoxAnimation: w, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
+        { giftBoxAnimation: D, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         L = null != n.firstTimeNotice && !a && T && R >= G,
         [j, M] = (0, m.XR)(
             L ? l.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
@@ -209,9 +209,9 @@ function Z(e) {
             v(!1), M(P.L.TAKE_ACTION), Y();
         },
         K =
-            void 0 !== w
+            void 0 !== D
                 ? (0, r.jsx)(k, {
-                      config: w,
+                      config: D,
                       hovered: B,
                       onClick: W,
                   })
@@ -226,7 +226,7 @@ function Z(e) {
                         channel: c,
                     });
     return (0, r.jsx)("div", {
-        className: o()(D.container, { [D.containerHovered]: B }),
+        className: o()(w.container, { [w.containerHovered]: B }),
         onMouseEnter: () => {
             d || v(!0);
         },

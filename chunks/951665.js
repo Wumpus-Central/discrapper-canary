@@ -5,7 +5,7 @@ var r = n(54381),
     a = n(457414),
     s = n(311173),
     o = n(388032),
-    c = n(97247);
+    c = n(683708);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,11 +52,11 @@ function u(e, t) {
 function g(e) {
     var t;
     let { rule: n, onChangeRule: g, collapsed: m = !1 } = e,
-        [p, f] = i.useState(!m),
-        h = i.useCallback(() => {
-            f(!p);
-        }, [p, f]),
-        b = i.useCallback(
+        [f, p] = i.useState(!m),
+        b = i.useCallback(() => {
+            p(!f);
+        }, [f, p]),
+        h = i.useCallback(
             (e) => {
                 g(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
@@ -64,10 +64,10 @@ function g(e) {
         );
     return (0, a.S)(n.triggerType)
         ? (0, r.jsx)(l.zF9, {
-              isExpanded: p,
+              isExpanded: f,
               collapsibleContent: (0, r.jsx)(s.Z, {
                   rule: n,
-                  onChangeText: b,
+                  onChangeText: h,
                   className: c.textAreaContainer,
                   initialValue: null == (t = n.triggerMetadata) ? void 0 : t.regexPatterns,
               }),
@@ -76,7 +76,7 @@ function g(e) {
                   let { onClick: t } = e;
                   return (0, r.jsx)(l.P3F, {
                       onClick: (e) => {
-                          h(), t(e);
+                          b(), t(e);
                       },
                       children: (0, r.jsxs)("div", {
                           className: c.header,
@@ -85,7 +85,7 @@ function g(e) {
                                   variant: "text-sm/medium",
                                   children: o.intl.string(o.t["dnunm+"]),
                               }),
-                              p
+                              f
                                   ? (0, r.jsx)(l.u04, {
                                         size: "md",
                                         color: "currentColor",

@@ -25,7 +25,7 @@ var r = n(54381),
     v = n(382271),
     S = n(981631),
     I = n(388032),
-    T = n(476034);
+    T = n(14515);
 let C = (e) => {
         let { onClose: t, onShare: n } = e,
             a = (0, l.e7)([b.Z], () => b.Z.getReferralsRemaining()),
@@ -43,7 +43,7 @@ let C = (e) => {
                 searchQuery: v,
                 selectedUsers: p,
             }),
-            [D, w] = i.useState(!1),
+            [w, D] = i.useState(!1),
             x = C.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map()),
             L = () =>
                 (0, r.jsx)(d.Z, {
@@ -77,13 +77,13 @@ let C = (e) => {
                         className: o()(T.footer, T.footerSeparator),
                         children: (0, r.jsx)(c.Button, {
                             variant: "primary",
-                            disabled: (0 === p.size && !s) || D,
+                            disabled: (0 === p.size && !s) || w,
                             text: i,
                             size: "md",
                             fullWidth: !0,
                             onClick: async () => {
                                 if (s) return void t();
-                                w(!0), await n([...p.values()]), w(!1);
+                                D(!0), await n([...p.values()]), D(!1);
                             },
                         }),
                     })

@@ -10,28 +10,28 @@ var r = n(54381),
     u = n(204875),
     g = n(715796),
     m = n(411667),
-    p = n(434404),
-    f = n(962086),
-    h = n(225675),
-    b = n(703656),
+    f = n(434404),
+    p = n(962086),
+    b = n(225675),
+    h = n(703656),
     x = n(601964),
     j = n(485386),
-    _ = n(430824),
-    v = n(594174),
-    O = n(63063),
-    C = n(267101),
-    y = n(294294),
-    N = n(310800),
-    E = n(833695),
-    I = n(981631),
-    S = n(176505),
+    v = n(430824),
+    O = n(594174),
+    C = n(63063),
+    y = n(267101),
+    N = n(294294),
+    E = n(310800),
+    I = n(833695),
+    S = n(981631),
+    _ = n(176505),
     T = n(388032),
-    P = n(68920);
+    P = n(155167);
 function w(e) {
     let { guildId: t, hasValidApplication: n } = e,
-        { listingsLoaded: w } = (0, C.eD)(t),
-        Z = (0, a.e7)([_.Z], () => _.Z.getGuild(t)),
-        R = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
+        { listingsLoaded: w } = (0, y.eD)(t),
+        Z = (0, a.e7)([v.Z], () => v.Z.getGuild(t)),
+        R = (0, a.e7)([O.default], () => O.default.getCurrentUser()),
         D = null != Z && (0, x.eM)(Z, R),
         { loading: A } = (0, c.H)(t),
         [L, k] = i.useState(n ? "manage_listings" : "payment");
@@ -39,15 +39,15 @@ function w(e) {
     let G = i.useCallback(() => {
         if (null == Z) return;
         let e = j.Z.getEveryoneRole(Z);
-        p.Z.close();
+        f.Z.close();
         let t = { [e.id]: e };
-        (0, f.iD)(Z.id, {
-            type: h.z.SERVER_SHOP,
+        (0, p.iD)(Z.id, {
+            type: b.z.SERVER_SHOP,
             roles: t,
             initialTab: "guild_products",
-            returnToSection: I.pNK.GUILD_PRODUCTS,
+            returnToSection: S.pNK.GUILD_PRODUCTS,
         }),
-            (0, b.uL)(I.Z5c.CHANNEL(Z.id, S.oC.GUILD_SHOP));
+            (0, h.uL)(S.Z5c.CHANNEL(Z.id, _.oC.GUILD_SHOP));
     }, [Z]);
     if (!w || A) return (0, r.jsx)(o.$jN, {});
     if (null == Z) return null;
@@ -60,8 +60,8 @@ function w(e) {
                 (0, r.jsx)(o.Text, {
                     variant: "text-sm/normal",
                     children: T.intl.format(T.t.xiYuDt, {
-                        monetizationPolicyLink: O.Z.getArticleURL(I.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: O.Z.getCreatorSupportArticleURL(I.BhN.SERVER_PRODUCTS),
+                        monetizationPolicyLink: C.Z.getArticleURL(S.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: C.Z.getCreatorSupportArticleURL(S.BhN.SERVER_PRODUCTS),
                     }),
                 }),
             ],
@@ -107,9 +107,9 @@ function w(e) {
             ],
         }),
         B = (0, l.EQ)(L)
-            .with("basic_info", () => (0, r.jsx)(y.Z, { guildId: t }))
-            .with("manage_listings", () => (0, r.jsx)(N.Z, { guildId: t }))
-            .with("payment", () => (0, r.jsx)(E.Z, { guildId: t }))
+            .with("basic_info", () => (0, r.jsx)(N.Z, { guildId: t }))
+            .with("manage_listings", () => (0, r.jsx)(E.Z, { guildId: t }))
+            .with("payment", () => (0, r.jsx)(I.Z, { guildId: t }))
             .exhaustive(),
         F = w
             ? (0, r.jsx)(o.njP.Panel, {

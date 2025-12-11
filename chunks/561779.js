@@ -11,7 +11,7 @@ var r,
     f = n(793030),
     p = n(506802),
     _ = n(607070),
-    m = n(89079);
+    m = n(440326);
 function h(e, t, n) {
     return (
         t in e
@@ -160,8 +160,8 @@ class S extends (r = a.PureComponent) {
                 defaultValue: N,
                 orientation: P,
                 onValueRender: R,
-                renderMarker: D,
-                getAriaValueText: w,
+                renderMarker: w,
+                getAriaValueText: D,
                 barClassName: x,
                 grabberClassName: L,
                 grabberStyles: j = {},
@@ -191,8 +191,8 @@ class S extends (r = a.PureComponent) {
                                   }),
                                   style: { left: "".concat(e, "%") },
                                   children:
-                                      null != D
-                                          ? D(n)
+                                      null != w
+                                          ? w(n)
                                           : (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsx)("div", {
@@ -210,7 +210,7 @@ class S extends (r = a.PureComponent) {
                       })
                     : null,
             Y = null != R ? R(t) : "".concat(F.toFixed(0), "%"),
-            W = null != (e = null == w ? void 0 : w(t)) ? e : void 0;
+            W = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
         return (0, i.jsx)(
             f.gNt,
             b(g({}, B), {

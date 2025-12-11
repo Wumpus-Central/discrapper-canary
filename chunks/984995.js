@@ -1,0 +1,21 @@
+e.exports = {
+    inline: "_6c706db0523bd9a7-inline",
+    hiddenMosaicItem: "_6c706db0523bd9a7-hiddenMosaicItem",
+    obscured: "_6c706db0523bd9a7-obscured",
+    hiddenSpoiler: "_6c706db0523bd9a7-hiddenSpoiler",
+    hiddenExplicit: "_6c706db0523bd9a7-hiddenExplicit",
+    obscureVideoSpacing: "_6c706db0523bd9a7-obscureVideoSpacing",
+    mosaicItemContent: "_6c706db0523bd9a7-mosaicItemContent",
+    removeMosaicItemButton: "_6c706db0523bd9a7-removeMosaicItemButton",
+    spoilerRemoveMosaicItemButton:
+        "_6c706db0523bd9a7-spoilerRemoveMosaicItemButton _6c706db0523bd9a7-removeMosaicItemButton",
+    mosaicItem: "_6c706db0523bd9a7-mosaicItem",
+    mosaicItemNoJustify: "_6c706db0523bd9a7-mosaicItemNoJustify",
+    mosaicItemFullWidth: "_6c706db0523bd9a7-mosaicItemFullWidth",
+    mosaicItemMediaMosaic: "_6c706db0523bd9a7-mosaicItemMediaMosaic",
+    hasFooter: "_6c706db0523bd9a7-hasFooter",
+    mosaicItemWithFooter: "_6c706db0523bd9a7-mosaicItemWithFooter",
+    hideOverflow: "_6c706db0523bd9a7-hideOverflow",
+    removeMosaicItemHoverButton: "_6c706db0523bd9a7-removeMosaicItemHoverButton",
+    downloadHoverButtonIcon: "_6c706db0523bd9a7-downloadHoverButtonIcon",
+};

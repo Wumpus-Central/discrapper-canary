@@ -13,15 +13,15 @@ var r = n(54381),
     g = n(453687),
     h = n(25015),
     m = n(438075),
-    _ = n(963550),
-    b = n(845080),
+    b = n(963550),
+    _ = n(845080),
     E = n(295790),
     O = n(145807),
     v = n(592125),
     y = n(709054),
     I = n(981631),
-    C = n(7938),
-    S = n(360514);
+    C = n(630573),
+    S = n(548498);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -130,7 +130,7 @@ let N = i.memo(function (e) {
                 }),
                 disableInteraction: k,
                 childrenExecutedCommand: (0, O.Z)(N, Z, !1),
-                childrenHeader: (0, b.Z)({
+                childrenHeader: (0, _.Z)({
                     message: N,
                     channel: Z,
                     author: z,
@@ -143,7 +143,7 @@ let N = i.memo(function (e) {
                     hideGuildTag: !1,
                 }),
                 childrenAccessories: e.hideAccessories ? void 0 : (0, m.Q)(e, H, V),
-                childrenMessageContent: (0, _.Z)(e, B),
+                childrenMessageContent: (0, b.Z)(e, B),
                 childrenSystemMessage: (0, E.Z)(
                     ((i = T({}, e)),
                     (l = l = { disableInteraction: k }),

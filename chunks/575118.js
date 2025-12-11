@@ -14,7 +14,7 @@ var r = n(54381),
     m = n(821541),
     h = n(777207),
     g = n(624653),
-    E = n(325380);
+    E = n(51766);
 function b(e, t, n) {
     return (
         t in e
@@ -162,13 +162,13 @@ function T(e) {
         } = e,
         { headingId: P } = (0, g.v)(),
         { i18n: R } = (0, _.ZF)(),
-        D = null != t,
-        w = (0, f.MW)(n),
-        x = c ? (w ? S : I) : v,
+        w = null != t,
+        D = (0, f.MW)(n),
+        x = c ? (D ? S : I) : v,
         L =
             null != n &&
             (0, r.jsx)("div", {
-                className: o()(E.headerGraphic, { [E.headerGraphicAnimated]: w }),
+                className: o()(E.headerGraphic, { [E.headerGraphicAnimated]: D }),
                 children: (0, r.jsx)("div", {
                     className: E.headerGraphicContainer,
                     children: (0, r.jsx)(d.z, y({}, n)),
@@ -192,7 +192,7 @@ function T(e) {
                         children: (0, r.jsx)(x, {
                             leading: b,
                             trailing: O,
-                            hasGradient: D,
+                            hasGradient: w,
                             children: (0, r.jsxs)("div", {
                                 className: E.headerMain,
                                 children: [
@@ -217,7 +217,7 @@ function T(e) {
                 ],
             }),
         });
-    return D
+    return w
         ? (0, r.jsx)(u.$, {
               color: t,
               className: E.headerGradient,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r = n(54381),
     i = n(473749),
-    l = n(296009),
-    a = n(442837),
+    a = n(296009),
+    l = n(442837),
     o = n(704215),
     c = n(481060),
     s = n(491662),
@@ -11,34 +11,34 @@ var r = n(54381),
     f = n(785717),
     g = n(931847),
     p = n(50130),
-    m = n(28671),
-    b = n(430790),
+    b = n(28671),
+    m = n(430790),
     h = n(795990),
     y = n(388032),
-    v = n(66582);
+    v = n(284459);
 function O() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, f.KZ)(),
         O = i.useRef(!1),
-        j = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        { application: x, config: _ } = (0, p.G)(),
-        { token: P, fetched: I } = (0, s.o)(null == _ ? void 0 : _.application_id),
-        w = i.useMemo(
+        j = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        { application: x, config: P } = (0, p.G)(),
+        { token: I, fetched: w } = (0, s.o)(null == P ? void 0 : P.application_id),
+        S = i.useMemo(
             () =>
-                (null == _ ? void 0 : _.application_id) != null
+                (null == P ? void 0 : P.application_id) != null
                     ? new g.q({
-                          type: l.l.APPLICATION,
-                          applicationId: _.application_id,
+                          type: a.l.APPLICATION,
+                          applicationId: P.application_id,
                       })
                     : null,
-            [null == _ ? void 0 : _.application_id],
+            [null == P ? void 0 : P.application_id],
         ),
-        S = i.useCallback(() => {
+        E = i.useCallback(() => {
             t({ action: "PRESS_ADD_WIDGET" }),
                 (0, c.ZDy)(
                     async () => {
                         let { default: e } = await n.e("38576").then(n.bind(n, 925170));
                         return (n) => {
-                            var i, l;
+                            var i, a;
                             return (0, r.jsx)(
                                 e,
                                 ((i = (function (e) {
@@ -66,9 +66,9 @@ function O() {
                                     }
                                     return e;
                                 })({}, n)),
-                                (l = l = { trackUserProfileEditAction: t }),
+                                (a = a = { trackUserProfileEditAction: t }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -76,8 +76,8 @@ function O() {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                      })(Object(a)).forEach(function (e) {
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                                       }),
                                 i),
                             );
@@ -86,11 +86,11 @@ function O() {
                     { stackingBehavior: "stack" },
                 );
         }, [t]),
-        E = null == j || null == x || null == w || !I,
-        T = null != P;
+        _ = null == j || null == x || null == S || !w,
+        T = null != I;
     if (
         (i.useEffect(() => {
-            !E &&
+            !_ &&
                 T &&
                 (O.current ||
                     (e({
@@ -98,8 +98,8 @@ function O() {
                         applicationId: x.id,
                     }),
                     (O.current = !0)));
-        }, [E, T, e, null == x ? void 0 : x.id]),
-        E)
+        }, [_, T, e, null == x ? void 0 : x.id]),
+        _)
     )
         return (0, r.jsx)("div", {
             className: v.loading,
@@ -135,12 +135,12 @@ function O() {
                         children: [
                             (0, r.jsx)(c.LZC, { size: 32 }),
                             C,
-                            (0, r.jsx)(m.Z, {
+                            (0, r.jsx)(b.Z, {
                                 user: j,
                                 application: x,
                                 onDismiss: n,
                             }),
-                            (0, r.jsx)(b.Z, {}),
+                            (0, r.jsx)(m.Z, {}),
                         ],
                     });
                 case null:
@@ -155,7 +155,7 @@ function O() {
                                 text: y.intl.string(y.t["lBG2s/"]),
                                 size: "md",
                                 color: "secondary",
-                                onClick: S,
+                                onClick: E,
                             }),
                         ],
                     });

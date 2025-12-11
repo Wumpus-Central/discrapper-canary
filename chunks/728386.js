@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(443603),
     _ = n(957825),
     m = n(388032),
-    h = n(564355);
+    h = n(72775);
 function g(e, t, n) {
     return (
         t in e
@@ -75,16 +75,16 @@ function O(e, t) {
             (0, d.RO)(_.X1.STICKER, a, g.id);
         }, [a, g.id]),
         { Component: N, events: P, play: R } = (0, l.z)(),
-        D = (0, f.v)(u.U);
+        w = (0, f.v)(u.U);
     return n
         ? null
         : (0, r.jsx)("div", {
               className: o()(_.CT, h.buttonContainer),
               ref: t,
               children: (0, r.jsx)(c.u, {
-                  shouldShow: null != D,
+                  shouldShow: null != w,
                   text: m.intl.string(m.t.oOJ7KU),
-                  keyboardShortcut: D,
+                  keyboardShortcut: w,
                   children: (0, r.jsx)(
                       p.Z,
                       y(E({ className: o()(h.button, h.stickerButton) }, P), {

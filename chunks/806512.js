@@ -1,0 +1,16 @@
+e.exports = {
+    ripple: "c6367b0f171ba6d7-ripple",
+    row: "c6367b0f171ba6d7-row",
+    sticker: "c6367b0f171ba6d7-sticker",
+    showPulse: "c6367b0f171ba6d7-showPulse",
+    createSticker: "c6367b0f171ba6d7-createSticker",
+    createInspected: "c6367b0f171ba6d7-createInspected",
+    iconWrapper: "c6367b0f171ba6d7-iconWrapper",
+    icon: "c6367b0f171ba6d7-icon",
+    inspectedIndicator: "c6367b0f171ba6d7-inspectedIndicator",
+    stickerInspected: "c6367b0f171ba6d7-stickerInspected",
+    stickerNode: "c6367b0f171ba6d7-stickerNode",
+    stickerNodeDimmed: "c6367b0f171ba6d7-stickerNodeDimmed",
+    stickerNodeHidden: "c6367b0f171ba6d7-stickerNodeHidden",
+    stickerUnsendable: "c6367b0f171ba6d7-stickerUnsendable",
+};

@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(957825),
     v = n(474936),
     S = n(388032),
-    I = n(422840);
+    I = n(98228);
 function T(e, t, n) {
     return (
         t in e
@@ -75,7 +75,7 @@ function N(e, t) {
 }
 let P = [8, 8, 8, 8],
     R = 40;
-function D(e) {
+function w(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: a } = e;
     return (0, r.jsx)(
         u.P3F,
@@ -89,11 +89,11 @@ function D(e) {
         }),
     );
 }
-function w(e, t, n, i, a) {
+function D(e, t, n, i, a) {
     switch (e.categoryInfo.type) {
         case E.bg.FAVORITES:
             return (0, r.jsx)(
-                D,
+                w,
                 {
                     icon: u.r7p,
                     onClick: t,
@@ -104,7 +104,7 @@ function w(e, t, n, i, a) {
             );
         case E.bg.RECENTLY_HEARD:
             return (0, r.jsx)(
-                D,
+                w,
                 {
                     icon: u.T39,
                     onClick: t,
@@ -115,7 +115,7 @@ function w(e, t, n, i, a) {
             );
         case E.bg.FREQUENTLY_USED:
             return (0, r.jsx)(
-                D,
+                w,
                 {
                     icon: u.IeX,
                     onClick: t,
@@ -140,7 +140,7 @@ function w(e, t, n, i, a) {
             );
         case E.bg.DEFAULTS:
             return (0, r.jsx)(
-                D,
+                w,
                 {
                     icon: u.gw7,
                     onClick: t,
@@ -173,13 +173,13 @@ function L(e) {
     return t.categoryInfo.type === E.bg.GUILD
         ? (0, r.jsx)(_.V, {
               guild: t.categoryInfo.guild,
-              children: w(t, i, a, l, o),
+              children: D(t, i, a, l, o),
           })
         : (0, r.jsx)(c.u, {
               text: x(t),
               position: "right",
               align: "center",
-              children: w(t, i, a, l, o),
+              children: D(t, i, a, l, o),
           });
 }
 function j(e) {

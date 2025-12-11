@@ -1,13 +1,43 @@
-var r = {
-    container: "container__8ef77",
-    "aspect-ratio-21/9": "aspect-ratio-21/9__8ef77",
-    "aspect-ratio-16/9": "aspect-ratio-16/9__8ef77",
-    "aspect-ratio-6/4": "aspect-ratio-6/4__8ef77",
-    "aspect-ratio-2/1": "aspect-ratio-2/1__8ef77",
-    "aspect-ratio-1/1": "aspect-ratio-1/1__8ef77",
-    image: "image__8ef77",
-    video: "video__8ef77",
-    lottie: "lottie__8ef77",
-    rive: "rive__8ef77",
-};
-n.r((e.exports = r));
+n.d(t, { Z: () => c });
+var r = n(54381);
+n(473749);
+var i = n(120356),
+    l = n.n(i),
+    a = n(481060),
+    o = n(925329),
+    s = n(829592);
+function c(e) {
+    let { className: t, embeddedApps: n, muted: i } = e;
+    if (n.length <= 0) return null;
+    {
+        if (1 === n.length)
+            return (0, r.jsx)("div", {
+                className: l()(s.container, t, i && s.modeMuted),
+                children: (0, r.jsx)(o.Z, {
+                    game: n[0].application,
+                    className: s.icon20px,
+                }),
+            });
+        let e = n.length - 1;
+        return (0, r.jsxs)("div", {
+            className: l()(s.container, t, i && s.modeMuted),
+            children: [
+                (0, r.jsx)(o.Z, {
+                    game: n[0].application,
+                    className: s.icon20px,
+                }),
+                2 === n.length
+                    ? (0, r.jsx)(o.Z, {
+                          game: n[1].application,
+                          className: s.icon20px,
+                      })
+                    : (0, r.jsx)(a.Text, {
+                          className: s.overflow,
+                          variant: "text-xs/bold",
+                          color: "interactive-text-active",
+                          children: "+".concat(e),
+                      }),
+            ],
+        });
+    }
+}

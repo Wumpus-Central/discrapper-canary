@@ -11,8 +11,8 @@ var r = n(54381),
     f = n(600164),
     p = n(695103),
     _ = n(388032),
-    m = n(39205),
-    h = n(197571);
+    m = n(289253),
+    h = n(478411);
 let g = /^\d+$|^$/;
 function E(e, t, n) {
     if (null == e) return null;
@@ -49,10 +49,10 @@ function b(e) {
     function R(e) {
         v(e);
     }
-    function D(e) {
+    function w(e) {
         C(e);
     }
-    function w() {
+    function D() {
         return null == b
             ? null
             : (0, r.jsx)("div", {
@@ -100,7 +100,7 @@ function b(e) {
         onClose: t,
         transitionState: n,
         children: [
-            w(),
+            D(),
             (0, r.jsxs)(f.Z, {
                 direction: f.Z.Direction.VERTICAL,
                 align: f.Z.Align.START,
@@ -135,7 +135,7 @@ function b(e) {
                                     key: "proxy",
                                 },
                             ],
-                            onChange: D,
+                            onChange: w,
                             placeholder: "URL Origin Type",
                         }),
                     }),

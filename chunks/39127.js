@@ -6,7 +6,7 @@ var r = n(54381),
     s = n.n(o),
     l = n(963838),
     c = n(353368),
-    u = n(787122);
+    u = n(95119);
 let d = async (e) => {
     var t;
     let { animationType: n, animationId: r, url: i, shouldResize: o } = e,

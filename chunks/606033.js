@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(290780), n(781311);
+n.d(t, { Z: () => _ }), n(388685), n(290780), n(781311);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -13,9 +13,9 @@ var r = n(54381),
     g = n(6809),
     h = n(231338),
     m = n(388032),
-    _ = n(982538);
-let b = function (e) {
-    var t, n, b;
+    b = n(9976);
+let _ = function (e) {
+    var t, n, _;
     let { questId: E, setQuestId: O, quest: v, refreshQuest: y } = e,
         [I, C] = i.useState(!1),
         [S, T] = i.useState(!1),
@@ -86,17 +86,17 @@ let b = function (e) {
             [O],
         );
     return (0, r.jsxs)("div", {
-        className: _.controlBar,
+        className: b.controlBar,
         children: [
             (0, r.jsx)("div", {
                 children: (0, r.jsx)("div", {
-                    className: _.questSelectorContainer,
+                    className: b.questSelectorContainer,
                     children: (0, r.jsxs)("div", {
-                        className: _.questSelectorWrapper,
+                        className: b.questSelectorWrapper,
                         children: [
                             (0, r.jsx)(g.Z, {}),
                             (0, r.jsxs)("div", {
-                                className: _.questInput,
+                                className: b.questInput,
                                 children: [
                                     (0, r.jsx)(
                                         a.d,
@@ -128,11 +128,11 @@ let b = function (e) {
                                             .concat(E, "-")
                                             .concat(
                                                 null !=
-                                                    (b =
+                                                    (_ =
                                                         null == v || null == (n = v.config) || null == (t = n.messages)
                                                             ? void 0
                                                             : t.questName)
-                                                    ? b
+                                                    ? _
                                                     : "",
                                             ),
                                     ),
@@ -151,9 +151,9 @@ let b = function (e) {
             null != E &&
                 null != v &&
                 (0, r.jsx)("div", {
-                    className: _.controlsSection,
+                    className: b.controlsSection,
                     children: (0, r.jsxs)(s.ButtonGroup, {
-                        className: _.controlButtons,
+                        className: b.controlButtons,
                         children: [
                             (0, r.jsx)(s.Button, {
                                 onClick: Z,
@@ -184,9 +184,9 @@ let b = function (e) {
                                 align: "center",
                                 renderPopout: () =>
                                     (0, r.jsx)("div", {
-                                        className: _.sharePopover,
+                                        className: b.sharePopover,
                                         children: (0, r.jsx)("div", {
-                                            className: _.copyInput,
+                                            className: b.copyInput,
                                             children: (0, r.jsx)(o.Z, {
                                                 value: h.$w.QUEST_PREVIEW_TOOL_2(E),
                                                 text: m.intl.string(m.t.WqhZss),

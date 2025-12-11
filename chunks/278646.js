@@ -2,19 +2,19 @@ n.d(t, { h: () => d });
 var r = n(54381),
     i = n(481060),
     l = n(262212),
-    o = n(795338),
-    a = n(535396),
-    s = n(5238),
+    a = n(795338),
+    o = n(535396),
+    s = n(44542),
     c = n(388032),
-    u = n(477487);
+    u = n(694253);
 function d(e, t) {
     if (null == t) return;
-    let d = a.uc.has(t.skuId);
+    let d = o.uc.has(t.skuId);
     (0, i.ZDy)(async () => {
-        let { default: a } = await n.e("13965").then(n.bind(n, 666083));
+        let { default: o } = await n.e("13965").then(n.bind(n, 666083));
         return (n) =>
             (0, r.jsx)(
-                a,
+                o,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -43,7 +43,7 @@ function d(e, t) {
                     {
                         title: c.intl.formatToPlainString(s.default.lFuOFF, { perkName: t.title }),
                         description: c.intl.formatToPlainString(s.default.y3wHot, { perkName: t.title }),
-                        image: (0, r.jsx)(o.m, {
+                        image: (0, r.jsx)(a.m, {
                             className: u.image,
                             powerup: t,
                         }),

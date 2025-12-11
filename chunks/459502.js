@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var i = n(54381);
 n(473749);
 var r = n(442837),
@@ -10,28 +10,28 @@ var r = n(442837),
     u = n(592125),
     d = n(115648),
     p = n(15274),
-    h = n(924301),
-    f = n(658041),
+    f = n(924301),
+    h = n(658041),
     m = n(504160),
     g = n(554747),
     b = n(854698),
     C = n(688641),
     y = n(388032),
-    _ = n(837815);
-function v(e) {
-    let { channelId: t, showDismiss: v = !0 } = e,
-        O = (0, r.e7)([u.Z], () => u.Z.getChannel(t), [t]),
-        x = (0, g.sz)(t),
-        E = null != (0, g.qY)(t),
-        { canManageGuildEvent: j } = (0, o.XJ)(O),
-        S = (0, r.e7)([d.Z], () => x.filter((e) => !d.Z.isEventDismissed(e.id)), [x]),
-        P = (0, r.cj)([h.ZP], () => S.reduce((e, t) => ((e[t.id] = h.ZP.getUserCount(t.id, (0, b.DK)(t))), e), {}), [
-            S,
+    v = n(144914);
+function O(e) {
+    let { channelId: t, showDismiss: O = !0 } = e,
+        x = (0, r.e7)([u.Z], () => u.Z.getChannel(t), [t]),
+        E = (0, g.sz)(t),
+        j = null != (0, g.qY)(t),
+        { canManageGuildEvent: S } = (0, o.XJ)(x),
+        _ = (0, r.e7)([d.Z], () => E.filter((e) => !d.Z.isEventDismissed(e.id)), [E]),
+        P = (0, r.cj)([f.ZP], () => _.reduce((e, t) => ((e[t.id] = f.ZP.getUserCount(t.id, (0, b.DK)(t))), e), {}), [
+            _,
         ]);
-    return S.length < 1 || E
+    return _.length < 1 || j
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: S.map((e) =>
+              children: _.map((e) =>
                   (0, i.jsx)(
                       C.Z,
                       {
@@ -42,16 +42,16 @@ function v(e) {
                               width: 20,
                           }),
                           color: l.Z.unsafe_rawColors.GREEN_360.css,
-                          title: y.intl.formatToPlainString(j(e) ? y.t["1vGXqM"] : y.t.xMJyla, { eventName: e.name }),
+                          title: y.intl.formatToPlainString(S(e) ? y.t["1vGXqM"] : y.t.xMJyla, { eventName: e.name }),
                           description: y.intl.formatToPlainString(y.t.PTebCR, {
                               startTime: (0, b.ub)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () =>
                               (function (e) {
-                                  let t = j(e),
+                                  let t = S(e),
                                       r = () => {
                                           (0, a.ZDy)(async () => {
-                                              let { default: t } = await Promise.all([n.e("84722"), n.e("51885")]).then(
+                                              let { default: t } = await Promise.all([n.e("84722"), n.e("5992")]).then(
                                                   n.bind(n, 296864),
                                               );
                                               return (n) => {
@@ -113,20 +113,20 @@ function v(e) {
                                               };
                                           });
                                       };
-                                  t && (0, c.u1)() && (0, f.s)(e)
+                                  t && (0, c.u1)() && (0, h.s)(e)
                                       ? (0, s.Z)(r)
                                       : t
                                         ? r()
                                         : (0, p.bO)({ eventId: e.id });
                               })(e),
-                          onDismiss: v
+                          onDismiss: O
                               ? () => {
                                     var t;
                                     return (t = e.id), void (0, m.Xy)(t);
                                 }
                               : void 0,
                           userCount: P[e.id],
-                          className: _.eventPrompt,
+                          className: v.eventPrompt,
                       },
                       e.id,
                   ),

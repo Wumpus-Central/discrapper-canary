@@ -7,7 +7,7 @@ var r = n(54381),
     l = n(481060),
     c = n(359135),
     u = n(516817),
-    d = n(81298);
+    d = n(632180);
 function f(e, t, n) {
     return (
         t in e
@@ -103,7 +103,7 @@ let E = function (e) {
             highlighted: P,
             focusProps: R,
         } = e,
-        D = h(e, [
+        w = h(e, [
             "ref",
             "avatar",
             "name",
@@ -123,14 +123,14 @@ let E = function (e) {
             "highlighted",
             "focusProps",
         ]);
-    (D.className = o()(D.className, d.container, {
+    (w.className = o()(w.className, d.container, {
         [d.selected]: v,
         [d.highlighted]: P,
         [null != C ? C : ""]: v,
         [d.clickable]: !v && (null != I || null != y),
     })),
-        (D["aria-selected"] = null != (t = D["aria-selected"]) ? t : v);
-    let w = i.useRef(null),
+        (w["aria-selected"] = null != (t = w["aria-selected"]) ? t : v);
+    let D = i.useRef(null),
         x = (0, r.jsxs)("div", {
             className: o()(d.childContainer, { [d.nameplated]: null != _ }),
             children: [
@@ -138,11 +138,11 @@ let E = function (e) {
                     nameplate: _,
                     hovered: O,
                     selected: v,
-                    content: w,
+                    content: D,
                     placement: c.i.MEMBER_LIST,
                 }),
                 (0, r.jsxs)("div", {
-                    ref: w,
+                    ref: D,
                     className: o()(A, d.layout, {
                         [d.muted]: !v && S,
                         [d.wrappedLayout]: N,
@@ -195,7 +195,7 @@ let E = function (e) {
                                   to: I,
                                   onClick: y,
                               },
-                              D,
+                              w,
                           ),
                           {
                               role: "listitem",
@@ -215,7 +215,7 @@ let E = function (e) {
                             onClick: y,
                             focusProps: R,
                         },
-                        D,
+                        w,
                     ),
                     {
                         role: "listitem",
@@ -229,7 +229,7 @@ let E = function (e) {
                 m(p({}, R), {
                     children: (0, r.jsx)(
                         "div",
-                        m(p({}, D), {
+                        m(p({}, w), {
                             role: "listitem",
                             ref: n,
                             children: x,

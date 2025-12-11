@@ -4,9 +4,9 @@ r(473749);
 var o = r(793030),
     i = r(481060),
     l = r(388032),
-    c = r(76349),
-    s = r(768982);
-let a = (t) => {
+    c = r(666075),
+    a = r(787068);
+let s = (t) => {
     let { text: e, icon: r, foreground: o } = t;
     return (0, n.jsxs)("div", {
         className: c.bulletContainer,
@@ -86,7 +86,7 @@ function u(t) {
             {
                 graphic: {
                     type: "image",
-                    src: s.Z,
+                    src: a.Z,
                 },
                 title: l.intl.string(l.t.UVuXCs),
                 onClose: u,
@@ -99,16 +99,16 @@ function u(t) {
                     },
                 ],
                 children: [
-                    (0, n.jsx)(a, {
+                    (0, n.jsx)(s, {
                         text: l.intl.string(l.t.sBDfo6),
                         icon: i.nRN,
                         foreground: "var(--status-danger)",
                     }),
-                    (0, n.jsx)(a, {
+                    (0, n.jsx)(s, {
                         text: l.intl.string(l.t.x58YtH),
                         icon: i.gkL,
                     }),
-                    (0, n.jsx)(a, {
+                    (0, n.jsx)(s, {
                         text: l.intl.string(l.t.XtVqla),
                         icon: i.V9,
                     }),

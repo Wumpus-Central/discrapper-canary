@@ -1,0 +1,16 @@
+e.exports = {
+    container: "_3a5a1cbdfaf1e8ec-container",
+    innerContainer: "_3a5a1cbdfaf1e8ec-innerContainer",
+    keyComboInner: "_3a5a1cbdfaf1e8ec-keyComboInner",
+    keyComboContainer: "_3a5a1cbdfaf1e8ec-keyComboContainer",
+    header: "_3a5a1cbdfaf1e8ec-header",
+    headerTitle: "_3a5a1cbdfaf1e8ec-headerTitle",
+    roleContainer: "_3a5a1cbdfaf1e8ec-roleContainer",
+    highestRole: "_3a5a1cbdfaf1e8ec-highestRole",
+    addRoleIcon: "_3a5a1cbdfaf1e8ec-addRoleIcon",
+    roleTooltipItem: "_3a5a1cbdfaf1e8ec-roleTooltipItem",
+    addRoleContainer: "_3a5a1cbdfaf1e8ec-addRoleContainer",
+    guildIcon: "_3a5a1cbdfaf1e8ec-guildIcon",
+    loadingSpinner: "_3a5a1cbdfaf1e8ec-loadingSpinner",
+    noRoles: "_3a5a1cbdfaf1e8ec-noRoles",
+};

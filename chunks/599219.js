@@ -6,14 +6,14 @@ var a = n(54381),
     i = n(990547),
     r = n(442837),
     c = n(481060),
-    u = n(393238),
-    d = n(600164),
-    _ = n(313201),
-    p = n(215292),
-    f = n(382086),
+    d = n(393238),
+    u = n(600164),
+    f = n(313201),
+    b = n(215292),
+    p = n(382086),
     m = n(996453),
-    h = n(446706),
-    b = n(594174),
+    _ = n(446706),
+    h = n(594174),
     E = n(626135),
     N = n(179645),
     x = n(436046),
@@ -26,7 +26,7 @@ var a = n(54381),
     v = n(834891),
     I = n(675999),
     g = n(388032),
-    G = n(751629);
+    G = n(22742);
 function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +71,7 @@ function D(e, t) {
     );
 }
 function S(e) {
-    let t = (0, _.Dt)(),
+    let t = (0, f.Dt)(),
         { onSlideChange: n } = e,
         s = (function (e, t) {
             if (null == e) return {};
@@ -96,7 +96,7 @@ function S(e) {
         })(e, ["onSlideChange"]),
         { onClose: S } = s,
         [L, w] = o.useState(!1),
-        M = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
+        M = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
         k = null != M && null == M.nsfwAllowed,
         [P, U] = o.useState(k ? y.F.AGE_GATE : y.F.CHOOSE_TEMPLATE),
         [R, B] = o.useState(null);
@@ -118,7 +118,7 @@ function S(e) {
             },
             [z, U],
         ),
-        { content: q, footer: X } = (0, f.v)({
+        { content: q, footer: X } = (0, p.v)({
             hasFooter: !1,
             onBack: () => {
                 z(null), U(y.F.CHOOSE_TEMPLATE);
@@ -140,7 +140,7 @@ function S(e) {
             isSlideReady: R === y.F.CUSTOMIZE_GUILD,
             isCommunity: Y,
         }),
-        { content: ee, footer: et } = (0, p.F)({
+        { content: ee, footer: et } = (0, b.F)({
             createdGuildId: Z,
             hasFooter: !1,
             onChannelPromptCompleted: () => {
@@ -170,7 +170,7 @@ function S(e) {
         case y.F.CREATION_INTENT:
             eo = X;
     }
-    let { ref: es, width: el } = (0, u.ZP)();
+    let { ref: es, width: el } = (0, d.ZP)();
     if (L)
         return (0, a.jsx)(
             c.Y0X,
@@ -228,7 +228,7 @@ function S(e) {
                                                 impressionProperties: ei,
                                                 children: (0, a.jsx)("div", {
                                                     className: l()(G.container, G.shortFooter),
-                                                    children: (0, a.jsx)(h.Z, {
+                                                    children: (0, a.jsx)(_.Z, {
                                                         className: G.templates,
                                                         onChooseTemplate: K,
                                                         isNewUser: !0,
@@ -282,7 +282,7 @@ function S(e) {
                                     : null,
                                 P === y.F.CHOOSE_TEMPLATE
                                     ? (0, a.jsx)(c.mzw, {
-                                          justify: d.Z.Justify.BETWEEN,
+                                          justify: u.Z.Justify.BETWEEN,
                                           className: l()(G.footer, G.join),
                                           children: (0, a.jsx)(c.Anchor, {
                                               className: G.joinCTA,
@@ -303,7 +303,7 @@ function S(e) {
                                     : null,
                                 null != eo
                                     ? (0, a.jsx)(c.mzw, {
-                                          justify: d.Z.Justify.BETWEEN,
+                                          justify: u.Z.Justify.BETWEEN,
                                           className: G.footer,
                                           children: eo,
                                       })

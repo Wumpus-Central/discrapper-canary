@@ -1,0 +1,15 @@
+e.exports = {
+    tabs: "f1dca08b2e53a5ff-tabs",
+    separator: "f1dca08b2e53a5ff-separator",
+    tab: "f1dca08b2e53a5ff-tab",
+    tabPageLarge: "f1dca08b2e53a5ff-tabPageLarge f1dca08b2e53a5ff-tab",
+    tabPageSmall: "f1dca08b2e53a5ff-tabPageSmall f1dca08b2e53a5ff-tab",
+    tabNotSelected: "f1dca08b2e53a5ff-tabNotSelected",
+    requirementsContainer: "f1dca08b2e53a5ff-requirementsContainer",
+    requirements: "f1dca08b2e53a5ff-requirements",
+    requirement: "f1dca08b2e53a5ff-requirement",
+    requirementKey: "f1dca08b2e53a5ff-requirementKey",
+    tabSelected: "f1dca08b2e53a5ff-tabSelected",
+    tabNotSelectedColor: "f1dca08b2e53a5ff-tabNotSelectedColor",
+    tabSelectedColor: "f1dca08b2e53a5ff-tabSelectedColor",
+};

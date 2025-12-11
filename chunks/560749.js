@@ -12,26 +12,26 @@ var r = n(54381),
     p = n(601565),
     h = n(131704),
     m = n(601964),
-    _ = n(592125),
-    g = n(580005),
-    x = n(984933),
-    v = n(430824),
+    g = n(592125),
+    x = n(580005),
+    v = n(984933),
+    b = n(430824),
     j = n(496675),
-    S = n(914010),
-    b = n(594174),
+    _ = n(914010),
+    S = n(594174),
     y = n(938475),
     C = n(823379),
     O = n(102172),
     w = n(981631),
-    Z = n(128057),
+    Z = n(297940),
     P = n(388032),
-    I = n(603410);
+    I = n(311066);
 function E(e) {
     let { result: t, onSelectChannel: n } = e,
-        i = (0, o.e7)([v.Z], () => v.Z.getGuild(t.record.guild_id)),
-        l = (0, o.Wu)([y.ZP, b.default], () =>
+        i = (0, o.e7)([b.Z], () => b.Z.getGuild(t.record.guild_id)),
+        l = (0, o.Wu)([y.ZP, S.default], () =>
             y.ZP.getVoiceStatesForChannel(t.record)
-                .map((e) => b.default.getUser(e.user.id))
+                .map((e) => S.default.getUser(e.user.id))
                 .filter(C.lm),
         );
     return (0, r.jsxs)(c.P3F, {
@@ -81,39 +81,38 @@ function E(e) {
 function T(e) {
     let { onSelectChannel: t, className: n } = e,
         { search: l, query: a, results: m } = (0, p.Z)({ searchOptions: { frecencyBoosters: !0 } }),
-        b = (0, o.Wu)([S.Z, x.ZP, _.Z, v.Z, j.Z], () => {
+        S = (0, o.Wu)([_.Z, v.ZP, g.Z, b.Z, j.Z], () => {
             let e = [],
-                t = S.Z.getGuildId();
+                t = _.Z.getGuildId();
             if (null == t) return e;
-            for (let n of x.ZP.getVocalChannelIds(t)) {
-                let t = _.Z.getChannel(n);
-                null != t && (0, O.JL)(t, v.Z, j.Z) && e.push(t);
+            for (let n of v.ZP.getVocalChannelIds(t)) {
+                let t = g.Z.getChannel(n);
+                null != t && (0, O.JL)(t, b.Z, j.Z) && e.push(t);
             }
             return e;
         }),
-        y = (0, o.Wu)([f.Z, _.Z, g.Z, v.Z, j.Z], () => {
+        y = (0, o.Wu)([f.Z, g.Z, x.Z, b.Z, j.Z], () => {
             let e = [],
                 t = new Set();
             for (let n of f.Z.getChannelHistory()) {
-                let r = _.Z.getChannel(n);
+                let r = g.Z.getChannel(n);
                 (null == r ? void 0 : r.type) === w.d4z.GUILD_VOICE &&
-                    (0, O.JL)(r, v.Z, j.Z) &&
+                    (0, O.JL)(r, b.Z, j.Z) &&
                     (t.add(r.id), e.push(r));
             }
-            for (let n of g.Z.getFrequentlyWithoutFetchingLatest())
+            for (let n of x.Z.getFrequentlyWithoutFetchingLatest())
                 n instanceof h.Sf &&
                     n.type === w.d4z.GUILD_VOICE &&
                     !t.has(n.id) &&
-                    (0, O.JL)(n, v.Z, j.Z) &&
+                    (0, O.JL)(n, b.Z, j.Z) &&
                     (t.add(n.id), e.push(n));
             return e;
         }),
         T = i.useMemo(() => {
             let e = new Set(y.map((e) => e.id)),
-                t = new Set(b.map((e) => e.id));
+                t = new Set(S.map((e) => e.id));
             return [
-                ...b
-                    .toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
+                ...S.toSorted((t, n) => (e.has(t.id) && !e.has(n.id) ? -1 : e.has(n.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, u.Z)(e.id))
                     .filter(C.lm),
                 ...y
@@ -121,7 +120,7 @@ function T(e) {
                     .map((e) => (0, u.Z)(e.id))
                     .filter(C.lm),
             ];
-        }, [y, b]),
+        }, [y, S]),
         A = "" !== a ? m : T;
     return (0, r.jsxs)("div", {
         className: s()(I.root, n),

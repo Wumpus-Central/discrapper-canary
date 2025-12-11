@@ -1,0 +1,17 @@
+e.exports = {
+    wrapper: "_88a5335ec34af95b-wrapper",
+    operation: "_88a5335ec34af95b-operation",
+    handle: "_88a5335ec34af95b-handle",
+    resizeNorth: "_88a5335ec34af95b-resizeNorth _88a5335ec34af95b-handle",
+    resizeSouth: "_88a5335ec34af95b-resizeSouth _88a5335ec34af95b-handle",
+    resizeNSCursor: "_88a5335ec34af95b-resizeNSCursor",
+    resizeWest: "_88a5335ec34af95b-resizeWest _88a5335ec34af95b-handle",
+    resizeEast: "_88a5335ec34af95b-resizeEast _88a5335ec34af95b-handle",
+    resizeEWCursor: "_88a5335ec34af95b-resizeEWCursor",
+    resizeNorthWest: "_88a5335ec34af95b-resizeNorthWest _88a5335ec34af95b-handle",
+    resizeNorthEast: "_88a5335ec34af95b-resizeNorthEast _88a5335ec34af95b-handle",
+    resizeSouthWest: "_88a5335ec34af95b-resizeSouthWest _88a5335ec34af95b-handle",
+    resizeSouthEast: "_88a5335ec34af95b-resizeSouthEast _88a5335ec34af95b-handle",
+    resizeNWSECursor: "_88a5335ec34af95b-resizeNWSECursor",
+    resizeNESWCursor: "_88a5335ec34af95b-resizeNESWCursor",
+};

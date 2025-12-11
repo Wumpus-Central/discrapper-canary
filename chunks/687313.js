@@ -1,0 +1,17 @@
+t.exports = {
+    ping: "f0dcafd910670ca4-ping",
+    checklistRow: "f0dcafd910670ca4-checklistRow",
+    checklistIcon: "f0dcafd910670ca4-checklistIcon",
+    icon: "f0dcafd910670ca4-icon",
+    roleRow: "f0dcafd910670ca4-roleRow",
+    roleDot: "f0dcafd910670ca4-roleDot",
+    roleName: "f0dcafd910670ca4-roleName",
+    table: "f0dcafd910670ca4-table",
+    tableContainer: "f0dcafd910670ca4-tableContainer",
+    tableHeader: "f0dcafd910670ca4-tableHeader",
+    permissionsTable: "f0dcafd910670ca4-permissionsTable",
+    permissionRow: "f0dcafd910670ca4-permissionRow",
+    bullet: "f0dcafd910670ca4-bullet",
+    bulletWarning: "f0dcafd910670ca4-bulletWarning f0dcafd910670ca4-bullet",
+    bulletPositive: "f0dcafd910670ca4-bulletPositive f0dcafd910670ca4-bullet",
+};

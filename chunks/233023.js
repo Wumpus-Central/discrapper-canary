@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(741570),
     f = n(584973),
     p = n(556638),
-    _ = n(80568);
+    _ = n(175996);
 let m = 14;
 function h(e) {
     let {
@@ -38,9 +38,9 @@ function h(e) {
         N = null == t ? void 0 : t.emoji,
         P = null != A ? A : null == t ? void 0 : t.state,
         R = null != P && "" !== P,
-        D = null;
+        w = null;
     C && null != b
-        ? (D = (0, r.jsx)(u.Z, {
+        ? (w = (0, r.jsx)(u.Z, {
               userId: b,
               size: m,
               className: a()(i, _.hangStatusIcon),
@@ -48,23 +48,23 @@ function h(e) {
           }))
         : null == N ||
           v ||
-          (D = (0, r.jsx)(f.Z, {
+          (w = (0, r.jsx)(f.Z, {
               emoji: N,
               animate: O,
               className: i,
               hideTooltip: S || R,
           }));
-    let w = R && (null != D ? " ".concat(P) : P),
+    let D = R && (null != w ? " ".concat(P) : P),
         x = () => {
             let e = null != N && !v && !R;
             return S || e
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [D, w],
+                      children: [w, D],
                   })
                 : (0, r.jsxs)(o.Z, {
                       delay: p.X,
                       tooltipClassName: h,
-                      children: [D, w],
+                      children: [w, D],
                   });
         };
     return (0, r.jsx)(s.Text, {

@@ -5,8 +5,8 @@ var i = n(54381),
     r = n(5900),
     u = n(773275),
     a = n(388032),
-    o = n(36385),
-    c = n(291771);
+    o = n(498264),
+    c = n(977701);
 let d = () => {
         let { isWeb: t, installationStatus: e } = (0, u.xf)(),
             n = (0, l.useMemo)(() => {

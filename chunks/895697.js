@@ -24,16 +24,16 @@ var i = n(442837),
     I = n(915014),
     T = n(671955),
     C = n(388032),
-    A = n(57842),
-    N = n(116649);
+    A = n(773008),
+    N = n(155493);
 function P(e) {
     let {
             user: t,
             currentUser: n,
             displayProfile: P,
             guild: R,
-            isHoveringOrFocusing: D,
-            onOpenProfile: w,
+            isHoveringOrFocusing: w,
+            onOpenProfile: D,
             channelId: x,
             onClose: L,
         } = e,
@@ -52,7 +52,7 @@ function P(e) {
             (0, r.jsx)(E.Z, {
                 user: t,
                 guildId: null == R ? void 0 : R.id,
-                onOpenProfile: w,
+                onOpenProfile: D,
                 nickname: j,
                 pronouns: null == P ? void 0 : P.pronouns,
                 tags: (0, r.jsx)(p.Z, {
@@ -66,15 +66,15 @@ function P(e) {
                         !U &&
                             (0, r.jsx)(O.Z, {
                                 userId: t.id,
-                                isVisible: D,
-                                onOpenProfile: w,
+                                isVisible: w,
+                                onOpenProfile: D,
                             }),
                     ],
                 }),
             }),
             (0, r.jsx)(I.Z, {
                 user: t,
-                onOpenProfile: (e) => (null == w ? void 0 : w({ section: e })),
+                onOpenProfile: (e) => (null == D ? void 0 : D({ section: e })),
             }),
             (0, r.jsxs)("div", {
                 className: A.buttons,
@@ -102,7 +102,7 @@ function P(e) {
                       user: t,
                       currentUser: n,
                       guildId: null == R ? void 0 : R.id,
-                      onOpenUserProfileModal: w,
+                      onOpenUserProfileModal: D,
                       onClose: L,
                   })
                 : (0, r.jsx)(_.Z, {

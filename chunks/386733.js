@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(938736),
     v = n(981631),
     S = n(388032),
-    I = n(120472),
+    I = n(70649),
     T = n(691766);
 function C(e, t, n) {
     return (
@@ -108,7 +108,7 @@ let R = (e) => {
             }),
         });
     },
-    D = (e) => {
+    w = (e) => {
         let { numSentReferrals: t, placement: n } = e;
         return (0, r.jsxs)("div", {
             className: I.avatarProgressBarUnitConnectorContainer,
@@ -123,7 +123,7 @@ let R = (e) => {
             ],
         });
     },
-    w = (e) => {
+    D = (e) => {
         let { userRecords: t } = e,
             n = t.length,
             i = n < 1 ? null : t[0],
@@ -136,7 +136,7 @@ let R = (e) => {
                     userRecord: i,
                     placement: 1,
                 }),
-                (0, r.jsx)(D, {
+                (0, r.jsx)(w, {
                     numSentReferrals: n,
                     placement: 1,
                 }),
@@ -144,7 +144,7 @@ let R = (e) => {
                     userRecord: a,
                     placement: 2,
                 }),
-                (0, r.jsx)(D, {
+                (0, r.jsx)(w, {
                     numSentReferrals: n,
                     placement: 2,
                 }),
@@ -200,7 +200,7 @@ let R = (e) => {
                                 className: I.expandedProgressBarHeader,
                                 children: (0, O.$s)({ hasSentAll: m }),
                             }),
-                            (0, r.jsx)(w, { userRecords: l }),
+                            (0, r.jsx)(D, { userRecords: l }),
                             (0, r.jsx)(u.Text, {
                                 variant: t ? "text-sm/normal" : "text-lg/medium",
                                 children: (0, O.Hg)({
@@ -235,22 +235,22 @@ let R = (e) => {
                     }),
                 ],
             }),
-            D = p.redeemed === b.Q;
+            w = p.redeemed === b.Q;
         return (0, r.jsx)(f.Gt, {
             value: A,
             children: (0, r.jsx)("div", {
                 className: o()({
-                    [I.containerWithGlowWithoutBanner]: D,
-                    [I.containerWithoutGlow]: !D,
+                    [I.containerWithGlowWithoutBanner]: w,
+                    [I.containerWithoutGlow]: !w,
                     [I.containerWithMargins]: !t,
-                    [I.containerWithGlowOnSettingsPage]: D && t,
+                    [I.containerWithGlowOnSettingsPage]: w && t,
                 }),
                 children: (0, r.jsx)("div", {
                     ref: N,
                     className: o()({
                         [I.expandedProgressBarContainer]: !t,
                         [I.expandedProgressBarContainerSettingsPage]: t,
-                        [I.allReferralsSentBorder]: D,
+                        [I.allReferralsSentBorder]: w,
                     }),
                     children: R,
                 }),

@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(358085),
     h = n(998502),
     m = n(388032),
-    _ = n(499126),
-    b = n(197571);
+    b = n(14934),
+    _ = n(478411);
 function E(e, t, n) {
     return (
         t in e
@@ -47,25 +47,25 @@ class O extends i.PureComponent {
                 ((e = null != o.availableKB ? (0, f.BU)(o.availableKB, { useKibibytes: !0 }) : null),
                 (t = null != o.totalKB ? (0, f.BU)(o.totalKB, { useKibibytes: !0 }) : null)),
             (0, r.jsxs)(u.Z, {
-                className: _.installationPath,
+                className: b.installationPath,
                 align: u.Z.Align.CENTER,
                 children: [
                     this.renderDiskUsageCircle(),
                     (0, r.jsxs)(u.Z, {
                         direction: u.Z.Direction.VERTICAL,
-                        className: _.__invalid_descriptionWrapper,
+                        className: b.__invalid_descriptionWrapper,
                         children: [
                             (0, r.jsxs)(u.Z, {
                                 align: u.Z.Align.CENTER,
                                 children: [
                                     (0, r.jsx)(s.Heading, {
-                                        className: _.rowTitle,
+                                        className: b.rowTitle,
                                         variant: "heading-md/semibold",
                                         children: null != i ? i : p.Z.getLabelFromPath(n),
                                     }),
                                     a
                                         ? (0, r.jsx)("span", {
-                                              className: _.defaultIndicator,
+                                              className: b.defaultIndicator,
                                               children: m.intl.string(m.t.bBvAEH),
                                           })
                                         : null,
@@ -73,7 +73,7 @@ class O extends i.PureComponent {
                             }),
                             null != o && null != e && null != t
                                 ? (0, r.jsx)(c.Z, {
-                                      className: _.rowBody,
+                                      className: b.rowBody,
                                       hoverText: m.intl.formatToPlainString(m.t["Fxo9e+"], {
                                           available: e,
                                           total: t,
@@ -81,7 +81,7 @@ class O extends i.PureComponent {
                                       children: n,
                                   })
                                 : (0, r.jsx)(s.Text, {
-                                      className: _.rowBody,
+                                      className: b.rowBody,
                                       variant: "text-xs/normal",
                                       children: n,
                                   }),
@@ -103,7 +103,7 @@ class O extends i.PureComponent {
             { label: n, isDefault: i } = this.state;
         return (0, r.jsx)(s.Zbd, {
             editable: !0,
-            className: _.installationPathEditing,
+            className: b.installationPathEditing,
             children: (0, r.jsxs)(u.Z, {
                 children: [
                     this.renderDiskUsageCircle(),
@@ -116,7 +116,7 @@ class O extends i.PureComponent {
                                 onChange: this.handleLabelChange,
                             }),
                             (0, r.jsx)("div", {
-                                className: b.marginTop20,
+                                className: _.marginTop20,
                                 children: (0, r.jsx)(s.oil, {
                                     label: m.intl.string(m.t.lnUCwX),
                                     disabled: !0,
@@ -124,7 +124,7 @@ class O extends i.PureComponent {
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: _.defaultLocationCheckbox,
+                                className: b.defaultLocationCheckbox,
                                 children: (0, r.jsx)(s.Checkbox, {
                                     checked: null != i ? i : this.props.isDefault,
                                     disabled: this.props.isDefault,
@@ -132,7 +132,7 @@ class O extends i.PureComponent {
                                     label: m.intl.string(m.t.Z2MWuH),
                                 }),
                             }),
-                            (0, r.jsx)(s.izJ, { className: _.separator }),
+                            (0, r.jsx)(s.izJ, { className: b.separator }),
                             (0, r.jsxs)(u.Z, {
                                 children: [
                                     (0, r.jsx)(s.Button, {
@@ -236,7 +236,7 @@ class v extends i.PureComponent {
         let { installationPaths: e, installationPathsMetadata: t, defaultInstallationPath: n } = this.props,
             { editingPath: i } = this.state;
         return (0, r.jsx)("div", {
-            className: _.wrapper,
+            className: b.wrapper,
             children: (0, r.jsxs)(s.gNt, {
                 label: m.intl.string(m.t.aLszkC),
                 children: [
@@ -257,7 +257,7 @@ class v extends i.PureComponent {
                         );
                     }),
                     (0, r.jsx)("div", {
-                        className: _.buttonRowWrapper,
+                        className: b.buttonRowWrapper,
                         children: (0, r.jsx)(s.Button, {
                             variant: "primary",
                             size: "sm",

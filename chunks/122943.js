@@ -15,7 +15,7 @@ var r = n(54381),
     h = n(532657),
     g = n(556638),
     E = n(388032),
-    b = n(80568);
+    b = n(175996);
 function y(e, t, n) {
     return (
         t in e
@@ -85,14 +85,14 @@ function I(e) {
         { enableTopNavButton: N } = (0, d.Cq)({ location: "VoiceActivityStatus" }),
         P = !N && I,
         { analyticsLocations: R } = (0, l.ZP)(),
-        D = i.useCallback(() => {
+        w = i.useCallback(() => {
             (0, _.A)({
                 analyticsLocations: R,
                 activityType: "VOICE",
                 voiceChannelId: t.id,
             });
         }, [R, t.id]),
-        w = () =>
+        D = () =>
             y || A
                 ? (0, r.jsx)(p.Z, {
                       size: "custom",
@@ -105,7 +105,7 @@ function I(e) {
                       text: C,
                       "aria-label": (0, c.ZP)({ channel: t }),
                       delay: g.X,
-                      onTooltipShow: D,
+                      onTooltipShow: w,
                       children: (e) =>
                           (0, r.jsx)(
                               p.Z,
@@ -127,7 +127,7 @@ function I(e) {
                     : E.intl.string(E.t.msxteM);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            w(),
+            D(),
             !h &&
                 (0, r.jsxs)(m.Z, {
                     variant: n,

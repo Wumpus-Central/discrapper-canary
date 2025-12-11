@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(231338),
     E = n(295907),
     b = n(388032),
-    y = n(396579);
+    y = n(84784);
 let O = (e) => {
     let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
         a = ":".concat(t.name, ":");
@@ -70,7 +70,7 @@ function v(e) {
                 }
             );
         }, [I, T]);
-    let D = async (e) => {
+    let w = async (e) => {
         if (null == e) return;
         p === m.n_.AVATAR
             ? S({ action: "SEND_REACT_AVATAR" })
@@ -102,7 +102,7 @@ function v(e) {
         closePopout: g.dG,
         onSelectEmoji: async (e) => {
             let { emoji: t, willClose: n } = e;
-            await D(t), n && (T(), null == I || I());
+            await w(t), n && (T(), null == I || I());
         },
         pickerIntention: h.Hz.PROFILE,
     });

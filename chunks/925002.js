@@ -1,0 +1,17 @@
+e.exports = {
+    container: "_0f2e83213c878a13-container",
+    contentTitle: "_0f2e83213c878a13-contentTitle",
+    additionalParticipantBadge: "_0f2e83213c878a13-additionalParticipantBadge",
+    usesCardRows: "_0f2e83213c878a13-usesCardRows",
+    cardRow: "_0f2e83213c878a13-cardRow",
+    openOnHover: "_0f2e83213c878a13-openOnHover",
+    selected: "_0f2e83213c878a13-selected",
+    infoSection: "_0f2e83213c878a13-infoSection",
+    userSection: "_0f2e83213c878a13-userSection",
+    userName: "_0f2e83213c878a13-userName",
+    facePile: "_0f2e83213c878a13-facePile",
+    facePileItem: "_0f2e83213c878a13-facePileItem",
+    additionalParticipantBadgeText: "_0f2e83213c878a13-additionalParticipantBadgeText",
+    thumbnail: "_0f2e83213c878a13-thumbnail",
+    divider: "_0f2e83213c878a13-divider",
+};

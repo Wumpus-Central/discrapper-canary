@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     l = n(876215),
@@ -13,11 +13,11 @@ var r = n(54381),
     g = n(709054),
     h = n(981631),
     m = n(388032),
-    _ = n(25493);
-function b(e) {
+    b = n(697392);
+function _(e) {
     var t;
     let { item: n } = e,
-        b = i.useMemo(() => {
+        _ = i.useMemo(() => {
             switch (n.data.kind) {
                 case "message":
                 case "channelSummary":
@@ -73,15 +73,15 @@ function b(e) {
         C = null != (t = null == I ? void 0 : I.guild_id) ? t : O,
         S = (0, a.e7)([p.Z], () => (null != C ? p.Z.getGuild(C) : null), [C]),
         T = (0, a.e7)([f.default], () => (null != v ? f.default.getUser(v) : null), [v]);
-    return "unknown" === b
+    return "unknown" === _
         ? null
         : (0, r.jsx)("div", {
-              className: _.container,
+              className: b.container,
               children: (0, r.jsxs)("div", {
-                  className: _.header,
+                  className: b.header,
                   children: [
                       (() => {
-                          if ("guild" === b && null != S)
+                          if ("guild" === _ && null != S)
                               return (0, r.jsx)(o.Z, {
                                   guild: S,
                                   size: "Medium",
@@ -92,37 +92,37 @@ function b(e) {
                                   tooltipPosition: "top",
                                   animate: !1,
                               });
-                          if ("user" === b && null != T) {
+                          if ("user" === _ && null != T) {
                               let e = T.getAvatarURL(void 0, 50);
                               return (0, r.jsx)("img", {
                                   src: e,
                                   alt: T.username,
-                                  className: _.avatar,
+                                  className: b.avatar,
                               });
                           }
                           return null;
                       })(),
                       (0, r.jsxs)("div", {
-                          className: _.headerInfo,
+                          className: b.headerInfo,
                           children: [
                               (0, r.jsx)("div", {
-                                  className: _.titleRow,
+                                  className: b.titleRow,
                                   children: (0, r.jsxs)("div", {
-                                      className: _.titleLeft,
+                                      className: b.titleLeft,
                                       children: [
-                                          "guild" === b && null != S
+                                          "guild" === _ && null != S
                                               ? (0, r.jsx)("div", {
-                                                    className: _.title,
+                                                    className: b.title,
                                                     children: S.name,
                                                 })
-                                              : "user" === b && null != T
+                                              : "user" === _ && null != T
                                                 ? (0, r.jsx)("div", {
-                                                      className: _.title,
+                                                      className: b.title,
                                                       children: T.username,
                                                   })
                                                 : null,
                                           (0, r.jsx)("div", {
-                                              className: _.timestamp,
+                                              className: b.timestamp,
                                               children: (0, u.a3)(y),
                                           }),
                                       ],
@@ -156,36 +156,36 @@ function b(e) {
                                               return "";
                                       }
                                   })();
-                                  if ("user" === b)
+                                  if ("user" === _)
                                       return (0, r.jsx)("div", {
-                                          className: _.subtitle,
+                                          className: b.subtitle,
                                           children: (0, r.jsx)("span", {
-                                              className: _.subtitleText,
+                                              className: b.subtitleText,
                                               children: e,
                                           }),
                                       });
                                   if (null != I && null != e) {
                                       let t = (0, s.KS)(I, S);
                                       return (0, r.jsxs)("div", {
-                                          className: _.subtitle,
+                                          className: b.subtitle,
                                           children: [
                                               (0, r.jsx)("span", {
-                                                  className: _.subtitleText,
+                                                  className: b.subtitleText,
                                                   children: e,
                                               }),
                                               (0, r.jsx)("span", {
-                                                  className: _.subtitleText,
+                                                  className: b.subtitleText,
                                                   children: m.intl.string(m.t.CHUAYk),
                                               }),
                                               (0, r.jsxs)("span", {
-                                                  className: _.subtitleText,
+                                                  className: b.subtitleText,
                                                   children: [
                                                       null != t &&
                                                           (0, r.jsx)(t, {
                                                               size: "custom",
                                                               width: 16,
                                                               height: 16,
-                                                              className: _.channelIcon,
+                                                              className: b.channelIcon,
                                                           }),
                                                       I.name,
                                                   ],
@@ -195,9 +195,9 @@ function b(e) {
                                   }
                                   return null != e
                                       ? (0, r.jsx)("div", {
-                                            className: _.subtitle,
+                                            className: b.subtitle,
                                             children: (0, r.jsx)("span", {
-                                                className: _.subtitleText,
+                                                className: b.subtitleText,
                                                 children: e,
                                             }),
                                         })

@@ -1,0 +1,26 @@
+e.exports = {
+    applicationHomeBanner: "_62eb1df151d8bf49-applicationHomeBanner",
+    settingsBanner: "_62eb1df151d8bf49-settingsBanner",
+    settingsImageContainer: "_62eb1df151d8bf49-settingsImageContainer",
+    settingsBannerLeftImageContainer:
+        "_62eb1df151d8bf49-settingsBannerLeftImageContainer _62eb1df151d8bf49-settingsImageContainer",
+    settingsBannerRightImageContainer:
+        "_62eb1df151d8bf49-settingsBannerRightImageContainer _62eb1df151d8bf49-settingsImageContainer",
+    bannerBoxOutlinePosition: "_62eb1df151d8bf49-bannerBoxOutlinePosition",
+    backgroundGradient: "_62eb1df151d8bf49-backgroundGradient",
+    imageContainer: "_62eb1df151d8bf49-imageContainer",
+    settingsImage: "_62eb1df151d8bf49-settingsImage",
+    applicationHomeImage: "_62eb1df151d8bf49-applicationHomeImage",
+    bannerContent: "_62eb1df151d8bf49-bannerContent",
+    settingsBannerContent: "_62eb1df151d8bf49-settingsBannerContent",
+    bannerHeader: "_62eb1df151d8bf49-bannerHeader",
+    bannerText: "_62eb1df151d8bf49-bannerText",
+    subscribeButton: "_62eb1df151d8bf49-subscribeButton",
+    subscribeButtonText: "_62eb1df151d8bf49-subscribeButtonText",
+    premiumTrialBadge: "_62eb1df151d8bf49-premiumTrialBadge",
+    badgeGradient: "_62eb1df151d8bf49-badgeGradient",
+    buttonGradient: "_62eb1df151d8bf49-buttonGradient",
+    subBanner: "_62eb1df151d8bf49-subBanner",
+    subHomeBannerImageContainer: "_62eb1df151d8bf49-subHomeBannerImageContainer",
+    subBannerContent: "_62eb1df151d8bf49-subBannerContent",
+};

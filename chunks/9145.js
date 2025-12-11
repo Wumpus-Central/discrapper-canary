@@ -14,14 +14,14 @@ var r = n(54381),
     g = n(900211),
     m = n(740492),
     b = n(871499),
-    _ = n(402113),
-    y = n(800965),
-    O = n(592125),
+    y = n(402113),
+    O = n(800965),
+    j = n(592125),
     x = n(271383),
-    j = n(944486),
-    v = n(594174),
-    C = n(585483),
-    I = n(51144),
+    v = n(944486),
+    C = n(594174),
+    I = n(585483),
+    _ = n(51144),
     S = n(566620),
     E = n(317381),
     Z = n(619915),
@@ -33,11 +33,11 @@ var r = n(54381),
     A = n(617552),
     D = n(719296),
     L = n(225639),
-    M = n(651612),
+    M = n(996726),
     k = n(918559),
     U = n(981631),
     G = n(388032),
-    H = n(33985);
+    H = n(257536);
 let F = w.u8.SIZE_32,
     B = {
         [k.MI.NO_CHAT]: H.noChat,
@@ -49,7 +49,7 @@ function V(e) {
         Y = (0, N.Z)(),
         q = (0, s.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(z), [z]),
         K = (0, T.p)(z),
-        Q = (0, s.e7)([O.Z], () => O.Z.getChannel(K)),
+        Q = (0, s.e7)([j.Z], () => j.Z.getChannel(K)),
         X = (0, Z.gb)(q),
         J = (0, Z.uF)(X),
         $ = i.useCallback(() => {
@@ -90,7 +90,7 @@ function V(e) {
             : ((e = Math.min(es.height * k.I0)) > es.width && (t = (e = es.width) / k.I0), (ed = (es.width - e) / 2));
     }
     let eh = J.get(null != (l = null == Y ? void 0 : Y.id) ? l : ""),
-        ef = (0, s.e7)([j.Z], () => j.Z.getChannelId()),
+        ef = (0, s.e7)([v.Z], () => v.Z.getChannelId()),
         eg = (0, s.Wu)([x.ZP], () => {
             var e;
             return null == Q
@@ -175,18 +175,18 @@ function V(e) {
                     : l;
             }, [o, e, n, t]);
         })(en, er, V),
-        e_ = (0, L.y)();
+        ey = (0, L.y)();
     if (null == Y) return null;
-    let ey = [];
+    let eO = [];
     null != eh &&
-        (ey = Array.from(eh.embeddedActivity.userIds)
-            .map((e) => v.default.getUser(e))
+        (eO = Array.from(eh.embeddedActivity.userIds)
+            .map((e) => C.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
-    let eO = (e) => {
+    let ej = (e) => {
         var t;
         if (null == e || void 0 === e || e === w.ag) return null;
         let n = em.get(e.id),
-            i = null != (t = null == n ? void 0 : n.nick) ? t : I.ZP.getName(e);
+            i = null != (t = null == n ? void 0 : n.nick) ? t : _.ZP.getName(e);
         return (0, r.jsx)(
             c.u,
             {
@@ -249,10 +249,10 @@ function V(e) {
                                       children: [
                                           (0, r.jsx)(w.ZP, {
                                               renderIcon: !1,
-                                              users: ey,
+                                              users: eO,
                                               size: F,
                                               max: 6,
-                                              renderUser: eO,
+                                              renderUser: ej,
                                           }),
                                           (0, r.jsxs)("div", {
                                               className: H.footerButtons,
@@ -272,7 +272,7 @@ function V(e) {
                                                   }),
                                                   (0, r.jsx)("div", {
                                                       className: H.leaveButtonContainer,
-                                                      children: (0, r.jsx)(_.Z, {
+                                                      children: (0, r.jsx)(y.Z, {
                                                           applicationId: Y.id,
                                                           location: z,
                                                           centerButton: !0,
@@ -281,8 +281,8 @@ function V(e) {
                                                   }),
                                               ],
                                           }),
-                                          e_
-                                              ? (0, r.jsx)(y.Z, {
+                                          ey
+                                              ? (0, r.jsx)(O.Z, {
                                                     popoutOpen: !1,
                                                     onOpenPopout: () => {
                                                         (0, f.yw)(U.rMx.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
@@ -309,10 +309,10 @@ function V(e) {
                               maxHeight: V,
                               resizableNode: ee,
                               onResize: (e) => {
-                                  C.S.dispatch(U.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), ei(e);
+                                  I.S.dispatch(U.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), ei(e);
                               },
                               onResizeEnd: (e) => {
-                                  C.S.dispatch(U.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), el(e);
+                                  I.S.dispatch(U.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), el(e);
                               },
                           })
                         : null,

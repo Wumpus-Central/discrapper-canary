@@ -4,7 +4,7 @@ e(473749);
 var r = e(481060),
     i = e(308569),
     l = e(388032),
-    s = e(780187),
+    s = e(36884),
     o = e(75277);
 function c(t) {
     let { onNext: n, onClose: e, transitionState: c } = t;

@@ -20,7 +20,7 @@ var r = n(54381),
     h = n(960919),
     g = n(981631),
     E = n(388032),
-    b = n(66360);
+    b = n(564087);
 let y = (e) => {
         let { orbAmount: t } = e;
         return (0, r.jsxs)(a.Text, {

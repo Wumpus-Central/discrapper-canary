@@ -2,22 +2,22 @@ n.d(t, { Z: () => x }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(100527),
     u = n(434479),
     d = n(819640),
     f = n(713081),
-    p = n(326660),
-    h = n(441536),
+    h = n(326660),
+    p = n(441536),
     g = n(933104),
-    m = n(332538),
-    b = n(921944),
-    _ = n(5238),
-    y = n(388032),
-    O = n(969649);
-function v(e) {
+    b = n(332538),
+    m = n(921944),
+    y = n(44542),
+    O = n(388032),
+    v = n(243171);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function v(e) {
     }
     return e;
 }
-let j = {
+let C = {
         animation: {
             BEG: 0,
             END: 75,
@@ -54,73 +54,73 @@ let j = {
     },
     x = i.memo(function (e) {
         let { guildId: t, selected: l } = e,
-            x = (0, m.ZP)(t),
-            C = i.useCallback(() => {
+            x = (0, b.ZP)(t),
+            E = i.useCallback(() => {
                 var e;
                 (0, f.jd)(t),
-                    (0, h.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
-                    null == x || null == (e = x.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
+                    (0, p.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    null == x || null == (e = x.popout) || e.markAsDismissed(m.L.INDIRECT_ACTION);
             }, [t, x]),
-            E = i.useRef(null),
-            S = (0, s.s9z)(s.JQI),
-            I = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
-            P = S || I,
+            S = i.useRef(null),
+            I = (0, s.s9z)(s.JQI),
+            _ = (0, o.e7)([d.Z], () => d.Z.hasLayers()),
+            P = I || _,
             N = i.useCallback(() => {
                 var e;
                 if ((null == x ? void 0 : x.popout) == null || P) return null;
                 switch (null == x || null == (e = x.popout) ? void 0 : e.type) {
-                    case p.J.LEVEL_REACHED:
+                    case h.J.LEVEL_REACHED:
                         return (0, r.jsx)(
                             g.jG,
-                            v(
+                            j(
                                 {
                                     guildId: t,
-                                    channelRowRef: E,
+                                    channelRowRef: S,
                                 },
                                 x.popout,
                             ),
                         );
-                    case p.J.PERKS_AVAILABLE:
+                    case h.J.PERKS_AVAILABLE:
                         return (0, r.jsx)(
                             g.$h,
-                            v(
+                            j(
                                 {
                                     guildId: t,
-                                    channelRowRef: E,
+                                    channelRowRef: S,
                                 },
                                 x.popout,
                             ),
                         );
-                    case p.J.PERKS_PURCHASABLE:
+                    case h.J.PERKS_PURCHASABLE:
                         return (0, r.jsx)(
                             g.yI,
-                            v(
+                            j(
                                 {
                                     guildId: t,
-                                    channelRowRef: E,
+                                    channelRowRef: S,
                                 },
                                 x.popout,
                             ),
                         );
-                    case p.J.NEW_PERK_AVAILABLE:
+                    case h.J.NEW_PERK_AVAILABLE:
                         return (0, r.jsx)(
                             g.cO,
-                            v(
+                            j(
                                 {
                                     guildId: t,
-                                    channelRowRef: E,
+                                    channelRowRef: S,
                                 },
                                 x.popout,
                             ),
                         );
-                    case p.J.GAME_SERVER_HOSTING_AVAILABLE:
-                    case p.J.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
+                    case h.J.GAME_SERVER_HOSTING_AVAILABLE:
+                    case h.J.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
                         return (0, r.jsx)(
                             g.dJ,
-                            v(
+                            j(
                                 {
                                     guildId: t,
-                                    channelRowRef: E,
+                                    channelRowRef: S,
                                 },
                                 x.popout,
                             ),
@@ -128,7 +128,7 @@ let j = {
                     default:
                         return (0, r.jsx)("div", {});
                 }
-            }, [t, null == x ? void 0 : x.popout, E, P]),
+            }, [t, null == x ? void 0 : x.popout, S, P]),
             [Z, w] = i.useState(null);
         i.useEffect(() => {
             (null == x ? void 0 : x.popout) == null && w(null);
@@ -139,8 +139,8 @@ let j = {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.m, {
-                    ref: E,
-                    className: O.container,
+                    ref: S,
+                    className: v.container,
                     id: "skill-trees-".concat(t),
                     renderIcon: (e) =>
                         (0, r.jsx)(s.Ucv, {
@@ -151,22 +151,22 @@ let j = {
                     background:
                         (null == x ? void 0 : x.popout) != null &&
                         (0, r.jsx)("div", {
-                            className: O.lottieContainer,
+                            className: v.lottieContainer,
                             children: (0, r.jsx)(s.kci, {
                                 nextScene: null == Z ? "animation" : "LOOP",
-                                className: O.lottie,
-                                sceneSegments: j,
+                                className: v.lottie,
+                                sceneSegments: C,
                                 importData: () => n.e("50821").then(n.t.bind(n, 548421, 19)),
                                 onScenePlay: T,
                                 rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
                             }),
                         }),
                     text: (0, r.jsx)("span", {
-                        className: o()({ [O.textImportant]: (null == x ? void 0 : x.showUnread) === !0 }),
-                        children: y.intl.string(_.default.yv3DJJ),
+                        className: a()({ [v.textImportant]: (null == x ? void 0 : x.showUnread) === !0 }),
+                        children: O.intl.string(y.default.yv3DJJ),
                     }),
                     selected: l,
-                    onClick: C,
+                    onClick: E,
                     showUnread: (null == x ? void 0 : x.showUnread) === !0,
                     trailing: null == x ? void 0 : x.trailing,
                 }),

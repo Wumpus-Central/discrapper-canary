@@ -1,7 +1,7 @@
 n.d(t, {
-    GY: () => D,
+    GY: () => w,
     PI: () => S,
-    RT: () => w,
+    RT: () => D,
     XM: () => P,
     bc: () => I,
     ls: () => R,
@@ -27,7 +27,7 @@ var r = n(54381),
     b = n(620954),
     y = n(985149),
     O = n(388032),
-    v = n(962967);
+    v = n(32771);
 function S(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
@@ -141,7 +141,7 @@ function R(e) {
         }),
     });
 }
-function D(e) {
+function w(e) {
     let { widgetId: t, showAllStreams: n } = e,
         i = n ? O.intl.string(O.t.q2B3rh) : O.intl.string(O.t.JKGi6o),
         a = () => {
@@ -162,7 +162,7 @@ function D(e) {
               }),
           });
 }
-function w(e) {
+function D(e) {
     let { id: t, pinned: n } = e,
         i = n ? O.intl.string(O.t.cSu80j) : O.intl.string(O.t.cM8Vnm),
         a = (0, y.Z)();

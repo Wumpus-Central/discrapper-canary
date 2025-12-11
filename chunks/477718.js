@@ -1,10 +1,10 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => U });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    s = n.n(i),
-    a = n(913527),
-    o = n.n(a),
+    a = n.n(i),
+    s = n(913527),
+    o = n.n(s),
     u = n(399606),
     c = n(28664),
     E = n(481060),
@@ -14,33 +14,33 @@ var r = n(54381),
     T = n(472596),
     I = n(909746),
     m = n(233857),
-    g = n(501801),
-    N = n(884902),
-    h = n(271383),
-    O = n(430824),
-    f = n(5192),
+    f = n(501801),
+    g = n(884902),
+    N = n(271383),
+    h = n(430824),
+    O = n(5192),
     R = n(776767),
     S = n(981631),
     p = n(388032),
-    C = n(87437),
-    D = n(938556);
-function U(e) {
+    C = n(530952),
+    b = n(608586);
+function D(e) {
     var t, n;
-    let { log: i, member: a, guild: d } = e,
+    let { log: i, member: s, guild: d } = e,
         { analyticsLocations: m } = (0, _.ZP)(),
-        O = I.nm(i),
+        h = I.nm(i),
         R = I.QM(i),
-        U = null == (t = I.V$(S.zUn.REASON, i)) ? void 0 : t.newValue,
-        L = I.J5(i),
-        M = (0, A.LJ)(i.id),
-        x = (0, u.e7)([h.ZP], () => (null != i.userId ? h.ZP.getMember(a.guildId, i.userId) : null), [
-            a.guildId,
+        D = null == (t = I.V$(S.zUn.REASON, i)) ? void 0 : t.newValue,
+        U = I.J5(i),
+        L = (0, A.LJ)(i.id),
+        M = (0, u.e7)([N.ZP], () => (null != i.userId ? N.ZP.getMember(s.guildId, i.userId) : null), [
+            s.guildId,
             i.userId,
         ]),
-        b = (0, N.X7)(
-            null == x ? void 0 : x.guildId,
-            null == x ? void 0 : x.userId,
-            null != (n = null == x ? void 0 : x.colorStrings) ? n : null,
+        x = (0, g.X7)(
+            null == M ? void 0 : M.guildId,
+            null == M ? void 0 : M.userId,
+            null != (n = null == M ? void 0 : M.colorStrings) ? n : null,
         ),
         v = l.useCallback(
             (e) => (t) => {
@@ -56,7 +56,7 @@ function U(e) {
                       asContainer: !0,
                       text: p.intl.string(p.t.mvsi9n),
                       children: (0, r.jsx)(E.P3F, {
-                          onClick: v(x),
+                          onClick: v(M),
                           tag: "span",
                           className: C.username,
                           children: (0, r.jsxs)(E.Text, {
@@ -65,17 +65,17 @@ function U(e) {
                               children: [
                                   "@",
                                   (0, r.jsx)(E.PUh, {
-                                      name: f.ZP.getName(a.guildId, null, i.user),
-                                      colorString: null != (e = null == x ? void 0 : x.colorString) ? e : null,
-                                      colorStrings: b,
+                                      name: O.ZP.getName(s.guildId, null, i.user),
+                                      colorString: null != (e = null == M ? void 0 : M.colorString) ? e : null,
+                                      colorStrings: x,
                                   }),
                               ],
                           }),
                       }),
                   });
-        }, [v, i.user, a.guildId, x, b])();
+        }, [v, i.user, s.guildId, M, x])();
     return (0, r.jsxs)("div", {
-        className: s()(D.modInfoItem, C.auditLogItem),
+        className: a()(b.modInfoItem, C.auditLogItem),
         children: [
             (0, r.jsxs)("div", {
                 className: C.auditLogItemTitleContainer,
@@ -83,11 +83,11 @@ function U(e) {
                     (0, r.jsxs)("div", {
                         className: C.auditLogItemTitle,
                         children: [
-                            null != O &&
+                            null != h &&
                                 (0, r.jsx)(E.Text, {
                                     variant: "text-sm/semibold",
                                     color: "header-primary",
-                                    children: O,
+                                    children: h,
                                 }),
                             null != R &&
                                 (0, r.jsxs)(E.Text, {
@@ -102,16 +102,33 @@ function U(e) {
                         children: (0, r.jsx)(E.Text, {
                             variant: "text-sm/medium",
                             color: "header-primary",
-                            children: M,
+                            children: L,
                         }),
                     }),
                 ],
             }),
-            null != U &&
+            null != D &&
                 (0, r.jsx)("div", {
                     className: C.auditLogSecondaryContainer,
                     children: (0, r.jsxs)("div", {
                         className: C.auditLogReason,
+                        children: [
+                            P,
+                            (0, r.jsx)(E.Text, {
+                                variant: "text-sm/normal",
+                                color: "text-muted",
+                                tag: "span",
+                                children: D,
+                            }),
+                        ],
+                    }),
+                }),
+            null == D &&
+                null != U &&
+                (0, r.jsx)("div", {
+                    className: C.auditLogSecondaryContainer,
+                    children: (0, r.jsxs)("div", {
+                        className: C.auditLogSecondary,
                         children: [
                             P,
                             (0, r.jsx)(E.Text, {
@@ -123,25 +140,8 @@ function U(e) {
                         ],
                     }),
                 }),
-            null == U &&
-                null != L &&
-                (0, r.jsx)("div", {
-                    className: C.auditLogSecondaryContainer,
-                    children: (0, r.jsxs)("div", {
-                        className: C.auditLogSecondary,
-                        children: [
-                            P,
-                            (0, r.jsx)(E.Text, {
-                                variant: "text-sm/normal",
-                                color: "text-muted",
-                                tag: "span",
-                                children: L,
-                            }),
-                        ],
-                    }),
-                }),
-            null == U &&
-                null == L &&
+            null == D &&
+                null == U &&
                 (0, r.jsx)("div", {
                     className: C.auditLogSecondaryContainer,
                     children: (0, r.jsx)("div", {
@@ -150,7 +150,7 @@ function U(e) {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             tag: "span",
-                            children: (0, r.jsx)(g.tP, {
+                            children: (0, r.jsx)(f.tP, {
                                 log: i,
                                 guild: d,
                                 onContentClick: () => {},
@@ -162,9 +162,9 @@ function U(e) {
         ],
     });
 }
-function L(e) {
+function U(e) {
     let { member: t } = e,
-        n = (0, u.e7)([O.Z], () => O.Z.getGuild(t.guildId), [t.guildId]),
+        n = (0, u.e7)([h.Z], () => h.Z.getGuild(t.guildId), [t.guildId]),
         i = (0, u.e7)([m.Z], () => {
             let e = m.Z.logs;
             return null == e || null == n ? [] : I._$(e, n);
@@ -183,7 +183,7 @@ function L(e) {
                       ? (0, r.jsx)(R.WM, {
                             children: i.map((e) =>
                                 (0, r.jsx)(
-                                    U,
+                                    D,
                                     {
                                         log: e,
                                         member: t,

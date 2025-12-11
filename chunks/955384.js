@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(911969),
@@ -7,7 +7,7 @@ var i = n(54381),
     s = n(981631),
     c = n(295907),
     u = n(388032),
-    d = n(26896);
+    d = n(122083);
 function p(e, t, n) {
     return (
         t in e
@@ -21,10 +21,10 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function f(e) {
     e.stopPropagation();
 }
-class f extends r.PureComponent {
+class h extends r.PureComponent {
     render() {
         let { className: e, textValue: t, richValue: n, message: r, channel: l, onCancel: a, children: o } = this.props,
             s = (0, i.jsx)("div", {
@@ -37,7 +37,7 @@ class f extends r.PureComponent {
         return (0, i.jsxs)("div", {
             className: e,
             ref: this.node,
-            onContextMenu: h,
+            onContextMenu: f,
             children: [
                 o({
                     textValue: t,

@@ -13,15 +13,15 @@ var r = n(54381),
     g = n(100527),
     h = n(906732),
     m = n(522651),
-    _ = n(795318),
-    b = n(512384),
+    b = n(795318),
+    _ = n(512384),
     E = n(670188),
     O = n(314897),
     v = n(131951),
     y = n(51144),
     I = n(524484),
     C = n(388032),
-    S = n(720711);
+    S = n(328607);
 function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -142,7 +142,7 @@ function x(e) {
                       n.e("66165"),
                       n.e("8982"),
                       n.e("7717"),
-                      n.e("52021"),
+                      n.e("9393"),
                   ]).then(n.bind(n, 757387));
                   return (t) =>
                       (0, r.jsx)(
@@ -152,14 +152,14 @@ function x(e) {
                               guildId: k,
                               channel: O,
                               showMediaItems: !0,
-                              onInteraction: (0, _.u)("GuildChannelUserContextMenu", g.Z.RTC_PANEL, {
+                              onInteraction: (0, b.u)("GuildChannelUserContextMenu", g.Z.RTC_PANEL, {
                                   targetUserId: x.id,
                               }),
                           }),
                       );
               })
             : (0, u.jW)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("74820")]).then(
+                  let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("18030")]).then(
                       n.bind(n, 881351),
                   );
                   return (t) =>
@@ -168,7 +168,7 @@ function x(e) {
                           N(T({}, t), {
                               user: x,
                               showMediaItems: !0,
-                              onInteraction: (0, _.u)("UserGenericContextMenu", g.Z.RTC_PANEL, { targetUserId: x.id }),
+                              onInteraction: (0, b.u)("UserGenericContextMenu", g.Z.RTC_PANEL, { targetUserId: x.id }),
                           }),
                       );
               });
@@ -191,7 +191,7 @@ function x(e) {
                     className: S.avatarContainer,
                     onContextMenu: z,
                     focusProps: j,
-                    children: (0, r.jsx)(b.Z, {
+                    children: (0, r.jsx)(_.Z, {
                         shakeLocation: I.oZ.VOICE_USER,
                         isShaking: M,
                         children: (0, r.jsx)("div", {
@@ -232,7 +232,7 @@ function A(e) {
                 maxVisibleAvatars: t,
             };
         })(t.length - 1),
-        [_, b] = (function (e, t, n) {
+        [b, _] = (function (e, t, n) {
             let r = [];
             for (let i of e)
                 if (i.user.id !== t && !r.some((e) => e.user.id === i.user.id)) {
@@ -254,7 +254,7 @@ function A(e) {
                 size: "sm",
             }),
         }),
-        I = b && u ? t : _;
+        I = _ && u ? t : b;
     return I.length <= 0
         ? null
         : (0, r.jsx)(c.zJl, {
@@ -285,7 +285,7 @@ function A(e) {
                                 )
                               : null;
                       }),
-                      b ? y : null,
+                      _ ? y : null,
                   ],
               }),
           });

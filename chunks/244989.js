@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(79766),
     o = n(481060),
     c = n(213609),
-    u = n(65538);
+    u = n(974789);
 function d(e) {
     let { componentId: t, badgeCopy: n, acknowledgedBadgeCopy: i, isDismissed: d } = e;
     return ((0, c.Z)({

@@ -13,8 +13,8 @@ var r,
     g = n(287734),
     h = n(438139),
     m = n(2052),
-    _ = n(726542),
-    b = n(638880),
+    b = n(726542),
+    _ = n(638880),
     E = n(655922),
     O = n(122810),
     v = n(833664),
@@ -57,7 +57,7 @@ var r,
     ei = n(599706),
     el = n(981631),
     ea = n(388032),
-    es = n(84822);
+    es = n(649519);
 let eo = [14, 14, 12, 12, 10, 8, 6],
     ec = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
@@ -155,7 +155,7 @@ let eo = [14, 14, 12, 12, 10, 8, 6],
         }
         return null;
     },
-    e_ = (e) => {
+    eb = (e) => {
         let { activity: t, analyticsLocations: n } = e,
             { application_id: r, name: l } = t,
             { data: a } = (0, P.IX)(r),
@@ -197,7 +197,7 @@ let eo = [14, 14, 12, 12, 10, 8, 6],
                   ],
               });
     };
-var eb = (((r = eb || {}).XBOX = "XBOX"), (r.SPOTIFY = "SPOTIFY"), (r.MULTIPLE = "MULTIPLE"), r);
+var e_ = (((r = e_ || {}).XBOX = "XBOX"), (r.SPOTIFY = "SPOTIFY"), (r.MULTIPLE = "MULTIPLE"), r);
 let eE = (e) => {
     let t,
         { src: n, onClick: r, onContextMenu: l } = e;
@@ -240,7 +240,7 @@ let eE = (e) => {
           })
         : t;
 };
-eE.Src = eb;
+eE.Src = e_;
 let eO = (e) => {
     let {
             priorityUser: t,
@@ -478,7 +478,7 @@ let ev = (e) => {
                         }),
                     ],
                 }),
-                (0, i.jsx)(e_, {
+                (0, i.jsx)(eb, {
                     activity: a,
                     analyticsLocations: s,
                 }),
@@ -490,8 +490,8 @@ let ev = (e) => {
         let { activity: c, getAssetImage: u, user: d } = e,
             { analyticsLocations: p } = (0, N.ZP)(T.Z.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION),
             { data: f } = (0, P.IX)(c.application_id),
-            { assets: g, details: h, state: m, application_id: _ } = c,
-            { hasButton: b } = eh({
+            { assets: g, details: h, state: m, application_id: b } = c,
+            { hasButton: _ } = eh({
                 activity: c,
                 user: d,
             }),
@@ -504,7 +504,7 @@ let ev = (e) => {
             ? (0, i.jsxs)(ep, {
                   children: [
                       (0, i.jsxs)("div", {
-                          className: s()(es.activitySection, { [es.activitySectionWithButtons]: b }),
+                          className: s()(es.activitySection, { [es.activitySectionWithButtons]: _ }),
                           children: [
                               null != g && 0 !== Object.keys(g).length
                                   ? (0, i.jsxs)("div", {
@@ -512,7 +512,7 @@ let ev = (e) => {
                                         children: [
                                             (0, i.jsx)("img", {
                                                 alt: null != (l = g.large_text) ? l : "",
-                                                src: null != (a = u(_, g.large_image, [160, 160])) ? a : E,
+                                                src: null != (a = u(b, g.large_image, [160, 160])) ? a : E,
                                                 className: s()(es.largeImage, {
                                                     [es.largeImageMask]: null != g.small_image,
                                                 }),
@@ -520,7 +520,7 @@ let ev = (e) => {
                                             null != g.small_image
                                                 ? (0, i.jsx)("img", {
                                                       alt: null != (o = g.small_text) ? o : "",
-                                                      src: u(_, g.small_image, [64, 64]),
+                                                      src: u(b, g.small_image, [64, 64]),
                                                       className: es.smallImage,
                                                   })
                                                 : null,
@@ -562,7 +562,7 @@ let ev = (e) => {
                               }),
                           ],
                       }),
-                      (0, i.jsx)(e_, {
+                      (0, i.jsx)(eb, {
                           activity: c,
                           analyticsLocations: p,
                       }),
@@ -668,7 +668,7 @@ let ev = (e) => {
                     children: [
                         (0, i.jsx)("img", {
                             alt: "",
-                            src: _.Z.get(el.ABu.TWITCH).icon.lightSVG,
+                            src: b.Z.get(el.ABu.TWITCH).icon.lightSVG,
                             className: es.twitchSectionIcon,
                         }),
                         (0, i.jsxs)("div", {
@@ -714,7 +714,7 @@ let ev = (e) => {
                 userId: l.id,
                 guildId: o,
             }),
-            _ = (0, k.j)({ displayNameStyles: m });
+            b = (0, k.j)({ displayNameStyles: m });
         return (0, i.jsxs)(ep, {
             children: [
                 (0, i.jsxs)("div", {
@@ -727,7 +727,7 @@ let ev = (e) => {
                             className: es.applicationStreamingAvatar,
                         }),
                         (0, i.jsxs)("div", {
-                            children: [ec(er.ZP.getName(l), _), eu(h)],
+                            children: [ec(er.ZP.getName(l), b), eu(h)],
                         }),
                         (0, i.jsx)(Z.ZP, { size: Z.ZP.Sizes.SMALL }),
                     ],
@@ -757,7 +757,7 @@ let ev = (e) => {
         if (null == u) return null;
         let h = x.Z.getApplication(u);
         if (null == h) return null;
-        let _ = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
+        let b = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
             E = (0, et.xF)(h.id, s, 300);
         return (0, i.jsxs)(ep, {
             children: [
@@ -776,13 +776,13 @@ let ev = (e) => {
                                 children: h.name,
                             }),
                         }),
-                        null != _
+                        null != b
                             ? (0, i.jsx)("div", {
                                   className: es.embeddedActivityTimeElapsed,
                                   children: (0, i.jsx)(f.Text, {
                                       color: "text-muted",
                                       variant: "text-sm/normal",
-                                      children: (0, i.jsx)(ed, { timestamps: _ }),
+                                      children: (0, i.jsx)(ed, { timestamps: b }),
                                   }),
                               })
                             : null,
@@ -814,7 +814,7 @@ let ev = (e) => {
                                         text: ea.intl.string(ea.t.VJlc0S),
                                         onClick: (e) => {
                                             e.stopPropagation(),
-                                                (0, b.Z)({
+                                                (0, _.Z)({
                                                     applicationId: u,
                                                     activityChannelId: n.id,
                                                     locationObject: p.location,

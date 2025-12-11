@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => E,
-    x: () => _,
+    Z: () => I,
+    x: () => v,
 }),
     n(388685);
 var r,
@@ -14,11 +14,11 @@ var r,
     u = n(681715),
     g = n(477690),
     m = n(481060),
-    p = n(624138),
-    f = n(981631),
-    h = n(5238),
-    b = n(388032),
-    x = n(31441);
+    f = n(624138),
+    p = n(981631),
+    b = n(44542),
+    h = n(388032),
+    x = n(788555);
 function j(e, t, n) {
     return (
         t in e
@@ -32,21 +32,21 @@ function j(e, t, n) {
         e
     );
 }
-let _ = -1,
-    v = (0, p.Mg)(g.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-    O = (0, p.Mg)(g.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
-    C = {
+let v = -1,
+    O = (0, f.Mg)(g.Z.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+    C = (0, f.Mg)(g.Z.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+    y = {
         tension: 140,
         friction: 30,
     },
-    y = {
+    N = {
         tension: 800,
         friction: 20,
     };
-class N extends (r = l.Component) {
+class E extends (r = l.Component) {
     getTotalHeight() {
         let { tiers: e } = this.props;
-        return e[e.length - 1].y + O / 2;
+        return e[e.length - 1].y + C / 2;
     }
     getProgressHeight(e) {
         let t,
@@ -90,11 +90,11 @@ class N extends (r = l.Component) {
                 color: m.aML.Colors.PRIMARY,
                 tooltipClassName: x.foregroundTooltip,
                 children: [
-                    (0, i.jsx)("div", { children: b.intl.format(b.t.gDsyB9, { numSubscriptions: e }) }),
+                    (0, i.jsx)("div", { children: h.intl.format(h.t.gDsyB9, { numSubscriptions: e }) }),
                     null != s && s > 0 && null != l
                         ? (0, i.jsx)("div", {
                               className: x.tooltipMuted,
-                              children: b.intl.format(b.t["2U9MDp"], {
+                              children: h.intl.format(h.t["2U9MDp"], {
                                   number: s,
                                   tier: l.name,
                               }),
@@ -107,16 +107,16 @@ class N extends (r = l.Component) {
     }
     getTierMarkerTooltipText(e) {
         let { progress: t } = this.props;
-        if (null == e.name || e.key === f.Eu4.NONE) return null;
+        if (null == e.name || e.key === p.Eu4.NONE) return null;
         let n = Math.min(t, e.numRequired);
         return this.getTierDisabled(e)
             ? {
                   title: null,
-                  body: b.intl.formatToPlainString(h.default["9CtPjt"], { perk: e.name }),
+                  body: h.intl.formatToPlainString(b.default["9CtPjt"], { perk: e.name }),
               }
             : {
                   title: e.name,
-                  body: b.intl.format(b.t.AkLa6n, {
+                  body: h.intl.format(h.t.AkLa6n, {
                       subscribers: n,
                       numRequired: e.numRequired,
                   }),
@@ -129,18 +129,18 @@ class N extends (r = l.Component) {
             c = l >= e.numRequired,
             d = null != s && e.key === s.key,
             g = e.key === a[0].key,
-            p = this.getTierDisabled(e);
-        r = g ? x.tierFirst : p ? x.tierInProgress : d ? x.tierCurrent : c ? x.tierAccomplished : x.tierInProgress;
-        let f = e.y - (g ? 0 : O / 2),
-            h = this.state.tierMarkerActive >= t,
-            b = !g && d && h,
+            f = this.getTierDisabled(e);
+        r = g ? x.tierFirst : f ? x.tierInProgress : d ? x.tierCurrent : c ? x.tierAccomplished : x.tierInProgress;
+        let p = e.y - (g ? 0 : C / 2),
+            b = this.state.tierMarkerActive >= t,
+            h = !g && d && b,
             j = this.getTierMarkerTooltipText(e);
         return (0, i.jsx)(
             m.AMe,
             {
                 from: { scale: 1 },
-                to: { scale: b ? 1.625 : 1 },
-                config: y,
+                to: { scale: h ? 1.625 : 1 },
+                config: N,
                 children: (t) => {
                     var n, l, a;
                     return (0, i.jsx)(u.i_, {
@@ -152,11 +152,11 @@ class N extends (r = l.Component) {
                         children: (0, i.jsx)(o.animated.div, {
                             className: r,
                             style: {
-                                top: f,
+                                top: p,
                                 transform: t.scale.interpolate((e) => "scale(".concat(e, ")")),
                             },
                             children:
-                                b &&
+                                h &&
                                 (0, i.jsx)(m.dz2, {
                                     size: "md",
                                     color: "currentColor",
@@ -177,7 +177,7 @@ class N extends (r = l.Component) {
                 (0, i.jsx)("rect", {
                     x: "0",
                     y: "0",
-                    width: v,
+                    width: O,
                     height: e,
                     fill: "white",
                 }),
@@ -185,9 +185,9 @@ class N extends (r = l.Component) {
                     (0, i.jsx)(
                         "circle",
                         {
-                            cx: v / 2,
+                            cx: O / 2,
                             cy: e.y,
-                            r: v / 2,
+                            r: O / 2,
                             fill: "black",
                         },
                         e.key,
@@ -210,7 +210,7 @@ class N extends (r = l.Component) {
                 (0, i.jsx)(m.AMe, {
                     from: { height: 0 },
                     to: { height: n },
-                    config: C,
+                    config: y,
                     delay: r ? 0 : this.props.initialAnimationDelay,
                     onChange: this.handleForegroundFrame,
                     onRest: r ? void 0 : this.handleFinishedInitialAnimation,
@@ -236,8 +236,8 @@ class N extends (r = l.Component) {
             style: { height: r },
             children: [
                 (0, i.jsxs)("svg", {
-                    viewBox: "0 0 ".concat(v, " ").concat(r),
-                    width: v,
+                    viewBox: "0 0 ".concat(O, " ").concat(r),
+                    width: O,
                     height: r,
                     children: [this.renderProgressMask(r), this.renderProgressBar(r, n)],
                 }),
@@ -291,5 +291,5 @@ class N extends (r = l.Component) {
             });
     }
 }
-j(N, "defaultProps", { initialAnimationDelay: 0 });
-let E = N;
+j(E, "defaultProps", { initialAnimationDelay: 0 });
+let I = E;

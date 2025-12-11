@@ -10,9 +10,9 @@ var r,
     d = n(993365),
     f = n(639317),
     p = n(388032),
-    _ = n(8542),
-    m = n(979712),
-    h = n(154257);
+    _ = n(132648),
+    m = n(191228),
+    h = n(164701);
 function g(e, t, n) {
     return (
         t in e
@@ -129,8 +129,8 @@ class S extends (r = a.Component) {
             } = this.props,
             P = T ? f.g : "textarea",
             R = this.hasError(),
-            D = null != (t = this.props["aria-labelledby"]) ? t : null == (e = this.context) ? void 0 : e.titleId,
-            w = this.getAriaDescribedBy();
+            w = null != (t = this.props["aria-labelledby"]) ? t : null == (e = this.context) ? void 0 : e.titleId,
+            D = this.getAriaDescribedBy();
         return (0, i.jsxs)("div", {
             className: s()(m.inputWrapper, { [_.flex]: I }),
             children: [
@@ -145,8 +145,8 @@ class S extends (r = a.Component) {
                                     [m.disabled]: n,
                                     [_.resizeable]: E,
                                 }),
-                                "aria-labelledby": D,
-                                "aria-describedby": w,
+                                "aria-labelledby": w,
+                                "aria-describedby": D,
                                 "aria-invalid": R,
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: v,

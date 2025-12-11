@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(481060),
     u = n(277139),
     d = n(388032),
-    f = n(984392);
+    f = n(76359);
 function p(e) {
     return String.fromCodePoint(
         ...e

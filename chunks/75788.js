@@ -7,13 +7,13 @@ var a = e(54381),
     o = e(393869),
     c = e(25990),
     u = e(388032),
-    E = e(780187),
+    E = e(36884),
     A = e(800010);
 function _(t) {
     var n;
     let { error: e, setEmailToken: _, setError: d, onNext: C, onClose: x, transitionState: N } = t,
-        [S, g] = r.useState(!1),
-        [p, f] = r.useState(""),
+        [S, f] = r.useState(!1),
+        [g, p] = r.useState(""),
         [m, v] = r.useState(!1),
         h = (0, i.e7)([c.Z], () => c.Z.getErrors()),
         y = r.useRef(null);
@@ -22,14 +22,14 @@ function _(t) {
         null == (t = y.current) || t.focus();
     }, []);
     let T = async (t) => {
-            t.preventDefault(), d(null), g(!0);
+            t.preventDefault(), d(null), f(!0);
             try {
-                let { token: t } = await (0, o.w)(p);
+                let { token: t } = await (0, o.w)(g);
                 _(t), C();
             } catch (t) {
                 d(new s.Z(t).getAnyErrorMessage());
             } finally {
-                g(!1);
+                f(!1);
             }
         },
         M = async () => {
@@ -67,8 +67,8 @@ function _(t) {
             (0, a.jsx)(l.oil, {
                 label: u.intl.string(u.t["8mZX6M"]),
                 error: null != e ? e : null == h || null == (n = h.email_token) ? void 0 : n[0],
-                value: p,
-                onChange: f,
+                value: g,
+                onChange: p,
                 inputRef: y,
             }),
             (0, a.jsx)(l.Text, {

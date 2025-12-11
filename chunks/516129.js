@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(481060),
     o = n(410030),
     c = n(208567),
-    d = n(156811);
+    d = n(37679);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +35,7 @@ function u(e) {
 }
 let g = a.Z.unsafe_rawColors.PRIMARY_400.css,
     m = a.Z.unsafe_rawColors.PRIMARY_500.css;
-function p(e) {
+function f(e) {
     var { enabled: t, imageClassName: n, iconWrapperClassName: i } = e,
         a = (function (e, t) {
             if (null == e) return {};
@@ -58,11 +58,11 @@ function p(e) {
             }
             return i;
         })(e, ["enabled", "imageClassName", "iconWrapperClassName"]);
-    let p = (0, o.ZP)(),
-        f = {
+    let f = (0, o.ZP)(),
+        p = {
             height: 18,
             width: 18,
-            color: (0, s.wjy)(p) ? g : m,
+            color: (0, s.wjy)(f) ? g : m,
         };
     return (0, r.jsx)(
         c.Z,
@@ -75,8 +75,8 @@ function p(e) {
                 imageClassName: l()(n, d.avatarUploaderInnerSquare, { [d.avatarUploaderInnerSquareDisabled]: !t }),
                 icon:
                     null != a.image && "" !== a.image
-                        ? (0, r.jsx)(s.vdY, u({ size: "custom" }, f))
-                        : (0, r.jsx)(s.FmF, u({ size: "custom" }, f)),
+                        ? (0, r.jsx)(s.vdY, u({ size: "custom" }, p))
+                        : (0, r.jsx)(s.FmF, u({ size: "custom" }, p)),
                 iconClassName: l()(d.avatarUploadIcon, d.hideDefaultIcon),
                 iconWrapperClassName: i,
                 showIcon: !0,

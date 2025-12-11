@@ -2,52 +2,52 @@ n.d(t, { Z: () => v }), n(539854), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(494497),
-    o = n(442837),
-    a = n(704215),
+    a = n(442837),
+    o = n(704215),
     s = n(952265),
-    u = n(907862),
-    c = n(243778),
+    c = n(907862),
+    u = n(243778),
     d = n(819640),
-    p = n(476044),
-    f = n(921944),
-    m = n(5238),
+    f = n(476044),
+    p = n(921944),
+    m = n(44542),
     g = n(388032);
 function v(e) {
     let { powerup: t, targetRef: n, isCardVisible: v } = e,
-        x = (0, o.e7)([d.Z], () => d.Z.hasLayers()),
-        _ = (0, s.useHasAnyModalOpen)(),
-        b =
+        x = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
+        b = (0, s.useHasAnyModalOpen)(),
+        h =
             t.skuId === l.A$
                 ? {
                       title: g.intl.string(m.default.YWo6VL),
                       body: g.intl.string(m.default.gXVvKc),
-                      dismissibleContentType: a.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
+                      dismissibleContentType: o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
                   }
                 : null,
-        h = [];
-    null == b || x || !v || _ || h.push(b.dismissibleContentType);
-    let [j, C] = (0, c.US)(h),
+        j = [];
+    null == h || x || !v || b || j.push(h.dismissibleContentType);
+    let [_, C] = (0, u.US)(j),
         Z = i.useCallback(() => {
-            C(f.L.INDIRECT_ACTION);
+            C(p.L.INDIRECT_ACTION);
         }, [C]);
-    return ((0, p.Z)({
+    return ((0, f.Z)({
         targetRef: n,
         onShouldClose: Z,
-        enabled: null != j,
+        enabled: null != _,
     }),
-    null == b || null == j)
+    null == h || null == _)
         ? null
-        : (0, r.jsx)(u.J2, {
+        : (0, r.jsx)(c.J2, {
               targetElementRef: n,
               shouldShow: !0,
               position: "right",
               align: "top",
               size: "sm",
               caretConfig: { align: "start" },
-              title: b.title,
-              body: b.body,
+              title: h.title,
+              body: h.body,
               onRequestClose: () => {
-                  C(f.L.USER_DISMISS);
+                  C(p.L.USER_DISMISS);
               },
           });
 }

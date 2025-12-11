@@ -1,0 +1,15 @@
+e.exports = {
+    member: "_5d473ecff348c314-member",
+    memberInner: "_5d473ecff348c314-memberInner",
+    offline: "_5d473ecff348c314-offline",
+    icon: "_5d473ecff348c314-icon",
+    ownerIcon: "_5d473ecff348c314-ownerIcon _5d473ecff348c314-icon",
+    lostPermission: "_5d473ecff348c314-lostPermission",
+    premiumIcon: "_5d473ecff348c314-premiumIcon _5d473ecff348c314-icon",
+    placeholder: "_5d473ecff348c314-placeholder _5d473ecff348c314-member",
+    botTag: "_5d473ecff348c314-botTag",
+    username: "_5d473ecff348c314-username",
+    name: "_5d473ecff348c314-name",
+    clanTag: "_5d473ecff348c314-clanTag",
+    flatBottom: "_5d473ecff348c314-flatBottom",
+};

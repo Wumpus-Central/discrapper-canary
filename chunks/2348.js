@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(539854);
+n.d(t, { Z: () => I }), n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -10,13 +10,13 @@ var r = n(54381),
     u = n(977258),
     g = n(473403),
     m = n(216306),
-    p = n(743475),
-    f = n(827907),
-    h = n(868814),
-    b = n(981631),
+    f = n(743475),
+    p = n(827907),
+    b = n(868814),
+    h = n(981631),
     x = n(388032),
-    j = n(813878);
-function _(e) {
+    j = n(670950);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function _(e) {
     }
     return e;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,9 +59,9 @@ function v(e, t) {
         e
     );
 }
-function O(e) {
+function C(e) {
     let { guild: t, channel: i } = e,
-        l = (0, f.Mf)(i.id);
+        l = (0, p.Mf)(i.id);
     return "null" === i.id
         ? (0, r.jsx)("div", {
               className: a()(j.categoryRow, j.uncategorized),
@@ -86,7 +86,7 @@ function O(e) {
                       return (n) =>
                           (0, r.jsx)(
                               e,
-                              v(_({}, n), {
+                              O(v({}, n), {
                                   channel: i,
                                   guild: t,
                               }),
@@ -96,13 +96,13 @@ function O(e) {
               onClick: (e) => (
                   e.stopPropagation(),
                   (0, u.s)(t.id, i.id)
-                      ? (0, p.pt)(i.id)
+                      ? (0, f.pt)(i.id)
                       : (0, c.ZDy)(async () => {
                             let { default: e } = await n.e("35641").then(n.bind(n, 89216));
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
-                                    v(_({}, n), {
+                                    O(v({}, n), {
                                         guildId: t.id,
                                         startingChannelId: i.id,
                                     }),
@@ -122,10 +122,10 @@ function O(e) {
               ],
           });
 }
-let C = i.memo(function () {
+let y = i.memo(function () {
         return (0, r.jsx)("div", { className: j.separator });
     }),
-    y = i.memo(function (e) {
+    N = i.memo(function (e) {
         let { index: t } = e;
         return (0, r.jsx)(
             c.Text,
@@ -137,45 +137,45 @@ let C = i.memo(function () {
             "separator-".concat(t),
         );
     }),
-    N = i.memo(function (e) {
+    E = i.memo(function (e) {
         let {
                 channel: t,
                 category: i,
                 guild: l,
                 isFirstChannel: m,
-                isLastChannel: O,
-                tooltipDirection: N = "right",
+                isLastChannel: C,
+                tooltipDirection: E = "right",
             } = e,
-            E = (0, f.Mf)(t.id, i.id),
-            I = (0, f.t4)(t.id, i.id),
-            S = (0, f.EH)(t.id, i.id),
-            T = (0, f.lL)(l.id, i.id),
-            P = null != (0, h.Z)(l).find((e) => e.id === t.id);
+            I = (0, p.Mf)(t.id, i.id),
+            S = (0, p.t4)(t.id, i.id),
+            _ = (0, p.EH)(t.id, i.id),
+            T = (0, p.lL)(l.id, i.id),
+            P = null != (0, b.Z)(l).find((e) => e.id === t.id);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(o.u, {
                     asContainer: !0,
-                    __unsupportedReactNodeAsText: null != S ? S : T,
+                    __unsupportedReactNodeAsText: null != _ ? _ : T,
                     delay: 500,
-                    position: N,
+                    position: E,
                     children: (0, r.jsxs)(c.P3F, {
                         className: a()(j.channelRow, {
                             [j.firstChannel]: m,
-                            [j.lastChannel]: O,
-                            [j.disabled]: I,
+                            [j.lastChannel]: C,
+                            [j.disabled]: S,
                         }),
                         onClick: (e) => {
-                            if (!I)
+                            if (!S)
                                 return (
                                     e.stopPropagation(),
                                     (0, u.s)(l.id, t.id)
-                                        ? (0, p.pt)(t.id)
+                                        ? (0, f.pt)(t.id)
                                         : (0, c.ZDy)(async () => {
                                               let { default: e } = await n.e("35641").then(n.bind(n, 89216));
                                               return (n) =>
                                                   (0, r.jsx)(
                                                       e,
-                                                      v(_({}, n), {
+                                                      O(v({}, n), {
                                                           guildId: l.id,
                                                           startingChannelId: t.id,
                                                       }),
@@ -198,7 +198,7 @@ let C = i.memo(function () {
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
-                                              v(_({}, n), {
+                                              O(v({}, n), {
                                                   channel: t,
                                                   guild: l,
                                               }),
@@ -216,20 +216,20 @@ let C = i.memo(function () {
                                           n.e("91315"),
                                           n.e("24358"),
                                           n.e("38342"),
-                                          n.e("91053"),
-                                          n.e("46931"),
+                                          n.e("41700"),
+                                          n.e("48615"),
                                           n.e("37220"),
                                           n.e("43778"),
                                           n.e("18320"),
                                           n.e("95546"),
-                                          n.e("7891"),
+                                          n.e("40184"),
                                           n.e("84983"),
-                                          n.e("27454"),
+                                          n.e("55791"),
                                       ]).then(n.bind(n, 373651));
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
-                                              v(_({}, n), {
+                                              O(v({}, n), {
                                                   channel: t,
                                                   guild: l,
                                               }),
@@ -252,14 +252,14 @@ let C = i.memo(function () {
                                                 className: j.channelText,
                                                 variant: "text-md/medium",
                                                 lineClamp: 1,
-                                                color: I ? "text-muted" : "text-default",
+                                                color: S ? "text-muted" : "text-default",
                                                 children: t.name,
                                             }),
                                         }),
                                         P
                                             ? (0, r.jsxs)(r.Fragment, {
                                                   children: [
-                                                      (0, r.jsx)(y, { index: 0 }),
+                                                      (0, r.jsx)(N, { index: 0 }),
                                                       (0, r.jsx)(c.Text, {
                                                           variant: "text-xs/medium",
                                                           className: j.channelSubtitle,
@@ -276,31 +276,31 @@ let C = i.memo(function () {
                                 className: j.channelActions,
                                 children: (0, u.s)(t.guild_id, t.id)
                                     ? (0, r.jsx)(c.FZ5, {
-                                          checked: E,
-                                          disabled: I,
+                                          checked: I,
+                                          disabled: S,
                                       })
                                     : (0, r.jsx)(c.Button, {
                                           size: "sm",
                                           variant: "secondary",
                                           text: x.intl.string(x.t.zA9d1J),
                                           icon: c.mBM,
-                                          onClick: b.dG4,
+                                          onClick: h.dG4,
                                       }),
                             }),
                         ],
                     }),
                 }),
-                !O && (0, r.jsx)(C, {}),
+                !C && (0, r.jsx)(y, {}),
             ],
         });
     });
-function E(e) {
+function I(e) {
     let { categories: t, guild: n, className: l, hasSidebar: a } = e,
         s = i.useCallback(
             (e) => {
                 let i = t._categories[e];
                 return (0, r.jsx)(
-                    O,
+                    C,
                     {
                         channel: i.channel,
                         guild: n,
@@ -317,7 +317,7 @@ function E(e) {
                 return null == s
                     ? null
                     : (0, r.jsx)(
-                          N,
+                          E,
                           {
                               category: l.channel,
                               channel: s.channel,

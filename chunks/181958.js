@@ -4,7 +4,7 @@ n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(481060),
-    s = n(101859);
+    s = n(23372);
 let l = (e) => {
         let { data: t, disabled: n } = e,
             { content: i, className: l, onClick: c, disabled: u } = t;

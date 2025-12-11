@@ -1,0 +1,17 @@
+e.exports = {
+    container: "a8e786485f0c32f8-container",
+    playIcon: "a8e786485f0c32f8-playIcon",
+    playing: "a8e786485f0c32f8-playing",
+    playButtonContainer: "a8e786485f0c32f8-playButtonContainer",
+    audioElement: "a8e786485f0c32f8-audioElement",
+    playbackRate: "a8e786485f0c32f8-playbackRate",
+    playbackRateContainer: "a8e786485f0c32f8-playbackRateContainer",
+    volumeButton: "a8e786485f0c32f8-volumeButton",
+    volumeButtonIcon: "a8e786485f0c32f8-volumeButtonIcon",
+    volumeSlider: "a8e786485f0c32f8-volumeSlider",
+    duration: "a8e786485f0c32f8-duration",
+    waveform: "a8e786485f0c32f8-waveform",
+    rippleContainer: "a8e786485f0c32f8-rippleContainer",
+    ripple: "a8e786485f0c32f8-ripple",
+    reducedMotion: "a8e786485f0c32f8-reducedMotion",
+};

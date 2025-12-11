@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(196051),
     P = n(441729),
     R = n(626135),
-    D = n(63063),
-    w = n(695346),
+    w = n(63063),
+    D = n(695346),
     x = n(313789),
     L = n(263937),
     j = n(996073),
@@ -40,8 +40,8 @@ var r = n(54381),
     B = n(611480),
     F = n(653477),
     V = n(388032),
-    H = n(905170),
-    Y = n(953752),
+    H = n(324243),
+    Y = n(54354),
     W = n(328756);
 function K(e, t, n) {
     return (
@@ -185,7 +185,7 @@ function en(e) {
     });
 }
 function er() {
-    let e = w.jU.useSetting(),
+    let e = D.jU.useSetting(),
         [t] = i.useState(() => {
             let e = "1337",
                 t = (0, v.e5)(
@@ -416,7 +416,7 @@ function ef() {
         null != a.current && (clearTimeout(a.current), (a.current = null)),
             t !== e && (a.current = setTimeout(() => (0, d.qz)(t), 150));
     }, [t, e]);
-    let o = V.intl.format(V.t.GwEVE2, { learnMoreLink: D.Z.getArticleURL(Z.BhN.FORCED_COLORS) });
+    let o = V.intl.format(V.t.GwEVE2, { learnMoreLink: w.Z.getArticleURL(Z.BhN.FORCED_COLORS) });
     return (0, r.jsxs)(c.C3N, {
         label: V.intl.string(V.t["TYyfO/"]),
         children: [
@@ -439,8 +439,8 @@ function ef() {
     });
 }
 function ep() {
-    let e = w.QK.useSetting(),
-        t = w.Yk.useSetting(),
+    let e = D.QK.useSetting(),
+        t = D.Yk.useSetting(),
         {
             useReducedMotion: n,
             rawPrefersReducedMotion: a,
@@ -472,7 +472,7 @@ function ep() {
         className: Y.reducedMotion,
         children: (0, r.jsxs)(c.C3N, {
             label: V.intl.string(V.t.e3TR1b),
-            description: V.intl.format(V.t["2l9U2j"], { helpdeskArticle: D.Z.getArticleURL(Z.BhN.REDUCED_MOTION) }),
+            description: V.intl.format(V.t["2l9U2j"], { helpdeskArticle: w.Z.getArticleURL(Z.BhN.REDUCED_MOTION) }),
             children: [
                 (0, r.jsx)(c.Checkbox, {
                     checked: p,
@@ -493,7 +493,7 @@ function ep() {
                         label: V.intl.string(V.t.Iayoh5),
                         description: null != l ? (0, C.Z)(l) : void 0,
                         checked: e,
-                        onChange: w.QK.updateSetting,
+                        onChange: D.QK.updateSetting,
                     }),
                 }),
                 (0, r.jsx)(A.F, {
@@ -502,7 +502,7 @@ function ep() {
                         label: V.intl.string(V.t.iIaOlc),
                         description: null != u ? (0, C.Z)(u) : void 0,
                         checked: t,
-                        onChange: w.Yk.updateSetting,
+                        onChange: D.Yk.updateSetting,
                     }),
                 }),
             ],
@@ -510,10 +510,10 @@ function ep() {
     });
 }
 function e_() {
-    let e = w.Wp.useSetting(),
+    let e = D.Wp.useSetting(),
         t = (0, s.e7)([L.Z], () => L.Z.getAppliedOverrideReasonKey("animateStickers")),
         n = i.useCallback((e) => {
-            w.Wp.updateSetting(e);
+            D.Wp.updateSetting(e);
         }, []);
     return (0, r.jsx)(c.FXm, {
         label: V.intl.string(V.t["6NtAuJ"]),
@@ -539,7 +539,7 @@ function e_() {
 }
 function em() {
     let e = (0, s.e7)([f.Z], () => f.Z.isSubmitButtonEnabled),
-        t = w.dN.useSetting(),
+        t = D.dN.useSetting(),
         n = i.useRef(null);
     return (
         (0, j.Z)(n, U.rP.LEGACY_CHAT_INPUT),
@@ -567,7 +567,7 @@ function em() {
                                     enabled: e,
                                     location: { section: Z.jXE.SETTINGS_ACCESSIBILITY },
                                 }),
-                                    w.dN.updateSetting(e);
+                                    D.dN.updateSetting(e);
                             },
                         }),
                     }),
@@ -577,7 +577,7 @@ function em() {
     );
 }
 function eh() {
-    let e = w.OW.useSetting(),
+    let e = D.OW.useSetting(),
         t = (0, s.e7)([P.Z], () => P.Z.speechRate),
         [n, a] = i.useState(!1);
     if (!u.Zh) return null;
@@ -600,7 +600,7 @@ function eh() {
                     children: (0, r.jsx)(c.rsf, {
                         label: V.intl.string(V.t.qvTIwX),
                         checked: e,
-                        onChange: w.OW.updateSetting,
+                        onChange: D.OW.updateSetting,
                     }),
                 }),
                 (0, r.jsx)(A.F, {

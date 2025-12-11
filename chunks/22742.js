@@ -1,0 +1,16 @@
+e.exports = {
+    modal: "f17563ba6346b310-modal",
+    completed: "f17563ba6346b310-completed",
+    sidebar: "f17563ba6346b310-sidebar",
+    content: "f17563ba6346b310-content",
+    slidesContainer: "f17563ba6346b310-slidesContainer",
+    closeButton: "f17563ba6346b310-closeButton",
+    container: "f17563ba6346b310-container",
+    shortFooter: "f17563ba6346b310-shortFooter",
+    standardFooter: "f17563ba6346b310-standardFooter",
+    templates: "f17563ba6346b310-templates",
+    footer: "f17563ba6346b310-footer",
+    join: "f17563ba6346b310-join",
+    customizeGuildTitle: "f17563ba6346b310-customizeGuildTitle",
+    joinCTA: "f17563ba6346b310-joinCTA",
+};

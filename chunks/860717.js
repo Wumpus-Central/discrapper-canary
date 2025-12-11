@@ -1,8 +1,8 @@
 n.d(t, { Z: () => et }), n(467055), n(388685), n(35282), n(415506);
 var r = n(54381),
     i = n(473749),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(442837),
     c = n(481060),
     s = n(911969),
@@ -11,25 +11,25 @@ var r = n(54381),
     f = n(524995),
     g = n(812206),
     p = n(810568),
-    m = n(168524),
-    b = n(970184),
+    b = n(168524),
+    m = n(970184),
     h = n(197653),
     y = n(979372),
     v = n(676149),
     O = n(861529),
     j = n(768494),
     x = n(124347),
-    _ = n(929677),
-    P = n(706454),
-    I = n(314897),
-    w = n(77498),
-    S = n(823379),
-    E = n(785717),
+    P = n(929677),
+    I = n(706454),
+    w = n(314897),
+    S = n(77498),
+    E = n(823379),
+    _ = n(785717),
     T = n(621853),
     C = n(750312),
     D = n(919498),
     k = n(388032),
-    N = n(18827);
+    N = n(440653);
 function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -205,14 +205,14 @@ function M(e) {
                             var n,
                                 r,
                                 i = {},
-                                l = Object.keys(e);
-                            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                                a = Object.keys(e);
+                            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                             return i;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
-                        var l = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < l.length; r++)
-                            (n = l[r]),
+                        var a = Object.getOwnPropertySymbols(e);
+                        for (r = 0; r < a.length; r++)
+                            (n = a[r]),
                                 !(t.indexOf(n) >= 0) &&
                                     Object.prototype.propertyIsEnumerable.call(e, n) &&
                                     (i[n] = e[n]);
@@ -244,7 +244,7 @@ function F(e) {
     return e.map((e, t) => B(e, t));
 }
 function U(e) {
-    let { title: t, body: n, image: i, imagePlaceholder: l } = e;
+    let { title: t, body: n, image: i, imagePlaceholder: a } = e;
     return (0, r.jsxs)("div", {
         className: N.heroSection,
         children: [
@@ -274,11 +274,11 @@ function U(e) {
                           className: N.heroImage,
                       }),
                   })
-                : null != l
+                : null != a
                   ? (0, r.jsx)("div", {
                         className: N.heroImageContainer,
                         children: (0, r.jsx)("img", {
-                            src: l,
+                            src: a,
                             alt: "",
                             className: N.heroImage,
                         }),
@@ -303,7 +303,7 @@ function H(e) {
 function z(e) {
     let { content: t } = e,
         n = i.useId(),
-        l = (0, y._)();
+        a = (0, y._)();
     return null != t
         ? (0, r.jsx)(O.Z, {
               type: s.re.TEXT_DISPLAY,
@@ -311,14 +311,14 @@ function z(e) {
               content: t,
               className: N.text,
           })
-        : (0, r.jsx)("div", { className: a()(N.textPlaceholder, l.className) });
+        : (0, r.jsx)("div", { className: l()(N.textPlaceholder, a.className) });
 }
 function K(e) {
     let { content: t, image: n, imagePosition: i } = e,
-        l = (0, y._)(),
+        a = (0, y._)(),
         o = L(n)
             ? (0, r.jsx)("div", {
-                  className: a()(N.image, l.className),
+                  className: l()(N.image, a.className),
                   "data-position": i,
                   children: (0, r.jsx)(x.ZP, {
                       src: n.proxyUrl,
@@ -329,7 +329,7 @@ function K(e) {
                   }),
               })
             : null == t
-              ? (0, r.jsx)("div", { className: a()(N.imagePlaceholder, l.className) })
+              ? (0, r.jsx)("div", { className: l()(N.imagePlaceholder, a.className) })
               : null;
     return (0, r.jsxs)("div", {
         className: N.textWithImage,
@@ -350,10 +350,10 @@ function K(e) {
 }
 function V(e) {
     let { size: t = "small", divider: n = !1 } = e,
-        l = i.useId();
+        a = i.useId();
     return (0, r.jsx)(v.Z, {
         type: s.re.SEPARATOR,
-        id: l,
+        id: a,
         divider: n,
         spacing: "large" === t ? s.US.LARGE : s.US.SMALL,
     });
@@ -386,14 +386,14 @@ function Y(e, t) {
             r += i;
             continue;
         }
-        let l = t.variables[i];
-        null == l
+        let a = t.variables[i];
+        null == a
             ? (r += "\u2013\u2013")
-            : "unfurled_media" === l.type
-              ? (r += l.media.url)
-              : "number" === l.type
-                ? (r += t.numberFormat.format(l.value))
-                : "string" === l.type && (r += l.value);
+            : "unfurled_media" === a.type
+              ? (r += a.media.url)
+              : "number" === a.type
+                ? (r += t.numberFormat.format(a.value))
+                : "string" === a.type && (r += a.value);
     }
     return r;
 }
@@ -402,16 +402,16 @@ function X(e, t) {
     if (null == e || "skeleton" === t.mode) return null;
     let i = null == (r = e.match(R)) || null == (n = r[0]) ? void 0 : n.slice(2, -2);
     if (null == i) return null;
-    let l = t.variables[i];
-    return null == l || "unfurled_media" !== l.type ? null : l.media;
+    let a = t.variables[i];
+    return null == a || "unfurled_media" !== a.type ? null : a.media;
 }
 let Q = i.createContext(null);
 function J(e) {
-    return (0, o.cj)([g.Z, T.Z, w.Z], () => {
+    return (0, o.cj)([g.Z, T.Z, S.Z], () => {
         let t = g.Z.getApplication(e.applicationId);
         return {
             application: t,
-            game: null != t ? w.Z.getGameByApplication(t) : null,
+            game: null != t ? S.Z.getGameByApplication(t) : null,
             config: T.Z.getApplicationWidgetApplicationConfig(e.applicationId),
         };
     });
@@ -420,7 +420,7 @@ function $(e) {
     let { children: t, widget: n } = e;
     return (0, r.jsx)(h.am.Root, {
         containerInnerWidth: 396,
-        children: (0, r.jsx)(b.Il, {
+        children: (0, r.jsx)(m.Il, {
             applicationWidget: n,
             children: (0, r.jsx)(y.U, {
                 size: "reduced",
@@ -475,14 +475,14 @@ function ee(e) {
 }
 let et = Object.assign(
     function (e) {
-        let { trackUserProfileAction: t } = (0, E.KZ)(),
-            { user: n, widget: l, cta: s, subtle: g = !1 } = e,
-            b = (0, o.e7)([I.default], () => I.default.getId()) === n.id,
-            { application: h, game: y, config: v } = J(l),
+        let { trackUserProfileAction: t } = (0, _.KZ)(),
+            { user: n, widget: a, cta: s, subtle: g = !1 } = e,
+            m = (0, o.e7)([w.default], () => w.default.getId()) === n.id,
+            { application: h, game: y, config: v } = J(a),
             O = null == h ? void 0 : h.getIconURL(16),
-            x = (0, _.O)(n.id).data,
-            w = null == x ? void 0 : x.find((e) => e.application_id === l.applicationId),
-            T = (0, m.Z)({
+            x = (0, P.O)(n.id).data,
+            S = null == x ? void 0 : x.find((e) => e.application_id === a.applicationId),
+            T = (0, b.Z)({
                 location: "UserProfileApplicationWidget",
                 applicationId: null == y ? void 0 : y.id,
                 source: p.m1.UserProfile,
@@ -495,10 +495,10 @@ let et = Object.assign(
                 L &&
                     (t({
                         action: "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
-                        applicationId: l.applicationId,
+                        applicationId: a.applicationId,
                     }),
                     B({ analyticsLocations: F }));
-            }, [L, B, t, l.applicationId, F]),
+            }, [L, B, t, a.applicationId, F]),
             W = null == s && D && !R && L,
             H = (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -527,15 +527,15 @@ let et = Object.assign(
                           children: H,
                       })
                     : (0, r.jsx)(c.P3F, {
-                          className: a()(N.headerTitle, N.clickable),
+                          className: l()(N.headerTitle, N.clickable),
                           onClick: T,
                           children: H,
                       }),
-            K = (0, o.e7)([P.default], () => P.default.locale),
+            K = (0, o.e7)([I.default], () => I.default.locale),
             V = i.useMemo(() => {
                 let e = (function (e, t, n) {
-                    var r, i, l;
-                    let a = new Intl.NumberFormat(n, {
+                    var r, i, a;
+                    let l = new Intl.NumberFormat(n, {
                         notation: "compact",
                         compactDisplay: "short",
                         roundingMode: "floor",
@@ -544,7 +544,7 @@ let et = Object.assign(
                         ? {
                               mode: "skeleton",
                               config: t,
-                              numberFormat: a,
+                              numberFormat: l,
                           }
                         : {
                               mode: "from_data",
@@ -552,10 +552,10 @@ let et = Object.assign(
                                   Object.entries(
                                       A(
                                           { username: null == (r = e.profile) ? void 0 : r.username },
-                                          null == (l = e.profile) || null == (i = l.data) ? void 0 : i.primary,
+                                          null == (a = e.profile) || null == (i = a.data) ? void 0 : i.primary,
                                       ),
                                   )
-                                      .filter(S.V5)
+                                      .filter(E.V5)
                                       .map((e) => {
                                           let [t, n] = e;
                                           if ("object" == typeof n) {
@@ -585,12 +585,12 @@ let et = Object.assign(
                                               ];
                                           return null;
                                       })
-                                      .filter(S.lm),
+                                      .filter(E.lm),
                               ),
                               config: t,
-                              numberFormat: a,
+                              numberFormat: l,
                           };
-                })(null != w ? w : null, null != v ? v : null, K);
+                })(null != S ? S : null, null != v ? v : null, K);
                 return G.map(function t(n) {
                     switch (n.type) {
                         case "HERO":
@@ -630,13 +630,13 @@ let et = Object.assign(
                             return n;
                     }
                 });
-            }, [v, w, K]);
+            }, [v, S, K]);
         return (0, r.jsxs)(
             C.Z,
             Z(A({}, e), {
                 userId: n.id,
-                widget: l,
-                className: a()(N.widgetContainer, g && N.subtle),
+                widget: a,
+                className: l()(N.widgetContainer, g && N.subtle),
                 headerTitle: z,
                 headerClassName: N.header,
                 additionalManageWidgetMenuItems:
@@ -652,15 +652,15 @@ let et = Object.assign(
                     (0, r.jsx)(Q.Provider, {
                         value: e,
                         children: (0, r.jsx)($, {
-                            widget: l,
+                            widget: a,
                             children: (0, r.jsx)(M, { component: V }),
                         }),
                     }),
-                    b &&
+                    m &&
                         (0, r.jsxs)("div", {
                             className: N.footer,
                             children: [
-                                null == x || null != w || W
+                                null == x || null != S || W
                                     ? null
                                     : (0, r.jsxs)("div", {
                                           className: N.stillSyncing,

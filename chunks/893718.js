@@ -9,8 +9,8 @@ n.d(t, {
     hJ: () => eN,
     iV: () => eL,
     jx: () => eR,
-    oR: () => ew,
-    qz: () => eD,
+    oR: () => eD,
+    qz: () => ew,
     vB: () => eU,
     x2: () => eP,
 }),
@@ -45,8 +45,8 @@ var r = n(54381),
     N = n(570220),
     P = n(28546),
     R = n(805680),
-    D = n(368844),
-    w = n(41776),
+    w = n(368844),
+    D = n(41776),
     x = n(657871),
     L = n(849522),
     j = n(780291),
@@ -82,7 +82,7 @@ var r = n(54381),
     ed = n(981631),
     ef = n(761652),
     ep = n(957825),
-    e_ = n(564355);
+    e_ = n(72775);
 function em(e, t, n) {
     return (
         t in e
@@ -158,7 +158,7 @@ function eS(e, t, a, o, s) {
                             : [],
                     O = null != (b = W.Z.getUploads(s, t.drafts.type)) ? b : [],
                     v = (0, M.q5)(s);
-                if (null == d && !p && !h && (0, D.CB)(O, s)) {
+                if (null == d && !p && !h && (0, w.CB)(O, s)) {
                     c(!1),
                         (0, _.ZDy)(async () => {
                             let { default: e } = await Promise.all([
@@ -166,7 +166,7 @@ function eS(e, t, a, o, s) {
                                 n.e("90508"),
                                 n.e("22173"),
                                 n.e("95546"),
-                                n.e("48890"),
+                                n.e("27381"),
                             ]).then(n.bind(n, 273602));
                             return (t) =>
                                 (0, r.jsx)(
@@ -344,12 +344,12 @@ function eR() {
         handleHideAutocomplete: n,
     };
 }
-function eD(e) {
+function ew(e) {
     let t = i.useRef(null);
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e;
 }
-function ew(e) {
+function eD(e) {
     let [t, n] = i.useState(0);
     return {
         editorHeight: t,
@@ -363,7 +363,7 @@ function ew(e) {
 }
 function ex(e, t, n, r) {
     let i = e.getGuildId(),
-        a = (0, p.e7)([w.Z], () => null != i && w.Z.isLurking(i), [i]),
+        a = (0, p.e7)([D.Z], () => null != i && D.Z.isLurking(i), [i]),
         o = (0, p.e7)([F.ZP, K.default], () => {
             var e, t;
             let n = K.default.getCurrentUser();
@@ -523,8 +523,8 @@ function eG(e, t) {
         className: O,
         innerClassName: A,
         editorClassName: P,
-        id: D,
-        required: w,
+        id: w,
+        required: D,
         disabled: x,
         placeholder: M,
         accessibilityLabel: k,
@@ -562,7 +562,7 @@ function eG(e, t) {
     } = e;
     c()(null != G, "chat input type must be set");
     let { analyticsLocations: eq } = (0, b.ZP)(E.Z.CHANNEL_TEXT_AREA),
-        eQ = eD(t),
+        eQ = ew(t),
         eX = i.useRef(null),
         eJ = i.useRef(null),
         e$ = i.useRef(null),
@@ -630,10 +630,10 @@ function eG(e, t) {
             var e;
             return null == e1 || null == (e = e1.current) ? void 0 : e.hide();
         }, []),
-        { editorHeight: tI, handleResize: tT } = ew(z),
+        { editorHeight: tI, handleResize: tT } = eD(z),
         { handleTab: tC, handleEnter: tA, handleMoveSelection: tN } = ej(th, eX, ta),
-        { expressionPickerView: tP, shouldHideExpressionPicker: tR, handleOuterClick: tD } = eL(G, e$, U.id),
-        { selectedAutocompleteInputType: tw, selectedAutocompleteInputError: tx } = eM(tc, e$),
+        { expressionPickerView: tP, shouldHideExpressionPicker: tR, handleOuterClick: tw } = eL(G, e$, U.id),
+        { selectedAutocompleteInputType: tD, selectedAutocompleteInputError: tx } = eM(tc, e$),
         tL = ek(f),
         { currentAutocompleteType: tj, handleAutocompleteVisibilityChange: tM } = eU(G, U.id),
         { moveAppsEntrypointToOverflow: tk } = $.n.useConfig({ location: "ChannelAppLauncher" }),
@@ -659,7 +659,7 @@ function eG(e, t) {
             activeCommand: e5,
             pendingReply: W,
             pendingScheduledMessage: eK,
-            selectedAutocompleteInputType: tw,
+            selectedAutocompleteInputType: tD,
             selectedAutocompleteInputError: tx,
         }),
         tW = 0 === f.trim().length,
@@ -755,7 +755,7 @@ function eG(e, t) {
                                             G === ee.Ie.CREATE_FORUM_POST || G === ee.Ie.FORWARD_MESSAGE_INPUT,
                                         [e_.sansAttachButtonUserProfileReply]: G === ee.Ie.USER_PROFILE_REPLY,
                                     }),
-                                    onMouseDown: tD,
+                                    onMouseDown: tw,
                                     children: [
                                         tQ,
                                         tk && tq,
@@ -765,14 +765,14 @@ function eG(e, t) {
                                             ringClassName: e_.focusRing,
                                             children: (0, r.jsx)(et.Z, {
                                                 ref: e$,
-                                                id: D,
+                                                id: w,
                                                 focused: Z,
                                                 useSlate: ti,
                                                 textValue: f,
                                                 richValue: m,
                                                 disabled: e9,
                                                 placeholder: M,
-                                                required: w,
+                                                required: D,
                                                 accessibilityLabel: k,
                                                 isPreviewing: (e6 || e7) && tn,
                                                 channel: U,

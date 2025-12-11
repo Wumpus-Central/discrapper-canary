@@ -8,16 +8,16 @@ var i = n(481060),
     o = n(685389),
     c = n(981631),
     d = n(388032),
-    u = n(49792);
+    u = n(574094);
 function g(e) {
     let {
         children: t,
         revenue: n,
         revenueTrend: g,
         summaryMetricLabel: m,
-        summaryMetricValue: p,
-        summaryMetricTrend: f,
-        summaryMetricTrendIsPercent: h,
+        summaryMetricValue: f,
+        summaryMetricTrend: p,
+        summaryMetricTrendIsPercent: b,
     } = e;
     return (0, r.jsx)(i.C3N, {
         label: d.intl.string(d.t.ofmOzb),
@@ -36,10 +36,10 @@ function g(e) {
                         }),
                         (0, r.jsx)(s.Z, {
                             label: m,
-                            value: p,
+                            value: f,
                             additionalContent: (0, r.jsx)(l.H, {
-                                value: f,
-                                isPercent: h,
+                                value: p,
+                                isPercent: b,
                             }),
                         }),
                     ],

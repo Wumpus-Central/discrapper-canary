@@ -3,9 +3,9 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(619915),
-    o = n(449932),
-    a = n(561788),
-    s = n(413409);
+    a = n(449932),
+    o = n(561788),
+    s = n(26714);
 function c(e) {
     let { channel: t, onAction: n } = e,
         c = (0, l.ZP)(t),
@@ -17,13 +17,13 @@ function c(e) {
               children: [
                   (0, r.jsx)("div", {
                       className: s.popoutHeaderContainer,
-                      children: (0, r.jsx)(a.Z, { channel: t }),
+                      children: (0, r.jsx)(o.Z, { channel: t }),
                   }),
                   (0, r.jsx)("div", { className: s.headerDivider }),
                   u.map((e, i) => {
                       var l;
                       return (0, r.jsx)(
-                          o.Z,
+                          a.Z,
                           {
                               embeddedApp: e,
                               presenceActivity: null != (l = e.presenceActivity) ? l : void 0,

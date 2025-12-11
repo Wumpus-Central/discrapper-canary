@@ -1,0 +1,16 @@
+e.exports = {
+    splashContainer: "_0bef9109de189622-splashContainer",
+    splashContainerHorizontal: "_0bef9109de189622-splashContainerHorizontal",
+    priceOs: "_0bef9109de189622-priceOs",
+    platform: "_0bef9109de189622-platform",
+    exclusiveRegular: "_0bef9109de189622-exclusiveRegular",
+    exclusivePlaying: "_0bef9109de189622-exclusivePlaying",
+    splashPlaceholder: "_0bef9109de189622-splashPlaceholder",
+    splashVideo: "_0bef9109de189622-splashVideo",
+    tileBuyButton: "_0bef9109de189622-tileBuyButton",
+    tilePrice: "_0bef9109de189622-tilePrice",
+    tilePriceWithVisibleBuyButton: "_0bef9109de189622-tilePriceWithVisibleBuyButton _0bef9109de189622-tilePrice",
+    socialLayerStorefrontCardContainer: "_0bef9109de189622-socialLayerStorefrontCardContainer",
+    socialLayerStorefrontCardBackgroundImage: "_0bef9109de189622-socialLayerStorefrontCardBackgroundImage",
+    socialLayerStorefrontCardImage: "_0bef9109de189622-socialLayerStorefrontCardImage",
+};

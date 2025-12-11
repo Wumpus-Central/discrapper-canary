@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(925994),
     P = n(981631),
     R = n(388032),
-    D = n(564355);
-function w(e, t, n) {
+    w = n(72775);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -248,7 +248,7 @@ class U extends i.Component {
                 canOnlyUseTextCommands: T,
                 className: N,
                 id: R,
-                required: w,
+                required: D,
                 maxCharacterCount: L,
                 allowNewLines: M,
                 isEditorIdle: k,
@@ -261,13 +261,13 @@ class U extends i.Component {
             { submitting: V, popup: H } = this.state,
             Y = {
                 channel: g,
-                className: o()(N, D.textArea, {
-                    [D.textAreaSlate]: y,
-                    [D.textAreaDisabled]: d || V,
+                className: o()(N, w.textArea, {
+                    [w.textAreaSlate]: y,
+                    [w.textAreaDisabled]: d || V,
                 }),
                 id: R,
                 placeholder: this.getPlaceholder(),
-                required: w,
+                required: D,
                 accessibilityLabel: B,
                 disabled: d || !1,
                 submitting: V,
@@ -286,10 +286,10 @@ class U extends i.Component {
                 onKeyDown: p,
                 onSubmit: m,
                 textAreaPaddingClassName: o()({
-                    [D.textAreaForPostCreation]: E === v.Ie.CREATE_FORUM_POST,
-                    [D.textAreaCustomGift]: E === v.Ie.CUSTOM_GIFT,
-                    [D.textAreaForUserProfile]: E === v.Ie.USER_PROFILE,
-                    [D.textAreaForOverlayInlineReply]: E === v.Ie.OVERLAY_INLINE_REPLY,
+                    [w.textAreaForPostCreation]: E === v.Ie.CREATE_FORUM_POST,
+                    [w.textAreaCustomGift]: E === v.Ie.CUSTOM_GIFT,
+                    [w.textAreaForUserProfile]: E === v.Ie.USER_PROFILE,
+                    [w.textAreaForOverlayInlineReply]: E === v.Ie.OVERLAY_INLINE_REPLY,
                 }),
                 spellcheckEnabled: O,
                 useNewSlashCommands: I,
@@ -336,12 +336,12 @@ class U extends i.Component {
         var t;
         super(e),
             (t = this),
-            w(this, "ref", i.createRef()),
-            w(this, "_focusBlurQueue", Promise.resolve()),
-            w(this, "_unsubscribe", void 0),
-            w(this, "_initTimeoutId", null),
-            w(this, "_cachedEditorWindow", null),
-            w(this, "handleSelectionChange", () => {
+            D(this, "ref", i.createRef()),
+            D(this, "_focusBlurQueue", Promise.resolve()),
+            D(this, "_unsubscribe", void 0),
+            D(this, "_initTimeoutId", null),
+            D(this, "_cachedEditorWindow", null),
+            D(this, "handleSelectionChange", () => {
                 if (this.props.focused) {
                     var e, t, n;
                     this.props.onSelectionChanged(
@@ -349,7 +349,7 @@ class U extends i.Component {
                     );
                 }
             }),
-            w(this, "focus", () => {
+            D(this, "focus", () => {
                 var e;
                 null == (e = this._focusBlurQueue) ||
                     e.then(() => {
@@ -359,55 +359,55 @@ class U extends i.Component {
                         });
                     });
             }),
-            w(this, "saveCurrentText", function () {
+            D(this, "saveCurrentText", function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     { type: n, channel: r } = t.props;
                 n.drafts.autoSave && (e && t.saveCurrentTextThrottled.cancel(), t.handleSaveCurrentText(r.id));
             }),
-            w(this, "handleBeforeUnload", () => this.saveCurrentText()),
-            w(this, "saveCurrentTextThrottled", l().throttle(this.saveCurrentText.bind(this, !1), 500)),
-            w(this, "handleEnter", (e) => {
+            D(this, "handleBeforeUnload", () => this.saveCurrentText()),
+            D(this, "saveCurrentTextThrottled", l().throttle(this.saveCurrentText.bind(this, !1), 500)),
+            D(this, "handleEnter", (e) => {
                 var t, n;
                 return null == (t = (n = this.props).onEnter) ? void 0 : t.call(n, e);
             }),
-            w(this, "handleTab", () => {
+            D(this, "handleTab", () => {
                 var e, t;
                 return null == (e = (t = this.props).onTab) ? void 0 : e.call(t);
             }),
-            w(this, "handleMoveSelection", (e) => {
+            D(this, "handleMoveSelection", (e) => {
                 var t, n;
                 return null == (t = (n = this.props).onMoveSelection) ? void 0 : t.call(n, e);
             }),
-            w(this, "maybeShowAutocomplete", () => {
+            D(this, "maybeShowAutocomplete", () => {
                 var e, t;
                 return null == (e = (t = this.props).onMaybeShowAutocomplete) ? void 0 : e.call(t);
             }),
-            w(this, "hideAutocomplete", () => {
+            D(this, "hideAutocomplete", () => {
                 var e, t;
                 return null == (e = (t = this.props).onHideAutocomplete) ? void 0 : e.call(t);
             }),
-            w(this, "handleSaveCurrentText", (e) => {
+            D(this, "handleSaveCurrentText", (e) => {
                 d.Z.saveDraft(e, this.props.textValue, this.props.type.drafts.type);
             }),
-            w(this, "handleClearText", () => {
+            D(this, "handleClearText", () => {
                 var e, t;
                 null == (e = (t = this.props).onChange) || e.call(t, null, "", (0, S.JM)(""));
             }),
-            w(this, "handleInsertText", (e) => {
+            D(this, "handleInsertText", (e) => {
                 let { plainText: t, rawText: n, addSpace: r = !1 } = e;
                 this.props.disabled || (this.appendText(t, n, r), this.focus());
             }),
-            w(this, "handleFocus", (e) => {
+            D(this, "handleFocus", (e) => {
                 let { onFocus: t } = this.props,
                     { focused: n } = this.state;
                 null == t || t(e), n || this.setState({ focused: !0 });
             }),
-            w(this, "handleBlur", (e) => {
+            D(this, "handleBlur", (e) => {
                 let { onBlur: t } = this.props,
                     { focused: n } = this.state;
                 null == t || t(e), n && this.setState({ focused: !1 });
             }),
-            w(this, "handlePaste", (e) => {
+            D(this, "handlePaste", (e) => {
                 var t, n, r;
                 let i = null == (n = e.target) || null == (t = n.ownerDocument) ? void 0 : t.defaultView,
                     {

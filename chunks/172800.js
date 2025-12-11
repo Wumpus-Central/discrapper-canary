@@ -23,7 +23,7 @@ var r = n(54381),
     I = n(149203),
     T = n(981631),
     C = n(388032),
-    A = n(999642);
+    A = n(8905);
 function N(e, t, n) {
     return (
         t in e
@@ -65,7 +65,7 @@ function R(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function D(e, t) {
         e
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -167,14 +167,14 @@ let L = (e) => {
                         { visibleRowIndex: p, columnIndex: _ } = e,
                         m = null != (n = j(_, G)) ? n : {},
                         { ref: h, tabIndex: g, onFocus: E } = m,
-                        b = w(m, ["ref", "tabIndex", "onFocus"]),
+                        b = D(m, ["ref", "tabIndex", "onFocus"]),
                         y = el.rowIndex === p && el.columnIndex === _,
                         O = () => {
                             k.current || U.current || x(e);
                         };
                     return (0, i.createElement)(
                         "li",
-                        D(P({}, b), { key: t }),
+                        w(P({}, b), { key: t }),
                         (0, r.jsx)(l.tEY, {
                             children: (0, r.jsx)("button", {
                                 "aria-label": d,
@@ -307,7 +307,7 @@ let L = (e) => {
         eh = (e) =>
             (0, r.jsx)(
                 "ul",
-                D(P({}, M(G)), {
+                w(P({}, M(G)), {
                     className: o()(A.emojiListRow, {
                         [A.emojiListRowLargeSize]: ep,
                         [A.emojiListRowMediumSize]: e_,

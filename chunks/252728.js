@@ -1,0 +1,16 @@
+e.exports = {
+    shopCard: "bab2bcf65c38925f-shopCard",
+    shopCardDark: "bab2bcf65c38925f-shopCardDark bab2bcf65c38925f-shopCard",
+    shopCardHighlighted: "bab2bcf65c38925f-shopCardHighlighted",
+    shopCardDarkHighlighted: "bab2bcf65c38925f-shopCardDarkHighlighted",
+    shopCardAnimation: "bab2bcf65c38925f-shopCardAnimation",
+    shopCardSelected: "bab2bcf65c38925f-shopCardSelected",
+    shopCardClaimed: "bab2bcf65c38925f-shopCardClaimed",
+    claimedIcon: "bab2bcf65c38925f-claimedIcon",
+    preview: "bab2bcf65c38925f-preview",
+    previewTrick: "bab2bcf65c38925f-previewTrick",
+    previewTreat: "bab2bcf65c38925f-previewTreat",
+    productName: "bab2bcf65c38925f-productName",
+    avatarPreview: "bab2bcf65c38925f-avatarPreview",
+    nameplatePreview: "bab2bcf65c38925f-nameplatePreview",
+};

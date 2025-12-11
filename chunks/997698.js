@@ -4,7 +4,7 @@ var r = n(54381),
     l = n(760632),
     a = n(578053),
     s = n(388032),
-    o = n(354962);
+    o = n(41178);
 function c(e) {
     let { canManageGuild: t, guild: n } = e;
     return (0, r.jsxs)("div", {

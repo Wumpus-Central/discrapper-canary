@@ -9,15 +9,15 @@ var r = n(54381),
     u = n(352153),
     d = n(589694),
     p = n(62001),
-    f = n(869886);
+    f = n(38282);
 let g = function (e) {
     let { scrollContainerRef: t } = e,
         n = (0, l.e7)([a.Z], () => a.Z.notificationItem(), []),
         { showDot: g } = (0, c.Z)(),
         h = i.useRef(null),
-        [m, _] = i.useState(!1),
+        [m, b] = i.useState(!1),
         {
-            data: b,
+            data: _,
             loading: E,
             isRefreshing: O,
             handleOnRefresh: v,
@@ -36,8 +36,8 @@ let g = function (e) {
     let C = (0, l.e7)([a.Z], () => a.Z.hasNewContent(), []),
         S = (0, l.e7)([a.Z], () => a.Z.isHydrating(), []),
         T = i.useMemo(() => y[0].onViewableItemsChanged, [y]),
-        { registerItemRef: N } = (0, p.m)(b, T, t),
-        j = i.useMemo(() => b.some((e) => "end" === e.data.kind), [b]),
+        { registerItemRef: N } = (0, p.m)(_, T, t),
+        j = i.useMemo(() => _.some((e) => "end" === e.data.kind), [_]),
         P = i.useCallback(() => {
             if (j) return;
             let e = t.current;
@@ -47,10 +47,10 @@ let g = function (e) {
                 m ||
                 E ||
                 S ||
-                (_(!0),
+                (b(!0),
                 (0, s.es)().finally(() => {
                     setTimeout(() => {
-                        _(!1);
+                        b(!1);
                     }, 300);
                 }));
         }, [E, m, S, j, t]);
@@ -125,7 +125,7 @@ let g = function (e) {
                           ),
             [N],
         );
-    return E && 0 === b.length
+    return E && 0 === _.length
         ? (0, r.jsx)("div", {
               style: {
                   padding: "32px",
@@ -165,7 +165,7 @@ let g = function (e) {
                       ref: h,
                       className: f.scrollContainer,
                       children: [
-                          b.map((e) => Z(e)),
+                          _.map((e) => Z(e)),
                           !j &&
                               (m || S) &&
                               (0, r.jsx)("div", {

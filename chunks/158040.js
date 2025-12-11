@@ -2,7 +2,7 @@ n.d(t, { T: () => o });
 var a = n(54381),
     r = n(481060),
     i = n(388032),
-    s = n(675853);
+    s = n(23362);
 function o(e) {
     let { rewardName: t } = e;
     return (0, a.jsx)(r.Text, {

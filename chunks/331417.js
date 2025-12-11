@@ -1,0 +1,15 @@
+e.exports = {
+    icon: "f4b9b597e5b82a09-icon",
+    unlocked: "f4b9b597e5b82a09-unlocked",
+    emoji: "f4b9b597e5b82a09-emoji",
+    animated: "f4b9b597e5b82a09-animated",
+    audio: "f4b9b597e5b82a09-audio",
+    customization: "f4b9b597e5b82a09-customization",
+    upload: "f4b9b597e5b82a09-upload",
+    vanity: "f4b9b597e5b82a09-vanity",
+    stream: "f4b9b597e5b82a09-stream",
+    sticker: "f4b9b597e5b82a09-sticker",
+    customRoleIcon: "f4b9b597e5b82a09-customRoleIcon",
+    stage: "f4b9b597e5b82a09-stage",
+    soundboard: "f4b9b597e5b82a09-soundboard",
+};

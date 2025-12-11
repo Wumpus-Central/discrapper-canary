@@ -19,36 +19,36 @@ var r = n(54381),
     y = n(840724),
     O = n(231338),
     v = n(388032),
-    S = n(54602);
+    S = n(179047);
 function I(e) {
     var t, n, I, T, C, A, N, P;
-    let { guildId: R, skuId: D, channel: w } = e,
-        x = (0, o.e7)([p.Z], () => p.Z.isFetchingForSKU(D)),
-        L = (0, o.e7)([f.Z], () => f.Z.get(D)),
+    let { guildId: R, skuId: w, channel: D } = e,
+        x = (0, o.e7)([p.Z], () => p.Z.isFetchingForSKU(w)),
+        L = (0, o.e7)([f.Z], () => f.Z.get(w)),
         j = null == L ? void 0 : L.applicationId,
         { analyticsLocations: M } = (0, c.ZP)(l.Z.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
     (0, u.p2)();
     let k = (0, o.e7)([d.default], () =>
-            w.isDM() && null != w.recipients && 0 !== w.recipients.length ? d.default.getUser(w.recipients[0]) : null,
+            D.isDM() && null != D.recipients && 0 !== D.recipients.length ? d.default.getUser(D.recipients[0]) : null,
         ),
         { primaryIconAsset: U, primaryIconLabel: G } = i.useMemo(() => (0, m.FE)(L, j), [L, j]);
     i.useEffect(() => {
-        null == R || null == D || p.Z.isFetchingForSKU(D) || (0, h.y)(R, D);
-    }, [R, D]);
+        null == R || null == w || p.Z.isFetchingForSKU(w) || (0, h.y)(R, w);
+    }, [R, w]);
     let Z = i.useCallback(
             (e) => {
                 e.stopPropagation(),
                     (null == L ? void 0 : L.applicationId) != null &&
                         null != R &&
                         (0, g.g)({
-                            skuId: D,
+                            skuId: w,
                             applicationId: L.applicationId,
                             guildId: R,
                             isStorefront: !1,
                             analyticsLocations: M,
                         });
             },
-            [D, null == L ? void 0 : L.applicationId, R, M],
+            [w, null == L ? void 0 : L.applicationId, R, M],
         ),
         B = i.useCallback(() => {
             null != L &&
@@ -82,7 +82,7 @@ function I(e) {
                     (0, r.jsx)(y.ZP, {
                         className: S.card,
                         applicationId: L.applicationId,
-                        skuId: D,
+                        skuId: w,
                         variant: y.Zp.EMBEDDED,
                         onClick: Z,
                         analyticsLocations: M,

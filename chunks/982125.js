@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(657707),
     d = n(821541),
     f = n(777207),
-    p = n(726550);
+    p = n(672);
 function _(e) {
     let {
             checked: t,
@@ -39,10 +39,10 @@ function _(e) {
         }
         C(t ? "animateIn" : "animateOut");
     }, [t]);
-    let D = (e) => {
+    let w = (e) => {
             null != a && a(e);
         },
-        w = o()(p.checkboxOption, "string" == typeof T && p[T], "indicator" !== O && p.spacing),
+        D = o()(p.checkboxOption, "string" == typeof T && p[T], "indicator" !== O && p.spacing),
         x = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -106,7 +106,7 @@ function _(e) {
         });
     return m
         ? (0, r.jsx)("div", {
-              className: w,
+              className: D,
               "data-selected": t || void 0,
               "data-disabled": _ || void 0,
               children: x,
@@ -119,11 +119,11 @@ function _(e) {
                   inputRef: S,
                   "aria-labelledby": g,
                   isSelected: t,
-                  onChange: D,
+                  onChange: w,
                   isDisabled: _,
                   isReadOnly: m,
                   "data-mana-component": "checkbox",
-                  className: w,
+                  className: D,
                   value: String(b),
                   children: x,
               }),

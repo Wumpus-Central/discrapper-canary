@@ -1,26 +1,26 @@
-t.d(e, { default: () => p });
+t.d(e, { default: () => g });
 var n = t(54381),
     s = t(473749),
     r = t(481060),
-    l = t(987209),
-    a = t(563132),
+    a = t(987209),
+    l = t(563132),
     o = t(963249),
     c = t(701464),
     d = t(474936),
     u = t(981631),
     m = t(388032),
-    h = t(926845);
-function g(i) {
+    h = t(19809);
+function f(i) {
     let {
             giftRecipient: e,
             onClose: t,
-            transitionState: l,
-            analyticsLocations: g,
-            analyticsLocation: p,
-            analyticsObject: f,
+            transitionState: a,
+            analyticsLocations: f,
+            analyticsLocation: g,
+            analyticsObject: p,
             giftMessage: I,
         } = i,
-        { priceOptions: _ } = (0, a.JL)(),
+        { priceOptions: b } = (0, l.JL)(),
         j = s.useCallback(
             (i) => {
                 (0, o.Z)({
@@ -28,11 +28,11 @@ function g(i) {
                     giftRecipient: e,
                     subscriptionTier: i,
                     giftingOrigin: d.Wt.DM_CHANNEL,
-                    analyticsLocations: null != g ? g : [],
-                    analyticsLocation: p,
+                    analyticsLocations: null != f ? f : [],
+                    analyticsLocation: g,
                     analyticsObject:
-                        null != f
-                            ? f
+                        null != p
+                            ? p
                             : {
                                   page: u.ZY5.DM_CHANNEL,
                                   section: u.jXE.CHANNEL_TEXT_AREA,
@@ -43,10 +43,10 @@ function g(i) {
                 }),
                     t();
             },
-            [e, g, p, f, I, t],
+            [e, f, g, p, I, t],
         );
     return (0, n.jsxs)(r.Y0X, {
-        transitionState: l,
+        transitionState: a,
         size: r.CgR.DYNAMIC,
         className: h.modalContainer,
         parentComponent: "GiftOptionSelectModal",
@@ -76,14 +76,14 @@ function g(i) {
                 children: (0, n.jsx)(c.Z, {
                     onSelectSku: j,
                     giftRecipient: e,
-                    priceOptions: _,
+                    priceOptions: b,
                     onWishlistItemClick: t,
                 }),
             }),
         ],
     });
 }
-function p(i) {
+function g(i) {
     let {
         giftRecipient: e,
         onClose: t,
@@ -93,16 +93,16 @@ function p(i) {
         analyticsObject: c,
         giftMessage: u,
     } = i;
-    return (0, n.jsx)(a.PaymentContextProvider, {
+    return (0, n.jsx)(l.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: d.nS,
         isGift: !0,
-        children: (0, n.jsx)(l.KB, {
+        children: (0, n.jsx)(a.KB, {
             isGift: !0,
             giftRecipient: e,
             giftingOrigin: d.Wt.DM_CHANNEL,
-            children: (0, n.jsx)(g, {
+            children: (0, n.jsx)(f, {
                 giftRecipient: e,
                 onClose: t,
                 transitionState: s,

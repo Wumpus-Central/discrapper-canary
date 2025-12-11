@@ -17,8 +17,8 @@ var i = n(120356),
     g = n(981631),
     E = n(176505),
     b = n(388032),
-    y = n(342891),
-    O = n(226910);
+    y = n(360390),
+    O = n(99940);
 function v(e, t, n) {
     return (
         t in e
@@ -78,19 +78,19 @@ let I = () => {
             });
         },
         R = null != (t = null == I ? void 0 : I.applicationStatus) ? t : _.wB.STARTED,
-        D = null,
         w = null,
+        D = null,
         x = null,
         L = [y.notice, O.notice];
     switch (R) {
         case _.wB.SUBMITTED:
-            (D = b.intl.string(b.t["5iLvSx"])), (w = b.intl.string(b.t.mqtdmQ)), (x = N);
+            (w = b.intl.string(b.t["5iLvSx"])), (D = b.intl.string(b.t.mqtdmQ)), (x = N);
             break;
         case _.wB.REJECTED:
-            (D = b.intl.string(b.t.lk30cY)), (w = b.intl.string(b.t["8RrsHr"])), (x = P), L.push(y.error);
+            (w = b.intl.string(b.t.lk30cY)), (D = b.intl.string(b.t["8RrsHr"])), (x = P), L.push(y.error);
             break;
         default:
-            (D = b.intl.string(b.t.G5YKXP)), (w = b.intl.string(b.t["r8/DT+"])), (x = A);
+            (w = b.intl.string(b.t.G5YKXP)), (D = b.intl.string(b.t["r8/DT+"])), (x = A);
     }
     return (0, r.jsxs)("div", {
         className: a()(...L),
@@ -98,13 +98,13 @@ let I = () => {
             (0, r.jsx)(c.Text, {
                 className: y.header,
                 variant: "text-sm/normal",
-                children: D,
+                children: w,
             }),
             (0, r.jsx)(c.Button, {
                 variant: "overlay-primary",
                 size: "sm",
                 onClick: x,
-                text: w,
+                text: D,
             }),
         ],
     });

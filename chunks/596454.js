@@ -88,7 +88,7 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(54453);
+n(626105);
 let T = __OVERLAY__ ? () => (0, s.e7)([_.default], () => _.default.isInstanceFocused()) : g.n;
 function C(e) {
     var t,
@@ -108,8 +108,8 @@ function C(e) {
             onMouseEnter: N,
             onMouseLeave: P,
             canSelect: R = !0,
-            autoplay: D,
-            registerInnerRef: w,
+            autoplay: w,
+            registerInnerRef: D,
             registerAnimatedElementRef: x,
             surrogate: L,
         } = e,
@@ -139,7 +139,7 @@ function C(e) {
         { triggerAnimation: B, untriggerAnimation: F } = i.useContext(u.Rm),
         V = p.Yk.useSetting(),
         H = T(),
-        Y = null == D ? V : D,
+        Y = null == w ? V : w,
         W = E.kV[I],
         K = i.useRef(null),
         z = i.useMemo(() => {
@@ -195,9 +195,9 @@ function C(e) {
     );
     let $ = i.useCallback(
             (e) => {
-                (K.current = e), null == w || w(e), null == x || x(e);
+                (K.current = e), null == D || D(e), null == x || x(e);
             },
-            [w, x],
+            [D, x],
         ),
         ee = (0, l.Z)(K);
     return null == z || "" === z

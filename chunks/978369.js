@@ -1,46 +1,46 @@
 n.d(t, { Z: () => f }), n(539854), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(481060),
-    a = n(785717),
+    a = n(481060),
+    l = n(785717),
     o = n(86419),
     c = n(286957),
     s = n(388032),
-    u = n(44258);
+    u = n(260968);
 let d = i.memo(function (e) {
-    let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: a } = e;
-    return (0, r.jsx)(l.v2r, {
+    let { currentTags: t, onTagSelect: n, onNoneSelect: i, onClose: l } = e;
+    return (0, r.jsx)(a.v2r, {
         navId: "widget-game-tags",
         "aria-label": s.intl.string(s.t.r6EJOu),
-        onClose: a,
+        onClose: l,
         onSelect: () => {},
         className: u.gameTagsMenu,
         children: Object.entries(c.aE).map((e) => {
-            let [a, o] = e,
-                u = ((e, a) => {
+            let [l, o] = e,
+                u = ((e, l) => {
                     let o = [];
                     return (
-                        a.type === c.kd.RADIO &&
+                        l.type === c.kd.RADIO &&
                             o.push(
                                 (0, r.jsx)(
-                                    l.k5B,
+                                    a.k5B,
                                     {
                                         id: "".concat(e, "-none"),
                                         group: e,
                                         label: s.intl.string(s.t.PoWNfe),
-                                        checked: !a.tags.some((e) => t.includes(e)),
-                                        action: () => i(a.tags),
+                                        checked: !l.tags.some((e) => t.includes(e)),
+                                        action: () => i(l.tags),
                                     },
                                     "none",
                                 ),
                             ),
-                        a.tags.forEach((i) => {
+                        l.tags.forEach((i) => {
                             let s = c.XV[i];
                             null != s &&
-                                (a.type === c.kd.RADIO
+                                (l.type === c.kd.RADIO
                                     ? o.push(
                                           (0, r.jsx)(
-                                              l.k5B,
+                                              a.k5B,
                                               {
                                                   id: i,
                                                   group: e,
@@ -53,7 +53,7 @@ let d = i.memo(function (e) {
                                       )
                                     : o.push(
                                           (0, r.jsx)(
-                                              l.S89,
+                                              a.S89,
                                               {
                                                   id: i,
                                                   label: s.getText(),
@@ -66,14 +66,14 @@ let d = i.memo(function (e) {
                         }),
                         o
                     );
-                })(a, o);
+                })(l, o);
             return (0, r.jsx)(
-                l.kSQ,
+                a.kSQ,
                 {
                     label: o.getLabel(),
                     children: u,
                 },
-                a,
+                l,
             );
         }),
     });
@@ -81,12 +81,12 @@ let d = i.memo(function (e) {
 function f(e) {
     let { tags: t, widgetType: n, applicationId: f, ref: g } = e,
         p = (0, i.useRef)(null),
-        { trackUserProfileEditAction: m } = (0, a.KZ)(),
-        b = (0, i.useMemo)(() => (null != t ? t : []), [t]),
+        { trackUserProfileEditAction: b } = (0, l.KZ)(),
+        m = (0, i.useMemo)(() => (null != t ? t : []), [t]),
         h = (0, i.useCallback)(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    r = new Set(b);
+                    r = new Set(m);
                 if (t) {
                     let t = Object.values(c.aE).find((t) => t.tags.includes(e));
                     null != t &&
@@ -94,7 +94,7 @@ function f(e) {
                             r.delete(e);
                         }),
                         r.add(e),
-                        m({
+                        b({
                             action: "TAG_ADDED",
                             widgetEdited: n,
                             gameId: f,
@@ -102,42 +102,42 @@ function f(e) {
                 } else
                     r.has(e)
                         ? (r.delete(e),
-                          m({
+                          b({
                               action: "TAG_REMOVED",
                               widgetEdited: n,
                               gameId: f,
                           }))
                         : (r.add(e),
-                          m({
+                          b({
                               action: "TAG_ADDED",
                               widgetEdited: n,
                               gameId: f,
                           }));
                 (0, o.n$)(n, f, Array.from(r));
             },
-            [b, m, n, f],
+            [m, b, n, f],
         ),
         y = (0, i.useCallback)(
             (e) => {
-                let t = new Set(b);
+                let t = new Set(m);
                 e.forEach((e) => {
                     t.delete(e);
                 }),
-                    m({
+                    b({
                         action: "TAG_REMOVED",
                         widgetEdited: n,
                         gameId: f,
                     }),
                     (0, o.n$)(n, f, Array.from(t));
             },
-            [b, m, n, f],
+            [m, b, n, f],
         );
-    return (0, r.jsx)(l.yRy, {
+    return (0, r.jsx)(a.yRy, {
         targetElementRef: p,
         position: "right",
         align: "top",
         onRequestOpen: () => {
-            m({
+            b({
                 action: "PRESS_ADD_TAG",
                 widgetEdited: n,
             });
@@ -145,7 +145,7 @@ function f(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(d, {
-                currentTags: b,
+                currentTags: m,
                 onTagSelect: h,
                 onNoneSelect: y,
                 onClose: t,
@@ -161,7 +161,7 @@ function f(e) {
                     }
                 ),
                 children: (0, r.jsx)(
-                    l.P3F,
+                    a.P3F,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -191,7 +191,7 @@ function f(e) {
                         {
                             className: u.addButton,
                             "aria-label": s.intl.string(s.t.r6EJOu),
-                            children: (0, r.jsx)(l.Text, {
+                            children: (0, r.jsx)(a.Text, {
                                 variant: "text-xxs/medium",
                                 color: "none",
                                 children: s.intl.string(s.t.fZSejy),

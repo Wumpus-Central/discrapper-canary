@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(981631),
     m = n(217702),
     h = n(388032),
-    g = n(12464),
+    g = n(371804),
     E = n(167969),
     b = n(557256);
 function y(e, t, n) {
@@ -104,8 +104,8 @@ let C = i.forwardRef((e, t) => {
             maxWidth: T = y,
             maxHeight: C = v,
             minWidth: R = 0,
-            minHeight: D = 0,
-            mediaLayoutType: w,
+            minHeight: w = 0,
+            mediaLayoutType: D,
             limitResponsiveWidth: x = !0,
             accessory: L,
             zoomable: j = !0,
@@ -162,7 +162,7 @@ let C = i.forwardRef((e, t) => {
             maxWidth: T,
             maxHeight: C,
             minWidth: R,
-            minHeight: D,
+            minHeight: w,
         }),
         z = 0 !== K.width ? K.width / K.height : 1;
     "" !== f && c !== _.zo9.ERROR
@@ -171,12 +171,12 @@ let C = i.forwardRef((e, t) => {
               size: K,
               alt: b,
               className: s,
-              mediaLayoutType: w,
+              mediaLayoutType: D,
           }))
         : c !== _.zo9.LOADING &&
           (n = (0, r.jsx)(A, {
               size: K,
-              mediaLayoutType: w,
+              mediaLayoutType: D,
               alt: b,
           })),
         (n = (0, r.jsx)(p.N, {
@@ -184,7 +184,7 @@ let C = i.forwardRef((e, t) => {
             aspectRatio: z,
             placeholder: m,
             placeholderVersion: E,
-            placeholderStyle: P(K, w),
+            placeholderStyle: P(K, D),
             children: n,
         }));
     let q = null != U ? U() : null;
@@ -209,7 +209,7 @@ let C = i.forwardRef((e, t) => {
                                 },
                                 a,
                             ),
-                            style: N(K, x, F, w),
+                            style: N(K, x, F, D),
                         },
                         H,
                     ),
@@ -292,7 +292,7 @@ function P(e, t) {
                 maxWidth: 1 === (0, f.Z)() ? "calc(100% + 1px)" : "100%",
             };
         case m.hV.RESPONSIVE:
-            return D(e);
+            return w(e);
         default:
             return e;
     }
@@ -308,12 +308,12 @@ function R(e, t) {
                 maxHeight: "inherit",
             };
         case m.hV.RESPONSIVE:
-            return S(O({}, D(e)), { display: "flex" });
+            return S(O({}, w(e)), { display: "flex" });
         default:
             return e;
     }
 }
-function D(e) {
+function w(e) {
     let { width: t, height: n } = e;
     return {
         maxWidth: t,

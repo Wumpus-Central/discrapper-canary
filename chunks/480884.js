@@ -8,12 +8,12 @@ var a = e(54381),
     l = e(797614),
     d = e(819557),
     u = e(138201),
-    _ = e(359119),
-    b = e(473092),
-    g = e(636749),
-    x = e(981631),
+    b = e(359119),
+    g = e(473092),
+    x = e(636749),
+    _ = e(981631),
     v = e(388032),
-    k = e(98201);
+    k = e(602042);
 function p(t) {
     let {
             transitionState: n,
@@ -26,10 +26,10 @@ function p(t) {
             actionRows: m,
             learnMore: j,
         } = t,
-        N = (0, o.e7)([_.ZP], () => _.ZP.getChannelSafetyWarning(p, h));
+        N = (0, o.e7)([b.ZP], () => b.ZP.getChannelSafetyWarning(p, h));
     return (
         s.useEffect(() => {
-            (0, b.MC)(x.rMx.SAFETY_WARNING_MODAL_VIEWED, {
+            (0, g.MC)(_.rMx.SAFETY_WARNING_MODAL_VIEWED, {
                 channelId: p,
                 warningId: h,
                 senderId: y,
@@ -66,7 +66,7 @@ function p(t) {
                             (0, a.jsx)(u.rT, { children: m }),
                         ],
                     }),
-                    (0, a.jsx)(g.Z, {
+                    (0, a.jsx)(x.Z, {
                         channelId: p,
                         warningId: h,
                         senderId: y,

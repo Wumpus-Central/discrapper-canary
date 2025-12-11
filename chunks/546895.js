@@ -152,7 +152,7 @@ let c = {
     "discord_common/js/shared/animations/app/gifts/standard/coffee/coffee-loop.lottiejson": () =>
         n.e("93554").then(n.t.bind(n, 732573, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Anime_v01_Lottie.lottiejson": () =>
-        n.e("39690").then(n.t.bind(n, 725432, 19)),
+        n.e("219").then(n.t.bind(n, 725432, 19)),
     "discord_app/images/burst_reactions/BurstReaction_Arcade_v01.lottiejson": () =>
         n.e("54931").then(n.t.bind(n, 488583, 19)),
     "discord_app/images/burst_reactions/BurstReaction_BlackHoles_v01.lottiejson": () =>
@@ -262,7 +262,7 @@ let c = {
     "discord_app/modules/guild_onboarding/web/animations/bubble-island-02.lottiejson": () =>
         n.e("78683").then(n.t.bind(n, 814684, 19)),
     "discord_app/modules/guild_onboarding/web/animations/grilling-island-02.lottiejson": () =>
-        n.e("8271").then(n.t.bind(n, 180504, 19)),
+        n.e("8271").then(n.t.bind(n, 787117, 19)),
     "discord_app/modules/guild_onboarding/web/animations/main-island-02.lottiejson": () =>
         n.e("15851").then(n.t.bind(n, 790711, 19)),
     "discord_app/modules/guild_onboarding/web/animations/waffle-island-02.lottiejson": () =>

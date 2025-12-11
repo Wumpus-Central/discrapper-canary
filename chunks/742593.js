@@ -15,14 +15,14 @@ var i = n(120356),
     u = n(51144),
     d = n(894017),
     f = n(79874),
-    p = n(376108),
+    p = n(315416),
     _ = n(236373),
     m = n(854698),
     h = n(391174),
     g = n(95291),
     E = n(390966),
     b = n(388032),
-    y = n(396934);
+    y = n(58349);
 function O(e) {
     let { className: t, creator: n, guildId: i, isNew: h, guildEvent: g, eventPreview: O, recurrenceId: v } = e,
         S = (0, p.Z)(i, g.id, v),
@@ -36,7 +36,7 @@ function O(e) {
                 ? (0, m.lh)(A, C, new Date(I.scheduled_start_time))
                 : null;
     if (null == I) return null;
-    let { entity_type: P, status: R, recurrence_rule: D } = I;
+    let { entity_type: P, status: R, recurrence_rule: w } = I;
     return (0, r.jsxs)("div", {
         className: a()(y.statusContainer, t),
         children: [
@@ -45,7 +45,7 @@ function O(e) {
                 status: null != N ? N : R,
                 eventType: P,
                 isNew: h,
-                recurrenceRule: (0, _.KV)(D),
+                recurrenceRule: (0, _.KV)(w),
                 guildEventId: g.id,
                 recurrenceId: v,
             }),

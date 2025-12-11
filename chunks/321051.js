@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(697426),
     d = n(603074),
     f = n(388032),
-    p = n(596806);
+    p = n(13083);
 let _ = [54, 8, 8, 8];
 function m(e) {
     let { onSelect: t, sound: n } = e,

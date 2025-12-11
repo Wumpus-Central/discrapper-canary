@@ -10,28 +10,28 @@ var r = n(54381),
     u = n(863663),
     g = n(676651),
     m = n(613810),
-    p = n(391181),
-    f = n(388032),
-    h = n(82917);
-function b(e) {
+    f = n(391181),
+    p = n(388032),
+    b = n(973501);
+function h(e) {
     let { guildId: t, handleCreateOrEditProduct: i } = e,
         g = (0, d.ue)(t, { publishedOnly: !1 }),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: b } = (0, s.gX)(t),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: h } = (0, s.gX)(t),
         x = g.length > 0;
     return (0, r.jsx)("div", {
-        className: h.productListingsHeader,
+        className: b.productListingsHeader,
         children: (0, r.jsx)(l.gNt, {
-            label: x ? f.intl.string(f.t.RwuStQ) : f.intl.string(f.t.WKMcMW),
+            label: x ? p.intl.string(p.t.RwuStQ) : p.intl.string(p.t.WKMcMW),
             children: (e) =>
                 x
                     ? (0, r.jsx)("ul", {
-                          className: h.productListings,
+                          className: b.productListings,
                           id: e.controlId,
                           children: g.map((e) =>
                               (0, r.jsx)(
                                   "li",
                                   {
-                                      children: (0, r.jsx)(p.Z, {
+                                      children: (0, r.jsx)(f.Z, {
                                           guildId: t,
                                           product: e,
                                           onEditProduct: () => i(e.id),
@@ -101,7 +101,7 @@ function b(e) {
                                                   productId: e.id,
                                               }),
                                           onReportProduct: () => {},
-                                          disabled: b,
+                                          disabled: h,
                                       }),
                                   },
                                   e.id,
@@ -125,13 +125,13 @@ function x(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.zxk, {
-                text: f.intl.string(f.t.riG6Da),
+                text: p.intl.string(p.t.riG6Da),
                 icon: l.qJs,
                 onClick: () => a(null),
                 disabled: n,
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
-            (0, r.jsx)(b, {
+            (0, r.jsx)(h, {
                 guildId: t,
                 handleCreateOrEditProduct: a,
             }),

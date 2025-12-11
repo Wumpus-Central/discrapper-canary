@@ -25,7 +25,7 @@ var r = n(54381),
     C = n(435020),
     A = n(612853),
     N = n(981631),
-    P = n(62868);
+    P = n(129432);
 function R(e) {
     let {
             premiumSubscription: t,
@@ -33,8 +33,8 @@ function R(e) {
             onBack: a,
             onNext: s,
             legalTermsNodeRef: R,
-            flashLegalTerms: D,
-            invoiceError: w,
+            flashLegalTerms: w,
+            invoiceError: D,
             planError: x,
             onPurchaseError: L,
             baseAnalyticsData: j,
@@ -99,16 +99,16 @@ function R(e) {
         eN = eC || eb,
         eP = (0, _.U)(),
         eR = (0, c.e7)([T.Z], () => T.Z.currentOrderId),
-        eD = null,
-        ew = null;
+        ew = null,
+        eD = null;
     if (X === N.GZQ.ONE_TIME) {
         var ex;
         l()(null != ee, "SKU must be selected for one-time purchases"),
-            (eD = null != (ex = et[ee]) ? ex : null),
-            l()(null != eD, "SKU must exist and be fetched.");
+            (ew = null != (ex = et[ee]) ? ex : null),
+            l()(null != ew, "SKU must exist and be fetched.");
         let e = en[ee],
             t = null != J ? J : E.c;
-        ew = null != e ? e[t] : null;
+        eD = null != e ? e[t] : null;
     }
     let eL = async () => {
             await (0, S.H)({
@@ -133,8 +133,8 @@ function R(e) {
                 premiumSubscription: t,
                 onNext: s,
                 metadata: F,
-                sku: eD,
-                skuPricePreview: ew,
+                sku: ew,
+                skuPricePreview: eD,
                 purchaseType: X,
                 referralCode: er,
                 loadId: ei.loadId,
@@ -173,10 +173,10 @@ function R(e) {
               children: [
                   (0, r.jsx)(g.Z, {
                       legalTermsNodeRef: R,
-                      invoiceError: w,
+                      invoiceError: D,
                       planError: x,
                       disablePurchase: H,
-                      flashLegalTerms: D,
+                      flashLegalTerms: w,
                       isSubmitting: ev,
                       premiumSubscription: t,
                       isGift: el,

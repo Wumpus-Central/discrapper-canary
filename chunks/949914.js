@@ -27,11 +27,11 @@ var r = n(54381),
     N = n(330181),
     P = n(954821),
     R = n(980864),
-    D = n(981631),
-    w = n(176505),
+    w = n(981631),
+    D = n(176505),
     x = n(526761),
     L = n(388032),
-    j = n(602589);
+    j = n(64435);
 let M = (e) => {
         let { label: t, value: n, showInfoIcon: i, infoIconTooltipText: a } = e;
         return (0, r.jsxs)("div", {
@@ -136,15 +136,15 @@ let M = (e) => {
             G = (0, h.Dt)(),
             { analyticsLocations: Z } = (0, _.ZP)(),
             { shouldHideGuildPurchaseEntryPoints: B } = (0, g.uP)(null == s ? void 0 : s.id),
-            F = (null == t ? void 0 : t.paymentGateway) === D.gg$.APPLE_PARTNER;
+            F = (null == t ? void 0 : t.paymentGateway) === w.gg$.APPLE_PARTNER;
         if (null == a || null == n || null == b) return null;
         let V = () => {
                 null != s &&
-                    ((0, O.uL)(D.Z5c.CHANNEL(s.id, w.oC.ROLE_SUBSCRIPTIONS)),
+                    ((0, O.uL)(w.Z5c.CHANNEL(s.id, D.oC.ROLE_SUBSCRIPTIONS)),
                     (0, S.default)(),
-                    f.Z.show(D.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, L.intl.string(L.t.DvbaM4), () =>
+                    f.Z.show(w.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, L.intl.string(L.t.DvbaM4), () =>
                         (0, I.openUserSettings)(v.n.SUBSCRIPTIONS_PANEL, {
-                            section: D.oAB.SUBSCRIPTIONS,
+                            section: w.oAB.SUBSCRIPTIONS,
                             subsection: x.cP,
                         }),
                     ));

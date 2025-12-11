@@ -9,51 +9,51 @@ var i = n(120356),
     c = n(196345),
     d = n(137158),
     u = n(388032),
-    g = n(31829);
+    g = n(938645);
 let m = function (e) {
     let {
             channelId: t,
             formField: n,
             index: i,
             isDragEnabled: m,
-            isDropHovered: p,
-            onDrop: f,
-            onEdit: h,
-            onRemove: b,
+            isDropHovered: f,
+            onDrop: p,
+            onEdit: b,
+            onRemove: h,
             canRemove: x,
             title: j,
-            actionsLocation: _,
-            fieldStyle: v,
+            actionsLocation: v,
+            fieldStyle: O,
         } = e,
-        O = n.values,
-        C = O.slice(0, 1),
-        y = O.length - C.length;
+        C = n.values,
+        y = C.slice(0, 1),
+        N = C.length - y.length;
     return (0, r.jsxs)(d.Z, {
         field: n,
         index: i,
         isDragEnabled: m,
-        isDropHovered: p,
-        onDrop: f,
-        onEdit: h,
-        onRemove: b,
+        isDropHovered: f,
+        onDrop: p,
+        onEdit: b,
+        onRemove: h,
         title: j,
         canRemove: x,
-        actionsLocation: _,
-        fieldStyle: v,
+        actionsLocation: v,
+        fieldStyle: O,
         children: [
             (0, r.jsx)(c.EK, {
-                terms: C,
+                terms: y,
                 channelId: t,
             }),
-            0 !== y &&
+            0 !== N &&
                 (0, r.jsxs)(s.P3F, {
                     className: l()(g.fieldFooterContainer, g.clickable),
-                    onClick: h,
+                    onClick: b,
                     children: [
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
                             className: g.clickable,
-                            children: u.intl.format(u.t.jnhD0S, { count: y }),
+                            children: u.intl.format(u.t.jnhD0S, { count: N }),
                         }),
                         (0, r.jsx)(o.Z, {
                             className: g.termsFieldCaretIcon,

@@ -10,21 +10,21 @@ var r = n(54381),
     u = n(704215),
     g = n(780384),
     m = n(481060),
-    p = n(37234),
-    f = n(410030),
-    h = n(607070),
-    b = n(100527),
+    f = n(37234),
+    p = n(410030),
+    b = n(607070),
+    h = n(100527),
     x = n(663993),
     j = n(243778),
-    _ = n(518738),
-    v = n(753206),
-    O = n(606318),
-    C = n(402235),
-    y = n(441536),
-    N = n(494620),
-    E = n(345162),
-    I = n(496675),
-    S = n(84058),
+    v = n(518738),
+    O = n(753206),
+    C = n(606318),
+    y = n(402235),
+    N = n(441536),
+    E = n(494620),
+    I = n(345162),
+    S = n(496675),
+    _ = n(84058),
     T = n(103576),
     P = n(206950),
     w = n(95242),
@@ -37,16 +37,16 @@ var r = n(54381),
     G = n(981631),
     M = n(141006),
     U = n(388032),
-    B = n(5238),
-    F = n(12574),
-    H = n(21321),
+    B = n(44542),
+    F = n(99395),
+    H = n(536673),
     W = n(179517),
     z = n(79829);
 let V = (0, x.Un)({
         createPromise: () => n.e("4848").then(n.bind(n, 797967)),
         webpackId: 797967,
     }),
-    K = o().debounce((e, t) => (0, S.Uv)(e, t), 200);
+    K = o().debounce((e, t) => (0, _.Uv)(e, t), 200);
 function Y(e) {
     let { role: t, disabled: n } = e,
         [l, a] = i.useState(t.name);
@@ -70,8 +70,8 @@ function Y(e) {
 function q(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: s } = e,
         o = (0, P.F)(U.intl.string(U.t.Mi9Kbe)),
-        d = (0, f.ZP)(),
-        h = (0, _.oC)(n, t),
+        d = (0, p.ZP)(),
+        b = (0, v.oC)(n, t),
         x = {
             dark: {
                 src: W,
@@ -82,21 +82,21 @@ function q(e) {
                 name: t.name,
             },
         };
-    function C() {
-        (0, y.Z)(n, b.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, p.xf)();
+    function y() {
+        (0, N.Z)(n, h.Z.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, f.xf)();
     }
     return (0, r.jsx)(j.ZP, {
         contentTypes: [u.z.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE],
         children: (e) => {
-            let { visibleContent: p } = e;
+            let { visibleContent: f } = e;
             return (0, r.jsxs)(m.gNt, {
                 label: U.intl.string(U.t["9wVJRB"]),
-                badge: p === u.z.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE ? "new" : void 0,
+                badge: f === u.z.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE ? "new" : void 0,
                 children: [
                     (0, r.jsx)("div", {
                         className: F.roleStyleContainer,
                         children: k.pM.map((e) => {
-                            let { id: u, colors: p, labelString: f } = e;
+                            let { id: u, colors: f, labelString: p } = e;
                             return (0, r.jsxs)(
                                 "button",
                                 {
@@ -105,24 +105,24 @@ function q(e) {
                                         [F.disabled]: l || (s && [T.g.HOLOGRAPHIC, T.g.GRADIENT].includes(u)),
                                     }),
                                     onClick: () => {
-                                        (0, S.Jf)(t.id, u);
+                                        (0, _.Jf)(t.id, u);
                                     },
                                     children: [
                                         (0, r.jsx)(m.Rny, {
                                             children: (0, r.jsx)("div", {
                                                 className: F.roleStyleMessageContainer,
-                                                children: (0, r.jsx)(v.Z, {
+                                                children: (0, r.jsx)(O.Z, {
                                                     author: {
                                                         nick: o.author.username,
                                                         guildId: n,
                                                         authorId: o.author.id,
                                                         colorRoleId: t.id,
-                                                        colorStrings: (0, O.DX)(p),
-                                                        colorString: (0, c.Rf)(p.primary_color),
+                                                        colorStrings: (0, C.DX)(f),
+                                                        colorString: (0, c.Rf)(f.primary_color),
                                                     },
                                                     message: o,
                                                     preview: !0,
-                                                    roleIcon: null != h ? h : (0, g.ap)(d) ? x.light : x.dark,
+                                                    roleIcon: null != b ? b : (0, g.ap)(d) ? x.light : x.dark,
                                                     isGroupStart: !0,
                                                     disableInteraction: !0,
                                                     previewGuildId: n,
@@ -131,7 +131,7 @@ function q(e) {
                                         }),
                                         (0, r.jsx)("div", {
                                             className: F.roleStyleLabel,
-                                            children: U.intl.string(f),
+                                            children: U.intl.string(p),
                                         }),
                                     ],
                                 },
@@ -159,7 +159,7 @@ function q(e) {
                                     ],
                                 }),
                                 (0, r.jsx)(m.Button, {
-                                    onClick: C,
+                                    onClick: y,
                                     variant: "expressive",
                                     icon: m.Ucv,
                                     text: U.intl.string(U.t["+7XY31"]),
@@ -172,9 +172,9 @@ function q(e) {
     });
 }
 function X() {
-    let e = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
+    let e = (0, d.e7)([b.Z], () => b.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, m.JUn)({
-            colorStrings: (0, O.DX)(M.SK),
+            colorStrings: (0, C.DX)(M.SK),
             useReducedMotion: e,
             roleStyle: "username",
             includeConvenienceGlow: !0,
@@ -232,7 +232,7 @@ function J(e) {
                         void (
                             i.color !== t &&
                             (t !== G.p6O || 0 !== i.color) &&
-                            (t === G.p6O && (t = 0), (0, S.OW)(i.id, t))
+                            (t === G.p6O && (t = 0), (0, _.OW)(i.id, t))
                         )
                     );
                 },
@@ -243,7 +243,7 @@ function J(e) {
                             : n.secondary_color
                         : void 0,
                 onChangeGradientColors: (e) => {
-                    (0, S.TW)(
+                    (0, _.TW)(
                         i.id,
                         {
                             primary_color: e[0],
@@ -278,13 +278,13 @@ function Q(e) {
             src: z,
             name: t.name,
         },
-        u = (0, _.oC)(n, t),
-        p = [G.BRd.DARK, G.BRd.DARKER, G.BRd.MIDNIGHT, G.BRd.LIGHT];
+        u = (0, v.oC)(n, t),
+        f = [G.BRd.DARK, G.BRd.DARKER, G.BRd.MIDNIGHT, G.BRd.LIGHT];
     return (0, r.jsx)(m.Rny, {
         children: (0, r.jsx)("div", {
             className: a()(F.previewContainer, { [F.disableInteraction]: l }),
             "aria-hidden": !0,
-            children: p.map((e) =>
+            children: f.map((e) =>
                 (0, r.jsx)(
                     m.f6W,
                     {
@@ -296,7 +296,7 @@ function Q(e) {
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: F.messageContainer,
-                                        children: (0, r.jsx)(v.Z, {
+                                        children: (0, r.jsx)(O.Z, {
                                             author: o,
                                             message: s,
                                             roleIcon: null != u ? u : (0, g.ap)(e) ? d : c,
@@ -328,7 +328,7 @@ function $(e) {
             (0, r.jsx)(m.rsf, {
                 label: U.intl.string(U.t.vceJPk),
                 checked: t.hoist,
-                onChange: (e) => (0, S.we)(t.id, e, t.mentionable),
+                onChange: (e) => (0, _.we)(t.id, e, t.mentionable),
                 disabled: n,
             }),
             (0, r.jsx)(m.izJ, { className: F.divider }),
@@ -336,7 +336,7 @@ function $(e) {
                 label: U.intl.formatToPlainString(U.t.DTXoJQ, {}),
                 description: U.intl.string(U.t.kRg5W5),
                 checked: t.mentionable,
-                onChange: (e) => (0, S.we)(t.id, t.hoist, e),
+                onChange: (e) => (0, _.we)(t.id, t.hoist, e),
                 disabled: n,
             }),
         ],
@@ -344,25 +344,25 @@ function $(e) {
 }
 function ee(e) {
     let { guild: t, role: n, locked: i, setSelectedSection: l } = e,
-        s = (0, C.yH)(t.id, n),
+        s = (0, y.yH)(t.id, n),
         o = (0, d.e7)([T.Z], () => T.Z.getRoleStyleData(n.id)),
         c = !s,
         u = null != o && s ? o.currentStyle : T.g.SOLID,
-        g = (0, E.fI)(n),
-        p = i || g,
-        f = (0, d.e7)([I.Z], () => I.Z.canImpersonateRole(t, n)),
-        { headerHeight: h, headerRef: b } = (0, w.Z)(0),
+        g = (0, I.fI)(n),
+        f = i || g,
+        p = (0, d.e7)([S.Z], () => S.Z.canImpersonateRole(t, n)),
+        { headerHeight: b, headerRef: h } = (0, w.Z)(0),
         { scrolledToTop: x, handleScroll: j } = (0, R.V)();
     return (0, r.jsx)(m.yWw, {
         className: F.scroller,
-        style: { scrollPaddingTop: h },
+        style: { scrollPaddingTop: b },
         onScroll: j,
         children: (0, r.jsxs)("div", {
             className: H.contentWidth,
             children: [
                 (0, r.jsx)("div", {
                     className: a()(H.header, H.stickyHeader, { [H.stickyHeaderElevated]: !x }),
-                    ref: b,
+                    ref: h,
                     children: (0, r.jsx)(R.Z, {
                         guild: t,
                         role: n,
@@ -372,7 +372,7 @@ function ee(e) {
                 }),
                 (0, r.jsx)(Y, {
                     role: n,
-                    disabled: p,
+                    disabled: f,
                 }),
                 (0, r.jsx)("div", {
                     className: F.noticeContainer,
@@ -385,19 +385,19 @@ function ee(e) {
                         role: n,
                         guildId: t.id,
                         selectedStyle: u,
-                        disabled: p,
+                        disabled: f,
                         shouldShowUpsell: c,
                     }),
                 u !== T.g.HOLOGRAPHIC &&
                     null != u &&
                     (0, r.jsx)(J, {
                         role: n,
-                        disabled: p,
+                        disabled: f,
                         currentStyle: u,
                         hasEnhancedRoleColors: s,
                     }),
                 u === T.g.HOLOGRAPHIC &&
-                    (0, r.jsx)(N.Z, {
+                    (0, r.jsx)(E.Z, {
                         className: F.holographicInfoBox,
                         children: (0, r.jsx)(m.Text, {
                             variant: "text-xs/medium",
@@ -406,7 +406,7 @@ function ee(e) {
                     }),
                 (0, r.jsx)(Z.Z, {
                     guild: t,
-                    disabled: p,
+                    disabled: f,
                     role: n,
                 }),
                 (0, r.jsx)(Q, {
@@ -418,9 +418,9 @@ function ee(e) {
                 (0, r.jsx)(m.izJ, { className: F.divider }),
                 (0, r.jsx)($, {
                     role: n,
-                    disabled: p,
+                    disabled: f,
                 }),
-                f
+                p
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(m.izJ, { className: F.divider }),

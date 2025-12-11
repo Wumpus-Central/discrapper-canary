@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(361932), n(187205), n(953529);
+n.d(t, { Z: () => p }), n(388685), n(361932), n(187205), n(953529);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -9,8 +9,8 @@ var r = n(54381),
     d = n(259580),
     u = n(293810),
     g = n(388032),
-    m = n(937028);
-function p(e) {
+    m = n(57175);
+function f(e) {
     let { checked: t, children: n } = e;
     return (0, r.jsxs)("div", {
         className: m.row,
@@ -32,14 +32,14 @@ function p(e) {
         ],
     });
 }
-function f(e) {
+function p(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
         a = t.flatMap((e) => e.items.map((e) => e.completed)),
         o = a.filter((e) => e).length / a.length,
-        f = 1 === o,
-        h = (0, c.q_F)({ width: "".concat(100 * o, "%") }),
-        b = [
+        p = 1 === o,
+        b = (0, c.q_F)({ width: "".concat(100 * o, "%") }),
+        h = [
             g.intl.format(g.t.wtQtXs, { promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }),
             g.intl.format(g.t["0Fo0wf"], { caseStudiesUrl: u.iv.CASE_STUDIES }),
             g.intl.format(g.t["7JdzjA"], { subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }),
@@ -49,7 +49,7 @@ function f(e) {
             ? null
             : (0, r.jsxs)(c.C3N, {
                   children: [
-                      !f &&
+                      !p &&
                           t.map((e, t) => {
                               let { title: n, items: l } = e;
                               return (0, r.jsxs)(
@@ -63,7 +63,7 @@ function f(e) {
                                                   gap: 8,
                                                   children: l.map((e, t) =>
                                                       (0, r.jsx)(
-                                                          p,
+                                                          f,
                                                           {
                                                               children: e.description,
                                                               checked: e.completed,
@@ -83,7 +83,7 @@ function f(e) {
                           label: g.intl.string(g.t.FO0AIS),
                           children: (0, r.jsx)(c.Kqy, {
                               gap: 8,
-                              children: b.map((e, t) =>
+                              children: h.map((e, t) =>
                                   (0, r.jsx)(
                                       "div",
                                       {
@@ -122,12 +122,12 @@ function f(e) {
                             }),
                         ],
                     }),
-                    !f &&
+                    !p &&
                         (0, r.jsx)("div", {
                             className: m.progressBarOuter,
                             children: (0, r.jsx)(s.animated.div, {
                                 className: m.progressBarInner,
-                                style: h,
+                                style: b,
                             }),
                         }),
                     x,

@@ -1,0 +1,16 @@
+e.exports = {
+    assetWrapper: "_31fc2df9348cd84a-assetWrapper",
+    assetWrapperMasked: "_31fc2df9348cd84a-assetWrapperMasked",
+    stickerAsset: "_31fc2df9348cd84a-stickerAsset",
+    lottieCanvas: "_31fc2df9348cd84a-lottieCanvas _31fc2df9348cd84a-stickerAsset",
+    pngImage: "_31fc2df9348cd84a-pngImage _31fc2df9348cd84a-stickerAsset",
+    loadingIndicator: "_31fc2df9348cd84a-loadingIndicator",
+    error: "_31fc2df9348cd84a-error",
+    errorIcon: "_31fc2df9348cd84a-errorIcon",
+    errorText: "_31fc2df9348cd84a-errorText",
+    overlayWrapper: "_31fc2df9348cd84a-overlayWrapper",
+    overlayStickerWrapper: "_31fc2df9348cd84a-overlayStickerWrapper",
+    overlayLabelWrapper: "_31fc2df9348cd84a-overlayLabelWrapper",
+    overlayLabel: "_31fc2df9348cd84a-overlayLabel",
+    positionedLayer: "_31fc2df9348cd84a-positionedLayer",
+};

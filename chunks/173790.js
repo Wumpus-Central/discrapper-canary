@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(675993),
     b = n(689079),
     y = n(388032),
-    O = n(30787),
+    O = n(999711),
     v = n(413097);
 let S = 2048,
     I = 84;
@@ -29,8 +29,8 @@ function T(e) {
         A = null != (t = (0, d.q)(l.id === b.bi.BUILT_IN ? null : l.id)) ? t : l,
         N = (0, _.ye)(A) ? C : E.Z,
         P = i.useRef(null),
-        [R, D] = i.useState(!1),
-        { iconURL: w, name: x } = i.useMemo(
+        [R, w] = i.useState(!1),
+        { iconURL: D, name: x } = i.useMemo(
             () =>
                 (0, _.sl)(A, {
                     fakeAppIconURL: v,
@@ -57,13 +57,13 @@ function T(e) {
                     application: A,
                     context: n,
                     name: x,
-                    iconURL: w,
+                    iconURL: D,
                     scrollerRef: P,
                     sectionName: c,
                 }),
-                null != w &&
+                null != D &&
                     (0, r.jsx)(m.Z, {
-                        src: w,
+                        src: D,
                         className: O.appIcon,
                     }),
                 (0, r.jsx)(o.Z, { size: 54 }),
@@ -79,7 +79,7 @@ function T(e) {
                           application: A,
                           sectionName: c,
                           installOnDemand: k,
-                          setHasCommands: D,
+                          setHasCommands: w,
                       })
                     : null,
             ],

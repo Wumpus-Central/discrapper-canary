@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => x,
-    u: () => D,
+    u: () => w,
 }),
     n(388685);
 var r = n(54381),
@@ -24,7 +24,7 @@ var r = n(54381),
     O = n(354459),
     v = n(185923),
     S = n(295907),
-    I = n(339051);
+    I = n(21449);
 function T(e, t, n) {
     return (
         t in e
@@ -86,7 +86,7 @@ let P = v.Hz.CHAT,
         g.ZP.getByName("fork_and_knife"),
         g.ZP.getByName("yum"),
     ].filter(y.lm);
-function D(e) {
+function w(e) {
     let { emoji: t, isDisabled: n = !1, onClick: a, className: s } = e,
         c = i.useRef(null),
         f = (0, p.X)(c);
@@ -117,7 +117,7 @@ function D(e) {
         }),
     });
 }
-function w(e) {
+function D(e) {
     let { otherAccessories: t, isEmojiPickerExpanded: n, onSetExpanded: i, onFocus: a } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -202,7 +202,7 @@ function x(e) {
                         wrapper: "div",
                         pickerIntention: P,
                         searchProps: N(C({}, g), {
-                            accessory: (0, r.jsx)(w, {
+                            accessory: (0, r.jsx)(D, {
                                 otherAccessories: null == g ? void 0 : g.accessory,
                                 isEmojiPickerExpanded: L,
                                 onSetExpanded: U,
@@ -229,7 +229,7 @@ function x(e) {
                                             text: e.name,
                                             position: "top",
                                             asContainer: !0,
-                                            children: (0, r.jsx)(D, {
+                                            children: (0, r.jsx)(w, {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {

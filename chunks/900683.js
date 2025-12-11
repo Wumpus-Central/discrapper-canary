@@ -8,8 +8,8 @@ var i = n(120356),
     a = n.n(i),
     o = n(481060),
     s = n(388032),
-    l = n(252073),
-    c = n(531599);
+    l = n(95687),
+    c = n(723564);
 function u() {
     return (0, r.jsxs)("div", {
         className: a()(l.upsellFooter, l.reverseTrialUpsellContainer),

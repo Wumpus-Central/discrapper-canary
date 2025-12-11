@@ -1,0 +1,18 @@
+e.exports = {
+    sidebar: "_83a6b4623fc943b2-sidebar",
+    art: "_83a6b4623fc943b2-art",
+    step12Animation: "_83a6b4623fc943b2-step12Animation",
+    show: "_83a6b4623fc943b2-show",
+    step24Animation: "_83a6b4623fc943b2-step24Animation",
+    step1: "_83a6b4623fc943b2-step1 _83a6b4623fc943b2-art",
+    step24Clouds: "_83a6b4623fc943b2-step24Clouds _83a6b4623fc943b2-art _83a6b4623fc943b2-step12Animation",
+    step24Base: "_83a6b4623fc943b2-step24Base _83a6b4623fc943b2-art _83a6b4623fc943b2-step12Animation",
+    step24Ground: "_83a6b4623fc943b2-step24Ground _83a6b4623fc943b2-art _83a6b4623fc943b2-step12Animation",
+    step2Character: "_83a6b4623fc943b2-step2Character _83a6b4623fc943b2-art _83a6b4623fc943b2-step24Animation",
+    step2Base: "_83a6b4623fc943b2-step2Base _83a6b4623fc943b2-art _83a6b4623fc943b2-step12Animation",
+    step34Base: "_83a6b4623fc943b2-step34Base _83a6b4623fc943b2-art _83a6b4623fc943b2-step24Animation",
+    step34Flag: "_83a6b4623fc943b2-step34Flag _83a6b4623fc943b2-art _83a6b4623fc943b2-step24Animation",
+    step3Character: "_83a6b4623fc943b2-step3Character _83a6b4623fc943b2-art _83a6b4623fc943b2-step24Animation",
+    step4Character: "_83a6b4623fc943b2-step4Character _83a6b4623fc943b2-art _83a6b4623fc943b2-step24Animation",
+    step24Foreground: "_83a6b4623fc943b2-step24Foreground _83a6b4623fc943b2-art _83a6b4623fc943b2-step12Animation",
+};
