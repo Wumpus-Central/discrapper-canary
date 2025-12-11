@@ -5,10 +5,21 @@ var r = n(473749),
     o = n(643281);
 function s() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        t = (0, i.e7)([o.Z], () => o.Z.getMembers()),
-        n = (0, i.e7)([o.Z], () => o.Z.getPremiumGroupSubscriptionId()),
-        s = (0, i.e7)([o.Z], () => o.Z.hasFetchedMembers()),
-        l = !s;
+        {
+            premiumGroupMembers: t,
+            premiumGroupSubscriptionId: n,
+            hasFetchedMembers: s,
+            isFetchingMembers: l,
+            isFetchingMembership: c,
+            isUpdatingMembers: u,
+        } = (0, i.cj)([o.Z], () => ({
+            premiumGroupMembers: o.Z.getMembers(),
+            premiumGroupSubscriptionId: o.Z.getPremiumGroupSubscriptionId(),
+            hasFetchedMembers: o.Z.hasFetchedMembers(),
+            isFetchingMembers: o.Z.isFetchingMembers(),
+            isFetchingMembership: o.Z.isFetchingMembership(),
+            isUpdatingMembers: o.Z.isUpdatingMembers(),
+        }));
     return (
         (0, r.useEffect)(() => {
             e &&
@@ -22,7 +33,7 @@ function s() {
         }, [e, n, s]),
         {
             premiumGroupMembers: t,
-            isLoading: l,
+            isLoading: l || c || u,
         }
     );
 }

@@ -1,11 +1,12 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => A });
 var r,
     i = n(442837),
     a = n(570140),
     o = n(78839),
     s = n(80721),
-    l = n(981631);
-function c(e, t, n) {
+    l = n(282793),
+    c = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,10 +19,11 @@ function c(e, t, n) {
         e
     );
 }
-let u = {
+let d = {
     membersData: {
         data: null,
         isFetching: !1,
+        isUpdating: !1,
     },
     membershipData: {
         data: null,
@@ -29,48 +31,59 @@ let u = {
         hasFetched: !1,
     },
 };
-function d() {
-    u.membersData.isFetching = !0;
+function f() {
+    d.membersData.isFetching = !0;
 }
-function f(e) {
+function p(e) {
     let { members: t } = e;
-    (u.membersData.data = t), (u.membersData.isFetching = !1);
-}
-function p() {
-    u.membersData.isFetching = !1;
+    (d.membersData.data = t), (d.membersData.isFetching = !1);
 }
 function _() {
-    u.membershipData.isFetching = !0;
+    d.membersData.isFetching = !1;
 }
-function m(e) {
+function m() {
+    d.membershipData.isFetching = !0;
+}
+function h(e) {
     let { membership: t } = e;
-    (u.membershipData.data = t), (u.membershipData.isFetching = !1), (u.membershipData.hasFetched = !0);
-}
-function h() {
-    (u.membershipData.isFetching = !1), (u.membershipData.hasFetched = !0);
+    (d.membershipData.data = t), (d.membershipData.isFetching = !1), (d.membershipData.hasFetched = !0);
 }
 function g() {
-    (u.membershipData.isFetching = !1), (u.membershipData.hasFetched = !0);
+    (d.membershipData.isFetching = !1), (d.membershipData.hasFetched = !0);
 }
 function E() {
-    return (
-        !u.membershipData.isFetching && !u.membershipData.hasFetched && (a.Z.wait(() => (0, s.WH)().catch(l.VqG)), !0)
-    );
+    (d.membershipData.isFetching = !1), (d.membershipData.hasFetched = !0);
 }
 function b() {
+    return (
+        !d.membershipData.isFetching && !d.membershipData.hasFetched && (a.Z.wait(() => (0, s.WH)().catch(c.VqG)), !0)
+    );
+}
+function y() {
+    d.membersData.isUpdating = !0;
+}
+function O(e) {
+    let { subscriptionId: t } = e;
+    a.Z.wait(() => (0, s.i1)(t).catch(c.VqG)), (d.membersData.isUpdating = !1);
+}
+function v() {
+    d.membersData.isUpdating = !1;
+}
+function S() {
     var e, t, n;
     let r = null == (e = o.Z.getPremiumGroupSubscription()) ? void 0 : e.id;
-    return null != r ? r : null != (n = null == (t = u.membershipData.data) ? void 0 : t.subscriptionId) ? n : null;
+    return null != r ? r : null != (n = null == (t = d.membershipData.data) ? void 0 : t.subscriptionId) ? n : null;
 }
-function y(e) {
+function I(e) {
     let { subscriptionId: t } = e;
-    return null != t && !u.membersData.isFetching && (a.Z.wait(() => (0, s.i1)(t).catch(l.VqG)), !0);
+    return !d.membersData.isFetching && (a.Z.wait(() => (0, s.i1)(t).catch(c.VqG)), !0);
 }
-function O() {
-    u = {
+function T() {
+    d = {
         membersData: {
             data: null,
             isFetching: !1,
+            isUpdating: !1,
         },
         membershipData: {
             data: null,
@@ -79,42 +92,65 @@ function O() {
         },
     };
 }
-class v extends (r = i.ZP.Store) {
+class C extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(o.Z);
     }
     getMembers() {
-        return u.membersData.data;
+        return d.membersData.data;
     }
     isFetchingMembers() {
-        return u.membersData.isFetching;
+        return d.membersData.isFetching;
+    }
+    isUpdatingMembers() {
+        return d.membersData.isUpdating;
     }
     hasFetchedMembers() {
-        return null !== u.membersData.data;
+        return null !== d.membersData.data;
     }
     getMembership() {
-        return u.membershipData.data;
+        return d.membershipData.data;
     }
     isFetchingMembership() {
-        return u.membershipData.isFetching;
+        return d.membershipData.isFetching;
     }
     hasFetchedMembership() {
-        return u.membershipData.hasFetched;
+        return d.membershipData.hasFetched;
     }
     getPremiumGroupSubscriptionId() {
-        return b();
+        return S();
+    }
+    getNumUsedSeats() {
+        return null == d.membersData.data ? 0 : d.membersData.data.members.length;
+    }
+    getNumAvailableInvites() {
+        if (null == d.membersData.data) return l.v$;
+        let e = d.membersData.data.members.length + d.membersData.data.invitedUsers.length;
+        return Math.max(0, l.v$ - e);
+    }
+    getNumTotalSeats() {
+        return l.v$;
     }
 }
-c(v, "displayName", "PremiumGroupStore");
-let S = new v(a.Z, {
-    PREMIUM_GROUP_MEMBERS_REQUEST: y,
-    PREMIUM_GROUP_MEMBERS_FETCH_START: d,
-    PREMIUM_GROUP_MEMBERS_FETCH_SUCCESS: f,
-    PREMIUM_GROUP_MEMBERS_FETCH_FAILURE: p,
-    PREMIUM_GROUP_MEMBERSHIP_REQUEST: E,
-    PREMIUM_GROUP_MEMBERSHIP_FETCH_START: _,
-    PREMIUM_GROUP_MEMBERSHIP_FETCH_SUCCESS: m,
-    PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND: h,
-    PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE: g,
-    LOGOUT: O,
+u(C, "displayName", "PremiumGroupStore");
+let A = new C(a.Z, {
+    PREMIUM_GROUP_MEMBERS_REQUEST: I,
+    PREMIUM_GROUP_MEMBERS_FETCH_START: f,
+    PREMIUM_GROUP_MEMBERS_FETCH_SUCCESS: p,
+    PREMIUM_GROUP_MEMBERS_FETCH_FAILURE: _,
+    PREMIUM_GROUP_MEMBERSHIP_REQUEST: b,
+    PREMIUM_GROUP_MEMBERSHIP_FETCH_START: m,
+    PREMIUM_GROUP_MEMBERSHIP_FETCH_SUCCESS: h,
+    PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND: g,
+    PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE: E,
+    PREMIUM_GROUP_INVITE_USERS_START: y,
+    PREMIUM_GROUP_INVITE_USERS_SUCCESS: O,
+    PREMIUM_GROUP_INVITE_USERS_FAILURE: v,
+    PREMIUM_GROUP_REMOVE_MEMBER_START: y,
+    PREMIUM_GROUP_REMOVE_MEMBER_SUCCESS: O,
+    PREMIUM_GROUP_REMOVE_MEMBER_FAILURE: v,
+    PREMIUM_GROUP_REMOVE_INVITE_START: y,
+    PREMIUM_GROUP_REMOVE_INVITE_SUCCESS: O,
+    PREMIUM_GROUP_REMOVE_INVITE_FAILURE: v,
+    LOGOUT: T,
 });

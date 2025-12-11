@@ -1,6 +1,6 @@
-n.d(t, { b: () => w });
-var l = n(54381),
-    r = n(473749),
+n.d(t, { b: () => I });
+var r = n(54381),
+    l = n(473749),
     i = n(512722),
     a = n.n(i),
     s = n(704215),
@@ -8,50 +8,50 @@ var l = n(54381),
     u = n(605236),
     c = n(347896),
     d = n(717401),
-    m = n(885472),
-    p = n(317269),
+    p = n(885472),
+    m = n(317269),
     h = n(585483),
     f = n(669079),
     g = n(296848),
-    v = n(987209),
-    j = n(563132),
-    y = n(107998),
+    j = n(987209),
+    y = n(563132),
+    v = n(107998),
     b = n(614277),
-    S = n(400981),
-    x = n(435020),
-    P = n(698708),
-    O = n(981631),
+    O = n(400981),
+    P = n(435020),
+    S = n(698708),
+    x = n(981631),
     E = n(921944);
-function I(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            l.forEach(function (t) {
-                var l;
-                (l = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: l,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = l);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function w(e) {
+function I(e) {
     let t,
         {
             handleClose: i,
-            planGroup: w,
+            planGroup: I,
             onSubscriptionConfirmation: T,
             renderPurchaseConfirmation: k,
             postSuccessGuild: C,
@@ -66,10 +66,10 @@ function w(e) {
             selectedSkuId: Z,
             step: D,
             updatedSubscription: F,
-            startingPremiumSubscriptionPlanIdRef: B,
-            startingFractionalPremiumEndsAtRef: G,
+            startingPremiumSubscriptionPlanIdRef: G,
+            startingFractionalPremiumEndsAtRef: B,
             isPremiumGroupPurchase: H,
-        } = (0, j.JL)(),
+        } = (0, y.JL)(),
         {
             isGift: U,
             giftRecipient: z,
@@ -79,85 +79,107 @@ function w(e) {
             sendGiftMessage: Y,
             claimableRewards: q,
             selectedGiftingPromotionReward: J,
-        } = (0, v.wD)(),
-        { confirmationFooter: Q } = (0, y.zb)(),
+        } = (0, j.wD)(),
+        { confirmationFooter: Q } = (0, v.zb)(),
         X = (0, d.id)(L, U, q),
         $ = (0, c.Z)(),
         ee = (0, d.a5)(L),
         et = (0, d.tK)(null == J ? void 0 : J.skuId),
-        en = (0, x.$)(_, A),
-        el = U && null != J && ee;
+        en = (0, P.$)(_, A),
+        er = U && null != J && ee;
     a()(null != L, "Expected plan to selected"),
         a()(null != Z, "Expected selectedSkuId"),
         a()(null != D, "Step should be set");
-    let er = r.useCallback(() => {
+    let el = l.useCallback(() => {
         i(), null == T || T();
     }, [i, T]);
-    r.useEffect(() => {
+    l.useEffect(() => {
         function e() {
             H &&
+                null != F &&
+                F.hasAnyPremiumGroup &&
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e("86948").then(n.bind(n, 153241));
-                    return (t) => (0, l.jsx)(e, I({}, t));
+                    return (t) => {
+                        var n, l;
+                        return (0, r.jsx)(
+                            e,
+                            ((n = w({}, t)),
+                            (l = l = { subscription: F }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(l)).forEach(function (e) {
+                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                  }),
+                            n),
+                        );
+                    };
                 });
         }
         return (
-            h.S.subscribe(O.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
+            h.S.subscribe(x.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
             () => {
-                h.S.unsubscribe(O.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
+                h.S.unsubscribe(x.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
             }
         );
-    }, [H]),
-        r.useEffect(() => {
+    }, [H, F]),
+        l.useEffect(() => {
             !U || null == z || null == K || W || V || (0, f.pO)(z) || Y({ onSubscriptionConfirmation: T });
         }, [Y, U, z, K, W, V, T]),
-        r.useEffect(() => {
+        l.useEffect(() => {
             null != $ &&
                 null != $.reminderNotice &&
                 X &&
-                (0, u.wH)(s.z.GIFTING_PROMOTION_REMINDER, (0, m.m)(), { dismissAction: E.L.INDIRECT_ACTION });
+                (0, u.wH)(s.z.GIFTING_PROMOTION_REMINDER, (0, p.m)(), { dismissAction: E.L.INDIRECT_ACTION });
         }, [$, X]);
-    let ei = null != M ? p.PI.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != k) t = k(L, er, F);
+    let ei = null != M ? m.PI.DEEPLINK_TO_DESKTOP_APP : void 0;
+    if (null != k) t = k(L, el, F);
     else if (U)
-        t = (0, l.jsx)(p.TB, {
+        t = (0, r.jsx)(m.TB, {
             planId: L.id,
-            onClose: er,
+            onClose: el,
         });
     else {
         let e =
-            B.current === L.id
+            G.current === L.id
                 ? { postSuccessGuild: C }
                 : {
                       followupSKUInfo: N,
-                      startingPremiumSubscriptionPlanId: B.current,
-                      isDowngrade: null != R && (0, g.GY)(R, L.id, w),
+                      startingPremiumSubscriptionPlanId: G.current,
+                      isDowngrade: null != R && (0, g.GY)(R, L.id, I),
                   };
-        t = (0, l.jsx)(
-            p.ZP,
-            I(
+        t = (0, r.jsx)(
+            m.ZP,
+            w(
                 {
                     planId: L.id,
-                    onClose: er,
+                    onClose: el,
                     paymentSourceType: en,
                     hideClose: null != Q,
-                    startingFractionalPremiumEndsAt: G.current,
+                    startingFractionalPremiumEndsAt: B.current,
                     customCTAType: ei,
                 },
                 e,
             ),
         );
     }
-    return (0, l.jsxs)(l.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, l.jsxs)(b.C3, {
-                children: [(0, l.jsx)(P.Z, {}), t],
+            (0, r.jsxs)(b.C3, {
+                children: [(0, r.jsx)(S.Z, {}), t],
             }),
             null != Q && Q,
-            el &&
+            er &&
                 null != et &&
-                (0, l.jsx)(S.Z, {
-                    onClose: er,
+                (0, r.jsx)(O.Z, {
+                    onClose: el,
                     selectedPromotionalDecoPurchaseRecord: et,
                     selectedGiftingPromotionReward: J,
                 }),

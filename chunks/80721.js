@@ -1,10 +1,12 @@
 n.d(t, {
+    Jn: () => _,
     MT: () => f,
     WH: () => d,
     cD: () => p,
-    hH: () => h,
-    i1: () => _,
-    r7: () => m,
+    hH: () => E,
+    i1: () => m,
+    if: () => g,
+    r7: () => h,
 });
 var r = n(512722),
     i = n.n(r),
@@ -57,21 +59,46 @@ async function f(e, t, n, r) {
     };
 }
 async function p(e, t) {
+    o.Z.dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_START" });
     try {
         let n = await a.tn.post({
             url: c.ANM.BILLING_SUBSCRIPTION_INVITES(e),
             body: { user_ids: t },
             rejectWithError: !0,
         });
-        return {
-            invitedUsers: n.body.invited_users,
-            ineligibleUsers: n.body.ineligible_users,
-        };
+        return (
+            o.Z.dispatch({
+                type: "PREMIUM_GROUP_INVITE_USERS_SUCCESS",
+                subscriptionId: e,
+            }),
+            {
+                invitedUsers: n.body.invited_users,
+                ineligibleUsers: n.body.ineligible_users,
+            }
+        );
     } catch (e) {
-        return null;
+        return o.Z.dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_FAILURE" }), null;
     }
 }
-async function _(e) {
+async function _(e, t) {
+    o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_START" });
+    try {
+        let n = await a.tn.del({
+            url: c.ANM.BILLING_SUBSCRIPTION_REMOVE_USER(e, t),
+            rejectWithError: !0,
+        });
+        return (
+            o.Z.dispatch({
+                type: "PREMIUM_GROUP_REMOVE_MEMBER_SUCCESS",
+                subscriptionId: e,
+            }),
+            n
+        );
+    } catch (e) {
+        return o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_FAILURE" }), null;
+    }
+}
+async function m(e) {
     o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_START" });
     try {
         let t = (
@@ -97,13 +124,31 @@ async function _(e) {
         return o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_FAILURE" }), [];
     }
 }
-async function m(e, t) {
+async function h(e, t) {
     await a.tn.patch({
         url: c.ANM.BILLING_SUBSCRIPTION_INVITE(e, t),
         rejectWithError: !0,
     });
 }
-async function h(e) {
+async function g(e, t) {
+    o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_INVITE_START" });
+    try {
+        let n = await a.tn.del({
+            url: c.ANM.BILLING_SUBSCRIPTION_INVITE(e, t),
+            rejectWithError: !0,
+        });
+        return (
+            o.Z.dispatch({
+                type: "PREMIUM_GROUP_REMOVE_INVITE_SUCCESS",
+                subscriptionId: e,
+            }),
+            n
+        );
+    } catch (e) {
+        return o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_INVITE_FAILURE" }), null;
+    }
+}
+async function E(e) {
     o.Z.dispatch({
         type: "PREMIUM_GROUP_INVITE_FETCH_START",
         inviteId: e,
