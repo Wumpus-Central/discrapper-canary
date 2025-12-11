@@ -1,7 +1,7 @@
 n.d(t, {
     $Z: () => eU,
     OF: () => eZ,
-    _x: () => eF,
+    _x: () => eB,
     c$: () => eG,
     iE: () => eY,
 }),
@@ -45,8 +45,8 @@ var r = n(54381),
     U = n(857192),
     G = n(131951),
     Z = n(25990),
-    B = n(626135),
-    F = n(572004),
+    F = n(626135),
+    B = n(572004),
     V = n(49012),
     H = n(358085),
     Y = n(998502),
@@ -119,21 +119,21 @@ let eU = () => [
             e
         );
     },
-    eB = () => {
+    eF = () => {
         let e = eZ(),
             [t] = (0, O.US)(e);
         return t === a.z.DISPLAY_NAME_STYLES_NEW_BADGE || t === a.z.WIDGETS_USER_SETTINGS_NEW_BADGE
             ? (0, r.jsx)(l.IGR, { text: eD.intl.string(eD.t.y2b7CA) })
             : null;
     },
-    eF = () => {
+    eB = () => {
         let e = [];
         return (
             x.H.getConfig({ location: "SettingsRendererConfig" }).enabled && e.push(a.z.NITRO_PRIVACY_PERK_NEW_BADGE), e
         );
     },
     eV = () => {
-        let e = eF(),
+        let e = eB(),
             [t] = (0, O.US)(e);
         return a.z.NITRO_PRIVACY_PERK_NEW_BADGE === t ? (0, r.jsx)(l.IGR, { text: eD.intl.string(eD.t.y2b7CA) }) : null;
     },
@@ -144,7 +144,7 @@ let eU = () => [
             showPrepaidPaymentPastDueWarning: O,
             searchParams: v,
             numOfPendingFamilyRequests: M,
-            isOverlaySupported: eF,
+            isOverlaySupported: eB,
             isClipsBetaTagShowing: eY = !1,
             shouldMergeGameSettings: eW,
             isStaff: eK,
@@ -320,7 +320,7 @@ let eU = () => [
                 label: eD.intl.string(eD.t["vi7f+q"]),
                 ariaLabel: eD.intl.string(eD.t["vi7f+q"]),
                 element: j.Z,
-                newIndicator: (0, r.jsx)(eB, {}),
+                newIndicator: (0, r.jsx)(eF, {}),
                 newIndicatorDismissibleContentTypes: [...eZ()],
                 notice: {
                     stores: [Z.Z, T.Z],
@@ -821,7 +821,7 @@ let eU = () => [
                 searchableTitles: [eD.intl.string(eD.t.G0neg7)],
                 label: eD.intl.string(eD.t.G0neg7),
                 ariaLabel: eD.intl.string(eD.t.G0neg7),
-                element: X.Z,
+                element: X.ZP,
                 url: eR.Z5c.SETTINGS("accessibility"),
             },
             [eN.s6.ACCESSIBILITY_HIGH_CONTRAST]: {
@@ -1602,7 +1602,7 @@ let eU = () => [
                 section: eR.oAB.ADVANCED,
                 searchableTitles: [eD.intl.string(eD.t.ObIb1Q)],
                 parent: eN.s6.SETTINGS_ADVANCED,
-                predicate: () => F.wS,
+                predicate: () => B.wS,
             },
             [eN.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION]: {
                 section: eR.oAB.ADVANCED,
@@ -1677,7 +1677,7 @@ let eU = () => [
                 searchableTitles: [eD.intl.string(eD.t["9cb1Uz"]), eD.intl.string(eD.t.HcoRu0)],
                 label: eD.intl.string(eD.t["9cb1Uz"]),
                 element: e_.Z,
-                predicate: () => !eW && eF,
+                predicate: () => !eW && eB,
             },
             [eN.s6.CHANGELOG]: {
                 section: "changelog",
@@ -1689,12 +1689,12 @@ let eU = () => [
                 section: "merchandise",
                 onClick: () => {
                     let e = "https://discordmerch.com/Dsktopprm";
-                    B.default.track(eR.rMx.USER_SETTINGS_MERCH_LINK_CLICKED),
+                    F.default.track(eR.rMx.USER_SETTINGS_MERCH_LINK_CLICKED),
                         (0, V.q)({
                             href: e,
                             shouldConfirm: !0,
                             onConfirm: () => {
-                                B.default.track(eR.rMx.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, m.Z)(e);
+                                F.default.track(eR.rMx.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, m.Z)(e);
                             },
                         });
                 },

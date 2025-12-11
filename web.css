@@ -80907,10 +80907,6 @@ div:hover>div>._1f2acc2c7ffb774c-container ._1f2acc2c7ffb774c-badgeImage:not(._1
     margin-inline-start: 8px
 }
 
-._5d148ffac19e7fb1-ttsPreviewWrapper {
-    margin-bottom: 24px
-}
-
 ._5d148ffac19e7fb1-ttsSliderMarker {
     text-transform: uppercase
 }
@@ -80925,6 +80921,10 @@ div:hover>div>._1f2acc2c7ffb774c-container ._1f2acc2c7ffb774c-badgeImage:not(._1
 
 .custom-theme-background ._5d148ffac19e7fb1-preview {
     background: var(--background-gradient-chat-preview)
+}
+
+._5d148ffac19e7fb1-appearanceUpsell {
+    padding-top: 24px
 }
 
 .eb2508e5fd9f2b15-avatarBackground {

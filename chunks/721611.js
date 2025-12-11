@@ -1,29 +1,31 @@
 n.d(t, { Z: () => O });
 var r = n(54381),
     o = n(473749),
-    i = n(120356),
-    l = n.n(i),
-    a = n(512722),
-    c = n.n(a),
+    a = n(120356),
+    i = n.n(a),
+    l = n(512722),
+    c = n.n(l),
     s = n(467721),
     u = n(91192),
-    b = n(481060),
-    f = n(493773),
-    d = n(996435),
+    f = n(481060),
+    d = n(493773),
+    b = n(996435),
     y = n(700425),
-    p = n(910557);
+    p = n(183794);
 function g(e) {
     let { category: t, onClick: n, active: o } = e,
-        { useTitle: i, key: a } = t,
-        s = null == i ? void 0 : i();
+        { useTitle: a, useSubnavLabel: l, key: s } = t,
+        d = null == a ? void 0 : a(),
+        b = null == l ? void 0 : l(),
+        y = null != b ? b : d;
     return (
-        c()(null != s, "[SettingsSubnavigationCategory] Category must have a title"),
+        c()(null != y, "[SettingsSubnavigationCategory] Category must have a title"),
         (0, r.jsx)(u.mh, {
-            id: a,
+            id: s,
             children: (e) => {
-                var t, i;
+                var t, a;
                 return (0, r.jsx)(
-                    b.P3F,
+                    f.P3F,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -52,13 +54,13 @@ function g(e) {
                         {
                             onClick: n,
                             tag: "li",
-                            className: l()({ [p.active]: o }),
+                            className: i()({ [p.active]: o }),
                         },
                         e,
                     )),
-                    (i = i = { children: s }),
+                    (a = a = { children: y }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -66,11 +68,11 @@ function g(e) {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(i)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
                           }),
                     t),
-                    a,
+                    s,
                 );
             },
         })
@@ -78,17 +80,17 @@ function g(e) {
 }
 function O(e) {
     let { categories: t } = e,
-        n = d.Z.useField("currentCategoryKey");
-    (0, f.ZP)(() => {
-        t.some((e) => e.key === n) || d.Z.setState({ currentCategoryKey: t[0].key });
+        n = b.Z.useField("currentCategoryKey");
+    (0, d.ZP)(() => {
+        t.some((e) => e.key === n) || b.Z.setState({ currentCategoryKey: t[0].key });
     }),
         o.useEffect(
             () => () => {
-                d.Z.setState({ currentCategoryKey: void 0 });
+                b.Z.setState({ currentCategoryKey: void 0 });
             },
             [],
         );
-    let i = o.useMemo(
+    let a = o.useMemo(
             () =>
                 Math.max(
                     t.findIndex((e) => e.key === n),
@@ -96,8 +98,8 @@ function O(e) {
                 ),
             [t, n],
         ),
-        l = (0, b.q_F)({
-            y: 36 * i,
+        i = (0, f.q_F)({
+            y: 36 * a,
             config: {
                 mass: 0.1,
                 friction: 20,
@@ -113,7 +115,7 @@ function O(e) {
                     className: p.track,
                     children: (0, r.jsx)(s.animated.div, {
                         className: p.thumb,
-                        style: l,
+                        style: i,
                     }),
                 }),
                 (0, r.jsx)("ul", {
@@ -125,7 +127,7 @@ function O(e) {
                                     var t;
                                     return (
                                         (t = e.key),
-                                        void d.Z.setState({
+                                        void b.Z.setState({
                                             requestedTargetKey: t,
                                             showNavigationMobile: !1,
                                         })

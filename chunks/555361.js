@@ -17,17 +17,18 @@ function s(e) {
             asValueChanges: _,
             markers: m,
             onMarkerRender: h,
+            stickToMarkers: g,
         } = t,
-        [g] = i.useState(() => s()),
-        E = u(),
-        b = null == d ? void 0 : d(),
-        y = null == f ? void 0 : f();
+        [E] = i.useState(() => s()),
+        b = u(),
+        y = null == d ? void 0 : d(),
+        O = null == f ? void 0 : f();
     return (0, r.jsx)(o.X, {
         children: (0, r.jsx)(a.iRW, {
-            label: E,
-            description: b,
-            disabled: y,
-            initialValue: g,
+            label: b,
+            description: y,
+            disabled: O,
+            initialValue: E,
             minValue: l,
             maxValue: c,
             onValueRender: p,
@@ -36,6 +37,7 @@ function s(e) {
             orientation: "horizontal",
             markers: m,
             onMarkerRender: h,
+            stickToMarkers: g,
         }),
     });
 }
