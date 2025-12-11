@@ -1,4 +1,4 @@
-n.d(e, { h: () => E });
+n.d(e, { h: () => I });
 var i = n(657707),
     l = n(384275),
     s = n(509613),
@@ -20,15 +20,17 @@ let T = (0, s.k4)(r.n.AUTHORIZED_APPS_CATEGORY, {
     S = (0, s.wf)(r.n.AUTHORIZED_APPS_PANEL, {
         usePredicate: () => !(0, u.gN)("LegacyAuthorizedAppsPanel"),
         useTitle: () => d.intl.string(d.t["f6kk+r"]),
+        hideInStreamerMode: !0,
         StronglyDiscouragedCustomComponent: a.ZP,
         buildLayout: () => [],
     }),
     g = (0, s.wf)(r.n.AUTHORIZED_APPS_PANEL, {
         usePredicate: () => (0, u.gN)("AuthorizedAppsPanel"),
         useTitle: () => d.intl.string(d.t["f6kk+r"]),
+        hideInStreamerMode: !0,
         buildLayout: () => [T],
     }),
-    E = (0, s.m7)(r.n.AUTHORIZED_APPS_SIDEBAR_ITEM, {
+    I = (0, s.m7)(r.n.AUTHORIZED_APPS_SIDEBAR_ITEM, {
         useTitle: () => d.intl.string(d.t["f6kk+r"]),
         getLegacySearchKey: () => ((0, u.Gl)("AuthorizedAppsPanel") ? void 0 : c.s6.AUTHORIZED_APPS),
         icon: i.jje,
