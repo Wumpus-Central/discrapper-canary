@@ -1628,7 +1628,8 @@ let eU = () => [
                 parent: eN.s6.SETTINGS_ADVANCED,
             },
             [eN.s6.PRIVATE_BROWSING_PERK]: {
-                section: eR.oAB.CF_WARP,
+                section: eR.oAB.PRIVATE_BROWSING,
+                label: eD.intl.string(eM.default.bU5ANm),
                 searchableTitles: [eD.intl.string(eM.default.SsTtq3)],
                 predicate: () => x.H.getConfig({ location: "SettingsRendererConfig" }).enabled,
                 newIndicator: (0, r.jsx)(eV, {}),

@@ -31,7 +31,7 @@ n.d(t, {
     CoT: () => T,
     Cyb: () => m.Cy,
     DJE: () => n5,
-    DJj: () => ew,
+    DJj: () => eD,
     DZw: () => eN,
     E07: () => tv,
     EKQ: () => m.EK,
@@ -110,7 +110,7 @@ n.d(t, {
     PUi: () => nx,
     Pbq: () => t4,
     Plq: () => m.Pl,
-    PrB: () => D,
+    PrB: () => w,
     PrS: () => tm,
     PsQ: () => tV,
     PyE: () => m.Py,
@@ -135,7 +135,7 @@ n.d(t, {
     STv: () => em,
     SaU: () => tU,
     Sap: () => t9,
-    Sbl: () => tD,
+    Sbl: () => tw,
     Sc2: () => ey,
     Skl: () => m.Sk,
     T23: () => rk,
@@ -173,14 +173,14 @@ n.d(t, {
     YeM: () => eo,
     Ypu: () => en,
     Z5c: () => eT,
-    Z8P: () => eD,
+    Z8P: () => ew,
     Z9p: () => nd,
     ZUi: () => B,
     ZY5: () => tx,
     ZfP: () => C,
     Zuq: () => m.Zu,
     _1z: () => ee,
-    _8R: () => rD,
+    _8R: () => rw,
     _s_: () => v,
     _vf: () => et,
     a5g: () => tY,
@@ -189,13 +189,13 @@ n.d(t, {
     aO5: () => m.aO,
     aZC: () => tq,
     aib: () => tN,
-    ane: () => nw,
+    ane: () => nD,
     apO: () => n7,
     b2L: () => ne,
     b4C: () => rN,
     b8q: () => tL,
     bL: () => eA,
-    c2C: () => nD,
+    c2C: () => nw,
     d4z: () => r.d,
     dAT: () => tH,
     dCx: () => t6,
@@ -224,7 +224,7 @@ n.d(t, {
     gLR: () => rM,
     gg$: () => m.gg,
     hBH: () => i.h,
-    hCA: () => rw,
+    hCA: () => rD,
     hUK: () => nu,
     hVg: () => nv,
     hes: () => U,
@@ -266,12 +266,12 @@ n.d(t, {
     pAY: () => tf,
     pJs: () => N,
     pKx: () => m.pK,
-    pM4: () => w,
+    pM4: () => D,
     pNK: () => S,
     pTL: () => rL,
     pjP: () => n$,
     pmI: () => t5,
-    q5t: () => tw,
+    q5t: () => tD,
     q9n: () => nG,
     qAy: () => tM,
     qWG: () => rP,
@@ -623,10 +623,10 @@ var r = n(106351),
     R = (function (e) {
         return (e.NEVER = "NEVER"), (e.ENABLED = "ENABLED"), (e.BLOCKED = "BLOCKED"), e;
     })({}),
-    D = (function (e) {
+    w = (function (e) {
         return (e.NEVER = "NEVER"), (e.ALL_CHANNELS = "ALL_CHANNELS"), (e.SELECTED_CHANNEL = "SELECTED_CHANNEL"), e;
     })({}),
-    w = (function (e) {
+    D = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     x = (function (e) {
@@ -2173,8 +2173,8 @@ var eC = (function (e) {
 let eN = 100,
     eP = 200,
     eR = 50,
-    eD = 50,
-    ew = 25,
+    ew = 50,
+    eD = 25,
     ex = 200,
     eL = 100,
     ej = 250,
@@ -2563,7 +2563,7 @@ var tN = (function (e) {
             e
         );
     })({}),
-    tD = (function (e) {
+    tw = (function (e) {
         return (
             (e.GUILD_CREATE_INVITE_SUGGESTION = "Guild Create Invite Suggestion"),
             (e.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -2646,7 +2646,7 @@ var tN = (function (e) {
             e
         );
     })({}),
-    tw = (function (e) {
+    tD = (function (e) {
         return (
             (e.JOIN = "join"),
             (e.ASK_TO_JOIN = "ask to join"),
@@ -3432,7 +3432,7 @@ let tU = {
         QUEST_PREVIEW_TOOL_2: "Quest Preview Tool 2",
         SECURE_FRAMES: "Secure Frames",
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",
-        CF_WARP: "WARP+",
+        PRIVATE_BROWSING: "WARP+",
     });
 var tZ = (function (e) {
         return (
@@ -5787,7 +5787,7 @@ var nT = (function (e) {
         );
     })({});
 let nR = 50;
-var nD = (function (e) {
+var nw = (function (e) {
         return (
             (e.AGREEMENTS = "AGREEMENTS"),
             (e.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
@@ -5803,7 +5803,7 @@ var nD = (function (e) {
             e
         );
     })({}),
-    nw = (function (e) {
+    nD = (function (e) {
         return (e.UPDATE_PASSWORD = "update_password"), e;
     })({}),
     nx = (function (e) {
@@ -6424,8 +6424,8 @@ var rC = (function (e) {
     })({});
 let rP = 2500,
     rR = 0,
-    rD = 2592000000;
-var rw = (function (e) {
+    rw = 2592000000;
+var rD = (function (e) {
         return (e.USERS = "users"), (e.ROLES = "roles"), (e.EVERYONE = "everyone"), e;
     })({}),
     rx = (function (e) {

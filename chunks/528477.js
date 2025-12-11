@@ -1,4 +1,4 @@
-n.d(t, { n: () => O });
+n.d(t, { n: () => T });
 var a = n(54381),
     r = n(473749),
     i = n(159691),
@@ -22,12 +22,12 @@ var a = n(54381),
     _ = n(388032),
     S = n(817438),
     E = n(932889);
-let O = (e) => {
+let T = (e) => {
     let { onClose: t } = e,
         n = (0, u.m)(),
         {
-            installationStatus: O,
-            perkAvailableToUser: T,
+            installationStatus: T,
+            perkAvailableToUser: O,
             isSupportedPrivateBrowsingPerkPlatform: N,
             isWeb: P,
             connectionStatus: w,
@@ -37,10 +37,10 @@ let O = (e) => {
             (0, c.Z)(j.Z5c.NITRO_HOME), t();
         }, [t]),
         R = (0, r.useCallback)(() => {
-            (0, p.openUserSettings)(m.n.PRIVATE_BROWSING_PANEL, { section: j.oAB.CF_WARP });
+            (0, p.openUserSettings)(m.n.PRIVATE_BROWSING_PANEL, { section: j.oAB.PRIVATE_BROWSING });
         }, []),
         A = [x.Ij.CONNECTED].includes(w),
-        D = N && I && ![x._n.ZERO_TRUST, x._n.ERROR].includes(O) && !P && (!n || T),
+        D = N && I && ![x._n.ZERO_TRUST, x._n.ERROR].includes(T) && !P && (!n || O),
         Z = (0, r.useMemo)(() => {
             switch (w) {
                 case x.Ij.CONNECTED:
@@ -52,23 +52,23 @@ let O = (e) => {
             }
         }, [w]),
         L = (0, r.useMemo)(() => {
-            if (!T) return _.intl.string(C.default.KN6HOb);
-            switch (O) {
+            if (!O) return _.intl.string(C.default.KN6HOb);
+            switch (T) {
                 case x._n.INSTALLED:
                 case x._n.EXISTING_INSTALLATION:
                     return Z;
                 default:
                     return _.intl.string(C.default.KN6HOb);
             }
-        }, [O, T, Z]),
+        }, [T, O, Z]),
         M = (0, r.useMemo)(() => {
-            if (!T)
+            if (!O)
                 return (0, a.jsx)(i.xvT, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
                     children: _.intl.format(C.default["0UfKTY"], { helpdeskArticle: f.w }),
                 });
-            switch (O) {
+            switch (T) {
                 case x._n.INSTALLED:
                 case x._n.EXISTING_INSTALLATION:
                     return (0, a.jsx)(i.xvT, {
@@ -97,7 +97,7 @@ let O = (e) => {
                         }),
                     });
             }
-        }, [O, T, A, R, k]),
+        }, [T, O, A, R, k]),
         { analyticsLocations: U } = (0, o.ZP)(s.Z.MASKED_LINK);
     return ((0, r.useEffect)(() => {
         D &&
@@ -114,7 +114,7 @@ let O = (e) => {
                   (0, a.jsxs)("div", {
                       className: S.contentContainer,
                       children: [
-                          T &&
+                          O &&
                               (0, a.jsx)(i.$1m, {
                                   className: S.imageWrapper,
                                   offsetBottom: -5,
@@ -138,7 +138,7 @@ let O = (e) => {
                                   M,
                               ],
                           }),
-                          !T &&
+                          !O &&
                               (0, a.jsx)("div", {
                                   className: S.ctaContainer,
                                   children: (0, a.jsx)(d.Z, {

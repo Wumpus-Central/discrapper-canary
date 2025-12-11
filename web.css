@@ -86372,11 +86372,8 @@ div.d74ef86df6475678-nagbar {
     transition: background-color .15s ease
 }
 
-.dbfbe01105eb2897-baseControlItem:hover {
-    background-color: var(--interactive-background-hover)
-}
-
 .dbfbe01105eb2897-baseControlItem:hover.dbfbe01105eb2897-clickable {
+    background-color: var(--interactive-background-hover);
     cursor: pointer
 }
 

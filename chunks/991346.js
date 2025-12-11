@@ -39,8 +39,8 @@ var r = n(473749),
     N = n(128064),
     P = n(202527),
     R = n(413182),
-    D = n(695346),
-    w = n(526665),
+    w = n(695346),
+    D = n(526665),
     x = n(620163),
     L = n(168308),
     j = n(839469),
@@ -128,6 +128,7 @@ function V(e) {
                           M.s6.SESSIONS,
                           M.s6.CONNECTIONS,
                           M.s6.CLIPS,
+                          M.s6.PRIVATE_BROWSING_PERK,
                       ],
             },
             {
@@ -220,7 +221,7 @@ function Y() {
         W = (0, h.Z)({ location: k.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         K = (0, i.e7)([S.Z], () => S.Z.hasLibraryApplication()),
         z = (0, i.e7)([O.default], () => O.default.hasTOTPEnabled()),
-        q = D.Sb.useSetting(),
+        q = w.Sb.useSetting(),
         Q = (0, d.Z)(),
         X = null == (o = (0, f.Z)()) || o,
         J = (null == (t = (0, g.s)()) ? void 0 : t.length) > 0,
@@ -240,7 +241,7 @@ function Y() {
         })),
         { enabled: ea } = (0, u.zM)("useGenerateUserSettingsSections", { autoTrackExposure: !1 }),
         eo = (0, E.U)({ location: "useGenerateUserSettingsSections" }),
-        es = (0, w.gj)("useGenerateUserSettingsSections");
+        es = (0, D.gj)("useGenerateUserSettingsSections");
     return r.useMemo(
         () =>
             (0, x.iE)({

@@ -1,4 +1,4 @@
-n.d(e, { U: () => O });
+n.d(e, { U: () => _ });
 var i = n(54381);
 n(473749);
 var l = n(657707),
@@ -9,20 +9,17 @@ var l = n(657707),
     o = n(509613),
     c = n(970013),
     d = n(313789),
-    S = n(620163),
-    g = n(55467),
-    T = n(726985),
-    E = n(388032),
-    I = n(498264);
-let _ = (0, o.wf)(d.n.PRIVATE_BROWSING_PANEL, {
-        useTitle: () => E.intl.string(I.default.bU5ANm),
+    T = n(620163),
+    S = n(888645),
+    g = n(388032),
+    E = n(498264);
+let I = (0, o.wf)(d.n.PRIVATE_BROWSING_PANEL, {
+        useTitle: () => g.intl.string(E.default.bU5ANm),
         useBadge: () => (0, i.jsx)(s.Z, {}),
-        StronglyDiscouragedCustomComponent: g.R,
-        buildLayout: () => [],
+        buildLayout: () => [S.m],
     }),
-    O = (0, o.m7)(d.n.PRIVATE_BROWSING_SIDEBAR_ITEM, {
-        useTitle: () => E.intl.string(I.default.bU5ANm),
-        getLegacySearchKey: () => T.s6.PRIVATE_BROWSING_PERK,
+    _ = (0, o.m7)(d.n.PRIVATE_BROWSING_SIDEBAR_ITEM, {
+        useTitle: () => g.intl.string(E.default.bU5ANm),
         icon: l.enf,
         usePredicate: () => {
             let t = (0, r.m)(),
@@ -30,9 +27,9 @@ let _ = (0, o.wf)(d.n.PRIVATE_BROWSING_PANEL, {
                 { enabled: l } = u.H.useConfig({ location: "private_browsing_perk_settings_page" });
             return l && (e || n) && (!t || i);
         },
-        buildLayout: () => [_],
+        buildLayout: () => [I],
         trailing: {
             type: c.W.BADGE_NEW,
-            getDismissibleContentTypes: S._x,
+            getDismissibleContentTypes: T._x,
         },
     });

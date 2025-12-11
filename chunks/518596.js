@@ -153,7 +153,7 @@ function I() {
             [p.oAB.AUTHORIZED_APPS, d.n.AUTHORIZED_APPS_PANEL],
             [p.oAB.CONNECTIONS, d.n.CONNECTIONS_PANEL],
             [p.oAB.CLIPS, d.n.CLIPS_PANEL],
-            [p.oAB.CF_WARP, d.n.PRIVATE_BROWSING_PANEL],
+            [p.oAB.PRIVATE_BROWSING, d.n.PRIVATE_BROWSING_PANEL],
             [p.oAB.PREMIUM, d.n.NITRO_PANEL],
             [p.oAB.GUILD_BOOSTING, d.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL],
             [p.oAB.SUBSCRIPTIONS, d.n.SUBSCRIPTIONS_PANEL],
