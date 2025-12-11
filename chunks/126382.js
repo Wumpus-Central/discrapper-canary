@@ -1,11 +1,21 @@
-n.d(t, { D: () => i });
-let r = (0, n(427164).le)({
+n.d(t, {
+    $: () => i,
+    D: () => o,
+});
+var r = n(427164),
+    i = (function (e) {
+        return (e.Control = "control"), (e.NoSoftwareDecode = "no_software_decode"), (e.Disabled = "disabled"), e;
+    })({});
+let a = (0, r.le)({
     name: "2025-11-h265-no-software",
     kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
+    defaultConfig: { treatment: "control" },
+    variations: {
+        1: { treatment: "no_software_decode" },
+        2: { treatment: "disabled" },
+    },
 });
-function i(e) {
+function o(e) {
     let { location: t } = e;
-    return r.getConfig({ location: t });
+    return a.getConfig({ location: t });
 }
