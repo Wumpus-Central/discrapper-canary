@@ -6,13 +6,13 @@ var r = n(54381),
     s = n(273744),
     o = n(894903);
 let d = (e) => {
-    var t, n;
     let {
-            node: { info: d },
+            node: { info: t },
         } = e,
-        c = l.useRef(
-            a.Z.reactParserFor(
-                ((t = (function (e) {
+        n = l.useMemo(() => {
+            var e, t;
+            return a.Z.reactParserFor(
+                ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
@@ -37,9 +37,9 @@ let d = (e) => {
                     }
                     return e;
                 })({}, a.Z.defaultRules)),
-                (n = n = { link: s.s }),
+                (t = t = { link: s.s }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -47,17 +47,17 @@ let d = (e) => {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                      })(Object(t)).forEach(function (n) {
+                          Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                       }),
-                t),
-            ),
-        );
-    return null == d
+                e),
+            );
+        }, []);
+    return null == t
         ? null
         : (0, r.jsx)(i.Wn, {
               className: o.infoBox,
               messageType: i.QYI.INFO,
-              children: c.current(d),
+              children: n(t),
           });
 };

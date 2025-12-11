@@ -5,19 +5,19 @@ var r = n(54381),
     a = n(454585),
     s = n(273744),
     o = n(388032),
-    d = n(124252),
-    c = n(197571);
+    d = n(647889),
+    c = n(478411);
 let u = (e) => {
-        var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: p, rows: g, character_limit: _, pattern: x },
-                onChange: h,
-                initialText: b,
-                isRequired: f,
+                data: { title: t, subtitle: n, placeholder: u, rows: m, character_limit: b, pattern: p },
+                onChange: g,
+                initialText: f,
+                isRequired: h,
             } = e,
-            v = l.useRef(
-                a.Z.reactParserFor(
-                    ((t = (function (e) {
+            x = l.useMemo(() => {
+                var e, t;
+                return a.Z.reactParserFor(
+                    ((e = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -42,9 +42,9 @@ let u = (e) => {
                         }
                         return e;
                     })({}, a.Z.defaultRules)),
-                    (n = n = { link: s.s }),
+                    (t = t = { link: s.s }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -52,48 +52,48 @@ let u = (e) => {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          })(Object(t)).forEach(function (n) {
+                              Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
                           }),
-                    t),
-                ),
-            ),
-            [j, y] = l.useState(""),
-            [Z, O] = l.useState(null);
+                    e),
+                );
+            }, []),
+            [v, _] = l.useState(""),
+            [j, y] = l.useState(null);
         l.useEffect(() => {
             var e;
-            y(null != (e = null == b ? void 0 : b.value) ? e : "");
-        }, [b]);
-        let I = l.useCallback(
+            _(null != (e = null == f ? void 0 : f.value) ? e : "");
+        }, [f]);
+        let O = l.useCallback(
             (e) => {
-                let t = null != x ? new RegExp(x) : null;
+                let t = null != p ? new RegExp(p) : null;
                 null == t || t.test(e)
                     ? null != e &&
-                      (O(null),
-                      y(e),
-                      h({
+                      (y(null),
+                      _(e),
+                      g({
                           value: e,
                           isValid: !0,
                       }))
-                    : (O(o.intl.string(o.t["24xrGb"])),
-                      h({
+                    : (y(o.intl.string(o.t["24xrGb"])),
+                      g({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [h, x],
+            [g, p],
         );
         return (0, r.jsxs)("div", {
             className: c.marginBottom8,
             children: [
-                null != u &&
+                null != t &&
                     (0, r.jsx)("div", {
                         className: c.marginBottom8,
                         children: (0, r.jsxs)(i.Text, {
                             variant: "text-sm/bold",
                             children: [
-                                u,
-                                f &&
+                                t,
+                                h &&
                                     (0, r.jsx)("span", {
                                         className: d.required,
                                         children: "*",
@@ -101,20 +101,30 @@ let u = (e) => {
                             ],
                         }),
                     }),
-                (0, r.jsx)(i.Kx8, {
-                    maxLength: _,
-                    onChange: I,
-                    value: j,
-                    error: Z,
-                    rows: g,
-                    placeholder: p,
-                    autoFocus: !0,
-                }),
-                null != m &&
+                1 === m
+                    ? (0, r.jsx)(i.oil, {
+                          maxLength: b,
+                          onChange: O,
+                          value: v,
+                          error: j,
+                          placeholder: u,
+                          autoFocus: !0,
+                      })
+                    : (0, r.jsx)(i.Kx8, {
+                          maxLength: b,
+                          onChange: O,
+                          value: v,
+                          error: j,
+                          rows: m,
+                          placeholder: u,
+                          autoFocus: !0,
+                      }),
+                null != n &&
                     (0, r.jsx)("div", {
+                        className: c.marginTop4,
                         children: (0, r.jsx)(i.Text, {
                             variant: "text-sm/normal",
-                            children: v.current(m),
+                            children: x(n),
                         }),
                     }),
             ],

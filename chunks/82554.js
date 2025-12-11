@@ -24,7 +24,13 @@ var r = (function (e) {
         return (e.MESSAGE = "report_to_mod_message"), e;
     })({}),
     a = (function (e) {
-        return (e.MESSAGE = "message_urf"), (e.USER = "user_urf"), (e.GUILD = "guild_urf"), e;
+        return (
+            (e.MESSAGE = "message_urf"),
+            (e.USER = "user_urf"),
+            (e.GUILD = "guild_urf"),
+            (e.MEDIA_TAKEDOWN = "media_takedown"),
+            e
+        );
     })({}),
     o = (function (e) {
         return (

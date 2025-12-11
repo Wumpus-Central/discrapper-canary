@@ -3,8 +3,8 @@ var r = n(54381),
     l = n(473749),
     i = n(199849),
     a = n(481060),
-    s = n(100993),
-    o = n(197571);
+    s = n(984019),
+    o = n(478411);
 let d = (e) => {
         let { element: t, onChange: n, initialOption: d } = e,
             [c, u] = l.useState("");
@@ -12,8 +12,8 @@ let d = (e) => {
             u(null != d ? d : "");
         }, [d]);
         let m = t.name,
-            { title: p, options: g } = t.data,
-            _ = l.useCallback(
+            { title: b, options: p } = t.data,
+            g = l.useCallback(
                 (e) => {
                     null != e && (u(e), n(e));
                 },
@@ -22,15 +22,14 @@ let d = (e) => {
         return (0, r.jsxs)(
             "div",
             {
-                className: o.marginBottom8,
                 children: [
-                    null != p &&
+                    null != b &&
                         (0, r.jsx)("div", {
                             className: o.marginBottom8,
                             children: (0, r.jsxs)(a.Text, {
                                 variant: "text-sm/bold",
                                 children: [
-                                    p,
+                                    b,
                                     t.should_submit_data &&
                                         (0, r.jsx)("span", {
                                             className: s.required,
@@ -41,8 +40,8 @@ let d = (e) => {
                         }),
                     (0, r.jsx)(i.y6, {
                         value: c,
-                        onChange: _,
-                        options: g,
+                        onChange: g,
+                        options: p,
                     }),
                 ],
             },
