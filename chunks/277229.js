@@ -41,7 +41,7 @@ function _() {
     return s.isPlatformEmbedded;
 }
 async function m() {
-    var e, t, n, r, a, o, s, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, C, A, N, P, R, D, w, x, L, j, M, k;
+    var e, t, n, r, a, o, s, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, C, A, N, P, R, w, D, x, L, j, M, k;
     let U = l.Z.getMemoryUsageElectronProcessTypeDetails();
     if (null == U) return null;
     let G = [
@@ -60,10 +60,10 @@ async function m() {
                 null != (N = null == (u = U.renderer) ? void 0 : u.wss_kb) ? N : -1,
                 null != (P = null == (d = U.gpu) ? void 0 : d.wss_kb) ? P : -1,
                 null != (R = null == (f = U.crashpad) ? void 0 : f.wss_kb) ? R : -1,
-                null != (D = null == (p = U.utility) ? void 0 : p.wss_kb) ? D : -1,
+                null != (w = null == (p = U.utility) ? void 0 : p.wss_kb) ? w : -1,
             ],
             electron_process_type_count: [
-                null != (w = null == (_ = U.unknown) ? void 0 : _.proc_count) ? w : 0,
+                null != (D = null == (_ = U.unknown) ? void 0 : _.proc_count) ? D : 0,
                 null != (x = null == (m = U.main) ? void 0 : m.proc_count) ? x : 0,
                 null != (L = null == (h = U.renderer) ? void 0 : h.proc_count) ? L : 0,
                 null != (j = null == (g = U.gpu) ? void 0 : g.proc_count) ? j : 0,
@@ -71,11 +71,11 @@ async function m() {
                 null != (k = null == (b = U.utility) ? void 0 : b.proc_count) ? k : 0,
             ],
         },
-        B = await (0, i.q)();
+        F = await (0, i.q)();
     return (
-        null != B &&
-            (null != B.cpu_memory && (Z.system_memory_total = B.cpu_memory / 1024),
-            null != B.cpu_memory_avail && (Z.system_memory_available = B.cpu_memory_avail / 1024)),
+        null != F &&
+            (null != F.cpu_memory && (Z.system_memory_total = F.cpu_memory / 1024),
+            null != F.cpu_memory_avail && (Z.system_memory_available = F.cpu_memory_avail / 1024)),
         Z
     );
 }
@@ -105,26 +105,35 @@ function h() {
 }
 async function g() {
     var e, t, n;
-    let r = c.ZP.requireModule("discord_media");
-    if (!(null == r ? void 0 : r.getMemoryUsageBlob))
-        return {
+    let r,
+        i = {
             gpu_dedicated_memory: [],
             gpu_renderer_used_memory: [],
         };
-    let i = [],
-        a = [],
-        o = await r.getMemoryUsageBlob(),
-        s = new Set();
-    for (let r of null != (n = null == o || null == (t = o[0]) || null == (e = t.data) ? void 0 : e.gpus) ? n : [])
-        if (!(!r.luid || 0 === r.luid || s.has(r.luid)))
-            if ((s.add(r.luid), null != r.memory ? i.push(r.memory / 1024) : i.push(-1), null != r.memory_usage)) {
+    if (!s.isPlatformEmbedded || !(0, s.isWindows)()) return i;
+    try {
+        if (
+            (await c.ZP.ensureModule("discord_media"),
+            (null == (r = c.ZP.requireModule("discord_media")) ? void 0 : r.getMemoryUsageBlob) == null)
+        )
+            return i;
+    } catch (e) {
+        return i;
+    }
+    let a = [],
+        o = [],
+        l = await r.getMemoryUsageBlob(),
+        u = new Set();
+    for (let r of null != (n = null == l || null == (t = l[0]) || null == (e = t.data) ? void 0 : e.gpus) ? n : [])
+        if (!(!r.luid || 0 === r.luid || u.has(r.luid)))
+            if ((u.add(r.luid), null != r.memory ? a.push(r.memory / 1024) : a.push(-1), null != r.memory_usage)) {
                 let e = 0;
                 for (let t of r.memory_usage) t.memory_usage && (e += t.memory_usage / 1024);
-                a.push(e);
-            } else a.push(-1);
+                o.push(e);
+            } else o.push(-1);
     return {
-        gpu_dedicated_memory: i,
-        gpu_renderer_used_memory: a,
+        gpu_dedicated_memory: a,
+        gpu_renderer_used_memory: o,
     };
 }
 class E extends r.Z {
