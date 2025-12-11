@@ -23,9 +23,9 @@ function m(e) {
                 }),
             [n.id],
         ),
-        O = i.useCallback(() => {
+        v = i.useCallback(() => {
             null != y &&
-                ((0, u.qH)(y.type, y),
+                ((0, u.qH)(y.type, y, !0),
                 h(
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -87,7 +87,7 @@ function m(e) {
                             icon: o.kmB,
                             "aria-label": b.intl.formatToPlainString(b.t.KfGahB, { applicationName: n.name }),
                             onClick: () => {
-                                m(p.L.TAKE_ACTION), O();
+                                m(p.L.TAKE_ACTION), v();
                             },
                         }),
                     }),
