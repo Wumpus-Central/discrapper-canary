@@ -1,123 +1,102 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => y });
 var r = n(54381);
 n(473749);
 var i = n(399606),
     l = n(524437),
     o = n(692547),
     a = n(481060),
-    s = n(317632),
-    c = n(602478),
-    u = n(598999),
-    d = n(2818),
-    f = n(768943),
-    h = n(216789),
-    p = n(153209),
-    g = n(818186),
-    m = n(999671),
-    b = n(946443),
-    _ = n(264233),
-    y = n(388032),
-    O = n(407067);
-function v(e) {
-    let { tab: t, setTab: n, badgeState: p, closePopout: m } = e,
-        { enabled: b, inInbox: _ } = d.Z.useExperiment({ location: "RecentsPopout" }),
-        v = (0, h.Us)({ location: "RecentsHeader" }),
-        { enabled: x } = c.Z.useExperiment({ location: "RecentsHeader" }),
-        C = (0, i.e7)([s.Z], () => s.Z.getUnseenInviteCount()),
-        E = (0, i.e7)([f.Z], () => f.Z.getOverdueMessageReminderCount());
-    return (0, r.jsxs)(u.h4, {
-        className: O.header,
+    s = n(598999),
+    c = n(2818),
+    u = n(768943),
+    d = n(216789),
+    f = n(153209),
+    h = n(818186),
+    p = n(999671),
+    g = n(946443),
+    m = n(388032),
+    b = n(407067);
+function y(e) {
+    let { tab: t, setTab: n, badgeState: f, closePopout: p } = e,
+        { enabled: g, inInbox: y } = c.Z.useExperiment({ location: "RecentsPopout" }),
+        O = (0, d.Us)({ location: "RecentsHeader" }),
+        v = (0, i.e7)([u.Z], () => u.Z.getOverdueMessageReminderCount());
+    return (0, r.jsxs)(s.h4, {
+        className: b.header,
         children: [
             (0, r.jsxs)("div", {
-                className: O.headerTitle,
+                className: b.headerTitle,
                 children: [
                     (0, r.jsx)(a.xx7, {
                         size: "md",
                         color: "currentColor",
-                        className: O.inboxIcon,
+                        className: b.inboxIcon,
                     }),
                     (0, r.jsx)(a.Heading, {
-                        className: O.inboxTitle,
+                        className: b.inboxTitle,
                         variant: "text-lg/semibold",
                         color: "interactive-text-active",
-                        children: y.intl.string(y.t.GSmTKJ),
+                        children: m.intl.string(m.t.GSmTKJ),
                     }),
                     (0, r.jsxs)(a.kL8, {
-                        className: O.controls,
+                        className: b.controls,
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },
-                        "aria-label": y.intl.string(y.t["8k+6QY"]),
-                        children: [(0, r.jsx)(j, { tab: t }), (0, r.jsx)(g.Z, { closePopout: m })],
+                        "aria-label": m.intl.string(m.t["8k+6QY"]),
+                        children: [(0, r.jsx)(_, { tab: t }), (0, r.jsx)(h.Z, { closePopout: p })],
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: O.headerTabs,
+                className: b.headerTabs,
                 children: (0, r.jsxs)(a.njP, {
                     selectedItem: t,
                     type: "top",
                     look: "brand",
                     onItemSelect: n,
-                    className: O.tabBar,
+                    className: b.tabBar,
                     children: [
                         (0, r.jsxs)(a.njP.Item, {
                             id: l.X.FOR_YOU,
-                            "aria-label": y.intl.string(y.t["En+D+u"]),
-                            className: O.tab,
+                            "aria-label": m.intl.string(m.t["En+D+u"]),
+                            className: b.tab,
                             children: [
-                                y.intl.string(y.t["En+D+u"]),
-                                (null == p ? void 0 : p.badgeForYou)
+                                m.intl.string(m.t["En+D+u"]),
+                                (null == f ? void 0 : f.badgeForYou)
                                     ? (0, r.jsx)(a.fWl, {
                                           color: o.Z.colors.STATUS_DANGER.css,
-                                          className: O.iconBadge,
+                                          className: b.iconBadge,
                                       })
                                     : null,
                             ],
                         }),
                         (0, r.jsx)(a.njP.Item, {
                             id: l.X.UNREADS,
-                            className: O.tab,
-                            children: y.intl.string(y.t.sRUdB8),
+                            className: b.tab,
+                            children: m.intl.string(m.t.sRUdB8),
                         }),
                         (0, r.jsx)(a.njP.Item, {
-                            "aria-label": y.intl.string(y.t.GRZF96),
+                            "aria-label": m.intl.string(m.t.GRZF96),
                             id: l.X.MENTIONS,
-                            className: O.tab,
-                            children: y.intl.string(y.t.GRZF96),
+                            className: b.tab,
+                            children: m.intl.string(m.t.GRZF96),
                         }),
-                        x
-                            ? (0, r.jsxs)(a.njP.Item, {
-                                  "aria-label": "game_invites",
-                                  id: l.X.GAME_INVITES,
-                                  className: O.tab,
-                                  children: [
-                                      y.intl.string(y.t.apq3cU),
-                                      C > 0
-                                          ? (0, r.jsx)(a.fWl, {
-                                                color: o.Z.colors.STATUS_DANGER.css,
-                                                className: O.iconBadge,
-                                            })
-                                          : null,
-                                  ],
-                              })
-                            : null,
-                        b && _
+                        g && y
                             ? (0, r.jsx)(a.njP.Item, {
-                                  "aria-label": y.intl.string(y.t["2pAkDA"]),
+                                  "aria-label": m.intl.string(m.t["2pAkDA"]),
                                   id: l.X.BOOKMARKS,
-                                  className: O.tab,
+                                  className: b.tab,
                                   children:
-                                      0 === E
-                                          ? y.intl.string(y.t["2pAkDA"])
-                                          : y.intl.formatToPlainString(y.t.I4fryG, { count: E }),
+                                      0 === v
+                                          ? m.intl.string(m.t["2pAkDA"])
+                                          : m.intl.formatToPlainString(m.t.I4fryG, { count: v }),
                               })
                             : null,
-                        v
+                        O
                             ? (0, r.jsx)(a.njP.Item, {
                                   "aria-label": "scheduled",
                                   id: l.X.SCHEDULED,
-                                  className: O.tab,
-                                  children: y.intl.string(y.t.Fn6Odn),
+                                  className: b.tab,
+                                  children: m.intl.string(m.t.Fn6Odn),
                               })
                             : null,
                     ],
@@ -126,15 +105,13 @@ function v(e) {
         ],
     });
 }
-function j(e) {
+function _(e) {
     let { tab: t } = e;
     return t === l.X.FOR_YOU
-        ? (0, r.jsx)(p.Gp, {})
+        ? (0, r.jsx)(f.Gp, {})
         : t === l.X.UNREADS
-          ? (0, r.jsx)(b.QP, {})
+          ? (0, r.jsx)(g.QP, {})
           : t === l.X.MENTIONS
-            ? (0, r.jsx)(m.Z, {})
-            : t === l.X.GAME_INVITES
-              ? (0, r.jsx)(_.S, {})
-              : null;
+            ? (0, r.jsx)(p.Z, {})
+            : null;
 }
