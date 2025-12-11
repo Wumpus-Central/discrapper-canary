@@ -15,7 +15,7 @@ var r = n(120356),
 function f(e) {
     let { className: t, view: n, application: r } = e,
         f = "embedded" === n,
-        b = (0, o.Z)({ application: r });
+        g = (0, o.Z)({ application: r });
     return (0, a.jsxs)("div", {
         className: i()(t, {
             [h.sideContainer]: !f,
@@ -29,7 +29,7 @@ function f(e) {
                         className: h.infoSection,
                         children: (0, a.jsx)(s.Z, {
                             application: r,
-                            mutualGuilds: b,
+                            mutualGuilds: g,
                             mutualGuildShownMax: 3,
                             className: h.guildCountContainer,
                             guildIconSize: s.x.SMALL,
@@ -37,7 +37,7 @@ function f(e) {
                             compact: !0,
                             children: (0, a.jsx)(l.X6q, {
                                 variant: "heading-sm/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: m.intl.string(m.t["3NxHC4"]),
                             }),
                         }),

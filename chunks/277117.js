@@ -17,8 +17,8 @@ var i = n(657707),
     b = n(280885),
     y = n(483424),
     O = n(407699),
-    j = n(78806),
-    x = n(91433),
+    x = n(78806),
+    j = n(91433),
     v = n(900927),
     C = n(944043),
     I = n(678738),
@@ -68,7 +68,7 @@ function w(e) {
             }),
             M === P.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(S.Z.Overlay, {
-                    children: (0, r.jsx)(x.Z, {
+                    children: (0, r.jsx)(j.Z, {
                         user: t,
                         channelId: A.id,
                         applicationId: k,
@@ -78,7 +78,7 @@ function w(e) {
                 (0, r.jsx)(
                     S.Z.Overlay,
                     {
-                        children: (0, r.jsx)(x.Z, {
+                        children: (0, r.jsx)(j.Z, {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
@@ -99,9 +99,9 @@ function w(e) {
                         heading: N.intl.string(N.t.Iyka0U),
                         headingIcon: (0, r.jsx)(i.Mgn, {
                             size: "xxs",
-                            color: a.Z.colors.HEADER_PRIMARY,
+                            color: a.Z.colors.TEXT_STRONG,
                         }),
-                        headingColor: "header-primary",
+                        headingColor: "text-strong",
                         children: (0, r.jsx)(c.n, { userId: t.id }),
                     }),
                 }),
@@ -124,7 +124,7 @@ function w(e) {
                         (null == w ? void 0 : w.bio) !== "" &&
                         (0, r.jsx)(I.Z, {
                             heading: N.intl.string(N.t["61W33d"]),
-                            headingColor: "header-primary",
+                            headingColor: "text-strong",
                             children: (0, r.jsx)(b.Z, {
                                 userId: t.id,
                                 userBio: w.bio,
@@ -141,12 +141,12 @@ function w(e) {
                     G.length > 0 &&
                         (0, r.jsx)(I.Z, {
                             heading: N.intl.string(N.t["Uv/eTx"]),
-                            headingColor: "header-primary",
-                            children: (0, r.jsx)(j.Z, { applicationIds: G }),
+                            headingColor: "text-strong",
+                            children: (0, r.jsx)(x.Z, { applicationIds: G }),
                         }),
                     (0, r.jsx)(I.Z, {
                         heading: t.bot ? N.intl.string(N.t["A//N4k"]) : N.intl.string(N.t.a6XYD9),
-                        headingColor: "header-primary",
+                        headingColor: "text-strong",
                         children: (0, r.jsx)(v.Z, { userId: t.id }),
                     }),
                 ],

@@ -1,40 +1,40 @@
-t.d(n, { default: () => P }), t(388685);
-var r = t(54381),
-    i = t(473749),
-    a = t(979554),
-    l = t(442837),
-    o = t(481060),
-    s = t(809206),
-    c = t(204418),
-    d = t(583434),
-    u = t(150039),
-    m = t(164946),
-    p = t(25990),
-    f = t(594174),
-    x = t(960048),
-    g = t(22095),
-    C = t(49436),
-    h = t(968843),
-    v = t(475595),
-    j = t(115179),
-    _ = t(515108),
-    b = t(291967),
-    y = t(324805),
-    N = t(388032),
-    w = t(129034);
+n.d(t, { default: () => P }), n(388685);
+var r = n(54381),
+    i = n(473749),
+    a = n(979554),
+    l = n(442837),
+    o = n(481060),
+    s = n(809206),
+    c = n(204418),
+    d = n(583434),
+    u = n(150039),
+    m = n(164946),
+    f = n(25990),
+    b = n(594174),
+    p = n(960048),
+    x = n(22095),
+    g = n(49436),
+    C = n(968843),
+    h = n(475595),
+    v = n(115179),
+    j = n(515108),
+    N = n(291967),
+    y = n(324805),
+    w = n(388032),
+    _ = n(983102);
 function A(e) {
-    var n;
-    let { quest: t, avatarDeco: i, onUseNow: a, user: l, mode: s } = e,
-        d = (0, v.fh)(t, v.eC.REWARD).url,
-        u = (0, h.Qy)(t.config),
+    var t;
+    let { quest: n, avatarDeco: i, onUseNow: a, user: l, mode: s } = e,
+        d = (0, h.fh)(n, h.eC.REWARD).url,
+        u = (0, C.Qy)(n.config),
         m =
-            (null == (n = l.avatarDecoration) ? void 0 : n.skuId) != null &&
+            (null == (t = l.avatarDecoration) ? void 0 : t.skuId) != null &&
             l.avatarDecoration.skuId === (null == i ? void 0 : i.skuId);
     return (0, r.jsxs)("div", {
-        className: w.contentContainer,
+        className: _.contentContainer,
         children: [
             (0, r.jsx)("div", {
-                className: w.previewContainer,
+                className: _.previewContainer,
                 children: (0, r.jsx)(c.Z, {
                     user: l,
                     guildId: null,
@@ -44,13 +44,13 @@ function A(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: w.copyContainer,
+                className: _.copyContainer,
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-xl/semibold",
-                        color: "header-primary",
-                        className: w.heading,
-                        children: N.intl.string(N.t["0/Yz+Y"]),
+                        color: "text-strong",
+                        className: _.heading,
+                        children: w.intl.string(w.t["0/Yz+Y"]),
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/medium",
@@ -62,7 +62,7 @@ function A(e) {
             (0, r.jsx)(o.Button, {
                 variant: "secondary",
                 size: "sm",
-                text: m ? N.intl.string(N.t.hjaYYn) : N.intl.string(N.t.MAS7uK),
+                text: m ? w.intl.string(w.t.hjaYYn) : w.intl.string(w.t.MAS7uK),
                 loading: "applying" === s,
                 disabled: "claimed" !== s || m,
                 onClick: a,
@@ -72,48 +72,48 @@ function A(e) {
     });
 }
 function P(e) {
-    var n, t, o;
-    let { initialQuest: c, onClose: v, transitionState: N, preview: w, location: P, sourceQuestContent: D } = e,
-        E = null != (t = (0, h.B4)(c.id)) ? t : c,
-        T = i.useMemo(() => (0, j.xn)(E.config), [E]),
-        O = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
+    var t, n, o;
+    let { initialQuest: c, onClose: h, transitionState: w, preview: _, location: P, sourceQuestContent: D } = e,
+        E = null != (n = (0, C.B4)(c.id)) ? n : c,
+        T = i.useMemo(() => (0, v.xn)(E.config), [E]),
+        O = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
         [L, R] = (function (e) {
-            let { product: n, isFetching: t } = (0, d.T)(e),
+            let { product: t, isFetching: n } = (0, d.T)(e),
                 r = i.useMemo(() => {
-                    if (null == n || t) return null;
-                    let e = n.items.find((e) => e.type === a.Z.AVATAR_DECORATION);
+                    if (null == t || n) return null;
+                    let e = t.items.find((e) => e.type === a.Z.AVATAR_DECORATION);
                     return null != e ? e : null;
-                }, [n, t]),
+                }, [t, n]),
                 l = async () => {
                     if (null == r)
-                        return x.Z.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
+                        return p.Z.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
                     (0, u.PO)(r);
-                    let e = p.Z.getAllPending(),
-                        n = (0, m.ED)(e),
-                        t = await (0, s.Mn)(n);
-                    return (0, s.si)(), !!(null == t ? void 0 : t.ok);
+                    let e = f.Z.getAllPending(),
+                        t = (0, m.ED)(e),
+                        n = await (0, s.Mn)(t);
+                    return (0, s.si)(), !!(null == n ? void 0 : n.ok);
                 };
             return [r, l];
         })(null != (o = null == T ? void 0 : T.skuId) ? o : null),
-        I = (null == (n = E.userStatus) ? void 0 : n.claimedAt) != null,
-        k = !w && !I,
+        I = (null == (t = E.userStatus) ? void 0 : t.claimedAt) != null,
+        k = !_ && !I,
         [S, M] = i.useState(k ? "loading" : "claimed");
     i.useEffect(() => {
         k &&
-            (0, g.QB)(E.id, C.y$.CROSS_PLATFORM, P)
+            (0, x.QB)(E.id, g.y$.CROSS_PLATFORM, P)
                 .then(() => M("claimed"))
                 .catch(() => M("error"));
     }, [E.id, P, k]);
-    let Z = !0 === w && null === L && (null == T ? void 0 : T.skuId) !== "",
+    let Z = !0 === _ && null === L && (null == T ? void 0 : T.skuId) !== "",
         B = null == O,
-        W = B || (null == L && !0 !== w) || Z || "loading" === S,
+        W = B || (null == L && !0 !== _) || Z || "loading" === S,
         q = "error" === S || null == T,
         G = async () => {
             M("applying"), M((await R()) ? "applied" : "claimed");
         };
-    return (0, r.jsx)(_.Z, {
-        onClose: v,
-        transitionState: N,
+    return (0, r.jsx)(j.Z, {
+        onClose: h,
+        transitionState: w,
         quest: E,
         sourceQuestContent: D,
         location: y.dr.COLLECTIBLE_REWARD_MODAL,
@@ -122,7 +122,7 @@ function P(e) {
         rewardContent:
             q || B
                 ? null
-                : (0, r.jsx)(b.Z, {
+                : (0, r.jsx)(N.Z, {
                       rewardName: T.messages.name,
                       children: (0, r.jsx)(A, {
                           quest: E,

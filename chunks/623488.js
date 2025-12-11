@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(765400),
     u = n(916001),
     d = n(388032),
-    f = n(833398);
+    f = n(423212);
 function p(e) {
     let { hidePurchaseToUnlockBadge: t, showDraftBadge: n, className: i, children: s } = e;
     return (0, r.jsxs)("div", {
@@ -95,10 +95,10 @@ function m(e) {
             isDraft: P = !1,
         } = e,
         R = (0, s.hQ)(),
-        D = (e) => {
+        w = (e) => {
             e.stopPropagation();
         },
-        w = (0, r.jsxs)(r.Fragment, {
+        D = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(p, {
                     showDraftBadge: P,
@@ -118,7 +118,7 @@ function m(e) {
                             children: [
                                 (0, r.jsx)(o.Heading, {
                                     variant: "text-md/medium",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     className: f.productName,
                                     id: R,
                                     children: n,
@@ -163,7 +163,7 @@ function m(e) {
                         }),
                         (0, r.jsx)("div", {
                             className: f.productActionButton,
-                            onClick: D,
+                            onClick: w,
                             children: h,
                         }),
                     ],
@@ -174,7 +174,7 @@ function m(e) {
         ? (0, r.jsx)("article", {
               className: a()(f.productCard, v ? f.opaqueBackground : f.solidBackground),
               "aria-labelledby": R,
-              children: w,
+              children: D,
           })
         : (0, r.jsx)("div", {
               style: {
@@ -186,7 +186,7 @@ function m(e) {
                   "aria-label": d.intl.formatToPlainString(d.t["e+TmJa"], { productName: n }),
                   className: a()(f.productCard, v ? f.opaqueBackground : f.solidBackground, f.cardClickableContainer),
                   onClick: y,
-                  children: w,
+                  children: D,
               }),
           });
 }

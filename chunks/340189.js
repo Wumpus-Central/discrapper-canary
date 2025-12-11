@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(388032),
-    a = n(197530);
+    a = n(551952);
 let s = function () {
     return (0, r.jsxs)("div", {
         className: a.badExample,
@@ -27,7 +27,7 @@ let s = function () {
                         children: [
                             (0, r.jsx)(i.Text, {
                                 variant: "text-md/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: l.intl.string(l.t.wyARgw),
                             }),
                             (0, r.jsx)(i.Text, {

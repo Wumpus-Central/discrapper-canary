@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -27,9 +27,9 @@ var r = n(54381),
     N = n(870205),
     P = n(981631),
     R = n(689079),
-    D = n(388032),
-    w = n(202874),
-    x = n(698342);
+    w = n(388032),
+    D = n(589118),
+    x = n(450941);
 let L = 5,
     j = "placeholder",
     M = [, , , , ,].fill(j);
@@ -65,7 +65,7 @@ function k(e) {
                     children: [
                         (0, r.jsx)(u.Text, {
                             variant: "text-sm/semibold",
-                            color: "header-primary",
+                            color: "text-strong",
                             children: o.displayName,
                         }),
                         (0, r.jsx)(u.Text, {
@@ -117,21 +117,21 @@ function U() {
                     className: x.commandTextContainerPlaceholder,
                     children: [
                         (0, r.jsx)("div", {
-                            className: w.textPlaceholder,
+                            className: D.textPlaceholder,
                             style: t,
                             children: (0, r.jsx)(u.Text, {
-                                className: w.hidden,
+                                className: D.hidden,
                                 variant: "text-sm/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 lineClamp: 1,
                                 children: "_",
                             }),
                         }),
                         (0, r.jsx)("div", {
-                            className: w.textPlaceholder,
+                            className: D.textPlaceholder,
                             style: n,
                             children: (0, r.jsx)(u.Text, {
-                                className: w.hidden,
+                                className: D.hidden,
                                 variant: "text-xs/medium",
                                 color: "text-muted",
                                 lineClamp: 1,
@@ -143,7 +143,7 @@ function U() {
             [t, n],
         );
     return (0, r.jsx)("div", {
-        className: o()(x.command, w.loadingAnimation, { [w.noAnimation]: e }),
+        className: o()(x.command, D.loadingAnimation, { [D.noAnimation]: e }),
         children: a,
     });
 }
@@ -188,8 +188,8 @@ function G(e) {
         onClick: d,
         disabled: s,
         variant: "secondary",
-        "aria-label": D.intl.formatToPlainString(D.t.UXw6W2, { commandName: n.untranslatedName }),
-        text: D.intl.string(D.t.TXNS7S),
+        "aria-label": w.intl.formatToPlainString(w.t.UXw6W2, { commandName: n.untranslatedName }),
+        text: w.intl.string(w.t.TXNS7S),
         icon: l.U,
         iconPosition: "end",
         size: "md",
@@ -232,7 +232,7 @@ function Z(e) {
               ],
           });
 }
-function B(e) {
+function F(e) {
     var t;
     let { context: n, application: a, sectionName: o, installOnDemand: s, setHasCommands: l } = e,
         {
@@ -282,14 +282,14 @@ function B(e) {
                       context: n,
                       section: _,
                       commands: y,
-                      headerName: D.intl.string(D.t.acSE0h),
+                      headerName: w.intl.string(w.t.acSE0h),
                       sectionName: o,
                   }),
                   (0, r.jsx)(Z, {
                       context: n,
                       section: _,
                       commands: p ? M : E,
-                      headerName: D.intl.string(D.t.DUU9L3),
+                      headerName: w.intl.string(w.t.DUU9L3),
                       sectionName: o,
                       children:
                           b &&

@@ -6,8 +6,8 @@ var i = n(467721),
     o = n(481060),
     s = n(607070),
     l = n(388032),
-    c = n(630676),
-    u = n(583140);
+    c = n(749057),
+    u = n(141291);
 let d = () =>
         (0, r.jsxs)("div", {
             className: u.toast,
@@ -17,7 +17,7 @@ let d = () =>
                     className: c.loadingSpinner,
                 }),
                 (0, r.jsx)(o.Text, {
-                    color: "header-primary",
+                    color: "text-strong",
                     variant: "text-md/normal",
                     children: l.intl.string(l.t["5z/hlE"]),
                 }),

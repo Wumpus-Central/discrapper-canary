@@ -31,10 +31,10 @@ var r = n(54381),
     N = n(830253),
     P = n(286654),
     R = n(981631),
-    D = n(675654),
-    w = n(509571),
+    w = n(675654),
+    D = n(509571),
     x = n(388032),
-    L = n(463063);
+    L = n(349971);
 function j(e, t, n) {
     return (
         t in e
@@ -108,8 +108,8 @@ function Z(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let B = "1",
-    F = 0.01,
+let F = "1",
+    B = 0.01,
     V = 0.1,
     H = 0.01,
     Y = 1000;
@@ -196,7 +196,7 @@ function z(e) {
 }
 function q(e, t) {
     return i.useMemo(() => {
-        if (null == t || e !== B)
+        if (null == t || e !== F)
             return {
                 x: 0,
                 y: 0,
@@ -270,26 +270,26 @@ let Q = i.forwardRef(function (e, t) {
             I,
             null != (u = null == T ? void 0 : T.id) ? u : null,
             null != (m = eo ? y.AY.getSetting() : null == (n = y.kU.getSetting()) ? void 0 : n.volume) ? m : 100,
-            !eo && (null == T ? void 0 : T.isVocal()) ? w.w.VOICE : w.w.DEFAULT,
+            !eo && (null == T ? void 0 : T.isVocal()) ? D.w.VOICE : D.w.DEFAULT,
         ),
         { createMultipleConfettiAt: eE } = i.useContext(h.h),
         eb = i.useRef(null),
         ey = q(I.soundId, eb.current),
         eO = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
-        ev = i.useRef(F),
+        ev = i.useRef(B),
         eS = i.useRef(new c.Xp()),
-        eI = I.soundId === B,
+        eI = I.soundId === F,
         eT = "sound-".concat(I.soundId),
         eC = (0, s.JA)(eT),
         eA = null != ed || null != ef,
         eN = !(0, A.Nq)(ep, I, T) && !eo,
         eP = Z || (Q && !eN),
         eR = null != (O = g.Wq.useStore().bottomPosition) ? O : 0,
-        eD =
+        ew =
             (null != (S = null == (a = eb.current) ? void 0 : a.getBoundingClientRect().bottom) ? S : 0) + 50 > eR
                 ? "top"
                 : "bottom",
-        [ew, ex] = i.useState(!1),
+        [eD, ex] = i.useState(!1),
         eL = i.useCallback(() => {
             ex(!0);
         }, []),
@@ -305,7 +305,7 @@ let Q = i.forwardRef(function (e, t) {
             (eI &&
                 !eO &&
                 ((ev.current = Math.min(ev.current + H, V)),
-                Math.random() < ev.current && eE(ey.x, ey.y, void 0, void 0, { sprite: D.vv })),
+                Math.random() < ev.current && eE(ey.x, ey.y, void 0, void 0, { sprite: w.vv })),
             null != $)
         )
             return void $(e);
@@ -334,7 +334,7 @@ let Q = i.forwardRef(function (e, t) {
                       color: "currentColor",
                       className: o()(L.primaryIcon, e),
                   }),
-        eB = (0, r.jsx)("div", {
+        eF = (0, r.jsx)("div", {
             onMouseEnter: eL,
             onMouseLeave: ej,
             children: (0, r.jsx)(z, {
@@ -342,7 +342,7 @@ let Q = i.forwardRef(function (e, t) {
                 disabled: !W && !Z,
             }),
         }),
-        eF = () =>
+        eB = () =>
             eM && !er
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -352,7 +352,7 @@ let Q = i.forwardRef(function (e, t) {
                               className: L.buttonOverlay,
                               children: (0, r.jsxs)("div", {
                                   className: L.buttonOverlayActions,
-                                  children: [eP && eG, eP && eB],
+                                  children: [eP && eG, eP && eF],
                               }),
                           }),
                       ],
@@ -371,7 +371,7 @@ let Q = i.forwardRef(function (e, t) {
                                             setTooltipShowing: ex,
                                         })
                                       : (0, r.jsxs)(r.Fragment, {
-                                            children: [eP && eG, eZ(), eP && eB],
+                                            children: [eP && eG, eZ(), eP && eF],
                                         }),
                           }),
                       ],
@@ -397,12 +397,12 @@ let Q = i.forwardRef(function (e, t) {
                                         }),
                                         (0, r.jsx)(f.Text, {
                                             variant: "text-xs/medium",
-                                            color: "header-primary",
+                                            color: "text-strong",
                                             children: x.intl.string(x.t.QqqXLY),
                                         }),
                                     ],
                                 }),
-                                eP && eB,
+                                eP && eF,
                             ],
                         }),
                     ],
@@ -412,7 +412,7 @@ let Q = i.forwardRef(function (e, t) {
             case C.Pb.PLAY:
             case C.Pb.SOUNDMOJI:
             default:
-                return eF();
+                return eB();
         }
     }
     i.useEffect(() => {
@@ -420,7 +420,7 @@ let Q = i.forwardRef(function (e, t) {
         return (
             eI &&
                 e.start(Y, () => {
-                    ev.current = Math.max(ev.current - H, F);
+                    ev.current = Math.max(ev.current - H, B);
                 }),
             () => e.stop()
         );
@@ -434,8 +434,8 @@ let Q = i.forwardRef(function (e, t) {
             (0, r.jsx)(d.u, {
                 "aria-label": null != el ? I.name : void 0,
                 __unsupportedReactNodeAsText: null != el ? el : I.name,
-                position: eD,
-                shouldShow: !ew,
+                position: ew,
+                shouldShow: !eD,
                 delay: 500,
                 children: (0, r.jsxs)(
                     f.kL8,
@@ -494,14 +494,14 @@ let Q = i.forwardRef(function (e, t) {
             !I.available &&
                 (0, r.jsx)(d.u, {
                     text: x.intl.string(x.t.MDOXJR),
-                    shouldShow: !ew,
+                    shouldShow: !eD,
                     children: (0, r.jsx)("div", {
                         className: L.unavailableTooltip,
                         children:
                             !er &&
                             (0, r.jsxs)("div", {
                                 className: L.unavailableTooltipActions,
-                                children: [eG, eB],
+                                children: [eG, eF],
                             }),
                     }),
                 }),

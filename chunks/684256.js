@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(98880),
     f = n(772606),
     p = n(388032),
-    _ = n(493891);
+    _ = n(108864);
 function m(e) {
     let { context: t, entrypoint: n, title: a, look: m, items: h, sectionName: g, sectionOverallPosition: E } = e,
         b = (0, u.s)(),
@@ -25,7 +25,7 @@ function m(e) {
                     (0, r.jsx)(f.Z, { className: _.backButton }),
                     (0, r.jsx)(s.Heading, {
                         variant: "heading-md/medium",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: a,
                     }),
                 ],

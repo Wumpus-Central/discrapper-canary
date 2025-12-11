@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(55935),
     u = n(955204),
     d = n(674680),
-    f = n(655219);
+    f = n(663530);
 function p(e) {
     let { achievementId: t, dateUnlocked: n } = e,
         i = (0, u.oX)(t);
@@ -17,7 +17,7 @@ function p(e) {
     let o = null != n,
         { name: p, description: _, hideDescriptionUntilUnlock: m, onAction: h } = i,
         g = m && !o,
-        E = o ? "header-primary" : "text-muted",
+        E = o ? "text-strong" : "text-muted",
         b = o ? "text-default" : "text-muted",
         y = s()(n),
         O = null != h && o,

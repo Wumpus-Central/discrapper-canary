@@ -9,40 +9,40 @@ var r = n(54381),
     d = n(607070),
     u = n(714939),
     g = n(981631),
-    m = n(388032),
-    p = n(203552);
-function f(e) {
+    f = n(388032),
+    m = n(500591);
+function b(e) {
     let { color: t, children: n } = e;
     return (0, r.jsxs)("div", {
-        className: p.roleTag,
+        className: m.roleTag,
         children: [
             (0, r.jsx)(s.xko, {
-                className: p.roleDot,
+                className: m.roleDot,
                 color: t,
                 colors: null,
             }),
             (0, r.jsx)("span", {
-                className: p.roleText,
+                className: m.roleText,
                 children: n,
             }),
         ],
     });
 }
-function h(e) {
+function p(e) {
     let { guild: t, display: n } = e;
     return (0, r.jsxs)("div", {
-        className: a()(p.banner, t.backgroundClass, { [p.bannerOut]: !n }),
+        className: a()(m.banner, t.backgroundClass, { [m.bannerOut]: !n }),
         children: [
             (0, r.jsx)("div", {
-                className: p.roles,
+                className: m.roles,
                 children: t.roles.map((e, t) =>
                     (0, r.jsx)(
                         "div",
                         {
-                            className: p.rolesRow,
+                            className: m.rolesRow,
                             children: e.map((e) =>
                                 (0, r.jsx)(
-                                    f,
+                                    b,
                                     {
                                         color: e.color,
                                         children: e.name,
@@ -56,9 +56,9 @@ function h(e) {
                 ),
             }),
             (0, r.jsx)("div", {
-                className: p.profileCard,
+                className: m.profileCard,
                 children: (0, r.jsxs)("div", {
-                    className: p.avatarContainer,
+                    className: m.avatarContainer,
                     children: [
                         (0, r.jsx)(s.qEK, {
                             size: s.EFr.SIZE_56,
@@ -67,9 +67,9 @@ function h(e) {
                             src: t.avatar,
                         }),
                         (0, r.jsx)(s.Text, {
-                            color: "header-primary",
+                            color: "text-strong",
                             variant: "text-md/bold",
-                            className: p.avatarName,
+                            className: m.avatarName,
                             children: t.username,
                         }),
                     ],
@@ -78,109 +78,109 @@ function h(e) {
         ],
     });
 }
-function b() {
+function h() {
     let e = i.useMemo(
             () => [
                 {
-                    backgroundClass: p.bannerClubs,
+                    backgroundClass: m.bannerClubs,
                     username: "Wumpus#0000",
                     avatar: n(91055),
                     roles: [
                         [
                             {
-                                name: m.intl.string(m.t["7oaPPo"]),
+                                name: f.intl.string(f.t["7oaPPo"]),
                                 color: "#7e00fc",
                             },
                             {
-                                name: m.intl.string(m.t["Z/HN61"]),
+                                name: f.intl.string(f.t["Z/HN61"]),
                                 color: "#faa61a",
                             },
                             {
-                                name: m.intl.string(m.t.lvHTg0),
+                                name: f.intl.string(f.t.lvHTg0),
                                 color: "#f06ea8",
                             },
                         ],
                         [
                             {
-                                name: m.intl.string(m.t["6yECkg"]),
+                                name: f.intl.string(f.t["6yECkg"]),
                                 color: "#45ddc0",
                             },
                             {
-                                name: m.intl.string(m.t["5DabCV"]),
+                                name: f.intl.string(f.t["5DabCV"]),
                                 color: "#00b0f4",
                             },
                             {
-                                name: m.intl.string(m.t.bB900T),
+                                name: f.intl.string(f.t.bB900T),
                                 color: "#ba1616",
                             },
                         ],
                     ],
                 },
                 {
-                    backgroundClass: p.bannerGaming,
+                    backgroundClass: m.bannerGaming,
                     username: "Graggle#0000",
                     avatar: n(507003),
                     roles: [
                         [
                             {
-                                name: m.intl.string(m.t["xz/Vfn"]),
+                                name: f.intl.string(f.t["xz/Vfn"]),
                                 color: "#4a76e6",
                             },
                             {
-                                name: m.intl.string(m.t.Bceruw),
+                                name: f.intl.string(f.t.Bceruw),
                                 color: "#ad87ff",
                             },
                             {
-                                name: m.intl.string(m.t.W51slj),
+                                name: f.intl.string(f.t.W51slj),
                                 color: "#6defcf",
                             },
                         ],
                         [
                             {
-                                name: m.intl.string(m.t.y9gTiX),
+                                name: f.intl.string(f.t.y9gTiX),
                                 color: "#ff73fa",
                             },
                             {
-                                name: m.intl.string(m.t.HslvdS),
+                                name: f.intl.string(f.t.HslvdS),
                                 color: "#3ba55c",
                             },
                             {
-                                name: m.intl.string(m.t.ipL1AG),
+                                name: f.intl.string(f.t.ipL1AG),
                                 color: "#ff1b66",
                             },
                         ],
                     ],
                 },
                 {
-                    backgroundClass: p.bannerHobbies,
+                    backgroundClass: m.bannerHobbies,
                     username: "Mallow#0000",
                     avatar: n(552557),
                     roles: [
                         [
                             {
-                                name: m.intl.string(m.t.pAFEbr),
+                                name: f.intl.string(f.t.pAFEbr),
                                 color: "#20d6b8",
                             },
                             {
-                                name: m.intl.string(m.t["p/HZEE"]),
+                                name: f.intl.string(f.t["p/HZEE"]),
                                 color: "#236136",
                             },
                             {
-                                name: m.intl.string(m.t["9Qp/JQ"]),
+                                name: f.intl.string(f.t["9Qp/JQ"]),
                                 color: "#ff9a15",
                             },
                         ],
                         [
                             {
-                                name: m.intl.string(m.t.craF5a),
+                                name: f.intl.string(f.t.craF5a),
                                 color: "#ff78b9",
                             },
                             {
-                                name: m.intl.string(m.t.L1TvXF),
+                                name: f.intl.string(f.t.L1TvXF),
                                 color: "#00b0f4",
                             },
                             {
-                                name: m.intl.string(m.t.lqKz9F),
+                                name: f.intl.string(f.t.lqKz9F),
                                 color: "#6f52e4",
                             },
                         ],
@@ -201,11 +201,11 @@ function b() {
             return () => clearTimeout(e);
         }, [t]),
         (0, r.jsx)("div", {
-            className: p.bannerContainer,
+            className: m.bannerContainer,
             "aria-hidden": !0,
             children: e.map((e, n) =>
                 (0, r.jsx)(
-                    h,
+                    p,
                     {
                         guild: e,
                         display: n === t,
@@ -222,47 +222,47 @@ function x(e) {
         g = async () => {
             d(!0), await o.Z.createRole(t.id), d(!1);
         },
-        f = i.useCallback(() => {
+        b = i.useCallback(() => {
             l(n.id);
         }, [l, n.id]);
     return (0, r.jsx)(c.NM, {
         children: (0, r.jsxs)("div", {
-            className: p.section,
+            className: m.section,
             children: [
                 (0, r.jsx)(s.Heading, {
                     variant: "heading-lg/semibold",
-                    children: m.intl.string(m.t["LPJmL/"]),
+                    children: f.intl.string(f.t["LPJmL/"]),
                 }),
                 (0, r.jsxs)("div", {
-                    className: p.container,
+                    className: m.container,
                     children: [
-                        (0, r.jsx)(b, {}),
+                        (0, r.jsx)(h, {}),
                         (0, r.jsx)(s.Heading, {
                             variant: "heading-xl/semibold",
-                            children: m.intl.string(m.t.ALlnbi),
+                            children: f.intl.string(f.t.ALlnbi),
                         }),
                         (0, r.jsx)(s.Text, {
                             color: "text-default",
                             variant: "text-md/normal",
-                            className: p.introBody,
-                            children: m.intl.string(m.t["1ydhVp"]),
+                            className: m.introBody,
+                            children: f.intl.string(f.t["1ydhVp"]),
                         }),
                         (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: p.button,
+                            className: m.button,
                             children: (0, r.jsx)(s.Button, {
                                 variant: "primary",
-                                text: m.intl.string(m.t.JZZjQK),
+                                text: f.intl.string(f.t.JZZjQK),
                                 onClick: g,
                                 loading: a,
                             }),
                         }),
                     ],
                 }),
-                (0, r.jsx)(s.izJ, { className: p.divider }),
+                (0, r.jsx)(s.izJ, { className: m.divider }),
                 (0, r.jsx)(u.Z, {
                     role: n,
-                    onClick: f,
+                    onClick: b,
                 }),
             ],
         }),

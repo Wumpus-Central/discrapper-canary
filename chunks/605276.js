@@ -1,4 +1,4 @@
-t.d(n, { Z: () => y });
+t.d(n, { Z: () => N });
 var a = t(54381),
     l = t(473749),
     r = t(399606),
@@ -11,10 +11,10 @@ var a = t(54381),
     m = t(592125),
     h = t(375954),
     f = t(496675),
-    b = t(768581),
-    g = t(526120),
-    p = t(825334),
-    x = t(981631),
+    g = t(768581),
+    b = t(526120),
+    x = t(825334),
+    p = t(981631),
     j = t(388032),
     C = t(358053);
 let v = l.memo(function (e) {
@@ -34,21 +34,21 @@ let v = l.memo(function (e) {
     Z = (e) => {
         let { channelId: n, title: t, icon: d } = e,
             o = (0, r.e7)([m.Z], () => m.Z.getChannel(n)),
-            p = (0, r.e7)([h.Z], () => h.Z.getMessages(n)),
-            j = (0, r.e7)([f.Z], () => f.Z.can(x.Plq.VIEW_CHANNEL, o)),
-            v = p.first(),
+            x = (0, r.e7)([h.Z], () => h.Z.getMessages(n)),
+            j = (0, r.e7)([f.Z], () => f.Z.can(p.Plq.VIEW_CHANNEL, o)),
+            v = x.first(),
             Z = (0, s.zy)(v, !1),
             I = (null == Z ? void 0 : Z.length) > 0 ? Z[0] : null,
-            y = null != o && null == v && !p.loadingMore && !p.ready && !p.hasFetched && j;
+            N = null != o && null == v && !x.loadingMore && !x.ready && !x.hasFetched && j;
         return (
             l.useEffect(() => {
-                y &&
+                N &&
                     c.Z.fetchMessages({
                         channelId: n,
                         after: n,
                         limit: 5,
                     });
-            }, [n, y]),
+            }, [n, N]),
             (0, a.jsx)(
                 i.P3F,
                 {
@@ -56,7 +56,7 @@ let v = l.memo(function (e) {
                     onClick: (e) => {
                         null != o &&
                             (e.shiftKey
-                                ? (0, g.C3)(o.guild_id, o.id)
+                                ? (0, b.C3)(o.guild_id, o.id)
                                 : u.Z.openResourceChannelAsSidebar({
                                       guildId: o.guild_id,
                                       channelId: o.id,
@@ -65,7 +65,7 @@ let v = l.memo(function (e) {
                     children: (0, a.jsxs)(a.Fragment, {
                         children: [
                             (() => {
-                                let e = b.ZP.getResourceChannelIconURL({
+                                let e = g.ZP.getResourceChannelIconURL({
                                     channelId: n,
                                     icon: d,
                                 });
@@ -105,7 +105,7 @@ let v = l.memo(function (e) {
     },
     I = l.memo(function (e) {
         let { guild: n } = e,
-            t = (0, p.Z)(n.id);
+            t = (0, x.Z)(n.id);
         return 0 === t.length
             ? null
             : (0, a.jsx)(i.Zbd, {
@@ -116,7 +116,7 @@ let v = l.memo(function (e) {
                           (0, a.jsx)(i.Heading, {
                               className: C.sidebarCardHeader,
                               variant: "heading-md/bold",
-                              color: "header-primary",
+                              color: "text-strong",
                               children: j.intl.string(j.t.xwY4La),
                           }),
                           (0, a.jsx)("div", {
@@ -137,7 +137,7 @@ let v = l.memo(function (e) {
                   }),
               });
     }),
-    y = l.memo(function (e) {
+    N = l.memo(function (e) {
         let { guild: n, isNewMember: t } = e;
         return (0, a.jsxs)("aside", {
             className: C.sidebar,

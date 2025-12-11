@@ -53,7 +53,7 @@ function U(e) {
                         children: [
                             (0, r.jsx)(E.Text, {
                                 variant: "text-md/medium",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: L,
                             }),
                             null != O &&

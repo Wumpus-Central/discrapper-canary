@@ -105,7 +105,7 @@ function I(e) {
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: a,
                     }),
                     (0, r.jsxs)(s.P3F, {
@@ -197,7 +197,7 @@ function A() {
                     children: [
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/medium",
-                            color: "header-primary",
+                            color: "text-strong",
                             className: O.noGamesConnectedText,
                             children: y.intl.string(y.t["+0U77d"]),
                         }),

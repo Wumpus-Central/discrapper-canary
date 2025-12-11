@@ -47,8 +47,8 @@ var i = n(120356),
     U = n(529663),
     G = n(107283),
     Z = n(476945),
-    B = n(945182);
-function F(e) {
+    F = n(945182);
+function B(e) {
     let {
         Icon: t,
         text: n,
@@ -90,7 +90,7 @@ function V(e) {
         children: x.dO.map((e, n) => {
             let { Icon: i, getText: a } = e;
             return (0, r.jsx)(
-                F,
+                B,
                 {
                     Icon: i,
                     text: a(),
@@ -111,7 +111,7 @@ function H(e) {
         children: i.map((e, i) => {
             let { Icon: a, getText: o } = e;
             return (0, r.jsx)(
-                F,
+                B,
                 {
                     Icon: a,
                     text: o(),
@@ -283,7 +283,7 @@ function z(e) {
             g.map((e, n) => {
                 let { Icon: i, getText: o } = e;
                 return (0, r.jsx)(
-                    F,
+                    B,
                     {
                         Icon: i,
                         text: o(d),
@@ -411,11 +411,11 @@ function Q(e) {
         k = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         G = (0, T.N)(),
         Z = null == G || null == (t = G.subscription_trial) ? void 0 : t.sku_id,
-        F = (null == M ? void 0 : M.hasActiveTrial) ? (null == k ? void 0 : k.premiumType) : null,
+        B = (null == M ? void 0 : M.hasActiveTrial) ? (null == k ? void 0 : k.premiumType) : null,
         V = (0, O.Nx)(),
         H = (0, I.N)(),
         Y = (0, O.t7)(),
-        W = null != Z || null != F ? L.C.PREMIUM_TRIAL : null != H || Y ? L.C.PREMIUM_DISCOUNT : null,
+        W = null != Z || null != B ? L.C.PREMIUM_TRIAL : null != H || Y ? L.C.PREMIUM_DISCOUNT : null,
         K = (0, y.Vi)(),
         q = !b && V,
         Q = null == (n = (0, v.Z)()) ? void 0 : n.planSelection,
@@ -424,7 +424,7 @@ function Q(e) {
         $ = (0, N.W)(),
         ee = (0, s.ap)((0, c.ZP)()),
         et = ee ? P.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE : P.VE.PREMIUM_TIER_2_WHITE_FILL,
-        en = (0, P.A1)(Y, F, H, G, Z),
+        en = (0, P.A1)(Y, B, H, G, Z),
         er = q && !ee ? U.rimGlowTier2 : void 0;
     return (0, r.jsxs)("div", {
         className: a()(U.card, U.tier2, E, {
@@ -464,7 +464,7 @@ function Q(e) {
                 ? (0, r.jsx)("div", {
                       className: U.wumpusImageContainer,
                       children: (0, r.jsx)(l.Eep, {
-                          src: B,
+                          src: F,
                           mediaLayoutType: j.hV.RESPONSIVE,
                           width: 270,
                           height: 242,
@@ -546,7 +546,7 @@ function J(e) {
                 ref: s,
                 className: U.applicationHomeTierCardSectionHeader,
                 variant: "display-md",
-                color: "header-primary",
+                color: "text-strong",
                 children: M.intl.string(M.t.vLz3Zs),
             }),
             (0, r.jsxs)("div", {

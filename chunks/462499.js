@@ -1,8 +1,8 @@
-l.d(n, { default: () => b }), l(388685), l(953529);
+l.d(e, { default: () => b }), l(388685), l(953529);
 var a = l(54381),
-    r = l(473749),
-    t = l(658722),
-    i = l.n(t),
+    t = l(473749),
+    i = l(658722),
+    r = l.n(i),
     s = l(793030),
     o = l(399606),
     u = l(668339),
@@ -10,109 +10,109 @@ var a = l(54381),
     d = l(471445),
     m = l(734893),
     h = l(208567),
-    p = l(592125),
-    g = l(984933),
-    x = l(430824),
+    g = l(592125),
+    x = l(984933),
+    p = l(430824),
     v = l(768581),
     C = l(969632),
     j = l(580357),
     k = l(388032),
-    I = l(353441);
-function f(e, n, l, a) {
+    I = l(609442);
+function f(n, e, l, a) {
     return {
-        channelId: e.value,
-        title: n,
+        channelId: n.value,
+        title: e,
         description: l,
         emoji: null,
         icon: null != a ? a : null,
     };
 }
-function b(e) {
-    var n, l;
-    let { transitionState: t, onClose: b, resourceChannel: N, guildId: _, onSave: Z, onDelete: y, onIconUpload: G } = e,
-        [S, P] = r.useState(null != (n = null == N ? void 0 : N.title) ? n : ""),
-        [U, H] = r.useState(null != (l = null == N ? void 0 : N.description) ? l : ""),
-        [K, L] = r.useState(
-            (function (e) {
-                if (null == e) return null;
-                let n = p.Z.getChannel(e.channelId);
-                return null == n
+function b(n) {
+    var e, l;
+    let { transitionState: i, onClose: b, resourceChannel: N, guildId: Z, onSave: G, onDelete: S, onIconUpload: y } = n,
+        [P, U] = t.useState(null != (e = null == N ? void 0 : N.title) ? e : ""),
+        [H, K] = t.useState(null != (l = null == N ? void 0 : N.description) ? l : ""),
+        [L, M] = t.useState(
+            (function (n) {
+                if (null == n) return null;
+                let e = g.Z.getChannel(n.channelId);
+                return null == e
                     ? null
                     : {
-                          value: n.id,
-                          label: n.name,
+                          value: e.id,
+                          label: e.name,
                       };
             })(N),
         ),
-        M = (0, o.e7)([C.Z], () => {
-            var e;
-            return null == (e = C.Z.getResourceChannel(null == N ? void 0 : N.channelId)) ? void 0 : e.icon;
+        R = (0, o.e7)([C.Z], () => {
+            var n;
+            return null == (n = C.Z.getResourceChannel(null == N ? void 0 : N.channelId)) ? void 0 : n.icon;
         }),
-        R = (0, o.Wu)([C.Z], () => {
-            var e, n;
-            return (null != (n = null == (e = C.Z.getSettings()) ? void 0 : e.resourceChannels) ? n : []).map(
-                (e) => e.channelId,
+        E = (0, o.Wu)([C.Z], () => {
+            var n, e;
+            return (null != (e = null == (n = C.Z.getSettings()) ? void 0 : n.resourceChannels) ? e : []).map(
+                (n) => n.channelId,
             );
         }),
-        E = S.length < m.n || null == K,
-        T = r.useCallback(() => {
-            null == K || S.length <= 0 || (Z(f(K, S, U, M)), b());
-        }, [Z, b, S, K, M, U]),
-        w = r.useCallback(() => {
-            null == y || y(), b();
-        }, [y, b]),
-        z = r.useCallback(
-            (e) => {
-                L(e);
+        T = P.length < m.n || null == L,
+        w = t.useCallback(() => {
+            null == L || P.length <= 0 || (G(f(L, P, H, R)), b());
+        }, [G, b, P, L, R, H]),
+        z = t.useCallback(() => {
+            null == S || S(), b();
+        }, [S, b]),
+        B = t.useCallback(
+            (n) => {
+                M(n);
             },
-            [L],
+            [M],
         ),
-        B = r.useCallback(
-            (e) =>
+        O = t.useCallback(
+            (n) =>
                 Promise.resolve(
-                    g.ZP.getSelectableChannels(_)
-                        .filter((n) => (0, m.k3)(n.channel) && !R.includes(n.channel.id) && i()(e, n.channel.name))
-                        .map((e) => ({
-                            value: e.channel.id,
-                            label: e.channel.name,
+                    x.ZP.getSelectableChannels(Z)
+                        .filter((e) => (0, m.k3)(e.channel) && !E.includes(e.channel.id) && r()(n, e.channel.name))
+                        .map((n) => ({
+                            value: n.channel.id,
+                            label: n.channel.name,
                         })),
                 ),
-            [_, R],
+            [Z, E],
         ),
-        O = r.useCallback(
-            (e) => {
-                if (null == e || null == _) return null;
-                let n = p.Z.getChannel(e.value),
-                    l = x.Z.getGuild(_);
-                if (null == n || null == l) return null;
-                let r = (0, d.KS)(n, l);
-                return null == r
+        X = t.useCallback(
+            (n) => {
+                if (null == n || null == Z) return null;
+                let e = g.Z.getChannel(n.value),
+                    l = p.Z.getGuild(Z);
+                if (null == e || null == l) return null;
+                let t = (0, d.KS)(e, l);
+                return null == t
                     ? null
-                    : (0, a.jsx)(r, {
+                    : (0, a.jsx)(t, {
                           size: "xs",
                           color: "currentColor",
                           className: I.channelIcon,
                       });
             },
-            [_],
+            [Z],
         ),
-        X = r.useCallback(
-            (e) => {
-                null != G && null != K && G(f(K, S, U), e);
+        _ = t.useCallback(
+            (n) => {
+                null != y && null != L && y(f(L, P, H), n);
             },
-            [K, S, G, U],
+            [L, P, y, H],
         ),
-        D = r.useCallback(
+        D = t.useCallback(
             () =>
-                null == M || null == K
+                null == R || null == L
                     ? null
                     : v.ZP.getResourceChannelIconURL({
-                          channelId: K.value,
-                          icon: M,
+                          channelId: L.value,
+                          icon: R,
                       }),
-            [K, M],
+            [L, R],
         ),
-        F = r.useMemo(
+        F = t.useMemo(
             () => [
                 {
                     variant: "secondary",
@@ -122,22 +122,22 @@ function b(e) {
                 {
                     variant: "primary",
                     text: k.intl.string(k.t["R3BPH+"]),
-                    onClick: T,
-                    disabled: E,
+                    onClick: w,
+                    disabled: T,
                 },
             ],
-            [T, E, b],
+            [w, T, b],
         );
     return (0, a.jsxs)(s.Modal, {
         title: k.intl.string(k.t.SNMXYt),
-        transitionState: t,
+        transitionState: i,
         onClose: b,
         actions: F,
         actionBarInput:
             null != N
                 ? (0, a.jsx)(c.Avr, {
                       text: k.intl.string(k.t.N86XcP),
-                      onClick: w,
+                      onClick: z,
                       variant: "critical",
                   })
                 : void 0,
@@ -147,14 +147,14 @@ function b(e) {
                 children: [
                     (0, a.jsxs)(c.Heading, {
                         variant: "heading-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: [k.intl.string(k.t.nPa4Ju), (0, a.jsx)(j.Z, {})],
                     }),
                     (0, a.jsx)(u.d, {
-                        value: K,
-                        renderOptionPrefix: O,
-                        options: B,
-                        onChange: z,
+                        value: L,
+                        renderOptionPrefix: X,
+                        options: O,
+                        onChange: B,
                     }),
                     (0, a.jsx)(c.Text, {
                         variant: "text-xs/medium",
@@ -169,12 +169,12 @@ function b(e) {
                 children: [
                     (0, a.jsxs)(c.Heading, {
                         variant: "heading-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: [k.intl.string(k.t["lFy+aW"]), (0, a.jsx)(j.Z, {})],
                     }),
                     (0, a.jsx)(c.oil, {
-                        value: S,
-                        onChange: P,
+                        value: P,
+                        onChange: U,
                         placeholder: k.intl.string(k.t.XKUimI),
                         maxLength: m.am,
                     }),
@@ -186,12 +186,12 @@ function b(e) {
                 children: [
                     (0, a.jsx)(c.Heading, {
                         variant: "heading-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: k.intl.string(k.t.CnkilH),
                     }),
                     (0, a.jsx)(c.Kx8, {
-                        value: U,
-                        onChange: H,
+                        value: H,
+                        onChange: K,
                         placeholder: k.intl.string(k.t.na0V4E),
                         maxLength: m.Vu,
                     }),
@@ -205,7 +205,7 @@ function b(e) {
                         children: [
                             (0, a.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: k.intl.string(k.t.CB6dyu),
                             }),
                             (0, a.jsx)(c.Text, {
@@ -219,16 +219,16 @@ function b(e) {
                         children: (0, a.jsx)(h.Z, {
                             className: I.uploader,
                             imageClassName: I.uploadImage,
-                            image: M,
+                            image: R,
                             makeURL: D,
                             icon: (0, a.jsx)(c.rG2, {
                                 size: "md",
                                 color: "currentColor",
                             }),
                             hideSize: !0,
-                            onChange: X,
+                            onChange: _,
                             iconClassName: I.uploadImageIcon,
-                            showIcon: null == M,
+                            showIcon: null == R,
                         }),
                     }),
                 ],

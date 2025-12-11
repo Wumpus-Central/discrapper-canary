@@ -7,7 +7,7 @@ n(473749);
 var i = n(330711),
     a = n(793030),
     o = n(692547),
-    s = n(243059);
+    s = n(931632);
 function l(e) {
     let { type: t } = e;
     return (0, r.jsx)(c, {
@@ -31,7 +31,7 @@ function c(e) {
         children: [
             t,
             (0, r.jsx)(a.xvT, {
-                color: "header-primary",
+                color: "text-strong",
                 variant: "text-sm/medium",
                 children: n,
             }),

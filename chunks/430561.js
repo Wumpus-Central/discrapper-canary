@@ -34,7 +34,7 @@ function S(e) {
         className: v.titleWrapper,
         children: (0, r.jsx)(u.Text, {
             variant: "text-xs/semibold",
-            color: "header-primary",
+            color: "text-strong",
             children: t,
         }),
     });
@@ -107,7 +107,7 @@ function P(e) {
                           },
                           children: (0, r.jsx)(u.Text, {
                               variant: "text-xs/semibold",
-                              color: "header-primary",
+                              color: "text-strong",
                               children: o(),
                           }),
                       }),
@@ -119,7 +119,7 @@ function P(e) {
               className: v.titleWrapper,
               children: (0, r.jsx)(u.Text, {
                   variant: "text-xs/semibold",
-                  color: "header-primary",
+                  color: "text-strong",
                   children: t,
               }),
           });

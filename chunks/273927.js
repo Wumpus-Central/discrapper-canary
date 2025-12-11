@@ -21,7 +21,7 @@ var r = n(54381),
     g = n(726985),
     E = n(981631),
     b = n(388032),
-    y = n(602201);
+    y = n(131126);
 let O = 5;
 function v(e) {
     let { listType: t, numberOfUsers: n } = e,
@@ -86,7 +86,7 @@ function S(e) {
                               children: [
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-md/semibold",
-                                      color: "header-primary",
+                                      color: "text-strong",
                                       children: null != (t = m.globalName) ? t : m.username,
                                   }),
                                   (0, r.jsx)(l.Text, {

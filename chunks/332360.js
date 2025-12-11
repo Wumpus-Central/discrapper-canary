@@ -98,7 +98,7 @@ let E = () => {
                                 }),
                                 (0, r.jsx)(l.Heading, {
                                     variant: "heading-xl/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: h.intl.string(e === _.dG.CONTENT_AND_SOCIAL ? h.t["+o1pDZ"] : h.t.OAuOHD),
                                 }),
                             ],

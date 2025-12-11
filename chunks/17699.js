@@ -9,10 +9,10 @@ var r = n(54381),
     d = n(749210),
     u = n(110924),
     g = n(410030),
-    m = n(218867),
-    f = n(733026),
-    p = n(594174),
-    b = n(136015),
+    f = n(218867),
+    m = n(733026),
+    b = n(594174),
+    p = n(136015),
     h = n(434404),
     x = n(999382),
     j = n(84613),
@@ -87,7 +87,7 @@ class S extends i.PureComponent {
                     children: [
                         (0, r.jsx)(o.Text, {
                             variant: "text-md/semibold",
-                            color: "header-primary",
+                            color: "text-strong",
                             children: null != (e = t.globalName) ? e : t.username,
                         }),
                         (0, r.jsx)(o.Text, {
@@ -164,7 +164,7 @@ let _ = i.forwardRef(function (e, t) {
             },
             [a, n, l],
         );
-    return (0, r.jsx)(m.Z, {
+    return (0, r.jsx)(f.Z, {
         role: "listbox",
         listPadding: [8, 8, 8, 8],
         rowCount: l.length,
@@ -183,10 +183,10 @@ function T(e) {
         g = i.useCallback((e) => {
             a(e), 0 === e.trim().length && h.Z.setSearchQuery(e);
         }, []),
-        m = i.useCallback(() => {
+        f = i.useCallback(() => {
             a(""), h.Z.setSearchQuery("");
         }, []),
-        p = i.useCallback(async () => {
+        b = i.useCallback(async () => {
             if (0 === l.trim().length) {
                 h.Z.setSearchQuery(l), c(!1);
                 return;
@@ -194,18 +194,18 @@ function T(e) {
             if (!s)
                 try {
                     c(!0);
-                    let [e, n] = (0, f.C)(l),
+                    let [e, n] = (0, m.C)(l),
                         r = e[0];
                     h.Z.setSearchQuery(l), await d.Z.searchGuildBans(t, r, n), c(!1);
                 } catch (e) {
                     c(!1);
                 }
         }, [t, s, l]),
-        b = i.useCallback(
+        p = i.useCallback(
             (e) => {
-                "Enter" === e.key && (e.preventDefault(), e.stopPropagation(), p());
+                "Enter" === e.key && (e.preventDefault(), e.stopPropagation(), b());
             },
-            [p],
+            [b],
         );
     return (0, r.jsxs)("div", {
         children: [
@@ -229,8 +229,8 @@ function T(e) {
                         placeholder: C.intl.string(C.t.MiqUmf),
                         "aria-label": C.intl.string(C.t.MiqUmf),
                         onChange: g,
-                        onKeyDown: b,
-                        onClear: m,
+                        onKeyDown: p,
+                        onClear: f,
                     }),
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
@@ -238,7 +238,7 @@ function T(e) {
                         children: (0, r.jsx)(o.Button, {
                             variant: "primary",
                             text: C.intl.string(C.t["5h0QOP"]),
-                            onClick: p,
+                            onClick: b,
                             disabled: s,
                             loading: s,
                         }),
@@ -250,11 +250,11 @@ function T(e) {
 }
 function P() {
     var e, t;
-    let { guild: c, searchQuery: m } = (0, s.e7)([x.Z], () => x.Z.getProps(), [], l.isEqual),
-        h = null != m && m.trim().length > 0,
+    let { guild: c, searchQuery: f } = (0, s.e7)([x.Z], () => x.Z.getProps(), [], l.isEqual),
+        h = null != f && f.trim().length > 0,
         j = (0, u.Z)(h),
         v = h !== j,
-        [N] = (0, s.e7)([x.Z], () => x.Z.getBans(), [], b.Q),
+        [N] = (0, s.e7)([x.Z], () => x.Z.getBans(), [], p.Q),
         S = null != (e = null == N ? void 0 : N.size) ? e : 0,
         P = (0, g.ZP)(),
         w = null != (t = null == c ? void 0 : c.id) ? t : O.lds,
@@ -265,7 +265,7 @@ function P() {
                     ? (e) => null != e
                     : (t) => {
                           if (null == t || 0 === e.trim().length) return !1;
-                          let [[n], r] = (0, f.C)(e);
+                          let [[n], r] = (0, m.C)(e);
                           return (
                               !!r.includes(t.id) ||
                               (null != n &&
@@ -282,14 +282,14 @@ function P() {
                 if (null == e || 0 === n) return [];
                 let r = [];
                 for (let n of e.keys()) {
-                    let e = p.default.getUser(n);
+                    let e = b.default.getUser(n);
                     null != e && R(t)(e) && r.push(e);
                 }
                 return r;
             },
             [R],
         ),
-        A = i.useMemo(() => D(N, m, S), [N, D, m, S]),
+        A = i.useMemo(() => D(N, f, S), [N, D, f, S]),
         L = null != N,
         k = A.length % 1000 == 0 && A.length > 0 && L,
         G = 0 === A.length,
@@ -335,7 +335,7 @@ function P() {
               children: [
                   (0, r.jsx)(T, {
                       guildId: w,
-                      storedSearchQuery: m,
+                      storedSearchQuery: f,
                   }),
                   (0, r.jsxs)("div", {
                       className: y.scrollerContainer,

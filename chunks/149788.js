@@ -86,7 +86,7 @@ let b = function (e) {
                                   (0, r.jsx)(l.Heading, {
                                       className: h.sectionTitle,
                                       variant: "heading-lg/semibold",
-                                      color: "header-primary",
+                                      color: "text-strong",
                                       children: g.intl.string(g.t["2DfZIQ"]),
                                   }),
                                   (0, r.jsxs)("div", {

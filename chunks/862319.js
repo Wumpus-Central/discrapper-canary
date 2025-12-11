@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => f,
-    w: () => h,
+    Z: () => b,
+    w: () => p,
 });
 var r = n(54381);
 n(473749);
@@ -12,8 +12,8 @@ var i = n(120356),
     c = n(817460),
     d = n(723047),
     u = n(388032),
-    g = n(189075);
-function m(e) {
+    g = n(516453);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function m(e) {
     }
     return e;
 }
-function p(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,9 +56,9 @@ function p(e, t) {
         e
     );
 }
-function f(e) {
-    let { channelBenefits: t, intangibleBenefits: i, subscriptionListings: s, onImport: f } = e,
-        h = (0, d.mY)();
+function b(e) {
+    let { channelBenefits: t, intangibleBenefits: i, subscriptionListings: s, onImport: b } = e,
+        p = (0, d.mY)();
     return (0, r.jsx)("div", {
         className: g.container,
         children: s.map((e) =>
@@ -77,7 +77,7 @@ function f(e) {
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-md/normal",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     className: l()(g.rowText, g.listingName),
                                     children: e.name,
                                 }),
@@ -101,16 +101,16 @@ function f(e) {
                                     return (n) =>
                                         (0, r.jsx)(
                                             l,
-                                            p(m({}, n), {
+                                            m(f({}, n), {
                                                 fromSubscriptionListing: e,
                                                 existingChannelBenefits: t,
                                                 existingIntangibleBenefits: i,
-                                                onSubmit: f,
+                                                onSubmit: b,
                                             }),
                                         );
                                 });
                             },
-                            disabled: h,
+                            disabled: p,
                             text: u.intl.string(u.t["90bIv9"]),
                         }),
                     ],
@@ -120,7 +120,7 @@ function f(e) {
         ),
     });
 }
-function h(e) {
+function p(e) {
     let { guildId: t, onImport: i, disabled: o = !1 } = e;
     return (0, r.jsxs)(a.P3F, {
         className: l()(g.importRoleCard, { [g.disabled]: o }),
@@ -132,7 +132,7 @@ function h(e) {
                       return (n) =>
                           (0, r.jsx)(
                               e,
-                              p(m({}, n), {
+                              m(f({}, n), {
                                   guildId: t,
                                   onImport: i,
                               }),
@@ -150,7 +150,7 @@ function h(e) {
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
-                color: "header-primary",
+                color: "text-strong",
                 className: g.rowText,
                 children: u.intl.string(u.t.xK9pBC),
             }),

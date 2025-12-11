@@ -33,7 +33,7 @@ function c(e) {
                           u.length > 0 &&
                           (0, l.jsx)(a.Heading, {
                               variant: "heading-lg/semibold",
-                              color: "header-primary",
+                              color: "text-strong",
                               lineClamp: 1,
                               className: d.sectionTitle,
                               children: u,

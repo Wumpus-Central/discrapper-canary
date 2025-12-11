@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(937889),
     P = n(739566),
     R = n(779125),
-    D = n(890410),
-    w = n(464891),
+    w = n(890410),
+    D = n(464891),
     x = n(507418),
     L = n(348238),
     j = n(38267),
@@ -37,9 +37,9 @@ var r = n(54381),
     U = n(959517),
     G = n(981631),
     Z = n(674563),
-    B = n(590433),
-    F = n(388032),
-    V = n(545869);
+    F = n(590433),
+    B = n(388032),
+    V = n(978295);
 function H(e, t, n) {
     return (
         t in e
@@ -200,17 +200,17 @@ function et(e, t, n) {
     try {
         switch (parseInt(e.actionType)) {
             case g.d.DELETE_USER_MESSAGE:
-                return F.intl.formatToPlainString(F.t.BtKE9h, {
+                return B.intl.formatToPlainString(B.t.BtKE9h, {
                     userName: i,
                     timestamp: a.fromNow(),
                 });
             case g.d.SET_COMPLETED:
-                return F.intl.formatToPlainString(F.t.dyo9US, {
+                return B.intl.formatToPlainString(B.t.dyo9US, {
                     userName: i,
                     timestamp: a.fromNow(),
                 });
             case g.d.SUBMIT_FEEDBACK:
-                return F.intl.formatToPlainString(F.t["C9/kIO"], {
+                return B.intl.formatToPlainString(B.t["C9/kIO"], {
                     userName: i,
                     timestamp: a.fromNow(),
                 });
@@ -259,7 +259,7 @@ let ei = i.memo(function (e) {
         l = Q(n, i),
         c = X(i, n.author),
         u = (0, P.ZP)(n),
-        d = (0, w.CF)(
+        d = (0, D.CF)(
             Y(
                 {
                     message: n,
@@ -278,7 +278,7 @@ let ei = i.memo(function (e) {
         h = X(i, _, T.default.getCurrentUser());
     if (null != _) {
         let e = (0, P.ij)(_, i),
-            r = (0, w.CF)(
+            r = (0, D.CF)(
                 Y(
                     {
                         message: n,
@@ -304,7 +304,7 @@ let ei = i.memo(function (e) {
         });
     return (0, r.jsx)(p.Text, {
         variant: "text-md/normal",
-        color: "header-primary",
+        color: "text-strong",
         tag: "span",
         className: V.spanCorrection,
         children: (0, E.Mq)(n, a, g, f, t),
@@ -374,7 +374,7 @@ function ea(e) {
         ey = i.useCallback(() => {
             (0, y.Xx)(s.id, l, g.d.DELETE_USER_MESSAGE);
         }, [l, s.id]),
-        eO = (0, B.getFriendlyDurationString)(Number(eo)),
+        eO = (0, F.getFriendlyDurationString)(Number(eo)),
         ev = null != es,
         eS = H && null != ea && (null == el || !el.actions.hasOwnProperty(g.d.DELETE_USER_MESSAGE)),
         eI =
@@ -395,7 +395,7 @@ function ea(e) {
             children: (0, r.jsxs)("div", {
                 className: o()(V.content, { [V.compact]: a }),
                 children: [
-                    (0, r.jsx)(w.nD, {
+                    (0, r.jsx)(D.nD, {
                         message: s,
                         messageClassname: V.spanCorrection,
                         className: o()(V.usernameContainer, V.spanCorrection, { [V.compact]: a }),
@@ -407,7 +407,7 @@ function ea(e) {
                                     color: "text-brand",
                                     tag: "span",
                                     className: V.username,
-                                    children: F.intl.string(F.t.hG1StD),
+                                    children: B.intl.string(B.t.hG1StD),
                                 }),
                                 (0, r.jsx)(h.Z, {
                                     type: Z.Hb.SYSTEM_DM,
@@ -428,7 +428,7 @@ function ea(e) {
                     (0, r.jsx)("div", {
                         className: o()(V.messageContent, { [V.compact]: a }),
                         children: (0, r.jsx)(
-                            D.Z,
+                            w.Z,
                             K(Y({}, P), {
                                 message: s,
                                 channel: q,
@@ -453,7 +453,7 @@ function ea(e) {
                                                                 variant: "text-xs/medium",
                                                                 color: "text-muted",
                                                                 tag: "span",
-                                                                children: F.intl.format(F.t.SYIUTR, { keyword: et }),
+                                                                children: B.intl.format(B.t.SYIUTR, { keyword: et }),
                                                             }),
                                                             (0, r.jsx)("div", { className: o()(V.dot, V.dotMargin) }),
                                                         ],
@@ -463,7 +463,7 @@ function ea(e) {
                                                         variant: "text-xs/medium",
                                                         color: "text-muted",
                                                         tag: "span",
-                                                        children: F.intl.format(F.t.ZoOyKB, { ruleName: W }),
+                                                        children: B.intl.format(B.t.ZoOyKB, { ruleName: W }),
                                                     }),
                                                 null != eO &&
                                                     (0, r.jsxs)(r.Fragment, {
@@ -474,7 +474,7 @@ function ea(e) {
                                                                 color: "text-muted",
                                                                 tag: "span",
                                                                 className: V.__invalid_footerText,
-                                                                children: F.intl.format(F.t["3LYql6"], {
+                                                                children: B.intl.format(B.t["3LYql6"], {
                                                                     duration: eO,
                                                                 }),
                                                             }),
@@ -489,7 +489,7 @@ function ea(e) {
                                                                 color: "text-muted",
                                                                 tag: "span",
                                                                 className: V.titleCase,
-                                                                children: F.intl.format(F.t["26bB2M"], {
+                                                                children: B.intl.format(B.t["26bB2M"], {
                                                                     reason: (0, E.hU)(ec),
                                                                 }),
                                                             }),
@@ -534,7 +534,7 @@ function ea(e) {
                                             variant: "primary",
                                             size: "sm",
                                             textVariant: "text-xs/normal",
-                                            text: F.intl.string(F.t.DEoVWZ),
+                                            text: B.intl.string(B.t.DEoVWZ),
                                             onClick: eh,
                                         }),
                                     ],
@@ -550,7 +550,7 @@ function ea(e) {
                                                       variant: "primary",
                                                       size: "sm",
                                                       textVariant: "text-xs/normal",
-                                                      text: F.intl.string(F.t.jtkj06),
+                                                      text: B.intl.string(B.t.jtkj06),
                                                   }),
                                               }),
                                           ],
@@ -564,7 +564,7 @@ function ea(e) {
                                         variant: "primary",
                                         size: "sm",
                                         textVariant: "text-xs/normal",
-                                        text: F.intl.string(F.t["94JbM3"]),
+                                        text: B.intl.string(B.t["94JbM3"]),
                                     }),
                                 }),
                                 eS
@@ -578,7 +578,7 @@ function ea(e) {
                                                       variant: "primary",
                                                       size: "sm",
                                                       textVariant: "text-xs/normal",
-                                                      text: F.intl.string(F.t["3A52tY"]),
+                                                      text: B.intl.string(B.t["3A52tY"]),
                                                   }),
                                               }),
                                           ],

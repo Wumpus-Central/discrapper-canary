@@ -7,10 +7,10 @@ var n = A(54381),
     o = A.n(i),
     s = A(399606),
     d = A(692547),
-    u = A(215569),
-    c = A(796027),
-    g = A(668339),
-    f = A(248514),
+    c = A(215569),
+    u = A(796027),
+    f = A(668339),
+    g = A(248514),
     p = A(481060),
     m = A(749210),
     v = A(725803),
@@ -40,7 +40,7 @@ var n = A(54381),
     L = A(981631),
     B = A(674563),
     D = A(388032),
-    R = A(179598);
+    R = A(342762);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var A = null != arguments[t] ? arguments[t] : {},
@@ -118,7 +118,7 @@ function J(e) {
                 })),
             [o, A],
         );
-    return (0, n.jsx)(g.d, {
+    return (0, n.jsx)(f.d, {
         label: l,
         errorMessage: i,
         value: A,
@@ -131,22 +131,22 @@ function J(e) {
     });
 }
 function _(e) {
-    var t, A, a, l, i, g, h, q, U, M, _, ee;
+    var t, A, a, l, i, f, h, q, U, M, _, ee;
     let { guildId: et, productId: eA, transitionState: en, onClose: er } = e,
         [ea, el] = r.useState(eA),
         ei = (0, s.e7)([y.Z], () => (null == ea ? null : y.Z.getGuildProduct(ea)), [ea]),
         eo = (0, s.e7)([y.Z], () => y.Z.getGuildProductsForGuild(et, { publishedOnly: !0 }).length, [et]),
         es = (null == ei ? void 0 : ei.published) === !0,
         { application: ed } = (0, v.Z)(et, B.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        eu = I.M["0"],
-        ec = j.QK.useSetting(),
-        eg = (0, P.n)(),
-        ef = r.useCallback(() => {
+        ec = I.M["0"],
+        eu = j.QK.useSetting(),
+        ef = (0, P.n)(),
+        eg = r.useCallback(() => {
             var e;
             return (null == ei || null == (e = ei.image_asset) ? void 0 : e.application_id) == null
-                ? eu.data
-                : (0, O._W)(ei.image_asset.application_id, ei.image_asset, 600, eg && ec ? void 0 : "webp");
-        }, [eu, ei, eg, ec]),
+                ? ec.data
+                : (0, O._W)(ei.image_asset.application_id, ei.image_asset, 600, ef && eu ? void 0 : "webp");
+        }, [ec, ei, ef, eu]),
         { shouldRestrictUpdatingCreatorMonetizationSettings: ep } = (0, C.gX)(et);
     r.useEffect(() => {
         ep && (er(), (0, W.B)(D.intl.string(D.t.OLf3xn), D.t["90LBVr"]));
@@ -154,9 +154,9 @@ function _(e) {
     let [em, ev] = r.useState(null != (a = null == ei ? void 0 : ei.name) ? a : ""),
         [eh, eq] = r.useState(null != (l = null == ei ? void 0 : ei.description) ? l : ""),
         [eb, eC] = r.useState(null != (i = null == ei ? void 0 : ei.price_tier) ? i : void 0),
-        [eU, ej] = r.useState(ef),
+        [eU, ej] = r.useState(eg),
         [eV, ex] = r.useState(
-            null != (g = null == ei || null == (t = ei.image_asset) ? void 0 : t.filename) ? g : eu.name,
+            null != (f = null == ei || null == (t = ei.image_asset) ? void 0 : t.filename) ? f : ec.name,
         ),
         [eO, eP] = r.useState(!1),
         [eF, ey] = r.useState(),
@@ -219,7 +219,7 @@ function _(e) {
                     ? null
                     : (0, n.jsx)(p.oXn, {
                           className: R.successNotice,
-                          children: (0, n.jsx)(c.Z, {
+                          children: (0, n.jsx)(u.Z, {
                               message: (0, n.jsxs)("div", {
                                   className: R.successNoticeMessage,
                                   children: [
@@ -296,8 +296,8 @@ function _(e) {
         r.useEffect(() => {
             e_ && eM(void 0);
         }, [e_]);
-    let e7 = r.useRef(null),
-        e2 = !e1 || (!es && eo >= w.dD);
+    let e8 = r.useRef(null),
+        e7 = !e1 || (!es && eo >= w.dD);
     return (0, n.jsxs)(p.Y0X, {
         transitionState: en,
         size: p.CgR.DYNAMIC,
@@ -317,7 +317,7 @@ function _(e) {
                             (0, n.jsx)(p.Heading, {
                                 id: E,
                                 variant: "heading-xl/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: D.intl.string(D.t.DnNl1T),
                             }),
                             (0, n.jsx)(p.Text, {
@@ -342,7 +342,7 @@ function _(e) {
                     (0, n.jsx)(p.zJl, {
                         children: (0, n.jsxs)("div", {
                             className: R.productFieldsSection,
-                            ref: e7,
+                            ref: e8,
                             children: [
                                 (0, n.jsx)(p.oil, {
                                     label: D.intl.string(D.t.Hsk7xT),
@@ -421,7 +421,7 @@ function _(e) {
                                           children: (0, n.jsx)(T.s, {
                                               onFileAdded: () => {
                                                   var e;
-                                                  null == (e = e7.current) ||
+                                                  null == (e = e8.current) ||
                                                       e.scrollIntoView({
                                                           behavior: "smooth",
                                                           block: "end",
@@ -452,7 +452,7 @@ function _(e) {
                             className: R.productPreview,
                             children: [
                                 (0, n.jsx)(S.Z, {
-                                    disabled: e2,
+                                    disabled: e7,
                                     disabledTooltip: es
                                         ? D.intl.string(D.t["0NQ00t"])
                                         : eo >= w.dD
@@ -541,7 +541,7 @@ function _(e) {
                                         e
                                             ? eK(!0)
                                             : eX
-                                              ? (0, f.Z)({
+                                              ? (0, g.Z)({
                                                     title: D.intl.string(D.t["2WihyY"]),
                                                     subtitle: D.intl.string(D.t.ixRBLh),
                                                     confirmText: D.intl.string(D.t.N86XcP),
@@ -585,7 +585,7 @@ function _(e) {
                     ],
                 }),
             }),
-            (0, n.jsx)(u.W, {
+            (0, n.jsx)(c.W, {
                 component: "div",
                 className: R.successNoticeContainer,
                 children: e3,

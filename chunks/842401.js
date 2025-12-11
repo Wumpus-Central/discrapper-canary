@@ -4,7 +4,7 @@ n(473749);
 var l = n(481060),
     i = n(99690),
     a = n(388032),
-    s = n(430147);
+    s = n(273388);
 let o = (e) => {
     let { user: t } = e;
     return (0, r.jsxs)("div", {
@@ -30,7 +30,7 @@ let o = (e) => {
                                 null != t.globalName &&
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-md/semibold",
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         children: t.globalName,
                                     }),
                                 (0, r.jsx)(l.Text, {

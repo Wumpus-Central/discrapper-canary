@@ -19,14 +19,14 @@ var r = n(54381),
     g = n(825102),
     h = n(626135),
     m = n(617136),
-    _ = n(616022),
-    b = n(49436),
+    b = n(616022),
+    _ = n(49436),
     E = n(110560),
     O = n(324805),
     v = n(981631),
     y = n(231338),
     I = n(388032),
-    C = n(810516);
+    C = n(550601);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -115,12 +115,12 @@ function j(e) {
             e.contentRect.width < 500 ? Z("display-md") : Z("display-lg");
         }, []),
         L = (0, d.y)(w, [], { fireOnMount: !0 }),
-        R = (0, c.e7)([_.Z], () => _.Z.quests);
+        R = (0, c.e7)([b.Z], () => b.Z.quests);
     return (
         i.useEffect(() => {
             h.default.track(
                 v.rMx.QUEST_CONTENT_VIEWED,
-                T(S({}, (0, m.mH)(b.jn.QUEST_HOME_TAKEOVER)), {
+                T(S({}, (0, m.mH)(_.jn.QUEST_HOME_TAKEOVER)), {
                     quest_id: t.campaignId,
                     is_targeted: !1,
                 }),
@@ -166,7 +166,7 @@ function j(e) {
                                         gap: 8,
                                         children: [
                                             (0, r.jsx)(u.Heading, {
-                                                color: "header-primary",
+                                                color: "text-strong",
                                                 variant: A,
                                                 className: C.title,
                                                 children: t.labelTitle,
@@ -193,7 +193,7 @@ function j(e) {
                                                                     click_id: (0, o.Z)(),
                                                                     is_targeted: !1,
                                                                 },
-                                                                (0, m.mH)(b.jn.QUEST_HOME_TAKEOVER),
+                                                                (0, m.mH)(_.jn.QUEST_HOME_TAKEOVER),
                                                             ),
                                                         );
                                                 },
@@ -223,7 +223,7 @@ function j(e) {
                                                                                   click_id: (0, o.Z)(),
                                                                                   is_targeted: !1,
                                                                               },
-                                                                              (0, m.mH)(b.jn.QUEST_HOME_TAKEOVER),
+                                                                              (0, m.mH)(_.jn.QUEST_HOME_TAKEOVER),
                                                                           ),
                                                                       );
                                                               },

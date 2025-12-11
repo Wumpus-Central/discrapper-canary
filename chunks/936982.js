@@ -21,7 +21,7 @@ let f = () => {
               children: [
                   (0, r.jsx)(o.Heading, {
                       variant: "heading-lg/semibold",
-                      color: "header-primary",
+                      color: "text-strong",
                       children: d.intl.string(d.t["Ig/XFa"]),
                   }),
                   (0, r.jsxs)(o.ubH, {

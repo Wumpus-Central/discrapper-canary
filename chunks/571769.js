@@ -27,12 +27,12 @@ function j(t) {
     a.useEffect(() => {
         null == C && (0, m.iX)(e, n.planId);
     }, [e, n.planId, C]);
-    let S = (0, I.Z)(n),
-        { handleCopyServerIp: g, animateCopyIcon: T } = (0, v.Z)(
+    let g = (0, I.Z)(n),
+        { handleCopyServerIp: S, animateCopyIcon: T } = (0, v.Z)(
             e,
             n.id,
             u.Z.GAME_SERVER_INSTRUCTIONS_MODAL,
-            null != S ? S : "",
+            null != g ? g : "",
         ),
         E = a.useMemo(() => {
             switch (n.status) {
@@ -100,7 +100,7 @@ function j(t) {
                                   ),
                               ),
                           }),
-                          null != S &&
+                          null != g &&
                               (0, s.jsxs)("div", {
                                   className: _.serverIpContainer,
                                   children: [
@@ -108,14 +108,14 @@ function j(t) {
                                           className: r()(_.serverIpInput, T && _.animate),
                                           children: (0, s.jsx)(p.Text, {
                                               variant: "text-md/medium",
-                                              color: "header-primary",
-                                              children: S,
+                                              color: "text-strong",
+                                              children: g,
                                           }),
                                       }),
                                       (0, s.jsx)(p.Button, {
                                           variant: T ? "active" : "primary",
                                           text: T ? N.intl.string(N.t.t5VZ88) : N.intl.string(N.t.OpuAlK),
-                                          onClick: g,
+                                          onClick: S,
                                           icon: p.TIy,
                                       }),
                                   ],

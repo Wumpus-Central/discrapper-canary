@@ -24,7 +24,7 @@ var t = l(54381),
     T = l(981631),
     O = l(185923),
     I = l(388032),
-    P = l(353441);
+    P = l(609442);
 function k(e) {
     for (var n = 1; n < arguments.length; n++) {
         var l = null != arguments[n] ? arguments[n] : {},
@@ -363,7 +363,7 @@ function A(e) {
                 children: [
                     (0, t.jsxs)(c.Heading, {
                         variant: "heading-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: [I.intl.string(I.t["j+fhOY"]), (0, t.jsx)(S.Z, {})],
                     }),
                     (0, t.jsx)(c.oil, {
@@ -381,7 +381,7 @@ function A(e) {
                 children: [
                     (0, t.jsxs)(c.Heading, {
                         variant: "heading-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: [I.intl.string(I.t.jVDc5W), (0, t.jsx)(S.Z, {})],
                     }),
                     (0, t.jsx)(u.d, {
@@ -405,7 +405,7 @@ function A(e) {
                         children: [
                             (0, t.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: I.intl.string(I.t.gs5rQm),
                             }),
                             (0, t.jsx)(c.Text, {
@@ -540,7 +540,7 @@ function A(e) {
                 children: [
                     (0, t.jsxs)(c.Heading, {
                         variant: "heading-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: [I.intl.string(I.t.MIMVLa), (0, t.jsx)(S.Z, {})],
                     }),
                     (0, t.jsx)(c.FXm, {

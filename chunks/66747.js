@@ -6,8 +6,8 @@ var r = n(54381),
     a = n(392711),
     s = n(498607),
     c = n.n(s),
-    u = n(399606),
-    d = n(692547),
+    d = n(399606),
+    u = n(692547),
     C = n(28664),
     m = n(481060),
     b = n(700582),
@@ -21,12 +21,12 @@ var r = n(54381),
     y = n(172751),
     O = n(493892),
     H = n(884902),
-    _ = n(433355),
-    w = n(430824),
-    S = n(496675),
-    Z = n(594174),
-    D = n(203893),
-    N = n(777288),
+    w = n(433355),
+    S = n(430824),
+    Z = n(496675),
+    D = n(594174),
+    N = n(203893),
+    _ = n(777288),
     R = n(5192),
     L = n(709054),
     I = n(51144),
@@ -43,7 +43,7 @@ var r = n(54381),
     q = n(176505),
     G = n(50493),
     z = n(388032),
-    Y = n(490225);
+    Y = n(983266);
 let Q = l.memo(function (e) {
         let { member: t } = e,
             n = l.useMemo(() => (0, j.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
@@ -61,7 +61,7 @@ let Q = l.memo(function (e) {
                             size: "custom",
                             width: 20,
                             height: 20,
-                            color: d.Z.colors.TEXT_MUTED.css,
+                            color: u.Z.colors.TEXT_MUTED.css,
                         }),
                     }),
                 n &&
@@ -82,16 +82,16 @@ let Q = l.memo(function (e) {
                             size: "custom",
                             width: 20,
                             height: 20,
-                            color: d.Z.colors.TEXT_FEEDBACK_CRITICAL.css,
+                            color: u.Z.colors.TEXT_FEEDBACK_CRITICAL.css,
                         }),
                     }),
                 (0, O.He)(t.userId) &&
                     (0, r.jsx)(C.u, {
                         text: z.intl.string(z.t.PK9FQ2),
-                        children: (0, r.jsx)(D.Z, {
+                        children: (0, r.jsx)(N.Z, {
                             width: 20,
                             height: 20,
-                            color: d.Z.colors.TEXT_FEEDBACK_CRITICAL.css,
+                            color: u.Z.colors.TEXT_FEEDBACK_CRITICAL.css,
                         }),
                     }),
                 (0, g.EY)(t) &&
@@ -101,7 +101,7 @@ let Q = l.memo(function (e) {
                             size: "custom",
                             width: 20,
                             height: 20,
-                            color: d.Z.colors.TEXT_MUTED.css,
+                            color: u.Z.colors.TEXT_MUTED.css,
                         }),
                     }),
             ],
@@ -109,12 +109,12 @@ let Q = l.memo(function (e) {
     }),
     W = l.memo(function (e) {
         let { member: t, highestRole: n } = e,
-            i = (0, u.e7)([w.Z], () => w.Z.getGuild(t.guildId), [t.guildId]),
+            i = (0, d.e7)([S.Z], () => S.Z.getGuild(t.guildId), [t.guildId]),
             a = t.roles.length - 1,
             s = l.useMemo(() => new Intl.NumberFormat(z.intl.currentLocale).format(a), [a]),
             c = (0, U.vN)(t),
-            d = (0, U.vN)(t, !0),
-            b = (0, u.e7)([S.Z], () => S.Z.can(B.Plq.MANAGE_ROLES, i), [i]);
+            u = (0, U.vN)(t, !0),
+            b = (0, d.e7)([Z.Z], () => Z.Z.can(B.Plq.MANAGE_ROLES, i), [i]);
         return null == i
             ? null
             : (0, r.jsxs)("div", {
@@ -129,12 +129,12 @@ let Q = l.memo(function (e) {
                       a > 0 &&
                           (0, r.jsx)(m.P3F, {
                               className: Y.otherRoles,
-                              onClick: (e) => d(e),
+                              onClick: (e) => u(e),
                               children: (0, r.jsx)(C.u, {
                                   text: z.intl.string(z.t.DY6n4q),
                                   children: (0, r.jsxs)(m.Text, {
                                       variant: "text-xs/medium",
-                                      color: "header-primary",
+                                      color: "text-strong",
                                       children: ["+", s],
                                   }),
                               }),
@@ -282,15 +282,15 @@ let $ = l.memo(function (e) {
                 highestRole: i,
                 isHoldingAdvancedInfoKey: a,
                 onOpenModerationMenu: s,
-                onOpenMemberView: d,
+                onOpenMemberView: u,
                 compact: b,
                 hasModViewPanelAccess: f,
             } = e,
-            p = (0, u.e7)([S.Z, w.Z], () => S.Z.can(B.Plq.MANAGE_GUILD, w.Z.getGuild(t.guildId)), [t.guildId]),
+            p = (0, d.e7)([Z.Z, S.Z], () => Z.Z.can(B.Plq.MANAGE_GUILD, S.Z.getGuild(t.guildId)), [t.guildId]),
             { selectedUserIds: h, addUsers: g, removeUser: j } = (0, A.Z)(t.guildId),
             x = (0, M.xC)(t.guildId),
             v = (0, M.hB)(t.guildId, x, t.userId),
-            y = (0, u.e7)(
+            y = (0, d.e7)(
                 [E.Z],
                 () => {
                     var e;
@@ -310,7 +310,7 @@ let $ = l.memo(function (e) {
                 [g, v, t, j, h],
             ),
             H = y === V.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-            _ = y === V.d$.ORDER_BY_USER_ID_ASC || y === V.d$.ORDER_BY_USER_ID_DESC;
+            w = y === V.d$.ORDER_BY_USER_ID_ASC || y === V.d$.ORDER_BY_USER_ID_DESC;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 x &&
@@ -351,7 +351,7 @@ let $ = l.memo(function (e) {
                     children: (0, r.jsx)($, {
                         showLongDate: a,
                         member: t,
-                        isSortedBy: _,
+                        isSortedBy: w,
                     }),
                 }),
                 p &&
@@ -382,10 +382,10 @@ let $ = l.memo(function (e) {
                                 asContainer: !0,
                                 text: f ? z.intl.string(z.t.nHfkf4) : z.intl.string(z.t.uTre2y),
                                 children: (0, r.jsx)(m.P3F, {
-                                    onClick: d,
+                                    onClick: u,
                                     className: Y.button,
                                     children: f
-                                        ? (0, r.jsx)(N.Z, {
+                                        ? (0, r.jsx)(_.Z, {
                                               width: et,
                                               height: et,
                                           })
@@ -425,31 +425,31 @@ let $ = l.memo(function (e) {
                 guildId: n,
                 style: i,
                 rowSelected: s,
-                isLoading: d = !1,
+                isLoading: u = !1,
                 isHoldingAdvancedInfoKey: C = !1,
                 compact: m = !1,
             } = e,
             { analyticsLocations: b } = (0, p.ZP)(),
-            f = (0, u.e7)([_.ZP], () => _.ZP.getGuildSidebarState(n), [n]),
+            f = (0, d.e7)([w.ZP], () => w.ZP.getGuildSidebarState(n), [n]),
             h = (null == f ? void 0 : f.details.userId) === t,
-            g = (0, u.e7)([E.Z], () => E.Z.getEnhancedMember(n, t), [n, t]),
+            g = (0, d.e7)([E.Z], () => E.Z.getEnhancedMember(n, t), [n, t]),
             j = (0, U.zq)(g),
-            y = (0, u.e7)([Z.default], () => Z.default.getUser(t), [t]),
+            y = (0, d.e7)([D.default], () => D.default.getUser(t), [t]),
             O = (0, v.m)(n),
             H = (0, U.RN)(null != g ? g : void 0),
-            w = l.useCallback(
+            S = l.useCallback(
                 (e) => {
                     e.stopPropagation(), e.preventDefault(), H(e);
                 },
                 [H],
             ),
-            S = l.useCallback(
+            Z = l.useCallback(
                 (e) => {
                     e.stopPropagation(), e.preventDefault(), null != g && (0, U.RE)(g, b);
                 },
                 [g, b],
             ),
-            D = l.useCallback(
+            N = l.useCallback(
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
@@ -460,7 +460,7 @@ let $ = l.memo(function (e) {
                 },
                 [g, b, O],
             ),
-            N = l.useCallback((e, t) => c()((0, a.omit)(e, en), (0, a.omit)(t, en)), []);
+            _ = l.useCallback((e, t) => c()((0, a.omit)(e, en), (0, a.omit)(t, en)), []);
         return null == g
             ? null
             : (0, r.jsx)(T.Z, {
@@ -472,18 +472,18 @@ let $ = l.memo(function (e) {
                       Y.memberRowContainer,
                       s && Y.selected,
                       h && Y.memberSelected,
-                      d && Y.loading,
+                      u && Y.loading,
                   ),
-                  equalityFn: N,
-                  onClick: S,
-                  onContextMenu: w,
+                  equalityFn: _,
+                  onClick: Z,
+                  onContextMenu: S,
                   children: (0, r.jsx)(ee, {
                       member: g,
                       user: y,
                       highestRole: j,
                       isHoldingAdvancedInfoKey: C,
-                      onOpenModerationMenu: w,
-                      onOpenMemberView: D,
+                      onOpenModerationMenu: S,
+                      onOpenMemberView: N,
                       compact: m,
                       hasModViewPanelAccess: O,
                   }),

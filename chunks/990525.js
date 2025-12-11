@@ -20,7 +20,7 @@ var r = n(54381),
     h = n(981631),
     x = n(509571),
     _ = n(388032),
-    P = n(478875);
+    P = n(223296);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -194,7 +194,7 @@ let w = (e) => {
                             children: [
                                 (0, r.jsxs)(u.Text, {
                                     variant: "text-xs/medium",
-                                    color: t.underDevelopment ? "text-muted" : "header-primary",
+                                    color: t.underDevelopment ? "text-muted" : "text-strong",
                                     children: [t.underDevelopment ? "\uD83D\uDEA7 " : "", W],
                                 }),
                                 M && !A ? (0, r.jsx)(u._8t, { size: "xxs" }) : null,

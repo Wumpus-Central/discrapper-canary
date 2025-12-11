@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(981631),
     m = n(474936),
     h = n(388032),
-    g = n(807284),
+    g = n(867814),
     E = n(492764),
     b = n(235810);
 function y(e, t, n) {
@@ -122,7 +122,7 @@ function S() {
             }),
             (0, r.jsx)(o.xvT, {
                 variant: "text-xs/medium",
-                color: "header-primary",
+                color: "text-strong",
                 className: g.upsellText,
                 children: p,
             }),

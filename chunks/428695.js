@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(626135),
     p = n(981631),
     f = n(388032),
-    g = n(454703);
+    g = n(156132);
 let h = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
     m = function (e) {
         let {
@@ -19,8 +19,8 @@ let h = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
             message: l,
             image: s,
             type: m,
-            imageStyles: _,
-            imageMarginX: b,
+            imageStyles: b,
+            imageMarginX: _,
             imageMarginTop: E,
             trackingSource: O,
             undismissable: v,
@@ -64,7 +64,7 @@ let h = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
             : null != n &&
               (P = (0, r.jsx)(c.Text, {
                   variant: "text-md/medium",
-                  color: "header-primary",
+                  color: "text-strong",
                   className: a()(g.title, { [g.noImageTitle]: null == s }, { [g.center]: T }),
                   children: n,
               }));
@@ -78,7 +78,7 @@ let h = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
                   color: "text-muted",
                   children: l,
               }));
-        let A = null != b ? "".concat(b, "px") : "16px";
+        let A = null != _ ? "".concat(_, "px") : "16px";
         return (0, r.jsxs)("div", {
             className: a()(g.container, N),
             children: [
@@ -106,7 +106,7 @@ let h = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
                         },
                         children: (0, r.jsx)("img", {
                             className: g.image,
-                            style: _,
+                            style: b,
                             src: s,
                             alt: "",
                         }),

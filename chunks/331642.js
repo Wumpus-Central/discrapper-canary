@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(603074),
     m = n(294206),
     h = n(388032),
-    g = n(298879);
+    g = n(462135);
 function E(e, t, n) {
     return (
         t in e
@@ -170,7 +170,7 @@ function I(e) {
                         }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/medium",
-                        color: "header-primary",
+                        color: "text-strong",
                         className: g.soundText,
                         children: p(),
                     }),

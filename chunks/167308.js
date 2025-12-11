@@ -8,7 +8,7 @@ var r = n(481060),
     o = n(444134),
     c = n(836831),
     d = n(324805),
-    u = n(835343);
+    u = n(674293);
 let m = (e) => {
     let {
             contentLocation: t,
@@ -16,20 +16,20 @@ let m = (e) => {
             progressBarRef: m,
             isExpanded: p,
             percentComplete: h,
-            activeScreen: x,
-            popoutTargetElementRef: f,
-            onGameSheetOpened: g,
-            onGameSheetClosed: b,
+            activeScreen: f,
+            popoutTargetElementRef: x,
+            onGameSheetOpened: b,
+            onGameSheetClosed: g,
         } = e,
         v = (0, l.eQ)(n),
         j = (0, l.vf)({
             quest: n,
             isExpanded: p,
-            activeScreen: x,
+            activeScreen: f,
             sourceQuestContent: i.jn.QUEST_BAR_V2,
-            popoutTargetElementRef: f,
-            onGameSheetOpened: g,
-            onGameSheetClosed: b,
+            popoutTargetElementRef: x,
+            onGameSheetOpened: b,
+            onGameSheetClosed: g,
         });
     return (0, a.jsxs)("div", {
         className: u.questProgressWrapper,
@@ -65,7 +65,7 @@ let m = (e) => {
                             (0, a.jsx)(r.Text, {
                                 ref: e,
                                 className: u.questProgressHint,
-                                color: "header-primary",
+                                color: "text-strong",
                                 variant: "text-sm/semibold",
                                 children: v,
                             }),

@@ -37,8 +37,8 @@ var r = n(54381),
     U = n(358221),
     G = n(584511),
     Z = n(793865),
-    B = n(522651),
-    F = n(795318),
+    F = n(522651),
+    B = n(795318),
     V = n(354459),
     H = n(981631),
     Y = n(295907),
@@ -159,7 +159,7 @@ function es(e) {
                 label: K.intl.string(K.t.WAI6xu),
                 className: q.actionButton,
                 onClick: () => {
-                    (0, B.v)(s, B.d.DISCONNECT),
+                    (0, F.v)(s, F.d.DISCONNECT),
                         M.default.track(
                             H.rMx.RING_CALL_DECLINED,
                             J(
@@ -180,7 +180,7 @@ function es(e) {
                         let { closePopout: t } = e;
                         return (0, r.jsx)(Z.Z, {
                             onClose: t,
-                            onInteraction: (0, F.u)("VideoDeviceMenu", s, { entrypoint: V.A5.CARET }),
+                            onInteraction: (0, B.u)("VideoDeviceMenu", s, { entrypoint: V.A5.CARET }),
                         });
                     },
                     position: "top",
@@ -204,7 +204,7 @@ function es(e) {
                             onCameraUnavailable: C.Z,
                             onChange: () => {
                                 var e;
-                                (0, B.v)(s, B.d.JOIN_VIDEO_CALL),
+                                (0, F.v)(s, F.d.JOIN_VIDEO_CALL),
                                     M.default.track(
                                         H.rMx.RING_CALL_ACCEPTED,
                                         J(
@@ -264,7 +264,7 @@ function el(e) {
         Z = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
-        B = (0, c.q_F)(
+        F = (0, c.q_F)(
             {
                 value: +!!O,
                 config: ee(J({}, s.config.stiff), { clamp: !0 }),
@@ -277,7 +277,7 @@ function el(e) {
         };
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [m]);
-    let F = M === H.WtW.VIDEO && A && N > 0,
+    let B = M === H.WtW.VIDEO && A && N > 0,
         { enabled: V } = R.Z.useExperiment({
             guildId: null == m ? void 0 : m.guild_id,
             location: "IncomingCallModal",
@@ -317,7 +317,7 @@ function el(e) {
                     children: [
                         (0, r.jsx)(c.Text, {
                             className: q.title,
-                            color: "header-primary",
+                            color: "text-strong",
                             variant: O ? "text-md/semibold" : "text-lg/semibold",
                             children: P,
                         }),
@@ -331,7 +331,7 @@ function el(e) {
                 }),
             ],
         }),
-        el = F ? et : en,
+        el = B ? et : en,
         ec = (0, l.e7)([j.Z], () => j.Z.windowSize());
     return (0, r.jsx)(h.Gt, {
         value: y,
@@ -352,9 +352,9 @@ function el(e) {
                     (0, r.jsxs)(s.animated.div, {
                         className: o()(q.root, Q.elevationHigh, { [q.previewCamera]: O }, e),
                         style: ee(J({}, n), {
-                            width: B.value.interpolate([0, 1], [el.width, er]),
-                            minHeight: B.value.interpolate([0, 1], [el.height, ei]),
-                            translateX: B.value.interpolate([0, 1], [0, (-1 * Math.abs(er - el.width)) / 2]),
+                            width: F.value.interpolate([0, 1], [el.width, er]),
+                            minHeight: F.value.interpolate([0, 1], [el.height, ei]),
+                            translateX: F.value.interpolate([0, 1], [0, (-1 * Math.abs(er - el.width)) / 2]),
                         }),
                         children: [
                             O
@@ -364,11 +364,11 @@ function el(e) {
                                       children: $,
                                   }),
                             (0, r.jsx)(es, {
-                                canVideo: F,
+                                canVideo: B,
                                 channel: m,
                                 numVideoDevices: N,
                             }),
-                            F && !O
+                            B && !O
                                 ? (0, r.jsx)("div", {
                                       "data-button-hoisted-classname-wrapper": !0,
                                       className: q.previewButton,

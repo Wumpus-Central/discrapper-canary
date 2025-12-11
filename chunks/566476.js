@@ -7,10 +7,10 @@ var i = n(120356),
     s = n(481060),
     o = n(385499),
     c = n(246946),
-    d = n(147721);
+    d = n(761382);
 function u(e) {
-    let { className: t, avatarURL: n, name: i, bot: u, verifiedBot: g, userTag: m } = e,
-        p = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation);
+    let { className: t, avatarURL: n, name: i, bot: u, verifiedBot: g, userTag: f } = e,
+        m = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation);
     return (0, r.jsxs)("div", {
         className: l()(d.container, t),
         children: [
@@ -26,7 +26,7 @@ function u(e) {
                     (0, r.jsx)(s.Text, {
                         tag: "span",
                         className: d.name,
-                        color: "header-primary",
+                        color: "text-strong",
                         variant: "text-sm/semibold",
                         children: i,
                     }),
@@ -36,14 +36,14 @@ function u(e) {
                               verified: g,
                           })
                         : null,
-                    p
+                    m
                         ? null
                         : (0, r.jsx)(s.Text, {
                               tag: "span",
                               color: "interactive-text-default",
                               className: d.userTag,
                               variant: "text-sm/normal",
-                              children: m,
+                              children: f,
                           }),
                 ],
             }),

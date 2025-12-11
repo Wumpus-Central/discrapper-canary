@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(955204),
     f = n(248998),
     p = n(388032),
-    _ = n(599710);
+    _ = n(770827);
 function m(e) {
     let { onBackClick: t } = e,
         n = (0, a.e7)([u.Z], () => u.Z.getAllUnlockedAchievements()),
@@ -48,7 +48,7 @@ function m(e) {
                         children: [
                             (0, r.jsx)(s.Heading, {
                                 variant: "heading-lg/extrabold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: p.intl.string(p.t["6jI0hd"]),
                             }),
                             (0, r.jsx)(s.Text, {

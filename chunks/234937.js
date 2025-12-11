@@ -6,7 +6,7 @@ var l = n(442837),
     a = n(565138),
     s = n(430824),
     o = n(388032),
-    d = n(573265);
+    d = n(914426);
 let c = (e) => {
     let { event: t } = e,
         n = (0, l.e7)([s.Z], () => s.Z.getGuild(t.guild_id));
@@ -40,7 +40,7 @@ let c = (e) => {
                           }),
                           (0, r.jsx)(i.Text, {
                               variant: "text-md/semibold",
-                              color: "header-primary",
+                              color: "text-strong",
                               children: t.name,
                           }),
                       ],

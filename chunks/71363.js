@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(75077),
     v = n(981631),
     S = n(388032),
-    I = n(677599),
+    I = n(548768),
     T = n(865215);
 let C = (e) => {
     let t,
@@ -28,11 +28,11 @@ let C = (e) => {
         { isAllPerksVisible: a, setIsAllPerksVisible: C, previousComponent: A, enablePremiumBrandRefresh: N } = e,
         P = i.useRef(null),
         R = i.useRef(null),
-        D = Object.entries((0, b.Z)()).reduce((e, t) => {
+        w = Object.entries((0, b.Z)()).reduce((e, t) => {
             let [n, r] = t;
             return !1 !== r.canReveal && "upcomingDropUntimed" !== r.name && (e[n] = r), e;
         }, {}),
-        { analyticsLocations: w } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        { analyticsLocations: D } = (0, f.ZP)(d.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [x, L] = i.useState(!1),
         j = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         M = (0, O.mN)(),
@@ -59,7 +59,7 @@ let C = (e) => {
             color: "nitro-pink",
             className: o()(I.container, I.responsiveContainer, { [I.hiddenGradient]: !N }),
             children: (0, r.jsxs)(f.Gt, {
-                value: w,
+                value: D,
                 children: [
                     N
                         ? (0, r.jsx)(g.Z, { onBackClick: G })
@@ -72,14 +72,14 @@ let C = (e) => {
                         children: [
                             (0, r.jsx)(c.Heading, {
                                 variant: "heading-xxl/extrabold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 className: I.heading,
                                 children: t,
                             }),
                             (0, r.jsx)(E.Z, {
                                 className: I.cardCarousel,
                                 cards: (0, O.ZM)({
-                                    perksCards: D,
+                                    perksCards: w,
                                     variant: y.gM.CARD_CAROUSEL_FIRST_ROW,
                                     isPremiumSubscriber: M,
                                     hideCardsOnNarrowScreen: !0,
@@ -90,14 +90,14 @@ let C = (e) => {
                             }),
                             (0, r.jsx)(c.Heading, {
                                 variant: "heading-xxl/extrabold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 className: I.heading,
                                 children: n,
                             }),
                             (0, r.jsx)(E.Z, {
                                 className: I.cardCarousel,
                                 cards: (0, O.ZM)({
-                                    perksCards: D,
+                                    perksCards: w,
                                     variant: y.gM.CARD_CAROUSEL_SECOND_ROW,
                                     isPremiumSubscriber: M,
                                     hideCardsOnNarrowScreen: !0,
@@ -108,14 +108,14 @@ let C = (e) => {
                             }),
                             (0, r.jsx)(c.Heading, {
                                 variant: "heading-xxl/extrabold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 className: I.heading,
                                 children: S.intl.string(S.t.LTaxu9),
                             }),
                             (0, r.jsx)(E.Z, {
                                 className: I.cardCarousel,
                                 cards: (0, O.ZM)({
-                                    perksCards: D,
+                                    perksCards: w,
                                     variant: y.gM.CARD_CAROUSEL_THIRD_ROW,
                                     isPremiumSubscriber: M,
                                     hideCardsOnNarrowScreen: !0,
@@ -132,7 +132,7 @@ let C = (e) => {
                         onChange: (e) => {
                             e &&
                                 !x &&
-                                (_.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: w }),
+                                (_.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: D }),
                                 L(!0));
                         },
                         children: (0, r.jsx)("div", {

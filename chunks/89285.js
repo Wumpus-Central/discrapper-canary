@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     a = n(388032),
-    o = n(488463);
+    o = n(158859);
 function s(e) {
     let { name: t, onRetry: n } = e,
         s = null != t ? t : a.intl.string(a.t["11pdXZ"]);
@@ -14,7 +14,7 @@ function s(e) {
             children: [
                 (0, r.jsx)(i.Heading, {
                     variant: "heading-lg/medium",
-                    color: "header-primary",
+                    color: "text-strong",
                     children: s,
                 }),
                 (0, r.jsxs)(i.P3F, {

@@ -1,4 +1,4 @@
-n.d(t, { E: () => m });
+n.d(t, { E: () => f });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -8,7 +8,7 @@ var i = n(120356),
     o = n(723047),
     c = n(570533),
     d = n(388032),
-    u = n(562337);
+    u = n(623918);
 function g(e) {
     let { emoji: t, onRemoveEmoji: n, disabled: i = !1 } = e,
         o = s.ZP.getEmojiURL({
@@ -25,7 +25,7 @@ function g(e) {
                 alt: t.name,
             }),
             (0, r.jsx)(a.Text, {
-                color: "header-primary",
+                color: "text-strong",
                 variant: "text-md/medium",
                 className: u.emojiAlias,
                 children: t.name,
@@ -43,7 +43,7 @@ function g(e) {
         ],
     });
 }
-function m(e) {
+function f(e) {
     let { tierEmojiIds: t, guildId: n, onRemoveEmoji: i } = e,
         l = (0, c.Z)(n),
         a = null != t ? l.filter((e) => t.has(e.id)) : [],

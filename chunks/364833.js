@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(373370),
     h = n(968843),
     m = n(475595),
-    _ = n(283689),
-    b = n(602667),
+    b = n(283689),
+    _ = n(602667),
     E = n(698716),
     O = n(659302),
     v = n(611855),
@@ -23,7 +23,7 @@ var r = n(54381),
     C = n(324805),
     S = n(981631),
     T = n(388032),
-    N = n(378672);
+    N = n(773969);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -70,7 +70,7 @@ function P(e) {
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: d
                             ? T.intl.string(T.t.XBboAK)
                             : T.intl.formatToPlainString(T.t.EQa7os, { questName: n.config.messages.questName }),
@@ -90,7 +90,7 @@ function P(e) {
 function x(e) {
     var t, n, l;
     let { nodeRef: c, quest: m } = e,
-        b = (0, d.O5)(),
+        _ = (0, d.O5)(),
         S = (0, s.e7)([p.Z], () => p.Z.isEnrolling(m.id), [m]),
         [x, A] = i.useState(!1),
         Z = i.useCallback(() => A(!0), []),
@@ -105,11 +105,11 @@ function x(e) {
                 questContentCTA: d.jZ.ACCEPT_QUEST,
                 sourceQuestContent: f.jn.ACTIVITY_PANEL,
             }),
-                (0, _.Rt)(m) && L();
+                (0, b.Rt)(m) && L();
         }, [m, L]),
         M = i.useCallback(() => {
             null != m &&
-                (b({
+                (_({
                     questId: m.id,
                     questContent: f.jn.ACTIVITY_PANEL,
                     questContentCTA: d.jZ.TRACK_PROGRESS,
@@ -119,9 +119,9 @@ function x(e) {
                     fromContent: f.jn.ACTIVITY_PANEL,
                     questId: m.id,
                 }));
-        }, [m, b]),
+        }, [m, _]),
         k = i.useCallback(() => {
-            b({
+            _({
                 questId: m.id,
                 questContent: f.jn.ACTIVITY_PANEL,
                 questContentCTA: d.jZ.LEARN_MORE,
@@ -131,7 +131,7 @@ function x(e) {
                     fromContent: f.jn.ACTIVITY_PANEL,
                     questId: m.id,
                 });
-        }, [m.id, b]),
+        }, [m.id, _]),
         U = (0, O.hf)({
             quest: m,
             questContent: f.jn.ACTIVITY_PANEL,
@@ -147,7 +147,7 @@ function x(e) {
             questContent: f.jn.ACTIVITY_PANEL,
             sourceQuestContent: f.jn.ACTIVITY_PANEL,
         }),
-        F = (0, _.Rt)(m),
+        F = (0, b.Rt)(m),
         z = (0, g.CR)({ quest: m }),
         Y = F ? z : T.intl.string(T.t.l7E81v);
     return (0, r.jsxs)("div", {
@@ -275,7 +275,7 @@ function x(e) {
     });
 }
 let A = function (e) {
-    return (0, r.jsx)(b.A, {
+    return (0, r.jsx)(_.A, {
         questOrQuests: e.quest,
         questContent: f.jn.ACTIVITY_PANEL,
         sourceQuestContent: f.jn.ACTIVITY_PANEL,

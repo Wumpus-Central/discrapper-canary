@@ -1,6 +1,6 @@
 n.d(t, {
-    V: () => f,
-    Z: () => h,
+    V: () => b,
+    Z: () => p,
 }),
     n(388685);
 var r = n(54381),
@@ -13,9 +13,9 @@ var r = n(54381),
     d = n(243730),
     u = n(852898),
     g = n(203377),
-    m = n(388032),
-    p = n(345987);
-function f() {
+    f = n(388032),
+    m = n(235778);
+function b() {
     let [e, t] = i.useState(!0);
     return {
         scrolledToTop: e,
@@ -24,38 +24,38 @@ function f() {
         },
     };
 }
-function h(e) {
-    let { guild: t, role: f, selectedSection: h, setSelectedSection: b } = e,
+function p(e) {
+    let { guild: t, role: b, selectedSection: p, setSelectedSection: h } = e,
         x = i.useCallback(
             (e) => {
-                b(e);
+                h(e);
             },
-            [b],
+            [h],
         ),
         j = (0, l.e7)([d.Z], () => {
             var e;
-            return null == (e = d.Z.getRoleMemberCount(t.id)) ? void 0 : e[f.id];
-        }, [f.id, t.id]),
-        _ = (0, c.fI)(f),
-        v = (0, u.Z)(t.id, f);
+            return null == (e = d.Z.getRoleMemberCount(t.id)) ? void 0 : e[b.id];
+        }, [b.id, t.id]),
+        v = (0, c.fI)(b),
+        O = (0, u.Z)(t.id, b);
     i.useEffect(() => {
-        _ && b(g.ZI.PERMISSIONS);
-    }, [_, b]);
-    let O = (0, o.e)(t, f);
+        v && h(g.ZI.PERMISSIONS);
+    }, [v, h]);
+    let C = (0, o.e)(t, b);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: p.titleContainer,
+                className: m.titleContainer,
                 children: [
                     (0, r.jsx)(a.Text, {
-                        className: p.titleText,
-                        color: "header-primary",
+                        className: m.titleText,
+                        color: "text-strong",
                         variant: "text-md/semibold",
-                        children: m.intl.format(m.t.BUdGkE, { roleName: f.name }),
+                        children: f.intl.format(f.t.BUdGkE, { roleName: b.name }),
                     }),
-                    O
+                    C
                         ? (0, r.jsx)(a.P3F, {
-                              className: p.menu,
+                              className: m.menu,
                               onClick: function (e) {
                                   (0, s.jW)(e, async () => {
                                       let { default: e } = await Promise.resolve().then(n.bind(n, 741247));
@@ -92,7 +92,7 @@ function h(e) {
                                               (l = l =
                                                   {
                                                       guild: t,
-                                                      role: f,
+                                                      role: b,
                                                   }),
                                               Object.getOwnPropertyDescriptors
                                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -115,7 +115,7 @@ function h(e) {
                                       };
                                   });
                               },
-                              "aria-label": m.intl.string(m.t.PdRCRg),
+                              "aria-label": f.intl.string(f.t.PdRCRg),
                               children: (0, r.jsx)(a.xhG, {
                                   size: "md",
                                   color: "currentColor",
@@ -124,44 +124,44 @@ function h(e) {
                         : null,
                 ],
             }),
-            null != v
+            null != O
                 ? (0, r.jsx)(a.Wn, {
                       messageType: a.QYI.WARNING,
-                      children: v,
+                      children: O,
                   })
                 : null,
             (0, r.jsxs)(a.njP, {
-                className: p.tabBar,
-                "aria-label": m.intl.string(m.t["+1H47t"]),
-                selectedItem: h,
+                className: m.tabBar,
+                "aria-label": f.intl.string(f.t["+1H47t"]),
+                selectedItem: p,
                 type: "top",
                 look: "brand",
                 onItemSelect: x,
                 children: [
                     (0, r.jsx)(a.njP.Item, {
-                        className: p.tabBarItem,
+                        className: m.tabBarItem,
                         id: g.ZI.DISPLAY,
-                        disabled: _,
-                        children: m.intl.string(m.t.hmdomw),
+                        disabled: v,
+                        children: f.intl.string(f.t.hmdomw),
                     }),
                     (0, r.jsx)(a.njP.Item, {
-                        className: p.tabBarItem,
+                        className: m.tabBarItem,
                         id: g.ZI.PERMISSIONS,
-                        children: m.intl.string(m.t.WIDE1L),
+                        children: f.intl.string(f.t.WIDE1L),
                     }),
                     (0, r.jsx)(a.njP.Item, {
-                        className: p.tabBarItem,
+                        className: m.tabBarItem,
                         id: g.ZI.VERIFICATIONS,
-                        disabled: _,
-                        children: m.intl.string(m.t["5//Muu"]),
+                        disabled: v,
+                        children: f.intl.string(f.t["5//Muu"]),
                     }),
                     (0, r.jsx)(a.njP.Item, {
-                        className: p.tabBarItem,
+                        className: m.tabBarItem,
                         id: g.ZI.MEMBERS,
-                        disabled: _,
-                        children: _
-                            ? m.intl.string(m.t["kg//+7"])
-                            : m.intl.formatToPlainString(m.t.bHnZWW, { numMembers: String(j) }),
+                        disabled: v,
+                        children: v
+                            ? f.intl.string(f.t["kg//+7"])
+                            : f.intl.formatToPlainString(f.t.bHnZWW, { numMembers: String(j) }),
                     }),
                 ],
             }),

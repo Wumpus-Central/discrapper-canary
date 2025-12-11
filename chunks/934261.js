@@ -17,8 +17,8 @@ var i = n(392711),
     h = n(706454),
     x = n(695346),
     j = n(265159),
-    y = n(25990),
-    P = n(594174),
+    P = n(25990),
+    y = n(594174),
     O = n(55935),
     v = n(74538),
     E = n(388032),
@@ -50,18 +50,18 @@ function I(e) {
 }
 let S = (e) => {
         let { effectIsOwned: t, pendingProfileEffectRecord: n, product: u, purchase: d } = e,
-            p = (0, l.e7)([P.default], () => P.default.getCurrentUser()),
+            p = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
             m = (0, l.e7)([s.Z], () => s.Z.getProduct(null == n ? void 0 : n.skuId)),
             g = (0, l.e7)([h.default], () => h.default.locale),
             b = v.ZP.canUseCollectibles(p),
             x = (0, c.qS)(d),
             j = (0, c.G1)(u),
-            y = !b && x,
+            P = !b && x,
             I = (null == d ? void 0 : d.expiresAt) != null ? (0, O.TD)(Date.now(), d.expiresAt) : null,
             S = (0, a.ag)(d),
             _ = (0, a.kd)(m),
             A = (0, f.M)(!j || b),
-            N = w(y, j, b, A);
+            N = w(P, j, b, A);
         return null != n
             ? (0, r.jsx)("div", {
                   className: t ? C.effectDescriptionNoGradient : C.effectDescriptionBorderWithGradient,
@@ -69,7 +69,7 @@ let S = (e) => {
                       className: C.effectDescriptionContainer,
                       children: [
                           (0, r.jsx)(o.Text, {
-                              color: "header-primary",
+                              color: "text-strong",
                               variant: "text-sm/semibold",
                               className: C.effectName,
                               children: (0, i.isEmpty)(S) ? _ : S,
@@ -152,7 +152,7 @@ let S = (e) => {
             } = e,
             {
                 pendingGlobalName: h,
-                pendingNickname: P,
+                pendingNickname: y,
                 pendingPronouns: O,
                 pendingBio: E,
                 pendingBanner: w,
@@ -160,14 +160,14 @@ let S = (e) => {
                 pendingAvatarDecoration: A,
                 pendingThemeColors: N,
                 pendingAccentColor: k,
-            } = (0, l.cj)([u.Z, y.Z], () =>
+            } = (0, l.cj)([u.Z, P.Z], () =>
                 I(
                     {
                         pendingNickname: void 0,
                         pendingGlobalName: void 0,
                         pendingAccentColor: void 0,
                     },
-                    null != f ? u.Z.getAllPending() : y.Z.getAllPending(),
+                    null != f ? u.Z.getAllPending() : P.Z.getAllPending(),
                 ),
             ),
             Z = v.ZP.isPremium(i),
@@ -178,7 +178,7 @@ let S = (e) => {
                 user: i,
                 guild: f,
                 pendingGlobalName: h,
-                pendingNickname: P,
+                pendingNickname: y,
                 pendingPronouns: O,
                 pendingBio: x.dN.useSetting() && null != E ? d.ZP.parse(void 0, E).content : E,
                 pendingBanner: w,

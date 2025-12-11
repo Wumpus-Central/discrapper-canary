@@ -5,7 +5,7 @@ var i = n(481060),
     a = n(518950),
     o = n(268685),
     s = n(388032),
-    l = n(215062);
+    l = n(390434);
 function c(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ function f(e) {
                 (0, r.jsx)(i.Heading, {
                     variant: "heading-sm/normal",
                     className: l.textContainerRebranded,
-                    color: "header-primary",
+                    color: "text-strong",
                     children: s.intl.format(s.t.IqxblS, { username: d(t) }),
                 }),
             ],

@@ -4,7 +4,7 @@ n(473749);
 var l = n(481060),
     i = n(600164),
     s = n(388032),
-    a = n(357507);
+    a = n(802371);
 let o = {
     SlideContent: function (e) {
         let { children: t, scrollbarType: n } = e;
@@ -64,7 +64,7 @@ let o = {
             children: [
                 (0, r.jsx)(l.Heading, {
                     variant: "heading-xl/semibold",
-                    color: "header-primary",
+                    color: "text-strong",
                     children: s.intl.string(s.t.saHocI),
                 }),
                 null != t &&

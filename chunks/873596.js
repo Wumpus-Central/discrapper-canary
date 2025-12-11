@@ -14,7 +14,7 @@ var l = n(54381),
     p = n(586646),
     E = n(760373),
     N = n(388032),
-    O = n(756105);
+    O = n(544525);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -137,7 +137,7 @@ function I(e) {
                 (0, l.jsx)(a.Heading, {
                     className: O.title,
                     variant: "heading-lg/bold",
-                    color: "header-primary",
+                    color: "text-strong",
                     children: t ? N.intl.string(N.t.IlHdW8) : N.intl.string(N.t.WsOisp),
                 }),
                 (0, l.jsxs)(a.njP, {

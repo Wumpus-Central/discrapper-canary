@@ -6,7 +6,7 @@ var i = n(28664),
     a = n(449226),
     s = n(231338),
     o = n(388032),
-    c = n(824804);
+    c = n(146473);
 function d(e) {
     let { title: t, details: n } = e;
     return (0, r.jsxs)("div", {
@@ -17,7 +17,7 @@ function d(e) {
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "text-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: t,
                     }),
                     "string" == typeof n

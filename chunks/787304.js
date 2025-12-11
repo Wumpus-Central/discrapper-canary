@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(657707),
     d = n(402453),
     f = n(777207),
-    p = n(238584);
+    p = n(316521);
 function _(e) {
     let {
             value: t,
@@ -55,7 +55,7 @@ function _(e) {
                                 }),
                                 (0, r.jsx)(f.x, {
                                     variant: "text-md/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: (0, r.jsx)(l.X, {}),
                                 }),
                                 (0, r.jsx)(c.h, {

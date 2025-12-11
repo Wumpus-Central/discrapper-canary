@@ -28,8 +28,8 @@ var s = n(54381),
     v = n(963374),
     p = n(884338),
     N = n(168107),
-    y = n(480916),
-    C = n(446489),
+    C = n(480916),
+    y = n(446489),
     O = n(824578),
     P = n(247206),
     Z = n(406432),
@@ -64,8 +64,8 @@ var s = n(54381),
     et = n(981631),
     en = n(217702),
     es = n(388032),
-    el = n(586301),
-    ea = n(430864);
+    el = n(112021),
+    ea = n(960324);
 function er(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -129,14 +129,14 @@ let ei = 72,
                 threadId: t,
                 overrideMedia: i,
             }),
-            { ref: y, height: C } = (0, b.ZP)(),
+            { ref: C, height: y } = (0, b.ZP)(),
             O = (0, X.xH)((e) => e.setCardHeight, d.X);
         l.useEffect(() => {
-            null != C && O(t, C);
-        }, [C, O, t]),
+            null != y && O(t, y);
+        }, [y, O, t]),
             l.useEffect(() => {
-                null == a || a(y.current, t);
-            }, [y, a, t]);
+                null == a || a(C.current, t);
+            }, [C, a, t]);
         let P = l.useRef(null),
             { handleLeftClick: Z, handleRightClick: w } = (0, ee.Z)({
                 facepileRef: P,
@@ -168,7 +168,7 @@ let ei = 72,
             })(S, ["role", "onFocus"]),
             { isFocused: k, handleFocus: I, handleBlur: R } = (0, q.Z)(M);
         return (0, s.jsxs)("div", {
-            ref: y,
+            ref: C,
             "data-item-id": t,
             onClick: Z,
             onContextMenu: w,
@@ -179,7 +179,7 @@ let ei = 72,
                     er(
                         {
                             onClick: Z,
-                            focusProps: { ringTarget: y },
+                            focusProps: { ringTarget: C },
                             onContextMenu: w,
                             "aria-label": es.intl.formatToPlainString(es.t.pgYN6c, {
                                 title: g.name,
@@ -239,7 +239,7 @@ function eu(e) {
                     children: [
                         (0, s.jsx)(x.Heading, {
                             variant: "heading-lg/semibold",
-                            color: c ? "header-primary" : "text-muted",
+                            color: c ? "text-strong" : "text-muted",
                             lineClamp: 2,
                             className: el.postTitleText,
                             children: (0, s.jsxs)("span", {
@@ -437,7 +437,7 @@ function eg(e) {
                 }),
             }),
             "number" == typeof a
-                ? (0, s.jsx)(C.Z, {
+                ? (0, s.jsx)(y.Z, {
                       value: a,
                       digitWidth: 9,
                       className: el.messageCountText,
@@ -604,7 +604,7 @@ function ep(e) {
                     r &&
                         (e.preventDefault(),
                         e.nativeEvent.stopImmediatePropagation(),
-                        N.Z.showAgeVerificationGetStartedModal({ entryPoint: y.cU.FORUM_POST_MEDIA_PREVIEW }));
+                        N.Z.showAgeVerificationGetStartedModal({ entryPoint: C.cU.FORUM_POST_MEDIA_PREVIEW }));
             },
             children: [
                 (0, s.jsx)(ev, {

@@ -86,7 +86,7 @@ function w() {
                     (0, r.jsx)(a.Text, {
                         className: y.sourceOrPresetName,
                         variant: "text-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: L
                             ? null != (i = null == Z ? void 0 : Z.name)
                                 ? i

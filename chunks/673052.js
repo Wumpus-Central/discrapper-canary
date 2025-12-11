@@ -7,7 +7,7 @@ var i = n(481060),
     s = n(942951),
     l = n(834129),
     c = n(388032),
-    u = n(427070);
+    u = n(683330);
 function d(e) {
     let { message: t, channel: n, compact: d } = e,
         f = (0, o.ZP)(t),
@@ -29,7 +29,7 @@ function d(e) {
                 {
                     className: u.applicationName,
                     variant: "text-md/semibold",
-                    color: "header-primary",
+                    color: "text-strong",
                     children: _.name,
                 },
                 _.name,

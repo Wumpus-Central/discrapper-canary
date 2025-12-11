@@ -27,12 +27,12 @@ var r = n(54381),
     N = n(977392),
     P = n(134433),
     R = n(753194),
-    D = n(458034),
-    w = n(856651),
+    w = n(458034),
+    D = n(856651),
     x = n(981631),
     L = n(228168),
     j = n(388032),
-    M = n(852529);
+    M = n(638235);
 function k(e, t, n) {
     return (
         t in e
@@ -85,18 +85,18 @@ function Z(e, t) {
         e
     );
 }
-function B(e) {
+function F(e) {
     let t,
         { connectionType: n, connectionMetadataField: i, operator: a, value: o, description: s } = e;
     if (null != s)
         switch (a) {
-            case w.iO.LESS_THAN:
+            case D.iO.LESS_THAN:
                 t = j.intl.format(j.t["2p7dA3"], {
                     description: s,
                     count: Math.max(0, Number(o) - 1),
                 });
                 break;
-            case w.iO.GREATER_THAN:
+            case D.iO.GREATER_THAN:
                 t = j.intl.format(j.t["2p7dA3"], {
                     description: s,
                     count: Math.max(0, Number(o) + 1),
@@ -124,13 +124,13 @@ function B(e) {
                   }),
                   (0, r.jsx)(_.Text, {
                       variant: "text-xs/medium",
-                      color: "header-primary",
+                      color: "text-strong",
                       children: t,
                   }),
               ],
           });
 }
-function F(e) {
+function B(e) {
     let { eligibilityStates: t } = e,
         n = (0, g.ZP)(),
         i = (0, _.dQu)(u.Z.unsafe_rawColors.GREEN_330).hex(),
@@ -203,7 +203,7 @@ function F(e) {
                                     o()(null != i, "operator is null"),
                                     o()(null != a, "value is null"),
                                     (0, r.jsx)(
-                                        B,
+                                        F,
                                         {
                                             connectionType: t,
                                             connectionMetadataField: n,
@@ -272,7 +272,7 @@ function V(e) {
                 }),
                 (0, r.jsx)("div", {
                     className: M.popoutChecks,
-                    children: (0, r.jsx)(F, { eligibilityStates: o.flat() }),
+                    children: (0, r.jsx)(B, { eligibilityStates: o.flat() }),
                 }),
                 (0, r.jsxs)("div", {
                     className: M.buttonContainer,
@@ -321,7 +321,7 @@ function H(e) {
                       channelId: s.id,
                       guildId: a.id,
                       onGetRolesClicked: () => {
-                          (0, D.Am)(a.id);
+                          (0, w.Am)(a.id);
                       },
                       onOpenProfile: () => {
                           (0, v.openUserProfileModal)({
@@ -366,7 +366,7 @@ function H(e) {
                                 }),
                                 (0, r.jsx)(_.Text, {
                                     variant: "text-xs/bold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     className: M.roleName,
                                     children: u.name,
                                 }),

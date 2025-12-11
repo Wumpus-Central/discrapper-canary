@@ -7,9 +7,9 @@ var i = n(120356),
     s = n(481060),
     l = n(410030),
     c = n(388032),
-    u = n(896810);
+    u = n(434762);
 let d = function (e) {
-    let { className: t, color: n = "header-primary", textOpacity: i = 0.9 } = e,
+    let { className: t, color: n = "text-strong", textOpacity: i = 0.9 } = e,
         d = (0, l.Fg)(),
         f = (0, o.wj)(d) ? 0.2 : 0.08;
     return (0, r.jsxs)(s.Text, {

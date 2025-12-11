@@ -12,8 +12,8 @@ var a = n(54381),
     m = n(481060),
     h = n(857192),
     f = n(471518),
-    b = n(425986),
-    g = n(881294),
+    g = n(425986),
+    b = n(881294),
     x = n(523311),
     v = n(797908),
     C = n(292191),
@@ -31,7 +31,7 @@ function I(e) {
             return (
                 r.useEffect(() => {
                     a &&
-                        (0, g.zZ)(j.rMx.APP_DIRECTORY_COLLECTION_VIEWED, {
+                        (0, b.zZ)(j.rMx.APP_DIRECTORY_COLLECTION_VIEWED, {
                             collection_id: t,
                             collection_position: n,
                         });
@@ -44,7 +44,7 @@ function I(e) {
         }),
         c = r.useCallback(
             (e, a) => {
-                (0, g.zZ)(j.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                (0, b.zZ)(j.rMx.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                     collection_id: t.id,
                     item_position: a,
                     collection_position: n,
@@ -60,7 +60,7 @@ function I(e) {
             (0, a.jsx)(m.Heading, {
                 className: l()(_.sectionTitle, { [_.titleExtraPadding]: 0 === n }),
                 variant: "heading-lg/semibold",
-                color: "header-primary",
+                color: "text-strong",
                 children: t.title,
             }),
             (0, a.jsx)("div", {
@@ -85,14 +85,14 @@ function I(e) {
 let S = function (e) {
     let { onSelectApplication: t } = e,
         n = (0, p.e7)([h.default], () => h.default.onlyShowPreviewAppCollections) ? o.E.PREVIEW : o.E.ACTIVE,
-        i = (0, p.e7)([b.Z], () =>
-            b.Z.getFetchState({
+        i = (0, p.e7)([g.Z], () =>
+            g.Z.getFetchState({
                 surface: y,
                 activeState: n,
             }),
         ),
-        l = (0, p.e7)([b.Z], () =>
-            b.Z.getCollections({
+        l = (0, p.e7)([g.Z], () =>
+            g.Z.getCollections({
                 surface: y,
                 activeState: n,
             }),
@@ -104,13 +104,13 @@ let S = function (e) {
         });
     }, [n]);
     let s = r.useMemo(() => (null == l ? void 0 : l.filter((e) => e.type !== u.o.GALLERY)), [l]);
-    return i === b.M.ERROR
+    return i === g.M.ERROR
         ? (0, a.jsx)("div", {
               className: _.errorContainer,
               children: (0, a.jsx)(C.Z, { className: _.error }),
           })
         : (0, a.jsx)(x.Z, {
-              loading: i === b.M.FETCHING,
+              loading: i === g.M.FETCHING,
               children:
                   null == s
                       ? void 0

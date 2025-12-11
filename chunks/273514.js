@@ -6,7 +6,7 @@ var l = n(481060),
     a = n(592125),
     s = n(430824),
     o = n(388032),
-    d = n(238972);
+    d = n(557376);
 let c = (e) => {
     let { entry: t } = e,
         n = a.Z.getChannel(t.channelId);
@@ -42,7 +42,7 @@ let c = (e) => {
                           }),
                           (0, r.jsx)(l.Text, {
                               variant: "text-md/semibold",
-                              color: "header-primary",
+                              color: "text-strong",
                               children: t.name,
                           }),
                       ],

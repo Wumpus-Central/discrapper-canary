@@ -17,7 +17,7 @@ function u(e) {
                 children: (0, r.jsx)(s.Text, {
                     className: d.__invalid_label,
                     variant: "text-md/medium",
-                    color: "header-primary",
+                    color: "text-strong",
                     children: t,
                 }),
             }),

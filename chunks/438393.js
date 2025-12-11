@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(330711),
     a = n(793030),
-    o = n(994768);
+    o = n(697335);
 let s = 96;
 function l(e) {
     let { benefits: t, description: n, imgSrc: l, title: c, tag: u, FallbackIcon: d } = e,
@@ -44,7 +44,7 @@ function l(e) {
                         children: [
                             null != u && (0, r.jsx)("div", { children: u }),
                             (0, r.jsx)(a.X6q, {
-                                color: "header-primary",
+                                color: "text-strong",
                                 variant: "heading-xl/semibold",
                                 children: c,
                             }),

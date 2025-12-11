@@ -1,9 +1,9 @@
-n.d(t, { j: () => _ });
+n.d(t, { j: () => y });
 var r = n(54381),
     i = n(473749),
     l = n(28664),
-    o = n(481060),
-    a = n(239091),
+    a = n(481060),
+    o = n(239091),
     s = n(100527),
     c = n(933557),
     u = n(266076),
@@ -12,21 +12,21 @@ var r = n(54381),
     h = n(626135),
     p = n(981631),
     g = n(388032),
-    m = n(782196);
-let b = (e) => {
+    b = n(408215);
+let m = (e) => {
         let { channel: t } = e;
         return (0, f.m$)({ channelId: t.id })
             ? (0, r.jsx)(l.u, {
                   text: g.intl.string(g.t.QyZ4Td),
-                  children: (0, r.jsx)(o.tQf, {
+                  children: (0, r.jsx)(a.tQf, {
                       size: "xs",
                       "aria-label": g.intl.string(g.t.VHXh8a),
-                      color: o.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
+                      color: a.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                   }),
               })
             : null;
     },
-    _ = i.memo(function (e) {
+    y = i.memo(function (e) {
         let { channel: t } = e,
             i = t.id,
             f = (0, c.ZP)(t);
@@ -36,13 +36,13 @@ let b = (e) => {
                     asContainer: !0,
                     text: g.intl.string(g.t["5Q9+/L"]),
                     position: "bottom",
-                    children: (0, r.jsxs)(o.P3F, {
-                        className: m.hoverableContainer,
+                    children: (0, r.jsxs)(a.P3F, {
+                        className: b.hoverableContainer,
                         onClick: () => {
                             (0, d.B)(i, s.Z.HEADER_BAR);
                         },
                         onContextMenu: (e) =>
-                            (0, a.jW)(
+                            (0, o.jW)(
                                 e,
                                 () =>
                                     Promise.all([n.e("79695"), n.e("25421"), n.e("38357")])
@@ -122,26 +122,26 @@ let b = (e) => {
                         "aria-label": g.intl.string(g.t["5Q9+/L"]),
                         children: [
                             (0, r.jsx)(u.Z, {
-                                className: m.gdmIcon,
+                                className: b.gdmIcon,
                                 "aria-hidden": !0,
                                 channel: t,
-                                size: o.EFr.SIZE_20,
-                                facepileSizeOverride: o.EFr.SIZE_24,
+                                size: a.EFr.SIZE_20,
+                                facepileSizeOverride: a.EFr.SIZE_24,
                             }),
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-md/medium",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: null != f ? f : "",
                             }),
-                            (0, r.jsx)(o.vdY, {
-                                className: m.editIcon,
+                            (0, r.jsx)(a.vdY, {
+                                className: b.editIcon,
                                 size: "xs",
                                 color: "currentColor",
                             }),
                         ],
                     }),
                 }),
-                (0, r.jsx)(b, { channel: t }),
+                (0, r.jsx)(m, { channel: t }),
             ],
         });
     });

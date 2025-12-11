@@ -59,7 +59,7 @@ function L(e) {
                               children: [
                                   (0, i.jsx)(u.Text, {
                                       variant: "text-md/semibold",
-                                      color: "header-primary",
+                                      color: "text-strong",
                                       children: M.intl.string(M.t.YIVr4B),
                                   }),
                                   (0, i.jsx)(u.Text, {
@@ -98,7 +98,7 @@ function L(e) {
                     (0, i.jsxs)(u.Text, {
                         className: R.linkedLobby,
                         variant: "text-sm/medium",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: [
                             "\u2022",
                             (0, i.jsx)("img", {

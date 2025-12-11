@@ -44,7 +44,7 @@ var r = n(54381),
     U = n(856651),
     G = n(388032),
     Z = n(454578);
-function B(e, t, n) {
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function B(e, t, n) {
         e
     );
 }
-function F(e) {
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -68,7 +68,7 @@ function F(e) {
                 }),
             )),
             r.forEach(function (t) {
-                B(e, t, n[t]);
+                F(e, t, n[t]);
             });
     }
     return e;
@@ -142,7 +142,7 @@ let Y = (e) => {
                             children: [
                                 (0, r.jsx)(f.Text, {
                                     variant: "text-md/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: a.guild.name,
                                 }),
                                 (0, r.jsx)(f.Anchor, {
@@ -179,7 +179,7 @@ function W(e) {
         [S, T] = i.useState(n.metadataVisibility),
         [C, A] = i.useState(n.showActivity),
         [N, R] = i.useState(null),
-        [L, B] = i.useState(null),
+        [L, F] = i.useState(null),
         [V, W] = i.useState(!1),
         [K, z] = i.useState([]),
         q = (0, b.rR)(n.type),
@@ -225,7 +225,7 @@ function W(e) {
                                 className: Z.connectionAccountLabelContainer,
                                 children: [
                                     (0, r.jsx)(f.Text, {
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         variant: "text-md/semibold",
                                         className: Z.connectionAccountValue,
                                         children: e.name,
@@ -443,7 +443,7 @@ function W(e) {
             (0, r.jsx)(
                 s.Modal,
                 H(
-                    F(
+                    B(
                         {
                             title: G.intl.formatToPlainString(G.t.U5x12f, { name: e.name }),
                             subtitle: G.intl.format(G.t.VgqIPj, { provider: e.name }),
@@ -490,7 +490,7 @@ function W(e) {
         let { verified: t } = n,
             r = +!!e;
         if (e && !t) {
-            B(r),
+            F(r),
                 (0, O.Z)({
                     platformType: n.type,
                     location: "User Settings",
@@ -512,7 +512,7 @@ function W(e) {
             if (!1 === n.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
             null != e && (g(e), _.Z.setVisibility(n.type, n.id, e), R(null)),
-                null != t && (T(t), _.Z.setMetadataVisibility(n.type, n.id, t), B(null));
+                null != t && (T(t), _.Z.setMetadataVisibility(n.type, n.id, t), F(null));
         }, [n]);
     let ed = (0, w.wy)("ConnectedAccount");
     return (0, r.jsxs)("div", {

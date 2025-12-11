@@ -9,8 +9,8 @@ var a = e(120356),
     c = e(696375),
     d = e(800530),
     x = e(388032),
-    m = e(691196),
-    g = e(186425),
+    m = e(423332),
+    g = e(420418),
     u = e(160557);
 function p(n) {
     let { className: t, onNext: e, onClose: a } = n,
@@ -57,7 +57,7 @@ function p(n) {
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: "heading-md/bold",
-                        color: "header-primary",
+                        color: "text-strong",
                         className: m.actionsHeader,
                         children: x.intl.string(x.t["9BRc1N"]),
                     }),

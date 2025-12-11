@@ -10,15 +10,15 @@ var l = t(442837),
     u = t(311821),
     d = t(594174),
     f = t(55563),
-    p = t(551428),
-    g = t(73346),
+    g = t(551428),
+    p = t(73346),
     m = t(987209),
     b = t(563132),
     h = t(409813),
     y = t(614277),
     j = t(474936),
     v = t(388032),
-    x = t(323261);
+    x = t(321412);
 let O = {
     key: h.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
@@ -79,12 +79,12 @@ function k(e) {
         I = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         T = (0, l.e7)([f.Z], () => (null != P ? f.Z.get(P) : null), [P]),
         E = (0, s.Z)({}),
-        M = (0, l.e7)([p.Z], () => (null != P ? p.Z.getForSKU(P) : null), [P]),
+        M = (0, l.e7)([g.Z], () => (null != P ? g.Z.getForSKU(P) : null), [P]),
         Z =
             (null == M ? void 0 : M.headerBackground) != null && (null == T ? void 0 : T.applicationId) != null
-                ? (0, g._W)(T.applicationId, M.headerBackground, 256)
+                ? (0, p._W)(T.applicationId, M.headerBackground, 256)
                 : void 0,
-        _ = async (e, n) => {};
+        S = async (e, n) => {};
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(y.C3, {
@@ -97,7 +97,7 @@ function k(e) {
                                 (null == T ? void 0 : T.name) != null &&
                                     (0, i.jsx)(a.Heading, {
                                         variant: "heading-lg/semibold",
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         children: T.name,
                                     }),
                                 null != Z &&
@@ -114,7 +114,7 @@ function k(e) {
                                 (0, i.jsx)(r.Z, {
                                     recipients: E,
                                     selectedSkuId: P,
-                                    validateSelectedGift: _,
+                                    validateSelectedGift: S,
                                 }),
                                 (0, i.jsx)(c.Z, {
                                     sectionTitle: v.intl.string(v.t.B3miE8),

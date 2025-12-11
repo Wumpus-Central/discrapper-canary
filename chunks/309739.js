@@ -72,7 +72,7 @@ function g() {
                             (0, r.jsx)(a.Heading, {
                                 className: m.myServersTitle,
                                 variant: "heading-md/medium",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: p.intl.string(p.t.TqdOvC),
                             }),
                             !e &&

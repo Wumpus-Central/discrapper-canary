@@ -9,8 +9,8 @@ var r = n(54381),
     d = n(969632),
     u = n(430677),
     g = n(388032),
-    m = n(197530);
-function p(e) {
+    f = n(551952);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,15 +53,15 @@ function f(e, t) {
         e
     );
 }
-let h = [];
-function b() {
+let p = [];
+function h() {
     return (0, r.jsx)("div", {
-        className: m.actionItemContainer,
+        className: f.actionItemContainer,
         children: (0, r.jsxs)("div", {
-            className: m.actionItem,
+            className: f.actionItem,
             children: [
                 (0, r.jsx)("div", {
-                    className: m.actionItemEmojiWrapper,
+                    className: f.actionItemEmojiWrapper,
                     children: (0, r.jsx)(a.snC, {
                         size: "custom",
                         color: "currentColor",
@@ -70,10 +70,10 @@ function b() {
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: m.actionItemText,
+                    className: f.actionItemText,
                     children: (0, r.jsx)(a.Text, {
                         variant: "text-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: g.intl.string(g.t["K/i3iQ"]),
                     }),
                 }),
@@ -86,11 +86,11 @@ function x(e) {
         s = i.useCallback(() => {
             if (null != t)
                 return (0, a.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("7590"), n.e("83975")]).then(n.bind(n, 380716));
+                    let { default: e } = await Promise.all([n.e("7590"), n.e("88575")]).then(n.bind(n, 380716));
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            f(p({}, n), {
+                            b(m({}, n), {
                                 guildId: t,
                                 onSave: l,
                             }),
@@ -98,7 +98,7 @@ function x(e) {
                 });
         }, [t, l]);
     return (0, r.jsxs)(a.P3F, {
-        className: m.addActionItem,
+        className: f.addActionItem,
         onClick: s,
         children: [
             (0, r.jsx)(a.oFk, {
@@ -117,7 +117,7 @@ let j = function (e) {
     let { guildId: t } = e,
         n = (0, l.Wu)([d.Z], () => {
             var e;
-            return null != (e = d.Z.getSettings().newMemberActions) ? e : h;
+            return null != (e = d.Z.getSettings().newMemberActions) ? e : p;
         }),
         a = i.useCallback(
             (e, n) => {
@@ -141,13 +141,13 @@ let j = function (e) {
             },
             [n],
         ),
-        _ = n.map((e) => f(p({}, e), { id: e.channelId })),
-        v = i.useCallback((e) => {
+        v = n.map((e) => b(m({}, e), { id: e.channelId })),
+        O = i.useCallback((e) => {
             (0, c.hS)(e);
         }, []),
-        { handleDragStart: O, handleDragReset: C, handleDragComplete: y } = (0, s.Z)(_, v);
+        { handleDragStart: C, handleDragReset: y, handleDragComplete: N } = (0, s.Z)(v, O);
     return (0, r.jsxs)("div", {
-        className: m.section,
+        className: f.section,
         children: [
             n.map((e, n) =>
                 (0, r.jsx)(
@@ -158,14 +158,14 @@ let j = function (e) {
                         actionIndex: n,
                         onChange: g,
                         onDelete: j,
-                        onDragStart: O,
-                        onDragReset: C,
-                        onDragComplete: y,
+                        onDragStart: C,
+                        onDragReset: y,
+                        onDragComplete: N,
                     },
                     e.channelId,
                 ),
             ),
-            (0, r.jsx)(b, {}),
+            (0, r.jsx)(h, {}),
             n.length < o.O9 &&
                 (0, r.jsx)(x, {
                     guildId: t,

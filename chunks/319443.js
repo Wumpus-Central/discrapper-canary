@@ -1,6 +1,6 @@
 n.r(t), n.d(t, { default: () => U }), n(388685), n(781311);
-var r = n(54381),
-    a = n(473749),
+var a = n(54381),
+    r = n(473749),
     i = n(120356),
     l = n.n(i),
     s = n(392711),
@@ -11,14 +11,14 @@ var r = n(54381),
     p = n(611928),
     m = (n(763433), n(175118)),
     h = n(680180),
-    g = n(726115),
-    f = n(703656),
-    _ = n(314897),
-    b = n(594174),
-    x = n(626135),
-    v = n(471518),
-    C = n(31569),
-    j = n(370210),
+    f = n(726115),
+    g = n(703656),
+    b = n(314897),
+    x = n(594174),
+    v = n(626135),
+    C = n(471518),
+    j = n(31569),
+    _ = n(370210),
     y = n(678694),
     I = n(216780),
     S = n(881294),
@@ -34,32 +34,32 @@ var r = n(54381),
     w = n(979007),
     D = n(981631),
     k = n(388032),
-    M = n(813525);
+    M = n(563267);
 function G(e) {
     let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: i } = e,
-        s = (0, o.e7)([j.Z], () => j.Z.getApplication(t)),
-        [d, u] = a.useState(n),
-        m = a.useCallback(() => {
+        s = (0, o.e7)([_.Z], () => _.Z.getApplication(t)),
+        [d, u] = r.useState(n),
+        m = r.useCallback(() => {
             u(n);
         }, [n]);
-    return (0, r.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         className: M.detailHeaderContainer,
         children: [
-            (0, r.jsx)("div", {
+            (0, a.jsx)("div", {
                 className: M.detailHeaderSection,
-                children: (0, r.jsx)(p.Cm, {
+                children: (0, a.jsx)(p.Cm, {
                     icon: c.j9r,
                     onClick: i,
                 }),
             }),
-            (0, r.jsx)(c.Heading, {
+            (0, a.jsx)(c.Heading, {
                 variant: "heading-lg/semibold",
-                color: "header-primary",
+                color: "text-strong",
                 className: M.detailHeader,
                 lineClamp: 1,
                 children: null == s ? void 0 : s.name,
             }),
-            (0, r.jsx)("div", {
+            (0, a.jsx)("div", {
                 className: l()(M.detailHeaderSection, M.detailHeaderButtonsContainer, {
                     [M.visible]: !n,
                     [M.hide]: n && !d,
@@ -68,7 +68,7 @@ function G(e) {
                 onTransitionEnd: m,
                 children:
                     null != s
-                        ? (0, r.jsx)(L.Z, {
+                        ? (0, a.jsx)(L.Z, {
                               application: s,
                               size: "sm",
                           })
@@ -78,36 +78,36 @@ function G(e) {
     });
 }
 function B() {
-    let e = a.useCallback(() => {
+    let e = r.useCallback(() => {
             (0, S.qF)();
         }, []),
-        t = a.useCallback(() => {
+        t = r.useCallback(() => {
             (0, S.rf)();
         }, []);
-    return (0, r.jsxs)(c.qXd, {
+    return (0, a.jsxs)(c.qXd, {
         color: c.DM8.BRAND,
         className: M.nagbar,
         children: [
-            (0, r.jsx)(c.gw7, {
+            (0, a.jsx)(c.gw7, {
                 size: "custom",
                 color: "white",
                 className: M.logo,
             }),
-            (0, r.jsx)(c.Text, {
+            (0, a.jsx)(c.Text, {
                 tag: "span",
                 color: "always-white",
                 variant: "text-md/normal",
                 children: k.intl.string(k.t.Ol3MIt),
             }),
-            (0, r.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: M.nagbarActionContainer,
                 children: [
-                    (0, r.jsx)(c.NoS, {
+                    (0, a.jsx)(c.NoS, {
                         onClick: e,
                         noticeType: D.kVF.LOGIN,
                         children: k.intl.string(k.t["825cFy"]),
                     }),
-                    (0, r.jsx)(c.NoS, {
+                    (0, a.jsx)(c.NoS, {
                         onClick: t,
                         noticeType: D.kVF.REGISTER,
                         minor: !0,
@@ -120,28 +120,28 @@ function B() {
 }
 let U = function () {
     var e;
-    let t = (0, o.e7)([_.default], () => !_.default.isAuthenticated()),
-        { onScroll: n, scrollPosition: i, resetScrollPosition: j } = (0, d.M)(),
+    let t = (0, o.e7)([b.default], () => !b.default.isAuthenticated()),
+        { onScroll: n, scrollPosition: i, resetScrollPosition: _ } = (0, d.M)(),
         L = (0, E.Xh)(),
         U = (0, S.nu)(),
         F = (null == L ? void 0 : L.type) === E.m_.CATEGORY ? L.categoryId : void 0,
-        { applicationId: H, section: z } = (null == L ? void 0 : L.type) === E.m_.APPLICATION ? L : {},
+        { applicationId: z, section: H } = (null == L ? void 0 : L.type) === E.m_.APPLICATION ? L : {},
         { query: V, categoryId: Y } = (null == L ? void 0 : L.type) === E.m_.SEARCH ? L : {},
         W = (0, o.e7)([y.Z], () => y.Z.getCategories()),
-        X = a.useMemo(() => [(0, I.KQ)(), ...W], [W]),
-        K = a.useMemo(() => X.find((e) => e.id === Number(Y)), [X, Y]),
+        X = r.useMemo(() => [(0, I.KQ)(), ...W], [W]),
+        K = r.useMemo(() => X.find((e) => e.id === Number(Y)), [X, Y]),
         { tabs: q, selectedTab: Q, onSelectTab: J } = (0, O.i)(null == F ? void 0 : F.toString()),
-        [$, ee] = a.useState(!0),
+        [$, ee] = r.useState(!0),
         et = E.z8.useField("trackedOpenedFromExternalEntrypoint"),
         en = E.z8.useField("sessionId"),
-        er = (0, o.e7)([b.default], () => b.default.getCurrentUser());
-    a.useEffect(() => {
+        ea = (0, o.e7)([x.default], () => x.default.getCurrentUser());
+    r.useEffect(() => {
         if (!et && null == en) {
-            let e = (0, g.PM)();
-            x.default.track(D.rMx.APP_DIRECTORY_OPENED, {
+            let e = (0, f.PM)();
+            v.default.track(D.rMx.APP_DIRECTORY_OPENED, {
                 source: E.xF.EXTERNAL,
                 session_id: e,
-                user_id: null == er ? void 0 : er.id,
+                user_id: null == ea ? void 0 : ea.id,
             }),
                 E.z8.setState({
                     trackedOpenedFromExternalEntrypoint: !0,
@@ -150,15 +150,15 @@ let U = function () {
                     guildId: null,
                 });
         }
-    }, [en, et, null == er ? void 0 : er.id]),
-        a.useEffect(() => {
-            v.CP();
+    }, [en, et, null == ea ? void 0 : ea.id]),
+        r.useEffect(() => {
+            C.CP();
         }, []),
-        a.useEffect(() => {
-            U && v.g5();
+        r.useEffect(() => {
+            U && C.g5();
         }, [U]),
-        a.useEffect(() => E.aQ.setState({ lastItem: L }), [L]);
-    let ea = null != H,
+        r.useEffect(() => E.aQ.setState({ lastItem: L }), [L]);
+    let er = null != z,
         ei = (null == L ? void 0 : L.type) === E.m_.SEARCH,
         {
             searchQuery: el,
@@ -166,7 +166,7 @@ let U = function () {
             onClearSearch: eo,
             onSearchSubmit: ec,
         } = (0, P.M)({ initialQuery: null != V ? V : "" }),
-        ed = C.Z.useField("searchBarState"),
+        ed = j.Z.useField("searchBarState"),
         {
             onTabsAvailableWidthChange: eu,
             onCollapsedSearchBarClick: ep,
@@ -175,72 +175,72 @@ let U = function () {
             isSearchBarVisible: !0,
             isSearchBarEmpty: "" === el.trim(),
             searchBarState: ed,
-            setSearchBarState: (e) => C.Z.setState({ searchBarState: e }),
+            setSearchBarState: (e) => j.Z.setState({ searchBarState: e }),
         }),
-        eh = a.useCallback(
+        eh = r.useCallback(
             (e) => {
-                J(e), ei && eo(), j();
+                J(e), ei && eo(), _();
             },
-            [ei, eo, J, j],
+            [ei, eo, J, _],
         ),
-        eg = a.useCallback((e) => (0, N.ph)({ applicationId: e }), []),
-        ef = ea || ei,
-        e_ = a.useCallback(() => {
-            null != (0, E.Uc)() ? (0, f.op)() : (0, N.Yp)();
+        ef = r.useCallback((e) => (0, N.ph)({ applicationId: e }), []),
+        eg = er || ei,
+        eb = r.useCallback(() => {
+            null != (0, E.Uc)() ? (0, g.op)() : (0, N.Yp)();
         }, []),
-        eb = a.useMemo(
+        ex = r.useMemo(
             () =>
                 (0, s.debounce)((e) => {
-                    let { scrollTop: t, offsetHeight: n, scrollHeight: r, location: a } = e;
+                    let { scrollTop: t, offsetHeight: n, scrollHeight: a, location: r } = e;
                     t > 0 &&
                         (0, S.zZ)(D.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
-                            scroll_visible_percentile: (t + n) / r,
-                            current_page: a,
+                            scroll_visible_percentile: (t + n) / a,
+                            current_page: r,
                         });
                 }, 200),
             [],
         ),
-        ex = a.useCallback(
+        ev = r.useCallback(
             (e, t) => {
                 n(e),
-                    eb({
+                    ex({
                         scrollTop: e.currentTarget.scrollTop,
                         offsetHeight: e.currentTarget.offsetHeight,
                         scrollHeight: e.currentTarget.scrollHeight,
                         location: t,
                     });
             },
-            [eb, n],
+            [ex, n],
         );
-    return (0, r.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         className: l()(M.outerContainer, { [M.loggedOutContainer]: t }),
         children: [
-            t ? (0, r.jsx)(B, {}) : null,
-            (0, r.jsxs)("div", {
+            t ? (0, a.jsx)(B, {}) : null,
+            (0, a.jsxs)("div", {
                 className: M.innerContainer,
                 children: [
-                    (0, r.jsxs)(p.ZP, {
-                        variant: ef ? p._6.RELATIVE : p._6.OVERLAY,
+                    (0, a.jsxs)(p.ZP, {
+                        variant: eg ? p._6.RELATIVE : p._6.OVERLAY,
                         children: [
-                            !ef && (0, r.jsx)(p.z6, { scrollPosition: i }),
-                            ea
-                                ? (0, r.jsx)(G, {
-                                      applicationId: H,
+                            !eg && (0, a.jsx)(p.z6, { scrollPosition: i }),
+                            er
+                                ? (0, a.jsx)(G, {
+                                      applicationId: z,
                                       hideDetailHeaderButtons: $,
-                                      onClickBack: e_,
+                                      onClickBack: eb,
                                   })
-                                : (0, r.jsxs)(r.Fragment, {
+                                : (0, a.jsxs)(a.Fragment, {
                                       children: [
                                           ei
-                                              ? (0, r.jsx)(p.Cm, {
+                                              ? (0, a.jsx)(p.Cm, {
                                                     icon: c.j9r,
-                                                    onClick: e_,
+                                                    onClick: eb,
                                                 })
-                                              : (0, r.jsx)(p.aV, { icon: c.jje }),
+                                              : (0, a.jsx)(p.aV, { icon: c.jje }),
                                           ei
-                                              ? (0, r.jsx)(c.Heading, {
+                                              ? (0, a.jsx)(c.Heading, {
                                                     variant: "heading-lg/semibold",
-                                                    color: "header-primary",
+                                                    color: "text-strong",
                                                     className: M.searchHeader,
                                                     children:
                                                         null != V && "" !== V
@@ -252,13 +252,13 @@ let U = function () {
                                                                           : k.intl.string(k.t.E407b7),
                                                               }),
                                                 })
-                                              : (0, r.jsx)(m.Z, {
+                                              : (0, a.jsx)(m.Z, {
                                                     tabs: q,
                                                     selectedTab: Q,
                                                     onTabSelect: eh,
                                                     onAvailableWidthChange: eu,
                                                 }),
-                                          (0, r.jsx)(h.Z, {
+                                          (0, a.jsx)(h.Z, {
                                               query: el,
                                               placeholder: k.intl.string(k.t["5h0QOP"]),
                                               onTextChange: es,
@@ -272,28 +272,28 @@ let U = function () {
                                   }),
                         ],
                     }),
-                    ea
-                        ? (0, r.jsx)(A.Z, {
-                              onScroll: (e) => ex(e, E.m_.APPLICATION),
-                              onSelectApplication: eg,
-                              applicationId: H,
-                              initialTab: z,
+                    er
+                        ? (0, a.jsx)(A.Z, {
+                              onScroll: (e) => ev(e, E.m_.APPLICATION),
+                              onSelectApplication: ef,
+                              applicationId: z,
+                              initialTab: H,
                               onButtonsVisibilityChange: ee,
                           })
                         : ei
-                          ? (0, r.jsx)(Z.Z, {
-                                onSelectApplication: eg,
-                                onScroll: (e) => ex(e, E.m_.SEARCH),
+                          ? (0, a.jsx)(Z.Z, {
+                                onSelectApplication: ef,
+                                onScroll: (e) => ev(e, E.m_.SEARCH),
                             })
                           : Q === w.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
-                            ? (0, r.jsx)(R.Z, {
-                                  onScroll: (e) => ex(e, E.m_.HOME),
-                                  onSelectApplication: eg,
+                            ? (0, a.jsx)(R.Z, {
+                                  onScroll: (e) => ev(e, E.m_.HOME),
+                                  onSelectApplication: ef,
                               })
-                            : (0, r.jsx)(T.Z, {
+                            : (0, a.jsx)(T.Z, {
                                   tabId: Number(Q),
-                                  onScroll: (e) => ex(e, E.m_.CATEGORY),
-                                  onSelectApplication: eg,
+                                  onScroll: (e) => ev(e, E.m_.CATEGORY),
+                                  onSelectApplication: ef,
                               }),
                 ],
             }),

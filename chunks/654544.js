@@ -1,23 +1,23 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(481060),
-    a = n(835473),
+    a = n(481060),
+    l = n(835473),
     o = n(768581),
     c = n(582113),
     s = n(388032),
-    u = n(369929);
+    u = n(274156);
 function d(e) {
     let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: d, socialLayerStorefrontApplicationId: f } = e,
         g = i.useRef(null),
-        [p, m] = i.useState(!1),
-        b = (0, a.q)(f),
+        [p, b] = i.useState(!1),
+        m = (0, l.q)(f),
         h = i.useMemo(() => {
-            let e = null == b || b.id !== c.t9 ? s.intl.string(s.t.apFNLU) : s.intl.string(s.t["kq/75v"]);
-            if (null == b) return e;
+            let e = null == m || m.id !== c.t9 ? s.intl.string(s.t.apFNLU) : s.intl.string(s.t["kq/75v"]);
+            if (null == m) return e;
             let t = o.ZP.getApplicationIconURL({
-                id: b.id,
-                icon: b.icon,
+                id: m.id,
+                icon: m.icon,
                 size: 20,
             });
             return (0, r.jsxs)("div", {
@@ -28,42 +28,42 @@ function d(e) {
                         src: t,
                         alt: e,
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: e,
                     }),
                 ],
             });
-        }, [b]),
+        }, [m]),
         y = i.useMemo(
             () =>
-                (0, r.jsxs)(l.kSQ, {
+                (0, r.jsxs)(a.kSQ, {
                     children: [
-                        (0, r.jsx)(l.sNh, {
+                        (0, r.jsx)(a.sNh, {
                             id: "browse-collectibles-shop",
                             label: s.intl.string(s.t["5upuqx"]),
-                            iconLeft: l.EOn,
+                            iconLeft: a.EOn,
                             action: n,
                         }),
-                        (0, r.jsx)(l.sNh, {
+                        (0, r.jsx)(a.sNh, {
                             id: "browse-social-layer-storefront",
                             label: h,
-                            iconLeft: null != b ? void 0 : l.EOn,
+                            iconLeft: null != m ? void 0 : a.EOn,
                             action: d,
                         }),
                     ],
                 }),
-            [n, d, h, b],
+            [n, d, h, m],
         );
-    return (0, r.jsx)(l.yRy, {
+    return (0, r.jsx)(a.yRy, {
         targetElementRef: g,
         position: "bottom",
-        onRequestOpen: () => m(!0),
-        onRequestClose: () => m(!1),
+        onRequestOpen: () => b(!0),
+        onRequestClose: () => b(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(l.v2r, {
+            return (0, r.jsx)(a.v2r, {
                 navId: "wishlist-overflow-menu",
                 onSelect: void 0,
                 onClose: t,
@@ -73,7 +73,7 @@ function d(e) {
         },
         children: (e) =>
             (0, r.jsx)(
-                l.Button,
+                a.Button,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -103,7 +103,7 @@ function d(e) {
                         buttonRef: g,
                         variant: "secondary",
                         size: "sm",
-                        icon: p ? l.Dio : l.CJ0,
+                        icon: p ? a.Dio : a.CJ0,
                         iconPosition: "end",
                         text: t,
                     },

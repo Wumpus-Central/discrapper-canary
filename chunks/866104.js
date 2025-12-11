@@ -25,9 +25,9 @@ var r = n(54381),
     y = n(696014),
     O = n(847033),
     v = n(544978),
-    S = n(893182),
+    S = n(615327),
     I = n(388032),
-    T = n(793701);
+    T = n(332232);
 function C(e) {
     let { onClick: t } = e;
     return (0, r.jsxs)(l.P3F, {
@@ -36,7 +36,7 @@ function C(e) {
         children: [
             (0, r.jsx)(l.Text, {
                 variant: "text-sm/medium",
-                color: "header-primary",
+                color: "text-strong",
                 children: I.intl.string(I.t.J4cw1q),
             }),
             (0, r.jsx)(l.LZC, {
@@ -104,8 +104,8 @@ function P(e) {
         g = (null != (n = null == o || null == (t = o.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [E, b] = i.useState(1),
         P = (0, c.Z)("(max-width: 1439px)"),
-        { selectedTab: R, isPhantomPreview: D } = (0, O.m)(),
-        w = R === v.y.GUILD_PRODUCTS_PREVIEW ? I.intl.string(I.t["LvXy/H"]) : I.intl.string(I.t.XyqKh8),
+        { selectedTab: R, isPhantomPreview: w } = (0, O.m)(),
+        D = R === v.y.GUILD_PRODUCTS_PREVIEW ? I.intl.string(I.t["LvXy/H"]) : I.intl.string(I.t.XyqKh8),
         x = (e) => {
             null != e && e.clientHeight > 30 && b(2);
         };
@@ -139,7 +139,7 @@ function P(e) {
         : (0, r.jsx)(l.Text, {
               variant: "text-sm/normal",
               color: "text-default",
-              children: D ? w : I.intl.string(I.t["NY/FIW"]),
+              children: w ? D : I.intl.string(I.t["NY/FIW"]),
           });
     return (0, r.jsxs)("div", {
         className: T.container,
@@ -152,7 +152,7 @@ function P(e) {
                             guild: a,
                             size: f.Z.Sizes.LARGER,
                             iconSrc:
-                                null == a.icon || D
+                                null == a.icon || w
                                     ? (0, u.b)("server_products/storefront/default-guild-icon.jpg")
                                     : void 0,
                         }),
@@ -167,9 +167,9 @@ function P(e) {
                                 ref: x,
                                 children: (0, r.jsx)(l.Heading, {
                                     variant: "heading-xl/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     lineClamp: 2,
-                                    children: D
+                                    children: w
                                         ? I.intl.string(I.t.rtgp7q)
                                         : I.intl.formatToPlainString(I.t.NZeik9, { guildName: a.name }),
                                 }),
@@ -191,7 +191,7 @@ function P(e) {
             }),
             (0, r.jsx)(N, {
                 coverImageAsset: null == o ? void 0 : o.cover_image_asset,
-                isPreview: D,
+                isPreview: w,
             }),
         ],
     });

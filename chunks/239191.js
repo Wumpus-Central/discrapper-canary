@@ -10,8 +10,8 @@ var s = i(54381),
     m = i(153867),
     h = i(131388),
     g = i(514361),
-    p = i(47760),
-    x = i(210887),
+    x = i(47760),
+    p = i(210887),
     u = i(740492),
     y = i(695346),
     j = i(874893),
@@ -102,7 +102,7 @@ let C = [
 function k(e) {
     let { transitionState: t, onClose: i } = e,
         [a] = n.useState(() => g.Z.gradientPreset),
-        c = (0, d.e7)([x.Z], () => x.Z.theme),
+        c = (0, d.e7)([p.Z], () => p.Z.theme),
         [b] = n.useState(() => u.ZP.useSystemTheme === j.KW.ON),
         [k, K] = n.useState(() => (b ? "system" : null != a ? "gradient" : c)),
         { density: _ } = (0, o.TCT)(),
@@ -111,7 +111,7 @@ function k(e) {
             let e = [...C];
             if (null != a) {
                 let { colors: t, angle: i, theme: s, getName: n } = a,
-                    d = (0, p.VK)({
+                    d = (0, x.VK)({
                         colors: t,
                         angle: i,
                     }),
@@ -153,7 +153,7 @@ function k(e) {
                                 (0, s.jsx)("div", { className: O.headerImage }),
                                 (0, s.jsx)(o.Heading, {
                                     variant: w ? "heading-lg/semibold" : "heading-xl/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: f.intl.string(f.t["7+iCG4"]),
                                 }),
                             ],

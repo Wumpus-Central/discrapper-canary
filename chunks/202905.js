@@ -1,4 +1,4 @@
-n.d(t, { r: () => _ });
+n.d(t, { r: () => v });
 var r = n(54381),
     i = n(473749),
     l = n(580685),
@@ -9,12 +9,12 @@ var r = n(54381),
     d = n(65361),
     u = n(798476),
     g = n(434404),
-    m = n(999382),
-    p = n(548522),
-    f = n(651390),
-    h = n(981631),
-    b = n(388032),
-    x = n(556955);
+    f = n(999382),
+    m = n(548522),
+    b = n(651390),
+    p = n(981631),
+    h = n(388032),
+    x = n(159150);
 let j = {
     id: "0",
     name: "",
@@ -34,52 +34,52 @@ let j = {
     badgeColorPrimary: null,
     badgeColorSecondary: null,
 };
-function _(e) {
+function v(e) {
     let { pendingFields: t } = e,
-        { guild: n, guildProfile: _ } = (0, s.cj)([m.Z], () => ({
-            guild: m.Z.getGuild(),
-            guildProfile: m.Z.getGuildProfile(),
+        { guild: n, guildProfile: v } = (0, s.cj)([f.Z], () => ({
+            guild: f.Z.getGuild(),
+            guildProfile: f.Z.getGuildProfile(),
         })),
-        v = null == n ? void 0 : n.id,
-        O = (0, s.e7)([c.Z], () => c.Z.get(v)),
-        { fetchGuildProfile: C } = (0, d.u)(v),
-        y = (null == _ ? void 0 : _.visibility) == null || !l.Y.VISIBLE.has(null == _ ? void 0 : _.visibility),
-        N = (null == _ ? void 0 : _.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
+        O = null == n ? void 0 : n.id,
+        C = (0, s.e7)([c.Z], () => c.Z.get(O)),
+        { fetchGuildProfile: y } = (0, d.u)(O),
+        N = (null == v ? void 0 : v.visibility) == null || !l.Y.VISIBLE.has(null == v ? void 0 : v.visibility),
+        E = (null == v ? void 0 : v.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
     i.useEffect(() => {
-        null != v && C();
-    }, [v, C]);
-    let E = i.useMemo(() => (null == n || null == _ ? j : _), [n, _]),
-        I = i.useCallback(() => {
+        null != O && y();
+    }, [O, y]);
+    let I = i.useMemo(() => (null == n || null == v ? j : v), [n, v]),
+        S = i.useCallback(() => {
             (null == n ? void 0 : n.id) != null &&
-                (N
+                (E
                     ? g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC })
                     : g.Z.updateGuildProfile(n.id, { visibility: l.k.PUBLIC_WITH_RECRUITMENT }));
-        }, [null == n ? void 0 : n.id, N]),
-        S = i.useCallback(() => {
-            g.Z.setSection(h.pNK.PROFILE);
+        }, [null == n ? void 0 : n.id, E]),
+        _ = i.useCallback(() => {
+            g.Z.setSection(p.pNK.PROFILE);
         }, []);
     if (null == n) return null;
-    let T = null != t ? t : null == O ? void 0 : O.formFields;
+    let T = null != t ? t : null == C ? void 0 : C.formFields;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.X6q, {
                 variant: "heading-md/semibold",
-                color: "header-primary",
-                children: b.intl.string(b.t.AHJddL),
+                color: "text-strong",
+                children: h.intl.string(h.t.AHJddL),
             }),
             (0, r.jsx)(a.xvT, {
                 tag: "p",
                 variant: "text-sm/medium",
                 color: "text-subtle",
                 className: x.applicationBody,
-                children: b.intl.string(b.t.Z7TCtd),
+                children: h.intl.string(h.t.Z7TCtd),
             }),
-            (0, r.jsx)(f.c, { guildId: n.id }),
+            (0, r.jsx)(b.c, { guildId: n.id }),
             (0, r.jsx)("div", {
                 className: x.form,
                 children:
                     null != T
-                        ? (0, r.jsx)(p.y, {
+                        ? (0, r.jsx)(m.y, {
                               guild: n,
                               formFields: T,
                           })
@@ -93,26 +93,26 @@ function _(e) {
                         className: x.column,
                         children: [
                             (0, r.jsx)(o.rsf, {
-                                label: b.intl.string(b.t["N/0232"]),
-                                checked: N,
-                                onChange: I,
-                                disabled: y,
+                                label: h.intl.string(h.t["N/0232"]),
+                                checked: E,
+                                onChange: S,
+                                disabled: N,
                             }),
                             (0, r.jsx)(a.xvT, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
-                                children: b.intl.string(b.t["3TSZYK"]),
+                                children: h.intl.string(h.t["3TSZYK"]),
                             }),
-                            y &&
+                            N &&
                                 (0, r.jsx)(a.xvT, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: b.intl.format(b.t.Bk0VOi, {
+                                    children: h.intl.format(h.t.Bk0VOi, {
                                         profileLink: (e, t) =>
                                             (0, r.jsx)(
                                                 o.Anchor,
                                                 {
-                                                    onClick: S,
+                                                    onClick: _,
                                                     children: e,
                                                 },
                                                 t,
@@ -129,11 +129,11 @@ function _(e) {
                                 (0, r.jsx)("div", { className: x.gradient }),
                                 (0, r.jsx)(u.ZP, {
                                     className: x.preview,
-                                    profile: E,
+                                    profile: I,
                                     CTAOverride: (0, r.jsx)(a.zxk, {
                                         variant: "active",
                                         size: "sm",
-                                        text: b.intl.string(b.t["7XdMW2"]),
+                                        text: h.intl.string(h.t["7XdMW2"]),
                                         fullWidth: !0,
                                     }),
                                     disableGuildNameClick: !0,

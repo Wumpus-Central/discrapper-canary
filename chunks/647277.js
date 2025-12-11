@@ -15,8 +15,8 @@ var i = n(120356),
     m = n(656139),
     h = n(981631),
     g = n(388032),
-    E = n(756555),
-    b = n(754761);
+    E = n(641952),
+    b = n(456254);
 function y(e, t, n) {
     return (
         t in e
@@ -172,7 +172,7 @@ let I = (e) => {
                             children: [
                                 (0, r.jsx)(s.Heading, {
                                     variant: "heading-lg/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: g.intl.string(g.t.USo4s7),
                                 }),
                                 (0, r.jsx)(s.Text, {

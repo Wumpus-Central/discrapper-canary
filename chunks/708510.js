@@ -1,4 +1,4 @@
-n.d(t, { O: () => I });
+n.d(t, { O: () => S });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -9,26 +9,26 @@ var r = n(54381),
     d = n(430824),
     u = n(63063),
     g = n(999382),
-    m = n(432774),
-    p = n(682255),
-    f = n(217472),
-    h = n(202905),
-    b = n(44867),
+    f = n(432774),
+    m = n(682255),
+    b = n(217472),
+    p = n(202905),
+    h = n(44867),
     x = n(557359),
     j = n(658666),
-    _ = n(307375),
-    v = n(384632),
-    O = n(981631),
-    C = n(388032),
-    y = n(912231);
-function N(e) {
+    v = n(307375),
+    O = n(384632),
+    C = n(981631),
+    y = n(388032),
+    N = n(955120);
+function E(e) {
     let { pendingState: t } = e,
         n = i.useRef(!1),
         l = i.useCallback(
             async (e) => {
                 if (!n.current)
                     try {
-                        await (0, m.k)(e), (0, p.V)(e), (0, s.le)(), (0, s.aC)(e);
+                        await (0, f.k)(e), (0, m.V)(e), (0, s.le)(), (0, s.aC)(e);
                     } finally {
                         n.current = !0;
                     }
@@ -36,15 +36,15 @@ function N(e) {
             [n],
         );
     switch (t.joinType) {
-        case v.A.INVITE:
+        case O.A.INVITE:
             return (0, r.jsx)(x.A, {
                 requireTerms: t.requireTerms,
                 rules: t.termRules,
             });
-        case v.A.APPLY:
-            return (0, r.jsx)(h.r, { pendingFields: t.pendingVerificationFields });
-        case v.A.DISCOVERABLE:
-            return (0, r.jsx)(b.c, {
+        case O.A.APPLY:
+            return (0, r.jsx)(p.r, { pendingFields: t.pendingVerificationFields });
+        case O.A.DISCOVERABLE:
+            return (0, r.jsx)(h.c, {
                 fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
@@ -52,7 +52,7 @@ function N(e) {
             });
     }
 }
-function E(e) {
+function I(e) {
     let { guildId: t } = e,
         { nsfwLevel: n, ownerConfiguredContentLevel: s } = (0, l.cj)([d.Z], () => {
             var e, n;
@@ -67,22 +67,22 @@ function E(e) {
         }),
         c = i.useCallback(
             (e) => {
-                f.Z.setIsAgeRestricted(t, e);
+                b.Z.setIsAgeRestricted(t, e);
             },
             [t],
         ),
-        g = n === O.V_K.AGE_RESTRICTED && s !== O.V_K.AGE_RESTRICTED;
+        g = n === C.V_K.AGE_RESTRICTED && s !== C.V_K.AGE_RESTRICTED;
     return (0, r.jsx)(a.rsf, {
-        label: C.intl.string(C.t.N9xEJF),
-        description: C.intl.format(C.t.iyQQ62, {
-            helpArticleLink: u.Z.getArticleURL(O.BhN.NSFW_SERVER_AGE_RESTRICTION),
+        label: y.intl.string(y.t.N9xEJF),
+        description: y.intl.format(y.t.iyQQ62, {
+            helpArticleLink: u.Z.getArticleURL(C.BhN.NSFW_SERVER_AGE_RESTRICTION),
         }),
         checked: o,
         onChange: c,
         disabled: g,
     });
 }
-function I() {
+function S() {
     let e = (0, l.e7)([g.Z], () => g.Z.getProps().guild),
         t = (0, l.e7)([j.Z], () => j.Z.pendingState),
         n = (0, c.U)();
@@ -91,7 +91,7 @@ function I() {
     }, [null == e ? void 0 : e.id]);
     let s = i.useCallback(
         (t) => {
-            (null == e ? void 0 : e.id) != null && f.Z.setSelectedJoinType(e.id, t);
+            (null == e ? void 0 : e.id) != null && b.Z.setSelectedJoinType(e.id, t);
         },
         [null == e ? void 0 : e.id],
     );
@@ -101,21 +101,21 @@ function I() {
         gap: 32,
         children: [
             (0, r.jsx)(a.Heading, {
-                color: "header-primary",
+                color: "text-strong",
                 variant: "heading-lg/semibold",
-                children: C.intl.string(C.t.YJlvBM),
+                children: y.intl.string(y.t.YJlvBM),
             }),
-            (0, r.jsx)(_.h, {
+            (0, r.jsx)(v.h, {
                 onTypePicked: s,
                 activeType: d,
                 guild: e,
             }),
-            (0, r.jsx)("div", { className: y.divider }),
+            (0, r.jsx)("div", { className: N.divider }),
             !n &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(E, { guildId: e.id }), (0, r.jsx)("div", { className: y.divider })],
+                    children: [(0, r.jsx)(I, { guildId: e.id }), (0, r.jsx)("div", { className: N.divider })],
                 }),
-            (0, r.jsx)("div", { children: (0, r.jsx)(N, { pendingState: t }) }),
+            (0, r.jsx)("div", { children: (0, r.jsx)(E, { pendingState: t }) }),
         ],
     });
 }

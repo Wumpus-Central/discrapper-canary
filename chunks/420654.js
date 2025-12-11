@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(892001),
     d = n(280885),
     f = n(388032),
-    p = n(108670);
+    p = n(825293);
 function _(e, t, n) {
     return (
         t in e
@@ -98,7 +98,7 @@ let E = 57.75,
                           children: (0, r.jsx)(d.Z, {
                               userBio: a,
                               setLineClamp: !1,
-                              textColor: "header-primary",
+                              textColor: "text-strong",
                           }),
                       }),
                       (O || S) &&

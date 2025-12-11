@@ -8,7 +8,7 @@ var r = n(120356),
     i = n.n(r),
     l = n(481060);
 n(373370), n(115179), n(388032);
-var s = n(573938);
+var s = n(950418);
 function o(e) {
     let { children: t, isComplete: n, hasNextStep: r } = e;
     return (0, a.jsxs)("li", {
@@ -53,7 +53,7 @@ let d = function (e) {
                 className: s.headingWrapper,
                 children: (0, a.jsx)(l.Heading, {
                     className: s.heading,
-                    color: "header-primary",
+                    color: "text-strong",
                     variant: "text-xs/semibold",
                     children: n,
                 }),

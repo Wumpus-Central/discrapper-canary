@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(528027),
     l = n(686807),
     c = n(113318),
-    u = n(685172);
+    u = n(678238);
 function d(e) {
     let { benefit: t, guildId: n } = e,
         i = (0, c.Z)(n, t.ref_id),
@@ -25,14 +25,14 @@ function d(e) {
                       role: "link",
                       children: (0, r.jsx)(o.Text, {
                           variant: "text-md/medium",
-                          color: "header-primary",
+                          color: "text-strong",
                           className: a()(u.name, u.linkedName),
                           children: (0, l.Z)(t),
                       }),
                   })
                 : (0, r.jsx)(o.Text, {
                       variant: "text-md/medium",
-                      color: "header-primary",
+                      color: "text-strong",
                       className: u.name,
                       children: (0, l.Z)(t),
                   });

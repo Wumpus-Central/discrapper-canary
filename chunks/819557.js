@@ -1,78 +1,78 @@
-n.d(e, {
-    q: () => a,
+n.d(t, {
+    q: () => u,
     z: () => o,
 }),
     n(953529);
-var i = n(54381);
+var r = n(54381);
 n(473749);
 var l = n(120356),
-    r = n.n(l),
-    s = n(481060),
-    c = n(262441);
-function o(t) {
-    let { children: e } = t;
-    return (0, i.jsx)("div", {
-        className: c.cellGroup,
-        children: (0, i.jsx)("div", {
-            className: c.content,
-            children: e,
+    s = n.n(l),
+    i = n(481060),
+    a = n(932599);
+function o(e) {
+    let { children: t } = e;
+    return (0, r.jsx)("div", {
+        className: a.cellGroup,
+        children: (0, r.jsx)("div", {
+            className: a.content,
+            children: t,
         }),
     });
 }
-function a(t) {
+function u(e) {
     let {
-        icon: e,
+        icon: t,
         title: n,
         description: l,
         iconClassName: o,
-        color: a,
-        listType: d = "icon",
-        completed: u = !1,
-        index: x,
-    } = t;
-    return (0, i.jsxs)("div", {
-        className: c.cell,
+        color: u,
+        listType: c = "icon",
+        completed: d = !1,
+        index: m,
+    } = e;
+    return (0, r.jsxs)("div", {
+        className: a.cell,
         children: [
             (() => {
-                if ("numbered" === d && null != x)
-                    if (u)
-                        return (0, i.jsx)("div", {
-                            className: c.number,
-                            children: (0, i.jsx)(s.sV5, {
+                if ("numbered" === c && null != m)
+                    if (d)
+                        return (0, r.jsx)("div", {
+                            className: a.number,
+                            children: (0, r.jsx)(i.sV5, {
                                 color: "green",
-                                className: r()(c.icon, o),
+                                className: s()(a.icon, o),
                             }),
                         });
                     else
-                        return (0, i.jsx)(s.Heading, {
+                        return (0, r.jsx)(i.Heading, {
                             variant: "heading-md/semibold",
                             color: "text-brand",
-                            className: c.number,
-                            children: x + 1,
+                            className: a.number,
+                            children: m + 1,
                         });
-                if (null != e)
-                    return (0, i.jsx)("div", {
-                        className: c.iconContainer,
-                        children: (0, i.jsx)(e, {
-                            color: null != a ? a : "currentColor",
-                            className: r()(c.icon, o),
+                if (null != t)
+                    return (0, r.jsx)("div", {
+                        className: a.iconContainer,
+                        children: (0, r.jsx)(t, {
+                            color: null != u ? u : "currentColor",
+                            className: s()(a.icon, o),
                         }),
                     });
             })(),
-            (0, i.jsxs)("div", {
-                className: c.textContainer,
+            (0, r.jsxs)("div", {
+                className: a.textContainer,
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: "text-md/semibold",
-                        color: "header-primary",
-                        className: r()({ [c.completedText]: u }),
+                        color: "text-strong",
+                        className: s()({ [a.completedText]: d }),
                         children: n,
                     }),
                     null != l &&
-                        (0, i.jsx)(s.Text, {
+                        (0, r.jsx)(i.Text, {
                             variant: "text-xs/medium",
                             color: "text-subtle",
-                            className: r()({ [c.completedText]: u }),
+                            className: s()({ [a.completedText]: d }),
                             children: l,
                         }),
                 ],

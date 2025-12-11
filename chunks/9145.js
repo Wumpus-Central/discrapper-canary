@@ -16,8 +16,8 @@ var r = n(54381),
     b = n(871499),
     y = n(402113),
     O = n(800965),
-    j = n(592125),
-    x = n(271383),
+    x = n(592125),
+    j = n(271383),
     v = n(944486),
     C = n(594174),
     I = n(585483),
@@ -49,7 +49,7 @@ function V(e) {
         Y = (0, N.Z)(),
         q = (0, s.Wu)([E.ZP], () => E.ZP.getEmbeddedActivitiesForLocation(z), [z]),
         K = (0, T.p)(z),
-        Q = (0, s.e7)([j.Z], () => j.Z.getChannel(K)),
+        Q = (0, s.e7)([x.Z], () => x.Z.getChannel(K)),
         X = (0, Z.gb)(q),
         J = (0, Z.uF)(X),
         $ = i.useCallback(() => {
@@ -91,12 +91,12 @@ function V(e) {
     }
     let eh = J.get(null != (l = null == Y ? void 0 : Y.id) ? l : ""),
         ef = (0, s.e7)([v.Z], () => v.Z.getChannelId()),
-        eg = (0, s.Wu)([x.ZP], () => {
+        eg = (0, s.Wu)([j.ZP], () => {
             var e;
             return null == Q
                 ? []
                 : Array.from(null != (e = null == eh ? void 0 : eh.embeddedActivity.userIds) ? e : []).map((e) =>
-                      x.ZP.getMember(Q.guild_id, e),
+                      j.ZP.getMember(Q.guild_id, e),
                   );
         }, [eh, Q]),
         em = i.useMemo(() => {
@@ -182,7 +182,7 @@ function V(e) {
         (eO = Array.from(eh.embeddedActivity.userIds)
             .map((e) => C.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
-    let ej = (e) => {
+    let ex = (e) => {
         var t;
         if (null == e || void 0 === e || e === w.ag) return null;
         let n = em.get(e.id),
@@ -223,7 +223,7 @@ function V(e) {
                                 : (0, r.jsx)("div", {
                                       className: H.header,
                                       children: (0, r.jsx)(o.x, {
-                                          color: "header-primary",
+                                          color: "text-strong",
                                           variant: "text-md/semibold",
                                           className: H.headerTitle,
                                           children: null == Y ? void 0 : Y.name,
@@ -252,7 +252,7 @@ function V(e) {
                                               users: eO,
                                               size: F,
                                               max: 6,
-                                              renderUser: ej,
+                                              renderUser: ex,
                                           }),
                                           (0, r.jsxs)("div", {
                                               className: H.footerButtons,

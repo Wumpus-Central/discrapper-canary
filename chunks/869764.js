@@ -6,8 +6,8 @@ n.d(t, {
 var l = n(54381),
     i = n(473749),
     r = n(120356),
-    a = n.n(r),
-    s = n(95015),
+    s = n.n(r),
+    a = n(95015),
     o = n(442837),
     c = n(481060),
     d = n(933557),
@@ -25,9 +25,9 @@ var l = n(54381),
     x = n(981631),
     T = n(372897),
     _ = n(388032),
-    j = n(371882);
+    j = n(437449);
 function v(e) {
-    var { title: t, emojiId: n, emojiName: i, icon: r, completed: s, Icon: o, onClick: d } = e,
+    var { title: t, emojiId: n, emojiName: i, icon: r, completed: a, Icon: o, onClick: d } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -59,7 +59,7 @@ function v(e) {
                   })
                 : null;
     return (0, l.jsxs)(c.Zbd, {
-        className: a()(j.action, { [j.clickableAction]: null != d }),
+        className: s()(j.action, { [j.clickableAction]: null != d }),
         onClick: d,
         children: [
             null != f
@@ -88,7 +88,7 @@ function v(e) {
                 children: [
                     (0, l.jsx)(c.Text, {
                         variant: "text-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: t,
                     }),
                     null != g
@@ -100,7 +100,7 @@ function v(e) {
                         : null,
                 ],
             }),
-            s
+            a
                 ? (0, l.jsx)(c.owK, {
                       size: "md",
                       color: "currentColor",
@@ -118,9 +118,9 @@ function v(e) {
 function b(e) {
     var t;
     let { action: n, completed: r } = e,
-        { channelId: a, title: s, emoji: g, icon: f } = n,
+        { channelId: s, title: a, emoji: g, icon: f } = n,
         { id: N, name: I } = null != g ? g : {},
-        O = (0, o.e7)([m.Z], () => m.Z.getChannel(a)),
+        O = (0, o.e7)([m.Z], () => m.Z.getChannel(s)),
         E = (0, d.ZP)(O, !0),
         S = (0, o.e7)([h.Z], () => h.Z.can(x.Plq.VIEW_CHANNEL, O)),
         T = i.useMemo(() => {
@@ -130,8 +130,8 @@ function b(e) {
     let _ = null != (t = (0, u.KS)(O)) ? t : c.VL1;
     return (0, l.jsx)(v, {
         variant: "channel",
-        channelId: a,
-        title: s,
+        channelId: s,
+        title: a,
         channelName: E,
         emojiId: N,
         emojiName: I,
@@ -151,7 +151,7 @@ function D(e) {
         var e;
         null == r &&
             (null == d ? void 0 : d.flags) != null &&
-            (0, s.yE)(null != (e = d.flags) ? e : 0, T.q.STARTED_HOME_ACTIONS) &&
+            (0, a.yE)(null != (e = d.flags) ? e : 0, T.q.STARTED_HOME_ACTIONS) &&
             (0, p.Fg)(t);
     }, [r, t, null == d ? void 0 : d.flags]);
     let m = i.useCallback(() => {
@@ -164,7 +164,7 @@ function D(e) {
               children: [
                   (0, l.jsx)(c.Heading, {
                       variant: "heading-lg/bold",
-                      color: "header-primary",
+                      color: "text-strong",
                       children: _.intl.string(_.t.LhlgY9),
                   }),
                   n.map((e) =>
@@ -180,7 +180,7 @@ function D(e) {
                   ),
                   (null == u ? void 0 : u.rulesChannelId) != null &&
                       (0, l.jsxs)(c.Zbd, {
-                          className: a()(j.action, j.clickableAction),
+                          className: s()(j.action, j.clickableAction),
                           onClick: m,
                           children: [
                               (0, l.jsx)("div", {
@@ -195,7 +195,7 @@ function D(e) {
                                   className: j.actionInfo,
                                   children: (0, l.jsx)(c.Text, {
                                       variant: "text-md/semibold",
-                                      color: "header-primary",
+                                      color: "text-strong",
                                       children: _.intl.string(_.t["K/i3iQ"]),
                                   }),
                               }),

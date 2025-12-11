@@ -9,7 +9,7 @@ var a = n(54381),
     d = n(688465),
     u = n(670837);
 function p(e) {
-    let { title: t, betaTag: n, color: r = "header-primary" } = e;
+    let { title: t, betaTag: n, color: r = "text-strong" } = e;
     return (0, a.jsxs)(o.Heading, {
         className: l()(u.title, u.uppercase),
         variant: "display-lg",
@@ -19,8 +19,8 @@ function p(e) {
 }
 function m(e) {
     let { title: t, titleColor: n, description: i, button: d, className: m, children: h, betaTag: f = !1 } = e,
-        b = (0, c.ZP)(),
-        g = (0, s.wj)(b),
+        g = (0, c.ZP)(),
+        b = (0, s.wj)(g),
         x = r.useMemo(
             () =>
                 Array.isArray(t)
@@ -55,7 +55,7 @@ function m(e) {
                             (0, a.jsx)(o.Text, {
                                 className: u.description,
                                 variant: "text-md/medium",
-                                color: g ? "text-muted" : "header-primary",
+                                color: b ? "text-muted" : "text-strong",
                                 children: i,
                             }),
                         null != d &&

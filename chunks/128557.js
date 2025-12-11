@@ -95,7 +95,7 @@ function w(e) {
                           alt: "",
                       }),
                 (0, i.jsx)(u.Text, {
-                    color: "header-primary",
+                    color: "text-strong",
                     className: a()(T.cardTextContainer, T.cardHeader),
                     variant: "text-sm/normal",
                     children: o,

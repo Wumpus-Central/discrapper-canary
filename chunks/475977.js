@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(981631),
     p = n(474936),
     _ = n(388032),
-    m = n(227919);
+    m = n(200471);
 let h = () => {
     var e;
     let { analyticsLocations: t } = (0, s.ZP)(o.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
@@ -54,13 +54,13 @@ let h = () => {
                 children: [
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-lg/extrabold",
-                        color: O ? "redesign-button-overlay-text" : "currentColor",
+                        color: O ? "text-overlay-dark" : "currentColor",
                         className: m.title,
                         children: E,
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
-                        color: O ? "redesign-button-overlay-text" : "currentColor",
+                        color: O ? "text-overlay-dark" : "currentColor",
                         children: b,
                     }),
                 ],

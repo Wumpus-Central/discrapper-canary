@@ -8,7 +8,7 @@ n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(481060),
-    s = n(753599);
+    s = n(781826);
 function l(e, t, n) {
     return (
         t in e
@@ -98,7 +98,7 @@ function m(e) {
             icon: t,
             title: n,
             titleVariant: i = "text-md/semibold",
-            titleColor: l = "header-primary",
+            titleColor: l = "text-strong",
             description: c,
             descriptionVariant: u = "text-xs/medium",
             descriptionColor: d = "text-subtle",
@@ -180,7 +180,7 @@ function h(e) {
         icon: t,
         title: n,
         titleVariant: i = "text-md/semibold",
-        titleColor: l = "header-primary",
+        titleColor: l = "text-strong",
         description: c,
         descriptionVariant: u = "text-md/medium",
         descriptionColor: d = "text-subtle",

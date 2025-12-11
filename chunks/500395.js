@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => f });
 var r = n(54381),
     i = n(990547),
     l = n(481060),
@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(787051),
     o = n(975464),
     c = n(388032),
-    d = n(370511),
+    d = n(108789),
     u = n(270395);
 function g(e) {
     let { config: t } = e,
@@ -24,7 +24,7 @@ function g(e) {
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-xl/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: c.intl.string(c.t["PqYfh/"]),
                     }),
                     (0, r.jsx)(l.LZC, { size: 12 }),
@@ -49,9 +49,9 @@ function g(e) {
         ],
     });
 }
-function m(e) {
+function f(e) {
     let { guild: t, config: n } = e,
-        { isLoading: c, error: u, creatorMonetizationOnboardingMarketing: m } = (0, s.Z)(t.id);
+        { isLoading: c, error: u, creatorMonetizationOnboardingMarketing: f } = (0, s.Z)(t.id);
     return ((0, a.Z)({
         type: i.ImpressionTypes.PANE,
         name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
@@ -64,7 +64,7 @@ function m(e) {
               children: [
                   (0, r.jsx)(g, { config: n }),
                   (0, r.jsx)(o.C, {
-                      onboardingMarketing: m,
+                      onboardingMarketing: f,
                       onboardingMarketingError: u,
                   }),
               ],

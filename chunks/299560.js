@@ -13,11 +13,11 @@ var r = n(54381),
     g = n(86419),
     h = n(50130),
     m = n(872269),
-    _ = n(248554),
-    b = n(70399),
+    b = n(248554),
+    _ = n(70399),
     E = n(228168),
     O = n(388032),
-    v = n(229870);
+    v = n(119078);
 let y = {
     [s.l.FAVORITE_GAMES]: {
         placeholder: () => ({
@@ -140,19 +140,19 @@ function I(e) {
                               let e = I(j);
                               switch (e.variant) {
                                   case "details":
-                                      return (0, r.jsx)(_.i, {
+                                      return (0, r.jsx)(b.i, {
                                           className: v.placeholderPadding,
                                           applicationId: e.applicationId,
                                           size: c,
                                       });
                                   case "grid":
-                                      return (0, r.jsx)(_.c, {
+                                      return (0, r.jsx)(b.c, {
                                           className: v.placeholderPadding,
                                           applicationIds: e.applicationIds,
                                           size: c,
                                       });
                                   case "application-widget":
-                                      return (0, r.jsx)(b.Z, {
+                                      return (0, r.jsx)(_.Z, {
                                           applicationId: e.applicationId,
                                           size: c,
                                       });
@@ -173,7 +173,7 @@ function I(e) {
                                       children: [
                                           (0, r.jsx)(o.Text, {
                                               variant: "text-md/medium",
-                                              color: "header-primary",
+                                              color: "text-strong",
                                               children: (0, g.mR)(j),
                                           }),
                                           null != t
@@ -195,7 +195,7 @@ function I(e) {
                       if (null == j) return null;
                       let e = I(j);
                       return "application-widget" === e.variant
-                          ? (0, r.jsx)(b.T, {
+                          ? (0, r.jsx)(_.T, {
                                 applicationId: e.applicationId,
                                 size: c,
                             })

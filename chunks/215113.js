@@ -23,8 +23,8 @@ var r = n(54381),
     O = n(49436),
     h = n(937797),
     b = n(968843),
-    C = n(475595),
-    S = n(254579),
+    S = n(475595),
+    C = n(254579),
     _ = n(542347),
     y = n(602667),
     x = n(667109),
@@ -39,7 +39,7 @@ var r = n(54381),
     w = n(324805),
     L = n(231338),
     k = n(388032),
-    M = n(273339);
+    M = n(209668);
 function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -103,7 +103,7 @@ function U(e) {
             parentModalOpenStartClockTime: U,
             sourceQuestContent: q,
         } = e,
-        Y = (0, S.il)(g),
+        Y = (0, C.il)(g),
         H = (0, b.tP)(g),
         Q = (0, E.aM)(),
         [G, K] = o.useState(Y.progressSeconds),
@@ -191,7 +191,7 @@ function U(e) {
                                                       (0, r.jsx)("img", {
                                                           alt: g.config.messages.gameTitle,
                                                           className: i()(M.contentHeaderLogotype, M.accentOnHover),
-                                                          src: (0, C.fh)(g, C.eC.LOGO_TYPE, ea).url,
+                                                          src: (0, S.fh)(g, S.eC.LOGO_TYPE, ea).url,
                                                       }),
                                                       (0, r.jsx)(R.Z, {}),
                                                       (0, r.jsxs)("div", {
@@ -199,7 +199,7 @@ function U(e) {
                                                           children: [
                                                               (0, r.jsx)(d.Heading, {
                                                                   variant: "heading-md/semibold",
-                                                                  color: "header-primary",
+                                                                  color: "text-strong",
                                                                   children: k.intl.format(k.t.EQa7os, {
                                                                       questName: g.config.messages.questName,
                                                                   }),

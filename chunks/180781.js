@@ -1,62 +1,62 @@
 n.d(t, { Z: () => p });
-var i = n(54381);
+var o = n(54381);
 n(473749);
-var a = n(442837),
+var i = n(442837),
     r = n(481060),
-    o = n(906732),
+    a = n(906732),
     l = n(48217),
-    c = n(26323),
-    s = n(430824),
-    d = n(914010),
-    u = n(981631),
-    f = n(30513),
-    _ = n(388032),
-    g = n(413955);
+    s = n(26323),
+    c = n(430824),
+    u = n(914010),
+    b = n(981631),
+    d = n(30513),
+    f = n(388032),
+    m = n(861203);
 function p(e) {
-    let { analyticsSection: t, analyticsPage: n, isGIF: p, banner: x } = e,
-        m = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
-        N = (0, a.e7)([s.Z], () => s.Z.getGuild(m)),
-        { analyticsLocations: h } = (0, o.ZP)();
-    return null == N ||
-        N.features.has(u.GuildFeatures.ANIMATED_BANNER) ||
-        (!p && N.features.has(u.GuildFeatures.BANNER))
+    let { analyticsSection: t, analyticsPage: n, isGIF: p, banner: g } = e,
+        v = (0, i.e7)([u.Z], () => u.Z.getGuildId()),
+        _ = (0, i.e7)([c.Z], () => c.Z.getGuild(v)),
+        { analyticsLocations: x } = (0, a.ZP)();
+    return null == _ ||
+        _.features.has(b.GuildFeatures.ANIMATED_BANNER) ||
+        (!p && _.features.has(b.GuildFeatures.BANNER))
         ? null
-        : (0, i.jsxs)("div", {
-              className: g.container,
+        : (0, o.jsxs)("div", {
+              className: m.container,
               children: [
-                  (0, i.jsx)(r.Ucv, {
+                  (0, o.jsx)(r.Ucv, {
                       color: r.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                      className: g.guildBoostingIcon,
+                      className: m.guildBoostingIcon,
                   }),
-                  (0, i.jsx)(r.Text, {
-                      color: "header-primary",
+                  (0, o.jsx)(r.Text, {
+                      color: "text-strong",
                       variant: "text-sm/semibold",
-                      children: _.intl.string(_.t["56M7xe"]),
+                      children: f.intl.string(f.t["56M7xe"]),
                   }),
-                  (0, i.jsx)("div", {
-                      className: g.subscribeButton,
-                      children: (0, i.jsx)(r.Avr, {
-                          text: _.intl.string(_.t.WUHdZV),
+                  (0, o.jsx)("div", {
+                      className: m.subscribeButton,
+                      children: (0, o.jsx)(r.Avr, {
+                          text: f.intl.string(f.t.WUHdZV),
                           onClick: () => {
-                              if (null == N) return;
+                              if (null == _) return;
                               let e = {
                                   section: t,
                                   page: n,
-                                  object: u.qAy.UPSELL_HEADER,
+                                  object: b.qAy.UPSELL_HEADER,
                               };
-                              null != x
+                              null != g
                                   ? (0, l.c)({
-                                        analyticsLocations: h,
+                                        analyticsLocations: x,
                                         analyticsLocation: e,
-                                        guild: N,
+                                        guild: _,
                                         isGIF: p,
-                                        banner: x,
+                                        banner: g,
                                     })
-                                  : (0, c.Z)({
-                                        analyticsLocations: h,
+                                  : (0, s.Z)({
+                                        analyticsLocations: x,
                                         analyticsSourceLocation: e,
-                                        guild: N,
-                                        perks: p ? (0, f.zC)() : (0, f.XO)(),
+                                        guild: _,
+                                        perks: p ? (0, d.zC)() : (0, d.XO)(),
                                     });
                           },
                           textVariant: "text-sm/semibold",

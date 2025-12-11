@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,18 +10,18 @@ var i = n(120356),
     d = n(434404),
     u = n(626135),
     g = n(629481),
-    m = n(981631),
-    p = n(388032),
-    f = n(370541);
-function h(e) {
+    f = n(981631),
+    m = n(388032),
+    b = n(692831);
+function p(e) {
     let { pills: t } = e;
     return (0, r.jsx)("div", {
-        className: f.row,
+        className: b.row,
         children: t.map((e) =>
             (0, r.jsx)(
                 "div",
                 {
-                    className: f.pill,
+                    className: b.pill,
                     children: (0, r.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         children: e,
@@ -32,44 +32,44 @@ function h(e) {
         ),
     });
 }
-function b(e) {
+function h(e) {
     let { guildId: t, showCTA: n, responsive: i = !0 } = e,
-        b = [
-            [p.intl.string(p.t["73h51J"]), p.intl.string(p.t["gbjs/6"])],
-            [p.intl.string(p.t.mCoH0V), p.intl.string(p.t["l/BuSI"])],
-            [p.intl.string(p.t.psQktv), p.intl.string(p.t.nMhIZQ)],
-            [p.intl.string(p.t["0ItLmF"]), p.intl.string(p.t.yQHqsC)],
+        h = [
+            [m.intl.string(m.t["73h51J"]), m.intl.string(m.t["gbjs/6"])],
+            [m.intl.string(m.t.mCoH0V), m.intl.string(m.t["l/BuSI"])],
+            [m.intl.string(m.t.psQktv), m.intl.string(m.t.nMhIZQ)],
+            [m.intl.string(m.t["0ItLmF"]), m.intl.string(m.t.yQHqsC)],
         ];
     return (0, r.jsx)("div", {
-        className: l()({ [f.responsive]: i }),
+        className: l()({ [b.responsive]: i }),
         children: (0, r.jsxs)("div", {
-            className: f.container,
+            className: b.container,
             children: [
                 (0, r.jsxs)("div", {
-                    className: f.content,
+                    className: b.content,
                     children: [
                         (0, r.jsx)("div", {
-                            className: f.pillContainer,
-                            children: b.map((e, t) => (0, r.jsx)(h, { pills: e }, "pill-row-".concat(t))),
+                            className: b.pillContainer,
+                            children: h.map((e, t) => (0, r.jsx)(p, { pills: e }, "pill-row-".concat(t))),
                         }),
                         (0, r.jsxs)("div", {
-                            className: f.ctaContent,
+                            className: b.ctaContent,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-lg/medium",
-                                    color: "header-primary",
-                                    children: p.intl.string(p.t["67arYL"]),
+                                    color: "text-strong",
+                                    children: m.intl.string(m.t["67arYL"]),
                                 }),
                                 n &&
                                     (0, r.jsx)(a.zxk, {
-                                        text: p.intl.string(p.t.oyzLpD),
+                                        text: m.intl.string(m.t.oyzLpD),
                                         icon: s.ZSh,
                                         iconPosition: "end",
                                         size: "md",
                                         onClick: () => {
                                             var e, n;
                                             u.default.track(
-                                                m.rMx.GUILD_SHOP_PREVIEW_CLICK,
+                                                f.rMx.GUILD_SHOP_PREVIEW_CLICK,
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -115,7 +115,7 @@ function b(e) {
                                                       }),
                                                 e),
                                             ),
-                                                d.Z.open(t, m.pNK.GUILD_PRODUCTS);
+                                                d.Z.open(t, f.pNK.GUILD_PRODUCTS);
                                         },
                                     }),
                             ],
@@ -123,17 +123,17 @@ function b(e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: f.muralImageContainer,
+                    className: b.muralImageContainer,
                     children: [
                         (0, r.jsx)("img", {
                             src: (0, c.b)("server_products/storefront/preview-mural.png"),
                             alt: "",
-                            className: f.muralImage,
+                            className: b.muralImage,
                         }),
                         (0, r.jsx)("img", {
                             src: (0, c.b)("server_products/storefront/preview-mural-reduced.png"),
                             alt: "",
-                            className: f.muralImageReducedWidth,
+                            className: b.muralImageReducedWidth,
                         }),
                     ],
                 }),

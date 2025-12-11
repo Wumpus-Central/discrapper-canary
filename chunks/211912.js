@@ -1,88 +1,88 @@
 a.d(t, { default: () => b });
-var r = a(54381),
-    s = a(473749),
-    n = a(120356),
-    i = a.n(n),
+var s = a(54381),
+    n = a(473749),
+    r = a(120356),
+    i = a.n(r),
     c = a(704215),
-    l = a(159691),
-    o = a(481060),
+    o = a(159691),
+    l = a(481060),
     d = a(605236),
     u = a(626135),
-    m = a(164670),
-    f = a(705338),
-    x = a(981631),
+    x = a(164670),
+    m = a(705338),
+    f = a(981631),
     h = a(921944),
-    p = a(231338),
+    g = a(231338),
     j = a(388032),
-    v = a(487373),
-    g = a(867709),
+    p = a(383749),
+    v = a(867709),
     N = a(157443);
 function b(e) {
-    let { transitionState: t, returnRef: a, onClose: n } = e;
-    s.useEffect(() => {
-        u.default.track(x.rMx.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal" }),
+    let { transitionState: t, returnRef: a, onClose: r } = e;
+    n.useEffect(() => {
+        u.default.track(f.rMx.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal" }),
             (0, d.bj)(c.z.GAME_SHOP_ANNOUNCEMENT_MODAL, { dismissAction: h.L.AUTO_DISMISS });
     }, []);
-    let b = s.useCallback(() => {
-            (0, f.eagerNavigateToSocialLayerStorefront)({ guildId: (0, m.ac)() });
+    let b = n.useCallback(() => {
+            (0, m.eagerNavigateToSocialLayerStorefront)({ guildId: (0, x.ac)() });
         }, []),
-        k = s.useCallback(() => {
-            (0, f.default)({ guildId: (0, m.ac)() }), n();
-        }, [n]);
-    return (0, r.jsx)(l.f6W, {
-        theme: p.BR.DARK,
+        k = n.useCallback(() => {
+            (0, m.default)({ guildId: (0, x.ac)() }), r();
+        }, [r]);
+    return (0, s.jsx)(o.f6W, {
+        theme: g.BR.DARK,
         children: (e) =>
-            (0, r.jsx)(o.Y0X, {
+            (0, s.jsx)(l.Y0X, {
                 transitionState: t,
                 parentComponent: "SocialLayerStorefrontAnnouncementModal",
-                size: o.CgR.DYNAMIC,
-                className: i()(e, v.modal),
+                size: l.CgR.DYNAMIC,
+                className: i()(e, p.modal),
                 returnRef: a,
-                children: (0, r.jsxs)(o.hzk, {
-                    className: v.content,
+                children: (0, s.jsxs)(l.hzk, {
+                    className: p.content,
                     children: [
-                        (0, r.jsx)("div", {
-                            className: v.closeButton,
-                            children: (0, r.jsx)(o.olH, { onClick: n }),
+                        (0, s.jsx)("div", {
+                            className: p.closeButton,
+                            children: (0, s.jsx)(l.olH, { onClick: r }),
                         }),
-                        (0, r.jsx)("div", { className: v.artwork }),
-                        (0, r.jsx)(l.X6q, {
+                        (0, s.jsx)("div", { className: p.artwork }),
+                        (0, s.jsx)(o.X6q, {
                             variant: "display-md",
-                            color: "header-primary",
+                            color: "text-strong",
                             children: j.intl.string(j.t.to0E8U),
                         }),
-                        (0, r.jsx)(l.X6q, {
+                        (0, s.jsx)(o.X6q, {
                             variant: "display-md",
-                            color: "header-primary",
+                            color: "text-strong",
                             children: j.intl.string(j.t.BKEkBd),
                         }),
-                        (0, r.jsx)(l.X6q, {
+                        (0, s.jsx)(o.X6q, {
                             variant: "heading-md/medium",
                             color: "text-muted",
                             children: j.intl.string(j.t.SiXpR2),
                         }),
-                        (0, r.jsxs)("div", {
-                            className: v.features,
+                        (0, s.jsxs)("div", {
+                            className: p.features,
                             children: [
-                                (0, r.jsxs)("div", {
-                                    className: v.feature,
+                                (0, s.jsxs)("div", {
+                                    className: p.feature,
                                     children: [
-                                        (0, r.jsx)("div", {
-                                            className: v.featureIcon,
-                                            children: (0, r.jsx)("img", {
+                                        (0, s.jsx)("div", {
+                                            className: p.featureIcon,
+                                            children: (0, s.jsx)("img", {
                                                 src: N,
                                                 alt: "",
                                             }),
                                         }),
-                                        (0, r.jsxs)("div", {
-                                            className: v.featureCopy,
+                                        (0, s.jsxs)("div", {
+                                            className: p.featureCopy,
                                             children: [
-                                                (0, r.jsx)(l.X6q, {
+                                                (0, s.jsx)(o.X6q, {
                                                     variant: "heading-md/semibold",
-                                                    color: "header-primary",
+                                                    color: "text-strong",
                                                     children: j.intl.string(j.t["5hRbeH"]),
                                                 }),
-                                                (0, r.jsx)(l.xvT, {
+                                                (0, s.jsx)(o.xvT, {
                                                     variant: "text-sm/medium",
                                                     color: "text-muted",
                                                     children: j.intl.string(j.t["72sDuh"]),
@@ -91,25 +91,25 @@ function b(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsxs)("div", {
-                                    className: v.feature,
+                                (0, s.jsxs)("div", {
+                                    className: p.feature,
                                     children: [
-                                        (0, r.jsx)("div", {
-                                            className: v.featureIcon,
-                                            children: (0, r.jsx)("img", {
-                                                src: g,
+                                        (0, s.jsx)("div", {
+                                            className: p.featureIcon,
+                                            children: (0, s.jsx)("img", {
+                                                src: v,
                                                 alt: "",
                                             }),
                                         }),
-                                        (0, r.jsxs)("div", {
-                                            className: v.featureCopy,
+                                        (0, s.jsxs)("div", {
+                                            className: p.featureCopy,
                                             children: [
-                                                (0, r.jsx)(l.X6q, {
+                                                (0, s.jsx)(o.X6q, {
                                                     variant: "heading-md/semibold",
-                                                    color: "header-primary",
+                                                    color: "text-strong",
                                                     children: j.intl.string(j.t.MO4ASw),
                                                 }),
-                                                (0, r.jsx)(l.xvT, {
+                                                (0, s.jsx)(o.xvT, {
                                                     variant: "text-sm/medium",
                                                     color: "text-muted",
                                                     children: j.intl.string(j.t.o4i2Wx),
@@ -120,7 +120,7 @@ function b(e) {
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(l.zxk, {
+                        (0, s.jsx)(o.zxk, {
                             variant: "primary",
                             text: j.intl.string(j.t.CekBHq),
                             onClick: k,

@@ -1,6 +1,6 @@
-n.d(t, { Z: () => g }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
-var r = n(54381),
-    a = n(473749),
+n.d(t, { Z: () => f }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
+var a = n(54381),
+    r = n(473749),
     i = n(442837),
     l = n(481060),
     s = n(703656),
@@ -11,12 +11,12 @@ var r = n(54381),
     p = n(981631),
     m = n(388032);
 let h = "redirect_to_support_server";
-function g(e) {
+function f(e) {
     let { application: t, className: n } = e,
-        { onGoToSupportServer: g } = (function (e) {
+        { onGoToSupportServer: f } = (function (e) {
             let t = (0, d.nu)(),
                 n = (0, i.e7)([o.default], () => o.default.getSessionId()),
-                r = a.useCallback(async () => {
+                a = r.useCallback(async () => {
                     try {
                         var t;
                         let n = null == e || null == (t = e.guild) ? void 0 : t.id;
@@ -31,35 +31,35 @@ function g(e) {
                     } catch (e) {}
                 }, [e]);
             return (
-                a.useEffect(() => {
-                    let a = new URL(location.href);
-                    if (null != e && t && null != n && "true" === a.searchParams.get(h)) {
-                        a.searchParams.delete(h);
-                        let e = a.pathname + a.search;
-                        (0, s.dL)(e), r();
+                r.useEffect(() => {
+                    let r = new URL(location.href);
+                    if (null != e && t && null != n && "true" === r.searchParams.get(h)) {
+                        r.searchParams.delete(h);
+                        let e = r.pathname + r.search;
+                        (0, s.dL)(e), a();
                     }
-                }, [t, r, n, e]),
+                }, [t, a, n, e]),
                 {
-                    onGoToSupportServer: a.useCallback(() => {
+                    onGoToSupportServer: r.useCallback(() => {
                         var n;
                         null != (null == e || null == (n = e.guild) ? void 0 : n.id) &&
-                            (t ? r() : (0, d.rf)({ [h]: "true" }));
-                    }, [e, r, t]),
+                            (t ? a() : (0, d.rf)({ [h]: "true" }));
+                    }, [e, a, t]),
                 }
             );
         })(t);
     return null != t.guild && t.guild.features.includes(p.GuildFeatures.DISCOVERABLE)
-        ? (0, r.jsxs)("div", {
+        ? (0, a.jsxs)("div", {
               className: n,
               children: [
-                  (0, r.jsx)(l.Heading, {
+                  (0, a.jsx)(l.Heading, {
                       variant: "heading-sm/semibold",
-                      color: "header-primary",
+                      color: "text-strong",
                       children: m.intl.string(m.t.KJEO27),
                   }),
-                  (0, r.jsx)(u.Z, {
+                  (0, a.jsx)(u.Z, {
                       guild: t.guild,
-                      onClick: g,
+                      onClick: f,
                   }),
               ],
           })

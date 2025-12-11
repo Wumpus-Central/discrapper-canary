@@ -7,23 +7,23 @@ var l = n(54381),
     C = n(481060),
     c = n(607070),
     d = n(70097),
-    u = n(566697),
-    o = n(594174),
+    o = n(566697),
+    u = n(594174),
     L = n(526167),
     H = n(741245),
     M = n(388032),
-    h = n(127290),
-    Z = n(667325),
-    p = n(552039),
-    g = n(445161);
+    h = n(353516),
+    Z = n(530641),
+    g = n(491567),
+    p = n(419698);
 let m = (t) => {
     let { type: e, text: n, buttonText: s, buttonLoading: m, hideClose: N, onClose: f } = t,
         x = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
-        E = (0, a.e7)([o.default], () => {
-            let t = o.default.getCurrentUser();
+        E = (0, a.e7)([u.default], () => {
+            let t = u.default.getCurrentUser();
             return i()(null != t, "UserSettingsProfileCustomization: user cannot be undefined"), t;
         }),
-        _ = (0, L.rO)() ? Z.Z : p.Z,
+        _ = (0, L.rO)() ? Z.Z : g.Z,
         I = ((t) => {
             switch (t) {
                 case H.Yk.PREMIUM_UPDATED:
@@ -40,7 +40,7 @@ let m = (t) => {
             (0, l.jsx)(C.Heading, {
                 className: h.header,
                 variant: "display-md",
-                color: "header-primary",
+                color: "text-strong",
                 children: I,
             }),
             (0, l.jsxs)("div", {
@@ -48,7 +48,7 @@ let m = (t) => {
                 children: [
                     x
                         ? (0, l.jsx)("img", {
-                              src: g.Z,
+                              src: p.Z,
                               alt: "",
                               className: h.nameplateGlow,
                           })
@@ -60,7 +60,7 @@ let m = (t) => {
                               className: h.nameplateGlow,
                               children: (0, l.jsx)("source", { src: _ }),
                           }),
-                    (0, l.jsx)(u.Z, {
+                    (0, l.jsx)(o.Z, {
                         user: E,
                         isHighlighted: !0,
                         nameplate: null,

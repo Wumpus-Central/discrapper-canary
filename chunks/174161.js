@@ -34,7 +34,7 @@ function E(e) {
               children: (0, r.jsx)(s.Heading, {
                   className: g.guildName,
                   variant: "heading-md/semibold",
-                  color: "header-primary",
+                  color: "text-strong",
                   children: t.name,
               }),
           })
@@ -47,7 +47,7 @@ function E(e) {
                   children: (0, r.jsx)(s.Heading, {
                       className: g.guildName,
                       variant: "heading-md/semibold",
-                      color: "header-primary",
+                      color: "text-strong",
                       children: t.name,
                   }),
               }),

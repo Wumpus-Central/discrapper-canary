@@ -24,12 +24,12 @@ var r = n(54381),
     T = n(638631),
     C = n(254139),
     A = n(388032),
-    N = n(350169);
+    N = n(466127);
 let P = (e, t) => {
         let { className: n, subscriptionTier: i, isEligibleForBogoPromotion: a, offerExpiresAt: P } = e,
             { analyticsLocations: R } = (0, f.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
-            D = (0, _.Nx)(),
-            w = (0, v.$)(),
+            w = (0, _.Nx)(),
+            D = (0, v.$)(),
             x = (0, m.Z)(),
             L = null != x,
             j = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
@@ -49,7 +49,7 @@ let P = (e, t) => {
                         className: N.contentContainer,
                         children: [
                             (0, r.jsx)(C.Z, { containerVisibilityPercentage: k }),
-                            D &&
+                            w &&
                                 (null != P
                                     ? (0, r.jsx)(y.Z, {
                                           expiresAt: P,
@@ -63,7 +63,7 @@ let P = (e, t) => {
                                 className: N.marketingPageTextContainer,
                                 children: (0, r.jsx)(c.Heading, {
                                     variant: "display-md",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     className: N.header,
                                     children: A.intl.string(A.t.YCZldK),
                                 }),
@@ -90,15 +90,15 @@ let P = (e, t) => {
                                             }),
                                         }),
                                     (0, r.jsxs)("div", {
-                                        className: D ? N.singleButtonContainer : N.twoButtonContainer,
+                                        className: w ? N.singleButtonContainer : N.twoButtonContainer,
                                         children: [
                                             (0, r.jsx)(b.Z, {
                                                 size: "md",
-                                                fullWidth: D,
+                                                fullWidth: w,
                                                 hasActivePromotion: !!a,
                                                 subscriptionTier: i,
                                             }),
-                                            !D &&
+                                            !w &&
                                                 (0, r.jsx)(E.Z, {
                                                     variant: "secondary",
                                                     size: "md",
@@ -110,7 +110,7 @@ let P = (e, t) => {
                                         children: (0, r.jsx)(c.Text, {
                                             color: "text-muted",
                                             variant: "text-xs/medium",
-                                            children: A.intl.format(A.t.kt9wxs, { cheapestMonthlyPrice: w }),
+                                            children: A.intl.format(A.t.kt9wxs, { cheapestMonthlyPrice: D }),
                                         }),
                                     }),
                                     null != Z &&

@@ -1,6 +1,6 @@
 n.d(t, {
     GW: () => O,
-    Qg: () => b,
+    Qg: () => p,
     Yn: () => C,
     ZP: () => S,
     bL: () => N,
@@ -21,8 +21,8 @@ var s = n(481060),
     d = n(809086),
     u = n(981631),
     g = n(388032),
-    m = n(50225);
-function f(e) {
+    f = n(50225);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -67,7 +67,7 @@ function p(e, t) {
     }
     return i;
 }
-function b(e) {
+function p(e) {
     return (t, n, r) => {
         let i = e(t),
             l = e(n);
@@ -76,11 +76,11 @@ function b(e) {
 }
 function h(e) {
     var { key: t, cellClassName: n, renderHeader: r, renderContent: i } = e,
-        l = p(e, ["key", "cellClassName", "renderHeader", "renderContent"]);
-    return f(
+        l = b(e, ["key", "cellClassName", "renderHeader", "renderContent"]);
+    return m(
         {
             key: t,
-            bodyCellClassName: m.cell,
+            bodyCellClassName: f.cell,
             cellClassName: n,
             renderHeader: r,
             render: i,
@@ -91,15 +91,15 @@ function h(e) {
 function x() {
     return (0, r.jsx)(s.Text, {
         variant: "text-xs/medium",
-        className: m.unpublishedBadge,
+        className: f.unpublishedBadge,
         children: g.intl.string(g.t.TJ4CCy),
     });
 }
 function j(e) {
     var { cellClassName: t, key: n, renderHeader: i } = e,
-        l = p(e, ["cellClassName", "key", "renderHeader"]);
+        l = b(e, ["cellClassName", "key", "renderHeader"]);
     return h(
-        f(
+        m(
             {
                 cellClassName: t,
                 key: n,
@@ -115,18 +115,18 @@ function j(e) {
                                         listing: t,
                                         imageSize: 128,
                                         alt: "",
-                                        className: m.listingImage,
+                                        className: f.listingImage,
                                     }),
                                     (0, r.jsxs)(s.Text, {
                                         variant: "text-md/medium",
-                                        color: "header-primary",
-                                        className: m.listingNameLabel,
+                                        color: "text-strong",
+                                        className: f.listingNameLabel,
                                         children: [t.name, !t.published && (0, r.jsx)(x, {})],
                                     }),
                                 ],
                             })),
                         (0, r.jsx)(N, {
-                            className: m.listingNameCell,
+                            className: f.listingNameCell,
                             children: n,
                         })
                     );
@@ -138,9 +138,9 @@ function j(e) {
 }
 function v(e) {
     var { cellClassName: t, getAmount: n, key: i, renderHeader: l } = e,
-        a = p(e, ["cellClassName", "getAmount", "key", "renderHeader"]);
+        a = b(e, ["cellClassName", "getAmount", "key", "renderHeader"]);
     return h(
-        f(
+        m(
             {
                 key: i,
                 cellClassName: t,
@@ -156,9 +156,9 @@ function v(e) {
 }
 function O(e) {
     var { cellClassName: t, getCount: n, key: i, renderHeader: l } = e,
-        a = p(e, ["cellClassName", "getCount", "key", "renderHeader"]);
+        a = b(e, ["cellClassName", "getCount", "key", "renderHeader"]);
     return h(
-        f(
+        m(
             {
                 key: i,
                 cellClassName: t,
@@ -193,14 +193,14 @@ function C(e) {
                       }),
                 e
             );
-        })(f({}, r), { cellClassName: a()(r.cellClassName, m.cellAlignRight) });
+        })(m({}, r), { cellClassName: a()(r.cellClassName, f.cellAlignRight) });
     }
     return t;
 }
 let y = (e) => {
         let { children: t } = e;
         return (0, r.jsx)(s.Text, {
-            className: m.headerCell,
+            className: f.headerCell,
             variant: "text-xs/medium",
             color: "interactive-text-default",
             "aria-hidden": !0,
@@ -223,14 +223,14 @@ let y = (e) => {
     I = (e) => {
         let { children: t } = e;
         return (0, r.jsxs)(N, {
-            className: m.personCountCell,
+            className: f.personCountCell,
             children: [
                 null != t ? t : "-",
                 " ",
                 (0, r.jsx)(s.tBG, {
                     size: "md",
                     color: "currentColor",
-                    className: m.personCountIcon,
+                    className: f.personCountIcon,
                     "aria-hidden": !0,
                 }),
             ],
@@ -245,7 +245,7 @@ function S(e) {
             initialSortKey: c,
             initialSortDirection: d = u.sHY.ASCENDING,
         } = e,
-        g = p(e, [
+        g = b(e, [
             "className",
             "headerClassName",
             "rowClassName",
@@ -253,18 +253,18 @@ function S(e) {
             "initialSortKey",
             "initialSortDirection",
         ]);
-    let [b, h] = i.useState(c),
+    let [p, h] = i.useState(c),
         [x, j] = i.useState(d);
     return (0, r.jsx)("div", {
-        className: a()(m.tableContainer, t),
+        className: a()(f.tableContainer, t),
         children: (0, r.jsx)(
             o.Z,
-            f(
+            m(
                 {
-                    className: a()({ [m.tableWithoutSeparators]: !s }, m.table),
-                    rowClassName: a()({ [m.rowWithSeparators]: s }, l),
-                    headerClassName: a()(m.header, { [m.headerWithoutSeparators]: !s }, n),
-                    sortKey: b,
+                    className: a()({ [f.tableWithoutSeparators]: !s }, f.table),
+                    rowClassName: a()({ [f.rowWithSeparators]: s }, l),
+                    headerClassName: a()(f.header, { [f.headerWithoutSeparators]: !s }, n),
+                    sortKey: p,
                     sortDirection: x,
                     onSort: (e, t) => {
                         h(e), j(t);

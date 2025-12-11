@@ -49,7 +49,7 @@ function _(e) {
         children: [
             (0, r.jsx)(o.Heading, {
                 variant: "text-md/medium",
-                color: "header-primary",
+                color: "text-strong",
                 children: (0, r.jsx)("label", {
                     htmlFor: i,
                     className: a()(d.title, { [d.disabled]: s }),

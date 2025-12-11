@@ -17,8 +17,8 @@ var a = n(54381),
     C = n(49436),
     j = n(968843),
     g = n(115179),
-    y = n(515108),
-    v = n(291967),
+    v = n(515108),
+    y = n(291967),
     _ = n(324805),
     N = n(981631),
     O = n(215023),
@@ -54,12 +54,12 @@ function E(e) {
         h = f ? A.Z : S.Z,
         C = r.useRef(null),
         j = r.useRef(null),
-        [g, y] = r.useState(!1),
-        [v, _] = r.useState(!1),
+        [g, v] = r.useState(!1),
+        [y, _] = r.useState(!1),
         [N, O] = r.useState(!1);
     r.useEffect(() => {
-        g && v && N && t();
-    }, [g, v, N, t]),
+        g && y && N && t();
+    }, [g, y, N, t]),
         r.useEffect(() => {
             n ||
                 i ||
@@ -98,7 +98,7 @@ function E(e) {
                 playsInline: !0,
                 className: P.centerOrb,
                 controls: !1,
-                onCanPlayThrough: r.useCallback(() => y(!0), []),
+                onCanPlayThrough: r.useCallback(() => v(!0), []),
                 onEnded: T,
                 children: (0, a.jsx)("source", {
                     src: x,
@@ -151,7 +151,7 @@ function D(e) {
                             }),
                             (0, a.jsx)(l.Heading, {
                                 variant: "heading-xl/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: T.intl.formatToPlainString(T.t.YMor7k, { count: r }),
                             }),
                         ],
@@ -209,7 +209,7 @@ function k(e) {
     }, [d.id, u, x, c]);
     let L = !O || "loading" === x || (null == b && null == m),
         S = "error" === x || null == p || (null == b && null != m);
-    return (0, a.jsx)(y.Z, {
+    return (0, a.jsx)(v.Z, {
         onClose: s,
         transitionState: o,
         quest: d,
@@ -219,7 +219,7 @@ function k(e) {
         rewardContentHasError: S,
         rewardContent: S
             ? null
-            : (0, a.jsx)(v.Z, {
+            : (0, a.jsx)(y.Z, {
                   rewardName: T.intl.string(T.t.Lmysvd),
                   children: (0, a.jsx)(D, {
                       onClose: s,

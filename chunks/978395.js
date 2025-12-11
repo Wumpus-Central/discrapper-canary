@@ -41,9 +41,9 @@ function M(e) {
             isHoveringOrFocusing: U,
             onOpenProfile: G,
             channelId: Z,
-            onClose: B,
+            onClose: F,
         } = e,
-        F = u.ZP.useName(null == k ? void 0 : k.id, Z, t),
+        B = u.ZP.useName(null == k ? void 0 : k.id, Z, t),
         { relationshipType: V, originApplicationId: H } = (0, i.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id),
@@ -66,19 +66,19 @@ function M(e) {
                 user: t,
                 guildId: null == k ? void 0 : k.id,
                 onOpenProfile: G,
-                onClose: B,
+                onClose: F,
                 usernameIcon:
                     t.hasAvatarForGuild(null == k ? void 0 : k.id) &&
                     (0, r.jsx)(N.Z, {
                         user: t,
-                        nickname: F,
+                        nickname: B,
                     }),
-                nickname: F,
+                nickname: B,
                 pronouns: null == M ? void 0 : M.pronouns,
                 tags: (0, r.jsx)(m.Z, {
                     displayProfile: M,
                     themeType: x.l.POPOUT,
-                    onClose: B,
+                    onClose: F,
                 }),
                 nicknameIcons: W
                     ? null
@@ -124,9 +124,9 @@ function M(e) {
                           heading: L.intl.string(L.t.Iyka0U),
                           headingIcon: (0, r.jsx)(a.Mgn, {
                               size: "xxs",
-                              color: a.TVs.colors.HEADER_PRIMARY,
+                              color: a.TVs.colors.TEXT_STRONG,
                           }),
-                          headingColor: "header-primary",
+                          headingColor: "text-strong",
                           children: (0, r.jsx)(s.n, { userId: t.id }),
                       }),
                   })
@@ -134,7 +134,7 @@ function M(e) {
                       user: t,
                       bio: null == M ? void 0 : M.bio,
                       hidePersonalInformation: W,
-                      onClose: B,
+                      onClose: F,
                   }),
             J &&
                 (0, r.jsx)(S.Z, {
@@ -145,7 +145,7 @@ function M(e) {
             q &&
                 (0, r.jsx)(h.Z, {
                     isPremiumUser: $,
-                    onInteraction: B,
+                    onInteraction: F,
                 }),
             K
                 ? (0, r.jsx)(v.Z, {
@@ -153,13 +153,13 @@ function M(e) {
                       currentUser: n,
                       guildId: null == k ? void 0 : k.id,
                       onOpenUserProfileModal: G,
-                      onClose: B,
+                      onClose: F,
                   })
                 : (0, r.jsx)(g.Z, {
                       user: t,
                       currentUser: n,
                       guildId: null == k ? void 0 : k.id,
-                      onClose: B,
+                      onClose: F,
                   }),
             z &&
                 !q &&

@@ -14,8 +14,8 @@ n.d(t, { Z: () => R }),
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(704215),
     c = n(481060),
     u = n(243778),
@@ -53,7 +53,7 @@ function R(e) {
             (0, v.Sn)(t), (0, v.BN)(t);
         }, [t]),
         (0, T.Wj)(t);
-    let L = (0, o.e7)([x.Z], () => x.Z.getStateForGuild(t)),
+    let L = (0, a.e7)([x.Z], () => x.Z.getStateForGuild(t)),
         U = (0, h.Z)(t),
         M = i.useRef(!1),
         { shouldShow: D, modalConfig: V } = (0, P.K)(t, "GuildPowerupsOverview"),
@@ -165,7 +165,7 @@ function R(e) {
                               className: k.powerupsContainer,
                               children: z.map((e) => {
                                   let { type: n, listings: i } = e,
-                                      { title: l, description: o } = (function (e) {
+                                      { title: l, description: a } = (function (e) {
                                           switch (e) {
                                               case N.Us.LEVEL:
                                                   return {
@@ -189,20 +189,20 @@ function R(e) {
                                                   className: k.powerupHorizontalPadding,
                                                   children: [
                                                       (0, r.jsx)(c.Heading, {
-                                                          color: "header-primary",
+                                                          color: "text-strong",
                                                           variant: "heading-lg/semibold",
                                                           children: l,
                                                       }),
                                                       (0, r.jsx)(c.Text, {
                                                           color: "text-muted",
                                                           variant: "text-sm/medium",
-                                                          children: o,
+                                                          children: a,
                                                       }),
                                                   ],
                                               }),
                                               (0, r.jsx)(s, {
                                                   orientation: "horizontal",
-                                                  className: a()(k.powerupContainer, k.powerupHorizontalPadding, {
+                                                  className: o()(k.powerupContainer, k.powerupHorizontalPadding, {
                                                       [k.powerupsLevelContainer]: n === N.Us.LEVEL,
                                                   }),
                                                   fade: !0,

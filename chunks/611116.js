@@ -10,8 +10,8 @@ var r = n(54381),
     l = n(572995),
     c = n(42373),
     u = n(388032),
-    d = n(642650),
-    f = n(595475);
+    d = n(291049),
+    f = n(538654);
 function p(e, t, n) {
     return (
         t in e
@@ -82,7 +82,7 @@ function g(e) {
             (0, r.jsx)(s.Heading, {
                 className: E.bentoSectionHeader,
                 variant: "display-md",
-                color: "header-primary",
+                color: "text-strong",
                 children: i,
             }),
             (0, r.jsx)("div", {

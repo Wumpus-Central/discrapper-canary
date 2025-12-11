@@ -4,9 +4,9 @@ r(473749);
 var o = r(481060),
     c = r(198952),
     i = r(329242),
-    l = r(225753),
+    l = r(372807),
     a = r(388032),
-    s = r(167154);
+    s = r(461818);
 let d = (e) => {
     var t,
         r,
@@ -129,7 +129,7 @@ let d = (e) => {
             children: [
                 (0, n.jsx)(o.Text, {
                     variant: "eyebrow",
-                    color: "header-primary",
+                    color: "text-strong",
                     children: a.intl.string(l.default.cXgKMD),
                 }),
                 (0, n.jsx)(o.Text, {

@@ -4,7 +4,7 @@ var r = n(54381),
     l = n(481060),
     a = n(751586),
     s = n(388032),
-    o = n(473846);
+    o = n(789046);
 function c(e) {
     let { children: t, selectedSections: n = [], onSectionSelect: c, controls: u } = e,
         d = (0, a.Ui)(),
@@ -15,7 +15,7 @@ function c(e) {
         children: [
             (0, r.jsx)(l.Heading, {
                 variant: "heading-xl/semibold",
-                color: "header-primary",
+                color: "text-strong",
                 children: s.intl.string(s.t.BDUDau),
             }),
             (0, r.jsx)("div", {

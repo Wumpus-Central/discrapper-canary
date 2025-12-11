@@ -1,4 +1,4 @@
-n.d(t, { default: () => b }), n(539854);
+n.d(t, { default: () => y }), n(539854);
 var i = n(54381),
     a = n(473749),
     o = n(149765),
@@ -45,12 +45,12 @@ function S(e) {
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: "heading-lg/extrabold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: E.intl.string(E.t.MatO7M),
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: "text-md/normal",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: E.intl.string(E.t.VyPIeu),
                     }),
                 ],
@@ -58,8 +58,8 @@ function S(e) {
         ],
     });
 }
-let h = (e) => (e.toString() === f.Plq.MENTION_EVERYONE.toString() ? E.intl.string(E.t.yCpsQw) : (0, s.wt)(e));
-function T(e) {
+let T = (e) => (e.toString() === f.Plq.MENTION_EVERYONE.toString() ? E.intl.string(E.t.yCpsQw) : (0, s.wt)(e));
+function h(e) {
     let { permissions: t } = e;
     return (0, i.jsxs)("div", {
         className: O.tableContainer,
@@ -82,7 +82,7 @@ function T(e) {
                                 (0, i.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
-                                    children: h(e),
+                                    children: T(e),
                                 }),
                             ],
                         },
@@ -116,7 +116,7 @@ function I(e) {
                                 (0, i.jsx)(l.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: h(e),
+                                    children: T(e),
                                 }),
                             ],
                         },
@@ -134,11 +134,11 @@ function N(e) {
         "data-migration-pending": !0,
         children: (0, i.jsxs)("div", {
             className: O.table,
-            children: [(0, i.jsx)(T, { permissions: n }), (0, i.jsx)(I, { permissions: a })],
+            children: [(0, i.jsx)(h, { permissions: n }), (0, i.jsx)(I, { permissions: a })],
         }),
     });
 }
-function y(e) {
+function b(e) {
     let { onConfirm: t, onDismiss: n } = e;
     return (0, i.jsx)(l.mzw, {
         className: O.footer,
@@ -159,7 +159,7 @@ function y(e) {
         }),
     });
 }
-function b(e) {
+function y(e) {
     let { guild: t, transitionState: n, onClose: r } = e,
         s = a.useMemo(() => {
             let e = [],
@@ -232,7 +232,7 @@ function b(e) {
         children: [
             (0, i.jsx)(S, { guild: t }),
             (0, i.jsx)(N, { permissions: s }),
-            (0, i.jsx)(y, {
+            (0, i.jsx)(b, {
                 onConfirm: c,
                 onDismiss: () => {
                     r();

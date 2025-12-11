@@ -8,31 +8,31 @@ var i = n(54381),
     c = n(481060),
     d = n(430824),
     u = n(626135),
-    p = n(369994),
-    m = n(162157),
-    b = n(533244),
-    g = n(487419),
-    f = n(821312),
+    b = n(369994),
+    p = n(162157),
+    m = n(533244),
+    f = n(487419),
+    g = n(821312),
     h = n(676770),
     x = n(981631),
     j = n(388032),
-    v = n(796668);
+    v = n(192928);
 function O(e) {
     let { guildId: t, transitionState: n, onClose: O, analyticsData: y } = e,
-        _ = (0, a.e7)([d.Z], () => d.Z.getGuild(t), [t]),
-        C = !!(null == _ ? void 0 : _.features.has(x.GuildFeatures.INVITES_DISABLED)),
-        [N] = r.useState(!1),
-        [S, I] = r.useState(h.Fl),
-        w = (0, a.e7)([g.Z], () => g.Z.getGuildIncident(t)),
-        E = (0, m.BT)(_),
-        P = (0, b.SG)(w) || C,
-        T = (0, b.sN)(w),
-        [Z, k] = r.useState(P),
-        [A, D] = r.useState(T),
+        C = (0, a.e7)([d.Z], () => d.Z.getGuild(t), [t]),
+        N = !!(null == C ? void 0 : C.features.has(x.GuildFeatures.INVITES_DISABLED)),
+        [S] = r.useState(!1),
+        [I, w] = r.useState(h.Fl),
+        E = (0, a.e7)([f.Z], () => f.Z.getGuildIncident(t)),
+        P = (0, p.BT)(C),
+        T = (0, m.SG)(E) || N,
+        Z = (0, m.sN)(E),
+        [_, k] = r.useState(T),
+        [A, D] = r.useState(Z),
         [R, L] = r.useState(!1),
-        M = Z !== P || A !== T || R,
-        U = C && !E;
-    return null == _
+        M = _ !== T || A !== Z || R,
+        U = N && !P;
+    return null == C
         ? (O(), null)
         : (0, i.jsx)(l.Modal, {
               transitionState: n,
@@ -42,18 +42,18 @@ function O(e) {
                       text: j.intl.string(j.t["ETE/oC"]),
                       onClick: O,
                       variant: "secondary",
-                      disabled: N,
+                      disabled: S,
                   },
                   {
                       text: j.intl.string(j.t["pwm/z0"]),
                       onClick: () => {
-                          (P || T) && !Z && !A
-                              ? ((0, p.n)(_.id, !1, !1),
+                          (T || Z) && !_ && !A
+                              ? ((0, b.n)(C.id, !1, !1),
                                 (0, c.ZDy)(() =>
                                     Promise.resolve((e) => {
                                         var n, r;
                                         return (0, i.jsx)(
-                                            f.default,
+                                            g.default,
                                             ((n = (function (e) {
                                                 for (var t = 1; t < arguments.length; t++) {
                                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -100,20 +100,20 @@ function O(e) {
                                         );
                                     }),
                                 ))
-                              : (0, p.n)(_.id, Z, A, S);
+                              : (0, b.n)(C.id, _, A, I);
                           let { source: e, alertType: n, messageId: r } = y;
                           u.default.track(x.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                               guild_id: t,
                               source: e,
                               raid_alert_id: r,
                               raid_alert_type: n,
-                              intervention_type_enabled: (0, b.sO)(Z, A),
-                              intervention_type_disabled: (0, b.lk)(Z, A),
-                              duration: 60 * S,
+                              intervention_type_enabled: (0, m.sO)(_, A),
+                              intervention_type_disabled: (0, m.lk)(_, A),
+                              duration: 60 * I,
                           }),
                               O();
                       },
-                      loading: N,
+                      loading: S,
                       disabled: !M,
                   },
               ],
@@ -125,9 +125,9 @@ function O(e) {
                           placeholder: j.intl.string(j.t.vKYZzc),
                           options: (0, h.c1)(),
                           select: (e) => {
-                              I(e), L(!0);
+                              w(e), L(!0);
                           },
-                          isSelected: (e) => e === S,
+                          isSelected: (e) => e === I,
                           serialize: (e) => String(e),
                       }),
                       (0, i.jsxs)("div", {
@@ -138,7 +138,7 @@ function O(e) {
                                   children: [
                                       (0, i.jsx)(c.Text, {
                                           variant: "text-md/semibold",
-                                          color: "header-primary",
+                                          color: "text-strong",
                                           children: j.intl.string(j.t.Uwsjn6),
                                       }),
                                       (0, i.jsx)(c.Text, {
@@ -150,7 +150,7 @@ function O(e) {
                               }),
                               (0, i.jsx)(s.i_, {
                                   body: j.intl.string(j.t["9GPbsV"]),
-                                  shouldShow: C,
+                                  shouldShow: N,
                                   asContainer: !0,
                                   element: "div",
                                   children: (0, i.jsx)("div", {
@@ -159,7 +159,7 @@ function O(e) {
                                           onChange: function () {
                                               k((e) => !e);
                                           },
-                                          checked: Z,
+                                          checked: _,
                                           disabled: U,
                                       }),
                                   }),
@@ -174,7 +174,7 @@ function O(e) {
                                   children: [
                                       (0, i.jsx)(c.Text, {
                                           variant: "text-md/semibold",
-                                          color: "header-primary",
+                                          color: "text-strong",
                                           children: j.intl.string(j.t["wrDmA/"]),
                                       }),
                                       (0, i.jsx)(c.Text, {

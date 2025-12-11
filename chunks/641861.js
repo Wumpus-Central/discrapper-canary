@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => x });
 var i = n(54381);
 n(473749);
 var r = n(120356),
@@ -10,19 +10,19 @@ var r = n(120356),
     u = n(26151),
     d = n(213609),
     p = n(358221),
-    h = n(985588),
-    f = n(686546),
+    f = n(985588),
+    h = n(686546),
     m = n(359110),
     g = n(601964),
     b = n(430824),
     C = n(933557),
     y = n(354459),
-    _ = n(388032),
-    v = n(115858);
-function O(e) {
+    v = n(388032),
+    O = n(943856);
+function x(e) {
     let { recipientUser: t, voiceChannel: n } = e,
         r = (0, C.ZP)(n),
-        s = (0, h.s)(t, "RingToVoiceBanner", n.id),
+        s = (0, f.s)(t, "RingToVoiceBanner", n.id),
         { userIsInCall: u, isUserRinging: m } = (0, o.cj)([p.Z], () => {
             let e = null;
             return (
@@ -33,9 +33,9 @@ function O(e) {
                 }
             );
         }),
-        O = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
-        E = null != O ? (0, g.EB)(O, 32, !0) : null,
-        j = !s || (u && !m);
+        x = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
+        j = null != x ? (0, g.EB)(x, 32, !0) : null,
+        S = !s || (u && !m);
     return ((0, d.Z)(
         {
             type: a.ImpressionTypes.PAGE,
@@ -45,48 +45,48 @@ function O(e) {
                 voice_guild_id: null == n ? void 0 : n.guild_id,
             },
         },
-        { disableTrack: j },
+        { disableTrack: S },
         [t.id],
     ),
-    j)
+    S)
         ? null
         : (0, i.jsxs)("div", {
-              className: l()(v.themed, v.chatHeaderBar),
+              className: l()(O.themed, O.chatHeaderBar),
               children: [
                   (0, i.jsxs)("div", {
-                      className: v.chatHeaderBarInfo,
+                      className: O.chatHeaderBarInfo,
                       children: [
-                          (0, i.jsx)(f.ZP, {
-                              className: v.mask,
-                              mask: f.QS.SQUIRCLE,
+                          (0, i.jsx)(h.ZP, {
+                              className: O.mask,
+                              mask: h.QS.SQUIRCLE,
                               width: 24,
                               height: 24,
                               children:
-                                  null == E
+                                  null == j
                                       ? (0, i.jsx)("div", {
-                                            className: l()(v.guildIcon, v.guildIconWithoutImage),
+                                            className: l()(O.guildIcon, O.guildIconWithoutImage),
                                             children: (0, i.jsx)("div", {
-                                                className: v.guildAcronym,
-                                                children: null != O ? (0, g.gM)(O) : null,
+                                                className: O.guildAcronym,
+                                                children: null != x ? (0, g.gM)(x) : null,
                                             }),
                                         })
                                       : (0, i.jsx)("img", {
-                                            alt: null == O ? void 0 : O.name,
-                                            src: E,
-                                            className: v.guildIcon,
+                                            alt: null == x ? void 0 : x.name,
+                                            src: j,
+                                            className: O.guildIcon,
                                         }),
                           }),
                           (0, i.jsx)(c.Text, {
-                              className: v.chatHeaderBarText,
+                              className: O.chatHeaderBarText,
                               variant: "text-md/medium",
                               color: "text-default",
-                              children: _.intl.format(_.t.f2tNxH, {
+                              children: v.intl.format(v.t.f2tNxH, {
                                   username: null == t ? void 0 : t.globalName,
                                   channelName: (0, i.jsx)(
                                       c.Text,
                                       {
                                           variant: "text-md/semibold",
-                                          color: "header-primary",
+                                          color: "text-strong",
                                           children: r,
                                       },
                                       n.id,
@@ -95,7 +95,7 @@ function O(e) {
                           }),
                       ],
                   }),
-                  (0, i.jsx)(x, {
+                  (0, i.jsx)(E, {
                       channelId: n.id,
                       recipientUserId: t.id,
                       isUserRinging: m,
@@ -103,9 +103,9 @@ function O(e) {
               ],
           });
 }
-function x(e) {
+function E(e) {
     let { channelId: t, recipientUserId: n, isUserRinging: r } = e,
-        l = r ? _.intl.string(_.t.ygslb0) : _.intl.string(_.t["3Hv9qQ"]),
+        l = r ? v.intl.string(v.t.ygslb0) : v.intl.string(v.t["3Hv9qQ"]),
         a = r
             ? () => u.Z.stopRinging(t, [n])
             : () => {

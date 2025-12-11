@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(570949),
     d = n(753972),
     f = n(532309),
-    p = n(934347),
+    p = n(878246),
     _ = n(413097);
 function m(e, t, n) {
     return (
@@ -85,7 +85,7 @@ function g(e) {
                     children: [
                         (0, r.jsx)(a.Heading, {
                             variant: "heading-md/semibold",
-                            color: "header-primary",
+                            color: "text-strong",
                             lineClamp: 1,
                             children: null != (t = null == n ? void 0 : n.displayName) ? t : v,
                         }),

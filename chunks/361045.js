@@ -5,7 +5,7 @@ var r = n(481060),
     i = n(688465),
     l = n(921944),
     s = n(388032),
-    o = n(941246);
+    o = n(506812);
 function c(e) {
     let { markAsDismissed: t, onCTA: c } = e;
     return (0, a.jsxs)("div", {
@@ -36,7 +36,7 @@ function c(e) {
                         children: [
                             (0, a.jsxs)(r.Heading, {
                                 variant: "heading-md/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 className: o.heading,
                                 children: [s.intl.string(s.t.MLt8H4), (0, a.jsx)(i.Z, { className: o.betaTag })],
                             }),

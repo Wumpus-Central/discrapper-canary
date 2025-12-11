@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => x });
 var r = n(54381),
     l = n(473749),
     i = n(442837),
@@ -9,53 +9,53 @@ var r = n(54381),
     c = n(359993),
     u = n(146078),
     m = n(881998),
-    p = n(709054),
-    g = n(388032),
-    _ = n(719706),
-    x = n(970952);
-let h = (e) => {
+    b = n(709054),
+    p = n(388032),
+    g = n(501859),
+    f = n(970952);
+let x = (e) => {
     var t, n;
-    let { entry: h } = e,
-        { name: b } = h,
-        f = (0, i.e7)([m.default], () => m.default.getNewestTokenForApplication(h.id)),
-        v = null != (n = h.getIconURL(40)) ? n : x,
-        j = (0, c.Z)({ application: h }),
+    let { entry: x } = e,
+        { name: h } = x,
+        v = (0, i.e7)([m.default], () => m.default.getNewestTokenForApplication(x.id)),
+        _ = null != (n = x.getIconURL(40)) ? n : f,
+        j = (0, c.Z)({ application: x }),
         y = l.useRef(!1);
     l.useEffect(() => {
         y.current || (o.Z.fetch(), (y.current = !0));
     }, []);
-    let Z = null != f ? p.default.extractTimestamp(f.id) : void 0;
+    let O = null != v ? b.default.extractTimestamp(v.id) : void 0;
     return (0, r.jsxs)("div", {
-        className: _.container,
+        className: g.container,
         children: [
             (0, r.jsx)(s.Heading, {
-                className: _.header,
+                className: g.header,
                 variant: "heading-sm/semibold",
-                children: g.intl.string(g.t["aYfK/w"]),
+                children: p.intl.string(p.t["aYfK/w"]),
             }),
             (0, r.jsx)("div", {
-                className: _.appContainer,
+                className: g.appContainer,
                 children: (0, r.jsxs)("div", {
-                    className: _.appInfo,
+                    className: g.appInfo,
                     children: [
                         (0, r.jsx)(d.ZP, {
                             mask: d.ZP.Masks.AVATAR_DEFAULT,
                             width: 40,
                             height: 40,
-                            className: _.appIconMask,
+                            className: g.appIconMask,
                             children: (0, r.jsx)("img", {
-                                src: v,
+                                src: _,
                                 alt: "",
-                                className: _.appIcon,
+                                className: g.appIcon,
                             }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: _.textContainer,
+                            className: g.textContainer,
                             children: [
                                 (0, r.jsx)(s.Text, {
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     variant: "text-md/medium",
-                                    children: b,
+                                    children: h,
                                 }),
                                 j.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
@@ -66,7 +66,7 @@ let h = (e) => {
                                                   children: (0, u.Z)(j.length),
                                               }),
                                               (0, r.jsx)(a.Z, {
-                                                  className: _.guildStack,
+                                                  className: g.guildStack,
                                                   guilds: j,
                                                   maxGuilds: 6,
                                               }),
@@ -77,14 +77,14 @@ let h = (e) => {
                                               (0, r.jsx)(s.Text, {
                                                   color: "text-default",
                                                   variant: "text-md/normal",
-                                                  children: null == (t = h.bot) ? void 0 : t.tag,
+                                                  children: null == (t = x.bot) ? void 0 : t.tag,
                                               }),
-                                              null != Z &&
+                                              null != O &&
                                                   (0, r.jsx)(s.Text, {
                                                       color: "text-default",
                                                       variant: "text-md/normal",
-                                                      children: g.intl.formatToPlainString(g.t.C9rUO8, {
-                                                          authorizedAt: Z,
+                                                      children: p.intl.formatToPlainString(p.t.C9rUO8, {
+                                                          authorizedAt: O,
                                                       }),
                                                   }),
                                           ],

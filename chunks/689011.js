@@ -14,7 +14,7 @@ var i = n(481060),
     c = n(225715),
     u = n(750143),
     d = n(388032),
-    f = n(848902),
+    f = n(983956),
     p = n(365627),
     _ = n(753260);
 let m = (e) => {
@@ -97,7 +97,7 @@ function g(e) {
             (0, r.jsx)(i.Heading, {
                 className: f.confirmationTitle,
                 variant: "heading-xl/extrabold",
-                color: "header-primary",
+                color: "text-strong",
                 children: d.intl.format(d.t.wLFT6z, { tier: t }),
             }),
             (0, r.jsx)(i.Text, {

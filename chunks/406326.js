@@ -16,8 +16,8 @@ var r = n(54381),
     b = n(465524),
     y = n(611004),
     O = n(770092),
-    j = n(315322),
-    x = n(981631),
+    x = n(315322),
+    j = n(981631),
     v = n(921944),
     C = n(388032),
     I = n(372403);
@@ -73,13 +73,13 @@ function E(e) {
             isIndexing: c,
             isSearching: p,
             documentsIndexed: h,
-            selectedChannelId: j,
+            selectedChannelId: x,
         } = e,
         _ = (0, m.kU)({ location: "SearchHeader" }),
         S = (0, O.I)(t),
         { totalFilters: E } = (0, b.p4)(S, t),
         P = i.useMemo(() => {
-            if (t.type === x.aib.DMS) {
+            if (t.type === j.aib.DMS) {
                 var e, n;
                 let t = null != (n = null == (e = (0, f.$G)(S).channel_id) ? void 0 : e.length) ? n : 0;
                 return t > 0 ? C.intl.format(C.t.A2dqWG, { filterCount: t }) : C.intl.string(C.t.tc619d);
@@ -107,7 +107,7 @@ function E(e) {
         }, [t, k]),
         H = i.useMemo(() => (E > 0 ? C.intl.format(C.t.uaR4sI, { filterCount: E }) : C.intl.string(C.t.UdhTtk)), [E]),
         F = (0, g.U)({ location: "SearchHeader" }),
-        B = t.type === x.aib.DMS || t.type === x.aib.CHANNEL,
+        B = t.type === j.aib.DMS || t.type === j.aib.CHANNEL,
         V = i.useMemo(
             () =>
                 _ && F
@@ -130,7 +130,7 @@ function E(e) {
                               B &&
                                   (0, r.jsx)(w, {
                                       searchContext: t,
-                                      selectedChannelId: j,
+                                      selectedChannelId: x,
                                       isPopoutOpen: "settings" === T,
                                       setOpenPopout: k,
                                       isPopoverVisible: M,
@@ -170,7 +170,7 @@ function E(e) {
                                   B &&
                                       (0, r.jsx)(w, {
                                           searchContext: t,
-                                          selectedChannelId: j,
+                                          selectedChannelId: x,
                                           isPopoutOpen: "settings" === T,
                                           setOpenPopout: k,
                                           isPopoverVisible: M,
@@ -186,22 +186,22 @@ function E(e) {
                               children: [
                                   (0, r.jsx)(d.njP.Item, {
                                       className: I.searchHeaderTab,
-                                      id: x.QIO.NEWEST,
+                                      id: j.QIO.NEWEST,
                                       children: C.intl.string(C.t.rLjqbS),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: I.searchHeaderTab,
-                                      id: x.QIO.OLDEST,
+                                      id: j.QIO.OLDEST,
                                       children: C.intl.string(C.t.a1BaUr),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: I.searchHeaderTab,
-                                      id: x.QIO.MOST_RELEVANT,
+                                      id: j.QIO.MOST_RELEVANT,
                                       children: C.intl.string(C.t.FtR97k),
                                   }),
                               ],
                           }),
-            [H, G, _, T, F, B, l, t, n, j, M, k, U],
+            [H, G, _, T, F, B, l, t, n, x, M, k, U],
         );
     return (0, r.jsxs)("header", {
         className: a()(I.searchHeader, { [I.searchHeaderWithSubtitle]: null != P }),
@@ -255,7 +255,7 @@ function T(e) {
                     color: "text-muted",
                     children: (0, r.jsx)(d.Anchor, {
                         className: I.helpdeskLink,
-                        href: h.Z.getArticleURL(x.BhN.SEARCH_INDEXING),
+                        href: h.Z.getArticleURL(j.BhN.SEARCH_INDEXING),
                         children: C.intl.string(C.t["G3EA+4"]),
                     }),
                 }),
@@ -280,7 +280,7 @@ function R(e) {
     let { totalResults: t, subtitle: n } = e,
         i = (0, r.jsx)(d.Text, {
             variant: "text-md/medium",
-            color: "header-primary",
+            color: "text-strong",
             children: C.intl.format(C.t.ZGVL3g, { count: t }),
         });
     return null != n
@@ -312,19 +312,19 @@ function w(e) {
             (e) => {
                 if (h !== e) {
                     if (
-                        ((0, j.yn)({
+                        ((0, x.yn)({
                             searchContext: t,
                             prevIsCrossDMSettingEnabled: p.rR.getSetting(),
                             isCrossDMSettingEnabled: e,
-                            location: j.Ix.SEARCH_HEADER,
+                            location: x.Ix.SEARCH_HEADER,
                         }),
                         e)
                     ) {
-                        let e = { type: x.aib.DMS };
+                        let e = { type: j.aib.DMS };
                         y.Z.transitionStateToSearchContext(t, e, y.Z.cleanUpPrivateChannelSearchState);
                     } else {
                         let e = {
-                            type: x.aib.CHANNEL,
+                            type: j.aib.CHANNEL,
                             channelId: n,
                         };
                         y.Z.transitionStateToSearchContext(t, e);
@@ -417,15 +417,15 @@ function A(e) {
             () => [
                 {
                     label: C.intl.string(C.t.CbaapP),
-                    value: x.QIO.NEWEST,
+                    value: j.QIO.NEWEST,
                 },
                 {
                     label: C.intl.string(C.t.OukXZj),
-                    value: x.QIO.OLDEST,
+                    value: j.QIO.OLDEST,
                 },
                 {
                     label: C.intl.string(C.t.q8gB52),
-                    value: x.QIO.MOST_RELEVANT,
+                    value: j.QIO.MOST_RELEVANT,
                 },
             ],
             [],

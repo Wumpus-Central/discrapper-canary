@@ -6,14 +6,14 @@ var i = n(54381),
     o = n(239091),
     s = n(285173),
     c = n(388032),
-    d = n(297132);
+    d = n(281773);
 function u(e) {
     var t;
-    let { roles: u, guildId: p } = e,
-        m = null != (t = u[0]) ? t : null,
-        b = u.length - 1,
-        g = r.useMemo(() => new Intl.NumberFormat(c.intl.currentLocale).format(b), [b]),
-        f = r.useCallback(
+    let { roles: u, guildId: b } = e,
+        p = null != (t = u[0]) ? t : null,
+        m = u.length - 1,
+        f = r.useMemo(() => new Intl.NumberFormat(c.intl.currentLocale).format(m), [m]),
+        g = r.useCallback(
             (e) => {
                 e.stopPropagation(),
                     (0, o.jW)(e, async () => {
@@ -28,22 +28,22 @@ function u(e) {
         : (0, i.jsxs)("div", {
               className: d.roleContainer,
               children: [
-                  null != m &&
+                  null != p &&
                       (0, i.jsx)(s.Z, {
                           className: d.firstRole,
-                          role: m,
-                          guildId: p,
+                          role: p,
+                          guildId: b,
                       }),
-                  b > 0 &&
+                  m > 0 &&
                       (0, i.jsx)(a.P3F, {
                           className: d.otherRoles,
-                          onClick: f,
+                          onClick: g,
                           children: (0, i.jsx)(l.u, {
                               text: c.intl.string(c.t.DY6n4q),
                               children: (0, i.jsxs)(a.Text, {
                                   variant: "text-xs/medium",
-                                  color: "header-primary",
-                                  children: ["+", g],
+                                  color: "text-strong",
+                                  children: ["+", f],
                               }),
                           }),
                       }),

@@ -36,7 +36,7 @@ let y = (e, t) => {
                         (0, r.jsx)(s.Heading, {
                             className: h.footerHeader,
                             variant: "display-md",
-                            color: "header-primary",
+                            color: "text-strong",
                             children: m.intl.string(m.t.lEw32m),
                         }),
                         (0, r.jsx)(p.PK, {

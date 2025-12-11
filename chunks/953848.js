@@ -379,7 +379,7 @@ function C(e) {
                                                         })(),
                                                         (0, l.jsx)(u.Text, {
                                                             variant: "text-md/semibold",
-                                                            color: "header-primary",
+                                                            color: "text-strong",
                                                             children:
                                                                 null != p.name && "" !== p.name
                                                                     ? p.name

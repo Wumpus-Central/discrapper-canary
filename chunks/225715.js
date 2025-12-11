@@ -14,7 +14,7 @@ var i = n(120356),
     o = n(481060),
     s = n(41959),
     l = n(245561),
-    c = n(839763);
+    c = n(992802);
 function u(e, t, n) {
     return (
         t in e
@@ -134,7 +134,7 @@ let b = (e) => {
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-md/bold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: n,
                     }),
                     (0, r.jsx)(o.Heading, {

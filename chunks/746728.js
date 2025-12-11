@@ -13,7 +13,7 @@ var r = n(54381),
     u = n(164991),
     d = n(783393),
     p = n(112471),
-    f = n(803638);
+    f = n(755850);
 function g(e) {
     let { categoryId: t, loadId: n } = e;
     u.Z.setState({ categoryId: t }),
@@ -42,7 +42,7 @@ function h(e) {
             (0, r.jsx)(s.Text, {
                 className: f.name,
                 variant: "text-sm/medium",
-                color: "header-primary",
+                color: "text-strong",
                 children: m,
             }),
             (0, r.jsx)(s.Text, {

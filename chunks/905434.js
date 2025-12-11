@@ -5,7 +5,7 @@ var l = n(481060),
     i = n(565138),
     a = n(430824),
     s = n(388032),
-    o = n(633570);
+    o = n(435639);
 let d = (e) => {
     let { stageInstance: t } = e,
         n = a.Z.getGuild(t.guild_id);
@@ -39,7 +39,7 @@ let d = (e) => {
                           }),
                           (0, r.jsx)(l.Text, {
                               variant: "text-md/semibold",
-                              color: "header-primary",
+                              color: "text-strong",
                               children: t.topic,
                           }),
                       ],

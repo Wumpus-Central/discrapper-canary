@@ -12,8 +12,8 @@ var i = n(120356),
     s = n(330711),
     l = n(793030),
     c = n(692547),
-    u = n(173258),
-    d = n(494933);
+    u = n(655657),
+    d = n(510924);
 let f = 48,
     p = 5;
 function _(e) {
@@ -143,7 +143,7 @@ function m(e) {
                     null != n &&
                         (0, r.jsx)(l.xvT, {
                             variant: "text-md/semibold",
-                            color: "header-primary",
+                            color: "text-strong",
                             children: n,
                         }),
                     (0, r.jsx)(l.xvT, {

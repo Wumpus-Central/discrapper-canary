@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(740594),
     d = n(767714),
     f = n(474936),
-    p = n(414239);
+    p = n(879149);
 function _(e, t, n) {
     return (
         t in e
@@ -91,7 +91,7 @@ function h(e) {
             !I && C,
             (0, r.jsx)(s.Text, {
                 variant: null != i ? i : "text-sm/medium",
-                color: "header-primary",
+                color: "text-strong",
                 className: p.upsellText,
                 children: n,
             }),

@@ -6,7 +6,7 @@ var i = n(481060),
     o = n(305347),
     s = n(220250),
     l = n(388032),
-    c = n(505044);
+    c = n(413953);
 function u(e) {
     let { guildId: t, name: n } = e,
         u = (0, s.nv)(),
@@ -40,7 +40,7 @@ function u(e) {
                 className: c.header,
                 children: (0, r.jsx)(i.Heading, {
                     variant: "heading-lg/medium",
-                    color: "header-primary",
+                    color: "text-strong",
                     children: null != n ? n : l.intl.string(l.t.wZmueu),
                 }),
             }),

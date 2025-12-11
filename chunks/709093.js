@@ -13,7 +13,7 @@ var i = n(120356),
     p = n(474936),
     _ = n(282793),
     m = n(388032),
-    h = n(108626),
+    h = n(267180),
     g = n(236078),
     E = n(278345),
     b = n(895601),
@@ -87,9 +87,9 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
             N = (0, c.Fv)(E),
             P = (0, d.N)(),
             R = null == P || null == (t = P.discount) ? void 0 : t.amount,
-            D = A ? v : O,
+            w = A ? v : O,
             {
-                step: w,
+                step: D,
                 breadcrumbs: x,
                 startedPaymentFlowWithPaymentSourcesRef: L,
                 isDisplayingWowMomentConfirmation: j,
@@ -112,22 +112,22 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                 let t = e.id !== l.h8.ADD_PAYMENT_STEPS,
                     n = e.id === l.h8.ADD_PAYMENT_STEPS && !L.current;
                 return !E || (E && (t || n));
-            })).find((e) => e.id === w),
+            })).find((e) => e.id === D),
             U =
                 null != (i = null == k || null == (n = k.sectionHeaderText) ? void 0 : n.call(k))
                     ? i
                     : null == k
                       ? void 0
                       : k.label,
-            G = null != U && null != w,
-            Z = N && G && w === l.h8.REVIEW,
-            B = A ? "nitro-pink" : "nitro-green",
-            F = T(A, C);
+            G = null != U && null != D,
+            Z = N && G && D === l.h8.REVIEW,
+            F = A ? "nitro-pink" : "nitro-green",
+            B = T(A, C);
         return j
             ? (0, r.jsx)("div", {
                   className: h.container,
                   children: (0, r.jsx)(o.$1m, {
-                      color: B,
+                      color: F,
                       className: h.headerContainer,
                   }),
               })
@@ -135,7 +135,7 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                   className: h.container,
                   children: [
                       (0, r.jsxs)(o.$1m, {
-                          color: B,
+                          color: F,
                           className: a()(h.headerContainer, { [h.containerBottomPadding]: !G }),
                           children: [
                               (0, r.jsx)(I, { isTier2: A }),
@@ -147,7 +147,7 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                                       className: h.closeButtonPosition,
                                   }),
                               (0, r.jsx)("img", {
-                                  src: D,
+                                  src: w,
                                   alt: "",
                                   className: Z ? h.bigWumpus : h.wumpus,
                               }),
@@ -164,9 +164,9 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                                           }),
                                       (0, r.jsx)(o.Text, {
                                           variant: "display-md",
-                                          color: "header-primary",
+                                          color: "text-strong",
                                           className: h.nitroText,
-                                          children: F,
+                                          children: B,
                                       }),
                                   ],
                               }),
@@ -177,7 +177,7 @@ let T = (e, t) => (t ? (0, _.sO)() : e ? m.intl.string(m.t.lG6a5x) : m.intl.stri
                           (0, r.jsx)(S, {
                               isOneStepCheckout: N,
                               headerText: U,
-                              step: w,
+                              step: D,
                               filteredBreadcrumbs: M,
                           }),
                       Z &&

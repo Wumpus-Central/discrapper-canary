@@ -13,17 +13,17 @@ var r = n(54381),
     g = n(859921),
     h = n(750910),
     m = n(28494),
-    _ = n(29086),
-    b = n(590771),
+    b = n(29086),
+    _ = n(590771),
     E = n(273596),
     O = n(128449),
     v = n(49898),
     y = n(388032),
-    I = n(301578);
+    I = n(146927);
 function C() {
     let e = i.useRef((0, f.PM)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: C } = (0, a.M)(),
-        { tabs: S, selectedTab: T, setSelectedTab: N } = (0, _.Y)(),
+        { tabs: S, selectedTab: T, setSelectedTab: N } = (0, b.Y)(),
         j = (0, f.lg)(T),
         P = !O.MU.has(T),
         {
@@ -101,7 +101,7 @@ function C() {
                         L &&
                             (0, r.jsx)(l.Heading, {
                                 variant: "heading-lg/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 className: I.searchResultsHeader,
                                 children: y.intl.format(y.t.zHdzqW, { query: G }),
                             }),
@@ -124,7 +124,7 @@ function C() {
                           onGuildCardClick: z,
                           onGuildCardSeen: F,
                       })
-                    : (0, r.jsx)(b.Z, {
+                    : (0, r.jsx)(_.Z, {
                           selectedTab: T,
                           onScroll: t,
                           onGuildCardClick: z,

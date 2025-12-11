@@ -20,8 +20,8 @@ var r = n(54381),
     g = n(726542),
     h = n(884338),
     m = n(367907),
-    _ = n(598077),
-    b = n(314897),
+    b = n(598077),
+    _ = n(314897),
     E = n(271383),
     O = n(485386),
     v = n(626135),
@@ -29,8 +29,8 @@ var r = n(54381),
     I = n(225104),
     C = n(981631),
     S = n(388032),
-    T = n(375563),
-    N = n(245141);
+    T = n(151544),
+    N = n(608908);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,7 +75,7 @@ function P(e, t) {
 let x = function (e) {
     let { guildId: t, transitionState: l, onClose: x } = e,
         A = (0, o.e7)([O.Z], () => O.Z.getSortedRoles(t)),
-        Z = (0, o.e7)([b.default], () => b.default.getId()),
+        Z = (0, o.e7)([_.default], () => _.default.getId()),
         w = (0, o.e7)([E.ZP], () => E.ZP.getMember(t, Z)),
         [L, R] = i.useState([]),
         D = (0, f.ZP)();
@@ -126,7 +126,7 @@ let x = function (e) {
                                 s =
                                     (null == i ? void 0 : i.bot) != null
                                         ? (0, r.jsx)("img", {
-                                              src: new _.Z(i.bot).getAvatarURL(t, 24),
+                                              src: new b.Z(i.bot).getAvatarURL(t, 24),
                                               alt: "",
                                               className: a()(T.botAvatar, N.avatar),
                                           })
@@ -208,7 +208,7 @@ let x = function (e) {
                                 children: [
                                     (0, r.jsx)(u.Text, {
                                         variant: "text-md/medium",
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         className: T.verifiedRoleName,
                                         children: e.name,
                                     }),

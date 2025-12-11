@@ -112,7 +112,7 @@ function B(e) {
                     user: e,
                     channel: l,
                     stream: n,
-                    color: a ? "header-primary" : "none",
+                    color: a ? "text-strong" : "none",
                 }),
                 a &&
                     (0, i.jsx)(V, {

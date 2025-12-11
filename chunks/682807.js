@@ -21,7 +21,7 @@ function h(e) {
               children: [
                   (0, a.jsx)(s.Heading, {
                       variant: "heading-sm/semibold",
-                      color: "header-primary",
+                      color: "text-strong",
                       children: p.intl.string(p.t.l6DP2n),
                   }),
                   (0, a.jsxs)("div", {
@@ -38,14 +38,14 @@ function h(e) {
                               ),
                           ),
                           null != r.terms_of_service_url
-                              ? (0, a.jsx)(b, {
+                              ? (0, a.jsx)(g, {
                                     icon: s.aAW,
                                     url: r.terms_of_service_url,
                                     children: p.intl.string(p.t.s7STcY),
                                 })
                               : null,
                           null != r.privacy_policy_url
-                              ? (0, a.jsx)(b, {
+                              ? (0, a.jsx)(g, {
                                     icon: s.mBM,
                                     url: r.privacy_policy_url,
                                     children: p.intl.string(p.t.kH3JR5),
@@ -69,14 +69,14 @@ function f(e) {
             : null == u || null == (n = u.icon)
               ? void 0
               : n.lightSVG;
-    return (0, a.jsx)(b, {
+    return (0, a.jsx)(g, {
         icon: void 0 === p ? s.xPt : void 0,
         imageSrc: p,
         url: r,
         children: i,
     });
 }
-function b(e) {
+function g(e) {
     let { icon: t, imageSrc: n, iconColor: r, url: l, children: c } = e,
         d = (0, u.nu)(),
         p = null;

@@ -27,9 +27,9 @@ var r = n(54381),
     N = n(495114),
     P = n(170140),
     R = n(981631),
-    D = n(959517),
-    w = n(388032),
-    x = n(823708),
+    w = n(959517),
+    D = n(388032),
+    x = n(138770),
     L = n(527455);
 function j(e, t, n) {
     return (
@@ -86,10 +86,10 @@ function U(e, t) {
 function G(e) {
     var t, n, a, j;
     let { embedUrl: k, message: G, channel: Z } = e,
-        B = i.useRef(null),
         F = i.useRef(null),
+        B = i.useRef(null),
         V = (0, P.J)(k, G),
-        { setPopout: H } = (0, b.Z)(G.id, D.d$),
+        { setPopout: H } = (0, b.Z)(G.id, w.d$),
         Y = (0, E.qo)(G, Z, H, !0),
         W = v.QK.useSetting(),
         K = (0, A.n)(),
@@ -166,7 +166,7 @@ function G(e) {
                 : (0, r.jsx)(
                       O.Z,
                       {
-                          targetElementRef: B,
+                          targetElementRef: F,
                           userId: V.authorId,
                           guildId: V.guildId,
                           channelId: Z.id,
@@ -178,7 +178,7 @@ function G(e) {
                               (0, r.jsx)(
                                   u.rz2,
                                   U(M({}, e), {
-                                      ref: B,
+                                      ref: F,
                                       name: V.authorName,
                                       colorString: et,
                                       colorStrings: ei,
@@ -203,7 +203,7 @@ function G(e) {
                         (!0 === V.shouldShowBlurredThumbnailImage
                             ? (0, r.jsx)("img", {
                                   src: L,
-                                  alt: w.intl.string(w.t.rIbh8H),
+                                  alt: D.intl.string(D.t.rIbh8H),
                                   className: o()(x.thumbnail, { [x.spoiler]: V.shouldSpoiler }),
                                   onContextMenu: Y,
                                   onError: () => X(!0),
@@ -211,7 +211,7 @@ function G(e) {
                             : (0, r.jsx)(m.Z, {
                                   src: !eg && eh ? "".concat(em, "?format=png") : em,
                                   backgroundSrc: "".concat(em, "?format=png"),
-                                  alt: w.intl.string(w.t.rIbh8H),
+                                  alt: D.intl.string(D.t.rIbh8H),
                                   aspectRatio: 16 / 9,
                                   className: o()(x.thumbnail, { [x.spoiler]: V.shouldSpoiler }),
                                   imageChildClassName: x.thumbnailImage,
@@ -264,7 +264,7 @@ function G(e) {
                             null != V.authorId &&
                                 null != ef &&
                                 (0, r.jsx)(O.Z, {
-                                    targetElementRef: F,
+                                    targetElementRef: B,
                                     userId: V.authorId,
                                     guildId: V.guildId,
                                     channelId: Z.id,
@@ -280,10 +280,10 @@ function G(e) {
                                             children: (0, r.jsx)(
                                                 u.qEK,
                                                 U(M({}, e), {
-                                                    ref: F,
+                                                    ref: B,
                                                     size: u.EFr.SIZE_40,
                                                     src: ef,
-                                                    "aria-label": w.intl.string(w.t.KXz3XB),
+                                                    "aria-label": D.intl.string(D.t.KXz3XB),
                                                     avatarDecoration: ed,
                                                 }),
                                             ),
@@ -306,7 +306,7 @@ function G(e) {
                                                 className: x.channelName,
                                                 children: (0, r.jsx)(u.Heading, {
                                                     variant: "heading-md/semibold",
-                                                    color: "header-primary",
+                                                    color: "text-strong",
                                                     children: null != (j = V.channelName) ? j : V.guildName,
                                                 }),
                                             }),
@@ -317,7 +317,7 @@ function G(e) {
                                             variant: "text-sm/medium",
                                             color: "text-muted",
                                             className: x.descriptionFooterAuthorContainer,
-                                            children: w.intl.format(w.t.voIDKa, {
+                                            children: D.intl.format(D.t.voIDKa, {
                                                 authorName: V.authorName,
                                                 authorNameHook: e_,
                                             }),

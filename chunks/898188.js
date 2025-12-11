@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(216701),
     O = n(981631),
     v = n(388032),
-    S = n(530815);
+    S = n(388778);
 let I = 60;
 function T(e) {
     let { action: t } = e,
@@ -59,33 +59,33 @@ function A(e) {
         A = (null == m ? void 0 : m.actionType) === g.NewMemberActionTypes.VIEW,
         N = (0, c.dQu)(c.TVs.colors.WHITE),
         [P, R] = i.useState(!1),
-        [D] = i.useState(new s.Z.Value(0)),
-        [w] = i.useState(new s.Z.Value(0));
+        [w] = i.useState(new s.Z.Value(0)),
+        [D] = i.useState(new s.Z.Value(0));
     i.useEffect(() => {
         b
-            ? s.Z.timing(D, {
+            ? s.Z.timing(w, {
                   toValue: 0,
                   duration: O ? 1 : 350,
                   easing: s.Z.Easing.quad,
                   delay: 500 * !A,
               }).start(() => R(!0))
-            : s.Z.timing(D, {
+            : s.Z.timing(w, {
                   toValue: 1,
                   duration: O ? 1 : 350,
                   easing: s.Z.Easing.quad,
                   delay: 400,
               }).start();
-    }, [b, D, A, O]),
+    }, [b, w, A, O]),
         i.useEffect(() => {
             b &&
                 P &&
-                s.Z.timing(w, {
+                s.Z.timing(D, {
                     toValue: 1,
                     duration: 350 * !O,
                     easing: s.Z.Easing.quad,
                     delay: 400,
                 }).start();
-        }, [b, w, P, O]);
+        }, [b, D, P, O]);
     let x = i.useCallback(() => {
         null != y && (0, h.gp)(f, y.channelId);
     }, [f, y]);
@@ -97,7 +97,7 @@ function A(e) {
                   P && null != y
                       ? (0, r.jsx)(s.Z.div, {
                             style: {
-                                marginBottom: w.interpolate({
+                                marginBottom: D.interpolate({
                                     inputRange: [0, 1],
                                     outputRange: [-I, 0],
                                 }),
@@ -116,7 +116,7 @@ function A(e) {
                                         children: [
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-md/semibold",
-                                                color: "header-primary",
+                                                color: "text-strong",
                                                 children: v.intl.format(v.t["/beONw"], { step: y.title }),
                                             }),
                                             (0, r.jsx)(T, { action: y }),
@@ -136,7 +136,7 @@ function A(e) {
                       : (0, r.jsxs)(s.Z.div, {
                             className: S.banner,
                             style: {
-                                marginBottom: D.interpolate({
+                                marginBottom: w.interpolate({
                                     inputRange: [0, 1],
                                     outputRange: [-I, 0],
                                 }),
@@ -152,7 +152,7 @@ function A(e) {
                                     children: [
                                         (0, r.jsx)(c.Text, {
                                             variant: "text-md/semibold",
-                                            color: "header-primary",
+                                            color: "text-strong",
                                             children: m.title,
                                         }),
                                         (0, r.jsx)(c.Text, {

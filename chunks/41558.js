@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(481060),
     o = n(388032),
-    s = n(258253),
+    s = n(194370),
     l = (function (e) {
         return (e[(e.VIEW_MORE = 0)] = "VIEW_MORE"), (e[(e.VIEW_LESS = 1)] = "VIEW_LESS"), e;
     })(l || {});
@@ -14,7 +14,7 @@ function c(e) {
         children: [
             (0, r.jsx)(a.Text, {
                 variant: "text-md/medium",
-                color: "header-primary",
+                color: "text-strong",
                 children: t,
             }),
             null != n &&
@@ -41,7 +41,7 @@ function c(e) {
             children: (0, r.jsx)(a.Text, {
                 className: s.hidden,
                 variant: "text-md/medium",
-                color: "header-primary",
+                color: "text-strong",
                 children: "_",
             }),
         });

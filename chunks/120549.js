@@ -1,10 +1,10 @@
 n.d(t, {
-    V: () => _,
-    Z: () => f,
+    V: () => b,
+    Z: () => g,
 }),
     n(388685);
-var r = n(54381),
-    a = n(473749),
+var a = n(54381),
+    r = n(473749),
     i = n(120356),
     l = n.n(i),
     s = n(442837),
@@ -14,24 +14,24 @@ var r = n(54381),
     u = n(678694),
     p = n(216780),
     m = n(388032),
-    h = n(647803);
-function g(e) {
+    h = n(370374);
+function f(e) {
     let { category: t, count: n, onSelectCategory: i, selected: s } = e,
-        c = a.useCallback(() => {
+        c = r.useCallback(() => {
             i(t.id);
         }, [t.id, i]),
         u = n.toLocaleString(d.default.locale);
-    return (0, r.jsxs)(o.P3F, {
+    return (0, a.jsxs)(o.P3F, {
         onClick: c,
         className: l()(h.category, { [h.selected]: s }),
         children: [
-            (0, r.jsx)(o.Text, {
+            (0, a.jsx)(o.Text, {
                 className: h.name,
                 variant: "text-sm/medium",
-                color: "header-primary",
+                color: "text-strong",
                 children: t.name,
             }),
-            (0, r.jsx)(o.Text, {
+            (0, a.jsx)(o.Text, {
                 className: h.count,
                 variant: "text-sm/normal",
                 color: "text-muted",
@@ -40,10 +40,10 @@ function g(e) {
         ],
     });
 }
-function f(e) {
+function g(e) {
     let { countsByCategory: t, onSelectCategory: n, selectedCategoryId: i } = e,
         l = (0, s.e7)([u.Z], () => u.Z.getCategories()),
-        o = a.useMemo(
+        o = r.useMemo(
             () => [
                 (0, p.KQ)(),
                 ...l.filter((e) => {
@@ -55,14 +55,14 @@ function f(e) {
         );
     return 0 === o.length
         ? null
-        : (0, r.jsx)("div", {
+        : (0, a.jsx)("div", {
               className: h.categories,
               children: o.map((e) => {
-                  var a;
+                  var r;
                   let l = e.id,
-                      s = null != (a = t[l]) ? a : 0;
-                  return (0, r.jsx)(
-                      g,
+                      s = null != (r = t[l]) ? r : 0;
+                  return (0, a.jsx)(
+                      f,
                       {
                           category: e,
                           count: s,
@@ -74,11 +74,11 @@ function f(e) {
               }),
           });
 }
-function _(e) {
+function b(e) {
     var t;
     let { countsByCategory: n, onSelectCategory: i, selectedCategoryId: l } = e,
         d = (0, s.e7)([u.Z], () => u.Z.getCategories()),
-        g = a.useMemo(
+        f = r.useMemo(
             () => [
                 (0, p.KQ)(),
                 ...d.filter((e) => {
@@ -88,39 +88,39 @@ function _(e) {
             ],
             [d, n],
         ),
-        f = a.useMemo(
+        g = r.useMemo(
             () =>
-                g.map((e) => ({
+                f.map((e) => ({
                     id: "".concat(e.id),
-                    label: (0, r.jsx)(c.iG, {
+                    label: (0, a.jsx)(c.iG, {
                         count: n[e.id],
                         name: e.name,
                     }),
                 })),
-            [g, n],
+            [f, n],
         ),
-        _ = a.useCallback(
+        b = r.useCallback(
             (e) => {
-                let t = g.find((t) => t.id === Number(e));
+                let t = f.find((t) => t.id === Number(e));
                 null != t && i(t);
             },
-            [i, g],
+            [i, f],
         ),
-        b = a.useMemo(() => g.find((e) => e.id === l), [l, g]);
-    return 0 === f.length
+        x = r.useMemo(() => f.find((e) => e.id === l), [l, f]);
+    return 0 === g.length
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, a.jsxs)("div", {
               className: h.container,
               children: [
-                  (0, r.jsx)(o.Text, {
+                  (0, a.jsx)(o.Text, {
                       variant: "text-sm/medium",
                       color: "text-subtle",
                       children: m.intl.string(m.t.f09BQJ),
                   }),
-                  (0, r.jsx)(c.ZP, {
-                      items: f,
-                      title: null != (t = null == b ? void 0 : b.name) ? t : "",
-                      onSelect: _,
+                  (0, a.jsx)(c.ZP, {
+                      items: g,
+                      title: null != (t = null == x ? void 0 : x.name) ? t : "",
+                      onSelect: b,
                       selected: "".concat(l),
                       "aria-label": m.intl.string(m.t.WHdCwR),
                       variant: c.PA.FILLED,

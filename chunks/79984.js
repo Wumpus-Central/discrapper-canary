@@ -29,7 +29,7 @@ function d() {
                         children: (0, r.jsx)(l.Heading, {
                             className: u.hidden,
                             variant: "heading-md/semibold",
-                            color: "header-primary",
+                            color: "text-strong",
                             lineClamp: 1,
                             children: "_",
                         }),

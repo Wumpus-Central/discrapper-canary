@@ -1,6 +1,6 @@
-n.d(t, { Z: () => f });
-var r = n(54381),
-    a = n(473749),
+n.d(t, { Z: () => g });
+var a = n(54381),
+    r = n(473749),
     i = n(793030),
     l = n(823379),
     s = n(216780),
@@ -11,43 +11,43 @@ var r = n(54381),
     p = n(24746),
     m = n(970731),
     h = n(388032),
-    g = n(964645);
-function f(e) {
+    f = n(195006);
+function g(e) {
     let { application: t } = e,
-        n = a.useMemo(() => {
-            var e, n, r;
+        n = r.useMemo(() => {
+            var e, n, a;
             return null !=
-                (r = (null != (n = null == (e = t.directory_entry) ? void 0 : e.carousel_items) ? n : [])
+                (a = (null != (n = null == (e = t.directory_entry) ? void 0 : e.carousel_items) ? n : [])
                     .map(s.RF)
                     .filter(l.lm))
-                ? r
+                ? a
                 : [];
         }, [t]);
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, r.jsxs)("div", {
-                className: g.aboutContainer,
+            (0, a.jsxs)("div", {
+                className: f.aboutContainer,
                 children: [
-                    (0, r.jsx)(o.Z, {
+                    (0, a.jsx)(o.Z, {
                         application: t,
                         carouselItems: n,
                     }),
-                    (0, r.jsx)(p.Z, { application: t }),
-                    (0, r.jsx)(c.Z, { application: t }),
-                    (0, r.jsx)(m.Z, { application: t }),
-                    (0, r.jsx)(d.Z, { application: t }),
+                    (0, a.jsx)(p.Z, { application: t }),
+                    (0, a.jsx)(c.Z, { application: t }),
+                    (0, a.jsx)(m.Z, { application: t }),
+                    (0, a.jsx)(d.Z, { application: t }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: g.informationContainer,
+            (0, a.jsxs)("div", {
+                className: f.informationContainer,
                 children: [
-                    (0, r.jsx)("div", { className: g.divider }),
-                    (0, r.jsx)(i.X6q, {
+                    (0, a.jsx)("div", { className: f.divider }),
+                    (0, a.jsx)(i.X6q, {
                         variant: "heading-lg/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: h.intl.string(h.t["mD+J/i"]),
                     }),
-                    (0, r.jsx)(u.Z, {
+                    (0, a.jsx)(u.Z, {
                         application: t,
                         view: "embedded",
                     }),

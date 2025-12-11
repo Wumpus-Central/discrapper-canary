@@ -27,21 +27,21 @@ var r = n(54381),
     N = n(592125),
     P = n(906467),
     R = n(430824),
-    D = n(496675),
-    w = n(699516),
+    w = n(496675),
+    D = n(699516),
     x = n(944486),
     L = n(594174),
     j = n(626135),
     M = n(22665),
     k = n(981631),
     U = n(959517),
-    G = n(953278);
+    G = n(239276);
 function Z(e) {
     let { message: t, snapshot: n, index: u } = e,
         f = i.useMemo(() => new d.r(t, n, u), [t, n, u]),
         _ = (0, o.e7)(
-            [N.Z, L.default, w.Z, D.Z, R.Z, p.Z],
-            () => f.getForwardInfo(N.Z, L.default, w.Z, D.Z, R.Z, p.Z).footerInfo,
+            [N.Z, L.default, D.Z, w.Z, R.Z, p.Z],
+            () => f.getForwardInfo(N.Z, L.default, D.Z, w.Z, R.Z, p.Z).footerInfo,
             [f],
             s.Z,
         ),
@@ -91,12 +91,12 @@ function Z(e) {
                   }),
                   (0, r.jsx)(c.Fbu, {
                       size: "xxs",
-                      color: l.Z.colors.TEXT_LOW_CONTRAST,
+                      color: l.Z.colors.TEXT_MUTED,
                   }),
               ],
           });
 }
-function B(e, t) {
+function F(e, t) {
     let { popouts: n, setPopout: r } = (0, O.Z)(e.id, U.d$),
         { usernameProfile: a, avatarProfile: o } = n,
         s = (0, y.XO)(e, t, a, r);
@@ -116,7 +116,7 @@ function B(e, t) {
         showAvatarPopout: o,
     };
 }
-function F(e) {
+function B(e) {
     let { mergedMessageRecord: t, content: n, channel: i, reportingUserId: a, reportedTimestamp: o } = e,
         s = (0, m.JZ)(t.author, i),
         {
@@ -125,7 +125,7 @@ function F(e) {
             onPopoutRequestClose: u,
             showUsernamePopout: d,
             showAvatarPopout: f,
-        } = B(t, i);
+        } = F(t, i);
     return (0, r.jsx)(h.Z, {
         childrenExecutedCommand: (0, r.jsx)(M.Z, {
             reportingUserId: a,
@@ -210,7 +210,7 @@ function V(e) {
                   children: (0, r.jsxs)("div", {
                       className: G.content,
                       children: [
-                          (0, r.jsx)(F, {
+                          (0, r.jsx)(B, {
                               mergedMessageRecord: m,
                               content: O,
                               channel: A,

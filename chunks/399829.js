@@ -9,22 +9,22 @@ var r = n(54381),
     d = n(28664),
     u = n(477690),
     g = n(481060),
-    m = n(179360),
-    p = n(129861),
-    f = n(999382),
-    h = n(905128),
-    b = n(151494),
+    f = n(179360),
+    m = n(129861),
+    b = n(999382),
+    p = n(905128),
+    h = n(151494),
     x = n(733683),
     j = n(237583),
-    _ = n(899667),
-    v = n(271383),
-    O = n(430824),
-    C = n(594174),
-    y = n(267642),
-    N = n(624138),
-    E = n(981631),
-    I = n(388032),
-    S = n(744834);
+    v = n(899667),
+    O = n(271383),
+    C = n(430824),
+    y = n(594174),
+    N = n(267642),
+    E = n(624138),
+    I = n(981631),
+    S = n(388032),
+    _ = n(391847);
 function T(e, t, n) {
     return (
         t in e
@@ -38,12 +38,12 @@ function T(e, t, n) {
         e
     );
 }
-let P = (0, N.Mg)(u.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+let P = (0, E.Mg)(u.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
 class w extends i.Component {
     componentDidMount() {
         this.measure();
         let { guildId: e } = this.props;
-        null != e && (0, m.C0)(e), window.addEventListener("resize", this.measure);
+        null != e && (0, f.C0)(e), window.addEventListener("resize", this.measure);
     }
     componentWillUnmount() {
         window.removeEventListener("resize", this.measure);
@@ -63,15 +63,15 @@ class w extends i.Component {
             s = e.map((e) => {
                 var n;
                 return {
-                    numRequired: E.oCV[e.tier],
-                    name: (0, y.nW)(e.tier),
+                    numRequired: I.oCV[e.tier],
+                    name: (0, N.nW)(e.tier),
                     y: null != (n = t[e.tier]) ? n : 0,
                     key: e.tier,
                 };
             });
         return (0, r.jsx)(x.Z, {
             currentTier: l,
-            className: i > 0 ? S.progressWithSubscriptions : S.progress,
+            className: i > 0 ? _.progressWithSubscriptions : _.progress,
             progress: i,
             tiers: [a, ...s],
             initialAnimationDelay: 500,
@@ -80,19 +80,19 @@ class w extends i.Component {
     }
     renderTierNone() {
         return (0, r.jsxs)("div", {
-            className: S.tierDefaultUnlocked,
+            className: _.tierDefaultUnlocked,
             ref: this.defaultTierRef,
             children: [
                 (0, r.jsx)(g.Text, {
                     variant: "text-md/medium",
-                    color: "header-primary",
-                    children: I.intl.string(I.t["76OoX8"]),
+                    color: "text-strong",
+                    children: S.intl.string(S.t["76OoX8"]),
                 }),
                 (0, r.jsx)(g.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    className: S.tierDefaultUnlockedDescription,
-                    children: I.intl.string(I.t.DaYNQQ),
+                    className: _.tierDefaultUnlockedDescription,
+                    children: S.intl.string(S.t.DaYNQQ),
                 }),
             ],
         });
@@ -101,7 +101,7 @@ class w extends i.Component {
         let { subscribers: e, uniqueSubscriberCount: t, guildId: n } = this.props;
         return (0, r.jsxs)("div", {
             ref: this.defaultTierRef,
-            className: S.subscribers,
+            className: _.subscribers,
             children: [
                 (0, r.jsx)(j.Z, {
                     guildId: null != n ? n : void 0,
@@ -111,8 +111,8 @@ class w extends i.Component {
                     max: 5,
                 }),
                 (0, r.jsx)("div", {
-                    className: S.subscriberCount,
-                    children: I.intl.format(I.t["0r7snZ"], { count: t }),
+                    className: _.subscriberCount,
+                    children: S.intl.format(S.t["0r7snZ"], { count: t }),
                 }),
             ],
         });
@@ -125,11 +125,11 @@ class w extends i.Component {
               ? null
               : (0, r.jsx)("div", {
                     children: (0, r.jsxs)("div", {
-                        className: S.content,
+                        className: _.content,
                         children: [
                             this.renderProgressBar(l),
                             (0, r.jsxs)("div", {
-                                className: S.tiers,
+                                className: _.tiers,
                                 children: [
                                     0 === i ? this.renderTierNone() : this.renderSubscribers(),
                                     l.map((r, i, l) =>
@@ -138,7 +138,7 @@ class w extends i.Component {
                                             tiers: l,
                                             tierIndex: i,
                                             onSetRef: this.setTierRef,
-                                            isAnimatedTo: E.oCV[this.state.animatedTier] >= E.oCV[r.tier],
+                                            isAnimatedTo: I.oCV[this.state.animatedTier] >= I.oCV[r.tier],
                                             subscriptionCount: n,
                                             guildId: e,
                                         }),
@@ -156,7 +156,7 @@ class w extends i.Component {
             T(this, "subscribersPopoutTargetRef", i.createRef()),
             T(this, "state", {
                 tierPositions: null,
-                animatedTier: E.Eu4.NONE,
+                animatedTier: I.Eu4.NONE,
             }),
             T(this, "measure", () => {
                 let { uniqueSubscriberCount: e } = this.props,
@@ -185,7 +185,7 @@ class w extends i.Component {
                     : (0, r.jsx)(
                           d.u,
                           {
-                              __unsupportedReactNodeAsText: (0, r.jsx)(p.Z, {
+                              __unsupportedReactNodeAsText: (0, r.jsx)(m.Z, {
                                   user: e.user,
                                   nick: e.nick,
                               }),
@@ -194,7 +194,7 @@ class w extends i.Component {
                                   tabIndex: -1,
                                   "aria-label": e.user.username,
                                   src: null != e ? e.user.getAvatarURL(this.props.guildId, 32) : null,
-                                  className: a()(S.avatar, t, null != t ? S.subscriberMask : null),
+                                  className: a()(_.avatar, t, null != t ? _.subscriberMask : null),
                                   size: g.EFr.SIZE_32,
                               }),
                           },
@@ -203,22 +203,22 @@ class w extends i.Component {
             }),
             T(this, "renderSubscribersPopout", () =>
                 (0, r.jsx)(g.Ttm, {
-                    className: S.subscribersPopout,
+                    className: _.subscribersPopout,
                     children: this.props.subscribers.map((e) =>
                         (0, r.jsxs)(
                             "div",
                             {
-                                className: S.subscribersPopoutUser,
+                                className: _.subscribersPopoutUser,
                                 children: [
                                     (0, r.jsx)(g.qEK, {
                                         src: e.user.getAvatarURL(this.props.guildId, 32),
                                         "aria-label": e.user.username,
                                         size: g.EFr.SIZE_32,
-                                        className: S.avatar,
+                                        className: _.avatar,
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: S.subscribersPopoutUsername,
-                                        children: (0, r.jsx)(p.Z, {
+                                        className: _.subscribersPopoutUsername,
+                                        children: (0, r.jsx)(m.Z, {
                                             user: e.user,
                                             nick: e.nick,
                                         }),
@@ -274,7 +274,7 @@ class w extends i.Component {
                                                 });
                                         }
                                         return e;
-                                    })({ className: S.moreSubscribers }, t),
+                                    })({ className: _.moreSubscribers }, t),
                                     {
                                         ref: this.subscribersPopoutTargetRef,
                                         children: e,
@@ -287,17 +287,17 @@ class w extends i.Component {
             );
     }
 }
-let Z = c.ZP.connectStores([O.Z, h.Z, f.Z, _.Z, C.default, v.ZP], () => {
+let Z = c.ZP.connectStores([C.Z, p.Z, b.Z, v.Z, y.default, O.ZP], () => {
     var e, t;
-    let n = f.Z.getGuildId(),
-        r = null != (t = null == (e = O.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : E.Eu4.NONE,
-        i = (0, b.I)(n),
-        l = null != n ? _.Z.getAppliedGuildBoostsForGuild(n) : null,
+    let n = b.Z.getGuildId(),
+        r = null != (t = null == (e = C.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : I.Eu4.NONE,
+        i = (0, h.I)(n),
+        l = null != n ? v.Z.getAppliedGuildBoostsForGuild(n) : null,
         a = o()(null != l ? l : []).uniqBy((e) => e.userId),
         s = a
             .map((e) => ({
-                user: C.default.getUser(e.userId),
-                nick: v.ZP.getNick(n, e.userId),
+                user: y.default.getUser(e.userId),
+                nick: O.ZP.getNick(n, e.userId),
             }))
             .filter((e) => null != e.user)
             .value();

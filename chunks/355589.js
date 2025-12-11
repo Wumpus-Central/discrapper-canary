@@ -1,33 +1,33 @@
 n.d(t, { Z: () => ee }), n(539854), n(388685), n(953529);
-var r = n(54381),
-    i = n(473749),
-    l = n(120356),
-    a = n.n(l),
+var a = n(54381),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
     s = n(913527),
     o = n.n(s),
     c = n(467721),
     d = n(55160),
     u = n(149765),
     m = n(442837),
-    h = n(692547),
-    g = n(481060),
-    f = n(787014),
+    f = n(692547),
+    h = n(481060),
+    g = n(787014),
     x = n(412899),
-    p = n(493773),
-    b = n(447003),
+    b = n(493773),
+    p = n(447003),
     j = n(621516),
     v = n(982168),
-    _ = n(386923),
-    C = n(474366),
-    y = n(345162),
-    T = n(485386),
-    w = n(430824),
-    S = n(186523),
-    N = n(585483),
-    O = n(70956),
-    P = n(709054),
-    I = n(961675),
-    E = n(883429),
+    C = n(386923),
+    y = n(474366),
+    T = n(345162),
+    w = n(485386),
+    S = n(430824),
+    N = n(186523),
+    O = n(585483),
+    P = n(70956),
+    I = n(709054),
+    E = n(961675),
+    _ = n(883429),
     R = n(993259),
     M = n(109434),
     Z = n(456269),
@@ -38,7 +38,7 @@ var r = n(54381),
     D = n(710352),
     H = n(981631),
     z = n(388032),
-    B = n(951718);
+    B = n(111101);
 function U(e, t, n) {
     return (
         t in e
@@ -55,14 +55,14 @@ function U(e, t, n) {
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            a = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (a = a.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
+            a.forEach(function (t) {
                 U(e, t, n[t]);
             });
     }
@@ -76,8 +76,8 @@ function V(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -114,11 +114,11 @@ class X {
 }
 let Y = (e) => {
         let { guild: t, roles: n } = e;
-        return (0, r.jsx)("div", {
+        return (0, a.jsx)("div", {
             className: B.rolesList,
             "aria-label": z.intl.formatToPlainString(z.t.PCs0oo, { numRoles: n.length }),
             children: n.map((e) =>
-                (0, r.jsx)(
+                (0, a.jsx)(
                     x.UB,
                     {
                         role: e,
@@ -140,11 +140,11 @@ let Y = (e) => {
     },
     Q = (e) => {
         let { handleHide: t } = e;
-        return (0, r.jsx)(g.P3F, {
+        return (0, a.jsx)(h.P3F, {
             onClick: t,
             className: B.closeButton,
             "aria-label": z.intl.string(z.t.WAI6xu),
-            children: (0, r.jsx)(g.Dio, {
+            children: (0, a.jsx)(h.Dio, {
                 size: "md",
                 color: "currentColor",
                 className: B.closeIcon,
@@ -153,17 +153,17 @@ let Y = (e) => {
     },
     $ = (e) => {
         let { expanded: t, onClick: n } = e;
-        return (0, r.jsx)(g.P3F, {
+        return (0, a.jsx)(h.P3F, {
             onClick: n,
             className: B.closeButton,
             "aria-label": t ? z.intl.string(z.t.iTcuma) : z.intl.string(z.t.dcl9MQ),
             children: t
-                ? (0, r.jsx)(g.dOc, {
+                ? (0, a.jsx)(h.dOc, {
                       size: "xs",
                       color: "currentColor",
                       className: B.closeIcon,
                   })
-                : (0, r.jsx)(g.bJT, {
+                : (0, a.jsx)(h.bJT, {
                       size: "xs",
                       color: "currentColor",
                       className: B.closeIcon,
@@ -172,18 +172,18 @@ let Y = (e) => {
     },
     ee = (e) => {
         let t,
-            { hasAnyThread: l, hasActiveThreads: s, channel: x } = e,
+            { hasAnyThread: i, hasActiveThreads: s, channel: x } = e,
             { onboardingExpanded: U } = (0, F.xH)((e) => {
                 let { onboardingExpanded: t } = e;
                 return { onboardingExpanded: t };
             }, d.X),
             { tagFilter: ee } = (0, M.H)(x.id),
-            et = (0, m.e7)([w.Z], () => w.Z.getGuild(x.getGuildId())),
+            et = (0, m.e7)([S.Z], () => S.Z.getGuild(x.getGuildId())),
             en = (0, Z.r_)(x),
-            { transitions: er, setVisible: ei } = (() => {
-                let [e, t] = i.useState(!0);
+            { transitions: ea, setVisible: er } = (() => {
+                let [e, t] = r.useState(!0);
                 return {
-                    transitions: (0, g.Yzy)(e, {
+                    transitions: (0, h.Yzy)(e, {
                         keys: (e) => (e ? "shown" : "hidden"),
                         config: J,
                         from: { opacity: 0 },
@@ -194,32 +194,32 @@ let Y = (e) => {
                     setVisible: t,
                 };
             })(),
-            el = (0, g.Yzy)(U, {
+            ei = (0, h.Yzy)(U, {
                 from: { maxHeight: 0 },
                 enter: { maxHeight: 500 },
                 leave: { maxHeight: 0 },
                 config: { duration: 200 },
             }),
-            ea = i.useCallback((e) => {
+            el = r.useCallback((e) => {
                 var t;
                 null == (t = e.clickHandler) || t.call(e);
             }, []),
-            es = ((t = x.id), i.useCallback(() => (ei(!1), E.Z.hideAdminOnboarding(t, !0)), [t, ei])),
+            es = ((t = x.id), r.useCallback(() => (er(!1), _.Z.hideAdminOnboarding(t, !0)), [t, er])),
             {
                 onboardingSteps: eo,
                 isDismissed: ec,
                 isHidden: ed,
                 isAllDone: eu,
             } = ((e) => {
-                let { guild: t, channel: l, hasAnyThread: a, handleHide: s } = e,
-                    [c, d] = i.useState(!1),
-                    h = (0, A.c)(l.id),
-                    x = (0, m.e7)([I.Z], () => I.Z.hasHidden(l.id)),
-                    p = (function (e, t, l, a) {
+                let { guild: t, channel: i, hasAnyThread: l, handleHide: s } = e,
+                    [c, d] = r.useState(!1),
+                    f = (0, A.c)(i.id),
+                    x = (0, m.e7)([E.Z], () => E.Z.hasHidden(i.id)),
+                    b = (function (e, t, i, l) {
                         let s = null == e ? void 0 : e.id,
-                            o = (0, m.e7)([T.Z], () => (null != s ? T.Z.getSortedRoles(s) : void 0));
-                        return i.useMemo(() => {
-                            let i,
+                            o = (0, m.e7)([w.Z], () => (null != s ? w.Z.getSortedRoles(s) : void 0));
+                        return r.useMemo(() => {
+                            let r,
                                 s = new X(),
                                 c = (null == t ? void 0 : t.isMediaChannel()) === !0;
                             return (
@@ -228,47 +228,47 @@ let Y = (e) => {
                                     c ||
                                     null == o ||
                                     s.addStep(
-                                        (function (e, t, i, l) {
-                                            let a = (0, b.Z)(i)
+                                        (function (e, t, r, i) {
+                                            let l = (0, p.Z)(r)
                                                     ? u.$e(H.Plq.VIEW_CHANNEL, H.Plq.SEND_MESSAGES)
                                                     : H.Plq.SEND_MESSAGES,
                                                 s =
                                                     null != e
-                                                        ? (0, R.E)(t, i, a).filter(
+                                                        ? (0, R.E)(t, r, l).filter(
                                                               (e) =>
-                                                                  i.permissionOverwrites.hasOwnProperty(e.id) ||
-                                                                  (0, y.fI)(e),
+                                                                  r.permissionOverwrites.hasOwnProperty(e.id) ||
+                                                                  (0, T.fI)(e),
                                                           )
                                                         : [],
                                                 o = s.length > 0,
-                                                c = s.some((e) => (0, y.fI)(e));
+                                                c = s.some((e) => (0, T.fI)(e));
                                             return {
                                                 name: z.intl.string(z.t["/Ax2gs"]),
                                                 description: z.intl.string(z.t.gAIOfg),
                                                 isDone: o && c,
                                                 shouldWarn: o && !c,
                                                 children: o
-                                                    ? (0, r.jsx)(Y, {
+                                                    ? (0, a.jsx)(Y, {
                                                           guild: e,
                                                           roles: s,
                                                       })
                                                     : null,
                                                 clickHandler: () => {
                                                     K(D.ZI.PERMISSIONS),
-                                                        (0, g.ZDy)(
+                                                        (0, h.ZDy)(
                                                             async () => {
                                                                 let { default: t } = await n
                                                                     .e("78704")
                                                                     .then(n.bind(n, 560602));
                                                                 return (
-                                                                    l(!0),
+                                                                    i(!0),
                                                                     (n) =>
-                                                                        (0, r.jsx)(
+                                                                        (0, a.jsx)(
                                                                             t,
                                                                             V(G({}, n), {
-                                                                                channel: i,
+                                                                                channel: r,
                                                                                 guild: e,
-                                                                                permission: a,
+                                                                                permission: l,
                                                                                 currentSelectedRoles: s,
                                                                             }),
                                                                         )
@@ -277,12 +277,12 @@ let Y = (e) => {
                                                             {
                                                                 modalKey: "SEND_MESSAGE_ROLE_PERMISSION_FIX_MODAL_KEY",
                                                                 onCloseRequest: H.VqG,
-                                                                onCloseCallback: () => l(!1),
+                                                                onCloseCallback: () => i(!1),
                                                             },
                                                         );
                                                 },
                                             };
-                                        })(e, o, t, a),
+                                        })(e, o, t, l),
                                     ),
                                 c ||
                                     s.addStep(
@@ -292,7 +292,7 @@ let Y = (e) => {
                                                 name: z.intl.string(z.t.UgJu1e),
                                                 description: z.intl.string(z.t["3C6/G1"]),
                                                 clickHandler: () => {
-                                                    K(D.ZI.GUIDELINES), f.ZP.open(e.id, void 0, H.ZfP.TOPIC);
+                                                    K(D.ZI.GUIDELINES), g.ZP.open(e.id, void 0, H.ZfP.TOPIC);
                                                 },
                                                 isDone: t,
                                             };
@@ -306,11 +306,11 @@ let Y = (e) => {
                                             description: z.intl.string(z.t.wCv4Oz),
                                             clickHandler: () => {
                                                 K(D.ZI.TAGS),
-                                                    f.ZP.open(e.id),
-                                                    (0, g.ZDy)(async () => {
+                                                    g.ZP.open(e.id),
+                                                    (0, h.ZDy)(async () => {
                                                         let { default: t } = await n.e("21971").then(n.bind(n, 201049));
                                                         return (n) =>
-                                                            (0, r.jsx)(
+                                                            (0, a.jsx)(
                                                                 t,
                                                                 V(G({}, n), {
                                                                     channelId: e.id,
@@ -331,9 +331,9 @@ let Y = (e) => {
                                             description: z.intl.string(z.t["+50LJg"]),
                                             clickHandler: () => {
                                                 K(D.ZI.DEFAULT_REACTION),
-                                                    (0, g.ZDy)(async () => {
+                                                    (0, h.ZDy)(async () => {
                                                         let { default: t } = await n.e("80404").then(n.bind(n, 158586));
-                                                        return (n) => (0, r.jsx)(t, V(G({}, n), { channel: e }));
+                                                        return (n) => (0, a.jsx)(t, V(G({}, n), { channel: e }));
                                                     });
                                             },
                                             isDone: t,
@@ -341,85 +341,85 @@ let Y = (e) => {
                                     })(t),
                                 ),
                                 s.addStep(
-                                    ((i = null == e ? void 0 : e.id),
+                                    ((r = null == e ? void 0 : e.id),
                                     {
                                         name: z.intl.string(z.t["6A0O64"]),
                                         description: c
                                             ? z.intl.string(z.t["8hI5vr"])
                                             : z.intl.format(z.t.ysxcAw, {
                                                   onClick: (e) => {
-                                                      null != i &&
+                                                      null != r &&
                                                           (e.preventDefault(),
                                                           e.stopPropagation(),
                                                           (0, k.qz)(),
-                                                          (0, g.ZDy)(async () => {
+                                                          (0, h.ZDy)(async () => {
                                                               let { default: e } = await n
                                                                   .e("18417")
                                                                   .then(n.bind(n, 740696));
-                                                              return (t) => (0, r.jsx)(e, V(G({}, t), { guildId: i }));
+                                                              return (t) => (0, a.jsx)(e, V(G({}, t), { guildId: r }));
                                                           }));
                                                   },
                                               }),
                                         clickHandler: () => {
-                                            K(D.ZI.CREATE_POST), N.S.dispatch(H.CkL.FOCUS_COMPOSER_TITLE);
+                                            K(D.ZI.CREATE_POST), O.S.dispatch(H.CkL.FOCUS_COMPOSER_TITLE);
                                         },
-                                        isDone: l,
+                                        isDone: i,
                                     }),
                                 ),
                                 s
                             );
-                        }, [t, e, o, l, a]);
-                    })(t, l, a, d),
-                    j = p.isAllDone(),
+                        }, [t, e, o, i, l]);
+                    })(t, i, l, d),
+                    j = b.isAllDone(),
                     v =
-                        h ||
+                        f ||
                         x ||
                         !((e) => {
-                            let t = P.default.extractTimestamp(e);
+                            let t = I.default.extractTimestamp(e);
                             return o()().isBefore(o()(t).add(o().duration(15, "days")));
-                        })(l.id),
-                    _ = i.useRef(0);
+                        })(i.id),
+                    C = r.useRef(0);
                 return (
-                    i.useEffect(
+                    r.useEffect(
                         () => (
                             c || !j || v
-                                ? clearTimeout(_.current)
-                                : (_.current = setTimeout(() => {
+                                ? clearTimeout(C.current)
+                                : (C.current = setTimeout(() => {
                                       s();
-                                  }, 60 * O.Z.Millis.SECOND)),
-                            () => clearTimeout(_.current)
+                                  }, 60 * P.Z.Millis.SECOND)),
+                            () => clearTimeout(C.current)
                         ),
                         [j, v, s, c],
                     ),
                     {
-                        onboardingSteps: p,
+                        onboardingSteps: b,
                         isHidden: x,
-                        isDismissed: h,
+                        isDismissed: f,
                         isAllDone: j,
                     }
                 );
             })({
                 guild: et,
                 channel: x,
-                hasAnyThread: l,
+                hasAnyThread: i,
                 handleHide: es,
             }),
             em = !ed && !ec,
-            eh = (0, F.AF)(),
-            eg = x.isMediaChannel(),
-            ef = (e) => eh.getState().setOnboardingExpanded(e);
-        return ((0, p.ZP)(() => {
+            ef = (0, F.AF)(),
+            eh = x.isMediaChannel(),
+            eg = (e) => ef.getState().setOnboardingExpanded(e);
+        return ((0, b.ZP)(() => {
             eu && em && es();
         }),
         ((e) => {
-            let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: l, channel: a } = e,
-                s = (0, m.e7)([T.Z], () => (null != l ? T.Z.partitionVersion(l) : void 0)),
-                o = i.useCallback(() => {
-                    N.S.dispatch(H.CkL.REMEASURE_TARGET);
+            let { isAllDone: t, isVisible: n, canManageChannel: a, guildId: i, channel: l } = e,
+                s = (0, m.e7)([w.Z], () => (null != i ? w.Z.partitionVersion(i) : void 0)),
+                o = r.useCallback(() => {
+                    O.S.dispatch(H.CkL.REMEASURE_TARGET);
                 }, []);
-            i.useEffect(() => {
+            r.useEffect(() => {
                 o();
-            }, [o, t, n, r, s, a.id, a.permissionOverwrites]);
+            }, [o, t, n, a, s, l.id, l.permissionOverwrites]);
         })({
             isAllDone: eu,
             isVisible: em,
@@ -427,11 +427,11 @@ let Y = (e) => {
             guildId: null == et ? void 0 : et.id,
             channel: x,
         }),
-        i.useEffect(() => {
-            ec || ei(!ed);
-        }, [ec, ei, ed]),
-        (0, p.ZP)(() => {
-            (l && em) || ef(!0);
+        r.useEffect(() => {
+            ec || er(!ed);
+        }, [ec, er, ed]),
+        (0, b.ZP)(() => {
+            (i && em) || eg(!0);
         }),
         null == et)
             ? null
@@ -439,33 +439,33 @@ let Y = (e) => {
               ? s || 0 !== ee.size
                   ? ee.size > 0
                       ? null
-                      : (0, r.jsx)(_.Z, { guild: et })
-                  : (0, r.jsxs)(r.Fragment, {
-                        children: [(0, r.jsx)(_.Z, { guild: et }), (0, r.jsx)(C.q, {})],
+                      : (0, a.jsx)(C.Z, { guild: et })
+                  : (0, a.jsxs)(a.Fragment, {
+                        children: [(0, a.jsx)(C.Z, { guild: et }), (0, a.jsx)(y.q, {})],
                     })
               : em && en
-                ? eg
-                    ? l
+                ? eh
+                    ? i
                         ? null
-                        : (0, r.jsx)(j.Z, { channel: x })
-                    : (0, r.jsx)(r.Fragment, {
-                          children: er((e, t) =>
+                        : (0, a.jsx)(j.Z, { channel: x })
+                    : (0, a.jsx)(a.Fragment, {
+                          children: ea((e, t) =>
                               t
-                                  ? (0, r.jsx)(c.animated.div, {
+                                  ? (0, a.jsx)(c.animated.div, {
                                         style: e,
                                         className: B.container,
-                                        children: (0, r.jsxs)("div", {
+                                        children: (0, a.jsxs)("div", {
                                             className: B.wrapper,
                                             children: [
-                                                (0, r.jsx)("div", {
+                                                (0, a.jsx)("div", {
                                                     className: B.headerRow,
-                                                    children: (0, r.jsxs)(g.y5t, {
-                                                        component: (0, r.jsx)(g.Heading, {
+                                                    children: (0, a.jsxs)(h.y5t, {
+                                                        component: (0, a.jsx)(h.Heading, {
                                                             variant: "heading-md/semibold",
                                                             children: z.intl.string(z.t.LhlgY9),
                                                         }),
                                                         children: [
-                                                            (0, r.jsx)(g.Heading, {
+                                                            (0, a.jsx)(h.Heading, {
                                                                 variant: "heading-md/medium",
                                                                 className: B.header,
                                                                 children: z.intl.format(z.t["9L+8bz"], {
@@ -473,11 +473,11 @@ let Y = (e) => {
                                                                     numSteps: eo.steps.length.toString(),
                                                                 }),
                                                             }),
-                                                            (0, r.jsxs)(g.Text, {
+                                                            (0, a.jsxs)(h.Text, {
                                                                 variant: "text-xs/normal",
                                                                 className: B.visibilityInfo,
                                                                 children: [
-                                                                    (0, r.jsx)(g.d3s, {
+                                                                    (0, a.jsx)(h.d3s, {
                                                                         size: "xxs",
                                                                         color: "currentColor",
                                                                         className: B.icon,
@@ -485,71 +485,71 @@ let Y = (e) => {
                                                                     z.intl.string(z.t.znhX2R),
                                                                 ],
                                                             }),
-                                                            (0, r.jsx)($, {
+                                                            (0, a.jsx)($, {
                                                                 expanded: U,
-                                                                onClick: () => ef(!U),
+                                                                onClick: () => eg(!U),
                                                             }),
-                                                            (0, r.jsx)(Q, { handleHide: es }),
+                                                            (0, a.jsx)(Q, { handleHide: es }),
                                                         ],
                                                     }),
                                                 }),
-                                                el((e, t) =>
+                                                ei((e, t) =>
                                                     t
-                                                        ? (0, r.jsx)(c.animated.div, {
+                                                        ? (0, a.jsx)(c.animated.div, {
                                                               style: e,
                                                               className: B.listContainer,
-                                                              children: (0, r.jsx)("ol", {
+                                                              children: (0, a.jsx)("ol", {
                                                                   className: B.checklist,
                                                                   children: eo.getSteps().map((e) =>
-                                                                      (0, r.jsxs)(
-                                                                          g.P3F,
+                                                                      (0, a.jsxs)(
+                                                                          h.P3F,
                                                                           {
                                                                               tag: "li",
                                                                               "aria-label": e.name,
-                                                                              onClick: () => ea(e),
-                                                                              className: a()(B.stepContainer, {
+                                                                              onClick: () => el(e),
+                                                                              className: l()(B.stepContainer, {
                                                                                   [B.completed]: e.isDone,
                                                                               }),
                                                                               children: [
                                                                                   e.shouldWarn
-                                                                                      ? (0, r.jsx)(g.Mgn, {
+                                                                                      ? (0, a.jsx)(h.Mgn, {
                                                                                             size: "custom",
                                                                                             width: 20,
                                                                                             height: 20,
-                                                                                            color: h.Z.colors
+                                                                                            color: f.Z.colors
                                                                                                 .STATUS_DANGER.css,
                                                                                             className: B.stepStatus,
                                                                                         })
                                                                                       : e.isDone
-                                                                                        ? (0, r.jsx)(g.G2e, {
-                                                                                              color: h.Z.colors
+                                                                                        ? (0, a.jsx)(h.G2e, {
+                                                                                              color: f.Z.colors
                                                                                                   .STATUS_POSITIVE_BACKGROUND
                                                                                                   .css,
-                                                                                              icon: g.dz2,
+                                                                                              icon: h.dz2,
                                                                                               style: q,
                                                                                               className: B.stepStatus,
                                                                                           })
-                                                                                        : (0, r.jsx)(g.G2e, {
+                                                                                        : (0, a.jsx)(h.G2e, {
                                                                                               disableColor: !0,
-                                                                                              icon: (0, g.GSL)(S.Z),
+                                                                                              icon: (0, h.GSL)(N.Z),
                                                                                               style: W,
-                                                                                              className: a()(
+                                                                                              className: l()(
                                                                                                   B.stepStatus,
                                                                                                   B.completed,
                                                                                               ),
                                                                                           }),
-                                                                                  (0, r.jsxs)("div", {
+                                                                                  (0, a.jsxs)("div", {
                                                                                       className: B.step,
                                                                                       children: [
-                                                                                          (0, r.jsx)(g.Text, {
+                                                                                          (0, a.jsx)(h.Text, {
                                                                                               variant: "text-md/medium",
                                                                                               color: e.isDone
                                                                                                   ? "text-default"
-                                                                                                  : "header-primary",
+                                                                                                  : "text-strong",
                                                                                               className: B.stepName,
                                                                                               children: e.name,
                                                                                           }),
-                                                                                          (0, r.jsx)(g.Text, {
+                                                                                          (0, a.jsx)(h.Text, {
                                                                                               variant: "text-sm/normal",
                                                                                               color: "text-default",
                                                                                               className:
@@ -559,7 +559,7 @@ let Y = (e) => {
                                                                                           e.children,
                                                                                       ],
                                                                                   }),
-                                                                                  (0, r.jsx)(g.Fbu, {
+                                                                                  (0, a.jsx)(h.Fbu, {
                                                                                       size: "custom",
                                                                                       color: "currentColor",
                                                                                       width: 12,
@@ -580,9 +580,9 @@ let Y = (e) => {
                                   : null,
                           ),
                       })
-                : l
+                : i
                   ? null
-                  : (0, r.jsx)(L.Z, {
+                  : (0, a.jsx)(L.Z, {
                         channelName: x.name,
                         guildId: x.guild_id,
                         tagFilter: ee,

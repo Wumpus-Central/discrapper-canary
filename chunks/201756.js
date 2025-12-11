@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
@@ -6,8 +6,8 @@ var r = n(54381),
     a = n(498607),
     s = n.n(a),
     c = n(399606),
-    u = n(28664),
-    d = n(481060),
+    d = n(28664),
+    u = n(481060),
     C = n(430824),
     m = n(496675),
     b = n(588215),
@@ -21,9 +21,9 @@ var r = n(54381),
     y = n(42551),
     O = n(981631),
     H = n(388032),
-    _ = n(494409),
-    w = n(490225);
-function S(e) {
+    w = n(452173),
+    S = n(983266);
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function S(e) {
     }
     return e;
 }
-function Z(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -68,39 +68,39 @@ function Z(e, t) {
     }
     return l;
 }
-let D = l.forwardRef(function (e, t) {
+let N = l.forwardRef(function (e, t) {
     var n,
         l,
-        { label: i, onFilter: a, isFiltered: s, isSorted: c, className: u } = e,
-        C = Z(e, ["label", "onFilter", "isFiltered", "isSorted", "className"]);
-    let m = s ? "header-primary" : "text-default";
+        { label: i, onFilter: a, isFiltered: s, isSorted: c, className: d } = e,
+        C = D(e, ["label", "onFilter", "isFiltered", "isSorted", "className"]);
+    let m = s ? "text-strong" : "text-default";
     return (
         c && (m = "text-brand"),
         (0, r.jsx)("th", {
-            className: o()(_.tableHeaderCellContainer, u),
+            className: o()(w.tableHeaderCellContainer, d),
             children: (0, r.jsxs)(
-                d.P3F,
-                ((n = S({}, C)),
+                u.P3F,
+                ((n = Z({}, C)),
                 (l = l =
                     {
                         innerRef: t,
                         onClick: a,
-                        className: o()(_.tableHeaderCell, { [_.tableHeaderCellWithFilter]: null != a }),
+                        className: o()(w.tableHeaderCell, { [w.tableHeaderCellWithFilter]: null != a }),
                         children: [
-                            (0, r.jsx)(d.Text, {
+                            (0, r.jsx)(u.Text, {
                                 variant: "eyebrow",
                                 color: m,
                                 children: i,
                             }),
                             null != a &&
                                 (0, r.jsx)("div", {
-                                    className: _.filterIconButton,
-                                    children: (0, r.jsx)(d.gXV, {
+                                    className: w.filterIconButton,
+                                    children: (0, r.jsx)(u.gXV, {
                                         size: "custom",
-                                        className: _.filterIcon,
+                                        className: w.filterIcon,
                                         color: s
-                                            ? d.TVs.colors.CONTROL_BRAND_FOREGROUND.css
-                                            : d.TVs.colors.TEXT_MUTED.css,
+                                            ? u.TVs.colors.CONTROL_BRAND_FOREGROUND.css
+                                            : u.TVs.colors.TEXT_MUTED.css,
                                         width: 16,
                                         height: 16,
                                     }),
@@ -124,11 +124,11 @@ let D = l.forwardRef(function (e, t) {
         })
     );
 });
-function N(e) {
+function _(e) {
     let { guildId: t, currentPagedMembers: n } = e,
         i = l.useRef(null),
         a = l.useRef(null),
-        N = l.useRef(null),
+        _ = l.useRef(null),
         R = l.useRef(null),
         L = l.useRef(null),
         I = (0, c.e7)([p.Z], () => p.Z.getSearchStateByGuildId(t), [t], s()),
@@ -156,31 +156,31 @@ function N(e) {
         }, [W, K, E, M, Q]);
     return (0, r.jsx)("thead", {
         children: (0, r.jsxs)("tr", {
-            className: _.tableHeaderRow,
+            className: w.tableHeaderRow,
             children: [
                 Y &&
                     (0, r.jsx)("th", {
-                        className: o()(_.tableHeaderCellContainer, w.xsmallCol),
-                        children: (0, r.jsx)(u.u, {
+                        className: o()(w.tableHeaderCellContainer, S.xsmallCol),
+                        children: (0, r.jsx)(d.u, {
                             shouldShow: !W,
                             text: H.intl.string(H.t.tJEY0G),
-                            children: (0, r.jsx)(d.P3F, {
+                            children: (0, r.jsx)(u.P3F, {
                                 onClick: J,
-                                className: _.tableHeaderCell,
-                                children: (0, r.jsx)(d.FZ5, {
+                                className: w.tableHeaderCell,
+                                children: (0, r.jsx)(u.FZ5, {
                                     checked: K,
                                     disabled: !W,
                                 }),
                             }),
                         }),
                     }),
-                (0, r.jsx)(D, { label: H.intl.string(H.t.Es7n9c) }),
+                (0, r.jsx)(N, { label: H.intl.string(H.t.Es7n9c) }),
                 P
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(d.yRy, {
+                              (0, r.jsx)(u.yRy, {
                                   targetElementRef: i,
-                                  animation: d.yRy.Animation.FADE,
+                                  animation: u.yRy.Animation.FADE,
                                   position: "bottom",
                                   spacing: 4,
                                   align: "left",
@@ -191,26 +191,26 @@ function N(e) {
                                       }),
                                   children: (e) => {
                                       var { onClick: t } = e,
-                                          n = Z(e, ["onClick"]);
+                                          n = D(e, ["onClick"]);
                                       return (0, r.jsx)(
-                                          D,
-                                          S(
+                                          N,
+                                          Z(
                                               {
                                                   ref: i,
                                                   label: H.intl.string(H.t.xcKP1P),
                                                   onFilter: t,
                                                   isFiltered: A,
                                                   isSorted: U,
-                                                  className: w.smallCol,
+                                                  className: S.smallCol,
                                               },
                                               n,
                                           ),
                                       );
                                   },
                               }),
-                              (0, r.jsx)(d.yRy, {
+                              (0, r.jsx)(u.yRy, {
                                   targetElementRef: a,
-                                  animation: d.yRy.Animation.FADE,
+                                  animation: u.yRy.Animation.FADE,
                                   position: "bottom",
                                   spacing: 4,
                                   align: "left",
@@ -221,17 +221,17 @@ function N(e) {
                                       }),
                                   children: (e) => {
                                       var { onClick: t } = e,
-                                          n = Z(e, ["onClick"]);
+                                          n = D(e, ["onClick"]);
                                       return (0, r.jsx)(
-                                          D,
-                                          S(
+                                          N,
+                                          Z(
                                               {
                                                   ref: a,
                                                   label: H.intl.string(H.t.sPph4O),
                                                   onFilter: t,
                                                   isFiltered: F,
                                                   isSorted: B,
-                                                  className: w.smallCol,
+                                                  className: S.smallCol,
                                               },
                                               n,
                                           ),
@@ -242,20 +242,20 @@ function N(e) {
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(D, {
+                              (0, r.jsx)(N, {
                                   label: H.intl.string(H.t.xcKP1P),
-                                  className: w.smallCol,
+                                  className: S.smallCol,
                               }),
-                              (0, r.jsx)(D, {
+                              (0, r.jsx)(N, {
                                   label: H.intl.string(H.t.sPph4O),
-                                  className: w.smallCol,
+                                  className: S.smallCol,
                               }),
                           ],
                       }),
                 P
-                    ? (0, r.jsx)(d.yRy, {
-                          targetElementRef: N,
-                          animation: d.yRy.Animation.FADE,
+                    ? (0, r.jsx)(u.yRy, {
+                          targetElementRef: _,
+                          animation: u.yRy.Animation.FADE,
                           position: "bottom",
                           spacing: 4,
                           align: "left",
@@ -266,16 +266,16 @@ function N(e) {
                               }),
                           children: (e) => {
                               var { onClick: t } = e,
-                                  n = Z(e, ["onClick"]);
+                                  n = D(e, ["onClick"]);
                               return (0, r.jsx)(
-                                  D,
-                                  S(
+                                  N,
+                                  Z(
                                       {
-                                          ref: N,
+                                          ref: _,
                                           label: H.intl.string(H.t["yn0w1+"]),
                                           onFilter: t,
                                           isFiltered: z,
-                                          className: w.smallCol,
+                                          className: S.smallCol,
                                       },
                                       n,
                                   ),
@@ -283,43 +283,43 @@ function N(e) {
                           },
                       })
                     : P &&
-                      (0, r.jsx)(D, {
+                      (0, r.jsx)(N, {
                           label: H.intl.string(H.t["yn0w1+"]),
-                          className: w.smallCol,
+                          className: S.smallCol,
                       }),
-                (0, r.jsx)(d.yRy, {
+                (0, r.jsx)(u.yRy, {
                     targetElementRef: R,
-                    animation: d.yRy.Animation.FADE,
+                    animation: u.yRy.Animation.FADE,
                     position: "bottom",
                     spacing: 4,
                     align: "left",
                     renderPopout: () => (0, r.jsx)(y.Z, { guildId: t }),
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = Z(e, ["onClick"]);
+                            n = D(e, ["onClick"]);
                         return (0, r.jsx)(
-                            D,
-                            S(
+                            N,
+                            Z(
                                 {
                                     ref: R,
                                     label: H.intl.string(H.t["2SZsWX"]),
                                     onFilter: t,
                                     isFiltered: k,
-                                    className: w.mediumCol,
+                                    className: S.mediumCol,
                                 },
                                 n,
                             ),
                         );
                     },
                 }),
-                (0, r.jsx)(u.u, {
+                (0, r.jsx)(d.u, {
                     text: H.intl.string(H.t["2cRO3R"]),
                     position: "top",
                     align: "left",
                     shouldShow: !0,
-                    children: (0, r.jsx)(d.yRy, {
+                    children: (0, r.jsx)(u.yRy, {
                         targetElementRef: L,
-                        animation: d.yRy.Animation.FADE,
+                        animation: u.yRy.Animation.FADE,
                         position: "bottom",
                         spacing: 4,
                         align: "left",
@@ -331,7 +331,7 @@ function N(e) {
                             });
                         },
                         children: (e) =>
-                            (0, r.jsx)(D, {
+                            (0, r.jsx)(N, {
                                 ref: L,
                                 label: H.intl.string(H.t["7V3759"]),
                                 "aria-label": H.intl.string(H.t["2cRO3R"]),
@@ -340,7 +340,7 @@ function N(e) {
                                     null == (n = e.onClick) || n.call(e, t);
                                 },
                                 isFiltered: T,
-                                className: w.smallCol,
+                                className: S.smallCol,
                                 onMouseEnter: () => {
                                     var t;
                                     null == (t = e.onMouseEnter) || t.call(e);
@@ -352,9 +352,9 @@ function N(e) {
                             }),
                     }),
                 }),
-                (0, r.jsx)(D, {
+                (0, r.jsx)(N, {
                     label: H.intl.string(H.t["5Q9xGr"]),
-                    className: w.smallCol,
+                    className: S.smallCol,
                 }),
             ],
         }),

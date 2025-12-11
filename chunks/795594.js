@@ -47,8 +47,8 @@ var r = n(54381),
     U = n(9156),
     G = n(768581),
     Z = n(49012),
-    B = n(621600),
-    F = n(709054),
+    F = n(621600),
+    B = n(709054),
     V = n(706454),
     H = n(210887),
     Y = n(313789),
@@ -380,7 +380,7 @@ let ef = (e) => {
                                         children: [
                                             (0, r.jsx)(E.Heading, {
                                                 variant: "heading-sm/medium",
-                                                color: "header-primary",
+                                                color: "text-strong",
                                                 children: en.intl.string(en.t.xrmhRX),
                                             }),
                                             Q
@@ -443,7 +443,7 @@ let ef = (e) => {
                                   children: [
                                       (0, r.jsx)(E.Heading, {
                                           variant: "heading-sm/medium",
-                                          color: "header-primary",
+                                          color: "text-strong",
                                           children: en.intl.string(en.t.fcYgiY),
                                       }),
                                       V
@@ -477,7 +477,7 @@ let ef = (e) => {
                                   }),
                               })
                             : null,
-                    n = new Date(F.default.extractTimestamp(h)).toLocaleDateString(_);
+                    n = new Date(B.default.extractTimestamp(h)).toLocaleDateString(_);
                 return (0, r.jsxs)("div", {
                     className: er.headerV2,
                     children: [
@@ -520,7 +520,7 @@ let ef = (e) => {
                     T.ZP.trackWithMetadata(ee.rMx.NOTIFICATION_SETTINGS_UPDATED, {
                         update_type: et.I.AUTHORIZED_APP_DM_PUSH_NOTIFICATION,
                         application_id: a.id,
-                        label: e ? B.ZB.Unmuted : B.ZB.Muted,
+                        label: e ? F.ZB.Unmuted : F.ZB.Muted,
                     });
             },
             eh = i.useCallback(async () => {
@@ -528,7 +528,7 @@ let ef = (e) => {
                 let e = M;
                 null == e && (e = await y.Z.ensurePrivateChannel(L.id)),
                     Z
-                        ? O.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, B.ZB.Unmuted)
+                        ? O.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, F.ZB.Unmuted)
                         : (0, E.ZDy)(async () => {
                               let { default: t } = await n.e("8246").then(n.bind(n, 540679));
                               return (n) =>
@@ -551,7 +551,7 @@ let ef = (e) => {
                           children: [
                               (0, r.jsx)(E.Heading, {
                                   variant: "heading-sm/medium",
-                                  color: "header-primary",
+                                  color: "text-strong",
                                   className: er.dmSettingsHeader,
                                   children: en.intl.string(en.t.NaZyYC),
                               }),

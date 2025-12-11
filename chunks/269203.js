@@ -10,30 +10,30 @@ var r = n(442837),
     u = n(594174),
     d = n(967128),
     p = n(388032),
-    h = n(496363);
-function f(e) {
+    f = n(724006);
+function h(e) {
     var t;
     let { joinRequest: n, guild: s } = e,
         c = (0, r.e7)([u.default], () => u.default.getUser(n.userId));
     return (0, i.jsxs)("div", {
-        className: h.summaryContainer,
+        className: f.summaryContainer,
         children: [
             (0, i.jsxs)("div", {
-                className: h.summaryHeader,
+                className: f.summaryHeader,
                 children: [
                     null != s &&
                         (0, i.jsxs)("div", {
-                            className: h.summaryHeaderClanInfo,
+                            className: f.summaryHeaderClanInfo,
                             children: [
                                 (0, i.jsx)(a.Z, {
                                     guild: s,
                                     active: !0,
                                     size: a.Z.Sizes.SMOL,
-                                    className: h.guildIcon,
+                                    className: f.guildIcon,
                                 }),
                                 (0, i.jsx)(l.Heading, {
                                     variant: "heading-sm/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: s.name,
                                 }),
                             ],
@@ -41,7 +41,7 @@ function f(e) {
                     null != c &&
                         (0, i.jsx)(l.Heading, {
                             variant: "heading-xl/semibold",
-                            color: "header-primary",
+                            color: "text-strong",
                             children: p.intl.format(p.t.jDV3i6, { username: c.globalName }),
                         }),
                 ],
@@ -57,9 +57,9 @@ function f(e) {
                                   : e.response;
                           return (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)("hr", { className: h.summarySeparator }),
+                                  (0, i.jsx)("hr", { className: f.summarySeparator }),
                                   (0, i.jsxs)("div", {
-                                      className: h.formResponseContainer,
+                                      className: f.formResponseContainer,
                                       children: [
                                           (0, i.jsx)(l.Text, {
                                               variant: "text-xs/semibold",
@@ -84,14 +84,14 @@ function m(e) {
         { loading: n, joinRequest: r, joinRequestGuild: a } = (0, s.Z)(t.id);
     return (0, i.jsx)(d.ZP, {
         channelId: t.id,
-        className: h.container,
+        className: f.container,
         children:
             null != r && null != r.formResponses
                 ? (0, i.jsxs)("div", {
-                      className: h.formContainer,
+                      className: f.formContainer,
                       children: [
                           (0, i.jsx)("div", {
-                              children: (0, i.jsx)(f, {
+                              children: (0, i.jsx)(h, {
                                   guild: a,
                                   joinRequest: r,
                               }),

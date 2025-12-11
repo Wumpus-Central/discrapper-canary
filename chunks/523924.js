@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(937111),
     u = n(850493),
     d = n(388032),
-    p = n(394121);
+    p = n(871612);
 let f = (e) => {
     let {
             headerId: t,
@@ -17,18 +17,18 @@ let f = (e) => {
             confirmText: g,
             onWithdrawApplication: h,
             rejectionReason: m = null,
-            guild: _ = null,
+            guild: b = null,
         } = e,
-        b = (0, l.e7)([c.Z], () => {
+        _ = (0, l.e7)([c.Z], () => {
             var e;
-            return c.Z.getCooldown(null != (e = null == _ ? void 0 : _.id) ? e : "0");
+            return c.Z.getCooldown(null != (e = null == b ? void 0 : b.id) ? e : "0");
         }),
-        { canReapply: E, isLoading: O } = (0, u.o)(null == _ ? void 0 : _.id);
+        { canReapply: E, isLoading: O } = (0, u.o)(null == b ? void 0 : b.id);
     i.useEffect(() => {
-        null == b && null != _ && o.Z.fetchJoinRequestCooldown(_.id);
-    }, [b, _]);
-    let v = (null != b ? b : 0) > 0,
-        y = v && null != b ? Math.ceil((1000 * b - Date.now()) / 86400000) : 0;
+        null == _ && null != b && o.Z.fetchJoinRequestCooldown(b.id);
+    }, [_, b]);
+    let v = (null != _ ? _ : 0) > 0,
+        y = v && null != _ ? Math.ceil((1000 * _ - Date.now()) / 86400000) : 0;
     return (0, r.jsxs)("div", {
         className: p.confirmation,
         children: [
@@ -45,10 +45,10 @@ let f = (e) => {
                     (0, r.jsx)(s.Heading, {
                         id: t,
                         variant: "heading-lg/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children:
-                            (null == _ ? void 0 : _.name) != null
-                                ? d.intl.formatToPlainString(d.t["P+/gzA"], { guildName: _.name })
+                            (null == b ? void 0 : b.name) != null
+                                ? d.intl.formatToPlainString(d.t["P+/gzA"], { guildName: b.name })
                                 : d.intl.string(d.t.gBPcuP),
                     }),
                     null != m && "" !== m
@@ -78,7 +78,7 @@ let f = (e) => {
                                   onClick: f,
                                   variant: "secondary",
                                   size: "md",
-                                  loading: null == b || O,
+                                  loading: null == _ || O,
                                   disabled: v || O,
                                   text: n,
                                   fullWidth: !0,

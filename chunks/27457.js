@@ -715,7 +715,7 @@ let ec = i.memo((e) => {
                                             children: (0, r.jsx)(u.tQf, {
                                                 className: er.secureFramesIcon,
                                                 size: "xs",
-                                                color: s.Z.colors.HEADER_PRIMARY,
+                                                color: s.Z.colors.TEXT_STRONG,
                                                 "aria-label": en.intl.string(en.t.mR9cf3),
                                             }),
                                         }),

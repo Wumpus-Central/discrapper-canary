@@ -33,8 +33,8 @@ var r = n(54381),
     N = n(867176),
     P = n(502762),
     R = n(652853),
-    D = n(313789),
-    w = n(518596),
+    w = n(313789),
+    D = n(518596),
     x = n(430824),
     L = n(594174),
     j = n(314884),
@@ -43,8 +43,8 @@ var r = n(54381),
     U = n(63063),
     G = n(74538),
     Z = n(998502),
-    B = n(848572),
-    F = n(863504),
+    F = n(848572),
+    B = n(863504),
     V = n(787528),
     H = n(768865),
     Y = n(789155),
@@ -52,7 +52,7 @@ var r = n(54381),
     K = n(474936),
     z = n(981631),
     q = n(388032),
-    Q = n(616885),
+    Q = n(143394),
     X = n(834982),
     J = n(912450),
     $ = n(703548),
@@ -194,7 +194,7 @@ function ey(e) {
         l = i === K.PremiumTypes.TIER_1,
         c = () => {
             a(),
-                (0, w.openUserSettings)(D.n.PROFILE_PANEL, { section: z.oAB.PROFILE_CUSTOMIZATION }),
+                (0, D.openUserSettings)(w.n.PROFILE_PANEL, { section: z.oAB.PROFILE_CUSTOMIZATION }),
                 M.default.track(z.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "user_profile_customization" });
         };
     return (
@@ -272,20 +272,20 @@ function ey(e) {
 function eO(e) {
     var t, n, i;
     let { currentUser: a, onClose: o } = e,
-        s = (0, B.Rw)(),
+        s = (0, F.Rw)(),
         { analyticsLocations: l } = (0, b.ZP)(E.Z.PREMIUM_UNCANCEL_MODAL),
-        c = (0, B.GG)(),
+        c = (0, F.GG)(),
         u = null != (t = null == s ? void 0 : s.id) ? t : K.VU.PREMIUM_TENURE_1_MONTH,
-        d = (0, F.Z)(u);
+        d = (0, B.Z)(u);
     if (!(0, G.M5)(a, K.PremiumTypes.TIER_2) || null == c) return null;
-    let f = null != (n = null == s ? void 0 : s.status) ? n : B.Vq.UPCOMING,
+    let f = null != (n = null == s ? void 0 : s.status) ? n : F.Vq.UPCOMING,
         _ =
             null != (i = null == s ? void 0 : s.nameUnformatted)
                 ? i
                 : K.vK[K.VU.PREMIUM_TENURE_1_MONTH].nameUnformatted,
         m = (0, V.J)(u),
         h = q.intl.string(_),
-        g = f === B.Vq.EARNED,
+        g = f === F.Vq.EARNED,
         y = null != s && "daysLeft" in s ? s.daysLeft : 1,
         O = q.t.pwkxYF;
     if (g) {
@@ -411,7 +411,7 @@ function eS(e) {
         f = eg().boostItemVisual,
         h = () => {
             n(),
-                (0, w.openUserSettings)(D.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { section: z.oAB.GUILD_BOOSTING }),
+                (0, D.openUserSettings)(w.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { section: z.oAB.GUILD_BOOSTING }),
                 M.default.track(z.rMx.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
         };
     return (0, r.jsx)(eE, {
@@ -674,7 +674,7 @@ let eP = function (e) {
                       children: [
                           (0, r.jsx)(p.Heading, {
                               variant: "heading-xl/semibold",
-                              color: "header-primary",
+                              color: "text-strong",
                               className: Q.title,
                               children: n,
                           }),

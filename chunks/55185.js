@@ -44,7 +44,7 @@ function y(e) {
                 children: [
                     (0, i.jsx)(s.Text, {
                         variant: "text-sm/medium",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: p.intl.string(h.default.WhdCGP),
                     }),
                     n &&
@@ -118,7 +118,7 @@ function j(e) {
                 children: [
                     (0, i.jsx)(s.Heading, {
                         variant: "heading-sm/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         className: g.controlTitle,
                         children: p.intl.string(h.default["5YsmGI"]),
                     }),

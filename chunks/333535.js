@@ -9,10 +9,10 @@ var i = n(54381),
     u = n(572004),
     d = n(63063),
     p = n(158222),
-    h = n(523900),
-    f = n(981631),
+    f = n(523900),
+    h = n(981631),
     m = n(388032),
-    g = n(235391);
+    g = n(545020);
 function b(e) {
     let { threadId: t } = e,
         n = (0, l.e7)([s.Z], () => s.Z.getChannel(t)),
@@ -20,25 +20,25 @@ function b(e) {
         C = r.useCallback(() => {
             null != n &&
                 null != b &&
-                ((0, o.yw)(f.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, u.JG)((0, c.EO)(n, b)));
+                ((0, o.yw)(h.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, u.JG)((0, c.EO)(n, b)));
         }, [n, b]);
     return (0, i.jsxs)("div", {
         className: g.sharePromptContainer,
         children: [
-            (0, i.jsx)(h.Z, {}),
+            (0, i.jsx)(f.Z, {}),
             (0, i.jsxs)("div", {
                 className: g.sharePromptContent,
                 children: [
                     (0, i.jsx)(a.Text, {
                         variant: "text-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: m.intl.string(m.t["5uAO7d"]),
                     }),
                     (0, i.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
                         children: m.intl.format(m.t.WnfPV3, {
-                            helpArticleUrl: d.Z.getCreatorSupportArticleURL(f.BhN.MEDIA_CHANNEL),
+                            helpArticleUrl: d.Z.getCreatorSupportArticleURL(h.BhN.MEDIA_CHANNEL),
                         }),
                     }),
                     (0, i.jsx)(a.LZC, { size: 4 }),

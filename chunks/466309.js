@@ -8,7 +8,7 @@ var i = n(442837),
     l = n(509545),
     c = n(74538),
     u = n(474936),
-    d = n(274065);
+    d = n(283102);
 let f = function (e) {
     let { isGift: t = !1, priceOptions: n } = e,
         f = (0, i.e7)([l.Z], () => l.Z.get(u.Xh.PREMIUM_GROUP_MONTH)),
@@ -20,7 +20,7 @@ let f = function (e) {
         });
     let _ = (0, c.gy)(f, n, !1, t),
         m = u.rV.MONTH,
-        h = p ? "header-primary" : "always-white";
+        h = p ? "text-strong" : "always-white";
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(o.Text, {

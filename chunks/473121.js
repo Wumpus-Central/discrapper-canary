@@ -63,7 +63,7 @@ let c = (e) => {
             null != t && "" !== t
                 ? (0, r.jsx)(i.Heading, {
                       variant: "heading-xl/semibold",
-                      color: "header-primary",
+                      color: "text-strong",
                       children: t,
                   })
                 : null,

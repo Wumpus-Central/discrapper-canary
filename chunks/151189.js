@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(981631),
     E = n(474936),
     b = n(388032),
-    y = n(935149),
+    y = n(430915),
     O = n(867250);
 let v = () => (0, m.f)(!1),
     S = (e) => {
@@ -63,7 +63,7 @@ let v = () => (0, m.f)(!1),
                               }),
                               (0, r.jsx)(s.Text, {
                                   className: y.upsellTitle,
-                                  color: "header-primary",
+                                  color: "text-strong",
                                   variant: "text-lg/semibold",
                                   children: b.intl.string(b.t.jJG1pl),
                               }),

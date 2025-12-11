@@ -68,7 +68,7 @@ function O(e) {
                     }),
                     (0, r.jsx)(s.LZC, { size: 22 }),
                     (0, r.jsx)(s.Heading, {
-                        color: "header-primary",
+                        color: "text-strong",
                         variant: "heading-lg/extrabold",
                         className: b.header,
                         children: E.intl.string(E.t.cBjkcx),

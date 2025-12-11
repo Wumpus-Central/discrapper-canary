@@ -16,8 +16,8 @@ var r = n(54381),
     b = n(892001),
     y = n(899007),
     O = n(648052),
-    j = n(867176),
-    x = n(280885),
+    x = n(867176),
+    j = n(280885),
     v = n(900927),
     C = n(678738),
     I = n(502762),
@@ -101,7 +101,7 @@ function w(e) {
                             (0, r.jsxs)("div", {
                                 className: T.header,
                                 children: [
-                                    (0, r.jsx)(j.Z, {
+                                    (0, r.jsx)(x.Z, {
                                         user: n,
                                         displayProfile: D,
                                         themeType: Z.l.SIDEBAR,
@@ -135,8 +135,8 @@ function w(e) {
                                         children: [
                                             (0, r.jsx)(C.Z, {
                                                 heading: P.intl.string(P.t["61W33d"]),
-                                                headingColor: "header-primary",
-                                                children: (0, r.jsx)(x.Z, {
+                                                headingColor: "text-strong",
+                                                children: (0, r.jsx)(j.Z, {
                                                     userBio: null == D ? void 0 : D.bio,
                                                     userId: n.id,
                                                     animateOnHoverOrFocusOnly: !0,
@@ -145,7 +145,7 @@ function w(e) {
                                             }),
                                             (0, r.jsx)(C.Z, {
                                                 heading: P.intl.string(P.t["A//N4k"]),
-                                                headingColor: "header-primary",
+                                                headingColor: "text-strong",
                                                 children: (0, r.jsx)(v.Z, { userId: n.id }),
                                             }),
                                         ],

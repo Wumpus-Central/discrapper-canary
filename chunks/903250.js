@@ -43,8 +43,8 @@ let R = (e, t) => {
             U = null != k,
             G = R ? l.Tt.WHITE : l.Tt.BRAND,
             Z = M.length > 0,
-            B = T.intl.string(T.t.YCZldK),
-            F = (0, _.rO)(),
+            F = T.intl.string(T.t.YCZldK),
+            B = (0, _.rO)(),
             V = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
         return (0, r.jsx)(f.Gt, {
             value: x,
@@ -62,8 +62,8 @@ let R = (e, t) => {
                                 (0, r.jsx)(c.Heading, {
                                     className: C.marketingPageHeading,
                                     variant: "display-sm",
-                                    color: "header-primary",
-                                    children: B,
+                                    color: "text-strong",
+                                    children: F,
                                 }),
                                 U
                                     ? (0, r.jsx)(O.Z, { referrer: k })
@@ -116,8 +116,8 @@ let R = (e, t) => {
                             className: C.heroHeadingV2Art,
                             ref: D,
                             children: (0, r.jsx)("source", {
-                                src: F ? A.Z : P.Z,
-                                type: F ? I.m.MP4 : I.m.WEBM,
+                                src: B ? A.Z : P.Z,
+                                type: B ? I.m.MP4 : I.m.WEBM,
                             }),
                         }),
                     }),

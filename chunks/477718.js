@@ -86,7 +86,7 @@ function D(e) {
                             null != h &&
                                 (0, r.jsx)(E.Text, {
                                     variant: "text-sm/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: h,
                                 }),
                             null != R &&
@@ -101,7 +101,7 @@ function D(e) {
                         className: C.auditLogItemDate,
                         children: (0, r.jsx)(E.Text, {
                             variant: "text-sm/medium",
-                            color: "header-primary",
+                            color: "text-strong",
                             children: L,
                         }),
                     }),

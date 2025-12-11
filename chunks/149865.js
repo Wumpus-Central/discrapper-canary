@@ -5,7 +5,7 @@ var r = n(54381),
     o = n(36361),
     s = n(111161),
     l = n(662097),
-    c = n(700875);
+    c = n(682454);
 function u(e) {
     let { node: t } = e,
         { useTitle: n, useSubtitle: u, variant: d = "default", layout: f, initialize: p } = t,
@@ -24,7 +24,7 @@ function u(e) {
                         (0, r.jsx)(a.Text, {
                             tag: "legend",
                             variant: "text-md/semibold",
-                            color: "header-primary",
+                            color: "text-strong",
                             className: c.title,
                             children: _,
                         }),

@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(565473),
     p = n(927923),
     f = n(388032),
-    g = n(971108);
+    g = n(479157);
 function h(e) {
     let { platform: t } = e;
     return t === p.YE.XBOX
@@ -32,7 +32,7 @@ function m(e) {
         u = null != i ? i : c;
     if (null == u || !p.al.has(u)) return null;
     let m = null != n,
-        _ = m
+        b = m
             ? u === p.YE.XBOX
                 ? f.intl.string(f.t.UjA4HX)
                 : f.intl.string(f.t.QCw1oW)
@@ -44,9 +44,9 @@ function m(e) {
         children: [
             (0, r.jsx)(h, { platform: u }),
             (0, r.jsx)(s.Text, {
-                color: m ? "header-primary" : "always-white",
+                color: m ? "text-strong" : "always-white",
                 variant: "text-xs/medium",
-                children: _,
+                children: b,
             }),
         ],
     });

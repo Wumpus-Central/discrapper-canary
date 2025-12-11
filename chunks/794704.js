@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(594190),
     P = n(137920),
     R = n(320724),
-    D = n(925329),
-    w = n(297700),
+    w = n(925329),
+    D = n(297700),
     x = n(444295),
     L = n(486016),
     j = n(837268),
@@ -37,8 +37,8 @@ var r = n(54381),
     U = n(371651),
     G = n(829907),
     Z = n(624864),
-    B = n(610394),
-    F = n(957148),
+    F = n(610394),
+    B = n(957148),
     V = n(932404),
     H = n(398269),
     Y = n(340101),
@@ -68,9 +68,9 @@ var r = n(54381),
     em = n(987650),
     eh = n(501787),
     eg = n(388032),
-    eE = n(607547),
-    eb = n(131970),
-    ey = n(730462);
+    eE = n(677677),
+    eb = n(704437),
+    ey = n(494139);
 function eO(e, t, n) {
     return (
         t in e
@@ -148,8 +148,8 @@ let eA = eL(null),
     eN = 20,
     eP = 16,
     eR = 1,
-    eD = 25,
-    ew = [0, 5, 10, 15, 20, 25];
+    ew = 25,
+    eD = [0, 5, 10, 15, 20, 25];
 function ex() {
     let e = eL(eA);
     f().isEqual(e, eA) || (es.default.track(ep.rMx.OVERLAY_SETTINGS_UPDATED, e), (eA = e));
@@ -209,7 +209,7 @@ function ej(e) {
                                 children: [
                                     (0, r.jsx)(h.Text, {
                                         variant: "text-md/medium",
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         className: eE.groupTitle,
                                         children: i,
                                     }),
@@ -358,7 +358,7 @@ function eG(e) {
                         (0, x.ou)(e, x.OverlayToggledClientSettingType.OOP, null != (r = o.id) ? r : null);
             }
             (a || s) &&
-                (0, F.l)(
+                (0, B.l)(
                     a ? x.OverlayToggledClientSettingType.LEGACY_GAME : x.OverlayToggledClientSettingType.OOP_GAME,
                     null != (i = o.id) ? i : null,
                 );
@@ -412,12 +412,12 @@ function eG(e) {
                 null != i)
             ) {
                 var a;
-                (0, F.l)(i, null != (a = o.id) ? a : null);
+                (0, B.l)(i, null != (a = o.id) ? a : null);
             }
         },
         G = C && A,
         Z = !P && !R,
-        B = !m && !P && b && !C,
+        F = !m && !P && b && !C,
         V = !b && !R && m && !A,
         H = (null == u ? void 0 : u.overlayMethod) === j.gl.Disabled,
         Y = (null == u ? void 0 : u.state) === j.mM.OVERLAY_RENDERING && !H,
@@ -516,7 +516,7 @@ function eG(e) {
                     return [eg.intl.string(eg.t["9DUS5l"]), null];
                 case J:
                     return [eg.intl.string(eg.t.nQ9EdJ), null];
-                case B:
+                case F:
                 case V:
                     return [eg.intl.string(eg.t.VWUn0a), null];
                 case W:
@@ -575,7 +575,7 @@ function eG(e) {
                                 text: eg.intl.string(eg.t["4PJP5p"]),
                                 children: (e) =>
                                     (0, r.jsx)(
-                                        w.Z,
+                                        D.Z,
                                         eI(
                                             ev(
                                                 {
@@ -615,10 +615,10 @@ function eG(e) {
                       }),
                   ],
               }),
-              icon: (0, r.jsx)(D.Z, {
+              icon: (0, r.jsx)(w.Z, {
                   game: s,
                   pid: null == o ? void 0 : o.pid,
-                  size: D.A.MEDIUM,
+                  size: w.A.MEDIUM,
               }),
               "aria-label": eg.intl.string(eg.t["87O5GC"]),
               action: (0, r.jsx)(h.P3F, {
@@ -683,13 +683,13 @@ function eZ(e) {
     let { game: t, gameApplication: n } = e,
         a = i.useMemo(() => (null == t ? null : "pid" in t ? t.pid : null), [t]),
         o = (0, p.e7)([T.Z], () => (null != n ? n : T.Z.getApplication(null == t ? void 0 : t.id)), [n, t]);
-    return (0, r.jsx)(D.Z, {
+    return (0, r.jsx)(w.Z, {
         game: o,
         pid: a,
-        size: D.A.SMALL,
+        size: w.A.SMALL,
     });
 }
-function eB(e) {
+function eF(e) {
     let {
             rawGame: t,
             gameApplication: n,
@@ -710,7 +710,7 @@ function eB(e) {
         let n = !e && _;
         if ((m(e), s(e, u, d), n)) {
             var r, i;
-            (0, F.l)(l, null != (i = null != (r = u.id) ? r : null == t ? void 0 : t.id) ? i : null);
+            (0, B.l)(l, null != (i = null != (r = u.id) ? r : null == t ? void 0 : t.id) ? i : null);
         }
     };
     return (0, r.jsx)(ej, {
@@ -732,7 +732,7 @@ function eB(e) {
         }),
     });
 }
-function eF() {
+function eB() {
     let [e, t] = i.useState(!1),
         { legacyEnabled: n, oopEnabled: a } = (0, p.cj)([U.default], () => U.default.getGlobalEnabledStatus()),
         o = (0, p.Wu)([N.ZP], () => N.ZP.getGamesSeen(!0)).filter((e) => !(0, z.le)(e)),
@@ -743,7 +743,7 @@ function eF() {
             y.Z.setEnabled(e, a);
             let i = null != (r = null == (t = N.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? r : null;
             (0, x.ou)(e, x.OverlayToggledClientSettingType.LEGACY, i),
-                !e && n && (0, F.l)(x.OverlayToggledClientSettingType.LEGACY, i);
+                !e && n && (0, B.l)(x.OverlayToggledClientSettingType.LEGACY, i);
         },
         u = (e, t, n) => {
             let { enabledOOP: r } = n;
@@ -802,7 +802,7 @@ function eF() {
                       className: eE.scroller,
                       children: o.map((e, t) =>
                           (0, r.jsx)(
-                              eB,
+                              eF,
                               {
                                   rawGame: e,
                                   clientSettingType: x.OverlayToggledClientSettingType.LEGACY_GAME,
@@ -834,7 +834,7 @@ function eV() {
             y.Z.setEnabled(a, e);
             let o = null != (r = null == (t = N.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? r : null;
             (0, x.ou)(e, x.OverlayToggledClientSettingType.OOP, o),
-                i && (0, F.l)(x.OverlayToggledClientSettingType.OOP, o);
+                i && (0, B.l)(x.OverlayToggledClientSettingType.OOP, o);
         },
         u = (e, t, n) => {
             let { enabledLegacy: r } = n;
@@ -889,7 +889,7 @@ function eV() {
                       className: eE.scroller,
                       children: s.map((e, t) =>
                           (0, r.jsx)(
-                              eB,
+                              eF,
                               {
                                   rawGame: e,
                                   clientSettingType: x.OverlayToggledClientSettingType.OOP_GAME,
@@ -947,7 +947,7 @@ function eY() {
                     children: [
                         (0, r.jsx)(h.Text, {
                             variant: "text-md/semibold",
-                            color: "header-primary",
+                            color: "text-strong",
                             children: eg.intl.string(eg.t.VsAZcC),
                         }),
                         l &&
@@ -1025,7 +1025,7 @@ function eK() {
         children: [
             (0, r.jsx)(h.Heading, {
                 variant: "heading-md/semibold",
-                color: "header-primary",
+                color: "text-strong",
                 children: eg.intl.string(eg.t.xOE5bA),
             }),
             t.map((e) =>
@@ -1039,7 +1039,7 @@ function eK() {
                                 children: [
                                     (0, r.jsx)(h.Text, {
                                         variant: "text-sm/semibold",
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         children: eg.intl.string(e.title),
                                     }),
                                     (0, r.jsx)(h.Text, {
@@ -1132,8 +1132,8 @@ function eX() {
             eq(eg.intl.string(eg.t.iOtj8E), !1, !1, !0),
             eq(eg.intl.string(eg.t["0oqNgL"]), !1, !0),
         ]),
-        u = (0, p.e7)([B.Z, et.Z], () => {
-            let e = B.Z.getWidgetByType(ep.Odu.VOICE_V3);
+        u = (0, p.e7)([F.Z, et.Z], () => {
+            let e = F.Z.getWidgetByType(ep.Odu.VOICE_V3);
             if (null == e) return null;
             let t = et.Z.getWidget(e.id);
             return null != t && (0, Y.Aw)(t) ? t : null;
@@ -1255,9 +1255,9 @@ function eX() {
                     initialValue: d,
                     onValueRender: (e) => (e < eR ? eg.intl.string(eg.t.nrUzFL) : "".concat(Math.floor(e))),
                     minValue: eR - 1,
-                    maxValue: eD,
+                    maxValue: ew,
                     onValueChange: g,
-                    markers: ew,
+                    markers: eD,
                     barStyles: { background: h.TVs.colors.BACKGROUND_MOD_STRONG.css },
                     fillStyles: { background: h.TVs.colors.BACKGROUND_BRAND.css },
                     onMarkerRender: (e) => (e < eR ? eg.intl.string(eg.t.nrUzFL) : "".concat(Math.floor(e))),
@@ -1292,7 +1292,7 @@ function eJ() {
                           children: [
                               (0, r.jsx)(h.Heading, {
                                   variant: "heading-xl/medium",
-                                  color: "header-primary",
+                                  color: "text-strong",
                                   children: eg.intl.string(eg.t.jzjJQg),
                               }),
                               (0, r.jsx)(h.Text, {
@@ -1357,7 +1357,7 @@ function e$(e) {
                             children: [
                                 (0, r.jsx)(h.Text, {
                                     variant: "text-md/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: eg.intl.string(eg.t.wgVQND),
                                 }),
                                 (0, r.jsx)(h.Text, {
@@ -1381,7 +1381,7 @@ function e$(e) {
                         children: [
                             (0, r.jsx)(h.Text, {
                                 variant: "text-md/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: eg.intl.string(eg.t["+eFXxq"]),
                             }),
                             (0, r.jsx)(h.Text, {
@@ -1425,7 +1425,7 @@ function e0(e) {
                                       runningGameApplication: a,
                                   }),
                                   (0, r.jsx)(eV, {}),
-                                  (0, r.jsx)(eF, {}),
+                                  (0, r.jsx)(eB, {}),
                                   (0, r.jsx)(eH, {}),
                               ],
                           }),

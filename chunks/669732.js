@@ -1,4 +1,4 @@
-n.d(e, { default: () => u }), n(953529);
+n.d(e, { default: () => p }), n(953529);
 var r = n(54381);
 n(473749);
 var a = n(120356),
@@ -8,9 +8,9 @@ var a = n(120356),
     l = n(923928),
     c = n(600164),
     m = n(388032),
-    d = n(384822),
-    p = n(337667);
-let u = (t) => {
+    d = n(945346),
+    u = n(337667);
+let p = (t) => {
     let { onClose: e, transitionState: n, showHideSuppressWarning: a = !1 } = t;
     return (0, r.jsx)(o.Y0X, {
         transitionState: n,
@@ -27,13 +27,13 @@ let u = (t) => {
                     className: d.modalContent,
                     children: [
                         (0, r.jsx)("img", {
-                            src: p,
+                            src: u,
                             alt: "",
                             className: d.hero,
                         }),
                         (0, r.jsx)(o.Text, {
                             className: d.title,
-                            color: "header-primary",
+                            color: "text-strong",
                             variant: "text-md/semibold",
                             children: m.intl.string(m.t.sDvH0T),
                         }),

@@ -10,72 +10,72 @@ var i = n(392711),
     d = n(601964),
     u = n(496675),
     g = n(594174),
-    m = n(434404),
-    p = n(449226),
-    f = n(981631),
-    h = n(388032),
-    b = n(824804);
+    f = n(434404),
+    m = n(449226),
+    b = n(981631),
+    p = n(388032),
+    h = n(146473);
 function x(e) {
     let t,
         { guild: n } = e,
         x = n.mfaLevel,
-        j = (0, l.e7)([u.Z], () => null != n && u.Z.can(f.Plq.MANAGE_GUILD, n), [n]),
-        _ = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        v = (0, d.eM)(n, _),
-        O = null == _ ? void 0 : _.mfaEnabled,
-        C = x === f.BpS.ELEVATED,
-        y = v && O,
-        N = (0, i.throttle)(async (e) => {
-            y &&
-                (await m.Z.updateMFALevel({
+        j = (0, l.e7)([u.Z], () => null != n && u.Z.can(b.Plq.MANAGE_GUILD, n), [n]),
+        v = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        O = (0, d.eM)(n, v),
+        C = null == v ? void 0 : v.mfaEnabled,
+        y = x === b.BpS.ELEVATED,
+        N = O && C,
+        E = (0, i.throttle)(async (e) => {
+            N &&
+                (await f.Z.updateMFALevel({
                     guildId: n.id,
-                    level: e ? f.BpS.ELEVATED : f.BpS.NONE,
+                    level: e ? b.BpS.ELEVATED : b.BpS.NONE,
                 }));
         }, 1000);
     if (!j) return null;
-    y ||
-        (t = v
-            ? h.intl.format(h.t.nFwNyR, {
-                  settingsHook: () => (0, c.openUserSettings)(o.n.ACCOUNT_PANEL, { section: f.oAB.ACCOUNT }),
+    N ||
+        (t = O
+            ? p.intl.format(p.t.nFwNyR, {
+                  settingsHook: () => (0, c.openUserSettings)(o.n.ACCOUNT_PANEL, { section: b.oAB.ACCOUNT }),
               })
-            : h.intl.string(h.t["9Ghu40"]));
-    let E = n.features.has(f.GuildFeatures.DISCOVERABLE);
+            : p.intl.string(p.t["9Ghu40"]));
+    let I = n.features.has(b.GuildFeatures.DISCOVERABLE);
     return (0, r.jsxs)("div", {
-        className: b.simpleItemWrapper,
+        className: h.simpleItemWrapper,
         children: [
             (0, r.jsxs)("div", {
-                className: b.itemContent,
+                className: h.itemContent,
                 children: [
                     (0, r.jsx)(s.Heading, {
                         variant: "text-md/semibold",
-                        color: "header-primary",
-                        children: h.intl.string(h.t.lbBfEQ),
+                        color: "text-strong",
+                        children: p.intl.string(p.t.lbBfEQ),
                     }),
                     (0, r.jsxs)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: [h.intl.string(h.t["a/93J6"]), " ", t],
+                        children: [p.intl.string(p.t["a/93J6"]), " ", t],
                     }),
                 ],
             }),
-            !y || (C && E)
+            !N || (y && I)
                 ? (0, r.jsx)(a.u, {
-                      text: E
-                          ? h.intl.string(h.t["KG1V/E"])
-                          : v
-                            ? h.intl.string(h.t.NmsheT)
-                            : h.intl.string(h.t.LieBta),
-                      children: (0, r.jsx)(p.Z, {
-                          checked: C,
+                      text: I
+                          ? p.intl.string(p.t["KG1V/E"])
+                          : O
+                            ? p.intl.string(p.t.NmsheT)
+                            : p.intl.string(p.t.LieBta),
+                      children: (0, r.jsx)(m.Z, {
+                          checked: y,
                           disabled: !0,
-                          onChange: N,
-                          className: b.bringToFront,
+                          onChange: E,
+                          className: h.bringToFront,
                       }),
                   })
-                : (0, r.jsx)(p.Z, {
-                      checked: C,
-                      onChange: N,
-                      className: b.bringToFront,
+                : (0, r.jsx)(m.Z, {
+                      checked: y,
+                      onChange: E,
+                      className: h.bringToFront,
                   }),
         ],
     });

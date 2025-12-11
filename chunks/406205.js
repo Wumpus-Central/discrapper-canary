@@ -18,7 +18,7 @@ var i = n(54381),
     f = n(490897),
     N = n(526761),
     b = n(388032),
-    S = n(407937),
+    S = n(874238),
     E = n(650455);
 function O(e) {
     let { guildId: t } = e,
@@ -78,7 +78,7 @@ function O(e) {
                                 children: [
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-sm/semibold",
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         children: b.intl.string(b.t.Tqd1Af),
                                     }),
                                     (0, i.jsx)(c.Text, {
@@ -92,7 +92,7 @@ function O(e) {
                                 children: [
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-sm/semibold",
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         children: b.intl.string(b.t["1m22ZB"]),
                                     }),
                                     (0, i.jsx)(c.Text, {

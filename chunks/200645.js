@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(998502),
     p = n(981631),
     _ = n(388032),
-    m = n(761588);
+    m = n(867889);
 function h(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ function E() {
                 children: [
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: _.intl.string(_.t.roHq80),
                     }),
                     (0, r.jsx)(o.Text, {
@@ -111,7 +111,7 @@ class b extends i.PureComponent {
             children: [
                 (0, r.jsx)(o.Heading, {
                     variant: "heading-lg/semibold",
-                    color: "header-primary",
+                    color: "text-strong",
                     children: i,
                 }),
                 (0, r.jsxs)(o.C3N, {

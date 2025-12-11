@@ -12,8 +12,8 @@ var i = n(120356),
     f = n(510659),
     p = n(228168),
     _ = n(388032),
-    m = n(882909),
-    h = n(583140);
+    m = n(570447),
+    h = n(141291);
 let g = (e) => {
         let { message: t, userId: n, onClose: i } = e,
             { trackUserProfileAction: o } = (0, d.KZ)();
@@ -29,7 +29,7 @@ let g = (e) => {
                     className: m.successToast,
                     children: [
                         (0, r.jsx)(l.Text, {
-                            color: "header-primary",
+                            color: "text-strong",
                             variant: "text-sm/semibold",
                             children: t,
                         }),
@@ -57,7 +57,7 @@ let g = (e) => {
                     className: m.toastIcon,
                 }),
                 (0, r.jsx)(l.Text, {
-                    color: "header-primary",
+                    color: "text-strong",
                     variant: "text-sm/semibold",
                     children: _.intl.string(_.t.tcARX0),
                 }),

@@ -112,7 +112,7 @@ function O() {
         children: [
             (0, r.jsx)(c.Heading, {
                 variant: "heading-md/medium",
-                color: "header-primary",
+                color: "text-strong",
                 children: y.intl.string(y.t["oqalC+"]),
             }),
             (0, r.jsx)(c.Text, {

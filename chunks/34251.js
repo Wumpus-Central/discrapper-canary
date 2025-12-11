@@ -1,4 +1,4 @@
-n.d(t, { default: () => C }), n(388685);
+n.d(t, { default: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -9,9 +9,9 @@ var r = n(54381),
     d = n(515108),
     u = n(291967),
     m = n(324805),
-    x = n(388032),
-    f = n(258910);
-function p(e) {
+    b = n(388032),
+    f = n(679789);
+function x(e) {
     let { quest: t, rewardName: n, location: i, sourceQuestContent: o } = e;
     return (0, r.jsxs)("div", {
         className: f.contentContainer,
@@ -33,61 +33,61 @@ function p(e) {
                 children: [
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-xl/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         className: f.heading,
-                        children: x.intl.string(x.t["0/Yz+Y"]),
+                        children: b.intl.string(b.t["0/Yz+Y"]),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
-                        children: x.intl.format(x.t["v1u/zq"], { rewardName: n }),
+                        children: b.intl.format(b.t["v1u/zq"], { rewardName: n }),
                     }),
                 ],
             }),
             (0, r.jsx)(a.Button, {
                 variant: "secondary",
                 size: "sm",
-                text: x.intl.string(x.t.OD6Tvf),
+                text: b.intl.string(b.t.OD6Tvf),
                 disabled: !0,
                 fullWidth: !0,
             }),
         ],
     });
 }
-function C(e) {
+function p(e) {
     var t, n;
-    let { initialQuest: a, onClose: c, transitionState: x, location: f, sourceQuestContent: C } = e,
-        h = null != (n = (0, s.B4)(a.id)) ? n : a,
-        g = i.useMemo(() => (0, l.K)(h.config), [h]),
-        _ = (null == (t = h.userStatus) ? void 0 : t.claimedAt) != null,
-        j = !h.preview && !_,
+    let { initialQuest: a, onClose: c, transitionState: b, location: f, sourceQuestContent: p } = e,
+        C = null != (n = (0, s.B4)(a.id)) ? n : a,
+        g = i.useMemo(() => (0, l.K)(C.config), [C]),
+        h = (null == (t = C.userStatus) ? void 0 : t.claimedAt) != null,
+        j = !C.preview && !h,
         [v, N] = i.useState(j ? "loading" : "claimed");
     i.useEffect(() => {
         if (j) {
-            let e = (0, l.zG)(h.config);
-            (0, o.QB)(h.id, e, f)
+            let e = (0, l.zG)(C.config);
+            (0, o.QB)(C.id, e, f)
                 .then(() => N("claimed"))
                 .catch(() => N("error"));
         }
-    }, [h, f, j]);
-    let b = "error" === v || null == g;
+    }, [C, f, j]);
+    let y = "error" === v || null == g;
     return (0, r.jsx)(d.Z, {
         onClose: c,
-        transitionState: x,
-        quest: h,
-        sourceQuestContent: C,
+        transitionState: b,
+        quest: C,
+        sourceQuestContent: p,
         location: m.dr.INGAME_REWARD_MODAL,
         isRewardContentLoading: "loading" === v,
-        rewardContentHasError: b,
-        rewardContent: b
+        rewardContentHasError: y,
+        rewardContent: y
             ? null
             : (0, r.jsx)(u.Z, {
                   rewardName: g.messages.name,
-                  children: (0, r.jsx)(p, {
-                      quest: h,
+                  children: (0, r.jsx)(x, {
+                      quest: C,
                       rewardName: g.messages.name,
                       location: f,
-                      sourceQuestContent: C,
+                      sourceQuestContent: p,
                   }),
               }),
     });

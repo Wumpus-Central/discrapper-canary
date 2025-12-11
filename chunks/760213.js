@@ -6,25 +6,25 @@ n.d(t, {
 var r,
     i = n(54381),
     s = n(473749),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(442837),
     c = n(481060),
     u = n(893776),
     d = n(239091),
     h = n(623602),
-    g = n(598077),
-    m = n(314897),
-    p = n(246946),
-    f = n(594174),
-    _ = n(626135),
-    x = n(51144),
+    f = n(598077),
+    g = n(314897),
+    m = n(246946),
+    p = n(594174),
+    x = n(626135),
+    _ = n(51144),
     E = n(480387),
     v = n(726745),
-    j = n(251423),
-    b = n(981631),
+    b = n(251423),
+    j = n(981631),
     I = n(388032),
-    N = n(878709),
+    N = n(805079),
     y =
         (((r = {})[(r.LOGIN_REQUIRED = 0)] = "LOGIN_REQUIRED"),
         (r[(r.SWITCHED = 1)] = "SWITCHED"),
@@ -34,17 +34,17 @@ function S(e) {
     let { actionText: t, user: n, onAction: r } = e,
         {
             currentUser: s,
-            hidePrivateData: l,
-            isAuthenticated: j,
-        } = (0, o.cj)([f.default, p.Z, m.default], () => ({
-            currentUser: f.default.getCurrentUser(),
-            hidePrivateData: p.Z.hidePersonalInformation,
-            isAuthenticated: m.default.isAuthenticated(),
+            hidePrivateData: a,
+            isAuthenticated: b,
+        } = (0, o.cj)([p.default, m.Z, g.default], () => ({
+            currentUser: p.default.getCurrentUser(),
+            hidePrivateData: m.Z.hidePersonalInformation,
+            isAuthenticated: g.default.isAuthenticated(),
         })),
-        y = new g.Z(n),
-        S = j && (null == s ? void 0 : s.id) === y.id,
+        y = new f.Z(n),
+        S = b && (null == s ? void 0 : s.id) === y.id,
         C = n.tokenStatus === v.q.INVALID,
-        O = l || y.hasUniqueUsername() ? null : "#".concat(y.discriminator),
+        O = a || y.hasUniqueUsername() ? null : "#".concat(y.discriminator),
         T = null;
     return (
         h.Z.useConfig({ location: "Account card load" }),
@@ -73,18 +73,18 @@ function S(e) {
                         "aria-label": n.username,
                     }),
                     (0, i.jsxs)("div", {
-                        className: a()(N.usernameSection, { [N.hasActionMaxWidth]: !S }),
+                        className: l()(N.usernameSection, { [N.hasActionMaxWidth]: !S }),
                         children: [
                             (0, i.jsxs)("div", {
                                 className: N.username,
                                 children: [
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-md/semibold",
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         lineClamp: 1,
-                                        children: x.ZP.getUserTag(y, {
+                                        children: _.ZP.getUserTag(y, {
                                             mode: "username",
-                                            identifiable: l ? "never" : "always",
+                                            identifiable: a ? "never" : "always",
                                         }),
                                     }),
                                     (0, i.jsx)(c.Text, {
@@ -106,8 +106,8 @@ function S(e) {
                                     text: C ? I.intl.string(I.t["DSN+hw"]) : t,
                                     onClick: function () {
                                         if (C) return void r(0, n.id);
-                                        _.default.track(b.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                            location: { section: b.jXE.MANAGE_ACCOUNTS_MODAL },
+                                        x.default.track(j.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                            location: { section: j.jXE.MANAGE_ACCOUNTS_MODAL },
                                         }),
                                             E.yD(n.id),
                                             r(1, n.id);
@@ -132,9 +132,9 @@ function S(e) {
                                                     });
                                                     let e = {};
                                                     null != s
-                                                        ? (e.section = b.jXE.MANAGE_ACCOUNTS_MODAL)
-                                                        : (e.page = b.Usc.LOGIN),
-                                                        _.default.track(b.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
+                                                        ? (e.section = j.jXE.MANAGE_ACCOUNTS_MODAL)
+                                                        : (e.page = j.Usc.LOGIN),
+                                                        x.default.track(j.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
                                                             location: e,
                                                         }),
                                                         r(2, n.id),
@@ -157,12 +157,12 @@ function S(e) {
 }
 function C(e) {
     let { actionText: t, onAction: n } = e,
-        { isLoading: r, multiAccountUsers: l } = (0, j.L)();
+        { isLoading: r, multiAccountUsers: a } = (0, b.L)();
     return (0, i.jsx)("div", {
         className: N.list,
         children: r
             ? (0, i.jsx)(c.$jN, { className: N.spinner })
-            : l.map((e, r) =>
+            : a.map((e, r) =>
                   (0, i.jsxs)(
                       s.Fragment,
                       {
@@ -176,7 +176,7 @@ function C(e) {
                                   },
                                   e.id,
                               ),
-                              l.length - 1 !== r &&
+                              a.length - 1 !== r &&
                                   (0, i.jsx)("div", {
                                       role: "separator",
                                       className: N.separator,

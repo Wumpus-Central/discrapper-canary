@@ -5,8 +5,8 @@ var i = n(481060),
     l = n(671533),
     a = n(400251),
     s = n(388032),
-    o = n(806328),
-    c = n(166582),
+    o = n(960931),
+    c = n(762451),
     d = n(176480);
 let u = (e) => {
     let t,
@@ -51,7 +51,7 @@ let u = (e) => {
                 }),
                 (0, r.jsx)(i.Heading, {
                     variant: "heading-xl/semibold",
-                    color: "header-primary",
+                    color: "text-strong",
                     className: c.emptySearchTitle,
                     children: s.intl.string(s.t["6HXiuE"]),
                 }),

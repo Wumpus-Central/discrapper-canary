@@ -1,10 +1,10 @@
-n.d(e, { Z: () => p }), n(388685);
+n.d(e, { Z: () => f }), n(388685);
 var a = n(54381),
-    r = n(473749),
-    i = n(481060),
+    i = n(473749),
+    r = n(481060),
     s = n(458044),
     o = n(388032),
-    l = n(291191);
+    l = n(612922);
 function c(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -30,7 +30,7 @@ function c(t) {
     }
     return t;
 }
-function g(t, e) {
+function d(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -48,9 +48,9 @@ function g(t, e) {
         t
     );
 }
-function d(t) {
-    let { user: e, tagId: n, title: r, messageCount: s, reactionCount: c, activeAgo: g, tags: d, attachment: m } = t,
-        { name: u, avatarSrc: p } = e;
+function g(t) {
+    let { user: e, tagId: n, title: i, messageCount: s, reactionCount: c, activeAgo: d, tags: g, attachment: m } = t,
+        { name: u, avatarSrc: f } = e;
     return (0, a.jsxs)("div", {
         className: l.post,
         children: [
@@ -59,13 +59,13 @@ function d(t) {
                     (0, a.jsxs)("div", {
                         className: l.inline,
                         children: [
-                            (0, a.jsxs)(i.Text, {
-                                color: "header-primary",
+                            (0, a.jsxs)(r.Text, {
+                                color: "text-strong",
                                 variant: "text-xs/medium",
                                 className: l.inline,
                                 children: [
                                     (0, a.jsx)("img", {
-                                        src: p,
+                                        src: f,
                                         alt: o.intl.string(o.t.lqaIxI),
                                         width: 16,
                                         height: 16,
@@ -80,31 +80,31 @@ function d(t) {
                                             className: l.bullet,
                                             children: "\u2022",
                                         }),
-                                        (0, a.jsx)(i.Text, {
-                                            color: "header-primary",
+                                        (0, a.jsx)(r.Text, {
+                                            color: "text-strong",
                                             variant: "text-xxs/medium",
                                             className: l.inlineTag,
-                                            children: d[n],
+                                            children: g[n],
                                         }),
                                     ],
                                 }),
                         ],
                     }),
-                    (0, a.jsx)(i.Heading, {
-                        color: "header-primary",
+                    (0, a.jsx)(r.Heading, {
+                        color: "text-strong",
                         variant: "heading-md/semibold",
                         className: l.title,
-                        children: r,
+                        children: i,
                     }),
                     (0, a.jsxs)("div", {
                         className: l.inline,
                         children: [
-                            (0, a.jsxs)(i.Text, {
+                            (0, a.jsxs)(r.Text, {
                                 color: "text-default",
                                 variant: "text-xs/medium",
                                 className: l.alignCenter,
                                 children: [
-                                    (0, a.jsx)(i.kBi, {
+                                    (0, a.jsx)(r.kBi, {
                                         size: "xs",
                                         color: "currentColor",
                                         className: l.icon,
@@ -119,7 +119,7 @@ function d(t) {
                                             className: l.bullet,
                                             children: "\u2022",
                                         }),
-                                        (0, a.jsxs)(i.Text, {
+                                        (0, a.jsxs)(r.Text, {
                                             color: "text-default",
                                             variant: "text-xs/medium",
                                             className: l.alignCenter,
@@ -139,10 +139,10 @@ function d(t) {
                                 className: l.bullet,
                                 children: "\u2022",
                             }),
-                            (0, a.jsx)(i.Text, {
+                            (0, a.jsx)(r.Text, {
                                 color: "text-default",
                                 variant: "text-xs/medium",
-                                children: g,
+                                children: d,
                             }),
                         ],
                     }),
@@ -151,7 +151,7 @@ function d(t) {
             null != m &&
                 (0, a.jsx)("img", {
                     src: m,
-                    alt: o.intl.formatToPlainString(o.t.MJHFt9, { name: r }),
+                    alt: o.intl.formatToPlainString(o.t.MJHFt9, { name: i }),
                     className: l.attachment,
                 }),
         ],
@@ -159,7 +159,7 @@ function d(t) {
 }
 function m(t) {
     let { author: e, content: n } = t,
-        { name: r, isOP: s, avatarSrc: c } = e;
+        { name: i, isOP: s, avatarSrc: c } = e;
     return (0, a.jsxs)("div", {
         className: l.message,
         children: [
@@ -174,10 +174,10 @@ function m(t) {
                     (0, a.jsxs)("div", {
                         className: l.inline,
                         children: [
-                            (0, a.jsx)(i.Text, {
-                                color: "header-primary",
+                            (0, a.jsx)(r.Text, {
+                                color: "text-strong",
                                 variant: "text-sm/semibold",
-                                children: r,
+                                children: i,
                             }),
                             s &&
                                 (0, a.jsx)("span", {
@@ -186,7 +186,7 @@ function m(t) {
                                 }),
                         ],
                     }),
-                    (0, a.jsx)(i.Text, {
+                    (0, a.jsx)(r.Text, {
                         color: "text-default",
                         variant: "text-sm/normal",
                         children: n,
@@ -197,21 +197,21 @@ function m(t) {
     });
 }
 function u(t) {
-    let { title: e, messages: n, maxHeight: r } = t;
+    let { title: e, messages: n, maxHeight: i } = t;
     return (0, a.jsx)("div", {
         className: l.previewContainer,
-        style: { maxHeight: r },
+        style: { maxHeight: i },
         "aria-hidden": !0,
         children: (0, a.jsxs)("div", {
             className: l.preview,
             children: [
-                (0, a.jsx)(i.kBi, {
+                (0, a.jsx)(r.kBi, {
                     size: "md",
                     color: "currentColor",
                     className: l.forumPostIcon,
                 }),
-                (0, a.jsx)(i.Heading, {
-                    color: "header-primary",
+                (0, a.jsx)(r.Heading, {
+                    color: "text-strong",
                     variant: "heading-lg/semibold",
                     className: l.header,
                     children: e,
@@ -229,7 +229,7 @@ function u(t) {
                                             (0, a.jsxs)("div", {
                                                 className: l.actionBar,
                                                 children: [
-                                                    (0, a.jsxs)(i.Text, {
+                                                    (0, a.jsxs)(r.Text, {
                                                         color: "text-brand",
                                                         variant: "text-xs/medium",
                                                         className: l.fakeReactions,
@@ -243,12 +243,12 @@ function u(t) {
                                                             "17",
                                                         ],
                                                     }),
-                                                    (0, a.jsxs)(i.Text, {
+                                                    (0, a.jsxs)(r.Text, {
                                                         color: "text-muted",
                                                         variant: "text-xs/medium",
                                                         className: l.following,
                                                         children: [
-                                                            (0, a.jsx)(i.Dkj, {
+                                                            (0, a.jsx)(r.Dkj, {
                                                                 size: "xs",
                                                                 color: "currentColor",
                                                             }),
@@ -266,7 +266,7 @@ function u(t) {
                 }),
                 (0, a.jsx)("div", {
                     className: l.chatInput,
-                    children: (0, a.jsx)(i.Text, {
+                    children: (0, a.jsx)(r.Text, {
                         color: "text-muted",
                         variant: "text-sm/normal",
                         children: o.intl.string(o.t.YzpScd),
@@ -276,16 +276,16 @@ function u(t) {
         }),
     });
 }
-function p(t) {
+function f(t) {
     let { id: e } = t,
-        [n, o] = r.useState(0),
-        m = r.useRef(null),
-        { tags: p, posts: x, postPreview: f, ariaLabel: h } = (0, s.Z)(e);
+        [n, o] = i.useState(0),
+        m = i.useRef(null),
+        { tags: f, posts: x, postPreview: p, ariaLabel: b } = (0, s.Z)(e);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             o(0);
         }, [e]),
-        r.useEffect(() => {
+        i.useEffect(() => {
             var t;
             0 === n &&
                 (null == m || null == (t = m.current) ? void 0 : t.clientHeight) != null &&
@@ -294,7 +294,7 @@ function p(t) {
         (0, a.jsxs)("div", {
             className: l.container,
             role: "image",
-            "aria-label": h,
+            "aria-label": b,
             children: [
                 (0, a.jsxs)("div", {
                     ref: m,
@@ -303,11 +303,11 @@ function p(t) {
                     children: [
                         (0, a.jsx)("div", {
                             className: l.tags,
-                            children: p.map((t, e) =>
+                            children: f.map((t, e) =>
                                 (0, a.jsx)(
-                                    i.Text,
+                                    r.Text,
                                     {
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         variant: "text-xs/medium",
                                         className: l.tag,
                                         children: t,
@@ -318,11 +318,11 @@ function p(t) {
                         }),
                         (0, a.jsx)("div", {
                             className: l.posts,
-                            children: x.map((t, e) => (0, a.jsx)(d, g(c({}, t), { tags: p }), e)),
+                            children: x.map((t, e) => (0, a.jsx)(g, d(c({}, t), { tags: f }), e)),
                         }),
                     ],
                 }),
-                (0, a.jsx)(u, g(c({}, f), { maxHeight: n })),
+                (0, a.jsx)(u, d(c({}, p), { maxHeight: n })),
             ],
         })
     );

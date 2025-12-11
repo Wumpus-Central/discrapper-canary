@@ -14,7 +14,7 @@ var i = n(120356),
     _ = n(172751),
     m = n(228168),
     h = n(388032),
-    g = n(954677);
+    g = n(367701);
 function E(e) {
     let {
             user: t,
@@ -42,15 +42,15 @@ function E(e) {
                       children: e,
                   }),
         R = null != v && v.length > 0,
-        D = (0, c.D)(t),
-        w = (0, d.Z)({
+        w = (0, c.D)(t),
+        D = (0, d.Z)({
             userId: t.id,
             guildId: n,
             pendingDisplayNameStyles: O,
         }),
-        x = null != w;
+        x = null != D;
     return (0, r.jsxs)("div", {
-        className: a()(g.container, { [g.bot]: null != D }, S),
+        className: a()(g.container, { [g.bot]: null != w }, S),
         children: [
             (0, r.jsxs)("div", {
                 className: g.usernameRow,
@@ -61,7 +61,7 @@ function E(e) {
                                   variant: N,
                                   children: (0, r.jsx)(p.Z, {
                                       userName: b,
-                                      displayNameStyles: w,
+                                      displayNameStyles: D,
                                       effectDisplayType: f.F.ANIMATED,
                                       textClassName: g.nicknameWithDisplayNameStyles,
                                       shouldWrap: !0,
@@ -76,9 +76,9 @@ function E(e) {
                                   children: b,
                               }),
                     ),
-                    null != D &&
+                    null != w &&
                         (0, r.jsx)(u.Z, {
-                            type: D,
+                            type: w,
                             verified: t.isVerifiedBot(),
                         }),
                     null != y &&
@@ -91,7 +91,7 @@ function E(e) {
             (0, r.jsxs)("div", {
                 className: a()(g.tags, {
                     [g.pronouns]: R,
-                    [g.bot]: null != D,
+                    [g.bot]: null != w,
                 }),
                 children: [
                     !t.isProvisional &&
@@ -121,7 +121,7 @@ function E(e) {
                                     children: (0, r.jsx)(s.Text, {
                                         className: a()(g.pronounsText, I),
                                         variant: "text-sm/medium",
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         children: v,
                                     }),
                                 }),

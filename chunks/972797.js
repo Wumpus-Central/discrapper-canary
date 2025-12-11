@@ -1,4 +1,4 @@
-A.d(t, { Z: () => c }), A(388685);
+A.d(t, { Z: () => u }), A(388685);
 var n = A(54381),
     r = A(473749),
     a = A(120356),
@@ -7,10 +7,10 @@ var n = A(54381),
     o = A(481060),
     s = A(313201),
     d = A(388032),
-    u = A(750404);
-function c(e) {
-    let { disabled: t = !1, disabledTooltip: A, published: a, submitting: c = !1, onClick: g } = e,
-        f = (0, s.Dt)(),
+    c = A(289676);
+function u(e) {
+    let { disabled: t = !1, disabledTooltip: A, published: a, submitting: u = !1, onClick: f } = e,
+        g = (0, s.Dt)(),
         [p, m] = r.useState(a);
     return (
         r.useEffect(() => {
@@ -19,25 +19,25 @@ function c(e) {
         (0, n.jsxs)("div", {
             className: l()(
                 {
-                    [u.publishable]: !t && !a,
-                    [u.wasEverPublished]: p,
+                    [c.publishable]: !t && !a,
+                    [c.wasEverPublished]: p,
                 },
-                u.outerContainer,
+                c.outerContainer,
             ),
             children: [
                 (0, n.jsxs)("div", {
-                    className: u.container,
+                    className: c.container,
                     children: [
                         (0, n.jsxs)("div", {
-                            className: u.explanationColumn,
+                            className: c.explanationColumn,
                             children: [
                                 (0, n.jsx)(o.Heading, {
                                     variant: "text-sm/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: a ? d.intl.string(d.t.Vaaagc) : d.intl.string(d.t.oI8aQf),
                                 }),
                                 (0, n.jsx)(o.Text, {
-                                    id: f,
+                                    id: g,
                                     variant: "text-sm/normal",
                                     color: "text-default",
                                     children: a ? d.intl.string(d.t["0r6pbG"]) : d.intl.string(d.t["8MMHYG"]),
@@ -49,11 +49,11 @@ function c(e) {
                             icon: a ? o.kZF : o.T$Z,
                             iconPosition: "end",
                             variant: a ? "critical-primary" : "expressive",
-                            "aria-describedby": f,
+                            "aria-describedby": g,
                             "aria-disabled": t,
                             disabled: t,
-                            onClick: t ? void 0 : g,
-                            loading: c,
+                            onClick: t ? void 0 : f,
+                            loading: u,
                         }),
                     ],
                 }),

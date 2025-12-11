@@ -10,24 +10,24 @@ var r = t(54381),
     d = t(481060),
     p = t(13245),
     f = t(367907),
-    m = t(753972),
-    v = t(812206),
-    b = t(322155),
+    b = t(753972),
+    m = t(812206),
+    v = t(322155),
     h = t(522474),
     O = t(788983),
     j = t(695346),
-    P = t(390322),
-    x = t(961048),
+    x = t(390322),
+    P = t(961048),
     g = t(871499),
-    y = t(268353),
-    I = t(786915),
+    I = t(268353),
+    y = t(786915),
     C = t(800965),
     Z = t(107169),
-    _ = t(592125),
-    T = t(271383),
-    w = t(594174),
-    S = t(358085),
-    N = t(51144),
+    T = t(592125),
+    w = t(271383),
+    S = t(594174),
+    N = t(358085),
+    _ = t(51144),
     A = t(998502),
     k = t(228488),
     E = t(145597),
@@ -41,19 +41,19 @@ var r = t(54381),
     W = t(225639),
     M = t(981631),
     Y = t(388032),
-    J = t(896681);
+    J = t(153438);
 let V = D.u8.SIZE_24;
 function G(e) {
     let { applicationId: n, channelId: t } = e,
-        i = (0, a.e7)([v.Z], () => v.Z.getApplication(n)),
+        i = (0, a.e7)([m.Z], () => m.Z.getApplication(n)),
         G = (0, a.e7)([R.ZP], () => R.ZP.getSelfEmbeddedActivities().get(n)),
-        F = (0, a.e7)([_.Z], () => _.Z.getChannel(t)),
+        F = (0, a.e7)([T.Z], () => T.Z.getChannel(t)),
         H = j.Sb.useSetting(),
-        q = (0, a.Wu)([T.ZP], () => {
+        q = (0, a.Wu)([w.ZP], () => {
             var e;
             return null == F || null == G
                 ? []
-                : Array.from(null != (e = G.userIds) ? e : []).map((e) => T.ZP.getMember(F.guild_id, e));
+                : Array.from(null != (e = G.userIds) ? e : []).map((e) => w.ZP.getMember(F.guild_id, e));
         }, [G, F]),
         X = o.useMemo(() => {
             let e = new Map();
@@ -69,7 +69,7 @@ function G(e) {
                 var t;
                 if (null == e || e === D.ag) return null;
                 let o = X.get(e.id),
-                    i = null != (t = null == o ? void 0 : o.nick) ? t : N.ZP.getName(e);
+                    i = null != (t = null == o ? void 0 : o.nick) ? t : _.ZP.getName(e);
                 return (0, r.jsx)(
                     u.u,
                     {
@@ -93,16 +93,16 @@ function G(e) {
         ),
         Q = null == G ? void 0 : G.userIds,
         ee = (0, a.Wu)(
-            [w.default],
+            [S.default],
             () =>
                 Array.from(null != Q ? Q : [])
-                    .map((e) => w.default.getUser(e))
+                    .map((e) => S.default.getUser(e))
                     .filter((e) => null != e),
             [Q],
         ),
         en = o.useCallback(() => {
             let e = (0, E.getPID)();
-            p.Z.setInputLocked(!b.Z.isInputLocked(e), e);
+            p.Z.setInputLocked(!v.Z.isInputLocked(e), e);
         }, []),
         et = (0, U.P)(),
         {
@@ -115,7 +115,7 @@ function G(e) {
                     O.setAlwaysOnTop(M.KJ3.ACTIVITY_POPOUT, e);
                 }, []);
             return {
-                canStayOnTop: S.isPlatformEmbedded && A.ZP.supportsFeature(M.eRX.POPOUT_WINDOWS),
+                canStayOnTop: N.isPlatformEmbedded && A.ZP.supportsFeature(M.eRX.POPOUT_WINDOWS),
                 popoutWindowAlwaysOnTop: e,
                 handleStayOnTop: n,
             };
@@ -156,7 +156,7 @@ function G(e) {
         })(),
         es = o.useRef(null);
     if (null == i || null == G) return null;
-    let ed = (0, r.jsx)(m.Z, {
+    let ed = (0, r.jsx)(b.Z, {
         application: i,
         size: 24,
         className: J.appIcon,
@@ -181,7 +181,7 @@ function G(e) {
                                 ed,
                                 (0, r.jsx)(d.Text, {
                                     variant: "text-md/normal",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     className: J.applicationName,
                                     children: (0, r.jsx)(c.Z, { children: i.name }),
                                 }),
@@ -209,7 +209,7 @@ function G(e) {
                                 (0, r.jsxs)("div", {
                                     className: J.actionButtonsContainer,
                                     children: [
-                                        (0, r.jsx)(I.Z, {
+                                        (0, r.jsx)(y.Z, {
                                             appContext: M.IlC.POPOUT,
                                             applicationId: n,
                                             channel: F,
@@ -247,7 +247,7 @@ function G(e) {
                                                   },
                                               })
                                             : null,
-                                        (0, r.jsx)(y.Z, {
+                                        (0, r.jsx)(I.Z, {
                                             node: ea,
                                             guestWindow: ec,
                                             onClick: eu,
@@ -259,7 +259,7 @@ function G(e) {
                                                 position: "bottom",
                                                 renderPopout: (e) => {
                                                     let { closePopout: n } = e;
-                                                    return (0, r.jsx)(P.Z, {
+                                                    return (0, r.jsx)(x.Z, {
                                                         children: (0, r.jsx)(z.Z, {
                                                             application: i,
                                                             channelId: t,
@@ -271,7 +271,7 @@ function G(e) {
                                                     var t, r;
                                                     let { isShown: i } = n;
                                                     return (0, o.createElement)(
-                                                        x.Z,
+                                                        P.Z,
                                                         ((t = (function (e) {
                                                             for (var n = 1; n < arguments.length; n++) {
                                                                 var t = null != arguments[n] ? arguments[n] : {},

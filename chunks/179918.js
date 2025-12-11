@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(63063),
     _ = n(671728),
     m = n(388032),
-    h = n(671713);
+    h = n(407367);
 let g = (e) => {
     let { componentId: t, promotionBannerMarketingComponentFields: n } = e,
         { analyticsLocations: g } = (0, d.ZP)(),
@@ -50,7 +50,7 @@ let g = (e) => {
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: "heading-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: b.header,
                     }),
                     (0, r.jsx)(s.xvT, {

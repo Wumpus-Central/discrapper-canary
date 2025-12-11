@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(953529);
+n.d(t, { Z: () => x }), n(388685), n(953529);
 var l = n(54381),
     i = n(473749),
     r = n(120356),
@@ -13,12 +13,12 @@ var l = n(54381),
     h = n(339085),
     f = n(14263),
     g = n(388032),
-    j = n(830626);
-function v(e) {
-    let { guildId: t, option: n, selected: r, onSelect: v, hideMemberCount: x, canBeNew: y } = e,
+    j = n(876800);
+function x(e) {
+    let { guildId: t, option: n, selected: r, onSelect: x, hideMemberCount: v, canBeNew: y } = e,
         b = (0, u.wj)((0, p.ZP)()),
         [C, O] = i.useState(!1),
-        Z = C && !x,
+        Z = C && !v,
         w = i.useRef(null),
         { reducedMotion: _ } = i.useContext(d.Sfi),
         N = (0, c.e7)([h.ZP], () => {
@@ -95,7 +95,7 @@ function v(e) {
         children: (0, l.jsxs)(d.P3F, {
             className: j.optionButton,
             onClick: () => {
-                O(!r), v(!r);
+                O(!r), x(!r);
             },
             onMouseDown: () => S(!0),
             onMouseUp: () => S(!1),
@@ -113,7 +113,7 @@ function v(e) {
                     children: [
                         (0, l.jsx)(d.Text, {
                             variant: "text-md/medium",
-                            color: "header-primary",
+                            color: "text-strong",
                             children: n.title,
                         }),
                         n.description.length > 0

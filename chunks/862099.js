@@ -19,8 +19,8 @@ var r,
     g = n(703656),
     h = n(922482),
     m = n(565799),
-    _ = n(501655),
-    b = n(192079),
+    b = n(501655),
+    _ = n(192079),
     E = n(427679),
     O = n(448206),
     v = n(496675),
@@ -42,7 +42,7 @@ var r,
     M = n(765305),
     k = n(981631),
     U = n(388032),
-    G = n(507795);
+    G = n(439738);
 let B = l.memo(function (e) {
     let {
         heading: t,
@@ -80,7 +80,7 @@ let B = l.memo(function (e) {
                 ],
             }),
             (0, i.jsx)(c.Heading, {
-                color: "header-primary",
+                color: "text-strong",
                 variant: "heading-md/semibold",
                 className: G.eventName,
                 children: o,
@@ -186,11 +186,11 @@ function F(e) {
         {
             startDateTimeString: h,
             upcomingEvent: m,
-            diffMinutes: _,
+            diffMinutes: b,
         } = (0, R.ub)(f.toISOString(), null == g ? void 0 : g.toISOString()),
-        b = m
-            ? _ > 0
-                ? U.intl.formatToPlainString(U.t.PQlCWk, { minutes: _ })
+        _ = m
+            ? b > 0
+                ? U.intl.formatToPlainString(U.t.PQlCWk, { minutes: b })
                 : U.intl.string(U.t.WINqKV)
             : U.intl.formatToPlainString(U.t.DC6h3G, { date: h });
     return (
@@ -210,7 +210,7 @@ function F(e) {
                             onClick: () => (0, S.bO)({ eventId: n.id }),
                             className: G.eventNameClickable,
                             children: (0, i.jsx)(c.Text, {
-                                color: "header-primary",
+                                color: "text-strong",
                                 variant: "text-md/semibold",
                                 className: G.eventName,
                                 children: n.name,
@@ -247,7 +247,7 @@ function F(e) {
                             color: "text-default",
                             variant: "text-xs/normal",
                             className: G.startTime,
-                            children: b,
+                            children: _,
                         }),
                     ],
                 }),
@@ -338,10 +338,10 @@ function W(e) {
 }
 function q(e) {
     let { stageInstance: t, channel: n } = e,
-        r = (0, o.Wu)([m.Z], () => [...new Set(m.Z.getMutableParticipants(n.id, _.pV.SPEAKER).map((e) => e.user))], [
+        r = (0, o.Wu)([m.Z], () => [...new Set(m.Z.getMutableParticipants(n.id, b.pV.SPEAKER).map((e) => e.user))], [
             n.id,
         ]),
-        l = (0, o.e7)([m.Z], () => m.Z.getParticipantCount(n.id, _.pV.AUDIENCE), [n.id]),
+        l = (0, o.e7)([m.Z], () => m.Z.getParticipantCount(n.id, b.pV.AUDIENCE), [n.id]),
         a = U.intl.formatToPlainString(U.t["+v2pN2"], { count: "".concat(l) });
     return (0, i.jsx)(B, {
         onClickCloseIcon: () => (0, N.ji)({ stageId: null == t ? void 0 : t.id }),
@@ -412,7 +412,7 @@ function Q(e) {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: G.userNames,
-                                    children: (0, b.ER)(a, d, null == t ? void 0 : t.id, n.length),
+                                    children: (0, _.ER)(a, d, null == t ? void 0 : t.id, n.length),
                                 }),
                             ],
                         })

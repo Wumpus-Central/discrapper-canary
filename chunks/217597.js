@@ -41,7 +41,7 @@ function s(e) {
             (0, r.jsx)(l.Text, {
                 tag: "span",
                 variant: "heading-xl/medium",
-                color: "header-primary",
+                color: "text-strong",
                 children: s,
             }),
             o,

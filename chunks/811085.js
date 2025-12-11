@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(959562),
     p = n(800530),
     _ = n(388032),
-    m = n(498714);
+    m = n(750412);
 let h = 36;
 function g() {
     let e = (0, d.P)(),
@@ -102,7 +102,7 @@ function g() {
                         className: m.title,
                         children: [
                             (0, r.jsx)(l.Heading, {
-                                color: "header-primary",
+                                color: "text-strong",
                                 variant: "heading-lg/normal",
                                 children: _.intl.format(O, {
                                     hook: (e) =>

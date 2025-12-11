@@ -7,7 +7,7 @@ var r = n(54381),
     l = n(955204),
     c = n(818765),
     u = n(674680),
-    d = n(229450);
+    d = n(854161);
 let f = (e) => {
         let { color: t } = e;
         return (0, r.jsxs)("svg", {
@@ -99,7 +99,7 @@ function _(e) {
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: "text-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: a(),
                     }),
                     (0, r.jsx)(s.Text, {

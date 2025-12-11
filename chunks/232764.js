@@ -9,7 +9,7 @@ n(473749);
 var i = n(481060),
     l = n(983135),
     a = n(388032),
-    s = n(275811);
+    s = n(207555);
 function o() {
     return (0, r.jsxs)("div", {
         className: s.container,
@@ -22,7 +22,7 @@ function o() {
             }),
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
-                color: "header-primary",
+                color: "text-strong",
                 className: s.header,
                 children: a.intl.string(a.t.e6spZv),
             }),
@@ -55,7 +55,7 @@ function c() {
             }),
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
-                color: "header-primary",
+                color: "text-strong",
                 className: s.header,
                 children: a.intl.string(a.t.nRE3tc),
             }),
@@ -88,7 +88,7 @@ function d() {
             }),
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
-                color: "header-primary",
+                color: "text-strong",
                 className: s.header,
                 children: a.intl.string(a.t.VkaI6l),
             }),
@@ -121,7 +121,7 @@ function u() {
             }),
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
-                color: "header-primary",
+                color: "text-strong",
                 className: s.header,
                 children: a.intl.string(a.t["3SM68F"]),
             }),

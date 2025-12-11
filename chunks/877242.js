@@ -14,13 +14,13 @@ var r = n(54381),
     v = n(215113),
     E = n(684245),
     g = n(388032),
-    O = n(273339);
+    O = n(209668);
 function h() {
     let { quest: e, sourceQuestContent: t, isPortrait: n, onClose: l } = o.useContext(v.VideoQuestModalContext),
         h = (0, m.aM)(),
         b = (0, p.tP)(e),
-        C = o.useRef(null),
-        { isHoveringOrFocusing: S } = (0, c.Z)(C),
+        S = o.useRef(null),
+        { isHoveringOrFocusing: C } = (0, c.Z)(S),
         _ = (0, E.e)({
             quest: e,
             onClose: l,
@@ -38,13 +38,13 @@ function h() {
                 className: i()(O.contentHeaderGameInfo, O.contentHeaderGameInfoHoverable, {
                     [O.contentHeaderGameInfoHoverableExpired]: b,
                 }),
-                ref: C,
+                ref: S,
                 children: [
                     (0, r.jsx)("div", {
                         className: O.contentFooterAdDetailedInfo,
                         children: (0, r.jsx)(s.Heading, {
                             variant: "heading-md/medium",
-                            color: "header-primary",
+                            color: "text-strong",
                             className: i()(O.adDetailsTextSecondary, { [O.adDetailsTextSecondaryPortrait]: n }),
                             lineClamp: n ? void 0 : 1,
                             children: g.intl.format(g.t.EQa7os, { questName: e.config.messages.questName }),
@@ -60,7 +60,7 @@ function h() {
                                 }),
                                 children: (0, r.jsx)(s.owK, {
                                     size: "xs",
-                                    color: S ? s.TVs.colors.ICON_STRONG.css : s.TVs.colors.ICON_MUTED.css,
+                                    color: C ? s.TVs.colors.ICON_STRONG.css : s.TVs.colors.ICON_MUTED.css,
                                 }),
                             }),
                             (0, r.jsx)(s.Heading, {
@@ -69,7 +69,7 @@ function h() {
                                     [O.adDetailsTextPrimaryPortrait]: n,
                                     [O.addFourPxMarginRight]: n,
                                 }),
-                                color: S ? "text-strong" : "text-subtle",
+                                color: C ? "text-strong" : "text-subtle",
                                 lineClamp: 1,
                                 children: e.config.messages.gamePublisher,
                             }),
@@ -86,7 +86,7 @@ function h() {
                                               }),
                                               variant: "heading-sm/medium",
                                               lineClamp: n ? void 0 : 1,
-                                              color: S ? "text-strong" : "text-subtle",
+                                              color: C ? "text-strong" : "text-subtle",
                                               children: y,
                                           }),
                                       ],

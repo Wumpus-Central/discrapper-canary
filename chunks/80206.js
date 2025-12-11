@@ -3,12 +3,12 @@ var r = n(54381);
 n(473749);
 var i = n(793030),
     s = n(159691),
-    l = n(481060),
-    a = n(388905),
-    o = n(294707);
+    a = n(481060),
+    l = n(388905),
+    o = n(253623);
 function c(e) {
     let { title: t, subtitle: n, buttonText: c, image: u, onButtonClick: d, loading: h } = e;
-    return (0, r.jsx)(a.ZP, {
+    return (0, r.jsx)(l.ZP, {
         className: o.container,
         children: (0, r.jsxs)(i.Kqy, {
             align: "center",
@@ -30,10 +30,10 @@ function c(e) {
                                         className: o.image,
                                         children: u,
                                     }),
-                                h && (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE }),
+                                h && (0, r.jsx)(a.$jN, { type: a.$jN.Type.SPINNING_CIRCLE }),
                                 (0, r.jsx)(i.X6q, {
                                     variant: "heading-xl/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: t,
                                 }),
                             ],

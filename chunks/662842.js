@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(924301),
     h = n(504160),
     m = n(151864),
-    _ = n(725436),
-    b = n(497656),
+    b = n(725436),
+    _ = n(497656),
     E = n(554747),
     O = n(230900),
     v = n(854698),
@@ -31,10 +31,10 @@ var r = n(54381),
     Z = n(981631),
     w = n(765305),
     L = n(388032),
-    R = n(454703);
+    R = n(156132);
 function D(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
-        l = (0, b.y)(t.id),
+        l = (0, _.y)(t.id),
         d = (0, E.k5)(t.id),
         j = (0, s.e7)([T.Z], () => T.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
         { isStageNoticeHidden: D, isEventNoticeHidden: k } = (0, s.cj)(
@@ -81,7 +81,7 @@ function D(e) {
                         isStageNoticeHidden: f,
                         isStudyRoomNotice: m,
                     } = e,
-                    b = null != n && null != i && !f,
+                    _ = null != n && null != i && !f,
                     E = null != t ? (0, v.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
@@ -104,7 +104,7 @@ function D(e) {
                     };
                 }
                 if (null == t || d) {
-                    if (b) {
+                    if (_) {
                         let e = L.intl.string(L.t.ZYO5OK);
                         return (
                             (null == a ? void 0 : a.speaker)
@@ -149,7 +149,7 @@ function D(e) {
                             }
                         );
                     }
-                } else if (t.entity_type === w.WX.STAGE_INSTANCE && b) {
+                } else if (t.entity_type === w.WX.STAGE_INSTANCE && _) {
                     let e = L.intl.string(L.t.ZYO5OK);
                     return (
                         (null == a ? void 0 : a.speaker)
@@ -200,7 +200,7 @@ function D(e) {
                     return {
                         noticeType: 1,
                         title: t.name,
-                        location: (0, _.m)(e, !0),
+                        location: (0, b.m)(e, !0),
                         locationIcon: (0, r.jsx)(c._tJ, {
                             size: "custom",
                             color: "currentColor",
@@ -343,7 +343,7 @@ function D(e) {
                       }),
                   (0, r.jsx)(c.Text, {
                       variant: "text-md/medium",
-                      color: "header-primary",
+                      color: "text-strong",
                       className: a()(R.title, R.live),
                       children: W,
                   }),

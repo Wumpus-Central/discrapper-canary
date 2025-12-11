@@ -12,18 +12,18 @@ var r = n(54381),
     p = n(594190),
     h = n(320724),
     m = n(751571),
-    _ = n(616022),
-    g = n(63063),
-    x = n(358085),
-    v = n(747268),
+    g = n(616022),
+    x = n(63063),
+    v = n(358085),
+    b = n(747268),
     j = n(215915),
-    S = n(855403),
-    b = n(567126),
+    _ = n(855403),
+    S = n(567126),
     y = n(615161),
     C = n(761274),
-    O = n(128057),
+    O = n(297940),
     w = n(388032),
-    Z = n(602804);
+    Z = n(132011);
 function P(e) {
     let { source: t } = e;
     return t.id.startsWith(c.vA.SCREEN)
@@ -91,7 +91,7 @@ function E(e) {
                 deviceSources: l,
                 screenSources: s,
                 sourceType: o,
-                fetchingSources: g,
+                fetchingSources: x,
                 selectedSource: O,
                 discordSourceId: P,
                 hasPermission: E,
@@ -105,30 +105,30 @@ function E(e) {
             for (let n of e) null != n.windowHandle && (t[n.windowHandle] = n.exeName);
             return t;
         }),
-        M = (0, d.e7)([_.Z], () => _.Z.quests),
-        k = (0, b.jx)(M, A, n);
+        M = (0, d.e7)([g.Z], () => g.Z.quests),
+        k = (0, S.jx)(M, A, n);
     i.useEffect(() => ((0, h.Ky)(), h.P7), []);
     let D = i.useMemo(
         () =>
             N
                 ? [...n].sort(
                       (e, t) =>
-                          (0, b.ov)(t, null == k ? void 0 : k.source.id, P, R) -
-                          (0, b.ov)(e, null == k ? void 0 : k.source.id, P, R),
+                          (0, S.ov)(t, null == k ? void 0 : k.source.id, P, R) -
+                          (0, S.ov)(e, null == k ? void 0 : k.source.id, P, R),
                   )
                 : n,
         [k, N, n, P, R],
     );
-    if (g) {
+    if (x) {
         if (!1 === E) {
             let e = !1;
-            if ((0, x.isMac)()) {
+            if ((0, v.isMac)()) {
                 var L, B;
                 let t =
                     null === f.Z || void 0 === f.Z || null == (B = f.Z.remoteApp) || null == (L = B.getVersion)
                         ? void 0
                         : L.call(B);
-                e = !v.o || "0.0.0" === t || a().satisfies(t, "0.0.363");
+                e = !b.o || "0.0.0" === t || a().satisfies(t, "0.0.363");
             }
             return (0, r.jsxs)("div", {
                 className: Z.errorBox,
@@ -167,7 +167,7 @@ function E(e) {
                           source: e,
                           selected:
                               null != O && "windowHandle" in O
-                                  ? (0, S.Z)(e.id, O.windowHandle)
+                                  ? (0, _.Z)(e.id, O.windowHandle)
                                   : (null == O ? void 0 : O.id) === e.id,
                       },
                       e.id,
@@ -186,7 +186,7 @@ function T() {
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-lg/medium",
-                color: "header-primary",
+                color: "text-strong",
                 className: Z.emptyHeader,
                 children: w.intl.string(O.default["/z3YaZ"]),
             }),
@@ -198,7 +198,7 @@ function T() {
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-sm/semibold",
-                children: w.intl.format(O.default.xpVzr3, { helpdeskURL: g.Z.getArticleURL(360040816151) }),
+                children: w.intl.format(O.default.xpVzr3, { helpdeskURL: x.Z.getArticleURL(360040816151) }),
             }),
         ],
     });

@@ -184,7 +184,7 @@ function N() {
             (0, r.jsx)(c.Text, {
                 className: I.emptyHeader,
                 variant: "text-lg/medium",
-                color: "header-primary",
+                color: "text-strong",
                 children: P.intl.string(Z.default.sWGfr9),
             }),
             (0, r.jsx)(c.Text, {

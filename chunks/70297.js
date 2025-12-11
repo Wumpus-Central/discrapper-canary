@@ -1,104 +1,104 @@
-t.d(n, {
+n.d(t, {
     Z: () => C,
     q: () => x,
 }),
-    t(953529);
-var r = t(54381);
-t(473749);
-var l = t(120356),
-    i = t.n(l),
-    a = t(704215),
-    o = t(481060),
-    s = t(266454),
-    c = t(605236),
-    d = t(434404),
-    u = t(707076),
-    p = t(398758),
-    h = t(981631),
-    m = t(921944),
-    f = t(388032),
-    g = t(886461),
-    _ = t(697611);
+    n(953529);
+var a = n(54381);
+n(473749);
+var r = n(120356),
+    l = n.n(r),
+    i = n(704215),
+    o = n(481060),
+    c = n(266454),
+    d = n(605236),
+    s = n(434404),
+    u = n(707076),
+    b = n(398758),
+    p = n(981631),
+    f = n(921944),
+    h = n(388032),
+    m = n(408302),
+    g = n(697611);
 function x(e) {
-    return (0, p.te)(e) ? 250 : 152;
+    return (0, b.te)(e) ? 250 : 152;
 }
 function C(e) {
-    let { guild: n } = e,
-        t = (0, p.te)(n.id),
-        l = (0, s.Nj)(a.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL),
-        x = t && !l ? a.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL : a.z.CHANNEL_BROWSER_NUX;
-    (0, c.kk)(x);
-    let C = t
-        ? (0, r.jsxs)(r.Fragment, {
+    let { guild: t } = e,
+        n = (0, b.te)(t.id),
+        r = (0, c.Nj)(i.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL),
+        x = n && !r ? i.z.GUILD_HEADER_COMMUNITY_ONBOARDING_ADMIN_UPSELL : i.z.CHANNEL_BROWSER_NUX;
+    (0, d.kk)(x);
+    let C = n
+        ? (0, a.jsxs)(a.Fragment, {
               children: [
-                  (0, r.jsxs)("div", {
+                  (0, a.jsxs)("div", {
                       children: [
-                          (0, r.jsx)(o.Heading, {
-                              className: g.heading,
+                          (0, a.jsx)(o.Heading, {
+                              className: m.heading,
                               color: "always-white",
                               variant: "heading-lg/semibold",
-                              children: f.intl.string(f.t.AalzkJ),
+                              children: h.intl.string(h.t.AalzkJ),
                           }),
-                          (0, r.jsx)(o.Text, {
-                              className: g.description,
+                          (0, a.jsx)(o.Text, {
+                              className: m.description,
                               variant: "text-md/normal",
                               color: "always-white",
-                              children: f.intl.string(f.t.CXh95Z),
+                              children: h.intl.string(h.t.CXh95Z),
                           }),
-                          (0, r.jsx)(o.Button, {
+                          (0, a.jsx)(o.Button, {
                               variant: "overlay-primary",
                               onClick: () => {
-                                  d.Z.open(n.id, h.pNK.ONBOARDING), (0, s.Q3)(x, { dismissAction: m.L.PRIMARY });
+                                  s.Z.open(t.id, p.pNK.ONBOARDING), (0, c.Q3)(x, { dismissAction: f.L.PRIMARY });
                               },
-                              text: f.intl.string(f.t["+OtO4e"]),
+                              text: h.intl.string(h.t["+OtO4e"]),
                           }),
                       ],
                   }),
-                  (0, r.jsx)(u.j, { isTooltip: !0 }),
+                  (0, a.jsx)(u.j, { isTooltip: !0 }),
               ],
           })
-        : (0, r.jsxs)("div", {
-              className: g.nuxContent,
+        : (0, a.jsxs)("div", {
+              className: m.nuxContent,
               children: [
-                  (0, r.jsx)("img", {
+                  (0, a.jsx)("img", {
                       width: 180,
-                      className: g.image,
-                      src: _,
+                      className: m.image,
+                      src: g,
                       alt: "",
                       "aria-hidden": !0,
                   }),
-                  (0, r.jsxs)("div", {
+                  (0, a.jsxs)("div", {
                       children: [
-                          (0, r.jsx)(o.Heading, {
-                              className: g.heading,
+                          (0, a.jsx)(o.Heading, {
+                              className: m.heading,
                               variant: "heading-lg/semibold",
-                              color: "header-primary",
-                              children: f.intl.string(f.t.utqWEC),
+                              color: "text-strong",
+                              children: h.intl.string(h.t.utqWEC),
                           }),
-                          (0, r.jsx)(o.Text, {
+                          (0, a.jsx)(o.Text, {
                               variant: "text-md/normal",
                               color: "text-default",
-                              children: f.intl.string(f.t["+9etcM"]),
+                              children: h.intl.string(h.t["+9etcM"]),
                           }),
-                          (0, r.jsx)(o.Text, {
-                              className: g.tip,
+                          (0, a.jsx)(o.Text, {
+                              className: m.tip,
                               variant: "text-md/normal",
                               color: "text-default",
-                              children: f.intl.format(f.t.Z0axjk, {}),
+                              children: h.intl.format(h.t.Z0axjk, {}),
                           }),
                       ],
                   }),
               ],
           });
-    return (0, r.jsxs)("div", {
-        className: i()(g.container, { [g.adminUpsell]: t }),
+    return (0, a.jsxs)("div", {
+        className: l()(m.container, { [m.adminUpsell]: n }),
         children: [
-            (0, r.jsx)(o.P3F, {
-                className: g.closeButton,
+            (0, a.jsx)(o.P3F, {
+                className: m.closeButton,
                 onClick: () => {
-                    (0, s.Q3)(x, { dismissAction: m.L.DISMISS });
+                    (0, c.Q3)(x, { dismissAction: f.L.DISMISS });
                 },
-                children: (0, r.jsx)(o.Dio, {
+                children: (0, a.jsx)(o.Dio, {
                     size: "md",
                     color: "currentColor",
                 }),

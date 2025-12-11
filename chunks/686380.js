@@ -26,9 +26,9 @@ var r = n(54381),
     A = n(474936),
     N = n(981631),
     P = n(388032),
-    R = n(269143),
-    D = n(295234);
-function w(e, t, n) {
+    R = n(218977),
+    w = n(746838);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
@@ -230,7 +230,7 @@ class U extends i.Component {
             }),
             i = this.isSender ? n : t,
             a = (0, r.jsx)(c.Eep, {
-                src: D.Z,
+                src: w.Z,
                 height: 84,
                 width: 144,
                 className: R.imgDMEmbedXP,
@@ -262,7 +262,7 @@ class U extends i.Component {
                                     children: [
                                         (0, r.jsx)(c.Heading, {
                                             variant: "heading-md/semibold",
-                                            color: "header-primary",
+                                            color: "text-strong",
                                             children: o,
                                         }),
                                         (0, r.jsx)(c.Text, {
@@ -285,15 +285,15 @@ class U extends i.Component {
     }
     constructor(e) {
         super(e),
-            w(this, "trialOffer", void 0),
-            w(this, "referralsSent", void 0),
-            w(this, "currentUser", void 0),
-            w(this, "recipientHasNitro", void 0),
-            w(this, "trialEndsAt", void 0),
-            w(this, "analyticsLocations", void 0),
-            w(this, "offerExpired", void 0),
-            w(this, "isSender", void 0),
-            w(this, "compact", void 0),
+            D(this, "trialOffer", void 0),
+            D(this, "referralsSent", void 0),
+            D(this, "currentUser", void 0),
+            D(this, "recipientHasNitro", void 0),
+            D(this, "trialEndsAt", void 0),
+            D(this, "analyticsLocations", void 0),
+            D(this, "offerExpired", void 0),
+            D(this, "isSender", void 0),
+            D(this, "compact", void 0),
             (this.trialOffer = e.trialOffer),
             (this.referralsSent = e.referralsSent),
             (this.currentUser = e.currentUser),

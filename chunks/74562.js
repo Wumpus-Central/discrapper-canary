@@ -9,7 +9,7 @@ var i = t(442837),
     s = t(496675),
     u = t(981631),
     d = t(388032),
-    g = t(776873);
+    g = t(435663);
 function p(e) {
     let { guildId: n, onClose: t } = e,
         p = (0, i.e7)([o.Z, s.Z], () => {
@@ -32,7 +32,7 @@ function p(e) {
                 }),
             }),
             (0, r.jsx)(l.Heading, {
-                color: "header-primary",
+                color: "text-strong",
                 variant: "heading-xl/semibold",
                 className: g.title,
                 children: d.intl.string(d.t["WgZ+3D"]),

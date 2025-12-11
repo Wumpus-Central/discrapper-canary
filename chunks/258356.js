@@ -78,7 +78,7 @@ function g(e) {
                         children: [
                             (0, r.jsxs)(i.Text, {
                                 className: h.guildName,
-                                color: "header-primary",
+                                color: "text-strong",
                                 variant: "text-sm/medium",
                                 tag: "span",
                                 children: [

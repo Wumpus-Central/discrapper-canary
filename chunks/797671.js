@@ -2,19 +2,19 @@ n.d(t, { default: () => L }), n(539854), n(953529), n(388685), n(457542);
 var l = n(54381),
     i = n(473749),
     r = n(990547),
-    o = n(793030),
-    a = n(442837),
+    a = n(793030),
+    o = n(442837),
     c = n(283693),
     s = n(199849),
     u = n(755721),
     d = n(481060),
     p = n(911969),
-    _ = n(241865),
-    h = n(408987),
+    f = n(241865),
+    b = n(408987),
     g = n(312146),
-    f = n(60222),
-    b = n(131704),
-    x = n(324067),
+    h = n(60222),
+    x = n(131704),
+    _ = n(324067),
     m = n(430824),
     v = n(934415),
     C = n(700785),
@@ -22,7 +22,7 @@ var l = n(54381),
     w = n(981631),
     y = n(231338),
     T = n(388032),
-    I = n(920454);
+    I = n(549922);
 function L(e) {
     var t, n;
     let { guildId: L, transitionState: R, onSubmit: S, onClose: j } = e,
@@ -30,8 +30,8 @@ function L(e) {
         [k, D] = i.useState(w.d4z.GUILD_TEXT),
         [Z, A] = i.useState(""),
         [B, G] = i.useState(!1),
-        O = (0, a.e7)([m.Z], () => m.Z.getGuild(L), [L]),
-        H = (0, f.m)(L),
+        O = (0, o.e7)([m.Z], () => m.Z.getGuild(L), [L]),
+        H = (0, h.m)(L),
         U = (0, g.Ui)(O),
         V = i.useMemo(
             () =>
@@ -74,7 +74,7 @@ function L(e) {
                                 isBeta: !0,
                             }),
                         i.map((e) => {
-                            let { icon: t, label: n, value: i, description: r, isBeta: o } = e;
+                            let { icon: t, label: n, value: i, description: r, isBeta: a } = e;
                             return {
                                 name: (0, l.jsxs)("div", {
                                     className: I.channelOptionWrapper,
@@ -84,8 +84,8 @@ function L(e) {
                                             children: [
                                                 (0, l.jsxs)(d.Text, {
                                                     variant: "text-md/normal",
-                                                    color: "header-primary",
-                                                    children: [n, (0, l.jsx)(_.p, { isBeta: o })],
+                                                    color: "text-strong",
+                                                    children: [n, (0, l.jsx)(f.p, { isBeta: a })],
                                                 }),
                                                 (0, l.jsx)(d.Text, {
                                                     variant: "text-xs/normal",
@@ -107,7 +107,7 @@ function L(e) {
                 }),
             [H, U],
         ),
-        W = (0, a.e7)([x.Z], () => x.Z.getCategories(L)._categories, [L]),
+        W = (0, o.e7)([_.Z], () => _.Z.getCategories(L)._categories, [L]),
         z = i.useMemo(
             () =>
                 W.map((e) => {
@@ -157,7 +157,7 @@ function L(e) {
             })
                 .then(
                     (e) => {
-                        h.Z.checkGuildTemplateDirty(L), S(e.body.id), j();
+                        b.Z.checkGuildTemplateDirty(L), S(e.body.id), j();
                     },
                     (e) => {},
                 )
@@ -165,7 +165,7 @@ function L(e) {
                     G(!1);
                 });
         },
-        children: (0, l.jsx)(o.Modal, {
+        children: (0, l.jsx)(a.Modal, {
             transitionState: R,
             title: T.intl.string(T.t["fUYU+j"]),
             onClose: j,
@@ -205,7 +205,7 @@ function L(e) {
                         label: T.intl.string(T.t.PVbHDl),
                         value: Z,
                         onChange: function (e) {
-                            (0, b.zi)(k) && (e = (0, v.Nj)(e)), A(e);
+                            (0, x.zi)(k) && (e = (0, v.Nj)(e)), A(e);
                         },
                         maxLength: w.HN8,
                         placeholder: T.intl.string(T.t["bw/b8E"]),

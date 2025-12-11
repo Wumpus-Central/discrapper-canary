@@ -6,31 +6,31 @@ var r = n(442837),
     a = n(536442),
     s = n(142497),
     o = n(388032),
-    c = n(785281),
+    c = n(927476),
     u = n(137707);
 let d = () =>
     (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(i.Text, {
-                color: "header-primary",
+                color: "text-strong",
                 variant: "text-xs/normal",
                 className: c.inlineText,
                 children: o.intl.string(o.t.GcZzp2),
             }),
             (0, l.jsx)(i.Text, {
-                color: "header-primary",
+                color: "text-strong",
                 variant: "text-xs/normal",
                 className: c.inlineText,
                 children: o.intl.string(o.t["/NEGrO"]),
             }),
             (0, l.jsx)(i.Text, {
-                color: "header-primary",
+                color: "text-strong",
                 variant: "text-xs/normal",
                 className: c.inlineText,
                 children: o.intl.string(o.t.eUbuHL),
             }),
             (0, l.jsx)(i.Text, {
-                color: "header-primary",
+                color: "text-strong",
                 variant: "text-xs/normal",
                 className: c.inlineText,
                 children: o.intl.string(o.t.sCAZeI),

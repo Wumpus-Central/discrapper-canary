@@ -15,8 +15,8 @@ var r = n(54381),
     h = n(572995),
     g = n(981631),
     E = n(869783),
-    b = n(642650),
-    y = n(595475);
+    b = n(291049),
+    y = n(538654);
 function O(e, t, n) {
     return (
         t in e
@@ -142,8 +142,8 @@ let C = (e) => {
                 isReducedMotion: N,
                 onClick: P,
                 badgeText: R,
-                size: D,
-                enablePremiumBrandRefreshDesign: w,
+                size: w,
+                enablePremiumBrandRefreshDesign: D,
             } = e,
             x = (0, m.rO)(),
             L = i.useRef(null),
@@ -162,17 +162,17 @@ let C = (e) => {
             G = () => {
                 null == L.current || N || ((j.current = L.current.currentTime), L.current.pause());
             },
-            Z = w ? y : b;
-        t = w
-            ? D === h.y$.LARGE
+            Z = D ? y : b;
+        t = D
+            ? w === h.y$.LARGE
                 ? "heading-xxl/bold"
                 : "heading-xl/bold"
-            : D === h.y$.SMALL
+            : w === h.y$.SMALL
               ? "heading-xl/extrabold"
               : "heading-xxl/extrabold";
-        let B = () =>
+        let F = () =>
                 (0, r.jsxs)("div", {
-                    className: o()(Z.textBox, Z["".concat(D)]),
+                    className: o()(Z.textBox, Z["".concat(w)]),
                     children: [
                         (0, r.jsxs)("div", {
                             children: [
@@ -187,15 +187,15 @@ let C = (e) => {
                                     }),
                                 (0, r.jsx)(d.Heading, {
                                     variant: t,
-                                    color: "header-primary",
-                                    className: o()(Z.header, !w && Z["".concat(D)]),
+                                    color: "text-strong",
+                                    className: o()(Z.header, !D && Z["".concat(w)]),
                                     children: a,
                                 }),
                             ],
                         }),
                         (0, r.jsx)(d.Text, {
                             variant: "text-md/medium",
-                            color: w ? "text-strong" : "text-muted",
+                            color: D ? "text-strong" : "text-muted",
                             className: Z.description,
                             children: l,
                         }),
@@ -205,13 +205,13 @@ let C = (e) => {
                                 descriptionCta: c,
                                 onClick: P,
                                 debouncedOnClickAnalytics: k,
-                                enablePremiumBrandRefreshDesign: w,
+                                enablePremiumBrandRefreshDesign: D,
                             }),
                     ],
                 }),
-            F = () =>
+            B = () =>
                 (0, r.jsx)("div", {
-                    className: o()(Z.boxArtContainer, Z["".concat(D)]),
+                    className: o()(Z.boxArtContainer, Z["".concat(w)]),
                     children: (0, r.jsx)(
                         p.Z,
                         {
@@ -234,19 +234,19 @@ let C = (e) => {
             H = () =>
                 V
                     ? (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(B, {}), (0, r.jsx)(F, {})],
+                          children: [(0, r.jsx)(F, {}), (0, r.jsx)(B, {})],
                       })
                     : (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(F, {}), (0, r.jsx)(B, {})],
+                          children: [(0, r.jsx)(B, {}), (0, r.jsx)(F, {})],
                       }),
             Y = {
-                className: o()(w ? y.backgroundColor : M, Z.boxContainer, Z["".concat(D)], w && y.gradientBackground),
+                className: o()(D ? y.backgroundColor : M, Z.boxContainer, Z["".concat(w)], D && y.gradientBackground),
                 onMouseEnter: U,
                 onFocus: U,
                 onBlur: G,
                 onMouseLeave: G,
             };
-        return w
+        return D
             ? (0, r.jsx)(
                   d.$1m,
                   I(v({}, Y), {

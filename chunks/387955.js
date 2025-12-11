@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => g });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -9,41 +9,41 @@ var i = n(120356),
     c = n(572264),
     u = n(981631),
     d = n(388032),
-    m = n(631936),
-    g = n(849399);
-function f(e) {
+    f = n(991119),
+    m = n(849399);
+function g(e) {
     let { user: t } = e;
     return (0, r.jsxs)("div", {
-        className: m.infoContainer,
+        className: f.infoContainer,
         children: [
             (0, r.jsx)("img", {
-                className: m.infoPicture,
+                className: f.infoPicture,
                 alt: "",
-                src: g,
+                src: m,
             }),
             (0, r.jsx)(o.Heading, {
-                className: m.title,
-                color: "header-primary",
+                className: f.title,
+                color: "text-strong",
                 variant: "heading-xl/bold",
                 children: d.intl.format(d.t["au+lPv"], { n: t.tag }),
             }),
             (0, r.jsx)(o.Text, {
-                className: m.subtitleInfo,
+                className: f.subtitleInfo,
                 color: "text-default",
                 variant: "text-md/medium",
                 children: d.intl.format(d.t["5fwX56"], {}),
             }),
             (0, r.jsx)(o.Text, {
-                className: m.prompt,
+                className: f.prompt,
                 color: "text-default",
                 variant: "text-sm/medium",
                 children: d.intl.format(d.t.i2vB8z, { helpdeskArticle: s.Z.getArticleURL(u.BhN.POMELO_FAQ) }),
             }),
             (0, r.jsxs)("div", {
-                className: a()([m.infoItem, m.infoItemSpacing]),
+                className: a()([f.infoItem, f.infoItemSpacing]),
                 children: [
                     (0, r.jsx)("div", {
-                        className: m.infoIcon,
+                        className: f.infoIcon,
                         children: (0, r.jsx)(o.iFz, {
                             size: "custom",
                             color: "currentColor",
@@ -59,10 +59,10 @@ function f(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: a()([m.infoItem, m.infoItemSpacing]),
+                className: a()([f.infoItem, f.infoItemSpacing]),
                 children: [
                     (0, r.jsx)("div", {
-                        className: m.infoIcon,
+                        className: f.infoIcon,
                         children: (0, r.jsx)(l.Z, {
                             width: 20,
                             height: 20,
@@ -76,10 +76,10 @@ function f(e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: m.infoItem,
+                className: f.infoItem,
                 children: [
                     (0, r.jsx)("div", {
-                        className: m.infoIcon,
+                        className: f.infoIcon,
                         children: (0, r.jsx)(c.Z, {
                             width: 20,
                             height: 20,

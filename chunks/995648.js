@@ -5,7 +5,7 @@ var i = r(120356),
     a = r.n(i),
     o = r(481060),
     l = r(422559),
-    s = r(347044);
+    s = r(632202);
 function c(e) {
     let {
         grantedPermissions: t,
@@ -23,7 +23,7 @@ function c(e) {
                           null != i
                               ? (0, n.jsx)(o.Heading, {
                                     variant: "heading-sm/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     className: s.header,
                                     children: i,
                                 })
@@ -60,7 +60,7 @@ function c(e) {
                           null != c
                               ? (0, n.jsx)(o.Heading, {
                                     variant: "heading-sm/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     className: s.header,
                                     children: c,
                                 })

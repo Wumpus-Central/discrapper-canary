@@ -1,30 +1,30 @@
 n.d(t, { default: () => T }), n(953529), n(642613), n(388685), n(784620), n(973216);
 var i = n(54381),
     r = n(473749),
-    l = n(772848),
-    a = n(442837),
+    a = n(772848),
+    l = n(442837),
     o = n(544891),
     s = n(668339),
     u = n(199849),
     c = n(159691),
     d = n(481060),
     m = n(53281),
-    p = n(476326),
-    v = n(304761),
-    f = n(273031),
+    f = n(476326),
+    p = n(304761),
+    v = n(273031),
     h = n(859235),
     g = n(898463),
     x = n(951394),
     b = n(667344),
     y = n(493075),
     j = n(594174),
-    _ = n(768581),
-    O = n(55935),
-    S = n(358085),
-    w = n(223356),
-    P = n(225452),
+    O = n(768581),
+    S = n(55935),
+    w = n(358085),
+    P = n(223356),
+    _ = n(225452),
     C = n(388032),
-    E = n(176059);
+    E = n(294698);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -79,14 +79,14 @@ function T(e) {
                         return "Linux";
                 }
                 return "";
-            })((0, S.getOS)()),
+            })((0, w.getOS)()),
         ),
-        [er, el] = r.useState(""),
-        [ea, eo] = r.useState(""),
+        [er, ea] = r.useState(""),
+        [el, eo] = r.useState(""),
         [es, eu] = r.useState(""),
         [ec, ed] = r.useState(""),
-        [em, ep] = r.useState(!1),
-        [ev, ef] = r.useState(!1),
+        [em, ef] = r.useState(!1),
+        [ep, ev] = r.useState(!1),
         [eh, eg] = r.useState(!1),
         [ex, eb] = r.useState(null);
     r.useEffect(() => {
@@ -102,43 +102,43 @@ function T(e) {
                 rejectWithError: !0,
             })
             .then((e) => {
-                if (null != e.body && "1b4a4225212609b70ea55b6ebd1dbdfab293b54d" !== e.body.hash) {
-                    let e = new Date("1765395619307"),
+                if (null != e.body && "84b271aef686b009e79406f9bdcfef11665c6d39" !== e.body.hash) {
+                    let e = new Date("1765489481318"),
                         t = new Date(),
-                        n = (0, O.TD)(t, e);
+                        n = (0, S.TD)(t, e);
                     n.hours > 6 && eb(n.hours);
                 }
             });
     }, []);
-    let ey = (0, a.e7)([j.default], () => {
+    let ey = (0, l.e7)([j.default], () => {
             let e = j.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        ej = (0, a.e7)([v.C], () => {
+        ej = (0, l.e7)([p.C], () => {
             var e;
-            return null == (e = v.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web;
+            return null == (e = p.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web;
         }),
-        { overridesInfo: e_ } = (0, y.sI)(),
-        { overridesInfo: eO } = (0, b.Qb)(),
-        eS = Object.entries(k({}, e_, eO)).map((e) => {
+        { overridesInfo: eO } = (0, y.sI)(),
+        { overridesInfo: eS } = (0, b.Qb)(),
+        ew = Object.entries(k({}, eO, eS)).map((e) => {
             let [t, { variantId: n }] = e;
             return {
                 experimentId: t,
                 variantId: n,
             };
         });
-    async function ew() {
+    async function eP() {
         var e, t;
-        if ((eg(!1), "" === Z || "" === B || null == H)) return void ep(!0);
-        let r = null == X || null == (e = X.features) ? void 0 : e.find((e) => (0, w.pD)(e) === K);
-        ef(!0), ep(!1);
-        let l = (0, P.D)(
+        if ((eg(!1), "" === Z || "" === B || null == H)) return void ef(!0);
+        let r = null == X || null == (e = X.features) ? void 0 : e.find((e) => (0, P.pD)(e) === K);
+        ev(!0), ef(!1);
+        let a = (0, _.D)(
                 U.map((e) => {
                     let { item: t } = e;
                     return t;
                 }),
             ),
-            a = await (0, w.ZD)(
+            l = await (0, P.ZD)(
                 {
                     name: Z,
                     description: B,
@@ -146,7 +146,7 @@ function T(e) {
                     feature: r,
                     url: z,
                     buildOverride: null != (t = null == ej ? void 0 : ej.id) ? t : null,
-                    experimentOverrides: eS,
+                    experimentOverrides: ew,
                 },
                 !0 === Q
                     ? {
@@ -154,16 +154,16 @@ function T(e) {
                           device: ee,
                           operatingSystem: en,
                           operatingSystemVersion: er,
-                          clientVersion: ea,
+                          clientVersion: el,
                           clientBuildNumber: es,
                           locale: ec,
                       }
                     : { overridePlatformInformation: Q },
-                l,
+                a,
             ).catch(() => eg(!0));
-        ef(!1),
-            null != a && a.ok
-                ? (ey && window.open(a.body.permalink_url, "_blank"),
+        ev(!1),
+            null != l && l.ok
+                ? (ey && window.open(l.body.permalink_url, "_blank"),
                   A(),
                   (0, d.ZDy)(async () => {
                       let { default: e } = await n.e("64648").then(n.bind(n, 81155));
@@ -172,7 +172,7 @@ function T(e) {
                           return (0, i.jsx)(
                               e,
                               ((n = k({}, t)),
-                              (r = r = { asanaTask: a.body }),
+                              (r = r = { asanaTask: l.body }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                   : (function (e, t) {
@@ -194,7 +194,7 @@ function T(e) {
     return (
         r.useEffect(() => {
             async function e() {
-                F(await (0, w.WG)());
+                F(await (0, P.WG)());
             }
             ey && e();
         }, [ey]),
@@ -226,10 +226,10 @@ function T(e) {
                             ? e
                             : [
                                   ...e,
-                                  new p.ZP({
-                                      id: (0, l.Z)(),
+                                  new f.ZP({
+                                      id: (0, a.Z)(),
                                       file: r,
-                                      platform: p.ow.WEB,
+                                      platform: f.ow.WEB,
                                       origin: "clipboard",
                                   }),
                               ],
@@ -257,8 +257,8 @@ function T(e) {
                 {
                     variant: "primary",
                     text: ey ? "Submit and Open Report" : "Submit Report",
-                    loading: ev,
-                    onClick: ew,
+                    loading: ep,
+                    onClick: eP,
                     autoFocus: !1,
                 },
             ],
@@ -301,7 +301,7 @@ function T(e) {
                                     ],
                                 }),
                             ey &&
-                                Object.keys(eS).length > 0 &&
+                                Object.keys(ew).length > 0 &&
                                 (0, i.jsxs)(d.M14, {
                                     type: "critical",
                                     children: [
@@ -311,7 +311,7 @@ function T(e) {
                                         }),
                                         (0, i.jsx)(d.Text, {
                                             variant: "text-sm/normal",
-                                            children: eS.map((e) =>
+                                            children: ew.map((e) =>
                                                 (0, i.jsxs)(
                                                     "div",
                                                     {
@@ -367,14 +367,14 @@ function T(e) {
                                                         (0, i.jsx)("img", {
                                                             alt: "",
                                                             className: E.formPriorityImage,
-                                                            src: (0, _.gT)({
+                                                            src: (0, O.gT)({
                                                                 id: t.emoji,
                                                                 animated: !0,
                                                                 size: 48,
                                                             }),
                                                         }),
                                                         (0, i.jsx)(d.Text, {
-                                                            color: "header-primary",
+                                                            color: "text-strong",
                                                             variant: "text-sm/semibold",
                                                             className: E.formPriorityTitle,
                                                             children: t.title,
@@ -391,7 +391,7 @@ function T(e) {
                                         });
                                     })(e),
                                 onChange: q,
-                                options: (0, w.Tj)().map((e) => ({
+                                options: (0, P.Tj)().map((e) => ({
                                     priority: e,
                                     value: e.value,
                                     label: e.title,
@@ -410,13 +410,13 @@ function T(e) {
                                         (I =
                                             null == X ||
                                             null == (L = X.features) ||
-                                            null == (T = L.filter((e) => "" !== (0, w.pD)(e))) ||
+                                            null == (T = L.filter((e) => "" !== (0, P.pD)(e))) ||
                                             null ==
                                                 (t = T.map((e) => {
                                                     var t;
                                                     return {
                                                         label: null != (t = e.name) ? t : "",
-                                                        value: (0, w.pD)(e),
+                                                        value: (0, P.pD)(e),
                                                     };
                                                 }))
                                                 ? void 0
@@ -458,12 +458,12 @@ function T(e) {
                                               label: C.intl.string(C.t.rEtxdg),
                                               placeholder: "Operating System Version",
                                               value: er,
-                                              onChange: (e) => el(e),
+                                              onChange: (e) => ea(e),
                                           }),
                                           (0, i.jsx)(d.oil, {
                                               label: C.intl.string(C.t["wy1M/t"]),
                                               placeholder: "Client Version",
-                                              value: ea,
+                                              value: el,
                                               onChange: (e) => eo(e),
                                           }),
                                           (0, i.jsx)(d.oil, {
@@ -502,10 +502,10 @@ function T(e) {
                                                 ...U,
                                                 ...Array.from(e.currentTarget.files).map(
                                                     (e) =>
-                                                        new p.ZP({
-                                                            id: (0, l.Z)(),
+                                                        new f.ZP({
+                                                            id: (0, a.Z)(),
                                                             file: e,
-                                                            platform: p.ow.WEB,
+                                                            platform: f.ow.WEB,
                                                             origin: "file_picker",
                                                         }),
                                                 ),
@@ -537,7 +537,7 @@ function T(e) {
                                                                       (0, i.jsx)("div", {
                                                                           className: E.removeAttachment,
                                                                           children: (0, i.jsx)(x.ZP, {
-                                                                              children: (0, i.jsx)(f.Z, {
+                                                                              children: (0, i.jsx)(v.Z, {
                                                                                   tooltip: C.intl.string(C.t.vN7REz),
                                                                                   onClick: () => {
                                                                                       var t;

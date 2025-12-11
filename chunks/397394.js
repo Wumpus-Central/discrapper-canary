@@ -1,7 +1,7 @@
 n.d(t, {
     $0: () => G,
-    Lk: () => B,
-    Xg: () => F,
+    Lk: () => F,
+    Xg: () => B,
     ZP: () => j,
     c7: () => M,
     j3: () => V,
@@ -36,7 +36,7 @@ var r = n(54381),
     T = n(787025),
     C = n(981631),
     A = n(388032),
-    N = n(295880);
+    N = n(818012);
 function P(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ function R(e) {
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -78,12 +78,12 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -138,7 +138,7 @@ function j(e) {
     );
 }
 function M(e) {
-    return (0, r.jsx)(j, w(R({}, e), { headerClassName: N.headerSuccess }));
+    return (0, r.jsx)(j, D(R({}, e), { headerClassName: N.headerSuccess }));
 }
 function k(e) {
     var { guild: t, application: n } = e,
@@ -200,7 +200,7 @@ function k(e) {
                 })),
         (0, r.jsx)(
             T.j,
-            w(R({}, a), {
+            D(R({}, a), {
                 actions: N,
                 children: (0, r.jsx)(
                     U,
@@ -263,7 +263,7 @@ function G(e) {
     }, [a, t.id]);
     return (0, r.jsx)(
         T.j,
-        w(R({}, n), {
+        D(R({}, n), {
             actions: [
                 {
                     variant: "primary",
@@ -290,7 +290,7 @@ function G(e) {
                         children: [
                             (0, r.jsx)(f.Heading, {
                                 variant: "heading-xl/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: A.intl.format(A.t["1Q+p1k"], { appName: t.name }),
                             }),
                             (0, r.jsx)(d.x, {
@@ -308,7 +308,7 @@ function G(e) {
 function Z(e) {
     return (0, r.jsx)(
         T.j,
-        w(R({}, e), {
+        D(R({}, e), {
             title: A.intl.string(A.t.j2d6Km),
             subtitle: A.intl.string(A.t["/B7kXy"]),
             actions: [
@@ -320,10 +320,10 @@ function Z(e) {
         }),
     );
 }
-function B(e) {
-    return (0, r.jsx)(j, w(R({}, e), { headerClassName: N.headerFailure }));
+function F(e) {
+    return (0, r.jsx)(j, D(R({}, e), { headerClassName: N.headerFailure }));
 }
-function F() {
+function B() {
     var e, t;
     let n = (0, l.TH)();
     return (0, r.jsx)(T.G, {
@@ -355,7 +355,7 @@ function V(e) {
         children: (0, r.jsx)(T.j, {
             transitionState: c.Dvm.ENTERED,
             hideHeader: !0,
-            children: (0, r.jsx)(B, {
+            children: (0, r.jsx)(F, {
                 message: l,
                 showsCloseWindowText: !0,
             }),

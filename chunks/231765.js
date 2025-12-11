@@ -208,7 +208,7 @@ function U(e) {
                 children: [
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/semibold",
-                        color: l ? "text-muted" : "header-primary",
+                        color: l ? "text-muted" : "text-strong",
                         className: S.sliderLabel,
                         children: v.intl.string(v.t.vd0D81),
                     }),
@@ -229,7 +229,7 @@ function U(e) {
                 children: [
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/semibold",
-                        color: l ? "text-muted" : "header-primary",
+                        color: l ? "text-muted" : "text-strong",
                         className: S.sliderLabel,
                         children: v.intl.string(v.t.sPO3ij),
                     }),
@@ -282,7 +282,7 @@ function G(e) {
                 children: [
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/semibold",
-                        color: s ? "text-muted" : "header-primary",
+                        color: s ? "text-muted" : "text-strong",
                         className: S.sliderLabel,
                         children: v.intl.string(v.t.L0oQuh),
                     }),
@@ -326,7 +326,7 @@ function Z(e) {
                 children: [
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/semibold",
-                        color: d ? "text-muted" : "header-primary",
+                        color: d ? "text-muted" : "text-strong",
                         className: S.sliderLabel,
                         children: v.intl.string(v.t.UxnnC4),
                     }),
@@ -354,7 +354,7 @@ function Z(e) {
         ],
     });
 }
-function B(e) {
+function F(e) {
     let { updateSettings: t } = e,
         n = () => {
             t({
@@ -383,7 +383,7 @@ function B(e) {
         }),
     });
 }
-function F(e) {
+function B(e) {
     let { onChangePage: t } = e,
         n = () => t(1);
     return (0, r.jsxs)(c.P3F, {
@@ -402,7 +402,7 @@ function F(e) {
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: v.intl.string(v.t["6jI0hd"]),
                     }),
                     (0, r.jsx)(c.Text, {
@@ -489,7 +489,7 @@ function H(e) {
                     settings: a,
                     updateSettings: m,
                 }),
-                (0, r.jsx)(F, { onChangePage: t }),
+                (0, r.jsx)(B, { onChangePage: t }),
                 (0, r.jsx)(G, {
                     settings: a,
                     updateSettings: m,
@@ -502,7 +502,7 @@ function H(e) {
                     settings: a,
                     updateSettings: m,
                 }),
-                (0, r.jsx)(B, { updateSettings: m }),
+                (0, r.jsx)(F, { updateSettings: m }),
             ],
         })
     );

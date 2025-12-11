@@ -13,7 +13,7 @@ var r = n(54381),
     _ = n(981631),
     m = n(268685),
     h = n(388032),
-    g = n(604483);
+    g = n(436808);
 function E(e) {
     let { user: t, application: n, bot: E, accountScopes: b, showLogout: y, location: O, scopes: v } = e,
         S = (0, p.X)(),
@@ -34,7 +34,7 @@ function E(e) {
                               }),
                               (0, r.jsx)(o.X6q, {
                                   variant: "heading-xxl/bold",
-                                  color: "header-primary",
+                                  color: "text-strong",
                                   children: n.name,
                               }),
                           ],
@@ -43,7 +43,7 @@ function E(e) {
                           children: [
                               (0, r.jsxs)(l.x, {
                                   variant: "text-lg/bold",
-                                  color: "header-primary",
+                                  color: "text-strong",
                                   children: [
                                       n.name,
                                       null != E

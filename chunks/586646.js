@@ -11,7 +11,7 @@ var l = n(54381),
     f = n(190054),
     g = n(760373),
     h = n(388032),
-    p = n(506317);
+    p = n(321835);
 function E(e) {
     let { channelId: t } = e,
         n = (0, r.e7)([o.Z], () => {
@@ -53,7 +53,7 @@ function E(e) {
                 children: [
                     (0, l.jsx)(a.Heading, {
                         variant: "text-sm/bold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: h.intl.string(h.t.cTQI5t),
                     }),
                     null != E &&

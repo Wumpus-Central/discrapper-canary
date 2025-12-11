@@ -57,8 +57,8 @@ var r = n(54381),
     U = n(228763),
     G = n(422559),
     Z = n(713938),
-    B = n(166148),
-    F = n(807989),
+    F = n(166148),
+    B = n(807989),
     V = n(627799),
     H = n(260430),
     Y = n(668185),
@@ -346,7 +346,7 @@ function ec(e) {
         [eM, ek] = i.useState(!1),
         [eU, eG] = i.useState(!1),
         eZ = null == eR ? void 0 : eR.guilds,
-        [eB, eF] = i.useState(null != ep ? ep : null),
+        [eF, eB] = i.useState(null != ep ? ep : null),
         [eV, eH] = i.useState(null != e_ ? e_ : null),
         [eY, eW] = i.useState(L.Hn),
         [eK, ez] = i.useState(!1),
@@ -355,7 +355,7 @@ function ec(e) {
             [null == eR ? void 0 : eR.user],
         ),
         eQ = (0, T.Z)(null != (t = null == eR ? void 0 : eR.application) ? t : null),
-        eX = i.useMemo(() => (null == eZ ? void 0 : eZ.find((e) => e.id === eB)), [eZ, eB]),
+        eX = i.useMemo(() => (null == eZ ? void 0 : eZ.find((e) => e.id === eF)), [eZ, eF]),
         [eJ, e$] = i.useState(null),
         e0 = i.useMemo(() => {
             var e;
@@ -447,7 +447,7 @@ function ec(e) {
                         nonce: es,
                         integrationType: eJ,
                         permissions: f.Od(e6, eY),
-                        guildId: eJ === u.Y.GUILD_INSTALL && null != eB ? eB : void 0,
+                        guildId: eJ === u.Y.GUILD_INSTALL && null != eF ? eF : void 0,
                         channelId: eJ === u.Y.GUILD_INSTALL && null != eV ? eV : void 0,
                         dmSettings: { allowMobilePush: eK },
                     });
@@ -494,7 +494,7 @@ function ec(e) {
                 es,
                 e6,
                 eY,
-                eB,
+                eF,
                 eJ,
                 eV,
                 e9,
@@ -522,7 +522,7 @@ function ec(e) {
                                   integrationType: null != eJ ? eJ : void 0,
                               });
                     ew((0, U.d)(e)),
-                        ec === B.s.NONE && e.authorized && !tt && tr(!0),
+                        ec === F.s.NONE && e.authorized && !tt && tr(!0),
                         (0, y.yw)(J.rMx.OAUTH2_AUTHORIZE_VIEWED, {
                             application_id: e.application.id,
                             mobile_push_notification_default_setting: !1,
@@ -582,7 +582,7 @@ function ec(e) {
         }, [eA, to, e1, e0, em, eD, eP]),
         i.useEffect(() => {
             if (null == eJ || null != eR || null != eL) return;
-            eJ === u.Y.USER_INSTALL && (eF(null), eH(null));
+            eJ === u.Y.USER_INSTALL && (eB(null), eH(null));
             let e = e5.filter((e) => !Z.ak.includes(e));
             0 === e5.length
                 ? ej(Error("No scopes were provided."))
@@ -604,7 +604,7 @@ function ec(e) {
                     label: ee.intl.string(ee.t.j2d6Km),
                     header: (0, r.jsx)(E.Text, {
                         variant: "text-lg/bold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: ee.intl.string(ee.t.j2d6Km),
                     }),
                     body: (0, r.jsx)(E.Text, {
@@ -714,17 +714,17 @@ function ec(e) {
                               error: (null != (o = null != (a = tE[d.x.BOT]) ? a : tE[d.x.APPLICATIONS_COMMANDS])
                                   ? o
                                   : [])[0],
-                              selectedGuildId: eB,
-                              onGuildChange: eF,
+                              selectedGuildId: eF,
+                              onGuildChange: eB,
                               guilds: null != tb ? tb : [],
-                              disabled: "" !== eB && null != eB && !0 === eh,
+                              disabled: "" !== eF && null != eF && !0 === eh,
                           })
                         : null,
                     ty
                         ? (0, r.jsx)(X.Z, {
                               error: (null != (c = tE[d.x.WEBHOOK_INCOMING]) ? c : [])[0],
                               selectedChannelId: eV,
-                              selectedGuildId: eB,
+                              selectedGuildId: eF,
                               onChannelChange: eH,
                           })
                         : null,
@@ -761,7 +761,7 @@ function ec(e) {
                   : _.approximate_guild_count;
         P = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(F.Z, {
+                (0, r.jsx)(B.Z, {
                     application: eR.application,
                     scopes: e5,
                     disclosures: e9,

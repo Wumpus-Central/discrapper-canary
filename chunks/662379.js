@@ -4,7 +4,7 @@ n(473749);
 var i = n(481060),
     l = n(293810),
     a = n(388032),
-    s = n(964269),
+    s = n(780970),
     o = n(961618),
     c = n(217684),
     d = n(174618);
@@ -25,7 +25,7 @@ function u(e) {
                 className: s.howItWorksDescription,
                 children: (0, r.jsx)(i.Text, {
                     variant: "text-sm/normal",
-                    color: "header-primary",
+                    color: "text-strong",
                     children: n,
                 }),
             }),
@@ -51,7 +51,7 @@ function g() {
         children: [
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
-                color: "header-primary",
+                color: "text-strong",
                 children: a.intl.string(a.t.R9rNIk),
             }),
             (0, r.jsx)(i.LZC, { size: 24 }),

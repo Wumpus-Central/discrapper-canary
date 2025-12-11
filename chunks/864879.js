@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(906732),
     l = n(6598),
     c = n(388032),
-    u = n(998268);
+    u = n(442147);
 let d = i.forwardRef((e, t) => {
     let { analyticsLocations: n } = (0, s.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA);
     return (0, r.jsx)(s.Gt, {
@@ -20,7 +20,7 @@ let d = i.forwardRef((e, t) => {
                     (0, r.jsx)(l.Z, {}),
                     (0, r.jsx)(a.Heading, {
                         variant: "display-md",
-                        color: "header-primary",
+                        color: "text-strong",
                         className: u.footerHeader,
                         children: c.intl.string(c.t.lEw32m),
                     }),

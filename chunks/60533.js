@@ -8,7 +8,7 @@ var i = n(442837),
     o = n(601964),
     c = n(594174),
     d = n(388032),
-    u = n(254574);
+    u = n(325398);
 function g(e) {
     let { guild: t } = e,
         n = (0, i.e7)([c.default], () => {
@@ -21,7 +21,7 @@ function g(e) {
         children: [
             (0, r.jsx)(a.Heading, {
                 variant: "heading-lg/semibold",
-                color: "header-primary",
+                color: "text-strong",
                 children: d.intl.string(d.t.Ms33Ds),
             }),
             (0, r.jsx)(a.Text, {

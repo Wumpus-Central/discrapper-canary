@@ -1,4 +1,4 @@
-n.d(e, { z: () => f });
+n.d(e, { z: () => C });
 var i = n(54381),
     l = n(657707),
     s = n(442837),
@@ -8,9 +8,9 @@ var i = n(54381),
     o = n(564344),
     c = n(509613),
     d = n(970013),
-    S = n(518950),
-    g = n(25990),
-    T = n(594174),
+    T = n(518950),
+    S = n(25990),
+    g = n(594174),
     E = n(313789),
     I = n(620163),
     _ = n(726985),
@@ -19,20 +19,20 @@ var i = n(54381),
 let A = (0, c.wf)(E.n.PROFILE_PANEL, {
         useTitle: () => O.intl.string(O.t["vi7f+q"]),
         notice: {
-            stores: [u.Z, g.Z],
+            stores: [u.Z, S.Z],
             element: a.Z,
         },
         StronglyDiscouragedCustomComponent: o.Z,
         buildLayout: () => [],
     }),
-    f = (0, c.m7)(E.n.PROFILE_SIDEBAR_ITEM, {
+    C = (0, c.m7)(E.n.PROFILE_SIDEBAR_ITEM, {
         useTitle: () => O.intl.string(O.t["vi7f+q"]),
         getLegacySearchKey: () => _.s6.PROFILE_CUSTOMIZATION,
         icon: l.tBG,
         stronglyDiscouragedCustomComponent: () => {
             var t;
-            let e = (0, s.e7)([T.default], () => T.default.getCurrentUser()),
-                { avatarSrc: n, avatarDecorationSrc: u } = (0, S.Z)({
+            let e = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+                { avatarSrc: n, avatarDecorationSrc: u } = (0, T.Z)({
                     userId: null == e ? void 0 : e.id,
                     size: r.EFr.SIZE_48,
                 });
@@ -51,7 +51,7 @@ let A = (0, c.wf)(E.n.PROFILE_PANEL, {
                               className: N.textContainer,
                               children: [
                                   (0, i.jsx)(r.Text, {
-                                      color: "header-primary",
+                                      color: "text-strong",
                                       variant: "text-md/medium",
                                       lineClamp: 1,
                                       children: null != (t = e.globalName) ? t : e.username,

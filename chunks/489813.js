@@ -1,6 +1,6 @@
 n.d(t, {
-    CA: () => u,
-    Ih: () => d,
+    CA: () => d,
+    Ih: () => u,
     PU: () => C,
     hK: () => c,
 });
@@ -10,7 +10,7 @@ var l = n(120356),
     i = n.n(l),
     o = n(692547),
     a = n(481060),
-    s = n(690663);
+    s = n(758075);
 function c(e) {
     let { title: t, children: n } = e;
     return (0, r.jsxs)("div", {
@@ -19,14 +19,14 @@ function c(e) {
             (0, r.jsx)(a.Text, {
                 className: s.questionTitle,
                 variant: "text-md/normal",
-                color: "header-primary",
+                color: "text-strong",
                 children: t,
             }),
             n,
         ],
     });
 }
-function u(e) {
+function d(e) {
     let { title: t, children: n } = e;
     return (0, r.jsxs)("div", {
         className: s.disabledQuestionContainer,
@@ -41,7 +41,7 @@ function u(e) {
         ],
     });
 }
-function d(e) {
+function u(e) {
     let { icon: t, text: n, meetsRequirement: l } = e;
     return (0, r.jsxs)("div", {
         className: s.requirementContainer,
@@ -75,11 +75,11 @@ function d(e) {
     });
 }
 function C(e) {
-    let { icon: t, text: n, footnote: l, meetsRequirement: c, children: u, className: d } = e;
+    let { icon: t, text: n, footnote: l, meetsRequirement: c, children: d, className: u } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: i()(s.requirementContainer, d),
+                className: i()(s.requirementContainer, u),
                 children: [
                     (0, r.jsx)(t, {
                         className: s.requirementIcon,
@@ -100,7 +100,7 @@ function C(e) {
                               className: s.requirementSuccess,
                               secondaryColor: o.Z.colors.WHITE.css,
                           })
-                        : u,
+                        : d,
                 ],
             }),
             null != l &&

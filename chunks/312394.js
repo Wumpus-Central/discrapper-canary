@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(821541),
     l = n(777207),
     c = n(963115),
-    u = n(712542);
+    u = n(716772);
 function d(e, t, n) {
     return (
         t in e
@@ -96,7 +96,7 @@ function g(e) {
                     ? (0, r.jsx)(l.x, {
                           tag: "legend",
                           variant: "text-lg/medium",
-                          color: "header-primary",
+                          color: "text-strong",
                           className: u.legend,
                           children: n,
                       })

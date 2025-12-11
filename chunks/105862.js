@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(888617),
     u = n(981631),
     d = n(388032),
-    f = n(431048);
+    f = n(516610);
 function p(e) {
     let { padding: t = !1 } = e,
         n = i.useCallback(() => {
@@ -32,7 +32,7 @@ function p(e) {
                     children: [
                         (0, r.jsx)(a.Heading, {
                             variant: "heading-lg/bold",
-                            color: "header-primary",
+                            color: "text-strong",
                             children: d.intl.string(d.t["kw8/Ec"]),
                         }),
                         (0, r.jsx)(a.Text, {

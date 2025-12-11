@@ -1,7 +1,7 @@
 n.d(t, {
     Fc: () => V,
-    IL: () => F,
-    UQ: () => B,
+    IL: () => B,
+    UQ: () => F,
     rz: () => Y,
 });
 var r = n(54381);
@@ -91,7 +91,7 @@ function Z(e, t) {
         e
     );
 }
-function B(e) {
+function F(e) {
     var t;
     let {
             ctaButton: n,
@@ -121,7 +121,7 @@ function B(e) {
                     }),
                 (0, r.jsx)(o.X, {
                     variant: "display-md",
-                    color: L ? "header-primary" : "always-white",
+                    color: L ? "text-strong" : "always-white",
                     className: x.cardTitle,
                     children: M,
                 }),
@@ -156,7 +156,7 @@ function B(e) {
               children: k,
           });
 }
-function F(e) {
+function B(e) {
     var t;
     let {
             ctaButton: n,
@@ -175,13 +175,13 @@ function F(e) {
         U = (0, s.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
         G = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         Z = (0, O.N)(),
-        B = null == Z || null == (t = Z.subscription_trial) ? void 0 : t.sku_id,
-        F = (null == U ? void 0 : U.hasActiveTrial) ? (null == G ? void 0 : G.premiumType) : null,
+        F = null == Z || null == (t = Z.subscription_trial) ? void 0 : t.sku_id,
+        B = (null == U ? void 0 : U.hasActiveTrial) ? (null == G ? void 0 : G.premiumType) : null,
         V = (0, y.N)(),
         H = (0, g.t7)(),
-        Y = null != B || null != F ? R.C.PREMIUM_TRIAL : null != V || H ? R.C.PREMIUM_DISCOUNT : null,
+        Y = null != F || null != B ? R.C.PREMIUM_TRIAL : null != V || H ? R.C.PREMIUM_DISCOUNT : null,
         W = (0, c.ap)((0, d.ZP)()),
-        K = (0, A.A1)(H, F, V, Z, B),
+        K = (0, A.A1)(H, B, V, Z, F),
         z = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -214,7 +214,7 @@ function F(e) {
                 }),
             (0, r.jsx)(o.X, {
                 variant: "display-md",
-                color: W ? "header-primary" : "always-white",
+                color: W ? "text-strong" : "always-white",
                 className: x.cardTitle,
                 children: D.intl.string(D.t.lG6a5x),
             }),
@@ -222,7 +222,7 @@ function F(e) {
                 isGift: p,
                 premiumTier: R.PremiumTypes.TIER_2,
                 offerType: Y,
-                offerTierMatchesCard: B === R.Si.TIER_2 || (0, I.Wp)(V, R.Si.TIER_2),
+                offerTierMatchesCard: F === R.Si.TIER_2 || (0, I.Wp)(V, R.Si.TIER_2),
                 showYearlyPrice: i,
                 priceOptions: E,
                 enablePremiumBrandRefresh: !0,
@@ -255,7 +255,7 @@ function V(e) {
                 children: [
                     (0, r.jsx)(o.X, {
                         variant: "display-md",
-                        color: l ? "header-primary" : "always-white",
+                        color: l ? "text-strong" : "always-white",
                         className: x.cardTitle,
                         children: D.intl.string(w.default.eSKiXk),
                     }),
@@ -280,7 +280,7 @@ function V(e) {
 let H = (e) => {
     let { subscriptionTier: t, isReducedMotion: n, tierCardProps: i, className: o } = e,
         s = t === R.Si.TIER_2,
-        c = s ? F : B,
+        c = s ? B : F,
         { subscribeButtonProps: d, subscriptionTier: f } = (0, S.G)({
             subscriptionTier: t,
             variantOverride: s ? "expressive" : "secondary",
@@ -346,7 +346,7 @@ function Y(e) {
             children: [
                 (0, r.jsx)(o.X, {
                     variant: "display-md",
-                    color: "header-primary",
+                    color: "text-strong",
                     className: x.premiumCardsHeader,
                     children: D.intl.string(D.t.vLz3Zs),
                 }),

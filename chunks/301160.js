@@ -6,8 +6,8 @@ var a = t(54381),
     l = t(481060),
     r = t(768581),
     m = t(570533),
-    d = t(388032),
-    c = t(929828);
+    c = t(388032),
+    d = t(851120);
 function j(e) {
     let { emoji: i, onChange: t, value: n } = e,
         o = r.ZP.getEmojiURL({
@@ -17,25 +17,25 @@ function j(e) {
         });
     return (0, a.jsx)(s.$q, {
         size: 20,
-        className: c.emojiRow,
+        className: d.emojiRow,
         onChange: t,
         type: s.M0.INVERTED,
         value: n,
         reverse: !0,
         children: (0, a.jsxs)("div", {
-            className: c.emojiLabel,
+            className: d.emojiLabel,
             children: [
                 (0, a.jsx)("img", {
-                    className: c.emojiImage,
+                    className: d.emojiImage,
                     src: o,
                     width: 24,
                     height: 24,
                     alt: "",
                 }),
                 (0, a.jsx)(l.Text, {
-                    color: "header-primary",
+                    color: "text-strong",
                     variant: "text-md/medium",
-                    className: c.emojiAlias,
+                    className: d.emojiAlias,
                     children: i.name,
                 }),
             ],
@@ -52,25 +52,25 @@ function h(e) {
             onClose: u,
         } = e,
         x = (0, m.Z)(i),
-        [p, v] = n.useState(new Set()),
-        C = p.size > 0;
+        [g, p] = n.useState(new Set()),
+        v = g.size > 0;
     return (0, a.jsx)(o.Modal, {
         transitionState: h,
         onClose: u,
-        title: d.intl.string(d.t.xC6tUv),
+        title: c.intl.string(c.t.xC6tUv),
         actions: [
             {
-                text: d.intl.string(d.t["ETE/oC"]),
+                text: c.intl.string(c.t["ETE/oC"]),
                 variant: "secondary",
                 onClick: u,
             },
             {
-                text: d.intl.format(d.t.pX74jh, { totalEmoji: p.size }),
+                text: c.intl.format(c.t.pX74jh, { totalEmoji: g.size }),
                 variant: "primary",
                 onClick: function () {
-                    s(p), u();
+                    s(g), u();
                 },
-                disabled: !C,
+                disabled: !v,
             },
         ],
         children: (0, a.jsxs)(l.Kqy, {
@@ -78,12 +78,12 @@ function h(e) {
             children: [
                 (0, a.jsx)(l.Text, {
                     variant: "text-md/normal",
-                    children: d.intl.format(d.t["OnK+C1"], { transitionToManageEmoji: r }),
+                    children: c.intl.format(c.t["OnK+C1"], { transitionToManageEmoji: r }),
                 }),
                 null != x &&
                     x.length > 0 &&
                     (0, a.jsx)("div", {
-                        className: c.emojiContainer,
+                        className: d.emojiContainer,
                         children: x.map((e) =>
                             null != t && t.has(e.id)
                                 ? null
@@ -95,13 +95,13 @@ function h(e) {
                                               var i;
                                               return (
                                                   (i = e.id),
-                                                  void v((e) => {
+                                                  void p((e) => {
                                                       let t = new Set(e);
-                                                      return p.has(i) ? t.delete(i) : t.add(i), t;
+                                                      return g.has(i) ? t.delete(i) : t.add(i), t;
                                                   })
                                               );
                                           },
-                                          value: p.has(e.id),
+                                          value: g.has(e.id),
                                       },
                                       e.id,
                                   ),

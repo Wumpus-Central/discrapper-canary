@@ -26,7 +26,7 @@ function l(e) {
               children: [
                   (0, r.jsx)(a.Heading, {
                       variant: "heading-md/semibold",
-                      color: "header-primary",
+                      color: "text-strong",
                       children: p.header,
                   }),
                   (0, r.jsx)(a.Text, {

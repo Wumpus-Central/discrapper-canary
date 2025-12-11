@@ -5,8 +5,8 @@ var a = n(54381),
     l = n(312097),
     o = n(810568),
     s = n(388032),
-    c = n(226788),
-    d = n(275914);
+    c = n(452379),
+    d = n(588109);
 function u(e) {
     let { detectedGame: t, trackAction: n } = e,
         u = i.useRef(null),
@@ -23,8 +23,8 @@ function u(e) {
                 ...e,
             ];
         }, [t.artwork, t.screenshots]),
-        g = m.length > 2;
-    function f(e) {
+        f = m.length > 2;
+    function g(e) {
         if (null == u.current) return;
         let t = u.current.getScrollerState().scrollLeft;
         u.current.scrollTo({
@@ -39,11 +39,11 @@ function u(e) {
                   (0, a.jsx)(r.Heading, {
                       className: c.sectionHeader,
                       variant: "text-md/semibold",
-                      color: "header-primary",
+                      color: "text-strong",
                       children: s.intl.string(s.t.bNdK5x),
                   }),
                   (0, a.jsxs)("div", {
-                      className: g ? d.gameProfileMediaSmall : d.gameProfileMediaLarge,
+                      className: f ? d.gameProfileMediaSmall : d.gameProfileMediaLarge,
                       children: [
                           (0, a.jsx)(r.xVE, {
                               ref: u,
@@ -77,14 +77,14 @@ function u(e) {
                                   ),
                               ),
                           }),
-                          g &&
+                          f &&
                               (0, a.jsxs)("div", {
                                   className: d.mediaOverlay,
                                   children: [
                                       (0, a.jsx)("div", { className: d.gradientLeft }),
                                       (0, a.jsx)(r.P3F, {
                                           className: d.arrowClickable,
-                                          onClick: () => f(-1),
+                                          onClick: () => g(-1),
                                           children: (0, a.jsx)(r.whL, {
                                               className: d.arrow,
                                               color: "currentColor",
@@ -93,7 +93,7 @@ function u(e) {
                                       (0, a.jsx)("div", { className: d.gradientRight }),
                                       (0, a.jsx)(r.P3F, {
                                           className: d.arrowClickable,
-                                          onClick: () => f(1),
+                                          onClick: () => g(1),
                                           children: (0, a.jsx)(r.ZSh, {
                                               className: d.arrow,
                                               color: "currentColor",

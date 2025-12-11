@@ -38,7 +38,7 @@ let E = (e) => {
         let { className: t, id: n, children: i, variant: s = "heading-xl/semibold" } = e;
         return (0, r.jsx)(o.Heading, {
             variant: s,
-            color: "header-primary",
+            color: "text-strong",
             className: a()(h.title, t),
             id: n,
             children: i,
@@ -229,7 +229,7 @@ let I = (e) => {
                           className: h.joiningAsUsername,
                           tag: "span",
                           variant: "text-md/semibold",
-                          color: "header-primary",
+                          color: "text-strong",
                           children: t.username,
                       }),
                   ],

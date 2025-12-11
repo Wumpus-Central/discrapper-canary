@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var i = n(54381),
     r = n(473749),
     l = n(990547),
@@ -8,9 +8,9 @@ var i = n(54381),
     c = n(39604),
     u = n(176127),
     d = n(388032),
-    p = n(945202);
-function h(e) {
-    let { onOpenClips: t, lastClipsSession: n, closePopout: h } = e;
+    p = n(288048);
+function f(e) {
+    let { onOpenClips: t, lastClipsSession: n, closePopout: f } = e;
     return (r.useEffect(
         () => () => {
             (0, c.eL)();
@@ -33,7 +33,7 @@ function h(e) {
                   }),
                   (0, i.jsx)(a.Heading, {
                       className: p.header,
-                      color: "header-primary",
+                      color: "text-strong",
                       variant: "heading-md/extrabold",
                       children: d.intl.format(d.t["+qxkzC"], { count: n.newClipIds.length }),
                   }),
@@ -51,7 +51,7 @@ function h(e) {
                                   variant: "secondary",
                                   text: d.intl.string(d.t["7r5Z19"]),
                                   onClick: function () {
-                                      (0, s.Kw)(s.v6.CLIPS_CHANNEL_ATTACH_REMINDER), h();
+                                      (0, s.Kw)(s.v6.CLIPS_CHANNEL_ATTACH_REMINDER), f();
                                   },
                               }),
                               (0, i.jsx)(a.Button, {

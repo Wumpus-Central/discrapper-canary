@@ -30,7 +30,7 @@ let o = (e) => {
                         (0, r.jsx)("div", {
                             children: (0, r.jsx)(l.Text, {
                                 variant: "text-md/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: t.name,
                             }),
                         }),

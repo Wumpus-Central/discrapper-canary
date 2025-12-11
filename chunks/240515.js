@@ -3,18 +3,18 @@ var r = n(54381),
     i = n(473749),
     o = n(990547),
     l = n(755721),
-    c = n(481060),
-    s = n(194359),
+    s = n(481060),
+    c = n(194359),
     a = n(819557),
     d = n(138201),
     u = n(626135),
     f = n(63063),
     O = n(5192),
     m = n(478923),
-    j = n(858380),
-    x = n(981631),
-    g = n(388032),
-    p = n(230784);
+    x = n(858380),
+    g = n(981631),
+    j = n(388032),
+    p = n(205205);
 function b(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -62,19 +62,19 @@ function E() {
     return (0, r.jsxs)(a.z, {
         children: [
             (0, r.jsx)(a.q, {
-                title: g.intl.string(g.t.ruhGkg),
-                description: g.intl.string(g.t["/FWKKC"]),
-                icon: c.owK,
+                title: j.intl.string(j.t.ruhGkg),
+                description: j.intl.string(j.t["/FWKKC"]),
+                icon: s.owK,
             }),
             (0, r.jsx)(a.q, {
-                title: g.intl.string(g.t.N9v3eq),
-                description: g.intl.string(g.t.ddpuJg),
-                icon: c.owK,
+                title: j.intl.string(j.t.N9v3eq),
+                description: j.intl.string(j.t.ddpuJg),
+                icon: s.owK,
             }),
             (0, r.jsx)(a.q, {
-                title: g.intl.string(g.t["4ycGE0"]),
-                description: g.intl.string(g.t["5yfN+o"]),
-                icon: c.d3s,
+                title: j.intl.string(j.t["4ycGE0"]),
+                description: j.intl.string(j.t["5yfN+o"]),
+                icon: s.d3s,
             }),
         ],
     });
@@ -105,28 +105,28 @@ function h(t) {
     return (
         i.useLayoutEffect(
             () => () => {
-                u.default.track(x.rMx.USER_REMEDIATION_ACTION, {
-                    action: j.l.DISMISS_IGNORE,
+                u.default.track(g.rMx.USER_REMEDIATION_ACTION, {
+                    action: x.l.DISMISS_IGNORE,
                     location: N,
                 });
             },
             [N],
         ),
         (0, r.jsx)(
-            c.VoidConfirmModal,
+            s.VoidConfirmModal,
             I(
                 b(
                     {
-                        confirmText: g.intl.string(g.t.ytCpKs),
-                        cancelText: g.intl.string(g.t["ETE/oC"]),
+                        confirmText: j.intl.string(j.t.ytCpKs),
+                        cancelText: j.intl.string(j.t["ETE/oC"]),
                         onConfirm: () => {
                             null == h || h(),
-                                s.Z.ignoreUser(e.id, N, null != a ? a : void 0),
-                                u.default.track(x.rMx.IGNORE_USER_CONFIRMED);
+                                c.Z.ignoreUser(e.id, N, null != a ? a : void 0),
+                                u.default.track(g.rMx.IGNORE_USER_CONFIRMED);
                         },
                         onCancel: () => {
-                            u.default.track(x.rMx.USER_REMEDIATION_ACTION, {
-                                action: j.l.CANCEL_IGNORE,
+                            u.default.track(g.rMx.USER_REMEDIATION_ACTION, {
+                                action: x.l.CANCEL_IGNORE,
                                 location: N,
                             });
                         },
@@ -145,30 +145,30 @@ function h(t) {
                                     (0, r.jsxs)("div", {
                                         className: p.iconContainer,
                                         children: [
-                                            (0, r.jsx)(c.qEK, {
-                                                size: c.EFr.SIZE_56,
+                                            (0, r.jsx)(s.qEK, {
+                                                size: s.EFr.SIZE_56,
                                                 src: e.getAvatarURL(void 0, 64),
                                                 "aria-hidden": !0,
                                             }),
                                             (0, r.jsx)("div", {
                                                 className: p.icon,
-                                                children: (0, r.jsx)(c.kZF, {}),
+                                                children: (0, r.jsx)(s.kZF, {}),
                                             }),
                                         ],
                                     }),
                                     (0, r.jsxs)("div", {
                                         children: [
-                                            (0, r.jsx)(c.Heading, {
+                                            (0, r.jsx)(s.Heading, {
                                                 variant: "heading-xl/bold",
-                                                color: "header-primary",
-                                                children: g.intl.format(g.t["WrQD/Y"], {
+                                                color: "text-strong",
+                                                children: j.intl.format(j.t["WrQD/Y"], {
                                                     username: O.ZP.getName(n, a, e),
                                                 }),
                                             }),
-                                            (0, r.jsx)(c.Text, {
+                                            (0, r.jsx)(s.Text, {
                                                 variant: "text-md/medium",
                                                 color: "text-default",
-                                                children: g.intl.string(g.t.JKL1u1),
+                                                children: j.intl.string(j.t.JKL1u1),
                                             }),
                                         ],
                                     }),
@@ -179,20 +179,20 @@ function h(t) {
                                 className: p.otherOptions,
                                 children: [
                                     (0, r.jsx)(d.rT, {
-                                        title: g.intl.string(g.t["1v01gh"]),
+                                        title: j.intl.string(j.t["1v01gh"]),
                                         children: (0, r.jsx)(d.JZ, {
-                                            title: g.intl.string(g.t.bwxY30),
-                                            description: g.intl.string(g.t.NTnf1T),
+                                            title: j.intl.string(j.t.bwxY30),
+                                            description: j.intl.string(j.t.NTnf1T),
                                             titleVariant: "text-md/medium",
                                             descriptionVariant: "text-xs/medium",
-                                            buttonText: g.intl.string(g.t.QdfUHE),
+                                            buttonText: j.intl.string(j.t.QdfUHE),
                                             onButtonPress: () => {
-                                                u.default.track(x.rMx.USER_REMEDIATION_ACTION, {
-                                                    action: j.l.GOTO_BLOCK,
+                                                u.default.track(g.rMx.USER_REMEDIATION_ACTION, {
+                                                    action: x.l.GOTO_BLOCK,
                                                     location: N,
                                                 }),
-                                                    (0, c.pTH)(),
-                                                    (0, c.h7j)((t) =>
+                                                    (0, s.pTH)(),
+                                                    (0, s.h7j)((t) =>
                                                         (0, r.jsx)(
                                                             m.default,
                                                             I(b({}, t), {
@@ -208,11 +208,11 @@ function h(t) {
                                             },
                                         }),
                                     }),
-                                    (0, r.jsx)(c.Text, {
+                                    (0, r.jsx)(s.Text, {
                                         variant: "text-sm/medium",
                                         className: p.featureGuide,
-                                        children: g.intl.format(g.t.Hjvqr6, {
-                                            articleLink: f.Z.getArticleURL(x.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
+                                        children: j.intl.format(j.t.Hjvqr6, {
+                                            articleLink: f.Z.getArticleURL(g.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
                                         }),
                                     }),
                                 ],

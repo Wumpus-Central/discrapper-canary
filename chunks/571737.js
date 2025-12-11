@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m }), n(539854);
-var r = n(54381),
-    a = n(473749),
+var a = n(54381),
+    r = n(473749),
     i = n(622535),
     l = n(481060),
     s = n(783097),
@@ -8,11 +8,11 @@ var r = n(54381),
     c = n(956965),
     d = n(548514),
     u = n(388032),
-    p = n(348908);
+    p = n(360259);
 let m = function (e) {
     let { application: t, onButtonsVisibilityChange: n } = e,
-        m = a.useRef(null),
-        h = a.useMemo(
+        m = r.useRef(null),
+        h = r.useMemo(
             () =>
                 o.ZP.getApplicationIconURL({
                     id: t.id,
@@ -21,7 +21,7 @@ let m = function (e) {
                 }),
             [t],
         ),
-        g = a.useMemo(() => {
+        f = r.useMemo(() => {
             let e = [];
             return (
                 (0, s.vJ)(t) && e.push(u.intl.string(u.t.LO4f0P)),
@@ -30,17 +30,17 @@ let m = function (e) {
                 e
             );
         }, [t]);
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, r.jsx)(c.Z, {
+            (0, a.jsx)(c.Z, {
                 application: t,
                 bannerType: "detail",
                 iconURL: h,
             }),
-            (0, r.jsx)("div", {
+            (0, a.jsx)("div", {
                 className: p.avatarContainer,
                 style: { height: 52 },
-                children: (0, r.jsx)("img", {
+                children: (0, a.jsx)("img", {
                     src: h,
                     alt: "",
                     className: p.avatar,
@@ -52,22 +52,22 @@ let m = function (e) {
                     },
                 }),
             }),
-            (0, r.jsxs)("div", {
+            (0, a.jsxs)("div", {
                 className: p.infoContainer,
                 children: [
-                    (0, r.jsxs)("div", {
+                    (0, a.jsxs)("div", {
                         className: p.metadataContainer,
                         children: [
-                            (0, r.jsx)(l.Heading, {
+                            (0, a.jsx)(l.Heading, {
                                 variant: "heading-xxl/bold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 lineClamp: 1,
                                 children: t.name,
                             }),
-                            (0, r.jsx)("div", {
+                            (0, a.jsx)("div", {
                                 className: p.disclosuresContainer,
-                                children: g.map((e, t) =>
-                                    (0, r.jsx)(
+                                children: f.map((e, t) =>
+                                    (0, a.jsx)(
                                         l.Text,
                                         {
                                             className: p.disclosuresText,
@@ -81,11 +81,11 @@ let m = function (e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(i.$, {
+                    (0, a.jsx)(i.$, {
                         innerRef: m,
                         onChange: n,
                         active: !0,
-                        children: (0, r.jsx)(d.Z, {
+                        children: (0, a.jsx)(d.Z, {
                             ref: m,
                             application: t,
                             size: "md",

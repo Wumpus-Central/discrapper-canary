@@ -136,7 +136,7 @@ let ed = r.memo(function (e) {
                         children: [
                             (0, i.jsx)(d.Text, {
                                 variant: "text-sm/medium",
-                                color: "header-primary",
+                                color: "text-strong",
                                 className: ea.emojiTooltipText,
                                 children: ":".concat(e.name, ":"),
                             }),

@@ -333,7 +333,7 @@ function C(e) {
                             children: [
                                 (0, r.jsx)(c.Heading, {
                                     variant: "heading-sm/normal",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     className: y.tooltipHeader,
                                     children: H,
                                 }),

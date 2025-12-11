@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(481060),
     l = n(388032),
-    a = n(394121);
+    a = n(871612);
 function s(e) {
     let { onDiscardApplication: t, onContinueApplication: n, guild: s } = e;
     return (0, r.jsxs)("div", {
@@ -18,7 +18,7 @@ function s(e) {
             }),
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
-                color: "header-primary",
+                color: "text-strong",
                 children:
                     null != s
                         ? l.intl.formatToPlainString(l.t.f5Jaw7, { guildName: s.name })

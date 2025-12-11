@@ -3,20 +3,20 @@ var r = n(54381),
     i = n(473749),
     o = n(990547),
     l = n(442837),
-    c = n(481060),
-    s = n(194359),
+    s = n(481060),
+    c = n(194359),
     a = n(1596),
     d = n(681678),
     u = n(138201),
     f = n(699516),
     O = n(626135),
     m = n(63063),
-    j = n(5192),
-    x = n(240515),
-    g = n(858380),
+    x = n(5192),
+    g = n(240515),
+    j = n(858380),
     p = n(981631),
     b = n(388032),
-    I = n(230784);
+    I = n(205205);
 function E(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -61,7 +61,7 @@ function h(t, e) {
     );
 }
 function y(t) {
-    let { user: e, onBlock: n, onIgnore: i, location: o, disallowIgnore: s, guildId: d, channelId: y } = t,
+    let { user: e, onBlock: n, onIgnore: i, location: o, disallowIgnore: c, guildId: d, channelId: y } = t,
         N = (0, l.e7)([f.Z], () => f.Z.isIgnored(e.id));
     return (0, r.jsxs)("div", {
         className: I.container,
@@ -72,25 +72,25 @@ function y(t) {
                     (0, r.jsxs)("div", {
                         className: I.iconContainer,
                         children: [
-                            (0, r.jsx)(c.qEK, {
-                                size: c.EFr.SIZE_56,
+                            (0, r.jsx)(s.qEK, {
+                                size: s.EFr.SIZE_56,
                                 src: e.getAvatarURL(void 0, 64),
                                 "aria-hidden": !0,
                             }),
                             (0, r.jsx)("div", {
                                 className: I.icon,
-                                children: (0, r.jsx)(c.t6m, {}),
+                                children: (0, r.jsx)(s.t6m, {}),
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(c.Heading, {
+                            (0, r.jsx)(s.Heading, {
                                 variant: "heading-xl/bold",
-                                color: "header-primary",
-                                children: b.intl.format(b.t.CIbzHR, { username: j.ZP.getName(d, y, e) }),
+                                color: "text-strong",
+                                children: b.intl.format(b.t.CIbzHR, { username: x.ZP.getName(d, y, e) }),
                             }),
-                            (0, r.jsx)(c.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: "text-md/medium",
                                 color: "text-default",
                                 children: b.intl.string(b.t.S70jou),
@@ -100,7 +100,7 @@ function y(t) {
                 ],
             }),
             (0, r.jsx)(a.Z, {}),
-            s || N
+            c || N
                 ? null
                 : (0, r.jsxs)("div", {
                       className: I.otherOptions,
@@ -115,13 +115,13 @@ function y(t) {
                                   buttonText: b.intl.string(b.t.mxJOd9),
                                   onButtonPress: () => {
                                       O.default.track(p.rMx.USER_REMEDIATION_ACTION, {
-                                          action: g.l.GOTO_IGNORE,
+                                          action: j.l.GOTO_IGNORE,
                                           location: o,
                                       }),
-                                          (0, c.pTH)(),
-                                          (0, c.h7j)((t) =>
+                                          (0, s.pTH)(),
+                                          (0, s.h7j)((t) =>
                                               (0, r.jsx)(
-                                                  x.default,
+                                                  g.default,
                                                   h(E({}, t), {
                                                       user: e,
                                                       guildId: d,
@@ -135,7 +135,7 @@ function y(t) {
                                   },
                               }),
                           }),
-                          (0, r.jsx)(c.Text, {
+                          (0, r.jsx)(s.Text, {
                               variant: "text-sm/medium",
                               className: I.featureGuide,
                               children: b.intl.format(b.t.DJN6eZ, {
@@ -156,9 +156,9 @@ function N(t) {
             location: u = "ContextMenu",
             disallowIgnore: f,
             guildId: m,
-            channelId: j,
+            channelId: x,
         } = t,
-        x = (function (t, e) {
+        g = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
@@ -183,14 +183,14 @@ function N(t) {
         i.useLayoutEffect(
             () => () => {
                 O.default.track(p.rMx.USER_REMEDIATION_ACTION, {
-                    action: g.l.DISMISS_BLOCK,
+                    action: j.l.DISMISS_BLOCK,
                     location: u,
                 });
             },
             [u],
         ),
         (0, r.jsx)(
-            c.VoidConfirmModal,
+            s.VoidConfirmModal,
             h(
                 E(
                     {
@@ -198,27 +198,27 @@ function N(t) {
                         cancelText: b.intl.string(b.t["ETE/oC"]),
                         onCancel: () => {
                             O.default.track(p.rMx.USER_REMEDIATION_ACTION, {
-                                action: g.l.CANCEL_BLOCK,
+                                action: j.l.CANCEL_BLOCK,
                                 location: u,
                             }),
                                 null == l || l();
                         },
                         onConfirm: () => {
                             null == n || n(),
-                                s.Z.blockUser(e.id, { location: u }).then(() => {
+                                c.Z.blockUser(e.id, { location: u }).then(() => {
                                     O.default.track(p.rMx.BLOCK_USER_CONFIRMED),
-                                        d.Z.showBlockSuccessToast(e.id, null != j ? j : void 0);
+                                        d.Z.showBlockSuccessToast(e.id, null != x ? x : void 0);
                                 });
                         },
                         impression: { impressionName: o.ImpressionNames.BLOCK_USER_CONFIRMATION },
                     },
-                    x,
+                    g,
                 ),
                 {
                     children: (0, r.jsx)(y, {
                         user: e,
                         guildId: m,
-                        channelId: j,
+                        channelId: x,
                         onBlock: n,
                         onIgnore: a,
                         disallowIgnore: f,

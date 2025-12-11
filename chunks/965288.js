@@ -19,8 +19,8 @@ var r = n(54381),
     b = n(795318),
     y = n(728285),
     O = n(670188),
-    j = n(314897),
-    x = n(271383),
+    x = n(314897),
+    j = n(271383),
     v = n(5192),
     C = n(590415),
     I = n(354459),
@@ -89,7 +89,7 @@ let Z = i.memo(function (e) {
                 (0, r.jsx)(p.Text, {
                     className: _.text,
                     variant: "text-sm/normal",
-                    color: "header-primary",
+                    color: "text-strong",
                     children: v.ZP.getName(t, n, i),
                 }),
                 l
@@ -142,12 +142,12 @@ let Z = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: s, blocked: u } = t,
             v = l.getGuildId(),
-            C = j.default.getId(),
+            C = x.default.getId(),
             { newestAnalyticsLocation: Z } = (0, g.ZP)(f.Z.AUDIENCE_TILE),
             T = (0, y.bp)(),
-            N = (0, d.e7)([x.ZP], () => {
+            N = (0, d.e7)([j.ZP], () => {
                 var e;
-                return null != v && (null == (e = x.ZP.getMember(v, s.id)) ? void 0 : e.premiumSince) != null;
+                return null != v && (null == (e = j.ZP.getMember(v, s.id)) ? void 0 : e.premiumSince) != null;
             }, [v, s.id]),
             R = i.useRef(null);
         o()(null != v, "Channel cannot be guildless");

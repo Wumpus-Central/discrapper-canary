@@ -23,7 +23,7 @@ var r = n(54381),
     I = n(544989),
     T = n(671955),
     C = n(388032),
-    A = n(116649);
+    A = n(155493);
 function N(e, t, n) {
     return (
         t in e
@@ -59,8 +59,8 @@ function R(e) {
             user: n,
             guildId: N,
             channelId: R,
-            messageId: D,
-            roleId: w,
+            messageId: w,
+            roleId: D,
             openedAt: x,
             setPopoutRef: L,
             closePopout: j,
@@ -70,19 +70,19 @@ function R(e) {
         } = e,
         G = (0, m.ZP)(n.id, N),
         { analyticsLocations: Z } = (0, s.ZP)([...k, o.Z.USER_PROFILE_POPOUT]),
-        B = (0, p.ZB)({
+        F = (0, p.ZB)({
             layout: "POPOUT",
             userId: n.id,
             guildId: N,
             channelId: R,
-            messageId: D,
-            roleId: w,
+            messageId: w,
+            roleId: D,
         }),
-        F = i.useRef(null),
-        V = (0, u.X)(F);
+        B = i.useRef(null),
+        V = (0, u.X)(B);
     i.useEffect(() => {
-        null == L || L(null == F ? void 0 : F.current);
-    }, [F, L]);
+        null == L || L(null == B ? void 0 : B.current);
+    }, [B, L]);
     let H = () => {
             null == j || j(),
                 (0, h.openUserProfileModal)(
@@ -91,7 +91,7 @@ function R(e) {
                             sourceAnalyticsLocations: Z,
                             hideRestrictedProfile: !0,
                         },
-                        B,
+                        F,
                     ),
                 );
         },
@@ -109,7 +109,7 @@ function R(e) {
                                           action: "PRESS_VIEW_PROFILE",
                                           analyticsLocations: Z,
                                       },
-                                      B,
+                                      F,
                                   ),
                               );
                       },
@@ -121,13 +121,13 @@ function R(e) {
     return (0, r.jsx)(s.Gt, {
         value: Z,
         children: (0, r.jsx)(p.Mt, {
-            value: B,
+            value: F,
             openedAt: x,
             fetchStartedAt: null == G ? void 0 : G.fetchStartedAt,
             fetchEndedAt: null == G ? void 0 : G.fetchEndedAt,
             isLoaded: null == G ? void 0 : G.isLoaded,
             children: (0, r.jsxs)(K, {
-                ref: F,
+                ref: B,
                 "aria-labelledby": z,
                 children: [
                     (0, r.jsx)(a.nn4, {
@@ -185,7 +185,7 @@ function R(e) {
                                         userId: n.id,
                                         userBio: null == G ? void 0 : G.bio,
                                         setLineClamp: !1,
-                                        textColor: "header-primary",
+                                        textColor: "text-strong",
                                     }),
                                 ],
                             }),

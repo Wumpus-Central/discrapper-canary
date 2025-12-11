@@ -12,16 +12,16 @@ var l = n(54381),
     m = n(547972),
     f = n(556296),
     b = n(13140),
-    y = n(52436),
-    v = n(981631),
+    v = n(52436),
+    y = n(981631),
     h = n(332325),
     j = n(388032),
-    g = n(245725);
+    g = n(904465);
 let x = r.memo(function (e) {
         let { allClips: t } = e,
-            { query: i, setQuery: a } = (0, y.f)(),
-            d = (0, s.e7)([f.ZP], () => f.ZP.getKeybindForAction(v.kg4.SAVE_CLIP)),
-            p = (0, y.f)(
+            { query: i, setQuery: a } = (0, v.f)(),
+            d = (0, s.e7)([f.ZP], () => f.ZP.getKeybindForAction(y.kg4.SAVE_CLIP)),
+            p = (0, v.f)(
                 (e) =>
                     e.selectedUserIds.size > 0 ||
                     null != e.selectedActivity ||
@@ -97,7 +97,7 @@ let x = r.memo(function (e) {
                             children: [
                                 (0, l.jsx)(o.Heading, {
                                     variant: "heading-lg/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: j.intl.string(j.t.z2jK6X),
                                 }),
                                 null != w &&
@@ -178,13 +178,13 @@ let x = r.memo(function (e) {
     });
 function C(e) {
     let { clipsByGame: t, filteredClips: n, favoriteClips: i, allClips: a } = e,
-        s = (0, y.f)((e) => e.selectedGameId),
-        c = (0, y.f)((e) => e.setSelectedGameId),
+        s = (0, v.f)((e) => e.selectedGameId),
+        c = (0, v.f)((e) => e.setSelectedGameId),
         u = r.useMemo(() => t.map((e) => e.applicationId), [t]),
         m = (0, d.Z)(u),
         f = r.useCallback(() => c(null), [c]),
         b = r.useCallback(() => c("favorites"), [c]),
-        v = r.useMemo(() => new Map(m.map((e) => [null == e ? void 0 : e.id, e])), [m]);
+        y = r.useMemo(() => new Map(m.map((e) => [null == e ? void 0 : e.id, e])), [m]);
     return (0, l.jsxs)("div", {
         className: g.sidebar,
         children: [
@@ -235,7 +235,7 @@ function C(e) {
                                                 name: t,
                                                 count: n,
                                                 icon: (0, l.jsx)(p.Z, {
-                                                    game: v.get(r),
+                                                    game: y.get(r),
                                                     size: p.A.XSMALL,
                                                 }),
                                                 isSelected: s === r,

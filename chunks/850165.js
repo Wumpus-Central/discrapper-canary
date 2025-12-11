@@ -21,7 +21,7 @@ function s(t) {
                         children: [
                             (0, i.jsx)(r.Heading, {
                                 variant: "heading-xl/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: s,
                             }),
                             null != o &&

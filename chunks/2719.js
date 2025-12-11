@@ -37,8 +37,8 @@ var r = n(54381),
     U = n(313789),
     G = n(461877),
     Z = n(518596),
-    B = n(726985),
-    F = n(981631),
+    F = n(726985),
+    B = n(981631),
     V = n(815660),
     H = n(801461),
     Y = n(388032),
@@ -97,7 +97,7 @@ function Q(e, t) {
 }
 let X = M.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK;
 function J() {
-    (0, Z.openUserSettings)(U.n.PROFILE_PANEL, { section: F.oAB.PROFILE_CUSTOMIZATION });
+    (0, Z.openUserSettings)(U.n.PROFILE_PANEL, { section: B.oAB.PROFILE_CUSTOMIZATION });
 }
 function $(e) {
     var t, a;
@@ -133,7 +133,7 @@ function $(e) {
                             children: [
                                 (0, r.jsx)(f.Text, {
                                     tag: "span",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     variant: "text-md/normal",
                                     children: l.username,
                                 }),
@@ -234,7 +234,7 @@ function ee(e) {
                                 ref: _,
                                 children: (0, r.jsx)(f.Text, {
                                     tag: "span",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     variant: "text-md/normal",
                                     children: null == p ? Y.intl.string(Y.t.ep5kjK) : p,
                                 }),
@@ -344,7 +344,7 @@ function en(e) {
                         (0, r.jsx)("div", {
                             children: (0, r.jsx)(f.Text, {
                                 tag: "span",
-                                color: "header-primary",
+                                color: "text-strong",
                                 variant: "text-md/normal",
                                 children: t.valueMessage,
                             }),
@@ -388,7 +388,7 @@ function er(e) {
                 w.default,
                 Q(z({}, e), {
                     title: Y.intl.string(Y.t["3CTiKi"]),
-                    children: a.hasFlag(F.xW$.MFA_SMS) ? Y.intl.string(Y.t.jrhJyo) : void 0,
+                    children: a.hasFlag(B.xW$.MFA_SMS) ? Y.intl.string(Y.t.jrhJyo) : void 0,
                     actionText: Y.intl.string(Y.t.N86XcP),
                     handleSubmit: (e) => O.Z.removePhone(e, O.L.USER_SETTINGS_UPDATE),
                 }),
@@ -419,7 +419,7 @@ function er(e) {
                             (0, r.jsx)("div", {
                                 children: (0, r.jsx)(f.Text, {
                                     tag: "span",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     variant: "text-md/normal",
                                     children: t,
                                 }),
@@ -521,7 +521,7 @@ function ea(e) {
                         (0, r.jsx)("div", {
                             children: (0, r.jsx)(f.Text, {
                                 tag: "span",
-                                color: "header-primary",
+                                color: "text-strong",
                                 variant: "text-md/normal",
                                 children: l,
                             }),
@@ -628,32 +628,32 @@ function eo() {
                         className: W.fieldList,
                         children: [
                             (0, r.jsx)(I.F, {
-                                setting: B.s6.ACCOUNT_DISPLAY_NAME,
+                                setting: F.s6.ACCOUNT_DISPLAY_NAME,
                                 children: (0, r.jsx)(ee, {
                                     className: W.fieldSpacerBottom,
                                     user: t,
                                 }),
                             }),
                             (0, r.jsx)(I.F, {
-                                setting: B.s6.ACCOUNT_USERNAME,
+                                setting: F.s6.ACCOUNT_USERNAME,
                                 children: (0, r.jsx)($, { user: t }),
                             }),
                             (0, r.jsx)(I.F, {
-                                setting: B.s6.ACCOUNT_EMAIL,
+                                setting: F.s6.ACCOUNT_EMAIL,
                                 children: (0, r.jsx)(en, {
                                     className: W.fieldSpacer,
                                     user: t,
                                 }),
                             }),
                             (0, r.jsx)(I.F, {
-                                setting: B.s6.ACCOUNT_PHONE_NUMBER,
+                                setting: F.s6.ACCOUNT_PHONE_NUMBER,
                                 children: (0, r.jsx)(er, {
                                     className: W.fieldSpacer,
                                     user: t,
                                 }),
                             }),
                             (0, r.jsx)(I.F, {
-                                setting: B.s6.ACCOUNT_AGE_GROUP,
+                                setting: F.s6.ACCOUNT_AGE_GROUP,
                                 children: (0, r.jsx)(ea, { className: W.fieldSpacer }),
                             }),
                         ],

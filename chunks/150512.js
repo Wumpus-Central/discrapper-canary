@@ -2,8 +2,8 @@ n.d(t, { Z: () => p }), n(35282);
 var l = n(54381),
     i = n(473749),
     r = n(120356),
-    a = n.n(r),
-    s = n(399606),
+    s = n.n(r),
+    a = n(399606),
     o = n(481060),
     c = n(749210),
     d = n(607070),
@@ -13,14 +13,14 @@ var l = n(54381),
     f = n(594174),
     h = n(5192),
     N = n(51144),
-    I = n(180391);
+    I = n(380815);
 function p(e) {
     let { guildId: t, welcomeMessage: n, className: r } = e,
-        p = (0, s.e7)([g.Z], () => g.Z.getGuild(t)),
-        O = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        E = (0, s.e7)([f.default], () => f.default.getUser(null == n ? void 0 : n.authorIds[0])),
+        p = (0, a.e7)([g.Z], () => g.Z.getGuild(t)),
+        O = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+        E = (0, a.e7)([f.default], () => f.default.getUser(null == n ? void 0 : n.authorIds[0])),
         S = i.useMemo(() => (null != p && null != E && (0, u.Y)(p, E) ? E : null), [p, E]),
-        x = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
+        x = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
         T = i.useMemo(() => {
             var e;
             return null != (e = null == n ? void 0 : n.authorIds) ? e : [];
@@ -36,7 +36,7 @@ function p(e) {
     if (null == S || null == x || null == n) return null;
     let v = null != p && p.ownerId === S.id;
     return (0, l.jsxs)(o.Zbd, {
-        className: a()(I.welcomeMessageContainer, r),
+        className: s()(I.welcomeMessageContainer, r),
         children: [
             (0, l.jsx)("div", { className: I.avatarBackground }),
             O
@@ -61,7 +61,7 @@ function p(e) {
                         children: [
                             (0, l.jsx)(o.Text, {
                                 variant: "text-sm/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: _,
                             }),
                             v

@@ -53,7 +53,7 @@ function O(e) {
                     heading: y.intl.string(y.t.Iyka0U),
                     headingIcon: (0, l.jsx)(o.Mgn, {
                         size: "xxs",
-                        color: o.TVs.colors.HEADER_PRIMARY,
+                        color: o.TVs.colors.TEXT_STRONG,
                     }),
                     headingColor: "text-default",
                     children: (0, l.jsx)(c.n, { userId: n.id }),

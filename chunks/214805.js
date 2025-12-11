@@ -1,17 +1,17 @@
 t.d(n, { I: () => c }), t(953529);
 var r = t(54381);
 t(473749);
-var i = t(120356),
-    l = t.n(i),
+var l = t(120356),
+    i = t.n(l),
     s = t(781160),
     o = t(793030),
-    u = t(316492),
-    a = t(494933);
+    u = t(840967),
+    a = t(510924);
 function c(e) {
     let {
         title: n,
         description: t,
-        headerImage: i,
+        headerImage: l,
         onDetails: c,
         onPurchase: d,
         PurchaseButton: p,
@@ -20,7 +20,7 @@ function c(e) {
     } = e;
     return (0, r.jsx)(s.tE, {
         children: (0, r.jsxs)("div", {
-            className: l()(u.wrapper, a.hoverCard),
+            className: i()(u.wrapper, a.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != c ? c() : null != d && d();
@@ -32,9 +32,9 @@ function c(e) {
                 (0, r.jsx)("div", {
                     className: u.cardHeaderImg,
                     style:
-                        null != i ? { backgroundImage: null != i ? "url(".concat(i.toString(), ")") : void 0 } : void 0,
+                        null != l ? { backgroundImage: null != l ? "url(".concat(l.toString(), ")") : void 0 } : void 0,
                     children:
-                        null == i &&
+                        null == l &&
                         (0, r.jsx)(o.Prq, {
                             color: "white",
                             size: "custom",
@@ -46,7 +46,7 @@ function c(e) {
                     className: u.details,
                     children: [
                         (0, r.jsx)(o.xvT, {
-                            color: "header-primary",
+                            color: "text-strong",
                             variant: "text-md/semibold",
                             children: n,
                         }),

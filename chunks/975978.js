@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(694338),
     E = n(474936),
     b = n(388032),
-    y = n(727486),
+    y = n(949803),
     O = n(298632),
     v = n(219242);
 function S(e, t, n) {
@@ -78,7 +78,7 @@ let A = (e) => {
                   children: [
                       (0, r.jsx)(l.kSu, {
                           size: "sm",
-                          color: s.Z.colors.HEADER_PRIMARY,
+                          color: s.Z.colors.TEXT_STRONG,
                           "aria-hidden": !0,
                       }),
                       (0, r.jsx)(l.nn4, { children: b.intl.string(b.t["tq+6t/"]) }),
@@ -88,7 +88,7 @@ let A = (e) => {
                   children: [
                       (0, r.jsx)(l.P$X, {
                           size: "xs",
-                          color: s.Z.colors.HEADER_PRIMARY,
+                          color: s.Z.colors.TEXT_STRONG,
                           "aria-hidden": !0,
                       }),
                       (0, r.jsx)(l.nn4, { children: b.intl.string(b.t.l4qZrp) }),
@@ -173,7 +173,7 @@ let A = (e) => {
             ],
         });
     },
-    D = (e) => {
+    w = (e) => {
         let { tier0Price: t, tier2Price: n, shouldUseDiscountPrice: i, tier2DiscountedPriceString: a } = e,
             o = i ? a : (0, f.T4)(n.amount, n.currency);
         return (0, r.jsx)("thead", {
@@ -208,7 +208,7 @@ let A = (e) => {
             }),
         });
     },
-    w = (e) => {
+    D = (e) => {
         var t;
         let n,
             { className: a, hidePill: s = !1, selectedPlanTier: f = E.PremiumTypes.TIER_2 } = e,
@@ -217,8 +217,8 @@ let A = (e) => {
             A = null == T || null == (t = T.subscription_trial) ? void 0 : t.sku_id,
             N = (0, p.N)(),
             R = null != N && (0, m.Wp)(N, E.Si.TIER_2),
-            w = (0, m.Aq)(E.Xh.PREMIUM_MONTH_TIER_2),
-            x = "".concat(w, "/").concat((0, d.eP)(E.rV.MONTH)),
+            D = (0, m.Aq)(E.Xh.PREMIUM_MONTH_TIER_2),
+            x = "".concat(D, "/").concat((0, d.eP)(E.rV.MONTH)),
             L = (0, d.CY)(E.Xh.PREMIUM_MONTH_TIER_0),
             j = (0, d.CY)(E.Xh.PREMIUM_MONTH_TIER_2),
             M = (0, g.e)();
@@ -239,7 +239,7 @@ let A = (e) => {
                     (0, r.jsx)(l.Heading, {
                         className: y.titleText,
                         variant: "display-md",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: b.intl.string(b.t.DbPgAd),
                     }),
                     (0, r.jsxs)("div", {
@@ -273,7 +273,7 @@ let A = (e) => {
                             (0, r.jsxs)("table", {
                                 className: y.table,
                                 children: [
-                                    (0, r.jsx)(D, {
+                                    (0, r.jsx)(w, {
                                         tier0Price: L,
                                         tier2Price: j,
                                         shouldUseDiscountPrice: R,

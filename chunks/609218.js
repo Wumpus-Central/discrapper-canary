@@ -54,8 +54,8 @@ function M(e) {
             upsellViewedTrackingData: U,
             onClose: G,
             onDisplay: Z,
-            onLearnMore: B,
-            isEmojiPickerOverlay: F = !1,
+            onLearnMore: F,
+            isEmojiPickerOverlay: B = !1,
         } = e,
         V = (0, l.e7)([E.Z], () => E.Z.affinities),
         H = (0, l.e7)([E.Z], () => E.Z.hasFetched);
@@ -72,7 +72,7 @@ function M(e) {
                 location_section: k,
                 location_object: C.qAy.NAVIGATION_LINK,
             }),
-                null == B || B(),
+                null == F || F(),
                 (0, p.Z)(),
                 G(),
                 (0, f.xf)(),
@@ -87,8 +87,8 @@ function M(e) {
         X = (0, S.Z)(T.Si.TIER_2);
     if (Q) {
         let e;
-        e = F ? ((0, h.rO)() ? w.Z : D.Z) : (0, h.rO)() ? x.Z : L.Z;
-        let t = F ? "nitro-pink" : "green";
+        e = B ? ((0, h.rO)() ? w.Z : D.Z) : (0, h.rO)() ? x.Z : L.Z;
+        let t = B ? "nitro-pink" : "green";
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.ZMr, {
@@ -123,7 +123,7 @@ function M(e) {
                                         (0, r.jsx)(u.Heading, {
                                             className: o()(N.title, { [N.withBadge]: null != X }),
                                             variant: "heading-xl/bold",
-                                            color: "header-primary",
+                                            color: "text-strong",
                                             children: a,
                                         }),
                                         (0, r.jsx)(u.Text, {

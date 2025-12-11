@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(481060),
     o = n(194082),
     c = n(14338),
-    d = n(982115);
+    d = n(995148);
 let u = i.memo(function (e) {
     let {
         label: t,
@@ -38,7 +38,7 @@ let u = i.memo(function (e) {
                       className: d.micIcon,
                   }),
             (0, r.jsxs)(s.Text, {
-                color: "header-primary",
+                color: "text-strong",
                 variant: "text-md/semibold",
                 className: d.text,
                 children: [t, " \u2014 ", n],

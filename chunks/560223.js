@@ -14,7 +14,7 @@ var r = n(54381),
     m = n(391110),
     h = n(75077),
     g = n(51636),
-    E = n(484327);
+    E = n(877782);
 function b(e, t, n) {
     return (
         t in e
@@ -71,7 +71,7 @@ let S = (e) => {
         let { showAllPerksButton: t, leftAlignHeaders: n, title: i, headerClassname: a } = e,
             o = (0, r.jsx)(s.Heading, {
                 variant: "heading-xxl/extrabold",
-                color: "header-primary",
+                color: "text-strong",
                 className: null != a ? a : E.heading,
                 children: i,
             });
@@ -115,8 +115,8 @@ let S = (e) => {
         let N = (0, h.re)(C),
             P = (0, _.Z)(),
             R = (0, h.mN)(),
-            { fractionalState: D } = (0, l.Z)(),
-            w = (0, d.W)(),
+            { fractionalState: w } = (0, l.Z)(),
+            D = (0, d.W)(),
             x = (0, u.bg)({ location: "PremiumPerks" }),
             L = c.JH.useExperiment({ location: "PremiumPerks" }).enabled,
             j = f.Z.useExperiment({ location: "PremiumPerks" }).enabled,
@@ -125,8 +125,8 @@ let S = (e) => {
                 variant: n,
                 hideCardsOnNarrowScreen: !1,
                 isPremiumSubscriber: R,
-                fractionalState: D,
-                isInReverseTrial: w,
+                fractionalState: w,
+                isInReverseTrial: D,
                 showProfileWidgets: x,
                 showDisplayNameStyles: L,
                 recurring3PPromotionExperiment: j,
@@ -151,7 +151,7 @@ let S = (e) => {
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: "text-lg/normal",
-                    color: "header-primary",
+                    color: "text-strong",
                     className: o()(E.subtitle, {
                         [E.subtitle]: null == O || b,
                         [E.subtitleWithButton]: null != O && !b,

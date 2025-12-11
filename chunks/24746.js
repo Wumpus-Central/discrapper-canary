@@ -1,6 +1,6 @@
-n.d(t, { Z: () => b }), n(953529), n(388685);
-var r = n(54381),
-    a = n(473749),
+n.d(t, { Z: () => x }), n(953529), n(388685);
+var a = n(54381),
+    r = n(473749),
     i = n(120356),
     l = n.n(i),
     s = n(159635),
@@ -9,79 +9,79 @@ var r = n(54381),
     d = n(241209),
     u = n(547563),
     p = n(388032),
-    m = n(412850);
+    m = n(300449);
 let h = o().parserFor(u.Z),
-    g = o().reactFor(o().ruleOutput(u.Z, "react"));
-function f(e) {
+    f = o().reactFor(o().ruleOutput(u.Z, "react"));
+function g(e) {
     let { description: t, supportsMarkdown: n } = e,
-        [i, s] = a.useState(!1),
-        o = a.useRef(null);
-    a.useEffect(() => {
+        [i, s] = r.useState(!1),
+        o = r.useRef(null);
+    r.useEffect(() => {
         if (null == o.current) return;
         let e = new ResizeObserver(() => {
-            var e, t, n, r;
+            var e, t, n, a;
             s(
                 (null != (n = null == (e = o.current) ? void 0 : e.scrollHeight) ? n : 0) -
-                    (null != (r = null == (t = o.current) ? void 0 : t.clientHeight) ? r : 0) >
+                    (null != (a = null == (t = o.current) ? void 0 : t.clientHeight) ? a : 0) >
                     1,
             );
         });
         return e.observe(o.current), () => e.disconnect();
     }, []);
-    let [u, p] = a.useState(!1),
-        f = a.useCallback(() => {
+    let [u, p] = r.useState(!1),
+        g = r.useCallback(() => {
             p((e) => !e);
         }, []);
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, r.jsx)("div", {
+            (0, a.jsx)("div", {
                 ref: o,
                 className: l()({
                     [m.descriptionClamp]: !u,
                     [m.descriptionClampSafari]: !u && "Safari" === platform.name,
                 }),
                 children: n
-                    ? (0, r.jsx)(d.Z, {
+                    ? (0, a.jsx)(d.Z, {
                           className: m.detailedDescription,
                           parser: h,
-                          output: g,
+                          output: f,
                           state: { allowLinks: !0 },
                           children: t,
                       })
-                    : (0, r.jsx)(c.Text, {
+                    : (0, a.jsx)(c.Text, {
                           variant: "text-md/normal",
                           color: "text-default",
                           children: t,
                       }),
             }),
             i || u
-                ? (0, r.jsx)(_, {
+                ? (0, a.jsx)(b, {
                       isShowingMore: u,
-                      onToggle: f,
+                      onToggle: g,
                   })
                 : null,
         ],
     });
 }
-function _(e) {
+function b(e) {
     let { onToggle: t, isShowingMore: n } = e,
-        i = a.useMemo(
+        i = r.useMemo(
             () =>
-                (0, r.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     className: m.showMoreContent,
                     children: [
-                        (0, r.jsx)(c.Text, {
+                        (0, a.jsx)(c.Text, {
                             variant: "text-md/semibold",
                             color: "interactive-text-default",
                             children: n ? p.intl.string(p.t["vtfc4+"]) : p.intl.string(p.t.ZDRyuq),
                         }),
                         n
-                            ? (0, r.jsx)(c.u04, {
+                            ? (0, a.jsx)(c.u04, {
                                   size: "md",
                                   color: "currentColor",
                                   className: m.showMoreButtonIcon,
                               })
-                            : (0, r.jsx)(c.CJ0, {
+                            : (0, a.jsx)(c.CJ0, {
                                   size: "md",
                                   color: "currentColor",
                                   className: m.showMoreButtonIcon,
@@ -90,26 +90,26 @@ function _(e) {
                 }),
             [n],
         );
-    return (0, r.jsxs)(c.P3F, {
+    return (0, a.jsxs)(c.P3F, {
         className: m.showMoreButton,
         onClick: t,
-        children: [(0, r.jsx)("div", { className: m.divider }), i, (0, r.jsx)("div", { className: m.divider })],
+        children: [(0, a.jsx)("div", { className: m.divider }), i, (0, a.jsx)("div", { className: m.divider })],
     });
 }
-let b = function (e) {
+let x = function (e) {
     var t, n;
     let { application: i } = e,
         l = null == (t = i.directory_entry) ? void 0 : t.detailed_description,
         s = null == (n = i.directory_entry) ? void 0 : n.short_description,
-        o = a.useMemo(
+        o = r.useMemo(
             () =>
                 null != l && l.length > 0
-                    ? (0, r.jsx)(f, {
+                    ? (0, a.jsx)(g, {
                           description: l,
                           supportsMarkdown: !0,
                       })
                     : null != s && s.length > 0
-                      ? (0, r.jsx)(f, {
+                      ? (0, a.jsx)(g, {
                             description: s,
                             supportsMarkdown: !1,
                         })
@@ -118,12 +118,12 @@ let b = function (e) {
         );
     return null == o
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, a.jsxs)("div", {
               className: m.overviewContainer,
               children: [
-                  (0, r.jsx)(c.Heading, {
+                  (0, a.jsx)(c.Heading, {
                       variant: "heading-lg/semibold",
-                      color: "header-primary",
+                      color: "text-strong",
                       children: p.intl.string(p.t.txraKS),
                   }),
                   o,

@@ -6,7 +6,7 @@ var i = n(481060),
     o = n(528027),
     s = n(686807),
     l = n(113318),
-    c = n(490944);
+    c = n(893243);
 function u(e) {
     let { benefit: t, guildId: n, onClick: u } = e,
         d = (0, l.Z)(n, t.ref_id),
@@ -33,7 +33,7 @@ function u(e) {
                 children: [
                     (0, r.jsx)(i.Text, {
                         variant: "text-md/medium",
-                        color: "header-primary",
+                        color: "text-strong",
                         className: c.name,
                         children: (0, s.Z)(t),
                     }),

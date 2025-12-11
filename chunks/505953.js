@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(789707),
     y = n(981631),
     O = n(531578),
-    v = n(271343);
+    v = n(142758);
 function S(e, t, n) {
     return (
         t in e
@@ -75,8 +75,8 @@ function A(e) {
     let { summary: t, channel: f, members: b, guildId: S, unread: T, onClick: A } = e,
         [N, P] = i.useState(!1),
         R = (0, u.Ye)(m.default.extractTimestamp(t.startId)),
-        D = (0, a.e7)([h.Z], () => h.Z.summaryFeedback(t)),
-        w = (e, n) => {
+        w = (0, a.e7)([h.Z], () => h.Z.summaryFeedback(t)),
+        D = (e, n) => {
             e.stopPropagation(),
                 (0, g.Z)({
                     summary: t,
@@ -156,12 +156,12 @@ function A(e) {
                 }),
             }),
             N &&
-                !D &&
+                !w &&
                 (0, r.jsxs)("div", {
                     className: v.feedbackContainer,
                     children: [
                         (0, r.jsx)(o.P3F, {
-                            onClick: (e) => w(e, O.aZ.GOOD),
+                            onClick: (e) => D(e, O.aZ.GOOD),
                             children: (0, r.jsx)(_.Z, {
                                 className: v.thumbIcon,
                                 width: 12,
@@ -169,7 +169,7 @@ function A(e) {
                             }),
                         }),
                         (0, r.jsx)(o.P3F, {
-                            onClick: (e) => w(e, O.aZ.BAD),
+                            onClick: (e) => D(e, O.aZ.BAD),
                             children: (0, r.jsx)(p.Z, {
                                 className: v.thumbIcon,
                                 width: 12,
@@ -179,7 +179,7 @@ function A(e) {
                     ],
                 }),
             (0, r.jsx)(o.Text, {
-                color: "header-primary",
+                color: "text-strong",
                 variant: "text-sm/semibold",
                 className: v.title,
                 children: t.topic,

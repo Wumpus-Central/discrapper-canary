@@ -1,9 +1,9 @@
 r.r(t), r.d(t, { default: () => j });
 var n = r(54381),
-    o = r(473749),
-    c = r(793030),
-    i = r(442837),
-    l = r(481060),
+    c = r(473749),
+    o = r(793030),
+    l = r(442837),
+    i = r(481060),
     s = r(959457),
     a = r(571826),
     u = r(630759),
@@ -11,12 +11,12 @@ var n = r(54381),
     f = r(785792),
     p = r(190054),
     b = r(760373),
-    y = r(388032),
-    O = r(547990);
+    O = r(388032),
+    y = r(979519);
 let j = function (e) {
     var t, r;
-    let { transitionState: j, streamKey: h, channelId: m, onClose: g } = e,
-        v = (0, i.e7)([s.Z], () => {
+    let { transitionState: j, streamKey: h, channelId: g, onClose: m } = e,
+        v = (0, l.e7)([s.Z], () => {
             var e;
             return null == (e = s.Z.getSecureFramesState(h)) ? void 0 : e.epochAuthenticator;
         }),
@@ -25,53 +25,53 @@ let j = function (e) {
             chunkSize: b.y6,
             desiredLength: b.YP,
         }),
-        P = o.useCallback(() => {
-            (0, a.ih)({ channelId: m });
-        }, [m]),
-        _ = {
+        P = c.useCallback(() => {
+            (0, a.ih)({ channelId: g });
+        }, [g]),
+        w = {
             transitionState: j,
-            title: y.intl.string(y.t.QogHld),
-            subtitle: y.intl.string(y.t.qODBkW),
+            title: O.intl.string(O.t.QogHld),
+            subtitle: O.intl.string(O.t.qODBkW),
         },
-        w = (0, n.jsxs)(n.Fragment, {
+        T = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)("div", {
-                    className: O.verification,
+                    className: y.verification,
                     children: [
                         (0, n.jsxs)("div", {
-                            className: O.header,
+                            className: y.header,
                             children: [
-                                (0, n.jsx)(l.Heading, {
+                                (0, n.jsx)(i.Heading, {
                                     variant: "text-sm/bold",
-                                    color: "header-primary",
-                                    children: y.intl.string(y.t.cgBTyO),
+                                    color: "text-strong",
+                                    children: O.intl.string(O.t.cgBTyO),
                                 }),
                                 null != x &&
                                     (0, n.jsx)(p.H, {
-                                        className: O.copyIcon,
+                                        className: y.copyIcon,
                                         chunks: x,
-                                        color: l.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
+                                        color: i.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                         onCopy: P,
                                     }),
                             ],
                         }),
                         (0, n.jsx)(f.b, {
-                            className: O.code,
+                            className: y.code,
                             chunks: x,
                             columns: b.WK,
                         }),
                     ],
                 }),
-                (0, n.jsx)(l.Text, {
-                    className: O.footer,
+                (0, n.jsx)(i.Text, {
+                    className: y.footer,
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    children: y.intl.format(y.t["H3+ktv"], { helpArticle: (0, u.uV)() }),
+                    children: O.intl.format(O.t["H3+ktv"], { helpArticle: (0, u.uV)() }),
                 }),
             ],
         });
     return (0, n.jsx)(
-        c.Modal,
+        o.Modal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -96,12 +96,12 @@ let j = function (e) {
                     });
             }
             return e;
-        })({}, _)),
+        })({}, w)),
         (r = r =
             {
-                onClose: g,
+                onClose: m,
                 actions: [],
-                children: w,
+                children: T,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

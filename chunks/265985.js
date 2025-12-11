@@ -21,7 +21,7 @@ var i = n(120356),
     E = n(575460),
     b = n(293810),
     y = n(388032),
-    O = n(673854);
+    O = n(627153);
 let v = 440,
     S = 80,
     I = 4,
@@ -107,7 +107,7 @@ let v = 440,
                                     children: [
                                         (0, r.jsx)(l.Text, {
                                             variant: "text-md/medium",
-                                            color: "header-primary",
+                                            color: "text-strong",
                                             className: O.emojiName,
                                             children: y.intl.string(y.t.PrKk4n),
                                         }),

@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(125631),
     p = n(981631),
     f = n(388032),
-    g = n(184904);
+    g = n(462408);
 function h(e, t, n) {
     return (0, r.jsxs)(
         "button",
@@ -51,7 +51,7 @@ function m() {
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-lg/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: f.intl.string(f.t.IuMx1Y),
                     }),
                     (0, r.jsx)(l.Text, {

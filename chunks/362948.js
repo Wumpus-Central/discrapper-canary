@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(981631),
     d = n(474936),
     f = n(388032),
-    p = n(551720);
+    p = n(192123);
 let _ = 1048576,
     m = [
         {
@@ -146,7 +146,7 @@ let _ = 1048576,
     ];
 function h(e) {
     let { children: t, className: n, tier: i } = e,
-        a = i === u.Eu4.NONE ? "text-muted" : "header-primary",
+        a = i === u.Eu4.NONE ? "text-muted" : "text-strong",
         s = i === u.Eu4.NONE || null == i ? "heading-xl/normal" : "heading-xl/bold";
     return (0, r.jsxs)("th", {
         className: o()(p.columnHeading, n),

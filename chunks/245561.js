@@ -6,7 +6,7 @@ var i = n(120356),
     o = n(481060),
     s = n(596454),
     l = n(889989),
-    c = n(617374);
+    c = n(373191);
 function u(e) {
     let t,
         { applicationId: n, storeListingBenefits: i, skuBenefits: a, className: o } = e;
@@ -44,7 +44,7 @@ function d(e) {
         emojiContainerClassName: i,
         showsDescription: l = !0,
         nameTextVariant: u = "text-md/medium",
-        nameTextColor: d = "header-primary",
+        nameTextColor: d = "text-strong",
     } = e;
     return (0, r.jsxs)("div", {
         className: a()(c.container, n),
@@ -86,7 +86,7 @@ function f(e) {
         emojiContainerClassName: s,
         showsDescription: u = !0,
         nameTextVariant: d = "text-md/medium",
-        nameTextColor: f = "header-primary",
+        nameTextColor: f = "text-strong",
     } = e;
     return (0, r.jsxs)("div", {
         className: a()(c.container, i),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(953529);
+n.d(t, { Z: () => O }), n(953529);
 var a = n(54381),
     r = n(473749),
     i = n(120356),
@@ -11,20 +11,20 @@ var a = n(54381),
     m = n(960919),
     p = n(373370),
     h = n(968843),
-    x = n(862657),
-    f = n(115179),
-    g = n(836831),
-    b = n(644646),
+    f = n(862657),
+    x = n(115179),
+    b = n(836831),
+    g = n(644646),
     v = n(251360),
     j = n(19148),
-    _ = n(69439),
-    y = n(324805),
-    C = n(642145),
+    y = n(69439),
+    C = n(324805),
+    _ = n(642145),
     S = n(388032),
-    E = n(289157);
-let O = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
-function T(e) {
-    var t, n, i, T, P;
+    E = n(710294);
+let T = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
+function O(e) {
+    var t, n, i, O, P;
     let {
             quest: w,
             questContent: I,
@@ -36,8 +36,8 @@ function T(e) {
             sourceQuestContent: L,
         } = e,
         M = r.useRef(null),
-        U = (0, f.w8)(w.config),
-        B = (0, f.B3)(w.config),
+        U = (0, x.w8)(w.config),
+        B = (0, x.B3)(w.config),
         F = (null == (t = w.userStatus) ? void 0 : t.enrolledAt) != null,
         { ref: G, scrollHeight: V } = (0, d.kE)(),
         H = 104 !== V,
@@ -45,7 +45,7 @@ function T(e) {
         { expansionSpring: z } = (0, c.q_F)({
             expansionSpring: +!!k,
             config:
-                ((T = (function (e) {
+                ((O = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             a = Object.keys(n);
@@ -69,10 +69,10 @@ function T(e) {
                             });
                     }
                     return e;
-                })({}, C.Y)),
+                })({}, _.Y)),
                 (P = P = { clamp: !0 }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(T, Object.getOwnPropertyDescriptors(P))
+                    ? Object.defineProperties(O, Object.getOwnPropertyDescriptors(P))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -81,14 +81,14 @@ function T(e) {
                           }
                           return n;
                       })(Object(P)).forEach(function (e) {
-                          Object.defineProperty(T, e, Object.getOwnPropertyDescriptor(P, e));
+                          Object.defineProperty(O, e, Object.getOwnPropertyDescriptor(P, e));
                       }),
-                T),
+                O),
         }),
         q = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
         K = (null == (i = w.userStatus) ? void 0 : i.claimedAt) != null,
-        Q = (0, f.xN)(w.config),
-        Y = (0, f.LM)(w.config),
+        Q = (0, x.xN)(w.config),
+        Y = (0, x.LM)(w.config),
         { completedRatio: X, completedRatioDisplay: J } = (0, h.I)(w),
         $ = (0, p.Bd)(w, L, M),
         ee = r.useMemo(
@@ -183,24 +183,24 @@ function T(e) {
                                           children: [
                                               q &&
                                                   (0, a.jsx)(c.Fmz, {
-                                                      importData: O,
+                                                      importData: T,
                                                       className: E.confetti,
                                                       loop: !1,
                                                       autoplay: !1,
                                                       shouldAnimate: !en,
                                                   }),
-                                              (0, a.jsx)(g.Z, {
+                                              (0, a.jsx)(b.Z, {
                                                   quest: w,
                                                   size: 76,
                                                   percentComplete: X,
-                                                  percentCompleteText: k && !(0, x.zi)(w) ? J : void 0,
+                                                  percentCompleteText: k && !(0, f.zi)(w) ? J : void 0,
                                                   children: (0, a.jsx)("div", {
                                                       className: E.circularRewardTileWrapper,
-                                                      children: (0, a.jsx)(b.Z, {
+                                                      children: (0, a.jsx)(g.Z, {
                                                           quest: w,
                                                           questContent: I,
                                                           className: E.circularQuestRewardTileAsset,
-                                                          location: y.dr.QUEST_HOME_DESKTOP,
+                                                          location: C.dr.QUEST_HOME_DESKTOP,
                                                           autoplay: k,
                                                           onLoadComplete: W,
                                                           lazyLoad: !0,
@@ -210,12 +210,12 @@ function T(e) {
                                               }),
                                           ],
                                       })
-                                    : (0, a.jsx)(b.Z, {
+                                    : (0, a.jsx)(g.Z, {
                                           quest: w,
                                           autoplay: k,
                                           questContent: I,
                                           className: E.questRewardTileAsset,
-                                          location: y.dr.QUEST_HOME_DESKTOP,
+                                          location: C.dr.QUEST_HOME_DESKTOP,
                                           onLoadComplete: W,
                                           lazyLoad: !0,
                                           sourceQuestContent: L,
@@ -235,7 +235,7 @@ function T(e) {
                             }),
                             (0, a.jsx)(c.Text, {
                                 variant: "text-md/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 className: E.header,
                                 children: ee,
                             }),
@@ -251,7 +251,7 @@ function T(e) {
                         }),
                 ],
             }),
-            (0, a.jsx)(_.Z, {
+            (0, a.jsx)(y.Z, {
                 quest: w,
                 questContent: I,
                 contentPosition: R,
@@ -268,7 +268,7 @@ let N = r.memo(function (e) {
         c.Text,
         {
             variant: "text-md/semibold",
-            color: "header-primary",
+            color: "text-strong",
             tag: "span",
             className: E.header,
             children: n,

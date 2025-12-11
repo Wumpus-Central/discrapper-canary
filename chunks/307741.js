@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(168524),
     E = n(715318),
     b = n(388032),
-    y = n(488463);
+    y = n(158859);
 function O(e) {
     let { detectedGame: t } = e,
         n = i.useMemo(() => {
@@ -71,7 +71,7 @@ function S(e) {
         children: [
             (0, r.jsx)(s.X6q, {
                 variant: "heading-lg/bold",
-                color: "header-primary",
+                color: "text-strong",
                 children: l,
             }),
             (0, r.jsx)(s.xvT, {

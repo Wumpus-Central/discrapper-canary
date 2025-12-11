@@ -4,7 +4,7 @@ var r = n(54381),
     l = n(481060),
     a = n(926526),
     s = n(388032),
-    o = n(394121);
+    o = n(871612);
 let c = function (e) {
     let { onWithdrawApplication: t, guild: n = null } = e,
         c = null == n ? void 0 : n.id;
@@ -27,7 +27,7 @@ let c = function (e) {
                     children: [
                         (0, r.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
-                            color: "header-primary",
+                            color: "text-strong",
                             children:
                                 (null == n ? void 0 : n.name) != null
                                     ? s.intl.formatToPlainString(s.t["0Qlu/6"], { guildName: n.name })

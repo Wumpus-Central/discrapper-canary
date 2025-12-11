@@ -1,4 +1,4 @@
-n.d(l, { default: () => z }), n(415506);
+n.d(l, { default: () => y }), n(415506);
 var t = n(54381),
     i = n(473749),
     a = n(120356),
@@ -6,16 +6,16 @@ var t = n(54381),
     s = n(990547),
     u = n(793030),
     d = n(399606),
-    c = n(481060),
-    o = n(588705),
+    o = n(481060),
+    c = n(588705),
     m = n(700582),
     x = n(100527),
     g = n(906732),
     v = n(436774),
     h = n(313201),
     j = n(978986),
-    p = n(451603),
-    E = n(885714),
+    E = n(451603),
+    p = n(885714),
     _ = n(973616),
     I = n(598077),
     N = n(701190),
@@ -43,9 +43,9 @@ function F() {
                 location_stack: l,
             });
         }, [l]),
-        (0, t.jsxs)(c.P3F, {
+        (0, t.jsxs)(o.P3F, {
             onClick: () =>
-                (0, E.Z)({
+                (0, p.Z)({
                     analyticsSource: { page: D.Sbl.EXTERNAL_INVITE_LINK_MODAL },
                     analyticsLocation: {
                         page: D.Sbl.EXTERNAL_INVITE_LINK_MODAL,
@@ -55,7 +55,7 @@ function F() {
                 }),
             className: b.experimentUpsellError,
             children: [
-                (0, t.jsx)(c.SrA, {
+                (0, t.jsx)(o.SrA, {
                     size: "md",
                     className: b.experimentUpsellIcon,
                     color: v.JX.PREMIUM_TIER_2,
@@ -79,7 +79,7 @@ function U(e) {
         className: r()(b.iconContainer, l),
         children: [
             (0, t.jsx)(S.Z, { className: b.iconSparklePlus }),
-            (0, t.jsx)(c.xPt, {
+            (0, t.jsx)(o.xPt, {
                 size: "custom",
                 color: "currentColor",
                 className: b.iconLink,
@@ -90,7 +90,7 @@ function U(e) {
         ],
     });
 }
-function y(e) {
+function z(e) {
     let { transitionState: l } = e,
         n = (0, h.Dt)(),
         { analyticsLocations: i } = (0, g.ZP)(x.Z.INVITE_MODAL);
@@ -105,10 +105,10 @@ function y(e) {
                 className: b.errorContent,
                 children: [
                     (0, t.jsx)(U, { className: b.errorImage }),
-                    (0, t.jsx)(c.Heading, {
+                    (0, t.jsx)(o.Heading, {
                         id: n,
                         variant: "heading-xl/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: O.intl.string(O.t.u9zxnX),
                     }),
                     (0, t.jsx)("div", {
@@ -126,8 +126,8 @@ function y(e) {
         }),
     });
 }
-function z(e) {
-    var l, n, a, r, v, E;
+function y(e) {
+    var l, n, a, r, v, p;
     let S,
         T,
         k,
@@ -136,7 +136,7 @@ function z(e) {
         var e;
         return null == (e = f.default.getCurrentUser()) ? void 0 : e.premiumType;
     });
-    let z = (0, d.e7)([f.default], () => f.default.getCurrentUser()),
+    let y = (0, d.e7)([f.default], () => f.default.getCurrentUser()),
         { invite: V, error: w, submitting: H } = (0, d.cj)([R.Z], () => R.Z.getProps()),
         K = (0, d.e7)([N.Z], () => {
             var e;
@@ -178,11 +178,11 @@ function z(e) {
                 });
             }
         }, [J, Y, null == V ? void 0 : V.code, null == V || null == (n = V.guild) ? void 0 : n.id]),
-        null == V || null == z)
+        null == V || null == y)
     )
         return null;
     if (V.state === D.r2o.EXPIRED || V.state === D.r2o.BANNED || V.state === D.r2o.ERROR)
-        return (0, t.jsx)(y, { transitionState: U });
+        return (0, t.jsx)(z, { transitionState: U });
     if (null == V.channel) return null;
     function $() {
         null != V && A.Z.acceptInvite(V);
@@ -208,7 +208,7 @@ function z(e) {
             }));
     else if (((null == (S = en.name) || "" === S) && null != et && (S = et.username), null == S))
         throw Error("no name for group DM invite");
-    let eu = (0, p.yU)();
+    let eu = (0, E.yU)();
     return (
         (k = ea
             ? O.intl.string(O.t["e/6Ogt"])
@@ -219,8 +219,8 @@ function z(e) {
                 size: null != T ? "xl" : "sm",
                 "aria-labelledby": B,
                 "aria-label":
-                    null != (E = null != (v = null == el ? void 0 : el.name) ? v : null == en ? void 0 : en.name)
-                        ? E
+                    null != (p = null != (v = null == el ? void 0 : el.name) ? v : null == en ? void 0 : en.name)
+                        ? p
                         : "",
                 transitionState: U,
                 onClose: () => (ee(), Promise.resolve()),
@@ -245,16 +245,16 @@ function z(e) {
                                         children: [
                                             (0, t.jsx)(m.Z, {
                                                 user: new I.Z(et),
-                                                size: c.EFr.SIZE_20,
+                                                size: o.EFr.SIZE_20,
                                             }),
-                                            (0, t.jsx)(c.Text, {
+                                            (0, t.jsx)(o.Text, {
                                                 tag: "span",
                                                 variant: "text-md/medium",
                                                 color: "text-subtle",
                                                 children: O.intl.format(O.t.ri1ubC, {
                                                     usernameHook: (e, l) =>
                                                         (0, t.jsx)(
-                                                            c.Text,
+                                                            o.Text,
                                                             {
                                                                 variant: "text-md/semibold",
                                                                 color: "text-default",
@@ -272,7 +272,7 @@ function z(e) {
                                     children: [
                                         (0, t.jsx)("div", {
                                             id: B,
-                                            children: (0, t.jsx)(o.Z, {
+                                            children: (0, t.jsx)(c.Z, {
                                                 invite: V,
                                                 disableUser: es,
                                                 error: w,
@@ -296,13 +296,13 @@ function z(e) {
                                                                   fullWidth: !0,
                                                                   text: eu ? O.intl.string(O.t.ZNCziL) : k,
                                                                   icon:
-                                                                      eu || null == z
+                                                                      eu || null == y
                                                                           ? void 0
                                                                           : () =>
                                                                                 (0, t.jsx)(m.Z, {
                                                                                     "aria-hidden": !0,
-                                                                                    size: c.EFr.SIZE_16,
-                                                                                    user: z,
+                                                                                    size: o.EFr.SIZE_16,
+                                                                                    user: y,
                                                                                     className: b.acceptAsAvatar,
                                                                                 }),
                                                               })

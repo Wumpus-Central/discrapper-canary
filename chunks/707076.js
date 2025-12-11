@@ -6,8 +6,8 @@ var l = n(54381);
 n(473749);
 var i = n(120356),
     r = n.n(i),
-    a = n(442837),
-    s = n(481060),
+    s = n(442837),
+    a = n(481060),
     o = n(367907),
     c = n(548473),
     d = n(721012),
@@ -21,7 +21,7 @@ var i = n(120356),
     p = n(84658),
     O = n(981631),
     E = n(388032),
-    S = n(473450);
+    S = n(744099);
 function x(e) {
     let { isTooltip: t = !1 } = e,
         n = [
@@ -46,21 +46,21 @@ function x(e) {
         ];
     t && n.pop();
     let i = t
-            ? (0, l.jsx)(s.Text, {
+            ? (0, l.jsx)(a.Text, {
                   variant: "text-sm/semibold",
-                  color: "header-primary",
+                  color: "text-strong",
                   children: E.intl.string(E.t.nTI2mQ),
               })
-            : (0, l.jsx)(s.Heading, {
+            : (0, l.jsx)(a.Heading, {
                   variant: "heading-md/semibold",
                   children: E.intl.string(E.t.g1OQtu),
               }),
-        a = t
-            ? (0, l.jsx)(s.Text, {
+        s = t
+            ? (0, l.jsx)(a.Text, {
                   variant: "text-xxs/normal",
                   children: E.intl.format(E.t.hGwDPV, {}),
               })
-            : (0, l.jsx)(s.Text, {
+            : (0, l.jsx)(a.Text, {
                   variant: "text-xs/normal",
                   children: E.intl.format(E.t["8XLD3r"], {}),
               });
@@ -71,7 +71,7 @@ function x(e) {
             (0, l.jsx)("div", {
                 className: S.spacingSmall,
                 children: n.map((e, t) => {
-                    let { emoji: n, emojiDescription: i, title: a, selected: o } = e;
+                    let { emoji: n, emojiDescription: i, title: s, selected: o } = e;
                     return (0, l.jsxs)(
                         "div",
                         {
@@ -82,15 +82,15 @@ function x(e) {
                                     "aria-label": i,
                                     children: n,
                                 }),
-                                (0, l.jsx)(s.Text, {
+                                (0, l.jsx)(a.Text, {
                                     variant: "text-sm/medium",
-                                    color: "header-primary",
-                                    children: a,
+                                    color: "text-strong",
+                                    children: s,
                                 }),
                                 o &&
                                     (0, l.jsx)("div", {
                                         className: S.checkboxCircle,
-                                        children: (0, l.jsx)(s.dz2, {
+                                        children: (0, l.jsx)(a.dz2, {
                                             size: "md",
                                             color: "currentColor",
                                             className: S.checkmark,
@@ -102,7 +102,7 @@ function x(e) {
                     );
                 }),
             }),
-            a,
+            s,
         ],
     });
 }
@@ -136,9 +136,9 @@ function T() {
     return (0, l.jsx)(d.i, { testimonials: e });
 }
 function _() {
-    let e = (0, a.e7)([N.Z], () => N.Z.getGuildId()),
-        t = (0, a.e7)([g.Z], () => g.Z.getGuild(e)),
-        n = (0, a.e7)([f.default], () => f.default.getCurrentUser());
+    let e = (0, s.e7)([N.Z], () => N.Z.getGuildId()),
+        t = (0, s.e7)([g.Z], () => g.Z.getGuild(e)),
+        n = (0, s.e7)([f.default], () => f.default.getCurrentUser());
     return null == e || null == t || null == n
         ? null
         : (0, l.jsxs)("div", {
@@ -162,11 +162,11 @@ function _() {
                           (0, l.jsxs)("div", {
                               className: S.upsellHeaderText,
                               children: [
-                                  (0, l.jsx)(s.Heading, {
+                                  (0, l.jsx)(a.Heading, {
                                       variant: "heading-xl/semibold",
                                       children: E.intl.string(E.t.GnKOAx),
                                   }),
-                                  (0, l.jsx)(s.Text, {
+                                  (0, l.jsx)(a.Text, {
                                       variant: "text-md/normal",
                                       children: E.intl.string(E.t.SJRFJj),
                                   }),
@@ -174,7 +174,7 @@ function _() {
                           }),
                           (0, l.jsx)("div", {
                               className: S.upsellButtons,
-                              children: (0, l.jsx)(s.Button, {
+                              children: (0, l.jsx)(a.Button, {
                                   variant: "primary",
                                   text: E.intl.string(E.t.RzWDqY),
                                   onClick: function () {
@@ -240,9 +240,9 @@ function _() {
                           }),
                       ],
                   }),
-                  (0, l.jsx)(s.izJ, {}),
+                  (0, l.jsx)(a.izJ, {}),
                   (0, l.jsx)(T, {}),
-                  (0, l.jsx)(s.izJ, {}),
+                  (0, l.jsx)(a.izJ, {}),
                   (0, l.jsxs)("div", {
                       className: S.valuesContainer,
                       children: [
@@ -253,11 +253,11 @@ function _() {
                                   (0, l.jsxs)("div", {
                                       className: S.valueText,
                                       children: [
-                                          (0, l.jsx)(s.Heading, {
+                                          (0, l.jsx)(a.Heading, {
                                               variant: "heading-md/semibold",
                                               children: E.intl.string(E.t.Z7kqKZ),
                                           }),
-                                          (0, l.jsx)(s.Text, {
+                                          (0, l.jsx)(a.Text, {
                                               variant: "text-sm/normal",
                                               children: E.intl.string(E.t.di3UC5),
                                           }),
@@ -271,11 +271,11 @@ function _() {
                                   (0, l.jsxs)("div", {
                                       className: S.valueText,
                                       children: [
-                                          (0, l.jsx)(s.Heading, {
+                                          (0, l.jsx)(a.Heading, {
                                               variant: "heading-md/semibold",
                                               children: E.intl.string(E.t.O4jYEh),
                                           }),
-                                          (0, l.jsx)(s.Text, {
+                                          (0, l.jsx)(a.Text, {
                                               variant: "text-sm/normal",
                                               children: E.intl.string(E.t["l/l/Gw"]),
                                           }),
@@ -295,14 +295,14 @@ function _() {
                                               title: E.intl.string(E.t["47zu7B"]),
                                               subtitle: E.intl.string(E.t["amoSN/"]),
                                               completed: !0,
-                                              Icon: s.VL1,
+                                              Icon: a.VL1,
                                               variant: "static",
                                           }),
                                           (0, l.jsx)(u.k, {
                                               title: E.intl.string(E.t.EZfTKE),
                                               subtitle: E.intl.string(E.t["/sYelW"]),
                                               completed: !0,
-                                              Icon: s.VL1,
+                                              Icon: a.VL1,
                                               variant: "static",
                                           }),
                                       ],
@@ -317,7 +317,7 @@ function _() {
                                       children: [
                                           {
                                               channelIcon: () =>
-                                                  (0, l.jsx)(s.MqZ, {
+                                                  (0, l.jsx)(a.MqZ, {
                                                       size: "xs",
                                                       color: "currentColor",
                                                       className: S.channelIcon,
@@ -327,7 +327,7 @@ function _() {
                                           },
                                           {
                                               channelIcon: () =>
-                                                  (0, l.jsx)(s.VL1, {
+                                                  (0, l.jsx)(a.VL1, {
                                                       size: "md",
                                                       color: "currentColor",
                                                       className: S.channelIcon,
@@ -337,7 +337,7 @@ function _() {
                                           },
                                           {
                                               channelIcon: () =>
-                                                  (0, l.jsx)(s.VL1, {
+                                                  (0, l.jsx)(a.VL1, {
                                                       size: "md",
                                                       color: "currentColor",
                                                       className: S.channelIcon,
@@ -347,7 +347,7 @@ function _() {
                                           },
                                           {
                                               channelIcon: () =>
-                                                  (0, l.jsx)(s.Mmi, {
+                                                  (0, l.jsx)(a.Mmi, {
                                                       size: "md",
                                                       color: "currentColor",
                                                       className: S.channelIcon,
@@ -356,30 +356,30 @@ function _() {
                                               selected: !0,
                                           },
                                       ].map((e, t) => {
-                                          let { channelIcon: n, channel: i, selected: a } = e;
+                                          let { channelIcon: n, channel: i, selected: s } = e;
                                           return (0, l.jsxs)(
                                               "div",
                                               {
                                                   className: r()(S.previewListItem, S.spaceBetween, {
-                                                      [S.selected]: a,
+                                                      [S.selected]: s,
                                                   }),
                                                   children: [
                                                       (0, l.jsxs)("div", {
                                                           className: S.channel,
                                                           children: [
                                                               n(),
-                                                              (0, l.jsx)(s.Text, {
+                                                              (0, l.jsx)(a.Text, {
                                                                   variant: "text-md/medium",
-                                                                  color: "header-primary",
+                                                                  color: "text-strong",
                                                                   children: i,
                                                               }),
                                                           ],
                                                       }),
                                                       (0, l.jsx)("div", {
-                                                          className: r()(S.checkbox, { [S.selected]: a }),
+                                                          className: r()(S.checkbox, { [S.selected]: s }),
                                                           children:
-                                                              a &&
-                                                              (0, l.jsx)(s.dz2, {
+                                                              s &&
+                                                              (0, l.jsx)(a.dz2, {
                                                                   size: "md",
                                                                   color: "currentColor",
                                                                   className: S.checkmark,
@@ -394,11 +394,11 @@ function _() {
                                   (0, l.jsxs)("div", {
                                       className: S.valueText,
                                       children: [
-                                          (0, l.jsx)(s.Heading, {
+                                          (0, l.jsx)(a.Heading, {
                                               variant: "heading-md/semibold",
                                               children: E.intl.string(E.t["3T9aHG"]),
                                           }),
-                                          (0, l.jsx)(s.Text, {
+                                          (0, l.jsx)(a.Text, {
                                               variant: "text-sm/normal",
                                               children: E.intl.string(E.t.dA7Cag),
                                           }),

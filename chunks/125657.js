@@ -8,34 +8,34 @@ var i = n(54381),
     c = n(412899),
     d = n(995648),
     u = n(385499),
-    p = n(600164),
-    m = n(422559),
-    b = n(598077),
-    g = n(271383),
-    f = n(485386),
+    b = n(600164),
+    p = n(422559),
+    m = n(598077),
+    f = n(271383),
+    g = n(485386),
     h = n(768581),
     x = n(388032),
-    j = n(144645);
+    j = n(939248);
 function v(e) {
     var t;
     let { guild: n, applicationIntegration: v } = e,
         { application: O } = v,
-        y = null != O.bot ? new b.Z(O.bot) : null,
-        _ = (0, a.e7)([g.ZP], () => (null != y ? g.ZP.getMember(n.id, y.id) : null), [y, n]),
-        C = (0, a.e7)([f.Z], () => f.Z.getEveryoneRole(n)),
-        N = (0, a.Wu)([f.Z], () => {
+        y = null != O.bot ? new m.Z(O.bot) : null,
+        C = (0, a.e7)([f.ZP], () => (null != y ? f.ZP.getMember(n.id, y.id) : null), [y, n]),
+        N = (0, a.e7)([g.Z], () => g.Z.getEveryoneRole(n)),
+        S = (0, a.Wu)([g.Z], () => {
             var e;
-            return f.Z.getManyRoles(n.id, null != (e = null == _ ? void 0 : _.roles) ? e : []);
+            return g.Z.getManyRoles(n.id, null != (e = null == C ? void 0 : C.roles) ? e : []);
         }),
-        S = null == y ? void 0 : y.id;
+        I = null == y ? void 0 : y.id;
     r.useEffect(() => {
-        null != S && s.Z.requestMembersById(n.id, S);
-    }, [n.id, S]);
-    let I = r.useMemo(() => l.$e(C.permissions, ...N.map((e) => e.permissions)), [N, C]);
+        null != I && s.Z.requestMembersById(n.id, I);
+    }, [n.id, I]);
+    let w = r.useMemo(() => l.$e(N.permissions, ...S.map((e) => e.permissions)), [S, N]);
     if (null == y) return null;
-    let w = h.ZP.getApplicationIconURL({
+    let E = h.ZP.getApplicationIconURL({
         id: O.id,
-        guildMember: _,
+        guildMember: C,
         bot: O.bot,
         icon: O.icon,
         size: 32,
@@ -43,19 +43,19 @@ function v(e) {
     return (0, i.jsx)(o.Zbd, {
         editable: !0,
         className: j.card,
-        children: (0, i.jsxs)(p.Z, {
-            direction: p.Z.Direction.VERTICAL,
+        children: (0, i.jsxs)(b.Z, {
+            direction: b.Z.Direction.VERTICAL,
             children: [
-                (0, i.jsxs)(p.Z, {
-                    align: p.Z.Align.CENTER,
+                (0, i.jsxs)(b.Z, {
+                    align: b.Z.Align.CENTER,
                     children: [
                         (0, i.jsx)("img", {
                             alt: "",
-                            src: w,
+                            src: E,
                             className: j.iconWrapper,
                         }),
                         (0, i.jsx)(o.Text, {
-                            color: "header-primary",
+                            color: "text-strong",
                             variant: "text-sm/normal",
                             children: x.intl.format(x.t.GyhzGw, { user: y.toString() }),
                         }),
@@ -68,7 +68,7 @@ function v(e) {
                 (function (e, t, n, r) {
                     let a = [],
                         s = [];
-                    for (let e of m.VY) l.e$(r, e) ? a.push(e) : s.push(e);
+                    for (let e of p.VY) l.e$(r, e) ? a.push(e) : s.push(e);
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(o.izJ, { className: j.divider }),
@@ -95,7 +95,7 @@ function v(e) {
                                 : null,
                         ],
                     });
-                })(y, n, null != (t = null == _ ? void 0 : _.roles) ? t : [], I),
+                })(y, n, null != (t = null == C ? void 0 : C.roles) ? t : [], w),
             ],
         }),
     });

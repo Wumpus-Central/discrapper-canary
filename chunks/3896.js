@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => f });
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -8,11 +8,11 @@ var r = n(54381),
     c = n(259580),
     d = n(981631),
     u = n(388032),
-    g = n(824804);
-function m(e) {
+    g = n(146473);
+function f(e) {
     let { guild: t } = e,
         l = t.verificationLevel,
-        m = i.useMemo(() => (0, o.I9)(l), [l]);
+        f = i.useMemo(() => (0, o.I9)(l), [l]);
     return (0, r.jsxs)(s.P3F, {
         onClick: () =>
             (0, s.ZDy)(async () => {
@@ -74,7 +74,7 @@ function m(e) {
                 children: [
                     (0, r.jsx)(s.Heading, {
                         variant: "text-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: u.intl.string(u.t.DpRdYK),
                     }),
                     (0, r.jsx)(s.Text, {
@@ -102,7 +102,7 @@ function m(e) {
                                           width: 16,
                                           height: 16,
                                       }),
-                                m,
+                                f,
                             ],
                         }),
                     }),

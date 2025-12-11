@@ -15,7 +15,7 @@ function o() {
             children: [
                 (0, r.jsx)(i.Heading, {
                     variant: "heading-xxl/normal",
-                    color: "header-primary",
+                    color: "text-strong",
                     className: s.heading,
                     children: a.intl.string(l.default["VAK+h9"]),
                 }),

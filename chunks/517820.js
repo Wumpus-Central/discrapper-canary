@@ -27,10 +27,10 @@ var r = n(54381),
     N = n(348238),
     P = n(83561),
     R = n(834129),
-    D = n(981631),
-    w = n(674563),
+    w = n(981631),
+    D = n(674563),
     x = n(388032),
-    L = n(682392);
+    L = n(138851);
 function j(e, t, n) {
     return (
         t in e
@@ -107,12 +107,12 @@ function Z(e) {
                 compact: n,
             });
         case c.p.INTERACTION_BLOCKED:
-            return (0, r.jsx)(F, { compact: n });
-        default:
             return (0, r.jsx)(B, { compact: n });
+        default:
+            return (0, r.jsx)(F, { compact: n });
     }
 }
-function B(e) {
+function F(e) {
     let { compact: t } = e;
     return (0, r.jsx)(W, {
         compact: t,
@@ -136,7 +136,7 @@ function B(e) {
         }),
     });
 }
-function F(e) {
+function B(e) {
     let { compact: t } = e;
     return (0, r.jsx)(W, {
         compact: t,
@@ -389,7 +389,7 @@ function Y(e) {
             });
     }
     function _() {
-        null != o && y.Z.open(o, D.pNK.GUILD_AUTOMOD, void 0, D.KsC.AUTOMOD_MENTION_SPAM);
+        null != o && y.Z.open(o, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
     }
     return (0, r.jsx)(W, {
         compact: a,
@@ -516,13 +516,13 @@ function K(e) {
                                     children: x.intl.string(x.t.hG1StD),
                                 }),
                                 (0, r.jsx)(_.Z, {
-                                    type: w.Hb.SYSTEM_DM,
+                                    type: D.Hb.SYSTEM_DM,
                                     className: L.systemTag,
                                 }),
                                 f &&
                                     (0, r.jsx)(p.Text, {
                                         variant: "text-md/normal",
-                                        color: "header-primary",
+                                        color: "text-strong",
                                         tag: "span",
                                         className: L.spanCorrection,
                                         children: x.intl.string(x.t.ufawcw),

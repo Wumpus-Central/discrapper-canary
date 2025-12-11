@@ -13,44 +13,44 @@ var r = n(54381),
     d = n(45966),
     u = n(473403),
     g = n(454585),
-    m = n(323502),
-    p = n(958832),
-    f = n(324067),
-    h = n(984933),
-    b = n(259580),
+    f = n(323502),
+    m = n(958832),
+    b = n(324067),
+    p = n(984933),
+    h = n(259580),
     x = n(999382),
     j = n(743475),
-    _ = n(889369),
-    v = n(570961),
-    O = n(208665),
-    C = n(868814),
-    y = n(974513),
-    N = n(2348),
-    E = n(353890),
-    I = n(716130),
-    S = n(388032),
-    T = n(868893),
-    P = n(430864);
+    v = n(889369),
+    O = n(570961),
+    C = n(208665),
+    y = n(868814),
+    N = n(974513),
+    E = n(2348),
+    I = n(353890),
+    S = n(716130),
+    _ = n(388032),
+    T = n(196732),
+    P = n(960324);
 function w(e) {
     let { guild: t } = e,
         a = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
-        f = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
-        h = (0, C.Z)(t),
-        b = (0, l.e7)([_.Z], () => _.Z.editedDefaultChannelIds),
-        x = h.filter((e) => !b.has(e.id)),
-        [v, O] = i.useState(!1);
+        b = (0, l.e7)([m.Z], () => m.Z.hasFetched(t.id)),
+        p = (0, y.Z)(t),
+        h = (0, l.e7)([v.Z], () => v.Z.editedDefaultChannelIds),
+        x = p.filter((e) => !h.has(e.id)),
+        [O, C] = i.useState(!1);
     return (i.useEffect(() => {
-        f || a || (0, m.S)(t.id);
-    }, [t.id, f, a]),
-    v || 0 === x.length)
+        b || a || (0, f.S)(t.id);
+    }, [t.id, b, a]),
+    O || 0 === x.length)
         ? null
         : (0, r.jsxs)("div", {
               className: T.recommendations,
               children: [
                   (0, r.jsx)(o.Text, {
                       variant: "text-md/medium",
-                      color: "header-primary",
-                      children: S.intl.string(S.t.NN7rD3),
+                      color: "text-strong",
+                      children: _.intl.string(_.t.NN7rD3),
                   }),
                   (0, r.jsxs)("div", {
                       className: T.recsSubheader,
@@ -58,11 +58,11 @@ function w(e) {
                           (0, r.jsx)(o.Text, {
                               variant: "text-xs/normal",
                               color: "text-muted",
-                              children: S.intl.string(S.t["3Uuql+"]),
+                              children: _.intl.string(_.t["3Uuql+"]),
                           }),
                           (0, r.jsxs)(o.P3F, {
                               className: T.dismissAll,
-                              onClick: () => O(!0),
+                              onClick: () => C(!0),
                               children: [
                                   (0, r.jsx)(o.dz2, {
                                       size: "xxs",
@@ -73,7 +73,7 @@ function w(e) {
                                       className: T.dismissAllText,
                                       variant: "text-xs/medium",
                                       color: "text-brand",
-                                      children: S.intl.string(S.t.ZC3PJ2),
+                                      children: _.intl.string(_.t.ZC3PJ2),
                                   }),
                               ],
                           }),
@@ -131,13 +131,13 @@ function w(e) {
                                               ? (0, r.jsx)(o.Button, {
                                                     size: "sm",
                                                     variant: "primary",
-                                                    text: S.intl.string(S.t.OYkgVk),
+                                                    text: _.intl.string(_.t.OYkgVk),
                                                     onClick: () => (0, j.pt)(e.id),
                                                 })
                                               : (0, r.jsx)(o.Button, {
                                                     size: "sm",
                                                     variant: "secondary",
-                                                    text: S.intl.string(S.t.zA9d1J),
+                                                    text: _.intl.string(_.t.zA9d1J),
                                                     icon: o.mBM,
                                                     iconPosition: "start",
                                                     onClick: () => {
@@ -244,23 +244,23 @@ function Z(e) {
     let { saveOnClose: t = !1 } = e,
         n = (0, l.e7)([x.Z], () => x.Z.getGuild()),
         a = (0, l.e7)([d.Z], () => d.Z.isLoading()),
-        s = (0, l.e7)([h.ZP], () => h.ZP.getChannels(null == n ? void 0 : n.id)),
-        c = (0, l.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
-        u = (0, l.e7)([O.Z], () => O.Z.advancedMode),
+        s = (0, l.e7)([p.ZP], () => p.ZP.getChannels(null == n ? void 0 : n.id)),
+        c = (0, l.e7)([b.Z], () => b.Z.getCategories(null == n ? void 0 : n.id)),
+        u = (0, l.e7)([C.Z], () => C.Z.advancedMode),
         g = i.useRef(null),
-        [m, p] = i.useState(!1),
-        _ = i.useRef(n);
+        [f, m] = i.useState(!1),
+        v = i.useRef(n);
     return (i.useEffect(() => {
-        _.current = n;
+        v.current = n;
     }),
     i.useEffect(() => {
         if (t) {
-            let { current: e } = _;
+            let { current: e } = v;
             return () => {
                 null != e &&
                     (0, j.DO)(e)
                         .then(() => {
-                            u && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                            u && (0, O.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                         })
                         .catch(() => {});
             };
@@ -278,9 +278,9 @@ function Z(e) {
                         children: [
                             (0, r.jsx)(o.P3F, {
                                 className: T.collapseButton,
-                                onClick: () => p((e) => !e),
-                                children: (0, r.jsx)(b.Z, {
-                                    direction: m ? b.Z.Directions.DOWN : b.Z.Directions.UP,
+                                onClick: () => m((e) => !e),
+                                children: (0, r.jsx)(h.Z, {
+                                    direction: f ? h.Z.Directions.DOWN : h.Z.Directions.UP,
                                     height: 16,
                                     width: 16,
                                 }),
@@ -288,23 +288,23 @@ function Z(e) {
                             (0, r.jsx)(o.Heading, {
                                 className: T.header,
                                 variant: "heading-lg/extrabold",
-                                children: S.intl.string(S.t["4GSygh"]),
+                                children: _.intl.string(_.t["4GSygh"]),
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: S.intl.string(S.t.Kq7FAS),
+                                children: _.intl.string(_.t.Kq7FAS),
                             }),
-                            (0, r.jsx)(y.Wu, {
+                            (0, r.jsx)(N.Wu, {
                                 className: T.advancedModeToggle,
                                 guildId: n.id,
                             }),
-                            m
+                            f
                                 ? null
                                 : (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(w, { guild: n }),
-                                          (0, r.jsx)(N.Z, {
+                                          (0, r.jsx)(E.Z, {
                                               className: T.channelBrowserOuter,
                                               guild: n,
                                               categories: c,
@@ -320,18 +320,18 @@ function Z(e) {
                                         (0, r.jsx)(o.Heading, {
                                             className: T.prejoinHeader,
                                             variant: "heading-lg/extrabold",
-                                            children: S.intl.string(S.t.g2RnpV),
+                                            children: _.intl.string(_.t.g2RnpV),
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             className: T.prejoinSubHeader,
                                             variant: "text-sm/normal",
                                             color: "text-default",
-                                            children: S.intl.string(S.t.bLDQ1Q),
+                                            children: _.intl.string(_.t.bLDQ1Q),
                                         }),
                                         (0, r.jsx)("div", {
                                             ref: g,
                                             className: T.advancedModeQuestions,
-                                            children: (0, r.jsx)(I.Z, {
+                                            children: (0, r.jsx)(S.Z, {
                                                 guildId: n.id,
                                                 prejoinOnly: !0,
                                                 includeCount: !0,
@@ -342,7 +342,7 @@ function Z(e) {
                                 }),
                         ],
                     }),
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(I.Z, {
                         guild: n,
                         scrollToQuestions: () => {
                             null != g.current && g.current.scrollIntoView({ behavior: "smooth" });
@@ -353,20 +353,20 @@ function Z(e) {
 }
 function R() {
     let e = (0, l.e7)([x.Z], () => x.Z.getProps().guild),
-        t = (0, l.e7)([_.Z], () => _.Z.submitting),
-        n = (0, l.e7)([O.Z], () => O.Z.advancedMode);
+        t = (0, l.e7)([v.Z], () => v.Z.submitting),
+        n = (0, l.e7)([C.Z], () => C.Z.advancedMode);
     return null == e
         ? null
         : (0, r.jsx)(a.Z, {
               onSave: () => {
                   (0, j.DO)(e)
                       .then(() => {
-                          n && (0, v.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
+                          n && (0, O.rS)(e, { ignoreDefaultPrompt: !0 }).catch(() => {});
                       })
                       .catch(() => {});
               },
               onReset: j.BG,
               submitting: t,
-              onSaveText: S.intl.string(S.t["R3BPH+"]),
+              onSaveText: _.intl.string(_.t["R3BPH+"]),
           });
 }

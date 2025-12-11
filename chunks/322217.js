@@ -123,7 +123,7 @@ let f = {
                         },
                         {
                             label: "Header Primary",
-                            value: "header-primary",
+                            value: "text-strong",
                         },
                         {
                             label: "Header Secondary",

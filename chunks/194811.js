@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(481060),
     l = n(652853),
     c = n(671955),
-    u = n(704543);
+    u = n(251806);
 function d(e) {
     let { text: t, textId: n, tags: i, platformIcon: d, contextMenu: f } = e,
         { themeType: p } = (0, l.z)();
@@ -24,7 +24,7 @@ function d(e) {
                     (0, r.jsxs)(s.Text, {
                         className: u.headerText,
                         variant: p === c.l.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
-                        color: "header-primary",
+                        color: "text-strong",
                         id: n,
                         children: [
                             (0, r.jsx)(o.Z, { children: t }),

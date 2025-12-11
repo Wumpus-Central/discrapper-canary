@@ -22,8 +22,8 @@ var r = n(54381),
     g = n(240479),
     E = n(710111),
     b = n(388032),
-    y = n(937309),
-    O = n(463063);
+    y = n(258462),
+    O = n(349971);
 function v(e, t, n) {
     return (
         t in e
@@ -152,7 +152,7 @@ function N(e) {
                             }),
                             (0, r.jsx)(u.Text, {
                                 variant: "text-md/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 children: t.name,
                             }),
                         ],

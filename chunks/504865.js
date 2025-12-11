@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(509545),
     d = n(74538),
     f = n(474936),
-    p = n(274065);
+    p = n(283102);
 let _ = function (e) {
     let {
             subscriptionTier: t,
@@ -33,7 +33,7 @@ let _ = function (e) {
         v = null != O ? (0, d.gy)(O, h, !1, _) : null;
     if (E) {
         let e = n === f.rV.YEAR,
-            t = e ? "text-muted" : y ? "header-primary" : "always-white";
+            t = e ? "text-muted" : y ? "text-strong" : "always-white";
         return (0, r.jsxs)("div", {
             children: [
                 (0, r.jsx)(l.Text, {

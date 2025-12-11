@@ -16,8 +16,8 @@ var r = n(54381),
     b = n(884902),
     y = n(670188),
     O = n(271383),
-    j = n(496675),
-    x = n(158776),
+    x = n(496675),
+    j = n(158776),
     v = n(471253),
     C = n(431328),
     I = n(145834),
@@ -94,17 +94,17 @@ let w = i.memo(function (e) {
         var t;
         let { channel: l, participant: a, tempDisableOnInit: s = !1 } = e,
             m = i.useRef(null),
-            [j, C] = i.useState(s);
+            [x, C] = i.useState(s);
         (0, f.ZP)(() => {
-            if (!j) return;
+            if (!x) return;
             let e = setTimeout(() => C(!1), 1000);
             return () => clearTimeout(e);
         });
         let S = l.getGuildId();
         o()(null != S, "Channel cannot be guildless");
-        let { isMobile: E, status: Z } = (0, c.cj)([x.Z], () => ({
-                isMobile: x.Z.isMobileOnline(a.user.id),
-                status: x.Z.getStatus(a.user.id, S),
+        let { isMobile: E, status: Z } = (0, c.cj)([j.Z], () => ({
+                isMobile: j.Z.isMobileOnline(a.user.id),
+                status: j.Z.getStatus(a.user.id, S),
             })),
             w = (0, c.e7)([O.ZP], () => O.ZP.getMember(S, a.user.id)),
             A = (0, b.X7)(
@@ -202,7 +202,7 @@ let w = i.memo(function (e) {
                                 onClick: function () {
                                     (0, v.DT)(l, a.user.id, !1);
                                 },
-                                disabled: L || j,
+                                disabled: L || x,
                                 icon: u.Lrb,
                                 variant: "secondary",
                                 "aria-label": L ? P.intl.string(P.t.h9rsTd) : P.intl.string(P.t.f0T7hI),
@@ -242,7 +242,7 @@ let w = i.memo(function (e) {
                 (0, r.jsx)(u.Text, {
                     className: T.emptyStateTitle,
                     variant: "text-lg/semibold",
-                    color: "header-primary",
+                    color: "text-strong",
                     children: P.intl.string(P.t["7R24mX"]),
                 }),
                 (0, r.jsx)(u.Text, {
@@ -258,7 +258,7 @@ function M(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
         l = (0, C.Fd)(t.id),
         s = [
-            +!!(0, c.e7)([j.Z], () => j.Z.can(Z.Pl.MANAGE_CHANNELS, t) || j.Z.can(Z.Pl.MANAGE_ROLES, t)),
+            +!!(0, c.e7)([x.Z], () => x.Z.can(Z.Pl.MANAGE_CHANNELS, t) || x.Z.can(Z.Pl.MANAGE_ROLES, t)),
             Math.max(1, l.length),
         ];
     return (0, r.jsxs)("div", {

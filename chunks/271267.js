@@ -1,6 +1,6 @@
 n.d(t, {
     Q: () => g,
-    Z: () => b,
+    Z: () => p,
 }),
     n(388685);
 var r = n(54381),
@@ -37,7 +37,7 @@ function u(e) {
     return e;
 }
 let g = "role_subscriptions_eligibility_modal";
-function m(e) {
+function f(e) {
     let { guild: t, eligibility: i, eligibilityLoading: a, eligibilityError: s, refreshEligibility: c } = e;
     return (0, r.jsx)(l.Button, {
         variant: "expressive",
@@ -82,15 +82,15 @@ function m(e) {
         icon: l.Mgn,
     });
 }
-function f(e) {
+function m(e) {
     let { guild: t, checkboxText: n } = e,
         { canSubmitAcceptance: s, error: c, loading: d, submitAcceptTermsRequest: u } = (0, a.Z)(t.id),
-        [g, m] = i.useState(!1);
+        [g, f] = i.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.Checkbox, {
                 onChange: function () {
-                    m((e) => !e);
+                    f((e) => !e);
                 },
                 checked: g,
                 label: n,
@@ -116,7 +116,7 @@ function f(e) {
         ],
     });
 }
-function p(e) {
+function b(e) {
     let { guild: t, monetizationEligibility: n } = e,
         {
             eligibilityLoading: i,
@@ -130,11 +130,11 @@ function p(e) {
     return c
         ? g
             ? (0, r.jsx)(s.Z, u({}, n))
-            : (0, r.jsx)(f, {
+            : (0, r.jsx)(m, {
                   guild: t,
                   checkboxText: d,
               })
-        : (0, r.jsx)(m, {
+        : (0, r.jsx)(f, {
               guild: t,
               eligibility: o,
               eligibilityLoading: i,
@@ -142,7 +142,7 @@ function p(e) {
               refreshEligibility: a,
           });
 }
-function b(e) {
+function p(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, r.jsxs)("div", {
         className: c.ctaContainer,
@@ -157,7 +157,7 @@ function b(e) {
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-xl/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: o.intl.string(o.t["PqYfh/"]),
                     }),
                     (0, r.jsx)(l.LZC, { size: 12 }),
@@ -167,7 +167,7 @@ function b(e) {
                         children: o.intl.string(o.t["41wkMc"]),
                     }),
                     (0, r.jsx)(l.LZC, { size: 24 }),
-                    (0, r.jsx)(p, {
+                    (0, r.jsx)(b, {
                         guild: t,
                         monetizationEligibility: n,
                     }),

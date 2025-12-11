@@ -1,85 +1,85 @@
-t.d(n, { Z: () => j }), t(388685);
+t.d(n, { Z: () => v }), t(388685);
 var l = t(54381),
     i = t(473749),
     o = t(120356),
     r = t.n(o),
-    s = t(467721),
-    a = t(442837),
-    c = t(481060),
+    a = t(467721),
+    c = t(442837),
+    s = t(481060),
     d = t(607070),
     u = t(872269),
-    m = t(228168),
-    p = t(388032),
-    f = t(361623),
-    x = t(583140);
+    f = t(228168),
+    m = t(388032),
+    p = t(969032),
+    x = t(141291);
 let h = {
-        [m.qb.WIDGET_ADDED]: {
-            message: p.intl.string(p.t.fFP1Uy),
-            icon: (0, l.jsx)(c.dz2, {
+        [f.qb.WIDGET_ADDED]: {
+            message: m.intl.string(m.t.fFP1Uy),
+            icon: (0, l.jsx)(s.dz2, {
                 size: "sm",
-                color: c.TVs.colors.STATUS_POSITIVE.css,
+                color: s.TVs.colors.STATUS_POSITIVE.css,
             }),
             toast_id: "user_profile_widget_added",
         },
-        [m.qb.WIDGET_REMOVED]: {
-            message: p.intl.string(p.t.zzsK7h),
-            icon: (0, l.jsx)(c.dz2, {
+        [f.qb.WIDGET_REMOVED]: {
+            message: m.intl.string(m.t.zzsK7h),
+            icon: (0, l.jsx)(s.dz2, {
                 size: "sm",
-                color: c.TVs.colors.STATUS_POSITIVE.css,
+                color: s.TVs.colors.STATUS_POSITIVE.css,
             }),
             toast_id: "user_profile_widget_removed",
         },
-        [m.qb.WIDGET_SAVE_FAILURE]: {
-            message: p.intl.string(p.t["84MExs"]),
-            icon: (0, l.jsx)(c.Uz9, {
+        [f.qb.WIDGET_SAVE_FAILURE]: {
+            message: m.intl.string(m.t["84MExs"]),
+            icon: (0, l.jsx)(s.Uz9, {
                 size: "sm",
-                color: c.TVs.colors.STATUS_DANGER.css,
+                color: s.TVs.colors.STATUS_DANGER.css,
             }),
             toast_id: "user_profile_widget_save_failure",
-            type: c.ToastType.FAILURE,
+            type: s.ToastType.FAILURE,
         },
-        [m.qb.SOMETHING_WENT_WRONG]: {
-            message: p.intl.string(p.t.F8FvUy),
-            icon: (0, l.jsx)(c.Uz9, {
+        [f.qb.SOMETHING_WENT_WRONG]: {
+            message: m.intl.string(m.t.F8FvUy),
+            icon: (0, l.jsx)(s.Uz9, {
                 size: "sm",
-                color: c.TVs.colors.STATUS_DANGER.css,
+                color: s.TVs.colors.STATUS_DANGER.css,
             }),
             toast_id: "user_profile_something_went_wrong",
-            type: c.ToastType.FAILURE,
+            type: s.ToastType.FAILURE,
         },
     },
-    v = (e) => {
+    b = (e) => {
         let { message: n, icon: t, type: i } = e;
         return (0, l.jsxs)("div", {
-            className: r()(x.toast, f.toast),
+            className: r()(x.toast, p.toast),
             "data-type": i,
             children: [
                 (0, l.jsx)("div", {
-                    className: f.toastIcon,
+                    className: p.toastIcon,
                     children: t,
                 }),
-                (0, l.jsx)(c.Text, {
-                    color: "header-primary",
+                (0, l.jsx)(s.Text, {
+                    color: "text-strong",
                     variant: "text-sm/semibold",
                     children: n,
                 }),
             ],
         });
     },
-    j = (e) => {
+    v = (e) => {
         let { className: n, onAutoHide: t } = e,
             o = (0, u.be)(),
-            m = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-            [p, x] = i.useState(!1),
-            [j, g] = i.useState(null);
+            f = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
+            [m, x] = i.useState(!1),
+            [v, j] = i.useState(null);
         i.useEffect(() => {
-            null !== o ? (x(!0), g(h[o]), c.uvj.announce(h[o].message)) : x(!1);
+            null !== o ? (x(!0), j(h[o]), s.uvj.announce(h[o].message)) : x(!1);
         }, [o]);
-        let b = (0, c.Yzy)(
-            p,
+        let g = (0, s.Yzy)(
+            m,
             {
                 from: {
-                    transform: m ? "translateY(0)" : "translateY(-12px)",
+                    transform: f ? "translateY(0)" : "translateY(-12px)",
                     opacity: 0,
                 },
                 enter: {
@@ -87,7 +87,7 @@ let h = {
                     opacity: 1,
                 },
                 leave: {
-                    transform: m ? "translateY(0)" : "translateY(-12px)",
+                    transform: f ? "translateY(0)" : "translateY(-12px)",
                     opacity: 0,
                 },
                 config: {
@@ -101,23 +101,23 @@ let h = {
         );
         return (
             i.useEffect(() => {
-                if (p) {
+                if (m) {
                     let e = setTimeout(() => {
                         null == t || t();
                     }, 2000);
                     return () => clearTimeout(e);
                 }
-            }, [p, t]),
+            }, [m, t]),
             (0, l.jsx)(l.Fragment, {
-                children: b(
+                children: g(
                     (e, t) =>
                         t &&
-                        null !== j &&
-                        (0, l.jsx)(s.animated.div, {
-                            className: r()(n, f.toastContainer),
+                        null !== v &&
+                        (0, l.jsx)(a.animated.div, {
+                            className: r()(n, p.toastContainer),
                             style: e,
                             children: (0, l.jsx)(
-                                v,
+                                b,
                                 (function (e) {
                                     for (var n = 1; n < arguments.length; n++) {
                                         var t = null != arguments[n] ? arguments[n] : {},
@@ -142,7 +142,7 @@ let h = {
                                             });
                                     }
                                     return e;
-                                })({}, j),
+                                })({}, v),
                             ),
                         }),
                 ),

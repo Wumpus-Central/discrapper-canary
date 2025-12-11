@@ -8,14 +8,14 @@ var r = n(54381),
     u = n(668339),
     c = n(481060),
     d = n(734893),
-    m = n(271383),
-    g = n(430824),
+    g = n(271383),
+    m = n(430824),
     p = n(594174),
     f = n(903518),
     b = n(580357),
     h = n(388032),
-    v = n(353441);
-function x(e) {
+    x = n(609442);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,18 +60,18 @@ function j(e, t) {
 }
 function k(e) {
     var t, n, a;
-    let { transitionState: k, onClose: y, guildId: O, welcomeMessage: I, onSave: P } = e,
-        [C, _] = l.useState(x({}, I)),
-        w = (0, s.e7)([g.Z], () => g.Z.getGuild(O)),
-        Z = l.useCallback(
+    let { transitionState: k, onClose: O, guildId: y, welcomeMessage: I, onSave: P } = e,
+        [C, w] = l.useState(v({}, I)),
+        Z = (0, s.e7)([m.Z], () => m.Z.getGuild(y)),
+        S = l.useCallback(
             (e) => {
                 let t = {};
                 return Promise.resolve(
-                    m.ZP.getMembers(O)
+                    g.ZP.getMembers(y)
                         .filter((n) => {
                             var r;
                             let l = p.default.getUser(n.userId);
-                            if ((null != l && (t[n.userId] = l), null == w || null == l || !(0, f.Y)(w, l))) return !1;
+                            if ((null != l && (t[n.userId] = l), null == Z || null == l || !(0, f.Y)(Z, l))) return !1;
                             let a = ""
                                 .concat(null != (r = n.nick) ? r : "", " ")
                                 .concat(null == l ? void 0 : l.username);
@@ -90,87 +90,87 @@ function k(e) {
                         }),
                 );
             },
-            [O, w],
+            [y, Z],
         ),
-        S = l.useCallback(
+        L = l.useCallback(
             (e) => {
-                if (null == O || null == e) return null;
-                let t = m.ZP.getMember(O, e.value);
+                if (null == y || null == e) return null;
+                let t = g.ZP.getMember(y, e.value);
                 if (null == t) return null;
                 let n = p.default.getUser(t.userId);
                 if (null == n) return null;
-                let l = n.getAvatarURL(O, 20);
+                let l = n.getAvatarURL(y, 20);
                 return (0, r.jsx)(c.Xo$, {
                     size: c.EFr.SIZE_20,
                     src: l,
                     "aria-hidden": !0,
                 });
             },
-            [O],
-        ),
-        L = l.useCallback(
-            (e) => {
-                let { value: t } = e;
-                _((e) => j(x({}, e), { authorIds: null != t ? [t] : [] }));
-            },
-            [_],
+            [y],
         ),
         U = l.useCallback(
             (e) => {
-                _((t) => j(x({}, t), { message: null != e ? e : "" }));
+                let { value: t } = e;
+                w((e) => j(v({}, e), { authorIds: null != t ? [t] : [] }));
             },
-            [_],
+            [w],
         ),
-        G = l.useCallback(() => {
-            P(C), y();
-        }, [y, P, C]),
+        G = l.useCallback(
+            (e) => {
+                w((t) => j(v({}, t), { message: null != e ? e : "" }));
+            },
+            [w],
+        ),
         M = l.useCallback(() => {
-            P(null), y();
-        }, [P, y]),
-        T = null != (t = C.authorIds[0]) ? t : "",
-        E = (0, s.e7)([m.ZP], () => (null != O ? m.ZP.getMember(O, T) : null)),
-        R = (0, s.e7)([p.default], () => (null != E ? p.default.getUser(E.userId) : null)),
-        H = null != (a = null != (n = null == E ? void 0 : E.nick) ? n : null == R ? void 0 : R.username) ? a : "",
-        N = (function (e) {
+            P(C), O();
+        }, [O, P, C]),
+        T = l.useCallback(() => {
+            P(null), O();
+        }, [P, O]),
+        E = null != (t = C.authorIds[0]) ? t : "",
+        R = (0, s.e7)([g.ZP], () => (null != y ? g.ZP.getMember(y, E) : null)),
+        H = (0, s.e7)([p.default], () => (null != R ? p.default.getUser(R.userId) : null)),
+        N = null != (a = null != (n = null == R ? void 0 : R.nick) ? n : null == H ? void 0 : H.username) ? a : "",
+        D = (function (e) {
             if (null == e.message || 0 === e.message.length) return null;
             if (null == e.authorIds || 0 === e.authorIds.length)
                 if (e.message.length < d.ZR) return h.intl.formatToPlainString(h.t.Lj831L, { minLength: d.ZR });
                 else return h.intl.string(h.t["4m7gtn"]);
             return e.message.length < d.ZR ? h.intl.formatToPlainString(h.t.TJGHXt, { minLength: d.ZR }) : null;
         })(C),
-        D = l.useMemo(
+        Q = l.useMemo(
             () => [
                 {
                     text: h.intl.string(h.t["ETE/oC"]),
-                    onClick: y,
+                    onClick: O,
                     variant: "secondary",
                 },
                 {
                     text: h.intl.string(h.t["R3BPH+"]),
-                    onClick: G,
+                    onClick: M,
                     variant: "primary",
-                    disabled: 0 === C.message.length || null != N,
+                    disabled: 0 === C.message.length || null != D,
                 },
             ],
-            [N, G, y, C.message.length],
+            [D, M, O, C.message.length],
         );
     return (0, r.jsxs)(o.Modal, {
         title: h.intl.string(h.t.UnLrit),
         transitionState: k,
-        onClose: y,
-        actions: D,
+        onClose: O,
+        actions: Q,
         actionBarInput: (0, r.jsx)(c.Avr, {
             text: h.intl.string(h.t.N86XcP),
-            onClick: M,
+            onClick: T,
             variant: "critical",
         }),
         children: [
             (0, r.jsxs)("div", {
-                className: v.formGroup,
+                className: x.formGroup,
                 children: [
                     (0, r.jsxs)(c.Heading, {
                         variant: "heading-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: [h.intl.string(h.t.zNQfQy), (0, r.jsx)(b.Z, {})],
                     }),
                     (0, r.jsx)(c.Text, {
@@ -180,23 +180,23 @@ function k(e) {
                     }),
                     (0, r.jsx)(u.d, {
                         value: {
-                            value: T,
-                            label: H,
+                            value: E,
+                            label: N,
                         },
-                        renderOptionPrefix: S,
-                        options: Z,
-                        onChange: L,
+                        renderOptionPrefix: L,
+                        options: S,
+                        onChange: U,
                         filter: !1,
                     }),
                 ],
             }),
-            (0, r.jsx)("div", { className: v.separator }),
+            (0, r.jsx)("div", { className: x.separator }),
             (0, r.jsxs)("div", {
-                className: v.formGroup,
+                className: x.formGroup,
                 children: [
                     (0, r.jsx)(c.Heading, {
                         variant: "heading-md/semibold",
-                        color: "header-primary",
+                        color: "text-strong",
                         children: h.intl.string(h.t.SHQcv7),
                     }),
                     (0, r.jsx)(c.Text, {
@@ -207,14 +207,14 @@ function k(e) {
                     (0, r.jsx)(c.Kx8, {
                         placeholder: h.intl.string(h.t["kX/Sbx"]),
                         value: C.message,
-                        onChange: U,
+                        onChange: G,
                         maxLength: d.W4,
                     }),
-                    null != N
+                    null != D
                         ? (0, r.jsx)(c.Text, {
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
-                              children: N,
+                              children: D,
                           })
                         : null,
                 ],

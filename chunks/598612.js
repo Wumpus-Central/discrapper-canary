@@ -1,7 +1,7 @@
 n.d(t, { Y: () => o });
 var r = n(54381),
     i = n(793030),
-    a = n(836519);
+    a = n(860317);
 function o(e) {
     let { title: t, subtitle: n, type: o = "primary" } = e;
     return "secondary" === o
@@ -29,7 +29,7 @@ function o(e) {
                       className: a.headerTitle,
                       children: (0, r.jsx)(i.X6q, {
                           variant: "heading-xl/normal",
-                          color: "header-primary",
+                          color: "text-strong",
                           children: t,
                       }),
                   }),

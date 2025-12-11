@@ -19,14 +19,14 @@ var r = n(54381),
     g = n(372769),
     m = n(134432),
     b = n(769654),
-    _ = n(430824),
-    y = n(768581),
-    O = n(411198),
-    x = n(683818),
-    j = n(16853),
-    v = n(981631),
-    C = n(388032),
-    I = n(777261),
+    y = n(430824),
+    O = n(768581),
+    x = n(411198),
+    j = n(683818),
+    v = n(16853),
+    C = n(981631),
+    I = n(388032),
+    _ = n(183594),
     S = n(883760);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -75,7 +75,7 @@ let P = i.memo(function (e) {
     let { onClick: t } = e;
     return (0, r.jsxs)(c.P3F, {
         onClick: t,
-        className: I.addEntryCard,
+        className: _.addEntryCard,
         children: [
             (0, r.jsx)("img", {
                 alt: "",
@@ -83,9 +83,9 @@ let P = i.memo(function (e) {
             }),
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/semibold",
-                color: "header-primary",
-                className: I.addServerText,
-                children: C.intl.string(C.t.H9jxS1),
+                color: "text-strong",
+                className: _.addServerText,
+                children: I.intl.string(I.t.H9jxS1),
             }),
         ],
     });
@@ -94,14 +94,14 @@ function T(e) {
     let { entry: t } = e,
         [l, s] = i.useState(!1),
         d = i.useRef(null),
-        { canEdit: u } = (0, x.Z)(t);
+        { canEdit: u } = (0, j.Z)(t);
     return (0, r.jsx)("div", {
-        className: a()(I.actionButtonsContainer, { [I.forceButtonsShow]: l }),
+        className: a()(_.actionButtonsContainer, { [_.forceButtonsShow]: l }),
         children: (0, r.jsxs)(h.ZP, {
             children: [
                 u
                     ? (0, r.jsx)(o.u, {
-                          text: C.intl.string(C.t.XnuOvN),
+                          text: I.intl.string(I.t.XnuOvN),
                           children: (0, r.jsx)(h.zx, {
                               onClick: () => {
                                   (0, c.ZDy)(async () => {
@@ -109,16 +109,16 @@ function T(e) {
                                       return (n) => (0, r.jsx)(e, Z(E({}, n), { entry: t }));
                                   });
                               },
-                              "aria-label": C.intl.string(C.t.XnuOvN),
+                              "aria-label": I.intl.string(I.t.XnuOvN),
                               children: (0, r.jsx)(c.vdY, {
                                   size: "xs",
                                   color: "currentColor",
-                                  className: I.overflowIcon,
+                                  className: _.overflowIcon,
                               }),
                           }),
                       })
                     : null,
-                (0, r.jsx)(j.Z, {
+                (0, r.jsx)(v.Z, {
                     targetElementRef: d,
                     onRequestOpen: () => s(!0),
                     onRequestClose: () => s(!1),
@@ -150,7 +150,7 @@ function T(e) {
                                 return i;
                             })(e, ["onClick"]);
                         return (0, r.jsx)(o.u, {
-                            text: C.intl.string(C.t["UKOtz+"]),
+                            text: I.intl.string(I.t["UKOtz+"]),
                             children: (0, r.jsx)(
                                 h.zx,
                                 Z(E({}, n), {
@@ -158,11 +158,11 @@ function T(e) {
                                         t(e);
                                     },
                                     ref: d,
-                                    "aria-label": C.intl.string(C.t["UKOtz+"]),
+                                    "aria-label": I.intl.string(I.t["UKOtz+"]),
                                     children: (0, r.jsx)(c.xhG, {
                                         size: "md",
                                         color: "currentColor",
-                                        className: I.overflowIcon,
+                                        className: _.overflowIcon,
                                     }),
                                 }),
                             ),
@@ -177,34 +177,34 @@ let N = i.memo(function (e) {
     var t;
     let { entry: l } = e,
         [a, o] = i.useState(!1),
-        h = null != (0, s.e7)([_.Z], () => _.Z.getGuild(l.guildId)),
-        x = async () => {
+        h = null != (0, s.e7)([y.Z], () => y.Z.getGuild(l.guildId)),
+        j = async () => {
             o(!0);
             try {
-                h ? (0, b.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
+                h ? (0, b.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: C.vtS.DIRECTORY_ENTRY });
             } finally {
                 o(!1);
             }
         },
-        j = y.ZP.getGuildSplashURL({
+        v = O.ZP.getGuildSplashURL({
             id: l.guildId,
             splash: l.splash,
             size: 300 * (0, m.x_)(),
         }),
         S =
             null !=
-            (t = y.ZP.getGuildIconURL({
+            (t = O.ZP.getGuildIconURL({
                 id: l.guildId,
                 icon: l.icon,
                 size: 40,
             }))
                 ? t
                 : void 0,
-        P = C.intl.string(C.t.VJlc0S);
+        P = I.intl.string(I.t.VJlc0S);
     return (
-        h && (P = C.intl.string(C.t.cqWE2Z)),
+        h && (P = I.intl.string(I.t.cqWE2Z)),
         (0, r.jsxs)("div", {
-            className: I.card,
+            className: _.card,
             onContextMenu: (e) => {
                 (0, d.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
@@ -213,30 +213,30 @@ let N = i.memo(function (e) {
             },
             children: [
                 (0, r.jsxs)("div", {
-                    className: I.cardHeader,
+                    className: _.cardHeader,
                     children: [
                         (0, r.jsx)("div", {
-                            className: I.splash,
+                            className: _.splash,
                             children:
-                                null != j &&
+                                null != v &&
                                 (0, r.jsx)("img", {
-                                    src: j,
+                                    src: v,
                                     alt: "",
-                                    className: I.splashImage,
+                                    className: _.splashImage,
                                 }),
                         }),
                         (0, r.jsx)("div", {
-                            className: I.guildIcon,
+                            className: _.guildIcon,
                             children: (0, r.jsx)(p.ZP, {
                                 mask: p.ZP.Masks.SQUIRCLE,
                                 width: 48,
                                 height: 48,
                                 children: (0, r.jsx)("div", {
-                                    className: I.iconMask,
+                                    className: _.iconMask,
                                     children: (0, r.jsx)(f.Z, {
-                                        className: I.icon,
+                                        className: _.icon,
                                         iconSrc: S,
-                                        guild: (0, O.e)(l),
+                                        guild: (0, x.e)(l),
                                         size: f.Z.Sizes.MEDIUM,
                                         active: !0,
                                     }),
@@ -246,41 +246,41 @@ let N = i.memo(function (e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: I.guildInfo,
+                    className: _.guildInfo,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: I.title,
+                            className: _.title,
                             children: [
                                 (0, r.jsx)(g.Z, {
-                                    className: I.guildBadge,
+                                    className: _.guildBadge,
                                     guild: l,
                                 }),
                                 (0, r.jsx)(c.Text, {
-                                    className: I.guildName,
+                                    className: _.guildName,
                                     variant: "heading-md/semibold",
-                                    color: "header-primary",
+                                    color: "text-strong",
                                     children: l.name,
                                 }),
                             ],
                         }),
                         (0, r.jsx)(c.Text, {
-                            className: I.description,
+                            className: _.description,
                             variant: "text-sm/normal",
                             color: "text-default",
                             children: l.description,
                         }),
                         (0, r.jsxs)("div", {
-                            className: I.memberInfo,
+                            className: _.memberInfo,
                             children: [
                                 null != l.approximatePresenceCount &&
                                     (0, r.jsxs)("div", {
-                                        className: I.memberCount,
+                                        className: _.memberCount,
                                         children: [
-                                            (0, r.jsx)("div", { className: I.dotOnline }),
+                                            (0, r.jsx)("div", { className: _.dotOnline }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "text-default",
-                                                children: C.intl.format(C.t["LC+S+m"], {
+                                                children: I.intl.format(I.t["LC+S+m"], {
                                                     membersOnline: l.approximatePresenceCount,
                                                 }),
                                             }),
@@ -288,13 +288,13 @@ let N = i.memo(function (e) {
                                     }),
                                 null != l.approximateMemberCount &&
                                     (0, r.jsxs)("div", {
-                                        className: I.memberCount,
+                                        className: _.memberCount,
                                         children: [
-                                            (0, r.jsx)("div", { className: I.dotOffline }),
+                                            (0, r.jsx)("div", { className: _.dotOffline }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "text-default",
-                                                children: C.intl.format(C.t.zRl6XR, {
+                                                children: I.intl.format(I.t.zRl6XR, {
                                                     count: l.approximateMemberCount,
                                                 }),
                                             }),
@@ -303,11 +303,11 @@ let N = i.memo(function (e) {
                             ],
                         }),
                         (0, r.jsx)("div", {
-                            className: I.joinButton,
+                            className: _.joinButton,
                             children: (0, r.jsx)(c.Button, {
                                 loading: a,
                                 variant: h ? "secondary" : "active",
-                                onClick: x,
+                                onClick: j,
                                 text: P,
                                 fullWidth: !0,
                             }),

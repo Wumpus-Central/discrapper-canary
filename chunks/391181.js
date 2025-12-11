@@ -14,7 +14,7 @@ var r = n(54381),
     f = n(48691),
     p = n(231338),
     _ = n(388032),
-    m = n(692316);
+    m = n(446285);
 function h(e, t, n) {
     return (
         t in e
@@ -279,7 +279,7 @@ function S(e) {
                         children: [
                             (0, r.jsx)(s.Heading, {
                                 variant: "text-md/semibold",
-                                color: "header-primary",
+                                color: "text-strong",
                                 className: m.productName,
                                 children: t.name,
                             }),

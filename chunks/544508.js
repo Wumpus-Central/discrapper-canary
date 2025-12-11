@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => v }), n(388685), n(704826), n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(28664),
     u = n(481060),
     d = n(607070),
-    m = n(745510),
-    g = n(899007),
-    f = n(867176),
+    f = n(745510),
+    m = n(899007),
+    g = n(867176),
     E = n(51144),
     p = n(346585),
     h = n(81259),
@@ -18,23 +18,23 @@ var r = n(54381),
     y = n(801461),
     S = n(671955),
     b = n(388032),
-    _ = n(631936),
-    x = n(733469);
-let N = i.forwardRef(function (e, t) {
+    x = n(991119),
+    N = n(733469);
+let v = i.forwardRef(function (e, t) {
     let {
             user: n,
             error: a,
-            formValues: N,
-            displayProfile: v,
-            onChangeFormValue: T,
-            onFocusDisplayName: I,
-            onFocusUsername: j,
+            formValues: v,
+            displayProfile: T,
+            onChangeFormValue: I,
+            onFocusDisplayName: j,
+            onFocusUsername: _,
             editState: P,
             footerNotice: C,
             usernameSuggestionLoading: A,
             oneClickFlow: R,
         } = e,
-        { username: M, globalName: L } = N,
+        { username: M, globalName: L } = v,
         w = i.useRef(null),
         D = i.useRef(null),
         k = i.useMemo(() => n.merge({ discriminator: "0000" }), [n]),
@@ -67,8 +67,8 @@ let N = i.forwardRef(function (e, t) {
             [],
         );
     let G = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        { createMultipleConfettiAt: W } = i.useContext(m.h),
-        F = null == v ? void 0 : v.getLegacyUsername();
+        { createMultipleConfettiAt: W } = i.useContext(f.h),
+        F = null == T ? void 0 : T.getLegacyUsername();
     return (
         i.useEffect(() => {
             !G &&
@@ -112,35 +112,35 @@ let N = i.forwardRef(function (e, t) {
                 ));
         }, [W, P, n, G]),
         (0, r.jsxs)("div", {
-            className: o()(_.userCardContainer, { [_.shinyCard]: P === y.Wq.PREVIEW }),
+            className: o()(x.userCardContainer, { [x.shinyCard]: P === y.Wq.PREVIEW }),
             children: [
                 (0, r.jsxs)("div", {
-                    className: _.profileCard,
+                    className: x.profileCard,
                     children: [
-                        (0, r.jsx)(f.Z, {
-                            user: k,
-                            displayProfile: v,
-                            themeType: S.l.SIDEBAR,
-                        }),
                         (0, r.jsx)(g.Z, {
                             user: k,
-                            displayProfile: v,
+                            displayProfile: T,
                             themeType: S.l.SIDEBAR,
-                            className: _.avatar,
+                        }),
+                        (0, r.jsx)(m.Z, {
+                            user: k,
+                            displayProfile: T,
+                            themeType: S.l.SIDEBAR,
+                            className: x.avatar,
                         }),
                         P === y.Wq.PREVIEW &&
                             null != F &&
                             (0, r.jsx)("div", {
-                                className: _.legacyUsernameBadgeContainer,
+                                className: x.legacyUsernameBadgeContainer,
                                 children: (0, r.jsx)(c.u, {
                                     position: "top",
                                     text: b.intl.formatToPlainString(b.t.bhrgkA, { legacyUsername: F }),
                                     spacing: 12,
                                     children: (0, r.jsx)(u.Anchor, {
                                         children: (0, r.jsx)("img", {
-                                            className: _.legacyUsernameBadge,
+                                            className: x.legacyUsernameBadge,
                                             alt: "",
-                                            src: x,
+                                            src: N,
                                         }),
                                     }),
                                 }),
@@ -153,7 +153,7 @@ let N = i.forwardRef(function (e, t) {
                             opacity: Z.opacity,
                             y: Z.y,
                         },
-                        className: _.inputContainer,
+                        className: x.inputContainer,
                         children: [
                             (0, r.jsxs)(u.Kqy, {
                                 gap: 16,
@@ -164,8 +164,8 @@ let N = i.forwardRef(function (e, t) {
                                             value: null != L ? L : "",
                                             placeholder: E.ZP.getName(n),
                                             maxLength: y.hy,
-                                            onChange: (e) => T({ globalName: e }),
-                                            onFocus: I,
+                                            onChange: (e) => I({ globalName: e }),
+                                            onFocus: j,
                                             inputRef: D,
                                         }),
                                     (P === y.Wq.EDIT_USERNAME || P === y.Wq.SUGGESTION) &&
@@ -175,14 +175,14 @@ let N = i.forwardRef(function (e, t) {
                                             value: null != M ? M : "",
                                             placeholder: n.username,
                                             maxLength: y.hy,
-                                            onChange: (e) => T({ username: e.replace("@", "") }),
-                                            onFocus: j,
+                                            onChange: (e) => I({ username: e.replace("@", "") }),
+                                            onFocus: _,
                                             inputRef: w,
                                         }),
                                 ],
                             }),
                             (0, r.jsx)("div", {
-                                className: _.messageContainer,
+                                className: x.messageContainer,
                                 children: (() => {
                                     if (null != a)
                                         return (0, r.jsx)(h.Z, {
@@ -213,10 +213,10 @@ let N = i.forwardRef(function (e, t) {
                     }),
                 P === y.Wq.PREVIEW &&
                     (0, r.jsxs)("div", {
-                        className: _.userCard,
+                        className: x.userCard,
                         children: [
                             (0, r.jsx)(u.Heading, {
-                                color: "header-primary",
+                                color: "text-strong",
                                 variant: "heading-xl/bold",
                                 children: E.ZP.getName(n),
                             }),
@@ -226,7 +226,7 @@ let N = i.forwardRef(function (e, t) {
                                 children: n.username,
                             }),
                             (0, r.jsx)(u.Text, {
-                                className: _.memberText,
+                                className: x.memberText,
                                 color: "text-muted",
                                 variant: "text-sm/medium",
                                 children: b.intl.format(b.t["9rfonh"], { date: (0, p.K9)(n.id) }),

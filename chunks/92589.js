@@ -1,13 +1,13 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var r = n(54381);
 n(473749);
 var l = n(907331),
-    i = n(481060),
+    a = n(481060),
     o = n(168020),
-    s = n(794324),
-    a = n(859788),
+    i = n(794324),
+    s = n(859788),
     c = n(388032),
-    u = n(449177);
+    u = n(984623);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -33,29 +33,29 @@ function d(e) {
     }
     return e;
 }
-let g = (e) => {
+let f = (e) => {
     let { immersiveBannerBlock: t, onVisibilityChange: n } = e,
-        g = (0, l.O)(
+        f = (0, l.O)(
             (e) => {
                 null == n || n(e);
             },
             0.33,
             null != n,
         ),
-        { bannerUrl: f, bannerAnimatedUrl: p } = (0, s._M)(t),
-        m = null != t.textColor ? { color: t.textColor } : void 0,
-        h = null != t.body && "" !== t.body,
+        { bannerUrl: g, bannerAnimatedUrl: p } = (0, i._M)(t),
+        b = null != t.textColor ? { color: t.textColor } : void 0,
+        m = null != t.body && "" !== t.body,
         C = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, r.jsxs)("div", {
-        ref: g,
+        ref: f,
         className: u.immersiveBannerBlock,
         children: [
             (0, r.jsx)("div", {
                 className: u.banner,
                 children:
-                    null != f &&
-                    (0, r.jsx)(a.Z, {
-                        bannerStatic: f,
+                    null != g &&
+                    (0, r.jsx)(s.Z, {
+                        bannerStatic: g,
                         bannerAnimated: p,
                     }),
             }),
@@ -70,25 +70,25 @@ let g = (e) => {
                                   size: "lg",
                               })
                             : null,
-                        (0, r.jsx)(i.Heading, {
+                        (0, r.jsx)(a.Heading, {
                             variant: "heading-xxl/bold",
                             className: u.title,
-                            color: "header-primary",
-                            style: d({}, m),
+                            color: "text-strong",
+                            style: d({}, b),
                             children: t.title,
                         }),
-                        h || C
-                            ? (0, r.jsxs)(i.Text, {
+                        m || C
+                            ? (0, r.jsxs)(a.Text, {
                                   variant: "text-md/medium",
-                                  style: d({}, m),
+                                  style: d({}, b),
                                   children: [
-                                      h && t.body,
-                                      h && C && " ",
+                                      m && t.body,
+                                      m && C && " ",
                                       C &&
-                                          (0, r.jsx)(i.Anchor, {
+                                          (0, r.jsx)(a.Anchor, {
                                               href: t.helpCenterUrl,
                                               className: u.learnMoreLink,
-                                              style: d({}, m),
+                                              style: d({}, b),
                                               children: c.intl.string(c.t.O7ADgv),
                                           }),
                                   ],
