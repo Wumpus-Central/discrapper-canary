@@ -1,22 +1,24 @@
 n.d(t, {
-    F: () => y,
-    Z: () => O,
+    F: () => O,
+    Z: () => x,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(120356),
-    a = n.n(l),
+    a = n(120356),
+    l = n.n(a),
     o = n(481060),
     c = n(785717),
-    s = n(128156),
-    u = n(311044),
-    d = n(408986),
-    f = n(778414),
-    g = n(414655),
-    p = n(228168),
-    m = n(883101);
-function b(e) {
+    s = n(592183),
+    u = n(224724),
+    d = n(128156),
+    f = n(311044),
+    g = n(408986),
+    p = n(778414),
+    b = n(414655),
+    m = n(228168),
+    h = n(237297);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +43,7 @@ function b(e) {
     }
     return e;
 }
-function h(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,9 +61,9 @@ function h(e, t) {
         e
     );
 }
-function y(e) {
+function O(e) {
     var { children: t, className: n, scrollerRef: i } = e,
-        l = (function (e, t) {
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -70,132 +72,134 @@ function y(e) {
                     var n,
                         r,
                         i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["children", "className", "scrollerRef"]);
     return (0, r.jsx)(
         o.Ttm,
-        h(
-            b(
+        v(
+            y(
                 {
                     ref: i,
-                    className: a()(m.tabPanelScroller, n),
+                    className: l()(h.tabPanelScroller, n),
                     fade: !0,
                 },
-                l,
+                a,
             ),
             { children: t },
         ),
     );
 }
-function v(e) {
+function j(e) {
     let {
         user: t,
         currentUser: n,
         section: i,
-        subsection: l,
-        displayProfile: a,
+        subsection: a,
+        displayProfile: l,
         guildId: o,
         channelId: c,
-        onClose: m,
+        onClose: s,
     } = e;
-    return i === p.oh.ACTIVITY
-        ? (0, r.jsx)(s.Z, {
+    return i === m.oh.ACTIVITY
+        ? (0, r.jsx)(d.Z, {
               user: t,
               currentUser: n,
-              displayProfile: a,
+              displayProfile: l,
               guildId: o,
               channelId: c,
-              subsection: l,
-              onClose: m,
+              subsection: a,
+              onClose: s,
           })
-        : i === p.oh.MUTUAL_FRIENDS
-          ? (0, r.jsx)(u.Z, {
+        : i === m.oh.MUTUAL_FRIENDS
+          ? (0, r.jsx)(f.Z, {
                 user: t,
                 guildId: o,
                 channelId: c,
-                onClose: m,
+                onClose: s,
             })
-          : i === p.oh.MUTUAL_GUILDS
-            ? (0, r.jsx)(d.Z, {
+          : i === m.oh.MUTUAL_GUILDS
+            ? (0, r.jsx)(g.Z, {
                   user: t,
-                  onClose: m,
+                  onClose: s,
               })
-            : i === p.oh.WIDGETS
-              ? (0, r.jsx)(f.C, {
+            : i === m.oh.WIDGETS
+              ? (0, r.jsx)(p.C, {
                     user: t,
                     guildId: o,
                     channelId: c,
                 })
-              : i === p.oh.WISHLIST
-                ? (0, r.jsx)(g.Z, { profileOwner: t })
+              : i === m.oh.WISHLIST
+                ? (0, r.jsx)(b.Z, { profileOwner: t })
                 : null;
 }
-function O(e) {
+function x(e) {
     var t;
     let {
             user: n,
-            currentUser: l,
-            displayProfile: a,
-            guildId: s,
-            channelId: u,
-            items: d,
-            initialSection: f,
-            initialSubsection: g,
-            onClose: p,
+            currentUser: a,
+            displayProfile: l,
+            guildId: d,
+            channelId: f,
+            items: g,
+            initialSection: p,
+            initialSubsection: b,
+            onClose: O,
         } = e,
-        { trackUserProfileAction: y } = (0, c.KZ)(),
-        [{ section: O, subsection: j, text: x }, _] = i.useState(
-            h(
-                b(
+        { trackUserProfileAction: x } = (0, c.KZ)(),
+        [{ section: P, subsection: I, text: w }, S] = i.useState(
+            v(
+                y(
                     {},
                     null !=
-                        (t = d.find((e) => {
+                        (t = g.find((e) => {
                             let { section: t } = e;
-                            return t === f;
+                            return t === p;
                         }))
                         ? t
-                        : d[0],
+                        : g[0],
                 ),
-                { subsection: g },
+                { subsection: b },
             ),
         );
     return (0, r.jsxs)("div", {
-        className: m.container,
+        className: h.container,
         children: [
             (0, r.jsx)(o.Ttm, {
                 orientation: "horizontal",
-                className: m.tabListScroller,
+                className: h.tabListScroller,
                 fade: !0,
                 paddingFix: !1,
                 children: (0, r.jsx)(o.njP, {
                     type: "top",
                     look: "custom",
-                    selectedItem: O,
+                    selectedItem: P,
                     onItemSelect: (e) => {
-                        y({
+                        if (u.Z.hasSaveablePendingChanges() && P === m.oh.WIDGETS)
+                            return void s.Z.notifyPendingWidgets();
+                        x({
                             action: "PRESS_SECTION",
                             section: e,
                         }),
-                            _((t) => {
+                            S((t) => {
                                 var n;
-                                return null != (n = d.find((t) => t.section === e)) ? n : t;
+                                return null != (n = g.find((t) => t.section === e)) ? n : t;
                             });
                     },
-                    children: d.map((e) =>
+                    children: g.map((e) =>
                         (0, r.jsx)(
                             o.njP.Item,
                             {
-                                className: m.tabBarItem,
+                                className: h.tabBarItem,
                                 id: e.section,
                                 "aria-label": e.text,
                                 children: e.text,
@@ -206,20 +210,20 @@ function O(e) {
                 }),
             }),
             (0, r.jsx)(o.njP.Panel, {
-                id: O,
-                "aria-label": x,
-                className: m.tabBarPanel,
+                id: P,
+                "aria-label": w,
+                className: h.tabBarPanel,
                 children: (0, r.jsx)(o.y5t, {
-                    component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: x }) }),
-                    children: (0, r.jsx)(v, {
+                    component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: w }) }),
+                    children: (0, r.jsx)(j, {
                         user: n,
-                        currentUser: l,
-                        displayProfile: a,
-                        guildId: s,
-                        channelId: u,
-                        section: O,
-                        subsection: j,
-                        onClose: p,
+                        currentUser: a,
+                        displayProfile: l,
+                        guildId: d,
+                        channelId: f,
+                        section: P,
+                        subsection: I,
+                        onClose: O,
                     }),
                 }),
             }),
