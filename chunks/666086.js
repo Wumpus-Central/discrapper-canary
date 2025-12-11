@@ -105,7 +105,7 @@ class O extends s.Z {
     }
     onChannelSelect(e) {
         let { channelId: t } = e;
-        this.sendGiftingNotificationIfEligible(), this.sendGiftPromptMessageInSelectedChannelIfEligible(t);
+        this.sendGiftPromptMessageInSelectedChannelIfEligible(t);
     }
     onPostConnectionOpen() {
         this.sendGiftingNotificationIfEligible();
