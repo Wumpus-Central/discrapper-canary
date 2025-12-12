@@ -1,13 +1,13 @@
 n.d(t, { Z: () => s }), n(388685);
 var r = n(54381);
 n(473749);
-var l = n(481060),
+var l = n(793030),
     i = n(652339);
 let a = (e) => {
         let { onChange: t, label: n, subtitle: a, selected: s } = e;
         return (0, r.jsx)("div", {
             className: i.checkboxRow,
-            children: (0, r.jsx)(l.Checkbox, {
+            children: (0, r.jsx)(l.XZJ, {
                 checked: s,
                 onChange: t,
                 label: n,

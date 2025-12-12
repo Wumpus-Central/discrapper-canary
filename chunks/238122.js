@@ -5,16 +5,24 @@ var r = n(54381),
     a = n(454585),
     s = n(273744),
     o = n(388032),
-    d = n(647889),
-    c = n(478411);
+    c = n(124252),
+    d = n(197571);
 let u = (e) => {
         let {
-                data: { title: t, subtitle: n, placeholder: u, rows: m, character_limit: b, pattern: p },
-                onChange: g,
-                initialText: f,
+                data: {
+                    title: t,
+                    subtitle: n,
+                    description: u,
+                    placeholder: m,
+                    rows: p,
+                    character_limit: g,
+                    pattern: _,
+                },
+                onChange: x,
+                initialText: b,
                 isRequired: h,
             } = e,
-            x = l.useMemo(() => {
+            f = l.useMemo(() => {
                 var e, t;
                 return a.Z.reactParserFor(
                     ((e = (function (e) {
@@ -58,73 +66,85 @@ let u = (e) => {
                     e),
                 );
             }, []),
-            [v, _] = l.useState(""),
-            [j, y] = l.useState(null);
+            [v, j] = l.useState(""),
+            [y, O] = l.useState(null);
         l.useEffect(() => {
             var e;
-            _(null != (e = null == f ? void 0 : f.value) ? e : "");
-        }, [f]);
-        let O = l.useCallback(
+            j(null != (e = null == b ? void 0 : b.value) ? e : "");
+        }, [b]);
+        let Z = l.useCallback(
             (e) => {
-                let t = null != p ? new RegExp(p) : null;
+                let t = null != _ ? new RegExp(_) : null;
                 null == t || t.test(e)
                     ? null != e &&
-                      (y(null),
-                      _(e),
-                      g({
+                      (O(null),
+                      j(e),
+                      x({
                           value: e,
                           isValid: !0,
                       }))
-                    : (y(o.intl.string(o.t["24xrGb"])),
-                      g({
+                    : (O(o.intl.string(o.t["24xrGb"])),
+                      x({
                           value: e,
                           isValid: !1,
                       }));
             },
-            [g, p],
+            [x, _],
         );
         return (0, r.jsxs)("div", {
-            className: c.marginBottom8,
+            className: d.marginBottom8,
             children: [
-                null != t &&
-                    (0, r.jsx)("div", {
-                        className: c.marginBottom8,
-                        children: (0, r.jsxs)(i.Text, {
-                            variant: "text-sm/bold",
-                            children: [
-                                t,
-                                h &&
-                                    (0, r.jsx)("span", {
-                                        className: d.required,
-                                        children: "*",
-                                    }),
-                            ],
-                        }),
-                    }),
-                1 === m
+                (0, r.jsxs)("div", {
+                    className: d.marginBottom8,
+                    children: [
+                        null != t &&
+                            (0, r.jsxs)(i.Text, {
+                                variant: "text-sm/bold",
+                                children: [
+                                    t,
+                                    h &&
+                                        (0, r.jsx)("span", {
+                                            className: c.required,
+                                            children: "*",
+                                        }),
+                                ],
+                            }),
+                        null != u &&
+                            (0, r.jsx)("div", {
+                                className: d.marginTop4,
+                                children: (0, r.jsx)(i.Text, {
+                                    variant: "text-sm/normal",
+                                    color: "text-muted",
+                                    children: u,
+                                }),
+                            }),
+                    ],
+                }),
+                1 === p
                     ? (0, r.jsx)(i.oil, {
-                          maxLength: b,
-                          onChange: O,
+                          maxLength: g,
+                          onChange: Z,
                           value: v,
-                          error: j,
-                          placeholder: u,
+                          error: y,
+                          placeholder: m,
                           autoFocus: !0,
                       })
                     : (0, r.jsx)(i.Kx8, {
-                          maxLength: b,
-                          onChange: O,
+                          maxLength: g,
+                          onChange: Z,
                           value: v,
-                          error: j,
-                          rows: m,
-                          placeholder: u,
+                          error: y,
+                          rows: p,
+                          placeholder: m,
                           autoFocus: !0,
                       }),
                 null != n &&
                     (0, r.jsx)("div", {
-                        className: c.marginTop4,
+                        className: d.marginTop4,
                         children: (0, r.jsx)(i.Text, {
-                            variant: "text-sm/normal",
-                            children: x(n),
+                            variant: "text-xs/normal",
+                            color: "text-muted",
+                            children: f(n),
                         }),
                     }),
             ],

@@ -8,10 +8,10 @@ var r = n(54381),
 let c = (e) => {
     let { onNavigate: t } = e,
         n = i.useCallback(() => {
-            t(l.V.DSA);
+            t(l.V4.DSA);
         }, [t]),
         c = i.useCallback(() => {
-            t(l.V.TIDA);
+            t(l.V4.TIDA);
         }, [t]);
     return (0, r.jsxs)(s.Kqy, {
         gap: 8,
