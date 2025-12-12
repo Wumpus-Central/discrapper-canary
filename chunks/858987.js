@@ -1,6 +1,6 @@
 n.d(t, {
-    K: () => O,
-    Z: () => S,
+    K: () => E,
+    Z: () => y,
 }),
     n(997841);
 var r = n(54381);
@@ -8,69 +8,18 @@ n(473749);
 var i = n(512722),
     a = n.n(i),
     o = n(95015),
-    s = n(481060),
-    l = n(115130),
-    c = n(906732),
-    u = n(563132),
-    d = n(74538),
-    f = n(296848),
-    p = n(244923),
-    _ = n(981631),
-    m = n(231338),
-    h = n(388032);
-function g(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
+    s = n(681715),
+    l = n(481060),
+    c = n(115130),
+    u = n(906732),
+    d = n(563132),
+    f = n(74538),
+    p = n(296848),
+    _ = n(244923),
+    m = n(981631),
+    h = n(231338),
+    g = n(388032);
 function E(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                g(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function b(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function y(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function O(e) {
     let {
         purchaseType: t,
         plan: n,
@@ -81,194 +30,146 @@ function O(e) {
         isPrepaidPaymentSource: l,
         inReverseTrial: c,
         paymentSourceId: u,
-        hasPaymentSources: p,
+        hasPaymentSources: d,
     } = e;
-    if (null === u && p) return h.intl.string(h.t.CpOiEO);
-    if (t === m.GZ.ONE_TIME) return o ? h.intl.string(h.t.ouo4FK) : h.intl.string(h.t.ExD0Ng);
-    if ((a()(null != n, "Subscription plan must be selected to render SubscriptionReviewButton"), i === _.POd.BOOST))
-        return h.intl.string(h.t.eUEeCt);
-    if (o) return h.intl.string(h.t.ouo4FK);
-    if (c) return h.intl.string(h.t.LQVQIq);
-    if ((0, d.PV)(n.id))
+    if (null === u && d) return g.intl.string(g.t.CpOiEO);
+    if (t === h.GZ.ONE_TIME) return o ? g.intl.string(g.t.ouo4FK) : g.intl.string(g.t.ExD0Ng);
+    if ((a()(null != n, "Subscription plan must be selected to render SubscriptionReviewButton"), i === m.POd.BOOST))
+        return g.intl.string(g.t.eUEeCt);
+    if (o) return g.intl.string(g.t.ouo4FK);
+    if (c) return g.intl.string(g.t.LQVQIq);
+    if ((0, f.PV)(n.id))
         return l
-            ? h.intl.string(h.t.cRCCJ3)
+            ? g.intl.string(g.t.cRCCJ3)
             : null != r
               ? r.isPausedAllowsResumeButNotUpdates
-                  ? h.intl.string(h.t.zpi5pg)
-                  : (0, f.R4)(r, n.id, s)
-                    ? h.intl.string(h.t.IJI7yk)
-                    : h.intl.string(h.t.VPuTc5)
-              : (0, d.W_)(null, n);
-    return h.intl.string(h.t.YScQSF);
+                  ? g.intl.string(g.t.zpi5pg)
+                  : (0, p.R4)(r, n.id, s)
+                    ? g.intl.string(g.t.IJI7yk)
+                    : g.intl.string(g.t.VPuTc5)
+              : (0, f.W_)(null, n);
+    return g.intl.string(g.t.YScQSF);
 }
-function v(e, t) {
+function b(e, t) {
     null != e.current && (e.current.scrollIntoView({ behavior: "smooth" }), t());
 }
-function S(e) {
+function y(e) {
     var t;
     let {
             legalTermsNodeRef: n,
             invoiceError: i,
             planError: a,
-            disablePurchase: d,
-            flashLegalTerms: f,
-            isSubmitting: m,
-            premiumSubscription: g,
-            isGift: b,
-            planGroup: S,
-            isPrepaid: I,
-            isTrial: T,
-            makePurchase: C,
-            needsPaymentSource: A,
-            inReverseTrial: N,
-            onNext: P,
-            onPaymentSourceAdd: R,
+            disablePurchase: f,
+            flashLegalTerms: p,
+            isSubmitting: h,
+            premiumSubscription: y,
+            isGift: O,
+            planGroup: v,
+            isPrepaid: S,
+            isTrial: I,
+            makePurchase: T,
+            needsPaymentSource: C,
+            inReverseTrial: A,
+            onNext: N,
+            onPaymentSourceAdd: P,
         } = e,
         {
-            application: D,
+            application: R,
             selectedPlan: w,
-            hasAcceptedTerms: x,
-            purchaseType: L,
-            paymentSourceId: j,
-            activeSubscription: M,
-            devShelfFetchState: k,
-            hasPaymentSources: U,
-        } = (0, u.JL)(),
-        G = O({
-            purchaseType: L,
+            hasAcceptedTerms: D,
+            purchaseType: x,
+            paymentSourceId: L,
+            activeSubscription: j,
+            devShelfFetchState: M,
+            hasPaymentSources: k,
+        } = (0, d.JL)(),
+        U = E({
+            purchaseType: x,
             plan: w,
-            premiumSubscription: g,
-            isGift: b,
-            planGroup: S,
-            isPrepaidPaymentSource: I,
-            inReverseTrial: N,
-            paymentSourceId: j,
-            hasPaymentSources: U,
+            premiumSubscription: y,
+            isGift: O,
+            planGroup: v,
+            isPrepaidPaymentSource: S,
+            inReverseTrial: A,
+            paymentSourceId: L,
+            hasPaymentSources: k,
         }),
-        { analyticsLocations: Z } = (0, c.ZP)();
-    if (null != i || null != a || d)
-        return (0, r.jsx)(s.Button, {
+        { analyticsLocations: G } = (0, u.ZP)();
+    if (null != i || null != a || f)
+        return (0, r.jsx)(l.Button, {
             variant: "active",
-            text: G,
+            text: U,
             disabled: !0,
         });
-    if (A && U)
-        return (0, r.jsx)(s.aML, {
-            "data-migration-pending": !0,
-            text: h.intl.string(h.t.L7jbQV),
-            children: (e) =>
-                (0, r.jsx)(
-                    s.Button,
-                    y(
-                        E(
-                            {
-                                variant: "primary",
-                                text: G,
-                            },
-                            e,
-                        ),
-                        {
-                            type: "submit",
-                            "data-testid": "submitButton",
-                            onClick: R,
-                        },
-                    ),
-                ),
+    if (C && k)
+        return (0, r.jsx)(s.u, {
+            text: g.intl.string(g.t.L7jbQV),
+            children: (0, r.jsx)(l.Button, {
+                variant: "primary",
+                text: U,
+                type: "submit",
+                "data-testid": "submitButton",
+                onClick: P,
+            }),
         });
-    if (A && !U)
-        return (0, r.jsx)(s.aML, {
-            "data-migration-pending": !0,
-            text: h.intl.string(h.t.L7jbQV),
-            children: (e) =>
-                (0, r.jsx)(
-                    s.Button,
-                    y(
-                        E(
-                            {
-                                variant: "active",
-                                text: G,
-                            },
-                            e,
-                        ),
-                        {
-                            type: "submit",
-                            "data-testid": "submitButton",
-                            disabled: !0,
-                        },
-                    ),
-                ),
+    if (C && !k)
+        return (0, r.jsx)(s.u, {
+            text: g.intl.string(g.t.L7jbQV),
+            children: (0, r.jsx)(l.Button, {
+                variant: "active",
+                text: U,
+                type: "submit",
+                "data-testid": "submitButton",
+                disabled: !0,
+            }),
         });
-    if ((0, o.yE)(null != (t = null == D ? void 0 : D.flags) ? t : 0, _.udG.EMBEDDED) && k === l.O.LOADING)
-        return (0, r.jsx)(s.aML, {
-            "data-migration-pending": !0,
-            text: h.intl.string(h.t.cjA5tj),
-            children: (e) =>
-                (0, r.jsx)(
-                    s.Button,
-                    y(
-                        E(
-                            {
-                                variant: "active",
-                                text: G,
-                            },
-                            e,
-                        ),
-                        {
-                            type: "submit",
-                            "data-testid": "submitButton",
-                            disabled: !0,
-                        },
-                    ),
-                ),
+    if ((0, o.yE)(null != (t = null == R ? void 0 : R.flags) ? t : 0, m.udG.EMBEDDED) && M === c.O.LOADING)
+        return (0, r.jsx)(s.u, {
+            text: g.intl.string(g.t.cjA5tj),
+            children: (0, r.jsx)(l.Button, {
+                variant: "active",
+                text: U,
+                type: "submit",
+                "data-testid": "submitButton",
+                disabled: !0,
+            }),
         });
-    if (T)
-        return (0, r.jsx)(s.Button, {
+    if (I)
+        return (0, r.jsx)(l.Button, {
             variant: "expressive",
-            "data-testid": x ? "purchase" : "submitButton",
-            text: G,
-            onClick: x ? C : () => v(n, f),
-            loading: m,
+            "data-testid": D ? "purchase" : "submitButton",
+            text: U,
+            onClick: D ? T : () => b(n, p),
+            loading: h,
             iconPosition: "start",
-            icon: () => (0, r.jsx)(s.SrA, { color: "currentColor" }),
+            icon: () => (0, r.jsx)(l.SrA, { color: "currentColor" }),
         });
-    else if (!x)
-        return (0, r.jsx)(s.aML, {
-            "data-migration-pending": !0,
-            text: h.intl.string(h.t.XdvBLS),
-            children: (e) =>
-                (0, r.jsx)(
-                    s.Button,
-                    y(
-                        E(
-                            {
-                                variant: "active",
-                                text: G,
-                            },
-                            e,
-                        ),
-                        {
-                            type: "submit",
-                            onClick: () => v(n, f),
-                            "data-testid": "submitButton",
-                        },
-                    ),
-                ),
+    else if (!D)
+        return (0, r.jsx)(s.u, {
+            text: g.intl.string(g.t.XdvBLS),
+            children: (0, r.jsx)(l.Button, {
+                variant: "active",
+                text: U,
+                type: "submit",
+                onClick: () => b(n, p),
+                "data-testid": "submitButton",
+            }),
         });
-    else if (N && null != M && null != j)
-        return (0, r.jsx)(p.Z, {
-            activeSubscription: M,
-            onNext: P,
-            isSubmitting: m,
-            paymentSourceId: j,
-            buttonLabel: G,
-            analyticsLocations: Z,
+    else if (A && null != j && null != L)
+        return (0, r.jsx)(_.Z, {
+            activeSubscription: j,
+            onNext: N,
+            isSubmitting: h,
+            paymentSourceId: L,
+            buttonLabel: U,
+            analyticsLocations: G,
         });
     else
-        return (0, r.jsx)(s.Button, {
+        return (0, r.jsx)(l.Button, {
             variant: "active",
-            text: G,
+            text: U,
             "data-testid": "purchase",
-            onClick: C,
-            loading: m,
+            onClick: T,
+            loading: h,
         });
 }

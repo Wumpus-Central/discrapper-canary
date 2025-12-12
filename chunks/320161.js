@@ -115,16 +115,16 @@ function S(e) {
         !c.wS)
     )
         return (0, r.jsx)(r.Fragment, { children: u({}) });
-    let D = S >= v.length - 1,
-        w = D ? s.r6K.RED : s.r6K.GREEN,
-        x = T ? w : s.r6K.PRIMARY,
+    let w = S >= v.length - 1,
+        D = w ? s.r6K.RED : s.r6K.GREEN,
+        x = T ? D : s.r6K.PRIMARY,
         L = () => {
             var e;
             if (!T) return t;
             let n = (0, a.clamp)(S - 1, 0, v.length - 1),
                 i = null != (e = v[n]) ? e : v[0];
             return (0, r.jsx)(s.UkV, {
-                isShaking: D,
+                isShaking: w,
                 children: i(),
             });
         },
@@ -142,7 +142,6 @@ function S(e) {
                 R.start(y, () => I(0));
         };
     return (0, r.jsx)(s.aML, {
-        "data-migration-pending": !0,
         text: L(),
         delay: m,
         "aria-label": p,

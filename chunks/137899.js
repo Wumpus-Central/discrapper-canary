@@ -60,7 +60,6 @@ class m extends i.PureComponent {
         switch (this.props.mode) {
             case "UPDATE_AVAILABLE":
                 return (0, r.jsx)(p.JO, {
-                    hideOnClick: !1,
                     tooltip: f.intl.string(f.t["zp9d/4"]),
                     foreground: g.downloadArrow,
                     background: g.cloud,

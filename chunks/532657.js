@@ -1,12 +1,13 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
-    l = n(556638),
-    c = n(175996);
-function u(e, t, n) {
+    s = n(454399),
+    l = n(481060),
+    c = n(556638),
+    u = n(175996);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +31,12 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,75 +48,70 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e) {
+function m(e) {
+    var t;
     let {
-            text: t,
-            tooltipText: n,
-            textVariant: a = "text-xs/medium",
-            textClassName: u,
-            "aria-label": f,
-            icon: _,
-            canTruncate: m = !0,
-            hideTooltip: h = !1,
-            hideText: g = !1,
+            text: n,
+            tooltipText: a,
+            textVariant: d = "text-xs/medium",
+            textClassName: p,
+            "aria-label": m,
+            icon: h,
+            canTruncate: g = !0,
+            hideTooltip: E = !1,
+            hideText: b = !1,
         } = e,
-        E = i.useRef(null),
-        b = () => {
-            let e = null != n ? n : t;
-            return (0, r.jsxs)(r.Fragment, {
-                children: [
-                    _,
-                    (0, r.jsx)(s.Text, {
-                        variant: "text-sm/medium",
-                        color: "none",
-                        className: o()(c.tooltipText, u),
-                        children: e,
-                    }),
-                ],
-            });
-        },
-        y = {
-            variant: a,
+        y = i.useRef(null),
+        [O, v] = i.useState(!1),
+        S = {
+            variant: d,
             color: "none",
-            className: o()(m && c.truncated, u),
+            className: o()(g && u.truncated, p),
         },
-        O = null != t && null == n && m,
-        v = !h && (null != n || O || g);
-    return null == _ && g
+        I = null != n && null == a && g,
+        T = !E && (null != a || I || b),
+        C = null != (t = null != a ? a : n) ? t : "",
+        A = (null == d ? void 0 : d.startsWith("text-sm")) ? u.textSm : u.textXs,
+        N = i.useCallback(() => {
+            if (I) {
+                let { current: e } = y;
+                v((null != e && e.offsetWidth < e.scrollWidth) || null != a || b);
+            } else v(!0);
+        }, [I, a, b]),
+        P = i.useCallback(() => {
+            v(!1);
+        }, []);
+    return null == h && b
         ? null
-        : v
-          ? (0, r.jsx)(s.aML, {
-                "data-migration-pending": !0,
-                text: b(),
-                "aria-label": f,
-                tooltipContentClassName: o()(c.container, c.activitiesTooltip),
-                delay: l.X,
-                children: (e) => {
-                    let { onMouseEnter: i, onMouseLeave: a } = e;
-                    return (0, r.jsxs)("div", {
-                        className: o()(c.container, c.textWithIconContainer),
-                        onMouseEnter: () => {
-                            let { current: e } = E,
-                                t = null != e && e.offsetWidth < e.scrollWidth;
-                            (null != n || t || g) && (null == i || i());
-                        },
-                        onMouseLeave: a,
-                        children: [_, !g && (0, r.jsx)(s.Text, p(d({ ref: E }, y), { children: t }))],
-                    });
-                },
+        : T
+          ? (0, r.jsx)(s.i, {
+                body: C,
+                asset: h,
+                assetSize: 16,
+                delay: c.X,
+                shouldShow: O,
+                asContainer: !0,
+                children: (0, r.jsxs)("div", {
+                    className: o()(u.container, u.textWithIconContainer, A),
+                    "aria-label": m,
+                    onMouseEnter: N,
+                    onMouseLeave: P,
+                    children: [h, !b && (0, r.jsx)(l.Text, _(f({ ref: y }, S), { children: n }))],
+                }),
             })
-          : (0, r.jsxs)(r.Fragment, {
-                children: [_, !g && (0, r.jsx)(s.Text, p(d({}, y), { children: t }))],
+          : (0, r.jsxs)("div", {
+                className: o()(u.container, u.textWithIconContainer, A),
+                children: [h, !b && (0, r.jsx)(l.Text, _(f({}, S), { children: n }))],
             });
 }

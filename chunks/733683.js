@@ -84,7 +84,6 @@ class E extends (r = l.Component) {
         return (0, i.jsxs)(
             f.gqK,
             {
-                "data-migration-pending": !0,
                 targetElementRef: this.foregroundTooltipElementRef,
                 position: "right",
                 color: f.aML.Colors.PRIMARY,

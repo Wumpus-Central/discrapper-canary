@@ -1,141 +1,138 @@
-n.d(t, { Z: () => L }), n(388685), n(642613), n(539854);
+n.d(t, { Z: () => w }), n(388685), n(642613), n(539854);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
     s = n(742280),
     o = n(442837),
-    c = n(481060),
-    u = n(355467),
-    d = n(493683),
-    p = n(393903),
-    f = n(81643),
-    g = n(100527),
-    h = n(367907),
-    m = n(791250),
-    _ = n(752048),
-    b = n(518950),
-    E = n(592125),
-    O = n(480294),
-    v = n(158776),
-    y = n(699516),
-    I = n(111583),
-    C = n(594174),
-    S = n(351402),
-    T = n(823379),
-    N = n(399521),
-    j = n(981631),
-    P = n(388032),
-    x = n(944658);
-function A(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function Z(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function w(e) {
+    c = n(681715),
+    u = n(481060),
+    d = n(355467),
+    p = n(493683),
+    f = n(393903),
+    g = n(81643),
+    h = n(100527),
+    m = n(367907),
+    b = n(791250),
+    E = n(752048),
+    _ = n(518950),
+    O = n(592125),
+    v = n(480294),
+    y = n(158776),
+    I = n(699516),
+    C = n(111583),
+    S = n(594174),
+    T = n(351402),
+    N = n(823379),
+    j = n(399521),
+    P = n(981631),
+    x = n(388032),
+    A = n(938359);
+function Z(e) {
     var t, n;
     let { user: i, index: l, isCompetitive: a } = e,
-        { status: s, isMobile: u } = (0, o.cj)([v.Z], () => ({
-            status: v.Z.getStatus(i.id),
-            isMobile: v.Z.isMobileOnline(i.id),
+        { status: s, isMobile: c } = (0, o.cj)([y.Z], () => ({
+            status: y.Z.getStatus(i.id),
+            isMobile: y.Z.isMobileOnline(i.id),
         })),
-        p = (0, o.e7)([I.Z, E.Z], () => {
-            let e = E.Z.getDMFromUserId(i.id);
-            return null != e && I.Z.isTyping(e, i.id);
+        d = (0, o.e7)([C.Z, O.Z], () => {
+            let e = O.Z.getDMFromUserId(i.id);
+            return null != e && C.Z.isTyping(e, i.id);
         }, [i]),
-        { avatarSrc: f, eventHandlers: m } = (0, b.Z)({
+        { avatarSrc: f, eventHandlers: g } = (0, _.Z)({
             userId: i.id,
-            size: c.EFr.SIZE_32,
+            size: u.EFr.SIZE_32,
             animateOnHover: !0,
         }),
-        _ = async () => {
-            await d.Z.openPrivateChannel({
+        b = async () => {
+            var e, t;
+            await p.Z.openPrivateChannel({
                 recipientIds: [i.id],
-                location: g.Z.FREQUENT_FRIENDS_ROW,
+                location: h.Z.FREQUENT_FRIENDS_ROW,
             });
-            let e = E.Z.getDMFromUserId(i.id);
-            null != e &&
-                (0, h.yw)(
-                    j.rMx.CHANNEL_OPENED,
-                    Z(A({}, (0, h.$H)(e)), { location: "".concat(g.Z.FREQUENT_FRIENDS_ROW, " ").concat(l + 1) }),
+            let n = O.Z.getDMFromUserId(i.id);
+            null != n &&
+                (0, m.yw)(
+                    P.rMx.CHANNEL_OPENED,
+                    ((e = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({}, (0, m.$H)(n))),
+                    (t = t = { location: "".concat(h.Z.FREQUENT_FRIENDS_ROW, " ").concat(l + 1) }),
+                    Object.getOwnPropertyDescriptors
+                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                        : (function (e, t) {
+                              var n = Object.keys(e);
+                              if (Object.getOwnPropertySymbols) {
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
+                              }
+                              return n;
+                          })(Object(t)).forEach(function (n) {
+                              Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                          }),
+                    e),
                 );
         },
-        O = 0 === l,
-        y = O ? c.YqE : a ? c.XcD : void 0,
-        C = O ? P.intl.string(P.t.aI4VOL) : a ? P.intl.string(P.t.kABl2x) : void 0;
-    return (0, r.jsx)(c.P3F, {
-        className: x.frequentFriendAvatarButton,
-        onClick: _,
-        onMouseEnter: m.onMouseEnter,
-        onMouseLeave: m.onMouseLeave,
-        "aria-label": P.intl.formatToPlainString(P.t.M5FjCr, { username: i.username }),
-        children: (0, r.jsx)(c.qEK, {
+        E = 0 === l,
+        v = E ? u.YqE : a ? u.XcD : void 0,
+        I = E ? x.intl.string(x.t.aI4VOL) : a ? x.intl.string(x.t.kABl2x) : void 0;
+    return (0, r.jsx)(u.P3F, {
+        className: A.frequentFriendAvatarButton,
+        onClick: b,
+        onMouseEnter: g.onMouseEnter,
+        onMouseLeave: g.onMouseLeave,
+        "aria-label": x.intl.formatToPlainString(x.t.M5FjCr, { username: i.username }),
+        children: (0, r.jsx)(u.qEK, {
             src: f,
             "aria-label": null != (t = i.globalName) ? t : i.username,
             status: s,
-            isTyping: p,
-            isMobile: u && !p,
-            size: c.EFr.SIZE_32,
-            CutoutIcon: y,
-            avatarTooltipAsset: O ? "\uD83D\uDD25" : a ? "\u2744️" : void 0,
-            avatarTooltipText: C,
+            isTyping: d,
+            isMobile: c && !d,
+            size: u.EFr.SIZE_32,
+            CutoutIcon: v,
+            avatarTooltipAsset: E ? "\uD83D\uDD25" : a ? "\u2744️" : void 0,
+            avatarTooltipText: I,
             statusTooltip: !0,
             statusTooltipDelay: 50,
             avatarTooltipTitle: null != (n = i.globalName) ? n : i.username,
         }),
     });
 }
-function L() {
-    let { enabled: e } = (0, N.Q)("frequent_friends_row"),
+function w() {
+    let { enabled: e } = (0, j.Q)("frequent_friends_row"),
         t = (function () {
-            let e = (0, o.Wu)([_.Z], () =>
-                    [..._.Z.getUserAffinities()].sort((e, t) => _.Z.compare(e.otherUserId, t.otherUserId)),
+            let e = (0, o.Wu)([E.Z], () =>
+                    [...E.Z.getUserAffinities()].sort((e, t) => E.Z.compare(e.otherUserId, t.otherUserId)),
                 ),
-                t = (0, o.Wu)([C.default, y.Z], () => {
+                t = (0, o.Wu)([S.default, I.Z], () => {
                     let t = e.map((e) => e.otherUserId),
                         n = [];
                     for (let e of t)
                         if (n.length < 5) {
-                            let t = C.default.getUser(e);
-                            !(0, T.lm)(t) || y.Z.isIgnored(t.id) || y.Z.isBlocked(t.id) || n.push(t);
+                            let t = S.default.getUser(e);
+                            !(0, N.lm)(t) || I.Z.isIgnored(t.id) || I.Z.isBlocked(t.id) || n.push(t);
                         } else break;
                     return n;
                 }, [e]),
@@ -158,98 +155,96 @@ function L() {
                       showCompetitiveSpot: n,
                   };
         })(),
-        n = (0, o.e7)([O.Z], () => O.Z.hasConsented(j.pjP.PERSONALIZATION)),
-        l = (0, o.e7)([C.default], () => {
+        n = (0, o.e7)([v.Z], () => v.Z.hasConsented(P.pjP.PERSONALIZATION)),
+        l = (0, o.e7)([S.default], () => {
             var e, t;
-            return null != (t = null == (e = C.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) && t;
+            return null != (t = null == (e = S.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) && t;
         }),
-        [d, g] = i.useState({
+        [p, h] = i.useState({
             scrollLeft: 0,
             scrollWidth: 0,
             clientWidth: 0,
         }),
-        h = i.useRef(null),
-        b = (0, o.e7)([S.Z], () => S.Z.ipCountryCode),
-        E = (0, f.gD)(),
-        v = i.useCallback(() => {
+        m = i.useRef(null),
+        _ = (0, o.e7)([T.Z], () => T.Z.ipCountryCode),
+        O = (0, g.gD)(),
+        y = i.useCallback(() => {
             var e;
-            let t = null == (e = h.current) ? void 0 : e.getScrollerNode();
+            let t = null == (e = m.current) ? void 0 : e.getScrollerNode();
             null != t &&
-                g({
+                h({
                     scrollLeft: t.scrollLeft,
                     scrollWidth: t.scrollWidth,
                     clientWidth: t.clientWidth,
                 });
         }, []);
     i.useEffect(() => {
-        (null == t ? void 0 : t.frequentFriends.length) != null && v();
-    }, [null == t ? void 0 : t.frequentFriends.length, null == t ? void 0 : t.showCompetitiveSpot, v]);
-    let I = (0, p.y)(v, []),
-        L = i.useCallback(
+        (null == t ? void 0 : t.frequentFriends.length) != null && y();
+    }, [null == t ? void 0 : t.frequentFriends.length, null == t ? void 0 : t.showCompetitiveSpot, y]);
+    let C = (0, f.y)(y, []),
+        w = i.useCallback(
             (e) => {
                 let t = e.currentTarget;
-                g({
+                h({
                     scrollLeft: t.scrollLeft,
                     scrollWidth: t.scrollWidth,
                     clientWidth: t.clientWidth,
                 });
             },
-            [g],
+            [h],
         );
     if (
         (i.useEffect(() => {
-            (0, u.GE)();
+            (0, d.GE)();
         }, []),
         !e || null == t || !n)
     )
         return null;
-    let { frequentFriends: R, showCompetitiveSpot: D } = t,
-        M = (b === s.S.AU || b === s.S.GB) && !E,
-        k = null != b && s.M.EU_COUNTRIES.has(b) && !l,
-        U = !M && !k && null != b && D,
-        G = d.scrollWidth > d.clientWidth,
-        B = d.scrollLeft > 0,
-        H = d.scrollLeft < d.scrollWidth - d.clientWidth - 2;
+    let { frequentFriends: L, showCompetitiveSpot: R } = t,
+        D = (_ === s.S.AU || _ === s.S.GB) && !O,
+        M = null != _ && s.M.EU_COUNTRIES.has(_) && !l,
+        k = !D && !M && null != _ && R,
+        U = p.scrollWidth > p.clientWidth,
+        G = p.scrollLeft > 0,
+        B = p.scrollLeft < p.scrollWidth - p.clientWidth - 2;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: x.frequentFriendsRow,
+                className: A.frequentFriendsRow,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: x.frequentFriendsHeader,
+                        className: A.frequentFriendsHeader,
                         children: [
-                            (0, r.jsx)(c.Text, {
+                            (0, r.jsx)(u.Text, {
                                 variant: "text-sm/semibold",
-                                className: x.frequentFriendsTitle,
-                                children: P.intl.string(P.t.QEh90H),
+                                className: A.frequentFriendsTitle,
+                                children: x.intl.string(x.t.QEh90H),
                             }),
-                            (0, r.jsx)(c.aML, {
-                                "data-migration-pending": !0,
-                                text: P.intl.string(P.t.tqCMcU),
-                                children: (e) =>
-                                    (0, r.jsx)(c.d3s, Z(A({}, e), { className: x.frequentFriendsInfoIcon })),
+                            (0, r.jsx)(c.u, {
+                                text: x.intl.string(x.t.tqCMcU),
+                                children: (0, r.jsx)(u.d3s, { className: A.frequentFriendsInfoIcon }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(c.xVE, {
+                    (0, r.jsx)(u.xVE, {
                         ref: (e) => {
-                            (h.current = e),
-                                (I.current =
+                            (m.current = e),
+                                (C.current =
                                     (null == e ? void 0 : e.getScrollerNode()) != null ? e.getScrollerNode() : null);
                         },
-                        className: a()(x.frequentFriendsAvatars, {
-                            [x.scrollMaskLeft]: G && B,
-                            [x.scrollMaskRight]: G && H,
+                        className: a()(A.frequentFriendsAvatars, {
+                            [A.scrollMaskLeft]: U && G,
+                            [A.scrollMaskRight]: U && B,
                         }),
                         orientation: "horizontal",
-                        onScroll: L,
-                        children: R.map((e, t) =>
+                        onScroll: w,
+                        children: L.map((e, t) =>
                             (0, r.jsx)(
-                                w,
+                                Z,
                                 {
                                     user: e,
                                     index: t,
-                                    isCompetitive: U && t === R.length - 1,
+                                    isCompetitive: k && t === L.length - 1,
                                 },
                                 e.id,
                             ),
@@ -257,7 +252,7 @@ function L() {
                     }),
                 ],
             }),
-            (0, r.jsx)(m.d, {}),
+            (0, r.jsx)(b.d, {}),
         ],
     });
 }

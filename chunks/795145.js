@@ -18,15 +18,13 @@ let c = (e) => {
         f =
             null != g
                 ? (0, r.jsx)(l.aML, {
-                      "data-migration-pending": !0,
                       text: g,
                       position: "top",
                       "aria-label": "string" == typeof g ? g : t,
-                      children: (e) => {
-                          var t, n;
-                          return (0, r.jsx)(
+                      children: (e) =>
+                          (0, r.jsx)(
                               l.d3s,
-                              ((t = (function (e) {
+                              (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
                                           r = Object.keys(n);
@@ -54,25 +52,11 @@ let c = (e) => {
                                   {
                                       size: "xs",
                                       color: "currentColor",
+                                      className: o.infoIcon,
                                   },
                                   e,
-                              )),
-                              (n = n = { className: o.infoIcon }),
-                              Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                  : (function (e, t) {
-                                        var n = Object.keys(e);
-                                        if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, r);
-                                        }
-                                        return n;
-                                    })(Object(n)).forEach(function (e) {
-                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                    }),
-                              t),
-                          );
-                      },
+                              ),
+                          ),
                   })
                 : null;
     return (0, r.jsxs)("div", {

@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(102725),
     d = n(342134),
     f = n(966327),
-    p = n(495511);
+    p = n(847310);
 function _(e, t, n) {
     return (
         t in e
@@ -102,7 +102,7 @@ function y(e) {
             positionKey: P,
             ariaHidden: R = !1,
         } = e,
-        D = E(e, [
+        w = E(e, [
             "children",
             "text",
             "keyboardShortcut",
@@ -119,9 +119,9 @@ function y(e) {
             "positionKey",
             "ariaHidden",
         ]);
-    let w = (0, f.c)(C),
+    let D = (0, f.c)(C),
         x = i.useId(),
-        { isVisible: L, triggerProps: j } = (0, u.l)(m({ targetElementRef: w.targetElementRef }, D)),
+        { isVisible: L, triggerProps: j } = (0, u.l)(m({ targetElementRef: D.targetElementRef }, w)),
         M = R ? void 0 : x,
         k = (0, d.Q)({ shouldShow: L }),
         { defaultLayerContext: U } = (0, o.ZFG)(),
@@ -146,6 +146,7 @@ function y(e) {
             [_, h, b],
         );
     if (null == G || ("string" == typeof G && "" === G)) return n;
+    if (null == n) return null;
     let Z = null != P ? P : (0, c.Sw)(_);
     if (y) {
         let e = R
@@ -176,18 +177,18 @@ function y(e) {
             tag: O,
             children: n,
             triggerHandlers: e,
-            triggerRef: w.triggerRef,
+            triggerRef: D.triggerRef,
         });
     } else {
         if (!i.isValidElement(n)) return null;
-        t = (0, c.C9)(n, j, M, w.triggerRef);
+        t = (0, c.C9)(n, j, M, D.triggerRef);
     }
-    let B = k((e, t) =>
+    let F = k((e, t) =>
         t
             ? (0, r.jsx)(l.N, {
                   isVisible: L,
                   isRendered: !0,
-                  targetElementRef: w.targetElementRef,
+                  targetElementRef: D.targetElementRef,
                   anchorRef: A,
                   id: x,
                   content: G,
@@ -210,7 +211,7 @@ function y(e) {
                       id: x,
                       children: G,
                   }),
-            B,
+            F,
         ],
     });
 }

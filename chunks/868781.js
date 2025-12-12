@@ -130,7 +130,7 @@ function v(e) {
                   className: a,
               })
             : void 0,
-        text: g,
+        text: null != g ? g : "",
         textVariant: n,
         textClassName: i,
         hideTooltip: c,

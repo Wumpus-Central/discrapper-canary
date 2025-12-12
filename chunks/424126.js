@@ -3,7 +3,6 @@ e.exports = {
     inner: "e131a99484292a19-inner",
     channel: "e131a99484292a19-channel",
     noiseCancellationPopout: "e131a99484292a19-noiseCancellationPopout",
-    noiseCancellationTooltip: "e131a99484292a19-noiseCancellationTooltip",
     krispLogo: "e131a99484292a19-krispLogo",
     krispLink: "e131a99484292a19-krispLink",
     connection: "e131a99484292a19-connection",

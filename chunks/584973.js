@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(481060),
+    s = n(28664),
     l = n(596454),
     c = n(633302),
     u = n(695346),
@@ -61,11 +61,10 @@ function h(e) {
     };
     return _
         ? (0, r.jsx)(l.Z, m({}, y))
-        : (0, r.jsx)(s.aML, {
-              "data-migration-pending": !0,
+        : (0, r.jsx)(s.u, {
               targetElementRef: E,
               text: b,
               delay: h,
-              children: (e) => (0, r.jsx)(l.Z, m({}, e, y)),
+              children: (0, r.jsx)(l.Z, m({}, y)),
           });
 }

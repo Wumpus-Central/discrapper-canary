@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(392711),
     l = n(793030),
     c = n(442837),
-    u = n(481060),
+    u = n(28664),
     d = n(833664),
     f = n(545957),
     p = n(933557),
@@ -291,19 +291,14 @@ function Z(e) {
                             className: o()(R.activityContainer, $ && R.iconOnly),
                             children: [et(), er()],
                         })
-                      : (0, r.jsx)(u.aML, {
-                            "data-migration-pending": !0,
-                            tooltipContentClassName: o()(R.container, R.activitiesTooltip, R.hasMultipleActivities),
+                      : (0, r.jsx)(u.u, {
                             delay: A.X,
-                            text: en(),
-                            "aria-label": ee,
-                            children: (e) =>
-                                (0, r.jsxs)(
-                                    "div",
-                                    L(D({ className: o()(R.activityContainer, $ && R.iconOnly) }, e), {
-                                        children: [et(!0), er()],
-                                    }),
-                                ),
+                            __unsupportedReactNodeAsText: en(),
+                            children: (0, r.jsxs)("div", {
+                                className: o()(R.activityContainer, $ && R.iconOnly),
+                                "aria-label": ee,
+                                children: [et(!0), er()],
+                            }),
                         })
                   : et(),
         ea = o()(R.container, {

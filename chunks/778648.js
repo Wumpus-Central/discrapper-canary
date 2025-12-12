@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var a = n(54381),
     r = n(473749),
     i = n(664751),
@@ -6,31 +6,32 @@ var a = n(54381),
     s = n(311570),
     o = n(442837),
     c = n(199849),
-    d = n(755721),
-    u = n(481060),
-    m = n(355467),
-    p = n(821849),
-    h = n(72924),
+    d = n(681715),
+    u = n(755721),
+    m = n(481060),
+    p = n(355467),
+    h = n(821849),
+    f = n(72924),
     x = n(100527),
-    f = n(906732),
+    b = n(906732),
     g = n(883904),
-    b = n(678558),
-    v = n(730647),
-    j = n(584825),
-    _ = n(305342),
-    y = n(333867),
-    C = n(963249),
-    S = n(87484),
-    E = n(736519),
+    v = n(678558),
+    j = n(730647),
+    y = n(584825),
+    C = n(305342),
+    _ = n(333867),
+    S = n(963249),
+    E = n(87484),
+    T = n(736519),
     O = n(43747),
-    T = n(970815),
-    N = n(430824),
-    P = n(78839),
-    w = n(246992),
-    I = n(981631),
-    k = n(474936),
-    R = n(443582);
-function A(e) {
+    N = n(970815),
+    P = n(430824),
+    w = n(78839),
+    I = n(246992),
+    k = n(981631),
+    R = n(474936),
+    A = n(681510);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -55,7 +56,7 @@ function A(e) {
     }
     return e;
 }
-function D(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,14 +74,14 @@ function D(e, t) {
         e
     );
 }
-function Z(e) {
+function L(e) {
     let { selectedGuildForGuildSub: t } = e,
-        n = (0, j.GG)(null == t ? void 0 : t.id)[0];
+        n = (0, y.GG)(null == t ? void 0 : t.id)[0];
     return null != t && null != n
         ? (0, a.jsx)("div", {
               children: n.subscription_listings_ids.map((e) =>
                   (0, a.jsx)(
-                      _.Z,
+                      C.Z,
                       {
                           guildId: t.id,
                           groupListingId: e,
@@ -92,41 +93,41 @@ function Z(e) {
           })
         : null;
 }
-let L = function () {
-    let [e, t] = r.useState(k.Si.TIER_2),
-        [n, j] = r.useState(null),
-        _ = (0, o.Wu)([N.Z], () => N.Z.getGuildsArray()),
-        [L] = (0, o.Wu)([P.Z], () => [P.Z.getPremiumSubscription()]),
-        M = _.map((e) => ({
+let M = function () {
+    let [e, t] = r.useState(R.Si.TIER_2),
+        [n, y] = r.useState(null),
+        C = (0, o.Wu)([P.Z], () => P.Z.getGuildsArray()),
+        [M] = (0, o.Wu)([w.Z], () => [w.Z.getPremiumSubscription()]),
+        U = C.map((e) => ({
             value: e,
             label: e.name,
         })),
-        [U, B] = r.useState(M.length > 0 ? M[0].value : null),
-        [F, G] = r.useState(""),
-        [V, H] = r.useState({
-            plan_id: k.Xh.PREMIUM_MONTH_TIER_2,
+        [B, F] = r.useState(U.length > 0 ? U[0].value : null),
+        [G, V] = r.useState(""),
+        [H, W] = r.useState({
+            plan_id: R.Xh.PREMIUM_MONTH_TIER_2,
             gift: "true",
         }),
-        W = "true" !== V.gift && null != L,
-        [z, q] = r.useState(M.length > 0 ? M[0].value : null),
-        { analyticsLocations: K } = (0, f.ZP)(x.Z.PAYMENT_FLOW_TEST_PAGE),
-        [Q, Y] = r.useState(""),
-        [X, J] = r.useState(I.lds),
-        { balance: $, isFetching: ee, error: et } = (0, O.A)(),
-        { isSubmitting: en, responseMessage: ea, redeemVirtualCurrency: er } = (0, O.f)(),
-        [ei, el] = r.useState(I.lds),
-        [es, eo] = r.useState(""),
-        [ec, ed] = r.useState(I.lds),
-        [eu, em] = r.useState(I.lds);
-    return (0, a.jsx)(f.Gt, {
-        value: K,
-        children: (0, a.jsx)(u.zJl, {
-            className: R.scroller,
-            children: (0, a.jsxs)(u.Kqy, {
+        z = "true" !== H.gift && null != M,
+        [K, q] = r.useState(U.length > 0 ? U[0].value : null),
+        { analyticsLocations: Q } = (0, b.ZP)(x.Z.PAYMENT_FLOW_TEST_PAGE),
+        [Y, X] = r.useState(""),
+        [J, $] = r.useState(k.lds),
+        { balance: ee, isFetching: et, error: en } = (0, O.A)(),
+        { isSubmitting: ea, responseMessage: er, redeemVirtualCurrency: ei } = (0, O.f)(),
+        [el, es] = r.useState(k.lds),
+        [eo, ec] = r.useState(""),
+        [ed, eu] = r.useState(k.lds),
+        [em, ep] = r.useState(k.lds);
+    return (0, a.jsx)(b.Gt, {
+        value: Q,
+        children: (0, a.jsx)(m.zJl, {
+            className: A.scroller,
+            children: (0, a.jsxs)(m.Kqy, {
                 direction: "vertical",
                 gap: 24,
                 children: [
-                    (0, a.jsxs)(u.Kqy, {
+                    (0, a.jsxs)(m.Kqy, {
                         direction: "horizontal",
                         gap: 8,
                         align: "end",
@@ -136,15 +137,15 @@ let L = function () {
                                 value: e,
                                 options: [
                                     {
-                                        value: k.Si.TIER_2,
+                                        value: R.Si.TIER_2,
                                         label: "Nitro",
                                     },
                                     {
-                                        value: k.Si.TIER_1,
+                                        value: R.Si.TIER_1,
                                         label: "Nitro Classic",
                                     },
                                     {
-                                        value: k.Si.TIER_0,
+                                        value: R.Si.TIER_0,
                                         label: "Nitro Basic",
                                     },
                                     {
@@ -153,18 +154,18 @@ let L = function () {
                                     },
                                 ],
                                 onChange: (e) => t(e),
-                                popoutLayerContext: w.O$,
+                                popoutLayerContext: I.O$,
                             }),
-                            (0, a.jsx)(E.Z, {
+                            (0, a.jsx)(T.Z, {
                                 subscriptionTier: e,
                                 premiumModalAnalyticsLocation: {},
-                                color: d.Tt.PRIMARY,
-                                look: d.iL.FILLED,
+                                color: u.Tt.PRIMARY,
+                                look: u.iL.FILLED,
                             }),
                         ],
                     }),
-                    (0, a.jsx)(u.izJ, {}),
-                    (0, a.jsxs)(u.Kqy, {
+                    (0, a.jsx)(m.izJ, {}),
+                    (0, a.jsxs)(m.Kqy, {
                         direction: "horizontal",
                         gap: 8,
                         align: "end",
@@ -174,15 +175,15 @@ let L = function () {
                                 value: n,
                                 options: [
                                     {
-                                        value: k.Si.TIER_2,
+                                        value: R.Si.TIER_2,
                                         label: "Nitro",
                                     },
                                     {
-                                        value: k.Si.TIER_1,
+                                        value: R.Si.TIER_1,
                                         label: "Nitro Classic",
                                     },
                                     {
-                                        value: k.Si.TIER_0,
+                                        value: R.Si.TIER_0,
                                         label: "Nitro Basic",
                                     },
                                     {
@@ -190,115 +191,103 @@ let L = function () {
                                         label: "None",
                                     },
                                 ],
-                                onChange: (e) => j(e),
-                                popoutLayerContext: w.O$,
+                                onChange: (e) => y(e),
+                                popoutLayerContext: I.O$,
                             }),
-                            (0, a.jsx)(u.Button, {
+                            (0, a.jsx)(m.Button, {
                                 variant: "primary",
                                 text: "Select Plan",
                                 onClick: () =>
-                                    (0, C.Z)({
+                                    (0, S.Z)({
                                         subscriptionTier: n,
-                                        analyticsLocations: K,
+                                        analyticsLocations: Q,
                                     }),
                             }),
                         ],
                     }),
-                    (0, a.jsx)(u.izJ, {}),
-                    (0, a.jsxs)(u.Kqy, {
+                    (0, a.jsx)(m.izJ, {}),
+                    (0, a.jsxs)(m.Kqy, {
                         direction: "vertical",
                         gap: 8,
                         children: [
                             (0, a.jsx)(c.y6, {
                                 label: "Boost",
-                                value: U,
-                                options: M,
-                                onChange: (e) => B(e),
-                                popoutLayerContext: w.O$,
+                                value: B,
+                                options: U,
+                                onChange: (e) => F(e),
+                                popoutLayerContext: I.O$,
                             }),
-                            null != U
-                                ? (0, a.jsx)(b.Z, {
-                                      guild: U,
+                            null != B
+                                ? (0, a.jsx)(v.Z, {
+                                      guild: B,
                                       analyticsLocation: {},
                                   })
                                 : (0, a.jsx)("div", { children: "No Guild to boost" }),
                         ],
                     }),
-                    (0, a.jsx)(u.izJ, {}),
-                    (0, a.jsxs)(u.Kqy, {
+                    (0, a.jsx)(m.izJ, {}),
+                    (0, a.jsxs)(m.Kqy, {
                         direction: "vertical",
                         gap: 8,
                         children: [
-                            (0, a.jsx)(u.Anchor, {
+                            (0, a.jsx)(m.Anchor, {
                                 href: "https://i.dis.gd/createPromo",
                                 children: "How to create promotion",
                             }),
-                            (0, a.jsxs)(u.Kqy, {
+                            (0, a.jsxs)(m.Kqy, {
                                 direction: "horizontal",
                                 gap: 8,
                                 align: "end",
                                 children: [
-                                    (0, a.jsx)(u.oil, {
+                                    (0, a.jsx)(m.oil, {
                                         label: "Standalone: Trial Promotion Redemption",
                                         placeholder: "Promotion Code",
-                                        value: F,
-                                        onChange: (e) => G(e),
+                                        value: G,
+                                        onChange: (e) => V(e),
                                     }),
-                                    (0, a.jsx)(u.aML, {
-                                        "data-migration-pending": !0,
+                                    (0, a.jsx)(d.u, {
                                         text: "Need Promotion Code",
-                                        shouldShow: F.length < 1,
-                                        children: (e) =>
-                                            (0, a.jsx)(
-                                                u.Button,
-                                                D(
-                                                    A(
-                                                        {
-                                                            variant: "primary",
-                                                            text: "Open Link",
-                                                            disabled: F.length < 1,
-                                                        },
-                                                        e,
-                                                    ),
-                                                    {
-                                                        onClick: () => {
-                                                            window.open(I.Z5c.BILLING_PROMOTION_REDEMPTION(F));
-                                                        },
-                                                    },
-                                                ),
-                                            ),
+                                        shouldShow: G.length < 1,
+                                        children: (0, a.jsx)(m.Button, {
+                                            variant: "primary",
+                                            text: "Open Link",
+                                            disabled: G.length < 1,
+                                            onClick: () => {
+                                                window.open(k.Z5c.BILLING_PROMOTION_REDEMPTION(G));
+                                            },
+                                        }),
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, a.jsx)(u.izJ, {}),
-                    (0, a.jsxs)(u.C3N, {
+                    (0, a.jsx)(m.izJ, {}),
+                    (0, a.jsxs)(m.C3N, {
                         label: "Standalone: Gift/Subscription Purchase",
                         children: [
                             (0, a.jsx)(c.y6, {
                                 label: "Plan",
-                                value: V.plan_id,
+                                value: H.plan_id,
                                 options: [
                                     {
-                                        value: k.Xh.PREMIUM_MONTH_TIER_2,
+                                        value: R.Xh.PREMIUM_MONTH_TIER_2,
                                         label: "Nitro",
                                     },
                                     {
-                                        value: k.Xh.PREMIUM_MONTH_TIER_1,
+                                        value: R.Xh.PREMIUM_MONTH_TIER_1,
                                         label: "Nitro Classic",
                                     },
                                     {
-                                        value: k.Xh.PREMIUM_MONTH_TIER_0,
+                                        value: R.Xh.PREMIUM_MONTH_TIER_0,
                                         label: "Nitro Basic",
                                     },
                                 ],
-                                onChange: (e) => H((t) => D(A({}, t), { plan_id: e })),
-                                popoutLayerContext: w.O$,
+                                onChange: (e) => W((t) => Z(D({}, t), { plan_id: e })),
+                                popoutLayerContext: I.O$,
                             }),
                             (0, a.jsx)(c.y6, {
                                 label: "Type",
-                                value: V.gift,
+                                value: H.gift,
                                 options: [
                                     {
                                         value: "true",
@@ -309,233 +298,221 @@ let L = function () {
                                         label: "Not Gift",
                                     },
                                 ],
-                                onChange: (e) => H((t) => D(A({}, t), { gift: e })),
-                                popoutLayerContext: w.O$,
+                                onChange: (e) => W((t) => Z(D({}, t), { gift: e })),
+                                popoutLayerContext: I.O$,
                             }),
                         ],
                     }),
-                    (0, a.jsx)(u.aML, {
-                        "data-migration-pending": !0,
+                    (0, a.jsx)(d.u, {
                         text: "Already subscribed",
-                        shouldShow: W,
-                        children: (e) =>
-                            (0, a.jsx)(
-                                u.Button,
-                                D(
-                                    A(
-                                        {
-                                            variant: "primary",
-                                            text: "Open Link",
-                                        },
-                                        e,
-                                    ),
-                                    {
-                                        disabled: W,
-                                        onClick: () => {
-                                            window.open(I.Z5c.BILLING_PREMIUM_SUBSCRIBE + "?" + i.stringify(A({}, V)));
-                                        },
-                                    },
-                                ),
-                            ),
+                        shouldShow: z,
+                        children: (0, a.jsx)(m.Button, {
+                            variant: "primary",
+                            text: "Open Link",
+                            disabled: z,
+                            onClick: () => {
+                                window.open(k.Z5c.BILLING_PREMIUM_SUBSCRIBE + "?" + i.stringify(D({}, H)));
+                            },
+                        }),
                     }),
-                    (0, a.jsx)(u.izJ, {}),
-                    (0, a.jsxs)(u.C3N, {
+                    (0, a.jsx)(m.izJ, {}),
+                    (0, a.jsxs)(m.C3N, {
                         label: "Redeem Virtual Currency for SKU",
                         children: [
-                            (0, a.jsxs)(u.Kqy, {
+                            (0, a.jsxs)(m.Kqy, {
                                 direction: "horizontal",
                                 gap: 8,
                                 align: "end",
                                 children: [
-                                    (0, a.jsx)(u.Text, {
+                                    (0, a.jsx)(m.Text, {
                                         variant: "text-sm/normal",
                                         children: "Virtual Currency Balance:",
                                     }),
-                                    ee
+                                    et
                                         ? (0, a.jsx)("div", {
-                                              className: R.loader,
-                                              children: (0, a.jsx)(u.$jN, { type: u.RAz.SPINNING_CIRCLE }),
+                                              className: A.loader,
+                                              children: (0, a.jsx)(m.$jN, { type: m.RAz.SPINNING_CIRCLE }),
                                           })
                                         : (0, a.jsxs)("div", {
-                                              className: R.balanceWidgetPillContainer,
+                                              className: A.balanceWidgetPillContainer,
                                               children: [
-                                                  null !== et &&
-                                                      (0, a.jsxs)(u.Text, {
+                                                  null !== en &&
+                                                      (0, a.jsxs)(m.Text, {
                                                           variant: "text-sm/normal",
                                                           children: [
                                                               "Error fetching Virtual Currency Balance: ",
-                                                              et.message,
+                                                              en.message,
                                                           ],
                                                       }),
-                                                  (0, a.jsx)(T.A4, {
-                                                      balance: null != $ ? $ : 0,
-                                                      balanceWidgetMode: T.b6.SELECTED,
+                                                  (0, a.jsx)(N.A4, {
+                                                      balance: null != ee ? ee : 0,
+                                                      balanceWidgetMode: N.b6.SELECTED,
                                                   }),
                                               ],
                                           }),
                                 ],
                             }),
-                            (0, a.jsx)(u.oil, {
+                            (0, a.jsx)(m.oil, {
                                 label: "SKU ID",
                                 placeholder: "SKU ID",
-                                value: ei,
-                                onChange: (e) => el(e),
+                                value: el,
+                                onChange: (e) => es(e),
                             }),
-                            (0, a.jsx)(u.Button, {
+                            (0, a.jsx)(m.Button, {
                                 variant: "primary",
                                 text: "Redeem Virtual Currency for SKU",
-                                loading: en,
-                                onClick: () => er(ei, (0, l.Z)()),
+                                loading: ea,
+                                onClick: () => ei(el, (0, l.Z)()),
                             }),
-                            null != ea &&
-                                (0, a.jsx)(u.Text, {
+                            null != er &&
+                                (0, a.jsx)(m.Text, {
                                     variant: "text-sm/normal",
-                                    children: ea,
+                                    children: er,
                                 }),
                         ],
                     }),
-                    (0, a.jsx)(u.izJ, {}),
-                    (0, a.jsxs)(u.C3N, {
+                    (0, a.jsx)(m.izJ, {}),
+                    (0, a.jsxs)(m.C3N, {
                         label: "Creator Revenue",
                         children: [
                             (0, a.jsx)(c.y6, {
                                 label: "Premium Server Subscription For",
-                                value: z,
-                                options: M,
+                                value: K,
+                                options: U,
                                 onChange: (e) => q(e),
-                                popoutLayerContext: w.O$,
+                                popoutLayerContext: I.O$,
                             }),
-                            (0, a.jsx)(v.l, {
-                                guildId: null == z ? void 0 : z.id,
-                                children: (0, a.jsx)(Z, { selectedGuildForGuildSub: z }),
+                            (0, a.jsx)(j.l, {
+                                guildId: null == K ? void 0 : K.id,
+                                children: (0, a.jsx)(L, { selectedGuildForGuildSub: K }),
                             }),
                         ],
                     }),
-                    (0, a.jsx)(u.izJ, {}),
-                    (0, a.jsxs)(u.Kqy, {
+                    (0, a.jsx)(m.izJ, {}),
+                    (0, a.jsxs)(m.Kqy, {
                         direction: "vertical",
                         gap: 8,
                         children: [
-                            (0, a.jsxs)(u.C3N, {
+                            (0, a.jsxs)(m.C3N, {
                                 label: "Activities & Application Payment Modals",
                                 children: [
-                                    (0, a.jsx)(u.oil, {
+                                    (0, a.jsx)(m.oil, {
                                         label: "Application Id",
                                         placeholder: "Application Id",
-                                        value: Q,
-                                        onChange: Y,
+                                        value: Y,
+                                        onChange: X,
                                     }),
-                                    (0, a.jsx)(u.oil, {
+                                    (0, a.jsx)(m.oil, {
                                         label: "Sku Id",
                                         placeholder: "Sku Id",
-                                        value: X,
-                                        onChange: (e) => J(e),
+                                        value: J,
+                                        onChange: (e) => $(e),
                                     }),
                                 ],
                             }),
-                            (0, a.jsx)(u.Button, {
+                            (0, a.jsx)(m.Button, {
                                 variant: "primary",
                                 text: "Open App Subs Modal for Activity",
                                 onClick: () =>
-                                    (0, h.S)({
-                                        applicationId: Q,
-                                        skuId: X,
+                                    (0, f.S)({
+                                        applicationId: Y,
+                                        skuId: J,
                                         openPremiumPaymentModal: () => !0,
                                         analyticsLocations: [],
-                                        analyticsLocationObject: { page: I.ZY5.IN_APP },
-                                        context: I.IlC.APP,
+                                        analyticsLocationObject: { page: k.ZY5.IN_APP },
+                                        context: k.IlC.APP,
                                     }),
                             }),
                         ],
                     }),
-                    (0, a.jsx)(u.izJ, {}),
-                    (0, a.jsx)(u.Kqy, {
+                    (0, a.jsx)(m.izJ, {}),
+                    (0, a.jsx)(m.Kqy, {
                         direction: "vertical",
                         gap: 8,
-                        children: (0, a.jsx)(u.C3N, {
+                        children: (0, a.jsx)(m.C3N, {
                             label: "Standard Payment Modal Test",
-                            children: (0, a.jsxs)(u.Kqy, {
+                            children: (0, a.jsxs)(m.Kqy, {
                                 direction: "horizontal",
                                 gap: 8,
                                 align: "end",
                                 children: [
-                                    (0, a.jsx)(u.oil, {
+                                    (0, a.jsx)(m.oil, {
                                         label: "Application Id",
                                         hideLabel: !0,
                                         placeholder: "Application Id",
-                                        value: es,
-                                        onChange: eo,
+                                        value: eo,
+                                        onChange: ec,
                                     }),
-                                    (0, a.jsx)(u.oil, {
+                                    (0, a.jsx)(m.oil, {
                                         label: "SKU ID",
                                         hideLabel: !0,
                                         placeholder: "SKU ID",
-                                        value: ec,
-                                        onChange: (e) => ed(e),
+                                        value: ed,
+                                        onChange: (e) => eu(e),
                                     }),
-                                    (0, a.jsx)(u.Button, {
+                                    (0, a.jsx)(m.Button, {
                                         variant: "primary",
                                         text: "Open Standard Payment Modal for SKU",
                                         onClick: () =>
-                                            (0, S.Z)({
-                                                applicationId: es,
-                                                skuId: ec,
-                                                analyticsLocations: K,
+                                            (0, E.Z)({
+                                                applicationId: eo,
+                                                skuId: ed,
+                                                analyticsLocations: Q,
                                             }),
                                     }),
                                 ],
                             }),
                         }),
                     }),
-                    (0, a.jsx)(u.izJ, {}),
-                    (0, a.jsxs)(u.Kqy, {
+                    (0, a.jsx)(m.izJ, {}),
+                    (0, a.jsxs)(m.Kqy, {
                         direction: "horizontal",
                         align: "end",
                         gap: 8,
                         children: [
-                            (0, a.jsx)(u.oil, {
+                            (0, a.jsx)(m.oil, {
                                 label: "Collectibles Payment Modal Test",
                                 placeholder: "SKU ID",
-                                value: eu,
-                                onChange: (e) => em(e),
+                                value: em,
+                                onChange: (e) => ep(e),
                             }),
-                            (0, a.jsx)(u.Button, {
+                            (0, a.jsx)(m.Button, {
                                 variant: "primary",
                                 text: "Open Collectibles Payment Modal for SKU",
                                 onClick: () =>
-                                    (0, y.Z)({
-                                        skuId: eu,
-                                        analyticsLocations: K,
+                                    (0, _.Z)({
+                                        skuId: em,
+                                        analyticsLocations: Q,
                                         variantsReturnStyle: s.v.VARIANTS_GROUP,
                                     }),
                             }),
                         ],
                     }),
-                    (0, a.jsx)(u.izJ, {}),
-                    (0, a.jsx)(u.C3N, {
+                    (0, a.jsx)(m.izJ, {}),
+                    (0, a.jsx)(m.C3N, {
                         label: "Helpers",
-                        children: (0, a.jsxs)(u.Kqy, {
+                        children: (0, a.jsxs)(m.Kqy, {
                             direction: "horizontal",
                             gap: 8,
                             align: "end",
                             children: [
-                                (0, a.jsx)(u.Button, {
+                                (0, a.jsx)(m.Button, {
                                     variant: "primary",
                                     text: "Reset SubscriptionPlanStore",
-                                    onClick: () => (0, p.mE)(),
+                                    onClick: () => (0, h.mE)(),
                                 }),
-                                (0, a.jsx)(u.Button, {
+                                (0, a.jsx)(m.Button, {
                                     variant: "primary",
                                     text: "Reset SubscriptionStore",
-                                    onClick: () => (0, m.GM)(),
+                                    onClick: () => (0, p.GM)(),
                                 }),
                             ],
                         }),
                     }),
-                    (0, a.jsx)(u.izJ, {}),
-                    (0, a.jsx)(u.C3N, {
+                    (0, a.jsx)(m.izJ, {}),
+                    (0, a.jsx)(m.C3N, {
                         label: "Dismissible Content Framework",
-                        children: (0, a.jsx)(u.Button, {
+                        children: (0, a.jsx)(m.Button, {
                             variant: "primary",
                             text: "Reset DismissibleContentFrameworkStore",
                             onClick: () => (0, g.EG)(),

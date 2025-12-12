@@ -13,9 +13,9 @@ var r = n(54381),
     g = n(515753),
     h = n(410030),
     m = n(607070),
-    _ = n(100527),
-    b = n(906732),
-    E = n(821982),
+    b = n(100527),
+    E = n(906732),
+    _ = n(821982),
     O = n(243778),
     v = n(633302),
     y = n(567400),
@@ -32,7 +32,7 @@ var r = n(54381),
     w = n(981631),
     L = n(921944),
     R = n(388032),
-    D = n(677372);
+    D = n(959088);
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -142,23 +142,23 @@ let G = (e) => {
                 "children",
             ]);
         let h = (0, s.JA)("shop"),
-            m = _.Z.HOME_PAGE_SHOP_TAB,
-            { analyticsLocations: E } = (0, b.ZP)(m),
+            m = b.Z.HOME_PAGE_SHOP_TAB,
+            { analyticsLocations: _ } = (0, E.ZP)(m),
             [O, v] = i.useState(!1),
             y = i.useCallback(() => {
                 void 0 !== a && a(),
                     void 0 !== o &&
                         (0, C.mK)({
                             tab: o,
-                            analyticsLocations: E,
+                            analyticsLocations: _,
                             analyticsSource: m,
                         }),
                     v(!0),
                     (0, C.Sm)({
                         analyticsSource: m,
-                        analyticsLocations: E,
+                        analyticsLocations: _,
                     });
-            }, [m, E, a, v, o]),
+            }, [m, _, a, v, o]),
             I = w.Z5c.COLLECTIBLES_SHOP;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -192,7 +192,7 @@ let G = (e) => {
     F = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
-            a = null != i ? (0, E.Z)(i, p.EFr.SIZE_80, !l) : void 0,
+            a = null != i ? (0, _.Z)(i, p.EFr.SIZE_80, !l) : void 0,
             s = n.title(),
             o = null == (t = n.body) ? void 0 : t.call(n),
             c = null == o || "" === o;
@@ -240,9 +240,9 @@ let G = (e) => {
             u,
             f,
             g,
-            _,
             b,
             E,
+            _,
             O,
             v,
             y,
@@ -265,8 +265,8 @@ let G = (e) => {
                 : ((t = null == (u = C.entryPointBackgroundAssets) ? void 0 : u.srcLightHovered),
                   (n = null == (g = C.entrypointBackgroundStyle) || null == (f = g.hovered) ? void 0 : f.light))
             : Y
-              ? ((t = null == (_ = C.entryPointBackgroundAssets) ? void 0 : _.srcDark),
-                (n = null == (E = C.entrypointBackgroundStyle) || null == (b = E.resting) ? void 0 : b.dark))
+              ? ((t = null == (b = C.entryPointBackgroundAssets) ? void 0 : b.srcDark),
+                (n = null == (_ = C.entrypointBackgroundStyle) || null == (E = _.resting) ? void 0 : E.dark))
               : ((t = null == (O = C.entryPointBackgroundAssets) ? void 0 : O.srcLight),
                 (n = null == (y = C.entrypointBackgroundStyle) || null == (v = y.resting) ? void 0 : v.light));
         let K = i.useCallback(
@@ -362,7 +362,6 @@ let G = (e) => {
             });
         }, [t]);
         return (0, r.jsx)(p.aML, {
-            "data-migration-pending": !0,
             text: l,
             tooltipClassName: D.marketingBadgeTooltip,
             position: "right",
@@ -382,11 +381,11 @@ let G = (e) => {
             [p, f] = i.useState(!1),
             g = (0, h.ZP)(),
             m = (0, d.wj)(g),
-            _ = (0, S.p)({ location: "CollectiblesShopButton" }),
-            b = _.useNewHoverStyle ? D.marketingButtonBackgroundNew : D.marketingButtonBackground,
-            E = l.entryPointBackgroundAssets,
+            b = (0, S.p)({ location: "CollectiblesShopButton" }),
+            E = b.useNewHoverStyle ? D.marketingButtonBackgroundNew : D.marketingButtonBackground,
+            _ = l.entryPointBackgroundAssets,
             O = l.entrypointBackgroundStyle,
-            v = m ? (null == E ? void 0 : E.srcDarkHovered) : null == E ? void 0 : E.srcLightHovered,
+            v = m ? (null == _ ? void 0 : _.srcDarkHovered) : null == _ ? void 0 : _.srcLightHovered,
             y = m
                 ? null == O || null == (t = O.hovered)
                     ? void 0
@@ -398,14 +397,14 @@ let G = (e) => {
             i.useEffect(() => {
                 if (null == v || "" === v) return void f(!1);
                 let e = () => {
-                    f(_.useNewHoverStyle && z(u));
+                    f(b.useNewHoverStyle && z(u));
                 };
                 e();
                 let t = requestAnimationFrame(e);
                 return () => {
                     cancelAnimationFrame(t);
                 };
-            }, [v, _.useNewHoverStyle]),
+            }, [v, b.useNewHoverStyle]),
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)(
@@ -416,7 +415,7 @@ let G = (e) => {
                             children: [
                                 (0, r.jsx)("div", {
                                     ref: u,
-                                    className: b,
+                                    className: E,
                                     style: null != y ? { background: y } : void 0,
                                     children:
                                         null != v &&

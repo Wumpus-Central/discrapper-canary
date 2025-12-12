@@ -4,8 +4,6 @@ e.exports = {
     bgGradientHighlight: "cb36986bcdc8c377-bgGradientHighlight",
     iconWrapper: "cb36986bcdc8c377-iconWrapper",
     activeVoiceIcon: "cb36986bcdc8c377-activeVoiceIcon",
-    tooltip: "cb36986bcdc8c377-tooltip",
-    tooltipContent: "cb36986bcdc8c377-tooltipContent",
     tooltipHeader: "cb36986bcdc8c377-tooltipHeader",
     buttonWrapper: "cb36986bcdc8c377-buttonWrapper",
     descriptionWrapper: "cb36986bcdc8c377-descriptionWrapper",

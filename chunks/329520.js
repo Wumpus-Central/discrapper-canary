@@ -107,15 +107,9 @@ function O(e) {
         y = (0, c.ZP)(b),
         O = (null == n ? void 0 : n.name) === "" ? null : null == n ? void 0 : n.name,
         v = null != O ? O : g.intl.string(g.t.eXan7B),
-        S = null != O ? O : g.intl.string(g.t.eXan7B),
-        I =
-            null != y
-                ? (0, r.jsxs)(r.Fragment, {
-                      children: [v, " (", y, ")"],
-                  })
-                : v,
-        T = E ? I : v,
-        C = null != y ? "".concat(S, " (").concat(y, ")") : S;
+        S = null != y ? "".concat(v, " (").concat(y, ")") : v,
+        I = E ? S : v,
+        T = S;
     return (0, r.jsx)(m.Z, {
         icon: u
             ? void 0
@@ -123,13 +117,13 @@ function O(e) {
                   icon: o.ARS,
                   className: l,
               }),
-        text: T,
-        tooltipText: _ ? void 0 : I,
+        text: I,
+        tooltipText: _ ? void 0 : S,
         textVariant: i,
         className: s,
         canTruncate: h,
         hideTooltip: _,
-        "aria-label": C,
+        "aria-label": T,
         hideText: f,
     });
 }
