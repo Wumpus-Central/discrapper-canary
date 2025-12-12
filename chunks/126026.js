@@ -1,6 +1,7 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => i }), n(388685);
 var r = n(54381),
-    l = n(481060);
+    l = n(481060),
+    o = n(100527);
 let i = (e) => {
     let { analyticsLocations: t, onCloseCallback: i } = e;
     (0, l.ZDy)(
@@ -33,7 +34,12 @@ let i = (e) => {
                                 });
                         }
                         return e;
-                    })({ analyticsLocations: t }, n),
+                    })(
+                        {
+                            analyticsLocations: [...t, o.Z.VIEW_ALL_RENTALS_MODAL],
+                        },
+                        n,
+                    ),
                 );
         },
         { onCloseCallback: i },
