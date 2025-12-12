@@ -1,14 +1,16 @@
 n.d(t, {
-    M1: () => l,
+    M1: () => c,
     NV: () => i,
     aS: () => o,
     fJ: () => a,
+    lC: () => s,
     nG: () => r,
-    yf: () => s,
+    yf: () => l,
 });
 let r = 64,
     i = 62,
     a = 72,
     o = 50,
-    s = 5,
-    l = "ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL";
+    s = 48,
+    l = 5,
+    c = "ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL";

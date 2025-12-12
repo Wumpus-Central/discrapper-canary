@@ -11,8 +11,8 @@ var n,
     p = i(5254),
     d = i(91896),
     m = i(441623),
-    N = i(199902),
-    O = i(271383),
+    O = i(199902),
+    N = i(271383),
     y = i(430824),
     f = i(158776),
     g = i(699516),
@@ -78,13 +78,13 @@ function P(e) {
         status: f.Z.getStatus(e),
         isMobile: f.Z.isMobileOnline(e),
         activities: f.Z.getActivities(e),
-        applicationStream: N.Z.getAnyStreamForUser(e),
+        applicationStream: O.Z.getAnyStreamForUser(e),
     };
 }
 function S(e) {
     let t = [];
     return (
-        r()(O.ZP.memberOf(e))
+        r()(N.ZP.memberOf(e))
             .map(y.Z.getGuild)
             .sortBy((e) => (null != e ? e.name.toLowerCase() : null))
             .forEach((e) => {
@@ -101,7 +101,6 @@ class D extends u.Z {
         var e, t, i, n, s;
         return [
             this.type,
-            +(this.giftIntentType !== E.hX.FRIEND_ANNIVERSARY),
             null !=
             (s =
                 null != (n = null == (e = this.nickname) ? void 0 : e.toLowerCase())
@@ -308,16 +307,16 @@ let j = !0,
     _ = new C(),
     R = !0,
     A = !1;
-function F() {
+function M() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     j && (e || (k !== v.pJs.ONLINE && k !== v.pJs.ADD_FRIEND)) && !L && ((j = !1), (L = !0), l.Z.fetchRelationships());
 }
-function M() {
-    if (((j = !0), R ? (L = !1) : F(), (_ = _.reset()), A)) return;
+function x() {
+    if (((j = !0), R ? (L = !1) : M(), (_ = _.reset()), A)) return;
     let e = _.getRelationshipCounts();
     k = 0 === e[v.OGo.FRIEND] ? (0 !== e[v.OGo.PENDING_INCOMING] ? v.pJs.PENDING : v.pJs.ADD_FRIEND) : v.pJs.ONLINE;
 }
-function x() {
+function F() {
     _ = R ? new C() : _.reset();
 }
 function T(e) {
@@ -327,14 +326,14 @@ function T(e) {
 }
 class U extends (n = o.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, N.Z, c.Z, p.Z, d.Z, O.ZP, y.Z, m.ZP, f.Z, g.Z, I.default),
-            this.syncWith([g.Z], x),
-            this.syncWith([d.Z], x),
-            this.syncWith([p.Z], x),
-            this.syncWith([m.ZP], x),
+        this.waitFor(h.Z, O.Z, c.Z, p.Z, d.Z, N.ZP, y.Z, m.ZP, f.Z, g.Z, I.default),
+            this.syncWith([g.Z], F),
+            this.syncWith([d.Z], F),
+            this.syncWith([p.Z], F),
+            this.syncWith([m.ZP], F),
             this.syncWith([I.default], T(G)),
-            this.syncWith([f.Z, N.Z], T(P)),
-            M();
+            this.syncWith([f.Z, O.Z], T(P)),
+            x();
     }
     getState() {
         return {
@@ -347,14 +346,14 @@ class U extends (n = o.ZP.Store) {
 b(U, "displayName", "FriendsStore");
 let J = new U(a.Z, {
     CONNECTION_OPEN: function () {
-        M();
+        x();
     },
     FRIENDS_SET_SECTION: function (e) {
-        (k = e.section), F();
+        (k = e.section), M();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (R = null != t), x(), !R;
+        return (R = null != t), F(), !R;
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
         L = !1;

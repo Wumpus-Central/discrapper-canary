@@ -91,6 +91,13 @@ class y extends (r = i.ZP.PersistedStore) {
             (null != (a = null == (r = d.get(e)) ? void 0 : r.communicationProbability) ? a : 0)
         );
     }
+    compareByDmProbability(e, t) {
+        var n, r, i, a;
+        return (
+            (null != (i = null == (n = d.get(t)) ? void 0 : n.dmProbability) ? i : 0) -
+            (null != (a = null == (r = d.get(e)) ? void 0 : r.dmProbability) ? a : 0)
+        );
+    }
     getUserAffinity(e) {
         return d.get(e);
     }

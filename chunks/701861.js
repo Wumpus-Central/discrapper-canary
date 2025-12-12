@@ -13,9 +13,9 @@ var r = n(54381),
     g = n(762500),
     h = n(703656),
     m = n(592125),
-    _ = n(131951),
-    b = n(699516),
-    E = n(51144),
+    b = n(131951),
+    E = n(699516),
+    _ = n(51144),
     O = n(298213),
     v = n(321488),
     y = n(417183),
@@ -25,7 +25,7 @@ var r = n(54381),
     T = n(474936),
     N = n(65154),
     j = n(388032),
-    P = n(934422);
+    P = n(756853);
 function x(e, t, n) {
     return (
         t in e
@@ -64,16 +64,16 @@ function A(e) {
         h = i.useCallback(() => {
             let e = l ? j.intl.string(j.t.RLcE6x) : j.intl.string(j.t.cvSt1J);
             c.Z.show({
-                title: j.intl.formatToPlainString(j.t.fPLvZd, { name: E.ZP.getName(t) }),
-                body: j.intl.formatToPlainString(j.t.l5FFq6, { name: E.ZP.getName(t) }),
+                title: j.intl.formatToPlainString(j.t.fPLvZd, { name: _.ZP.getName(t) }),
+                body: j.intl.formatToPlainString(j.t.l5FFq6, { name: _.ZP.getName(t) }),
                 confirmText: e,
                 confirmVariant: "critical-primary",
                 cancelText: j.intl.string(j.t["ETE/oC"]),
                 onConfirm: g,
             });
         }, [g, l, t]),
-        m = (0, s.e7)([_.Z], () => _.Z.supports(N.AN.VIDEO)),
-        b = t.isProvisional,
+        m = (0, s.e7)([b.Z], () => b.Z.supports(N.AN.VIDEO)),
+        E = t.isProvisional,
         v = l ? j.intl.string(j.t.RLcE6x) : j.intl.string(j.t.cvSt1J);
     return (0, r.jsxs)(o.v2r, {
         navId: "friend-row",
@@ -81,14 +81,14 @@ function A(e) {
         onClose: d.Zy,
         onSelect: a,
         children: [
-            !b && m
+            !E && m
                 ? (0, r.jsx)(o.sNh, {
                       id: "start-video-call",
                       label: j.intl.string(j.t.oCqlGG),
                       action: f,
                   })
                 : null,
-            !b &&
+            !E &&
                 (0, r.jsx)(o.sNh, {
                     id: "start-voice-call",
                     label: j.intl.string(j.t.focH1t),
@@ -121,15 +121,16 @@ class Z extends i.PureComponent {
                 isGameRelationship: s,
                 giftIntentType: c,
                 hasFriendAnniversarySection: u,
+                sectionIndex: h,
             } = this.props,
-            { isActiveRow: h } = this.state;
-        return (0, f.i)(p.Z.FRIENDS_LIST) && c === T.hX.FRIEND_ANNIVERSARY && u
+            { isActiveRow: m } = this.state;
+        return (0, f.i)(p.Z.FRIENDS_LIST) && c === T.hX.FRIEND_ANNIVERSARY && u && 0 === h
             ? (0, r.jsx)(g.Z, {
                   ref: this.peopleListItemRef,
                   isFocused: t,
-                  isActive: h,
+                  isActive: m,
                   recipientUser: e,
-                  onOtherHover: () => (h ? null : (0, d.Zy)()),
+                  onOtherHover: () => (m ? null : (0, d.Zy)()),
                   onClick: this.handleOpenPrivateChannel,
                   giftIntentType: c,
                   status: l,
@@ -141,9 +142,9 @@ class Z extends i.PureComponent {
             : (0, r.jsx)(y.Z, {
                   ref: this.peopleListItemRef,
                   isFocused: t,
-                  isActive: h,
+                  isActive: m,
                   user: e,
-                  onOtherHover: () => (h ? null : (0, d.Zy)()),
+                  onOtherHover: () => (m ? null : (0, d.Zy)()),
                   onClick: this.handleOpenPrivateChannel,
                   children: (t) =>
                       (0, r.jsxs)("div", {
@@ -159,7 +160,7 @@ class Z extends i.PureComponent {
                                       applicationStream: i,
                                       status: l,
                                       user: e,
-                                      userIgnored: b.Z.isIgnored(e.id),
+                                      userIgnored: E.Z.isIgnored(e.id),
                                   }),
                                   hovered: t,
                                   showAccountIdentifier: !s && !e.isProvisional,

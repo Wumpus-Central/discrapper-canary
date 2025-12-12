@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(481060),
     u = n(607070),
     d = n(981631),
-    p = n(983703);
+    p = n(535881);
 let f = function (e) {
     let {
             rows: t,
@@ -17,18 +17,18 @@ let f = function (e) {
             hasSearchQuery: g,
             sectionFilter: h,
             footer: m,
-            renderSectionFooter: _,
+            renderSectionFooter: b,
         } = e,
-        b = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
-        E = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        E = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
+        _ = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         O = (0, l.ZP)({
             id: "people",
-            isEnabled: b,
+            isEnabled: E,
             async scrollToStart() {},
             async scrollToEnd() {},
         }),
         v = h !== d.pJs.ONLINE && h !== d.pJs.ALL,
-        y = E || g || v,
+        y = _ || g || v,
         I = i.useMemo(
             () =>
                 t.map((e, t) =>
@@ -38,7 +38,7 @@ let f = function (e) {
                           ? (0, r.jsxs)(
                                 "div",
                                 {
-                                    children: [f(t), e.map(n), null == _ ? void 0 : _(t)],
+                                    children: [f(t), e.map((e) => n(e, t)), null == b ? void 0 : b(t)],
                                 },
                                 t,
                             )
@@ -47,12 +47,12 @@ let f = function (e) {
                                 {
                                     transitionAppear: !1,
                                     component: "div",
-                                    children: [f(t), e.map(n), null == _ ? void 0 : _(t)],
+                                    children: [f(t), e.map((e) => n(e, t)), null == b ? void 0 : b(t)],
                                 },
                                 t,
                             ),
                 ),
-            [n, f, _, t, y],
+            [n, f, b, t, y],
         );
     return (0, r.jsx)(a.bG, {
         navigator: O,

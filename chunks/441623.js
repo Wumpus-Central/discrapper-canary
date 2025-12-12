@@ -98,12 +98,7 @@ function M() {
             j(n) && (N.push(e), (R[e] = { friendsSince: n }));
         }
     }
-    N.sort((e, t) => {
-        let n = d.Z.getUserAffinity(e),
-            r = d.Z.getUserAffinity(t),
-            i = null != n ? n.dmProbability : 0;
-        return (null != r ? r.dmProbability : 0) - i;
-    });
+    N.sort((e, t) => d.Z.compareByDmProbability(e, t));
     let t = 0;
     for (let e of N)
         null != d.Z.getUserAffinity(e) && d.Z.getUserAffinity(e).dmProbability > T && t < E && (P.add(e), t++);
@@ -120,10 +115,10 @@ function G() {
 function Z() {
     G();
 }
-function B() {
+function F() {
     (A = C()), G();
 }
-function F() {
+function B() {
     A.lastShownFriendsListGiftIntents = Array.from(P);
 }
 function V(e) {
@@ -275,9 +270,9 @@ h(en, "displayName", "PremiumGiftingIntentStore"),
     ]);
 let er = new en(c.Z, {
     CONNECTION_OPEN: Z,
-    LOGOUT: B,
+    LOGOUT: F,
     MESSAGE_GIFT_INTENT_SHOWN: V,
-    FRIENDS_LIST_GIFT_INTENTS_SHOWN: F,
+    FRIENDS_LIST_GIFT_INTENTS_SHOWN: B,
     GIFT_UNREAD_NOTIFICATION_DISMISS: H,
     GIFT_INTENT_FLOW_PURCHASED_GIFT: W,
     DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: q,
