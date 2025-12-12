@@ -1,15 +1,15 @@
-t.d(n, { Z: () => m });
+t.d(n, { Z: () => f });
 var l = t(54381);
 t(473749);
 var i = t(442837),
     o = t(481060),
     r = t(906732),
-    s = t(335131),
-    a = t(592183),
-    c = t(224724),
+    a = t(335131),
+    c = t(592183),
+    s = t(224724),
     d = t(732380),
     u = t(388032);
-function m(e) {
+function f(e) {
     var { onClose: n } = e,
         t = (function (e, n) {
             if (null == e) return {};
@@ -32,8 +32,8 @@ function m(e) {
             }
             return i;
         })(e, ["onClose"]);
-    let { analyticsLocations: m, newestAnalyticsLocation: p } = (0, r.ZP)(),
-        f = (0, i.e7)([c.Z], () => c.Z.hasSaveablePendingChanges());
+    let { analyticsLocations: f, newestAnalyticsLocation: m } = (0, r.ZP)(),
+        p = (0, i.e7)([s.Z], () => s.Z.hasUnsavedChanges());
     return (0, l.jsx)(
         d.pt,
         (function (e) {
@@ -66,10 +66,10 @@ function m(e) {
                 icon: o.EOn,
                 tooltipText: u.intl.string(u.t.b2d0N0),
                 onClick: () => {
-                    if (f) return void a.Z.notifyPendingWidgets();
-                    (0, s.mK)({
-                        analyticsLocations: m,
-                        analyticsSource: p,
+                    if (p) return void c.Z.notifyUnsavedWidgets();
+                    (0, a.mK)({
+                        analyticsLocations: f,
+                        analyticsSource: m,
                     }),
                         null == n || n();
                 },

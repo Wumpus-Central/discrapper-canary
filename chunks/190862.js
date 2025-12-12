@@ -1,20 +1,20 @@
-n.d(t, { Z: () => j }), n(388685);
-var r = n(54381),
-    i = n(473749),
-    a = n(296009),
-    l = n(442837),
-    o = n(314897),
-    c = n(86419),
-    s = n(556045),
-    u = n(881410),
-    d = n(141014),
-    f = n(985748),
-    g = n(566007),
-    p = n(173951),
-    b = n(455731),
-    m = n(272289),
-    h = n(902210);
-function y(e) {
+n.d(t, { Z: () => j });
+var r = n(54381);
+n(473749);
+var i = n(296009),
+    a = n(442837),
+    l = n(314897),
+    o = n(86419),
+    c = n(556045),
+    s = n(881410),
+    u = n(141014),
+    d = n(985748),
+    f = n(566007),
+    g = n(173951),
+    p = n(455731),
+    b = n(272289),
+    m = n(902210);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function y(e) {
     }
     return e;
 }
-function O(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,73 +59,72 @@ function O(e, t) {
     }
     return i;
 }
-let v = (e) => {
-        var { widget: t } = e,
-            n = O(e, ["widget"]);
-        switch (t.type) {
-            case a.l.FAVORITE_GAMES:
-                return (0, r.jsx)(g.Z, y({ widget: t }, n));
-            case a.l.CURRENT_GAMES:
-                return (0, r.jsx)(f.Z, y({ widget: t }, n));
-            case a.l.WANT_TO_PLAY_GAMES:
-                return (0, r.jsx)(b.Z, y({ widget: t }, n));
-            case a.l.PLAYED_GAMES:
-                return (0, r.jsx)(p.Z, y({ widget: t }, n));
-            default:
-                return null;
-        }
-    },
-    j = (e) => {
-        var { widget: t, user: n, disableInteraction: a } = e,
-            f = O(e, ["widget", "user", "disableInteraction"]);
-        let { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, s.h)(t),
-            b = (0, l.e7)([o.default], () => o.default.getId() === n.id),
-            j = b && !a && g,
-            x = (0, c.mR)(t),
-            P = (0, c.Hy)(t, { isCurrentUser: b }),
-            I = (0, c.kQ)(t),
-            w = 1 === (0, c.Gv)(t.type),
-            [S, E] = i.useState(!1);
-        return (0, r.jsx)(d.N, {
-            value: {
-                expanded: S,
-                setExpanded: E,
+function v(e) {
+    var { widget: t } = e,
+        n = y(e, ["widget"]);
+    switch (t.type) {
+        case i.l.FAVORITE_GAMES:
+            return (0, r.jsx)(f.Z, h({ widget: t }, n));
+        case i.l.CURRENT_GAMES:
+            return (0, r.jsx)(d.Z, h({ widget: t }, n));
+        case i.l.WANT_TO_PLAY_GAMES:
+            return (0, r.jsx)(p.Z, h({ widget: t }, n));
+        case i.l.PLAYED_GAMES:
+            return (0, r.jsx)(g.Z, h({ widget: t }, n));
+        default:
+            return null;
+    }
+}
+function O(e) {
+    var { widget: t, user: n, disableInteraction: i } = e,
+        d = y(e, ["widget", "user", "disableInteraction"]);
+    let { setExpanded: f } = (0, u.g)(),
+        { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, c.h)(t),
+        O = (0, a.e7)([l.default], () => l.default.getId() === n.id),
+        j = O && !i && g,
+        x = (0, o.mR)(t),
+        P = (0, o.Hy)(t, { isCurrentUser: O }),
+        I = (0, o.kQ)(t),
+        w = 1 === (0, o.Gv)(t.type);
+    return (0, r.jsx)(
+        v,
+        h(
+            {
+                widget: t,
+                user: n,
+                disableInteraction: i,
+                headerTitle: x,
+                headerSubtitle: P,
+                headerActionButtons:
+                    O && !w
+                        ? [
+                              (0, r.jsx)(
+                                  s.yX,
+                                  {
+                                      disabled: I,
+                                      widgetType: t.type,
+                                      widget: t,
+                                      onAddGame: () => f(!0),
+                                  },
+                                  "".concat(t.type, "-browse-games-popout"),
+                              ),
+                          ]
+                        : void 0,
+                trailingContent:
+                    j &&
+                    (0, r.jsx)(b.Z, {
+                        userId: n.id,
+                        widgetType: t.type,
+                        onDismiss: p,
+                        className: m.suggestedGames,
+                    }),
             },
-            children: (0, r.jsx)(
-                v,
-                y(
-                    {
-                        widget: t,
-                        user: n,
-                        disableInteraction: a,
-                        headerTitle: x,
-                        headerSubtitle: P,
-                        headerActionButtons:
-                            b && !w
-                                ? [
-                                      (0, r.jsx)(
-                                          u.yX,
-                                          {
-                                              disabled: I,
-                                              widgetType: t.type,
-                                              widget: t,
-                                              onAddGame: () => E(!0),
-                                          },
-                                          "".concat(t.type, "-browse-games-popout"),
-                                      ),
-                                  ]
-                                : void 0,
-                        trailingContent:
-                            j &&
-                            (0, r.jsx)(m.Z, {
-                                userId: n.id,
-                                widgetType: t.type,
-                                onDismiss: p,
-                                className: h.suggestedGames,
-                            }),
-                    },
-                    f,
-                ),
-            ),
-        });
-    };
+            d,
+        ),
+    );
+}
+function j(e) {
+    var { widget: t } = e,
+        n = y(e, ["widget"]);
+    return (0, r.jsx)(u.N, { children: (0, r.jsx)(O, h({ widget: t }, n)) });
+}

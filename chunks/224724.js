@@ -61,7 +61,7 @@ class T extends a.ZP.Store {
         return c;
     }
     getSaveablePendingWidgets() {
-        return null == c ? null : c.filter((e) => e.isSaveable());
+        return null == c ? null : c.filter((e) => !e.isDiscardable());
     }
     hasPendingChanges() {
         return null !== c && (null === u || !i().isEqual(c, u));
@@ -105,9 +105,13 @@ class T extends a.ZP.Store {
         let { removedWidgets: e } = this.getWidgetUpdates();
         return e;
     }
-    hasSaveablePendingChanges() {
+    hasUnsavedChanges() {
         let { changedWidgets: e, removedWidgets: t, hasOrderChanges: n } = this.getWidgetUpdates();
         return e.length > 0 || t.length > 0 || n;
+    }
+    canSaveChanges() {
+        let e = this.getSaveablePendingWidgets();
+        return null != e && e.every((e) => e.isValid());
     }
     get isSubmitting() {
         return d;

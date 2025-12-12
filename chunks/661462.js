@@ -184,8 +184,7 @@ function x(e) {
                     look: "custom",
                     selectedItem: P,
                     onItemSelect: (e) => {
-                        if (u.Z.hasSaveablePendingChanges() && P === m.oh.WIDGETS)
-                            return void s.Z.notifyPendingWidgets();
+                        if (u.Z.hasUnsavedChanges() && P === m.oh.WIDGETS) return void s.Z.notifyUnsavedWidgets();
                         x({
                             action: "PRESS_SECTION",
                             section: e,

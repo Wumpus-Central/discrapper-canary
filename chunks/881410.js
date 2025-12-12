@@ -80,22 +80,25 @@ function b(e, t) {
 function m(e) {
     var { widgetType: t, widget: n, onAddGame: m, children: h } = e,
         y = b(e, ["widgetType", "widget", "onAddGame", "children"]);
-    let O = i.useMemo(() => new Set(n.games.map((e) => e.applicationId)), [n.games]),
-        { trackUserProfileEditAction: v } = (0, s.KZ)(),
+    let v = i.useMemo(() => new Set(n.games.map((e) => e.applicationId)), [n.games]),
+        { trackUserProfileEditAction: O } = (0, s.KZ)(),
         [j, x] = i.useState(""),
         P = i.useRef(""),
         I = i.useCallback(
             (e) => {
-                (0, u.ES)(t, { applicationId: e }),
+                (0, u.ES)({
+                    widgetType: t,
+                    game: { applicationId: e },
+                }),
                     o.uvj.announce(d.intl.string(d.t.q0U3DE)),
-                    v({
+                    O({
                         action: "GAME_ADDED",
                         gameId: e,
                         widgetEdited: t,
                     }),
                     null == m || m();
             },
-            [t, v, m],
+            [t, O, m],
         ),
         { options: w, matchSorterOptions: S } = (0, c.h)(),
         E = i.useMemo(
@@ -104,9 +107,9 @@ function m(e) {
                     id: String(e.value),
                     value: String(e.value),
                     label: e.label,
-                    disabled: O.has(e.value),
+                    disabled: v.has(e.value),
                 })),
-            [w, O],
+            [w, v],
         ),
         _ = i.useMemo(
             () =>
@@ -122,7 +125,7 @@ function m(e) {
                 let n = e.target.value;
                 "" === j.trim() &&
                     "" !== n.trim() &&
-                    v({
+                    O({
                         action: "GAME_SEARCH_SESSION_STARTED",
                         widgetEdited: t,
                         numCharacters: n.trim().length,
@@ -131,13 +134,13 @@ function m(e) {
                     x(n),
                     (P.current = n);
             },
-            [j, v, t, T],
+            [j, O, t, T],
         );
     return (0, r.jsx)(
         o.yRy,
         p(g({}, y), {
             onRequestOpen: () => {
-                v({
+                O({
                     action: "PRESS_ADD_GAME",
                     widgetEdited: t,
                 }),
@@ -145,7 +148,7 @@ function m(e) {
                     (P.current = "");
             },
             onRequestClose: () => {
-                v({
+                O({
                     action: "GAME_SEARCH_SESSION_ENDED",
                     widgetEdited: t,
                     numCharacters: P.current.trim().length,

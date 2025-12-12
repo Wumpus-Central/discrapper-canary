@@ -1,11 +1,12 @@
 n.d(t, {
-    Ki: () => o,
-    Wc: () => s,
-    zy: () => l,
+    Ki: () => s,
+    Wc: () => l,
+    zy: () => c,
 });
-var r = n(296009),
-    i = n(86419);
-function a(e, t, n) {
+var r = n(624238),
+    i = n(296009),
+    a = n(86419);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,11 +19,11 @@ function a(e, t, n) {
         e
     );
 }
-let o = [r.l.CURRENT_GAMES, r.l.FAVORITE_GAMES, r.l.WANT_TO_PLAY_GAMES, r.l.PLAYED_GAMES];
-function s(e) {
-    return o.includes(e.type);
+let s = [i.l.CURRENT_GAMES, i.l.FAVORITE_GAMES, i.l.WANT_TO_PLAY_GAMES, i.l.PLAYED_GAMES];
+function l(e) {
+    return s.includes(e.type);
 }
-class l {
+class c {
     toSubmission() {
         let e = (e) => ({
             game_id: e.applicationId,
@@ -37,11 +38,14 @@ class l {
             },
         };
     }
-    isSaveable() {
-        return this.games.length > 0;
+    isDiscardable() {
+        return 0 === this.games.length;
+    }
+    isValid() {
+        return this.games.length > 0 && this.games.length <= r.kp[this.type];
     }
     isEqual(e) {
-        return e instanceof l && e.type === this.type && (0, i.ou)(this.games, e.games, this.type);
+        return e instanceof c && e.type === this.type && (0, a.ou)(this.games, e.games, this.type);
     }
     getProfileAnalyticsOptions() {
         return { widgetType: this.type };
@@ -50,9 +54,9 @@ class l {
         return { widgetEdited: this.type };
     }
     constructor({ id: e, type: t, games: n }) {
-        a(this, "id", void 0),
-            a(this, "type", void 0),
-            a(this, "games", void 0),
+        o(this, "id", void 0),
+            o(this, "type", void 0),
+            o(this, "games", void 0),
             (this.id = e),
             (this.type = t),
             (this.games = n);

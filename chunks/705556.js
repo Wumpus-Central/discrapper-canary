@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(224724),
     _ = n(732380),
     m = n(388032),
-    h = n(530401);
+    h = n(119180);
 function g(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ function O(e) {
     let { user: t, guildId: n, fullWidth: g, appContext: y, onClose: O } = e,
         v = (0, a.e7)([c.default], () => c.default.getId() === t.id),
         S = (0, a.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
-        I = (0, a.e7)([p.Z], () => p.Z.hasSaveablePendingChanges()),
+        I = (0, a.e7)([p.Z], () => p.Z.hasUnsavedChanges()),
         T = (0, l.Z)({ guild: S }),
         C = (0, l.Z)({}),
         { trackUserProfileAction: A } = (0, d.KZ)(),
@@ -82,7 +82,7 @@ function O(e) {
                   fullWidth: g,
                   variant: "primary",
                   onClick: () => {
-                      if (I) return void f.Z.notifyPendingWidgets();
+                      if (I) return void f.Z.notifyUnsavedWidgets();
                       null == O || O(), C(), (0, s.i)(y);
                   },
               })
@@ -132,7 +132,7 @@ function O(e) {
                                   fullWidth: g,
                                   variant: "primary",
                                   onClick: () => {
-                                      if (I) return void f.Z.notifyPendingWidgets();
+                                      if (I) return void f.Z.notifyUnsavedWidgets();
                                       null == t || t();
                                   },
                               },

@@ -1,15 +1,16 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => b });
 var r = n(54381);
 n(473749);
 var i = n(442837),
-    l = n(314897),
-    a = n(733231),
-    o = n(141014),
-    c = n(385153),
-    s = n(623132),
-    u = n(34335),
-    d = n(112794);
-function f(e) {
+    a = n(314897),
+    l = n(733231),
+    o = n(262804),
+    c = n(141014),
+    s = n(385153),
+    u = n(623132),
+    d = n(34335),
+    f = n(553087);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,9 +35,9 @@ function f(e) {
     }
     return e;
 }
-function g(e) {
+function p(e) {
     var { games: t, user: n, widgetType: i } = e,
-        l = (function (e, t) {
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -45,28 +46,28 @@ function g(e) {
                     var n,
                         r,
                         i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        a = Object.keys(e);
+                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++)
-                    (n = l[r]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < a.length; r++)
+                    (n = a[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["games", "user", "widgetType"]);
-    let { registerItemRef: o, manageFocusOnDelete: c } = (0, a.C)();
+    let { registerItemRef: o, manageFocusOnDelete: c } = (0, l.C)();
     return (0, r.jsx)("ul", {
-        className: d.cardList,
+        className: f.cardList,
         children: t.map((e, t) =>
             (0, r.jsx)(
                 "li",
                 {
                     children: (0, r.jsx)(
-                        s.Z,
-                        f(
+                        u.Z,
+                        g(
                             {
                                 index: t,
                                 user: n,
@@ -75,7 +76,7 @@ function g(e) {
                                 coverRef: o(e.applicationId),
                                 onRemoveGame: c,
                             },
-                            l,
+                            a,
                         ),
                     ),
                 },
@@ -84,21 +85,21 @@ function g(e) {
         ),
     });
 }
-function p(e) {
+function b(e) {
     var t, n;
-    let { user: s, widgetType: d, disableInteraction: p, games: m } = e,
-        b = (0, i.e7)([l.default], () => l.default.getId() === s.id),
-        { getManageButtonForWidget: h } = (0, u.j)(),
-        y = h(d),
-        { expanded: v, setExpanded: O } = (0, o.g)(),
-        j = v ? m : m.slice(0, 2),
-        x = m.length > 2,
-        _ = (0, r.jsxs)(r.Fragment, {
+    let { user: u, widgetType: f, disableInteraction: b, games: m } = e,
+        h = (0, i.e7)([a.default], () => a.default.getId() === u.id),
+        { getManageButtonForWidget: y } = (0, d.j)(),
+        v = y(f),
+        { expanded: O, setExpanded: j } = (0, c.g)(),
+        x = O ? m : m.slice(0, 2),
+        P = m.length > 2,
+        I = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(
-                    g,
-                    ((t = f({}, e)),
-                    (n = n = { games: j }),
+                    p,
+                    ((t = g({}, e)),
+                    (n = n = { games: x }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -113,17 +114,25 @@ function p(e) {
                           }),
                     t),
                 ),
-                x &&
-                    (0, r.jsx)(c.Z, {
-                        expanded: v,
-                        onClick: () => O((e) => !e),
+                P &&
+                    (0, r.jsx)(s.Z, {
+                        expanded: O,
+                        onClick: () => j((e) => !e),
                     }),
             ],
         });
-    return b && !p
-        ? (0, r.jsx)(a.d, {
-              emptyListFallbackRef: y,
-              children: _,
+    return h && !b
+        ? (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)(o.Z, {
+                      widgetType: f,
+                      gameCount: m.length,
+                  }),
+                  (0, r.jsx)(l.d, {
+                      emptyListFallbackRef: v,
+                      children: I,
+                  }),
+              ],
           })
-        : _;
+        : I;
 }

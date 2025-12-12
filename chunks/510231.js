@@ -1,29 +1,21 @@
-n.d(t, {
-    N: () => f,
-    h: () => p,
-}),
-    n(583741);
+n.d(t, { h: () => u }), n(583741);
 var r = n(473749),
     i = n(392711),
-    a = n.n(i),
-    o = n(624238),
-    s = n(442837),
-    l = n(189451),
-    c = n(77498),
-    u = n(570911);
+    l = n.n(i),
+    a = n(442837),
+    s = n(86419),
+    o = n(77498),
+    c = n(570911);
 function d(e) {
     var t;
-    return null != (t = u.gQ.get(e)) ? t : 0;
+    return null != (t = c.gQ.get(e)) ? t : 0;
 }
-function f(e) {
-    return (null == e ? void 0 : e.themes) != null && e.themes.includes(l.J8.EROTIC);
-}
-function p() {
-    let e = (0, s.e7)([c.Z], () => c.Z.games),
+function u() {
+    let e = (0, a.e7)([o.Z], () => o.Z.games),
         t = r.useMemo(
             () =>
-                a()(e)
-                    .filter((e) => !f(e) && !o.Fb.has(e.id))
+                l()(e)
+                    .filter((e) => (0, s.pZ)(e))
                     .map((e) => ({
                         value: e.id,
                         label: e.name,

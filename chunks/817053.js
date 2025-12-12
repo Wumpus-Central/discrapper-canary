@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => E,
+    Z: () => _,
     o: () => b,
 }),
     n(388685);
@@ -65,9 +65,9 @@ function b(e) {
               onLoad: () => a(!1),
           });
 }
-function _(e) {
-    let { imageSrc: t, gameName: n, applicationId: l, userId: m, className: _, hideTooltip: E = !1, coverRef: O } = e,
-        v = (0, s.e7)([f.Z], () => f.Z.hasSaveablePendingChanges()),
+function E(e) {
+    let { imageSrc: t, gameName: n, applicationId: l, userId: m, className: E, hideTooltip: _ = !1, coverRef: O } = e,
+        v = (0, s.e7)([f.Z], () => f.Z.hasUnsavedChanges()),
         y = (0, d.Z)({
             location: "GameCover",
             applicationId: l,
@@ -80,7 +80,7 @@ function _(e) {
         S = i.useCallback(
             (e) => {
                 if (v) {
-                    e.preventDefault(), e.stopPropagation(), p.Z.notifyPendingWidgets();
+                    e.preventDefault(), e.stopPropagation(), p.Z.notifyUnsavedWidgets();
                     return;
                 }
                 null == y || y(e);
@@ -88,7 +88,7 @@ function _(e) {
             [v, y],
         ),
         T = (e) =>
-            E
+            _
                 ? e
                 : (0, r.jsx)(o.u, {
                       text: I,
@@ -100,7 +100,7 @@ function _(e) {
             ? (0, r.jsx)(c.tEY, {
                   children: (0, r.jsx)("div", {
                       ref: O,
-                      className: _,
+                      className: E,
                       tabIndex: -1,
                       children: (0, r.jsx)(b, {
                           imageSrc: t,
@@ -112,7 +112,7 @@ function _(e) {
                   innerRef: O,
                   onClick: S,
                   "aria-label": C,
-                  className: a()(h.clickable, _),
+                  className: a()(h.clickable, E),
                   children: (0, r.jsx)(b, {
                       imageSrc: t,
                       gameName: n,
@@ -120,7 +120,7 @@ function _(e) {
               }),
     );
 }
-function E(e) {
+function _(e) {
     var { applicationId: t, userId: n, className: i, disableInteraction: l = !1, hideTooltip: s, coverRef: o } = e,
         u = (function (e, t) {
             if (null == e) return {};
@@ -154,7 +154,7 @@ function E(e) {
               }),
           })
         : (0, r.jsx)(
-              _,
+              E,
               m(
                   {
                       className: d,
