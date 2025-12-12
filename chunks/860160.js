@@ -20,7 +20,6 @@ function b(e) {
         b = i.useMemo(() => {
             switch (n.data.kind) {
                 case "message":
-                case "channelSummary":
                 case "guildEvent":
                 case "forumThread":
                 case "generatedCandidate":
@@ -35,8 +34,6 @@ function b(e) {
             switch (n.data.kind) {
                 case "message":
                     return n.data.message.channel_id;
-                case "channelSummary":
-                    return n.data.topic.channelId;
                 case "generatedCandidate":
                     return n.data.item.channel_id;
                 case "forumThread":
@@ -59,8 +56,6 @@ function b(e) {
                 case "message":
                 case "forumThread":
                     return g.default.extractTimestamp(n.data.message.id);
-                case "channelSummary":
-                    return g.default.extractTimestamp(n.data.topic.endId);
                 case "guildEvent":
                     return g.default.extractTimestamp(n.data.eventId);
                 case "generatedCandidate":
@@ -135,7 +130,6 @@ function b(e) {
                                               if (n.channelType === h.d4z.GUILD_ANNOUNCEMENT)
                                                   return m.intl.string(m.t["8P08G9"]);
                                               return m.intl.string(m.t.hMFMY9);
-                                          case "channelSummary":
                                           case "generatedCandidate":
                                               return m.intl.string(m.t.ljgIO9);
                                           case "guildEvent":

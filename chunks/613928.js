@@ -1,21 +1,20 @@
 n.d(t, {
-    $U: () => A,
-    FJ: () => R,
-    HG: () => M,
-    IC: () => x,
-    NV: () => P,
-    Rm: () => L,
+    $U: () => P,
+    FJ: () => w,
+    HG: () => R,
+    IC: () => j,
+    NV: () => N,
+    Rm: () => Z,
     _e: () => I,
     aL: () => y,
-    eO: () => D,
+    eO: () => L,
     em: () => S,
     es: () => T,
     jv: () => C,
-    mV: () => w,
-    rK: () => Z,
-    wV: () => j,
+    mV: () => A,
+    rK: () => x,
     y_: () => v,
-    ye: () => k,
+    ye: () => D,
 }),
     n(539854),
     n(472816),
@@ -53,12 +52,7 @@ var y =
     (r[(r.MUTED = 4)] = "MUTED"),
     r);
 function I(e) {
-    return (
-        e.type === b.Ni.MESSAGE ||
-        e.type === b.Ni.SUMMARY ||
-        e.type === b.Ni.GENERATED_CANDIDATE ||
-        e.type === b.Ni.GUILD_EVENT
-    );
+    return e.type === b.Ni.MESSAGE || e.type === b.Ni.GENERATED_CANDIDATE || e.type === b.Ni.GUILD_EVENT;
 }
 function C(e) {
     return e < -1.5 ? 4 : e < 0 ? 3 : e > 0 ? 2 : 1;
@@ -104,19 +98,12 @@ async function S(e, t, n) {
             .flat()
             .filter(Boolean),
         o = l
-            .filter((e) => e.type === b.Ni.SUMMARY)
-            .map((e) => ({
-                guild_id: e.data.guild_id,
-                channel_id: e.data.channel_id,
-                summary_id: e.data.summary_id,
-            })),
-        c = l
             .filter((e) => e.type === b.Ni.ACTIVITY)
             .map((e) => ({
                 user_id: e.data.user_id,
                 content_id: e.data.content_id,
             })),
-        u = l
+        c = l
             .filter((e) => e.type === b.Ni.GENERATED_CANDIDATE)
             .map((e) => ({
                 content_id: e.data.content_id,
@@ -125,9 +112,8 @@ async function S(e, t, n) {
             }));
     await g.Z.fetchHydrated(t, n, {
         messageItems: [...a, ...s],
-        summaryItems: o,
-        activityItems: c,
-        generatedCandidateItems: u,
+        activityItems: o,
+        generatedCandidateItems: c,
     });
 }
 async function T() {
@@ -136,74 +122,18 @@ async function T() {
         n = _.Z.getNextIndexToHydrate();
     await S([...e, ...t], n, n + b.xy);
 }
-function N(e, t, n) {
-    let r = [],
-        i = null;
-    for (let l of e) {
-        if (null == l.author || (t && i === l.author.id)) continue;
-        let e = l instanceof c.ZP ? l : (0, s.e5)(l);
-        if ((r.push(e), (i = l.author.id), null != n && r.length >= n)) break;
-    }
-    return r;
-}
-function j(e, t) {
-    let { reactions: n, reactionCount: r } = (function (e) {
-            let t = [],
-                n = 0;
-            for (let l of e)
-                if (null != l.reactions) {
-                    if (t.length < 5)
-                        for (let e of l.reactions) {
-                            var r, i;
-                            (null == e.count_details ||
-                                (null != (r = e.count_details.burst) ? r : 0) > 0 ||
-                                (null != (i = e.count_details.normal) ? i : 0) > 0) &&
-                                t.push(e);
-                        }
-                    n += (function (e) {
-                        let t = 0;
-                        if (null != e.reactions) {
-                            let n = (null != e.reactions ? e.reactions : []).map((e) => {
-                                var t, n;
-                                return null == e.count_details
-                                    ? 0
-                                    : (null != (t = e.count_details.burst) ? t : 0) +
-                                          (null != (n = e.count_details.normal) ? n : 0);
-                            });
-                            n.length > 0 && (t = n.reduce((e, t) => e + t));
-                        }
-                        return t;
-                    })(l);
-                }
-            return {
-                reactions: t,
-                reactionCount: n,
-            };
-        })(e.messages),
-        i = N(e.messages, !0, 3);
-    return {
-        id: e.id,
-        topic: e.topic,
-        summShort: e.summ_short,
-        people: Array.from(new Set(e.people)),
-        startId: e.start_id,
-        endId: e.end_id,
-        count: e.count,
-        channelId: e.channel_id,
-        type: e.type,
-        messages: i,
-        reactions: n,
-        messageIds: e.messages.map((e) => e.id),
-        guildId: t,
-        reactionCount: r,
-        numTotalMessages: e.messages.length,
-        source: e.source,
-    };
-}
-function P(e) {
+function N(e) {
     let t = [];
     null != e.messages && (t = e.messages);
-    let n = N(t);
+    let n = (function (e, t, n) {
+        let r = [];
+        for (let t of e) {
+            if (null == t.author) continue;
+            let e = t instanceof c.ZP ? t : (0, s.e5)(t);
+            r.push(e), t.author.id;
+        }
+        return r;
+    })(t);
     return {
         guild_id: e.guild_id,
         content_id: e.content_id,
@@ -219,7 +149,7 @@ function P(e) {
         messages: n,
     };
 }
-function x(e, t) {
+function j(e, t) {
     var n, r;
     return (
         (n = (function (e) {
@@ -267,14 +197,14 @@ function x(e, t) {
         n
     );
 }
-function A(e, t) {
+function P(e, t) {
     let n = p.ZP.getTrackedAckMessageId(e);
     return null == n || f.default.extractTimestamp(t) > f.default.extractTimestamp(n);
 }
-function Z(e) {
+function x(e) {
     return (0, h.VZ)(e);
 }
-function w(e) {
+function A(e) {
     var t;
     return {
         id: e.id,
@@ -299,7 +229,7 @@ function w(e) {
         score_components: e.score_components,
     };
 }
-function L(e, t, n) {
+function Z(e, t, n) {
     let r = E.Z.getReadTimestamp(e);
     null == r && (r = null == n ? void 0 : n[e]);
     let i = E.Z.getReadTimestamp(t);
@@ -311,7 +241,7 @@ function L(e, t, n) {
             ? 1
             : i - r;
 }
-function R(e) {
+function w(e) {
     let t = [..._.Z.getUnreadDisplayItems(), ..._.Z.getReadDisplayItems()],
         n = null;
     for (let t = e.length - 1; t >= 0; t--) {
@@ -325,15 +255,12 @@ function R(e) {
     let r = t.findIndex((e) => e.id === n);
     return r < 0 ? [] : t.slice(0, r + 1);
 }
-function D(e) {
+function L(e) {
     var t, n;
     let r, i;
     switch (e.data.kind) {
         case "message":
             r = e.data.message.channel_id;
-            break;
-        case "channelSummary":
-            r = e.data.topic.channelId;
             break;
         case "generatedCandidate":
             r = e.data.item.channel_id;
@@ -355,7 +282,7 @@ function D(e) {
         (null == s ? void 0 : s.nsfwLevel) === O.V_K.AGE_RESTRICTED
     );
 }
-function M(e) {
+function R(e) {
     switch (e.data.kind) {
         case "end":
             return "end";
@@ -369,8 +296,6 @@ function M(e) {
             if ((null == (t = e.data.messageContext) ? void 0 : t.external_content_application_id) != null)
                 return "game_message";
             return "message";
-        case "channelSummary":
-            return "summary";
         case "guildEvent":
             return "guild_event";
         case "contentInventory":
@@ -388,7 +313,7 @@ function M(e) {
             return "unknown";
     }
 }
-async function k(e) {
+async function D(e) {
     let { ack: t } = await Promise.resolve().then(n.bind(n, 45114)),
         { AnalyticsObjectTypes: r } = await Promise.resolve().then(n.bind(n, 981631));
     _.Z.getDehydratedItems().forEach((n) => {

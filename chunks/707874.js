@@ -22,12 +22,6 @@ function p(e) {
                         messageIds: [t.data.message.id],
                         title: void 0,
                     };
-                case "channelSummary":
-                    return {
-                        channelId: t.data.topic.channelId,
-                        messageIds: [t.data.topic.startId],
-                        title: t.data.topic.topic,
-                    };
                 case "generatedCandidate":
                     return {
                         channelId: t.data.item.channel_id,

@@ -5,18 +5,6 @@ var r = n(473749),
     a = n(144725),
     s = n(797394);
 function o(e, t, n) {
-    if (t.type === s.Ni.SUMMARY)
-        return {
-            id: e.id,
-            timestamp: Date.now(),
-            data: {
-                kind: "channelSummary",
-                topic: t.summary,
-            },
-            score: e.score,
-            debugScore: JSON.stringify(e.score_components),
-            unread: n,
-        };
     if (t.type === s.Ni.MESSAGE)
         return t.message.id === t.message.channel_id && null != t.threadChannel
             ? {
@@ -79,7 +67,7 @@ function o(e, t, n) {
             debugScore: JSON.stringify(e.score_components),
             unread: n,
         };
-    else if (t.type === s.Ni.GENERATED_CANDIDATE)
+    if (t.type === s.Ni.GENERATED_CANDIDATE)
         return {
             id: e.id,
             timestamp: Date.now(),

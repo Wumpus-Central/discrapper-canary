@@ -57,11 +57,7 @@ let f = new p(l.Z, {
                     (null == (n = e.data.message_context) ? void 0 : n.external_content_application_id) != null ||
                     (0, o.$U)(e.data.channel_id, e.data.message_id) ||
                     (d.readIdToTimestampMap[e.id] = 0);
-            } else
-                e.type !== s.Ni.SUMMARY ||
-                    null != d.readIdToTimestampMap[e.id] ||
-                    (0, o.$U)(e.data.channel_id, e.data.summary_id) ||
-                    (d.readIdToTimestampMap[e.id] = 0);
+            }
     },
     CLEAR_ICYMI_READ_STATES: function () {
         d.readIdToTimestampMap = {};

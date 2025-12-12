@@ -38,8 +38,6 @@ let c = (e) => {
             case "message":
                 if (e.channelType === s.d4z.GUILD_ANNOUNCEMENT) return "announcement";
                 return "message";
-            case "channelSummary":
-                return "summary";
             case "guildEvent":
                 return "guild_event";
             case "contentInventory":
@@ -62,8 +60,6 @@ let c = (e) => {
             case a.Ni.MESSAGE:
                 if (e.data.channel_type === s.d4z.GUILD_ANNOUNCEMENT) return "announcement";
                 return "message";
-            case a.Ni.SUMMARY:
-                return "summary";
             case a.Ni.ACTIVITY:
                 return "hotwheels_gaming_activity";
             case a.Ni.CUSTOM_STATUS:

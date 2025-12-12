@@ -16,7 +16,6 @@ let a = 15,
     o = "1312632705086787756";
 var c =
     (((r = {})[(r.MESSAGE = 0)] = "MESSAGE"),
-    (r[(r.SUMMARY = 1)] = "SUMMARY"),
     (r[(r.ACTIVITY = 2)] = "ACTIVITY"),
     (r[(r.CUSTOM_STATUS = 3)] = "CUSTOM_STATUS"),
     (r[(r.GENERATED_CANDIDATE = 4)] = "GENERATED_CANDIDATE"),
@@ -31,8 +30,6 @@ function u(e) {
             if ((null == (t = e.data.message_context) ? void 0 : t.external_content_application_id) != null)
                 return "game_message";
             return "message";
-        case 1:
-            return "summary";
         case 2:
             return "hotwheels_gaming_activity";
         case 3:
@@ -45,6 +42,6 @@ function u(e) {
             return "generated_candidate";
     }
 }
-let d = new Set([0, 1, 3, 4]);
+let d = new Set([0, 3, 4]);
 l.hBH.IMAGE, l.hBH.GIFV;
 var p = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.BOOKMARKS = 2)] = "BOOKMARKS"), i);

@@ -24,9 +24,6 @@ function g(e) {
                         case "message":
                             (0, o.jd)(t.data.message.channel_id, t.data.message.id);
                             break;
-                        case "channelSummary":
-                            (0, o.jd)(t.data.topic.channelId, t.data.topic.startId);
-                            break;
                         case "guildEvent": {
                             let e = a.ZP.getGuildScheduledEvent(t.data.eventId);
                             null != e && (0, s.uL)(p.Z5c.GUILD_EVENT_DETAILS(e.guild_id, e.id));
