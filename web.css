@@ -60398,16 +60398,21 @@ screen and (max-width:485px) {
 
 ._44061dfca5514945-baseLayout {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap: 35px;
     position: relative
 }
 
 ._44061dfca5514945-previewsContainer {
-    align-self: flex-start;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 24px
+    align-self: flex-end
+}
+
+@media (min-width:937px) {
+    ._44061dfca5514945-previewsContainer {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 24px
+    }
 }
 
 ._44061dfca5514945-preview,
