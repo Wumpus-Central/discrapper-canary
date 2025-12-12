@@ -46782,7 +46782,7 @@ div.modalOverrideBody__34eac {
 }
 
 .container_c0c49a:before {
-    background: linear-gradient(180deg, #151263, #5b6cf2, #b1bafd);
+    background: linear-gradient(180deg, rgba(88, 101, 242, 0), #5865f2);
     border-radius: 8px;
     content: "";
     inset: 0;
@@ -52869,7 +52869,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -58255,9 +58255,9 @@ screen and (max-width:485px) {
     border-radius: 3px;
     color: var(--white-500);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-bold);
-    line-height: 29px;
+    line-height: 1.8125rem;
     margin-top: 20px;
     padding: 10px 20px;
     text-transform: uppercase
@@ -60223,9 +60223,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

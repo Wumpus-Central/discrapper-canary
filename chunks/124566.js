@@ -56,6 +56,9 @@ let h = {
                         }),
                 getGlowAnimationData: () => Promise.resolve(null),
             },
+            gradientConfig: {
+                gradient: ["rgba(88, 101, 242, 0)", "rgba(88, 101, 242, 1)"],
+            },
         },
         firstTimeNotice: {
             getImageUrl: (e, t) => (t ? u.Z : c.Z),
