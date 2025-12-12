@@ -727,7 +727,7 @@ let eU = () => [
                 section: eR.oAB.INVENTORY,
                 searchableTitles: [eD.intl.string(eD.t["jcSP+g"])],
                 label: eD.intl.string(eD.t["jcSP+g"]),
-                element: eu.Z,
+                element: eu.ZP,
                 ariaLabel: eD.intl.string(eD.t["jcSP+g"]),
                 badgeCount: t,
             },

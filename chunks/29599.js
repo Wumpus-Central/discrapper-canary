@@ -27,10 +27,10 @@ var r = n(54381),
     N = n(317941),
     P = n(342386),
     R = n(518596),
-    D = n(981631),
-    w = n(474936),
+    w = n(981631),
+    D = n(474936),
     x = n(388032),
-    L = n(666707);
+    L = n(785911);
 function j(e, t, n) {
     return (
         t in e
@@ -187,52 +187,53 @@ function G(e) {
         ],
     });
 }
-let Z = function () {
-    let e = (0, c.Wu)([I.Z], () => I.Z.getGiftable()),
-        [t, n] = l().partition(e, (e) => {
+let Z = function (e) {
+    let { inOldSettings: t = !1 } = e,
+        n = (0, c.Wu)([I.Z], () => I.Z.getGiftable()),
+        [a, s] = l().partition(n, (e) => {
             let { giftCodeBatchId: t } = e;
             return null == t;
         }),
-        a = (0, c.e7)([S.default], () => C.ZP.isPremiumExactly(S.default.getCurrentUser(), w.PremiumTypes.TIER_2)),
-        s = l().groupBy(t, (e) => (0, T.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
-        [p, _] = i.useState(!1);
+        p = (0, c.e7)([S.default], () => C.ZP.isPremiumExactly(S.default.getCurrentUser(), D.PremiumTypes.TIER_2)),
+        _ = l().groupBy(a, (e) => (0, T.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
+        [h, g] = i.useState(!1);
     i.useEffect(() => {
         d.Z.wait(() => {
-            (0, f.Qv)().then(() => _(!0));
+            (0, f.Qv)().then(() => g(!0));
         });
     }, []);
     let {
-            promotionsLoaded: h,
-            activeOutboundPromotions: g,
-            claimedEndedOutboundPromotions: b,
-            claimedOutboundPromotionCodeMap: j,
-            addClaimedOutboundPromotionCode: M,
+            promotionsLoaded: b,
+            activeOutboundPromotions: j,
+            claimedEndedOutboundPromotions: M,
+            claimedOutboundPromotionCodeMap: k,
+            addClaimedOutboundPromotionCode: U,
         } = (0, E.lG)(),
-        k = g.length + b.length > 0,
-        U =
+        Z = j.length + M.length > 0,
+        F =
             m.g.useExperiment(
                 { location: "EntitlementGifts" },
                 {
                     autoTrackExposure: !1,
-                    disable: a,
+                    disable: p,
                 },
-            ).enabled && k;
-    function Z() {
-        (0, R.openUserSettings)(A.n.NITRO_PANEL, { section: D.oAB.PREMIUM });
-    }
+            ).enabled && Z;
     function B() {
+        (0, R.openUserSettings)(A.n.NITRO_PANEL, { section: w.oAB.PREMIUM });
+    }
+    function V() {
         var e;
-        let t = n.find((e) => e.giftCodeBatchId === w.m8 && !e.consumed),
-            i = null != (e = n.filter((e) => e.giftCodeBatchId === w.rX && !e.consumed)) ? e : [],
-            [s, c] = l().partition(i, (e) => {
+        let n = s.find((e) => e.giftCodeBatchId === D.m8 && !e.consumed),
+            i = null != (e = s.filter((e) => e.giftCodeBatchId === D.rX && !e.consumed)) ? e : [],
+            [a, c] = l().partition(i, (e) => {
                 let { subscriptionPlanId: t } = e;
-                return t === w.Xh.PREMIUM_YEAR_TIER_2;
+                return t === D.Xh.PREMIUM_YEAR_TIER_2;
             }),
             d = (0, r.jsx)(u.Heading, {
                 variant: "heading-md/semibold",
-                children: k ? x.intl.string(x.t.wFsj3B) : void 0,
+                children: Z ? x.intl.string(x.t.wFsj3B) : void 0,
             }),
-            f = U
+            f = F
                 ? (0, r.jsxs)("div", {
                       className: L.promoHeaderContainer,
                       children: [
@@ -246,82 +247,82 @@ let Z = function () {
                               className: L.promoDescription,
                               children: x.intl.format(x.t.G4fwxK, {
                                   onClick: () => {
-                                      (0, P.default)(), (0, v.uL)(D.Z5c.APPLICATION_STORE);
+                                      (0, P.default)(), (0, v.uL)(w.Z5c.APPLICATION_STORE);
                                   },
                               }),
                           }),
                           (0, r.jsx)(y.Z, {
                               showGradient: !0,
                               className: L.promoNitroButton,
-                              subscriptionTier: w.Si.TIER_2,
+                              subscriptionTier: D.Si.TIER_2,
                               textOptions: { textOverride: x.intl.string(x.t.mr4K7D) },
                           }),
                       ],
                   })
                 : null;
         return (0, r.jsxs)("div", {
-            className: L.marginContainer,
+            className: t ? L.marginContainer : void 0,
             children: [
                 d,
-                k ? (0, r.jsx)(u.izJ, { className: L.divider }) : null,
+                Z ? (0, r.jsx)(u.izJ, { className: L.divider }) : null,
                 (0, r.jsx)(O.Z, {
                     className: L.gradientContainer,
-                    isShown: U,
+                    isShown: F,
                     type: O.Y.PREMIUM,
                     hasBackground: !0,
                     children: (0, r.jsxs)("div", {
-                        className: o()({ [L.marginContainer]: !U }),
+                        className: o()({ [L.marginContainer]: !F && t }),
                         children: [
                             f,
-                            b.map((e) => {
+                            M.map((e) => {
                                 let { code: t, promotion: n } = e;
                                 return (0, r.jsx)(
                                     G,
                                     {
                                         outboundPromotion: n,
                                         code: t,
-                                        addClaimedOutboundPromotionCode: M,
-                                        disabled: !a,
+                                        addClaimedOutboundPromotionCode: U,
+                                        disabled: !p,
                                     },
                                     n.id,
                                 );
                             }),
-                            g.map((e) =>
+                            j.map((e) =>
                                 (0, r.jsx)(
                                     G,
                                     {
                                         outboundPromotion: e,
-                                        code: j[e.id],
-                                        addClaimedOutboundPromotionCode: M,
-                                        disabled: !a,
+                                        code: k[e.id],
+                                        addClaimedOutboundPromotionCode: U,
+                                        disabled: !p,
                                     },
                                     e.id,
                                 ),
                             ),
-                            null != t
+                            null != n
                                 ? (0, r.jsx)(
                                       N.Z,
                                       {
                                           className: L.skuCard,
-                                          skuId: t.skuId,
-                                          subscriptionPlanId: t.subscriptionPlanId,
-                                          entitlements: [t],
-                                          giftCodeBatchId: w.m8,
+                                          skuId: n.skuId,
+                                          subscriptionPlanId: n.subscriptionPlanId,
+                                          entitlements: [n],
+                                          giftCodeBatchId: D.m8,
                                       },
-                                      (0, T.Bg)(t.skuId, t.subscriptionPlanId),
+                                      (0, T.Bg)(n.skuId, n.subscriptionPlanId),
                                   )
                                 : null,
-                            s.length > 0
+                            a.length > 0
                                 ? (0, r.jsx)(
                                       N.Z,
                                       {
                                           className: L.skuCard,
-                                          skuId: s[0].skuId,
-                                          subscriptionPlanId: s[0].subscriptionPlanId,
-                                          entitlements: s,
-                                          giftCodeBatchId: w.rX,
+                                          skuId: a[0].skuId,
+                                          subscriptionPlanId: a[0].subscriptionPlanId,
+                                          entitlements: a,
+                                          giftCodeBatchId: D.rX,
                                       },
-                                      (0, T.Bg)(s[0].skuId, s[0].subscriptionPlanId),
+                                      (0, T.Bg)(a[0].skuId, a[0].subscriptionPlanId),
                                   )
                                 : null,
                             c.length > 0
@@ -332,7 +333,7 @@ let Z = function () {
                                           skuId: c[0].skuId,
                                           subscriptionPlanId: c[0].subscriptionPlanId,
                                           entitlements: c,
-                                          giftCodeBatchId: w.rX,
+                                          giftCodeBatchId: D.rX,
                                       },
                                       (0, T.Bg)(c[0].skuId, c[0].subscriptionPlanId),
                                   )
@@ -343,7 +344,7 @@ let Z = function () {
             ],
         });
     }
-    function F() {
+    function H() {
         return (0, r.jsxs)("div", {
             className: L.emptyState,
             children: [
@@ -354,17 +355,17 @@ let Z = function () {
                 }),
                 (0, r.jsx)("p", {
                     className: L.emptyStateSubtext,
-                    children: x.intl.format(x.t.HezvJ8, { onClick: Z }),
+                    children: x.intl.format(x.t.HezvJ8, { onClick: B }),
                 }),
             ],
         });
     }
-    return p && h
+    return h && b
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  B(),
+                  V(),
                   (0, r.jsx)("div", {
-                      className: L.marginContainer,
+                      className: t ? L.marginContainer : void 0,
                       children: (0, r.jsxs)(u.y5t, {
                           component: (0, r.jsx)(u.Heading, {
                               variant: "heading-md/semibold",
@@ -372,10 +373,10 @@ let Z = function () {
                           }),
                           children: [
                               (0, r.jsx)(u.izJ, { className: L.divider }),
-                              0 === Object.keys(s).length
-                                  ? F()
+                              0 === Object.keys(_).length
+                                  ? H()
                                   : l()
-                                        .keys(s)
+                                        .keys(_)
                                         .map((e) => {
                                             let { skuId: t, subscriptionPlanId: n, giftStyle: i } = (0, T.Z0)(e);
                                             return (0, r.jsx)(
@@ -384,7 +385,7 @@ let Z = function () {
                                                     className: L.skuCard,
                                                     skuId: t,
                                                     subscriptionPlanId: n,
-                                                    entitlements: s[e],
+                                                    entitlements: _[e],
                                                     giftStyle: i,
                                                 },
                                                 e,
