@@ -49339,6 +49339,14 @@ html:not(.chat-input) .b1f01d03ecc7d736-inputInner {
     fill: ButtonText !important
 }
 
+._50e22d8b0c6ff6cb-container {
+    background-color: var(--modal-background);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 8px;
+    width: 250px
+}
+
 ._50e22d8b0c6ff6cb-popoutRoleDot {
     -webkit-margin-end: 4px;
     margin-inline-end: 4px
