@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(658722),
@@ -14,29 +14,30 @@ var r = n(54381),
     f = n(893966),
     p = n(527379),
     h = n(285173),
-    g = n(388032);
-let j = new Set();
-function x(e) {
+    g = n(388032),
+    j = n(115491);
+let x = new Set();
+function v(e) {
     let { guildId: t } = e,
         n = (0, b.BG)(t),
         i = (0, d.e7)([f.Z], () => f.Z.getSearchStateByGuildId(t), [t], u()),
         [a, c] = l.useState(i.selectedRoleIds),
-        x = (0, m.h)(t, j, !0),
-        v = l.useCallback(
+        v = (0, m.h)(t, x, !0),
+        y = l.useCallback(
             (e) => {
                 (0, p.Dr)(t, { selectedRoleIds: e }), n(e);
             },
             [t, n],
         ),
-        y = l.useMemo(() => s()(v, 300), [v]),
-        O = l.useCallback(
+        O = l.useMemo(() => s()(y, 300), [y]),
+        H = l.useCallback(
             (e) => {
                 let t = new Set(null != e ? e : []);
-                c(t), y(t);
+                c(t), O(t);
             },
-            [y],
+            [O],
         ),
-        H = l.useCallback(
+        _ = l.useCallback(
             (e) => {
                 let { record: n } = e;
                 return {
@@ -55,9 +56,9 @@ function x(e) {
             },
             [t],
         ),
-        _ = l.useCallback(
+        w = l.useCallback(
             (e, t) => {
-                let n = new Map(x.map((e) => [e.record.id, e]));
+                let n = new Map(v.map((e) => [e.record.id, e]));
                 return e.filter((e) => {
                     let r = n.get(e.value);
                     if (null == r) return !1;
@@ -65,20 +66,23 @@ function x(e) {
                     return o()(t.toLowerCase(), l.name.toLowerCase());
                 });
             },
-            [x],
+            [v],
         );
-    return (0, r.jsx)(C.V, {
-        label: g.intl.string(g.t.ZveC7e),
-        hideLabel: !0,
-        placeholder: g.intl.string(g.t.ZveC7e),
-        value: Array.from(a),
-        onSelectionChange: O,
-        options: x,
-        formatOption: H,
-        customMatchSorter: _,
-        selectionMode: "multiple",
-        autoFocus: !0,
-        closeOnSelect: !1,
-        shouldFocusWrap: !0,
+    return (0, r.jsx)("div", {
+        className: j.rolePopout,
+        children: (0, r.jsx)(C.V, {
+            label: g.intl.string(g.t.ZveC7e),
+            hideLabel: !0,
+            placeholder: g.intl.string(g.t.ZveC7e),
+            value: Array.from(a),
+            onSelectionChange: H,
+            options: v,
+            formatOption: _,
+            customMatchSorter: w,
+            selectionMode: "multiple",
+            autoFocus: !0,
+            closeOnSelect: !1,
+            shouldFocusWrap: !0,
+        }),
     });
 }
