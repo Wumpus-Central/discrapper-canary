@@ -166,7 +166,7 @@ function I() {
             [p.oAB.TEXT, d.n.CHAT_PANEL],
             [p.oAB.NOTIFICATIONS, e ? d.n.NOTIFICATIONS_PANEL : d.n.LEGACY_NOTIFICATIONS_SETTINGS_PANEL],
             [p.oAB.KEYBINDS, d.n.KEYBINDS_PANEL],
-            [p.oAB.LOCALE, d.n.LANGUAGE_AND_TIME_PANEL],
+            [p.oAB.LANGUAGE, d.n.LANGUAGE_AND_TIME_PANEL],
             [p.oAB.WINDOWS, d.n.WINDOWS_PANEL],
             [p.oAB.LINUX, d.n.LINUX_PANEL],
             [p.oAB.STREAMER_MODE, d.n.STREAMER_MODE_PANEL],
@@ -202,14 +202,16 @@ function C(e) {
     if ((0, f.yP)("renderUserSettingsRedirector")) {
         let e = I(),
             r = e.get(t.section);
-        if (null == r)
+        if (null == r) {
             S({
                 section: t.section,
                 subsection: t.subsection,
                 urlOrigin: n,
             }),
-                i();
-        else {
+                O();
+            return;
+        }
+        {
             let n = null != t.subsection && "" !== t.subsection ? e.get(p.oAB[t.subsection]) : null;
             O(null != n ? n : r, {
                 section: t.section,

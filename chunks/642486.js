@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(518596),
     f = n(981631),
     p = n(388032),
-    _ = n(151126),
+    _ = n(889139),
     m = n(444675);
 function h() {
     let e = (0, a.e7)([c.default], () => c.default.locale),
@@ -48,7 +48,7 @@ function h() {
                 m.nextTick(() => {
                     l.ZP.updateLocale(e),
                         (0, s.Mr3)(d.USER_SETTINGS_MODAL_KEY) &&
-                            (0, d.openUserSettings)(u.n.LANGUAGE_AND_TIME_PANEL, { section: f.oAB.LOCALE });
+                            (0, d.openUserSettings)(u.n.LANGUAGE_AND_TIME_PANEL, { section: f.oAB.LANGUAGE });
                 });
         }, []);
     return (0, r.jsx)(o.d, {

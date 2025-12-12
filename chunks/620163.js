@@ -9,8 +9,8 @@ n.d(t, {
     n(539854);
 var r = n(54381),
     i = n(990547),
-    o = n(704215),
-    a = n(692547),
+    a = n(704215),
+    o = n(692547),
     s = n(248514),
     l = n(481060),
     c = n(570140),
@@ -56,15 +56,15 @@ var r = n(54381),
     q = n(748717),
     Q = n(419636),
     X = n(154022),
-    J = n(736752),
+    J = n(393681),
     $ = n(309739),
     ee = n(64914),
     et = n(501348),
     en = n(795594),
     er = n(443702),
     ei = n(327192),
-    eo = n(949493),
-    ea = n(675047),
+    ea = n(949493),
+    eo = n(675047),
     es = n(956699),
     el = n(54942),
     ec = n(293389),
@@ -91,51 +91,51 @@ var r = n(54381),
     eR = n(981631),
     ew = n(65154),
     eD = n(388032),
-    ex = n(376437),
-    eL = n(542395),
-    ej = n(148806),
-    eM = n(665525),
-    ek = n(202323);
+    ex = n(143525),
+    eL = n(307139),
+    ej = n(517319),
+    eM = n(472057),
+    ek = n(256529);
 let eU = () => [
-        o.z.CLIENT_THEMES_SETTINGS_BADGE,
-        o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE,
-        o.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE,
+        a.z.CLIENT_THEMES_SETTINGS_BADGE,
+        a.z.DEKSTOP_CUSTOM_APP_ICON_BADGE,
+        a.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE,
     ],
     eG = () => {
         let e = eU(),
             [t] = (0, O.US)(e);
-        return t === o.z.CLIENT_THEMES_SETTINGS_BADGE || t === o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE
+        return t === a.z.CLIENT_THEMES_SETTINGS_BADGE || t === a.z.DEKSTOP_CUSTOM_APP_ICON_BADGE
             ? (0, r.jsx)(l.lBU, { text: eD.intl.string(eD.t.y2b7CA) })
-            : t === o.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE
+            : t === a.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE
               ? (0, r.jsx)(l.IGR, { text: eD.intl.string(eD.t.y2b7CA) })
               : null;
     },
     eZ = () => {
         let e = [];
         return (
-            (0, M.hL)("SettingsRendererConfig") && e.push(o.z.WIDGETS_USER_SETTINGS_NEW_BADGE),
+            (0, M.hL)("SettingsRendererConfig") && e.push(a.z.WIDGETS_USER_SETTINGS_NEW_BADGE),
             v.JH.getCurrentConfig({ location: "SettingsRendererConfig" }).enabled &&
-                e.push(o.z.DISPLAY_NAME_STYLES_NEW_BADGE),
+                e.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE),
             e
         );
     },
     eF = () => {
         let e = eZ(),
             [t] = (0, O.US)(e);
-        return t === o.z.DISPLAY_NAME_STYLES_NEW_BADGE || t === o.z.WIDGETS_USER_SETTINGS_NEW_BADGE
+        return t === a.z.DISPLAY_NAME_STYLES_NEW_BADGE || t === a.z.WIDGETS_USER_SETTINGS_NEW_BADGE
             ? (0, r.jsx)(l.IGR, { text: eD.intl.string(eD.t.y2b7CA) })
             : null;
     },
     eB = () => {
         let e = [];
         return (
-            x.H.getConfig({ location: "SettingsRendererConfig" }).enabled && e.push(o.z.NITRO_PRIVACY_PERK_NEW_BADGE), e
+            x.H.getConfig({ location: "SettingsRendererConfig" }).enabled && e.push(a.z.NITRO_PRIVACY_PERK_NEW_BADGE), e
         );
     },
     eV = () => {
         let e = eB(),
             [t] = (0, O.US)(e);
-        return o.z.NITRO_PRIVACY_PERK_NEW_BADGE === t ? (0, r.jsx)(l.IGR, { text: eD.intl.string(eD.t.y2b7CA) }) : null;
+        return a.z.NITRO_PRIVACY_PERK_NEW_BADGE === t ? (0, r.jsx)(l.IGR, { text: eD.intl.string(eD.t.y2b7CA) }) : null;
     },
     eH = eO.Z,
     eY = (e) => {
@@ -353,7 +353,7 @@ let eU = () => [
                 label: eD.intl.string(eD.t["+o1pDZ"]),
                 searchableTitles: [eD.intl.string(eD.t["+o1pDZ"])],
                 ariaLabel: eD.intl.string(eD.t["+o1pDZ"]),
-                element: eo.Z,
+                element: ea.Z,
                 url: eR.Z5c.SETTINGS("content-and-social"),
             },
             [eN.s6.CONTENT_SOCIAL_DISCORD_TAB]: {
@@ -384,7 +384,7 @@ let eU = () => [
                 label: eD.intl.string(eD.t.OAuOHD),
                 searchableTitles: [eD.intl.string(eD.t.OAuOHD)],
                 ariaLabel: eD.intl.string(eD.t.OAuOHD),
-                element: ea.Z,
+                element: eo.Z,
                 url: eR.Z5c.SETTINGS("data-and-privacy"),
             },
             [eN.s6.PRIVACY_AND_SAFETY_STANDING]: {
@@ -588,9 +588,9 @@ let eU = () => [
                 badgeCount: M,
                 newIndicator: (0, r.jsx)(l.IGR, {
                     text: eD.intl.string(eD.t.y2b7CA),
-                    color: a.Z.colors.BACKGROUND_BRAND.css,
+                    color: o.Z.colors.BACKGROUND_BRAND.css,
                 }),
-                newIndicatorDismissibleContentTypes: [o.z.FAMILY_CENTER_NEW_BADGE],
+                newIndicatorDismissibleContentTypes: [a.z.FAMILY_CENTER_NEW_BADGE],
                 url: eR.Z5c.SETTINGS("family-center"),
             },
             [eN.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY]: {
@@ -611,7 +611,7 @@ let eU = () => [
                 label: eD.intl.string(eD.t["+1h0k/"]),
                 ariaLabel: eD.intl.string(eD.t["+1h0k/"]),
                 element: eg.ZP,
-                newIndicatorDismissibleContentTypes: [o.z.AUTH_SESSIONS_NEW],
+                newIndicatorDismissibleContentTypes: [a.z.AUTH_SESSIONS_NEW],
                 impressionName: i.ImpressionNames.USER_SETTINGS_SESSIONS,
                 impressionProperties: { source: null == v ? void 0 : v.source },
             },
@@ -623,7 +623,7 @@ let eU = () => [
                 element: ei.ZP,
                 impressionName: i.ImpressionNames.USER_SETTINGS_CONNECTIONS,
                 impressionProperties: { source: null == v ? void 0 : v.source },
-                newIndicatorDismissibleContentTypes: [o.z.NEW_CRUNCHYROLL_CONNECTION],
+                newIndicatorDismissibleContentTypes: [a.z.NEW_CRUNCHYROLL_CONNECTION],
                 url: eR.Z5c.SETTINGS("connections"),
             },
             [eN.s6.THIRD_PARTY_ACCESS]: {
@@ -714,7 +714,7 @@ let eU = () => [
                 icon: O
                     ? (0, r.jsx)(l.Mgn, {
                           size: "xs",
-                          color: a.Z.unsafe_rawColors.YELLOW_300.css,
+                          color: o.Z.unsafe_rawColors.YELLOW_300.css,
                       })
                     : null,
             },
@@ -808,7 +808,7 @@ let eU = () => [
                 parent: eN.s6.APPEARANCE,
                 newIndicator: (0, r.jsx)(l.IGR, {
                     text: eD.intl.string(eD.t.y2b7CA),
-                    color: a.Z.colors.BACKGROUND_BRAND.css,
+                    color: o.Z.colors.BACKGROUND_BRAND.css,
                 }),
             },
             [eN.s6.APPEARANCE_SCALING_SPACING]: {
@@ -1505,7 +1505,7 @@ let eU = () => [
                 url: eR.Z5c.SETTINGS("keybinds"),
             },
             [eN.s6.LANGUAGE]: {
-                section: eR.oAB.LOCALE,
+                section: eR.oAB.LANGUAGE,
                 searchableTitles: [
                     eD.intl.string(eD.t.IHMsPn),
                     eD.intl.string(eD.t.dyamEI),
