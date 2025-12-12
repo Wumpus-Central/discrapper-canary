@@ -352,7 +352,7 @@ function el(e) {
                     (0, r.jsxs)(s.animated.div, {
                         className: a()(q.root, Q.elevationHigh, { [q.previewCamera]: O }, e),
                         style: ee(J({}, n), {
-                            width: F.value.interpolate([0, 1], [el.width, er]),
+                            minWidth: F.value.interpolate([0, 1], [el.width, er]),
                             minHeight: F.value.interpolate([0, 1], [el.height, ei]),
                             translateX: F.value.interpolate([0, 1], [0, (-1 * Math.abs(er - el.width)) / 2]),
                         }),
