@@ -1,7 +1,7 @@
 n.d(t, {
     Cg: () => p,
     Hs: () => u,
-    LT: () => o,
+    LT: () => a,
     Mo: () => c,
     RE: () => d,
     Sp: () => l,
@@ -26,7 +26,7 @@ function i(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function a(e) {
     }
     return e;
 }
-let o = r.Key.F6,
+let a = r.Key.F6,
     s = new Map([
         [r.Key.F6, "f6"],
         [r.Key.Tab, "tab"],
@@ -298,7 +298,7 @@ let u = Object.freeze({
         up: 82,
     }),
     f = Object.freeze(
-        a(
+        o(
             {
                 a: 65,
                 s: 83,
@@ -375,31 +375,35 @@ let u = Object.freeze({
                 "right alt": 165,
                 "right ctrl": 163,
                 "right meta": 93,
+                f1: 112,
+                f2: 113,
+                f3: 114,
+                f4: 115,
+                f5: 116,
+                f6: 117,
+                f7: 118,
+                f8: 119,
+                f9: 120,
+                f10: 121,
+                f11: 122,
+                f12: 123,
+                f13: 124,
+                f14: 125,
+                f15: 126,
+                f16: 127,
                 f17: 128,
                 f18: 129,
                 f19: 130,
                 f20: 131,
-                f5: 116,
-                f6: 117,
-                f7: 118,
-                f3: 114,
-                f8: 119,
-                f9: 120,
-                f11: 122,
-                f13: 124,
-                f16: 127,
-                f14: 125,
-                f10: 121,
-                f12: 123,
-                f15: 126,
+                f21: 132,
+                f22: 133,
+                f23: 134,
+                f24: 135,
                 home: 36,
                 "page up": 33,
                 del: 46,
-                f4: 115,
                 end: 35,
-                f2: 113,
                 "page down": 34,
-                f1: 112,
                 left: 37,
                 right: 39,
                 down: 40,
