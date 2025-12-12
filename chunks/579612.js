@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(933557),
     l = n(471445),
     c = n(266076),
@@ -19,17 +19,17 @@ var i = n(120356),
     _ = n(51144),
     m = n(495824);
 function h(e) {
-    let { channel: t, className: n, avatarSize: i, iconSize: a } = e;
+    let { channel: t, avatarSize: n, iconSize: i, iconClassName: o } = e;
     if (t.isDM()) {
         let e = t.getRecipientId(),
-            n = p.default.getUser(e);
-        if (null == n) return null;
-        let a = n.getAvatarURL(null, o.ny6[i].size);
-        return (0, r.jsx)(o.qEK, {
+            i = p.default.getUser(e);
+        if (null == i) return null;
+        let o = i.getAvatarURL(null, a.ny6[n].size);
+        return (0, r.jsx)(a.qEK, {
             "aria-hidden": !0,
             className: m.searchResultDMChannelIcon,
-            size: i,
-            src: a,
+            size: n,
+            src: o,
         });
     }
     if (t.isGroupDM())
@@ -37,15 +37,15 @@ function h(e) {
             "aria-hidden": !0,
             className: m.searchResultGDMChannelIcon,
             channel: t,
-            size: i,
+            size: n,
         });
     let s = (0, l.KS)(t);
     return null == s
         ? null
         : (0, r.jsx)(s, {
-              className: n,
+              className: o,
               color: "currentColor",
-              size: a,
+              size: i,
           });
 }
 function g(e) {
@@ -83,11 +83,11 @@ function b(e) {
     return null == t
         ? (0, r.jsx)("strong", { children: n })
         : (0, r.jsxs)("div", {
-              className: a()(m.resultChannel, i),
+              className: o()(m.resultChannel, i),
               children: [
                   (0, r.jsx)(h, {
                       channel: t,
-                      avatarSize: o.EFr.SIZE_20,
+                      avatarSize: a.EFr.SIZE_20,
                       iconSize: "refresh_sm",
                   }),
                   (0, r.jsxs)("div", {
