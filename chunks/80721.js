@@ -10,40 +10,42 @@ n.d(t, {
 });
 var r = n(512722),
     i = n.n(r),
-    a = n(544891),
-    o = n(570140),
+    o = n(544891),
+    a = n(570140),
     s = n(598077),
     l = n(504518),
     c = n(981631);
 let u = 10;
 async function d() {
-    o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_START" });
+    a.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_START" });
     try {
         let e = (
-            await a.tn.get({
+            await o.tn.get({
                 url: c.ANM.PREMIUM_GROUP_MEMBERSHIP,
                 rejectWithError: !0,
             })
         ).body;
         return (
             null != e
-                ? o.Z.dispatch({
+                ? a.Z.dispatch({
                       type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_SUCCESS",
                       membership: {
                           subscriptionId: e.subscription_id,
                           memberType: e.member_type,
+                          subscriptionStatus: e.subscription_status,
+                          currentPeriodEnd: e.current_period_end,
                       },
                   })
-                : o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND" }),
+                : a.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND" }),
             e
         );
     } catch (e) {
-        return o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE" }), null;
+        return a.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE" }), null;
     }
 }
 async function f(e, t, n, r) {
-    let { users: i, next_index: o } = (
-        await a.tn.get({
+    let { users: i, next_index: a } = (
+        await o.tn.get({
             url: c.ANM.BILLING_SUBSCRIPTION_ELIGIBLE_USERS(e),
             query: {
                 index: t,
@@ -55,19 +57,19 @@ async function f(e, t, n, r) {
     ).body;
     return {
         users: i.map((e) => new s.Z(e)),
-        nextIndex: o,
+        nextIndex: a,
     };
 }
 async function p(e, t) {
-    o.Z.dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_START" });
+    a.Z.dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_START" });
     try {
-        let n = await a.tn.post({
+        let n = await o.tn.post({
             url: c.ANM.BILLING_SUBSCRIPTION_INVITES(e),
             body: { user_ids: t },
             rejectWithError: !0,
         });
         return (
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: "PREMIUM_GROUP_INVITE_USERS_SUCCESS",
                 subscriptionId: e,
             }),
@@ -77,32 +79,32 @@ async function p(e, t) {
             }
         );
     } catch (e) {
-        return o.Z.dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_FAILURE" }), null;
+        return a.Z.dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_FAILURE" }), null;
     }
 }
 async function _(e, t) {
-    o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_START" });
+    a.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_START" });
     try {
-        let n = await a.tn.del({
+        let n = await o.tn.del({
             url: c.ANM.BILLING_SUBSCRIPTION_REMOVE_USER(e, t),
             rejectWithError: !0,
         });
         return (
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: "PREMIUM_GROUP_REMOVE_MEMBER_SUCCESS",
                 subscriptionId: e,
             }),
             n
         );
     } catch (e) {
-        return o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_FAILURE" }), null;
+        return a.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_FAILURE" }), null;
     }
 }
 async function m(e) {
-    o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_START" });
+    a.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_START" });
     try {
         let t = (
-                await a.tn.get({
+                await o.tn.get({
                     url: c.ANM.BILLING_SUBSCRIPTION_MEMBERS(e),
                     rejectWithError: !0,
                 })
@@ -110,7 +112,7 @@ async function m(e) {
             n = t.find((e) => e.isPrimary());
         return (
             i()(null != n, "Primary member not found in premium group"),
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: "PREMIUM_GROUP_MEMBERS_FETCH_SUCCESS",
                 members: {
                     primary: n.user,
@@ -121,53 +123,53 @@ async function m(e) {
             t
         );
     } catch (e) {
-        return o.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_FAILURE" }), [];
+        return a.Z.dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_FAILURE" }), [];
     }
 }
 async function h(e, t) {
-    await a.tn.patch({
+    await o.tn.patch({
         url: c.ANM.BILLING_SUBSCRIPTION_INVITE(e, t),
         rejectWithError: !0,
     });
 }
 async function g(e, t) {
-    o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_INVITE_START" });
+    a.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_INVITE_START" });
     try {
-        let n = await a.tn.del({
+        let n = await o.tn.del({
             url: c.ANM.BILLING_SUBSCRIPTION_INVITE(e, t),
             rejectWithError: !0,
         });
         return (
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: "PREMIUM_GROUP_REMOVE_INVITE_SUCCESS",
                 subscriptionId: e,
             }),
             n
         );
     } catch (e) {
-        return o.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_INVITE_FAILURE" }), null;
+        return a.Z.dispatch({ type: "PREMIUM_GROUP_REMOVE_INVITE_FAILURE" }), null;
     }
 }
 async function E(e) {
-    o.Z.dispatch({
+    a.Z.dispatch({
         type: "PREMIUM_GROUP_INVITE_FETCH_START",
         inviteId: e,
     });
     try {
         let t = (
-            await a.tn.get({
+            await o.tn.get({
                 url: c.ANM.PREMIUM_GROUP_INVITE(e),
                 rejectWithError: !0,
             })
         ).body;
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: "PREMIUM_GROUP_INVITE_FETCH_SUCCESS",
             inviteId: e,
             invite: t,
         });
     } catch (n) {
         var t;
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: "PREMIUM_GROUP_INVITE_FETCH_FAIL",
             inviteId: e,
             status: null != (t = null == n ? void 0 : n.status) ? t : 0,

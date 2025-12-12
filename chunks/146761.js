@@ -127,17 +127,65 @@ let C = () =>
     N = (e) => {
         let { currentUser: t } = e,
             { premiumGroupMembers: i, isLoading: o } = (0, _.Z)(),
-            a = (0, s.e7)([p.Z], () => p.Z.getPremiumGroupSubscriptionId());
-        if (o || null == i || null == a) return (0, r.jsx)(l.$jN, {});
-        let { primary: c, members: u } = i,
-            f = () => {
+            {
+                hasFetchedMembership: a,
+                premiumGroupSubscriptionId: c,
+                premiumGroupMembershipSubscriptionStatus: u,
+                premiumGroupMembershipCurrentPeriodEnd: f,
+            } = (0, s.cj)([p.Z], () => ({
+                hasFetchedMembership: p.Z.hasFetchedMembership(),
+                premiumGroupSubscriptionId: p.Z.getPremiumGroupSubscriptionId(),
+                premiumGroupMembershipSubscriptionStatus: p.Z.getPremiumGroupSubscriptionStatus(),
+                premiumGroupMembershipCurrentPeriodEnd: p.Z.getPremiumGroupCurrentPeriodEnd(),
+            }));
+        if (o || null == i || !a || null == c) return (0, r.jsx)(l.$jN, {});
+        let { primary: m, members: v } = i,
+            { title: I, description: N } = (() => {
+                switch (u) {
+                    case E.O0b.CANCELED:
+                        return {
+                            title: y.intl.string(b.default.mCwdPj),
+                            description: y.intl.format(b.default.wH9NYG, { endDate: f }),
+                        };
+                    case E.O0b.PAUSED:
+                        return {
+                            title: y.intl.string(b.default.IDyd1e),
+                            description: y.intl.format(b.default["8MfYhr"], {
+                                premiumGroupProductName: (0, g.sO)(),
+                                helpCenterLink: g.j3,
+                            }),
+                        };
+                    case E.O0b.PAST_DUE:
+                    case E.O0b.ACCOUNT_HOLD:
+                    case E.O0b.BILLING_RETRY:
+                        return {
+                            title: y.intl.string(b.default.Duq8zp),
+                            description: y.intl.format(b.default["MHn/D6"], {
+                                endDate: f,
+                                premiumGroupProductName: (0, g.sO)(),
+                            }),
+                        };
+                    default:
+                        return {
+                            title: y.intl.formatToPlainString(b.default.xiUjMF, {
+                                premiumGroupProductName: (0, g.sO)(),
+                            }),
+                            description: y.intl.format(b.default["2HEyqG"], {
+                                primaryName: (0, d.XM)(m),
+                                premiumGroupProductName: (0, g.sO)(),
+                                helpCenterLink: g.j3,
+                            }),
+                        };
+                }
+            })(),
+            P = () => {
                 (0, l.ZDy)(async () => {
                     let { default: e } = await n.e("92326").then(n.bind(n, 3446));
                     return (n) =>
                         (0, r.jsx)(
                             e,
                             T(S({}, n), {
-                                premiumGroupSubscriptionId: a,
+                                premiumGroupSubscriptionId: c,
                                 currentUser: t,
                             }),
                         );
@@ -152,18 +200,12 @@ let C = () =>
                     className: O.contentGrid,
                     children: [
                         (0, r.jsx)(A, {
-                            title: y.intl.formatToPlainString(b.default.xiUjMF, {
-                                premiumGroupProductName: (0, g.sO)(),
-                            }),
-                            description: y.intl.format(b.default["2HEyqG"], {
-                                primaryName: (0, d.XM)(c),
-                                helpCenterLink: g.j3,
-                                premiumGroupProductName: (0, g.sO)(),
-                            }),
+                            title: I,
+                            description: N,
                             button: (0, r.jsx)(l.Button, {
                                 variant: "secondary",
                                 text: y.intl.string(b.default.NCu2JD),
-                                onClick: f,
+                                onClick: P,
                             }),
                         }),
                         (0, r.jsxs)(l.Kqy, {
@@ -181,10 +223,10 @@ let C = () =>
                                     children: y.intl.string(b.default["oqw/KW"]),
                                 }),
                                 (0, r.jsx)(h.Vl, {
-                                    user: c,
+                                    user: m,
                                     isOwnUser: !1,
                                 }),
-                                u.map((e) =>
+                                v.map((e) =>
                                     (0, r.jsx)(
                                         h.kg,
                                         {
