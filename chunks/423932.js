@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => c });
 var r = n(54381);
 n(473749);
 var i = n(481060);
@@ -31,14 +31,38 @@ function o(e) {
     }
     return e;
 }
-function s(e) {
+function s(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function l(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : s(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function c(e) {
+    let { source: t, onClose: a } = e;
     (0, i.ZDy)(
         async () => {
             let { default: e } = await n.e("76815").then(n.bind(n, 336977));
-            return (t) => (0, r.jsx)(e, o({}, t));
+            return (n) => (0, r.jsx)(e, l(o({}, n), { source: t }));
         },
         {
-            onCloseCallback: e,
+            onCloseCallback: a,
             backdropStyle: i.fCB.BLUR,
         },
     );

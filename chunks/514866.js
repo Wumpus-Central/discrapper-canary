@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => C });
 var a = n(54381);
 n(473749);
 var r = n(120356),
@@ -12,47 +12,48 @@ var r = n(120356),
     m = n(359119),
     p = n(423932),
     h = n(695346),
-    x = n(306052),
-    f = n(944486),
-    g = n(594174),
-    b = n(134612),
-    v = n(517269),
-    j = n(197571);
-function _() {
-    let e = g.default.getCurrentUser(),
+    f = n(306052),
+    x = n(944486),
+    b = n(594174),
+    g = n(134612),
+    v = n(407383),
+    j = n(293717),
+    y = n(478411);
+function C() {
+    let e = b.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
         r = h.Rt.useSetting();
     return (0, a.jsxs)(s.Ttm, {
         children: [
             (0, a.jsx)("div", {
-                className: i()(v.buttonsContainer, j.marginBottom20),
-                children: (0, a.jsx)(x.g, { isDevTools: !0 }),
+                className: i()(j.buttonsContainer, y.marginBottom20),
+                children: (0, a.jsx)(f.g, { isDevTools: !0 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(v.buttonsContainer, j.marginBottom8),
+                className: i()(j.buttonsContainer, y.marginBottom8),
                 children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
                     text: "Launch Vibing Wumpus",
-                    onClick: () => (0, p.Z)(),
+                    onClick: () => (0, p.Z)({ source: v.I.KEYBIND }),
                 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(v.buttonsContainer, j.marginBottom8),
+                className: i()(j.buttonsContainer, y.marginBottom8),
                 children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
                     text: "Launch Safety Tools Modal",
                     onClick: () =>
                         (() => {
-                            let e = f.Z.getChannelId(),
+                            let e = x.Z.getChannelId(),
                                 t = null != e ? e : "21154681615024128";
                             (0, s.ZDy)(
                                 async () => {
                                     let { default: e } = await Promise.all([
                                         n.e("37031"),
                                         n.e("89650"),
-                                        n.e("76144"),
+                                        n.e("30332"),
                                     ]).then(n.bind(n, 611446));
                                     return (n) =>
                                         (0, a.jsx)(
@@ -92,7 +93,7 @@ function _() {
                                             ),
                                         );
                                 },
-                                { modalKey: b.X_ },
+                                { modalKey: g.X_ },
                             );
                         })(),
                 }),
@@ -101,7 +102,7 @@ function _() {
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)("div", {
-                            className: i()(v.buttonsContainer, j.marginBottom8),
+                            className: i()(j.buttonsContainer, y.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -110,7 +111,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(v.buttonsContainer, j.marginBottom8),
+                            className: i()(j.buttonsContainer, y.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -119,7 +120,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(v.buttonsContainer, j.marginBottom8),
+                            className: i()(j.buttonsContainer, y.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -128,7 +129,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(v.buttonsContainer, j.marginBottom8),
+                            className: i()(j.buttonsContainer, y.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -137,7 +138,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(v.buttonsContainer, j.marginBottom8),
+                            className: i()(j.buttonsContainer, y.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -146,7 +147,7 @@ function _() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(v.buttonsContainer, j.marginBottom20),
+                            className: i()(j.buttonsContainer, y.marginBottom20),
                             children: (0, a.jsx)(s.rsf, {
                                 label: "Ignore profile speedbump disabled",
                                 checked: r,
