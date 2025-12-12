@@ -1,207 +1,177 @@
-n.d(t, { Z: () => T }), n(388685), n(953529), n(781311);
+n.d(t, {
+    $0: () => v,
+    Vy: () => S,
+    ZP: () => I,
+    kC: () => O,
+}),
+    n(953529),
+    n(388685),
+    n(781311);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
-    l = n(544891),
-    c = n(28664),
-    u = n(481060),
-    d = n(497321),
-    f = n(100527),
-    p = n(43015),
-    _ = n(136097),
-    m = n(246946),
-    h = n(594174),
-    g = n(460562),
-    E = n(823379),
-    b = n(313789),
-    y = n(10298),
-    O = n(518596),
-    v = n(981631),
-    S = n(388032),
-    I = n(844642);
-function T() {
-    let e,
-        { currentSession: t, otherSessions: n } = (0, _.h)(),
-        a = (0, s.e7)([m.Z], () => m.Z.hidePersonalInformation),
-        o = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        [f, g] = i.useState(!1);
-    i.useEffect(() => {
-        (0, p.fw)();
-        let e = setTimeout(() => g(!0), 500);
-        return () => {
-            clearTimeout(e), (0, p.$Z)();
-        };
-    }, []);
-    let E = () => {
-            l.tn.post({
-                url: v.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG,
-                rejectWithError: !0,
-            });
-        },
-        [b, O] = i.useState(new Set());
-    return a
-        ? (0, r.jsx)(d.Z, {})
-        : ((e =
-              null == t && 0 === n.length
-                  ? f
-                      ? (0, r.jsx)("div", {
-                            className: I.loading,
-                            children: (0, r.jsx)(u.$jN, {}),
-                        })
-                      : null
-                  : (0, r.jsxs)(r.Fragment, {
-                        children: [
-                            (0, r.jsxs)(u.Kqy, {
-                                gap: 24,
-                                className: I.sessions,
-                                children: [
-                                    (0, r.jsx)(u.C3N, {
-                                        label: S.intl.string(S.t.LLS19o),
-                                        children:
-                                            null != t
-                                                ? (0, r.jsx)(C, {
-                                                      session: t,
-                                                      current: !0,
-                                                  })
-                                                : null,
-                                    }),
-                                    !(n.length > 0) && (null == o ? void 0 : o.mfaEnabled)
-                                        ? null
-                                        : (0, r.jsxs)(u.C3N, {
-                                              label: S.intl.string(S.t.xx1MWc),
-                                              children: [
-                                                  n.map((e) =>
-                                                      (0, r.jsx)(
-                                                          C,
-                                                          {
-                                                              session: e,
-                                                              useChecks: b.size > 0,
-                                                              checked: b.has(e.id_hash),
-                                                              setChecked: (t) => {
-                                                                  let n = new Set(b);
-                                                                  t ? n.add(e.id_hash) : n.delete(e.id_hash), O(n);
-                                                              },
-                                                          },
-                                                          e.id_hash,
-                                                      ),
-                                                  ),
-                                                  (null == o ? void 0 : o.mfaEnabled) ? null : (0, r.jsx)(A, {}),
-                                              ],
-                                          }),
-                                ],
-                            }),
-                            n.length > 0
-                                ? (0, r.jsx)(u.gNt, {
-                                      label: b.size > 0 ? S.intl.string(S.t.mMEmRO) : S.intl.string(S.t.Vij32M),
-                                      description: S.intl.string(S.t.OTXyaf),
-                                      children: (0, r.jsx)("div", {
-                                          "data-button-hoisted-classname-wrapper": !0,
-                                          className: I.logOutAllButton,
-                                          children: (0, r.jsx)(u.Button, {
-                                              variant: "critical-secondary",
-                                              size: "sm",
-                                              text:
-                                                  b.size > 0
-                                                      ? S.intl.formatToPlainString(S.t["83CPLj"], { count: b.size })
-                                                      : S.intl.string(S.t.cLmmeY),
-                                              onClick: () => {
-                                                  b.size > 0
-                                                      ? (0, p.L$)(Array.from(b))
-                                                      : (0, p.L$)(n.map((e) => e.id_hash));
-                                              },
-                                          }),
-                                      }),
-                                  })
-                                : null,
-                        ],
-                    })),
-          (0, r.jsxs)(y.N, {
-              header: S.intl.string(S.t["+1h0k/"]),
+    l = n(481060),
+    c = n(100527),
+    u = n(43015),
+    d = n(136097),
+    f = n(594174),
+    p = n(460562),
+    _ = n(823379),
+    m = n(313789),
+    h = n(10298),
+    g = n(518596),
+    E = n(981631),
+    b = n(388032),
+    y = n(713791);
+function O() {
+    return (0, r.jsx)(l.Text, {
+        variant: "text-sm/normal",
+        className: y.description,
+        children: b.intl.string(b.t.zZp618),
+    });
+}
+function v() {
+    let { currentSession: e } = (0, d.h)();
+    return null == e
+        ? (0, r.jsx)("div", {
+              className: y.loading,
+              children: (0, r.jsx)(l.$jN, {}),
+          })
+        : (0, r.jsx)(l.C3N, {
+              label: b.intl.string(b.t.LLS19o),
+              children: (0, r.jsx)(T, {
+                  session: e,
+                  current: !0,
+              }),
+          });
+}
+function S() {
+    let { currentSession: e, otherSessions: t } = (0, d.h)(),
+        n = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
+        [a, o] = i.useState(new Set());
+    return (null == e && 0 === t.length) ||
+        (0 === t.length && (null == n ? void 0 : n.mfaEnabled)) ||
+        (!(t.length > 0) && (null == n ? void 0 : n.mfaEnabled))
+        ? null
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(u.Text, {
-                      variant: "text-sm/normal",
-                      className: I.description,
-                      children: S.intl.string(S.t.zZp618),
+                  (0, r.jsxs)(l.C3N, {
+                      label: b.intl.string(b.t.xx1MWc),
+                      children: [
+                          t.map((e) =>
+                              (0, r.jsx)(
+                                  T,
+                                  {
+                                      session: e,
+                                      useChecks: a.size > 0,
+                                      checked: a.has(e.id_hash),
+                                      setChecked: (t) => {
+                                          let n = new Set(a);
+                                          t ? n.add(e.id_hash) : n.delete(e.id_hash), o(n);
+                                      },
+                                  },
+                                  e.id_hash,
+                              ),
+                          ),
+                          (null == n ? void 0 : n.mfaEnabled) ? null : (0, r.jsx)(C, {}),
+                      ],
                   }),
-                  (null == o ? void 0 : o.isStaff())
-                      ? (0, r.jsxs)("div", {
-                            className: I.tools,
-                            children: [
-                                (0, r.jsx)(u.Text, {
-                                    className: I.toolsTitle,
-                                    variant: "text-md/bold",
-                                    children: "DEV TOOLS",
+                  t.length > 0
+                      ? (0, r.jsx)(l.gNt, {
+                            label: a.size > 0 ? b.intl.string(b.t.mMEmRO) : b.intl.string(b.t.Vij32M),
+                            description: b.intl.string(b.t.OTXyaf),
+                            children: (0, r.jsx)("div", {
+                                "data-button-hoisted-classname-wrapper": !0,
+                                className: y.logOutAllButton,
+                                children: (0, r.jsx)(l.Button, {
+                                    variant: "critical-secondary",
+                                    size: "sm",
+                                    text:
+                                        a.size > 0
+                                            ? b.intl.formatToPlainString(b.t["83CPLj"], { count: a.size })
+                                            : b.intl.string(b.t.cLmmeY),
+                                    onClick: () => {
+                                        a.size > 0 ? (0, u.L$)(Array.from(a)) : (0, u.L$)(t.map((e) => e.id_hash));
+                                    },
                                 }),
-                                (0, r.jsx)(u.Text, {
-                                    className: I.toolsTitle,
-                                    variant: "text-sm/normal",
-                                    color: "text-feedback-critical",
-                                    children: "These tools are only shown to staff users.",
-                                }),
-                                (0, r.jsx)(c.u, {
-                                    text: "Triggers mobile and email suspicious session notifications for the current user",
-                                    children: (0, r.jsx)(u.Button, {
-                                        variant: "secondary",
-                                        size: "sm",
-                                        text: "Trigger Suspicious Sessions Notification",
-                                        onClick: E,
-                                    }),
-                                }),
-                            ],
+                            }),
                         })
                       : null,
-                  e,
               ],
-          }));
+          });
 }
-function C(e) {
+function I() {
+    return (
+        i.useEffect(
+            () => (
+                (0, u.fw)(),
+                () => {
+                    (0, u.$Z)();
+                }
+            ),
+            [],
+        ),
+        (0, r.jsxs)(h.N, {
+            header: b.intl.string(b.t["+1h0k/"]),
+            children: [
+                (0, r.jsx)(O, {}),
+                (0, r.jsxs)(l.Kqy, {
+                    gap: 24,
+                    className: y.sessions,
+                    children: [(0, r.jsx)(v, {}), (0, r.jsx)(S, {})],
+                }),
+            ],
+        })
+    );
+}
+function T(e) {
     var t, n, i, a, s;
-    let { session: l, current: c, setChecked: d, checked: f, useChecks: m } = e,
-        h =
-            null != (s = null == (t = l.client_info) ? void 0 : t.location)
+    let { session: c, current: f, setChecked: p, checked: m, useChecks: h } = e,
+        g =
+            null != (s = null == (t = c.client_info) ? void 0 : t.location)
                 ? s
-                : null == (n = l.client_info)
+                : null == (n = c.client_info)
                   ? void 0
                   : n.ip,
-        g = null == (i = l.client_info) ? void 0 : i.platform,
-        { text: b, icon: y } = N(null == (a = l.client_info) ? void 0 : a.os),
-        O = c ? null : (0, _.p)(l.approx_last_used_time),
-        v = [b, g].filter(E.lm),
-        T = [h, O].filter(E.lm);
+        E = null == (i = c.client_info) ? void 0 : i.platform,
+        { text: O, icon: v } = A(null == (a = c.client_info) ? void 0 : a.os),
+        S = f ? null : (0, d.p)(c.approx_last_used_time),
+        I = [O, E].filter(_.lm),
+        T = [g, S].filter(_.lm);
     return (0, r.jsxs)(
         "div",
         {
-            className: o()(I.session, c ? I.currentSession : null),
+            className: o()(y.session, f ? y.currentSession : null),
             children: [
                 (0, r.jsx)("div", {
-                    className: I.sessionIcon,
-                    children: (0, r.jsx)(y, {
+                    className: y.sessionIcon,
+                    children: (0, r.jsx)(v, {
                         size: "md",
                         color: "currentColor",
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: I.sessionInfo,
+                    className: y.sessionInfo,
                     children: [
-                        (0, r.jsxs)(u.Text, {
+                        (0, r.jsxs)(l.Text, {
                             variant: "eyebrow",
-                            className: I.sessionInfoRow,
+                            className: y.sessionInfoRow,
                             children: [
-                                (0, r.jsx)("span", { children: v[0] }),
-                                v.length > 1 &&
+                                (0, r.jsx)("span", { children: I[0] }),
+                                I.length > 1 &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)("span", { children: "\xB7" }),
-                                            (0, r.jsx)("span", { children: v[1] }),
+                                            (0, r.jsx)("span", { children: I[1] }),
                                         ],
                                     }),
                             ],
                         }),
-                        (0, r.jsxs)(u.Text, {
+                        (0, r.jsxs)(l.Text, {
                             variant: "text-sm/medium",
-                            className: I.sessionInfoRow,
+                            className: y.sessionInfoRow,
                             children: [
                                 (0, r.jsx)("span", { children: T[0] }),
                                 T.length > 1 &&
@@ -215,64 +185,64 @@ function C(e) {
                         }),
                     ],
                 }),
-                c
+                f
                     ? null
-                    : m
+                    : h
                       ? (0, r.jsx)("div", {
-                            className: I.sessionCheckbox,
-                            children: (0, r.jsx)(u.Cnq, {
+                            className: y.sessionCheckbox,
+                            children: (0, r.jsx)(l.Cnq, {
                                 onChange: (e) => {
-                                    null == d || d(e);
+                                    null == p || p(e);
                                 },
-                                checked: f,
+                                checked: m,
                             }),
                         })
-                      : (0, r.jsx)(u.P3F, {
-                            className: I.sessionMoreButton,
+                      : (0, r.jsx)(l.P3F, {
+                            className: y.sessionMoreButton,
                             onClick: (e) => {
-                                e.shiftKey ? null == d || d(!0) : (0, p.L$)(l.id_hash);
+                                e.shiftKey ? null == p || p(!0) : (0, u.L$)(c.id_hash);
                             },
-                            "aria-label": S.intl.string(S.t.E4MJNt),
-                            children: (0, r.jsx)(u.Dio, {
+                            "aria-label": b.intl.string(b.t.E4MJNt),
+                            children: (0, r.jsx)(l.Dio, {
                                 size: "md",
                                 color: "currentColor",
                             }),
                         }),
             ],
         },
-        l.id_hash,
+        c.id_hash,
     );
 }
-function A() {
+function C() {
     return (0, r.jsxs)("div", {
-        className: o()(I.session, I.legacySession),
+        className: o()(y.session, y.legacySession),
         children: [
             (0, r.jsx)("div", {
-                className: I.sessionIcon,
-                children: (0, r.jsx)(g.Z, {
+                className: y.sessionIcon,
+                children: (0, r.jsx)(p.Z, {
                     width: "32",
                     height: "32",
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: I.sessionInfo,
+                className: y.sessionInfo,
                 children: [
-                    (0, r.jsx)(u.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: "eyebrow",
-                        className: I.sessionInfoRow,
+                        className: y.sessionInfoRow,
                         color: "text-muted",
-                        children: (0, r.jsx)("span", { children: S.intl.string(S.t.iUa0sn) }),
+                        children: (0, r.jsx)("span", { children: b.intl.string(b.t.iUa0sn) }),
                     }),
-                    (0, r.jsx)(u.Text, {
+                    (0, r.jsx)(l.Text, {
                         variant: "text-sm/medium",
-                        className: I.sessionInfoRow,
+                        className: y.sessionInfoRow,
                         color: "text-muted",
                         children: (0, r.jsx)("span", {
-                            children: S.intl.format(S.t["044+8i"], {
+                            children: b.intl.format(b.t["044+8i"], {
                                 onClick: () =>
-                                    (0, O.openUserSettings)(b.n.ACCOUNT_PANEL, {
-                                        section: v.oAB.ACCOUNT,
-                                        analyticsLocations: [f.Z.USER_SETTINGS_SESSIONS],
+                                    (0, g.openUserSettings)(m.n.ACCOUNT_PANEL, {
+                                        section: E.oAB.ACCOUNT,
+                                        analyticsLocations: [c.Z.USER_SETTINGS_SESSIONS],
                                     }),
                             }),
                         }),
@@ -282,25 +252,25 @@ function A() {
         ],
     });
 }
-function N(e) {
+function A(e) {
     switch (null == e ? void 0 : e.toLowerCase().trim()) {
         case null:
         case void 0:
         case "":
             return {
-                text: S.intl.string(S.t.cDHCNY),
-                icon: u.pzj,
+                text: b.intl.string(b.t.cDHCNY),
+                icon: l.pzj,
             };
         case "ios":
         case "android":
             return {
                 text: e,
-                icon: u.AtH,
+                icon: l.AtH,
             };
         default:
             return {
                 text: e,
-                icon: u.pzj,
+                icon: l.pzj,
             };
     }
 }

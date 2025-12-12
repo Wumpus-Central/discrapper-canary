@@ -1,24 +1,47 @@
-n.d(e, { F: () => g });
+n.d(e, { F: () => A });
 var i = n(657707),
     l = n(704215),
-    s = n(509613),
+    s = n(43015),
+    u = n(509613),
     r = n(970013),
-    u = n(313789),
-    a = n(36192),
-    o = n(726985),
-    c = n(388032);
-let d = (0, s.wf)(u.n.SESSIONS_PANEL, {
-        useTitle: () => c.intl.string(c.t["+1h0k/"]),
-        StronglyDiscouragedCustomComponent: a.Z,
+    a = n(313789),
+    o = n(526665),
+    c = n(36192),
+    S = n(830031),
+    T = n(211839),
+    d = n(572161),
+    g = n(726985),
+    E = n(388032);
+let I = (0, u.k4)(a.n.SESSIONS_DESCRIPTION_CATEGORY, { buildLayout: () => [d.Z] }),
+    _ = (0, u.k4)(a.n.SESSIONS_CATEGORY, {
+        buildLayout: () => [S.P, T.m],
+        initialize: () => (
+            (0, s.fw)(),
+            () => {
+                (0, s.$Z)();
+            }
+        ),
+    }),
+    O = (0, u.wf)(a.n.SESSIONS_PANEL, {
+        usePredicate: () => !(0, o.gN)("LegacySessionsPanel"),
+        useTitle: () => E.intl.string(E.t["+1h0k/"]),
+        hideInStreamerMode: !0,
+        StronglyDiscouragedCustomComponent: c.ZP,
         buildLayout: () => [],
     }),
-    g = (0, s.m7)(u.n.SESSIONS_SIDEBAR_ITEM, {
-        useTitle: () => c.intl.string(c.t["+1h0k/"]),
-        getLegacySearchKey: () => o.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2,
+    N = (0, u.wf)(a.n.SESSIONS_PANEL, {
+        usePredicate: () => (0, o.gN)("SessionsPanel"),
+        useTitle: () => E.intl.string(E.t["+1h0k/"]),
+        hideInStreamerMode: !0,
+        buildLayout: () => [I, _],
+    }),
+    A = (0, u.m7)(a.n.SESSIONS_SIDEBAR_ITEM, {
+        useTitle: () => E.intl.string(E.t["+1h0k/"]),
+        getLegacySearchKey: () => ((0, o.Gl)("SessionsPanel") ? void 0 : g.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2),
         icon: i.dW3,
         trailing: {
             type: r.W.BADGE_NEW,
             getDismissibleContentTypes: () => [l.z.AUTH_SESSIONS_NEW],
         },
-        buildLayout: () => [d],
+        buildLayout: () => ((0, o.Gl)("SessionsPanel") ? [N] : [O]),
     });

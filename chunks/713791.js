@@ -11,6 +11,4 @@ e.exports = {
     sessionCheckbox: "_803f2f55621144fb-sessionCheckbox",
     logOutAllButton: "_803f2f55621144fb-logOutAllButton",
     loading: "_803f2f55621144fb-loading",
-    tools: "_803f2f55621144fb-tools",
-    toolsTitle: "_803f2f55621144fb-toolsTitle",
 };

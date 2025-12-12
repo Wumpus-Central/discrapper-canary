@@ -610,7 +610,7 @@ let eU = () => [
                 searchableTitles: [eD.intl.string(eD.t["+1h0k/"])],
                 label: eD.intl.string(eD.t["+1h0k/"]),
                 ariaLabel: eD.intl.string(eD.t["+1h0k/"]),
-                element: eg.Z,
+                element: eg.ZP,
                 newIndicatorDismissibleContentTypes: [a.z.AUTH_SESSIONS_NEW],
                 impressionName: i.ImpressionNames.USER_SETTINGS_SESSIONS,
                 impressionProperties: { source: null == v ? void 0 : v.source },
@@ -1895,6 +1895,12 @@ let eU = () => [
             [eN.s6.DEVELOPER_OPTIONS_SHOW_TOTP_SUCCESS]: {
                 section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Show TOTP Success"],
+                parent: eN.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
+                predicate: () => k.Z.isDeveloper,
+            },
+            [eN.s6.DEVELOPER_OPTIONS_TRIGGER_SUSPICIOUS_SESSIONS]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
+                searchableTitles: ["Trigger Suspicious Sessions Notification"],
                 parent: eN.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
                 predicate: () => k.Z.isDeveloper,
             },

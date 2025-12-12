@@ -10,11 +10,11 @@ n.d(t, {
     XO: () => x,
     Xn: () => q,
     bb: () => K,
-    qo: () => B,
+    qo: () => F,
     rY: () => G,
     sR: () => H,
     tn: () => W,
-    wq: () => F,
+    wq: () => B,
 }),
     n(997841),
     n(388685);
@@ -94,12 +94,12 @@ function R(e, t) {
         e
     );
 }
-function D(e, t, n) {
+function w(e, t, n) {
     return i.useCallback(() => {
         n({ [e]: !t });
     }, [e, n, t]);
 }
-function w(e, t, n) {
+function D(e, t, n) {
     return i.useCallback(
         (r) => {
             let i = E.default.getUser(e);
@@ -117,20 +117,20 @@ function w(e, t, n) {
     );
 }
 function x(e, t, n, r) {
-    let i = D("usernameProfile", n, r);
-    return w(e.author.id, t.id, i);
+    let i = w("usernameProfile", n, r);
+    return D(e.author.id, t.id, i);
 }
 function L(e, t, n, r) {
-    let i = D("referencedUsernameProfile", n, r);
-    return w(null == e ? void 0 : e.author.id, t.id, i);
+    let i = w("referencedUsernameProfile", n, r);
+    return D(null == e ? void 0 : e.author.id, t.id, i);
 }
 function j(e, t, n, r) {
-    let i = D("interactionUsernameProfile", n, r);
-    return w(null == e ? void 0 : e.user.id, t.id, i);
+    let i = w("interactionUsernameProfile", n, r);
+    return D(null == e ? void 0 : e.user.id, t.id, i);
 }
 function M(e, t, n, r) {
-    let i = D("referencedUsernameProfile", n, r);
-    return w(e, t.id, i);
+    let i = w("referencedUsernameProfile", n, r);
+    return D(e, t.id, i);
 }
 function k(e) {
     return i.useCallback(
@@ -141,15 +141,15 @@ function k(e) {
     );
 }
 function U(e, t) {
-    return k(D("avatarProfile", e, t));
+    return k(w("avatarProfile", e, t));
 }
 function G(e, t) {
-    return k(D("referencedAvatarProfile", e, t));
+    return k(w("referencedAvatarProfile", e, t));
 }
 function Z(e, t) {
-    return k(D("interactionAvatarProfile", e, t));
+    return k(w("interactionAvatarProfile", e, t));
 }
-function B(e, t, a, l) {
+function F(e, t, a, l) {
     let { id: c } = t,
         { id: d, flags: f } = e,
         p = (0, o.yE)(f, C.iLy.EPHEMERAL),
@@ -182,7 +182,8 @@ function B(e, t, a, l) {
                             n.e("93375"),
                             n.e("38342"),
                             n.e("37220"),
-                            n.e("79531"),
+                            n.e("26503"),
+                            n.e("59031"),
                         ]).then(n.bind(n, 225138));
                         return (n) =>
                             (0, r.jsx)(
@@ -204,7 +205,7 @@ function B(e, t, a, l) {
         [p, c, d, a, _, l],
     );
 }
-function F(e, t) {
+function B(e, t) {
     return i.useCallback(
         (n) => {
             let r = E.default.getUser(e),
@@ -314,7 +315,7 @@ function z(e, t) {
     }, [t, e]);
 }
 function q(e, t) {
-    let n = D("interactionData", e, t);
+    let n = w("interactionData", e, t);
     return i.useCallback(
         (e) => {
             e.preventDefault(), e.stopPropagation(), n();

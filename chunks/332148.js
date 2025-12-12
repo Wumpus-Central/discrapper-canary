@@ -1,51 +1,79 @@
-n.d(t, { Z: () => d }), n(784620), n(973216);
+n.d(t, { Z: () => f }), n(784620), n(973216);
 var r = n(544891),
     i = n(570140),
-    l = n(346479),
+    l = n(881052),
+    a = n(346479),
     o = n(624453),
-    a = n(668781),
-    s = n(981631),
-    c = n(388032);
-let u = {
+    s = n(668781),
+    c = n(981631),
+    u = n(388032);
+let d = {
         async pinMessage(e, t) {
             let { id: n, name: i } = e;
-            await l.Z.unarchiveThreadIfNecessary(e.id),
+            await a.Z.unarchiveThreadIfNecessary(e.id),
                 r.tn
                     .put({
-                        url: s.ANM.PIN(n, t),
-                        oldFormErrors: !0,
+                        url: c.ANM.PIN(n, t),
                         rejectWithError: !0,
                     })
-                    .catch(() => {
-                        let t;
-                        (t = e.isPrivate()
-                            ? c.intl.formatToPlainString(c.t.Q89oQU, { maxPins: s.tG9 })
-                            : c.intl.formatToPlainString(c.t.NnO1S5, {
-                                  maxPins: s.tG9,
-                                  channelName: i,
-                              })),
-                            a.Z.show({
-                                title: c.intl.string(c.t.HI88Q3),
-                                body: t,
-                                confirmText: c.intl.string(c.t.BddRzS),
-                            });
+                    .catch((t) => {
+                        let n = new l.Hx(t),
+                            r = n.code,
+                            a = u.intl.string(u.t.j2d6Km),
+                            o = u.intl.string(u.t.fEptJP);
+                        if (null != r)
+                            switch (r) {
+                                case c.evJ.TOO_MANY_PINS_IN_CHANNEL:
+                                    (a = u.intl.string(u.t.HI88Q3)),
+                                        (o = e.isPrivate()
+                                            ? u.intl.formatToPlainString(u.t.Q89oQU, { maxPins: c.tG9 })
+                                            : u.intl.formatToPlainString(u.t.NnO1S5, {
+                                                  maxPins: c.tG9,
+                                                  channelName: i,
+                                              }));
+                                    break;
+                                case c.evJ.INVALID_ACCESS:
+                                    (a = u.intl.string(u.t["25gfQX"])), (o = u.intl.string(u.t.QNnTwN));
+                                    break;
+                                case c.evJ.INVALID_PIN_MESSAGE_CHANNEL:
+                                    (a = u.intl.string(u.t["Q5G6+m"])), (o = u.intl.string(u.t["5hgPfC"]));
+                                    break;
+                                case c.evJ.INVALID_THREAD_ARCHIVE_STATE:
+                                    (a = u.intl.string(u.t.fu6Lbl)), (o = u.intl.string(u.t.FmrcZM));
+                                    break;
+                                case c.evJ.INVALID_ACTION_SYSTEM_MESSAGE:
+                                    (a = u.intl.string(u.t["zV0/FC"])), (o = u.intl.string(u.t.C4a7xI));
+                                    break;
+                                case c.evJ.UNKNOWN_MESSAGE:
+                                    (a = u.intl.string(u.t.fkqPro)), (o = u.intl.string(u.t.H6fRIg));
+                                    break;
+                                default:
+                                    var d;
+                                    (a = u.intl.string(u.t.HI88Q3)),
+                                        (o = null != (d = n.getAnyErrorMessage()) ? d : u.intl.string(u.t.fEptJP));
+                            }
+                        s.Z.show({
+                            title: a,
+                            body: o,
+                            confirmText: u.intl.string(u.t.BddRzS),
+                        });
                     });
         },
         async unpinMessage(e, t) {
-            await l.Z.unarchiveThreadIfNecessary(e.id),
+            await a.Z.unarchiveThreadIfNecessary(e.id),
                 r.tn
                     .del({
-                        url: s.ANM.PIN(e.id, t),
+                        url: c.ANM.PIN(e.id, t),
                         oldFormErrors: !0,
                         rejectWithError: !0,
                     })
                     .catch(() =>
-                        a.Z.show({
-                            title: c.intl.string(c.t.xFjByk),
-                            body: c.intl.string(c.t["0R/Toc"]),
-                            confirmText: c.intl.string(c.t["7NqTJn"]),
-                            cancelText: c.intl.string(c.t["ETE/oC"]),
-                            onConfirm: u.unpinMessage.bind(u, e, t),
+                        s.Z.show({
+                            title: u.intl.string(u.t.xFjByk),
+                            body: u.intl.string(u.t["0R/Toc"]),
+                            confirmText: u.intl.string(u.t["7NqTJn"]),
+                            cancelText: u.intl.string(u.t["ETE/oC"]),
+                            onConfirm: d.unpinMessage.bind(d, e, t),
                         }),
                     );
         },
@@ -58,7 +86,7 @@ let u = {
         fetchPins(e, t) {
             var n, l;
             let a = null != (n = null == t ? void 0 : t.reset) && n,
-                c = null != (l = null == t ? void 0 : t.limit) ? l : 25,
+                s = null != (l = null == t ? void 0 : t.limit) ? l : 25,
                 u = null == t ? void 0 : t.before;
             (a ||
                 (function (e, t) {
@@ -82,9 +110,9 @@ let u = {
                 }),
                 r.tn
                     .get({
-                        url: s.ANM.PINS(e),
+                        url: c.ANM.PINS(e),
                         query: {
-                            limit: c,
+                            limit: s,
                             before: null == u ? void 0 : u.toISOString(),
                         },
                         retries: 2,
@@ -109,4 +137,4 @@ let u = {
                     ));
         },
     },
-    d = u;
+    f = d;

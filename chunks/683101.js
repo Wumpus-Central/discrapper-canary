@@ -2,12 +2,12 @@ n.d(t, { Z: () => T }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(374470),
-    s = n(481060),
-    a = n(239091),
+    a = n(481060),
+    s = n(239091),
     o = n(294218),
     u = n(592125),
     c = n(388032),
-    E = n(374815);
+    E = n(745807);
 function d(e, t, n) {
     return (
         t in e
@@ -58,10 +58,10 @@ function A(e, t) {
 class T extends l.PureComponent {
     render() {
         let { message: e, listItemProps: t, searchOffset: n, index: l, totalResults: i } = this.props,
-            a = u.Z.getChannel(e.channel_id);
-        if (null == a) return null;
+            s = u.Z.getChannel(e.channel_id);
+        if (null == s) return null;
         let d = "search-result-".concat(e.id);
-        return (0, r.jsx)(s.tEY, {
+        return (0, r.jsx)(a.tEY, {
             ringTarget: this.hitRef,
             ringClassName: E.__invalid_searchResultFocusRing,
             offset: 4,
@@ -72,7 +72,7 @@ class T extends l.PureComponent {
                     "aria-setsize": i,
                     "aria-labelledby": d,
                     children: [
-                        (0, r.jsx)(s.P3F, {
+                        (0, r.jsx)(a.P3F, {
                             tabIndex: -1,
                             onClick: this.handleMessageClick,
                             innerRef: this.containerRef,
@@ -86,7 +86,7 @@ class T extends l.PureComponent {
                                     children: (0, r.jsx)(o.Z, {
                                         id: d,
                                         message: e,
-                                        channel: a,
+                                        channel: s,
                                         onContextMenu: (t) => this.handleContextMenu(t, e),
                                         animateAvatar: !1,
                                         subscribeToComponentDispatch: !1,
@@ -99,7 +99,7 @@ class T extends l.PureComponent {
                         (0, r.jsx)("div", {
                             className: E.buttonsContainer,
                             "aria-hidden": !0,
-                            children: (0, r.jsx)(s.P3F, {
+                            children: (0, r.jsx)(a.P3F, {
                                 className: E.button,
                                 onClick: this.jumpTo,
                                 children: c.intl.string(c.t.k5WiPf),
@@ -118,8 +118,10 @@ class T extends l.PureComponent {
                 let l = u.Z.getChannel(t.channel_id);
                 null != l &&
                     (e.stopPropagation(),
-                    (0, a.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("38342"), n.e("46155")]).then(n.bind(n, 858341));
+                    (0, s.jW)(e, async () => {
+                        let { default: e } = await Promise.all([n.e("38342"), n.e("26503"), n.e("72804")]).then(
+                            n.bind(n, 858341),
+                        );
                         return (n) =>
                             (0, r.jsx)(
                                 e,
