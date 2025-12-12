@@ -1,104 +1,75 @@
-r.d(t, { default: () => b }), r(388685);
-var n = r(54381),
-    o = r(473749),
-    c = r(755721),
-    i = r(481060),
-    l = r(153867),
-    s = r(388032),
-    a = r(412335);
-function b(e) {
-    var t,
-        r,
-        { onSubmit: b, onClose: u } = e,
-        p = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                o = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
+n.d(e, { default: () => a }), n(388685);
+var r = n(54381),
+    o = n(473749),
+    i = n(481060),
+    l = n(153867),
+    c = n(388032);
+function a(t) {
+    var { onSubmit: e, onClose: n } = t,
+        a = (function (t, e) {
+            if (null == t) return {};
+            var n,
+                r,
+                o = (function (t, e) {
+                    if (null == t) return {};
+                    var n,
+                        r,
                         o = {},
-                        c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (r = c[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                        i = Object.keys(t);
+                    for (r = 0; r < i.length; r++) (n = i[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
                     return o;
-                })(e, t);
+                })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++)
-                    (r = c[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var i = Object.getOwnPropertySymbols(t);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
             }
             return o;
-        })(e, ["onSubmit", "onClose"]);
-    let [f, O] = o.useState(!1);
-    return (0, n.jsxs)(
-        i.VoidConfirmModal,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
+        })(t, ["onSubmit", "onClose"]);
+    let [u, s] = o.useState(!1);
+    return (0, r.jsx)(
+        i.sm4,
+        (function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var n = null != arguments[e] ? arguments[e] : {},
+                    r = Object.keys(n);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (t) {
+                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
                         }),
                     )),
-                    n.forEach(function (t) {
-                        var n;
-                        (n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: n,
+                    r.forEach(function (e) {
+                        var r;
+                        (r = n[e]),
+                            e in t
+                                ? Object.defineProperty(t, e, {
+                                      value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = n);
+                                : (t[e] = r);
                     });
             }
-            return e;
+            return t;
         })(
             {
-                header: s.intl.string(s.t.HlAPoq),
-                confirmButtonColor: c.zx.Colors.GREEN,
-                confirmText: s.intl.string(s.t.rimG2R),
-                cancelText: s.intl.string(s.t["ETE/oC"]),
-                onConfirm: b,
-                onClose: () => (f && l.ZP.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), u()),
+                title: c.intl.string(c.t.HlAPoq),
+                subtitle: c.intl.string(c.t.Jz3oqA),
+                variant: "active",
+                confirmText: c.intl.string(c.t.rimG2R),
+                cancelText: c.intl.string(c.t["ETE/oC"]),
+                onConfirm: e,
+                onClose: () => (u && l.ZP.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), n()),
+                checkboxProps: {
+                    checked: u,
+                    onChange: (t) => s(t),
+                    label: c.intl.string(c.t["JdIQ/Y"]),
+                },
             },
-            p,
-        )),
-        (r = r =
-            {
-                children: [
-                    (0, n.jsx)(i.Text, {
-                        variant: "text-md/normal",
-                        children: s.intl.string(s.t.Jz3oqA),
-                    }),
-                    (0, n.jsx)("div", {
-                        className: a.checkbox,
-                        children: (0, n.jsx)(i.Checkbox, {
-                            checked: f,
-                            onChange: (e) => O(e),
-                            label: s.intl.string(s.t["JdIQ/Y"]),
-                            labelType: "secondary",
-                        }),
-                    }),
-                ],
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
-                  }
-                  return r;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-              }),
-        t),
+            a,
+        ),
     );
 }

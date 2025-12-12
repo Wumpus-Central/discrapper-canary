@@ -2801,6 +2801,11 @@
     flex: 1
 }
 
+._8a031a135bfcb9ba-actionBarCheckbox {
+    -webkit-padding-end: var(--space-8);
+    padding-inline-end: var(--space-8)
+}
+
 ._8a031a135bfcb9ba-actionBarLayoutChatInput {
     align-items: flex-start
 }

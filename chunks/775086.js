@@ -107,7 +107,7 @@ function h(e) {
             "notice",
             "children",
         ]);
-    let S = null != t ? t : null != f || (0, o.G)(O) || null != b ? "md" : "sm";
+    let S = null != t ? t : null != f || null != g || (0, o.G)(O) || null != b ? "md" : "sm";
     return (0, r.jsxs)(
         i.I,
         p(d({}, v), {
@@ -137,4 +137,4 @@ function h(e) {
         }),
     );
 }
-n(161953);
+n(971513);
