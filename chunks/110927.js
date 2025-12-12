@@ -9,7 +9,7 @@ var o = n(54381),
     b = n(867003),
     u = n(987562),
     s = n(981631),
-    d = n(29467),
+    d = n(967955),
     f = n(388032);
 function m(e) {
     let { onClose: t, transitionState: m, dismissibleContent: p } = e;

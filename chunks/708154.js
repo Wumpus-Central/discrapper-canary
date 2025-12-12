@@ -2,13 +2,13 @@ n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(990547),
-    a = n(159691),
-    o = n(481060),
+    o = n(159691),
+    a = n(481060),
     s = n(906732),
     l = n(213609),
     c = n(550385),
     u = n(771934),
-    d = n(202283),
+    d = n(5570),
     f = n(388032),
     p = n(574876),
     _ = n(758335);
@@ -36,12 +36,12 @@ function m() {
                     (0, r.jsxs)("div", {
                         className: p.textContent,
                         children: [
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
                                 children: f.intl.string(d.default.XP4jzJ),
                             }),
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
                                 children: f.intl.string(d.default.MJYvmG),
@@ -50,7 +50,7 @@ function m() {
                     }),
                 ],
             }),
-            (0, r.jsx)(a.zxk, {
+            (0, r.jsx)(o.zxk, {
                 variant: "secondary",
                 size: "sm",
                 text: f.intl.string(d.default.eGxkmm),

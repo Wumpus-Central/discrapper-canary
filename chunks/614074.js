@@ -5,7 +5,7 @@ var i = n(54381),
     u = n(5900),
     r = n(773275),
     a = n(388032),
-    o = n(36385),
+    o = n(665525),
     c = n(291771);
 let S = () => {
         let { isWeb: t, installationStatus: e } = (0, r.xf)(),

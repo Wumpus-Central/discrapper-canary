@@ -60,7 +60,7 @@ function h(e) {
                             },
                             onClick: () => {
                                 (0, o.ZDy)(async () => {
-                                    let { default: t } = await n.e("42358").then(n.bind(n, 210995));
+                                    let { default: t } = await n.e("1872").then(n.bind(n, 210995));
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
