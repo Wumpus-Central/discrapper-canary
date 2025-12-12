@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(583741);
+n.d(t, { Z: () => E }), n(388685), n(583741);
 var i = n(54381),
     r = n(473749),
     l = n(392711),
@@ -9,37 +9,37 @@ var i = n(54381),
     u = n(268350),
     d = n(926491),
     p = n(419922),
-    h = n(314897),
-    f = n(375954),
+    f = n(314897),
+    h = n(375954),
     m = n(594174),
     g = n(626135),
     b = n(51144),
     C = n(901461),
     y = n(981631),
     v = n(388032),
-    _ = n(315146);
-let O = "749054660769218631";
-function x(e) {
+    O = n(42241);
+let x = "749054660769218631";
+function E(e) {
     var t;
     let { channel: n } = e,
-        [l, x] = r.useState("");
+        [l, E] = r.useState("");
     r.useEffect(() => {
         (0, u.FQ)("847199849233514549", !0);
     }, []);
-    let E = (0, o.e7)(
-            [f.Z, h.default],
+    let j = (0, o.e7)(
+            [h.Z, f.default],
             () =>
-                !!a()(f.Z.getMessages(n.id).toArray())
+                !!a()(h.Z.getMessages(n.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== h.default.getId() && e.state === y.yb.SENT && !(0, C.Z)(e)),
+                    .find((e) => e.author.id !== f.default.getId() && e.state === y.yb.SENT && !(0, C.Z)(e)),
         ),
-        j = (0, o.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        S = null != (t = b.ZP.useName(j)) ? t : v.intl.string(v.t.y1Wu2f),
-        P = (0, o.e7)([d.Z], () => d.Z.getStickerById(O)),
+        S = (0, o.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+        _ = null != (t = b.ZP.useName(S)) ? t : v.intl.string(v.t.y1Wu2f),
+        P = (0, o.e7)([d.Z], () => d.Z.getStickerById(x)),
         I = r.useCallback(async () => {
             if (null == l || "" === l)
                 try {
-                    await c.Z.sendGreetMessage(n.id, O),
+                    await c.Z.sendGreetMessage(n.id, x),
                         g.default.track(y.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
@@ -47,25 +47,25 @@ function x(e) {
                             type: "Send wave",
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || x(v.intl.string(v.t.Whhv4w));
+                    e.ok || 429 !== e.status || E(v.intl.string(v.t.Whhv4w));
                 }
         }, [n.id, n.type, l]),
-        Z = v.intl.formatToPlainString(v.t.m0zYbV, { username: S }),
+        Z = v.intl.formatToPlainString(v.t.m0zYbV, { username: _ }),
         T =
             null != l && "" !== l
                 ? (0, i.jsx)(s.Text, {
-                      className: _.error,
+                      className: O.error,
                       color: "text-feedback-critical",
                       variant: "text-sm/normal",
                       children: l,
                   })
                 : null;
-    return E
+    return j
         ? (0, i.jsxs)("div", {
-              className: _.containerCompact,
+              className: O.containerCompact,
               children: [
                   (0, i.jsxs)(s.P3F, {
-                      className: null != l && "" !== l ? _.compactButtonDisabled : _.compactButton,
+                      className: null != l && "" !== l ? O.compactButtonDisabled : O.compactButton,
                       "aria-label": v.intl.string(v.t.pJObYI),
                       onClick: I,
                       children: [
@@ -74,7 +74,7 @@ function x(e) {
                               size: 24,
                           }),
                           (0, i.jsx)(s.Text, {
-                              className: _.text,
+                              className: O.text,
                               variant: "text-md/medium",
                               children: Z,
                           }),
@@ -84,12 +84,12 @@ function x(e) {
               ],
           })
         : (0, i.jsxs)("div", {
-              className: _.containerExpanded,
+              className: O.containerExpanded,
               children: [
                   (0, i.jsx)(p.Z, {
                       sticker: P,
                       size: 160,
-                      className: _.stickerExpanded,
+                      className: O.stickerExpanded,
                   }),
                   (0, i.jsx)(s.Button, {
                       fullWidth: !0,

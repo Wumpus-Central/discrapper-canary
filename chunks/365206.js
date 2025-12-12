@@ -2,13 +2,13 @@ n.d(t, { Z: () => y });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(485853),
+    a = n.n(i),
+    o = n(485853),
     s = n(481060),
     l = n(839963),
     c = n(139256),
     u = n(388032),
-    d = n(33470);
+    d = n(762464);
 function f(e, t, n) {
     return (
         t in e
@@ -44,9 +44,9 @@ function _(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -55,8 +55,8 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let h = 40,
@@ -66,7 +66,7 @@ function E(e) {
     return (0, r.jsxs)("div", {
         className: d.votesData,
         children: [
-            t && (0, r.jsx)(a.T, { children: u.intl.string(u.t["8DAM+5"]) }),
+            t && (0, r.jsx)(o.T, { children: u.intl.string(u.t["8DAM+5"]) }),
             (0, r.jsxs)(s.Text, {
                 variant: "text-md/semibold",
                 color: "none",
@@ -81,17 +81,17 @@ function E(e) {
     });
 }
 function b(e) {
-    let { answer: t, isExpired: n, myAvatarUrl: i, canShowVoteCounts: a } = e,
+    let { answer: t, isExpired: n, myAvatarUrl: i, canShowVoteCounts: o } = e,
         s = !0 === t.isSelected,
         l = !0 === t.didSelfVote,
         u = !0 === t.isVictor;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.$w, {
-                attachmentClassName: o()(d.attachment, { [d.attachmentWithResults]: a }),
+                attachmentClassName: a()(d.attachment, { [d.attachmentWithResults]: o }),
                 emojiClassName: d.emoji,
                 media: t.pollMedia,
-                fallback: (0, r.jsx)("div", { className: o()(d.attachment, d.mediaMissing) }),
+                fallback: (0, r.jsx)("div", { className: a()(d.attachment, d.mediaMissing) }),
             }),
             s &&
                 (0, r.jsx)(c.ZY, {
@@ -100,7 +100,7 @@ function b(e) {
                     isExpired: n,
                     className: d.selectedIcon,
                 }),
-            a &&
+            o &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(E, {
@@ -122,14 +122,14 @@ function b(e) {
     });
 }
 function y(e) {
-    var { isExpired: t, myAvatarUrl: n, answersInteraction: i, canShowVoteCounts: a } = e,
+    var { isExpired: t, myAvatarUrl: n, answersInteraction: i, canShowVoteCounts: o } = e,
         s = _(e, ["isExpired", "myAvatarUrl", "answersInteraction", "canShowVoteCounts"]);
     return (0, r.jsx)(
         c.$e,
         p(
             {
                 className: d.answersContainer,
-                answerClassName: o()(d.answer, { [d.currentlyVoting]: i !== l.Y7.LIST }),
+                answerClassName: a()(d.answer, { [d.currentlyVoting]: i !== l.Y7.LIST }),
                 myAvatarUrl: n,
                 answersInteraction: i,
                 renderAnswerContent: (e) =>
@@ -138,7 +138,7 @@ function y(e) {
                         isExpired: t,
                         myAvatarUrl: n,
                         answersInteraction: i,
-                        canShowVoteCounts: a,
+                        canShowVoteCounts: o,
                     }),
             },
             s,

@@ -2,14 +2,14 @@ n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(793030),
+    a = n.n(i),
+    o = n(793030),
     s = n(302221),
     l = n(553896),
     c = n(848572),
     u = n(787528),
     d = n(388032),
-    f = n(726185);
+    f = n(70815);
 let p = (e, t) =>
         (null == e ? void 0 : e.status) === c.Vq.EARNED
             ? d.intl.format(d.t.Hu4jfi, { date: null != t ? t : new Date() })
@@ -38,7 +38,7 @@ let p = (e, t) =>
                 (0, r.jsx)("img", {
                     src: i,
                     alt: E,
-                    className: o()(f.badgeImage, {
+                    className: a()(f.badgeImage, {
                         [f.upcomingBadge]: t.status === c.Vq.UPCOMING,
                         [f.wide]: g,
                     }),
@@ -46,17 +46,17 @@ let p = (e, t) =>
                 (0, r.jsxs)("div", {
                     className: f.textColumn,
                     children: [
-                        (0, r.jsx)(a.xvT, {
+                        (0, r.jsx)(o.xvT, {
                             variant: "text-lg/semibold",
                             className: f.badgeText,
                             children: E,
                         }),
-                        (0, r.jsx)(a.xvT, {
+                        (0, r.jsx)(o.xvT, {
                             variant: "text-md/normal",
                             className: f.badgeText,
                             children: b,
                         }),
-                        (0, r.jsx)(a.xvT, {
+                        (0, r.jsx)(o.xvT, {
                             variant: "text-xs/normal",
                             children: p(t, n),
                         }),

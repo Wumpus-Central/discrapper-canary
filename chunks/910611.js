@@ -14,20 +14,20 @@ var i = n(54381),
     u = n(481060),
     d = n(835473),
     p = n(385499),
-    h = n(933557),
-    f = n(471445),
+    f = n(933557),
+    h = n(471445),
     m = n(243778),
     g = n(565138),
     b = n(370774),
     C = n(703656),
     y = n(621853),
     v = n(484459),
-    _ = n(699516),
-    O = n(914010),
-    x = n(594174),
-    E = n(768581),
-    j = n(63063),
-    S = n(374386),
+    O = n(699516),
+    x = n(914010),
+    E = n(594174),
+    j = n(768581),
+    S = n(63063),
+    _ = n(374386),
     P = n(946734),
     I = n(99843),
     Z = n(372564),
@@ -36,19 +36,19 @@ var i = n(54381),
     A = n(981631),
     w = n(921944),
     M = n(388032),
-    R = n(97009);
+    R = n(978966);
 function L(e) {
     var t;
     let { channel: n, children: r } = e,
         l = (0, d.q)(null == (t = n.linkedLobby) ? void 0 : t.application_id),
         [a, o] = (0, m.US)([s.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
     if (null == l) return null;
-    let p = E.ZP.getApplicationIconURL({
+    let p = j.ZP.getApplicationIconURL({
             id: l.id,
             icon: l.icon,
             size: 14,
         }),
-        [h, f] =
+        [f, h] =
             a !== s.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP
                 ? [M.intl.string(M.t["XJVlf/"]), void 0]
                 : [
@@ -66,7 +66,7 @@ function L(e) {
                                       variant: "text-sm/medium",
                                       color: "text-default",
                                       children: M.intl.format(M.t["16aguo"], {
-                                          helpdeskArticle: j.Z.getArticleURL(A.BhN.LINKED_LOBBIES),
+                                          helpdeskArticle: S.Z.getArticleURL(A.BhN.LINKED_LOBBIES),
                                       }),
                                   }),
                                   (0, i.jsx)(u.P3F, {
@@ -88,8 +88,8 @@ function L(e) {
         {
             position: "bottom",
             align: "left",
-            __unsupportedReactNodeAsText: h,
-            "aria-label": f,
+            __unsupportedReactNodeAsText: f,
+            "aria-label": h,
             forceOpen: a === s.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP || void 0,
             children: (0, i.jsxs)("div", {
                 className: R.linkedLobbyTooltip,
@@ -128,7 +128,7 @@ function D(e) {
             handleParentContextMenu: m,
             renderFollowButton: g,
         } = e,
-        b = (0, f.KS)(t, o),
+        b = (0, h.KS)(t, o),
         { prefix: C, level: y } = (function (e, t) {
             var n, i;
             switch (e) {
@@ -264,10 +264,10 @@ function D(e) {
         case A.d4z.ANNOUNCEMENT_THREAD:
         case A.d4z.PUBLIC_THREAD:
         case A.d4z.PRIVATE_THREAD:
-            let O = null;
+            let x = null;
             if (!s && null != l) {
-                let e = (0, f.KS)(l, o);
-                O = (0, i.jsxs)(r.Fragment, {
+                let e = (0, h.KS)(l, o);
+                x = (0, i.jsxs)(r.Fragment, {
                     children: [
                         V(e, M.intl.string(M.t.Pnajj0)),
                         (0, i.jsx)(T.Z.Title, {
@@ -275,32 +275,32 @@ function D(e) {
                             onContextMenu: m,
                             onClick: p,
                             className: a()(R.parentChannelName, R.cursorPointer),
-                            children: (0, h.F6)(l, x.default, _.Z),
+                            children: (0, f.F6)(l, E.default, O.Z),
                         }),
                         (0, i.jsx)(T.Z.Caret, {}),
                     ],
                 });
             }
-            let E = (null == l ? void 0 : l.type) != null && A.TPd.GUILD_THREADS_ONLY.has(l.type);
+            let j = (null == l ? void 0 : l.type) != null && A.TPd.GUILD_THREADS_ONLY.has(l.type);
             return (0, i.jsxs)(r.Fragment, {
                 children: [
-                    O,
-                    V(E ? null : b, M.intl.string(M.t["7Xm5QI"])),
+                    x,
+                    V(j ? null : b, M.intl.string(M.t["7Xm5QI"])),
                     (0, i.jsx)(T.Z.Title, {
                         level: y,
                         onContextMenu: d,
                         onClick: c,
                         className: a()({
                             [R.cursorPointer]: s,
-                            [R.forumPostTitle]: E,
-                            [R.forumPostSidebarTitle]: s && E,
+                            [R.forumPostTitle]: j,
+                            [R.forumPostSidebarTitle]: s && j,
                         }),
                         children: v,
                     }),
                 ],
             });
         case A.d4z.GUILD_DIRECTORY:
-            let j = (null == o ? void 0 : o.features.has(A.GuildFeatures.HUB))
+            let S = (null == o ? void 0 : o.features.has(A.GuildFeatures.HUB))
                 ? M.intl.formatToPlainString(M.t.Dy2aht, { guildName: n })
                 : n;
             return (0, i.jsxs)(r.Fragment, {
@@ -322,7 +322,7 @@ function D(e) {
                                   })
                                 : null,
                             " ",
-                            j,
+                            S,
                         ],
                     }),
                 ],
@@ -334,11 +334,11 @@ function D(e) {
 let k = (e) => {
     var t, n, l;
     let { channel: a } = e,
-        s = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
-        c = (0, o.e7)([x.default], () => x.default.getUser(a.getRecipientId())),
-        u = (0, S.G)(),
+        s = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
+        c = (0, o.e7)([E.default], () => E.default.getUser(a.getRecipientId())),
+        u = (0, _.G)(),
         d = (0, o.e7)([y.Z], () => (null != c ? y.Z.getUserProfile(c.id) : null)),
-        h = null != d && (null != (t = null == d ? void 0 : d.fetchEndedAt) ? t : 0) > 0;
+        f = null != d && (null != (t = null == d ? void 0 : d.fetchEndedAt) ? t : 0) > 0;
     return (r.useEffect(() => {
         (null == s ? void 0 : s.isStaff()) &&
             null != c &&
@@ -352,7 +352,7 @@ let k = (e) => {
     a.isDM() && (null == s ? void 0 : s.isStaff()) && null != c)
         ? c.isStaff()
             ? (0, i.jsx)(p.Z, { type: p.Z.Types.STAFF_ONLY_DM })
-            : u && h && !(null != (l = null == (n = d.badges) ? void 0 : n.some((e) => e.id.startsWith("staff"))) && l)
+            : u && f && !(null != (l = null == (n = d.badges) ? void 0 : n.some((e) => e.id.startsWith("staff"))) && l)
               ? (0, i.jsx)(p.Z, { type: p.Z.Types.NOT_STAFF_WARNING })
               : null
         : null;
@@ -396,7 +396,7 @@ function V(e, t) {
 }
 function F(e) {
     let { guild: t, channel: n, caretPosition: l = "left" } = e,
-        a = (0, o.e7)([O.Z], () => O.Z.getGuildId()),
+        a = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
         s = (0, b.D)(),
         d = r.useRef(null);
     return (a === A.I_8 || s) && null != t

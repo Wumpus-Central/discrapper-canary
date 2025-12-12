@@ -1,24 +1,24 @@
-n.d(t, { Z: () => f }), n(388685), n(361932), n(187205), n(953529);
+n.d(t, { Z: () => b }), n(388685), n(361932), n(187205), n(953529);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    s = n.n(l),
-    a = n(467721),
+    a = n.n(l),
+    s = n(467721),
     o = n(692547),
     c = n(481060),
-    u = n(259580),
-    d = n(293810),
+    d = n(259580),
+    u = n(293810),
     g = n(388032),
-    m = n(937028);
-function p(e) {
+    f = n(57175);
+function m(e) {
     let { checked: t, children: n } = e;
     return (0, r.jsxs)("div", {
-        className: m.row,
+        className: f.row,
         children: [
             (0, r.jsx)(c.Text, {
                 variant: "text-md/normal",
                 color: "interactive-text-active",
-                className: m.rowText,
+                className: f.rowText,
                 children: n,
             }),
             t
@@ -26,30 +26,30 @@ function p(e) {
                       size: "md",
                       color: "currentColor",
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: s()(m.rowIcon, m.rowIconChecked),
+                      className: a()(f.rowIcon, f.rowIconChecked),
                   })
-                : (0, r.jsx)("div", { className: s()(m.rowIcon, m.rowIconEmpty) }),
+                : (0, r.jsx)("div", { className: a()(f.rowIcon, f.rowIconEmpty) }),
         ],
     });
 }
-function f(e) {
+function b(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
-        s = t.flatMap((e) => e.items.map((e) => e.completed)),
-        o = s.filter((e) => e).length / s.length,
-        f = 1 === o,
-        h = (0, c.q_F)({ width: "".concat(100 * o, "%") }),
-        x = [
-            g.intl.format(g.t.wtQtXs, { promoPageGuideUrl: d.iv.PROMO_PAGE_GUIDE }),
-            g.intl.format(g.t["0Fo0wf"], { caseStudiesUrl: d.iv.CASE_STUDIES }),
-            g.intl.format(g.t["7JdzjA"], { subscriptionOfferingGuideUrl: d.iv.SUBSCRIPTION_OFFERING_GUIDE }),
-            g.intl.format(g.t.zkXN6I, { tierStructureGuideUrl: d.iv.TIER_STRUCTURE_GUIDE }),
+        a = t.flatMap((e) => e.items.map((e) => e.completed)),
+        o = a.filter((e) => e).length / a.length,
+        b = 1 === o,
+        p = (0, c.q_F)({ width: "".concat(100 * o, "%") }),
+        h = [
+            g.intl.format(g.t.wtQtXs, { promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }),
+            g.intl.format(g.t["0Fo0wf"], { caseStudiesUrl: u.iv.CASE_STUDIES }),
+            g.intl.format(g.t["7JdzjA"], { subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }),
+            g.intl.format(g.t.zkXN6I, { tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE }),
         ],
-        b = n
+        x = n
             ? null
             : (0, r.jsxs)(c.C3N, {
                   children: [
-                      !f &&
+                      !b &&
                           t.map((e, t) => {
                               let { title: n, items: l } = e;
                               return (0, r.jsxs)(
@@ -63,7 +63,7 @@ function f(e) {
                                                   gap: 8,
                                                   children: l.map((e, t) =>
                                                       (0, r.jsx)(
-                                                          p,
+                                                          m,
                                                           {
                                                               children: e.description,
                                                               checked: e.completed,
@@ -83,11 +83,11 @@ function f(e) {
                           label: g.intl.string(g.t.FO0AIS),
                           children: (0, r.jsx)(c.Kqy, {
                               gap: 8,
-                              children: x.map((e, t) =>
+                              children: h.map((e, t) =>
                                   (0, r.jsx)(
                                       "div",
                                       {
-                                          className: m.row,
+                                          className: f.row,
                                           children: (0, r.jsx)(c.Text, {
                                               variant: "text-md/normal",
                                               children: e,
@@ -101,36 +101,36 @@ function f(e) {
                   ],
               });
     return (0, r.jsx)("div", {
-        className: m.checklist,
+        className: f.checklist,
         children: (0, r.jsx)("div", {
-            className: m.container,
+            className: f.container,
             children: (0, r.jsxs)(c.Kqy, {
                 gap: 16,
                 children: [
                     (0, r.jsxs)(c.P3F, {
-                        className: m.headerBar,
+                        className: f.headerBar,
                         onClick: () => l((e) => !e),
                         children: [
                             (0, r.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
-                                className: m.headerText,
+                                className: f.headerText,
                                 children: g.intl.string(g.t["2Xbd/G"]),
                             }),
-                            (0, r.jsx)(u.Z, {
-                                direction: n ? u.Z.Directions.DOWN : u.Z.Directions.UP,
-                                className: m.headerCaret,
+                            (0, r.jsx)(d.Z, {
+                                direction: n ? d.Z.Directions.DOWN : d.Z.Directions.UP,
+                                className: f.headerCaret,
                             }),
                         ],
                     }),
-                    !f &&
+                    !b &&
                         (0, r.jsx)("div", {
-                            className: m.progressBarOuter,
-                            children: (0, r.jsx)(a.animated.div, {
-                                className: m.progressBarInner,
-                                style: h,
+                            className: f.progressBarOuter,
+                            children: (0, r.jsx)(s.animated.div, {
+                                className: f.progressBarInner,
+                                style: p,
                             }),
                         }),
-                    b,
+                    x,
                 ],
             }),
         }),

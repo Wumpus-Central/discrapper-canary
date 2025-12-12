@@ -2,11 +2,11 @@ n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    o = n(518950),
-    a = n(998502),
+    a = n(518950),
+    o = n(998502),
     s = n(631885),
     l = n(329242),
-    c = n(173664);
+    c = n(12252);
 function u(e, t, n) {
     return (
         t in e
@@ -59,15 +59,15 @@ function p(e, t) {
         e
     );
 }
-let _ = a.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK;
+let _ = o.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK;
 function m(e) {
     let { otherUser: t, status: n } = e,
-        a = (0, s.j_)(t.id, n),
+        o = (0, s.j_)(t.id, n),
         {
             avatarSrc: u,
             avatarDecorationSrc: f,
             eventHandlers: m,
-        } = (0, o.Z)({
+        } = (0, a.Z)({
             userId: t.id,
             size: i.EFr.SIZE_40,
             animateOnHover: !0,
@@ -96,7 +96,7 @@ function m(e) {
                     (0, r.jsx)(i.Text, {
                         color: "text-muted",
                         variant: "text-xs/normal",
-                        children: a,
+                        children: o,
                     }),
                 ],
             }),

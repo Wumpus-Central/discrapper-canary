@@ -13,12 +13,12 @@ var r,
     g = n(714338),
     h = n(663993),
     m = n(84615),
-    _ = n(984802),
-    b = n(819640),
-    E = n(585483),
+    b = n(984802),
+    E = n(819640),
+    _ = n(585483),
     O = n(981631),
     v = n(388032),
-    y = n(256076);
+    y = n(388596);
 function I(e, t, n) {
     return (
         t in e
@@ -78,7 +78,7 @@ let T = (0, h.Un)({
     }),
     j = (0, h.Un)({
         createPromise: () =>
-            Promise.all([n.e("36599"), n.e("7654"), n.e("86736"), n.e("86915")]).then(n.bind(n, 869779)),
+            Promise.all([n.e("36599"), n.e("7654"), n.e("9414"), n.e("86915")]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: "ChannelSettings",
     }),
@@ -97,11 +97,11 @@ let T = (0, h.Un)({
                 n.e("15851"),
                 n.e("51453"),
                 n.e("845"),
-                n.e("86736"),
+                n.e("9414"),
                 n.e("6850"),
                 n.e("58227"),
                 n.e("44686"),
-                n.e("384"),
+                n.e("9536"),
                 n.e("95140"),
             ]).then(n.bind(n, 994763)),
         webpackId: 994763,
@@ -158,7 +158,7 @@ class D extends (r = l.PureComponent) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
         o.Z.parallel([o.Z.spring(t, C({ toValue: 0 }, L)), o.Z.spring(n, C({ toValue: 1.1 }, L))]).start(() => {
-            e(), E.S.dispatch(O.CkL.LAYER_POP_COMPLETE);
+            e(), _.S.dispatch(O.CkL.LAYER_POP_COMPLETE);
         });
     }
     animateUnder() {
@@ -269,10 +269,10 @@ class D extends (r = l.PureComponent) {
 I(D, "defaultProps", { baseLayer: !1 }), I(D, "contextType", d.Sfi);
 class M extends l.PureComponent {
     componentDidMount() {
-        E.S.subscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
+        _.S.subscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
     }
     componentWillUnmount() {
-        E.S.unsubscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
+        _.S.unsubscribe(O.CkL.LAYER_POP_ESCAPE_KEY, p.xf);
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
@@ -329,8 +329,8 @@ class M extends l.PureComponent {
     }
 }
 function k(e) {
-    let t = (0, _.Ll)(),
-        n = (0, c.e7)([b.Z], () => b.Z.getLayers()),
+    let t = (0, b.Ll)(),
+        n = (0, c.e7)([E.Z], () => E.Z.getLayers()),
         r = (0, m.QP)(
             (e) => e.fullScreenLayers.length > 0 && !e.fullScreenLayers.some((e) => e.options.showAppUnderLayer),
         );

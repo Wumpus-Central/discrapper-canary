@@ -1,29 +1,29 @@
-n.d(t, { default: () => j }), n(388685);
+n.d(t, { default: () => f }), n(388685);
 var i = n(54381),
     o = n(473749),
     l = n(793030),
-    r = n(481060),
-    a = n(787014),
+    a = n(481060),
+    r = n(787014),
     c = n(907040),
     s = n(946458),
     d = n(185923),
     u = n(388032),
-    m = n(172107);
-let j = (e) => {
-    var t, n, j, p, b, x, h;
-    let { channel: f, onClose: v, transitionState: y } = e,
-        [g, O] = o.useState(null != (j = f.defaultReactionEmoji) ? j : null),
+    m = n(47945);
+let f = (e) => {
+    var t, n, f, j, b, p, x;
+    let { channel: h, onClose: v, transitionState: y } = e,
+        [g, O] = o.useState(null != (f = h.defaultReactionEmoji) ? f : null),
         [N, w] = o.useState(!1),
         [E, P] = o.useState(!1),
         k = o.useRef(null),
-        _ =
-            (null != (p = null == (t = f.defaultReactionEmoji) ? void 0 : t.emojiId) ? p : null) !==
-            (null != (b = null == g ? void 0 : g.emojiId) ? b : null),
         C =
-            (null != (x = null == (n = f.defaultReactionEmoji) ? void 0 : n.emojiName) ? x : null) !==
-            (null != (h = null == g ? void 0 : g.emojiName) ? h : null),
-        R = _ || C,
-        B = (e) => {
+            (null != (j = null == (t = h.defaultReactionEmoji) ? void 0 : t.emojiId) ? j : null) !==
+            (null != (b = null == g ? void 0 : g.emojiId) ? b : null),
+        R =
+            (null != (p = null == (n = h.defaultReactionEmoji) ? void 0 : n.emojiName) ? p : null) !==
+            (null != (x = null == g ? void 0 : g.emojiName) ? x : null),
+        B = C || R,
+        I = (e) => {
             O(
                 null == e
                     ? null
@@ -32,11 +32,11 @@ let j = (e) => {
                       : { emojiName: e.optionallyDiverseSequence },
             );
         },
-        I = async () => {
-            if (R) {
+        S = async () => {
+            if (B) {
                 w(!0), P(!1);
                 try {
-                    await (0, a.wk)(f.id, { defaultReactionEmoji: g }), v();
+                    await (0, r.wk)(h.id, { defaultReactionEmoji: g }), v();
                 } catch (e) {
                     P(!0);
                 } finally {
@@ -59,39 +59,39 @@ let j = (e) => {
                 variant: "primary",
                 text: u.intl.string(u.t["R3BPH+"]),
                 loading: N,
-                disabled: !R,
-                onClick: I,
+                disabled: !B,
+                onClick: S,
                 autoFocus: !0,
             },
         ],
         children: [
             (0, i.jsx)(s.Z, { reactionEmoji: g }),
-            (0, i.jsxs)(r.ButtonGroup, {
+            (0, i.jsxs)(a.ButtonGroup, {
                 size: "sm",
                 className: m.buttonRow,
                 children: [
-                    (0, i.jsx)(r.yRy, {
+                    (0, i.jsx)(a.yRy, {
                         targetElementRef: k,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(c.Z, {
-                                guildId: null == f ? void 0 : f.guild_id,
+                                guildId: null == h ? void 0 : h.guild_id,
                                 closePopout: t,
                                 onSelectEmoji: (e) => {
                                     let { emoji: n, willClose: i } = e;
-                                    B(n), i && t();
+                                    I(n), i && t();
                                 },
                                 pickerIntention: d.Hz.COMMUNITY_CONTENT,
-                                channel: f,
+                                channel: h,
                             });
                         },
                         position: "right",
-                        animation: r.yRy.Animation.NONE,
+                        animation: a.yRy.Animation.NONE,
                         align: "center",
                         children: (e) => {
                             var t, n;
                             return (0, i.jsx)(
-                                r.Button,
+                                a.Button,
                                 ((t = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -144,15 +144,15 @@ let j = (e) => {
                         },
                     }),
                     null != g &&
-                        (0, i.jsx)(r.Button, {
+                        (0, i.jsx)(a.Button, {
                             text: u.intl.string(u.t.N86XcP),
                             variant: "critical-secondary",
-                            onClick: () => B(null),
+                            onClick: () => I(null),
                         }),
                 ],
             }),
             E
-                ? (0, i.jsx)(r.Text, {
+                ? (0, i.jsx)(a.Text, {
                       variant: "text-sm/normal",
                       color: "text-feedback-critical",
                       children: u.intl.string(u.t.F75nNl),

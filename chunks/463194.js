@@ -1,15 +1,15 @@
 n.d(t, { F: () => h });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(596454),
     u = n(607070),
     d = n(104505),
     f = n(176354),
-    p = n(300849);
+    p = n(65589);
 function _(e) {
     let { emoji: t, shouldAnimate: n } = e;
     if (null == t) return null;
@@ -24,14 +24,14 @@ function _(e) {
 }
 function m(e) {
     let { trait: t, ellipsize: n } = e,
-        o = i.useRef(null),
-        c = (0, d.X)(o),
+        a = i.useRef(null),
+        c = (0, d.X)(a),
         f = !(0, s.e7)([u.Z], () => u.Z.useReducedMotion) && c;
     return null == t.label || t.label.length <= 0
         ? null
         : (0, r.jsxs)("div", {
-              ref: o,
-              className: a()(p.trait, { [p.ellipsize]: n }),
+              ref: a,
+              className: o()(p.trait, { [p.ellipsize]: n }),
               children: [
                   (0, r.jsx)(_, {
                       emoji: t.emoji,
@@ -55,7 +55,7 @@ function h(e) {
                     ? (0, r.jsx)(
                           "div",
                           {
-                              className: a()(p.trait, { [p.ellipsize]: t.ellipsize }),
+                              className: o()(p.trait, { [p.ellipsize]: t.ellipsize }),
                               children: (0, r.jsx)(l.Text, {
                                   tag: "span",
                                   variant: "text-sm/normal",
@@ -75,7 +75,7 @@ function h(e) {
                       ),
             [],
         ),
-        o = i.useCallback((e) => n(e, { ellipsize: !0 }), [n]),
+        a = i.useCallback((e) => n(e, { ellipsize: !0 }), [n]),
         s = i.useCallback((e) => n(e, { ellipsize: !1 }), [n]),
         c = i.useCallback(
             (e) =>
@@ -90,7 +90,7 @@ function h(e) {
         : (0, r.jsx)(l.Epb, {
               className: p.container,
               items: t,
-              renderItem: o,
+              renderItem: a,
               renderOverflow: c,
               maxLines: 2,
               itemGapPx: 4,

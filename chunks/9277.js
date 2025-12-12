@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(55160),
     l = n(442837),
     c = n(114101),
@@ -17,9 +17,9 @@ var r = n(54381),
     E = n(981631),
     b = n(957825),
     y = n(388032),
-    O = n(564355);
+    O = n(72775);
 function v(e, t) {
-    let { disabled: n, type: o, channel: v } = e,
+    let { disabled: n, type: a, channel: v } = e,
         [S, I] = i.useState(!1),
         T = (0, l.e7)([p.Z], () => {
             var e, t;
@@ -46,13 +46,13 @@ function v(e, t) {
         handler: w,
     });
     let D = i.useCallback(() => {
-            (0, f.RO)(b.X1.GIF, o, v.id);
-        }, [o, v.id]),
+            (0, f.RO)(b.X1.GIF, a, v.id);
+        }, [a, v.id]),
         { Component: x, events: L, play: j } = (0, c.V)(),
         M = (0, m.v)(d.O),
-        k = o === h.Ie.NORMAL ? M : void 0;
+        k = a === h.Ie.NORMAL ? M : void 0;
     if (n) return null;
-    let U = C === b.X1.GIF && A === o && P === v.id;
+    let U = C === b.X1.GIF && A === a && P === v.id;
     return (0, r.jsx)(u.u, {
         keyboardShortcut: T ? void 0 : k,
         text: y.intl.string(T ? y.t.mE2e8A : y.t.nffuyb),
@@ -60,7 +60,7 @@ function v(e, t) {
         forceOpen: T,
         children: (0, r.jsx)("div", {
             ref: t,
-            className: a()(b.CT, O.buttonContainer),
+            className: o()(b.CT, O.buttonContainer),
             children: (0, r.jsx)(g.Z, {
                 className: O.button,
                 onMouseEnter: L.onMouseEnter,

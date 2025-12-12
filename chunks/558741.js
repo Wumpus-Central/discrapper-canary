@@ -1,0 +1,17 @@
+e.exports = {
+    content: "_75e8ee170883da62-content",
+    innerContent: "_75e8ee170883da62-innerContent",
+    innerGlow: "_75e8ee170883da62-innerGlow",
+    outerGlow: "_75e8ee170883da62-outerGlow",
+    subContent: "_75e8ee170883da62-subContent",
+    avatars: "_75e8ee170883da62-avatars",
+    recipientUserAvatar: "_75e8ee170883da62-recipientUserAvatar",
+    currentUserAvatar: "_75e8ee170883da62-currentUserAvatar",
+    textContainer: "_75e8ee170883da62-textContainer",
+    subHeaderContainer: "_75e8ee170883da62-subHeaderContainer",
+    subHeaderText: "_75e8ee170883da62-subHeaderText",
+    buttonContainer: "_75e8ee170883da62-buttonContainer",
+    connector: "_75e8ee170883da62-connector",
+    rightPopoutConnector: "_75e8ee170883da62-rightPopoutConnector",
+    leftPopoutConnector: "_75e8ee170883da62-leftPopoutConnector",
+};

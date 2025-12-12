@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(793030),
     l = n(442837),
     c = n(481060),
@@ -18,23 +18,23 @@ var r = n(54381),
     b = n(947189),
     y = n(612776),
     O = n(981631),
-    v = n(862474),
+    v = n(638398),
     S = n(388032),
-    I = n(417788),
-    T = n(763645),
-    C = n(868981),
-    A = n(918746);
+    I = n(554445),
+    T = n(469095),
+    C = n(1222),
+    A = n(976999);
 function N() {
     let e = (0, i.useContext)(f.Q),
         t = (0, c.dQu)(e.primaryColor).hex(),
         {
-            quests: { numOrbs: n, numCompleted: o } = {
+            quests: { numOrbs: n, numCompleted: a } = {
                 numOrbs: 0,
                 numCompleted: 0,
             },
         } = (0, l.e7)([p.Z], () => p.Z.getCheckpointData()),
-        N = 0 === o,
-        P = n > 0 || 0 === o,
+        N = 0 === a,
+        P = n > 0 || 0 === a,
         R = () => {
             (0, u.Z)(d.Z.getArticleURL(O.BhN.QUESTS_LEARN_MORE));
         };
@@ -50,7 +50,7 @@ function N() {
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: a()(I.title, { [T.emptyState]: N }),
+                        className: o()(I.title, { [T.emptyState]: N }),
                         children: [
                             (0, r.jsx)(s.qDn, {
                                 size: "refresh_sm",
@@ -65,13 +65,13 @@ function N() {
                             }),
                         ],
                     }),
-                    !N && (0, r.jsx)(b.Z, { end: o }),
+                    !N && (0, r.jsx)(b.Z, { end: a }),
                     P &&
                         (0, r.jsx)(E.Z, {
                             variant: "heading-xxl/medium",
                             className: T.subtitle,
                             children:
-                                0 === o
+                                0 === a
                                     ? S.intl.format(v.default.UYTBoT, {
                                           learnMoreHook: (e, t) =>
                                               (0, r.jsx)(

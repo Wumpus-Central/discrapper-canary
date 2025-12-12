@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(91192),
     l = n(536895),
     c = n(442837),
@@ -18,8 +18,8 @@ var r = n(54381),
     b = n(444282),
     y = n(898463),
     O = n(981631),
-    v = n(83120),
-    S = n(154257);
+    v = n(575817),
+    S = n(164701);
 function I(e, t, n) {
     return (
         t in e
@@ -78,9 +78,9 @@ function N(e, t) {
         r,
         i = P(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -89,13 +89,13 @@ function P(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let R = [];
 function w(e) {
-    let { channelId: t, type: n, ignoreFile: o, smallAttachments: I = !1 } = e,
+    let { channelId: t, type: n, ignoreFile: a, smallAttachments: I = !1 } = e,
         C = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         P = (0, _.Z)("attachments", l.hy.HORIZONTAL),
         w = (0, c.e7)([h.Z], () => h.Z.getUploads(t, n.drafts.type)),
@@ -173,7 +173,7 @@ function w(e) {
                     k(i);
             }
         }, [t, j.length, n]);
-    let F = w.filter((e) => e.filename !== o);
+    let F = w.filter((e) => e.filename !== a);
     return (!D && 0 === F.length) || (D && 0 === j.length)
         ? null
         : (0, r.jsx)(s.bG, {
@@ -181,11 +181,11 @@ function w(e) {
               children: (0, r.jsx)(s.SJ, {
                   children: (e) => {
                       var { ref: i } = e,
-                          o = N(e, ["ref"]);
+                          a = N(e, ["ref"]);
                       return (0, r.jsx)(
                           "ul",
-                          A(T({ ref: i }, o), {
-                              className: a()(v.channelAttachmentArea, S.scrollbarGhost),
+                          A(T({ ref: i }, a), {
+                              className: o()(v.channelAttachmentArea, S.scrollbarGhost),
                               children: D
                                   ? j.map((e) =>
                                         (0, r.jsx)(
@@ -219,13 +219,13 @@ function w(e) {
           });
 }
 function D(e) {
-    let { channelId: t, type: n, canAttachFiles: i, ignoreFile: o, smallAttachments: a = !1 } = e;
+    let { channelId: t, type: n, canAttachFiles: i, ignoreFile: a, smallAttachments: o = !1 } = e;
     return i
         ? (0, r.jsx)(w, {
               channelId: t,
               type: n,
-              ignoreFile: o,
-              smallAttachments: a,
+              ignoreFile: a,
+              smallAttachments: o,
           })
         : null;
 }

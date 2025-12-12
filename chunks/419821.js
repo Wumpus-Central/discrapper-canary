@@ -1,17 +1,17 @@
 n.d(t, { u: () => y });
 var r = n(54381),
     i = n(473749),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(399606),
     l = n(481060),
     c = n(594174),
     u = n(933970),
     d = n(340453),
     f = n(292352),
-    p = n(435757),
+    p = n(517319),
     _ = n(388032),
-    m = n(823074);
+    m = n(68842);
 function h(e, t, n) {
     return (
         t in e
@@ -66,21 +66,21 @@ function b(e, t) {
 }
 function y(e) {
     let { user: t } = e,
-        o = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
+        a = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         h = i.useCallback(() => {
-            a()(void 0 !== o, "User must be logged in to accept a link request"),
+            o()(void 0 !== a, "User must be logged in to accept a link request"),
                 (0, l.ZDy)(async () => {
                     let { default: e } = await n.e("50872").then(n.bind(n, 442673));
                     return (n) =>
                         (0, r.jsx)(
                             e,
                             b(g({}, n), {
-                                currentUser: o,
+                                currentUser: a,
                                 otherUser: t,
                             }),
                         );
                 });
-        }, [o, t]);
+        }, [a, t]);
     return (0, r.jsxs)("div", {
         className: m.container,
         children: [

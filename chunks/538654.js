@@ -1,0 +1,20 @@
+var r = {
+    boxBackdrop: "b0db003538002d93-boxBackdrop",
+    bentoSectionHeader: "b0db003538002d93-bentoSectionHeader",
+    bentoBoxesGrid: "b0db003538002d93-bentoBoxesGrid",
+    bentoBoxButton: "b0db003538002d93-bentoBoxButton",
+    backgroundColor: "b0db003538002d93-backgroundColor",
+    description: "b0db003538002d93-description",
+    boxesSubHeader: "b0db003538002d93-boxesSubHeader",
+    badge: "b0db003538002d93-badge",
+    boxVideo: "b0db003538002d93-boxVideo",
+    header: "b0db003538002d93-header",
+    boxArtContainer: "b0db003538002d93-boxArtContainer",
+    large: "b0db003538002d93-large",
+    medium: "b0db003538002d93-medium",
+    small: "b0db003538002d93-small",
+    boxContainer: "b0db003538002d93-boxContainer",
+    textBox: "b0db003538002d93-textBox",
+    gradientBackground: "b0db003538002d93-gradientBackground",
+};
+n.r((e.exports = r));

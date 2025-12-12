@@ -1,46 +1,46 @@
-n.d(t, { Z: () => s }), n(953529), n(388685);
-var r = n(54381),
-    l = n(473749),
-    i = n(793030),
-    a = n(481060),
-    o = n(388032),
-    c = n(1904);
-function s(e) {
-    let { errorText: t, title: n, description: s, transitionState: d, onCancel: u, onConfirm: p, children: g } = e,
-        [m, b] = l.useState(!1),
-        h = l.useCallback(async () => {
-            b(!0);
+r.d(t, { Z: () => b }), r(953529), r(388685);
+var n = r(54381),
+    a = r(473749),
+    i = r(793030),
+    o = r(481060),
+    c = r(388032),
+    l = r(386305);
+function b(e) {
+    let { errorText: t, title: r, description: b, transitionState: s, onCancel: u, onConfirm: d, children: p } = e,
+        [g, f] = a.useState(!1),
+        y = a.useCallback(async () => {
+            f(!0);
             try {
-                await p();
+                await d();
             } catch (e) {
                 throw e;
             } finally {
-                b(!1);
+                f(!1);
             }
-        }, [p]);
-    return (0, r.jsxs)(i.Modal, {
-        transitionState: d,
+        }, [d]);
+    return (0, n.jsxs)(i.Modal, {
+        transitionState: s,
         onClose: u,
-        title: n,
-        subtitle: s,
+        title: r,
+        subtitle: b,
         actions: [
             {
-                text: o.intl.string(o.t["ETE/oC"]),
+                text: c.intl.string(c.t["ETE/oC"]),
                 variant: "secondary",
                 onClick: u,
             },
             {
-                text: o.intl.string(o.t["R3BPH+"]),
-                onClick: h,
+                text: c.intl.string(c.t["R3BPH+"]),
+                onClick: y,
                 variant: "primary",
-                loading: m,
+                loading: g,
             },
         ],
         children: [
-            g,
+            p,
             null != t && "" !== t
-                ? (0, r.jsx)(a.Text, {
-                      className: c.errorText,
+                ? (0, n.jsx)(o.Text, {
+                      className: l.errorText,
                       variant: "text-xs/normal",
                       color: "text-feedback-critical",
                       children: t,

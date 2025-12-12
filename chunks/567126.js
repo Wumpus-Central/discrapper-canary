@@ -22,13 +22,13 @@ var r = n(54381),
     p = n(579806),
     h = n(600164),
     m = n(152708),
-    _ = n(594190),
-    g = n(751571),
-    x = n(616022),
-    v = n(787695),
+    g = n(594190),
+    x = n(751571),
+    v = n(616022),
+    b = n(787695),
     j = n(759479),
-    S = n(263463),
-    b = n(131951),
+    _ = n(263463),
+    S = n(131951),
     y = n(449224),
     C = n(358085),
     O = n(463727),
@@ -46,7 +46,7 @@ var r = n(54381),
     D = n(324805),
     L = n(65154),
     B = n(388032),
-    G = n(336606);
+    G = n(2688);
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -73,8 +73,8 @@ function U(e) {
     return e;
 }
 function F(e, t, n, r) {
-    let i = (0, C.isWindows)() ? (0, E.Z)(_.ZP, y.Z) : null,
-        l = _.ZP.getRunningGames(),
+    let i = (0, C.isWindows)() ? (0, E.Z)(g.ZP, y.Z) : null,
+        l = g.ZP.getRunningGames(),
         s = null == n ? void 0 : n.split(":")[1],
         o = e.id.split(":")[1];
     if (null != s && s === o) return 0;
@@ -85,7 +85,7 @@ function F(e, t, n, r) {
     return null != a && M.Mm.has(a) ? 2 : 1;
 }
 function H(e, t, n) {
-    let r = (0, v.Z)({ location: D.dr.STREAM_SOURCE_SELECT });
+    let r = (0, b.Z)({ location: D.dr.STREAM_SOURCE_SELECT });
     return i.useMemo(() => {
         if (null == n || !r) return null;
         for (let r of n) {
@@ -109,29 +109,29 @@ function H(e, t, n) {
 function W(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: l } = O.Z.useExperiment({ location: "GoLive_Source_Select" }),
-        o = b.Z.supports(L.AN.GO_LIVE_HARDWARE),
+        o = S.Z.supports(L.AN.GO_LIVE_HARDWARE),
         [a, p] = i.useState(null),
-        [v, j] = i.useState(null),
+        [b, j] = i.useState(null),
         [y, C] = i.useState(null),
         w = null != y && y.length > 0,
         [Z, P] = i.useState(c.vA.WINDOW),
         [E, T] = i.useState(!1),
         A = i.useRef(null),
         M = i.useRef(new u.Xp()),
-        D = (0, d.e7)([_.ZP], () => _.ZP.getRunningGames()),
+        D = (0, d.e7)([g.ZP], () => g.ZP.getRunningGames()),
         U = H(
-            (0, d.e7)([x.Z], () => x.Z.quests),
+            (0, d.e7)([v.Z], () => v.Z.quests),
             D,
-            v,
+            b,
         ),
         W = i.useMemo(
             () =>
-                null == v
+                null == b
                     ? null
-                    : [...v].sort(
+                    : [...b].sort(
                           (e, t) => F(t, null == U ? void 0 : U.source.id) - F(e, null == U ? void 0 : U.source.id),
                       ),
-            [U, v],
+            [U, b],
         );
     i.useEffect(() => {
         let e = M.current;
@@ -164,7 +164,7 @@ function W(e) {
         }, []),
         [z, J] = i.useState(void 0);
     i.useEffect(() => {
-        g.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(J);
+        x.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(J);
     }, []);
     let X = (function (e) {
         switch (e) {
@@ -257,7 +257,7 @@ function W(e) {
                     null != e && T(!e.isScrolledToTop());
                 },
                 children: [
-                    Z === c.vA.WINDOW && null != U && (0, r.jsx)(S.Z, { quest: U.quest }),
+                    Z === c.vA.WINDOW && null != U && (0, r.jsx)(_.Z, { quest: U.quest }),
                     (0, r.jsx)(m.Z, {
                         layout: m.Z.Layout.WRAP,
                         columns: 2,
@@ -333,7 +333,7 @@ function J(e) {
     i.useEffect(() => {
         let e = h.current,
             t = () => {
-                let e = Object.entries(b.Z.getVideoDevices()).filter((e) => {
+                let e = Object.entries(S.Z.getVideoDevices()).filter((e) => {
                     let [t, n] = e;
                     return !n.disabled;
                 });
@@ -384,26 +384,26 @@ function J(e) {
             },
             [t, c],
         ),
-        _ = (0, C.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, M.jR),
-        g = (0, C.isMac)(),
-        x = b.Z.getUseGamescopeCapture(),
-        [v, j] = i.useState(!1),
-        S = i.useCallback(() => {
-            j(!v);
-        }, [v]),
-        y = _
+        g = (0, C.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, M.jR),
+        x = (0, C.isMac)(),
+        v = S.Z.getUseGamescopeCapture(),
+        [b, j] = i.useState(!1),
+        _ = i.useCallback(() => {
+            j(!b);
+        }, [b]),
+        y = g
             ? (0, r.jsx)(V, { onSelect: t })
             : (0, r.jsxs)("div", {
                   className: G.nativePickerTypes,
                   children: [
                       (0, r.jsx)(z, {
                           onSelect: t,
-                          id: x ? "gamescope" : "screen",
+                          id: v ? "gamescope" : "screen",
                           name: B.intl.string(B.t.R4wpLN),
                           text: B.intl.string(B.t.cVUFXY),
                           icon: f.pzj,
                       }),
-                      !x &&
+                      !v &&
                           (0, r.jsx)(z, {
                               onSelect: t,
                               id: "window",
@@ -411,7 +411,7 @@ function J(e) {
                               text: B.intl.string(B.t.dG2A1E),
                               icon: f.GON,
                           }),
-                      g
+                      x
                           ? (0, r.jsx)(z, {
                                 onSelect: t,
                                 id: "app",
@@ -435,10 +435,10 @@ function J(e) {
             0 === l.length
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: s()(G.nativePickerCaptureSection, v ? null : G.nativePickerCollapsed),
+                      className: s()(G.nativePickerCaptureSection, b ? null : G.nativePickerCollapsed),
                       children: [
                           (0, r.jsxs)(f.P3F, {
-                              onClick: S,
+                              onClick: _,
                               className: G.nativePickerLabel,
                               children: [
                                   (0, r.jsx)(f.Text, {
@@ -479,7 +479,7 @@ function X(e) {
         { lastPickerAction: s, lastPickerError: o } = (0, T.Z)(t, n);
     return (
         i.useEffect(() => {
-            b.Z.getUseGamescopeCapture() ||
+            S.Z.getUseGamescopeCapture() ||
                 ((0, C.isLinux)() ||
                 ((0, C.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, M.jR))
                     ? (0, Z.T)(l)

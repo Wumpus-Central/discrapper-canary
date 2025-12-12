@@ -1,3 +1,14 @@
-n.d(t, { Z: () => r });
-let r =
-    "https://cdn.discordapp.com/assets/content/7c8ee05f499cdf960d0b69208667276e8ca276aa2edcee6141d55e237d1ed5d2.svg";
+n.d(t, { Z: () => s });
+var r = n(473749),
+    i = n(442837),
+    a = n(897285),
+    o = n(924301);
+function s(e, t, n) {
+    let s = (0, i.e7)([o.ZP], () => o.ZP.getUserCount(t, n));
+    return (
+        (0, r.useEffect)(() => {
+            null != e && null != t && a.Z.getGuildEventUserCounts(e, t, null != n ? [n] : []);
+        }, [t, e, n]),
+        s
+    );
+}

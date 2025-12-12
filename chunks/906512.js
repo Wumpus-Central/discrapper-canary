@@ -1,26 +1,26 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(692547),
     c = n(28664),
-    u = n(481060),
-    d = n(142497),
+    d = n(481060),
+    u = n(142497),
     g = n(338327),
-    m = n(496675),
-    p = n(63063),
-    f = n(981631),
-    h = n(190378),
-    x = n(388032),
-    b = n(275657),
+    f = n(496675),
+    m = n(63063),
+    b = n(981631),
+    p = n(190378),
+    h = n(388032),
+    x = n(77059),
     j = n(438825),
-    _ = n(236140),
-    v = n(37069),
-    O = n(518513),
-    C = n(40271);
-function y(e) {
+    v = n(236140),
+    O = n(37069),
+    C = n(518513),
+    y = n(40271);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function y(e) {
     }
     return e;
 }
-let N = [
+let E = [
         {
             iconSrc: n(348986),
             name: "Pokemon GO Paris",
@@ -59,13 +59,13 @@ let N = [
             rightAlign: !0,
         },
         {
-            iconSrc: O,
+            iconSrc: C,
             name: "Learn Latin",
             position: [-280, -30],
             faded: !0,
         },
         {
-            iconSrc: C,
+            iconSrc: y,
             name: "r/leagueoflegends",
             position: [-320, -30],
             rightAlign: !0,
@@ -76,20 +76,20 @@ let N = [
             position: [-250, 40],
         },
         {
-            iconSrc: v,
+            iconSrc: O,
             name: "Hogwarts School",
             position: [-270, 40],
             faded: !0,
             rightAlign: !0,
         },
     ],
-    E = (e) => {
-        let { icon: t, color: n, size: i = 24, header: l, body: s } = e;
+    I = (e) => {
+        let { icon: t, color: n, size: i = 24, header: l, body: a } = e;
         return (0, r.jsxs)("div", {
-            className: b.featureCard,
+            className: x.featureCard,
             children: [
                 (0, r.jsx)("div", {
-                    className: b.featureIcon,
+                    className: x.featureIcon,
                     children: (0, r.jsx)(t, {
                         color: null != n ? n : "currentColor",
                         width: i,
@@ -97,31 +97,31 @@ let N = [
                         size: "custom",
                     }),
                 }),
-                (0, r.jsx)(u.Heading, {
+                (0, r.jsx)(d.Heading, {
                     variant: "heading-md/semibold",
-                    className: b.featureHeader,
+                    className: x.featureHeader,
                     children: l,
                 }),
-                (0, r.jsx)(u.Text, {
+                (0, r.jsx)(d.Text, {
                     color: "text-default",
                     variant: "text-sm/normal",
-                    children: s,
+                    children: a,
                 }),
             ],
         });
     },
-    I = (e) => {
-        let { iconSrc: t, name: n, position: i, faded: l, rightAlign: a, imageCoordinates: o } = e,
+    S = (e) => {
+        let { iconSrc: t, name: n, position: i, faded: l, rightAlign: s, imageCoordinates: o } = e,
             c = {
-                [a ? "right" : "left"]: o[0] + i[0],
+                [s ? "right" : "left"]: o[0] + i[0],
                 top: o[1] + i[1],
             };
         return (0, r.jsxs)("div", {
-            className: s()(b.guildDetails, { [b.faded]: l }),
+            className: a()(x.guildDetails, { [x.faded]: l }),
             style: c,
             children: [
                 (0, r.jsx)("div", {
-                    className: b.guildIcon,
+                    className: x.guildIcon,
                     children: (0, r.jsx)("img", {
                         alt: "",
                         src: t,
@@ -129,43 +129,43 @@ let N = [
                         height: 24,
                     }),
                 }),
-                (0, r.jsx)(u.Heading, {
+                (0, r.jsx)(d.Heading, {
                     variant: "heading-deprecated-12/semibold",
                     children: n,
                 }),
             ],
         });
     },
-    S = (e) => {
+    _ = (e) => {
         let { guild: t } = e,
             [n, l] = i.useState(0),
-            [s, v] = i.useState(0),
-            [O, C] = i.useState(),
-            S = (0, a.e7)([m.Z], () => m.Z.can(f.Plq.ADMINISTRATOR, t)),
-            T = null == O ? void 0 : O.offsetWidth,
-            P = null == O ? void 0 : O.offsetHeight;
+            [a, O] = i.useState(0),
+            [C, y] = i.useState(),
+            _ = (0, s.e7)([f.Z], () => f.Z.can(b.Plq.ADMINISTRATOR, t)),
+            T = null == C ? void 0 : C.offsetWidth,
+            P = null == C ? void 0 : C.offsetHeight;
         return (
             i.useEffect(() => {
-                null != T && l(T / 2), null != P && v(P / 2);
-            }, [T, P, l, v]),
+                null != T && l(T / 2), null != P && O(P / 2);
+            }, [T, P, l, O]),
             i.useEffect(() => {
-                (0, d.Kw)(h.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
+                (0, u.Kw)(p.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []),
             (0, r.jsxs)("div", {
-                className: b.container,
+                className: x.container,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: b.banner,
-                        ref: (e) => C(e),
+                        className: x.banner,
+                        ref: (e) => y(e),
                         children: [
-                            N.map((e) => {
+                            E.map((e) => {
                                 var t, i;
                                 return (0, r.jsx)(
-                                    I,
-                                    ((t = y({}, e)),
+                                    S,
+                                    ((t = N({}, e)),
                                     (i = i =
                                         {
-                                            imageCoordinates: [n, s],
+                                            imageCoordinates: [n, a],
                                         }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
@@ -186,71 +186,71 @@ let N = [
                             (0, r.jsx)("img", {
                                 alt: "",
                                 src: j,
-                                className: b.image,
+                                className: x.image,
                                 width: 256,
                             }),
                             (0, r.jsx)("img", {
                                 alt: "",
-                                src: _,
-                                className: b.sparkles,
+                                src: v,
+                                className: x.sparkles,
                             }),
                         ],
                     }),
-                    (0, r.jsx)(u.Heading, {
+                    (0, r.jsx)(d.Heading, {
                         variant: "heading-xl/semibold",
-                        children: x.intl.string(x.t["M/gBcA"]),
+                        children: h.intl.string(h.t["M/gBcA"]),
                     }),
-                    (0, r.jsx)(u.Text, {
+                    (0, r.jsx)(d.Text, {
                         color: "text-default",
                         variant: "text-md/normal",
-                        className: b.body,
-                        children: x.intl.format(x.t["52EgsM"], {
-                            helpdeskArticle: p.Z.getArticleURL(f.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
+                        className: x.body,
+                        children: h.intl.format(h.t["52EgsM"], {
+                            helpdeskArticle: m.Z.getArticleURL(b.BhN.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
                         }),
                     }),
                     (0, r.jsx)(c.u, {
-                        text: S ? null : x.intl.string(x.t["pjG+T3"]),
-                        "aria-label": S ? void 0 : x.intl.string(x.t["pjG+T3"]),
+                        text: _ ? null : h.intl.string(h.t["pjG+T3"]),
+                        "aria-label": _ ? void 0 : h.intl.string(h.t["pjG+T3"]),
                         children: (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: b.button,
-                            children: (0, r.jsx)(u.Button, {
+                            className: x.button,
+                            children: (0, r.jsx)(d.Button, {
                                 variant: "primary",
-                                text: x.intl.string(x.t.LhlgY9),
+                                text: h.intl.string(h.t.LhlgY9),
                                 onClick: () => {
                                     g.Z.open();
                                 },
-                                disabled: !S,
+                                disabled: !_,
                             }),
                         }),
                     }),
-                    (0, r.jsx)("hr", { className: b.separator }),
-                    (0, r.jsx)(u.Text, {
+                    (0, r.jsx)("hr", { className: x.separator }),
+                    (0, r.jsx)(d.Text, {
                         color: "text-default",
                         variant: "text-sm/normal",
-                        children: x.intl.string(x.t.OzLWLE),
+                        children: h.intl.string(h.t.OzLWLE),
                     }),
-                    (0, r.jsx)(u.Text, {
+                    (0, r.jsx)(d.Text, {
                         color: "text-default",
-                        className: b.body,
+                        className: x.body,
                         variant: "text-sm/normal",
-                        children: x.intl.format(x.t.rjhrqC, {
-                            helpdeskArticle: p.Z.getArticleURL(f.BhN.GUILD_COMMUNITY_FEATURE),
+                        children: h.intl.format(h.t.rjhrqC, {
+                            helpdeskArticle: m.Z.getArticleURL(b.BhN.GUILD_COMMUNITY_FEATURE),
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: b.features,
+                        className: x.features,
                         children: [
                             {
-                                icon: u.IeX,
+                                icon: d.IeX,
                                 color: o.Z.unsafe_rawColors.GREEN_360.css,
-                                header: x.intl.string(x.t.oVQF2y),
-                                body: x.intl.format(x.t.A6G7ak, {
+                                header: h.intl.string(h.t.oVQF2y),
+                                body: h.intl.format(h.t.A6G7ak, {
                                     featureHook: (e, t) =>
                                         (0, r.jsx)(
                                             "strong",
                                             {
-                                                className: b.featuredText,
+                                                className: x.featuredText,
                                                 children: e,
                                             },
                                             t,
@@ -258,25 +258,25 @@ let N = [
                                 }),
                             },
                             {
-                                icon: u.IeX,
+                                icon: d.IeX,
                                 color: o.Z.unsafe_rawColors.PARTNER.css,
-                                header: x.intl.string(x.t["0rJl9y"]),
-                                body: x.intl.format(x.t.XsCNky, {
+                                header: h.intl.string(h.t["0rJl9y"]),
+                                body: h.intl.format(h.t.XsCNky, {
                                     infoHook: () =>
                                         (0, r.jsx)(c.u, {
-                                            text: x.intl.string(x.t.kPJlTh),
-                                            "aria-label": x.intl.string(x.t.kPJlTh),
-                                            children: (0, r.jsx)(u.d3s, {
+                                            text: h.intl.string(h.t.kPJlTh),
+                                            "aria-label": h.intl.string(h.t.kPJlTh),
+                                            children: (0, r.jsx)(d.d3s, {
                                                 size: "xs",
                                                 color: "currentColor",
-                                                className: b.infoIcon,
+                                                className: x.infoIcon,
                                             }),
                                         }),
                                     featureHook: (e, t) =>
                                         (0, r.jsx)(
                                             "strong",
                                             {
-                                                className: b.featuredText,
+                                                className: x.featuredText,
                                                 children: e,
                                             },
                                             t,
@@ -284,12 +284,12 @@ let N = [
                                 }),
                             },
                             {
-                                icon: u.d3s,
+                                icon: d.d3s,
                                 color: o.Z.unsafe_rawColors.RED_360.css,
-                                header: x.intl.string(x.t.W2kLJC),
-                                body: x.intl.string(x.t.hyNkHz),
+                                header: h.intl.string(h.t.W2kLJC),
+                                body: h.intl.string(h.t.hyNkHz),
                             },
-                        ].map((e, t) => (0, r.jsx)(E, y({}, e), t)),
+                        ].map((e, t) => (0, r.jsx)(I, N({}, e), t)),
                     }),
                 ],
             })

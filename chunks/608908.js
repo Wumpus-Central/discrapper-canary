@@ -1,0 +1,17 @@
+e.exports = {
+    container: "_183c2cc3c55377b0-container",
+    icon: "_183c2cc3c55377b0-icon",
+    size56: "_183c2cc3c55377b0-size56",
+    avatarContainer: "_183c2cc3c55377b0-avatarContainer",
+    avatarContainerMasked: "_183c2cc3c55377b0-avatarContainerMasked",
+    clickableAvatar: "_183c2cc3c55377b0-clickableAvatar",
+    emptyUser: "_183c2cc3c55377b0-emptyUser",
+    size32: "_183c2cc3c55377b0-size32",
+    size24: "_183c2cc3c55377b0-size24",
+    size16: "_183c2cc3c55377b0-size16",
+    emptyUserDimmed: "_183c2cc3c55377b0-emptyUserDimmed",
+    avatarWithBackground: "_183c2cc3c55377b0-avatarWithBackground",
+    avatar: "_183c2cc3c55377b0-avatar",
+    moreUsers: "_183c2cc3c55377b0-moreUsers",
+    moreUsersDimmed: "_183c2cc3c55377b0-moreUsersDimmed",
+};

@@ -1,20 +1,20 @@
 n.d(e, {
-    default: () => m,
-    x: () => g,
+    default: () => g,
+    x: () => b,
 }),
     n(388685);
 var i,
     r = n(54381),
-    s = n(473749),
-    a = n(481060),
+    a = n(473749),
+    s = n(481060),
     o = n(378298),
     c = n(473092),
     l = n(684471),
     d = n(745982),
     u = n(463439),
-    p = n(388032),
-    x = n(35853);
-function h(t) {
+    f = n(388032),
+    p = n(365132);
+function x(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             i = Object.keys(n);
@@ -39,7 +39,7 @@ function h(t) {
     }
     return t;
 }
-function _(t, e) {
+function h(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -57,76 +57,76 @@ function _(t, e) {
         t
     );
 }
-var g =
+var b =
     (((i = {})[(i.INTRO = 0)] = "INTRO"),
     (i[(i.SAFETY_TIPS = 1)] = "SAFETY_TIPS"),
     (i[(i.TAKE_ACTION = 2)] = "TAKE_ACTION"),
     i);
-let m = (t) => {
-    let { warningId: e, warningType: n, senderId: i, modalProps: g, channelId: m } = t,
-        [f, b] = s.useState(0),
-        O = s.useMemo(
+let g = (t) => {
+    let { warningId: e, warningType: n, senderId: i, modalProps: b, channelId: g } = t,
+        [m, O] = a.useState(0),
+        j = a.useMemo(
             () => ({
-                channelId: m,
+                channelId: g,
                 senderId: i,
                 warningId: e,
                 warningType: n,
                 isNudgeWarning: !1,
             }),
-            [m, i, e, n],
+            [g, i, e, n],
         );
-    s.useEffect(() => {
-        (0, c.KQ)(_(h({}, O), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
-    }, [O]);
-    let j = s.useCallback(
+    a.useEffect(() => {
+        (0, c.KQ)(h(x({}, j), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
+    }, [j]);
+    let v = a.useCallback(
             (t) => {
-                (0, c.qc)(_(h({}, O), { cta: t }));
+                (0, c.qc)(h(x({}, j), { cta: t }));
             },
-            [O],
+            [j],
         ),
-        [v, T] = s.useState(!1);
+        [_, T] = a.useState(!1);
     function E(t) {
-        b(t);
+        O(t);
     }
-    return (0, r.jsxs)(a.Y0X, {
+    return (0, r.jsxs)(s.Y0X, {
         "data-migration-pending": !0,
-        transitionState: g.transitionState,
+        transitionState: b.transitionState,
         parentComponent: "InappropriateConversationModal",
         children: [
             (0, r.jsx)("div", {
-                className: x.container,
-                children: (0, r.jsxs)(a.MyZ, {
+                className: p.container,
+                children: (0, r.jsxs)(s.MyZ, {
                     width: 440,
-                    activeSlide: f,
+                    activeSlide: m,
                     centered: !1,
                     overflow: "visible",
                     contentDisplay: "flex",
                     children: [
-                        (0, r.jsx)(a.Mi4, {
+                        (0, r.jsx)(s.Mi4, {
                             id: 0,
                             children: (0, r.jsx)(l.Z, {
                                 warningId: e,
                                 senderId: i,
-                                trackAnalyticsEvent: j,
+                                trackAnalyticsEvent: v,
                                 onNavigate: E,
                             }),
                         }),
-                        (0, r.jsx)(a.Mi4, {
+                        (0, r.jsx)(s.Mi4, {
                             id: 1,
                             children: (0, r.jsx)(d.Z, {
                                 warningId: e,
                                 senderId: i,
-                                trackAnalyticsEvent: j,
+                                trackAnalyticsEvent: v,
                             }),
                         }),
-                        (0, r.jsx)(a.Mi4, {
+                        (0, r.jsx)(s.Mi4, {
                             id: 2,
                             children: (0, r.jsx)(u.Z, {
                                 warningId: e,
                                 senderId: i,
-                                trackAnalyticsEvent: j,
-                                channelId: m,
-                                hasReported: v,
+                                trackAnalyticsEvent: v,
+                                channelId: g,
+                                hasReported: _,
                                 onReport: function () {
                                     T(!0);
                                 },
@@ -135,24 +135,24 @@ let m = (t) => {
                     ],
                 }),
             }),
-            (0, r.jsxs)(a.mzw, {
+            (0, r.jsxs)(s.mzw, {
                 "data-migration-pending": !0,
-                className: x.footer,
+                className: p.footer,
                 children: [
-                    (0, r.jsx)(a.Avr, {
+                    (0, r.jsx)(s.Avr, {
                         variant: "secondary",
                         size: "sm",
-                        text: p.intl.string(p.t.cpT0Cq),
+                        text: f.intl.string(f.t.cpT0Cq),
                         onClick: function () {
-                            g.onClose(), (0, o.T)(m, [e]), j(c.NM.USER_TAKEOVER_MODAL_DISMISS);
+                            b.onClose(), (0, o.T)(g, [e]), v(c.NM.USER_TAKEOVER_MODAL_DISMISS);
                         },
                         textVariant: "text-sm/normal",
                     }),
-                    0 !== f &&
-                        (0, r.jsx)(a.Avr, {
+                    0 !== m &&
+                        (0, r.jsx)(s.Avr, {
                             variant: "secondary",
                             size: "sm",
-                            text: p.intl.string(p.t["13/7kX"]),
+                            text: f.intl.string(f.t["13/7kX"]),
                             textVariant: "text-sm/normal",
                             onClick: () => E(0),
                         }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(358797);
+n.d(t, { Z: () => j }), n(388685), n(358797);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -9,16 +9,16 @@ var i = n(54381),
     u = n(393238),
     d = n(607070),
     p = n(314897),
-    h = n(111583),
-    f = n(889901),
+    f = n(111583),
+    h = n(889901),
     m = n(64078),
     g = n(351780),
     b = n(843693),
     C = n(641033),
     y = n(989830),
     v = n(388032),
-    _ = n(23586);
-let O = r.memo(function (e) {
+    O = n(869121);
+let x = r.memo(function (e) {
         let { channelId: t, width: n } = e,
             l = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
             a = (0, s.e7)([b.ZP], () => b.ZP.getMostRecentMessageCombo(t), [t]),
@@ -34,11 +34,11 @@ let O = r.memo(function (e) {
             }, 2000);
             return () => clearTimeout(e);
         }, [a]);
-        let h = null != a ? "100%" : "200%",
-            f = (0, c.q_F)(
+        let f = null != a ? "100%" : "200%",
+            h = (0, c.q_F)(
                 {
                     opacity: +!!u,
-                    translateY: u ? "0" : h,
+                    translateY: u ? "0" : f,
                     pointerEvents: "none",
                     width: n,
                     config: l ? o.config.stiff : o.config.slow,
@@ -48,32 +48,32 @@ let O = r.memo(function (e) {
         return (
             null != a &&
             (0, i.jsx)(o.animated.div, {
-                className: _.messageComboScore,
-                style: f,
+                className: O.messageComboScore,
+                style: h,
                 children: (0, i.jsx)(c.Text, {
-                    className: _.comboScore,
+                    className: O.comboScore,
                     variant: "text-sm/bold",
                     children: (0, C.Eo)(a.combo),
                 }),
             })
         );
     }),
-    x = r.memo(function (e) {
+    E = r.memo(function (e) {
         let { value: t, multiplier: n } = e,
             { color: l, square: o, flair: s } = r.useMemo(() => (0, C.yz)(n), [n]);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.Text, {
-                    className: _.comboValue,
+                    className: O.comboValue,
                     variant: "text-sm/bold",
                     children: t,
                 }),
                 (0, i.jsxs)("div", {
-                    className: _.comboNameplate,
+                    className: O.comboNameplate,
                     style: { color: l },
                     children: [
                         (0, i.jsx)(c.Text, {
-                            className: _.comboMultiplier,
+                            className: O.comboMultiplier,
                             style: { color: l },
                             variant: "text-sm/bold",
                             children: v.intl.format(v.t["6bgVlq"], { multiplier: n }),
@@ -82,11 +82,11 @@ let O = r.memo(function (e) {
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: a()(_.comboSquare, _.left),
+                                        className: a()(O.comboSquare, O.left),
                                         style: { backgroundColor: l },
                                     }),
                                     (0, i.jsx)("div", {
-                                        className: a()(_.comboSquare, _.right),
+                                        className: a()(O.comboSquare, O.right),
                                         style: { backgroundColor: l },
                                     }),
                                 ],
@@ -95,15 +95,15 @@ let O = r.memo(function (e) {
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: a()(_.confettiIcon, _.left),
-                                        children: (0, i.jsx)(f.Z, {
+                                        className: a()(O.confettiIcon, O.left),
+                                        children: (0, i.jsx)(h.Z, {
                                             width: 24,
                                             height: 24,
                                         }),
                                     }),
                                     (0, i.jsx)("div", {
-                                        className: a()(_.confettiIcon, _.right),
-                                        children: (0, i.jsx)(f.Z, {
+                                        className: a()(O.confettiIcon, O.right),
+                                        children: (0, i.jsx)(h.Z, {
                                             width: 24,
                                             height: 24,
                                         }),
@@ -112,7 +112,7 @@ let O = r.memo(function (e) {
                             }),
                         1 === n &&
                             (0, i.jsx)(c.Text, {
-                                className: _.tip,
+                                className: O.tip,
                                 variant: "text-sm/bold",
                                 children: v.intl.string(v.t.b5Cpof),
                             }),
@@ -121,22 +121,22 @@ let O = r.memo(function (e) {
             ],
         });
     }),
-    E = r.memo(function (e) {
+    j = r.memo(function (e) {
         let { channelId: t } = e,
             n = (0, s.e7)([p.default], () => p.default.getId()),
-            l = (0, s.e7)([h.Z], () => h.Z.isTyping(t, n), [t, n]),
+            l = (0, s.e7)([f.Z], () => f.Z.isTyping(t, n), [t, n]),
             a = (0, s.e7)([g.Z], () => g.Z.isEnabled()),
             d = (0, s.e7)([b.ZP], () => b.ZP.isComboing(n, t), [t, n]),
-            { ref: f, width: m = 0 } = (0, u.ZP)(),
+            { ref: h, width: m = 0 } = (0, u.ZP)(),
             [C, v] = r.useState(!1),
-            E = (0, y.Z)(t),
-            j = a && d && l;
+            j = (0, y.Z)(t),
+            S = a && d && l;
         r.useEffect(() => {
-            j && v(!0);
-            let e = setTimeout(() => v(j), 1000);
+            S && v(!0);
+            let e = setTimeout(() => v(S), 1000);
             return () => clearTimeout(e);
-        }, [j]);
-        let S = (0, c.q_F)({
+        }, [S]);
+        let _ = (0, c.q_F)({
                 opacity: +!!C,
                 transform: C ? "translateY(0)" : "translateY(100%)",
                 pointerEvents: "none",
@@ -144,13 +144,13 @@ let O = r.memo(function (e) {
             }),
             P = r.useMemo(
                 () =>
-                    null != E
-                        ? E
+                    null != j
+                        ? j
                         : {
                               value: 0,
                               multiplier: 1,
                           },
-                [E],
+                [j],
             ),
             I = r.useRef(P);
         r.useEffect(() => {
@@ -158,22 +158,22 @@ let O = r.memo(function (e) {
         }, [P]);
         let { multiplier: Z, value: T } = r.useMemo(
             () => ({
-                value: j ? P.value : I.current.value,
-                multiplier: j ? P.multiplier : I.current.multiplier,
+                value: S ? P.value : I.current.value,
+                multiplier: S ? P.multiplier : I.current.multiplier,
             }),
-            [j, P, I],
+            [S, P, I],
         );
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(O, {
+                (0, i.jsx)(x, {
                     channelId: t,
                     width: m,
                 }),
                 (0, i.jsx)(o.animated.div, {
-                    ref: f,
-                    className: _.combo,
-                    style: S,
-                    children: (0, i.jsx)(x, {
+                    ref: h,
+                    className: O.combo,
+                    style: _,
+                    children: (0, i.jsx)(E, {
                         value: T,
                         multiplier: Z,
                     }),

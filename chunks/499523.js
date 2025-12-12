@@ -1,0 +1,15 @@
+e.exports = {
+    modal: "_453148f24138f5f8-modal",
+    header: "_453148f24138f5f8-header",
+    headerIconContainer: "_453148f24138f5f8-headerIconContainer",
+    acronym: "_453148f24138f5f8-acronym",
+    headerText: "_453148f24138f5f8-headerText",
+    table: "_453148f24138f5f8-table",
+    tableContainer: "_453148f24138f5f8-tableContainer",
+    tableHeader: "_453148f24138f5f8-tableHeader",
+    permissionsTable: "_453148f24138f5f8-permissionsTable",
+    permissionRow: "_453148f24138f5f8-permissionRow",
+    bullet: "_453148f24138f5f8-bullet",
+    bulletWarning: "_453148f24138f5f8-bulletWarning _453148f24138f5f8-bullet",
+    footer: "_453148f24138f5f8-footer",
+};

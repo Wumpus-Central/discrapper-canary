@@ -1,12 +1,12 @@
 n.d(t, { o: () => h }), n(388685);
 var r,
     i = n(54381),
-    o = n(473749),
-    a = n(120356),
-    s = n.n(a),
+    a = n(473749),
+    o = n(120356),
+    s = n.n(o),
     l = n(748780),
     c = n(481060),
-    u = n(684640);
+    u = n(10874);
 function d(e, t, n) {
     return (
         t in e
@@ -63,7 +63,7 @@ let m = {
     friction: 7,
     tension: 60,
 };
-class h extends (r = o.Component) {
+class h extends (r = a.Component) {
     componentWillAppear(e) {
         this.animateTo(1).start(e);
     }

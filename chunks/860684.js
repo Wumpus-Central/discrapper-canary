@@ -1,21 +1,21 @@
-n.d(t, { D: () => o });
+n.d(t, { D: () => a });
 var r = n(54381),
-    i = n(266585);
-function o(e) {
+    i = n(33569);
+function a(e) {
     let { graphic: t, layout: n } = e;
     if ("type" in t)
         switch (t.type) {
             case "role":
-                let { color: o } = t;
+                let { color: a } = t;
                 return (0, r.jsx)("div", {
                     className: i.roleDot,
-                    style: { backgroundColor: o },
+                    style: { backgroundColor: a },
                 });
             case "avatar":
-                let { src: a } = t;
+                let { src: o } = t;
                 return (0, r.jsx)("img", {
                     className: i.avatar,
-                    src: a,
+                    src: o,
                     alt: "",
                 });
             case "image":

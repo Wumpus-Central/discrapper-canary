@@ -2,11 +2,11 @@ n.d(t, { Z: () => f });
 var r = n(54381);
 n(473749);
 var i = n(780384),
-    o = n(755721),
-    a = n(481060),
+    a = n(755721),
+    o = n(481060),
     s = n(410030),
     l = n(388032),
-    c = n(978774),
+    c = n(75424),
     u = n(982404),
     d = n(299156);
 let f = function (e) {
@@ -33,7 +33,7 @@ let f = function (e) {
                               (0, r.jsxs)("div", {
                                   className: c.churnFooterContentBodyInner,
                                   children: [
-                                      (0, r.jsx)(a.Text, {
+                                      (0, r.jsx)(o.Text, {
                                           variant: "text-md/medium",
                                           className: c.churnFooterCopy,
                                           children: l.intl.format(l.t["2gem05"], {
@@ -44,27 +44,27 @@ let f = function (e) {
                                       (0, r.jsxs)("div", {
                                           className: c.churnFooterCTAs,
                                           children: [
-                                              (0, r.jsxs)(a.gtL, {
+                                              (0, r.jsxs)(o.gtL, {
                                                   "data-migration-pending": !0,
                                                   className: c.churnFooterClaimCTA,
                                                   innerClassName: c.churnFooterClaimCTAInner,
-                                                  look: o.iL.OUTLINED,
-                                                  color: o.Tt.CUSTOM,
+                                                  look: a.iL.OUTLINED,
+                                                  color: a.Tt.CUSTOM,
                                                   onClick: () => (null == n ? void 0 : n()),
                                                   children: [
-                                                      (0, r.jsx)(a.SrA, {
+                                                      (0, r.jsx)(o.SrA, {
                                                           size: "xs",
                                                           color: "currentColor",
                                                           className: c.churnFooterClaimIcon,
                                                       }),
-                                                      (0, r.jsx)(a.Text, {
+                                                      (0, r.jsx)(o.Text, {
                                                           variant: "text-sm/semibold",
                                                           className: c.churnFooterClaimCopy,
                                                           children: l.intl.string(l.t.zrCzVB),
                                                       }),
                                                   ],
                                               }),
-                                              (0, r.jsx)(a.Button, {
+                                              (0, r.jsx)(o.Button, {
                                                   variant: "primary",
                                                   text: l.intl.string(l.t["3PatSz"]),
                                                   onClick: () => (null == f ? void 0 : f()),

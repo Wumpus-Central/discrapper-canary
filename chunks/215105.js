@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(388685), n(781311);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(106351),
     l = n(507274),
     c = n(541716),
@@ -19,7 +19,7 @@ var r = n(54381),
     y = n(228168),
     O = n(295907),
     v = n(388032),
-    S = n(36190);
+    S = n(756065);
 let I = (0, f.createChannelRecord)({
         id: "1",
         type: s.d.DM,
@@ -28,11 +28,11 @@ let I = (0, f.createChannelRecord)({
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case y.n_.ACTIVITY:
-                let o = v.intl.formatToPlainString(v.t.WmvMCo, { username: n }),
-                    a = "\n> ".concat(i);
+                let a = v.intl.formatToPlainString(v.t.WmvMCo, { username: n }),
+                    o = "\n> ".concat(i);
                 return null != i
-                    ? "".concat(E.jd).concat(o, "*").concat(a, "\n").concat(t)
-                    : "".concat(E.jd).concat(o, "*\n").concat(t);
+                    ? "".concat(E.jd).concat(a, "*").concat(o, "\n").concat(t)
+                    : "".concat(E.jd).concat(a, "*\n").concat(t);
             case y.n_.AVATAR:
                 let s = v.intl.formatToPlainString(v.t.lpaBsB, { username: n });
                 return "".concat(E.jd).concat(s, "*\n").concat(t);
@@ -62,7 +62,7 @@ function A(e) {
     let {
             user: t,
             guildId: n,
-            channelId: o,
+            channelId: a,
             sourceType: s,
             sourceDetails: f,
             setPopoutRef: p,
@@ -121,7 +121,7 @@ function A(e) {
         ref: U,
         onKeyDown: G,
         children: (0, r.jsx)("div", {
-            className: a()(S.container, F, { [S.customProfileTheme]: null != D }),
+            className: o()(S.container, F, { [S.customProfileTheme]: null != D }),
             children: (0, r.jsx)(d.ZP, {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -129,7 +129,7 @@ function A(e) {
                 innerClassName: S.inputInner,
                 editorClassName: S.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
-                placeholder: v.intl.formatToPlainString(C(s), { username: _.ZP.getName(n, o, t) }),
+                placeholder: v.intl.formatToPlainString(C(s), { username: _.ZP.getName(n, a, t) }),
                 channel: I,
                 textValue: x,
                 richValue: j,

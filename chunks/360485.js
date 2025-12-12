@@ -1,0 +1,18 @@
+e.exports = {
+    container: "_0ab2c03be0b88164-container",
+    sidebarHeader: "_0ab2c03be0b88164-sidebarHeader",
+    layoutStyle: "_0ab2c03be0b88164-layoutStyle",
+    inline: "_0ab2c03be0b88164-inline",
+    xsmallAvatar: "_0ab2c03be0b88164-xsmallAvatar",
+    sidebarHeaderDefault: "_0ab2c03be0b88164-sidebarHeaderDefault _0ab2c03be0b88164-sidebarHeader",
+    username: "_0ab2c03be0b88164-username",
+    userRowAvatar: "_0ab2c03be0b88164-userRowAvatar",
+    userRowText: "_0ab2c03be0b88164-userRowText",
+    userRowSubText: "_0ab2c03be0b88164-userRowSubText",
+    userRowSubAvatar: "_0ab2c03be0b88164-userRowSubAvatar",
+    permissionsForm: "_0ab2c03be0b88164-permissionsForm",
+    createOverwritePopout: "_0ab2c03be0b88164-createOverwritePopout",
+    roleRow: "_0ab2c03be0b88164-roleRow",
+    roleName: "_0ab2c03be0b88164-roleName",
+    searchBar: "_0ab2c03be0b88164-searchBar",
+};

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(392711),
@@ -9,23 +9,23 @@ var i = n(54381),
     u = n(213609),
     d = n(728345),
     p = n(372900),
-    h = n(77498),
-    f = n(19780),
+    f = n(77498),
+    h = n(19780),
     m = n(594174),
     g = n(607361),
     b = n(463421),
     C = n(981631),
-    y = n(53229),
+    y = n(486014),
     v = n(388032),
-    _ = n(405143);
-function O(e) {
+    O = n(67103);
+function x(e) {
     let t,
         { activity: n, channel: l, userId: a } = e,
         u = (0, d.IX)(n.application_id).data,
-        [p, h] = r.useState(!1),
+        [p, f] = r.useState(!1),
         [m, g] = r.useState(0),
-        b = (0, o.e7)([f.Z], () => f.Z.getChannelId() !== l.id);
-    async function O() {
+        b = (0, o.e7)([h.Z], () => h.Z.getChannelId() !== l.id);
+    async function x() {
         g(1);
         try {
             await c.Z.sendActivityInvite({
@@ -45,10 +45,10 @@ function O(e) {
     if ((b && (t = v.intl.string(y.default.qRXats)), n.type === C.IIU.PLAYING)) {
         let e = null == u ? void 0 : u.getIconURL(46);
         return (0, i.jsxs)("div", {
-            className: _.activityRow,
+            className: O.activityRow,
             children: [
                 (0, i.jsxs)("div", {
-                    className: _.activityRowContent,
+                    className: O.activityRowContent,
                     children: [
                         p || null == e
                             ? (0, i.jsx)(s.IMN, {
@@ -59,7 +59,7 @@ function O(e) {
                             : (0, i.jsx)("img", {
                                   src: e,
                                   alt: n.name,
-                                  onError: () => h(!0),
+                                  onError: () => f(!0),
                               }),
                         (0, i.jsxs)("div", {
                             children: [
@@ -82,11 +82,11 @@ function O(e) {
                     fullWidth: !0,
                     size: "sm",
                     text: 2 === m ? v.intl.string(y.default["8HU1M2"]) : v.intl.string(y.default.DKHhec),
-                    onClick: O,
+                    onClick: x,
                 }),
                 null != t &&
                     (0, i.jsx)(s.Text, {
-                        className: _.disabledReason,
+                        className: O.disabledReason,
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: t,
@@ -95,22 +95,22 @@ function O(e) {
         });
     }
 }
-function x(e) {
+function E(e) {
     let { userId: t, channel: n } = e,
         s = (0, o.e7)([m.default], () => m.default.getUser(t)),
         c = (0, b.Z)(t, n.guild_id),
         d = (0, g.Z)(t, n.id),
-        f = r.useMemo(
+        h = r.useMemo(
             () =>
                 l.uniqWith(c, (e, t) => {
                     if (e.application_id === t.application_id) return !0;
-                    let n = h.Z.getGameByName(e.name),
-                        i = h.Z.getGameByName(t.name);
+                    let n = f.Z.getGameByName(e.name),
+                        i = f.Z.getGameByName(t.name);
                     return (null != n && n === i) || e.name === t.name;
                 }),
             [c],
         ),
-        C = null == s || !d || 0 === f.length;
+        C = null == s || !d || 0 === h.length;
     return ((0, u.Z)(
         {
             type: a.ImpressionTypes.POPOUT,
@@ -124,12 +124,12 @@ function x(e) {
         : (0, i.jsx)(p.Z.Provider, {
               value: n.guild_id,
               children: (0, i.jsx)("div", {
-                  className: _.root,
+                  className: O.root,
                   children: (0, i.jsx)("div", {
-                      className: _.activityList,
-                      children: f.map((e) =>
+                      className: O.activityList,
+                      children: h.map((e) =>
                           (0, i.jsx)(
-                              O,
+                              x,
                               {
                                   activity: e,
                                   channel: n,

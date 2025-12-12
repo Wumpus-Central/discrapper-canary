@@ -13,9 +13,9 @@ var r = n(54381),
     g = n(100527),
     h = n(906732),
     m = n(538870),
-    _ = n(522651),
-    b = n(795318),
-    E = n(512384),
+    b = n(522651),
+    E = n(795318),
+    _ = n(512384),
     O = n(670188),
     v = n(314897),
     y = n(131951),
@@ -23,7 +23,7 @@ var r = n(54381),
     C = n(51144),
     S = n(524484),
     T = n(388032),
-    N = n(720711);
+    N = n(328607);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -144,7 +144,7 @@ function Z(e) {
                       n.e("66165"),
                       n.e("8982"),
                       n.e("7717"),
-                      n.e("52021"),
+                      n.e("9393"),
                   ]).then(n.bind(n, 757387));
                   return (t) =>
                       (0, r.jsx)(
@@ -154,14 +154,14 @@ function Z(e) {
                               guildId: G,
                               channel: v,
                               showMediaItems: !0,
-                              onInteraction: (0, b.u)("GuildChannelUserContextMenu", g.Z.RTC_PANEL, {
+                              onInteraction: (0, E.u)("GuildChannelUserContextMenu", g.Z.RTC_PANEL, {
                                   targetUserId: Z.id,
                               }),
                           }),
                       );
               })
             : (0, u.jW)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("74820")]).then(
+                  let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("18030")]).then(
                       n.bind(n, 881351),
                   );
                   return (t) =>
@@ -170,7 +170,7 @@ function Z(e) {
                           P(j({}, t), {
                               user: Z,
                               showMediaItems: !0,
-                              onInteraction: (0, b.u)("UserGenericContextMenu", g.Z.RTC_PANEL, { targetUserId: Z.id }),
+                              onInteraction: (0, E.u)("UserGenericContextMenu", g.Z.RTC_PANEL, { targetUserId: Z.id }),
                           }),
                       );
               });
@@ -195,12 +195,12 @@ function Z(e) {
                 children: (0, r.jsx)(c.P3F, {
                     innerRef: p,
                     onClick: (t) => {
-                        e.onClick(t), (0, _.v)(f, _.d.VOICE_USER);
+                        e.onClick(t), (0, b.v)(f, b.d.VOICE_USER);
                     },
                     className: N.avatarContainer,
                     onContextMenu: W,
                     focusProps: x,
-                    children: (0, r.jsx)(E.Z, {
+                    children: (0, r.jsx)(_.Z, {
                         shakeLocation: S.oZ.VOICE_USER,
                         isShaking: U,
                         children: (0, r.jsx)("div", {
@@ -241,7 +241,7 @@ function w(e) {
                 maxVisibleAvatars: t,
             };
         })(t.length - 1),
-        [_, b] = (function (e, t, n) {
+        [b, E] = (function (e, t, n) {
             let r = [];
             for (let i of e)
                 if (i.user.id !== t && !r.some((e) => e.user.id === i.user.id)) {
@@ -250,7 +250,7 @@ function w(e) {
                 }
             return [r, !1];
         })(t, g, m),
-        E = u ? c.V_R : c.qJs,
+        _ = u ? c.V_R : c.qJs,
         O = u ? T.intl.string(T.t["Z/Tya5"]) : T.intl.string(T.t.XR5BAc),
         y = (0, r.jsx)(o.u, {
             text: O,
@@ -258,12 +258,12 @@ function w(e) {
             children: (0, r.jsx)(c.hU, {
                 "aria-label": O,
                 onClick: () => d(!u),
-                icon: () => (0, r.jsx)(E, { size: "md" }),
+                icon: () => (0, r.jsx)(_, { size: "md" }),
                 variant: "icon-only",
                 size: "sm",
             }),
         }),
-        I = b && u ? t : _;
+        I = E && u ? t : b;
     return I.length <= 0
         ? null
         : (0, r.jsx)(c.zJl, {
@@ -294,7 +294,7 @@ function w(e) {
                                 )
                               : null;
                       }),
-                      b ? y : null,
+                      E ? y : null,
                   ],
               }),
           });

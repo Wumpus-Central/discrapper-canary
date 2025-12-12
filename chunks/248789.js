@@ -9,8 +9,8 @@ var i = n(54381),
     u = n(378298),
     d = n(359119),
     p = n(473092),
-    h = n(177342),
-    f = n(134612),
+    f = n(177342),
+    h = n(134612),
     m = n(388032);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -60,8 +60,8 @@ function C(e) {
         v = r.useCallback(() => {
             (0, u.T)(t, [C]);
         }, [t, C]),
-        _ = (0, a.e7)([c.Z], () => c.Z.isBlocked(y)),
-        O = r.useMemo(
+        O = (0, a.e7)([c.Z], () => c.Z.isBlocked(y)),
+        x = r.useMemo(
             () => ({
                 channelId: t,
                 warningId: C,
@@ -71,19 +71,19 @@ function C(e) {
             [t, C, y],
         );
     r.useEffect(() => {
-        (0, p.KQ)(b(g({}, O), { viewName: p.pb.SAFETY_WARNING_BANNER })),
+        (0, p.KQ)(b(g({}, x), { viewName: p.pb.SAFETY_WARNING_BANNER })),
             s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
-    }, [O]);
-    let x = r.useCallback(
+    }, [x]);
+    let E = r.useCallback(
             (e) => {
-                (0, p.qc)(b(g({}, O), { cta: e }));
+                (0, p.qc)(b(g({}, x), { cta: e }));
             },
-            [O],
+            [x],
         ),
-        E = r.useCallback(() => {
+        j = r.useCallback(() => {
             (0, o.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("899")]).then(
+                    let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("98932")]).then(
                         n.bind(n, 611446),
                     );
                     return (n) => {
@@ -98,16 +98,16 @@ function C(e) {
                         });
                     };
                 },
-                { modalKey: f.X_ },
+                { modalKey: h.X_ },
             ),
-                x(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
-        }, [t, y, C, x]),
-        j = r.useCallback(() => {
-            v(), x(p.NM.USER_BANNER_BLOCK_CONFIRM);
-        }, [v, x]),
+                E(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
+        }, [t, y, C, E]),
         S = r.useCallback(() => {
-            v(), x(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
-        }, [v, x]),
+            v(), E(p.NM.USER_BANNER_BLOCK_CONFIRM);
+        }, [v, E]),
+        _ = r.useCallback(() => {
+            v(), E(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+        }, [v, E]),
         P = r.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("19538").then(n.bind(n, 699783));
@@ -115,10 +115,10 @@ function C(e) {
                     let { transitionState: r, onClose: l } = n;
                     return (0, i.jsx)(e, {
                         transitionState: r,
-                        onBlock: j,
-                        onBlockAndReport: S,
+                        onBlock: S,
+                        onBlockAndReport: _,
                         onCancel: () => {
-                            null == l || l(), x(p.NM.USER_BANNER_BLOCK_CANCEL);
+                            null == l || l(), E(p.NM.USER_BANNER_BLOCK_CANCEL);
                         },
                         onClose: l,
                         userId: y,
@@ -126,8 +126,8 @@ function C(e) {
                     });
                 };
             });
-        }, [j, S, y, t, x]);
-    return (0, i.jsx)(h.Q, {
+        }, [S, _, y, t, E]);
+    return (0, i.jsx)(f.Q, {
         channelId: t,
         warningId: C,
         senderId: y,
@@ -139,9 +139,9 @@ function C(e) {
             {
                 text: m.intl.string(m.t.Qyu4UK),
                 variant: "primary",
-                onClick: E,
+                onClick: j,
             },
-            ...(_
+            ...(O
                 ? []
                 : [
                       {

@@ -2,10 +2,10 @@ n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(556638),
-    l = n(80568);
+    l = n(175996);
 function c(e, t, n) {
     return (
         t in e
@@ -60,14 +60,14 @@ function f(e, t) {
 }
 function p(e) {
     let { icon: t, tooltipText: n, tooltipAriaLabel: i, className: c, onTooltipShow: d } = e,
-        p = (0, a.vjg)(a.Skl.ONLINE);
+        p = (0, o.vjg)(o.Skl.ONLINE);
     return null == n
         ? (0, r.jsx)(t, {
               size: "custom",
               color: p,
-              className: o()(l.icon, c),
+              className: a()(l.icon, c),
           })
-        : (0, r.jsx)(a.aML, {
+        : (0, r.jsx)(o.aML, {
               "data-migration-pending": !0,
               text: n,
               "aria-label": i,
@@ -80,7 +80,7 @@ function p(e) {
                       f(u({}, e), {
                           size: "custom",
                           color: p,
-                          className: o()(l.icon, c),
+                          className: a()(l.icon, c),
                       }),
                   ),
           });

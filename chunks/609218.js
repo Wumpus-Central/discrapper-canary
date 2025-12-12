@@ -5,8 +5,8 @@ n.d(t, {
     n(953529);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(313666),
     l = n(442837),
     c = n(755721),
@@ -28,13 +28,13 @@ var r = n(54381),
     T = n(474936),
     C = n(981631),
     A = n(388032),
-    N = n(124527),
-    P = n(591867),
-    R = n(325380),
-    w = n(428946),
-    D = n(42948),
-    x = n(109194),
-    L = n(352812),
+    N = n(313655),
+    P = n(90081),
+    R = n(51766),
+    w = n(526438),
+    D = n(572637),
+    x = n(371587),
+    L = n(699653),
     j = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
@@ -47,7 +47,7 @@ function M(e) {
     let {
             containerContext: t,
             image: n,
-            title: o,
+            title: a,
             description: j,
             enableSocialProof: M,
             analyticsLocationSection: k,
@@ -121,10 +121,10 @@ function M(e) {
                                         }),
                                         null != X && (0, r.jsx)(s.C, { type: { text: X } }),
                                         (0, r.jsx)(u.Heading, {
-                                            className: a()(N.title, { [N.withBadge]: null != X }),
+                                            className: o()(N.title, { [N.withBadge]: null != X }),
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
-                                            children: o,
+                                            children: a,
                                         }),
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-md/medium",
@@ -174,7 +174,7 @@ function M(e) {
                 isVisible: !0,
             }),
             (0, r.jsxs)("div", {
-                className: a()(P.container, W()),
+                className: o()(P.container, W()),
                 children: [
                     (0, r.jsx)(u.olH, {
                         "data-migration-pending": !0,
@@ -192,9 +192,9 @@ function M(e) {
                                 alt: "Nitro Perk",
                             }),
                             (0, r.jsx)(u.Heading, {
-                                className: a()(P.title, { [P.titleNoSocialProof]: !Y }),
+                                className: o()(P.title, { [P.titleNoSocialProof]: !Y }),
                                 variant: "heading-xl/bold",
-                                children: o,
+                                children: a,
                             }),
                             Y && (0, r.jsx)(I.Z, { affinities: V }),
                             (0, r.jsx)(u.Text, {

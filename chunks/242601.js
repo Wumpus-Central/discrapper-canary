@@ -13,9 +13,9 @@ var r = n(54381),
     g = n(711237),
     h = n(110924),
     m = n(100527),
-    _ = n(906732),
-    b = n(536687),
-    E = n(211644),
+    b = n(906732),
+    E = n(536687),
+    _ = n(211644),
     O = n(266454),
     v = n(492162),
     y = n(43740),
@@ -53,7 +53,7 @@ var r = n(54381),
     ee = n(921944),
     et = n(647086),
     en = n(388032),
-    er = n(971606);
+    er = n(289033);
 function ei(e, t, n) {
     return (
         t in e
@@ -229,7 +229,7 @@ class eu extends i.PureComponent {
             g = i || l || a;
         return null == t
             ? null
-            : (0, r.jsx)(_.Gt, {
+            : (0, r.jsx)(b.Gt, {
                   value: s,
                   children: (0, r.jsx)(d.KeG, {
                       targetElementRef: this.guildHeaderRef,
@@ -385,14 +385,14 @@ class eu extends i.PureComponent {
                             n.e("15851"),
                             n.e("51453"),
                             n.e("845"),
-                            n.e("86736"),
+                            n.e("9414"),
                             n.e("6850"),
                             n.e("58227"),
                             n.e("44686"),
-                            n.e("384"),
+                            n.e("9536"),
                             n.e("87154"),
                             n.e("33213"),
-                            n.e("1289"),
+                            n.e("22431"),
                         ]).then(n.bind(n, 545135));
                         return (n) => (0, r.jsx)(e, ea(el({}, n), { guild: t }));
                     });
@@ -417,7 +417,7 @@ class eu extends i.PureComponent {
                 null != e && t && T.Z.hideGuildTemplateDirtyTooltip(e.id);
             }),
             ei(this, "renderMenuPopout", async () => {
-                let { default: e } = await Promise.all([n.e("87154"), n.e("45141")]).then(n.bind(n, 859432));
+                let { default: e } = await Promise.all([n.e("87154"), n.e("97368")]).then(n.bind(n, 859432));
                 return (t) => {
                     let { closePopout: n } = t,
                         { guild: i } = this.props;
@@ -511,21 +511,21 @@ function ed(e) {
         Z = (0, s.e7)([M.Z], () => M.Z.isUnavailable(n)),
         w = (0, s.e7)([F.default], () => F.default.getCurrentUser()),
         { enableStudyGroup: k } = (0, j.s)(u),
-        Y = (0, E.ZP)((e) => e.currentlyShown.has(o.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        Y = (0, _.ZP)((e) => e.currentlyShown.has(o.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [W, q] = i.useState(!Y),
         K = (0, h.Z)(n),
-        { analyticsLocations: Q } = (0, _.ZP)(m.Z.GUILD_HEADER);
+        { analyticsLocations: Q } = (0, b.ZP)(m.Z.GUILD_HEADER);
     i.useEffect(() => {
         n !== K && q(!Y);
     }, [n, K, Y]);
-    let [J, et] = (0, E.ZP)(
+    let [J, et] = (0, _.ZP)(
             (e) => [
                 $.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
                 e.currentlyShownGroup.has(ee.R.GUILD_HEADER_TOOLTIPS),
             ],
             a.X,
         ),
-        en = (0, b.Z)(u),
+        en = (0, E.Z)(u),
         er = (0, d.s9z)(d.JQI),
         ei = (0, s.e7)([G.Z], () => G.Z.hasLayers()),
         el = (0, s.e7)([L.Z], () => L.Z.shouldShow(eo)),
@@ -542,9 +542,9 @@ function ed(e) {
         eh = z.ZP.isNewUser(w),
         em = W && !eh;
     (0, I.Z)(u);
-    let e_ = (0, O.Nj)(o.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
-        eb = (0, x.Z)(n),
-        eE = (0, C.Z)(n),
+    let eb = (0, O.Nj)(o.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+        eE = (0, x.Z)(n),
+        e_ = (0, C.Z)(n),
         eO = (0, s.e7)([V.Z], () => V.Z.getChannelId()),
         ev = (0, s.e7)([H.Z], () => H.Z.desyncedVoiceStatesCount),
         ey = (0, A.Z)(n);
@@ -569,14 +569,14 @@ function ed(e) {
         showRoleSubscriptionUpsell: ea,
         showHubPrivacySettingsTooltip: es,
         showNewUnreadsBar: eg,
-        showMediaChannelUpsell: eb,
-        showTierTemplatesUpsell: eE,
+        showMediaChannelUpsell: eE,
+        showTierTemplatesUpsell: e_,
         isHeaderPopoutOpen: ef,
         enableStudyGroup: k,
         isGuildHeaderDismissibleTooltipShown: et,
         canShowCoachMarkAtBottom: W,
         headerAnalyticsLocations: Q,
-        isTutorialHighlightDismissed: e_,
+        isTutorialHighlightDismissed: eb,
         shouldRenderBurstCoachmark: em,
         shouldRenderGuildPowerupPerkCoachmark: !1 === ey,
     });

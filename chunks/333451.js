@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(780384),
     c = n(755721),
@@ -22,7 +22,7 @@ var r = n(54381),
     S = n(981631),
     I = n(474936),
     T = n(388032),
-    C = n(22706);
+    C = n(421077);
 function A(e, t, n) {
     return (
         t in e
@@ -117,7 +117,7 @@ function D(e) {
     var t;
     let {
             premiumSubscriptionPlan: n,
-            onClose: o,
+            onClose: a,
             onBack: s,
             onSkip: g,
             onSubscriptionConfirmation: E,
@@ -149,11 +149,11 @@ function D(e) {
                     children: [
                         (0, r.jsx)(u.olH, {
                             "data-migration-pending": !0,
-                            onClick: o,
+                            onClick: a,
                             className: C.closeButton,
                         }),
                         F && (0, r.jsx)(h.dz, { className: C.premiumTrialBadge }),
-                        (0, r.jsx)("div", { className: a()(C.upsellImage, { [C.upsellImageWithTrialOffer]: F }) }),
+                        (0, r.jsx)("div", { className: o()(C.upsellImage, { [C.upsellImageWithTrialOffer]: F }) }),
                         (0, r.jsx)("div", {
                             className: C.bodyText,
                             children:
@@ -184,7 +184,7 @@ function D(e) {
                                     text: null != Z ? T.intl.string(T.t["Gd/XHF"]) : T.intl.string(T.t.p2moip),
                                     type: "submit",
                                     onClick: () => {
-                                        o(),
+                                        a(),
                                             (0, _.Z)({
                                                 initialPlanId: null,
                                                 subscriptionTier: I.Si.TIER_2,

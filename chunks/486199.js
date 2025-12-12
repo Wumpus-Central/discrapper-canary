@@ -6,7 +6,7 @@ var r = n(120356),
     a = n(28664),
     o = n(481060),
     s = n(388032),
-    c = n(961174);
+    c = n(29175);
 function d(e) {
     let {
         name: t,
@@ -14,11 +14,11 @@ function d(e) {
         icon: r,
         imageSrc: d,
         iconBackgroundColor: u,
-        iconClassName: p,
-        iconWrapperClassName: m,
-        details: b,
-        detailsClassName: g,
-        isHeader: f,
+        iconClassName: b,
+        iconWrapperClassName: p,
+        details: m,
+        detailsClassName: f,
+        isHeader: g,
         isPremium: h,
         children: x,
     } = e;
@@ -55,14 +55,14 @@ function d(e) {
                               children: o,
                           })
                       );
-                  })(r, d, u, p, m)
+                  })(r, d, u, b, p)
                 : null,
             (0, i.jsxs)(o.Kqy, {
                 justify: "center",
                 children: [
                     (function (e) {
-                        let { name: t, description: n, details: r, detailsClassName: d, isHeader: u, isPremium: p } = e,
-                            m =
+                        let { name: t, description: n, details: r, detailsClassName: d, isHeader: u, isPremium: b } = e,
+                            p =
                                 null == r
                                     ? void 0
                                     : r.map((e, t) => {
@@ -98,7 +98,7 @@ function d(e) {
                                     className: u ? c.header : c.secondaryHeader,
                                     children: [
                                         t,
-                                        p &&
+                                        b &&
                                             (0, i.jsx)(a.u, {
                                                 text: s.intl.string(s.t.VFuFum),
                                                 children: (0, i.jsx)(o.Prq, {
@@ -118,16 +118,16 @@ function d(e) {
                                     : null,
                                 (0, i.jsx)(o.Kqy, {
                                     direction: "horizontal",
-                                    children: m,
+                                    children: p,
                                 }),
                             ],
                         });
                     })({
                         name: t,
                         description: n,
-                        details: b,
-                        detailsClassName: g,
-                        isHeader: f,
+                        details: m,
+                        detailsClassName: f,
+                        isHeader: g,
                         isPremium: h,
                     }),
                     x,

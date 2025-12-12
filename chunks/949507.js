@@ -1,8 +1,8 @@
-n.d(t, { Z: () => x }), n(953529);
-var r = n(54381);
+n.d(t, { Z: () => v }), n(953529);
+var a = n(54381);
 n(473749);
-var i = n(120356),
-    a = n.n(i),
+var r = n(120356),
+    i = n.n(r),
     l = n(481060),
     s = n(410030),
     o = n(686546),
@@ -12,63 +12,63 @@ var i = n(120356),
     p = n(768581),
     m = n(411198),
     h = n(981631),
-    g = n(388032),
-    f = n(70019),
-    _ = n(129512),
-    b = n(330065);
-function x(e) {
-    let { guild: t, className: n, onClick: i } = e,
-        x = (0, s.ZP)(),
-        v = (0, m.dangerouslyConstructGuildRecordFromUntypedObject)({
+    f = n(388032),
+    g = n(135587),
+    b = n(129512),
+    x = n(330065);
+function v(e) {
+    let { guild: t, className: n, onClick: r } = e,
+        v = (0, s.ZP)(),
+        C = (0, m.dangerouslyConstructGuildRecordFromUntypedObject)({
             name: t.name,
             icon: t.icon,
         }),
-        C = p.ZP.getGuildDiscoverySplashURL({
+        j = p.ZP.getGuildDiscoverySplashURL({
             id: t.id,
             splash: t.discovery_splash,
             size: 192 * (0, u.x_)(),
         }),
-        j =
-            null != C
-                ? C
+        _ =
+            null != j
+                ? j
                 : (function (e) {
                       switch (e) {
                           case h.BRd.DARK:
-                              return _;
-                          case h.BRd.LIGHT:
                               return b;
+                          case h.BRd.LIGHT:
+                              return x;
                       }
-                  })(x),
+                  })(v),
         y = p.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
             size: 50,
         });
-    return (0, r.jsxs)(l.P3F, {
-        className: a()(f.card, n),
-        onClick: i,
-        "aria-label": g.intl.string(g.t.RB4L2x),
+    return (0, a.jsxs)(l.P3F, {
+        className: i()(g.card, n),
+        onClick: r,
+        "aria-label": f.intl.string(f.t.RB4L2x),
         children: [
-            (0, r.jsxs)("div", {
-                className: f.cardHeader,
+            (0, a.jsxs)("div", {
+                className: g.cardHeader,
                 children: [
-                    (0, r.jsx)("img", {
-                        src: j,
+                    (0, a.jsx)("img", {
+                        src: _,
                         alt: "",
-                        className: f.splashImage,
+                        className: g.splashImage,
                     }),
-                    (0, r.jsx)("div", {
-                        className: f.guildIcon,
-                        children: (0, r.jsx)(o.ZP, {
+                    (0, a.jsx)("div", {
+                        className: g.guildIcon,
+                        children: (0, a.jsx)(o.ZP, {
                             mask: o.ZP.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
-                            children: (0, r.jsx)("div", {
-                                className: f.iconMask,
-                                children: (0, r.jsx)(c.Z, {
-                                    className: f.__invalid_icon,
+                            children: (0, a.jsx)("div", {
+                                className: g.iconMask,
+                                children: (0, a.jsx)(c.Z, {
+                                    className: g.__invalid_icon,
                                     iconSrc: y,
-                                    guild: v,
+                                    guild: C,
                                     size: c.Z.Sizes.LARGE,
                                 }),
                             }),
@@ -76,45 +76,45 @@ function x(e) {
                     }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: f.cardDetails,
+            (0, a.jsxs)("div", {
+                className: g.cardDetails,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: f.guildNameWrapper,
+                    (0, a.jsxs)("div", {
+                        className: g.guildNameWrapper,
                         children: [
-                            (0, r.jsx)(d.Z, {
-                                className: f.guildBadge,
+                            (0, a.jsx)(d.Z, {
+                                className: g.guildBadge,
                                 guild: t,
                                 tooltipColor: l.aML.Colors.PRIMARY,
                             }),
-                            (0, r.jsx)(l.Heading, {
+                            (0, a.jsx)(l.Heading, {
                                 variant: "heading-md/semibold",
-                                className: f.guildName,
+                                className: g.guildName,
                                 children: t.name,
                             }),
                         ],
                     }),
-                    (0, r.jsx)(l.Text, {
-                        className: f.guildDescription,
+                    (0, a.jsx)(l.Text, {
+                        className: g.guildDescription,
                         variant: "text-sm/normal",
                         color: "text-default",
                         lineClamp: 2,
                         children: t.description,
                     }),
-                    (0, r.jsx)("div", {
-                        className: f.memberInfo,
-                        children: (0, r.jsxs)("div", {
-                            className: f.memberCountWrapper,
+                    (0, a.jsx)("div", {
+                        className: g.memberInfo,
+                        children: (0, a.jsxs)("div", {
+                            className: g.memberCountWrapper,
                             children: [
-                                (0, r.jsx)(l.tBG, {
+                                (0, a.jsx)(l.tBG, {
                                     color: "currentColor",
-                                    className: f.memberCountIcon,
+                                    className: g.memberCountIcon,
                                     size: "xs",
                                 }),
-                                (0, r.jsx)(l.Text, {
+                                (0, a.jsx)(l.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: g.intl.format(g.t.zRl6XR, { count: t.approximate_member_count }),
+                                    children: f.intl.format(f.t.zRl6XR, { count: t.approximate_member_count }),
                                 }),
                             ],
                         }),

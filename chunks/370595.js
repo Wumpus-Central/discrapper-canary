@@ -3,9 +3,9 @@ var r = n(54381);
 n(473749);
 var l = n(481060),
     i = n(50493),
-    s = n(388032),
-    a = n(220512),
-    o = n(87819);
+    a = n(388032),
+    s = n(807121),
+    o = n(280533);
 function u(e) {
     let { onNavigate: t, backPanel: n = i.k.INFO } = e;
     return (0, r.jsxs)("div", {
@@ -14,7 +14,7 @@ function u(e) {
             (0, r.jsx)("div", {
                 className: o.headerTitle,
                 children: (0, r.jsxs)(l.P3F, {
-                    className: a.backButton,
+                    className: s.backButton,
                     onClick: () => (null == t ? void 0 : t(n)),
                     children: [
                         (0, r.jsx)(l.whL, {
@@ -24,15 +24,15 @@ function u(e) {
                         }),
                         (0, r.jsx)(l.Heading, {
                             variant: "heading-md/semibold",
-                            children: s.intl.string(s.t["13/7kX"]),
+                            children: a.intl.string(a.t["13/7kX"]),
                         }),
                     ],
                 }),
             }),
             (0, r.jsx)(l.M2$, {
                 shortcut: "esc",
-                keyClassName: a.keyComboInner,
-                className: a.keyComboContainer,
+                keyClassName: s.keyComboInner,
+                className: s.keyComboContainer,
             }),
         ],
     });

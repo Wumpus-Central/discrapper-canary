@@ -1,20 +1,20 @@
 n.d(t, { C: () => _ }), n(953529), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(937397),
     l = n(735048),
     c = n(155127),
     u = n(657707),
     d = n(821541),
     f = n(777207),
-    p = n(726550);
+    p = n(672);
 function _(e) {
     let {
             checked: t,
             description: n,
-            onChange: o,
+            onChange: a,
             disabled: _ = !1,
             displayOnly: m,
             label: h,
@@ -40,9 +40,9 @@ function _(e) {
         C(t ? "animateIn" : "animateOut");
     }, [t]);
     let w = (e) => {
-            null != o && o(e);
+            null != a && a(e);
         },
-        D = a()(p.checkboxOption, "string" == typeof T && p[T], "indicator" !== O && p.spacing),
+        D = o()(p.checkboxOption, "string" == typeof T && p[T], "indicator" !== O && p.spacing),
         x = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {

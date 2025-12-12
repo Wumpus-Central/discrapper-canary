@@ -12,11 +12,11 @@ var i = n(92951),
     p = n(639949),
     f = n(612776),
     g = n(921944),
-    h = n(862474),
+    h = n(638398),
     m = n(388032),
-    _ = n(519236),
-    b = n(807808),
-    E = n(512903);
+    b = n(306541),
+    E = n(900268),
+    _ = n(35446);
 function O(e) {
     var t, n;
     let { markAsDismissed: O } = e,
@@ -66,9 +66,9 @@ function O(e) {
             t),
         children: (0, r.jsx)(o.ZP, {
             children: (0, r.jsxs)("div", {
-                className: _.container,
+                className: b.container,
                 style: {
-                    backgroundImage: "url(".concat(E.Z, "), linear-gradient(").concat(y, "80, black)"),
+                    backgroundImage: "url(".concat(_.Z, "), linear-gradient(").concat(y, "80, black)"),
                     borderColor: y,
                     boxShadow: "0 0 15px 5px ".concat(y, "50"),
                 },
@@ -78,19 +78,19 @@ function O(e) {
                         muted: !0,
                         playsInline: !0,
                         loop: !0,
-                        className: _.logo,
+                        className: b.logo,
                         children: (0, r.jsx)("source", {
-                            src: b.Z,
+                            src: E.Z,
                             type: "video/webm",
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: _.textContainer,
+                        className: b.textContainer,
                         children: [
                             (0, r.jsx)(a.Text, {
                                 variant: "display-sm",
                                 style: { color: y },
-                                className: _.display,
+                                className: b.display,
                                 children: m.intl.string(h.default["CdU/PF"]),
                             }),
                             (0, r.jsx)(a.Text, {
@@ -99,7 +99,7 @@ function O(e) {
                                 children: m.intl.string(h.default["M/LvW0"]),
                             }),
                             (0, r.jsx)(a.P3F, {
-                                className: _.dismissButton,
+                                className: b.dismissButton,
                                 onClick: () => O(g.L.DISMISS),
                                 style: { color: y },
                                 children: (0, r.jsx)(a.Text, {
@@ -111,8 +111,8 @@ function O(e) {
                         ],
                     }),
                     (0, r.jsx)(p.Z, {
-                        className: _.clickable,
-                        contentClassName: _.button,
+                        className: b.clickable,
+                        contentClassName: b.button,
                         onClick: () => {
                             (0, d.Z)("coachmark"), O(g.L.TAKE_ACTION);
                         },

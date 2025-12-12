@@ -1,1 +1,1 @@
-e.exports = n.p + "e8396e79419904ca.webp";
+e.exports = "/assets/e8396e79419904ca.webp";

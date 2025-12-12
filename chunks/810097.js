@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(28664),
     c = n(481060),
@@ -16,7 +16,7 @@ var r = n(54381),
     p = n(510659),
     _ = n(228168),
     m = n(388032),
-    h = n(734623);
+    h = n(46833);
 function g(e, t, n) {
     return (
         t in e
@@ -85,7 +85,7 @@ function T(e) {
     let {
             user: t,
             sourceType: n,
-            isVisible: o,
+            isVisible: a,
             isExpandable: g,
             interactionSourceId: b,
             targetRef: O,
@@ -126,8 +126,8 @@ function T(e) {
                     });
         };
     return (0, r.jsxs)(u.ZP, {
-        className: a()(h.popover, {
-            [h.visible]: o,
+        className: o()(h.popover, {
+            [h.visible]: a,
             [h.expandable]: g,
             [h.statusPopover]: n === _.n_.STATUS,
             [h.avatarPopover]: n === _.n_.AVATAR,
@@ -137,7 +137,7 @@ function T(e) {
             (0, r.jsx)(l.u, {
                 asContainer: !0,
                 text: m.intl.string(m.t.nhaI4b),
-                shouldShow: o,
+                shouldShow: a,
                 delay: 0,
                 ariaHidden: !0,
                 children: (0, r.jsx)(u.zx, {
@@ -154,7 +154,7 @@ function T(e) {
             (0, r.jsx)(l.u, {
                 asContainer: !0,
                 text: m.intl.string(m.t.RmDYKK),
-                shouldShow: o,
+                shouldShow: a,
                 delay: 0,
                 ariaHidden: !0,
                 children: (0, r.jsx)(u.zx, {
@@ -178,7 +178,7 @@ function T(e) {
                       return (0, r.jsx)(l.u, {
                           asContainer: !0,
                           text: m.intl.string(m.t["UKOtz+"]),
-                          shouldShow: o,
+                          shouldShow: a,
                           delay: 0,
                           ariaHidden: !0,
                           children: (0, r.jsx)(

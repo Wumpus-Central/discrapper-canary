@@ -2,8 +2,8 @@ n.d(t, { Z: () => s });
 var r = n(54381),
     i = n(473749),
     l = n(907862),
-    o = n(388032),
-    a = n(30399);
+    a = n(388032),
+    o = n(993516);
 function s(e) {
     let {
         targetElementRef: t,
@@ -33,17 +33,17 @@ function s(e) {
             onRequestClose: s,
             actions: [
                 {
-                    text: o.intl.string(o.t.RzWDqY),
+                    text: a.intl.string(a.t.RzWDqY),
                     variant: "primary",
                     onClick: c,
                 },
             ],
             targetElementRef: t,
-            title: o.intl.string(o.t.Ylu2JM),
-            body: o.intl.string(o.t.vgylLQ),
+            title: a.intl.string(a.t.Ylu2JM),
+            body: a.intl.string(a.t.vgylLQ),
             graphic: {
                 type: "image",
-                src: a.Z,
+                src: o.Z,
             },
         })
     );

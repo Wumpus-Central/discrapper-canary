@@ -1,8 +1,8 @@
 n.d(t, { Z: () => F }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(788911),
@@ -26,7 +26,7 @@ var r = n(54381),
     A = n(689079),
     N = n(981631),
     P = n(388032),
-    R = n(57507),
+    R = n(157787),
     w = n(239840);
 let D = 512,
     x = 7,
@@ -40,7 +40,7 @@ let D = 512,
         (0, d.yw)(N.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300),
     F = i.forwardRef(function (e, t) {
-        let { channel: n, canOnlyUseTextCommands: o } = e,
+        let { channel: n, canOnlyUseTextCommands: a } = e,
             s = i.useRef(!1),
             l = i.useRef(0),
             [F, V] = i.useState(0),
@@ -66,8 +66,8 @@ let D = 512,
                 },
                 filters: {
                     commandTypes: [u.yU.CHAT],
-                    builtIns: o ? O.D.ONLY_TEXT : O.D.ALLOW,
-                    applicationCommands: !o,
+                    builtIns: a ? O.D.ONLY_TEXT : O.D.ALLOW,
+                    applicationCommands: !a,
                 },
                 options: {
                     placeholderCount: x,
@@ -101,8 +101,8 @@ let D = 512,
             i.useEffect(() => {
                 ei.current(l.current);
             }, [J]);
-        let eo = i.useCallback((e) => (e !== q.length - 1 || X ? j : 0), [q.length, X]),
-            ea = Q.map((e) => e.data.length);
+        let ea = i.useCallback((e) => (e !== q.length - 1 || X ? j : 0), [q.length, X]),
+            eo = Q.map((e) => e.data.length);
         i.useEffect(() => {
             null != H.current && Y && null != F && H.current.scrollRowIntoView(F);
         }, [Y, F]),
@@ -165,7 +165,7 @@ let D = 512,
                     let t = q[e];
                     if (null == t) return null;
                     let i = (0, C.ky)(t),
-                        o = (0, r.jsx)(i, {
+                        a = (0, r.jsx)(i, {
                             channel: n,
                             section: t,
                             width: 16,
@@ -176,7 +176,7 @@ let D = 512,
                         E.Z,
                         {
                             className: R.categoryHeader,
-                            icon: o,
+                            icon: a,
                             children: t.name,
                         },
                         e,
@@ -188,16 +188,16 @@ let D = 512,
                 (e, t) => {
                     let n = e === q.length - 1,
                         i = q[e],
-                        { data: o } = Q[e];
+                        { data: a } = Q[e];
                     return (0, r.jsxs)(
                         "ul",
                         {
                             role: "group",
                             "aria-label": i.name,
-                            className: a()(R.categorySection, { [R.categorySectionLast]: n }),
+                            className: o()(R.categorySection, { [R.categorySectionLast]: n }),
                             children: [
                                 t,
-                                0 === o.length &&
+                                0 === a.length &&
                                     (0, r.jsx)(c.Z, {
                                         message: P.intl.format(P.t.WoQXT6, { applicationName: i.name }),
                                         noResultsImageURL: w,
@@ -213,27 +213,27 @@ let D = 512,
             ed = i.useCallback(
                 (e, t) => {
                     var i;
-                    let o = Q[t.sectionIndex],
-                        a = o.data[t.sectionRowIndex],
-                        s = "".concat(o.section.id, ":").concat(null != (i = null == a ? void 0 : a.id) ? i : e);
+                    let a = Q[t.sectionIndex],
+                        o = a.data[t.sectionRowIndex],
+                        s = "".concat(a.section.id, ":").concat(null != (i = null == o ? void 0 : o.id) ? i : e);
                     if (
-                        null == a ||
-                        (o.section.id !== a.applicationId && o.section.id !== A.bi.FRECENCY) ||
-                        a.inputType === v.iw.PLACEHOLDER
+                        null == o ||
+                        (a.section.id !== o.applicationId && a.section.id !== A.bi.FRECENCY) ||
+                        o.inputType === v.iw.PLACEHOLDER
                     )
                         return (0, r.jsx)(T.Z, {}, s);
-                    let l = z.find((e) => e.id === a.applicationId);
+                    let l = z.find((e) => e.id === o.applicationId);
                     return (0, r.jsx)(
                         f.ZP.NewCommand,
                         {
                             index: e,
-                            command: a,
+                            command: o,
                             channel: n,
                             className: R.itemWrapper,
                             selected: F === e,
-                            showImage: o.section.id !== a.applicationId,
+                            showImage: a.section.id !== o.applicationId,
                             section: l,
-                            onClick: () => el(a, l, (0, S.tI)(o.section)),
+                            onClick: () => el(o, l, (0, S.tI)(a.section)),
                             onHover: () => {
                                 V(null), W(!1);
                             },
@@ -276,10 +276,10 @@ let D = 512,
                         renderSection: eu,
                         renderSectionHeader: ec,
                         rowCount: q.length,
-                        rowCountBySection: ea,
+                        rowCountBySection: eo,
                         rowHeight: L,
                         sectionHeaderHeight: M,
-                        sectionMarginBottom: eo,
+                        sectionMarginBottom: ea,
                         ref: H,
                         stickyHeaders: !0,
                     }),

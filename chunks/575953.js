@@ -1,0 +1,17 @@
+e.exports = {
+    flexVertical: "_2d3feb462957391b-flexVertical",
+    flexHorizontal: "_2d3feb462957391b-flexHorizontal",
+    flexHorizontalReverse: "_2d3feb462957391b-flexHorizontalReverse",
+    flexAlignStart: "_2d3feb462957391b-flexAlignStart",
+    flexAlignEnd: "_2d3feb462957391b-flexAlignEnd",
+    flexAlignCenter: "_2d3feb462957391b-flexAlignCenter",
+    flexAlignStretch: "_2d3feb462957391b-flexAlignStretch",
+    flexJustifyStart: "_2d3feb462957391b-flexJustifyStart",
+    flexJustifyEnd: "_2d3feb462957391b-flexJustifyEnd",
+    flexJustifyCenter: "_2d3feb462957391b-flexJustifyCenter",
+    flexJustifyAround: "_2d3feb462957391b-flexJustifyAround",
+    flexJustifyBetween: "_2d3feb462957391b-flexJustifyBetween",
+    flexNowrap: "_2d3feb462957391b-flexNowrap",
+    flexWrap: "_2d3feb462957391b-flexWrap",
+    flexWrapReverse: "_2d3feb462957391b-flexWrapReverse",
+};

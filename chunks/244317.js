@@ -11,17 +11,17 @@ var r = n(54381),
     p = n(981631),
     f = n(186901),
     g = n(388032),
-    h = n(87805);
+    h = n(123591);
 function m(e) {
     let { applicationId: t } = e.match.params,
-        [m, _] = i.useState(!1),
-        b = i.useRef(!1),
-        [E, O] = i.useState(null),
+        [m, b] = i.useState(!1),
+        E = i.useRef(!1),
+        [_, O] = i.useState(null),
         v = !u.isPlatformEmbedded && !a.tq && !m,
         y = i.useMemo(() => (0, l.Z)(), []);
     return (i.useEffect(() => {
         v &&
-            !0 !== b.current &&
+            !0 !== E.current &&
             (Promise.resolve()
                 .then(n.bind(n, 536285))
                 .then((e) => {
@@ -55,10 +55,10 @@ function m(e) {
                         })
                         .then(() => n.disconnect());
                 }),
-            (b.current = !0));
+            (E.current = !0));
     }, [t, v, y]),
-    v && !1 !== E)
-        ? !0 === E
+    v && !1 !== _)
+        ? !0 === _
             ? (0, r.jsxs)("div", {
                   className: h.container,
                   children: [
@@ -73,7 +73,7 @@ function m(e) {
                       (0, r.jsx)(s.zxk, {
                           variant: "primary",
                           text: g.intl.string(g.t.fIv16B),
-                          onClick: () => _(!0),
+                          onClick: () => b(!0),
                       }),
                   ],
               })

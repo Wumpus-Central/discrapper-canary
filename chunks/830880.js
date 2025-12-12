@@ -1,4 +1,4 @@
-n.d(t, { R: () => _ }), n(388685);
+n.d(t, { R: () => b }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(704215),
@@ -12,8 +12,8 @@ var r = n(54381),
     f = n(526761),
     g = n(726985),
     h = n(388032),
-    m = n(252319);
-function _() {
+    m = n(45639);
+function b() {
     let [e, t] = (0, a.US)([l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE]);
     return i.useMemo(() => e === l.z.RESTRICTED_ACCOUNTS_SETTING_NOTICE, [e])
         ? (0, r.jsx)(s.f, {

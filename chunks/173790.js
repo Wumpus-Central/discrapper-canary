@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(442837),
-    a = n(218061),
+    a = n(442837),
+    o = n(218061),
     s = n(481060),
     l = n(361213),
     c = n(778569),
@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(675993),
     b = n(689079),
     y = n(388032),
-    O = n(30787),
+    O = n(999711),
     v = n(413097);
 let S = 2048,
     I = 84;
@@ -25,7 +25,7 @@ function T(e) {
     var t;
     let { context: n, application: l, sectionName: c } = e,
         S = "channel" === n.type ? n.channel : void 0,
-        T = (0, o.e7)([f.Z], () => f.Z.entrypoint()),
+        T = (0, a.e7)([f.Z], () => f.Z.entrypoint()),
         A = null != (t = (0, d.q)(l.id === b.bi.BUILT_IN ? null : l.id)) ? t : l,
         N = (0, _.ye)(A) ? C : E.Z,
         P = i.useRef(null),
@@ -66,7 +66,7 @@ function T(e) {
                         src: D,
                         className: O.appIcon,
                     }),
-                (0, r.jsx)(a.Z, { size: 54 }),
+                (0, r.jsx)(o.Z, { size: 54 }),
                 (0, r.jsx)(N, {
                     context: n,
                     application: A,
@@ -87,8 +87,8 @@ function T(e) {
     );
 }
 function C(e) {
-    let { context: t, application: n, sectionName: i, hasCommands: o } = e,
-        a = (0, c.Z)({
+    let { context: t, application: n, sectionName: i, hasCommands: a } = e,
+        o = (0, c.Z)({
             applicationId: n.id,
             size: S,
             names: ["embedded_cover"],
@@ -102,9 +102,9 @@ function C(e) {
     return (0, r.jsx)(E.Z, {
         context: t,
         application: n,
-        imageCoverUrl: a.url,
+        imageCoverUrl: o.url,
         videoUrl: u,
         sectionName: i,
-        hasCommands: o,
+        hasCommands: a,
     });
 }

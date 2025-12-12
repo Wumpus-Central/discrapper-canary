@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(388685), n(415506);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(990169),
     c = n(249458),
@@ -73,9 +73,9 @@ function S(e, t) {
         r,
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -84,17 +84,17 @@ function I(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(54453);
+n(626105);
 let T = __OVERLAY__ ? () => (0, s.e7)([_.default], () => _.default.isInstanceFocused()) : g.n;
 function C(e) {
     var t,
         n,
         {
-            src: o,
+            src: a,
             alt: s,
             className: c,
             emojiId: f,
@@ -143,7 +143,7 @@ function C(e) {
         W = E.kV[I],
         K = i.useRef(null),
         z = i.useMemo(() => {
-            if (null != o) return o;
+            if (null != a) return a;
             if (null != f) {
                 let e = !0 === A && Y;
                 return m.ZP.getEmojiURL({
@@ -154,7 +154,7 @@ function C(e) {
             }
             if (null != _) return h.ZP.getURL(_);
             throw Error("Unknown Src for Emoji");
-        }, [O, Y, f, _, W, H, M, C, A, o]),
+        }, [O, Y, f, _, W, H, M, C, A, a]),
         q = i.useCallback(() => {
             null != z &&
                 (Z.current = (0, d.po)(z, (e) => {
@@ -177,7 +177,7 @@ function C(e) {
             let e = null != f && "" !== f ? { "data-id": f } : { "data-name": _ };
             return y(
                 v(y({}, j), {
-                    className: a()("emoji", c, { jumboable: "jumbo" === I }),
+                    className: o()("emoji", c, { jumboable: "jumbo" === I }),
                     onError: q,
                     onMouseEnter: Q,
                     onMouseLeave: X,
@@ -205,7 +205,7 @@ function C(e) {
               "span",
               v(y({}, J), {
                   ref: $,
-                  className: a()("emoji", "emoji-text"),
+                  className: o()("emoji", "emoji-text"),
                   children: null != L ? L : _,
               }),
           )
@@ -249,13 +249,13 @@ function C(e) {
 }
 function A(e) {
     let { useThoughtfullyAnimated: t } = i.useContext(f.q),
-        { animate: n, registerRef: o } = t(),
-        { disableAnimations: a } = i.useContext(c.G);
+        { animate: n, registerRef: a } = t(),
+        { disableAnimations: o } = i.useContext(c.G);
     return (0, r.jsx)(
         C,
         v(y({}, e), {
-            registerAnimatedElementRef: o,
-            shouldAnimate: n && !a,
+            registerAnimatedElementRef: a,
+            shouldAnimate: n && !o,
         }),
     );
 }

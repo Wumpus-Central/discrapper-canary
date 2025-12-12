@@ -15,7 +15,7 @@ var i = n(54381),
     I = n(620163),
     _ = n(726985),
     O = n(388032),
-    N = n(88651);
+    N = n(897192);
 let A = (0, c.wf)(E.n.PROFILE_PANEL, {
         useTitle: () => O.intl.string(O.t["vi7f+q"]),
         notice: {

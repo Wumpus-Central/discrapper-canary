@@ -9,9 +9,9 @@ var r = n(481060),
     l = n(981631),
     d = n(927923),
     u = n(388032),
-    p = n(99372),
-    f = n(629582);
-function b() {
+    p = n(126690),
+    b = n(898912);
+function f() {
     return (0, o.jsxs)("div", {
         className: p.getXboxApp,
         children: [
@@ -60,14 +60,14 @@ function x(e) {
     let { onClose: t } = e;
     return (0, o.jsx)(c.L, {
         img: (0, o.jsx)("img", {
-            src: f.Z,
+            src: b.Z,
             width: "124",
             height: "160",
             alt: "",
         }),
         title: u.intl.string(u.t["7QsHmh"]),
         body: u.intl.string(u.t.byYNPX),
-        content: (0, o.jsx)(b, {}),
+        content: (0, o.jsx)(f, {}),
         onClose: t,
     });
 }

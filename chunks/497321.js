@@ -2,13 +2,13 @@ n.d(t, { Z: () => f });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(313789),
     l = n(518596),
     c = n(981631),
     u = n(388032),
-    d = n(26621);
+    d = n(737430);
 function f(e) {
     let { disableButton: t } = e,
         n = () => {
@@ -18,8 +18,8 @@ function f(e) {
         className: d.streamerModeEnabled,
         children: [
             (0, r.jsx)("div", { className: d.streamerModeEnabledImage }),
-            (0, r.jsx)(a.P3F, {
-                className: o()(d.streamerModeEnabledBtn, { [d.disabled]: t }),
+            (0, r.jsx)(o.P3F, {
+                className: a()(d.streamerModeEnabledBtn, { [d.disabled]: t }),
                 onClick: n,
                 children: u.intl.string(u.t.Br1ls3),
             }),

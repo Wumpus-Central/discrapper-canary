@@ -11,16 +11,16 @@ var a = n(54381),
     m = n(829716),
     p = n(981631),
     h = n(921944),
-    x = n(486730),
-    f = n(388032),
-    g = n(374104);
-let b = new o.Z("DisplayNameStylesCoachmark");
+    f = n(143525),
+    x = n(388032),
+    b = n(16596);
+let g = new o.Z("DisplayNameStylesCoachmark");
 function v(e) {
     let { markAsDismissed: t, targetElementRef: n, children: o } = e,
         { analyticsLocations: v } = (0, s.ZP)(),
         j = (0, r.useRef)(null),
-        _ = (0, i.e7)([u.Z], () => u.Z.isFocused()),
-        y = (0, r.useCallback)(() => {
+        y = (0, i.e7)([u.Z], () => u.Z.isFocused()),
+        C = (0, r.useCallback)(() => {
             t(h.L.TAKE_ACTION),
                 (0, d.openUserSettings)(
                     c.n.PROFILE_PANEL,
@@ -33,23 +33,23 @@ function v(e) {
                     },
                 );
         }, [t, v]),
-        C = (0, r.useCallback)(() => {
+        _ = (0, r.useCallback)(() => {
             t(h.L.USER_DISMISS);
         }, [t]);
     return (
         (0, r.useEffect)(() => {
             var e, t, n;
-            _ && (null == (e = j.current) ? void 0 : e.paused)
-                ? null == (t = j.current) || t.play().catch(b.error)
-                : _ || null == (n = j.current) || n.pause();
-        }, [_]),
+            y && (null == (e = j.current) ? void 0 : e.paused)
+                ? null == (t = j.current) || t.play().catch(g.error)
+                : y || null == (n = j.current) || n.pause();
+        }, [y]),
         (0, a.jsxs)(a.Fragment, {
             children: [
                 o,
                 (0, a.jsx)(l.J, {
                     targetElementRef: n,
                     shouldShow: !0,
-                    onRequestClose: C,
+                    onRequestClose: _,
                     align: "right",
                     position: "top",
                     caretConfig: { align: "center" },
@@ -57,18 +57,18 @@ function v(e) {
                     graphic: {
                         type: "video",
                         ref: j,
-                        src: g.Z,
+                        src: b.Z,
                         aspectRatio: "21/9",
                         loop: !0,
                     },
                     size: "lg",
-                    title: f.intl.string(x.default["1AE464"]),
-                    body: [f.intl.string(x.default.cNc1g9), f.intl.string(f.t["4JNXHG"])],
+                    title: x.intl.string(f.default["1AE464"]),
+                    body: [x.intl.string(f.default.cNc1g9), x.intl.string(x.t["4JNXHG"])],
                     actions: [
                         {
-                            text: f.intl.string(f.t.uw9zI7),
+                            text: x.intl.string(x.t.uw9zI7),
                             variant: "primary",
-                            onClick: y,
+                            onClick: C,
                         },
                     ],
                 }),

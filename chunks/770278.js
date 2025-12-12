@@ -1,12 +1,12 @@
 n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(467721),
     l = n(481060),
     c = n(110924),
-    u = n(372840);
+    u = n(98127);
 function d(e, t, n) {
     return (
         t in e
@@ -55,7 +55,7 @@ let m = i.forwardRef(function (e, t) {
     let {
             backdropStyle: n = l.fCB.SUBTLE,
             backdropInstant: i = !1,
-            zIndexBoost: o = 0,
+            zIndexBoost: a = 0,
             LayerComponent: d,
             isVisible: m,
             onClose: h,
@@ -84,7 +84,7 @@ let m = i.forwardRef(function (e, t) {
             "animate-always",
         );
     if (null == d) {
-        let e = { zIndex: 1000 + o };
+        let e = { zIndex: 1000 + a };
         return S((t, n) =>
             n
                 ? (0, r.jsx)(s.animated.div, {
@@ -99,7 +99,7 @@ let m = i.forwardRef(function (e, t) {
         children: S((e, t) =>
             t
                 ? (0, r.jsx)(s.animated.div, {
-                      className: a()(u.backdrop, u.withLayer),
+                      className: o()(u.backdrop, u.withLayer),
                       style:
                           n === l.fCB.TOP_RADIAL
                               ? {

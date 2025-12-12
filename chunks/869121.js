@@ -1,3 +1,13 @@
-e.exports = JSON.parse(
-    '{"kxF9br":["SDK összekapcsolva RPC-n keresztül"],"8a7IrV":["Kapcsolódási végpont URL-címe regisztrálva"],"9iLeL2":["URL-cím a következőképpen konfigurálva: ",[1,"url"]],"AGLx00":["Összekapcsolt játékmenet:"],"w0pN4R":["Fiók hozzákapcsolása"],"yKwZc2":["Fiókok összekapcsolásának kezelése"],"aTULMB":["Nem észlelhető hitelesítési visszahívás. Ha meghívtad a funkciót, és továbbra is ezt látod, nézd meg a részleteket a naplókban"],"eg0mNa":["Nem lehet összekapcsolni, mivel nem érhetők el érvényes összekapcsolási folyamatok"],"OEkrCx":["A rendszer ezt a folyamatot fogja használni"],"no+FQS":["A rendszer az első elérhető összekapcsolási folyamatot fogja használni, fentről kezdve"],"PFxxJa":["Ha a játék fut, és nem tud kapcsolódni a Discordhoz, próbáld meg megtekinteni a játék naplóit a hibakereséshez"],"S94dzs":["RegisterAuthorizeRequestCallback meghívva és megfelelően működik"],"vR0zs6":["Fiókok összekapcsolása"],"KoK4J9":["Devtools: ",[1,"appName"]],"tkIymA":["Leválasztás"],"K3ObrU":["Webes folyamat:"]}',
-);
+e.exports = {
+    combo: "_257afd0547709ecc-combo",
+    comboValue: "_257afd0547709ecc-comboValue",
+    comboNameplate: "_257afd0547709ecc-comboNameplate",
+    comboMultiplier: "_257afd0547709ecc-comboMultiplier",
+    comboSquare: "_257afd0547709ecc-comboSquare",
+    left: "_257afd0547709ecc-left",
+    right: "_257afd0547709ecc-right",
+    confettiIcon: "_257afd0547709ecc-confettiIcon",
+    tip: "_257afd0547709ecc-tip",
+    messageComboScore: "_257afd0547709ecc-messageComboScore",
+    comboScore: "_257afd0547709ecc-comboScore",
+};

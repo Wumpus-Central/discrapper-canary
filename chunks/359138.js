@@ -1,20 +1,20 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(442837),
-    a = n(28664),
+    a = n(442837),
+    o = n(28664),
     s = n(481060),
     l = n(747545),
     c = n(131951),
     u = n(388032),
-    d = n(745343);
+    d = n(79414);
 let f = 387,
     p = 218;
 function _() {
     let e = c.Z.getCameraComponent(),
-        t = (0, o.e7)([c.Z], () => c.Z.getVideoDeviceId()),
+        t = (0, a.e7)([c.Z], () => c.Z.getVideoDeviceId()),
         [n, _] = i.useState(!1),
-        m = (0, o.e7)([c.Z], () => c.Z.isVideoAvailable());
+        m = (0, a.e7)([c.Z], () => c.Z.isVideoAvailable());
     return n
         ? (0, r.jsx)("div", {
               className: d.cameraWrapper,
@@ -33,7 +33,7 @@ function _() {
           })
         : (0, r.jsx)("div", {
               className: d.cameraWrapper,
-              children: (0, r.jsx)(a.u, {
+              children: (0, r.jsx)(o.u, {
                   text: m ? null : u.intl.string(u.t["8jSzSe"]),
                   children: (0, r.jsx)(s.Button, {
                       variant: "primary",

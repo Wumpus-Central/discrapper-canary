@@ -1,0 +1,17 @@
+e.exports = {
+    debugToolsPanel: "_50163d4ba77e00f2-debugToolsPanel",
+    header: "_50163d4ba77e00f2-header",
+    headerTextContainer: "_50163d4ba77e00f2-headerTextContainer",
+    body: "_50163d4ba77e00f2-body",
+    footer: "_50163d4ba77e00f2-footer",
+    categoryContainer: "_50163d4ba77e00f2-categoryContainer",
+    categoryHeader: "_50163d4ba77e00f2-categoryHeader",
+    statusRow: "_50163d4ba77e00f2-statusRow",
+    statusTextContainer: "_50163d4ba77e00f2-statusTextContainer",
+    statusIcon: "_50163d4ba77e00f2-statusIcon",
+    calloutBox: "_50163d4ba77e00f2-calloutBox",
+    tabBar: "_50163d4ba77e00f2-tabBar",
+    tab: "_50163d4ba77e00f2-tab",
+    selected: "_50163d4ba77e00f2-selected",
+    spinner: "_50163d4ba77e00f2-spinner",
+};

@@ -1,10 +1,10 @@
-r.d(t, { default: () => _ });
+r.d(t, { default: () => C });
 var n = r(54381),
     s = r(473749),
-    o = r(793030),
-    i = r(442837),
-    c = r(481060),
-    a = r(198993),
+    c = r(793030),
+    a = r(442837),
+    o = r(481060),
+    i = r(198993),
     l = r(639351),
     d = r(63063),
     u = r(258609),
@@ -13,7 +13,7 @@ var n = r(54381),
     m = r(927923),
     x = r(981631),
     b = r(388032),
-    h = r(5511);
+    h = r(337016);
 function g(e) {
     let { step: t, instructions: r } = e;
     return (0, n.jsxs)("div", {
@@ -21,13 +21,13 @@ function g(e) {
         children: [
             (0, n.jsx)("div", {
                 className: h.stepNumberContainer,
-                children: (0, n.jsx)(c.Text, {
+                children: (0, n.jsx)(o.Text, {
                     variant: "text-sm/semibold",
                     className: h.stepNumber,
                     children: t,
                 }),
             }),
-            (0, n.jsx)(c.Text, {
+            (0, n.jsx)(o.Text, {
                 variant: "text-sm/normal",
                 color: "text-strong",
                 className: h.instructions,
@@ -36,22 +36,22 @@ function g(e) {
         ],
     });
 }
-function _(e) {
-    let { channel: t, transitionState: r, onClose: _ } = e,
-        C = (0, i.e7)([u.default], () => null != u.default.getRemoteSessionId()),
-        O = (0, f.Z)(t, { forQRCode: !0 });
+function C(e) {
+    let { channel: t, transitionState: r, onClose: C } = e,
+        O = (0, a.e7)([u.default], () => null != u.default.getRemoteSessionId()),
+        v = (0, f.Z)(t, { forQRCode: !0 });
     return (
         s.useEffect(() => {
-            C && _();
-        }, [C, _]),
+            O && C();
+        }, [O, C]),
         s.useEffect(() => {
             (0, p.Z)(t.id, m.YE.XBOX);
         }, [t.id]),
-        (0, n.jsx)(o.Modal, {
+        (0, n.jsx)(c.Modal, {
             title: b.intl.string(b.t["f+Aijq"]),
             subtitle: b.intl.string(b.t.mYFmDY),
             actions: [],
-            onClose: _,
+            onClose: C,
             transitionState: r,
             children: (0, n.jsxs)("div", {
                 className: h.card,
@@ -59,7 +59,7 @@ function _(e) {
                     (0, n.jsxs)("div", {
                         className: h.cardText,
                         children: [
-                            (0, n.jsxs)(c.Text, {
+                            (0, n.jsxs)(o.Text, {
                                 variant: "text-lg/semibold",
                                 color: "text-strong",
                                 className: h.cardRow,
@@ -73,9 +73,9 @@ function _(e) {
                                 step: 2,
                                 instructions: b.intl.string(b.t.IWuXjC),
                             }),
-                            (0, n.jsx)(c.Text, {
+                            (0, n.jsx)(o.Text, {
                                 variant: "text-sm/medium",
-                                children: (0, n.jsx)(c.Anchor, {
+                                children: (0, n.jsx)(o.Anchor, {
                                     className: h.learnMore,
                                     href: d.Z.getArticleURL(x.BhN.XBOX_CONNECTION),
                                     children: b.intl.string(b.t.hvVgAZ),
@@ -83,10 +83,10 @@ function _(e) {
                             }),
                         ],
                     }),
-                    (0, n.jsx)(a.ZP, {
+                    (0, n.jsx)(i.ZP, {
                         className: h.qrCode,
                         size: 120,
-                        text: O,
+                        text: v,
                     }),
                 ],
             }),

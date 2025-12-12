@@ -1,15 +1,15 @@
 n.d(t, { A: () => E });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(467721),
     l = n(990547),
     c = n(793030),
     u = n(481060),
     d = n(984802),
-    f = n(163838),
-    p = n(325380);
+    f = n(725419),
+    p = n(51766);
 function _(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ function E(e) {
     var t;
     let {
             transitionState: n,
-            animationVariant: o = "default",
+            animationVariant: a = "default",
             returnRef: _,
             "aria-label": h,
             onClose: E,
@@ -85,7 +85,7 @@ function E(e) {
         ),
         S = (0, d.Ll)(),
         { theme: I } = (0, u.TCT)(),
-        T = (0, c.hvB)(n, o);
+        T = (0, c.hvB)(n, a);
     return (0, r.jsx)(c.tCf.Provider, {
         value: v,
         children: (0, r.jsx)(
@@ -112,7 +112,7 @@ function E(e) {
                                 children: (e) =>
                                     (0, r.jsx)(s.animated.div, {
                                         "data-mana-component": "layer-modal",
-                                        className: a()(p.container, f.modal, e),
+                                        className: o()(p.container, f.modal, e),
                                         style: T,
                                         children: (0, r.jsx)("div", {
                                             className: f.modalContent,
@@ -120,7 +120,7 @@ function E(e) {
                                                 theme: I,
                                                 children: (e) =>
                                                     (0, r.jsx)("div", {
-                                                        className: a()(e, f.modalContentInner),
+                                                        className: o()(e, f.modalContentInner),
                                                         children: y,
                                                     }),
                                             }),

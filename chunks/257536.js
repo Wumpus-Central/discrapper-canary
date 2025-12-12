@@ -1,0 +1,16 @@
+e.exports = {
+    iframe: "_49094c5b98f242a0-iframe",
+    wrapper: "_49094c5b98f242a0-wrapper",
+    resizable: "_49094c5b98f242a0-resizable",
+    noChat: "_49094c5b98f242a0-noChat",
+    activityPanelContainer: "_49094c5b98f242a0-activityPanelContainer",
+    header: "_49094c5b98f242a0-header",
+    footer: "_49094c5b98f242a0-footer",
+    headerTitle: "_49094c5b98f242a0-headerTitle",
+    leaveButtonContainer: "_49094c5b98f242a0-leaveButtonContainer",
+    activityContainer: "_49094c5b98f242a0-activityContainer",
+    activityContainerNoMargin: "_49094c5b98f242a0-activityContainerNoMargin",
+    footerButtons: "_49094c5b98f242a0-footerButtons",
+    avatar: "_49094c5b98f242a0-avatar",
+    buttonSection: "_49094c5b98f242a0-buttonSection",
+};

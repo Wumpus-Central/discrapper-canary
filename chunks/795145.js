@@ -3,19 +3,19 @@ var r = n(54381);
 n(473749);
 var i = n(692547),
     l = n(481060),
-    s = n(355011),
-    a = n(388032),
-    o = n(53774);
+    a = n(355011),
+    s = n(388032),
+    o = n(173706);
 let c = (e) => {
     let {
             title: t,
-            subtext: n = a.intl.string(a.t.jHpxwo),
+            subtext: n = s.intl.string(s.t.jHpxwo),
             localizedNumber: c,
-            isTrendingUp: u,
-            isTrendingDown: d,
+            isTrendingUp: d,
+            isTrendingDown: u,
             tooltipText: g,
         } = e,
-        m =
+        f =
             null != g
                 ? (0, r.jsx)(l.aML, {
                       "data-migration-pending": !0,
@@ -81,33 +81,33 @@ let c = (e) => {
             (0, r.jsxs)(l.Text, {
                 variant: "text-md/medium",
                 className: o.analyticsCardTitle,
-                children: [t, m],
+                children: [t, f],
             }),
             (0, r.jsx)("div", {
                 className: o.analyticsCardContent,
                 children: (0, r.jsx)(l.Text, {
                     className: null != c ? o.analyticsCardNumber : o.analyticsCardNumberNotAvailable,
                     variant: "text-lg/semibold",
-                    children: null != c ? c : a.intl.string(a.t.jHpxwo),
+                    children: null != c ? c : s.intl.string(s.t.jHpxwo),
                 }),
             }),
             (0, r.jsxs)("div", {
                 className: o.analyticsCardArrowSubText,
                 children: [
-                    u
-                        ? (0, r.jsx)(s.Z, {
+                    d
+                        ? (0, r.jsx)(a.Z, {
                               className: o.trendingArrow,
                               color: i.Z.unsafe_rawColors.GREEN_360.css,
-                              "aria-label": a.intl.string(a.t["8mcccd"]),
+                              "aria-label": s.intl.string(s.t["8mcccd"]),
                               width: 14,
                               height: 12,
                           })
                         : null,
-                    d
-                        ? (0, r.jsx)(s.Z, {
+                    u
+                        ? (0, r.jsx)(a.Z, {
                               className: o.trendingArrowIconDown,
                               color: i.Z.unsafe_rawColors.RED_400.css,
-                              "aria-label": a.intl.string(a.t.NLl6Q3),
+                              "aria-label": s.intl.string(s.t.NLl6Q3),
                               width: 14,
                               height: 12,
                           })

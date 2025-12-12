@@ -1,9 +1,9 @@
-n.d(t, { p: () => o });
+n.d(t, { p: () => a });
 var r = n(54381);
 n(473749);
-var i = n(98201);
-function o(e) {
-    let { alt: t, ariaLabel: n, ariaHidden: o, role: a, width: s = 288, height: l = 162 } = e;
+var i = n(602042);
+function a(e) {
+    let { alt: t, ariaLabel: n, ariaHidden: a, role: o, width: s = 288, height: l = 162 } = e;
     return (0, r.jsx)("img", {
         style: {
             width: s,
@@ -12,7 +12,7 @@ function o(e) {
         src: i.Z,
         alt: t,
         "aria-label": n,
-        "aria-hidden": o,
-        role: null != a ? a : "img",
+        "aria-hidden": a,
+        role: null != o ? o : "img",
     });
 }

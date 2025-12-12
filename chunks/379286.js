@@ -1,0 +1,18 @@
+e.exports = {
+    cardBrands: "_3e8d57b333f5b109-cardBrands",
+    cardFormHeader: "_3e8d57b333f5b109-cardFormHeader",
+    jcb: "_3e8d57b333f5b109-jcb",
+    jcb_monochrome: "_3e8d57b333f5b109-jcb_monochrome",
+    amex: "_3e8d57b333f5b109-amex",
+    amex_monochrome: "_3e8d57b333f5b109-amex_monochrome",
+    mastercard: "_3e8d57b333f5b109-mastercard",
+    mastercard_monochrome: "_3e8d57b333f5b109-mastercard_monochrome",
+    visa: "_3e8d57b333f5b109-visa",
+    visa_monochrome: "_3e8d57b333f5b109-visa_monochrome",
+    discover: "_3e8d57b333f5b109-discover",
+    discover_monochrome: "_3e8d57b333f5b109-discover_monochrome",
+    dinersclub: "_3e8d57b333f5b109-dinersclub",
+    dinersclub_monochrome: "_3e8d57b333f5b109-dinersclub_monochrome",
+    unionpay: "_3e8d57b333f5b109-unionpay",
+    unionpay_monochrome: "_3e8d57b333f5b109-unionpay_monochrome",
+};

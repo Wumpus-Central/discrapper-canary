@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685), n(704826), n(35282);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(692547),
     l = n(481060),
     c = n(907040),
@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(981631),
     f = n(185923),
     p = n(388032),
-    _ = n(41356);
+    _ = n(907728);
 let m = {
         section: d.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: "gift_effect_emoji_picker",
@@ -18,10 +18,10 @@ let m = {
     h = f.Hz.GIFT;
 function g(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
-        [o, d] = i.useState(!1),
+        [a, d] = i.useState(!1),
         f = i.useRef(null),
         g = (0, u.Z)({ location: "GiftEmoji" }),
-        E = a()(_.text, g && _.refresh),
+        E = o()(_.text, g && _.refresh),
         b = (e) =>
             (0, r.jsxs)("div", {
                 className: _.customGiftContent,
@@ -48,7 +48,7 @@ function g(e) {
         };
     return (0, r.jsx)(l.yRy, {
         targetElementRef: f,
-        shouldShow: o,
+        shouldShow: a,
         position: "bottom",
         align: "left",
         onRequestClose: () => d(!1),
@@ -72,7 +72,7 @@ function g(e) {
         },
         children: () =>
             (0, r.jsx)(l.P3F, {
-                className: a()(_.container, g && _.refresh),
+                className: o()(_.container, g && _.refresh),
                 onClick: () => d(!0),
                 innerRef: f,
                 children:

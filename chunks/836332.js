@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -12,12 +12,12 @@ var r = n(54381),
     p = n(635921),
     _ = n(869783),
     m = n(388032),
-    h = n(264502),
-    g = n(839526),
-    E = n(4046),
-    b = n(423741);
+    h = n(886496),
+    g = n(438743),
+    E = n(32763),
+    b = n(111658);
 let y = (e, t) => {
-        let { className: n, isFooterVisible: o, isDarkMode: y, isReducedMotion: O, subscriptionTier: v } = e,
+        let { className: n, isFooterVisible: a, isDarkMode: y, isReducedMotion: O, subscriptionTier: v } = e,
             { analyticsLocations: S } = (0, c.ZP)(l.Z.PREMIUM_MARKETING_FOOTER_CTA),
             I = (0, f.Nx)(),
             T = (0, d.rO)(),
@@ -25,13 +25,13 @@ let y = (e, t) => {
             [A, N] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !o || O || A || null == C.current || C.current.play();
-            }, [o, O, A]),
+                !a || O || A || null == C.current || C.current.play();
+            }, [a, O, A]),
             (0, r.jsx)(c.Gt, {
                 value: S,
                 children: (0, r.jsxs)("div", {
                     ref: t,
-                    className: a()(h.container, n),
+                    className: o()(h.container, n),
                     children: [
                         (0, r.jsx)(s.Heading, {
                             className: h.footerHeader,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(872810),
     c = n(493773),
@@ -11,11 +11,11 @@ var i = n(120356),
     d = n(592125),
     f = n(231338),
     p = n(388032),
-    _ = n(15456);
+    _ = n(134119);
 function m(e) {
     var t;
     let { stream: n, width: i } = e,
-        m = (0, a.e7)([d.Z], () => d.Z.getChannel(n.channelId));
+        m = (0, o.e7)([d.Z], () => d.Z.getChannel(n.channelId));
     (0, c.ZP)(() => {
         (null == m ? void 0 : m.isGuildStageVoice()) && (0, l.aP)((0, u.V9)(n), !1);
     });
@@ -26,13 +26,13 @@ function m(e) {
         theme: f.BR.MIDNIGHT,
         children: (e) =>
             (0, r.jsx)("div", {
-                className: o()(_.container, e),
+                className: a()(_.container, e),
                 children: (0, r.jsxs)("div", {
                     className: _.content,
                     children: [
                         (0, r.jsx)("div", {
-                            className: o()(_.artContainer, _[g]),
-                            children: (0, r.jsx)("div", { className: o()(_.art, _[g]) }),
+                            className: a()(_.artContainer, _[g]),
+                            children: (0, r.jsx)("div", { className: a()(_.art, _[g]) }),
                         }),
                         (0, r.jsxs)("div", {
                             className: _.cta,

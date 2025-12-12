@@ -13,9 +13,9 @@ var r = n(54381),
     g = n(870569),
     h = n(345243),
     m = n(115530),
-    _ = n(981631),
-    b = n(388032),
-    E = n(79822);
+    b = n(981631),
+    E = n(388032),
+    _ = n(139661);
 function O(e, t, n) {
     return (
         t in e
@@ -73,10 +73,10 @@ class I extends i.PureComponent {
             children: [
                 (0, r.jsx)(m.Z, {
                     children: this.isHost()
-                        ? b.intl.formatToPlainString(b.t["6UJ7mh"], { count: this.props.party.length })
-                        : b.intl.string(b.t.RZufbH),
+                        ? E.intl.formatToPlainString(E.t["6UJ7mh"], { count: this.props.party.length })
+                        : E.intl.string(E.t.RZufbH),
                 }),
-                (0, r.jsx)(h.Z, { children: b.intl.string(b.t["0ZHLIi"]) }),
+                (0, r.jsx)(h.Z, { children: E.intl.string(E.t["0ZHLIi"]) }),
             ],
         });
     }
@@ -85,7 +85,7 @@ class I extends i.PureComponent {
         return this.isHost()
             ? null
             : (0, r.jsx)(g.Z, {
-                  tooltipText: b.intl.string(b.t.LeZSpz),
+                  tooltipText: E.intl.string(E.t.LeZSpz),
                   onClick: e,
                   icon: o.Dio,
               });
@@ -93,9 +93,9 @@ class I extends i.PureComponent {
     renderHelpIcon() {
         return this.isHost()
             ? (0, r.jsx)(g.Z, {
-                  tooltipText: b.intl.string(b.t.U7N2Hs),
+                  tooltipText: E.intl.string(E.t.U7N2Hs),
                   onClick: () => {
-                      window.open(f.Z.getArticleURL(_.BhN.SPOTIFY_CONNECTION), "_blank");
+                      window.open(f.Z.getArticleURL(b.BhN.SPOTIFY_CONNECTION), "_blank");
                   },
                   icon: o.d3s,
               })
@@ -103,12 +103,12 @@ class I extends i.PureComponent {
     }
     render() {
         return (0, r.jsxs)("div", {
-            className: E.listeningAlong,
+            className: _.listeningAlong,
             children: [
                 this.renderTitle(),
                 (0, r.jsx)(u.Z, {
                     justify: u.Z.Justify.END,
-                    className: E.party,
+                    className: _.party,
                     children: (0, r.jsx)(p.Z, {
                         users: this.props.party,
                         max: this.isHost() ? 5 : 4,
@@ -117,7 +117,7 @@ class I extends i.PureComponent {
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: E.icons,
+                    className: _.icons,
                     children: [this.renderHelpIcon(), this.renderStopListeningButton()],
                 }),
             ],
@@ -134,8 +134,8 @@ class I extends i.PureComponent {
                 return (
                     (n =
                         (null == l ? void 0 : l.id) === e.id
-                            ? b.intl.string(b.t["N9bqD+"])
-                            : b.intl.string(b.t.Z2Y4c9)),
+                            ? E.intl.string(E.t["N9bqD+"])
+                            : E.intl.string(E.t.Z2Y4c9)),
                     (0, r.jsx)(
                         d.Z,
                         {
@@ -154,7 +154,7 @@ class I extends i.PureComponent {
                                             key: e.id,
                                             src: e.getAvatarURL(void 0, 24),
                                             size: o.EFr.SIZE_24,
-                                            className: a()(E.avatar, t),
+                                            className: a()(_.avatar, t),
                                             "aria-label": e.username,
                                             onContextMenu: (t) => void (null != e && (null == u || u(t, e))),
                                             avatarContentRef: this.partyMemberAvatarRef,
@@ -175,12 +175,12 @@ class I extends i.PureComponent {
                         targetElementRef: this.partyMemberOverflowRef,
                         children: (n) =>
                             (0, r.jsx)(s.u, {
-                                text: b.intl.string(b.t.Zf4NPe),
+                                text: E.intl.string(E.t.Zf4NPe),
                                 children: (0, r.jsx)(
                                     "div",
                                     y(v({}, n), {
                                         ref: this.partyMemberOverflowRef,
-                                        className: a()(E.overflow, t),
+                                        className: a()(_.overflow, t),
                                         children: e,
                                     }),
                                 ),

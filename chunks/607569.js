@@ -1,24 +1,24 @@
 n.d(t, { default: () => j }), n(388685), n(704826), n(35282), n(781311);
 var r = n(54381),
     l = n(473749),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     o = n(891371),
     c = n(692992),
     s = n(692547),
     d = n(481060),
     u = n(881052),
     p = n(186523),
-    g = n(246364),
-    m = n(915509),
-    b = n(592286),
+    b = n(246364),
+    g = n(915509),
+    m = n(592286),
     h = n(388032),
-    f = n(1904);
+    f = n(386305);
 let x = "MULTIPLE_CHOICE",
     y = (e) => {
-        let { choice: t, index: n, onChange: i, onClear: s, onReorder: u, isDropHovered: g } = e,
+        let { choice: t, index: n, onChange: a, onClear: s, onReorder: u, isDropHovered: b } = e,
+            g = l.useRef(null),
             m = l.useRef(null),
-            b = l.useRef(null),
             [, y, j] = (0, o.c)({
                 type: x,
                 item: {
@@ -34,11 +34,11 @@ let x = "MULTIPLE_CHOICE",
                 hover: (e, t) => {
                     var r;
                     let { index: l } = e,
-                        i = null == (r = m.current) ? void 0 : r.getBoundingClientRect(),
-                        a = t.getClientOffset();
-                    if (null == i || null == a) return;
-                    let o = (i.bottom - i.top) / 2,
-                        c = a.y - i.top;
+                        a = null == (r = g.current) ? void 0 : r.getBoundingClientRect(),
+                        i = t.getClientOffset();
+                    if (null == a || null == i) return;
+                    let o = (a.bottom - a.top) / 2,
+                        c = i.y - a.top;
                     (l < n && c < o) || (l > n && c > o) || u(e.choice, n, !1);
                 },
                 drop: (e) => {
@@ -48,8 +48,8 @@ let x = "MULTIPLE_CHOICE",
         return (
             l.useLayoutEffect(
                 () => (
-                    y(b),
-                    j(v(m)),
+                    y(m),
+                    j(v(g)),
                     () => {
                         y(null), v(null);
                     }
@@ -57,8 +57,8 @@ let x = "MULTIPLE_CHOICE",
                 [y, v, j],
             ),
             (0, r.jsxs)("div", {
-                ref: m,
-                className: a()(f.draggableInputContainer, { [f.dragging]: g }),
+                ref: g,
+                className: i()(f.draggableInputContainer, { [f.dragging]: b }),
                 "data-dnd-name": t,
                 children: [
                     (0, r.jsx)("div", {
@@ -74,7 +74,7 @@ let x = "MULTIPLE_CHOICE",
                         children: [
                             (0, r.jsx)(d.oil, {
                                 autoFocus: !0,
-                                onChange: (e) => i(e),
+                                onChange: (e) => a(e),
                                 placeholder: h.intl.formatToPlainString(h.t["Ep/pbH"], { index: n + 1 }),
                                 value: t,
                             }),
@@ -91,7 +91,7 @@ let x = "MULTIPLE_CHOICE",
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        ref: b,
+                        ref: m,
                         className: f.dragContainer,
                         "data-dnd-name": t,
                         children: (0, r.jsx)(d.Vni, {
@@ -105,28 +105,28 @@ let x = "MULTIPLE_CHOICE",
         );
     },
     j = function (e) {
-        var t, n, i, a;
+        var t, n, a, i;
         let { field: o, onSave: c, onClose: p } = e,
             [x, j] = l.useState(null != (t = null == o ? void 0 : o.label) ? t : ""),
             [v, C] = l.useState(null != (n = null == o ? void 0 : o.choices) ? n : [""]),
-            [_, I] = l.useState(null),
-            [O, w] = l.useState(null),
+            [I, O] = l.useState(null),
+            [_, w] = l.useState(null),
             E = (e, t, n) => {
                 if (null == v) return;
-                null != _ && I(null);
+                null != I && O(null);
                 let r = v.indexOf(e),
                     l = [...v];
                 null != t && t !== r && (l.splice(r, 1), l.splice(t, 0, e), C(l)),
-                    n ? null !== t && w(null) : t !== O && w(t);
+                    n ? null !== t && w(null) : t !== _ && w(t);
             },
             P = async () => {
-                null != _ && I(null);
+                null != I && O(null);
                 let e = x.trim();
-                if ("" === e) return void I(h.intl.string(h.t["G+TI44"]));
+                if ("" === e) return void O(h.intl.string(h.t["G+TI44"]));
                 if (0 === v.map((e) => e.trim()).filter((e) => "" !== e).length)
-                    return void I(h.intl.string(h.t.jZoHgI));
+                    return void O(h.intl.string(h.t.jZoHgI));
                 let t = {
-                    field_type: g.QJ.MULTIPLE_CHOICE,
+                    field_type: b.QJ.MULTIPLE_CHOICE,
                     label: e,
                     choices: v,
                     required: !0,
@@ -134,12 +134,12 @@ let x = "MULTIPLE_CHOICE",
                 try {
                     await c(t), p();
                 } catch (e) {
-                    I(new u.Hx(e).getAnyErrorMessage());
+                    O(new u.Hx(e).getAnyErrorMessage());
                 }
             };
         return (0, r.jsxs)(
-            m.Z,
-            ((i = (function (e) {
+            g.Z,
+            ((a = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -164,9 +164,9 @@ let x = "MULTIPLE_CHOICE",
                 }
                 return e;
             })({}, e)),
-            (a = a =
+            (i = i =
                 {
-                    errorText: _,
+                    errorText: I,
                     title: h.intl.string(h.t.ooKh3m),
                     onConfirm: P,
                     onCancel: p,
@@ -176,9 +176,9 @@ let x = "MULTIPLE_CHOICE",
                             children: (0, r.jsx)(d.oil, {
                                 autoFocus: !0,
                                 onChange: (e) => {
-                                    null != _ && I(null);
+                                    null != I && O(null);
                                     let t = e.replace(/(\r\n|\n|\r)/g, " ");
-                                    t.length > b.XN && (t = e.slice(0, b.XN)), j(t);
+                                    t.length > m.XN && (t = e.slice(0, m.XN)), j(t);
                                 },
                                 placeholder: h.intl.string(h.t.fqVmbL),
                                 value: x,
@@ -193,31 +193,31 @@ let x = "MULTIPLE_CHOICE",
                                     index: t,
                                     onChange: (e) =>
                                         ((e, t) => {
-                                            null != _ && I(null);
+                                            null != I && O(null);
                                             let n = e.replace(/(\r\n|\n|\r)/g, " ");
-                                            n.length > b.au && (n = n.slice(0, b.au));
+                                            n.length > m.au && (n = n.slice(0, m.au));
                                             let r = [...v];
                                             (r[t] = n), C(r);
                                         })(e, t),
                                     onClear: () =>
                                         ((e) => {
-                                            null != _ && I(null);
+                                            null != I && O(null);
                                             let t = [...v.slice(0, e), ...v.slice(e + 1)];
                                             C(0 === t.length ? [""] : t);
                                         })(t),
                                     onReorder: E,
-                                    isDropHovered: t === O,
+                                    isDropHovered: t === _,
                                 },
                                 "choice-".concat(t),
                             ),
                         ),
-                        v.length !== b.mb &&
+                        v.length !== m.mb &&
                             (0, r.jsx)("div", {
                                 className: f.addItemContainer,
                                 children: (0, r.jsxs)(d.P3F, {
                                     className: f.addItemButton,
                                     onClick: () => {
-                                        null != _ && I(null), v.length !== b.mb && C([...v, ""]);
+                                        null != I && O(null), v.length !== m.mb && C([...v, ""]);
                                     },
                                     children: [
                                         (0, r.jsx)(d.oFk, {
@@ -237,7 +237,7 @@ let x = "MULTIPLE_CHOICE",
                     ],
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -245,9 +245,9 @@ let x = "MULTIPLE_CHOICE",
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(a)).forEach(function (e) {
-                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                  })(Object(i)).forEach(function (e) {
+                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(i, e));
                   }),
-            i),
+            a),
         );
     };

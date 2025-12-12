@@ -1,8 +1,8 @@
-n.d(t, { Z: () => g });
-var r = n(54381);
+n.d(t, { Z: () => f });
+var a = n(54381);
 n(473749);
-var i = n(120356),
-    a = n.n(i),
+var r = n(120356),
+    i = n.n(r),
     l = n(793030),
     s = n(194594),
     o = n(359993),
@@ -11,57 +11,57 @@ var i = n(120356),
     u = n(691703),
     p = n(953989),
     m = n(388032),
-    h = n(28552);
-function g(e) {
-    let { className: t, view: n, application: i } = e,
-        g = "embedded" === n,
-        f = (0, o.Z)({ application: i });
-    return (0, r.jsxs)("div", {
-        className: a()(t, {
-            [h.sideContainer]: !g,
-            [h.gridContainer]: g,
+    h = n(758701);
+function f(e) {
+    let { className: t, view: n, application: r } = e,
+        f = "embedded" === n,
+        g = (0, o.Z)({ application: r });
+    return (0, a.jsxs)("div", {
+        className: i()(t, {
+            [h.sideContainer]: !f,
+            [h.gridContainer]: f,
         }),
         children: [
-            (0, r.jsxs)("div", {
-                className: a()(h.sectionContainer, { [h.reducedGap]: g }),
+            (0, a.jsxs)("div", {
+                className: i()(h.sectionContainer, { [h.reducedGap]: f }),
                 children: [
-                    (0, r.jsx)("div", {
+                    (0, a.jsx)("div", {
                         className: h.infoSection,
-                        children: (0, r.jsx)(s.Z, {
-                            application: i,
-                            mutualGuilds: f,
+                        children: (0, a.jsx)(s.Z, {
+                            application: r,
+                            mutualGuilds: g,
                             mutualGuildShownMax: 3,
                             className: h.guildCountContainer,
                             guildIconSize: s.x.SMALL,
                             guildsClassName: h.guildsIconContainer,
                             compact: !0,
-                            children: (0, r.jsx)(l.X6q, {
+                            children: (0, a.jsx)(l.X6q, {
                                 variant: "heading-sm/semibold",
                                 color: "text-strong",
                                 children: m.intl.string(m.t["3NxHC4"]),
                             }),
                         }),
                     }),
-                    (0, r.jsx)(c.Z, {
-                        application: i,
+                    (0, a.jsx)(c.Z, {
+                        application: r,
                         className: h.infoSection,
                     }),
-                    (0, r.jsx)(p.Z, {
-                        application: i,
+                    (0, a.jsx)(p.Z, {
+                        application: r,
                         className: h.infoSection,
                     }),
                 ],
             }),
-            (0, r.jsxs)("div", {
-                className: a()(h.sectionContainer, { [h.reducedGap]: g }),
+            (0, a.jsxs)("div", {
+                className: i()(h.sectionContainer, { [h.reducedGap]: f }),
                 children: [
-                    (0, r.jsx)(d.Z, {
-                        application: i,
+                    (0, a.jsx)(d.Z, {
+                        application: r,
                         className: h.infoSection,
-                        innerClassName: g ? h.linkGrid : void 0,
+                        innerClassName: f ? h.linkGrid : void 0,
                     }),
-                    (0, r.jsx)(u.Z, {
-                        application: i,
+                    (0, a.jsx)(u.Z, {
+                        application: r,
                         className: h.infoSection,
                     }),
                 ],

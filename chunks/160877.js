@@ -5,8 +5,8 @@ n.d(t, {
     n(953529);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(470167),
     l = n(793030),
     c = n(572691),
@@ -16,7 +16,7 @@ var r = n(54381),
     p = n(247206),
     _ = n(719548),
     m = n(388032),
-    h = n(463300);
+    h = n(44332);
 let g = (e) => {
         let { attachment: t } = e,
             { url: n, description: i } = t;
@@ -29,17 +29,17 @@ let g = (e) => {
     },
     E = (e) => {
         var t, n, i;
-        let { embed: o } = e;
-        if (!_.n2.has(o.type)) return null;
-        let a =
-            void 0 !== o.video && o.type !== s.h.GIFV
-                ? o.video.url
-                : null != (i = null == (t = o.thumbnail) ? void 0 : t.url)
+        let { embed: a } = e;
+        if (!_.n2.has(a.type)) return null;
+        let o =
+            void 0 !== a.video && a.type !== s.h.GIFV
+                ? a.video.url
+                : null != (i = null == (t = a.thumbnail) ? void 0 : t.url)
                   ? i
-                  : null == (n = o.image)
+                  : null == (n = a.image)
                     ? void 0
                     : n.url;
-        return null == a ? null : (0, r.jsx)(b, { url: a });
+        return null == o ? null : (0, r.jsx)(b, { url: o });
     },
     b = (e) => {
         let { url: t, description: n } = e,
@@ -48,12 +48,12 @@ let g = (e) => {
             className: h.mediaContainer,
             children: i
                 ? (0, r.jsx)(u.Z, {
-                      className: a()(h.video, h.media),
+                      className: o()(h.video, h.media),
                       controls: !0,
                       src: t,
                   })
                 : (0, r.jsx)("img", {
-                      className: a()(h.image, h.media),
+                      className: o()(h.image, h.media),
                       src: t,
                       alt: n,
                   }),
@@ -71,8 +71,8 @@ function O(e) {
     let {
             channelId: t,
             messageId: n,
-            isReportFalsePositiveLoading: o,
-            analyticsContext: a,
+            isReportFalsePositiveLoading: a,
+            analyticsContext: o,
             attachmentPreview: s,
             embedPreview: c,
             onConfirmPress: u,
@@ -84,28 +84,28 @@ function O(e) {
                 action: p.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
                 messageId: n,
-                context: a,
+                context: o,
             }),
                 f();
-        }, [t, n, a, f]),
+        }, [t, n, o, f]),
         h = i.useCallback(() => {
             null == u || u(),
                 (0, p.aP)({
                     action: p.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: t,
                     messageId: n,
-                    context: a,
+                    context: o,
                 });
-        }, [t, n, a, u]);
+        }, [t, n, o, u]);
     return (
         i.useEffect(() => {
             (0, p.aP)({
                 action: p.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
                 channelId: t,
                 messageId: n,
-                context: a,
+                context: o,
             });
-        }, [t, n, a]),
+        }, [t, n, o]),
         (0, r.jsxs)(l.Modal, {
             transitionState: d,
             onClose: f,
@@ -116,13 +116,13 @@ function O(e) {
                     text: m.intl.string(m.t["ETE/oC"]),
                     onClick: _,
                     variant: "secondary",
-                    disabled: o,
+                    disabled: a,
                 },
                 {
                     text: m.intl.string(m.t["cY+Oob"]),
                     onClick: h,
-                    loading: o,
-                    disabled: o,
+                    loading: a,
+                    disabled: a,
                 },
             ],
             children: [null != s && (0, r.jsx)(g, { attachment: s }), null != c && (0, r.jsx)(E, { embed: c })],

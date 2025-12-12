@@ -4,7 +4,7 @@ var i = n(54381),
     l = n(970683),
     a = n(481060),
     o = n(388032),
-    s = n(582220);
+    s = n(37830);
 function c(e) {
     let { header: t, description: n, onDismiss: c, buttons: u, dismissible: d = !0 } = e,
         p = r.useCallback(() => {

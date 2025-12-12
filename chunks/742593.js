@@ -7,27 +7,27 @@ n.d(t, {
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(28664),
     l = n(481060),
     c = n(271383),
     u = n(51144),
     d = n(894017),
     f = n(79874),
-    p = n(376108),
+    p = n(315416),
     _ = n(236373),
     m = n(854698),
     h = n(391174),
     g = n(95291),
     E = n(390966),
     b = n(388032),
-    y = n(396934);
+    y = n(58349);
 function O(e) {
     let { className: t, creator: n, guildId: i, isNew: h, guildEvent: g, eventPreview: O, recurrenceId: v } = e,
         S = (0, p.Z)(i, g.id, v),
         I = null != g ? g : O,
-        T = (0, a.e7)([c.ZP], () => c.ZP.getNick(i, null == n ? void 0 : n.id), [i, n]);
+        T = (0, o.e7)([c.ZP], () => c.ZP.getNick(i, null == n ? void 0 : n.id), [i, n]);
     v = null == I || null != v ? v : (0, m.DK)(I);
     let { startTime: C } = (0, f.ZP)(null != g ? g : O, v),
         A = (0, d.Z)(v, g.id),
@@ -38,7 +38,7 @@ function O(e) {
     if (null == I) return null;
     let { entity_type: P, status: R, recurrence_rule: w } = I;
     return (0, r.jsxs)("div", {
-        className: o()(y.statusContainer, t),
+        className: a()(y.statusContainer, t),
         children: [
             (0, r.jsx)(E.z, {
                 startTime: C.toISOString(),
@@ -86,16 +86,16 @@ function v(e) {
         headerVariant: t = "heading-lg/medium",
         descriptionClassName: n,
         name: i,
-        description: a,
+        description: o,
         truncate: s,
         guildId: c,
         imageSource: u,
     } = e;
     return (0, r.jsxs)("div", {
-        className: o()({ [y.withThumbnail]: null != u }),
+        className: a()({ [y.withThumbnail]: null != u }),
         children: [
             (0, r.jsxs)("div", {
-                className: o()({ [y.descriptionWithThumbnail]: null != u }),
+                className: a()({ [y.descriptionWithThumbnail]: null != u }),
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: t,
@@ -103,10 +103,10 @@ function v(e) {
                         className: y.eventName,
                         children: i,
                     }),
-                    null != a &&
+                    null != o &&
                         (0, r.jsx)(h.Z, {
-                            description: a,
-                            className: o()(n, y.description),
+                            description: o,
+                            className: a()(n, y.description),
                             truncate: s,
                             guildId: c,
                         }),
@@ -128,8 +128,8 @@ function S(e) {
         headerVariant: t,
         descriptionClassName: n,
         creator: i,
-        name: o,
-        description: a,
+        name: a,
+        description: o,
         imageSource: s,
         truncate: l,
         guildId: c,
@@ -160,8 +160,8 @@ function S(e) {
                 recurrenceId: p,
             }),
             (0, r.jsx)(v, {
-                name: o,
-                description: a,
+                name: a,
+                description: o,
                 headerVariant: t,
                 descriptionClassName: n,
                 truncate: l,

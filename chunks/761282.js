@@ -6,9 +6,9 @@ n.d(t, {
 var r = n(54381);
 n(473749);
 var i = n(261600),
-    o = n(157925),
-    a = n(84822);
-let s = { [o.gD]: new i.U() };
+    a = n(157925),
+    o = n(649519);
+let s = { [a.gD]: new i.U() };
 function l(e) {
     var t;
     let n = e.application_id;
@@ -26,7 +26,7 @@ function c(e) {
         return (0, r.jsx)(
             "section",
             {
-                className: a.section,
+                className: o.section,
                 children: (0, r.jsx)(t, { activity: e }),
             },
             "delegate-".concat(n),

@@ -6,8 +6,8 @@ n.d(t, {
 var r,
     i = n(54381);
 n(473749);
-var o = n(120356),
-    a = n.n(o),
+var a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(570140),
@@ -17,7 +17,7 @@ var o = n(120356),
     p = n(944486),
     _ = n(594174),
     m = n(388032),
-    h = n(204427);
+    h = n(58804);
 function g(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ let y = new b(c.Z, {}),
             children: [
                 (0, i.jsx)(l.Text, {
                     variant: "text-sm/medium",
-                    className: a()(h.text, h.replyLabel),
+                    className: o()(h.text, h.replyLabel),
                     children: m.intl.string(m.t["2UvR1E"]),
                 }),
                 (0, i.jsx)("div", {

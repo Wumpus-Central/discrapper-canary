@@ -9,35 +9,35 @@ var i = n(54381),
     u = n(442837),
     d = n(36563),
     p = n(481060),
-    h = n(787014),
-    f = n(911969),
+    f = n(787014),
+    h = n(911969),
     m = n(933557),
     g = n(185413),
     b = n(626786),
     C = n(434404),
     y = n(454585),
     v = n(345162),
-    _ = n(485386),
-    O = n(430824),
-    x = n(496675),
-    E = n(594174),
-    j = n(700785),
-    S = n(51144),
+    O = n(485386),
+    x = n(430824),
+    E = n(496675),
+    j = n(594174),
+    S = n(700785),
+    _ = n(51144),
     P = n(967128),
     I = n(786721),
     Z = n(981631),
     T = n(388032),
-    N = n(338518),
-    A = n(430864);
+    N = n(56759),
+    A = n(960324);
 function w(e) {
     let { channel: t } = e,
         [n, l] = r.useState(!1),
         o = (0, m.ZP)(t, !0),
         w = t.guild_id,
-        M = (0, u.e7)([_.Z], () => (null != w ? _.Z.getSortedRoles(w) : void 0)),
-        R = (0, u.e7)([E.default, O.Z], () => {
+        M = (0, u.e7)([O.Z], () => (null != w ? O.Z.getSortedRoles(w) : void 0)),
+        R = (0, u.e7)([j.default, x.Z], () => {
             var e;
-            return E.default.getUser(null == (e = O.Z.getGuild(w)) ? void 0 : e.ownerId);
+            return j.default.getUser(null == (e = x.Z.getGuild(w)) ? void 0 : e.ownerId);
         }),
         L = r.useMemo(() => (null != M ? M.filter((e) => !(0, v.fI)(e)) : []), [M]),
         D = r.useMemo(
@@ -45,7 +45,7 @@ function w(e) {
                 s()(L)
                     .filter((e) => {
                         if (null == w) return !1;
-                        let n = j.I0({
+                        let n = S.I0({
                             forceRoles: { [e.id]: e },
                             context: t,
                         });
@@ -54,28 +54,28 @@ function w(e) {
                     .value(),
             [t, w, L],
         ),
-        k = (0, u.Wu)([E.default], () => {
+        k = (0, u.Wu)([j.default], () => {
             let e = {};
             for (let n of (null != R && (e[R.id] = R), Object.values(t.permissionOverwrites))) {
-                if (n.type !== f.BN.MEMBER || null != e[n.id]) continue;
-                let t = E.default.getUser(n.id);
+                if (n.type !== h.BN.MEMBER || null != e[n.id]) continue;
+                let t = j.default.getUser(n.id);
                 null != t && (e[t.id] = t);
             }
             return s()(e)
                 .filter((e) => {
                     var n;
-                    let i = j.BT({
+                    let i = S.BT({
                             permission: Z.Plq.ADMINISTRATOR,
                             user: e,
                             context: t,
                         }),
-                        r = null != (n = t.permissionOverwrites[e.id]) ? n : j.Hn,
+                        r = null != (n = t.permissionOverwrites[e.id]) ? n : S.Hn,
                         l = c.e$(r.allow, Z.Plq.VIEW_CHANNEL);
                     return i || l;
                 })
                 .value();
         }, [t, R]),
-        U = x.Z.can(Z.Plq.MANAGE_CHANNELS, t) || x.Z.can(Z.Plq.MANAGE_ROLES, t),
+        U = E.Z.can(Z.Plq.MANAGE_CHANNELS, t) || E.Z.can(Z.Plq.MANAGE_ROLES, t),
         V = r.useCallback(() => l(!1), []);
     return (0, i.jsxs)(P.ZP, {
         channelId: t.id,
@@ -108,7 +108,7 @@ function w(e) {
                               variant: "secondary",
                               text: T.intl.string(T.t["3gUsJb"]),
                               onClick: function () {
-                                  h.ZP.open(t.id);
+                                  f.ZP.open(t.id);
                               },
                               icon: p.vdY,
                           }),
@@ -127,7 +127,7 @@ function w(e) {
                                 users: k,
                             });
                         let e = k[0],
-                            n = S.ZP.getName(e);
+                            n = _.ZP.getName(e);
                         return (0, i.jsxs)("div", {
                             className: N.avatars,
                             children: [

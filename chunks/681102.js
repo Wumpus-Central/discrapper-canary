@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(97028),
     l = n(28664),
     c = n(481060),
@@ -10,20 +10,20 @@ var r = n(54381),
     d = n(810568),
     f = n(168524),
     p = n(214288),
-    _ = n(638912);
+    _ = n(35583);
 let m = 10,
     h = 2;
 function g(e) {
     let { game: t, activityLevel: n, hideTooltip: i } = e,
-        o = t.getIconURL(24),
-        a = (0, p.B)(),
+        a = t.getIconURL(24),
+        o = (0, p.B)(),
         g = (0, f.Z)({
             location: "GuildProfile",
             source: d.m1.GuildProfile,
             trackEntryPointImpression: !0,
             applicationId: t.id,
         });
-    if (null == o) return null;
+    if (null == a) return null;
     let E = !i,
         b = (null == n ? void 0 : n.level) === s.m.HIGH,
         y = (0, r.jsx)(c.Text, {
@@ -41,7 +41,7 @@ function g(e) {
                 children: [
                     (0, r.jsx)("img", {
                         className: _.gameIconImage,
-                        src: o,
+                        src: a,
                         alt: t.name,
                     }),
                     b &&
@@ -63,7 +63,7 @@ function g(e) {
                 ],
             }),
         });
-    return a
+    return o
         ? (0, r.jsx)(c.P3F, {
               onClick: g,
               className: _.gameIconWrapper,
@@ -116,17 +116,17 @@ function b(e) {
     });
 }
 function y(e) {
-    let { gamesToDisplay: t, lastGameToDisplay: n, remainingGames: o, activity: s } = e,
+    let { gamesToDisplay: t, lastGameToDisplay: n, remainingGames: a, activity: s } = e,
         u = i.useMemo(() => {
             if (null == n) return null;
             let e = n.getIconURL(24);
             if (null == e) return null;
-            if (0 === o.length)
+            if (0 === a.length)
                 return (0, r.jsx)(g, {
                     game: n,
                     activityLevel: s[n.id],
                 });
-            let t = o;
+            let t = a;
             return (0, r.jsx)(l.u, {
                 "aria-label": "",
                 position: "bottom",
@@ -135,10 +135,10 @@ function y(e) {
                     activity: s,
                 }),
                 children: (0, r.jsxs)("div", {
-                    className: a()(_.gameIcon, _.extraGameItem),
+                    className: o()(_.gameIcon, _.extraGameItem),
                     children: [
                         (0, r.jsx)("img", {
-                            className: a()(_.gameIconImage, _.extraGameIconImage),
+                            className: o()(_.gameIconImage, _.extraGameIconImage),
                             src: e,
                             alt: n.name,
                         }),
@@ -154,7 +154,7 @@ function y(e) {
                     ],
                 }),
             });
-        }, [n, o, s]);
+        }, [n, a, s]);
     return null == t || 0 === t.length
         ? null
         : 1 === t.length

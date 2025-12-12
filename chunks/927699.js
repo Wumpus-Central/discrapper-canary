@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(541716),
     c = n(752305),
@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(474936),
     _ = n(981631),
     m = n(388032),
-    h = n(12033);
+    h = n(765989);
 let g = (0, f.createChannelRecord)({
     id: "1",
     type: _.d4z.DM,
@@ -21,7 +21,7 @@ function E(e) {
     let {
             sectionTitle: t,
             errors: n,
-            onTextChange: o,
+            onTextChange: a,
             pendingText: f,
             placeholder: _,
             currentText: E,
@@ -34,7 +34,7 @@ function E(e) {
         [T, C] = i.useState((0, c.JM)(S)),
         A = i.useRef(!1);
     function N(e, t, n) {
-        t !== S && (I(t), C(n), o(t));
+        t !== S && (I(t), C(n), a(t));
     }
     function P() {
         return new Promise((e) => {
@@ -55,14 +55,14 @@ function E(e) {
             }
         }, [f, E]),
         (0, r.jsx)("div", {
-            className: a()(h.body, b),
+            className: o()(h.body, b),
             children: (0, r.jsxs)(d.Z, {
                 title: t,
                 errors: n,
                 disabled: O,
                 children: [
                     (0, r.jsx)(u.ZP, {
-                        innerClassName: a()(h.textArea, y),
+                        innerClassName: o()(h.textArea, y),
                         editorClassName: h.editorTextArea,
                         maxCharacterCount: p.$n,
                         onChange: N,

@@ -2,13 +2,13 @@ n.d(t, { Z: () => h }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(628692),
+    a = n.n(i),
+    o = n(628692),
     s = n(845537),
     l = n(653309),
-    c = n(12888),
-    u = n(953782),
-    d = n(430864);
+    c = n(884878),
+    u = n(299477),
+    d = n(960324);
 function f(e, t, n) {
     return (
         t in e
@@ -83,7 +83,7 @@ function h(e, t, n) {
                 );
             return (0, r.jsx)("div", m(p({}, u), { children: f }));
         case "blockQuote": {
-            let e = o()(d.blockquoteContainer, d.slateBlockquoteContainer);
+            let e = a()(d.blockquoteContainer, d.slateBlockquoteContainer);
             return (0, r.jsxs)(
                 "div",
                 m(p({}, u), {
@@ -164,7 +164,7 @@ function h(e, t, n) {
             return (0, r.jsxs)(g, {
                 attributes: u,
                 className: b,
-                children: [(0, r.jsx)(a.ku, { soundId: _.soundId }), f],
+                children: [(0, r.jsx)(o.ku, { soundId: _.soundId }), f],
             });
         case "commandMention":
             return (0, r.jsxs)(g, {
@@ -196,11 +196,11 @@ function h(e, t, n) {
 }
 let g = (e) => {
     let { className: t, attributes: n, children: i } = e,
-        a = o()(u.inlineElement, u.inlineVoid, t);
+        o = a()(u.inlineElement, u.inlineVoid, t);
     return (0, r.jsx)(
         "span",
         m(p({}, n), {
-            className: a,
+            className: o,
             contentEditable: !1,
             children: i,
         }),

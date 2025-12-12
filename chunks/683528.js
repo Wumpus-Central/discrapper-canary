@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(607070),
     c = n(991621),
@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(549635),
     _ = n(217702),
     m = n(388032),
-    h = n(27505);
+    h = n(351225);
 let g = 40;
 function E(e) {
     return "media-view-scroll-thumbnail-".concat(e);
@@ -29,16 +29,16 @@ function b(e) {
 }
 function y(e) {
     var t, n;
-    let { item: i, enabledContentHarmTypeFlags: o = 0 } = e,
-        a = b(i);
-    return null == a
+    let { item: i, enabledContentHarmTypeFlags: a = 0 } = e,
+        o = b(i);
+    return null == o
         ? null
         : (0, u.g4)(
                 {
                     type: c.l.GenericMedia,
                     media: i,
                 },
-                o,
+                a,
             )
           ? (0, r.jsx)(s.Kqy, {
                 align: "center",
@@ -59,7 +59,7 @@ function y(e) {
                 maxWidth: g,
                 maxHeight: g,
                 useFullWidth: !0,
-                src: a,
+                src: o,
                 shouldAnimate: !1,
                 shouldRenderAccessory: !1,
                 srcIsAnimated: i.srcIsAnimated,
@@ -69,7 +69,7 @@ function y(e) {
 }
 let O = i.memo(y);
 function v(e) {
-    let { items: t, currentIndex: n, onGalleryItemClick: o, className: c, enabledContentHarmTypeFlags: u } = e,
+    let { items: t, currentIndex: n, onGalleryItemClick: a, className: c, enabledContentHarmTypeFlags: u } = e,
         d = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
@@ -83,10 +83,10 @@ function v(e) {
                 });
         }, [n]),
         (0, r.jsx)("div", {
-            className: a()(h.galleryContainer, c),
+            className: o()(h.galleryContainer, c),
             children: (0, r.jsx)(s.h21, {
                 orientation: "horizontal",
-                className: a()(h.gallery, c),
+                className: o()(h.gallery, c),
                 ref: d,
                 onClick: (e) => e.stopPropagation(),
                 children: t.map((e, i) => {
@@ -96,7 +96,7 @@ function v(e) {
                         s.P3F,
                         {
                             id: E(i),
-                            className: a()(h.galleryItem, {
+                            className: o()(h.galleryItem, {
                                 [h.inactive]: !l,
                                 [h.first]: 0 === i,
                                 [h.last]: i === t.length - 1,
@@ -105,7 +105,7 @@ function v(e) {
                                 pageNumber: i + 1,
                                 totalPages: t.length,
                             }),
-                            onClick: () => o(i),
+                            onClick: () => a(i),
                             children: (0, r.jsx)(O, {
                                 item: e,
                                 enabledContentHarmTypeFlags: u,

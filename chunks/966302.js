@@ -1,8 +1,8 @@
 n.d(t, { Z: () => el }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(467721),
     l = n(442837),
     c = n(481060),
@@ -44,9 +44,9 @@ var r = n(54381),
     Y = n(295907),
     W = n(65154),
     K = n(388032),
-    z = n(993103),
-    q = n(450943),
-    Q = n(315091);
+    z = n(225375),
+    q = n(82144),
+    Q = n(533348);
 function X(e, t, n) {
     return (
         t in e
@@ -109,20 +109,20 @@ let et = {
     },
     er = 475,
     ei = 267,
-    eo = 128;
-function ea(e) {
+    ea = 128;
+function eo(e) {
     let { header: t } = e,
         n = x.Z.getCameraComponent(),
-        o = (0, l.e7)([x.Z], () => x.Z.getVideoDeviceId()),
-        a = (0, S.Z)();
+        a = (0, l.e7)([x.Z], () => x.Z.getVideoDeviceId()),
+        o = (0, S.Z)();
     return (
         i.useEffect(() => {
             let e = L.default.getCurrentUser();
-            if (a && null != e) {
+            if (o && null != e) {
                 let t = (0, O.P)(e);
-                (0, v.FU)(t, o, { track: !1 }).catch(H.dG4);
+                (0, v.FU)(t, a, { track: !1 }).catch(H.dG4);
             }
-        }, [a, o]),
+        }, [o, a]),
         (0, r.jsxs)("div", {
             className: q.previewRoot,
             children: [
@@ -131,7 +131,7 @@ function ea(e) {
                     className: q.preview,
                     children: (0, r.jsx)(n, {
                         disabled: !1,
-                        deviceId: o,
+                        deviceId: a,
                         width: er,
                         height: ei,
                     }),
@@ -145,14 +145,14 @@ function ea(e) {
     );
 }
 function es(e) {
-    let { canVideo: t, channel: n, numVideoDevices: o } = e,
+    let { canVideo: t, channel: n, numVideoDevices: a } = e,
         { parentAnalyticsLocation: s } = (0, h.ZP)(),
         { cameraUnavailable: l, enabled: d } = (0, I.Z)(),
         p = (0, T.Z)(n),
         _ = i.useRef(null),
-        g = o > 1;
+        g = a > 1;
     return (0, r.jsxs)("div", {
-        className: a()(q.wrapper, q.actions),
+        className: o()(q.wrapper, q.actions),
         children: [
             (0, r.jsx)(A.Z, {
                 iconComponent: c.Dio,
@@ -188,19 +188,19 @@ function es(e) {
                     animation: c.yRy.Animation.FADE,
                     children: (e, t) => {
                         let { onClick: i } = e,
-                            { isShown: o } = t;
+                            { isShown: a } = t;
                         return (0, r.jsx)(P.C, {
                             buttonRef: _,
                             join: !0,
                             enabled: d,
-                            className: a()(q.actionButton, { [q.fullRegionDropdownButtonOverride]: g }),
+                            className: o()(q.actionButton, { [q.fullRegionDropdownButtonOverride]: g }),
                             color: "green",
                             centerButton: !0,
                             hasPermission: p,
                             cameraUnavailable: l,
                             channel: n,
                             onPopoutClick: g ? i : null,
-                            popoutOpen: o,
+                            popoutOpen: a,
                             onCameraUnavailable: C.Z,
                             onChange: () => {
                                 var e;
@@ -243,7 +243,7 @@ function es(e) {
 }
 function el(e) {
     var t;
-    let { animatedStyle: n, y: o, x: f, channel: m } = e,
+    let { animatedStyle: n, y: a, x: f, channel: m } = e,
         { analyticsLocations: y } = (0, h.ZP)(_.Z.INCOMING_CALL_MODAL),
         [O, v] = i.useState(!1),
         S = (0, l.e7)([D.Z], () => D.Z.getGuild(m.guild_id)),
@@ -252,10 +252,10 @@ function el(e) {
                 ? k.ZP.getGuildIconURL({
                       id: S.id,
                       icon: S.icon,
-                      size: eo,
+                      size: ea,
                   })
                 : null,
-        T = null != (t = (0, g.x)(m, eo, !0)) ? t : I,
+        T = null != (t = (0, g.x)(m, ea, !0)) ? t : I,
         C = (0, E.ZP)(m),
         [A, N] = (0, l.Wu)([x.Z], () => [x.Z.supports(W.AN.VIDEO), Object.keys(x.Z.getVideoDevices()).length]),
         P = null != S ? "".concat(C, ", ").concat(S.name) : C,
@@ -290,14 +290,14 @@ function el(e) {
             children: [
                 null != S && null == I
                     ? (0, r.jsx)("div", {
-                          className: a()(q.icon, z.wrapper, z.ringingIncoming),
+                          className: o()(q.icon, z.wrapper, z.ringingIncoming),
                           children: (0, r.jsx)(b.ZP, {
                               className: q.mask,
                               mask: b.QS.AVATAR_DEFAULT,
                               width: O ? 40 : 80,
                               height: O ? 40 : 80,
                               children: (0, r.jsx)("div", {
-                                  className: a()(q.guildIcon, q.guildIconWithoutImage),
+                                  className: o()(q.guildIcon, q.guildIconWithoutImage),
                                   children: (0, r.jsx)("div", {
                                       className: q.guildAcronym,
                                       children: (0, w.gM)(S),
@@ -340,7 +340,7 @@ function el(e) {
             selector: ".".concat(q.root),
             initialPosition: {
                 left: f,
-                top: o,
+                top: a,
             },
             maxX: ec.width,
             maxY: ec.height,
@@ -350,7 +350,7 @@ function el(e) {
                 theme: O ? H.BRd.DARK : void 0,
                 children: (e) =>
                     (0, r.jsxs)(s.animated.div, {
-                        className: a()(q.root, Q.elevationHigh, { [q.previewCamera]: O }, e),
+                        className: o()(q.root, Q.elevationHigh, { [q.previewCamera]: O }, e),
                         style: ee(J({}, n), {
                             minWidth: F.value.interpolate([0, 1], [el.width, er]),
                             minHeight: F.value.interpolate([0, 1], [el.height, ei]),
@@ -358,7 +358,7 @@ function el(e) {
                         }),
                         children: [
                             O
-                                ? (0, r.jsx)(ea, { header: $ })
+                                ? (0, r.jsx)(eo, { header: $ })
                                 : (0, r.jsx)("div", {
                                       className: q.mainChannelInfo,
                                       children: $,

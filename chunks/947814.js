@@ -1,3 +1,1 @@
-e.exports = JSON.parse(
-    '{"RPb8Zk":["Dein Feedback hilft uns, die Discord-Safety-Funktionen zu verbessern."],"cDP3b4":["Feedback abgeschickt"],"KZw6kn":["Was funktioniert nicht gut?"],"eSP1F9":["Ich habe meine Meinung über die Anzeige dieses Inhalts geändert."],"bC0QVX":["Die Anweisungen waren verwirrend."],"8JFGXc":["Ich habe versucht, die Schritte zu befolgen, aber es hat nicht funktioniert."],"Dl4A+U":["Ich hatte nicht die richtigen Dokumente dabei."],"ZsnNgz":["Mir ist unwohl dabei, personenbezogene Daten zu teilen."],"ep5SQp":["Sonstiges"],"kkKhVJ":["Das dauert zu lange."],"maxf2S":["Ich habe mich gefragt, warum das nötig war."],"Q5cQ46":["Beschreibe dein Problem"],"zApKaR":["Möchtest du uns mehr darüber erzählen?"],"4djgO/":["Danke für das Feedback!"],"RqoA4v":["Wie war deine Erfahrung mit der Altersbestätigung?"]}',
-);
+n(481754), (e.exports = n(981994).Object.setPrototypeOf);

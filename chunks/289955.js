@@ -1,0 +1,15 @@
+e.exports = {
+    fileWrapper: "_0ccaee68b77c7469-fileWrapper",
+    file: "_0ccaee68b77c7469-file",
+    fileInner: "_0ccaee68b77c7469-fileInner",
+    icon: "_0ccaee68b77c7469-icon",
+    filenameWrapper: "_0ccaee68b77c7469-filenameWrapper",
+    filename: "_0ccaee68b77c7469-filename",
+    metadata: "_0ccaee68b77c7469-metadata",
+    progressContainer: "_0ccaee68b77c7469-progressContainer _0ccaee68b77c7469-metadata",
+    progress: "_0ccaee68b77c7469-progress",
+    cancelButton: "_0ccaee68b77c7469-cancelButton",
+    size: "_0ccaee68b77c7469-size",
+    filenameLinkWrapper: "_0ccaee68b77c7469-filenameLinkWrapper",
+    fileNameLink: "_0ccaee68b77c7469-fileNameLink",
+};

@@ -1,12 +1,12 @@
 n.d(t, { Z: () => _ }), n(388685), n(539854);
 var r,
     i,
-    o = n(54381),
-    a = n(473749),
+    a = n(54381),
+    o = n(473749),
     s = n(120356),
     l = n.n(s),
     c = n(600164),
-    u = n(501640);
+    u = n(87266);
 function d(e, t, n) {
     return (
         t in e
@@ -20,10 +20,10 @@ function d(e, t, n) {
         e
     );
 }
-class f extends (r = a.PureComponent) {
+class f extends (r = o.PureComponent) {
     render() {
         let { className: e } = this.props;
-        return (0, o.jsx)("input", {
+        return (0, a.jsx)("input", {
             ref: this.setCodeBlockRef,
             className: l()(u.input, e),
             maxLength: 1,
@@ -61,15 +61,15 @@ class f extends (r = a.PureComponent) {
     }
 }
 d(f, "defaultProps", { autoFocus: !1 });
-class p extends (i = a.PureComponent) {
+class p extends (i = o.PureComponent) {
     render() {
         let { className: e, inputClassName: t } = this.props,
             { codes: n } = this.state,
             r = [];
         for (let e = 0; e < n.length; e++)
-            e === n.length / 2 && r.push((0, o.jsx)("div", { className: u.spacer }, "spacer")),
+            e === n.length / 2 && r.push((0, a.jsx)("div", { className: u.spacer }, "spacer")),
                 r.push(
-                    (0, o.jsx)(
+                    (0, a.jsx)(
                         f,
                         {
                             ref: (t) => this.setCodeBlockRef(e, t),
@@ -82,7 +82,7 @@ class p extends (i = a.PureComponent) {
                         e,
                     ),
                 );
-        return (0, o.jsx)(c.Z, {
+        return (0, a.jsx)(c.Z, {
             align: c.Z.Align.CENTER,
             justify: c.Z.Justify.CENTER,
             className: e,

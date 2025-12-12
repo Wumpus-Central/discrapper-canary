@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(781311);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(793030),
     l = n(442837),
     c = n(833664),
@@ -18,12 +18,12 @@ var r = n(54381),
     b = n(122943),
     y = n(556638),
     O = n(981631),
-    v = n(80568);
+    v = n(175996);
 function S(e) {
     let {
         user: t,
         activities: n,
-        applicationStream: o,
+        applicationStream: a,
         voiceChannel: S,
         textClassName: I,
         iconClassName: T,
@@ -34,7 +34,7 @@ function S(e) {
         hideTooltip: R = !1,
     } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
-    let w = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
+    let w = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
         D = (0, f.E)("ActivityStatus", S),
         x = (0, l.e7)([p.default], () => p.default.getId() === (null == t ? void 0 : t.id)),
         L = (0, l.e7)([d.Z], () =>
@@ -102,7 +102,7 @@ function S(e) {
                     })
                   : null;
         },
-        G = a()(v.container, {
+        G = o()(v.container, {
             [v.textXs]: "xs" === C,
             [v.textSm]: "sm" === C,
         }),
@@ -128,7 +128,7 @@ function S(e) {
             U(),
             (0, r.jsx)(s.xvT, {
                 variant: "text-".concat(C, "/normal"),
-                className: a()(v.truncated, v.dot, I),
+                className: o()(v.truncated, v.dot, I),
                 children: y.l,
             }),
             Z(),

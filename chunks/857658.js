@@ -1,8 +1,8 @@
 n.d(t, { U: () => R }), n(388685), n(781311);
 var r = n(54381),
     i = n(473749),
-    o = n(688619),
-    a = n.n(o),
+    a = n(688619),
+    o = n.n(a),
     s = n(120356),
     l = n.n(s),
     c = n(608787),
@@ -15,9 +15,9 @@ var r = n(54381),
     h = n(233398),
     g = n(866419),
     E = n(771934),
-    b = n(5570),
+    b = n(831989),
     y = n(388032),
-    O = n(209289);
+    O = n(202560);
 function v() {
     return (0, r.jsx)("div", {
         className: O.loader,
@@ -36,8 +36,8 @@ function C(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
 }
 function A(e) {
-    let { colors: t, selectedIndex: n, onColorSelect: o } = e,
-        [a, s] = i.useMemo(() => {
+    let { colors: t, selectedIndex: n, onColorSelect: a } = e,
+        [o, s] = i.useMemo(() => {
             let e = t.map((e, n) => C(t, n)),
                 n = t.map((t, n) => "".concat(t, " ").concat(e[n], "%")).join(", ");
             return [e, { background: "linear-gradient(to right, ".concat(n, ")") }];
@@ -46,7 +46,7 @@ function A(e) {
         className: O.gradientBar,
         style: s,
         children: t.map((e, t) => {
-            let s = a[t],
+            let s = o[t],
                 c = t === n;
             return (0, r.jsxs)(
                 i.Fragment,
@@ -58,7 +58,7 @@ function A(e) {
                                 left: "".concat(s, "%"),
                                 backgroundColor: e,
                             },
-                            onClick: () => o(t),
+                            onClick: () => a(t),
                             children: (0, r.jsx)("div", { className: O.colorSquareInner }),
                         }),
                         c &&
@@ -84,29 +84,29 @@ function N(e) {
 }
 function P(e) {
     if (!(0, u.FX)(e)) return e;
-    let t = a()(e);
+    let t = o()(e);
     return t.set("hsl.h", (t.get("hsl.h") + 15) % 360).hex();
 }
 function R(e) {
-    let { value: t, onChange: n, className: o, colors: a, setColors: s } = e,
+    let { value: t, onChange: n, className: a, colors: o, setColors: s } = e,
         c = (0, m.Z)(),
         [v, T] = i.useState(0),
         [C, R] = i.useState(t);
     i.useEffect(() => {
-        if (a.length > 0 && v < a.length) {
-            let e = a[v];
+        if (o.length > 0 && v < o.length) {
+            let e = o[v];
             (0, u.FX)(e) && (R(e), n(e));
         }
-        v >= a.length && T(0);
-    }, [v, a, n]);
+        v >= o.length && T(0);
+    }, [v, o, n]);
     let w = (e) => {
             let t = e.trim();
             return t.startsWith("#") ? t : t.length > 0 ? "#".concat(t) : t;
         },
         D = (e) => {
             let t = w(e);
-            if ((R(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), a.length > 0))) {
-                let e = [...a];
+            if ((R(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), o.length > 0))) {
+                let e = [...o];
                 (e[v] = t), s(e);
             }
         },
@@ -114,8 +114,8 @@ function R(e) {
             R(e.hex);
         }, []),
         L = (e) => {
-            if (((0, E.P0)(), n(e.hex), a.length > 0)) {
-                let t = [...a];
+            if (((0, E.P0)(), n(e.hex), o.length > 0)) {
+                let t = [...o];
                 (t[v] = e.hex), s(t);
             }
         },
@@ -127,30 +127,30 @@ function R(e) {
                 } catch (e) {}
         },
         M = () => {
-            if (a.length === I) return;
-            0 === a.length && (0, g.ft)(), (0, E.gG)();
-            let e = a.length > 0 ? a[a.length - 1] : C,
-                t = a.length > 0 ? P(e) : e,
-                n = [...a, t];
+            if (o.length === I) return;
+            0 === o.length && (0, g.ft)(), (0, E.gG)();
+            let e = o.length > 0 ? o[o.length - 1] : C,
+                t = o.length > 0 ? P(e) : e,
+                n = [...o, t];
             s(n), T(n.length - 1);
         },
         k = (e) => {
-            if (a.length > 1) {
+            if (o.length > 1) {
                 (0, E.JL)();
-                let t = a.filter((t, n) => n !== e);
+                let t = o.filter((t, n) => n !== e);
                 s(t), v >= t.length ? T(t.length - 1) : v > e && T(v - 1);
             }
         },
         U = (e) => {
             T(e), (0, E.w8)();
         },
-        G = a.length > 1;
+        G = o.length > 1;
     return (0, r.jsxs)("div", {
-        className: l()(O.container, o),
+        className: l()(O.container, a),
         children: [
             G &&
                 (0, r.jsx)(A, {
-                    colors: a,
+                    colors: o,
                     selectedIndex: v,
                     onColorSelect: U,
                 }),
@@ -200,7 +200,7 @@ function R(e) {
                     }),
                 ],
             }),
-            a.length < I &&
+            o.length < I &&
                 (0, r.jsx)(p.zxk, {
                     variant: "secondary",
                     size: "md",

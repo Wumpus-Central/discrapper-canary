@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => _,
+    Z: () => b,
     f: () => x,
 }),
     n(388685);
@@ -9,44 +9,44 @@ var r = n(54381),
     o = n(442837),
     a = n(481060),
     s = n(434404),
-    u = n(905128),
-    c = n(238343),
+    c = n(905128),
+    u = n(238343),
     d = n(639777),
-    p = n(981631),
-    f = n(265397),
+    f = n(981631),
+    p = n(556970),
     m = n(388032),
-    g = n(46310),
-    v = n(175435);
+    g = n(592281),
+    v = n(337003);
 function x(e, t) {
     var x;
-    let _ = null != (x = (0, d.Z)(t)) && x,
-        b = (0, o.e7)([u.Z], () => {
+    let b = null != (x = (0, d.Z)(t)) && x,
+        h = (0, o.e7)([c.Z], () => {
             var e;
-            return null == (e = u.Z.getStateForGuild(t)) ? void 0 : e.allPowerups;
+            return null == (e = c.Z.getStateForGuild(t)) ? void 0 : e.allPowerups;
         }),
-        h = (0, o.e7)([u.Z], () => {
+        j = (0, o.e7)([c.Z], () => {
             var e;
-            return null == (e = u.Z.getStateForGuild(t)) ? void 0 : e.unlockedPowerups;
+            return null == (e = c.Z.getStateForGuild(t)) ? void 0 : e.unlockedPowerups;
         });
     return i.useMemo(() => {
         let i = (e) =>
                 "guildTagsBadgePacks" === e
                     ? (function (e) {
-                          let { guildId: t, canUseBoosts: i, allPowerups: o, unlockedPowerups: u } = e,
-                              d = m.intl.string(f.default.KC9HRW),
-                              x = m.intl.string(f.default.GJiSmP),
-                              _ = null == o ? void 0 : o[l.IN],
-                              b = (null == u ? void 0 : u[l.IN]) != null,
-                              h = m.intl.string(f.default["/egwJA"]),
-                              j = b ? void 0 : m.intl.string(f.default.W6Vwn3),
-                              C = b ? void 0 : m.intl.string(f.default.lvk1Gc),
-                              Z = b ? m.intl.string(f.default["9CfkLO"]) : m.intl.string(m.t["+7XY31"]),
-                              w = b ? "secondary" : "expressive",
+                          let { guildId: t, canUseBoosts: i, allPowerups: o, unlockedPowerups: c } = e,
+                              d = m.intl.string(p.default.KC9HRW),
+                              x = m.intl.string(p.default.GJiSmP),
+                              b = null == o ? void 0 : o[l.IN],
+                              h = (null == c ? void 0 : c[l.IN]) != null,
+                              j = m.intl.string(p.default["/egwJA"]),
+                              _ = h ? void 0 : m.intl.string(p.default.W6Vwn3),
+                              C = h ? void 0 : m.intl.string(p.default.lvk1Gc),
+                              Z = h ? m.intl.string(p.default["9CfkLO"]) : m.intl.string(m.t["+7XY31"]),
+                              w = h ? "secondary" : "expressive",
                               I = i
                                   ? () => {
-                                        b
-                                            ? s.Z.open(t, p.pNK.TAG, p.jXE.GUILD_POWERUPS_OVERVIEW_CARD)
-                                            : null != _ && (0, c.KE)(t, _),
+                                        h
+                                            ? s.Z.open(t, f.pNK.TAG, f.jXE.GUILD_POWERUPS_OVERVIEW_CARD)
+                                            : null != b && (0, u.KE)(t, b),
                                             (0, a.pTH)();
                                     }
                                   : void 0;
@@ -90,7 +90,7 @@ function x(e, t) {
                                                       {
                                                           guildId: t,
                                                           title: d,
-                                                          description: m.intl.string(f.default.BBRFRd),
+                                                          description: m.intl.string(p.default.BBRFRd),
                                                           powerups: e,
                                                           footerInfoText: C,
                                                           footerAction:
@@ -110,8 +110,8 @@ function x(e, t) {
                                       { onCloseCallback: null == l ? void 0 : l.onModalClose },
                                   );
                               },
-                              viewCta: h,
-                              viewCtaTooltip: j,
+                              viewCta: j,
+                              viewCtaTooltip: _,
                               image: {
                                   staticUrl: v.Z,
                                   animatedUrl: g.Z,
@@ -119,9 +119,9 @@ function x(e, t) {
                           };
                       })({
                           guildId: t,
-                          canUseBoosts: _,
-                          allPowerups: b,
-                          unlockedPowerups: h,
+                          canUseBoosts: b,
+                          allPowerups: h,
+                          unlockedPowerups: j,
                       })
                     : void 0,
             o = {};
@@ -130,8 +130,8 @@ function x(e, t) {
             null != e && (o[t] = e);
         }
         return o;
-    }, [e, t, _, b, h]);
+    }, [e, t, b, h, j]);
 }
-function _(e, t) {
+function b(e, t) {
     return x([e], t)[e];
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(913527),
     l = n.n(s),
     c = n(481060),
@@ -12,15 +12,15 @@ var r = n(54381),
     p = n(942951),
     _ = n(594174),
     m = n(55935),
-    h = n(964721),
+    h = n(792389),
     g = n(388032),
-    E = n(424271),
-    b = n(724913),
+    E = n(5053),
+    b = n(549578),
     y = n(328756);
 let O = (e) => {
-    let { reportingUserId: t, guildId: n, compact: o, channel: s, messageId: O, reportedTimestamp: v } = e,
+    let { reportingUserId: t, guildId: n, compact: a, channel: s, messageId: O, reportedTimestamp: v } = e,
         S = _.default.getUser(t),
-        I = i.useMemo(() => (o ? (0, f.Z)((0, m.vc)(l()(), "LT")) : null), [o]),
+        I = i.useMemo(() => (a ? (0, f.Z)((0, m.vc)(l()(), "LT")) : null), [a]),
         T = (0, p.l)({
             user: S,
             channelId: s.id,
@@ -36,7 +36,7 @@ let O = (e) => {
                   })
                 : g.intl.string(h.default.xpRjfS);
     return (0, r.jsxs)("div", {
-        className: a()(b.messageSpine, b.repliedMessage, I),
+        className: o()(b.messageSpine, b.repliedMessage, I),
         children: [
             (0, r.jsx)(c.qEK, {
                 src: C,

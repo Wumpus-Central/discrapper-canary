@@ -1,0 +1,16 @@
+e.exports = {
+    modalRoot: "_6f8c06009fdc1dc6-modalRoot",
+    closeButton: "_6f8c06009fdc1dc6-closeButton",
+    modalContent: "_6f8c06009fdc1dc6-modalContent",
+    templatesContainer: "_6f8c06009fdc1dc6-templatesContainer",
+    templatesContainerBody: "_6f8c06009fdc1dc6-templatesContainerBody",
+    templatesContentContainer: "_6f8c06009fdc1dc6-templatesContentContainer",
+    modalBodyText: "_6f8c06009fdc1dc6-modalBodyText",
+    creatorPortalText: "_6f8c06009fdc1dc6-creatorPortalText",
+    templateCardList: "_6f8c06009fdc1dc6-templateCardList",
+    templateCard: "_6f8c06009fdc1dc6-templateCard",
+    templateNameRow: "_6f8c06009fdc1dc6-templateNameRow",
+    unselectedTemplateName: "_6f8c06009fdc1dc6-unselectedTemplateName",
+    templateCardImage: "_6f8c06009fdc1dc6-templateCardImage",
+    blackoutOverlay: "_6f8c06009fdc1dc6-blackoutOverlay",
+};

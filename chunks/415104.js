@@ -11,10 +11,10 @@ var a = n(54381),
     m = n(110560),
     p = n(672188),
     h = n(466962),
-    x = n(439826),
-    f = n(43779),
-    g = n(981631),
-    b = n(88036);
+    f = n(439826),
+    x = n(43779),
+    b = n(981631),
+    g = n(645455);
 function v(e) {
     var t, n;
     let {
@@ -23,10 +23,10 @@ function v(e) {
             questContent: u,
             contentPosition: v,
             rowIndex: j,
-            impressionRef: _,
-            sourceQuestContent: y,
+            impressionRef: y,
+            sourceQuestContent: C,
         } = e,
-        [C, S] = r.useState(!1),
+        [_, S] = r.useState(!1),
         [E, O] = r.useState([]),
         T = (0, c.qb)(i),
         N = r.useMemo(() => (0, d.q8)(i), [i]),
@@ -35,29 +35,29 @@ function v(e) {
             S(!0),
                 P({
                     questId: i.id,
-                    event: g.rMx.QUEST_HOVER,
+                    event: b.rMx.QUEST_HOVER,
                     properties: {
                         content_id: u,
                         content_name: (0, s._b)(u),
                         content_position: v,
                     },
-                    sourceQuestContent: y,
+                    sourceQuestContent: C,
                 }),
                 N && (0, m.loadVideoQuestModal)();
-        }, [P, i.id, u, N, y, v]),
+        }, [P, i.id, u, N, C, v]),
         I = r.useCallback(() => {
             S(!1),
                 P({
                     questId: i.id,
-                    event: g.rMx.QUEST_HOVER_OFF,
+                    event: b.rMx.QUEST_HOVER_OFF,
                     properties: {
                         content_id: u,
                         content_name: (0, s._b)(u),
                         content_position: v,
                     },
-                    sourceQuestContent: y,
+                    sourceQuestContent: C,
                 });
-        }, [P, i.id, u, y, v]),
+        }, [P, i.id, u, C, v]),
         k = r.useContext(h.t),
         { visibilityElementRef: R, almostVisibleInViewport: A } = (function (e) {
             let [t, n] = r.useState(!1),
@@ -80,31 +80,31 @@ function v(e) {
     return (0, a.jsxs)("div", {
         id: "quest-tile-".concat(i.id),
         ref: (e) => {
-            (_.current = e), (R.current = e);
+            (y.current = e), (R.current = e);
         },
-        className: l()(b.container, o),
+        className: l()(g.container, o),
         onMouseEnter: w,
         onMouseLeave: I,
         onFocus: w,
         onBlur: I,
         children: [
-            (0, a.jsx)(x.Z, {
+            (0, a.jsx)(f.Z, {
                 quest: i,
-                isHovering: C,
+                isHovering: _,
                 errorHints: E,
                 warningHints: T,
                 isVisibleInViewport: A,
-                sourceQuestContent: y,
+                sourceQuestContent: C,
             }),
-            (0, a.jsx)(f.Z, {
+            (0, a.jsx)(x.Z, {
                 quest: i,
                 questContent: u,
-                isHovering: C,
+                isHovering: _,
                 contentPosition: v,
                 rowIndex: j,
                 onReceiveErrorHints: O,
                 isVisibleInViewport: A,
-                sourceQuestContent: y,
+                sourceQuestContent: C,
             }),
         ],
     });

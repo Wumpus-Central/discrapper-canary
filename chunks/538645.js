@@ -11,22 +11,22 @@ var a = n(54381),
     m = n(267097),
     p = n(281598),
     h = n(25251),
-    x = n(373071),
-    f = n(782691),
-    g = n(558270);
-let b = "Make sure you're only uploading text files!",
+    f = n(373071),
+    x = n(782691),
+    b = n(75266);
+let g = "Make sure you're only uploading text files!",
     v = (e) => {
         var t, n, r;
         let { effect: i, onClick: l } = e,
-            { deleteConfig: s } = (0, x.n6)();
+            { deleteConfig: s } = (0, f.n6)();
         return (0, a.jsxs)(c.P3F, {
-            className: g.previewCard,
+            className: b.previewCard,
             onClick: () => {
                 l(i);
             },
             children: [
                 (0, a.jsx)("div", {
-                    className: g.previewCardImage,
+                    className: b.previewCardImage,
                     style: {
                         backgroundImage: "url(".concat(
                             null == (r = i.config) || null == (n = r.effects) || null == (t = n[0]) ? void 0 : t.base64,
@@ -35,7 +35,7 @@ let b = "Make sure you're only uploading text files!",
                     },
                 }),
                 (0, a.jsxs)("div", {
-                    className: g.previewCardFooter,
+                    className: b.previewCardFooter,
                     children: [
                         (0, a.jsx)(c.Text, {
                             variant: "text-md/bold",
@@ -54,30 +54,30 @@ let b = "Make sure you're only uploading text files!",
         });
     };
 function j() {
-    let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, x.n6)(),
+    let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, f.n6)(),
         [i, j] = r.useState(),
-        _ = r.useRef(null),
-        y = (0, o.Wu)([h.Z], () => h.Z.getAllProfileEffects());
+        y = r.useRef(null),
+        C = (0, o.Wu)([h.Z], () => h.Z.getAllProfileEffects());
     (0, m.Z)();
-    let [C, S] = r.useState(""),
+    let [_, S] = r.useState(""),
         E = r.useMemo(
             () =>
-                "" === C
-                    ? y
-                    : y.filter((e) => {
+                "" === _
+                    ? C
+                    : C.filter((e) => {
                           var t, n, a, r;
-                          let i = C.toLowerCase(),
+                          let i = _.toLowerCase(),
                               l = null != (a = null == (t = e.config.title) ? void 0 : t.toLowerCase()) ? a : "",
                               s = null != (r = null == (n = e.config.description) ? void 0 : n.toLowerCase()) ? r : "";
                           return l.includes(i) || s.includes(i);
                       }),
-            [C, y],
+            [_, C],
         ),
         O = r.useCallback(
             (e, n) => {
-                if (null == n || !e.type.startsWith("text/")) return (0, p.Eo)(b);
+                if (null == n || !e.type.startsWith("text/")) return (0, p.Eo)(g);
                 let [a, r] = n.split(",");
-                if (!a.includes("text/plain")) return (0, p.Eo)(b);
+                if (!a.includes("text/plain")) return (0, p.Eo)(g);
                 let i = JSON.parse(atob(r));
                 (i.skuId = (0, s.Z)()), t(i), (0, p.XA)("Profile Effect (maybe??) imported!");
             },
@@ -93,16 +93,16 @@ function j() {
             [O],
         );
     return (0, a.jsxs)("div", {
-        className: g.root,
+        className: b.root,
         children: [
             null == i &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)("div", {
-                            className: g.col,
+                            className: b.col,
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: l()(g.section, g.row),
+                                    className: l()(b.section, b.row),
                                     children: [
                                         (0, a.jsx)(c.Heading, {
                                             variant: "heading-xl/bold",
@@ -123,7 +123,7 @@ function j() {
                                     ],
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: g.customEffectsGrid,
+                                    className: b.customEffectsGrid,
                                     children: Object.values(e).map((e) =>
                                         (0, a.jsx)(
                                             v,
@@ -140,10 +140,10 @@ function j() {
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: l()(g.row, g.end, g.section),
+                            className: l()(b.row, b.end, b.section),
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: g.uploadButton,
+                                    className: b.uploadButton,
                                     children: [
                                         (0, a.jsx)(c.Text, {
                                             variant: "text-md/normal",
@@ -151,7 +151,7 @@ function j() {
                                             children: "Import Shared Config",
                                         }),
                                         (0, a.jsx)(u.Z, {
-                                            ref: _,
+                                            ref: y,
                                             onChange: T,
                                             multiple: !1,
                                         }),
@@ -172,25 +172,25 @@ function j() {
                         }),
                         (0, a.jsx)("hr", {}),
                         (0, a.jsxs)("div", {
-                            className: g.section,
+                            className: b.section,
                             children: [
                                 (0, a.jsx)(c.Heading, {
                                     variant: "heading-xl/bold",
                                     children: "All Effects",
                                 }),
                                 (0, a.jsx)(c.oil, {
-                                    value: C,
+                                    value: _,
                                     onChange: (e) => {
                                         S(e);
                                     },
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: g.pfxGrid,
+                                    className: b.pfxGrid,
                                     children: E.map((e) =>
                                         (0, a.jsx)(
                                             c.P3F,
                                             {
-                                                className: g.pfxListItem,
+                                                className: b.pfxListItem,
                                                 style: {
                                                     backgroundImage: "url(".concat(e.config.thumbnailPreviewSrc, ")"),
                                                 },
@@ -203,7 +203,7 @@ function j() {
                                                     });
                                                 },
                                                 children: (0, a.jsx)("div", {
-                                                    className: g.pfxListItemFooter,
+                                                    className: b.pfxListItemFooter,
                                                     children: (0, a.jsx)(c.Text, {
                                                         variant: "text-md/normal",
                                                         color: "always-white",
@@ -219,7 +219,7 @@ function j() {
                         }),
                     ],
                 }),
-            null != i && (0, a.jsx)(f.Z, { effect: i }),
+            null != i && (0, a.jsx)(x.Z, { effect: i }),
         ],
     });
 }

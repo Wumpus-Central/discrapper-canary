@@ -13,16 +13,16 @@ var r = n(54381),
     g = n(358221),
     h = n(740492),
     m = n(871499),
-    _ = n(786915),
-    b = n(944486),
-    E = n(48131),
+    b = n(786915),
+    E = n(944486),
+    _ = n(48131),
     O = n(214143),
     v = n(610278),
     y = n(408491),
     I = n(981631),
     C = n(918559),
     S = n(388032),
-    T = n(909357);
+    T = n(2266);
 let N = {
     [C.MI.NO_CHAT]: T.noChat,
     [C.MI.RESIZABLE]: T.resizable,
@@ -31,9 +31,9 @@ function j(e) {
     let { frame: t } = e,
         n = (0, f.q)(t.applicationId),
         l = (0, d.Z)(),
-        { selectedChannelId: j, selectedVoiceChannelId: P } = (0, s.cj)([b.Z], () => ({
-            selectedChannelId: b.Z.getChannelId(),
-            selectedVoiceChannelId: b.Z.getVoiceChannelId(),
+        { selectedChannelId: j, selectedVoiceChannelId: P } = (0, s.cj)([E.Z], () => ({
+            selectedChannelId: E.Z.getChannelId(),
+            selectedVoiceChannelId: E.Z.getVoiceChannelId(),
         })),
         x = (0, s.e7)([g.Z], () => null != P && j === P && g.Z.getChatOpen(P), [j, P]),
         A = (0, s.e7)([h.ZP], () => h.ZP.callChatSidebarWidth),
@@ -45,13 +45,13 @@ function j(e) {
             height: 0,
         }),
         M = i.useCallback(() => {
-            E.Z.updateFrameLayoutMode({
+            _.Z.updateFrameLayoutMode({
                 applicationId: t.applicationId,
                 layoutMode: y.U.PIP,
             });
         }, [t.applicationId]),
         k = i.useCallback(() => {
-            E.Z.stopFrame({ applicationId: t.applicationId });
+            _.Z.stopFrame({ applicationId: t.applicationId });
         }, [t.applicationId]);
     i.useLayoutEffect(() => {
         if (null == L.current) return;
@@ -69,7 +69,7 @@ function j(e) {
                 null == w.current ||
                     w.current.contains(e.target) ||
                     l ||
-                    E.Z.updateFrameLayoutMode({
+                    _.Z.updateFrameLayoutMode({
                         applicationId: t.applicationId,
                         layoutMode: y.U.PIP,
                     });
@@ -124,7 +124,7 @@ function j(e) {
                     (0, r.jsxs)("div", {
                         className: T.footer,
                         children: [
-                            (0, r.jsx)(_.Z, {
+                            (0, r.jsx)(b.Z, {
                                 appContext: I.IlC.APP,
                                 applicationId: n.id,
                                 shouldPrioritizeGroupPlusIcon: !0,

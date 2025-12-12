@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(290780), n(781311);
+n.d(t, { Z: () => E }), n(388685), n(290780), n(781311);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -13,16 +13,16 @@ var r = n(54381),
     g = n(6809),
     h = n(231338),
     m = n(388032),
-    _ = n(982538);
-let b = function (e) {
-    var t, n, b;
-    let { questId: E, setQuestId: O, quest: v, refreshQuest: y } = e,
+    b = n(9976);
+let E = function (e) {
+    var t, n, E;
+    let { questId: _, setQuestId: O, quest: v, refreshQuest: y } = e,
         [I, C] = i.useState(!1),
         [S, T] = i.useState(!1),
         N = i.useRef(null),
         j = (0, p.MP)(),
-        P = (0, l.e7)([d.Z], () => (null != E ? d.Z.getFetchQuestPreviewError(E) : null), [E]),
-        x = (0, l.e7)([d.Z], () => null != E && d.Z.isFetchingQuestPreview(E), [E]),
+        P = (0, l.e7)([d.Z], () => (null != _ ? d.Z.getFetchQuestPreviewError(_) : null), [_]),
+        x = (0, l.e7)([d.Z], () => null != _ && d.Z.isFetchingQuestPreview(_), [_]),
         A = i.useMemo(() => {
             let e = j.map((e) => {
                 var t, n, r;
@@ -39,46 +39,46 @@ let b = function (e) {
                 };
             });
             return (
-                null == E ||
-                    e.some((e) => e.value === E) ||
+                null == _ ||
+                    e.some((e) => e.value === _) ||
                     e.unshift({
-                        label: E,
-                        value: E,
+                        label: _,
+                        value: _,
                     }),
                 e
             );
-        }, [j, E]),
+        }, [j, _]),
         Z = i.useCallback(async () => {
-            if (null != E) {
+            if (null != _) {
                 C(!0);
                 try {
-                    await (0, u.Wf)(E, 1);
+                    await (0, u.Wf)(_, 1);
                 } finally {
                     C(!1);
                 }
             }
-        }, [E, C]),
+        }, [_, C]),
         w = i.useCallback(async () => {
-            if (null != E) {
+            if (null != _) {
                 C(!0);
                 try {
-                    await (0, u.eT)(E);
+                    await (0, u.eT)(_);
                 } finally {
                     C(!1);
                 }
             }
-        }, [E, C]),
+        }, [_, C]),
         L = i.useCallback(async () => {
-            if (null != E) {
+            if (null != _) {
                 C(!0);
                 try {
                     let e = Math.random();
-                    await (0, u.Wf)(E, e);
+                    await (0, u.Wf)(_, e);
                 } finally {
                     C(!1);
                 }
             }
-        }, [E, C]),
+        }, [_, C]),
         R = i.useCallback(
             (e) => {
                 (0, c.Ew)(e) || null == O || O(e);
@@ -86,24 +86,24 @@ let b = function (e) {
             [O],
         );
     return (0, r.jsxs)("div", {
-        className: _.controlBar,
+        className: b.controlBar,
         children: [
             (0, r.jsx)("div", {
                 children: (0, r.jsx)("div", {
-                    className: _.questSelectorContainer,
+                    className: b.questSelectorContainer,
                     children: (0, r.jsxs)("div", {
-                        className: _.questSelectorWrapper,
+                        className: b.questSelectorWrapper,
                         children: [
                             (0, r.jsx)(g.Z, {}),
                             (0, r.jsxs)("div", {
-                                className: _.questInput,
+                                className: b.questInput,
                                 children: [
                                     (0, r.jsx)(
                                         a.d,
                                         {
                                             "aria-label": "Quest ID",
                                             options: A,
-                                            value: E,
+                                            value: _,
                                             onChange: R,
                                             placeholder: m.intl.string(m.t.Zw8jxn),
                                             clearable: !0,
@@ -125,14 +125,14 @@ let b = function (e) {
                                             },
                                         },
                                         ""
-                                            .concat(E, "-")
+                                            .concat(_, "-")
                                             .concat(
                                                 null !=
-                                                    (b =
+                                                    (E =
                                                         null == v || null == (n = v.config) || null == (t = n.messages)
                                                             ? void 0
                                                             : t.questName)
-                                                    ? b
+                                                    ? E
                                                     : "",
                                             ),
                                     ),
@@ -148,12 +148,12 @@ let b = function (e) {
                     }),
                 }),
             }),
-            null != E &&
+            null != _ &&
                 null != v &&
                 (0, r.jsx)("div", {
-                    className: _.controlsSection,
+                    className: b.controlsSection,
                     children: (0, r.jsxs)(s.ButtonGroup, {
-                        className: _.controlButtons,
+                        className: b.controlButtons,
                         children: [
                             (0, r.jsx)(s.Button, {
                                 onClick: Z,
@@ -184,11 +184,11 @@ let b = function (e) {
                                 align: "center",
                                 renderPopout: () =>
                                     (0, r.jsx)("div", {
-                                        className: _.sharePopover,
+                                        className: b.sharePopover,
                                         children: (0, r.jsx)("div", {
-                                            className: _.copyInput,
+                                            className: b.copyInput,
                                             children: (0, r.jsx)(o.Z, {
-                                                value: h.$w.QUEST_PREVIEW_TOOL_2(E),
+                                                value: h.$w.QUEST_PREVIEW_TOOL_2(_),
                                                 text: m.intl.string(m.t.WqhZss),
                                             }),
                                         }),

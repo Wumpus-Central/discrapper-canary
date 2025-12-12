@@ -8,15 +8,15 @@ var a = n(54381),
     c = n(7093),
     d = n(817466),
     u = n(388032),
-    m = n(119290);
-let p = r.lazy(() => n.e("77898").then(n.bind(n, 739859)));
+    m = n(679363);
+let p = r.lazy(() => n.e("979").then(n.bind(n, 739859)));
 function h() {
     let e = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         t = (0, c.Z)((e) => e.shouldRenderTenureLevelUp),
         n = (0, d.Z)();
-    return e || !t || null == n ? null : (0, a.jsx)(x, { levelUpData: n });
+    return e || !t || null == n ? null : (0, a.jsx)(f, { levelUpData: n });
 }
-function x(e) {
+function f(e) {
     let { levelUpData: t } = e,
         n = r.useRef(null),
         i = r.useCallback(() => {

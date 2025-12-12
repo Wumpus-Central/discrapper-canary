@@ -1,3 +1,47 @@
-o.exports = JSON.parse(
-    '{"kxF9br":["SDK connesso tramite RPC"],"8a7IrV":["URL entrypoint di collegamento registrato"],"9iLeL2":["URL configurato come ",[1,"url"]],"AGLx00":["Flusso di gioco connesso:"],"w0pN4R":["Collega account"],"yKwZc2":["Gestisci il collegamento dell\'account"],"aTULMB":["Risposta di autenticazione non rilevata. Se hai chiamato la funzione e continui a vedere questo, consulta i registri per maggiori dettagli"],"eg0mNa":["Impossibile collegare perché non ci sono flussi di collegamento validi disponibili"],"OEkrCx":["Questo flusso sarà usato"],"no+FQS":["Verrà utilizzato il primo flusso di collegamento disponibile, a partire dall\'alto"],"PFxxJa":["Se il tuo gioco è in esecuzione e non può connettersi a Discord, prova a visualizzare i log del tuo gioco per eseguire il debug"],"S94dzs":["RegisterAuthorizeRequestCallback chiamata e funzionante"],"vR0zs6":["Collegamento account"],"KoK4J9":["Devtools: ",[1,"appName"]],"tkIymA":["Scollega"],"K3ObrU":["Flusso web:"]}',
-);
+n.d(t, { Z: () => d });
+var r = n(54381);
+n(473749);
+var i = n(120356),
+    l = n.n(i),
+    a = n(990547),
+    s = n(79766),
+    o = n(481060),
+    c = n(213609),
+    u = n(974789);
+function d(e) {
+    let { componentId: t, badgeCopy: n, acknowledgedBadgeCopy: i, isDismissed: d } = e;
+    return ((0, c.Z)({
+        type: a.ImpressionTypes.VIEW,
+        name: a.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: {
+            component_type: s.I.PREMIUM_TAB,
+            component_id: t,
+        },
+    }),
+    d)
+        ? (0, r.jsxs)("div", {
+              className: l()(u.premiumBadge, u.premiumAcknowledgedBadge),
+              children: [
+                  (0, r.jsx)(o.T39, {
+                      size: "custom",
+                      width: 10,
+                      height: 10,
+                      color: "currentColor",
+                      className: u.BadgeClockIcon,
+                  }),
+                  (0, r.jsx)(o.Text, {
+                      variant: "eyebrow",
+                      color: "text-subtle",
+                      children: i,
+                  }),
+              ],
+          })
+        : (0, r.jsx)("div", {
+              className: l()(u.premiumBadge, u.premiumUnacknowledgedBadge),
+              children: (0, r.jsx)(o.Text, {
+                  variant: "eyebrow",
+                  className: u.premiumUnacknowledgedBadgeCopy,
+                  children: n,
+              }),
+          });
+}

@@ -1,11 +1,11 @@
 n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(54381),
-    o = n(473749),
-    a = n(120356),
-    s = n.n(a),
+    a = n(473749),
+    o = n(120356),
+    s = n.n(o),
     l = n(748780),
-    c = n(49434);
+    c = n(192350);
 function u(e, t, n) {
     return (
         t in e
@@ -48,7 +48,7 @@ function _(e) {
         n = t % 60;
     return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"));
 }
-class m extends (r = o.Component) {
+class m extends (r = a.Component) {
     componentDidMount() {
         let { previewWidth: e, animatedProgress: t } = this.state;
         (this._previewId = e.addListener(this.handlePreviewChange)),
@@ -76,19 +76,19 @@ class m extends (r = o.Component) {
             props: { type: r },
         } = this;
         if (null == n) return 0;
-        let { left: i, width: o, bottom: a, height: s } = n.getBoundingClientRect();
-        return Math.min(1, Math.max(0, r === p.VOLUME ? (a - t) / s : (e - i) / o));
+        let { left: i, width: a, bottom: o, height: s } = n.getBoundingClientRect();
+        return Math.min(1, Math.max(0, r === p.VOLUME ? (o - t) / s : (e - i) / a));
     }
     render() {
         let { buffers: e, type: t, className: n, sliderClassName: r } = this.props,
-            { dragging: o, previewWidth: a, animatedProgress: u } = this.state,
-            d = o ? u : a;
+            { dragging: a, previewWidth: o, animatedProgress: u } = this.state,
+            d = a ? u : o;
         return (0, i.jsx)("div", {
             className: s()(n, t === p.VOLUME ? c.vertical : c.horizontal),
             children: (0, i.jsx)("div", {
                 className: s()(
                     r,
-                    o ? c.mediaBarInteractionDragging : c.mediaBarInteraction,
+                    a ? c.mediaBarInteractionDragging : c.mediaBarInteraction,
                     t === p.VOLUME ? c.mediaBarInteractionVolume : null,
                 ),
                 onMouseDown: this.handleDragStart,
@@ -119,7 +119,7 @@ class m extends (r = o.Component) {
                             ? (0, i.jsx)(l.Z.div, {
                                   className: c.mediaBarPreview,
                                   style: {
-                                      width: a.interpolate({
+                                      width: o.interpolate({
                                           inputRange: [0, 1],
                                           outputRange: ["0%", "100%"],
                                       }),
@@ -195,7 +195,7 @@ class m extends (r = o.Component) {
             }),
             u(this, "handleDragStart", (e) => {
                 let { onDragStart: t, onDrag: n, type: r, currentWindow: i } = this.props,
-                    { clientX: o, clientY: a } = e;
+                    { clientX: a, clientY: o } = e;
                 if ((e.preventDefault(), null == this.wrapper)) return;
                 let { left: s, width: l } = this.wrapper.getBoundingClientRect();
                 this.setState(
@@ -206,7 +206,7 @@ class m extends (r = o.Component) {
                     },
                     () => {
                         t(r),
-                            n(this.calculatePercentage(o, a), r),
+                            n(this.calculatePercentage(a, o), r),
                             i.removeEventListener("mouseup", this.handleDragEnd, !1),
                             i.removeEventListener("mousemove", this.handleDragMove, !1),
                             i.addEventListener("mouseup", this.handleDragEnd, !1),

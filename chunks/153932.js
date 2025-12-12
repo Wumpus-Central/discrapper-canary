@@ -1,10 +1,10 @@
-n.d(t, { default: () => _ }), n(539854);
+n.d(t, { default: () => k }), n(539854);
 var s = n(54381),
     i = n(473749),
     o = n(990547),
     r = n(159691),
-    c = n(481060),
-    a = n(442837),
+    a = n(481060),
+    c = n(442837),
     l = n(194359),
     u = n(906732),
     p = n(321488),
@@ -14,7 +14,7 @@ var s = n(54381),
     f = n(974042),
     g = n(981631),
     O = n(388032),
-    y = n(862998);
+    y = n(52382);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,7 +64,7 @@ function P(e) {
         r = (e) => {
             e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: "Spam requests modal" });
         },
-        a = (e) => {
+        c = (e) => {
             e.stopPropagation(),
                 l.Z.addRelationship({
                     userId: t.id,
@@ -100,14 +100,14 @@ function P(e) {
                             className: y.actions,
                             children: [
                                 (0, s.jsx)(p.Z, {
-                                    icon: c.dz2,
+                                    icon: a.dz2,
                                     actionType: p.Z.ActionTypes.ACCEPT,
                                     tooltip: O.intl.string(O.t.Zcibdf),
-                                    onClick: a,
+                                    onClick: c,
                                     shouldHighlight: e,
                                 }),
                                 (0, s.jsx)(p.Z, {
-                                    icon: c.Dio,
+                                    icon: a.Dio,
                                     actionType: p.Z.ActionTypes.DENY,
                                     tooltip: O.intl.string(O.t.xuio0C),
                                     onClick: r,
@@ -120,11 +120,11 @@ function P(e) {
         }),
     });
 }
-function _(e) {
+function k(e) {
     let { transitionState: t, onClose: n } = e,
-        { rows: c } = (0, a.cj)([f.ZP], () => f.ZP.getState()),
-        u = c.filter(g.pJs.PENDING_IGNORED),
-        p = c.filter(g.pJs.SPAM),
+        { rows: a } = (0, c.cj)([f.ZP], () => f.ZP.getState()),
+        u = a.filter(g.pJs.PENDING_IGNORED),
+        p = a.filter(g.pJs.SPAM),
         d = p.length + u.length;
     i.useEffect(() => {
         0 === d && n();

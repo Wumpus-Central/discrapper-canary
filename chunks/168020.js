@@ -1,19 +1,19 @@
-n.d(t, { R: () => a }), n(35282);
+n.d(t, { R: () => s }), n(35282);
 var r = n(54381);
 n(473749);
 var l = n(481060),
-    o = n(774078),
-    i = n(388032),
-    s = n(64092);
-let a = (e) => {
+    a = n(774078),
+    o = n(388032),
+    i = n(594054);
+let s = (e) => {
     let { endDate: t, size: n = "md" } = e,
-        { days: a, hours: c, minutes: u } = (0, o.Z)(t),
+        { days: s, hours: c, minutes: u } = (0, a.Z)(t),
         d = (function (e, t, n) {
             let r = (e) => "".concat(e.toString().padStart(2, "0"));
             return [r(e), r(t), r(n)].join(":");
-        })(a, c, u);
+        })(s, c, u);
     return (0, r.jsxs)("div", {
-        className: s.container,
+        className: i.container,
         role: "timer",
         children: [
             d.split("").map((e, t) =>
@@ -23,7 +23,7 @@ let a = (e) => {
                           {
                               color: "none",
                               variant: "md" === n ? "heading-lg/extrabold" : "heading-xxl/extrabold",
-                              className: s.delineator,
+                              className: i.delineator,
                               "aria-hidden": !0,
                               tag: "div",
                               children: e,
@@ -35,7 +35,7 @@ let a = (e) => {
                           {
                               color: "always-white",
                               variant: "md" === n ? "heading-md/bold" : "heading-xl/bold",
-                              className: s.number,
+                              className: i.number,
                               "aria-hidden": !0,
                               tag: "div",
                               children: e,
@@ -44,8 +44,8 @@ let a = (e) => {
                       ),
             ),
             (0, r.jsx)(l.nn4, {
-                children: i.intl.format(i.t.j6IyVe, {
-                    days: a,
+                children: o.intl.format(o.t.j6IyVe, {
+                    days: s,
                     hours: c,
                     minutes: u,
                 }),

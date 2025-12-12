@@ -13,12 +13,12 @@ var r = n(54381),
     g = n(158776),
     h = n(699516),
     m = n(594174),
-    _ = n(482798),
-    b = n(167762),
-    E = n(151459),
+    b = n(482798),
+    E = n(167762),
+    _ = n(151459),
     O = n(981631),
     v = n(388032),
-    y = n(10058);
+    y = n(172421);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,10 +65,10 @@ function C(e, t) {
 function S(e) {
     let { className: t } = e,
         n = (0, a.e7)([h.Z], () => h.Z.getPendingCount() > 0),
-        _ = (0, s.dQu)(s.TVs.modules.chat.INPUT_ICON_SIZE),
+        b = (0, s.dQu)(s.TVs.modules.chat.INPUT_ICON_SIZE),
         S = (function () {
             let [e, t] = i.useState(null),
-                { showActivityTicker: n } = (0, E.Z)(),
+                { showActivityTicker: n } = (0, _.Z)(),
                 r = i.useRef({}),
                 l = i.useRef(null);
             return (
@@ -83,10 +83,10 @@ function S(e) {
                                 0 === Object.keys(r.current[e]).length && delete r.current[e];
                         },
                         i = (n, i, a) => {
-                            var s, o, c, u, d, p, g, _, b;
+                            var s, o, c, u, d, p, g, b, E;
                             if (!h.Z.isFriend(n)) return !1;
-                            let E = m.default.getUser(n);
-                            if (null == E) return !1;
+                            let _ = m.default.getUser(n);
+                            if (null == _) return !1;
                             let v = !1,
                                 y = null;
                             if (null != i) {
@@ -114,7 +114,7 @@ function S(e) {
                                         ((v = !0),
                                         e(n, "presence", l),
                                         (y = {
-                                            user: E,
+                                            user: _,
                                             activity: i,
                                         }));
                                 } else
@@ -125,11 +125,11 @@ function S(e) {
                                 let t = f.Z.getChannel(a);
                                 if (null != t) {
                                     let i = "voice-".concat(t.id);
-                                    (null == (_ = r.current[n]) ? void 0 : _.voice) !== i &&
+                                    (null == (b = r.current[n]) ? void 0 : b.voice) !== i &&
                                         ((v = !0),
                                         e(n, "voice", i),
                                         (y = {
-                                            user: E,
+                                            user: _,
                                             voiceChannel: t,
                                         }));
                                 }
@@ -139,9 +139,9 @@ function S(e) {
                             return (
                                 v &&
                                     null != y &&
-                                    ((b = y),
+                                    ((E = y),
                                     null != l.current && (window.clearTimeout(l.current), (l.current = null)),
-                                    t(b),
+                                    t(E),
                                     (l.current = window.setTimeout(() => {
                                         t(null), (l.current = null);
                                     }, 10000))),
@@ -252,7 +252,7 @@ function S(e) {
                           }),
                 ),
             }),
-            (0, r.jsx)(b.Or, {
+            (0, r.jsx)(E.Or, {
                 popoutPosition: "bottom",
                 popoutAlign: "left",
                 children: (e, i, l, a) =>
@@ -263,7 +263,7 @@ function S(e) {
                             className: t,
                             onClick: e,
                             icon: s.iFz,
-                            iconSize: _,
+                            iconSize: b,
                             "aria-label": v.intl.string(v.t.TdEu5X),
                             tooltip: i ? null : v.intl.string(v.t.TdEu5X),
                             selected: i,
@@ -276,6 +276,6 @@ function S(e) {
 }
 function T(e) {
     let { className: t } = e,
-        { enableTopNavButton: n } = (0, _.Cq)({ location: "friends-button" });
+        { enableTopNavButton: n } = (0, b.Cq)({ location: "friends-button" });
     return n ? (0, r.jsx)(S, { className: t }) : null;
 }

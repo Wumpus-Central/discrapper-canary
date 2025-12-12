@@ -2,12 +2,12 @@ n.d(t, { q: () => m });
 var r = n(54381);
 n(473749);
 var i = n(952265),
-    o = n(28664),
-    a = n(159691),
+    a = n(28664),
+    o = n(159691),
     s = n(481060),
     l = n(479661),
     c = n(135102),
-    u = n(5570),
+    u = n(831989),
     d = n(388032);
 function f(e, t, n) {
     return (
@@ -41,7 +41,7 @@ function p(e) {
 let _ = () => {
         (0, i.openModalLazy)(
             async () => {
-                let { CustomThemesShareModalWrapper: e } = await Promise.all([n.e("36653"), n.e("26196")]).then(
+                let { CustomThemesShareModalWrapper: e } = await Promise.all([n.e("36653"), n.e("58973")]).then(
                     n.bind(n, 433359),
                 );
                 return (t) => (0, r.jsx)(e, p({}, t));
@@ -51,9 +51,9 @@ let _ = () => {
     },
     m = () =>
         (0, l.e)("client_themes_editor")
-            ? (0, r.jsx)(o.u, {
+            ? (0, r.jsx)(a.u, {
                   text: d.intl.string(d.t.RDE0Sc),
-                  children: (0, r.jsx)(a.hU, {
+                  children: (0, r.jsx)(o.hU, {
                       "aria-label": d.intl.string(u.default.zgFs8C),
                       icon: s.aAc,
                       variant: "icon-only",

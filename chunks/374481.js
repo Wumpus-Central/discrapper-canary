@@ -1,10 +1,10 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(793030),
-    l = n(355325);
+    l = n(97118);
 function c(e, t, n) {
     return (
         t in e
@@ -63,9 +63,9 @@ function p(e, t) {
         r,
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,13 +74,13 @@ function _(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e) {
     var { children: t, gradientClassName: n } = e,
-        o = p(e, ["children", "gradientClassName"]);
+        a = p(e, ["children", "gradientClassName"]);
     let c = i.useRef(null),
         [d, _] = i.useState(!0),
         m = () => {
@@ -91,7 +91,7 @@ function m(e) {
         children: [
             (0, r.jsx)(
                 s.h21,
-                f(u({ fade: !0 }, o), {
+                f(u({ fade: !0 }, a), {
                     ref: (e) => {
                         null != e && ((c.current = e), m());
                     },
@@ -100,7 +100,7 @@ function m(e) {
                 }),
             ),
             (0, r.jsx)("div", {
-                className: a()(l.containerScrollGradient, n),
+                className: o()(l.containerScrollGradient, n),
                 "data-shown": d,
             }),
         ],

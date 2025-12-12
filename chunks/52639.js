@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => O });
 var r = n(54381);
 n(473749);
 var i = n(81897),
@@ -15,25 +15,25 @@ var i = n(81897),
     g = n(502762),
     m = n(686625),
     b = n(388032),
-    _ = n(439178);
-function y(e) {
+    y = n(3311);
+function O(e) {
     let { user: t, channelId: n } = e,
-        { analyticsLocations: y } = (0, l.ZP)(),
-        { context: O } = (0, o.KZ)(),
-        x = (0, i.Z)(),
-        { mutualFriendsCount: j, mutualFriends: v, mutualGuilds: C } = (0, c.Z)(t),
-        I = !t.bot && null != j && j > 0,
-        S = null != C && C.length > 0;
-    return I || S
+        { analyticsLocations: O } = (0, l.ZP)(),
+        { context: x } = (0, o.KZ)(),
+        j = (0, i.Z)(),
+        { mutualFriendsCount: v, mutualFriends: C, mutualGuilds: I } = (0, c.Z)(t),
+        _ = !t.bot && null != v && v > 0,
+        S = null != I && I.length > 0;
+    return _ || S
         ? (0, r.jsxs)(g.Z.Overlay, {
-              className: _.overlay,
+              className: y.overlay,
               children: [
                   S &&
                       (0, r.jsx)(m.Z, {
                           section: "MUTUAL_GUILDS",
                           header: b.intl.string(b.t["4lTDZq"]),
-                          listClassName: _.list,
-                          items: C.map((e) => {
+                          listClassName: y.list,
+                          items: I.map((e) => {
                               let { guild: n, nick: i } = e;
                               return (0, r.jsx)(
                                   f.Z,
@@ -47,20 +47,20 @@ function y(e) {
                               );
                           }),
                       }),
-                  S && I && (0, r.jsx)(p.Z, { className: _.divider }),
-                  I &&
+                  S && _ && (0, r.jsx)(p.Z, { className: y.divider }),
+                  _ &&
                       (0, r.jsx)(m.Z, {
                           section: "MUTUAL_FRIENDS",
                           header: b.intl.string(b.t["0mTJ3j"]),
-                          listClassName: _.list,
-                          onExpand: () => (0, d.Z)(t.id, x),
+                          listClassName: y.list,
+                          onExpand: () => (0, d.Z)(t.id, j),
                           items:
-                              null == v
-                                  ? Array.from({ length: j }).map((e, t) =>
+                              null == C
+                                  ? Array.from({ length: v }).map((e, t) =>
                                         (0, r.jsxs)(
                                             "div",
                                             {
-                                                className: _.loadingMutualFriend,
+                                                className: y.loadingMutualFriend,
                                                 children: [
                                                     (0, r.jsx)(a.ZT, {
                                                         width: 40,
@@ -75,7 +75,7 @@ function y(e) {
                                             t,
                                         ),
                                     )
-                                  : v.map((e) => {
+                                  : C.map((e) => {
                                         let { key: t, user: i, status: l } = e;
                                         return (0, r.jsx)(
                                             h.Z,
@@ -115,11 +115,11 @@ function y(e) {
                                                                     });
                                                             }
                                                             return e;
-                                                        })({}, O)),
+                                                        })({}, x)),
                                                         (t = t =
                                                             {
                                                                 userId: i.id,
-                                                                sourceAnalyticsLocations: y,
+                                                                sourceAnalyticsLocations: O,
                                                             }),
                                                         Object.getOwnPropertyDescriptors
                                                             ? Object.defineProperties(

@@ -1,37 +1,37 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var r = n(54381),
     i = n(159691),
     l = n(481060),
-    s = n(724598),
-    a = n(674180),
+    a = n(724598),
+    s = n(674180),
     o = n(572004),
     c = n(495437),
-    u = n(267101),
-    d = n(863663),
+    d = n(267101),
+    u = n(863663),
     g = n(676651),
-    m = n(613810),
-    p = n(391181),
-    f = n(388032),
-    h = n(82917);
-function x(e) {
+    f = n(613810),
+    m = n(391181),
+    b = n(388032),
+    p = n(973501);
+function h(e) {
     let { guildId: t, handleCreateOrEditProduct: i } = e,
-        g = (0, u.ue)(t, { publishedOnly: !1 }),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: x } = (0, a.gX)(t),
-        b = g.length > 0;
+        g = (0, d.ue)(t, { publishedOnly: !1 }),
+        { shouldRestrictUpdatingCreatorMonetizationSettings: h } = (0, s.gX)(t),
+        x = g.length > 0;
     return (0, r.jsx)("div", {
-        className: h.productListingsHeader,
+        className: p.productListingsHeader,
         children: (0, r.jsx)(l.gNt, {
-            label: b ? f.intl.string(f.t.RwuStQ) : f.intl.string(f.t.WKMcMW),
+            label: x ? b.intl.string(b.t.RwuStQ) : b.intl.string(b.t.WKMcMW),
             children: (e) =>
-                b
+                x
                     ? (0, r.jsx)("ul", {
-                          className: h.productListings,
+                          className: p.productListings,
                           id: e.controlId,
                           children: g.map((e) =>
                               (0, r.jsx)(
                                   "li",
                                   {
-                                      children: (0, r.jsx)(p.Z, {
+                                      children: (0, r.jsx)(m.Z, {
                                           guildId: t,
                                           product: e,
                                           onEditProduct: () => i(e.id),
@@ -40,10 +40,10 @@ function x(e) {
                                               return (n = e.id), void (0, c.Je)(t, n, { published: !1 });
                                           },
                                           onDeleteProduct: () => {
-                                              var i, s;
+                                              var i, a;
                                               return (
                                                   (i = e.id),
-                                                  (s = e.name),
+                                                  (a = e.name),
                                                   void (0, l.ZDy)(async () => {
                                                       let { default: e } = await n.e("95925").then(n.bind(n, 673078));
                                                       return (n) =>
@@ -83,7 +83,7 @@ function x(e) {
                                                                   {
                                                                       guildId: t,
                                                                       productId: i,
-                                                                      productName: s,
+                                                                      productName: a,
                                                                   },
                                                                   n,
                                                               ),
@@ -93,22 +93,22 @@ function x(e) {
                                           },
                                           onCopyProductLink: () => {
                                               var n;
-                                              return (n = e.id), void (0, o.JG)((0, d.ar)(t, n));
+                                              return (n = e.id), void (0, o.JG)((0, u.ar)(t, n));
                                           },
                                           onTestDownload: () =>
-                                              m.Z.open({
+                                              f.Z.open({
                                                   guildId: t,
                                                   productId: e.id,
                                               }),
                                           onReportProduct: () => {},
-                                          disabled: x,
+                                          disabled: h,
                                       }),
                                   },
                                   e.id,
                               ),
                           ),
                       })
-                    : (0, r.jsx)(s.Z, {
+                    : (0, r.jsx)(a.Z, {
                           guildId: t,
                           showCTA: !1,
                           responsive: !1,
@@ -116,24 +116,24 @@ function x(e) {
         }),
     });
 }
-function b(e) {
+function x(e) {
     let { guildId: t } = e,
-        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, a.gX)(t),
-        s = (e) => {
+        { shouldRestrictUpdatingCreatorMonetizationSettings: n } = (0, s.gX)(t),
+        a = (e) => {
             g.h(t, e);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.zxk, {
-                text: f.intl.string(f.t.riG6Da),
+                text: b.intl.string(b.t.riG6Da),
                 icon: l.qJs,
-                onClick: () => s(null),
+                onClick: () => a(null),
                 disabled: n,
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
-            (0, r.jsx)(x, {
+            (0, r.jsx)(h, {
                 guildId: t,
-                handleCreateOrEditProduct: s,
+                handleCreateOrEditProduct: a,
             }),
         ],
     });

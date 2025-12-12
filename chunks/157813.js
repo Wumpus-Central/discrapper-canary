@@ -1,13 +1,13 @@
 n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(475179),
     c = n(871499),
     u = n(388032),
-    d = n(808602);
+    d = n(71425);
 function f(e) {
     let { className: t, isVertical: n } = e;
     return (0, r.jsxs)("div", {
@@ -16,12 +16,12 @@ function f(e) {
             (0, r.jsx)(s.CJ0, {
                 size: "md",
                 color: "currentColor",
-                className: a()(n ? d.upCaret : d.leftCaret, t),
+                className: o()(n ? d.upCaret : d.leftCaret, t),
             }),
             (0, r.jsx)(s.BFJ, {
                 size: "md",
                 color: "currentColor",
-                className: a()(d.members, t),
+                className: o()(d.members, t),
             }),
         ],
     });
@@ -34,26 +34,26 @@ function p(e) {
             (0, r.jsx)(s.CJ0, {
                 size: "md",
                 color: "currentColor",
-                className: a()(n ? d.downCaret : d.rightCaret, t),
+                className: o()(n ? d.downCaret : d.rightCaret, t),
             }),
             n &&
                 (0, r.jsx)(s.BFJ, {
                     size: "md",
                     color: "currentColor",
-                    className: a()(d.members, t),
+                    className: o()(d.members, t),
                 }),
         ],
     });
 }
 function _(e) {
-    let { channelId: t, className: n, isParticipantsOpen: o, isVertical: s = !1, hideTooltip: _ = !1 } = e;
+    let { channelId: t, className: n, isParticipantsOpen: a, isVertical: s = !1, hideTooltip: _ = !1 } = e;
     function m() {
-        l.Z.toggleParticipants(t, !o);
+        l.Z.toggleParticipants(t, !a);
     }
     let h = i.useCallback(
         (e) => {
             let { className: t } = e;
-            return o
+            return a
                 ? (0, r.jsx)(p, {
                       className: t,
                       isVertical: s,
@@ -63,11 +63,11 @@ function _(e) {
                       isVertical: s,
                   });
         },
-        [o, s],
+        [a, s],
     );
     return (0, r.jsx)(c.Z, {
-        label: o ? u.intl.string(u.t.QJMRUB) : u.intl.string(u.t.vZiwmG),
-        className: a()(d.participantsButton, n),
+        label: a ? u.intl.string(u.t.QJMRUB) : u.intl.string(u.t.vZiwmG),
+        className: o()(d.participantsButton, n),
         onClick: m,
         iconComponent: h,
         shouldShowTooltip: !_,

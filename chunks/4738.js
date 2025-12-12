@@ -1,15 +1,15 @@
 n.d(t, { D: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(693789),
     l = n(481060),
     c = n(889963),
     u = n(388032),
-    d = n(18039);
+    d = n(979854);
 function f(e) {
-    let { page: t, totalPageCount: n, disabled: o, onPageChange: s } = e,
+    let { page: t, totalPageCount: n, disabled: a, onPageChange: s } = e,
         [c, u] = i.useState(!1),
         [f, p] = i.useState(null),
         _ = null != f && f >= 1 && f <= n,
@@ -21,7 +21,7 @@ function f(e) {
         h = (e) => {
             "Enter" === e.key && null != f && _ && (s(f), u(!1), p(null));
         };
-    return o
+    return a
         ? (0, r.jsx)(
               l.Heading,
               {
@@ -46,7 +46,7 @@ function f(e) {
                             u(!1), p(null);
                         },
                         onKeyUp: h,
-                        disabled: o,
+                        disabled: a,
                     },
                     t.key,
                 ),
@@ -56,7 +56,7 @@ function f(e) {
                 {
                     onClick: () => u(!0),
                     children: (0, r.jsx)(l.Heading, {
-                        className: a()(d.roundButton, d.gap),
+                        className: o()(d.roundButton, d.gap),
                         "aria-hidden": !0,
                         variant: "heading-sm/semibold",
                         children: "\u2026",
@@ -70,7 +70,7 @@ function p(e) {
             currentPage: t,
             totalCount: n,
             pageSize: i,
-            maxVisiblePages: o,
+            maxVisiblePages: a,
             disablePaginationGap: p,
             onPageChange: _,
             hideMaxPage: m = !1,
@@ -135,7 +135,7 @@ function p(e) {
         return (0, r.jsx)(
             l.P3F,
             {
-                className: a()(d.roundButton, { [d.activeButton]: e.selected }),
+                className: o()(d.roundButton, { [d.activeButton]: e.selected }),
                 onClick: e.selected ? void 0 : e.navigateToPage,
                 "aria-label": u.intl.formatToPlainString(u.t.IGMs8S, { pageNumber: e.targetPage }),
                 "aria-current": e.selected ? "page" : void 0,
@@ -164,7 +164,7 @@ function p(e) {
         let { pages: t, hasMultiplePages: n } = e;
         return n
             ? (0, r.jsx)("div", {
-                  className: a()(d.pageControlContainer, h),
+                  className: o()(d.pageControlContainer, h),
                   children: (0, r.jsx)("nav", {
                       className: d.pageControl,
                       children: t.map((e) => {
@@ -188,7 +188,7 @@ function p(e) {
     return (0, r.jsx)(c.W, {
         totalPageCount: E,
         selectedPage: t,
-        maxVisiblePages: o,
+        maxVisiblePages: a,
         hideMaxPage: m,
         onPageChange: b,
         children: T,

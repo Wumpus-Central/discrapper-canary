@@ -1,5 +1,5 @@
 n.d(t, {
-    A7: () => ea,
+    A7: () => eo,
     BO: () => em,
     DR: () => ec,
     G5: () => ef,
@@ -13,15 +13,15 @@ n.d(t, {
     hX: () => ee,
     iT: () => er,
     lV: () => $,
-    ur: () => eo,
+    ur: () => ea,
     wj: () => et,
     xi: () => ei,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(374470),
@@ -57,7 +57,7 @@ var r = n(54381),
     G = n(814249),
     Z = n(295907),
     F = n(388032),
-    B = n(180376);
+    B = n(51463);
 function V(e, t, n) {
     return (
         t in e
@@ -116,9 +116,9 @@ function K(e, t) {
         r,
         i = z(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -127,8 +127,8 @@ function z(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let q = {
@@ -145,7 +145,7 @@ function J(e) {
     var {
             onVolumeChange: t,
             onMute: n,
-            volume: o,
+            volume: a,
             autoMute: s,
             alt: l,
             renderAdjacentContent: c,
@@ -172,7 +172,7 @@ function J(e) {
         ]);
     let E = Q(t),
         b = X(n);
-    (o = null == o ? j.FC : o), (s = null == s ? j.rs : s);
+    (a = null == a ? j.FC : a), (s = null == s ? j.rs : s);
     let [y, O] = i.useState(!0),
         [v, I] = i.useState(!1),
         T = m === k.hV.MOSAIC || !0 === _,
@@ -216,7 +216,7 @@ function J(e) {
                     onVolumeChange: E,
                     renderLinkComponent: er,
                     renderOverlayContent: u,
-                    volume: o,
+                    volume: a,
                 }),
             ),
             null != c && c(),
@@ -239,7 +239,7 @@ function J(e) {
                                         "aria-label": F.intl.string(F.t.fSiQ3A),
                                         onMouseEnter: () => I(!0),
                                         onMouseLeave: () => I(!1),
-                                        className: a()(B.mediaMosaicAltText, {
+                                        className: o()(B.mediaMosaicAltText, {
                                             [B.mediaMosaicVideoAltText]: !0,
                                             [B.reducedSize]: h,
                                         }),
@@ -262,10 +262,10 @@ function $(e) {
     return (0, r.jsx)(J, H({}, e));
 }
 function ee(e) {
-    var { onVolumeChange: t, volume: n, onMute: o, onVolumeShow: a, onVolumeHide: s, renderAdjacentContent: l } = e,
+    var { onVolumeChange: t, volume: n, onMute: a, onVolumeShow: o, onVolumeHide: s, renderAdjacentContent: l } = e,
         c = K(e, ["onVolumeChange", "volume", "onMute", "onVolumeShow", "onVolumeHide", "renderAdjacentContent"]);
     let u = Q(t),
-        d = X(o);
+        d = X(a);
     n = null == n ? j.FC : n;
     let f = () => !1;
     return (0, r.jsxs)(i.Fragment, {
@@ -275,7 +275,7 @@ function ee(e) {
                 W(H({}, c), {
                     onVolumeChange: u,
                     onMute: d,
-                    onVolumeShow: a,
+                    onVolumeShow: o,
                     onVolumeHide: s,
                     volume: n,
                     autoMute: f,
@@ -288,15 +288,15 @@ function ee(e) {
 }
 function et(e) {
     var { onVolumeChange: t, volume: n, onMute: i } = e,
-        o = K(e, ["onVolumeChange", "volume", "onMute"]);
-    let a = Q(t),
+        a = K(e, ["onVolumeChange", "volume", "onMute"]);
+    let o = Q(t),
         s = X(i);
     return (
         (n = null == n ? j.FC : n),
         (0, r.jsx)(
             P.Z,
-            W(H({}, o), {
-                onVolumeChange: a,
+            W(H({}, a), {
+                onVolumeChange: o,
                 onMute: s,
                 volume: n,
             }),
@@ -307,7 +307,7 @@ function en(e) {
     let {
             alt: t,
             hiddenSpoilers: n,
-            renderAdjacentContent: o,
+            renderAdjacentContent: a,
             containerClassName: s,
             imageContainerClassName: l,
             disableAltTextDisplay: c = !1,
@@ -344,12 +344,12 @@ function en(e) {
         },
         b = i.createRef();
     return (0, r.jsxs)("div", {
-        className: a()(B.imageContent, s),
+        className: o()(B.imageContent, s),
         children: [
             (0, r.jsxs)("div", {
-                className: a()(B.imageContainer, l),
+                className: o()(B.imageContainer, l),
                 style: p,
-                children: [(0, r.jsx)(_.Z, H({}, e)), null != o && o()],
+                children: [(0, r.jsx)(_.Z, H({}, e)), null != a && a()],
             }),
             h &&
                 g &&
@@ -368,7 +368,7 @@ function en(e) {
                                         type: "button",
                                         ref: b,
                                         "aria-label": F.intl.string(F.t.fSiQ3A),
-                                        className: a()(B.mediaMosaicAltText, { [B.reducedSize]: u }),
+                                        className: o()(B.mediaMosaicAltText, { [B.reducedSize]: u }),
                                         children: F.intl.string(F.t.jCV1Tz),
                                     }),
                                 ),
@@ -394,10 +394,10 @@ function ei(e) {
         children: [(0, r.jsx)(I.Z, H({}, n)), null != t && t()],
     });
 }
-function eo(e) {
+function ea(e) {
     return (0, r.jsx)(E.Z, H({}, e));
 }
-var ea = (function (e) {
+var eo = (function (e) {
     return (e[(e.OLD_MESSAGES = 0)] = "OLD_MESSAGES"), (e[(e.REPLY = 1)] = "REPLY"), e;
 })({});
 function es(e) {
@@ -428,7 +428,7 @@ let ec = (e) => {
                     ? null
                     : (0, r.jsxs)("div", {
                           onClick: n,
-                          className: a()(B.jumpToPresentBar, i),
+                          className: o()(B.jumpToPresentBar, i),
                           children: [
                               (0, r.jsx)("div", {
                                   className: B.barButtonMain,
@@ -460,7 +460,7 @@ let ec = (e) => {
                 e.disableInteractions
                     ? null
                     : (0, r.jsxs)(d.P3F, {
-                          className: a()(B.messagesErrorBar, i),
+                          className: o()(B.messagesErrorBar, i),
                           onClick: t,
                           focusProps: {
                               offset: {
@@ -491,7 +491,7 @@ let ec = (e) => {
     };
 function ed(e) {
     let { content: t, channelId: n } = e,
-        [o] = i.useState(() => (0, y.hQ)("NewMessagesBarJumpToNewMessages_")),
+        [a] = i.useState(() => (0, y.hQ)("NewMessagesBarJumpToNewMessages_")),
         s = i.useCallback(() => {
             let e = R.ZP.ackMessageId(n);
             null != e
@@ -519,7 +519,7 @@ function ed(e) {
     return c
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(B.newMessagesBar, { [B.disableInteractions]: c }),
+              className: o()(B.newMessagesBar, { [B.disableInteractions]: c }),
               children: [
                   (0, r.jsx)(d.tEY, {
                       offset: 4,
@@ -528,9 +528,9 @@ function ed(e) {
                           className: B.barButtonMain,
                           onClick: s,
                           "aria-label": F.intl.string(F.t.z0Mkp3),
-                          "aria-describedby": o,
+                          "aria-describedby": a,
                           children: (0, r.jsx)("span", {
-                              id: o,
+                              id: a,
                               className: B.span,
                               children: t,
                           }),
@@ -556,7 +556,7 @@ function ed(e) {
           });
 }
 function ef(e) {
-    var t, n, o;
+    var t, n, a;
     let { channel: s, content: _, scrollManager: m } = e,
         { disableInteractions: E } = i.useContext(b.G),
         [y, v] = i.useState(null),
@@ -608,7 +608,7 @@ function ef(e) {
         ),
         V = null != (n = (0, u.e7)([C.Z], () => C.Z.visibleSummaryIndex())) ? n : -1,
         H = null == j || null == (t = j[V]) ? void 0 : t.topic;
-    null == H && null == y && (null == j ? void 0 : j.length) >= 1 && (H = null == (o = j[0]) ? void 0 : o.topic);
+    null == H && null == y && (null == j ? void 0 : j.length) >= 1 && (H = null == (a = j[0]) ? void 0 : a.topic);
     let Y = i.useMemo(
             () =>
                 l().debounce((e) => {
@@ -775,7 +775,7 @@ function ef(e) {
             ? null
             : (0, r.jsxs)("div", {
                   ref: S,
-                  className: a()(B.newTopicsBarContainer, B.containerMarginTop),
+                  className: o()(B.newTopicsBarContainer, B.containerMarginTop),
                   children: [
                       (0, r.jsx)("div", {
                           className: B.newTopicsBarTopicSection,
@@ -784,7 +784,7 @@ function ef(e) {
                               "aria-label": F.intl.string(F.t.RT3MPz),
                               onClick: Q,
                               children: (0, r.jsxs)("div", {
-                                  className: a()({
+                                  className: o()({
                                       [B.newTopicsBarTextUnselected]: !z,
                                       [B.newTopicsBarTextSelected]: z,
                                   }),
@@ -796,7 +796,7 @@ function ef(e) {
                                       }),
                                       (0, r.jsx)(d.Text, {
                                           variant: "text-sm/medium",
-                                          className: a()(B.newTopicsBarCompact, B.newTopicsBarText),
+                                          className: o()(B.newTopicsBarCompact, B.newTopicsBarText),
                                           children: er,
                                       }),
                                       (0, r.jsx)(D.Z, {
@@ -816,7 +816,7 @@ function ef(e) {
                       }),
                       (0, r.jsxs)(d.P3F, {
                           onClick: en,
-                          className: a()(B.barButtonAlt, B.flexEnd),
+                          className: o()(B.barButtonAlt, B.flexEnd),
                           children: [
                               (0, r.jsx)("div", {
                                   className: B.newTopicsBarCompact,
@@ -885,7 +885,7 @@ function e_(e, t) {
     return null != t && e.length === t.length && !e.some((e, n) => !ep(e, t[n]));
 }
 function em(e) {
-    var t, n, o;
+    var t, n, a;
     let { channel: s, scrollManager: p } = e,
         { disableInteractions: _ } = i.useContext(b.G),
         [m, E] = i.useState(null),
@@ -937,7 +937,7 @@ function em(e) {
         ),
         j = null != (n = (0, u.e7)([C.Z], () => C.Z.visibleSummaryIndex())) ? n : -1,
         M = null == N || null == (t = N[j]) ? void 0 : t.topic;
-    null == M && null == m && (null == N ? void 0 : N.length) >= 1 && (M = null == (o = N[0]) ? void 0 : o.topic);
+    null == M && null == m && (null == N ? void 0 : N.length) >= 1 && (M = null == (a = N[0]) ? void 0 : a.topic);
     let k = i.useMemo(() => l().get(N, j - 1), [j, N]),
         Z = i.useMemo(() => l().get(N, j + 1), [j, N]),
         V = i.useMemo(
@@ -1090,7 +1090,7 @@ function em(e) {
             ? null
             : (0, r.jsxs)("div", {
                   ref: y,
-                  className: a()(B.topicsPillContainer, B.containerMarginTop),
+                  className: o()(B.topicsPillContainer, B.containerMarginTop),
                   children: [
                       (0, r.jsxs)("div", {
                           className: B.topicsPill,
@@ -1100,7 +1100,7 @@ function em(e) {
                                   "aria-label": F.intl.string(F.t.RT3MPz),
                                   onClick: z,
                                   children: (0, r.jsxs)("div", {
-                                      className: a()({
+                                      className: o()({
                                           [B.topicsPillTextUnselected]: !W,
                                           [B.topicsPillTextSelected]: W,
                                       }),
@@ -1130,7 +1130,7 @@ function em(e) {
                                       (0, r.jsx)(d.P3F, {
                                           "aria-label": F.intl.string(F.t["4huCnC"]),
                                           onClick: X,
-                                          className: a()(B.topicsPillCaret, B.topicsCaretLeft, {
+                                          className: o()(B.topicsPillCaret, B.topicsCaretLeft, {
                                               [B.topicsPillCaretDisabled]: null == Z,
                                           }),
                                           children: (0, r.jsx)(D.Z, {
@@ -1142,7 +1142,7 @@ function em(e) {
                                       (0, r.jsx)(d.P3F, {
                                           "aria-label": F.intl.string(F.t["58KOoF"]),
                                           onClick: Q,
-                                          className: a()(B.topicsPillCaret, B.topicsCaretRight, {
+                                          className: o()(B.topicsPillCaret, B.topicsCaretRight, {
                                               [B.topicsPillCaretDisabled]: null == k,
                                           }),
                                           children: (0, r.jsx)(D.Z, {
@@ -1229,7 +1229,7 @@ let eh = function (e) {
     eg = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)("div", {
-            className: a()(B.popoutContainer, n),
+            className: o()(B.popoutContainer, n),
             children: t,
         });
     },

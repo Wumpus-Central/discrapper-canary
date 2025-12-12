@@ -6,15 +6,15 @@ var r = n(120356),
     o = n(442837),
     l = n(28664),
     d = n(481060),
-    s = n(978088),
-    c = n(840720),
-    u = n(430824),
-    g = n(594174),
+    c = n(978088),
+    s = n(840720),
+    b = n(430824),
+    u = n(594174),
     f = n(731722),
-    b = n(446094),
+    g = n(446094),
     p = n(388032),
-    m = n(921072),
-    C = n(265227);
+    m = n(551199),
+    C = n(52140);
 function h(e) {
     var t,
         n,
@@ -42,14 +42,14 @@ function h(e) {
             }
             return r;
         })(e, ["guildId"]);
-    let _ = (0, o.e7)([u.Z], () => u.Z.getGuild(j)),
-        y = (0, o.e7)([g.default], () => {
+    let y = (0, o.e7)([b.Z], () => b.Z.getGuild(j)),
+        O = (0, o.e7)([u.default], () => {
             var e;
-            let t = null == (e = g.default.getCurrentUser()) ? void 0 : e.primaryGuild;
+            let t = null == (e = u.default.getCurrentUser()) ? void 0 : e.primaryGuild;
             return (null == t ? void 0 : t.identityGuildId) === j && (null == t ? void 0 : t.identityEnabled) === !0;
         }, [j]),
-        { isAdopting: O, onAdoptTag: x, onEditProfile: w } = (0, b.Z)(j, v.onClose);
-    if (null != _ && (0, f.up)(_) && (0, f.jq)(_))
+        { isAdopting: x, onAdoptTag: w, onEditProfile: P } = (0, g.Z)(j, v.onClose);
+    if (null != y && (0, f.up)(y) && (0, f.jq)(y))
         return (0, a.jsxs)(
             d.Y0X,
             ((t = (function (e) {
@@ -111,35 +111,35 @@ function h(e) {
                                                     }),
                                                 ],
                                             }),
-                                            (0, a.jsx)(c.Z, {
+                                            (0, a.jsx)(s.Z, {
                                                 className: C.guildRow,
-                                                guildId: _.id,
-                                                guildName: _.name,
-                                                guildIcon: _.icon,
+                                                guildId: y.id,
+                                                guildName: y.name,
+                                                guildIcon: y.icon,
                                                 guildIconSize: 32,
-                                                guildTag: _.profile.tag,
-                                                guildBadge: null != (r = _.profile.badge) ? r : "",
+                                                guildTag: y.profile.tag,
+                                                guildBadge: null != (r = y.profile.badge) ? r : "",
                                             }),
                                             (0, a.jsxs)("div", {
                                                 className: C.buttonContainer,
                                                 children: [
                                                     (0, a.jsx)(l.u, {
                                                         text: p.intl.string(m.default.WlENZt),
-                                                        shouldShow: y,
+                                                        shouldShow: O,
                                                         children: (0, a.jsx)(d.Button, {
                                                             variant: "primary",
                                                             text: p.intl.string(p.t.jwEaiX),
                                                             fullWidth: !0,
-                                                            onClick: x,
-                                                            loading: O,
-                                                            disabled: y,
+                                                            onClick: w,
+                                                            loading: x,
+                                                            disabled: O,
                                                         }),
                                                     }),
                                                     (0, a.jsx)(d.Button, {
                                                         variant: "secondary",
                                                         text: p.intl.string(p.t.s5vZlQ),
                                                         fullWidth: !0,
-                                                        onClick: w,
+                                                        onClick: P,
                                                     }),
                                                 ],
                                             }),
@@ -148,11 +148,11 @@ function h(e) {
                                 }),
                                 (0, a.jsx)("div", {
                                     className: i()(C.modalContentChild, C.right),
-                                    children: (0, a.jsx)(s.Z, {
+                                    children: (0, a.jsx)(c.Z, {
                                         className: C.rightContent,
-                                        guildId: _.id,
-                                        tag: _.profile.tag,
-                                        badge: null != (h = _.profile.badge) ? h : "",
+                                        guildId: y.id,
+                                        tag: y.profile.tag,
+                                        badge: null != (h = y.profile.badge) ? h : "",
                                     }),
                                 }),
                             ],

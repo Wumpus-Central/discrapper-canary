@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => j });
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -13,8 +13,8 @@ var r = n(54381),
     f = n(670188),
     g = n(237583),
     m = n(768581),
-    b = n(374379);
-function _(e) {
+    b = n(807788);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function _(e) {
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,14 +57,14 @@ function y(e, t) {
         e
     );
 }
-function O(e) {
+function x(e) {
     let { channel: t, speaker: l, className: g } = e,
-        O = i.useRef(null),
-        { newestAnalyticsLocation: x } = (0, u.ZP)(),
-        j = (0, h.bp)(),
-        { reducedMotion: v } = i.useContext(o.Sfi),
-        C = (0, d.Z)({ userId: l.id }),
-        I = null != l.member ? (0, m.CA)(l.member) : null,
+        x = i.useRef(null),
+        { newestAnalyticsLocation: j } = (0, u.ZP)(),
+        v = (0, h.bp)(),
+        { reducedMotion: C } = i.useContext(o.Sfi),
+        I = (0, d.Z)({ userId: l.id }),
+        _ = null != l.member ? (0, m.CA)(l.member) : null,
         S = (e) => {
             (0, c.jW)(
                 e,
@@ -74,57 +74,57 @@ function O(e) {
                         n.e("66165"),
                         n.e("8982"),
                         n.e("7717"),
-                        n.e("52021"),
+                        n.e("9393"),
                     ]).then(n.bind(n, 757387));
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            y(_({}, n), {
+                            O(y({}, n), {
                                 user: l.user,
                                 guildId: t.guild_id,
                                 channel: t,
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
                                 showChatItems: !1,
-                                onInteraction: (0, p.u)("GuildChannelUserContextMenu", x),
+                                onInteraction: (0, p.u)("GuildChannelUserContextMenu", j),
                             }),
                         );
                 },
-                { context: j },
+                { context: v },
             );
         };
     return (0, r.jsx)(f.Z, {
-        targetElementRef: O,
+        targetElementRef: x,
         user: l.user,
         guildId: t.guild_id,
         channelId: t.id,
         clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(s.u, {
-                targetElementRef: O,
+                targetElementRef: x,
                 __unsupportedReactNodeAsText: l.userNick,
                 position: "bottom",
                 children: (0, r.jsx)(
                     o.P3F,
-                    y(_({}, e), {
-                        innerRef: O,
+                    O(y({}, e), {
+                        innerRef: x,
                         onClick: (t) => {
                             t.stopPropagation(), e.onClick(t);
                         },
                         onContextMenu: S,
                         children: (0, r.jsx)(o.qEK, {
-                            src: null != I ? I : l.user.getAvatarURL(t.guild_id, 24),
+                            src: null != _ ? _ : l.user.getAvatarURL(t.guild_id, 24),
                             size: o.EFr.SIZE_24,
                             className: a()(b.avatar, g),
                             "aria-label": l.userNick,
-                            isSpeaking: C && !v.enabled,
+                            isSpeaking: I && !C.enabled,
                         }),
                     }),
                 ),
             }),
     });
 }
-function x(e) {
+function j(e) {
     let { speakers: t, channel: n } = e;
     return (0, r.jsx)(g.Z, {
         className: b.summary,
@@ -133,7 +133,7 @@ function x(e) {
         max: 10,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                O,
+                x,
                 {
                     channel: n,
                     speaker: e,

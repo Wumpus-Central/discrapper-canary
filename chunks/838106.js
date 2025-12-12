@@ -1,0 +1,15 @@
+e.exports = {
+    wrapper: "_19b5e5f5dd1df486-wrapper",
+    wrapperAccepted: "_19b5e5f5dd1df486-wrapperAccepted",
+    rewardTileWrapper: "_19b5e5f5dd1df486-rewardTileWrapper",
+    rewardTile: "_19b5e5f5dd1df486-rewardTile",
+    heading: "_19b5e5f5dd1df486-heading",
+    promotedTag: "_19b5e5f5dd1df486-promotedTag",
+    content: "_19b5e5f5dd1df486-content",
+    headingWithSubmenu: "_19b5e5f5dd1df486-headingWithSubmenu",
+    questTitle: "_19b5e5f5dd1df486-questTitle",
+    gameTile: "_19b5e5f5dd1df486-gameTile",
+    ctas: "_19b5e5f5dd1df486-ctas",
+    submenuWrapper: "_19b5e5f5dd1df486-submenuWrapper",
+    submenuIcon: "_19b5e5f5dd1df486-submenuIcon",
+};

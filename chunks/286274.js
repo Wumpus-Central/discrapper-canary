@@ -1,0 +1,15 @@
+e.exports = {
+    main: "_4d307bb213548a7a-main",
+    checkerboard: "_4d307bb213548a7a-checkerboard",
+    previewPlaceholder: "_4d307bb213548a7a-previewPlaceholder",
+    aside: "_4d307bb213548a7a-aside",
+    previews: "_4d307bb213548a7a-previews",
+    reactions: "_4d307bb213548a7a-reactions",
+    jumbo: "_4d307bb213548a7a-jumbo",
+    foot: "_4d307bb213548a7a-foot",
+    editor: "_4d307bb213548a7a-editor",
+    titleBar: "_4d307bb213548a7a-titleBar",
+    title: "_4d307bb213548a7a-title",
+    closeButton: "_4d307bb213548a7a-closeButton",
+    resetButton: "_4d307bb213548a7a-resetButton",
+};

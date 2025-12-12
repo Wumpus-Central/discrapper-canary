@@ -2,18 +2,18 @@ n.d(t, { Z: () => d });
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    o = n(767714),
-    a = n(382791),
+    a = n(767714),
+    o = n(382791),
     s = n(981631),
     l = n(388032),
-    c = n(838344),
+    c = n(29642),
     u = n(309389);
 let d = () => {
     let e = { section: s.jXE.REVERSE_TRIAL_BANNER };
     return (0, r.jsxs)("div", {
         className: c.banner,
         children: [
-            (0, r.jsx)(a.mn, {
+            (0, r.jsx)(o.mn, {
                 text: l.intl.string(l.t.qYKftX),
                 className: c.pill,
             }),
@@ -32,7 +32,7 @@ let d = () => {
                     children: l.intl.format(l.t.uu1WAa, { weeks: 1 }),
                 }),
             }),
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(a.Z, {
                 premiumModalAnalyticsLocation: e,
                 showGradient: !0,
                 className: c.promoNitroButton,

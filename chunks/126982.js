@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(873546),
     l = n(442837),
     c = n(481060),
@@ -13,10 +13,10 @@ var r = n(54381),
     _ = n(563132),
     m = n(409813),
     h = n(750143),
-    g = n(735553),
+    g = n(434742),
     E = n(60314),
-    b = n(420602),
-    y = n(197099);
+    b = n(732779),
+    y = n(79276);
 let O = (e) => {
     let { className: t, style: n } = e;
     return (0, l.e7)([d.Z], () => d.Z.useReducedMotion)
@@ -47,12 +47,12 @@ let O = (e) => {
           });
 };
 function v(e) {
-    let { step: t, onClose: n, isOrbCheckout: o } = e,
+    let { step: t, onClose: n, isOrbCheckout: a } = e,
         l = (0, u.Z)(h.X),
         { footerNode: d } = (0, _.JL)(),
         f = (0, p.G6)() && !s.tq,
         b = null != d ? d.offsetWidth : void 0,
-        y = i.useMemo(() => (f && null != b && (t === m.h8.ADD_PAYMENT_STEPS || o) ? b : void 0), [f, b, t, o]);
+        y = i.useMemo(() => (f && null != b && (t === m.h8.ADD_PAYMENT_STEPS || a) ? b : void 0), [f, b, t, a]);
     if (t === m.h8.BENEFITS || t === m.h8.CONFIRM) return null;
     let v = null != y ? { width: y + 2 } : void 0,
         S = null != y ? { width: y + 3 } : void 0;
@@ -66,8 +66,8 @@ function v(e) {
                     "aria-hidden": "true",
                     "data-accessibility": "desaturate",
                     style: S,
-                    children: o
-                        ? (0, r.jsx)(O, { className: a()(g.headerImage, g.orbCheckoutHeaderVideo) })
+                    children: a
+                        ? (0, r.jsx)(O, { className: o()(g.headerImage, g.orbCheckoutHeaderVideo) })
                         : (0, r.jsx)("img", {
                               src: E,
                               alt: "",

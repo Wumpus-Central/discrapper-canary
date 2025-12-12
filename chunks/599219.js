@@ -8,12 +8,12 @@ var a = n(54381),
     c = n(481060),
     d = n(393238),
     u = n(600164),
-    _ = n(313201),
+    f = n(313201),
     p = n(215292),
-    f = n(382086),
+    b = n(382086),
     m = n(996453),
-    h = n(446706),
-    b = n(594174),
+    _ = n(446706),
+    h = n(594174),
     E = n(626135),
     N = n(179645),
     x = n(436046),
@@ -26,7 +26,7 @@ var a = n(54381),
     y = n(834891),
     v = n(675999),
     I = n(388032),
-    G = n(751629);
+    G = n(22742);
 function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +71,7 @@ function D(e, t) {
     );
 }
 function S(e) {
-    let t = (0, _.Dt)(),
+    let t = (0, f.Dt)(),
         { onSlideChange: n } = e,
         i = (function (e, t) {
             if (null == e) return {};
@@ -96,7 +96,7 @@ function S(e) {
         })(e, ["onSlideChange"]),
         { onClose: S } = i,
         [L, w] = o.useState(!1),
-        M = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
+        M = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
         k = null != M && null == M.nsfwAllowed,
         [P, U] = o.useState(k ? j.F.AGE_GATE : j.F.CHOOSE_TEMPLATE),
         [R, B] = o.useState(null);
@@ -118,7 +118,7 @@ function S(e) {
             },
             [z, U],
         ),
-        { content: q, footer: X } = (0, f.v)({
+        { content: q, footer: X } = (0, b.v)({
             hasFooter: !1,
             onBack: () => {
                 z(null), U(j.F.CHOOSE_TEMPLATE);
@@ -230,7 +230,7 @@ function S(e) {
                                                 impressionProperties: er,
                                                 children: (0, a.jsx)("div", {
                                                     className: s()(G.container, G.shortFooter),
-                                                    children: (0, a.jsx)(h.Z, {
+                                                    children: (0, a.jsx)(_.Z, {
                                                         className: G.templates,
                                                         onChooseTemplate: K,
                                                         isNewUser: !0,

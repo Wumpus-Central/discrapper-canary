@@ -13,7 +13,7 @@ var i = n(54381),
     f = n(335049),
     g = n(689079),
     h = n(388032),
-    y = n(320692);
+    y = n(25743);
 function m(e) {
     let {
             editPermissions: t,
@@ -31,9 +31,9 @@ function m(e) {
     s()(null != O, "");
     let [x, M] = r.useState(null),
         { query: T, results: P, setQuery: S } = j(n),
-        [Z, _] = r.useState({}),
-        q = r.useMemo(() => Object.keys(Z).length, [Z]),
-        I = q + E >= g._n,
+        [Z, q] = r.useState({}),
+        _ = r.useMemo(() => Object.keys(Z).length, [Z]),
+        I = _ + E >= g._n,
         N = r.useMemo(
             () =>
                 P.filter((e) => {
@@ -44,7 +44,7 @@ function m(e) {
         ),
         D = r.useCallback(
             (e, t) => {
-                _((n) => {
+                q((n) => {
                     let i = (0, p.rE)(e, t),
                         r = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
@@ -84,7 +84,7 @@ function m(e) {
                     );
                 });
             },
-            [I, _],
+            [I, q],
         ),
         H = r.useCallback(() => {
             t(Z, []), k();
@@ -159,7 +159,7 @@ function m(e) {
                     text: h.intl.string(h.t.OYkgVk),
                     onClick: H,
                     variant: "primary",
-                    disabled: 0 === q,
+                    disabled: 0 === _,
                 },
             ],
             listProps: {

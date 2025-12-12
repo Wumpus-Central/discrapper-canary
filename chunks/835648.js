@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(91192),
     l = n(442837),
     c = n(681715),
@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(957825),
     v = n(474936),
     S = n(388032),
-    I = n(422840);
+    I = n(98228);
 function T(e, t, n) {
     return (
         t in e
@@ -76,12 +76,12 @@ function N(e, t) {
 let P = [8, 8, 8, 8],
     R = 40;
 function w(e) {
-    let { icon: t, isSelected: n, onClick: i, listItemProps: o } = e;
+    let { icon: t, isSelected: n, onClick: i, listItemProps: a } = e;
     return (0, r.jsx)(
         u.P3F,
-        N(C({}, o), {
+        N(C({}, a), {
             onClick: i,
-            className: a()(I.categoryIcon, { [I.selected]: n }),
+            className: o()(I.categoryIcon, { [I.selected]: n }),
             children: (0, r.jsx)(t, {
                 className: I.categoryIconIcon,
                 color: "currentColor",
@@ -89,7 +89,7 @@ function w(e) {
         }),
     );
 }
-function D(e, t, n, i, o) {
+function D(e, t, n, i, a) {
     switch (e.categoryInfo.type) {
         case E.bg.FAVORITES:
             return (0, r.jsx)(
@@ -133,7 +133,7 @@ function D(e, t, n, i, o) {
                     children: (0, r.jsx)(d.Z, {
                         guild: e.categoryInfo.guild,
                         isSelected: n,
-                        isLocked: o,
+                        isLocked: a,
                     }),
                 }),
                 e.key,
@@ -168,26 +168,26 @@ function x(e) {
     }
 }
 function L(e) {
-    let { category: t, categoryIndex: n, onClick: i, isSelected: o, isNitroLocked: a } = e,
+    let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: o } = e,
         l = (0, s.JA)("soundboard_guild_".concat(n));
     return t.categoryInfo.type === E.bg.GUILD
         ? (0, r.jsx)(_.V, {
               guild: t.categoryInfo.guild,
-              children: D(t, i, o, l, a),
+              children: D(t, i, a, l, o),
           })
         : (0, r.jsx)(c.u, {
               text: x(t),
               position: "right",
               align: "center",
-              children: D(t, i, o, l, a),
+              children: D(t, i, a, l, o),
           });
 }
 function j(e) {
     let {
             soundboardListRef: t,
             categories: n,
-            shouldUpsellLockedCategories: o,
-            listPadding: a = P,
+            shouldUpsellLockedCategories: a,
+            listPadding: o = P,
             guildId: s,
             inExpressionPicker: c,
         } = e,
@@ -196,7 +196,7 @@ function j(e) {
         _ = (0, g.I5)(d, v.PremiumTypes.TIER_2),
         E = i.useCallback(
             (e, t, n, i) => {
-                let a = o && (0, b.O)(e.categoryInfo, _, s),
+                let o = a && (0, b.O)(e.categoryInfo, _, s),
                     l = () => {
                         h.default.track(y.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                             location: { page: y.ZY5.SOUNDBOARD_POPOUT },
@@ -213,10 +213,10 @@ function j(e) {
                     categoryIndex: t,
                     onClick: l,
                     isSelected: i,
-                    isNitroLocked: a,
+                    isNitroLocked: o,
                 });
             },
-            [s, o, _],
+            [s, a, _],
         );
     return (0, r.jsx)(p.Z, {
         className: c ? I.expressionPickerCategoryList : I.categoryList,
@@ -224,7 +224,7 @@ function j(e) {
         expressionsListRef: t,
         store: f.Wq,
         categories: n,
-        listPadding: a,
+        listPadding: o,
         renderCategoryListItem: E,
         rowCount: n.length,
         categoryHeight: R,

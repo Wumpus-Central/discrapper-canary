@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(906732),
     c = n(201895),
@@ -15,7 +15,7 @@ var r = n(54381),
     h = n(532657),
     g = n(556638),
     E = n(388032),
-    b = n(80568);
+    b = n(175996);
 function y(e, t, n) {
     return (
         t in e
@@ -72,7 +72,7 @@ function I(e) {
     let {
             channel: t,
             textVariant: n,
-            textClassName: o,
+            textClassName: a,
             iconClassName: f,
             hideText: h = !1,
             hideTooltip: y = !1,
@@ -98,7 +98,7 @@ function I(e) {
                       size: "custom",
                       color: T,
                       channel: t,
-                      className: a()(b.icon, f),
+                      className: o()(b.icon, f),
                   })
                 : (0, r.jsx)(s.aML, {
                       "data-migration-pending": !0,
@@ -113,7 +113,7 @@ function I(e) {
                                   size: "custom",
                                   color: T,
                                   channel: t,
-                                  className: a()(b.icon, f),
+                                  className: o()(b.icon, f),
                               }),
                           ),
                   }),
@@ -131,7 +131,7 @@ function I(e) {
             !h &&
                 (0, r.jsxs)(m.Z, {
                     variant: n,
-                    className: o,
+                    className: a,
                     canTruncate: v,
                     hideTooltip: y,
                     children: [x(), P && null != C && " (".concat(C, ")")],
@@ -144,7 +144,7 @@ function T(e) {
             channel: t,
             textVariant: n,
             textClassName: i,
-            iconClassName: o,
+            iconClassName: a,
             hideText: l = !1,
             hideTooltip: c = !1,
             canTruncate: f = !0,
@@ -169,7 +169,7 @@ function T(e) {
             size: "custom",
             color: m,
             channel: t,
-            className: a()(b.icon, o),
+            className: o()(b.icon, a),
         }),
         text: I,
         tooltipText: c ? void 0 : S,

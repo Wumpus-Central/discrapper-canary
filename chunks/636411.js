@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(607070),
     c = n(70097),
@@ -14,13 +14,13 @@ var i = n(120356),
     _ = n(981631),
     m = n(474936),
     h = n(388032),
-    g = n(717461);
+    g = n(87911);
 let E = "https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4",
     b = 32;
 function y(e) {
     var t, n;
     let { onDismiss: i } = e,
-        y = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        y = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
         O = h.intl.string(h.t.eikz43),
         v = (0, d.N)(),
         S = (0, u.N)(),
@@ -47,7 +47,7 @@ function y(e) {
                     (0, r.jsx)("div", {
                         className: g.contentFill,
                         children: (0, r.jsx)(c.Z, {
-                            className: o()(g.banner, { [g.hasTrialOffer]: I }),
+                            className: a()(g.banner, { [g.hasTrialOffer]: I }),
                             src: E,
                             loop: !0,
                             autoPlay: !y,

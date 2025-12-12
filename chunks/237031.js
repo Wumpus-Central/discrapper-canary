@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    o = n(1870),
-    a = n(724994);
+    a = n(1870),
+    o = n(724994);
 function s(e, t, n) {
     return (
         t in e
@@ -72,12 +72,12 @@ let d = "collectibles shop product details modal",
             rentalDuration: h,
         } = e;
         if (t.isCategoryReward) {
-            let { isPurchased: e } = (0, a.U)(o.Z, t);
+            let { isPurchased: e } = (0, o.U)(a.Z, t);
             if (!e) return;
         }
         (0, i.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("5410"), n.e("86111")]).then(n.bind(n, 702370));
+                let { default: e } = await Promise.all([n.e("5410"), n.e("8087")]).then(n.bind(n, 702370));
                 return (n) =>
                     (0, r.jsx)(
                         e,

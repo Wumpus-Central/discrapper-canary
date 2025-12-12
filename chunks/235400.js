@@ -1,8 +1,8 @@
-n.d(t, { default: () => E }), n(388685);
+n.d(t, { default: () => A }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     s = n(100527),
     o = n(906732),
     c = n(335131),
@@ -12,54 +12,54 @@ var r = n(54381),
     p = n(311395),
     h = n(269982),
     x = n(767714),
-    v = n(150039),
-    g = n(369111),
-    f = n(271383),
-    j = n(594174),
-    _ = n(626135),
+    f = n(150039),
+    v = n(369111),
+    g = n(271383),
+    b = n(594174),
+    j = n(626135),
     P = n(74538),
     O = n(240781),
     w = n(818611),
     y = n(981631),
     C = n(474936),
     S = n(388032),
-    I = n(88785);
-function b(e) {
+    I = n(258659);
+function E(e) {
     let {
             user: t,
             categories: n,
             purchases: o,
             analyticsLocations: m,
-            onClose: j,
-            initialSelectedDecoration: _,
+            onClose: b,
+            initialSelectedDecoration: j,
             guild: y,
         } = e,
-        b = (0, l.e7)([f.ZP], () => (null != y ? f.ZP.getMember(y.id, t.id) : null)),
-        E = null != b ? b.avatarDecoration : t.avatarDecoration,
-        { pendingAvatarDecoration: A, setPendingAvatarDecoration: T } = (0, g.Z)({
+        E = (0, a.e7)([g.ZP], () => (null != y ? g.ZP.getMember(y.id, t.id) : null)),
+        A = null != E ? E.avatarDecoration : t.avatarDecoration,
+        { pendingAvatarDecoration: T, setPendingAvatarDecoration: _ } = (0, v.Z)({
             analyticsLocations: m,
             guildId: null == y ? void 0 : y.id,
         }),
         [D, Z] = i.useState(() => {
             var e;
-            return null != _
-                ? _
-                : void 0 !== A
-                  ? A
-                  : null == E
+            return null != j
+                ? j
+                : void 0 !== T
+                  ? T
+                  : null == A
                     ? null
                     : null !=
                         (e = (0, d.iC)(o, n).find((e) => {
                             let { skuId: t } = e;
-                            return t === E.skuId;
+                            return t === A.skuId;
                         }))
                       ? e
                       : null;
         }),
-        N = (0, v.Ys)({
+        N = (0, f.Ys)({
             pendingValue: D,
             userValue: null == t ? void 0 : t.avatarDecoration,
-            guildValue: null == b ? void 0 : b.avatarDecoration,
+            guildValue: null == E ? void 0 : E.avatarDecoration,
             guildId: null == y ? void 0 : y.id,
         }),
         { product: k, purchase: R } = (0, u.Z)(null == D ? void 0 : D.skuId),
@@ -68,39 +68,39 @@ function b(e) {
         M = i.useRef(null),
         B = (0, p.Z)(m),
         F =
-            void 0 === A
-                ? (null == D ? void 0 : D.skuId) === (null == E ? void 0 : E.skuId)
-                : (null == D ? void 0 : D.skuId) === (null == A ? void 0 : A.skuId),
+            void 0 === T
+                ? (null == D ? void 0 : D.skuId) === (null == A ? void 0 : A.skuId)
+                : (null == D ? void 0 : D.skuId) === (null == T ? void 0 : T.skuId),
         z = i.useCallback(
             (e) => {
-                j(),
+                b(),
                     (0, c.mK)({
                         analyticsLocations: m,
                         analyticsSource: s.Z.EDIT_AVATAR_DECORATION_MODAL,
                         initialProductSkuId: e,
                     });
             },
-            [m, j],
+            [m, b],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)(a.xBx, {
+            (0, r.jsxs)(l.xBx, {
                 "data-migration-pending": !0,
                 separator: !1,
                 className: I.modalHeader,
                 children: [
-                    (0, r.jsx)(a.Heading, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-lg/semibold",
                         children: S.intl.string(S.t.HykynS),
                     }),
-                    (0, r.jsx)(a.olH, {
+                    (0, r.jsx)(l.olH, {
                         "data-migration-pending": !0,
                         className: I.modalCloseButton,
-                        onClick: j,
+                        onClick: b,
                     }),
                 ],
             }),
-            (0, r.jsxs)(a.hzk, {
+            (0, r.jsxs)(l.hzk, {
                 "data-migration-pending": !0,
                 className: I.modalContent,
                 scrollbarType: "none",
@@ -123,21 +123,21 @@ function b(e) {
                     }),
                 ],
             }),
-            (0, r.jsxs)(a.mzw, {
+            (0, r.jsxs)(l.mzw, {
                 "data-migration-pending": !0,
                 className: I.modalFooter,
                 children: [
                     (null != R && (U || !L)) || null === D
-                        ? (0, r.jsx)(a.Button, {
+                        ? (0, r.jsx)(l.Button, {
                               variant: "primary",
                               text: S.intl.string(S.t.Jh8fJz),
                               onClick: () => {
-                                  T(D), j();
+                                  _(D), b();
                               },
                               disabled: F,
                           })
                         : null == R && (U || !L)
-                          ? (0, r.jsx)(a.Button, {
+                          ? (0, r.jsx)(l.Button, {
                                 variant: "primary",
                                 onClick: () => z(null == k ? void 0 : k.skuId),
                                 text: S.intl.string(S.t.fYfGgK),
@@ -156,19 +156,19 @@ function b(e) {
                     !U && L
                         ? (0, r.jsx)(h.Z, {
                               product: k,
-                              onClose: j,
+                              onClose: b,
                           })
-                        : (0, r.jsx)(a.Button, {
+                        : (0, r.jsx)(l.Button, {
                               variant: "secondary",
                               text: S.intl.string(S.t["ETE/oC"]),
-                              onClick: j,
+                              onClick: b,
                           }),
                 ],
             }),
         ],
     });
 }
-function E(e) {
+function A(e) {
     let {
             transitionState: t,
             analyticsLocations: n,
@@ -177,13 +177,13 @@ function E(e) {
             initialSelectedDecoration: u,
             guild: p,
         } = e,
-        h = (0, l.e7)([j.default], () => j.default.getCurrentUser()),
+        h = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
         { analyticsLocations: x } = (0, o.ZP)(n, s.Z.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: v, purchases: g, isFetchingCategories: f, isFetchingPurchases: P } = (0, m.ZP)(),
-        O = f || (P && 0 === g.size);
+        { categories: f, purchases: v, isFetchingCategories: g, isFetchingPurchases: P } = (0, m.ZP)(),
+        O = g || (P && 0 === v.size);
     return (
         i.useEffect(() => {
-            _.default.track(y.rMx.OPEN_MODAL, {
+            j.default.track(y.rMx.OPEN_MODAL, {
                 type: y.jXE.AVATAR_DECORATION_CUSTOMIZATION,
                 location_stack: x,
             });
@@ -192,22 +192,22 @@ function E(e) {
             ? null
             : (0, r.jsx)(o.Gt, {
                   value: x,
-                  children: (0, r.jsx)(a.Y0X, {
+                  children: (0, r.jsx)(l.Y0X, {
                       transitionState: t,
                       className: I.modal,
-                      size: O ? a.CgR.DYNAMIC : a.CgR.MEDIUM,
+                      size: O ? l.CgR.DYNAMIC : l.CgR.MEDIUM,
                       parentComponent: "AvatarDecorationModal",
                       "data-migration-pending": !0,
                       children: O
-                          ? (0, r.jsx)(a.$jN, {
+                          ? (0, r.jsx)(l.$jN, {
                                 className: I.spinner,
-                                type: a.$jN.Type.SPINNING_CIRCLE,
+                                type: l.$jN.Type.SPINNING_CIRCLE,
                             })
-                          : (0, r.jsx)(b, {
+                          : (0, r.jsx)(E, {
                                 user: h,
                                 guild: p,
-                                categories: v,
-                                purchases: g,
+                                categories: f,
+                                purchases: v,
                                 analyticsLocations: x,
                                 initialSelectedDecoration: u,
                                 onClose: () => {

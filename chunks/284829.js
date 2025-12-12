@@ -1,8 +1,8 @@
 n.d(t, { U: () => E }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(793030),
-    a = n(481060),
+    a = n(793030),
+    o = n(481060),
     s = n(63063),
     l = n(74538),
     c = n(10508),
@@ -11,9 +11,9 @@ var r = n(54381),
     f = n(474936),
     p = n(981631),
     _ = n(388032),
-    m = n(950728),
+    m = n(201007),
     h = n(997892),
-    g = n(21299);
+    g = n(942257);
 let E = () => {
     let {
             transitionState: e,
@@ -40,7 +40,7 @@ let E = () => {
     if (null === O || null === v)
         return (0, r.jsx)("div", {
             className: m.spinnerContainer,
-            children: (0, r.jsx)(a.$jN, {}),
+            children: (0, r.jsx)(o.$jN, {}),
         });
     let P = n === f.PremiumTypes.TIER_2,
         R = [
@@ -54,12 +54,12 @@ let E = () => {
                 text: _.intl.string(_.t.CKSuZJ),
                 onClick: () => N(),
                 variant: "primary",
-                icon: a.SrA,
+                icon: o.SrA,
                 loading: I,
                 disabled: I,
             },
         ];
-    return (0, r.jsxs)(o.ExpressiveModal, {
+    return (0, r.jsxs)(a.ExpressiveModal, {
         graphic: {
             type: "image",
             src: P ? g.Z : h,
@@ -82,7 +82,7 @@ let E = () => {
             }),
             (0, r.jsx)("div", {
                 className: m.legalContainer,
-                children: (0, r.jsx)(a.Text, {
+                children: (0, r.jsx)(o.Text, {
                     variant: "text-xs/medium",
                     color: "text-subtle",
                     children:
@@ -104,7 +104,7 @@ let E = () => {
                 }),
             }),
             C
-                ? (0, r.jsx)(o.M14, {
+                ? (0, r.jsx)(a.M14, {
                       type: "critical",
                       children: _.intl.string(_.t["5mlOCW"]),
                   })

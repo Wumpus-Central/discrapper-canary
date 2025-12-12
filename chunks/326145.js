@@ -13,10 +13,10 @@ var r = n(54381),
     g = n(768581),
     h = n(302221),
     m = n(745752),
-    _ = n(17181),
-    b = n(388032),
-    E = n(76531),
-    O = n(718215);
+    b = n(17181),
+    E = n(388032),
+    _ = n(337917),
+    O = n(321347);
 function v(e) {
     let { guildId: t, channelId: n } = e,
         { ref: l, width: v, height: y } = (0, c.ZP)(),
@@ -24,7 +24,7 @@ function v(e) {
             null != t &&
                 null != n &&
                 ((0, m.I1)(t),
-                (0, _.default)({
+                (0, b.default)({
                     guildId: t,
                     returnChannelId: n,
                 }));
@@ -42,7 +42,7 @@ function v(e) {
         ),
         T = (0, d.N)(S);
     return (0, r.jsxs)("div", {
-        className: a()(E.outerWrapping, O.main, { [O.fullBorderWithGradient]: null == S }),
+        className: a()(_.outerWrapping, O.main, { [O.fullBorderWithGradient]: null == S }),
         ref: l,
         children: [
             null != S
@@ -66,27 +66,27 @@ function v(e) {
                 }),
             null != S && (0, r.jsx)("div", { className: O.gradient }),
             (0, r.jsxs)("div", {
-                className: a()(E.explainerContainer, E.transparentBackground),
+                className: a()(_.explainerContainer, _.transparentBackground),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: E.header,
+                        className: _.header,
                         children: [
                             (0, r.jsx)(o.Heading, {
                                 variant: "heading-xxl/normal",
                                 color: "always-white",
-                                children: b.intl.string(b.t.CCmhpF),
+                                children: E.intl.string(E.t.CCmhpF),
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-lg/normal",
                                 color: "always-white",
-                                children: b.intl.string(b.t.gRAHcZ),
+                                children: E.intl.string(E.t.gRAHcZ),
                             }),
                         ],
                     }),
                     (0, r.jsx)(o.Button, {
                         variant: "overlay-primary",
                         size: "md",
-                        text: b.intl.string(b.t.VVFjAC),
+                        text: E.intl.string(E.t.VVFjAC),
                         onClick: I,
                     }),
                 ],

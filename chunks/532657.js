@@ -1,11 +1,11 @@
 n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(556638),
-    c = n(80568);
+    c = n(175996);
 function u(e, t, n) {
     return (
         t in e
@@ -62,7 +62,7 @@ function _(e) {
     let {
             text: t,
             tooltipText: n,
-            textVariant: o = "text-xs/medium",
+            textVariant: a = "text-xs/medium",
             textClassName: u,
             "aria-label": f,
             icon: _,
@@ -79,16 +79,16 @@ function _(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "none",
-                        className: a()(c.tooltipText, u),
+                        className: o()(c.tooltipText, u),
                         children: e,
                     }),
                 ],
             });
         },
         y = {
-            variant: o,
+            variant: a,
             color: "none",
-            className: a()(m && c.truncated, u),
+            className: o()(m && c.truncated, u),
         },
         O = null != t && null == n && m,
         v = !h && (null != n || O || g);
@@ -99,18 +99,18 @@ function _(e) {
                 "data-migration-pending": !0,
                 text: b(),
                 "aria-label": f,
-                tooltipContentClassName: a()(c.container, c.activitiesTooltip),
+                tooltipContentClassName: o()(c.container, c.activitiesTooltip),
                 delay: l.X,
                 children: (e) => {
-                    let { onMouseEnter: i, onMouseLeave: o } = e;
+                    let { onMouseEnter: i, onMouseLeave: a } = e;
                     return (0, r.jsxs)("div", {
-                        className: a()(c.container, c.textWithIconContainer),
+                        className: o()(c.container, c.textWithIconContainer),
                         onMouseEnter: () => {
                             let { current: e } = E,
                                 t = null != e && e.offsetWidth < e.scrollWidth;
                             (null != n || t || g) && (null == i || i());
                         },
-                        onMouseLeave: o,
+                        onMouseLeave: a,
                         children: [_, !g && (0, r.jsx)(s.Text, p(d({ ref: E }, y), { children: t }))],
                     });
                 },

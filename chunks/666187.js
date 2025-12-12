@@ -1,18 +1,18 @@
 n.d(t, { L: () => S }), n(539854);
 var r,
     i = n(54381),
-    o = n(473749),
-    a = n(120356),
-    s = n.n(a),
+    a = n(473749),
+    o = n(120356),
+    s = n.n(o),
     l = n(772848),
     c = n(793030),
     u = n(15127),
     d = n(993365),
     f = n(639317),
     p = n(388032),
-    _ = n(8542),
-    m = n(979712),
-    h = n(154257);
+    _ = n(132648),
+    m = n(191228),
+    h = n(164701);
 function g(e, t, n) {
     return (
         t in e
@@ -31,7 +31,7 @@ let E = (0, l.Z)(),
     y = (0, l.Z)(),
     O = 10,
     v = 7.23;
-class S extends (r = o.Component) {
+class S extends (r = a.Component) {
     getPaddingRight() {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
         if (null == e) return O;
@@ -111,8 +111,8 @@ class S extends (r = o.Component) {
         let {
                 disabled: n,
                 value: r,
-                placeholder: o,
-                autoFocus: a,
+                placeholder: a,
+                autoFocus: o,
                 minLength: l,
                 maxLength: u,
                 allowOverflow: d,
@@ -151,9 +151,9 @@ class S extends (r = o.Component) {
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: v,
                                 disabled: n,
-                                placeholder: o,
+                                placeholder: a,
                                 value: r,
-                                autoFocus: a,
+                                autoFocus: o,
                                 minLength: l,
                                 maxLength: d ? void 0 : u,
                                 spellCheck: g,
@@ -192,9 +192,9 @@ class S extends (r = o.Component) {
                 var e;
                 let { maxLength: t, minLength: n, error: r } = this.props,
                     i = [],
-                    o = null == (e = this.context) ? void 0 : e.errorId;
+                    a = null == (e = this.context) ? void 0 : e.errorId;
                 return (
-                    null != o && i.push(o),
+                    null != a && i.push(a),
                     null != r ? i.push(E) : (null != t && i.push(y), null != n && i.push(b)),
                     i.length > 0 ? i.join(" ") : void 0
                 );

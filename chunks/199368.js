@@ -1,0 +1,16 @@
+e.exports = {
+    header: "a9b45282395ecdfc-header",
+    subheader: "a9b45282395ecdfc-subheader",
+    help: "a9b45282395ecdfc-help",
+    helpSeparator: "a9b45282395ecdfc-helpSeparator",
+    wumpus: "a9b45282395ecdfc-wumpus",
+    notice: "a9b45282395ecdfc-notice",
+    content: "a9b45282395ecdfc-content",
+    review: "a9b45282395ecdfc-review",
+    reviewHeaderText: "a9b45282395ecdfc-reviewHeaderText",
+    divider: "a9b45282395ecdfc-divider",
+    reviewHeader: "a9b45282395ecdfc-reviewHeader",
+    reviewActions: "a9b45282395ecdfc-reviewActions",
+    rolesWarning: "a9b45282395ecdfc-rolesWarning",
+    warningIcon: "a9b45282395ecdfc-warningIcon",
+};

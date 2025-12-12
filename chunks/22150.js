@@ -1,18 +1,18 @@
 e.d(n, { Z: () => _ }), e(388685), e(953529);
-var a = e(54381),
-    r = e(473749),
-    i = e(442837),
+var r = e(54381),
+    i = e(473749),
+    a = e(442837),
     l = e(481060),
     s = e(479531),
     o = e(393869),
     c = e(594174),
     u = e(388032),
-    E = e(780187),
+    E = e(36884),
     A = e(800010);
 function _(t) {
     let { onNext: n, onClose: e, transitionState: _ } = t,
-        [d, C] = r.useState(!1),
-        x = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
+        [d, C] = i.useState(!1),
+        x = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
         N = async (t) => {
             t.preventDefault(), C(!0);
             try {
@@ -24,7 +24,7 @@ function _(t) {
                 C(!1);
             }
         };
-    return (0, a.jsx)(l.Ioy, {
+    return (0, r.jsx)(l.Ioy, {
         graphic: {
             type: "image",
             src: A,
@@ -45,7 +45,7 @@ function _(t) {
                 onClick: N,
             },
         ],
-        children: (0, a.jsx)(l.Text, {
+        children: (0, r.jsx)(l.Text, {
             className: E.description,
             variant: "text-md/normal",
             children: u.intl.format(u.t.oMFSgi, { oldEmail: null == x ? void 0 : x.email }),

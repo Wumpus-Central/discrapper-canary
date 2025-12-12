@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(420660),
@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(981631),
     v = n(474936),
     S = n(671955),
-    I = n(66856);
+    I = n(108096);
 function T(e, t, n) {
     return (
         t in e
@@ -78,7 +78,7 @@ function R(e) {
     let {
             user: t,
             displayProfile: n,
-            guildId: o,
+            guildId: a,
             channelId: m,
             themeType: T,
             animateOnHover: A,
@@ -99,14 +99,14 @@ function R(e) {
         })),
         B = void 0 !== D ? D : Z,
         V = [S.l.MODAL, S.l.MODAL_V2].includes(T) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        H = a()(I.avatar, w),
+        H = o()(I.avatar, w),
         {
             avatarDecorationSrc: Y,
             avatarSrc: W,
             eventHandlers: K,
         } = (0, E.Z)({
             userId: t.id,
-            guildId: null != n ? n.guildId : o,
+            guildId: null != n ? n.guildId : a,
             size: V,
             animateOnHover: A,
         }),
@@ -133,7 +133,7 @@ function R(e) {
         : (0, r.jsx)(
               l.P3F,
               N(C({}, K), {
-                  className: a()(H, I.clickable),
+                  className: o()(H, I.clickable),
                   focusProps: { ringClassName: I.focusRing },
                   onClick: () => {
                       j({

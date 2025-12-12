@@ -14,24 +14,24 @@ var i = n(54381),
     u = n(481060),
     d = n(211266),
     p = n(699682),
-    h = n(367907),
-    f = n(644914),
+    f = n(367907),
+    h = n(644914),
     m = n(434404),
     g = n(330010),
     b = n(978946),
     C = n(314897),
     y = n(430824),
     v = n(594174),
-    _ = n(259580),
-    O = n(585483),
-    x = n(63063),
-    E = n(358085),
-    j = n(709054),
-    S = n(967128),
+    O = n(259580),
+    x = n(585483),
+    E = n(63063),
+    j = n(358085),
+    S = n(709054),
+    _ = n(967128),
     P = n(981631),
     I = n(231873),
     Z = n(388032),
-    T = n(183334);
+    T = n(91023);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,12 +77,12 @@ function A(e, t) {
 }
 function w(e) {
     let { className: t, iconUrl: n, icon: l, header: o, completed: s, onClick: c } = e,
-        [d, h] = r.useState(!1),
-        f = (0, p.Z)(s);
+        [d, f] = r.useState(!1),
+        h = (0, p.Z)(s);
     return (
         r.useEffect(() => {
-            null != f && s !== f && (h(!0), setTimeout(() => h(!1), 1000));
-        }, [s, f]),
+            null != h && s !== h && (f(!0), setTimeout(() => f(!1), 1000));
+        }, [s, h]),
         (0, i.jsxs)(u.P3F, {
             className: a()(t, T.card, { [T.completed]: s }),
             onClick: c,
@@ -106,9 +106,9 @@ function w(e) {
                           color: "currentColor",
                           className: a()(T.checkmark, { [T.animate]: d }),
                       })
-                    : (0, i.jsx)(_.Z, {
+                    : (0, i.jsx)(O.Z, {
                           className: T.arrow,
-                          direction: _.Z.Directions.RIGHT,
+                          direction: O.Z.Directions.RIGHT,
                       }),
             ],
         })
@@ -117,9 +117,9 @@ function w(e) {
 function M(e) {
     let { channel: t } = e,
         l = (0, s.e7)([y.Z], () => (null != t ? y.Z.getGuild(t.getGuildId()) : null), [t]),
-        p = null != l && j.default.extractTimestamp(l.id) < Date.now() - P._8R,
-        _ = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
-        { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, l),
+        p = null != l && S.default.extractTimestamp(l.id) < Date.now() - P._8R,
+        O = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
+        { canInvite: M, canManageGuild: R, canMessage: L } = (0, h.TE)(t, l),
         D = (0, s.e7)([v.default], () => {
             var e, t;
             return (
@@ -127,7 +127,7 @@ function M(e) {
                 (null == (t = v.default.getCurrentUser()) ? void 0 : t.mobile) === !0
             );
         }),
-        { guildPopulated: k, guildMessaged: U, guildPersonalized: V } = (0, f.h_)(l),
+        { guildPopulated: k, guildMessaged: U, guildPersonalized: V } = (0, h.h_)(l),
         {
             handleInvite: F,
             handleMessage: B,
@@ -136,13 +136,13 @@ function M(e) {
             handleAddApplication: z,
         } = (function (e) {
             let t = r.useCallback(() => {
-                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    f.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: I.Ft.CHANNEL_WELCOME,
                         action: I.j7.INVITE,
                     }),
                         null != e &&
                             (0, u.ZDy)(async () => {
-                                let { default: t } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
+                                let { default: t } = await Promise.all([n.e("49049"), n.e("7654"), n.e("97016")]).then(
                                     n.bind(n, 560114),
                                 );
                                 return (n) =>
@@ -157,17 +157,17 @@ function M(e) {
                             });
                 }, [e]),
                 l = r.useCallback(() => {
-                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    f.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: I.Ft.CHANNEL_WELCOME,
                         action: I.j7.SEND_MESSAGE,
                     }),
-                        O.S.dispatch(P.CkL.TEXTAREA_FOCUS, {
+                        x.S.dispatch(P.CkL.TEXTAREA_FOCUS, {
                             highlight: !0,
                             channelId: P.lds,
                         });
                 }, []),
                 a = r.useCallback(() => {
-                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    f.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: I.Ft.CHANNEL_WELCOME,
                         action: I.j7.PERSONALIZE_SERVER,
                     }),
@@ -178,7 +178,7 @@ function M(e) {
                 handleMessage: l,
                 handlePersonalize: a,
                 handleDownload: r.useCallback(() => {
-                    h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    f.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: I.Ft.CHANNEL_WELCOME,
                         action: I.j7.DOWNLOAD,
                     }),
@@ -191,7 +191,7 @@ function M(e) {
                 }, []),
                 handleAddApplication: r.useCallback(() => {
                     null != e &&
-                        (h.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        (f.ZP.trackWithMetadata(P.rMx.SERVER_SETUP_CTA_CLICKED, {
                             setup_type: I.Ft.CHANNEL_WELCOME,
                             action: I.j7.ADD_APP,
                         }),
@@ -334,7 +334,7 @@ function M(e) {
                     "message",
                 ),
             ),
-        (0, E.isWeb)() &&
+        (0, j.isWeb)() &&
             Q.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -367,13 +367,13 @@ function M(e) {
                 "addapp",
             ),
         ));
-    let $ = _ ? Z.intl.string(Z.t["1ach9C"]) : Z.intl.string(Z.t["ezm+/j"]);
+    let $ = O ? Z.intl.string(Z.t["1ach9C"]) : Z.intl.string(Z.t["ezm+/j"]);
     p && ($ = Z.intl.string(Z.t["gwyU/J"]));
     let ee = "".concat(
-        x.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED),
+        E.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED),
         "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm",
     );
-    return (0, i.jsx)(S.ZP, {
+    return (0, i.jsx)(_.ZP, {
         channelId: t.id,
         children: (0, i.jsx)("div", {
             className: T.container,

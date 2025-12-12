@@ -1,4 +1,4 @@
-a.d(t, { h: () => N });
+a.d(t, { h: () => m });
 var n = a(54381),
     r = a(473749),
     s = a(120356),
@@ -7,9 +7,9 @@ var n = a(54381),
     o = a(653371),
     c = a(388755),
     d = a(330711),
-    u = a(907367);
-let _ = null;
-class N extends r.PureComponent {
+    u = a(61450);
+let N = null;
+class m extends r.PureComponent {
     render() {
         let {
             token: e,
@@ -18,21 +18,21 @@ class N extends r.PureComponent {
             mainContentId: s,
             mobileClassName: i,
             avoidRouter: d,
-            authRedirectTo: N,
-            openNavAriaLabel: m,
+            authRedirectTo: m,
+            openNavAriaLabel: f,
             hideNavAriaLabel: p,
             skipToContentLabel: h,
         } = this.props;
-        return null == _
+        return null == N
             ? null
             : (0, n.jsxs)(r.Fragment, {
                   children: [
                       (0, n.jsx)(o.a, {
                           className: l()(u.desktopHeader, t),
-                          TrackClick: _,
+                          TrackClick: N,
                           token: e,
                           avoidRouter: d,
-                          authRedirectTo: N,
+                          authRedirectTo: m,
                           onChangeLocale: a,
                           mainContentId: s,
                           skipToContentLabel: h,
@@ -41,9 +41,9 @@ class N extends r.PureComponent {
                           className: l()(u.mobileHeader, i),
                           token: e,
                           avoidRouter: d,
-                          TrackClick: _,
+                          TrackClick: N,
                           onChangeLocale: a,
-                          openNavAriaLabel: m,
+                          openNavAriaLabel: f,
                           hideNavAriaLabel: p,
                       }),
                   ],
@@ -52,7 +52,7 @@ class N extends r.PureComponent {
     constructor(e) {
         super(e),
             null != e.locale && d.Z.setLocale(e.locale),
-            (_ = (t) =>
+            (N = (t) =>
                 (0, n.jsx)(
                     i.Z,
                     (function (e) {

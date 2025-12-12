@@ -1,0 +1,18 @@
+e.exports = {
+    recentChannelsMenu: "_711d3bfd02a655e2-recentChannelsMenu",
+    recentChannelsMenuHeader: "_711d3bfd02a655e2-recentChannelsMenuHeader",
+    guildIconWrapper: "_711d3bfd02a655e2-guildIconWrapper",
+    overflowCount: "_711d3bfd02a655e2-overflowCount",
+    channelItemContainer: "_711d3bfd02a655e2-channelItemContainer",
+    channelItemHighlighted: "_711d3bfd02a655e2-channelItemHighlighted",
+    searchBarContainer: "_711d3bfd02a655e2-searchBarContainer",
+    emptyChannelItem: "_711d3bfd02a655e2-emptyChannelItem",
+    channelItemIcon: "_711d3bfd02a655e2-channelItemIcon",
+    channelItemNameContainer: "_711d3bfd02a655e2-channelItemNameContainer",
+    channelItemName: "_711d3bfd02a655e2-channelItemName",
+    channelIcon: "_711d3bfd02a655e2-channelIcon",
+    channelItemNameText: "_711d3bfd02a655e2-channelItemNameText",
+    channelItemAvatars: "_711d3bfd02a655e2-channelItemAvatars",
+    channelList: "_711d3bfd02a655e2-channelList",
+    channelListWrapper: "_711d3bfd02a655e2-channelListWrapper",
+};

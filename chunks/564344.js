@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(503089),
@@ -24,13 +24,13 @@ var r = n(54381),
     T = n(526761),
     C = n(726985),
     A = n(388032),
-    N = n(455734);
+    N = n(37149);
 function P() {
     u.Z.useExperiment({ location: "profile_customization_auto" });
     let e = (0, s.e7)([f.Z], () => f.Z.getGuild()),
         t = (0, O.Z)(),
         n = (0, s.e7)([f.Z, E.Z], () => f.Z.showNotice() || E.Z.showNotice()),
-        o = null != e ? e : t,
+        a = null != e ? e : t,
         P = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         { subsection: R, setSubsection: w } = (0, v.Z)(),
         D = g.R.useField("hasSearchResults"),
@@ -45,14 +45,14 @@ function P() {
                     y.S.dispatch(S.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            t === T.NB.GUILD && null == e && null != o && (0, d.Fq)(o), w(t);
+            t === T.NB.GUILD && null == e && null != a && (0, d.Fq)(a), w(t);
         }
     }
     i.useEffect(() => {
         null != P &&
-            (null == o ? void 0 : o.id) !== I._ &&
-            (0, _.Z)(P.id, P.getAvatarURL(null == o ? void 0 : o.id, 80), { guildId: null == o ? void 0 : o.id });
-    }, [null == o ? void 0 : o.id, P]);
+            (null == a ? void 0 : a.id) !== I._ &&
+            (0, _.Z)(P.id, P.getAvatarURL(null == a ? void 0 : a.id, 80), { guildId: null == a ? void 0 : a.id });
+    }, [null == a ? void 0 : a.id, P]);
     let j = !0,
         M = !0;
     return (
@@ -86,7 +86,7 @@ function P() {
                             ? (0, r.jsx)(
                                   l.njP.Item,
                                   {
-                                      className: a()(N.tabBarItem, N.guildTabBarItem),
+                                      className: o()(N.tabBarItem, N.guildTabBarItem),
                                       "aria-label": A.intl.string(A.t.kPHroX),
                                       id: T.NB.GUILD,
                                       children: A.intl.string(A.t.kPHroX),
@@ -96,7 +96,7 @@ function P() {
                             : null,
                     ],
                 }),
-                R === T.NB.GUILD ? (0, r.jsx)(p.Z, { selectedGuild: o }) : (0, r.jsx)(h.Z, {}),
+                R === T.NB.GUILD ? (0, r.jsx)(p.Z, { selectedGuild: a }) : (0, r.jsx)(h.Z, {}),
             ],
         })
     );

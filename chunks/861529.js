@@ -1,15 +1,15 @@
 n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(454585),
     l = n(937889),
     c = n(970184),
     u = n(979372),
     d = n(870456),
-    f = n(709136),
-    p = n(430864);
+    f = n(21092),
+    p = n(960324);
 function _(e) {
     let t = (0, c.CJ)();
     return (0, i.useMemo)(() => {
@@ -29,9 +29,9 @@ function _(e) {
 function m(e) {
     let { content: t, className: n } = e,
         i = _(t),
-        o = (0, u._)();
+        a = (0, u._)();
     return (0, r.jsx)("div", {
-        className: a()(n, p.markup, f.markdownContainer, o.className),
+        className: o()(n, p.markup, f.markdownContainer, a.className),
         children: i,
     });
 }

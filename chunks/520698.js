@@ -1,7 +1,9 @@
 e.exports = {
-    header: "header_d0b769",
-    content: "content_d0b769",
-    icon: "icon_d0b769",
-    divider: "divider_d0b769",
-    iconButton: "iconButton_d0b769",
+    content: "_38377f52a071dad6-content",
+    logo: "_38377f52a071dad6-logo",
+    title: "_38377f52a071dad6-title",
+    description: "_38377f52a071dad6-description",
+    formItem: "_38377f52a071dad6-formItem",
+    footer: "_38377f52a071dad6-footer",
+    buttonWrapper: "_38377f52a071dad6-buttonWrapper",
 };

@@ -13,13 +13,13 @@ var r = n(54381),
     g = n(264783),
     h = n(944486),
     m = n(358085),
-    _ = n(821020),
-    b = n(370774),
-    E = n(128008),
+    b = n(821020),
+    E = n(370774),
+    _ = n(128008),
     O = n(961040),
     v = n(981631),
     y = n(388032),
-    I = n(445202);
+    I = n(12816);
 let C = {
         cozy: 0,
         default: 0,
@@ -37,9 +37,9 @@ let C = {
     };
 function N(e) {
     var t, n;
-    let { onClick: l, selectedOverride: s = !1, popoutProps: o, ref: h, focusSectionProps: _ } = e,
+    let { onClick: l, selectedOverride: s = !1, popoutProps: o, ref: h, focusSectionProps: b } = e,
         [O, v] = i.useState(!1),
-        N = (0, b.D)(),
+        N = (0, E.D)(),
         j = s || N,
         P = s || j,
         {
@@ -52,7 +52,7 @@ function N(e) {
             color: O || P ? d.TVs.colors.ICON_STRONG : d.TVs.colors.ICON_MUTED,
             size: A,
         }),
-        { badge: L, badgeType: R } = (0, E.h6)({ isSelected: j }),
+        { badge: L, badgeType: R } = (0, _.h6)({ isSelected: j }),
         D = (0, m.isDesktop)() && x,
         M = (0, g.A)(),
         k = (0, m.isMac)() ? C[M] : D ? S[M] : T[M];
@@ -99,7 +99,7 @@ function N(e) {
                             innerRef: h,
                             className: a()(I.clickableContainer, { [I.withHoverHighlight]: Z }),
                         },
-                        _,
+                        b,
                         o,
                     )),
                     (n = n =
@@ -156,18 +156,18 @@ function N(e) {
 function j() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = i.useRef(null),
-        { notificationCenterVariant: n } = (0, _.pN)({ location: "NotificationsInboxButton" }),
+        { notificationCenterVariant: n } = (0, b.pN)({ location: "NotificationsInboxButton" }),
         l = (0, o.e7)([h.Z], () => h.Z.getChannelId()),
         a = i.useMemo(() => v.Z5c.CHANNEL(v.STv, null != l ? l : void 0), [l]),
-        c = (0, E.mv)();
-    return n === _.jP.SIDEBAR
+        c = (0, _.mv)();
+    return n === b.jP.SIDEBAR
         ? (0, r.jsx)(N, {
               onClick: () => {
                   c(), (0, s.uL)(a);
               },
               focusSectionProps: e,
           })
-        : n === _.jP.POPOUT
+        : n === b.jP.POPOUT
           ? (0, r.jsx)(O.Z, {
                 targetElementRef: t,
                 popoutPosition: "bottom",

@@ -2,14 +2,14 @@ n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    o = n(906732),
-    a = n(222062),
+    a = n(906732),
+    o = n(222062),
     s = n(867176),
     l = n(654904),
     c = n(486324),
     u = n(671955),
     d = n(388032),
-    f = n(579534);
+    f = n(39425);
 function p(e) {
     let {
             user: t,
@@ -22,10 +22,10 @@ function p(e) {
             disabledInputs: E,
             onUpsellClick: b,
         } = e,
-        { newestAnalyticsLocation: y } = (0, o.ZP)(),
+        { newestAnalyticsLocation: y } = (0, a.ZP)(),
         O = _ || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
         v = O ? i.vdY : i.SrA,
-        S = (0, a.M)(O),
+        S = (0, o.M)(O),
         I = () => {
             if (!O && !S) {
                 null == b || b();

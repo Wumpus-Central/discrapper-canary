@@ -1,8 +1,8 @@
 n.d(t, { Z: () => F }), n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(704215),
     c = n(996146),
@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(981631),
     P = n(921944),
     R = n(388032),
-    w = n(30989),
-    D = n(564355);
+    w = n(124907),
+    D = n(72775);
 function x(e, t, n) {
     return (
         t in e
@@ -106,13 +106,13 @@ function k(e) {
 }
 function U(e) {
     let { Component: t, events: n, play: i } = (0, c.$)(),
-        { tooltipsWithKeybinds: o } = T.n.useConfig({ location: "TrinketsAnimationButton" }),
-        a = () => {
+        { tooltipsWithKeybinds: a } = T.n.useConfig({ location: "TrinketsAnimationButton" }),
+        o = () => {
             var t;
             i(), null == (t = e.onClick) || t.call(e);
         };
     return (0, r.jsx)(u.u, {
-        shouldShow: o,
+        shouldShow: a,
         text: R.intl.string(R.t.Ve9Ge6),
         children: (0, r.jsx)(
             A.Z,
@@ -123,7 +123,7 @@ function U(e) {
                         "aria-label": R.intl.string(R.t.Z1RnTk),
                         isActive: !1,
                         noHover: !0,
-                        onClick: a,
+                        onClick: o,
                     },
                     n,
                 ),
@@ -158,14 +158,14 @@ function U(e) {
 let G = v.Z.Millis.DAYS_30;
 function Z(e) {
     var t;
-    let { giftingPromotionConfig: n, disabled: o, channel: c } = e,
+    let { giftingPromotionConfig: n, disabled: a, channel: c } = e,
         { analyticsLocations: u } = (0, p.ZP)(f.Z.GIFT_BUTTON),
         [d, v] = i.useState(!1),
         T = (0, s.e7)([y.Z], () => !(null === y.Z || void 0 === y.Z ? void 0 : y.Z.hasLayers())),
         A = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
         R = null != A ? S.default.age(A.id) : 0,
         { giftBoxAnimation: D, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
-        L = null != n.firstTimeNotice && !o && T && R >= G,
+        L = null != n.firstTimeNotice && !a && T && R >= G,
         [j, M] = (0, m.XR)(
             L ? l.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, _.t)(l.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
@@ -179,7 +179,7 @@ function Z(e) {
             isGift: !0,
             giftRecipient: B,
         });
-    if (o) return null;
+    if (a) return null;
     let Y = () => {
             H && V && null != B
                 ? (0, E.Z)({
@@ -222,11 +222,11 @@ function Z(e) {
                         onClick: W,
                     })
                   : (0, r.jsx)(C.Z, {
-                        disabled: o,
+                        disabled: a,
                         channel: c,
                     });
     return (0, r.jsx)("div", {
-        className: a()(w.container, { [w.containerHovered]: F }),
+        className: o()(w.container, { [w.containerHovered]: F }),
         onMouseEnter: () => {
             d || v(!0);
         },

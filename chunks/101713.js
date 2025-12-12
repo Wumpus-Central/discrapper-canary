@@ -1,0 +1,15 @@
+e.exports = {
+    channelName: "_7c7a601dfe2157c8-channelName",
+    username: "_7c7a601dfe2157c8-username",
+    kvContainer: "_7c7a601dfe2157c8-kvContainer",
+    item: "_7c7a601dfe2157c8-item",
+    itemValue: "_7c7a601dfe2157c8-itemValue",
+    valueIcon: "_7c7a601dfe2157c8-valueIcon",
+    title: "_7c7a601dfe2157c8-title",
+    divider: "_7c7a601dfe2157c8-divider",
+    graph: "_7c7a601dfe2157c8-graph",
+    videoWrapper: "_7c7a601dfe2157c8-videoWrapper",
+    allowSelection: "_7c7a601dfe2157c8-allowSelection",
+    avatar: "_7c7a601dfe2157c8-avatar",
+    tabBar: "_7c7a601dfe2157c8-tabBar",
+};

@@ -1,0 +1,18 @@
+e.exports = {
+    header: "b1c9f2f24db7d2ca-header",
+    container: "b1c9f2f24db7d2ca-container",
+    rows: "b1c9f2f24db7d2ca-rows",
+    appIcon: "b1c9f2f24db7d2ca-appIcon",
+    row: "b1c9f2f24db7d2ca-row",
+    rowInner: "b1c9f2f24db7d2ca-rowInner",
+    rowDetails: "b1c9f2f24db7d2ca-rowDetails",
+    leftIcon: "b1c9f2f24db7d2ca-leftIcon",
+    rightIcon: "b1c9f2f24db7d2ca-rightIcon",
+    detailsContainer: "b1c9f2f24db7d2ca-detailsContainer",
+    overviewContainerNoVideo: "b1c9f2f24db7d2ca-overviewContainerNoVideo",
+    titleContainer: "b1c9f2f24db7d2ca-titleContainer",
+    partnerLabelContainer: "b1c9f2f24db7d2ca-partnerLabelContainer",
+    descriptionContainer: "b1c9f2f24db7d2ca-descriptionContainer",
+    expandableDescriptionClickable: "b1c9f2f24db7d2ca-expandableDescriptionClickable",
+    overflowHidden: "b1c9f2f24db7d2ca-overflowHidden",
+};

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Z }), n(539854), n(781311);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n(793030),
     c = n(442837),
@@ -26,7 +26,7 @@ var r = n(54381),
     A = n(556638),
     N = n(981631),
     P = n(388032),
-    R = n(80568);
+    R = n(175996);
 function w(e, t, n) {
     return (
         t in e
@@ -95,10 +95,10 @@ function M(e, t) {
 function k(e) {
     let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
         i = [],
-        { descriptiveTextEnabled: o } = (0, y.f)({ location: "StackedActivityStatus" }),
-        { enableTopNavButton: a } = (0, _.Cq)({ location: "StackedActivityStatus" }),
+        { descriptiveTextEnabled: a } = (0, y.f)({ location: "StackedActivityStatus" }),
+        { enableTopNavButton: o } = (0, _.Cq)({ location: "StackedActivityStatus" }),
         s = (0, p.ZP)(r),
-        l = o || a;
+        l = a || o;
     return (
         null != t && i.push(j(t)),
         n.forEach((e) => {
@@ -110,11 +110,11 @@ function k(e) {
     );
 }
 function U(e) {
-    let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: o } = e,
-        s = o - 1;
+    let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
+        s = a - 1;
     return (0, r.jsxs)(l.xvT, {
         variant: t,
-        className: a()(n, R.activityCounter),
+        className: o()(n, R.activityCounter),
         color: i ? "status-positive" : "none",
         children: ["+", s],
     });
@@ -123,7 +123,7 @@ function G(e) {
     let { textVariant: t, className: n } = e;
     return (0, r.jsx)(l.xvT, {
         variant: t,
-        className: a()(R.dot, n),
+        className: o()(R.dot, n),
         children: A.l,
     });
 }
@@ -131,7 +131,7 @@ function Z(e) {
     let {
         user: t,
         activities: n,
-        applicationStream: o,
+        applicationStream: a,
         voiceChannel: l,
         textClassName: p,
         iconClassName: _,
@@ -142,7 +142,7 @@ function Z(e) {
         hideTooltip: x = !1,
     } = e;
     (0, f.Z)(null == t ? void 0 : t.id);
-    let j = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
+    let j = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
         M = (0, m.Cf)(j),
         Z = (0, g.E)("ActivityStatus", l),
         F = i.useMemo(() => {
@@ -288,29 +288,29 @@ function Z(e) {
                 : J && !W
                   ? x
                       ? (0, r.jsxs)("div", {
-                            className: a()(R.activityContainer, $ && R.iconOnly),
+                            className: o()(R.activityContainer, $ && R.iconOnly),
                             children: [et(), er()],
                         })
                       : (0, r.jsx)(u.aML, {
                             "data-migration-pending": !0,
-                            tooltipContentClassName: a()(R.container, R.activitiesTooltip, R.hasMultipleActivities),
+                            tooltipContentClassName: o()(R.container, R.activitiesTooltip, R.hasMultipleActivities),
                             delay: A.X,
                             text: en(),
                             "aria-label": ee,
                             children: (e) =>
                                 (0, r.jsxs)(
                                     "div",
-                                    L(D({ className: a()(R.activityContainer, $ && R.iconOnly) }, e), {
+                                    L(D({ className: o()(R.activityContainer, $ && R.iconOnly) }, e), {
                                         children: [et(!0), er()],
                                     }),
                                 ),
                         })
                   : et(),
-        eo = a()(R.container, {
+        ea = o()(R.container, {
             [R.textXs]: "xs" === y,
             [R.textSm]: "sm" === y,
         }),
-        ea = () =>
+        eo = () =>
             null == F && null == V
                 ? null
                 : (0, r.jsx)(I.Z, {
@@ -321,13 +321,13 @@ function Z(e) {
                       hideTooltip: x,
                       textClassName: p,
                       iconClassName: _,
-                      tooltipClassName: eo,
+                      tooltipClassName: ea,
                       voiceChannel: l,
                       hangStatus: V,
                       userId: null == t ? void 0 : t.id,
                   });
     return (0, r.jsxs)("div", {
-        className: eo,
+        className: ea,
         children: [
             ei(),
             (null != F || null != V) &&
@@ -336,7 +336,7 @@ function Z(e) {
                     textVariant: "text-".concat(y, "/normal"),
                     className: p,
                 }),
-            ea(),
+            eo(),
             P && (0, r.jsx)(v.Z, {}),
         ],
     });

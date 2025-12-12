@@ -1,0 +1,16 @@
+e.exports = {
+    sidebar: "e29cd7b93c4f1266-sidebar",
+    container: "e29cd7b93c4f1266-container",
+    titleContainer: "e29cd7b93c4f1266-titleContainer",
+    titleElevated: "e29cd7b93c4f1266-titleElevated",
+    title: "e29cd7b93c4f1266-title",
+    titleText: "e29cd7b93c4f1266-titleText",
+    addRole: "e29cd7b93c4f1266-addRole",
+    list: "e29cd7b93c4f1266-list",
+    row: "e29cd7b93c4f1266-row",
+    lock: "e29cd7b93c4f1266-lock",
+    dragAfter: "e29cd7b93c4f1266-dragAfter",
+    dragBefore: "e29cd7b93c4f1266-dragBefore",
+    tooltip: "e29cd7b93c4f1266-tooltip",
+    verifiedRoleIcon: "e29cd7b93c4f1266-verifiedRoleIcon",
+};

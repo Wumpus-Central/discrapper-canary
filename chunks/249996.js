@@ -1,20 +1,20 @@
 n.d(t, { Z: () => u });
 var r = n(54381),
     i = n(473749),
-    o = n(657707),
-    a = n(524437),
+    a = n(657707),
+    o = n(524437),
     s = n(481060),
-    l = n(75100);
+    l = n(662778);
 function c(e) {
     let { redactionType: t, label: n } = e,
         c = i.useMemo(() => {
             switch (t) {
-                case a.Q4.BLUR:
-                    return o.XBm;
-                case a.Q4.BLOCK:
-                    return o.t6m;
-                case a.Q4.SHOW:
-                    return o.tEF;
+                case o.Q4.BLUR:
+                    return a.XBm;
+                case o.Q4.BLOCK:
+                    return a.t6m;
+                case o.Q4.SHOW:
+                    return a.tEF;
                 default:
                     return null;
             }

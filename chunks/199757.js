@@ -1,0 +1,16 @@
+e.exports = {
+    animationWrapper: "e8d31f9c1e8d9b86-animationWrapper",
+    clickZone: "e8d31f9c1e8d9b86-clickZone",
+    clickable: "e8d31f9c1e8d9b86-clickable",
+    overflowWrapper: "e8d31f9c1e8d9b86-overflowWrapper",
+    container: "e8d31f9c1e8d9b86-container",
+    iconAndDetails: "e8d31f9c1e8d9b86-iconAndDetails",
+    details: "e8d31f9c1e8d9b86-details",
+    footer: "e8d31f9c1e8d9b86-footer",
+    hint: "e8d31f9c1e8d9b86-hint",
+    dismissButton: "e8d31f9c1e8d9b86-dismissButton",
+    buttonContainer: "e8d31f9c1e8d9b86-buttonContainer",
+    button: "e8d31f9c1e8d9b86-button",
+    avatar: "e8d31f9c1e8d9b86-avatar",
+    icon: "e8d31f9c1e8d9b86-icon",
+};

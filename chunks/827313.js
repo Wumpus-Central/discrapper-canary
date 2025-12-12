@@ -2,14 +2,14 @@ n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(681715),
+    a = n.n(i),
+    o = n(681715),
     s = n(481060),
     l = n(785717),
     c = n(531301),
     u = n(228168),
     d = n(388032),
-    f = n(925568);
+    f = n(42959);
 function p(e) {
     let { userId: t, isVisible: n, onOpenProfile: i } = e,
         { note: p } = (0, c.Z)(t),
@@ -21,13 +21,13 @@ function p(e) {
         b = () => {
             E({ action: "PRESS_ADD_NOTE" }), null == i || i({ subsection: u.Tb.NOTE });
         };
-    return (0, r.jsx)(a.u, {
+    return (0, r.jsx)(o.u, {
         asContainer: !0,
         text: g,
         children: (0, r.jsx)(s.P3F, {
             "aria-label": h,
             onClick: b,
-            className: o()(f.button, n && f.visible),
+            className: a()(f.button, n && f.visible),
             children: (0, r.jsx)(m, {
                 size: "xs",
                 color: "currentColor",

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
-var r = n(54381);
+var a = n(54381);
 n(473749);
-var i = n(120356),
-    a = n.n(i),
+var r = n(120356),
+    i = n.n(r),
     l = n(780384),
     s = n(481060),
     o = n(794295),
@@ -10,26 +10,26 @@ var i = n(120356),
     d = n(726542),
     u = n(881294),
     p = n(388032),
-    m = n(84933);
+    m = n(442245);
 function h(e) {
     var t, n;
-    let { application: i, className: l, innerClassName: o } = e,
-        c = null != (n = null == (t = i.directory_entry) ? void 0 : t.external_urls) ? n : [];
-    return null != i.terms_of_service_url || null != i.privacy_policy_url || c.length > 0
-        ? (0, r.jsxs)("div", {
-              className: a()(m.container, l),
+    let { application: r, className: l, innerClassName: o } = e,
+        c = null != (n = null == (t = r.directory_entry) ? void 0 : t.external_urls) ? n : [];
+    return null != r.terms_of_service_url || null != r.privacy_policy_url || c.length > 0
+        ? (0, a.jsxs)("div", {
+              className: i()(m.container, l),
               children: [
-                  (0, r.jsx)(s.Heading, {
+                  (0, a.jsx)(s.Heading, {
                       variant: "heading-sm/semibold",
                       color: "text-strong",
                       children: p.intl.string(p.t.l6DP2n),
                   }),
-                  (0, r.jsxs)("div", {
-                      className: a()(m.list, o),
+                  (0, a.jsxs)("div", {
+                      className: i()(m.list, o),
                       children: [
                           c.map((e, t) =>
-                              (0, r.jsx)(
-                                  g,
+                              (0, a.jsx)(
+                                  f,
                                   {
                                       url: e.url,
                                       children: e.name,
@@ -37,17 +37,17 @@ function h(e) {
                                   t,
                               ),
                           ),
-                          null != i.terms_of_service_url
-                              ? (0, r.jsx)(f, {
+                          null != r.terms_of_service_url
+                              ? (0, a.jsx)(g, {
                                     icon: s.aAW,
-                                    url: i.terms_of_service_url,
+                                    url: r.terms_of_service_url,
                                     children: p.intl.string(p.t.s7STcY),
                                 })
                               : null,
-                          null != i.privacy_policy_url
-                              ? (0, r.jsx)(f, {
+                          null != r.privacy_policy_url
+                              ? (0, a.jsx)(g, {
                                     icon: s.mBM,
-                                    url: i.privacy_policy_url,
+                                    url: r.privacy_policy_url,
                                     children: p.intl.string(p.t.kH3JR5),
                                 })
                               : null,
@@ -57,11 +57,11 @@ function h(e) {
           })
         : null;
 }
-function g(e) {
+function f(e) {
     var t, n;
-    let { url: i, children: a } = e,
+    let { url: r, children: i } = e,
         o = (0, c.ZP)(),
-        u = d.Z.getByUrl(i),
+        u = d.Z.getByUrl(r),
         p = (0, l.wj)(o)
             ? null == u || null == (t = u.icon)
                 ? void 0
@@ -69,35 +69,35 @@ function g(e) {
             : null == u || null == (n = u.icon)
               ? void 0
               : n.lightSVG;
-    return (0, r.jsx)(f, {
+    return (0, a.jsx)(g, {
         icon: void 0 === p ? s.xPt : void 0,
         imageSrc: p,
-        url: i,
-        children: a,
+        url: r,
+        children: i,
     });
 }
-function f(e) {
-    let { icon: t, imageSrc: n, iconColor: i, url: l, children: c } = e,
+function g(e) {
+    let { icon: t, imageSrc: n, iconColor: r, url: l, children: c } = e,
         d = (0, u.nu)(),
         p = null;
     null != t
-        ? (p = (0, r.jsx)(t, {
+        ? (p = (0, a.jsx)(t, {
               className: m.listIcon,
-              color: null != i ? i : "currentColor",
+              color: null != r ? r : "currentColor",
               width: 20,
               height: 20,
               size: "custom",
           }))
         : null != n &&
-          (p = (0, r.jsx)("img", {
+          (p = (0, a.jsx)("img", {
               className: m.listImage,
               src: n,
               alt: "",
           }));
-    let h = (0, r.jsxs)(r.Fragment, {
+    let h = (0, a.jsxs)(a.Fragment, {
         children: [
             p,
-            (0, r.jsx)(s.Text, {
+            (0, a.jsx)(s.Text, {
                 className: m.listText,
                 variant: "text-sm/medium",
                 selectable: !0,
@@ -105,9 +105,9 @@ function f(e) {
             }),
         ],
     });
-    return (0, r.jsx)(o.Z, {
+    return (0, a.jsx)(o.Z, {
         href: l,
-        className: a()(m.listItem, m.linkItem),
+        className: i()(m.listItem, m.linkItem),
         trusted: !d,
         useDefaultUnderlineStyles: !1,
         children: h,

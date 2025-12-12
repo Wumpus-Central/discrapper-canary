@@ -2,15 +2,15 @@ n.d(t, { Z: () => j }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(481060),
-    s = n(596454),
-    a = n(318766),
+    a = n(596454),
+    s = n(318766),
     o = n(907040),
     c = n(176354),
-    u = n(434404),
-    d = n(185923),
+    d = n(434404),
+    u = n(185923),
     g = n(388032),
-    m = n(83552);
-function p(e) {
+    f = n(857413);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,18 +35,18 @@ function p(e) {
     }
     return e;
 }
-let f = { label: "" };
-function h(e) {
-    let { emoji: t, disabled: n, handleSelectEmoji: u } = e,
+let b = { label: "" };
+function p(e) {
+    let { emoji: t, disabled: n, handleSelectEmoji: d } = e,
         g = i.useRef(null),
-        m = i.useMemo(
+        f = i.useMemo(
             () =>
                 null == t || null == t.name
                     ? null
                     : function () {
                           var e;
                           let n = c.ZP.isCustomEmoji(t) ? t.name : t.surrogates;
-                          return (0, r.jsx)(s.Z, {
+                          return (0, r.jsx)(a.Z, {
                               animated: null != (e = t.animated) && e,
                               emojiId: t.id,
                               emojiName: n,
@@ -55,10 +55,10 @@ function h(e) {
             [t],
         );
     return n
-        ? (0, r.jsx)(a.Z, {
+        ? (0, r.jsx)(s.Z, {
               tabIndex: -1,
               active: !1,
-              renderButtonContents: m,
+              renderButtonContents: f,
           })
         : (0, r.jsx)(l.yRy, {
               targetElementRef: g,
@@ -67,22 +67,22 @@ function h(e) {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(o.Z, {
                       closePopout: t,
-                      onSelectEmoji: u(t),
-                      pickerIntention: d.Hz.GUILD_PROFILE,
+                      onSelectEmoji: d(t),
+                      pickerIntention: u.Hz.GUILD_PROFILE,
                   });
               },
               children: (e, t) => {
                   var n, i;
                   let { isShown: l } = t;
                   return (0, r.jsx)(
-                      a.Z,
-                      ((n = p({}, e)),
+                      s.Z,
+                      ((n = m({}, e)),
                       (i = i =
                           {
                               ref: g,
                               tabIndex: 0,
                               active: l,
-                              renderButtonContents: m,
+                              renderButtonContents: f,
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -101,74 +101,74 @@ function h(e) {
               },
           });
 }
-function x(e) {
-    let { guildId: t, trait: n, index: s, onTraitUpdate: a, disabled: o } = e,
+function h(e) {
+    let { guildId: t, trait: n, index: a, onTraitUpdate: s, disabled: o } = e,
         c = i.useCallback(() => {
-            a(t, s, {
+            s(t, a, {
                 emoji: void 0,
                 label: "",
             });
-        }, [t, s, a]),
-        u = i.useCallback(
+        }, [t, a, s]),
+        d = i.useCallback(
             (e) => (n) => {
                 let { emoji: r, willClose: i } = n;
-                a(t, s, { emoji: null != r ? r : void 0 }), i && e();
+                s(t, a, { emoji: null != r ? r : void 0 }), i && e();
             },
-            [t, s, a],
+            [t, a, s],
         ),
-        d = i.useCallback(
+        u = i.useCallback(
             (e) => {
-                a(t, s, { label: e });
+                s(t, a, { label: e });
             },
-            [t, s, a],
+            [t, a, s],
         ),
         g = i.useMemo(() => n.emoji, [n.emoji]),
-        p = (null != n.label && n.label.length > 0) || null != n.emoji;
+        m = (null != n.label && n.label.length > 0) || null != n.emoji;
     return (0, r.jsx)("div", {
-        className: m.traitWrapper,
+        className: f.traitWrapper,
         children: (0, r.jsx)(l.oil, {
             disabled: o,
             value: n.label,
-            onChange: d,
+            onChange: u,
             maxLength: 24,
             leading: {
                 type: "emoji",
-                button: (0, r.jsx)(h, {
+                button: (0, r.jsx)(p, {
                     emoji: g,
                     disabled: o,
-                    handleSelectEmoji: u,
+                    handleSelectEmoji: d,
                 }),
             },
-            clearable: { show: p },
+            clearable: { show: m },
             onClear: c,
         }),
     });
 }
-let b = [0, 1, 2, 3, 4];
+let x = [0, 1, 2, 3, 4];
 function j(e) {
     let { profile: t, canManageGuild: n } = e,
-        s = i.useMemo(() => t.traits, [t]),
-        a = i.useCallback(
+        a = i.useMemo(() => t.traits, [t]),
+        s = i.useCallback(
             (e, t, n) => {
-                let r = [...s];
-                (r[t] = p({}, s[t], n)), u.Z.updateGuildProfile(e, { traits: r });
+                let r = [...a];
+                (r[t] = m({}, a[t], n)), d.Z.updateGuildProfile(e, { traits: r });
             },
-            [s],
+            [a],
         );
     return (0, r.jsx)(l.gNt, {
         label: g.intl.string(g.t.S6JNrh),
         description: g.intl.string(g.t.l7Ig5Z),
         children: (0, r.jsx)("div", {
-            className: m.grid,
-            children: b.map((e) => {
+            className: f.grid,
+            children: x.map((e) => {
                 var i;
                 return (0, r.jsx)(
-                    x,
+                    h,
                     {
                         guildId: t.id,
-                        trait: null != (i = s[e]) ? i : f,
+                        trait: null != (i = a[e]) ? i : b,
                         index: e,
-                        onTraitUpdate: a,
+                        onTraitUpdate: s,
                         disabled: !n,
                     },
                     "trait-".concat(e),

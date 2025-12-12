@@ -3,22 +3,22 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(322665),
-    s = n(484474),
+    s = n(17845),
     o = n(374939),
     c = n(283293),
     u = n(726115),
     d = n(294330),
     p = n(981631),
-    f = n(663448);
+    f = n(423337);
 let g = {
     page: p.ZY5.GUILD_DISCOVERY,
     object: p.qAy.CARD,
     section: p.jXE.DISCOVER_POPULAR,
 };
 function h(e) {
-    let { tab: t, guildIds: n, loading: p, onScroll: h, onGuildCardClick: m, onGuildCardSeen: _ } = e,
-        b = (0, u.Mf)(t),
-        E = (0, u.a$)(t),
+    let { tab: t, guildIds: n, loading: p, onScroll: h, onGuildCardClick: m, onGuildCardSeen: b } = e,
+        E = (0, u.Mf)(t),
+        _ = (0, u.a$)(t),
         O = (0, u.QW)(t),
         v = (0, u.lg)(t),
         y = i.useMemo(() => {
@@ -33,20 +33,20 @@ function h(e) {
                             guildId: null != (i = n[a]) ? i : null,
                             index: a,
                             onClick: (e) => m(e, a, v, g),
-                            onView: (e) => _(e, v),
+                            onView: (e) => b(e, v),
                         },
                         null != (l = n[a]) ? l : a,
                     ),
                 );
             }
             return t;
-        }, [v, n, p, m, _]);
+        }, [v, n, p, m, b]);
     return (0, r.jsxs)(c.Z, {
         onScroll: h,
         children: [
             (0, r.jsx)(s.Z, {
-                title: b,
-                description: E,
+                title: E,
+                description: _,
                 children: (0, r.jsx)(a.Z, {}),
             }),
             (0, r.jsxs)(o.Z, {

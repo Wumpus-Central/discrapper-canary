@@ -1,0 +1,15 @@
+e.exports = {
+    wrapper: "_1505aa5f003f302a-wrapper",
+    videoContainer: "_1505aa5f003f302a-videoContainer",
+    zoomed: "_1505aa5f003f302a-zoomed",
+    zoomEnabled: "_1505aa5f003f302a-zoomEnabled",
+    zoomDragging: "_1505aa5f003f302a-zoomDragging",
+    minimap: "_1505aa5f003f302a-minimap",
+    minimapVideo: "_1505aa5f003f302a-minimapVideo",
+    minimapIndicator: "_1505aa5f003f302a-minimapIndicator",
+    zoomControlsContainer: "_1505aa5f003f302a-zoomControlsContainer",
+    idle: "_1505aa5f003f302a-idle",
+    zoomControls: "_1505aa5f003f302a-zoomControls",
+    zoomControlsWithChildren: "_1505aa5f003f302a-zoomControlsWithChildren",
+    zoomControlsRow: "_1505aa5f003f302a-zoomControlsRow",
+};

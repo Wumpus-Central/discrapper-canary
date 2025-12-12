@@ -1,10 +1,10 @@
 n.d(t, { E: () => p });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(692547),
-    l = n(602066);
+    l = n(19102);
 function c(e, t, n) {
     return (
         t in e
@@ -42,26 +42,26 @@ function p(e) {
     let t,
         {
             className: n,
-            percent: o,
+            percent: a,
             size: c = "small",
             foregroundColor: d = s.Z.unsafe_rawColors.BRAND_500.css,
             backgroundColor: p = "var(--interactive-background-active)",
             foregroundGradientColor: _,
             animate: m = !0,
         } = e,
-        h = null != o ? o : 0;
+        h = null != a ? a : 0;
     return (
         (t =
             null != _
                 ? { background: "linear-gradient(to right, ".concat(_[0], ", ").concat(_[1], ")") }
                 : { backgroundColor: d }),
         (0, r.jsx)("div", {
-            className: a()(n, l.progress, l[c]),
+            className: o()(n, l.progress, l[c]),
             style: { backgroundColor: p },
             children:
                 h !== f && "number" == typeof h
                     ? (0, r.jsx)("div", {
-                          className: a()(l.progressBar, l[c], { [l.animating]: m }),
+                          className: o()(l.progressBar, l[c], { [l.animating]: m }),
                           style: u(
                               { transform: "translate3d(".concat(Math.min(Math.max(0, h), 100) - 100, "%, 0, 0)") },
                               t,
@@ -70,11 +70,11 @@ function p(e) {
                     : (0, r.jsxs)(i.Fragment, {
                           children: [
                               (0, r.jsx)("div", {
-                                  className: a()(l.indeterminateBar1, l[c], { [l.animating]: m }),
+                                  className: o()(l.indeterminateBar1, l[c], { [l.animating]: m }),
                                   style: t,
                               }),
                               (0, r.jsx)("div", {
-                                  className: a()(l.indeterminateBar2, l[c], { [l.animating]: m }),
+                                  className: o()(l.indeterminateBar2, l[c], { [l.animating]: m }),
                                   style: t,
                               }),
                           ],

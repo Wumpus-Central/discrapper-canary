@@ -2,11 +2,11 @@ n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(793030),
+    a = n.n(i),
+    o = n(793030),
     s = n(194983),
     l = n(556638),
-    c = n(80568);
+    c = n(175996);
 function u(e, t, n) {
     return (
         t in e
@@ -65,9 +65,9 @@ function _(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,21 +76,21 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
     var { children: t, className: n, variant: i = "text-xs/medium", hideTooltip: u = !1, canTruncate: f = !0 } = e,
         m = _(e, ["children", "className", "variant", "hideTooltip", "canTruncate"]);
     return (0, r.jsx)(
-        a.xvT,
+        o.xvT,
         p(
             d(
                 {
                     variant: i,
                     color: "none",
-                    className: o()(f && c.truncated, n),
+                    className: a()(f && c.truncated, n),
                 },
                 m,
             ),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => w });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(755721),
     c = n(481060),
@@ -22,15 +22,15 @@ var r = n(54381),
     S = n(638631),
     I = n(869783),
     T = n(388032),
-    C = n(876544),
-    A = n(181960),
-    N = n(313199),
-    P = n(821969);
+    C = n(904256),
+    A = n(678393),
+    N = n(77874),
+    P = n(36426);
 let R = (e, t) => {
         let {
                 className: n,
                 buttonClassName: i,
-                subscriptionTier: o,
+                subscriptionTier: a,
                 isDarkMode: R,
                 isEligibleForBogoPromotion: w,
                 videoRef: D,
@@ -49,7 +49,7 @@ let R = (e, t) => {
         return (0, r.jsx)(f.Gt, {
             value: x,
             children: (0, r.jsxs)("div", {
-                className: a()(C.container, C.heroHeadingContainer, n),
+                className: o()(C.container, C.heroHeadingContainer, n),
                 ref: t,
                 "data-testid": "marketing-page-hero-header",
                 children: [
@@ -78,18 +78,18 @@ let R = (e, t) => {
                                       }),
                                 L
                                     ? (0, r.jsx)("div", {
-                                          className: a()(C.buttonContainer, C.marketingPageCTAContainer, {
+                                          className: o()(C.buttonContainer, C.marketingPageCTAContainer, {
                                               [C.marketingPageCTAMargin]: !(Z || U),
                                           }),
                                           children: (0, r.jsx)(b.Z, {
-                                              className: a()(C.button, i),
+                                              className: o()(C.button, i),
                                               color: G,
                                           }),
                                       })
                                     : (0, r.jsx)(v.PK, {
-                                          subscriptionTier: o,
+                                          subscriptionTier: a,
                                           inOfferExperience: j,
-                                          containerClassName: a()(C.marketingPageCTAContainer, {
+                                          containerClassName: o()(C.marketingPageCTAContainer, {
                                               [C.marketingPageCTAMargin]: !(Z || U),
                                           }),
                                           buttonClassName: i,

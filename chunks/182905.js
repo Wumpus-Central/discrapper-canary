@@ -7,7 +7,7 @@ var l = n(120356),
     s = n(755721),
     o = n(481060),
     c = n(600164),
-    d = n(69165);
+    d = n(738242);
 let u = (e) => {
     let { className: t, icon: n, noticeText: l, buttonText: u, onClick: h, canSync: g } = e;
     return (0, i.jsx)(o.Zbd, {

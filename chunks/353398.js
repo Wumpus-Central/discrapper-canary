@@ -1,6 +1,6 @@
 n.d(t, {
     Q5: () => T,
-    Sf: () => S,
+    Sf: () => _,
     ZP: () => w,
 }),
     n(781311),
@@ -9,27 +9,27 @@ n.d(t, {
 var r,
     i = n(54381),
     l = n(473749),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    s = n.n(a),
     o = n(512722),
     c = n.n(o),
-    u = n(442837),
-    d = n(692547),
+    d = n(442837),
+    u = n(692547),
     g = n(796027),
-    m = n(755721),
-    p = n(481060),
-    f = n(570140),
-    h = n(484614),
-    x = n(881052),
-    b = n(751189),
+    f = n(755721),
+    m = n(481060),
+    b = n(570140),
+    p = n(484614),
+    h = n(881052),
+    x = n(751189),
     j = n(409059),
-    _ = n(518936),
-    v = n(999382),
-    O = n(260539),
-    C = n(388032),
-    y = n(86477),
-    N = n(197571);
-function E(e, t, n) {
+    v = n(518936),
+    O = n(999382),
+    C = n(260539),
+    y = n(388032),
+    N = n(865062),
+    E = n(478411);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,15 +42,15 @@ function E(e, t, n) {
         e
     );
 }
-class I extends (r = u.ZP.Store) {
+class S extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(v.Z, j.Z);
+        this.waitFor(O.Z, j.Z);
     }
     getTemplate() {
-        let e = v.Z.getProps().guild;
+        let e = O.Z.getProps().guild;
         if (null == e) return null;
         let t = j.Z.getForGuild(e.id);
-        return null != t && t.state !== O.Rj.RESOLVING ? t : null;
+        return null != t && t.state !== C.Rj.RESOLVING ? t : null;
     }
     showNotice() {
         let e = this.getTemplate();
@@ -60,10 +60,10 @@ class I extends (r = u.ZP.Store) {
     }
     constructor(...e) {
         super(...e),
-            E(this, "name", ""),
-            E(this, "description", ""),
-            E(this, "error", null),
-            E(this, "reset", () => {
+            I(this, "name", ""),
+            I(this, "description", ""),
+            I(this, "error", null),
+            I(this, "reset", () => {
                 let e = this.getTemplate();
                 if (null != e) {
                     var t, n;
@@ -72,18 +72,18 @@ class I extends (r = u.ZP.Store) {
                 } else (this.name = ""), (this.description = "");
                 this.emitChange();
             }),
-            E(this, "setName", (e) => {
+            I(this, "setName", (e) => {
                 (this.name = e), this.emitChange();
             }),
-            E(this, "setDescription", (e) => {
+            I(this, "setDescription", (e) => {
                 (this.description = e), this.emitChange();
             }),
-            E(this, "setError", (e) => {
+            I(this, "setError", (e) => {
                 (this.error = e), this.emitChange();
             }),
-            E(this, "save", async () => {
-                await b.Z.updateGuildTemplate(
-                    v.Z.getProps().guild.id,
+            I(this, "save", async () => {
+                await x.Z.updateGuildTemplate(
+                    O.Z.getProps().guild.id,
                     this.getTemplate().code,
                     this.name,
                     this.description,
@@ -92,18 +92,18 @@ class I extends (r = u.ZP.Store) {
             });
     }
 }
-E(I, "displayName", "GuildSettingsTemplateMetadataStore_");
-let S = new I(f.Z);
+I(S, "displayName", "GuildSettingsTemplateMetadataStore_");
+let _ = new S(b.Z);
 function T() {
     let [e, t] = l.useState(!1),
         n = async () => {
-            t(!0), await S.save(), t(!1);
+            t(!0), await _.save(), t(!1);
         };
     return (0, i.jsx)(g.Z, {
         submitting: e,
-        onReset: S.reset,
+        onReset: _.reset,
         onSave: n,
-        disabled: !P(S.name),
+        disabled: !P(_.name),
     });
 }
 function P(e) {
@@ -111,87 +111,87 @@ function P(e) {
 }
 function w() {
     return (0, i.jsx)("div", {
-        className: N.marginBottom4,
-        children: (0, i.jsxs)(p.y5t, {
-            component: (0, i.jsx)(p.Heading, {
+        className: E.marginBottom4,
+        children: (0, i.jsxs)(m.y5t, {
+            component: (0, i.jsx)(m.Heading, {
                 variant: "heading-lg/semibold",
-                children: C.intl.string(C.t.KUw7Ss),
+                children: y.intl.string(y.t.KUw7Ss),
             }),
             children: [
-                (0, i.jsx)(p.Text, {
-                    className: N.marginBottom20,
+                (0, i.jsx)(m.Text, {
+                    className: E.marginBottom20,
                     variant: "text-sm/normal",
-                    children: C.intl.format(C.t.c0m8bK, {}),
+                    children: y.intl.format(y.t.c0m8bK, {}),
                 }),
                 (0, i.jsx)(R, {}),
-                (0, i.jsx)(p.izJ, { className: y.divider }),
+                (0, i.jsx)(m.izJ, { className: N.divider }),
                 (0, i.jsx)(Z, {}),
             ],
         }),
     });
 }
 function Z() {
-    let { guild: e } = v.Z.getProps();
+    let { guild: e } = O.Z.getProps();
     c()(null != e, "guild cannot be null");
-    let t = (0, u.e7)([S], () => S.error),
+    let t = (0, d.e7)([_], () => _.error),
         [n, r] = l.useState(!0),
-        { loading: s, guildTemplate: a } = (function (e) {
+        { loading: a, guildTemplate: s } = (function (e) {
             let [t, n] = l.useState(!0);
             return (
                 l.useEffect(() => {
                     !(async function () {
                         n(!0);
                         try {
-                            await b.Z.loadTemplatesForGuild(e), n(!1);
+                            await x.Z.loadTemplatesForGuild(e), n(!1);
                         } catch (e) {
-                            S.setError(new x.Hx(e));
+                            _.setError(new h.Hx(e));
                         }
                     })();
                 }, [e]),
                 {
                     loading: t,
-                    guildTemplate: (0, u.e7)([j.Z], () => j.Z.getForGuild(e), [e]),
+                    guildTemplate: (0, d.e7)([j.Z], () => j.Z.getForGuild(e), [e]),
                 }
             );
         })(e.id);
     if (
         (l.useEffect(() => {
-            if (n && !s) {
-                if (null != a) {
+            if (n && !a) {
+                if (null != s) {
                     var e, t;
-                    S.setName(null != (e = a.name) ? e : ""), S.setDescription(null != (t = a.description) ? t : "");
+                    _.setName(null != (e = s.name) ? e : ""), _.setDescription(null != (t = s.description) ? t : "");
                 }
                 r(!1);
             }
-        }, [n, a, s]),
+        }, [n, s, a]),
         l.useEffect(
             () => () => {
-                S.reset(), S.setError(null);
+                _.reset(), _.setError(null);
             },
             [],
         ),
         n)
     )
         return null != t
-            ? (0, i.jsx)(p.Text, {
+            ? (0, i.jsx)(m.Text, {
                   color: "text-feedback-critical",
                   variant: "text-sm/normal",
                   children: t.message,
               })
-            : (0, i.jsx)(p.$jN, { className: N.marginTop40 });
+            : (0, i.jsx)(m.$jN, { className: E.marginTop40 });
     let o =
         null != t && null == t.getFirstFieldErrorMessage("name") && null == t.getFirstFieldErrorMessage("description");
-    return (0, i.jsxs)(p.Kqy, {
+    return (0, i.jsxs)(m.Kqy, {
         gap: 20,
         children: [
             (0, i.jsx)(A, {}),
             (0, i.jsx)(L, {
                 guild: e,
-                guildTemplate: a,
+                guildTemplate: s,
             }),
             o
-                ? (0, i.jsx)(p.Text, {
-                      className: N.marginTop8,
+                ? (0, i.jsx)(m.Text, {
+                      className: E.marginTop8,
                       color: "text-feedback-critical",
                       variant: "text-sm/normal",
                       children: t.getAnyErrorMessage(),
@@ -202,94 +202,94 @@ function Z() {
 }
 function R() {
     return (0, i.jsxs)("div", {
-        className: y.descriptionBox,
+        className: N.descriptionBox,
         children: [
             (0, i.jsxs)("div", {
-                className: y.descriptionSection,
+                className: N.descriptionSection,
                 children: [
-                    (0, i.jsx)(p.Heading, {
+                    (0, i.jsx)(m.Heading, {
                         variant: "eyebrow",
-                        children: C.intl.string(C.t["f8u+VO"]),
+                        children: y.intl.string(y.t["f8u+VO"]),
                     }),
                     (0, i.jsxs)("div", {
-                        className: y.descriptionRow,
+                        className: N.descriptionRow,
                         children: [
-                            (0, i.jsx)(p.owK, {
+                            (0, i.jsx)(m.owK, {
                                 size: "md",
-                                className: y.descriptionIcon,
-                                color: d.Z.unsafe_rawColors.GREEN_360.css,
-                                secondaryColor: d.Z.unsafe_rawColors.WHITE_500.css,
+                                className: N.descriptionIcon,
+                                color: u.Z.unsafe_rawColors.GREEN_360.css,
+                                secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            C.intl.string(C.t.K2tn16),
+                            y.intl.string(y.t.K2tn16),
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: y.descriptionRow,
+                        className: N.descriptionRow,
                         children: [
-                            (0, i.jsx)(p.owK, {
+                            (0, i.jsx)(m.owK, {
                                 size: "md",
-                                className: y.descriptionIcon,
-                                color: d.Z.unsafe_rawColors.GREEN_360.css,
-                                secondaryColor: d.Z.unsafe_rawColors.WHITE_500.css,
+                                className: N.descriptionIcon,
+                                color: u.Z.unsafe_rawColors.GREEN_360.css,
+                                secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            C.intl.string(C.t.om5gNq),
+                            y.intl.string(y.t.om5gNq),
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: y.descriptionRow,
+                        className: N.descriptionRow,
                         children: [
-                            (0, i.jsx)(p.owK, {
+                            (0, i.jsx)(m.owK, {
                                 size: "md",
-                                className: y.descriptionIcon,
-                                color: d.Z.unsafe_rawColors.GREEN_360.css,
-                                secondaryColor: d.Z.unsafe_rawColors.WHITE_500.css,
+                                className: N.descriptionIcon,
+                                color: u.Z.unsafe_rawColors.GREEN_360.css,
+                                secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            C.intl.string(C.t["/VNqdD"]),
+                            y.intl.string(y.t["/VNqdD"]),
                         ],
                     }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: y.descriptionSection,
+                className: N.descriptionSection,
                 children: [
-                    (0, i.jsx)(p.Heading, {
+                    (0, i.jsx)(m.Heading, {
                         variant: "eyebrow",
-                        children: C.intl.string(C.t["8zhJEr"]),
+                        children: y.intl.string(y.t["8zhJEr"]),
                     }),
                     (0, i.jsxs)("div", {
-                        className: y.descriptionRow,
+                        className: N.descriptionRow,
                         children: [
-                            (0, i.jsx)(p.k$p, {
+                            (0, i.jsx)(m.k$p, {
                                 size: "md",
-                                className: y.descriptionIcon,
-                                color: d.Z.unsafe_rawColors.RED_400.css,
-                                secondaryColor: d.Z.unsafe_rawColors.WHITE_500.css,
+                                className: N.descriptionIcon,
+                                color: u.Z.unsafe_rawColors.RED_400.css,
+                                secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            C.intl.string(C.t.WOKI6t),
+                            y.intl.string(y.t.WOKI6t),
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: y.descriptionRow,
+                        className: N.descriptionRow,
                         children: [
-                            (0, i.jsx)(p.k$p, {
+                            (0, i.jsx)(m.k$p, {
                                 size: "md",
-                                className: y.descriptionIcon,
-                                color: d.Z.unsafe_rawColors.RED_400.css,
-                                secondaryColor: d.Z.unsafe_rawColors.WHITE_500.css,
+                                className: N.descriptionIcon,
+                                color: u.Z.unsafe_rawColors.RED_400.css,
+                                secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            C.intl.string(C.t.ddhDJH),
+                            y.intl.string(y.t.ddhDJH),
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: y.descriptionRow,
+                        className: N.descriptionRow,
                         children: [
-                            (0, i.jsx)(p.k$p, {
+                            (0, i.jsx)(m.k$p, {
                                 size: "md",
-                                className: y.descriptionIcon,
-                                color: d.Z.unsafe_rawColors.RED_400.css,
-                                secondaryColor: d.Z.unsafe_rawColors.WHITE_500.css,
+                                className: N.descriptionIcon,
+                                color: u.Z.unsafe_rawColors.RED_400.css,
+                                secondaryColor: u.Z.unsafe_rawColors.WHITE_500.css,
                             }),
-                            C.intl.string(C.t["6Q/DHk"]),
+                            y.intl.string(y.t["6Q/DHk"]),
                         ],
                     }),
                 ],
@@ -299,54 +299,54 @@ function R() {
 }
 function D(e) {
     let { cancel: t, confirm: n } = e;
-    return (0, i.jsx)(p.SR, {
+    return (0, i.jsx)(m.SR, {
         dismissable: !0,
-        header: C.intl.string(C.t["cN/RFD"]),
-        confirmText: C.intl.string(C.t["cN/RFD"]),
-        cancelText: C.intl.string(C.t["ETE/oC"]),
+        header: y.intl.string(y.t["cN/RFD"]),
+        confirmText: y.intl.string(y.t["cN/RFD"]),
+        cancelText: y.intl.string(y.t["ETE/oC"]),
         onCancel: t,
         onConfirm: n,
-        children: (0, i.jsx)(p.Text, {
+        children: (0, i.jsx)(m.Text, {
             variant: "text-md/normal",
             color: "text-default",
-            children: C.intl.string(C.t["apCQv/"]),
+            children: y.intl.string(y.t["apCQv/"]),
         }),
     });
 }
 function A() {
-    let e = (0, u.e7)([S], () => S.name),
-        t = (0, u.e7)([S], () => S.description),
-        n = (0, u.e7)([S], () => S.error),
-        [r, s] = l.useState(!1),
-        a = l.useCallback(() => {
-            s(!1);
+    let e = (0, d.e7)([_], () => _.name),
+        t = (0, d.e7)([_], () => _.description),
+        n = (0, d.e7)([_], () => _.error),
+        [r, a] = l.useState(!1),
+        s = l.useCallback(() => {
+            a(!1);
         }, []),
         o = l.useCallback(() => {
-            s(!0);
+            a(!0);
         }, []),
         c = l.useMemo(() => {
-            if (!(r || e.length < 1 || P(e))) return C.intl.string(C.t.IHAlh1);
+            if (!(r || e.length < 1 || P(e))) return y.intl.string(y.t.IHAlh1);
         }, [e, r]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(p.oil, {
-                label: C.intl.string(C.t.z1a9R1),
+            (0, i.jsx)(m.oil, {
+                label: y.intl.string(y.t.z1a9R1),
                 required: !0,
                 error: null != c ? c : null == n ? void 0 : n.getFirstFieldErrorMessage("name"),
                 value: e,
-                onChange: (e) => S.setName(e),
-                placeholder: C.intl.string(C.t.bMlpvk),
+                onChange: (e) => _.setName(e),
+                placeholder: y.intl.string(y.t.bMlpvk),
                 maxLength: 100,
-                onBlur: a,
+                onBlur: s,
                 onFocus: o,
                 autoFocus: !0,
             }),
-            (0, i.jsx)(p.Kx8, {
-                label: C.intl.string(C.t.GxirWa),
+            (0, i.jsx)(m.Kx8, {
+                label: y.intl.string(y.t.GxirWa),
                 error: null == n ? void 0 : n.getFirstFieldErrorMessage("description"),
                 value: t,
-                onChange: (e) => S.setDescription(e),
-                placeholder: C.intl.string(C.t.n1FBXh),
+                onChange: (e) => _.setDescription(e),
+                placeholder: y.intl.string(y.t.n1FBXh),
                 maxLength: 120,
             }),
         ],
@@ -358,23 +358,23 @@ function L(e) {
         ? (0, i.jsx)(k, { guild: t })
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(p.gNt, {
-                      label: C.intl.string(C.t.zGGcLw),
-                      children: (0, i.jsx)(h.Z, {
-                          buttonLook: m.zx.Looks.FILLED,
-                          buttonColor: m.zx.Colors.BRAND,
-                          value: (0, _.Z)(n.code),
+                  (0, i.jsx)(m.gNt, {
+                      label: y.intl.string(y.t.zGGcLw),
+                      children: (0, i.jsx)(p.Z, {
+                          buttonLook: f.zx.Looks.FILLED,
+                          buttonColor: f.zx.Colors.BRAND,
+                          value: (0, v.Z)(n.code),
                       }),
                   }),
                   n.isDirty &&
-                      (0, i.jsx)(p.Text, {
+                      (0, i.jsx)(m.Text, {
                           color: "text-feedback-warning",
-                          className: N.marginTop8,
+                          className: E.marginTop8,
                           variant: "text-sm/normal",
-                          children: C.intl.string(C.t.aWsjtD),
+                          children: y.intl.string(y.t.aWsjtD),
                       }),
                   (0, i.jsxs)("div", {
-                      className: a()(N.marginTop20, y.buttonContainer),
+                      className: s()(E.marginTop20, N.buttonContainer),
                       children: [
                           n.isDirty &&
                               (0, i.jsx)(G, {
@@ -382,7 +382,7 @@ function L(e) {
                                   guildTemplate: n,
                               }),
                           (0, i.jsxs)("div", {
-                              className: y.rightButtonContainer,
+                              className: N.rightButtonContainer,
                               children: [
                                   (0, i.jsx)(M, {
                                       guild: t,
@@ -395,83 +395,83 @@ function L(e) {
                   }),
                   n.isDirty &&
                       (0, i.jsx)("div", {
-                          className: y.lastSync,
-                          children: C.intl.format(C.t.v0AVum, { timestamp: new Date(n.updatedAt) }),
+                          className: N.lastSync,
+                          children: y.intl.format(y.t.v0AVum, { timestamp: new Date(n.updatedAt) }),
                       }),
               ],
           });
 }
 function k(e) {
     let { guild: t } = e,
-        n = (0, u.e7)([S], () => S.name),
-        [r, s] = l.useState(!1),
-        a = async () => {
-            S.setError(null), s(!0);
+        n = (0, d.e7)([_], () => _.name),
+        [r, a] = l.useState(!1),
+        s = async () => {
+            _.setError(null), a(!0);
             try {
-                await b.Z.createGuildTemplate(t.id, S.name, S.description);
+                await x.Z.createGuildTemplate(t.id, _.name, _.description);
             } catch (e) {
-                S.setError(new x.Hx(e));
+                _.setError(new h.Hx(e));
             }
-            s(!1);
+            a(!1);
         };
-    return (0, i.jsx)(p.Button, {
+    return (0, i.jsx)(m.Button, {
         variant: "primary",
-        text: C.intl.string(C.t.Wxdi8A),
+        text: y.intl.string(y.t.Wxdi8A),
         loading: r,
         disabled: !P(n),
-        onClick: a,
+        onClick: s,
     });
 }
 function G(e) {
     let { guild: t, guildTemplate: n } = e,
-        [r, s] = l.useState(!1),
-        a = async () => {
-            S.setError(null), s(!0);
+        [r, a] = l.useState(!1),
+        s = async () => {
+            _.setError(null), a(!0);
             try {
-                await b.Z.syncGuildTemplate(t.id, n.code);
+                await x.Z.syncGuildTemplate(t.id, n.code);
             } catch (e) {
-                S.setError(new x.Hx(e));
+                _.setError(new h.Hx(e));
             }
-            s(!1);
+            a(!1);
         };
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
-        className: y.button,
-        children: (0, i.jsx)(p.Button, {
+        className: N.button,
+        children: (0, i.jsx)(m.Button, {
             variant: "primary",
-            text: C.intl.string(C.t["Nw+0Y/"]),
+            text: y.intl.string(y.t["Nw+0Y/"]),
             loading: r,
-            onClick: a,
+            onClick: s,
         }),
     });
 }
 function M(e) {
     let { guild: t, guildTemplate: n } = e,
-        [r, s] = l.useState(!1),
-        a = async () => {
-            S.setError(null);
+        [r, a] = l.useState(!1),
+        s = async () => {
+            _.setError(null);
             try {
-                await b.Z.deleteGuildTemplate(t.id, n.code), S.setName(""), S.setDescription("");
+                await x.Z.deleteGuildTemplate(t.id, n.code), _.setName(""), _.setDescription("");
             } catch (e) {
-                S.setError(new x.Hx(e));
+                _.setError(new h.Hx(e));
             }
-            s(!1);
+            a(!1);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: y.button,
-                children: (0, i.jsx)(p.Button, {
+                className: N.button,
+                children: (0, i.jsx)(m.Button, {
                     variant: "critical-secondary",
-                    text: C.intl.string(C.t["cN/RFD"]),
-                    onClick: () => s(!0),
+                    text: y.intl.string(y.t["cN/RFD"]),
+                    onClick: () => a(!0),
                 }),
             }),
             r
                 ? (0, i.jsx)(D, {
-                      confirm: a,
-                      cancel: () => s(!1),
+                      confirm: s,
+                      cancel: () => a(!1),
                   })
                 : null,
         ],
@@ -481,13 +481,13 @@ function U(e) {
     let { guildTemplate: t } = e;
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
-        className: y.button,
-        children: (0, i.jsx)(p.Button, {
+        className: N.button,
+        children: (0, i.jsx)(m.Button, {
             variant: "secondary",
-            text: C.intl.string(C.t.YI3iV6),
+            text: y.intl.string(y.t.YI3iV6),
             onClick: () =>
-                (0, p.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e("10778"), n.e("86015")]).then(n.bind(n, 766775));
+                (0, m.ZDy)(async () => {
+                    let { default: e } = await Promise.all([n.e("10778"), n.e("93099")]).then(n.bind(n, 766775));
                     return (n) => {
                         var r, l;
                         return (0, i.jsx)(
@@ -503,7 +503,7 @@ function U(e) {
                                             }),
                                         )),
                                         r.forEach(function (t) {
-                                            E(e, t, n[t]);
+                                            I(e, t, n[t]);
                                         });
                                 }
                                 return e;

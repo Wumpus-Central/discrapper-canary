@@ -1,8 +1,8 @@
 n.d(t, { B: () => v });
 var r = n(54381),
     i = n(473749),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(399606),
     l = n(481060),
     c = n(594174),
@@ -11,9 +11,9 @@ var r = n(54381),
     f = n(933970),
     p = n(340453),
     _ = n(292352),
-    m = n(435757),
+    m = n(517319),
     h = n(388032),
-    g = n(823074);
+    g = n(68842);
 function E(e, t, n) {
     return (
         t in e
@@ -68,11 +68,11 @@ function O(e, t) {
 }
 function v(e) {
     let { user: t } = e,
-        o = (0, u.Z)(),
+        a = (0, u.Z)(),
         E = (0, d.VM)(),
         y = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         v = i.useCallback(() => {
-            a()(void 0 !== y, "User must be logged in to accept a link request"),
+            o()(void 0 !== y, "User must be logged in to accept a link request"),
                 (0, l.ZDy)(async () => {
                     let { default: e } = await n.e("59716").then(n.bind(n, 275370));
                     return (n) =>
@@ -86,7 +86,7 @@ function v(e) {
                 });
         }, [y, t]),
         S = i.useCallback(() => {
-            a()(void 0 !== y, "User must be logged in to decline a link request"),
+            o()(void 0 !== y, "User must be logged in to decline a link request"),
                 (0, l.ZDy)(async () => {
                     let { default: e } = await n.e("958").then(n.bind(n, 4526));
                     return (n) =>
@@ -100,7 +100,7 @@ function v(e) {
                 });
         }, [y, t]),
         I = i.useCallback(() => {
-            a()(void 0 !== y, "User must be logged in to decline a link request"),
+            o()(void 0 !== y, "User must be logged in to decline a link request"),
                 (0, l.ZDy)(async () => {
                     let { default: e } = await n.e("69015").then(n.bind(n, 247265));
                     return (n) =>
@@ -125,7 +125,7 @@ function v(e) {
             }),
             (0, r.jsx)("div", {
                 className: g.actions,
-                children: o
+                children: a
                     ? (0, r.jsx)(f.Z, {
                           icon: l.Dio,
                           tooltip: h.intl.string(m.default.e5iHmZ),

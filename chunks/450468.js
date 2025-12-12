@@ -1,8 +1,8 @@
 n.d(t, { default: () => I }), n(388685), n(415506);
 var r = n(54381),
     i = n(473749),
-    o = n(512722),
-    a = n.n(o),
+    a = n(512722),
+    o = n.n(a),
     s = n(793030),
     l = n(442837),
     c = n(481060),
@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(78839),
     E = n(74538),
     b = n(388032),
-    y = n(409150);
+    y = n(65439);
 async function O(e, t, n, r) {
     let i = (0, E.MY)(e, t);
     await (0, d.bG)(n),
@@ -58,7 +58,7 @@ function S() {
     });
 }
 function I(e) {
-    let { guildBoostSlotId: t, transitionState: n, onClose: o } = e,
+    let { guildBoostSlotId: t, transitionState: n, onClose: a } = e,
         { analyticsLocations: d } = (0, m.ZP)(_.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
     i.useEffect(() => {
         g.Z.hasFetchedSubscriptions() || (0, u.jg)();
@@ -72,7 +72,7 @@ function I(e) {
                 try {
                     A(!0), P(null);
                     let e = (0, h.g)(y, 1);
-                    a()(
+                    o()(
                         (0, E.uV)(e) <= (0, E.uV)(y.additionalPlans),
                         "Uncanceling should not increase the number of guild subscriptions",
                     ),
@@ -101,7 +101,7 @@ function I(e) {
                             variant: "secondary",
                             text: b.intl.string(b.t.oEAioF),
                             disabled: C,
-                            onClick: o,
+                            onClick: a,
                         },
                         {
                             variant: "primary",
@@ -115,7 +115,7 @@ function I(e) {
                         {
                             variant: "primary",
                             text: b.intl.string(b.t.BddRzS),
-                            onClick: o,
+                            onClick: a,
                         },
                     ];
                 default:
@@ -137,7 +137,7 @@ function I(e) {
         value: d,
         children: (0, r.jsx)(s.Modal, {
             transitionState: n,
-            onClose: async () => await o(),
+            onClose: async () => await a(),
             size: "sm",
             title: w(),
             actions: D(),

@@ -4,7 +4,7 @@ n(473749);
 var r = n(120356),
     i = n.n(r),
     a = n(481060),
-    s = n(713449);
+    s = n(68877);
 function o(e) {
     let { steps: t, stepIndex: n, onClick: r } = e;
     return (0, l.jsx)("div", {

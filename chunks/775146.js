@@ -1,20 +1,20 @@
 t.d(n, { Z: () => i });
-var r = t(54381),
-    a = t(8561);
+var a = t(54381),
+    r = t(791894);
 function i(e) {
     let { children: n, actions: t } = e;
-    return (0, r.jsx)("div", {
-        className: a.card,
-        children: (0, r.jsxs)("div", {
-            className: a.contentWrapper,
+    return (0, a.jsx)("div", {
+        className: r.card,
+        children: (0, a.jsxs)("div", {
+            className: r.contentWrapper,
             children: [
                 n,
                 null != t &&
-                    (0, r.jsxs)(r.Fragment, {
+                    (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, r.jsx)("div", { className: a.divider }),
-                            (0, r.jsx)("div", {
-                                className: a.serverActions,
+                            (0, a.jsx)("div", { className: r.divider }),
+                            (0, a.jsx)("div", {
+                                className: r.serverActions,
                                 children: t,
                             }),
                         ],

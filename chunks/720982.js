@@ -2,27 +2,27 @@ n.d(t, { d: () => c });
 var r = n(54381),
     i = n(473749),
     s = n(481060),
-    l = n(594961),
-    a = n(388032),
-    o = n(48486);
+    a = n(594961),
+    l = n(388032),
+    o = n(565038);
 let c = (e) => {
     let { onNavigate: t } = e,
         n = i.useCallback(() => {
-            t(l.V4.DSA);
+            t(a.V4.DSA);
         }, [t]),
         c = i.useCallback(() => {
-            t(l.V4.TIDA);
+            t(a.V4.TIDA);
         }, [t]);
     return (0, r.jsxs)(s.Kqy, {
         gap: 8,
         children: [
             (0, r.jsx)(s.Heading, {
                 variant: "heading-xl/semibold",
-                children: a.intl.string(a.t.Z11w18),
+                children: l.intl.string(l.t.Z11w18),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-md/normal",
-                children: a.intl.string(a.t.bd1h5T),
+                children: l.intl.string(l.t.bd1h5T),
             }),
             (0, r.jsxs)("div", {
                 className: o.container,
@@ -33,7 +33,7 @@ let c = (e) => {
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: "text-md/medium",
-                                children: a.intl.string(a.t["AszWL/"]),
+                                children: l.intl.string(l.t["AszWL/"]),
                             }),
                             (0, r.jsx)(s.LJT, { size: "sm" }),
                         ],
@@ -44,7 +44,7 @@ let c = (e) => {
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: "text-md/medium",
-                                children: a.intl.string(a.t.jMSjZL),
+                                children: l.intl.string(l.t.jMSjZL),
                             }),
                             (0, r.jsx)(s.LJT, { size: "sm" }),
                         ],

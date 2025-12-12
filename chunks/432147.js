@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(239091),
     c = n(901461),
@@ -16,7 +16,7 @@ var i = n(120356),
     h = n(488131),
     g = n(981631),
     E = n(388032),
-    b = n(740810);
+    b = n(758951);
 function y(e, t, n) {
     return (
         t in e
@@ -48,7 +48,7 @@ function O(e) {
 }
 function v(e) {
     let { message: t, compact: n } = e,
-        i = (0, a.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
+        i = (0, o.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
     return null == i
         ? null
         : (0, r.jsx)(S, {
@@ -70,17 +70,17 @@ function S(e) {
     }
     function _(e) {
         (0, l.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e("90508"), n.e("89250"), n.e("18308")]).then(n.bind(n, 422200));
+            let { default: e } = await Promise.all([n.e("90508"), n.e("89250"), n.e("3489")]).then(n.bind(n, 422200));
             return (n) => (0, r.jsx)(e, O({ channel: t }, n));
         });
     }
-    let m = (0, a.e7)([p.Z], () => p.Z.getCount(t.id)),
+    let m = (0, o.e7)([p.Z], () => p.Z.getCount(t.id)),
         y = I(t),
         v = null != m && m > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: o()(b.spine, {
+                className: a()(b.spine, {
                     [b.cozy]: !i,
                     [b.systemMessageSpine]: c,
                 }),
@@ -90,7 +90,7 @@ function S(e) {
                 onKeyDown: d,
                 onContextMenu: _,
                 "aria-roledescription": E.intl.string(E.t["8ipxiY"]),
-                className: o()(b.container, { [b.systemMessageContainer]: c }),
+                className: a()(b.container, { [b.systemMessageContainer]: c }),
                 children: (0, r.jsxs)(s.nuw, {
                     children: [
                         (0, r.jsxs)("div", {
@@ -124,9 +124,9 @@ function S(e) {
 }
 function I(e) {
     var t;
-    let n = (0, a.e7)([p.Z], () => p.Z.getMostRecentMessage(e.id)),
-        i = (0, a.e7)([p.Z], () => p.Z.getCount(e.id)),
-        o = (0, _.Ok)(e);
+    let n = (0, o.e7)([p.Z], () => p.Z.getMostRecentMessage(e.id)),
+        i = (0, o.e7)([p.Z], () => p.Z.getCount(e.id)),
+        a = (0, _.Ok)(e);
     return (null == (t = e.threadMetadata) ? void 0 : t.archived)
         ? E.intl.string(E.t.ZTo4HS)
         : null == i || 0 === i
@@ -137,7 +137,7 @@ function I(e) {
                       (0, r.jsx)("span", { children: E.intl.string(E.t.ZTo4HS) }),
                       (0, r.jsx)("span", {
                           className: b.timestamp,
-                          children: (0, _.Ye)(o),
+                          children: (0, _.Ye)(a),
                       }),
                   ],
               })
@@ -149,7 +149,7 @@ function I(e) {
                       }),
                       (0, r.jsx)("span", {
                           className: b.timestamp,
-                          children: (0, _.Ye)(o),
+                          children: (0, _.Ye)(a),
                       }),
                   ],
               });

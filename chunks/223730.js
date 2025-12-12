@@ -1,24 +1,24 @@
 n.d(t, {
-    S$: () => m,
-    yj: () => _,
+    S$: () => b,
+    yj: () => y,
 });
 var r = n(54381),
     i = n(442837),
     l = n(481060),
-    o = n(695346),
-    a = n(313789),
+    a = n(695346),
+    o = n(313789),
     s = n(518596),
     c = n(771845),
     u = n(88658),
     d = n(782896),
     f = n(981631),
-    h = n(254681),
+    h = n(418924),
     p = n(388032),
-    g = n(95049);
-let m = () => {
-    (0, s.openUserSettings)(a.n.ACTIVITY_PRIVACY_PANEL, { section: f.oAB.ACTIVITY_PRIVACY });
+    g = n(507179);
+let b = () => {
+    (0, s.openUserSettings)(o.n.ACTIVITY_PRIVACY_PANEL, { section: f.oAB.ACTIVITY_PRIVACY });
 };
-function b(e) {
+function m(e) {
     let { children: t, onClick: n } = e;
     return (0, r.jsxs)(l.P3F, {
         className: g.chevronButton,
@@ -35,17 +35,17 @@ function b(e) {
         ],
     });
 }
-function _(e) {
+function y(e) {
     let { onClosePopout: t } = e,
-        n = o.G6.useSetting(),
-        a = (0, i.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
+        n = a.G6.useSetting(),
+        o = (0, i.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
         s = (0, u._o)(),
-        f = a.filter((e) => !s.has(e));
-    return 0 === a.length
+        f = o.filter((e) => !s.has(e));
+    return 0 === o.length
         ? null
-        : (0, r.jsxs)(b, {
+        : (0, r.jsxs)(m, {
               onClick: () => {
-                  t(), m();
+                  t(), b();
               },
               children: [
                   (0, r.jsx)(l.Text, {

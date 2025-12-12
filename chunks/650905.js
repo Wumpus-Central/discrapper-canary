@@ -2,7 +2,7 @@ n.d(t, { F: () => u }), n(539854), n(49124), n(415506);
 var r = n(54381);
 n(473749);
 var i = n(481060);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,7 +26,7 @@ function a(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -62,7 +62,7 @@ let c = new (n(710845).Z)("MFAPlayground"),
                 name: "Challenge Modal",
                 id: "mfa-modal",
                 component: function (e) {
-                    let { hasPassword: t, hasTotp: o, hasSms: s, hasWebauthn: u, hasBackup: d, simulateError: f } = e,
+                    let { hasPassword: t, hasTotp: a, hasSms: s, hasWebauthn: u, hasBackup: d, simulateError: f } = e,
                         p = [];
                     u &&
                         p.push({
@@ -77,7 +77,7 @@ let c = new (n(710845).Z)("MFAPlayground"),
                                 },
                             }),
                         }),
-                        o && p.push({ type: "totp" }),
+                        a && p.push({ type: "totp" }),
                         s && p.push({ type: "sms" }),
                         d && p.push({ type: "backup" }),
                         t && p.push({ type: "password" });
@@ -112,13 +112,13 @@ let c = new (n(710845).Z)("MFAPlayground"),
                                             });
                                     (0, i.ZDy)(
                                         async () => {
-                                            let { MFAModal: i } = await Promise.all([n.e("52030"), n.e("45353")]).then(
+                                            let { MFAModal: i } = await Promise.all([n.e("52030"), n.e("3040")]).then(
                                                 n.bind(n, 124860),
                                             );
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     i,
-                                                    l(a({}, n), {
+                                                    l(o({}, n), {
                                                         finish: t,
                                                         mfaChallenge: e,
                                                     }),

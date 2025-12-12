@@ -1,54 +1,54 @@
-n.d(e, { default: () => h }), n(35282);
+n.d(t, { default: () => b }), n(35282);
 var i = n(54381),
-    r = n(473749),
-    a = n(793030),
-    o = n(481060),
-    s = n(536442),
-    c = n(13140),
+    a = n(473749),
+    r = n(793030),
+    c = n(481060),
+    o = n(536442),
+    s = n(13140),
     l = n(487029),
     d = n(388032),
-    u = n(71661);
-function h(t) {
-    let { guildId: e, channel: h, keybind: y, transitionState: b, onClose: k } = t,
-        p = r.useCallback(async () => {
-            (0, s.Kw)(s.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), await k();
+    u = n(362961);
+function b(e) {
+    let { guildId: t, channel: b, keybind: h, transitionState: y, onClose: k } = e,
+        p = a.useCallback(async () => {
+            (0, o.Kw)(o.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), await k();
         }, [k]),
-        f = r.useCallback(async () => {
+        f = a.useCallback(async () => {
             await p(),
-                (0, o.ZDy)(async () => {
-                    let { default: t } = await n.e("58120").then(n.bind(n, 355453));
-                    return (e) =>
+                (0, c.ZDy)(async () => {
+                    let { default: e } = await n.e("58120").then(n.bind(n, 355453));
+                    return (t) =>
                         (0, i.jsx)(
-                            t,
-                            (function (t) {
-                                for (var e = 1; e < arguments.length; e++) {
-                                    var n = null != arguments[e] ? arguments[e] : {},
+                            e,
+                            (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
                                         i = Object.keys(n);
                                     "function" == typeof Object.getOwnPropertySymbols &&
                                         (i = i.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (t) {
-                                                return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             }),
                                         )),
-                                        i.forEach(function (e) {
+                                        i.forEach(function (t) {
                                             var i;
-                                            (i = n[e]),
-                                                e in t
-                                                    ? Object.defineProperty(t, e, {
+                                            (i = n[t]),
+                                                t in e
+                                                    ? Object.defineProperty(e, t, {
                                                           value: i,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (t[e] = i);
+                                                    : (e[t] = i);
                                         });
                                 }
-                                return t;
-                            })({}, e),
+                                return e;
+                            })({}, t),
                         );
                 });
         }, [p]),
-        j = r.useMemo(
+        j = a.useMemo(
             () => [
                 {
                     variant: "secondary",
@@ -63,36 +63,36 @@ function h(t) {
             ],
             [f, p],
         );
-    return (0, i.jsxs)(a.Modal, {
+    return (0, i.jsxs)(r.Modal, {
         onClose: p,
         actions: j,
-        transitionState: b,
+        transitionState: y,
         title: d.intl.string(d.t.yJeV51),
         children: [
-            (0, i.jsx)(o.Text, {
+            (0, i.jsx)(c.Text, {
                 variant: "text-md/normal",
                 children: d.intl.format(d.t.fq3Swz, {
-                    keybind: (0, c.BB)(y.shortcut, !0).split(" + "),
-                    keybindHook: (t, e) =>
+                    keybind: (0, s.BB)(h.shortcut, !0).split(" + "),
+                    keybindHook: (e, t) =>
                         (0, i.jsx)(
                             "span",
                             {
                                 className: u.keybindHintKeys,
-                                children: (0, i.jsx)(o.M2$, {
+                                children: (0, i.jsx)(c.M2$, {
                                     className: u.keybindShortcut,
-                                    shortcut: (0, c.BB)(y.shortcut, !1),
+                                    shortcut: (0, s.BB)(h.shortcut, !1),
                                 }),
                             },
-                            e,
+                            t,
                         ),
-                    openSettingsHook: (t, e) =>
+                    openSettingsHook: (e, t) =>
                         (0, i.jsx)(
-                            o.Anchor,
+                            c.Anchor,
                             {
                                 onClick: f,
-                                children: t,
+                                children: e,
                             },
-                            e,
+                            t,
                         ),
                 }),
             }),
@@ -101,8 +101,8 @@ function h(t) {
                 children: (0, i.jsx)(l.Z, {
                     width: 372,
                     height: 316,
-                    guildId: e,
-                    channel: h,
+                    guildId: t,
+                    channel: b,
                     interactive: !1,
                     keepOpen: !0,
                     onClose: () => {},

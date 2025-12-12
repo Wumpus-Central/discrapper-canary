@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(906732),
     c = n(835473),
@@ -13,12 +13,12 @@ var r = n(54381),
     _ = n(652853),
     m = n(671955),
     h = n(388032),
-    g = n(976794);
+    g = n(97057);
 function E(e) {
-    let { user: t, guildId: n, channelId: o, applicationId: E, isGameRelationship: b = !1, className: y } = e,
+    let { user: t, guildId: n, channelId: a, applicationId: E, isGameRelationship: b = !1, className: y } = e,
         { themeType: O } = (0, _.z)(),
         v = O === m.l.MODAL_V2,
-        S = f.ZP.getName(n, o, t),
+        S = f.ZP.getName(n, a, t),
         { trackUserProfileAction: I } = (0, p.KZ)(),
         { newestAnalyticsLocation: T } = (0, l.ZP)(),
         { acceptFriendRequest: C, cancelFriendRequest: A } = (0, d.u)({
@@ -38,7 +38,7 @@ function E(e) {
     return R && null == w
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(g.container, y),
+              className: o()(g.container, y),
               children: [
                   R
                       ? (0, r.jsx)(s.Text, {

@@ -1,10 +1,10 @@
 n.d(t, { Z: () => c });
 var r = n(54381),
     i = n(473749),
-    o = n(55160),
-    a = n(607070),
+    a = n(55160),
+    o = n(607070),
     s = n(996435),
-    l = n(135443);
+    l = n(63224);
 function c(e) {
     let { node: t, children: n } = e,
         c = i.useRef(null),
@@ -26,7 +26,7 @@ function c(e) {
                             null == e.targetAccordionKey &&
                             (u.current = requestAnimationFrame(() => {
                                 var t, n;
-                                let r = e.animateScroll && !a.Z.useReducedMotion,
+                                let r = e.animateScroll && !o.Z.useReducedMotion,
                                     i = null != (n = e.scrollBlock) ? n : "start";
                                 null == (t = c.current) ||
                                     t.scrollIntoView({
@@ -37,7 +37,7 @@ function c(e) {
                             }));
                 },
                 {
-                    equalityFn: o.X,
+                    equalityFn: a.X,
                     fireImmediately: !0,
                 },
             );

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => m });
 var i = n(54381),
     s = n(473749),
     r = n(120356),
@@ -6,23 +6,23 @@ var i = n(54381),
     l = n(793030),
     o = n(481060),
     d = n(511010),
-    c = n(64515),
-    u = n(892744);
-function _(e) {
+    c = n(674162),
+    u = n(73377);
+function m(e) {
     let {
         headerText: t,
         descriptionText: n,
         infoRows: r,
-        onDismissAndStay: _,
-        onDismissAndLeave: m,
-        leaveButtonText: x,
-        stayButtonText: f,
+        onDismissAndStay: m,
+        onDismissAndLeave: _,
+        leaveButtonText: f,
+        stayButtonText: x,
         transitionState: g,
         impression: h,
     } = e;
     return (0, i.jsx)(l.ExpressiveModal, {
         transitionState: g,
-        onClose: () => (_(), Promise.resolve()),
+        onClose: () => (m(), Promise.resolve()),
         trackingProps: { impression: h },
         graphic: {
             type: "image",
@@ -32,13 +32,13 @@ function _(e) {
         subtitle: null != n ? n : void 0,
         actions: [
             {
-                text: f,
-                onClick: _,
+                text: x,
+                onClick: m,
                 variant: "secondary",
             },
             {
-                text: x,
-                onClick: m,
+                text: f,
+                onClick: _,
             },
         ],
         children: (0, i.jsx)("div", {

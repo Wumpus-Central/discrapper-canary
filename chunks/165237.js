@@ -1,0 +1,16 @@
+e.exports = {
+    root: "_4ad815b9a8eb0838-root",
+    art: "_4ad815b9a8eb0838-art",
+    heading: "_4ad815b9a8eb0838-heading",
+    checkboxContainer: "_4ad815b9a8eb0838-checkboxContainer",
+    closeButton: "_4ad815b9a8eb0838-closeButton",
+    closeButtonContainer: "_4ad815b9a8eb0838-closeButtonContainer",
+    activitiesContainer: "_4ad815b9a8eb0838-activitiesContainer",
+    activitiesContainerSmol: "_4ad815b9a8eb0838-activitiesContainerSmol",
+    activitySuggestion: "_4ad815b9a8eb0838-activitySuggestion",
+    clickableTile: "_4ad815b9a8eb0838-clickableTile",
+    iconContainer: "_4ad815b9a8eb0838-iconContainer",
+    shelfButtonCloseButton: "_4ad815b9a8eb0838-shelfButtonCloseButton",
+    closeButtonIcon: "_4ad815b9a8eb0838-closeButtonIcon",
+    singleUserRoot: "_4ad815b9a8eb0838-singleUserRoot",
+};

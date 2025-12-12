@@ -1,44 +1,44 @@
 n.d(t, { Z: () => v });
 var r = n(54381),
     i = n(473749),
-    l = n(296009),
-    a = n(442837),
+    a = n(296009),
+    l = n(442837),
     o = n(704215),
-    s = n(481060),
-    c = n(491662),
+    c = n(481060),
+    s = n(491662),
     u = n(243778),
     d = n(594174),
     f = n(785717),
     g = n(931847),
     p = n(50130),
-    m = n(28671),
-    b = n(430790),
+    b = n(28671),
+    m = n(430790),
     h = n(795990),
     y = n(388032),
-    O = n(66582);
+    O = n(284459);
 function v() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, f.KZ)(),
         v = i.useRef(!1),
-        j = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        j = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         { application: x, config: P } = (0, p.G)(),
-        { token: _, fetched: I } = (0, c.o)(null == P ? void 0 : P.application_id),
-        w = i.useMemo(
+        { token: I, fetched: w } = (0, s.o)(null == P ? void 0 : P.application_id),
+        S = i.useMemo(
             () =>
                 (null == P ? void 0 : P.application_id) != null
                     ? new g.q({
-                          type: l.l.APPLICATION,
+                          type: a.l.APPLICATION,
                           applicationId: P.application_id,
                       })
                     : null,
             [null == P ? void 0 : P.application_id],
         ),
-        S = i.useCallback(() => {
+        E = i.useCallback(() => {
             t({ action: "PRESS_ADD_WIDGET" }),
-                (0, s.ZDy)(
+                (0, c.ZDy)(
                     async () => {
                         let { default: e } = await n.e("38576").then(n.bind(n, 925170));
                         return (n) => {
-                            var i, l;
+                            var i, a;
                             return (0, r.jsx)(
                                 e,
                                 ((i = (function (e) {
@@ -66,9 +66,9 @@ function v() {
                                     }
                                     return e;
                                 })({}, n)),
-                                (l = l = { trackUserProfileEditAction: t }),
+                                (a = a = { trackUserProfileEditAction: t }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -76,8 +76,8 @@ function v() {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                      })(Object(a)).forEach(function (e) {
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                                       }),
                                 i),
                             );
@@ -86,11 +86,11 @@ function v() {
                     { stackingBehavior: "stack" },
                 );
         }, [t]),
-        E = null == j || null == x || null == w || !I,
-        T = null != _;
+        _ = null == j || null == x || null == S || !w,
+        T = null != I;
     if (
         (i.useEffect(() => {
-            !E &&
+            !_ &&
                 T &&
                 (v.current ||
                     (e({
@@ -98,24 +98,24 @@ function v() {
                         applicationId: x.id,
                     }),
                     (v.current = !0)));
-        }, [E, T, e, null == x ? void 0 : x.id]),
-        E)
+        }, [_, T, e, null == x ? void 0 : x.id]),
+        _)
     )
         return (0, r.jsx)("div", {
             className: O.loading,
-            children: (0, r.jsx)(s.$jN, {}),
+            children: (0, r.jsx)(c.$jN, {}),
         });
     if (!T) return (0, r.jsx)(h.Z, {});
-    let C = (0, r.jsxs)(s.Kqy, {
+    let C = (0, r.jsxs)(c.Kqy, {
         gap: 4,
         className: O.header,
         children: [
-            (0, r.jsx)(s.Heading, {
+            (0, r.jsx)(c.Heading, {
                 variant: "heading-md/medium",
                 color: "text-strong",
                 children: y.intl.string(y.t["oqalC+"]),
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 children: y.intl.format(y.t.YnNFWa, { applicationName: x.name }),
@@ -129,33 +129,33 @@ function v() {
             let { visibleContent: t, markAsDismissed: n } = e;
             switch (t) {
                 case o.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET:
-                    return (0, r.jsxs)(s.Kqy, {
+                    return (0, r.jsxs)(c.Kqy, {
                         gap: 16,
                         align: "center",
                         children: [
-                            (0, r.jsx)(s.LZC, { size: 32 }),
+                            (0, r.jsx)(c.LZC, { size: 32 }),
                             C,
-                            (0, r.jsx)(m.Z, {
+                            (0, r.jsx)(b.Z, {
                                 user: j,
                                 application: x,
                                 onDismiss: n,
                             }),
-                            (0, r.jsx)(b.Z, {}),
+                            (0, r.jsx)(m.Z, {}),
                         ],
                     });
                 case null:
-                    return (0, r.jsxs)(s.Kqy, {
+                    return (0, r.jsxs)(c.Kqy, {
                         gap: 32,
                         align: "center",
                         children: [
-                            (0, r.jsx)(s.LZC, { size: 128 }),
+                            (0, r.jsx)(c.LZC, { size: 128 }),
                             C,
-                            (0, r.jsx)(s.Button, {
-                                icon: s.qJs,
+                            (0, r.jsx)(c.Button, {
+                                icon: c.qJs,
                                 text: y.intl.string(y.t["lBG2s/"]),
                                 size: "md",
                                 color: "secondary",
-                                onClick: S,
+                                onClick: E,
                             }),
                         ],
                     });

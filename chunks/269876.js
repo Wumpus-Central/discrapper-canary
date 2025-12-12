@@ -7,8 +7,8 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(46973),
     c = n(846519),
@@ -19,14 +19,14 @@ var r = n(54381),
     _ = n(131951),
     m = n(65154),
     h = n(388032),
-    g = n(192294),
-    E = n(89079),
-    b = n(197571);
+    g = n(948913),
+    E = n(440326),
+    b = n(478411);
 let y = (0, p.hQ)();
 function O() {
     let [e, t] = i.useState(-100),
         [n, r] = i.useState(!1);
-    function o(e, n) {
+    function a(e, n) {
         t(e), r((n & m.Dg.VOICE) === m.Dg.VOICE);
     }
     return (
@@ -34,10 +34,10 @@ function O() {
             let e = new c.V7();
             return (
                 e.start(1000, () => {
-                    _.Z.getMediaEngine().on(l.aB.VoiceActivity, o), e.stop();
+                    _.Z.getMediaEngine().on(l.aB.VoiceActivity, a), e.stop();
                 }),
                 () => {
-                    _.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, o), e.stop();
+                    _.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, a), e.stop();
                 }
             );
         }, []),
@@ -48,17 +48,17 @@ function O() {
     );
 }
 function v(e) {
-    let { isSpeaking: t, className: n, id: i, ariaDescribedBy: o, ariaLabelledBy: s } = e;
+    let { isSpeaking: t, className: n, id: i, ariaDescribedBy: a, ariaLabelledBy: s } = e;
     return (0, r.jsx)("div", {
-        className: a()(g.inputSensitivitySlider, n),
+        className: o()(g.inputSensitivitySlider, n),
         id: i,
-        "aria-describedby": o,
+        "aria-describedby": a,
         "aria-labelledby": s,
-        children: (0, r.jsx)("div", { className: a()(g.inputSensitivityBar, g.sliderBar, { [g.speaking]: t }) }),
+        children: (0, r.jsx)("div", { className: o()(g.inputSensitivityBar, g.sliderBar, { [g.speaking]: t }) }),
     });
 }
 function S(e) {
-    let { volume: t, id: n, ariaDescribedBy: i, ariaLabelledBy: o } = e,
+    let { volume: t, id: n, ariaDescribedBy: i, ariaLabelledBy: a } = e,
         { threshold: l, autoThreshold: c } = (0, s.cj)([_.Z], () => ({
             threshold: _.Z.getModeOptions().threshold,
             autoThreshold: _.Z.getModeOptions().autoThreshold,
@@ -71,10 +71,10 @@ function S(e) {
         });
     }
     return (0, r.jsx)("section", {
-        className: a()(g.inputSensitivityToggle, g.manual),
+        className: o()(g.inputSensitivityToggle, g.manual),
         id: n,
         "aria-describedby": i,
-        "aria-labelledby": o,
+        "aria-labelledby": a,
         children: (0, r.jsx)(d.iRW, {
             initialValue: l + 100,
             onValueRender: (e) => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
@@ -83,10 +83,10 @@ function S(e) {
             fillStyles: { background: u.Z.unsafe_rawColors.YELLOW_300.css },
             "aria-labelledby": y,
             children: (0, r.jsxs)("div", {
-                className: a()(g.sliderBar, g.microphone, g.inputSensitivityBar, E.bar),
+                className: o()(g.sliderBar, g.microphone, g.inputSensitivityBar, E.bar),
                 children: [
                     (0, r.jsx)("div", {
-                        className: a()(g.fill, g.inputSensitivityBarFill),
+                        className: o()(g.fill, g.inputSensitivityBarFill),
                         style: { width: t + 100 + "%" },
                     }),
                     (0, r.jsx)("div", { className: "grow" }),
@@ -104,7 +104,7 @@ function I() {
             inputMode: _.Z.getMode(),
             automaticVADSupported: _.Z.supports(m.AN.AUTOMATIC_VAD),
         })),
-        { volume: o, isSpeaking: a } = O(),
+        { volume: a, isSpeaking: o } = O(),
         l = (0, s.e7)([_.Z], () => _.Z.isEnabled());
     function c(e, t) {
         f.Z.setMode(n, {
@@ -126,7 +126,7 @@ function I() {
                 ? (0, r.jsxs)("section", {
                       className: g.inputSensitivityToggle,
                       children: [
-                          (0, r.jsx)(v, { isSpeaking: a }),
+                          (0, r.jsx)(v, { isSpeaking: o }),
                           (0, r.jsx)(d.Text, {
                               variant: "text-md/normal",
                               className: b.marginBottom8,
@@ -134,7 +134,7 @@ function I() {
                           }),
                       ],
                   })
-                : (0, r.jsx)(S, { volume: o }),
+                : (0, r.jsx)(S, { volume: a }),
             !l &&
                 (0, r.jsx)(d.Wn, {
                     messageType: d.QYI.WARNING,

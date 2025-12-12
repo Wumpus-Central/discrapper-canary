@@ -6,9 +6,9 @@ n.d(t, {
     n(388685);
 var r,
     i = n(54381),
-    o = n(473749),
-    a = n(120356),
-    s = n.n(a),
+    a = n(473749),
+    o = n(120356),
+    s = n.n(o),
     l = n(748780),
     c = n(692547),
     u = n(780384),
@@ -16,7 +16,7 @@ var r,
     f = n(436774),
     p = n(302221),
     _ = n(474936),
-    m = n(513825);
+    m = n(60564);
 function h(e, t, n) {
     return (
         t in e
@@ -75,9 +75,9 @@ function y(e, t) {
         r,
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++)
-            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -86,8 +86,8 @@ function O(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let v = Object.freeze({
@@ -114,7 +114,7 @@ var S = (function (e) {
         e
     );
 })({});
-class I extends (r = o.PureComponent) {
+class I extends (r = a.PureComponent) {
     componentDidMount() {
         this.animate();
     }
@@ -391,13 +391,13 @@ function T(e) {
     var { theme: t } = e,
         n = y(e, ["theme"]);
     let r = (0, d.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(),
-        o = (0, d.dQu)(c.Z.unsafe_rawColors.BRAND_500).hex(),
-        a = (0, u.wj)(t) ? r : o;
+        a = (0, d.dQu)(c.Z.unsafe_rawColors.BRAND_500).hex(),
+        o = (0, u.wj)(t) ? r : a;
     return (0, i.jsx)(
         I,
         b(g({}, n), {
             theme: t,
-            flashColor: a,
+            flashColor: o,
         }),
     );
 }

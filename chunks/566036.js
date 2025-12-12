@@ -2,43 +2,43 @@ n.d(t, { Z: () => j }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(392711),
-    s = n.n(l),
-    a = n(668339),
+    a = n.n(l),
+    s = n(668339),
     o = n(481060),
     c = n(510231),
-    u = n(434404),
-    d = n(383124),
+    d = n(434404),
+    u = n(383124),
     g = n(795691),
-    m = n(388032),
-    p = n(448369);
-let f = () => null;
-function h(e) {
+    f = n(388032),
+    m = n(39169);
+let b = () => null;
+function p(e) {
     let { gameApplicationIds: t, handleChange: n, disabled: i } = e,
-        { options: l, matchSorterOptions: s } = (0, c.h)();
-    return (0, r.jsx)(a.d, {
+        { options: l, matchSorterOptions: a } = (0, c.h)();
+    return (0, r.jsx)(s.d, {
         multi: !0,
         hidePills: !0,
-        wrapperClassName: p.selectWrapper,
+        wrapperClassName: m.selectWrapper,
         options: l,
         value: t,
-        placeholder: m.intl.string(m.t.JTLolO),
+        placeholder: f.intl.string(f.t.JTLolO),
         onChange: n,
         isDisabled: 20 === t.length || i,
-        matchSorterOptions: s,
+        matchSorterOptions: a,
         clearQueryOnSelect: !0,
-        customPillContainerClassName: p.pills,
-        renderCustomPill: f,
+        customPillContainerClassName: m.pills,
+        renderCustomPill: b,
     });
 }
-function x(e) {
+function h(e) {
     let { gameApplicationIds: t, onRemoveGame: n, disabled: i } = e;
     return 0 === t.length
         ? null
         : (0, r.jsx)("div", {
-              className: p.selectedGames,
+              className: m.selectedGames,
               children: t.map((e) =>
                   (0, r.jsx)(
-                      d.Z,
+                      u.Z,
                       {
                           applicationId: e,
                           selected: !0,
@@ -50,45 +50,45 @@ function x(e) {
               ),
           });
 }
-let b = [];
+let x = [];
 function j(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
-        a = n.id,
-        c = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : b,
-        d = i.useCallback(
+        s = n.id,
+        c = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : x,
+        u = i.useCallback(
             (e) => {
-                u.Z.updateGuildProfile(a, { gameApplicationIds: e });
+                d.Z.updateGuildProfile(s, { gameApplicationIds: e });
             },
-            [a],
+            [s],
         ),
-        p = i.useCallback(
+        m = i.useCallback(
             (e) => {
                 let t = c.filter((t) => t !== e);
-                u.Z.updateGuildProfile(a, { gameApplicationIds: t });
+                d.Z.updateGuildProfile(s, { gameApplicationIds: t });
             },
-            [a, c],
+            [s, c],
         ),
-        f = i.useRef(c),
-        j = i.useMemo(() => (s().isEqual(new Set(c), new Set(f.current)) || (f.current = [...c]), f.current), [c]);
+        b = i.useRef(c),
+        j = i.useMemo(() => (a().isEqual(new Set(c), new Set(b.current)) || (b.current = [...c]), b.current), [c]);
     return (0, r.jsxs)(o.C3N, {
-        label: m.intl.string(m.t.BR68vK),
-        description: m.intl.string(m.t.MobxiB),
+        label: f.intl.string(f.t.BR68vK),
+        description: f.intl.string(f.t.MobxiB),
         children: [
-            (0, r.jsx)(h, {
+            (0, r.jsx)(p, {
                 gameApplicationIds: c,
-                handleChange: d,
+                handleChange: u,
                 disabled: !l,
             }),
-            (0, r.jsx)(x, {
+            (0, r.jsx)(h, {
                 gameApplicationIds: j,
-                onRemoveGame: p,
+                onRemoveGame: m,
                 disabled: !l,
             }),
             (0, r.jsx)(g.Z, {
-                guildId: a,
+                guildId: s,
                 selectedGameApplicationIds: c,
-                onUpdateGames: d,
+                onUpdateGames: u,
                 disabled: !l,
             }),
         ],

@@ -1,10 +1,10 @@
-a.r(t), a.d(t, { default: () => f }), a(388685), a(35282), a(65234), a(111804), a(490233), a(97749);
+a.r(t), a.d(t, { default: () => k }), a(388685), a(35282), a(65234), a(111804), a(490233), a(97749);
 var s = a(54381),
     n = a(473749),
     i = a(873546),
-    l = a(442837),
-    r = a(481060),
-    c = a(830064),
+    c = a(442837),
+    l = a(481060),
+    r = a(830064),
     d = a(388905),
     g = a(625128),
     o = a(362762),
@@ -13,19 +13,19 @@ var s = a(54381),
     h = a(968843),
     u = a(110560),
     p = a(324805),
-    _ = a(981631),
+    b = a(981631),
     T = a(186901),
     j = a(388032),
-    E = a(781984),
-    v = a(74830),
-    N = a(13299);
-l.ZP.initialize();
-let k = i.tq || i.Em;
-function f(e) {
+    _ = a(227633),
+    E = a(74830),
+    v = a(770354);
+c.ZP.initialize();
+let N = i.tq || i.Em;
+function k(e) {
     let { match: t } = e,
-        a = (0, l.e7)([o.Z], () => o.Z.getState("quest-preview")),
+        a = (0, c.e7)([o.Z], () => o.Z.getState("quest-preview")),
         i = t.params.questId,
-        f = (function (e) {
+        k = (function (e) {
             let [t, a] = n.useState(null);
             return (
                 n.useEffect(() => {
@@ -42,88 +42,88 @@ function f(e) {
             );
         })(i);
     n.useEffect(() => {
-        if (!k) {
+        if (!N) {
             if (null == a)
-                g.Z.openNativeAppModal("quest-preview", _.Etm.DEEP_LINK, {
+                g.Z.openNativeAppModal("quest-preview", b.Etm.DEEP_LINK, {
                     type: T.jE.QUEST_PREVIEW_TOOL,
                     params: { questId: i },
                 });
-            else if (a === _.kEZ.OPEN_FAIL) {
+            else if (a === b.kEZ.OPEN_FAIL) {
                 let e = new URLSearchParams();
                 e.set(h.tR.TAB, h.e5.PREVIEW_TOOL),
                     e.set(h.tR.QUEST_ID, i),
                     (0, m.dL)({
-                        pathname: _.Z5c.QUEST_HOME_V2,
+                        pathname: b.Z5c.QUEST_HOME_V2,
                         search: "?".concat(e.toString()),
                     });
             }
         }
     }, [a, i]);
-    let b = n.useCallback(() => (0, u.openAppWithQuestPreview)(i), [i]);
-    if (k)
+    let f = n.useCallback(() => (0, u.openAppWithQuestPreview)(i), [i]);
+    if (N)
         return (0, s.jsxs)("div", {
-            className: E.page,
+            className: _.page,
             children: [
                 (0, s.jsx)("img", {
-                    className: E.bgImg,
-                    src: N.ZP,
+                    className: _.bgImg,
+                    src: v.ZP,
                     alt: "",
                 }),
                 (0, s.jsx)("div", {
-                    className: E.logoContainer,
+                    className: _.logoContainer,
                     children: (0, s.jsx)("img", {
-                        src: v,
+                        src: E,
                         alt: "",
                     }),
                 }),
-                null != f &&
+                null != k &&
                     (0, s.jsx)("div", {
-                        className: E.card,
+                        className: _.card,
                         children:
-                            "ok" === f.status
+                            "ok" === k.status
                                 ? (0, s.jsxs)(s.Fragment, {
                                       children: [
                                           (0, s.jsx)("div", {
-                                              className: E.gameTile,
+                                              className: _.gameTile,
                                               children: (0, s.jsx)("img", {
                                                   src: ""
                                                       .concat(p.HO)
                                                       .concat(i, "/dark/")
-                                                      .concat(f.value.assets.gameTile),
+                                                      .concat(k.value.assets.gameTile),
                                                   alt: "",
-                                                  className: E.gameTileImg,
+                                                  className: _.gameTileImg,
                                               }),
                                           }),
-                                          (0, s.jsx)(r.Heading, {
+                                          (0, s.jsx)(l.Heading, {
                                               variant: "heading-lg/semibold",
                                               color: "text-default",
-                                              className: E.headingText,
-                                              children: f.value.messages.questName,
+                                              className: _.headingText,
+                                              children: k.value.messages.questName,
                                           }),
-                                          (0, s.jsx)(r.Text, {
+                                          (0, s.jsx)(l.Text, {
                                               variant: "text-md/normal",
-                                              className: E.bodyText,
+                                              className: _.bodyText,
                                               children: j.intl.string(j.t.bWuKqh),
                                           }),
-                                          (0, s.jsx)(r.Button, {
+                                          (0, s.jsx)(l.Button, {
                                               variant: "primary",
                                               text: j.intl.string(j.t.UQvCf7),
                                               fullWidth: !0,
-                                              onClick: b,
+                                              onClick: f,
                                           }),
                                       ],
                                   })
                                 : (0, s.jsxs)(s.Fragment, {
                                       children: [
-                                          (0, s.jsx)(r.Heading, {
+                                          (0, s.jsx)(l.Heading, {
                                               variant: "heading-lg/semibold",
                                               color: "text-default",
-                                              className: E.headingText,
+                                              className: _.headingText,
                                               children: j.intl.string(j.t.k4z4er),
                                           }),
-                                          (0, s.jsx)(r.Text, {
+                                          (0, s.jsx)(l.Text, {
                                               variant: "text-md/normal",
-                                              className: E.bodyText,
+                                              className: _.bodyText,
                                               children: j.intl.string(j.t.gtZK09),
                                           }),
                                       ],
@@ -131,15 +131,15 @@ function f(e) {
                     }),
             ],
         });
-    let I = null == a || a === _.kEZ.OPENING || a === _.kEZ.OPEN_FAIL;
+    let I = null == a || a === b.kEZ.OPENING || a === b.kEZ.OPEN_FAIL;
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(c.Z, {
-                className: E.backgroundArtwork,
+            (0, s.jsx)(r.Z, {
+                className: _.backgroundArtwork,
                 preserveAspectRatio: "xMinYMin slice",
             }),
             (0, s.jsx)("div", {
-                className: E.container,
+                className: _.container,
                 children: (0, s.jsx)(d.ZP, {
                     children: I
                         ? (0, s.jsxs)(s.Fragment, {
@@ -151,7 +151,7 @@ function f(e) {
                         : (0, s.jsxs)(s.Fragment, {
                               children: [
                                   (0, s.jsx)(d.Dx, {
-                                      className: E.appOpenedTitle,
+                                      className: _.appOpenedTitle,
                                       children: j.intl.string(j.t.csrAMJ),
                                   }),
                                   (0, s.jsx)(d.DK, { children: j.intl.string(j.t.ghBJz9) }),

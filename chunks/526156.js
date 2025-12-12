@@ -5,17 +5,17 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(230711),
     c = n(528084),
-    u = n(9352);
+    u = n(964694);
 let d = (e) => {
         let {
                 tabs: t,
                 panelClassName: n,
-                tabsClassName: o,
+                tabsClassName: a,
                 defaultTab: l,
                 onTabChange: c,
                 orientation: d = "horizontal",
@@ -34,10 +34,10 @@ let d = (e) => {
                 _(null != (n = t.find((t) => t.setting === e)) ? n : t[0]), null == c || c(e);
             };
         return (0, r.jsxs)("div", {
-            className: a()(u.tabbedSettingsContainer, { [u.vertical]: "vertical" === d }),
+            className: o()(u.tabbedSettingsContainer, { [u.vertical]: "vertical" === d }),
             children: [
                 (0, r.jsx)(s.njP, {
-                    className: a()(u.tabBar, { [u.vertical]: "vertical" === d }, o),
+                    className: o()(u.tabBar, { [u.vertical]: "vertical" === d }, a),
                     selectedItem: p.setting,
                     onItemSelect: h,
                     orientation: d,
@@ -47,7 +47,7 @@ let d = (e) => {
                         (0, r.jsx)(
                             s.njP.Item,
                             {
-                                className: a()(u.tab, {
+                                className: o()(u.tab, {
                                     [u.vertical]: "vertical" === d,
                                     [u.selected]: e.setting === p.setting,
                                 }),
@@ -62,7 +62,7 @@ let d = (e) => {
                 (0, r.jsx)(s.njP.Panel, {
                     id: p.setting,
                     "aria-labelledby": p.title,
-                    className: a()(u.tabBarPanel, n, { [u.vertical]: "vertical" === d }),
+                    className: o()(u.tabBarPanel, n, { [u.vertical]: "vertical" === d }),
                     children: m(p),
                 }),
             ],
@@ -73,13 +73,13 @@ let d = (e) => {
         let {
                 tabs: n,
                 settingsSection: i,
-                parentSetting: o,
-                panelClassName: a,
+                parentSetting: a,
+                panelClassName: o,
                 defaultTabIndex: s,
                 onTabChange: u,
                 orientation: f = "horizontal",
             } = e,
-            { viewableTabs: p, filteredTab: _ } = (0, c.a)(n, o),
+            { viewableTabs: p, filteredTab: _ } = (0, c.a)(n, a),
             m = null != s ? n[s] : null,
             h = null != (t = null != m ? m : _) ? t : p[0],
             g = (e) => {
@@ -90,6 +90,6 @@ let d = (e) => {
             orientation: f,
             defaultTab: h,
             onTabChange: g,
-            panelClassName: a,
+            panelClassName: o,
         });
     };

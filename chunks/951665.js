@@ -2,11 +2,11 @@ n.d(t, { Z: () => g }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(481060),
-    s = n(457414),
-    a = n(311173),
+    a = n(457414),
+    s = n(311173),
     o = n(388032),
-    c = n(97247);
-function u(e) {
+    c = n(683708);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +31,7 @@ function u(e) {
     }
     return e;
 }
-function d(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,23 +51,23 @@ function d(e, t) {
 }
 function g(e) {
     var t;
-    let { rule: n, onChangeRule: g, collapsed: m = !1 } = e,
-        [p, f] = i.useState(!m),
-        h = i.useCallback(() => {
-            f(!p);
-        }, [p, f]),
-        x = i.useCallback(
+    let { rule: n, onChangeRule: g, collapsed: f = !1 } = e,
+        [m, b] = i.useState(!f),
+        p = i.useCallback(() => {
+            b(!m);
+        }, [m, b]),
+        h = i.useCallback(
             (e) => {
-                g(d(u({}, n), { triggerMetadata: d(u({}, n.triggerMetadata), { regexPatterns: e }) }));
+                g(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
             [g, n],
         );
-    return (0, s.S)(n.triggerType)
+    return (0, a.S)(n.triggerType)
         ? (0, r.jsx)(l.zF9, {
-              isExpanded: p,
-              collapsibleContent: (0, r.jsx)(a.Z, {
+              isExpanded: m,
+              collapsibleContent: (0, r.jsx)(s.Z, {
                   rule: n,
-                  onChangeText: x,
+                  onChangeText: h,
                   className: c.textAreaContainer,
                   initialValue: null == (t = n.triggerMetadata) ? void 0 : t.regexPatterns,
               }),
@@ -76,7 +76,7 @@ function g(e) {
                   let { onClick: t } = e;
                   return (0, r.jsx)(l.P3F, {
                       onClick: (e) => {
-                          h(), t(e);
+                          p(), t(e);
                       },
                       children: (0, r.jsxs)("div", {
                           className: c.header,
@@ -85,7 +85,7 @@ function g(e) {
                                   variant: "text-sm/medium",
                                   children: o.intl.string(o.t["dnunm+"]),
                               }),
-                              p
+                              m
                                   ? (0, r.jsx)(l.u04, {
                                         size: "md",
                                         color: "currentColor",

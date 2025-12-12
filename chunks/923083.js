@@ -1,3 +1,10 @@
-s.exports = JSON.parse(
-    '{"kxF9br":["SDK 透過 RPC 連接"],"8a7IrV":["已註冊連接進入點網址"],"9iLeL2":["網址已設定為 ",[1,"url"]],"AGLx00":["已連接的遊戲流程\uFF1A"],"w0pN4R":["連結帳號"],"yKwZc2":["管理帳號連結"],"aTULMB":["未偵測到認證回呼\u3002如果您已呼叫該函式但仍看到此情況\uFF0C請檢查記錄以取得詳細資訊"],"eg0mNa":["目前沒有可用的有效連結流程\uFF0C因此無法連結"],"OEkrCx":["將使用此流程"],"no+FQS":["將使用第一個可用的連結流程\uFF0C從最上方開始"],"PFxxJa":["如果您的遊戲正在執行且無法連接 Discord\uFF0C請嘗試檢視您的遊戲記錄以進行偵錯"],"S94dzs":["呼叫 RegisterAuthorizeRequestCallback 並已正確執行"],"vR0zs6":["帳號連結"],"KoK4J9":["開發工具\uFF1A",[1,"appName"]],"tkIymA":["取消連結"],"K3ObrU":["網頁流程"]}',
-);
+n.d(t, { _: () => s });
+var r = n(442837),
+    i = n(496675),
+    l = n(430104),
+    a = n(231338);
+function s(e) {
+    let t = (0, l.sP)(),
+        n = (0, r.e7)([i.Z], () => i.Z.can(a.Pl.REQUEST_TO_SPEAK, e));
+    return !t && n;
+}

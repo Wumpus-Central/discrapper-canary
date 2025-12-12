@@ -17,15 +17,15 @@ var r = n(54381),
     g = n(99977),
     h = n(919842),
     m = n(320007),
-    _ = n(719961),
-    b = n(336219),
-    E = n(609174),
+    b = n(719961),
+    E = n(336219),
+    _ = n(609174),
     O = n(257966),
     v = n(111666),
     y = n(413557),
     I = n(300986),
     C = n(314451),
-    S = n(35583),
+    S = n(137899),
     T = n(273959),
     N = n(821020),
     j = n(340137),
@@ -40,7 +40,7 @@ var r = n(54381),
     M = n(228488),
     k = n(950796),
     U = n(741764),
-    G = n(82504);
+    G = n(428754);
 let B = (0, s.U)(() => ({ isOpen: !0 }));
 function H(e) {
     let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: i } = e;
@@ -56,8 +56,8 @@ let V = i.memo(function () {
         D.ZP.setMinimumSize(U.J, U.N);
     }, []);
     let { notificationCenterVariant: e, entrypoint: t } = (0, N.pN)({ location: "AppTitleBar" }),
-        { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, b.t)({ location: "AppTitleBar" }),
-        { backForwardButtons: s, titlebarIconSize: O } = (0, _.T)({ location: "AppTitleBar" }),
+        { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, E.t)({ location: "AppTitleBar" }),
+        { backForwardButtons: s, titlebarIconSize: O } = (0, b.T)({ location: "AppTitleBar" }),
         { hasBugReporterAccess: T } = f.Z.useExperiment({ location: "HeaderBar" }, { autoTrackExposure: !1 }),
         { enabled: B } = g.c.useConfig({ location: "AppTitleBar" }),
         V = (0, o.e7)([w.Z], () => w.Z.isDeveloper),
@@ -115,7 +115,7 @@ let V = i.memo(function () {
                         leading: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 s &&
-                                    (0, r.jsx)(E.Z, {
+                                    (0, r.jsx)(_.Z, {
                                         firstElementFocusJumpSectionProps: "BACK_FORWARD_NAVIGATION" === K ? e : void 0,
                                     }),
                                 z && (0, r.jsx)(j.Z, { focusSectionProps: "NOTIFICATIONS_INBOX" === K ? e : void 0 }),
