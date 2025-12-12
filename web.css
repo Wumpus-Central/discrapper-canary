@@ -94284,16 +94284,16 @@ html.disable-forced-colors * {
         --icon-transparent: color-mix(in oklab, hsl(var(--transparent-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-text-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-black-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blue-new-26) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-default: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
-        --input-border-readonly: color-mix(in oklab, hsl(var(--opacity-white-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blue-new-26) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-default: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-readonly: color-mix(in oklab, hsl(var(--opacity-white-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-foreground-placeholder: color-mix(in oklab, var(--neutral-32) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --input-icon-default: color-mix(in oklab, var(--neutral-16) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-text-default: color-mix(in oklab, var(--neutral-9) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-icon-default: color-mix(in oklab, var(--neutral-16) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-32) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-text-default: color-mix(in oklab, var(--neutral-9) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-text-error-default: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-text-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-text-color-amount, 0%));
@@ -94316,7 +94316,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-default: color-mix(in oklab, hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
         --message-reacted-background-default: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
-        --message-reacted-text-default: color-mix(in oklab, var(--blurple-3) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --message-reacted-text-default: color-mix(in oklab, var(--blurple-3) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-background-scrim-opaque: color-mix(in oklab, var(--black) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-expression-picker-background-default: color-mix(in oklab, var(--neutral-69) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -94993,16 +94993,16 @@ html.disable-forced-colors * {
         --icon-transparent: color-mix(in oklab, hsl(var(--transparent-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-text-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-black-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blue-new-49) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, hsl(var(--opacity-36-hsl)/0.3607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3607843137254902) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-default: color-mix(in oklab, var(--red-new-54) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-54) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-36-hsl)/0.3607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3607843137254902) var(--custom-theme-base-color-amount, 0%));
-        --input-border-readonly: color-mix(in oklab, hsl(var(--opacity-black-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blue-new-49) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, hsl(var(--opacity-36-hsl)/0.3607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3607843137254902) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-default: color-mix(in oklab, var(--red-new-54) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-54) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-36-hsl)/0.3607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3607843137254902) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-readonly: color-mix(in oklab, hsl(var(--opacity-black-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-foreground-placeholder: color-mix(in oklab, var(--neutral-44) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --input-icon-default: color-mix(in oklab, var(--neutral-44) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-44) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-text-default: color-mix(in oklab, var(--neutral-69) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-icon-default: color-mix(in oklab, var(--neutral-44) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-44) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-text-default: color-mix(in oklab, var(--neutral-69) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-text-error-default: color-mix(in oklab, var(--red-new-54) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-text-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-text-color-amount, 0%));
@@ -95025,7 +95025,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-default: color-mix(in oklab, hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --message-reacted-background-default: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
-        --message-reacted-text-default: color-mix(in oklab, var(--blurple-75) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --message-reacted-text-default: color-mix(in oklab, var(--blurple-75) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-background-scrim-opaque: color-mix(in oklab, var(--black) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-expression-picker-background-default: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -95702,16 +95702,16 @@ html.disable-forced-colors * {
         --icon-transparent: color-mix(in oklab, hsl(var(--transparent-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-text-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-black-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blue-new-42) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, hsl(var(--opacity-32-hsl)/0.3215686274509804) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3215686274509804) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-default: color-mix(in oklab, var(--red-new-37) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-37) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-32-hsl)/0.3215686274509804) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3215686274509804) var(--custom-theme-base-color-amount, 0%));
-        --input-border-readonly: color-mix(in oklab, hsl(var(--opacity-white-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blue-new-42) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, hsl(var(--opacity-32-hsl)/0.3215686274509804) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3215686274509804) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-default: color-mix(in oklab, var(--red-new-37) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-37) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-32-hsl)/0.3215686274509804) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.3215686274509804) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-readonly: color-mix(in oklab, hsl(var(--opacity-white-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-foreground-placeholder: color-mix(in oklab, var(--neutral-38) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --input-icon-default: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-38) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-text-default: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-icon-default: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-38) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-text-default: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-text-error-default: color-mix(in oklab, var(--red-new-37) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-text-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-text-color-amount, 0%));
@@ -95734,7 +95734,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-default: color-mix(in oklab, hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
         --message-reacted-background-default: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
-        --message-reacted-text-default: color-mix(in oklab, var(--blurple-21) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --message-reacted-text-default: color-mix(in oklab, var(--blurple-21) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-background-scrim-opaque: color-mix(in oklab, var(--plum-19) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-expression-picker-background-default: color-mix(in oklab, var(--neutral-97) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -96411,16 +96411,16 @@ html.disable-forced-colors * {
         --icon-transparent: color-mix(in oklab, hsl(var(--transparent-hsl)/0) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0) var(--custom-theme-text-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-black-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blue-new-36) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-default: color-mix(in oklab, var(--red-new-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
-        --input-border-readonly: color-mix(in oklab, hsl(var(--opacity-white-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blue-new-36) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-default: color-mix(in oklab, var(--red-new-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-readonly: color-mix(in oklab, hsl(var(--opacity-white-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-foreground-placeholder: color-mix(in oklab, var(--neutral-36) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --input-icon-default: color-mix(in oklab, var(--neutral-23) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-36) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-text-default: color-mix(in oklab, var(--neutral-5) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-icon-default: color-mix(in oklab, var(--neutral-23) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-36) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-text-default: color-mix(in oklab, var(--neutral-5) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-text-error-default: color-mix(in oklab, var(--red-new-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-text-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-text-color-amount, 0%));
@@ -96443,7 +96443,7 @@ html.disable-forced-colors * {
         --message-mentioned-background-default: color-mix(in oklab, hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --message-mentioned-background-hover: color-mix(in oklab, hsl(var(--opacity-yellow-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
         --message-reacted-background-default: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
-        --message-reacted-text-default: color-mix(in oklab, var(--blurple-14) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --message-reacted-text-default: color-mix(in oklab, var(--blurple-14) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --mobile-background-scrim-opaque: color-mix(in oklab, var(--black) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-expression-picker-background-default: color-mix(in oklab, var(--neutral-86) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -96767,15 +96767,15 @@ html.disable-forced-colors * {
         --icon-subtle: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-black-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blue-new-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, var(--neutral-25) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-default: color-mix(in oklab, var(--red-new-6) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-6) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, var(--neutral-5) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blue-new-18) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, var(--neutral-25) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-default: color-mix(in oklab, var(--red-new-6) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-6) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, var(--neutral-5) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-foreground-placeholder: color-mix(in oklab, var(--neutral-29) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --input-icon-default: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-29) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-text-default: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-icon-default: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-29) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-text-default: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-text-error-default: color-mix(in oklab, var(--red-new-6) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-text-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-text-color-amount, 0%));
@@ -97029,15 +97029,15 @@ html.disable-forced-colors * {
         --icon-subtle: color-mix(in oklab, var(--neutral-64) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-black-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blue-new-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, var(--neutral-46) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-default: color-mix(in oklab, var(--red-new-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, var(--neutral-59) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blue-new-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, var(--neutral-46) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-default: color-mix(in oklab, var(--red-new-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, var(--neutral-59) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-foreground-placeholder: color-mix(in oklab, var(--neutral-46) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --input-icon-default: color-mix(in oklab, var(--neutral-64) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-46) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-text-default: color-mix(in oklab, var(--neutral-76) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-icon-default: color-mix(in oklab, var(--neutral-64) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-46) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-text-default: color-mix(in oklab, var(--neutral-76) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-text-error-default: color-mix(in oklab, var(--red-new-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-text-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-text-color-amount, 0%));
@@ -97291,15 +97291,15 @@ html.disable-forced-colors * {
         --icon-subtle: color-mix(in oklab, var(--neutral-15) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-black-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blue-new-27) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, var(--neutral-31) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-default: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, var(--neutral-17) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blue-new-27) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, var(--neutral-31) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-default: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, var(--neutral-17) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-foreground-placeholder: color-mix(in oklab, var(--neutral-36) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --input-icon-default: color-mix(in oklab, var(--neutral-15) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-36) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-text-default: color-mix(in oklab, var(--neutral-6) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-icon-default: color-mix(in oklab, var(--neutral-15) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-36) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-text-default: color-mix(in oklab, var(--neutral-6) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-text-error-default: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-text-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-text-color-amount, 0%));
@@ -97553,15 +97553,15 @@ html.disable-forced-colors * {
         --icon-subtle: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-black-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blue-new-21) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, var(--neutral-28) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-default: color-mix(in oklab, var(--red-new-16) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-16) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, var(--neutral-13) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blue-new-21) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, var(--neutral-28) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-default: color-mix(in oklab, var(--red-new-16) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-16) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, var(--neutral-13) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-foreground-placeholder: color-mix(in oklab, var(--neutral-34) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --input-icon-default: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-34) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-text-default: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --input-icon-default: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-placeholder-text-default: color-mix(in oklab, var(--neutral-34) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --input-text-default: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-text-error-default: color-mix(in oklab, var(--red-new-16) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-text-color-amount, 0%));
         --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-text-color-amount, 0%));
@@ -101118,10 +101118,10 @@ html.disable-forced-colors * {
     .mana-text-inputs.theme-dark {
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-red-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, hsl(var(--opacity-white-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-36) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-44-hsl)/0.4392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.4392156862745098) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, hsl(var(--opacity-white-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-36) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-44-hsl)/0.4392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.4392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-text-error-default: color-mix(in oklab, var(--neutral-9) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%))
     }
 }
@@ -101143,10 +101143,10 @@ html.disable-forced-colors * {
     .mana-text-inputs.theme-light {
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-1-hsl)/0.0196078431372549) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0196078431372549) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-red-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, hsl(var(--opacity-black-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-66) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-48-hsl)/0.47843137254901963) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.47843137254901963) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, hsl(var(--opacity-black-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-66) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-48-hsl)/0.47843137254901963) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.47843137254901963) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-text-error-default: color-mix(in oklab, var(--neutral-69) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%))
     }
 }
@@ -101168,10 +101168,10 @@ html.disable-forced-colors * {
     .mana-text-inputs.theme-midnight {
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-red-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, hsl(var(--opacity-white-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-23) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-44-hsl)/0.4392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.4392156862745098) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, hsl(var(--opacity-white-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-23) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-44-hsl)/0.4392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.4392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-text-error-default: color-mix(in oklab, var(--neutral-10) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%))
     }
 }
@@ -101193,10 +101193,10 @@ html.disable-forced-colors * {
     .mana-text-inputs.theme-darker {
         --input-background-default: color-mix(in oklab, hsl(var(--opacity-black-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --input-background-error-default: color-mix(in oklab, hsl(var(--opacity-red-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-base-color-amount, 0%));
-        --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-default: color-mix(in oklab, hsl(var(--opacity-white-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
-        --input-border-error-hover: color-mix(in oklab, var(--red-new-45) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-44-hsl)/0.4392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.4392156862745098) var(--custom-theme-base-color-amount, 0%));
+        --input-border-active: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-default: color-mix(in oklab, hsl(var(--opacity-white-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-error-hover: color-mix(in oklab, var(--red-new-45) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --input-border-hover: color-mix(in oklab, hsl(var(--opacity-44-hsl)/0.4392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.4392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --input-text-error-default: color-mix(in oklab, var(--neutral-5) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%))
     }
 }
