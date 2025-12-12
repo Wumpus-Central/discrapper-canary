@@ -88,6 +88,8 @@ var d = (function (e) {
             (e.QUALCOMM = "qualcomm"),
             (e.MEDIATEK = "mediatek"),
             (e.WMF_SW = "wmf_sw"),
+            (e.WMF_HW = "wmf_hw"),
+            (e.WMF_DIRECT_3D = "wmf_direct_3d"),
             (e.UNCATEGORIZED = "uncategorized"),
             (e.UNKNOWN = "unknown"),
             e
@@ -126,6 +128,8 @@ let _ = Object.freeze({
         "c2.mtk": "mediatek",
         "omx.mtk": "mediatek",
         "mediafoundation sw": "wmf_sw",
+        "mediafoundation hw": "wmf_hw",
+        "mediafoundation direct3d": "wmf_direct_3d",
     }),
     m = Object.freeze({
         videotoolbox: "videotoolbox",

@@ -75,10 +75,10 @@ let A = 50,
     N = 0.9,
     P = 0.1,
     R = 0;
-function D(e) {
+function w(e) {
     return (null != e ? e : v.Qx) / v.Qx;
 }
-function w(e) {
+function D(e) {
     return null != e && 0 !== e ? e + 1 : 0;
 }
 class x extends p.Z {
@@ -414,7 +414,7 @@ class x extends p.Z {
                     ssrc: t,
                     videoSsrc: r,
                     videoSsrcs: n,
-                    rtxSsrc: w(r),
+                    rtxSsrc: D(r),
                     mute: this.getLocalMute(e),
                     volume: this.getLocalVolume(e),
                 };
@@ -515,7 +515,7 @@ class x extends p.Z {
     }
     getLocalVolume(e) {
         let t = this.localVolumes[e];
-        return null == t && (t = this.context === v.Yn.DEFAULT ? v.Qx : v.Yh), D(t);
+        return null == t && (t = this.context === v.Yn.DEFAULT ? v.Qx : v.Yh), w(t);
     }
     setLocalVolume(e, t) {
         this.localVolumes[e] = t;
@@ -816,7 +816,7 @@ class x extends p.Z {
                     null,
                     this.audioSSRC,
                     this.videoStreamParameters[s].ssrc,
-                    w(this.videoStreamParameters[s].ssrc),
+                    D(this.videoStreamParameters[s].ssrc),
                     this.videoStreamParameters,
                 ),
                 this.conn.setTransportOptions(this.applyQualityConstraints().constraints));
@@ -912,7 +912,7 @@ class x extends p.Z {
                 ssrc: this.remoteAudioSSRCs[e],
                 videoSsrc: t,
                 videoSsrcs: this.remoteVideoSSRCs[e],
-                rtxSsrc: w(t),
+                rtxSsrc: D(t),
                 mute: this.getLocalMute(e),
                 volume: this.getLocalVolume(e),
             };
@@ -1016,7 +1016,8 @@ class x extends p.Z {
                     this.experimentFlags.has(O.V8.VIDEOTOOLBOX_RATE_CONTROL) &&
                         (u.params["fixed-rate-presentation-timestamps"] = "1"),
                     this.experimentFlags.has(O.V8.LOW_LATENCY_RATE_CONTROL) &&
-                        (u.params["low-latency-rate-control"] = "1"));
+                        (u.params["low-latency-rate-control"] = "1"),
+                    this.experimentFlags.has(O.V8.WMF_GPU_ENCODE) && (u.params["wmf-gpu"] = "1"));
         }
         return {
             videoEncoder: u,
@@ -1260,7 +1261,7 @@ class x extends p.Z {
                               });
                           })
                         : t > 0
-                          ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = w(t)))
+                          ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = D(t)))
                           : (i[0].active = !1)
                     : t > 0 &&
                       (void 0 !== this.remoteVideoSSRCs[e]
@@ -1274,7 +1275,7 @@ class x extends p.Z {
                         null != n && "" !== n ? n : null,
                         e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e],
                         t,
-                        w(t),
+                        D(t),
                         this.videoStreamParameters,
                     );
             }),

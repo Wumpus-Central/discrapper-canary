@@ -22,7 +22,7 @@ n.d(t, {
     Uc: () => en,
     V8: () => et,
     WA: () => y,
-    XR: () => B,
+    XR: () => F,
     YE: () => G,
     Yh: () => f,
     Yn: () => i,
@@ -38,7 +38,7 @@ n.d(t, {
     h7: () => a,
     iA: () => q,
     jg: () => E,
-    kS: () => F,
+    kS: () => B,
     mC: () => C,
     mN: () => T,
     n4: () => Y,
@@ -130,7 +130,7 @@ let d = 100,
     U = 500000,
     G = 3500000,
     Z = 9000000,
-    B = [
+    F = [
         "remoteSinkWantsPixelCount",
         "remoteSinkWantsMaxFramerate",
         "encodingVideoMinBitRate",
@@ -138,7 +138,7 @@ let d = 100,
         "encodingVideoBitRate",
         "streamParameters",
     ],
-    F = {
+    B = {
         videoBudget: {
             width: 1280,
             height: 720,
@@ -290,6 +290,7 @@ var K = (function (e) {
             (e.LOW_LATENCY_RATE_CONTROL = "low_latency_rate_control"),
             (e.H265_HARDWARE_ONLY = "h265_hardware_only"),
             (e.H265_HARDWARE_DECODE_AVAILABLE = "h265_hardware_decode_available"),
+            (e.WMF_GPU_ENCODE = "wmf_gpu_encode"),
             e
         );
     })({}),
