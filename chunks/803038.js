@@ -1,7 +1,6 @@
-n.d(t, { Mc: () => a });
 var r = n(818083),
     i = n(987338);
-let a = (0, r.B)({
+(0, r.B)({
     id: "2025-05_client_theme_color_picker",
     kind: "user",
     label: "Client Theme Color Picker",

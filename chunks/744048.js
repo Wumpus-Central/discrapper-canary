@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(539854), n(388685);
+n.d(t, { Z: () => O }), n(539854), n(388685);
 var r = n(54381),
     i = n(442837),
     a = n(704215),
@@ -7,69 +7,68 @@ var r = n(54381),
     l = n(514361),
     c = n(662975),
     u = n(724145),
-    d = n(771934),
-    f = n(884134),
-    p = n(266454),
-    _ = n(243778),
-    m = n(819640),
-    h = n(594174),
-    g = n(74538),
-    E = n(550385),
-    b = n(981631),
-    y = n(921944),
-    O = n(223399);
-let v = function (e) {
+    d = n(884134),
+    f = n(266454),
+    p = n(243778),
+    _ = n(819640),
+    m = n(594174),
+    h = n(74538),
+    g = n(550385),
+    E = n(981631),
+    b = n(921944),
+    y = n(852750);
+let O = function (e) {
     let { mobile: t } = e,
-        n = (0, i.e7)([m.Z], () => m.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
-        v = (0, i.e7)([h.default], () => g.ZP.canUseClientThemes(h.default.getCurrentUser())),
-        S = (0, i.e7)([l.Z], () => l.Z.isCoachmark),
-        I = (0, c.g)(),
-        { activePanel: T, metadata: C } = (0, E.oq)(),
-        A = [];
-    !n && null == T && (S && !v && A.push(a.z.CLIENT_THEMES_COACHMARK), I && A.push(a.z.CUSTOM_THEME_COACHMARK));
-    let [N, P] = (0, _.US)(A, y.R.SIDEBAR, !0),
-        R = N === a.z.CLIENT_THEMES_COACHMARK,
-        D = N === a.z.CUSTOM_THEME_COACHMARK;
-    if (((0, d.HA)(I, N), n)) return null;
-    let w = T === E.wh.CLIENT_THEMES || R,
-        x = T === E.wh.APP_ICON,
-        L = T === E.wh.CUSTOM_THEME || D,
-        j = T === E.wh.APPLICATION_TEST_MODE_DEBUG;
-    if (!(w || x || L || j)) return null;
-    let M = () =>
+        n = (0, i.e7)([_.Z], () => _.Z.getLayers().includes(E.S9g.USER_SETTINGS)),
+        O = (0, i.e7)([m.default], () => h.ZP.canUseClientThemes(m.default.getCurrentUser())),
+        v = (0, i.e7)([l.Z], () => l.Z.isCoachmark),
+        S = (0, c.g)(),
+        { activePanel: I, metadata: T } = (0, g.oq)(),
+        C = [];
+    !n && null == I && (v && !O && C.push(a.z.CLIENT_THEMES_COACHMARK), S && O && C.push(a.z.CUSTOM_THEME_COACHMARK));
+    let [A, N] = (0, p.US)(C, b.R.SIDEBAR, !0),
+        P = A === a.z.CLIENT_THEMES_COACHMARK,
+        R = A === a.z.CUSTOM_THEME_COACHMARK;
+    if (n) return null;
+    let w = I === g.wh.CLIENT_THEMES || P,
+        D = I === g.wh.APP_ICON,
+        x = I === g.wh.CUSTOM_THEME || R,
+        L = I === g.wh.APPLICATION_TEST_MODE_DEBUG;
+    if (!(w || D || x || L)) return null;
+    let j = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
                 w &&
                     (0, r.jsx)(u.Z, {
-                        markAsDismissed: R
-                            ? P
+                        markAsDismissed: P
+                            ? N
                             : () => {
-                                  (0, p.Q3)(a.z.CLIENT_THEMES_COACHMARK, {
-                                      dismissAction: y.L.INDIRECT_ACTION,
+                                  (0, f.Q3)(a.z.CLIENT_THEMES_COACHMARK, {
+                                      dismissAction: b.L.INDIRECT_ACTION,
                                       forceTrack: !0,
                                   });
                               },
-                        showClientThemesCoachmark: R,
+                        showClientThemesCoachmark: P,
                     }),
-                x &&
+                D &&
                     (0, r.jsx)(o.Z, {
                         isCoachmark: !1,
-                        markAsDismissed: P,
+                        markAsDismissed: N,
                     }),
-                L &&
-                    (0, r.jsx)(f.Z, {
-                        metadata: null != C ? C : {},
-                        markAsDismissed: P,
-                        isCoachmark: D,
+                x &&
+                    (0, r.jsx)(d.Z, {
+                        metadata: null != T ? T : {},
+                        markAsDismissed: N,
+                        isCoachmark: R,
                         isMobile: t,
                     }),
-                j && (0, r.jsx)(s.Z, {}),
+                L && (0, r.jsx)(s.Z, {}),
             ],
         });
     return t
         ? (0, r.jsx)("div", {
-              className: O.mobileContainer,
-              children: M(),
+              className: y.mobileContainer,
+              children: j(),
           })
-        : M();
+        : j();
 };

@@ -92954,11 +92954,7 @@ html.disable-forced-colors * {
     flex-direction: column
 }
 
-._5a2dfc677f2b8493-coachmarkHeaderTextContainer {
-    margin-top: var(--space-4)
-}
-
-._5a2dfc677f2b8493-badgeAndCloseRow {
+._5a2dfc677f2b8493-headerAndCloseRow {
     align-items: center;
     display: flex;
     justify-content: space-between;

@@ -1,14 +1,11 @@
 n.d(t, {
-    Aq: () => Z,
-    Do: () => k,
-    Kl: () => F,
-    ZP: () => H,
-    bn: () => G,
-    cI: () => U,
-    cv: () => w,
-    f0: () => L,
-    gE: () => j,
-    og: () => M,
+    Aq: () => k,
+    Kl: () => G,
+    ZP: () => F,
+    bn: () => M,
+    cI: () => j,
+    f0: () => x,
+    gE: () => L,
 }),
     n(388685),
     n(290780);
@@ -144,14 +141,14 @@ let h = new (n(499303).I)(),
         null != e.prevFatigableCandidate &&
         e.candidates.has(e.prevFatigableCandidate.content) &&
         null == e.shownFatigableCandidate,
-    D = (e) => {
+    w = (e) => {
         if (0 === e.candidates.size) return e;
         let t = new Date().getTime() - e.lastWinnerTime > g;
         return R(e) && !t
             ? (h.unschedule(), A(e, N(e)))
             : ((null != e.shownFatigableCandidate && !t) ||
                   h.scheduled() ||
-                  x(e) ||
+                  D(e) ||
                   h.schedule(() => {
                       (0, a.j)(() => {
                           y.setState((e) => {
@@ -162,43 +159,34 @@ let h = new (n(499303).I)(),
                   }, 250),
               e);
     },
-    w = () => x(y.getState()),
-    x = (e) => {
+    D = (e) => {
         let t = new Date().getTime();
         return null == e.shownFatigableCandidate && t - e.lastWinnerTime < E;
     },
-    L = (e) => {
+    x = (e) => {
         let t = d.O.has(e.content);
         (0, a.j)(() => {
             y.setState((n) => {
                 let r = v(n);
-                return O ? r : t ? I(r, e) : D(T(r, e));
+                return O ? r : t ? I(r, e) : w(T(r, e));
             });
         });
     },
-    j = (e, t) => {
+    L = (e, t) => {
         (0, a.j)(() => {
             y.setState((n) => {
                 let r = v(n);
-                return t ? D(S(C(r, e), e)) : S(C(r, e), e);
+                return t ? w(S(C(r, e), e)) : S(C(r, e), e);
             });
         });
     },
-    M = () => {
-        var e;
-        return null != (e = y.getState().recentlyShown[0]) ? e : null;
-    },
+    j = (e) => y.getState().currentlyShown.has(e),
+    M = (e) => y((t) => t.currentlyShown.has(e)),
     k = () => {
-        var e, t;
-        return null != (t = null == (e = y.getState().shownFatigableCandidate) ? void 0 : e.content) ? t : null;
-    },
-    U = (e) => y.getState().currentlyShown.has(e),
-    G = (e) => y((t) => t.currentlyShown.has(e)),
-    Z = () => {
         let e = [...y.getState().currentlyShown].filter((e) => !d.O.has(e)).length;
         return [y.getState().currentlyShown.size, e];
     },
-    B = () => {
+    U = () => {
         (0, a.j)(() => {
             y.setState(() => {
                 let e = b();
@@ -207,8 +195,8 @@ let h = new (n(499303).I)(),
         }),
             h.unschedule();
     },
-    F = () => y.getState().postConnectionOpen;
-class V extends (r = o.ZP.Store) {
+    G = () => y.getState().postConnectionOpen;
+class Z extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(l.Z, u.Z), this.syncWith([l.Z, u.Z], () => this.setHasRequiredAction());
     }
@@ -216,11 +204,11 @@ class V extends (r = o.ZP.Store) {
         O = (0, c.Z)(l.Z, u.Z);
     }
 }
-function H(e, t) {
+function F(e, t) {
     return y(e, t);
 }
-f(V, "displayName", "DismissibleContentShownStateStore"),
-    new V(s.Z, {
-        CONNECTION_OPEN: () => B(),
-        LOGOUT: () => B(),
+f(Z, "displayName", "DismissibleContentShownStateStore"),
+    new Z(s.Z, {
+        CONNECTION_OPEN: () => U(),
+        LOGOUT: () => U(),
     });
