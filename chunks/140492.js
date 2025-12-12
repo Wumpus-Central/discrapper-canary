@@ -18,8 +18,8 @@ let g = () => {
     return [
         m.Z5c.FRIENDS,
         (0, a.VZ)("navigateToChannel") ? m.Z5c.ICYMI : null,
-        e ? m.Z5c.MESSAGE_REQUESTS : null,
         u.Z.hasLibraryApplication() && !c.bm.getSetting() ? m.Z5c.APPLICATION_LIBRARY : null,
+        e ? m.Z5c.MESSAGE_REQUESTS : null,
         m.Z5c.APPLICATION_STORE,
         m.Z5c.COLLECTIBLES_SHOP,
         c.Ex.getSetting() ? m.Z5c.FAMILY_CENTER : null,
