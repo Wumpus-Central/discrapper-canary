@@ -4,7 +4,7 @@ n.d(t, {
     Em: () => N,
     IC: () => E,
     J9: () => P,
-    ON: () => D,
+    ON: () => w,
     Ql: () => f,
     UO: () => A,
     US: () => v,
@@ -95,11 +95,11 @@ function c(e, t) {
     return i;
 }
 function u(e) {
-    return "function" == typeof (null == e ? void 0 : e.buildLayout);
+    return "buildLayout" in e && "function" == typeof e.buildLayout;
 }
 function d(e) {
     if (u(e)) {
-        let t = e.buildLayout().map((e) => d(e)),
+        let t = e.buildLayout().map(d),
             { buildLayout: n } = e,
             r = s(a({}, l(e, ["buildLayout"])), { layout: t });
         return t.forEach((e) => (e.parent = r)), r;
@@ -169,6 +169,6 @@ function P(e, t) {
 function R(e, t) {
     return I(e, r.Jq.NAVIGATOR, t);
 }
-function D(e, t) {
+function w(e, t) {
     return I(e, r.Jq.CUSTOM, t);
 }
