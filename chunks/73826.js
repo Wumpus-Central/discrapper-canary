@@ -1,36 +1,43 @@
-n.d(t, { Z: () => h });
-var a = n(54381);
-n(473749);
-var r = n(120356),
-    i = n.n(r),
-    l = n(467721),
-    s = n(481060),
-    o = n(49436),
-    c = n(644646),
-    d = n(617889),
-    u = n(324805),
-    m = n(388032),
-    p = n(905952);
-let h = (e) => {
-    let { quest: t, expansionSpring: n, isFullyExpanded: r, partnerBranding: h, useReducedMotion: x } = e,
-        f = (0, d.qe)().label,
-        g = f ? -4 : 6;
+n.d(t, { Z: () => v });
+var a = n(54381),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
+    s = n(467721),
+    o = n(442837),
+    c = n(481060),
+    d = n(607070),
+    u = n(49436),
+    m = n(644646),
+    p = n(444134),
+    h = n(526188),
+    f = n(617889),
+    x = n(324805),
+    b = n(388032),
+    g = n(964907);
+let v = (e) => {
+    let { isFullyExpanded: t, partnerBranding: n } = e,
+        i = (0, f.qe)().label,
+        v = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        { quest: j } = r.useContext(h.A),
+        { expansionSpring: y } = r.useContext(p.xo),
+        C = i ? -4 : 6;
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(l.animated.div, {
-                className: p.rewardTileContainer,
+            (0, a.jsx)(s.animated.div, {
+                className: g.rewardTileContainer,
                 style: {
-                    transform: (0, l.to)(
+                    transform: (0, s.to)(
                         [
-                            n.to({
+                            y.to({
                                 range: [0, 1],
                                 output: [0, 0],
                             }),
-                            n.to({
+                            y.to({
                                 range: [0, 1],
                                 output: [0, 82],
                             }),
-                            n.to({
+                            y.to({
                                 range: [0, 1],
                                 output: [1, 64 / 48],
                             }),
@@ -38,14 +45,14 @@ let h = (e) => {
                         (e, t, n) => "translate(".concat(e, "px, ").concat(t, "px) scale(").concat(n, ")"),
                     ),
                 },
-                children: (0, a.jsx)(c.Z, {
+                children: (0, a.jsx)(m.Z, {
                     learnMoreStyle: "text",
-                    learnMoreFontSize: r ? 9 : void 0,
-                    quest: t,
-                    questContent: o.jn.QUEST_BAR_V2,
-                    location: u.dr.QUESTS_BAR,
-                    autoplay: r && !x,
-                    sourceQuestContent: o.jn.QUEST_BAR_V2,
+                    learnMoreFontSize: t ? 9 : void 0,
+                    quest: j,
+                    questContent: u.jn.QUEST_BAR_V2,
+                    location: x.dr.QUESTS_BAR,
+                    autoplay: t && !v,
+                    sourceQuestContent: u.jn.QUEST_BAR_V2,
                     style: {
                         width: 48,
                         height: 48,
@@ -54,18 +61,18 @@ let h = (e) => {
                     },
                 }),
             }),
-            (0, a.jsxs)(l.animated.div, {
-                className: i()(p.rewardHighlightLogoCTA, { [p.rewardHighlightLogoCTALabel]: f }),
+            (0, a.jsxs)(s.animated.div, {
+                className: l()(g.rewardHighlightLogoCTA, { [g.rewardHighlightLogoCTALabel]: i }),
                 style: {
-                    transform: (0, l.to)(
+                    transform: (0, s.to)(
                         [
-                            n.to({
+                            y.to({
                                 range: [0, 1],
                                 output: [0, -48],
                             }),
-                            n.to({
+                            y.to({
                                 range: [0, 1],
-                                output: [0, g],
+                                output: [0, C],
                             }),
                         ],
                         (e, t) => "translate(".concat(e, "px, ").concat(t, "px)"),
@@ -73,22 +80,22 @@ let h = (e) => {
                 },
                 children: [
                     (0, a.jsx)("div", {
-                        className: i()({ [p.partnerBranding]: !f }),
-                        children: h,
+                        className: l()({ [g.partnerBranding]: !i }),
+                        children: n,
                     }),
-                    (0, a.jsx)(l.animated.div, {
-                        className: i()(p.rewardHighlightCTA, { [p.rewardHighlightCTALabel]: f }),
+                    (0, a.jsx)(s.animated.div, {
+                        className: l()(g.rewardHighlightCTA, { [g.rewardHighlightCTALabel]: i }),
                         style: {
-                            opacity: n.to({
+                            opacity: y.to({
                                 range: [0, 1],
-                                output: [f ? 1 : 0.7, 0],
+                                output: [i ? 1 : 0.7, 0],
                             }),
                         },
-                        children: (0, a.jsx)(s.Text, {
+                        children: (0, a.jsx)(c.Text, {
                             color: "always-white",
                             lineClamp: 1,
                             variant: "text-xs/medium",
-                            children: m.intl.string(m.t["3mgEQf"]),
+                            children: b.intl.string(b.t["3mgEQf"]),
                         }),
                     }),
                 ],

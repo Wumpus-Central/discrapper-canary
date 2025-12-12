@@ -5,6 +5,7 @@ n.d(t, {
     eC: () => u,
     m_: () => s,
     n0: () => d,
+    nj: () => f,
 });
 var r = n(427164);
 let i = (0, r.le)({
@@ -101,6 +102,12 @@ let l = (0, r.le)({
     },
     d = (0, r.le)({
         name: "2025-11-quest-home-takeover-client-rollout",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    }),
+    f = (0, r.le)({
+        name: "2025-11-quest-bar-listen-for-source-error",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },

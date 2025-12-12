@@ -1,37 +1,39 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var a = n(54381),
-    r = n(120356),
-    i = n.n(r),
-    l = n(481060),
-    s = n(49436),
-    o = n(968843),
-    c = n(698716),
-    d = n(388032),
-    u = n(933393);
-function m(e) {
-    let { quest: t, onCtxMenuOpen: n, onCtxMenuClose: r, onCtxMenuSelect: m } = e,
-        p = (0, o.B6)(t.config.expiresAt);
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
+    s = n(481060),
+    o = n(49436),
+    c = n(968843),
+    d = n(698716),
+    u = n(526188),
+    m = n(388032),
+    p = n(782589);
+function h() {
+    let { quest: e, onCtxMenuOpen: t, onCtxMenuClose: n, onCtxMenuSelect: i } = r.useContext(u.A),
+        h = (0, c.B6)(e.config.expiresAt);
     return (0, a.jsxs)("div", {
-        className: u.questAcceptedHeader,
+        className: p.questAcceptedHeader,
         children: [
-            (0, a.jsx)(l.Text, {
+            (0, a.jsx)(s.Text, {
                 variant: "text-xxs/medium",
-                className: i()(u.flex, u.headerText),
-                children: d.intl.format(d.t["pX+fmn"], { expirationDate: p }),
+                className: l()(p.flex, p.headerText),
+                children: m.intl.format(m.t["pX+fmn"], { expirationDate: h }),
             }),
-            (0, a.jsx)(c.i, {
-                onOpen: n,
-                onClose: r,
-                onSelect: m,
-                questContent: s.jn.QUEST_BAR_V2,
-                quest: t,
+            (0, a.jsx)(d.i, {
+                onOpen: t,
+                onClose: n,
+                onSelect: i,
+                questContent: o.jn.QUEST_BAR_V2,
+                quest: e,
                 shouldShowDisclosure: !1,
                 showShareLink: !0,
-                sourceQuestContent: s.jn.QUEST_BAR_V2,
+                sourceQuestContent: o.jn.QUEST_BAR_V2,
                 children: (e) => {
                     var t, n;
                     return (0, a.jsx)(
-                        l.P3F,
+                        s.P3F,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -59,12 +61,12 @@ function m(e) {
                         })({}, e)),
                         (n = n =
                             {
-                                className: u.submenuWrapper,
-                                "aria-label": d.intl.string(d.t.DEoVWZ),
-                                children: (0, a.jsx)(l.xhG, {
+                                className: p.submenuWrapper,
+                                "aria-label": m.intl.string(m.t.DEoVWZ),
+                                children: (0, a.jsx)(s.xhG, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: i()(u.submenuIcon, u.interactiveNormal),
+                                    className: l()(p.submenuIcon, p.interactiveNormal),
                                 }),
                             }),
                         Object.getOwnPropertyDescriptors

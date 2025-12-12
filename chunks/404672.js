@@ -1,15 +1,21 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var a = n(54381),
     r = n(473749),
     i = n(467721),
-    l = n(444134);
-function s(e) {
-    let { expansionSpring: t, isExpanded: n } = e,
-        { animatedComponentProps: s, recalculateAnimationPositions: o, mountPoints: c } = r.useContext(l.xo);
+    l = n(444134),
+    s = n(526188);
+function o() {
+    let {
+            expansionSpring: e,
+            animatedComponentProps: t,
+            recalculateAnimationPositions: n,
+            mountPoints: o,
+        } = r.useContext(l.xo),
+        { isExpanded: c } = r.useContext(s.A);
     return (
         r.useEffect(() => {
-            o();
-        }, [o, n]),
+            n();
+        }, [n, c]),
         (0, a.jsx)("div", {
             style: {
                 overflow: "hidden",
@@ -21,9 +27,9 @@ function s(e) {
                 height: "100%",
                 zIndex: 5,
             },
-            children: s.map((e) => {
-                let { id: n, collapsedLeft: r, expandedLeft: l, collapsedTop: s, expandedTop: o, width: d } = e,
-                    u = c.get(n);
+            children: t.map((t) => {
+                let { id: n, collapsedLeft: r, expandedLeft: l, collapsedTop: s, expandedTop: c, width: d } = t,
+                    u = o.get(n);
                 return (0, a.jsx)(
                     i.animated.div,
                     {
@@ -36,13 +42,13 @@ function s(e) {
                             width: d,
                             transform: (0, i.to)(
                                 [
-                                    t.to({
+                                    e.to({
                                         range: [0, 1],
                                         output: [r, l],
                                     }),
-                                    t.to({
+                                    e.to({
                                         range: [0, 1],
-                                        output: [s, o],
+                                        output: [s, c],
                                     }),
                                 ],
                                 (e, t) => "translate(".concat(e, "px, ").concat(t, "px)"),
