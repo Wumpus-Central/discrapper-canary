@@ -1,41 +1,41 @@
-a.d(e, { default: () => p }), a(388685);
-var s = a(54381),
-    n = a(473749),
-    i = a(990547),
-    r = a(793030),
-    l = a(481060),
-    o = a(479531),
-    c = a(388032),
-    u = a(800010);
+s.d(e, { default: () => p }), s(388685);
+var a = s(54381),
+    n = s(473749),
+    i = s(990547),
+    r = s(793030),
+    l = s(481060),
+    o = s(479531),
+    c = s(388032),
+    u = s(800010);
 function p(t) {
     let {
             transitionState: e,
-            onFormSubmit: a,
+            onFormSubmit: s,
             onResend: p,
             onSuccess: y,
-            onClose: d,
-            headerText: h,
-            confirmButtonText: g,
-            confirmButtonVariant: T = "primary",
-            impression: f,
+            onClose: g,
+            headerText: d,
+            confirmButtonText: h,
+            confirmButtonVariant: x = "primary",
+            impression: T,
         } = t,
-        [m, x] = n.useState(!1),
+        [f, m] = n.useState(!1),
         [S, w] = n.useState(""),
         [C, b] = n.useState(!1),
         [k, v] = n.useState(null),
         E = n.useRef(null),
         j = async (t) => {
-            t.preventDefault(), v(null), x(!0);
+            t.preventDefault(), v(null), m(!0);
             try {
-                let t = await a(S);
-                null != y && y(t), d();
+                let t = await s(S);
+                null != y && y(t), g();
             } catch (t) {
                 v(new o.Z(t).getAnyErrorMessage());
             } finally {
-                x(!1);
+                m(!1);
             }
         },
-        M = async () => {
+        A = async () => {
             if (!C) {
                 b(!0);
                 try {
@@ -48,49 +48,50 @@ function p(t) {
                 }
             }
         },
-        A = m || C;
-    return (0, s.jsx)("form", {
+        M = f || C;
+    return (0, a.jsx)("form", {
         onSubmit: j,
-        children: (0, s.jsx)(r.ExpressiveModal, {
+        children: (0, a.jsx)(r.ExpressiveModal, {
             transitionState: e,
             trackingProps: {
-                impression: f,
+                impression: T,
                 impressionType: i.ImpressionTypes.MODAL,
             },
             graphic: {
                 src: u,
                 type: "image",
             },
-            title: h,
+            title: d,
             subtitle: c.intl.string(c.t.SZJowy),
             actions: [
                 {
                     text: c.intl.string(c.t["ETE/oC"]),
-                    onClick: d,
+                    onClick: g,
                     variant: "secondary",
-                    disabled: A,
+                    disabled: M,
                 },
                 {
-                    text: g,
-                    variant: T,
-                    loading: A,
+                    text: h,
+                    variant: x,
+                    loading: M,
                     type: "submit",
                 },
             ],
-            onClose: d,
-            children: (0, s.jsxs)(l.Kqy, {
+            onClose: g,
+            children: (0, a.jsxs)(l.Kqy, {
                 gap: 8,
                 children: [
-                    (0, s.jsx)(l.oil, {
+                    (0, a.jsx)(l.oil, {
                         label: c.intl.string(c.t["8mZX6M"]),
                         error: k,
                         value: S,
                         onChange: w,
                         inputRef: E,
                     }),
-                    (0, s.jsx)(l.Text, {
-                        variant: "text-sm/normal",
-                        children: c.intl.format(c.t.P0sak5, { onResend: M }),
+                    (0, a.jsx)(r.Avr, {
+                        textVariant: "text-sm/normal",
+                        text: c.intl.string(c.t.K0NPQ6),
+                        onClick: A,
                     }),
                 ],
             }),
