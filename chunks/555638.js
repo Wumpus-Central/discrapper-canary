@@ -1,45 +1,45 @@
-n.d(t, { A: () => d });
-var o = n(54381);
-n(473749);
-var i = n(212598),
-    a = n(388032),
-    r = n(60236),
-    s = n(254564);
-function d(e) {
+e.d(n, { A: () => c });
+var o = e(54381);
+e(473749);
+var i = e(212598),
+    r = e(388032),
+    s = e(436200),
+    a = e(757685);
+function c(t) {
     let {
-            platformType: t,
-            isWaitingForConnection: n,
-            onWaitingForConnection: d,
-            expectedCallbackState: c,
-            onAuthToken: l,
-            onError: b,
-            onClose: u,
-        } = e,
-        p = n
+            platformType: n,
+            isWaitingForConnection: e,
+            onWaitingForConnection: c,
+            expectedCallbackState: l,
+            onAuthToken: d,
+            onError: u,
+            onClose: p,
+        } = t,
+        _ = e
             ? (0, o.jsx)("img", {
-                  src: s.Z,
+                  src: a.Z,
                   width: "231",
                   height: "172",
                   alt: "",
               })
             : (0, o.jsx)("img", {
-                  src: r.Z,
+                  src: s.Z,
                   width: "231",
                   height: "160",
                   alt: "",
               }),
-        C = n ? a.intl.string(a.t.TTIocg) : a.intl.string(a.t["6n+UPR"]),
-        h = n ? a.intl.string(a.t.MNmoKH) : a.intl.string(a.t.JaaqIf);
+        b = e ? r.intl.string(r.t.TTIocg) : r.intl.string(r.t["6n+UPR"]),
+        C = e ? r.intl.string(r.t.MNmoKH) : r.intl.string(r.t.JaaqIf);
     return (0, o.jsx)(i.t, {
-        platformType: t,
-        isWaitingForConnection: n,
-        onWaitingForConnection: d,
-        expectedCallbackState: c,
-        onAuthToken: l,
-        onError: b,
-        onClose: u,
-        img: p,
-        title: C,
-        body: h,
+        platformType: n,
+        isWaitingForConnection: e,
+        onWaitingForConnection: c,
+        expectedCallbackState: l,
+        onAuthToken: d,
+        onError: u,
+        onClose: p,
+        img: _,
+        title: b,
+        body: C,
     });
 }

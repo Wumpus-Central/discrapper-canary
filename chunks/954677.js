@@ -1,0 +1,18 @@
+e.exports = {
+    container: "container__63ed3",
+    bot: "bot__63ed3",
+    clickableUsername: "clickableUsername__63ed3",
+    nickname: "nickname__63ed3",
+    userTagUsername: "userTagUsername__63ed3",
+    nicknameWithDisplayNameStyles: "nicknameWithDisplayNameStyles__63ed3",
+    nicknameIcons: "nicknameIcons__63ed3",
+    usernameRow: "usernameRow__63ed3",
+    tags: "tags__63ed3",
+    pronouns: "pronouns__63ed3",
+    userTag: "userTag__63ed3",
+    pronounsText: "pronounsText__63ed3 userTag__63ed3",
+    userTagDiscriminator: "userTagDiscriminator__63ed3",
+    dotSpacer: "dotSpacer__63ed3",
+    guildTagContainer: "guildTagContainer__63ed3",
+    guildTag: "guildTag__63ed3",
+};

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => L });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(681715),
     c = n(755721),
@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(938736),
     v = n(981631),
     S = n(388032),
-    I = n(70649),
+    I = n(120472),
     T = n(691766);
 function C(e, t, n) {
     return (
@@ -76,13 +76,13 @@ function P(e, t) {
 }
 let R = (e) => {
         let { userRecord: t, placement: n } = e,
-            { avatarSrc: i, eventHandlers: a } = (0, p.Z)({
+            { avatarSrc: i, eventHandlers: o } = (0, p.Z)({
                 userId: null == t ? void 0 : t.id,
                 size: u.EFr.SIZE_32,
                 animateOnHover: !0,
             }),
-            o = null != t,
-            s = o
+            a = null != t,
+            s = a
                 ? (0, r.jsx)(
                       u.qEK,
                       A(
@@ -91,7 +91,7 @@ let R = (e) => {
                               "aria-label": t.username,
                               size: u.EFr.SIZE_32,
                           },
-                          a,
+                          o,
                       ),
                   )
                 : (0, r.jsx)(u.Heading, {
@@ -101,7 +101,7 @@ let R = (e) => {
                   });
         return (0, r.jsx)(l.u, {
             text: S.intl.string(S.t.UnKHdo),
-            shouldShow: !o,
+            shouldShow: !a,
             children: (0, r.jsx)("div", {
                 className: I.userAvatarProgressBarUnit,
                 children: s,
@@ -115,7 +115,7 @@ let R = (e) => {
             children: [
                 (0, r.jsx)("div", { className: I.avatarProgressBarUnitConnectorBase }),
                 (0, r.jsx)("div", {
-                    className: o()({
+                    className: a()({
                         [I.fullHighlight]: t > n,
                         [I.halfHighlight]: t === n,
                     }),
@@ -127,8 +127,8 @@ let R = (e) => {
         let { userRecords: t } = e,
             n = t.length,
             i = n < 1 ? null : t[0],
-            a = n < 2 ? null : t[1],
-            o = n < 3 ? null : t[2];
+            o = n < 2 ? null : t[1],
+            a = n < 3 ? null : t[2];
         return (0, r.jsxs)("div", {
             className: I.userAvatarProgressBarContainer,
             children: [
@@ -141,7 +141,7 @@ let R = (e) => {
                     placement: 1,
                 }),
                 (0, r.jsx)(R, {
-                    userRecord: a,
+                    userRecord: o,
                     placement: 2,
                 }),
                 (0, r.jsx)(w, {
@@ -149,7 +149,7 @@ let R = (e) => {
                     placement: 2,
                 }),
                 (0, r.jsx)(R, {
-                    userRecord: o,
+                    userRecord: a,
                     placement: 3,
                 }),
             ],
@@ -166,8 +166,8 @@ let R = (e) => {
     L = (e) => {
         let { isInSettings: t = !1 } = e,
             n = (0, s.e7)([E.Z], () => E.Z.getRecipientStatus()),
-            { referralSentUsers: a } = (0, b.G)(),
-            l = i.useMemo(() => a.map((e) => new _.Z(e)), [a]),
+            { referralSentUsers: o } = (0, b.G)(),
+            l = i.useMemo(() => o.map((e) => new _.Z(e)), [o]),
             p = {
                 redeemed: 0,
                 converted: 0,
@@ -187,7 +187,7 @@ let R = (e) => {
                     (0, r.jsx)(y.ZP, {
                         percentage: P,
                         progressCircleVariation: y.Qo.NITRO_LOGO,
-                        iconClassName: o()({
+                        iconClassName: a()({
                             [I.referralProgressBarIcon]: !t,
                             [I.referralProgressBarIconSettings]: t,
                         }),
@@ -209,7 +209,7 @@ let R = (e) => {
                                 }),
                             }),
                             (0, r.jsx)("div", {
-                                className: o()(I.expandedProgressBarButtonContainer, {
+                                className: a()(I.expandedProgressBarButtonContainer, {
                                     [I.expandedProgressBarButtonContainerLayout]: !t,
                                 }),
                                 children: (0, r.jsx)(u.gtL, {
@@ -239,7 +239,7 @@ let R = (e) => {
         return (0, r.jsx)(f.Gt, {
             value: A,
             children: (0, r.jsx)("div", {
-                className: o()({
+                className: a()({
                     [I.containerWithGlowWithoutBanner]: w,
                     [I.containerWithoutGlow]: !w,
                     [I.containerWithMargins]: !t,
@@ -247,7 +247,7 @@ let R = (e) => {
                 }),
                 children: (0, r.jsx)("div", {
                     ref: N,
-                    className: o()({
+                    className: a()({
                         [I.expandedProgressBarContainer]: !t,
                         [I.expandedProgressBarContainerSettingsPage]: t,
                         [I.allReferralsSentBorder]: w,

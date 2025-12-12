@@ -1,26 +1,26 @@
-n.d(t, { n: () => g });
+n.d(t, { n: () => m });
 var r = n(54381),
     i = n(473749),
     s = n(481060),
-    a = n(82554),
-    l = n(63063),
+    l = n(82554),
+    a = n(63063),
     o = n(432510),
     c = n(981631),
     u = n(388032),
-    d = n(885146);
+    d = n(16362);
 let h = {
-        [a.BM.MESSAGE]: u.t.fuqnBC,
-        [a.BM.USER]: u.t.F4jrRW,
-        [a.BM.GUILD]: u.t.gH3aMs,
+        [l.BM.MESSAGE]: u.t.fuqnBC,
+        [l.BM.USER]: u.t.F4jrRW,
+        [l.BM.GUILD]: u.t.gH3aMs,
     },
-    f = (e) => {
-        let { title: t, menuType: n, onReopen: a } = e,
-            l = i.useCallback(() => {
-                (0, o.l)(n, a)();
-            }, [n, a]);
+    g = (e) => {
+        let { title: t, menuType: n, onReopen: l } = e,
+            a = i.useCallback(() => {
+                (0, o.l)(n, l)();
+            }, [n, l]);
         return (0, r.jsxs)(s.P3F, {
             className: d.reportButton,
-            onClick: l,
+            onClick: a,
             children: [
                 (0, r.jsx)(s.Text, {
                     variant: "text-md/medium",
@@ -33,9 +33,9 @@ let h = {
             ],
         });
     },
-    g = (e) => {
-        let { showBackButton: t, onBack: n, dsaCapabilities: i, renderFooter: o, onClose: g, onReopen: m } = e,
-            p =
+    m = (e) => {
+        let { showBackButton: t, onBack: n, dsaCapabilities: i, renderFooter: o, onClose: m, onReopen: p } = e,
+            f =
                 t && null != n
                     ? (0, r.jsx)("div", {
                           className: d.footerButtons,
@@ -56,27 +56,27 @@ let h = {
                 (0, r.jsx)(s.Text, {
                     variant: "text-md/normal",
                     children: u.intl.format(u.t["532l+q"], {
-                        supportURL: l.Z.getArticleURL(c.BhN.COPYRIGHT_AND_IP_POLICY),
+                        supportURL: a.Z.getArticleURL(c.BhN.COPYRIGHT_AND_IP_POLICY),
                     }),
                 }),
                 (0, r.jsx)("div", {
                     className: d.container,
                     children: i.map((e) =>
-                        e === a.BM.MEDIA_TAKEDOWN || null == h[e]
+                        e === l.BM.MEDIA_TAKEDOWN || null == h[e]
                             ? null
                             : (0, r.jsx)(
-                                  f,
+                                  g,
                                   {
                                       title: u.intl.string(h[e]),
                                       menuType: e,
-                                      onClose: g,
-                                      onReopen: m,
+                                      onClose: m,
+                                      onReopen: p,
                                   },
                                   e,
                               ),
                     ),
                 }),
-                null == o ? void 0 : o(p),
+                null == o ? void 0 : o(f),
             ],
         });
     };

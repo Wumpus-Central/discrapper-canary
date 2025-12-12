@@ -1,5 +1,5 @@
 n.d(t, {
-    F: () => g,
+    F: () => b,
     I: () => v,
 }),
     n(953529);
@@ -15,8 +15,8 @@ var r = n(481060),
     u = n(246133),
     m = n(981631),
     p = n(388032),
-    h = n(787224);
-let f = [
+    h = n(54482);
+let x = [
         {
             duration: 15 * o.Z.Millis.MINUTE,
             label: () => p.intl.string(p.t["8ot6gv"]),
@@ -42,12 +42,12 @@ let f = [
             label: () => p.intl.string(p.t["46dqJY"]),
         },
     ],
-    x = "forever";
-function b(e) {
+    f = "forever";
+function g(e) {
     let { status: t, currentStatus: n, description: i } = e,
         l = t !== m.Skl.ONLINE,
         s = (0, a.jsx)(a.Fragment, {
-            children: f.map((e) => {
+            children: x.map((e) => {
                 let { duration: i, label: l } = e;
                 return (0, a.jsx)(
                     r.sNh,
@@ -62,7 +62,7 @@ function b(e) {
                             }),
                         dontCloseOnAction: !0,
                     },
-                    null != i ? i : x,
+                    null != i ? i : f,
                 );
             }),
         });
@@ -104,7 +104,7 @@ function b(e) {
         children: l ? s : void 0,
     });
 }
-function g(e) {
+function b(e) {
     if (null == e || "0" === e) return;
     let { kind: t, dateString: n, timeString: a } = (0, d.k)(e);
     return "today" === t
@@ -121,7 +121,7 @@ function v(e) {
         c = s.fv.useSetting(),
         d = e === m.Skl.DND,
         u = (n) => {
-            let a = g(t);
+            let a = b(t);
             if (e === n && null != a) return a;
             switch (n) {
                 case m.Skl.DND:
@@ -133,7 +133,7 @@ function v(e) {
             }
         },
         v = (0, a.jsx)(a.Fragment, {
-            children: f.map((t) => {
+            children: x.map((t) => {
                 let { duration: n, label: l } = t;
                 return (0, a.jsx)(
                     r.sNh,
@@ -145,25 +145,25 @@ function v(e) {
                         },
                         dontCloseOnAction: !0,
                     },
-                    null != n ? n : x,
+                    null != n ? n : f,
                 );
             }),
         }),
-        j = b({
+        j = g({
             status: m.Skl.ONLINE,
             currentStatus: e,
         }),
-        y = b({
+        _ = g({
             status: m.Skl.IDLE,
             currentStatus: e,
             description: u(m.Skl.IDLE),
         }),
-        C = b({
+        y = g({
             status: m.Skl.DND,
             currentStatus: e,
             description: u(m.Skl.DND),
         }),
-        _ = b({
+        C = g({
             status: m.Skl.INVISIBLE,
             currentStatus: e,
             description: u(m.Skl.INVISIBLE),
@@ -172,9 +172,9 @@ function v(e) {
         children: [
             j,
             (0, a.jsx)(r.Clw, {}, "menu-separator-statuses"),
+            _,
             y,
             C,
-            _,
             o || n
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [

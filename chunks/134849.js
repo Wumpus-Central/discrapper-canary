@@ -1,31 +1,31 @@
-n.d(t, { Z: () => S }), n(539854), n(388685);
+n.d(t, { Z: () => _ }), n(539854), n(388685);
 var i = n(54381),
     r = n(473749),
-    a = n(442837),
-    l = n(481060),
-    o = n(804570),
+    l = n(442837),
+    o = n(481060),
+    a = n(804570),
     s = n(624864),
     c = n(388627),
     u = n(561064),
     d = n(380736),
-    f = n(693091),
-    h = n(371467),
-    p = n(987650),
+    h = n(693091),
+    p = n(371467),
+    f = n(987650),
     m = n(981631),
     g = n(388032),
-    b = n(782621);
-let y = [];
-function O(e) {
+    y = n(63452);
+let O = [];
+function v(e) {
     return e.notification.id;
 }
-function v(e, t, n, r) {
-    let { index: a, notification: l, locked: o, pinned: s } = t;
+function E(e, t, n, r) {
+    let { index: l, notification: o, locked: a, pinned: s } = t;
     return (0, i.jsx)(
         d.Z,
         {
-            index: a,
-            notification: l,
-            locked: o,
+            index: l,
+            notification: o,
+            locked: a,
             pinned: s,
             transitionState: n,
             cleanUp: r,
@@ -33,21 +33,21 @@ function v(e, t, n, r) {
         e,
     );
 }
-function E(e) {
+function b(e) {
     return (0, i.jsx)("div", {
-        className: b.container,
+        className: y.container,
         children: e,
     });
 }
-let S = r.memo(function (e) {
+let _ = r.memo(function (e) {
     let { locked: t, pinned: n, showEmpty: d = !0 } = e,
-        b = (0, a.e7)(
-            [h.Z, s.Z],
+        y = (0, l.e7)(
+            [p.Z, s.Z],
             () => {
-                if (s.Z.isNotificationDisabled(p.n0.TextChat)) return y;
+                if (s.Z.isNotificationDisabled(f.n0.TextChat)) return O;
                 let e = [],
                     i = 0;
-                for (let r of h.Z.getNotifications()) {
+                for (let r of p.Z.getNotifications()) {
                     if (i > 4) break;
                     (!t || r.status !== m._1z.TIMED_OUT) &&
                         (e.push({
@@ -63,25 +63,25 @@ let S = r.memo(function (e) {
             [t, n],
             c.E6,
         ),
-        S = r.useState(() => new f.AS(t))[0];
-    return (r.useLayoutEffect(() => S.updateState(b, t)),
-    r.useLayoutEffect(() => (S.initialize((0, u.i)()), () => S.cleanUp()), [S]),
-    0 !== b.length || t)
-        ? (0, i.jsx)(f.S4.Provider, {
-              value: S,
-              children: (0, i.jsx)(l.W3x, {
-                  items: b,
-                  renderItem: v,
-                  getItemKey: O,
-                  wrapChildren: E,
+        _ = r.useState(() => new h.AS(t))[0];
+    return (r.useLayoutEffect(() => _.updateState(y, t)),
+    r.useLayoutEffect(() => (_.initialize((0, u.i)()), () => _.cleanUp()), [_]),
+    0 !== y.length || t)
+        ? (0, i.jsx)(h.S4.Provider, {
+              value: _,
+              children: (0, i.jsx)(o.W3x, {
+                  items: y,
+                  renderItem: E,
+                  getItemKey: v,
+                  wrapChildren: b,
               }),
           })
         : d
           ? t
               ? null
-              : (0, i.jsx)(o.E, {
+              : (0, i.jsx)(a.E, {
                     emptyText: g.intl.string(g.t.O1Nbjq),
-                    icon: l.Dkj,
+                    icon: o.Dkj,
                     absolute: !0,
                 })
           : null;

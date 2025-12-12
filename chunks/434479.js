@@ -3,12 +3,12 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     l = n.n(i),
-    a = n(91192),
-    o = n(589440),
+    o = n(91192),
+    a = n(589440),
     s = n(481060),
-    c = n(879917),
-    u = n(642915),
-    d = n(323453);
+    c = n(780462),
+    u = n(55940),
+    d = n(509612);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,14 +59,14 @@ function p(e) {
             className: i,
             innerClassName: p,
             renderIcon: g,
-            text: b,
-            selected: m,
-            trailing: y,
-            background: O,
-            showUnread: v = !1,
-            ref: j,
+            text: m,
+            selected: b,
+            trailing: _,
+            background: y,
+            showUnread: O = !1,
+            ref: v,
         } = e,
-        C = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -98,19 +98,19 @@ function p(e) {
             "showUnread",
             "ref",
         ]);
-    let x = (0, a.JA)(n),
-        E = null != (t = (0, o.q)(b)) ? t : "";
+    let C = (0, o.JA)(n),
+        x = null != (t = (0, a.q)(m)) ? t : "";
     return (0, r.jsx)("li", {
-        ref: j,
+        ref: v,
         children: (0, r.jsxs)(
             s.kL8,
-            h(f({}, C), {
-                buttonProps: h(f({}, x), {
+            h(f({}, j), {
+                buttonProps: h(f({}, C), {
                     id: n,
                     role: "button",
                 }),
                 tag: "div",
-                "aria-label": E,
+                "aria-label": x,
                 focusProps: {
                     offset: {
                         top: 1,
@@ -119,15 +119,15 @@ function p(e) {
                     },
                 },
                 onContextMenu:
-                    null != C.onContextMenu
-                        ? C.onContextMenu
+                    null != j.onContextMenu
+                        ? j.onContextMenu
                         : (e) => {
                               e.stopPropagation();
                           },
-                className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: m }, i),
+                className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: b }, i),
                 children: [
-                    O,
-                    v ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
+                    y,
+                    O ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)("div", {
                         className: l()([d.link, d.basicChannelRowLink, p]),
                         children: (0, r.jsxs)("div", {
@@ -140,9 +140,9 @@ function p(e) {
                                 (0, r.jsx)("div", {
                                     className: d.name,
                                     "aria-hidden": !0,
-                                    children: b,
+                                    children: m,
                                 }),
-                                y,
+                                _,
                             ],
                         }),
                     }),

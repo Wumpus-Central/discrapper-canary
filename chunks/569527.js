@@ -1,7 +1,7 @@
 n.d(t, { Z: () => T }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
-var a = n(54381),
-    r = n(473749),
-    i = n(828700),
+var r = n(54381),
+    i = n(473749),
+    a = n(828700),
     l = n(209173),
     s = n(288385),
     o = n(442837),
@@ -11,49 +11,49 @@ var a = n(54381),
     p = n(283293),
     m = n(314897),
     h = n(471518),
-    f = n(493646),
-    b = n(370210),
-    g = n(678694),
-    x = n(177653),
-    v = n(216780),
-    C = n(881294),
-    j = n(523311),
-    _ = n(797908),
+    g = n(493646),
+    f = n(370210),
+    _ = n(678694),
+    b = n(177653),
+    x = n(216780),
+    v = n(881294),
+    C = n(523311),
+    j = n(797908),
     y = n(258971),
     I = n(133743),
     S = n(120549),
     P = n(188607),
     O = n(979007),
     E = n(981631),
-    N = n(843931);
+    N = n(36523);
 function T(e) {
     var t;
     let { onSelectApplication: n, onScroll: T } = e,
         A = (0, o.e7)([m.default], () => m.default.isAuthenticated()),
-        L = r.useRef(null),
-        R = (0, i.TH)(),
-        Z = r.useRef(null),
+        L = i.useRef(null),
+        R = (0, a.TH)(),
+        Z = i.useRef(null),
         {
             query: w,
             page: D,
             categoryId: k,
-        } = r.useMemo(() => {
+        } = i.useMemo(() => {
             var e, t;
             let n = new URLSearchParams(R.search),
-                a = n.get("page"),
-                r = null != a ? Number(a) : 1;
+                r = n.get("page"),
+                i = null != r ? Number(r) : 1;
             return {
                 query: null != (e = n.get("q")) ? e : "",
-                page: r,
+                page: i,
                 categoryId:
                     null != (t = Number(n.get("category_id"))) ? t : O.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID,
             };
         }, [R.search]),
-        M = (0, o.e7)([g.Z], () => g.Z.getCategories()),
-        G = r.useMemo(() => (null == M ? void 0 : M.find((e) => e.id === k)), [M, k]),
-        B = r.useCallback(
+        M = (0, o.e7)([_.Z], () => _.Z.getCategories()),
+        G = i.useMemo(() => (null == M ? void 0 : M.find((e) => e.id === k)), [M, k]),
+        B = i.useCallback(
             (e) => {
-                (0, C.zZ)(E.rMx.APP_DIRECTORY_SEARCHED, {
+                (0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCHED, {
                     search_term: w,
                     num_results: e,
                     current_page: y.m_.SEARCH,
@@ -64,7 +64,7 @@ function T(e) {
             },
             [w, D, null == G ? void 0 : G.name, null == G ? void 0 : G.id],
         );
-    r.useEffect(() => {
+    i.useEffect(() => {
         var e;
         null == (e = L.current) || e.scrollTo({ to: 0 }),
             w !== Z.current &&
@@ -84,15 +84,15 @@ function T(e) {
                 onSuccessCallback: B,
             });
     }, [k, D, w, B]);
-    let { fetchState: U, searchResults: F } = (0, o.cj)([x.Z], () => ({
-            fetchState: x.Z.getFetchState({
+    let { fetchState: U, searchResults: F } = (0, o.cj)([b.Z], () => ({
+            fetchState: b.Z.getFetchState({
                 query: w,
                 categoryId: k,
                 page: D,
                 pageSize: O.PAGE_SIZE,
                 source: s.F.APP_DIRECTORY,
             }),
-            searchResults: x.Z.getSearchResults({
+            searchResults: b.Z.getSearchResults({
                 query: w,
                 categoryId: k,
                 page: D,
@@ -100,8 +100,8 @@ function T(e) {
                 source: s.F.APP_DIRECTORY,
             }),
         })),
-        H = (0, o.cj)([x.Z], () => {
-            let e = x.Z.getSearchResults({
+        z = (0, o.cj)([b.Z], () => {
+            let e = b.Z.getSearchResults({
                 query: w,
                 source: s.F.APP_DIRECTORY,
             });
@@ -109,33 +109,33 @@ function T(e) {
                 ? (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var n = null != arguments[t] ? arguments[t] : {},
-                              a = Object.keys(n);
+                              r = Object.keys(n);
                           "function" == typeof Object.getOwnPropertySymbols &&
-                              (a = a.concat(
+                              (r = r.concat(
                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                   }),
                               )),
-                              a.forEach(function (t) {
-                                  var a;
-                                  (a = n[t]),
+                              r.forEach(function (t) {
+                                  var r;
+                                  (r = n[t]),
                                       t in e
                                           ? Object.defineProperty(e, t, {
-                                                value: a,
+                                                value: r,
                                                 enumerable: !0,
                                                 configurable: !0,
                                                 writable: !0,
                                             })
-                                          : (e[t] = a);
+                                          : (e[t] = r);
                               });
                       }
                       return e;
-                  })({ [v.MU]: e.totalCount }, e.countsByCategory)
+                  })({ [x.MU]: e.totalCount }, e.countsByCategory)
                 : {};
         }),
-        z = (0, d.Z)(F),
-        V = r.useMemo(() => (U === b.M.FETCHING ? z : F), [U, z, F]),
-        Y = r.useCallback(
+        H = (0, d.Z)(F),
+        V = i.useMemo(() => (U === f.M.FETCHING ? H : F), [U, H, F]),
+        Y = i.useCallback(
             (e) => {
                 (0, I.pR)({
                     query: w,
@@ -145,9 +145,9 @@ function T(e) {
             },
             [k, w],
         ),
-        W = r.useCallback(
+        W = i.useCallback(
             (e) => {
-                (0, C.zZ)(E.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
+                (0, v.zZ)(E.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                     category: e.name,
                     category_id: e.id,
                     current_page: y.m_.SEARCH,
@@ -159,9 +159,9 @@ function T(e) {
             },
             [w],
         ),
-        X = r.useCallback(
+        X = i.useCallback(
             (e, t) => {
-                (0, C.zZ)(E.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
+                (0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: y.m_.SEARCH,
                     application_id: e,
                     load_id: null == V ? void 0 : V.loadId,
@@ -172,39 +172,39 @@ function T(e) {
             },
             [null == V ? void 0 : V.loadId, n, w],
         ),
-        K = (0, f.K)();
-    return (0, a.jsxs)("div", {
+        K = (0, g.K)();
+    return (0, r.jsxs)("div", {
         className: N.container,
         children: [
-            (0, a.jsx)(p.Z, {
+            (0, r.jsx)(p.Z, {
                 ref: L,
                 onScroll: T,
-                children: (0, a.jsxs)("div", {
+                children: (0, r.jsxs)("div", {
                     className: N.innerContainer,
                     children: [
-                        A ? null : (0, a.jsx)("div", { className: N.centeringBuffer }),
-                        (0, a.jsx)(u.Z, {
-                            children: (0, a.jsxs)("div", {
+                        A ? null : (0, r.jsx)("div", { className: N.centeringBuffer }),
+                        (0, r.jsx)(u.Z, {
+                            children: (0, r.jsxs)("div", {
                                 className: N.contentContainer,
                                 children: [
-                                    (0, a.jsx)("div", {
+                                    (0, r.jsx)("div", {
                                         className: N.topFilterContainer,
-                                        children: (0, a.jsx)(S.V, {
-                                            countsByCategory: H,
+                                        children: (0, r.jsx)(S.V, {
+                                            countsByCategory: z,
                                             selectedCategoryId: k,
                                             onSelectCategory: W,
                                         }),
                                     }),
-                                    (0, a.jsx)(j.Z, {
-                                        loading: U === b.M.FETCHING,
+                                    (0, r.jsx)(C.Z, {
+                                        loading: U === f.M.FETCHING,
                                         children:
-                                            U === b.M.FETCHED &&
+                                            U === f.M.FETCHED &&
                                             (null == V || (null == V ? void 0 : V.results.length) === 0)
-                                                ? (0, a.jsx)(P.Z, {
+                                                ? (0, r.jsx)(P.Z, {
                                                       selectedCategoryId: null != k ? k : K.id,
                                                       searchAllCategories: () => W(K),
                                                   })
-                                                : (0, a.jsx)("div", {
+                                                : (0, r.jsx)("div", {
                                                       className: N.content,
                                                       children:
                                                           null == V
@@ -212,8 +212,8 @@ function T(e) {
                                                               : V.results.map((e, t) => {
                                                                     if (e.type === l.s.APPLICATION) {
                                                                         let n = e.data;
-                                                                        return (0, a.jsx)(
-                                                                            _.Z,
+                                                                        return (0, r.jsx)(
+                                                                            j.Z,
                                                                             {
                                                                                 application: n,
                                                                                 onSelectApplication: (e) => X(e, t),
@@ -226,7 +226,7 @@ function T(e) {
                                                                 }),
                                                   }),
                                     }),
-                                    (0, a.jsx)(c.DsT, {
+                                    (0, r.jsx)(c.DsT, {
                                         className: N.paginationInput,
                                         totalCount: Math.min(
                                             (null != (t = null == V ? void 0 : V.totalPages) ? t : 0) * O.PAGE_SIZE,
@@ -244,12 +244,12 @@ function T(e) {
                     ],
                 }),
             }),
-            (0, a.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: N.sideFilterContainer,
-                children: (0, a.jsx)("div", {
+                children: (0, r.jsx)("div", {
                     className: N.sideFilterContent,
-                    children: (0, a.jsx)(S.Z, {
-                        countsByCategory: H,
+                    children: (0, r.jsx)(S.Z, {
+                        countsByCategory: z,
                         selectedCategoryId: k,
                         onSelectCategory: W,
                     }),

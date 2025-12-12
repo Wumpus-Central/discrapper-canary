@@ -8,30 +8,30 @@ var a = n(54381),
     c = n(410030),
     d = n(607070),
     u = n(100527),
-    b = n(335131),
-    m = n(70097),
+    m = n(335131),
+    b = n(70097),
     p = n(507808),
     f = n(43747),
     x = n(960919),
     h = n(22095),
     C = n(49436),
-    j = n(968843),
-    g = n(115179),
-    v = n(515108),
-    y = n(291967),
-    _ = n(324805),
+    _ = n(968843),
+    j = n(115179),
+    g = n(515108),
+    v = n(291967),
+    y = n(324805),
     N = n(981631),
     O = n(215023),
     T = n(388032),
-    P = n(10167),
-    w = n(691091),
-    L = n(347516),
-    S = n(941714),
-    A = n(466410),
-    Z = n(97794);
+    P = n(561549),
+    w = n(582425),
+    L = n(345554),
+    S = n(88490),
+    A = n(466674),
+    Z = n(201284);
 function R(e) {
     let { onVideoLoaded: t } = e;
-    return (0, a.jsx)(m.Z, {
+    return (0, a.jsx)(b.Z, {
         className: P.smallOrb,
         playsInline: !0,
         controls: !1,
@@ -47,19 +47,19 @@ function R(e) {
 function E(e) {
     let { onVideoLoaded: t, isLoading: n } = e,
         i = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        [u, b] = r.useState(!i),
+        [u, m] = r.useState(!i),
         p = (0, c.ZP)(),
         f = (0, l.apv)(p),
         x = f ? L.Z : w.Z,
         h = f ? A.Z : S.Z,
         C = r.useRef(null),
-        j = r.useRef(null),
-        [g, v] = r.useState(!1),
-        [y, _] = r.useState(!1),
+        _ = r.useRef(null),
+        [j, g] = r.useState(!1),
+        [v, y] = r.useState(!1),
         [N, O] = r.useState(!1);
     r.useEffect(() => {
-        g && y && N && t();
-    }, [g, y, N, t]),
+        j && v && N && t();
+    }, [j, v, N, t]),
         r.useEffect(() => {
             n ||
                 i ||
@@ -71,34 +71,34 @@ function E(e) {
     let T = r.useCallback(() => {
         if (!i) {
             var e;
-            b(!1), null == (e = j.current) || e.play();
+            m(!1), null == (e = _.current) || e.play();
         }
     }, [i]);
     return (0, a.jsxs)("div", {
         className: P.orbsContainer,
         children: [
-            (0, a.jsx)(m.Z, {
-                ref: j,
+            (0, a.jsx)(b.Z, {
+                ref: _,
                 autoPlay: !1,
                 loop: !0,
                 muted: !0,
                 playsInline: !0,
                 className: s()(P.centerOrb, P.idleOrb, { [P.hidden]: u }),
                 controls: !1,
-                onCanPlayThrough: r.useCallback(() => _(!0), []),
+                onCanPlayThrough: r.useCallback(() => y(!0), []),
                 children: (0, a.jsx)("source", {
                     src: h,
                     type: "video/webm",
                 }),
             }),
-            (0, a.jsx)(m.Z, {
+            (0, a.jsx)(b.Z, {
                 ref: C,
                 autoPlay: !1,
                 muted: !0,
                 playsInline: !0,
                 className: P.centerOrb,
                 controls: !1,
-                onCanPlayThrough: r.useCallback(() => v(!0), []),
+                onCanPlayThrough: r.useCallback(() => g(!0), []),
                 onEnded: T,
                 children: (0, a.jsx)("source", {
                     src: x,
@@ -126,7 +126,7 @@ function D(e) {
                 ctaObject: N.qAy.CTA_TO_ORBS_SHOP,
             }),
                 await n(),
-                (0, b.mK)({
+                (0, m.mK)({
                     tab: O.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: u.Z.QUEST_REWARD_MODAL,
@@ -191,10 +191,10 @@ function D(e) {
 function k(e) {
     var t, n;
     let { initialQuest: i, onClose: s, transitionState: o, sourceQuestContent: l, location: c } = e,
-        d = null != (n = (0, j.B4)(i.id)) ? n : i,
+        d = null != (n = (0, _.B4)(i.id)) ? n : i,
         u = (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null,
-        { balance: b, error: m } = (0, f.A)(),
-        p = (0, g.LM)(d.config),
+        { balance: m, error: b } = (0, f.A)(),
+        p = (0, j.LM)(d.config),
         [x, N] = r.useState(u ? "success" : "loading"),
         [O, P] = r.useState(!1),
         w = r.useCallback(() => {
@@ -207,24 +207,24 @@ function k(e) {
                 .then(() => N("success"))
                 .catch(() => N("error"));
     }, [d.id, u, x, c]);
-    let L = !O || "loading" === x || (null == b && null == m),
-        S = "error" === x || null == p || (null == b && null != m);
-    return (0, a.jsx)(v.Z, {
+    let L = !O || "loading" === x || (null == m && null == b),
+        S = "error" === x || null == p || (null == m && null != b);
+    return (0, a.jsx)(g.Z, {
         onClose: s,
         transitionState: o,
         quest: d,
         sourceQuestContent: l,
-        location: _.dr.ORBS_REWARD_MODAL,
+        location: y.dr.ORBS_REWARD_MODAL,
         isRewardContentLoading: L,
         rewardContentHasError: S,
         rewardContent: S
             ? null
-            : (0, a.jsx)(y.Z, {
+            : (0, a.jsx)(v.Z, {
                   rewardName: T.intl.string(T.t.Lmysvd),
                   children: (0, a.jsx)(D, {
                       onClose: s,
                       orbsEarned: p,
-                      orbsBalance: b,
+                      orbsBalance: m,
                       isLoading: L,
                       onVideoLoaded: w,
                   }),

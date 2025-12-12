@@ -13,10 +13,10 @@ var r = n(54381),
     g = n(768581),
     h = n(302221),
     m = n(745752),
-    b = n(17181),
-    _ = n(388032),
-    E = n(337917),
-    O = n(321347);
+    _ = n(17181),
+    b = n(388032),
+    E = n(76531),
+    O = n(718215);
 function v(e) {
     let { guildId: t, channelId: n } = e,
         { ref: l, width: v, height: y } = (0, c.ZP)(),
@@ -24,7 +24,7 @@ function v(e) {
             null != t &&
                 null != n &&
                 ((0, m.I1)(t),
-                (0, b.default)({
+                (0, _.default)({
                     guildId: t,
                     returnChannelId: n,
                 }));
@@ -74,19 +74,19 @@ function v(e) {
                             (0, r.jsx)(o.Heading, {
                                 variant: "heading-xxl/normal",
                                 color: "always-white",
-                                children: _.intl.string(_.t.CCmhpF),
+                                children: b.intl.string(b.t.CCmhpF),
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-lg/normal",
                                 color: "always-white",
-                                children: _.intl.string(_.t.gRAHcZ),
+                                children: b.intl.string(b.t.gRAHcZ),
                             }),
                         ],
                     }),
                     (0, r.jsx)(o.Button, {
                         variant: "overlay-primary",
                         size: "md",
-                        text: _.intl.string(_.t.VVFjAC),
+                        text: b.intl.string(b.t.VVFjAC),
                         onClick: I,
                     }),
                 ],

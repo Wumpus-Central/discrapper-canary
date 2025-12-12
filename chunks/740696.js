@@ -1,22 +1,22 @@
 n.d(e, { default: () => h }), n(388685), n(539854);
 var a = n(54381),
-    r = n(473749),
-    i = n(793030),
+    i = n(473749),
+    r = n(793030),
     s = n(442837),
     o = n(481060),
     l = n(430824),
     c = n(496675),
-    d = n(228392),
-    g = n(941848),
+    g = n(228392),
+    d = n(941848),
     m = n(710352),
     u = n(981631),
-    f = n(921944),
+    x = n(921944),
     p = n(388032),
-    x = n(212553);
+    f = n(87612);
 function h(t) {
-    let { guildId: e, shouldUpsellCreation: h, transitionState: b, onClose: v } = t,
-        j = (0, s.e7)([l.Z], () => l.Z.getGuild(e), [e]),
-        y = (0, s.e7)([c.Z], () => c.Z.can(u.Plq.MANAGE_CHANNELS, j)),
+    let { guildId: e, shouldUpsellCreation: h, transitionState: v, onClose: j } = t,
+        b = (0, s.e7)([l.Z], () => l.Z.getGuild(e), [e]),
+        y = (0, s.e7)([c.Z], () => c.Z.can(u.Plq.MANAGE_CHANNELS, b)),
         N = [
             {
                 id: 0,
@@ -31,12 +31,12 @@ function h(t) {
                 name: p.intl.string(p.t.x3drh1),
             },
         ],
-        [P, S] = r.useState(0),
+        [P, S] = i.useState(0),
         O = [
             {
                 variant: h ? "secondary" : "primary",
                 text: h ? p.intl.string(p.t.TulDPl) : p.intl.string(p.t["NX+WJN"]),
-                onClick: () => v(f.L.SECONDARY),
+                onClick: () => j(x.L.SECONDARY),
             },
         ];
     return (
@@ -46,12 +46,12 @@ function h(t) {
                 text: p.intl.string(p.t["1X8SK/"]),
                 onClick: () => {
                     (0, o.ZDy)(async () => {
-                        let { default: t } = await Promise.all([n.e("29497"), n.e("59679")]).then(n.bind(n, 241865));
+                        let { default: t } = await Promise.all([n.e("29497"), n.e("53781")]).then(n.bind(n, 241865));
                         return (n) => {
-                            var r, i;
+                            var i, r;
                             return (0, a.jsx)(
                                 t,
-                                ((r = (function (t) {
+                                ((i = (function (t) {
                                     for (var e = 1; e < arguments.length; e++) {
                                         var n = null != arguments[e] ? arguments[e] : {},
                                             a = Object.keys(n);
@@ -76,14 +76,14 @@ function h(t) {
                                     }
                                     return t;
                                 })({}, n)),
-                                (i = i =
+                                (r = r =
                                     {
                                         channelType: u.d4z.GUILD_FORUM,
                                         guildId: e,
                                         prefillChannelName: h ? p.intl.string(p.t["5z1Xat"]) : void 0,
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
                                     : (function (t, e) {
                                           var n = Object.keys(t);
                                           if (Object.getOwnPropertySymbols) {
@@ -91,34 +91,34 @@ function h(t) {
                                               n.push.apply(n, a);
                                           }
                                           return n;
-                                      })(Object(i)).forEach(function (t) {
-                                          Object.defineProperty(r, t, Object.getOwnPropertyDescriptor(i, t));
+                                      })(Object(r)).forEach(function (t) {
+                                          Object.defineProperty(i, t, Object.getOwnPropertyDescriptor(r, t));
                                       }),
-                                r),
+                                i),
                             );
                         };
                     }),
-                        v(f.L.PRIMARY);
+                        j(x.L.PRIMARY);
                 },
             }),
-        (0, a.jsxs)(i.IX, {
-            transitionState: b,
+        (0, a.jsxs)(r.IX, {
+            transitionState: v,
             size: "xxl",
-            onClose: async () => await v(),
+            onClose: async () => await j(),
             children: [
-                (0, a.jsx)(i.xBx, {
+                (0, a.jsx)(r.xBx, {
                     title: p.intl.string(p.t["6S6WCQ"]),
                     subtitle: p.intl.string(p.t.I2BA8K),
                 }),
-                (0, a.jsxs)(i.fef, {
+                (0, a.jsxs)(r.fef, {
                     children: [
                         (0, a.jsx)(o.njP, {
                             selectedItem: P,
                             type: "top",
                             onItemSelect: (t) => {
-                                S(t), (0, d.ws)({ forumDemoId: t });
+                                S(t), (0, g.ws)({ forumDemoId: t });
                             },
-                            className: x.tags,
+                            className: f.tags,
                             children: N.map((t, e) =>
                                 (0, a.jsx)(
                                     o.njP.Item,
@@ -130,11 +130,11 @@ function h(t) {
                                 ),
                             ),
                         }),
-                        (0, a.jsx)(g.Z, { id: P }),
+                        (0, a.jsx)(d.Z, { id: P }),
                     ],
                 }),
                 y &&
-                    (0, a.jsx)(i.Go$, {
+                    (0, a.jsx)(r.Go$, {
                         leading: (0, a.jsx)(o.Button, {
                             variant: "secondary",
                             text: p.intl.string(p.t.hvVgAZ),

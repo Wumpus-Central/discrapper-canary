@@ -1,8 +1,8 @@
 n.d(t, { K: () => x }), n(388685), n(314940);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(485853),
     l = n(467721),
     c = n(278074),
@@ -17,7 +17,7 @@ var r = n(54381),
     E = n(139256),
     b = n(294608),
     y = n(388032),
-    O = n(75022);
+    O = n(390840);
 function v(e, t, n) {
     return (
         t in e
@@ -53,9 +53,9 @@ function I(e, t) {
         r,
         i = T(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -64,23 +64,23 @@ function T(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let C = 24,
     A = 24,
     N = 20;
 function P(e) {
-    let { percentage: t, label: n, canShowVoterDetails: a, answerId: o } = e,
+    let { percentage: t, label: n, canShowVoterDetails: o, answerId: a } = e,
         l = (0, p.Dt)(),
         { channelId: c, messageId: u } = (0, b.pE)(),
         [g, E] = i.useState(""),
         [y, v] = i.useState(!1),
         S = "" !== g && y,
         I = i.useCallback(() => {
-            E((0, h.e1)(u, c, o));
-        }, [u, c, o]),
+            E((0, h.e1)(u, c, a));
+        }, [u, c, a]),
         T = i.useCallback(() => {
             I(), v(!0);
         }, [I]),
@@ -91,9 +91,9 @@ function P(e) {
             (0, m.n)({
                 channelId: c,
                 messageId: u,
-                answerId: o,
+                answerId: a,
             });
-        }, [c, u, o]);
+        }, [c, u, a]);
     return (
         i.useEffect(() => {
             if (y)
@@ -107,7 +107,7 @@ function P(e) {
         (0, r.jsxs)("div", {
             className: O.votesData,
             children: [
-                a
+                o
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               "" !== g
@@ -185,7 +185,7 @@ function R(e) {
     });
 }
 function w(e) {
-    let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: a, isExpired: o, className: s } = e;
+    let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: o, isExpired: a, className: s } = e;
     return (0, c.EQ)({
         answersInteraction: t,
         didSelfVote: i,
@@ -211,8 +211,8 @@ function w(e) {
             },
             () =>
                 (0, r.jsx)(E.ZY, {
-                    isVictor: a,
-                    isExpired: o,
+                    isVictor: o,
+                    isExpired: a,
                     size: C,
                     className: s,
                 }),
@@ -220,18 +220,18 @@ function w(e) {
         .otherwise(() => null);
 }
 function D(e) {
-    let { answer: t, isExpired: n, answersInteraction: i, canShowVoteCounts: a, canShowVoterDetails: l } = e,
+    let { answer: t, isExpired: n, answersInteraction: i, canShowVoteCounts: o, canShowVoterDetails: l } = e,
         c = !0 === t.isSelected,
         u = !0 === t.didSelfVote,
         d = !0 === t.isVictor,
         p = t.shouldAnimateTransition;
     return (0, r.jsxs)("div", {
-        className: o()(O.answerInner, {
+        className: a()(O.answerInner, {
             [O.currentlyVoting]: i !== g.Y7.LIST,
             [O.selected]: c,
         }),
         children: [
-            a
+            o
                 ? (0, r.jsx)(R, {
                       percentage: t.votesPercentage,
                       shouldAnimate: p,
@@ -250,7 +250,7 @@ function D(e) {
                 children: t.pollMedia.text,
             }),
             t.didSelfVote && (0, r.jsx)(s.T, { children: y.intl.string(y.t["8DAM+5"]) }),
-            a &&
+            o &&
                 (0, r.jsx)(P, {
                     percentage: t.votesPercentage,
                     label: t.votes,
@@ -269,8 +269,8 @@ function D(e) {
     });
 }
 function x(e) {
-    var { isExpired: t, answersInteraction: n, canShowVoteCounts: i, canTapAnswers: a } = e,
-        o = I(e, ["isExpired", "answersInteraction", "canShowVoteCounts", "canTapAnswers"]);
+    var { isExpired: t, answersInteraction: n, canShowVoteCounts: i, canTapAnswers: o } = e,
+        a = I(e, ["isExpired", "answersInteraction", "canShowVoteCounts", "canTapAnswers"]);
     return (0, r.jsx)(
         E.$e,
         S(
@@ -278,17 +278,17 @@ function x(e) {
                 className: O.answersContainer,
                 answerClassName: O.answer,
                 answersInteraction: n,
-                canTapAnswers: a,
+                canTapAnswers: o,
                 renderAnswerContent: (e) =>
                     (0, r.jsx)(D, {
                         answer: e,
                         isExpired: t,
                         answersInteraction: n,
                         canShowVoteCounts: i,
-                        canShowVoterDetails: a,
+                        canShowVoterDetails: o,
                     }),
             },
-            o,
+            a,
         ),
     );
 }

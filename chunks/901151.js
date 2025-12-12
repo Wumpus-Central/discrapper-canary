@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(642613), n(539854);
 var r = n(54381),
     i = n(473749),
-    a = n(524437),
-    o = n(28664),
+    o = n(524437),
+    a = n(28664),
     s = n(481060),
     l = n(768581),
     c = n(63063),
@@ -17,13 +17,13 @@ var r = n(54381),
     E = n(726985),
     b = n(981631),
     y = n(388032),
-    O = n(285044);
+    O = n(42101);
 let v = 3,
     S = 3;
 function I(e) {
     let { applications: t } = e,
         n = i.useMemo(() => t.sort((e, t) => u.default.compare(t.id, e.id)), [t]),
-        a = i.useMemo(() => {
+        o = i.useMemo(() => {
             let e = [];
             for (let t = 0; t < v; t++) {
                 let r = n[t];
@@ -54,14 +54,14 @@ function I(e) {
             for (let t = 0; t < S; t++) {
                 let i = n[t];
                 if (null == i) break;
-                let { icon: a, name: s, id: c } = i,
+                let { icon: o, name: s, id: c } = i,
                     u = l.ZP.getApplicationIconURL({
                         id: c,
-                        icon: a,
+                        icon: o,
                     });
                 e.push(
                     (0, r.jsx)(
-                        o.u,
+                        a.u,
                         {
                             __unsupportedReactNodeAsText: s,
                             children: (0, r.jsx)("img", {
@@ -106,7 +106,7 @@ function I(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
                         color: "text-strong",
-                        children: a,
+                        children: o,
                     }),
                     (0, r.jsxs)(s.P3F, {
                         onClick: d,
@@ -148,19 +148,19 @@ function T() {
 }
 function C() {
     let e = d.JG.useSetting(),
-        t = e === a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
+        t = e === o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
         n = [
             {
                 name: y.intl.string(y.t.JIFnN9),
-                value: a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
+                value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL,
             },
             {
                 name: y.intl.string(y.t.rRdsk1),
-                value: a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
+                value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_USERS_WITH_GAME,
             },
             {
                 name: y.intl.string(y.t.AolKwN),
-                value: a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
+                value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
             },
         ];
     return (0, r.jsxs)(h.U, {

@@ -1,18 +1,18 @@
 n.d(t, { D9: () => O });
 var r = n(979554),
     i = n(242433),
-    a = n(100527),
-    o = n(717401),
+    o = n(100527),
+    a = n(717401),
     s = n(981631),
     l = n(388032),
-    c = n(135058),
-    u = n(728993),
-    d = n(925831),
-    f = n(52484);
-n(900285), n(164327);
-var p = n(895255),
-    _ = n(673650),
-    m = n(11120);
+    c = n(12901),
+    u = n(868592),
+    d = n(908637),
+    f = n(233634);
+n(337357), n(349927);
+var p = n(191333),
+    _ = n(81932),
+    m = n(770476);
 let h = {
         skuId: i.d.SEASONAL_GIFTING_2025_HEAD_IN_THE_CLOUDS_SKU_ID,
         assetId: "a_670b722e56740d11d1e6fe55b8094013",
@@ -43,13 +43,13 @@ let h = {
     },
     O = {
         rewards: [h, g, E],
-        rewardAssetIdMap: (0, o.YV)([h, g, E]),
+        rewardAssetIdMap: (0, a.YV)([h, g, E]),
         chatGiftIcon: {
             trinketsAnimation: {
                 getAnimationData: () =>
                     n
-                        .e("27569")
-                        .then(n.bind(n, 628011))
+                        .e("31675")
+                        .then(n.bind(n, 177648))
                         .then((e) => {
                             let { default: t } = e;
                             return fetch(t).then((e) => e.json());
@@ -62,13 +62,13 @@ let h = {
             title: () => l.intl.string(l.t.Eeqjcv),
             description: () => l.intl.string(l.t["Wp+i/e"]),
             cta: () => l.intl.string(l.t.RzWDqY),
-            analyticsLocation: a.Z.GIFTING_PROMOTION_COACHMARK,
+            analyticsLocation: o.Z.GIFTING_PROMOTION_COACHMARK,
             analyticsPage: s.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
         },
         reminderNagbar: {
             description: () => l.intl.string(l.t.veQg0t),
             cta: () => l.intl.string(l.t.RzWDqY),
-            analyticsLocation: a.Z.SEASONAL_GIFTING_REMINDER_NAGBAR,
+            analyticsLocation: o.Z.SEASONAL_GIFTING_REMINDER_NAGBAR,
             analyticsPage: s.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
         },
         reminderNotice: {
@@ -76,7 +76,7 @@ let h = {
             title: () => l.intl.string(l.t.bLOiLM),
             description: () => l.intl.string(l.t["cE/UX7"]),
             cta: () => l.intl.string(l.t.RzWDqY),
-            analyticsLocation: a.Z.GIFTING_PROMOTION_COACHMARK,
+            analyticsLocation: o.Z.GIFTING_PROMOTION_COACHMARK,
             analyticsPage: s.ZY5.PREMUIM_UPSELL_GIFTING_PROMOTION,
         },
         planSelection: {

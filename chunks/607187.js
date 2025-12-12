@@ -1,14 +1,14 @@
 n.d(t, { Z: () => l });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
-    s = n(79639);
+    o = n(120356),
+    a = n.n(o),
+    s = n(817002);
 let l = i.forwardRef(function (e, t) {
-    let { children: n, className: i, style: a, noBorder: l = !1, participantUserId: c } = e;
+    let { children: n, className: i, style: o, noBorder: l = !1, participantUserId: c } = e;
     return (0, r.jsx)("div", {
-        className: o()(i, s.tile, { [s.noBorder]: l }),
-        style: a,
+        className: a()(i, s.tile, { [s.noBorder]: l }),
+        style: o,
         ref: t,
         "data-selenium-video-tile": c,
         children: n,

@@ -1,8 +1,8 @@
 n.d(t, { U: () => S });
 var r = n(54381),
     i = n(473749),
-    a = n(512722),
-    o = n.n(a),
+    o = n(512722),
+    a = n.n(o),
     s = n(481060),
     l = n(479446),
     c = n(622909),
@@ -17,13 +17,13 @@ var r = n(54381),
     E = n(981631),
     b = n(474936),
     y = n(231338),
-    O = n(455006);
+    O = n(315);
 function v(e, t) {
     return e in t;
 }
 function S(e) {
     var t;
-    let { renderHeader: n, referralTrialOfferId: a, handleClose: S } = e,
+    let { renderHeader: n, referralTrialOfferId: o, handleClose: S } = e,
         {
             selectedSkuId: I,
             step: T,
@@ -41,9 +41,9 @@ function S(e) {
         U = x && (0, _.pO)(j) && T === g.h8.CONFIRM && null != L && !M && !k,
         G = null != n && null != T,
         Z = [g.h8.SKU_SELECT, g.h8.SELECT_FREE_SKU],
-        B = null != T && !Z.includes(T) && null != I,
-        F = (0, u.N)(a),
-        V = !x && null != F && null != I && b.nG[F.trial_id].skus.includes(I),
+        F = null != T && !Z.includes(T) && null != I,
+        B = (0, u.N)(o),
+        V = !x && null != B && null != I && b.nG[B.trial_id].skus.includes(I),
         H = (0, c.N)(),
         Y = null == H || null == (t = H.discount) ? void 0 : t.plan_ids.some((e) => b.GP[e].skuId === I),
         W = !x && null != H && null != I && Y;
@@ -74,8 +74,8 @@ function S(e) {
                           step: T,
                           onClose: S,
                       }))
-                    : B &&
-                      (o()(v(I, b.y7), "invalid sku id: ".concat(I)),
+                    : F &&
+                      (a()(v(I, b.y7), "invalid sku id: ".concat(I)),
                       (e = (0, r.jsx)(f.Z, {
                           currentStep: null != T ? T : void 0,
                           purchaseState: A,
@@ -92,5 +92,5 @@ function S(e) {
                       }))),
             e
         );
-    }, [L, S, A, n, C, I, T, V, W, U, B, G, N, x, j, R, w, D]);
+    }, [L, S, A, n, C, I, T, V, W, U, F, G, N, x, j, R, w, D]);
 }

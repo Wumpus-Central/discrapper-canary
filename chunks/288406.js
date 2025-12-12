@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(481060),
@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(768581),
     p = n(176354),
     _ = n(185923),
-    m = n(211581);
+    m = n(74066);
 let h = l().memoize((e) =>
         ""
             .concat(e * _.DC.NonDiversityPerRow, "px ")
@@ -23,26 +23,26 @@ let h = l().memoize((e) =>
             .concat(e * Math.ceil(u.ZP.numDiversitySprites / _.DC.DiversityPerRow), "px"),
     ),
     E = (e, t, r) => {
-        let i, a, o;
+        let i, o, a;
         if (!e.useSpriteSheet) return;
         let s = null != e.index ? e.index : 0;
         e.hasDiversity
             ? ((i = n(735800)("./spritesheet-".concat(t, "-").concat(r, ".png"))),
-              (a = g(r)),
-              (o = _.DC.DiversityPerRow))
-            : ((i = n(604901)("./spritesheet-emoji-".concat(r, ".png"))), (a = h(r)), (o = _.DC.NonDiversityPerRow));
-        let l = (-s % o) * r,
-            c = -Math.floor(s / o) * r;
+              (o = g(r)),
+              (a = _.DC.DiversityPerRow))
+            : ((i = n(604901)("./spritesheet-emoji-".concat(r, ".png"))), (o = h(r)), (a = _.DC.NonDiversityPerRow));
+        let l = (-s % a) * r,
+            c = -Math.floor(s / a) * r;
         return {
             backgroundImage: "url('".concat(i, "')"),
             backgroundPosition: "".concat(l, "px ").concat(c, "px"),
-            backgroundSize: a,
+            backgroundSize: o,
             height: r,
             width: r,
         };
     },
     b = i.memo(function (e) {
-        let { emoji: t, size: n, surrogateCodePoint: a, allowAnimatedEmoji: s, "aria-label": l, isLocked: u } = e,
+        let { emoji: t, size: n, surrogateCodePoint: o, allowAnimatedEmoji: s, "aria-label": l, isLocked: u } = e,
             h = (() => {
                 if (!t.useSpriteSheet) {
                     var e;
@@ -65,8 +65,8 @@ let h = l().memoize((e) =>
                         : null;
                 }
                 return (0, r.jsx)("div", {
-                    className: o()(m.emojiSpriteImage, { [m.lockedEmoji]: u }),
-                    style: E(t, a, n),
+                    className: a()(m.emojiSpriteImage, { [m.lockedEmoji]: u }),
+                    style: E(t, o, n),
                     children: (0, r.jsx)(c.nn4, { children: l }),
                 });
             })();

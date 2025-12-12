@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(865427),
     p = n(820254),
     f = n(388032),
-    g = n(187794);
+    g = n(36398);
 let h = "isHideDevBanner",
     m = () => {
         var e;
@@ -27,7 +27,7 @@ let h = "isHideDevBanner",
         let m = () => {
                 o.K.set(h, !0), n(!0);
             },
-            b = () =>
+            _ = () =>
                 (0, r.jsx)(c.P3F, {
                     onClick: m,
                     className: g.closeButton,
@@ -41,15 +41,15 @@ let h = "isHideDevBanner",
         return null != l
             ? (0, r.jsxs)("div", {
                   className: a()(g.devBanner, g.buildOverride),
-                  children: [(0, r.jsx)(p.Z, { className: g.icon }), f.intl.string(f.t.Wj3LW4), (0, r.jsx)(b, {})],
+                  children: [(0, r.jsx)(p.Z, { className: g.icon }), f.intl.string(f.t.Wj3LW4), (0, r.jsx)(_, {})],
               })
             : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, r.jsxs)("div", {
                     className: a()(g.devBanner, g.staging),
                     children: [
                         (0, r.jsx)(p.Z, { className: g.icon }),
-                        f.intl.format(f.t.uyrfYF, { buildNumber: "478844" }),
-                        (0, r.jsx)(b, {}),
+                        f.intl.format(f.t.uyrfYF, { buildNumber: "479390" }),
+                        (0, r.jsx)(_, {}),
                     ],
                 })
               : null;

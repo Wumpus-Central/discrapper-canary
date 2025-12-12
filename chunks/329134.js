@@ -1,11 +1,11 @@
-n.d(t, { P: () => o });
+n.d(t, { P: () => a });
 var r = n(473749),
     i = n(535396),
-    l = n(44542),
-    a = n(388032);
-function o(e, t, n) {
+    l = n(5238),
+    o = n(388032);
+function a(e, t, n) {
     return r.useMemo(() => {
-        var r, o, s;
+        var r, a, s;
         return (null == (r = t.sourceEntitlement) ? void 0 : r.ends_at) != null
             ? {
                   type: "expiring",
@@ -19,17 +19,17 @@ function o(e, t, n) {
               : t.type === i.A3.LEVEL_ACTIVATED
                 ? {
                       type: "active",
-                      statusText: a.intl.formatToPlainString(l.default.WRRYUT, {
+                      statusText: o.intl.formatToPlainString(l.default.WRRYUT, {
                           perkName:
-                              null != (s = null == (o = t.sourcePowerup) ? void 0 : o.title)
+                              null != (s = null == (a = t.sourcePowerup) ? void 0 : a.title)
                                   ? s
-                                  : a.intl.string(a.t.BfF6ED),
+                                  : o.intl.string(o.t.BfF6ED),
                       }),
                   }
                 : t.type === i.A3.POWERUP_ACTIVATED
                   ? {
                         type: "active",
-                        statusText: a.intl.string(l.default.FFLkmx),
+                        statusText: o.intl.string(l.default.FFLkmx),
                     }
                   : void 0;
     }, [t, n, e]);

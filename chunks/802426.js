@@ -1,11 +1,11 @@
 r.d(t, { default: () => p }), r(388685), r(953529);
 var n = r(54381),
     o = r(473749),
-    a = r(793030),
-    i = r(481060),
+    i = r(793030),
+    a = r(481060),
     c = r(921944),
     s = r(388032),
-    l = r(30172);
+    l = r(333669);
 function p(e) {
     var t,
         r,
@@ -19,14 +19,14 @@ function p(e) {
                     var r,
                         n,
                         o = {},
-                        a = Object.keys(e);
-                    for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < a.length; n++)
-                    (r = a[n]),
+                var i = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < i.length; n++)
+                    (r = i[n]),
                         !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
@@ -38,8 +38,8 @@ function p(e) {
             },
             [p, d],
         ),
-        b = [p.firstHeader, p.secondHeader].filter(Boolean).join(" "),
-        y = [
+        y = [p.firstHeader, p.secondHeader].filter(Boolean).join(" "),
+        b = [
             {
                 variant: "secondary",
                 text: s.intl.string(s.t["ETE/oC"]),
@@ -56,7 +56,7 @@ function p(e) {
                 : []),
         ];
     return (0, n.jsx)(
-        a.Modal,
+        i.Modal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -84,27 +84,27 @@ function p(e) {
         })({}, u)),
         (r = r =
             {
-                title: b,
-                actions: y,
+                title: y,
+                actions: b,
                 size: "md",
                 children: (0, n.jsx)("div", {
                     className: l.container,
                     children: (0, n.jsxs)("div", {
                         className: l.contentContainer,
                         children: [
-                            (0, n.jsx)(i.Text, {
+                            (0, n.jsx)(a.Text, {
                                 tag: "span",
                                 className: l.description,
                                 variant: "text-sm/normal",
                                 children: p.firstBody,
                             }),
-                            (0, n.jsx)(i.Text, {
+                            (0, n.jsx)(a.Text, {
                                 tag: "span",
                                 className: l.description,
                                 variant: "text-sm/normal",
                                 children: p.secondBody,
                             }),
-                            (0, n.jsx)(i.Text, {
+                            (0, n.jsx)(a.Text, {
                                 tag: "span",
                                 className: l.description,
                                 variant: "text-sm/normal",

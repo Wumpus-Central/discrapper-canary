@@ -1,8 +1,8 @@
 n.d(t, { y: () => c });
 var r = n(54381),
     i = n(598869),
-    a = n(66333);
-let o = {
+    o = n(370921);
+let a = {
         name: "Chip",
         id: "chip",
         component: i.A,
@@ -122,25 +122,25 @@ let o = {
     c = {
         title: "Chip",
         stories: [
-            o,
+            a,
             {
                 name: "All Variants",
                 id: "chip-all-variants",
                 component: function () {
                     return (0, r.jsx)("div", {
-                        className: a.allChips,
+                        className: o.allChips,
                         children: l.map((e) =>
                             (0, r.jsxs)(
                                 "div",
                                 {
-                                    className: a.section,
+                                    className: o.section,
                                     children: [
                                         (0, r.jsx)("h3", {
-                                            className: a.sectionTitle,
+                                            className: o.sectionTitle,
                                             children: e,
                                         }),
                                         (0, r.jsx)("div", {
-                                            className: a.chipGrid,
+                                            className: o.chipGrid,
                                             children: s.map((t) => {
                                                 let n = "".concat(t).concat(e);
                                                 return (0, r.jsx)(

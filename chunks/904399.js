@@ -2,9 +2,9 @@ n.d(t, { Z: () => l });
 var r = n(54381);
 n(473749);
 var i = n(907331),
-    a = n(481060),
-    o = n(530612),
-    s = n(568933);
+    o = n(481060),
+    a = n(530612),
+    s = n(41856);
 function l(e) {
     let {
             users: t,
@@ -24,24 +24,24 @@ function l(e) {
         ? (0, r.jsxs)("div", {
               className: s.emptySearchResultsContainer,
               children: [
-                  (0, r.jsx)(a.Heading, {
+                  (0, r.jsx)(o.Heading, {
                       variant: "heading-md/semibold",
                       color: "text-strong",
                       children: p.header,
                   }),
-                  (0, r.jsx)(a.Text, {
+                  (0, r.jsx)(o.Text, {
                       variant: "text-md/medium",
                       color: "text-subtle",
                       children: p.body,
                   }),
               ],
           })
-        : (0, r.jsxs)(a.u2D, {
+        : (0, r.jsxs)(o.u2D, {
               className: _,
               children: [
                   t.map((e) =>
                       (0, r.jsx)(
-                          o.Z,
+                          a.Z,
                           {
                               user: e,
                               checked: n(e),
@@ -53,7 +53,7 @@ function l(e) {
                           e.id,
                       ),
                   ),
-                  c && (0, r.jsx)(a.$jN, {}),
+                  c && (0, r.jsx)(o.$jN, {}),
                   (0, r.jsx)("div", { ref: m }),
               ],
           });

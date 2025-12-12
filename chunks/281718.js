@@ -1,0 +1,17 @@
+t.exports = {
+    ping: "ping_f0dcaf",
+    checklistRow: "checklistRow_f0dcaf",
+    checklistIcon: "checklistIcon_f0dcaf",
+    icon: "icon_f0dcaf",
+    roleRow: "roleRow_f0dcaf",
+    roleDot: "roleDot_f0dcaf",
+    roleName: "roleName_f0dcaf",
+    table: "table_f0dcaf",
+    tableContainer: "tableContainer_f0dcaf",
+    tableHeader: "tableHeader_f0dcaf",
+    permissionsTable: "permissionsTable_f0dcaf",
+    permissionRow: "permissionRow_f0dcaf",
+    bullet: "bullet_f0dcaf",
+    bulletWarning: "bulletWarning_f0dcaf bullet_f0dcaf",
+    bulletPositive: "bulletPositive_f0dcaf bullet_f0dcaf",
+};

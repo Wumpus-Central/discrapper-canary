@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(780384),
     c = n(481060),
@@ -24,7 +24,7 @@ var r = n(54381),
     v = n(359135),
     S = n(516817),
     I = n(388032),
-    T = n(585633),
+    T = n(63053),
     C = n(460400),
     A = n(943549);
 let N = {
@@ -38,7 +38,7 @@ let N = {
         let {
                 user: t,
                 guildId: n,
-                nameplate: a,
+                nameplate: o,
                 nameplateData: P,
                 className: R,
                 innerClassName: w,
@@ -56,7 +56,7 @@ let N = {
             } = e,
             V = (0, u.ZP)(),
             H = (0, l.wj)(V),
-            Y = null != a ? (0, p.E)(a) : P,
+            Y = null != o ? (0, p.E)(o) : P,
             W = (0, s.e7)([O.Z], () => (null != t ? O.Z.getStatus(t.id) : c.Skl.ONLINE)),
             K = H ? "#706F74" : "#aaaab2",
             z = i.useRef(null),
@@ -84,10 +84,10 @@ let N = {
             }),
             ee = i.useMemo(
                 () =>
-                    null != a
-                        ? I.intl.formatToPlainString(I.t.YJig7C, { a11y_text: a.label })
+                    null != o
+                        ? I.intl.formatToPlainString(I.t.YJig7C, { a11y_text: o.label })
                         : I.intl.string(I.t.SZeUdR),
-                [a],
+                [o],
             );
         return (0, r.jsx)("div", {
             role: "img",
@@ -97,7 +97,7 @@ let N = {
                 width: null != B ? "".concat(B, "px") : "100%",
             },
             children: (0, r.jsxs)(c.Rny, {
-                className: o()(R, T.nameplatePreview, {
+                className: a()(R, T.nameplatePreview, {
                     [T.nameplatePurchased]: Z && !D,
                     [T.xsmall]: "xsmall" === G,
                     [T.small]: "small" === G,
@@ -115,14 +115,14 @@ let N = {
                                 placement: v.i.PREVIEW,
                                 content: L ? void 0 : z,
                             },
-                            null == a ? void 0 : a.skuId,
+                            null == o ? void 0 : o.skuId,
                         ),
                     (0, r.jsxs)("div", {
                         className: T.overlayContainer,
                         children: [
                             null != t
                                 ? (0, r.jsx)("div", {
-                                      className: o()(T.avatarContainer, !L && T.avatarVisible),
+                                      className: a()(T.avatarContainer, !L && T.avatarVisible),
                                       children: (0, r.jsx)(d.Z, {
                                           ref: z,
                                           avatar: (0, r.jsx)(f.Z, {
@@ -150,7 +150,7 @@ let N = {
                                   })
                                 : null,
                             (0, r.jsxs)("div", {
-                                className: o()(T.avatarContainer, L && T.avatarVisible),
+                                className: a()(T.avatarContainer, L && T.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
                                         src: H ? C : A,

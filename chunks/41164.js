@@ -5,17 +5,17 @@ var a = n(481060),
     o = n(313789),
     l = n(518596),
     s = n(181211),
-    c = n(885528),
-    r = n(981631),
+    r = n(188879),
+    c = n(981631),
     d = n(726985),
-    u = n(200630);
+    u = n(22860);
 let p = (e) => {
     let { transitionState: t, onClose: n, classificationId: p, source: m } = e,
         f = (0, s.Z)(),
         h = () => {
             n(),
                 (0, l.openUserSettings)(o.n.ACCOUNT_PANEL, {
-                    section: r.oAB.ACCOUNT,
+                    section: c.oAB.ACCOUNT,
                     subsection: d.s6.PRIVACY_AND_SAFETY_STANDING,
                 });
         };
@@ -38,7 +38,7 @@ let p = (e) => {
                 className: u.modalContent,
                 children: f
                     ? (0, i.jsx)(a.$jN, {})
-                    : (0, i.jsx)(c.Z, {
+                    : (0, i.jsx)(r.Z, {
                           classificationId: p,
                           source: m,
                           onError: h,

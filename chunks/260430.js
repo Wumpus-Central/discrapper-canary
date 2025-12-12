@@ -2,15 +2,15 @@ n.d(t, { Z: () => m }), n(472816), n(794429);
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    a = n.n(i),
-    o = n(373793),
+    o = n.n(i),
+    a = n(373793),
     s = n(243814),
     l = n(993365),
     c = n(481060),
     u = n(211266),
     d = n(713938),
     f = n(388032),
-    p = n(50548);
+    p = n(282320);
 function _(e) {
     let { text: t, error: n, isFake: i } = e;
     return (0, r.jsxs)("div", {
@@ -20,12 +20,12 @@ function _(e) {
                 ? (0, r.jsx)(c.k$p, {
                       size: "md",
                       color: "currentColor",
-                      className: a()(p.icon, p.fakeScopeIcon),
+                      className: o()(p.icon, p.fakeScopeIcon),
                   })
                 : (0, r.jsx)(c.owK, {
                       size: "md",
                       color: "currentColor",
-                      className: a()(p.icon, p.scopeIcon),
+                      className: o()(p.icon, p.scopeIcon),
                   }),
             (0, r.jsxs)("div", {
                 className: p.scopeInner,
@@ -62,9 +62,9 @@ function m(e) {
     if (0 === i.length) return null;
     let y = b(),
         O = g ? f.t.PZpY9c : f.t["1Hz+Sl"],
-        v = m === o.Y.USER_INSTALL && l.includes(s.x.APPLICATIONS_COMMANDS);
+        v = m === a.Y.USER_INSTALL && l.includes(s.x.APPLICATIONS_COMMANDS);
     return (0, r.jsxs)("div", {
-        className: a()(p.scopes, E ? p.noDivider : void 0),
+        className: o()(p.scopes, E ? p.noDivider : void 0),
         children: [
             (0, r.jsx)(c.Heading, {
                 variant: "heading-sm/normal",

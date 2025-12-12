@@ -4,20 +4,20 @@ var i = n(54381),
     a = n(512722),
     l = n.n(a),
     s = n(793030),
-    c = n(442837),
-    o = n(481060),
-    u = n(418632),
+    o = n(442837),
+    u = n(481060),
+    c = n(418632),
     d = n(594174),
     f = n(388032),
-    m = n(956797);
+    m = n(97411);
 let g = function (e) {
     let { onClose: t, transitionState: a } = e,
-        g = (0, c.e7)([d.default], () => d.default.getCurrentUser()),
+        g = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         [b, p] = r.useState(!1),
         v = r.useCallback(() => (null == t || t(), Promise.resolve()), [t]),
         y = r.useCallback(() => {
             null == t || t(),
-                (0, o.ZDy)(async () => {
+                (0, u.ZDy)(async () => {
                     let { default: e } = await n.e("9343").then(n.bind(n, 642298));
                     return (t) =>
                         (0, i.jsx)(
@@ -54,7 +54,7 @@ let g = function (e) {
             null == t || t(),
                 l()(null != g, "ResendEmailVerificationButton: currentUser cannot be undefined"),
                 p(!0),
-                (0, u.s)(g).finally(() => p(!1));
+                (0, c.s)(g).finally(() => p(!1));
         }, [g, t]),
         h = r.useMemo(
             () =>
@@ -88,7 +88,7 @@ let g = function (e) {
         actions: h,
         children: [
             (0, i.jsx)("div", { className: m.imageUnverified }),
-            (0, i.jsx)(o.Text, {
+            (0, i.jsx)(u.Text, {
                 variant: "text-md/normal",
                 className: m.message,
                 children: f.intl.string(f.t["0LgOKH"]),

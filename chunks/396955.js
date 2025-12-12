@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    a = n(388032),
-    o = n(14846),
+    o = n(388032),
+    a = n(402529),
     s = (function (e) {
         return (
             (e.SELECT_PAYMENT_METHOD = "SELECT_PAYMENT_METHOD"),
@@ -20,26 +20,26 @@ function l(e) {
     if (!t) return null;
     switch (t) {
         case "SELECT_PAYMENT_METHOD":
-            n = a.intl.string(a.t.Tdb5qb);
+            n = o.intl.string(o.t.Tdb5qb);
             break;
         case "ADD_NEW_PAYMENT_METHOD":
-            n = a.intl.string(a.t["6d44F5"]);
+            n = o.intl.string(o.t["6d44F5"]);
     }
     return (0, r.jsxs)("div", {
-        className: o.paymentRestrictionBannerContainer,
+        className: a.paymentRestrictionBannerContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: o.appsIconContainer,
+                className: a.appsIconContainer,
                 children: [
                     (0, r.jsx)(i.jje, {
                         size: "md",
                         color: "white",
-                        className: o.icon,
+                        className: a.icon,
                     }),
                     (0, r.jsx)(i.jje, {
                         size: "md",
                         color: "currentColor",
-                        className: o.iconDark,
+                        className: a.iconDark,
                     }),
                 ],
             }),
@@ -47,7 +47,7 @@ function l(e) {
                 variant: "text-sm/normal",
                 children: n,
             }),
-            (0, r.jsx)("div", { className: o.paymentRestrictionBannerBackgroundImage }),
+            (0, r.jsx)("div", { className: a.paymentRestrictionBannerBackgroundImage }),
         ],
     });
 }

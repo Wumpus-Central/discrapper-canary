@@ -9,10 +9,10 @@ n.d(t, {
 });
 var r = n(481060),
     i = n(930153),
-    a = n(74538),
-    o = n(474936),
+    o = n(74538),
+    a = n(474936),
     s = n(282793),
-    l = n(137427),
+    l = n(96011),
     c = n(388032);
 let u = [
         {
@@ -23,7 +23,7 @@ let u = [
             Icon: r.dz2,
             getText: () =>
                 c.intl.formatToPlainString(c.t.p8QVLT, {
-                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, o.v9)(a.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
         {
@@ -41,8 +41,8 @@ let u = [
             getText: function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "en-US";
                 return c.intl.formatToPlainString(c.t["T9RTr/"], {
-                    numBoosts: o.cb,
-                    percentageOff: (0, i.T3)(e, o.Rr / 100),
+                    numBoosts: a.cb,
+                    percentageOff: (0, i.T3)(e, a.Rr / 100),
                 });
             },
         },
@@ -50,7 +50,7 @@ let u = [
             Icon: r.rG2,
             getText: () =>
                 c.intl.formatToPlainString(c.t.p8QVLT, {
-                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, o.v9)(a.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
         {
@@ -71,7 +71,7 @@ let u = [
             Icon: r.rG2,
             getText: () =>
                 c.intl.formatToPlainString(c.t.p8QVLT, {
-                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, o.v9)(a.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
         {
@@ -96,7 +96,7 @@ let u = [
             Icon: r.rG2,
             getText: () =>
                 c.intl.formatToPlainString(c.t.p8QVLT, {
-                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_2, { useSpace: !1 }),
+                    maxUploadPremium: (0, o.v9)(a.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
         {
@@ -129,7 +129,7 @@ let u = [
             Icon: r.dz2,
             getText: () =>
                 c.intl.formatToPlainString(c.t.p8QVLT, {
-                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_0, { useSpace: !1 }),
+                    maxUploadPremium: (0, o.v9)(a.PremiumTypes.TIER_0, { useSpace: !1 }),
                 }),
         },
         {
@@ -142,7 +142,7 @@ let u = [
             Icon: r.rG2,
             getText: () =>
                 c.intl.formatToPlainString(c.t.p8QVLT, {
-                    maxUploadPremium: (0, a.v9)(o.PremiumTypes.TIER_0, { useSpace: !1 }),
+                    maxUploadPremium: (0, o.v9)(a.PremiumTypes.TIER_0, { useSpace: !1 }),
                 }),
         },
         {

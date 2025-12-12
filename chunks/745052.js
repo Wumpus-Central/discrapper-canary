@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(112724),
     h = n(183126),
     m = n(493773),
-    b = n(209613),
-    _ = n(325708),
+    _ = n(209613),
+    b = n(325708),
     E = n(320149),
     O = n(82295),
     v = n(252618),
@@ -50,8 +50,8 @@ var r = n(54381),
     J = n(921944),
     X = n(526761),
     $ = n(388032),
-    ee = n(439700),
-    et = n(978966);
+    ee = n(803882),
+    et = n(97009);
 function en(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,12 +105,12 @@ function ei() {
             (0, p.showToast)((0, p.createToast)($.intl.string($.t["EDYbS+"]), p.ToastType.FAILURE));
         }, []),
         { rejectAll: d } = (0, B.m)({ onError: u }),
-        f = (0, b.Z)("message-requests-list"),
+        f = (0, _.Z)("message-requests-list"),
         { channelId: g } = (0, H._)(),
         m = i.useCallback(() => {
             d(n.map((e) => e.channel.id));
         }, [n, d]),
-        _ = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 var t, i;
                 let { row: s } = e,
@@ -215,7 +215,7 @@ function ei() {
                                   sectionHeight: K.oi,
                                   rowHeight: K.WN,
                                   renderSection: E,
-                                  renderRow: _,
+                                  renderRow: b,
                                   sections: [n.length],
                                   chunkSize: 30,
                                   fade: !0,
@@ -234,8 +234,8 @@ function el(e) {
         l = (0, c.e7)([L.Z], () => L.Z.getChannel(null == i ? void 0 : i.channelId));
     if (null == i || i.type !== j.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
     let a = t - Q.R7I;
-    return (0, r.jsx)(_.Z, {
-        sidebarType: _.y.MessageRequestSidebar,
+    return (0, r.jsx)(b.Z, {
+        sidebarType: b.y.MessageRequestSidebar,
         maxWidth: a,
         onWidthChange: n,
         children: (0, r.jsx)(E.Z, {
@@ -335,13 +335,13 @@ let eo = (0, g.Z)(function (e) {
             return null != e && e.type === j.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         h = null == g ? void 0 : g.channelId,
-        b = null != g,
-        _ = (0, k.T)(h),
+        _ = null != g,
+        b = (0, k.T)(h),
         E = (0, M.J)(h),
         O = i.useRef(null);
     i.useEffect(() => {
-        null != h && !_ && E && b && ((0, T.Kh)(h), N.Z.closeChannelSidebar(w.uZ));
-    }, [h, E, b, _]);
+        null != h && !b && E && _ && ((0, T.Kh)(h), N.Z.closeChannelSidebar(w.uZ));
+    }, [h, E, _, b]);
     let [y, I] = i.useState(K.pS.REQUESTS),
         A = (e) => {
             I(e);
@@ -352,8 +352,8 @@ let eo = (0, g.Z)(function (e) {
             children: [
                 (0, r.jsxs)("div", {
                     className: a()(et.chat, ee.container, {
-                        [et.threadSidebarOpen]: b,
-                        [et.threadSidebarFloating]: b && u,
+                        [et.threadSidebarOpen]: _,
+                        [et.threadSidebarFloating]: _ && u,
                     }),
                     children: [
                         (0, r.jsx)(p.f6W, {
@@ -405,7 +405,7 @@ let eo = (0, g.Z)(function (e) {
                         }),
                     ],
                 }),
-                b &&
+                _ &&
                     (0, r.jsx)(el, {
                         pageWidth: t,
                         onSidebarResize: (e, t) => {

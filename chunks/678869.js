@@ -1,8 +1,8 @@
 n.d(t, { Z: () => L }), n(804061), n(704826), n(35282), n(539854);
 var r = n(54381),
     i = n(473749),
-    a = n(423875),
-    o = n(442837),
+    o = n(423875),
+    a = n(442837),
     s = n(902704),
     l = n(481060),
     c = n(952164),
@@ -25,8 +25,8 @@ var r = n(54381),
     C = n(981631),
     A = n(616922),
     N = n(388032),
-    P = n(36310),
-    R = n(813849);
+    P = n(119835),
+    R = n(951948);
 function w(e, t) {
     return N.intl.formatToPlainString(N.t.h2yWWX, {
         username: t.username,
@@ -35,12 +35,12 @@ function w(e, t) {
 }
 let D = (e, t, n) => {
     let { artist: r, media: i } = e,
-        a = N.t["6iNxrl"],
-        o = h.ZP.getName(t.guild_id, t.id, n);
+        o = N.t["6iNxrl"],
+        a = h.ZP.getName(t.guild_id, t.id, n);
     return N.intl
-        .formatToMarkdownString(a, {
+        .formatToMarkdownString(o, {
             artist: r,
-            userName: o,
+            userName: a,
             media: i,
         })
         .replaceAll("*", "");
@@ -48,19 +48,19 @@ let D = (e, t, n) => {
 function x(e) {
     let { activity: t } = e,
         n = t.timestamps,
-        { now: a } = (0, I.tS)(),
-        { durationTimestamp: o, seekBarStyles: s } = i.useMemo(() => {
+        { now: o } = (0, I.tS)(),
+        { durationTimestamp: a, seekBarStyles: s } = i.useMemo(() => {
             var e;
             let { start: n, end: r } = null != (e = t.timestamps) ? e : {};
             if (null == n || null == r) return {};
-            let i = Math.min(r, a),
-                o = r - n,
-                s = Math.floor((Math.max(i - n, 0) / o) * 100);
+            let i = Math.min(r, o),
+                a = r - n,
+                s = Math.floor((Math.max(i - n, 0) / a) * 100);
             return {
                 seekBarStyles: { width: "".concat(s, "%") },
-                durationTimestamp: (0, E.T_)({ start: 0 }, o),
+                durationTimestamp: (0, E.T_)({ start: 0 }, a),
             };
-        }, [t, a]);
+        }, [t, o]);
     return null == s
         ? null
         : (0, r.jsxs)("div", {
@@ -79,7 +79,7 @@ function x(e) {
                       variant: "text-xs/normal",
                       tabularNumbers: !0,
                       color: void 0,
-                      children: o,
+                      children: a,
                   }),
               ],
           });
@@ -91,10 +91,10 @@ function L(e) {
         I,
         { channel: P, entry: L, closePopout: j, onReaction: M, onVoiceChannelPreview: k } = e,
         { largeImage: U } = (0, g.rv)({ entry: L }),
-        { activity: G, currentEntry: Z, artist: B, title: F, user: V } = (0, v.pi)(L),
+        { activity: G, currentEntry: Z, artist: F, title: B, user: V } = (0, v.pi)(L),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
         W = (0, y.Z)(C.ABu.SPOTIFY),
-        K = (0, o.e7)(
+        K = (0, a.e7)(
             [u.Z, _.default],
             () =>
                 (null == G ? void 0 : G.type) === C.IIU.LISTENING && null != V
@@ -112,11 +112,11 @@ function L(e) {
                 user: V,
                 channel: P,
                 mediaImageSrc: null == U ? void 0 : U.src,
-                artist: B,
+                artist: F,
                 description: D(
                     {
-                        artist: B,
-                        media: F,
+                        artist: F,
+                        media: B,
                     },
                     P,
                     V,
@@ -124,11 +124,11 @@ function L(e) {
                 colors: [H, Y],
                 badges: (0, b.jE)({ timestamp: n }),
             });
-        }, [G, B, P, L, null == U ? void 0 : U.src, H, Y, F, V]);
+        }, [G, F, P, L, null == U ? void 0 : U.src, H, Y, B, V]);
     if (null == G || null == Z) return null;
-    let q = B,
+    let q = F,
         Q = [];
-    if (Z.media.provider === a.p.SPOTIFY) {
+    if (Z.media.provider === o.p.SPOTIFY) {
         (h = () => {
             (0, c.aG)(G);
         }),
@@ -144,7 +144,7 @@ function L(e) {
         };
         if (
             ((q = (0, r.jsx)(d.Z, {
-                artists: B,
+                artists: F,
                 canOpen: null != G.sync_id,
                 linkClassName: R.popoutTextSecondary,
                 onOpenSpotifyArtist: e,
@@ -175,7 +175,7 @@ function L(e) {
         channel: P,
         entry: L,
         headerIcons:
-            Z.media.provider === a.p.SPOTIFY
+            Z.media.provider === o.p.SPOTIFY
                 ? (0, r.jsx)(T.Z, {
                       onClick: n,
                       "aria-label": N.intl.string(N.t.rRffNz),
@@ -183,7 +183,7 @@ function L(e) {
                   })
                 : null,
         userDescription: (0, E.kr)(L) ? N.t.Tzx5D2 : N.t.CcVI1T,
-        title: F,
+        title: B,
         onClickTitle: h,
         subtitle: q,
         badges: null,
@@ -199,7 +199,7 @@ function L(e) {
                     user: V,
                     channel: P,
                     generateReactionImage: z,
-                    reactionImageAltText: w(B, V),
+                    reactionImageAltText: w(F, V),
                     entry: L,
                     buttons: Q,
                 }),

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(788911),
@@ -26,7 +26,7 @@ var r = n(54381),
     A = n(689079),
     N = n(981631),
     P = n(388032),
-    R = n(157787),
+    R = n(57507),
     w = n(239840);
 let D = 512,
     x = 7,
@@ -39,11 +39,11 @@ let D = 512,
     Z = l().debounce(() => {
         (0, d.yw)(N.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300),
-    B = i.forwardRef(function (e, t) {
-        let { channel: n, canOnlyUseTextCommands: a } = e,
+    F = i.forwardRef(function (e, t) {
+        let { channel: n, canOnlyUseTextCommands: o } = e,
             s = i.useRef(!1),
             l = i.useRef(0),
-            [B, V] = i.useState(0),
+            [F, V] = i.useState(0),
             H = i.useRef(null),
             [Y, W] = i.useState(!1),
             K = h.Xn.useStore((e) => e.activeCategoryIndex);
@@ -66,8 +66,8 @@ let D = 512,
                 },
                 filters: {
                     commandTypes: [u.yU.CHAT],
-                    builtIns: a ? O.D.ONLY_TEXT : O.D.ALLOW,
-                    applicationCommands: !a,
+                    builtIns: o ? O.D.ONLY_TEXT : O.D.ALLOW,
+                    applicationCommands: !o,
                 },
                 options: {
                     placeholderCount: x,
@@ -101,11 +101,11 @@ let D = 512,
             i.useEffect(() => {
                 ei.current(l.current);
             }, [J]);
-        let ea = i.useCallback((e) => (e !== q.length - 1 || X ? j : 0), [q.length, X]),
-            eo = Q.map((e) => e.data.length);
+        let eo = i.useCallback((e) => (e !== q.length - 1 || X ? j : 0), [q.length, X]),
+            ea = Q.map((e) => e.data.length);
         i.useEffect(() => {
-            null != H.current && Y && null != B && H.current.scrollRowIntoView(B);
-        }, [Y, B]),
+            null != H.current && Y && null != F && H.current.scrollRowIntoView(F);
+        }, [Y, F]),
             i.useLayoutEffect(() => {
                 if (null != $) {
                     var e;
@@ -137,13 +137,13 @@ let D = 512,
             t,
             () => ({
                 onTabOrEnter: (e) => {
-                    if (null == B) return !e && (V(0), !0);
-                    if (null == B) return !1;
+                    if (null == F) return !e && (V(0), !0);
+                    if (null == F) return !1;
                     let t = 0,
                         n = 0;
                     for (let e of Q)
-                        if (((t = n), B < (n += e.data.length))) {
-                            let n = e.data[B - t],
+                        if (((t = n), F < (n += e.data.length))) {
+                            let n = e.data[F - t],
                                 r = z.find((e) => e.id === n.applicationId);
                             el(n, r, (0, S.tI)(e.section));
                             break;
@@ -154,18 +154,18 @@ let D = 512,
                     if (0 === J.length) return !0;
                     let t = X ? x : 0,
                         n = J.length + t,
-                        r = null == B ? 0 : B + e;
+                        r = null == F ? 0 : F + e;
                     return r >= n ? (r = n - 1) : r < 0 && (r = 0), V(r), W(!0), !0;
                 },
             }),
-            [J.length, Q, X, z, el, B],
+            [J.length, Q, X, z, el, F],
         );
         let ec = i.useCallback(
                 (e) => {
                     let t = q[e];
                     if (null == t) return null;
                     let i = (0, C.ky)(t),
-                        a = (0, r.jsx)(i, {
+                        o = (0, r.jsx)(i, {
                             channel: n,
                             section: t,
                             width: 16,
@@ -176,7 +176,7 @@ let D = 512,
                         E.Z,
                         {
                             className: R.categoryHeader,
-                            icon: a,
+                            icon: o,
                             children: t.name,
                         },
                         e,
@@ -188,16 +188,16 @@ let D = 512,
                 (e, t) => {
                     let n = e === q.length - 1,
                         i = q[e],
-                        { data: a } = Q[e];
+                        { data: o } = Q[e];
                     return (0, r.jsxs)(
                         "ul",
                         {
                             role: "group",
                             "aria-label": i.name,
-                            className: o()(R.categorySection, { [R.categorySectionLast]: n }),
+                            className: a()(R.categorySection, { [R.categorySectionLast]: n }),
                             children: [
                                 t,
-                                0 === a.length &&
+                                0 === o.length &&
                                     (0, r.jsx)(c.Z, {
                                         message: P.intl.format(P.t.WoQXT6, { applicationName: i.name }),
                                         noResultsImageURL: w,
@@ -213,27 +213,27 @@ let D = 512,
             ed = i.useCallback(
                 (e, t) => {
                     var i;
-                    let a = Q[t.sectionIndex],
-                        o = a.data[t.sectionRowIndex],
-                        s = "".concat(a.section.id, ":").concat(null != (i = null == o ? void 0 : o.id) ? i : e);
+                    let o = Q[t.sectionIndex],
+                        a = o.data[t.sectionRowIndex],
+                        s = "".concat(o.section.id, ":").concat(null != (i = null == a ? void 0 : a.id) ? i : e);
                     if (
-                        null == o ||
-                        (a.section.id !== o.applicationId && a.section.id !== A.bi.FRECENCY) ||
-                        o.inputType === v.iw.PLACEHOLDER
+                        null == a ||
+                        (o.section.id !== a.applicationId && o.section.id !== A.bi.FRECENCY) ||
+                        a.inputType === v.iw.PLACEHOLDER
                     )
                         return (0, r.jsx)(T.Z, {}, s);
-                    let l = z.find((e) => e.id === o.applicationId);
+                    let l = z.find((e) => e.id === a.applicationId);
                     return (0, r.jsx)(
                         f.ZP.NewCommand,
                         {
                             index: e,
-                            command: o,
+                            command: a,
                             channel: n,
                             className: R.itemWrapper,
-                            selected: B === e,
-                            showImage: a.section.id !== o.applicationId,
+                            selected: F === e,
+                            showImage: o.section.id !== a.applicationId,
                             section: l,
-                            onClick: () => el(o, l, (0, S.tI)(a.section)),
+                            onClick: () => el(a, l, (0, S.tI)(o.section)),
                             onHover: () => {
                                 V(null), W(!1);
                             },
@@ -241,11 +241,11 @@ let D = 512,
                         s,
                     );
                 },
-                [n, Q, el, z, B],
+                [n, Q, el, z, F],
             ),
             ef = (0, m.Dt)();
         return (
-            (0, p.KR)(ef, !0, (0, f.DJ)(B)),
+            (0, p.KR)(ef, !0, (0, f.DJ)(F)),
             i.useEffect(
                 () => () => {
                     (0, p.sJ)();
@@ -256,7 +256,7 @@ let D = 512,
                 id: ef,
                 className: R.outerWrapper,
                 innerClassName: R.wrapper,
-                onMouseDown: F,
+                onMouseDown: B,
                 children: [
                     (0, r.jsx)(I.Z, {
                         className: R.rail,
@@ -276,10 +276,10 @@ let D = 512,
                         renderSection: eu,
                         renderSectionHeader: ec,
                         rowCount: q.length,
-                        rowCountBySection: eo,
+                        rowCountBySection: ea,
                         rowHeight: L,
                         sectionHeaderHeight: M,
-                        sectionMarginBottom: ea,
+                        sectionMarginBottom: eo,
                         ref: H,
                         stickyHeaders: !0,
                     }),
@@ -287,6 +287,6 @@ let D = 512,
             })
         );
     });
-function F(e) {
+function B(e) {
     e.preventDefault();
 }

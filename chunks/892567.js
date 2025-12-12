@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(522942),
     l = n(342905),
     c = n(442837),
@@ -15,14 +15,14 @@ var r = n(54381),
     h = n(821795),
     g = n(760692),
     E = n(7284),
-    b = n(24730);
+    b = n(492333);
 let y = [l.C.CHERRY_BOMB, l.C.CHICLE],
     O = i.memo(function (e) {
         var t;
         let {
                 userName: n,
                 displayNameStyles: i,
-                effectDisplayType: a = h.F.STATIC,
+                effectDisplayType: o = h.F.STATIC,
                 inProfile: O = !1,
                 textClassName: S,
                 loop: I = !1,
@@ -52,9 +52,9 @@ let y = [l.C.CHERRY_BOMB, l.C.CHICLE],
             }),
             U = v(x);
         return (0, r.jsxs)("div", {
-            className: o()(b.container, N, S, {
-                [b.showEffect]: a !== h.F.PLAIN,
-                [b.animated]: a === h.F.ANIMATED && !P,
+            className: a()(b.container, N, S, {
+                [b.showEffect]: o !== h.F.PLAIN,
+                [b.animated]: o === h.F.ANIMATED && !P,
                 [b.loop]: I,
                 [b.inProfile]: O,
             }),
@@ -62,7 +62,7 @@ let y = [l.C.CHERRY_BOMB, l.C.CHICLE],
             children: [
                 (0, r.jsx)("span", {
                     "data-username-with-effects": L,
-                    className: o()(b.innerContainer, null == U ? void 0 : U.effectClassName, {
+                    className: a()(b.innerContainer, null == U ? void 0 : U.effectClassName, {
                         [b.underlineOnHover]: A,
                         [b.chicle]: i.fontId === l.C.CHICLE,
                     }),
@@ -70,7 +70,7 @@ let y = [l.C.CHERRY_BOMB, l.C.CHICLE],
                 }),
                 (null == U ? void 0 : U.glowClassName) != null &&
                     (0, r.jsx)("span", {
-                        className: o()(b.glowContainer, b.innerContainer, U.glowClassName, {
+                        className: a()(b.glowContainer, b.innerContainer, U.glowClassName, {
                             [b.chicle]: i.fontId === l.C.CHICLE,
                         }),
                         "aria-hidden": !0,

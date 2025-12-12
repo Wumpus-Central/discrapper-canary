@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(793030),
     l = n(442837),
     c = n(481060),
@@ -24,10 +24,10 @@ var r = n(54381),
     O = n(382271),
     v = n(981631),
     S = n(388032),
-    I = n(14515);
+    I = n(476034);
 let T = (e) => {
         let { onClose: t, onShare: n } = e,
-            a = (0, l.e7)([E.Z], () => E.Z.getReferralsRemaining()),
+            o = (0, l.e7)([E.Z], () => E.Z.getReferralsRemaining()),
             u = (0, l.e7)([E.Z], () => E.Z.getHasEligibleFriends()),
             [f, p] = i.useState(new Map()),
             [_, g] = i.useState(""),
@@ -77,8 +77,8 @@ let T = (e) => {
                 }),
             L = (e) => {
                 let i,
-                    { eligibleRecipients: a } = e,
-                    s = O.length > 0 && 0 === a.size;
+                    { eligibleRecipients: o } = e,
+                    s = O.length > 0 && 0 === o.size;
                 return (
                     (i =
                         !0 === s
@@ -87,7 +87,7 @@ let T = (e) => {
                               ? S.intl.string(S.t.ItpQxk)
                               : S.intl.format(S.t.iW2stn, { nTrials: f.size })),
                     (0, r.jsx)("div", {
-                        className: o()(I.footer, I.footerSeparator),
+                        className: a()(I.footer, I.footerSeparator),
                         children: (0, r.jsx)(c.Button, {
                             variant: "primary",
                             disabled: (0 === f.size && !s) || R,
@@ -116,9 +116,9 @@ let T = (e) => {
                     isFetching: N,
                     onFetchMore: C,
                     isUserDisabled: (e) =>
-                        null !== a &&
-                        0 !== a &&
-                        [...f.values()].filter((e) => !P.has(e.id)).length >= a &&
+                        null !== o &&
+                        0 !== o &&
+                        [...f.values()].filter((e) => !P.has(e.id)).length >= o &&
                         !f.has(e.id) &&
                         !P.has(e.id),
                     searchQuery: O,
@@ -129,7 +129,7 @@ let T = (e) => {
                     className: I.list,
                 });
             };
-        return null === a
+        return null === o
             ? (0, r.jsx)(c.$jN, {})
             : A
               ? (0, r.jsx)(s.Modal, {
@@ -165,26 +165,26 @@ let T = (e) => {
     },
     C = (e) => {
         let { onClose: t, onShare: n } = e,
-            a = (0, l.e7)([E.Z], () => E.Z.getRecipientStatus()),
+            o = (0, l.e7)([E.Z], () => E.Z.getRecipientStatus()),
             [d, f] = i.useState(new Map()),
             [p, _] = i.useState(new Map()),
             [m, h] = i.useState(!1);
         i.useEffect(() => {
             (async () => {
                 let e = new Map();
-                for (let [t, n] of a) {
+                for (let [t, n] of o) {
                     let r = await (0, u.PR)(t);
                     (r.referralStatus = n), e.set(r.id, r);
                 }
                 f(e);
             })();
-        }, [a]);
+        }, [o]);
         let y = () => {
             let e;
             return (
                 (e = p.size <= 1 ? S.intl.string(S.t.ItpQxk) : S.intl.format(S.t.iW2stn, { nTrials: p.size })),
                 (0, r.jsx)("div", {
-                    className: o()(I.footer, I.footerSeparator),
+                    className: a()(I.footer, I.footerSeparator),
                     children: (0, r.jsx)(c.Button, {
                         variant: "primary",
                         disabled: 0 === p.size || m,
@@ -230,8 +230,8 @@ var A = (function (e) {
 })({});
 let N = (e) => {
     let { onClose: t, startingScreen: n = 1 } = e,
-        a = (0, l.e7)([E.Z], () => E.Z.getReferralsRemaining()),
-        [o, s] = i.useState(n),
+        o = (0, l.e7)([E.Z], () => E.Z.getReferralsRemaining()),
+        [a, s] = i.useState(n),
         [u, d] = i.useState([]),
         { analyticsLocations: m } = (0, p.ZP)([f.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]),
         h = async (e) => {
@@ -245,8 +245,8 @@ let N = (e) => {
             ),
                 s(2);
         };
-    if (null === a) return (0, r.jsx)(c.$jN, {});
-    if (2 === o) {
+    if (null === o) return (0, r.jsx)(c.$jN, {});
+    if (2 === a) {
         let e = 3 === n;
         return (0, r.jsx)(O.m, {
             isReminderConfirmation: e,
@@ -254,12 +254,12 @@ let N = (e) => {
             onClose: t,
         });
     }
-    return 1 === o
+    return 1 === a
         ? (0, r.jsx)(T, {
               onClose: t,
               onShare: h,
           })
-        : 3 === o
+        : 3 === a
           ? (0, r.jsx)(C, {
                 onClose: t,
                 onShare: h,

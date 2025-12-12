@@ -9,13 +9,13 @@ n.d(t, {
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    a = n.n(i),
-    o = n(873546),
+    o = n.n(i),
+    a = n(873546),
     s = n(481060),
     l = n(626135),
     c = n(981631),
     u = n(388032),
-    d = n(99940);
+    d = n(226910);
 function f(e, t, n) {
     return (
         t in e
@@ -74,9 +74,9 @@ function h(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,8 +85,8 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let E = Object.freeze({
@@ -106,11 +106,11 @@ let E = Object.freeze({
 });
 function b(e) {
     var { children: t, className: n, minor: i = !1 } = e,
-        o = h(e, ["children", "className", "minor"]);
+        a = h(e, ["children", "className", "minor"]);
     return (0, r.jsx)(s.tEY, {
         children: (0, r.jsx)(
             "button",
-            m(p({ className: a()(d.button, n, { [d.buttonMinor]: i }) }, o), { children: t }),
+            m(p({ className: o()(d.button, n, { [d.buttonMinor]: i }) }, a), { children: t }),
         ),
     });
 }
@@ -141,15 +141,15 @@ function S(e) {
 }
 function I(e) {
     var { children: t, href: n, noticeType: i } = e,
-        a = h(e, ["children", "href", "noticeType"]);
+        o = h(e, ["children", "href", "noticeType"]);
     return (0, r.jsx)(
         s.Anchor,
-        m(p({}, a), {
+        m(p({}, o), {
             className: d.button,
             href: n,
             onClick: (e) => {
                 var t;
-                null == (t = a.onClick) || t.call(a, e), v(i, n);
+                null == (t = o.onClick) || t.call(o, e), v(i, n);
             },
             children: t,
         }),
@@ -159,7 +159,7 @@ function T(e) {
     let { onClick: t, noticeType: n, className: i } = e;
     return (0, r.jsx)(s.P3F, {
         focusProps: { offset: 6 },
-        className: a()(d.closeButton, i),
+        className: o()(d.closeButton, i),
         onClick: () => {
             t(), O(n);
         },
@@ -175,7 +175,7 @@ function C(e) {
     let { color: t = E.DEFAULT, className: n, style: i, ref: s, children: l } = e;
     return (0, r.jsx)("div", {
         ref: s,
-        className: a()(d.notice, { [d.isMobile]: o.tq }, n, t),
+        className: o()(d.notice, { [d.isMobile]: a.tq }, n, t),
         style: null != i ? i : void 0,
         children: l,
     });

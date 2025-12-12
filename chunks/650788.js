@@ -3,8 +3,8 @@ var n = r(54381),
     i = r(473749),
     o = r(120356),
     l = r.n(o),
-    c = r(990547),
-    s = r(442837),
+    s = r(990547),
+    c = r(442837),
     a = r(692547),
     d = r(481060),
     u = r(213609),
@@ -20,9 +20,9 @@ var n = r(54381),
     m = r(847033),
     v = r(544978),
     y = r(154522),
-    w = r(935554),
-    P = r(340529),
-    _ = r(175390),
+    _ = r(935554),
+    w = r(340529),
+    P = r(175390),
     L = r(64685),
     S = r(866104),
     I = r(886176),
@@ -30,16 +30,16 @@ var n = r(54381),
     D = r(176505),
     T = r(20281),
     k = r(388032),
-    N = r(977063),
-    R = r(978966);
+    N = r(486663),
+    R = r(97009);
 function E(e) {
     var t;
     let { guildId: r, productId: i } = e,
         { loaded: o, subscriptionsSettings: l } = (0, O.H)(r),
-        c = (0, s.e7)([g.Z], () => g.Z.getGuild(r)),
+        s = (0, c.e7)([g.Z], () => g.Z.getGuild(r)),
         { selectedTab: a, isPhantomPreview: u, categoryTabs: C } = (0, m.m)(),
         p = !o || null == l;
-    return null == c || (!u && p)
+    return null == s || (!u && p)
         ? (0, n.jsx)(d.$jN, {})
         : (0, n.jsx)(x.Z, {
               defaultSortOption:
@@ -48,22 +48,22 @@ function E(e) {
                   className: N.contentContainer,
                   children: [
                       (0, n.jsx)(S.C, {
-                          guild: c,
+                          guild: s,
                           subscriptionsSettings: l,
                       }),
                       (0, n.jsx)(d.LZC, { size: 32 }),
-                      C.length > 0 && (0, n.jsx)(P.z, { guild: c }),
+                      C.length > 0 && (0, n.jsx)(w.z, { guild: s }),
                       (0, n.jsxs)("div", {
                           className: N.tabContainer,
                           children: [
                               (0, n.jsx)(d.LZC, { size: 32 }),
-                              u && (0, n.jsx)(_.Z, { guildId: r }),
+                              u && (0, n.jsx)(P.Z, { guildId: r }),
                               a === v.y.GUILD_PRODUCTS &&
                                   (0, n.jsx)(y.Q, {
                                       guildId: r,
                                       productId: i,
                                   }),
-                              a === v.y.GUILD_ROLE_SUBSCRIPTIONS && (0, n.jsx)(w.Z, { guildId: r }),
+                              a === v.y.GUILD_ROLE_SUBSCRIPTIONS && (0, n.jsx)(_.Z, { guildId: r }),
                           ],
                       }),
                   ],
@@ -72,25 +72,25 @@ function E(e) {
 }
 function V(e) {
     let { guildId: t, productId: r } = e,
-        o = (0, s.e7)([p.Z], () => p.Z.isConnected()),
-        O = (0, s.e7)([g.Z], () => g.Z.getGuild(t)),
+        o = (0, c.e7)([p.Z], () => p.Z.isConnected()),
+        O = (0, c.e7)([g.Z], () => g.Z.getGuild(t)),
         { shouldHideGuildPurchaseEntryPoints: x, restrictionsLoading: v } = (0, C.uP)(t),
-        { selectedTab: y, isPhantomPreview: w, categoryTabs: P } = (0, m.m)(),
-        _ = o && (null == O || (0 === P.length && !w) || (x && !v));
+        { selectedTab: y, isPhantomPreview: _, categoryTabs: w } = (0, m.m)(),
+        P = o && (null == O || (0 === w.length && !_) || (x && !v));
     return (
         i.useEffect(() => {
-            _ && (0, h.M)(t, D.oC.GUILD_SHOP);
-        }, [t, _]),
+            P && (0, h.M)(t, D.oC.GUILD_SHOP);
+        }, [t, P]),
         (0, u.Z)(
             {
                 type: T.n.PAGE,
-                name: c.ImpressionNames.GUILD_SHOP_PAGE,
+                name: s.ImpressionNames.GUILD_SHOP_PAGE,
                 properties: {
                     product_id: r,
                     tab: y,
                 },
             },
-            { disableTrack: _ },
+            { disableTrack: P },
         ),
         (0, n.jsxs)("div", {
             "data-has-border": !0,

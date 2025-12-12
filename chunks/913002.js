@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(28664),
     c = n(481060),
@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(695346),
     _ = n(785717),
     m = n(388032),
-    h = n(229860);
+    h = n(81064);
 function g(e, t, n) {
     return (
         t in e
@@ -72,7 +72,7 @@ let O = 300,
             return (n) => (0, r.jsx)(t, y(E({}, n), { sourceAnalyticsLocations: e }));
         });
 function S(e) {
-    let { isVisible: t, isExpandable: n, onCloseProfile: a } = e,
+    let { isVisible: t, isExpandable: n, onCloseProfile: o } = e,
         { analyticsLocations: g } = (0, d.ZP)(),
         { trackUserProfileAction: E } = (0, _.KZ)(),
         b = i.useRef(null),
@@ -80,13 +80,13 @@ function S(e) {
         [S, I] = (0, s.Wu)([u.Z], () => [u.Z.useReducedMotion, u.Z.keyboardModeEnabled]),
         T = !n || S || I ? 0 : O,
         C = () => {
-            E({ action: "PRESS_EDIT_CUSTOM_STATUS" }), v(g), null == a || a();
+            E({ action: "PRESS_EDIT_CUSTOM_STATUS" }), v(g), null == o || o();
         },
         A = () => {
             E({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), p.Ok.updateSetting(void 0);
         };
     return (0, r.jsxs)(f.ZP, {
-        className: o()(h.popover, {
+        className: a()(h.popover, {
             [h.visible]: t,
             [h.expandable]: n,
         }),
@@ -99,7 +99,7 @@ function S(e) {
                 ariaHidden: !0,
                 children: (0, r.jsx)(f.zx, {
                     ref: b,
-                    className: o()(h.button, h.left),
+                    className: a()(h.button, h.left),
                     "aria-label": m.intl.string(m.t.QdHxos),
                     "aria-haspopup": "dialog",
                     onClick: C,
@@ -116,7 +116,7 @@ function S(e) {
                 ariaHidden: !0,
                 children: (0, r.jsx)(f.zx, {
                     ref: y,
-                    className: o()(h.button, h.right),
+                    className: a()(h.button, h.right),
                     "aria-label": m.intl.string(m.t.wfYTHe),
                     onClick: A,
                     children: (0, r.jsx)(c.XHJ, {

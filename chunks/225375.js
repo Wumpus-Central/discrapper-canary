@@ -1,14 +1,3 @@
-e.exports = {
-    "outgoing-call-pulse": "f910d08f42c82225-outgoing-call-pulse",
-    "incoming-call-pulse": "f910d08f42c82225-incoming-call-pulse",
-    clickable: "f910d08f42c82225-clickable",
-    wrapper: "f910d08f42c82225-wrapper",
-    ringingOutgoing: "f910d08f42c82225-ringingOutgoing",
-    ringingIncoming: "f910d08f42c82225-ringingIncoming",
-    statusContainer: "f910d08f42c82225-statusContainer",
-    status: "f910d08f42c82225-status",
-    voiceAvatar: "f910d08f42c82225-voiceAvatar",
-    border: "f910d08f42c82225-border",
-    callAvatarMask: "f910d08f42c82225-callAvatarMask",
-    callAvatarMaskContainer: "f910d08f42c82225-callAvatarMaskContainer",
-};
+n.d(t, { Z: () => r });
+let r =
+    "https://cdn.discordapp.com/assets/content/6ffaa21345f63322cf7ff8725e4e087b8c32968b8b7ba55822f0c369d7f0c03b.gif";

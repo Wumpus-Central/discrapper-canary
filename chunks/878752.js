@@ -10,9 +10,9 @@ var r = n(100527),
     u = n(131951),
     d = n(213652),
     p = n(320427),
-    f = n(145010),
-    h = n(159909),
-    m = n(2012);
+    h = n(145010),
+    f = n(159909),
+    m = n(474830);
 function g(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: g = !1 } = e,
         { analyticsLocations: b } = (0, l.ZP)(r.Z.VOICE_CONTROL_TRAY),
@@ -25,21 +25,21 @@ function g(e) {
             { location: "VoiceEffectsActionBar" },
             { autoTrackExposure: !1 },
         ),
-        O = (0, a.Z)(u.Z);
+        _ = (0, a.Z)(u.Z);
     if (null == t || null != C) return null;
-    let x = v && O,
-        E = y && n;
-    return x || E
+    let O = v && _,
+        x = y && n;
+    return O || x
         ? (0, i.jsxs)(l.Gt, {
               value: b,
               children: [
                   (0, i.jsxs)("div", {
                       className: m.voiceEffectsActionBar,
                       children: [
-                          x && (0, i.jsx)(d.Z, { channel: t }),
-                          E && (0, i.jsx)(p.Z, {}),
-                          E && (0, i.jsx)(f.Z, { channel: t }),
-                          E && (0, i.jsx)(h.Z, {}),
+                          O && (0, i.jsx)(d.Z, { channel: t }),
+                          x && (0, i.jsx)(p.Z, {}),
+                          x && (0, i.jsx)(h.Z, { channel: t }),
+                          x && (0, i.jsx)(f.Z, {}),
                       ],
                   }),
                   g && (0, i.jsx)("div", { className: m.divider }),

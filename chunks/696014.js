@@ -1,14 +1,14 @@
 n.d(t, { s: () => c }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
-    s = n(57945);
+    o = n(120356),
+    a = n.n(o),
+    s = n(886886);
 let l = 2;
 function c() {
     let [e, t] = i.useState(!1);
     function n(e) {
-        let { showAll: n = !1, className: i, children: a, lineClamp: c = l } = e,
+        let { showAll: n = !1, className: i, children: o, lineClamp: c = l } = e,
             u = {
                 lineClamp: c,
                 WebkitLineClamp: c,
@@ -18,9 +18,9 @@ function c() {
             };
         return (0, r.jsx)("div", {
             ref: d,
-            className: o()(s.lineClamp, i),
+            className: a()(s.lineClamp, i),
             style: n ? void 0 : u,
-            children: a,
+            children: o,
         });
     }
     return {

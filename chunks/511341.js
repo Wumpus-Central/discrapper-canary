@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(54381),
     i = n(473749),
-    a = n(442837),
-    o = n(780384),
+    o = n(442837),
+    a = n(780384),
     s = n(907040),
     l = n(210887),
     c = n(823379),
@@ -16,26 +16,26 @@ var r = n(54381),
     g = n(231338),
     E = n(295907),
     b = n(388032),
-    y = n(84784);
+    y = n(396579);
 let O = (e) => {
     let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
-        a = ":".concat(t.name, ":");
+        o = ":".concat(t.name, ":");
     switch (r) {
         case m.n_.ACTIVITY:
-            let o = b.intl.formatToPlainString(b.t.EUFEJt, { username: n }),
+            let a = b.intl.formatToPlainString(b.t.EUFEJt, { username: n }),
                 s = "\n> ".concat(i);
             return null != i
-                ? "".concat(p.jd).concat(o, "*").concat(s, "\n").concat(a)
-                : "".concat(p.jd).concat(o, "*\n").concat(a);
+                ? "".concat(p.jd).concat(a, "*").concat(s, "\n").concat(o)
+                : "".concat(p.jd).concat(a, "*\n").concat(o);
         case m.n_.AVATAR:
             let l = b.intl.formatToPlainString(b.t.E6H15q, { username: n });
-            return "".concat(p.jd).concat(l, "*\n").concat(a);
+            return "".concat(p.jd).concat(l, "*\n").concat(o);
         case m.n_.STATUS:
             let u = b.intl.formatToPlainString(b.t.XPQgL2, { username: n }),
                 d = "\n> ".concat(i);
             return null != i
-                ? "".concat(p.jd).concat(u, "*").concat(d, "\n").concat(a)
-                : "".concat(p.jd).concat(u, "*\n").concat(a);
+                ? "".concat(p.jd).concat(u, "*").concat(d, "\n").concat(o)
+                : "".concat(p.jd).concat(u, "*\n").concat(o);
         default:
             (0, c.vE)(r);
     }
@@ -53,8 +53,8 @@ function v(e) {
         } = e,
         { resetInteraction: T, setInteractionToast: C } = (0, f.Xo)(),
         { theme: A } = (0, _.z)(),
-        N = (0, a.e7)([l.Z], () => l.Z.theme),
-        P = (0, o.wj)(N) ? !(0, o.wj)(A) : (0, o.wj)(A),
+        N = (0, o.e7)([l.Z], () => l.Z.theme),
+        P = (0, a.wj)(N) ? !(0, a.wj)(A) : (0, a.wj)(A),
         R = i.useRef(null);
     i.useEffect(() => {
         null == v || v(null == R ? void 0 : R.current);

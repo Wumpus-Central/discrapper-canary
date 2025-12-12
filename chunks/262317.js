@@ -14,20 +14,20 @@ var i = n(54381),
     u = n(239091),
     d = n(287734),
     p = n(872810),
-    f = n(888651),
-    h = n(622822),
+    h = n(888651),
+    f = n(622822),
     m = n(100527),
     g = n(795318),
     b = n(258609),
     C = n(257115),
     y = n(569545),
     v = n(102172),
-    O = n(525925),
-    x = n(701362),
-    E = n(655018),
-    j = n(83896),
-    S = n(821415),
-    _ = n(670188),
+    _ = n(525925),
+    O = n(701362),
+    x = n(655018),
+    E = n(83896),
+    j = n(821415),
+    S = n(670188),
     P = n(597998),
     I = n(314897),
     Z = n(430824),
@@ -37,7 +37,7 @@ var i = n(54381),
     w = n(927923),
     M = n(70722),
     R = n(388032),
-    L = n(932732);
+    L = n(92024);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -114,11 +114,11 @@ function V(e) {
         ],
     });
 }
-let F = (0, f.$)(function (e) {
+let F = (0, h.$)(function (e) {
     var t;
     let {
             collapsed: l,
-            user: f,
+            user: h,
             channel: U,
             mute: V,
             localMute: F,
@@ -147,8 +147,8 @@ let F = (0, f.$)(function (e) {
             otherClientSessionType: eu,
             voicePlatform: ed,
             isSelfOnOtherClient: ep = !1,
-            tabIndex: ef,
-            location: eh,
+            tabIndex: eh,
+            location: ef,
             isSelf: em,
             application: eg,
             hangStatusActivity: eb,
@@ -156,47 +156,47 @@ let F = (0, f.$)(function (e) {
             showHangStatus: ey,
         } = e,
         ev = r.useRef(null),
-        [eO, ex] = r.useState(!1),
-        eE = r.useRef(null),
-        [ej, eS] = r.useState(!1),
-        [e_, eP] = r.useState(!1),
+        [e_, eO] = r.useState(!1),
+        ex = r.useRef(null),
+        [eE, ej] = r.useState(!1),
+        [eS, eP] = r.useState(!1),
         [eI, eZ] = r.useState(!1),
         [eT, eN] = r.useState(!1),
-        eA = e_ || eT || eI,
-        ew = ej || eA,
+        eA = eS || eT || eI,
+        ew = eE || eA,
         eM = (null == eC ? void 0 : eC.session_id) != null,
         eR = () => {
-            ex(!eO);
+            eO(!e_);
         },
         eL = (e, t) => {
             let n = new Set(["system:click_outside", "user:escape", "user:explicit"]);
-            null != t && n.has(t) && (eI && eZ(!1), e_ && eP(!1)), eD();
+            null != t && n.has(t) && (eI && eZ(!1), eS && eP(!1)), eD();
         },
         eD = () => {
-            (en || ey || eM) && (null == eo || eo(f.id));
+            (en || ey || eM) && (null == eo || eo(h.id));
         },
         ek = (e) => {
             e
-                ? (eE.current = setTimeout(() => {
-                      eS(!0);
+                ? (ex.current = setTimeout(() => {
+                      ej(!0);
                   }, 150 * !!ec))
-                : clearTimeout(eE.current);
+                : clearTimeout(ex.current);
         };
-    r.useEffect(() => () => clearTimeout(eE.current), []);
+    r.useEffect(() => () => clearTimeout(ex.current), []);
     let eU = (e) => {
-            e && eS(!1);
+            e && ej(!1);
         },
         eV = () => {
             if (!(en && (0, v.p9)(U, A.Z, Z.Z, T.Z, b.default)[0])) return;
             let e = {
                 streamType: M.lo.GUILD,
-                ownerId: f.id,
+                ownerId: h.id,
                 channelId: U.id,
                 guildId: U.guild_id,
             };
-            I.default.getId() !== f.id && d.default.selectVoiceChannel(U.id),
-                ei ? ((0, O.Z)(e), c.Z.selectParticipant(e.channelId, (0, y.V9)(e))) : (0, p.iV)(e),
-                null == eo || eo(f.id);
+            I.default.getId() !== h.id && d.default.selectVoiceChannel(U.id),
+                ei ? ((0, _.Z)(e), c.Z.selectParticipant(e.channelId, (0, y.V9)(e))) : (0, p.iV)(e),
+                null == eo || eo(h.id);
         },
         eF = (e) => {
             (0, u.jW)(e, async () => {
@@ -205,19 +205,19 @@ let F = (0, f.$)(function (e) {
                     n.e("66165"),
                     n.e("8982"),
                     n.e("7717"),
-                    n.e("96253"),
+                    n.e("96306"),
                 ]).then(n.bind(n, 757387));
                 return (t) =>
                     (0, i.jsx)(
                         e,
                         k(D({}, t), {
-                            user: f,
+                            user: h,
                             guildId: U.guild_id,
                             channel: U,
                             showMediaItems: !0,
                             showStageChannelItems: U.isGuildStageVoice(),
                             onInteraction: (0, g.u)("GuildChannelUserContextMenu", m.Z.VOICE_USER, {
-                                targetUserId: f.id,
+                                targetUserId: h.id,
                             }),
                         }),
                     );
@@ -226,7 +226,7 @@ let F = (0, f.$)(function (e) {
         eB = (e) =>
             em
                 ? (0, i.jsx)(
-                      E.$,
+                      x.$,
                       k(D({}, e), {
                           channel: U,
                           setIsHangStatusInputFocused: eP,
@@ -235,28 +235,28 @@ let F = (0, f.$)(function (e) {
                   )
                 : null != eb
                   ? (0, i.jsx)(
-                        j.I,
+                        E.I,
                         k(D({}, e), {
                             hangStatusActivity: eb,
                             channel: U,
-                            userId: f.id,
+                            userId: h.id,
                         }),
                     )
                   : null,
         eH = () =>
-            (0, i.jsx)(S.Z, {
-                userId: f.id,
+            (0, i.jsx)(j.Z, {
+                userId: h.id,
                 channel: U,
             }),
         eG = () =>
-            (0, h.dl)() && (0, h.zd)(U.id)
+            (0, f.dl)() && (0, f.zd)(U.id)
                 ? null
-                : (0, i.jsx)(x.Z, {
-                      user: f,
+                : (0, i.jsx)(O.Z, {
+                      user: h,
                       channel: U,
                       onWatch: eV,
                       previewIsOpen: ec,
-                      location: eh,
+                      location: ef,
                   }),
         ez = (0, i.jsx)("div", {
             className: L.draggable,
@@ -264,24 +264,24 @@ let F = (0, f.$)(function (e) {
             onMouseEnter: ep
                 ? void 0
                 : () => {
-                      (en || ey || eM) && !eO && (null == ea || ea(f.id));
+                      (en || ey || eM) && !e_ && (null == ea || ea(h.id));
                   },
             onMouseLeave: ep ? void 0 : eD,
-            children: (0, i.jsx)(_.Z, {
+            children: (0, i.jsx)(S.Z, {
                 clickTrap:
-                    (null == f ? void 0 : f.id) === (null == (t = N.default.getCurrentUser()) ? void 0 : t.id) && eO,
+                    (null == h ? void 0 : h.id) === (null == (t = N.default.getCurrentUser()) ? void 0 : t.id) && e_,
                 targetElementRef: ev,
-                user: f,
+                user: h,
                 guildId: U.guild_id,
                 channelId: U.id,
                 newAnalyticsLocations: [m.Z.VOICE_USER],
-                shouldShow: eO,
-                onRequestClose: () => ex(!1),
+                shouldShow: e_,
+                onRequestClose: () => eO(!1),
                 children: (e) =>
                     ((e) => {
                         let t = w.al.has(null != eu ? eu : ""),
                             n = {
-                                user: f,
+                                user: h,
                                 speaking: X,
                                 voiceDb: J,
                                 latched: Q,
@@ -300,13 +300,13 @@ let F = (0, f.$)(function (e) {
                                 overlap: l,
                                 serverMute: W,
                                 serverDeaf: q,
-                                tabIndex: ef,
+                                tabIndex: eh,
                                 otherClientSessionType: eu,
                                 voicePlatform: ed,
                                 embeddedApplication: z,
                                 avatarContainerClass: a()({ [L.userAvatar]: !0 }),
                                 disabled: ep && !t,
-                                selected: eO,
+                                selected: e_,
                                 onClick: t ? void 0 : eR,
                                 onDoubleClick: eV,
                                 onContextMenu: eF,
@@ -330,14 +330,14 @@ let F = (0, f.$)(function (e) {
                                 ? (c = eB)
                                 : en
                                   ? (c = eG)
-                                  : eM && f.id !== I.default.getId()
+                                  : eM && h.id !== I.default.getId()
                                     ? (c = eH)
                                     : ey && (c = eB),
                             (0, i.jsx)(s.yRy, {
                                 targetElementRef: ev,
                                 position: "right",
                                 renderPopout: c,
-                                shouldShow: (es || (ey && eA)) && !eO,
+                                shouldShow: (es || (ey && eA)) && !e_,
                                 onRequestClose: eL,
                                 align: ey && ew && !em ? "center" : void 0,
                                 spacing: ey && ew ? 8 : 0,

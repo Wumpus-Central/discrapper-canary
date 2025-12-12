@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(688619),
-    o = n.n(a),
+    o = n(688619),
+    a = n.n(o),
     s = n(392711),
     l = n(780384),
     c = n(481060),
@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(783097),
     _ = n(772606),
     m = n(488977),
-    h = n(438959);
+    h = n(42659);
 let g = 20;
 function E(e, t, n) {
     return t === n ? 1 : (0, s.clamp)((e - t) / (n - t), 0, 1);
@@ -30,7 +30,7 @@ function y(e) {
     );
 }
 function O(e) {
-    let { application: t, context: n, name: a, iconURL: O, scrollerRef: v, sectionName: S } = e,
+    let { application: t, context: n, name: o, iconURL: O, scrollerRef: v, sectionName: S } = e,
         I = (0, l.ap)((0, u.ZP)()),
         T = i.useRef(null),
         C = i.useRef(null),
@@ -44,8 +44,8 @@ function O(e) {
                 (t =
                     null ==
                     (e = (0, f.wh)({
-                        foreground: o()(R),
-                        background: o()(I ? "#000000" : "#ffffff"),
+                        foreground: a()(R),
+                        background: a()(I ? "#000000" : "#ffffff"),
                         ratio: 5,
                         saturationFactor: 0.6,
                     }))
@@ -60,11 +60,11 @@ function O(e) {
             var e, t, n;
             let r = v.current,
                 i = T.current,
-                a = A.current,
-                o = null == N ? void 0 : N.current,
+                o = A.current,
+                a = null == N ? void 0 : N.current,
                 l = parseInt(null != (e = null == D ? void 0 : D.height) ? e : ""),
                 c = parseInt(null != (t = null == x ? void 0 : x.height) ? t : "");
-            if (null != r && null != i && null != a && !isNaN(l) && !isNaN(c)) {
+            if (null != r && null != i && null != o && !isNaN(l) && !isNaN(c)) {
                 let e = null != (n = r.scrollTop) ? n : 0,
                     t = 0 !== r.scrollHeight ? r.scrollHeight : c + g,
                     u = 0 !== r.clientHeight ? r.clientHeight : c + g,
@@ -76,9 +76,9 @@ function O(e) {
                         .concat(R, " ")
                         .concat((1 - p) * 100, "%, ")
                         .concat(w, ")")),
-                    (a.style.opacity = "".concat(b(0, 1, p))),
-                    (a.style.transform = "translateY(".concat(b(l / 4, 0, p), "px)")),
-                    null != o && (o.style.opacity = "".concat(b(1, 0, p)));
+                    (o.style.opacity = "".concat(b(0, 1, p))),
+                    (o.style.transform = "translateY(".concat(b(l / 4, 0, p), "px)")),
+                    null != a && (a.style.opacity = "".concat(b(1, 0, p)));
             }
         }, [w, R, null == x ? void 0 : x.height, I, v, null == D ? void 0 : D.height]);
     return (
@@ -119,7 +119,7 @@ function O(e) {
                                 ref: A,
                                 className: h.textApplicationName,
                                 variant: "heading-lg/extrabold",
-                                children: a,
+                                children: o,
                             }),
                         }),
                     ],

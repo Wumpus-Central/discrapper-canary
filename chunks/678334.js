@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(512722),
     l = n.n(s),
     c = n(442837),
@@ -25,12 +25,12 @@ var r = n(54381),
     C = n(435020),
     A = n(612853),
     N = n(981631),
-    P = n(129432);
+    P = n(62868);
 function R(e) {
     let {
             premiumSubscription: t,
             setPurchaseState: n,
-            onBack: a,
+            onBack: o,
             onNext: s,
             legalTermsNodeRef: R,
             flashLegalTerms: w,
@@ -43,8 +43,8 @@ function R(e) {
             planGroup: U,
             analyticsLocation: G,
             purchaseTokenAuthState: Z,
-            openInvoiceId: B,
-            metadata: F,
+            openInvoiceId: F,
+            metadata: B,
             backButtonEligible: V,
             disablePurchase: H,
             isTrial: Y = !1,
@@ -63,8 +63,8 @@ function R(e) {
             skuPricePreviewsById: en,
             referralCode: er,
             contextMetadata: ei,
-            invoicePreview: ea,
-            inReverseTrial: eo,
+            invoicePreview: eo,
+            inReverseTrial: ea,
             premiumBrandRefreshBackgroundClassName: es,
         } = (0, v.JL)(),
         {
@@ -129,17 +129,17 @@ function R(e) {
                 priceOptions: z,
                 paymentSource: eO,
                 isPrepaidPaymentPastDue: eP,
-                openInvoiceId: B,
+                openInvoiceId: F,
                 premiumSubscription: t,
                 onNext: s,
-                metadata: F,
+                metadata: B,
                 sku: ew,
                 skuPricePreview: eD,
                 purchaseType: X,
                 referralCode: er,
                 loadId: ei.loadId,
                 giftInfoOptions: eg,
-                invoicePreview: ea,
+                invoicePreview: eo,
                 orderId: eR,
             });
         },
@@ -162,14 +162,14 @@ function R(e) {
             let { makePurchase: e } = eM.current;
             eb && !el && null == t && e();
         }, [eb, el, t]);
-    let ek = null != B || (X === N.GZQ.ONE_TIME && !el),
+    let ek = null != F || (X === N.GZQ.ONE_TIME && !el),
         eU = V && !ek;
     return eb
         ? null
         : (0, r.jsxs)(u.mzw, {
               "data-migration-pending": !0,
               align: f.Z.Align.CENTER,
-              className: o()(es, P.modalFooter),
+              className: a()(es, P.modalFooter),
               children: [
                   (0, r.jsx)(g.Z, {
                       legalTermsNodeRef: R,
@@ -186,14 +186,14 @@ function R(e) {
                       makePurchase: eL,
                       needsPaymentSource: null == eO && !eN,
                       onNext: s,
-                      inReverseTrial: eo,
+                      inReverseTrial: ea,
                       onPaymentSourceAdd: W,
                   }),
                   (0, r.jsx)(A.Z, {}),
                   eU
                       ? (0, r.jsx)("div", {
                             className: P.back,
-                            children: (0, r.jsx)(m.Z, { onClick: a }),
+                            children: (0, r.jsx)(m.Z, { onClick: o }),
                         })
                       : null,
               ],

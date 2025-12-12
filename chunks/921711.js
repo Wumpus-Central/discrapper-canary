@@ -6,10 +6,10 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     l = n.n(i),
-    a = n(692547),
-    o = n(549631),
-    s = n(267431),
-    c = n(642915);
+    o = n(692547),
+    a = n(549631),
+    s = n(373887),
+    c = n(55940);
 function u(e) {
     return e;
 }
@@ -17,9 +17,9 @@ function d(e) {
     let { locked: t } = e;
     return (0, r.jsx)("div", {
         className: l()(c.iconItem, s.premiumChannelIcon),
-        children: (0, r.jsx)(o.Z, {
+        children: (0, r.jsx)(a.Z, {
             className: c.actionIcon,
-            color: t ? a.Z.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css : void 0,
+            color: t ? o.Z.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css : void 0,
         }),
     });
 }

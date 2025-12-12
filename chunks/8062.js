@@ -1,0 +1,20 @@
+n.d(t, {
+    $J: () => a,
+    E1: () => s,
+    JQ: () => l,
+    S3: () => o,
+    TE: () => i,
+    Wb: () => c,
+    Zj: () => r,
+    ju: () => _,
+    p6: () => E,
+});
+let r = "sentry.source",
+    i = "sentry.sample_rate",
+    a = "sentry.op",
+    o = "sentry.origin",
+    _ = "sentry.idle_span_finish_reason",
+    s = "sentry.measurement_unit",
+    c = "sentry.measurement_value",
+    E = "sentry.profile_id",
+    l = "sentry.exclusive_time";

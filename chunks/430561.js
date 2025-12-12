@@ -10,8 +10,8 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(692547),
     c = n(28664),
@@ -27,7 +27,7 @@ var r = n(54381),
     b = n(620954),
     y = n(985149),
     O = n(388032),
-    v = n(32771);
+    v = n(962967);
 function S(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
@@ -49,17 +49,17 @@ function T(e, t) {
 let C = (e, t) => Date.now() - e < t;
 function A(e, t) {
     let n = i.useRef(null == e ? void 0 : e.showExtrasHintTimestamp),
-        [r, a] = i.useState(!1),
-        o = (0, y.Z)(),
+        [r, o] = i.useState(!1),
+        a = (0, y.Z)(),
         s = i.useRef(void 0);
     return (
         i.useEffect(() => {
             let r = null == e ? void 0 : e.showExtrasHintTimestamp;
             r !== n.current &&
                 ((n.current = r),
-                a(!0),
+                o(!0),
                 (s.current = setTimeout(() => {
-                    a(!1);
+                    o(!1);
                 }, t)));
         }, [t, null == e ? void 0 : e.showExtrasHintTimestamp]),
         (0, p.ZP)(() => {
@@ -67,30 +67,30 @@ function A(e, t) {
             return (
                 null != n &&
                     C(n, t) &&
-                    (a(!0),
+                    (o(!0),
                     (s.current = setTimeout(() => {
-                        a(!1);
+                        o(!1);
                     }, t))),
                 () => {
                     null != s.current && clearTimeout(s.current);
                 }
             );
         }),
-        r && o
+        r && a
     );
 }
 let N = 8000;
 function P(e) {
     let { children: t, widgetId: n } = e,
         i = (0, s.e7)([_.Z], () => _.Z.getWidget(n), [n]),
-        a = A(i, N),
-        o = () =>
+        o = A(i, N),
+        a = () =>
             (0, E.QR)((0, b.Pb)(), O.t["1XA04X"], O.intl.string(O.t.uZZGzf), {
                 useFlexboxLayout: !0,
                 highlightAdminWarningIfElevated: !1,
                 keybindClassName: v.keybind,
             });
-    return a
+    return o
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(h.Z, {
@@ -108,7 +108,7 @@ function P(e) {
                           children: (0, r.jsx)(u.Text, {
                               variant: "text-xs/semibold",
                               color: "text-strong",
-                              children: o(),
+                              children: a(),
                           }),
                       }),
                   }),
@@ -144,7 +144,7 @@ function R(e) {
 function w(e) {
     let { widgetId: t, showAllStreams: n } = e,
         i = n ? O.intl.string(O.t.q2B3rh) : O.intl.string(O.t.JKGi6o),
-        a = () => {
+        o = () => {
             (0, d.zG)(t, { showAllStreams: !n });
         };
     return (0, y.Z)()
@@ -153,8 +153,8 @@ function w(e) {
               text: i,
               "aria-label": i,
               children: (0, r.jsx)(u.P3F, {
-                  className: o()(v.button, n && v.active),
-                  onClick: a,
+                  className: a()(v.button, n && v.active),
+                  onClick: o,
                   children: (0, r.jsx)(u.pzj, {
                       size: "xxs",
                       color: n ? l.Z.colors.BACKGROUND_BRAND : l.Z.colors.INTERACTIVE_TEXT_ACTIVE,
@@ -165,15 +165,15 @@ function w(e) {
 function D(e) {
     let { id: t, pinned: n } = e,
         i = n ? O.intl.string(O.t.cSu80j) : O.intl.string(O.t.cM8Vnm),
-        a = (0, y.Z)();
+        o = (0, y.Z)();
     return (0, r.jsx)(c.u, {
         text: i,
         "aria-label": i,
         asContainer: !0,
         children: (0, r.jsx)(u.P3F, {
-            className: o()(v.button, n && v.active),
+            className: a()(v.button, n && v.active),
             onClick: () => {
-                a || (0, d.xh)(t);
+                o || (0, d.xh)(t);
             },
             children: (0, r.jsx)(u.k5M, {
                 size: "xxs",

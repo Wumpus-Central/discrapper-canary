@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => y });
 var l = n(54381),
     r = n(473749),
     i = n(120356),
@@ -12,12 +12,12 @@ var l = n(54381),
     m = n(981631),
     f = n(332325),
     b = n(388032),
-    y = n(46733);
-function v(e) {
+    v = n(641719);
+function y(e) {
     let { isEmptyBecauseQuery: t } = e,
         n = (0, s.e7)([u.ZP], () => u.ZP.getKeybindForAction(m.kg4.SAVE_CLIP)),
         i = (0, p.z8)(),
-        v = t ? y.noSearchResultsImage : y.noClipsImage,
+        y = t ? v.noSearchResultsImage : v.noClipsImage,
         h = r.useCallback(() => {
             (0, o.Z)(f.Z.CLIPS, { stackingBehavior: "stack" });
         }, []),
@@ -31,9 +31,9 @@ function v(e) {
                     keybind: e,
                     keybindHook: () =>
                         (0, l.jsx)("span", {
-                            className: y.keybindHintKeys,
+                            className: v.keybindHintKeys,
                             children: (0, l.jsx)(c.M2$, {
-                                className: y.keybindShortcut,
+                                className: v.keybindShortcut,
                                 shortcut: e,
                             }),
                         }),
@@ -41,14 +41,14 @@ function v(e) {
             }
         })();
     return (0, l.jsx)("div", {
-        className: y.container,
+        className: v.container,
         children: (0, l.jsxs)("div", {
-            className: y.content,
+            className: v.content,
             children: [
-                (0, l.jsx)("div", { className: v }),
+                (0, l.jsx)("div", { className: y }),
                 (0, l.jsx)(c.Text, {
                     variant: "text-md/medium",
-                    className: a()(y.noClipsText, { [y.noSearchResultsText]: t }),
+                    className: a()(v.noClipsText, { [v.noSearchResultsText]: t }),
                     children: j,
                 }),
             ],

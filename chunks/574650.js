@@ -2,8 +2,8 @@ n.d(t, { Z: () => I }), n(539854), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    a = n.n(i),
-    o = n(828700),
+    o = n.n(i),
+    a = n(828700),
     s = n(442837),
     l = n(248514),
     c = n(481060),
@@ -17,8 +17,8 @@ var i = n(120356),
     g = n(981631),
     E = n(176505),
     b = n(388032),
-    y = n(360390),
-    O = n(99940);
+    y = n(342891),
+    O = n(226910);
 function v(e, t, n) {
     return (
         t in e
@@ -53,9 +53,9 @@ let I = () => {
     let i = (0, s.e7)([d.Z], () => d.Z.getGuildId(), []),
         v = (0, s.e7)([u.Z], () => u.Z.getGuild(i), [i]),
         I = (0, s.e7)([h.Z], () => (null != i ? h.Z.getRequest(i) : null), [i]),
-        T = (0, o.TH)(),
+        T = (0, a.TH)(),
         C =
-            (null == (e = (0, o.LX)(T.pathname, g.Z5c.CHANNEL(null == v ? void 0 : v.id, E.oC.GUILD_ONBOARDING)))
+            (null == (e = (0, a.LX)(T.pathname, g.Z5c.CHANNEL(null == v ? void 0 : v.id, E.oC.GUILD_ONBOARDING)))
                 ? void 0
                 : e.isExact) === !0;
     if (null == v || !(0, m.Dc)(v) || C) return null;
@@ -93,7 +93,7 @@ let I = () => {
             (w = b.intl.string(b.t.G5YKXP)), (D = b.intl.string(b.t["r8/DT+"])), (x = A);
     }
     return (0, r.jsxs)("div", {
-        className: a()(...L),
+        className: o()(...L),
         children: [
             (0, r.jsx)(c.Text, {
                 className: y.header,

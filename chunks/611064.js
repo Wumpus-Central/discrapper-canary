@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => b,
-    Z: () => y,
+    Z: () => _,
 });
 var r = n(54381),
     i = n(473749),
@@ -14,15 +14,15 @@ var r = n(54381),
     p = n(809017),
     h = n(981631),
     f = n(388032),
-    g = n(533212),
-    m = n(791486);
+    g = n(532406),
+    m = n(32482);
 function b(e) {
     return (null == e ? void 0 : e.id) === p.G;
 }
-let y = i.memo(function (e) {
+let _ = i.memo(function (e) {
     let t,
-        { title: p, onToggleExpand: b, expanded: y, expandedCount: O } = e,
-        j = (0, l.e7)([d.Z], () => d.Z.hidden),
+        { title: p, onToggleExpand: b, expanded: _, expandedCount: y } = e,
+        O = (0, l.e7)([d.Z], () => d.Z.hidden),
         x = i.useCallback((e) => {
             (0, s.jW)(e, async () => {
                 let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 703180));
@@ -35,13 +35,13 @@ let y = i.memo(function (e) {
             (0, r.jsx)(a.nn4, {
                 children: f.intl.format(f.t.Uaqbke, {
                     title: p,
-                    count: O,
+                    count: y,
                 }),
             }),
             (0, r.jsxs)(a.P3F, {
                 onClick: (e) => {
                     if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
-                        return j ? (0, c.lY)() : O > 3 ? b() : (0, h.dG4)();
+                        return O ? (0, c.lY)() : y > 3 ? b() : (0, h.dG4)();
                 },
                 onContextMenu: x,
                 tag: "span",
@@ -52,16 +52,16 @@ let y = i.memo(function (e) {
                         className: g.header,
                         children: [
                             (0, r.jsxs)("span", {
-                                children: [p, " \u2014 ", O],
+                                children: [p, " \u2014 ", y],
                             }),
                             (0, r.jsx)(u.Z, {}),
                         ],
                     }),
-                    O <= 3 && !j
+                    y <= 3 && !O
                         ? null
-                        : ((t = j
+                        : ((t = O
                               ? (0, r.jsx)(a.u04, { className: g.toggleExpandIcon })
-                              : y
+                              : _
                                 ? (0, r.jsx)(a.CJ0, { className: g.toggleExpandIcon })
                                 : (0, r.jsx)(a.Fbu, { className: g.toggleExpandIcon })),
                           (0, r.jsx)(a.tEY, {

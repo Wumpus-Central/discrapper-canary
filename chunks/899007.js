@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(420660),
@@ -20,7 +20,7 @@ var r = n(54381),
     O = n(981631),
     v = n(474936),
     S = n(671955),
-    I = n(108096);
+    I = n(66856);
 function T(e, t, n) {
     return (
         t in e
@@ -78,7 +78,7 @@ function R(e) {
     let {
             user: t,
             displayProfile: n,
-            guildId: a,
+            guildId: o,
             channelId: m,
             themeType: T,
             animateOnHover: A,
@@ -93,20 +93,20 @@ function R(e) {
         k = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, m), [t, m]),
         { live: U } = (0, g.Z)(t.id),
         [G] = U,
-        { status: Z, isMobileOnline: B } = (0, s.cj)([p.Z], () => ({
+        { status: Z, isMobileOnline: F } = (0, s.cj)([p.Z], () => ({
             status: (0, c.Z)(G) ? O.Skl.STREAMING : p.Z.getStatus(t.id),
             isMobileOnline: p.Z.isMobileOnline(t.id),
         })),
-        F = void 0 !== D ? D : Z,
+        B = void 0 !== D ? D : Z,
         V = [S.l.MODAL, S.l.MODAL_V2].includes(T) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        H = o()(I.avatar, w),
+        H = a()(I.avatar, w),
         {
             avatarDecorationSrc: Y,
             avatarSrc: W,
             eventHandlers: K,
         } = (0, E.Z)({
             userId: t.id,
-            guildId: null != n ? n.guildId : a,
+            guildId: null != n ? n.guildId : o,
             size: V,
             animateOnHover: A,
         }),
@@ -116,9 +116,9 @@ function R(e) {
             size: V,
             "aria-label": t.username,
             imageClassName: null != R ? I.overlay : void 0,
-            status: k ? O.Skl.UNKNOWN : F,
+            status: k ? O.Skl.UNKNOWN : B,
             statusBackdropColor: M && !k ? (0, l.QFD)(x) : void 0,
-            isMobile: B,
+            isMobile: F,
             statusTooltip: !0,
             statusTooltipDelay: y.vB,
         });
@@ -133,7 +133,7 @@ function R(e) {
         : (0, r.jsx)(
               l.P3F,
               N(C({}, K), {
-                  className: o()(H, I.clickable),
+                  className: a()(H, I.clickable),
                   focusProps: { ringClassName: I.focusRing },
                   onClick: () => {
                       j({

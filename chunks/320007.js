@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -13,9 +13,9 @@ var r = n(54381),
     g = n(175470),
     h = n(203259),
     m = n(356659),
-    b = n(388032);
-function _(e) {
-    let { canShowReminder: t = !1, className: _ } = e,
+    _ = n(388032);
+function b(e) {
+    let { canShowReminder: t = !1, className: b } = e,
         E = (0, f.Z)(u.Z),
         { showClipsHeaderEntrypoint: O } = d.NV.useExperiment({ location: "ClipsButton" }, { autoTrackExposure: !1 }),
         {
@@ -37,7 +37,7 @@ function _(e) {
     function A() {
         (0, a.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("61342"), n.e("17316")]).then(n.bind(n, 542055));
+                let { default: e } = await Promise.all([n.e("61342"), n.e("2161")]).then(n.bind(n, 542055));
                 return (t) =>
                     (0, r.jsx)(
                         e,
@@ -88,10 +88,10 @@ function _(e) {
                   (0, r.jsx)("div", {
                       ref: N,
                       children: (0, r.jsx)(s.JO, {
-                          className: _,
+                          className: b,
                           icon: a.AlX,
                           showBadge: v,
-                          tooltip: b.intl.string(b.t.MXaLEM),
+                          tooltip: _.intl.string(_.t.MXaLEM),
                           onClick: A,
                       }),
                   }),

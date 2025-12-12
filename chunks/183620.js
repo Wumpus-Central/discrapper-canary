@@ -1,12 +1,12 @@
 n.d(t, { Z: () => p }), n(388685);
 var r,
     i = n(54381),
-    a = n(473749),
-    o = n(120356),
-    s = n.n(o),
+    o = n(473749),
+    a = n(120356),
+    s = n.n(a),
     l = n(481060),
     c = n(388032),
-    u = n(44463);
+    u = n(791373);
 function d(e, t, n) {
     return (
         t in e
@@ -20,14 +20,14 @@ function d(e, t, n) {
         e
     );
 }
-class f extends (r = a.PureComponent) {
+class f extends (r = o.PureComponent) {
     render() {
         var e;
         let {
                 title: t,
                 actionText: n,
                 children: r,
-                error: o,
+                error: a,
                 isLoading: d,
                 maxLength: f,
                 transitionState: p,
@@ -37,7 +37,7 @@ class f extends (r = a.PureComponent) {
             } = this.props,
             { code: g, errorMessage: E, retrySuccess: b } = this.state,
             y =
-                a.Children.count(r) > 0
+                o.Children.count(r) > 0
                     ? (0, i.jsx)(l.Zbd, {
                           type: l.Zbd.Types.WARNING,
                           className: u.card,
@@ -115,7 +115,7 @@ class f extends (r = a.PureComponent) {
                                               color: "text-feedback-critical",
                                               variant: "text-xs/normal",
                                               className: u.error,
-                                              children: null != o ? o : E,
+                                              children: null != a ? a : E,
                                           })
                                         : null,
                                     O,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => J }), n(415506), n(388685), n(35282), n(290780);
 var r,
     i = n(54381),
     l = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(793030),
     c = n(442837),
     u = n(28664),
@@ -12,18 +12,18 @@ var r,
     h = n(134616),
     p = n(714338),
     g = n(212819),
-    b = n(815372),
-    m = n(14429),
-    y = n(576855),
-    O = n(313201),
-    v = n(991346),
-    j = n(592125),
-    C = n(888369),
-    x = n(430824),
-    E = n(158776),
-    S = n(306680),
-    I = n(944486),
-    _ = n(938475),
+    m = n(815372),
+    b = n(14429),
+    _ = n(576855),
+    y = n(313201),
+    O = n(991346),
+    v = n(592125),
+    j = n(888369),
+    C = n(430824),
+    x = n(158776),
+    E = n(306680),
+    S = n(944486),
+    I = n(938475),
     P = n(483360),
     N = n(459273),
     Z = n(585483),
@@ -35,7 +35,7 @@ var r,
     M = n(558631),
     L = n(981631),
     k = n(388032),
-    G = n(720578);
+    G = n(712198);
 function U(e, t, n) {
     return (
         t in e
@@ -102,7 +102,7 @@ let V = () =>
     });
 class H extends (r = l.Component) {
     render() {
-        let e = x.Z.getGuild(this.props.channel.guild_id);
+        let e = C.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
             R.$W,
             F(B({}, this.props), {
@@ -115,45 +115,45 @@ class H extends (r = l.Component) {
     }
 }
 U(H, "defaultProps", { unread: !1 });
-let z = c.ZP.connectStores([S.ZP, j.Z], (e) => {
+let z = c.ZP.connectStores([E.ZP, v.Z], (e) => {
         let { channel: t } = e;
         return {
-            unread: S.ZP.hasUnread(t.id),
-            mentions: S.ZP.getMentionCount(t.id),
-            isMentionLowImportance: S.ZP.getIsMentionLowImportance(t.id),
-            category: j.Z.getChannel(t.parent_id),
+            unread: E.ZP.hasUnread(t.id),
+            mentions: E.ZP.getMentionCount(t.id),
+            isMentionLowImportance: E.ZP.getIsMentionLowImportance(t.id),
+            category: v.Z.getChannel(t.parent_id),
         };
     })(H),
-    W = c.ZP.connectStores([_.ZP], (e) => {
+    W = c.ZP.connectStores([I.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
-        return { voiceStates: _.ZP.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: I.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(H),
-    K = c.ZP.connectStores([C.default], (e) => {
+    K = c.ZP.connectStores([j.default], (e) => {
         let { guild: t } = e;
-        return { unread: C.default.hasUnread(t.id) };
+        return { unread: j.default.hasUnread(t.id) };
     })(R.ic),
-    Y = c.ZP.connectStores([S.ZP, E.Z], (e) => {
+    Y = c.ZP.connectStores([E.ZP, x.Z], (e) => {
         var t;
         let { channel: n } = e,
             r = null,
-            i = E.Z.getState().statuses;
+            i = x.Z.getState().statuses;
         return (
             (null == (t = n.recipients) ? void 0 : t.some((e) => i[e] === L.Skl.ONLINE)) && (r = L.Skl.ONLINE),
             {
-                mentions: S.ZP.getMentionCount(n.id),
+                mentions: E.ZP.getMentionCount(n.id),
                 status: r,
             }
         );
     })(R.PZ),
-    q = c.ZP.connectStores([j.Z, S.ZP, E.Z], (e) => {
+    q = c.ZP.connectStores([v.Z, E.ZP, x.Z], (e) => {
         let { user: t } = e,
-            n = j.Z.getDMFromUserId(t.id);
+            n = v.Z.getDMFromUserId(t.id);
         return {
-            mentions: null != n ? S.ZP.getMentionCount(n) : 0,
-            status: E.Z.getStatus(t.id),
-            isMobile: E.Z.isMobileOnline(t.id),
+            mentions: null != n ? E.ZP.getMentionCount(n) : 0,
+            status: x.Z.getStatus(t.id),
+            isMobile: x.Z.isMobileOnline(t.id),
         };
     })(R.n5);
 function Q(e, t, n) {
@@ -266,9 +266,9 @@ class X extends l.PureComponent {
         return "quick-switcher-".concat(this._listId, "-item-").concat(e);
     }
     renderProtip() {
-        return (0, i.jsx)(y.Z, {
-            className: o()(G.protip, { [G.hasContent]: this.state.query.length > 0 }),
-            type: y.Z.Types.INLINE,
+        return (0, i.jsx)(_.Z, {
+            className: a()(G.protip, { [G.hasContent]: this.state.query.length > 0 }),
+            type: _.Z.Types.INLINE,
             children: k.intl.format(k.t.wukqXQ, {
                 userSymbolHook: (e, t) => Q(t, g.xQ.USER, k.intl.string(k.t.GQRCGn)),
                 textChannelSymbolHook: (e, t) => Q(t, g.xQ.TEXT_CHANNEL, k.intl.string(k.t.wrwhuZ)),
@@ -300,7 +300,7 @@ class X extends l.PureComponent {
         super(...e),
             U(this, "scrollerRef", l.createRef()),
             U(this, "inputRef", l.createRef()),
-            U(this, "_listId", (0, O.hQ)()),
+            U(this, "_listId", (0, y.hQ)()),
             U(this, "state", {
                 query: this.props.query,
                 mouseFocusDisabled: !0,
@@ -332,15 +332,15 @@ class X extends l.PureComponent {
                                 n.e("15851"),
                                 n.e("51453"),
                                 n.e("845"),
-                                n.e("9414"),
+                                n.e("86736"),
                                 n.e("6850"),
                                 n.e("58227"),
                                 n.e("44686"),
-                                n.e("9536"),
+                                n.e("384"),
                                 n.e("22516"),
                                 n.e("87154"),
                                 n.e("33213"),
-                                n.e("88429"),
+                                n.e("73709"),
                             ]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, i.jsx)(
@@ -355,7 +355,7 @@ class X extends l.PureComponent {
                     case g.h8.TEXT_CHANNEL:
                     case g.h8.VOICE_CHANNEL:
                         let r = t.record,
-                            l = x.Z.getGuild(r.getGuildId());
+                            l = C.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
                             case L.d4z.GUILD_TEXT:
@@ -441,14 +441,14 @@ class X extends l.PureComponent {
                                     e,
                                     F(B({}, n), {
                                         channel: t.record,
-                                        selected: I.Z.getChannelId() === t.record.id,
+                                        selected: S.Z.getChannelId() === t.record.id,
                                         onSelect: T.Cp,
                                     }),
                                 );
                         });
                     case g.h8.USER:
                         return (0, f.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("26465")]).then(
+                            let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("77635")]).then(
                                 n.bind(n, 881351),
                             );
                             return (n) =>
@@ -516,7 +516,7 @@ class X extends l.PureComponent {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: r } = this.props,
-                    { showScores: l } = m.Z.getCurrentConfig({ location: "62f4be_1" }, { autoTrackExposure: !1 });
+                    { showScores: l } = b.Z.getCurrentConfig({ location: "62f4be_1" }, { autoTrackExposure: !1 });
                 switch (n.type) {
                     case g.h8.HEADER:
                         return (0, i.jsx)(
@@ -641,7 +641,7 @@ class X extends l.PureComponent {
                                 score: l ? n.score : void 0,
                                 id: this.getRowId(t),
                                 children:
-                                    n.record.type === b.Ky.SETTINGS &&
+                                    n.record.type === m.Ky.SETTINGS &&
                                     (0, i.jsx)("div", {
                                         className: G.miscContainer,
                                         children: k.intl.string(k.t["3D5yo/"]),
@@ -657,9 +657,9 @@ class X extends l.PureComponent {
 }
 function J(e) {
     let t = (0, c.cj)([A.Z], () => A.Z.getProps()),
-        n = (0, v.Pt)(),
+        n = (0, O.Pt)(),
         r = M.Z.useExperiment({ location: "QuickSwitcher" }).enabled,
-        a = l.useMemo(
+        o = l.useMemo(
             () =>
                 r
                     ? Object.values(n)
@@ -671,7 +671,7 @@ function J(e) {
     return (
         l.useLayoutEffect(() => {
             if (!r) return;
-            let e = a
+            let e = o
                 .map((e) => {
                     var t;
                     return {
@@ -687,7 +687,7 @@ function J(e) {
                 path: L.Z5c.SETTINGS("account"),
             }),
                 (0, P.gF)(e);
-        }, [a, r]),
+        }, [o, r]),
         (0, i.jsx)(X, B({}, t, e))
     );
 }

@@ -1,8 +1,8 @@
-n.d(t, { t: () => a });
+n.d(t, { t: () => o });
 var r = n(535396),
-    i = n(44542),
+    i = n(5238),
     l = n(388032);
-function a(e, t) {
+function o(e, t) {
     switch (t) {
         case r.br.AVAILABLE:
             return l.intl.formatToPlainString(i.default.BdRXZA, { boostCount: e });

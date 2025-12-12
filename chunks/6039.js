@@ -13,14 +13,14 @@ var r = n(54381),
     g = n(693546),
     h = n(305325),
     m = n(246364),
-    b = n(937111),
-    _ = n(381416),
+    _ = n(937111),
+    b = n(381416),
     E = n(523924),
     O = n(390500),
     v = n(981631),
     y = n(898625),
     I = n(388032),
-    C = n(643854);
+    C = n(18545);
 function S(e) {
     let { guild: t, width: n, height: l } = e,
         a = i.useMemo(
@@ -62,11 +62,11 @@ let T = (e) => {
     let { guildId: t } = e,
         { ref: n, width: o, height: c } = (0, s.ZP)(),
         [p, f] = i.useState(y.hO.INITIAL),
-        T = (0, l.e7)([b.Z], () => b.Z.getRequest(t)),
+        T = (0, l.e7)([_.Z], () => _.Z.getRequest(t)),
         N = (0, l.e7)([d.Z], () => d.Z.getGuild(t)),
-        { hasFetchedRequestToJoinGuilds: j, guildPreviewDisabled: P } = (0, l.cj)([b.Z], () => ({
-            hasFetchedRequestToJoinGuilds: b.Z.hasFetchedRequestToJoinGuilds,
-            guildPreviewDisabled: b.Z.getJoinRequestGuild(t),
+        { hasFetchedRequestToJoinGuilds: j, guildPreviewDisabled: P } = (0, l.cj)([_.Z], () => ({
+            hasFetchedRequestToJoinGuilds: _.Z.hasFetchedRequestToJoinGuilds,
+            guildPreviewDisabled: _.Z.getJoinRequestGuild(t),
         }));
     i.useEffect(() => {
         null != N && (0, u.uL)(v.Z5c.CHANNEL(t));
@@ -123,7 +123,7 @@ let T = (e) => {
                                 guild: P,
                             });
                         default:
-                            return (0, r.jsx)(_.s, {
+                            return (0, r.jsx)(b.s, {
                                 onDiscardApplication: L,
                                 onContinueApplication: () => (0, h.hk)(t),
                                 guild: P,

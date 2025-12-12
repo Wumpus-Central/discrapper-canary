@@ -1,6 +1,6 @@
-t.d(n, { Z: () => C });
-var a,
-    r,
+t.d(n, { Z: () => h });
+var r,
+    a,
     i = t(54381),
     l = t(473749),
     s = t(793030),
@@ -11,106 +11,106 @@ var a,
     m = t(60482),
     g = t(858594),
     f = t(899789),
-    b = t(735276),
-    x = t(619733),
-    v = t(160589),
-    j = t(388032),
-    p = t(468678);
-let h =
-    ((a = (function (e) {
+    x = t(735276),
+    v = t(619733),
+    _ = t(400580),
+    b = t(388032),
+    j = t(62525);
+let p =
+    ((r = (function (e) {
         for (var n = 1; n < arguments.length; n++) {
             var t = null != arguments[n] ? arguments[n] : {},
-                a = Object.keys(t);
+                r = Object.keys(t);
             "function" == typeof Object.getOwnPropertySymbols &&
-                (a = a.concat(
+                (r = r.concat(
                     Object.getOwnPropertySymbols(t).filter(function (e) {
                         return Object.getOwnPropertyDescriptor(t, e).enumerable;
                     }),
                 )),
-                a.forEach(function (n) {
-                    var a;
-                    (a = t[n]),
+                r.forEach(function (n) {
+                    var r;
+                    (r = t[n]),
                         n in e
                             ? Object.defineProperty(e, n, {
-                                  value: a,
+                                  value: r,
                                   enumerable: !0,
                                   configurable: !0,
                                   writable: !0,
                               })
-                            : (e[n] = a);
+                            : (e[n] = r);
                 });
         }
         return e;
-    })({}, x.IX)),
-    (r = r = { initialStep: x.EK.SERVER_SETTINGS }),
+    })({}, v.IX)),
+    (a = a = { initialStep: v.EK.SERVER_SETTINGS }),
     Object.getOwnPropertyDescriptors
-        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(r))
+        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
         : (function (e, n) {
               var t = Object.keys(e);
               if (Object.getOwnPropertySymbols) {
-                  var a = Object.getOwnPropertySymbols(e);
-                  t.push.apply(t, a);
+                  var r = Object.getOwnPropertySymbols(e);
+                  t.push.apply(t, r);
               }
               return t;
-          })(Object(r)).forEach(function (e) {
-              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(r, e));
+          })(Object(a)).forEach(function (e) {
+              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
           }),
-    a);
-function C(e) {
+    r);
+function h(e) {
     let { guildId: n } = e;
     l.useEffect(() => {
         (0, u.ce)(n);
     }, [n]);
     let t = (0, o.e7)([m.Z], () => m.Z.getStateForGuild(n)),
-        { catalog: a, instances: r } = l.useMemo(() => {
+        { catalog: r, instances: a } = l.useMemo(() => {
             var e, n;
             return {
                 catalog: Object.values(null != (e = null == t ? void 0 : t.catalog) ? e : {}),
                 instances: Object.values(null != (n = null == t ? void 0 : t.instances) ? n : {}),
             };
         }, [null == t ? void 0 : t.catalog, null == t ? void 0 : t.instances]),
-        C = r.length >= x.YX;
-    return 0 === a.length
+        h = a.length >= v.YX;
+    return 0 === r.length
         ? (0, i.jsx)("div", {
-              className: p.container,
+              className: j.container,
               children: (0, i.jsx)(c.$jN, {
                   type: c.RAz.SPINNING_CIRCLE,
-                  className: p.spinner,
+                  className: j.spinner,
               }),
           })
         : (0, i.jsxs)("div", {
-              className: p.container,
+              className: j.container,
               children: [
                   (0, i.jsx)(s.X6q, {
-                      className: p.heading,
+                      className: j.heading,
                       variant: "heading-md/semibold",
-                      children: j.intl.string(v.default["3vWDMz"]),
+                      children: b.intl.string(_.default["3vWDMz"]),
                   }),
-                  C &&
+                  h &&
                       (0, i.jsx)("div", {
-                          className: p.maxInstancesWarning,
+                          className: j.maxInstancesWarning,
                           children: (0, i.jsx)(f.C, {}),
                       }),
                   (0, i.jsx)(s.zJl, {
-                      className: p.gameContainerWrapper,
+                      className: j.gameContainerWrapper,
                       children: (0, i.jsx)("div", {
-                          className: p.gameContainer,
-                          children: a.map((e, t) =>
+                          className: j.gameContainer,
+                          children: r.map((e, t) =>
                               (0, i.jsx)(
                                   g.Z,
                                   {
                                       guildId: n,
                                       game: e,
                                       onClick: () =>
-                                          (0, b.Z)({
+                                          (0, x.Z)({
                                               guildId: n,
-                                              stepConfig: h,
+                                              stepConfig: p,
                                               initialGameServerGame: e,
                                               analyticsLocation: d.Z.GAME_SERVER_PAGE_SIDEBAR,
                                           }),
-                                      imageClassName: p.image,
-                                      titleClassName: p.title,
-                                      disabled: C,
+                                      imageClassName: j.image,
+                                      titleClassName: j.title,
+                                      disabled: h,
                                       location: d.Z.GAME_SERVER_PAGE_SIDEBAR,
                                   },
                                   "sidebar-game-".concat(t, "-").concat(e.id),

@@ -1,8 +1,8 @@
 n.d(t, { N: () => L }), n(953529), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(259580),
@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(800530),
     y = n(981631),
     O = n(388032),
-    v = n(16583);
+    v = n(712243);
 function S(e, t, n) {
     return (
         t in e
@@ -72,7 +72,7 @@ function C(e, t) {
     );
 }
 let A = (e) => {
-        let { status: t, onClick: n, opened: i, count: a } = e;
+        let { status: t, onClick: n, opened: i, count: o } = e;
         return (0, r.jsxs)(l.P3F, {
             className: v.header,
             onClick: n,
@@ -92,8 +92,8 @@ let A = (e) => {
                             color: "text-default",
                             children:
                                 "active" === t
-                                    ? O.intl.formatToPlainString(O.t.IeV2oY, { count: a.toString() })
-                                    : O.intl.formatToPlainString(O.t.fZAHBT, { count: a.toString() }),
+                                    ? O.intl.formatToPlainString(O.t.IeV2oY, { count: o.toString() })
+                                    : O.intl.formatToPlainString(O.t.fZAHBT, { count: o.toString() }),
                         }),
                         (0, r.jsx)(l.Heading, {
                             variant: "text-sm/normal",
@@ -168,12 +168,12 @@ let A = (e) => {
         }),
     D = (e) => {
         let { classification: t } = e,
-            { id: a, description: s } = t,
-            c = f.default.extractTimestamp(a),
+            { id: o, description: s } = t,
+            c = f.default.extractTimestamp(o),
             u = (0, h.e)(t),
             d = i.useMemo(() => {
                 var e, n, i;
-                let a = {
+                let o = {
                     description: s,
                     descriptionHook: (e) =>
                         (0, r.jsx)(l.Text, {
@@ -186,14 +186,14 @@ let A = (e) => {
                     ? (null == t || null == (e = t.guild_metadata) ? void 0 : e.member_type) === p.wO.OWNER
                         ? O.intl.format(
                               O.t.Lb0HVv,
-                              C(I({}, a), { guildName: null == t || null == (n = t.guild_metadata) ? void 0 : n.name }),
+                              C(I({}, o), { guildName: null == t || null == (n = t.guild_metadata) ? void 0 : n.name }),
                           )
                         : O.intl.format(O.t.rmpEPD, {
                               guildName: null == t || null == (i = t.guild_metadata) ? void 0 : i.name,
-                              classification_type: a.description,
-                              classificationHook: a.descriptionHook,
+                              classification_type: o.description,
+                              classificationHook: o.descriptionHook,
                           })
-                    : O.intl.format(O.t.QY4g5t, a);
+                    : O.intl.format(O.t.QY4g5t, o);
             }, [t, s]),
             _ = () => {
                 (0, l.ZDy)(async () => {
@@ -203,7 +203,7 @@ let A = (e) => {
                             e,
                             I(
                                 {
-                                    classificationId: a,
+                                    classificationId: o,
                                     source: b.s.StandingTab,
                                 },
                                 t,
@@ -215,7 +215,7 @@ let A = (e) => {
             l.P3F,
             {
                 onClick: _,
-                className: o()(v.itemDetail, { [v.itemDetailNew]: u }),
+                className: a()(v.itemDetail, { [v.itemDetailNew]: u }),
                 children: (0, r.jsxs)("div", {
                     className: v.descriptionContainer,
                     children: [
@@ -227,18 +227,18 @@ let A = (e) => {
                     ],
                 }),
             },
-            a,
+            o,
         );
     },
     x = (e) => {
         let { status: t, classifications: n } = e,
-            [a, o] = i.useState(!1),
+            [o, a] = i.useState(!1),
             [c, u] = i.useState(3),
             f = (0, g.P)(),
             p = (0, s.e7)([_.Z], () => _.Z.getIsDsaEligible()),
             m = i.useMemo(() => n.slice(0, c), [n, c]);
         i.useEffect(() => {
-            a &&
+            o &&
                 d.default.track(y.rMx.SAFETY_HUB_ACTION, {
                     action: b.n0.ViewViolationsDropdown,
                     account_standing: f.state,
@@ -247,18 +247,18 @@ let A = (e) => {
                     is_violative_content_shown: !1,
                     is_dsa_eligible: p,
                 });
-        }, [a, f.state, m, p]);
+        }, [o, f.state, m, p]);
         let h = n.length - m.length > 3 ? 3 : n.length - m.length;
         return (0, r.jsxs)("div", {
             className: v.dropdown,
             children: [
                 (0, r.jsx)(A, {
                     status: t,
-                    onClick: () => o((e) => !e),
-                    opened: a,
+                    onClick: () => a((e) => !e),
+                    opened: o,
                     count: n.length,
                 }),
-                a &&
+                o &&
                     (0, r.jsxs)("div", {
                         className: v.items,
                         children: [

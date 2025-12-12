@@ -1,8 +1,8 @@
 n.d(t, { k: () => l }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(481060),
-    o = n(23393);
+    o = n(481060),
+    a = n(534924);
 function s(e, t, n) {
     return (
         t in e
@@ -27,10 +27,10 @@ class l extends i.PureComponent {
     render() {
         return null != this.state.error
             ? (0, r.jsx)("div", {
-                  children: (0, r.jsx)(a.Text, {
+                  children: (0, r.jsx)(o.Text, {
                       color: "text-feedback-critical",
                       variant: "text-md/normal",
-                      className: o.labelSpacing,
+                      className: a.labelSpacing,
                       children: "Error rendering component. Check console for more information on the error.",
                   }),
               })

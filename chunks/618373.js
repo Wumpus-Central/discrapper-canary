@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(54381);
 n(473749);
 var i = n(442837),
-    a = n(481060),
-    o = n(594190),
+    o = n(481060),
+    a = n(594190),
     s = n(174609),
     l = n(865066),
     c = n(313789),
@@ -15,20 +15,20 @@ var i = n(442837),
     f = n(44359),
     p = n(981631),
     _ = n(388032),
-    m = n(781614);
+    m = n(8280);
 function h(e, t, n) {
     let {
         highlightAdminWarningIfElevated: i,
-        useFlexboxLayout: a,
-        keybindClassName: o,
+        useFlexboxLayout: o,
+        keybindClassName: a,
     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     return (0, r.jsx)(E, {
         keybind: e,
         message: t,
         messageWithoutKeybind: n,
         highlightAdminWarningIfElevated: i,
-        useFlexboxLayout: a,
-        keybindClassName: o,
+        useFlexboxLayout: o,
+        keybindClassName: a,
     });
 }
 let g = (e, t) =>
@@ -37,7 +37,7 @@ let g = (e, t) =>
             keybind: e,
             keybindHook: (t, n) =>
                 (0, r.jsx)(
-                    a.M2$,
+                    o.M2$,
                     {
                         shortcut: e,
                         className: m.keyCombo,
@@ -57,13 +57,13 @@ function E(e) {
             keybindClassName: b,
         } = e,
         y = (0, d.o)(),
-        O = (0, i.e7)([o.ZP], () => {
-            let e = o.ZP.getVisibleGame();
-            return null != e && e.elevated && o.ZP.canShowAdminWarning;
+        O = (0, i.e7)([a.ZP], () => {
+            let e = a.ZP.getVisibleGame();
+            return null != e && e.elevated && a.ZP.canShowAdminWarning;
         }),
         v = (0, l.hi)();
     return O
-        ? (0, r.jsx)(a.Text, {
+        ? (0, r.jsx)(o.Text, {
               variant: "text-xxs/semibold",
               color: g ? "text-feedback-warning" : "text-muted",
               children: v

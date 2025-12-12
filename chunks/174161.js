@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(54381),
     i = n(473749),
-    a = n(442837),
-    o = n(28664),
+    o = n(442837),
+    a = n(28664),
     s = n(481060),
     l = n(358555),
     c = n(769654),
@@ -13,11 +13,11 @@ var r = n(54381),
     _ = n(709054),
     m = n(997431),
     h = n(388032),
-    g = n(80253);
+    g = n(212229);
 function E(e) {
     let { profile: t, disableGuildNameClick: n } = e,
         l = t.id,
-        u = (0, a.e7)([f.ZP, d.default], () => {
+        u = (0, o.e7)([f.ZP, d.default], () => {
             var e;
             return (null == (e = f.ZP.getMember(l, d.default.getId())) ? void 0 : e.joinedAt) != null;
         }, [l]),
@@ -28,7 +28,7 @@ function E(e) {
             [u, t.id],
         );
     return !u || n
-        ? (0, r.jsx)(o.u, {
+        ? (0, r.jsx)(a.u, {
               text: t.name,
               overflowOnly: !0,
               children: (0, r.jsx)(s.Heading, {
@@ -41,7 +41,7 @@ function E(e) {
         : (0, r.jsx)(s.P3F, {
               className: g.guildNameContainer,
               onClick: p,
-              children: (0, r.jsx)(o.u, {
+              children: (0, r.jsx)(a.u, {
                   text: t.name,
                   overflowOnly: !0,
                   children: (0, r.jsx)(s.Heading, {
@@ -55,8 +55,8 @@ function E(e) {
 }
 function b(e) {
     let { profile: t, disableGuildNameClick: n } = e,
-        o = (0, a.e7)([u.default], () => u.default.locale),
-        c = (0, m.M)(_.default.extractTimestamp(t.id), o),
+        a = (0, o.e7)([u.default], () => u.default.locale),
+        c = (0, m.M)(_.default.extractTimestamp(t.id), a),
         d = i.useMemo(() => {
             let e = (0, p.$5)(t);
             return (0, r.jsx)(l.Z, {

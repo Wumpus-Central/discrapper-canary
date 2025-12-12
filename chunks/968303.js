@@ -1,8 +1,8 @@
 n.d(t, { n: () => P }), n(704826), n(35282), n(415506), n(388685);
 var r,
     i,
-    a = n(54381),
-    o = n(473749),
+    o = n(54381),
+    a = n(473749),
     s = n(120356),
     l = n.n(s),
     c = n(372817),
@@ -11,7 +11,7 @@ var r,
     f = n(360920),
     p = n(777207),
     _ = n(295907),
-    m = n(923416);
+    m = n(82642);
 function h(e, t, n) {
     return (
         t in e
@@ -70,9 +70,9 @@ function y(e, t) {
         r,
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,8 +81,8 @@ function O(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let v = {
@@ -90,17 +90,17 @@ let v = {
         top: m.top,
         "top-pill": m.topPill,
     },
-    S = o.forwardRef(function (e, t) {
-        let { className: n, onClick: r, children: i, "aria-expanded": o, "aria-controls": s } = e;
-        return (0, a.jsx)(f.P, {
+    S = a.forwardRef(function (e, t) {
+        let { className: n, onClick: r, children: i, "aria-expanded": a, "aria-controls": s } = e;
+        return (0, o.jsx)(f.P, {
             innerRef: t,
             tabIndex: null == r ? -1 : 0,
             className: l()(m.header, n),
             onClick: r,
-            "aria-expanded": o,
+            "aria-expanded": a,
             "aria-controls": s,
             focusProps: { offset: { top: -6 } },
-            children: (0, a.jsx)(p.x, {
+            children: (0, o.jsx)(p.x, {
                 variant: "eyebrow",
                 color: "none",
                 className: m.headerText,
@@ -110,15 +110,15 @@ let v = {
     });
 function I(e) {
     let { style: t } = e;
-    return (0, a.jsx)("div", {
+    return (0, o.jsx)("div", {
         className: m.separator,
         style: t,
     });
 }
-let T = o.forwardRef(function (e, t) {
+let T = a.forwardRef(function (e, t) {
     var { children: n, id: r } = e,
         i = y(e, ["children", "id"]);
-    return (0, a.jsx)(
+    return (0, o.jsx)(
         "div",
         b(g({}, i), {
             ref: t,
@@ -142,12 +142,12 @@ function A(e, t) {
         n
     );
 }
-class N extends (r = o.Component) {
+class N extends (r = a.Component) {
     getStyle() {
         let { color: e, id: t, selectedItem: n, itemType: r } = this.props,
-            { hover: i, active: a } = this.state;
+            { hover: i, active: o } = this.state;
         if (null != e) {
-            if ("side" === r) return (null != t && n === t) || a ? A(e, "Selected") : i ? A(e, "Hover") : A(e);
+            if ("side" === r) return (null != t && n === t) || o ? A(e, "Selected") : i ? A(e, "Hover") : A(e);
             if ("top" === r)
                 if (n === t)
                     return {
@@ -184,7 +184,7 @@ class N extends (r = o.Component) {
                 id: n,
                 selectedItem: r,
                 color: i,
-                variant: o,
+                variant: a,
                 disabled: s,
                 onContextMenu: c,
                 clickableRef: u,
@@ -194,14 +194,14 @@ class N extends (r = o.Component) {
             } = this.props,
             h = this.props["aria-label"],
             g = r === n;
-        return (0, a.jsx)(f.P, {
+        return (0, o.jsx)(f.P, {
             className: l()(t, {
                 [m.item]: !_,
                 [m.brand]: "brand" === p,
                 [m.selected]: null == i && g,
                 [m.themed]: "grey" === p,
                 [m.disabled]: null == i && s,
-                [m.destructive]: "destructive" === o,
+                [m.destructive]: "destructive" === a,
             }),
             style: this.getStyle(),
             role: "tab",
@@ -254,7 +254,7 @@ h(N, "defaultProps", {
     look: "grey",
     disableItemStyles: !1,
 });
-class P extends (i = o.Component) {
+class P extends (i = a.Component) {
     render() {
         let {
             className: e,
@@ -264,7 +264,7 @@ class P extends (i = o.Component) {
             "aria-label": i,
             orientation: s = "horizontal",
         } = this.props;
-        return (0, a.jsx)("div", {
+        return (0, o.jsx)("div", {
             ref: this.tabBarRef,
             className: l()(e, v[n]),
             style: r,
@@ -272,12 +272,12 @@ class P extends (i = o.Component) {
             "aria-orientation": s,
             onKeyDown: this.handleKeyDown,
             "aria-label": i,
-            children: o.Children.map(t, this.renderChildren),
+            children: a.Children.map(t, this.renderChildren),
         });
     }
     constructor(...e) {
         super(...e),
-            h(this, "tabBarRef", o.createRef()),
+            h(this, "tabBarRef", a.createRef()),
             h(
                 this,
                 "focusManager",
@@ -294,8 +294,8 @@ class P extends (i = o.Component) {
             ),
             h(this, "renderChildren", (e) => {
                 let { selectedItem: t, onItemSelect: n, type: r = "side", look: i = "grey" } = this.props;
-                return o.isValidElement(e)
-                    ? o.cloneElement(e, {
+                return a.isValidElement(e)
+                    ? a.cloneElement(e, {
                           selectedItem: t,
                           onItemSelect: n,
                           itemType: r,

@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(467721),
     l = n(990547),
     c = n(974955),
@@ -13,7 +13,7 @@ var r = n(54381),
     d = n(624653),
     f = n(635146),
     p = n(219855),
-    _ = n(51766);
+    _ = n(325380);
 function m(e, t, n) {
     return (
         t in e
@@ -70,7 +70,7 @@ function b(e) {
     var t;
     let {
             transitionState: n,
-            animationVariant: a = "default",
+            animationVariant: o = "default",
             size: p = "md",
             paddingSize: m = "sm",
             fullScreenOnMobile: g = !0,
@@ -93,7 +93,7 @@ function b(e) {
             }),
             [v, A, S],
         ),
-        P = (0, f.hv)(n, a);
+        P = (0, f.hv)(n, o);
     return (0, r.jsx)(d.t.Provider, {
         value: N,
         children: (0, r.jsx)(c.V, {
@@ -108,12 +108,12 @@ function b(e) {
             children: (0, r.jsx)(u.y, {
                 forceLevel: 1,
                 children: (0, r.jsxs)("div", {
-                    className: o()(_.outerContainer, { [_.fullScreenOnMobile]: g }),
+                    className: a()(_.outerContainer, { [_.fullScreenOnMobile]: g }),
                     children: [
                         I,
                         (0, r.jsx)(s.animated.div, {
                             "data-mana-component": "modal",
-                            className: o()(_.container, _["size-".concat(p)], _["padding-size-".concat(m)]),
+                            className: a()(_.container, _["size-".concat(p)], _["padding-size-".concat(m)]),
                             style: P,
                             children: C,
                         }),

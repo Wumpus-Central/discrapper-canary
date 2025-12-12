@@ -7,16 +7,16 @@ var n = A(54381),
     o = A(481060),
     s = A(752305),
     d = A(893718),
-    c = A(131704),
-    u = A(703558),
-    f = A(981631),
-    g = A(388032),
-    p = A(108527),
-    m = A(132648);
+    u = A(131704),
+    c = A(703558),
+    g = A(981631),
+    f = A(388032),
+    p = A(231319),
+    m = A(8542);
 let v = (0, i.Z)(),
-    h = (0, c.createChannelRecord)({
+    h = (0, u.createChannelRecord)({
         id: "1",
-        type: f.d4z.DM,
+        type: g.d4z.DM,
     });
 function q() {
     return new Promise((e) => {
@@ -41,8 +41,8 @@ function C(e) {
             "aria-labelledby": A,
             className: a,
             id: i,
-            autoFocus: c,
-            maxLength: f,
+            autoFocus: u,
+            maxLength: g,
             onChange: m,
             onSubmit: C,
             showCharacterCount: U = !1,
@@ -56,7 +56,7 @@ function C(e) {
         } = e,
         N = (0, o.Gc0)(),
         [I, K] = r.useState(() => (0, s.JM)(x)),
-        T = r.useRef(!0 === c),
+        T = r.useRef(!0 === u),
         Z = null != A ? A : null == N ? void 0 : N.titleId,
         W = null != (t = null == N ? void 0 : N.errorId) ? t : v;
     function X(e, t, A) {
@@ -69,8 +69,8 @@ function C(e) {
                 alwaysUseLayer: !0,
                 small: !0,
             },
-            disableAutoFocus: !0 !== c,
-            drafts: { type: u.d.ChannelMessage },
+            disableAutoFocus: !0 !== u,
+            drafts: { type: c.d.ChannelMessage },
             emojis: { button: !0 },
             permissions: { requireSendMessages: !1 },
             submit: {
@@ -78,7 +78,7 @@ function C(e) {
                 disableEnterToSubmit: !0,
             },
         }),
-        [c],
+        [u],
     );
     return (0, n.jsx)(o.gNt, {
         label: F,
@@ -95,7 +95,7 @@ function C(e) {
                 "aria-invalid": (null == e ? void 0 : e.errorMessageId) != null,
                 className: p.textArea,
                 innerClassName: l()(a, p.textAreaInner),
-                maxCharacterCount: f,
+                maxCharacterCount: g,
                 onChange: X,
                 placeholder: j,
                 required: V,
@@ -117,14 +117,14 @@ function C(e) {
                 children: [
                     !0 === U &&
                         (0, n.jsx)(b, {
-                            hasError: null != N.error || (null != f && x.length > f),
+                            hasError: null != N.error || (null != g && x.length > g),
                             text: x,
-                            maxLength: f,
+                            maxLength: g,
                         }),
-                    null != f &&
+                    null != g &&
                         (0, n.jsx)(o.nn4, {
                             id: v,
-                            children: g.intl.format(g.t["+DFxLc"], { maxLength: f }),
+                            children: f.intl.format(f.t["+DFxLc"], { maxLength: g }),
                         }),
                 ],
             });

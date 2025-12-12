@@ -2,12 +2,12 @@ n.d(t, { Z: () => g });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    a = n.n(i),
-    o = n(739566),
+    o = n.n(i),
+    a = n(739566),
     s = n(492593),
     l = n(930282),
     c = n(464891),
-    u = n(935950);
+    u = n(62440);
 function d(e, t, n) {
     return (
         t in e
@@ -66,9 +66,9 @@ function m(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,8 +77,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function g(e) {
@@ -102,15 +102,15 @@ function g(e) {
             "hideTimestamp",
             "withFooter",
         ]);
-    let y = (0, o.ZP)(t);
+    let y = (0, a.ZP)(t);
     return (0, r.jsx)("div", {
-        className: a()({ [u.withFooter]: E }, u.embedCard, { [u.compact]: p }, d),
+        className: o()({ [u.withFooter]: E }, u.embedCard, { [u.compact]: p }, d),
         children: (0, r.jsx)(
             s.Z,
             _(f({}, b), {
-                className: a()(u.messageContainer, { [u.compact]: p }),
+                className: o()(u.messageContainer, { [u.compact]: p }),
                 childrenMessageContent: (0, r.jsx)(l.ZP, {
-                    className: a()(u.__invalid_messageContent, { [u.compact]: p }),
+                    className: o()(u.__invalid_messageContent, { [u.compact]: p }),
                     message: t,
                     content: i,
                     compact: null != p && p,
@@ -125,7 +125,7 @@ function g(e) {
                             guildId: null == n ? void 0 : n.guild_id,
                             compact: p,
                             hideTimestamp: g,
-                            className: a()(u.header, { [u.compact]: p }),
+                            className: o()(u.header, { [u.compact]: p }),
                         },
                         null != h ? h : {},
                     ),

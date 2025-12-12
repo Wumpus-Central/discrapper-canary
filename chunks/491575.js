@@ -13,18 +13,18 @@ var r = n(54381),
     g = n(635395),
     h = n(533934),
     m = n(5560),
-    b = n(451478),
-    _ = n(585483),
+    _ = n(451478),
+    b = n(585483),
     E = n(145604),
     O = n(718813),
     v = n(981631),
-    y = n(358091);
+    y = n(3484);
 let I = i.memo(function () {
     let e = (0, c.Z)(),
         t = i.useRef(null),
         n = i.useCallback((e) => {
             let { duration: n, intensity: r } = e;
-            if (p.Z.useReducedMotion || !b.Z.isFocused()) return;
+            if (p.Z.useReducedMotion || !_.Z.isFocused()) return;
             let { current: i } = t;
             a()(null != i, "Shakeable is shaken when not mounted"), i.shake(n, r);
         }, []);
@@ -32,9 +32,9 @@ let I = i.memo(function () {
         i.useEffect(() => (d.Z.setLayout(u.ZP), d.Z.enable(), () => d.Z.disable()), []),
         i.useEffect(
             () => (
-                _.S.subscribe(v.CkL.SHAKE_APP, n),
+                b.S.subscribe(v.CkL.SHAKE_APP, n),
                 () => {
-                    _.S.unsubscribe(v.CkL.SHAKE_APP, n);
+                    b.S.unsubscribe(v.CkL.SHAKE_APP, n);
                 }
             ),
             [n],

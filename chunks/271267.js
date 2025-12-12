@@ -1,17 +1,17 @@
 n.d(t, {
     Q: () => g,
-    Z: () => p,
+    Z: () => h,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(481060),
-    a = n(957011),
-    s = n(756066),
+    s = n(957011),
+    a = n(756066),
     o = n(388032),
-    c = n(684734),
-    d = n(270395);
-function u(e) {
+    c = n(52726),
+    u = n(270395);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,8 +37,8 @@ function u(e) {
     return e;
 }
 let g = "role_subscriptions_eligibility_modal";
-function f(e) {
-    let { guild: t, eligibility: i, eligibilityLoading: a, eligibilityError: s, refreshEligibility: c } = e;
+function m(e) {
+    let { guild: t, eligibility: i, eligibilityLoading: s, eligibilityError: a, refreshEligibility: c } = e;
     return (0, r.jsx)(l.Button, {
         variant: "expressive",
         onClick: function () {
@@ -49,12 +49,12 @@ function f(e) {
                         var l, o;
                         return (0, r.jsx)(
                             e,
-                            ((l = u({}, n)),
+                            ((l = d({}, n)),
                             (o = o =
                                 {
                                     eligibility: i,
-                                    eligibilityLoading: a,
-                                    eligibilityError: s,
+                                    eligibilityLoading: s,
+                                    eligibilityError: a,
                                     refreshEligibility: c,
                                     guildId: t.id,
                                 }),
@@ -82,24 +82,24 @@ function f(e) {
         icon: l.Mgn,
     });
 }
-function m(e) {
+function p(e) {
     let { guild: t, checkboxText: n } = e,
-        { canSubmitAcceptance: s, error: c, loading: d, submitAcceptTermsRequest: u } = (0, a.Z)(t.id),
-        [g, f] = i.useState(!1);
+        { canSubmitAcceptance: a, error: c, loading: u, submitAcceptTermsRequest: d } = (0, s.Z)(t.id),
+        [g, m] = i.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.Checkbox, {
                 onChange: function () {
-                    f((e) => !e);
+                    m((e) => !e);
                 },
                 checked: g,
                 label: n,
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(l.Button, {
-                disabled: !g || !s,
-                onClick: u,
-                loading: d,
+                disabled: !g || !a,
+                onClick: d,
+                loading: u,
                 variant: "expressive",
                 text: o.intl.string(o.t.NL5ZNS),
             }),
@@ -116,40 +116,40 @@ function m(e) {
         ],
     });
 }
-function b(e) {
+function f(e) {
     let { guild: t, monetizationEligibility: n } = e,
         {
             eligibilityLoading: i,
             eligibilityError: l,
-            refreshEligibility: a,
+            refreshEligibility: s,
             eligibility: o,
             eligibleForMonetization: c,
-            acceptTermsCheckboxText: d,
+            acceptTermsCheckboxText: u,
             wasRejectedInV1: g,
         } = n;
     return c
         ? g
-            ? (0, r.jsx)(s.Z, u({}, n))
-            : (0, r.jsx)(m, {
+            ? (0, r.jsx)(a.Z, d({}, n))
+            : (0, r.jsx)(p, {
                   guild: t,
-                  checkboxText: d,
+                  checkboxText: u,
               })
-        : (0, r.jsx)(f, {
+        : (0, r.jsx)(m, {
               guild: t,
               eligibility: o,
               eligibilityLoading: i,
               eligibilityError: l,
-              refreshEligibility: a,
+              refreshEligibility: s,
           });
 }
-function p(e) {
+function h(e) {
     let { guild: t, monetizationEligibility: n } = e;
     return (0, r.jsxs)("div", {
         className: c.ctaContainer,
         children: [
             (0, r.jsx)("img", {
                 className: c.heroBanner,
-                src: d,
+                src: u,
                 alt: o.intl.string(o.t.Af4klP),
             }),
             (0, r.jsxs)("div", {
@@ -167,7 +167,7 @@ function p(e) {
                         children: o.intl.string(o.t["41wkMc"]),
                     }),
                     (0, r.jsx)(l.LZC, { size: 24 }),
-                    (0, r.jsx)(b, {
+                    (0, r.jsx)(f, {
                         guild: t,
                         monetizationEligibility: n,
                     }),

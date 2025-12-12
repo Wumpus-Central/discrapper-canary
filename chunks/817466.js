@@ -4,22 +4,22 @@ var a = n(780384),
     i = n(291175),
     l = n(804413),
     s = n(474936),
-    o = n(337968),
-    c = n(511581),
-    d = n(980775),
-    u = n(151741),
-    m = n(541078),
-    p = n(615975),
-    h = n(299283),
-    f = n(110314),
-    x = n(52704),
-    b = n(239783),
-    g = n(154637),
-    v = n(717480),
-    j = n(113609),
-    y = n(459448),
-    C = n(988866),
-    _ = n(353234);
+    o = n(538092),
+    c = n(533577),
+    d = n(799974),
+    u = n(264511),
+    m = n(345614),
+    p = n(925773),
+    h = n(298342),
+    x = n(761822),
+    f = n(131664),
+    g = n(389457),
+    b = n(673252),
+    v = n(869708),
+    j = n(288829),
+    _ = n(943323),
+    y = n(958657),
+    C = n(605493);
 let S = {
         [s.VU.PREMIUM_TENURE_1_MONTH]: {
             dark: " #D76C1F, #F79C53",
@@ -57,15 +57,15 @@ let S = {
     E = {
         [s.VU.PREMIUM_TENURE_1_MONTH]: {
             dark: o.Z,
-            light: x.Z,
+            light: f.Z,
         },
         [s.VU.PREMIUM_TENURE_3_MONTH]: {
             dark: c.Z,
-            light: b.Z,
+            light: g.Z,
         },
         [s.VU.PREMIUM_TENURE_6_MONTH]: {
             dark: d.Z,
-            light: g.Z,
+            light: b.Z,
         },
         [s.VU.PREMIUM_TENURE_12_MONTH]: {
             dark: u.Z,
@@ -77,15 +77,15 @@ let S = {
         },
         [s.VU.PREMIUM_TENURE_36_MONTH]: {
             dark: p.Z,
-            light: y.Z,
+            light: _.Z,
         },
         [s.VU.PREMIUM_TENURE_60_MONTH]: {
             dark: h.Z,
-            light: C.Z,
+            light: y.Z,
         },
         [s.VU.PREMIUM_TENURE_72_MONTH]: {
-            dark: f.Z,
-            light: _.Z,
+            dark: x.Z,
+            light: C.Z,
         },
     };
 function O() {

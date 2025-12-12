@@ -9,9 +9,9 @@ var o = r(952265),
     s = r(703656),
     u = r(626135),
     b = r(981631),
-    d = r(474936),
-    f = r(388032),
-    p = r(77353);
+    f = r(474936),
+    d = r(388032),
+    p = r(880916);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -74,8 +74,8 @@ function y(e) {
             }),
             (0, s.uL)(b.Z5c.APPLICATION_STORE);
     }
-    let h = f.intl.string(f.t.ewxv3J),
-        j = f.intl.string(f.t.qlsCDB);
+    let h = d.intl.string(d.t.ewxv3J),
+        j = d.intl.string(d.t.qlsCDB);
     return (0, c.Z)({ location: "StreamUpsellModal" })
         ? (0, n.jsx)(
               i.Z,
@@ -96,7 +96,7 @@ function y(e) {
                       body: j,
                       artElement: g,
                       artContainerClassName: p.artContainer,
-                      type: d.cd.STREAM_QUALITY_UPSELL,
+                      type: f.cd.STREAM_QUALITY_UPSELL,
                       analyticsLocation: {
                           section: b.jXE.STREAM_UPSELL_MODAL,
                           object: b.qAy.BUTTON_CTA,
@@ -104,7 +104,7 @@ function y(e) {
                       analyticsSource: r,
                       onClose: t,
                       onSubscribeClick: a.Z,
-                      secondaryCTA: f.intl.string(f.t.ZnqyZ2),
+                      secondaryCTA: d.intl.string(d.t.ZnqyZ2),
                       onSecondaryClick: m,
                       showEnhancedUpsell: !0,
                       enableArtBoxShadow: !1,

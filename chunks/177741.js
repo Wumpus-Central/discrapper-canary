@@ -14,34 +14,34 @@ a.r(t),
 var i,
     c = a(54381),
     o = a(473749),
-    d = a(120356),
-    s = a.n(d),
+    s = a(120356),
+    d = a.n(s),
     r = a(467721),
     p = a(442837),
     u = a(544891),
     M = a(481060),
     l = a(570140),
-    m = a(607070),
-    w = a(70097),
-    _ = a(626135),
+    _ = a(607070),
+    m = a(70097),
+    w = a(626135),
     E = a(526167),
-    f = a(585483),
-    h = a(960048),
+    h = a(585483),
+    f = a(960048),
     W = a(138464),
     T = a(438820),
-    b = a(981631),
-    I = a(372630),
-    S = a(172625),
-    g = a(45254),
-    P = a(554560),
-    y = a(177808),
-    Z = a(739014),
-    F = a(496059),
+    I = a(981631),
+    S = a(577562),
+    g = a(426401),
+    b = a(926734),
+    P = a(601046),
+    y = a(421391),
+    Z = a(153911),
+    F = a(588369),
     U = (((i = {}).WUMPUS_FLIGHT = "wumpus_flight"), (i.GRADIENT_HIGHLIGHT = "gradient_highlight"), i);
 async function C(e, t) {
     try {
         l.Z.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA" });
-        let a = e ? S.Z : g.Z;
+        let a = e ? g.Z : b.Z;
         window.matchMedia("(min-width: 1012px) and (max-width: 1980px)").matches ||
         window.matchMedia("(min-height: 720px) and (max-height: 1408px)").matches
             ? (a = e ? P.Z : y.Z)
@@ -59,25 +59,25 @@ async function C(e, t) {
                 wumpusMedia: i,
             });
     } catch (e) {
-        h.Z.captureException(e), l.Z.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE" });
+        f.Z.captureException(e), l.Z.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_FAILURE" });
     }
 }
 function H() {
-    let e = (0, p.e7)([m.Z], () => m.Z.useReducedMotion),
+    let e = (0, p.e7)([_.Z], () => _.Z.useReducedMotion),
         [t, a] = o.useState(null),
-        { isFetchingMedia: i, canPlayWowMoment: d } = (0, p.cj)([T.Z], () => ({
+        { isFetchingMedia: i, canPlayWowMoment: s } = (0, p.cj)([T.Z], () => ({
             isFetchingMedia: T.Z.isFetchingWowMomentMedia,
             canPlayWowMoment: T.Z.canPlayWowMoment,
         })),
         [u, l] = o.useState(!1),
-        h = (0, E.vu)(),
-        S = (0, E.rO)(),
-        g = h > 52 || -1 === h || S,
-        P = S ? "video/mp4" : "video/webm",
-        y = g && !e && d && null === t && !1 === i;
+        f = (0, E.vu)(),
+        g = (0, E.rO)(),
+        b = f > 52 || -1 === f || g,
+        P = g ? "video/mp4" : "video/webm",
+        y = b && !e && s && null === t && !1 === i;
     o.useEffect(() => {
-        y && C(S, a);
-    }, [y, S, a]),
+        y && C(g, a);
+    }, [y, g, a]),
         o.useEffect(() => {
             function t() {
                 !e &&
@@ -86,17 +86,17 @@ function H() {
                     (n = setTimeout(() => {
                         l(!1),
                             F(!0),
-                            _.default.track(b.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: "gradient_highlight" }),
+                            w.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: "gradient_highlight" }),
                             (0, W.H)(!1);
                     }, 2000)));
             }
             return (
-                f.S.subscribe(b.CkL.PREMIUM_SUBSCRIPTION_CREATED, t),
+                h.S.subscribe(I.CkL.PREMIUM_SUBSCRIPTION_CREATED, t),
                 () => {
-                    f.S.unsubscribe(b.CkL.PREMIUM_SUBSCRIPTION_CREATED, t);
+                    h.S.unsubscribe(I.CkL.PREMIUM_SUBSCRIPTION_CREATED, t);
                 }
             );
-        }, [e, g]);
+        }, [e, b]);
     let [Z, F] = o.useState(!1),
         [U, H] = o.useState(!1),
         O = (0, M.q_F)({
@@ -137,18 +137,18 @@ function H() {
     let x = u && null !== t,
         R = x || Z;
     return (0, c.jsxs)("div", {
-        className: s()({
-            [I.wrapper]: !R,
-            [I.activeWrapper]: R,
+        className: d()({
+            [S.wrapper]: !R,
+            [S.activeWrapper]: R,
         }),
         children: [
             x &&
-                (0, c.jsx)(w.Z, {
+                (0, c.jsx)(m.Z, {
                     autoPlay: !0,
-                    className: I.videoWrapper,
+                    className: S.videoWrapper,
                     onPlay: () => {
                         clearTimeout(n),
-                            _.default.track(b.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: "wumpus_flight" });
+                            w.default.track(I.rMx.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: "wumpus_flight" });
                     },
                     onEnded: () => {
                         l(!1), (0, W.H)(!1), window.URL.revokeObjectURL(t), a(null);
@@ -159,14 +159,14 @@ function H() {
                     }),
                 }),
             (0, c.jsx)(r.animated.div, {
-                className: I.gadientHighlight,
+                className: S.gadientHighlight,
                 style: O,
             }),
             (0, c.jsx)(r.animated.div, {
-                className: I.swipeWrapper,
+                className: S.swipeWrapper,
                 style: v,
                 children: (0, c.jsxs)("svg", {
-                    className: I.swipe,
+                    className: S.swipe,
                     viewBox: "0 0 848 1024",
                     fill: "none",
                     children: [

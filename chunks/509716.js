@@ -1,23 +1,40 @@
-e.exports = {
-    root: "_3ec704473ec6c7bf-root",
-    contentContainer: "_3ec704473ec6c7bf-contentContainer",
-    bodyContent: "_3ec704473ec6c7bf-bodyContent",
-    header: "_3ec704473ec6c7bf-header",
-    enhancedHeader: "_3ec704473ec6c7bf-enhancedHeader",
-    subHeader: "_3ec704473ec6c7bf-subHeader",
-    content: "_3ec704473ec6c7bf-content",
-    enhancedContent: "_3ec704473ec6c7bf-enhancedContent",
-    footer: "_3ec704473ec6c7bf-footer",
-    enhancedFooter: "_3ec704473ec6c7bf-enhancedFooter",
-    primaryActions: "_3ec704473ec6c7bf-primaryActions",
-    enhancedPrimaryActions: "_3ec704473ec6c7bf-enhancedPrimaryActions",
-    secondaryAction: "_3ec704473ec6c7bf-secondaryAction",
-    enhancedSecondaryAction: "_3ec704473ec6c7bf-enhancedSecondaryAction",
-    closeButton: "_3ec704473ec6c7bf-closeButton",
-    artContainer: "_3ec704473ec6c7bf-artContainer",
-    artContainerBoxShadow: "_3ec704473ec6c7bf-artContainerBoxShadow",
-    art: "_3ec704473ec6c7bf-art",
-    sparkleBadge: "_3ec704473ec6c7bf-sparkleBadge",
-    newBadge: "_3ec704473ec6c7bf-newBadge",
-    betaTag: "_3ec704473ec6c7bf-betaTag",
-};
+n.d(t, { f: () => l }), n(388685), n(781311);
+var r = n(456007),
+    i = n(895924),
+    o = n(351133),
+    a = n(689079),
+    s = n(388032);
+function l(e) {
+    let { option: t, content: n, guildId: l, channelId: c, allowEmptyValues: u, commandOrigin: d = i.bB.CHAT } = e,
+        f = null != n ? (0, r.KF)({ content: n }, "content").trim() : "",
+        p = t.required,
+        _ = "" === f;
+    if (null == n)
+        return p
+            ? {
+                  success: !1,
+                  error: s.intl.string(s.t.JZJQL2),
+              }
+            : { success: !0 };
+    if (_)
+        return u
+            ? { success: !0 }
+            : p
+              ? {
+                    success: !1,
+                    error: s.intl.string(s.t.JZJQL2),
+                }
+              : {
+                    success: !1,
+                    error: (0, a.al)(t),
+                };
+    let m =
+            n.length > 1
+                ? {
+                      type: "text",
+                      text: f,
+                  }
+                : n[0],
+        h = o.Z[t.type](m, t, c, l, d);
+    return h.success || null != h.error || (h.error = (0, a.al)(t)), h;
+}

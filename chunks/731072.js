@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => p });
 var i = n(54381),
     r = n(473749),
     l = n(481060),
@@ -7,33 +7,33 @@ var i = n(54381),
     s = n(434404),
     c = n(486199),
     d = n(13051),
-    u = n(456928);
-function b(e) {
+    u = n(66544);
+function p(e) {
     let {
             integrations: t,
             editedIntegration: n,
-            guild: b,
-            platformType: p,
-            labelText: m,
-            descriptionText: f,
-            helpText: g,
+            guild: p,
+            platformType: m,
+            labelText: b,
+            descriptionText: g,
+            helpText: f,
             errors: h,
             canNavigate: x,
         } = e,
-        j = o.Z.get(p),
+        j = o.Z.get(m),
         v = r.useCallback(
             async (e) => {
-                x() && (await s.Z.enableIntegration(b.id, e.type, e.id), a.Z.startEditingIntegration(e.id));
+                x() && (await s.Z.enableIntegration(p.id, e.type, e.id), a.Z.startEditingIntegration(e.id));
             },
-            [x, b.id],
+            [x, p.id],
         ),
         O = r.useCallback(
             (e) => {
                 x() &&
                     (e.id === (null == n ? void 0 : n.id) && a.Z.stopEditingIntegration(),
-                    s.Z.disableIntegration(b.id, e.id));
+                    s.Z.disableIntegration(p.id, e.id));
             },
-            [x, n, b.id],
+            [x, n, p.id],
         ),
         y = r.useCallback(
             (e) => {
@@ -45,11 +45,11 @@ function b(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.Z, {
-                name: m,
+                name: b,
                 icon: null == j ? void 0 : j.icon.whiteSVG,
                 iconBackgroundColor: null == j ? void 0 : j.color,
                 iconClassName: u.platformIcon,
-                description: f,
+                description: g,
                 isHeader: !0,
             }),
             (0, i.jsx)(l.izJ, { className: u.headerDivider }),
@@ -66,7 +66,7 @@ function b(e) {
                     {
                         integration: e,
                         editedIntegration: n,
-                        guild: b,
+                        guild: p,
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
                         onEnable: v,
                         onDisable: O,
@@ -79,7 +79,7 @@ function b(e) {
                 className: u.helpText,
                 color: "text-muted",
                 variant: "text-sm/normal",
-                children: g,
+                children: f,
             }),
         ],
     });

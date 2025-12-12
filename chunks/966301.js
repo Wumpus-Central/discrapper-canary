@@ -1,101 +1,101 @@
 n.d(t, {
-    ZP: () => I,
-    Zm: () => _,
+    ZP: () => E,
+    Zm: () => S,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
-    a = n(796027),
-    s = n(481060),
+    s = n(796027),
+    a = n(481060),
     o = n(471445),
     c = n(45966),
-    d = n(637853),
-    u = n(999382),
+    u = n(637853),
+    d = n(999382),
     g = n(889369),
     m = n(983135),
-    f = n(190007),
-    p = n(926958),
-    b = n(570961),
-    h = n(208665),
-    x = n(974513),
+    p = n(190007),
+    f = n(926958),
+    h = n(570961),
+    x = n(208665),
+    b = n(974513),
     j = n(38703),
-    v = n(716130),
-    O = n(981631),
-    C = n(290511),
-    y = n(388032),
-    N = n(23550);
-function E(e) {
+    _ = n(716130),
+    v = n(981631),
+    O = n(290511),
+    C = n(388032),
+    y = n(314160);
+function N(e) {
     let { guildId: t, prompts: n } = e,
-        a = (0, l.e7)([g.Z], () => g.Z.editedDefaultChannelIds),
-        [c, u] = (0, d.dF)(t, n, [...a]),
+        s = (0, l.e7)([g.Z], () => g.Z.editedDefaultChannelIds),
+        [c, d] = (0, u.dF)(t, n, [...s]),
         m = c.length,
-        f = c.length + u.length,
-        p = (m / f) * 100,
-        b = Math.max(Math.ceil((85 * f) / 100) - m, 0),
-        [h, x] = i.useState(!1),
-        j = h ? s.CJ0 : s.u04;
+        p = c.length + d.length,
+        f = (m / p) * 100,
+        h = Math.max(Math.ceil((85 * p) / 100) - m, 0),
+        [x, b] = i.useState(!1),
+        j = x ? a.CJ0 : a.u04;
     return (0, r.jsxs)("div", {
-        className: N.channelCoverage,
+        className: y.channelCoverage,
         children: [
-            (0, r.jsxs)(s.P3F, {
-                className: N.coverageHeader,
-                onClick: () => x(!h),
+            (0, r.jsxs)(a.P3F, {
+                className: y.coverageHeader,
+                onClick: () => b(!x),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: N.warningTextContainer,
+                        className: y.warningTextContainer,
                         children: [
-                            p <= 85 &&
-                                (0, r.jsx)(s.Mgn, {
+                            f <= 85 &&
+                                (0, r.jsx)(a.Mgn, {
                                     size: "xs",
                                     color: "currentColor",
-                                    className: N.warning,
+                                    className: y.warning,
                                 }),
-                            (0, r.jsx)(s.Text, {
-                                className: N.coverageTitle,
+                            (0, r.jsx)(a.Text, {
+                                className: y.coverageTitle,
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: y.intl.format(y.t.nMVKCX, { numChannelsMissing: f - m }),
+                                children: C.intl.format(C.t.nMVKCX, { numChannelsMissing: p - m }),
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: N.progressContainer,
+                        className: y.progressContainer,
                         children: [
-                            (0, r.jsx)(s.Exd, {
-                                className: N.coverageProgress,
-                                foregroundColor: p > 85 ? "var(--status-positive)" : "var(--status-warning)",
-                                percent: p,
+                            (0, r.jsx)(a.Exd, {
+                                className: y.coverageProgress,
+                                foregroundColor: f > 85 ? "var(--status-positive)" : "var(--status-warning)",
+                                percent: f,
                             }),
                             (0, r.jsx)(j, {
                                 size: "md",
                                 color: "currentColor",
-                                className: N.caret,
+                                className: y.caret,
                             }),
                         ],
                     }),
                 ],
             }),
-            h
+            x
                 ? (0, r.jsxs)("div", {
-                      className: N.channelCoverageDetails,
+                      className: y.channelCoverageDetails,
                       children: [
-                          (0, r.jsx)(s.Text, {
+                          (0, r.jsx)(a.Text, {
                               variant: "text-xs/semibold",
                               color: "text-muted",
-                              children: y.intl.string(y.t["0FM4i+"]),
+                              children: C.intl.string(C.t["0FM4i+"]),
                           }),
                           (0, r.jsx)("div", {
-                              className: N.channels,
-                              children: u.map((e) => {
+                              className: y.channels,
+                              children: d.map((e) => {
                                   var t;
-                                  let n = null != (t = (0, o.KS)(e)) ? t : s.VL1;
+                                  let n = null != (t = (0, o.KS)(e)) ? t : a.VL1;
                                   return (0, r.jsx)(
                                       "div",
                                       {
-                                          className: N.channelPill,
-                                          children: (0, r.jsxs)(s.Text, {
-                                              className: N.channel,
+                                          className: y.channelPill,
+                                          children: (0, r.jsxs)(a.Text, {
+                                              className: y.channel,
                                               variant: "text-xs/normal",
                                               color: "interactive-text-active",
                                               children: [
@@ -112,26 +112,26 @@ function E(e) {
                               }),
                           }),
                           (0, r.jsx)("div", {
-                              className: N.channelCoverageHint,
+                              className: y.channelCoverageHint,
                               children:
-                                  b > 0
+                                  h > 0
                                       ? (0, r.jsxs)(r.Fragment, {
                                             children: [
-                                                (0, r.jsx)(s.Mgn, {
+                                                (0, r.jsx)(a.Mgn, {
                                                     size: "xs",
                                                     color: "currentColor",
                                                 }),
-                                                (0, r.jsx)(s.Text, {
+                                                (0, r.jsx)(a.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: y.intl.format(y.t.sX8890, { numChannels: b }),
+                                                    children: C.intl.format(C.t.sX8890, { numChannels: h }),
                                                 }),
                                             ],
                                         })
-                                      : (0, r.jsx)(s.Text, {
+                                      : (0, r.jsx)(a.Text, {
                                             variant: "text-xs/normal",
                                             color: "text-muted",
-                                            children: y.intl.string(y.t.o4s29v),
+                                            children: C.intl.string(C.t.o4s29v),
                                         }),
                           }),
                       ],
@@ -140,24 +140,24 @@ function E(e) {
         ],
     });
 }
-function I(e) {
+function E(e) {
     let { saveOnClose: t } = e,
-        n = (0, l.e7)([u.Z], () => u.Z.getGuild());
+        n = (0, l.e7)([d.Z], () => d.Z.getGuild());
     return null == n
         ? null
-        : (0, r.jsx)(S, {
+        : (0, r.jsx)(I, {
               guild: n,
               saveOnClose: t,
           });
 }
-function S(e) {
+function I(e) {
     let { guild: t, saveOnClose: n } = e,
-        a = (0, l.e7)([c.Z], () => c.Z.isLoading()),
-        o = (0, l.e7)([h.Z], () => h.Z.editedOnboardingPrompts),
-        d = (0, l.e7)([h.Z], () => h.Z.advancedMode),
-        u = i.useRef(!1);
+        s = (0, l.e7)([c.Z], () => c.Z.isLoading()),
+        o = (0, l.e7)([x.Z], () => x.Z.editedOnboardingPrompts),
+        u = (0, l.e7)([x.Z], () => x.Z.advancedMode),
+        d = i.useRef(!1);
     i.useEffect(() => {
-        a || u.current || ((u.current = !0), d || 0 !== o.length || (0, b.tS)(t, [(0, C.ae)()], !1));
+        s || d.current || ((d.current = !0), u || 0 !== o.length || (0, h.tS)(t, [(0, O.ae)()], !1));
     });
     let g = i.useRef(t);
     if (
@@ -169,90 +169,90 @@ function S(e) {
                 return () => {
                     let e = g.current;
                     null != e &&
-                        (0, b.rS)(e, { ignoreDefaultPrompt: !0 })
-                            .then(() => (0, f.ss)(e.id))
+                        (0, h.rS)(e, { ignoreDefaultPrompt: !0 })
+                            .then(() => (0, p.ss)(e.id))
                             .catch(() => {});
                 };
         }, [n]),
         null == t)
     )
         return null;
-    let p = async () => {
+    let f = async () => {
         try {
-            await (0, b.rS)(t), await (0, m.di)(t.id);
+            await (0, h.rS)(t), await (0, m.di)(t.id);
         } catch (e) {}
     };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(s.Heading, {
-                className: N.header,
+            (0, r.jsx)(a.Heading, {
+                className: y.header,
                 variant: "heading-lg/extrabold",
-                children: d ? y.intl.string(y.t.AGjtFv) : y.intl.string(y.t.dqCzoT),
+                children: u ? C.intl.string(C.t.AGjtFv) : C.intl.string(C.t.dqCzoT),
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-default",
-                children: y.intl.string(y.t["q/6MLL"]),
+                children: C.intl.string(C.t["q/6MLL"]),
             }),
             (0, r.jsxs)("div", {
-                className: N.links,
+                className: y.links,
                 children: [
-                    (0, r.jsx)(s.Anchor, {
+                    (0, r.jsx)(a.Anchor, {
                         target: "_blank",
-                        href: O.EYA.GUILD_ONBOARDING_EXAMPLES,
-                        children: (0, r.jsx)(s.Text, {
+                        href: v.EYA.GUILD_ONBOARDING_EXAMPLES,
+                        children: (0, r.jsx)(a.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: y.intl.string(y.t.Ok55Kh),
+                            children: C.intl.string(C.t.Ok55Kh),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: N.dot }),
-                    (0, r.jsx)(s.Anchor, {
-                        onClick: p,
-                        children: (0, r.jsx)(s.Text, {
+                    (0, r.jsx)("div", { className: y.dot }),
+                    (0, r.jsx)(a.Anchor, {
+                        onClick: f,
+                        children: (0, r.jsx)(a.Text, {
                             variant: "text-sm/medium",
                             color: "text-link",
-                            children: y.intl.string(y.t["6gsjdM"]),
+                            children: C.intl.string(C.t["6gsjdM"]),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: N.dot }),
-                    (0, r.jsx)(x.Wu, { guildId: t.id }),
+                    (0, r.jsx)("div", { className: y.dot }),
+                    (0, r.jsx)(b.Wu, { guildId: t.id }),
                 ],
             }),
-            (0, r.jsx)(E, {
+            (0, r.jsx)(N, {
                 guildId: t.id,
                 prompts: o,
             }),
             n && (0, r.jsx)(j.Z, {}),
             (0, r.jsx)("div", {
-                className: N.prompts,
-                children: a
-                    ? (0, r.jsx)(s.$jN, {})
-                    : (0, r.jsx)(v.Z, {
-                          postjoinOnly: d,
+                className: y.prompts,
+                children: s
+                    ? (0, r.jsx)(a.$jN, {})
+                    : (0, r.jsx)(_.Z, {
+                          postjoinOnly: u,
                           guildId: t.id,
                       }),
             }),
         ],
     });
 }
-function _() {
-    let e = (0, l.e7)([u.Z], () => u.Z.getGuild()),
-        t = (0, l.e7)([h.Z], () => h.Z.submitting),
-        n = (0, l.e7)([p.Z], () => p.Z.isSubmitting()),
-        i = (0, l.e7)([p.Z], () => p.Z.hasChanges());
+function S() {
+    let e = (0, l.e7)([d.Z], () => d.Z.getGuild()),
+        t = (0, l.e7)([x.Z], () => x.Z.submitting),
+        n = (0, l.e7)([f.Z], () => f.Z.isSubmitting()),
+        i = (0, l.e7)([f.Z], () => f.Z.hasChanges());
     return null == e
         ? null
-        : (0, r.jsx)(a.Z, {
+        : (0, r.jsx)(s.Z, {
               onSave: async () => {
                   try {
-                      await (0, b.rS)(e), i && (await (0, f.e$)(e.id));
+                      await (0, h.rS)(e), i && (await (0, p.e$)(e.id));
                   } catch (e) {}
               },
               onReset: () => {
-                  (0, b.NB)(), i && (0, f.Pk)();
+                  (0, h.NB)(), i && (0, p.Pk)();
               },
               submitting: t || (i && n),
-              onSaveText: y.intl.string(y.t["R3BPH+"]),
+              onSaveText: C.intl.string(C.t["R3BPH+"]),
           });
 }

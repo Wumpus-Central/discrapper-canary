@@ -7,8 +7,8 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(97613),
-    o = n.n(a),
+    o = n(97613),
+    a = n.n(o),
     s = n(757275),
     l = n(818537),
     c = n(663042),
@@ -19,7 +19,7 @@ var r = n(54381),
     _ = n(624138),
     m = n(314910),
     h = n(308569),
-    g = n(73822);
+    g = n(102521);
 function E(e, t, n) {
     return (
         t in e
@@ -134,17 +134,17 @@ function A() {
     let { reducedMotion: e } = i.useContext(f.Sfi),
         t = e.enabled ? C : T,
         n = S((e) => e.fullScreenLayers),
-        a = n.map((e) => ({
+        o = n.map((e) => ({
             item: e,
             nodeRef: i.createRef(),
         }));
     return (0, r.jsx)(s.Z, {
-        children: a.map((e) => {
-            let { item: i, nodeRef: a } = e;
+        children: o.map((e) => {
+            let { item: i, nodeRef: o } = e;
             return (0, r.jsx)(
                 l.Z,
                 {
-                    nodeRef: a,
+                    nodeRef: o,
                     classNames: i.options.disableAnimation ? void 0 : t,
                     timeout: v,
                     onEntered: () => {
@@ -158,7 +158,7 @@ function A() {
                     },
                     unmountOnExit: !0,
                     children: (0, r.jsx)(I, {
-                        containerRef: a,
+                        containerRef: o,
                         item: i,
                     }),
                 },
@@ -169,8 +169,8 @@ function A() {
 }
 function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
-        { layerKey: n, Layer: r, disableAnimation: i = !1, showAppUnderLayer: a = !1 } = t,
-        s = null != n ? n : o()();
+        { layerKey: n, Layer: r, disableAnimation: i = !1, showAppUnderLayer: o = !1 } = t,
+        s = null != n ? n : a()();
     return (
         (0, u.j)(() => {
             S.setState((t) => ({
@@ -183,7 +183,7 @@ function N(e) {
                         render: e,
                         options: {
                             disableAnimation: i,
-                            showAppUnderLayer: a,
+                            showAppUnderLayer: o,
                         },
                     },
                 ],

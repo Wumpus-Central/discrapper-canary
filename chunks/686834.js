@@ -1,16 +1,16 @@
 n.d(t, { X: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(467721);
+    o = n(467721);
 n(442837), n(616022);
-var o = n(49436),
+var a = n(49436),
     s = n(968843),
     l = n(602667),
     c = n(883333),
     u = n(150588),
     d = n(21730),
     f = n(231919),
-    p = n(89480);
+    p = n(523137);
 function _(e, t, n) {
     return (
         t in e
@@ -29,8 +29,8 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
@@ -58,13 +58,13 @@ function h(e) {
         questOrQuests: t,
         questContent: n,
         questContentPosition: m,
-        trackGuildAndChannelMetadata: n === o.jn.QUESTS_EMBED,
+        trackGuildAndChannelMetadata: n === a.jn.QUESTS_EMBED,
         sourceQuestContent: h,
         children: (e) =>
-            (0, r.jsx)(a.animated.div, {
+            (0, r.jsx)(o.animated.div, {
                 style: {
                     maxHeight:
-                        n === o.jn.QUESTS_EMBED
+                        n === a.jn.QUESTS_EMBED
                             ? void 0
                             : O.to({
                                   range: [0, 1],

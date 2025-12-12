@@ -1,26 +1,26 @@
 n.d(t, { Z: () => h }), n(388685);
-var a = n(54381),
-    r = n(473749),
-    i = n(120356),
-    l = n.n(i),
+var r = n(54381),
+    i = n(473749),
+    a = n(120356),
+    l = n.n(a),
     s = n(21260),
     o = n(481060),
     c = n(393903),
     d = n(79707),
     u = n(388032),
-    p = n(1855);
+    p = n(16617);
 function m(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: i } = e,
-        s = r.useMemo(
+    let { onTabSelect: t, tabs: n, selectedTab: a } = e,
+        s = i.useMemo(
             () =>
                 null !=
                 n.find((e) => {
                     let { id: t } = e;
-                    return t === i;
+                    return t === a;
                 }),
-            [i, n],
+            [a, n],
         ),
-        [c, m] = r.useState(!1),
+        [c, m] = i.useState(!1),
         h = (function (e) {
             let { selected: t, isHovered: n } = e;
             return n ? "text-strong" : t ? "text-brand" : "text-default";
@@ -28,23 +28,23 @@ function m(e) {
             selected: s,
             isHovered: c,
         }),
-        f = (function (e) {
+        g = (function (e) {
             let { selected: t, isHovered: n } = e;
             return n ? o.TVs.colors.TEXT_STRONG : t ? o.TVs.colors.TEXT_BRAND : o.TVs.colors.INTERACTIVE_TEXT_DEFAULT;
         })({
             selected: s,
             isHovered: c,
         }),
-        b = r.useCallback(() => m(!0), []),
-        g = r.useCallback(() => m(!1), []),
-        x = r.useRef(null);
-    return (0, a.jsx)(o.yRy, {
-        targetElementRef: x,
+        f = i.useCallback(() => m(!0), []),
+        _ = i.useCallback(() => m(!1), []),
+        b = i.useRef(null);
+    return (0, r.jsx)(o.yRy, {
+        targetElementRef: b,
         renderPopout: (e) => {
-            let { closePopout: r } = e;
-            return (0, a.jsx)(d.Z, {
-                selectedTab: i,
-                onClose: r,
+            let { closePopout: i } = e;
+            return (0, r.jsx)(d.Z, {
+                selectedTab: a,
+                onClose: i,
                 tabs: n,
                 onTabSelect: t,
             });
@@ -52,78 +52,78 @@ function m(e) {
         position: "bottom",
         align: "left",
         children: (e, t) => {
-            var n, r;
-            let { isShown: i } = t;
-            return (0, a.jsx)(
+            var n, i;
+            let { isShown: a } = t;
+            return (0, r.jsx)(
                 o.njP.Item,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            a = Object.keys(n);
+                            r = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (a = a.concat(
+                            (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            a.forEach(function (t) {
-                                var a;
-                                (a = n[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: a,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = a);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
                 })({}, e)),
-                (r = r =
+                (i = i =
                     {
                         id: "more",
                         look: "brand",
                         selectedItem: s ? "more" : void 0,
                         className: l()(p.tab, { [p.selected]: !1 }),
                         clickableRef: (e) => {
-                            null != e && null != e.ref && (x.current = e.ref);
+                            null != e && null != e.ref && (b.current = e.ref);
                         },
                         "aria-label": u.intl.string(u.t["UKOtz+"]),
-                        children: (0, a.jsxs)("div", {
+                        children: (0, r.jsxs)("div", {
                             className: p.more,
-                            onMouseEnter: b,
-                            onMouseLeave: g,
+                            onMouseEnter: f,
+                            onMouseLeave: _,
                             children: [
-                                (0, a.jsx)(o.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
                                     color: h,
                                     children: u.intl.string(u.t["UKOtz+"]),
                                 }),
-                                i
-                                    ? (0, a.jsx)(o.u04, {
+                                a
+                                    ? (0, r.jsx)(o.u04, {
                                           size: "xs",
-                                          color: f,
+                                          color: g,
                                       })
-                                    : (0, a.jsx)(o.CJ0, {
+                                    : (0, r.jsx)(o.CJ0, {
                                           size: "xs",
-                                          color: f,
+                                          color: g,
                                       }),
                             ],
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var a = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, a);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(r)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
                 n),
             );
@@ -131,53 +131,53 @@ function m(e) {
     });
 }
 function h(e) {
-    let { className: t, selectedTab: n, tabs: i, onTabSelect: d, onAvailableWidthChange: u } = e,
-        [h, f] = r.useState(0),
-        b = r.useRef(h),
+    let { className: t, selectedTab: n, tabs: a, onTabSelect: d, onAvailableWidthChange: u } = e,
+        [h, g] = i.useState(0),
+        f = i.useRef(h),
         {
-            lastVisibleIndex: g,
-            onItemLayout: x,
-            overflowItemsRef: v,
-            itemWidthsRef: C,
+            lastVisibleIndex: _,
+            onItemLayout: b,
+            overflowItemsRef: x,
+            itemWidthsRef: v,
         } = (0, s.zP)({
-            items: i,
+            items: a,
             itemGapPx: 20,
             maxLines: 1,
             containerWidth: h,
         }),
-        j = r.useMemo(() => i.slice(0, g + 1), [g, i]),
-        _ = r.useMemo(() => i.slice(g + 1), [g, i]),
-        y = r.useRef(null),
-        I = r.useCallback(
+        C = i.useMemo(() => a.slice(0, _ + 1), [_, a]),
+        j = i.useMemo(() => a.slice(_ + 1), [_, a]),
+        y = i.useRef(null),
+        I = i.useCallback(
             (e) => {
                 let t = e.contentRect.width;
-                if (null == t || b.current === t) return;
-                f(t), (b.current = t);
-                let n = C.current.reduce((e, t, n) => e + t + 20 * (0 !== n));
+                if (null == t || f.current === t) return;
+                g(t), (f.current = t);
+                let n = v.current.reduce((e, t, n) => e + t + 20 * (0 !== n));
                 null == u || u(t - n);
             },
-            [C, u],
+            [v, u],
         );
     (0, c.s)(y, I);
     let S = 0 !== h;
-    return (0, a.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         className: l()(p.container, t),
         ref: y,
         children: [
-            (0, a.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: p.measurements,
                 children: [
-                    i.map((e, t) =>
-                        (0, a.jsx)(
+                    a.map((e, t) =>
+                        (0, r.jsx)(
                             s.AJ,
                             {
                                 index: t,
-                                onItemLayout: x,
-                                children: (0, a.jsx)(o.njP.Item, {
+                                onItemLayout: b,
+                                children: (0, r.jsx)(o.njP.Item, {
                                     id: e.id,
                                     "aria-label": e.label,
                                     className: p.tab,
-                                    children: (0, a.jsx)(o.Text, {
+                                    children: (0, r.jsx)(o.Text, {
                                         variant: "text-md/medium",
                                         children: e.label,
                                     }),
@@ -186,10 +186,10 @@ function h(e) {
                             e.id,
                         ),
                     ),
-                    (0, a.jsx)("div", {
-                        ref: v,
-                        children: (0, a.jsx)(m, {
-                            tabs: _,
+                    (0, r.jsx)("div", {
+                        ref: x,
+                        children: (0, r.jsx)(m, {
+                            tabs: j,
                             onTabSelect: d,
                             selectedTab: n,
                         }),
@@ -197,15 +197,15 @@ function h(e) {
                 ],
             }),
             S &&
-                (0, a.jsxs)(o.njP, {
+                (0, r.jsxs)(o.njP, {
                     type: "top",
                     look: "brand",
                     selectedItem: n,
                     onItemSelect: d,
                     className: p.tabs,
                     children: [
-                        j.map((e) =>
-                            (0, a.jsx)(
+                        C.map((e) =>
+                            (0, r.jsx)(
                                 o.njP.Item,
                                 {
                                     id: e.id,
@@ -217,9 +217,9 @@ function h(e) {
                                 e.id,
                             ),
                         ),
-                        0 !== _.length
-                            ? (0, a.jsx)(m, {
-                                  tabs: _,
+                        0 !== j.length
+                            ? (0, r.jsx)(m, {
+                                  tabs: j,
                                   onTabSelect: d,
                                   selectedTab: n,
                               })

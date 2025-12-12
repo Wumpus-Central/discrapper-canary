@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    a = n.n(i),
-    o = n(194983),
+    o = n.n(i),
+    a = n(194983),
     s = n(481060),
     l = n(574176),
     c = n(833858),
@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(741570),
     f = n(584973),
     p = n(556638),
-    _ = n(175996);
+    _ = n(80568);
 let m = 14;
 function h(e) {
     let {
@@ -43,7 +43,7 @@ function h(e) {
         ? (w = (0, r.jsx)(u.Z, {
               userId: b,
               size: m,
-              className: a()(i, _.hangStatusIcon),
+              className: o()(i, _.hangStatusIcon),
               hangStatusActivity: E,
           }))
         : null == N ||
@@ -61,7 +61,7 @@ function h(e) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [w, D],
                   })
-                : (0, r.jsxs)(o.Z, {
+                : (0, r.jsxs)(a.Z, {
                       delay: p.X,
                       tooltipClassName: h,
                       children: [w, D],
@@ -70,7 +70,7 @@ function h(e) {
     return (0, r.jsx)(s.Text, {
         variant: "text-".concat(y, "/medium"),
         color: "none",
-        className: a()(_.truncated, n),
+        className: o()(_.truncated, n),
         children: x(),
     });
 }

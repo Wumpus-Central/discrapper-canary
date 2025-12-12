@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
 var r = n(54381),
     i = n(481060);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -57,7 +57,7 @@ let c = (e) => "gift-option-select-modal-".concat(e.id);
 function u(e) {
     let {
         giftRecipient: t,
-        onClose: a,
+        onClose: o,
         analyticsLocations: s,
         analyticsLocation: u,
         analyticsObject: d,
@@ -65,11 +65,11 @@ function u(e) {
     } = e;
     return (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("74330"), n.e("16"), n.e("3472")]).then(n.bind(n, 841081));
+            let { default: e } = await Promise.all([n.e("74330"), n.e("16"), n.e("12693")]).then(n.bind(n, 841081));
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    l(o({}, n), {
+                    l(a({}, n), {
                         giftRecipient: t,
                         analyticsLocations: s,
                         analyticsLocation: u,
@@ -80,7 +80,7 @@ function u(e) {
         },
         {
             modalKey: c(t),
-            onCloseCallback: a,
+            onCloseCallback: o,
         },
     );
 }

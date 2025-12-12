@@ -6,12 +6,12 @@ var a = n(54381),
     s = n(313201),
     o = n(921944),
     c = n(388032),
-    d = n(312529);
+    d = n(18845);
 function u(e) {
     let { markAsDismissed: t, heading: n, subheading: u, children: m, height: p } = e,
         h = (0, s.Dt)(),
-        f = r.useRef(null),
-        x = (0, l.q_F)({
+        x = r.useRef(null),
+        f = (0, l.q_F)({
             from: {
                 transform: "translate3d(-110%, 0, 0)",
                 height: p,
@@ -26,12 +26,12 @@ function u(e) {
                 damping: 15,
             },
             onRest: () => {
-                null != f.current && f.current.focus();
+                null != x.current && x.current.focus();
             },
         });
     return (0, a.jsx)(i.animated.div, {
         className: d.container,
-        style: x,
+        style: f,
         children: (0, a.jsxs)("aside", {
             "aria-labelledby": h,
             className: d.content,
@@ -40,7 +40,7 @@ function u(e) {
                     className: d.headerRow,
                     children: [
                         (0, a.jsx)(l.P3F, {
-                            innerRef: f,
+                            innerRef: x,
                             "aria-label": c.intl.string(c.t.WAI6xu),
                             className: d.closeButton,
                             onClick: () => {

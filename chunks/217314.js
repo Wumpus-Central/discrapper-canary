@@ -1,10 +1,10 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(399606),
     l = n(28664),
-    a = n(481060),
-    o = n(7284),
+    o = n(481060),
+    a = n(7284),
     s = n(210975),
     c = n(158776),
     u = n(699516),
@@ -12,30 +12,30 @@ var i = n(399606),
     f = n(51144),
     h = n(984370),
     p = n(388032),
-    g = n(978966);
-function b(e) {
+    g = n(97009);
+function m(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),
-        b = (0, i.e7)([d.default], () => d.default.getUser(t)),
-        m = (0, i.e7)([c.Z], () => c.Z.getStatus(t)),
-        y = (0, i.e7)([c.Z], () => c.Z.isMobileOnline(t)),
-        O = (0, i.e7)([u.Z], () => u.Z.getNickname(t)),
-        v = f.ZP.useUserTag(b),
-        j = (0, o.j)({ displayNameStyles: null == b ? void 0 : b.displayNameStyles }),
-        C = (0, s.m$)({ channelId: e.channel.id });
+        m = (0, i.e7)([d.default], () => d.default.getUser(t)),
+        b = (0, i.e7)([c.Z], () => c.Z.getStatus(t)),
+        _ = (0, i.e7)([c.Z], () => c.Z.isMobileOnline(t)),
+        y = (0, i.e7)([u.Z], () => u.Z.getNickname(t)),
+        O = f.ZP.useUserTag(m),
+        v = (0, a.j)({ displayNameStyles: null == m ? void 0 : m.displayNameStyles }),
+        j = (0, s.m$)({ channelId: e.channel.id });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(a.nn4, { children: p.intl.string(p.t.EJRzg7) }),
-            null != b &&
+            (0, r.jsx)(o.nn4, { children: p.intl.string(p.t.EJRzg7) }),
+            null != m &&
                 !n &&
                 (0, r.jsx)("div", {
-                    children: (0, r.jsx)(a.qEK, {
-                        status: m,
-                        isMobile: y,
+                    children: (0, r.jsx)(o.qEK, {
+                        status: b,
+                        isMobile: _,
                         className: g.avatar,
-                        size: a.EFr.SIZE_20,
-                        "aria-label": f.ZP.getName(b),
-                        src: b.getAvatarURL(void 0, 20),
+                        size: o.EFr.SIZE_20,
+                        "aria-label": f.ZP.getName(m),
+                        src: m.getAvatarURL(void 0, 20),
                     }),
                 }),
             (0, r.jsx)(h.Z.Title, {
@@ -46,20 +46,20 @@ function b(e) {
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.u, {
-                            text: v,
+                            text: O,
                             position: "bottom",
                             children: (0, r.jsx)("span", {
-                                className: j,
-                                children: null != O ? O : f.ZP.getName(b),
+                                className: v,
+                                children: null != y ? y : f.ZP.getName(m),
                             }),
                         }),
-                        C &&
+                        j &&
                             (0, r.jsx)(l.u, {
                                 text: p.intl.string(p.t.QyZ4Td),
-                                children: (0, r.jsx)(a.tQf, {
+                                children: (0, r.jsx)(o.tQf, {
                                     size: "xs",
                                     "aria-label": p.intl.string(p.t.VHXh8a),
-                                    color: a.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
+                                    color: o.TVs.colors.INTERACTIVE_TEXT_DEFAULT,
                                     className: g.secureFramesIcon,
                                 }),
                             }),

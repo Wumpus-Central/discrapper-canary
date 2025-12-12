@@ -11,7 +11,7 @@ var n = r(54381),
     b = r(51144),
     p = r(981631),
     O = r(388032),
-    f = r(678286);
+    f = r(40175);
 function y(e) {
     var t;
     let { transitionState: r, guild: y, user: g, ban: j, onClose: m } = e,

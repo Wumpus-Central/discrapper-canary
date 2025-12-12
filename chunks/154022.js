@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(442837),
     l = n(704215),
     c = n(481060),
@@ -46,8 +46,8 @@ var r = n(54381),
     B = n(611480),
     V = n(653477),
     H = n(388032),
-    Y = n(324243),
-    W = n(54354),
+    Y = n(486730),
+    W = n(953752),
     K = n(328756);
 function z(e, t, n) {
     return (
@@ -104,10 +104,10 @@ function X(e, t) {
 let J = (0, E.hQ)(),
     $ = (0, E.hQ)(),
     ee = (0, E.hQ)(),
-    et = o().debounce((e) => {
+    et = a().debounce((e) => {
         (0, f.o2)(e);
     }, 250),
-    en = o().debounce((e) => {
+    en = a().debounce((e) => {
         (0, P.Ct)(e);
     }, 250);
 function er(e) {
@@ -172,7 +172,7 @@ function er(e) {
                 i &&
                     (0, r.jsxs)(N.F, {
                         setting: Z.s6.ACCESSIBILITY_SWITCH_ICON,
-                        children: [(0, r.jsx)(eo, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
+                        children: [(0, r.jsx)(ea, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
                     }),
                 (0, r.jsx)(eb, {}),
                 (0, r.jsx)(N.F, {
@@ -258,7 +258,7 @@ function ei() {
         }),
     });
 }
-function ea() {
+function eo() {
     let e = (0, s.e7)([p.Z], () => p.Z.isHighContrastModeEnabled);
     function t(e) {
         (0, f.vW)(e ? p.X.HIGH : p.X.DEFAULT);
@@ -277,7 +277,7 @@ function ea() {
         },
     });
 }
-function eo() {
+function ea() {
     let e = (0, s.e7)([p.Z], () => p.Z.isSwitchIconsEnabled);
     return (0, r.jsx)(c.rsf, {
         label: H.intl.string(H.t["S3z+pV"]),
@@ -420,25 +420,25 @@ function ep() {
     i.useEffect(() => {
         n(e);
     }, [e]);
-    let a = i.useRef(null);
+    let o = i.useRef(null);
     i.useEffect(() => {
-        null != a.current && (clearTimeout(a.current), (a.current = null)),
-            t !== e && (a.current = setTimeout(() => (0, f.qz)(t), 150));
+        null != o.current && (clearTimeout(o.current), (o.current = null)),
+            t !== e && (o.current = setTimeout(() => (0, f.qz)(t), 150));
     }, [t, e]);
-    let o = H.intl.format(H.t.GwEVE2, { learnMoreLink: D.Z.getArticleURL(F.BhN.FORCED_COLORS) });
+    let a = H.intl.format(H.t.GwEVE2, { learnMoreLink: D.Z.getArticleURL(F.BhN.FORCED_COLORS) });
     return (0, r.jsxs)(c.C3N, {
         label: H.intl.string(H.t["TYyfO/"]),
         children: [
             (0, r.jsx)(N.F, {
                 setting: Z.s6.ACCESSIBILITY_HIGH_CONTRAST,
-                children: (0, r.jsx)(ea, {}),
+                children: (0, r.jsx)(eo, {}),
             }),
             (0, m.b)()
                 ? (0, r.jsx)(N.F, {
                       setting: Z.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
                       children: (0, r.jsx)(c.rsf, {
                           label: H.intl.string(H.t.cguiec),
-                          description: o,
+                          description: a,
                           checked: t,
                           onChange: n,
                       }),
@@ -452,8 +452,8 @@ function e_() {
         t = x.Yk.useSetting(),
         {
             useReducedMotion: n,
-            rawPrefersReducedMotion: a,
-            systemPrefersReducedMotion: o,
+            rawPrefersReducedMotion: o,
+            systemPrefersReducedMotion: a,
             gifAutoPlayOverrideReason: l,
             animateEmojiOverrideReason: u,
         } = (0, s.cj)([p.Z, j.Z], () => ({
@@ -463,14 +463,14 @@ function e_() {
             gifAutoPlayOverrideReason: j.Z.getAppliedOverrideReasonKey("gifAutoPlay"),
             animateEmojiOverrideReason: j.Z.getAppliedOverrideReasonKey("animateEmoji"),
         })),
-        d = "auto" === a,
+        d = "auto" === o,
         _ = i.useRef(null);
     (0, M.Z)(_, G.rP.REDUCED_MOTION);
     let m = i.useCallback(
             (e) => {
-                (0, f.Zt)(e ? "auto" : o);
+                (0, f.Zt)(e ? "auto" : a);
             },
-            [o],
+            [a],
         ),
         h = i.useCallback((e) => {
             (0, f.Zt)(e ? "reduce" : "no-preference");

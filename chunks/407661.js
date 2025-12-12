@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(28664),
     c = n(481060),
@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(962293),
     y = n(981631),
     O = n(388032),
-    v = n(58804);
+    v = n(204427);
 let S = 2,
     I = 10;
 function T(e, t) {
@@ -35,14 +35,14 @@ function T(e, t) {
     }, [n, r]);
 }
 function C(e) {
-    let { channel: t, message: n, replyChainLength: a } = e;
-    function o() {
+    let { channel: t, message: n, replyChainLength: o } = e;
+    function a() {
         (0, _.A6)(t.id), (0, g.R6)(t, n, "Reply Chain Nudge");
     }
-    let s = i.useRef(a);
+    let s = i.useRef(o);
     return (
         i.useEffect(() => {
-            s.current = a;
+            s.current = o;
         }),
         i.useEffect(() => {
             (0, u.yw)(y.rMx.THREAD_NUDGE_SHOWN, {
@@ -53,7 +53,7 @@ function C(e) {
             });
         }, [t]),
         (0, r.jsxs)(c.P3F, {
-            onClick: o,
+            onClick: a,
             className: v.threadSuggestionBar,
             focusProps: {
                 offset: {
@@ -66,7 +66,7 @@ function C(e) {
                     color: "text-default",
                     className: v.text,
                     variant: "text-sm/normal",
-                    children: O.intl.format(O.t.B3V0FM, { count: Math.min(I, a + 1) }),
+                    children: O.intl.format(O.t.B3V0FM, { count: Math.min(I, o + 1) }),
                 }),
                 (0, r.jsx)(c.Text, {
                     color: "text-link",
@@ -80,7 +80,7 @@ function C(e) {
 }
 function A(e) {
     let { reply: t, chatInputType: n } = e,
-        { channel: i, message: a, shouldMention: s, showMentionToggle: u } = t,
+        { channel: i, message: o, shouldMention: s, showMentionToggle: u } = t,
         {
             guildId: g,
             nick: E,
@@ -89,13 +89,13 @@ function A(e) {
             colorRoleName: N,
             authorId: P,
             displayNameStyles: R,
-        } = (0, f.ZP)(a),
+        } = (0, f.ZP)(o),
         w = (0, p.X7)(g, P, A),
         D = (0, d.j)({ displayNameStyles: R }),
-        x = T(i, a),
-        L = (0, h.NE)(i, a),
+        x = T(i, o),
+        L = (0, h.NE)(i, o),
         j = n.showThreadPromptOnReply && x >= S && L,
-        M = () => (0, m.uL)(y.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
+        M = () => (0, m.uL)(y.Z5c.CHANNEL(i.getGuildId(), i.id, o.id));
     function k(e) {
         e.stopPropagation(), (0, _.qx)(i.id, !s);
     }
@@ -122,7 +122,7 @@ function A(e) {
                             },
                             children: (0, r.jsx)(c.Text, {
                                 color: "text-default",
-                                className: o()(v.text, v.replyLabel),
+                                className: a()(v.text, v.replyLabel),
                                 variant: "text-sm/normal",
                                 children: O.intl.format(O.t["8E4GxS"], {
                                     userHook: (e, t) =>
@@ -184,7 +184,7 @@ function A(e) {
                 j &&
                     (0, r.jsx)(C, {
                         channel: i,
-                        message: a,
+                        message: o,
                         replyChainLength: x,
                     }),
             ],

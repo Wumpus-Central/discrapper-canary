@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C });
 var r = n(54381),
     i = n(793030),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(568836),
     l = n(834129),
     c = n(594174),
@@ -11,9 +11,9 @@ var r = n(54381),
     f = n(703995),
     p = n(260720),
     _ = n(282793),
-    m = n(137427),
+    m = n(96011),
     h = n(388032),
-    g = n(887547),
+    g = n(887819),
     E = n(617842);
 function b(e, t, n) {
     return (
@@ -68,14 +68,14 @@ function v(e, t) {
     );
 }
 let S = (e) => {
-        let { disabled: t, invite: a, isExistingSub: s } = e,
+        let { disabled: t, invite: o, isExistingSub: s } = e,
             l = () => {
-                if (null == a) return;
-                let e = a.subscription,
-                    t = c.default.getUser(a.primary_user);
+                if (null == o) return;
+                let e = o.subscription,
+                    t = c.default.getUser(o.primary_user);
                 if (null == t) return;
                 let i = (0, d.XM)(t);
-                (0, o.ZDy)(async () => {
+                (0, a.ZDy)(async () => {
                     let { default: t } = await n.e("26450").then(n.bind(n, 382927));
                     return (n) =>
                         (0, r.jsx)(
@@ -88,7 +88,7 @@ let S = (e) => {
                         );
                 });
             };
-        return (0, r.jsx)(o.Button, {
+        return (0, r.jsx)(a.Button, {
             variant: "expressive",
             size: "md",
             text: h.intl.string(m.default.rjuKse),
@@ -100,7 +100,7 @@ let S = (e) => {
     I = (e) => {
         let { disabled: t } = e,
             n = () => {};
-        return (0, r.jsx)(o.Button, {
+        return (0, r.jsx)(a.Button, {
             variant: "secondary",
             size: "md",
             text: h.intl.string(m.default["eYHh+z"]),
@@ -109,7 +109,7 @@ let S = (e) => {
         });
     },
     T = (e) => {
-        let { message: t, header: n, body: a, compact: s, actionButton: c } = e;
+        let { message: t, header: n, body: o, compact: s, actionButton: c } = e;
         return (0, r.jsxs)(l.Z, {
             className: g.systemMessageContainer,
             compact: s,
@@ -118,12 +118,12 @@ let S = (e) => {
                 color: "currentColor",
             }),
             children: [
-                (0, r.jsx)(o.Text, {
+                (0, r.jsx)(a.Text, {
                     variant: "text-md/medium",
                     color: "text-strong",
                     children: t,
                 }),
-                (0, r.jsxs)(o.Kqy, {
+                (0, r.jsxs)(a.Kqy, {
                     direction: "horizontal",
                     className: g.embedContainer,
                     children: [
@@ -135,7 +135,7 @@ let S = (e) => {
                         (0, r.jsxs)("div", {
                             className: g.content,
                             children: [
-                                (0, r.jsx)(o.Cts, {
+                                (0, r.jsx)(a.Cts, {
                                     type: "beta",
                                     variant: "expressive",
                                 }),
@@ -143,10 +143,10 @@ let S = (e) => {
                                     className: g.title,
                                     children: n,
                                 }),
-                                (0, r.jsx)(o.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
-                                    children: a,
+                                    children: o,
                                 }),
                                 (0, r.jsx)("div", {
                                     className: g.buttonContainer,
@@ -161,23 +161,23 @@ let S = (e) => {
     },
     C = (e) => {
         let { message: t, channel: n, compact: i } = e,
-            o = t.premiumGroupInviteId,
+            a = t.premiumGroupInviteId,
             {
                 inviteState: l,
                 isFetching: d,
                 invite: m,
                 currentUser: h,
                 premiumSubscription: g,
-            } = (0, a.cj)([f.Z, c.default, u.Z], () => {
+            } = (0, o.cj)([f.Z, c.default, u.Z], () => {
                 var e;
                 return {
-                    inviteState: null != o ? f.Z.getInviteState(o) : _.bZ.NOT_FOUND,
-                    isFetching: null != o && f.Z.isFetching(o),
-                    invite: null != o ? (null == (e = f.Z.getInvite(o)) ? void 0 : e.invite) : null,
+                    inviteState: null != a ? f.Z.getInviteState(a) : _.bZ.NOT_FOUND,
+                    isFetching: null != a && f.Z.isFetching(a),
+                    invite: null != a ? (null == (e = f.Z.getInvite(a)) ? void 0 : e.invite) : null,
                     currentUser: c.default.getCurrentUser(),
                     premiumSubscription: u.Z.getPremiumSubscription(),
                 };
-            }, [o]);
+            }, [a]);
         if (null == h) return null;
         let E = t.author,
             b = h.id === E.id;

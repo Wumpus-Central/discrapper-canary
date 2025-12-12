@@ -1,13 +1,13 @@
 n.d(t, {
     PY: () => Z,
-    ZP: () => B,
+    ZP: () => F,
     iR: () => U,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(944611),
@@ -24,7 +24,7 @@ var r = n(54381),
     y = n(990233),
     O = n(981631),
     v = n(388032),
-    S = n(83292);
+    S = n(898404);
 function I(e, t, n) {
     return (
         t in e
@@ -114,16 +114,16 @@ class U extends i.PureComponent {
                 coords: { width: n, height: r },
                 videoPool: i,
             },
-            ref: a,
+            ref: o,
         } = this;
-        if (e !== u.EO.VIDEO || null == a) return;
-        let o = i.getElement();
-        (o.oncanplay = this.handleCanPlay),
-            (o.src = t),
-            (o.width = n),
-            (o.height = r),
-            a.appendChild(o),
-            (this._video = o);
+        if (e !== u.EO.VIDEO || null == o) return;
+        let a = i.getElement();
+        (a.oncanplay = this.handleCanPlay),
+            (a.src = t),
+            (a.width = n),
+            (a.height = r),
+            o.appendChild(a),
+            (this._video = a);
     }
     componentDidUpdate(e) {
         let { width: t, height: n } = this.props.coords;
@@ -154,7 +154,7 @@ class U extends i.PureComponent {
             : null;
     }
     render() {
-        let { item: e, renderExtras: t, format: n, coords: i, focused: a, selected: o } = this.props,
+        let { item: e, renderExtras: t, format: n, coords: i, focused: o, selected: a } = this.props,
             { color: s, loaded: l } = this.state;
         return (0, r.jsxs)(f.P3F, {
             tabIndex: -1,
@@ -162,8 +162,8 @@ class U extends i.PureComponent {
                 this.ref = e;
             },
             className: S.result,
-            "data-focused": a,
-            "data-selected": o,
+            "data-focused": o,
+            "data-selected": a,
             onClick: this.handleClick,
             style: T({ backgroundColor: l ? void 0 : s }, i),
             children: [L(n) ? null : this.renderGIF(), null != t ? t(e) : null],
@@ -199,7 +199,7 @@ class G extends i.PureComponent {
         e === O.wI2.FAVORITES && ((0, p.t1)(O.wI2.FAVORITES), (0, p.hM)(t, O.wI2.FAVORITES, { limit: null }));
     }
     selectItem(e, t) {
-        let { onSelectGIF: n, resultType: r, data: i, resultQuery: a } = this.props;
+        let { onSelectGIF: n, resultType: r, data: i, resultQuery: o } = this.props;
         null != n && n(e),
             (0, p.R7)({
                 type: r,
@@ -208,7 +208,7 @@ class G extends i.PureComponent {
                 limit: this.props.searchLimit,
                 results: i.length,
                 totalResults: this.props.searchTotalResults,
-                query: a,
+                query: o,
                 gifId: e.id,
             });
     }
@@ -321,11 +321,11 @@ class G extends i.PureComponent {
             }),
             I(this, "renderItem", (e, t, n, i) => {
                 if (e > 0) return null;
-                let { focusedId: a } = this.state,
-                    { selectedGIF: o } = this.props,
+                let { focusedId: o } = this.state,
+                    { selectedGIF: a } = this.props,
                     s = this.props.data[t];
                 if (null == s) return null;
-                let l = null != o && R(o) === R(s);
+                let l = null != a && R(a) === R(s);
                 return (0, r.jsx)(
                     U,
                     {
@@ -336,7 +336,7 @@ class G extends i.PureComponent {
                         coords: n,
                         onClick: this.handleClickItem,
                         renderExtras: () => (0, r.jsx)(E.Z, T({ className: S.favButton }, s)),
-                        focused: R(s) === a,
+                        focused: R(s) === o,
                         imagePool: this.props.imagePool,
                         videoPool: this.props.videoPool,
                         selected: l,
@@ -356,7 +356,7 @@ class G extends i.PureComponent {
                 return null != r ? (null != (n = r.id) ? n : r.src) : null;
             }),
             I(this, "renderSection", (e, t, n) => {
-                let { onSelectSuggestion: a, suggestions: o } = this.props;
+                let { onSelectSuggestion: o, suggestions: a } = this.props;
                 return 1 === e
                     ? (0, r.jsx)(
                           "div",
@@ -364,7 +364,7 @@ class G extends i.PureComponent {
                               className: S.endContainer,
                               style: t,
                               children:
-                                  o.length > 0
+                                  a.length > 0
                                       ? (0, r.jsxs)(i.Fragment, {
                                             children: [
                                                 (0, r.jsx)("div", {
@@ -374,13 +374,13 @@ class G extends i.PureComponent {
                                                 (0, r.jsx)(f.ButtonGroup, {
                                                     size: "sm",
                                                     className: S.searchSuggestions,
-                                                    children: o.map((e) =>
+                                                    children: a.map((e) =>
                                                         (0, r.jsx)(
                                                             f.Button,
                                                             {
                                                                 variant: "secondary",
                                                                 onClick: () => {
-                                                                    a(e);
+                                                                    o(e);
                                                                 },
                                                                 text: e,
                                                             },
@@ -397,13 +397,13 @@ class G extends i.PureComponent {
                     : null;
             }),
             I(this, "renderContent", (e, t, n) => {
-                let { className: i, data: a, resultQuery: s, query: l, resultType: c } = this.props;
-                return 0 === a.length && (s !== l || c === O.wI2.TRENDING_GIFS)
+                let { className: i, data: o, resultQuery: s, query: l, resultType: c } = this.props;
+                return 0 === o.length && (s !== l || c === O.wI2.TRENDING_GIFS)
                     ? (0, r.jsx)(
                           f.GMG,
                           {
                               fade: !0,
-                              className: o()(S.results, i),
+                              className: a()(S.results, i),
                               sections: [P.length],
                               columns: e,
                               itemGutter: 12,
@@ -420,9 +420,9 @@ class G extends i.PureComponent {
                               ref: this._masonryRef,
                               fade: !0,
                               itemGutter: 12,
-                              className: o()(S.results, i),
+                              className: a()(S.results, i),
                               columns: e,
-                              sections: [a.length, 0],
+                              sections: [o.length, 0],
                               getItemKey: this.getItemKey,
                               getItemHeight: this.getItemHeight,
                               renderItem: this.renderItem,
@@ -483,7 +483,7 @@ function Z() {
         videoPool: r,
     };
 }
-let B = function (e) {
+let F = function (e) {
     let t = Z();
     return (0, r.jsx)(G, T({}, e, t));
 };

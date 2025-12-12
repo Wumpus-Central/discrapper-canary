@@ -1,134 +1,134 @@
-t.r(n), t.d(n, { default: () => I }), t(388685);
-var a = t(54381),
-    r = t(473749),
-    l = t(120356),
-    i = t.n(l),
-    c = t(442837),
-    o = t(704215),
-    d = t(692547),
-    s = t(481060),
-    u = t(252618),
-    b = t(266454),
-    p = t(984370),
-    h = t(216306),
-    f = t(104155),
-    m = t(22082),
-    g = t(433355),
-    x = t(430824),
-    C = t(31445),
-    j = t(59350),
-    v = t(290511),
-    O = t(176505),
-    y = t(921944),
-    N = t(388032),
-    _ = t(453223),
-    w = t(978966);
+n.r(t), n.d(t, { default: () => I }), n(388685);
+var r = n(54381),
+    l = n(473749),
+    i = n(120356),
+    a = n.n(i),
+    o = n(442837),
+    s = n(704215),
+    c = n(692547),
+    d = n(481060),
+    u = n(252618),
+    p = n(266454),
+    h = n(984370),
+    f = n(216306),
+    m = n(104155),
+    g = n(22082),
+    _ = n(433355),
+    x = n(430824),
+    C = n(31445),
+    b = n(59350),
+    j = n(290511),
+    v = n(176505),
+    O = n(921944),
+    y = n(388032),
+    N = n(126512),
+    w = n(97009);
 function Z(e) {
-    let { guild: n } = e,
-        t = (0, C.Z)(n);
-    r.useEffect(() => {
-        (0, b.Q3)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: y.L.DISMISS });
+    let { guild: t } = e,
+        n = (0, C.Z)(t);
+    l.useEffect(() => {
+        (0, p.Q3)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: O.L.DISMISS });
     });
-    let l = t
-            ? N.intl.formatToPlainString(N.t.uqZgYe, { guildName: n.name })
-            : N.intl.formatToPlainString(N.t.velJea, { guildName: n.name }),
-        i = t ? N.intl.string(N.t.h9mGOP) : N.intl.string(N.t.et6wav);
+    let i = n
+            ? y.intl.formatToPlainString(y.t.uqZgYe, { guildName: t.name })
+            : y.intl.formatToPlainString(y.t.velJea, { guildName: t.name }),
+        a = n ? y.intl.string(y.t.h9mGOP) : y.intl.string(y.t.et6wav);
     return (
-        (0, u.Tt)({ location: l }),
-        (0, a.jsxs)(p.Z, {
-            className: _.header,
-            innerClassname: _.innerHeader,
+        (0, u.Tt)({ location: i }),
+        (0, r.jsxs)(h.Z, {
+            className: N.header,
+            innerClassname: N.innerHeader,
             hideSearch: !0,
-            channelId: O.oC.CUSTOMIZE_COMMUNITY,
-            guildId: n.id,
+            channelId: v.oC.CUSTOMIZE_COMMUNITY,
+            guildId: t.id,
             children: [
-                (0, a.jsx)(p.Z.Icon, {
-                    icon: s.H$4,
+                (0, r.jsx)(h.Z.Icon, {
+                    icon: d.H$4,
                     "aria-hidden": !0,
                 }),
-                (0, a.jsx)(p.Z.Title, { children: i }),
+                (0, r.jsx)(h.Z.Title, { children: a }),
             ],
         })
     );
 }
 function I(e) {
-    let { guildId: n, selectedSection: t } = e,
-        l = (0, c.e7)([x.Z], () => x.Z.getGuild(n)),
-        o = (0, C.Z)(l),
-        [u, b] = r.useState(null != t ? t : v.l7.CUSTOMIZE);
-    r.useEffect(() => {
-        null != t && b(t);
-    }, [t]);
-    let p = (0, c.e7)([g.ZP], () => g.ZP.getCurrentSidebarChannelId(O.oC.CHANNEL_BROWSER)),
-        y = null != p && u === v.l7.BROWSE,
-        I = (0, c.e7)([m.Z], () => m.Z.getNewChannelIds(n).size > 0),
-        P = (0, h.fU)(n);
-    return null == l
+    let { guildId: t, selectedSection: n } = e,
+        i = (0, o.e7)([x.Z], () => x.Z.getGuild(t)),
+        s = (0, C.Z)(i),
+        [u, p] = l.useState(null != n ? n : j.l7.CUSTOMIZE);
+    l.useEffect(() => {
+        null != n && p(n);
+    }, [n]);
+    let h = (0, o.e7)([_.ZP], () => _.ZP.getCurrentSidebarChannelId(v.oC.CHANNEL_BROWSER)),
+        O = null != h && u === j.l7.BROWSE,
+        I = (0, o.e7)([g.Z], () => g.Z.getNewChannelIds(t).size > 0),
+        P = (0, f.fU)(t);
+    return null == i
         ? null
-        : (0, a.jsxs)(a.Fragment, {
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, a.jsxs)("div", {
-                      className: i()(w.chat, { [w.threadSidebarOpen]: y }),
+                  (0, r.jsxs)("div", {
+                      className: a()(w.chat, { [w.threadSidebarOpen]: O }),
                       children: [
-                          (0, a.jsx)(Z, { guild: l }),
-                          (0, a.jsxs)("div", {
-                              className: i()(w.content, _.container),
+                          (0, r.jsx)(Z, { guild: i }),
+                          (0, r.jsxs)("div", {
+                              className: a()(w.content, N.container),
                               children: [
-                                  o &&
-                                      (0, a.jsxs)(s.njP, {
-                                          className: _.tabBar,
+                                  s &&
+                                      (0, r.jsxs)(d.njP, {
+                                          className: N.tabBar,
                                           type: "top",
                                           look: "brand",
                                           selectedItem: u,
-                                          onItemSelect: (e) => b(e),
+                                          onItemSelect: (e) => p(e),
                                           children: [
-                                              (0, a.jsx)(
-                                                  s.njP.Item,
+                                              (0, r.jsx)(
+                                                  d.njP.Item,
                                                   {
-                                                      className: _.tabBarItem,
-                                                      id: v.l7.CUSTOMIZE,
-                                                      children: N.intl.string(N.t.H2cICW),
+                                                      className: N.tabBarItem,
+                                                      id: j.l7.CUSTOMIZE,
+                                                      children: y.intl.string(y.t.H2cICW),
                                                   },
-                                                  v.l7.CUSTOMIZE,
+                                                  j.l7.CUSTOMIZE,
                                               ),
-                                              (0, a.jsxs)(
-                                                  s.njP.Item,
+                                              (0, r.jsxs)(
+                                                  d.njP.Item,
                                                   {
-                                                      className: _.tabBarItem,
-                                                      id: v.l7.BROWSE,
-                                                      "aria-label": N.intl.string(N.t.et6wav),
+                                                      className: N.tabBarItem,
+                                                      id: j.l7.BROWSE,
+                                                      "aria-label": y.intl.string(y.t.et6wav),
                                                       children: [
-                                                          N.intl.string(N.t.et6wav),
-                                                          (0, a.jsx)(s.IGR, {
-                                                              text: I ? N.intl.string(N.t.psHMa6) : P,
+                                                          y.intl.string(y.t.et6wav),
+                                                          (0, r.jsx)(d.IGR, {
+                                                              text: I ? y.intl.string(y.t.psHMa6) : P,
                                                               color: I
-                                                                  ? d.Z.unsafe_rawColors.BRAND_260.css
-                                                                  : d.Z.colors.BACKGROUND_ACCENT.css,
-                                                              className: i()({ [_.newBadge]: I }),
+                                                                  ? c.Z.unsafe_rawColors.BRAND_260.css
+                                                                  : c.Z.colors.BACKGROUND_ACCENT.css,
+                                                              className: a()({ [N.newBadge]: I }),
                                                           }),
                                                       ],
                                                   },
-                                                  v.l7.BROWSE,
+                                                  j.l7.BROWSE,
                                               ),
                                           ],
                                       }),
                                   (() => {
                                       switch (u) {
-                                          case v.l7.CUSTOMIZE:
-                                              return (0, a.jsx)(j.Z, {
-                                                  guildId: n,
-                                                  onBrowseChannels: () => b(v.l7.BROWSE),
+                                          case j.l7.CUSTOMIZE:
+                                              return (0, r.jsx)(b.Z, {
+                                                  guildId: t,
+                                                  onBrowseChannels: () => p(j.l7.BROWSE),
                                               });
-                                          case v.l7.BROWSE:
+                                          case j.l7.BROWSE:
                                           default:
-                                              return (0, a.jsx)(f.Z, { guildId: n });
+                                              return (0, r.jsx)(m.Z, { guildId: t });
                                       }
                                   })(),
                               ],
                           }),
                       ],
                   }),
-                  y && (0, a.jsx)(f.I, { channelId: p }),
+                  O && (0, r.jsx)(m.I, { channelId: h }),
               ],
           });
 }

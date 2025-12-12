@@ -6,7 +6,7 @@ n.d(t, {
 var i,
     r,
     l,
-    a = /^1(0127|2633)$/.test(n.j)
+    a = /^(12633|84770)$/.test(n.j)
         ? (((i = {}).INVITE = "member_joined"),
           (i.CHANNEL = "create_channel"),
           (i.AVATAR = "avatar"),

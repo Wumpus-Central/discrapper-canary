@@ -1,8 +1,8 @@
 n.d(t, { Z: () => U }), n(388685), n(539854), n(35282);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(729594),
@@ -27,7 +27,7 @@ var r = n(54381),
     N = n(925994),
     P = n(981631),
     R = n(388032),
-    w = n(72775);
+    w = n(564355);
 function D(e, t, n) {
     return (
         t in e
@@ -88,7 +88,7 @@ let M = function () {
 class U extends i.Component {
     _getEditorWindow() {
         var e, t, n, r, i;
-        let a =
+        let o =
             null == (i = this.ref) ||
             null == (r = i.current) ||
             null == (n = r.getSlateEditor) ||
@@ -96,9 +96,9 @@ class U extends i.Component {
             null == (e = t.windowContext)
                 ? void 0
                 : e.renderWindow;
-        if (null == this._cachedEditorWindow || this._cachedEditorWindow !== a) {
-            if (null != this._cachedEditorWindow && null == a) return null;
-            this._cachedEditorWindow = null != a ? a : window;
+        if (null == this._cachedEditorWindow || this._cachedEditorWindow !== o) {
+            if (null != this._cachedEditorWindow && null == o) return null;
+            this._cachedEditorWindow = null != o ? o : window;
         }
         return this._cachedEditorWindow;
     }
@@ -230,7 +230,7 @@ class U extends i.Component {
         return e && !n ? (r ? "" : R.intl.string(R.t.IYKTTc)) : t;
     }
     render() {
-        var e, t, n, i, a, s;
+        var e, t, n, i, o, s;
         let {
                 textValue: l,
                 richValue: c,
@@ -255,20 +255,20 @@ class U extends i.Component {
                 currentAutocompleteType: U,
                 "aria-describedby": G,
                 "aria-labelledby": Z,
-                accessibilityLabel: B,
-                showValueWhenDisabled: F,
+                accessibilityLabel: F,
+                showValueWhenDisabled: B,
             } = this.props,
             { submitting: V, popup: H } = this.state,
             Y = {
                 channel: g,
-                className: o()(N, w.textArea, {
+                className: a()(N, w.textArea, {
                     [w.textAreaSlate]: y,
                     [w.textAreaDisabled]: d || V,
                 }),
                 id: R,
                 placeholder: this.getPlaceholder(),
                 required: D,
-                accessibilityLabel: B,
+                accessibilityLabel: F,
                 disabled: d || !1,
                 submitting: V,
                 isEdit: E === v.Ie.EDIT,
@@ -285,7 +285,7 @@ class U extends i.Component {
                 onResize: _,
                 onKeyDown: p,
                 onSubmit: m,
-                textAreaPaddingClassName: o()({
+                textAreaPaddingClassName: a()({
                     [w.textAreaForPostCreation]: E === v.Ie.CREATE_FORUM_POST,
                     [w.textAreaCustomGift]: E === v.Ie.CUSTOM_GIFT,
                     [w.textAreaForUserProfile]: E === v.Ie.USER_PROFILE,
@@ -297,7 +297,7 @@ class U extends i.Component {
                 currentAutocompleteType: U,
                 disableAutoFocus: u.tq || (null != (n = E.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = E.submit) ? void 0 : e.disableEnterToSubmit) && i,
-                "aria-controls": null != (a = H.id) ? a : void 0,
+                "aria-controls": null != (o = H.id) ? o : void 0,
                 "aria-haspopup": "listbox",
                 "aria-expanded": null !== H.id || void 0,
                 "aria-activedescendant": null != (s = H.activeDescendant) ? s : void 0,
@@ -311,13 +311,13 @@ class U extends i.Component {
                       A.Z,
                       j(x({ ref: this.ref }, Y), {
                           type: E,
-                          value: d && !F ? (0, S.JM)("") : c,
+                          value: d && !B ? (0, S.JM)("") : c,
                           canUseCommands: null == (t = E.commands) ? void 0 : t.enabled,
                           canOnlyUseTextCommands: T,
                           onSubmitFailure: h,
                       }),
                   )
-                : (0, r.jsx)(C.Z, j(x({ ref: this.ref }, Y), { value: d && !F ? "" : l }));
+                : (0, r.jsx)(C.Z, j(x({ ref: this.ref }, Y), { value: d && !B ? "" : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(b.d9, {
@@ -411,8 +411,8 @@ class U extends i.Component {
                 var t, n, r;
                 let i = null == (n = e.target) || null == (t = n.ownerDocument) ? void 0 : t.defaultView,
                     {
-                        channel: a,
-                        canPasteFiles: o,
+                        channel: o,
+                        canPasteFiles: a,
                         uploadPromptCharacterCount: s,
                         promptToUpload: l,
                         maxCharacterCount: c,
@@ -420,9 +420,9 @@ class U extends i.Component {
                     } = this.props,
                     d = null != i ? (0, T.im)(i) : null,
                     g = (0, T.Mo)(),
-                    b = null != (r = null != d ? d : g) ? r : a,
-                    y = (0, T._K)(i, this._getEditorWindow()) ? a : b;
-                if (null == l || (!y.isPrivate() && !o) || (y.isPrivate() && y.isManaged())) return !1;
+                    b = null != (r = null != d ? d : g) ? r : o,
+                    y = (0, T._K)(i, this._getEditorWindow()) ? o : b;
+                if (null == l || (!y.isPrivate() && !a) || (y.isPrivate() && y.isManaged())) return !1;
                 let O = (e, t) => {
                         var n, r;
                         let i = h.Z.getActiveCommand(y.id);
@@ -432,25 +432,25 @@ class U extends i.Component {
                                 showLargeMessageDialog: t,
                                 origin: "clipboard",
                             });
-                        let a = null != (n = u.drafts.commandType) ? n : u.drafts.type,
-                            o = null,
+                        let o = null != (n = u.drafts.commandType) ? n : u.drafts.type,
+                            a = null,
                             s = h.Z.getActiveOption(y.id);
                         null !=
-                            (o =
+                            (a =
                                 (null == s ? void 0 : s.type) === _.jw.ATTACHMENT
                                     ? s
                                     : null == (r = i.options)
                                       ? void 0
                                       : r.find((e) => {
                                             if (e.type === _.jw.ATTACHMENT)
-                                                return null == E.Z.getUpload(y.id, e.name, a);
+                                                return null == E.Z.getUpload(y.id, e.name, o);
                                         })) &&
                             f.Z.setFile({
                                 channelId: y.id,
-                                id: o.name,
-                                draftType: a,
+                                id: a.name,
+                                draftType: o,
                                 file: {
-                                    id: o.name,
+                                    id: a.name,
                                     platform: m.ow.WEB,
                                     file: e[0],
                                 },
@@ -504,7 +504,7 @@ class U extends i.Component {
     }
 }
 function G(e, t) {
-    var n, r, i, a, o;
+    var n, r, i, o, a;
     let s = [],
         l = [],
         c = null,
@@ -514,13 +514,13 @@ function G(e, t) {
         if ("file" === t.kind) {
             let e =
                 null !=
-                (a =
+                (o =
                     null != (i = null == (n = t.webkitGetAsEntry) ? void 0 : n.call(t))
                         ? i
                         : null == (r = t.getAsEntry)
                           ? void 0
                           : r.call(t))
-                    ? a
+                    ? o
                     : null;
             if (null != e && !1 === e.isFile) {
                 d.push({
@@ -529,9 +529,9 @@ function G(e, t) {
                 });
                 continue;
             }
-            let o = t.getAsFile();
-            if (null == o) continue;
-            null != o.path && o.path.length > 0 ? s.push(o) : l.push(o);
+            let a = t.getAsFile();
+            if (null == a) continue;
+            null != a.path && a.path.length > 0 ? s.push(a) : l.push(a);
         } else
             "string" === t.kind &&
                 ("text/plain" === t.type && null == c ? (c = t) : "text/html" === t.type && null == u && (u = t));
@@ -543,7 +543,7 @@ function G(e, t) {
     if (l.length > 0) {
         if (1 === l.length && "image/png" === l[0].type && null != u) {
             let t = l[0],
-                n = null != (o = Z(e.getData(u.type))) ? o : t.name;
+                n = null != (a = Z(e.getData(u.type))) ? a : t.name;
             return {
                 files: [(0, y.dp)(t, n, t.type)],
                 errors: d,

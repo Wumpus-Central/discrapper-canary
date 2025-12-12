@@ -3,21 +3,21 @@ var r = n(54381),
     i = n(473749),
     l = n(481060),
     a = n(322665),
-    s = n(17845),
+    s = n(484474),
     o = n(374939),
     c = n(283293),
     u = n(726115),
     d = n(294330),
     p = n(981631),
-    f = n(423337);
+    f = n(663448);
 let g = {
     page: p.ZY5.GUILD_DISCOVERY,
     object: p.qAy.CARD,
     section: p.jXE.DISCOVER_POPULAR,
 };
 function h(e) {
-    let { tab: t, guildIds: n, loading: p, onScroll: h, onGuildCardClick: m, onGuildCardSeen: b } = e,
-        _ = (0, u.Mf)(t),
+    let { tab: t, guildIds: n, loading: p, onScroll: h, onGuildCardClick: m, onGuildCardSeen: _ } = e,
+        b = (0, u.Mf)(t),
         E = (0, u.a$)(t),
         O = (0, u.QW)(t),
         v = (0, u.lg)(t),
@@ -33,19 +33,19 @@ function h(e) {
                             guildId: null != (i = n[a]) ? i : null,
                             index: a,
                             onClick: (e) => m(e, a, v, g),
-                            onView: (e) => b(e, v),
+                            onView: (e) => _(e, v),
                         },
                         null != (l = n[a]) ? l : a,
                     ),
                 );
             }
             return t;
-        }, [v, n, p, m, b]);
+        }, [v, n, p, m, _]);
     return (0, r.jsxs)(c.Z, {
         onScroll: h,
         children: [
             (0, r.jsx)(s.Z, {
-                title: _,
+                title: b,
                 description: E,
                 children: (0, r.jsx)(a.Z, {}),
             }),

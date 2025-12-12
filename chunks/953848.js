@@ -26,7 +26,7 @@ var l = n(54381),
     j = n(483517),
     _ = n(981631),
     O = n(388032),
-    y = n(394386);
+    y = n(90149);
 let w = a.memo(function (e) {
         let { game: t } = e,
             n = (0, s.e7)([c.Z], () => {

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    a = n(79243);
-let o = function () {
+    o = n(858187);
+let a = function () {
     return (0, r.jsx)(i.Fbu, {
         size: "md",
         color: "currentColor",
-        className: a.icon,
+        className: o.icon,
     });
 };

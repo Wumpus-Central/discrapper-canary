@@ -12,8 +12,8 @@ var l = n(54381),
     m = n(10217),
     f = n(410426),
     b = n(356659),
-    y = n(388032),
-    v = n(864447);
+    v = n(388032),
+    y = n(280407);
 let h = 16 / 9,
     j = [0, 16, 0, 16],
     g = j[1] + j[3];
@@ -75,8 +75,8 @@ function O(e) {
                 let t = n.some((e) => e.isTemporary);
                 e.push({
                     type: "today",
-                    title: y.intl.string(y.t["kB2R/0"]),
-                    description: t ? y.intl.string(y.t["6AXirz"]) : void 0,
+                    title: v.intl.string(v.t["kB2R/0"]),
+                    description: t ? v.intl.string(v.t["6AXirz"]) : void 0,
                     clips: n,
                 });
             }
@@ -122,7 +122,7 @@ function O(e) {
             (e) => {
                 (0, s.ZDy)(
                     async () => {
-                        let { default: r } = await Promise.all([n.e("98920"), n.e("91903")]).then(n.bind(n, 22989));
+                        let { default: r } = await Promise.all([n.e("98920"), n.e("8789")]).then(n.bind(n, 22989));
                         return (n) => {
                             var i, a;
                             return (0, l.jsx)(
@@ -194,7 +194,7 @@ function O(e) {
                 return (0, l.jsx)(
                     "div",
                     {
-                        className: v.clipsRow,
+                        className: y.clipsRow,
                         children: s.map((e) =>
                             (0, l.jsx)(
                                 "div",
@@ -231,7 +231,7 @@ function O(e) {
                     : (0, l.jsxs)(
                           "div",
                           {
-                              className: v.sectionHeaderContainer,
+                              className: y.sectionHeaderContainer,
                               children: [
                                   (0, l.jsx)(s.Heading, {
                                       variant: "text-md/semibold",
@@ -242,7 +242,7 @@ function O(e) {
                                       (0, l.jsx)(s.Text, {
                                           variant: "text-sm/normal",
                                           color: "text-subtle",
-                                          className: v.sectionDescription,
+                                          className: y.sectionDescription,
                                           children: t.description,
                                       }),
                               ],
@@ -255,7 +255,7 @@ function O(e) {
     return P || 0 !== D.length
         ? P
             ? (0, l.jsx)("div", {
-                  className: v.spinnerContainer,
+                  className: y.spinnerContainer,
                   children: (0, l.jsx)(s.$jN, {}),
               })
             : (0, l.jsx)(o.Z, {

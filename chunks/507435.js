@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(953529);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(468194),
     l = n(692547),
     c = n(481060),
@@ -15,7 +15,7 @@ var r = n(54381),
     h = n(139256),
     g = n(489887),
     E = n(388032),
-    b = n(130828);
+    b = n(18294);
 function y(e, t, n) {
     return (
         t in e
@@ -51,9 +51,9 @@ function v(e, t) {
         r,
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -62,8 +62,8 @@ function S(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let I = 16;
@@ -120,7 +120,7 @@ function N(e) {
     let t;
     var { type: n } = e,
         i = v(e, ["type"]);
-    let a = "text-muted";
+    let o = "text-muted";
     switch (n) {
         case "NO_VOTES":
             t = (0, r.jsx)(c.Text, {
@@ -131,7 +131,7 @@ function N(e) {
             });
             break;
         case "VICTOR":
-            let { victorAnswerText: o, victorVotePercentage: s } = i;
+            let { victorAnswerText: a, victorVotePercentage: s } = i;
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
@@ -142,7 +142,7 @@ function N(e) {
                                 color: "text-default",
                                 className: b.victorAnswerText,
                                 scaleFontToUserSetting: !0,
-                                children: o,
+                                children: a,
                             }),
                             (0, r.jsx)(h.ZY, {
                                 size: I,
@@ -154,7 +154,7 @@ function N(e) {
                     }),
                     (0, r.jsxs)(c.Text, {
                         variant: "text-xs/medium",
-                        color: a,
+                        color: o,
                         scaleFontToUserSetting: !0,
                         children: [E.intl.string(E.t.ufIDIx), " \u2022 ", s, "%"],
                     }),
@@ -173,7 +173,7 @@ function N(e) {
                     }),
                     (0, r.jsxs)(c.Text, {
                         variant: "text-xs/medium",
-                        color: a,
+                        color: o,
                         scaleFontToUserSetting: !0,
                         children: [l, "%"],
                     }),
@@ -186,21 +186,21 @@ function N(e) {
     });
 }
 function P(e) {
-    let { className: t, data: n, onClickPollLink: a } = e,
+    let { className: t, data: n, onClickPollLink: o } = e,
         s = i.useMemo(() => A(n), [n]),
         l = null != n.victorEmoji || "NO_VOTES" === s.type;
     return (0, r.jsxs)("div", {
-        className: o()(b.container, { [b.containerWithImage]: l }, t),
+        className: a()(b.container, { [b.containerWithImage]: l }, t),
         children: [
             (0, r.jsx)(C, {
                 hasNoVotes: "NO_VOTES" === s.type,
                 victorEmoji: n.victorEmoji,
             }),
             (0, r.jsx)(N, O({}, s)),
-            null != a &&
+            null != o &&
                 (0, r.jsx)(c.Button, {
                     size: "sm",
-                    onClick: a,
+                    onClick: o,
                     variant: "secondary",
                     text: E.intl.string(E.t.Jw7Vbf),
                 }),
@@ -209,15 +209,15 @@ function P(e) {
 }
 function R(e) {
     var t;
-    let { message: n, channel: a, compact: o, disableInteraction: l = !1 } = e,
+    let { message: n, channel: o, compact: a, disableInteraction: l = !1 } = e,
         d = n.embeds[0],
         h = i.useMemo(() => (0, m.Z)(d), [d]),
         y = (0, s.aF)(null != (t = null == h ? void 0 : h.questionText) ? t : "", g.Dv),
         O = (0, f.ZP)(n),
         v = (0, p.l)({
             user: n.author,
-            channelId: a.id,
-            guildId: a.guild_id,
+            channelId: o.id,
+            guildId: o.guild_id,
             messageId: n.id,
         }),
         S = n.messageReference,
@@ -237,7 +237,7 @@ function R(e) {
                   (0, r.jsx)(_.Z, {
                       iconNode: (0, r.jsx)(c.QDj, { size: "xs" }),
                       timestamp: n.timestamp,
-                      compact: o,
+                      compact: a,
                       children: E.intl.format(E.t.VJcK41, {
                           username: O.nick,
                           usernameHook: v(O),

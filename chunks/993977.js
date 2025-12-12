@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(957657),
     h = n(34305),
     m = n(981631),
-    b = n(388032),
-    _ = n(375951);
+    _ = n(388032),
+    b = n(77839);
 function E(e, t, n) {
     return (
         t in e
@@ -52,31 +52,31 @@ function v(e) {
         return (0, r.jsxs)(
             "div",
             {
-                className: _.hiddenLibraryApplication,
+                className: b.hiddenLibraryApplication,
                 children: [
                     (0, r.jsxs)(c.Z, {
                         direction: c.Z.Direction.VERTICAL,
-                        className: _.hiddenLibraryApplicationContent,
+                        className: b.hiddenLibraryApplicationContent,
                         children: [
                             (0, r.jsx)("div", {
-                                className: _.applicationName,
+                                className: b.applicationName,
                                 children: e.libraryApplication.getBranchedName(e.application),
                             }),
                             null != t
                                 ? (0, r.jsx)("div", {
-                                      className: _.applicationSubText,
+                                      className: b.applicationSubText,
                                       children: m.EOG[t],
                                   })
                                 : null,
                         ],
                     }),
                     (0, r.jsx)(s.P3F, {
-                        className: _.restoreButton,
+                        className: b.restoreButton,
                         onClick: () => n(e.libraryApplication),
                         children: (0, r.jsx)(s.Dio, {
                             size: "md",
                             color: "currentColor",
-                            className: _.restoreIcon,
+                            className: b.restoreIcon,
                         }),
                     }),
                 ],
@@ -85,12 +85,12 @@ function v(e) {
         );
     });
     return (0, r.jsxs)("div", {
-        className: _.hiddenLibraryApplications,
+        className: b.hiddenLibraryApplications,
         children: [
             (0, r.jsx)(s.Heading, {
                 variant: "heading-md/semibold",
-                className: _.hiddenLibraryApplicationsTitle,
-                children: b.intl.string(b.t["5PJtrH"]),
+                className: b.hiddenLibraryApplicationsTitle,
+                children: _.intl.string(_.t["5PJtrH"]),
             }),
             i,
         ],
@@ -113,22 +113,22 @@ class y extends i.PureComponent {
             installShortcutStartMenu: n,
         } = this.props;
         return (0, r.jsxs)("div", {
-            className: _.body,
+            className: b.body,
             children: [
                 (0, f.Q)()
                     ? (0, r.jsxs)(s.Kqy, {
                           gap: 16,
                           children: [
                               (0, r.jsx)(s.rsf, {
-                                  label: b.intl.string(b.t["9ID+Kh"]),
-                                  description: b.intl.string(b.t.vT61N0),
+                                  label: _.intl.string(_.t["9ID+Kh"]),
+                                  description: _.intl.string(_.t.vT61N0),
                                   checked: t,
                                   onChange: this.handleToggleShortcutDesktop,
                               }),
                               (0, r.jsx)(s.izJ, {}),
                               (0, r.jsx)(s.rsf, {
-                                  label: b.intl.string(b.t.vNpUMz),
-                                  description: b.intl.string(b.t.cpYp0H),
+                                  label: _.intl.string(_.t.vNpUMz),
+                                  description: _.intl.string(_.t.cpYp0H),
                                   checked: n,
                                   onChange: this.handleToggleShortcutStartMenu,
                               }),
@@ -149,7 +149,7 @@ class y extends i.PureComponent {
             children: [
                 (0, r.jsx)(g.Z, { currentRoute: m.Z5c.APPLICATION_LIBRARY_SETTINGS }),
                 (0, r.jsx)(s.w0Z, {
-                    className: _.scroller,
+                    className: b.scroller,
                     children: this.renderBody(),
                 }),
             ],

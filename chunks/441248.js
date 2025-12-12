@@ -1,10 +1,10 @@
-n.d(t, { k: () => m });
+n.d(t, { k: () => b });
 var r = n(54381);
 n(473749);
 var i = n(120356),
     l = n.n(i),
-    a = n(481060),
-    o = n(40614),
+    o = n(481060),
+    a = n(40614),
     s = n(736409),
     c = n(12694),
     u = n(925329),
@@ -12,8 +12,8 @@ var i = n(120356),
     f = n(168524),
     h = n(115530),
     p = n(388032),
-    g = n(867751);
-function b(e) {
+    g = n(48733);
+function m(e) {
     let { name: t, applicationId: n } = e,
         i = (0, f.Z)({
             location: "ActivityPanelGameCard",
@@ -21,7 +21,7 @@ function b(e) {
             source: d.m1.RtcPanel,
             trackEntryPointImpression: !0,
         });
-    return (0, r.jsx)(a.P3F, {
+    return (0, r.jsx)(o.P3F, {
         onClick: i,
         className: l()(null != i && g.clickableGameName),
         children: (0, r.jsx)(h.Z, {
@@ -30,7 +30,7 @@ function b(e) {
         }),
     });
 }
-function m(e) {
+function b(e) {
     let {
             isStreaming: t,
             application: n,
@@ -39,9 +39,9 @@ function m(e) {
             isForceShowSharingPopout: d,
             setIsForceShowSharingPopout: f,
             ref: h,
-            popoutTargetRef: m,
+            popoutTargetRef: b,
         } = e,
-        y = null != n ? n.name : null != i ? i.name : p.intl.string(p.t["UQMV/E"]);
+        _ = null != n ? n.name : null != i ? i.name : p.intl.string(p.t["UQMV/E"]);
     return (
         (0, c.V)(),
         (0, r.jsxs)("div", {
@@ -57,7 +57,7 @@ function m(e) {
                             ref: h,
                         }),
                         t
-                            ? (0, r.jsx)(a.Odl, {
+                            ? (0, r.jsx)(o.Odl, {
                                   size: "md",
                                   color: "currentColor",
                                   className: g.liveBadge,
@@ -66,19 +66,19 @@ function m(e) {
                     ],
                 }),
                 (0, r.jsx)(s.j, {
-                    popoutTargetRef: m,
+                    popoutTargetRef: b,
                     isForceShowSharingPopout: d,
                     setIsForceShowSharingPopout: f,
                     children: (0, r.jsxs)("div", {
                         className: g.info,
                         children: [
-                            null != y
-                                ? (0, r.jsx)(b, {
-                                      name: y,
+                            null != _
+                                ? (0, r.jsx)(m, {
+                                      name: _,
                                       applicationId: null == n ? void 0 : n.id,
                                   })
                                 : null,
-                            (0, r.jsx)(o.V, { onClick: l }),
+                            (0, r.jsx)(a.V, { onClick: l }),
                         ],
                     }),
                 }),

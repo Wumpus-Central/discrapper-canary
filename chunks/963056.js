@@ -3,7 +3,7 @@ var a = n(54381);
 n(473749);
 var r = n(467721),
     i = n(481060),
-    l = n(10467);
+    l = n(572797);
 function s(e) {
     let { text: t } = e,
         n = (0, i.Yzy)(t, {

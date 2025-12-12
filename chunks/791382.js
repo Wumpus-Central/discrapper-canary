@@ -6,24 +6,24 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     l = n.n(i),
-    a = n(28664),
-    s = n(481060),
+    s = n(28664),
+    a = n(481060),
     o = n(264451),
     c = n(75775),
-    d = n(388032),
-    u = n(705737);
+    u = n(388032),
+    d = n(8275);
 let g = (e) => {
         let { value: t, isPercent: n } = e;
         if (null == t) return null;
-        let { formattedValue: i, isPositive: a } = (0, o.m5)(t, n);
+        let { formattedValue: i, isPositive: s } = (0, o.m5)(t, n);
         return (0, r.jsxs)("div", {
-            className: u.trendContainer,
+            className: d.trendContainer,
             children: [
-                (0, r.jsx)(c.Z, { className: l()(u.chartLineIcon, { [u.chartLineIconNegative]: !a }) }),
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(c.Z, { className: l()(d.chartLineIcon, { [d.chartLineIconNegative]: !s }) }),
+                (0, r.jsx)(a.Text, {
                     variant: "text-md/normal",
-                    className: u.trendDescription,
-                    children: d.intl.format(d.t.OTHOvZ, { value: i }),
+                    className: d.trendDescription,
+                    children: u.intl.format(u.t.OTHOvZ, { value: i }),
                 }),
             ],
         });
@@ -31,38 +31,38 @@ let g = (e) => {
     m = (e) => {
         let { label: t, sublabel: n, value: i, additionalContent: l, tooltip: o } = e;
         return (0, r.jsxs)("div", {
-            className: u.container,
+            className: d.container,
             children: [
                 (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsxs)("div", {
-                            className: u.labelContainer,
+                            className: d.labelContainer,
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(a.Text, {
                                     variant: "text-xs/medium",
-                                    className: u.label,
+                                    className: d.label,
                                     children: t,
                                 }),
                                 null != o &&
-                                    (0, r.jsx)(a.u, {
+                                    (0, r.jsx)(s.u, {
                                         text: o,
-                                        children: (0, r.jsx)(s.d3s, {
+                                        children: (0, r.jsx)(a.d3s, {
                                             size: "xs",
                                             color: "currentColor",
-                                            className: u.labelTooltipIcon,
+                                            className: d.labelTooltipIcon,
                                         }),
                                     }),
                                 null != n
-                                    ? (0, r.jsx)(s.Text, {
+                                    ? (0, r.jsx)(a.Text, {
                                           variant: "text-xs/normal",
-                                          className: u.sublabel,
+                                          className: d.sublabel,
                                           children: n,
                                       })
                                     : null,
                             ],
                         }),
-                        (0, r.jsx)(s.Text, {
-                            className: u.value,
+                        (0, r.jsx)(a.Text, {
+                            className: d.value,
                             variant: "text-sm/normal",
                             children: i,
                         }),

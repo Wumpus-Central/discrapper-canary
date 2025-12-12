@@ -1,0 +1,16 @@
+e.exports = {
+    container: "container__99871",
+    loaderContainer: "loaderContainer__99871",
+    loadingText: "loadingText__99871",
+    header: "header__99871",
+    headerIcon: "headerIcon__99871",
+    checklistItem: "checklistItem__99871",
+    separator: "separator__99871",
+    checklistIcon: "checklistIcon__99871",
+    checklistText: "checklistText__99871",
+    detailsButton: "detailsButton__99871",
+    doesNot: "doesNot__99871",
+    healthPending: "healthPending__99871",
+    healthFailingDescription: "healthFailingDescription__99871",
+    indent: "indent__99871",
+};

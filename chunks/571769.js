@@ -1,98 +1,98 @@
-n.d(e, { default: () => j });
+n.d(e, { default: () => C });
 var s = n(54381),
-    a = n(473749),
-    i = n(120356),
-    r = n.n(i),
+    i = n(473749),
+    r = n(120356),
+    a = n.n(r),
     l = n(660815),
-    c = n(793030),
-    o = n(442837),
-    f = n(198168),
-    p = n(481060),
-    u = n(100527),
-    d = n(454585),
+    o = n(793030),
+    c = n(442837),
+    p = n(198168),
+    u = n(481060),
+    d = n(100527),
+    f = n(454585),
     x = n(494620),
     m = n(905551),
-    h = n(60482),
-    v = n(587065),
-    I = n(986841),
-    b = n(160589),
+    _ = n(60482),
+    h = n(587065),
+    v = n(986841),
+    I = n(400580),
     N = n(388032),
-    _ = n(321464);
-function j(t) {
-    let { guildId: e, instance: n, onClose: i, transitionState: j } = t,
-        C = (0, o.e7)([h.Z], () => {
+    j = n(71124);
+function C(t) {
+    let { guildId: e, instance: n, onClose: r, transitionState: C } = t,
+        g = (0, c.e7)([_.Z], () => {
             var t;
-            return null == (t = h.Z.getStateForGuild(e)) ? void 0 : t.instructions[n.planId];
+            return null == (t = _.Z.getStateForGuild(e)) ? void 0 : t.instructions[n.planId];
         });
-    a.useEffect(() => {
-        null == C && (0, m.iX)(e, n.planId);
-    }, [e, n.planId, C]);
-    let g = (0, I.Z)(n),
-        { handleCopyServerIp: S, animateCopyIcon: T } = (0, v.Z)(
+    i.useEffect(() => {
+        null == g && (0, m.iX)(e, n.planId);
+    }, [e, n.planId, g]);
+    let S = (0, v.Z)(n),
+        { handleCopyServerIp: T, animateCopyIcon: E } = (0, h.Z)(
             e,
             n.id,
-            u.Z.GAME_SERVER_INSTRUCTIONS_MODAL,
-            null != g ? g : "",
+            d.Z.GAME_SERVER_INSTRUCTIONS_MODAL,
+            null != S ? S : "",
         ),
-        E = a.useMemo(() => {
+        b = i.useMemo(() => {
             switch (n.status) {
                 case l.V.STARTING:
-                    return N.intl.string(b.default.ud4hxY);
+                    return N.intl.string(I.default.ud4hxY);
                 case l.V.OFFLINE:
-                    return N.intl.string(b.default.ABAm7x);
+                    return N.intl.string(I.default.ABAm7x);
                 default:
                     return;
             }
         }, [n.status]);
-    return (0, s.jsxs)(c.IX, {
+    return (0, s.jsxs)(o.IX, {
         size: "lg",
         paddingSize: "lg",
-        transitionState: j,
-        onClose: i,
+        transitionState: C,
+        onClose: r,
         children: [
-            (0, s.jsx)(c.xBx, {
+            (0, s.jsx)(o.xBx, {
                 gradientColor: "purple",
                 graphic: {
                     type: "dynamic",
-                    component: f.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
+                    component: p.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
                     props: { instance: n },
                 },
                 alignCenter: !0,
                 title: n.name,
-                subtitle: N.intl.string(b.default["4HqfaU"]),
+                subtitle: N.intl.string(I.default["4HqfaU"]),
             }),
-            null == C
-                ? (0, s.jsx)(p.$jN, {})
+            null == g
+                ? (0, s.jsx)(u.$jN, {})
                 : (0, s.jsxs)("div", {
-                      className: _.content,
+                      className: j.content,
                       children: [
-                          null != E &&
+                          null != b &&
                               (0, s.jsx)(x.Z, {
-                                  className: _.infoBox,
-                                  children: E,
+                                  className: j.infoBox,
+                                  children: b,
                               }),
                           (0, s.jsx)("div", {
-                              className: _.stepsContainer,
-                              children: C.map((t, e) =>
+                              className: j.stepsContainer,
+                              children: g.map((t, e) =>
                                   (0, s.jsxs)(
                                       "div",
                                       {
-                                          className: _.step,
+                                          className: j.step,
                                           children: [
                                               (0, s.jsx)("div", {
-                                                  className: _.stepNumber,
-                                                  children: (0, s.jsx)(p.Text, {
+                                                  className: j.stepNumber,
+                                                  children: (0, s.jsx)(u.Text, {
                                                       variant: "text-xs/semibold",
                                                       color: "text-subtle",
-                                                      children: N.intl.formatToPlainString(b.default.oSU1fF, {
+                                                      children: N.intl.formatToPlainString(I.default.oSU1fF, {
                                                           step: e + 1,
                                                       }),
                                                   }),
                                               }),
-                                              (0, s.jsx)(p.Text, {
+                                              (0, s.jsx)(u.Text, {
                                                   variant: "text-sm/normal",
                                                   color: "text-subtle",
-                                                  children: d.Z.parse(t, !1, { allowLinks: !0 }),
+                                                  children: f.Z.parse(t, !1, { allowLinks: !0 }),
                                               }),
                                           ],
                                       },
@@ -100,23 +100,23 @@ function j(t) {
                                   ),
                               ),
                           }),
-                          null != g &&
+                          null != S &&
                               (0, s.jsxs)("div", {
-                                  className: _.serverIpContainer,
+                                  className: j.serverIpContainer,
                                   children: [
                                       (0, s.jsx)("div", {
-                                          className: r()(_.serverIpInput, T && _.animate),
-                                          children: (0, s.jsx)(p.Text, {
+                                          className: a()(j.serverIpInput, E && j.animate),
+                                          children: (0, s.jsx)(u.Text, {
                                               variant: "text-md/medium",
                                               color: "text-strong",
-                                              children: g,
+                                              children: S,
                                           }),
                                       }),
-                                      (0, s.jsx)(p.Button, {
-                                          variant: T ? "active" : "primary",
-                                          text: T ? N.intl.string(N.t.t5VZ88) : N.intl.string(N.t.OpuAlK),
-                                          onClick: S,
-                                          icon: p.TIy,
+                                      (0, s.jsx)(u.Button, {
+                                          variant: E ? "active" : "primary",
+                                          text: E ? N.intl.string(N.t.t5VZ88) : N.intl.string(N.t.OpuAlK),
+                                          onClick: T,
+                                          icon: u.TIy,
                                       }),
                                   ],
                               }),

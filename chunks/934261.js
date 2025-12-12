@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => w });
 var r = n(54381);
 n(473749);
 var i = n(392711),
@@ -13,17 +13,17 @@ var i = n(392711),
     p = n(678135),
     m = n(643879),
     g = n(350327),
-    b = n(687158),
-    h = n(706454),
-    x = n(695346),
+    h = n(687158),
+    x = n(706454),
+    b = n(695346),
     j = n(265159),
     P = n(25990),
     y = n(594174),
     O = n(55935),
-    v = n(74538),
-    E = n(388032),
-    C = n(138532);
-function I(e) {
+    _ = n(74538),
+    v = n(388032),
+    E = n(71627);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,54 +48,54 @@ function I(e) {
     }
     return e;
 }
-let S = (e) => {
+let I = (e) => {
         let { effectIsOwned: t, pendingProfileEffectRecord: n, product: u, purchase: d } = e,
             p = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
             m = (0, l.e7)([s.Z], () => s.Z.getProduct(null == n ? void 0 : n.skuId)),
-            g = (0, l.e7)([h.default], () => h.default.locale),
-            b = v.ZP.canUseCollectibles(p),
-            x = (0, c.qS)(d),
+            g = (0, l.e7)([x.default], () => x.default.locale),
+            h = _.ZP.canUseCollectibles(p),
+            b = (0, c.qS)(d),
             j = (0, c.G1)(u),
-            P = !b && x,
-            I = (null == d ? void 0 : d.expiresAt) != null ? (0, O.TD)(Date.now(), d.expiresAt) : null,
-            S = (0, a.ag)(d),
-            _ = (0, a.kd)(m),
-            A = (0, f.M)(!j || b),
-            N = w(P, j, b, A);
+            P = !h && b,
+            C = (null == d ? void 0 : d.expiresAt) != null ? (0, O.TD)(Date.now(), d.expiresAt) : null,
+            I = (0, a.ag)(d),
+            w = (0, a.kd)(m),
+            A = (0, f.M)(!j || h),
+            N = S(P, j, h, A);
         return null != n
             ? (0, r.jsx)("div", {
-                  className: t ? C.effectDescriptionNoGradient : C.effectDescriptionBorderWithGradient,
+                  className: t ? E.effectDescriptionNoGradient : E.effectDescriptionBorderWithGradient,
                   children: (0, r.jsxs)("div", {
-                      className: C.effectDescriptionContainer,
+                      className: E.effectDescriptionContainer,
                       children: [
                           (0, r.jsx)(o.Text, {
                               color: "text-strong",
                               variant: "text-sm/semibold",
-                              className: C.effectName,
-                              children: (0, i.isEmpty)(S) ? _ : S,
+                              className: E.effectName,
+                              children: (0, i.isEmpty)(I) ? w : I,
                           }),
                           null != d
                               ? null
                               : (0, r.jsx)(o.Text, {
                                     color: "text-default",
                                     variant: "text-sm/normal",
-                                    className: C.effectDescription,
+                                    className: E.effectDescription,
                                     children: N,
                                 }),
-                          null != I &&
+                          null != C &&
                               (0, r.jsx)(o.Text, {
                                   variant: "text-xxs/normal",
                                   color: "text-muted",
-                                  className: C.effectPurchasedAt,
-                                  children: E.intl.format(E.t.Io7ozn, { days: I.days.toString() }),
+                                  className: E.effectPurchasedAt,
+                                  children: v.intl.format(v.t.Io7ozn, { days: C.days.toString() }),
                               }),
                           null != d &&
                               (0, r.jsxs)(o.Text, {
                                   variant: "text-xxs/normal",
                                   color: "text-muted",
-                                  className: C.effectPurchasedAt,
+                                  className: E.effectPurchasedAt,
                                   children: [
-                                      E.intl.format(E.t.gW9R4B, {
+                                      v.intl.format(v.t.gW9R4B, {
                                           date: d.purchasedAt.toLocaleDateString(g, {
                                               month: "long",
                                               year: "numeric",
@@ -105,7 +105,7 @@ let S = (e) => {
                                           (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   (0, r.jsx)("br", {}),
-                                                  E.intl.format(E.t.eZSTa5, {
+                                                  v.intl.format(v.t.eZSTa5, {
                                                       date: d.expiresAt.toLocaleDateString(g, {
                                                           minute: "numeric",
                                                           hour: "numeric",
@@ -118,29 +118,29 @@ let S = (e) => {
                                           }),
                                   ],
                               }),
-                          x &&
+                          b &&
                               (0, r.jsx)(o.Text, {
                                   variant: "text-xxs/normal",
                                   color: "text-muted",
-                                  className: C.effectPurchasedAt,
-                                  children: E.intl.string(E.t.nKdAlO),
+                                  className: E.effectPurchasedAt,
+                                  children: v.intl.string(v.t.nKdAlO),
                               }),
                       ],
                   }),
               })
             : null;
     },
-    w = (e, t, n, r) =>
+    S = (e, t, n, r) =>
         e
-            ? E.intl.string(E.t["1UPza/"])
+            ? v.intl.string(v.t["1UPza/"])
             : t && n
-              ? E.intl.string(E.t.hmyYK8)
+              ? v.intl.string(v.t.hmyYK8)
               : t && !n
                 ? r
-                    ? E.intl.string(E.t.melduy)
-                    : E.intl.string(E.t.JtAKwp)
-                : E.intl.string(E.t.fEGjVQ),
-    _ = (e) => {
+                    ? v.intl.string(v.t.melduy)
+                    : v.intl.string(v.t.JtAKwp)
+                : v.intl.string(v.t.fEGjVQ),
+    w = (e) => {
         var t, n;
         let {
                 user: i,
@@ -151,17 +151,17 @@ let S = (e) => {
                 guild: f,
             } = e,
             {
-                pendingGlobalName: h,
+                pendingGlobalName: x,
                 pendingNickname: y,
                 pendingPronouns: O,
-                pendingBio: E,
-                pendingBanner: w,
-                pendingAvatar: _,
+                pendingBio: v,
+                pendingBanner: S,
+                pendingAvatar: w,
                 pendingAvatarDecoration: A,
                 pendingThemeColors: N,
                 pendingAccentColor: k,
             } = (0, l.cj)([u.Z, P.Z], () =>
-                I(
+                C(
                     {
                         pendingNickname: void 0,
                         pendingGlobalName: void 0,
@@ -170,22 +170,22 @@ let S = (e) => {
                     null != f ? u.Z.getAllPending() : P.Z.getAllPending(),
                 ),
             ),
-            Z = v.ZP.isPremium(i),
-            D = v.ZP.canUsePremiumProfileCustomization(i),
-            T = (0, b.ZP)(i.id),
-            U = !!(null == T ? void 0 : T.getPreviewBio(E)),
+            Z = _.ZP.isPremium(i),
+            D = _.ZP.canUsePremiumProfileCustomization(i),
+            T = (0, h.ZP)(i.id),
+            U = !!(null == T ? void 0 : T.getPreviewBio(v)),
             B = {
                 user: i,
                 guild: f,
-                pendingGlobalName: h,
+                pendingGlobalName: x,
                 pendingNickname: y,
                 pendingPronouns: O,
-                pendingBio: x.dN.useSetting() && null != E ? d.ZP.parse(void 0, E).content : E,
-                pendingBanner: w,
+                pendingBio: b.dN.useSetting() && null != v ? d.ZP.parse(void 0, v).content : v,
+                pendingBanner: S,
                 useLargeBanner: !0,
                 pendingAvatar: (0, m.SD)({
                     userId: i.id,
-                    image: _,
+                    image: w,
                 }),
                 pendingAvatarDecoration: A,
                 pendingThemeColors: N,
@@ -197,11 +197,11 @@ let S = (e) => {
                 onBannerChange: g.g_,
             };
         return (0, r.jsxs)("div", {
-            className: C.previewContainer,
+            className: E.previewContainer,
             children: [
                 (0, r.jsx)(
                     p.Z,
-                    ((t = I({}, B)),
+                    ((t = C({}, B)),
                     (n = n =
                         {
                             disabledInputs: !0,
@@ -222,7 +222,7 @@ let S = (e) => {
                     t),
                 ),
                 !1,
-                (0, r.jsx)(S, {
+                (0, r.jsx)(I, {
                     effectIsOwned: s,
                     pendingProfileEffectRecord: o,
                     product: c,

@@ -1,15 +1,15 @@
 n.d(t, {
     QP: () => N,
-    ZP: () => I,
+    ZP: () => S,
     h6: () => P,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    a = n.n(l),
-    o = n(525654),
-    s = n.n(o),
+    o = n.n(l),
+    a = n(525654),
+    s = n.n(a),
     c = n(91192),
     u = n(442837),
     d = n(481060),
@@ -17,21 +17,21 @@ var r = n(54381),
     h = n(493773),
     p = n(607070),
     g = n(724757),
-    b = n(626135),
-    m = n(585483),
-    y = n(358085),
-    O = n(143316),
-    v = n(240126),
-    j = n(147522),
-    C = n(809780),
-    x = n(981631),
-    E = n(388032),
-    S = n(97916);
-function I(e) {
-    var t, n, l, o, O, I, P;
+    m = n(626135),
+    b = n(585483),
+    _ = n(358085),
+    y = n(143316),
+    O = n(240126),
+    v = n(147522),
+    j = n(809780),
+    C = n(981631),
+    x = n(388032),
+    E = n(915087);
+function S(e) {
+    var t, n, l, a, y, S, P;
     let { onJump: N, showTutorial: Z, setSeenTutorial: w, closePopout: T } = e,
         A = i.useRef(null),
-        [R, D] = (0, C.ZP)(A),
+        [R, D] = (0, j.ZP)(A),
         { loadState: M, channels: L } = R,
         { maybeLoadMore: k } = D,
         G = (0, u.e7)([p.Z], () => p.Z.messageGroupSpacing);
@@ -44,35 +44,35 @@ function I(e) {
             l.clearScrollToChannelIndex();
             let { current: i } = t;
             if (null == i || null == r) return;
-            let a = null == (e = i.getScrollerNode()) ? void 0 : e.children;
-            if (null == a) return;
-            let o = a[r];
+            let o = null == (e = i.getScrollerNode()) ? void 0 : e.children;
             if (null == o) return;
+            let a = o[r];
+            if (null == a) return;
             let { scrollTop: s, offsetHeight: c } = i.getScrollerState();
-            (o.offsetTop < s || o.offsetTop > s + c) && i.scrollTo({ to: o.offsetTop });
+            (a.offsetTop < s || a.offsetTop > s + c) && i.scrollTo({ to: a.offsetTop });
         }),
-        (o = R),
-        (O = D),
+        (a = R),
+        (y = D),
         i.useEffect(() => {
             let e = () => {
-                let e = o.channels.find((e) => !e.collapsed);
-                null != e && O.markChannelRead(e);
+                let e = a.channels.find((e) => !e.collapsed);
+                null != e && y.markChannelRead(e);
             };
             return (
-                m.S.subscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
+                b.S.subscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    m.S.unsubscribe(x.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    b.S.unsubscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
-        }, [O, o.channels]),
-        (I = D),
+        }, [y, a.channels]),
+        (S = D),
         i.useEffect(() => {
             let e = (e) => {
-                ((0, y.isMac)() || (0, y.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
+                ((0, _.isMac)() || (0, _.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
                     !e.shiftKey &&
                     !e.altKey &&
                     "z" === e.key &&
-                    I.undoMarkChannelRead();
+                    S.undoMarkChannelRead();
             };
             return (
                 document.addEventListener("keydown", e),
@@ -80,9 +80,9 @@ function I(e) {
                     document.removeEventListener("keydown", e);
                 }
             );
-        }, [I]),
+        }, [S]),
         i.useEffect(() => {
-            b.default.track(x.rMx.OPEN_POPOUT, { type: "Inbox" });
+            m.default.track(C.rMx.OPEN_POPOUT, { type: "Inbox" });
         }, []),
         i.useEffect(
             () => (
@@ -95,21 +95,21 @@ function I(e) {
         ),
         (0, h.ZP)(
             () => (
-                m.S.subscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
+                b.S.subscribe(C.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead),
                 () => {
-                    m.S.unsubscribe(x.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead);
+                    b.S.unsubscribe(C.CkL.INBOX_MARK_ALL_UNREADS_READ, D.markAllRead);
                 }
             ),
         );
     let U = (0, g.Z)("unreads", A);
     if (0 === L.length) {
-        return (0, r.jsx)(v.Z, {
+        return (0, r.jsx)(O.Z, {
             Icon: d.xx7,
-            header: E.intl.string(E.t["6XMM+D"]),
+            header: x.intl.string(x.t["6XMM+D"]),
             tip:
                 (null == (P = s().os) ? void 0 : P.family) === "OS X"
-                    ? E.intl.string(E.t.w9uDOW)
-                    : E.intl.string(E.t.BiUJC6),
+                    ? x.intl.string(x.t.w9uDOW)
+                    : x.intl.string(x.t.BiUJC6),
         });
     }
     return (0, r.jsx)(c.bG, {
@@ -180,12 +180,12 @@ function I(e) {
                     )),
                     (n = n =
                         {
-                            onScroll: M === C.jd.Done ? void 0 : k,
-                            className: a()(S.scroller, "group-spacing-".concat(G)),
+                            onScroll: M === j.jd.Done ? void 0 : k,
+                            className: o()(E.scroller, "group-spacing-".concat(G)),
                             children: [
-                                Z ? (0, r.jsx)(_, { setSeenTutorial: w }) : null,
-                                (0, j.Z)(L, D, N),
-                                M === C.jd.Done ? null : (0, r.jsx)(d.$jN, { className: S.spinner }),
+                                Z ? (0, r.jsx)(I, { setSeenTutorial: w }) : null,
+                                (0, v.Z)(L, D, N),
+                                M === j.jd.Done ? null : (0, r.jsx)(d.$jN, { className: E.spinner }),
                             ],
                         }),
                     Object.getOwnPropertyDescriptors
@@ -206,13 +206,13 @@ function I(e) {
         }),
     });
 }
-function _(e) {
+function I(e) {
     let { setSeenTutorial: t } = e;
     return (0, r.jsxs)("div", {
-        className: S.tutorial,
+        className: E.tutorial,
         children: [
             (0, r.jsx)("div", {
-                className: S.tutorialIcon,
+                className: E.tutorialIcon,
                 children: (0, r.jsx)(d.xx7, {
                     size: "md",
                     color: "currentColor",
@@ -221,22 +221,22 @@ function _(e) {
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(d.Heading, {
-                        className: S.__invalid_tutorialHeader,
+                        className: E.__invalid_tutorialHeader,
                         variant: "heading-md/semibold",
-                        children: E.intl.string(E.t.vZPktJ),
+                        children: x.intl.string(x.t.vZPktJ),
                     }),
                     (0, r.jsx)(d.Text, {
                         color: "text-default",
                         variant: "text-sm/normal",
-                        children: E.intl.string(E.t.vWkIII),
+                        children: x.intl.string(x.t.vWkIII),
                     }),
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: S.tutorialButton,
+                        className: E.tutorialButton,
                         children: (0, r.jsx)(d.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: E.intl.string(E.t["+IrDzN"]),
+                            text: x.intl.string(x.t["+IrDzN"]),
                             onClick: t,
                         }),
                     }),
@@ -246,11 +246,11 @@ function _(e) {
     });
 }
 function P() {
-    return (0, r.jsx)(v.Z, {
+    return (0, r.jsx)(O.Z, {
         Icon: d.xx7,
         disableStars: !0,
-        header: E.intl.string(E.t["KG/ynf"]),
-        tip: E.intl.string(E.t.cvcKzX),
+        header: x.intl.string(x.t["KG/ynf"]),
+        tip: x.intl.string(x.t.cvcKzX),
     });
 }
-let N = () => (0, r.jsx)(O.Z, { onClick: () => m.S.dispatch(x.CkL.INBOX_MARK_ALL_UNREADS_READ) });
+let N = () => (0, r.jsx)(y.Z, { onClick: () => b.S.dispatch(C.CkL.INBOX_MARK_ALL_UNREADS_READ) });

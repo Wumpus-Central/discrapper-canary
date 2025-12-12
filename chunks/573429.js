@@ -4,7 +4,7 @@ var r = n(54381),
     l = n(481060),
     s = n(812652),
     o = n(388032),
-    a = n(780376);
+    a = n(14959);
 function c(e) {
     let { mainCTADisabled: t, mainCTAOnClick: n, align: c, ctaText: d, hideOptionsButton: u } = e,
         f = i.useRef(null);

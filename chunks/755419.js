@@ -4,13 +4,13 @@ n.d(t, {
 });
 var r = n(54381),
     i = n(120356),
-    a = n.n(i),
-    o = n(317257),
+    o = n.n(i),
+    a = n(317257),
     s = n(499997),
     l = n(215023),
-    c = n(669790),
+    c = n(200192),
     u = n(593639),
-    d = n(239261);
+    d = n(26028);
 let f = {
         [l.Vt.FRACTIONAL_PREMIUM]: {
             render: (e) => {
@@ -28,14 +28,14 @@ let f = {
                 let { animationState: t = "on", className: n } = e;
                 return (0, r.jsx)(s.Z, {
                     animationState: t,
-                    className: a()(c.orbProfileBadgeAsset, n),
+                    className: o()(c.orbProfileBadgeAsset, n),
                 });
             },
         },
     },
     p = () => ({
-        id: o.l.ORB_PROFILE_BADGE,
-        icon: o.l.ORB_PROFILE_BADGE,
+        id: a.l.ORB_PROFILE_BADGE,
+        icon: a.l.ORB_PROFILE_BADGE,
         iconSrc: d.Z,
         description: "",
         isPreviewMode: !0,

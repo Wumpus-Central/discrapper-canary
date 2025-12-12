@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685), n(781311);
 var r = n(54381),
     i = n(473749),
-    a = n(906732),
-    o = n(541716),
+    o = n(906732),
+    a = n(541716),
     s = n(752305),
     l = n(893718),
     c = n(131704),
@@ -11,7 +11,7 @@ var r = n(54381),
     f = n(698305),
     p = n(981631),
     _ = n(388032),
-    m = n(15);
+    m = n(391022);
 function h(e, t, n) {
     return (
         t in e
@@ -70,12 +70,12 @@ let y = (0, c.createChannelRecord)({
 });
 function O(e) {
     let { user: t, guildId: n, channelId: c, onClose: p, disableAutoFocus: h = !1 } = e,
-        { newestAnalyticsLocation: E } = (0, a.ZP)(),
+        { newestAnalyticsLocation: E } = (0, o.ZP)(),
         { trackUserProfileAction: O } = (0, d.KZ)(),
         [v, S] = i.useState(""),
         [I, T] = i.useState((0, s.JM)(v)),
         C = i.useRef(!1),
-        A = i.useMemo(() => b(g({}, o.Ie.USER_PROFILE), { disableAutoFocus: h }), [h]);
+        A = i.useMemo(() => b(g({}, a.Ie.USER_PROFILE), { disableAutoFocus: h }), [h]);
     return (0, r.jsx)(l.ZP, {
         className: m.container,
         editorClassName: m.editor,

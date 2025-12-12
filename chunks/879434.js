@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var a = n(54381),
     r = n(473749),
     i = n(120356),
@@ -11,19 +11,19 @@ var a = n(54381),
     m = n(538645),
     p = n(383036),
     h = n(981631),
-    f = n(55915);
-let x = (e) => {
+    x = n(511130);
+let f = (e) => {
         let { setTab: t } = e,
             n = (0, o.e7)([u.Z], () => u.Z.getWindowOpen(h.KJ3.DEVTOOLS_POPOUT));
         return (0, a.jsxs)("div", {
-            className: f.content,
+            className: x.content,
             children: [
                 (0, a.jsx)(s.P3F, {
                     onClick: () => {
                         t(1);
                     },
                     children: (0, a.jsx)("div", {
-                        className: l()(f.banner, f.pfxBanner),
+                        className: l()(x.banner, x.pfxBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -36,7 +36,7 @@ let x = (e) => {
                         t(2);
                     },
                     children: (0, a.jsx)("div", {
-                        className: l()(f.banner, f.nameplateBanner),
+                        className: l()(x.banner, x.nameplateBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -49,7 +49,7 @@ let x = (e) => {
                         t(3);
                     },
                     children: (0, a.jsx)("div", {
-                        className: l()(f.banner, f.bundlesBanner),
+                        className: l()(x.banner, x.bundlesBanner),
                         children: (0, a.jsx)(s.xvT, {
                             variant: "text-md/bold",
                             color: "always-white",
@@ -87,13 +87,13 @@ let x = (e) => {
             ],
         });
     },
-    b = () => {
+    g = () => {
         let [e, t] = r.useState(0);
         return (0, a.jsxs)(s.zJl, {
-            className: f.wrapper,
+            className: x.wrapper,
             children: [
                 (0, a.jsxs)("div", {
-                    className: f.nav,
+                    className: x.nav,
                     children: [
                         (0, a.jsx)(s.X6q, {
                             variant: "heading-xxl/medium",
@@ -116,7 +116,7 @@ let x = (e) => {
                         case 3:
                             return (0, a.jsx)(p.Z, {});
                         default:
-                            return (0, a.jsx)(x, { setTab: t });
+                            return (0, a.jsx)(f, { setTab: t });
                     }
                 })(),
             ],

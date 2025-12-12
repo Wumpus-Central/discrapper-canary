@@ -1,4 +1,4 @@
-r.d(t, { default: () => I }), r(388685);
+r.d(t, { default: () => U }), r(388685);
 var n = r(54381),
     a = r(473749),
     i = r(512722),
@@ -17,13 +17,13 @@ var n = r(54381),
     P = r(80721),
     x = r(282793),
     j = r(981631),
-    h = r(137427),
+    h = r(96011),
     O = r(388032),
-    S = r(544165),
-    w = r(530641),
-    v = r(491567),
-    C = r(419698),
-    k = r(568368);
+    S = r(807021),
+    w = r(667325),
+    v = r(552039),
+    C = r(445161),
+    k = r(255870);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -67,7 +67,7 @@ function E(e, t) {
         e
     );
 }
-function T(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var r,
         n,
@@ -87,9 +87,9 @@ function T(e, t) {
     }
     return a;
 }
-function Z(e) {
+function T(e) {
     var { onClose: t, isExistingSub: r, premiumGroupPrimaryName: a, currentUser: i } = e,
-        o = T(e, ["onClose", "isExistingSub", "premiumGroupPrimaryName", "currentUser"]);
+        o = _(e, ["onClose", "isExistingSub", "premiumGroupPrimaryName", "currentUser"]);
     let u = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
         p = (0, y.rO)() ? w.Z : v.Z;
     return (0, n.jsx)(
@@ -155,7 +155,7 @@ function Z(e) {
         }),
     );
 }
-function G(e) {
+function Z(e) {
     var {
             setModalState: t,
             onClose: r,
@@ -165,7 +165,7 @@ function G(e) {
             currentUser: c,
             setError: f,
         } = e,
-        d = T(e, [
+        d = _(e, [
             "setModalState",
             "onClose",
             "premiumGroupSubscriptionId",
@@ -223,10 +223,10 @@ function G(e) {
         }),
     );
 }
-function U(e) {
+function G(e) {
     let t, r;
     var { error: a, onClose: i } = e,
-        o = T(e, ["error", "onClose"]);
+        o = _(e, ["error", "onClose"]);
     let s = (0, x.sO)();
     switch (a) {
         case 1:
@@ -281,9 +281,9 @@ function U(e) {
         ),
     );
 }
-function I(e) {
+function U(e) {
     var { premiumGroupSubscriptionId: t, isExistingSub: r, premiumGroupPrimaryName: i } = e,
-        l = T(e, ["premiumGroupSubscriptionId", "isExistingSub", "premiumGroupPrimaryName"]);
+        l = _(e, ["premiumGroupSubscriptionId", "isExistingSub", "premiumGroupPrimaryName"]);
     let [c, u] = (0, a.useState)(0),
         [f, d] = (0, a.useState)(null),
         m = (0, s.e7)([g.default], () => g.default.getCurrentUser());
@@ -292,7 +292,7 @@ function I(e) {
     switch (c) {
         case 0:
             b = (0, n.jsx)(
-                G,
+                Z,
                 N(
                     {
                         setModalState: u,
@@ -308,7 +308,7 @@ function I(e) {
             break;
         case 1:
             b = (0, n.jsx)(
-                Z,
+                T,
                 E(N({}, l), {
                     isExistingSub: r,
                     premiumGroupPrimaryName: i,
@@ -317,7 +317,7 @@ function I(e) {
             );
             break;
         case 2:
-            b = (0, n.jsx)(U, N({ error: f }, l));
+            b = (0, n.jsx)(G, N({ error: f }, l));
     }
     return (0, n.jsx)(p.Z, {
         isConfirmationStep: 1 === c,

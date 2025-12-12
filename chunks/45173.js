@@ -12,11 +12,11 @@ var i = n(92951),
     p = n(639949),
     f = n(612776),
     g = n(921944),
-    h = n(547081),
+    h = n(862474),
     m = n(388032),
-    b = n(306541),
-    _ = n(900268),
-    E = n(35446);
+    _ = n(519236),
+    b = n(807808),
+    E = n(512903);
 function O(e) {
     var t, n;
     let { markAsDismissed: O } = e,
@@ -66,7 +66,7 @@ function O(e) {
             t),
         children: (0, r.jsx)(o.ZP, {
             children: (0, r.jsxs)("div", {
-                className: b.container,
+                className: _.container,
                 style: {
                     backgroundImage: "url(".concat(E.Z, "), linear-gradient(").concat(y, "80, black)"),
                     borderColor: y,
@@ -78,19 +78,19 @@ function O(e) {
                         muted: !0,
                         playsInline: !0,
                         loop: !0,
-                        className: b.logo,
+                        className: _.logo,
                         children: (0, r.jsx)("source", {
-                            src: _.Z,
+                            src: b.Z,
                             type: "video/webm",
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: b.textContainer,
+                        className: _.textContainer,
                         children: [
                             (0, r.jsx)(a.Text, {
                                 variant: "display-sm",
                                 style: { color: y },
-                                className: b.display,
+                                className: _.display,
                                 children: m.intl.string(h.default["CdU/PF"]),
                             }),
                             (0, r.jsx)(a.Text, {
@@ -99,7 +99,7 @@ function O(e) {
                                 children: m.intl.string(h.default["M/LvW0"]),
                             }),
                             (0, r.jsx)(a.P3F, {
-                                className: b.dismissButton,
+                                className: _.dismissButton,
                                 onClick: () => O(g.L.DISMISS),
                                 style: { color: y },
                                 children: (0, r.jsx)(a.Text, {
@@ -111,8 +111,8 @@ function O(e) {
                         ],
                     }),
                     (0, r.jsx)(p.Z, {
-                        className: b.clickable,
-                        contentClassName: b.button,
+                        className: _.clickable,
+                        contentClassName: _.button,
                         onClick: () => {
                             (0, d.Z)("coachmark"), O(g.L.TAKE_ACTION);
                         },

@@ -13,13 +13,13 @@ var r = n(54381),
     d = n(763520),
     f = n(358221),
     p = n(414910),
-    b = n(598006),
-    m = n(502053),
+    m = n(598006),
+    _ = n(502053),
     g = n(965048),
     v = n(266910),
-    h = n(352978),
-    E = n(928518),
-    _ = n(518950),
+    b = n(352978),
+    h = n(928518),
+    E = n(518950),
     y = n(470956),
     S = n(314897),
     O = n(271383),
@@ -32,7 +32,7 @@ var r = n(54381),
     Z = n(981631),
     R = n(65154),
     T = n(388032),
-    A = n(858329);
+    A = n(7504);
 let N = s.EFr.SIZE_80,
     D = s.EFr.SIZE_40;
 function M(e) {
@@ -70,13 +70,13 @@ function k(e) {
         Y = H.id === W,
         G = (0, P.ZP)(t),
         K = (0, o.e7)([w.Z], () => w.Z.isFocused()),
-        Q = (0, o.e7)([E.Z], () => E.Z.getWindowFocused(Z.KJ3.CHANNEL_CALL_POPOUT)),
+        Q = (0, o.e7)([h.Z], () => h.Z.getWindowFocused(Z.KJ3.CHANNEL_CALL_POPOUT)),
         X = (0, o.e7)([C.Z], () => null != H.id && C.Z.isLocalVideoDisabled(H.id, (0, p.Z)(t.type)), [H.id, t.type]),
         J = (0, o.e7)([O.ZP], () => O.ZP.isGuestOrLurker(n.guild_id, H.id)),
         $ = I.ZP.getName(n.getGuildId(), n.id, H) + (J ? " ".concat(T.intl.string(T.t["pFO/Ph"])) : ""),
         ee = q && (Q || K),
         et = c < 124 ? D : N,
-        { avatarSrc: en, avatarDecorationSrc: er } = (0, _.Z)({
+        { avatarSrc: en, avatarDecorationSrc: er } = (0, E.Z)({
             userId: H.id,
             guildId: n.guild_id,
             size: et,
@@ -84,7 +84,7 @@ function k(e) {
         }),
         ei = (0, o.e7)([f.Z], () => f.Z.getSelectedParticipant(n.id)),
         el = (0, g.Z)(R.Yn.DEFAULT, t.user.id),
-        ea = (0, m.Z)(t.user.id),
+        ea = (0, _.Z)(t.user.id),
         eo = {
             channel: n,
             selectedParticipant: ei,
@@ -107,10 +107,10 @@ function k(e) {
                   selected: s,
               })
             : (0, r.jsx)(
-                  h.Z,
+                  b.Z,
                   {
                       onResize: M,
-                      wrapperClassName: y !== b.P.CALL_TILE ? A.videoWrapper : void 0,
+                      wrapperClassName: y !== m.P.CALL_TILE ? A.videoWrapper : void 0,
                       className: A.content,
                       mirror: Y,
                       streamId: B,

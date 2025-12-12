@@ -1,8 +1,8 @@
 n.d(t, { Z: () => U }), n(539854);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n(873546),
     c = n(442837),
@@ -30,7 +30,7 @@ var r = n(54381),
     w = n(728386),
     D = n(763679),
     x = n(957825),
-    L = n(72775);
+    L = n(564355);
 function j(e) {
     let { disabled: t, channel: n } = e,
         i = (0, E.Z)();
@@ -46,10 +46,10 @@ function j(e) {
           });
 }
 function M(e) {
-    var t, n, i, a, E, b, y, N, P;
-    let { type: M, disabled: U, channel: G, handleSubmit: Z, isEmpty: B, showAllButtons: F } = e,
+    var t, n, i, o, E, b, y, N, P;
+    let { type: M, disabled: U, channel: G, handleSubmit: Z, isEmpty: F, showAllButtons: B } = e,
         V = (0, c.e7)([d.Z], () => d.Z.isSubmitButtonEnabled),
-        H = k(G.id, M, B),
+        H = k(G.id, M, F),
         { activeCommand: Y, activeCommandOption: W } = (0, c.cj)([p.Z], () => ({
             activeCommand: p.Z.getActiveCommand(G.id),
             activeCommandOption: p.Z.getActiveOption(G.id),
@@ -76,7 +76,7 @@ function M(e) {
         }),
         er = (0, g.Nt)() && (null == (i = M.confetti) ? void 0 : i.button) != null,
         ei =
-            (null == (a = M.submit) ? void 0 : a.button) != null &&
+            (null == (o = M.submit) ? void 0 : o.button) != null &&
             ((null == (E = M.submit) ? void 0 : E.ignorePreference) || V);
     if (
         (!l.tq &&
@@ -97,7 +97,7 @@ function M(e) {
                 }),
             (null == (N = M.gifs) ? void 0 : N.button) != null &&
                 null == Y &&
-                F &&
+                B &&
                 $.push({
                     key: "gif",
                     node: (0, r.jsx)(
@@ -126,7 +126,7 @@ function M(e) {
             !er &&
                 (null == (P = M.stickers) ? void 0 : P.button) != null &&
                 null == Y &&
-                F &&
+                B &&
                 $.push({
                     key: "sticker",
                     node: (0, r.jsx)(
@@ -199,16 +199,16 @@ function M(e) {
                     "submit",
                 ),
             });
-    let ea = (0, s.chain)($)
+    let eo = (0, s.chain)($)
         .filter((e) => null != z[e.key])
         .sortBy((e) => z[e.key])
         .map((e) => e.node)
         .value();
-    return 0 === ea.length
+    return 0 === eo.length
         ? null
         : (0, r.jsx)("div", {
-              className: o()(L.buttons, { [L.reducedGap]: Q }),
-              children: ea,
+              className: a()(L.buttons, { [L.reducedGap]: Q }),
+              children: eo,
           });
 }
 function k(e, t, n) {

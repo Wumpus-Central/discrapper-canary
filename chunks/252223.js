@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Z }), n(539854), n(781311);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n(793030),
     c = n(442837),
@@ -26,7 +26,7 @@ var r = n(54381),
     A = n(556638),
     N = n(981631),
     P = n(388032),
-    R = n(175996);
+    R = n(80568);
 function w(e, t, n) {
     return (
         t in e
@@ -95,10 +95,10 @@ function M(e, t) {
 function k(e) {
     let { streamActivity: t, otherActivities: n, voiceActivityChannel: r } = e,
         i = [],
-        { descriptiveTextEnabled: a } = (0, y.f)({ location: "StackedActivityStatus" }),
-        { enableTopNavButton: o } = (0, _.Cq)({ location: "StackedActivityStatus" }),
+        { descriptiveTextEnabled: o } = (0, y.f)({ location: "StackedActivityStatus" }),
+        { enableTopNavButton: a } = (0, _.Cq)({ location: "StackedActivityStatus" }),
         s = (0, p.ZP)(r),
-        l = a || o;
+        l = o || a;
     return (
         null != t && i.push(j(t)),
         n.forEach((e) => {
@@ -110,11 +110,11 @@ function k(e) {
     );
 }
 function U(e) {
-    let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: a } = e,
-        s = a - 1;
+    let { textVariant: t, className: n, hasCustomStatusText: i, totalActivityCount: o } = e,
+        s = o - 1;
     return (0, r.jsxs)(l.xvT, {
         variant: t,
-        className: o()(n, R.activityCounter),
+        className: a()(n, R.activityCounter),
         color: i ? "status-positive" : "none",
         children: ["+", s],
     });
@@ -123,7 +123,7 @@ function G(e) {
     let { textVariant: t, className: n } = e;
     return (0, r.jsx)(l.xvT, {
         variant: t,
-        className: o()(R.dot, n),
+        className: a()(R.dot, n),
         children: A.l,
     });
 }
@@ -131,7 +131,7 @@ function Z(e) {
     let {
         user: t,
         activities: n,
-        applicationStream: a,
+        applicationStream: o,
         voiceChannel: l,
         textClassName: p,
         iconClassName: _,
@@ -142,10 +142,10 @@ function Z(e) {
         hideTooltip: x = !1,
     } = e;
     (0, f.Z)(null == t ? void 0 : t.id);
-    let j = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+    let j = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
         M = (0, m.Cf)(j),
         Z = (0, g.E)("ActivityStatus", l),
-        B = i.useMemo(() => {
+        F = i.useMemo(() => {
             var e, t;
             let r =
                 null == n
@@ -158,10 +158,10 @@ function Z(e) {
             let i = null != (t = null == (e = r.state) ? void 0 : e.trim()) ? t : null;
             return null == ("" === i ? null : i) && null == r.emoji ? null : r;
         }, [n]),
-        F = (0, c.e7)([E.default], () => E.default.getId() === (null == t ? void 0 : t.id)),
+        B = (0, c.e7)([E.default], () => E.default.getId() === (null == t ? void 0 : t.id)),
         V = (0, c.e7)([h.Z], () =>
             Z
-                ? F
+                ? B
                     ? h.Z.getHangStatusActivity()
                     : null != n
                       ? n.find((e) => e.type === N.IIU.HANG_STATUS)
@@ -193,12 +193,12 @@ function Z(e) {
         Y = null == n ? void 0 : n.find((e) => e.name === (null == M ? void 0 : M.name)),
         W = (null == t ? void 0 : t.bot) === !0,
         K = (0, c.e7)([b.Z], () => b.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
-        z = (null == B ? void 0 : B.state) != null,
+        z = (null == F ? void 0 : F.state) != null,
         q = null != j,
         Q = !q && null != l,
         X = H.length + (q || Q ? 1 : 0),
         J = X > 1,
-        $ = ((null == B ? void 0 : B.state) != null || null != V) && "xs" === y,
+        $ = ((null == F ? void 0 : F.state) != null || null != V) && "xs" === y,
         ee = k({
             streamActivity: Y,
             otherActivities: H,
@@ -288,55 +288,55 @@ function Z(e) {
                 : J && !W
                   ? x
                       ? (0, r.jsxs)("div", {
-                            className: o()(R.activityContainer, $ && R.iconOnly),
+                            className: a()(R.activityContainer, $ && R.iconOnly),
                             children: [et(), er()],
                         })
                       : (0, r.jsx)(u.aML, {
                             "data-migration-pending": !0,
-                            tooltipContentClassName: o()(R.container, R.activitiesTooltip, R.hasMultipleActivities),
+                            tooltipContentClassName: a()(R.container, R.activitiesTooltip, R.hasMultipleActivities),
                             delay: A.X,
                             text: en(),
                             "aria-label": ee,
                             children: (e) =>
                                 (0, r.jsxs)(
                                     "div",
-                                    L(D({ className: o()(R.activityContainer, $ && R.iconOnly) }, e), {
+                                    L(D({ className: a()(R.activityContainer, $ && R.iconOnly) }, e), {
                                         children: [et(!0), er()],
                                     }),
                                 ),
                         })
                   : et(),
-        ea = o()(R.container, {
+        eo = a()(R.container, {
             [R.textXs]: "xs" === y,
             [R.textSm]: "sm" === y,
         }),
-        eo = () =>
-            null == B && null == V
+        ea = () =>
+            null == F && null == V
                 ? null
                 : (0, r.jsx)(I.Z, {
-                      customStatusActivity: B,
+                      customStatusActivity: F,
                       textSize: y,
                       animateEmoji: O,
                       hideEmoji: w,
                       hideTooltip: x,
                       textClassName: p,
                       iconClassName: _,
-                      tooltipClassName: ea,
+                      tooltipClassName: eo,
                       voiceChannel: l,
                       hangStatus: V,
                       userId: null == t ? void 0 : t.id,
                   });
     return (0, r.jsxs)("div", {
-        className: ea,
+        className: eo,
         children: [
             ei(),
-            (null != B || null != V) &&
+            (null != F || null != V) &&
                 X > 0 &&
                 (0, r.jsx)(G, {
                     textVariant: "text-".concat(y, "/normal"),
                     className: p,
                 }),
-            eo(),
+            ea(),
             P && (0, r.jsx)(v.Z, {}),
         ],
     });

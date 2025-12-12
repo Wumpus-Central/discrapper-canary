@@ -1,78 +1,78 @@
-n.d(t, { q: () => N });
-var a = n(54381),
-    r = n(473749),
-    i = n(120356),
-    l = n.n(i),
+n.d(t, { q: () => S });
+var r = n(54381),
+    i = n(473749),
+    l = n(120356),
+    a = n.n(l),
     s = n(442837),
     o = n(481060),
     c = n(596454),
     d = n(493773),
     u = n(607070),
     m = n(745510),
-    f = n(208049),
-    h = n(763296),
-    g = n(914010),
+    h = n(208049),
+    g = n(763296),
+    f = n(914010),
     x = n(626135),
-    b = n(326706),
-    p = n(981631),
+    p = n(326706),
+    b = n(981631),
     j = n(675654),
     v = n(710111),
-    C = n(162085),
-    y = n(388032),
-    T = n(5929);
-function w(e) {
-    let { className: t, sound: n, playSound: i, isPlaying: s, text: d } = e,
+    _ = n(964721),
+    C = n(388032),
+    y = n(65766);
+function T(e) {
+    let { className: t, sound: n, playSound: l, isPlaying: s, text: d } = e,
         u = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
-        m = y.intl.formatToPlainString(y.t.tuMUJ2, {
+        m = C.intl.formatToPlainString(C.t.tuMUJ2, {
             emojiName: null == n ? void 0 : n.emojiName,
             soundName: null == n ? void 0 : n.name,
         }),
-        f = r.useCallback(() => {
-            x.default.track(p.rMx.MODERATOR_QUEUE_ACTION, {
-                guild_id: g.Z.getGuildId(),
+        h = i.useCallback(() => {
+            x.default.track(b.rMx.MODERATOR_QUEUE_ACTION, {
+                guild_id: f.Z.getGuildId(),
                 action: "airhorn",
             }),
-                null != i && i();
-        }, [i]);
-    return (0, a.jsxs)(o.P3F, {
+                null != l && l();
+        }, [l]);
+    return (0, r.jsxs)(o.P3F, {
         "aria-label": m,
         tag: "span",
-        onClick: f,
-        className: l()(T.inlineContainer, T.inlineButton, { [T.playing]: !0 === s }, t),
+        onClick: h,
+        className: a()(y.inlineContainer, y.inlineButton, { [y.playing]: !0 === s }, t),
         children: [
             u &&
-                (0, a.jsx)(c.Z, {
+                (0, r.jsx)(c.Z, {
                     emojiId: null == n ? void 0 : n.emojiId,
                     emojiName: null == n ? void 0 : n.emojiName,
-                    className: T.soundmojiEmoji,
+                    className: y.soundmojiEmoji,
                 }),
-            (0, a.jsx)("span", { children: " ".concat(d, " ") }),
+            (0, r.jsx)("span", { children: " ".concat(d, " ") }),
         ],
     });
 }
-function S(e) {
+function w(e) {
     let { containerRef: t, text: n } = e,
-        i = r.useRef(null),
-        l = (0, s.e7)([h.Z], () => {
+        l = i.useRef(null),
+        a = (0, s.e7)([g.Z], () => {
             var e;
-            return null == (e = h.Z.getSoundsForGuild(v.X8)) ? void 0 : e.find((e) => "airhorn" === e.name);
+            return null == (e = g.Z.getSoundsForGuild(v.X8)) ? void 0 : e.find((e) => "airhorn" === e.name);
         }),
-        { createMultipleConfettiAt: o } = r.useContext(m.h),
+        { createMultipleConfettiAt: o } = i.useContext(m.h),
         c = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        { isPlaying: g, playSound: x } = (0, b.W)(l);
+        { isPlaying: f, playSound: x } = (0, p.W)(a);
     (0, d.ZP)(() => {
-        (0, f.w)();
+        (0, h.w)();
     });
-    let p = r.useCallback(async () => {
+    let b = i.useCallback(async () => {
         if (await x()) {
             var e;
-            if ((null == (e = i.current) || e.addAnimation(), !c && (null == t ? void 0 : t.current) != null)) {
+            if ((null == (e = l.current) || e.addAnimation(), !c && (null == t ? void 0 : t.current) != null)) {
                 let e = t.current.getBoundingClientRect(),
                     n = {
                         x: e.left + e.width / 2,
                         y: e.top + e.height / 3,
                     },
-                    a = j.CA[Math.floor(Math.random() * j.CA.length)];
+                    r = j.CA[Math.floor(Math.random() * j.CA.length)];
                 o(
                     n.x,
                     n.y,
@@ -90,24 +90,24 @@ function S(e) {
                         },
                     },
                     40,
-                    { sprite: a },
+                    { sprite: r },
                 );
             }
         }
     }, [x, o, c, t]);
-    return void 0 === l
+    return void 0 === a
         ? null
-        : (0, a.jsx)(w, {
-              sound: l,
-              playSound: p,
-              isPlaying: g,
+        : (0, r.jsx)(T, {
+              sound: a,
+              playSound: b,
+              isPlaying: f,
               text: n,
           });
 }
-function N() {
-    let e = r.useRef(null);
-    return (0, a.jsxs)(o.Kqy, {
-        className: T.container,
+function S() {
+    let e = i.useRef(null);
+    return (0, r.jsxs)(o.Kqy, {
+        className: y.container,
         direction: "vertical",
         align: "center",
         justify: "center",
@@ -117,28 +117,28 @@ function N() {
         },
         ref: e,
         children: [
-            (0, a.jsx)(o.l22, {
+            (0, r.jsx)(o.l22, {
                 size: "custom",
                 width: 48,
                 height: 48,
             }),
-            (0, a.jsxs)(o.Kqy, {
+            (0, r.jsxs)(o.Kqy, {
                 direction: "vertical",
                 align: "center",
                 justify: "center",
                 children: [
-                    (0, a.jsx)(o.Heading, {
-                        className: T.header,
+                    (0, r.jsx)(o.Heading, {
+                        className: y.header,
                         variant: "heading-md/medium",
-                        children: y.intl.string(C.default.h6QNky),
+                        children: C.intl.string(_.default.h6QNky),
                     }),
-                    (0, a.jsx)(o.Text, {
-                        className: T.text,
+                    (0, r.jsx)(o.Text, {
+                        className: y.text,
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        children: y.intl.format(C.default["8N4c58"], {
+                        children: C.intl.format(_.default["8N4c58"], {
                             airhornHook: (t) =>
-                                (0, a.jsx)(S, {
+                                (0, r.jsx)(w, {
                                     containerRef: e,
                                     text: t,
                                 }),

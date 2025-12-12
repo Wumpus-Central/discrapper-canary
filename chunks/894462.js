@@ -1,0 +1,17 @@
+e.exports = {
+    keybindMessage: "keybindMessage__740f2",
+    item: "item__740f2",
+    switch: "switch__740f2",
+    removeKeybindFloating: "removeKeybindFloating__740f2",
+    removeKeybind: "removeKeybind__740f2",
+    keybindGroup: "keybindGroup__740f2",
+    keybindGroupContent: "keybindGroupContent__740f2",
+    defaultKeybindGroup: "defaultKeybindGroup__740f2",
+    defaultKeybind: "defaultKeybind__740f2",
+    defaultKeybindShortcutGroup: "defaultKeybindShortcutGroup__740f2",
+    browserNotice: "browserNotice__740f2",
+    systemServiceUpsell: "systemServiceUpsell__740f2",
+    ctaContainer: "ctaContainer__740f2",
+    warning: "warning__740f2",
+    addButton: "addButton__740f2",
+};

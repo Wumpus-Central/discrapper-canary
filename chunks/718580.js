@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(467721),
     l = n(990547),
     c = n(872175),
@@ -16,7 +16,7 @@ var r = n(54381),
     _ = n(699682),
     m = n(793903),
     h = n(906732),
-    g = n(30929);
+    g = n(430723);
 function E(e, t, n) {
     return (
         t in e
@@ -75,9 +75,9 @@ function v(e, t) {
         r,
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -86,8 +86,8 @@ function S(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let I = {
@@ -104,13 +104,13 @@ function C(e, t) {
         if (0 === n) return "auto";
         let r = "forwards" === t.current,
             i = n > 0,
-            a = !1;
+            o = !1;
         return (
-            i && r && "left" === e && (a = !0),
-            i && !r && "right" === e && (a = !0),
-            !i && r && "right" === e && (a = !0),
-            i || r || "left" !== e || (a = !0),
-            a ? "".concat(100 * Math.abs(n), "%") : "auto"
+            i && r && "left" === e && (o = !0),
+            i && !r && "right" === e && (o = !0),
+            !i && r && "right" === e && (o = !0),
+            i || r || "left" !== e || (o = !0),
+            o ? "".concat(100 * Math.abs(n), "%") : "auto"
         );
     };
 }
@@ -120,7 +120,7 @@ function A(e) {
 function N(e) {
     var t,
         n,
-        a,
+        o,
         { contentDisplay: E, fadeInOut: y = !1 } = e,
         S = v(e, ["contentDisplay", "fadeInOut"]);
     let A = {},
@@ -156,7 +156,7 @@ function N(e) {
             },
             null == R ? "animate-never" : "respect-motion-settings",
         ),
-        B = (0, f.Yzy)(
+        F = (0, f.Yzy)(
             P,
             {
                 value: 0,
@@ -171,7 +171,7 @@ function N(e) {
             },
             null == R ? "animate-never" : "respect-motion-settings",
         ),
-        F = (0, c.Z)(w),
+        B = (0, c.Z)(w),
         { width: V, centered: H = !0 } = S,
         Y =
             u.tq && !S.shouldUseMediaQueriesForSizing
@@ -186,7 +186,7 @@ function N(e) {
                     top: "50%",
                 }
               : { transform: "scale(1.0, 1.0)" },
-        z = u.tq ? {} : { overflow: null != (a = S.overflow) ? a : "hidden" },
+        z = u.tq ? {} : { overflow: null != (o = S.overflow) ? o : "hidden" },
         q = i.useMemo(
             () => ({ width: u.tq && !S.shouldUseMediaQueriesForSizing ? "100%" : V }),
             [S.shouldUseMediaQueriesForSizing, V],
@@ -200,10 +200,10 @@ function N(e) {
             },
             z,
         ),
-        className: o()({ [g.outerAnimatedDivDynamicSizing]: S.shouldUseMediaQueriesForSizing }),
-        children: B((e, t, n) => {
+        className: a()({ [g.outerAnimatedDivDynamicSizing]: S.shouldUseMediaQueriesForSizing }),
+        children: F((e, t, n) => {
             let { key: i } = n,
-                a = { opacity: e.value.to((e) => 1 - Math.abs(e)) };
+                o = { opacity: e.value.to((e) => 1 - Math.abs(e)) };
             return (0, r.jsx)(
                 s.animated.div,
                 {
@@ -218,16 +218,16 @@ function N(e) {
                         q,
                         K,
                         D.enabled
-                            ? a
+                            ? o
                             : b(
                                   {
-                                      left: e.value.to(C("left", F)),
-                                      right: e.value.to(C("right", F)),
+                                      left: e.value.to(C("left", B)),
+                                      right: e.value.to(C("right", B)),
                                   },
-                                  y && a,
+                                  y && o,
                               ),
                     ),
-                    className: o()({ [g.innerAnimatedDivDynamicSizing]: S.shouldUseMediaQueriesForSizing }),
+                    className: a()({ [g.innerAnimatedDivDynamicSizing]: S.shouldUseMediaQueriesForSizing }),
                     children: A[t].children,
                 },
                 i,

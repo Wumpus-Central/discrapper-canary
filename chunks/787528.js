@@ -4,21 +4,21 @@ n.d(t, {
 });
 var r = n(474936),
     i = n(749472),
-    a = n(860691),
-    o = n(110149),
+    o = n(860691),
+    a = n(110149),
     s = n(64649),
     l = n(166870),
     c = n(79914),
     u = n(634071),
     d = n(557821),
-    f = n(396587),
-    p = n(73187),
-    _ = n(150285),
-    m = n(818546),
-    h = n(507804),
-    g = n(987658),
-    E = n(522990),
-    b = n(582971);
+    f = n(111301),
+    p = n(841264),
+    _ = n(678579),
+    m = n(545556),
+    h = n(684868),
+    g = n(971605),
+    E = n(16222),
+    b = n(347842);
 let y = {
         [r.VU.PREMIUM_TENURE_1_MONTH]: {
             standard: i,
@@ -37,11 +37,11 @@ let y = {
             ambient: m.Z,
         },
         [r.VU.PREMIUM_TENURE_24_MONTH]: {
-            standard: a,
+            standard: o,
             ambient: h.Z,
         },
         [r.VU.PREMIUM_TENURE_36_MONTH]: {
-            standard: o,
+            standard: a,
             ambient: g.Z,
         },
         [r.VU.PREMIUM_TENURE_60_MONTH]: {

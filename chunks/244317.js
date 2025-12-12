@@ -11,17 +11,17 @@ var r = n(54381),
     p = n(981631),
     f = n(186901),
     g = n(388032),
-    h = n(123591);
+    h = n(87805);
 function m(e) {
     let { applicationId: t } = e.match.params,
-        [m, b] = i.useState(!1),
-        _ = i.useRef(!1),
+        [m, _] = i.useState(!1),
+        b = i.useRef(!1),
         [E, O] = i.useState(null),
         v = !u.isPlatformEmbedded && !a.tq && !m,
         y = i.useMemo(() => (0, l.Z)(), []);
     return (i.useEffect(() => {
         v &&
-            !0 !== _.current &&
+            !0 !== b.current &&
             (Promise.resolve()
                 .then(n.bind(n, 536285))
                 .then((e) => {
@@ -55,7 +55,7 @@ function m(e) {
                         })
                         .then(() => n.disconnect());
                 }),
-            (_.current = !0));
+            (b.current = !0));
     }, [t, v, y]),
     v && !1 !== E)
         ? !0 === E
@@ -73,7 +73,7 @@ function m(e) {
                       (0, r.jsx)(s.zxk, {
                           variant: "primary",
                           text: g.intl.string(g.t.fIv16B),
-                          onClick: () => b(!0),
+                          onClick: () => _(!0),
                       }),
                   ],
               })

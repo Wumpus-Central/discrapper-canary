@@ -7,116 +7,82 @@ var i = n(54381),
     s = n(422559),
     c = n(601964),
     d = n(485386),
-    p = n(768581),
-    _ = n(700785),
+    _ = n(768581),
+    p = n(700785),
     u = n(84058),
-    f = n(981631),
-    m = n(135899),
-    E = n(388032),
-    O = n(499523);
-function S(e) {
+    m = n(981631),
+    E = n(135899),
+    O = n(388032),
+    S = n(56726);
+function T(e) {
     let { guild: t } = e,
-        n = p.ZP.getGuildIconURL({
+        n = _.ZP.getGuildIconURL({
             id: t.id,
             icon: t.icon,
             size: 120,
         });
     return (0, i.jsxs)(l.xBx, {
-        className: O.header,
+        className: S.header,
         "data-migration-pending": !0,
         children: [
             (0, i.jsx)("div", {
-                className: O.headerIconContainer,
+                className: S.headerIconContainer,
                 children:
                     null != n
                         ? (0, i.jsx)(l.qEK, {
                               src: n,
                               "aria-label": t.name,
                               size: l.EFr.SIZE_120,
-                              className: O.__invalid_guildIcon,
+                              className: S.__invalid_guildIcon,
                           })
                         : (0, i.jsx)("div", {
-                              className: O.acronym,
+                              className: S.acronym,
                               children: (0, c.gM)(t),
                           }),
             }),
             (0, i.jsxs)("div", {
-                className: O.headerText,
+                className: S.headerText,
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: "heading-lg/extrabold",
                         color: "text-strong",
-                        children: E.intl.string(E.t.MatO7M),
+                        children: O.intl.string(O.t.MatO7M),
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: "text-md/normal",
                         color: "text-strong",
-                        children: E.intl.string(E.t.VyPIeu),
+                        children: O.intl.string(O.t.VyPIeu),
                     }),
                 ],
             }),
         ],
     });
 }
-let T = (e) => (e.toString() === f.Plq.MENTION_EVERYONE.toString() ? E.intl.string(E.t.yCpsQw) : (0, s.wt)(e));
-function h(e) {
-    let { permissions: t } = e;
-    return (0, i.jsxs)("div", {
-        className: O.tableContainer,
-        children: [
-            (0, i.jsx)(l.Text, {
-                className: O.tableHeader,
-                variant: "text-xs/semibold",
-                color: "text-muted",
-                children: E.intl.string(E.t["0WZKI4"]),
-            }),
-            (0, i.jsx)("div", {
-                className: O.permissionsTable,
-                children: t.map((e, t) =>
-                    (0, i.jsxs)(
-                        "div",
-                        {
-                            className: O.permissionRow,
-                            children: [
-                                (0, i.jsx)("div", { className: O.bulletWarning }),
-                                (0, i.jsx)(l.Text, {
-                                    variant: "text-sm/normal",
-                                    color: "text-default",
-                                    children: T(e),
-                                }),
-                            ],
-                        },
-                        t,
-                    ),
-                ),
-            }),
-        ],
-    });
-}
+let h = (e) => (e.toString() === m.Plq.MENTION_EVERYONE.toString() ? O.intl.string(O.t.yCpsQw) : (0, s.wt)(e));
 function I(e) {
     let { permissions: t } = e;
     return (0, i.jsxs)("div", {
-        className: O.tableContainer,
+        className: S.tableContainer,
         children: [
             (0, i.jsx)(l.Text, {
-                className: O.tableHeader,
+                className: S.tableHeader,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: E.intl.string(E.t.Yo5qlq),
+                children: O.intl.string(O.t["0WZKI4"]),
             }),
             (0, i.jsx)("div", {
-                className: O.permissionsTable,
+                className: S.permissionsTable,
                 children: t.map((e, t) =>
                     (0, i.jsxs)(
                         "div",
                         {
-                            className: O.permissionRow,
+                            className: S.permissionRow,
                             children: [
-                                (0, i.jsx)("div", { className: O.bullet }),
+                                (0, i.jsx)("div", { className: S.bulletWarning }),
                                 (0, i.jsx)(l.Text, {
                                     variant: "text-sm/normal",
-                                    color: "text-muted",
-                                    children: T(e),
+                                    color: "text-default",
+                                    children: h(e),
                                 }),
                             ],
                         },
@@ -128,31 +94,65 @@ function I(e) {
     });
 }
 function N(e) {
+    let { permissions: t } = e;
+    return (0, i.jsxs)("div", {
+        className: S.tableContainer,
+        children: [
+            (0, i.jsx)(l.Text, {
+                className: S.tableHeader,
+                variant: "text-xs/semibold",
+                color: "text-muted",
+                children: O.intl.string(O.t.Yo5qlq),
+            }),
+            (0, i.jsx)("div", {
+                className: S.permissionsTable,
+                children: t.map((e, t) =>
+                    (0, i.jsxs)(
+                        "div",
+                        {
+                            className: S.permissionRow,
+                            children: [
+                                (0, i.jsx)("div", { className: S.bullet }),
+                                (0, i.jsx)(l.Text, {
+                                    variant: "text-sm/normal",
+                                    color: "text-muted",
+                                    children: h(e),
+                                }),
+                            ],
+                        },
+                        t,
+                    ),
+                ),
+            }),
+        ],
+    });
+}
+function b(e) {
     let { permissions: t } = e,
         { enabledPermissions: n, disabledPermissions: a } = t;
     return (0, i.jsx)(l.hzk, {
         "data-migration-pending": !0,
         children: (0, i.jsxs)("div", {
-            className: O.table,
-            children: [(0, i.jsx)(h, { permissions: n }), (0, i.jsx)(I, { permissions: a })],
+            className: S.table,
+            children: [(0, i.jsx)(I, { permissions: n }), (0, i.jsx)(N, { permissions: a })],
         }),
     });
 }
-function b(e) {
+function f(e) {
     let { onConfirm: t, onDismiss: n } = e;
     return (0, i.jsx)(l.mzw, {
-        className: O.footer,
+        className: S.footer,
         "data-migration-pending": !0,
         children: (0, i.jsxs)(r.hE2, {
             fullWidth: !0,
             children: [
                 (0, i.jsx)(r.zxk, {
                     variant: "secondary",
-                    text: E.intl.string(E.t.gWQZvr),
+                    text: O.intl.string(O.t.gWQZvr),
                     onClick: n,
                 }),
                 (0, i.jsx)(r.zxk, {
-                    text: E.intl.string(E.t.iOSdAW),
+                    text: O.intl.string(O.t.iOSdAW),
                     onClick: t,
                 }),
             ],
@@ -165,8 +165,8 @@ function y(e) {
             let e = [],
                 n = [];
             return (
-                m.$X.map((i) => {
-                    _.oz(i, t) ? e.push(i) : n.push(i);
+                E.$X.map((i) => {
+                    p.oz(i, t) ? e.push(i) : n.push(i);
                 }),
                 {
                     enabledPermissions: e,
@@ -179,7 +179,7 @@ function y(e) {
         var e, n;
         let i = null != t ? d.Z.getEveryoneRole(t) : void 0;
         if (null == i) return;
-        let a = o.Od(i.permissions, m.mu);
+        let a = o.Od(i.permissions, E.mu);
         await (0, u.Gf)(t.id, [
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -226,13 +226,13 @@ function y(e) {
     return (0, i.jsxs)(l.Y0X, {
         transitionState: n,
         size: l.CgR.SMALL,
-        className: O.modal,
+        className: S.modal,
         parentComponent: "DisableRiskyPermsModal",
         "data-migration-pending": !0,
         children: [
-            (0, i.jsx)(S, { guild: t }),
-            (0, i.jsx)(N, { permissions: s }),
-            (0, i.jsx)(b, {
+            (0, i.jsx)(T, { guild: t }),
+            (0, i.jsx)(b, { permissions: s }),
+            (0, i.jsx)(f, {
                 onConfirm: c,
                 onDismiss: () => {
                     r();

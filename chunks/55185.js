@@ -1,23 +1,23 @@
 n.d(t, {
-    I: () => E,
-    NK: () => x,
+    I: () => x,
+    NK: () => C,
 }),
     n(388685);
 var r,
     i = n(54381),
     l = n(473749),
-    a = n(442837),
-    o = n(907862),
+    o = n(442837),
+    a = n(907862),
     s = n(481060),
     c = n(246133),
     u = n(695346),
     d = n(885110),
     f = n(223730),
-    h = n(512929),
+    h = n(254681),
     p = n(388032),
-    g = n(509780),
-    b = n(273701);
-function m(e) {
+    g = n(87587),
+    m = n(354810);
+function b(e) {
     let { closePopout: t } = e;
     return (0, i.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
@@ -33,9 +33,9 @@ function m(e) {
         }),
     });
 }
-function y(e) {
+function _(e) {
     let { showCurrentGame: t, shouldShowStatus: n = !1 } = e,
-        r = (0, a.e7)([d.Z], () => d.Z.getStatus());
+        r = (0, o.e7)([d.Z], () => d.Z.getStatus());
     return (0, i.jsxs)("div", {
         className: g.toggleContainer,
         children: [
@@ -76,7 +76,7 @@ function y(e) {
         ],
     });
 }
-function O(e) {
+function y(e) {
     let { children: t } = e,
         n = (0, l.useRef)(null);
     return (
@@ -91,12 +91,12 @@ function O(e) {
         })
     );
 }
-function v(e) {
+function O(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
-    return (0, i.jsxs)(O, {
+    return (0, i.jsxs)(y, {
         children: [
-            (0, i.jsx)(y, { showCurrentGame: n }),
+            (0, i.jsx)(_, { showCurrentGame: n }),
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
@@ -107,9 +107,9 @@ function v(e) {
         ],
     });
 }
-function j(e) {
+function v(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(O, {
+    return (0, i.jsxs)(y, {
         children: [
             (0, i.jsxs)(s.Kqy, {
                 align: "start",
@@ -143,16 +143,16 @@ function j(e) {
                 color: "text-subtle",
                 children: p.intl.string(h.default.Yl0mh4),
             }),
-            (0, i.jsx)(m, { closePopout: t }),
+            (0, i.jsx)(b, { closePopout: t }),
         ],
     });
 }
-function C(e) {
+function j(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting();
-    return (0, i.jsxs)(O, {
+    return (0, i.jsxs)(y, {
         children: [
-            (0, i.jsx)(y, {
+            (0, i.jsx)(_, {
                 showCurrentGame: n,
                 shouldShowStatus: !0,
             }),
@@ -166,7 +166,7 @@ function C(e) {
         ],
     });
 }
-var x =
+var C =
     (((r = {})[(r.ActivityNux = 0)] = "ActivityNux"),
     (r[(r.StatusNux = 1)] = "StatusNux"),
     (r[(r.ActivityAndStatusNux = 2)] = "ActivityAndStatusNux"),
@@ -174,11 +174,11 @@ var x =
     (r[(r.Status = 4)] = "Status"),
     (r[(r.ActivityAndStatus = 5)] = "ActivityAndStatus"),
     r);
-function E(e) {
-    let { showPopout: t, popoutState: n, handleClose: r, popoutTargetRef: a, children: d } = e,
-        [g, m] = (0, l.useState)(n),
-        y = (0, l.useRef)(null),
-        O = (function (e) {
+function x(e) {
+    let { showPopout: t, popoutState: n, handleClose: r, popoutTargetRef: o, children: d } = e,
+        [g, b] = (0, l.useState)(n),
+        _ = (0, l.useRef)(null),
+        y = (function (e) {
             if (null === e) return null;
             switch (e) {
                 case 0:
@@ -228,37 +228,37 @@ function E(e) {
                 case 3:
                     return {
                         type: "popout",
-                        children: v,
+                        children: O,
                     };
                 case 4:
                     return {
                         type: "popout",
-                        children: j,
+                        children: v,
                     };
                 case 5:
                     return {
                         type: "popout",
-                        children: C,
+                        children: j,
                     };
                 default:
                     return null;
             }
         })(g),
-        x = (0, l.useRef)(t);
+        C = (0, l.useRef)(t);
     if (
         ((0, l.useEffect)(() => {
-            t && !x.current && m(n), t !== x.current && (x.current = t);
+            t && !C.current && b(n), t !== C.current && (C.current = t);
         }, [n, t]),
-        null == O || !t)
+        null == y || !t)
     )
         return d;
-    if ("popover" === O.type) {
-        var E, S;
-        let { action: e, title: t, body: n, textLink: l } = O;
+    if ("popover" === y.type) {
+        var x, E;
+        let { action: e, title: t, body: n, textLink: l } = y;
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(o.J2, {
-                    targetElementRef: a,
+                (0, i.jsx)(a.J2, {
+                    targetElementRef: o,
                     shouldShow: !0,
                     position: "top",
                     align: "center",
@@ -269,10 +269,10 @@ function E(e) {
                     gradientColor: "purple",
                     graphic: {
                         type: "image",
-                        src: b.Z,
+                        src: m.Z,
                     },
                     actions: [
-                        ((E = (function (e) {
+                        ((x = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
@@ -297,7 +297,7 @@ function E(e) {
                             }
                             return e;
                         })({}, e)),
-                        (S = S =
+                        (E = E =
                             {
                                 onClick: (t) => {
                                     var n;
@@ -305,7 +305,7 @@ function E(e) {
                                 },
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(E, Object.getOwnPropertyDescriptors(S))
+                            ? Object.defineProperties(x, Object.getOwnPropertyDescriptors(E))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -313,31 +313,31 @@ function E(e) {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(S)).forEach(function (e) {
-                                  Object.defineProperty(E, e, Object.getOwnPropertyDescriptor(S, e));
+                              })(Object(E)).forEach(function (e) {
+                                  Object.defineProperty(x, e, Object.getOwnPropertyDescriptor(E, e));
                               }),
-                        E),
+                        x),
                     ],
                 }),
                 d,
             ],
         });
     }
-    let { children: I } = O;
+    let { children: S } = y;
     return (0, i.jsx)(s.yRy, {
-        targetElementRef: y,
+        targetElementRef: _,
         shouldShow: !0,
         spacing: 10,
         position: "top",
         align: "left",
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(I, { closePopout: t });
+            return (0, i.jsx)(S, { closePopout: t });
         },
         onRequestClose: r,
         children: () =>
             (0, i.jsx)(s.P3F, {
-                innerRef: y,
+                innerRef: _,
                 onClick: r,
                 children: d,
             }),

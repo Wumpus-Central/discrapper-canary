@@ -2,23 +2,23 @@ n.d(t, { Z: () => v });
 var l = n(54381),
     r = n(473749),
     i = n(120356),
-    a = n.n(i),
-    s = n(481060),
+    s = n.n(i),
+    a = n(481060),
     o = n(135483),
     c = n(171019),
-    d = n(104505),
-    u = n(74538),
+    u = n(104505),
+    d = n(74538),
     p = n(539530),
     m = n(566697),
     g = n(388032),
-    h = n(332502);
+    h = n(24391);
 let x = (e) => {
         var t;
-        let { currentUser: n, nameplate: i, section: o, canUsePremiumCollectibles: u, isSelected: x, onClick: v } = e,
-            b = (0, r.useRef)(null),
-            { isHoveringOrFocusing: f } = (0, d.Z)(b);
-        return (0, l.jsxs)(s.P3F, {
-            innerRef: b,
+        let { currentUser: n, nameplate: i, section: o, canUsePremiumCollectibles: d, isSelected: x, onClick: v } = e,
+            _ = (0, r.useRef)(null),
+            { isHoveringOrFocusing: j } = (0, u.Z)(_);
+        return (0, l.jsxs)(a.P3F, {
+            innerRef: _,
             "aria-label": null != (t = i.label) ? t : g.intl.string(g.t.x5CoXR),
             className: h.nameplateItem,
             onClick: v,
@@ -27,13 +27,13 @@ let x = (e) => {
                     nameplate: i,
                     user: n,
                     showPlaceholderUser: !0,
-                    isHighlighted: f,
+                    isHighlighted: j,
                 }),
-                (0, l.jsx)("div", { className: a()(h.nameplateItemOverlay, { [h.selected]: x }) }),
+                (0, l.jsx)("div", { className: s()(h.nameplateItemOverlay, { [h.selected]: x }) }),
                 (0, l.jsx)(c.Z, {
                     isPurchaseSection: o === p.$0.PURCHASE,
                     isPremiumSection: o === p.$0.PREMIUM_PURCHASE,
-                    canUsePremiumCollectibles: u,
+                    canUsePremiumCollectibles: d,
                     skuId: i.skuId,
                 }),
             ],
@@ -41,17 +41,17 @@ let x = (e) => {
     },
     v = (e) => {
         let { currentUser: t, selectedNameplate: n, guildId: r, onSelect: i, onOpenShop: c } = e,
-            d = u.ZP.canUseCollectibles(t),
+            u = d.ZP.canUseCollectibles(t),
             m = (0, p.ZP)();
-        return (0, l.jsx)(s.u2D, {
+        return (0, l.jsx)(a.u2D, {
             className: h.inventory,
             children: m.map((e) =>
                 (0, l.jsxs)(
-                    s.Kqy,
+                    a.Kqy,
                     {
                         gap: 4,
                         children: [
-                            (0, l.jsx)(s.Text, {
+                            (0, l.jsx)(a.Text, {
                                 variant: "text-md/medium",
                                 children: e.header,
                             }),
@@ -59,15 +59,15 @@ let x = (e) => {
                                 (0, l.jsxs)("div", {
                                     className: h.inventoryControls,
                                     children: [
-                                        (0, l.jsxs)(s.P3F, {
-                                            className: a()(h.inventoryControlsButton, { [h.selected]: null == n }),
+                                        (0, l.jsxs)(a.P3F, {
+                                            className: s()(h.inventoryControlsButton, { [h.selected]: null == n }),
                                             onClick: () => i(null),
                                             children: [
-                                                (0, l.jsx)(s.t6m, {
+                                                (0, l.jsx)(a.t6m, {
                                                     size: "md",
                                                     color: "currentColor",
                                                 }),
-                                                (0, l.jsx)(s.Text, {
+                                                (0, l.jsx)(a.Text, {
                                                     variant: "text-xs/normal",
                                                     children:
                                                         null != r
@@ -76,15 +76,15 @@ let x = (e) => {
                                                 }),
                                             ],
                                         }),
-                                        (0, l.jsxs)(s.P3F, {
+                                        (0, l.jsxs)(a.P3F, {
                                             className: h.inventoryControlsButton,
                                             onClick: c,
                                             children: [
-                                                (0, l.jsx)(s.EOn, {
+                                                (0, l.jsx)(a.EOn, {
                                                     size: "md",
                                                     color: "currentColor",
                                                 }),
-                                                (0, l.jsx)(s.Text, {
+                                                (0, l.jsx)(a.Text, {
                                                     variant: "text-xs/normal",
                                                     children: g.intl.string(g.t.pWG4ze),
                                                 }),
@@ -101,7 +101,7 @@ let x = (e) => {
                                             currentUser: t,
                                             nameplate: r,
                                             section: e.section,
-                                            canUsePremiumCollectibles: d,
+                                            canUsePremiumCollectibles: u,
                                             isSelected: (null == n ? void 0 : n.skuId) === r.skuId,
                                             onClick: () => i(r),
                                         },

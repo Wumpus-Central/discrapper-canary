@@ -1,31 +1,45 @@
-e.exports = {
-    container: "_37e49614b9f110a9-container",
-    avatar: "_37e49614b9f110a9-avatar",
-    redIcon: "_37e49614b9f110a9-redIcon",
-    avatarWrapper: "_37e49614b9f110a9-avatarWrapper",
-    nameTag: "_37e49614b9f110a9-nameTag",
-    canCopy: "_37e49614b9f110a9-canCopy",
-    panelTitleContainer: "_37e49614b9f110a9-panelTitleContainer",
-    panelSubtextContainer: "_37e49614b9f110a9-panelSubtextContainer",
-    withDisplayNameStyles: "_37e49614b9f110a9-withDisplayNameStyles",
-    activityStatusText: "_37e49614b9f110a9-activityStatusText",
-    customStatus: "_37e49614b9f110a9-customStatus",
-    strikethrough: "_37e49614b9f110a9-strikethrough",
-    emoji: "_37e49614b9f110a9-emoji",
-    micButtonParent: "_37e49614b9f110a9-micButtonParent",
-    buttonChevron: "_37e49614b9f110a9-buttonChevron",
-    micButtonWithMenu: "_37e49614b9f110a9-micButtonWithMenu",
-    popoutOpen: "_37e49614b9f110a9-popoutOpen",
-    hasColorGlow: "_37e49614b9f110a9-hasColorGlow",
-    buttonChevronIcon: "_37e49614b9f110a9-buttonChevronIcon",
-    voiceFilterWarning: "_37e49614b9f110a9-voiceFilterWarning",
-    buttons: "_37e49614b9f110a9-buttons",
-    tooltipWithSubtext: "_37e49614b9f110a9-tooltipWithSubtext",
-    containerListenAlongVisible: "_37e49614b9f110a9-containerListenAlongVisible",
-    containerQuestBarVisible: "_37e49614b9f110a9-containerQuestBarVisible",
-    containerRtcOpened: "_37e49614b9f110a9-containerRtcOpened",
-    iconForeground: "_37e49614b9f110a9-iconForeground",
-    plated: "_37e49614b9f110a9-plated",
-    accountButtonsTooltip: "_37e49614b9f110a9-accountButtonsTooltip",
-    accountButtonsTooltipContent: "_37e49614b9f110a9-accountButtonsTooltipContent",
-};
+n.d(t, { Z: () => d }), n(388685);
+var a = n(54381),
+    r = n(473749),
+    i = n(120356),
+    l = n.n(i),
+    s = n(347469),
+    o = n(340669);
+function c(e) {
+    let { resizableNode: t, minHeight: n, onResize: r } = e,
+        i = (0, s.Z)({
+            minDimension: n,
+            resizableDomNodeRef: t,
+            onElementResize: r,
+            orientation: s.y.VERTICAL_TOP,
+            usePointerEvents: !0,
+        });
+    return (0, a.jsx)("div", {
+        onPointerDown: i,
+        className: o.resizeHandle,
+    });
+}
+function d(e) {
+    let { children: t, className: n, initialHeight: i, minHeight: s } = e,
+        d = r.useRef(null),
+        [u, m] = r.useState(i);
+    return (0, a.jsxs)("div", {
+        ref: d,
+        className: o.container,
+        style: {
+            minHeight: s,
+            height: u,
+        },
+        children: [
+            (0, a.jsx)(c, {
+                resizableNode: d,
+                minHeight: s,
+                onResize: m,
+            }),
+            (0, a.jsx)("div", {
+                className: l()(o.subPanelContent, n),
+                children: t,
+            }),
+        ],
+    });
+}

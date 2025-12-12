@@ -9,8 +9,8 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(373793),
-    o = n(705512),
+    o = n(373793),
+    a = n(705512),
     s = n(442837),
     l = n(481060),
     c = n(566620),
@@ -39,10 +39,10 @@ var r = n(54381),
     D = n(515344),
     x = n(967249),
     L = n(388032),
-    j = n(44830);
+    j = n(217648);
 function M(e) {
     var t;
-    let { app: n, linkType: a, activityCustomId: o, activityReferrerId: l, message: h, onView: g } = e,
+    let { app: n, linkType: o, activityCustomId: a, activityReferrerId: l, message: h, onView: g } = e,
         { name: E, bot: O } = (n = (0, R.O)(n)),
         v = null == O ? void 0 : O.id,
         S = (0, _.ye)(n),
@@ -54,7 +54,7 @@ function M(e) {
         { staticBannerSrc: N, videoBannerSrc: x, bannerAspectRatio: j } = (0, w.E)(n),
         M = (0, s.e7)([b.default], () => (null != l ? l : b.default.getId()), [l]),
         { analyticsLocations: G } = (0, f.ZP)(d.Z.APP_MESSAGE_EMBED),
-        { currentChannelId: Z, instanceId: B, isCurrentlyInInstance: F, canLaunchInChannel: V } = (0, C.c)(n.id),
+        { currentChannelId: Z, instanceId: F, isCurrentlyInInstance: B, canLaunchInChannel: V } = (0, C.c)(n.id),
         H = (0, u.Z)(),
         Y = (0, m.ms)({
             context: { type: "contextless" },
@@ -72,9 +72,9 @@ function M(e) {
                     ? (K &&
                           e.push({
                               label:
-                                  null == B
+                                  null == F
                                       ? L.intl.string(L.t.RscU7I)
-                                      : F
+                                      : B
                                         ? L.intl.string(L.t.DPfdsq)
                                         : L.intl.string(L.t.sqe0hj),
                               trackingArea: P.j_.PLAY,
@@ -82,14 +82,14 @@ function M(e) {
                                   (0, c.G6)({
                                       channelId: null != Z ? Z : void 0,
                                       applicationId: n.id,
-                                      isStart: null == B,
+                                      isStart: null == F,
                                       embeddedActivitiesManager: H,
-                                      customId: o,
+                                      customId: a,
                                       referrerId: M,
                                       analyticsLocations: G,
                                   });
                               },
-                              disabled: F,
+                              disabled: B,
                           }),
                       !K &&
                           W &&
@@ -101,7 +101,7 @@ function M(e) {
                                       appId: n.id,
                                       botId: v,
                                       analyticsLocations: G,
-                                      customId: o,
+                                      customId: a,
                                       referrerId: M,
                                   });
                               },
@@ -109,7 +109,7 @@ function M(e) {
                     : null != q && e.push(q),
                 e
             );
-        }, [K, W, B, F, Z, n.id, H, o, M, G, S, q, v]),
+        }, [K, W, F, B, Z, n.id, H, a, M, G, S, q, v]),
         X = S ? (0, r.jsx)(U, { app: n }) : (0, r.jsx)(k, { app: n });
     return (0, r.jsx)(A.W, {
         title: E,
@@ -123,9 +123,9 @@ function M(e) {
         onClickContent: z,
         trackingConfig: {
             id: n.id,
-            linkType: a,
+            linkType: o,
             referrerId: M,
-            activityCustomId: o,
+            activityCustomId: a,
             onView: g,
             guildId: null == (t = y.Z.getChannel(h.channel_id)) ? void 0 : t.guild_id,
             channelId: h.channel_id,
@@ -134,7 +134,7 @@ function M(e) {
     });
 }
 function k(e) {
-    var t, n, o;
+    var t, n, a;
     let { app: c } = e,
         u =
             (0, T.Eb)({
@@ -143,7 +143,7 @@ function k(e) {
                 integrationTypesConfig: c.integrationTypesConfig,
             }) &&
             null != c.integrationTypesConfig &&
-            a.Y.GUILD_INSTALL in c.integrationTypesConfig,
+            o.Y.GUILD_INSTALL in c.integrationTypesConfig,
         d = (0, s.e7)([E.default], () => E.default.locale, []),
         f = i.useMemo(() => {
             var e, t;
@@ -155,7 +155,7 @@ function k(e) {
                 r = null != (t = null == (e = c.directoryEntry) ? void 0 : e.guild_count) ? t : 0;
             return 0 === r ? null : L.intl.format(L.t["6IW6Wi"], { guildCount: n.format(r) });
         }, [null == (t = c.directoryEntry) ? void 0 : t.guild_count, u, d]),
-        p = null == (o = c.categories) || null == (n = o.at(0)) ? void 0 : n.name;
+        p = null == (a = c.categories) || null == (n = a.at(0)) ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != p &&
@@ -184,7 +184,7 @@ function k(e) {
 }
 function U(e) {
     let { app: t } = e,
-        { tags: n, maxParticipants: a = 0 } = t,
+        { tags: n, maxParticipants: o = 0 } = t,
         c = (0, s.e7)([v.Z], () => {
             var e;
             return null != (e = v.Z.getGuildId()) ? e : void 0;
@@ -207,7 +207,7 @@ function U(e) {
                     guildId: c,
                     activityText: L.intl.formatToPlainString(L.t["IJa+46"], { count: d.length }),
                 });
-            if (u.some((e) => (0, h.ig)(e) === o.o.GLOBAL))
+            if (u.some((e) => (0, h.ig)(e) === a.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(l.YqE, {
@@ -217,7 +217,7 @@ function U(e) {
                         L.intl.string(L.t.TsWCdW),
                     ],
                 });
-            let e = a > 0 ? L.intl.format(L.t.z8EAJW, { count: a }) : L.intl.string(L.t.RjceQU);
+            let e = o > 0 ? L.intl.format(L.t.z8EAJW, { count: o }) : L.intl.string(L.t.RjceQU);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(l.tBG, {
@@ -227,7 +227,7 @@ function U(e) {
                     e,
                 ],
             });
-        }, [u, d, c, a]);
+        }, [u, d, c, o]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n.length > 0 &&

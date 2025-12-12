@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(55160),
     l = n(532772),
     c = n(681715),
@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(443603),
     _ = n(957825),
     m = n(388032),
-    h = n(72775);
+    h = n(564355);
 function g(e, t, n) {
     return (
         t in e
@@ -66,20 +66,20 @@ function y(e, t) {
     );
 }
 function O(e, t) {
-    let { disabled: n, type: a, channel: g } = e,
+    let { disabled: n, type: o, channel: g } = e,
         [b, O, v, S] = (0, d.Iu)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], s.X),
         I = !1,
-        T = b === _.X1.STICKER && S === a && v === g.id,
+        T = b === _.X1.STICKER && S === o && v === g.id,
         C = !1,
         A = i.useCallback(() => {
-            (0, d.RO)(_.X1.STICKER, a, g.id);
-        }, [a, g.id]),
+            (0, d.RO)(_.X1.STICKER, o, g.id);
+        }, [o, g.id]),
         { Component: N, events: P, play: R } = (0, l.z)(),
         w = (0, f.v)(u.U);
     return n
         ? null
         : (0, r.jsx)("div", {
-              className: o()(_.CT, h.buttonContainer),
+              className: a()(_.CT, h.buttonContainer),
               ref: t,
               children: (0, r.jsx)(c.u, {
                   shouldShow: null != w,
@@ -87,7 +87,7 @@ function O(e, t) {
                   keyboardShortcut: w,
                   children: (0, r.jsx)(
                       p.Z,
-                      y(E({ className: o()(h.button, h.stickerButton) }, P), {
+                      y(E({ className: a()(h.button, h.stickerButton) }, P), {
                           onClick: () => {
                               A(), R();
                           },

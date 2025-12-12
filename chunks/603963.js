@@ -6,16 +6,16 @@ n.d(t, {
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    a = n(921801),
-    o = n(22354);
+    o = n(921801),
+    a = n(198840);
 function s(e) {
-    let { children: t, title: n, description: a } = e;
+    let { children: t, title: n, description: o } = e;
     return (0, r.jsxs)("div", {
-        className: o.category,
+        className: a.category,
         children: [
-            (null != n || null != a) &&
+            (null != n || null != o) &&
                 (0, r.jsxs)("div", {
-                    className: o.categoryHeader,
+                    className: a.categoryHeader,
                     children: [
                         null != n &&
                             (0, r.jsx)(i.Heading, {
@@ -23,26 +23,26 @@ function s(e) {
                                 color: "text-strong",
                                 children: n,
                             }),
-                        null != a &&
+                        null != o &&
                             (0, r.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: a,
+                                children: o,
                             }),
                     ],
                 }),
             (0, r.jsx)("div", {
-                className: o.categoryContent,
+                className: a.categoryContent,
                 children: t,
             }),
-            (0, r.jsx)(i.izJ, { className: o.categoryDivider }),
+            (0, r.jsx)(i.izJ, { className: a.categoryDivider }),
         ],
     });
 }
 function l(e) {
-    let { children: t, title: n, description: i, webSetting: o } = e;
-    return (0, r.jsx)(a.F, {
-        setting: o,
+    let { children: t, title: n, description: i, webSetting: a } = e;
+    return (0, r.jsx)(o.F, {
+        setting: a,
         children: (0, r.jsx)(s, {
             title: n,
             description: i,

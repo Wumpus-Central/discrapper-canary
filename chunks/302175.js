@@ -1,8 +1,8 @@
-n.d(t, { Z: () => B }), n(953529), n(388685);
+n.d(t, { Z: () => F }), n(953529), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(467721),
     l = n(907331),
     c = n(793030),
@@ -23,10 +23,10 @@ var r = n(54381),
     I = n(619733),
     T = n(535396),
     C = n(981631),
-    A = n(44542),
+    A = n(5238),
     N = n(388032),
-    P = n(887143),
-    R = n(918820);
+    P = n(765179),
+    R = n(630564);
 function w(e, t, n) {
     return (
         t in e
@@ -83,7 +83,7 @@ function j(e) {
     let {
             guildId: t,
             activeStatus: n,
-            title: a,
+            title: o,
             description: c,
             cost: h,
             costDecorator: g,
@@ -99,7 +99,7 @@ function j(e) {
         [M, k] = i.useState(!1),
         [U, G] = i.useState(!1),
         Z = U,
-        B = i.useCallback(() => {
+        F = i.useCallback(() => {
             let e = m.Z.getGuild(t);
             null != e &&
                 (0, p.u)({
@@ -112,7 +112,7 @@ function j(e) {
                     guild: e,
                 });
         }, [t, w]),
-        F = i.useCallback(() => {
+        B = i.useCallback(() => {
             v(), (0, S.Z)(t, d.Z.GUILD_POWERUPS_MARKETING, b);
         }, [t, b, v]),
         V = {
@@ -141,7 +141,7 @@ function j(e) {
         }, []),
         z = (0, l.O)(K);
     return (0, r.jsxs)("div", {
-        className: o()(R.topPerksCard, R.animatedTopPerksCard, P.powerupCard, { [R.animate]: M }),
+        className: a()(R.topPerksCard, R.animatedTopPerksCard, P.powerupCard, { [R.animate]: M }),
         onMouseEnter: () => {
             G(!0), null == I || I(!0);
         },
@@ -156,7 +156,7 @@ function j(e) {
             (0, r.jsx)("div", {
                 className: R.topPerksCardImageWrapper,
                 children: (0, r.jsx)(s.animated.img, {
-                    className: o()(R.topPerksCardImage, P.image),
+                    className: a()(R.topPerksCardImage, P.image),
                     src: E,
                     alt: "",
                     style: H,
@@ -164,10 +164,10 @@ function j(e) {
             }),
             (0, r.jsxs)(s.animated.div, {
                 style: L(D({}, Y), { transform: Y.y.to((e) => "translateY(".concat(e, "px)")) }),
-                className: o()(R.contentContainer, P.contentContainer),
+                className: a()(R.contentContainer, P.contentContainer),
                 children: [
                     (0, r.jsx)(_.xm, {
-                        heading: a,
+                        heading: o,
                         description: c,
                         label: N.intl.formatToPlainString(A.default.QOacIS, {
                             quantity: h,
@@ -184,7 +184,7 @@ function j(e) {
                                 children: (0, r.jsx)(u.Button, {
                                     variant: "primary",
                                     text: N.intl.string(N.t.oPAx73),
-                                    onClick: B,
+                                    onClick: F,
                                     fullWidth: !0,
                                 }),
                             }),
@@ -194,7 +194,7 @@ function j(e) {
                                     children: (0, r.jsx)(u.Button, {
                                         variant: "secondary",
                                         text: N.intl.string(N.t.GoCQxU),
-                                        onClick: F,
+                                        onClick: B,
                                         fullWidth: !0,
                                     }),
                                 }),
@@ -212,7 +212,7 @@ function j(e) {
     });
 }
 function M(e) {
-    let { guildId: t, powerup: n, costDecorator: a, isNew: o, onClose: s } = e,
+    let { guildId: t, powerup: n, costDecorator: o, isNew: a, onClose: s } = e,
         [l, c] = i.useState(!1),
         u = (0, v.ZP)(t, n).type,
         d = (0, b.Z)(n, l);
@@ -224,8 +224,8 @@ function M(e) {
         cost: n.cost,
         imageUrl: d,
         skuId: n.skuId,
-        costDecorator: a,
-        isNew: o,
+        costDecorator: o,
+        isNew: a,
         onClose: s,
         onHover: (e) => c(e),
     });
@@ -234,13 +234,13 @@ let k = 3,
     U = new Set([I.fj]),
     G = new Map([[I.fj, "+"]]),
     Z = i.forwardRef((e, t) => {
-        let { guild: n, onClose: a } = e;
+        let { guild: n, onClose: o } = e;
         i.useEffect(() => {
             E.Z.shouldFetchCatalogForGuild(n.id) && (0, g.Sn)(n.id),
                 E.Z.shouldFetchPowerupsForGuild(n.id) && (0, g.BN)(n.id);
         }, [n.id]);
-        let o = (0, O.Z)(n.id),
-            s = (null != o ? o : []).slice(0, k);
+        let a = (0, O.Z)(n.id),
+            s = (null != a ? a : []).slice(0, k);
         return 0 === s.length
             ? null
             : (0, r.jsxs)("div", {
@@ -267,7 +267,7 @@ let k = 3,
                                       powerup: e,
                                       costDecorator: G.get(e.skuId),
                                       isNew: U.has(e.skuId),
-                                      onClose: a,
+                                      onClose: o,
                                   },
                                   "guild-powerup-marketing-".concat(e.skuId),
                               ),
@@ -277,4 +277,4 @@ let k = 3,
               });
     });
 Z.displayName = "GuildPowerupsMarketingPowerupCards";
-let B = Z;
+let F = Z;

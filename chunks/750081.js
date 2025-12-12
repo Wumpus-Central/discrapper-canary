@@ -1,8 +1,8 @@
 n.r(t), n(65234), n(111804), n(490233), n(97749), n(388685), n(358797);
 var r,
     i,
-    a,
     o,
+    a,
     s,
     l = n(54381);
 n(92138), n(473749);
@@ -31,19 +31,19 @@ var c = n(748721),
     w = n(896361),
     D = n(746106),
     x = n(177692);
-n(678659);
+n(986484);
 var L = n(857192),
-    j = n(210761),
+    j = n(113752),
     M = n(44163),
     k = n(710845),
     U = n(70956),
     G = n(378799),
     Z = n(758731);
-L.default.cssDebuggingEnabled && n.e("93323").then(n.t.bind(n, 76671, 19)), (0, G.s5)();
-let B = 5 * U.Z.Millis.MINUTE,
-    F = document.getElementById("app-mount");
-d()(null != F, "Could not find app-mount"), (F.className = __OVERLAY__ ? "" : j.appMount);
-let V = (0, c.createRoot)(F),
+L.default.cssDebuggingEnabled && n.e("95666").then(n.bind(n, 754261)), (0, G.s5)();
+let F = 5 * U.Z.Millis.MINUTE,
+    B = document.getElementById("app-mount");
+d()(null != B, "Could not find app-mount"), (B.className = __OVERLAY__ ? "" : j.appMount);
+let V = (0, c.createRoot)(B),
     H = {
         "/oauth2/authorize": I.Z,
         "/one-time": Z.Z,
@@ -62,8 +62,8 @@ if (null != R.Z) {
             });
         }),
         v.ZP.appLoaded();
-    let e = null == (i = (a = R.Z.remoteApp).getVersion) ? void 0 : i.call(a),
-        t = null == (o = (s = R.Z.remoteApp).getBuildNumber) ? void 0 : o.call(s),
+    let e = null == (i = (o = R.Z.remoteApp).getVersion) ? void 0 : i.call(o),
+        t = null == (a = (s = R.Z.remoteApp).getBuildNumber) ? void 0 : a.call(s),
         n = {};
     null != R.Z.remoteApp.getModuleVersions && (n = R.Z.remoteApp.getModuleVersions()),
         b.Z.setExtra({
@@ -86,7 +86,7 @@ else {
     if ((document.addEventListener("scroll", (e) => e.preventDefault()), T.isPlatformEmbedded)) {
         (window.onbeforeunload = () => v.ZP.beforeUnload()),
             v.ZP.on("HELP_OPEN", () => window.open(y.Z.getCommunityURL()));
-        let e = new P.sW(B, () => v.ZP.purgeMemory());
+        let e = new P.sW(F, () => v.ZP.purgeMemory());
         v.ZP.on("MAIN_WINDOW_BLUR", () => {
             e.delay(), v.ZP.setFocused(!1), (0, A.T_)(window, !1);
         }),

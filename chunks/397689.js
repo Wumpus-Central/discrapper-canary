@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(906732),
@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(445924),
     _ = n(654904),
     m = n(486324),
-    h = n(802031);
+    h = n(86698);
 function g(e, t, n) {
     return (
         t in e
@@ -70,7 +70,7 @@ function v(e) {
     let {
             user: t,
             guild: n,
-            displayProfile: a,
+            displayProfile: o,
             canUsePremiumCustomization: f,
             previewAvatar: g,
             previewAvatarDecorationSrc: b,
@@ -84,11 +84,11 @@ function v(e) {
         N = i.useRef(null),
         { analyticsLocations: P, newestAnalyticsLocation: R } = (0, c.ZP)(),
         w = (0, s.e7)([d.Z], () => d.Z.getStatus(t.id)),
-        D = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
+        D = null == n || (null == o ? void 0 : o.canUsePremiumProfileCustomization) || f,
         x = (0, r.jsx)(O, {
             src: g,
             avatarDecoration: b,
-            imageClassName: o()(I, { [h.overlay]: !T }),
+            imageClassName: a()(I, { [h.overlay]: !T }),
             size: l.EFr.SIZE_80,
             "aria-label": t.username,
             status: w,
@@ -128,7 +128,7 @@ function v(e) {
                         l.P3F,
                         y(E({}, e), {
                             innerRef: N,
-                            className: o()(h.avatar, h.clickable),
+                            className: a()(h.avatar, h.clickable),
                             children: [
                                 x,
                                 (0, r.jsx)(l.vdY, {
@@ -144,7 +144,7 @@ function v(e) {
             })
           : (0, r.jsxs)(l.P3F, {
                 onClick: A,
-                className: o()(h.avatar, h.clickable),
+                className: a()(h.avatar, h.clickable),
                 children: [
                     x,
                     (0, r.jsx)(l.SrA, {

@@ -10,20 +10,20 @@ var r = n(120356),
     u = n(657305),
     d = n(835473),
     p = n(12498),
-    f = n(933557),
-    h = n(471445),
+    h = n(933557),
+    f = n(471445),
     m = n(925329),
     g = n(554747),
     b = n(854698),
     C = n(897669),
     y = n(665149),
     v = n(984370),
-    O = n(910611),
-    x = n(728285),
-    E = n(454585),
-    j = n(801604),
-    S = n(210975),
-    _ = n(809244),
+    _ = n(910611),
+    O = n(728285),
+    x = n(454585),
+    E = n(801604),
+    j = n(210975),
+    S = n(809244),
     P = n(618158),
     I = n(358221),
     Z = n(362721),
@@ -35,11 +35,11 @@ var r = n(120356),
     R = n(981631),
     L = n(231338),
     D = n(388032),
-    k = n(303962),
-    U = n(960324);
+    k = n(39219),
+    U = n(430864);
 function V(e) {
     let { focusedParticipant: t, channel: n } = e,
-        r = (0, x.bp)(),
+        r = (0, O.bp)(),
         l = (0, a.e7)([I.Z], () => I.Z.getLayout(n.id, r));
     return (0, i.jsx)(P.Z, {
         children: (0, i.jsx)(A.Z, {
@@ -53,7 +53,7 @@ function V(e) {
 }
 function F(e) {
     let { user: t, channel: n, stream: r, color: l } = e,
-        a = (0, _.Z)(n, t, r);
+        a = (0, S.Z)(n, t, r);
     return null == t || null == r
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -142,9 +142,9 @@ function H(e) {
             }),
             [t.id],
         ),
-        C = (0, f.ZP)(t),
-        x = (0, h.KS)(t),
-        [_] = (0, d.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
+        C = (0, h.ZP)(t),
+        O = (0, f.KS)(t),
+        [S] = (0, d.Z)((null == b ? void 0 : b.type) === M.fO.ACTIVITY ? [b.applicationId] : []),
         P = D.intl.string(D.t.BVZqJl);
     t.isDM() ? (P = D.intl.string(D.t.jN2DfZ)) : t.isGroupDM() && (P = D.intl.string(D.t["e5y+gm"]));
     let T = (0, a.e7)([p.Z], () => p.Z.getChannelStatus(t)),
@@ -203,7 +203,7 @@ function H(e) {
                           (0, i.jsx)(s.Text, {
                               variant: "text-xs/normal",
                               className: l()(k.channelStatus, U.markup, { [k.hoverable]: R }),
-                              children: E.Z.parseVoiceChannelStatus(T, !0, { channelId: t.id }),
+                              children: x.Z.parseVoiceChannelStatus(T, !0, { channelId: t.id }),
                           }),
                           R &&
                               (0, i.jsx)(s.vdY, {
@@ -217,7 +217,7 @@ function H(e) {
                   }),
               })
             : null,
-        F = (0, S.m$)({ channelId: t.id });
+        F = (0, j.m$)({ channelId: t.id });
     return (0, i.jsxs)("div", {
         className: k.subtitleContainer,
         children: [
@@ -243,9 +243,9 @@ function H(e) {
                                 wrapperClassName: k.title,
                                 children: (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        null != x
+                                        null != O
                                             ? (0, i.jsx)(y.ZP.ChannelIcon, {
-                                                  icon: x,
+                                                  icon: O,
                                                   "aria-label": P,
                                               })
                                             : null,
@@ -263,19 +263,19 @@ function H(e) {
                                     ],
                                 }),
                             }),
-                            (0, i.jsx)(O.TS, {
+                            (0, i.jsx)(_.TS, {
                                 channel: t,
                                 guild: r,
                             }),
                             (0, i.jsx)(B, {
-                                focusedApplication: _,
+                                focusedApplication: S,
                                 focusedParticipant: b,
                                 channel: t,
                             }),
                         ],
                     }),
             }),
-            (0, i.jsx)(j.Z, { channelId: t.id }),
+            (0, i.jsx)(E.Z, { channelId: t.id }),
         ],
     });
 }

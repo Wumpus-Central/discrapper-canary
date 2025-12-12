@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(388685), n(415506);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(990169),
     c = n(249458),
@@ -73,9 +73,9 @@ function S(e, t) {
         r,
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -84,17 +84,17 @@ function I(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-n(626105);
+n(54453);
 let T = __OVERLAY__ ? () => (0, s.e7)([_.default], () => _.default.isInstanceFocused()) : g.n;
 function C(e) {
     var t,
         n,
         {
-            src: a,
+            src: o,
             alt: s,
             className: c,
             emojiId: f,
@@ -136,14 +136,14 @@ function C(e) {
     let [M, k] = i.useState(!1),
         [U, G] = i.useState(void 0),
         Z = i.useRef(void 0),
-        { triggerAnimation: B, untriggerAnimation: F } = i.useContext(u.Rm),
+        { triggerAnimation: F, untriggerAnimation: B } = i.useContext(u.Rm),
         V = p.Yk.useSetting(),
         H = T(),
         Y = null == w ? V : w,
         W = E.kV[I],
         K = i.useRef(null),
         z = i.useMemo(() => {
-            if (null != a) return a;
+            if (null != o) return o;
             if (null != f) {
                 let e = !0 === A && Y;
                 return m.ZP.getEmojiURL({
@@ -154,7 +154,7 @@ function C(e) {
             }
             if (null != _) return h.ZP.getURL(_);
             throw Error("Unknown Src for Emoji");
-        }, [O, Y, f, _, W, H, M, C, A, a]),
+        }, [O, Y, f, _, W, H, M, C, A, o]),
         q = i.useCallback(() => {
             null != z &&
                 (Z.current = (0, d.po)(z, (e) => {
@@ -163,21 +163,21 @@ function C(e) {
         }, [z]),
         Q = i.useCallback(
             (e) => {
-                O && k(!0), null == f && B(_), null == N || N(e);
+                O && k(!0), null == f && F(_), null == N || N(e);
             },
-            [O, _, N, B, f],
+            [O, _, N, F, f],
         ),
         X = i.useCallback(
             (e) => {
-                O && k(!1), null == f && F(_), null == P || P(e);
+                O && k(!1), null == f && B(_), null == P || P(e);
             },
-            [O, f, _, P, F],
+            [O, f, _, P, B],
         ),
         J = i.useMemo(() => {
             let e = null != f && "" !== f ? { "data-id": f } : { "data-name": _ };
             return y(
                 v(y({}, j), {
-                    className: o()("emoji", c, { jumboable: "jumbo" === I }),
+                    className: a()("emoji", c, { jumboable: "jumbo" === I }),
                     onError: q,
                     onMouseEnter: Q,
                     onMouseLeave: X,
@@ -205,7 +205,7 @@ function C(e) {
               "span",
               v(y({}, J), {
                   ref: $,
-                  className: o()("emoji", "emoji-text"),
+                  className: a()("emoji", "emoji-text"),
                   children: null != L ? L : _,
               }),
           )
@@ -249,13 +249,13 @@ function C(e) {
 }
 function A(e) {
     let { useThoughtfullyAnimated: t } = i.useContext(f.q),
-        { animate: n, registerRef: a } = t(),
-        { disableAnimations: o } = i.useContext(c.G);
+        { animate: n, registerRef: o } = t(),
+        { disableAnimations: a } = i.useContext(c.G);
     return (0, r.jsx)(
         C,
         v(y({}, e), {
-            registerAnimatedElementRef: a,
-            shouldAnimate: n && !o,
+            registerAnimatedElementRef: o,
+            shouldAnimate: n && !a,
         }),
     );
 }

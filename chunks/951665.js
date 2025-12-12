@@ -2,11 +2,11 @@ n.d(t, { Z: () => g }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(481060),
-    a = n(457414),
-    s = n(311173),
+    s = n(457414),
+    a = n(311173),
     o = n(388032),
-    c = n(683708);
-function d(e) {
+    c = n(97247);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +31,7 @@ function d(e) {
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,22 +52,22 @@ function u(e, t) {
 function g(e) {
     var t;
     let { rule: n, onChangeRule: g, collapsed: m = !1 } = e,
-        [f, p] = i.useState(!m),
-        b = i.useCallback(() => {
-            p(!f);
-        }, [f, p]),
-        h = i.useCallback(
+        [p, f] = i.useState(!m),
+        h = i.useCallback(() => {
+            f(!p);
+        }, [p, f]),
+        x = i.useCallback(
             (e) => {
-                g(u(d({}, n), { triggerMetadata: u(d({}, n.triggerMetadata), { regexPatterns: e }) }));
+                g(d(u({}, n), { triggerMetadata: d(u({}, n.triggerMetadata), { regexPatterns: e }) }));
             },
             [g, n],
         );
-    return (0, a.S)(n.triggerType)
+    return (0, s.S)(n.triggerType)
         ? (0, r.jsx)(l.zF9, {
-              isExpanded: f,
-              collapsibleContent: (0, r.jsx)(s.Z, {
+              isExpanded: p,
+              collapsibleContent: (0, r.jsx)(a.Z, {
                   rule: n,
-                  onChangeText: h,
+                  onChangeText: x,
                   className: c.textAreaContainer,
                   initialValue: null == (t = n.triggerMetadata) ? void 0 : t.regexPatterns,
               }),
@@ -76,7 +76,7 @@ function g(e) {
                   let { onClick: t } = e;
                   return (0, r.jsx)(l.P3F, {
                       onClick: (e) => {
-                          b(), t(e);
+                          h(), t(e);
                       },
                       children: (0, r.jsxs)("div", {
                           className: c.header,
@@ -85,7 +85,7 @@ function g(e) {
                                   variant: "text-sm/medium",
                                   children: o.intl.string(o.t["dnunm+"]),
                               }),
-                              f
+                              p
                                   ? (0, r.jsx)(l.u04, {
                                         size: "md",
                                         color: "currentColor",

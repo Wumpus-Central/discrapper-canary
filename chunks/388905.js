@@ -20,8 +20,8 @@ n.d(t, {
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(43267),
     l = n(905656),
     c = n(600164),
@@ -31,22 +31,22 @@ var i = n(120356),
     p = n(63063),
     _ = n(981631),
     m = n(388032),
-    h = n(356897);
-let g = o.qEK;
+    h = n(28731);
+let g = a.qEK;
 null == g && (g = () => null);
 let E = (e) => {
         let { className: t, id: n, children: i, variant: s = "heading-xl/semibold" } = e;
-        return (0, r.jsx)(o.Heading, {
+        return (0, r.jsx)(a.Heading, {
             variant: s,
             color: "text-strong",
-            className: a()(h.title, t),
+            className: o()(h.title, t),
             id: n,
             children: i,
         });
     },
     b = (e) => {
         let { className: t, children: n } = e;
-        return (0, r.jsx)(o.Text, {
+        return (0, r.jsx)(a.Text, {
             variant: "text-md/normal",
             color: "text-default",
             className: t,
@@ -58,7 +58,7 @@ let E = (e) => {
         return (0, r.jsx)("img", {
             alt: "",
             src: n,
-            className: a()(h.image, t),
+            className: o()(h.image, t),
         });
     },
     O = (e) => {
@@ -66,18 +66,18 @@ let E = (e) => {
         return (0, r.jsx)(g, {
             src: n,
             size: i,
-            className: a()(h.inviteLargeIcon, t),
+            className: o()(h.inviteLargeIcon, t),
             "aria-hidden": !0,
         });
     },
     v = (e) => {
-        let { guild: t, size: n, animate: i = !1, className: a } = e;
+        let { guild: t, size: n, animate: i = !1, className: o } = e;
         return (0, r.jsx)(d.Z, {
             active: !0,
             guild: t,
             size: n,
             animate: i,
-            className: a,
+            className: o,
         });
     };
 v.Sizes = d.Z.Sizes;
@@ -86,17 +86,17 @@ let S = (e) => {
     return (0, r.jsx)(g, {
         src: (0, s.x)(n),
         size: i,
-        className: a()(h.inviteIcon, t),
+        className: o()(h.inviteIcon, t),
         "aria-hidden": !0,
     });
 };
-S.Sizes = o.EFr;
+S.Sizes = a.EFr;
 let I = (e) => {
         let {
                 label: t,
                 error: n,
                 placeholder: i,
-                value: a,
+                value: o,
                 className: s,
                 setRef: l,
                 type: c = "text",
@@ -112,10 +112,10 @@ let I = (e) => {
                 onBlur: y,
             } = e,
             O = (0, u.Dt)(),
-            v = (0, r.jsx)(o.oil, {
+            v = (0, r.jsx)(a.oil, {
                 name: h,
                 type: c,
-                value: a,
+                value: o,
                 inputRef: l,
                 placeholder: i,
                 "aria-label": t,
@@ -142,15 +142,15 @@ let I = (e) => {
     T = (e) => {
         let { className: t, children: n } = e;
         return (0, r.jsx)("div", {
-            className: a()(h.block, t),
+            className: o()(h.block, t),
             children: n,
         });
     },
     C = (e) => {
         let { className: t, children: n } = e;
-        return (0, r.jsx)(o.Text, {
+        return (0, r.jsx)(a.Text, {
             variant: "text-xs/normal",
-            className: a()(h.subText, t),
+            className: o()(h.subText, t),
             children: n,
         });
     },
@@ -164,7 +164,7 @@ let I = (e) => {
         });
     },
     N = (e) =>
-        (0, r.jsx)(o.Text, {
+        (0, r.jsx)(a.Text, {
             tag: "span",
             className: null == e ? void 0 : e.className,
             variant: "text-sm/normal",
@@ -173,13 +173,13 @@ let I = (e) => {
         }),
     P = (e) => {
         let t,
-            { online: n, total: i, className: o, flat: s, textClassName: l, renderText: u = N } = e;
+            { online: n, total: i, className: a, flat: s, textClassName: l, renderText: u = N } = e;
         return null == i
             ? null
             : (null != n &&
                   n > 0 &&
                   (t = (0, r.jsxs)("div", {
-                      className: a()(h.pill, h.pillOnline, s && h.pillFlat),
+                      className: o()(h.pill, h.pillOnline, s && h.pillFlat),
                       children: [
                           (0, r.jsx)("i", { className: h.pillIconOnline }),
                           u({
@@ -190,11 +190,11 @@ let I = (e) => {
                   })),
               (0, r.jsxs)(c.Z, {
                   justify: c.Z.Justify.CENTER,
-                  className: o,
+                  className: a,
                   children: [
                       t,
                       (0, r.jsxs)("div", {
-                          className: a()(h.pill, s && h.pillFlat),
+                          className: o()(h.pill, s && h.pillFlat),
                           children: [
                               (0, r.jsx)("i", { className: h.pillIconTotal }),
                               u({
@@ -213,7 +213,7 @@ let I = (e) => {
             : (0, r.jsxs)("div", {
                   className: h.joiningAs,
                   children: [
-                      (0, r.jsx)(o.Text, {
+                      (0, r.jsx)(a.Text, {
                           tag: "span",
                           variant: "text-md/normal",
                           color: "text-default",
@@ -222,10 +222,10 @@ let I = (e) => {
                       (0, r.jsx)(O, {
                           className: h.joiningAsAvatar,
                           src: t.getAvatarURL(void 0, 24),
-                          size: o.EFr.SIZE_24,
+                          size: a.EFr.SIZE_24,
                           "aria-label": t.username,
                       }),
-                      (0, r.jsx)(o.Text, {
+                      (0, r.jsx)(a.Text, {
                           className: h.joiningAsUsername,
                           tag: "span",
                           variant: "text-md/semibold",
@@ -240,7 +240,7 @@ let I = (e) => {
         return (0, r.jsxs)(T, {
             className: t,
             children: [
-                (0, r.jsx)(o.Button, {
+                (0, r.jsx)(a.Button, {
                     text: m.intl.format(m.t.JoS1i3, { platform: (0, f.DW)() }),
                     variant: "secondary",
                     fullWidth: !0,
@@ -266,7 +266,7 @@ let I = (e) => {
             theme: u = _.BRd.DARK,
             style: d,
         } = e;
-        return (0, r.jsx)(o.f6W, {
+        return (0, r.jsx)(a.f6W, {
             theme: u,
             disableAdaptiveTheme: !0,
             children: (e) =>
@@ -274,11 +274,11 @@ let I = (e) => {
                     "data-theme": u,
                     onSubmit: s,
                     style: d,
-                    className: a()(c ? h.authBoxExpanded : h.authBox, e, t),
+                    className: o()(c ? h.authBoxExpanded : h.authBox, e, t),
                     children: [
                         (0, r.jsx)("div", { className: h.discordLogo }),
                         (0, r.jsx)("div", {
-                            className: a()(h.centeringWrapper, n),
+                            className: o()(h.centeringWrapper, n),
                             children: l,
                         }),
                     ],

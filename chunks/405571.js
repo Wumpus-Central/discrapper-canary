@@ -1,1 +1,1 @@
-e.exports = "/assets/22bb7108ad1c466f.webp";
+e.exports = n.p + "22bb7108ad1c466f.webp";

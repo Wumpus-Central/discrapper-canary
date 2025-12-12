@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(570140),
@@ -16,12 +16,12 @@ var r = n(54381),
     p = n(585483),
     _ = n(402426),
     m = n(981631),
-    h = n(872050),
-    g = n(77517),
-    E = n(493969);
+    h = n(839249),
+    g = n(293914),
+    E = n(503019);
 let b = 1000,
     y = (e) => {
-        let { children: t, isConfirmationStep: n, isEligibleForWowMoment: a, shouldPrefetchWowMoment: b } = e,
+        let { children: t, isConfirmationStep: n, isEligibleForWowMoment: o, shouldPrefetchWowMoment: b } = e,
             y = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
             [O, v] = (0, i.useState)("entry"),
             S = (0, i.useRef)(null),
@@ -42,7 +42,7 @@ let b = 1000,
         (0, i.useEffect)(() => {
             b && N(!0);
         }, [b]);
-        let { mediaUrls: P, isSuccess: R } = (0, _.Z)(!y && a && A),
+        let { mediaUrls: P, isSuccess: R } = (0, _.Z)(!y && o && A),
             w = (0, i.useRef)(null),
             [D, x] = (0, i.useState)(!1),
             [L, j] = (0, i.useState)(!1),
@@ -51,7 +51,7 @@ let b = 1000,
         if (
             ((0, i.useEffect)(() => {
                 let e;
-                a &&
+                o &&
                     n &&
                     !U &&
                     "none" === M &&
@@ -72,7 +72,7 @@ let b = 1000,
                     f.default.track(m.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED, {
                         wow_moment_type: e ? "animated" : "static",
                     }));
-            }, [y, a, n, R, U, M]),
+            }, [y, o, n, R, U, M]),
             (0, i.useEffect)(() => {
                 function e() {
                     x(!0), C();
@@ -108,7 +108,7 @@ let b = 1000,
                                     muted: !0,
                                     autoPlay: !0,
                                     onEnded: T,
-                                    className: o()(h.video, "entry" === O ? h.visible : h.hidden),
+                                    className: a()(h.video, "entry" === O ? h.visible : h.hidden),
                                     children: (0, r.jsx)("source", { src: P.modalGlowEntry }),
                                 }),
                             }),
@@ -117,14 +117,14 @@ let b = 1000,
                                 playsInline: !0,
                                 muted: !0,
                                 loop: !0,
-                                className: o()(h.video, "idle" === O ? h.visible : h.hidden),
+                                className: a()(h.video, "idle" === O ? h.visible : h.hidden),
                                 children: (0, r.jsx)("source", { src: P.modalGlowIdle }),
                             }),
                             (0, r.jsx)(d.Z, {
                                 ref: I,
                                 playsInline: !0,
                                 muted: !0,
-                                className: o()(h.video, "exit" === O ? h.visible : h.hidden),
+                                className: a()(h.video, "exit" === O ? h.visible : h.hidden),
                                 children: (0, r.jsx)("source", { src: P.modalGlowExit }),
                             }),
                         ],

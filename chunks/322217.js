@@ -1,8 +1,8 @@
 n.d(t, { i: () => f });
 var r = n(54381),
     i = n(173511),
-    a = n(481060),
-    o = n(338182);
+    o = n(481060),
+    a = n(56413);
 function s(e, t, n) {
     return (
         t in e
@@ -56,22 +56,22 @@ function u(e, t) {
     );
 }
 function d(e) {
-    return (0, r.jsx)(a.w0Z, {
-        className: o.variants,
+    return (0, r.jsx)(o.w0Z, {
+        className: a.variants,
         children: Object.values(i.O).map((t) =>
             (0, r.jsxs)(
-                a.Zbd,
+                o.Zbd,
                 {
-                    className: o.card,
+                    className: a.card,
                     children: [
                         (0, r.jsx)(
-                            a.Text,
+                            o.Text,
                             u(l({}, e), {
                                 variant: t,
                                 children: e.children,
                             }),
                         ),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: "text-xs/normal",
                             color: "text-subtle",
                             children: t,
@@ -89,7 +89,7 @@ let f = {
         {
             name: "Text",
             id: "text",
-            component: a.Text,
+            component: o.Text,
             controls: {
                 variant: {
                     label: "Variant",

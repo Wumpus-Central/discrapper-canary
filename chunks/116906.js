@@ -1,45 +1,45 @@
-t.d(n, { Z: () => O });
+t.d(n, { Z: () => _ });
 var l = t(54381);
 t(473749);
 var i = t(442837),
     o = t(481060),
     r = t(468363),
-    a = t(353647),
-    c = t(158776),
-    s = t(885110),
+    s = t(353647),
+    a = t(158776),
+    c = t(885110),
     d = t(63063),
     u = t(209698),
-    f = t(369566),
-    m = t(29899),
+    m = t(369566),
+    f = t(29899),
     p = t(678738),
     x = t(151545),
     h = t(527790),
-    b = t(769140),
-    v = t(864141),
-    j = t(228168),
-    g = t(981631),
+    v = t(769140),
+    j = t(864141),
+    g = t(228168),
+    b = t(981631),
     I = t(388032),
-    y = t(835734),
-    Z = t(940640);
-function O(e) {
-    let { user: n, currentUser: t, guildId: O, subsection: N, onClose: T } = e,
-        { voiceActivityStatusEnabled: A } = (0, r.U)({ location: "UserProfileModalActivity" }),
-        P = (0, u.b)({ location: "UserProfileModalActivity" }),
-        { live: E, recent: _, stream: C } = (0, f.Z)(n.id),
-        { voiceChannel: S, voiceActivity: w } = (0, m.Z)({
+    y = t(7994),
+    Z = t(878449);
+function _(e) {
+    let { user: n, currentUser: t, guildId: _, subsection: O, onClose: N } = e,
+        { voiceActivityStatusEnabled: T } = (0, r.U)({ location: "UserProfileModalActivity" }),
+        A = (0, u.b)({ location: "UserProfileModalActivity" }),
+        { live: P, recent: E, stream: C } = (0, m.Z)(n.id),
+        { voiceChannel: S, voiceActivity: w } = (0, f.Z)({
             userId: n.id,
-            guildId: O,
+            guildId: _,
         }),
-        D = (0, i.e7)([a.Z], () => a.Z.isFetchingUserOutbox(n.id)),
-        R = n.id === t.id,
-        L = (0, i.e7)([s.Z, c.Z], () => {
-            let e = R ? s.Z.getStatus() : c.Z.getStatus(n.id);
+        D = (0, i.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
+        L = n.id === t.id,
+        R = (0, i.e7)([c.Z, a.Z], () => {
+            let e = L ? c.Z.getStatus() : a.Z.getStatus(n.id);
             return e === o.Skl.OFFLINE || e === o.Skl.INVISIBLE;
         }),
-        M = E.length > 0 || null != C,
-        B = A && null == C && null == w && null != S,
-        U = !L && (M || B),
-        k = _.length > 0;
+        M = P.length > 0 || null != C,
+        B = T && null == C && null == w && null != S,
+        U = !R && (M || B),
+        k = E.length > 0;
     return U || k || !D
         ? (0, l.jsxs)(o.zJl, {
               className: y.scroller,
@@ -51,26 +51,26 @@ function O(e) {
                             children: (0, l.jsxs)("ul", {
                                 className: y.activityList,
                                 children: [
-                                    !P &&
+                                    !A &&
                                         B &&
                                         (0, l.jsx)("li", {
-                                            children: (0, l.jsx)(v.Z, {
+                                            children: (0, l.jsx)(j.Z, {
                                                 user: n,
                                                 currentUser: t,
                                                 voiceChannel: S,
-                                                onClose: T,
+                                                onClose: N,
                                             }),
                                         }),
                                     null != C &&
                                         (0, l.jsx)("li", {
-                                            children: (0, l.jsx)(b.Z, {
+                                            children: (0, l.jsx)(v.Z, {
                                                 user: n,
                                                 currentUser: t,
                                                 stream: C,
-                                                onClose: T,
+                                                onClose: N,
                                             }),
                                         }),
-                                    E.map((e, i) =>
+                                    P.map((e, i) =>
                                         (0, l.jsx)(
                                             "li",
                                             {
@@ -78,7 +78,7 @@ function O(e) {
                                                     user: n,
                                                     currentUser: t,
                                                     activity: e,
-                                                    onClose: T,
+                                                    onClose: N,
                                                 }),
                                             },
                                             "live-".concat(i),
@@ -91,30 +91,30 @@ function O(e) {
                   k
                       ? (0, l.jsx)(p.Z, {
                             heading: I.intl.string(I.t.M0zgnT),
-                            introText: R
+                            introText: L
                                 ? I.intl.format(I.t["4bk9Ak"], {
                                       learnMoreHook: (e, n) =>
                                           (0, l.jsx)(
                                               o.Anchor,
                                               {
-                                                  href: d.Z.getArticleURL(g.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                  href: d.Z.getArticleURL(b.BhN.ACTIVITY_STATUS_SETTINGS),
                                                   children: e,
                                               },
                                               n,
                                           ),
                                   })
                                 : void 0,
-                            scrollIntoView: N === j.Tb.RECENT_ACTIVITY,
+                            scrollIntoView: O === g.Tb.RECENT_ACTIVITY,
                             children: (0, l.jsx)("ul", {
                                 className: y.activityList,
-                                children: _.map((e) =>
+                                children: E.map((e) =>
                                     (0, l.jsx)(
                                         "li",
                                         {
                                             children: (0, l.jsx)(h.Z, {
                                                 user: n,
                                                 entry: e,
-                                                onClose: T,
+                                                onClose: N,
                                             }),
                                         },
                                         e.id,

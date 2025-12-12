@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(54381);
 n(473749);
 var i = n(442837),
-    a = n(481060),
-    o = n(223245),
+    o = n(481060),
+    a = n(223245),
     s = n(921801),
     l = n(246946),
     c = n(358085),
@@ -13,7 +13,7 @@ var i = n(442837),
     p = n(726985),
     _ = n(981631),
     m = n(388032),
-    h = n(268622);
+    h = n(40086);
 function g(e, t, n) {
     return (
         t in e
@@ -54,17 +54,17 @@ function b() {
             enableContentProtection: v,
         } = (0, i.cj)([l.Z], () => E({}, l.Z.getSettings())),
         S = () =>
-            (0, r.jsxs)(a.Zbd, {
-                type: a.Zbd.Types.PRIMARY,
+            (0, r.jsxs)(o.Zbd, {
+                type: o.Zbd.Types.PRIMARY,
                 className: h.noticeCard,
                 children: [
                     (0, r.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(a.Heading, {
+                            (0, r.jsx)(o.Heading, {
                                 variant: "heading-md/medium",
                                 children: m.intl.string(m.t.bxGbHL),
                             }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 children: m.intl.format(m.t["4rmZnx"], { streamkitURL: _.EYA.STREAMKIT }),
                             }),
@@ -81,7 +81,7 @@ function b() {
             }),
         I = () => {
             if (c.isPlatformEmbedded)
-                return (0, r.jsx)(a.rsf, {
+                return (0, r.jsx)(o.rsf, {
                     label: m.intl.string(m.t["PKDAJ/"]),
                     description: m.intl.string(m.t.ZPi4lM),
                     checked: t,
@@ -89,14 +89,14 @@ function b() {
                 });
         },
         T = (e, t) => {
-            o.Z.update({ [e]: t });
+            a.Z.update({ [e]: t });
         },
         C = () => {
             (0, f.openUserSettings)(u.n.KEYBINDS_PANEL, { section: _.oAB.KEYBINDS });
         };
     return (0, r.jsx)(d.Z, {
         title: m.intl.string(m.t.S5GfOW),
-        children: (0, r.jsxs)(a.Kqy, {
+        children: (0, r.jsxs)(o.Kqy, {
             gap: 24,
             children: [
                 (0, r.jsx)(s.F, {
@@ -105,27 +105,27 @@ function b() {
                 }),
                 (0, r.jsx)(s.F, {
                     setting: p.s6.STREAMER_MODE_ENABLE,
-                    children: (0, r.jsxs)(a.Kqy, {
+                    children: (0, r.jsxs)(o.Kqy, {
                         gap: 16,
                         children: [
-                            (0, r.jsx)(a.rsf, {
+                            (0, r.jsx)(o.rsf, {
                                 label: m.intl.string(m.t.p9ZAJZ),
                                 description: m.intl.format(m.t.MLVL2M, { onClick: C }),
                                 checked: e,
                                 onChange: (e) => T("enabled", e),
                             }),
                             I(),
-                            (0, r.jsx)(a.izJ, {}),
+                            (0, r.jsx)(o.izJ, {}),
                         ],
                     }),
                 }),
-                (0, r.jsxs)(a.C3N, {
+                (0, r.jsxs)(o.C3N, {
                     label: m.intl.string(m.t["+1H47t"]),
                     className: h.sectionLabel,
                     children: [
                         (0, r.jsx)(s.F, {
                             setting: p.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
-                            children: (0, r.jsx)(a.rsf, {
+                            children: (0, r.jsx)(o.rsf, {
                                 label: m.intl.string(m.t.UpQziA),
                                 description: m.intl.string(m.t["+9Lra7"]),
                                 checked: b,
@@ -134,7 +134,7 @@ function b() {
                         }),
                         (0, r.jsx)(s.F, {
                             setting: p.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
-                            children: (0, r.jsx)(a.rsf, {
+                            children: (0, r.jsx)(o.rsf, {
                                 label: m.intl.string(m.t.q7WNGv),
                                 description: m.intl.string(m.t.m7mS2U),
                                 checked: g,
@@ -143,7 +143,7 @@ function b() {
                         }),
                         (0, r.jsx)(s.F, {
                             setting: p.s6.STREAMER_MODE_DISABLE_SOUNDS,
-                            children: (0, r.jsx)(a.rsf, {
+                            children: (0, r.jsx)(o.rsf, {
                                 label: m.intl.string(m.t.o56OZu),
                                 description: m.intl.string(m.t.eAkaik),
                                 checked: y,
@@ -152,7 +152,7 @@ function b() {
                         }),
                         (0, r.jsx)(s.F, {
                             setting: p.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
-                            children: (0, r.jsx)(a.rsf, {
+                            children: (0, r.jsx)(o.rsf, {
                                 label: m.intl.string(m.t.qmYiYd),
                                 description: m.intl.string(m.t["ZAmpQ/"]),
                                 checked: O,
@@ -161,7 +161,7 @@ function b() {
                         }),
                         (0, r.jsx)(s.F, {
                             setting: p.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
-                            children: (0, r.jsx)(a.rsf, {
+                            children: (0, r.jsx)(o.rsf, {
                                 label: m.intl.string(m.t["iA81+a"]),
                                 description: m.intl.string(m.t.P4vj0h),
                                 checked: v,

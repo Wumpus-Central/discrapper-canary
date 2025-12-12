@@ -12,13 +12,13 @@ var r = n(54381),
     p = n(481060),
     h = n(668781),
     m = n(211266),
-    g = n(579806),
-    x = n(89425),
-    v = n(100527),
-    b = n(906732),
+    _ = n(579806),
+    g = n(89425),
+    x = n(100527),
+    v = n(906732),
     j = n(594190),
-    _ = n(695346),
-    S = n(131951),
+    S = n(695346),
+    b = n(131951),
     y = n(19780),
     C = n(594174),
     O = n(449224),
@@ -37,25 +37,25 @@ var r = n(54381),
     L = n(328242),
     B = n(565574),
     G = n(286420),
-    U = n(51708),
+    U = n(173044),
     F = n(351911),
     H = n(577257),
     W = n(70722),
-    V = n(297940),
+    V = n(258587),
     z = n(388032),
-    J = n(677210);
+    J = n(468918);
 function X(e) {
     var t;
     let { onClose: n, transitionState: l, sourceApplication: o, analyticsLocations: X = [], selectSource: K = !0 } = e,
         q = i.useRef(performance.now()),
         Y = (0, u.e7)(
-            [S.Z],
+            [b.Z],
             () =>
-                (S.Z.getUseSystemScreensharePicker() || S.Z.getUseGamescopeCapture()) &&
+                (b.Z.getUseSystemScreensharePicker() || b.Z.getUseGamescopeCapture()) &&
                 ((0, w.isLinux)() ||
-                    ((0, w.isMac)() && a().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, W.jR))),
+                    ((0, w.isMac)() && a().satisfies(null === _.Z || void 0 === _.Z ? void 0 : _.Z.os.release, W.jR))),
         ),
-        { analyticsLocations: Q } = (0, b.ZP)(X, v.Z.GO_LIVE_MODAL_V2),
+        { analyticsLocations: Q } = (0, v.ZP)(X, x.Z.GO_LIVE_MODAL_V2),
         $ = (0, u.e7)([C.default], () => C.default.getCurrentUser()),
         ee = (0, N.Z)(),
         { state: et, dispatch: en } = (0, k.Ti)(o, $, ee),
@@ -93,7 +93,7 @@ function X(e) {
         { sourceType: eu } = et,
         ef = i.useCallback(
             async (e) => {
-                _.eo.updateSetting(et.notifyFriends), _.I0.updateSetting(et.hidePreview);
+                S.eo.updateSetting(et.notifyFriends), S.I0.updateSetting(et.hidePreview);
                 let [t, r] = await (0, T.Z)(e.hasOwnProperty("pid") ? e.pid : e, {
                     preset: et.preset,
                     fps: et.fps,
@@ -115,7 +115,7 @@ function X(e) {
             [n, et, Q],
         );
     async function ep(e) {
-        (await (0, x.Z)({ channelId: e })) && null != o && ef(o);
+        (await (0, g.Z)({ channelId: e })) && null != o && ef(o);
     }
     let eh = i.useCallback(() => {
         var e;

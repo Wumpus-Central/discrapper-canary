@@ -1,8 +1,8 @@
 n.d(t, { Y: () => s }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(117995),
-    o = n(51766);
+    o = n(117995),
+    a = n(325380);
 function s(e) {
     let { message: t, type: n } = e,
         s = null == t || 0 === t.length || null == n,
@@ -13,8 +13,8 @@ function s(e) {
             null != n && c(n), null != t && d(t);
         }, [n, t]),
         (0, r.jsx)("div", {
-            className: s ? o.sectionHidden : o.section,
-            children: (0, r.jsx)(a.M, {
+            className: s ? a.sectionHidden : a.section,
+            children: (0, r.jsx)(o.M, {
                 type: l,
                 hidden: s,
                 children: u,

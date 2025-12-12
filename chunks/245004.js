@@ -3,9 +3,9 @@ var r = n(54381);
 n(473749), n(399606);
 var i = n(481060);
 n(607070);
-var a = n(388032);
-n(44542);
-var o = n(918820);
+var o = n(388032);
+n(5238);
+var a = n(630564);
 function s(e, t, n) {
     return (
         t in e
@@ -41,9 +41,9 @@ function c(e, t) {
         r,
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -52,8 +52,8 @@ function u(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function d(e) {
@@ -61,21 +61,21 @@ function d(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.Heading, {
-                className: o.topPerksCardHeading,
+                className: a.topPerksCardHeading,
                 variant: "heading-lg/extrabold",
                 children: t,
             }),
             (0, r.jsx)(i.Text, {
-                className: o.topPerksCardDescription,
+                className: a.topPerksCardDescription,
                 variant: "text-sm/normal",
                 children: n,
             }),
             (0, r.jsxs)("div", {
-                className: o.labelsContainer,
+                className: a.labelsContainer,
                 children: [
                     null != s &&
                         (0, r.jsxs)("div", {
-                            className: o.topPerksCardLabelContainer,
+                            className: a.topPerksCardLabelContainer,
                             children: [
                                 (0, r.jsx)(i.Ucv, {
                                     size: "sm",
@@ -89,7 +89,7 @@ function d(e) {
                         }),
                     l &&
                         (0, r.jsxs)("div", {
-                            className: o.topPerksCardLabelContainer,
+                            className: a.topPerksCardLabelContainer,
                             children: [
                                 (0, r.jsx)(i.owK, {
                                     size: "custom",
@@ -100,7 +100,7 @@ function d(e) {
                                 (0, r.jsx)(i.Text, {
                                     variant: "text-sm/semibold",
                                     color: "currentColor",
-                                    children: a.intl.string(a.t.pCMkDb),
+                                    children: o.intl.string(o.t.pCMkDb),
                                 }),
                             ],
                         }),

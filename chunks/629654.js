@@ -1,16 +1,16 @@
 n.d(t, { Z: () => f });
 var r = n(54381),
     i = n(473749),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(607070),
     l = n(659302),
     c = n(211712),
     u = n(388032),
-    d = n(331466);
+    d = n(19895);
 function f(e) {
     let { preset: t, onShuffle: n } = e,
-        f = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        f = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
         p = (0, l.g2)({ useReducedMotion: f }),
         { name: _, header: m } = i.useMemo(() => {
             let e = (0, c.Ib)(t);
@@ -22,7 +22,7 @@ function f(e) {
     return (0, r.jsxs)("div", {
         className: d.container,
         children: [
-            (0, r.jsx)(o.P3F, {
+            (0, r.jsx)(a.P3F, {
                 onClick: () => {
                     n(), p.startAnimation(!1);
                 },
@@ -30,7 +30,7 @@ function f(e) {
                 "aria-label": u.intl.string(u.t["44yJxh"]),
                 children: p.render(),
             }),
-            (0, r.jsxs)(o.P3F, {
+            (0, r.jsxs)(a.P3F, {
                 onClick: () => {
                     n(), p.startAnimation(!1);
                 },
@@ -43,7 +43,7 @@ function f(e) {
                         src: m,
                         className: d.presetImage,
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         className: d.presetLabel,
                         variant: "text-sm/bold",
                         color: "always-white",

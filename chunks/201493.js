@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(781311);
+n.d(t, { Z: () => v }), n(388685), n(781311);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -14,22 +14,22 @@ var r = n(54381),
     g = n(102888),
     m = n(65839),
     b = n(453879),
-    y = n(408310),
-    O = n(486527),
-    j = n(981631),
+    _ = n(408310),
+    y = n(75666),
+    O = n(981631),
     x = n(295907),
-    v = n(960931);
-let C = (e) => {
-    let { channel: t, guild: C } = e,
+    j = n(806328);
+let v = (e) => {
+    let { channel: t, guild: v } = e,
         {
-            currentCategoryId: I,
-            directoryEntries: _,
+            currentCategoryId: C,
+            directoryEntries: I,
             categoryCounts: S,
             allEntriesCount: E,
             isLoading: Z,
         } = (0, l.cj)([h.Z], () => {
             let e = h.Z.getCurrentCategoryId(t.id),
-                n = h.Z.getDirectoryEntries(t.id, e === O.AR.ALL ? null : e),
+                n = h.Z.getDirectoryEntries(t.id, e === y.AR.ALL ? null : e),
                 r = h.Z.getDirectoryCategoryCounts(t.id);
             return {
                 currentCategoryId: e,
@@ -47,8 +47,8 @@ let C = (e) => {
                     (0, o.ack)(
                         t.id,
                         {
-                            object: j.qAy.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED,
-                            objectType: j.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                            object: O.qAy.ACK_GUILD_DIRECTORY_CHANNEL_VIEWED,
+                            objectType: O.AnalyticsObjectTypes.ACK_AUTOMATIC,
                         },
                         !0,
                         !0,
@@ -58,7 +58,7 @@ let C = (e) => {
         },
         [t.id],
     );
-    let P = i.useMemo(() => (null != _ ? (0, b.v)(Object.values(_), I) : null), [_, I]),
+    let P = i.useMemo(() => (null != I ? (0, b.v)(Object.values(I), C) : null), [I, C]),
         {
             mostRecentQuery: T,
             searchFetching: N,
@@ -83,12 +83,12 @@ let C = (e) => {
             u.c$(t.id), u.YZ(t.id), A(e);
         }, [t.id]),
         i.useEffect(() => {
-            d.default.track(j.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
+            d.default.track(O.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
                 directory_channel_id: t.id,
-                directory_guild_id: C.id,
-                primary_category_id: I,
+                directory_guild_id: v.id,
+                primary_category_id: C,
             });
-        }, [t.id, C.id, I]);
+        }, [t.id, v.id, C]);
     let k = (0, f.G)(t),
         U = i.useMemo(
             () =>
@@ -127,10 +127,10 @@ let C = (e) => {
                                       })({}, n)),
                                       (l = l =
                                           {
-                                              directoryGuildName: C.name,
-                                              directoryGuildId: C.id,
+                                              directoryGuildName: v.name,
+                                              directoryGuildId: v.id,
                                               directoryChannelId: t.id,
-                                              currentCategoryId: I === O.AR.ALL ? null : I,
+                                              currentCategoryId: C === y.AR.ALL ? null : C,
                                           }),
                                       Object.getOwnPropertyDescriptors
                                           ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -150,22 +150,22 @@ let C = (e) => {
                           });
                       }
                     : void 0,
-            [k, C.name, C.id, t.id, I],
+            [k, v.name, v.id, t.id, C],
         ),
         G = (e) => {
             0 !== w.trim().length &&
                 e.key === x.vn.ENTER &&
                 (u.Rq(t.id, w),
-                d.default.track(j.rMx.GUILD_DIRECTORY_SEARCH, {
+                d.default.track(O.rMx.GUILD_DIRECTORY_SEARCH, {
                     directory_channel_id: t.id,
-                    directory_guild_id: C.id,
+                    directory_guild_id: v.id,
                 }));
         },
         H = () => {
             A(""), u.So(t.id);
         };
     return D
-        ? (0, r.jsx)(y.Z, {
+        ? (0, r.jsx)(_.Z, {
               searchQuery: w,
               setSearchQuery: A,
               mostRecentQuery: T,
@@ -175,16 +175,16 @@ let C = (e) => {
               searchResults: R,
               searchFetching: N,
           })
-        : null == P && null == I
+        : null == P && null == C
           ? (0, r.jsx)("div", {
-                className: v.pageContainer,
-                children: (0, r.jsx)(a.$jN, { className: v.spinner }),
+                className: j.pageContainer,
+                children: (0, r.jsx)(a.$jN, { className: j.spinner }),
             })
-          : (null == P ? void 0 : P.length) === 0 && null == I
+          : (null == P ? void 0 : P.length) === 0 && null == C
             ? (0, r.jsx)("div", {
-                  className: v.pageContainer,
+                  className: j.pageContainer,
                   children: (0, r.jsx)(g.Z, {
-                      guild: C,
+                      guild: v,
                       onAddGuild: U,
                   }),
               })
@@ -195,7 +195,7 @@ let C = (e) => {
                   handleSearchKeyPress: G,
                   handleClearSearch: H,
                   handleCreateOrAddGuild: U,
-                  currentCategoryId: I,
+                  currentCategoryId: C,
                   handleSelectCategory: (e) => {
                       u.Su(t.id, e);
                   },

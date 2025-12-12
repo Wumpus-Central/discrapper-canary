@@ -1,37 +1,37 @@
-s.r(a), s.d(a, { default: () => n });
+s.r(a), s.d(a, { default: () => u });
 var l = s(54381),
     r = s(473749),
-    c = s(442837),
-    i = s(481060),
+    i = s(442837),
+    c = s(481060),
     t = s(925329),
     p = s(594174),
     d = s(768581),
-    f = s(843731);
-let n = r.memo(function (e) {
+    n = s(77344);
+let u = r.memo(function (e) {
     let { application: a } = e,
-        s = (0, c.e7)([p.default], () => p.default.getCurrentUser()),
+        s = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
         r = d.ZP.getUserAvatarURL(s);
     return (0, l.jsxs)("div", {
-        className: f.headerIcons,
+        className: n.headerIcons,
         children: [
             (0, l.jsx)(t.Z, {
-                className: f.avatar,
+                className: n.avatar,
                 game: a,
                 size: t.A.MEDIUM,
                 "aria-label": a.name,
             }),
             (0, l.jsxs)("div", {
-                className: f.ellipseGroup,
+                className: n.ellipseGroup,
                 children: [
-                    (0, l.jsx)("div", { className: f.ellipse }),
-                    (0, l.jsx)("div", { className: f.ellipse }),
-                    (0, l.jsx)("div", { className: f.ellipse }),
+                    (0, l.jsx)("div", { className: n.ellipse }),
+                    (0, l.jsx)("div", { className: n.ellipse }),
+                    (0, l.jsx)("div", { className: n.ellipse }),
                 ],
             }),
-            (0, l.jsx)(i.qEK, {
-                className: f.avatar,
+            (0, l.jsx)(c.qEK, {
+                className: n.avatar,
                 src: r,
-                size: i.EFr.SIZE_48,
+                size: c.EFr.SIZE_48,
                 "aria-label": s.username,
             }),
         ],

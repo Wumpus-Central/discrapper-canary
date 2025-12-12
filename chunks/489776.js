@@ -1,16 +1,16 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(467721),
-    a = n(692547),
-    s = n(481060),
+    s = n(692547),
+    a = n(481060),
     o = n(236413),
     c = n(85960),
-    d = n(65912),
-    u = n(564488),
+    u = n(65912),
+    d = n(564488),
     g = n(388032),
-    m = n(402766);
-function f(e) {
+    m = n(32490);
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function f(e) {
     }
     return e;
 }
-function p(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,64 +53,64 @@ function p(e, t) {
         e
     );
 }
-function b(e) {
+function h(e) {
     let { guildId: t, triggerType: n } = e,
-        b = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
-        [h] = i.useState(b),
-        [x, j] = i.useState(!1),
-        { editingRule: v, createNewEditingRule: O } = (0, d.V)(),
-        { getDefaultRuleName: C } = c.I6[n],
-        y = !(0, o.Vb)(v) && (null == v ? void 0 : v.triggerType) === n,
-        [N, E] = i.useState(y ? v : h),
-        I = (0, s.q_F)({
-            opacity: +!y,
-            pointerEvents: y ? "none" : "all",
-            config: p(f({}, l.config.stiff), { clamp: !0 }),
+        h = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
+        [x] = i.useState(h),
+        [b, j] = i.useState(!1),
+        { editingRule: _, createNewEditingRule: v } = (0, u.V)(),
+        { getDefaultRuleName: O } = c.I6[n],
+        C = !(0, o.Vb)(_) && (null == _ ? void 0 : _.triggerType) === n,
+        [y, N] = i.useState(C ? _ : x),
+        E = (0, a.q_F)({
+            opacity: +!C,
+            pointerEvents: C ? "none" : "all",
+            config: f(p({}, l.config.stiff), { clamp: !0 }),
         }),
-        S = (0, s.q_F)({
-            opacity: +!!y,
-            pointerEvents: y ? "all" : "none",
-            config: p(f({}, l.config.stiff), { clamp: !0 }),
+        I = (0, a.q_F)({
+            opacity: +!!C,
+            pointerEvents: C ? "all" : "none",
+            config: f(p({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
-                E(y ? v : h);
+                N(C ? _ : x);
             },
             onRest: () => {
-                E(y ? v : h), j(y);
+                N(C ? _ : x), j(C);
             },
         });
-    return null == v || y
+    return null == _ || C
         ? (0, r.jsxs)("div", {
               className: m.mainRuleContainer,
-              style: { height: y ? "auto" : "60px" },
+              style: { height: C ? "auto" : "60px" },
               children: [
                   (0, r.jsx)(l.animated.div, {
                       className: m.animatedRuleCardContainer,
-                      style: S,
-                      children: (0, r.jsx)(u.Z, {
-                          rule: N,
-                          persistEdit: x,
+                      style: I,
+                      children: (0, r.jsx)(d.Z, {
+                          rule: y,
+                          persistEdit: b,
                       }),
                   }),
                   (0, r.jsx)(l.animated.div, {
                       className: m.animatedNewRuleContainer,
-                      style: I,
-                      children: (0, r.jsxs)(s.P3F, {
+                      style: E,
+                      children: (0, r.jsxs)(a.P3F, {
                           className: m.addAnotherRuleCardContainer,
                           onClick: () => {
-                              O(t, n);
+                              v(t, n);
                           },
                           children: [
-                              (0, r.jsx)(s.oFk, {
+                              (0, r.jsx)(a.oFk, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
-                                  color: a.Z.unsafe_rawColors.BLUE_345.css,
+                                  color: s.Z.unsafe_rawColors.BLUE_345.css,
                                   className: m.plusIcon,
                               }),
-                              (0, r.jsx)(s.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: "text-md/semibold",
                                   color: "text-link",
-                                  children: g.intl.format(g.t.dNjRAf, { ruleName: C() }),
+                                  children: g.intl.format(g.t.dNjRAf, { ruleName: O() }),
                               }),
                           ],
                       }),

@@ -1,8 +1,8 @@
 n.d(t, { L: () => O });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(159691),
     c = n(481060),
@@ -12,10 +12,10 @@ var r = n(54381),
     p = n(507808),
     _ = n(981631),
     m = n(388032),
-    h = n(226880),
-    g = n(36764),
-    E = n(73909),
-    b = n(479656);
+    h = n(97127),
+    g = n(665923),
+    E = n(477154),
+    b = n(387888);
 let y = () => {
         let e = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
         return (0, r.jsx)("div", {
@@ -48,20 +48,20 @@ let y = () => {
         let {
                 ctaText: t,
                 ctaOnClick: n,
-                analyticsPage: a,
+                analyticsPage: o,
                 linkPreText: s = m.intl.string(m.t["5qZv9E"]),
                 linkText: u = m.intl.string(m.t.XRdyjz),
             } = e,
             d = i.useCallback(() => {
-                null != a &&
+                null != o &&
                     (0, p.Y)({
-                        pageType: a,
+                        pageType: o,
                         sectionType: _.jXE.ORBS_BALANCE_MENU,
                         ctaObject: _.qAy.ORBS_LEARN_MORE_LINK,
                     });
-            }, [a]);
+            }, [o]);
         return (0, r.jsxs)("div", {
-            className: o()(h.container, g.baseCardOutline),
+            className: a()(h.container, g.baseCardOutline),
             children: [
                 (0, r.jsx)(y, {}),
                 (0, r.jsx)(l.zxk, {

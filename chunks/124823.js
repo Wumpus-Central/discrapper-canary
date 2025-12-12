@@ -14,20 +14,20 @@ var r = n(54381),
     g = n(221292),
     m = n(687158),
     b = n(892001),
-    y = n(899007),
-    O = n(648052),
-    x = n(867176),
-    j = n(280885),
-    v = n(900927),
-    C = n(678738),
-    I = n(502762),
-    _ = n(530),
+    _ = n(899007),
+    y = n(648052),
+    O = n(867176),
+    x = n(280885),
+    j = n(900927),
+    v = n(678738),
+    C = n(502762),
+    I = n(530),
     S = n(679332),
     E = n(544989),
     Z = n(671955),
     P = n(388032),
-    T = n(960077),
-    N = n(82600);
+    T = n(231688),
+    N = n(892273);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -88,7 +88,7 @@ function w(e) {
             fetchStartedAt: null == D ? void 0 : D.fetchStartedAt,
             fetchEndedAt: null == D ? void 0 : D.fetchEndedAt,
             isLoaded: null == D ? void 0 : D.isLoaded,
-            children: (0, r.jsxs)(I.Z, {
+            children: (0, r.jsxs)(C.Z, {
                 ref: G,
                 user: n,
                 displayProfile: D,
@@ -101,13 +101,13 @@ function w(e) {
                             (0, r.jsxs)("div", {
                                 className: T.header,
                                 children: [
-                                    (0, r.jsx)(x.Z, {
+                                    (0, r.jsx)(O.Z, {
                                         user: n,
                                         displayProfile: D,
                                         themeType: Z.l.SIDEBAR,
                                         animateOnHoverOrFocusOnly: !H,
                                     }),
-                                    (0, r.jsx)(y.Z, {
+                                    (0, r.jsx)(_.Z, {
                                         user: n,
                                         displayProfile: D,
                                         channelId: w.id,
@@ -119,34 +119,34 @@ function w(e) {
                             (0, r.jsxs)("div", {
                                 className: N.body,
                                 children: [
-                                    (0, r.jsx)(_.Z, {
+                                    (0, r.jsx)(I.Z, {
                                         user: n,
                                         guildId: w.guild_id,
                                         nickname: h.ZP.getName(null, w.id, n),
                                         pronouns: null == D ? void 0 : D.pronouns,
                                         onOpenProfile: A ? void 0 : B,
-                                        tags: (0, r.jsx)(O.Z, {
+                                        tags: (0, r.jsx)(y.Z, {
                                             displayProfile: D,
                                             themeType: Z.l.SIDEBAR,
                                         }),
                                     }),
-                                    (0, r.jsxs)(I.Z.Overlay, {
+                                    (0, r.jsxs)(C.Z.Overlay, {
                                         className: N.overlay,
                                         children: [
-                                            (0, r.jsx)(C.Z, {
+                                            (0, r.jsx)(v.Z, {
                                                 heading: P.intl.string(P.t["61W33d"]),
                                                 headingColor: "text-strong",
-                                                children: (0, r.jsx)(j.Z, {
+                                                children: (0, r.jsx)(x.Z, {
                                                     userBio: null == D ? void 0 : D.bio,
                                                     userId: n.id,
                                                     animateOnHoverOrFocusOnly: !0,
                                                     isHoveringOrFocusing: H,
                                                 }),
                                             }),
-                                            (0, r.jsx)(C.Z, {
+                                            (0, r.jsx)(v.Z, {
                                                 heading: P.intl.string(P.t["A//N4k"]),
                                                 headingColor: "text-strong",
-                                                children: (0, r.jsx)(v.Z, { userId: n.id }),
+                                                children: (0, r.jsx)(j.Z, { userId: n.id }),
                                             }),
                                         ],
                                     }),

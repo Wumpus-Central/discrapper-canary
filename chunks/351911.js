@@ -13,14 +13,14 @@ var i = n(120356),
     p = n(358085),
     h = n(672811),
     m = n(891180),
-    g = n(556389),
-    x = n(615161),
-    v = n(396678),
-    b = n(37113),
+    _ = n(556389),
+    g = n(615161),
+    x = n(396678),
+    v = n(37113),
     j = n(65154),
-    _ = n(297940),
-    S = n(388032),
-    y = n(65337);
+    S = n(258587),
+    b = n(388032),
+    y = n(214795);
 function C() {
     return (0, r.jsx)("span", {
         className: y.ellipsis,
@@ -29,14 +29,14 @@ function C() {
 }
 function O(e) {
     let { source: t } = e,
-        { data: n } = (0, c.IX)(null != t && (0, g.T)(t) ? t.id : void 0);
+        { data: n } = (0, c.IX)(null != t && (0, _.T)(t) ? t.id : void 0);
     return null == t
         ? (0, r.jsx)(a.hGI, {
               className: y.screenArrowIcon,
               size: "md",
               color: "currentColor",
           })
-        : (0, g.T)(t)
+        : (0, _.T)(t)
           ? (0, r.jsx)(d.Z, {
                 game: n,
                 pid: t.pid,
@@ -55,25 +55,25 @@ function O(e) {
 }
 function w() {
     var e, t, n, i;
-    let [{ preset: c, resolution: d, fps: g, muteStreamAudio: w, selectedSource: Z, sourceType: P, audioSourceId: I }] =
-            (0, x.E_)(),
+    let [{ preset: c, resolution: d, fps: _, muteStreamAudio: w, selectedSource: Z, sourceType: P, audioSourceId: I }] =
+            (0, g.E_)(),
         [E, T] = (0, u.Ls)(j.h7.AUDIO_INPUT, { location: "StreamSettingsSummary" }),
         N = E.concat(T),
-        [A, R] = null != (n = (0, v.Z)(c)) ? n : [d, g],
+        [A, R] = null != (n = (0, x.Z)(c)) ? n : [d, _],
         M = (0, h.L)(c),
         k = (0, m.M)(A),
         D = P === s.vA.CAMERA,
         L = null != Z,
         B = null != Z ? (null == Z || null == (e = Z.id) ? void 0 : e.startsWith(s.vA.CAMERA)) : D,
-        G = c === b.ApplicationStreamPresets.PRESET_AUTO,
+        G = c === v.ApplicationStreamPresets.PRESET_AUTO,
         U = L
             ? void 0
-            : c === b.ApplicationStreamPresets.PRESET_VIDEO
-              ? S.intl.string(_.default.MuHUFe)
-              : c === b.ApplicationStreamPresets.PRESET_DOCUMENTS
-                ? S.intl.string(_.default.y0JuYR)
-                : c === b.ApplicationStreamPresets.PRESET_AUTO
-                  ? S.intl.string(_.default.m4jtlc)
+            : c === v.ApplicationStreamPresets.PRESET_VIDEO
+              ? b.intl.string(S.default.MuHUFe)
+              : c === v.ApplicationStreamPresets.PRESET_DOCUMENTS
+                ? b.intl.string(S.default.y0JuYR)
+                : c === v.ApplicationStreamPresets.PRESET_AUTO
+                  ? b.intl.string(S.default.m4jtlc)
                   : void 0,
         F = (0, o.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, p.isLinux)());
     return (0, r.jsxs)("div", {
@@ -90,7 +90,7 @@ function w() {
                         children: L
                             ? null != (i = null == Z ? void 0 : Z.name)
                                 ? i
-                                : S.intl.string(_.default["hJMA+x"])
+                                : b.intl.string(S.default["hJMA+x"])
                             : M,
                     }),
                     (0, r.jsxs)(a.Text, {
@@ -137,7 +137,7 @@ function w() {
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
-                                                S.intl.string(_.default.FzMGWR),
+                                                b.intl.string(S.default.FzMGWR),
                                             ],
                                         }),
                                     ],
@@ -146,7 +146,7 @@ function w() {
                                 !B &&
                                 F &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)(C, {}), S.intl.string(_.default["n9/rUq"])],
+                                    children: [(0, r.jsx)(C, {}), b.intl.string(S.default["n9/rUq"])],
                                 }),
                             B
                                 ? (0, r.jsxs)(r.Fragment, {

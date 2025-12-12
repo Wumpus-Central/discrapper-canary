@@ -1,44 +1,44 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(54381),
     i = n(473749),
-    a = n(296009),
-    l = n(442837),
+    l = n(296009),
+    a = n(442837),
     o = n(704215),
-    c = n(481060),
-    s = n(491662),
+    s = n(481060),
+    c = n(491662),
     u = n(243778),
     d = n(594174),
     f = n(785717),
     g = n(931847),
     p = n(50130),
-    b = n(28671),
-    m = n(430790),
+    m = n(28671),
+    b = n(430790),
     h = n(795990),
     y = n(388032),
-    v = n(284459);
-function O() {
+    O = n(66582);
+function v() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, f.KZ)(),
-        O = i.useRef(!1),
-        j = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        v = i.useRef(!1),
+        j = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         { application: x, config: P } = (0, p.G)(),
-        { token: I, fetched: w } = (0, s.o)(null == P ? void 0 : P.application_id),
-        S = i.useMemo(
+        { token: _, fetched: I } = (0, c.o)(null == P ? void 0 : P.application_id),
+        w = i.useMemo(
             () =>
                 (null == P ? void 0 : P.application_id) != null
                     ? new g.q({
-                          type: a.l.APPLICATION,
+                          type: l.l.APPLICATION,
                           applicationId: P.application_id,
                       })
                     : null,
             [null == P ? void 0 : P.application_id],
         ),
-        E = i.useCallback(() => {
+        S = i.useCallback(() => {
             t({ action: "PRESS_ADD_WIDGET" }),
-                (0, c.ZDy)(
+                (0, s.ZDy)(
                     async () => {
                         let { default: e } = await n.e("38576").then(n.bind(n, 925170));
                         return (n) => {
-                            var i, a;
+                            var i, l;
                             return (0, r.jsx)(
                                 e,
                                 ((i = (function (e) {
@@ -66,9 +66,9 @@ function O() {
                                     }
                                     return e;
                                 })({}, n)),
-                                (a = a = { trackUserProfileEditAction: t }),
+                                (l = l = { trackUserProfileEditAction: t }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -76,8 +76,8 @@ function O() {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(a)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                       }),
                                 i),
                             );
@@ -86,36 +86,36 @@ function O() {
                     { stackingBehavior: "stack" },
                 );
         }, [t]),
-        _ = null == j || null == x || null == S || !w,
-        T = null != I;
+        E = null == j || null == x || null == w || !I,
+        T = null != _;
     if (
         (i.useEffect(() => {
-            !_ &&
+            !E &&
                 T &&
-                (O.current ||
+                (v.current ||
                     (e({
                         action: "VIEW_APPLICATION_WIDGETS_EMPTY_STATE",
                         applicationId: x.id,
                     }),
-                    (O.current = !0)));
-        }, [_, T, e, null == x ? void 0 : x.id]),
-        _)
+                    (v.current = !0)));
+        }, [E, T, e, null == x ? void 0 : x.id]),
+        E)
     )
         return (0, r.jsx)("div", {
-            className: v.loading,
-            children: (0, r.jsx)(c.$jN, {}),
+            className: O.loading,
+            children: (0, r.jsx)(s.$jN, {}),
         });
     if (!T) return (0, r.jsx)(h.Z, {});
-    let C = (0, r.jsxs)(c.Kqy, {
+    let C = (0, r.jsxs)(s.Kqy, {
         gap: 4,
-        className: v.header,
+        className: O.header,
         children: [
-            (0, r.jsx)(c.Heading, {
+            (0, r.jsx)(s.Heading, {
                 variant: "heading-md/medium",
                 color: "text-strong",
                 children: y.intl.string(y.t["oqalC+"]),
             }),
-            (0, r.jsx)(c.Text, {
+            (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 children: y.intl.format(y.t.YnNFWa, { applicationName: x.name }),
@@ -129,33 +129,33 @@ function O() {
             let { visibleContent: t, markAsDismissed: n } = e;
             switch (t) {
                 case o.z.APPLICATION_WIDGET_EMPTY_STATE_CARD_ADD_WIDGET:
-                    return (0, r.jsxs)(c.Kqy, {
+                    return (0, r.jsxs)(s.Kqy, {
                         gap: 16,
                         align: "center",
                         children: [
-                            (0, r.jsx)(c.LZC, { size: 32 }),
+                            (0, r.jsx)(s.LZC, { size: 32 }),
                             C,
-                            (0, r.jsx)(b.Z, {
+                            (0, r.jsx)(m.Z, {
                                 user: j,
                                 application: x,
                                 onDismiss: n,
                             }),
-                            (0, r.jsx)(m.Z, {}),
+                            (0, r.jsx)(b.Z, {}),
                         ],
                     });
                 case null:
-                    return (0, r.jsxs)(c.Kqy, {
+                    return (0, r.jsxs)(s.Kqy, {
                         gap: 32,
                         align: "center",
                         children: [
-                            (0, r.jsx)(c.LZC, { size: 128 }),
+                            (0, r.jsx)(s.LZC, { size: 128 }),
                             C,
-                            (0, r.jsx)(c.Button, {
-                                icon: c.qJs,
+                            (0, r.jsx)(s.Button, {
+                                icon: s.qJs,
                                 text: y.intl.string(y.t["lBG2s/"]),
                                 size: "md",
                                 color: "secondary",
-                                onClick: E,
+                                onClick: S,
                             }),
                         ],
                     });

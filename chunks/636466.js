@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(442837),
-    o = n(704215),
+    o = n(442837),
+    a = n(704215),
     s = n(952265),
     l = n(907862),
     c = n(481060),
@@ -23,9 +23,9 @@ var r = n(54381),
     y = n(921944),
     O = n(474936),
     v = n(388032),
-    S = n(466953),
-    I = n(788015),
-    T = n(993516);
+    S = n(758650),
+    I = n(976218),
+    T = n(30399);
 function C(e, t, n) {
     return (
         t in e
@@ -84,9 +84,9 @@ function R(e, t) {
         r,
         i = w(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -95,8 +95,8 @@ function w(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function D(e) {
@@ -130,9 +130,9 @@ function x(e) {
         c = R(e, ["showPopover", "onViewWishlist", "onCardClick"]);
     let u = i.useRef(null),
         d = (0, s.useHasAnyModalOpen)(),
-        f = (0, a.e7)([m.Z], () => m.Z.hasLayers()),
+        f = (0, o.e7)([m.Z], () => m.Z.hasLayers()),
         g = (0, h.NN)({ location: "wishlist-card" }),
-        [E, b] = (0, p.US)(g ? [o.z.GAME_SHOP_WISHLIST_POPOVER] : [], y.R.SIDEBAR, !0),
+        [E, b] = (0, p.US)(g ? [a.z.GAME_SHOP_WISHLIST_POPOVER] : [], y.R.SIDEBAR, !0),
         O = i.useCallback(() => {
             b(y.L.USER_DISMISS), l();
         }, [l, b]),
@@ -152,7 +152,7 @@ function x(e) {
                 }),
             ),
             t &&
-                E === o.z.GAME_SHOP_WISHLIST_POPOVER &&
+                E === a.z.GAME_SHOP_WISHLIST_POPOVER &&
                 !d &&
                 !f &&
                 (0, r.jsx)(D, {
@@ -167,8 +167,8 @@ function L(e, t) {
     let {
             index: n,
             moreCount: i,
-            onViewWishlist: a,
-            isSingleCard: o = !1,
+            onViewWishlist: o,
+            isSingleCard: a = !1,
             profileOwner: s,
             wishlistId: l,
             showTypeTooltip: c = !1,
@@ -184,7 +184,7 @@ function L(e, t) {
             shouldShow: !0,
         },
         y = () => {
-            if (p) return void a();
+            if (p) return void o();
             (0, g.P)(
                 e.sku,
                 {
@@ -212,10 +212,10 @@ function L(e, t) {
             shouldScalePreview: !1,
             renderPreview: I,
             moreCount: i,
-            isSingleCard: o,
+            isSingleCard: a,
             wishlistId: l,
             showPopover: 0 === n && e.sku.applicationId === b.t9,
-            onViewWishlist: a,
+            onViewWishlist: o,
             cardSize: d,
         },
         e.skuId,
@@ -223,8 +223,8 @@ function L(e, t) {
 }
 function j(e) {
     let { item: t, card: n, profileOwner: i } = e,
-        { data: a } = (0, d.IX)(t.sku.applicationId),
-        o = () => {
+        { data: o } = (0, d.IX)(t.sku.applicationId),
+        a = () => {
             (0, g.P)(
                 t.sku,
                 {
@@ -242,7 +242,7 @@ function j(e) {
             (0, r.jsx)("div", {
                 className: I.singleItemInfo,
                 children: (0, r.jsxs)(c.P3F, {
-                    onClick: o,
+                    onClick: a,
                     className: I.singleItemName,
                     "aria-label": v.intl.string(v.t.pLPjsb),
                     children: [
@@ -255,7 +255,7 @@ function j(e) {
                         (0, r.jsx)(c.Text, {
                             variant: "text-xs/medium",
                             color: "text-default",
-                            children: v.intl.format(v.t["CqpEC+"], { applicationName: null == a ? void 0 : a.name }),
+                            children: v.intl.format(v.t["CqpEC+"], { applicationName: null == o ? void 0 : o.name }),
                         }),
                     ],
                 }),
@@ -264,14 +264,14 @@ function j(e) {
     });
 }
 function M(e, t) {
-    let { profileOwner: n, analyticsLocations: i, wishlistId: a, onViewWishlist: o } = t,
+    let { profileOwner: n, analyticsLocations: i, wishlistId: o, onViewWishlist: a } = t,
         s = L(e, {
             index: 0,
             profileOwner: n,
             analyticsLocations: i,
-            onViewWishlist: o,
+            onViewWishlist: a,
             isSingleCard: !0,
-            wishlistId: a,
+            wishlistId: o,
         });
     return (0, r.jsx)(j, {
         item: e,

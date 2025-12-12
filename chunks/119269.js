@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(607070),
@@ -13,7 +13,7 @@ var r = n(54381),
     d = n(967538),
     f = n(885302),
     p = n(914677),
-    _ = n(543130),
+    _ = n(86852),
     m = (function (e) {
         return (
             (e[(e.NITRO_GEM = 0)] = "NITRO_GEM"),
@@ -24,7 +24,7 @@ var r = n(54381),
     })({});
 let h = (e) => {
         let { avatarDecoAssetId: t, avatarDecoAssetDescription: n } = e,
-            a = i.useMemo(() => (0, u.Z)(t, l.EFr.SIZE_120, !1), [t]);
+            o = i.useMemo(() => (0, u.Z)(t, l.EFr.SIZE_120, !1), [t]);
         return (0, r.jsx)("div", {
             className: _.avatarDecoContainer,
             children: (0, r.jsx)("div", {
@@ -32,7 +32,7 @@ let h = (e) => {
                 children: (0, r.jsx)("img", {
                     className: _.avatarDecoImage,
                     alt: n,
-                    src: a,
+                    src: o,
                 }),
             }),
         });
@@ -42,7 +42,7 @@ let h = (e) => {
                 showAnimations: t = !0,
                 iconClassName: n,
                 staticPercentage: i,
-                innerCircleClassName: a,
+                innerCircleClassName: o,
                 progressCircleStrokeSize: l,
                 backgroundCircleSize: u,
                 percentage: m,
@@ -62,7 +62,7 @@ let h = (e) => {
                     case 0:
                         return (0, r.jsx)(d.Z, {
                             className: C ? _.nitroGemAnimation : void 0,
-                            backgroundColor: o()(_.gemBackgroundFill, a),
+                            backgroundColor: a()(_.gemBackgroundFill, o),
                             backgroundCircleSize: u,
                         });
                     case 1:
@@ -82,9 +82,9 @@ let h = (e) => {
                 }
             };
         return (0, r.jsx)("div", {
-            className: o()(_.progressCircle, n),
+            className: a()(_.progressCircle, n),
             children: (0, r.jsx)(p.Z, {
-                animationClassName: o()(_.activeProgressCircle, {
+                animationClassName: a()(_.activeProgressCircle, {
                     [_.activeProgressCircleAnimation]: C,
                     [null != v ? v : ""]: C,
                 }),

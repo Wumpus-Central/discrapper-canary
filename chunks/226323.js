@@ -13,8 +13,8 @@ var r = n(54381),
     g = n(100527),
     h = n(906732),
     m = n(538870),
-    b = n(522651),
-    _ = n(795318),
+    _ = n(522651),
+    b = n(795318),
     E = n(512384),
     O = n(670188),
     v = n(314897),
@@ -23,7 +23,7 @@ var r = n(54381),
     C = n(51144),
     S = n(524484),
     T = n(388032),
-    N = n(328607);
+    N = n(720711);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -144,7 +144,7 @@ function Z(e) {
                       n.e("66165"),
                       n.e("8982"),
                       n.e("7717"),
-                      n.e("9393"),
+                      n.e("52021"),
                   ]).then(n.bind(n, 757387));
                   return (t) =>
                       (0, r.jsx)(
@@ -154,14 +154,14 @@ function Z(e) {
                               guildId: G,
                               channel: v,
                               showMediaItems: !0,
-                              onInteraction: (0, _.u)("GuildChannelUserContextMenu", g.Z.RTC_PANEL, {
+                              onInteraction: (0, b.u)("GuildChannelUserContextMenu", g.Z.RTC_PANEL, {
                                   targetUserId: Z.id,
                               }),
                           }),
                       );
               })
             : (0, u.jW)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("18030")]).then(
+                  let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("74820")]).then(
                       n.bind(n, 881351),
                   );
                   return (t) =>
@@ -170,7 +170,7 @@ function Z(e) {
                           P(j({}, t), {
                               user: Z,
                               showMediaItems: !0,
-                              onInteraction: (0, _.u)("UserGenericContextMenu", g.Z.RTC_PANEL, { targetUserId: Z.id }),
+                              onInteraction: (0, b.u)("UserGenericContextMenu", g.Z.RTC_PANEL, { targetUserId: Z.id }),
                           }),
                       );
               });
@@ -195,7 +195,7 @@ function Z(e) {
                 children: (0, r.jsx)(c.P3F, {
                     innerRef: p,
                     onClick: (t) => {
-                        e.onClick(t), (0, b.v)(f, b.d.VOICE_USER);
+                        e.onClick(t), (0, _.v)(f, _.d.VOICE_USER);
                     },
                     className: N.avatarContainer,
                     onContextMenu: W,
@@ -241,7 +241,7 @@ function w(e) {
                 maxVisibleAvatars: t,
             };
         })(t.length - 1),
-        [b, _] = (function (e, t, n) {
+        [_, b] = (function (e, t, n) {
             let r = [];
             for (let i of e)
                 if (i.user.id !== t && !r.some((e) => e.user.id === i.user.id)) {
@@ -263,7 +263,7 @@ function w(e) {
                 size: "sm",
             }),
         }),
-        I = _ && u ? t : b;
+        I = b && u ? t : _;
     return I.length <= 0
         ? null
         : (0, r.jsx)(c.zJl, {
@@ -294,7 +294,7 @@ function w(e) {
                                 )
                               : null;
                       }),
-                      _ ? y : null,
+                      b ? y : null,
                   ],
               }),
           });

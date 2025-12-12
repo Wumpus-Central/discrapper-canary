@@ -3,63 +3,63 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     l = n.n(i),
-    a = n(692547),
-    s = n(481060),
+    s = n(692547),
+    a = n(481060),
     o = n(259580),
     c = n(196345),
-    d = n(137158),
-    u = n(388032),
-    g = n(938645);
+    u = n(137158),
+    d = n(388032),
+    g = n(31829);
 let m = function (e) {
     let {
             channelId: t,
             formField: n,
             index: i,
             isDragEnabled: m,
-            isDropHovered: f,
-            onDrop: p,
-            onEdit: b,
-            onRemove: h,
-            canRemove: x,
+            isDropHovered: p,
+            onDrop: f,
+            onEdit: h,
+            onRemove: x,
+            canRemove: b,
             title: j,
-            actionsLocation: v,
-            fieldStyle: O,
+            actionsLocation: _,
+            fieldStyle: v,
         } = e,
-        C = n.values,
-        y = C.slice(0, 1),
-        N = C.length - y.length;
-    return (0, r.jsxs)(d.Z, {
+        O = n.values,
+        C = O.slice(0, 1),
+        y = O.length - C.length;
+    return (0, r.jsxs)(u.Z, {
         field: n,
         index: i,
         isDragEnabled: m,
-        isDropHovered: f,
-        onDrop: p,
-        onEdit: b,
-        onRemove: h,
+        isDropHovered: p,
+        onDrop: f,
+        onEdit: h,
+        onRemove: x,
         title: j,
-        canRemove: x,
-        actionsLocation: v,
-        fieldStyle: O,
+        canRemove: b,
+        actionsLocation: _,
+        fieldStyle: v,
         children: [
             (0, r.jsx)(c.EK, {
-                terms: y,
+                terms: C,
                 channelId: t,
             }),
-            0 !== N &&
-                (0, r.jsxs)(s.P3F, {
+            0 !== y &&
+                (0, r.jsxs)(a.P3F, {
                     className: l()(g.fieldFooterContainer, g.clickable),
-                    onClick: b,
+                    onClick: h,
                     children: [
-                        (0, r.jsx)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: "text-md/normal",
                             className: g.clickable,
-                            children: u.intl.format(u.t.jnhD0S, { count: N }),
+                            children: d.intl.format(d.t.jnhD0S, { count: y }),
                         }),
                         (0, r.jsx)(o.Z, {
                             className: g.termsFieldCaretIcon,
                             height: 14,
                             width: 14,
-                            color: a.Z.unsafe_rawColors.WHITE_500.css,
+                            color: s.Z.unsafe_rawColors.WHITE_500.css,
                         }),
                     ],
                 }),

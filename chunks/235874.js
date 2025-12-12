@@ -7,12 +7,12 @@ n.d(t, {
     n(49124);
 var r,
     i = n(54381),
-    a = n(473749),
-    o = n(793030),
+    o = n(473749),
+    a = n(793030),
     s = n(493773),
     l = n(930295),
     c = n(126306),
-    u = n(74492);
+    u = n(974101);
 function d(e, t, n) {
     return (
         t in e
@@ -71,9 +71,9 @@ function m(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++)
+            (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -82,8 +82,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var g = (function (e) {
@@ -108,15 +108,15 @@ function b(e) {
     }
     throw Error("Unexpected position: ".concat(e));
 }
-class y extends (r = a.Component) {
+class y extends (r = o.Component) {
     render() {
         let {
             children: e,
             shouldShow: t,
             onRequestOpen: n,
             onRequestClose: r,
-            align: a,
-            fixed: o,
+            align: o,
+            fixed: a,
             useRawTargetDimensions: s,
             onShiftClick: c,
             positionKey: u,
@@ -139,9 +139,9 @@ class y extends (r = a.Component) {
             targetElementRef: this.props.targetElementRef,
             preload: f,
             position: y,
-            align: null != a ? a : b(y),
+            align: null != o ? o : b(y),
             autoInvert: O,
-            fixed: o,
+            fixed: a,
             nudgeAlignIntoViewport: v,
             useRawTargetDimensions: s,
             renderPopout: this.renderPopout,
@@ -163,7 +163,7 @@ class y extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            d(this, "ref", a.createRef()),
+            d(this, "ref", o.createRef()),
             d(this, "renderPopout", (e) => {
                 let { renderPopout: t, animation: n = "2", animationPosition: r } = this.props;
                 switch ((null != r && null != e.position && (e.position = r), n)) {
@@ -185,16 +185,16 @@ class y extends (r = a.Component) {
 function O(e) {
     var { renderPopout: t } = e,
         n = m(e, ["renderPopout"]);
-    let r = a.useRef(null),
-        [l, c] = a.useState(0);
+    let r = o.useRef(null),
+        [l, c] = o.useState(0);
     function d() {
         return h(), (0, i.jsx)(i.Fragment, {});
     }
-    a.useLayoutEffect(() => {
+    o.useLayoutEffect(() => {
         if (l > 0) {
-            var e, t, n, i, a;
-            null == (a = r.current) ||
-                null == (i = a.ref) ||
+            var e, t, n, i, o;
+            null == (o = r.current) ||
+                null == (i = o.ref) ||
                 null == (n = i.current) ||
                 null == (t = n.layerRef) ||
                 null == (e = t.current) ||
@@ -205,7 +205,7 @@ function O(e) {
             let e = setTimeout(t, 20 + 20 * Math.random());
             return () => clearTimeout(e);
         });
-    let p = a.useRef(!1);
+    let p = o.useRef(!1);
     async function h() {
         if (!p.current) {
             p.current = !0;
@@ -217,10 +217,10 @@ function O(e) {
         }
     }
     function g() {
-        var e, t, n, a;
+        var e, t, n, o;
         let s =
-                null == (a = r.current) ||
-                null == (n = a.ref) ||
+                null == (o = r.current) ||
+                null == (n = o.ref) ||
                 null == (t = n.current) ||
                 null == (e = t.domElementRef)
                     ? void 0
@@ -229,16 +229,16 @@ function O(e) {
         return (0, i.jsx)("div", {
             className: u.loader,
             style: { width: l },
-            children: (0, i.jsx)(o.$jN, {}),
+            children: (0, i.jsx)(a.$jN, {}),
         });
     }
-    let [E, b] = a.useState(() => d),
-        O = a.useRef(d);
+    let [E, b] = o.useState(() => d),
+        O = o.useRef(d);
     return (
-        a.useEffect(() => {
+        o.useEffect(() => {
             O.current = d;
         }),
-        a.useEffect(() => {
+        o.useEffect(() => {
             p.current
                 ? t().then((e) => {
                       b(() => e), c((e) => e + 1);

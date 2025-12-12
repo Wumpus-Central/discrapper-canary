@@ -1,8 +1,8 @@
 n.d(t, { G: () => h }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
-    a = n(793030),
-    o = n(481060),
+    o = n(793030),
+    a = n(481060),
     s = n(63063),
     l = n(74538),
     c = n(45474),
@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(474936),
     f = n(282793),
     p = n(981631),
-    _ = n(137427),
+    _ = n(96011),
     m = n(388032);
 let h = () => {
         var e;
@@ -73,7 +73,7 @@ let h = () => {
                 : m.intl.formatToPlainString(m.t.LZunzZ, {
                       planPremiumType: l.ZP.getTierDisplayNameByPlanId("".concat(E)),
                   });
-        return (0, r.jsx)(a.Modal, {
+        return (0, r.jsx)(o.Modal, {
             size: "md",
             transitionState: t,
             title: N,
@@ -81,7 +81,7 @@ let h = () => {
             actions: C,
             onClose: async () => n(),
             children: v
-                ? (0, r.jsx)(o.M14, {
+                ? (0, r.jsx)(a.M14, {
                       type: "critical",
                       children: m.intl.string(m.t["5mlOCW"]),
                   })

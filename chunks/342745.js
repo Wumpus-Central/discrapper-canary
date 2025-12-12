@@ -1,0 +1,15 @@
+e.exports = {
+    main: "main__4d307",
+    checkerboard: "checkerboard__4d307",
+    previewPlaceholder: "previewPlaceholder__4d307",
+    aside: "aside__4d307",
+    previews: "previews__4d307",
+    reactions: "reactions__4d307",
+    jumbo: "jumbo__4d307",
+    foot: "foot__4d307",
+    editor: "editor__4d307",
+    titleBar: "titleBar__4d307",
+    title: "title__4d307",
+    closeButton: "closeButton__4d307",
+    resetButton: "resetButton__4d307",
+};

@@ -2,19 +2,19 @@ n.d(t, { n: () => h }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    a = n(706454),
-    o = n(74538),
+    o = n(706454),
+    a = n(74538),
     s = n(937615),
     l = n(46062),
     c = n(474936),
     u = n(981631),
     d = n(388032),
-    f = n(948295);
+    f = n(17355);
 let p = (e) => {
-        let { text: t, badge: n, variant: a } = e;
+        let { text: t, badge: n, variant: o } = e;
         return (0, r.jsxs)(i.Text, {
             color: "text-default",
-            variant: null != a ? a : "text-sm/normal",
+            variant: null != o ? o : "text-sm/normal",
             children: [t, " ", n],
         });
     },
@@ -56,8 +56,8 @@ let p = (e) => {
         let E = {
                 0: {
                     label: (0, r.jsx)(p, { text: d.intl.string(d.t["09yRK3"]) }),
-                    column1: (0, r.jsx)(_, { text: o.ZP.formatPriceString(e, c.rV.MONTH) }),
-                    column2: (0, r.jsx)(_, { text: n ? h : o.ZP.formatPriceString(t, c.rV.MONTH) }),
+                    column1: (0, r.jsx)(_, { text: a.ZP.formatPriceString(e, c.rV.MONTH) }),
+                    column2: (0, r.jsx)(_, { text: n ? h : a.ZP.formatPriceString(t, c.rV.MONTH) }),
                     withBottomBorder: !0,
                 },
                 1: {
@@ -82,8 +82,8 @@ let p = (e) => {
                 },
                 5: {
                     label: (0, r.jsx)(p, { text: d.intl.string(d.t["ufhQC+"]) }),
-                    column1: (0, r.jsx)(_, { text: (0, o.v9)(c.PremiumTypes.TIER_0) }),
-                    column2: (0, r.jsx)(_, { text: (0, o.v9)(c.PremiumTypes.TIER_2) }),
+                    column1: (0, r.jsx)(_, { text: (0, a.v9)(c.PremiumTypes.TIER_0) }),
+                    column2: (0, r.jsx)(_, { text: (0, a.v9)(c.PremiumTypes.TIER_2) }),
                 },
                 6: {
                     label: (0, r.jsx)(p, { text: d.intl.string(d.t.VwxlMw) }),
@@ -94,7 +94,7 @@ let p = (e) => {
                     label: (0, r.jsx)(p, {
                         text: d.intl.formatToPlainString(d.t.nyhDpw, {
                             numBoosts: c.cb,
-                            percentageOff: (0, s.T3)(a.default.locale, c.Rr / 100),
+                            percentageOff: (0, s.T3)(o.default.locale, c.Rr / 100),
                         }),
                     }),
                     column1: (0, r.jsx)(m, { includes: !1 }),

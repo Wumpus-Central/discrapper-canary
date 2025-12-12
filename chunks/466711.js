@@ -1,8 +1,8 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(704215),
     c = n(996146),
@@ -27,8 +27,8 @@ var r = n(54381),
     N = n(981631),
     P = n(921944),
     R = n(388032),
-    w = n(124907),
-    D = n(72775);
+    w = n(30989),
+    D = n(564355);
 function x(e, t, n) {
     return (
         t in e
@@ -106,13 +106,13 @@ function k(e) {
 }
 function U(e) {
     let { Component: t, events: n, play: i } = (0, c.$)(),
-        { tooltipsWithKeybinds: a } = T.n.useConfig({ location: "TrinketsAnimationButton" }),
-        o = () => {
+        { tooltipsWithKeybinds: o } = T.n.useConfig({ location: "TrinketsAnimationButton" }),
+        a = () => {
             var t;
             i(), null == (t = e.onClick) || t.call(e);
         };
     return (0, r.jsx)(u.u, {
-        shouldShow: a,
+        shouldShow: o,
         text: R.intl.string(R.t.Ve9Ge6),
         children: (0, r.jsx)(
             A.Z,
@@ -123,7 +123,7 @@ function U(e) {
                         "aria-label": R.intl.string(R.t.Z1RnTk),
                         isActive: !1,
                         noHover: !0,
-                        onClick: o,
+                        onClick: a,
                     },
                     n,
                 ),
@@ -158,32 +158,32 @@ function U(e) {
 let G = v.Z.Millis.DAYS_30;
 function Z(e) {
     var t;
-    let { giftingPromotionConfig: n, disabled: a, channel: c } = e,
+    let { giftingPromotionConfig: n, disabled: o, channel: c } = e,
         { analyticsLocations: u } = (0, p.ZP)(f.Z.GIFT_BUTTON),
         [d, v] = i.useState(!1),
         T = (0, s.e7)([y.Z], () => !(null === y.Z || void 0 === y.Z ? void 0 : y.Z.hasLayers())),
         A = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
         R = null != A ? S.default.age(A.id) : 0,
         { giftBoxAnimation: D, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
-        L = null != n.firstTimeNotice && !a && T && R >= G,
+        L = null != n.firstTimeNotice && !o && T && R >= G,
         [j, M] = (0, m.XR)(
             L ? l.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null,
             (0, _.t)(l.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK),
         ),
         Z = null != j,
-        B = d || Z,
-        F = (0, I.Ft)(c),
+        F = d || Z,
+        B = (0, I.Ft)(c),
         V = c.type === N.d4z.DM,
         H = (0, b.ao)({
             location: "gift-promotion-button",
             isGift: !0,
-            giftRecipient: F,
+            giftRecipient: B,
         });
-    if (a) return null;
+    if (o) return null;
     let Y = () => {
-            H && V && null != F
+            H && V && null != B
                 ? (0, E.Z)({
-                      giftRecipient: F,
+                      giftRecipient: B,
                       analyticsLocations: u,
                       analyticsObject: {
                           page: c.isPrivate() ? N.ZY5.DM_CHANNEL : N.ZY5.GUILD_CHANNEL,
@@ -194,7 +194,7 @@ function Z(e) {
                   })
                 : (0, h.Z)({
                       isGift: !0,
-                      giftRecipient: null == F ? void 0 : F,
+                      giftRecipient: null == B ? void 0 : B,
                       initialPlanId: null,
                       analyticsLocations: u,
                       analyticsObject: {
@@ -212,21 +212,21 @@ function Z(e) {
             void 0 !== D
                 ? (0, r.jsx)(k, {
                       config: D,
-                      hovered: B,
+                      hovered: F,
                       onClick: W,
                   })
                 : void 0 !== x
                   ? (0, r.jsx)(U, {
                         config: x,
-                        hovered: B,
+                        hovered: F,
                         onClick: W,
                     })
                   : (0, r.jsx)(C.Z, {
-                        disabled: a,
+                        disabled: o,
                         channel: c,
                     });
     return (0, r.jsx)("div", {
-        className: o()(w.container, { [w.containerHovered]: B }),
+        className: a()(w.container, { [w.containerHovered]: F }),
         onMouseEnter: () => {
             d || v(!0);
         },
@@ -245,4 +245,4 @@ function Z(e) {
                 : K,
     });
 }
-let B = i.memo(Z);
+let F = i.memo(Z);

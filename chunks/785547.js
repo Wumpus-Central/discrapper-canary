@@ -1,8 +1,8 @@
 n.d(t, { Z: () => k }), n(415506), n(388685);
 var r,
     i = n(54381),
-    a = n(473749),
-    o = n(442837),
+    o = n(473749),
+    a = n(442837),
     s = n(692547),
     l = n(28664),
     c = n(755721),
@@ -23,7 +23,7 @@ var r,
     I = n(701560),
     T = n(981631),
     C = n(388032),
-    A = n(48208);
+    A = n(767248);
 function N(e, t, n) {
     return (
         t in e
@@ -117,7 +117,7 @@ function j(e) {
     let t = v.en(e.sku);
     return null != t ? C.intl.formatToPlainString(C.t.Aqe2ZC, { date: t }) : null;
 }
-class M extends (r = a.Component) {
+class M extends (r = o.Component) {
     get analyticsLocation() {
         return w(P({}, this.props.analyticsContext.location), { object: T.qAy.BUTTON_CTA });
     }
@@ -170,8 +170,8 @@ class M extends (r = a.Component) {
             fullWidth: t,
             size: n,
             color: r,
-            customDisabledColor: a,
-            isPlayShiny: o,
+            customDisabledColor: o,
+            isPlayShiny: a,
             onDropdownOpen: s,
             onDropdownClose: l,
             analyticsListSort: c,
@@ -183,8 +183,8 @@ class M extends (r = a.Component) {
             fullWidth: t,
             size: n,
             color: r,
-            customDisabledColor: a,
-            isShiny: o,
+            customDisabledColor: o,
+            isShiny: a,
             onDropdownOpen: s,
             onDropdownClose: l,
             analyticsListSort: c,
@@ -192,15 +192,15 @@ class M extends (r = a.Component) {
         });
     }
     renderDisabledButton(e, t) {
-        let { className: n, fullWidth: r, size: a, customDisabledColor: o, tooltipPosition: s } = this.props;
+        let { className: n, fullWidth: r, size: o, customDisabledColor: a, tooltipPosition: s } = this.props;
         return (0, i.jsxs)("div", {
             className: A.disabledButtonWrapper,
             children: [
                 (0, i.jsxs)(c.zx, {
                     className: n,
                     fullWidth: r,
-                    size: a,
-                    color: null != o ? o : A.disabledButtonColor,
+                    size: o,
+                    color: null != a ? a : A.disabledButtonColor,
                     disabled: !0,
                     children: [this.getText(e), this.renderProgressBar()],
                 }),
@@ -227,12 +227,12 @@ class M extends (r = a.Component) {
         });
     }
     renderActionButton(e, t) {
-        let { className: n, fullWidth: r, size: a, color: o, isCloudSyncing: s } = this.props;
+        let { className: n, fullWidth: r, size: o, color: a, isCloudSyncing: s } = this.props;
         return (0, i.jsxs)(c.zx, {
             className: n,
             fullWidth: r,
-            size: a,
-            color: null != o ? o : c.zx.Colors.GREEN,
+            size: o,
+            color: null != a ? a : c.zx.Colors.GREEN,
             submitting: "uninstalling" === e || s,
             onClick: (e) => this.handleClick(e, t),
             children: [this.getText(e), this.renderProgressBar()],
@@ -285,15 +285,15 @@ class M extends (r = a.Component) {
 function k(e) {
     let { libraryApplication: t } = e,
         n = (0, f.O)(),
-        [r, a] = (0, o.Wu)([E.Z, b.Z], () => [(0, h.i)(t, E.Z, b.Z), E.Z.getState(t.id, t.branchId)], [t]),
-        s = (0, o.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
-        l = (0, o.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
+        [r, o] = (0, a.Wu)([E.Z, b.Z], () => [(0, h.i)(t, E.Z, b.Z), E.Z.getState(t.id, t.branchId)], [t]),
+        s = (0, a.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
+        l = (0, a.e7)([m.Z], () => m.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, i.jsx)(
         M,
         w(P({}, e), {
             analyticsContext: n,
             actionState: r,
-            dispatchState: a,
+            dispatchState: o,
             isCloudSyncing: s,
             hasNoBuild: l,
         }),

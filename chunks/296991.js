@@ -1,26 +1,26 @@
-n.d(t, { k: () => _ }), n(388685);
+n.d(t, { k: () => S }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    a = n.n(l),
-    s = n(97613),
-    o = n.n(s),
+    s = n.n(l),
+    a = n(97613),
+    o = n.n(a),
     c = n(891371),
-    d = n(692992),
-    u = n(442837),
+    u = n(692992),
+    d = n(442837),
     g = n(481060),
     m = n(541716),
-    f = n(752305),
-    p = n(893718),
-    b = n(592125),
-    h = n(984933),
-    x = n(540457),
+    p = n(752305),
+    f = n(893718),
+    h = n(592125),
+    x = n(984933),
+    b = n(540457),
     j = n(681460),
-    v = n(592286),
-    O = n(981631),
-    C = n(388032),
-    y = n(616224);
-function N(e) {
+    _ = n(592286),
+    v = n(981631),
+    O = n(388032),
+    C = n(94228);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function N(e) {
     }
     return e;
 }
-function E(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,57 +63,57 @@ function E(e, t) {
         e
     );
 }
-let I = "RULE";
-function S(e) {
+let E = "RULE";
+function I(e) {
     let {
             rule: t,
             rulesChannel: n,
             index: l,
-            onChange: s,
+            onChange: a,
             onKeyDown: o,
-            onClear: u,
-            onRuleReorder: b,
-            isDropHovered: h,
-            focused: x,
+            onClear: d,
+            onRuleReorder: h,
+            isDropHovered: x,
+            focused: b,
             onFocus: j,
-            previewEnabled: O,
-            isDragEnabled: N,
-            disabled: E,
+            previewEnabled: v,
+            isDragEnabled: y,
+            disabled: N,
         } = e,
+        I = i.useRef(null),
         S = i.useRef(null),
-        _ = i.useRef(null),
-        [{ textValue: T, richValue: P }, w] = i.useState((0, f.eK)(t.value)),
+        [{ textValue: T, richValue: P }, w] = i.useState((0, p.eK)(t.value)),
         [, Z, R] = (0, c.c)({
-            type: I,
+            type: E,
             item: {
                 rule: t,
                 index: l,
             },
             end: (e, t) => {
-                null == e || t.didDrop() || b(e.rule, null, !0);
+                null == e || t.didDrop() || h(e.rule, null, !0);
             },
         }),
-        [, D] = (0, d.L)({
-            accept: I,
+        [, D] = (0, u.L)({
+            accept: E,
             hover: (e, t) => {
                 var n;
                 let { index: r } = e,
-                    i = null == (n = S.current) ? void 0 : n.getBoundingClientRect(),
-                    a = t.getClientOffset();
-                if (null == i || null == a) return;
-                let s = (i.bottom - i.top) / 2,
-                    o = a.y - i.top;
-                (r < l && o < s) || (r > l && o > s) || b(e.rule, l, !1);
+                    i = null == (n = I.current) ? void 0 : n.getBoundingClientRect(),
+                    s = t.getClientOffset();
+                if (null == i || null == s) return;
+                let a = (i.bottom - i.top) / 2,
+                    o = s.y - i.top;
+                (r < l && o < a) || (r > l && o > a) || h(e.rule, l, !1);
             },
             drop: (e) => {
-                b(e.rule, l, !0);
+                h(e.rule, l, !0);
             },
         });
     if (
         (i.useLayoutEffect(
             () => (
-                Z(_),
-                R(D(S)),
+                Z(S),
+                R(D(I)),
                 () => {
                     Z(null), D(null);
                 }
@@ -121,43 +121,43 @@ function S(e) {
             [Z, D, R],
         ),
         i.useEffect(() => {
-            "" !== t.value && "" === T && w((0, f.eK)(t.value));
+            "" !== t.value && "" === T && w((0, p.eK)(t.value));
         }, [t.value, T]),
         null == n)
     )
         return null;
     let A = "" !== t.value ? t.value : t.id;
     return (0, r.jsx)("div", {
-        ref: S,
-        className: a()(y.draggableInputContainer, { [y.dragging]: h }),
+        ref: I,
+        className: s()(C.draggableInputContainer, { [C.dragging]: x }),
         "data-dnd-name": A,
         children: (0, r.jsxs)("div", {
-            className: y.inputWrapper,
+            className: C.inputWrapper,
             children: [
                 (0, r.jsx)(g.P3F, {
                     onMouseDown: () => j(l),
-                    children: (0, r.jsx)(p.ZP, {
-                        innerClassName: y.rulesTextAreaInput,
+                    children: (0, r.jsx)(f.ZP, {
+                        innerClassName: C.rulesTextAreaInput,
                         type: m.Ie.RULES_INPUT,
                         textValue: T,
                         richValue: P,
                         channel: n,
-                        placeholder: C.intl.string(C.t.BRkD41),
-                        focused: x,
+                        placeholder: O.intl.string(O.t.BRkD41),
+                        focused: b,
                         onChange: (e, n, r) => {
-                            let i = E ? t.value : n;
-                            i.length > v.fn && (i = i.slice(0, v.fn)),
-                                n !== i && ((n = i), (r = (0, f.JM)(i))),
-                                s(n),
+                            let i = N ? t.value : n;
+                            i.length > _.fn && (i = i.slice(0, _.fn)),
+                                n !== i && ((n = i), (r = (0, p.JM)(i))),
+                                a(n),
                                 w({
                                     textValue: n,
                                     richValue: r,
                                 });
                         },
                         onKeyDown: o,
-                        canMentionChannels: O,
-                        canMentionRoles: O,
-                        maxCharacterCount: v.fn,
+                        canMentionChannels: v,
+                        canMentionRoles: v,
+                        maxCharacterCount: _.fn,
                         onSubmit: () =>
                             Promise.resolve({
                                 shouldClear: !1,
@@ -166,45 +166,45 @@ function S(e) {
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    className: y.clearButton,
+                    className: C.clearButton,
                     children: (0, r.jsx)(g.hU, {
                         size: "sm",
                         variant: "icon-only",
                         icon: g.k$p,
-                        "aria-label": C.intl.string(C.t.VkKicb),
-                        onClick: u,
+                        "aria-label": O.intl.string(O.t.VkKicb),
+                        onClick: d,
                     }),
                 }),
                 (0, r.jsx)("div", {
-                    ref: _,
-                    className: y.dragContainer,
+                    ref: S,
+                    className: C.dragContainer,
                     "data-dnd-name": A,
                     children:
-                        N &&
+                        y &&
                         (0, r.jsx)(g.Vni, {
                             size: "xs",
                             color: "currentColor",
-                            className: y.dragIcon,
+                            className: C.dragIcon,
                         }),
                 }),
             ],
         }),
     });
 }
-function _(e) {
-    let { rules: t, setRules: n, guild: l, disabled: a } = e,
-        s = l.rulesChannelId,
-        c = l.features.has(O.GuildFeatures.PREVIEW_ENABLED),
-        d = (0, u.e7)([b.Z], () => (null != s ? b.Z.getChannel(s) : null)),
-        m = (0, u.e7)([h.ZP], () => h.ZP.getDefaultChannel(l.id)),
-        [f, p] = i.useState(null),
-        [I, _] = i.useState(null),
+function S(e) {
+    let { rules: t, setRules: n, guild: l, disabled: s } = e,
+        a = l.rulesChannelId,
+        c = l.features.has(v.GuildFeatures.PREVIEW_ENABLED),
+        u = (0, d.e7)([h.Z], () => (null != a ? h.Z.getChannel(a) : null)),
+        m = (0, d.e7)([x.ZP], () => x.ZP.getDefaultChannel(l.id)),
+        [p, f] = i.useState(null),
+        [E, S] = i.useState(null),
         T = i.useCallback(
             (e) => {
-                if (!a && t.length !== v.X2)
+                if (!s && t.length !== _.X2)
                     if (null != e && "" === t[t.length - 1].value) {
                         let r = [...t];
-                        (r[t.length - 1] = E(N({}, r[t.length - 1]), { value: e })), n(r), _(r.length - 1);
+                        (r[t.length - 1] = N(y({}, r[t.length - 1]), { value: e })), n(r), S(r.length - 1);
                     } else
                         n([
                             ...t,
@@ -213,78 +213,78 @@ function _(e) {
                                 value: null != e ? e : "",
                             },
                         ]),
-                            _(t.length);
+                            S(t.length);
             },
-            [a, t, n],
+            [s, t, n],
         ),
         P = i.useCallback(() => {
-            a || T(void 0);
-        }, [T, a]),
+            s || T(void 0);
+        }, [T, s]),
         w = i.useCallback(
             (e, r) => {
-                if (a) return;
+                if (s) return;
                 let i = [...t];
-                (i[r] = E(N({}, i[r]), { value: e })), n(i);
+                (i[r] = N(y({}, i[r]), { value: e })), n(i);
             },
-            [a, t, n],
+            [s, t, n],
         ),
         Z = i.useCallback(
             (e, r, i) => {
-                if (a || null == t) return;
+                if (s || null == t) return;
                 let l = t.indexOf(e);
                 if (null != r && r !== l) {
                     let i = [...t];
                     i.splice(l, 1), i.splice(r, 0, e), n(i);
                 }
-                i ? null !== f && p(null) : r !== f && p(r);
+                i ? null !== p && f(null) : r !== p && f(r);
             },
-            [a, f, t, n],
+            [s, p, t, n],
         ),
-        R = t.length === v.X2,
+        R = t.length === _.X2,
         D = i.useMemo(() => {
-            let e = R ? C.intl.formatToPlainString(C.t.tU718E, { number: v.X2 }) : void 0;
+            let e = R ? O.intl.formatToPlainString(O.t.tU718E, { number: _.X2 }) : void 0;
             return [
                 {
-                    text: C.intl.string(C.t.DXq2od),
-                    onClick: () => T(C.intl.string(C.t.XudkSq)),
-                    disabled: R || a,
+                    text: O.intl.string(O.t.DXq2od),
+                    onClick: () => T(O.intl.string(O.t.XudkSq)),
+                    disabled: R || s,
                     tooltipText: e,
                 },
                 {
-                    text: C.intl.string(C.t.nSqTjM),
-                    onClick: () => T(C.intl.string(C.t.np91jA)),
-                    disabled: R || a,
+                    text: O.intl.string(O.t.nSqTjM),
+                    onClick: () => T(O.intl.string(O.t.np91jA)),
+                    disabled: R || s,
                     tooltipText: e,
                 },
                 {
-                    text: C.intl.string(C.t.AtRxsO),
-                    onClick: () => T(C.intl.string(C.t.PNIDDJ)),
-                    disabled: R || a,
+                    text: O.intl.string(O.t.AtRxsO),
+                    onClick: () => T(O.intl.string(O.t.PNIDDJ)),
+                    disabled: R || s,
                     tooltipText: e,
                 },
                 {
-                    text: C.intl.string(C.t["0K5NJt"]),
-                    onClick: () => T(C.intl.string(C.t.HolIDy)),
-                    disabled: R || a,
+                    text: O.intl.string(O.t["0K5NJt"]),
+                    onClick: () => T(O.intl.string(O.t.HolIDy)),
+                    disabled: R || s,
                     tooltipText: e,
                 },
             ];
-        }, [T, a, R]);
+        }, [T, s, R]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: y.rulesContainer,
+                className: C.rulesContainer,
                 children: t.map((e, i) =>
                     (0, r.jsx)(
-                        S,
+                        I,
                         {
-                            rulesChannel: null != d ? d : m,
+                            rulesChannel: null != u ? u : m,
                             rule: e,
                             index: i,
                             onChange: (e) => w(e, i),
                             onClear: () =>
                                 ((e) => {
-                                    if (a) return;
+                                    if (s) return;
                                     let r = [...t.slice(0, e), ...t.slice(e + 1)];
                                     n(
                                         0 === r.length
@@ -298,32 +298,32 @@ function _(e) {
                                     );
                                 })(i),
                             onRuleReorder: Z,
-                            isDropHovered: i === f,
-                            focused: i === I,
-                            onFocus: _,
+                            isDropHovered: i === p,
+                            focused: i === E,
+                            onFocus: S,
                             previewEnabled: null == c || c,
-                            isDragEnabled: !a && t.length > 1,
-                            disabled: a,
+                            isDragEnabled: !s && t.length > 1,
+                            disabled: s,
                         },
                         e.id,
                     ),
                 ),
             }),
             !R &&
-                (0, r.jsx)(x.A, {
-                    text: C.intl.string(C.t.Cq5JuR),
+                (0, r.jsx)(b.A, {
+                    text: O.intl.string(O.t.Cq5JuR),
                     onClick: P,
-                    disabled: a,
+                    disabled: s,
                 }),
             (0, r.jsx)(g.Heading, {
                 variant: "text-xs/bold",
                 color: "text-muted",
-                className: y.exampleRulesTitle,
-                children: C.intl.string(C.t.XHWj8W),
+                className: C.exampleRulesTitle,
+                children: O.intl.string(O.t.XHWj8W),
             }),
             (0, r.jsx)(j.j, {
                 pills: D,
-                pillClassName: y.pill,
+                pillClassName: C.pill,
             }),
         ],
     });

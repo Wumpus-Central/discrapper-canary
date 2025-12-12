@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    a = n.n(l),
-    o = n(467721),
+    o = n.n(l),
+    a = n(467721),
     s = n(793030),
     c = n(442837),
     u = n(481060),
@@ -12,30 +12,30 @@ var r = n(54381),
     h = n(667815),
     p = n(531572),
     g = n(259580),
-    b = n(639777),
-    m = n(495804),
-    y = n(441536),
-    O = n(44542),
-    v = n(388032),
-    j = n(915241);
-function C(e) {
+    m = n(639777),
+    b = n(495804),
+    _ = n(441536),
+    y = n(5238),
+    O = n(388032),
+    v = n(931942);
+function j(e) {
     let { guild: t, withMargin: l } = e,
-        C = (0, m.Z)(t),
-        x = (0, b.Z)(t.id),
-        E = i.useCallback(() => {
-            (0, y.Z)(t.id, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
+        j = (0, b.Z)(t),
+        C = (0, m.Z)(t.id),
+        x = i.useCallback(() => {
+            (0, _.Z)(t.id, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        S = (0, c.e7)([p.Z], () => {
+        E = (0, c.e7)([p.Z], () => {
             var e;
             return null != (e = p.Z.getCountForGuild(t.id)) ? e : 0;
         });
     i.useEffect(() => {
-        S !== t.premiumSubscriberCount && (0, h.v)(t.id, t.premiumSubscriberCount);
-    }, [t.id, S, t.premiumSubscriberCount]);
-    let I = Math.min((S / C) * 100, 100),
-        [_, P] = (0, u.q_F)(
+        E !== t.premiumSubscriberCount && (0, h.v)(t.id, t.premiumSubscriberCount);
+    }, [t.id, E, t.premiumSubscriberCount]);
+    let S = Math.min((E / j) * 100, 100),
+        [I, P] = (0, u.q_F)(
             () => ({
-                width: S === t.premiumSubscriberCount ? "calc(".concat(I, "% - 4px)") : "0%",
+                width: E === t.premiumSubscriberCount ? "calc(".concat(S, "% - 4px)") : "0%",
                 config: {
                     tension: 250,
                     damping: 5,
@@ -43,12 +43,12 @@ function C(e) {
                 },
             }),
             "respect-motion-settings",
-            [S, t.premiumSubscriberCount],
+            [E, t.premiumSubscriberCount],
         );
     i.useEffect(() => {
-        P({ width: "calc(".concat(I, "% - 4px)") });
-    }, [I, P]);
-    let N = S >= C;
+        P({ width: "calc(".concat(S, "% - 4px)") });
+    }, [S, P]);
+    let N = E >= j;
     return (0, r.jsx)(u.P3F, {
         "aria-label": void 0,
         role: "button",
@@ -59,11 +59,11 @@ function C(e) {
             },
         },
         onClick: () => {
-            E();
+            x();
         },
-        className: a()(j.container, { [j.containerWithMargin]: l }),
+        className: o()(v.container, { [v.containerWithMargin]: l }),
         onContextMenu: (e) => {
-            x &&
+            C &&
                 (0, d.jW)(e, async () => {
                     let { default: e } = await n.e("8570").then(n.bind(n, 651138));
                     return (n) => {
@@ -114,50 +114,50 @@ function C(e) {
                 });
         },
         children: (0, r.jsxs)("div", {
-            className: j.contentContainer,
+            className: v.contentContainer,
             children: [
-                (0, r.jsx)("div", { className: j.progressContainer }),
-                (0, r.jsx)(o.animated.div, {
-                    className: a()(j.progress, { [j.progressLow]: I <= 5 }),
-                    style: _,
+                (0, r.jsx)("div", { className: v.progressContainer }),
+                (0, r.jsx)(a.animated.div, {
+                    className: o()(v.progress, { [v.progressLow]: S <= 5 }),
+                    style: I,
                 }),
                 (0, r.jsxs)("div", {
-                    className: j.textContainer,
+                    className: v.textContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: j.textContentContainer,
+                            className: v.textContentContainer,
                             children: [
                                 (0, r.jsx)(s.xvT, {
-                                    className: j.text,
+                                    className: v.text,
                                     variant: "text-xs/semibold",
-                                    children: v.intl.string(O.default.NI6Ihe),
+                                    children: O.intl.string(y.default.NI6Ihe),
                                 }),
-                                t.premiumSubscriberCount >= C &&
+                                t.premiumSubscriberCount >= j &&
                                     (0, r.jsx)(s.xvT, {
-                                        className: j.text,
+                                        className: v.text,
                                         variant: "text-xs/semibold",
                                         children: "\uD83C\uDF89",
                                     }),
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: j.textContentContainer,
+                            className: v.textContentContainer,
                             children: [
                                 (0, r.jsx)(s.xvT, {
-                                    className: a()(j.text, j.boostCountText),
+                                    className: o()(v.text, v.boostCountText),
                                     variant: "text-xs/semibold",
                                     children: N
-                                        ? v.intl.formatToPlainString(O.default["Ehpq+7"], { appliedBoostCount: S })
-                                        : v.intl.formatToPlainString(O.default["/rbPDs"], {
-                                              appliedBoostCount: S,
-                                              maxBoostCount: C,
+                                        ? O.intl.formatToPlainString(y.default["Ehpq+7"], { appliedBoostCount: E })
+                                        : O.intl.formatToPlainString(y.default["/rbPDs"], {
+                                              appliedBoostCount: E,
+                                              maxBoostCount: j,
                                           }),
                                 }),
                                 (0, r.jsx)(g.Z, {
                                     width: 12,
                                     height: 12,
                                     direction: g.Z.Directions.RIGHT,
-                                    className: a()(j.text, j.boostCountText),
+                                    className: o()(v.text, v.boostCountText),
                                 }),
                             ],
                         }),
@@ -167,9 +167,9 @@ function C(e) {
         }),
     });
 }
-function x(e) {
+function C(e) {
     let { guild: t, withMargin: n } = e;
-    return (0, r.jsx)(C, {
+    return (0, r.jsx)(j, {
         guild: t,
         withMargin: n,
     });

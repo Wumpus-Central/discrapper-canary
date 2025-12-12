@@ -2,13 +2,13 @@ n.d(t, { Z: () => g });
 var r = n(54381);
 n(473749);
 var i = n(392711),
-    a = n(194983),
-    o = n(28664),
+    o = n(194983),
+    a = n(28664),
     s = n(481060),
     l = n(5192),
     c = n(652853),
     u = n(671955),
-    d = n(964542);
+    d = n(16535);
 let f = 4,
     p = 1,
     _ = 3,
@@ -177,10 +177,10 @@ function g(e) {
                                         children: (0, r.jsx)(s.Text, {
                                             variant: "text-xxs/semibold",
                                             lineClamp: 1,
-                                            children: (0, r.jsx)(a.Z, { children: y > 99 ? ">99" : "+".concat(y) }),
+                                            children: (0, r.jsx)(o.Z, { children: y > 99 ? ">99" : "+".concat(y) }),
                                         }),
                                     })
-                                  : (0, r.jsx)(o.u, {
+                                  : (0, r.jsx)(a.u, {
                                         text: l.ZP.getName(n.guild_id, n.id, c),
                                         children: (0, r.jsx)("img", {
                                             className: d.avatar,

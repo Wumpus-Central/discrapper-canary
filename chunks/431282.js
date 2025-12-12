@@ -10,7 +10,7 @@ var a = n(54381),
     l = n(481060),
     s = n(732380),
     o = n(388032),
-    c = n(787224);
+    c = n(54482);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,17 +71,17 @@ function m(e) {
     });
 }
 function p(e) {
-    let { action: t, onClick: n, icon: m, label: p, sublabel: h, trailing: f, renderSubmenu: x, ref: b } = e,
-        g = null != n,
+    let { action: t, onClick: n, icon: m, label: p, sublabel: h, trailing: x, renderSubmenu: f, ref: g } = e,
+        b = null != n,
         v = (0, s.Q1)({
             action: t,
             onClick: n,
         }),
-        [j, y] = r.useState(!1),
-        C = r.useRef(null),
-        _ = null != b ? b : C,
-        S = null != x,
-        E = S && g,
+        [j, _] = r.useState(!1),
+        y = r.useRef(null),
+        C = null != g ? g : y,
+        S = null != f,
+        E = S && b,
         O = {
             offset: {
                 top: -8,
@@ -91,10 +91,10 @@ function p(e) {
             },
         },
         T = r.useCallback(() => {
-            y(!0);
+            _(!0);
         }, []),
         N = r.useCallback(() => {
-            y(!1);
+            _(!1);
         }, []),
         P = () =>
             (0, a.jsxs)(a.Fragment, {
@@ -124,7 +124,7 @@ function p(e) {
                                     }),
                                 ],
                             }),
-                            f,
+                            x,
                         ],
                     }),
                 ],
@@ -188,7 +188,7 @@ function p(e) {
                             children: P(),
                         })),
                 (0, a.jsx)("div", {
-                    ref: _,
+                    ref: C,
                     className: c.menuItemInner,
                     children: t,
                 })
@@ -200,9 +200,9 @@ function p(e) {
               onMouseEnter: T,
               onMouseLeave: N,
               children: (0, a.jsx)(l.yRy, {
-                  targetElementRef: _,
+                  targetElementRef: C,
                   spacing: 0,
-                  renderPopout: x,
+                  renderPopout: f,
                   shouldShow: j,
                   onRequestClose: N,
                   children: w,

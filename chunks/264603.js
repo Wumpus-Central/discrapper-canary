@@ -11,17 +11,17 @@ var a = n(54381),
     m = n(100527),
     p = n(906732),
     h = n(407089),
-    f = n(524995),
-    x = n(812206),
-    b = n(835473),
-    g = n(594190),
+    x = n(524995),
+    f = n(812206),
+    g = n(835473),
+    b = n(594190),
     v = n(989941),
     j = n(695346),
-    y = n(881998),
-    C = n(449224),
-    _ = n(246992),
-    S = n(663618),
-    E = n(17827);
+    _ = n(881998),
+    y = n(449224),
+    C = n(246992),
+    S = n(451429),
+    E = n(441900);
 let O = [
     {
         label: "Unset",
@@ -45,23 +45,23 @@ function T() {
         { analyticsLocations: t } = (0, p.ZP)(m.Z.DEV_TOOLS),
         n = j.JG.useSetting(),
         [i, o] = r.useState(""),
-        T = (0, s.e7)([g.ZP, C.Z], () => (0, v.Z)(g.ZP, C.Z)),
-        N = (0, b.q)(i),
-        P = (0, s.Wu)([x.Z], () => {
+        T = (0, s.e7)([b.ZP, y.Z], () => (0, v.Z)(b.ZP, y.Z)),
+        N = (0, g.q)(i),
+        P = (0, s.Wu)([f.Z], () => {
             var e, t;
             return null !=
                 (t =
                     null == N || null == (e = N.linkedGames)
                         ? void 0
-                        : e.map((e) => x.Z.getApplication(e.id)).filter((e) => null != e))
+                        : e.map((e) => f.Z.getApplication(e.id)).filter((e) => null != e))
                 ? t
                 : [];
         }),
-        w = (0, f.F)(N, { allowedFlows: [f.r.RPC] }),
-        I = (0, f.F)(N, { allowedFlows: [f.r.WEB] }),
-        k = (0, f.F)(N),
+        w = (0, x.F)(N, { allowedFlows: [x.r.RPC] }),
+        I = (0, x.F)(N, { allowedFlows: [x.r.WEB] }),
+        k = (0, x.F)(N),
         { canDeauthorize: R, deauthorize: A } = (function (e) {
-            let t = (0, s.e7)([y.default], () => y.default.getNewestTokenForApplication(e)),
+            let t = (0, s.e7)([_.default], () => _.default.getNewestTokenForApplication(e)),
                 n = r.useCallback(() => {
                     null != t && u.Z.delete(t.id);
                 }, [t]);
@@ -86,7 +86,7 @@ function T() {
                         options: O,
                         isSelected: (e) => e === n,
                         select: j.JG.updateSetting,
-                        popoutLayerContext: _.O$,
+                        popoutLayerContext: C.O$,
                         serialize: (e) => e.toString(),
                     }),
                 ],

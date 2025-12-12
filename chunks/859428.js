@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(755721),
     c = n(481060),
@@ -13,32 +13,32 @@ var r = n(54381),
     _ = n(900849),
     m = n(981631),
     h = n(388032),
-    g = n(510093),
-    E = n(99940);
+    g = n(990186),
+    E = n(226910);
 let b = () => {
     let e = (0, s.e7)([p.Z], () => p.Z.getGuildId(), []),
         t = (0, s.e7)([f.Z], () => f.Z.getGuild(e), [e]),
-        [n, a] = i.useState(!1);
+        [n, o] = i.useState(!1);
     if (null == t) return null;
     let b = () => {
             (0, d.s1)().goBack();
         },
         y = async () => {
-            a(!0);
+            o(!0);
             try {
                 _.mT(t.id), await u.Z.joinGuild(t.id, { source: m.vtS.NOTICE_BAR });
             } catch (e) {
-                a(!1);
+                o(!1);
             }
         };
     return (0, r.jsxs)("div", {
-        className: o()(g.notice, E.notice),
+        className: a()(g.notice, E.notice),
         children: [
             (0, r.jsxs)(l.zx, {
                 look: l.zx.Looks.OUTLINED,
                 color: l.zx.Colors.WHITE,
                 size: l.zx.Sizes.NONE,
-                className: o()(g.button, g.back),
+                className: a()(g.button, g.back),
                 innerClassName: g.iconButton,
                 onClick: b,
                 children: [

@@ -12,8 +12,8 @@ n.d(t, {
     n(388685);
 var r = n(704215),
     i = n(70956),
-    a = n(512170),
-    o = n(388032);
+    o = n(29467),
+    a = n(388032);
 let s = 6 * i.Z.Millis.DAYS_30;
 var l = (function (e) {
     return (
@@ -28,19 +28,19 @@ function c() {
     return [
         {
             value: "confusion",
-            label: o.intl.string(o.t["64Oph/"]),
+            label: a.intl.string(a.t["64Oph/"]),
         },
         {
             value: "does_not_achieve_wants",
-            label: o.intl.string(o.t["wH5R/r"]),
+            label: a.intl.string(a.t["wH5R/r"]),
         },
         {
             value: "hard_to_access",
-            label: o.intl.string(o.t["4uZBRp"]),
+            label: a.intl.string(a.t["4uZBRp"]),
         },
         {
             value: "something_else",
-            label: o.intl.string(o.t.YicFbD),
+            label: a.intl.string(a.t.YicFbD),
         },
     ];
 }
@@ -57,19 +57,19 @@ function d() {
     return [
         {
             value: "confusion",
-            label: o.intl.string(o.t.IumZmj),
+            label: a.intl.string(a.t.IumZmj),
         },
         {
             value: "does_not_achieve_wants",
-            label: o.intl.string(o.t.mXkYyW),
+            label: a.intl.string(a.t.mXkYyW),
         },
         {
             value: "hard_to_access",
-            label: o.intl.string(o.t.eg1hVP),
+            label: a.intl.string(a.t.eg1hVP),
         },
         {
             value: "something_else",
-            label: o.intl.string(o.t.WAYoTx),
+            label: a.intl.string(a.t.WAYoTx),
         },
     ];
 }
@@ -90,19 +90,19 @@ function p(e) {
     let t = [
         {
             value: "pid_concern",
-            label: o.intl.string(a.default.ZsnNgz),
+            label: a.intl.string(o.default.ZsnNgz),
         },
         {
             value: "too_much_time",
-            label: o.intl.string(a.default.kkKhVJ),
+            label: a.intl.string(o.default.kkKhVJ),
         },
         {
             value: "confusion",
-            label: o.intl.string(a.default.bC0QVX),
+            label: a.intl.string(o.default.bC0QVX),
         },
         {
             value: "something_else",
-            label: o.intl.string(o.t.WAYoTx),
+            label: a.intl.string(a.t.WAYoTx),
         },
     ];
     return e === r.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE
@@ -110,22 +110,22 @@ function p(e) {
               ...t,
               {
                   value: "need_documents",
-                  label: o.intl.string(a.default["Dl4A+U"]),
+                  label: a.intl.string(o.default["Dl4A+U"]),
               },
               {
                   value: "didnt_work",
-                  label: o.intl.string(a.default["8JFGXc"]),
+                  label: a.intl.string(o.default["8JFGXc"]),
               },
           ]
         : [
               ...t,
               {
                   value: "changed_mind",
-                  label: o.intl.string(a.default.eSP1F9),
+                  label: a.intl.string(o.default.eSP1F9),
               },
               {
                   value: "unnecessary",
-                  label: o.intl.string(a.default.maxf2S),
+                  label: a.intl.string(o.default.maxf2S),
               },
           ];
 }

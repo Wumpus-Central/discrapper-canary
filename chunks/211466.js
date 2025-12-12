@@ -2,8 +2,8 @@ n.d(t, { n: () => m });
 var r = n(54381);
 n(473749);
 var i = n(925513),
-    a = n(63063),
-    o = n(526156),
+    o = n(63063),
+    a = n(526156),
     s = n(821035),
     l = n(768604),
     c = n(838436),
@@ -11,7 +11,7 @@ var i = n(925513),
     d = n(726985),
     f = n(981631),
     p = n(388032),
-    _ = n(693976);
+    _ = n(20492);
 function m() {
     let e = (0, i.v6)(),
         t = [
@@ -34,9 +34,9 @@ function m() {
         children: [
             (0, r.jsx)(c.H, {
                 header: p.intl.string(p.t["Hj/But"]),
-                description: p.intl.format(p.t.dliU4j, { learnMoreLink: a.Z.getArticleURL(e) }),
+                description: p.intl.format(p.t.dliU4j, { learnMoreLink: o.Z.getArticleURL(e) }),
             }),
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(a.Z, {
                 parentSetting: d.s6.CONTENT_SOCIAL,
                 settingsSection: f.oAB.CONTENT_AND_SOCIAL,
                 tabs: t,
