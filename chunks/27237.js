@@ -1,9 +1,9 @@
-n.d(t, { ZP: () => I }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    a = n.n(l),
-    o = n(793030),
+    o = n.n(l),
+    a = n(793030),
     s = n(481060),
     c = n(297159),
     u = n(238343),
@@ -23,13 +23,13 @@ function Z(e) {
     let t,
         { active: n, nextActive: i, position: l } = e;
     return (
-        (t = n && !1 !== i ? "full" : n && !1 === i ? "half" : "none"),
+        (t = n && !1 !== i ? v.vW.FULL : n && !1 === i ? v.vW.HALF : v.vW.NONE),
         (0, r.jsxs)("div", {
             className: C.progressContainer,
             children: [
-                (0, r.jsx)("div", { className: a()(C.progress, C[l], C[t]) }),
+                (0, r.jsx)("div", { className: o()(C.progress, C[l], C[t]) }),
                 (0, r.jsx)("div", {
-                    className: a()(C.boostContainer, _.boostProgressBackground, {
+                    className: o()(C.boostContainer, _.boostProgressBackground, {
                         [C.boostContainerActive]: n,
                         [_.active]: n,
                     }),
@@ -44,7 +44,7 @@ function Z(e) {
 }
 function w(e) {
     let { isActive: t, index: n } = e,
-        { textColor: l, iconColor: a } = (0, g.Z)(t),
+        { textColor: l, iconColor: o } = (0, g.Z)(t),
         s = i.useMemo(() => {
             let e = b.C[n];
             if (null == e) return [];
@@ -59,10 +59,10 @@ function w(e) {
                               className: C.perkRow,
                               children: [
                                   (0, r.jsx)(i, {
-                                      color: a,
+                                      color: o,
                                       size: "sm",
                                   }),
-                                  (0, r.jsx)(o.xvT, {
+                                  (0, r.jsx)(a.xvT, {
                                       className: C.perkText,
                                       color: l,
                                       variant: "text-sm/medium",
@@ -73,14 +73,14 @@ function w(e) {
                           "perk-".concat(n, "-").concat(t),
                       );
                   });
-        }, [n, a, l]);
+        }, [n, o, l]);
     return (0, r.jsxs)("div", {
         className: C.perkRowContainer,
         children: [
             s,
             (0, r.jsx)("div", {
                 className: C.perkRow,
-                children: (0, r.jsx)(o.xvT, {
+                children: (0, r.jsx)(a.xvT, {
                     color: l,
                     variant: "text-sm/medium",
                     children: j.intl.string(h.default.nIj3LZ),
@@ -90,46 +90,47 @@ function w(e) {
     });
 }
 function I(e) {
-    let { guildId: t, index: n, powerup: l, nextPowerup: a } = e,
-        o = (0, d.ZP)(t, l),
-        s = (0, d.ZP)(t, a),
-        c = o.type !== v.A3.INACTIVE,
+    let t,
+        { guildId: n, index: l, powerup: o, nextPowerup: a } = e,
+        s = (0, d.ZP)(n, o),
+        c = (0, d.ZP)(n, a),
         x = s.type !== v.A3.INACTIVE,
-        b = o.type === v.A3.TIER_OVERRIDE_ACTIVATED,
-        [h, j] = i.useState(void 0);
-    (0, u.KT)(h);
-    let { textColor: _ } = (0, g.Z)(c);
+        b = c.type !== v.A3.INACTIVE,
+        h = s.type === v.A3.TIER_OVERRIDE_ACTIVATED,
+        [j, _] = i.useState(void 0);
+    (0, u.KT)(j), (t = 0 === l ? v.m.START : null == a ? v.m.END : v.m.MIDDLE);
+    let { textColor: I } = (0, g.Z)(x);
     return (0, r.jsxs)(m.Z, {
-        guildId: t,
-        powerup: l,
+        guildId: n,
+        powerup: o,
         className: C.card,
         children: [
             (0, r.jsx)(Z, {
-                position: 0 === n ? "start" : null == a ? "end" : "middle",
-                active: c,
-                nextActive: null != a ? x : void 0,
+                position: t,
+                active: x,
+                nextActive: null != a ? b : void 0,
             }),
             (0, r.jsx)(f.Q9, {
-                title: l.title,
-                textColor: _,
+                title: o.title,
+                textColor: I,
                 footer:
-                    !b &&
+                    !h &&
                     (0, r.jsx)(m.g, {
                         className: C.footer,
-                        guildId: t,
-                        powerup: l,
+                        guildId: n,
+                        powerup: o,
                     }),
                 children: (0, r.jsx)(w, {
-                    isActive: c,
-                    index: n,
+                    isActive: x,
+                    index: l,
                 }),
             }),
-            !b &&
+            !h &&
                 (0, r.jsx)(f.N4, {
                     children: (0, r.jsx)(p.ZP, {
-                        guildId: t,
-                        powerup: l,
-                        onError: j,
+                        guildId: n,
+                        powerup: o,
+                        onError: _,
                     }),
                 }),
         ],
