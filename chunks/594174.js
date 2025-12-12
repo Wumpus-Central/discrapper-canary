@@ -92,7 +92,7 @@ function A(e) {
     let _ = e.avatar_decoration_data;
     void 0 !== _ && ((e.avatarDecorationData = (0, s.FG)(_)), delete e.avatar_decoration_data);
     let m = e.collectibles;
-    void 0 !== m && (delete e.collectibles, (e.collectibles = (0, l.Xm)(m)));
+    void 0 !== m && (delete e.collectibles, (e.collectibles = (0, l.X)(m)));
     let h = e.global_name;
     void 0 !== h && ((e.globalName = h), delete e.global_name);
     let g = e.primary_guild;
@@ -111,7 +111,7 @@ function P(e) {
         r = O[e.id],
         i = void 0 !== e.id && e.id === h.default.getId();
     if (null == r)
-        void 0 !== (t = (r = new _.Z(e)).premiumType) && i && (r.premiumType = D((0, p.QI)(r), r.premiumType));
+        void 0 !== (t = (r = new _.Z(e)).premiumType) && i && (r.premiumType = w((0, p.QI)(r), r.premiumType));
     else if (n) {
         var a;
         let n = A(e);
@@ -126,16 +126,16 @@ function P(e) {
 function R(e) {
     var t;
     let n = null != (t = e.premium_type) ? t : e.premiumType,
-        r = D((0, p.VR)(e), n);
+        r = w((0, p.VR)(e), n);
     return void 0 !== e.premiumType ? (e.premiumType = r) : void 0 !== e.premium_type && (e.premium_type = r), e;
 }
-function D(e, t) {
+function w(e, t) {
     if (!e) return t;
     let n = d.Z.getPremiumTypeOverride(),
         r = d.Z.getPremiumTypeActual();
     return n === b.F_ ? r : n;
 }
-function w(e, t) {
+function D(e, t) {
     if ((null == e ? void 0 : e.users) == null) return !1;
     for (let n in e.users) {
         let r = e.users[n];
@@ -160,7 +160,7 @@ function x(e, t) {
                         N(e) && P(e, t);
                     });
             }),
-        w(e.resolved, t),
+        D(e.resolved, t),
         (null == (o = e.interaction_metadata) ? void 0 : o.user) != null &&
             N(e.interaction_metadata.user) &&
             P(e.interaction_metadata.user, t),
@@ -236,7 +236,7 @@ function Z(e) {
     let { user: t } = e;
     P(t);
 }
-function B(e) {
+function F(e) {
     let { user: t } = e;
     P(
         {
@@ -246,7 +246,7 @@ function B(e) {
         !0,
     );
 }
-function F(e) {
+function B(e) {
     let { messages: t } = e;
     return t.forEach((e) => x(e, !0)), !1;
 }
@@ -527,11 +527,11 @@ function eR(e) {
         null != e.message && x(e.message, !0);
     }, !1);
 }
-function eD(e) {
+function ew(e) {
     let { participants: t } = e;
     return t.reduce((e, t) => ((0, o.Z)(t) && P(t.member.user)) || e, !1);
 }
-function ew(e) {
+function eD(e) {
     let {} = e,
         t = O[h.default.getId()];
     return null != t && ((O[h.default.getId()] = t.set("ageVerificationStatus", a.F$.CLIENT_ONLY_PENDING)), !0);
@@ -547,7 +547,7 @@ function ex(e) {
 }
 function eL(e) {
     let { resolved: t } = e;
-    return w(t, !0);
+    return D(t, !0);
 }
 function ej(e) {
     let { stickers: t } = e;
@@ -612,7 +612,7 @@ class eM extends g.Z {
         super({
             CONNECTION_OPEN: L,
             CONNECTION_OPEN_SUPPLEMENTAL: j,
-            UPDATE_CLIENT_PREMIUM_TYPE: B,
+            UPDATE_CLIENT_PREMIUM_TYPE: F,
             OVERLAY_INITIALIZE: k,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
             USER_UPDATE: U,
@@ -621,9 +621,9 @@ class eM extends g.Z {
             PRESENCE_UPDATES: en,
             SEARCH_MESSAGES_SUCCESS: Y,
             MOD_VIEW_SEARCH_MESSAGES_SUCCESS: Y,
-            LOAD_MESSAGES_SUCCESS: F,
-            LOAD_MESSAGES_AROUND_SUCCESS: F,
-            LOAD_RECENT_MENTIONS_SUCCESS: F,
+            LOAD_MESSAGES_SUCCESS: B,
+            LOAD_MESSAGES_AROUND_SUCCESS: B,
+            LOAD_RECENT_MENTIONS_SUCCESS: B,
             LOAD_PINNED_MESSAGES_SUCCESS: V,
             THREAD_LIST_SYNC: H,
             MESSAGE_CREATE: J,
@@ -671,8 +671,8 @@ class eM extends g.Z {
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: eC,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eP,
             LOAD_ICYMI_HYDRATED: eR,
-            EMBEDDED_ACTIVITY_UPDATE_V2: eD,
-            INITIATE_AGE_VERIFICATION: ew,
+            EMBEDDED_ACTIVITY_UPDATE_V2: ew,
+            INITIATE_AGE_VERIFICATION: eD,
             CLOSE_AGE_VERIFICATION_MODAL: ex,
             INTERACTION_MODAL_CREATE: eL,
         });

@@ -51,12 +51,12 @@ let N = {
                 pendingDisplayNameStyles: U,
                 nameplatePreviewSize: G = "default",
                 isPurchased: Z = !1,
-                skipEffectDisplayName: B = !1,
-                width: F,
+                skipEffectDisplayName: F = !1,
+                width: B,
             } = e,
             V = (0, u.ZP)(),
             H = (0, l.wj)(V),
-            Y = null != a ? (0, p.EU)(a) : P,
+            Y = null != a ? (0, p.E)(a) : P,
             W = (0, s.e7)([O.Z], () => (null != t ? O.Z.getStatus(t.id) : c.Skl.ONLINE)),
             K = H ? "#706F74" : "#aaaab2",
             z = i.useRef(null),
@@ -94,7 +94,7 @@ let N = {
             "aria-label": ee,
             style: {
                 color: H ? "white" : "black",
-                width: null != F ? "".concat(F, "px") : "100%",
+                width: null != B ? "".concat(B, "px") : "100%",
             },
             children: (0, r.jsxs)(c.Rny, {
                 className: o()(R, T.nameplatePreview, {
@@ -103,7 +103,7 @@ let N = {
                     [T.small]: "small" === G,
                     [T.large]: "large" === G,
                     [T.xlarge]: "xlarge" === G,
-                    [T.inheritWidth]: null != F,
+                    [T.inheritWidth]: null != B,
                 }),
                 children: [
                     null != Y &&
@@ -141,7 +141,7 @@ let N = {
                                           name: (0, r.jsx)(h.Z, {
                                               userName: Q,
                                               displayNameStyles: $,
-                                              effectDisplayType: B ? m.F.PLAIN : m.F.ANIMATED,
+                                              effectDisplayType: F ? m.F.PLAIN : m.F.ANIMATED,
                                               loop: !0,
                                           }),
                                           innerClassName: w,

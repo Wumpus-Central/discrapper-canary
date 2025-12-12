@@ -18,7 +18,7 @@ var r = n(54381),
     b = n(579407),
     y = n(755419),
     O = n(616066),
-    v = n(187951),
+    v = n(989035),
     S = n(63243),
     I = n(244488),
     T = n(223223);
@@ -75,7 +75,7 @@ let C = (e) => {
                   onMouseEnter: s,
                   onMouseLeave: l,
                   children: (0, r.jsx)(_.Z, {
-                      nameplate: (0, b.EU)(t),
+                      nameplate: (0, b.E)(t),
                       hovered: a,
                       placement: p.i.MINI_PREVIEW,
                   }),
