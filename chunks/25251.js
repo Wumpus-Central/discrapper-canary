@@ -1,10 +1,11 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v }), n(388685), n(361932), n(187205);
 var r,
     i = n(392711),
+    o = n(979554),
     a = n(442837),
-    o = n(570140),
-    s = n(212161);
-function l(e, t, n) {
+    s = n(570140),
+    l = n(212161);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,79 +18,82 @@ function l(e, t, n) {
         e
     );
 }
-let c = {},
-    u = (e, t) => !(0, i.isEqual)(c[e], t) && ((c[e] = t), !0),
-    d = (e) => {
-        let t = !1;
-        return (
-            e.items.forEach((n) => {
-                if (!(0, s.H)(n)) return;
-                let r = {
-                    skuId: e.skuId,
-                    config: n,
-                };
-                u(e.skuId, r) && (t = !0);
-            }),
-            t
-        );
-    },
+let u = {},
+    d = (e, t) => !(0, i.isEqual)(u[e], t) && ((u[e] = t), !0),
     f = (e) => {
-        let t = !1;
-        return (
-            e.forEach((e) => {
-                e.products.forEach((e) => {
-                    d(e) && (t = !0);
-                });
-            }),
-            t
-        );
+        var t, n;
+        let r = !1;
+        if (e.type !== o.Z.PROFILE_EFFECT && e.type !== o.Z.VARIANTS_GROUP) return r;
+        let a = [
+            ...e.items,
+            ...(null != (n = null == (t = e.variants) ? void 0 : t.flatMap((e) => e.items)) ? n : []),
+        ].filter(l.H);
+        for (let e of (0, i.uniqBy)(a, "skuId")) {
+            let t = {
+                skuId: e.skuId,
+                config: e,
+            };
+            d(e.skuId, t) && (r = !0);
+        }
+        return r;
     },
     p = (e) => {
         let t = !1;
         return (
             e.forEach((e) => {
-                d(e) && (t = !0);
+                e.products.forEach((e) => {
+                    f(e) && (t = !0);
+                });
             }),
             t
         );
     },
     _ = (e) => {
-        let { product: t } = e;
-        return d(t);
+        let t = !1;
+        return (
+            e.forEach((e) => {
+                f(e) && (t = !0);
+            }),
+            t
+        );
     },
     m = (e) => {
-        let { categories: t } = e;
-        return f(t.categories);
+        let { product: t } = e;
+        return f(t);
     },
     h = (e) => {
-        let { shopHome: t } = e;
-        return f(t.categories);
+        let { categories: t } = e;
+        return p(t.categories);
     },
     g = (e) => {
-        let { purchases: t } = e;
-        return p(t);
+        let { shopHome: t } = e;
+        return p(t.categories);
     },
     E = (e) => {
         let { purchases: t } = e;
-        return null != t && p(t);
+        return _(t);
     },
     b = (e) => {
-        c = {};
+        let { purchases: t } = e;
+        return null != t && _(t);
+    },
+    y = (e) => {
+        u = {};
     };
-class y extends (r = a.ZP.Store) {
+class O extends (r = a.ZP.Store) {
     getAllProfileEffects() {
-        return Object.values(c);
+        return Object.values(u);
     }
     getProfileEffect(e) {
-        return null != e ? c[e] : void 0;
+        return null != e ? u[e] : void 0;
     }
 }
-l(y, "displayName", "ProfileEffectStore");
-let O = new y(o.Z, {
-    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: _,
-    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: m,
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: h,
-    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: g,
-    COLLECTIBLES_CLAIM_SUCCESS: E,
-    LOGOUT: b,
+c(O, "displayName", "ProfileEffectStore");
+let v = new O(s.Z, {
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: m,
+    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: h,
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: g,
+    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: E,
+    COLLECTIBLES_CLAIM_SUCCESS: b,
+    LOGOUT: y,
 });
