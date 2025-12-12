@@ -5,7 +5,7 @@ var i = n(793030),
     a = n(496600),
     o = n(713072),
     s = n(345729),
-    l = n(680765);
+    l = n(685424);
 function c(e, t, n) {
     return (
         t in e
@@ -83,22 +83,33 @@ function m(e) {
     var { hideTags: t, wrapTags: n, maxOptionsVisible: c = 5 } = e,
         d = p(e, ["hideTags", "wrapTags", "maxOptionsVisible"]);
     let { fieldProps: _ } = (0, i.XF_)(d),
-        { disabled: m, required: h, onQueryChange: g, onKeyDown: E, onFocus: b, onBlur: y, placeholder: O } = d,
         {
-            isOpen: v,
-            setIsOpen: S,
-            refs: I,
-            floatingStyles: T,
-            getFloatingProps: C,
-            getReferenceProps: A,
-            transitionStyles: N,
+            disabled: m,
+            required: h,
+            onQueryChange: g,
+            onKeyDown: E,
+            onFocus: b,
+            onBlur: y,
+            placeholder: O,
+            closeOnSelect: v,
+            selectionMode: S,
+        } = d,
+        {
+            isOpen: I,
+            setIsOpen: T,
+            refs: C,
+            floatingStyles: A,
+            getFloatingProps: N,
+            getReferenceProps: P,
+            transitionStyles: R,
         } = (0, s.C)();
     return (0, r.jsxs)(
         a.uz,
         f(u({}, d), {
             isCollapsible: !0,
-            isOpen: v,
-            setIsOpen: S,
+            isOpen: I,
+            setIsOpen: T,
+            closeOnSelect: null != v ? v : "single" === S,
             children: [
                 (0, r.jsx)(
                     a.Ct,
@@ -113,24 +124,24 @@ function m(e) {
                             onFocus: b,
                             onKeyDown: E,
                             showChevronButton: !0,
-                            ref: I.setReference,
+                            ref: C.setReference,
                             placeholder: O,
                         },
                         _,
-                        A(),
+                        P(),
                     ),
                 ),
-                v &&
+                I &&
                     (0, r.jsx)(
                         "div",
                         f(
                             u(
                                 {
-                                    ref: I.setFloating,
+                                    ref: C.setFloating,
                                     className: l.selectDropdown,
-                                    style: u({}, T, N),
+                                    style: u({}, A, R),
                                 },
-                                C(),
+                                N(),
                             ),
                             {
                                 children: (0, r.jsx)(a.px, {
