@@ -498,46 +498,49 @@ function e4(e) {
         {
             Component: o,
             play: c,
-            events: { onMouseEnter: u, onMouseLeave: d },
+            events: { onMouseEnter: u, onMouseLeave: p },
         } = s,
-        p = eK(s.events, ["onMouseEnter", "onMouseLeave"]),
-        [g, h] = i.useState(!1),
-        m = i.useCallback(() => {
-            h(!1);
+        g = eK(s.events, ["onMouseEnter", "onMouseLeave"]),
+        [h, m] = i.useState(!1),
+        [E, O] = (0, U.US)([d.z.GAME_SHOP_RTC_GIFTING_NEW_BADGE], void 0, !0),
+        v = i.useCallback(() => {
+            m(!1);
         }, []),
-        E = i.useCallback(
+        y = i.useCallback(
             (e) => {
                 let { closePopout: n } = e;
                 return (0, r.jsx)($.Z, {
                     channel: t,
                     closePopout: n,
-                    isHovered: g,
+                    isHovered: h,
                 });
             },
-            [t, g],
+            [t, h],
         ),
-        O = i.useCallback(() => {
-            c(), g ? h(!1) : h(!0), (0, R.v)(l, R.d.GIFTING);
-        }, [l, c, g]);
+        I = i.useCallback(() => {
+            c(),
+                h ? m(!1) : m(!0),
+                (0, R.v)(l, R.d.GIFTING),
+                E === d.z.GAME_SHOP_RTC_GIFTING_NEW_BADGE && O(eG.L.TAKE_ACTION);
+        }, [l, c, h, E, O]);
     return (0, r.jsx)(b.aML, {
         "data-migration-pending": !0,
         text: eV.intl.string(eV.t.PEjaCx),
-        shouldShow: !g,
+        shouldShow: !h,
         onTooltipShow: u,
-        onTooltipHide: d,
+        onTooltipHide: p,
         children: (e) =>
             (0, r.jsx)(b.yRy, {
                 targetElementRef: n,
-                shouldShow: g,
+                shouldShow: h,
                 animation: b.yRy.Animation.FADE,
                 animationPosition: "top",
                 position: "top",
                 align: "left",
-                spacing: 16,
-                onRequestClose: m,
-                renderPopout: E,
+                onRequestClose: v,
+                renderPopout: y,
                 children: () =>
-                    (0, r.jsx)(
+                    (0, r.jsxs)(
                         _.zx,
                         eq(
                             eW(
@@ -546,19 +549,27 @@ function e4(e) {
                                     size: _.zx.Sizes.MEDIUM,
                                     buttonRef: n,
                                 }),
-                                p,
+                                g,
                             ),
                             {
-                                onClick: O,
+                                onClick: I,
                                 className: a()(eF.button, eF.buttonColor),
                                 innerClassName: eF.buttonContents,
                                 wrapperClassName: eF.button,
                                 focusProps: eQ,
-                                children: (0, r.jsx)(o, {
-                                    size: "md",
-                                    color: "currentColor",
-                                    className: eF.buttonIcon,
-                                }),
+                                children: [
+                                    E === d.z.GAME_SHOP_RTC_GIFTING_NEW_BADGE &&
+                                        (0, r.jsx)(P.r, {
+                                            top: -4,
+                                            right: -4,
+                                            alert: !0,
+                                        }),
+                                    (0, r.jsx)(o, {
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: eF.buttonIcon,
+                                    }),
+                                ],
                             },
                         ),
                     ),
@@ -1053,7 +1064,7 @@ let e7 = (0, y.Z)(function (e) {
                         voiceStates: T,
                         showVoiceStates: v,
                         shouldShowVoicePanelIntroduction: g,
-                        showSocialLayerStorefrontGiftingButton: R && D,
+                        showSocialLayerStorefrontGiftingButton: (R && D) || !0,
                         isPrivateChannelWithEnabledActivities: L,
                         analyticsLocations: Z,
                     }),
