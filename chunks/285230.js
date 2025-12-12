@@ -1,6 +1,6 @@
 n.d(t, { d: () => i });
 let r = (0, n(427164).le)({
-    name: "2025-11-message-context-menu-mana-design",
+    name: "2025-11-message-context-menu",
     kind: "user",
     defaultConfig: {
         variant: "control",
