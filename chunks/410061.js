@@ -145,10 +145,10 @@ let d = (e, t) => {
             });
         }, [e, _]),
         r.useEffect(() => {
-            let e = g.current.values(),
+            let e = g.current,
                 t = p.current;
             return () => {
-                e.forEach(c), t.abort();
+                Array.from(e.values()).forEach(c), t.abort();
             };
         }, []),
         {
