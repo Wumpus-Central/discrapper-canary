@@ -139,7 +139,3 @@ let _ = new f("2025-09-libdiscore-rawguildemojistore", "RawGuildEmojiStore", "Kk
     m = new f("2025-10-libdiscore-guildstickersstore", "GuildStickersStore", "Kkv");
 new p("2025-09-libdiscore-telemetry");
 let h = new d("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
-new d(
-    "2025-11-shadow-tree-mount-lock",
-    "Enable locking the mount operation in ShadowTree::tryCommit to avoid mount instructions going out of order!",
-);
