@@ -1,29 +1,29 @@
 n.d(t, {
-    AW: () => O,
-    As: () => G,
-    Cm: () => C,
-    HU: () => D,
-    Hi: () => F,
-    Hl: () => B,
-    IV: () => N,
-    J0: () => P,
-    K8: () => w,
-    RE: () => S,
-    Vt: () => L,
-    aK: () => I,
-    aP: () => U,
-    f7: () => y,
-    fH: () => V,
-    gj: () => g,
-    kN: () => R,
-    lb: () => T,
-    o0: () => M,
-    o8: () => x,
-    sT: () => Z,
-    xg: () => k,
-    y8: () => H,
-    yf: () => b,
-    yo: () => A,
+    AW: () => v,
+    As: () => Z,
+    Cm: () => A,
+    HU: () => x,
+    Hi: () => B,
+    Hl: () => V,
+    IV: () => P,
+    J0: () => R,
+    K8: () => D,
+    RE: () => I,
+    Vt: () => j,
+    aK: () => T,
+    aP: () => G,
+    f7: () => O,
+    fH: () => H,
+    gj: () => E,
+    kN: () => w,
+    lb: () => C,
+    o0: () => k,
+    o8: () => L,
+    sT: () => F,
+    xg: () => U,
+    y8: () => Y,
+    yf: () => y,
+    yo: () => N,
 }),
     n(388685);
 var r = n(463570),
@@ -39,8 +39,9 @@ var r = n(463570),
     p = n(685816),
     _ = n(981631),
     m = n(25951),
-    h = n(416115);
-let g = [
+    h = n(416115),
+    g = n(704514);
+let E = [
         "1409898408042303629",
         "1232073608168472638",
         "1382845914225442886",
@@ -65,9 +66,9 @@ let g = [
         "1420045363171033128",
         "1333278032768536596",
     ],
-    E = ["1385035256058482798", "1385035256083648542", "1385035256104620154"],
-    b = o()([...l()(E, i()(Array(E.length), new Date("2025-07-02").getTime()))]);
-var y = (function (e) {
+    b = ["1385035256058482798", "1385035256083648542", "1385035256104620154"],
+    y = o()([...l()(b, i()(Array(b.length), new Date("2025-07-02").getTime()))]);
+var O = (function (e) {
         return (
             (e[(e.VISIBLE = 0)] = "VISIBLE"),
             (e[(e.HIDDEN = 1)] = "HIDDEN"),
@@ -76,7 +77,7 @@ var y = (function (e) {
             e
         );
     })({}),
-    O = (function (e) {
+    v = (function (e) {
         return (
             (e.HOME = "home"),
             (e.CATALOG = "catalog"),
@@ -88,12 +89,12 @@ var y = (function (e) {
             e
         );
     })({});
-let v = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
-    S = (e) => v.includes(e),
-    I = (e) => null != e && "home" !== e && "catalog" !== e,
-    T = 800,
-    C = 604800000,
-    A = [
+let S = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
+    I = (e) => S.includes(e),
+    T = (e) => null != e && "home" !== e && "catalog" !== e,
+    C = 800,
+    A = 604800000,
+    N = [
         "1212569433839636530",
         "1144308439720394944",
         "1314020996201713685",
@@ -429,12 +430,12 @@ let v = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
         "1285465421167988758",
         "1277733174797008931",
     ],
-    N = 12,
-    P = 518,
-    R = 5,
-    w = 3,
-    D = ["1212569433839636530", "1212570343567261736", "1212582298893946880"];
-var x = (function (e) {
+    P = 12,
+    R = 518,
+    w = 5,
+    D = 3,
+    x = ["1212569433839636530", "1212570343567261736", "1212582298893946880"];
+var L = (function (e) {
     return (
         (e[(e.FIAT = 0)] = "FIAT"),
         (e[(e.ORB = 1)] = "ORB"),
@@ -445,14 +446,14 @@ var x = (function (e) {
         e
     );
 })({});
-let L = {
+let j = {
         ORB_PROFILE_BADGE: "1342211853484429445",
         FRACTIONAL_PREMIUM: f.a.PREMIUM_TIER_2_3_DAY,
     },
-    j = new Set(Object.values(L)),
-    M = (e) => j.has(e),
-    k = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
-    U = [
+    M = new Set(Object.values(j)),
+    k = (e) => M.has(e),
+    U = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
+    G = [
         {
             sortType: d.E.RELEVANCE,
             sortDirection: u.F.DESC,
@@ -474,15 +475,15 @@ let L = {
             sortDirection: u.F.DESC,
         },
     ],
-    G = 300,
-    Z = {
+    Z = 300,
+    F = {
         amount: 300,
         currency: _.pKx.DISCORD_ORB,
         tax: 0,
         taxInclusive: !1,
     },
-    F = "1428539043993358497",
-    B = [
+    B = "1428539043993358497",
+    V = [
         "1144308439720394944",
         "1333866045236314327",
         "1212569433839636530",
@@ -514,10 +515,10 @@ let L = {
         "1349849614173339688",
         "1349849614143979540",
     ],
-    V = {
-        categorySkuId: F,
+    H = {
+        categorySkuId: B,
         categoryStoreListingId: "1438783661058031686",
-        rankedSkuIds: B,
+        rankedSkuIds: V,
         type: p.z.HERO,
         heroBannerUrl: m.Z,
         heroBannerAnimatedUrl: h.Z,
@@ -525,11 +526,12 @@ let L = {
             animated: h.Z,
             static: m.Z,
         },
+        logoUrl: g.Z,
         name: "Try Before You Buy!",
-        summary: "Use Orbs to Try Before You Buy!",
-        title: "Try Before You Buy",
+        summary: " ",
+        title: " ",
     },
-    H = [
+    Y = [
         {
             categorySkuId: "1440063059895779408",
             rewardSkuId: "1440063059862487193",
