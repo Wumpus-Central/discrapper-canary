@@ -154,7 +154,7 @@ function T(e) {
         } = e,
         p = i.useId(),
         T = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        O = (0, o.e7)([c.Z], () => c.Z.isAppFocused() || c.Z.isVisible()),
+        O = (0, o.e7)([c.Z], () => c.Z.isAppFocused()),
         [y, S] = i.useState(!1),
         b = i.useCallback((e) => {
             e && S(!0);
