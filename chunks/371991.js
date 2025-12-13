@@ -71,7 +71,7 @@ let b = (e) => {
                 }),
                 variant: _ ? "text-xs/normal" : "text-xs/medium",
                 tabularNumbers: s,
-                color: _ ? "text-feedback-positive" : a,
+                color: a,
                 scaleFontToUserSetting: f,
                 "aria-label": y.current,
                 children: b,
