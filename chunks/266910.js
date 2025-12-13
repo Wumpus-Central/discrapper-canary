@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => T });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -6,18 +6,16 @@ var r = n(54381),
     s = n(692547),
     l = n(481060),
     c = n(220082),
-    u = n(420596),
-    d = n(880563),
-    f = n(168631),
-    p = n(687158),
-    _ = n(213053),
-    m = n(484459),
-    h = n(695346),
-    g = n(775610),
-    E = n(981631),
-    b = n(671955),
-    y = n(182719);
-function O(e, t, n) {
+    u = n(880563),
+    d = n(168631),
+    f = n(687158),
+    p = n(213053),
+    _ = n(484459),
+    m = n(775610),
+    h = n(981631),
+    g = n(671955),
+    E = n(607437);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +28,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,12 +39,12 @@ function v(e) {
                 }),
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,22 +56,22 @@ function S(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = C(e, t);
+        i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -81,7 +79,7 @@ function T(e, t) {
     }
     return i;
 }
-function C(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,77 +88,65 @@ function C(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let A = function (e) {
+let T = function (e) {
     var t,
         n,
         a,
+        b,
         O,
-        S,
-        C,
+        I,
         {
-            style: A,
-            src: N,
-            backgroundSrc: P,
-            userId: R,
-            guildId: D,
-            pulseSpeakingIndicator: w = !1,
-            speaking: x = !1,
+            style: T,
+            src: C,
+            backgroundSrc: A,
+            userId: N,
+            guildId: P,
+            pulseSpeakingIndicator: R = !1,
+            speaking: w = !1,
         } = e,
-        L = T(e, ["style", "src", "backgroundSrc", "userId", "guildId", "pulseSpeakingIndicator", "speaking"]);
-    let j = null != P ? P : N,
-        M = (0, c.ZP)(j, s.Z.unsafe_rawColors.PRIMARY_800.css),
-        k = (0, u.c)(!0, "VideoBackground-web").enabled,
-        U = (0, p.ZP)(null != R ? R : E.lds, D),
-        G = null != (O = (0, f.V3)(null == U || null == (t = U.themeColors) ? void 0 : t[0])) ? O : E.BRd.DARK,
-        { profileThemeStyle: Z, profileThemeClassName: B } = (0, _.Z)({
-            theme: G,
-            themeType: b.l.VIDEO_TILE_BACKGROUND,
-            primaryColor: null != (S = null == U || null == (n = U.themeColors) ? void 0 : n[0]) ? S : null,
-            secondaryColor: null != (C = null == U || null == (a = U.themeColors) ? void 0 : a[1]) ? C : null,
+        D = S(e, ["style", "src", "backgroundSrc", "userId", "guildId", "pulseSpeakingIndicator", "speaking"]);
+    let x = null != A ? A : C,
+        L = (0, c.ZP)(x, s.Z.unsafe_rawColors.PRIMARY_800.css),
+        j = (0, f.ZP)(null != N ? N : h.lds, P),
+        M = null != (b = (0, d.V3)(null == j || null == (t = j.themeColors) ? void 0 : t[0])) ? b : h.BRd.DARK,
+        { profileThemeStyle: k, profileThemeClassName: U } = (0, p.Z)({
+            theme: M,
+            themeType: g.l.VIDEO_TILE_BACKGROUND,
+            primaryColor: null != (O = null == j || null == (n = j.themeColors) ? void 0 : n[0]) ? O : null,
+            secondaryColor: null != (I = null == j || null == (a = j.themeColors) ? void 0 : a[1]) ? I : null,
         }),
-        F =
-            null == U
-                ? void 0
-                : U.getBannerURL({
-                      size: 1024,
-                      canAnimate: h.QK.getSetting(),
-                  }),
-        { useProfileColors: V } = (0, g.$i)("VideoBackground-web"),
-        H = V || k;
+        { useProfileColors: G } = (0, m.$i)("VideoBackground-web");
     if (
         (i.useEffect(() => {
-            null != R &&
-                H &&
-                (0, m.Z)(R, void 0, {
-                    guildId: D,
+            null != N &&
+                G &&
+                (0, _.Z)(N, void 0, {
+                    guildId: P,
                     dispatchWait: !0,
                 });
-        }, [H, R, D]),
-        null == N)
+        }, [G, N, P]),
+        null == C)
     )
         return null;
-    let Y = (0, r.jsx)(
+    let Z = (0, r.jsx)(
             l.qEK,
-            v(
+            y(
                 {
-                    className: y.avatarWrapper,
-                    src: N,
+                    className: E.avatarWrapper,
+                    src: C,
                 },
-                L,
+                D,
             ),
         ),
-        W = I(v({}, A), { backgroundColor: M });
-    return (
-        null != F && x && k && ((W.backgroundImage = "url(".concat(F, ")")), (W.backgroundSize = "cover")),
-        (0, r.jsx)("div", {
-            style: V ? v({}, A, Z) : v({}, W),
-            className: o()(y.background, { [B]: V }),
-            children: w
-                ? (0, r.jsx)(d.Z, {
-                      shouldAnimate: x,
-                      children: Y,
-                  })
-                : Y,
-        })
-    );
+        F = v(y({}, T), { backgroundColor: L });
+    return (0, r.jsx)("div", {
+        style: G ? y({}, T, k) : y({}, F),
+        className: o()(E.background, { [U]: G }),
+        children: R
+            ? (0, r.jsx)(u.Z, {
+                  shouldAnimate: w,
+                  children: Z,
+              })
+            : Z,
+    });
 };
