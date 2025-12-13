@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(228168),
     _ = n(671955),
     m = n(388032),
-    h = n(704543);
+    h = n(251806);
 function g(e, t, n) {
     return (
         t in e
@@ -90,13 +90,21 @@ let S = i.forwardRef(function (e, t) {
     var {
             children: n,
             className: i,
-            subsection: a,
+            profileModalScrollTarget: a,
             onAction: g,
             onClose: b,
             "aria-label": v,
             "aria-labelledby": S,
         } = e,
-        I = O(e, ["children", "className", "subsection", "onAction", "onClose", "aria-label", "aria-labelledby"]);
+        I = O(e, [
+            "children",
+            "className",
+            "profileModalScrollTarget",
+            "onAction",
+            "onClose",
+            "aria-label",
+            "aria-labelledby",
+        ]);
     let { themeType: T } = (0, f.z)(),
         { analyticsLocations: C } = (0, l.ZP)(),
         { context: A } = (0, c.KZ)();
@@ -129,9 +137,9 @@ let S = i.forwardRef(function (e, t) {
                           (0, u.openUserProfileModal)(
                               E(
                                   {
-                                      section: p.oh.ACTIVITY,
+                                      tabSection: p.oh.ACTIVITY,
                                       sourceAnalyticsLocations: C,
-                                      subsection: a,
+                                      scrollTarget: a,
                                   },
                                   A,
                               ),

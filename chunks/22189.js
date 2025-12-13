@@ -170,7 +170,7 @@ let ey = () => {
                 userId: ev.id,
                 sourceAnalyticsLocations: e,
                 hideRestrictedProfile: !0,
-                section: U.oh.WIDGETS,
+                tabSection: U.oh.WIDGETS,
             });
         },
         eZ = i.useCallback(() => {

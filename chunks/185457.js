@@ -4,8 +4,8 @@ t(473749);
 var i = t(481060),
     r = t(906732),
     a = t(531301),
-    u = t(892001),
-    o = t(314897),
+    o = t(892001),
+    u = t(314897),
     s = t(246946),
     d = t(981631),
     c = t(228168),
@@ -17,17 +17,17 @@ function Z(e) {
         h = !O && null != m && m.length > 0,
         p = f === d.IlC.POPOUT || f === d.IlC.OVERLAY,
         { analyticsLocations: P } = (0, r.ZP)();
-    return b === o.default.getId() || s.Z.hidePersonalInformation || p
+    return b === u.default.getId() || s.Z.hidePersonalInformation || p
         ? null
         : (0, l.jsx)(i.sNh, {
               id: "note",
               label: O ? g.intl.string(g.t["WLKx/9"]) : h ? g.intl.string(g.t.sHHsOM) : g.intl.string(g.t.Dglxrf),
               subtext: g.intl.string(g.t.r1BOdd),
               action: () => {
-                  (0, u.openUserProfileModal)({
+                  (0, o.openUserProfileModal)({
                       userId: n.id,
-                      section: c.oh.USER_INFO,
-                      subsection: c.Tb.NOTE,
+                      tabSection: c.oh.USER_INFO,
+                      scrollTarget: c.Tb.NOTE,
                       guildId: t,
                       channelId: Z,
                       sourceAnalyticsLocations: P,

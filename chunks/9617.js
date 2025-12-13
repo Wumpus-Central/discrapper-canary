@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(921944),
     _ = n(228168),
     m = n(388032),
-    h = n(700803);
+    h = n(983240);
 let g = () => {
     let [e, t] = (0, l.US)([a.z.WIDGETS_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE]),
         n = e === a.z.WIDGETS_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
@@ -37,7 +37,7 @@ let g = () => {
                         userId: g,
                         sourceAnalyticsLocations: [s.Z.USER_SETTINGS_USER_PROFILE],
                         hideRestrictedProfile: !0,
-                        section: _.oh.WIDGETS,
+                        tabSection: _.oh.WIDGETS,
                     });
             },
             size: "sm",

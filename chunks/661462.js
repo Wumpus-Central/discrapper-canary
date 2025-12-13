@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => O,
-    Z: () => x,
+    F: () => y,
+    Z: () => O,
 }),
     n(388685);
 var r = n(54381),
@@ -19,51 +19,10 @@ var r = n(54381),
     m = n(228168),
     h = n(237297);
 function y(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function v(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function O(e) {
-    var { children: t, className: n, scrollerRef: i } = e,
-        a = (function (e, t) {
+    var t,
+        n,
+        { children: i, className: a, scrollerRef: c } = e,
+        s = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -86,63 +45,88 @@ function O(e) {
         })(e, ["children", "className", "scrollerRef"]);
     return (0, r.jsx)(
         o.Ttm,
-        v(
-            y(
-                {
-                    ref: i,
-                    className: l()(h.tabPanelScroller, n),
-                    fade: !0,
-                },
-                a,
-            ),
-            { children: t },
-        ),
+        ((t = (function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    r = Object.keys(n);
+                "function" == typeof Object.getOwnPropertySymbols &&
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        }),
+                    )),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
+                                      value: r,
+                                      enumerable: !0,
+                                      configurable: !0,
+                                      writable: !0,
+                                  })
+                                : (e[t] = r);
+                    });
+            }
+            return e;
+        })(
+            {
+                ref: c,
+                className: l()(h.tabPanelScroller, a),
+                fade: !0,
+            },
+            s,
+        )),
+        (n = n = { children: i }),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+              }),
+        t),
     );
 }
-function j(e) {
-    let {
-        user: t,
-        currentUser: n,
-        section: i,
-        subsection: a,
-        displayProfile: l,
-        guildId: o,
-        channelId: c,
-        onClose: s,
-    } = e;
+function v(e) {
+    let { user: t, currentUser: n, section: i, displayProfile: a, guildId: l, channelId: o, onClose: c } = e;
     return i === m.oh.ACTIVITY
         ? (0, r.jsx)(d.Z, {
               user: t,
               currentUser: n,
-              displayProfile: l,
-              guildId: o,
-              channelId: c,
-              subsection: a,
-              onClose: s,
+              displayProfile: a,
+              guildId: l,
+              channelId: o,
+              onClose: c,
           })
         : i === m.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(f.Z, {
                 user: t,
-                guildId: o,
-                channelId: c,
-                onClose: s,
+                guildId: l,
+                channelId: o,
+                onClose: c,
             })
           : i === m.oh.MUTUAL_GUILDS
             ? (0, r.jsx)(g.Z, {
                   user: t,
-                  onClose: s,
+                  onClose: c,
               })
             : i === m.oh.WIDGETS
               ? (0, r.jsx)(p.C, {
                     user: t,
-                    guildId: o,
-                    channelId: c,
+                    guildId: l,
+                    channelId: o,
                 })
               : i === m.oh.WISHLIST
                 ? (0, r.jsx)(b.Z, { profileOwner: t })
                 : null;
 }
-function x(e) {
+function O(e) {
     var t;
     let {
             user: n,
@@ -152,24 +136,17 @@ function x(e) {
             channelId: f,
             items: g,
             initialSection: p,
-            initialSubsection: b,
-            onClose: O,
+            onClose: b,
         } = e,
-        { trackUserProfileAction: x } = (0, c.KZ)(),
-        [{ section: P, subsection: I, text: w }, S] = i.useState(
-            v(
-                y(
-                    {},
-                    null !=
-                        (t = g.find((e) => {
-                            let { section: t } = e;
-                            return t === p;
-                        }))
-                        ? t
-                        : g[0],
-                ),
-                { subsection: b },
-            ),
+        { trackUserProfileAction: y } = (0, c.KZ)(),
+        [{ section: O, text: j }, x] = i.useState(
+            null !=
+                (t = g.find((e) => {
+                    let { section: t } = e;
+                    return t === p;
+                }))
+                ? t
+                : g[0],
         );
     return (0, r.jsxs)("div", {
         className: h.container,
@@ -182,14 +159,14 @@ function x(e) {
                 children: (0, r.jsx)(o.njP, {
                     type: "top",
                     look: "custom",
-                    selectedItem: P,
+                    selectedItem: O,
                     onItemSelect: (e) => {
-                        if (u.Z.hasUnsavedChanges() && P === m.oh.WIDGETS) return void s.Z.notifyUnsavedWidgets();
-                        x({
+                        if (u.Z.hasUnsavedChanges() && O === m.oh.WIDGETS) return void s.Z.notifyUnsavedWidgets();
+                        y({
                             action: "PRESS_SECTION",
                             section: e,
                         }),
-                            S((t) => {
+                            x((t) => {
                                 var n;
                                 return null != (n = g.find((t) => t.section === e)) ? n : t;
                             });
@@ -209,20 +186,19 @@ function x(e) {
                 }),
             }),
             (0, r.jsx)(o.njP.Panel, {
-                id: P,
-                "aria-label": w,
+                id: O,
+                "aria-label": j,
                 className: h.tabBarPanel,
                 children: (0, r.jsx)(o.y5t, {
-                    component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: w }) }),
-                    children: (0, r.jsx)(j, {
+                    component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: j }) }),
+                    children: (0, r.jsx)(v, {
                         user: n,
                         currentUser: a,
                         displayProfile: l,
                         guildId: d,
                         channelId: f,
-                        section: P,
-                        subsection: I,
-                        onClose: O,
+                        section: O,
+                        onClose: b,
                     }),
                 }),
             }),

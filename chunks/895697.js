@@ -71,7 +71,7 @@ function P(e) {
             }),
             (0, r.jsx)(I.Z, {
                 user: t,
-                onOpenProfile: (e) => (null == D ? void 0 : D({ section: e })),
+                onOpenProfile: (e) => (null == D ? void 0 : D({ tabSection: e })),
             }),
             (0, r.jsxs)("div", {
                 className: A.buttons,

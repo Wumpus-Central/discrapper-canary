@@ -90,7 +90,7 @@ let T = (e) => {
                               (0, v.openUserProfileModal)({
                                   userId: t,
                                   channelId: n,
-                                  section: P.oh.MUTUAL_GUILDS,
+                                  tabSection: P.oh.MUTUAL_GUILDS,
                                   sourceAnalyticsLocations: [d.Z.DM_CHANNEL],
                               });
                           },

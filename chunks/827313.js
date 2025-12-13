@@ -19,7 +19,12 @@ function p(e) {
         g = _ ? p : d.intl.string(d.t["1ZZtts"]),
         { trackUserProfileAction: E } = (0, l.KZ)(),
         b = () => {
-            E({ action: "PRESS_ADD_NOTE" }), null == i || i({ subsection: u.Tb.NOTE });
+            E({ action: "PRESS_ADD_NOTE" }),
+                null == i ||
+                    i({
+                        tabSection: u.oh.USER_INFO,
+                        scrollTarget: u.Tb.NOTE,
+                    });
         };
     return (0, r.jsx)(o.u, {
         asContainer: !0,

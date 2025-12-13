@@ -77,9 +77,9 @@ function I(e) {
             userId: t.id,
             guildId: y,
         }),
-        D = t.id === n.id,
-        w = (0, a.e7)([c.Z, l.Z], () => {
-            let e = D ? c.Z.getStatus() : l.Z.getStatus(t.id, y);
+        w = t.id === n.id,
+        D = (0, a.e7)([c.Z, l.Z], () => {
+            let e = w ? c.Z.getStatus() : l.Z.getStatus(t.id, y);
             return e === E.Sk.OFFLINE || e === E.Sk.INVISIBLE;
         }),
         { voiceActivityStatusEnabled: x } = (0, o.U)({ location: "UserProfileStackedActivity" }),
@@ -103,7 +103,7 @@ function I(e) {
             },
             [n, L, A, I, N, t, P],
         );
-    return w
+    return D
         ? null
         : (0, r.jsx)(p.Z, {
               renderCards: j,
@@ -113,7 +113,7 @@ function I(e) {
                       action: "PRESS_SHOW_MORE_ACTIVITY",
                       analyticsLocations: T,
                   }),
-                      null == v || v({ section: g.oh.ACTIVITY });
+                      null == v || v({ tabSection: g.oh.ACTIVITY });
               },
           });
 }

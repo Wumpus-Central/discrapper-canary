@@ -330,7 +330,7 @@ function H(e) {
                               guildId: a.id,
                               channelId: s.id,
                               roleId: u.id,
-                              subsection: L.Tb.CONNECTIONS,
+                              scrollTarget: L.Tb.CONNECTIONS,
                               sourceAnalyticsLocations: l,
                           }),
                               i();

@@ -1,84 +1,84 @@
 n.d(t, { I: () => B }), n(388685), n(539854);
 var r = n(54381),
     l = n(473749),
-    i = n(120356),
-    o = n.n(i),
-    s = n(636977),
-    a = n(442837),
+    a = n(120356),
+    o = n.n(a),
+    i = n(636977),
+    s = n(442837),
     c = n(481060),
     u = n(410030),
     d = n(857595),
-    g = n(607070),
-    f = n(984370),
+    f = n(607070),
+    g = n(984370),
     p = n(110560),
-    m = n(567400),
-    h = n(892001),
+    b = n(567400),
+    m = n(892001),
     C = n(507808),
-    _ = n(825102),
-    b = n(775451),
-    v = n(594174),
-    E = n(471731),
-    S = n(304742),
+    h = n(825102),
+    v = n(775451),
+    E = n(594174),
+    S = n(471731),
+    _ = n(304742),
     O = n(554067),
     x = n(215023),
     y = n(981631),
     j = n(228168),
     k = n(388032),
-    T = n(421200);
-function I(e) {
-    let { tab: t, displayText: n, selected: l, handleTransition: i } = e;
-    return (0, r.jsx)(f.Z.Title, {
-        onClick: () => i(t),
+    T = n(379398);
+function L(e) {
+    let { tab: t, displayText: n, selected: l, handleTransition: a } = e;
+    return (0, r.jsx)(g.Z.Title, {
+        onClick: () => a(t),
         wrapperClassName: T.tabWrapper,
         className: o()(T.tab, { [T.selected]: l }),
         children: n,
     });
 }
-function L(e) {
-    let { tab: t, selected: n, displayText: i, handleTransition: s } = e,
-        [a, u] = l.useState(!1),
+function I(e) {
+    let { tab: t, selected: n, displayText: a, handleTransition: i } = e,
+        [s, u] = l.useState(!1),
         p = l.useRef(null),
-        [m, h] = l.useState(0),
+        [b, m] = l.useState(0),
         C = l.useRef(!1),
-        _ = (e) => {
-            clearTimeout(m),
-                h(
+        h = (e) => {
+            clearTimeout(b),
+                m(
                     setTimeout(() => {
                         u(e);
                     }, 100),
                 ),
-                e && (C.current = g.Z.keyboardModeEnabled);
+                e && (C.current = f.Z.keyboardModeEnabled);
         },
-        b = (e) => {
-            ("Enter" === e.key || " " === e.key) && (e.preventDefault(), _(!0));
+        v = (e) => {
+            ("Enter" === e.key || " " === e.key) && (e.preventDefault(), h(!0));
         };
     return (0, r.jsx)("div", {
         className: T.tabWithMenuContainer,
-        onMouseEnter: () => _(!0),
-        onMouseLeave: () => _(!1),
+        onMouseEnter: () => h(!0),
+        onMouseLeave: () => h(!1),
         children: (0, r.jsx)(c.yRy, {
             targetElementRef: p,
-            shouldShow: a,
+            shouldShow: s,
             position: "bottom",
             align: "left",
-            onRequestOpen: () => _(!0),
+            onRequestOpen: () => h(!0),
             onRequestClose: () => {
                 var e;
-                C.current && !g.Z.keyboardModeEnabled && (0, d.Qj)(), _(!1), null == (e = p.current) || e.focus();
+                C.current && !f.Z.keyboardModeEnabled && (0, d.Qj)(), h(!1), null == (e = p.current) || e.focus();
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(S.Z, {
-                    handleTransition: s,
+                return (0, r.jsx)(_.Z, {
+                    handleTransition: i,
                     onClose: t,
                 });
             },
             children: (e, l) => {
-                var a, u;
+                var s, u;
                 let { isShown: d } = l;
                 return (0, r.jsx)(
-                    f.Z.Title,
-                    ((a = (function (e) {
+                    g.Z.Title,
+                    ((s = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -106,14 +106,14 @@ function L(e) {
                     (u = u =
                         {
                             ref: p,
-                            onClick: () => s(t),
-                            onKeyDown: b,
+                            onClick: () => i(t),
+                            onKeyDown: v,
                             wrapperClassName: T.tabWrapper,
                             className: o()(T.tab, { [T.selected]: n }),
                             children: (0, r.jsxs)("span", {
                                 className: T.tabWithChevron,
                                 children: [
-                                    i,
+                                    a,
                                     d
                                         ? (0, r.jsx)(c.u04, {
                                               size: "sm",
@@ -127,7 +127,7 @@ function L(e) {
                             }),
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(u))
+                        ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(u))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -136,9 +136,9 @@ function L(e) {
                               }
                               return n;
                           })(Object(u)).forEach(function (e) {
-                              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(u, e));
+                              Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(u, e));
                           }),
-                    a),
+                    s),
                 );
             },
         }),
@@ -146,10 +146,10 @@ function L(e) {
 }
 function B(e) {
     let { selectedTab: t, handleTransition: n } = e,
-        i = (0, u.ZP)(),
-        d = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
-        { enabled: g } = (0, _.W)({ location: "collectibles_shop_header_bar" }),
-        S = (0, m.Y)({ location: "CollectiblesShopHeaderBar" }),
+        a = (0, u.ZP)(),
+        d = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
+        { enabled: f } = (0, h.W)({ location: "collectibles_shop_header_bar" }),
+        _ = (0, b.Y)({ location: "CollectiblesShopHeaderBar" }),
         B = [
             {
                 tab: x.AW.HOME,
@@ -160,7 +160,7 @@ function B(e) {
                 displayText: k.intl.string(k.t.Ah5sJo),
             },
         ];
-    g &&
+    f &&
         B.push({
             tab: x.AW.ORBS,
             displayText: k.intl.string(k.t.EBYkzk),
@@ -172,53 +172,53 @@ function B(e) {
                 sectionType: y.jXE.ORBS_BALANCE_MENU,
                 ctaObject: y.qAy.CTA_TO_QUEST_HOME,
             }),
-                (0, p.navigateToQuestHome)({ fromContent: s.j.ORBS_BALANCE_MENU });
+                (0, p.navigateToQuestHome)({ fromContent: i.j.ORBS_BALANCE_MENU });
         }, [A]),
         P = l.useCallback(() => {
             (null == d ? void 0 : d.id) != null &&
-                (0, h.openUserProfileModal)({
+                (0, m.openUserProfileModal)({
                     userId: d.id,
-                    section: j.oh.WISHLIST,
+                    tabSection: j.oh.WISHLIST,
                     showGuildProfile: !1,
                 });
         }, [null == d ? void 0 : d.id]);
     return (0, r.jsx)(c.f6W, {
-        theme: i,
+        theme: a,
         children: (e) =>
-            (0, r.jsxs)(f.Z, {
+            (0, r.jsxs)(g.Z, {
                 disableDoubleClick: !0,
                 className: o()(e, T.headerBar),
-                innerClassname: g ? T.headerBarInner : void 0,
+                innerClassname: f ? T.headerBarInner : void 0,
                 children: [
                     (0, r.jsxs)(c.P3F, {
                         className: T.shopHomeLink,
                         onClick: () => n(x.AW.HOME),
                         "aria-label": k.intl.string(k.t.pWG4ze) + " home",
                         children: [
-                            (0, r.jsx)(E.Z, { className: T.discordLogo }),
-                            (0, r.jsx)(f.Z.Title, { children: k.intl.string(k.t.pWG4ze) }),
+                            (0, r.jsx)(S.Z, { className: T.discordLogo }),
+                            (0, r.jsx)(g.Z.Title, { children: k.intl.string(k.t.pWG4ze) }),
                         ],
                     }),
                     (0, r.jsx)("div", {
                         className: T.tabs,
                         children: B.map((e) => {
-                            let { tab: l, displayText: i } = e;
+                            let { tab: l, displayText: a } = e;
                             return l === x.AW.CATALOG
                                 ? (0, r.jsx)(
-                                      L,
+                                      I,
                                       {
                                           tab: l,
                                           selected: (0, x.RE)(t) || t === l,
-                                          displayText: i,
+                                          displayText: a,
                                           handleTransition: n,
                                       },
                                       l,
                                   )
                                 : (0, r.jsx)(
-                                      I,
+                                      L,
                                       {
                                           tab: l,
-                                          displayText: i,
+                                          displayText: a,
                                           selected: t === l,
                                           handleTransition: n,
                                       },
@@ -233,7 +233,7 @@ function B(e) {
                                 handleTransition: n,
                                 selectedTab: t,
                             }),
-                            S &&
+                            _ &&
                                 (0, r.jsx)(c.P3F, {
                                     className: T.wishlistButton,
                                     onClick: P,
@@ -243,10 +243,10 @@ function B(e) {
                                         color: "currentColor",
                                     }),
                                 }),
-                            g &&
-                                (0, r.jsx)(b.V9, {
+                            f &&
+                                (0, r.jsx)(v.V9, {
                                     analyticsPage: A,
-                                    cardAlignment: b.V9.CardAlignment.END,
+                                    cardAlignment: v.V9.CardAlignment.END,
                                     ctaText: k.intl.string(k.t.VC4Mq0),
                                     ctaOnClick: N,
                                     className: T.balanceWidgetMenu,

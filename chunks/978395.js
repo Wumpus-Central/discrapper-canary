@@ -115,7 +115,7 @@ function M(e) {
             !q &&
                 (0, r.jsx)(R.Z, {
                     user: t,
-                    onOpenProfile: (e) => (null == G ? void 0 : G({ section: e })),
+                    onOpenProfile: (e) => (null == G ? void 0 : G({ tabSection: e })),
                 }),
             t.isProvisional
                 ? (0, r.jsx)(I.Z.Overlay, {

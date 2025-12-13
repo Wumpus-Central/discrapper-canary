@@ -195,7 +195,7 @@ function G(e) {
                                             wishlistId: er,
                                             title: ei,
                                             onClick: () => {
-                                                null == J || J({ section: D.oh.WISHLIST });
+                                                null == J || J({ tabSection: D.oh.WISHLIST });
                                             },
                                         }),
                                     }),

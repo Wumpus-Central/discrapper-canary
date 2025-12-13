@@ -1,8 +1,8 @@
 t.d(a, { Z: () => D }), t(388685);
-var s = t(54381);
+var n = t(54381);
 t(473749);
-var n = t(120356),
-    i = t.n(n),
+var i = t(120356),
+    s = t.n(i),
     l = t(876215),
     r = t(481060),
     c = t(906732),
@@ -12,102 +12,102 @@ var n = t(120356),
     m = t(740605),
     j = t(370370),
     u = t(91140),
-    b = t(551228),
-    p = t(555672),
+    p = t(551228),
+    b = t(555672),
     v = t(335326),
     y = t(297781),
     h = t(797342),
     E = t(313201),
     _ = t(810568),
     I = t(168524),
-    N = t(960870),
-    f = t(139793),
-    P = t(502762),
-    g = t(652853),
-    T = t(576759),
-    Z = t(336383),
-    C = t(373826),
-    O = t(614716),
-    S = t(228168),
+    f = t(960870),
+    g = t(139793),
+    N = t(502762),
+    T = t(652853),
+    P = t(576759),
+    S = t(336383),
+    Z = t(373826),
+    C = t(614716),
+    O = t(228168),
     R = t(616922),
     k = t(671955),
-    A = t(704543);
-function w(e) {
+    A = t(251806);
+function M(e) {
     for (var a = 1; a < arguments.length; a++) {
         var t = null != arguments[a] ? arguments[a] : {},
-            s = Object.keys(t);
+            n = Object.keys(t);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (s = s.concat(
+            (n = n.concat(
                 Object.getOwnPropertySymbols(t).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(t, e).enumerable;
                 }),
             )),
-            s.forEach(function (a) {
-                var s;
-                (s = t[a]),
+            n.forEach(function (a) {
+                var n;
+                (n = t[a]),
                     a in e
                         ? Object.defineProperty(e, a, {
-                              value: s,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[a] = s);
+                        : (e[a] = n);
             });
     }
     return e;
 }
-function G(e) {
-    let { user: a, entry: t, header: n, className: d, onClose: m } = e,
+function w(e) {
+    let { user: a, entry: t, header: i, className: d, onClose: m } = e,
         j = (0, E.Dt)(),
-        { themeType: b } = (0, g.z)(),
+        { themeType: p } = (0, T.z)(),
         { largeImage: v } = (0, o.rv)({
             entry: t,
             showCoverImage: !1,
         }),
-        { appName: O, activity: R } = (0, h.n)(t),
-        w = (0, I.Z)({
+        { appName: C, activity: R } = (0, h.n)(t),
+        M = (0, I.Z)({
             location: "UserProfileRecentActivityCard",
             applicationId: t.extra.application_id,
             source: _.m1.UserProfile,
             sourceUserId: a.id,
             trackEntryPointImpression: !0,
         }),
-        { analyticsLocations: G } = (0, c.ZP)(),
-        M = (0, N.Z)({
+        { analyticsLocations: w } = (0, c.ZP)(),
+        G = (0, f.Z)({
             display: "recent",
             user: a,
             entry: t,
-            analyticsLocations: G,
+            analyticsLocations: w,
         }),
-        L = (0, f.Z)({
+        L = (0, g.Z)({
             userId: a.id,
-            onAction: M,
+            onAction: G,
         });
-    return null == w
-        ? (0, s.jsx)("article", {
+    return null == M
+        ? (0, n.jsx)("article", {
               "aria-labelledby": j,
-              children: (0, s.jsxs)(P.Z.Overlay, {
-                  className: i()(A.card, d),
+              children: (0, n.jsxs)(N.Z.Overlay, {
+                  className: s()(A.card, d),
                   ref: L,
                   children: [
-                      n,
-                      (0, s.jsx)("div", {
+                      i,
+                      (0, n.jsx)("div", {
                           className: A.body,
-                          children: (0, s.jsxs)("div", {
+                          children: (0, n.jsxs)("div", {
                               className: A.content,
                               children: [
-                                  (0, s.jsx)(x.E, {
+                                  (0, n.jsx)(x.E, {
                                       image: v,
                                       size: x.J.SIZE_60,
                                       className: A.image,
                                   }),
-                                  (0, s.jsx)("div", {
+                                  (0, n.jsx)("div", {
                                       className: A.details,
-                                      children: (0, s.jsx)("div", {
-                                          children: (0, s.jsx)(C.f, {
+                                      children: (0, n.jsx)("div", {
+                                          children: (0, n.jsx)(Z.f, {
                                               variant: "heading-sm/semibold",
-                                              text: O,
+                                              text: C,
                                               id: j,
                                           }),
                                       }),
@@ -118,154 +118,154 @@ function G(e) {
                   ],
               }),
           })
-        : (0, s.jsxs)(Z.Z, {
+        : (0, n.jsxs)(S.Z, {
               ref: L,
               className: d,
-              subsection: S.Tb.RECENT_ACTIVITY,
-              onAction: M,
+              profileModalScrollTarget: O.Tb.RECENT_ACTIVITY,
+              onAction: G,
               onClose: m,
               "aria-labelledby": j,
               children: [
-                  n,
-                  (0, s.jsx)("div", {
+                  i,
+                  (0, n.jsx)("div", {
                       className: A.body,
-                      children: (0, s.jsxs)("div", {
+                      children: (0, n.jsxs)("div", {
                           className: A.content,
                           children: [
-                              (0, s.jsx)(x.E, {
+                              (0, n.jsx)(x.E, {
                                   image: v,
                                   size: x.J.SIZE_60,
                                   className: A.clickableImage,
                                   onClick: (e) => {
                                       e.stopPropagation(),
-                                          M({ action: "PRESS_IMAGE" }),
-                                          w(e),
-                                          b !== k.l.MODAL && b !== k.l.MODAL_V2 && (null == m || m());
+                                          G({ action: "PRESS_IMAGE" }),
+                                          M(e),
+                                          p !== k.l.MODAL && p !== k.l.MODAL_V2 && (null == m || m());
                                   },
                               }),
-                              (0, s.jsxs)("div", {
+                              (0, n.jsxs)("div", {
                                   className: A.details,
                                   children: [
-                                      (0, s.jsx)(r.P3F, {
+                                      (0, n.jsx)(r.P3F, {
                                           className: A.clickableText,
                                           onClick: (e) => {
                                               e.stopPropagation(),
-                                                  M({ action: "PRESS_TEXT" }),
-                                                  w(e),
-                                                  b !== k.l.MODAL && b !== k.l.MODAL_V2 && (null == m || m());
+                                                  G({ action: "PRESS_TEXT" }),
+                                                  M(e),
+                                                  p !== k.l.MODAL && p !== k.l.MODAL_V2 && (null == m || m());
                                           },
-                                          children: (0, s.jsx)(C.f, {
+                                          children: (0, n.jsx)(Z.f, {
                                               variant: "heading-sm/semibold",
-                                              text: O,
+                                              text: C,
                                               id: j,
                                           }),
                                       }),
-                                      (0, s.jsx)(y.Gk, {
+                                      (0, n.jsx)(y.Gk, {
                                           location: y.Gt.USER_PROFILE,
                                           className: A.badges,
                                           children:
                                               t.content_type === l.s.TOP_GAME
-                                                  ? p.Hs.map((e, a) => (0, s.jsx)(e, { entry: t }, "entry-".concat(a)))
-                                                  : u.W.map((e, a) => (0, s.jsx)(e, { entry: t }, "entry-".concat(a))),
+                                                  ? b.Hs.map((e, a) => (0, n.jsx)(e, { entry: t }, "entry-".concat(a)))
+                                                  : u.W.map((e, a) => (0, n.jsx)(e, { entry: t }, "entry-".concat(a))),
                                       }),
                                   ],
                               }),
                           ],
                       }),
                   }),
-                  (0, s.jsx)(T.Z, {
+                  (0, n.jsx)(P.Z, {
                       applicationId: t.extra.application_id,
-                      onAction: M,
+                      onAction: G,
                       onClose: m,
                       activity: R,
                   }),
               ],
           });
 }
-function M(e) {
-    let { user: a, entry: t, header: n, className: i, onClose: l } = e,
+function G(e) {
+    let { user: a, entry: t, header: i, className: s, onClose: l } = e,
         d = (0, E.Dt)(),
         { largeImage: j } = (0, o.rv)({ entry: t }),
         { url: u } = t.extra,
-        { analyticsLocations: b } = (0, c.ZP)(),
-        p = (0, N.Z)({
+        { analyticsLocations: p } = (0, c.ZP)(),
+        b = (0, f.Z)({
             display: "recent",
             user: a,
             entry: t,
-            analyticsLocations: b,
+            analyticsLocations: p,
         }),
-        h = (0, f.Z)({
+        h = (0, g.Z)({
             userId: a.id,
-            onAction: p,
+            onAction: b,
         });
-    return (0, s.jsxs)(Z.Z, {
+    return (0, n.jsxs)(S.Z, {
         ref: h,
-        className: i,
-        subsection: S.Tb.RECENT_ACTIVITY,
-        onAction: p,
+        className: s,
+        profileModalScrollTarget: O.Tb.RECENT_ACTIVITY,
+        onAction: b,
         onClose: l,
         "aria-labelledby": d,
         children: [
-            n,
-            (0, s.jsx)("div", {
+            i,
+            (0, n.jsx)("div", {
                 className: A.body,
-                children: (0, s.jsxs)("div", {
+                children: (0, n.jsxs)("div", {
                     className: A.content,
                     children: [
                         null == u || "" === u
-                            ? (0, s.jsx)(x.E, {
+                            ? (0, n.jsx)(x.E, {
                                   aspectRatio: "crunchyroll",
                                   image: j,
                                   size: x.J.SIZE_60,
                                   className: A.image,
                               })
-                            : (0, s.jsx)(x.E, {
+                            : (0, n.jsx)(x.E, {
                                   aspectRatio: "crunchyroll",
                                   image: j,
                                   size: x.J.SIZE_60,
                                   className: A.clickableImage,
                                   onClick: (e) => {
-                                      e.stopPropagation(), p({ action: "PRESS_IMAGE" }), (0, m.Y)(u);
+                                      e.stopPropagation(), b({ action: "PRESS_IMAGE" }), (0, m.Y)(u);
                                   },
                               }),
-                        (0, s.jsxs)("div", {
+                        (0, n.jsxs)("div", {
                             className: A.details,
                             children: [
                                 null == u || "" === u
-                                    ? (0, s.jsxs)("div", {
+                                    ? (0, n.jsxs)("div", {
                                           children: [
-                                              (0, s.jsx)(C.f, {
+                                              (0, n.jsx)(Z.f, {
                                                   variant: "heading-sm/semibold",
                                                   text: t.extra.media_title,
                                                   id: d,
                                               }),
-                                              (0, s.jsx)(C.Z, {
+                                              (0, n.jsx)(Z.Z, {
                                                   variant: "text-xs/normal",
                                                   text: t.extra.media_subtitle,
                                               }),
                                           ],
                                       })
-                                    : (0, s.jsxs)(r.P3F, {
+                                    : (0, n.jsxs)(r.P3F, {
                                           className: A.clickableText,
                                           onClick: (e) => {
-                                              e.stopPropagation(), p({ action: "PRESS_TEXT" }), (0, m.Y)(u);
+                                              e.stopPropagation(), b({ action: "PRESS_TEXT" }), (0, m.Y)(u);
                                           },
                                           children: [
-                                              (0, s.jsx)(C.f, {
+                                              (0, n.jsx)(Z.f, {
                                                   variant: "heading-sm/semibold",
                                                   text: t.extra.media_title,
                                                   id: d,
                                               }),
-                                              (0, s.jsx)(C.Z, {
+                                              (0, n.jsx)(Z.Z, {
                                                   variant: "text-xs/normal",
                                                   text: t.extra.media_subtitle,
                                               }),
                                           ],
                                       }),
-                                (0, s.jsx)(y.Gk, {
+                                (0, n.jsx)(y.Gk, {
                                     location: y.Gt.USER_PROFILE,
                                     className: A.badges,
-                                    children: v.t.map((e, a) => (0, s.jsx)(e, { entry: t }, "entry-".concat(a))),
+                                    children: v.t.map((e, a) => (0, n.jsx)(e, { entry: t }, "entry-".concat(a))),
                                 }),
                             ],
                         }),
@@ -277,38 +277,38 @@ function M(e) {
 }
 function L(e) {
     var a, t;
-    let { user: n, entry: i, header: l, className: r, onClose: d } = e,
+    let { user: i, entry: s, header: l, className: r, onClose: d } = e,
         j = (0, E.Dt)(),
-        { largeImage: u } = (0, o.rv)({ entry: i }),
-        { analyticsLocations: p } = (0, c.ZP)(),
-        v = (0, N.Z)({
+        { largeImage: u } = (0, o.rv)({ entry: s }),
+        { analyticsLocations: b } = (0, c.ZP)(),
+        v = (0, f.Z)({
             display: "recent",
-            user: n,
-            entry: i,
-            analyticsLocations: p,
+            user: i,
+            entry: s,
+            analyticsLocations: b,
         }),
-        h = (0, f.Z)({
-            userId: n.id,
+        h = (0, g.Z)({
+            userId: i.id,
             onAction: v,
         }),
-        _ = null == (a = i.extra.entries[0]) ? void 0 : a.media;
+        _ = null == (a = s.extra.entries[0]) ? void 0 : a.media;
     return null == _
         ? null
-        : (0, s.jsxs)(Z.Z, {
+        : (0, n.jsxs)(S.Z, {
               ref: h,
               className: r,
-              subsection: S.Tb.RECENT_ACTIVITY,
+              profileModalScrollTarget: O.Tb.RECENT_ACTIVITY,
               onAction: v,
               onClose: d,
               "aria-labelledby": j,
               children: [
                   l,
-                  (0, s.jsx)("div", {
+                  (0, n.jsx)("div", {
                       className: A.body,
-                      children: (0, s.jsxs)("div", {
+                      children: (0, n.jsxs)("div", {
                           className: A.content,
                           children: [
-                              (0, s.jsx)(x.E, {
+                              (0, n.jsx)(x.E, {
                                   image: u,
                                   size: x.J.SIZE_60,
                                   className: A.clickableImage,
@@ -318,12 +318,12 @@ function L(e) {
                                           (0, m.o)(R.Hw.ALBUM, _.external_parent_id);
                                   },
                               }),
-                              (0, s.jsxs)("div", {
+                              (0, n.jsxs)("div", {
                                   className: A.details,
                                   children: [
-                                      (0, s.jsxs)("div", {
+                                      (0, n.jsxs)("div", {
                                           children: [
-                                              (0, s.jsx)(C.f, {
+                                              (0, n.jsx)(Z.f, {
                                                   variant: "heading-sm/semibold",
                                                   text: _.title,
                                                   onClick: () => {
@@ -332,7 +332,7 @@ function L(e) {
                                                   },
                                                   id: j,
                                               }),
-                                              (0, s.jsx)(C.Z, {
+                                              (0, n.jsx)(Z.Z, {
                                                   variant: "text-xs/normal",
                                                   text: null == (t = _.artists[0]) ? void 0 : t.name,
                                                   onClick: () => {
@@ -346,10 +346,10 @@ function L(e) {
                                               }),
                                           ],
                                       }),
-                                      (0, s.jsx)(y.Gk, {
+                                      (0, n.jsx)(y.Gk, {
                                           location: y.Gt.USER_PROFILE,
                                           className: A.badges,
-                                          children: b.te.map((e, a) => (0, s.jsx)(e, { entry: i }, "entry-".concat(a))),
+                                          children: p.te.map((e, a) => (0, n.jsx)(e, { entry: s }, "entry-".concat(a))),
                                       }),
                                   ],
                               }),
@@ -360,66 +360,66 @@ function L(e) {
           });
 }
 function U(e) {
-    let { user: a, entry: t, header: n, className: i, onClose: l } = e,
+    let { user: a, entry: t, header: i, className: s, onClose: l } = e,
         r = (0, E.Dt)(),
         { largeImage: d } = (0, o.rv)({
             entry: t,
             showCoverImage: !1,
         }),
         { analyticsLocations: m } = (0, c.ZP)(),
-        u = (0, N.Z)({
+        u = (0, f.Z)({
             display: "recent",
             user: a,
             entry: t,
             analyticsLocations: m,
         }),
-        b = (0, f.Z)({
+        p = (0, g.Z)({
             userId: a.id,
             onAction: u,
         }),
-        p = (0, O.Z)({
+        b = (0, C.Z)({
             applicationId: t.extra.application_id,
             onClose: l,
         });
-    return (0, s.jsxs)(Z.Z, {
-        ref: b,
-        className: i,
-        subsection: S.Tb.RECENT_ACTIVITY,
+    return (0, n.jsxs)(S.Z, {
+        ref: p,
+        className: s,
+        profileModalScrollTarget: O.Tb.RECENT_ACTIVITY,
         onAction: u,
         onClose: l,
         "aria-labelledby": r,
         children: [
-            n,
-            (0, s.jsx)("div", {
+            i,
+            (0, n.jsx)("div", {
                 className: A.body,
-                children: (0, s.jsxs)("div", {
+                children: (0, n.jsxs)("div", {
                     className: A.content,
                     children: [
-                        (0, s.jsx)(x.E, {
+                        (0, n.jsx)(x.E, {
                             image: d,
                             size: x.J.SIZE_60,
                             className: A.clickableImage,
                             onClick: (e) => {
-                                e.stopPropagation(), u({ action: "PRESS_IMAGE" }), p();
+                                e.stopPropagation(), u({ action: "PRESS_IMAGE" }), b();
                             },
                         }),
-                        (0, s.jsxs)("div", {
+                        (0, n.jsxs)("div", {
                             className: A.details,
                             children: [
-                                (0, s.jsx)("div", {
-                                    children: (0, s.jsx)(C.f, {
+                                (0, n.jsx)("div", {
+                                    children: (0, n.jsx)(Z.f, {
                                         variant: "heading-sm/semibold",
                                         text: t.extra.activity_name,
                                         onClick: () => {
-                                            u({ action: "PRESS_TEXT" }), p();
+                                            u({ action: "PRESS_TEXT" }), b();
                                         },
                                         id: r,
                                     }),
                                 }),
-                                (0, s.jsx)(y.Gk, {
+                                (0, n.jsx)(y.Gk, {
                                     location: y.Gt.USER_PROFILE,
                                     className: A.badges,
-                                    children: j.j.map((e, a) => (0, s.jsx)(e, { entry: t }, "entry-".concat(a))),
+                                    children: j.j.map((e, a) => (0, n.jsx)(e, { entry: t }, "entry-".concat(a))),
                                 }),
                             ],
                         }),
@@ -434,31 +434,31 @@ function D(e) {
         t = (function (e, a) {
             if (null == e) return {};
             var t,
-                s,
-                n = (function (e, a) {
+                n,
+                i = (function (e, a) {
                     if (null == e) return {};
                     var t,
-                        s,
-                        n = {},
-                        i = Object.keys(e);
-                    for (s = 0; s < i.length; s++) (t = i[s]), a.indexOf(t) >= 0 || (n[t] = e[t]);
-                    return n;
+                        n,
+                        i = {},
+                        s = Object.keys(e);
+                    for (n = 0; n < s.length; n++) (t = s[n]), a.indexOf(t) >= 0 || (i[t] = e[t]);
+                    return i;
                 })(e, a);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (s = 0; s < i.length; s++)
-                    (t = i[s]),
-                        !(a.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (n[t] = e[t]);
+                var s = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < s.length; n++)
+                    (t = s[n]),
+                        !(a.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (i[t] = e[t]);
             }
-            return n;
+            return i;
         })(e, ["entry"]);
     return (0, d.dX)(a)
-        ? (0, s.jsx)(G, w({ entry: a }, t))
+        ? (0, n.jsx)(w, M({ entry: a }, t))
         : (0, d.y0)(a)
-          ? (0, s.jsx)(M, w({ entry: a }, t))
+          ? (0, n.jsx)(G, M({ entry: a }, t))
           : (0, d.dU)(a)
-            ? (0, s.jsx)(L, w({ entry: a }, t))
+            ? (0, n.jsx)(L, M({ entry: a }, t))
             : (0, d.Mq)(a)
-              ? (0, s.jsx)(U, w({ entry: a }, t))
+              ? (0, n.jsx)(U, M({ entry: a }, t))
               : null;
 }

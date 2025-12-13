@@ -14,63 +14,63 @@ var i = t(442837),
     p = t(678738),
     x = t(151545),
     h = t(527790),
-    b = t(769140),
-    v = t(864141),
+    v = t(769140),
+    b = t(864141),
     j = t(228168),
     g = t(981631),
     I = t(388032),
     y = t(835734),
     Z = t(940640);
 function O(e) {
-    let { user: n, currentUser: t, guildId: O, subsection: N, onClose: T } = e,
-        { voiceActivityStatusEnabled: A } = (0, r.U)({ location: "UserProfileModalActivity" }),
-        P = (0, u.b)({ location: "UserProfileModalActivity" }),
-        { live: E, recent: _, stream: C } = (0, f.Z)(n.id),
-        { voiceChannel: S, voiceActivity: w } = (0, m.Z)({
+    let { user: n, currentUser: t, guildId: O, onClose: T } = e,
+        { voiceActivityStatusEnabled: N } = (0, r.U)({ location: "UserProfileModalActivity" }),
+        A = (0, u.b)({ location: "UserProfileModalActivity" }),
+        { live: P, recent: E, stream: _ } = (0, f.Z)(n.id),
+        { voiceChannel: C, voiceActivity: S } = (0, m.Z)({
             userId: n.id,
             guildId: O,
         }),
-        D = (0, i.e7)([a.Z], () => a.Z.isFetchingUserOutbox(n.id)),
-        L = n.id === t.id,
-        R = (0, i.e7)([s.Z, c.Z], () => {
-            let e = L ? s.Z.getStatus() : c.Z.getStatus(n.id);
+        w = (0, i.e7)([a.Z], () => a.Z.isFetchingUserOutbox(n.id)),
+        D = n.id === t.id,
+        L = (0, i.e7)([s.Z, c.Z], () => {
+            let e = D ? s.Z.getStatus() : c.Z.getStatus(n.id);
             return e === o.Skl.OFFLINE || e === o.Skl.INVISIBLE;
         }),
-        M = E.length > 0 || null != C,
-        B = A && null == C && null == w && null != S,
-        U = !R && (M || B),
-        k = _.length > 0;
-    return U || k || !D
+        R = P.length > 0 || null != _,
+        M = N && null == _ && null == S && null != C,
+        B = !L && (R || M),
+        U = E.length > 0;
+    return B || U || !w
         ? (0, l.jsxs)(o.zJl, {
               className: y.scroller,
               fade: !0,
               children: [
-                  U
+                  B
                       ? (0, l.jsx)(p.Z, {
                             "aria-label": I.intl.string(I.t.J6STd9),
                             children: (0, l.jsxs)("ul", {
                                 className: y.activityList,
                                 children: [
-                                    !P &&
-                                        B &&
-                                        (0, l.jsx)("li", {
-                                            children: (0, l.jsx)(v.Z, {
-                                                user: n,
-                                                currentUser: t,
-                                                voiceChannel: S,
-                                                onClose: T,
-                                            }),
-                                        }),
-                                    null != C &&
+                                    !A &&
+                                        M &&
                                         (0, l.jsx)("li", {
                                             children: (0, l.jsx)(b.Z, {
                                                 user: n,
                                                 currentUser: t,
-                                                stream: C,
+                                                voiceChannel: C,
                                                 onClose: T,
                                             }),
                                         }),
-                                    E.map((e, i) =>
+                                    null != _ &&
+                                        (0, l.jsx)("li", {
+                                            children: (0, l.jsx)(v.Z, {
+                                                user: n,
+                                                currentUser: t,
+                                                stream: _,
+                                                onClose: T,
+                                            }),
+                                        }),
+                                    P.map((e, i) =>
                                         (0, l.jsx)(
                                             "li",
                                             {
@@ -88,10 +88,10 @@ function O(e) {
                             }),
                         })
                       : null,
-                  k
+                  U
                       ? (0, l.jsx)(p.Z, {
                             heading: I.intl.string(I.t.M0zgnT),
-                            introText: L
+                            introText: D
                                 ? I.intl.format(I.t["4bk9Ak"], {
                                       learnMoreHook: (e, n) =>
                                           (0, l.jsx)(
@@ -104,10 +104,10 @@ function O(e) {
                                           ),
                                   })
                                 : void 0,
-                            scrollIntoView: N === j.Tb.RECENT_ACTIVITY,
+                            scrollTargetId: j.Tb.RECENT_ACTIVITY,
                             children: (0, l.jsx)("ul", {
                                 className: y.activityList,
-                                children: _.map((e) =>
+                                children: E.map((e) =>
                                     (0, l.jsx)(
                                         "li",
                                         {

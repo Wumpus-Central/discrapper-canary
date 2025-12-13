@@ -12,15 +12,15 @@ var a = n(54381),
     p = n(388032);
 function h(e) {
     let { targetElementRef: t, markAsDismissed: n, children: h } = e,
-        x = (0, r.e7)([o.default], () => o.default.getId()),
-        f = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
-        g = (0, c.bg)({ location: "GameWidgetsPopover" });
+        f = (0, r.e7)([o.default], () => o.default.getId()),
+        x = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
+        b = (0, c.bg)({ location: "GameWidgetsPopover" });
     return (0, a.jsxs)(a.Fragment, {
         children: [
             h,
             (0, a.jsx)(i.J2, {
                 targetElementRef: t,
-                badge: g
+                badge: b
                     ? {
                           type: "early_access",
                           variant: "expressive",
@@ -31,7 +31,7 @@ function h(e) {
                 caretConfig: { align: "start" },
                 graphic: {
                     type: "image",
-                    src: f
+                    src: x
                         ? "https://cdn.discordapp.com/assets/content/1b55390a202dcca3843b6c9205af0379cfa072f34d8b9217bce04aba4d373e5b.png"
                         : "https://cdn.discordapp.com/assets/content/fdb6d4e8a2f01f917d2025a8ca58ebd55e4eada92df1d5386f73d91d6acad1f9.png",
                 },
@@ -49,10 +49,10 @@ function h(e) {
                         onClick: () => {
                             n(m.L.TAKE_ACTION),
                                 (0, d.openUserProfileModal)({
-                                    userId: x,
+                                    userId: f,
                                     sourceAnalyticsLocations: [s.Z.ACCOUNT],
                                     hideRestrictedProfile: !0,
-                                    section: u.oh.WIDGETS,
+                                    tabSection: u.oh.WIDGETS,
                                 });
                         },
                     },

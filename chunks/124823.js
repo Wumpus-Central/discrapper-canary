@@ -68,7 +68,7 @@ function w(e) {
         }),
         G = i.useRef(null),
         { isHoveringOrFocusing: H, isHovering: F } = (0, u.Z)(G),
-        B = (e) => {
+        B = () => {
             (0, b.openUserProfileModal)(
                 R(
                     {
@@ -76,7 +76,6 @@ function w(e) {
                         hideRestrictedProfile: !0,
                     },
                     U,
-                    e,
                 ),
             );
         };

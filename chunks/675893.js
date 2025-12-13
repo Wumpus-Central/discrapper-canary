@@ -47,7 +47,7 @@ function g(e) {
         { trackUserProfileAction: b } = (0, o.KZ)(),
         y = (0, c.d)(t.id, g),
         O = i.useCallback(() => {
-            null == m || m({ section: p.oh.WIDGETS });
+            null == m || m({ tabSection: p.oh.WIDGETS });
         }, [m]),
         v = i.useCallback(
             (e) => {

@@ -3,11 +3,11 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(442837),
-    l = n(481060),
-    c = n(607070),
-    u = n(313201),
-    d = n(729392);
+    s = n(481060),
+    l = n(313201),
+    c = n(938111),
+    u = n(104287),
+    d = n(516117);
 function f(e) {
     let {
             children: t,
@@ -15,25 +15,19 @@ function f(e) {
             headingIcon: a,
             introText: f,
             className: p,
-            scrollIntoView: _ = !1,
+            scrollTargetId: _,
             headingClassName: m,
             headingVariant: h = "text-xs/semibold",
             headingColor: g = "text-default",
         } = e,
-        E = (0, u.Dt)(),
-        b = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        y = i.useRef(null);
+        E = (0, l.Dt)(),
+        b = i.useRef(null),
+        y = (0, u.b)(),
+        O = null != _ && y === _;
     return (
-        i.useEffect(() => {
-            let e = y.current;
-            if (null == e) return;
-            let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: b ? "auto" : "smooth" });
-            });
-            return () => cancelAnimationFrame(t);
-        }, [b]),
+        (0, c.Z)(b, O),
         (0, r.jsxs)("section", {
-            ref: _ ? y : void 0,
+            ref: O ? b : void 0,
             className: o()(d.section, p),
             "aria-labelledby": null != n ? E : void 0,
             children: [
@@ -44,7 +38,7 @@ function f(e) {
                             (0, r.jsxs)("div", {
                                 className: d.header,
                                 children: [
-                                    (0, r.jsx)(l.Heading, {
+                                    (0, r.jsx)(s.Heading, {
                                         variant: h,
                                         color: g,
                                         className: m,
@@ -55,13 +49,13 @@ function f(e) {
                                 ],
                             }),
                             null != f &&
-                                (0, r.jsx)(l.Text, {
+                                (0, r.jsx)(s.Text, {
                                     variant: "text-xs/normal",
                                     children: f,
                                 }),
                         ],
                     }),
-                (0, r.jsx)(l.y5t, { children: t }),
+                (0, r.jsx)(s.y5t, { children: t }),
             ],
         })
     );

@@ -71,8 +71,8 @@ async function E(e) {
     var t,
         {
             userId: a,
-            section: o,
-            subsection: f,
+            tabSection: o,
+            scrollTarget: f,
             guildId: m,
             channelId: E,
             showGuildProfile: b = !0,
@@ -82,8 +82,8 @@ async function E(e) {
         } = e,
         S = _(e, [
             "userId",
-            "section",
-            "subsection",
+            "tabSection",
+            "scrollTarget",
             "guildId",
             "channelId",
             "showGuildProfile",
@@ -103,8 +103,8 @@ async function E(e) {
                     await Promise.all([
                         n.e("61924"),
                         n.e("74330"),
-                        n.e("39380"),
                         n.e("62880"),
+                        n.e("39380"),
                         n.e("85032"),
                         n.e("93979"),
                     ]).then(n.bind(n, 866035))
@@ -117,8 +117,8 @@ async function E(e) {
                                 user: I,
                                 currentUser: T,
                                 guildId: m,
-                                initialSection: o,
-                                initialSubsection: f,
+                                initialTabSection: o,
+                                initialScrollTarget: f,
                                 channelId: E,
                                 showGuildProfile: b,
                                 customStatusPrompt: O,

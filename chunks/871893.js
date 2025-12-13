@@ -15,5 +15,4 @@ e.exports = {
     profileButtons: "_9c3bea41fd465666-profileButtons",
     profileRolesSection: "_9c3bea41fd465666-profileRolesSection",
     profileAppConnections: "_9c3bea41fd465666-profileAppConnections",
-    profileNote: "_9c3bea41fd465666-profileNote",
 };

@@ -46,7 +46,8 @@ function h(e) {
                     }),
                     (0, u.openUserProfileModal)({
                         userId: g,
-                        section: _.oh.WIDGETS,
+                        tabSection: _.oh.WIDGETS,
+                        scrollTarget: a.l.CURRENT_GAMES,
                     }),
                     null == h || h();
             },

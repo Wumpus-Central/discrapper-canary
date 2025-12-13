@@ -9,7 +9,7 @@ var r = n(54381),
 function u(e) {
     let { user: t, onOpenProfile: n } = e,
         u = i.useCallback(() => {
-            null == n || n({ section: c.oh.WISHLIST });
+            null == n || n({ tabSection: c.oh.WISHLIST });
         }, [n]),
         {
             displayedWishlistItems: d,
