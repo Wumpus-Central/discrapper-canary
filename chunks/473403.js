@@ -199,9 +199,10 @@ let U = i.memo(function (e) {
                       ei = en || el,
                       er = (0, s.e7)([_.Z], () => Object.values(_.Z.getVoiceStatesForChannel(g.id)).length > 0, [g.id]),
                       ea = ei && g.isGuildVocal() && er,
-                      eo = (0, o.JA)(g.id),
-                      { role: es } = eo,
-                      eu = (function (e, t) {
+                      eo = el && g.isGuildVocal() && er,
+                      es = (0, o.JA)(g.id),
+                      { role: eu } = es,
+                      ec = (function (e, t) {
                           if (null == e) return {};
                           var n,
                               l,
@@ -223,16 +224,16 @@ let U = i.memo(function (e) {
                                           (i[n] = e[n]);
                           }
                           return i;
-                      })(eo, ["role"]),
-                      ec = i.useRef(null),
+                      })(es, ["role"]),
                       ed = i.useRef(null),
-                      eg = (0, y.Z)(g),
-                      ef = A.Z5c.CHANNEL(eg, g.id),
-                      eh = (0, N.ZP)(g),
-                      em = g.isGuildVocal(),
-                      eN = (0, l.jsx)("div", {
+                      eg = i.useRef(null),
+                      ef = (0, y.Z)(g),
+                      eh = A.Z5c.CHANNEL(ef, g.id),
+                      em = (0, N.ZP)(g),
+                      eN = g.isGuildVocal(),
+                      eE = (0, l.jsx)("div", {
                           className: a()({ [L.favoritesSuggestion]: Q }),
-                          ref: ed,
+                          ref: eg,
                           children: (0, l.jsxs)(
                               b.Z,
                               ((r = (function (e) {
@@ -261,14 +262,14 @@ let U = i.memo(function (e) {
                                   return e;
                               })(
                                   {
-                                      role: em && !p ? "button" : "link",
-                                      href: em ? void 0 : ef,
+                                      role: eN && !p ? "button" : "link",
+                                      href: eN ? void 0 : eh,
                                       target: "_blank",
-                                      ref: ec,
+                                      ref: ed,
                                       className: L.link,
                                       onClick: () => (null == S ? void 0 : S(g)),
                                   },
-                                  eu,
+                                  ec,
                               )),
                               (c = c =
                                   {
@@ -292,7 +293,7 @@ let U = i.memo(function (e) {
                                                       "aria-hidden": !0,
                                                       children: (0, l.jsx)(B, {
                                                           channel: g,
-                                                          name: null != h ? h : eh,
+                                                          name: null != h ? h : em,
                                                       }),
                                                   }),
                                                   i.Children.count(F) > 0
@@ -333,8 +334,8 @@ let U = i.memo(function (e) {
                           ),
                       });
                   return (0, l.jsx)(d.tEY, {
-                      focusTarget: ec,
-                      ringTarget: ed,
+                      focusTarget: ed,
+                      ringTarget: eg,
                       offset: {
                           top: 2,
                           bottom: 2,
@@ -381,11 +382,11 @@ let U = i.memo(function (e) {
                           onMouseEnter: z,
                           onMouseLeave: V,
                           children: [
-                              !el &&
+                              !eo &&
                                   v &&
                                   !m &&
                                   (0, l.jsx)("div", { className: a()(L.unread, et ? L.unreadImportant : void 0) }),
-                              null != (n = null == D ? void 0 : D(eN)) ? n : eN,
+                              null != (n = null == D ? void 0 : D(eE)) ? n : eE,
                           ],
                       }),
                   });
