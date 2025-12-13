@@ -66,17 +66,13 @@ class O extends s.Z {
             }
         }
     }
-    recipientUserIDForGiftingNotification() {
-        if (h.ZP.canShowGiftNotification())
-            return h.ZP.getFriendAnniversaries().find((e) => h.ZP.isFreshTopAffinityFriendAnniversary({ userId: e }));
-    }
     async sendGiftingNotificationIfEligible() {
         let { enabled: e } = _.w.getConfig({
                 location: "PremiumGiftingIntentManager handleTopAffinityUnreadNotification",
             }),
             t = u.vc.getSetting();
         if (!e || !t) return;
-        let n = this.recipientUserIDForGiftingNotification();
+        let n = h.ZP.getNextRecipientUserIDForNotification();
         if (null != n)
             try {
                 let e = await a.Z.getOrEnsurePrivateChannel(n),
@@ -87,7 +83,7 @@ class O extends s.Z {
                         channelId: t.id,
                         isPreload: !0,
                     }));
-                let r = this.recipientUserIDForGiftingNotification();
+                let r = h.ZP.getNextRecipientUserIDForNotification();
                 if (r !== n) return;
                 o.Z.sendGiftingPromptSystemMessage(t.id, {
                     giftIntentType: g.hX.FRIEND_ANNIVERSARY,
