@@ -1,11 +1,9 @@
-Object.defineProperty(t, "__esModule", { value: !0 });
-var r = n(429783);
-Object.keys(r).forEach(function (e) {
-    "default" !== e &&
-        Object.defineProperty(t, e, {
-            enumerable: !0,
-            get: function () {
-                return r[e];
-            },
-        });
-});
+t.exports = {
+    splash: "_15293d44d152f857-splash",
+    gameIcon: "_15293d44d152f857-gameIcon",
+    gameName: "_15293d44d152f857-gameName",
+    installSize: "_15293d44d152f857-installSize",
+    divider: "_15293d44d152f857-divider",
+    selector: "_15293d44d152f857-selector",
+    terms: "_15293d44d152f857-terms",
+};
