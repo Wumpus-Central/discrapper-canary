@@ -126,5 +126,8 @@ function O(e) {
 function j(e) {
     var { widget: t } = e,
         n = y(e, ["widget"]);
-    return (0, r.jsx)(u.N, { children: (0, r.jsx)(O, h({ widget: t }, n)) });
+    return (0, r.jsx)(u.N, {
+        widgetType: t.type,
+        children: (0, r.jsx)(O, h({ widget: t }, n)),
+    });
 }
