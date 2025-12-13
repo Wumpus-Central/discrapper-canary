@@ -527,6 +527,7 @@ let j = {
             static: m.Z,
         },
         logoUrl: g.Z,
+        heroLogoUrl: g.Z,
         name: "Try Before You Buy!",
         summary: " ",
         title: " ",
