@@ -23,58 +23,55 @@ let y = [l.C.CHERRY_BOMB, l.C.CHICLE],
                 userName: n,
                 displayNameStyles: i,
                 effectDisplayType: a = h.F.STATIC,
-                inProfile: O = !1,
-                textClassName: S,
-                loop: I = !1,
-                shouldWrap: T = !1,
-                boldFontOpacity: C = 1,
-                shouldUnderlineOnHover: A = !1,
+                inProfile: l = !1,
+                textClassName: O,
+                loop: S = !1,
+                shouldWrap: I = !1,
+                boldFontOpacity: T = 1,
+                shouldUnderlineOnHover: C = !1,
             } = e,
-            N = (0, E.j)({
+            A = (0, E.j)({
                 displayNameStyles: i,
-                inProfile: O,
+                inProfile: l,
             }),
-            { useReducedMotion: P } = (0, c.cj)([f.Z], () => ({ useReducedMotion: f.Z.useReducedMotion })),
-            { includeNonProfile: R } = p.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
-            w = (0, m.Y)({ location: "UserNameWithEffects" }),
-            D = (0, d.dQu)(d.TVs.colors.BACKGROUND_BASE_LOW).hex(),
-            x = null != (t = null == i ? void 0 : i.effectId) ? t : s.m.SOLID,
-            L = (0, d.qgQ)(n),
-            j = (0, u.EJ)(L, x === s.m.TOON ? b.emoji : void 0),
-            M = (0, _.Z)({
-                displayNameStyles: w ? i : null,
-                backgroundColor: D,
+            { useReducedMotion: N } = (0, c.cj)([f.Z], () => ({ useReducedMotion: f.Z.useReducedMotion })),
+            { includeNonProfile: P } = p.fN.useExperiment({ location: "useDisplayNameStylesFont" }),
+            R = (0, m.Y)({ location: "UserNameWithEffects" }),
+            w = (0, d.dQu)(d.TVs.colors.BACKGROUND_BASE_LOW).hex(),
+            D = null != (t = null == i ? void 0 : i.effectId) ? t : s.m.SOLID,
+            x = (0, d.qgQ)(n),
+            L = (0, u.EJ)(x, D === s.m.TOON ? b.emoji : void 0),
+            j = (0, _.Z)({
+                displayNameStyles: R ? i : null,
+                backgroundColor: w,
             });
-        if (!w || (!O && !R) || null == i) return n;
-        let k = (0, g.K)(x, M, {
-                shouldWrap: T,
-                fontOpacity: y.includes(i.fontId) ? C : 1,
+        if (!R || (!l && !P) || null == i) return n;
+        let M = (0, g.K)(D, j, {
+                shouldWrap: I,
+                fontOpacity: y.includes(i.fontId) ? T : 1,
             }),
-            U = v(x);
+            k = v(D);
         return (0, r.jsxs)("div", {
-            className: o()(b.container, N, S, {
+            className: o()(b.container, A, O, {
                 [b.showEffect]: a !== h.F.PLAIN,
-                [b.animated]: a === h.F.ANIMATED && !P,
-                [b.loop]: I,
-                [b.inProfile]: O,
+                [b.animated]: a === h.F.ANIMATED && !N,
+                [b.loop]: S,
+                [b.inProfile]: l,
             }),
-            style: k,
+            style: M,
             children: [
                 (0, r.jsx)("span", {
-                    "data-username-with-effects": L,
-                    className: o()(b.innerContainer, null == U ? void 0 : U.effectClassName, {
-                        [b.underlineOnHover]: A,
-                        [b.chicle]: i.fontId === l.C.CHICLE,
+                    "data-username-with-effects": x,
+                    className: o()(b.innerContainer, null == k ? void 0 : k.effectClassName, {
+                        [b.underlineOnHover]: C,
                     }),
-                    children: j,
+                    children: L,
                 }),
-                (null == U ? void 0 : U.glowClassName) != null &&
+                (null == k ? void 0 : k.glowClassName) != null &&
                     (0, r.jsx)("span", {
-                        className: o()(b.glowContainer, b.innerContainer, U.glowClassName, {
-                            [b.chicle]: i.fontId === l.C.CHICLE,
-                        }),
+                        className: o()(b.glowContainer, b.innerContainer, k.glowClassName),
                         "aria-hidden": !0,
-                        children: L,
+                        children: x,
                     }),
             ],
         });
