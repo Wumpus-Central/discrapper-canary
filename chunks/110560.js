@@ -360,14 +360,7 @@ function ee(e) {
 function et(e) {
     (0, s.ZDy)(async () => {
         let { default: t } = await Promise.all([n.e("8753"), n.e("53145")]).then(n.bind(n, 627080));
-        return (n) =>
-            (0, r.jsx)(
-                t,
-                k(j({}, n), {
-                    questId: e.id,
-                    questName: e.config.messages.questName,
-                }),
-            );
+        return (n) => (0, r.jsx)(t, k(j({}, n), { questId: e.id }));
     });
 }
 async function en(e, t) {

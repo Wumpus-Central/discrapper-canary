@@ -7,8 +7,8 @@ var n = t(54381),
     c = t(3737);
 let l = [],
     u = function (e) {
-        let { transitionState: r, onClose: t, questId: u, questName: p } = e,
-            f = o.useMemo(() => {
+        let { transitionState: r, onClose: t, questId: u } = e,
+            p = o.useMemo(() => {
                 let e = new URL("".concat(window.location.origin, "/quests/").concat(u));
                 return e.searchParams.append("referrer_id", "quest_home_qr_code"), e.toString();
             }, [u]);
@@ -16,14 +16,14 @@ let l = [],
             actions: l,
             onClose: t,
             size: "md",
-            subtitle: a.intl.format(a.t.zlG59w, { questName: p }),
+            subtitle: a.intl.string(a.t.bBTjR9),
             title: a.intl.string(a.t.g3jrBu),
             transitionState: r,
             children: (0, n.jsx)("div", {
                 className: c.qrCodeWrapper,
                 children: (0, n.jsx)(i.c2, {
                     size: 200,
-                    text: f,
+                    text: p,
                     overlaySize: i.cK.SIZE_40,
                 }),
             }),
