@@ -31,8 +31,8 @@ var r = n(54381),
     N = n(980728),
     P = n(805355),
     R = n(705338),
-    D = n(882508),
-    w = n(594914),
+    w = n(882508),
+    D = n(594914),
     x = n(848118),
     L = n(433386),
     j = n(926294),
@@ -41,8 +41,8 @@ var r = n(54381),
     U = n(181268),
     G = n(981631),
     Z = n(231338),
-    B = n(388032),
-    F = n(450433);
+    F = n(388032),
+    B = n(171532);
 function V(e, t, n) {
     return (
         t in e
@@ -131,17 +131,17 @@ var $ = (function (e) {
 function ee(e) {
     let { sku: t, isCardHovered: n, onClick: i } = e;
     return (0, r.jsx)("div", {
-        className: F.wishlistButtonContainer,
+        className: B.wishlistButtonContainer,
         children: (0, r.jsx)(b.s, {
             skuId: t.id,
             isCardHovered: n,
-            nuxGraphic: (0, D.c)(t),
+            nuxGraphic: (0, w.c)(t),
             onClick: i,
         }),
     });
 }
 function et(e) {
-    var t, n, a, s, c, p, b, P, D, j;
+    var t, n, a, s, c, p, b, P, w, j;
     let {
             isVisible: V,
             positionInSection: H,
@@ -213,7 +213,7 @@ function et(e) {
                 return null;
             let n = u()(),
                 r = Math.max(u()(ei.tenantMetadata.socialLayer.expiresAt).diff(n, "days"), 1);
-            return r <= J ? B.intl.format(B.t.PWw4Vp, { days: r }) : null;
+            return r <= J ? F.intl.format(F.t.PWw4Vp, { days: r }) : null;
         }, [null == ei || null == (n = ei.tenantMetadata) || null == (t = n.socialLayer) ? void 0 : t.expiresAt]),
         eb = (0, T.a7)(ei),
         [ey, eO] = (0, E.Cf)(null == eb ? void 0 : eb.toString(), "#000000"),
@@ -258,9 +258,9 @@ function et(e) {
             onMouseLeave: ef,
             className: l()(
                 {
-                    [F.cardAnimation]: !eo && 2 !== K,
-                    [F.cardDark]: ea,
-                    [ea ? F.cardDarkHighlighted : F.cardHighlighted]: es,
+                    [B.cardAnimation]: !eo && 2 !== K,
+                    [B.cardDark]: ea,
+                    [ea ? B.cardDarkHighlighted : B.cardHighlighted]: es,
                 },
                 et,
             ),
@@ -271,7 +271,7 @@ function et(e) {
                     (0, r.jsx)(_.IGR, {
                         text: eE,
                         disableColor: !0,
-                        className: F.badge,
+                        className: B.badge,
                     }),
                 (0, r.jsx)(ee, {
                     sku: ei,
@@ -280,36 +280,36 @@ function et(e) {
                 }),
                 null != eC
                     ? (0, r.jsx)(x.p, {
-                          containerClassName: F.cardImageContainer,
-                          foregroundImageClassName: F.cardImage,
+                          containerClassName: B.cardImageContainer,
+                          foregroundImageClassName: B.cardImage,
                           cardImage: eC,
                           altText: ei.name,
                           shape: "custom",
-                          backgroundImageClassName: F.cardBackgroundImage,
+                          backgroundImageClassName: B.cardBackgroundImage,
                           cardBackgroundImage: eb,
                       })
                     : (0, r.jsx)("div", {
-                          className: F.ticketIconContainer,
+                          className: B.ticketIconContainer,
                           children: (0, r.jsx)(d.Prq, {
                               color: "white",
                               size: "custom",
                               height: q,
                               width: q,
-                              className: F.ticketIcon,
+                              className: B.ticketIcon,
                           }),
                       }),
                 2 !== K
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)("div", {
-                                  className: F.bottomGradient,
+                                  className: B.bottomGradient,
                                   style: { background: ev },
                               }),
                               (0, r.jsxs)("div", {
-                                  className: F.details,
+                                  className: B.details,
                                   children: [
                                       (0, r.jsx)("div", {
-                                          className: F.titleContainer,
+                                          className: B.titleContainer,
                                           children: (0, r.jsx)(_.Text, {
                                               color: "always-white",
                                               variant: "text-md/medium",
@@ -318,13 +318,13 @@ function et(e) {
                                           }),
                                       }),
                                       (0, r.jsxs)("div", {
-                                          className: F.descriptionContainer,
+                                          className: B.descriptionContainer,
                                           children: [
                                               null != em &&
                                                   (0, r.jsx)("img", {
                                                       src: em.toString(),
                                                       alt: eh,
-                                                      className: F.iconAsset,
+                                                      className: B.iconAsset,
                                                   }),
                                               (0, r.jsx)(_.Text, {
                                                   variant: "text-md/bold",
@@ -342,7 +342,7 @@ function et(e) {
                                   ],
                               }),
                               (0, r.jsx)("div", {
-                                  className: F.buttonHover,
+                                  className: B.buttonHover,
                                   children: (0, r.jsxs)(d.hE2, {
                                       wrap: !1,
                                       fullWidth: !0,
@@ -352,7 +352,7 @@ function et(e) {
                                               onClick: (e) => {
                                                   e.stopPropagation(),
                                                       e_(U.rZ.BUY_BUTTON),
-                                                      (0, w.P)(
+                                                      (0, D.P)(
                                                           ei,
                                                           { isGift: !1 },
                                                           {
@@ -362,9 +362,9 @@ function et(e) {
                                                           },
                                                       );
                                               },
-                                              text: B.intl.format(B.t.Xp5WTn, {
+                                              text: F.intl.format(F.t.Xp5WTn, {
                                                   price: (0, I.T4)(
-                                                      null != (D = null == (c = ei.price) ? void 0 : c.amount) ? D : 0,
+                                                      null != (w = null == (c = ei.price) ? void 0 : c.amount) ? w : 0,
                                                       null != (j = null == (p = ei.price) ? void 0 : p.currency)
                                                           ? j
                                                           : Z.pK.USD,
@@ -376,7 +376,7 @@ function et(e) {
                                               onGift: (e) => {
                                                   e.stopPropagation(),
                                                       e_(U.rZ.GIFT_BUTTON),
-                                                      (0, w.P)(
+                                                      (0, D.P)(
                                                           ei,
                                                           { isGift: !0 },
                                                           {
@@ -409,11 +409,11 @@ function en(e) {
         d = i.useMemo(
             () =>
                 l()(
-                    F.card,
+                    B.card,
                     {
-                        [F.cardSmall]: 0 === t,
-                        [F.cardMedium]: 1 === t,
-                        [F.cardEmbedded]: 2 === t,
+                        [B.cardSmall]: 0 === t,
+                        [B.cardMedium]: 1 === t,
+                        [B.cardEmbedded]: 2 === t,
                     },
                     n.className,
                 ),
@@ -425,6 +425,7 @@ function en(e) {
         threshold: 0,
         children: (0, r.jsx)("div", {
             ref: c,
+            className: B.cardContainer,
             children: s
                 ? (0, r.jsx)(
                       et,
