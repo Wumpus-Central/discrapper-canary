@@ -7,8 +7,8 @@ var r = n(54381),
     l = n(374470),
     o = n(481060),
     a = n(239091),
-    s = n(911969),
-    c = n(100527),
+    c = n(911969),
+    s = n(100527),
     u = n(906732),
     d = n(285230),
     f = n(299206),
@@ -22,7 +22,7 @@ var r = n(54381),
     h = n(786095),
     j = n(268623),
     S = n(986240),
-    E = n(667922),
+    E = n(293335),
     P = n(941389),
     T = n(289889),
     _ = n(449751),
@@ -97,7 +97,7 @@ function $(e) {
     var t, n;
     let i,
         o,
-        s,
+        c,
         d,
         {
             channel: f,
@@ -108,12 +108,12 @@ function $(e) {
             onSelect: y,
             onHeightUpdate: m,
         } = e,
-        { analyticsLocations: v } = (0, u.ZP)([c.Z.MESSAGE_CONTEXT_MENU]),
+        { analyticsLocations: v } = (0, u.ZP)([s.Z.MESSAGE_CONTEXT_MENU]),
         h = b,
         j = b.getAttribute("data-type"),
         S = b.getAttribute("data-id"),
         E = b.getAttribute("data-name");
-    if (null != p) o = i = s = p.url;
+    if (null != p) o = i = c = p.url;
     else
         for (; (0, l.kK)(h); )
             (0, l.kK)(h, HTMLImageElement) && null != h.src && (o = h.src),
@@ -126,7 +126,7 @@ function $(e) {
                         ((o = i),
                         h.hasAttribute("data-safe-src") &&
                             "" !== h.getAttribute("data-safe-src") &&
-                            (s = h.getAttribute("data-safe-src")))),
+                            (c = h.getAttribute("data-safe-src")))),
                 (h = h.parentNode);
     let P = null != (n = null == (t = document.getSelection()) ? void 0 : t.toString()) ? n : "";
     return (0, r.jsx)(u.Gt, {
@@ -141,7 +141,7 @@ function $(e) {
             favoriteableName: E,
             itemHref: i,
             itemSrc: o,
-            itemSafeSrc: s,
+            itemSafeSrc: c,
             itemTextContent: d,
             canReport: !0,
             onHeightUpdate: m,
@@ -159,7 +159,7 @@ function ee(e) {
             channel: n,
             mediaItem: l,
             textSelection: a,
-            favoriteableType: c,
+            favoriteableType: s,
             favoriteableId: u,
             favoriteableName: $,
             itemHref: ee,
@@ -170,8 +170,8 @@ function ee(e) {
             onHeightUpdate: el,
             onSelect: eo,
             onClose: ea,
-            navId: es,
-            ariaLabel: ec,
+            navId: ec,
+            ariaLabel: es,
             shouldHideMediaOptions: eu = !1,
         } = e,
         ed = i.useRef(null);
@@ -210,13 +210,14 @@ function ee(e) {
         ep = (e, t) => {
             var n;
             return (function e(t, n, r, l) {
+                var o;
                 if (null == t) return null;
                 if (!r && !l) return t;
                 if (Array.isArray(t)) return t.map((t) => e(t, n, r, l));
                 if (!i.isValidElement(t)) return t;
-                let o = t.props,
-                    { icon: a, iconLeft: s, children: c } = o,
-                    u = (function (e, t) {
+                let a = t.props,
+                    { icon: c, iconLeft: s, children: u } = a,
+                    d = (function (e, t) {
                         if (null == e) return {};
                         var n,
                             r,
@@ -238,29 +239,37 @@ function ee(e) {
                                         (i[n] = e[n]);
                         }
                         return i;
-                    })(o, ["icon", "iconLeft", "children"]),
-                    d = null != c ? i.Children.map(c, (t) => (null == t ? null : e(t, void 0, !1, l))) : c;
+                    })(a, ["icon", "iconLeft", "children"]),
+                    f = null != u ? i.Children.map(u, (t) => (null == t ? null : e(t, void 0, !1, l))) : u;
                 if (r)
                     return i.cloneElement(
                         t,
-                        Y(J({}, u), {
+                        Y(J({}, d), {
                             icon: void 0,
                             iconLeft: void 0,
-                            children: d,
+                            children: f,
                         }),
                     );
-                if (l) {
-                    var f;
-                    return i.cloneElement(
-                        t,
-                        Y(J({}, u), {
-                            icon: void 0,
-                            iconLeft: null != (f = null != s ? s : n) ? f : a,
-                            children: d,
-                        }),
-                    );
-                }
-                return t;
+                let g = null != (o = null != s ? s : n) ? o : "function" == typeof c ? c : void 0;
+                return null == g
+                    ? i.cloneElement(
+                          t,
+                          Y(J({}, d), {
+                              icon: c,
+                              iconLeft: s,
+                              children: f,
+                          }),
+                      )
+                    : l
+                      ? i.cloneElement(
+                            t,
+                            Y(J({}, d), {
+                                icon: void 0,
+                                iconLeft: g,
+                                children: f,
+                            }),
+                        )
+                      : t;
             })(e, null == t ? void 0 : t.iconToAdd, null != (n = null == t ? void 0 : t.removeIcon) ? n : eb, eg);
         },
         eO = (0, D.Z)(t, n),
@@ -281,7 +290,7 @@ function ee(e) {
         eZ = ep((0, j.Z)(t), { iconToAdd: o.plf }),
         ew = ep(
             (0, m.Z)({
-                commandType: s.yU.MESSAGE,
+                commandType: c.yU.MESSAGE,
                 commandTargetId: t.id,
                 channel: n,
                 guildId: void 0,
@@ -309,10 +318,13 @@ function ee(e) {
         eF = ep((0, Z.Z)(t, n), { removeIcon: !1 }),
         ez = ep((0, U.ZP)(t), { removeIcon: !1 }),
         eH = ep((0, U.eH)(t), { removeIcon: !1 }),
-        eB = ep((0, U.wY)(t), { removeIcon: !1 }),
+        eB = ep((0, U.wY)(t), {
+            iconToAdd: o.U65,
+            removeIcon: !1,
+        }),
         eK = ep(
             (0, A.Z)({
-                type: c,
+                type: s,
                 id: u,
                 name: $,
             }),
@@ -344,9 +356,9 @@ function ee(e) {
         });
     return eb
         ? (0, r.jsxs)(o.v2r, {
-              navId: es,
+              navId: ec,
               onClose: ea,
-              "aria-label": ec,
+              "aria-label": es,
               onSelect: ef,
               children: [
                   (0, r.jsxs)(o.kSQ, {
@@ -365,9 +377,9 @@ function ee(e) {
               ],
           })
         : (0, r.jsxs)(o.v2r, {
-              navId: es,
+              navId: ec,
               onClose: ea,
-              "aria-label": ec,
+              "aria-label": es,
               onSelect: ef,
               children: [
                   (0, r.jsx)(o.kSQ, { children: ey }),
