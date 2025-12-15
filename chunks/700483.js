@@ -14,14 +14,14 @@ var r = n(54381),
     g = n(575175),
     m = n(522651),
     b = n(795318),
-    _ = n(258609),
-    y = n(74299),
-    O = n(924301),
-    x = n(459502),
-    j = n(856691),
-    v = n(728285),
-    C = n(357156),
-    I = n(923973),
+    y = n(258609),
+    O = n(74299),
+    x = n(924301),
+    j = n(459502),
+    v = n(856691),
+    C = n(728285),
+    I = n(357156),
+    _ = n(923973),
     S = n(829750),
     E = n(189771),
     Z = n(294629),
@@ -56,29 +56,22 @@ var r = n(54381),
     er = n(270295),
     ei = n(354459),
     el = n(388032),
-    ea = n(769265);
+    ea = n(547565);
 function es(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, u.ZP)(),
         i = (0, ee.Z)(t.id),
         [l, s] = (0, er.Z)(t),
-        d = (0, $._)(t),
-        p = (0, et.to)();
+        d = (0, $._)(t);
     return i
         ? null
         : (0, r.jsx)(w.d, {
               isTrayButton: !0,
               isActive: l,
-              label: p
-                  ? el.intl.string(el.t.NzITVo)
-                  : l
-                    ? el.intl.string(el.t.GCimTk)
-                    : d
-                      ? el.intl.string(el.t.hLbG5N)
-                      : el.intl.string(el.t.e4WMvx),
-              iconComponent: p ? a.XuQ : a.V9,
+              label: l ? el.intl.string(el.t.GCimTk) : d ? el.intl.string(el.t.hLbG5N) : el.intl.string(el.t.e4WMvx),
+              iconComponent: a.V9,
               onClick: () => {
-                  if (((0, m.v)(n, m.d.REQUEST_TO_SPEAK, !l), p))
+                  if (((0, m.v)(n, m.d.REQUEST_TO_SPEAK, !l), (0, et.u1)()))
                       return void o.Z.showAgeVerificationGetStartedModal({ entryPoint: c.cU.STAGE_CHANNEL_RAISE_HAND });
                   s();
               },
@@ -106,32 +99,31 @@ let eo = i.memo(function (e) {
 });
 function ec(e) {
     let { channel: t } = e,
-        { parentAnalyticsLocation: n } = (0, u.ZP)(),
-        i = (0, et.to)();
+        { parentAnalyticsLocation: n } = (0, u.ZP)();
     return (0, r.jsx)(w.d, {
         isTrayButton: !0,
         onClick: () => {
-            if (((0, m.v)(n, m.d.SPEAK_ON_STAGE), i))
+            if (((0, m.v)(n, m.d.SPEAK_ON_STAGE), (0, et.u1)()))
                 return void o.Z.showAgeVerificationGetStartedModal({ entryPoint: c.cU.STAGE_CHANNEL_RAISE_HAND });
             (0, B.RK)(t, !1);
         },
-        iconComponent: i ? a.v0G : a.Lrb,
+        iconComponent: a.Lrb,
         label: el.intl.string(el.t["8Joh+p"]),
     });
 }
 function ed(e) {
     let { channel: t, onSelect: n } = e,
-        o = (0, v.bp)(),
-        { canManageGuildEvent: c } = (0, C.XJ)(t),
+        o = (0, C.bp)(),
+        { canManageGuildEvent: c } = (0, I.XJ)(t),
         p = (0, l.e7)([Y.Z], () => Y.Z.getStageInstanceByChannel(t.id), [t.id]),
-        h = (0, l.e7)([O.ZP], () => O.ZP.getGuildScheduledEvent(null == p ? void 0 : p.guild_scheduled_event_id)),
+        h = (0, l.e7)([x.ZP], () => x.ZP.getGuildScheduledEvent(null == p ? void 0 : p.guild_scheduled_event_id)),
         { suppress: f } = (0, Z.Z)(t),
         g = M.default.getId(),
-        [_] = (0, er.Z)(t),
-        y = W.ZP.isModerator(g, t.id),
-        x = (0, V.B)(t.id),
-        j = c(h),
-        { parentAnalyticsLocation: I } = (0, u.ZP)(),
+        [y] = (0, er.Z)(t),
+        O = W.ZP.isModerator(g, t.id),
+        j = (0, V.B)(t.id),
+        v = c(h),
+        { parentAnalyticsLocation: _ } = (0, u.ZP)(),
         S = i.useRef(null),
         E = () =>
             (function (e) {
@@ -142,7 +134,7 @@ function ed(e) {
                 channel: t,
                 appContext: o,
             });
-    return (y || j) && null != p
+    return (O || v) && null != p
         ? (0, r.jsx)(a.yRy, {
               targetElementRef: S,
               renderPopout: (e) => {
@@ -153,7 +145,7 @@ function ed(e) {
                           "aria-label": el.intl.string(el.t["3Uj+2p"]),
                           onClose: i,
                           onSelect: n,
-                          onInteraction: (0, b.u)("End Stage", I, { entrypoint: ei.A5.CARET }),
+                          onInteraction: (0, b.u)("End Stage", _, { entrypoint: ei.A5.CARET }),
                           children: (0, r.jsx)(a.sNh, {
                               id: "end-stage",
                               color: "danger",
@@ -180,7 +172,7 @@ function ed(e) {
                   });
               },
           })
-        : (f && !x) || _
+        : (f && !j) || y
           ? (0, r.jsx)(A.Z, {
                 label: el.intl.string(el.t.SMKyih),
                 onClick: E,
@@ -236,16 +228,16 @@ let eh = i.memo(function (e) {
         { suppress: s, selfMute: o, mute: c } = (0, Z.Z)(t),
         d = (0, V.B)(t.id),
         m = (0, ee.Z)(t.id),
-        O = (0, l.e7)([_.default], () => null != _.default.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: x, enabled: j } = (0, I.Z)(),
-        v = (0, E.Z)(t),
-        { limit: C, reachedLimit: w } = (0, S.Z)(t),
+        x = (0, l.e7)([y.default], () => null != y.default.getAwaitingRemoteSessionInfo()),
+        { cameraUnavailable: j, enabled: v } = (0, _.Z)(),
+        C = (0, E.Z)(t),
+        { limit: I, reachedLimit: w } = (0, S.Z)(t),
         A = (0, l.e7)([H.default], () => H.default.getCurrentUser()),
-        M = (0, l.e7)([k.Z], () => (0, y.Z)(k.Z)),
+        M = (0, l.e7)([k.Z], () => (0, O.Z)(k.Z)),
         U = (0, l.e7)([G.Z], () => G.Z.getVoiceChannelId() === t.id, [t.id]),
         F = (0, l.e7)([p.Z], () => p.Z.getStreamParticipants(t.id)[0], [t.id]),
         B = (0, q.PK)(t.id),
-        z = C > 0,
+        z = I > 0,
         W = (w && !B) || (null != F && F.user.id !== (null == A ? void 0 : A.id)),
         Y = (0, b.u)("AudioDeviceMenu", n, { entrypoint: ei.A5.CARET }),
         K = i.useRef(null),
@@ -273,13 +265,13 @@ let eh = i.memo(function (e) {
             return (0, r.jsx)(L.C, {
                 ref: K,
                 centerButton: !0,
-                hasPermission: v,
-                enabled: j,
-                cameraUnavailable: x,
+                hasPermission: C,
+                enabled: v,
+                cameraUnavailable: j,
                 onChange: P.r,
                 onCameraUnavailable: N.Z,
                 channelLimitReached: w,
-                channelLimit: C,
+                channelLimit: I,
                 popoutOpen: i,
                 onPopoutClick: n,
             });
@@ -326,7 +318,7 @@ let eh = i.memo(function (e) {
                                       suppress: s,
                                       popoutOpen: i,
                                       onClick: () => (0, g.Z)(c, s, "Stage Channel Controls"),
-                                      awaitingRemote: O,
+                                      awaitingRemote: x,
                                   });
                               },
                           }),
@@ -343,7 +335,7 @@ let eh = i.memo(function (e) {
                               currentUser: A,
                               exitFullScreen: () => null,
                               canGoLive: M,
-                              hasPermission: v,
+                              hasPermission: C,
                               disabled: W,
                           })
                         : null,
@@ -389,10 +381,10 @@ let eg = i.memo(function (e) {
                     (0, r.jsxs)("div", {
                         className: ea.eventPrompts,
                         children: [
-                            u ? (0, r.jsx)(x.Z, { channelId: null == t ? void 0 : t.id }) : null,
+                            u ? (0, r.jsx)(j.Z, { channelId: null == t ? void 0 : t.id }) : null,
                             (0, r.jsx)("div", { className: ea.separator }),
                             u && s && !o
-                                ? (0, r.jsx)(j.Z, {
+                                ? (0, r.jsx)(v.Z, {
                                       highlight: !0,
                                       channel: t,
                                   })

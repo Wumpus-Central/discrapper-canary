@@ -1,8 +1,8 @@
 n.d(t, {
     DT: () => A,
-    Ef: () => D,
+    Ef: () => w,
     HO: () => R,
-    NZ: () => w,
+    NZ: () => D,
     Pq: () => P,
     Q1: () => S,
     RK: () => T,
@@ -98,25 +98,26 @@ function I(e, t) {
 function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = null == e ? void 0 : e.getGuildId();
-    if ((i()(null != r, "This channel cannot be guildless."), !t && (0, E.u1)())) return Promise.resolve();
-    let a = f.Z.getVoiceStateForChannel(e.id);
-    return (
-        (0, g.gf)(a) !== g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ||
-            t ||
-            (0, c.yw)(b.rMx.PROMOTED_TO_SPEAKER, v({}, (0, m.s$)(e))),
-        o.tn.patch({
-            url: b.ANM.UPDATE_VOICE_STATE(r),
-            body: v(
-                {
-                    suppress: t,
-                    request_to_speak_timestamp: null,
-                    channel_id: e.id,
-                },
-                n ? { silent: n } : {},
-            ),
-            rejectWithError: !1,
-        })
-    );
+    i()(null != r, "This channel cannot be guildless.");
+    let a = f.Z.getVoiceStateForChannel(e.id),
+        s = (0, g.gf)(a);
+    return !t && (0, E.u1)()
+        ? Promise.resolve()
+        : (s !== g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK ||
+              t ||
+              (0, c.yw)(b.rMx.PROMOTED_TO_SPEAKER, v({}, (0, m.s$)(e))),
+          o.tn.patch({
+              url: b.ANM.UPDATE_VOICE_STATE(r),
+              body: v(
+                  {
+                      suppress: t,
+                      request_to_speak_timestamp: null,
+                      channel_id: e.id,
+                  },
+                  n ? { silent: n } : {},
+              ),
+              rejectWithError: !1,
+          }));
 }
 function C(e) {
     let t = null == e ? void 0 : e.getGuildId();
@@ -197,9 +198,9 @@ async function R(e, t, n, r) {
     let i = await (0, h.me)(e.id, t, n, r);
     return T(e, !1, !0), i;
 }
-async function D(e, t, n) {
+async function w(e, t, n) {
     if ("" !== t) return await (0, h.Dk)(e.id, t, n);
 }
-async function w(e) {
+async function D(e) {
     await (0, h.Ix)(e.id);
 }

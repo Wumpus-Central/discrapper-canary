@@ -1,4 +1,4 @@
-n.d(e, { Z: () => N });
+n.d(e, { Z: () => D });
 var l = n(54381);
 n(473749);
 var i = n(442837),
@@ -11,24 +11,22 @@ var i = n(442837),
     d = n(357156),
     g = n(703656),
     f = n(922482),
-    p = n(430104),
-    h = n(984933),
-    v = n(430824),
-    m = n(496675),
-    Z = n(626135),
-    y = n(572004),
-    b = n(658041),
-    P = n(482241),
-    E = n(951539),
-    C = n(894017),
-    _ = n(274311),
-    j = n(854698),
-    x = n(118998),
-    O = n(139712),
-    w = n(765305),
-    S = n(981631),
+    p = n(984933),
+    h = n(430824),
+    v = n(496675),
+    m = n(626135),
+    Z = n(572004),
+    b = n(482241),
+    y = n(951539),
+    P = n(894017),
+    E = n(274311),
+    C = n(854698),
+    _ = n(118998),
+    j = n(139712),
+    x = n(765305),
+    O = n(981631),
     k = n(388032);
-function D(t) {
+function w(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             l = Object.keys(n);
@@ -53,7 +51,7 @@ function D(t) {
     }
     return t;
 }
-function T(t, e) {
+function S(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -71,46 +69,46 @@ function T(t, e) {
         t
     );
 }
-function N(t) {
-    let { guild: e, channel: N, guildScheduledEvent: I, isActive: G, recurrenceId: H, onActionTaken: L } = t,
-        { scheduled_start_time: W, id: V, entity_type: z, guild_id: A } = I,
-        { canManageGuildEvent: X } = (0, d.XJ)(null != N ? N : e),
-        U = X(I),
-        R = (0, E.ZP)(I),
-        q = (0, _.T)(null == N ? void 0 : N.id, I.id),
-        { withinStartWindow: J } = (0, j.ub)(W),
-        Y = (0, i.e7)([m.Z], () => null == N || !N.isGuildVocal() || m.Z.can(S.Plq.CONNECT, N), [N]),
-        B = (0, s.J)(A),
-        M = (0, C.Z)(H, V);
-    function K(t) {
-        t.stopPropagation(), (0, O.Z)(V, H, A);
+function D(t) {
+    let { guild: e, channel: D, guildScheduledEvent: T, isActive: N, recurrenceId: I, onActionTaken: G } = t,
+        { scheduled_start_time: H, id: L, entity_type: W, guild_id: V } = T,
+        { canManageGuildEvent: z } = (0, d.XJ)(null != D ? D : e),
+        A = z(T),
+        X = (0, y.ZP)(T),
+        U = (0, E.T)(null == D ? void 0 : D.id, T.id),
+        { withinStartWindow: R } = (0, C.ub)(H),
+        q = (0, i.e7)([v.Z], () => null == D || !D.isGuildVocal() || v.Z.can(O.Plq.CONNECT, D), [D]),
+        J = (0, s.J)(V),
+        Y = (0, P.Z)(I, L);
+    function B(t) {
+        t.stopPropagation(), (0, j.Z)(L, I, V);
     }
-    async function Q(t) {
+    async function M(t) {
         t.stopPropagation(),
-            await o.Z.joinGuild(A),
-            v.Z.addConditionalChangeListener(
+            await o.Z.joinGuild(V),
+            h.Z.addConditionalChangeListener(
                 () =>
-                    null == v.Z.getGuild(A) ||
-                    (G || K(t),
+                    null == h.Z.getGuild(V) ||
+                    (N || B(t),
                     (function (t) {
                         t.stopPropagation();
-                        let e = h.ZP.getDefaultChannel(A);
-                        (0, u.pTH)(), (0, g.XU)(A, null == e ? void 0 : e.id);
+                        let e = p.ZP.getDefaultChannel(V);
+                        (0, u.pTH)(), (0, g.XU)(V, null == e ? void 0 : e.id);
                     })(t),
                     !1),
             );
     }
     return {
-        onDeleteClick: U
+        onDeleteClick: A
             ? function (t) {
                   t.stopPropagation(),
-                      U &&
-                          !G &&
+                      A &&
+                          !N &&
                           (0, r.Z)({
                               title: k.intl.string(k.t.R5bpin),
                               subtitle: k.intl.string(k.t.v2GWNQ),
                               confirmText: k.intl.string(k.t.oyYWHE),
-                              onConfirm: () => P.Z.deleteGuildEvent(V, A),
+                              onConfirm: () => b.Z.deleteGuildEvent(L, V),
                           });
               }
             : void 0,
@@ -122,11 +120,11 @@ function N(t) {
                         return (n) =>
                             (0, l.jsx)(
                                 t,
-                                D(
+                                w(
                                     {
-                                        guildEventId: V,
-                                        recurrenceId: H,
-                                        channel: N,
+                                        guildEventId: L,
+                                        recurrenceId: I,
+                                        channel: D,
                                         guild: e,
                                     },
                                     n,
@@ -135,94 +133,84 @@ function N(t) {
                     });
         },
         onJoinClick:
-            Y || B
+            q || J
                 ? function (t) {
-                      if ((t.stopPropagation(), B)) {
-                          null == L || L(), (0, c.hk)(A);
+                      if ((t.stopPropagation(), J)) {
+                          null == G || G(), (0, c.hk)(V);
                           return;
                       }
-                      (null == N ? void 0 : N.isGuildStageVoice())
-                          ? ((0, f.Cq)(N), null == L || L())
-                          : (null == N ? void 0 : N.isGuildVoice()) &&
-                            (P.Z.joinVoiceEvent(N.guild_id, N.id), null == L || L());
+                      (null == D ? void 0 : D.isGuildStageVoice())
+                          ? ((0, f.Cq)(D), null == G || G())
+                          : (null == D ? void 0 : D.isGuildVoice()) &&
+                            (b.Z.joinVoiceEvent(D.guild_id, D.id), null == G || G());
                   }
                 : void 0,
-        onRsvpClick: K,
+        onRsvpClick: B,
         onStartClick:
-            U && J && !(null == M ? void 0 : M.is_canceled)
+            A && R && !(null == Y ? void 0 : Y.is_canceled)
                 ? function (t) {
-                      t.stopPropagation();
-                      let e = () => {
+                      t.stopPropagation(),
                           (0, u.ZDy)(async () => {
-                              let { default: t } = await Promise.all([n.e("84722"), n.e("14531")]).then(
+                              let { default: t } = await Promise.all([n.e("84722"), n.e("65413")]).then(
                                   n.bind(n, 296864),
                               );
                               return (e) =>
                                   (0, l.jsx)(
                                       t,
-                                      T(D({}, e), {
-                                          event: I,
-                                          onSuccess: L,
+                                      S(w({}, e), {
+                                          event: T,
+                                          onSuccess: G,
                                       }),
                                   );
                           });
-                      };
-                      (0, p.u1)() && (0, b.s)(I)
-                          ? (0, u.ZDy)(async () => {
-                                let { AgeVerificationRequiredSpeedbumpModal: t } = await n
-                                    .e("26513")
-                                    .then(n.bind(n, 31362));
-                                return (n) => (0, l.jsx)(t, T(D({}, n), { onStart: () => e() }));
-                            })
-                          : e();
                   }
                 : void 0,
         onInviteClick: function (t) {
             if ((t.stopPropagation(), null != e)) {
-                if (!(0, x.T)(R, q, N)) {
-                    let t = (0, x.H)({
-                        guildId: A,
-                        guildEventId: V,
+                if (!(0, _.T)(X, U, D)) {
+                    let t = (0, _.H)({
+                        guildId: V,
+                        guildEventId: L,
                     });
-                    (0, y.JG)(t),
-                        Z.default.track(S.rMx.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
-                            guild_id: A,
-                            guild_scheduled_event_id: V,
+                    (0, Z.JG)(t),
+                        m.default.track(O.rMx.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
+                            guild_id: V,
+                            guild_scheduled_event_id: L,
                         });
                     return;
                 }
                 (0, u.ZDy)(async () => {
-                    let { default: t } = await Promise.all([n.e("49049"), n.e("7654"), n.e("27267")]).then(
+                    let { default: t } = await Promise.all([n.e("49049"), n.e("7654"), n.e("40283")]).then(
                         n.bind(n, 560114),
                     );
                     return (n) =>
                         (0, l.jsx)(
                             t,
-                            T(D({}, n), {
+                            S(w({}, n), {
                                 guild: e,
-                                channel: N,
-                                guildScheduledEvent: I,
-                                source: S.t4x.GUILD_EVENTS,
+                                channel: D,
+                                guildScheduledEvent: T,
+                                source: O.t4x.GUILD_EVENTS,
                             }),
                         );
                 });
             }
         },
         onEndClick:
-            U && z === w.WX.EXTERNAL && G
+            A && W === x.WX.EXTERNAL && N
                 ? function (t) {
                       t.stopPropagation(),
-                          U &&
+                          A &&
                               (0, r.Z)({
                                   title: k.intl.string(k.t.qaYzPA),
                                   subtitle: k.intl.string(k.t.bnDQ7E),
                                   confirmText: k.intl.string(k.t.mjB9pd),
                                   onConfirm: () => {
-                                      P.Z.endEvent(V, A), (0, u.pTH)();
+                                      b.Z.endEvent(L, V), (0, u.pTH)();
                                   },
                               });
                   }
                 : void 0,
-        onJoinGuildClick: Q,
+        onJoinGuildClick: M,
     };
 }

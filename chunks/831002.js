@@ -1,5 +1,5 @@
 n.d(t, {
-    $A: () => _,
+    $A: () => y,
     j8: () => v,
 });
 var i = n(54381);
@@ -14,34 +14,34 @@ var s = n(218035),
     u = n(728285),
     d = n(423589),
     p = n(592125),
-    h = n(496675),
-    f = n(881824),
+    f = n(496675),
+    h = n(881824),
     m = n(146085),
     g = n(427679),
-    b = n(430104),
-    C = n(852159);
+    b = n(430104);
 n(354459);
-var y = n(388032);
-function _(e) {
+var C = n(388032);
+function y(e) {
     let t = (0, a.e7)([p.Z], () => p.Z.getChannel(e), [e]),
-        n = (0, a.e7)([h.Z], () => h.Z.can(m.yP, t)),
+        n = (0, a.e7)([f.Z], () => f.Z.can(m.yP, t)),
         r = (0, b.sP)(),
         l = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(e), [e]),
-        s = (0, u.bp)(),
-        c = (0, C.A)(t);
+        s = (0, u.bp)();
     return (null == t ? void 0 : t.isGuildStageVoice()) && n && !r
         ? null != l
             ? (0, i.jsx)(o.sNh, {
                   id: "edit-stage",
-                  label: y.intl.string(y.t["I+9bLx"]),
+                  label: C.intl.string(C.t["I+9bLx"]),
                   action: () => {
-                      null != t && (0, f.T)(t, s);
+                      null != t && (0, h.T)(t, s);
                   },
               })
             : (0, i.jsx)(o.sNh, {
                   id: "start-stage",
-                  label: y.intl.string(y.t.OYbHfv),
-                  action: c,
+                  label: C.intl.string(C.t.OYbHfv),
+                  action: () => {
+                      null != t && (0, h.T)(t, s);
+                  },
               })
         : null;
 }
