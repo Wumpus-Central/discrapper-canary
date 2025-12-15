@@ -10,8 +10,8 @@ var r = n(399606),
     u = n(951206),
     d = n(446226),
     p = n(937393),
-    h = n(721351),
-    f = n(981631),
+    f = n(721351),
+    h = n(981631),
     m = n(388032);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -60,11 +60,11 @@ function C(e) {
     let t = (0, r.e7)([s.Z], () => s.Z.getChannelId() === e.id),
         C = (0, d.Z)(),
         y = (null == C ? void 0 : C.channelId) === e.id,
-        _ = (0, o.V)(e) && !e.isPrivate(),
-        v = (0, o.Z)(e),
-        O = (!(0, r.e7)([c.Z], () => c.Z.isInChannel(e.id)) && v) || _,
-        x = (0, p.Z)();
-    return y || 0 !== x.length
+        v = (0, o.V)(e) && !e.isPrivate(),
+        O = (0, o.Z)(e),
+        x = (!(0, r.e7)([c.Z], () => c.Z.isInChannel(e.id)) && O) || v,
+        E = (0, p.Z)();
+    return y || 0 !== E.length
         ? y
             ? (0, i.jsx)(l.sNh, {
                   label: m.intl.string(m.t.PlwgdU),
@@ -72,10 +72,10 @@ function C(e) {
                   action: () => {
                       (0, u.F)(C);
                   },
-                  icon: (0, h.Z)(void 0),
-                  disabled: O,
+                  icon: (0, f.Z)(void 0),
+                  disabled: x,
               })
-            : x.map((r) => {
+            : E.map((r) => {
                   var o, s;
                   return (0, i.jsx)(
                       l.sNh,
@@ -84,15 +84,15 @@ function C(e) {
                           label:
                               ((o = r.type),
                               (s = t),
-                              o === f.ABu.XBOX
+                              o === h.ABu.XBOX
                                   ? s
                                       ? m.intl.string(m.t["qVE/VF"])
                                       : m.intl.string(m.t.E8euSk)
-                                  : o === f.ABu.PLAYSTATION
+                                  : o === h.ABu.PLAYSTATION
                                     ? s
                                         ? m.intl.string(m.t.vzfxmY)
                                         : m.intl.string(m.t.QxEYDj)
-                                    : o === f.ABu.PLAYSTATION_STAGING
+                                    : o === h.ABu.PLAYSTATION_STAGING
                                       ? s
                                           ? m.intl.string(m.t.BDiXtV)
                                           : m.intl.string(m.t["bhdB9+"])
@@ -104,14 +104,14 @@ function C(e) {
                                           platformType: t.type,
                                           location: "Console Transfer Item",
                                       });
-                                  t.type === f.ABu.XBOX
+                                  t.type === h.ABu.XBOX
                                       ? (0, l.ZDy)(async () => {
-                                            let { default: t } = await Promise.all([n.e("10695"), n.e("45929")]).then(
+                                            let { default: t } = await Promise.all([n.e("8753"), n.e("45929")]).then(
                                                 n.bind(n, 200623),
                                             );
                                             return (n) => (0, i.jsx)(t, b(g({}, n), { channel: e }));
                                         })
-                                      : (t.type === f.ABu.PLAYSTATION || t.type === f.ABu.PLAYSTATION_STAGING) &&
+                                      : (t.type === h.ABu.PLAYSTATION || t.type === h.ABu.PLAYSTATION_STAGING) &&
                                         (0, l.ZDy)(async () => {
                                             let { default: r } = await n.e("638").then(n.bind(n, 543974));
                                             return (n) =>
@@ -124,8 +124,8 @@ function C(e) {
                                                 );
                                         });
                               })(r),
-                          icon: (0, h.Z)(r.type),
-                          disabled: O,
+                          icon: (0, f.Z)(r.type),
+                          disabled: x,
                       },
                       r.id,
                   );

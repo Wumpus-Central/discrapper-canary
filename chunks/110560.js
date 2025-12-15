@@ -19,8 +19,8 @@ n.r(t),
 var r = n(54381);
 n(473749);
 var i = n(772848),
-    o = n(271579),
-    a = n(756647),
+    a = n(271579),
+    o = n(756647),
     s = n(481060),
     l = n(668781),
     c = n(836768),
@@ -118,10 +118,10 @@ function Z(e) {
 }
 function F(e, t, i) {
     (0, s.ZDy)(async () => {
-        let { default: o } = await n.e("97158").then(n.bind(n, 964129));
+        let { default: a } = await n.e("97158").then(n.bind(n, 964129));
         return (n) =>
             (0, r.jsx)(
-                o,
+                a,
                 k(j({}, n), {
                     initialQuest: e,
                     location: t,
@@ -132,21 +132,7 @@ function F(e, t, i) {
 }
 function B(e, t, i) {
     (0, s.ZDy)(async () => {
-        let { default: o } = await n.e("32869").then(n.bind(n, 187311));
-        return (n) =>
-            (0, r.jsx)(
-                o,
-                k(j({}, n), {
-                    initialQuest: e,
-                    sourceQuestContent: i,
-                    location: t,
-                }),
-            );
-    });
-}
-function V(e, t, i, o) {
-    (0, s.ZDy)(async () => {
-        let { default: a } = await n.e("28217").then(n.bind(n, 824571));
+        let { default: a } = await n.e("32869").then(n.bind(n, 187311));
         return (n) =>
             (0, r.jsx)(
                 a,
@@ -154,17 +140,31 @@ function V(e, t, i, o) {
                     initialQuest: e,
                     sourceQuestContent: i,
                     location: t,
-                    preview: o,
+                }),
+            );
+    });
+}
+function V(e, t, i, a) {
+    (0, s.ZDy)(async () => {
+        let { default: o } = await n.e("28217").then(n.bind(n, 824571));
+        return (n) =>
+            (0, r.jsx)(
+                o,
+                k(j({}, n), {
+                    initialQuest: e,
+                    sourceQuestContent: i,
+                    location: t,
+                    preview: a,
                 }),
             );
     });
 }
 function H(e, t, i) {
     (0, s.ZDy)(async () => {
-        let { default: o } = await n.e("52040").then(n.bind(n, 636494));
+        let { default: a } = await n.e("52040").then(n.bind(n, 636494));
         return (n) =>
             (0, r.jsx)(
-                o,
+                a,
                 k(j({}, n), {
                     quest: e,
                     location: t,
@@ -224,14 +224,14 @@ function z(e) {
         });
 }
 function q() {
-    return Promise.all([n.e("13193"), n.e("75909"), n.e("90499")]).then(n.bind(n, 215113));
+    return Promise.all([n.e("13193"), n.e("75909"), n.e("11941")]).then(n.bind(n, 215113));
 }
 function Q(e) {
     var t;
     let {
         quest: n,
-        questContent: o,
-        sourceQuestContent: a,
+        questContent: a,
+        sourceQuestContent: o,
         sourceQuestContentCTA: l,
         autoplay: c = !0,
         skipEnrollmentCheck: u = !1,
@@ -246,9 +246,9 @@ function Q(e) {
     ) {
         g.Z.isEnrolling(n.id) ||
             (0, m.AH)(n.id, {
-                questContent: o,
+                questContent: a,
                 questContentCTA: h.jZ.ACCEPT_QUEST,
-                sourceQuestContent: a,
+                sourceQuestContent: o,
             });
         let e = b.ZP.getState().getVideoProgress(n.id);
         null != e &&
@@ -256,7 +256,7 @@ function Q(e) {
             ((0, m.lx)(n.id),
             p.default.track(w.rMx.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: n.id,
-                source_quest_content: (0, h._b)(a),
+                source_quest_content: (0, h._b)(o),
                 source_quest_content_cta: l,
                 video_session_id: d,
             }));
@@ -272,7 +272,7 @@ function Q(e) {
                         questId: n.id,
                         autoplay: c,
                         videoSessionId: d,
-                        sourceQuestContent: a,
+                        sourceQuestContent: o,
                     }),
                 );
         },
@@ -282,7 +282,7 @@ function Q(e) {
             onCloseCallback: () =>
                 (0, A.Mo)({
                     questId: n.id,
-                    sourceQuestContent: a,
+                    sourceQuestContent: o,
                     videoSessionId: d,
                 }),
         },
@@ -294,9 +294,9 @@ function X(e) {
         r = "quest";
     if ("Android" === n || "iOS" === n) {
         let t = f.default.getFingerprint(),
-            n = (0, o.WS)(),
+            n = (0, a.WS)(),
             i = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, "/quests/").concat(e);
-        return (0, o.ZP)(i, {
+        return (0, a.ZP)(i, {
             utmSource: r,
             fingerprint: t,
             attemptId: n,
@@ -306,10 +306,10 @@ function X(e) {
 }
 function J(e) {
     let t = X(e),
-        n = (0, o.zS)(t);
+        n = (0, a.zS)(t);
     null != n &&
         p.default.track(w.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, a.K)(n.fingerprint),
+            fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
@@ -327,12 +327,12 @@ function $(e) {
         r = "quest-preview";
     if ("Android" === n || "iOS" === n) {
         let t = f.default.getFingerprint(),
-            n = (0, o.WS)(),
+            n = (0, a.WS)(),
             i = ""
                 .concat(location.protocol, "//")
                 .concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, "/quest-preview/")
                 .concat(e);
-        return (0, o.ZP)(i, {
+        return (0, a.ZP)(i, {
             utmSource: r,
             fingerprint: t,
             attemptId: n,
@@ -342,10 +342,10 @@ function $(e) {
 }
 function ee(e) {
     let t = $(e),
-        n = (0, o.zS)(t);
+        n = (0, a.zS)(t);
     null != n &&
         p.default.track(w.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, a.K)(n.fingerprint),
+            fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
@@ -359,7 +359,7 @@ function ee(e) {
 }
 function et(e) {
     (0, s.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e("10695"), n.e("53145")]).then(n.bind(n, 627080));
+        let { default: t } = await Promise.all([n.e("8753"), n.e("53145")]).then(n.bind(n, 627080));
         return (n) =>
             (0, r.jsx)(
                 t,

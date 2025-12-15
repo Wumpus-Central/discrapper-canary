@@ -6,7 +6,7 @@ var i = n(481060),
     o = n(546791),
     s = n(292352),
     l = n(981631),
-    c = n(225753),
+    c = n(517319),
     u = n(388032);
 function d(e, t, n) {
     return (
@@ -41,7 +41,7 @@ function p() {
     let e = (0, o.nE)(u.intl.string(c.default.Ta9byS), u.intl.string(c.default["8SLtqb"])),
         t = () => {
             (0, i.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e("10695"), n.e("48168")]).then(n.bind(n, 978305));
+                let { default: e } = await Promise.all([n.e("8753"), n.e("48168")]).then(n.bind(n, 978305));
                 return (t) => (0, r.jsx)(e, f({}, t));
             }),
                 a.default.track(l.rMx.FAMILY_CENTER_ACTION, { action: s.YC.ShowQRCodeModal });

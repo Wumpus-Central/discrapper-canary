@@ -52879,7 +52879,7 @@ h2.feb59c8c6ec00ad9-title {
 }
 
 .d285a61ed580c689-markdown {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -58265,9 +58265,9 @@ screen and (max-width:485px) {
     border-radius: 3px;
     color: var(--white-500);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-bold);
-    line-height: 29px;
+    line-height: 1.8125rem;
     margin-top: 20px;
     padding: 10px 20px;
     text-transform: uppercase
@@ -61566,9 +61566,9 @@ screen and (max-width:485px) {
 }
 
 ._6df1abcb56d96feb-cardTitle {
-    font-size: 32px;
+    font-size: 2rem;
     font-style: italic;
-    line-height: 27px;
+    line-height: 1.6875rem;
     text-transform: uppercase
 }
 
