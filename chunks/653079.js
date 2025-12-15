@@ -1,51 +1,53 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var l = n(54381),
     r = n(120356),
     i = n.n(r),
+    a = n(392711),
     s = n(442837),
-    a = n(481060),
-    o = n(884697),
-    c = n(449217),
+    o = n(481060),
+    c = n(884697),
+    d = n(449217),
     u = n(29121),
-    d = n(778825),
-    p = n(25990),
-    m = n(74538),
-    g = n(956748),
-    h = n(566697),
-    x = n(388032),
-    v = n(763740);
-let _ = (e) => {
+    p = n(778825),
+    m = n(25990),
+    g = n(74538),
+    h = n(956748),
+    x = n(566697),
+    v = n(388032),
+    b = n(875292);
+let f = (e) => {
     var t, n;
-    let { user: r, guildId: _, nameplate: j } = e,
-        y = (0, s.cj)([p.Z, d.Z], () => (null == _ ? p.Z.getAllPending() : d.Z.getAllPending())),
-        { product: P, purchase: b } = (0, c.Z)(null == j ? void 0 : j.skuId),
-        f = (0, u.kd)(P),
-        C = m.ZP.canUseCollectibles(r),
-        E = (0, o.qS)(b),
-        O = (0, o.G1)(P),
-        w = !C && E,
-        N = null == b || w;
+    let { user: r, guildId: f, nameplate: j } = e,
+        y = (0, s.cj)([m.Z, p.Z], () => (null == f ? m.Z.getAllPending() : p.Z.getAllPending())),
+        { product: P, purchase: C } = (0, d.Z)(null == j ? void 0 : j.skuId),
+        E = (0, u.ag)(C),
+        O = (0, u.kd)(P),
+        w = g.ZP.canUseCollectibles(r),
+        _ = (0, c.qS)(C),
+        N = (0, c.G1)(P),
+        Z = !w && _,
+        I = null == C || Z;
     return (0, l.jsxs)("div", {
-        className: i()(v.previewBorder, { [v.upsell]: null != j && N }),
+        className: i()(b.previewBorder, { [b.upsell]: null != j && I }),
         children: [
             (0, l.jsx)("div", {
-                className: v.previewBox,
+                className: b.previewBox,
                 role: "img",
-                "aria-label": x.intl.string(x.t.SZeUdR),
+                "aria-label": v.intl.string(v.t.SZeUdR),
                 children: (0, l.jsxs)("div", {
-                    className: v.previewContents,
+                    className: b.previewContents,
                     "aria-hidden": !0,
                     children: [
-                        (0, l.jsx)(g.G, {
+                        (0, l.jsx)(h.G, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, l.jsx)(g.G, {
+                        (0, l.jsx)(h.G, {
                             width: 124,
                             opacity: 0.9,
                         }),
                         (0, l.jsx)(
-                            h.Z,
+                            x.Z,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -74,7 +76,7 @@ let _ = (e) => {
                             (n = n =
                                 {
                                     user: r,
-                                    guildId: _,
+                                    guildId: f,
                                     nameplate: j,
                                     isHighlighted: !0,
                                 }),
@@ -92,11 +94,11 @@ let _ = (e) => {
                                   }),
                             t),
                         ),
-                        (0, l.jsx)(g.G, {
+                        (0, l.jsx)(h.G, {
                             width: 124,
                             opacity: 0.9,
                         }),
-                        (0, l.jsx)(g.G, {
+                        (0, l.jsx)(h.G, {
                             width: 124,
                             opacity: 0.9,
                         }),
@@ -105,22 +107,22 @@ let _ = (e) => {
             }),
             null != j &&
                 (0, l.jsxs)("div", {
-                    className: v.previewDescription,
+                    className: b.previewDescription,
                     children: [
-                        (0, l.jsx)(a.Text, {
+                        (0, l.jsxs)(o.Text, {
                             variant: "text-sm/semibold",
-                            children: f,
+                            children: [" ", (0, a.isEmpty)(E) ? O : E],
                         }),
-                        N &&
-                            (0, l.jsx)(a.Text, {
+                        I &&
+                            (0, l.jsx)(o.Text, {
                                 variant: "text-sm/normal",
-                                children: w
-                                    ? x.intl.string(x.t.nD78oa)
-                                    : O && C
-                                      ? x.intl.string(x.t.hmyYK8)
-                                      : O
-                                        ? x.intl.string(x.t.JY1i0u)
-                                        : x.intl.string(x.t.fEGjVQ),
+                                children: Z
+                                    ? v.intl.string(v.t.nD78oa)
+                                    : N && w
+                                      ? v.intl.string(v.t.hmyYK8)
+                                      : N
+                                        ? v.intl.string(v.t.JY1i0u)
+                                        : v.intl.string(v.t.fEGjVQ),
                             }),
                     ],
                 }),
