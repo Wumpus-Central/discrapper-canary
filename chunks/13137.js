@@ -95,7 +95,7 @@ function h(e) {
     let A = (0, f.Dt)(),
         [k, w] = l.useState(!1),
         [U, Z] = l.useState(D),
-        [$, H] = l.useState(null),
+        [$, H] = l.useState(1 === R.length ? R[0] : null),
         [B, G] = l.useState(null),
         [J, K] = l.useState("");
     (0, u.ZP)(() => (null == o ? void 0 : o())),
@@ -174,7 +174,7 @@ function h(e) {
                           }),
                       }),
                   })),
-                  (i = () => H(null)))
+                  (i = () => (1 === R.length ? Z(null) : H(null))))
                 : null != $ &&
                   null != B &&
                   (null == (t = $.freeformConfig) ? void 0 : t.value) === B.value &&

@@ -1,7 +1,7 @@
-n.d(t, { default: () => j });
+n.d(t, { default: () => v });
 var r = n(54381),
-    l = n(473749),
-    a = n(990547),
+    a = n(473749),
+    l = n(990547),
     i = n(481060),
     o = n(957115),
     c = n(157283),
@@ -15,24 +15,24 @@ var r = n(54381),
     g = n(531578),
     O = n(70722),
     y = n(388032),
-    v = n(40207);
-let _ = [O.kr.OTHER];
-function j(e) {
-    let { isStreamer: t, stream: j, streamApplication: h, onClose: E, transitionState: x, analyticsData: S } = e;
-    l.useEffect(() => {
+    _ = n(40207);
+let j = [O.kr.OTHER];
+function v(e) {
+    let { isStreamer: t, stream: v, streamApplication: h, onClose: x, transitionState: S, analyticsData: E } = e;
+    a.useEffect(() => {
         m.default.track(p.rMx.OPEN_MODAL, {
             type: "Stream Problem Report",
-            other_user_id: j.ownerId,
+            other_user_id: v.ownerId,
             application_id: null != h ? h.id : null,
             application_name: null != h ? h.name : null,
             game_id: null != h ? h.id : null,
             source: "Stream End",
         });
-    }, [j.ownerId, h]);
-    let { showRefreshedStreamTaxonomy: P } = (0, c.u)({ location: "StreamFeedback" }),
-        { surveyEmojiKind: C } = (0, s.R)({ location: "StreamFeedback" });
+    }, [v.ownerId, h]);
+    let { showRefreshedStreamTaxonomy: k } = (0, c.u)({ location: "StreamFeedback" }),
+        { surveyEmojiKind: P } = (0, s.R)({ location: "StreamFeedback" });
     function w(e) {
-        var t, l, a;
+        var t, a, l;
         let { dontShowAgain: c, rating: s, feedback: d } = e;
         if (
             (c &&
@@ -42,27 +42,27 @@ function j(e) {
                 }),
             null != s)
         ) {
-            if (P) {
+            if (k) {
                 let { category: n, problem: r } = e;
                 (0, f.Z)({
                     problem: null != (t = null == r ? void 0 : r.value) ? t : null,
                     category: n,
-                    variant: null != (l = null == r ? void 0 : r.variant) ? l : null,
-                    stream: j,
+                    variant: null != (a = null == r ? void 0 : r.variant) ? a : null,
+                    stream: v,
                     feedback: d,
                     streamApplication: h,
-                    analyticsData: S,
+                    analyticsData: E,
                     location: "Stream End",
                     rating: s,
                 });
             } else {
                 let { problem: t } = e;
                 (0, f.Z)({
-                    problem: null != (a = null == t ? void 0 : t.value) ? a : null,
-                    stream: j,
+                    problem: null != (l = null == t ? void 0 : t.value) ? l : null,
+                    stream: v,
                     feedback: d,
                     streamApplication: h,
-                    analyticsData: S,
+                    analyticsData: E,
                     location: "Stream End",
                     rating: s,
                 });
@@ -102,95 +102,55 @@ function j(e) {
                 });
         }
     }
-    let R = y.intl.string(y.t["5smP3R"]),
-        k = y.intl.string(y.t["0uxA2V"]),
+    let C = y.intl.string(y.t["5smP3R"]),
+        R = y.intl.string(y.t["0uxA2V"]),
         T = y.intl.string(y.t.CqjnLN),
-        F = {
-            impressionName: a.ImpressionNames.STREAM_FEEDBACK_MODAL,
+        D = {
+            impressionName: l.ImpressionNames.STREAM_FEEDBACK_MODAL,
             impressionProperties: {
-                media_session_id: S.media_session_id,
-                rtc_connection_id: S.rtc_connection_id,
-                parent_media_session_id: S.parent_media_session_id,
+                media_session_id: E.media_session_id,
+                rtc_connection_id: E.rtc_connection_id,
+                parent_media_session_id: E.parent_media_session_id,
             },
         };
-    if (P) {
+    if (k) {
         let e = {
-                value: g.tX.CONNECTION,
-                label: y.intl.string(v.default.FVhMw6),
-                problemsHeader: y.intl.string(y.t["6Y1t5P"]),
-                problemOptions: (0, o.Z1)(),
-                freeformConfig: {
-                    value: g.T_.FREEFORM,
-                    label: y.intl.string(y.t.emlT91),
-                },
+            value: t ? g.tX.STREAMING : g.tX.STREAM_WATCHING,
+            label: y.intl.string(t ? _.default["0ZBLiZ"] : _.default.TVTIT1),
+            problemsHeader: y.intl.string(y.t["6Y1t5P"]),
+            problemOptions: (0, o.Ez)({ isStreamer: t }),
+            freeformConfig: {
+                value: g.MJ.FREEFORM,
+                label: y.intl.string(y.t.emlT91),
             },
-            n = {
-                value: g.tX.AUDIO,
-                label: y.intl.string(v.default.PL2l6A),
-                problemsHeader: y.intl.string(y.t["6Y1t5P"]),
-                problemOptions: (0, o.w9)({ isMobile: !1 }),
-                freeformConfig: {
-                    value: g.b9.FREEFORM,
-                    label: y.intl.string(y.t.emlT91),
-                },
-            },
-            l = {
-                value: g.tX.VIDEO,
-                label: y.intl.string(v.default["0WFzPh"]),
-                problemsHeader: y.intl.string(y.t["6Y1t5P"]),
-                problemOptions: (0, o.NX)(),
-                freeformConfig: {
-                    value: g.ct.FREEFORM,
-                    label: y.intl.string(y.t.emlT91),
-                },
-            },
-            a = {
-                value: g.tX.PEOPLE,
-                label: y.intl.string(v.default.Moa3W9),
-                problemsHeader: y.intl.string(y.t["6Y1t5P"]),
-                problemOptions: (0, o.hP)(),
-                freeformConfig: {
-                    value: g.s_.FREEFORM,
-                    label: y.intl.string(y.t.emlT91),
-                },
-            },
-            i = {
-                value: t ? g.tX.STREAMING : g.tX.STREAM_WATCHING,
-                label: y.intl.string(t ? v.default["0ZBLiZ"] : v.default.TVTIT1),
-                problemsHeader: y.intl.string(y.t["6Y1t5P"]),
-                problemOptions: (0, o.Ez)({ isStreamer: t }),
-                freeformConfig: {
-                    value: g.MJ.FREEFORM,
-                    label: y.intl.string(y.t.emlT91),
-                },
-            };
+        };
         return (0, r.jsx)(u.Z, {
             onSubmit: w,
-            onClose: E,
-            ratingHeader: R,
-            ratingEmojiKind: C,
-            ratingBody: t ? k : T,
-            categoriesHeader: y.intl.string(v.default.tq8598),
-            optionsTree: [e, n, l, i, a],
-            impression: F,
-            transitionState: x,
+            onClose: x,
+            ratingHeader: C,
+            ratingEmojiKind: P,
+            ratingBody: t ? R : T,
+            categoriesHeader: y.intl.string(_.default.tq8598),
+            optionsTree: [e],
+            impression: D,
+            transitionState: S,
         });
     }
     return (0, r.jsx)(d.Z, {
         modalType: "stream",
-        header: R,
-        ratingEmojiKind: C,
-        impression: F,
-        body: t ? k : T,
+        header: C,
+        ratingEmojiKind: P,
+        impression: D,
+        body: t ? R : T,
         problemTitle: y.intl.string(y.t["6Y1t5P"]),
         problems: (0, b.Z)({
             isStreamer: t,
             isEndStream: !0,
         }),
-        freeformNeededProblems: _,
+        freeformNeededProblems: j,
         onSubmit: w,
-        onClose: E,
-        transitionState: x,
+        onClose: x,
+        transitionState: S,
         otherKey: O.kr.OTHER,
     });
 }
