@@ -1,10 +1,10 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => P });
 var r = n(54381);
 n(473749);
 var i = n(442837),
     l = n(692547),
-    o = n(481060),
-    a = n(619915),
+    a = n(481060),
+    o = n(619915),
     s = n(172942),
     c = n(371991),
     u = n(456269),
@@ -13,101 +13,99 @@ var i = n(442837),
     h = n(601070),
     p = n(430824),
     g = n(496675),
-    m = n(306680),
-    b = n(979651),
-    _ = n(968358),
-    y = n(790901),
-    O = n(714794),
-    v = n(355363),
-    j = n(259404),
+    b = n(306680),
+    m = n(979651),
+    y = n(968358),
+    O = n(790901),
+    v = n(714794),
+    j = n(355363),
+    C = n(687352),
     x = n(876548),
-    C = n(25601),
-    E = n(981631),
-    S = n(490897),
-    I = n(388032),
-    P = n(885525);
-function N(e) {
+    E = n(25601),
+    S = n(981631),
+    I = n(490897),
+    _ = n(388032);
+function P(e) {
     var t;
     let {
             channel: n,
-            isChannelSelected: N,
-            isChannelCollapsed: Z,
-            voiceStates: w,
-            enableConnectedUserLimit: T,
-            enableActivities: A,
-            isSubscriptionGated: R,
-            needSubscriptionToAccess: D,
-            isNewChannel: L,
+            isChannelSelected: P,
+            isChannelCollapsed: N,
+            voiceStates: Z,
+            enableConnectedUserLimit: w,
+            enableActivities: T,
+            isSubscriptionGated: A,
+            needSubscriptionToAccess: R,
+            isNewChannel: D,
             muted: M,
-            resolvedUnreadSetting: k,
+            resolvedUnreadSetting: L,
         } = e,
-        G = (0, i.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
-        U = (0, i.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
-        B = (0, a.ZP)(n),
-        F = (0, i.e7)([g.Z], () => !g.Z.can(E.Plq.CONNECT, n)),
-        V = (0, s.P)(n),
-        H = (0, i.e7)([b.Z], () => b.Z.hasVideo(n.id)),
-        W = (0, f.PK)(n.id) && n.isGuildStageVoice(),
-        z = (0, v.ZP)({
+        k = (0, i.e7)([b.ZP], () => b.ZP.getMentionCount(n.id)),
+        G = (0, i.e7)([b.ZP], () => b.ZP.getIsMentionLowImportance(n.id)),
+        U = (0, o.ZP)(n),
+        B = (0, i.e7)([g.Z], () => !g.Z.can(S.Plq.CONNECT, n)),
+        F = (0, s.P)(n),
+        V = (0, i.e7)([m.Z], () => m.Z.hasVideo(n.id)),
+        H = (0, f.PK)(n.id) && n.isGuildStageVoice(),
+        z = (0, j.ZP)({
             channel: n,
-            locked: F,
-            video: (H || W) && null == V,
-            selected: N,
+            locked: B,
+            video: (V || H) && null == F,
+            selected: P,
         }),
-        K = (0, i.e7)([h.Z], () => h.Z.getNewThreadCount(n.guild_id, n.id)),
-        Y = (0, u.n2)(n.guild_id, n.id),
-        q = (0, i.e7)([p.Z], () => {
+        W = (0, i.e7)([h.Z], () => h.Z.getNewThreadCount(n.guild_id, n.id)),
+        K = (0, u.n2)(n.guild_id, n.id),
+        Y = (0, i.e7)([p.Z], () => {
             var e, t;
             return (
                 null !=
-                    (t = null == (e = p.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(E.GuildFeatures.COMMUNITY)) &&
+                    (t = null == (e = p.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(S.GuildFeatures.COMMUNITY)) &&
                 t
             );
         });
-    if ((0, O.Z)(G))
-        return (0, r.jsx)(C.Z, {
-            mentionsCount: G,
-            isMentionLowImportance: U,
+    if ((0, v.Z)(k))
+        return (0, r.jsx)(E.Z, {
+            mentionsCount: k,
+            isMentionLowImportance: G,
         });
-    if ((0, d.O)(R)) return (0, r.jsx)(d.Z, { locked: D });
-    if (L)
-        return (0, r.jsx)(o.IGR, {
-            text: I.intl.string(I.t.y2b7CA),
-            color: l.Z.unsafe_rawColors.BRAND_260.css,
-            className: P.newChannel,
+    if ((0, d.O)(A)) return (0, r.jsx)(d.Z, { locked: R });
+    if (D)
+        return (0, r.jsx)(a.IGR, {
+            text: _.intl.string(_.t.y2b7CA),
+            color: l.Z.colors.BADGE_BACKGROUND_DEFAULT.css,
         });
-    if (!M && k === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != K && K > 0)
-        return (0, r.jsx)(o.Text, {
+    if (!M && L === I.i.ALL_MESSAGES && n.isForumLikeChannel() && null != W && W > 0)
+        return (0, r.jsx)(a.Text, {
             variant: "text-xs/semibold",
             color: "text-brand",
-            children: I.intl.format(I.t.GkAbqY, { count: (0, o.NGo)(K) }),
+            children: _.intl.format(_.t.GkAbqY, { count: (0, a.NGo)(W) }),
         });
-    if (!M && n.isForumLikeChannel() && null != Y && Y > 0)
-        return (0, r.jsx)(o.Text, {
+    if (!M && n.isForumLikeChannel() && null != K && K > 0)
+        return (0, r.jsx)(a.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
-            children: (0, o.NGo)(Y),
+            children: (0, a.NGo)(K),
         });
-    let X = null != (t = null == w ? void 0 : w.length) ? t : 0;
-    return null != T && T && z
+    let q = null != (t = null == Z ? void 0 : Z.length) ? t : 0;
+    return null != w && w && z
         ? (0, r.jsx)(x.Z, {
-              userCount: X,
-              video: H || W,
+              userCount: q,
+              video: V || H,
               channel: n,
           })
-        : Z && (0, _.a)(w) && q
-          ? (0, r.jsx)(o.IGR, {
-                text: I.intl.string(I.t.dI3q4h),
+        : N && (0, y.a)(Z) && Y
+          ? (0, r.jsx)(a.IGR, {
+                text: _.intl.string(_.t.dI3q4h),
                 color: l.Z.unsafe_rawColors.RED_400.css,
             })
-          : null != V
+          : null != F
             ? (0, r.jsx)(c.x3, {
                   textColor: "text-feedback-positive",
-                  entry: { start: V },
+                  entry: { start: F },
               })
-            : null != A && A && (0, y.u)(B)
-              ? (0, r.jsx)(j.Z, {
-                    embeddedApps: B,
+            : null != T && T && (0, O.u)(U)
+              ? (0, r.jsx)(C.Z, {
+                    embeddedApps: U,
                     muted: M,
                 })
               : null;

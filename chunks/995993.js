@@ -1,9 +1,9 @@
-n.d(t, { m: () => C });
+n.d(t, { m: () => x });
 var r = n(54381),
     i = n(473749),
     l = n(399606),
-    o = n(704215),
-    a = n(692547),
+    a = n(704215),
+    o = n(692547),
     s = n(481060),
     c = n(239091),
     u = n(266454),
@@ -12,34 +12,33 @@ var r = n(54381),
     h = n(22082),
     p = n(703656),
     g = n(306680),
-    m = n(709054),
-    b = n(540126),
-    _ = n(434479),
-    y = n(981631),
-    O = n(176505),
-    v = n(490897),
-    j = n(388032),
-    x = n(885525);
-function C(e) {
-    let { guild: t, selected: C } = e,
+    b = n(709054),
+    m = n(540126),
+    y = n(434479),
+    O = n(981631),
+    v = n(176505),
+    j = n(490897),
+    C = n(388032);
+function x(e) {
+    let { guild: t, selected: x } = e,
         E = (0, f.Z)(t),
-        S = (0, u.Nj)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        S = (0, u.Nj)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         I = (0, l.Wu)([h.Z], () =>
             Array.from(h.Z.getNewChannelIds(t.id)).filter((e) => h.Z.shouldIndicateNewChannel(t.id, e)),
         ),
-        P = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, v.W.GUILD_ONBOARDING_QUESTION)),
-        N = I.length > b.Cb,
-        Z = (0, l.e7)([d.Z, g.ZP], () => {
+        _ = (0, l.e7)([g.ZP], () => g.ZP.hasUnread(t.id, j.W.GUILD_ONBOARDING_QUESTION)),
+        P = I.length > m.Cb,
+        N = (0, l.e7)([d.Z, g.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
-                n = g.ZP.lastMessageId(t.id, v.W.GUILD_ONBOARDING_QUESTION);
+                n = g.ZP.lastMessageId(t.id, j.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
-            let r = m.default.extractTimestamp(n);
+            let r = b.default.extractTimestamp(n);
             return null != e && e > r;
         }),
-        w = i.useCallback(() => {
-            (0, p.uL)(y.Z5c.CHANNEL(t.id, E ? O.oC.CUSTOMIZE_COMMUNITY : O.oC.CHANNEL_BROWSER));
+        Z = i.useCallback(() => {
+            (0, p.uL)(O.Z5c.CHANNEL(t.id, E ? v.oC.CUSTOMIZE_COMMUNITY : v.oC.CHANNEL_BROWSER));
         }, [t.id, E]),
-        T = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e("8926").then(n.bind(n, 156673));
@@ -92,17 +91,16 @@ function C(e) {
             },
             [t],
         ),
-        A = null;
+        T = null;
     return (
-        (S && !P && !N) ||
-            C ||
-            Z ||
-            (A = (0, r.jsx)(s.IGR, {
-                color: a.Z.colors.BADGE_BACKGROUND_DEFAULT.css,
-                text: j.intl.string(j.t.y2b7CA),
-                className: x.newChannel,
+        (S && !_ && !P) ||
+            x ||
+            N ||
+            (T = (0, r.jsx)(s.IGR, {
+                color: o.Z.colors.BADGE_BACKGROUND_DEFAULT.css,
+                text: C.intl.string(C.t.y2b7CA),
             })),
-        (0, r.jsx)(_.m, {
+        (0, r.jsx)(y.m, {
             id: "channels-".concat(t.id),
             renderIcon: (e) =>
                 (0, r.jsx)(s.H$4, {
@@ -110,11 +108,11 @@ function C(e) {
                     color: "currentColor",
                     className: e,
                 }),
-            text: E ? j.intl.string(j.t.h9mGOP) : j.intl.string(j.t.et6wav),
-            selected: C,
-            onClick: w,
-            onContextMenu: T,
-            trailing: A,
+            text: E ? C.intl.string(C.t.h9mGOP) : C.intl.string(C.t.et6wav),
+            selected: x,
+            onClick: Z,
+            onContextMenu: w,
+            trailing: T,
         })
     );
 }
