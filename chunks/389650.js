@@ -207,12 +207,6 @@ class W extends i.PureComponent {
     }
 }
 class K extends i.PureComponent {
-    componentDidMount() {
-        _.Z.enableAll(!1);
-    }
-    componentWillUnmount() {
-        _.Z.enableAll(!0);
-    }
     get keybindActionTypes() {
         let {
                 overlaySupported: e,
@@ -545,19 +539,28 @@ class K extends i.PureComponent {
     }
 }
 function z() {
+    i.useEffect(
+        () => (
+            _.Z.enableAll(!1),
+            () => {
+                _.Z.enableAll(!0);
+            }
+        ),
+        [],
+    );
     let e = (0, c.e7)([A.ZP], () => A.ZP.getState()),
         t = (0, c.e7)([C.Z], () => (0, O.Z)(C.Z)),
         n = (0, c.e7)([I.Z], () => I.Z.isSupported),
-        i = (0, y.w9)(),
-        a = (0, y.PP)(),
-        o = (0, w.wy)("UserSettingsKeybindsConnected");
+        a = (0, y.w9)(),
+        o = (0, y.PP)(),
+        s = (0, w.wy)("UserSettingsKeybindsConnected");
     return (0, r.jsx)(K, {
         keybinds: e,
         canGoLive: t,
         overlaySupported: n,
         allowSoundboard: (0, P.isWindows)(),
-        enableClips: i,
-        enableScreenshotKeybind: a,
-        isUserSettingsRedesignEnabled: o,
+        enableClips: a,
+        enableScreenshotKeybind: o,
+        isUserSettingsRedesignEnabled: s,
     });
 }

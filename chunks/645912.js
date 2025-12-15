@@ -1,18 +1,27 @@
-n.d(e, { G: () => c });
+n.d(e, { G: () => E });
 var i = n(657707),
     l = n(509613),
     s = n(313789),
+    u = n(526665),
     r = n(389650),
-    u = n(726985),
-    a = n(388032);
-let o = (0, l.wf)(s.n.KEYBINDS_PANEL, {
-        useTitle: () => a.intl.string(a.t.T9DA2K),
+    a = n(408283),
+    o = n(726985),
+    c = n(388032);
+let T = (0, l.k4)(s.n.KEYBINDS_CATEGORY, { buildLayout: () => [a.A] }),
+    S = (0, l.wf)(s.n.KEYBINDS_PANEL, {
+        usePredicate: () => !(0, u.gN)("LegacyKeybindsPanel"),
+        useTitle: () => c.intl.string(c.t.T9DA2K),
         StronglyDiscouragedCustomComponent: r.Z,
         buildLayout: () => [],
     }),
-    c = (0, l.m7)(s.n.KEYBINDS_SIDEBAR_ITEM, {
-        useTitle: () => a.intl.string(a.t.T9DA2K),
-        getLegacySearchKey: () => u.s6.KEYBINDS,
+    d = (0, l.wf)(s.n.KEYBINDS_PANEL, {
+        usePredicate: () => (0, u.gN)("KeybindsPanel"),
+        useTitle: () => c.intl.string(c.t.T9DA2K),
+        buildLayout: () => [T],
+    }),
+    E = (0, l.m7)(s.n.KEYBINDS_SIDEBAR_ITEM, {
+        useTitle: () => c.intl.string(c.t.T9DA2K),
+        getLegacySearchKey: () => ((0, u.Gl)("KeybindsPanel") ? void 0 : o.s6.KEYBINDS),
         icon: i.YiA,
-        buildLayout: () => [o],
+        buildLayout: () => ((0, u.Gl)("KeybindsPanel") ? [d] : [S]),
     });
