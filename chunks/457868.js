@@ -435,7 +435,7 @@ function X(e) {
 function J(e) {
     let { channel: t } = e;
     return (0, r.jsxs)("div", {
-        className: a()(B.emptyState, B.container, V.membersWrap, V.hiddenMembers, V.members),
+        className: a()(V.membersWrap, V.hiddenMembers, V.members, B.emptyState),
         children: [
             (0, r.jsx)(h.Text, {
                 className: B.emptyStateHeader,
