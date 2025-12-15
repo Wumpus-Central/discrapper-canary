@@ -1,29 +1,29 @@
 n.d(t, {
-    A3: () => T,
-    FZ: () => I,
-    Hl: () => X,
-    Je: () => N,
-    Jh: () => L,
-    KK: () => W,
-    Oe: () => S,
-    Qi: () => F,
-    Ro: () => O,
-    _k: () => G,
-    _p: () => w,
-    aq: () => k,
-    cP: () => P,
-    e9: () => D,
-    ee: () => z,
-    gZ: () => B,
-    ge: () => x,
-    ig: () => C,
-    nL: () => H,
-    nW: () => R,
-    tb: () => j,
-    tl: () => K,
-    vx: () => M,
-    y4: () => Y,
-    yw: () => V,
+    A3: () => N,
+    FZ: () => A,
+    Hl: () => ee,
+    Je: () => w,
+    Jh: () => k,
+    KK: () => q,
+    Oe: () => C,
+    Qi: () => Y,
+    Ro: () => I,
+    _k: () => B,
+    _p: () => j,
+    aq: () => Z,
+    cP: () => D,
+    e9: () => L,
+    ee: () => X,
+    gZ: () => H,
+    ge: () => M,
+    ig: () => P,
+    nL: () => K,
+    nW: () => x,
+    tb: () => U,
+    tl: () => Q,
+    vx: () => G,
+    y4: () => z,
+    yw: () => W,
 }),
     n(583741),
     n(415506),
@@ -37,17 +37,20 @@ var a = n(274136),
     s = n(317169),
     l = n(151494),
     c = n(430824),
-    u = n(314884),
-    d = n(78839),
-    f = n(424218),
-    p = n(823379),
-    _ = n(63063),
-    m = n(74538),
-    h = n(960048),
-    g = n(981631),
-    E = n(185923),
-    b = n(474936),
-    y = n(388032);
+    u = n(594174),
+    d = n(314884),
+    f = n(78839),
+    p = n(424218),
+    _ = n(823379),
+    m = n(63063),
+    h = n(74538),
+    g = n(960048),
+    E = n(981631),
+    b = n(185923),
+    y = n(474936),
+    O = n(282793),
+    v = n(388032),
+    S = n(353149);
 Object.freeze({
     1: 1,
     2: 2,
@@ -59,7 +62,7 @@ Object.freeze({
     8: 18,
     9: 24,
 });
-var O = (function (e) {
+var I = (function (e) {
     return (
         (e[(e.EMOJI = 1)] = "EMOJI"),
         (e[(e.AUDIO = 2)] = "AUDIO"),
@@ -75,332 +78,335 @@ var O = (function (e) {
         e
     );
 })({});
-let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
-    S = v.slice().reverse(),
-    I = (e) => {
+let T = [E.Eu4.NONE, E.Eu4.TIER_1, E.Eu4.TIER_2, E.Eu4.TIER_3],
+    C = T.slice().reverse(),
+    A = (e) => {
         var t;
-        return e === g.Eu4.NONE ? g.Eu4.TIER_1 : null == (t = Z.find((t) => t.tier === e)) ? void 0 : t.nextTier;
+        return e === E.Eu4.NONE ? E.Eu4.TIER_1 : null == (t = V.find((t) => t.tier === e)) ? void 0 : t.nextTier;
     },
-    T = (e, t) =>
-        null != t && t.features.has(g.GuildFeatures.MORE_STICKERS) && e === g.Eu4.TIER_3
+    N = (e, t) =>
+        null != t && t.features.has(E.GuildFeatures.MORE_STICKERS) && e === E.Eu4.TIER_3
             ? a.D.MAX_STICKER_SLOTS
-            : b.$8[e],
-    C = (e) => b.pH[e],
-    A = (e, t) => (null != t && t.features.has(g.GuildFeatures.MORE_SOUNDBOARD) ? b.w1 : b._k[e]),
-    N = (e) => {
-        if (e === g.Eu4.NONE) return b._k[e];
-        let t = v[v.indexOf(e) - 1];
-        return b._k[e] - b._k[t];
+            : y.$8[e],
+    P = (e) => y.pH[e],
+    R = (e, t) => (null != t && t.features.has(E.GuildFeatures.MORE_SOUNDBOARD) ? y.w1 : y._k[e]),
+    w = (e) => {
+        if (e === E.Eu4.NONE) return y._k[e];
+        let t = T[T.indexOf(e) - 1];
+        return y._k[e] - y._k[t];
     },
-    P = (e) => [
+    D = (e) => [
         {
-            tier: g.Eu4.TIER_1,
-            title: y.intl.string(y.t["lK+WOT"]),
+            tier: E.Eu4.TIER_1,
+            title: v.intl.string(v.t["lK+WOT"]),
             perks: [
                 {
-                    title: y.intl.formatToPlainString(y.t.dnLAwl, {
-                        adding: b.HO[g.Eu4.TIER_1].limits.emoji - b.HO[g.Eu4.NONE].limits.emoji,
-                        total: b.HO[g.Eu4.TIER_1].limits.emoji,
+                    title: v.intl.formatToPlainString(v.t.dnLAwl, {
+                        adding: y.HO[E.Eu4.TIER_1].limits.emoji - y.HO[E.Eu4.NONE].limits.emoji,
+                        total: y.HO[E.Eu4.TIER_1].limits.emoji,
                     }),
-                    description: y.intl.string(y.t["/Guvxs"]),
+                    description: v.intl.string(v.t["/Guvxs"]),
                     icon: 1,
                 },
                 {
-                    title: y.intl.formatToPlainString(y.t["/9p2/g"], {
-                        adding: C(g.Eu4.TIER_1),
-                        total: T(g.Eu4.TIER_1),
+                    title: v.intl.formatToPlainString(v.t["/9p2/g"], {
+                        adding: P(E.Eu4.TIER_1),
+                        total: N(E.Eu4.TIER_1),
                     }),
-                    description: y.intl.string(y.t.JfsnDQ),
+                    description: v.intl.string(v.t.JfsnDQ),
                     icon: 8,
                 },
                 {
-                    title: y.intl.formatToPlainString(y.t.NRuk5m, {
-                        soundCount: N(g.Eu4.TIER_1),
-                        totalSoundCount: A(g.Eu4.TIER_1),
+                    title: v.intl.formatToPlainString(v.t.NRuk5m, {
+                        soundCount: w(E.Eu4.TIER_1),
+                        totalSoundCount: R(E.Eu4.TIER_1),
                     }),
-                    description: y.intl.string(y.t.Oq7OVl),
+                    description: v.intl.string(v.t.Oq7OVl),
                     icon: 13,
                 },
                 {
-                    title: y.intl.formatToPlainString(y.t.zoT1ZE, {
-                        bitrate: b.HO[g.Eu4.TIER_1].limits.bitrate / 1000,
+                    title: v.intl.formatToPlainString(v.t.zoT1ZE, {
+                        bitrate: y.HO[E.Eu4.TIER_1].limits.bitrate / 1000,
                     }),
-                    description: y.intl.string(y.t["8a03jk"]),
+                    description: v.intl.string(v.t["8a03jk"]),
                     icon: 2,
                 },
                 {
-                    title: y.intl.string(y.t.h0s84V),
-                    description: y.intl.format(y.t["t+0cbk"], {}),
+                    title: v.intl.string(v.t.h0s84V),
+                    description: v.intl.format(v.t["t+0cbk"], {}),
                     icon: 3,
                 },
                 {
-                    title: y.intl.string(y.t.vjPGPp),
-                    description: y.intl.string(y.t.tG4MMU),
+                    title: v.intl.string(v.t.vjPGPp),
+                    description: v.intl.string(v.t.tG4MMU),
                     icon: 4,
                 },
                 {
-                    title: y.intl.string(y.t.cObMZD),
-                    description: y.intl.string(y.t["puH/9R"]),
+                    title: v.intl.string(v.t.cObMZD),
+                    description: v.intl.string(v.t["puH/9R"]),
                     icon: 7,
                 },
-            ].filter(p.lm),
+            ].filter(_.lm),
         },
         {
-            tier: g.Eu4.TIER_2,
-            title: y.intl.string(y.t["34GpBc"]),
+            tier: E.Eu4.TIER_2,
+            title: v.intl.string(v.t["34GpBc"]),
             perks: [
                 {
-                    title: y.intl.formatToPlainString(y.t.dnLAwl, {
-                        adding: b.HO[g.Eu4.TIER_2].limits.emoji - b.HO[g.Eu4.TIER_1].limits.emoji,
-                        total: b.HO[g.Eu4.TIER_2].limits.emoji,
+                    title: v.intl.formatToPlainString(v.t.dnLAwl, {
+                        adding: y.HO[E.Eu4.TIER_2].limits.emoji - y.HO[E.Eu4.TIER_1].limits.emoji,
+                        total: y.HO[E.Eu4.TIER_2].limits.emoji,
                     }),
-                    description: y.intl.string(y.t.fRiNhw),
+                    description: v.intl.string(v.t.fRiNhw),
                     icon: 1,
                 },
                 {
-                    title: y.intl.formatToPlainString(y.t["/9p2/g"], {
-                        adding: C(g.Eu4.TIER_2),
-                        total: T(g.Eu4.TIER_2),
+                    title: v.intl.formatToPlainString(v.t["/9p2/g"], {
+                        adding: P(E.Eu4.TIER_2),
+                        total: N(E.Eu4.TIER_2),
                     }),
-                    description: y.intl.string(y.t.t4TM28),
+                    description: v.intl.string(v.t.t4TM28),
                     icon: 8,
                 },
                 {
-                    title: y.intl.formatToPlainString(y.t.NRuk5m, {
-                        soundCount: N(g.Eu4.TIER_2),
-                        totalSoundCount: A(g.Eu4.TIER_2),
+                    title: v.intl.formatToPlainString(v.t.NRuk5m, {
+                        soundCount: w(E.Eu4.TIER_2),
+                        totalSoundCount: R(E.Eu4.TIER_2),
                     }),
-                    description: y.intl.string(y.t.pEYlPZ),
+                    description: v.intl.string(v.t.pEYlPZ),
                     icon: 13,
                 },
                 {
-                    title: y.intl.formatToPlainString(y.t.zoT1ZE, {
-                        bitrate: b.HO[g.Eu4.TIER_2].limits.bitrate / 1000,
+                    title: v.intl.formatToPlainString(v.t.zoT1ZE, {
+                        bitrate: y.HO[E.Eu4.TIER_2].limits.bitrate / 1000,
                     }),
-                    description: y.intl.string(y.t["nzRo/I"]),
+                    description: v.intl.string(v.t["nzRo/I"]),
                     icon: 2,
                 },
                 {
-                    title: y.intl.string(y.t["+KhQKM"]),
-                    description: y.intl.string(y.t.ZWf10P),
+                    title: v.intl.string(v.t["+KhQKM"]),
+                    description: v.intl.string(v.t.ZWf10P),
                     icon: 4,
                 },
                 {
-                    title: y.intl.formatToPlainString(y.t.t95LnM, {
-                        fileSize: (0, f.BU)(b.HO[g.Eu4.TIER_2].limits.fileSize / 1024, { useKibibytes: !0 }),
+                    title: v.intl.formatToPlainString(v.t.t95LnM, {
+                        fileSize: (0, p.BU)(y.HO[E.Eu4.TIER_2].limits.fileSize / 1024, { useKibibytes: !0 }),
                     }),
-                    description: y.intl.format(y.t.yvht65, {}),
+                    description: v.intl.format(v.t.yvht65, {}),
                     icon: 5,
                 },
                 {
-                    title: y.intl.string(y.t.bmaoNI),
-                    description: y.intl.string(y.t.WZW2Bj),
+                    title: v.intl.string(v.t.bmaoNI),
+                    description: v.intl.string(v.t.WZW2Bj),
                     icon: 7,
                 },
                 {
-                    title: y.intl.string(y.t.BHtqcV),
-                    description: y.intl.string(y.t.ukVcEe),
+                    title: v.intl.string(v.t.BHtqcV),
+                    description: v.intl.string(v.t.ukVcEe),
                     icon: 11,
                 },
                 e
                     ? {
-                          title: y.intl.formatToPlainString(y.t.T8P3TH, { limit: g.eez }),
-                          description: y.intl.formatToPlainString(y.t.T8P3TH, { limit: g.eez }),
+                          title: v.intl.formatToPlainString(v.t.T8P3TH, { limit: E.eez }),
+                          description: v.intl.formatToPlainString(v.t.T8P3TH, { limit: E.eez }),
                           icon: 12,
                       }
                     : null,
-            ].filter(p.lm),
+            ].filter(_.lm),
         },
         {
-            tier: g.Eu4.TIER_3,
-            title: y.intl.string(y.t.P7LdcQ),
+            tier: E.Eu4.TIER_3,
+            title: v.intl.string(v.t.P7LdcQ),
             perks: [
                 {
-                    title: y.intl.formatToPlainString(y.t.dnLAwl, {
-                        adding: b.HO[g.Eu4.TIER_3].limits.emoji - b.HO[g.Eu4.TIER_2].limits.emoji,
-                        total: b.HO[g.Eu4.TIER_3].limits.emoji,
+                    title: v.intl.formatToPlainString(v.t.dnLAwl, {
+                        adding: y.HO[E.Eu4.TIER_3].limits.emoji - y.HO[E.Eu4.TIER_2].limits.emoji,
+                        total: y.HO[E.Eu4.TIER_3].limits.emoji,
                     }),
-                    description: y.intl.string(y.t.AfJxnV),
+                    description: v.intl.string(v.t.AfJxnV),
                     icon: 1,
                 },
                 {
-                    title: y.intl.formatToPlainString(y.t["/9p2/g"], {
-                        adding: C(g.Eu4.TIER_3),
-                        total: T(g.Eu4.TIER_3),
+                    title: v.intl.formatToPlainString(v.t["/9p2/g"], {
+                        adding: P(E.Eu4.TIER_3),
+                        total: N(E.Eu4.TIER_3),
                     }),
-                    description: y.intl.string(y.t["+ZI4QZ"]),
+                    description: v.intl.string(v.t["+ZI4QZ"]),
                     icon: 8,
                 },
                 {
-                    title: y.intl.formatToPlainString(y.t.NRuk5m, {
-                        soundCount: N(g.Eu4.TIER_3),
-                        totalSoundCount: A(g.Eu4.TIER_3),
+                    title: v.intl.formatToPlainString(v.t.NRuk5m, {
+                        soundCount: w(E.Eu4.TIER_3),
+                        totalSoundCount: R(E.Eu4.TIER_3),
                     }),
-                    description: y.intl.string(y.t["8omJSY"]),
+                    description: v.intl.string(v.t["8omJSY"]),
                     icon: 13,
                 },
                 {
-                    title: y.intl.formatToPlainString(y.t.zoT1ZE, {
-                        bitrate: b.HO[g.Eu4.TIER_3].limits.bitrate / 1000,
+                    title: v.intl.formatToPlainString(v.t.zoT1ZE, {
+                        bitrate: y.HO[E.Eu4.TIER_3].limits.bitrate / 1000,
                     }),
-                    description: y.intl.string(y.t["cOkbp/"]),
+                    description: v.intl.string(v.t["cOkbp/"]),
                     icon: 2,
                 },
                 {
-                    title: y.intl.string(y.t.C2w2cM),
-                    description: y.intl.format(y.t["3Reosx"], {
-                        helpdeskArticle: _.Z.getArticleURL(g.BhN.GUILD_VANITY_URL),
+                    title: v.intl.string(v.t.C2w2cM),
+                    description: v.intl.format(v.t["3Reosx"], {
+                        helpdeskArticle: m.Z.getArticleURL(E.BhN.GUILD_VANITY_URL),
                     }),
                     icon: 6,
                 },
                 {
-                    title: y.intl.formatToPlainString(y.t.t95LnM, {
-                        fileSize: (0, f.BU)(b.HO[g.Eu4.TIER_3].limits.fileSize / 1024, { useKibibytes: !0 }),
+                    title: v.intl.formatToPlainString(v.t.t95LnM, {
+                        fileSize: (0, p.BU)(y.HO[E.Eu4.TIER_3].limits.fileSize / 1024, { useKibibytes: !0 }),
                     }),
-                    description: y.intl.format(y.t.IwDqSL, {}),
+                    description: v.intl.format(v.t.IwDqSL, {}),
                     icon: 5,
                 },
                 {
-                    title: y.intl.string(y.t.z0GtBG),
-                    description: y.intl.string(y.t.v92GNV),
+                    title: v.intl.string(v.t.z0GtBG),
+                    description: v.intl.string(v.t.v92GNV),
                     icon: 3,
                 },
                 e
                     ? {
-                          title: y.intl.formatToPlainString(y.t.T8P3TH, { limit: g.RcX }),
-                          description: y.intl.formatToPlainString(y.t.T8P3TH, { limit: g.RcX }),
+                          title: v.intl.formatToPlainString(v.t.T8P3TH, { limit: E.RcX }),
+                          description: v.intl.formatToPlainString(v.t.T8P3TH, { limit: E.RcX }),
                           icon: 12,
                       }
                     : null,
-            ].filter(p.lm),
+            ].filter(_.lm),
         },
     ];
-function R(e) {
+function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { useLevels: n = !0 } = t;
     switch (e) {
-        case g.Eu4.NONE:
-            return n ? y.intl.string(y.t.LcKgJd) : y.intl.string(y.t.mx8j2m);
-        case g.Eu4.TIER_1:
-            return y.intl.string(y.t.nzXtaS);
-        case g.Eu4.TIER_2:
-            return y.intl.string(y.t["h33/uW"]);
-        case g.Eu4.TIER_3:
-            return y.intl.string(y.t.BfF6ED);
+        case E.Eu4.NONE:
+            return n ? v.intl.string(v.t.LcKgJd) : v.intl.string(v.t.mx8j2m);
+        case E.Eu4.TIER_1:
+            return v.intl.string(v.t.nzXtaS);
+        case E.Eu4.TIER_2:
+            return v.intl.string(v.t["h33/uW"]);
+        case E.Eu4.TIER_3:
+            return v.intl.string(v.t.BfF6ED);
         default:
             throw Error("Not a valid tier type");
     }
 }
-function D(e) {
+function L(e) {
     switch (e) {
-        case g.Eu4.NONE:
-            return y.intl.string(y.t.LcKgJd);
-        case g.Eu4.TIER_1:
-            return y.intl.string(y.t.xRjU1V);
-        case g.Eu4.TIER_2:
-            return y.intl.string(y.t.C7e2Bo);
-        case g.Eu4.TIER_3:
-            return y.intl.string(y.t.avGxmk);
+        case E.Eu4.NONE:
+            return v.intl.string(v.t.LcKgJd);
+        case E.Eu4.TIER_1:
+            return v.intl.string(v.t.xRjU1V);
+        case E.Eu4.TIER_2:
+            return v.intl.string(v.t.C7e2Bo);
+        case E.Eu4.TIER_3:
+            return v.intl.string(v.t.avGxmk);
         default:
             throw Error("Not a valid tier type");
     }
 }
-let w = i().memoize((e) =>
-        b.HO[g.Eu4.TIER_1].features.includes(e)
-            ? g.Eu4.TIER_1
-            : b.HO[g.Eu4.TIER_2].features.includes(e)
-              ? g.Eu4.TIER_2
-              : b.HO[g.Eu4.TIER_3].features.includes(e)
-                ? g.Eu4.TIER_3
+let j = i().memoize((e) =>
+        y.HO[E.Eu4.TIER_1].features.includes(e)
+            ? E.Eu4.TIER_1
+            : y.HO[E.Eu4.TIER_2].features.includes(e)
+              ? E.Eu4.TIER_2
+              : y.HO[E.Eu4.TIER_3].features.includes(e)
+                ? E.Eu4.TIER_3
                 : null,
     ),
-    x = (e) =>
-        e === g.Eu4.NONE
-            ? g.AnalyticsObjectTypes.NONE
-            : e === g.Eu4.TIER_1
-              ? g.AnalyticsObjectTypes.TIER_1
-              : e === g.Eu4.TIER_2
-                ? g.AnalyticsObjectTypes.TIER_2
-                : e === g.Eu4.TIER_3
-                  ? g.AnalyticsObjectTypes.TIER_3
+    M = (e) =>
+        e === E.Eu4.NONE
+            ? E.AnalyticsObjectTypes.NONE
+            : e === E.Eu4.TIER_1
+              ? E.AnalyticsObjectTypes.TIER_1
+              : e === E.Eu4.TIER_2
+                ? E.AnalyticsObjectTypes.TIER_2
+                : e === E.Eu4.TIER_3
+                  ? E.AnalyticsObjectTypes.TIER_3
                   : null;
-function L(e) {
+function k(e) {
     var t;
     let n = null == (t = c.Z.getGuild(e)) ? void 0 : t.premiumTier;
-    return null != n ? n : g.Eu4.NONE;
+    return null != n ? n : E.Eu4.NONE;
 }
-function j(e, t) {
+function U(e, t) {
     return null == t || (null != e && e >= t);
 }
-function M(e) {
+function G(e) {
     return i()
         .values(e)
         .filter((e) => e.isAvailable());
 }
-function k(e) {
+function Z(e) {
     let { fractionalState: t } = e,
-        n = d.Z.getPremiumTypeSubscription();
-    u.Z.hasFetched || u.Z.isFetching || (0, o.X8)();
-    let r = M(u.Z.boostSlots),
-        i = null == n ? void 0 : n.isPausedOrPausePending,
-        a = r.length > 0;
-    if (i && t === b.a$.NONE && !a) return y.intl.string(y.t.mOWsF1);
-    let { numAvailableGuildBoostSlots: s, numCanceledGuildBoostSlots: l } = Object.values(u.Z.boostSlots).reduce(
-        (e, t) => (K(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e),
+        n = f.Z.getPremiumTypeSubscription(),
+        r = u.default.getCurrentUser();
+    d.Z.hasFetched || d.Z.isFetching || (0, o.X8)();
+    let i = G(d.Z.boostSlots),
+        a = null == n ? void 0 : n.isPausedOrPausePending,
+        s = i.length > 0;
+    if (a && t === y.a$.NONE && !s) return v.intl.string(v.t.mOWsF1);
+    if (null == r ? void 0 : r.isPremiumGroupMember())
+        return v.intl.formatToPlainString(S.default["5xN/C1"], { premiumGroupProductName: (0, O.sO)() });
+    let { numAvailableGuildBoostSlots: l, numCanceledGuildBoostSlots: c } = Object.values(d.Z.boostSlots).reduce(
+        (e, t) => (Q(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e),
         {
             numAvailableGuildBoostSlots: 0,
             numCanceledGuildBoostSlots: 0,
         },
     );
-    if (null == n || s > 0) return null;
-    if (n.status === g.O0b.PAST_DUE) return y.intl.string(y.t.De4Vm6);
-    if (n.status === g.O0b.ACCOUNT_HOLD) return y.intl.string(y.t.JakNQ8);
-    if (l > 0) return y.intl.string(y.t.x25mZR);
+    if (null == n || l > 0) return null;
+    if (n.status === E.O0b.PAST_DUE) return v.intl.string(v.t.De4Vm6);
+    if (n.status === E.O0b.ACCOUNT_HOLD) return v.intl.string(v.t.JakNQ8);
+    if (c > 0) return v.intl.string(v.t.x25mZR);
     if (null == n.renewalMutations) return null;
-    let c = m.uV(n.renewalMutations.additionalPlans);
-    return m.uV(n.additionalPlans) > c ? y.intl.string(y.t.x25mZR) : y.intl.string(y.t["W/bb8f"]);
+    let p = h.uV(n.renewalMutations.additionalPlans);
+    return h.uV(n.additionalPlans) > p ? v.intl.string(v.t.x25mZR) : v.intl.string(v.t["W/bb8f"]);
 }
-function U(e) {
+function F(e) {
     return e.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1));
 }
-function G(e, t) {
+function B(e, t) {
     var n;
-    if ((null == (n = c.Z.getGuild(t)) ? void 0 : n.features.has(g.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) === !0)
+    if ((null == (n = c.Z.getGuild(t)) ? void 0 : n.features.has(E.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) === !0)
         return 0;
-    let r = L(t),
-        i = g.oCV[r],
+    let r = k(t),
+        i = E.oCV[r],
         a = e.filter((e) => null != e.endsAt);
     return i - (e.length - a.length);
 }
-let Z = [
+let V = [
     {
-        tier: g.Eu4.TIER_3,
-        amount: g.oCV[g.Eu4.TIER_3],
+        tier: E.Eu4.TIER_3,
+        amount: E.oCV[E.Eu4.TIER_3],
         nextTier: null,
     },
     {
-        tier: g.Eu4.TIER_2,
-        amount: g.oCV[g.Eu4.TIER_2],
-        nextTier: g.Eu4.TIER_3,
+        tier: E.Eu4.TIER_2,
+        amount: E.oCV[E.Eu4.TIER_2],
+        nextTier: E.Eu4.TIER_3,
     },
     {
-        tier: g.Eu4.TIER_1,
-        amount: g.oCV[g.Eu4.TIER_1],
-        nextTier: g.Eu4.TIER_2,
+        tier: E.Eu4.TIER_1,
+        amount: E.oCV[E.Eu4.TIER_1],
+        nextTier: E.Eu4.TIER_2,
     },
 ];
-function B(e, t) {
-    let n = G(e, t);
+function H(e, t) {
+    let n = B(e, t);
     if (n > 0) {
-        let r = U(e).filter((e) => null != e.endsAt),
+        let r = F(e).filter((e) => null != e.endsAt),
             i = r.length - n;
         i < 0 &&
-            h.Z.addBreadcrumb({
+            g.Z.addBreadcrumb({
                 category: "premium",
                 message: "Negative index while checking grace period ending date.",
                 data: {
                     subscriptionLength: e.length,
-                    subscriptionsNeededForPremiumTier: g.oCV[L(t)],
+                    subscriptionsNeededForPremiumTier: E.oCV[k(t)],
                     endingSubscriptionLength: r.length,
                 },
             });
@@ -409,60 +415,60 @@ function B(e, t) {
     }
     return null;
 }
-function F(e, t) {
-    let n = C(t),
-        r = v.indexOf(t);
+function Y(e, t) {
+    let n = P(t),
+        r = T.indexOf(t);
     if (-1 === r) return 0;
-    let i = v[r - 1],
-        a = null != i ? T(i) : 0,
-        o = T(t);
+    let i = T[r - 1],
+        a = null != i ? N(i) : 0,
+        o = N(t);
     return Math.max(0, n - e.slice(a, o).length);
 }
-function V(e, t, n) {
-    return -1 === v.indexOf(n) ? 0 : Math.max(0, H(e) - t.length);
-}
-function H(e) {
-    var t, n;
-    let r = b.XB + (null != (n = null == (t = e.premiumFeatures) ? void 0 : t.additionalSoundSlots) ? n : 0);
-    return Math.max(e.features.has(g.GuildFeatures.MORE_SOUNDBOARD) ? b.w1 : b.XB, r);
-}
-function Y(e) {
-    var t, n;
-    let r = E.xD + (null != (n = null == (t = e.premiumFeatures) ? void 0 : t.additionalEmojiSlots) ? n : 0);
-    return Math.max(e.features.has(g.GuildFeatures.MORE_EMOJI) ? E.IE : E.xD, r);
-}
-function W(e, t) {
-    let n = (0, s.I)(e.id).available;
-    return Math.max(0, g.oCV[t] - n);
+function W(e, t, n) {
+    return -1 === T.indexOf(n) ? 0 : Math.max(0, K(e) - t.length);
 }
 function K(e) {
-    var t;
-    return (null == (t = e.subscription) ? void 0 : t.status) === g.O0b.CANCELED || e.canceled;
+    var t, n;
+    let r = y.XB + (null != (n = null == (t = e.premiumFeatures) ? void 0 : t.additionalSoundSlots) ? n : 0);
+    return Math.max(e.features.has(E.GuildFeatures.MORE_SOUNDBOARD) ? y.w1 : y.XB, r);
 }
 function z(e) {
-    var t;
-    return null != (t = S.find((t) => e >= g.oCV[t])) ? t : g.Eu4.NONE;
+    var t, n;
+    let r = b.xD + (null != (n = null == (t = e.premiumFeatures) ? void 0 : t.additionalEmojiSlots) ? n : 0);
+    return Math.max(e.features.has(E.GuildFeatures.MORE_EMOJI) ? b.IE : b.xD, r);
 }
-function q(e) {
-    var t;
-    return null != (t = v.find((t) => e < g.oCV[t])) ? t : g.Eu4.TIER_3;
+function q(e, t) {
+    let n = (0, s.I)(e.id).available;
+    return Math.max(0, E.oCV[t] - n);
 }
-let Q = {
-    [g.Eu4.NONE]: 0,
-    [g.Eu4.TIER_1]: 1 / 3,
-    [g.Eu4.TIER_2]: 2 / 3,
-    [g.Eu4.TIER_3]: 1,
-};
+function Q(e) {
+    var t;
+    return (null == (t = e.subscription) ? void 0 : t.status) === E.O0b.CANCELED || e.canceled;
+}
 function X(e) {
+    var t;
+    return null != (t = C.find((t) => e >= E.oCV[t])) ? t : E.Eu4.NONE;
+}
+function J(e) {
+    var t;
+    return null != (t = T.find((t) => e < E.oCV[t])) ? t : E.Eu4.TIER_3;
+}
+let $ = {
+    [E.Eu4.NONE]: 0,
+    [E.Eu4.TIER_1]: 1 / 3,
+    [E.Eu4.TIER_2]: 2 / 3,
+    [E.Eu4.TIER_3]: 1,
+};
+function ee(e) {
     let t = (0, l.I)(e.id),
-        n = z(t),
-        r = q(t),
-        i = g.oCV[n],
-        a = (t - i) / (g.oCV[r] - i),
-        o = Q[n],
-        s = Q[r];
+        n = X(t),
+        r = J(t),
+        i = E.oCV[n],
+        a = (t - i) / (E.oCV[r] - i),
+        o = $[n],
+        s = $[r];
     return {
-        fillFactor: n === g.Eu4.TIER_3 ? 1 : a * (s - o) + o,
+        fillFactor: n === E.Eu4.TIER_3 ? 1 : a * (s - o) + o,
         totalAvailableBoostsCount: t,
     };
 }

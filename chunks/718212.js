@@ -3,4 +3,5 @@ e.exports = {
     boosterRecognitionCard: "_744fffb886c6f25b-boosterRecognitionCard",
     faq: "_744fffb886c6f25b-faq",
     blockedPaymentsWarning: "_744fffb886c6f25b-blockedPaymentsWarning",
+    guildBoostingSettings: "_744fffb886c6f25b-guildBoostingSettings",
 };
