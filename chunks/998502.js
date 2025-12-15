@@ -87,7 +87,7 @@ let S = window.DiscordNative,
     N = null,
     P = null,
     R = null,
-    D = {};
+    w = {};
 null != S &&
     ((N = S.remoteApp
         .getVersion()
@@ -95,7 +95,7 @@ null != S &&
         .map((e) => parseInt(e))),
     (R = null == (r = (i = S.remoteApp).getModuleVersions) ? void 0 : r.call(i)),
     (P = null == (a = (o = S.remoteApp).getBuildNumber) ? void 0 : a.call(o)));
-let w = new Set([
+let D = new Set([
         "discord_erlpack",
         "discord_game_utils",
         "discord_rpc",
@@ -113,7 +113,7 @@ let w = new Set([
 var Z = (function (e) {
     return (e.SAVED = "saved"), (e.CANCELED = "canceled"), (e.ERRORED = "errored"), e;
 })({});
-function B(e) {
+function F(e) {
     try {
         let t = decodeURIComponent(e);
         return (t = (t = t.replace(M, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(j, "_");
@@ -124,7 +124,7 @@ function B(e) {
             .replace(j, "_");
     }
 }
-async function F(e) {
+async function B(e) {
     let t = {
             method: "GET",
             mode: "cors",
@@ -135,7 +135,7 @@ async function F(e) {
     return l()(null != r, "Data is null"), r;
 }
 function V(e) {
-    return F(e);
+    return B(e);
 }
 var H = (function (e) {
         return (
@@ -153,7 +153,7 @@ var H = (function (e) {
 function W(e) {
     var t, n, r, i, a, o, s, l, c;
     return {
-        id: D[null != (t = e.id) ? t : ""],
+        id: w[null != (t = e.id) ? t : ""],
         nativeProcessObserverId: parseInt(null != (n = e.id) ? n : "", 10),
         name: null != (r = e.gameName) ? r : e.name,
         origGameName: e.origGameName,
@@ -197,7 +197,7 @@ let q = {
         requireModule: (e) => S.nativeModules.requireModule(e),
         ensureModule: (e) =>
             m.isPlatformEmbedded
-                ? __OVERLAY__ && w.has(e)
+                ? __OVERLAY__ && D.has(e)
                     ? Promise.resolve()
                     : S.nativeModules.ensureModule(e)
                 : Promise.reject(Error("not embedded")),
@@ -244,14 +244,14 @@ let q = {
         },
         setObservedGamesCallback(e, t, n) {
             try {
-                D = {};
+                w = {};
                 let r = 0,
                     i = this.getDiscordUtils();
                 (t && null != i.setObservedGamesCallback2 ? i.setObservedGamesCallback2 : i.setObservedGamesCallback)(
                     e.map((e) => {
                         let t = ++r;
                         return (
-                            null != e.id && (D[t] = e.id),
+                            null != e.id && (w[t] = e.id),
                             v(y({}, e), {
                                 cmdline: e.cmdLine,
                                 id: t,
@@ -425,7 +425,7 @@ let q = {
             let c = h.Z.toURLSafe(e);
             if (null == c) return "errored";
             let u = null != (r = c.pathname.split("/").pop()) ? r : "unknown";
-            u = B(u);
+            u = F(u);
             let d = c.searchParams.get("format");
             if (null != d) {
                 let e = d.replace(U, "").toLowerCase();
@@ -458,8 +458,8 @@ let q = {
             let r = h.Z.toURLSafe(e);
             if (null == r) return null;
             let i = null != (n = null != t ? t : r.pathname.split("/").pop()) ? n : "unknown";
-            null == t && (i = B(i));
-            let a = await F(e),
+            null == t && (i = F(i));
+            let a = await B(e),
                 o = E.from(a),
                 s = await S.fileManager.saveWithDialog(o, i, void 0);
             return null == s ? null : s;
@@ -616,6 +616,12 @@ let q = {
         getOptionalUpdates: async () => await S.settings.get("OPTIN_OPTIONAL_UPDATES", !1),
         async setOptionalUpdates(e) {
             await S.settings.set("OPTIN_OPTIONAL_UPDATES", e);
+        },
+        async getOpenOnStart() {
+            var e, t, n;
+            return null != (n = await (null == (e = (t = S.app).getOpenOnStart) ? void 0 : e.call(t)))
+                ? n
+                : await S.settings.get("OPEN_ON_STARTUP", !0);
         },
         getGPUDriverVersions() {
             return (0, m.isWindows)() && null != this.getDiscordUtils().getGPUDriverVersions

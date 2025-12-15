@@ -98,7 +98,7 @@ function E() {
 class b extends i.PureComponent {
     async componentDidMount() {
         this.setState({
-            openOnStartup: await f.ZP.getSetting("OPEN_ON_STARTUP", !0),
+            openOnStartup: await f.ZP.getOpenOnStart(),
             startMinimized: await f.ZP.getSetting("START_MINIMIZED", !1),
             minimizeToTray: await f.ZP.getSetting("MINIMIZE_TO_TRAY", !0),
         });
