@@ -24,7 +24,7 @@ var r = n(54381),
     m = n(914498),
     h = n(967249),
     g = n(217702),
-    E = n(906376),
+    E = n(984694),
     b = (function (e) {
         return (e[(e.BOT = 0)] = "BOT"), (e[(e.ACTIVITY = 1)] = "ACTIVITY"), e;
     })({});
@@ -74,8 +74,8 @@ function v(e) {
     } = e;
     C = y(C);
     let { primaryColor: P, secondaryColor: R } = (0, p.Z)(null != S ? S : h),
-        D = "linear-gradient(45deg, ".concat(P, ", ").concat(R, ")"),
-        w = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+        w = "linear-gradient(45deg, ".concat(P, ", ").concat(R, ")"),
+        D = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
         x = i.useRef(!1),
         L = (0, l.O)(
             (e) => {
@@ -97,7 +97,7 @@ function v(e) {
             void 0,
         ),
         j = null != h,
-        M = null != b && !1 === w,
+        M = null != b && !1 === D,
         k = j || M,
         U = 0 === v ? E.bannerAspectRatioBot : E.bannerAspectRatioActivity,
         G = i.useRef(null),
@@ -105,8 +105,8 @@ function v(e) {
             let e = G.current;
             null != e && ("hidden" === getComputedStyle(e).visibility ? e.pause() : e.play());
         }, []),
-        B = i.useMemo(() => !!M && new URL(b).pathname.endsWith(".gif"), [M, b]),
-        F = i.useMemo(() => {
+        F = i.useMemo(() => !!M && new URL(b).pathname.endsWith(".gif"), [M, b]),
+        B = i.useMemo(() => {
             if (null != A)
                 return (e) => {
                     A(e),
@@ -144,7 +144,7 @@ function v(e) {
                     className: o()(E.bannerWrapper, U, { [E.showVideoOnFocus]: M }),
                     children: [
                         M &&
-                            (B
+                            (F
                                 ? (0, r.jsx)("div", {
                                       className: E.videoBanner,
                                       style: { backgroundImage: "url(".concat(b, ")") },
@@ -166,7 +166,7 @@ function v(e) {
                     ],
                 }),
             (0, r.jsxs)("div", {
-                style: { background: D },
+                style: { background: w },
                 children: [
                     (0, r.jsxs)("div", {
                         className: E.contentContainer,
@@ -179,8 +179,8 @@ function v(e) {
                                     children: n,
                                 }),
                             (0, r.jsxs)(O, {
-                                onClick: F,
-                                className: o()(E.contentWrapper, { [E.contentWrapperClickable]: null != F }),
+                                onClick: B,
+                                className: o()(E.contentWrapper, { [E.contentWrapperClickable]: null != B }),
                                 children: [
                                     null != S &&
                                         (0, r.jsx)("div", {
@@ -219,19 +219,22 @@ function v(e) {
                                                 trackingArea: u,
                                                 isDeadEnd: f,
                                                 iconButton: p,
+                                                buttonRef: _,
                                             } = e,
-                                            _ = 0 === t;
+                                            h = 0 === t;
                                         return p
                                             ? (0, r.jsx)(
                                                   d.u,
                                                   {
                                                       text: n,
+                                                      targetElementRef: _,
                                                       children: (0, r.jsx)(c.hU, {
-                                                          variant: _ ? "overlay-primary" : "overlay-secondary",
+                                                          variant: h ? "overlay-primary" : "overlay-secondary",
                                                           disabled: o || null != s,
                                                           loading: l,
                                                           icon: i,
                                                           "aria-label": n,
+                                                          buttonRef: _,
                                                           onClick: (e) => {
                                                               a(e),
                                                                   (0, m.KX)({
@@ -253,11 +256,12 @@ function v(e) {
                                                       className: E.buttonWithPossibleDisabledTextWrapper,
                                                       children: [
                                                           (0, r.jsx)(c.zxk, {
-                                                              variant: _ ? "overlay-primary" : "overlay-secondary",
+                                                              variant: h ? "overlay-primary" : "overlay-secondary",
                                                               disabled: o || null != s,
                                                               loading: l,
                                                               icon: i,
                                                               text: n,
+                                                              buttonRef: _,
                                                               onClick: (e) => {
                                                                   a(e),
                                                                       (0, m.KX)({

@@ -131,16 +131,18 @@ function k(e) {
             analyticsLocations: q,
             showAuthButton: Q,
             startAuthorization: X,
+            accountLinkButtonRef: J,
+            renderAccountLinkUpsell: $,
         } = e,
-        J =
+        ee =
             null != (o = null == Y || null == (t = Y.timestamps) ? void 0 : t.start)
                 ? o
                 : null == Y
                   ? void 0
                   : Y.created_at,
-        $ = i.useMemo(() => {
+        et = i.useMemo(() => {
             var e;
-            return null != J
+            return null != ee
                 ? (0, r.jsxs)("div", {
                       className: j.timestampContainer,
                       children: [
@@ -150,7 +152,7 @@ function k(e) {
                           }),
                           (0, r.jsx)(m.x3, {
                               entry: {
-                                  start: J,
+                                  start: ee,
                                   end: null == Y || null == (e = Y.timestamps) ? void 0 : e.end,
                               },
                               textColor: "currentColor",
@@ -160,12 +162,12 @@ function k(e) {
                       ],
                   })
                 : null;
-        }, [J, null == Y || null == (n = Y.timestamps) ? void 0 : n.end]),
-        ee = (0, I.H)(s),
-        et = (0, E.N)(y.id),
-        en = i.useMemo(
+        }, [ee, null == Y || null == (n = Y.timestamps) ? void 0 : n.end]),
+        en = (0, I.H)(s),
+        er = (0, E.N)(y.id),
+        ei = i.useMemo(
             () =>
-                et.some((e) => (0, h.ig)(e) === a.o.GLOBAL)
+                er.some((e) => (0, h.ig)(e) === a.o.GLOBAL)
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(c.YqE, {
@@ -176,54 +178,55 @@ function k(e) {
                           ],
                       })
                     : null,
-            [et],
+            [er],
         ),
-        er = i.useMemo(
+        ea = i.useMemo(
             () =>
                 (0, r.jsxs)(c.Text, {
                     variant: "text-xs/normal",
                     className: j.tagline,
                     color: "none",
                     lineClamp: 2,
-                    children: [ee ? (0, O.$v)(s, C, P, k, !1) : $, ee ? null : en],
+                    children: [en ? (0, O.$v)(s, C, P, k, !1) : et, en ? null : ei],
                 }),
-            [ee, s, C, P, k, $, en],
+            [en, s, C, P, k, et, ei],
         ),
-        ei = i.useMemo(
+        eo = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
                     className: j.info,
-                    children: [er, K || ee ? null : z],
+                    children: [ea, K || en ? null : z],
                 }),
-            [er, K, ee, z],
+            [ea, K, en, z],
         ),
-        ea = !!U,
-        eo = (0, g.A)(y),
-        { canJoin: es, remoteJoinPlatform: el } = (0, v.h)({
+        es = !!U,
+        el = (0, g.A)(y),
+        { canJoin: ec, remoteJoinPlatform: eu } = (0, v.h)({
             presenceActivity: Y,
             currentUserPresenceActivity: W,
             currentUserId: k,
             message: s,
             application: y,
             isEmbeddedApplication: G,
-            isFrameApplication: eo,
-            isGameLaunchable: ea,
+            isFrameApplication: el,
+            isGameLaunchable: es,
         }),
-        ec = (0, v.p)(Y, W, s, y),
-        eu = (0, S.L)(Y, s, y, k),
-        ed = (0, T.g)(W, Y),
-        ef = (0, l.e7)(
+        ed = (0, v.p)(Y, W, s, y),
+        ef = (0, S.L)(Y, s, y, k),
+        ep = (0, T.g)(W, Y),
+        e_ = (0, l.e7)(
             [b.Z],
             () => null != Y && null != Y.application_id && b.Z.getState(Y.application_id, D.mFx.JOIN) === D.OcF.LOADING,
         ),
-        ep = i.useMemo(() => {
+        { actions: em, hasAccountLinkButton: eh } = i.useMemo(() => {
             let e = null,
-                t = !0;
-            es
+                t = !0,
+                n = !1;
+            ec
                 ? (e = {
                       label: L.intl.string(L.t.VJlc0S),
                       trackingArea: _.j_.JOIN,
-                      submitting: ef,
+                      submitting: e_,
                       onClick: () => {
                           var e, t;
                           d.Z.join({
@@ -235,7 +238,7 @@ function k(e) {
                               source: D.Sbl.MESSAGE_EMBED,
                               analyticsLocations: q,
                               embedded: (0, A.Z)(Y, D.xjy.EMBEDDED),
-                              remotePartyId: null != el ? (null == (e = Y.party) ? void 0 : e.id) : void 0,
+                              remotePartyId: null != eu ? (null == (e = Y.party) ? void 0 : e.id) : void 0,
                           }),
                               (0, N.Z)({
                                   type: D.q5t.JOIN,
@@ -247,11 +250,11 @@ function k(e) {
                                   partyId: null == (t = Y.party) ? void 0 : t.id,
                                   messageId: s.id,
                                   analyticsLocations: q,
-                                  remoteJoinPlatform: el,
+                                  remoteJoinPlatform: eu,
                               });
                       },
                   })
-                : ec
+                : ed
                   ? ((e = {
                         label: L.intl.string(L.t.VJlc0S),
                         trackingArea: _.j_.SYNC,
@@ -260,7 +263,7 @@ function k(e) {
                         },
                     }),
                     (t = !1))
-                  : eu
+                  : ef
                     ? (e = {
                           label: L.intl.string(L.t["hC/Zey"]),
                           trackingArea: _.j_.INVITE,
@@ -276,7 +279,7 @@ function k(e) {
                           disabled: s.author.id === k,
                           disabledReason: s.author.id === k ? L.intl.string(L.t.IBl8ID) : void 0,
                       })
-                    : ed
+                    : ep
                       ? (e = {
                             label: L.intl.string(L.t.KC26NR),
                             trackingArea: _.j_.PLAY,
@@ -284,13 +287,13 @@ function k(e) {
                             disabled: !0,
                         })
                       : null != Z && ((e = Z), (t = !1));
-            let n = [];
+            let r = [];
             return (
                 null != e &&
-                    (n.push(e),
+                    (r.push(e),
                     Q &&
                         t &&
-                        n.push({
+                        (r.push({
                             label: L.intl.string(L.t.lw71Nf),
                             trackingArea: _.j_.CONNECT_ACCOUNT,
                             onClick: () => {
@@ -298,42 +301,52 @@ function k(e) {
                             },
                             icon: c.uIJ,
                             iconButton: !0,
-                        })),
-                n
+                            buttonRef: J,
+                        }),
+                        (n = !0))),
+                {
+                    actions: r,
+                    hasAccountLinkButton: n,
+                }
             );
-        }, [es, ec, eu, ed, Z, s.author.id, s.id, Y, P.id, P.guild_id, q, el, k, ef, Q, X]),
-        e_ = ep.some((e) => e.trackingArea === _.j_.CLOUD_PLAY);
-    (0, w.Z)(e_, q);
-    let em = i.useMemo(
+        }, [ec, ed, ef, ep, Z, s.author.id, s.id, Y, P.id, P.guild_id, q, eu, k, e_, Q, X, J]),
+        eg = em.some((e) => e.trackingArea === _.j_.CLOUD_PLAY);
+    (0, w.Z)(eg, q);
+    let eE = i.useMemo(
         () =>
-            ed
+            ep
                 ? null
                 : (0, r.jsx)(M, {
                       presenceActivity: Y,
-                      remoteJoinPlatform: el,
+                      remoteJoinPlatform: eu,
                   }),
-        [ed, Y, el],
+        [ep, Y, eu],
     );
-    return (0, r.jsx)(p.W, {
-        header: R,
-        title: C,
-        staticBannerSrc: F,
-        onClickBanner: B,
-        bannerAspectRatio: p.u.ACTIVITY,
-        iconSrc: null != V ? V : void 0,
-        info: ei,
-        actions: ep,
-        primaryActionFirst: !0,
-        onClickContent: B,
-        trackingConfig: {
-            id: y.id,
-            linkType: x.U.RICH_PRESENCE_INVITE,
-            onView: H,
-            referrerId: s.author.id,
-            guildId: P.guild_id,
-            channelId: s.channel_id,
-            messageId: s.id,
-        },
-        footer: em,
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(p.W, {
+                header: R,
+                title: C,
+                staticBannerSrc: F,
+                onClickBanner: B,
+                bannerAspectRatio: p.u.ACTIVITY,
+                iconSrc: null != V ? V : void 0,
+                info: eo,
+                actions: em,
+                primaryActionFirst: !0,
+                onClickContent: B,
+                trackingConfig: {
+                    id: y.id,
+                    linkType: x.U.RICH_PRESENCE_INVITE,
+                    onView: H,
+                    referrerId: s.author.id,
+                    guildId: P.guild_id,
+                    channelId: s.channel_id,
+                    messageId: s.id,
+                },
+                footer: eE,
+            }),
+            eh ? $() : null,
+        ],
     });
 }
