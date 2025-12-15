@@ -1,94 +1,63 @@
-n.d(t, { default: () => o }), n(388685);
-var a = n(54381),
-    s = n(473749),
+n.d(e, { default: () => o }), n(388685);
+var i = n(54381),
+    a = n(473749),
+    s = n(775086),
     l = n(481060),
-    i = n(365007),
-    r = n(388032),
-    c = n(676641);
-function o(e) {
-    let { transitionState: t, onClose: n, credential: o } = e,
-        [d, u] = s.useState(!1),
-        [f, h] = s.useState(""),
-        [b, m] = s.useState(void 0),
-        x = s.useRef(null);
-    async function p(e) {
-        e.preventDefault(), u(!0);
+    r = n(365007),
+    u = n(388032);
+function o(t) {
+    let { transitionState: e, onClose: n, credential: o } = t,
+        [c, d] = a.useState(!1),
+        [g, f] = a.useState(""),
+        [h, p] = a.useState(void 0),
+        E = a.useRef(null);
+    async function v() {
+        d(!0);
         try {
-            await (0, i.WQ)(o.id, f), n();
-        } catch (e) {
-            m(e.message);
+            await (0, r.WQ)(o.id, g), n();
+        } catch (t) {
+            p(t.message);
         } finally {
-            u(!1);
+            d(!1);
         }
     }
     return (
-        s.useEffect(() => {
-            if (t === l.Dvm.ENTERED) {
-                var e;
-                null == (e = x.current) || e.focus();
+        a.useEffect(() => {
+            if (e === l.Dvm.ENTERED) {
+                var t;
+                null == (t = E.current) || t.focus();
             }
-        }, [t]),
-        (0, a.jsxs)(l.Y0X, {
-            transitionState: t,
-            parentComponent: "EditCredentialModal",
-            children: [
-                (0, a.jsxs)(l.xBx, {
-                    separator: !1,
-                    className: c.header,
-                    children: [
-                        (0, a.jsx)(l.Text, {
-                            color: "text-default",
-                            variant: "text-lg/bold",
-                            className: c.subtitle,
-                            children: r.intl.string(r.t.YjuMsf),
-                        }),
-                        (0, a.jsx)(l.olH, {
-                            onClick: n,
-                            className: c.modalCloseButton,
-                        }),
-                    ],
-                }),
-                (0, a.jsxs)("form", {
-                    onSubmit: p,
-                    children: [
-                        (0, a.jsx)(l.hzk, {
-                            className: c.content,
-                            children: (0, a.jsx)(l.oil, {
-                                label: r.intl.string(r.t["7yEgJY"]),
-                                inputRef: x,
-                                "aria-label": r.intl.string(r.t["7yEgJY"]),
-                                placeholder: o.name,
-                                value: f,
-                                minLength: 1,
-                                maxLength: 32,
-                                onChange: h,
-                                autoFocus: !0,
-                                required: !0,
-                                error: b,
-                            }),
-                        }),
-                        (0, a.jsxs)(l.mzw, {
-                            children: [
-                                (0, a.jsx)(l.Button, {
-                                    variant: "primary",
-                                    text: r.intl.string(r.t.i4jeWR),
-                                    type: "submit",
-                                    loading: d,
-                                    disabled: 0 === f.length || f.length > 32,
-                                }),
-                                (0, a.jsx)("div", {
-                                    "data-button-hoisted-classname-wrapper": !0,
-                                    className: c.cancel,
-                                    children: (0, a.jsx)(l.Button, {
-                                        variant: "secondary",
-                                        text: r.intl.string(r.t["ETE/oC"]),
-                                        onClick: n,
-                                    }),
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
+        }, [e]),
+        (0, i.jsx)(s.Modal, {
+            transitionState: e,
+            title: u.intl.string(u.t.YjuMsf),
+            onClose: n,
+            input: (0, i.jsx)(l.oil, {
+                label: u.intl.string(u.t["7yEgJY"]),
+                inputRef: E,
+                "aria-label": u.intl.string(u.t["7yEgJY"]),
+                placeholder: o.name,
+                value: g,
+                minLength: 1,
+                maxLength: 32,
+                onChange: f,
+                autoFocus: !0,
+                required: !0,
+                error: h,
+            }),
+            actions: [
+                {
+                    variant: "secondary",
+                    text: u.intl.string(u.t["ETE/oC"]),
+                    onClick: n,
+                },
+                {
+                    variant: "primary",
+                    text: u.intl.string(u.t.i4jeWR),
+                    disabled: 0 === g.length || g.length > 32,
+                    loading: c,
+                    onClick: v,
+                },
             ],
         })
     );
