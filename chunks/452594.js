@@ -6,6 +6,4 @@ e.exports = {
     channelName: "_4c08473a6cdffac2-channelName",
     channelSelection: "_4c08473a6cdffac2-channelSelection",
     warning: "_4c08473a6cdffac2-warning",
-    notificationToggle: "_4c08473a6cdffac2-notificationToggle",
-    ageVerificationNotice: "_4c08473a6cdffac2-ageVerificationNotice",
 };

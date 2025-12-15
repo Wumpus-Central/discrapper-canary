@@ -50,7 +50,6 @@ function p(e) {
                 rsvped: !0,
                 guildEvent: O,
                 eventPreview: O,
-                hideAgeVerificationNotice: !0,
             }),
             (0, l.jsxs)("div", {
                 className: f.textContainer,
