@@ -1,10 +1,10 @@
-n.d(t, { Z: () => p }), n(388685);
-var r,
-    i = n(54381),
-    a = n(473749),
-    o = n(120356),
-    s = n.n(o),
-    l = n(481060),
+n.d(t, { Z: () => f }), n(388685);
+var r = n(54381),
+    i = n(473749),
+    a = n(120356),
+    o = n.n(a),
+    s = n(481060),
+    l = n(816814),
     c = n(388032),
     u = n(44463);
 function d(e, t, n) {
@@ -20,124 +20,93 @@ function d(e, t, n) {
         e
     );
 }
-class f extends (r = a.PureComponent) {
+class f extends i.PureComponent {
     render() {
-        var e;
-        let {
-                title: t,
-                actionText: n,
-                children: r,
-                error: o,
-                isLoading: d,
-                maxLength: f,
-                transitionState: p,
-                helpMessage: _,
-                retryPrompt: m,
-                retrySuccessMessage: h,
-            } = this.props,
-            { code: g, errorMessage: E, retrySuccess: b } = this.state,
-            y =
-                a.Children.count(r) > 0
-                    ? (0, i.jsx)(l.Zbd, {
-                          type: l.Zbd.Types.WARNING,
-                          className: u.card,
-                          children: (0, i.jsx)(l.Text, {
-                              variant: "text-md/normal",
-                              children: r,
-                          }),
-                      })
-                    : null,
-            O =
-                null != m
-                    ? (0, i.jsxs)(l.Text, {
-                          className: s()(u.__invalid_submitText, u.spacing),
-                          variant: "text-sm/normal",
-                          children: [
-                              (0, i.jsx)("br", {}),
-                              (0, i.jsx)(l.P3F, {
-                                  className: s()(u.spacing, u.__invalid_link),
-                                  onClick: this.handleRetry,
-                                  children: (0, i.jsx)(l.Anchor, { children: m }),
-                              }),
-                          ],
-                      })
-                    : null,
-            v = b
-                ? (0, i.jsx)(l.Zbd, {
-                      type: l.Zbd.Types.SUCCESS,
+        let { transitionState: e } = this.props,
+            { code: t, errorMessage: n, retrySuccess: i } = this.state,
+            a = i
+                ? (0, r.jsx)(s.Zbd, {
+                      type: s.Zbd.Types.SUCCESS,
                       className: u.card,
-                      children: (0, i.jsx)(l.Text, {
+                      children: (0, r.jsx)(s.Text, {
                           variant: "text-md/normal",
-                          children: h,
+                          children: c.intl.string(c.t.j4qu8n),
                       }),
                   })
                 : null;
-        return (0, i.jsx)(l.Y0X, {
-            transitionState: p,
+        return (0, r.jsx)(s.Y0X, {
+            transitionState: e,
             parentComponent: "MFAConfirm",
-            children: (0, i.jsxs)("form", {
+            children: (0, r.jsxs)("form", {
                 onSubmit: this.handleSubmit,
                 children: [
-                    (0, i.jsx)(l.xBx, {
+                    (0, r.jsx)(s.xBx, {
                         separator: !1,
-                        children: (0, i.jsx)(l.Heading, {
+                        children: (0, r.jsx)(s.Heading, {
                             variant: "heading-lg/semibold",
-                            children: t,
+                            children: c.intl.string(c.t["mGppp/"]),
                         }),
                     }),
-                    (0, i.jsxs)(l.hzk, {
+                    (0, r.jsxs)(s.hzk, {
                         children: [
-                            null != _
-                                ? (0, i.jsx)(l.Text, {
-                                      color: "text-default",
-                                      variant: "text-md/normal",
-                                      className: u.spacing,
-                                      children: _,
-                                  })
-                                : null,
-                            y,
-                            v,
-                            (0, i.jsxs)("div", {
+                            (0, r.jsx)(s.Text, {
+                                color: "text-default",
+                                variant: "text-md/normal",
+                                className: u.spacing,
+                                children: c.intl.string(c.t["37S9yU"]),
+                            }),
+                            a,
+                            (0, r.jsxs)("div", {
                                 className: u.spacing,
                                 children: [
-                                    (0, i.jsx)(l.oil, {
+                                    (0, r.jsx)(s.oil, {
                                         inputRef: this.setRef,
-                                        label: this.getLabelText(),
+                                        label: c.intl.string(c.t.TjGb4Q),
                                         onChange: this.handleCodeChange,
-                                        placeholder: null != (e = this.getPlaceholder()) ? e : void 0,
-                                        maxLength: null != f ? f : 10,
-                                        value: g,
+                                        maxLength: 8,
+                                        value: t,
                                         autoComplete: "one-time-code",
                                         autoFocus: !0,
                                     }),
-                                    this.errorPresent()
-                                        ? (0, i.jsx)(l.Text, {
+                                    null != this.state.errorMessage && "" !== this.state.errorMessage
+                                        ? (0, r.jsx)(s.Text, {
                                               color: "text-feedback-critical",
                                               variant: "text-xs/normal",
                                               className: u.error,
-                                              children: null != o ? o : E,
+                                              children: n,
                                           })
                                         : null,
-                                    O,
+                                    (0, r.jsxs)(s.Text, {
+                                        className: o()(u.__invalid_submitText, u.spacing),
+                                        variant: "text-sm/normal",
+                                        children: [
+                                            (0, r.jsx)("br", {}),
+                                            (0, r.jsx)(s.P3F, {
+                                                className: o()(u.spacing, u.__invalid_link),
+                                                onClick: this.handleRetry,
+                                                children: (0, r.jsx)(s.Anchor, { children: c.intl.string(c.t.PZgmxv) }),
+                                            }),
+                                        ],
+                                    }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, i.jsx)(l.mzw, {
-                        children: (0, i.jsxs)(l.ButtonGroup, {
+                    (0, r.jsx)(s.mzw, {
+                        children: (0, r.jsxs)(s.ButtonGroup, {
                             direction: "horizontal-reverse",
                             children: [
-                                (0, i.jsx)(l.Button, {
+                                (0, r.jsx)(s.Button, {
                                     variant: "primary",
-                                    text: null != n ? n : c.intl.string(c.t["cY+Oob"]),
+                                    text: c.intl.string(c.t.piW6YS),
                                     type: "submit",
-                                    disabled: d || 0 === g.length,
+                                    disabled: this.state.isLoading || 0 === t.length,
                                 }),
-                                (0, i.jsx)(l.Button, {
+                                (0, r.jsx)(s.Button, {
                                     variant: "secondary",
                                     text: c.intl.string(c.t["ETE/oC"]),
-                                    onClick: this.handleCancel,
-                                    disabled: d,
+                                    onClick: this.props.onClose,
+                                    disabled: this.state.isLoading,
                                 }),
                             ],
                         }),
@@ -153,62 +122,28 @@ class f extends (r = a.PureComponent) {
                 code: "",
                 errorMessage: "",
                 retrySuccess: !1,
+                isLoading: !1,
             }),
             d(this, "setRef", (e) => {
                 this._input = e;
             }),
-            d(this, "getLabelText", () => {
-                var e;
-                return null != (e = this.props.label)
-                    ? e
-                    : this.props.disallowBackupCodes
-                      ? c.intl.string(c.t.HZPBOd)
-                      : c.intl.string(c.t["+NQopF"]);
+            d(this, "handleRetry", async () => {
+                await l.Z.sendMFABackupCodesVerificationKeyEmail(this.props.password),
+                    this.setState({ retrySuccess: !0 });
             }),
-            d(this, "getSupportedCodeTypes", () =>
-                this.props.disallowBackupCodes ? c.intl.string(c.t.tARzgo) : c.intl.string(c.t.yO4lAM),
-            ),
-            d(this, "getPlaceholder", () => {
-                var e;
-                return this.props.forceNoPlaceholder
-                    ? null
-                    : null != (e = this.props.placeholder)
-                      ? e
-                      : this.getSupportedCodeTypes();
-            }),
-            d(
-                this,
-                "errorPresent",
-                () =>
-                    (null != this.props.error && "" !== this.props.error) ||
-                    (null != this.state.errorMessage && "" !== this.state.errorMessage),
-            ),
-            d(this, "handleRetry", () => {
-                let { onRetry: e } = this.props;
-                null == e || e().then(() => this.setState({ retrySuccess: !0 }));
-            }),
-            d(this, "handleSubmit", (e) => {
-                e.preventDefault();
-                let { handleSubmit: t, onError: n } = this.props;
-                t(this.state.code).catch((e) => {
-                    null != e.body &&
-                        (null == n || n(e.body), e.body.message && this.setState({ errorMessage: e.body.message }));
-                });
-            }),
-            d(this, "handleCancel", () => {
-                let { onClose: e, handleEarlyClose: t } = this.props;
-                e(), null == t || t();
+            d(this, "handleSubmit", async (e) => {
+                e.preventDefault(), this.setState({ isLoading: !0 });
+                try {
+                    await l.Z.confirmViewBackupCodes(this.state.code, !1), this.props.onClose();
+                } catch (e) {
+                    if (null == e.body) return;
+                    e.body.message && this.setState({ errorMessage: e.body.message });
+                } finally {
+                    this.setState({ isLoading: !1 });
+                }
             }),
             d(this, "handleCodeChange", (e) => {
                 this.setState({ code: e });
             });
     }
 }
-d(f, "defaultProps", {
-    btnClass: "",
-    isLoading: !1,
-    disallowBackupCodes: !1,
-    error: null,
-    forceNoPlaceholder: !1,
-});
-let p = f;
