@@ -1034,7 +1034,7 @@ let e7 = (0, I.Z)(function (e) {
                         voiceStates: S,
                         showVoiceStates: v,
                         shouldShowVoicePanelIntroduction: g,
-                        showSocialLayerStorefrontGiftingButton: (R && D) || !0,
+                        showSocialLayerStorefrontGiftingButton: R && D,
                         isPrivateChannelWithEnabledActivities: L,
                         analyticsLocations: x,
                     }),
