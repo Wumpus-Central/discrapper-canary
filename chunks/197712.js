@@ -1,7 +1,7 @@
 n.d(t, {
-    $p: () => a,
     AK: () => d,
     Es: () => u,
+    GU: () => a,
     U$: () => o,
     kH: () => c,
 }),
@@ -43,7 +43,7 @@ async function a(e) {
             sourceX: m,
             sourceY: h,
             sourceWidth: g,
-            sourceHeight: f,
+            sourceHeight: b,
         } = (0, r.GS)({
             image: l,
             cropDimensions: a,
@@ -51,15 +51,15 @@ async function a(e) {
             maxDimensions: s,
             imageRotation: u,
         }),
-        b = await t.arrayBuffer(),
-        v = new Worker(new URL("/assets/" + n.u("86047"), n.b)),
-        p = new Promise((e, t) => {
-            v.onmessage = (n) => {
-                let { data: l } = n;
-                if (l.type === i.u.CROP_GIF_COMPLETE) {
-                    var r;
+        f = await t.arrayBuffer(),
+        v = new Worker(new URL("/assets/" + n.u("776"), n.b)),
+        p = new Promise((e, n) => {
+            v.onmessage = (l) => {
+                var r, a;
+                let { data: o } = l;
+                if (o.type === i.u.CROP_ANIMATED_IMAGE_COMPLETE)
                     e(
-                        ((r = new Blob([l.result])),
+                        ((r = new Blob([o.result], { type: t.type })),
                         new Promise((e) => {
                             let t = new FileReader();
                             (t.onload = (t) => {
@@ -71,22 +71,26 @@ async function a(e) {
                         })),
                     ),
                         v.terminate();
-                } else
-                    l.type === i.u.CROP_GIF_ERROR &&
-                        (t(Error("Error cropping GIF", { cause: null == l ? void 0 : l.error })), v.terminate());
+                else if (o.type === i.u.CROP_ANIMATED_IMAGE_ERROR) {
+                    let e = null == o ? void 0 : o.error,
+                        t = null != (a = null == e ? void 0 : e.message) ? a : "Unknown error";
+                    n(Error("Error cropping animated image: ".concat(t))), v.terminate();
+                }
             };
-        });
+        }),
+        x = "image/webp" === t.type ? "webp" : "gif";
     return (
         v.postMessage({
-            type: i.u.CROP_GIF_START,
-            gif: new Uint8Array(b),
+            type: i.u.CROP_ANIMATED_IMAGE_START,
+            data: new Uint8Array(f),
             x: 0 | m,
             y: 0 | h,
             width: 0 | g,
-            height: 0 | f,
+            height: 0 | b,
             imageRotation: 0 | u,
             resizeWidth: c,
             resizeHeight: d,
+            format: x,
         }),
         {
             result: p,

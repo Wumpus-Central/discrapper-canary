@@ -56,9 +56,9 @@ let a = 432,
     S = a / v;
 var I = (function (e) {
     return (
-        (e[(e.CROP_GIF_START = 0)] = "CROP_GIF_START"),
-        (e[(e.CROP_GIF_COMPLETE = 1)] = "CROP_GIF_COMPLETE"),
-        (e[(e.CROP_GIF_ERROR = 2)] = "CROP_GIF_ERROR"),
+        (e[(e.CROP_ANIMATED_IMAGE_START = 0)] = "CROP_ANIMATED_IMAGE_START"),
+        (e[(e.CROP_ANIMATED_IMAGE_COMPLETE = 1)] = "CROP_ANIMATED_IMAGE_COMPLETE"),
+        (e[(e.CROP_ANIMATED_IMAGE_ERROR = 2)] = "CROP_ANIMATED_IMAGE_ERROR"),
         e
     );
 })({});
