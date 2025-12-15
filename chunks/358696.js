@@ -12,7 +12,7 @@ var i = n(120356),
     c = n(442550),
     u = n(264832),
     d = n(388032),
-    f = n(255332);
+    f = n(503416);
 let p = {
     none: void 0,
     default: f.aspectRatio,
@@ -70,35 +70,37 @@ function g(e) {
     return (0, r.jsxs)("div", {
         className: a()(f.imagePosition, y),
         children: [
-            (0, r.jsx)(o.u, {
-                text: s.text,
-                asContainer: !0,
-                children: (0, r.jsx)(h, {
-                    onClick: E,
-                    children: (0, r.jsx)(u._, {
-                        href: s.url,
-                        children:
-                            null != _
-                                ? (0, r.jsx)(l.ZP, {
+            (0, r.jsx)(h, {
+                onClick: E,
+                children: (0, r.jsx)(u._, {
+                    href: s.url,
+                    children:
+                        null != _
+                            ? (0, r.jsx)(o.u, {
+                                  text: s.text,
+                                  asContainer: !0,
+                                  children: (0, r.jsx)(l.ZP, {
                                       className: f.imageContainer,
                                       mask: S,
                                       width: O,
                                       height: O,
                                       children: I,
-                                  })
-                                : (0, r.jsx)("div", {
+                                  }),
+                              })
+                            : (0, r.jsx)(o.u, {
+                                  text: s.text,
+                                  children: (0, r.jsx)("div", {
                                       className: f.imageContainer,
                                       children: I,
                                   }),
-                    }),
+                              }),
                 }),
             }),
             null != _ &&
-                (0, r.jsx)(o.u, {
-                    text: _.text,
-                    asContainer: !0,
-                    children: (0, r.jsx)(u._, {
-                        href: _.url,
+                (0, r.jsx)(u._, {
+                    href: _.url,
+                    children: (0, r.jsx)(o.u, {
+                        text: _.text,
                         children: (0, r.jsx)("div", {
                             className: f.smallImageContainer,
                             children: (0, r.jsx)(c.f, {
