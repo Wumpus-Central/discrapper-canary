@@ -25,4 +25,6 @@ e.exports = {
     mostPopularText: "e4ef5cb9eb007591-mostPopularText",
     bogoPillWithSparkles: "e4ef5cb9eb007591-bogoPillWithSparkles",
     freeTrialPillWithSparkles: "e4ef5cb9eb007591-freeTrialPillWithSparkles",
+    premiumGroupCard: "e4ef5cb9eb007591-premiumGroupCard",
+    textLogo: "e4ef5cb9eb007591-textLogo",
 };
