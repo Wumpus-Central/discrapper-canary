@@ -129,13 +129,17 @@ let eU = () => [
     eB = () => {
         let e = [];
         return (
-            x.H.getConfig({ location: "SettingsRendererConfig" }).enabled && e.push(a.z.NITRO_PRIVACY_PERK_NEW_BADGE), e
+            x.H.getConfig({ location: "SettingsRendererConfig" }).enabled &&
+                e.push(a.z.NITRO_PRIVACY_PERK_NEW_BADGE_V2),
+            e
         );
     },
     eV = () => {
         let e = eB(),
             [t] = (0, O.US)(e);
-        return a.z.NITRO_PRIVACY_PERK_NEW_BADGE === t ? (0, r.jsx)(l.IGR, { text: eD.intl.string(eD.t.y2b7CA) }) : null;
+        return a.z.NITRO_PRIVACY_PERK_NEW_BADGE_V2 === t
+            ? (0, r.jsx)(l.IGR, { text: eD.intl.string(eD.t.y2b7CA) })
+            : null;
     },
     eH = eO.Z,
     eY = (e) => {

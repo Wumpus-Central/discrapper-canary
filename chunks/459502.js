@@ -46,7 +46,7 @@ function C(e) {
                           onClick: () => {
                               O(e)
                                   ? (0, a.ZDy)(async () => {
-                                        let { default: t } = await Promise.all([n.e("84722"), n.e("5992")]).then(
+                                        let { default: t } = await Promise.all([n.e("84722"), n.e("58923")]).then(
                                             n.bind(n, 296864),
                                         );
                                         return (n) => {
