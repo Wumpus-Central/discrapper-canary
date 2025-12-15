@@ -1,17 +1,26 @@
-n.d(e, { d: () => o });
+n.d(e, { d: () => d });
 var i = n(657707),
     l = n(509613),
     s = n(906467),
-    r = n(313789),
-    u = n(287490);
-let a = (0, l.wf)(r.n.EXPERIMENTS_PANEL, {
+    u = n(313789),
+    r = n(526665),
+    a = n(287490),
+    o = n(430404);
+let c = (0, l.k4)(u.n.EXPERIMENTS_CATEGORY, { buildLayout: () => [o.z] }),
+    T = (0, l.wf)(u.n.EXPERIMENTS_PANEL, {
+        usePredicate: () => !(0, r.gN)("LegacyExperimentsPanel"),
         useTitle: () => "Experiments",
-        StronglyDiscouragedCustomComponent: u.Z,
+        StronglyDiscouragedCustomComponent: a.Z,
         buildLayout: () => [],
     }),
-    o = (0, l.m7)(r.n.EXPERIMENTS_SIDEBAR_ITEM, {
+    S = (0, l.wf)(u.n.EXPERIMENTS_PANEL, {
+        usePredicate: () => (0, r.gN)("ExperimentsPanel"),
+        useTitle: () => "Experiments",
+        buildLayout: () => [c],
+    }),
+    d = (0, l.m7)(u.n.EXPERIMENTS_SIDEBAR_ITEM, {
         useTitle: () => "Experiments",
         icon: i.uOV,
         usePredicate: () => s.Z.isDeveloper,
-        buildLayout: () => [a],
+        buildLayout: () => ((0, r.Gl)("ExperimentsPanel") ? [S] : [T]),
     });

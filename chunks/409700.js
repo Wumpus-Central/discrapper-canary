@@ -205,7 +205,7 @@ function P(e) {
         positionKey: p,
         scrollBehavior: "close",
         children: (e) =>
-            (0, r.jsxs)(c.u, {
+            (0, r.jsx)(c.u, {
                 onTooltipHide: () => {
                     E && (null == s || s(!1));
                 },
@@ -215,19 +215,16 @@ function P(e) {
                 text: a,
                 position: "top",
                 shouldShow: E,
-                children: [
-                    "(",
-                    (0, r.jsx)(
-                        u.P3F,
-                        T(S({}, e), {
-                            innerRef: g,
-                            "aria-label": a,
-                            onClick: m,
-                            className: l,
-                            children: o,
-                        }),
-                    ),
-                ],
+                children: (0, r.jsx)(
+                    u.P3F,
+                    T(S({}, e), {
+                        innerRef: g,
+                        "aria-label": a,
+                        onClick: m,
+                        className: l,
+                        children: o,
+                    }),
+                ),
             }),
     });
 }
