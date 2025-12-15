@@ -123,13 +123,25 @@ function E(e, t, n) {
         } = n,
         c = !1,
         u = !1,
-        d = e(
-            (null != l ? l : t).content,
+        d = (null != l ? l : t).content,
+        f = e(
+            d,
             !0,
             h(t, n),
             (e, n) => (
                 Array.isArray(e) || (e = [e]),
-                e.length >= r.dc - 10 && (u = !0),
+                e.length >= r.dc - 10 &&
+                    ((u = !0),
+                    (e = [
+                        {
+                            type: "text",
+                            content: d,
+                            originalMatch: {
+                                index: 0,
+                                0: d,
+                            },
+                        },
+                    ])),
                 a && (e = N(e, (null != l ? l : t).embeds)),
                 o || (e = S(e, n)),
                 (e = b(e)),
@@ -141,7 +153,7 @@ function E(e, t, n) {
         );
     return {
         hasSpoilerEmbeds: c,
-        content: d,
+        content: f,
         hasBailedAst: u,
     };
 }
