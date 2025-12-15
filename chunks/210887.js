@@ -70,7 +70,7 @@ let y = 0,
     S = O[v],
     I = null;
 function T() {
-    return __OVERLAY__ || null == I ? (0, c.Z)(v, O, S) : I;
+    return __OVERLAY__ || null == I ? (0, c.Z)(v, O) : I;
 }
 function C() {
     let e = T();
@@ -112,11 +112,11 @@ function P() {
 function R(e) {
     return (I = null), !e.isSwitchingAccount && S !== m.BRd.DARK && ((S = m.BRd.DARK), (0, u.Z)(S), C());
 }
-function D(e) {
+function w(e) {
     let { systemTheme: t } = e;
     return (v = t), C();
 }
-function w(e) {
+function D(e) {
     return (O = g({}, O, e.preferences)), C();
 }
 function x(e) {
@@ -146,9 +146,9 @@ let M = new A(o.Z, {
     UNSYNCED_USER_SETTINGS_UPDATE: C,
     USER_SETTINGS_PROTO_UPDATE: C,
     RESET_PREVIEW_CLIENT_THEME: C,
-    SYSTEM_THEME_CHANGE: D,
+    SYSTEM_THEME_CHANGE: w,
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: P,
-    UPDATE_THEME_PREFERENCES: w,
+    UPDATE_THEME_PREFERENCES: D,
     SET_THEME_OVERRIDE: x,
     CLEAR_THEME_OVERRIDE: L,
     REFRESH_THEME: j,

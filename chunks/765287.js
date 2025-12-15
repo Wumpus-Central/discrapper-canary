@@ -6,12 +6,12 @@ var r = n(524437),
     s = n(581883),
     l = n(981631),
     c = n(874893);
-function u(e, t, n) {
-    var u, d, f;
+function u(e, t) {
+    var n, u, d;
     if (__OVERLAY__) return l.BRd.DARK;
-    let p = c.yW;
+    let f = c.yW;
     if (i.Z.syncForcedColors && "active" === i.Z.systemForcedColors && e !== c.zd.NO_PREFERENCE) return e;
     if (o.ZP.useSystemTheme === c.KW.ON && e !== c.zd.NO_PREFERENCE) return t[e];
-    let _ = null == (u = a.Z.getAppearanceSettings()) ? void 0 : u.theme;
-    return null != _ ? _ : p[null != (f = null == (d = s.Z.settings.appearance) ? void 0 : d.theme) ? f : r.Q2.UNSET];
+    let p = null == (n = a.Z.getAppearanceSettings()) ? void 0 : n.theme;
+    return null != p ? p : f[null != (d = null == (u = s.Z.settings.appearance) ? void 0 : u.theme) ? d : r.Q2.UNSET];
 }
