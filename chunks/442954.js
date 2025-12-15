@@ -244,7 +244,7 @@ let y = {
         return (s.displayName = "PremiumSubscriptionPauseModalWrapper"), (e) => (0, a.jsx)(s, v({}, e));
     },
     NewMemberActionModal: async () => {
-        let { default: e } = await Promise.all([n.e("7590"), n.e("9109")]).then(n.bind(n, 380716)),
+        let { default: e } = await Promise.all([n.e("7590"), n.e("80187")]).then(n.bind(n, 380716)),
             { NewMemberActionTypes: t } = await Promise.resolve().then(n.bind(n, 734893)),
             r = {
                 channelId: "123456789",

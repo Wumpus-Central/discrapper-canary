@@ -119,17 +119,17 @@ let j = function (e) {
             var e;
             return null != (e = d.Z.getSettings().newMemberActions) ? e : p;
         }),
-        a = i.useCallback(
-            (e, n) => {
-                (0, c.vR)(e), (0, c.ad)(t, e.channelId, n, !0);
-            },
-            [t],
-        ),
+        a = i.useCallback((e, t) => {
+            (0, c.vR)(e, t);
+        }, []),
         g = i.useCallback(
             (e, r, i, l) => {
                 var a;
-                let s = null == (a = n[e]) ? void 0 : a.channelId;
-                null != s && null != d.Z.getSettings() && ((0, c.el)(s, r), (0, c.ad)(t, s, i, l));
+                let s = null == (a = n[e]) ? void 0 : a.channelId,
+                    o = r.channelId;
+                null != s &&
+                    null != d.Z.getSettings() &&
+                    (null == d.Z.getPendingIconDataForChannel(o) && (0, c.ad)(t, s, i, l), (0, c.el)(s, r));
             },
             [n, t],
         ),
