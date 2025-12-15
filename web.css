@@ -44679,11 +44679,6 @@ body .b54a5b2f01b57ad8-headerAnimation {
     opacity: 1
 }
 
-.e144e058a84f76ff-nameplatePurchased {
-    opacity: .4;
-    transition: opacity .5s
-}
-
 .e144e058a84f76ff-placeholderUsername {
     border-radius: 8px;
     height: 14px;
@@ -44789,10 +44784,6 @@ body .b54a5b2f01b57ad8-headerAnimation {
     width: 100%
 }
 
-._1e45840d30b6fafc-purchasedEffect {
-    opacity: .35
-}
-
 @keyframes _1e45840d30b6fafc-scaleIn {
     0% {
         transform: scale(.7)
@@ -44805,11 +44796,6 @@ body .b54a5b2f01b57ad8-headerAnimation {
 
 .d71c71459df6d8de-fadeInAvatarImg {
     animation: d71c71459df6d8de-fadeIn 1.5s
-}
-
-.d71c71459df6d8de-avatarPurchased {
-    opacity: .5;
-    transition: opacity .5s
 }
 
 .d71c71459df6d8de-avatar {
