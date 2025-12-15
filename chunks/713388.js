@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(642613), n(388685);
+n.d(t, { Z: () => b }), n(642613), n(388685);
 var a = n(54381),
     r = n(473749),
     i = n(481060),
@@ -7,11 +7,34 @@ var a = n(54381),
     o = n(920952),
     c = n(206412),
     d = n(617810),
-    u = n(211339);
+    u = n(478152);
 function m(e) {
+    if (
+        (e.type === s.Jq.PANEL && null != e.StronglyDiscouragedCustomComponent) ||
+        ((0, s.Lk)(e) &&
+            e.type === s.Jq.SIDEBAR_ITEM &&
+            e.layout.some((e) => (null == e ? void 0 : e.StronglyDiscouragedCustomComponent) != null))
+    )
+        return !0;
+    if ((0, s.Lk)(e) && 0 === e.layout.length) {
+        var t, n, a;
+        if (
+            null !=
+            (null == (a = e.parent) || null == (n = a.parent) || null == (t = n.getLegacySearchKey)
+                ? void 0
+                : t.call(n))
+        )
+            return !0;
+    }
+    return !1;
+}
+function p(e) {
+    return !!m(e) || (!!(0, s.Lk)(e) && e.layout.some((e) => p(e)));
+}
+function h(e) {
     var t;
-    let { setting: n, depth: i, highlight: l } = e,
-        s = null == (t = r.useContext(h)) ? void 0 : t.get(n),
+    let { setting: n, depth: i, highlightMode: l } = e,
+        s = null == (t = r.useContext(x)) ? void 0 : t.get(n),
         o = null;
     return (
         null != s &&
@@ -20,11 +43,11 @@ function m(e) {
                 .sort((e, t) => e.localeCompare(t))
                 .map((e) =>
                     (0, a.jsx)(
-                        m,
+                        h,
                         {
                             setting: e,
                             depth: i + 1,
-                            highlight: l,
+                            highlightMode: l,
                         },
                         e,
                     ),
@@ -32,36 +55,47 @@ function m(e) {
         (0, a.jsx)(c.r, {
             title: n,
             initExpanded: i <= 2,
-            highlight: l,
+            highlightMode: l,
             children: o,
         })
     );
 }
-function p(e) {
-    let { setting: t, depth: n } = e,
-        r =
-            ((0, s.Lk)(t) &&
-                t.type === s.Jq.SIDEBAR_ITEM &&
-                t.layout.some((e) => (null == e ? void 0 : e.StronglyDiscouragedCustomComponent) != null)) ||
-            (t.type === s.Jq.PANEL && null != t.StronglyDiscouragedCustomComponent),
-        i = null;
+function f(e) {
+    let { setting: t, depth: n, inheritedHighlightMode: r } = e,
+        i = (function (e, t) {
+            if ("migrated" === t) return "migrated";
+            switch (e.type) {
+                case s.Jq.ROOT:
+                    return p(e) ? "root" : "migrated-root";
+                case s.Jq.SECTION:
+                    return p(e) ? "none" : "migrated";
+                case s.Jq.PANEL:
+                case s.Jq.SIDEBAR_ITEM:
+                    return m(e) ? "legacy" : "migrated";
+                default:
+                    return null != t ? t : "migrated";
+            }
+        })(t, r),
+        l = "migrated" === i ? "migrated" : void 0,
+        o = null;
     if ((0, s.Lk)(t)) {
-        var l, o, d;
+        var d, u, x;
         let e =
-            null == (d = t.parent) || null == (o = d.parent) || null == (l = o.getLegacySearchKey) ? void 0 : l.call(o);
+            null == (x = t.parent) || null == (u = x.parent) || null == (d = u.getLegacySearchKey) ? void 0 : d.call(u);
         0 === t.layout.length && null != e
-            ? (i = (0, a.jsx)(m, {
+            ? (o = (0, a.jsx)(h, {
                   setting: e,
                   depth: n + 1,
-                  highlight: !0,
+                  highlightMode: null != l ? l : "legacy",
               }))
             : t.layout.length > 0 &&
-              (i = t.layout.map((e) =>
+              (o = t.layout.map((e) =>
                   (0, a.jsx)(
-                      p,
+                      f,
                       {
                           setting: e,
                           depth: n + 1,
+                          inheritedHighlightMode: l,
                       },
                       e.key,
                   ),
@@ -70,12 +104,12 @@ function p(e) {
     return (0, a.jsx)(c.r, {
         title: t.key,
         initExpanded: n <= 2,
-        highlight: r,
-        children: i,
+        highlightMode: i,
+        children: o,
     });
 }
-let h = r.createContext(null);
-function x() {
+let x = r.createContext(null);
+function b() {
     let [e, t] = r.useState(!1),
         { legacySettingDirectory: n } = (0, d.q)(),
         { node: s } = (0, l.ZP)(o.E, ""),
@@ -94,14 +128,14 @@ function x() {
                 onChange: (e) => t(e),
                 label: "Show Legacy Settings Tree",
             }),
-            (0, a.jsx)(h.Provider, {
+            (0, a.jsx)(x.Provider, {
                 value: n,
                 children: (0, a.jsxs)("div", {
                     className: u.tree,
                     children: [
                         e &&
                             (0, a.jsx)(
-                                m,
+                                h,
                                 {
                                     setting: "root",
                                     depth: 1,
@@ -110,7 +144,7 @@ function x() {
                             ),
                         !e &&
                             (0, a.jsx)(
-                                p,
+                                f,
                                 {
                                     setting: s,
                                     depth: 1,
