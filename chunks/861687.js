@@ -27,8 +27,8 @@ var r = n(654861),
     N = n(145016),
     P = n(166884),
     R = n(450109),
-    D = n(118445),
-    w = n(412412),
+    w = n(118445),
+    D = n(412412),
     x = n(311473),
     L = n(615830),
     j = n(314897),
@@ -37,8 +37,8 @@ var r = n(654861),
     U = n(19780),
     G = n(226961),
     Z = n(936349),
-    B = n(594174),
-    F = n(626135),
+    F = n(594174),
+    B = n(626135),
     V = n(12647),
     H = n(931619),
     Y = n(358085),
@@ -501,7 +501,7 @@ class eN extends f.Z {
         let { enabled: n } = (0, y.h)({ location: "_chooseExperiments" });
         n && t.push("should_analyze_user_voice_volume"),
             t.push("keyframe_on_join"),
-            D.Z.getCurrentConfig({ location: "_chooseExperiments" }, { autoTrackExposure: !0 }).enabled &&
+            w.Z.getCurrentConfig({ location: "_chooseExperiments" }, { autoTrackExposure: !0 }).enabled &&
                 t.push("network_aware_socket");
         let r = A.Z.getCurrentConfig(
             { location: "_chooseExperiments" },
@@ -558,7 +558,7 @@ class eN extends f.Z {
             t ||
                 !this._connecting ||
                 this._encountered_socket_failure ||
-                (F.default.track(
+                (B.default.track(
                     es.rMx.VOICE_CONNECTION_SOCKET_FAILURE,
                     ep(ed({}, this._getAnalyticsProperties()), {
                         hostname: this.hostname,
@@ -586,7 +586,7 @@ class eN extends f.Z {
                     e.getOutboundStats().forEach((t) => {
                         var n;
                         (null != (n = t.num_frames) ? n : 0) > 0 &&
-                            F.default.track(
+                            B.default.track(
                                 es.rMx.VIDEO_STREAM_ENDED,
                                 ep(
                                     ed(
@@ -611,7 +611,7 @@ class eN extends f.Z {
                     let t = e.getCameraDurationStats();
                     null != t &&
                         t.camera_enabled_duration > 0 &&
-                        F.default.track(
+                        B.default.track(
                             es.rMx.VIDEO_CALL_ENDED,
                             ep(ed({}, t), { media_session_id: this.getMediaSessionId() }),
                         );
@@ -620,7 +620,7 @@ class eN extends f.Z {
                     var n;
                     let i = e.getInboundStats(t);
                     (null != (n = null == i ? void 0 : i.num_frames) ? n : 0) > 0 &&
-                        F.default.track(
+                        B.default.track(
                             es.rMx.VIDEO_STREAM_ENDED,
                             ed(
                                 ep(ed({}, this._getAnalyticsProperties()), {
@@ -647,7 +647,7 @@ class eN extends f.Z {
                     let n = JSON.parse(e);
                     if (null == n || null == n.available_video_encoders || null == n.available_video_decoders)
                         throw Error("codec survey is not available");
-                    F.default.track(
+                    B.default.track(
                         es.rMx.VOICE_CODEC_DETECTED,
                         ep(ed({}, n), {
                             rtc_connection_id: this.getRTCConnectionId(),
@@ -743,6 +743,7 @@ class eN extends f.Z {
                         soundshare_experimental: k.Z.getExperimentalSoundshare(),
                         join_voice_id: this.joinVoiceId,
                         bypass_system_input_processing: i.bypassSystemInputProcessing,
+                        system_microphone_mode: k.Z.getSystemMicrophoneMode(),
                     },
                 );
             Promise.all([
@@ -754,10 +755,9 @@ class eN extends f.Z {
                 })(),
                 x.Z.getKrispModel(),
                 k.Z.getKrispEnableStats() ? k.Z.getMediaEngine().getNoiseCancellationStats() : Promise.resolve(null),
-                k.Z.getMediaEngine().getSystemMicrophoneMode(),
             ]).then((e) => {
-                let [{ batteryUsageRounded: t }, n, r, i] = e;
-                F.default.track(
+                let [{ batteryUsageRounded: t }, n, r] = e;
+                B.default.track(
                     es.rMx.VOICE_DISCONNECT,
                     ep(ed({}, s), {
                         battery_usage: t,
@@ -766,7 +766,6 @@ class eN extends f.Z {
                         duration_medium_noise_detected_ms: null == r ? void 0 : r.mediumNoiseMs,
                         duration_high_noise_detected_ms: null == r ? void 0 : r.highNoiseMs,
                         duration_noise_cancellation_voice_detected_ms: null == r ? void 0 : r.talkTimeMs,
-                        system_microphone_mode: i,
                     }),
                 );
             }),
@@ -855,7 +854,7 @@ class eN extends f.Z {
             k.Z.getUseVaapiEncoder() && E.push("vaapi"),
             this.context === el.Yn.STREAM &&
                 "streamer" === this.getVoiceParticipantType() &&
-                (0, w.t)("handleReady").enabled &&
+                (0, D.t)("handleReady").enabled &&
                 E.push("useCaptureDeviceForEncode"),
             f.setVideoEncoderExperiments(E.join(",")),
             f.on(p.Sh.Speaking, (e, t, n) => {
@@ -964,7 +963,7 @@ class eN extends f.Z {
                 if (e !== this._socket) return;
                 let n = Z.Z.shouldIncludePreferredRegion() ? Z.Z.getPreferredRegion() : null;
                 this.logger.error("Error occurred while connecting to RTC server: ".concat(t)),
-                    F.default.track(
+                    B.default.track(
                         es.rMx.VOICE_CONNECTION_FAILURE,
                         ep(ed({}, this._getAnalyticsProperties()), {
                             hostname: this.hostname,
@@ -1015,7 +1014,7 @@ class eN extends f.Z {
                     if (this._connecting) {
                         let t = k.Z.getSettings(),
                             n = this._getAnalyticsProperties();
-                        F.default.track(
+                        B.default.track(
                             es.rMx.VOICE_CONNECTION_SUCCESS,
                             ed(
                                 ep(ed({}, n), {
@@ -1041,7 +1040,7 @@ class eN extends f.Z {
                         );
                         let r = performance.now(),
                             i = (e, t) => (null == e || null == t ? null : e - t);
-                        F.default.track(es.rMx.VOICE_CONNECTION_TTC_COLLECTED, {
+                        B.default.track(es.rMx.VOICE_CONNECTION_TTC_COLLECTED, {
                             rtc_connection_id: n.rtc_connection_id,
                             time_1_creation_to_connect: this._connectStartTime - this._createdTime,
                             time_2_media_engine_connect: h,
@@ -1186,7 +1185,7 @@ class eN extends f.Z {
     }
     _handleRemoteStreamsReady(e) {
         let t = (0, _.zO)() - this._connectStartTime;
-        F.default.track(
+        B.default.track(
             es.rMx.VOICE_CONNECTION_REMOTE_STREAMS_CREATED,
             ep(ed({}, this._getAnalyticsProperties()), {
                 number_of_users: e,
@@ -1304,7 +1303,7 @@ class eN extends f.Z {
                 n = null != (a = null == t ? void 0 : t.num_frames) ? a : 0;
             null != t &&
                 n > 0 &&
-                (F.default.track(
+                (B.default.track(
                     es.rMx.VIDEO_STREAM_ENDED,
                     ed(
                         ep(ed({}, this._getAnalyticsProperties()), {
@@ -1353,7 +1352,7 @@ class eN extends f.Z {
                 "Setting media-session-id: ".concat(e, " for rtc-connection-id: ").concat(this.getRTCConnectionId()),
             );
         let t = v.Z.getRawThermalState();
-        F.default.track(
+        B.default.track(
             es.rMx.MEDIA_SESSION_JOINED,
             ep(ed({}, this._getAnalyticsProperties()), {
                 media_session_id: this.getMediaSessionId(),
@@ -1404,7 +1403,7 @@ class eN extends f.Z {
         let n = this._secureFramesTransitionStates.size;
         this._secureFramesTransitionStates.delete(e);
         let r = (e, t) => (null != e && null != t ? e - t : void 0);
-        F.default.track(
+        B.default.track(
             es.rMx.SECURE_FRAMES_TRANSITION,
             ep(ed({}, this._getAnalyticsProperties()), {
                 media_session_id: this.getMediaSessionId(),
@@ -1709,7 +1708,7 @@ class eN extends f.Z {
             timeSinceInit: d,
             eventLog: f,
         } of this._mlsFailures)
-            F.default.track(
+            B.default.track(
                 es.rMx.MLS_FAILURES,
                 ep(ed({}, this._getAnalyticsProperties()), {
                     media_session_id: i,
@@ -1732,7 +1731,7 @@ class eN extends f.Z {
         this._mlsFailures = [];
     }
     _alertMLSFailure(e, t) {
-        let n = B.default.getCurrentUser();
+        let n = F.default.getCurrentUser();
         ((null == n ? void 0 : n.isStaff()) || (null == n ? void 0 : n.isStaffPersonal())) &&
             h.Z.show({
                 title: "MLS Error in ".concat(e),
@@ -1895,7 +1894,7 @@ class eN extends f.Z {
                     let e = this._voiceQuality.getPeriodicStats();
                     if (this.shouldReportPeriodicStats(e))
                         for (let t of e)
-                            F.default.track(
+                            B.default.track(
                                 es.rMx.VOICE_QUALITY_PERIODIC_STATS,
                                 ep(ed({}, this._getAnalyticsProperties()), {
                                     media_session_id: this.getMediaSessionId(),
@@ -1937,7 +1936,7 @@ class eN extends f.Z {
             eu(this, "_trackVoiceConnectionConnecting", () => {
                 let e = M.Z.getChannel(this.channelId),
                     t = null == e ? void 0 : e.type;
-                F.default.track(
+                B.default.track(
                     es.rMx.VOICE_CONNECTION_CONNECTING,
                     ep(ed({}, this.getAudioDeviceStates(), this.getVideoDeviceStates()), {
                         guild_id: this.guildId,
