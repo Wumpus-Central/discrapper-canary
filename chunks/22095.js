@@ -1,7 +1,7 @@
 n.d(t, {
     AH: () => G,
     Ag: () => q,
-    CS: () => w,
+    CS: () => D,
     EW: () => K,
     Kh: () => ei,
     MG: () => en,
@@ -12,14 +12,14 @@ n.d(t, {
     cT: () => $,
     eT: () => Y,
     gU: () => et,
-    gl: () => F,
+    gl: () => B,
     is: () => x,
     it: () => L,
     lL: () => ee,
     lx: () => X,
     m0: () => M,
     nE: () => V,
-    pf: () => B,
+    pf: () => F,
     qm: () => Q,
     w: () => J,
     wF: () => U,
@@ -102,8 +102,8 @@ function R(e, t) {
         e
     );
 }
-let D = 5;
-async function w(e) {
+let w = 5;
+async function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     try {
         let n = (
@@ -120,7 +120,7 @@ async function w(e) {
                 user_status: n.quest_user_status,
             });
         else if (null != n.error_hints_v2 && n.error_hints_v2.length > 0)
-            return { errorHints: n.error_hints_v2.slice(0, D) };
+            return { errorHints: n.error_hints_v2.slice(0, w) };
     } catch (r) {
         var n;
         let e = new o.Z(r);
@@ -208,6 +208,7 @@ async function M(e) {
                 event: r.NetworkActionNames.QUEST_HEARTBEAT,
                 properties: {
                     quest_id: t,
+                    application_id: i,
                     terminal: s,
                     is_overlay: __OVERLAY__,
                     stack_trace: null != (l = Error().stack) ? l : "",
@@ -347,7 +348,7 @@ async function Z(e, t, n) {
         }
     }
 }
-async function B(e) {
+async function F(e) {
     if (!E.Z.isFetchingRewardCode(e)) {
         a.Z.dispatch({
             type: "QUESTS_FETCH_REWARD_CODE_BEGIN",
@@ -375,7 +376,7 @@ async function B(e) {
         }
     }
 }
-async function F(e, t) {
+async function B(e, t) {
     let n = E.Z.isDismissingContent(e),
         r = (0, v.GN)(t);
     if (!n && r) {
