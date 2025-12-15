@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(125988),
     u = n(998502),
     d = n(388032),
-    f = n(407780);
+    f = n(101490);
 function p(e, t, n) {
     return (
         t in e
@@ -68,32 +68,31 @@ let g = u.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
                 item: t,
                 user: n,
                 isHighlighted: i = !1,
-                isPurchased: u = !1,
-                avatarSize: p = s.EFr.SIZE_152,
-                avatarPlaceholderSrc: m,
-                className: E,
+                avatarSize: u = s.EFr.SIZE_152,
+                avatarPlaceholderSrc: p,
+                className: m,
             } = e,
-            b = (0, l.y9)(p),
+            E = (0, l.y9)(u),
             {
-                avatarDecorationSrc: y,
-                eventHandlers: O,
-                avatarPlaceholderSrc: v,
+                avatarDecorationSrc: b,
+                eventHandlers: y,
+                avatarPlaceholderSrc: O,
             } = (0, c.Z)({
                 user: n,
                 avatarDecorationOverride: (null == t ? void 0 : t.type) === o.Z.AVATAR_DECORATION ? t : void 0,
-                size: b,
+                size: E,
                 onlyAnimateOnHoverOrFocus: !i,
             }),
-            S = d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: t.label });
+            v = d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: t.label });
         return (0, r.jsx)(
             g,
-            h(_({}, O), {
-                avatarDecoration: y,
-                src: i ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != m ? m : v,
+            h(_({}, y), {
+                avatarDecoration: b,
+                src: i ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != p ? p : O,
                 imageClassName: i ? f.fadeInAvatarImg : void 0,
-                className: a()(E, f.avatar, { [f.avatarPurchased]: u && !i }),
-                size: p,
-                "aria-label": S,
+                className: a()(m, f.avatar),
+                size: u,
+                "aria-label": v,
             }),
         );
     };

@@ -1,28 +1,28 @@
 r.r(t), r.d(t, { default: () => C }), r(388685), r(314940);
 var n = r(54381),
-    i = r(473749),
-    a = r(512722),
-    s = r.n(a),
-    l = r(467721),
+    a = r(473749),
+    i = r(512722),
+    s = r.n(i),
+    l = r(236726),
     o = r(278074),
     c = r(979554),
     u = r(314794),
-    d = r(399606),
-    f = r(481060),
+    f = r(399606),
+    d = r(481060),
     p = r(566697),
     g = r(283066),
-    h = r(876917),
-    m = r(594174),
-    j = r(508925),
-    b = r(616066),
+    b = r(876917),
+    h = r(594174),
+    m = r(508925),
+    j = r(616066),
     y = r(216541),
     w = r(302800),
     v = r(388032),
-    O = r(186175),
+    O = r(904734),
     P = r(593639),
     E = r(945182),
     x = r(234286);
-function _(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -47,32 +47,31 @@ function _(e) {
     }
     return e;
 }
-let S = (e) => {
-        let { product: t, itemConsumed: r, forCollectedModal: i } = e,
-            [a] = t.items,
-            l = (0, d.e7)([m.default], () => {
-                let e = m.default.getCurrentUser();
+let _ = (e) => {
+        let { product: t, itemConsumed: r, forCollectedModal: a } = e,
+            [i] = t.items,
+            l = (0, f.e7)([h.default], () => {
+                let e = h.default.getCurrentUser();
                 return s()(null != e, "User cannot be undefined"), e;
             }),
             w = Object.values(u.a).includes(t.skuId),
-            _ = (0, g.Z)({ location: "CollectiblesProductPreview" });
+            S = (0, g.Z)({ location: "CollectiblesProductPreview" });
         return (0, o.EQ)(t.type)
             .with(c.Z.PROFILE_EFFECT, () =>
                 (0, n.jsx)("div", {
                     className: O.profileEffectShopPreview,
-                    children: (0, n.jsx)(h.Z, {
-                        skuId: a.skuId,
-                        delayProfileEffectIntro: i,
-                        withScaleAnimation: i,
+                    children: (0, n.jsx)(b.Z, {
+                        skuId: i.skuId,
+                        delayProfileEffectIntro: a,
+                        withScaleAnimation: a,
                     }),
                 }),
             )
             .with(c.Z.AVATAR_DECORATION, () =>
-                (0, n.jsx)(b.R, {
-                    item: a,
+                (0, n.jsx)(j.R, {
+                    item: i,
                     user: l,
-                    avatarSize: f.EFr.SIZE_120,
-                    isPurchased: !1,
+                    avatarSize: d.EFr.SIZE_120,
                     isHighlighted: !0,
                 }),
             )
@@ -80,7 +79,7 @@ let S = (e) => {
                 (0, n.jsx)("div", {
                     className: O.nameplate,
                     children: (0, n.jsx)(p.Z, {
-                        nameplate: a,
+                        nameplate: i,
                         user: l,
                         nameplatePreviewSize: "large",
                         isHighlighted: !0,
@@ -93,9 +92,8 @@ let S = (e) => {
                     children: (0, n.jsx)(y.d, {
                         product: t,
                         user: l,
-                        isPurchased: !1,
                         isHighlighted: !0,
-                        forCollectedModal: i,
+                        forCollectedModal: a,
                     }),
                 }),
             )
@@ -103,7 +101,7 @@ let S = (e) => {
                 if (w)
                     if (r)
                         return (0, n.jsx)("img", {
-                            src: _ ? x : E,
+                            src: S ? x : E,
                             alt: v.intl.string(v.t.t0xkSB),
                             style: { width: "100%" },
                         });
@@ -112,14 +110,14 @@ let S = (e) => {
                             src: P,
                             alt: v.intl.string(v.t.g5W1g8),
                         });
-                return (0, n.jsx)(j.b, { product: t });
+                return (0, n.jsx)(m.b, { product: t });
             })
             .otherwise(() => null);
     },
     k = (e) => {
         let { reducedMotion: t, displayOptions: r } = e,
-            [a, s] = i.useState(!1),
-            o = (0, f.q_F)({
+            [i, s] = a.useState(!1),
+            o = (0, d.q_F)({
                 from: {
                     transform: "translateX(100%)",
                     right: "-100%",
@@ -131,7 +129,7 @@ let S = (e) => {
                 config: { duration: 1550 },
                 onRest: () => setTimeout(() => s(!0), 100),
             }),
-            c = (0, f.q_F)({
+            c = (0, d.q_F)({
                 from: {
                     transform: "translateX(100%)",
                     right: "-100%",
@@ -141,9 +139,9 @@ let S = (e) => {
                     right: "50%",
                 },
                 config: { duration: 1550 },
-                reverse: a,
+                reverse: i,
             }),
-            u = (0, f.q_F)(
+            u = (0, d.q_F)(
                 {
                     from: {
                         transform: "translateX(50%)",
@@ -165,7 +163,7 @@ let S = (e) => {
                 (0, n.jsx)(l.animated.div, {
                     className: O.easterEggContainer,
                     style: o,
-                    children: (0, n.jsx)(S, _({}, e)),
+                    children: (0, n.jsx)(_, S({}, e)),
                 }),
                 (0, n.jsx)(l.animated.div, {
                     className: O.easterEggContainer,
@@ -182,12 +180,12 @@ let S = (e) => {
     };
 function C(e) {
     var t, r;
-    let i = (0, w.v)(e.product.categorySkuId);
-    return null != i
+    let a = (0, w.v)(e.product.categorySkuId);
+    return null != a
         ? (0, n.jsx)(
               k,
-              ((t = _({}, e)),
-              (r = r = { displayOptions: i }),
+              ((t = S({}, e)),
+              (r = r = { displayOptions: a }),
               Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                   : (function (e, t) {
@@ -202,5 +200,5 @@ function C(e) {
                     }),
               t),
           )
-        : (0, n.jsx)(S, _({}, e));
+        : (0, n.jsx)(_, S({}, e));
 }

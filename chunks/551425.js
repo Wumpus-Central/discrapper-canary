@@ -13,9 +13,9 @@ var r = n(979554),
     p = n(594174),
     m = n(583434),
     h = n(216541),
-    g = n(948067);
-let b = s.EFr.SIZE_152,
-    y = (0, a.y9)(b),
+    b = n(411698);
+let g = s.EFr.SIZE_152,
+    y = (0, a.y9)(g),
     O = (e) => {
         var t, n;
         let { item: r } = e,
@@ -30,7 +30,7 @@ let b = s.EFr.SIZE_152,
                 size: y,
             });
         return (0, i.jsx)("div", {
-            className: g.avatarDecorationPreview,
+            className: b.avatarDecorationPreview,
             children: (0, i.jsx)(
                 s.qEK,
                 ((t = (function (e) {
@@ -63,7 +63,7 @@ let b = s.EFr.SIZE_152,
                         "aria-label": r.label,
                         src: u,
                         avatarDecoration: c,
-                        size: b,
+                        size: g,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -84,7 +84,7 @@ let b = s.EFr.SIZE_152,
     j = (e) => {
         let { item: t } = e;
         return (0, i.jsx)("div", {
-            className: g.profileEffectPreview,
+            className: b.profileEffectPreview,
             children: (0, i.jsx)(f.Z, {
                 isHighlighted: !0,
                 skuId: null == t ? void 0 : t.skuId,
@@ -94,10 +94,10 @@ let b = s.EFr.SIZE_152,
     P = (e) => {
         let { item: t } = e;
         return (0, i.jsx)("div", {
-            className: g.nameplatePreview,
+            className: b.nameplatePreview,
             children: (0, i.jsx)(c.Z, {
                 nameplate: t,
-                className: g.nameplate,
+                className: b.nameplate,
                 nameplatePreviewSize: "xlarge",
                 isHighlighted: !0,
                 showPlaceholderUser: !0,
@@ -107,10 +107,9 @@ let b = s.EFr.SIZE_152,
     v = (e) => {
         let { product: t } = e;
         return (0, i.jsx)("div", {
-            className: g.bundlePreview,
+            className: b.bundlePreview,
             children: (0, i.jsx)(h.d, {
                 product: t,
-                isPurchased: !1,
                 isHighlighted: !1,
             }),
         });
@@ -120,7 +119,7 @@ let b = s.EFr.SIZE_152,
             { product: n, isFetching: l } = (0, m.T)(t.skuId, !0);
         if (l || null == n)
             return (0, i.jsx)("div", {
-                className: g.spinnerContainer,
+                className: b.spinnerContainer,
                 children: (0, i.jsx)(s.$jN, {}),
             });
         if (n.type === r.Z.BUNDLE) return 0 === n.items.length ? null : (0, i.jsx)(v, { product: n });
@@ -137,7 +136,7 @@ let b = s.EFr.SIZE_152,
                     ? (0, i.jsx)(d.Z, {
                           defaultAnimationState: u.SR.ACTION,
                           idleAnimationState: u.SR.LOOP,
-                          className: g.giftAnimation,
+                          className: b.giftAnimation,
                           giftStyle: t.giftStyle,
                       })
                     : null;

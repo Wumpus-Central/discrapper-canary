@@ -30,8 +30,8 @@ var n = t(54381),
     v = t(981631),
     k = t(228168),
     E = t(388032),
-    P = t(968394);
-let R = {
+    R = t(968394);
+let P = {
     FULL_WISHLIST: {
         title: E.intl.string(E.t["7lZ31J"]),
         getSubtitle: (i) => E.intl.formatToPlainString(E.t.BjEX38, { username: i }),
@@ -56,9 +56,9 @@ let R = {
 function M(i) {
     let { title: e, subtitle: t, themeClass: s } = i;
     return (0, n.jsx)("div", {
-        className: a()(P.wishlistBannerHeader, s),
+        className: a()(R.wishlistBannerHeader, s),
         children: (0, n.jsxs)("div", {
-            className: P.wishlistBannerTitleContainer,
+            className: R.wishlistBannerTitleContainer,
             children: [
                 (0, n.jsx)(d.Heading, {
                     variant: "heading-lg/bold",
@@ -77,7 +77,7 @@ function A() {
         children: [
             (0, n.jsx)(d.nn4, { children: E.intl.string(E.t.pfChQr) }),
             (0, n.jsx)("div", {
-                className: P.wishlistBannerGrid,
+                className: R.wishlistBannerGrid,
                 children: Array.from({ length: L.zL }, (i, e) =>
                     (0, n.jsx)(S.Z, { cardSize: w.U.SMALL }, "placeholder-".concat(e)),
                 ),
@@ -92,7 +92,7 @@ function H(i) {
         : (0, n.jsx)(
               "li",
               {
-                  className: P.wishlistBannerListItem,
+                  className: R.wishlistBannerListItem,
                   children: (0, n.jsx)(b.BO, {
                       item: e.item,
                       remainingCount: t,
@@ -103,10 +103,9 @@ function H(i) {
                               if (null != e.item.bundleItems && e.item.bundleItems.length > 0) {
                                   let t = { items: e.item.bundleItems };
                                   return (0, n.jsx)("div", {
-                                      className: P.bundlePreviewBanner,
+                                      className: R.bundlePreviewBanner,
                                       children: (0, n.jsx)(h.d, {
                                           product: t,
-                                          isPurchased: !1,
                                           isHighlighted: i,
                                           user: s,
                                       }),
@@ -141,14 +140,14 @@ function G(i) {
         analyticsLocations: f,
     } = i;
     return (0, n.jsxs)("ul", {
-        className: P.wishlistBannerGrid,
+        className: R.wishlistBannerGrid,
         children: [
             e.map((i, e) => {
                 let { item: t, source: s } = i;
                 return (0, n.jsx)(
                     "li",
                     {
-                        className: P.wishlistBannerListItem,
+                        className: R.wishlistBannerListItem,
                         children: ((i, e) => {
                             var t, s;
                             let { item: r, source: u } = i,
@@ -247,7 +246,7 @@ let W = function (i) {
             });
         }, [e.id]),
         F =
-            R[
+            P[
                 s.useMemo(
                     () =>
                         j >= L.zL
@@ -306,12 +305,12 @@ let W = function (i) {
         ? null
         : (0, n.jsxs)("div", {
               ref: V,
-              className: a()(P.wishlistBanner, Z),
+              className: a()(R.wishlistBanner, Z),
               style: W,
               children: [
                   null != D &&
                       (0, n.jsx)("div", {
-                          className: P.backgroundImage,
+                          className: R.backgroundImage,
                           style: { backgroundImage: "url(".concat(D, ")") },
                       }),
                   (0, n.jsx)(d.f6W, {

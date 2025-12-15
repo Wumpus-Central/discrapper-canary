@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(314940);
+n.d(t, { Z: () => w }), n(314940);
 var r = n(54381);
 n(473749);
 var i = n(278074),
@@ -17,7 +17,7 @@ var i = n(278074),
     g = n(987209),
     E = n(981631),
     b = n(388032),
-    y = n(610868),
+    y = n(154965),
     O = n(241822);
 function v(e, t, n) {
     return (
@@ -135,7 +135,6 @@ let R = (e) => {
             className: y.bundlePreviewWrapper,
             children: (0, r.jsx)(u.d, {
                 product: o,
-                isPurchased: !1,
                 isHighlighted: !1,
             }),
         });
@@ -156,7 +155,7 @@ let R = (e) => {
           })
         : l;
 };
-function D(e) {
+function w(e) {
     let { sku: t } = e;
     return t.productLine === E.POd.COLLECTIBLES ? (0, r.jsx)(R, { sku: t }) : null;
 }

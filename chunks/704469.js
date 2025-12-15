@@ -11,14 +11,14 @@ var a = n(54381),
     m = n(429368),
     p = n(724994),
     h = n(786040),
-    x = n(508925),
-    f = n(616066),
-    g = n(216541),
-    b = n(396728),
+    f = n(508925),
+    x = n(616066),
+    b = n(216541),
+    g = n(396728),
     v = n(58201),
     j = n(201964),
-    _ = n(374370);
-let y = (e) => {
+    y = n(635492);
+let C = (e) => {
         let { product: t, isCardHovered: n } = e,
             r = (0, h.rC)(t),
             { isPurchased: s, isPartiallyOwnedBundle: o } = (0, p.L)(t),
@@ -26,11 +26,11 @@ let y = (e) => {
         return (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)("div", {
-                    className: i()(_.productPreview, {
-                        [_.faded]: (s || o) && !n,
-                        [_.fullPreview]: c,
+                    className: i()(y.productPreview, {
+                        [y.faded]: (s || o) && !n,
+                        [y.fullPreview]: c,
                     }),
-                    children: (0, a.jsx)(C, {
+                    children: (0, a.jsx)(_, {
                         product: t,
                         isCardHovered: n,
                     }),
@@ -39,7 +39,7 @@ let y = (e) => {
             ],
         });
     },
-    C = (e) => {
+    _ = (e) => {
         let { product: t, isCardHovered: n } = e,
             r = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
             i = (0, h.rC)(t),
@@ -49,33 +49,29 @@ let y = (e) => {
                 return (0, a.jsx)(d.Z, {
                     skuId: s.skuId,
                     isHighlighted: n,
-                    isPurchased: !1,
                     removeSetHeight: !0,
                 });
             case l.Z.AVATAR_DECORATION:
-                return (0, a.jsx)(f.R, {
+                return (0, a.jsx)(x.R, {
                     item: s,
                     user: r,
                     isHighlighted: n,
-                    isPurchased: !1,
                     avatarSize: c.EFr.SIZE_120,
                 });
             case l.Z.NAMEPLATE:
-                return (0, a.jsx)(b.Z, {
+                return (0, a.jsx)(g.Z, {
                     nameplate: s,
                     user: r,
                     isHighlighted: n,
-                    isPurchased: !1,
                 });
             case l.Z.BUNDLE:
-                return (0, a.jsx)(g.d, {
+                return (0, a.jsx)(b.d, {
                     product: t,
                     user: r,
                     isHighlighted: n,
-                    isPurchased: !1,
                 });
             case l.Z.EXTERNAL_SKU:
-                return (0, a.jsx)(x.b, {
+                return (0, a.jsx)(f.b, {
                     product: t,
                     animationState: n ? "on" : "off",
                 });
@@ -90,7 +86,7 @@ let y = (e) => {
             color: c.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
             width: 40,
             height: 40,
-            className: i()(_.productPreviewIconOverlay, { [_.hidden]: t }),
+            className: i()(y.productPreviewIconOverlay, { [y.hidden]: t }),
         });
     },
     E = (e) => {
@@ -99,7 +95,7 @@ let y = (e) => {
             l = (0, m.o)(i);
         if (null == i) return null;
         let s = (0, v.W)(i, null != r ? r : l);
-        return (0, a.jsx)(y, {
+        return (0, a.jsx)(C, {
             product: s,
             isCardHovered: n,
         });

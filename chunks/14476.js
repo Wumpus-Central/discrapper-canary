@@ -1,124 +1,111 @@
-n.d(t, { c: () => v });
-var l = n(54381),
-    r = n(473749),
+n.d(t, { c: () => h });
+var r = n(54381),
+    l = n(473749),
     i = n(120356),
     a = n.n(i),
-    s = n(979554),
-    o = n(780384),
-    u = n(481060),
-    c = n(410030),
-    d = n(104505),
-    m = n(699758),
-    p = n(616066),
-    h = n(396728),
-    f = n(388032),
-    g = n(632939);
-let v = (e) => {
+    o = n(979554),
+    s = n(481060),
+    u = n(104505),
+    c = n(699758),
+    d = n(616066),
+    p = n(396728),
+    m = n(388032),
+    f = n(252728);
+let h = (e) => {
     let t,
         n,
         {
             skuId: i,
-            assetId: v,
-            user: j,
+            assetId: h,
+            user: g,
             claimed: y,
-            onSelect: b,
-            productName: S,
-            a11yLabel: x,
-            selectedSkuId: P,
-            category: O,
-            type: E,
-            palette: I,
+            onSelect: j,
+            productName: v,
+            a11yLabel: b,
+            selectedSkuId: O,
+            category: S,
+            type: P,
+            palette: x,
         } = e,
-        w = r.useRef(null),
-        { isHoveringOrFocusing: T } = (0, d.Z)(w),
-        k = !y && T,
-        C = (0, c.ZP)(),
-        N = (0, o.wj)(C);
+        E = l.useRef(null),
+        { isHoveringOrFocusing: w } = (0, u.Z)(E),
+        I = !y && w;
     return (
-        E === s.Z.AVATAR_DECORATION
+        P === o.Z.AVATAR_DECORATION
             ? ((t = {
-                  type: s.Z.AVATAR_DECORATION,
-                  label: x,
-                  asset: v,
+                  type: o.Z.AVATAR_DECORATION,
+                  label: b,
+                  asset: h,
               }),
-              (n = (0, l.jsxs)(l.Fragment, {
-                  children: [
-                      (0, l.jsx)(p.R, {
-                          item: t,
-                          user: j,
-                          isHighlighted: k,
-                          avatarSize: u.EFr.SIZE_96,
-                          isPurchased: y,
-                      }),
-                      y &&
-                          (0, l.jsx)(u.sV5, {
-                              size: "custom",
-                              width: 48,
-                              height: 48,
-                              color: N ? u.TVs.colors.WHITE : u.TVs.colors.BLACK,
-                              className: g.claimedIcon,
-                          }),
-                  ],
+              (n = (0, r.jsx)(d.R, {
+                  item: t,
+                  user: g,
+                  isHighlighted: I,
+                  avatarSize: s.EFr.SIZE_96,
               })))
-            : E === s.Z.NAMEPLATE &&
+            : P === o.Z.NAMEPLATE &&
               ((t = {
-                  type: s.Z.NAMEPLATE,
-                  label: x,
-                  asset: v,
-                  palette: null != I ? I : "none",
+                  type: o.Z.NAMEPLATE,
+                  label: b,
+                  asset: h,
+                  palette: null != x ? x : "none",
               }),
-              (n = (0, l.jsxs)(l.Fragment, {
-                  children: [
-                      (0, l.jsx)(h.Z, {
-                          nameplate: t,
-                          user: j,
-                          isHighlighted: k,
-                          isPurchased: y,
-                          size: "small",
-                      }),
-                      y &&
-                          (0, l.jsx)(u.sV5, {
-                              size: "custom",
-                              width: 48,
-                              height: 48,
-                              color: N ? u.TVs.colors.WHITE : u.TVs.colors.BLACK,
-                              className: g.claimedIcon,
-                          }),
-                  ],
+              (n = (0, r.jsx)(p.Z, {
+                  nameplate: t,
+                  user: g,
+                  isHighlighted: I,
+                  size: "small",
               }))),
-        (0, l.jsx)(u.tEY, {
-            children: (0, l.jsxs)(u.kL8, {
-                ref: w,
-                "aria-label": null != S ? S : "",
+        (0, r.jsx)(s.tEY, {
+            children: (0, r.jsxs)(s.kL8, {
+                ref: E,
+                "aria-label": null != v ? v : "",
                 onClick: () => {
-                    null == i || null == b || y || b(i);
+                    null == i || null == j || y || j(i);
                 },
-                className: a()(N ? g.shopCardDark : g.shopCard, {
-                    [g.shopCardAnimation]: !y,
-                    [N ? g.shopCardDarkHighlighted : g.shopCardHighlighted]: k,
-                    [g.shopCardSelected]: P === i,
+                className: a()(f.shopCard, {
+                    [f.shopCardAnimation]: !y,
+                    [f.highlighted]: I,
+                    [f.shopCardSelected]: O === i,
                 }),
                 children: [
-                    (0, l.jsx)("div", {
-                        className: a()(g.preview, {
-                            [g.avatarPreview]: E === s.Z.AVATAR_DECORATION,
-                            [g.nameplatePreview]: E === s.Z.NAMEPLATE,
-                            [g.previewTrick]: O === m.KN.Trick,
-                            [g.previewTreat]: O === m.KN.Treat,
-                            [g.shopCardClaimed]: y,
+                    (0, r.jsx)("div", {
+                        className: a()(f.preview, {
+                            [f.avatarPreview]: P === o.Z.AVATAR_DECORATION,
+                            [f.nameplatePreview]: P === o.Z.NAMEPLATE,
+                            [f.previewTrick]: S === c.KN.Trick,
+                            [f.previewTreat]: S === c.KN.Treat,
                         }),
-                        children: null != t && n,
+                        children:
+                            null != t
+                                ? (0, r.jsxs)(r.Fragment, {
+                                      children: [
+                                          (0, r.jsx)("div", {
+                                              className: a()(f.previewContainer, { [f.claimed]: y }),
+                                              children: n,
+                                          }),
+                                          y &&
+                                              (0, r.jsx)(s.sV5, {
+                                                  size: "custom",
+                                                  width: 48,
+                                                  height: 48,
+                                                  color: s.TVs.colors.INTERACTIVE_TEXT_ACTIVE,
+                                                  className: f.claimedIcon,
+                                              }),
+                                      ],
+                                  })
+                                : null,
                     }),
-                    (0, l.jsxs)("div", {
-                        className: g.productName,
+                    (0, r.jsxs)("div", {
+                        className: f.productName,
                         children: [
-                            (0, l.jsx)(u.Heading, {
+                            (0, r.jsx)(s.Heading, {
                                 variant: "heading-md/extrabold",
-                                children: S,
+                                children: v,
                             }),
-                            (0, l.jsx)(u.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: "text-sm/normal",
-                                children: y ? f.intl.string(f.t["6cfuDj"]) : f.intl.string(f.t.QQsaCc),
+                                children: y ? m.intl.string(m.t["6cfuDj"]) : m.intl.string(m.t.QQsaCc),
                             }),
                         ],
                     }),

@@ -7,7 +7,7 @@ var i = n(979554),
     s = n(566697),
     l = n(876917),
     c = n(688192),
-    u = n(232644);
+    u = n(889588);
 let d = 136,
     f = 200;
 function p(e) {
@@ -20,7 +20,6 @@ function p(e) {
                 children: (0, r.jsx)(l.Z, {
                     skuId: m.skuId,
                     isHighlighted: p,
-                    isPurchased: !1,
                     removeSetHeight: !0,
                 }),
             });
@@ -31,7 +30,6 @@ function p(e) {
                     item: m,
                     user: n,
                     isHighlighted: p,
-                    isPurchased: !1,
                     avatarSize: a.EFr.SIZE_80,
                 }),
             });
@@ -47,7 +45,6 @@ function p(e) {
                             isHighlighted: p,
                             showPlaceholderUser: !0,
                             showStatus: !0,
-                            isPurchased: !1,
                             nameplatePreviewSize: "default",
                             width: _ === c.U.SMALL ? d : f,
                         }),
@@ -61,7 +58,6 @@ function p(e) {
                             isHighlighted: p,
                             showPlaceholderUser: !0,
                             showStatus: !0,
-                            isPurchased: !1,
                             nameplatePreviewSize: "default",
                             width: _ === c.U.SMALL ? d : f,
                         }),

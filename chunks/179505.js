@@ -13,8 +13,8 @@ var r = n(54381),
     d = n(766717),
     f = n(474936),
     p = n(388032),
-    _ = n(239990),
-    m = n(976218);
+    _ = n(669155),
+    m = n(788015);
 function h(e, t, n) {
     (0, c.Z)({
         skuId: e.skuId,
@@ -69,7 +69,6 @@ function E(e, t) {
                     className: _.bundlePreview,
                     children: (0, r.jsx)(l.d, {
                         product: t,
-                        isPurchased: !1,
                         isHighlighted: !1,
                         user: a,
                     }),

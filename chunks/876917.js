@@ -12,29 +12,28 @@ let f = (e) => {
     let {
             skuId: t,
             isHighlighted: n,
-            isPurchased: a,
-            removeSetHeight: f = !1,
-            withScaleAnimation: p = !1,
-            delayProfileEffectIntro: _ = !1,
+            removeSetHeight: a = !1,
+            withScaleAnimation: f = !1,
+            delayProfileEffectIntro: p = !1,
         } = e,
-        [m, h] = i.useState(!0);
+        [_, m] = i.useState(!0);
     return (i.useEffect(() => {
-        if (!0 !== p) h(!1);
+        if (!0 !== f) m(!1);
         else {
             let e = setTimeout(() => {
-                h(!1);
+                m(!1);
             }, s.JH);
             return () => {
                 clearTimeout(e);
             };
         }
-    }, [p]),
+    }, [f]),
     null == t)
         ? null
         : (0, r.jsxs)("div", {
               className: o()(u.previewContainer, {
-                  [u.previewContainerAnimation]: p,
-                  [u.previewContainerSetHeight]: !f,
+                  [u.previewContainerAnimation]: f,
+                  [u.previewContainerSetHeight]: !a,
               }),
               children: [
                   (0, r.jsx)("img", {
@@ -44,20 +43,17 @@ let f = (e) => {
                       "aria-hidden": !0,
                       draggable: !1,
                   }),
-                  !m &&
-                      (0, r.jsx)("div", {
-                          className: a ? u.purchasedEffect : void 0,
-                          children: (0, r.jsx)(c.Z, {
-                              skuId: t,
-                              useThumbnail: !0,
-                              autoPlay: p,
-                              restartMethod: l.Q.FromStart,
-                              resetOnHover: !0,
-                              isHovering: n,
-                              useOpacityOnHover: !1,
-                              delayIntro: _,
-                              shopPreview: !0,
-                          }),
+                  !_ &&
+                      (0, r.jsx)(c.Z, {
+                          skuId: t,
+                          useThumbnail: !0,
+                          autoPlay: f,
+                          restartMethod: l.Q.FromStart,
+                          resetOnHover: !0,
+                          isHovering: n,
+                          useOpacityOnHover: !1,
+                          delayIntro: p,
+                          shopPreview: !0,
                       }),
               ],
           });

@@ -30,7 +30,6 @@ let C = (e) => {
             item: t,
             avatarSize: n,
             isHighlighted: !1,
-            isPurchased: !1,
             avatarPlaceholderSrc: a,
             className: v.avatarDecoration,
         });
