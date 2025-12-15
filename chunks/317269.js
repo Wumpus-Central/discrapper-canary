@@ -19,15 +19,15 @@ var l,
     H = n(912788),
     M = n(509545),
     h = n(55563),
-    Z = n(63063),
+    p = n(63063),
     g = n(74538),
-    p = n(296848),
-    m = n(335105),
+    m = n(296848),
+    Z = n(335105),
     N = n(741245),
     f = n(783017),
     x = n(474936),
-    E = n(282793),
-    _ = n(981631),
+    _ = n(282793),
+    E = n(981631),
     I = n(283307),
     T = n(353149),
     P = n(388032),
@@ -40,19 +40,19 @@ function v(t) {
         switch (n) {
             case x.Xh.PREMIUM_MONTH_TIER_1:
                 (e = P.intl.string(P.t.knvOVz)),
-                    _.X7u.has(null != i ? i : _.HeQ.UNKNOWN) && (e = P.intl.format(P.t.o6hBiR, {}));
+                    E.X7u.has(null != i ? i : E.HeQ.UNKNOWN) && (e = P.intl.format(P.t.o6hBiR, {}));
                 break;
             case x.Xh.PREMIUM_MONTH_TIER_2:
                 (e = P.intl.string(P.t.f8Dquh)),
-                    _.X7u.has(null != i ? i : _.HeQ.UNKNOWN) && (e = P.intl.format(P.t.A4THYt, {}));
+                    E.X7u.has(null != i ? i : E.HeQ.UNKNOWN) && (e = P.intl.format(P.t.A4THYt, {}));
                 break;
             case x.Xh.PREMIUM_YEAR_TIER_1:
                 (e = P.intl.string(P.t.YZd5rw)),
-                    _.X7u.has(null != i ? i : _.HeQ.UNKNOWN) && (e = P.intl.format(P.t.MHAxpE, {}));
+                    E.X7u.has(null != i ? i : E.HeQ.UNKNOWN) && (e = P.intl.format(P.t.MHAxpE, {}));
                 break;
             case x.Xh.PREMIUM_YEAR_TIER_2:
                 (e = P.intl.formatToPlainString(P.t["M/Lknl"], { numFreeGuildSubscriptions: x.cb })),
-                    _.X7u.has(null != i ? i : _.HeQ.UNKNOWN) &&
+                    E.X7u.has(null != i ? i : E.HeQ.UNKNOWN) &&
                         (e = P.intl.format(P.t.mULxLW, { numFreeGuildSubscriptions: x.cb }));
                 break;
             case x.Xh.PREMIUM_3_MONTH_TIER_2:
@@ -62,6 +62,12 @@ function v(t) {
             case x.Xh.PREMIUM_MONTH_TIER_0:
             case x.Xh.PREMIUM_YEAR_TIER_0:
                 e = P.intl.string(P.t["XEoQ7+"]);
+                break;
+            case x.Xh.PREMIUM_GROUP_MONTH:
+                e = P.intl.formatToPlainString(T.default.pDiwHe, {
+                    premiumGroupProductName: (0, _.sO)(),
+                    totalSeats: _.v$,
+                });
                 break;
             default:
                 throw Error("Unexpected planId: ".concat(n));
@@ -99,34 +105,34 @@ function j(t) {
             isDowngrade: k,
             hideClose: j,
             postSuccessGuild: b,
-            paymentSourceType: w,
-            startingFractionalPremiumEndsAt: U,
+            paymentSourceType: U,
+            startingFractionalPremiumEndsAt: w,
             customCTAType: A,
         } = t,
         { isDisplayingWowMomentConfirmation: O, customCheckoutFlow: S, isPremiumGroupPurchase: X } = (0, u.JL)(),
-        { theme: y } = (0, c.TCT)(),
-        D = (0, C.e7)([h.Z], () => (null != H ? h.Z.get(H.id) : null)),
-        Y = (0, p.qH)(U);
+        { theme: D } = (0, c.TCT)(),
+        y = (0, C.e7)([h.Z], () => (null != H ? h.Z.get(H.id) : null)),
+        Y = (0, m.qH)(w);
     i.useEffect(() => {
-        if (null == H || null != D) return;
+        if (null == H || null != y) return;
         let { applicationId: t, id: e } = H;
-        (0, d.$N)(t, e).catch(_.VqG);
-    }, [H, D]);
+        (0, d.$N)(t, e).catch(E.VqG);
+    }, [H, y]);
     let B = (t) =>
         X
             ? P.intl.formatToPlainString(T.default.pDiwHe, {
-                  premiumGroupProductName: (0, E.sO)(),
-                  totalSeats: E.v$,
+                  premiumGroupProductName: (0, _.sO)(),
+                  totalSeats: _.v$,
               })
             : t.skuId === x.Si.TIER_0
-              ? _.X7u.has(null != w ? w : _.HeQ.UNKNOWN)
+              ? E.X7u.has(null != U ? U : E.HeQ.UNKNOWN)
                   ? P.intl.format(P.t.o6hBiR, {})
                   : P.intl.string(P.t["AGf/ye"])
               : t.skuId === x.Si.TIER_1
-                ? _.X7u.has(null != w ? w : _.HeQ.UNKNOWN)
+                ? E.X7u.has(null != U ? U : E.HeQ.UNKNOWN)
                     ? P.intl.format(P.t.o6hBiR, {})
                     : P.intl.string(P.t.knvOVz)
-                : _.X7u.has(null != w ? w : _.HeQ.UNKNOWN)
+                : E.X7u.has(null != U ? U : E.HeQ.UNKNOWN)
                   ? P.intl.format(P.t.A4THYt, {})
                   : a
                     ? P.intl.string(P.t["g52y/r"])
@@ -138,10 +144,10 @@ function j(t) {
                 children: [P.intl.string(P.t.bIVRSQ), " ", P.intl.string(P.t["0UJqOy"])],
             }),
         });
-    else if (null != D)
+    else if (null != y)
         e = (0, s.jsx)("div", {
             className: R.text,
-            children: P.intl.format(P.t["tsQOs+"], { skuName: D.name }),
+            children: P.intl.format(P.t["tsQOs+"], { skuName: y.name }),
         });
     else if (Y && !k) {
         let t = M.Z.get(l);
@@ -153,7 +159,7 @@ function j(t) {
                           (0, s.jsx)("p", { children: P.intl.string(P.t["L9lcG/"]) }),
                           (0, s.jsx)("p", {
                               children: P.intl.format(P.t.EoDFuN, {
-                                  helpCenterLink: Z.Z.getArticleURL(_.BhN.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: p.Z.getArticleURL(E.BhN.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -165,7 +171,7 @@ function j(t) {
                           (0, s.jsx)("p", { children: P.intl.string(P.t.UPpbP3) }),
                           (0, s.jsx)("p", {
                               children: P.intl.format(P.t.EoDFuN, {
-                                  helpCenterLink: Z.Z.getArticleURL(_.BhN.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: p.Z.getArticleURL(E.BhN.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -200,23 +206,23 @@ function j(t) {
     }
     let Q = g.ZP.getPremiumType(l);
     r()(null != Q, "premium type should not be null in purchase confirmation");
-    let [W, K] = i.useState(!1),
-        G = i.useCallback(() => {
-            null != L && (L(), S === I.cL.APPLE_PAYMENT_LINK && K(!0));
+    let [W, G] = i.useState(!1),
+        K = i.useCallback(() => {
+            null != L && (L(), S === I.cL.APPLE_PAYMENT_LINK && G(!0));
         }, [L, S]);
     n = X
         ? P.intl.string(T.default.clIveA)
         : "deeplink_to_desktop_app" === A || S === I.cL.APPLE_PAYMENT_LINK
           ? P.intl.string(P.t.qXV2XU)
-          : null != D
-            ? P.intl.formatToPlainString(P.t["1qGgm4"], { skuName: D.name })
+          : null != y
+            ? P.intl.formatToPlainString(P.t["1qGgm4"], { skuName: y.name })
             : k
               ? P.intl.string(P.t.QJ9EyM)
               : null != b
                 ? P.intl.string(P.t.ta3cXY)
                 : P.intl.string(P.t.TkTvBz);
     let V = () =>
-        _.X7u.has(null != w ? w : _.HeQ.UNKNOWN)
+        E.X7u.has(null != U ? U : E.HeQ.UNKNOWN)
             ? N.ZP.Types.PREMIUM_PAYMENT_STARTED
             : null != o
               ? N.ZP.Types.PREMIUM_UPDATED
@@ -227,15 +233,15 @@ function j(t) {
               text: e,
               buttonText: n,
               hideClose: j,
-              onClose: G,
+              onClose: K,
               buttonLoading: W,
           })
         : (0, s.jsxs)("div", {
               className: R.confirmation,
               children: [
-                  (0, s.jsx)(m.Z, {
+                  (0, s.jsx)(Z.Z, {
                       type: V(),
-                      theme: y,
+                      theme: D,
                   }),
                   e,
                   j
@@ -246,7 +252,7 @@ function j(t) {
                             children: (0, s.jsx)(c.Button, {
                                 variant: "primary",
                                 text: n,
-                                onClick: G,
+                                onClick: K,
                                 loading: W,
                             }),
                         }),
