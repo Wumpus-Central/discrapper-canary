@@ -1,60 +1,61 @@
-t.d(n, { default: () => j }), t(388685), t(953529);
-var l = t(54381),
-    i = t(473749),
+t.d(n, { default: () => p }), t(388685), t(953529);
+var i = t(54381),
+    l = t(473749),
     a = t(793030),
     r = t(442837),
     s = t(481060),
     c = t(41776),
     o = t(357156),
     u = t(513449),
-    d = t(592125),
-    h = t(430824),
+    d = t(937096),
+    h = t(592125),
+    x = t(430824),
     v = t(305298),
     m = t(405613),
-    x = t(460838),
-    C = t(765305),
-    g = t(388032),
-    p = t(710421);
-function j(e) {
+    g = t(460838),
+    j = t(765305),
+    f = t(388032),
+    C = t(710421);
+function p(e) {
     var n;
-    let { transitionState: t, event: j, onSuccess: N, onClose: f } = e,
-        { guild_id: k, privacy_level: E } = j,
-        y = (0, r.e7)([d.Z], () => d.Z.getChannel(j.channel_id), [j]),
-        w = (0, r.e7)([h.Z], () => h.Z.getGuild(k), [k]),
-        { canManageGuildEvent: I } = (0, o.XJ)(null != y ? y : w),
-        Z = I(j),
-        _ = (0, r.e7)([c.Z], () => c.Z.isLurking(k), [k]),
-        b = j.entity_type === C.WX.STAGE_INSTANCE,
-        [S, T] = i.useState(b),
-        [A, { loading: G, error: L }] = (0, v.Z)();
+    let { transitionState: t, event: p, onSuccess: N, onClose: k } = e,
+        { guild_id: y, privacy_level: E } = p,
+        w = (0, r.e7)([h.Z], () => h.Z.getChannel(p.channel_id), [p]),
+        _ = (0, r.e7)([x.Z], () => x.Z.getGuild(y), [y]),
+        { canManageGuildEvent: T } = (0, o.XJ)(null != w ? w : _),
+        Z = T(p),
+        S = (0, r.e7)([c.Z], () => c.Z.isLurking(y), [y]),
+        A = p.entity_type === j.WX.STAGE_INSTANCE,
+        [I, b] = l.useState(A),
+        [P, { loading: G, error: L }] = (0, v.Z)();
     if (!Z) return null;
-    let X = E === C.j8.PUBLIC ? g.intl.string(g.t.HhlaLP) : g.intl.string(g.t.GI3xXd),
-        O = () => {
-            null == N || N(), f(), (0, u.Ku)(!1);
+    let O = E === j.j8.PUBLIC ? f.intl.string(f.t.HhlaLP) : f.intl.string(f.t.GI3xXd),
+        R = () => {
+            null == N || N(), k(), (0, u.Ku)(!1);
         },
-        P = async () => {
-            await A(j, S, { onSuccess: O });
+        M = async () => {
+            await P(p, I, { onSuccess: R });
         };
-    return (0, l.jsxs)(a.Modal, {
+    return (0, i.jsxs)(a.Modal, {
         transitionState: t,
-        onClose: f,
-        title: j.name,
-        subtitle: g.intl.format(g.t.UMajol, {
-            privacyLevel: X,
+        onClose: k,
+        title: p.name,
+        subtitle: f.intl.format(f.t.UMajol, {
+            privacyLevel: O,
             privacyLevelHook: (e, n) =>
-                E !== C.j8.PUBLIC
+                E !== j.j8.PUBLIC
                     ? null
-                    : (0, l.jsxs)(
+                    : (0, i.jsxs)(
                           "div",
                           {
-                              className: p.privacyLevel,
+                              className: C.privacyLevel,
                               children: [
-                                  (0, l.jsx)(s.enf, {
+                                  (0, i.jsx)(s.enf, {
                                       size: "xs",
                                       color: "currentColor",
-                                      className: p.publicIcon,
+                                      className: C.publicIcon,
                                   }),
-                                  (0, l.jsx)(s.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       variant: "text-md/normal",
                                       children: e,
                                   }),
@@ -63,50 +64,49 @@ function j(e) {
                           n,
                       ),
         }),
+        actionBarInput: A
+            ? (0, i.jsxs)(a.P3F, {
+                  onClick: () => b(!I),
+                  className: C.notificationToggle,
+                  children: [
+                      (0, i.jsx)(a.FZ5, { checked: I }),
+                      (0, i.jsx)(s.Text, {
+                          color: "text-default",
+                          variant: "text-sm/normal",
+                          children: f.intl.string(f.t["Pe+Pwp"]),
+                      }),
+                  ],
+              })
+            : void 0,
         actions: [
             {
-                variant: "secondary",
-                text: g.intl.string(g.t.CZGqeT),
-                onClick: () => {
-                    f();
-                },
-            },
-            {
                 variant: "active",
-                text: g.intl.string(g.t.cK1GGY),
-                onClick: P,
+                text: f.intl.string(f.t.cK1GGY),
+                onClick: M,
                 loading: G,
             },
         ],
         children: [
-            (0, l.jsx)(x.Z, {
-                guild: w,
-                channel: y,
-                name: j.name,
-                description: null != (n = j.description) ? n : void 0,
-                imageSource: (0, m.Z)(j),
+            (0, i.jsx)(g.Z, {
+                guild: _,
+                channel: w,
+                name: p.name,
+                description: null != (n = p.description) ? n : void 0,
+                imageSource: (0, m.Z)(p),
                 isActive: !1,
-                isUserLurking: _,
+                isUserLurking: S,
                 speakers: [],
                 speakerCount: 0,
                 rsvped: !0,
-                guildEvent: j,
+                guildEvent: p,
+                hideAgeVerificationNotice: !0,
             }),
-            b &&
-                (0, l.jsx)("div", {
-                    className: p.verticalSpacing,
-                    children: (0, l.jsx)(a.XZJ, {
-                        checked: S,
-                        onChange: (e) => T(e),
-                        label: g.intl.string(g.t.dGNtgI),
-                        labelType: "secondary",
-                    }),
-                }),
+            j.Qk.has(p.entity_type) && (0, i.jsx)(d.Z, { className: C.ageVerificationNotice }),
             null != L && null != L.getAnyErrorMessage()
-                ? (0, l.jsx)(s.Text, {
+                ? (0, i.jsx)(s.Text, {
                       color: "text-feedback-critical",
                       variant: "text-sm/normal",
-                      className: p.errorMessage,
+                      className: C.errorMessage,
                       children: L.getAnyErrorMessage(),
                   })
                 : null,

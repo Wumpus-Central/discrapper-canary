@@ -15,4 +15,5 @@ e.exports = {
     eventActions: "_8826425bb0684b12-eventActions",
     channelLocation: "_8826425bb0684b12-channelLocation label",
     externalLocation: "_8826425bb0684b12-externalLocation label",
+    ageVerificationNoticeSpacing: "_8826425bb0684b12-ageVerificationNoticeSpacing",
 };

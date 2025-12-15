@@ -209,6 +209,45 @@ class c extends a.h {
             return null;
         }
     }
+    enableProfilingV8Heap(e) {
+        try {
+            var t, n;
+            return null === r.Z ||
+                void 0 === r.Z ||
+                null == (n = r.Z.processUtils) ||
+                null == (t = n.enableProfilingV8Heap)
+                ? void 0
+                : t.call(n, e);
+        } catch (e) {
+            return;
+        }
+    }
+    disableProfilingV8Heap() {
+        try {
+            var e, t;
+            return null === r.Z ||
+                void 0 === r.Z ||
+                null == (t = r.Z.processUtils) ||
+                null == (e = t.disableProfilingV8Heap)
+                ? void 0
+                : e.call(t);
+        } catch (e) {
+            return;
+        }
+    }
+    getProfilerV8MemoryCallstacks() {
+        try {
+            var e, t;
+            return null === r.Z ||
+                void 0 === r.Z ||
+                null == (t = r.Z.processUtils) ||
+                null == (e = t.getProfilerV8MemoryCallstacks)
+                ? void 0
+                : e.call(t);
+        } catch (e) {
+            return null;
+        }
+    }
     constructor() {
         var e, t;
         super(),

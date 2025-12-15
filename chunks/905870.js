@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(642613), n(388685), n(539854), n(361932), n(187205);
+n.d(t, { Z: () => K }), n(642613), n(388685), n(539854), n(361932), n(187205);
 var r = n(268146),
     i = n(433517),
     a = n(147913),
@@ -42,30 +42,37 @@ let y = 1048576,
     w = 256,
     D = 12,
     x = !0,
-    L = 4 * y,
-    j = 30 * f.Z.Millis.MINUTE,
-    M = 8 * y,
-    k = 60 * f.Z.Millis.MINUTE,
-    U = "lastMemoryUsageRestart",
-    G = +f.Z.Millis.DAY,
-    Z = +f.Z.Millis.MINUTE;
-function B() {
+    L = 15 * f.Z.Millis.MINUTE,
+    j = 0.75 * y,
+    M = +y,
+    k = 64,
+    U = 4 * y,
+    G = 30 * f.Z.Millis.MINUTE,
+    Z = 8 * y,
+    F = 60 * f.Z.Millis.MINUTE,
+    B = "lastMemoryUsageRestart",
+    V = +f.Z.Millis.DAY,
+    H = +f.Z.Millis.MINUTE;
+function Y() {
     return p.isPlatformEmbedded && (0, p.isWindows)();
 }
-class F extends a.Z {
+class W extends a.Z {
     _initialize() {}
     _terminate() {
-        B() &&
+        Y() &&
             (clearInterval(this._checkIntervalNativeHeap),
             (this._checkIntervalNativeHeap = null),
             clearInterval(this._checkIntervalPA),
             (this._checkIntervalPA = null),
+            clearInterval(this._checkIntervalV8),
+            (this._checkIntervalV8 = null),
             _.Z.disablePerfMemoryHooks(),
-            _.Z.disablePAMemoryProfiler());
+            _.Z.disablePAMemoryProfiler(),
+            _.Z.disableProfilingV8Heap());
     }
     handlePostConnectionOpen() {
         var e, t;
-        if (!B()) return;
+        if (!Y()) return;
         let n = null == (e = (t = o.Z.remoteApp).getReleaseChannel) ? void 0 : e.call(t);
         "development" !== n && "canary" !== n && (this._supportedNativeChannel = !1),
             clearInterval(this._checkIntervalNativeHeap),
@@ -76,7 +83,11 @@ class F extends a.Z {
                 (clearInterval(this._checkIntervalPA),
                 (this._checkIntervalPA = setInterval(async () => {
                     await this.trackPartitionAllocPerformanceStats();
-                }, N)));
+                }, N)),
+                clearInterval(this._checkIntervalV8),
+                (this._checkIntervalV8 = setInterval(async () => {
+                    await this.trackV8HeapAlloc();
+                }, L)));
     }
     async trackNativeHeapPerformanceStats() {
         var e, t;
@@ -170,21 +181,21 @@ class F extends a.Z {
             (this._pushedNativeDeadlockMinidumpCount += 1));
     }
     doRestartIfNeeded(e) {
-        if (e < L) return;
+        if (e < U) return;
         let t = performance.now() - this._startupTime;
-        if (t < k) return;
-        let n = i.K.get(U);
-        if (null != n && n.timestamp >= Date.now() - G) return;
+        if (t < F) return;
+        let n = i.K.get(B);
+        if (null != n && n.timestamp >= Date.now() - V) return;
         let { enable: a, enableForce: o } = g.Z.getConfig({ location: "DesktopPerfAnalyticsManager" });
         a &&
             setTimeout(() => {
                 let n = !0;
-                if (e < M || !o) {
+                if (e < Z || !o) {
                     let e = l.Z.getIdleSince();
-                    if (null == e || e > Date.now() - j || null != u.Z.getRTCConnection()) return;
+                    if (null == e || e > Date.now() - G || null != u.Z.getRTCConnection()) return;
                 } else n = !1;
                 s.Z.persist(),
-                    i.K.set(U, {
+                    i.K.set(B, {
                         timeSinceStartup: t,
                         timestamp: Date.now(),
                     }),
@@ -197,13 +208,13 @@ class F extends a.Z {
                         message: "Restarting due to excessive renderer memory usage: ".concat(e, "kB"),
                     }),
                     h.ZP.crash(3);
-            }, Z);
+            }, H);
     }
     trackPartitionAllocPerformanceStats() {
         var e, t, n;
-        let r = _.Z.getMemoryHeapStats();
+        let r = _.Z.getPartitionAllocatorStats();
         if (null == r) return;
-        let i = null != (e = r.usedHeapSize) ? e : 0;
+        let i = null != (e = r.total_alloc_kb) ? e : 0;
         if (!this._paHeapHooksInstalled && i > P) {
             let e = _.Z.enablePAMemoryProfiler({
                 allocationThresholdKB: D,
@@ -273,16 +284,82 @@ class F extends a.Z {
             }
         }
     }
+    trackV8HeapAlloc() {
+        var e, t, n, r, i, a, o, s, l;
+        let c = _.Z.getMemoryHeapStats();
+        if (null == c) return;
+        let u = null != (e = c.usedHeapSize) ? e : 0;
+        if (
+            (!this._v8ProfilerRunning &&
+                u >= j &&
+                (_.Z.enableProfilingV8Heap({
+                    allocationThresholdKB: k,
+                    sampleIntervalBytes: 65536,
+                    stackDepth: 64,
+                }),
+                (this._v8ProfilerRunning = !0)),
+            this._v8ProfilerRunning)
+        ) {
+            if (u < M) return;
+            let e = _.Z.getProfilerV8MemoryCallstacks();
+            if (null != e) {
+                let c = 3,
+                    u = e.map((e) => {
+                        var t, n;
+                        return {
+                            callstack: e,
+                            totalSize:
+                                null != (n = null == (t = e.frame_alloc_size) ? void 0 : t.reduce((e, t) => e + t, 0))
+                                    ? n
+                                    : 0,
+                        };
+                    });
+                for (let e of (u.sort((e, t) => t.totalSize - e.totalSize), u.slice(0, c).map((e) => e.callstack))) {
+                    let c = null != (s = null == (t = e.frame_script_name) ? void 0 : t.length) ? s : 0;
+                    if (
+                        null == c ||
+                        c !== (null == (n = e.frame_name) ? void 0 : n.length) ||
+                        c !== (null == (r = e.frame_line) ? void 0 : r.length) ||
+                        c !== (null == (i = e.frame_col) ? void 0 : i.length)
+                    )
+                        continue;
+                    let u = {
+                        memory_type: "v8_heap",
+                        callstack_allocation_total_size_kb: Math.floor(
+                            (null != (l = null == (a = e.frame_alloc_size) ? void 0 : a.reduce((e, t) => e + t, 0))
+                                ? l
+                                : 0) / 1024,
+                        ),
+                        callstack_frame_module_names:
+                            null == (o = e.frame_script_name)
+                                ? void 0
+                                : o.map((t, n) => {
+                                      var r, i, a, o, s, l;
+                                      let c = null != (o = null == (r = e.frame_name) ? void 0 : r[n]) ? o : "",
+                                          u = null != (s = null == (i = e.frame_line) ? void 0 : i[n]) ? s : 0,
+                                          d = null != (l = null == (a = e.frame_col) ? void 0 : a[n]) ? l : 0;
+                                      return c.length > 0
+                                          ? "at ".concat(c, " (").concat(t, ":").concat(u, ":").concat(d, ")")
+                                          : "at ".concat(t, ":").concat(u, ":").concat(d);
+                                  }),
+                    };
+                    d.default.track(E.rMx.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, u);
+                }
+            }
+        }
+    }
     constructor(...e) {
         super(...e),
             b(this, "_checkIntervalNativeHeap", null),
             b(this, "_checkIntervalPA", null),
+            b(this, "_checkIntervalV8", null),
             b(this, "_nativeHeapHooksInstalled", !1),
             b(this, "_paHeapHooksInstalled", !1),
+            b(this, "_v8ProfilerRunning", !1),
             b(this, "_pushedNativeDeadlockMinidumpCount", 0),
             b(this, "_startupTime", performance.now()),
             b(this, "_supportedNativeChannel", !0),
             b(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
     }
 }
-let V = new F();
+let K = new W();
