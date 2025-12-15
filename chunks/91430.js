@@ -33,8 +33,8 @@ var r = n(54381),
     N = n(594174),
     P = n(626135),
     R = n(63063),
-    D = n(74538),
-    w = n(212895),
+    w = n(74538),
+    D = n(212895),
     x = n(374649),
     L = n(140465),
     j = n(160913),
@@ -43,8 +43,8 @@ var r = n(54381),
     U = n(757861),
     G = n(385251),
     Z = n(987997),
-    B = n(393411),
-    F = n(908951),
+    F = n(393411),
+    B = n(908951),
     V = n(592889),
     H = n(975772),
     Y = n(474936),
@@ -52,7 +52,7 @@ var r = n(54381),
     K = n(362786),
     z = n(921944),
     q = n(388032),
-    Q = n(903163);
+    Q = n(703361);
 let X = "app";
 function J(e) {
     let t,
@@ -67,9 +67,9 @@ function J(e) {
             let e = N.default.getCurrentUser();
             return l()(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e;
         });
-    if (0 === (0, D.uV)(n.additionalPlans)) return null;
+    if (0 === (0, w.uV)(n.additionalPlans)) return null;
     let { status: p } = n,
-        _ = (0, D.v6)(n);
+        _ = (0, w.v6)(n);
     if (_) t = Q.guildBoostingSubscriptionRowCanceled;
     else
         switch (p) {
@@ -100,7 +100,7 @@ function J(e) {
                         children: [
                             (0, r.jsx)("div", { className: o()(Q.guildBoostingWordmark, { [Q.canceled]: _ }) }),
                             (0, r.jsx)("div", {
-                                children: (0, D.bt)({
+                                children: (0, w.bt)({
                                     subscription: n,
                                     renewalInvoicePreview: i,
                                     user: u,
@@ -221,7 +221,7 @@ function en(e) {
                 className: Q.detailBlockHeader,
                 children: q.intl.string(q.t.KXQjfc),
             }),
-            (0, r.jsx)("div", { children: D.ZP.getBillingInformationString(t, n, i, !1, s) }),
+            (0, r.jsx)("div", { children: w.ZP.getBillingInformationString(t, n, i, !1, s) }),
         ],
     });
 }
@@ -303,7 +303,7 @@ function ei(e) {
     let S = (0, y.Z)(),
         I = (0, M.$)(),
         T = (0, L.lr)(),
-        C = D.ZP.isBaseSubscriptionCanceled(t),
+        C = w.ZP.isBaseSubscriptionCanceled(t),
         A = (0, U.P)(t, i);
     if (null == b || null == v) return (0, r.jsx)(m.$jN, {});
     let N = A ? (0, L.Yi)(v) : null,
@@ -320,7 +320,7 @@ function ei(e) {
                       isLoading: a,
                       analyticsLocation: n,
                   })
-                : (0, r.jsx)(B.Z, {
+                : (0, r.jsx)(F.Z, {
                       subscription: t,
                       currentInvoicePreview: b,
                       renewalInvoicePreview: v,
@@ -365,9 +365,9 @@ function ei(e) {
                                                   paymentGatewayName: W.Vzj[t.paymentGateway],
                                               })
                                             : q.intl.string(q.t.iRzXKd),
-                                    children: (0, r.jsx)(F.Z, {
+                                    children: (0, r.jsx)(B.Z, {
                                         subscription: t,
-                                        onPaymentSourceAdded: w.i1,
+                                        onPaymentSourceAdded: D.i1,
                                         highlightAddPaymentMethodButton: c || l,
                                         analyticsLocation: n,
                                         currentInvoicePreview: b,
@@ -443,7 +443,7 @@ function es(e) {
             analyticsLocation: d,
             fetchKey: T,
         }),
-        [D] = (0, x.ED)({
+        [w] = (0, x.ED)({
             subscriptionId: a.id,
             renewal: !0,
             applyEntitlements: !0,
@@ -452,7 +452,7 @@ function es(e) {
             userDiscountOfferId: null == S ? void 0 : S.id,
             fetchKey: T,
         }),
-        w = (0, H.x)(),
+        D = (0, H.x)(),
         L = null == s ? void 0 : s.invalid,
         U = (0, f.e7)([N.default], () => {
             var e;
@@ -460,10 +460,10 @@ function es(e) {
         }),
         G = u()(a.currentPeriodEnd),
         Z = null != a.paymentSourceId,
-        B = null != (t = null == D ? void 0 : D.total) ? t : 0,
-        F =
+        F = null != (t = null == w ? void 0 : w.total) ? t : 0,
+        B =
             !Z &&
-            B > 0 &&
+            F > 0 &&
             (7 >= G.diff(u()(), "days") || a.status === W.O0b.PAST_DUE) &&
             !U &&
             !a.isPurchasedExternally,
@@ -473,11 +473,12 @@ function es(e) {
         J = (null == a ? void 0 : a.status) === W.O0b.PAST_DUE,
         en = J ? u()().diff(u()(a.currentPeriodStart), "days") : 0,
         er = null != y && y.isPremiumGroupPrimary(),
-        [ea] = (0, x.Ox)({
+        ea = a.hasAnyPremiumGroup,
+        [eo] = (0, x.Ox)({
             subscriptionId: a.id,
             preventFetch: !(X || J),
         });
-    return null == P || null == D
+    return null == P || null == w
         ? (0, r.jsx)(m.$jN, {})
         : (null != a.renewalMutations &&
               ((a.renewalMutations.planId !== a.planId && !(0, A.Q0)(a.renewalMutations.planId)) ||
@@ -492,22 +493,23 @@ function es(e) {
               label: q.intl.string(q.t["/gs+Pz"]),
               description: q.intl.string(q.t.D8UpUo),
               children: [
-                  F ? (0, r.jsx)($, {}) : null,
+                  B ? (0, r.jsx)($, {}) : null,
                   Y ? (0, r.jsx)(ee, {}) : null,
-                  X && null != ea
+                  X && null != eo
                       ? (0, r.jsx)(et, {
                             daysPastDue: en,
                             subscription: a,
-                            openInvoiceId: ea.id,
+                            openInvoiceId: eo.id,
                         })
                       : null,
                   er &&
+                      ea &&
                       (0, r.jsx)(k.L, {
                           subscription: a,
                           analyticsLocations: O,
                       }),
                   n,
-                  w &&
+                  D &&
                       (0, r.jsx)(m.Wn, {
                           messageType: m.QYI.INFO,
                           action: (0, r.jsx)(m.P3F, {
@@ -534,11 +536,11 @@ function es(e) {
                                   paymentSource: s,
                                   busy: l,
                                   fromStandaloneBillingPage: c,
-                                  showNoPaymentMethod: F,
+                                  showNoPaymentMethod: B,
                                   showInvalidPaymentMethod: Y,
                                   fetchedCurrentInvoicePreview: P,
-                                  fetchedRenewalInvoicePreview: D,
-                                  fetchedOpenInvoice: ea,
+                                  fetchedRenewalInvoicePreview: w,
+                                  fetchedOpenInvoice: eo,
                                   isPremiumGroup: er,
                               }),
                           }),
@@ -559,7 +561,7 @@ function es(e) {
                                               paymentSource: s,
                                               busy: l,
                                               fromStandaloneBillingPage: c,
-                                              showNoPaymentMethod: F,
+                                              showNoPaymentMethod: B,
                                               showInvalidPaymentMethod: Y,
                                               fetchedCurrentInvoicePreview: null,
                                               fetchedRenewalInvoicePreview: null,

@@ -1,4 +1,11 @@
-n.d(t, { Z: () => K }), n(388685), n(539854);
+n.d(t, {
+    ZP: () => Q,
+    bs: () => q,
+    pJ: () => z,
+    qI: () => K,
+}),
+    n(388685),
+    n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -466,87 +473,93 @@ let W = (0, S.oH)(function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return new Set(t.map((e) => e.exePath));
     }),
-    K = function (e) {
-        let { className: t, showHeader: n = !0 } = e,
-            a = (0, s.Wu)([m.ZP], () => m.ZP.getGamesSeen(!1)),
-            { runningGame: l, overrideExePaths: c } = (0, s.cj)([m.ZP], () => ({
+    K = () => {
+        let e = (0, s.Wu)([m.ZP], () => m.ZP.getGamesSeen(!1)),
+            { runningGame: t, overrideExePaths: n } = (0, s.cj)([m.ZP], () => ({
                 runningGame: m.ZP.getVisibleGame(),
                 overrideExePaths: W(...m.ZP.getOverrides()),
-            })),
-            { gameHistory: u, robloxSubgameHistory: f } = i.useMemo(
-                () =>
-                    a.reduce((e, t) => ((0, b.le)(t) ? e.robloxSubgameHistory.push(t) : e.gameHistory.push(t), e), {
-                        gameHistory: [],
-                        robloxSubgameHistory: [],
-                    }),
-                [a],
-            ),
-            p = i.useRef(null);
-        function _() {
-            return 0 === u.length
-                ? (0, r.jsx)(Y, { children: (0, r.jsx)(d.OZU, { children: P.intl.string(P.t["1yiJwn"]) }) })
-                : (0, r.jsx)(d.C3N, {
-                      className: x.marginTop40,
-                      label: P.intl.string(P.t.jCOdvx),
-                      description: P.intl.format(P.t.KPA3m9, { igdbLink: F }),
-                      children: u.map((e) =>
+            }));
+        i.useEffect(() => ((0, h.Ky)(), h.P7), []);
+        let a = i.useMemo(() => e.reduce((e, t) => ((0, b.le)(t) && e.push(t), e), []), [e]);
+        return null != t
+            ? (0, r.jsx)(
+                  V,
+                  {
+                      rawGame: t,
+                      isOverride: n.has(t.exePath),
+                      nowPlaying: !0,
+                      subgames: t.id === E.eB ? a : void 0,
+                  },
+                  (0, m.rH)(t),
+              )
+            : (0, r.jsx)(H, {});
+    },
+    z = () => {
+        let e = i.useRef(null);
+        return (0, r.jsxs)("div", {
+            className: o()(R.nowPlayingAdd, x.marginReset),
+            children: [
+                (0, r.jsx)("span", { children: P.intl.string(P.t.xwhoqM) }),
+                (0, r.jsx)(d.yRy, {
+                    targetElementRef: e,
+                    renderPopout: (e) => {
+                        let { closePopout: t } = e;
+                        return (0, r.jsx)(B, { onClose: t });
+                    },
+                    align: "center",
+                    position: "bottom",
+                    children: (t) =>
+                        (0, r.jsx)(
+                            d.Avr,
+                            k(j({}, t), {
+                                buttonRef: e,
+                                variant: "primary",
+                                textVariant: "text-sm/medium",
+                                text: P.intl.string(P.t.GjgdXe),
+                            }),
+                        ),
+                }),
+            ],
+        });
+    },
+    q = (e) => {
+        let { hideHeader: t = !1 } = e,
+            n = (0, s.Wu)([m.ZP], () => m.ZP.getGamesSeen(!1)),
+            a = (0, s.e7)([m.ZP], () => W(...m.ZP.getOverrides()));
+        i.useEffect(() => ((0, h.Ky)(), h.P7), []);
+        let { gameHistory: o, robloxSubgameHistory: l } = i.useMemo(
+            () =>
+                n.reduce((e, t) => ((0, b.le)(t) ? e.robloxSubgameHistory.push(t) : e.gameHistory.push(t), e), {
+                    gameHistory: [],
+                    robloxSubgameHistory: [],
+                }),
+            [n],
+        );
+        return 0 === o.length
+            ? (0, r.jsx)(Y, { children: (0, r.jsx)(d.OZU, { children: P.intl.string(P.t["1yiJwn"]) }) })
+            : (0, r.jsx)(d.C3N, {
+                  label: t ? void 0 : P.intl.string(P.t.jCOdvx),
+                  description: t ? void 0 : P.intl.format(P.t.KPA3m9, { igdbLink: F }),
+                  children: (0, r.jsx)("div", {
+                      children: o.map((e) =>
                           (0, r.jsx)(
                               V,
                               {
                                   rawGame: e,
-                                  isOverride: c.has(e.exePath),
-                                  subgames: e.id === E.eB ? f : void 0,
+                                  isOverride: a.has(e.exePath),
+                                  subgames: e.id === E.eB ? l : void 0,
                               },
                               (0, m.rH)(e),
                           ),
                       ),
-                  });
-        }
-        return (
-            i.useEffect(() => ((0, h.Ky)(), h.P7), []),
-            (0, r.jsxs)(C.Z, {
-                title: n ? P.intl.string(P.t.AVDyEj) : null,
-                className: t,
-                children: [
-                    null != l
-                        ? (0, r.jsx)(
-                              V,
-                              {
-                                  rawGame: l,
-                                  isOverride: c.has(l.exePath),
-                                  nowPlaying: !0,
-                                  subgames: l.id === E.eB ? f : void 0,
-                              },
-                              (0, m.rH)(l),
-                          )
-                        : (0, r.jsx)(H, {}),
-                    (0, r.jsxs)("div", {
-                        className: o()(R.nowPlayingAdd, x.marginReset, x.marginTop8, x.marginBottom20),
-                        children: [
-                            (0, r.jsx)("span", { children: P.intl.string(P.t.xwhoqM) }),
-                            (0, r.jsx)(d.yRy, {
-                                targetElementRef: p,
-                                renderPopout: (e) => {
-                                    let { closePopout: t } = e;
-                                    return (0, r.jsx)(B, { onClose: t });
-                                },
-                                align: "center",
-                                position: "bottom",
-                                children: (e) =>
-                                    (0, r.jsx)(
-                                        d.Avr,
-                                        k(j({}, e), {
-                                            buttonRef: p,
-                                            variant: "primary",
-                                            textVariant: "text-sm/medium",
-                                            text: P.intl.string(P.t.GjgdXe),
-                                        }),
-                                    ),
-                            }),
-                        ],
-                    }),
-                    _(),
-                ],
-            })
-        );
+                  }),
+              });
+    },
+    Q = function (e) {
+        let { className: t, showHeader: n = !0 } = e;
+        return (0, r.jsxs)(C.Z, {
+            title: n ? P.intl.string(P.t.AVDyEj) : null,
+            className: t,
+            children: [(0, r.jsx)(K, {}), (0, r.jsx)(z, {}), (0, r.jsx)(d.izJ, { gap: 20 }), (0, r.jsx)(q, {})],
+        });
     };

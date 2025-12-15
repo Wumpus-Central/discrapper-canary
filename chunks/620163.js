@@ -1664,7 +1664,7 @@ let eU = () => [
                 section: eR.oAB.REGISTERED_GAMES,
                 searchableTitles: [eD.intl.string(eD.t.AVDyEj)],
                 label: eD.intl.string(eD.t.AVDyEj),
-                element: ec.Z,
+                element: ec.ZP,
                 predicate: () => !eK && (0, eS.Jw)(),
             },
             [eN.s6.OVERLAY]: {

@@ -34,7 +34,7 @@ function g() {
                     return (0, r.jsx)(c.ZP, {});
                 case p.Z.MY_GAMES:
                 default:
-                    return (0, r.jsx)(u.Z, {
+                    return (0, r.jsx)(u.ZP, {
                         className: h.body,
                         showHeader: !1,
                     });

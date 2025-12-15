@@ -1,29 +1,27 @@
 n.d(t, {
-    L: () => R,
-    d: () => N,
+    L: () => N,
+    d: () => C,
 }),
     n(953529),
     n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(512722),
-    a = n.n(o),
-    s = n(442837),
-    l = n(481060),
-    c = n(366939),
-    u = n(74538),
-    d = n(51144),
-    f = n(80721),
-    p = n(643281),
-    _ = n(591085),
-    m = n(546090),
-    h = n(366733),
-    g = n(282793),
-    E = n(981631),
-    b = n(941651),
-    y = n(388032),
-    O = n(17845);
-function v(e, t, n) {
+    a = n(442837),
+    o = n(481060),
+    s = n(366939),
+    l = n(74538),
+    c = n(51144),
+    u = n(80721),
+    d = n(643281),
+    f = n(591085),
+    p = n(546090),
+    _ = n(366733),
+    m = n(282793),
+    h = n(981631),
+    g = n(353149),
+    E = n(388032),
+    b = n(12048);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +34,7 @@ function v(e, t, n) {
         e
     );
 }
-function S(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,12 +45,12 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-function I(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,53 +62,53 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let C = () =>
-        (0, r.jsxs)(l.Kqy, {
+let I = () =>
+        (0, r.jsxs)(o.Kqy, {
             direction: "horizontal",
             gap: 10,
             padding: {
                 top: 12,
                 bottom: 12,
             },
-            className: O.header,
+            className: b.header,
             children: [
-                (0, r.jsx)(l.Heading, {
+                (0, r.jsx)(o.Heading, {
                     variant: "display-md",
-                    className: O.logoHeader,
-                    children: (0, g.sO)(),
+                    className: b.logoHeader,
+                    children: (0, m.sO)(),
                 }),
-                (0, r.jsx)(l.Cts, {
+                (0, r.jsx)(o.Cts, {
                     type: "beta",
                     variant: "expressive",
                 }),
             ],
         }),
-    A = (e) => {
+    T = (e) => {
         let { title: t, description: n, button: i } = e;
         return (0, r.jsxs)("div", {
-            className: O.descriptionAndButtonContainer,
+            className: b.descriptionAndButtonContainer,
             children: [
-                (0, r.jsxs)(l.Kqy, {
+                (0, r.jsxs)(o.Kqy, {
                     direction: "vertical",
                     gap: 8,
-                    className: O.descriptionContainer,
+                    className: b.descriptionContainer,
                     children: [
-                        (0, r.jsx)(l.Heading, {
+                        (0, r.jsx)(o.Heading, {
                             variant: "heading-xl/semibold",
                             children: t,
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: "text-sm/medium",
                             color: "text-muted",
                             children: n,
@@ -118,97 +116,97 @@ let C = () =>
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: O.buttonContainer,
+                    className: b.buttonContainer,
                     children: i,
                 }),
             ],
         });
     },
-    N = (e) => {
+    C = (e) => {
         let { currentUser: t } = e,
-            { premiumGroupMembers: i, isLoading: o } = (0, _.Z)(),
+            { premiumGroupMembers: i, isLoading: s } = (0, f.Z)(),
             {
-                hasFetchedMembership: a,
-                premiumGroupSubscriptionId: c,
-                premiumGroupMembershipSubscriptionStatus: u,
-                premiumGroupMembershipCurrentPeriodEnd: f,
-            } = (0, s.cj)([p.Z], () => ({
-                hasFetchedMembership: p.Z.hasFetchedMembership(),
-                premiumGroupSubscriptionId: p.Z.getPremiumGroupSubscriptionId(),
-                premiumGroupMembershipSubscriptionStatus: p.Z.getPremiumGroupSubscriptionStatus(),
-                premiumGroupMembershipCurrentPeriodEnd: p.Z.getPremiumGroupCurrentPeriodEnd(),
+                hasFetchedMembership: l,
+                premiumGroupSubscriptionId: u,
+                premiumGroupMembershipSubscriptionStatus: p,
+                premiumGroupMembershipCurrentPeriodEnd: y,
+            } = (0, a.cj)([d.Z], () => ({
+                hasFetchedMembership: d.Z.hasFetchedMembership(),
+                premiumGroupSubscriptionId: d.Z.getPremiumGroupSubscriptionId(),
+                premiumGroupMembershipSubscriptionStatus: d.Z.getPremiumGroupSubscriptionStatus(),
+                premiumGroupMembershipCurrentPeriodEnd: d.Z.getPremiumGroupCurrentPeriodEnd(),
             }));
-        if (o || null == i || !a || null == c) return (0, r.jsx)(l.$jN, {});
-        let { primary: m, members: v } = i,
-            { title: I, description: N } = (() => {
-                switch (u) {
-                    case E.O0b.CANCELED:
+        if (s || null == i || !l || null == u) return (0, r.jsx)(o.$jN, {});
+        let { primary: v, members: C } = i,
+            { title: A, description: N } = (() => {
+                switch (p) {
+                    case h.O0b.CANCELED:
                         return {
-                            title: y.intl.string(b.default.mCwdPj),
-                            description: y.intl.format(b.default.wH9NYG, { endDate: f }),
+                            title: E.intl.string(g.default.mCwdPj),
+                            description: E.intl.format(g.default.wH9NYG, { endDate: y }),
                         };
-                    case E.O0b.PAUSED:
+                    case h.O0b.PAUSED:
                         return {
-                            title: y.intl.string(b.default.IDyd1e),
-                            description: y.intl.format(b.default["8MfYhr"], {
-                                premiumGroupProductName: (0, g.sO)(),
-                                helpCenterLink: g.j3,
+                            title: E.intl.string(g.default.IDyd1e),
+                            description: E.intl.format(g.default["8MfYhr"], {
+                                premiumGroupProductName: (0, m.sO)(),
+                                helpCenterLink: m.j3,
                             }),
                         };
-                    case E.O0b.PAST_DUE:
-                    case E.O0b.ACCOUNT_HOLD:
-                    case E.O0b.BILLING_RETRY:
+                    case h.O0b.PAST_DUE:
+                    case h.O0b.ACCOUNT_HOLD:
+                    case h.O0b.BILLING_RETRY:
                         return {
-                            title: y.intl.string(b.default.Duq8zp),
-                            description: y.intl.format(b.default["MHn/D6"], {
-                                endDate: f,
-                                premiumGroupProductName: (0, g.sO)(),
+                            title: E.intl.string(g.default.Duq8zp),
+                            description: E.intl.format(g.default["MHn/D6"], {
+                                endDate: y,
+                                premiumGroupProductName: (0, m.sO)(),
                             }),
                         };
                     default:
                         return {
-                            title: y.intl.formatToPlainString(b.default.xiUjMF, {
-                                premiumGroupProductName: (0, g.sO)(),
+                            title: E.intl.formatToPlainString(g.default.xiUjMF, {
+                                premiumGroupProductName: (0, m.sO)(),
                             }),
-                            description: y.intl.format(b.default["2HEyqG"], {
-                                primaryName: (0, d.XM)(m),
-                                premiumGroupProductName: (0, g.sO)(),
-                                helpCenterLink: g.j3,
+                            description: E.intl.format(g.default["2HEyqG"], {
+                                primaryName: (0, c.XM)(v),
+                                premiumGroupProductName: (0, m.sO)(),
+                                helpCenterLink: m.j3,
                             }),
                         };
                 }
             })(),
             P = () => {
-                (0, l.ZDy)(async () => {
+                (0, o.ZDy)(async () => {
                     let { default: e } = await n.e("92326").then(n.bind(n, 3446));
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            T(S({}, n), {
-                                premiumGroupSubscriptionId: c,
+                            S(O({}, n), {
+                                premiumGroupSubscriptionId: u,
                                 currentUser: t,
                             }),
                         );
                 });
             };
-        return (0, r.jsxs)(l.$1m, {
-            className: O.container,
+        return (0, r.jsxs)(o.$1m, {
+            className: b.container,
             color: "nitro-pink",
             children: [
-                (0, r.jsx)(C, {}),
+                (0, r.jsx)(I, {}),
                 (0, r.jsxs)("div", {
-                    className: O.contentGrid,
+                    className: b.contentGrid,
                     children: [
-                        (0, r.jsx)(A, {
-                            title: I,
+                        (0, r.jsx)(T, {
+                            title: A,
                             description: N,
-                            button: (0, r.jsx)(l.Button, {
+                            button: (0, r.jsx)(o.Button, {
                                 variant: "secondary",
-                                text: y.intl.string(b.default.NCu2JD),
+                                text: E.intl.string(g.default.NCu2JD),
                                 onClick: P,
                             }),
                         }),
-                        (0, r.jsxs)(l.Kqy, {
+                        (0, r.jsxs)(o.Kqy, {
                             direction: "vertical",
                             padding: {
                                 left: 32,
@@ -216,19 +214,19 @@ let C = () =>
                             },
                             gap: 0,
                             children: [
-                                (0, r.jsx)(l.Heading, {
+                                (0, r.jsx)(o.Heading, {
                                     variant: "heading-sm/medium",
                                     color: "text-strong",
-                                    className: O.usersListHeader,
-                                    children: y.intl.string(b.default["oqw/KW"]),
+                                    className: b.usersListHeader,
+                                    children: E.intl.string(g.default["oqw/KW"]),
                                 }),
-                                (0, r.jsx)(h.Vl, {
-                                    user: m,
+                                (0, r.jsx)(_.Vl, {
+                                    user: v,
                                     isOwnUser: !1,
                                 }),
-                                v.map((e) =>
+                                C.map((e) =>
                                     (0, r.jsx)(
-                                        h.kg,
+                                        _.kg,
                                         {
                                             user: e,
                                             isOwnUser: e.id === (null == t ? void 0 : t.id),
@@ -243,21 +241,21 @@ let C = () =>
             ],
         });
     },
-    P = (e) => {
+    A = (e) => {
         let {
             premiumGroupMembers: t,
             isLoadingPremiumGroupMembers: n,
             canInvite: i,
-            onInvite: o,
-            onRemoveMember: a,
-            onRemoveInvitedUser: s,
+            onInvite: a,
+            onRemoveMember: s,
+            onRemoveInvitedUser: l,
             numTotalSeats: c,
             numUsedSeats: u,
             numAvailableInvites: d,
         } = e;
-        if (n || null == t) return (0, r.jsx)(l.$jN, {});
-        let { primary: f, members: p, invitedUsers: _ } = t;
-        return (0, r.jsxs)(l.Kqy, {
+        if (n || null == t) return (0, r.jsx)(o.$jN, {});
+        let { primary: f, members: m, invitedUsers: h } = t;
+        return (0, r.jsxs)(o.Kqy, {
             direction: "vertical",
             padding: {
                 left: 32,
@@ -265,7 +263,7 @@ let C = () =>
             },
             gap: 0,
             children: [
-                (0, r.jsxs)(l.Kqy, {
+                (0, r.jsxs)(o.Kqy, {
                     direction: "vertical",
                     gap: 4,
                     padding: {
@@ -275,50 +273,40 @@ let C = () =>
                         bottom: 10,
                     },
                     children: [
-                        (0, r.jsxs)(l.Kqy, {
+                        (0, r.jsxs)(o.Kqy, {
                             direction: "horizontal",
                             justify: "space-between",
                             align: "center",
                             gap: 4,
                             children: [
-                                (0, r.jsx)(l.Heading, {
+                                (0, r.jsx)(o.Heading, {
                                     variant: "heading-sm/medium",
                                     color: "text-strong",
-                                    children: y.intl.string(b.default["oqw/KW"]),
+                                    children: E.intl.string(g.default["oqw/KW"]),
                                 }),
-                                (0, r.jsx)(m.Z, {
-                                    onInvite: o,
+                                (0, r.jsx)(p.Z, {
+                                    onInvite: a,
                                     disabled: !i,
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: "text-xs/medium",
                             color: "text-subtle",
-                            children: y.intl.format(b.default["/a/UoP"], {
+                            children: E.intl.format(g.default["/a/UoP"], {
                                 usedSeats: u,
                                 totalSeats: c,
                             }),
                         }),
                     ],
                 }),
-                (0, r.jsx)(h.Vl, {
+                (0, r.jsx)(_.Vl, {
                     user: f,
                     isOwnUser: !0,
                 }),
-                p.map((e) =>
+                m.map((e) =>
                     (0, r.jsx)(
-                        h.UA,
-                        {
-                            user: e,
-                            onRemove: () => a(e),
-                        },
-                        e.id,
-                    ),
-                ),
-                _.map((e) =>
-                    (0, r.jsx)(
-                        h.gk,
+                        _.UA,
                         {
                             user: e,
                             onRemove: () => s(e),
@@ -326,11 +314,21 @@ let C = () =>
                         e.id,
                     ),
                 ),
+                h.map((e) =>
+                    (0, r.jsx)(
+                        _.gk,
+                        {
+                            user: e,
+                            onRemove: () => l(e),
+                        },
+                        e.id,
+                    ),
+                ),
                 Array.from({ length: d }).map((e, t) =>
                     (0, r.jsx)(
-                        h.QU,
+                        _.QU,
                         {
-                            onInvite: o,
+                            onInvite: a,
                             canInvite: i,
                         },
                         "seat-available-".concat(t),
@@ -339,129 +337,128 @@ let C = () =>
             ],
         });
     },
-    R = (e) => {
-        let { subscription: t, analyticsLocations: o } = e;
-        a()(t.hasAnyPremiumGroup, "Subscription is not a premium group");
-        let { premiumGroupMembers: d, isLoading: m } = (0, _.Z)(),
+    N = (e) => {
+        let { subscription: t, analyticsLocations: c } = e,
+            { premiumGroupMembers: p, isLoading: _ } = (0, f.Z)(),
             {
-                numAvailableInvites: h,
+                numAvailableInvites: y,
                 numTotalSeats: v,
-                numUsedSeats: I,
-            } = (0, s.cj)([p.Z], () => ({
-                numAvailableInvites: p.Z.getNumAvailableInvites(),
-                numTotalSeats: p.Z.getNumTotalSeats(),
-                numUsedSeats: p.Z.getNumUsedSeats(),
+                numUsedSeats: C,
+            } = (0, a.cj)([d.Z], () => ({
+                numAvailableInvites: d.Z.getNumAvailableInvites(),
+                numTotalSeats: d.Z.getNumTotalSeats(),
+                numUsedSeats: d.Z.getNumUsedSeats(),
             })),
-            [N, R] = i.useState(!1),
-            { status: w } = t,
-            D = i.useCallback(() => {
-                (0, l.ZDy)(async () => {
+            [N, P] = i.useState(!1),
+            { status: R } = t,
+            w = i.useCallback(() => {
+                (0, o.ZDy)(async () => {
                     let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await n
                         .e("26526")
                         .then(n.bind(n, 48813));
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            T(S({}, n), {
+                            S(O({}, n), {
                                 premiumSubscription: t,
-                                analyticsLocations: o,
+                                analyticsLocations: c,
                             }),
                         );
                 });
-            }, [t, o]),
-            x = i.useCallback(async () => {
-                R(!0), await (0, c.O5)(t, o), R(!1);
-            }, [t, o]),
-            L = (e) => {
-                (0, f.Jn)(t.id, e.id);
+            }, [t, c]),
+            D = i.useCallback(async () => {
+                P(!0), await (0, s.O5)(t, c), P(!1);
+            }, [t, c]),
+            x = (e) => {
+                (0, u.Jn)(t.id, e.id);
             },
-            j = () => {
-                (0, l.ZDy)(async () => {
+            L = () => {
+                (0, o.ZDy)(async () => {
                     let { default: e } = await n.e("86948").then(n.bind(n, 153241));
-                    return (n) => (0, r.jsx)(e, T(S({}, n), { subscription: t }));
+                    return (n) => (0, r.jsx)(e, S(O({}, n), { subscription: t }));
                 });
             },
-            M = (e) => {
-                (0, f.if)(t.id, e.id);
+            j = (e) => {
+                (0, u.if)(t.id, e.id);
             },
-            k = () => {
-                switch (w) {
-                    case E.O0b.CANCELED:
+            M = () => {
+                switch (R) {
+                    case h.O0b.CANCELED:
                         return {
-                            title: y.intl.string(b.default.KME8Q6),
-                            description: y.intl.format(b.default["1sNA+Y"], {
+                            title: E.intl.string(g.default.KME8Q6),
+                            description: E.intl.format(g.default["1sNA+Y"], {
                                 endDate: t.currentPeriodEnd,
-                                premiumGroupProductName: (0, g.sO)(),
+                                premiumGroupProductName: (0, m.sO)(),
                             }),
                         };
-                    case E.O0b.PAUSED:
+                    case h.O0b.PAUSED:
                         return {
-                            title: y.intl.string(b.default["4flKoC"]),
-                            description: y.intl.format(b.default["Q++BmO"], { premiumGroupProductName: (0, g.sO)() }),
+                            title: E.intl.string(g.default["4flKoC"]),
+                            description: E.intl.format(g.default["Q++BmO"], { premiumGroupProductName: (0, m.sO)() }),
                         };
-                    case E.O0b.PAST_DUE:
-                    case E.O0b.ACCOUNT_HOLD:
-                    case E.O0b.BILLING_RETRY:
+                    case h.O0b.PAST_DUE:
+                    case h.O0b.ACCOUNT_HOLD:
+                    case h.O0b.BILLING_RETRY:
                         return {
-                            title: y.intl.string(b.default.cfeFEt),
-                            description: y.intl.format(b.default["5+LPUW"], {
+                            title: E.intl.string(g.default.cfeFEt),
+                            description: E.intl.format(g.default["5+LPUW"], {
                                 endDate: t.currentPeriodEnd,
-                                helpCenterLink: g.j3,
+                                helpCenterLink: m.j3,
                             }),
                         };
                     default:
                         return {
-                            title: y.intl.formatToPlainString(b.default.NRCfnQ, {
-                                premiumGroupProductName: (0, g.sO)(),
+                            title: E.intl.formatToPlainString(g.default.NRCfnQ, {
+                                premiumGroupProductName: (0, m.sO)(),
                             }),
-                            description: y.intl.format(b.default.lvnrnb, {
-                                totalSeats: g.v$,
-                                premiumGroupProductName: (0, g.sO)(),
-                                helpCenterLink: g.j3,
+                            description: E.intl.format(g.default.lvnrnb, {
+                                totalSeats: m.v$,
+                                premiumGroupProductName: (0, m.sO)(),
+                                helpCenterLink: m.j3,
                             }),
                         };
                 }
             },
-            U = () =>
-                u.Vw(t)
-                    ? (0, r.jsx)(l.Button, {
+            k = () =>
+                l.Vw(t)
+                    ? (0, r.jsx)(o.Button, {
                           variant: "expressive",
                           size: "md",
-                          text: y.intl.string(b.default.EFTJMQ),
-                          onClick: x,
+                          text: E.intl.string(g.default.EFTJMQ),
+                          onClick: D,
                           loading: N,
                       })
-                    : (0, r.jsx)(l.Button, {
+                    : (0, r.jsx)(o.Button, {
                           variant: "secondary",
                           size: "md",
-                          text: y.intl.string(b.default.oO0EYw),
-                          onClick: D,
+                          text: E.intl.string(g.default.oO0EYw),
+                          onClick: w,
                       }),
-            G = i.useMemo(() => !g.Ou.includes(t.status) && h > 0, [t.status, h]),
-            { title: Z, description: F } = k();
-        return (0, r.jsxs)(l.$1m, {
-            className: O.container,
+            U = i.useMemo(() => !m.Ou.includes(t.status) && y > 0, [t.status, y]),
+            { title: G, description: Z } = M();
+        return (0, r.jsxs)(o.$1m, {
+            className: b.container,
             color: "nitro-pink",
             children: [
-                (0, r.jsx)(C, {}),
+                (0, r.jsx)(I, {}),
                 (0, r.jsxs)("div", {
-                    className: O.contentGrid,
+                    className: b.contentGrid,
                     children: [
-                        (0, r.jsx)(A, {
-                            title: Z,
-                            description: F,
-                            button: U(),
+                        (0, r.jsx)(T, {
+                            title: G,
+                            description: Z,
+                            button: k(),
                         }),
-                        (0, r.jsx)(P, {
-                            premiumGroupMembers: d,
-                            isLoadingPremiumGroupMembers: m,
-                            canInvite: G,
-                            onInvite: j,
-                            onRemoveMember: L,
-                            onRemoveInvitedUser: M,
+                        (0, r.jsx)(A, {
+                            premiumGroupMembers: p,
+                            isLoadingPremiumGroupMembers: _,
+                            canInvite: U,
+                            onInvite: L,
+                            onRemoveMember: x,
+                            onRemoveInvitedUser: j,
                             numTotalSeats: v,
-                            numUsedSeats: I,
-                            numAvailableInvites: h,
+                            numUsedSeats: C,
+                            numAvailableInvites: y,
                         }),
                     ],
                 }),

@@ -84835,6 +84835,7 @@ div.d74ef86df6475678-nagbar {
 }
 
 .cc46f0f859f26200-game .cc46f0f859f26200-removeGame {
+    cursor: pointer;
     inset-inline-end: -15px;
     opacity: 0;
     position: absolute;
