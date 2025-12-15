@@ -1,64 +1,62 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => g });
 var r = n(54381);
 n(473749);
 var i = n(399606),
     a = n(481060),
     o = n(594174),
-    s = n(277537),
-    l = n(785681),
-    c = n(631885),
-    u = n(552045),
-    d = n(87792),
-    f = n(302289),
-    p = n(946690),
-    _ = n(369954),
-    m = n(225753),
-    h = n(388032),
-    g = n(862964);
-let E = () => {
-    let e = (0, c.ZM)().length > 0,
-        t = (0, s.PO)("family_center_activity_page"),
-        n = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
-        E = (0, l.o)(h.intl.string(m.default["5RZ8Tq"]), h.intl.string(m.default.bmhCnL)),
-        b = (0, l.o)(h.intl.string(m.default.XKnFFq), h.intl.string(m.default["68zfxD"])),
-        y = (0, l.o)(h.intl.string(m.default["Rm/6a0"]), h.intl.string(m.default["1xPTwE"]));
-    return void 0 === n
+    s = n(785681),
+    l = n(631885),
+    c = n(552045),
+    u = n(87792),
+    d = n(302289),
+    f = n(946690),
+    p = n(369954),
+    _ = n(517319),
+    m = n(388032),
+    h = n(833826);
+let g = () => {
+    let e = (0, l.ZM)().length > 0,
+        t = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        n = (0, s.o)(m.intl.string(_.default["5RZ8Tq"]), m.intl.string(_.default.bmhCnL)),
+        g = (0, s.o)(m.intl.string(_.default.XKnFFq), m.intl.string(_.default["68zfxD"])),
+        E = (0, s.o)(m.intl.string(_.default["Rm/6a0"]), m.intl.string(_.default["1xPTwE"]));
+    return void 0 === t
         ? null
         : (0, r.jsxs)("div", {
-              className: g.container,
+              className: h.container,
               children: [
-                  t && e
+                  e
                       ? null
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: g.banner,
-                                    children: (0, r.jsx)(u.Z, {}),
+                                    className: h.banner,
+                                    children: (0, r.jsx)(c.Z, {}),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: g.featureCards,
+                                    className: h.featureCards,
                                     children: [
-                                        (0, r.jsx)(p.Z, {
+                                        (0, r.jsx)(f.Z, {
                                             icon: a.eQA,
-                                            header: h.intl.string(m.default["001l3m"]),
-                                            description: E,
+                                            header: m.intl.string(_.default["001l3m"]),
+                                            description: n,
                                         }),
-                                        (0, r.jsx)(p.Z, {
+                                        (0, r.jsx)(f.Z, {
                                             icon: a.tEF,
-                                            header: h.intl.string(m.default.yipAeP),
-                                            description: b,
+                                            header: m.intl.string(_.default.yipAeP),
+                                            description: g,
                                         }),
-                                        (0, r.jsx)(p.Z, {
+                                        (0, r.jsx)(f.Z, {
                                             icon: a.IkH,
-                                            header: h.intl.string(m.default.hhOuMe),
-                                            description: y,
+                                            header: m.intl.string(_.default.hhOuMe),
+                                            description: E,
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                  e ? (0, r.jsx)(d.Z, {}) : (0, r.jsx)(f.Z, {}),
-                  (0, r.jsx)(_.J, {}),
+                  e ? (0, r.jsx)(u.Z, {}) : (0, r.jsx)(d.Z, {}),
+                  (0, r.jsx)(p.J, {}),
               ],
           });
 };

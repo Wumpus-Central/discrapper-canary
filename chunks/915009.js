@@ -1,10 +1,10 @@
 n.d(t, {
-    LN: () => v,
-    T3: () => b,
-    aR: () => T,
-    q1: () => y,
-    rD: () => O,
-    xf: () => E,
+    LN: () => O,
+    T3: () => E,
+    aR: () => I,
+    q1: () => b,
+    rD: () => y,
+    xf: () => g,
 });
 var r = n(473749),
     i = n(442837),
@@ -17,12 +17,11 @@ var r = n(473749),
     d = n(260722),
     f = n(473007),
     p = n(800651),
-    _ = n(277537),
-    m = n(652262),
-    h = n(631885),
-    g = n(484710);
-let E = () => {
-        let e = (0, m.F)(),
+    _ = n(652262),
+    m = n(631885),
+    h = n(484710);
+let g = () => {
+        let e = (0, _.F)(),
             t = l.sx.useControlledSetting(null == e ? void 0 : e.id);
         return null == e
             ? null
@@ -39,8 +38,8 @@ let E = () => {
                   explicitContentGuilds: a.Q4.BLUR,
               };
     },
-    b = () => {
-        let e = (0, m.F)(),
+    E = () => {
+        let e = (0, _.F)(),
             t = l.up.useControlledSetting(null == e ? void 0 : e.id);
         if (null == e) return null;
         let { goreContentNonFriendDm: n, goreContentFriendDm: r } = null != t ? t : {};
@@ -55,30 +54,29 @@ let E = () => {
             goreContentGuilds: a.Q4.BLUR,
         };
     },
-    y = () => {
-        let e = (0, m.F)(),
+    b = () => {
+        let e = (0, _.F)(),
             t = l.Ov.useControlledSetting(null == e ? void 0 : e.id),
             n = l.vV.useControlledSetting(null == e ? void 0 : e.id);
         return null != n ? n : !!t || t;
     };
-function O() {
-    let e = (0, m.F)(),
+function y() {
+    let e = (0, _.F)(),
         t = l.vB.useControlledSetting(null == e ? void 0 : e.id),
         n = r.useMemo(() => (0, u.bL)(t), [t]);
     return n.mutualGuilds && !n.all;
 }
-function v() {
+function O() {
     let e = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        t = (0, h.AZ)(),
-        n = (0, _.PO)("settings-controls");
-    return (null == e ? void 0 : e.nsfwAllowed) === !1 && t && n;
+        t = (0, m.AZ)();
+    return (null == e ? void 0 : e.nsfwAllowed) === !1 && t;
 }
-function S(e) {
-    let t = (0, m.M)();
+function v(e) {
+    let t = (0, _.M)();
     return (0, i.e7)([f.Z], () => f.Z.hasConsented(t, e));
 }
-function I(e) {
-    let t = (0, m.M)();
+function S(e) {
+    let t = (0, _.M)();
     return r.useCallback(
         async (n) => {
             if (null == t) return;
@@ -87,15 +85,15 @@ function I(e) {
             try {
                 await d.ZP.updateTeenConsents(t, r, i);
             } catch (e) {
-                s.Z.showFailedToast(g.wQ.GENERIC_ERROR);
+                s.Z.showFailedToast(h.wQ.GENERIC_ERROR);
             }
         },
         [t, e],
     );
 }
-function T(e) {
+function I(e) {
     return {
-        hasConsented: S(e),
-        updateConsent: I(e),
+        hasConsented: v(e),
+        updateConsent: S(e),
     };
 }

@@ -1,13 +1,11 @@
 e.exports = {
     container: "_38524e4c5f939069-container",
-    containerV2: "_38524e4c5f939069-containerV2",
     connectedCounter: "_38524e4c5f939069-connectedCounter",
     icon: "_38524e4c5f939069-icon",
     tooltip: "_38524e4c5f939069-tooltip",
     header: "_38524e4c5f939069-header",
     headerText: "_38524e4c5f939069-headerText",
     activityCounterRow: "_38524e4c5f939069-activityCounterRow",
-    activityCounterRowV2: "_38524e4c5f939069-activityCounterRowV2",
     activityOverview: "_38524e4c5f939069-activityOverview",
     emptyActivity: "_38524e4c5f939069-emptyActivity",
     actionSection: "_38524e4c5f939069-actionSection",

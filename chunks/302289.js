@@ -1,24 +1,20 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(481060),
-    s = n(546791),
-    l = n(785681),
-    c = n(130310),
-    u = n(225753),
-    d = n(388032),
-    f = n(398739),
-    p = n(519279);
-let _ = () => {
-    let e = (0, s.nE)(d.intl.string(u.default.XJabSN), d.intl.string(u.default.tr8Gni)),
-        t = (0, l.o)(
-            (0, s.nE)(d.intl.string(u.default.i4XFEH), d.intl.string(u.default["3xKGSE"])),
-            (0, s.nE)(d.intl.string(u.default.eHQZuO), d.intl.string(u.default.XbgrG7)),
-        );
+    s = n(785681),
+    l = n(130310),
+    c = n(517319),
+    u = n(388032),
+    d = n(104672),
+    f = n(108319);
+let p = () => {
+    let e = u.intl.string(c.default.tr8Gni),
+        t = (0, s.o)(u.intl.string(c.default["3xKGSE"]), u.intl.string(c.default.XbgrG7));
     return (0, r.jsxs)(o.Kqy, {
-        className: a()(f.container, p.box),
+        className: a()(d.container, f.box),
         gap: 24,
         padding: 24,
         children: [
@@ -36,7 +32,7 @@ let _ = () => {
                     }),
                 ],
             }),
-            (0, r.jsx)(c.Z, {}),
+            (0, r.jsx)(l.Z, {}),
         ],
     });
 };

@@ -1,79 +1,78 @@
-r.d(e, { default: () => O }), r(953529), r(388685);
+r.d(t, { default: () => j }), r(953529), r(388685);
 var o = r(54381);
 r(473749);
 var n = r(793030),
     i = r(481060),
     c = r(546791),
-    l = r(277537),
-    s = r(785681),
-    a = r(880257),
-    u = r(863552),
-    h = r(292352),
-    d = r(225753),
-    p = r(388032),
-    f = r(441076);
-let C = {
-        [h.MY.USER_INTERACTION]: (0, o.jsx)(u.Z, {
+    l = r(785681),
+    s = r(880257),
+    a = r(863552),
+    u = r(292352),
+    h = r(517319),
+    d = r(388032),
+    p = r(956206);
+let f = {
+        [u.MY.USER_INTERACTION]: (0, o.jsx)(a.Z, {
             width: 18,
             height: 18,
         }),
-        [h.MY.USER_CALLED]: (0, o.jsx)(i.Csw, {
+        [u.MY.USER_CALLED]: (0, o.jsx)(i.Csw, {
             size: "custom",
             color: "currentColor",
             width: 22,
             height: 22,
         }),
-        [h.MY.USER_ADD]: (0, o.jsx)(i.iFz, {
+        [u.MY.USER_ADD]: (0, o.jsx)(i.iFz, {
             size: "custom",
             color: "currentColor",
             width: 22,
             height: 22,
         }),
-        [h.MY.GUILD_ADD]: (0, o.jsx)(i.dRF, {
+        [u.MY.GUILD_ADD]: (0, o.jsx)(i.dRF, {
             size: "custom",
             color: "currentColor",
             width: 22,
             height: 22,
         }),
-        [h.MY.GUILD_INTERACTION]: (0, o.jsx)(i.VL1, {
+        [u.MY.GUILD_INTERACTION]: (0, o.jsx)(i.VL1, {
             size: "custom",
             color: "currentColor",
             width: 22,
             height: 22,
         }),
-        [h.MY.TOTAL_VOICE_MINUTES]: (0, o.jsx)(n.T39, {
+        [u.MY.TOTAL_VOICE_MINUTES]: (0, o.jsx)(n.T39, {
             size: "custom",
             color: "currentColor",
             width: 22,
             height: 22,
         }),
-        [h.MY.PURCHASES]: (0, o.jsx)(n.ciH, {
+        [u.MY.PURCHASES]: (0, o.jsx)(n.ciH, {
             size: "custom",
             color: "currentColor",
             width: 22,
             height: 22,
         }),
     },
-    j = (t) => {
-        let { header: e, description: r, icon: c } = t;
+    C = (e) => {
+        let { header: t, description: r, icon: c } = e;
         return (0, o.jsxs)(n.Kqy, {
             direction: "horizontal",
-            className: f.row,
+            className: p.row,
             padding: 16,
             align: "center",
             gap: 16,
             fullWidth: !1,
             children: [
                 (0, o.jsx)("div", {
-                    className: f.iconContainer,
+                    className: p.iconContainer,
                     children: c,
                 }),
                 (0, o.jsxs)("div", {
-                    className: f.rowContent,
+                    className: p.rowContent,
                     children: [
                         (0, o.jsx)(i.Text, {
                             variant: "text-sm/bold",
-                            children: e,
+                            children: t,
                         }),
                         (0, o.jsx)(i.Text, {
                             variant: "text-xs/medium",
@@ -84,30 +83,29 @@ let C = {
             ],
         });
     },
-    O = (t) => {
-        let { transitionState: e, onClose: r } = t,
-            i = (0, l.PO)("family_center_activity_card"),
-            u = (0, s.o)(p.intl.string(d.default.q3IRal), p.intl.string(d.default.JNLpDZ)),
-            h = (0, a.Z)(),
-            f = (0, c._p)(i);
+    j = (e) => {
+        let { transitionState: t, onClose: r } = e,
+            i = (0, l.o)(d.intl.string(h.default.q3IRal), d.intl.string(h.default.JNLpDZ)),
+            a = (0, s.Z)(),
+            u = (0, c._p)();
         return (0, o.jsx)(n.Modal, {
-            transitionState: e,
+            transitionState: t,
             onClose: r,
             actions: [],
-            title: u,
+            title: i,
             children: (0, o.jsx)(n.Kqy, {
                 gap: 8,
                 fullWidth: !1,
-                children: f.map((t) => {
-                    let [e, r] = t;
+                children: u.map((e) => {
+                    let [t, r] = e;
                     return (0, o.jsx)(
-                        j,
+                        C,
                         {
-                            icon: C[e],
+                            icon: f[t],
                             header: r.tooltipHeader(),
-                            description: r.tooltipDescription(null != h ? h : void 0),
+                            description: r.tooltipDescription(null != a ? a : void 0),
                         },
-                        e,
+                        t,
                     );
                 }),
             }),
