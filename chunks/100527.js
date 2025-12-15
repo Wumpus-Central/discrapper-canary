@@ -206,6 +206,7 @@ var r = (function (e) {
         (e.PREMIUM_MARKETING_COMPARISON_TABLE = "premium marketing comparison table"),
         (e.PREMIUM_MARKETING_FOOTER = "premium marketing footer"),
         (e.PREMIUM_MARKETING_GIFT_SECTION = "premium marketing gift section"),
+        (e.PREMIUM_MARKETING_TENURE_REWARDS_SECTION = "premium marketing tenure rewards section"),
         (e.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER = "premium marketing reverse trial banner"),
         (e.PREMIUM_MARKETING_REWARD_SELECTION_MODAL = "premium marketing reward selection modal"),
         (e.TIERED_TENURE_BADGES_MODAL = "tiered tenure badges modal"),
