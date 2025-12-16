@@ -1,15 +1,15 @@
 n.d(t, {
-    Av: () => l,
-    C9: () => c,
-    FX: () => u,
-    QV: () => o,
-    Sw: () => d,
-    tS: () => s,
+    Av: () => m,
+    C9: () => h,
+    FX: () => g,
+    QV: () => p,
+    Sw: () => E,
+    tS: () => _,
 }),
+    n(388685),
     n(781311),
     n(35282),
     n(539854),
-    n(388685),
     n(49124);
 var r = n(473749);
 function i(e, t, n) {
@@ -42,6 +42,40 @@ function a(e) {
     return e;
 }
 function o(e, t) {
+    if (null != e) {
+        if ("function" == typeof e) return void e(t);
+        "object" == typeof e && "current" in e && (e.current = t);
+    }
+}
+let s = {};
+function l(e) {
+    return null == e ? s : "function" == typeof e || "object" == typeof e ? e : s;
+}
+let c = new WeakMap();
+function u(e) {
+    let t = l(e),
+        n = c.get(t);
+    if (null != n) return n;
+    let r = (t) => {
+        if (null == t) return void e(null);
+        null != t && "function" == typeof t.getBoundingClientRect && e(t);
+    };
+    return c.set(t, r), r;
+}
+let d = new WeakMap();
+function f(e, t) {
+    let n = l(e),
+        r = l(t),
+        i = d.get(n);
+    null == i && ((i = new WeakMap()), d.set(n, i));
+    let a = i.get(r);
+    if (null != a) return a;
+    let s = (n) => {
+        o(e, n), t(n);
+    };
+    return i.set(r, s), s;
+}
+function p(e, t) {
     let n = (null != e ? e : "").trim(),
         r = (null != t ? t : "").trim();
     if ("" === n) return r;
@@ -55,14 +89,14 @@ function o(e, t) {
     }
     return 0 === o.length ? n : "".concat(n, " ").concat(o.join(" ")).trim();
 }
-function s(e, t) {
+function _(e, t) {
     if (null != e || null != t)
         return function () {
             for (var n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
             "function" == typeof e && e(...r), "function" == typeof t && t(...r);
         };
 }
-function l(e) {
+function m(e) {
     switch (e) {
         case "top":
         default:
@@ -75,41 +109,30 @@ function l(e) {
             return "left";
     }
 }
-function c(e, t, n, i) {
+function h(e, t, n, i) {
     let a = e.props,
-        l = (e, t) => {
-            null != e && ("function" == typeof e ? e(t) : "object" == typeof e && "current" in e && (e.current = t));
-        },
-        c = e.ref,
-        u = (e) => {
-            l(c, e), null != e && "function" == typeof e.getBoundingClientRect && i(e);
-        },
-        d = {
-            onMouseEnter: s(a.onMouseEnter, t.onMouseEnter),
-            onMouseLeave: s(a.onMouseLeave, t.onMouseLeave),
-            onFocus: s(a.onFocus, t.onFocus),
-            onBlur: s(a.onBlur, t.onBlur),
-            onContextMenu: s(a.onContextMenu, t.onContextMenu),
-            onClick: s(a.onClick, t.onClick),
+        o = f(e.props.ref, u(i)),
+        s = {
+            onMouseEnter: _(a.onMouseEnter, t.onMouseEnter),
+            onMouseLeave: _(a.onMouseLeave, t.onMouseLeave),
+            onFocus: _(a.onFocus, t.onFocus),
+            onBlur: _(a.onBlur, t.onBlur),
+            onContextMenu: _(a.onContextMenu, t.onContextMenu),
+            onClick: _(a.onClick, t.onClick),
         };
-    if ((null != n && "" !== n && (d["aria-describedby"] = o(a["aria-describedby"], n)), "string" == typeof e.type))
-        d.ref = u;
-    else if ("buttonRef" in e.props) {
-        let t = e.props.buttonRef;
-        (d.buttonRef = (e) => {
-            l(t, e), u(e);
-        }),
-            (d.ref = u);
-    } else if ("innerRef" in e.props) {
-        let t = e.props.innerRef;
-        (d.innerRef = (e) => {
-            l(t, e), u(e);
-        }),
-            (d.ref = u);
-    } else (d.ref = u), (d.innerRef = u);
-    return r.cloneElement(e, d);
+    return (
+        null != n && "" !== n && (s["aria-describedby"] = p(a["aria-describedby"], n)),
+        "string" == typeof e.type
+            ? (s.ref = o)
+            : "buttonRef" in e.props
+              ? ((s.buttonRef = f(e.props.buttonRef, o)), (s.ref = o))
+              : "innerRef" in e.props
+                ? ((s.innerRef = f(e.props.innerRef, o)), (s.ref = o))
+                : ((s.ref = o), (s.innerRef = o)),
+        r.cloneElement(e, s)
+    );
 }
-function u(e) {
+function g(e) {
     let { tag: t, className: n, tabIndex: i, children: o, triggerHandlers: s, describedById: l, triggerRef: c } = e;
     return r.createElement(
         t,
@@ -130,7 +153,7 @@ function u(e) {
         o,
     );
 }
-function d(e) {
+function E(e) {
     if (null == e) return "";
     if ("string" == typeof e) return e;
     try {
