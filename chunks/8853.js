@@ -1,14 +1,21 @@
-n.d(t, { t: () => p }), n(980754), n(388685), n(415506);
+n.d(t, { t: () => y }), n(980754), n(388685), n(415506);
 var r = n(230367),
     i = n(320215),
     a = n(240773),
     o = n(495852),
-    s = n(922122),
-    l = n(999755),
-    c = n(990830),
-    u = n(214611),
-    d = n(740111);
-class f extends o.C {
+    s = n(359295),
+    l = n(323407),
+    c = n(279882),
+    u = n(828186),
+    d = n(698587),
+    f = n(497504),
+    p = n(631536),
+    _ = n(922122),
+    m = n(999755),
+    h = n(990830),
+    g = n(214611),
+    E = n(740111);
+class b extends o.C {
     create(e) {
         let t = {
             properties: { oneofKind: void 0 },
@@ -38,7 +45,7 @@ class f extends o.C {
                 case 2:
                     a.properties = {
                         oneofKind: "announcementModalVariant1",
-                        announcementModalVariant1: d.xY.internalBinaryRead(
+                        announcementModalVariant1: E.xY.internalBinaryRead(
                             e,
                             e.uint32(),
                             n,
@@ -49,25 +56,87 @@ class f extends o.C {
                 case 4:
                     a.properties = {
                         oneofKind: "premiumTab",
-                        premiumTab: u.C.internalBinaryRead(e, e.uint32(), n, a.properties.premiumTab),
+                        premiumTab: g.C.internalBinaryRead(e, e.uint32(), n, a.properties.premiumTab),
                     };
                     break;
                 case 5:
                     a.properties = {
                         oneofKind: "marketingPageBanner",
-                        marketingPageBanner: c.w.internalBinaryRead(e, e.uint32(), n, a.properties.marketingPageBanner),
+                        marketingPageBanner: h.w.internalBinaryRead(e, e.uint32(), n, a.properties.marketingPageBanner),
                     };
                     break;
                 case 6:
                     a.properties = {
                         oneofKind: "paymentModalBanner",
-                        paymentModalBanner: l.j.internalBinaryRead(e, e.uint32(), n, a.properties.paymentModalBanner),
+                        paymentModalBanner: m.j.internalBinaryRead(e, e.uint32(), n, a.properties.paymentModalBanner),
                     };
                     break;
                 case 7:
                     a.properties = {
                         oneofKind: "mobileBottomSheet",
-                        mobileBottomSheet: s.g.internalBinaryRead(e, e.uint32(), n, a.properties.mobileBottomSheet),
+                        mobileBottomSheet: _.g.internalBinaryRead(e, e.uint32(), n, a.properties.mobileBottomSheet),
+                    };
+                    break;
+                case 8:
+                    a.properties = {
+                        oneofKind: "giftIcon",
+                        giftIcon: p.O.internalBinaryRead(e, e.uint32(), n, a.properties.giftIcon),
+                    };
+                    break;
+                case 9:
+                    a.properties = {
+                        oneofKind: "giftIconCoachmark",
+                        giftIconCoachmark: f.h.internalBinaryRead(e, e.uint32(), n, a.properties.giftIconCoachmark),
+                    };
+                    break;
+                case 10:
+                    a.properties = {
+                        oneofKind: "giftPlanSelectionCardBanner",
+                        giftPlanSelectionCardBanner: d.C.internalBinaryRead(
+                            e,
+                            e.uint32(),
+                            n,
+                            a.properties.giftPlanSelectionCardBanner,
+                        ),
+                    };
+                    break;
+                case 11:
+                    a.properties = {
+                        oneofKind: "giftCustomizationBanner",
+                        giftCustomizationBanner: u.m.internalBinaryRead(
+                            e,
+                            e.uint32(),
+                            n,
+                            a.properties.giftCustomizationBanner,
+                        ),
+                    };
+                    break;
+                case 12:
+                    a.properties = {
+                        oneofKind: "billingSettingsNitroGiftBanner",
+                        billingSettingsNitroGiftBanner: c.V.internalBinaryRead(
+                            e,
+                            e.uint32(),
+                            n,
+                            a.properties.billingSettingsNitroGiftBanner,
+                        ),
+                    };
+                    break;
+                case 13:
+                    a.properties = {
+                        oneofKind: "giftReminderNagbar",
+                        giftReminderNagbar: l.p.internalBinaryRead(e, e.uint32(), n, a.properties.giftReminderNagbar),
+                    };
+                    break;
+                case 14:
+                    a.properties = {
+                        oneofKind: "giftReminderCoachmark",
+                        giftReminderCoachmark: s.r.internalBinaryRead(
+                            e,
+                            e.uint32(),
+                            n,
+                            a.properties.giftReminderCoachmark,
+                        ),
                     };
                     break;
                 case 3:
@@ -79,8 +148,8 @@ class f extends o.C {
                         throw new globalThis.Error(
                             "Unknown field ".concat(t, " (wire type ").concat(i, ") for ").concat(this.typeName),
                         );
-                    let f = e.skip(i);
-                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, f);
+                    let b = e.skip(i);
+                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, b);
             }
         }
         return a;
@@ -88,7 +157,7 @@ class f extends o.C {
     internalBinaryWrite(e, t, n) {
         "placeholder" === e.properties.oneofKind && t.tag(1, r.TD.LengthDelimited).string(e.properties.placeholder),
             "announcementModalVariant1" === e.properties.oneofKind &&
-                d.xY
+                E.xY
                     .internalBinaryWrite(
                         e.properties.announcementModalVariant1,
                         t.tag(2, r.TD.LengthDelimited).fork(),
@@ -96,18 +165,52 @@ class f extends o.C {
                     )
                     .join(),
             "premiumTab" === e.properties.oneofKind &&
-                u.C.internalBinaryWrite(e.properties.premiumTab, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
+                g.C.internalBinaryWrite(e.properties.premiumTab, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
             "marketingPageBanner" === e.properties.oneofKind &&
-                c.w
+                h.w
                     .internalBinaryWrite(e.properties.marketingPageBanner, t.tag(5, r.TD.LengthDelimited).fork(), n)
                     .join(),
             "paymentModalBanner" === e.properties.oneofKind &&
-                l.j
+                m.j
                     .internalBinaryWrite(e.properties.paymentModalBanner, t.tag(6, r.TD.LengthDelimited).fork(), n)
                     .join(),
             "mobileBottomSheet" === e.properties.oneofKind &&
-                s.g
+                _.g
                     .internalBinaryWrite(e.properties.mobileBottomSheet, t.tag(7, r.TD.LengthDelimited).fork(), n)
+                    .join(),
+            "giftIcon" === e.properties.oneofKind &&
+                p.O.internalBinaryWrite(e.properties.giftIcon, t.tag(8, r.TD.LengthDelimited).fork(), n).join(),
+            "giftIconCoachmark" === e.properties.oneofKind &&
+                f.h
+                    .internalBinaryWrite(e.properties.giftIconCoachmark, t.tag(9, r.TD.LengthDelimited).fork(), n)
+                    .join(),
+            "giftPlanSelectionCardBanner" === e.properties.oneofKind &&
+                d.C.internalBinaryWrite(
+                    e.properties.giftPlanSelectionCardBanner,
+                    t.tag(10, r.TD.LengthDelimited).fork(),
+                    n,
+                ).join(),
+            "giftCustomizationBanner" === e.properties.oneofKind &&
+                u.m
+                    .internalBinaryWrite(
+                        e.properties.giftCustomizationBanner,
+                        t.tag(11, r.TD.LengthDelimited).fork(),
+                        n,
+                    )
+                    .join(),
+            "billingSettingsNitroGiftBanner" === e.properties.oneofKind &&
+                c.V.internalBinaryWrite(
+                    e.properties.billingSettingsNitroGiftBanner,
+                    t.tag(12, r.TD.LengthDelimited).fork(),
+                    n,
+                ).join(),
+            "giftReminderNagbar" === e.properties.oneofKind &&
+                l.p
+                    .internalBinaryWrite(e.properties.giftReminderNagbar, t.tag(13, r.TD.LengthDelimited).fork(), n)
+                    .join(),
+            "giftReminderCoachmark" === e.properties.oneofKind &&
+                s.r
+                    .internalBinaryWrite(e.properties.giftReminderCoachmark, t.tag(14, r.TD.LengthDelimited).fork(), n)
                     .join(),
             "" !== e.contentIdentifier && t.tag(3, r.TD.LengthDelimited).string(e.contentIdentifier);
         let i = n.writeUnknownFields;
@@ -127,35 +230,84 @@ class f extends o.C {
                 name: "announcement_modal_variant_1",
                 kind: "message",
                 oneof: "properties",
-                T: () => d.xY,
+                T: () => E.xY,
             },
             {
                 no: 4,
                 name: "premium_tab",
                 kind: "message",
                 oneof: "properties",
-                T: () => u.C,
+                T: () => g.C,
             },
             {
                 no: 5,
                 name: "marketing_page_banner",
                 kind: "message",
                 oneof: "properties",
-                T: () => c.w,
+                T: () => h.w,
             },
             {
                 no: 6,
                 name: "payment_modal_banner",
                 kind: "message",
                 oneof: "properties",
-                T: () => l.j,
+                T: () => m.j,
             },
             {
                 no: 7,
                 name: "mobile_bottom_sheet",
                 kind: "message",
                 oneof: "properties",
-                T: () => s.g,
+                T: () => _.g,
+            },
+            {
+                no: 8,
+                name: "gift_icon",
+                kind: "message",
+                oneof: "properties",
+                T: () => p.O,
+            },
+            {
+                no: 9,
+                name: "gift_icon_coachmark",
+                kind: "message",
+                oneof: "properties",
+                T: () => f.h,
+            },
+            {
+                no: 10,
+                name: "gift_plan_selection_card_banner",
+                kind: "message",
+                oneof: "properties",
+                T: () => d.C,
+            },
+            {
+                no: 11,
+                name: "gift_customization_banner",
+                kind: "message",
+                oneof: "properties",
+                T: () => u.m,
+            },
+            {
+                no: 12,
+                name: "billing_settings_nitro_gift_banner",
+                kind: "message",
+                oneof: "properties",
+                T: () => c.V,
+            },
+            {
+                no: 13,
+                name: "gift_reminder_nagbar",
+                kind: "message",
+                oneof: "properties",
+                T: () => l.p,
+            },
+            {
+                no: 14,
+                name: "gift_reminder_coachmark",
+                kind: "message",
+                oneof: "properties",
+                T: () => s.r,
             },
             {
                 no: 3,
@@ -166,4 +318,4 @@ class f extends o.C {
         ]);
     }
 }
-let p = new f();
+let y = new b();
