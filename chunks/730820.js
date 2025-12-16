@@ -1,34 +1,24 @@
-n.d(t, { Z: () => U }), n(388685);
+n.d(t, { Z: () => T });
 var r = n(54381),
     i = n(473749),
     a = n(512722),
     o = n.n(a),
     s = n(442837),
     l = n(481060),
-    c = n(816814),
-    u = n(240872),
-    d = n(23645),
-    f = n(600164),
-    p = n(183620),
-    _ = n(144114),
-    m = n(921801),
-    h = n(355497),
-    g = n(607018),
-    E = n(778764),
-    b = n(314897),
-    y = n(325067),
-    O = n(594174),
-    v = n(572004),
-    S = n(287880),
-    I = n(714565),
-    T = n(202858),
-    C = n(726985),
-    A = n(981631),
-    N = n(815660),
-    P = n(388032),
-    R = n(335094),
-    w = n(478411);
-function D(e, t, n) {
+    c = n(921801),
+    u = n(778764),
+    d = n(314897),
+    f = n(325067),
+    p = n(594174),
+    _ = n(287880),
+    m = n(805244),
+    h = n(616495),
+    g = n(905935),
+    E = n(867289),
+    b = n(217801),
+    y = n(453706),
+    O = n(726985);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +31,7 @@ function D(e, t, n) {
         e
     );
 }
-function x(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,355 +42,62 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
-function L(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function j(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function M(e) {
-    let {
-            code: { code: t, consumed: n },
-        } = e,
-        a = "".concat(t.substr(0, 4), "-").concat(t.substr(4)),
-        o = i.useRef(null),
-        s = i.useCallback(
-            (e) => {
-                if ("c" === e.key && e.metaKey && v.wS) {
-                    var t;
-                    e.preventDefault(),
-                        e.stopPropagation(),
-                        (0, v.JG)(a),
-                        null == o || null == (t = o.current) || t.focus();
-                }
-            },
-            [a],
-        );
-    return (0, r.jsx)("li", {
-        className: w.marginBottom20,
-        children: (0, r.jsxs)(l.P3F, {
-            innerRef: o,
-            className: R.backupCode,
-            onKeyDown: s,
-            children: [
-                (0, r.jsx)(l.FZ5, { checked: n }),
-                (0, r.jsx)("span", {
-                    className: R.code,
-                    children: a,
-                }),
-            ],
-        }),
-    });
-}
-class k extends i.PureComponent {
-    maskPhoneNumber(e) {
-        return null == e ? "" : "".concat("*".repeat(e.length - 4)).concat(e.slice(-4));
-    }
-    renderMFASMS() {
-        let e,
-            t,
-            { revealed: n } = this.state,
-            { currentUser: i, togglingSMS: a, hasTOTPEnabled: o } = this.props,
-            s = null != i.phone,
-            c = i.hasFlag(A.xW$.MFA_SMS);
-        if (o) {
-            if (s || c) {
-                let e = n ? i.phone : this.maskPhoneNumber(i.phone);
-                t = (0, r.jsxs)(l.Text, {
-                    variant: "text-sm/normal",
-                    children: [
-                        P.intl.format(P.t.PXVoEO, { phoneNumber: e }),
-                        (0, r.jsx)(l.Anchor, {
-                            onClick: this.togglePhoneNumberVisibility,
-                            className: R.phoneRevealer,
-                            children: n ? P.intl.string(P.t.FfltIN) : P.intl.string(P.t.llArAg),
-                        }),
-                    ],
-                });
-            }
-            if (c)
-                e = (0, r.jsx)(l.Button, {
-                    variant: "critical-secondary",
-                    size: "sm",
-                    text: P.intl.string(P.t.KLWnit),
-                    loading: a,
-                    onClick: this.handleDisableSMS,
-                });
-            else {
-                let t = (0, I.c)(i);
-                e = (0, r.jsxs)(l.ButtonGroup, {
-                    size: "sm",
-                    children: [
-                        (0, r.jsx)(l.Button, {
-                            variant: "primary",
-                            size: "sm",
-                            text: null != t ? t : P.intl.string(P.t.DZQe23),
-                            onClick: this.handleEnableSMS,
-                            loading: a,
-                            disabled: null != t,
-                        }),
-                        s
-                            ? (0, r.jsx)(l.Button, {
-                                  variant: "secondary",
-                                  size: "sm",
-                                  text: P.intl.string(P.t.Ulqq6K),
-                                  onClick: this.handleChangePhoneNumber,
-                              })
-                            : null,
-                    ],
-                });
-            }
-            return (0, r.jsx)(m.F, {
-                setting: C.s6.ACCOUNT_SMS_BACKUP,
-                children: (0, r.jsxs)(l.gNt, {
-                    label: P.intl.string(P.t.uHAJ5v),
-                    description: P.intl.string(P.t.fspJ4H),
-                    children: [t, e],
-                }),
-            });
-        }
-    }
+class I extends i.PureComponent {
     renderEnabled() {
-        let e,
-            { backupCodes: t } = this.props,
-            n = (0, r.jsx)(m.F, {
-                setting: C.s6.ACCOUNT_VIEW_BACKUP_CODES,
-                children: (0, r.jsx)(l.Button, {
-                    variant: "primary",
-                    size: "sm",
-                    text: P.intl.string(P.t.xZEzbu),
-                    onClick: this.sendMFABackupCodesVerificationKeyEmail,
-                }),
-            });
-        if (t.length > 0) {
-            n = (0, r.jsx)(d.Z, {
-                fileContents: this.getDownloadFileContents,
-                contentType: "text/plain",
-                fileName: "discord_backup_codes.txt",
-                children: (0, r.jsx)(l.Button, {
-                    variant: "primary",
-                    size: "sm",
-                    text: P.intl.string(P.t.qZZUy6),
-                }),
-            });
-            let i = (e) => e.map((e) => (0, r.jsx)(M, { code: e }, e.code));
-            e = (0, r.jsxs)(l.Kqy, {
-                gap: 16,
-                children: [
-                    (0, r.jsxs)(l.gNt, {
-                        label: P.intl.string(P.t.GfqHPn),
-                        description: P.intl.format(P.t.OhmvYt, {}),
-                        children: [
-                            (0, r.jsxs)(f.Z, {
-                                children: [
-                                    (0, r.jsx)(f.Z.Child, {
-                                        children: (0, r.jsx)("ul", {
-                                            className: R.checkboxGroup,
-                                            children: i(t.slice(0, t.length / 2)),
-                                        }),
-                                    }),
-                                    (0, r.jsx)(f.Z.Child, {
-                                        children: (0, r.jsx)("ul", {
-                                            className: R.checkboxGroup,
-                                            children: i(t.slice(t.length / 2)),
-                                        }),
-                                    }),
-                                ],
-                            }),
-                            (0, r.jsx)(l.Avr, {
-                                textVariant: "text-sm/medium",
-                                onClick: this.generateBackupCodes,
-                                text: P.intl.string(P.t.RIThUu),
-                            }),
-                        ],
-                    }),
-                    (0, r.jsx)(l.izJ, {}),
-                ],
-            });
-        }
+        let { backupCodes: e, hasTOTPEnabled: t, currentUser: n, togglingSMS: i } = this.props;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(l.gNt, {
-                    label: P.intl.string(P.t.EPVq00),
-                    description: P.intl.string(P.t.bQwxib),
-                    children: (0, r.jsxs)(l.ButtonGroup, {
-                        size: "sm",
-                        children: [
-                            n,
-                            (0, r.jsx)(m.F, {
-                                setting: C.s6.ACCOUNT_REMOVE_2FA,
-                                children: (0, r.jsx)(l.Button, {
-                                    variant: "critical-secondary",
-                                    size: "sm",
-                                    text: P.intl.string(P.t["D+aE7g"]),
-                                    onClick: this.handleDisableMFA,
-                                }),
-                            }),
-                            (0, r.jsx)(m.F, {
-                                setting: C.s6.ACCOUNT_ENABLE_2FA,
-                                children: (0, r.jsx)(l.Button, {
-                                    variant: "primary",
-                                    size: "sm",
-                                    text: P.intl.string(P.t.cDgKte),
-                                    onClick: T.ZP.enableMFA,
-                                }),
-                            }),
-                        ],
-                    }),
+                (0, r.jsx)(m.Z, {
+                    backupCodes: e,
+                    currentUser: n,
                 }),
-                e,
-                this.renderMFASMS(),
-                (0, r.jsx)(m.F, {
-                    setting: C.s6.ACCOUNT_SECURITY_KEYS,
-                    children: (0, r.jsx)(E.Z, {}),
+                e.length > 0 &&
+                    (0, r.jsxs)(l.Kqy, {
+                        gap: 16,
+                        children: [(0, r.jsx)(h.Z, { backupCodes: e }), (0, r.jsx)(l.izJ, {})],
+                    }),
+                t &&
+                    (0, r.jsx)(c.F, {
+                        setting: O.s6.ACCOUNT_SMS_BACKUP,
+                        children: (0, r.jsx)(E.Z, {
+                            currentUser: n,
+                            togglingSMS: i,
+                        }),
+                    }),
+                (0, r.jsx)(c.F, {
+                    setting: O.s6.ACCOUNT_SECURITY_KEYS,
+                    children: (0, r.jsx)(u.Z, {}),
                 }),
             ],
         });
     }
     renderDisabled() {
         return (0, r.jsxs)(r.Fragment, {
-            children: [
-                (0, r.jsx)(l.gNt, {
-                    label: P.intl.string(P.t.EPVq00),
-                    description: P.intl.string(P.t["8aDa1t"]),
-                    children: (0, r.jsx)(l.Button, {
-                        variant: "primary",
-                        size: "sm",
-                        text: P.intl.string(P.t.cDgKte),
-                        onClick: T.ZP.enableMFA,
-                    }),
-                }),
-                (0, r.jsx)(E.Z, {}),
-            ],
+            children: [(0, r.jsx)(g.Z, {}), (0, r.jsx)(u.Z, {})],
         });
     }
     render() {
         let { currentUser: e } = this.props;
-        return S.uZ
+        return _.uZ
             ? e.verified
                 ? e.mfaEnabled
                     ? this.renderEnabled()
                     : this.renderDisabled()
-                : (0, r.jsx)(l.gNt, {
-                      label: P.intl.string(P.t.EPVq00),
-                      children: (0, r.jsx)(l.Wn, {
-                          messageType: l.QYI.WARNING,
-                          children: P.intl.string(P.t.uggF7o),
-                      }),
-                  })
-            : (0, r.jsx)(l.gNt, {
-                  label: P.intl.string(P.t.EPVq00),
-                  children: (0, r.jsx)(l.Wn, {
-                      messageType: l.QYI.INFO,
-                      children: P.intl.string(P.t.PhHhsj),
-                  }),
-              });
-    }
-    openPhoneVerificationModal() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, l.h7j)((t) => (0, r.jsx)(g.default, x({ reason: _.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: N.M });
-    }
-    constructor(...e) {
-        super(...e),
-            D(this, "state", {
-                revealed: !1,
-                password: "",
-            }),
-            D(this, "togglePhoneNumberVisibility", (e) => {
-                e.preventDefault(), this.setState({ revealed: !this.state.revealed });
-            }),
-            D(this, "handleDisableMFA", () => {
-                u.Z.show({
-                    title: P.intl.string(P.t["D+aE7g"]),
-                    body: P.intl.string(P.t.EA4ZEk),
-                    cancelText: P.intl.string(P.t["ETE/oC"]),
-                    onConfirm: () => c.Z.disable(),
-                });
-            }),
-            D(this, "generateBackupCodes", async () => {
-                let e = y.Z.getVerificationKey();
-                await c.Z.confirmViewBackupCodes(e, !0);
-            }),
-            D(this, "sendMFABackupCodesVerificationKeyEmail", () => {
-                (0, l.h7j)((e) =>
-                    (0, r.jsx)(
-                        h.default,
-                        j(x({}, e), {
-                            handleSubmit: (e) =>
-                                c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
-                                    this.viewBackupCodes(e);
-                                }),
-                            title: P.intl.string(P.t.PsQmzU),
-                            actionText: P.intl.string(P.t.ajkYcF),
-                        }),
-                    ),
-                );
-            }),
-            D(this, "viewBackupCodes", (e) => {
-                (0, l.h7j)((t) => (0, r.jsx)(p.Z, j(x({}, t), { password: e })), { stackingBehavior: "stack" });
-            }),
-            D(this, "getDownloadFileContents", () => {
-                let e = this.props.backupCodes
-                        .map((e) => {
-                            let { consumed: t, code: n } = e;
-                            return "* "
-                                .concat(n.substr(0, 4), "-")
-                                .concat(n.substr(4), " ")
-                                .concat(t ? "(used)" : "");
-                        })
-                        .join("\r\n"),
-                    t = P.intl.formatToPlainString(P.t["uYWwh/"], { email: this.props.currentUser.email });
-                return "".concat(t, "\r\n\r\n").concat(e);
-            }),
-            D(this, "handleChangePhoneNumber", () => {
-                this.openPhoneVerificationModal();
-            }),
-            D(this, "handleEnableSMS", () => {
-                let { currentUser: e } = this.props;
-                null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: c.Z.enableSMS }) : c.Z.enableSMS();
-            }),
-            D(this, "handleDisableSMS", () => {
-                (0, l.h7j)((e) =>
-                    (0, r.jsx)(
-                        h.default,
-                        j(x({}, e), {
-                            handleSubmit: c.Z.disableSMS,
-                            title: P.intl.string(P.t.KLWnit),
-                            children: P.intl.string(P.t["W0/Duf"]),
-                        }),
-                    ),
-                );
-            });
+                : (0, r.jsx)(y.Z, {})
+            : (0, r.jsx)(b.Z, {});
     }
 }
-function U(e) {
-    let t = (0, s.e7)([O.default], () => O.default.getCurrentUser());
+function T(e) {
+    let t = (0, s.e7)([p.default], () => p.default.getCurrentUser());
     o()(null != t, "TwoFactorAuth: currentUser cannot be undefined");
-    let n = (0, s.cj)([y.Z, b.default], () => ({
-        togglingSMS: y.Z.togglingSMS,
-        hasTOTPEnabled: b.default.hasTOTPEnabled(),
+    let n = (0, s.cj)([f.Z, d.default], () => ({
+        togglingSMS: f.Z.togglingSMS,
+        hasTOTPEnabled: d.default.hasTOTPEnabled(),
     }));
-    return (0, r.jsx)(k, x({ currentUser: t }, n, e));
+    return (0, r.jsx)(I, S({ currentUser: t }, n, e));
 }
