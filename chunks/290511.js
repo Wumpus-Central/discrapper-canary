@@ -1,30 +1,29 @@
 n.d(t, {
-    BN: () => j,
-    FN: () => v,
+    BN: () => L,
+    FN: () => O,
     NE: () => d,
     NO: () => f,
     Ni: () => w,
-    Oq: () => D,
-    RF: () => T,
-    Un: () => S,
-    X: () => b,
+    Oq: () => R,
+    RF: () => I,
+    Un: () => v,
+    X: () => E,
     YW: () => p,
-    a4: () => L,
-    ae: () => C,
+    a4: () => x,
+    ae: () => T,
     b3: () => g,
-    cf: () => R,
-    dr: () => N,
-    fY: () => y,
+    cf: () => P,
+    dr: () => A,
+    fY: () => b,
     iU: () => u,
     kk: () => h,
-    l7: () => O,
-    md: () => E,
+    l7: () => y,
     qm: () => _,
-    rZ: () => k,
-    t9: () => M,
-    yZ: () => A,
+    rZ: () => M,
+    t9: () => j,
+    yZ: () => C,
     yx: () => m,
-    zz: () => I,
+    zz: () => S,
 }),
     n(953529),
     n(388685),
@@ -64,39 +63,38 @@ let u = 100,
     m = 10,
     h = 100,
     g = 4,
-    E = 7,
-    b = 5,
-    y = 13;
-var O = (function (e) {
+    E = 1,
+    b = 13;
+var y = (function (e) {
         return (e[(e.CUSTOMIZE = 0)] = "CUSTOMIZE"), (e[(e.BROWSE = 1)] = "BROWSE"), e;
     })({}),
-    v = (function (e) {
+    O = (function (e) {
         return (e[(e.MULTIPLE_CHOICE = 0)] = "MULTIPLE_CHOICE"), (e[(e.DROPDOWN = 1)] = "DROPDOWN"), e;
     })({}),
-    S = (function (e) {
+    v = (function (e) {
         return (
             (e[(e.ONBOARDING_DEFAULT = 0)] = "ONBOARDING_DEFAULT"),
             (e[(e.ONBOARDING_ADVANCED = 1)] = "ONBOARDING_ADVANCED"),
             e
         );
     })({}),
-    I = (function (e) {
+    S = (function (e) {
         return (
             (e[(e.APPLICATION = 0)] = "APPLICATION"),
             (e[(e.PROVIDER_CONNECTED_ACCOUNT = 1)] = "PROVIDER_CONNECTED_ACCOUNT"),
             e
         );
     })({});
-function T(e) {
+function I(e) {
     if (e.options.length > 0) return !1;
-    let t = C(),
+    let t = T(),
         { id: n } = t,
         r = l(t, ["id"]),
         { id: a } = e,
         o = l(e, ["id"]);
     return i()(r, o);
 }
-function C() {
+function T() {
     return {
         id: String(Date.now()),
         title: s.intl.string(s.t.vY91C9),
@@ -107,7 +105,7 @@ function C() {
         type: 0,
     };
 }
-function A(e) {
+function C(e) {
     return {
         id: String(Date.now()),
         title: "",
@@ -118,7 +116,7 @@ function A(e) {
         type: 0,
     };
 }
-function N(e) {
+function A(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -143,7 +141,7 @@ function N(e) {
         type: e.type,
     };
 }
-function P(e) {
+function N(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -165,10 +163,10 @@ function P(e) {
         type: e.type,
     };
 }
-function R(e) {
+function P(e) {
     var t, n, r, i;
     return {
-        prompts: e.prompts.map(P),
+        prompts: e.prompts.map(N),
         defaultChannelIds: e.default_channel_ids,
         responses: null != (t = e.responses) ? t : [],
         mode: e.mode,
@@ -179,7 +177,7 @@ function R(e) {
         connections: null != (i = e.connections) ? i : [],
     };
 }
-function D(e) {
+function R(e) {
     return null == e || (null == e.id && null == e.name);
 }
 let w = new Set([
@@ -192,11 +190,11 @@ let w = new Set([
         o.ABu.LEAGUE_OF_LEGENDS,
         o.ABu.SKYPE,
     ]),
-    x = Object.values(o.ABu).filter((e) => !w.has(e));
-function L(e) {
+    D = Object.values(o.ABu).filter((e) => !w.has(e));
+function x(e) {
     return 0 === e.connection_type ? "app:".concat(e.application_id) : "provider:".concat(e.provider_id);
 }
-function j(e) {
+function L(e) {
     let [t, n] = e.split(":");
     return "app" === t && void 0 !== n && "" !== n
         ? {
@@ -210,7 +208,7 @@ function j(e) {
             }
           : null;
 }
-function M(e) {
+function j(e) {
     let t = [];
     return (
         0 !== e.connection_type && 1 !== e.connection_type
@@ -221,7 +219,7 @@ function M(e) {
                   : 1 === e.connection_type &&
                     ((0, a.Ew)(e.provider_id)
                         ? t.push("Platform ID is required for platform connections")
-                        : x.includes(e.provider_id) || t.push("Invalid platform ID"),
+                        : D.includes(e.provider_id) || t.push("Invalid platform ID"),
                     (0, a.Ew)(e.application_id) || t.push("Application ID not allowed for platform connections")),
               null != e.description &&
                   e.description.length > h &&
@@ -229,13 +227,13 @@ function M(e) {
         t
     );
 }
-function k(e) {
+function M(e) {
     let t = [],
         n = new Set();
     for (let [r, i] of e.entries()) {
-        let e = M(i);
+        let e = j(i);
         t.push(...e.map((e) => "Connection ".concat(r + 1, ": ").concat(e)));
-        let a = L(i);
+        let a = x(i);
         n.has(a) && t.push("Duplicate connection configuration"), n.add(a);
     }
     return t;

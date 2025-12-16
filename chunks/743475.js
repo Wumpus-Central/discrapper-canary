@@ -1,7 +1,7 @@
 n.d(t, {
-    BG: () => f,
-    DO: () => b,
-    pt: () => h,
+    BG: () => b,
+    DO: () => h,
+    pt: () => p,
 }),
     n(388685);
 var r = n(570140),
@@ -14,30 +14,26 @@ var r = n(570140),
     d = n(889369),
     u = n(570961),
     g = n(208665),
-    m = n(290511),
-    p = n(388032);
-function f() {
+    f = n(290511),
+    m = n(388032);
+function b() {
     r.Z.dispatch({ type: "GUILD_SETTINGS_DEFAULT_CHANNELS_RESET" });
 }
-function h(e) {
+function p(e) {
     r.Z.dispatch({
         type: "GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE",
         channelId: e,
     });
 }
-async function b(e) {
+async function h(e) {
     let t = Array.from(d.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
         n = g.Z.advancedMode,
-        [f, h] = (0, s.d9)(e.id, [...t]),
-        b = (0, s.kl)(e.id, t, g.Z.editedOnboardingPrompts),
-        x = (0, s.kl)(e.id, t, g.Z.editedOnboardingPrompts, s.V7);
-    if (
-        a.Z.getEnabled(e.id) &&
-        ((!n && (h.length < m.md || f.length < m.X)) || (n && (b.length < m.md || x.length < m.X)))
-    )
+        [b] = (0, s.d9)(e.id, [...t]),
+        p = (0, s.kl)(e.id, t, g.Z.editedOnboardingPrompts, s.V7);
+    if (a.Z.getEnabled(e.id) && ((!n && b.length < f.X) || (n && p.length < f.X)))
         return void i.Z.show({
-            title: p.intl.string(p.t.iLdiqY),
-            body: p.intl.string(p.t.JOT74c),
+            title: m.intl.string(m.t.iLdiqY),
+            body: m.intl.string(m.t.JOT74c),
         });
     if (d.Z.hasChanges()) {
         r.Z.dispatch({ type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT" });
@@ -49,10 +45,10 @@ async function b(e) {
                     channelIds: t,
                 });
         } catch (n) {
-            var j;
-            let { fieldName: e, error: t } = null != (j = new l.Hx(n).getAnyErrorMessageAndField()) ? j : {};
+            var h;
+            let { fieldName: e, error: t } = null != (h = new l.Hx(n).getAnyErrorMessageAndField()) ? h : {};
             i.Z.show({
-                title: p.intl.string(p.t.iLdiqY),
+                title: m.intl.string(m.t.iLdiqY),
                 body: [e, t].filter(c.lm).join(": "),
             }),
                 r.Z.dispatch({ type: "GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED" });

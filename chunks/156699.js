@@ -30,11 +30,8 @@ async function N(e, t, n) {
     if (!r) return !0;
     r && o.Z.shouldFetchPrompts(e) && (await (0, a.eM)(e));
     let E = o.Z.getDefaultChannelIds(e),
-        [f, N] = (0, s.d9)(e, E);
-    if (!E.includes(t)) return !0;
-    let g = n.removingView && N.length - 1 < d.md,
-        _ = (n.removingChat || n.removingView) && f.length - 1 < d.X;
-    return !g && !_;
+        [f] = (0, s.d9)(e, E);
+    return !E.includes(t) || !((n.removingChat || n.removingView) && f.length - 1 < d.X);
 }
 async function g(e, t, n) {
     let u = e.getGuildId();

@@ -134,8 +134,8 @@ function x(e) {
 function j(e) {
     let t = (0, l.e7)([s.Z], () => s.Z.getDefaultChannelIds(e)),
         n = i.useMemo(() => new Set(t), [t]),
-        [r, a] = (0, o.VF)(e, n);
-    return a.length >= b.md && r.length >= b.X;
+        [r] = (0, o.VF)(e, n);
+    return r.length >= b.X;
 }
 function v(e) {
     let t = j(e),
@@ -159,10 +159,7 @@ function O(e) {
               })
             : O
               ? p.intl.formatToPlainString(p.t.HxEwSv, { numDefaultChannels: v })
-              : p.intl.formatToPlainString(p.t.ey3uVZ, {
-                    numDefaultChannels: b.md,
-                    numChattableChannels: b.X,
-                });
+              : p.intl.formatToPlainString(p.t.vPwmA0, { numChattableChannels: b.X });
     return (0, r.jsx)(x, {
         title: y ? p.intl.string(p.t.YZookV) : p.intl.string(p.t["4GSygh"]),
         description: N,

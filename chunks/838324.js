@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -10,50 +10,46 @@ var i = n(442837),
     d = n(974513),
     u = n(290511),
     g = n(388032),
-    m = n(636942);
-function p(e) {
+    f = n(212781);
+function m(e) {
     let { guildId: t, scrollToQuestions: n } = e,
-        p = (0, i.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
-        f = (0, i.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
-        [h, b] = (0, o.VF)(t, f),
-        [x, j] = (0, d.OA)(t, [...f]),
-        _ = p ? j.length : b.length,
-        v = p ? x.length : h.length,
-        O = _ < u.md,
-        C = v >= u.X,
-        y = j.length - b.length,
+        m = (0, i.e7)([s.Z], () => s.Z.isAdvancedMode(t)),
+        b = (0, i.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
+        [p, h] = (0, o.VF)(t, b),
+        [x, j] = (0, d.OA)(t, [...b]),
+        v = m ? j.length : h.length,
+        O = m ? x.length : p.length,
+        C = O >= u.X,
+        y = j.length - h.length,
         N = (0, r.jsx)(a.owK, {
             size: "sm",
             color: l.Z.unsafe_rawColors.BRAND_500.css,
             secondaryColor: l.Z.unsafe_rawColors.WHITE_100.css,
-            className: m.icon,
+            className: f.icon,
         }),
         E = (0, r.jsx)(a.k$p, {
             size: "sm",
-            className: m.icon,
+            className: f.icon,
             color: l.Z.colors.WHITE.css,
             secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
         }),
-        I = [(Math.min(u.X, v) / u.md) * 100, (Math.min(u.md, _) / u.md) * 100],
-        S =
-            !O && C
-                ? [l.Z.colors.TEXT_FEEDBACK_POSITIVE.css, l.Z.colors.TEXT_FEEDBACK_POSITIVE.css]
-                : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
+        I = [(Math.min(u.X, O) / u.X) * 100],
+        S = C ? [l.Z.colors.TEXT_FEEDBACK_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css];
     return (0, r.jsxs)("div", {
-        className: m.container,
+        className: f.container,
         children: [
             (0, r.jsxs)("div", {
-                className: m.header,
+                className: f.header,
                 children: [
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/bold",
                         color: "text-brand",
-                        children: g.intl.format(g.t.kvroKO, { count: v }),
+                        children: g.intl.format(g.t.kvroKO, { count: O }),
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/bold",
                         color: "text-muted",
-                        children: g.intl.format(g.t["0MjxJ5"], { count: _ }),
+                        children: g.intl.format(g.t["0MjxJ5"], { count: v }),
                     }),
                 ],
             }),
@@ -63,18 +59,7 @@ function p(e) {
                 size: a.yGy.Sizes.XSMALL,
             }),
             (0, r.jsxs)("div", {
-                className: m.requiredItem,
-                children: [
-                    O ? E : N,
-                    (0, r.jsx)(a.Text, {
-                        variant: "text-xs/normal",
-                        color: "text-muted",
-                        children: g.intl.format(g.t.k0COZY, { count: u.md }),
-                    }),
-                ],
-            }),
-            (0, r.jsxs)("div", {
-                className: m.requiredItem,
+                className: f.requiredItem,
                 children: [
                     C ? N : E,
                     (0, r.jsx)(a.Text, {
@@ -84,17 +69,17 @@ function p(e) {
                     }),
                 ],
             }),
-            p &&
+            m &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)("div", {
-                            className: m.requiredItem,
+                            className: f.requiredItem,
                             children: [
                                 (0, r.jsx)(a.d3s, {
                                     size: "sm",
                                     color: l.Z.colors.WHITE.css,
                                     secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
-                                    className: m.icon,
+                                    className: f.icon,
                                 }),
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-xs/normal",
@@ -104,13 +89,13 @@ function p(e) {
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: m.requiredItem,
+                            className: f.requiredItem,
                             children: [
                                 (0, r.jsx)(a.d3s, {
                                     size: "sm",
                                     color: l.Z.colors.WHITE.css,
                                     secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
-                                    className: m.icon,
+                                    className: f.icon,
                                 }),
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-xs/normal",

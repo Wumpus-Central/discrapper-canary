@@ -1,7 +1,7 @@
 n.d(t, {
-    O4: () => f,
-    OA: () => p,
-    Wu: () => h,
+    O4: () => b,
+    OA: () => m,
+    Wu: () => p,
 }),
     n(388685);
 var r = n(54381),
@@ -14,40 +14,34 @@ var r = n(54381),
     d = n(983135),
     u = n(208665),
     g = n(290511),
-    m = n(388032);
-function p(e, t) {
+    f = n(388032);
+function m(e, t) {
     let n = (0, l.Wu)([u.Z], () => (0, c.kl)(e, t, u.Z.editedOnboardingPrompts));
     return [(0, l.Wu)([u.Z], () => (0, c.kl)(e, t, u.Z.editedOnboardingPrompts, c.V7)), n];
 }
-function f(e) {
+function b(e) {
     let t = (0, l.e7)([o.Z], () => o.Z.isAdvancedMode(e)),
-        [n, r] = (function (e) {
-            let t = (0, l.Wu)([o.Z], () => (0, c.kl)(e, o.Z.getDefaultChannelIds(e), o.Z.getOnboardingPrompts(e)));
-            return [
-                (0, l.Wu)([o.Z], () => (0, c.kl)(e, o.Z.getDefaultChannelIds(e), o.Z.getOnboardingPrompts(e), c.V7)),
-                t,
-            ];
-        })(e);
-    return !!t && r.length >= g.md && n.length >= g.X;
+        [n] = [(0, l.Wu)([o.Z], () => (0, c.kl)(e, o.Z.getDefaultChannelIds(e), o.Z.getOnboardingPrompts(e), c.V7))];
+    return !!t && n.length >= g.X;
 }
-function h(e) {
+function p(e) {
     let { guildId: t, className: n } = e,
         c = (0, l.e7)([o.Z], () => o.Z.isAdvancedMode(t)),
         u = i.useCallback(() => {
             let e = c ? g.Un.ONBOARDING_DEFAULT : g.Un.ONBOARDING_ADVANCED;
             c
                 ? (0, a.Z)({
-                      title: m.intl.string(m.t["49+ONj"]),
-                      subtitle: m.intl.string(m.t.TLkoOt),
+                      title: f.intl.string(f.t["49+ONj"]),
+                      subtitle: f.intl.string(f.t.TLkoOt),
                       variant: "primary",
-                      confirmText: m.intl.string(m.t.R9GHya),
+                      confirmText: f.intl.string(f.t.R9GHya),
                       onConfirm: () => (0, d.Ts)(t, e),
                   })
                 : (0, a.Z)({
-                      title: m.intl.string(m.t.YB9xUF),
-                      subtitle: m.intl.string(m.t.BcGGVn),
+                      title: f.intl.string(f.t.YB9xUF),
+                      subtitle: f.intl.string(f.t.BcGGVn),
                       variant: "primary",
-                      confirmText: m.intl.string(m.t.ts6u6r),
+                      confirmText: f.intl.string(f.t.ts6u6r),
                       onConfirm: () => (0, d.Ts)(t, e),
                   });
         }, [t, c]);
@@ -58,7 +52,7 @@ function h(e) {
             children: (0, r.jsx)(s.Text, {
                 variant: "text-sm/medium",
                 color: "text-link",
-                children: c ? m.intl.string(m.t.OmpxWy) : m.intl.string(m.t.ozsQBC),
+                children: c ? f.intl.string(f.t.OmpxWy) : f.intl.string(f.t.ozsQBC),
             }),
         }),
     });

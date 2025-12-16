@@ -10,8 +10,8 @@ n.d(t, {
 var l = n(570140),
     i = n(668781),
     r = n(479531),
-    a = n(983736),
-    s = n(45966),
+    s = n(983736),
+    a = n(45966),
     o = n(819553),
     c = n(637853),
     d = n(17181),
@@ -41,10 +41,10 @@ function _(e) {
         });
 }
 async function j(e, t) {
-    let n = s.Z.getEnabled(e),
-        a = Array.from(I.Z.editedDefaultChannelIds).filter((e) => null != g.Z.getChannel(e)),
-        [o, d] = (0, c.d9)(e, [...a]);
-    if (n && t === S.Un.ONBOARDING_DEFAULT && (d.length < S.md || o.length < S.X))
+    let n = a.Z.getEnabled(e),
+        s = Array.from(I.Z.editedDefaultChannelIds).filter((e) => null != g.Z.getChannel(e)),
+        [o] = (0, c.d9)(e, [...s]);
+    if (n && t === S.Un.ONBOARDING_DEFAULT && o.length < S.X)
         return void i.Z.show({
             title: x.intl.string(x.t.iLdiqY),
             body: x.intl.string(x.t.JOT74c),
@@ -52,8 +52,8 @@ async function j(e, t) {
     try {
         await (0, p.n_)(e, { mode: t });
     } catch (n) {
-        var u;
-        let { fieldName: e, error: t } = null != (u = new r.Z(n).getAnyErrorMessageAndField()) ? u : {};
+        var d;
+        let { fieldName: e, error: t } = null != (d = new r.Z(n).getAnyErrorMessageAndField()) ? d : {};
         i.Z.show({
             title: x.intl.string(x.t.iLdiqY),
             body: [e, t].filter(h.lm).join(": "),
@@ -85,7 +85,7 @@ async function D(e) {
             onboardingResponses: new Set(),
             onboardingEnabled: !0,
             memberOptions: {
-                isPending: (0, a.Dc)(t),
+                isPending: (0, s.Dc)(t),
                 flags: 0,
             },
         }),
