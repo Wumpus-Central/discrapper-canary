@@ -33,7 +33,7 @@ function C(e) {
             canUsePremiumCollectibles: d,
             selectedProfileEffect: f,
         } = e,
-        g = (0, u.G1)(n);
+        g = null != i ? (0, u.qS)(i) : (0, u.G1)(n);
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsxs)(o.mzw, {
             "data-migration-pending": !0,
@@ -65,7 +65,7 @@ function C(e) {
                         }),
                 !d && g
                     ? (0, r.jsx)(p.Z, {
-                          product: n,
+                          product: null != i ? i : n,
                           onClose: s,
                       })
                     : (0, r.jsx)(o.Button, {
@@ -112,9 +112,9 @@ function I(e) {
                 : null;
         }, [I, P, v]),
         { product: _, purchase: A } = (0, d.Z)(null == w ? void 0 : w.skuId),
-        k = i.useRef(null),
-        N = h.ZP.canUseCollectibles(t),
-        Z =
+        Z = i.useRef(null),
+        k = h.ZP.canUseCollectibles(t),
+        N =
             void 0 === x
                 ? (null == I ? void 0 : I.skuId) === (null == p ? void 0 : p.skuId)
                 : (null == I ? void 0 : I.skuId) === (null == x ? void 0 : x.skuId),
@@ -161,7 +161,7 @@ function I(e) {
                         user: t,
                         guild: n,
                         pendingProfileEffect: I,
-                        selectedProfileEffectRef: k,
+                        selectedProfileEffectRef: Z,
                         onSelect: T,
                         onOpenShop: D,
                     }),
@@ -183,9 +183,9 @@ function I(e) {
                 onOpenShop: D,
                 product: _,
                 purchase: A,
-                canUsePremiumCollectibles: N,
+                canUsePremiumCollectibles: k,
                 selectedProfileEffect: I,
-                disableApplyButton: Z,
+                disableApplyButton: N,
             }),
         ],
     });

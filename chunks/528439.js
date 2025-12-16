@@ -24,7 +24,7 @@ let d = { skuId: "None" },
                 (t, r) => {
                     let i = e.get(r.skuId);
                     return (
-                        (0, c.G1)(null != i ? i : n.get(r.skuId))
+                        (null != i ? (0, c.qS)(i) : (0, c.G1)(n.get(r.skuId)))
                             ? t.premium_purchase.push(r)
                             : null != i
                               ? t.purchase.push(r)

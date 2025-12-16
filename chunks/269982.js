@@ -7,7 +7,7 @@ var i = n(979554),
     s = n(436774),
     o = n(474936),
     c = n(388032),
-    d = n(178368);
+    d = n(583470);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -37,13 +37,15 @@ function m(e) {
     let { product: t, onClose: m } = e,
         { newestAnalyticsLocation: p } = (0, a.ZP)(),
         h =
-            t.type === i.Z.AVATAR_DECORATION
-                ? o.cd.AVATAR_DECORATION_MODAL_UPSELL
-                : t.type === i.Z.PROFILE_EFFECT
-                  ? o.cd.PROFILE_EFFECT_MODAL_UPSELL
-                  : t.type === i.Z.NAMEPLATE
-                    ? o.cd.NAMEPLATE_MODAL_UPSELL
-                    : null;
+            null == t
+                ? null
+                : t.type === i.Z.AVATAR_DECORATION
+                  ? o.cd.AVATAR_DECORATION_MODAL_UPSELL
+                  : t.type === i.Z.PROFILE_EFFECT
+                    ? o.cd.PROFILE_EFFECT_MODAL_UPSELL
+                    : t.type === i.Z.NAMEPLATE
+                      ? o.cd.NAMEPLATE_MODAL_UPSELL
+                      : null;
     return null == h
         ? null
         : (0, r.jsxs)("div", {
