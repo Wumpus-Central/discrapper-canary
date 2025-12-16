@@ -160,19 +160,30 @@ function K(e) {
 let z = i.forwardRef(function (e, t) {
     var a, s, l;
     let c,
-        { canRemove: d, className: g, role: E, onRemove: O, guildId: v, disableBorderColor: I, onMouseDown: A } = e,
-        N = (0, u.JA)(E.id),
-        { tabIndex: P } = N,
-        R = B(N, ["tabIndex"]),
-        w = (0, S.p9)({
+        {
+            canRemove: d,
+            className: g,
+            role: E,
+            onRemove: O,
+            guildId: v,
+            disableBorderColor: I,
+            onMouseDown: A,
+            guild: N,
+        } = e,
+        P = (0, u.JA)(E.id),
+        { tabIndex: R } = P,
+        w = B(P, ["tabIndex"]),
+        D = (0, S.p9)({
             roleId: E.id,
             size: 16,
             guildId: v,
+            role: E,
+            guild: N,
         }),
-        D = (0, p.e7)([b.Z], () => b.Z.roleStyle),
-        x = (0, T._f)(v, E, E.colorStrings),
-        L = (null == (a = E.tags) ? void 0 : a.guild_connections) === null,
-        j = i.useCallback(
+        x = (0, p.e7)([b.Z], () => b.Z.roleStyle),
+        L = (0, T._f)(v, E, E.colorStrings),
+        j = (null == (a = E.tags) ? void 0 : a.guild_connections) === null,
+        U = i.useCallback(
             (e) => {
                 (0, h.jW)(e, async () => {
                     let { default: e } = await n.e("5396").then(n.bind(n, 731646));
@@ -188,35 +199,35 @@ let z = i.forwardRef(function (e, t) {
             },
             [E.id],
         ),
-        U = (0, m.dQu)(_.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        Z = null != (s = E.colorString) ? s : U,
-        V = null != (l = (0, f.wK)(Z, 0.6)) ? l : void 0,
-        H = _.Z.unsafe_rawColors.WHITE_500.css,
-        Y = (0, f._i)(Z);
-    null != Y && 0.3 > (0, f.Bd)(Y) && (H = _.Z.unsafe_rawColors.PRIMARY_630.css),
-        (c = L
+        Z = (0, m.dQu)(_.Z.unsafe_rawColors.PRIMARY_300).hsl(),
+        V = null != (s = E.colorString) ? s : Z,
+        H = null != (l = (0, f.wK)(V, 0.6)) ? l : void 0,
+        Y = _.Z.unsafe_rawColors.WHITE_500.css,
+        W = (0, f._i)(V);
+    null != W && 0.3 > (0, f.Bd)(W) && (Y = _.Z.unsafe_rawColors.PRIMARY_630.css),
+        (c = j
             ? (0, r.jsx)(y.Z, {
                   className: k.roleFlowerStar,
                   iconClassName: d ? k.roleVerifiedIcon : void 0,
-                  color: Z,
+                  color: V,
                   size: 14,
               })
-            : "dot" === D
+            : "dot" === x
               ? (0, r.jsx)(m.FhE, {
                     className: k.roleDot,
-                    color: Z,
-                    colors: x,
+                    color: V,
+                    colors: L,
                     background: !1,
                     tooltip: !1,
                 })
               : (0, r.jsx)(m.xko, {
-                    color: Z,
-                    colors: x,
+                    color: V,
+                    colors: L,
                 }));
-    let W = i.useMemo(() => {
+    let K = i.useMemo(() => {
         var t;
-        return G({ borderColor: I ? void 0 : V }, null != (t = e.style) ? t : {});
-    }, [V, I, e.style]);
+        return G({ borderColor: I ? void 0 : H }, null != (t = e.style) ? t : {});
+    }, [H, I, e.style]);
     return (0, r.jsx)(m.tEY, {
         children: (0, r.jsxs)(
             "div",
@@ -225,20 +236,20 @@ let z = i.forwardRef(function (e, t) {
                     {
                         ref: t,
                         className: o()(k.role, g),
-                        style: W,
-                        onContextMenu: j,
+                        style: K,
+                        onContextMenu: U,
                         onMouseDown: A,
                         "aria-label": E.name,
-                        tabIndex: P,
+                        tabIndex: R,
                     },
-                    R,
+                    w,
                 ),
                 {
                     children: [
                         (0, r.jsxs)(m.P3F, {
                             className: o()(d && k.roleRemoveButtonCanRemove, k.roleRemoveButton),
                             onClick: d ? O : void 0,
-                            tabIndex: d ? P : -1,
+                            tabIndex: d ? R : -1,
                             focusProps: { focusClassName: k.roleRemoveIconFocused },
                             "aria-hidden": !d,
                             "aria-label": M.intl.formatToPlainString(M.t.QrxwhY, { roleName: E.name }),
@@ -247,14 +258,14 @@ let z = i.forwardRef(function (e, t) {
                                 d
                                     ? (0, r.jsx)(m.Dio, {
                                           size: "md",
-                                          color: H,
+                                          color: Y,
                                           className: k.roleRemoveIcon,
                                           "aria-hidden": !0,
                                       })
                                     : null,
                             ],
                         }),
-                        null != w ? (0, r.jsx)(C.Z, F(G({ className: k.roleIcon }, w), { enableTooltip: !1 })) : null,
+                        null != D ? (0, r.jsx)(C.Z, F(G({ className: k.roleIcon }, D), { enableTooltip: !1 })) : null,
                         (0, r.jsx)("div", {
                             "aria-hidden": !0,
                             className: k.roleName,
