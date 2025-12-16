@@ -44370,15 +44370,15 @@ body .b54a5b2f01b57ad8-headerAnimation {
     color: var(--text-strong)
 }
 
-.b52e4f70d11a5ca2-intersectionContainer {
-    position: relative
+.b52e4f70d11a5ca2-intersectionContainer,
+.b52e4f70d11a5ca2-intersectionRef {
+    position: absolute
 }
 
 .b52e4f70d11a5ca2-intersectionRef {
     background: transparent;
     height: 1px;
     inset-inline-start: 0;
-    position: absolute;
     top: 0;
     width: 1px
 }
