@@ -1,7 +1,8 @@
 e.exports = {
-    previewContents: "_36852d62378f0835-previewContents",
+    previewContainer: "_36852d62378f0835-previewContainer",
+    upsellContainer: "_36852d62378f0835-upsellContainer",
     previewBox: "_36852d62378f0835-previewBox",
-    previewDescription: "_36852d62378f0835-previewDescription",
-    previewBorder: "_36852d62378f0835-previewBorder",
-    upsell: "_36852d62378f0835-upsell",
+    previewContents: "_36852d62378f0835-previewContents",
+    previewDescriptionContainer: "_36852d62378f0835-previewDescriptionContainer",
+    previewDescriptionUpsell: "_36852d62378f0835-previewDescriptionUpsell",
 };
