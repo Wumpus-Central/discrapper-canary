@@ -1,7 +1,7 @@
 n.d(t, {
     Tu: () => g,
     UM: () => m,
-    j1: () => f,
+    j1: () => h,
 }),
     n(388685),
     n(387201),
@@ -16,8 +16,8 @@ var i = n(473749),
     u = n(938475),
     d = n(823379),
     p = n(406463),
-    h = n(78332);
-function f(e) {
+    f = n(78332);
+function h(e) {
     let { channel: t } = e,
         n = (0, r.e7)([o.Z], () => o.Z.getUserAffinitiesMap(), []),
         l = null == t ? void 0 : t.guild_id,
@@ -50,14 +50,16 @@ function f(e) {
         .slice(0, 5);
 }
 function m(e) {
-    let { enabled: t } = (0, a.o)({
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { enabled: n } = (0, a.o)({
             autoTrackExposure: !1,
             guildId: e.guild_id,
             location: "VoiceInviteSuggestionsUtils",
         }),
-        n = (0, r.e7)([h.Z], () => h.Z.getShouldShowPopover(e.id), [e.id]);
+        { collapsed: l = !1 } = t,
+        o = (0, r.e7)([f.Z], () => f.Z.getShouldShowPopover(e.id), [e.id]);
     return {
-        shouldShow: t && n,
+        shouldShow: n && o && !l,
         dismiss: i.useCallback(() => {
             (0, p.o)(e.id);
         }, [e]),

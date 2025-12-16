@@ -17,8 +17,8 @@ var i = n(54381),
     C = n(819349),
     y = n(771027),
     v = n(512384),
-    O = n(763624),
-    x = n(463421),
+    x = n(763624),
+    O = n(463421),
     E = n(470956),
     j = n(597998),
     S = n(199902),
@@ -68,7 +68,7 @@ let U = r.memo((e) => {
             [T, y.id],
         ),
         X = (0, p.Z)(null != Y ? [Y.applicationId] : []),
-        J = (0, x.Z)(T, y.guild_id)[0],
+        J = (0, O.Z)(T, y.guild_id)[0],
         Q = null != (n = (0, d.IX)(null == J ? void 0 : J.application_id).data) ? n : void 0,
         [$, ee] = (0, o.Wu)(
             [S.Z],
@@ -86,7 +86,7 @@ let U = r.memo((e) => {
         ea = (0, o.e7)([g.Z], () => (k ? g.Z.getHangStatusActivity() : null), [k]),
         eo = (0, b.j)(T),
         es = (0, E.Eu)(y.id, T),
-        { enableVCStatusIcons: ec, enableRequestToStream: eu } = O.A.useExperiment(
+        { enableVCStatusIcons: ec, enableRequestToStream: eu } = x.A.useExperiment(
             {
                 guildId: y.guild_id,
                 location: "VoiceUsers",
@@ -180,14 +180,14 @@ let V = [],
                 numAudience: g,
                 withGuildIcon: b = !1,
                 className: v,
-                children: O,
-                isThread: x = !1,
+                children: x,
+                isThread: O = !1,
             } = e,
             [S, P] = r.useState(null),
             [I, N] = r.useState(!1),
             A = r.useRef(null),
             w = (0, E.Es)(l.id, null != c ? c : V),
-            { shouldShow: M, dismiss: D } = (0, y.UM)(l),
+            { shouldShow: M, dismiss: D } = (0, y.UM)(l, { collapsed: u }),
             F = r.useRef(
                 new s.sW(50, () => {
                     P(A.current), (A.current = null);
@@ -281,15 +281,15 @@ let V = [],
                 r
             );
         })();
-        return null == W && null == O
+        return null == W && null == x
             ? null
             : (0, i.jsxs)(j.eJ, {
                   className: a()(v, k.list, {
                       [k.collapsed]: u,
                       [k.withGuildIcon]: b,
-                      [k.isThread]: x,
+                      [k.isThread]: O,
                   }),
                   collapsed: u,
-                  children: [W, O],
+                  children: [W, x],
               });
     };
