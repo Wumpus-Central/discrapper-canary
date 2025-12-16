@@ -8,15 +8,15 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(692547),
     l = n(481060),
     c = n(518950),
     u = n(51144),
-    d = n(941651),
+    d = n(353149),
     f = n(388032),
-    p = n(740908);
+    p = n(779872);
 function _(e, t, n) {
     return (
         t in e
@@ -47,7 +47,7 @@ function m(e) {
     return e;
 }
 let h = (e) => {
-        let { user: t, isOwnUser: n, label: o, onRemove: s, isFaded: d } = e,
+        let { user: t, isOwnUser: n, label: a, removeButton: s, isFaded: d } = e,
             { avatarSrc: _, eventHandlers: h } = (0, c.Z)({
                 userId: null == t ? void 0 : t.id,
                 size: l.EFr.SIZE_24,
@@ -55,12 +55,12 @@ let h = (e) => {
             g = (0, u.XM)(t),
             [E, b] = i.useState(!1);
         return (0, r.jsxs)("div", {
-            className: a()(p.container, { [p.hoverBackground]: null != s }),
+            className: o()(p.container, { [p.hoverBackground]: null != s }),
             onMouseEnter: () => b(!0),
             onMouseLeave: () => b(!1),
             children: [
                 (0, r.jsxs)("div", {
-                    className: a()(p.userInfoContainer, { [p.faded]: d }),
+                    className: o()(p.userInfoContainer, { [p.faded]: d }),
                     children: [
                         (0, r.jsx)(
                             l.qEK,
@@ -80,12 +80,12 @@ let h = (e) => {
                             color: "text-strong",
                             children: [g, !!n && " (".concat(f.intl.string(f.t.LuZzxn), ")")],
                         }),
-                        null != o &&
+                        null != a &&
                             (0, r.jsx)(l.Text, {
                                 className: p.label,
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: o,
+                                children: a,
                             }),
                     ],
                 }),
@@ -96,8 +96,8 @@ let h = (e) => {
                         children: (0, r.jsx)(l.Avr, {
                             textVariant: "text-sm/medium",
                             variant: "secondary",
-                            text: f.intl.string(f.t.N86XcP),
-                            onClick: s,
+                            text: s.label,
+                            onClick: s.onRemove,
                         }),
                     }),
             ],
@@ -116,7 +116,10 @@ let h = (e) => {
         return (0, r.jsx)(h, {
             user: t,
             label: f.intl.string(d.default.mnt50A),
-            onRemove: n,
+            removeButton: {
+                onRemove: n,
+                label: f.intl.string(f.t.N86XcP),
+            },
         });
     },
     b = (e) => {
@@ -133,14 +136,17 @@ let h = (e) => {
             user: t,
             label: f.intl.string(d.default["1RH5t9"]),
             isFaded: !0,
-            onRemove: n,
+            removeButton: {
+                onRemove: n,
+                label: f.intl.string(d.default["2blqtw"]),
+            },
         });
     },
     O = (e) => {
         let { onInvite: t, canInvite: n } = e,
-            [o, c] = i.useState(!1);
+            [a, c] = i.useState(!1);
         return (0, r.jsxs)("div", {
-            className: a()(p.container, { [p.hoverBackground]: n }),
+            className: o()(p.container, { [p.hoverBackground]: n }),
             onMouseEnter: () => c(!0),
             onMouseLeave: () => c(!1),
             children: [
@@ -148,7 +154,7 @@ let h = (e) => {
                     className: p.userInfoContainer,
                     children: [
                         (0, r.jsx)("div", {
-                            className: a()(p.userIconCircle, p.avatar),
+                            className: o()(p.userIconCircle, p.avatar),
                             children: (0, r.jsx)(l.tBG, {
                                 size: "xxs",
                                 color: s.Z.colors.ICON_SUBTLE,
@@ -162,7 +168,7 @@ let h = (e) => {
                         }),
                     ],
                 }),
-                o &&
+                a &&
                     n &&
                     (0, r.jsx)("div", {
                         className: p.textButtonContainer,
