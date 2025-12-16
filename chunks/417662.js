@@ -95,7 +95,7 @@ function _(e) {
                                                 : u.bN.end(e, []);
                                     for (let [t, r] of a) {
                                         let i = t.children[0];
-                                        if (!u.LC.isText(t.children[0])) continue;
+                                        if (!u.LC.isText(i)) continue;
                                         let a = u.C0.child(r, 0),
                                             o = {
                                                 path: a,

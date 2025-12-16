@@ -61,7 +61,7 @@ function b(e, t, n) {
             let [a, o] = i;
             for (let i = a.children.length - 1; i >= 0; i--) {
                 let s = a.children[i];
-                if (g.has(s.type)) {
+                if (!f.LC.isText(s) && g.has(s.type)) {
                     let a = [s, f.C0.child(o, i)];
                     r ? O(e, a, !0, null) : y(e, a, t, n);
                 }
@@ -79,34 +79,34 @@ function O(e, t, n, r) {
     let [i, a] = t,
         o = !1;
     for (let t = i.children.length - 1; t >= 0; t--) {
-        let s = i.children[t],
-            l = t < i.children.length - 1 ? i.children[t + 1] : null;
+        let s = i.children[t];
         if (f.LC.isText(s) && !n) {
-            if (null == l || !e.isVoid(l)) continue;
-            let n = !1,
-                r = 0;
+            let n = t < i.children.length - 1 ? i.children[t + 1] : null;
+            if (null == n || !f.q.isElement(n) || !e.isVoid(n)) continue;
+            let r = !1,
+                l = 0;
             for (;;) {
-                let e = s.text.indexOf("\\", r);
+                let e = s.text.indexOf("\\", l);
                 if (-1 === e) break;
                 if (e === s.text.length - 1) {
-                    n = !0;
+                    r = !0;
                     break;
                 }
-                r = e + 2;
+                l = e + 2;
             }
-            if (n) {
-                let n = f.C0.child(a, t + 1);
+            if (r) {
+                let r = f.C0.child(a, t + 1);
                 d.Q.voidToText(
                     e,
-                    (0, u.sg)(l, {
+                    (0, u.sg)(n, {
                         mode: "plain",
                         preventEmojiSurrogates: !0,
                     }),
-                    n,
+                    r,
                 ),
                     (o = !0);
             }
-        } else if (e.isVoid(s)) {
+        } else if (f.q.isElement(s) && e.isVoid(s)) {
             let i = f.C0.child(a, t),
                 l = {
                     path: f.C0.child(i, 0),
