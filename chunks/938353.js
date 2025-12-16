@@ -37,8 +37,8 @@ var r,
     N = n(247206),
     P = n(629710),
     R = n(262777),
-    D = n(761538),
-    w = n(674611),
+    w = n(761538),
+    D = n(674611),
     x = n(294734),
     L = n(947849),
     j = n(10433),
@@ -47,8 +47,8 @@ var r,
     U = n(637618),
     G = n(225890),
     Z = n(364097),
-    B = n(939170),
-    F = n(187506),
+    F = n(939170),
+    B = n(187506),
     V = n(954654),
     H = n(41776),
     Y = n(628238),
@@ -91,8 +91,8 @@ var r,
     eN = n(255269),
     eP = n(461157),
     eR = n(901461),
-    eD = n(432376),
-    ew = n(384203),
+    ew = n(432376),
+    eD = n(384203),
     ex = n(633957),
     eL = n(530472),
     ej = n(29909),
@@ -101,8 +101,8 @@ var r,
     eU = n(453687),
     eG = n(128854),
     eZ = n(101578),
-    eB = n(524444),
-    eF = n(319323),
+    eF = n(524444),
+    eB = n(319323),
     eV = n(884182),
     eH = n(546432),
     eY = n(920888),
@@ -112,7 +112,7 @@ var r,
     eq = n(981631),
     eQ = n(474936),
     eX = n(388032),
-    eJ = n(636428),
+    eJ = n(253108),
     e$ = n(680674);
 function e0(e, t, n) {
     return (
@@ -260,7 +260,7 @@ class tn extends (r = a.Component) {
             r = null;
         switch (n) {
             case eI.aD.MARK_AS_FALSE_POSITIVE:
-                r = (0, i.jsx)(w.Z, {
+                r = (0, i.jsx)(D.Z, {
                     messageId: e.id,
                     channelId: t.id,
                 });
@@ -301,7 +301,7 @@ class tn extends (r = a.Component) {
                   if (n === C.g.EVENT) return (0, i.jsx)(G.Z, { code: r }, r);
                   if (n === C.g.CHANNEL_LINK)
                       return (0, i.jsx)(
-                          ew.Z,
+                          eD.Z,
                           {
                               code: r,
                               message: e,
@@ -517,15 +517,15 @@ class tn extends (r = a.Component) {
                   if (
                       ez.b.has(t.type) ||
                       (0, eO.l3)(t) ||
-                      ((0, B.b)(t) && !(0, F.M)(e)) ||
+                      ((0, F.b)(t) && !(0, B.M)(e)) ||
                       (0, eO.jz)(t) ||
                       (0, eO.HK)(t)
                   )
                       return null;
                   let r = {
-                      renderImageComponent: eB.Yi,
-                      renderVideoComponent: eB.lV,
-                      renderLinkComponent: eB.iT,
+                      renderImageComponent: eF.Yi,
+                      renderVideoComponent: eF.lV,
+                      renderLinkComponent: eF.iT,
                   };
                   if (
                       t.type === eq.hBH.ARTICLE &&
@@ -700,7 +700,7 @@ class tn extends (r = a.Component) {
         let t = e.applicationId;
         return e.type !== l.u.INTERACTION_PREMIUM_UPSELL || null == t
             ? null
-            : (0, i.jsx)(eF.Z, {
+            : (0, i.jsx)(eB.Z, {
                   applicationId: t,
                   guildId: this.props.channel.guild_id,
               });
@@ -743,7 +743,7 @@ class tn extends (r = a.Component) {
     }
     renderMediaObscureNotice(e) {
         return (0 !== e.attachments.length || 0 !== e.embeds.length) && (0, P.kC)(e)
-            ? (0, i.jsx)(D.Z, { message: e })
+            ? (0, i.jsx)(w.Z, { message: e })
             : null;
     }
     renderPoll(e, t) {
@@ -796,8 +796,8 @@ class tn extends (r = a.Component) {
             N = this.renderMediaObscureNotice(t),
             P = this.renderPoll(t, n),
             R = this.renderForwardedMessage(t),
-            D = this.renderReportedMessage(t),
-            w = this.renderShareClientTheme(t);
+            w = this.renderReportedMessage(t),
+            D = this.renderShareClientTheme(t);
         return null == c &&
             null == d &&
             null == _ &&
@@ -816,18 +816,18 @@ class tn extends (r = a.Component) {
             null != I &&
             null == P &&
             null == R &&
-            null == D &&
-            null == w
+            null == w &&
+            null == D
             ? null
             : (0, i.jsxs)("div", {
                   id: (0, eU.bX)(t),
                   className: s()(e, eJ.container),
                   children: [
-                      D,
+                      w,
                       R,
                       v,
                       P,
-                      w,
+                      D,
                       c,
                       u,
                       T,
@@ -871,43 +871,43 @@ class tn extends (r = a.Component) {
                 };
             }),
             e0(this, "renderEmbed", (e, t, n, r) => {
-                var a, o, s;
+                var a, o, s, l;
                 let {
-                        gifAutoPlay: l,
-                        inlineEmbedMedia: c,
-                        canSuppressEmbeds: u,
-                        hasSpoilerEmbeds: d,
-                        enabledContentHarmTypeFlags: f,
-                        shouldAgeVerify: p,
+                        gifAutoPlay: c,
+                        inlineEmbedMedia: u,
+                        canSuppressEmbeds: d,
+                        hasSpoilerEmbeds: f,
+                        enabledContentHarmTypeFlags: p,
+                        shouldAgeVerify: _,
                     } = this.props,
-                    _ = (0, eT.BP)(e, r, d, f);
+                    m = (0, eT.BP)(e, r, f, p);
                 if (e.type === eq.hBH.GIFT) return null;
-                let m = e6.includes(e.type)
+                let h = e6.includes(e.type)
                     ? e.url
-                    : null != (s = null == (a = e.image) ? void 0 : a.url)
-                      ? s
+                    : null != (l = null == (a = e.image) ? void 0 : a.url)
+                      ? l
                       : null == (o = e.video)
                         ? void 0
                         : o.url;
                 return (0, i.jsx)(
                     L.h.Provider,
                     {
-                        value: (0, eK.P)(m, e.image, e.video),
+                        value: (0, eK.P)(h, e.image, e.video, e.thumbnail, null == (s = e.provider) ? void 0 : s.name),
                         children: (0, i.jsx)(
                             I.ZP,
                             e1(
                                 {
                                     embed: e,
-                                    obscureReason: null != _ ? _ : void 0,
-                                    autoPlayGif: l,
-                                    hideMedia: !c,
+                                    obscureReason: null != m ? m : void 0,
+                                    autoPlayGif: c,
+                                    hideMedia: !u,
                                     allowFullScreen: !this.props.disableComponentInteractivity,
-                                    onSuppressEmbed: u ? this.handleEmbedSuppressed : void 0,
+                                    onSuppressEmbed: d ? this.handleEmbedSuppressed : void 0,
                                     renderTitle: this.renderEmbedTitle,
                                     renderDescription: this.renderEmbedDescription,
                                     message: r,
                                     embedIndex: t,
-                                    shouldAgeVerify: null != p && p,
+                                    shouldAgeVerify: null != _ && _,
                                 },
                                 n,
                             ),
@@ -994,7 +994,7 @@ function tr(e) {
         T = s === r.author.id && S && !o,
         C = r.author.id === s,
         A = r.isFirstMessageInForumPost(n),
-        P = (0, eD.Z)({
+        P = (0, ew.Z)({
             channel: n,
             canChat: m,
             renderReactions: p,
@@ -1005,8 +1005,8 @@ function tr(e) {
             isActiveChannelOrUnarchivableThread: S,
             isAutomodQuarantined: O,
         }),
-        D = (0, Y.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
-        w = (0, q.Z)(null == n ? void 0 : n.id),
+        w = (0, Y.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
+        D = (0, q.Z)(null == n ? void 0 : n.id),
         x = (0, J.Z)(r),
         L = (0, R.v)(r),
         j = (0, eN._)(n),
@@ -1041,9 +1041,9 @@ function tr(e) {
                 gifAutoPlay: _,
                 canRenderReferralEmbed: n.isDM(),
                 poll: x,
-                showListsAndHeaders: D,
-                showMaskedLinks: D,
-                shouldHideMediaOptions: w,
+                showListsAndHeaders: w,
+                showMaskedLinks: w,
+                shouldHideMediaOptions: D,
                 enabledContentHarmTypeFlags: L,
                 ctaButtonType: U,
                 shouldAgeVerify: G,

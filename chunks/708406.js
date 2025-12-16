@@ -1,6 +1,21 @@
-n.d(t, { _: () => i });
+n.d(t, {
+    Fo: () => o,
+    _2: () => s,
+});
 var r = n(981631);
-function i(e, t, n) {
+function i(e) {
+    return "Klipy" === e;
+}
+function a(e) {
+    return i(e);
+}
+function o(e) {
+    var t, n;
+    if (!a(e.providerName)) return;
+    let { thumbnail: r } = e;
+    if (null != r) return null != (n = null != (t = r.proxyURL) ? t : r.url) ? n : r.uri;
+}
+function s(e, t, n) {
     let i = null != t ? { [t]: 1 } : {},
         { offset: a, limit: o, results: s, totalResults: l } = null != n ? n : {};
     return {

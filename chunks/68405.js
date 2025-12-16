@@ -1,16 +1,16 @@
 n.d(t, {
-    PF: () => F,
-    R7: () => M,
-    Tg: () => U,
-    UU: () => G,
-    gK: () => k,
-    hM: () => R,
-    iy: () => Z,
-    mO: () => L,
-    t1: () => P,
-    uL: () => B,
-    v2: () => j,
-    yC: () => x,
+    PF: () => J,
+    R7: () => B,
+    Tg: () => H,
+    UU: () => Y,
+    gK: () => V,
+    hM: () => M,
+    iy: () => W,
+    mO: () => Z,
+    t1: () => j,
+    uL: () => X,
+    v2: () => F,
+    yC: () => G,
 }),
     n(704826),
     n(35282);
@@ -106,8 +106,14 @@ function C(e, t) {
     return i;
 }
 let A = 250,
-    N = /-/g;
-function P(e) {
+    N = /-/g,
+    P = "format",
+    R = "animated",
+    w = "webp",
+    D = ".webp",
+    x = ".avif",
+    L = ".gif";
+function j(e) {
     let t = null != e ? { [e]: 1 } : {};
     c.ZP.trackWithMetadata(E.rMx.SEARCH_STARTED, {
         search_type: E.aib.GIF,
@@ -116,7 +122,7 @@ function P(e) {
         modifiers: t,
     });
 }
-function R(e, t) {
+function M(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     var { startTime: r } = n,
         i = T(n, ["startTime"]);
@@ -125,13 +131,13 @@ function R(e, t) {
             limit: null,
             totalResults: e.length,
         },
-        o = (0, m._)(p.Z.getAnalyticsID(), t, I(v({}, a, i), { results: e.length })),
+        o = (0, m._2)(p.Z.getAnalyticsID(), t, I(v({}, a, i), { results: e.length })),
         s = null == r ? {} : { load_duration_ms: Date.now() - r };
     c.ZP.trackWithMetadata(E.rMx.SEARCH_RESULT_VIEWED, v({}, o, s));
 }
-function D(e, t, n) {
+function k(e, t, n) {
     let r = Date.now();
-    P(t),
+    j(t),
         o.tn
             .get({
                 url: E.ANM.GIFS_SEARCH,
@@ -148,7 +154,7 @@ function D(e, t, n) {
             .then(
                 (i) => {
                     let a = i.body;
-                    R(a, t, {
+                    M(a, t, {
                         startTime: r,
                         limit: n,
                     }),
@@ -165,19 +171,19 @@ function D(e, t, n) {
                     }),
             );
 }
-let w = i().debounce(D, A);
-function x(e, t) {
+let U = i().debounce(k, A);
+function G(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;
     "" === e
-        ? j()
+        ? F()
         : (l.Z.dispatch({
               type: "GIF_PICKER_QUERY",
               query: e,
           }),
-          n ? D(e, t, r) : w(e, t, r));
+          n ? k(e, t, r) : U(e, t, r));
 }
-function L(e) {
+function Z(e) {
     "" !== e &&
         null != e &&
         o.tn
@@ -201,15 +207,15 @@ function L(e) {
                 });
             });
 }
-function j() {
+function F() {
     l.Z.dispatch({
         type: "GIF_PICKER_QUERY",
         query: "",
     });
 }
-function M(e) {
+function B(e) {
     let { type: t, index: n, offset: r, limit: i, results: a, totalResults: s, query: l, gifId: u } = e,
-        d = (0, m._)(p.Z.getAnalyticsID(), t, {
+        d = (0, m._2)(p.Z.getAnalyticsID(), t, {
             offset: r,
             limit: i,
             results: a,
@@ -234,7 +240,7 @@ function M(e) {
                 rejectWithError: !0,
             });
 }
-function k() {
+function V() {
     let e = (0, a.Z)().replace(N, "");
     c.ZP.trackWithMetadata(E.rMx.SEARCH_OPENED, {
         search_type: E.aib.GIF,
@@ -247,7 +253,7 @@ function k() {
             });
         });
 }
-function U() {
+function H() {
     o.tn
         .get({
             url: E.ANM.GIFS_TRENDING,
@@ -269,9 +275,9 @@ function U() {
             });
         });
 }
-function G(e) {
+function Y(e) {
     let t = Date.now();
-    P(E.wI2.TRENDING_GIFS),
+    j(E.wI2.TRENDING_GIFS),
         o.tn
             .get({
                 url: E.ANM.GIFS_TRENDING_GIFS,
@@ -287,7 +293,7 @@ function G(e) {
             .then(
                 (n) => {
                     let { body: r } = n;
-                    R(r, E.wI2.TRENDING_GIFS, {
+                    M(r, E.wI2.TRENDING_GIFS, {
                         startTime: t,
                         limit: e,
                     }),
@@ -301,17 +307,50 @@ function G(e) {
                 },
             );
 }
-function Z(e) {
+function W(e) {
     let t = h.Z.toURLSafe(e);
     return null == t ? e : (0, u.MO)(t) ? (0, u.q5)(t).toString() : e;
 }
-function B(e) {
+function K(e) {
+    let t = h.Z.toURLSafe(e.src);
+    return null != t && ((0, u._M)(t) || (0, u.MO)(t));
+}
+function z(e) {
+    return K(e) && null != e.gifSrc ? e.gifSrc : e.src;
+}
+function q(e) {
+    let t = h.Z.toURLSafe(e);
+    if (null == t) return !1;
+    let n = t.pathname.toLowerCase();
+    return n.endsWith(D) || n.endsWith(x) || n.endsWith(L);
+}
+function Q(e) {
+    let t = h.Z.toURLSafe(e);
+    if (null == t) return e;
+    let n = t.pathname.toLowerCase(),
+        r = n.endsWith(D),
+        i = n.endsWith(x),
+        a = n.endsWith(L);
+    return r || i || a ? ((i || a) && t.searchParams.set(P, w), t.searchParams.set(R, "true"), t.toString()) : e;
+}
+function X(e) {
     f.DZ.updateAsync(
         "favoriteGifs",
         (t) => {
             var n;
-            let r = null != (n = i().max(Object.values(t.gifs).map((e) => e.order))) ? n : 0;
-            if (((t.gifs[Z(e.url)] = I(v({}, e), { order: r + 1 })), s.wK.toBinary(t).length > b.vY))
+            let r = null != (n = i().max(Object.values(t.gifs).map((e) => e.order))) ? n : 0,
+                a = z(e),
+                o = K(e) && q(a),
+                l = o ? Q(a) : a,
+                c = o ? s.EO.IMAGE : e.format;
+            if (
+                ((t.gifs[W(e.url)] = I(v({}, e), {
+                    src: l,
+                    format: c,
+                    order: r + 1,
+                })),
+                s.wK.toBinary(t).length > b.vY)
+            )
                 return (
                     g.Z.show({
                         title: y.intl.string(y.t["+XYXtZ"]),
@@ -319,17 +358,17 @@ function B(e) {
                     }),
                     !1
                 );
-            let a = i().size(t.gifs);
-            a > 2 && (t.hideTooltip = !0), _.default.track(E.rMx.GIF_FAVORITED, { total_num_favorited: a });
+            let u = i().size(t.gifs);
+            u > 2 && (t.hideTooltip = !0), _.default.track(E.rMx.GIF_FAVORITED, { total_num_favorited: u });
         },
         b.fy.INFREQUENT_USER_ACTION,
     );
 }
-function F(e) {
+function J(e) {
     f.DZ.updateAsync(
         "favoriteGifs",
         (t) => {
-            e in t.gifs ? delete t.gifs[e] : delete t.gifs[Z(e)],
+            e in t.gifs ? delete t.gifs[e] : delete t.gifs[W(e)],
                 _.default.track(E.rMx.GIF_UNFAVORITED, { total_num_favorited: i().size(t.gifs) });
         },
         b.fy.INFREQUENT_USER_ACTION,
