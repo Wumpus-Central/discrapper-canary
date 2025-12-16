@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => j });
 var i = n(54381),
     r = n(473749),
     l = n(772848),
@@ -9,20 +9,20 @@ var i = n(54381),
     u = n(688192),
     d = n(390322),
     p = n(602733),
-    h = n(626135),
-    f = n(164670),
-    m = n(81939),
+    f = n(626135),
+    h = n(164670),
+    m = n(927613),
     g = n(851397),
     b = n(582113),
     C = n(981631),
     y = n(701488),
-    _ = n(474936),
-    v = n(388032),
-    O = n(842350);
-let x = "vc-gifting-".concat((0, l.Z)());
-function E(e) {
+    v = n(474936),
+    x = n(388032),
+    O = n(542519);
+let E = "vc-gifting-".concat((0, l.Z)());
+function j(e) {
     var t;
-    let { isHovered: n, closePopout: l, onMouseEnter: E, onMouseLeave: j, channel: S } = e;
+    let { isHovered: n, closePopout: l, onMouseEnter: j, onMouseLeave: S, channel: _ } = e;
     r.useEffect(() => {
         n || l();
     }, [l, n]);
@@ -36,57 +36,57 @@ function E(e) {
                   })
                 : null;
         }, [P]),
-        {
-            loading: Z,
-            wishlistItems: T,
-            wishlistItemSkuIds: N,
-        } = (0, m.Z)({
-            guildId: (0, f.ac)(),
+        { state: Z, recommendations: T } = (0, m.Z)({
+            guildId: (0, h.ac)(),
+            applicationId: b.t9,
             numWishlistItems: m.W,
+            userIds: _.recipients,
+            location: "Social Layer Gifting Mini Shelf",
+            includeWishlists: !0,
         });
     return (
         r.useEffect(() => {
-            0 !== N.length &&
-                h.default.track(C.rMx.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
-                    guild_id: S.guild_id,
-                    channel_id: S.id,
-                    sku_ids: N,
+            0 !== T.length &&
+                f.default.track(C.rMx.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
+                    guild_id: _.guild_id,
+                    channel_id: _.id,
+                    sku_ids: T.map((e) => e.skuId),
                 });
-        }, [S.id, S.guild_id, N]),
+        }, [_.id, _.guild_id, T]),
         (0, i.jsx)(d.Z, {
             children: (0, i.jsx)(a.VqE, {
-                "aria-labelledby": x,
+                "aria-labelledby": E,
                 modal: !1,
                 children: (0, i.jsxs)("div", {
                     className: O.container,
-                    onMouseEnter: E,
-                    onMouseLeave: j,
+                    onMouseEnter: j,
+                    onMouseLeave: S,
                     children: [
                         (0, i.jsx)(a.X6q, {
                             className: O.title,
                             variant: "text-lg/bold",
                             color: "text-strong",
-                            children: v.intl.string(v.t.xLP3bi),
+                            children: x.intl.string(x.t.xLP3bi),
                         }),
                         (0, i.jsx)(a.xvT, {
                             className: O.subtitle,
                             variant: "text-sm/medium",
                             color: "text-subtle",
-                            children: v.intl.format(v.t["+SqhBF"], {
+                            children: x.intl.format(x.t["+SqhBF"], {
                                 applicationName:
-                                    null != (t = null == P ? void 0 : P.name) ? t : v.intl.string(v.t["/1hhto"]),
+                                    null != (t = null == P ? void 0 : P.name) ? t : x.intl.string(x.t["/1hhto"]),
                             }),
                         }),
                         (0, i.jsx)("div", {
                             className: O.wishlistItemsContainer,
                             children:
-                                Z || 0 === T.length
+                                "loading" === Z || 0 === T.length
                                     ? (0, i.jsx)(a.$jN, { className: O.loading })
                                     : T.map((e) =>
                                           (0, i.jsx)(
                                               s.i_,
                                               {
-                                                  body: v.intl.string(v.t["4yiU7x"]),
+                                                  body: x.intl.string(x.t["4yiU7x"]),
                                                   asset: I,
                                                   assetSize: p.EU,
                                                   position: "top",
@@ -101,7 +101,7 @@ function E(e) {
                                                       hideButtonIcon: !0,
                                                       showPrice: !0,
                                                       showIcons: !1,
-                                                      giftingOrigin: _.Wt.SHOP_PAGE,
+                                                      giftingOrigin: v.Wt.SHOP_PAGE,
                                                   }),
                                               },
                                               e.skuId,

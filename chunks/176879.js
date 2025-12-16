@@ -1,98 +1,106 @@
 n.d(t, {
-    QX: () => _,
-    ZP: () => p,
-    fA: () => f,
+    QX: () => h,
+    ZP: () => m,
+    fA: () => _,
 });
 var r = n(473749),
     i = n(164670),
     a = n(765907),
-    o = n(81939),
+    o = n(927613),
     s = n(125742),
-    l = n(687158),
-    c = n(321947),
-    u = n(602733),
-    d = n(388032);
-let f = 4;
-function p(e) {
-    let { user: t, numItems: n = u.zL, location: d, source: f } = e,
-        p = (0, l.ZP)(t.id),
-        { enabledInPopout: _, enabledInSidebar: m } = (0, s.u)({ location: d }),
-        h = r.useMemo(() => (f === u.bd.POPOUT ? _ : f !== u.bd.DM_SIDE_PANEL || m), [f, _, m]),
-        g = r.useMemo(() => (f === u.bd.POPOUT ? u.Yw.POPOUT : u.Yw.USER_PROFILE), [f]),
+    l = n(896010),
+    c = n(687158),
+    u = n(321947),
+    d = n(602733),
+    f = n(582113),
+    p = n(388032);
+let _ = 4;
+function m(e) {
+    let { user: t, numItems: n = d.zL, location: p, source: _ } = e,
+        m = (0, c.ZP)(t.id),
+        h = (0, s.R)({ location: p }),
+        { showRecommendations: g } = (0, l.E)({ location: p }),
+        E = r.useMemo(() => (_ === d.bd.POPOUT ? g : _ !== d.bd.DM_SIDE_PANEL || h), [_, h, g]),
+        b = r.useMemo(() => (_ === d.bd.POPOUT ? d.Yw.POPOUT : d.Yw.USER_PROFILE), [_]),
         {
-            defaultWishlistId: E,
-            wishlist: b,
-            popularCollectiblesProducts: y,
-            isFetchingWishlist: O,
-            isValidatingPopularProducts: v,
-            isFetchingPopularProducts: S,
-            wishlistError: I,
-        } = (0, u.ZL)({
+            defaultWishlistId: y,
+            wishlist: O,
+            popularCollectiblesProducts: v,
+            isFetchingWishlist: S,
+            isValidatingPopularProducts: I,
+            isFetchingPopularProducts: T,
+            wishlistError: C,
+        } = (0, d.ZL)({
             giftRecipient: t,
-            minNumItems: h ? n : 0,
-            source: g,
+            minNumItems: E ? n : 0,
+            source: b,
         }),
-        { isDisplayProfileSocialLayerStorefrontEligible: T } = (0, a.Z)({
-            displayProfile: p,
-            location: d,
+        { isDisplayProfileSocialLayerStorefrontEligible: A } = (0, a.Z)({
+            displayProfile: m,
+            location: p,
         }),
-        { wishlistItems: C } = (0, o.Z)({
+        N = r.useMemo(() => [t.id], [t.id]),
+        { recommendations: P } = (0, o.Z)({
             guildId: (0, i.ac)(),
-            numWishlistItems: n,
+            numWishlistItems: E ? Math.max(n, d.zL) : 0,
+            location: p,
+            applicationId: f.t9,
+            userIds: N,
+            includeWishlists: !0,
         }),
-        A = r.useMemo(() => {
+        R = r.useMemo(() => {
             var e;
-            return h &&
-                ((null != (e = null == b ? void 0 : b.items) ? e : []).filter((e) => !0 !== e.isOwned && (0, c.F)(e))
+            return E &&
+                ((null != (e = null == O ? void 0 : O.items) ? e : []).filter((e) => !0 !== e.isOwned && (0, u.F)(e))
                     .length > 0 ||
-                    T)
-                ? C
+                    A)
+                ? P
                 : [];
-        }, [null == b ? void 0 : b.items, T, h, C]),
+        }, [null == O ? void 0 : O.items, A, E, P]),
         {
-            displayItems: N,
-            hasMoreItems: P,
-            totalWishlistItemCount: R,
-            wishlistItemCountToBeDisplayed: w,
-        } = (0, u.UD)({
-            wishlist: b,
-            popularCollectiblesProducts: y,
-            popularSocialLayerStorefrontItems: A,
-            wishlistError: I,
+            displayItems: w,
+            hasMoreItems: D,
+            totalWishlistItemCount: x,
+            wishlistItemCountToBeDisplayed: L,
+        } = (0, d.UD)({
+            wishlist: O,
+            popularCollectiblesProducts: v,
+            popularSocialLayerStorefrontItems: R,
+            wishlistError: C,
             numItems: n,
         });
     return {
-        displayItems: N,
-        hasMoreItems: P,
-        totalWishlistItemCount: R,
-        wishlistItemCountToBeDisplayed: w,
+        displayItems: w,
+        hasMoreItems: D,
+        totalWishlistItemCount: x,
+        wishlistItemCountToBeDisplayed: L,
         fetchState: r.useMemo(
             () =>
-                O || v || S
+                S || I || T
                     ? { status: "loading" }
-                    : null != I
+                    : null != C
                       ? {
                             status: "error",
-                            error: I,
+                            error: C,
                         }
                       : { status: "success" },
-            [O, v, S, I],
+            [S, I, T, C],
         ),
-        defaultWishlistId: E,
-        wishlist: b,
+        defaultWishlistId: y,
+        wishlist: O,
     };
 }
-function _(e) {
-    let { user: t, numItems: n = u.zL, source: i, location: a } = e,
+function h(e) {
+    let { user: t, numItems: n = d.zL, source: i, location: a } = e,
         {
             displayItems: o,
             defaultWishlistId: s,
             wishlist: l,
             hasMoreItems: c,
-            totalWishlistItemCount: f,
-            wishlistItemCountToBeDisplayed: _,
-            fetchState: m,
-        } = p({
+            totalWishlistItemCount: u,
+            wishlistItemCountToBeDisplayed: f,
+            fetchState: _,
+        } = m({
             user: t,
             numItems: n,
             source: i,
@@ -108,19 +116,19 @@ function _(e) {
                 : e.length > 1 && e.length < n && o.length > e.length
                   ? {
                         displayedWishlistItems: o.map((e) => e.item),
-                        title: d.intl.string(d.t.BCi1gT),
+                        title: p.intl.string(p.t.BCi1gT),
                     }
                   : {
                         displayedWishlistItems: e,
-                        title: d.intl.string(d.t["7lZ31J"]),
+                        title: p.intl.string(p.t["7lZ31J"]),
                     };
         }, [o, l, n]);
     return {
         displayItems: o,
         hasMoreItems: c,
-        totalWishlistItemCount: f,
-        wishlistItemCountToBeDisplayed: _,
-        fetchState: m,
+        totalWishlistItemCount: u,
+        wishlistItemCountToBeDisplayed: f,
+        fetchState: _,
         defaultWishlistId: s,
         wishlist: l,
         displayedWishlistItems: h,

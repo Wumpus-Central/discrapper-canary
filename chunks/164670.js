@@ -1,46 +1,50 @@
 n.d(t, {
-    $p: () => p,
-    Do: () => y,
-    FE: () => b,
-    K$: () => _,
-    Uc: () => g,
-    _Z: () => f,
-    a7: () => O,
-    ac: () => m,
-    vg: () => S,
-    wK: () => h,
-    wQ: () => v,
-    x6: () => E,
+    $p: () => _,
+    Do: () => v,
+    FE: () => O,
+    K$: () => m,
+    Uc: () => E,
+    X0: () => y,
+    _Z: () => p,
+    a7: () => S,
+    ac: () => h,
+    vg: () => T,
+    wK: () => g,
+    wQ: () => I,
+    x6: () => b,
 }),
-    n(953529);
+    n(953529),
+    n(467055),
+    n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(973616),
-    o = n(430824),
-    s = n(73346),
-    l = n(591759),
-    c = n(699955),
-    u = n(582113),
-    d = n(981631);
-let f = s.$k ? "webp" : "jpg";
-function p(e) {
-    return null != e && u.Nx.has(e.id);
-}
+    o = n(659181),
+    s = n(430824),
+    l = n(73346),
+    c = n(591759),
+    u = n(699955),
+    d = n(582113),
+    f = n(981631);
+let p = l.$k ? "webp" : "jpg";
 function _(e) {
-    return null != e && e.productLine === d.POd.SOCIAL_LAYER_GAME_ITEM;
+    return null != e && d.Nx.has(e.id);
 }
-function m() {
-    let e = o.Z.getGuild(u.Kz);
-    return null != e && e.features.has(d.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : u.ON;
+function m(e) {
+    return null != e && e.productLine === f.POd.SOCIAL_LAYER_GAME_ITEM;
 }
-function h(e) {
-    var t, n;
-    return (
-        e.id === m() ||
-        (null != (n = null == (t = e.features) ? void 0 : t.has(d.GuildFeatures.SOCIAL_LAYER_STOREFRONT)) && n)
-    );
+function h() {
+    let e = s.Z.getGuild(d.Kz);
+    return null != e && e.features.has(f.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : d.ON;
 }
 function g(e) {
+    var t, n;
+    return (
+        e.id === h() ||
+        (null != (n = null == (t = e.features) ? void 0 : t.has(f.GuildFeatures.SOCIAL_LAYER_STOREFRONT)) && n)
+    );
+}
+function E(e) {
     return {
         applicationId: e.application_id,
         title: e.title,
@@ -69,7 +73,7 @@ function g(e) {
         application: null != e.application ? a.ZP.createFromServer(e.application) : void 0,
     };
 }
-function E(e) {
+function b(e) {
     if (null != e)
         return {
             carouselItems: e.carousel_items.map((e) => ({
@@ -86,7 +90,25 @@ function E(e) {
             cardBackgroundImageAssetId: e.card_background_image_asset_id,
         };
 }
-function b(e, t) {
+function y(e) {
+    return {
+        skus: e.skus.map((e) => o.Z.createFromServer(e)),
+        skusToRecommendationReasons: Object.fromEntries(
+            Object.entries(e.skus_to_user_ids).map((e) => {
+                let [t, n] = e;
+                return [
+                    t,
+                    n.map((e) => ({
+                        userId: e.user_id,
+                        reason: e.reason,
+                    })),
+                ];
+            }),
+        ),
+        application: a.ZP.createFromServer(e.application),
+    };
+}
+function O(e, t) {
     var n, r, i;
     if (
         null == t ||
@@ -105,11 +127,11 @@ function b(e, t) {
               primaryIconLabel: void 0,
           }
         : {
-              primaryIconAsset: null != (i = l.Z.toURLSafe((0, s._W)(t, a.labelIconAssetId, 512, "webp"))) ? i : void 0,
+              primaryIconAsset: null != (i = c.Z.toURLSafe((0, l._W)(t, a.labelIconAssetId, 512, "webp"))) ? i : void 0,
               primaryIconLabel: a.label,
           };
 }
-function y(e) {
+function v(e) {
     var t, n, r;
     let i = null == e ? void 0 : e.applicationId,
         a =
@@ -122,9 +144,9 @@ function y(e) {
                 : null == e
                   ? void 0
                   : e.thumbnailAssetId;
-    if (null != a && null != i) return l.Z.toURLSafe((0, s._W)(i, a, 512, "webp"));
+    if (null != a && null != i) return c.Z.toURLSafe((0, l._W)(i, a, 512, "webp"));
 }
-function O(e) {
+function S(e) {
     var t, n;
     if (
         (null == e || null == (n = e.tenantMetadata) || null == (t = n.socialLayer)
@@ -132,17 +154,17 @@ function O(e) {
             : t.cardBackgroundImageAssetId) != null &&
         (null == e ? void 0 : e.applicationId) != null
     )
-        return l.Z.toURLSafe(
-            (0, s._W)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, f),
+        return c.Z.toURLSafe(
+            (0, l._W)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, p),
         );
 }
-function v(e, t) {
+function I(e, t) {
     return ""
         .concat(location.protocol)
         .concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT)
-        .concat(d.Z5c.GAME_SHOP(e, t.id, t.slug));
+        .concat(f.Z5c.GAME_SHOP(e, t.id, t.slug));
 }
-function S(e, t) {
-    let n = o.Z.getGuild(e);
-    return null != n && h(n) && (0, c.ne)({ location: t });
+function T(e, t) {
+    let n = s.Z.getGuild(e);
+    return null != n && g(n) && (0, u.ne)({ location: t });
 }

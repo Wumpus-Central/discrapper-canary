@@ -1564,6 +1564,8 @@ let ep = "@me",
         STORE_LISTING: (e) => "/store/listings/".concat(e),
         STORE_LISTINGS_SKU: (e) => "/store/skus/".concat(e, "/listings"),
         SOCIAL_LAYER_APPLICATION_STOREFRONT: (e) => "/partner-sdk/guilds/".concat(e, "/application-storefront"),
+        SOCIAL_LAYER_APPLCIATION_RECOMMENDATIONS: (e) =>
+            "/partner-sdk/applications/".concat(e, "/skus/recommendations"),
         SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU: (e, t) =>
             "/partner-sdk/guilds/".concat(e, "/application-storefront/skus/").concat(t),
         ORDER_GET: (e) => "/billing/orders/".concat(e),

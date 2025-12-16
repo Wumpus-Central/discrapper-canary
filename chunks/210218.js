@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => A }), n(415506);
 var i,
     a = n(442837),
     o = n(570140),
@@ -56,77 +56,123 @@ function d(e, t) {
         e
     );
 }
-let f = {},
-    p = {};
-function _(e) {
-    let { guildId: t } = e,
-        n = p[t];
-    (p[t] = d(c({}, n), { state: "loading" })), (p = c({}, p));
+function f(e) {
+    if (0 === e.length) throw Error("No user IDs provided");
+    return e.length > 1 ? "more-than-one-user" : e[0];
 }
-function m(e) {
+let p = {},
+    _ = {},
+    m = {};
+function h() {
+    m = {};
+}
+function g(e) {
+    var t;
+    let { applicationId: n, userIds: r } = e,
+        i = f(r);
+    m = d(c({}, m), { [n]: d(c({}, null != (t = m[n]) ? t : {}), { [i]: { state: "loading" } }) });
+}
+function E(e) {
+    var t;
+    let { skus: n, skusToRecommendationReasons: r, userIds: i, application: a, numItemsRequested: o } = e,
+        s = f(i);
+    m = d(c({}, m), {
+        [a.id]: d(c({}, null != (t = m[a.id]) ? t : {}), {
+            [s]: {
+                state: "success",
+                data: {
+                    skus: n,
+                    skusToRecommendationReasons: r,
+                    numItemsRequested: o,
+                },
+            },
+        }),
+    });
+}
+function b(e) {
+    var t;
+    let { applicationId: n, userIds: r } = e,
+        i = f(r);
+    if (null != m[n] && null != m[n][i] && "success" === m[n][i].state) return !1;
+    m = d(c({}, m), { [n]: d(c({}, null != (t = m[n]) ? t : {}), { [i]: { state: "error" } }) });
+}
+function y(e) {
+    let { guildId: t } = e,
+        n = _[t];
+    (_[t] = d(c({}, n), { state: "loading" })), (_ = c({}, _));
+}
+function O(e) {
     let { guildId: t, storefront: n } = e;
-    (p[t] = {
+    (_[t] = {
         storefront: n,
         state: "fetched",
         fetchedAt: Date.now(),
     }),
-        (p = c({}, p));
+        (_ = c({}, _));
 }
-function h(e) {
+function v(e) {
     let { guildId: t, storefront: n } = e,
-        r = p[t];
+        r = _[t];
     (null == r ? void 0 : r.storefront) != null
-        ? (p[t] = d(c({}, r), { storefront: d(c({}, r.storefront), { assets: c({}, r.storefront.assets, n.assets) }) }))
-        : (p[t] = {
+        ? (_[t] = d(c({}, r), { storefront: d(c({}, r.storefront), { assets: c({}, r.storefront.assets, n.assets) }) }))
+        : (_[t] = {
               storefront: n,
               state: "partially-fetched",
               fetchedAt: null,
           }),
-        (p = c({}, p));
+        (_ = c({}, _));
 }
-function g(e) {
+function S(e) {
     let { guildId: t, eager: n } = e;
     if (n) {
-        let e = p[t];
+        let e = _[t];
         (null == e ? void 0 : e.state) === "loading" && (null == e ? void 0 : e.storefront) != null
-            ? (p[t] = d(c({}, e), { state: "fetched" }))
-            : delete p[t];
+            ? (_[t] = d(c({}, e), { state: "fetched" }))
+            : delete _[t];
     } else
-        p[t] = {
+        _[t] = {
             storefront: null,
             state: "error",
             fetchedAt: Date.now(),
         };
-    p = c({}, p);
+    _ = c({}, _);
 }
-function E(e) {
+function I(e) {
     let { guildId: t, pageIndex: n, skuId: r } = e;
-    (f[t] = {
+    (p[t] = {
         activePage: n,
         activeSkuId: r,
     }),
-        (f = c({}, f));
+        (p = c({}, p));
 }
-function b() {
+function T() {
     if (r === s.default.locale) return !1;
-    (r = s.default.locale), (f = {}), (p = {});
+    (r = s.default.locale), (p = {}), (_ = {}), (m = {});
 }
-class y extends (i = a.ZP.Store) {
+class C extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], b), (r = s.default.locale);
+        this.waitFor(s.default), this.syncWith([s.default], T), (r = s.default.locale);
     }
     getStorefrontData(e) {
-        return p[e];
+        return _[e];
     }
     getStorefrontState(e) {
-        return f[e];
+        return p[e];
+    }
+    recommendationsByApplicationsAndUsers(e, t) {
+        var n;
+        if (null != t && 0 !== t.length) return null == (n = m[e]) ? void 0 : n[f(t)];
     }
 }
-l(y, "displayName", "SocialLayerStorefrontStore");
-let O = new y(o.Z, {
-    SOCIAL_LAYER_STOREFRONT_LOAD: _,
-    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: m,
-    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: h,
-    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: g,
-    SET_SOCIAL_LAYER_STOREFRONT_STATE: E,
+l(C, "displayName", "SocialLayerStorefrontStore");
+let A = new C(o.Z, {
+    LOGOUT: h,
+    SOCIAL_LAYER_STOREFRONT_LOAD: y,
+    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: O,
+    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: v,
+    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: S,
+    SET_SOCIAL_LAYER_STOREFRONT_STATE: I,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: E,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: b,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START: g,
 });

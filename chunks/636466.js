@@ -173,18 +173,19 @@ function L(e, t) {
             wishlistId: l,
             showTypeTooltip: c = !1,
             cardSize: d,
+            analyticsLocations: p,
         } = t,
-        p = null != i && i > 0,
-        _ = c && !p,
-        m = p ? v.intl.string(v.t.TxBQzD) : v.intl.string(v.t.pLPjsb),
-        h = {
-            title: _ ? v.intl.string(v.t["4yiU7x"]) : m,
-            body: _ ? v.intl.string(v.t.ilhtIa) : void 0,
-            renderIcon: _ ? f.Q : void 0,
+        _ = null != i && i > 0,
+        m = c && !_,
+        h = _ ? v.intl.string(v.t.TxBQzD) : v.intl.string(v.t.pLPjsb),
+        y = {
+            title: m ? v.intl.string(v.t["4yiU7x"]) : h,
+            body: m ? v.intl.string(v.t.ilhtIa) : void 0,
+            renderIcon: m ? f.Q : void 0,
             shouldShow: !0,
         },
-        y = () => {
-            if (p) return void a();
+        I = () => {
+            if (_) return void a();
             (0, g.P)(
                 e.sku,
                 {
@@ -192,10 +193,12 @@ function L(e, t) {
                     giftRecipient: s,
                     giftingOrigin: O.Wt.USER_PROFILE_WISHLIST,
                 },
-                { analyticsLocations: [u.Z.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
+                {
+                    analyticsLocations: [...p, u.Z.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON],
+                },
             );
         },
-        I = () =>
+        T = () =>
             (0, r.jsx)(E.A, {
                 containerClassName: S.card,
                 backgroundImageClassName: S.cardBackgroundImage,
@@ -207,10 +210,10 @@ function L(e, t) {
         x,
         {
             wishlistItem: e,
-            onCardClick: y,
-            tooltipConfig: h,
+            onCardClick: I,
+            tooltipConfig: y,
             shouldScalePreview: !1,
-            renderPreview: I,
+            renderPreview: T,
             moreCount: i,
             isSingleCard: o,
             wishlistId: l,
@@ -222,17 +225,19 @@ function L(e, t) {
     );
 }
 function j(e) {
-    let { item: t, card: n, profileOwner: i } = e,
-        { data: a } = (0, d.IX)(t.sku.applicationId),
-        o = () => {
+    let { item: t, card: n, analyticsLocations: i, profileOwner: a } = e,
+        { data: o } = (0, d.IX)(t.sku.applicationId),
+        s = () => {
             (0, g.P)(
                 t.sku,
                 {
                     isGift: !0,
-                    giftRecipient: i,
+                    giftRecipient: a,
                     giftingOrigin: O.Wt.USER_PROFILE_WISHLIST,
                 },
-                { analyticsLocations: [u.Z.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
+                {
+                    analyticsLocations: [...i, u.Z.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON],
+                },
             );
         };
     return (0, r.jsxs)("div", {
@@ -242,7 +247,7 @@ function j(e) {
             (0, r.jsx)("div", {
                 className: I.singleItemInfo,
                 children: (0, r.jsxs)(c.P3F, {
-                    onClick: o,
+                    onClick: s,
                     className: I.singleItemName,
                     "aria-label": v.intl.string(v.t.pLPjsb),
                     children: [
@@ -255,7 +260,7 @@ function j(e) {
                         (0, r.jsx)(c.Text, {
                             variant: "text-xs/medium",
                             color: "text-default",
-                            children: v.intl.format(v.t["CqpEC+"], { applicationName: null == a ? void 0 : a.name }),
+                            children: v.intl.format(v.t["CqpEC+"], { applicationName: null == o ? void 0 : o.name }),
                         }),
                     ],
                 }),
@@ -277,5 +282,6 @@ function M(e, t) {
         item: e,
         card: s,
         profileOwner: n,
+        analyticsLocations: i,
     });
 }

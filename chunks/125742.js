@@ -1,31 +1,14 @@
-n.d(t, { u: () => i });
+n.d(t, { R: () => i });
 let r = (0, n(427164).le)({
-    name: "2025-12-user-profile-show-recommendations-in-breadcrumbs",
+    name: "2025-12-dm-side-panel-show-recommendations-in-breadcrumbs",
     kind: "user",
-    defaultConfig: {
-        enabledInPopout: !1,
-        enabledInSidebar: !1,
-    },
+    defaultConfig: { enabled: !1 },
     variations: {
-        0: {
-            enabledInPopout: !1,
-            enabledInSidebar: !1,
-        },
-        1: {
-            enabledInPopout: !0,
-            enabledInSidebar: !0,
-        },
-        2: {
-            enabledInPopout: !0,
-            enabledInSidebar: !1,
-        },
-        3: {
-            enabledInPopout: !1,
-            enabledInSidebar: !0,
-        },
+        0: { enabled: !1 },
+        1: { enabled: !0 },
     },
 });
 function i(e) {
     let { location: t } = e;
-    return r.useConfig({ location: t });
+    return r.useConfig({ location: t }).enabled;
 }
