@@ -49,21 +49,23 @@ function f(e, t, n) {
 function p(e) {
     return !!o.ZP.shouldAllowSurveyAction() && (!!e.startsWith("quest_completed_") || r.J[e] >= 100 * Math.random());
 }
-async function _(e) {
-    if (p(e))
-        try {
-            var t;
-            let n = await i.tn.post({
-                url: d.ANM.EMBEDDED_SURVEY_ACTION,
-                body: { action_type: e },
-                rejectWithError: !0,
-            });
-            a.Z.dispatch({
-                type: "SURVEY_FETCHED",
-                survey: null == n || null == (t = n.body) ? void 0 : t.survey,
-                isActionTriggered: !0,
-            });
-        } catch (e) {}
+async function _(e, t) {
+    if (!p(e)) return;
+    let n = { action_type: e };
+    null != t && (n.metadata = t);
+    try {
+        var r;
+        let e = await i.tn.post({
+            url: d.ANM.EMBEDDED_SURVEY_ACTION,
+            body: n,
+            rejectWithError: !0,
+        });
+        a.Z.dispatch({
+            type: "SURVEY_FETCHED",
+            survey: null == e || null == (r = e.body) ? void 0 : r.survey,
+            isActionTriggered: !0,
+        });
+    } catch (e) {}
 }
 let m = {
     fetchSurveyDetails: async function (e) {
