@@ -86,7 +86,7 @@ class u extends (r = a.Component) {
                 let [u, { default: d }] = await Promise.all([t(), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
                 if (null == this.animationRef.current) return;
                 let f =
-                    "object" == typeof u && "default" in u && "string" == typeof u.default
+                    "object" == typeof u && null != u && "default" in u && "string" == typeof u.default
                         ? { path: u.default }
                         : { animationData: u };
                 (this.animation = d.loadAnimation(
