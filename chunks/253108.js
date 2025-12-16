@@ -5,7 +5,5 @@ e.exports = {
     pollContainer: "b7e1cb0370c2dd0e-pollContainer",
     confirmText: "b7e1cb0370c2dd0e-confirmText",
     threadRoleMentionFailure: "b7e1cb0370c2dd0e-threadRoleMentionFailure",
-    nitroFileSizeUpsell: "b7e1cb0370c2dd0e-nitroFileSizeUpsell",
-    nitroBadgeSvg: "b7e1cb0370c2dd0e-nitroBadgeSvg",
     ctaButtonContainer: "b7e1cb0370c2dd0e-ctaButtonContainer",
 };

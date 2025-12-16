@@ -4,7 +4,7 @@ n.d(t, {
     $X: () => ey,
     $e: () => f,
     $n: () => eJ,
-    A5: () => B,
+    A5: () => F,
     AU: () => X,
     Bo: () => e4,
     C: () => s,
@@ -23,7 +23,6 @@ n.d(t, {
     HO: () => ek,
     HS: () => P,
     IW: () => T,
-    Lw: () => eN,
     M_: () => e2,
     NV: () => W,
     Nl: () => eh,
@@ -70,7 +69,7 @@ n.d(t, {
     dT: () => ef,
     ee: () => eE,
     gW: () => eg,
-    gh: () => F,
+    gh: () => B,
     h1: () => eZ,
     h8: () => el,
     hX: () => e$,
@@ -84,11 +83,11 @@ n.d(t, {
     mn: () => C,
     nC: () => eO,
     nG: () => eI,
-    nH: () => eB,
+    nH: () => eF,
     nS: () => m,
     o4: () => S,
     pH: () => eL,
-    pj: () => D,
+    pj: () => w,
     rB: () => e_,
     rV: () => A,
     rX: () => H,
@@ -102,7 +101,7 @@ n.d(t, {
     wh: () => Q,
     xT: () => er,
     y7: () => g,
-    ys: () => eF,
+    ys: () => eB,
     zp: () => Z,
 }),
     n(388685);
@@ -387,8 +386,8 @@ let P = Object.freeze({
             intervalCount: 1,
         },
     }),
-    D = new Set(["511651880837840896"]),
-    w = 16,
+    w = new Set(["511651880837840896"]),
+    D = 16,
     x = 8,
     L = 5,
     j = 30,
@@ -397,8 +396,8 @@ let P = Object.freeze({
     U = 28,
     G = 30,
     Z = 30,
-    B = 7,
-    F = 30,
+    F = 7,
+    B = 30,
     V = "775514091874680832",
     H = "845031178288889946",
     Y = 432000000,
@@ -599,8 +598,8 @@ let eA = Object.freeze({
     eN = 52428800,
     eP = 52428800,
     eR = 524288000,
-    eD = 52428800,
-    ew = 104857600,
+    ew = 52428800,
+    eD = 104857600,
     ex = 5,
     eL = {
         [i.Eu4.NONE]: ex,
@@ -657,7 +656,7 @@ let eA = Object.freeze({
             limits: {
                 emoji: 150,
                 bitrate: 256000,
-                fileSize: eD,
+                fileSize: ew,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
                 soundboardSounds: eM[i.Eu4.TIER_2],
@@ -677,7 +676,7 @@ let eA = Object.freeze({
             limits: {
                 emoji: 250,
                 bitrate: 384000,
-                fileSize: ew,
+                fileSize: eD,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: "1080p",
                 soundboardSounds: eM[i.Eu4.TIER_3],
@@ -715,14 +714,14 @@ var eG = (function (e) {
     eZ = (function (e) {
         return (e.FREE = "free"), (e.PREMIUM_STANDARD = "premium-standard"), e;
     })({});
-let eB = {
-    "1024422698568122368": w,
-    "511651876987469824": w,
-    "511651885459963904": w,
+let eF = {
+    "1024422698568122368": D,
+    "511651876987469824": D,
+    "511651885459963904": D,
     "944037208325619722": x,
     "642251038925127690": L,
 };
-var eF = (function (e) {
+var eB = (function (e) {
     return (
         (e.HIGH_STREAMING_QUALITY = "high_streaming_quality"), (e.MID_STREAMING_QUALITY = "mid_streaming_quality"), e
     );
