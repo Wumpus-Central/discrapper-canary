@@ -4,6 +4,7 @@ n.d(t, {
     Kt: () => U,
     Lj: () => N,
     RW: () => Y,
+    Uw: () => $,
     Y3: () => Q,
     Yt: () => R,
     _I: () => L,
@@ -12,10 +13,10 @@ n.d(t, {
     bN: () => P,
     dl: () => k,
     ft: () => q,
-    hO: () => D,
+    hO: () => w,
     kH: () => G,
     qF: () => K,
-    xi: () => $,
+    xi: () => ee,
     zd: () => V,
 }),
     n(388685),
@@ -106,10 +107,10 @@ function P() {
 function R(e) {
     return A.includes(e.nsfwLevel);
 }
-function D(e) {
-    return null != e && w(p.Z.getGuild(e));
-}
 function w(e) {
+    return null != e && D(p.Z.getGuild(e));
+}
+function D(e) {
     let t = (0, o.u)("age_verification_utils"),
         n = (0, s.yo)();
     return t && n && (null == e ? void 0 : e.features.has(b.GuildFeatures.AGE_VERIFICATION_LARGE_GUILD));
@@ -244,23 +245,23 @@ function Z(e) {
                   verifyTitle: i ? y.intl.string(y.t.xi46lg) : y.intl.string(y.t.ZmwvDc),
               };
 }
-let B = () => {
+let F = () => {
         let e = _.default.getCurrentUser();
         if (null == e) return !1;
         let t = k();
         return !0 !== e.nsfwAllowed || t;
     },
-    F = (e) => {
-        if (!B() || null == e) return !1;
+    B = (e) => {
+        if (!F() || null == e) return !1;
         let t = p.Z.getGuild(e);
         return null != t && (0, u.Y2)(t);
     },
-    V = (e) => !!B() && null != e && Q(d.Z.getChannel(e)),
+    V = (e) => !!F() && null != e && Q(d.Z.getChannel(e)),
     H = (e) => k() && V(e),
     Y = (e) => !!H(e) && ((0, g.mN)(E.L0.NSFW_VOICE_CHANNEL), !0);
 function W(e, t, n) {
-    if (D(e)) return void (0, g.mN)(E.L0.ACCESS_LARGE_GUILD_UNDERAGE);
-    if (F(e)) {
+    if (w(e)) return void (0, g.mN)(E.L0.ACCESS_LARGE_GUILD_UNDERAGE);
+    if (B(e)) {
         let e = null != n && N.has(n) ? n : E.L0.NSFW_SERVER;
         (0, g.mN)(e);
         return;
@@ -319,6 +320,11 @@ function J() {
     return null != e && null == e.nsfwAllowed;
 }
 function $() {
+    let e = (0, a.S)("age-gate-utils"),
+        t = (0, s.sf)();
+    return e && t;
+}
+function ee() {
     let e = (0, a.H)("age-gate-utils"),
         t = (0, s.L5)();
     return e && t;

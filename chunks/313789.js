@@ -11,6 +11,29 @@ var r = (function (e) {
         (e.ACCOUNT_PROFILE_TAB = "account_profile_tab"),
         (e.CONTENT_AND_SOCIAL_SIDEBAR_ITEM = "content_and_social_sidebar_item"),
         (e.CONTENT_AND_SOCIAL_PANEL = "content_and_social_panel"),
+        (e.CONTENT_AND_SOCIAL_CONTENT_CATEGORY = "content_and_social_content_category"),
+        (e.CONTENT_AND_SOCIAL_PERMISSIONS_CATEGORY = "content_and_social_permissions_category"),
+        (e.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_CATEGORY = "content_and_social_friend_requests_category"),
+        (e.CONTENT_AND_SOCIAL_RESTRICTED_USERS_CATEGORY = "content_and_social_restricted_users_category"),
+        (e.CONTENT_AND_SOCIAL_CONTENT_FILTERS_SETTING = "content_and_social_content_filters_setting"),
+        (e.CONTENT_AND_SOCIAL_DM_SPAM_SETTING = "content_and_social_dm_spam_setting"),
+        (e.CONTENT_AND_SOCIAL_AGE_RESTRICTED_DM_SETTING = "content_and_social_age_restricted_dm_setting"),
+        (e.CONTENT_AND_SOCIAL_AGE_RESTRICTED_IOS_SETTING = "content_and_social_age_restricted_ios_setting"),
+        (e.CONTENT_AND_SOCIAL_PERMISSIONS_GUILD_SELECTOR = "content_and_social_permissions_guild_selector"),
+        (e.CONTENT_AND_SOCIAL_PERMISSIONS_DMS_SETTING = "content_and_social_permissions_dms_setting"),
+        (e.CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING =
+            "content_and_social_permissions_message_requests_setting"),
+        (e.CONTENT_AND_SOCIAL_PERMISSIONS_ACTIVITY_SHARE_SETTING =
+            "content_and_social_permissions_activity_share_setting"),
+        (e.CONTENT_AND_SOCIAL_PERMISSIONS_ACTIVITY_JOIN_SETTING =
+            "content_and_social_permissions_activity_join_setting"),
+        (e.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_EVERYONE_SETTING = "content_and_social_friend_requests_everyone_setting"),
+        (e.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_MUTUAL_FRIENDS_SETTING =
+            "content_and_social_friend_requests_mutual_friends_setting"),
+        (e.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_MUTUAL_GUILDS_SETTING =
+            "content_and_social_friend_requests_mutual_guilds_setting"),
+        (e.CONTENT_AND_SOCIAL_BLOCKED_USERS = "content_and_social_blocked_users"),
+        (e.CONTENT_AND_SOCIAL_IGNORED_USERS = "content_and_social_ignored_users"),
         (e.DATA_AND_PRIVACY_SIDEBAR_ITEM = "data_and_privacy_sidebar_item"),
         (e.DATA_AND_PRIVACY_PANEL = "data_and_privacy_panel"),
         (e.FAMILY_CENTER_SIDEBAR_ITEM = "family_center_sidebar_item"),
