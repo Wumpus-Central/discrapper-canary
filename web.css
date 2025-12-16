@@ -46930,6 +46930,43 @@ div._34eac30af6a687c5-modalOverrideBody {
     display: none
 }
 
+.ddf599b22c154d9c-container {
+    display: inline-flex;
+    padding: var(--space-8) calc(var(--space-16) + 3px) var(--space-16)
+}
+
+.ddf599b22c154d9c-container label[data-mana-component=checkbox] {
+    align-items: center;
+    gap: var(--space-8);
+    margin: calc(var(--space-4)*-1);
+    padding: var(--space-4)
+}
+
+.ddf599b22c154d9c-container label[data-mana-component=checkbox]>div:first-of-type {
+    height: 16px;
+    width: 16px
+}
+
+.ddf599b22c154d9c-container label[data-mana-component=checkbox] label>div {
+    font-size: 12px;
+    line-height: 16px
+}
+
+.ddf599b22c154d9c-icon {
+    margin-bottom: -2px;
+    margin-top: -2px;
+    margin-inline: 0;
+    -webkit-margin-end: 2px;
+    height: 1em;
+    margin-inline-end: 2px;
+    width: 1em
+}
+
+.ddf599b22c154d9c-icon,
+.ddf599b22c154d9c-label {
+    display: inline
+}
+
 .aa605f19898fe32e-upload {
     background: var(--background-gradient-higher, var(--background-base-lower));
     background-color: var(--background-surface-high);
