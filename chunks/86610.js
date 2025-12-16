@@ -75,6 +75,7 @@ let S = (e, t) => null != t && t.implemented && t.flowType === e,
         },
         [u.G.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0 },
         [u.G.PREMIUM_CHECKOUT]: { allowGiftCustomization: !1 },
+        [u.G.SLAYER_STOREFRONT_CHECKOUT]: { allowGiftCustomization: !0 },
     };
 class T {
     getUnifiedStepDefinition(e) {

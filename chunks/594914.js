@@ -68,7 +68,7 @@ function _(e, t) {
         g = (0, i.Z)();
     (0, a.ZDy)(
         async () => {
-            let { default: t } = await n.e("45227").then(n.bind(n, 556266));
+            let { default: t } = await Promise.resolve().then(n.bind(n, 556266));
             return (n) =>
                 (0, r.jsx)(
                     t,

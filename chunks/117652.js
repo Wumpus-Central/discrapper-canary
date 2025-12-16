@@ -162,8 +162,28 @@ let U = (e) => {
                 disableThemedBackground: !0,
                 className: D.customGiftMessageWrapper,
                 innerClassName: D.customGiftMessage,
-            }),
-        ee = () => {
+            });
+    return {
+        renderLeftColumn: () =>
+            z
+                ? (0, r.jsxs)("div", {
+                      className: D.bodyColumnLeft,
+                      children: [
+                          (0, r.jsx)(a.Text, {
+                              variant: "text-xs/bold",
+                              color: "text-default",
+                              className: D.selectGiftTitle,
+                              children: q.toLocaleUpperCase(),
+                          }),
+                          N.map((e) => J(e)),
+                          (0, r.jsx)(Z, { handleClose: n }),
+                      ],
+                  })
+                : (0, r.jsx)("div", {
+                      className: D.bodyColumnMiddle,
+                      children: (0, r.jsx)(g.q, { isShopGift: !0 }),
+                  }),
+        renderRightColumn: () => {
             if (z)
                 return (0, r.jsxs)("div", {
                     className: D.bodyColumnRight,
@@ -231,27 +251,7 @@ let U = (e) => {
                               }),
                       ],
                   });
-        };
-    return {
-        leftColumnComponent: z
-            ? (0, r.jsxs)("div", {
-                  className: D.bodyColumnLeft,
-                  children: [
-                      (0, r.jsx)(a.Text, {
-                          variant: "text-xs/bold",
-                          color: "text-default",
-                          className: D.selectGiftTitle,
-                          children: q.toLocaleUpperCase(),
-                      }),
-                      N.map((e) => J(e)),
-                      (0, r.jsx)(Z, { handleClose: n }),
-                  ],
-              })
-            : (0, r.jsx)("div", {
-                  className: D.bodyColumnMiddle,
-                  children: (0, r.jsx)(g.q, { isShopGift: !0 }),
-              }),
-        rightColumnComponent: ee(),
+        },
         onStepChange: t,
         onBackClick: n,
         ctaDisabled: null != _ || null == A || A.id === (null == H ? void 0 : H.id) || s.length > R.$n,
@@ -261,8 +261,8 @@ let U = (e) => {
 function G(e) {
     let { handleStepChange: t, handleClose: n } = e,
         {
-            leftColumnComponent: i,
-            rightColumnComponent: o,
+            renderLeftColumn: i,
+            renderRightColumn: o,
             onStepChange: s,
             onBackClick: l,
             ctaDisabled: c,
@@ -276,7 +276,7 @@ function G(e) {
             (0, r.jsx)(N.C3, {
                 children: (0, r.jsxs)("div", {
                     className: D.stepBody,
-                    children: [i, o],
+                    children: [i(), o()],
                 }),
             }),
             (0, r.jsx)(N.O3, {
