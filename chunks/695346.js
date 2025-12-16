@@ -1,47 +1,48 @@
 n.d(t, {
-    A2: () => e2,
+    A2: () => e4,
     AY: () => eo,
     CM: () => eu,
-    CW: () => eU,
+    CW: () => eG,
     Cr: () => ey,
     DC: () => ed,
-    Eo: () => eQ,
-    Ex: () => eB,
+    Eo: () => eX,
+    Ex: () => eV,
     Fg: () => en,
     G6: () => eg,
+    Gp: () => ew,
     H1: () => k,
-    HV: () => e4,
+    HV: () => e5,
     I0: () => Z,
-    JG: () => eY,
+    JG: () => eW,
     JN: () => es,
     JT: () => ec,
     JY: () => A,
-    L1: () => eD,
+    L1: () => ex,
     NA: () => eC,
     OW: () => e_,
     Ok: () => ev,
     Ou: () => K,
     P4: () => eO,
     Pe: () => Y,
-    QK: () => ex,
+    QK: () => eL,
     QZ: () => w,
     R$: () => y,
     RS: () => eT,
-    R_: () => eV,
-    Rt: () => e1,
-    SE: () => ek,
-    Sb: () => ew,
-    Sh: () => eq,
+    R_: () => eH,
+    Rt: () => e3,
+    SE: () => eU,
+    Sb: () => eD,
+    Sh: () => eQ,
     T4: () => M,
     UP: () => em,
-    Wp: () => ej,
+    Wp: () => eM,
     Xc: () => H,
     Xk: () => U,
     Xr: () => eh,
-    YC: () => e3,
-    Yk: () => eL,
+    YC: () => e2,
+    Yk: () => ej,
     _O: () => j,
-    _j: () => eH,
+    _j: () => eY,
     a7: () => R,
     bh: () => el,
     bm: () => ep,
@@ -60,33 +61,34 @@ n.d(t, {
     fz: () => T,
     gR: () => $,
     h2: () => ee,
-    hg: () => e$,
+    hg: () => e0,
     iG: () => J,
-    iH: () => eZ,
-    j7: () => eJ,
+    iH: () => eF,
+    j7: () => e$,
     jU: () => ei,
     kJ: () => X,
     kU: () => ea,
-    l4: () => e0,
-    lk: () => eK,
+    l4: () => e1,
+    lL: () => eR,
+    lk: () => ez,
     mX: () => Q,
     nc: () => eA,
-    nh: () => ez,
-    no: () => eF,
+    nh: () => eq,
+    no: () => eB,
     p1: () => P,
     qF: () => G,
     rN: () => eN,
-    rR: () => e5,
+    rR: () => e8,
     tU: () => eS,
     uL: () => B,
-    uh: () => eX,
+    uh: () => eJ,
     vF: () => I,
     vc: () => N,
     x4: () => eI,
     xM: () => ef,
     xq: () => et,
     zA: () => q,
-    zY: () => eW,
+    zY: () => eK,
 }),
     n(388685);
 var r = n(392711),
@@ -727,14 +729,14 @@ let eN = (0, f.Zc)(
     (e) => (null != e && eP.has(e.value) ? e.value : l.l.COZY),
     (e) => o.Gm.create({ value: e }),
 );
-let eR = new Set([l.Z.ALL, l.Z.UNREADS, l.Z.NONE]);
-(0, f.Zc)(
-    "appearance",
-    "messagePreviews",
-    (e) => (null != e && eR.has(e.value) ? e.value : l.Z.ALL),
-    (e) => o.Gm.create({ value: e }),
-);
-let ew = (0, f.KM)(
+let eR = new Set([l.Z.ALL, l.Z.UNREADS, l.Z.NONE]),
+    ew = (0, f.Zc)(
+        "appearance",
+        "messagePreviews",
+        (e) => (null != e && eR.has(e.value) ? e.value : l.Z.ALL),
+        (e) => o.Gm.create({ value: e }),
+    ),
+    eD = (0, f.KM)(
         (0, f.Zc)(
             "appearance",
             "developerMode",
@@ -744,7 +746,7 @@ let ew = (0, f.KM)(
         "appearance",
         "developerMode",
     ),
-    eD = (0, f.Zc)(
+    ex = (0, f.Zc)(
         "appearance",
         "clientThemeSettings",
         (e) => {
@@ -777,7 +779,7 @@ let ew = (0, f.KM)(
         }),
         { comparator: r.isEqual },
     ),
-    ex = (0, f.R2)(
+    eL = (0, f.R2)(
         (0, f.KM)(
             (0, f.Zc)(
                 "textAndImages",
@@ -802,7 +804,7 @@ let ew = (0, f.KM)(
                 return null == (e = p.Z.getOverride("gifAutoPlay")) ? void 0 : e.value;
             }),
     ),
-    eL = (0, f.R2)(
+    ej = (0, f.R2)(
         (0, f.KM)(
             (0, f.Zc)(
                 "textAndImages",
@@ -827,7 +829,7 @@ let ew = (0, f.KM)(
                 return null == (e = p.Z.getOverride("animateEmoji")) ? void 0 : e.value;
             }),
     ),
-    ej = (0, f.R2)(
+    eM = (0, f.R2)(
         (0, f.KM)(
             (0, f.Zc)(
                 "textAndImages",
@@ -852,25 +854,25 @@ let ew = (0, f.KM)(
                 return null == (e = p.Z.getOverride("animateStickers")) ? void 0 : e.value;
             }),
     ),
-    eM = [],
-    ek = (0, f.Zc)(
-        "privacy",
-        "activityRestrictedGuildIds",
-        (e) => (null != e ? e : eM),
-        (e) => e,
-    ),
+    ek = [],
     eU = (0, f.Zc)(
         "privacy",
         "activityRestrictedGuildIds",
-        (e) => (null != e ? e : eM),
+        (e) => (null != e ? e : ek),
+        (e) => e,
+    ),
+    eG = (0, f.Zc)(
+        "privacy",
+        "activityRestrictedGuildIds",
+        (e) => (null != e ? e : ek),
         (e) => e,
         { delay: m.fy.FREQUENT_USER_ACTION },
     ),
-    eG = [],
-    eZ = (0, f.Zc)(
+    eZ = [],
+    eF = (0, f.Zc)(
         "privacy",
         "activityJoiningRestrictedGuildIds",
-        (e) => (null != e ? e : eG),
+        (e) => (null != e ? e : eZ),
         (e) => e,
     );
 (0, f.TG)({
@@ -885,7 +887,7 @@ let ew = (0, f.KM)(
     ineligibleDefault: a.E5.OFF,
     eligibleDefault: () => a.E5.ON_FOR_LARGE_GUILDS,
 });
-let eF = (0, f.TG)({
+let eB = (0, f.TG)({
         baseSetting: (0, f.Zc)(
             "privacy",
             "defaultGuildsActivityRestrictedV2",
@@ -897,13 +899,13 @@ let eF = (0, f.TG)({
         ineligibleDefault: a.GI.ACTIVITY_STATUS_OFF,
         eligibleDefault: () => a.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
     }),
-    eB = (0, f.Zc)(
+    eV = (0, f.Zc)(
         "privacy",
         "familyCenterEnabledV2",
         (e) => (null == e ? void 0 : e.value),
         (e) => o.D5.create({ value: e }),
     ),
-    eV = (0, f.Zc)(
+    eH = (0, f.Zc)(
         "privacy",
         "hideLegacyUsername",
         (e) => {
@@ -912,7 +914,7 @@ let eF = (0, f.TG)({
         },
         (e) => o.D5.create({ value: e }),
     ),
-    eH = (0, f.Zc)(
+    eY = (0, f.Zc)(
         "privacy",
         "allowGameFriendDmsInDiscord",
         (e) => {
@@ -921,19 +923,19 @@ let eF = (0, f.TG)({
         },
         (e) => o.D5.create({ value: e }),
     ),
-    eY = (0, f.Zc)(
+    eW = (0, f.Zc)(
         "privacy",
         "slayerSdkReceiveDmsInGame",
         (e) => (null != e ? e : a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET),
         (e) => e,
     ),
-    eW = (0, f.Zc)(
+    eK = (0, f.Zc)(
         "ads",
         "alwaysDeliver",
         (e) => null != e && e,
         (e) => e,
     ),
-    eK = (e) => {
+    ez = (e) => {
         let {
             explicitContentGuilds: t,
             explicitContentFriendDm: n,
@@ -945,7 +947,7 @@ let eF = (0, f.TG)({
             explicitContentNonFriendDm: null != r ? r : a.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
         };
     },
-    ez = (e) => {
+    eq = (e) => {
         let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: r } = e;
         return {
             explicitContentGuilds: null != t ? t : void 0,
@@ -953,8 +955,8 @@ let eF = (0, f.TG)({
             explicitContentNonFriendDm: null != r ? r : void 0,
         };
     },
-    eq = (0, f.Zc)("textAndImages", "explicitContentSettings", eK, ez),
-    eQ = (e) => {
+    eQ = (0, f.Zc)("textAndImages", "explicitContentSettings", ez, eq),
+    eX = (e) => {
         let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: r } = null != e ? e : {};
         return {
             goreContentGuilds: null != t ? t : a.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
@@ -962,7 +964,7 @@ let eF = (0, f.TG)({
             goreContentNonFriendDm: null != r ? r : a.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
         };
     },
-    eX = (e) => {
+    eJ = (e) => {
         let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: r } = e;
         return {
             goreContentGuilds: null != t ? t : void 0,
@@ -970,7 +972,7 @@ let eF = (0, f.TG)({
             goreContentNonFriendDm: null != r ? r : void 0,
         };
     },
-    eJ = (0, f.Zc)("textAndImages", "goreContentSettings", eQ, eX);
+    e$ = (0, f.Zc)("textAndImages", "goreContentSettings", eX, eJ);
 (0, f.Zc)(
     "appearance",
     "searchResultExactCountEnabled",
@@ -989,7 +991,7 @@ let eF = (0, f.TG)({
         },
         (e) => o.D5.create({ value: e }),
     );
-let e$ = (0, f.Zc)(
+let e0 = (0, f.Zc)(
     "appearance",
     "timestampHourCycle",
     (e) => (null != e ? e : a.hg.AUTO),
@@ -1007,25 +1009,25 @@ let e$ = (0, f.Zc)(
         (e) => (null != e ? e : a.n9.SWIPE_RIGHT_TO_LEFT_UNSET),
         (e) => e,
     );
-let e0 = (0, f.Zc)(
+let e1 = (0, f.Zc)(
         "userContent",
         "lastReceivedChangelogId",
         (e) => (null != e ? e : "0"),
         (e) => e,
     ),
-    e1 = (0, f.Zc)(
+    e3 = (0, f.Zc)(
         "safetySettings",
         "ignoreProfileSpeedbumpDisabled",
         (e) => null != e && e,
         (e) => e,
     ),
-    e3 = (0, f.Zc)(
+    e2 = (0, f.Zc)(
         "appearance",
         "uiDensity",
         (e) => (e === a.Pi.UNSET_UI_DENSITY ? a.Pi.DEFAULT : null != e ? e : a.Pi.DEFAULT),
         (e) => e,
     ),
-    e2 = (0, f.Zc)(
+    e4 = (0, f.Zc)(
         "inAppFeedbackSettings",
         "inAppFeedbackStates",
         (e) =>
@@ -1038,7 +1040,7 @@ let e0 = (0, f.Zc)(
             ),
         { delay: m.fy.AUTOMATED },
     ),
-    e4 = (0, f.Zc)(
+    e5 = (0, f.Zc)(
         "textAndImages",
         "showMentionSuggestions",
         (e) => {
@@ -1047,7 +1049,7 @@ let e0 = (0, f.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    e5 = (0, f.Zc)(
+    e8 = (0, f.Zc)(
         "textAndImages",
         "isCrossDmSearchEnabled",
         (e) => {

@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(834721);
+    s = n(226462);
 let l = i.forwardRef((e, t) => {
     let {
         muted: n = !1,
@@ -14,7 +14,8 @@ let l = i.forwardRef((e, t) => {
         subText: u,
         avatarClassName: d,
         innerClassName: f,
-        withDisplayNameStyles: p = !1,
+        nameClassName: p,
+        withDisplayNameStyles: _ = !1,
     } = e;
     return (0, r.jsxs)("div", {
         ref: t,
@@ -28,13 +29,13 @@ let l = i.forwardRef((e, t) => {
                 children: a,
             }),
             (0, r.jsxs)("div", {
-                className: o()(s.content, { [s.withDisplayNameStyles]: p }),
+                className: o()(s.content, { [s.withDisplayNameStyles]: _ }),
                 children: [
                     (0, r.jsxs)("div", {
                         className: s.nameAndDecorators,
                         children: [
                             (0, r.jsx)("div", {
-                                className: s.name,
+                                className: o()(s.name, p),
                                 children: c,
                             }),
                             l,

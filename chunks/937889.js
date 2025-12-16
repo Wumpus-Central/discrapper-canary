@@ -1,6 +1,7 @@
 n.d(t, {
     ZP: () => y,
-    k$: () => v,
+    d6: () => v,
+    k$: () => I,
     p6: () => g,
     rs: () => h,
 }),
@@ -142,11 +143,11 @@ function E(e, t, n) {
                             },
                         },
                     ])),
-                a && (e = N(e, (null != l ? l : t).embeds)),
-                o || (e = S(e, n)),
+                a && (e = R(e, (null != l ? l : t).embeds)),
+                o || (e = T(e, n)),
                 (e = b(e)),
-                t.embeds.length > 0 && (c = T(e, n)),
-                o && (e = P(e)),
+                t.embeds.length > 0 && (c = A(e, n)),
+                o && (e = w(e)),
                 null != s && (e = s(e, n)),
                 e
             ),
@@ -169,7 +170,40 @@ function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return E(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
 }
-function O(e, t, n, r) {
+function O(e, t) {
+    arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    let { content: n, guildId: r, channelId: i } = t;
+    return e(
+        n,
+        !0,
+        {
+            allowLinks: !1,
+            allowDevLinks: !1,
+            allowEmojiLinks: !1,
+            mentionChannels: [],
+            soundboardSounds: [],
+            isInteracting: !1,
+            formatInline: !0,
+            noStyleAndInteraction: !1,
+            allowHeading: !1,
+            allowList: !1,
+            allowGameMentions: !1,
+            disableAutoBlockNewlines: !0,
+            previewLinkTarget: !1,
+            disableAnimatedEmoji: !0,
+            guildId: r,
+            channelId: i,
+            muted: !1,
+            disablePressableChannelMention: !0,
+        },
+        (e) => (Array.isArray(e) || (e = [e]), e),
+    );
+}
+function v(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    return O(e, t, n);
+}
+function S(e, t, n, r) {
     return e(
         t,
         !0,
@@ -194,15 +228,15 @@ function O(e, t, n, r) {
         (e) => (Array.isArray(e) || (e = [e]), e),
     );
 }
-function v(e, t, n) {
-    return O(a.Z.parseAutoModerationSystemMessage, e, t, n);
+function I(e, t, n) {
+    return S(a.Z.parseAutoModerationSystemMessage, e, t, n);
 }
-function S(e, t) {
+function T(e, t) {
     return t
-        ? I(e)
-        : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = I(e[0].content)), e);
+        ? C(e)
+        : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = C(e[0].content)), e);
 }
-function I(e) {
+function C(e) {
     if (
         e.some(
             (e) =>
@@ -226,36 +260,36 @@ function I(e) {
         e
     );
 }
-function T(e, t) {
-    return t ? A(e) : "paragraph" === e[0].type && e[0].content instanceof Array && A(e[0].content);
+function A(e, t) {
+    return t ? P(e) : "paragraph" === e[0].type && e[0].content instanceof Array && P(e[0].content);
 }
-function C(e, t) {
-    if (e instanceof Array) return e.some((e) => C(e, t));
+function N(e, t) {
+    if (e instanceof Array) return e.some((e) => N(e, t));
     let n = t(e);
     return null != n
         ? n
         : e.content instanceof Array
-          ? C(e.content, t)
-          : e.items instanceof Array && e.items.some((e) => C(e, t));
+          ? N(e.content, t)
+          : e.items instanceof Array && e.items.some((e) => N(e, t));
 }
-function A(e) {
-    return C(e, (e) =>
-        "spoiler" === e.type ? C(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
+function P(e) {
+    return N(e, (e) =>
+        "spoiler" === e.type ? N(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
     );
 }
-function N(e, t) {
+function R(e, t) {
     if (1 !== e.length || 1 !== t.length) return e;
     let n = e[0],
         r = t[0];
     return ("link" === n.type || "attachmentLink" === n.type) && _.has(r.type) && (0, o.dY)(r) ? [] : e;
 }
-function P(e) {
+function w(e) {
     return (
         e.forEach((e) => {
             m.has(e.type) &&
                 null != e.content &&
                 (Array.isArray(e.content)
-                    ? P(e.content)
+                    ? w(e.content)
                     : "string" == typeof e.content
                       ? (e.content = e.content.replace(/\n/g, " "))
                       : s.Z.captureMessage(

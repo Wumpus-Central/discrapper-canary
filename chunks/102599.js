@@ -13,6 +13,8 @@ e.exports = {
     link: "_972a0d22c8afa7f0-link",
     linkButton: "_972a0d22c8afa7f0-linkButton",
     linkButtonIcon: "_972a0d22c8afa7f0-linkButtonIcon",
+    timestamp: "_972a0d22c8afa7f0-timestamp",
+    username: "_972a0d22c8afa7f0-username",
     closeButton: "_972a0d22c8afa7f0-closeButton",
     reducedClickTarget: "_972a0d22c8afa7f0-reducedClickTarget",
     closeButtonForceShow: "_972a0d22c8afa7f0-closeButtonForceShow",

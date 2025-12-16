@@ -7,7 +7,8 @@ var i = n(442837),
     a = n(313789),
     o = n(388032);
 let c = (0, u.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
-        useTitle: () => o.intl.string(o.t.MkvEgl),
+        useTitle: () => o.intl.string(o.t["yR/d2T"]),
+        useSubtitle: () => o.intl.string(o.t.RiIiPw),
         useValue: () =>
             (0, i.e7)([r.Z], () => {
                 let { hidePersonalInformation: t } = r.Z.getSettings();
@@ -15,7 +16,7 @@ let c = (0, u.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (t) => l.Z.update({ hidePersonalInformation: t }),
     }),
-    d = (0, u.qs)(a.n.STREAMER_MODE_HIDE_INVITE_LINKS, {
+    T = (0, u.qs)(a.n.STREAMER_MODE_HIDE_INVITE_LINKS, {
         useTitle: () => o.intl.string(o.t.uWBOri),
         useValue: () =>
             (0, i.e7)([r.Z], () => {
@@ -33,7 +34,7 @@ let c = (0, u.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
             }),
         setValue: (t) => l.Z.update({ disableSounds: t }),
     }),
-    T = (0, u.qs)(a.n.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
+    d = (0, u.qs)(a.n.STREAMER_MODE_DISABLE_NOTIFICATIONS, {
         useTitle: () => o.intl.string(o.t.sUAbLd),
         useValue: () =>
             (0, i.e7)([r.Z], () => {
@@ -68,5 +69,5 @@ let c = (0, u.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
     g = (0, u.Uc)(a.n.STREAMER_MODE_OPTIONS_LIST, {
         useTitle: () => o.intl.string(o.t.UtW8R6),
         variant: "separators",
-        buildLayout: () => [c, d, S, T, E],
+        buildLayout: () => [c, T, S, d, E],
     });

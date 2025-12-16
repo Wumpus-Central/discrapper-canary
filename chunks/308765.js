@@ -894,5 +894,22 @@ let i = {
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0,
     },
+    MessagePreviewManager: {
+        actions: [
+            "CONNECTION_OPEN_SUPPLEMENTAL",
+            "CONNECTION_RESUMED",
+            "GUILD_CREATE",
+            "GUILD_DELETE",
+            "LOAD_MESSAGES_SUCCESS",
+            "LOCAL_MESSAGES_LOADED",
+            "LOGOUT",
+            "MESSAGE_CREATE",
+            "MESSAGE_DELETE",
+            "MESSAGE_UPDATE",
+            "THREAD_LIST_SYNC",
+        ],
+        inlineRequire: () => n(983543).Z,
+        neverLoadBeforeConnectionOpen: !1,
+    },
 };
 (0, r.j)(i);
