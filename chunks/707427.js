@@ -1327,25 +1327,6 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            CONTROL_SECONDARY_BACKGROUND_HOVER: {
-                category: "generic",
-                [r.DARK]: {
-                    raw: "PRIMARY_430",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "PRIMARY_500",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "PLUM_11",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_11",
-                    opacity: 1,
-                },
-            },
             CONTROL_SECONDARY_BORDER_DEFAULT: {
                 category: "generic",
                 [r.DARK]: {
