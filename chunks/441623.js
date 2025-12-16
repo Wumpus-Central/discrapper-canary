@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => eo,
+    ZP: () => ec,
     n3: () => O,
     nN: () => E,
 }),
@@ -63,6 +63,7 @@ function A() {
         lastShownFriendsListGiftIntents: [],
         friendsTabBadgeLastDismissedTime: null,
         giftUnreadNotificationLastDismissedTimes: [],
+        profilePopoutGiftIntentsDismissMap: {},
     };
 }
 let N = A(),
@@ -104,7 +105,7 @@ function U() {
         }
 }
 function G() {
-    if (null != x) return void ei(x);
+    if (null != x) return void es(x);
     if ((B(), !f.Z.hasConsented(m.pjP.PERSONALIZATION))) return;
     let { enabled: e } = _.w.getConfig({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
     if (e) {
@@ -163,30 +164,43 @@ function X() {
         e - N.messageGiftIntentLastShownMap[t] > v && delete N.messageGiftIntentLastShownMap[t];
 }
 function J() {
-    N.lastShownFriendsListGiftIntents = [];
+    let e = j(),
+        t = y * b * 2;
+    for (let n in N.profilePopoutGiftIntentsDismissMap)
+        e - N.profilePopoutGiftIntentsDismissMap[n] > t && delete N.profilePopoutGiftIntentsDismissMap[n];
 }
 function $() {
-    N.messageGiftIntentLastShownMap = {};
+    N.lastShownFriendsListGiftIntents = [];
 }
 function ee() {
+    N.messageGiftIntentLastShownMap = {};
+}
+function et() {
     N.giftUnreadNotificationLastDismissedTimes = [];
 }
-function et(e) {
+function en(e) {
     let { total: t } = e;
     if (null == t) {
         (x = null), G();
         return;
     }
-    ei(t);
+    es(t);
 }
-function en(e) {
+function er(e) {
     let { date: t } = e;
     L = t;
 }
-function er() {
+function ei() {
     L = null;
 }
-function ei(e) {
+function ea(e) {
+    let { recipientUserId: t } = e;
+    N.profilePopoutGiftIntentsDismissMap[t] = j();
+}
+function eo() {
+    N.profilePopoutGiftIntentsDismissMap = {};
+}
+function es(e) {
     B();
     let { enabled: t } = _.w.getConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" });
     if (!t) return;
@@ -204,7 +218,7 @@ function ei(e) {
         P.sort((e, t) => d.Z.compareByDmProbability(e, t)),
         U(!0);
 }
-class ea extends (r = l.ZP.PersistedStore) {
+class el extends (r = l.ZP.PersistedStore) {
     initialize(e) {
         if (((N = A()), null != e)) {
             var t;
@@ -213,9 +227,10 @@ class ea extends (r = l.ZP.PersistedStore) {
                 (N.messageGiftIntentLastShownMap = g({}, e.messageGiftIntentLastShownMap)),
                 (N.giftUnreadNotificationLastDismissedTimes = Array.from(
                     null != (t = e.giftUnreadNotificationLastDismissedTimes) ? t : [],
-                ));
+                )),
+                (N.profilePopoutGiftIntentsDismissMap = g({}, e.profilePopoutGiftIntentsDismissMap));
         }
-        this.syncWith([p.Z, d.Z, f.Z, u.Z], G), X(), z();
+        this.syncWith([p.Z, d.Z, f.Z, u.Z], G), X(), z(), J();
     }
     getState() {
         return N;
@@ -242,6 +257,9 @@ class ea extends (r = l.ZP.PersistedStore) {
         let t = D[e];
         return null == t ? 0 : Z(t.friendsSince);
     }
+    canShowProfilePopoutGiftIntents(e) {
+        return null == N.profilePopoutGiftIntentsDismissMap[e] && this.getFriendAnniversaryYears(e) > 0;
+    }
     isGiftIntentMessageInCooldown(e) {
         return null != N.messageGiftIntentLastShownMap[e];
     }
@@ -264,9 +282,9 @@ class ea extends (r = l.ZP.PersistedStore) {
         return N.messageGiftIntentLastShownMap;
     }
 }
-h(ea, "displayName", "PremiumGiftingIntentStore"),
-    h(ea, "persistKey", "PremiumGiftingIntentStore"),
-    h(ea, "migrations", [
+h(el, "displayName", "PremiumGiftingIntentStore"),
+    h(el, "persistKey", "PremiumGiftingIntentStore"),
+    h(el, "migrations", [
         (e) => {
             var t, n;
             return null == e
@@ -288,18 +306,33 @@ h(ea, "displayName", "PremiumGiftingIntentStore"),
                       giftUnreadNotificationLastDismissedTimes: [],
                   };
         },
+        (e) => {
+            var t, n, r;
+            return null == e
+                ? e
+                : {
+                      friendsTabBadgeLastDismissedTime: null,
+                      lastShownFriendsListGiftIntents: null != (t = e.lastShownFriendsListGiftIntents) ? t : [],
+                      messageGiftIntentLastShownMap: null != (n = e.messageGiftIntentLastShownMap) ? n : {},
+                      giftUnreadNotificationLastDismissedTimes:
+                          null != (r = e.giftUnreadNotificationLastDismissedTimes) ? r : [],
+                      profilePopoutGiftIntentsDismissMap: {},
+                  };
+        },
     ]);
-let eo = new ea(c.Z, {
+let ec = new el(c.Z, {
     CONNECTION_OPEN: V,
     LOGOUT: H,
     MESSAGE_GIFT_INTENT_SHOWN: W,
     FRIENDS_LIST_GIFT_INTENTS_SHOWN: Y,
     GIFT_UNREAD_NOTIFICATION_DISMISS: K,
     GIFT_INTENT_FLOW_PURCHASED_GIFT: q,
-    DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: J,
-    DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET: $,
-    DEV_TOOLS_GIFT_UNREAD_NOTIFICATION_COOLDOWN_RESET: ee,
-    DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT: et,
-    DEV_TOOLS_SET_CURRENT_DATE: en,
-    DEV_TOOLS_RESET_CURRENT_DATE: er,
+    PROFILE_POPOUT_GIFT_INTENTS_DISMISS: ea,
+    DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: $,
+    DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET: ee,
+    DEV_TOOLS_GIFT_UNREAD_NOTIFICATION_COOLDOWN_RESET: et,
+    DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT: en,
+    DEV_TOOLS_SET_CURRENT_DATE: er,
+    DEV_TOOLS_RESET_CURRENT_DATE: ei,
+    DEV_TOOLS_PROFILE_POPOUT_GIFT_INTENTS_DISMISS_RESET: eo,
 });

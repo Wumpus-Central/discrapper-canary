@@ -328,6 +328,23 @@ function x() {
                         }),
                     ],
                 }),
+                (0, a.jsxs)("div", {
+                    className: h.panelRow,
+                    children: [
+                        (0, a.jsx)(o.Text, {
+                            variant: "text-md/normal",
+                            children: "Reset profile popout gift intents dismiss",
+                        }),
+                        (0, a.jsx)(o.Button, {
+                            variant: "primary",
+                            size: "sm",
+                            text: "Reset",
+                            onClick: () => {
+                                c.Z.dispatch({ type: "DEV_TOOLS_PROFILE_POPOUT_GIFT_INTENTS_DISMISS_RESET" });
+                            },
+                        }),
+                    ],
+                }),
             ],
         }),
     });
