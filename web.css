@@ -26149,7 +26149,7 @@ span._5d473ecff348c314-clanTag {
     gap: var(--space-4)
 }
 
-.de800837163648e8-bannerButton {
+.fb7f9476ada049c8-bannerButton {
     align-items: center;
     background: var(--redesign-button-overlay-alpha-background);
     border: 1px solid var(--opacity-white-8);
@@ -26164,13 +26164,13 @@ span._5d473ecff348c314-clanTag {
     width: var(--custom-button-button-sm-height)
 }
 
-.de800837163648e8-bannerButton:active,
-.de800837163648e8-bannerButton:hover {
+.fb7f9476ada049c8-bannerButton:active,
+.fb7f9476ada049c8-bannerButton:hover {
     background: var(--redesign-button-overlay-alpha-pressed-background);
     transition: background .15s ease-out
 }
 
-.de800837163648e8-bannerButton.de800837163648e8-disabled {
+.fb7f9476ada049c8-bannerButton.fb7f9476ada049c8-disabled {
     cursor: normal;
     opacity: .5
 }
