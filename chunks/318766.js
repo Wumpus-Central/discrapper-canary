@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => L,
+    Z: () => x,
     u: () => R,
 }),
     n(388685);
@@ -7,7 +7,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(467721),
+    s = n(236726),
     l = n(442837),
     c = n(704215),
     u = n(681715),
@@ -20,7 +20,7 @@ var r = n(54381),
     g = n(921944),
     E = n(185923),
     b = n(388032),
-    y = n(345857);
+    y = n(940003);
 function O(e, t, n) {
     return (
         t in e
@@ -100,26 +100,6 @@ let A = 20,
     R = {
         tension: 800,
         friction: 24,
-    },
-    D = () => {
-        let e = (0, l.e7)([f.Z], () => f.Z.useReducedMotion);
-        return (0, r.jsxs)("div", {
-            className: y.premiumTooltipContainer,
-            children: [
-                (0, r.jsx)(d.Fmz, {
-                    className: o()(y.premiumUnlockAnimation, { [y.reducedMotion]: e }),
-                    loop: !1,
-                    shouldAnimate: !e,
-                    pauseAtFrame: e ? 149 : void 0,
-                    importData: () => n.e("21812").then(n.t.bind(n, 741855, 19)),
-                }),
-                (0, r.jsx)(d.Text, {
-                    variant: "text-sm/medium",
-                    className: y.premiumTooltipText,
-                    children: b.intl.format(b.t["/7R4q4"], {}),
-                }),
-            ],
-        });
     };
 function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
@@ -129,7 +109,7 @@ function w(e) {
         "--custom-emoji-sprite-col": e % A,
     };
 }
-function x(e) {
+function D(e) {
     var {
             className: t,
             renderButtonContents: n,
@@ -226,18 +206,18 @@ function x(e) {
         ),
     );
 }
-function L(e) {
+function x(e) {
     var {
             "aria-label": t = b.intl.string(b.t.lPHwuQ),
-            tooltipText: n,
-            active: a,
-            onClick: o,
-            "aria-controls": s,
-            ref: l,
-            keyboardShortcut: f,
-            canShowNUXPremiumTooltip: _ = !1,
+            tooltipText: a,
+            active: s,
+            onClick: _,
+            "aria-controls": h,
+            ref: E,
+            keyboardShortcut: O,
+            canShowNUXPremiumTooltip: S = !1,
         } = e,
-        h = T(e, [
+        I = T(e, [
             "aria-label",
             "tooltipText",
             "active",
@@ -247,57 +227,55 @@ function L(e) {
             "keyboardShortcut",
             "canShowNUXPremiumTooltip",
         ]);
-    let E = (0, m.B4)(),
-        [O, S] = (0, p.US)(E ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
-        I = _ && O === c.z.TRIAL_NUX_EMOJI_BUTTON,
-        C = !a && I,
-        A = i.useRef(null),
-        N = null != l ? l : A,
-        P = (e) =>
+    let C = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
+        A = (0, m.B4)(),
+        [N, P] = (0, p.US)(A ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
+        R = S && N === c.z.TRIAL_NUX_EMOJI_BUTTON,
+        w = !s && R,
+        x = i.useRef(null),
+        L = null != E ? E : x,
+        j = () =>
             (0, r.jsx)(
-                x,
+                D,
                 v(
                     {
-                        ref: N,
-                        onMouseEnter: e.onMouseEnter,
+                        ref: L,
                         onMouseLeave: () => {
-                            var t;
-                            I && S(g.L.USER_DISMISS), null == (t = e.onMouseLeave) || t.call(e);
+                            R && P(g.L.USER_DISMISS);
                         },
-                        onFocus: e.onFocus,
-                        onBlur: e.onBlur,
-                        onClick: (t) => {
-                            var n;
-                            null == o || o(t), null == (n = e.onClick) || n.call(e);
+                        onClick: (e) => {
+                            null == _ || _(e);
                         },
                         "aria-label": t,
-                        "aria-controls": s,
-                        active: a,
-                        onContextMenu: e.onContextMenu,
-                        spriteClassName: I ? y.spritePremiumColored : void 0,
+                        "aria-controls": h,
+                        active: s,
+                        spriteClassName: R ? y.spritePremiumColored : void 0,
                     },
-                    h,
+                    I,
                 ),
             );
-    return null == n
-        ? P({})
-        : C
-          ? (0, r.jsx)(d.aML, {
-                "data-migration-pending": !0,
-                targetElementRef: N,
-                text: () => (0, r.jsx)(D, {}),
-                "aria-label": b.intl.formatToMarkdownString(b.t["/7R4q4"], {}),
+    return null == a
+        ? j()
+        : w
+          ? (0, r.jsx)(u.i_, {
+                targetElementRef: L,
+                body: b.intl.format(b.t["/7R4q4"], {}),
+                asset: (0, r.jsx)(d.Fmz, {
+                    className: o()(y.premiumUnlockAnimation, { [y.reducedMotion]: C }),
+                    loop: !1,
+                    shouldAnimate: !C,
+                    pauseAtFrame: C ? 149 : void 0,
+                    importData: () => n.e("21812").then(n.t.bind(n, 741855, 19)),
+                }),
                 position: "top",
                 shouldShow: !0,
-                tooltipClassName: y.premiumTooltip,
-                tooltipContentClassName: y.premiumTooltipContainer,
-                children: (e) => P(e),
+                children: j(),
             })
           : (0, r.jsx)(u.u, {
-                targetElementRef: N,
+                targetElementRef: L,
                 shouldShow: !0,
-                text: n,
-                keyboardShortcut: f,
-                children: P({}),
+                text: a,
+                keyboardShortcut: O,
+                children: j(),
             });
 }
