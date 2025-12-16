@@ -1,9 +1,4 @@
-n.d(t, {
-    d: () => y,
-    v: () => b,
-}),
-    n(415506),
-    n(388685);
+n.d(t, { d: () => b }), n(415506), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(293706),
@@ -87,99 +82,99 @@ function g(e, t) {
     return i;
 }
 let E = i.createContext(null);
-function b() {
-    let e = i.useContext(E);
-    if (null == e) throw Error("useMultiStepModalContext must be used within a MultiStepModal");
-    return e;
-}
-function y(e) {
+function b(e) {
     var t,
         n,
-        { steps: f, currentStepKey: _, onStepChange: g, onComplete: b, stepCount: y } = e,
-        O = h(e, ["steps", "currentStepKey", "onStepChange", "onComplete", "stepCount"]);
-    let { i18n: v } = (0, o.ZF)(),
-        S = O.onClose,
-        I = f.find((e) => e.stepKey === _);
-    if (null == I) throw Error("Step with key ".concat(_, " not found"));
-    let T = f.findIndex((e) => e.stepKey === _),
-        C = T === f.length - 1,
-        A = 0 === T,
-        [N, P] = i.useState(!1),
-        [R, D] = i.useState(_);
-    R !== _ && (P(!1), D(_));
-    let w = i.useCallback(
+        f,
+        { steps: _, currentStepKey: g, numberedSteps: b, onStepChange: y, onComplete: O } = e,
+        v = h(e, ["steps", "currentStepKey", "numberedSteps", "onStepChange", "onComplete"]);
+    let { i18n: S } = (0, o.ZF)(),
+        I = v.onClose,
+        T = _.find((e) => e.stepKey === g);
+    if (null == T) throw Error("Step with key ".concat(g, " not found"));
+    let C = _.findIndex((e) => e.stepKey === g),
+        A = C === _.length - 1,
+        N = 0 === C,
+        P = null == (f = T.nextEnabled) || f,
+        R = i.useCallback(
             (e) => {
-                null == g || g(e);
+                null == y || y(e, g);
             },
-            [g],
+            [y, g],
         ),
-        x = i.useCallback(async () => {
-            await (null == b ? void 0 : b()), S();
-        }, [b, S]),
-        L = i.useCallback(async () => {
-            C ? await x() : g(f[T + 1].stepKey);
-        }, [g, T, f, C, x]),
-        j = i.useCallback(() => {
-            A || g(f[T - 1].stepKey);
-        }, [g, T, f, A]),
-        M = i.useMemo(
+        w = i.useCallback(async () => {
+            await (null == O ? void 0 : O()), I();
+        }, [O, I]),
+        D = i.useCallback(async () => {
+            (null == T.onNext || (await T.onNext())) && (A ? await w() : R(_[C + 1].stepKey));
+        }, [R, C, _, A, w, T]),
+        x = i.useCallback(() => {
+            N || R(_[C - 1].stepKey);
+        }, [R, C, _, N]),
+        L = i.useMemo(
             () => ({
-                currentStepKey: _,
-                setNextEnabled: P,
-                goToStep: w,
-                goToNextStep: L,
-                goToPreviousStep: j,
-                complete: x,
+                currentStepKey: g,
+                goToStep: R,
+                goToNextStep: D,
+                goToPreviousStep: x,
+                complete: w,
             }),
-            [_, P, w, L, j, x],
+            [g, R, D, x, w],
         ),
-        k = {
+        j = {
             variant: "secondary",
-            text: v.BACK,
+            text: S.BACK,
         },
-        U = {
+        M = {
             variant: "primary",
-            text: v.NEXT,
-            disabled: !N,
+            text: S.NEXT,
+            disabled: !P,
             onClick: () => {
-                N && L();
+                P && D();
             },
         },
-        G = I.hideBackButton || A ? void 0 : (0, r.jsx)(a.A, m(p({}, k, I.backButtonProps), { onClick: j }));
+        k = {
+            text: S.CANCEL,
+            variant: "secondary",
+            onClick: I,
+        },
+        U = T.hideBackButton || N ? void 0 : (0, r.jsx)(a.A, m(p({}, j, T.backButtonProps), { onClick: x }));
     return (0, r.jsx)(E.Provider, {
-        value: M,
+        value: L,
         children: (0, r.jsxs)(
             s.I,
-            m(p({}, O), {
+            m(p({}, v), {
                 children: [
                     (0, r.jsx)(u.x, {
-                        title: I.title,
-                        subtitle: I.subtitle,
-                        stepNumber: I.stepNumber,
-                        stepCount: y,
+                        title: T.title,
+                        subtitle: T.subtitle,
+                        stepNumber: (null == b ? void 0 : b.includes(g)) ? b.indexOf(g) + 1 : void 0,
+                        stepCount: null == b ? void 0 : b.length,
                     }),
                     (0, r.jsx)(d.Y, {
-                        message: null == (t = I.notice) ? void 0 : t.message,
-                        type: null == (n = I.notice) ? void 0 : n.type,
+                        message: null == (t = T.notice) ? void 0 : t.message,
+                        type: null == (n = T.notice) ? void 0 : n.type,
                     }),
-                    (0, r.jsx)(c.f, {
-                        controls: I.input,
-                        listProps: I.listProps,
-                        children: I.body,
-                    }),
+                    _.map((e) =>
+                        null != e.body || null != e.input || null != e.listProps
+                            ? (0, r.jsx)(
+                                  "div",
+                                  {
+                                      style: { display: e.stepKey === g ? void 0 : "none" },
+                                      children: (0, r.jsx)(c.f, {
+                                          controls: e.input,
+                                          listProps: e.listProps,
+                                          children: e.body,
+                                      }),
+                                  },
+                                  e.stepKey,
+                              )
+                            : void 0,
+                    ),
                     (0, r.jsx)(l.G, {
-                        leading: G,
-                        actionsFullWidth: A,
-                        actions: [
-                            {
-                                text: v.CANCEL,
-                                variant: "secondary",
-                                onClick: () => {
-                                    S();
-                                },
-                            },
-                            p({}, U, I.nextButtonProps),
-                        ],
+                        leading: U,
+                        actionsFullWidth: N,
+                        actions: [...(N ? [k] : []), p({}, M, T.nextButtonProps)],
                     }),
                 ],
             }),

@@ -829,13 +829,13 @@ let y = {
             });
     },
     EnableCommunityModal: async () => {
-        let { default: e } = await Promise.all([n.e("57486"), n.e("116")]).then(n.bind(n, 87026));
+        let { default: e } = await Promise.all([n.e("57486"), n.e("39464")]).then(n.bind(n, 87026));
         return (t) =>
             (0, a.jsx)(
                 e,
                 j(v({}, t), {
-                    onClose: () => {
-                        console.log("EnableCommunityModal: Closed"), t.onClose();
+                    onClose: async () => {
+                        console.log("EnableCommunityModal: Closed"), await t.onClose();
                     },
                 }),
             );

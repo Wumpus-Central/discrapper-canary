@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(481060),
     d = n(248514),
     f = n(177475),
-    p = n(691739);
+    p = n(935692);
 function _(e, t, n) {
     return (
         t in e
@@ -111,22 +111,16 @@ function v(e) {
     return i < e.length && n.push(e.substring(i)), n.length > 0 ? n : e;
 }
 function S() {
-    let { setNextEnabled: e } = (0, o.vqz)();
-    return (
-        i.useEffect(() => {
-            e(!0);
-        }, [e]),
-        (0, r.jsx)(u.Text, {
-            variant: "text-sm/normal",
-            color: "text-subtle",
-            children: "Lost access to your radness? Talk to your radness provider to refresh your aura.",
-        })
-    );
+    return (0, r.jsx)(u.Text, {
+        variant: "text-sm/normal",
+        color: "text-subtle",
+        children: "Lost access to your radness? Talk to your radness provider to refresh your aura.",
+    });
 }
-function I() {
-    let { setNextEnabled: e } = (0, o.vqz)(),
-        [t, n] = i.useState([]),
-        a = [
+function I(e) {
+    let { setIsSafetyAccepted: t } = e,
+        [n, a] = i.useState([]),
+        s = [
             {
                 label: "I am wearing a helmet",
                 value: "helmet",
@@ -142,34 +136,34 @@ function I() {
         ];
     return (
         i.useEffect(() => {
-            e(t.length === a.length);
-        }, [t, e, a.length]),
+            t(n.length === s.length);
+        }, [n, s.length, t]),
         (0, r.jsx)(o.cOn, {
             label: "Safety checklist",
-            options: a,
-            selectedValues: t,
-            onChange: n,
+            options: s,
+            selectedValues: n,
+            onChange: a,
         })
     );
 }
-function T() {
-    let { setNextEnabled: e } = (0, o.vqz)(),
-        [t, n] = i.useState("");
-    return (
-        i.useEffect(() => {
-            e(t.length > 0);
-        }, [t, e]),
-        (0, r.jsx)(u.oil, {
-            placeholder: "Enter your passcode...",
-            value: t,
-            onChange: (e) => n(e),
-        })
-    );
+function T(e) {
+    let { setIsPasscodeValid: t } = e,
+        [n, a] = i.useState(""),
+        o = (e) => {
+            a(e), t(e.length > 0);
+        };
+    return (0, r.jsx)(u.oil, {
+        placeholder: "Enter your passcode...",
+        value: n,
+        onChange: o,
+    });
 }
 function C(e) {
     var t = m({}, h(e));
     let [n, a] = i.useState("intro"),
-        s = [
+        [s, l] = i.useState(!1),
+        [c, u] = i.useState(!1),
+        d = [
             {
                 stepKey: "intro",
                 title: "Verify radness",
@@ -179,27 +173,28 @@ function C(e) {
             },
             {
                 stepKey: "safety",
-                stepNumber: 1,
                 title: "Safety first",
                 subtitle: "Before we get started verifying your radness, we need to make sure you're safe and sound.",
-                body: (0, r.jsx)(I, {}),
+                body: (0, r.jsx)(I, { setIsSafetyAccepted: l }),
+                nextEnabled: s,
             },
             {
                 stepKey: "passcode",
-                stepNumber: 2,
                 title: "Enter passcode",
                 subtitle: "Enter your passcode to complete the radness verification process.",
-                body: (0, r.jsx)(T, {}),
+                body: (0, r.jsx)(T, { setIsPasscodeValid: u }),
                 nextButtonProps: { text: "Verify passcode" },
+                nextEnabled: c,
             },
-        ];
+        ],
+        f = d.slice(1).map((e) => e.stepKey);
     return (0, r.jsx)(
         o.dGG,
         g(
             {
-                steps: s,
-                stepCount: 2,
+                steps: d,
                 currentStepKey: n,
+                numberedSteps: f,
                 onStepChange: a,
             },
             t,

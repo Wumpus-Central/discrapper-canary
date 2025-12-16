@@ -1,16 +1,16 @@
 n.d(t, {
-    Gf: () => b,
-    Jf: () => m,
+    Gf: () => h,
+    Jf: () => f,
     OW: () => u,
     S1: () => s,
     TW: () => g,
     TY: () => c,
     Uv: () => d,
-    _l: () => f,
-    d_: () => h,
+    _l: () => b,
+    d_: () => p,
     lO: () => o,
     sI: () => a,
-    we: () => p,
+    we: () => m,
 }),
     n(953529),
     n(388685);
@@ -62,14 +62,14 @@ function g(e, t, n) {
         currentStyle: n,
     });
 }
-function m(e, t) {
+function f(e, t) {
     r.Z.dispatch({
         type: "GUILD_SETTINGS_ROLES_ROLE_STYLE_UPDATE",
         id: e,
         currentStyle: t,
     });
 }
-function p(e, t, n) {
+function m(e, t, n) {
     r.Z.dispatch({
         type: "GUILD_SETTINGS_ROLES_UPDATE_SETTINGS",
         id: e,
@@ -77,7 +77,7 @@ function p(e, t, n) {
         mentionable: n,
     });
 }
-function f(e, t, n) {
+function b(e, t, n) {
     r.Z.dispatch({
         type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON",
         id: e,
@@ -85,15 +85,16 @@ function f(e, t, n) {
         unicodeEmoji: n,
     });
 }
-function h(e, t) {
+function p(e, t) {
     r.Z.dispatch({
         type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS",
         roleId: e,
         roleConnectionConfigurations: t,
     });
 }
-async function b(e, t, n, a, s) {
+async function h(e, t, n, a, s) {
     var o, c, d, u;
+    let g = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
     r.Z.dispatch({ type: "GUILD_SETTINGS_ROLES_SUBMITTING" });
     try {
         for (null != n && n.length > 0 && (await i.Z.batchRoleUpdate(e, n)); null != t && t.length > 0; ) {
@@ -119,9 +120,13 @@ async function b(e, t, n, a, s) {
             }
         r.Z.dispatch({ type: "GUILD_SETTINGS_ROLES_SAVE_SUCCESS" });
     } catch (e) {
-        r.Z.dispatch({
-            type: "GUILD_SETTINGS_ROLES_SAVE_FAIL",
-            message: null != (u = null == (d = e.body) ? void 0 : d.message) ? u : Object.values(e.body)[0],
-        });
+        if (
+            (r.Z.dispatch({
+                type: "GUILD_SETTINGS_ROLES_SAVE_FAIL",
+                message: null != (u = null == (d = e.body) ? void 0 : d.message) ? u : Object.values(e.body)[0],
+            }),
+            g.throwErr)
+        )
+            throw e;
     }
 }

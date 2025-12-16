@@ -230,6 +230,7 @@ n.d(t, {
     d3s: () => r.d3s,
     d4D: () => r.d4D,
     d5i: () => r.d5i,
+    dGG: () => r.dGG,
     dOc: () => r.dOc,
     dRF: () => r.dRF,
     dTc: () => r.dTc,
