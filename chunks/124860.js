@@ -1,6 +1,6 @@
 n.d(t, {
-    C: () => b,
-    MFAModal: () => p,
+    C: () => p,
+    MFAModal: () => b,
     Y: () => j,
 }),
     n(388685),
@@ -12,8 +12,8 @@ var r = n(54381),
     a = n(447097),
     o = n(873124),
     c = n(248902),
-    u = n(160511),
-    d = n(51693),
+    d = n(160511),
+    u = n(51693),
     f = n(973810),
     h = n(388032);
 function g(e) {
@@ -59,14 +59,14 @@ function m(e, t) {
         e
     );
 }
-function b(e) {
+function p(e) {
     var t, n;
-    let { mfaChallenge: h, mfaFinish: b, onEarlyClose: p, onClose: j, headerAlignStart: y, width: x = 440 } = e,
+    let { mfaChallenge: h, mfaFinish: p, onEarlyClose: b, onClose: j, headerAlignStart: x, width: y = 440 } = e,
         [S, v] = l.useState(null != (n = null == (t = h.methods[0]) ? void 0 : t.type) ? n : "select"),
-        [C, Z] = l.useState(S),
-        O = async (e) => {
+        [C, O] = l.useState(S),
+        Z = async (e) => {
             let { mfaType: t, data: n } = e;
-            await b({
+            await p({
                 mfaType: t,
                 data: n,
                 ticket: h.ticket,
@@ -75,15 +75,15 @@ function b(e) {
         },
         w = {
             mfaChallenge: h,
-            finish: O,
+            finish: Z,
             setSlide: v,
-            onClose: p,
-            headerAlignStart: y,
+            onClose: b,
+            headerAlignStart: x,
         };
     return (0, r.jsxs)(i.MyZ, {
         activeSlide: S,
-        width: x,
-        onSlideReady: Z,
+        width: y,
+        onSlideReady: O,
         children: [
             (0, r.jsx)(i.Mi4, {
                 id: "select",
@@ -95,11 +95,11 @@ function b(e) {
             }),
             (0, r.jsx)(i.Mi4, {
                 id: "totp",
-                children: (0, r.jsx)(d.Z, m(g({}, w), { isSlideReady: "totp" === C })),
+                children: (0, r.jsx)(u.Z, m(g({}, w), { isSlideReady: "totp" === C })),
             }),
             (0, r.jsx)(i.Mi4, {
                 id: "sms",
-                children: (0, r.jsx)(u.Z, m(g({}, w), { isSlideReady: "sms" === C })),
+                children: (0, r.jsx)(d.Z, m(g({}, w), { isSlideReady: "sms" === C })),
             }),
             (0, r.jsx)(i.Mi4, {
                 id: "backup",
@@ -116,14 +116,15 @@ function b(e) {
         ],
     });
 }
-function p(e) {
+function b(e) {
     let { mfaChallenge: t, finish: n, transitionState: l, onClose: s } = e;
     return (0, r.jsx)(i.Y0X, {
+        "data-migration-pending": !0,
         transitionState: l,
         size: i.CgR.SMALL,
         "aria-label": h.intl.string(h.t.saHocI),
         parentComponent: "MFAModal",
-        children: (0, r.jsx)(b, {
+        children: (0, r.jsx)(p, {
             mfaChallenge: t,
             mfaFinish: n,
             onClose: s,
@@ -135,7 +136,7 @@ function j(e, t, n) {
     (0, i.h7j)(
         (n) =>
             (0, r.jsx)(
-                p,
+                b,
                 g(
                     {
                         finish: t,
