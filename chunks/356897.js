@@ -17,8 +17,6 @@ e.exports = {
     spinnerVideo: "_921c50dc4baa4b4f-spinnerVideo",
     image: "_921c50dc4baa4b4f-image",
     block: "_921c50dc4baa4b4f-block",
-    button: "_921c50dc4baa4b4f-button",
-    linkButton: "_921c50dc4baa4b4f-linkButton",
     inviteIcon: "_921c50dc4baa4b4f-inviteIcon",
     inviteLargeIcon: "_921c50dc4baa4b4f-inviteLargeIcon _921c50dc4baa4b4f-inviteIcon",
     downloadButtonSubtext: "_921c50dc4baa4b4f-downloadButtonSubtext",

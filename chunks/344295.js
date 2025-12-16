@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(997841), n(388685);
+n.d(t, { Z: () => q }), n(997841), n(388685);
 var r = n(54381),
     i = n(473749),
     s = n(120356),
@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(756647),
     u = n(442837),
     d = n(298444),
-    h = n(755721),
+    h = n(481060),
     f = n(447543),
     g = n(881052),
     m = n(899370),
@@ -24,8 +24,8 @@ var r = n(54381),
     y = n(108427),
     S = n(314897),
     C = n(896797),
-    O = n(701190),
-    T = n(626135),
+    T = n(701190),
+    O = n(626135),
     A = n(63063),
     Z = n(782605),
     P = n(954824),
@@ -37,9 +37,8 @@ var r = n(54381),
     M = n(701476),
     B = n(436620),
     U = n(388032),
-    G = n(356897),
-    F = n(478411);
-function V(e, t, n) {
+    G = n(478411);
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,74 +51,18 @@ function V(e, t, n) {
         e
     );
 }
-function W(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                V(e, t, n[t]);
-            });
-    }
-    return e;
-}
 u.ZP.initialize();
-let K = "Accept Invite Page",
-    H = "register",
-    z = "login",
-    q = (e) => {
-        var { className: t } = e,
-            n = (function (e, t) {
-                if (null == e) return {};
-                var n,
-                    r,
-                    i = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            r,
-                            i = {},
-                            s = Object.keys(e);
-                        for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                        return i;
-                    })(e, t);
-                if (Object.getOwnPropertySymbols) {
-                    var s = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < s.length; r++)
-                        (n = s[r]),
-                            !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-                }
-                return i;
-            })(e, ["className"]);
-        let i = n.look === h.zx.Looks.LINK;
-        return (0, r.jsx)(
-            h.zx,
-            W(
-                {
-                    size: i ? h.zx.Sizes.MIN : h.zx.Sizes.LARGE,
-                    fullWidth: !i,
-                    className: a()(t, {
-                        [G.button]: !i,
-                        [G.linkButton]: i,
-                    }),
-                },
-                n,
-            ),
-        );
-    };
-async function Y(e) {
-    let { invite: t } = await f.ZP.resolveInvite(e, K);
+let V = "Accept Invite Page",
+    W = "register",
+    H = "login";
+async function K(e) {
+    let { invite: t } = await f.ZP.resolveInvite(e, V);
     null != t && (0, p.A)(t);
 }
-(q.Looks = h.zx.Looks), (q.Colors = h.zx.Colors), (q.Sizes = h.zx.Sizes);
-class J extends i.PureComponent {
+class z extends i.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
-        if ((T.default.track(k.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, y.e)("invite"), !B.KO)) {
+        if ((O.default.track(k.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, y.e)("invite"), !B.KO)) {
             let e = this.getInviteKey();
             P.Z.launch("discord://" + k.Z5c.INVITE(e), () => void 0);
         }
@@ -132,9 +75,9 @@ class J extends i.PureComponent {
     componentDidUpdate(e) {
         let { invite: t, nativeAppState: n, authenticated: r, transitionTo: i } = this.props,
             s = this.getInviteKey();
-        if (s !== this.getInviteKey(e)) Y(s);
+        if (s !== this.getInviteKey(e)) K(s);
         else if (t.state === k.r2o.APP_NOT_OPENED) this.handleContinue();
-        else if (this.getMode() === z && r !== e.authenticated && r) {
+        else if (this.getMode() === H && r !== e.authenticated && r) {
             let e = S.default.getFingerprint();
             if (null != e) {
                 let t = (0, c.s)(e);
@@ -142,14 +85,14 @@ class J extends i.PureComponent {
             }
             f.ZP.acceptInvite({
                 inviteKey: s,
-                context: this.getAcceptInviteContext(K),
+                context: this.getAcceptInviteContext(V),
                 skipOnboarding: !0,
                 callback: this.handleContinue,
             });
         }
         if (
             (n !== e.nativeAppState && n === k.kEZ.OPEN && this.track(k.rMx.INVITE_APP_INVOKED, !1),
-            this.getMode() === H && r && !e.authenticated)
+            this.getMode() === W && r && !e.authenticated)
         ) {
             let { channel: e } = t;
             if (null != e)
@@ -177,7 +120,7 @@ class J extends i.PureComponent {
     }
     getMode() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
-        return w.a ? H : e.login ? z : H;
+        return w.a ? W : e.login ? H : W;
     }
     track(e, t, n) {
         let { invite: r } = this.props,
@@ -191,7 +134,25 @@ class J extends i.PureComponent {
                       invite_code: s,
                   }
                 : { invite_code: s };
-        T.default.track(e, W({}, a, n));
+        O.default.track(
+            e,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    "function" == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            }),
+                        )),
+                        r.forEach(function (t) {
+                            F(e, t, n[t]);
+                        });
+                }
+                return e;
+            })({}, a, n),
+        );
     }
     renderSpinner(e) {
         return (0, r.jsxs)(x.ZP, {
@@ -204,20 +165,23 @@ class J extends i.PureComponent {
             children: [
                 (0, r.jsx)(x.Ee, {
                     src: n(167969),
-                    className: F.marginBottom8,
+                    className: G.marginBottom8,
                 }),
                 (0, r.jsx)(x.Dx, {
-                    className: a()(F.marginTop8, F.marginBottom8),
+                    className: a()(G.marginTop8, G.marginBottom8),
                     children: U.intl.string(U.t.kux01N),
                 }),
                 (0, r.jsx)(x.DK, { children: e ? U.intl.string(U.t["5AkWAd"]) : U.intl.string(U.t["+qUJAj"]) }),
                 this.renderButton(U.intl.string(U.t.fIv16B)),
-                (0, r.jsx)(q, {
-                    onClick: () => window.open(A.Z.getArticleURL(k.BhN.INVALID_INVITES), "_blank"),
-                    look: q.Looks.LINK,
-                    color: q.Colors.LINK,
-                    className: F.marginTop8,
-                    children: U.intl.string(U.t.urIwn4),
+                (0, r.jsx)("div", {
+                    className: G.marginTop8,
+                    style: { textAlign: "left" },
+                    children: (0, r.jsx)(h.Avr, {
+                        size: "sm",
+                        textVariant: "text-sm/medium",
+                        text: U.intl.string(U.t.urIwn4),
+                        onClick: () => window.open(A.Z.getArticleURL(k.BhN.INVALID_INVITES), "_blank"),
+                    }),
                 }),
             ],
         });
@@ -247,7 +211,7 @@ class J extends i.PureComponent {
         return (0, r.jsxs)(x.ZP, {
             children: [
                 (0, r.jsx)(x.Dx, {
-                    className: F.marginBottom8,
+                    className: G.marginBottom8,
                     children: U.intl.string(U.t.csrAMJ),
                 }),
                 (0, r.jsx)(x.DK, { children: U.intl.string(U.t["m1+IBn"]) }),
@@ -268,7 +232,7 @@ class J extends i.PureComponent {
         let { invite: e } = this.props;
         return null != e.guild_scheduled_event && null != e.guild
             ? (0, r.jsx)(x.ZP, {
-                  className: F.marginTop20,
+                  className: G.marginTop20,
                   children: (0, r.jsx)(E.y, {
                       guild: e.guild,
                       onlineCount: e.approximate_presence_count,
@@ -316,7 +280,7 @@ class J extends i.PureComponent {
                 if (n && (0, o.yE)(null != (a = e.flags) ? a : 0, l.$.IS_GUEST_INVITE))
                     return f.ZP.openApp(e.code), d.x.set(b.J, e.code), this.renderAppOpened(() => i(k.Z5c.APP));
                 if (n || !B.KO) return this.renderAuthenticatedOrDownload();
-                if (this.getMode() === z)
+                if (this.getMode() === H)
                     return (0, r.jsx)(L.Z, {
                         invite: e,
                         transitionTo: i,
@@ -346,9 +310,9 @@ class J extends i.PureComponent {
         var t;
         super(...e),
             (t = this),
-            V(this, "state", { error: null }),
-            V(this, "getAcceptInviteContext", (e) => f.ZP.getInviteContext(e, this.props.invite)),
-            V(this, "handleContinue", (e) => {
+            F(this, "state", { error: null }),
+            F(this, "getAcceptInviteContext", (e) => f.ZP.getInviteContext(e, this.props.invite)),
+            F(this, "handleContinue", (e) => {
                 let { invite: t, transitionTo: n } = this.props;
                 if (null != t.channel || (null == e ? void 0 : e.channel) != null) {
                     var r;
@@ -357,12 +321,12 @@ class J extends i.PureComponent {
                         : f.ZP.transitionToInvite(null != e ? e : t, n);
                 }
             }),
-            V(this, "handleAccept", () => {
+            F(this, "handleAccept", () => {
                 this.setState({ error: null });
                 let e = this.getInviteKey();
                 f.ZP.acceptInvite({
                     inviteKey: e,
-                    context: this.getAcceptInviteContext(K),
+                    context: this.getAcceptInviteContext(V),
                     skipOnboarding: !0,
                     callback: (t) => {
                         (0, p.A)(t), null != t.channel && f.ZP.openApp(e, t.channel.id);
@@ -385,33 +349,36 @@ class J extends i.PureComponent {
                         });
                 });
             }),
-            V(this, "handleDefaultTransition", () => {
+            F(this, "handleDefaultTransition", () => {
                 let { defaultRoute: e, transitionTo: t } = this.props;
                 t(e);
             }),
-            V(this, "renderButton", function (e) {
+            F(this, "renderButton", function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : t.handleDefaultTransition,
                     { invite: i } = t.props,
                     s = null != i.guild_scheduled_event;
                 return B.KO
-                    ? (0, r.jsx)(q, {
-                          className: s ? F.marginTop20 : F.marginTop40,
-                          onClick: n,
-                          color: s ? q.Colors.GREEN : q.Colors.BRAND,
-                          children: e,
+                    ? (0, r.jsx)("div", {
+                          className: s ? G.marginTop20 : G.marginTop40,
+                          children: (0, r.jsx)(h.Button, {
+                              text: e,
+                              onClick: n,
+                              variant: s ? "active" : "primary",
+                              fullWidth: !0,
+                          }),
                       })
-                    : (0, r.jsx)(x.v6, { className: F.marginTop40 });
+                    : (0, r.jsx)(x.v6, { className: G.marginTop40 });
             });
     }
 }
-let Q = u.ZP.connectStores([O.Z, C.Z, S.default, v.Z, m.Z], (e) => {
+let q = u.ZP.connectStores([T.Z, C.Z, S.default, v.Z, m.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
-        invite: null != (t = O.Z.getInvite(n)) ? t : {},
+        invite: null != (t = T.Z.getInvite(n)) ? t : {},
         nativeAppState: v.Z.getState(n),
         authenticated: S.default.isAuthenticated(),
         defaultRoute: C.Z.defaultRoute,
         isUnderage: m.Z.isUnderageAnonymous(),
     };
-})(J);
+})(z);
