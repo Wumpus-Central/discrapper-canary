@@ -1,11 +1,12 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(544891),
     i = n(570140),
     l = n(695346),
     a = n(960048),
+    o = n(518929),
     s = n(613928),
-    o = n(981631);
-function c(e) {
+    c = n(981631);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +31,12 @@ function c(e) {
     }
     return e;
 }
-let u = {
+let d = {
     async fetchPopularGuildsFromCategories(e, t) {
         try {
             let { guilds: n } = (
                 await r.tn.post({
-                    url: o.ANM.GRAVITY_TOPIC_GUILDS,
+                    url: c.ANM.GRAVITY_TOPIC_GUILDS,
                     body: {
                         category_ids: e,
                         offset: t,
@@ -72,7 +73,7 @@ let u = {
             try {
                 let l = Date.now(),
                     a = await r.tn.get({
-                        url: o.ANM.GRAVITY_ITEMS_DEHYDRATED,
+                        url: c.ANM.GRAVITY_ITEMS_DEHYDRATED,
                         query: { refresh: n },
                         rejectWithError: !1,
                     });
@@ -94,7 +95,7 @@ let u = {
             try {
                 return (
                     await r.tn.post({
-                        url: o.ANM.GRAVITY_JOIN_GUILD,
+                        url: c.ANM.GRAVITY_JOIN_GUILD,
                         body: {
                             guild_ids: e,
                             location: t,
@@ -111,7 +112,7 @@ let u = {
         if ((0, s.rK)("fetchInitial"))
             try {
                 let n = await r.tn.post({
-                    url: o.ANM.GRAVITY_ITEMS_HYDRATE,
+                    url: c.ANM.GRAVITY_ITEMS_HYDRATE,
                     body: {
                         message_items: [
                             {
@@ -142,8 +143,9 @@ let u = {
     },
     async fetchHydrated(e, t, n) {
         if (!(0, s.rK)("fetchHydrated")) return;
-        let { messageItems: l, activityItems: c, generatedCandidateItems: u } = n;
-        if (0 === l.length && 0 === c.length && 0 === u.length)
+        let { contentGenerationEnabled: l } = (0, o.q3)("fetchHydrated", !1),
+            { messageItems: u, activityItems: d, generatedCandidateItems: p } = n;
+        if (0 === u.length && 0 === d.length && 0 === p.length)
             return void i.Z.dispatch({
                 type: "LOAD_ICYMI_HYDRATED",
                 requestMessageItems: [],
@@ -157,22 +159,22 @@ let u = {
             });
         try {
             let n = await r.tn.post({
-                url: o.ANM.GRAVITY_ITEMS_HYDRATE,
+                url: c.ANM.GRAVITY_ITEMS_HYDRATE,
                 body: {
-                    message_items: l,
-                    activity_items: c,
-                    generated_candidate_items: u,
+                    message_items: u,
+                    activity_items: d,
+                    generated_candidate_items: p,
                 },
                 rejectWithError: !1,
             });
             i.Z.dispatch({
                 type: "LOAD_ICYMI_HYDRATED",
-                requestMessageItems: l,
-                requestActivityItems: c,
-                requestGeneratedCandidateItems: u,
+                requestMessageItems: u,
+                requestActivityItems: d,
+                requestGeneratedCandidateItems: p,
                 messageItems: n.body.message_items,
                 activityItems: n.body.activity_items,
-                generatedCandidateItems: n.body.generated_candidate_items,
+                generatedCandidateItems: l ? n.body.generated_candidate_items : [],
                 startingIndex: e,
                 endingIndex: t,
             });
@@ -189,7 +191,7 @@ let u = {
         if ((0, s.rK)("guildChannelScores"))
             try {
                 let e = await r.tn.get({
-                    url: o.ANM.GRAVITY_CUSTOM_SCORES,
+                    url: c.ANM.GRAVITY_CUSTOM_SCORES,
                     rejectWithError: !1,
                 });
                 i.Z.dispatch({
@@ -204,7 +206,7 @@ let u = {
         if ((0, s.rK)("recommendedGuilds"))
             try {
                 let e = await r.tn.get({
-                    url: o.ANM.GRAVITY_RECOMMENDED_GUILDS,
+                    url: c.ANM.GRAVITY_RECOMMENDED_GUILDS,
                     rejectWithError: !1,
                 });
                 i.Z.dispatch({
@@ -221,7 +223,7 @@ let u = {
         if (null != e && null != e.createdAtMs)
             try {
                 let t = await r.tn.get({
-                    url: o.ANM.GRAVITY_ATTACHMENTS,
+                    url: c.ANM.GRAVITY_ATTACHMENTS,
                     rejectWithError: !1,
                 });
                 i.Z.dispatch({
@@ -314,12 +316,12 @@ let u = {
         });
     },
     feedItemActioned(e) {
-        i.Z.dispatch(c({ type: "ICYMI_FEED_ITEM_ACTIONED" }, e));
+        i.Z.dispatch(u({ type: "ICYMI_FEED_ITEM_ACTIONED" }, e));
     },
     feedFilterActioned(e) {
-        i.Z.dispatch(c({ type: "ICYMI_FEED_FILTER_ACTIONED" }, e));
+        i.Z.dispatch(u({ type: "ICYMI_FEED_FILTER_ACTIONED" }, e));
     },
     feedPageActioned(e) {
-        i.Z.dispatch(c({ type: "ICYMI_FEED_PAGE_ACTIONED" }, e));
+        i.Z.dispatch(u({ type: "ICYMI_FEED_PAGE_ACTIONED" }, e));
     },
 };
