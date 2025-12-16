@@ -120,7 +120,7 @@ let E = (e) => {
         } = e;
         return (
             g(),
-            l.F4.openCheckoutModal({
+            (0, l.wO)().openCheckoutModal({
                 loadId: t,
                 skuId: n,
                 analyticsLocations: i,
