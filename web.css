@@ -3700,14 +3700,14 @@
 
 ._64e6155a0667273d-radioGroupOption[data-selected] ._64e6155a0667273d-outerRadioBase,
 ._64e6155a0667273d-standaloneRadioIndicator[data-selected=true] ._64e6155a0667273d-outerRadioBase {
-    fill: var(--radio-background-default-selected);
-    stroke: var(--radio-border-default-selected)
+    fill: var(--radio-background-selected-default);
+    stroke: var(--radio-border-selected-default)
 }
 
 ._64e6155a0667273d-radioGroupOption[data-selected] ._64e6155a0667273d-outerRadioFill,
 ._64e6155a0667273d-standaloneRadioIndicator[data-selected=true] ._64e6155a0667273d-outerRadioFill {
-    fill: var(--radio-background-default-selected);
-    stroke: var(--radio-border-default-selected);
+    fill: var(--radio-background-selected-default);
+    stroke: var(--radio-border-selected-default);
     stroke-width: 2
 }
 
@@ -3749,8 +3749,8 @@
 
 ._64e6155a0667273d-radioGroupOption[data-selected]:hover ._64e6155a0667273d-outerRadioBase,
 ._64e6155a0667273d-radioGroupOption[data-selected]:hover ._64e6155a0667273d-outerRadioFill {
-    fill: var(--radio-background-hover-selected);
-    stroke: var(--radio-border-hover-selected)
+    fill: var(--radio-background-selected-hover);
+    stroke: var(--radio-border-selected-hover)
 }
 
 ._64e6155a0667273d-radioGroupOption[data-disabled],
@@ -4717,7 +4717,7 @@
 }
 
 .refresh-fast-follow-distinct-borders .aa8da23faa27393c-top {
-    border-color: var(--app-border-frame)
+    border-color: var(--app-frame-border)
 }
 
 ._2fba11c76b37269d-container {
@@ -8010,7 +8010,7 @@ html.decorate-links ._41f68f5eee7f9abd-lowSaturationUnderline {
 ._6e2b9359c6f84cfd-notice {
     background: var(--custom-notice-background);
     border-radius: 8px 0 0;
-    border-top: 1px solid var(--app-border-frame);
+    border-top: 1px solid var(--app-frame-border);
     color: var(--custom-notice-text);
     flex-grow: 0;
     flex-shrink: 0;
@@ -8021,8 +8021,8 @@ html.decorate-links ._41f68f5eee7f9abd-lowSaturationUnderline {
     position: relative;
     text-align: center;
     z-index: 101;
-    -webkit-border-start: 1px solid var(--app-border-frame);
-    border-inline-start: 1px solid var(--app-border-frame);
+    -webkit-border-start: 1px solid var(--app-frame-border);
+    border-inline-start: 1px solid var(--app-frame-border);
     box-shadow: none
 }
 
@@ -8470,7 +8470,7 @@ html.decorate-links ._41f68f5eee7f9abd-lowSaturationUnderline {
 }
 
 .refresh-fast-follow-distinct-borders .c36707910f687430-tooltip {
-    border-color: var(--app-border-frame)
+    border-color: var(--app-frame-border)
 }
 
 .a562c840daab72a7-slider {
@@ -36336,7 +36336,7 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 
 :where(.custom-theme-background) ._740174f3d6a2c8fe-channelTextArea {
     background: var(--background-gradient-highest, var(--input-background-default));
-    border-color: var(--app-border-frame)
+    border-color: var(--app-frame-border)
 }
 
 .refresh-fast-follow-distinct-borders ._740174f3d6a2c8fe-channelTextArea {
@@ -36344,7 +36344,7 @@ div._3d3b08df7e9aa942-mobilePushContainer {
 }
 
 .refresh-fast-follow-distinct-borders ._740174f3d6a2c8fe-channelTextArea:focus-within {
-    border-color: var(--app-border-frame)
+    border-color: var(--app-frame-border)
 }
 
 ._740174f3d6a2c8fe-sticker {
@@ -53491,11 +53491,11 @@ svg.c1e9c47c23f12ca3-radioIcon {
 }
 
 .refresh-fast-follow-distinct-borders .c1e9c47c23f12ca3-menu {
-    border-color: var(--app-border-frame)
+    border-color: var(--app-frame-border)
 }
 
 .refresh-fast-follow-distinct-borders .c1e9c47c23f12ca3-separator {
-    border-bottom-color: var(--app-border-frame)
+    border-bottom-color: var(--app-frame-border)
 }
 
 .enable-forced-colors .c1e9c47c23f12ca3-menu {
@@ -53937,11 +53937,11 @@ svg.c1e9c47c23f12ca3-radioIcon {
 }
 
 .refresh-fast-follow-distinct-borders ._9293f6b2fc12398a-container {
-    border-bottom-color: var(--app-border-frame)
+    border-bottom-color: var(--app-frame-border)
 }
 
 .refresh-fast-follow-distinct-borders ._9293f6b2fc12398a-divider {
-    background: var(--app-border-frame)
+    background: var(--app-frame-border)
 }
 
 .no-webkit-scrollbar ._9293f6b2fc12398a-scrollable {
@@ -54308,9 +54308,9 @@ svg.c1e9c47c23f12ca3-radioIcon {
 }
 
 .df4c28a1dd232372-header {
-    border-top: 1px solid var(--app-border-frame);
-    -webkit-border-start: 1px solid var(--app-border-frame);
-    border-inline-start: 1px solid var(--app-border-frame);
+    border-top: 1px solid var(--app-frame-border);
+    -webkit-border-start: 1px solid var(--app-frame-border);
+    border-inline-start: 1px solid var(--app-frame-border);
     border-start-start-radius: var(--radius-md)
 }
 
@@ -54803,7 +54803,7 @@ svg.c1e9c47c23f12ca3-radioIcon {
 }
 
 .refresh-fast-follow-distinct-borders ._3dde27fb71170aa9-container {
-    border-color: var(--app-border-frame)
+    border-color: var(--app-frame-border)
 }
 
 .a516b99f170990eb-positioner {
@@ -63697,7 +63697,7 @@ html ._614623a0ca8129b8-progress {
 }
 
 ._183c2cc3c55377b0-emptyUserDimmed {
-    background: var(--experimental-avatar-embed-bg)
+    background: var(--background-scrim)
 }
 
 ._183c2cc3c55377b0-avatarWithBackground {
@@ -63728,7 +63728,7 @@ html ._614623a0ca8129b8-progress {
 }
 
 ._183c2cc3c55377b0-moreUsers._183c2cc3c55377b0-moreUsersDimmed {
-    background-color: var(--experimental-avatar-embed-bg)
+    background-color: var(--background-scrim)
 }
 
 ._183c2cc3c55377b0-size56 ._183c2cc3c55377b0-moreUsers {
@@ -75442,7 +75442,7 @@ html ._614623a0ca8129b8-progress {
 }
 
 .refresh-fast-follow-distinct-borders ._55c999adcf6db265-container {
-    border-color: var(--app-border-frame)
+    border-color: var(--app-frame-border)
 }
 
 .enable-forced-colors ._55c999adcf6db265-container {
@@ -75941,7 +75941,7 @@ html ._614623a0ca8129b8-progress {
 
 ._0920e02cc8fc7b7b-homeWrapper {
     background-color: var(--background-base-lowest);
-    border-top: 1px solid var(--app-border-frame);
+    border-top: 1px solid var(--app-frame-border);
     display: flex;
     flex-direction: column;
     position: relative
@@ -84785,7 +84785,7 @@ div.d74ef86df6475678-nagbar {
 
 .dc2e0e7839a6713a-containerSidenav {
     background: var(--background-gradient-chat, var(--background-base-lower));
-    border-top: 1px solid var(--app-border-frame)
+    border-top: 1px solid var(--app-frame-border)
 }
 
 .dc2e0e7839a6713a-loadingContainer {
@@ -93784,8 +93784,8 @@ html.disable-forced-colors * {
 }
 
 .theme-dark {
-    --app-border-frame: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --app-frame-background: var(--neutral-78);
+    --app-frame-border: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --app-message-embed-secondary-text: hsl(var(--white-hsl)/0.7);
     --background-accent: var(--primary-530);
     --background-base-low: var(--neutral-66);
@@ -93902,9 +93902,6 @@ html.disable-forced-colors * {
     --content-inventory-overlay-text-primary: hsl(var(--white-hsl)/0.85);
     --content-inventory-overlay-text-secondary: hsl(var(--white-hsl)/0.7);
     --context-menu-backdrop-background: hsl(var(--opacity-black-72-hsl)/0.7215686274509804);
-    --control-border-expressive-active: hsl(var(--opacity-12-hsl)/0.12156862745098039);
-    --control-border-expressive-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
-    --control-border-expressive-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --control-brand-foreground: var(--brand-360);
     --control-brand-foreground-new: var(--brand-360);
     --control-connect-background-active: var(--green-new-62);
@@ -93946,6 +93943,9 @@ html.disable-forced-colors * {
     --control-expressive-background-active: var(--neutral-10);
     --control-expressive-background-default: var(--neutral-1);
     --control-expressive-background-hover: var(--neutral-1);
+    --control-expressive-border-active: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --control-expressive-border-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --control-expressive-border-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --control-expressive-icon-active: var(--black);
     --control-expressive-icon-default: var(--black);
     --control-expressive-icon-hover: var(--black);
@@ -94124,17 +94124,14 @@ html.disable-forced-colors * {
     --profile-gradient-section-box: hsl(var(--black-hsl)/0.45);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
-    --radio-background-default-selected: var(--blurple-50);
     --radio-background-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
-    --radio-background-hover-selected: var(--blurple-60);
+    --radio-background-selected-default: var(--blurple-50);
+    --radio-background-selected-hover: var(--blurple-60);
     --radio-border-active: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --radio-border-default: hsl(var(--opacity-64-hsl)/0.6392156862745098);
-    --radio-border-default-selected: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --radio-border-hover: hsl(var(--opacity-80-hsl)/0.8);
-    --radio-border-hover-selected: hsl(var(--opacity-12-hsl)/0.12156862745098039);
-    --radio-foreground-active: var(--blurple-50);
-    --radio-foreground-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
-    --radio-foreground-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
+    --radio-border-selected-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --radio-border-selected-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --radio-thumb-background-active: var(--neutral-1);
     --redesign-button-active-background: var(--green-430);
     --redesign-button-active-pressed-background: var(--green-460);
@@ -94248,8 +94245,8 @@ html.disable-forced-colors * {
 
 @supports (color:color-mix(in lch, red, blue)) {
     .theme-dark {
-        --app-border-frame: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-frame-background: color-mix(in oklab, var(--neutral-78) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --app-frame-border: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-message-embed-secondary-text: color-mix(in oklab, hsl(var(--white-hsl)/0.7) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.7) var(--custom-theme-text-color-amount, 0%));
         --background-accent: color-mix(in oklab, var(--primary-530) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --background-base-low: color-mix(in oklab, var(--neutral-66) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -94493,8 +94490,8 @@ html.disable-forced-colors * {
 }
 
 .theme-light {
-    --app-border-frame: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --app-frame-background: var(--neutral-7);
+    --app-frame-border: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --app-message-embed-secondary-text: hsl(var(--white-hsl)/0.7);
     --background-accent: var(--primary-430);
     --background-base-low: var(--neutral-2);
@@ -94611,9 +94608,6 @@ html.disable-forced-colors * {
     --content-inventory-overlay-text-primary: hsl(var(--white-hsl)/0.85);
     --content-inventory-overlay-text-secondary: hsl(var(--white-hsl)/0.7);
     --context-menu-backdrop-background: hsl(var(--opacity-black-52-hsl)/0.5215686274509804);
-    --control-border-expressive-active: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
-    --control-border-expressive-default: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
-    --control-border-expressive-hover: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
     --control-brand-foreground: var(--brand-500);
     --control-brand-foreground-new: var(--brand-500);
     --control-connect-background-active: var(--green-new-62);
@@ -94655,6 +94649,9 @@ html.disable-forced-colors * {
     --control-expressive-background-active: var(--blurple-65);
     --control-expressive-background-default: var(--blurple-50);
     --control-expressive-background-hover: var(--blurple-60);
+    --control-expressive-border-active: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
+    --control-expressive-border-default: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
+    --control-expressive-border-hover: hsl(var(--opacity-white-8-hsl)/0.0784313725490196);
     --control-expressive-icon-active: var(--white);
     --control-expressive-icon-default: var(--white);
     --control-expressive-icon-hover: var(--white);
@@ -94833,17 +94830,14 @@ html.disable-forced-colors * {
     --profile-gradient-section-box: hsl(var(--white-hsl)/0.45);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-black-4-hsl)/0.0392156862745098);
-    --radio-background-default-selected: var(--blurple-50);
     --radio-background-hover: hsl(var(--opacity-4-hsl)/0.0392156862745098);
-    --radio-background-hover-selected: var(--blurple-60);
+    --radio-background-selected-default: var(--blurple-50);
+    --radio-background-selected-hover: var(--blurple-60);
     --radio-border-active: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --radio-border-default: var(--neutral-34);
-    --radio-border-default-selected: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --radio-border-hover: var(--neutral-46);
-    --radio-border-hover-selected: hsl(var(--opacity-28-hsl)/0.2784313725490196);
-    --radio-foreground-active: var(--blurple-50);
-    --radio-foreground-default: hsl(var(--opacity-4-hsl)/0.0392156862745098);
-    --radio-foreground-hover: hsl(var(--opacity-4-hsl)/0.0392156862745098);
+    --radio-border-selected-default: hsl(var(--opacity-28-hsl)/0.2784313725490196);
+    --radio-border-selected-hover: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --radio-thumb-background-active: var(--neutral-1);
     --redesign-button-active-background: var(--green-430);
     --redesign-button-active-pressed-background: var(--green-460);
@@ -94957,8 +94951,8 @@ html.disable-forced-colors * {
 
 @supports (color:color-mix(in lch, red, blue)) {
     .theme-light {
-        --app-border-frame: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-frame-background: color-mix(in oklab, var(--neutral-7) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --app-frame-border: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-message-embed-secondary-text: color-mix(in oklab, hsl(var(--white-hsl)/0.7) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.7) var(--custom-theme-text-color-amount, 0%));
         --background-accent: color-mix(in oklab, var(--primary-430) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --background-base-low: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -95202,8 +95196,8 @@ html.disable-forced-colors * {
 }
 
 .theme-midnight {
-    --app-border-frame: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --app-frame-background: var(--neutral-100);
+    --app-frame-border: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --app-message-embed-secondary-text: hsl(var(--white-hsl)/0.7);
     --background-accent: var(--plum-17);
     --background-base-low: var(--neutral-95);
@@ -95320,9 +95314,6 @@ html.disable-forced-colors * {
     --content-inventory-overlay-text-primary: hsl(var(--white-hsl)/0.85);
     --content-inventory-overlay-text-secondary: hsl(var(--white-hsl)/0.7);
     --context-menu-backdrop-background: hsl(var(--black-hsl)/0.7);
-    --control-border-expressive-active: hsl(var(--opacity-24-hsl)/0.23921568627450981);
-    --control-border-expressive-default: hsl(var(--opacity-24-hsl)/0.23921568627450981);
-    --control-border-expressive-hover: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --control-brand-foreground: var(--brand-360);
     --control-brand-foreground-new: var(--brand-360);
     --control-connect-background-active: var(--green-new-62);
@@ -95364,6 +95355,9 @@ html.disable-forced-colors * {
     --control-expressive-background-active: var(--neutral-10);
     --control-expressive-background-default: var(--neutral-1);
     --control-expressive-background-hover: var(--neutral-1);
+    --control-expressive-border-active: hsl(var(--opacity-24-hsl)/0.23921568627450981);
+    --control-expressive-border-default: hsl(var(--opacity-24-hsl)/0.23921568627450981);
+    --control-expressive-border-hover: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --control-expressive-icon-active: var(--black);
     --control-expressive-icon-default: var(--black);
     --control-expressive-icon-hover: var(--black);
@@ -95542,17 +95536,14 @@ html.disable-forced-colors * {
     --profile-gradient-section-box: hsl(var(--black-hsl)/0.45);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
-    --radio-background-default-selected: var(--blurple-50);
     --radio-background-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
-    --radio-background-hover-selected: var(--blurple-60);
+    --radio-background-selected-default: var(--blurple-50);
+    --radio-background-selected-hover: var(--blurple-60);
     --radio-border-active: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --radio-border-default: hsl(var(--opacity-64-hsl)/0.6392156862745098);
-    --radio-border-default-selected: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --radio-border-hover: hsl(var(--opacity-80-hsl)/0.8);
-    --radio-border-hover-selected: hsl(var(--opacity-24-hsl)/0.23921568627450981);
-    --radio-foreground-active: var(--blurple-50);
-    --radio-foreground-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
-    --radio-foreground-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
+    --radio-border-selected-default: hsl(var(--opacity-24-hsl)/0.23921568627450981);
+    --radio-border-selected-hover: hsl(var(--opacity-24-hsl)/0.23921568627450981);
     --radio-thumb-background-active: var(--neutral-1);
     --redesign-button-active-background: var(--green-430);
     --redesign-button-active-pressed-background: var(--green-460);
@@ -95666,8 +95657,8 @@ html.disable-forced-colors * {
 
 @supports (color:color-mix(in lch, red, blue)) {
     .theme-midnight {
-        --app-border-frame: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-frame-background: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --app-frame-border: color-mix(in oklab, hsl(var(--opacity-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-message-embed-secondary-text: color-mix(in oklab, hsl(var(--white-hsl)/0.7) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.7) var(--custom-theme-text-color-amount, 0%));
         --background-accent: color-mix(in oklab, var(--plum-17) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --background-base-low: color-mix(in oklab, var(--neutral-95) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -95911,8 +95902,8 @@ html.disable-forced-colors * {
 }
 
 .theme-darker {
-    --app-border-frame: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --app-frame-background: var(--neutral-97);
+    --app-frame-border: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --app-message-embed-secondary-text: hsl(var(--white-hsl)/0.7);
     --background-accent: var(--plum-15);
     --background-base-low: var(--neutral-82);
@@ -96029,9 +96020,6 @@ html.disable-forced-colors * {
     --content-inventory-overlay-text-primary: hsl(var(--white-hsl)/0.85);
     --content-inventory-overlay-text-secondary: hsl(var(--white-hsl)/0.7);
     --context-menu-backdrop-background: hsl(var(--opacity-black-72-hsl)/0.7215686274509804);
-    --control-border-expressive-active: hsl(var(--opacity-12-hsl)/0.12156862745098039);
-    --control-border-expressive-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
-    --control-border-expressive-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --control-brand-foreground: var(--brand-360);
     --control-brand-foreground-new: var(--brand-360);
     --control-connect-background-active: var(--green-new-62);
@@ -96073,6 +96061,9 @@ html.disable-forced-colors * {
     --control-expressive-background-active: var(--neutral-10);
     --control-expressive-background-default: var(--neutral-1);
     --control-expressive-background-hover: var(--neutral-1);
+    --control-expressive-border-active: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --control-expressive-border-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --control-expressive-border-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --control-expressive-icon-active: var(--black);
     --control-expressive-icon-default: var(--black);
     --control-expressive-icon-hover: var(--black);
@@ -96251,17 +96242,14 @@ html.disable-forced-colors * {
     --profile-gradient-section-box: hsl(var(--black-hsl)/0.45);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
-    --radio-background-default-selected: var(--blurple-50);
     --radio-background-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
-    --radio-background-hover-selected: var(--blurple-60);
+    --radio-background-selected-default: var(--blurple-50);
+    --radio-background-selected-hover: var(--blurple-60);
     --radio-border-active: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --radio-border-default: hsl(var(--opacity-64-hsl)/0.6392156862745098);
-    --radio-border-default-selected: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --radio-border-hover: hsl(var(--opacity-80-hsl)/0.8);
-    --radio-border-hover-selected: hsl(var(--opacity-12-hsl)/0.12156862745098039);
-    --radio-foreground-active: var(--blurple-50);
-    --radio-foreground-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
-    --radio-foreground-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
+    --radio-border-selected-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
+    --radio-border-selected-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --radio-thumb-background-active: var(--neutral-1);
     --redesign-button-active-background: var(--green-430);
     --redesign-button-active-pressed-background: var(--green-460);
@@ -96375,8 +96363,8 @@ html.disable-forced-colors * {
 
 @supports (color:color-mix(in lch, red, blue)) {
     .theme-darker {
-        --app-border-frame: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-frame-background: color-mix(in oklab, var(--neutral-97) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --app-frame-border: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-message-embed-secondary-text: color-mix(in oklab, hsl(var(--white-hsl)/0.7) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.7) var(--custom-theme-text-color-amount, 0%));
         --background-accent: color-mix(in oklab, var(--plum-15) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --background-base-low: color-mix(in oklab, var(--neutral-82) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -96643,7 +96631,7 @@ html.disable-forced-colors * {
 
 .high-contrast-mode .theme-dark,
 .high-contrast-mode.theme-dark {
-    --app-border-frame: var(--neutral-12);
+    --app-frame-border: var(--neutral-12);
     --background-code: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
     --background-feedback-critical: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
     --background-feedback-info: hsl(var(--opacity-blue-12-hsl)/0.12156862745098039);
@@ -96758,9 +96746,9 @@ html.disable-forced-colors * {
     --mobile-text-heading-primary: var(--white);
     --radio-border-active: var(--neutral-12);
     --radio-border-default: var(--neutral-12);
-    --radio-border-default-selected: var(--neutral-12);
     --radio-border-hover: var(--neutral-12);
-    --radio-border-hover-selected: var(--neutral-12);
+    --radio-border-selected-default: var(--neutral-12);
+    --radio-border-selected-hover: var(--neutral-12);
     --redesign-button-primary-alt-border: var(--brand-300);
     --redesign-button-secondary-border: var(--neutral-12);
     --redesign-button-secondary-text: var(--neutral-1);
@@ -96807,7 +96795,7 @@ html.disable-forced-colors * {
 
     .high-contrast-mode .theme-dark,
     .high-contrast-mode.theme-dark {
-        --app-border-frame: color-mix(in oklab, var(--neutral-12) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --app-frame-border: color-mix(in oklab, var(--neutral-12) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --background-code: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-info: color-mix(in oklab, hsl(var(--opacity-blue-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
@@ -96905,7 +96893,7 @@ html.disable-forced-colors * {
 
 .high-contrast-mode .theme-light,
 .high-contrast-mode.theme-light {
-    --app-border-frame: var(--neutral-49);
+    --app-frame-border: var(--neutral-49);
     --background-code: hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196);
     --background-feedback-critical: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
     --background-feedback-info: hsl(var(--opacity-blue-12-hsl)/0.12156862745098039);
@@ -97020,9 +97008,9 @@ html.disable-forced-colors * {
     --mobile-text-heading-primary: var(--black);
     --radio-border-active: var(--neutral-49);
     --radio-border-default: var(--neutral-49);
-    --radio-border-default-selected: var(--neutral-49);
     --radio-border-hover: var(--neutral-49);
-    --radio-border-hover-selected: var(--neutral-49);
+    --radio-border-selected-default: var(--neutral-49);
+    --radio-border-selected-hover: var(--neutral-49);
     --redesign-button-primary-alt-border: var(--brand-600);
     --redesign-button-secondary-border: var(--neutral-49);
     --redesign-button-secondary-text: var(--neutral-76);
@@ -97069,7 +97057,7 @@ html.disable-forced-colors * {
 
     .high-contrast-mode .theme-light,
     .high-contrast-mode.theme-light {
-        --app-border-frame: color-mix(in oklab, var(--neutral-49) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --app-frame-border: color-mix(in oklab, var(--neutral-49) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --background-code: color-mix(in oklab, hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-info: color-mix(in oklab, hsl(var(--opacity-blue-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
@@ -97167,7 +97155,7 @@ html.disable-forced-colors * {
 
 .high-contrast-mode .theme-midnight,
 .high-contrast-mode.theme-midnight {
-    --app-border-frame: var(--neutral-23);
+    --app-frame-border: var(--neutral-23);
     --background-code: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
     --background-feedback-critical: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
     --background-feedback-info: hsl(var(--opacity-blue-12-hsl)/0.12156862745098039);
@@ -97282,9 +97270,9 @@ html.disable-forced-colors * {
     --mobile-text-heading-primary: var(--white);
     --radio-border-active: var(--neutral-23);
     --radio-border-default: var(--neutral-23);
-    --radio-border-default-selected: var(--neutral-23);
     --radio-border-hover: var(--neutral-23);
-    --radio-border-hover-selected: var(--neutral-23);
+    --radio-border-selected-default: var(--neutral-23);
+    --radio-border-selected-hover: var(--neutral-23);
     --redesign-button-primary-alt-border: var(--brand-345);
     --redesign-button-secondary-border: var(--neutral-23);
     --redesign-button-secondary-text: var(--neutral-6);
@@ -97331,7 +97319,7 @@ html.disable-forced-colors * {
 
     .high-contrast-mode .theme-midnight,
     .high-contrast-mode.theme-midnight {
-        --app-border-frame: color-mix(in oklab, var(--neutral-23) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --app-frame-border: color-mix(in oklab, var(--neutral-23) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --background-code: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-info: color-mix(in oklab, hsl(var(--opacity-blue-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
@@ -97429,7 +97417,7 @@ html.disable-forced-colors * {
 
 .high-contrast-mode .theme-darker,
 .high-contrast-mode.theme-darker {
-    --app-border-frame: var(--neutral-19);
+    --app-frame-border: var(--neutral-19);
     --background-code: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
     --background-feedback-critical: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
     --background-feedback-info: hsl(var(--opacity-blue-12-hsl)/0.12156862745098039);
@@ -97544,9 +97532,9 @@ html.disable-forced-colors * {
     --mobile-text-heading-primary: var(--white);
     --radio-border-active: var(--neutral-19);
     --radio-border-default: var(--neutral-19);
-    --radio-border-default-selected: var(--neutral-19);
     --radio-border-hover: var(--neutral-19);
-    --radio-border-hover-selected: var(--neutral-19);
+    --radio-border-selected-default: var(--neutral-19);
+    --radio-border-selected-hover: var(--neutral-19);
     --redesign-button-primary-alt-border: var(--brand-330);
     --redesign-button-secondary-border: var(--neutral-19);
     --redesign-button-secondary-text: var(--neutral-1);
@@ -97593,7 +97581,7 @@ html.disable-forced-colors * {
 
     .high-contrast-mode .theme-darker,
     .high-contrast-mode.theme-darker {
-        --app-border-frame: color-mix(in oklab, var(--neutral-19) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
+        --app-frame-border: color-mix(in oklab, var(--neutral-19) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --background-code: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-info: color-mix(in oklab, hsl(var(--opacity-blue-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
@@ -101099,53 +101087,53 @@ html.disable-forced-colors * {
 
 .refresh-fast-follow-distinct-borders .theme-dark,
 .refresh-fast-follow-distinct-borders.theme-dark {
-    --app-border-frame: var(--neutral-52)
+    --app-frame-border: var(--neutral-52)
 }
 
 @supports (color:color-mix(in lch, red, blue)) {
 
     .refresh-fast-follow-distinct-borders .theme-dark,
     .refresh-fast-follow-distinct-borders.theme-dark {
-        --app-border-frame: color-mix(in oklab, var(--neutral-52) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)))
+        --app-frame-border: color-mix(in oklab, var(--neutral-52) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)))
     }
 }
 
 .refresh-fast-follow-distinct-borders .theme-light,
 .refresh-fast-follow-distinct-borders.theme-light {
-    --app-border-frame: var(--neutral-12)
+    --app-frame-border: var(--neutral-12)
 }
 
 @supports (color:color-mix(in lch, red, blue)) {
 
     .refresh-fast-follow-distinct-borders .theme-light,
     .refresh-fast-follow-distinct-borders.theme-light {
-        --app-border-frame: color-mix(in oklab, var(--neutral-12) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)))
+        --app-frame-border: color-mix(in oklab, var(--neutral-12) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)))
     }
 }
 
 .refresh-fast-follow-distinct-borders .theme-midnight,
 .refresh-fast-follow-distinct-borders.theme-midnight {
-    --app-border-frame: var(--neutral-73)
+    --app-frame-border: var(--neutral-73)
 }
 
 @supports (color:color-mix(in lch, red, blue)) {
 
     .refresh-fast-follow-distinct-borders .theme-midnight,
     .refresh-fast-follow-distinct-borders.theme-midnight {
-        --app-border-frame: color-mix(in oklab, var(--neutral-73) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)))
+        --app-frame-border: color-mix(in oklab, var(--neutral-73) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)))
     }
 }
 
 .refresh-fast-follow-distinct-borders .theme-darker,
 .refresh-fast-follow-distinct-borders.theme-darker {
-    --app-border-frame: var(--neutral-65)
+    --app-frame-border: var(--neutral-65)
 }
 
 @supports (color:color-mix(in lch, red, blue)) {
 
     .refresh-fast-follow-distinct-borders .theme-darker,
     .refresh-fast-follow-distinct-borders.theme-darker {
-        --app-border-frame: color-mix(in oklab, var(--neutral-65) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)))
+        --app-frame-border: color-mix(in oklab, var(--neutral-65) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)))
     }
 }
 

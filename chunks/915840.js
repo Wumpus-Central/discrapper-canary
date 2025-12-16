@@ -2,7 +2,7 @@ n.d(t, { V: () => i });
 let { Themes: r } = n(15202).VV,
     i = {
         SemanticColorHighContrast: {
-            APP_BORDER_FRAME: {
+            APP_FRAME_BORDER: {
                 [r.DARK]: {
                     raw: "NEUTRAL_12",
                     opacity: 1,
@@ -2072,24 +2072,6 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            RADIO_BORDER_DEFAULT_SELECTED: {
-                [r.DARK]: {
-                    raw: "NEUTRAL_12",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "NEUTRAL_49",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_23",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "NEUTRAL_19",
-                    opacity: 1,
-                },
-            },
             RADIO_BORDER_HOVER: {
                 [r.DARK]: {
                     raw: "NEUTRAL_12",
@@ -2108,7 +2090,25 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            RADIO_BORDER_HOVER_SELECTED: {
+            RADIO_BORDER_SELECTED_DEFAULT: {
+                [r.DARK]: {
+                    raw: "NEUTRAL_12",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "NEUTRAL_49",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "NEUTRAL_23",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "NEUTRAL_19",
+                    opacity: 1,
+                },
+            },
+            RADIO_BORDER_SELECTED_HOVER: {
                 [r.DARK]: {
                     raw: "NEUTRAL_12",
                     opacity: 1,
