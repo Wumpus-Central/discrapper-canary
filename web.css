@@ -69887,11 +69887,46 @@ html ._614623a0ca8129b8-progress {
     z-index: 1
 }
 
-.abfd909f61de9fdf-wishlistButtonContainer {
+.abfd909f61de9fdf-cardButtonsContainer {
+    color: var(--primary-100);
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
     inset-inline-end: 8px;
     position: absolute;
     top: 8px;
     z-index: 1
+}
+
+.abfd909f61de9fdf-wishlistButton {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border-width: 0;
+    padding: 0
+}
+
+.abfd909f61de9fdf-forwardButton {
+    visibility: hidden
+}
+
+.abfd909f61de9fdf-cardButtonContainer {
+    align-items: center;
+    background-color: color-mix(in srgb, var(--black-500) 20%, transparent);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    transition: background-color .2s ease-in-out;
+    width: 40px
+}
+
+.abfd909f61de9fdf-cardButtonContainer:hover {
+    background: color-mix(in srgb, var(--black-500) 60%, transparent)
+}
+
+.abfd909f61de9fdf-cardButtonContainerHovered {
+    visibility: visible
 }
 
 @keyframes abfd909f61de9fdf-pulse {
