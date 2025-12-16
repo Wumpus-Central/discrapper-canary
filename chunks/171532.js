@@ -1,5 +1,4 @@
 e.exports = {
-    cardContainer: "abfd909f61de9fdf-cardContainer",
     card: "abfd909f61de9fdf-card",
     cardMedium: "abfd909f61de9fdf-cardMedium",
     cardSmall: "abfd909f61de9fdf-cardSmall",
