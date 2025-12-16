@@ -425,6 +425,7 @@ function en(e) {
         threshold: 0,
         children: (0, r.jsx)("div", {
             ref: c,
+            className: B.cardContainer,
             children: s
                 ? (0, r.jsx)(
                       et,
