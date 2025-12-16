@@ -8,7 +8,8 @@ n.d(t, {
     _Z: () => p,
     a7: () => S,
     ac: () => h,
-    vg: () => T,
+    l8: () => T,
+    vg: () => C,
     wK: () => g,
     wQ: () => I,
     x6: () => b,
@@ -165,6 +166,9 @@ function I(e, t) {
         .concat(f.Z5c.GAME_SHOP(e, t.id, t.slug));
 }
 function T(e, t) {
+    return "".concat(I(e, t), "\n\n");
+}
+function C(e, t) {
     let n = s.Z.getGuild(e);
     return null != n && g(n) && (0, u.ne)({ location: t });
 }

@@ -82,6 +82,7 @@ var E = (function (e) {
         (e.GIFTING = "gifting"),
         (e.CONTENT_INVENTORY_MEMBERLIST = "content_inventory_memberlist"),
         (e.GREET = "greet"),
+        (e.SOCIAL_LAYER_STOREFRONT = "social_layer_storefront"),
         (e.OTHER = "other"),
         e
     );

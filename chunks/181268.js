@@ -9,6 +9,7 @@ var r = (function (e) {
             (e.BUY_BUTTON = "buy_button"),
             (e.GIFT_BUTTON = "gift_button"),
             (e.WISHLIST_BUTTON = "wishlist_button"),
+            (e.FORWARD_BUTTON = "forward_button"),
             e
         );
     })({}),
@@ -23,6 +24,7 @@ var r = (function (e) {
             (e.CAROUSEL_NEXT = "carousel_next"),
             (e.CAROUSEL_PREV = "carousel_prev"),
             (e.MUTE_BUTTON = "mute_button"),
+            (e.FORWARD_BUTTON = "forward_button"),
             e
         );
     })({}),

@@ -83,6 +83,7 @@ function I(e) {
                         className: S.card,
                         applicationId: L.applicationId,
                         skuId: w,
+                        guildId: R,
                         variant: y.Zp.EMBEDDED,
                         onClick: Z,
                         analyticsLocations: M,
