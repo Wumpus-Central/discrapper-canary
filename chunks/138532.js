@@ -6,7 +6,4 @@ e.exports = {
     effectDescriptionNoGradient:
         "_92e520562ba50998-effectDescriptionNoGradient _92e520562ba50998-effectDescriptionBorder",
     effectDescriptionContainer: "_92e520562ba50998-effectDescriptionContainer",
-    effectDescription: "_92e520562ba50998-effectDescription",
-    effectName: "_92e520562ba50998-effectName",
-    effectPurchasedAt: "_92e520562ba50998-effectPurchasedAt",
 };
