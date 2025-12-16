@@ -653,7 +653,7 @@ function ev(e) {
                                 children: [
                                     eY
                                         ? (0, r.jsx)(v.Text, {
-                                              variant: "text-xxs/normal",
+                                              variant: "text-xs/normal",
                                               color: l
                                                   ? "interactive-text-active"
                                                   : eL
