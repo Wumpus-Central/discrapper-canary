@@ -14,7 +14,7 @@ var r,
     m = n(244526),
     h = n(981631),
     g = n(388032),
-    E = n(579378);
+    E = n(262992);
 function b(e, t, n) {
     return (
         t in e
@@ -165,59 +165,66 @@ class I extends a.PureComponent {
     }
     render() {
         let {
-                defaultPaymentSourceId: e,
-                paymentSources: t,
-                locale: n,
-                removing: r,
-                submitting: a,
-                premiumSubscriptionPaymentSourceId: o,
+                showHeader: e,
+                defaultPaymentSourceId: t,
+                paymentSources: n,
+                locale: r,
+                removing: a,
+                submitting: o,
+                premiumSubscriptionPaymentSourceId: l,
             } = this.props,
-            l = s()
-                .values(t)
-                .sort((t, n) => (t.id === e ? -1 : n.id === e ? 1 : p.default.compare(t.id, n.id))),
-            u = this.state.editingPayment,
-            d = l.findIndex((e) => e.id === u),
-            f = l.map((t, s) =>
+            u = s()
+                .values(n)
+                .sort((e, n) => (e.id === t ? -1 : n.id === t ? 1 : p.default.compare(e.id, n.id))),
+            d = this.state.editingPayment,
+            f = u.findIndex((e) => e.id === d),
+            _ = u.map((e, n) =>
                 (0, i.jsx)(
                     S,
                     {
-                        locale: n,
-                        paymentSource: t,
-                        isDefault: e === t.id,
+                        locale: r,
+                        paymentSource: e,
+                        isDefault: t === e.id,
                         onCancel: this.handleCancel,
                         onDelete: this.handleDelete,
-                        isForSubscription: t.id === o,
-                        hideDivider: d === s - 1,
+                        isForSubscription: e.id === l,
+                        hideDivider: f === n - 1,
                         onSubmit: this.handleSubmit,
-                        index: s,
-                        submitting: a,
-                        removing: r,
-                        isEditing: u === t.id,
+                        index: n,
+                        submitting: o,
+                        removing: a,
+                        isEditing: d === e.id,
                         onEditClick: this.handleEditClick,
                     },
-                    t.id,
+                    e.id,
                 ),
             );
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(c.Heading, {
-                    variant: "heading-lg/semibold",
-                    children: [
-                        (0, i.jsx)(c.mBM, {
-                            size: "sm",
-                            className: E.lockIcon,
-                        }),
-                        " ",
-                        g.intl.string(g.t.W26xGQ),
-                    ],
-                }),
-                (0, i.jsx)(c.Text, {
-                    variant: "text-sm/normal",
-                    color: "text-subtle",
-                    children: g.intl.string(g.t.h6V3uK),
-                }),
-                f,
-                d !== l.length - 1 ? (0, i.jsx)(c.izJ, { className: E.__invalid_sourceDivider }) : null,
+                e
+                    ? (0, i.jsxs)(i.Fragment, {
+                          children: [
+                              (0, i.jsxs)(c.Heading, {
+                                  variant: "heading-lg/semibold",
+                                  children: [
+                                      (0, i.jsx)(c.mBM, {
+                                          size: "sm",
+                                          className: E.lockIcon,
+                                      }),
+                                      " ",
+                                      g.intl.string(g.t.W26xGQ),
+                                  ],
+                              }),
+                              (0, i.jsx)(c.Text, {
+                                  variant: "text-sm/normal",
+                                  color: "text-subtle",
+                                  children: g.intl.string(g.t.h6V3uK),
+                              }),
+                          ],
+                      })
+                    : null,
+                _,
+                f !== u.length - 1 ? (0, i.jsx)(c.izJ, {}) : null,
                 this.renderFooter(),
             ],
         });
