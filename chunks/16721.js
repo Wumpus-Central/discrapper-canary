@@ -1,75 +1,72 @@
-var r = n(580983),
-    i = n(46015),
-    a = n(382698),
-    o = n(503463),
-    s = n(751954),
-    l = n(571078),
-    c = n(713411),
-    u = n(199838).get,
-    d = n(923646),
-    f = n(204954),
-    p = l("native-string-replace", String.prototype.replace),
-    _ = RegExp.prototype.exec,
-    m = _,
-    h = i("".charAt),
-    g = i("".indexOf),
-    E = i("".replace),
-    b = i("".slice),
-    y = (function () {
-        var e = /a/,
-            t = /b*/g;
-        return r(_, e, "a"), r(_, t, "a"), 0 !== e.lastIndex || 0 !== t.lastIndex;
-    })(),
-    O = s.BROKEN_CARET,
-    v = void 0 !== /()??/.exec("")[1];
-(y || v || O || d || f) &&
-    (m = function (e) {
-        var t,
+var n,
+    i,
+    o = r(580983),
+    a = r(46015),
+    c = r(382698),
+    u = r(503463),
+    s = r(751954),
+    l = r(571078),
+    f = r(713411),
+    p = r(199838).get,
+    v = r(923646),
+    g = r(204954),
+    d = l("native-string-replace", String.prototype.replace),
+    x = RegExp.prototype.exec,
+    h = x,
+    E = a("".charAt),
+    y = a("".indexOf),
+    I = a("".replace),
+    R = a("".slice),
+    b = ((i = /b*/g), o(x, (n = /a/), "a"), o(x, i, "a"), 0 !== n.lastIndex || 0 !== i.lastIndex),
+    A = s.BROKEN_CARET,
+    w = void 0 !== /()??/.exec("")[1];
+(b || w || A || v || g) &&
+    (h = function (t) {
+        var e,
+            r,
             n,
             i,
+            a,
             s,
             l,
-            d,
-            f,
-            S = this,
-            I = u(S),
-            T = a(e),
-            C = I.raw;
-        if (C) return (C.lastIndex = S.lastIndex), (t = r(m, C, T)), (S.lastIndex = C.lastIndex), t;
-        var A = I.groups,
-            N = O && S.sticky,
-            P = r(o, S),
-            R = S.source,
-            D = 0,
-            w = T;
+            v = p(this),
+            g = c(t),
+            S = v.raw;
+        if (S) return (S.lastIndex = this.lastIndex), (e = o(h, S, g)), (this.lastIndex = S.lastIndex), e;
+        var $ = v.groups,
+            m = A && this.sticky,
+            k = o(u, this),
+            C = this.source,
+            T = 0,
+            _ = g;
         if (
-            (N &&
-                (-1 === g((P = E(P, "y", "")), "g") && (P += "g"),
-                (w = b(T, S.lastIndex)),
-                S.lastIndex > 0 &&
-                    (!S.multiline || (S.multiline && "\n" !== h(T, S.lastIndex - 1))) &&
-                    ((R = "(?: " + R + ")"), (w = " " + w), D++),
-                (n = RegExp("^(?:" + R + ")", P))),
-            v && (n = RegExp("^" + R + "$(?!\\s)", P)),
-            y && (i = S.lastIndex),
-            (s = r(_, N ? n : S, w)),
-            N
-                ? s
-                    ? ((s.input = b(s.input, D)),
-                      (s[0] = b(s[0], D)),
-                      (s.index = S.lastIndex),
-                      (S.lastIndex += s[0].length))
-                    : (S.lastIndex = 0)
-                : y && s && (S.lastIndex = S.global ? s.index + s[0].length : i),
-            v &&
-                s &&
-                s.length > 1 &&
-                r(p, s[0], n, function () {
-                    for (l = 1; l < arguments.length - 2; l++) void 0 === arguments[l] && (s[l] = void 0);
+            (m &&
+                (-1 === y((k = I(k, "y", "")), "g") && (k += "g"),
+                (_ = R(g, this.lastIndex)),
+                this.lastIndex > 0 &&
+                    (!this.multiline || (this.multiline && "\n" !== E(g, this.lastIndex - 1))) &&
+                    ((C = "(?: " + C + ")"), (_ = " " + _), T++),
+                (r = RegExp("^(?:" + C + ")", k))),
+            w && (r = RegExp("^" + C + "$(?!\\s)", k)),
+            b && (n = this.lastIndex),
+            (i = o(x, m ? r : this, _)),
+            m
+                ? i
+                    ? ((i.input = R(i.input, T)),
+                      (i[0] = R(i[0], T)),
+                      (i.index = this.lastIndex),
+                      (this.lastIndex += i[0].length))
+                    : (this.lastIndex = 0)
+                : b && i && (this.lastIndex = this.global ? i.index + i[0].length : n),
+            w &&
+                i &&
+                i.length > 1 &&
+                o(d, i[0], r, function () {
+                    for (a = 1; a < arguments.length - 2; a++) void 0 === arguments[a] && (i[a] = void 0);
                 }),
-            s && A)
+            i && $)
         )
-            for (l = 0, s.groups = d = c(null); l < A.length; l++) d[(f = A[l])[0]] = s[f[1]];
-        return s;
+            for (a = 0, i.groups = s = f(null); a < $.length; a++) s[(l = $[a])[0]] = i[l[1]];
+        return i;
     }),
-    (e.exports = m);
+    (t.exports = h);
