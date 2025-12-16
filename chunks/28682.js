@@ -24,9 +24,8 @@ var r = (function (e) {
         (e[(e.SLIDER = 14)] = "SLIDER"),
         (e[(e.SELECT = 15)] = "SELECT"),
         (e[(e.RADIO = 16)] = "RADIO"),
-        (e[(e.CHECKBOX = 17)] = "CHECKBOX"),
-        (e[(e.NAVIGATOR = 18)] = "NAVIGATOR"),
-        (e[(e.CUSTOM = 19)] = "CUSTOM"),
+        (e[(e.NAVIGATOR = 17)] = "NAVIGATOR"),
+        (e[(e.CUSTOM = 18)] = "CUSTOM"),
         e
     );
 })({});

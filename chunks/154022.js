@@ -483,10 +483,10 @@ function e_() {
             label: H.intl.string(H.t.e3TR1b),
             description: H.intl.format(H.t["2l9U2j"], { helpdeskArticle: D.Z.getArticleURL(F.BhN.REDUCED_MOTION) }),
             children: [
-                (0, r.jsx)(c.Checkbox, {
+                (0, r.jsx)(c.rsf, {
+                    label: H.intl.string(H.t["+Dx+HD"]),
                     checked: d,
                     onChange: m,
-                    label: H.intl.string(H.t["+Dx+HD"]),
                 }),
                 (0, r.jsx)(N.F, {
                     setting: Z.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,

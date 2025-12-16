@@ -10,7 +10,7 @@ n.d(t, {
     ZD: () => S,
     fw: () => C,
     hs: () => R,
-    i_: () => B,
+    i_: () => F,
     k8: () => k,
     ox: () => v,
     yL: () => A,
@@ -84,7 +84,7 @@ function E(e, t) {
 }
 async function b(e, t) {
     var n;
-    let r = w(e),
+    let r = D(e),
         i = await s.tn.get({
             url: p.ANM.GET_REPORT_MENU(r),
             query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0,
@@ -104,7 +104,7 @@ async function y(e, t) {
 }
 async function O(e, t) {
     var n;
-    let r = D(e),
+    let r = w(e),
         i = await s.tn.get({
             url: p.ANM.GET_UNAUTHENTICATED_REPORT_MENU(r),
             query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0,
@@ -113,7 +113,7 @@ async function O(e, t) {
     return null != (n = i.body) ? n : JSON.parse(i.text);
 }
 async function v(e, t) {
-    let n = w(e),
+    let n = D(e),
         r = await b(e, t);
     await s.tn.post({
         url: p.ANM.SUBMIT_REPORT_MENU(n),
@@ -135,7 +135,7 @@ function S(e, t, n) {
 }
 function I(e, t, n) {
     return s.tn.post({
-        url: p.ANM.SUBMIT_REPORT_MENU(w(t)),
+        url: p.ANM.SUBMIT_REPORT_MENU(D(t)),
         body: M(e, t, n),
         rejectWithError: !1,
     });
@@ -164,7 +164,7 @@ function T(e, t, n) {
 }
 function C(e, t, n, r) {
     if (u.ZP.get("iar_skip_api_report_submit")) return Promise.resolve();
-    let i = D(t);
+    let i = w(t);
     return s.tn.post({
         url: p.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(i),
         body: M(e, t, n, r),
@@ -209,11 +209,11 @@ async function R(e) {
         })
     ).body;
 }
-function D(e) {
+function w(e) {
     let t = e.name;
     return a()(Object.values(f.BM).includes(t), "Invalid report type ".concat(e.name)), t;
 }
-function w(e) {
+function D(e) {
     let t = e.name;
     return a()(Object.values(f.b).includes(t), "Invalid report type ".concat(e.name)), t;
 }
@@ -409,23 +409,30 @@ function U(e, t) {
         reportType: e.name,
     });
 }
-function G(e, t, n, r, i) {
+function G(e, t) {
+    var n;
+    let { freeTextElements: r, dropdownElements: i, multiSelectElement: a, contentUrlInputElement: o } = e,
+        { textInput: s, multiSelect: l } = t;
     return (
-        e.some((e) => {
+        r.some((e) => {
             var t;
             return (
                 !0 === e.should_submit_data &&
-                ((null == r ? void 0 : r[e.name]) == null ||
-                    (null == r ? void 0 : r[e.name].value) === "" ||
-                    !(null == r || null == (t = r[e.name]) ? void 0 : t.isValid))
+                ((null == s ? void 0 : s[e.name]) == null ||
+                    (null == s ? void 0 : s[e.name].value) === "" ||
+                    !(null == s || null == (t = s[e.name]) ? void 0 : t.isValid))
             );
         }) ||
-        t.some(
+        i.some(
             (e) =>
                 !0 === e.should_submit_data &&
-                ((null == r ? void 0 : r[e.name]) == null || (null == r ? void 0 : r[e.name].value) === ""),
+                ((null == s ? void 0 : s[e.name]) == null || (null == s ? void 0 : s[e.name].value) === ""),
         ) ||
-        ((null == n ? void 0 : n.should_submit_data) === !0 && (null == i || 0 === Object.keys(i).length))
+        ((null == a ? void 0 : a.should_submit_data) === !0 && (null == l || 0 === Object.keys(l).length)) ||
+        ((null == o ? void 0 : o.should_submit_data) === !0 &&
+            ((null == s ? void 0 : s[o.name]) == null ||
+                (null == s ? void 0 : s[o.name].value) === "" ||
+                !(null == s || null == (n = s[o.name]) ? void 0 : n.isValid)))
     );
 }
 var Z = (function (e) {
@@ -436,7 +443,7 @@ var Z = (function (e) {
         e
     );
 })({});
-function B(e, t, n) {
+function F(e, t, n) {
     return r.useCallback(
         (r) => (i) => {
             c.ZP.trackWithMetadata(p.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
