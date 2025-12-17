@@ -8,8 +8,8 @@ var r = a(54381),
     d = a(709093),
     s = a(741245),
     b = a(783017),
-    f = a(317269),
-    p = a(474936),
+    p = a(317269),
+    f = a(474936),
     u = a(981631),
     m = a(388032),
     C = a(745769);
@@ -30,15 +30,15 @@ function h(e) {
 }
 function S(e) {
     let { onClose: t } = e;
-    return (0, r.jsx)(f.ZP, {
-        planId: p.Xh.PREMIUM_MONTH_TIER_0,
+    return (0, r.jsx)(p.ZP, {
+        planId: f.Xh.PREMIUM_MONTH_TIER_0,
         onClose: t,
     });
 }
 let v = (e) => {
     let { transitionState: t, onClose: a, premiumType: s } = e,
-        b = s === p.PremiumTypes.TIER_0,
-        f = n.useCallback(() => {
+        b = s === f.PremiumTypes.TIER_0,
+        p = n.useCallback(() => {
             c.S.dispatch(u.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                 l.Z.isDisplayingWowMomentConfirmation && l.Z.isAnimated
                     ? setTimeout(() => {
@@ -47,15 +47,19 @@ let v = (e) => {
                     : a();
         }, [a]);
     return (0, r.jsxs)(o.Y0X, {
+        "data-migration-pending": !0,
         className: C.root,
         transitionState: t,
         parentComponent: "ResubscribeSuccessStep",
         children: [
             (0, r.jsx)(d.Z, {
-                onClose: f,
+                onClose: p,
                 upgradeToPremiumType: s,
             }),
-            (0, r.jsx)(o.hzk, { children: (0, r.jsx)(b ? S : h, { onClose: f }) }),
+            (0, r.jsx)(o.hzk, {
+                "data-migration-pending": !0,
+                children: (0, r.jsx)(b ? S : h, { onClose: p }),
+            }),
         ],
     });
 };
