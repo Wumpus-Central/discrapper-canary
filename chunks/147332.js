@@ -105,6 +105,7 @@ let g = (e) => (0, r.jsx)(E, _({}, e)),
                     children: (0, r.jsx)(u.Ds, {
                         onBackClick: b,
                         primaryCTAButtonProps: I,
+                        justify: a.Z.Justify.BETWEEN,
                         align: a.Z.Align.CENTER,
                     }),
                 }),

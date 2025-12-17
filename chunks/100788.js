@@ -1,15 +1,15 @@
-n.d(t, { z: () => g });
-var r = n(54381),
-    i = n(473749),
-    a = n(481060),
-    o = n(409813),
-    s = n(51499),
-    l = n(614277),
-    c = n(658114),
-    u = n(514749),
-    d = n(81088),
-    f = n(175977);
-function p(e, t, n) {
+n.d(t, { z: () => h });
+var r = n(54381);
+n(473749);
+var i = n(481060),
+    a = n(409813),
+    o = n(51499),
+    s = n(614277),
+    l = n(658114),
+    c = n(514749),
+    u = n(81088),
+    d = n(175977);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,69 +33,57 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-let m = (e) => (0, r.jsx)(h, _({}, e)),
-    h = (e) => {
+let _ = (e) => (0, r.jsx)(m, p({}, e)),
+    m = (e) => {
         let { unifiedStepProps: t } = e,
             {
                 isStepLoading: n,
-                reviewBodyContent: o,
-                reviewBodyLegalContent: u,
-                errorMessage: p,
-                warningMessage: m,
-                primaryCTAButtonProps: h,
-            } = t,
-            g = i.useMemo(
-                () =>
-                    _(
-                        {
-                            variant: "active",
-                            type: "submit",
-                            "data-testid": "submitButton",
-                        },
-                        h,
-                    ),
-                [h],
-            );
+                reviewBodyContent: a,
+                reviewBodyLegalContent: c,
+                errorMessage: f,
+                warningMessage: p,
+                primaryCTAButtonProps: _,
+            } = t;
         return n
             ? (0, r.jsx)("div", {
-                  className: f.stepBody,
-                  children: (0, r.jsx)(a.$jN, { type: a.$jN.Type.WANDERING_CUBES }),
+                  className: d.stepBody,
+                  children: (0, r.jsx)(i.$jN, { type: i.$jN.Type.WANDERING_CUBES }),
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(s.Z, {}),
-                      (0, r.jsxs)(l.C3, {
+                      (0, r.jsx)(o.Z, {}),
+                      (0, r.jsxs)(s.C3, {
                           children: [
-                              (0, r.jsxs)(a.Kqy, {
+                              (0, r.jsxs)(i.Kqy, {
                                   direction: "vertical",
                                   gap: 8,
                                   children: [
-                                      null != p ? (0, r.jsx)(d.vw, { message: p }) : null,
-                                      null != m ? (0, r.jsx)(c.Z, { message: m }) : null,
+                                      null != f ? (0, r.jsx)(u.vw, { message: f }) : null,
+                                      null != p ? (0, r.jsx)(l.Z, { message: p }) : null,
                                   ],
                               }),
                               (0, r.jsxs)("div", {
-                                  className: f.stepBody,
-                                  children: [o, u],
+                                  className: d.stepBody,
+                                  children: [a, c],
                               }),
                           ],
                       }),
-                      (0, r.jsx)(l.O3, {
-                          children: (0, r.jsx)(d.Ds, {
-                              primaryCTAButtonProps: g,
+                      (0, r.jsx)(s.O3, {
+                          children: (0, r.jsx)(u.Ds, {
+                              primaryCTAButtonProps: _,
                               showLockIcon: !0,
                           }),
                       }),
                   ],
               });
     },
-    g = (0, u.q)({
-        step: o.h8.REVIEW,
-        renderStep: m,
-        DirectStepComponent: h,
+    h = (0, c.q)({
+        step: a.h8.REVIEW,
+        renderStep: _,
+        DirectStepComponent: m,
     });
