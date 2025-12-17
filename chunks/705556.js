@@ -94,9 +94,7 @@ function O(e) {
                           className: h.popoutMenu,
                           onSelect: void 0,
                           navId: "edit-profile-popout",
-                          onClose: () => {
-                              t(), null == O || O();
-                          },
+                          onClose: t,
                           "aria-label": m.intl.string(m.t.AXIHpV),
                           children: [
                               (0, r.jsx)(o.sNh, {
@@ -104,7 +102,7 @@ function O(e) {
                                   label: m.intl.string(m.t["PKQB/H"]),
                                   subtext: m.intl.string(m.t.VYHWKJ),
                                   action: () => {
-                                      A({ action: "EDIT_GUILD_PROFILE" }), T(), (0, s.i)(y);
+                                      A({ action: "EDIT_GUILD_PROFILE" }), null == O || O(), T(), (0, s.i)(y);
                                   },
                               }),
                               (0, r.jsx)(o.sNh, {
@@ -112,7 +110,7 @@ function O(e) {
                                   label: m.intl.string(m.t.HmFaFB),
                                   subtext: m.intl.string(m.t["+EERMk"]),
                                   action: () => {
-                                      A({ action: "EDIT_PROFILE" }), C(), (0, s.i)(y);
+                                      A({ action: "EDIT_PROFILE" }), null == O || O(), C(), (0, s.i)(y);
                                   },
                               }),
                           ],
