@@ -1,22 +1,21 @@
-n.d(t, { f: () => b }), n(388685);
+n.d(t, { f: () => N }), n(388685);
 var i = n(54381),
     s = n(473749),
-    l = n(755721),
-    r = n(481060),
-    a = n(87051),
-    o = n(225433),
-    d = n(933557),
-    c = n(471445),
-    u = n(600164),
-    h = n(592125),
-    g = n(324067),
-    m = n(699516),
-    x = n(594174),
-    p = n(621600),
-    j = n(981631),
-    v = n(388032),
-    f = n(99079);
-function N(e, t, n) {
+    l = n(481060),
+    r = n(87051),
+    a = n(225433),
+    o = n(933557),
+    d = n(471445),
+    c = n(600164),
+    u = n(592125),
+    h = n(324067),
+    g = n(699516),
+    m = n(594174),
+    x = n(621600),
+    p = n(981631),
+    j = n(388032),
+    v = n(99079);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +28,7 @@ function N(e, t, n) {
         e
     );
 }
-class b extends s.PureComponent {
+class N extends s.PureComponent {
     highlight() {
         this.setState({ highlight: !0 }, () => {
             null != this._timeout && clearTimeout(this._timeout), (this._timeout = setTimeout(this.unhighlight, 1000));
@@ -48,7 +47,7 @@ class b extends s.PureComponent {
         let { channel: i } = this.props,
             s = i.getGuildId();
         null != s &&
-            a.Z.updateChannelOverrideSettings(
+            r.Z.updateChannelOverrideSettings(
                 s,
                 i.id,
                 {
@@ -59,27 +58,17 @@ class b extends s.PureComponent {
             );
     }
     handleRadioChange(e) {
-        this.setMessageNotification(e, void 0, p.UE.notifications(e));
+        this.setMessageNotification(e, void 0, x.UE.notifications(e));
     }
     renderMessageNotificationsRadioOption(e) {
-        let {
-                messageNotifications: t,
-                guildMuted: n,
-                muted: s,
-                guildMessageNotifications: r,
-                checkboxColor: a,
-            } = this.props,
-            o = t === e;
-        (null == t || t === j.bL.NULL) && e === r && (o = !0);
-        let d = l.M0.INVERTED;
+        let { messageNotifications: t, guildMuted: n, guildMessageNotifications: s } = this.props,
+            r = t === e;
         return (
-            (s || t === j.bL.NULL || null == t) && (d = l.M0.GHOST),
-            (0, i.jsx)(l.$q, {
-                value: !n && o,
+            (null == t || t === p.bL.NULL) && e === s && (r = !0),
+            (0, i.jsx)(l.Checkbox, {
+                checked: !n && r,
+                label: "",
                 disabled: n,
-                shape: l.zV.ROUND,
-                color: a,
-                type: d,
                 onChange: this.handleRadioChange.bind(this, e),
             })
         );
@@ -88,32 +77,32 @@ class b extends s.PureComponent {
         let e,
             t,
             { channel: n } = this.props;
-        null != n.parent_id && (e = h.Z.getChannel(n.parent_id));
-        let s = (0, c.KS)(n);
-        if (n.type === j.d4z.GUILD_CATEGORY && null != n.guild_id && "" !== n.guild_id) {
-            let e = g.Z.getCategories(n.guild_id);
-            t = v.intl.formatToPlainString(v.t["2KzH89"], { num: null != e[n.id] ? e[n.id].length : 0 });
+        null != n.parent_id && (e = u.Z.getChannel(n.parent_id));
+        let s = (0, d.KS)(n);
+        if (n.type === p.d4z.GUILD_CATEGORY && null != n.guild_id && "" !== n.guild_id) {
+            let e = h.Z.getCategories(n.guild_id);
+            t = j.intl.formatToPlainString(j.t["2KzH89"], { num: null != e[n.id] ? e[n.id].length : 0 });
         } else
             t =
                 null != e
-                    ? v.intl.formatToPlainString(v.t.L1zJgb, { categoryName: (0, d.F6)(e, x.default, m.Z) })
-                    : v.intl.string(v.t.uIzfCE);
-        return (0, i.jsxs)(u.Z, {
+                    ? j.intl.formatToPlainString(j.t.L1zJgb, { categoryName: (0, o.F6)(e, m.default, g.Z) })
+                    : j.intl.string(j.t.uIzfCE);
+        return (0, i.jsxs)(c.Z, {
             grow: 1,
-            className: f.nameContainer,
+            className: v.nameContainer,
             children: [
-                null != s ? (0, i.jsx)(s, { className: f.icon }) : null,
+                null != s ? (0, i.jsx)(s, { className: v.icon }) : null,
                 (0, i.jsxs)("div", {
-                    className: f.channelNameContainer,
+                    className: v.channelNameContainer,
                     children: [
-                        (0, i.jsx)(r.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: "text-md/semibold",
-                            className: f.channelName,
-                            children: (0, d.F6)(n, x.default, m.Z),
+                            className: v.channelName,
+                            children: (0, o.F6)(n, m.default, g.Z),
                         }),
-                        (0, i.jsx)(r.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: "text-xs/normal",
-                            className: f.channelNameByline,
+                            className: v.channelNameByline,
                             children: t,
                         }),
                     ],
@@ -123,43 +112,42 @@ class b extends s.PureComponent {
     }
     renderOptions() {
         let { muted: e, guildMuted: t } = this.props;
-        return (0, i.jsxs)(u.Z, {
+        return (0, i.jsxs)(c.Z, {
             grow: 0,
             shrink: 0,
-            className: f.checkboxGroup,
-            justify: u.Z.Justify.AROUND,
-            align: u.Z.Align.CENTER,
+            className: v.checkboxGroup,
+            justify: c.Z.Justify.AROUND,
+            align: c.Z.Align.CENTER,
             children: [
-                (0, i.jsx)(u.Z.Child, {
+                (0, i.jsx)(c.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
-                    className: t ? f.checkboxContainerMuted : f.checkboxContainer,
-                    children: this.renderMessageNotificationsRadioOption(j.bL.ALL_MESSAGES),
+                    className: t ? v.checkboxContainerMuted : v.checkboxContainer,
+                    children: this.renderMessageNotificationsRadioOption(p.bL.ALL_MESSAGES),
                 }),
-                (0, i.jsx)(u.Z.Child, {
+                (0, i.jsx)(c.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
-                    className: t ? f.checkboxContainerMuted : f.checkboxContainer,
-                    children: this.renderMessageNotificationsRadioOption(j.bL.ONLY_MENTIONS),
+                    className: t ? v.checkboxContainerMuted : v.checkboxContainer,
+                    children: this.renderMessageNotificationsRadioOption(p.bL.ONLY_MENTIONS),
                 }),
-                (0, i.jsx)(u.Z.Child, {
+                (0, i.jsx)(c.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
-                    className: t ? f.checkboxContainerMuted : f.checkboxContainer,
-                    children: this.renderMessageNotificationsRadioOption(j.bL.NO_MESSAGES),
+                    className: t ? v.checkboxContainerMuted : v.checkboxContainer,
+                    children: this.renderMessageNotificationsRadioOption(p.bL.NO_MESSAGES),
                 }),
-                (0, i.jsx)(u.Z.Child, {
+                (0, i.jsx)(c.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
-                    className: f.checkboxMute,
-                    children: (0, i.jsx)(l.$q, {
-                        value: e,
-                        shape: l.zV.BOX,
-                        type: l.M0.INVERTED,
+                    className: v.checkboxMute,
+                    children: (0, i.jsx)(l.Checkbox, {
+                        checked: e,
+                        label: "",
                         onChange: this.handleMute,
                     }),
                 }),
@@ -168,16 +156,16 @@ class b extends s.PureComponent {
     }
     render() {
         let { highlight: e } = this.state;
-        return (0, i.jsxs)(r.Zbd, {
+        return (0, i.jsxs)(l.Zbd, {
             ref: this.contentDomRef,
             outline: !0,
             editable: !0,
-            className: e ? f.overrideHighlight : f.override,
+            className: e ? v.overrideHighlight : v.override,
             children: [
                 this.renderName(),
                 this.renderOptions(),
-                (0, i.jsx)(o.Z, {
-                    className: f.removeOverride,
+                (0, i.jsx)(a.Z, {
+                    className: v.removeOverride,
                     onClick: this.handleDelete,
                 }),
             ],
@@ -185,19 +173,19 @@ class b extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            N(this, "_timeout", void 0),
-            N(this, "contentDomRef", s.createRef()),
-            N(this, "state", { highlight: !1 }),
-            N(this, "unhighlight", () => {
+            f(this, "_timeout", void 0),
+            f(this, "contentDomRef", s.createRef()),
+            f(this, "state", { highlight: !1 }),
+            f(this, "unhighlight", () => {
                 this.setState({ highlight: !1 });
             }),
-            N(this, "handleMute", (e, t) => {
-                let { messageNotifications: n } = this.props;
-                this.setMessageNotification(null != n ? n : j.bL.NULL, t, p.UE.muted(t));
+            f(this, "handleMute", (e) => {
+                let { messageNotifications: t } = this.props;
+                this.setMessageNotification(null != t ? t : p.bL.NULL, e, x.UE.muted(e));
             }),
-            N(this, "handleDelete", () => {
+            f(this, "handleDelete", () => {
                 let { onDelete: e, channel: t } = this.props;
-                this.setMessageNotification(j.bL.NULL, !1, p.ZB.OverrideDeleted), null != e && e(t.id);
+                this.setMessageNotification(p.bL.NULL, !1, x.ZB.OverrideDeleted), null != e && e(t.id);
             });
     }
 }
