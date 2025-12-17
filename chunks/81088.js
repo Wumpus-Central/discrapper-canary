@@ -93,15 +93,7 @@ let g = (e) => {
     },
     E = (e) => {
         var { onClick: t, loading: n, disabled: o, text: s, tooltipText: l } = e;
-        let c = f(
-                {
-                    variant: "active",
-                    type: "submit",
-                    "data-testid": "submitButton",
-                    text: s,
-                },
-                m(e, ["onClick", "loading", "disabled", "text", "tooltipText"]),
-            ),
+        let c = f({ text: s }, m(e, ["onClick", "loading", "disabled", "text", "tooltipText"])),
             u = (0, r.jsx)(
                 a.zxk,
                 _(f({}, c), {
@@ -129,7 +121,7 @@ let g = (e) => {
                     {
                         className: u.checkoutModalFooter,
                         direction: s.Z.Direction.HORIZONTAL,
-                        justify: s.Z.Justify.END,
+                        justify: null != i ? s.Z.Justify.BETWEEN : s.Z.Justify.END,
                         "data-migration-pending": !0,
                     },
                     a,
