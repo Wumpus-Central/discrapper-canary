@@ -47538,7 +47538,9 @@ div._34eac30af6a687c5-modalOverrideBody {
 
 .ddf599b22c154d9c-container {
     display: inline-flex;
-    padding: var(--space-8) calc(var(--space-16) + 3px) var(--space-16)
+    padding-top: var(--space-8);
+    padding-inline: 19px;
+    padding-bottom: var(--space-16)
 }
 
 .ddf599b22c154d9c-container label[data-mana-component=checkbox] {
@@ -47554,8 +47556,16 @@ div._34eac30af6a687c5-modalOverrideBody {
 }
 
 .ddf599b22c154d9c-container label[data-mana-component=checkbox] label>div {
-    font-size: 12px;
-    line-height: 16px
+    font-size: 14px;
+    line-height: 1.25
+}
+
+.density-compact .ddf599b22c154d9c-container {
+    padding-inline: 17px
+}
+
+.density-cozy .ddf599b22c154d9c-container {
+    padding-inline: 21px
 }
 
 .ddf599b22c154d9c-icon {
