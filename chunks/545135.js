@@ -1,21 +1,20 @@
 n.d(t, { default: () => D });
-var i = n(54381);
-n(473749);
-var r = n(512722),
+var i = n(54381),
+    r = n(512722),
     s = n.n(r),
     l = n(442837),
     a = n(481060),
     c = n(239091),
     o = n(100527),
     u = n(906732),
-    d = n(299206),
-    g = n(894059),
-    b = n(423589),
-    p = n(837949),
-    S = n(601964),
-    h = n(314897),
-    f = n(594174),
-    E = n(976192),
+    d = n(894059),
+    g = n(423589),
+    b = n(837949),
+    p = n(601964),
+    S = n(314897),
+    h = n(594174),
+    f = n(976192),
+    E = n(518858),
     O = n(904483),
     y = n(429824),
     j = n(919815),
@@ -28,7 +27,7 @@ var r = n(512722),
     Z = n(466330),
     m = n(981631),
     x = n(388032);
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -71,12 +70,12 @@ function G(e, t) {
         e
     );
 }
-function k(e) {
+function M(e) {
     let { guild: t, onSelect: r, hideSettings: o } = e,
         u = t.id,
-        k = (0, l.e7)([f.default], () => {
-            let e = f.default.getCurrentUser();
-            return s()(null != e, "GuildContextMenu: user cannot be undefined"), (0, S.eM)(t, e);
+        M = (0, l.e7)([h.default], () => {
+            let e = h.default.getCurrentUser();
+            return s()(null != e, "GuildContextMenu: user cannot be undefined"), (0, p.eM)(t, e);
         }, [t]),
         D = (0, Z.Z)({
             guild: t,
@@ -86,32 +85,29 @@ function k(e) {
         w = (0, A.Z)(u),
         I = (0, _.Z)(t),
         R = (0, N.Z)(t),
-        T = (0, v.Z)(t),
-        U = (0, E.Z)({
+        U = (0, v.Z)(t),
+        T = (0, f.Z)({
             guildId: t.id,
-            userId: h.default.getId(),
+            userId: S.default.getId(),
             analyticsLocation: {
                 page: m.ZY5.GUILD_CHANNEL,
                 section: m.jXE.CHAT_USERNAME,
                 object: m.qAy.CONTEXT_MENU_ITEM,
             },
         }),
-        B = (0, O.Z)(t),
-        C = (0, g.Z)(t.id),
-        Q = (0, d.Z)({
-            id: t.id,
-            label: x.intl.string(x.t["94lLD7"]),
-        }),
+        C = (0, O.Z)(t),
+        B = (0, d.Z)(t.id),
+        Q = (0, E.Z)(t),
         Y = (0, j.Z)(t, { section: m.jXE.GUILD_LIST }),
-        H = (0, p.Z)(t.id),
+        H = (0, b.Z)(t.id),
         V = (0, P.Z)(t.id),
         F = (0, y.Z)(t),
-        q = (0, b.Mn)("GuildContextMenu"),
-        W = (0, L.p)(t);
-    function X() {
+        q = (0, g.Mn)("GuildContextMenu"),
+        J = (0, L.p)(t);
+    function W() {
         (0, a.ZDy)(async () => {
             let { default: e } = await n.e("53961").then(n.bind(n, 402979));
-            return (n) => (0, i.jsx)(e, G(M({}, n), { guild: t }));
+            return (n) => (0, i.jsx)(e, G(k({}, n), { guild: t }));
         });
     }
     return t.features.has(m.GuildFeatures.HUB)
@@ -130,19 +126,19 @@ function k(e) {
                               action: () =>
                                   (0, a.ZDy)(async () => {
                                       let { default: e } = await n.e("86722").then(n.bind(n, 264333));
-                                      return (n) => (0, i.jsx)(e, G(M({}, n), { guild: t }));
+                                      return (n) => (0, i.jsx)(e, G(k({}, n), { guild: t }));
                                   }),
                           }),
-                          U,
+                          T,
                       ],
                   }),
-                  k
+                  M
                       ? null
                       : (0, i.jsx)(a.kSQ, {
                             children: (0, i.jsx)(a.sNh, {
                                 id: "leave-guild",
                                 label: x.intl.string(x.t.Dv8gFT),
-                                action: X,
+                                action: W,
                                 color: "danger",
                             }),
                         }),
@@ -162,7 +158,7 @@ function k(e) {
                   }),
                   (0, i.jsxs)(a.kSQ, {
                       children: [
-                          o ? null : T,
+                          o ? null : U,
                           __OVERLAY__
                               ? null
                               : (0, i.jsx)(a.sNh, {
@@ -171,28 +167,28 @@ function k(e) {
                                     action: () =>
                                         (0, a.ZDy)(async () => {
                                             let { default: e } = await n.e("86722").then(n.bind(n, 264333));
-                                            return (n) => (0, i.jsx)(e, G(M({}, n), { guild: t }));
+                                            return (n) => (0, i.jsx)(e, G(k({}, n), { guild: t }));
                                         }),
                                 }),
-                          U,
+                          T,
                       ],
                   }),
                   (0, i.jsxs)(a.kSQ, {
-                      children: [B, C],
+                      children: [C, B],
                   }),
                   (0, i.jsxs)(a.kSQ, {
                       children: [
                           F,
-                          !k &&
+                          !M &&
                               (0, i.jsx)(a.sNh, {
                                   id: "leave-guild",
                                   label: x.intl.string(x.t.J2TBi3),
-                                  action: X,
+                                  action: W,
                                   color: "danger",
                               }),
                       ],
                   }),
-                  (0, i.jsx)(a.kSQ, { children: W }),
+                  (0, i.jsx)(a.kSQ, { children: J }),
                   (0, i.jsx)(a.kSQ, { children: Q }),
               ],
           });
@@ -201,6 +197,6 @@ function D(e) {
     let { analyticsLocations: t } = (0, u.ZP)(o.Z.CONTEXT_MENU);
     return (0, i.jsx)(u.Gt, {
         value: t,
-        children: (0, i.jsx)(k, M({}, e)),
+        children: (0, i.jsx)(M, k({}, e)),
     });
 }
