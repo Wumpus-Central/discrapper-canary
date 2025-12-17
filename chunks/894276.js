@@ -1,8 +1,8 @@
 n.d(t, {
-    E3: () => h,
-    Re: () => l,
-    fg: () => _,
-    iZ: () => m,
+    E3: () => E,
+    Re: () => u,
+    fg: () => h,
+    iZ: () => g,
 }),
     n(953529),
     n(539854),
@@ -10,8 +10,9 @@ n.d(t, {
 var r = n(512722),
     i = n.n(r),
     a = n(668757),
-    o = n(750179);
-function s(e, t, n) {
+    o = n(579092),
+    s = n(750179);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,19 +25,24 @@ function s(e, t, n) {
         e
     );
 }
-let l = [],
-    c = Symbol("unknown");
-class u {
+let c = new o.Yd("LibdiscoreExperiments"),
+    u = [],
+    d = Symbol("unknown");
+class f {
     getEnabledFeatureName() {
         let e = this.getCachedConfig();
         return void 0 === e || e.treatmentId <= 0 ? null : "".concat(this.id, ":").concat(e.treatmentId);
     }
     getCachedConfig() {
-        return (
-            this.cachedConfig === c &&
-                ((0, a.X6)() ? (this.cachedConfig = (0, a.Md)().getConfig(this.id)) : (this.cachedConfig = void 0)),
-            this.cachedConfig
-        );
+        if (this.cachedConfig === d)
+            if ((0, a.X6)())
+                try {
+                    this.cachedConfig = (0, a.Md)().getConfig(this.id);
+                } catch (e) {
+                    (this.cachedConfig = void 0), c.error("Error getting experiment config", e);
+                }
+            else this.cachedConfig = void 0;
+        return this.cachedConfig;
     }
     setExperiment(e) {
         this.inner = e;
@@ -48,16 +54,16 @@ class u {
             : this.inner.getConfig({ location: "default" });
     }
     constructor(e, t) {
-        s(this, "id", void 0),
-            s(this, "inner", void 0),
-            s(this, "cachedConfig", void 0),
+        l(this, "id", void 0),
+            l(this, "inner", void 0),
+            l(this, "cachedConfig", void 0),
             (this.id = e),
             (this.inner = null),
-            (this.cachedConfig = c),
-            l.push(this);
+            (this.cachedConfig = d),
+            u.push(this);
     }
 }
-class d extends u {
+class p extends f {
     getLabel() {
         return this.label;
     }
@@ -69,10 +75,10 @@ class d extends u {
         return null != e && 1 === e.treatmentId;
     }
     constructor(e, t) {
-        super(e), s(this, "label", void 0), (this.label = t);
+        super(e), l(this, "label", void 0), (this.label = t);
     }
 }
-class f extends u {
+class _ extends f {
     getCachedBridgedStoreMode() {
         let e = this.getCachedConfig(),
             t = (() => {
@@ -86,7 +92,7 @@ class f extends u {
                         return "typescript";
                 }
             })();
-        return (0, o.k)(t);
+        return (0, s.k)(t);
     }
     getEnabledFeatureName() {
         let e = this.getCachedBridgedStoreMode();
@@ -99,10 +105,10 @@ class f extends u {
         return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
     }
     constructor(e, t, n, r) {
-        super(e, r), s(this, "storeName", void 0), s(this, "type", void 0), (this.storeName = t), (this.type = n);
+        super(e, r), l(this, "storeName", void 0), l(this, "type", void 0), (this.storeName = t), (this.type = n);
     }
 }
-class p extends u {
+class m extends f {
     getLabel() {
         return "libdiscore Telemetry";
     }
@@ -132,10 +138,10 @@ class p extends u {
         );
     }
     constructor(...e) {
-        super(...e), s(this, "MAX_EMISSIONS_PER_APP_LAUNCH", 5), s(this, "emissionsCount", 0);
+        super(...e), l(this, "MAX_EMISSIONS_PER_APP_LAUNCH", 5), l(this, "emissionsCount", 0);
     }
 }
-let _ = new f("2025-09-libdiscore-rawguildemojistore", "RawGuildEmojiStore", "Kkv"),
-    m = new f("2025-10-libdiscore-guildstickersstore", "GuildStickersStore", "Kkv");
-new p("2025-09-libdiscore-telemetry");
-let h = new d("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
+let h = new _("2025-09-libdiscore-rawguildemojistore", "RawGuildEmojiStore", "Kkv"),
+    g = new _("2025-10-libdiscore-guildstickersstore", "GuildStickersStore", "Kkv");
+new m("2025-09-libdiscore-telemetry");
+let E = new p("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
