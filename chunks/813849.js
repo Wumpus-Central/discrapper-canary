@@ -38,4 +38,5 @@ e.exports = {
     streamingPopoutHero: "af3b89684c536957-streamingPopoutHero",
     streamCTA: "af3b89684c536957-streamCTA",
     maybeClickable: "af3b89684c536957-maybeClickable",
+    popoutGiftingBreadcrumb: "af3b89684c536957-popoutGiftingBreadcrumb",
 };

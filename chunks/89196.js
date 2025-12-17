@@ -1,7 +1,7 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var r,
     i = n(442837),
-    l = n(570140);
+    a = n(570140);
 function o(e, t, n) {
     return (
         t in e
@@ -15,43 +15,42 @@ function o(e, t, n) {
         e
     );
 }
-let a = { sentGifts: {} };
-function s(e, t) {
+let s = { sentGifts: {} };
+function l(e, t) {
     return "".concat(e, ":").concat(t);
 }
 class c extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && ((a = e), this.cleanupExpiredGifts());
+        null != e && ((s = e), this.cleanupExpiredGifts());
     }
     getState() {
-        return a;
+        return s;
     }
     hasSentGift(e, t) {
-        let n = s(e, t),
-            r = a.sentGifts[n];
+        let n = l(e, t),
+            r = s.sentGifts[n];
         return !(null == r || new Date(r.expiresAt) < new Date());
     }
     getSentGift(e, t) {
-        let n = s(e, t),
-            r = a.sentGifts[n];
+        let n = l(e, t),
+            r = s.sentGifts[n];
         return null == r || new Date(r.expiresAt) < new Date() ? null : r;
     }
     cleanupExpiredGifts() {
         let e = new Date();
-        for (let [t, n] of Object.entries(a.sentGifts)) new Date(n.expiresAt) < e && delete a.sentGifts[t];
+        for (let [t, n] of Object.entries(s.sentGifts)) new Date(n.expiresAt) < e && delete s.sentGifts[t];
     }
 }
+function u(e) {
+    let t = l(e.skuId, e.recipientId),
+        n = new Date(),
+        r = new Date(n.getTime() + 172800000);
+    s.sentGifts[t] = {
+        skuId: e.skuId,
+        recipientId: e.recipientId,
+        sentAt: n.toISOString(),
+        expiresAt: r.toISOString(),
+    };
+}
 o(c, "displayName", "SentGiftsStore"), o(c, "persistKey", "SentGiftsStore");
-let u = new c(l.Z, {
-    WISHLIST_GIFT_SENT: function (e) {
-        let t = s(e.skuId, e.recipientId),
-            n = new Date(),
-            r = new Date(n.getTime() + 172800000);
-        a.sentGifts[t] = {
-            skuId: e.skuId,
-            recipientId: e.recipientId,
-            sentAt: n.toISOString(),
-            expiresAt: r.toISOString(),
-        };
-    },
-});
+let d = new c(a.Z, { WISHLIST_GIFT_SENT: u });

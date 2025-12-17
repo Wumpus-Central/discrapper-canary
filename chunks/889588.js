@@ -2,6 +2,7 @@ e.exports = {
     card: "_39b322c2a73a9168-card",
     container: "_39b322c2a73a9168-container",
     smallCard: "_39b322c2a73a9168-smallCard",
+    smallSquareCard: "_39b322c2a73a9168-smallSquareCard",
     largeCard: "_39b322c2a73a9168-largeCard",
     isOwned: "_39b322c2a73a9168-isOwned",
     cardPreview: "_39b322c2a73a9168-cardPreview",

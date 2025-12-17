@@ -1,6 +1,6 @@
 n.d(t, {
-    W: () => f,
-    Z: () => m,
+    W: () => p,
+    Z: () => h,
 }),
     n(361932),
     n(187205),
@@ -8,57 +8,59 @@ n.d(t, {
     n(539854);
 var r = n(473749),
     i = n(442837),
-    a = n(321947),
-    o = n(55563),
-    s = n(411935),
-    l = n(210218),
-    c = n(699955),
-    u = n(868849),
-    d = n(981631);
-let f = 6;
-function p(e) {
-    let { applicationId: t, numItems: n, userIds: o, isEligible: c, includeWishlists: u } = e,
-        f = (0, i.e7)([l.Z], () => l.Z.recommendationsByApplicationsAndUsers(t, o));
+    a = n(902704),
+    o = n(321947),
+    s = n(55563),
+    l = n(411935),
+    c = n(210218),
+    u = n(699955),
+    d = n(868849),
+    f = n(981631);
+let p = 6;
+function _(e) {
+    let { applicationId: t, numItems: n, userIds: a, isEligible: s, includeWishlists: u } = e,
+        d = (0, i.e7)([c.Z], () => (null != t ? c.Z.recommendationsByApplicationsAndUsers(t, a) : void 0));
     r.useEffect(() => {
-        c &&
-            null != o &&
-            0 !== o.length &&
+        s &&
+            null != t &&
+            null != a &&
+            0 !== a.length &&
             0 !== n &&
-            (0, s.g$)({
+            (0, l.g$)({
                 applicationId: t,
-                userIds: o,
+                userIds: a,
                 maxRecommendations: n,
                 includeWishlists: u,
             });
-    }, [t, o, c, n, u]);
-    let p = r.useMemo(() => (null == f || "success" !== f.state ? [] : f.data.skus.slice(0, n)), [f, n]),
+    }, [t, a, s, n, u]);
+    let p = r.useMemo(() => (null == d || "success" !== d.state ? [] : d.data.skus.slice(0, n)), [d, n]),
         _ = r.useMemo(
             () =>
-                null == f || "success" !== f.state
+                null == d || "success" !== d.state
                     ? []
                     : p.map(
                           (e) =>
-                              new a.Z({
+                              new o.Z({
                                   sku_id: e.id,
-                                  sku_product_line: d.POd.SOCIAL_LAYER_GAME_ITEM,
+                                  sku_product_line: f.POd.SOCIAL_LAYER_GAME_ITEM,
                                   sku_name: e.name,
                                   sku: e,
                               }),
                       ),
-            [p, f],
+            [p, d],
         );
     return {
-        state: r.useMemo(() => (null == f ? "loading" : f.state), [f]),
+        state: r.useMemo(() => (null == d ? "loading" : d.state), [d]),
         recommendations: _,
     };
 }
-function _(e) {
-    let { guildId: t, numItems: n, isEligible: c } = e,
-        u = (0, i.e7)([l.Z], () => l.Z.getStorefrontData(t));
+function m(e) {
+    let { guildId: t, numItems: n, isEligible: a } = e,
+        u = (0, i.e7)([c.Z], () => (null != t ? c.Z.getStorefrontData(t) : void 0));
     r.useEffect(() => {
-        c && null == l.Z.getStorefrontData(t) && 0 !== n && (0, s.YL)(t, !1);
-    }, [t, n, c]);
-    let f = r.useMemo(() => {
+        a && null != t && null == c.Z.getStorefrontData(t) && 0 !== n && (0, l.YL)(t, !1);
+    }, [t, n, a]);
+    let d = r.useMemo(() => {
             if (null == u || null == u.storefront || "loading" === u.state || "partially-fetched" === u.state)
                 return [];
             let e = u.storefront.pages.flatMap((e) => {
@@ -73,14 +75,14 @@ function _(e) {
             for (let i of e) if (!r.has(i) && (t.push(i), r.add(i), t.length >= n)) break;
             return t;
         }, [u, n]),
-        p = (0, i.Wu)([o.Z], () => f.map((e) => o.Z.get(e)).filter((e) => null != e), [f]),
+        p = (0, i.Wu)([s.Z], () => d.map((e) => s.Z.get(e)).filter((e) => null != e), [d]),
         _ = r.useMemo(
             () =>
                 p.map(
                     (e) =>
-                        new a.Z({
+                        new o.Z({
                             sku_id: e.id,
-                            sku_product_line: d.POd.SOCIAL_LAYER_GAME_ITEM,
+                            sku_product_line: f.POd.SOCIAL_LAYER_GAME_ITEM,
                             sku_name: e.name,
                             sku: e,
                         }),
@@ -100,32 +102,36 @@ function _(e) {
         recommendations: _,
     };
 }
-function m(e) {
+function h(e) {
     let {
             guildId: t,
-            numWishlistItems: n = f,
+            numWishlistItems: n = p,
             location: i,
-            applicationId: a,
-            userIds: o,
-            includeWishlists: s = !1,
+            applicationId: o,
+            userIds: s,
+            includeWishlists: l = !1,
         } = e,
-        l = (0, u.Q)({ location: i }),
-        d = (0, c.cZ)({ location: i }),
-        m = r.useMemo(() => l && null != o && o.length > 0, [l, o]),
-        { state: h, recommendations: g } = _({
+        c = (0, d.Q)({ location: i }),
+        f = (0, u.cZ)({ location: i }),
+        h = r.useMemo(() => c && null != s && s.length > 0, [c, s]),
+        { state: g, recommendations: E } = m({
             guildId: t,
             numItems: n,
-            isEligible: !m && d,
+            isEligible: !h && f,
         }),
-        { state: E, recommendations: b } = p({
-            applicationId: a,
-            userIds: o,
-            numItems: n,
-            isEligible: m && d,
-            includeWishlists: s,
-        });
+        [b, y] = r.useState(s);
+    r.useEffect(() => {
+        y((e) => (null == e ? s : (0, a.E)(e, s) ? e : s));
+    }, [s]);
+    let { state: O, recommendations: v } = _({
+        applicationId: o,
+        userIds: b,
+        numItems: n,
+        isEligible: h && f,
+        includeWishlists: l,
+    });
     return {
-        state: r.useMemo(() => (d && 0 !== n ? (m ? E : h) : "success"), [d, n, m, E, h]),
-        recommendations: r.useMemo(() => (d && 0 !== n ? (m ? b : g) : []), [d, n, m, b, g]),
+        state: r.useMemo(() => (f && 0 !== n ? (h ? O : g) : "success"), [f, n, h, O, g]),
+        recommendations: r.useMemo(() => (f && 0 !== n ? (h ? v : E) : []), [f, n, h, v, E]),
     };
 }

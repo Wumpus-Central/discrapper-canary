@@ -1,5 +1,7 @@
-n.d(t, { A: () => i });
-let r = (0, n(427164).le)({
+n.d(t, { A: () => a });
+var r = n(427164),
+    i = n(699955);
+let l = (0, r.le)({
     name: "2025-12-social-layer-storefront-rtc-entrypoint-user-experiment",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -8,7 +10,9 @@ let r = (0, n(427164).le)({
         1: { enabled: !0 },
     },
 });
-function i(e) {
-    let { location: t } = e;
-    return r.useConfig({ location: t }).enabled;
+function a(e) {
+    let { location: t } = e,
+        n = (0, i.cZ)({ location: t }),
+        r = l.useConfig({ location: t }).enabled;
+    return n && r;
 }

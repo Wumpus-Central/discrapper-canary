@@ -19,9 +19,9 @@ var r = n(54381),
     h = n(981631),
     g = n(474936),
     E = n(388032),
-    b = n(232644),
+    b = n(889588),
     y = (function (e) {
-        return (e.SMALL = "small"), (e.MEDIUM = "medium"), (e.LARGE = "large"), e;
+        return (e.SMALL = "small"), (e.SMALL_SQUARE = "small-square"), (e.MEDIUM = "medium"), (e.LARGE = "large"), e;
     })({});
 function O(e) {
     let {
@@ -56,7 +56,7 @@ function O(e) {
                   "aria-label": U,
               })
             : void 0,
-        B = (0, r.jsx)("div", {
+        F = (0, r.jsx)("div", {
             className: b.cardStateIconWrapper,
             children: (0, r.jsx)(l.sV5, {
                 size: "custom",
@@ -67,7 +67,7 @@ function O(e) {
                 "aria-label": E.intl.string(E.t.L5Pt9L),
             }),
         }),
-        F = (0, r.jsx)("div", {
+        B = (0, r.jsx)("div", {
             className: b.overlay,
             children: (0, r.jsx)(l.Button, {
                 focusProps: { ringTarget: L },
@@ -108,6 +108,7 @@ function O(e) {
                     ref: L,
                     className: o()(b.card, {
                         [b.isOwned]: N,
+                        [b.smallSquareCard]: "small-square" === y,
                         [b.smallCard]: "small" === y,
                         [b.largeCard]: "large" === y,
                     }),
@@ -118,9 +119,9 @@ function O(e) {
                             className: b.cardPreview,
                             children: S(),
                         }),
-                        N && B,
+                        N && F,
                         O
-                            ? F
+                            ? B
                             : (0, r.jsx)(l.P3F, {
                                   "aria-label": C,
                                   focusProps: { ringTarget: L },
