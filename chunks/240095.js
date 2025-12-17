@@ -5,7 +5,6 @@ e.exports = {
     backgroundOverlay: "a230e00e14310f70-backgroundOverlay",
     heroImage: "a230e00e14310f70-heroImage",
     content: "a230e00e14310f70-content",
-    specialText: "a230e00e14310f70-specialText",
-    specialTextLink: "a230e00e14310f70-specialTextLink a230e00e14310f70-specialText",
+    link: "a230e00e14310f70-link",
     closeClickable: "a230e00e14310f70-closeClickable",
 };

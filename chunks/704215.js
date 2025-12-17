@@ -521,6 +521,7 @@ var r = (function (e) {
             (e[(e.GUILD_TAG_AVAILABLE_COACHMARK_V2 = 662)] = "GUILD_TAG_AVAILABLE_COACHMARK_V2"),
             (e[(e.GUILD_TAG_UPDATED_COACHMARK = 663)] = "GUILD_TAG_UPDATED_COACHMARK"),
             (e[(e.ORB_RENTAL_NEW_BADGE = 664)] = "ORB_RENTAL_NEW_BADGE"),
+            (e[(e.HOLIDAY_COACHMARK_WINTER_2025 = 665)] = "HOLIDAY_COACHMARK_WINTER_2025"),
             e
         );
     })({}),
