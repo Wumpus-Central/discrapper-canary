@@ -489,7 +489,7 @@ let et = Object.assign(
                 sourceUserId: n.id,
                 trackEntryPointImpression: !0,
             }),
-            { fetched: D, hasAlreadyLinked: R, canStartAuthorization: M, startAuthorization: B } = (0, f.F)(h),
+            { fetched: D, hasAlreadyLinked: R, canStartAuthorization: M, startAuthorization: B } = (0, f.FG)(h),
             { analyticsLocations: U } = (0, d.ZP)(u.Z.USER_PROFILE_APPLICATION_WIDGET),
             F = i.useCallback(() => {
                 M &&

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685), n(457542);
 var a = n(54381),
     r = n(473749),
-    l = n(296009),
-    i = n(442837),
+    i = n(296009),
+    l = n(442837),
     s = n(704215),
     o = n(907862),
     c = n(906732),
@@ -24,9 +24,9 @@ function _(e) {
     let { targetElementRef: n, onClose: _ } = e,
         [S, E] = r.useState(!1),
         { trackUserProfileEditAction: T } = (0, m.KZ)(),
-        O = (0, i.e7)([v.default], () => v.default.getId()),
+        O = (0, l.e7)([v.default], () => v.default.getId()),
         { config: N, application: w } = (0, f.G)(),
-        { fetched: P, hasAlreadyLinked: I, canStartAuthorization: k, startAuthorization: R } = (0, d.F)(w),
+        { fetched: P, hasAlreadyLinked: I, canStartAuthorization: k, startAuthorization: R } = (0, d.FG)(w),
         A = (0, x.ZP)(O),
         { analyticsLocations: Z } = (0, c.ZP)(),
         D =
@@ -45,7 +45,7 @@ function _(e) {
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: r } = e;
                   if (null == t) return null;
-                  let i = t === s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
+                  let l = t === s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
                   return (0, a.jsx)(o.J2, {
                       targetElementRef: n,
                       position: "right",
@@ -55,12 +55,12 @@ function _(e) {
                           src: N.edit_profile_upsell_image,
                       },
                       title: C.intl.format(C.t.TXDztH, { applicationName: w.name }),
-                      body: i ? C.intl.string(C.t["63Kso0"]) : C.intl.string(C.t.HwXoeC),
+                      body: l ? C.intl.string(C.t["63Kso0"]) : C.intl.string(C.t.HwXoeC),
                       onRequestClose: () => {
                           r(j.L.USER_DISMISS);
                       },
                       actions: [
-                          i
+                          l
                               ? {
                                     text: C.intl.string(C.t.VSLDly),
                                     onClick: () => {
@@ -73,7 +73,7 @@ function _(e) {
                                                     r(j.L.TAKE_ACTION), _();
                                                     let e = new p.q({
                                                         applicationId: w.id,
-                                                        type: l.l.APPLICATION,
+                                                        type: i.l.APPLICATION,
                                                     });
                                                     (0, h.qH)(e.type, e),
                                                         T(

@@ -58,7 +58,7 @@ function _(e) {
     let { applicationId: t, size: n = "default" } = e,
         { trackUserProfileAction: l } = (0, f.KZ)(),
         a = (0, p.q)(t),
-        { hasAlreadyLinked: s, canStartAuthorization: g, startAuthorization: b, fetched: _ } = (0, d.F)(a),
+        { hasAlreadyLinked: s, canStartAuthorization: g, startAuthorization: b, fetched: _ } = (0, d.FG)(a),
         { analyticsLocations: E } = (0, u.ZP)(c.Z.USER_PROFILE_APPLICATION_WIDGET),
         O = i.useCallback(() => {
             g &&

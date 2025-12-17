@@ -46,7 +46,7 @@ function p(e, t) {
                 m(!0);
                 let l = e(...i);
                 return (
-                    l === s.r.RPC &&
+                    l === s.ro.RPC &&
                         u &&
                         (0, a.ZDy)(
                             async () => {

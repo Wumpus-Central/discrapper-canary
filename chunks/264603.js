@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685);
 var a = n(54381),
     r = n(473749),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    l = n.n(i),
     s = n(442837),
     o = n(524437),
     c = n(199849),
@@ -44,9 +44,9 @@ function O() {
     let e = r.useRef(null),
         { analyticsLocations: t } = (0, p.ZP)(m.Z.DEV_TOOLS),
         n = j.JG.useSetting(),
-        [l, o] = r.useState(""),
+        [i, o] = r.useState(""),
         O = (0, s.e7)([g.ZP, C.Z], () => (0, v.Z)(g.ZP, C.Z)),
-        N = (0, b.q)(l),
+        N = (0, b.q)(i),
         w = (0, s.Wu)([x.Z], () => {
             var e, t;
             return null !=
@@ -57,9 +57,9 @@ function O() {
                 ? t
                 : [];
         }),
-        P = (0, f.F)(N, { allowedFlows: [f.r.RPC] }),
-        I = (0, f.F)(N, { allowedFlows: [f.r.WEB] }),
-        k = (0, f.F)(N),
+        P = (0, f.FG)(N, { allowedFlows: [f.ro.RPC] }),
+        I = (0, f.FG)(N, { allowedFlows: [f.ro.WEB] }),
+        k = (0, f.FG)(N),
         { canDeauthorize: R, deauthorize: A } = (function (e) {
             let t = (0, s.e7)([y.default], () => y.default.getNewestTokenForApplication(e)),
                 n = r.useCallback(() => {
@@ -72,7 +72,7 @@ function O() {
         })(null == N ? void 0 : N.id);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: i()(S.panel, E.panel),
+        className: l()(S.panel, E.panel),
         children: [
             (0, a.jsxs)("div", {
                 className: E.container,
@@ -100,7 +100,7 @@ function O() {
                     }),
                     (0, a.jsx)(d.oil, {
                         label: "Application ID",
-                        value: l,
+                        value: i,
                         onChange: o,
                     }),
                     null != O && null != O.id

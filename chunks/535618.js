@@ -45,7 +45,7 @@ function O(t) {
         [S, j] = a.useState({ state: "LINK" }),
         [k, N] = a.useState(!1),
         v = (0, l.e7)([_.Z], () => _.Z.getApplication(n.applicationId)),
-        E = (0, m.F)(v),
+        E = (0, m.FG)(v),
         { analyticsLocations: L } = (0, x.ZP)(null != T ? T : [], f.Z.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL);
     a.useEffect(() => {
         r.redeemed &&

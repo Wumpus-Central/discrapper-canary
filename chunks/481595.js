@@ -70,7 +70,7 @@ function G(e) {
         } = (0, R.JL)(),
         { isGift: $, giftRecipient: ee } = (0, P.wD)(),
         et = $ && (0, N.pO)(ee),
-        { fetched: en, hasAlreadyLinked: er } = (0, g.F)(G),
+        { fetched: en, hasAlreadyLinked: er } = (0, g.FG)(G),
         { defaultPaymentSourceId: ei, hasFetchedPaymentSources: ea } = (0, c.cj)([I.Z], () => ({
             defaultPaymentSourceId: I.Z.defaultPaymentSourceId,
             hasFetchedPaymentSources: I.Z.hasFetchedPaymentSources,

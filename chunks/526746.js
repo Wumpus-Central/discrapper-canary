@@ -27,7 +27,7 @@ function g(e) {
             (0, s.UM)(n.application_id).catch(() => {});
     }, [x, n.application_id]);
     let y = null != (t = null == x ? void 0 : x.name) ? t : f.intl.string(f.t.cgPbaZ),
-        { hasAlreadyLinked: b, canStartAuthorization: C, startAuthorization: O, fetched: Z } = (0, c.F)(x),
+        { hasAlreadyLinked: b, canStartAuthorization: C, startAuthorization: O, fetched: Z } = (0, c.FG)(x),
         w = (0, l.jsx)(d.Z, {
             game: x,
             size: d.A.MEDIUM,

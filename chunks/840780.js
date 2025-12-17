@@ -557,8 +557,8 @@ let ew = (0, v.Z)(function (e) {
             canStartAuthorization: Q,
             connectionApp: J,
             startAuthorization: ef,
-        } = (0, N.F)(v, {
-            allowedFlows: [N.r.RPC, N.r.WEB],
+        } = (0, N.FG)(v, {
+            allowedFlows: [N.ro.RPC, N.ro.WEB],
         }),
         [eg, eb] = i.useState(!1),
         em = (0, j.Z)(null == v ? void 0 : v.id);

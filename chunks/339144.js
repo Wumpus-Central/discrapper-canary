@@ -265,7 +265,7 @@ let D = i.memo(function (e) {
                     : (0, r.jsx)(M, {
                           runningGame: U,
                           startAuthorization: () => {
-                              Y({ analyticsLocations: ee }) === b.r.RPC &&
+                              Y({ analyticsLocations: ee }) === b.ro.RPC &&
                                   (eu(!0),
                                   null != es.current && clearTimeout(es.current),
                                   (es.current = setTimeout(() => {
