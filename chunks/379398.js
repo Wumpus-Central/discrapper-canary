@@ -1,13 +1,6 @@
 e.exports = {
     headerBar: "_8067953d83f4b8a8-headerBar",
     headerBarInner: "_8067953d83f4b8a8-headerBarInner",
-    tabs: "_8067953d83f4b8a8-tabs",
-    tabWrapper: "_8067953d83f4b8a8-tabWrapper",
-    tab: "_8067953d83f4b8a8-tab",
-    selected: "_8067953d83f4b8a8-selected",
-    tabWithMenuContainer: "_8067953d83f4b8a8-tabWithMenuContainer",
-    tabWithChevron: "_8067953d83f4b8a8-tabWithChevron",
-    discordLogo: "_8067953d83f4b8a8-discordLogo",
     shopHomeLink: "_8067953d83f4b8a8-shopHomeLink",
     alignedRightContent: "_8067953d83f4b8a8-alignedRightContent",
     wishlistButton: "_8067953d83f4b8a8-wishlistButton",
