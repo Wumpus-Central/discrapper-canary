@@ -14,6 +14,7 @@ let s = new Set([
         ...new Set([a.He.CARD, a.He.PAYMENT_REQUEST, a.He.PAYPAL]),
         ...new Set([
             a.He.IDEAL,
+            a.He.BANCONTACT,
             a.He.GOPAY_WALLET,
             a.He.KAKAOPAY,
             a.He.VENMO,
@@ -104,6 +105,7 @@ let s = new Set([
     d = {
         [a.He.CARD]: "card",
         [a.He.IDEAL]: "ideal",
+        [a.He.BANCONTACT]: "bancontact",
         [a.He.PAYPAL]: "paypal",
         [a.He.VENMO]: "venmo",
         [a.He.CASH_APP]: "cashapp",
@@ -131,11 +133,13 @@ let _ = (e, t) =>
         ? a.He.CARD
         : "ideal" === e
           ? a.He.IDEAL
-          : "google_pay" === e || "apple_pay" === e
-            ? a.He.PAYMENT_REQUEST
-            : e in t
-              ? t[e]
-              : null;
+          : "bancontact" === e
+            ? a.He.BANCONTACT
+            : "google_pay" === e || "apple_pay" === e
+              ? a.He.PAYMENT_REQUEST
+              : e in t
+                ? t[e]
+                : null;
 function m(e) {
     return l.size > 0 && l.has(e) ? "test" === (0, i.rI)() : s.has(e);
 }
