@@ -1,78 +1,46 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(54381),
     i = n(473749),
     l = n(120356),
-    o = n.n(l),
-    a = n(481060),
-    s = n(657955);
+    a = n.n(l),
+    o = n(681715),
+    s = n(682288);
 function c(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function u(e) {
     let {
-        children: t,
-        text: n,
-        disableWrapper: l = !1,
-        disabled: u = !1,
-        hideOnClick: d = !0,
-        shouldShow: f,
-        forceOpen: h,
-        selected: p = !1,
-    } = e;
-    return (0, r.jsx)(a.aML, {
-        "data-migration-pending": !0,
-        shouldShow: f,
-        forceOpen: h,
-        spacing: 12,
-        hideOnClick: d,
-        text: u ? null : n,
+            children: t,
+            text: n,
+            disableWrapper: l = !1,
+            disabled: c = !1,
+            hideOnClick: u = !0,
+            shouldShow: d,
+            forceOpen: f,
+            selected: h = !1,
+        } = e,
+        p = i.useMemo(
+            () =>
+                null == n || c
+                    ? null
+                    : (0, r.jsx)("div", {
+                          className: s.listItemTooltipContent,
+                          children: n,
+                      }),
+            [n, c],
+        ),
+        g = l
+            ? t
+            : (0, r.jsx)("div", {
+                  className: a()(s.listItemWrapper, { [s.selected]: h }),
+                  children: t,
+              });
+    return (0, r.jsx)(o.u, {
+        __unsupportedReactNodeAsText: p,
         position: "right",
-        "aria-label": !1,
-        tooltipClassName: s.listItemTooltip,
-        children: (e) => {
-            var n, a;
-            return l
-                ? i.cloneElement(i.Children.only(t), c({}, e))
-                : (0, r.jsx)(
-                      "div",
-                      ((n = c({ className: o()(s.listItemWrapper, { [s.selected]: p }) }, e)),
-                      (a = a = { children: t }),
-                      Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
-                          : (function (e, t) {
-                                var n = Object.keys(e);
-                                if (Object.getOwnPropertySymbols) {
-                                    var r = Object.getOwnPropertySymbols(e);
-                                    n.push.apply(n, r);
-                                }
-                                return n;
-                            })(Object(a)).forEach(function (e) {
-                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
-                            }),
-                      n),
-                  );
-        },
+        spacing: 12,
+        hideOnClick: u,
+        shouldShow: d,
+        forceOpen: f,
+        ariaHidden: !0,
+        asContainer: !l,
+        children: g,
     });
 }
