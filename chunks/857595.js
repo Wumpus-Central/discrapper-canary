@@ -21,6 +21,7 @@ n.d(t, {
     rf: () => _,
     u1: () => C,
     vW: () => R,
+    zH: () => D,
 });
 var r = n(570140),
     i = n(153867),
@@ -160,5 +161,11 @@ function w(e) {
     r.Z.dispatch({
         type: "ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED",
         switchIconsEnabled: e,
+    });
+}
+function D(e) {
+    r.Z.dispatch({
+        type: "UNSYNCED_USER_SETTINGS_UPDATE",
+        settings: { hdrDynamicRange: e },
     });
 }

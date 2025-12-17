@@ -70,8 +70,9 @@ function C() {
 }
 class A extends (r = o.ZP.DeviceSettingsStore) {
     initialize(e) {
-        var t;
-        (y = null != e ? e : {}).darkSidebar = null != (t = y.darkSidebar) ? t : C();
+        var t, n;
+        ((y = null != e ? e : {}).darkSidebar = null != (t = y.darkSidebar) ? t : C()),
+            (y.hdrDynamicRange = null != (n = y.hdrDynamicRange) ? n : "no-limit");
     }
     getUserAgnosticState() {
         return y;
@@ -185,6 +186,10 @@ class A extends (r = o.ZP.DeviceSettingsStore) {
     get listDensity() {
         var e;
         return null != (e = y.listDensity) ? e : p.fx.COZY;
+    }
+    get hdrDynamicRange() {
+        var e;
+        return null != (e = y.hdrDynamicRange) ? e : "no-limit";
     }
 }
 _(A, "displayName", "UnsyncedUserSettingsStore"),
