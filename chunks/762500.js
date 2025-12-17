@@ -1,129 +1,131 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => x });
 var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(990547),
-    o = n(442837),
+    o = n(990547),
+    s = n(442837),
     c = n(114101),
     u = n(481060),
-    d = n(906732),
-    p = n(213609),
-    f = n(963249),
-    g = n(417183),
-    h = n(825682),
-    m = n(170245),
-    b = n(752048),
-    _ = n(602733),
-    E = n(699516),
-    O = n(626135),
-    v = n(909917),
-    y = n(795448),
-    I = n(441623),
-    C = n(474936),
-    S = n(981631),
-    T = n(617015),
-    N = n(388032),
-    j = n(756853);
-function P(e) {
+    d = n(100527),
+    p = n(906732),
+    f = n(213609),
+    g = n(963249),
+    h = n(417183),
+    m = n(825682),
+    b = n(170245),
+    _ = n(752048),
+    E = n(602733),
+    O = n(699516),
+    v = n(626135),
+    y = n(909917),
+    I = n(795448),
+    C = n(441623),
+    S = n(474936),
+    T = n(981631),
+    N = n(617015),
+    j = n(388032),
+    P = n(756853);
+function x(e) {
     let {
             ref: t,
             isFocused: l,
-            isActive: P,
-            status: x,
-            activities: A,
-            applicationStream: Z,
-            isGameRelationship: w,
-            isMobile: L,
-            onOtherHover: R,
-            onClick: D,
-            recipientUser: M,
-            giftIntentType: k,
+            isActive: x,
+            status: A,
+            activities: Z,
+            applicationStream: w,
+            isGameRelationship: L,
+            isMobile: R,
+            onOtherHover: D,
+            onClick: M,
+            recipientUser: k,
+            giftIntentType: U,
         } = e,
-        { analyticsLocations: U } = (0, d.ZP)(),
-        { Component: G } = (0, c.V)(),
-        B = (0, o.e7)([I.ZP], () => I.ZP.getFriendAnniversaryYears(M.id)),
-        H = (0, _.ao)({
+        { analyticsLocations: G } = (0, p.ZP)(d.Z.PREMIUM_GIFT_INTENT_FRIEND_ROW),
+        { Component: H } = (0, c.V)(),
+        B = (0, s.e7)([C.ZP], () => C.ZP.getFriendAnniversaryYears(k.id)),
+        V = (0, E.ao)({
             location: "gift-intent-friend-row",
             isGift: !0,
-            giftRecipient: M,
+            giftRecipient: k,
         });
     i.useEffect(() => {
-        let e = b.Z.getUserAffinity(M.id);
-        (0, p.h)({
-            name: s.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
-            type: s.ImpressionTypes.VIEW,
+        let e = _.Z.getUserAffinity(k.id);
+        (0, f.h)({
+            name: o.ImpressionNames.GIFT_INTENT_ACTION_BUTTON,
+            type: o.ImpressionTypes.VIEW,
             properties: {
-                gift_intent_type: k,
+                gift_intent_type: U,
                 affinity: null == e ? void 0 : e.communicationProbability,
             },
         });
-    }, [M, k]);
-    let V = (e) => {
+    }, [k, U]);
+    let F = (e) => {
             e.stopPropagation();
-            let t = b.Z.getUserAffinity(M.id);
-            O.default.track(S.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
-                gift_intent_type: k,
-                affinity: null == t ? void 0 : t.communicationProbability,
+            let t = _.Z.getUserAffinity(k.id);
+            v.default.track(T.rMx.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
+                gift_intent_type: U,
+                affinity: null == t ? void 0 : t.dmProbability,
+                location_stack: G,
             }),
-                H
-                    ? (0, v.Z)({
-                          giftRecipient: M,
-                          analyticsLocations: U,
-                          analyticsLocation: S.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+                V
+                    ? (0, y.Z)({
+                          giftRecipient: k,
+                          analyticsLocations: G,
+                          analyticsLocation: T.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
                           analyticsObject: {
-                              page: S.ZY5.FRIENDS_LIST,
-                              section: S.jXE.FRIENDS_LIST_FRIEND_ROW,
-                              object: S.qAy.BUTTON_CTA,
-                              objectType: S.AnalyticsObjectTypes.GIFT,
+                              page: T.ZY5.FRIENDS_LIST,
+                              section: T.jXE.FRIENDS_LIST_FRIEND_ROW,
+                              object: T.qAy.BUTTON_CTA,
+                              objectType: T.AnalyticsObjectTypes.GIFT,
                           },
-                          giftMessage: F(),
+                          giftMessage: z(),
                       })
-                    : (0, f.Z)({
+                    : (0, g.Z)({
                           isGift: !0,
                           initialPlanId: null,
-                          giftRecipient: M,
-                          analyticsLocations: U,
-                          analyticsLocation: S.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+                          giftRecipient: k,
+                          analyticsLocations: G,
+                          analyticsLocation: T.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
                           analyticsObject: {
-                              page: S.ZY5.FRIENDS_LIST,
-                              section: S.jXE.FRIENDS_LIST_FRIEND_ROW,
-                              object: S.qAy.BUTTON_CTA,
-                              objectType: S.AnalyticsObjectTypes.GIFT,
+                              page: T.ZY5.FRIENDS_LIST,
+                              section: T.jXE.FRIENDS_LIST_FRIEND_ROW,
+                              object: T.qAy.BUTTON_CTA,
+                              objectType: T.AnalyticsObjectTypes.GIFT,
                           },
-                          giftMessage: F(),
+                          giftMessage: z(),
                       });
         },
-        F = () => (k === C.hX.FRIEND_ANNIVERSARY ? N.intl.string(N.t.OrwKgi) : void 0);
-    return (0, r.jsx)(g.Z, {
+        z = () => (U === S.hX.FRIEND_ANNIVERSARY ? j.intl.string(j.t.OrwKgi) : void 0);
+    return (0, r.jsx)(h.Z, {
         ref: t,
         isFocused: l,
-        isActive: P,
-        user: M,
-        onOtherHover: R,
-        onClick: D,
-        height: T.fJ,
+        isActive: x,
+        user: k,
+        onOtherHover: D,
+        onClick: M,
+        height: N.fJ,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: a()(j.listItemContents, j.friendAnniversaryRow),
+                className: a()(P.listItemContents, P.friendAnniversaryRow),
                 children: [
-                    (0, r.jsx)(m.Z, {
-                        className: j.userInfoCentered,
-                        user: M,
-                        status: x,
-                        isMobile: L,
+                    (0, r.jsx)(b.Z, {
+                        className: P.userInfoCentered,
+                        user: k,
+                        status: A,
+                        isMobile: R,
                         subText: (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(h.Z, {
+                                (0, r.jsx)(m.Z, {
                                     hovered: e,
-                                    activities: A,
-                                    applicationStream: Z,
-                                    status: x,
-                                    user: M,
-                                    userIgnored: E.Z.isIgnored(M.id),
+                                    activities: Z,
+                                    applicationStream: w,
+                                    status: A,
+                                    user: k,
+                                    userIgnored: O.Z.isIgnored(k.id),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: j.anniversarySubtext,
+                                    className: P.anniversarySubtext,
                                     children: [
                                         (0, r.jsx)(u.iFz, {
                                             size: "xxs",
@@ -132,31 +134,37 @@ function P(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: "text-xs/normal",
                                             color: "text-subtle",
-                                            children: N.intl.formatToPlainString(N.t.S3fdq7, { numberOfYears: B }),
+                                            children: j.intl.formatToPlainString(j.t.S3fdq7, { numberOfYears: B }),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
                         hovered: e,
-                        showAccountIdentifier: !w && !M.isProvisional,
+                        showAccountIdentifier: !L && !k.isProvisional,
                     }),
                     (0, r.jsxs)("div", {
-                        className: j.actions,
+                        className: P.actions,
                         children: [
                             (0, r.jsx)(u.hU, {
                                 size: "sm",
                                 variant: "secondary",
-                                icon: G,
-                                "aria-label": N.intl.string(N.t.I61IsE),
+                                icon: H,
+                                "aria-label": j.intl.string(j.t.I61IsE),
                                 onClick: () => {
-                                    (0, y.PV)(M.id),
+                                    v.default.track(T.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                        gift_intent_type: U,
+                                        cta_type: "send_message",
+                                        location_stack: G,
+                                    }),
+                                        (0, I.PV)(k.id),
                                         (0, u.ZDy)(async () => {
                                             let { default: e } = await n.e("5890").then(n.bind(n, 171793));
-                                            return (t) =>
-                                                (0, r.jsx)(
+                                            return (t) => {
+                                                var n, i;
+                                                return (0, r.jsx)(
                                                     e,
-                                                    (function (e) {
+                                                    ((n = (function (e) {
                                                         for (var t = 1; t < arguments.length; t++) {
                                                             var n = null != arguments[t] ? arguments[t] : {},
                                                                 r = Object.keys(n);
@@ -183,17 +191,43 @@ function P(e) {
                                                                 });
                                                         }
                                                         return e;
-                                                    })({}, t),
+                                                    })({}, t)),
+                                                    (i = i =
+                                                        {
+                                                            giftIntentType: null != U ? U : void 0,
+                                                            analyticsLocationHistory: G,
+                                                        }),
+                                                    Object.getOwnPropertyDescriptors
+                                                        ? Object.defineProperties(
+                                                              n,
+                                                              Object.getOwnPropertyDescriptors(i),
+                                                          )
+                                                        : (function (e, t) {
+                                                              var n = Object.keys(e);
+                                                              if (Object.getOwnPropertySymbols) {
+                                                                  var r = Object.getOwnPropertySymbols(e);
+                                                                  n.push.apply(n, r);
+                                                              }
+                                                              return n;
+                                                          })(Object(i)).forEach(function (e) {
+                                                              Object.defineProperty(
+                                                                  n,
+                                                                  e,
+                                                                  Object.getOwnPropertyDescriptor(i, e),
+                                                              );
+                                                          }),
+                                                    n),
                                                 );
+                                            };
                                         });
                                 },
                             }),
                             (0, r.jsx)(u.Button, {
                                 size: "sm",
-                                text: N.intl.string(N.t.PEjaCx),
+                                text: j.intl.string(j.t.PEjaCx),
                                 icon: u.OgN,
-                                "aria-label": N.intl.string(N.t.PEjaCx),
-                                onClick: V,
+                                "aria-label": j.intl.string(j.t.PEjaCx),
+                                onClick: F,
                             }),
                         ],
                     }),

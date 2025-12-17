@@ -1,20 +1,23 @@
-n.d(t, { Z: () => v }), n(388685);
-var r = n(106351),
-    i = n(846519),
-    a = n(493683),
-    o = n(904245),
-    s = n(147913),
-    l = n(710845),
-    c = n(348245),
-    u = n(695346),
-    d = n(592125),
-    f = n(375954),
-    p = n(944486),
-    _ = n(522558),
-    m = n(795448),
-    h = n(441623),
-    g = n(474936);
-function E(e, t, n) {
+n.d(t, { Z: () => T }), n(388685);
+var r = n(990547),
+    i = n(106351),
+    a = n(846519),
+    o = n(493683),
+    s = n(904245),
+    l = n(147913),
+    c = n(213609),
+    u = n(710845),
+    d = n(348245),
+    f = n(752048),
+    p = n(695346),
+    _ = n(592125),
+    m = n(375954),
+    h = n(944486),
+    g = n(522558),
+    E = n(795448),
+    b = n(441623),
+    y = n(474936);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,73 +30,83 @@ function E(e, t, n) {
         e
     );
 }
-let b = 1000,
-    y = new l.Z("PremiumGiftingIntentManager");
-class O extends s.Z {
+let v = 1000,
+    S = new u.Z("PremiumGiftingIntentManager");
+class I extends l.Z {
     isChannelEligible(e) {
         switch (e.type) {
-            case r.d.DM:
+            case i.d.DM:
                 return !0;
-            case r.d.GROUP_DM:
-            case r.d.GUILD_TEXT:
+            case i.d.GROUP_DM:
+            case i.d.GUILD_TEXT:
             default:
                 return !1;
         }
     }
     maybeSendGiftingPromptSystemMessageDelayed(e, t, n, r) {
-        new i.sW(b, () => {
-            let i = p.Z.getChannelId();
-            !h.ZP.isGiftIntentMessageInCooldown(n) &&
+        new a.sW(v, () => {
+            let i = h.Z.getChannelId();
+            !b.ZP.isGiftIntentMessageInCooldown(n) &&
                 e === i &&
-                f.Z.isReady(e) &&
-                (o.Z.sendGiftingPromptSystemMessage(e, {
+                m.Z.isReady(e) &&
+                (s.Z.sendGiftingPromptSystemMessage(e, {
                     giftIntentType: t,
                     recipientUserId: n,
                     giftIntentSecondaryAction: r,
                 }),
-                (0, m.PV)(n));
+                (0, E.PV)(n));
         }).delay();
     }
     sendGiftPromptMessageInSelectedChannelIfEligible(e) {
-        let { enabled: t } = _.w.getConfig({ location: "PremiumGiftingIntentManager handleChannelSelect" }),
-            n = d.Z.getChannel(e);
+        let { enabled: t } = g.w.getConfig({ location: "PremiumGiftingIntentManager handleChannelSelect" }),
+            n = _.Z.getChannel(e);
         if (t && null != n && this.isChannelEligible(n)) {
             let e = new Set(n.recipients),
-                t = h.ZP.getFriendAnniversaries().filter((t) => e.has(t));
+                t = b.ZP.getFriendAnniversaries().filter((t) => e.has(t));
             if (t.length > 0) {
                 let e = t[0];
-                this.maybeSendGiftingPromptSystemMessageDelayed(n.id, g.hX.FRIEND_ANNIVERSARY, e, g.X2.SEND_MESSAGE);
+                this.maybeSendGiftingPromptSystemMessageDelayed(n.id, y.hX.FRIEND_ANNIVERSARY, e, y.X2.SEND_MESSAGE);
             }
         }
     }
     async sendGiftingNotificationIfEligible() {
-        let { enabled: e } = _.w.getConfig({
+        let { enabled: e } = g.w.getConfig({
                 location: "PremiumGiftingIntentManager handleTopAffinityUnreadNotification",
             }),
-            t = u.vc.getSetting();
+            t = p.vc.getSetting();
         if (!e || !t) return;
-        let n = h.ZP.getNextRecipientUserIDForNotification();
+        let n = b.ZP.getNextRecipientUserIDForNotification();
         if (null != n)
             try {
-                let e = await a.Z.getOrEnsurePrivateChannel(n),
-                    t = d.Z.getChannel(e);
+                let e = await o.Z.getOrEnsurePrivateChannel(n),
+                    t = _.Z.getChannel(e);
                 if (null == t) return;
-                f.Z.isReady(t.id) ||
-                    (await c.Z.fetchMessages({
+                m.Z.isReady(t.id) ||
+                    (await d.Z.fetchMessages({
                         channelId: t.id,
                         isPreload: !0,
                     }));
-                let r = h.ZP.getNextRecipientUserIDForNotification();
-                if (r !== n) return;
-                o.Z.sendGiftingPromptSystemMessage(t.id, {
-                    giftIntentType: g.hX.FRIEND_ANNIVERSARY,
-                    recipientUserId: r,
-                    giftIntentSecondaryAction: g.X2.SEND_MESSAGE,
+                let i = b.ZP.getNextRecipientUserIDForNotification();
+                if (i !== n) return;
+                s.Z.sendGiftingPromptSystemMessage(t.id, {
+                    giftIntentType: y.hX.FRIEND_ANNIVERSARY,
+                    recipientUserId: i,
+                    giftIntentSecondaryAction: y.X2.SEND_MESSAGE,
+                });
+                let a = f.Z.getUserAffinity(i);
+                (0, c.h)({
+                    name: r.ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION,
+                    type: r.ImpressionTypes.VIEW,
+                    properties: {
+                        gift_intent_type: y.hX.FRIEND_ANNIVERSARY,
+                        dm_affinity: null == a ? void 0 : a.dmProbability,
+                        channel_id: t.id,
+                    },
                 }),
-                    (0, m.PV)(r),
-                    (0, m.Zm)();
+                    (0, E.PV)(i),
+                    (0, E.Zm)();
             } catch (e) {
-                y.error("Failed to fetch DM channel data for gifting notification", {
+                S.error("Failed to fetch DM channel data for gifting notification", {
                     recipientUserID: n,
                     error: e,
                 });
@@ -105,15 +118,15 @@ class O extends s.Z {
     }
     onPostConnectionOpen() {
         this.sendGiftingNotificationIfEligible();
-        let e = p.Z.getChannelId();
+        let e = h.Z.getChannelId();
         null != e && this.sendGiftPromptMessageInSelectedChannelIfEligible(e);
     }
     constructor(...e) {
         super(...e),
-            E(this, "actions", {
+            O(this, "actions", {
                 POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
                 CHANNEL_SELECT: (e) => this.onChannelSelect(e),
             });
     }
 }
-let v = new O();
+let T = new I();
