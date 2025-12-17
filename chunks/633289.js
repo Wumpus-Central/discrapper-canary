@@ -17,6 +17,9 @@ class l extends r.Z {
                 APEX_EXPERIMENT_OVERRIDE_CREATE: (e) => this.createOverride(e.experimentName, e.variantId),
                 APEX_EXPERIMENT_OVERRIDE_DELETE: (e) => this.deleteOverride(e.experimentName),
                 APEX_EXPERIMENT_OVERRIDE_CLEAR: () => this.clearAllOverrides(),
+                APEX_EXPERIMENT_SESSION_OVERRIDE_CREATE: (e) =>
+                    this.createSessionOverride(e.experimentName, e.variantId),
+                APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE: (e) => this.deleteSessionOverride(e.experimentName),
                 APEX_EXPERIMENT_CLEAR_FOR_TESTS: () => this.clearForTests(),
                 APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS: (e) => this.setExperimentsMetadata(e.experiments),
                 APEX_EXPERIMENTS_FETCH_START: (e) => this.handleFetchStart(e.userId),

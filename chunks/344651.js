@@ -526,6 +526,19 @@ W(
             userActivities: null != (n = e.user_activities) ? n : void 0,
         });
     }),
+    Y(["EXPERIMENT_SESSION_OVERRIDE_CREATE"], (e) => {
+        o.Z.dispatch({
+            type: "APEX_EXPERIMENT_SESSION_OVERRIDE_CREATE",
+            experimentName: e.experiment_name,
+            variantId: e.variant_id,
+        });
+    }),
+    Y(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (e) => {
+        o.Z.dispatch({
+            type: "APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE",
+            experimentName: e.experiment_name,
+        });
+    }),
     Y(["RESUMED"], () => {
         D.RR.forceUpdate(), D.GC.forceUpdate(), q({ type: "CONNECTION_RESUMED" });
     }),
