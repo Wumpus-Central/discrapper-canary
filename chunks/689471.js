@@ -5,6 +5,5 @@ e.exports = {
     icon: "_6c75d92c128c46b0-icon",
     credentialList: "_6c75d92c128c46b0-credentialList",
     credentialItem: "_6c75d92c128c46b0-credentialItem",
-    credentialOptions: "_6c75d92c128c46b0-credentialOptions",
     footer: "_6c75d92c128c46b0-footer",
 };
