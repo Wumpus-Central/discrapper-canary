@@ -83,43 +83,47 @@ function T(e) {
             let e = [],
                 r = !0,
                 i = !1;
-            return (null != _
-                ? (e = [
-                      {
-                          label: O.intl.string(O.t["s+J8Dl"]),
-                          trackingArea: d.j_.PLAY,
-                          isDeadEnd: !0,
-                          onClick: () => {
-                              c.Z.launch({
-                                  applicationId: _,
-                                  embedded: m,
-                              });
+            if (
+                (null != _
+                    ? (e = [
+                          {
+                              label: O.intl.string(O.t["s+J8Dl"]),
+                              trackingArea: d.j_.PLAY,
+                              isDeadEnd: !0,
+                              onClick: () => {
+                                  c.Z.launch({
+                                      applicationId: _,
+                                      embedded: m,
+                                  });
+                              },
                           },
-                      },
-                  ])
-                : null != S && ((e = [S]), (r = !1)),
-            w &&
-                r &&
-                (e.push({
-                    label: O.intl.string(O.t.lw71Nf),
-                    trackingArea: d.j_.CONNECT_ACCOUNT,
-                    onClick: () => {
-                        D({ analyticsLocations: R });
-                    },
-                    icon: l.uIJ,
-                    iconButton: !0,
-                    buttonRef: x,
-                }),
-                (i = !0)),
-            e.length > 0 && !(0, E.b)(t.id, j, n.id, P))
-                ? {
-                      actions: [],
-                      hasAccountLinkButton: !1,
-                  }
-                : {
-                      actions: e,
-                      hasAccountLinkButton: i,
-                  };
+                      ])
+                    : null != S && ((e = [S]), (r = !1)),
+                e.length > 0)
+            )
+                if (!(0, E.b)(t.id, j, n.id, P))
+                    return {
+                        actions: [],
+                        hasAccountLinkButton: !1,
+                    };
+                else
+                    w &&
+                        r &&
+                        (e.push({
+                            label: O.intl.string(O.t.lw71Nf),
+                            trackingArea: d.j_.CONNECT_ACCOUNT,
+                            onClick: () => {
+                                D({ analyticsLocations: R });
+                            },
+                            icon: l.uIJ,
+                            iconButton: !0,
+                            buttonRef: x,
+                        }),
+                        (i = !0));
+            return {
+                actions: e,
+                hasAccountLinkButton: i,
+            };
         }, [m, _, S, j, P, n.id, t.id, w, D, R, x]),
         U = M.some((e) => e.trackingArea === d.j_.CLOUD_PLAY);
     (0, b.Z)(U, R);
