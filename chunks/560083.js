@@ -1,34 +1,39 @@
-a.d(t, { default: () => v }), a(388685);
+a.d(t, { default: () => x }), a(388685);
 var n = a(54381),
     r = a(473749),
-    c = a(481060),
-    o = a(904245),
+    o = a(481060),
+    c = a(904245),
     i = a(794295),
-    l = a(835473),
-    s = a(930864),
-    d = a(957730),
+    l = a(906732),
+    s = a(835473),
+    d = a(930864),
+    u = a(957730),
     b = a(987509),
-    u = a(592125),
-    f = a(823379),
-    p = a(164670),
-    m = a(848118),
-    w = a(959517),
-    h = a(388032),
-    g = a(887444);
-function y(e) {
+    f = a(592125),
+    p = a(626135),
+    m = a(572004),
+    w = a(823379),
+    _ = a(164670),
+    h = a(848118),
+    y = a(181268),
+    O = a(981631),
+    v = a(959517),
+    g = a(388032),
+    P = a(887444);
+function I(e) {
     let { sku: t, guildId: a } = e,
-        o = (0, l.q)(t.applicationId),
-        s = r.useMemo(() => (0, p.wQ)(a, t), [a, t]);
+        c = (0, s.q)(t.applicationId),
+        l = r.useMemo(() => (0, _.wQ)(a, t), [a, t]);
     return (0, n.jsxs)("div", {
-        className: g.forwardPreview,
+        className: P.forwardPreview,
         children: [
             (0, n.jsxs)("div", {
-                className: g.linkContainer,
+                className: P.linkContainer,
                 children: [
                     (0, n.jsx)(i.Z, {
                         title: t.name,
-                        href: s,
-                        children: (0, n.jsx)(c.Text, {
+                        href: l,
+                        children: (0, n.jsx)(o.Text, {
                             variant: "text-md/medium",
                             color: "text-link",
                             lineClamp: 1,
@@ -36,39 +41,39 @@ function y(e) {
                         }),
                     }),
                     (0, n.jsxs)("div", {
-                        className: g.applicationInfo,
+                        className: P.applicationInfo,
                         children: [
-                            (0, n.jsx)(c.xPt, {
+                            (0, n.jsx)(o.xPt, {
                                 size: "xs",
                                 color: "currentColor",
-                                className: g.linkIcon,
+                                className: P.linkIcon,
                             }),
-                            (0, n.jsx)(c.Text, {
+                            (0, n.jsx)(o.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                children: h.intl.formatToPlainString(h.t["CqpEC+"], {
-                                    applicationName: null == o ? void 0 : o.name,
+                                children: g.intl.formatToPlainString(g.t["CqpEC+"], {
+                                    applicationName: null == c ? void 0 : c.name,
                                 }),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, n.jsx)(m.A, {
-                containerClassName: g.cardImage,
-                foregroundImageClassName: g.cardImage,
-                backgroundImageClassName: g.cardImage,
+            (0, n.jsx)(h.A, {
+                containerClassName: P.cardImage,
+                foregroundImageClassName: P.cardImage,
+                backgroundImageClassName: P.cardImage,
                 sku: t,
                 shape: "square",
             }),
         ],
     });
 }
-function v(e) {
+function x(e) {
     var t,
         a,
-        { sku: i, guildId: l, source: m, onClose: g } = e,
-        v = (function (e, t) {
+        { sku: i, guildId: s, source: h, onClose: P, analyticsLocations: x, analyticsContext: j } = e,
+        C = (function (e, t) {
             if (null == e) return {};
             var a,
                 n,
@@ -77,44 +82,67 @@ function v(e) {
                     var a,
                         n,
                         r = {},
-                        c = Object.keys(e);
-                    for (n = 0; n < c.length; n++) (a = c[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (a = o[n]), t.indexOf(a) >= 0 || (r[a] = e[a]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < c.length; n++)
-                    (a = c[n]),
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++)
+                    (a = o[n]),
                         !(t.indexOf(a) >= 0) && Object.prototype.propertyIsEnumerable.call(e, a) && (r[a] = e[a]);
             }
             return r;
-        })(e, ["sku", "guildId", "source", "onClose"]);
-    let O = r.useCallback(
-        async (e, t, a) => {
-            let { withMessage: n, closeAfterSend: r } = t;
-            a(!0);
-            try {
-                let t = (await Promise.all(e.map(b.qx))).filter(f.lm);
-                if (0 === t.length) return void a(!1);
-                r && g();
-                let c = (0, p.l8)(l, i);
-                for (let e of t) {
-                    let t = u.Z.getChannel(e);
-                    null != t &&
-                        (await o.Z.sendMessage(t.id, d.ZP.parse(t, c + (null != n ? n : "")), !1, {
-                            location: w.dy.SOCIAL_LAYER_STOREFRONT,
-                        }));
+        })(e, ["sku", "guildId", "source", "onClose", "analyticsLocations", "analyticsContext"]);
+    let { analyticsLocations: k } = (0, l.ZP)(null != x ? x : []),
+        S = r.useCallback(
+            async (e, t, a) => {
+                let { withMessage: n, closeAfterSend: r } = t;
+                a(!0);
+                try {
+                    let t = (await Promise.all(e.map(b.qx))).filter(w.lm);
+                    if (0 === t.length) return void a(!1);
+                    r && P();
+                    let o = (0, _.l8)(s, i);
+                    for (let e of t) {
+                        let t = f.Z.getChannel(e);
+                        null != t &&
+                            (await c.Z.sendMessage(t.id, u.ZP.parse(t, o + (null != n ? n : "")), !1, {
+                                location: v.dy.SOCIAL_LAYER_STOREFRONT,
+                            }));
+                    }
+                } catch (e) {
+                    (0, o.showToast)((0, o.createToast)(g.intl.string(g.t.iufib1), o.ToastType.FAILURE));
+                } finally {
+                    a(!1);
                 }
-            } catch (e) {
-                (0, c.showToast)((0, c.createToast)(h.intl.string(h.t.iufib1), c.ToastType.FAILURE));
-            } finally {
-                a(!1);
-            }
-        },
-        [g, l, i],
-    );
+            },
+            [P, s, i],
+        ),
+        L = r.useMemo(
+            () => [
+                {
+                    variant: "secondary",
+                    text: void 0,
+                    onClick: () => {
+                        p.default.track(O.rMx.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED, {
+                            slayer_storefront_session_id: null == j ? void 0 : j.sessionId,
+                            guild_id: s,
+                            sku_id: i.id,
+                            cta_type: y.eR.COPY_LINK_BUTTON,
+                            location_stack: k,
+                        }),
+                            (0, m.JG)((0, _.wQ)(s, i), () =>
+                                (0, o.showToast)((0, o.createToast)(g.intl.string(g.t["L/PwZf"]), o.ToastType.SUCCESS)),
+                            );
+                    },
+                    icon: o.xPt,
+                },
+            ],
+            [s, i, null == j ? void 0 : j.sessionId, k],
+        );
     return (0, n.jsx)(
-        s.ForwardModal,
+        d.ForwardModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var a = null != arguments[t] ? arguments[t] : {},
@@ -139,17 +167,18 @@ function v(e) {
                     });
             }
             return e;
-        })({}, v)),
+        })({}, C)),
         (a = a =
             {
-                onClose: g,
-                source: m,
-                customPreview: (0, n.jsx)(y, {
+                onClose: P,
+                source: h,
+                customPreview: (0, n.jsx)(I, {
                     sku: i,
-                    guildId: l,
+                    guildId: s,
                 }),
-                customSubtitle: h.intl.string(h.t.yiaXeN),
-                customSendHandler: O,
+                customSubtitle: g.intl.string(g.t.yiaXeN),
+                customSendHandler: S,
+                additionalActions: L,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))

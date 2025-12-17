@@ -5210,6 +5210,7 @@ var np = (function (e) {
             (e.SLAYER_STOREFRONT_CARD_ELEMENT_CLICKED = "slayer_storefront_card_element_clicked"),
             (e.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED = "slayer_storefront_pdp_element_clicked"),
             (e.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED = "slayer_storefront_page_element_clicked"),
+            (e.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED = "slayer_storefront_forward_modal_element_clicked"),
             (e.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED = "commerce_shop_vc_gift_button_viewed"),
             (e.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED = "commerce_shop_gifting_breadcrumb_viewed"),
             (e.USER_SERVER_PRIVACY_SETTINGS_ACTION = "user_server_privacy_settings_action"),

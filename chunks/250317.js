@@ -292,8 +292,10 @@ function H(e) {
                     sku: G,
                     guildId: v,
                     source: "social-layer-storefront-pdp",
+                    analyticsLocations: A,
+                    analyticsContext: T,
                 }));
-        }, [G, v, q]),
+        }, [G, v, q, A, T]),
         J = a.useCallback(() => {
             q(R.o4.WISHLIST_BUTTON);
         }, [q]),

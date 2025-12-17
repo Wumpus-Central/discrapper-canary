@@ -131,8 +131,16 @@ var et = (function (e) {
     return (e[(e.SMALL = 0)] = "SMALL"), (e[(e.MEDIUM = 1)] = "MEDIUM"), (e[(e.EMBEDDED = 2)] = "EMBEDDED"), e;
 })({});
 function en(e) {
-    let { guildId: t, sku: n, isCardHovered: a, trackCardClick: o, variant: s } = e,
-        c = i.useCallback(
+    let {
+            guildId: t,
+            sku: n,
+            isCardHovered: a,
+            trackCardClick: o,
+            variant: s,
+            analyticsLocations: c,
+            analyticsContext: u,
+        } = e,
+        f = i.useCallback(
             (e) => {
                 e.stopPropagation(),
                     null != n &&
@@ -141,22 +149,24 @@ function en(e) {
                         (0, x.b)({
                             sku: n,
                             guildId: t,
+                            analyticsContext: u,
+                            analyticsLocations: c,
                             source: "social-layer-storefront-embed",
                         }));
             },
-            [n, t, o],
+            [n, t, o, u, c],
         ),
-        u = i.useCallback(() => {
+        p = i.useCallback(() => {
             o(Z.rZ.WISHLIST_BUTTON);
         }, [o]),
-        f = i.useMemo(() => l()(H.cardButtonContainer, { [H.cardButtonContainerHovered]: a }), [a]);
+        _ = i.useMemo(() => l()(H.cardButtonContainer, { [H.cardButtonContainerHovered]: a }), [a]);
     return (0, r.jsxs)("div", {
         className: H.cardButtonsContainer,
         children: [
             2 === s &&
                 (0, r.jsx)(d.P3F, {
-                    className: l()(f, H.forwardButton),
-                    onClick: c,
+                    className: l()(_, H.forwardButton),
+                    onClick: f,
                     children: (0, r.jsx)(O.Z, {
                         size: "refresh_sm",
                         color: "currentColor",
@@ -166,8 +176,8 @@ function en(e) {
                 skuId: n.id,
                 isCardHovered: a,
                 nuxGraphic: (0, D.c)(n),
-                onClick: u,
-                className: l()(f, H.wishlistButton),
+                onClick: p,
+                className: l()(_, H.wishlistButton),
             }),
         ],
     });
@@ -308,6 +318,8 @@ function er(e) {
                     isCardHovered: es,
                     variant: K,
                     trackCardClick: e_,
+                    analyticsLocations: ec,
+                    analyticsContext: el,
                 }),
                 null != eT
                     ? (0, r.jsx)(j.p, {

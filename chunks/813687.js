@@ -55,7 +55,7 @@ function l(e, t) {
 }
 let c = "social-layer-storefront-forward-link-modal",
     u = (e) => {
-        let { sku: t, guildId: a, source: s } = e;
+        let { sku: t, guildId: a, source: s, analyticsLocations: u, analyticsContext: d } = e;
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e("36653"), n.e("33648"), n.e("8193")]).then(
@@ -68,6 +68,8 @@ let c = "social-layer-storefront-forward-link-modal",
                             sku: t,
                             guildId: a,
                             source: s,
+                            analyticsLocations: u,
+                            analyticsContext: d,
                         }),
                     );
             },
