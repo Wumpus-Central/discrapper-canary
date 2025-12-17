@@ -187,6 +187,7 @@ function w(e) {
                 "label",
                 b(g({}, M), {
                     className: m.container,
+                    "data-disabled": n || void 0,
                     children: [
                         (0, r.jsx)(
                             s.animated.div,
