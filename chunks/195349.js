@@ -1,20 +1,18 @@
-e.exports = {
-    settingCard: "_1a4ef2934d882343-settingCard",
-    active: "_1a4ef2934d882343-active",
-    shield: "_1a4ef2934d882343-shield " + n(712721).desaturateUserColors,
-    cardIcon: "_1a4ef2934d882343-cardIcon",
-    cardFolder: "_1a4ef2934d882343-cardFolder",
-    adminWarning: "_1a4ef2934d882343-adminWarning",
-    folderHeader: "_1a4ef2934d882343-folderHeader",
-    folderTitle: "_1a4ef2934d882343-folderTitle",
-    sectionTitle: "_1a4ef2934d882343-sectionTitle",
-    roleMemberList: "_1a4ef2934d882343-roleMemberList",
-    divider: "_1a4ef2934d882343-divider",
-    memberRow: "_1a4ef2934d882343-memberRow",
-    rowHeight: "_1a4ef2934d882343-rowHeight",
-    rowLabel: "_1a4ef2934d882343-rowLabel",
-    rowBotTag: "_1a4ef2934d882343-rowBotTag",
-    rowLabelSubText: "_1a4ef2934d882343-rowLabelSubText",
-    removeIcon: "_1a4ef2934d882343-removeIcon",
-    disabledRemoveIcon: "_1a4ef2934d882343-disabledRemoveIcon",
-};
+n.d(e, { w: () => r });
+var i = n(564344),
+    l = n(509613),
+    s = n(313789),
+    u = n(388032);
+let r = (0, l.ON)(s.n.PROFILE_SETTING, {
+    Component: i.Z,
+    useSearchTerms: () => [
+        u.intl.string(u.t["vi7f+q"]),
+        u.intl.string(u.t.Ip9nBS),
+        u.intl.string(u.t["2p07FR"]),
+        u.intl.string(u.t["7vhiqk"]),
+        u.intl.string(u.t.kPHroX),
+        u.intl.string(u.t.lqaIxI),
+        u.intl.string(u.t.Vgdusv),
+        u.intl.string(u.t.DMeO2X),
+    ],
+});

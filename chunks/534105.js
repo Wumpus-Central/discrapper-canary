@@ -1,0 +1,9 @@
+n.d(e, { a: () => r });
+var i = n(509613),
+    l = n(313789),
+    s = n(595242),
+    u = n(388032);
+let r = (0, i.ON)(l.n.PREMIUM_GUILD_SUBSCRIPTIONS_SETTING, {
+    Component: s.Z,
+    useSearchTerms: () => [u.intl.string(u.t["+CbP2v"]), u.intl.string(u.t.Nn1lJy)],
+});

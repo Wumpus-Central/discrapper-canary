@@ -481,10 +481,6 @@ function H(e) {
         (0, r.jsxs)(c.Kqy, {
             gap: 24,
             children: [
-                (0, r.jsx)(c.Heading, {
-                    variant: "heading-lg/semibold",
-                    children: v.intl.string(v.t.AtCukI),
-                }),
                 (0, r.jsx)(k, {
                     settings: a,
                     updateSettings: m,

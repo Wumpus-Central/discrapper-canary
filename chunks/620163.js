@@ -489,16 +489,6 @@ let eG = () => [
                 ],
                 parent: eP.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             },
-            [eP.s6.PARENTAL_CONTROLS_SEXUALLY_EXPLICIT_MEDIA_REDACTION]: {
-                section: ew.oAB.FAMILY_CENTER_PARENTAL_CONTROLS,
-                parent: eP.s6.PRIVACY_FAMILY_CENTER,
-                predicate: () => !1,
-            },
-            [eP.s6.PARENTAL_CONTROLS_GORE_MEDIA_REDACTION]: {
-                section: ew.oAB.FAMILY_CENTER_PARENTAL_CONTROLS,
-                parent: eP.s6.PRIVACY_FAMILY_CENTER,
-                predicate: () => !1,
-            },
             [eP.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2]: {
                 section: ew.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [

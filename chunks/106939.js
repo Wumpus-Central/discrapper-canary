@@ -180,8 +180,8 @@ function U() {
             (0, r.jsx)(c.njP.Panel, {
                 id: n,
                 "aria-labelledby": e,
-                className: D.contentPanel,
-                children: (0, r.jsx)("div", { children: t ? (0, r.jsx)(j, {}) : (0, r.jsx)(s, {}) }),
+                className: D.userSettingsContentPanel,
+                children: t ? (0, r.jsx)(j, {}) : (0, r.jsx)(s, {}),
             }),
         ],
     });

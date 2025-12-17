@@ -1,54 +1,79 @@
-n.d(e, { z: () => C });
+n.d(e, { z: () => D });
 var i = n(54381),
     l = n(657707),
     s = n(442837),
     u = n(481060),
-    r = n(778825),
-    a = n(398140),
-    o = n(564344),
-    S = n(509613),
-    T = n(970013),
-    c = n(518950),
-    E = n(25990),
-    d = n(594174),
-    g = n(313789),
-    _ = n(620163),
-    I = n(726985),
-    N = n(388032),
-    A = n(897192);
-let O = (0, S.wf)(g.n.PROFILE_PANEL, {
-        useTitle: () => N.intl.string(N.t["vi7f+q"]),
+    r = n(570140),
+    a = n(809206),
+    o = n(230711),
+    S = n(18438),
+    T = n(778825),
+    c = n(398140),
+    E = n(564344),
+    d = n(509613),
+    g = n(970013),
+    _ = n(518950),
+    I = n(25990),
+    N = n(594174),
+    A = n(313789),
+    O = n(526665),
+    C = n(620163),
+    f = n(97551),
+    P = n(726985),
+    R = n(981631),
+    L = n(388032),
+    p = n(897192);
+let m = (0, d.wf)(A.n.PROFILE_PANEL, {
+        usePredicate: () => !(0, O.gN)("LegacyProfilePanel"),
+        useTitle: () => L.intl.string(L.t["vi7f+q"]),
         notice: {
-            stores: [r.Z, E.Z],
-            element: a.Z,
+            stores: [T.Z, I.Z],
+            element: c.Z,
         },
-        StronglyDiscouragedCustomComponent: o.Z,
+        initialize: () => () =>
+            r.Z.wait(() => {
+                (0, S.It)(), (0, a.P6)(), o.Z.clearSubsection(R.oAB.PROFILE_CUSTOMIZATION);
+            }),
+        StronglyDiscouragedCustomComponent: E.Z,
         buildLayout: () => [],
     }),
-    C = (0, S.m7)(g.n.PROFILE_SIDEBAR_ITEM, {
-        useTitle: () => N.intl.string(N.t["vi7f+q"]),
-        getLegacySearchKey: () => I.s6.PROFILE_CUSTOMIZATION,
+    b = (0, d.wf)(A.n.PROFILE_PANEL, {
+        usePredicate: () => (0, O.gN)("ProfilePanel"),
+        useTitle: () => L.intl.string(L.t["vi7f+q"]),
+        notice: {
+            stores: [T.Z, I.Z],
+            element: c.Z,
+        },
+        initialize: () => () =>
+            r.Z.wait(() => {
+                (0, S.It)(), (0, a.P6)(), o.Z.clearSubsection(R.oAB.PROFILE_CUSTOMIZATION);
+            }),
+        buildLayout: () => [f.i],
+    }),
+    D = (0, d.m7)(A.n.PROFILE_SIDEBAR_ITEM, {
+        useTitle: () => L.intl.string(L.t["vi7f+q"]),
+        getLegacySearchKey: () => ((0, O.Gl)("ProfilePanel") ? void 0 : P.s6.PROFILE_CUSTOMIZATION),
         icon: l.tBG,
         stronglyDiscouragedCustomComponent: () => {
             var t;
-            let e = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
-                { avatarSrc: n, avatarDecorationSrc: r } = (0, c.Z)({
+            let e = (0, s.e7)([N.default], () => N.default.getCurrentUser()),
+                { avatarSrc: n, avatarDecorationSrc: r } = (0, _.Z)({
                     userId: null == e ? void 0 : e.id,
                     size: u.EFr.SIZE_48,
                 });
             return null == e
                 ? null
                 : (0, i.jsxs)("div", {
-                      className: A.profileCustomizationTab,
+                      className: p.profileCustomizationTab,
                       children: [
                           (0, i.jsx)(u.qEK, {
                               src: n,
                               avatarDecoration: r,
                               size: u.EFr.SIZE_48,
-                              "aria-label": N.intl.string(N.t.lqaIxI),
+                              "aria-label": L.intl.string(L.t.lqaIxI),
                           }),
                           (0, i.jsxs)("div", {
-                              className: A.textContainer,
+                              className: p.textContainer,
                               children: [
                                   (0, i.jsx)(u.Text, {
                                       color: "text-strong",
@@ -57,13 +82,13 @@ let O = (0, S.wf)(g.n.PROFILE_PANEL, {
                                       children: null != (t = e.globalName) ? t : e.username,
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: A.editProfilesRow,
+                                      className: p.editProfilesRow,
                                       children: [
                                           (0, i.jsx)(u.Text, {
                                               variant: "text-sm/normal",
                                               color: "currentColor",
                                               lineClamp: 1,
-                                              children: N.intl.string(N.t.Ip9nBS),
+                                              children: L.intl.string(L.t.Ip9nBS),
                                           }),
                                           (0, i.jsx)(l.vdY, {
                                               size: "xxs",
@@ -77,8 +102,8 @@ let O = (0, S.wf)(g.n.PROFILE_PANEL, {
                   });
         },
         trailing: {
-            type: T.W.BADGE_NEW,
-            getDismissibleContentTypes: _.OF,
+            type: g.W.BADGE_NEW,
+            getDismissibleContentTypes: C.OF,
         },
-        buildLayout: () => [O],
+        buildLayout: () => ((0, O.Gl)("ProfilePanel") ? [b] : [m]),
     });

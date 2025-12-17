@@ -85080,6 +85080,11 @@ div.d74ef86df6475678-nagbar {
     position: relative
 }
 
+.dc2e0e7839a6713a-userSettingsContentPanel {
+    overflow-x: unset;
+    overflow-y: unset
+}
+
 .dc2e0e7839a6713a-item {
     align-items: center;
     display: flex

@@ -103,18 +103,21 @@ function v(e) {
                 return t.get(a);
             }))
                 ? t
-                : o[0].key;
+                : o[0].key,
+        { navigateWithValidation: u } = (0, d.Cu)();
     i.useEffect(() => {
         let e = p.Z.getField("currentTabKeys");
         if (o.some((t) => t.key === e.get(a))) return;
         let t = new Map(e);
         t.set(a, o[0].key), p.Z.setState({ currentTabKeys: t });
     }, [o, a]);
-    let u = (e) => {
-            let t = new Map(p.Z.getField("currentTabKeys"));
-            t.set(a, e), p.Z.setState({ currentTabKeys: t });
+    let f = (e) => {
+            u(() => {
+                let t = new Map(p.Z.getField("currentTabKeys"));
+                t.set(a, e), p.Z.setState({ currentTabKeys: t });
+            });
         },
-        d = null != (n = o.find((e) => e.key === c)) ? n : o[0];
+        _ = null != (n = o.find((e) => e.key === c)) ? n : o[0];
     return (0, r.jsxs)(y, {
         panelKey: a,
         notice: l,
@@ -122,7 +125,7 @@ function v(e) {
             (0, r.jsx)(s.njP, {
                 className: E.tabBar,
                 selectedItem: c,
-                onItemSelect: u,
+                onItemSelect: f,
                 orientation: "horizontal",
                 type: "top",
                 look: "brand",
@@ -141,9 +144,9 @@ function v(e) {
             (0, r.jsx)(s.njP.Panel, {
                 id: c,
                 children:
-                    null != d.StronglyDiscouragedCustomComponent
-                        ? (0, r.jsx)(d.StronglyDiscouragedCustomComponent, {})
-                        : (0, r.jsx)(O, { layout: d.layout }),
+                    null != _.StronglyDiscouragedCustomComponent
+                        ? (0, r.jsx)(_.StronglyDiscouragedCustomComponent, {})
+                        : (0, r.jsx)(O, { layout: _.layout }),
             }),
         ],
     });
