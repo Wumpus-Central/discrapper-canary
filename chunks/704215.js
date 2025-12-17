@@ -520,6 +520,7 @@ var r = (function (e) {
             (e[(e.NITRO_PRIVACY_PERK_NEW_BADGE_V2 = 661)] = "NITRO_PRIVACY_PERK_NEW_BADGE_V2"),
             (e[(e.GUILD_TAG_AVAILABLE_COACHMARK_V2 = 662)] = "GUILD_TAG_AVAILABLE_COACHMARK_V2"),
             (e[(e.GUILD_TAG_UPDATED_COACHMARK = 663)] = "GUILD_TAG_UPDATED_COACHMARK"),
+            (e[(e.ORB_RENTAL_NEW_BADGE = 664)] = "ORB_RENTAL_NEW_BADGE"),
             e
         );
     })({}),
