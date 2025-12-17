@@ -53192,7 +53192,7 @@ h2.feb59c8c6ec00ad9-title {
 }
 
 .d285a61ed580c689-markdown {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -53437,6 +53437,7 @@ h2.feb59c8c6ec00ad9-title {
 
 .c1e9c47c23f12ca3-menu {
     --custom-menu-viewport-padding: 16px;
+    --custom-menu-separator-margin: 8px;
     background: var(--background-surface-high);
     background-color: var(--background-surface-higher);
     border: 1px solid var(--border-subtle);
@@ -53577,7 +53578,7 @@ h2.feb59c8c6ec00ad9-title {
     border-bottom-color: var(--border-subtle);
     border-bottom: 1px solid var(--border-subtle);
     box-sizing: border-box;
-    margin: 8px
+    margin: var(--custom-menu-separator-margin, 8px)
 }
 
 .c1e9c47c23f12ca3-submenuPaddingContainer {

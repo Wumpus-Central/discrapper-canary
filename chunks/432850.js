@@ -19,6 +19,7 @@ let u = (e) => {
             },
             children: [
                 (0, r.jsx)(o.hzk, {
+                    "data-migration-pending": !0,
                     className: l.scrollerContent,
                     children: t,
                 }),

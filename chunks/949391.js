@@ -1,46 +1,54 @@
-t.d(n, { default: () => p });
-var r = t(54381),
-    a = t(473749),
-    i = t(442837),
+t.d(e, { default: () => E });
+var a = t(54381),
+    i = t(473749),
+    r = t(442837),
     s = t(481060),
-    l = t(668274),
-    o = t(600164),
-    c = t(241209),
-    d = t(807693),
+    d = t(668274),
+    l = t(600164),
+    o = t(241209),
+    c = t(807693),
     u = t(388032),
-    E = t(648441);
-function p(e) {
-    var n;
-    let { eulaId: t, transitionState: p, onClose: f } = e,
-        h = (0, i.e7)([d.Z], () => d.Z.getEULA(t));
-    a.useEffect(() => {
-        (0, l.N)(t);
+    p = t(648441);
+function E(n) {
+    var e;
+    let { eulaId: t, transitionState: E, onClose: g } = n,
+        m = (0, r.e7)([c.Z], () => c.Z.getEULA(t));
+    i.useEffect(() => {
+        (0, d.N)(t);
     }, [t]);
-    let b = null != (n = null == h ? void 0 : h.name) ? n : u.intl.string(u.t.ZTNur7),
-        S =
-            null != h
-                ? (0, r.jsx)(c.Z, {
-                      children: h.content,
-                      className: E.markdown,
+    let f = null != (e = null == m ? void 0 : m.name) ? e : u.intl.string(u.t.ZTNur7),
+        h =
+            null != m
+                ? (0, a.jsx)(o.Z, {
+                      children: m.content,
+                      className: p.markdown,
                   })
-                : (0, r.jsx)(s.$jN, { className: E.spinner });
-    return (0, r.jsxs)(s.Y0X, {
-        transitionState: p,
+                : (0, a.jsx)(s.$jN, { className: p.spinner });
+    return (0, a.jsxs)(s.Y0X, {
+        "data-migration-pending": !0,
+        transitionState: E,
         size: s.CgR.SMALL,
-        "aria-label": b,
+        "aria-label": f,
         parentComponent: "EULA",
         children: [
-            (0, r.jsxs)(s.xBx, {
-                justify: o.Z.Justify.BETWEEN,
+            (0, a.jsxs)(s.xBx, {
+                "data-migration-pending": !0,
+                justify: l.Z.Justify.BETWEEN,
                 children: [
-                    (0, r.jsx)(s.Heading, {
+                    (0, a.jsx)(s.Heading, {
                         variant: "heading-lg/semibold",
-                        children: b,
+                        children: f,
                     }),
-                    (0, r.jsx)(s.olH, { onClick: f }),
+                    (0, a.jsx)(s.olH, {
+                        "data-migration-pending": !0,
+                        onClick: g,
+                    }),
                 ],
             }),
-            (0, r.jsx)(s.hzk, { children: S }),
+            (0, a.jsx)(s.hzk, {
+                "data-migration-pending": !0,
+                children: h,
+            }),
         ],
     });
 }
