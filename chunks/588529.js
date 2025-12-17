@@ -47,7 +47,7 @@ function f(e, t, n) {
     );
 }
 function p(e) {
-    return !!o.ZP.shouldAllowSurveyAction() && (!!e.startsWith("quest_completed_") || r.J[e] >= 100 * Math.random());
+    return !!o.ZP.shouldAllowSurveyAction() && r.J[e] >= 100 * Math.random();
 }
 async function _(e, t) {
     if (!p(e)) return;

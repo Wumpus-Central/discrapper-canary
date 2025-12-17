@@ -39,8 +39,7 @@ class l extends i.Z {
                     this.questCompletionStates.set(e, i);
             }),
             s(this, "onQuestCompleted", (e) => {
-                let t = "quest_completed_".concat(e);
-                (0, a.Ox)(t), (0, a.Ox)(r.Y.QUEST_COMPLETED, { quest_id: e });
+                (0, a.Ox)(r.Y.QUEST_COMPLETED, { quest_id: e });
             }),
             s(this, "stores", new Map([[o.Z, this.handleQuestStoreChange]])),
             s(this, "actions", {
