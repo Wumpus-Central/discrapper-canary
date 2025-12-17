@@ -1,50 +1,48 @@
-n.d(t, { q: () => O }), n(467055), n(388685);
+n.d(t, { q: () => p }), n(467055), n(388685);
 var l = n(54381),
     r = n(473749),
     i = n(442837),
-    a = n(199849),
-    o = n(481060),
-    s = n(339085),
-    u = n(565138),
-    c = n(889564),
-    d = n(430824),
-    m = n(496675),
-    h = n(771845),
+    a = n(673221),
+    o = n(339085),
+    s = n(565138),
+    u = n(889564),
+    c = n(430824),
+    d = n(496675),
+    m = n(771845),
     g = n(823379),
-    b = n(267642),
-    f = n(598117),
-    v = n(981631),
-    p = n(388032),
-    x = n(288336);
-let j = (e) => ({
+    h = n(267642),
+    b = n(598117),
+    f = n(981631),
+    v = n(388032);
+let x = (e) => ({
         label: e.name,
         value: e.id,
     }),
-    E = (e) => m.Z.can(v.Plq.CREATE_GUILD_EXPRESSIONS, e),
-    O = (e) => {
+    j = (e) => d.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, e),
+    p = (e) => {
         let {
                 onChange: t,
                 selected: n,
-                onError: m,
-                labelledBy: O,
-                isEmojiAnimated: y,
-                label: I,
-                required: C,
-                errorMessage: N,
+                onError: d,
+                labelledBy: p,
+                isEmojiAnimated: E,
+                label: O,
+                required: y,
+                errorMessage: S,
             } = e,
-            _ = (0, i.cj)([d.Z, h.ZP], () =>
+            I = (0, i.cj)([c.Z, m.ZP], () =>
                 Object.fromEntries(
-                    h.ZP.getFlattenedGuildIds()
-                        .map((e) => d.Z.getGuild(e))
+                    m.ZP.getFlattenedGuildIds()
+                        .map((e) => c.Z.getGuild(e))
                         .filter(g.lm)
                         .map((e) => [e.id, e]),
                 ),
             ),
-            w = (0, i.cj)(
-                [s.ZP],
+            N = (0, i.cj)(
+                [o.ZP],
                 () =>
                     Object.fromEntries(
-                        Object.entries(_).map((e) => {
+                        Object.entries(I).map((e) => {
                             let [t, n] = e;
                             return [
                                 t,
@@ -53,108 +51,67 @@ let j = (e) => ({
                                     let { guild: n, emojis: l, isEmojiAnimated: r } = e,
                                         i =
                                             null !=
-                                            (t = l.filter((e) => e.animated === r && !(0, c.Kt)(e, n.id)).length)
+                                            (t = l.filter((e) => e.animated === r && !(0, u.Kt)(e, n.id)).length)
                                                 ? t
                                                 : 0;
-                                    return (0, b.y4)(n) - i;
+                                    return (0, h.y4)(n) - i;
                                 })({
                                     guild: n,
-                                    emojis: s.ZP.getGuildEmoji(t),
-                                    isEmojiAnimated: y,
+                                    emojis: o.ZP.getGuildEmoji(t),
+                                    isEmojiAnimated: E,
                                 }),
                             ];
                         }),
                     ),
-                [_, y],
+                [I, E],
             ),
-            S = r.useMemo(() => Object.values(_).filter(E).map(j), [_]),
-            M = r.useCallback(
+            _ = r.useMemo(() => Object.values(I).filter(j).map(x), [I]),
+            w = r.useCallback(
                 (e) => {
-                    let [t] = e;
-                    if (null == t || null == t.value) return null;
-                    let n = _[t.value];
-                    return null == n
-                        ? null
-                        : (0, l.jsxs)("div", {
-                              className: x.value,
-                              children: [
-                                  (0, l.jsx)(u.Z, {
-                                      guild: n,
-                                      size: u.Z.Sizes.SMALLER,
-                                      active: !0,
-                                      className: x.icon,
-                                  }),
-                                  (0, l.jsx)(o.Text, {
-                                      variant: "text-md/normal",
-                                      className: x.label,
-                                      children: t.label,
-                                  }),
-                              ],
-                          });
-                },
-                [_],
-            ),
-            A = r.useCallback(
-                (e) => {
-                    if (null == e || null == e.value) return null;
-                    let t = _[e.value];
-                    return null == t
-                        ? null
-                        : (0, l.jsxs)("div", {
-                              className: x.option,
-                              children: [
-                                  (0, l.jsx)(u.Z, {
+                    let { value: t, label: n, disabled: r } = e;
+                    return {
+                        id: String(t),
+                        value: t,
+                        label: n,
+                        disabled: r,
+                        leading: ((e) => {
+                            if (null == e.value) return null;
+                            let t = I[e.value];
+                            return null == t
+                                ? null
+                                : (0, l.jsx)(s.Z, {
                                       guild: t,
-                                      size: u.Z.Sizes.MEDIUM,
+                                      size: s.Z.Sizes.SMALLER,
                                       active: !0,
-                                      className: x.icon,
-                                  }),
-                                  (0, l.jsxs)("div", {
-                                      className: x.optionLabelContainer,
-                                      children: [
-                                          (0, l.jsx)(o.Text, {
-                                              variant: "text-md/medium",
-                                              className: x.label,
-                                              lineClamp: 1,
-                                              children: e.label,
-                                          }),
-                                          (0, l.jsx)(o.Text, {
-                                              variant: "text-xs/normal",
-                                              color: "text-muted",
-                                              className: x.sublabel,
-                                              lineClamp: 1,
-                                              children: p.intl.format(p.t.WkK72v, { count: w[e.value] }),
-                                          }),
-                                      ],
-                                  }),
-                              ],
-                          });
+                                  });
+                        })(e),
+                        trailing:
+                            null == e.value ? null : v.intl.formatToPlainString(v.t.WkK72v, { count: N[e.value] }),
+                    };
                 },
-                [w, _],
+                [N, I],
             );
         return (
             r.useEffect(() => {
                 var e;
-                S.length < 1
-                    ? m(f.ze.NO_PERMISSIONS)
-                    : null != n && (null != (e = null == w ? void 0 : w[n]) ? e : 0) < 1
-                      ? m(v.evJ.TOO_MANY_EMOJI)
-                      : m(null);
-            }, [S, t, m, n, w]),
-            (0, l.jsx)(a.y6, {
-                label: I,
-                required: C,
-                errorMessage: N,
-                onChange: t,
-                options: S,
-                popoutPosition: "bottom",
-                popoutWidth: 240,
-                renderOptionLabel: A,
-                renderOptionValue: M,
+                _.length < 1
+                    ? d(b.ze.NO_PERMISSIONS)
+                    : null != n && (null != (e = null == N ? void 0 : N[n]) ? e : 0) < 1
+                      ? d(f.evJ.TOO_MANY_EMOJI)
+                      : d(null);
+            }, [_, t, d, n, N]),
+            (0, l.jsx)(a.P, {
+                label: O,
+                required: y,
+                selectionMode: "single",
+                errorMessage: S,
+                onSelectionChange: t,
+                options: _,
+                formatOption: w,
                 value: n,
-                "aria-labelledby": O,
-                placeholder: S.length < 1 ? p.intl.string(p.t.jHpxwo) : p.intl.string(p.t["4mqeQO"]),
-                isDisabled: S.length < 1,
+                "aria-labelledby": p,
+                placeholder: _.length < 1 ? v.intl.string(v.t.jHpxwo) : v.intl.string(v.t["4mqeQO"]),
+                disabled: _.length < 1,
             })
         );
     };
