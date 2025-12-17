@@ -235,7 +235,7 @@ let H = function () {
             },
             {
                 key: v.h8.REVIEW,
-                renderStep: (e) => (0, r.jsx)(w.l, F({}, e)),
+                renderStep: (e) => (0, r.jsx)(w.lZ, F({}, e)),
                 options: {
                     renderHeader: !0,
                     useBreadcrumbLabel: (e) => ((0, C.Fv)(e) ? Z.intl.string(Z.t.UKbp1N) : Z.intl.string(Z.t.QBnNHq)),

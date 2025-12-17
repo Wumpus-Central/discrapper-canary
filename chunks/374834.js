@@ -69,7 +69,7 @@ function O(e, t) {
 let v = [
         {
             key: o.h8.REVIEW,
-            renderStep: (e) => (0, r.jsx)(c.l, b({}, e)),
+            renderStep: (e) => (0, r.jsx)(c.lZ, b({}, e)),
             options: { useBreadcrumbLabel: () => h.intl.string(h.t.QBnNHq) },
         },
         {

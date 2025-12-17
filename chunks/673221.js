@@ -252,28 +252,21 @@ function R(e) {
             },
             [eE, eh, ec],
         ),
-        eS = Math.max(
-            er.findIndex((e) => {
-                var t;
-                return e.id === (null == (t = eh[eh.length - 1]) ? void 0 : t.id);
-            }),
-            0,
-        ),
-        eI = i.useRef(null);
+        eS = i.useRef(null);
     return (
         i.useEffect(
             () => (
                 !ei &&
                     q &&
-                    (eI.current = setTimeout(() => {
+                    (eS.current = setTimeout(() => {
                         var e;
-                        return null == (e = document.getElementById((0, E.cA)(en, eS))) ? void 0 : e.focus();
+                        return null == (e = document.getElementById((0, E.cA)(en, 0))) ? void 0 : e.focus();
                     }, 10)),
                 () => {
-                    null != eI.current && clearTimeout(eI.current);
+                    null != eS.current && clearTimeout(eS.current);
                 }
             ),
-            [ei, en, q, eS],
+            [ei, en, q],
         ),
         (0, r.jsx)(
             l.g,
@@ -378,7 +371,6 @@ function R(e) {
                                                     renderListItem: (e) => (0, r.jsx)(_.W, S({}, e)),
                                                     maxVisibleItems: M,
                                                     loading: ei,
-                                                    activeDescendantIndex: eS,
                                                     typeahead: !0,
                                                 }),
                                             }),

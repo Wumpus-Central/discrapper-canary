@@ -90,7 +90,7 @@ let x = [
     },
     {
         key: u.h8.REVIEW,
-        renderStep: (e) => (0, r.jsx)(p.l, v({}, e)),
+        renderStep: (e) => (0, r.jsx)(p.lZ, v({}, e)),
     },
     {
         key: u.h8.CONFIRM,
