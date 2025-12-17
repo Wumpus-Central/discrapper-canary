@@ -177,9 +177,9 @@ function M(e) {
             src: P.Z,
             className: l()(_.image, _.gameServerHostingImage),
         }),
-        title: I.intl.string(n === h.J.GAME_SERVER_HOSTING_AVAILABLE ? E.default.wXLChx : E.default["8z8RpY"]),
+        title: I.intl.string(n === h.Jk.GAME_SERVER_HOSTING_AVAILABLE ? E.default.wXLChx : E.default["8z8RpY"]),
         body:
-            n === h.J.GAME_SERVER_HOSTING_AVAILABLE
+            n === h.Jk.GAME_SERVER_HOSTING_AVAILABLE
                 ? I.intl.string(E.default.lZ6m7Q)
                 : I.intl.format(E.default["IQ1E+d"], { boostCount: o }),
         actions: [
