@@ -61695,6 +61695,10 @@ screen and (max-width:485px) {
     width: 390px
 }
 
+._6df1abcb56d96feb-applicationHomeCard._6df1abcb56d96feb-narrow {
+    width: 354px
+}
+
 ._6df1abcb56d96feb-card {
     background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
@@ -61726,6 +61730,10 @@ screen and (max-width:485px) {
     z-index: -1
 }
 
+._6df1abcb56d96feb-card._6df1abcb56d96feb-borderGradient._6df1abcb56d96feb-applicationHomeCard:after {
+    border-radius: var(--radius-lg)
+}
+
 ._6df1abcb56d96feb-tier0._6df1abcb56d96feb-pillMargin {
     margin-top: var(--space-24)
 }
@@ -61748,10 +61756,15 @@ screen and (max-width:485px) {
     top: 30px
 }
 
-._6df1abcb56d96feb-wumpus._6df1abcb56d96feb-inCorner {
+._6df1abcb56d96feb-wumpus._6df1abcb56d96feb-outerCorner {
     height: 165px;
     inset-inline-end: -33px;
     top: -40px
+}
+
+._6df1abcb56d96feb-wumpus._6df1abcb56d96feb-insideCorner {
+    inset-inline-end: 10px;
+    top: -20px
 }
 
 ._6df1abcb56d96feb-bigCloud {
@@ -61765,7 +61778,8 @@ screen and (max-width:485px) {
     top: 12px
 }
 
-._6df1abcb56d96feb-bigCloud._6df1abcb56d96feb-inCorner {
+._6df1abcb56d96feb-bigCloud._6df1abcb56d96feb-insideCorner,
+._6df1abcb56d96feb-bigCloud._6df1abcb56d96feb-outerCorner {
     inset-inline-end: 140px;
     top: 105px;
     width: 40px
@@ -61782,7 +61796,8 @@ screen and (max-width:485px) {
     top: 40px
 }
 
-._6df1abcb56d96feb-smallCloud._6df1abcb56d96feb-inCorner {
+._6df1abcb56d96feb-smallCloud._6df1abcb56d96feb-insideCorner,
+._6df1abcb56d96feb-smallCloud._6df1abcb56d96feb-outerCorner {
     inset-inline-end: 172px;
     top: 65px
 }
@@ -61859,6 +61874,10 @@ screen and (max-width:485px) {
 
 ._6df1abcb56d96feb-tier2CardOrder {
     order: 1
+}
+
+._6df1abcb56d96feb-premiumGroupCardOrder {
+    order: 2
 }
 
 @container premium-marketing-page-container (max-width: 960px) {
