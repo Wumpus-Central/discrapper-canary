@@ -1,4 +1,4 @@
-n.d(t, { u: () => o }), n(804061), n(704826), n(35282);
+n.d(t, { u: () => o });
 var r = n(503461),
     i = n(190313);
 function a(e, t, n) {
@@ -88,10 +88,6 @@ class s {
     }
     replaceChannel(e, t, n) {
         this.deleteChannel(e, t), this.putAll(e, t, n);
-    }
-    replaceAll(e, t, n) {
-        let r = n.map((n) => l(e, t, n));
-        this.transaction.replaceAll(r);
     }
     deleteAll() {
         this.transaction.delete();

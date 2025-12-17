@@ -246,9 +246,6 @@ class c {
             overwrite: t === r.Sn.Replace,
         });
     }
-    replaceAll(e) {
-        this.delete(), this.putAll(e);
-    }
     delete() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
         this.transaction.add({
